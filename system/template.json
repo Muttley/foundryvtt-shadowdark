@@ -1,0 +1,55 @@
+{
+
+"Actor": {
+	"types": ["player", "npc"],
+	"templates": {
+		"abilities": {
+			"str": {
+				"label": "SHADOWDARK.ability.str",
+				"value": 10,
+				"bonus": 0
+			},
+			"dex": {
+				"label": "SHADOWDARK.ability.dex",
+				"value": 10,
+				"bonus": 0
+			},
+			"con": {
+				"label": "SHADOWDARK.ability.con",
+				"value": 10,
+				"bonus": 0
+			},
+			"int": {
+				"label": "SHADOWDARK.ability.int",
+				"value": 10,
+				"bonus": 0
+			},
+			"wis": {
+				"label": "SHADOWDARK.ability.wis",
+				"value": 10,
+				"bonus": 0
+			},
+			"cha": {
+				"label": "SHADOWDARK.ability.cha",
+				"value": 10,
+				"bonus": 0
+			}
+		},
+		"attributes": {
+			"ac": {
+				"value": 10
+			},
+			"hp": {
+				"value": 0
+			}
+		}
+	},
+	"player": {
+		"templates": ["abilities", "common"]
+	}
+},
+
+"Item": {
+}
+
+}
