@@ -1,9 +1,13 @@
 {
-	"name": "shadowdark",
+	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG",
 	"version": "0.1.0",
-	"templateVersion": 1,
+	"compatibility": {
+		"maximum": "10",
+		"minimum": "10",
+		"verified": "10.278"
+	},
 	"authors": [
 		{
 			"name": "Paul Maskelyne",
@@ -11,8 +15,7 @@
 			"email": "mu77ley@gmail.com"
 		}
 	],
-	"scripts": [],
-	"esmodules": ["shadowdark.js"],
+	"esmodules": ["shadowdark.mjs"],
 	"styles": ["css/shadowdark.css"],
 	"packs": [],
 	"languages": [
@@ -23,6 +26,6 @@
 		}
 	],
 	"socket": true,
-	"gridDistance": 1,
+	"gridDistance": 5,
 	"gridUnits": "ft"
 }

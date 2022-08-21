@@ -1,10 +1,11 @@
 {
 	"scripts": {
-		"build:watch": "gulp watch",
-		"build": "gulp",
+		"build:watch": "gulp",
+		"build": "gulp build",
 		"clean": "gulp clean",
-		"css": "gulp css",
-		"lang": "gulp lang",
+		"css": "gulp compileCss",
+		"js": "gulp compileJs",
+		"lang": "gulp compileLang",
 		"lint": "gulp lint"
 	},
 	"devDependencies": {
@@ -18,5 +19,9 @@
 		"merge-stream": "^2.0.0",
 		"sass": "^1.49.0",
 		"yargs": "^17.3.1"
+	},
+	"dependencies": {
+		"@rollup/plugin-node-resolve": "^13.3.0",
+		"rollup": "^2.78.1"
 	}
 }

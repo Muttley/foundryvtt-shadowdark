@@ -1,5 +1,16 @@
-import { SHADOWDARK } from "./src/config.js";
-import { registerSystemSettings } from "./src/settings.js";
+import SHADOWDARK from "./src/config.mjs";
+import registerSystemSettings from "./src/settings.mjs";
+
+import * as applications from "./src/applications/_module.mjs";
+
+/* -------------------------------------------- */
+/*  Define Module Structure                     */
+/* -------------------------------------------- */
+
+globalThis.shadowdark = {
+	applications,
+	config: SHADOWDARK,
+};
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -9,6 +20,10 @@ import { registerSystemSettings } from "./src/settings.js";
 // initialization tasks have begun.
 //
 Hooks.once("init", () => {
+	globalThis.shadowdark = game.shadowdark = Object.assign(
+		game.system, globalThis.shadowdark
+	);
+
 	console.log("Shadowdark | Initialising the Shadowdark RPG Game System");
 
 	game.shadowdark = {
@@ -18,6 +33,10 @@ Hooks.once("init", () => {
 	CONFIG.SHADOWDARK = SHADOWDARK;
 
 	registerSystemSettings();
+
+	// Register sheet application classes
+	Items.unregisterSheet("core", ItemSheet);
+	Items.registerSheet("shadowdark", applications.item.ItemSheetShadowdark);
 });
 
 /* -------------------------------------------- */
@@ -28,7 +47,6 @@ Hooks.once("init", () => {
 //
 Hooks.on("ready", () => {
 	console.log("Shadowdark | Game Ready");
-
 });
 
 /* -------------------------------------------- */

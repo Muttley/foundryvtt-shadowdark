@@ -1,4 +1,7 @@
-export const registerSystemSettings = function() {
+/**
+ * Register all of the system's settings.
+ */
+export default function registerSystemSettings() {
 
 	// Internal System Version
 	game.settings.register("shadowdark", "systemVersion", {
@@ -9,4 +12,4 @@ export const registerSystemSettings = function() {
 		default: "",
 	});
 
-};
+}
