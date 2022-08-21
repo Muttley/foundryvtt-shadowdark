@@ -4,24 +4,21 @@
 		"build": "gulp build",
 		"clean": "gulp clean",
 		"css": "gulp compileCss",
-		"js": "gulp compileJs",
 		"lang": "gulp compileLang",
-		"lint": "gulp lint"
+		"lint": "gulp lintJs"
 	},
 	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^13.3.0",
 		"del": "^6.0.0",
 		"fancy-log": "^2.0.0",
-		"gulp": "^4.0.2",
 		"gulp-eslint-new": "^1.1.2",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-yaml": "^2.0.4",
+		"gulp": "^4.0.2",
 		"merge-stream": "^2.0.0",
+		"rollup": "^2.78.1",
 		"sass": "^1.49.0",
 		"yargs": "^17.3.1"
-	},
-	"dependencies": {
-		"@rollup/plugin-node-resolve": "^13.3.0",
-		"rollup": "^2.78.1"
 	}
 }

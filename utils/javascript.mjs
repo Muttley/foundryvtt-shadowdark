@@ -2,32 +2,11 @@ import gulp from "gulp";
 import eslint from "gulp-eslint-new";
 import gulpIf from "gulp-if";
 import mergeStream from "merge-stream";
-import nodeResolve from "@rollup/plugin-node-resolve";
-import { rollup } from "rollup";
-import del from "del";
 
 const SRC_LINT_PATHS = ["./system/shadowdark.mjs", "./system/src/"];
 
-function cleanupJavascriptFiles() {
-	return del("./system/shadowdark-compiled.mjs*");
-}
-export const clean = cleanupJavascriptFiles;
-
-async function compileJavascript() {
-	const bundle = await rollup({
-		input: "./system/shadowdark.mjs",
-		plugins: [nodeResolve()],
-	});
-
-	await bundle.write({
-		file: "./system/shadowdark-compiled.mjs",
-		format: "es",
-		sourcemap: true,
-		sourcemapFile: "./system/shadowdark.mjs",
-	});
-}
-export const compile = compileJavascript;
-
+// Use eslint to check for formatting issues
+//
 function lintJavascript() {
 	const tasks = SRC_LINT_PATHS.map(path => {
 		const src = path.endsWith("/")
@@ -49,6 +28,8 @@ function lintJavascript() {
 }
 export const lint = lintJavascript;
 
+// Watch for file changes and lint when they do
+//
 export function watchUpdates() {
 	gulp.watch(SRC_LINT_PATHS, lint);
 }
