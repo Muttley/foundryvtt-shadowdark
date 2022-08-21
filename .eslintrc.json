@@ -5,6 +5,7 @@
 		"node": true,
 		"jquery": true
 	},
+	"ignorePatterns": ["**/*compiled.mjs"],
 	"parserOptions": {
 		"requireConfigFile": false,
 		"sourceType": "module"
@@ -25,6 +26,7 @@
 		"computed-property-spacing": "warn",
 		"constructor-super": "error",
 		"default-param-last": "warn",
+		"disallowTabs": 0,
 		"dot-location": ["warn", "property"],
 		"eol-last": ["error", "always"],
 		"eqeqeq": ["warn", "smart"],
