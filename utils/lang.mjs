@@ -1,12 +1,12 @@
 import gulp from "gulp";
 import yaml from "gulp-yaml";
-import del from "del";
+import {deleteAsync} from "del";
 
 const LANG_DST_PATH = "./system/i18n";
 const LANG_SRC_PATHS = ["i18n/*.yaml"];
 
 function cleanupLangFiles() {
-	return del(LANG_DST_PATH);
+	return deleteAsync(LANG_DST_PATH);
 }
 export const clean = cleanupLangFiles;
 

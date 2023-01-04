@@ -1,7 +1,7 @@
 import gulp from "gulp";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
-import del from "del";
+import {deleteAsync} from "del";
 
 const sass = gulpSass(dartSass);
 
@@ -10,7 +10,7 @@ const SCSS_SRC_PATH = ["./scss/shadowdark.scss"];
 const SCSS_WATCH_PATHS = ["./scss/**/*.scss"];
 
 function cleanupCssFiles() {
-	return del(CSS_DST_PATH);
+	return deleteAsync(CSS_DST_PATH);
 }
 export const clean = cleanupCssFiles;
 
