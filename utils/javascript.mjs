@@ -30,6 +30,7 @@ export const lint = lintJavascript;
 
 // Watch for file changes and lint when they do
 //
-export function watchUpdates() {
+export function watchJavascriptUpdates() {
 	gulp.watch(SRC_LINT_PATHS, lint);
 }
+export const watchUpdates = watchJavascriptUpdates;

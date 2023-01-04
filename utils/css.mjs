@@ -21,6 +21,7 @@ function compileSass() {
 }
 export const compile = compileSass;
 
-export function watchUpdates() {
+export function watchScssUpdates() {
 	gulp.watch(SCSS_WATCH_PATHS, compile);
 }
+export const watchUpdates = watchScssUpdates;

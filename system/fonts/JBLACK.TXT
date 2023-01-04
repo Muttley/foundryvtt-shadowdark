@@ -1,0 +1,64 @@
+                   Readme file for JSL Blackletter font
+                               Version 2.1
+                             6 December 2000
+
+The "JSL Blackletter" font is based upon a typeface created  by  William
+Bullokar, for his "Booke at large, for the amendment of orthographie for
+English speech", published in 1580 by  Henrie  Denham.   In  this  book,
+Bullokar  attempted to regularise the spelling of English by adding some
+letters to the English alphabet (mostly  combinations  of  two  letters,
+such as "sh" or "ph"), and by using accents to mark the pronunciation of
+vowels.
+
+He also provided several example typefaces,  including  the  blackletter
+alphabet  which  is  the basis for this font.  His new letters have been
+removed, as I originally designed this font for the  purpose  of  repro-
+ducing some blackletter broadside ballads which used the normal  English
+orthography  of  the period.  (Obviously, his idea was met with the same
+enthusiasm that was shown to the Metric System by the United States...)
+
+This is version 2.1 of the fonts.  Originally,  the  archaic  characters
+and  ligatures had been mapped primarily to the "unused" character cells
+in the Windows fonts.   Unfortunately,  certain  Microsoft  applications
+ignore  these  unused  cells,  rendering  those characters inaccessible.
+Therefore, the archaic glyphs have been remapped to less-frequently-used
+positions.  New ligatures (fi/ffi) have also  been added, due to popular
+request.  Furthermore, the fonts  are  now  edit-embeddable,  to  permit
+creation of Adobe Acrobat documents and Web pages with embedded fonts.
+
+These fonts were produced with Fontographer  3.5.2.   Because  they  use
+ANSI  encoding,  the glyph mapping will be somewhat different under OS/2
+and the Macintosh.
+
+Version 2.1 moved  the  "ff"  ligature  to  a  different  position;  its
+previous  placement prevented the use of the Catalan raised period.  The
+macron has also been changed to a non-advancing glyph, positioned  above
+the  previous character (to facilitate the overline abbreviations common
+common to Renaissance printing).
+
+
+   Win                         
+   Code   JSL Blackletter   Arial
+   --------------------------------------------------------------
+   0131   Long 's'          florin (script f)
+   0165   'st' ligature     Yen currency symbol
+   0171   Dotless 'i'       double left guillemet
+   0172   'oo' ligature     logical not
+   0176   Half 'r'          degree symbol
+   0177   'ss' ligature     plus or minus symbol
+   0164   'ff' ligature     raised period
+
+
+JSL Blackletter is copyright (c) 1997-2000 by Jeffrey S. Lee. Permission
+is granted to freely distribute  it,  provided  that  it  is distributed
+unaltered, and it is accompanied by this  text  file.   It  may  not  be
+included  in  any  commercial  package without prior permission from the
+author.  This font is "emailware"; if you like it and decide to use  it,
+please send me email at the address listed below.  I will not charge you
+any money or send you annoying email  spam;  I'm  simply  interested  in
+who's  using it, and I'd be happy to receive any comments you might have
+about the font.
+
+                                           Jeff Lee
+                                           http://www.gate.net/~shipbrk/
+                                           shipbrk@gate.net

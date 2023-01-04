@@ -1,0 +1,23 @@
+.shadowdark.sheet.item {
+	.sheet-header {
+		color: red;
+	}
+
+	.sheet-body {
+		color: blue;
+
+		.title {
+			border: none;
+			color: green;
+			font-family: "JSL Blackletter";
+			font-size: 3rem;
+		}
+
+		.label {
+			color: black;
+			font-family: "Old Newspaper Font";
+			font-size: 1.2rem;
+		}
+	}
+
+}

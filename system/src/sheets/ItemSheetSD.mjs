@@ -1,4 +1,5 @@
-export default class ItemSheetShadowdark extends ItemSheet {
+export default class ItemSheetSD extends ItemSheet {
+
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
@@ -17,7 +18,16 @@ export default class ItemSheetShadowdark extends ItemSheet {
 	/** @override */
 	async getData(options) {
 		// TODO Implement our own data context
-		const data = super.getData();
-		return data;
+		const context = await super.getData(options);
+		const item = context.item;
+		const source = item.toObject();
+
+		foundry.utils.mergeObject(context, {
+			source: source.system,
+			system: item.system,
+			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
+		});
+
+		return context;
 	}
 }

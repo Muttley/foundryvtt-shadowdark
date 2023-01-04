@@ -50,18 +50,52 @@
 	},
 	"Item": {
 		"types": [
+			"armor",
 			"basic",
-			"weapon",
-			"armor"
+			"weapon"
 		],
 		"templates": {
-			"item_description": {
-				"description": ""
+			"common": {
+				"description": "",
+				"properties": []
 			},
-			"cost": {
-				"gp": 0,
-				"sp": 0,
-				"cp": 0
+			"physical": {
+				"cost": {
+					"gp": 0,
+					"sp": 0,
+					"cp": 0
+				},
+				"slots": 1,
+				"per_slot": 1
+			}
+		},
+		"armor": {
+			"templates": [
+				"common",
+				"physical"
+			],
+			"ac": {
+				"base": 0,
+				"modifier": 0,
+				"stat": ""
+			}
+		},
+		"basic": {
+			"templates": [
+				"common",
+				"physical"
+			]
+		},
+		"weapon": {
+			"templates": [
+				"physical",
+				"common"
+			],
+			"type": "",
+			"range": "",
+			"damage": {
+				"1h": "",
+				"2h": ""
 			}
 		}
 	}

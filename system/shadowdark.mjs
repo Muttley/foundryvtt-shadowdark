@@ -1,15 +1,17 @@
 import SHADOWDARK from "./src/config.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 
-import * as applications from "./src/applications/_module.mjs";
+import * as documents from "./src/documents/_module.mjs";
+import * as sheets from "./src/sheets/_module.mjs";
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
 
 globalThis.shadowdark = {
-	applications,
 	config: SHADOWDARK,
+	documents,
+	sheets,
 };
 
 /* -------------------------------------------- */
@@ -36,7 +38,7 @@ Hooks.once("init", () => {
 
 	// Register sheet application classes
 	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("shadowdark", applications.item.ItemSheetShadowdark);
+	Items.registerSheet("shadowdark", sheets.ItemSheetSD);
 });
 
 /* -------------------------------------------- */

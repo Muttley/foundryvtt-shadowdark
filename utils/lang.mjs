@@ -33,6 +33,7 @@ function compileLangs(cb) {
 }
 export const compile = compileLangs;
 
-export function watchUpdates() {
+export function watchLangUpdates() {
 	gulp.watch(LANG_SRC_PATHS, compile);
 }
+export const watchUpdates = watchLangUpdates;
