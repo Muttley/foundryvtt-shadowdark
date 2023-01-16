@@ -137,7 +137,7 @@
 		"no-extra-boolean-cast": ["warn", {"enforceForLogicalOperands": true}],
 		"no-extra-semi": "warn",
 		"no-multi-spaces": "off",
-		"no-tabs": ["warn", {"allowIndentationTabs": true}],
+		"no-tabs": "off",
 		"no-throw-literal": "error",
 		"no-trailing-spaces": "warn",
 		"no-useless-escape": "warn",
