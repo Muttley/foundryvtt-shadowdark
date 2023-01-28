@@ -1,8 +1,10 @@
 import SHADOWDARK from "./src/config.mjs";
 import registerSystemSettings from "./src/settings.mjs";
+import onUpdateWorldTime from "./src/time.mjs";
 
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
+
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
@@ -33,10 +35,18 @@ Hooks.once("init", () => {
 	};
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
+	CONFIG.Actor.documentClass = documents.ActorSD;
 
 	registerSystemSettings();
 
 	// Register sheet application classes
+	Actors.unregisterSheet("core", ActorSheet);
+	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
+		types: ["Player"],
+		makeDefault: true,
+		label: "SHADOWDARK.sheet.ClassPlayer",
+	});
+
 	Items.unregisterSheet("core", ItemSheet);
 	Items.registerSheet("shadowdark", sheets.ItemSheetSD);
 });
@@ -62,3 +72,5 @@ Hooks.on("ready", () => {
 Hooks.once("setup", () => {
 	console.log("Shadowdark | Setup Hook");
 });
+
+Hooks.on("updateWorldTime", onUpdateWorldTime);

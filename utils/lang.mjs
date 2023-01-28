@@ -21,7 +21,7 @@ function compileLangs(cb) {
 			.on("error", e => {
 				if (!emptyYamlMatch.exec(e.message)) {
 					const message = e.message.split(/\r?\n/)[0];
-					log.error(message);
+					console.error(message);
 					taskStream.emit("end");
 				}
 				cb();

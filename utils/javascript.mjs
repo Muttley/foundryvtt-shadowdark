@@ -1,9 +1,27 @@
-import gulp from "gulp";
+import { rollup } from "rollup";
 import eslint from "gulp-eslint-new";
+import gulp from "gulp";
 import gulpIf from "gulp-if";
 import mergeStream from "merge-stream";
+import nodeResolve from "@rollup/plugin-node-resolve";
 
 const SRC_LINT_PATHS = ["./system/shadowdark.mjs", "./system/src/"];
+
+// Compile javascript source files into a single output file.
+//
+async function compileJavascript() {
+	const bundle = await rollup({
+		input: "./system/shadowdark.mjs",
+		plugins: [nodeResolve()],
+	});
+	await bundle.write({
+		file: "./system/shadowdark-compiled.mjs",
+		format: "es",
+		sourcemap: true,
+		sourcemapFile: "./system/shadowdark.mjs",
+	});
+}
+export const compile = compileJavascript;
 
 // Use eslint to check for formatting issues
 //
@@ -21,7 +39,12 @@ function lintJavascript() {
 			.src(src)
 			.pipe(eslint({ fix: false }))
 			.pipe(eslint.format())
-			.pipe(gulpIf(file => file.eslint != null && file.eslint.fixed, gulp.dest(dest)));
+			.pipe(
+				gulpIf(
+					file => file.eslint != null && file.eslint.fixed,
+					gulp.dest(dest)
+				)
+			);
 	});
 
 	return mergeStream(tasks);
@@ -31,6 +54,6 @@ export const lint = lintJavascript;
 // Watch for file changes and lint when they do
 //
 export function watchJavascriptUpdates() {
-	gulp.watch(SRC_LINT_PATHS, lint);
+	gulp.watch(SRC_LINT_PATHS, gulp.parallel(lint, compile));
 }
 export const watchUpdates = watchJavascriptUpdates;

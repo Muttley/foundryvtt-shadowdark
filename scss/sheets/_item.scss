@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .shadowdark.sheet.item {
 	.sheet-header {
 		color: red;
@@ -6,14 +8,14 @@
 	.sheet-body {
 		color: blue;
 
-		.title {
+		&--title {
 			border: none;
-			color: green;
+			color: var(--secondary);
 			font-family: "JSL Blackletter";
 			font-size: 3rem;
 		}
 
-		.label {
+		&--label {
 			color: black;
 			font-family: "Old Newspaper Font";
 			font-size: 1.2rem;

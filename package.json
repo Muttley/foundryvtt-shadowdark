@@ -11,13 +11,13 @@
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"del": "^7.0.0",
 		"fancy-log": "^2.0.0",
+		"gulp": "^4.0.2",
 		"gulp-eslint-new": "^1.7.1",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-yaml": "^2.0.4",
-		"gulp": "^4.0.2",
 		"merge-stream": "^2.0.0",
-		"rollup": "^3.9.1",
+		"rollup": "^3.10.0",
 		"sass": "^1.57.1",
 		"yargs": "^17.6.2"
 	}

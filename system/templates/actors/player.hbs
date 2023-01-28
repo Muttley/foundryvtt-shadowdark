@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="player-header">
+		<img
+			class="portrait"
+			src="{{ actor.img }}"
+			data-edit="img"
+			title="{{ actor.name }}"
+			height="110"
+			width="110"
+		/>
+		<div class="title">
+			<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
+		</div>
+		<h1 class="player-name">
+			<input
+				name="name"
+				type="text"
+				value="{{ actor.name }}"
+				placeholder="{{ localize 'Name' }}"
+			/>
+		</h1>
+	</header>
+	<hr />
+	<section class="abilities">
+		{{#each actor.system.abilities as |ability id|}}
+			<div class="ability">
+				<label for="{{concat "system.abilities." id ".value"}}">
+					{{ability.label}}
+				</label>
+				{{numberInput
+					ability.value
+					name=(concat "system.abilities." id ".value")
+					class="ability-score" placeholder="10"
+				}}
+				<p>{{numberFormat ability.modifier decimals=0 sign=true}}</p>
+			</div>
+		{{/each}}
+	</section>
+</form>

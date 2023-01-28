@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+.shadowdark.sheet.player {
+	@include p-reset;
+	color: white;
+
+	.abilities {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 8px;
+		row-gap: 8px;
+	}
+
+	.ability {
+		font-family: "Old Newspaper Font";
+		border: 1px solid var(--color-border-light-tertiary);
+		padding: 4px;
+
+		label {
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+
+	.player-header {
+		@include p-reset;
+
+		display: grid;
+		// position: fixed;
+		grid-template-columns: 110px 1fr;
+		grid-template-rows: 55px 55px;
+		column-gap: 4px;
+
+		align-items: center;
+	}
+
+	.player-name {
+		font-family: "Old Newspaper Font";
+		font-size: 32px;
+
+		input {
+			@include p-reset;
+			padding-top: 15px;
+			padding-bottom: 19px;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			border: none;
+		}
+	}
+
+	.portrait {
+		grid-row: span 2;
+	}
+
+	.title {
+		@include p-reset;
+
+		font-family: "JSL Blackletter";
+		font-size: 3rem;
+
+		text-align: right;
+		line-height: 1;
+
+		&__prefix {
+			color: $secondary-color;
+			text-shadow: -0.2rem -0.2rem $primary-color;
+		}
+
+		&__suffix {
+			color: $primary-color;
+			text-shadow: -0.2rem -0.2rem $secondary-color;
+		}
+	}
+}
