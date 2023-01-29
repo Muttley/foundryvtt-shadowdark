@@ -8,6 +8,13 @@ $font-size: 1.1rem;
 }
 
 @font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Old Newspaper Font";
   src: url("../fonts/Old Newspaper Font.ttf") format("truetype");
   font-weight: normal;

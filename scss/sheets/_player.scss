@@ -3,6 +3,18 @@
 .shadowdark.sheet.player {
 	@include p-reset;
 	color: white;
+	font-size: 18px;
+
+	input {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+
+		text-overflow: ellipsis;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.05);
+		border: none;
+	}
 
 	.abilities {
 		display: grid;
@@ -11,24 +23,91 @@
 		row-gap: 8px;
 	}
 
-	.ability {
-		font-family: "Old Newspaper Font";
-		border: 1px solid var(--color-border-light-tertiary);
-		padding: 4px;
+	.ability-score {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 4px;
+		align-items: center;
+
+		text-align: center;
+
+		input {
+			@include p-reset;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			background: rgba(0, 0, 0, 0.05);
+			border: none;
+		}
+	}
+
+	.ac-value,
+	.hp-value {
+		font-size: 38px;
+		height: auto;
+		line-height: 1;
+		margin-bottom: 2px;
+	}
+
+	.details {
+		display: grid;
+		row-gap: 8px;
+	}
+
+	.detail-box {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+		border: 2px solid var(--color-border-light-tertiary);
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-bottom: 4px;
 
 		label {
-			font-size: 18px;
-			font-weight: bold;
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;;
+			line-height: 1;
+
+			border: none;
 		}
+	}
+
+	.detail-value {
+		text-align: right;
+	}
+
+	.hit-points {
+		text-align: center;
+	}
+
+	.hp-max {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+
+		p {
+			font-size: 18px;
+		}
+
+	}
+
+	.player-body {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 180px 180px repeat(2, 1fr);
+		column-gap: 4px;
 	}
 
 	.player-header {
 		@include p-reset;
 
 		display: grid;
-		// position: fixed;
 		grid-template-columns: 110px 1fr;
-		grid-template-rows: 55px 55px;
+
 		column-gap: 4px;
 
 		align-items: center;
@@ -36,12 +115,11 @@
 
 	.player-name {
 		font-family: "Old Newspaper Font";
-		font-size: 32px;
+		font-size: 28px;
 
 		input {
 			@include p-reset;
-			padding-top: 15px;
-			padding-bottom: 19px;
+			height: auto;
 
 			text-overflow: ellipsis;
 			text-align: center;
@@ -52,6 +130,13 @@
 
 	.portrait {
 		grid-row: span 2;
+	}
+
+	.rollable {
+		&:hover {
+			cursor: pointer;
+			text-shadow: 0 0 8px var(--clickable);
+		}
 	}
 
 	.title {
@@ -73,4 +158,47 @@
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
 	}
+
+	.value-box {
+		@include p-reset;
+		border: 2px solid var(--color-border-light-tertiary);
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-bottom: 4px;
+
+		&__bold {
+			@include p-reset;
+			font-family: "Old Newspaper Font";
+			border: 2px solid var(--color-border-light-tertiary);
+			padding-bottom: 4px;
+
+			label {
+				@include p-reset;
+				display: block;
+				padding: 4px;
+
+				font-family: "Old Newspaper Font";
+				font-size: 22px;
+				line-height: 1;
+
+				border: none;
+				color: white;
+				background: linear-gradient(0.75turn, transparent, black);
+			}
+		}
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;;
+			line-height: 1;
+
+			border: none;
+		}
+	}
+
+
 }

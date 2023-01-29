@@ -16,24 +16,13 @@
 				name="name"
 				type="text"
 				value="{{ actor.name }}"
-				placeholder="{{ localize 'Name' }}"
+				placeholder="{{localize 'SHADOWDARK.character.name'}}"
 			/>
 		</h1>
 	</header>
 	<hr />
-	<section class="abilities">
-		{{#each actor.system.abilities as |ability id|}}
-			<div class="ability">
-				<label for="{{concat "system.abilities." id ".value"}}">
-					{{ability.label}}
-				</label>
-				{{numberInput
-					ability.value
-					name=(concat "system.abilities." id ".value")
-					class="ability-score" placeholder="10"
-				}}
-				<p>{{numberFormat ability.modifier decimals=0 sign=true}}</p>
-			</div>
-		{{/each}}
+	<section class="player-body">
+		{{> systems/shadowdark/templates/actors/player/abilities.hbs}}
+		{{> systems/shadowdark/templates/actors/player/details.hbs}}
 	</section>
 </form>

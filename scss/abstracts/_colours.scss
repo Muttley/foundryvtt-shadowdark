@@ -1,7 +1,10 @@
 $primary-color: black !default;
 $secondary-color: #78557e !default;
 
+$clickable: red !default;
+
 :root {
 	--primary: #{$primary-color};
 	--secondary: #{$secondary-color};
+	--clickable: #{$clickable};
 }

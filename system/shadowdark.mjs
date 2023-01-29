@@ -1,6 +1,7 @@
 import SHADOWDARK from "./src/config.mjs";
-import registerSystemSettings from "./src/settings.mjs";
+import loadTemplates from "./src/templates.mjs";
 import onUpdateWorldTime from "./src/time.mjs";
+import registerSystemSettings from "./src/settings.mjs";
 
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
@@ -38,6 +39,7 @@ Hooks.once("init", () => {
 	CONFIG.Actor.documentClass = documents.ActorSD;
 
 	registerSystemSettings();
+	loadTemplates();
 
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
