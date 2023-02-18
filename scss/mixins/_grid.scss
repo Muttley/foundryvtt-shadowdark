@@ -1,0 +1,30 @@
+$columns: 6;
+
+%grid-styles {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	column-gap: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+@mixin grid-colspan {
+	@for $i from 1 through $columns {
+		.grid-colspan-#{$i} {
+			grid-row: span #{$i};
+		}
+	}
+}
+
+@mixin grid-x-columns {
+	@for $i from 1 through $columns {
+		.grid-#{$i}-columns {
+			@extend %grid-styles;
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+}
+
+@include grid-colspan;
+@include grid-x-columns;

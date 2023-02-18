@@ -86,6 +86,7 @@
 		"types": [
 			"Armor",
 			"Basic",
+			"Spell",
 			"Talent",
 			"Weapon"
 		],
@@ -120,6 +121,9 @@
 				"common",
 				"physical"
 			]
+		},
+		"Spell": {
+			"templates": ["common"]
 		},
 		"Talent": {
 			"templates": ["common"]

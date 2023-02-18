@@ -16,13 +16,14 @@
 				name="name"
 				type="text"
 				value="{{ actor.name }}"
-				placeholder="{{localize 'SHADOWDARK.character.name'}}"
+				placeholder="{{localize 'SHADOWDARK.character_name'}}"
 			/>
 		</h1>
 	</header>
 	<hr />
 	<section class="player-body">
-		{{> systems/shadowdark/templates/actors/player/abilities.hbs}}
-		{{> systems/shadowdark/templates/actors/player/details.hbs}}
+		{{> systems/shadowdark/templates/actors/player/abilities.hbs }}
+		{{> systems/shadowdark/templates/actors/player/details.hbs   }}
+		{{> systems/shadowdark/templates/actors/player/talents.hbs   }}
 	</section>
 </form>

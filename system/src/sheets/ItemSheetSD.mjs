@@ -12,7 +12,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		return `systems/shadowdark/templates/items/${this.item.type}.hbs`;
+		const type = this.item.type.toLowerCase();
+		return `systems/shadowdark/templates/items/${type}.hbs`;
 	}
 
 	/** @override */

@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../mixins" as *;
 
 .shadowdark.sheet.player {
 	@include p-reset;
@@ -8,6 +9,7 @@
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
+		font-size: 16px;
 
 		text-overflow: ellipsis;
 		text-align: center;
@@ -16,11 +18,23 @@
 		border: none;
 	}
 
+	ol {
+		padding: 4px;
+		margin: 4px;
+
+		list-style-type: none;
+
+		font-family: "Montserrat-Medium";
+		font-size: 16px;
+	}
+
+
 	.abilities {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: 8px;
-		row-gap: 8px;
+		grid-template-rows: repeat(3, 56px) 114px;
+		column-gap: 4px;
+		row-gap: 4px;
 	}
 
 	.ability-score {
@@ -52,12 +66,14 @@
 
 	.details {
 		display: grid;
-		row-gap: 8px;
+		grid-template-rows: 56px;
+		row-gap: 4px;
 	}
 
 	.detail-box {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
+		font-size: 16px;
 		border: 2px solid var(--color-border-light-tertiary);
 		padding-left: 4px;
 		padding-right: 4px;
@@ -69,7 +85,8 @@
 
 			font-family: "Old Newspaper Font";
 			font-size: 22px;
-			font-weight: bold;;
+			font-weight: bold;
+
 			line-height: 1;
 
 			border: none;
@@ -92,13 +109,18 @@
 		p {
 			font-size: 18px;
 		}
+	}
 
+	.level-xp {
+		display: grid;
+		grid-template-columns: 0.5fr 1.5fr;
+		column-gap: 4px;
 	}
 
 	.player-body {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 180px 180px repeat(2, 1fr);
+		grid-template-columns: 180px 185px 2fr;
 		column-gap: 4px;
 	}
 
@@ -193,12 +215,30 @@
 
 			font-family: "Old Newspaper Font";
 			font-size: 22px;
-			font-weight: bold;;
+			font-weight: bold;
+
 			line-height: 1;
 
 			border: none;
 		}
 	}
 
+	.xp-score {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 2px;
+		align-items: center;
 
+		text-align: center;
+
+		input {
+			@include p-reset;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			background: rgba(0, 0, 0, 0.05);
+			border: none;
+		}
+	}
 }
