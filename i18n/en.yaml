@@ -11,14 +11,25 @@ SHADOWDARK.character_class: Class
 SHADOWDARK.character_deity: Deity
 SHADOWDARK.character_hp_max: Max
 SHADOWDARK.character_hp: HP
+SHADOWDARK.character_level: Level
 SHADOWDARK.character_name: Name
 SHADOWDARK.character_race: Race
 SHADOWDARK.character_title: Title
+SHADOWDARK.character_xp: XP
+SHADOWDARK.coins.cp: CP
+SHADOWDARK.coins.gp: GP
+SHADOWDARK.coins.sp: SP
 SHADOWDARK.item_type.armor: Armor
 SHADOWDARK.item_type.basic: Basic
-SHADOWDARK.item_type.weapon: Weapon
-SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
-SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.spell: Spell
-SHADOWDARK.character_level: Level
-SHADOWDARK.character_xp: XP
+SHADOWDARK.item_type.talent: Talent
+SHADOWDARK.item_type.weapon: Weapon
+SHADOWDARK.item.cost: Cost
+SHADOWDARK.item.inventory_slots: Inventory Slots
+SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
+SHADOWDARK.spell_duration.focus: Focus
+SHADOWDARK.spell_duration.instant: Instant
+SHADOWDARK.spell_duration.rounds: Rounds
+SHADOWDARK.spell_range.close: Close
+SHADOWDARK.spell_range.far: Far
+SHADOWDARK.spell_range.near: Near

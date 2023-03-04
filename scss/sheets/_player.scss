@@ -32,7 +32,7 @@
 	.abilities {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(3, 56px) 114px;
+		grid-template-rows: repeat(3, 48px) 110px;
 		column-gap: 4px;
 		row-gap: 4px;
 	}
@@ -120,7 +120,7 @@
 	.player-body {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 180px 185px 2fr;
+		grid-template-columns: 180px 160px 2fr;
 		column-gap: 4px;
 	}
 
@@ -137,17 +137,9 @@
 
 	.player-name {
 		font-family: "Old Newspaper Font";
-		font-size: 28px;
+		font-size: 32px;
 
-		input {
-			@include p-reset;
-			height: auto;
-
-			text-overflow: ellipsis;
-			text-align: center;
-
-			border: none;
-		}
+		height: 100%;
 	}
 
 	.portrait {
@@ -181,47 +173,47 @@
 		}
 	}
 
-	.value-box {
-		@include p-reset;
-		border: 2px solid var(--color-border-light-tertiary);
-		padding-left: 4px;
-		padding-right: 4px;
-		padding-bottom: 4px;
+	// .value-box {
+	// 	@include p-reset;
+	// 	border: 2px solid var(--color-border-light-tertiary);
+	// 	padding-left: 4px;
+	// 	padding-right: 4px;
+	// 	padding-bottom: 4px;
 
-		&__bold {
-			@include p-reset;
-			font-family: "Old Newspaper Font";
-			border: 2px solid var(--color-border-light-tertiary);
-			padding-bottom: 4px;
+	// 	&__bold {
+	// 		@include p-reset;
+	// 		font-family: "Old Newspaper Font";
+	// 		border: 2px solid var(--color-border-light-tertiary);
+	// 		padding-bottom: 4px;
 
-			label {
-				@include p-reset;
-				display: block;
-				padding: 4px;
+	// 		label {
+	// 			@include p-reset;
+	// 			display: block;
+	// 			padding: 4px;
 
-				font-family: "Old Newspaper Font";
-				font-size: 22px;
-				line-height: 1;
+	// 			font-family: "Old Newspaper Font";
+	// 			font-size: 22px;
+	// 			line-height: 1;
 
-				border: none;
-				color: white;
-				background: linear-gradient(0.75turn, transparent, black);
-			}
-		}
+	// 			border: none;
+	// 			color: white;
+	// 			background: linear-gradient(0.75turn, transparent, black);
+	// 		}
+	// 	}
 
-		label {
-			@include p-reset;
-			display: block;
+	// 	label {
+	// 		@include p-reset;
+	// 		display: block;
 
-			font-family: "Old Newspaper Font";
-			font-size: 22px;
-			font-weight: bold;
+	// 		font-family: "Old Newspaper Font";
+	// 		font-size: 22px;
+	// 		font-weight: bold;
 
-			line-height: 1;
+	// 		line-height: 1;
 
-			border: none;
-		}
-	}
+	// 		border: none;
+	// 	}
+	// }
 
 	.xp-score {
 		display: grid;

@@ -1,5 +1,5 @@
 <form class="{{cssClass}}" autocomplete="off">
-	<header class="sheet-header">
+	<header class="item-header">
 		<img
 			src="{{ item.img }}"
 			data-edit="img"
@@ -9,6 +9,7 @@
 		/>
 		<h1>
 			<input
+				class="item-name"
 				name="name"
 				type="text"
 				value="{{ item.name }}"
@@ -16,7 +17,7 @@
 			/>
 		</h1>
 	</header>
-	<div class="sheet-body">
-		<h1 class="sheet-body--title">{{localize 'SHADOWDARK.item_type.basic'}}</h1>
-	</div>
+	<section class="item-body">
+		{{> systems/shadowdark/templates/items/partials/cost.hbs }}
+	</section>
 </form>

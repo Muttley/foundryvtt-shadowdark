@@ -8,6 +8,17 @@ export default class ActorSD extends Actor {
 		return this._abilityModifier(this.system.abilities[ability].value);
 	}
 
+	numGearSlots() {
+		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
+
+		if (this.type === "Player") {
+			const strength = this.system.abilities.str.value;
+			gearSlots = strength > gearSlots ? strength : gearSlots;
+		}
+
+		return gearSlots;
+	}
+
 	/** @inheritDoc */
 	prepareBaseData() {
 		switch (this.type) {

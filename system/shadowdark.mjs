@@ -6,7 +6,6 @@ import registerSystemSettings from "./src/settings.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
@@ -26,7 +25,8 @@ globalThis.shadowdark = {
 //
 Hooks.once("init", () => {
 	globalThis.shadowdark = game.shadowdark = Object.assign(
-		game.system, globalThis.shadowdark
+		game.system,
+		globalThis.shadowdark
 	);
 
 	console.log("Shadowdark | Initialising the Shadowdark RPG Game System");
@@ -73,6 +73,22 @@ Hooks.on("ready", () => {
 //
 Hooks.once("setup", () => {
 	console.log("Shadowdark | Setup Hook");
+
+	// Localize all the strings in the game config in advance
+	//
+	for (const obj in game.shadowdark.config) {
+		if ({}.hasOwnProperty.call(game.shadowdark.config, obj)) {
+			for (const el in game.shadowdark.config[obj]) {
+				if ({}.hasOwnProperty.call(game.shadowdark.config[obj], el)) {
+					if (typeof game.shadowdark.config[obj][el] === "string") {
+						game.shadowdark.config[obj][el] = game.i18n.localize(
+							game.shadowdark.config[obj][el]
+						);
+					}
+				}
+			}
+		}
+	}
 });
 
 Hooks.on("updateWorldTime", onUpdateWorldTime);

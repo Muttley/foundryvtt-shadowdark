@@ -12,8 +12,9 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		const type = this.item.type.toLowerCase();
-		return `systems/shadowdark/templates/items/${type}.hbs`;
+		// const type = this.item.type.toLowerCase();
+		// return `systems/shadowdark/templates/items/${type}.hbs`;
+		return "systems/shadowdark/templates/items/item.hbs";
 	}
 
 	/** @override */
@@ -27,6 +28,8 @@ export default class ItemSheetSD extends ItemSheet {
 			source: source.system,
 			system: item.system,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
+			usesSlots: item.system.slots !== undefined,
+			hasCost: item.system.cost !== undefined,
 		});
 
 		return context;

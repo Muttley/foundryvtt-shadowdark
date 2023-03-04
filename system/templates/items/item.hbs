@@ -9,6 +9,7 @@
 		/>
 		<h1>
 			<input
+				class="item-name"
 				name="name"
 				type="text"
 				value="{{ item.name }}"
@@ -16,7 +17,13 @@
 			/>
 		</h1>
 	</header>
-	<div class="item-body">
+	<section class="item-body">
+		{{#if hasCost }}
+			{{> systems/shadowdark/templates/items/partials/cost.hbs }}
+		{{/if}}
 
-	</div>
+		{{#if usesSlots }}
+			{{> systems/shadowdark/templates/items/partials/slots.hbs }}
+		{{/if}}
+	</section>
 </form>

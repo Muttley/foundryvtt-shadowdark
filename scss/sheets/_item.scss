@@ -1,25 +1,89 @@
 @use "../abstracts" as *;
+@use "../mixins" as *;
 
 .shadowdark.sheet.item {
-	.sheet-header {
-		color: red;
+	@include p-reset;
+	color: white;
+	font-size: 18px;
+
+	input {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+		font-size: 16px;
+
+		text-overflow: ellipsis;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.05);
+		border: none;
 	}
 
-	.sheet-body {
-		color: blue;
+	label {
+		@include p-reset;
+		display: block;
 
-		&--title {
+		font-family: "Old Newspaper Font";
+		font-size: 22px;
+		font-weight: bold;
+
+		line-height: 1;
+
+		border: none;
+	}
+
+	.coins {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.coin-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		align-items: center;
+
+		label {
+			font-size: 18px;
+			font-weight: normal;
+		}
+	}
+
+	.coin-value {
+		text-align: center;
+
+		input {
+			@include p-reset;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			background: rgba(0, 0, 0, 0.05);
 			border: none;
-			color: var(--secondary);
-			font-family: "JSL Blackletter";
-			font-size: 3rem;
-		}
-
-		&--label {
-			color: black;
-			font-family: "Old Newspaper Font";
-			font-size: 1.2rem;
 		}
 	}
 
+	.item-body {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 180px 160px 2fr;
+		column-gap: 4px;
+	}
+
+	.item-header {
+		@include p-reset;
+
+		display: grid;
+		grid-template-columns: 110px 1fr;
+
+		column-gap: 4px;
+
+		align-items: center;
+	}
+
+	.item-name {
+		font-family: "Old Newspaper Font";
+		font-size: 32px;
+
+		height: 100%;
+	}
 }

@@ -5,6 +5,8 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/hp.hbs",
 		"systems/shadowdark/templates/actors/player/details.hbs",
 		"systems/shadowdark/templates/actors/player/talents.hbs",
+		"systems/shadowdark/templates/items/partials/cost.hbs",
+		"systems/shadowdark/templates/items/partials/slots.hbs",
 	];
 
 	return loadTemplates(paths);

@@ -22,6 +22,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const context = await super.getData(options);
 
 		context.xpNextLevel = context.system.level.value * 10;
+		context.gearSlots = this.actor.numGearSlots();
 
 		return context;
 	}

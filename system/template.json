@@ -101,8 +101,11 @@
 					"sp": 0,
 					"cp": 0
 				},
-				"slots": 1,
-				"per_slot": 1
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"value": 1
+				}
 			}
 		},
 		"Armor": {
@@ -122,8 +125,21 @@
 				"physical"
 			]
 		},
+		"Gem": {
+			"templates": [
+				"common",
+				"physical"
+			]
+		},
 		"Spell": {
-			"templates": ["common"]
+			"templates": ["common"],
+			"class": [],
+			"duration": {
+				"type": "",
+				"value": 0
+			},
+			"range": "",
+			"tier": ""
 		},
 		"Talent": {
 			"templates": ["common"]
