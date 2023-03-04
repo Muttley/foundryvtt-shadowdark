@@ -5,10 +5,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
+			classes: ["shadowdark", "sheet", "player"],
 			width: 560,
 			height: 560,
-			classes: ["shadowdark", "sheet", "player"],
 			resizable: true,
+			tabs: [
+				{
+					navSelector: ".player-navigation",
+					contentSelector: ".player-body",
+					initial: "pc-tab-abilities",
+				}
+			]
 		});
 	}
 

@@ -53,7 +53,10 @@ Hooks.once("init", () => {
 	});
 
 	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("shadowdark", sheets.ItemSheetSD);
+	Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
+		makeDefault: true,
+		label: "SHADOWDARK.sheet.ClassItem",
+	});
 });
 
 /* -------------------------------------------- */

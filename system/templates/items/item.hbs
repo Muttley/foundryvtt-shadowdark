@@ -18,14 +18,20 @@
 		</h1>
 	</header>
 	<section class="item-body">
+		{{> systems/shadowdark/templates/items/partials/description.hbs }}
+
 		{{#if hasCost }}
 			{{> systems/shadowdark/templates/items/partials/cost.hbs }}
 		{{/if}}
 
 		{{#if usesSlots }}
+			{{!-- Gems have non-configurable slot settings --}}
 			{{#ifNeq item.type "Gem" }}
 				{{> systems/shadowdark/templates/items/partials/slots.hbs }}
+			{{else}}
+				<div></div>
 			{{/ifNeq}}
 		{{/if}}
+
 	</section>
 </form>

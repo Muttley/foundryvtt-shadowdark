@@ -26,8 +26,14 @@ SHADOWDARK.item_type.spell: Spell
 SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.weapon: Weapon
 SHADOWDARK.item.cost: Cost
-SHADOWDARK.item.inventory_slots: Inventory Slots
+SHADOWDARK.item.description: Description
+SHADOWDARK.item.inventory_slots: Slots
+SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
+SHADOWDARK.sheet.player.tab.abilities: Abilities
+SHADOWDARK.sheet.player.tab.background: Background
+SHADOWDARK.sheet.player.tab.inventory: Inventory
+SHADOWDARK.sheet.player.tab.talents: Talents
 SHADOWDARK.spell_duration.focus: Focus
 SHADOWDARK.spell_duration.instant: Instant
 SHADOWDARK.spell_duration.rounds: Rounds

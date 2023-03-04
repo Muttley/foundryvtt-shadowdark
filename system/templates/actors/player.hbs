@@ -21,10 +21,33 @@
 			/>
 		</h1>
 	</header>
-	<hr />
+
+	<nav class="player-navigation" data-group="primary">
+		<div class="player-navigation__flex">
+
+			<a class="item active" data-tab="tab-abilities">
+				{{localize "SHADOWDARK.sheet.player.tab.abilities"}}
+			</a>
+
+			<a class="item" data-tab="tab-talents">
+				{{localize "SHADOWDARK.sheet.player.tab.talents"}}
+			</a>
+
+			<a class="item" data-tab="tab-inventory">
+				{{localize "SHADOWDARK.sheet.player.tab.inventory"}}
+			</a>
+
+			<a class="item" data-tab="tab-background">
+				{{localize "SHADOWDARK.sheet.player.tab.background"}}
+			</a>
+
+		</div>
+	</nav>
+	<hr	/>
 	<section class="player-body">
 		{{> systems/shadowdark/templates/actors/player/abilities.hbs }}
-		{{> systems/shadowdark/templates/actors/player/details.hbs   }}
-		{{> systems/shadowdark/templates/actors/player/talents.hbs   }}
+		{{> systems/shadowdark/templates/actors/player/talents.hbs }}
+		{{> systems/shadowdark/templates/actors/player/inventory.hbs }}
+		{{> systems/shadowdark/templates/actors/player/background.hbs }}
 	</section>
 </form>

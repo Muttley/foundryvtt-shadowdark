@@ -31,14 +31,14 @@
 		border: none;
 	}
 
-	.coins {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-	}
+	// .coins {
+	// 	// display: grid;
+	// 	// grid-template-columns: repeat(3, 1fr);
+	// }
 
 	.coin-box {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 2fr 1fr;
 
 		align-items: center;
 
@@ -64,16 +64,25 @@
 
 	.item-body {
 		@include p-reset;
+		margin: 4px;
 		display: grid;
-		grid-template-columns: 180px 160px 2fr;
+		grid-template-columns: 1fr 100px;
+		grid-template-rows: 100px 100px 1fr;
 		column-gap: 4px;
+		row-gap: 8px;
+	}
+
+	.item-description {
+		@include p-reset;
+		height: 100%;
+		grid-row: span 3;
 	}
 
 	.item-header {
 		@include p-reset;
 
 		display: grid;
-		grid-template-columns: 110px 1fr;
+		grid-template-columns: 68px 1fr;
 
 		column-gap: 4px;
 

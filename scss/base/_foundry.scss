@@ -4,16 +4,26 @@ $pause-h: 200px;
 $pause-w: 200px;
 
 #pause>img {
-  content: url("../assets/logo/arcane-library-logo.webp");
-  width: $pause-w;
-  height: $pause-h;
-  top: -56px;
-  left: calc(50% - ($pause-w * .5));
-  opacity: .5;
-  --fa-animation-duration: 30s;
+	content: url("../assets/logo/arcane-library-logo.webp");
+	width: $pause-w;
+	height: $pause-h;
+	top: -56px;
+	left: calc(50% - ($pause-w * .5));
+	opacity: .5;
+	--fa-animation-duration: 30s;
 }
 
 #pause figcaption {
-  font-family: var(--font-header);
-  font-size: 3.5em;
+	font-family: var(--font-header);
+	font-size: 3.5em;
+}
+
+.editor {
+	height: 100%;
+	padding: 0 4px;
+
+	.tox-toolbar-overlord,
+	.tox-toolbar__primary {
+		background: none;
+	}
 }

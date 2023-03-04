@@ -1,22 +1,24 @@
-<section class="abilities">
-	{{#each actor.system.abilities as |ability id|}}
-		<div class="value-box ability" data-ability="{{id}}">
-			<label
-				for="{{concat "system.abilities." id ".value"}}"
-				class="rollable"
-			>
-				{{ability.label}}
-			</label>
-			<div class="ability-score">
-				{{numberInput
-					ability.value
-					name=(concat "system.abilities." id ".value")
-					class="ability-score" placeholder="10"
-				}}
-				<p>({{numberFormat ability.modifier decimals=0 sign=true}})</p>
+<section class="tab tab-abilities" data-group="primary" data-tab="tab-abilities">
+	<div class="ability-scores">
+		{{#each actor.system.abilities as |ability id|}}
+			<div class="value-box ability" data-ability="{{id}}">
+				<label
+					for="{{concat "system.abilities." id ".value"}}"
+					class="rollable"
+				>
+					{{ability.label}}
+				</label>
+				<div class="ability-score">
+					{{numberInput
+						ability.value
+						name=(concat "system.abilities." id ".value")
+						class="ability-score" placeholder="10"
+					}}
+					<p>({{numberFormat ability.modifier decimals=0 sign=true}})</p>
+				</div>
 			</div>
-		</div>
-	{{/each}}
-	{{> systems/shadowdark/templates/actors/player/abilities/hp.hbs }}
-	{{> systems/shadowdark/templates/actors/player/abilities/ac.hbs }}
+		{{/each}}
+		{{> systems/shadowdark/templates/actors/player/abilities/hp.hbs }}
+		{{> systems/shadowdark/templates/actors/player/abilities/ac.hbs }}
+	</div>
 </section>

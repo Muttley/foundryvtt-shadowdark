@@ -29,7 +29,7 @@
 	}
 
 
-	.abilities {
+	.ability-scores {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: repeat(3, 48px) 110px;
@@ -142,6 +142,34 @@
 		height: 100%;
 	}
 
+	.player-navigation {
+		&__flex {
+			display: flex;
+			justify-content: space-evenly;
+
+			a {
+				@include p-reset;
+				margin-top: 4px;
+				margin-bottom: 8px;
+
+				font-family: "Old Newspaper Font";
+				font-weight: bold;
+				font-size: 1.5rem;
+				line-height: 1;
+
+
+				color: $primary-color;
+				// text-shadow: -0.2rem -0.2rem $secondary-color;
+
+				&.active {
+					// color: $secondary-color;
+					// text-shadow: 0 0 4px $secondary-color;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
 	.portrait {
 		grid-row: span 2;
 	}
@@ -172,48 +200,6 @@
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
 	}
-
-	// .value-box {
-	// 	@include p-reset;
-	// 	border: 2px solid var(--color-border-light-tertiary);
-	// 	padding-left: 4px;
-	// 	padding-right: 4px;
-	// 	padding-bottom: 4px;
-
-	// 	&__bold {
-	// 		@include p-reset;
-	// 		font-family: "Old Newspaper Font";
-	// 		border: 2px solid var(--color-border-light-tertiary);
-	// 		padding-bottom: 4px;
-
-	// 		label {
-	// 			@include p-reset;
-	// 			display: block;
-	// 			padding: 4px;
-
-	// 			font-family: "Old Newspaper Font";
-	// 			font-size: 22px;
-	// 			line-height: 1;
-
-	// 			border: none;
-	// 			color: white;
-	// 			background: linear-gradient(0.75turn, transparent, black);
-	// 		}
-	// 	}
-
-	// 	label {
-	// 		@include p-reset;
-	// 		display: block;
-
-	// 		font-family: "Old Newspaper Font";
-	// 		font-size: 22px;
-	// 		font-weight: bold;
-
-	// 		line-height: 1;
-
-	// 		border: none;
-	// 	}
-	// }
 
 	.xp-score {
 		display: grid;
