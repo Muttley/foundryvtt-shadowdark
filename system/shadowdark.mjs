@@ -1,6 +1,7 @@
 import SHADOWDARK from "./src/config.mjs";
 import loadTemplates from "./src/templates.mjs";
 import onUpdateWorldTime from "./src/time.mjs";
+import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 
 import * as documents from "./src/documents/_module.mjs";
@@ -37,7 +38,9 @@ Hooks.once("init", () => {
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
+	CONFIG.Item.documentClass = documents.ItemSD;
 
+	registerHandlebarsHelpers();
 	registerSystemSettings();
 	loadTemplates();
 

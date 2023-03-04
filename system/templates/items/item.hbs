@@ -23,7 +23,9 @@
 		{{/if}}
 
 		{{#if usesSlots }}
-			{{> systems/shadowdark/templates/items/partials/slots.hbs }}
+			{{#ifNeq item.type "Gem" }}
+				{{> systems/shadowdark/templates/items/partials/slots.hbs }}
+			{{/ifNeq}}
 		{{/if}}
 	</section>
 </form>

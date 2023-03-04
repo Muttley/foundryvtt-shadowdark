@@ -12,15 +12,13 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		// const type = this.item.type.toLowerCase();
-		// return `systems/shadowdark/templates/items/${type}.hbs`;
 		return "systems/shadowdark/templates/items/item.hbs";
 	}
 
 	/** @override */
 	async getData(options) {
-		// TODO Implement our own data context
 		const context = await super.getData(options);
+
 		const item = context.item;
 		const source = item.toObject();
 

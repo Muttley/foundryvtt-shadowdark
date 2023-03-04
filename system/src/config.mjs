@@ -5,6 +5,10 @@ SHADOWDARK.DEFAULTS = {
 	GEAR_SLOTS: 10,
 };
 
+SHADOWDARK.INVENTORY = {
+	GEMS_PER_SLOT: 10,
+};
+
 SHADOWDARK.SPELL_DURATIONS = {
 	focus: "SHADOWDARK.spell_duration.focus",
 	instant: "SHADOWDARK.spell_duration.instant",
