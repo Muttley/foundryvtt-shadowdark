@@ -1,79 +1,94 @@
 <section class="tab tab-background" data-group="primary" data-tab="tab-background">
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_race'}}</label>
-		<input
-			name="system.race"
-			type="text"
-			class="detail-value"
-			value="{{ system.race }}"
-		/>
-	</div>
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_class'}}</label>
-		<input
-			name="system.class"
-			type="text"
-			class="detail-value"
-			value="{{ system.class }}"
-		/>
-	</div>
-	<div class="level-xp">
-		<div class="value-box">
-			<label>{{localize 'SHADOWDARK.character_level'}}</label>
-			{{numberInput
-				system.level.value
-				name="system.level.value"
-				class="ability-score"
-			}}
-		</div>
-		<div class="value-box">
-			<label>{{localize 'SHADOWDARK.character_xp'}}</label>
-			<div class="xp-score">
-				{{numberInput
-					system.level.xp
-					name="system.level.xp"
-					class="ability-score"
-					placeholder="0"
-				}}
-				<p>/</p>
-				<p>{{xpNextLevel}}</p>
+	<div class="background-grid">
+		<div class="background-details">
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_race'}}</label>
+				<input
+					name="system.race"
+					type="text"
+					class="detail-value"
+					value="{{ system.race }}"
+				/>
+			</div>
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_class'}}</label>
+				<input
+					name="system.class"
+					type="text"
+					class="detail-value"
+					value="{{ system.class }}"
+				/>
+			</div>
+			<div class="level-xp">
+				<div class="value-box">
+					<label>{{localize 'SHADOWDARK.character_level'}}</label>
+					{{numberInput
+						system.level.value
+						name="system.level.value"
+						class="ability-score"
+					}}
+				</div>
+				<div class="value-box">
+					<label>{{localize 'SHADOWDARK.character_xp'}}</label>
+					<div class="xp-score">
+						{{numberInput
+							system.level.xp
+							name="system.level.xp"
+							class="ability-score"
+							placeholder="0"
+						}}
+						<p>/</p>
+						<p>{{xpNextLevel}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_title'}}</label>
+				<input
+					name="system.title"
+					type="text"
+					class="detail-value"
+					value="{{ system.title }}"
+				/>
+			</div>
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_alignment'}}</label>
+				<input
+					name="system.alignment"
+					type="text"
+					class="detail-value"
+					value="{{ system.alignment }}"
+				/>
+			</div>
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_background'}}</label>
+				<input
+					name="system.background"
+					type="text"
+					class="detail-value"
+					value="{{ system.background }}"
+				/>
+			</div>
+			<div class="detail-box">
+				<label>{{localize 'SHADOWDARK.character_deity'}}</label>
+				<input
+					name="system.deity"
+					type="text"
+					class="detail-value"
+					value="{{ system.deity }}"
+				/>
 			</div>
 		</div>
-	</div>
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_title'}}</label>
-		<input
-			name="system.title"
-			type="text"
-			class="detail-value"
-			value="{{ system.title }}"
-		/>
-	</div>
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_alignment'}}</label>
-		<input
-			name="system.alignment"
-			type="text"
-			class="detail-value"
-			value="{{ system.alignment }}"
-		/>
-	</div>
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_background'}}</label>
-		<input
-			name="system.background"
-			type="text"
-			class="detail-value"
-			value="{{ system.background }}"
-		/>
-	</div>
-	<div class="detail-box">
-		<label>{{localize 'SHADOWDARK.character_deity'}}</label>
-		<input
-			name="system.deity"
-			type="text"
-			class="detail-value"
-			value="{{ system.deity }}"
-		/>
+		<div class="background-notes">
+			<label>{{localize 'SHADOWDARK.character_notes'}}</label>
+			{{editor
+				system.notes
+				target="system.notes"
+				button=true
+				editable=editable
+				engine="prosemirror"
+				collaborate=false
+			}}
+		</div>
 	</div>
 </section>

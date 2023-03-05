@@ -18,6 +18,19 @@
 		border: none;
 	}
 
+	label {
+		@include p-reset;
+		display: block;
+
+		font-family: "Old Newspaper Font";
+		font-size: 22px;
+		font-weight: bold;
+
+		line-height: 1;
+
+		border: none;
+	}
+
 	ol {
 		padding: 4px;
 		margin: 4px;
@@ -28,13 +41,20 @@
 		font-size: 16px;
 	}
 
+	.abilities-grid {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 180px 1fr;
+		column-gap: 8px;
+	}
 
 	.ability-scores {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: repeat(3, 48px) 110px;
-		column-gap: 4px;
-		row-gap: 4px;
+		column-gap: 8px;
+		row-gap: 8px;
+		background-color: var(--form-background);
 	}
 
 	.ability-score {
@@ -64,6 +84,26 @@
 		margin-bottom: 2px;
 	}
 
+	.background-grid {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 180px 1fr;
+		column-gap: 8px;
+	}
+
+	.background-details {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 4px;
+		background-color: var(--form-background);
+	}
+
+	.background-notes {
+		@include p-reset;
+		margin-bottom: 8px;
+		background-color: var(--form-background);
+	}
+
 	.details {
 		display: grid;
 		grid-template-rows: 56px;
@@ -74,23 +114,9 @@
 		@include p-reset;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
-		border: 2px solid var(--color-border-light-tertiary);
 		padding-left: 4px;
 		padding-right: 4px;
 		padding-bottom: 4px;
-
-		label {
-			@include p-reset;
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 22px;
-			font-weight: bold;
-
-			line-height: 1;
-
-			border: none;
-		}
 	}
 
 	.detail-value {
@@ -114,14 +140,12 @@
 	.level-xp {
 		display: grid;
 		grid-template-columns: 0.5fr 1.5fr;
-		column-gap: 4px;
+		column-gap: 8px;
 	}
 
 	.player-body {
 		@include p-reset;
-		display: grid;
-		grid-template-columns: 180px 160px 2fr;
-		column-gap: 4px;
+		margin: 4px;
 	}
 
 	.player-header {
@@ -137,7 +161,7 @@
 
 	.player-name {
 		font-family: "Old Newspaper Font";
-		font-size: 32px;
+		font-size: 2.5rem;
 
 		height: 100%;
 	}
@@ -149,21 +173,15 @@
 
 			a {
 				@include p-reset;
-				margin-top: 4px;
-				margin-bottom: 8px;
+				margin: 4px;
 
 				font-family: "Old Newspaper Font";
-				font-weight: bold;
-				font-size: 1.5rem;
+				font-size: 1.75rem;
 				line-height: 1;
 
-
 				color: $primary-color;
-				// text-shadow: -0.2rem -0.2rem $secondary-color;
 
 				&.active {
-					// color: $secondary-color;
-					// text-shadow: 0 0 4px $secondary-color;
 					text-decoration: underline;
 				}
 			}
@@ -185,7 +203,7 @@
 		@include p-reset;
 
 		font-family: "JSL Blackletter";
-		font-size: 3rem;
+		font-size: 3.5rem;
 
 		text-align: right;
 		line-height: 1;

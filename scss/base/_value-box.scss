@@ -3,7 +3,6 @@
 
 .value-box {
 	@include p-reset;
-	border: 2px solid var(--color-border-light-tertiary);
 	padding-left: 4px;
 	padding-right: 4px;
 	padding-bottom: 4px;
@@ -11,7 +10,6 @@
 	&__bold {
 		@include p-reset;
 		font-family: "Old Newspaper Font";
-		border: 2px solid var(--color-border-light-tertiary);
 		padding-bottom: 4px;
 
 		label {

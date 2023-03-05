@@ -9,6 +9,7 @@ export default class ActorSheetSD extends ActorSheet {
 			actor: actorData,
 			config: CONFIG.SHADOWDARK,
 			cssClass: this.actor.isOwner ? "editable" : "locked",
+			editable: this.isEditable,
 			isNpc: this.actor.type === "NPC",
 			isPlayer: this.actor.type === "Player",
 			items: actorData.items,

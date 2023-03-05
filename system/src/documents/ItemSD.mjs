@@ -7,7 +7,7 @@ export default class ItemSD extends Item {
 		if (data.type === "Gem") {
 			const slots = {
 				free_carry: 0,
-				per_slot: 10,
+				per_slot: CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT,
 				slots_used: 1,
 			};
 
