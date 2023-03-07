@@ -10,7 +10,7 @@ export default class WeaponPropertiesSD extends FormApplication {
 			this.properties[key] = {
 				selected: false,
 				title: weaponProperties[key],
-			}
+			};
 		}
 
 		for (const key of this.object.system.properties) {
