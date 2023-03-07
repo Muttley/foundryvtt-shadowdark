@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.weapon-properties {
+
+	.properties-grid {
+		display: grid;
+		row-gap: 8px;
+	}
+
+	.property {
+		font-size: 22px;
+		text-align: center;
+		width: 100%;
+		background-color: var(--form-background);
+
+		&:hover {
+			cursor: pointer;
+			text-shadow: 0 0 8px var(--clickable);
+		}
+
+		&.selected {
+			background-color: var(--secondary);
+			color: white;
+		}
+	}
+}

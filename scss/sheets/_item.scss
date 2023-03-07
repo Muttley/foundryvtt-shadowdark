@@ -152,4 +152,11 @@
 			background-color: var(--form-background);
 		}
 	}
+
+	.weapon-property-list {
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0 5px var(--color-shadow-primary);
+		}
+	}
 }

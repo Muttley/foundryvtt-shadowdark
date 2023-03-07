@@ -47,4 +47,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let ability = event.currentTarget.parentElement.dataset.ability;
 		this.actor.rollAbility(ability, {event: event});
 	}
+
+
 }
