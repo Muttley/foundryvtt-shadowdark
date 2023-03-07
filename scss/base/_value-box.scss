@@ -19,7 +19,8 @@
 
 			font-family: "Old Newspaper Font";
 			font-size: 22px;
-			line-height: 1;
+			font-weight: normal;
+			line-height: 1.1;
 
 			border: none;
 			color: white;
@@ -30,12 +31,13 @@
 	label {
 		@include p-reset;
 		display: block;
+		padding: 4px;
 
 		font-family: "Old Newspaper Font";
 		font-size: 22px;
 		font-weight: bold;
 
-		line-height: 1;
+		line-height: 1.1;
 
 		border: none;
 	}

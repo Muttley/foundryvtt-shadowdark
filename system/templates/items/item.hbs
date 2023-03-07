@@ -18,6 +18,11 @@
 		</h1>
 	</header>
 	<section class="item-body">
+
+		{{#ifEq item.type "Weapon"}}
+			{{> systems/shadowdark/templates/items/partials/weapon.hbs }}
+		{{/ifEq}}
+
 		{{> systems/shadowdark/templates/items/partials/description.hbs }}
 
 		{{#if hasCost }}

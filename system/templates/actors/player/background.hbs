@@ -1,8 +1,27 @@
 <section class="tab tab-background" data-group="primary" data-tab="tab-background">
 	<div class="background-grid">
 		<div class="background-details">
+			<div class="level-xp">
+				<label>{{localize 'SHADOWDARK.sheet.player.level'}}</label>
+				{{numberInput
+					system.level.value
+					name="system.level.value"
+					class="ability-score"
+				}}
+				<label>{{localize 'SHADOWDARK.sheet.player.xp'}}</label>
+				<div class="xp-score">
+					{{numberInput
+						system.level.xp
+						name="system.level.xp"
+						class="ability-score"
+						placeholder="0"
+					}}
+					<p>/</p>
+					<p>{{xpNextLevel}}</p>
+				</div>
+			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_race'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.race'}}</label>
 				<input
 					name="system.race"
 					type="text"
@@ -11,7 +30,7 @@
 				/>
 			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_class'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
 				<input
 					name="system.class"
 					type="text"
@@ -19,31 +38,8 @@
 					value="{{ system.class }}"
 				/>
 			</div>
-			<div class="level-xp">
-				<div class="value-box">
-					<label>{{localize 'SHADOWDARK.character_level'}}</label>
-					{{numberInput
-						system.level.value
-						name="system.level.value"
-						class="ability-score"
-					}}
-				</div>
-				<div class="value-box">
-					<label>{{localize 'SHADOWDARK.character_xp'}}</label>
-					<div class="xp-score">
-						{{numberInput
-							system.level.xp
-							name="system.level.xp"
-							class="ability-score"
-							placeholder="0"
-						}}
-						<p>/</p>
-						<p>{{xpNextLevel}}</p>
-					</div>
-				</div>
-			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_title'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
 				<input
 					name="system.title"
 					type="text"
@@ -52,7 +48,7 @@
 				/>
 			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_alignment'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.alignment'}}</label>
 				<input
 					name="system.alignment"
 					type="text"
@@ -61,7 +57,7 @@
 				/>
 			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_background'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.background'}}</label>
 				<input
 					name="system.background"
 					type="text"
@@ -70,7 +66,7 @@
 				/>
 			</div>
 			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.character_deity'}}</label>
+				<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
 				<input
 					name="system.deity"
 					type="text"
@@ -80,7 +76,7 @@
 			</div>
 		</div>
 		<div class="background-notes">
-			<label>{{localize 'SHADOWDARK.character_notes'}}</label>
+			<label>{{localize 'SHADOWDARK.sheet.player.notes'}}</label>
 			{{editor
 				system.notes
 				target="system.notes"

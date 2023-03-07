@@ -102,6 +102,7 @@
 					"sp": 0,
 					"cp": 0
 				},
+				"equipped": false,
 				"slots": {
 					"free_carry": 0,
 					"per_slot": 1,
@@ -150,11 +151,11 @@
 				"physical",
 				"common"
 			],
-			"type": "",
-			"range": "",
+			"type": "melee",
+			"range": "close",
 			"damage": {
-				"1h": "",
-				"2h": ""
+				"one-handed": "",
+				"two-handed": ""
 			}
 		}
 	}

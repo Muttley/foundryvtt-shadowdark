@@ -18,18 +18,7 @@
 		border: none;
 	}
 
-	label {
-		@include p-reset;
-		display: block;
 
-		font-family: "Old Newspaper Font";
-		font-size: 22px;
-		font-weight: bold;
-
-		line-height: 1;
-
-		border: none;
-	}
 
 	ol {
 		padding: 4px;
@@ -76,6 +65,10 @@
 		}
 	}
 
+	.ac {
+		text-align: center;
+	}
+
 	.ac-value,
 	.hp-value {
 		font-size: 38px;
@@ -84,39 +77,75 @@
 		margin-bottom: 2px;
 	}
 
+	.attacks-label {
+		@include p-reset;
+		display: block;
+		padding: 4px;
+
+		font-family: "Old Newspaper Font";
+		font-size: 22px;
+		line-height: 1;
+		font-weight: normal;
+
+		border: none;
+		color: white;
+		background: linear-gradient(0.75turn, transparent, black);
+	}
+
 	.background-grid {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 180px 1fr;
+		grid-template-columns: 230px 1fr;
+		grid-template-rows: 210px 1fr;
 		column-gap: 8px;
 	}
 
 	.background-details {
 		display: grid;
-		grid-template-columns: 1fr;
 		row-gap: 4px;
 		background-color: var(--form-background);
 	}
 
 	.background-notes {
 		@include p-reset;
-		margin-bottom: 8px;
 		background-color: var(--form-background);
-	}
+		grid-row: span 2;
 
-	.details {
-		display: grid;
-		grid-template-rows: 56px;
-		row-gap: 4px;
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1.1;
+
+			border: none;
+		}
 	}
 
 	.detail-box {
 		@include p-reset;
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
-		padding-left: 4px;
-		padding-right: 4px;
-		padding-bottom: 4px;
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1.1;
+
+			border: none;
+		}
+
 	}
 
 	.detail-value {
@@ -139,8 +168,35 @@
 
 	.level-xp {
 		display: grid;
-		grid-template-columns: 0.5fr 1.5fr;
+		grid-template-columns: 1fr 1fr 1fr 3fr;
 		column-gap: 8px;
+		align-items: center;
+		text-align: center;
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1.1;
+
+			border: none;
+		}
+	}
+
+	.luck {
+		display: grid;
+		grid-template-columns: 1.8fr 1fr;
+		align-items: center;
+		background-color: var(--form-background);
+
+		p {
+			font-size: 20px;
+			font-weight: bold;
+		}
 	}
 
 	.player-body {
@@ -176,7 +232,7 @@
 				margin: 4px;
 
 				font-family: "Old Newspaper Font";
-				font-size: 1.75rem;
+				font-size: 1.5rem;
 				line-height: 1;
 
 				color: $primary-color;

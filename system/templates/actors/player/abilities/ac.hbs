@@ -1,11 +1,14 @@
 <div class="value-box__bold">
-	<label>{{localize 'SHADOWDARK.character_ac'}}</label>
-	<div class="ac-value">
-		{{numberInput
-			actor.system.attributes.ac.value
-			name="system.attributes.ac.value"
-			class="ac-value"
-			placeholder="0"
-		}}
+	<label>{{localize 'SHADOWDARK.sheet.player.ac'}}</label>
+	<div class="ac">
+		<div class="ac-value">
+			{{numberInput
+				actor.system.attributes.ac.value
+				name="system.attributes.ac.value"
+				class="ac-value"
+				placeholder="0"
+			}}
+		</div>
+		{{> systems/shadowdark/templates/actors/player/abilities/luck.hbs }}
 	</div>
 </div>

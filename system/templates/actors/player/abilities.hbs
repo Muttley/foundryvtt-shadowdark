@@ -5,7 +5,7 @@
 				<div class="value-box ability" data-ability="{{id}}">
 					<label
 						for="{{concat "system.abilities." id ".value"}}"
-						class="rollable"
+						class="ability-name rollable"
 					>
 						{{ability.label}}
 					</label>
@@ -22,5 +22,6 @@
 			{{> systems/shadowdark/templates/actors/player/abilities/hp.hbs }}
 			{{> systems/shadowdark/templates/actors/player/abilities/ac.hbs }}
 		</div>
+		{{> systems/shadowdark/templates/actors/player/abilities/attacks.hbs }}
 	</div>
 </section>

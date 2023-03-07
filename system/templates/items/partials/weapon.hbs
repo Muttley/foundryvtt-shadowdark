@@ -1,0 +1,34 @@
+<div class="weapon-details">
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_type'}}</label>
+		<select name="system.type">
+			{{selectOptions weaponTypes selected=system.type localize=false}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_range'}}</label>
+		<select name="system.range">
+			{{selectOptions ranges selected=system.range localize=false}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_damage.1h'}}</label>
+		<select name="system.damage.1h">
+			<option value="">&mdash;</option>
+			{{selectOptions weaponBaseDamageDice selected=system.damage.1h localize=false}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_damage.2h'}}</label>
+		<select name="system.damage.2h">
+			<option value="">&mdash;</option>
+			{{selectOptions weaponBaseDamageDice selected=system.damage.2h localize=false}}
+		</select>
+	</div>
+</div>
+<div class="weapon-properties">
+	<div class="weapon-property">
+		<label>{{localize 'SHADOWDARK.item.weapon_properties'}}</label>
+		<p>Versatile</p>
+	</div>
+</div>

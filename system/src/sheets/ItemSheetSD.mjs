@@ -2,9 +2,10 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
+		// TODO Custom window sizes per item class?
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			width: 560,
-			height: 400,
+			width: 490,
+			height: 515,
 			classes: ["shadowdark", "sheet", "item"],
 			resizable: true,
 		});
@@ -23,11 +24,15 @@ export default class ItemSheetSD extends ItemSheet {
 		const source = item.toObject();
 
 		foundry.utils.mergeObject(context, {
+			hasCost: item.system.cost !== undefined,
+			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
+			ranges: CONFIG.SHADOWDARK.RANGES,
 			source: source.system,
 			system: item.system,
-			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
 			usesSlots: item.system.slots !== undefined,
-			hasCost: item.system.cost !== undefined,
+			weaponBaseDamageDice: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE,
+			weaponProperties: CONFIG.SHADOWDARK.WEAPON_PROPERTIES,
+			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 		});
 
 		return context;

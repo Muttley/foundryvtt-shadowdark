@@ -37,11 +37,19 @@
 		background-color: var(--form-background);
 	}
 
+	.slots {
+		display: grid;
+		row-gap: 4px;
+		background-color: var(--form-background);
+	}
+
 	.coin-box {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 
 		align-items: center;
+
+		text-align: center;
 
 		label {
 			font-size: 18px;
@@ -67,16 +75,15 @@
 		@include p-reset;
 		margin: 4px;
 		display: grid;
-		grid-template-columns: 1fr 100px;
-		grid-template-rows: 100px 100px 1fr;
+		grid-template-columns: 1fr 120px;
 		column-gap: 4px;
 		row-gap: 8px;
 	}
 
 	.item-description {
 		@include p-reset;
-		height: 100%;
-		grid-row: span 3;
+		padding: 4px;
+		grid-row: span 2;
 		background-color: var(--form-background);
 	}
 
@@ -96,5 +103,53 @@
 		font-size: 2.5rem;
 
 		height: 100%;
+	}
+
+	.weapon-details {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
+	.weapon-detail {
+		background-color: var(--form-background);
+		display: grid;
+		row-gap: 4px;
+	}
+
+	.weapon-properties {
+		@include p-reset;
+		display: grid;
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
+	.weapon-property {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		column-gap: 8px;
+		font-family: "Montserrat-Medium";
+		font-size: 16px;
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1.1;
+
+			border: none;
+			background-color: var(--form-background);
+		}
+
+		p {
+			background-color: var(--form-background);
+		}
 	}
 }

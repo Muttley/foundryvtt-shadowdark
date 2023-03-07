@@ -37,6 +37,11 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareDerivedData() {}
 
+	rollAbility(abilityId, options={}) {
+		// TODO Implement
+		console.log(`Rolling ability check: ${abilityId}`);
+	}
+
 	/* -------------------------------------------- */
 	/*  Base Data Preparation Helpers               */
 	/* -------------------------------------------- */

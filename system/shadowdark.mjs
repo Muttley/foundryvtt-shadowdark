@@ -4,6 +4,7 @@ import onUpdateWorldTime from "./src/time.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 
+import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
@@ -13,6 +14,7 @@ import * as sheets from "./src/sheets/_module.mjs";
 
 globalThis.shadowdark = {
 	config: SHADOWDARK,
+	dice,
 	documents,
 	sheets,
 };
@@ -39,6 +41,8 @@ Hooks.once("init", () => {
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
+	CONFIG.Dice.D20RollSD = dice.D20RollSD;
+	CONFIG.Dice.DamageRoll = dice.DamageRollSD;
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();

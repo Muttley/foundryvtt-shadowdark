@@ -1,51 +1,58 @@
 <form class="{{cssClass}}" autocomplete="off">
-	<header class="player-header">
-		<img
-			class="portrait"
-			src="{{ actor.img }}"
-			data-edit="img"
-			title="{{ actor.name }}"
-			height="110"
-			width="110"
-		/>
-		<div class="title">
-			<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
-		</div>
-		<h1>
-			<input
-				class="player-name"
-				name="name"
-				type="text"
-				value="{{ actor.name }}"
-				placeholder="{{localize 'SHADOWDARK.character_name'}}"
+	<div class="player-fixed">
+		<header class="player-header">
+			<img
+				class="portrait"
+				src="{{ actor.img }}"
+				data-edit="img"
+				title="{{ actor.name }}"
+				height="110"
+				width="110"
 			/>
-		</h1>
-	</header>
+			<div class="title">
+				<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
+			</div>
+			<h1>
+				<input
+					class="player-name"
+					name="name"
+					type="text"
+					value="{{ actor.name }}"
+					placeholder="{{localize 'SHADOWDARK.sheet.player.name'}}"
+				/>
+			</h1>
+		</header>
 
-	<nav class="player-navigation" data-group="primary">
-		<div class="player-navigation__flex">
+		<nav class="player-navigation" data-group="primary">
+			<div class="player-navigation__flex">
 
-			<a class="item active" data-tab="tab-abilities">
-				{{localize "SHADOWDARK.sheet.player.tab.abilities"}}
-			</a>
+				<a class="item active" data-tab="tab-abilities">
+					{{localize "SHADOWDARK.sheet.player.tab.abilities"}}
+				</a>
 
-			<a class="item" data-tab="tab-talents">
-				{{localize "SHADOWDARK.sheet.player.tab.talents"}}
-			</a>
+				<a class="item" data-tab="tab-spells">
+					{{localize "SHADOWDARK.sheet.player.tab.spells"}}
+				</a>
 
-			<a class="item" data-tab="tab-inventory">
-				{{localize "SHADOWDARK.sheet.player.tab.inventory"}}
-			</a>
+				<a class="item" data-tab="tab-talents">
+					{{localize "SHADOWDARK.sheet.player.tab.talents"}}
+				</a>
 
-			<a class="item" data-tab="tab-background">
-				{{localize "SHADOWDARK.sheet.player.tab.background"}}
-			</a>
+				<a class="item" data-tab="tab-inventory">
+					{{localize "SHADOWDARK.sheet.player.tab.inventory"}}
+				</a>
 
-		</div>
-	</nav>
+				<a class="item" data-tab="tab-background">
+					{{localize "SHADOWDARK.sheet.player.tab.background"}}
+				</a>
+
+			</div>
+		</nav>
+	</div>
 	<hr	/>
 	<section class="player-body">
 		{{> systems/shadowdark/templates/actors/player/abilities.hbs }}
+		{{> systems/shadowdark/templates/actors/player/spells.hbs }}
 		{{> systems/shadowdark/templates/actors/player/talents.hbs }}
 		{{> systems/shadowdark/templates/actors/player/inventory.hbs }}
 		{{> systems/shadowdark/templates/actors/player/background.hbs }}
