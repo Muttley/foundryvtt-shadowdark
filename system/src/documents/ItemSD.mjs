@@ -14,4 +14,19 @@ export default class ItemSD extends Item {
 			this.updateSource({"system.slots": slots});
 		}
 	}
+
+	hasProperty(property) {
+		for (const key of this.item.system.properties) {
+			if (key === property) return true;
+		}
+		return false;
+	}
+
+	isAShield() {
+		return this.hasProperty("shield");
+	}
+
+	isNotAShield() {
+		return !this.isAShield();
+	}
 }

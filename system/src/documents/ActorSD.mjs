@@ -8,6 +8,17 @@ export default class ActorSD extends Actor {
 		return this._abilityModifier(this.system.abilities[ability].value);
 	}
 
+	attackBonus(attackType) {
+		switch (attackType) {
+			case "melee":
+				return this.abilityModifier("str");
+			case "ranged":
+				return this.abilityModifier("dex");
+			default:
+				throw new Error(`Unknown attack type ${attackType}`);
+		}
+	}
+
 	numGearSlots() {
 		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
 
@@ -37,9 +48,57 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareDerivedData() {}
 
-	rollAbility(abilityId, options={}) {
+	async rollAbility(abilityId, options={}) {
 		// TODO Implement
 		console.log(`Rolling ability check: ${abilityId}`);
+	}
+
+	async updateArmor(updatedItem) {
+		// updatedItem is the item that has had its "equipped" field toggled
+		// on/off.
+		if (updatedItem.system.equipped) {
+			// First we need to disable any already equipped armor
+			const isAShield = updatedItem.isAShield();
+
+			const armorToUnequip = [];
+
+			for (const item of this.items) {
+				if (!item.system.equipped) continue;
+				if (item.type !== "Armor") continue;
+				if (item._id !== updatedItem._id) continue;
+
+				// Only unequip a shield if the newly equipped item is a shield
+				// as well.
+				if (item.isNotAShield() || (item.isAShield() && isAShield)) {
+					armorToUnequip.push({
+						_id: item._id,
+						"system.equipped": false,
+					});
+				}
+			}
+
+			if (armorToUnequip.length > 0) {
+				await this.updateEmbeddedDocuments("Item", armorToUnequip);
+			}
+		}
+
+		this.updateArmorClass();
+	}
+
+	async updateArmorClass() {
+		// TODO Actually calculate the AC using any equipped Armor (if any)
+		// for now we just set the base unarmored AC
+		const baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
+		const dexModifier = this.abilityModifier("dex");
+
+		const newArmorClass = baseArmorClass + dexModifier;
+
+		Actor.updateDocuments([{
+			_id: this._id,
+			"system.attributes.ac.value": newArmorClass,
+		}]);
+
+		console.log("Armor unequipped");
 	}
 
 	/* -------------------------------------------- */

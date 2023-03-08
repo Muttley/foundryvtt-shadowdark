@@ -1,4 +1,6 @@
 <div class="equipped">
-	<label>{{localize 'SHADOWDARK.item.equipped'}}</label>
-	<input type="checkbox" name="system.equipped" {{checked system.equipped}}>
+	{{#if isOwned}}
+		<label>{{localize 'SHADOWDARK.item.equipped'}}</label>
+		<input type="checkbox" name="system.equipped" {{checked system.equipped}}>
+	{{/if}}
 </div>
