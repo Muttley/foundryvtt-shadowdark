@@ -230,6 +230,9 @@
 		}
 
 		th {
+			@include p-reset;
+			padding-top: 0.1em;
+			padding-bottom: 0.1em;
 			font-family: "Old Newspaper Font";
 			font-size: 14px;
 		}
