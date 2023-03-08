@@ -3,7 +3,10 @@
  * @file Contains tests for actor documents
  */
 import ActorSD from "../ActorSD.mjs";
-import { cleanUpActorsByKey } from "../../testing/testUtils.mjs";
+import { 
+	cleanUpActorsByKey,
+	abilities,
+} from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.documents.actor";
 export const options = {
@@ -37,7 +40,6 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("abilityModifier(ability)", () => {
-		const abilities = ["str", "dex", "con", "int", "wis", "cha"];
 		const modifiers = {
 			1: -4,
 			2: -4,
