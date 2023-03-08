@@ -1,7 +1,6 @@
 /**
  * @file Contains tests for actor documents
  */
-
 import ActorSD from "../ActorSD.mjs";
 import { cleanUpActorsByKey } from "../../testing/testUtils.mjs";
 
@@ -11,15 +10,15 @@ export const options = {
 };
 
 const createMockActor = async type => {
-	ActorSD.create({
+	return ActorSD.create({
 		name: `Test Actor ${key}`,
 		type,
 	});
 };
 
-export default ({ describe, it, after, expect }) => {
-	after(async () => {
-		await cleanUpActorsByKey(key);
+export default ({ describe, it, after, before, expect }) => {
+	after(() => {
+		cleanUpActorsByKey(key);
 	});
 
 	describe("Actor creation", () => {
@@ -61,12 +60,16 @@ export default ({ describe, it, after, expect }) => {
 			20: 4,
 		};
 
+		before(async () => {
+			await createMockActor("Player");
+		});
+
 		Object.keys(modifiers).forEach(value => {
 			let modifier = modifiers[value];
 			describe(`${value} as value generates correct modifier`, () => {
 				abilities.forEach(ability => {
 					it(`for ${ability}`, async () => {
-						const actor = await await createMockActor("Player");
+						const actor = await game.actors.getName(`Test Actor ${key}`);
 						const updateData = {};
 						updateData[`system.abilities.${ability}.value`] = value;
 						await actor.update(updateData);
@@ -77,8 +80,8 @@ export default ({ describe, it, after, expect }) => {
 			});
 		});
 
-		after(async () => {
-			await cleanUpActorsByKey(key);
+		after(() => {
+			cleanUpActorsByKey(key);
 		});
 	});
 
