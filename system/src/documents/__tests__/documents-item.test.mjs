@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /**
  * @file Contains tests for item documents
  */
@@ -34,7 +35,7 @@ export default ({ describe, it, after, expect }) => {
 	describe("_preCreate(data, options, user)", () => {
 		it("Gem type item has slots correctly configured", async () => {
 			const item = await createMockItem("Gem");
-			expect(item.system.slots.free_cary).equal(0);
+			expect(item.system.slots.free_carry).equal(0);
 			expect(CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT).is.not.null;
 			expect(item.system.slots.per_slot).equal(CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
 			expect(item.system.slots.slots_used).equal(1);
