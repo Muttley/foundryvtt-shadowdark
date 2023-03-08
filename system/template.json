@@ -69,10 +69,15 @@
 					"value": 10
 				}
 			},
+			"ancestry": "",
 			"background": "",
 			"class": "",
+			"coins": {
+				"gp": 0,
+				"sp": 0,
+				"cp": 0
+			},
 			"deity": "",
-			"race": "",
 			"languages": [],
 			"level": {
 				"value": 1,
@@ -103,6 +108,7 @@
 					"cp": 0
 				},
 				"equipped": false,
+				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
 					"per_slot": 1,

@@ -39,6 +39,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.numGearSlots();
 		context.xpNextLevel = context.system.level.value * 10;
 
+		this._prepareItems(context);
+
 		return context;
 	}
 
@@ -48,5 +50,64 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.actor.rollAbility(ability, {event: event});
 	}
 
+	_prepareItems(context) {
+		const gems = [];
+		const inventory = [];
+		const spells = [];
+		const talents = [];
 
+		const allItems = this._sortAllItems(context);
+
+		let slotCount = 0;
+
+		for (const i of allItems) {
+			if (i.type === "Armor" || i.type === "Basic" || i.type === "Weapon") {
+				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
+
+				i.slotsUsed = (
+					Math.ceil(
+						i.system.quantity / i.system.slots.per_slot
+					)
+					* i.system.slots.slots_used
+				) - (i.system.slots.free_carry * i.system.slots.slots_used);
+
+				slotCount += i.slotsUsed;
+
+				inventory.push(i);
+			}
+			else if (i.type === "Gem") {
+				gems.push(i);
+			}
+			else if (i.type === "Spell") {
+				spells.push(i);
+			}
+			else if (i.type === "Talent") {
+				talents.push(i);
+			}
+		}
+
+		context.inventory = inventory;
+		context.spells = spells;
+		context.talents = talents;
+		context.slotsUsed = slotCount;
+	}
+
+	_sortAllItems(context) {
+		// Pre-sort all items so that when they are filtered into their relevant
+		// categories they are already sorted alphabetically (case-sensitive)
+		const allItems = [];
+		(context.items ?? []).forEach(item => allItems.push(item));
+
+		allItems.sort((a, b) => {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return allItems;
+	}
 }

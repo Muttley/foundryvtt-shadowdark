@@ -9,6 +9,10 @@ SHADOWDARK.app.weapon-properties.title: Properties
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
+SHADOWDARK.inventory.coins: Coins
+SHADOWDARK.inventory.slots_max: Max
+SHADOWDARK.inventory.slots_used: Used
+SHADOWDARK.inventory.slots: Slots
 SHADOWDARK.item_type.armor: Armor
 SHADOWDARK.item_type.basic: Basic
 SHADOWDARK.item_type.gem: Gem
@@ -18,8 +22,9 @@ SHADOWDARK.item_type.weapon: Weapon
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.inventory_free_carry: Free Carry
-SHADOWDARK.item.inventory_per_slot: Max Per Slot
-SHADOWDARK.item.inventory_slots: Slots Used
+SHADOWDARK.item.inventory_per_slot: Max per Slot
+SHADOWDARK.item.inventory_quantity: Quantity
+SHADOWDARK.item.inventory_slots: Slots per Item
 SHADOWDARK.item.weapon_damage.1h: 1H Damage
 SHADOWDARK.item.weapon_damage.2h: 2H Damage
 SHADOWDARK.item.weapon_properties: Properties
@@ -32,6 +37,7 @@ SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
 SHADOWDARK.sheet.player.ac: AC
 SHADOWDARK.sheet.player.alignment: Alignment
+SHADOWDARK.sheet.player.ancestry: Ancestry
 SHADOWDARK.sheet.player.attacks: Attacks
 SHADOWDARK.sheet.player.background: Background
 SHADOWDARK.sheet.player.class: Class
@@ -42,7 +48,6 @@ SHADOWDARK.sheet.player.level: Level
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.name: Name
 SHADOWDARK.sheet.player.notes: Character Notes
-SHADOWDARK.sheet.player.race: Race
 SHADOWDARK.sheet.player.spells: Spells
 SHADOWDARK.sheet.player.tab.abilities: Abilities
 SHADOWDARK.sheet.player.tab.background: Background

@@ -7,6 +7,8 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/luck.hbs",
 		"systems/shadowdark/templates/actors/player/background.hbs",
 		"systems/shadowdark/templates/actors/player/inventory.hbs",
+		"systems/shadowdark/templates/actors/player/inventory/coins.hbs",
+		"systems/shadowdark/templates/actors/player/inventory/slots.hbs",
 		"systems/shadowdark/templates/actors/player/spells.hbs",
 		"systems/shadowdark/templates/actors/player/talents.hbs",
 		"systems/shadowdark/templates/apps/weapon-properties.hbs",

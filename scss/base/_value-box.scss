@@ -3,9 +3,6 @@
 
 .value-box {
 	@include p-reset;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-bottom: 4px;
 
 	&__bold {
 		@include p-reset;
@@ -14,13 +11,13 @@
 
 		label {
 			@include p-reset;
+			padding-left: 4px;
 			display: block;
-			padding: 4px;
+
 
 			font-family: "Old Newspaper Font";
 			font-size: 22px;
 			font-weight: normal;
-			line-height: 1.1;
 
 			border: none;
 			color: white;
@@ -30,14 +27,12 @@
 
 	label {
 		@include p-reset;
+		padding-left: 4px;
 		display: block;
-		padding: 4px;
 
 		font-family: "Old Newspaper Font";
 		font-size: 22px;
 		font-weight: bold;
-
-		line-height: 1.1;
 
 		border: none;
 	}

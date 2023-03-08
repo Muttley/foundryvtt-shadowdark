@@ -88,7 +88,7 @@
 		"no-this-before-super": "error",
 		"no-unexpected-multiline": "warn",
 		"no-unmodified-loop-condition": "warn",
-		"no-unneeded-ternary": "warn",
+		"no-unneeded-ternary": "off",
 		"no-unreachable": "warn",
 		"no-unreachable-loop": "warn",
 		"no-unsafe-negation": ["warn", {"enforceForOrderingRelations":	true}],

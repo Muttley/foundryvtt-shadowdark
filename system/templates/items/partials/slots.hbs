@@ -1,4 +1,10 @@
 <div class="slots">
+	<label>{{localize 'SHADOWDARK.item.inventory_quantity'}}</label>
+	{{numberInput
+		item.system.quantity
+		name="system.quantity"
+		placeholder="0"
+	}}
 	<label>{{localize 'SHADOWDARK.item.inventory_slots'}}</label>
 	{{numberInput
 		item.system.slots.slots_used

@@ -1,0 +1,24 @@
+<div class="slots">
+	<label>{{localize 'SHADOWDARK.inventory.slots'}}</label>
+	<div class="slots-box">
+		<input
+			type="number"
+			value="{{slotsUsed}}"
+			class="slots-value"
+			{{#ifCond slotsUsed '>' gearSlots}}
+				style="color: red;"
+			{{/ifCond}}
+			disabled
+		>
+		<label>{{localize 'SHADOWDARK.inventory.slots_used'}}</label>
+	</div>
+	<div class="slots-box">
+		<input
+			type="number"
+			value="{{gearSlots}}"
+			class="slots-value"
+			disabled
+		>
+		<label>{{localize 'SHADOWDARK.inventory.slots_max'}}</label>
+	</div>
+</div>

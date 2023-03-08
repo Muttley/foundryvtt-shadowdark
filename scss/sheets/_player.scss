@@ -18,8 +18,6 @@
 		border: none;
 	}
 
-
-
 	ol {
 		padding: 4px;
 		margin: 4px;
@@ -40,7 +38,6 @@
 	.ability-scores {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(3, 48px) 110px;
 		column-gap: 8px;
 		row-gap: 8px;
 		background-color: var(--form-background);
@@ -125,6 +122,53 @@
 		}
 	}
 
+	.coins {
+		display: grid;
+		row-gap: 4px;
+		background-color: var(--form-background);
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1;
+
+			border: none;
+		}
+	}
+
+	.coin-box {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+
+		align-items: center;
+
+		text-align: center;
+
+		label {
+			font-size: 18px;
+			font-weight: normal;
+		}
+	}
+
+	.coin-value {
+		text-align: center;
+
+		input {
+			@include p-reset;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			background: rgba(0, 0, 0, 0.05);
+			border: none;
+		}
+	}
+
 	.detail-box {
 		@include p-reset;
 		display: grid;
@@ -165,6 +209,50 @@
 			font-size: 18px;
 		}
 	}
+
+	.inventory-body {
+		@include p-reset;
+		margin: 4px;
+		display: grid;
+		grid-template-columns: 1fr 120px;
+		grid-template-rows: 1fr;
+		column-gap: 4px;
+		row-gap: 8px;
+	}
+
+	.inventory-list {
+		display: grid;
+
+		table {
+			@include p-reset;
+			border: none;
+			align-self:start;
+		}
+
+		th {
+			font-family: "Old Newspaper Font";
+			font-size: 14px;
+		}
+
+		td {
+			font-family: "Montserrat-Medium";
+			font-size: 14px;
+		}
+
+		tr:not(:first-child):hover {
+			cursor: pointer;
+			background-color: var(--secondary);
+			color: white;
+		}
+	}
+
+	.inventory-sidebar {
+		@include p-reset;
+		display: grid;
+		grid-template-rows: 120px 85px 1fr;
+		row-gap: 8px;
+	}
+
 
 	.level-xp {
 		display: grid;
@@ -252,6 +340,39 @@
 		&:hover {
 			cursor: pointer;
 			text-shadow: 0 0 8px var(--clickable);
+		}
+	}
+
+	.slots {
+		display: grid;
+		row-gap: 4px;
+		background-color: var(--form-background);
+
+		label {
+			@include p-reset;
+			display: block;
+
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+
+			line-height: 1;
+
+			border: none;
+		}
+	}
+
+	.slots-box {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+
+		align-items: center;
+
+		text-align: center;
+
+		label {
+			font-size: 18px;
+			font-weight: normal;
 		}
 	}
 
