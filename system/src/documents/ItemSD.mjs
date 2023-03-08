@@ -16,7 +16,7 @@ export default class ItemSD extends Item {
 	}
 
 	hasProperty(property) {
-		for (const key of this.item.system.properties) {
+		for (const key of this.system.properties) {
 			if (key === property) return true;
 		}
 		return false;

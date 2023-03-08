@@ -65,7 +65,7 @@ export default class ActorSD extends Actor {
 			for (const item of this.items) {
 				if (!item.system.equipped) continue;
 				if (item.type !== "Armor") continue;
-				if (item._id !== updatedItem._id) continue;
+				if (item._id === updatedItem._id) continue;
 
 				// Only unequip a shield if the newly equipped item is a shield
 				// as well.
