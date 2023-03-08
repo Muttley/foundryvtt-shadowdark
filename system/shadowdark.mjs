@@ -9,6 +9,8 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
+import "./src/testing/index.mjs";
+
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
