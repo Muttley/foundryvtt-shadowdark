@@ -11,8 +11,14 @@ const delay = ms =>
 
 export const waitForInput = () => delay(inputDelay);
 
-export const cleanUpActorsByKey = async key => {
+export const cleanUpActorsByKey = key => {
 	game.actors
 		?.filter(a => a.name === `Test Actor ${key}`)
-		.forEach(async a => await a.delete());
+		.forEach(a => a.delete());
+};
+
+export const cleanUpItemsByKey = key => {
+	game.items
+		?.filter(i => i.name.includes(`Test Item ${key}:`))
+		.forEach(i => i.delete());
 };
