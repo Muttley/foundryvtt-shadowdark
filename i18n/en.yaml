@@ -35,6 +35,8 @@ SHADOWDARK.range.far: Far
 SHADOWDARK.range.near: Near
 SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
+SHADOWDARK.sheet.general.item_delete.title: Delete Item
+SHADOWDARK.sheet.general.item_edit.title: Edit Item
 SHADOWDARK.sheet.player.ac: AC
 SHADOWDARK.sheet.player.alignment: Alignment
 SHADOWDARK.sheet.player.ancestry: Ancestry
@@ -70,3 +72,4 @@ SHADOWDARK.weapon.properties.twoHanded: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.dialog.item.delete: Are you sure you wish to delete item
