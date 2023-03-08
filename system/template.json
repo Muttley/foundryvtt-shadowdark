@@ -107,6 +107,7 @@
 					"sp": 0,
 					"cp": 0
 				},
+				"canBeEquipped": false,
 				"equipped": false,
 				"quantity": 1,
 				"slots": {
@@ -125,7 +126,8 @@
 				"base": 0,
 				"modifier": 0,
 				"stat": ""
-			}
+			},
+			"canBeEquipped": true
 		},
 		"Basic": {
 			"templates": [
@@ -157,12 +159,13 @@
 				"physical",
 				"common"
 			],
-			"type": "melee",
-			"range": "close",
+			"canBeEquipped": true,
 			"damage": {
 				"one-handed": "",
 				"two-handed": ""
-			}
+			},
+			"range": "close",
+			"type": "melee"
 		}
 	}
 }

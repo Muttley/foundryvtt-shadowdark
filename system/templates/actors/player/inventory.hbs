@@ -4,22 +4,52 @@
 			<table>
 				<tr>
 					<th>&nbsp;</th>
-					<th>Quantity</th>
-					<th>Slots</th>
+					<th>{{localize 'SHADOWDARK.inventory.label.quantity'}}</th>
+					<th>{{localize 'SHADOWDARK.inventory.label.slots'}}</th>
+					<th>&nbsp;</th>
 				</tr>
 				{{#each inventory as |item|}}
 					<tr class="item" data-item-id="{{item._id}}">
-						<td>{{item.name}}</td>
-						<td style="text-align:center;">
+						<td>
+							{{item.name}}
+						</td>
+						<td class="item-list-centered">
 							{{#if item.showQuantity}}
-								<i class="fa-regular fa-minus fa-xs"></i>
-									{{item.system.quantity}}
-								<i class="fa-regular fa-plus fa-xs"></i>
+								{{#if ../owner}}
+									<a
+										class="item-control item-quantity-decrement"
+										data-item-id="{{item._id}}"
+										title="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
+									>
+										<i class="fa-regular fa-minus fa-xs"></i>
+									</a>
+								{{/if}}
+									{{item.system.quantity}}/{{item.system.slots.per_slot}}
+								{{#if ../owner}}
+									<a
+										class="item-control item-quantity-increment"
+										data-item-id="{{item._id}}"
+										title="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
+									>
+										<i class="fa-regular fa-plus fa-xs"></i>
+									</a>
+								{{/if}}
 							{{else}}
 								&nbsp;
 							{{/if}}
 						</td>
-						<td style="text-align:center;">{{item.slotsUsed}}</td>
+						<td class="item-list-centered">{{item.slotsUsed}}</td>
+						<td class="item-list-centered">
+							{{#if item.system.canBeEquipped}}
+								<a
+									class="item-control item-toggle-equipped {{#if item.system.equipped}}equipped{{/if}}"
+									data-item-id="{{item._id}}"
+									title="{{localize 'SHADOWDARK.inventory.tooltip.toggle_equipped'}}"
+								>
+									<i class="fas fa-shirt"></i>
+								</a>
+							{{/if}}
+						</td>
 					</tr>
 				{{/each}}
 			</table>

@@ -14,8 +14,4 @@ export default class ItemSD extends Item {
 			this.updateSource({"system.slots": slots});
 		}
 	}
-
-	prepareData() {
-		super.prepareData();
-	}
 }

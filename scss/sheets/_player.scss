@@ -80,7 +80,7 @@
 		padding: 4px;
 
 		font-family: "Old Newspaper Font";
-		font-size: 22px;
+		font-size: 20px;
 		line-height: 1;
 		font-weight: normal;
 
@@ -113,7 +113,7 @@
 			display: block;
 
 			font-family: "Old Newspaper Font";
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 
 			line-height: 1.1;
@@ -132,7 +132,7 @@
 			display: block;
 
 			font-family: "Old Newspaper Font";
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 
 			line-height: 1;
@@ -182,7 +182,7 @@
 			display: block;
 
 			font-family: "Old Newspaper Font";
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 
 			line-height: 1.1;
@@ -244,6 +244,10 @@
 			background-color: var(--secondary);
 			color: white;
 		}
+
+		.item-list-centered {
+			text-align: center;
+		}
 	}
 
 	.inventory-sidebar {
@@ -253,6 +257,13 @@
 		row-gap: 8px;
 	}
 
+	.item-toggle-equipped {
+		color: #A0A09A;
+
+		&.equipped {
+			color: black;
+		}
+	}
 
 	.level-xp {
 		display: grid;
@@ -266,7 +277,7 @@
 			display: block;
 
 			font-family: "Old Newspaper Font";
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 
 			line-height: 1.1;
@@ -353,7 +364,7 @@
 			display: block;
 
 			font-family: "Old Newspaper Font";
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 
 			line-height: 1;

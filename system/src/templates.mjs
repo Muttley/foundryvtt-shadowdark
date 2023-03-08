@@ -14,6 +14,7 @@ export default function() {
 		"systems/shadowdark/templates/apps/weapon-properties.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/description.hbs",
+		"systems/shadowdark/templates/items/partials/equipped.hbs",
 		"systems/shadowdark/templates/items/partials/slots.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
 	];
