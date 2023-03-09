@@ -8,6 +8,7 @@ import {
 	closeDialogs,
 	abilities,
 	waitForInput,
+	cleanUpItemsByKey,
 } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.sheets.actor";
@@ -32,6 +33,7 @@ const createMockItem = async type => {
 export default ({ describe, it, after, before, expect }) => {
 	after(async () => {
 		cleanUpActorsByKey(key);
+		cleanUpItemsByKey(key);
 		// await closeSheets();
 		await closeDialogs();
 	});
@@ -146,6 +148,7 @@ export default ({ describe, it, after, before, expect }) => {
 			item = await createMockItem("Armor");
 			await actor.createEmbeddedDocuments("Item", [item]);
 			actorItem = await actor.items.contents[0];
+			await item.delete();
 			// Render the inventory
 			await actor.sheet.render(true);
 			await waitForInput();
