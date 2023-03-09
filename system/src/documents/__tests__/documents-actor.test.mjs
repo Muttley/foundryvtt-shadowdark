@@ -157,13 +157,13 @@ export default ({ describe, it, after, before, expect }) => {
 				{
 					type: "Armor",
 					name: "Test Shield 1",
-					shield: true,
+					"system.properties": ["shield"],
 					"system.equipped": true,
 				},
 				{
 					type: "Armor",
 					name: "Test Shield 2",
-					shield: true,
+					"system.properties": ["shield"],
 				},
 			]);
 		});
@@ -225,7 +225,7 @@ export default ({ describe, it, after, before, expect }) => {
 				{
 					type: "Armor",
 					name: "Test Shield 1",
-					shield: true,
+					"system.properties": ["shield"],
 					"system.ac.modifier": 3,
 					"system.equipped": true,
 				},
