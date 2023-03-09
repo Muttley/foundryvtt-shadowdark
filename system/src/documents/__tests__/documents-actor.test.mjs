@@ -3,7 +3,7 @@
  * @file Contains tests for actor documents
  */
 import ActorSD from "../ActorSD.mjs";
-import { 
+import {
 	cleanUpActorsByKey,
 	abilities,
 } from "../../testing/testUtils.mjs";
