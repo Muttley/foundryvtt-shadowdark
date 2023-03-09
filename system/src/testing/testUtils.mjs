@@ -9,6 +9,7 @@ const delay = ms =>
 	});
 
 export const abilities = ["str", "dex", "con", "int", "wis", "cha"];
+export const itemTypes = ["Armor", "Basic", "Gem", "Spell", "Talent", "Weapon"];
 
 export const waitForInput = () => delay(inputDelay);
 
