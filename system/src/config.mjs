@@ -1,10 +1,14 @@
 // Namespace Configuration Values
 const SHADOWDARK = {};
 
+SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
+	dex: "SHADOWDARK.ability_dex",
+};
+
 SHADOWDARK.ARMOR_PROPERTIES = {
 	disadvStealth: "SHADOWDARK.armor.properties.disadvStealth",
-	disadvSwimming: "SHADOWDARK.armor.properties.disadvSwimming",
-	noSwimming: "SHADOWDARK.armor.properties.noSwimming",
+	disadvSwim: "SHADOWDARK.armor.properties.disadvSwim",
+	noSwim: "SHADOWDARK.armor.properties.noSwim",
 	oneHanded: "SHADOWDARK.armor.properties.oneHanded",
 	shield: "SHADOWDARK.armor.properties.shield",
 };

@@ -23,6 +23,10 @@
 			{{> items/partials/weapon.hbs }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Armor"}}
+			{{> items/partials/armor.hbs }}
+		{{/ifEq}}
+
 		{{> items/partials/description.hbs }}
 
 		{{#if hasCost}}

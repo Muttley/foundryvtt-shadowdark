@@ -6,15 +6,6 @@
 		],
 		"templates": {
 			"shared_details": {
-				"attributes": {
-					"ac": {
-						"value": 10
-					},
-					"hp": {
-						"max": 0,
-						"value": 0
-					}
-				},
 				"alignment": "",
 				"notes": ""
 			}
@@ -44,6 +35,9 @@
 			"attributes": {
 				"hp": {
 					"hd": 0
+				},
+				"ac": {
+					"value": 10
 				}
 			}
 		},
@@ -70,6 +64,12 @@
 				}
 			},
 			"ancestry": "",
+			"attributes": {
+				"hp": {
+					"max": 0,
+					"value": 0
+				}
+			},
 			"background": "",
 			"class": "",
 			"coins": {
@@ -125,7 +125,7 @@
 			"ac": {
 				"base": 0,
 				"modifier": 0,
-				"stat": ""
+				"attribute": ""
 			},
 			"canBeEquipped": true
 		},
@@ -159,13 +159,16 @@
 				"physical",
 				"common"
 			],
+			"attackBonus": 0,
 			"canBeEquipped": true,
 			"damage": {
+				"bonus": 0,
 				"one-handed": "",
 				"two-handed": ""
 			},
 			"range": "close",
-			"type": "melee"
+			"type": "melee",
+			"weaponMastery": false
 		}
 	}
 }

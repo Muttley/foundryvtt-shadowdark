@@ -31,6 +31,20 @@
 		border: none;
 	}
 
+	.armor-details {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
+	.armor-detail {
+		background-color: var(--form-background);
+		display: grid;
+		row-gap: 4px;
+	}
+
 	.coins {
 		display: grid;
 		row-gap: 4px;
@@ -127,14 +141,14 @@
 		row-gap: 4px;
 	}
 
-	.weapon-properties {
+	.item-properties {
 		@include p-reset;
 		display: grid;
 		grid-column: span 2;
 		column-gap: 4px;
 	}
 
-	.weapon-property {
+	.item-property {
 		@include p-reset;
 		display: grid;
 		grid-template-columns: 100px 1fr;
@@ -161,7 +175,7 @@
 		}
 	}
 
-	.weapon-property-list {
+	.item-property-list {
 		&:hover {
 			cursor: pointer;
 			box-shadow: 0 0 5px var(--color-shadow-primary);

@@ -19,6 +19,10 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	async getArmorClass() {
+		return await this.updateArmorClass();
+	}
+
 	numGearSlots() {
 		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
 
@@ -69,7 +73,13 @@ export default class ActorSD extends Actor {
 
 				// Only unequip a shield if the newly equipped item is a shield
 				// as well.
-				if (item.isNotAShield() || (item.isAShield() && isAShield)) {
+				if (isAShield && item.isAShield()) {
+					armorToUnequip.push({
+						_id: item._id,
+						"system.equipped": false,
+					});
+				}
+				else if (item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
 						_id: item._id,
 						"system.equipped": false,
@@ -91,14 +101,31 @@ export default class ActorSD extends Actor {
 		const baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
 		const dexModifier = this.abilityModifier("dex");
 
-		const newArmorClass = baseArmorClass + dexModifier;
+		let newArmorClass = baseArmorClass + dexModifier;
+
+		const equippedArmor = this.items.filter(
+			item => item.type === "Armor" && item.system.equipped
+		);
+		if (equippedArmor.length > 0) {
+			newArmorClass = 0;
+			for (let i = 0; i < equippedArmor.length; i++) {
+				const armor = equippedArmor[i];
+				newArmorClass += armor.system.ac.modifier;
+				newArmorClass += armor.system.ac.base;
+
+				const attribute = armor.system.ac.attribute;
+				if (attribute) {
+					newArmorClass += this.abilityModifier(attribute);
+				}
+			}
+		}
 
 		Actor.updateDocuments([{
 			_id: this._id,
 			"system.attributes.ac.value": newArmorClass,
 		}]);
 
-		console.log("Armor unequipped");
+		return newArmorClass;
 	}
 
 	/* -------------------------------------------- */

@@ -1,14 +1,20 @@
 SHADOWDARK.ability_cha: Cha
+SHADOWDARK.ability_charisma: Charisma
 SHADOWDARK.ability_con: Con
+SHADOWDARK.ability_constitution: Constitution
 SHADOWDARK.ability_dex: Dex
+SHADOWDARK.ability_dexterity: Dexterity
 SHADOWDARK.ability_int: Int
+SHADOWDARK.ability_intelligence: Intelligence
 SHADOWDARK.ability_str: Str
+SHADOWDARK.ability_strength: Strength
 SHADOWDARK.ability_wis: Wis
-SHADOWDARK.app.weapon-properties.save: Save
-SHADOWDARK.app.weapon-properties.title: Properties
-SHADOWDARK.armor.properties.disadvStealth: Disadvantage (Stealth)
-SHADOWDARK.armor.properties.disadvSwimming: Disadvantage (Swimming)
-SHADOWDARK.armor.properties.noSwimming: Cannot Swim
+SHADOWDARK.ability_wisdom: Wisdom
+SHADOWDARK.app.item-properties.save: Save
+SHADOWDARK.app.item-properties.title: Properties
+SHADOWDARK.armor.properties.disadvStealth: Disadvantage/Stealth
+SHADOWDARK.armor.properties.disadvSwim: Disadvantage/Swim
+SHADOWDARK.armor.properties.noSwim: No Swim
 SHADOWDARK.armor.properties.oneHanded: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.coins.cp: CP
@@ -31,6 +37,9 @@ SHADOWDARK.item_type.gem: Gem
 SHADOWDARK.item_type.spell: Spell
 SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.weapon: Weapon
+SHADOWDARK.item.armor_ac_modifier: Modifier
+SHADOWDARK.item.armor_ac: AC
+SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.equipped: Equipped
@@ -38,9 +47,9 @@ SHADOWDARK.item.inventory_free_carry: Free Carry
 SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantity
 SHADOWDARK.item.inventory_slots: Slots per Item
+SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.weapon_damage.1h: 1H Damage
 SHADOWDARK.item.weapon_damage.2h: 2H Damage
-SHADOWDARK.item.weapon_properties: Properties
 SHADOWDARK.item.weapon_range: Range
 SHADOWDARK.item.weapon_type: Type
 SHADOWDARK.range.close: Close

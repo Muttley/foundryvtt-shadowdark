@@ -52,6 +52,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.gearSlots = this.actor.numGearSlots();
 		context.xpNextLevel = context.system.level.value * 10;
+		context.armorClass = await this.actor.getArmorClass();
 
 		this._prepareItems(context);
 

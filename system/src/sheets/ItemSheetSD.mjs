@@ -18,7 +18,11 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find(".weapon-property-list").click(
+		html.find(".item-property-list.armor").click(
+			event => this._onArmorProperties(event)
+		);
+
+		html.find(".item-property-list.weapon").click(
 			event => this._onWeaponProperties(event)
 		);
 
@@ -41,22 +45,37 @@ export default class ItemSheetSD extends ItemSheet {
 			source: source.system,
 			system: item.system,
 			usesSlots: item.system.slots !== undefined,
+			armorBonusAttributes: CONFIG.SHADOWDARK.ARMOR_BONUS_ATTRIBUTES,
 			weaponBaseDamageDice: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE,
 			weaponProperties: CONFIG.SHADOWDARK.WEAPON_PROPERTIES,
+			armorProperties: CONFIG.SHADOWDARK.ARMOR_PROPERTIES,
 			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 			properties: [],
 			propertiesDisplay: "",
 		});
 
-		if (item.type === "Weapon") {
+		if (item.type === "Armor" || item.type === "Weapon") {
 			for (const key of this.item.system.properties) {
-				context.properties.push(context.weaponProperties[key]);
+				if (item.type === "Armor") {
+					context.properties.push(context.armorProperties[key]);
+				}
+				else if (item.type === "Weapon") {
+					context.properties.push(context.weaponProperties[key]);
+				}
 			}
 
 			context.propertiesDisplay = context.properties.join(", ");
 		}
 
 		return context;
+	}
+
+	_onArmorProperties(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.ArmorPropertiesSD(
+			this.item, {event: event}
+		).render(true);
 	}
 
 	_onWeaponProperties(event) {
