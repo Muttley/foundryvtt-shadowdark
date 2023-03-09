@@ -6,6 +6,7 @@ import ActorSD from "../ActorSD.mjs";
 import { 
 	cleanUpActorsByKey,
 	abilities,
+	waitForInput,
 } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.documents.actor";
@@ -137,4 +138,105 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("rollAbility(abilityId, options={})", () => {});
+
+	describe("updateArmor(updatedItem)", () => {
+		let actor = {};
+
+		before(async () => {
+			actor = await createMockActor("Player");
+			await actor.createEmbeddedDocuments("Item", [
+				{
+					type: "Armor",
+					name: "Test Armor 1",
+					"system.equipped": true,
+				},
+				{
+					type: "Armor",
+					name: "Test Armor 2",
+				},
+				{
+					type: "Armor",
+					name: "Test Shield 1",
+					shield: true,
+					"system.equipped": true,
+				},
+				{
+					type: "Armor",
+					name: "Test Shield 2",
+					shield: true,
+				},
+			]);
+		});
+
+		it("switches equipped status if another shield is equiiped", async () => {
+			const oldShield = actor.items.getName("Test Shield 1");
+			expect(oldShield.system.equipped).is.true;
+			const newShield = actor.items.getName("Test Shield 2");
+			expect(newShield.system.equipped).is.false;
+
+			await newShield.update({"system.equipped": true});
+			expect(oldShield.system.equipped).is.true;
+			expect(newShield.system.equipped).is.true;
+
+			await actor.updateArmor(newShield);
+			expect(oldShield.system.equipped).is.false;
+			expect(newShield.system.equipped).is.true;
+		});
+
+		it("switches equipped status if another armor (non-shield) is equipped", async () => {});
+
+		after(async () => {
+			await actor.delete();
+		});
+	});
+
+	describe("updateArmorClass()", () => {
+		let actor = {};
+
+		before(async () => {
+			actor = await createMockActor("Player");
+			await actor.update({
+				"system.abilities.dex.value": 18,
+			});
+		});
+
+		it("calculates the correct AC with no armor equipped", async () => {
+			await actor.updateArmorClass();
+			await waitForInput();
+			expect(actor.system.attributes.ac.value).equal(10 + 4);
+		});
+		it("calculates the correct AC with armor equipped", async () => {
+			await actor.createEmbeddedDocuments("Item", [
+				{
+					type: "Armor",
+					name: "Test Armor 1",
+					"system.ac.base": 11,
+					"system.ac.modifier": 2,
+					"system.equipped": true,
+				},
+			]);
+			await actor.updateArmorClass();
+			await waitForInput();
+			expect(actor.system.attributes.ac.value).equal(11 + 4 + 2);
+		});
+
+		it("calculates the correct AC with armor and shield equipped", async () => {
+			await actor.createEmbeddedDocuments("Item", [
+				{
+					type: "Armor",
+					name: "Test Shield 1",
+					shield: true,
+					"system.ac.modifier": 3,
+					"system.equipped": true,
+				},
+			]);
+			await actor.updateArmorClass();
+			await waitForInput();
+			expect(actor.system.attributes.ac.value).equal(11 + 4 + 2 + 3);
+		});
+
+		after(async () => {
+			await actor.delete();
+		});
+	});
 };
