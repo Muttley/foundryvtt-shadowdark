@@ -3,7 +3,7 @@
  * @file Contains tests for actor documents
  */
 import ActorSD from "../ActorSD.mjs";
-import { 
+import {
 	cleanUpActorsByKey,
 	abilities,
 	waitForInput,
@@ -36,6 +36,210 @@ export default ({ describe, it, after, before, expect }) => {
 		it("can create NPC actor", async () => {
 			const actor = await createMockActor("NPC");
 			expect(actor).is.not.undefined;
+			await actor.delete();
+		});
+	});
+
+	describe("Player actor has expected information", () => {
+		let actor = {};
+
+		before(async () => {
+			actor = await createMockActor("Player");
+		});
+
+		/* Shared Details */
+		it("has attributes", () => {
+			expect(actor.system.attributes).is.not.undefined;
+		});
+		it("has attributes.ac", () => {
+			expect(actor.system.attributes.ac).is.not.undefined;
+		});
+		it("has attributes.ac.value", () => {
+			expect(actor.system.attributes.ac.value).is.not.undefined;
+		});
+		it("has attributes.hp", () => {
+			expect(actor.system.attributes.hp).is.not.undefined;
+		});
+		it("has attributes.hp.max", () => {
+			expect(actor.system.attributes.hp.max).is.not.undefined;
+		});
+		it("has attributes.hp.value", () => {
+			expect(actor.system.attributes.hp.value).is.not.undefined;
+		});
+		it("has alignment", () => {
+			expect(actor.system.alignment).is.not.undefined;
+		});
+		it("has notes", () => {
+			expect(actor.system.notes).is.not.undefined;
+		});
+
+		/**  Player Specific  */
+		it("has abilities", () => {
+			expect(actor.system.abilities).is.not.undefined;
+		});
+		it("has abilities.str", () => {
+			expect(actor.system.abilities.str).is.not.undefined;
+		});
+		it("has abilities.str.value", () => {
+			expect(actor.system.abilities.str.value).is.not.undefined;
+		});
+		it("has abilities.dex", () => {
+			expect(actor.system.abilities.dex).is.not.undefined;
+		});
+		it("has abilities.dex.value", () => {
+			expect(actor.system.abilities.dex.value).is.not.undefined;
+		});
+		it("has abilities.con", () => {
+			expect(actor.system.abilities.con).is.not.undefined;
+		});
+		it("has abilities.con.value", () => {
+			expect(actor.system.abilities.con.value).is.not.undefined;
+		});
+		it("has abilities.int", () => {
+			expect(actor.system.abilities.int).is.not.undefined;
+		});
+		it("has abilities.int.value", () => {
+			expect(actor.system.abilities.int.value).is.not.undefined;
+		});
+		it("has abilities.wis", () => {
+			expect(actor.system.abilities.wis).is.not.undefined;
+		});
+		it("has abilities.wis.value", () => {
+			expect(actor.system.abilities.wis.value).is.not.undefined;
+		});
+		it("has abilities.cha", () => {
+			expect(actor.system.abilities.cha).is.not.undefined;
+		});
+		it("has abilities.cha.value", () => {
+			expect(actor.system.abilities.cha.value).is.not.undefined;
+		});
+		it("has ancestry", () => {
+			expect(actor.system.ancestry).is.not.undefined;
+		});
+		it("has background", () => {
+			expect(actor.system.background).is.not.undefined;
+		});
+		it("has class", () => {
+			expect(actor.system.class).is.not.undefined;
+		});
+		it("has coins", () => {
+			expect(actor.system.coins).is.not.undefined;
+		});
+		it("has coins.gp", () => {
+			expect(actor.system.coins.gp).is.not.undefined;
+		});
+		it("has coins.sp", () => {
+			expect(actor.system.coins.sp).is.not.undefined;
+		});
+		it("has coins.cp", () => {
+			expect(actor.system.coins.cp).is.not.undefined;
+		});
+		it("has deity", () => {
+			expect(actor.system.deity).is.not.undefined;
+		});
+		it("has languages", () => {
+			expect(actor.system.languages).is.not.undefined;
+			expect(actor.system.languages.length).equal(0);
+		});
+		it("has level", () => {
+			expect(actor.system.level).is.not.undefined;
+		});
+		it("has level.value", () => {
+			expect(actor.system.level.value).is.not.undefined;
+		});
+		it("has level.xp", () => {
+			expect(actor.system.level.xp).is.not.undefined;
+		});
+		it("has luck", () => {
+			expect(actor.system.luck).is.not.undefined;
+		});
+		it("has title", () => {
+			expect(actor.system.title).is.not.undefined;
+		});
+
+		after(async () => {
+			await actor.delete();
+		});
+	});
+
+	describe("NPC actor has expected information", () => {
+		let actor = {};
+
+		before(async () => {
+			actor = await createMockActor("NPC");
+		});
+
+		/* Shared Details */
+		it("has attributes", () => {
+			expect(actor.system.attributes).is.not.undefined;
+		});
+		it("has attributes.ac", () => {
+			expect(actor.system.attributes.ac).is.not.undefined;
+		});
+		it("has attributes.ac.value", () => {
+			expect(actor.system.attributes.ac.value).is.not.undefined;
+		});
+		it("has attributes.hp", () => {
+			expect(actor.system.attributes.hp).is.not.undefined;
+		});
+		it("has attributes.hp.max", () => {
+			expect(actor.system.attributes.hp.max).is.not.undefined;
+		});
+		it("has attributes.hp.value", () => {
+			expect(actor.system.attributes.hp.value).is.not.undefined;
+		});
+		it("has alignment", () => {
+			expect(actor.system.alignment).is.not.undefined;
+		});
+		it("has notes", () => {
+			expect(actor.system.notes).is.not.undefined;
+		});
+
+		/**  NPC Specific  */
+		it("has abilities", () => {
+			expect(actor.system.abilities).is.not.undefined;
+		});
+		it("has abilities.str", () => {
+			expect(actor.system.abilities.str).is.not.undefined;
+		});
+		it("has abilities.str.mod", () => {
+			expect(actor.system.abilities.str.mod).is.not.undefined;
+		});
+		it("has abilities.dex", () => {
+			expect(actor.system.abilities.dex).is.not.undefined;
+		});
+		it("has abilities.dex.mod", () => {
+			expect(actor.system.abilities.dex.mod).is.not.undefined;
+		});
+		it("has abilities.con", () => {
+			expect(actor.system.abilities.con).is.not.undefined;
+		});
+		it("has abilities.con.mod", () => {
+			expect(actor.system.abilities.con.mod).is.not.undefined;
+		});
+		it("has abilities.int", () => {
+			expect(actor.system.abilities.int).is.not.undefined;
+		});
+		it("has abilities.int.mod", () => {
+			expect(actor.system.abilities.int.mod).is.not.undefined;
+		});
+		it("has abilities.wis", () => {
+			expect(actor.system.abilities.wis).is.not.undefined;
+		});
+		it("has abilities.wis.mod", () => {
+			expect(actor.system.abilities.wis.mod).is.not.undefined;
+		});
+		it("has abilities.cha", () => {
+			expect(actor.system.abilities.cha).is.not.undefined;
+		});
+		it("has abilities.cha.mod", () => {
+			expect(actor.system.abilities.cha.mod).is.not.undefined;
+		});
+		it("has attributes.hp.hd", () => {
+			expect(actor.system.attributes.hp.hd).is.not.undefined;
+		});
+
+		after(async () => {
 			await actor.delete();
 		});
 	});
