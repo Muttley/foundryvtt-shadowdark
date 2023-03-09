@@ -20,25 +20,25 @@
 	<section class="item-body">
 
 		{{#ifEq item.type "Weapon"}}
-			{{> systems/shadowdark/templates/items/partials/weapon.hbs}}
+			{{> items/partials/weapon.hbs }}
 		{{/ifEq}}
 
-		{{> systems/shadowdark/templates/items/partials/description.hbs}}
+		{{> items/partials/description.hbs }}
 
 		{{#if hasCost}}
-			{{> systems/shadowdark/templates/items/partials/cost.hbs}}
+			{{> items/partials/cost.hbs }}
 		{{/if}}
 
 		{{#if usesSlots}}
 			{{!-- Gems have non-configurable slot settings --}}
 			{{#ifNeq item.type "Gem"}}
-				{{> systems/shadowdark/templates/items/partials/slots.hbs}}
+				{{> items/partials/slots.hbs }}
 			{{else}}
 				<div></div>
 			{{/ifNeq}}
 
 			{{#if item.system.canBeEquipped}}
-				{{> systems/shadowdark/templates/items/partials/equipped.hbs}}
+				{{> items/partials/equipped.hbs }}
 			{{/if}}
 		{{/if}}
 

@@ -1,5 +1,5 @@
 export default function() {
-	const paths = [
+	const partials = [
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/attacks.hbs",
@@ -12,12 +12,19 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/spells.hbs",
 		"systems/shadowdark/templates/actors/player/talents.hbs",
 		"systems/shadowdark/templates/apps/weapon-properties.hbs",
+		"systems/shadowdark/templates/items/partials/armor.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/description.hbs",
 		"systems/shadowdark/templates/items/partials/equipped.hbs",
 		"systems/shadowdark/templates/items/partials/slots.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
 	];
+
+	const paths = {};
+	for (const path of partials) {
+		const key = path.split("/").slice(3).join("/");
+		paths[key] = path;
+	}
 
 	return loadTemplates(paths);
 }
