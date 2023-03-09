@@ -112,5 +112,29 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
+	describe("attackBonus(attackType)", () => {
+		let actor = {};
+
+		before(async () => {
+			actor = await createMockActor("Player");
+			await actor.update({
+				"system.abilities.str.value": 18,
+				"system.abilities.dex.value": 3,
+			});
+		});
+
+		// @todo: talent bonus for both melee & ranged
+		it("melee attack returns str modifier", async () => {
+			expect(actor.attackBonus("melee")).equal(4);
+		});
+		it("ranged attack returns dex modifier", async () => {
+			expect(actor.attackBonus("ranged")).equal(-4);
+		});
+
+		after(async () => {
+			await actor.delete();
+		});
+	});
+
 	describe("rollAbility(abilityId, options={})", () => {});
 };
