@@ -238,6 +238,13 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has attributes.hp.hd", () => {
 			expect(actor.system.attributes.hp.hd).is.not.undefined;
 		});
+		it("has level", () => {
+			expect(actor.system.level).is.not.undefined;
+		});
+		it("has movement", () => {
+			expect(actor.system.movement).is.not.undefined;
+		});
+		// Expecting attacks to be items rather than system data
 
 		after(async () => {
 			await actor.delete();
