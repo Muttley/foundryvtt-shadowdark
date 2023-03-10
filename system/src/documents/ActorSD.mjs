@@ -98,18 +98,24 @@ export default class ActorSD extends Actor {
 	async updateArmorClass() {
 		// TODO Actually calculate the AC using any equipped Armor (if any)
 		// for now we just set the base unarmored AC
-		const baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
 		const dexModifier = this.abilityModifier("dex");
 
-		let newArmorClass = baseArmorClass + dexModifier;
+		let baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
+		baseArmorClass += dexModifier;
+
+		let newArmorClass = baseArmorClass;
 
 		const equippedArmor = this.items.filter(
 			item => item.type === "Armor" && item.system.equipped
 		);
+		let nonShieldEquipped = false;
 		if (equippedArmor.length > 0) {
 			newArmorClass = 0;
 			for (let i = 0; i < equippedArmor.length; i++) {
 				const armor = equippedArmor[i];
+
+				if (armor.isNotAShield()) nonShieldEquipped = true;
+
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
 
@@ -118,6 +124,9 @@ export default class ActorSD extends Actor {
 					newArmorClass += this.abilityModifier(attribute);
 				}
 			}
+
+			// Someone with no armor but a shield equipped
+			if (!nonShieldEquipped) newArmorClass += baseArmorClass;
 		}
 
 		Actor.updateDocuments([{

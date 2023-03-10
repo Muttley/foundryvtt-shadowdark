@@ -28,9 +28,12 @@ SHADOWDARK.inventory.label.slots: Slots
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Used
 SHADOWDARK.inventory.slots: Slots
+SHADOWDARK.inventory.tooltip.gem_bag: Open Gem Bag
 SHADOWDARK.inventory.tooltip.item_decrement: Decrease Quantity
 SHADOWDARK.inventory.tooltip.item_increment: Increase Quantity
 SHADOWDARK.inventory.tooltip.toggle_equipped: Toggle Equipped
+SHADOWDARK.inventory.total_coins: Total Coins
+SHADOWDARK.inventory.total_gems: Total Gems
 SHADOWDARK.item_type.armor: Armor
 SHADOWDARK.item_type.basic: Basic
 SHADOWDARK.item_type.gem: Gem
@@ -94,3 +97,6 @@ SHADOWDARK.weapon.properties.twoHanded: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.inventory.section.armor: Armor
+SHADOWDARK.inventory.section.weapon: Weapons
+SHADOWDARK.inventory.section.basic: Basic Equipment

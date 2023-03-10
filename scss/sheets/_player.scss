@@ -189,11 +189,14 @@
 
 			border: none;
 		}
-
 	}
 
 	.detail-value {
 		text-align: right;
+	}
+
+	.open-gem-bag {
+		color: sienna;
 	}
 
 	.hit-points {
@@ -216,8 +219,16 @@
 		display: grid;
 		grid-template-columns: 1fr 120px;
 		grid-template-rows: 1fr;
-		column-gap: 4px;
-		row-gap: 8px;
+		column-gap: 12px;
+		row-gap: 12px;
+	}
+
+	.inventory-header {
+		@include p-reset;
+		padding-top: 0.1em;
+		padding-bottom: 0.1em;
+		font-family: "Old Newspaper Font";
+		font-size: 16px;
 	}
 
 	.inventory-list {
@@ -226,31 +237,48 @@
 		table {
 			@include p-reset;
 			border: none;
-			align-self:start;
 		}
 
-		th {
-			@include p-reset;
-			padding-top: 0.1em;
-			padding-bottom: 0.1em;
-			font-family: "Old Newspaper Font";
-			font-size: 14px;
+		tr:not(
+			:first-child,
+			:nth-last-child(2),
+			:last-child,
+			.inventory-section-header
+		) {
+			padding-left: 8px;
+			font-family: "Montserrat-Medium";
+			font-size: 13px;
+
+			&:hover {
+				cursor: pointer;
+				background-color: var(--secondary);
+				color: white;
+			}
 		}
 
-		td {
+		tr:first-child,
+		tr:last-child,
+		tr:nth-last-child(2) {
+			background-color: #00000020;
+		}
+
+		tr:last-child,
+		tr:nth-last-child(2) {
 			font-family: "Montserrat-Medium";
 			font-size: 14px;
-		}
-
-		tr:not(:first-child):hover {
-			cursor: pointer;
-			background-color: var(--secondary);
-			color: white;
+			text-align: left;
 		}
 
 		.item-list-centered {
 			text-align: center;
 		}
+	}
+
+	.inventory-section-header {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+		font-size: 14px;
+		text-align: left;
 	}
 
 	.inventory-sidebar {

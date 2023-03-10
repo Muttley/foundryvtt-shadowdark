@@ -50,9 +50,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async getData(options) {
 		const context = await super.getData(options);
 
-		context.gearSlots = this.actor.numGearSlots();
+		// TODO Calculate this once we have ActiveEffects as it can be affected
+		// by talents.
+		//
+		// context.gearSlots = this.actor.numGearSlots();
+
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();
+
+		// TODO Languages!
 
 		this._prepareItems(context);
 
@@ -109,20 +115,31 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
-		this.actor.updateArmor(updatedItem);
+		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
 	_prepareItems(context) {
 		const gems = [];
-		const inventory = [];
+		const inventory = {
+			armor: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
+				items: [],
+			},
+			weapon: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.weapon"),
+				items: [],
+			},
+			basic: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.basic"),
+				items: [],
+			},
+		};
 		const spells = [];
 		const talents = [];
 
-		const allItems = this._sortAllItems(context);
-
 		let slotCount = 0;
 
-		for (const i of allItems) {
+		for (const i of this._sortAllItems(context)) {
 			if (i.type === "Armor" || i.type === "Basic" || i.type === "Weapon") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
 
@@ -144,7 +161,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 				slotCount += i.slotsUsed;
 
-				inventory.push(i);
+
+				inventory[i.type.toLowerCase()].items.push(i);
 			}
 			else if (i.type === "Gem") {
 				gems.push(i);
@@ -157,10 +175,28 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 		}
 
-		// TODO Add Gem and Coin slot usage to calculate total
+		// Work out how many slots all these coins are taking up...
+		const coins = this.actor.system.coins;
+		const totalCoins = coins.gp + coins.sp + coins.cp;
 
+		let coinSlots = 0;
+		const freeCoins = CONFIG.SHADOWDARK.DEFAULTS.FREE_COIN_CARRY;
+		if (totalCoins > freeCoins) {
+			coinSlots = Math.ceil((totalCoins - freeCoins) / freeCoins);
+		}
+
+		// Now do the same for gems...
+		let gemSlots = 0;
+		let totalGems = gems.length;
+
+		if (totalGems > 0) {
+			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
+		}
+
+		context.coins = {totalCoins, coinSlots};
+		context.gems = {items: gems, totalGems, gemSlots};
 		context.inventory = inventory;
-		context.slotsUsed = slotCount;
+		context.slotsUsed = slotCount + coinSlots + gemSlots;
 		context.spells = spells;
 		context.talents = talents;
 	}

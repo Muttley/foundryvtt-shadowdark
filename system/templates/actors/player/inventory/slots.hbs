@@ -5,7 +5,7 @@
 			type="number"
 			value="{{slotsUsed}}"
 			class="slots-value"
-			{{#ifCond slotsUsed '>' gearSlots}}
+			{{#ifCond slotsUsed '>' actor.system.slots}}
 				style="color: red;"
 			{{/ifCond}}
 			disabled
@@ -13,12 +13,11 @@
 		<label>{{localize 'SHADOWDARK.inventory.slots_used'}}</label>
 	</div>
 	<div class="slots-box">
-		<input
-			type="number"
-			value="{{gearSlots}}"
+		{{numberInput
+			actor.system.slots
+			name="system.slots"
 			class="slots-value"
-			disabled
-		>
+		}}
 		<label>{{localize 'SHADOWDARK.inventory.slots_max'}}</label>
 	</div>
 </div>
