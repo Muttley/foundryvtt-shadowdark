@@ -22,9 +22,24 @@
 	"packs": [],
 	"languages": [
 		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "i18n/de.json"
+		},
+		{
 			"lang": "en",
 			"name": "English",
 			"path": "i18n/en.json"
+		},
+		{
+			"lang": "fi",
+			"name": "suomen kieli",
+			"path": "i18n/fi.json"
+		},
+		{
+			"lang": "sv",
+			"name": "svenska",
+			"path": "i18n/sv.json"
 		}
 	],
 	"socket": true,
