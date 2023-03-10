@@ -19,7 +19,17 @@
 	],
 	"esmodules": ["shadowdark.mjs"],
 	"styles": ["css/shadowdark.css"],
-	"packs": [],
+	"packs": [
+		{
+			"name": "spells",
+			"label": "Spells",
+			"system": "shadowdark",
+			"path": "packs/spells.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		}
+	],
 	"languages": [
 		{
 			"lang": "de",
