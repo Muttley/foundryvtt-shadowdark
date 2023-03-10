@@ -146,9 +146,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				// We calculate how many slots are used by this item, taking
 				// into account the quantity and any free items.
 				//
-				// We define some temp variables here to ensure the equation is
-				// easier to read.
-				//
 				const freeCarry = i.system.slots.free_carry;
 				const perSlot = i.system.slots.per_slot;
 				const quantity = i.system.quantity;
@@ -160,7 +157,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				i.slotsUsed = totalSlotsUsed;
 
 				slotCount += i.slotsUsed;
-
 
 				inventory[i.type.toLowerCase()].items.push(i);
 			}
