@@ -96,8 +96,6 @@ export default class ActorSD extends Actor {
 	}
 
 	async updateArmorClass() {
-		// TODO Actually calculate the AC using any equipped Armor (if any)
-		// for now we just set the base unarmored AC
 		const dexModifier = this.abilityModifier("dex");
 
 		let baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;

@@ -51,12 +51,6 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has attributes", () => {
 			expect(actor.system.attributes).is.not.undefined;
 		});
-		it("has attributes.ac", () => {
-			expect(actor.system.attributes.ac).is.not.undefined;
-		});
-		it("has attributes.ac.value", () => {
-			expect(actor.system.attributes.ac.value).is.not.undefined;
-		});
 		it("has attributes.hp", () => {
 			expect(actor.system.attributes.hp).is.not.undefined;
 		});
@@ -414,7 +408,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("calculates the correct AC with no armor equipped", async () => {
 			await actor.updateArmorClass();
 			await waitForInput();
-			expect(actor.system.attributes.ac.value).equal(10 + 4);
+			expect(await actor.getArmorClass()).equal(10 + 4);
 		});
 		it("calculates the correct AC with armor equipped", async () => {
 			await actor.createEmbeddedDocuments("Item", [
@@ -423,12 +417,13 @@ export default ({ describe, it, after, before, expect }) => {
 					name: "Test Armor 1",
 					"system.ac.base": 11,
 					"system.ac.modifier": 2,
+					"system.ac.attribute": "dex",
 					"system.equipped": true,
 				},
 			]);
 			await actor.updateArmorClass();
 			await waitForInput();
-			expect(actor.system.attributes.ac.value).equal(11 + 4 + 2);
+			expect(await actor.getArmorClass()).equal(11 + 4 + 2);
 		});
 
 		it("calculates the correct AC with armor and shield equipped", async () => {
@@ -443,7 +438,7 @@ export default ({ describe, it, after, before, expect }) => {
 			]);
 			await actor.updateArmorClass();
 			await waitForInput();
-			expect(actor.system.attributes.ac.value).equal(11 + 4 + 2 + 3);
+			expect(await actor.getArmorClass()).equal(11 + 4 + 2 + 3);
 		});
 
 		after(async () => {

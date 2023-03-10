@@ -7,6 +7,12 @@
 		"templates": {
 			"shared_details": {
 				"alignment": "",
+				"attributes": {
+					"hp": {
+						"max": 0,
+						"value": 0
+					}
+				},
 				"notes": ""
 			}
 		},
