@@ -1,0 +1,102 @@
+SHADOWDARK.ability_cha: Kar
+SHADOWDARK.ability_charisma: Karisma
+SHADOWDARK.ability_con: Sitkeys
+SHADOWDARK.ability_constitution: Sit
+SHADOWDARK.ability_dex: Ketteryys
+SHADOWDARK.ability_dexterity: Ket
+SHADOWDARK.ability_int: Äly
+SHADOWDARK.ability_intelligence: Älykkyys
+SHADOWDARK.ability_str: Voi
+SHADOWDARK.ability_strength: Voimakkuus
+SHADOWDARK.ability_wis: Vii
+SHADOWDARK.ability_wisdom: Viisaus
+SHADOWDARK.app.item-properties.save: Tallenna
+SHADOWDARK.app.item-properties.title: Asetukset
+SHADOWDARK.armor.properties.disadvStealth: Haitta/Hiipiminen
+SHADOWDARK.armor.properties.disadvSwim: Haitta/Uiminen
+SHADOWDARK.armor.properties.noSwim: Ei voi uida
+SHADOWDARK.armor.properties.oneHanded: Varaa yhden käden
+SHADOWDARK.armor.properties.shield: Kilpi
+SHADOWDARK.coins.cp: Kupari
+SHADOWDARK.coins.gp: Kulta
+SHADOWDARK.coins.sp: Hopea
+SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
+SHADOWDARK.dialog.item.delete: Poista
+SHADOWDARK.inventory.coins: Kolikot
+SHADOWDARK.inventory.label.quantity: Kpl
+SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
+SHADOWDARK.inventory.slots_max: Maksimi
+SHADOWDARK.inventory.slots_used: Täytetty
+SHADOWDARK.inventory.slots: Tarviketila
+SHADOWDARK.inventory.tooltip.gem_bag: Avaa jalokivipussi
+SHADOWDARK.inventory.tooltip.item_decrement: Vähennä määrää
+SHADOWDARK.inventory.tooltip.item_increment: Lisää määrää
+SHADOWDARK.inventory.tooltip.toggle_equipped: Ota käyttöön
+SHADOWDARK.inventory.total_coins: Kolikoita yhteensä
+SHADOWDARK.inventory.total_gems: Jalokiviä yhteensä
+SHADOWDARK.item_type.armor: Panssari
+SHADOWDARK.item_type.basic: Esine
+SHADOWDARK.item_type.gem: Jalokivi
+SHADOWDARK.item_type.spell: Loitsu
+SHADOWDARK.item_type.talent: Lahjakkuus
+SHADOWDARK.item_type.weapon: Ase
+SHADOWDARK.item.armor_ac_modifier: Lisäpisteet
+SHADOWDARK.item.armor_ac: Puolustuspisteet
+SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
+SHADOWDARK.item.cost: Hinta
+SHADOWDARK.item.description: Kuvaus
+SHADOWDARK.item.equipped: Käytössä
+SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
+SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
+SHADOWDARK.item.inventory_quantity: Lukumäärä
+SHADOWDARK.item.inventory_slots: Tarviketiloja per esine
+SHADOWDARK.item.properties: Asetukset
+SHADOWDARK.item.weapon_damage.1h: Vahinkoa yhdellä kädellä
+SHADOWDARK.item.weapon_damage.2h: Vahinkoa kahdella kädellä
+SHADOWDARK.item.weapon_range: Kantama
+SHADOWDARK.item.weapon_type: Aseen tyyppi
+SHADOWDARK.range.close: Vieressä
+SHADOWDARK.range.far: Kaukana
+SHADOWDARK.range.near: Lähellä
+SHADOWDARK.sheet.ClassItem: Shadowdark esineikkuna
+SHADOWDARK.sheet.ClassPlayer: Shadowdark hahmoikkuna
+SHADOWDARK.sheet.general.item_delete.title: Poista esine
+SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
+SHADOWDARK.sheet.player.ac: Puolustus
+SHADOWDARK.sheet.player.alignment: Vakaumus
+SHADOWDARK.sheet.player.ancestry: Laji
+SHADOWDARK.sheet.player.attacks: Hyökkäykset
+SHADOWDARK.sheet.player.background: Tausta
+SHADOWDARK.sheet.player.class: Hahmoluokka
+SHADOWDARK.sheet.player.deity: Jumala
+SHADOWDARK.sheet.player.hp_max: Maksimi
+SHADOWDARK.sheet.player.hp: Osumapisteet
+SHADOWDARK.sheet.player.level: Kokemustaso
+SHADOWDARK.sheet.player.luck: Tuuripiste
+SHADOWDARK.sheet.player.name: Nimi
+SHADOWDARK.sheet.player.notes: Muistiinpanot
+SHADOWDARK.sheet.player.spells: Loitsut
+SHADOWDARK.sheet.player.tab.abilities: Kyvyt
+SHADOWDARK.sheet.player.tab.background: Tausta
+SHADOWDARK.sheet.player.tab.inventory: Kantamukset
+SHADOWDARK.sheet.player.tab.spells: Loitsut
+SHADOWDARK.sheet.player.tab.talents: Lahjakkuudet
+SHADOWDARK.sheet.player.talents: Lahjakkuudet
+SHADOWDARK.sheet.player.title: Arvonimi
+SHADOWDARK.sheet.player.xp: Kokemuspisteet
+SHADOWDARK.spell_duration.focus: Keskittyessä
+SHADOWDARK.spell_duration.instant: Välitön
+SHADOWDARK.spell_duration.rounds: Kierrosta
+SHADOWDARK.spell_range.close: Vieressä
+SHADOWDARK.spell_range.far: Kaukana
+SHADOWDARK.spell_range.near: Lähellä
+SHADOWDARK.weapon.properties.finesse: Hienovarainen
+SHADOWDARK.weapon.properties.loading: Ladattava
+SHADOWDARK.weapon.properties.thrown: Heitettävä
+SHADOWDARK.weapon.properties.twoHanded: Kaksikätinen
+SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
+SHADOWDARK.weapon.type.melee: Lähitaistelu ase
+SHADOWDARK.weapon.type.ranged: Kantama-ase
+SHADOWDARK.inventory.section.armor: Panssari
+SHADOWDARK.inventory.section.weapon: Aseet
+SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet
