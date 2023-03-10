@@ -99,7 +99,7 @@ export default class ActorSheetSD extends ActorSheet {
 				buttons: {
 					Yes: {
 						icon: "<i class=\"fa fa-check\"></i>",
-						label: "Yes",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
 							await this.actor.deleteEmbeddedDocuments(
 								"Item",
@@ -109,7 +109,7 @@ export default class ActorSheetSD extends ActorSheet {
 					},
 					Cancel: {
 						icon: "<i class=\"fa fa-times\"></i>",
-						label: "Cancel",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
 					},
 				},
 				default: "Yes",

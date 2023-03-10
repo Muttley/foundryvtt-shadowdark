@@ -25,6 +25,9 @@ SHADOWDARK.dialog.item.delete: Poista
 SHADOWDARK.inventory.coins: Kolikot
 SHADOWDARK.inventory.label.quantity: Kpl
 SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
+SHADOWDARK.inventory.section.armor: Panssari
+SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet
+SHADOWDARK.inventory.section.weapon: Aseet
 SHADOWDARK.inventory.slots_max: Maksimi
 SHADOWDARK.inventory.slots_used: Täytetty
 SHADOWDARK.inventory.slots: Tarviketila
@@ -97,6 +100,3 @@ SHADOWDARK.weapon.properties.twoHanded: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
 SHADOWDARK.weapon.type.ranged: Kantama-ase
-SHADOWDARK.inventory.section.armor: Panssari
-SHADOWDARK.inventory.section.weapon: Aseet
-SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet

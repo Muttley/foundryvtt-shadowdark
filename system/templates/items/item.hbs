@@ -33,6 +33,10 @@
 			{{> items/partials/cost.hbs }}
 		{{/if}}
 
+		{{#ifEq item.type "Basic"}}
+			{{> items/partials/treasure.hbs }}
+		{{/ifEq}}
+
 		{{#if usesSlots}}
 			{{!-- Gems have non-configurable slot settings --}}
 			{{#ifNeq item.type "Gem"}}
@@ -45,6 +49,7 @@
 				{{> items/partials/equipped.hbs }}
 			{{/if}}
 		{{/if}}
+
 
 	</section>
 </form>

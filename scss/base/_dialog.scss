@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark-dialog {
+	@include p-reset;
+	padding: 4px;
+}

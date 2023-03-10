@@ -10,6 +10,10 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Strength
 SHADOWDARK.ability_wis: Wis
 SHADOWDARK.ability_wisdom: Wisdom
+SHADOWDARK.app.gem-bag.sell_all: Sell All Gems
+SHADOWDARK.app.gem-bag.title: Gem Bag
+SHADOWDARK.app.gem-bag.tooltip.sell_gem: Sell Gem
+SHADOWDARK.app.gem-bag.total_value: Total Value
 SHADOWDARK.app.item-properties.save: Save
 SHADOWDARK.app.item-properties.title: Properties
 SHADOWDARK.armor.properties.disadvStealth: Disadvantage/Stealth
@@ -21,16 +25,27 @@ SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
+SHADOWDARK.dialog.general.cancel: Cancel
+SHADOWDARK.dialog.general.yes: Yes
+SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
+SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
+SHADOWDARK.dialog.item.sell_all: Sell All
+SHADOWDARK.dialog.item.sell: Sell
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
+SHADOWDARK.inventory.section.armor: Armor
+SHADOWDARK.inventory.section.basic: Basic Equipment
+SHADOWDARK.inventory.section.treasure: Treasure
+SHADOWDARK.inventory.section.weapon: Weapons
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Used
 SHADOWDARK.inventory.slots: Slots
 SHADOWDARK.inventory.tooltip.gem_bag: Open Gem Bag
 SHADOWDARK.inventory.tooltip.item_decrement: Decrease Quantity
 SHADOWDARK.inventory.tooltip.item_increment: Increase Quantity
+SHADOWDARK.inventory.tooltip.sell_treasure: Sell Treasure
 SHADOWDARK.inventory.tooltip.toggle_equipped: Toggle Equipped
 SHADOWDARK.inventory.total_coins: Total Coins
 SHADOWDARK.inventory.total_gems: Total Gems
@@ -51,6 +66,7 @@ SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantity
 SHADOWDARK.item.inventory_slots: Slots per Item
 SHADOWDARK.item.properties: Properties
+SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.weapon_damage.1h: 1H Damage
 SHADOWDARK.item.weapon_damage.2h: 2H Damage
 SHADOWDARK.item.weapon_range: Range
@@ -97,6 +113,3 @@ SHADOWDARK.weapon.properties.twoHanded: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.inventory.section.armor: Armor
-SHADOWDARK.inventory.section.weapon: Weapons
-SHADOWDARK.inventory.section.basic: Basic Equipment

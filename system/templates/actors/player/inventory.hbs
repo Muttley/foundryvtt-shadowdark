@@ -56,6 +56,15 @@
 										<i class="fas fa-shirt"></i>
 									</a>
 								{{/if}}
+								{{#if item.system.treasure}}
+									<a
+										class="item-control sell-treasure"
+										data-item-id="{{item._id}}"
+										title="{{localize 'SHADOWDARK.inventory.tooltip.sell_treasure'}}"
+									>
+										<i class="fa-solid fa-coins"></i>
+									</a>
+								{{/if}}
 							</td>
 						</tr>
 					{{/each}}
@@ -71,12 +80,16 @@
 					<td class="item-list-centered"><b>{{gems.totalGems}}</b></td>
 					<td class="item-list-centered"><b>{{gems.gemSlots}}</b></td>
 					<td class="item-list-centered">
-						<a
-							class="item-control open-gem-bag"
-							title="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
-						>
-							<i class="fa-solid fa-sack"></i>
-						</a>
+						{{#ifCond gems.totalGems '>' 0}}
+							<a
+								class="item-control open-gem-bag"
+								title="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
+							>
+								<i class="fa-solid fa-sack"></i>
+							</a>
+						{{else}}
+								<i class="fa-solid fa-sack inactive"></i>
+						{{/ifCond}}
 					</td>
 				</tr>
 			</table>

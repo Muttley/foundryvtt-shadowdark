@@ -57,6 +57,55 @@ export default class ActorSD extends Actor {
 		console.log(`Rolling ability check: ${abilityId}`);
 	}
 
+	async sellAllGems() {
+		const items = this.items.filter(item => item.type === "Gem");
+		return this.sellAllItems(items);
+	}
+
+	async sellAllItems(items) {
+		const coins = this.system.coins;
+
+		const soldItems = [];
+		for (let i = 0; i < items.length; i++) {
+			const item = items[i];
+
+			coins.gp += item.system.cost.gp;
+			coins.sp += item.system.cost.sp;
+			coins.cp += item.system.cost.cp;
+
+			soldItems.push(item._id);
+		}
+
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			soldItems
+		);
+
+		Actor.updateDocuments([{
+			_id: this._id,
+			"system.coins": coins,
+		}]);
+	}
+
+	async sellItemById(itemId) {
+		const item = this.getEmbeddedDocument("Item", itemId);
+		const coins = this.system.coins;
+
+		coins.gp += item.system.cost.gp;
+		coins.sp += item.system.cost.sp;
+		coins.cp += item.system.cost.cp;
+
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			[itemId]
+		);
+
+		Actor.updateDocuments([{
+			_id: this._id,
+			"system.coins": coins,
+		}]);
+	}
+
 	async updateArmor(updatedItem) {
 		// updatedItem is the item that has had its "equipped" field toggled
 		// on/off.

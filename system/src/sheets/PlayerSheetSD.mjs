@@ -2,6 +2,12 @@ import ActorSheetSD from "./ActorSheetSD.mjs";
 
 export default class PlayerSheetSD extends ActorSheetSD {
 
+	constructor(object, options) {
+		super(object, options);
+
+		this.gemBag = new shadowdark.apps.GemBagSD(this.actor);
+	}
+
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
@@ -42,12 +48,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find(".open-gem-bag").click(
+			event => this._onOpenGemBag(event)
+		);
+
+		html.find(".sell-treasure").click(
+			event => this._onSellTreasure(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
 
 	/** @override */
 	async getData(options) {
+		// Update the Gem Bag, but don't render it unless it's already showing
+		this.gemBag.render(false);
+
 		const context = await super.getData(options);
 
 		// TODO Calculate this once we have ActiveEffects as it can be affected
@@ -97,10 +114,47 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
+	async _onOpenGemBag(event) {
+		event.preventDefault();
+
+		this.gemBag.render(true);
+	}
+
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
 		let ability = $(event.currentTarget).data("ability");
 		this.actor.rollAbility(ability, {event: event});
+	}
+
+	_onSellTreasure(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const itemData = this.object.getEmbeddedDocument("Item", itemId);
+
+		renderTemplate(
+			"systems/shadowdark/templates/dialog/sell-item.hbs",
+			{name: itemData.name}
+		).then(html => {
+			new Dialog({
+				title: `${game.i18n.localize("SHADOWDARK.dialog.item.confirm_sale")}`,
+				content: html,
+				buttons: {
+					Yes: {
+						icon: "<i class=\"fa fa-check\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						callback: async () => {
+							this.actor.sellItemById(itemId);
+						},
+					},
+					Cancel: {
+						icon: "<i class=\"fa fa-times\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+					},
+				},
+				default: "Yes",
+			}).render(true);
+		});
 	}
 
 	async _onToggleEquipped(event) {
@@ -133,6 +187,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.basic"),
 				items: [],
 			},
+			treasure: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
+				items: [],
+			},
 		};
 		const spells = [];
 		const talents = [];
@@ -158,7 +216,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 				slotCount += i.slotsUsed;
 
-				inventory[i.type.toLowerCase()].items.push(i);
+				const section = i.system.treasure
+					? "treasure"
+					: i.type.toLowerCase();
+
+				inventory[section].items.push(i);
 			}
 			else if (i.type === "Gem") {
 				gems.push(i);
@@ -215,4 +277,5 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		return allItems;
 	}
+
 }

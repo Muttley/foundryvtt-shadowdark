@@ -224,7 +224,6 @@
 	}
 
 	.inventory-list {
-		display: grid;
 
 		table {
 			@include p-reset;
@@ -285,6 +284,10 @@
 		&.equipped {
 			color: black;
 		}
+	}
+
+	.inactive {
+		color: #A0A09A;
 	}
 
 	.level-xp {
@@ -374,6 +377,15 @@
 		&:hover {
 			cursor: pointer;
 			text-shadow: 0 0 8px var(--clickable);
+		}
+	}
+
+	.sell-treasure {
+		color: #A0A09A;
+
+		&:hover {
+			color: gold;
+			text-shadow: 1px 1px 1px black;
 		}
 	}
 
