@@ -19,6 +19,10 @@ import sheetsItemTests, {
 	key as sheetsItemKey,
 	options as sheetsItemOptions,
 } from "../sheets/__tests__/sheets-item.test.mjs";
+import sheetsPlayerTests, {
+	key as sheetsPlayerKey,
+	options as sheetsPlayerOptions,
+} from "../sheets/__tests__/sheets-player.test.mjs";
 
 
 Hooks.on("quenchReady", async quench => {
@@ -44,5 +48,10 @@ Hooks.on("quenchReady", async quench => {
 		sheetsItemKey,
 		sheetsItemTests,
 		sheetsItemOptions
+	);
+	quench.registerBatch(
+		sheetsPlayerKey,
+		sheetsPlayerTests,
+		sheetsPlayerOptions
 	);
 });
