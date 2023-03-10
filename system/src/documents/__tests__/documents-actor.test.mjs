@@ -150,6 +150,9 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has title", () => {
 			expect(actor.system.title).is.not.undefined;
 		});
+		it("has slots", () => {
+			expect(actor.system.slots).is.not.undefined;
+		});
 
 		after(async () => {
 			await actor.delete();
@@ -339,6 +342,18 @@ export default ({ describe, it, after, before, expect }) => {
 
 		after(async () => {
 			await actor.delete();
+		});
+	});
+
+	describe("getArmorClass()", () => {
+		// Tested under updateArmorClass()
+		it("returns the correct armor class", async () => {
+			const actor = await createMockActor("Player");
+			await actor.update({
+				"system.abilities.dex.value": 1,
+			});
+
+			expect(await actor.getArmorClass()).equal(10 - 4);
 		});
 	});
 
