@@ -217,18 +217,10 @@
 		@include p-reset;
 		margin: 4px;
 		display: grid;
-		grid-template-columns: 1fr 120px;
+		grid-template-columns: 4fr 1fr;
 		grid-template-rows: 1fr;
 		column-gap: 12px;
 		row-gap: 12px;
-	}
-
-	.inventory-header {
-		@include p-reset;
-		padding-top: 0.1em;
-		padding-bottom: 0.1em;
-		font-family: "Old Newspaper Font";
-		font-size: 16px;
 	}
 
 	.inventory-list {
@@ -236,49 +228,48 @@
 
 		table {
 			@include p-reset;
-			border: none;
-		}
-
-		tr:not(
-			:first-child,
-			:nth-last-child(2),
-			:last-child,
-			.inventory-section-header
-		) {
-			padding-left: 8px;
-			font-family: "Montserrat-Medium";
-			font-size: 13px;
-
-			&:hover {
-				cursor: pointer;
-				background-color: var(--secondary);
-				color: white;
-			}
-		}
-
-		tr:first-child,
-		tr:last-child,
-		tr:nth-last-child(2) {
-			background-color: #00000020;
-		}
-
-		tr:last-child,
-		tr:nth-last-child(2) {
 			font-family: "Montserrat-Medium";
 			font-size: 14px;
-			text-align: left;
-		}
-
-		.item-list-centered {
 			text-align: center;
-		}
-	}
+			border: none;
 
-	.inventory-section-header {
-		@include p-reset;
-		font-family: "Montserrat-Medium";
-		font-size: 14px;
-		text-align: left;
+			& td:first-child {
+				padding-left: 8px;
+				text-align: left;
+			}
+
+			& tr:first-child,
+			& tr:last-child,
+			& tr:nth-last-child(2) {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				:nth-last-child(2),
+				:last-child,
+				.inventory-section-header
+			) {
+				font-size: 13px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+
+			.inventory-section-header {
+				text-align: left;
+			}
+		}
 	}
 
 	.inventory-sidebar {
@@ -322,6 +313,7 @@
 		grid-template-columns: 1.8fr 1fr;
 		align-items: center;
 		background-color: var(--form-background);
+		column-gap: 4px;
 
 		p {
 			font-size: 20px;
