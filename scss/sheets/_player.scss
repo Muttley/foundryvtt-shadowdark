@@ -31,7 +31,7 @@
 	.abilities-grid {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 180px 1fr;
+		grid-template-columns: 1fr 3fr;
 		column-gap: 8px;
 	}
 
@@ -87,13 +87,13 @@
 		border: none;
 		color: white;
 		background: linear-gradient(0.75turn, transparent, black);
+		text-shadow: 1px 1px black
 	}
 
 	.background-grid {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 230px 1fr;
-		grid-template-rows: 210px 1fr;
+		grid-template-columns: 1fr 2fr;
 		column-gap: 8px;
 	}
 
@@ -172,7 +172,7 @@
 	.detail-box {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 100px 1fr;
+		grid-template-columns: 1fr 2fr;
 		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;

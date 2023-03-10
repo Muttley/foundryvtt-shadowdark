@@ -91,7 +91,7 @@
 		@include p-reset;
 		margin: 4px;
 		display: grid;
-		grid-template-columns: 1fr 120px;
+		grid-template-columns: 3fr 1fr;
 		column-gap: 4px;
 		row-gap: 8px;
 	}
@@ -151,13 +151,16 @@
 	.item-property {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 100px 1fr;
+		grid-template-columns: max-content 1fr;
 		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
 
 		label {
 			@include p-reset;
+			padding-left: 4px;
+			padding-right: 4px;
+
 			display: block;
 
 			font-family: "Old Newspaper Font";
