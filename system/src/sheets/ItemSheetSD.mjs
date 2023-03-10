@@ -4,8 +4,8 @@ export default class ItemSheetSD extends ItemSheet {
 	static get defaultOptions() {
 		// TODO Custom window sizes per item class?
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			width: 490,
-			height: 515,
+			width: 550,
+			height: 560,
 			classes: ["shadowdark", "sheet", "item"],
 			resizable: true,
 		});

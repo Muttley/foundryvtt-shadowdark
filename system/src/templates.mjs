@@ -17,6 +17,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/description.hbs",
 		"systems/shadowdark/templates/items/partials/equipped.hbs",
 		"systems/shadowdark/templates/items/partials/slots.hbs",
+		"systems/shadowdark/templates/items/partials/talent.hbs",
 		"systems/shadowdark/templates/items/partials/treasure.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
 	];

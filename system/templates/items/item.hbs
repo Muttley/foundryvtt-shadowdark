@@ -18,7 +18,6 @@
 		</h1>
 	</header>
 	<section class="item-body">
-
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon.hbs }}
 		{{/ifEq}}
@@ -29,27 +28,35 @@
 
 		{{> items/partials/description.hbs }}
 
-		{{#if hasCost}}
-			{{> items/partials/cost.hbs }}
-		{{/if}}
+		<div>
+			<div class="item-sidebar">
 
-		{{#ifEq item.type "Basic"}}
-			{{> items/partials/treasure.hbs }}
-		{{/ifEq}}
+				{{#ifEq item.type "Talent"}}
+					{{> items/partials/talent.hbs }}
+				{{/ifEq}}
 
-		{{#if usesSlots}}
-			{{!-- Gems have non-configurable slot settings --}}
-			{{#ifNeq item.type "Gem"}}
-				{{> items/partials/slots.hbs }}
-			{{else}}
-				<div></div>
-			{{/ifNeq}}
+				{{#if hasCost}}
+					{{> items/partials/cost.hbs }}
+				{{/if}}
 
-			{{#if item.system.canBeEquipped}}
-				{{> items/partials/equipped.hbs }}
-			{{/if}}
-		{{/if}}
+				{{#if usesSlots}}
+					{{!-- Gems have non-configurable slot settings --}}
+					{{#ifNeq item.type "Gem"}}
+						{{> items/partials/slots.hbs }}
+					{{else}}
+						<div></div>
+					{{/ifNeq}}
 
+					{{#if item.system.canBeEquipped}}
+						{{> items/partials/equipped.hbs }}
+					{{/if}}
+				{{/if}}
 
+				{{#ifEq item.type "Basic"}}
+					{{> items/partials/treasure.hbs }}
+				{{/ifEq}}
+
+			</div>
+		</div>
 	</section>
 </form>

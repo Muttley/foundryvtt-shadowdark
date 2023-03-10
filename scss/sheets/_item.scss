@@ -100,7 +100,8 @@
 	.item-description {
 		@include p-reset;
 		padding: 4px;
-		grid-row: span 3;
+		min-height: 340px;
+		max-height: 440px;
 		background-color: var(--form-background);
 	}
 
@@ -120,6 +121,12 @@
 		font-size: 2.5rem;
 
 		height: 100%;
+	}
+
+	.item-sidebar {
+		display: grid;
+		align-items: start;
+		row-gap: 8px;
 	}
 
 	.slots {
