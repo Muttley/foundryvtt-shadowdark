@@ -41,6 +41,16 @@ export const cleanUpItemsByKey = key => {
 		.forEach(i => i.delete());
 };
 
+/**
+ * If there are messages, purge them.
+ *
+ * @returns {Promise} The promise from deleting messages
+ */
+export const trashChat = () =>
+	game.messages?.size > 0
+		? game.messages?.documentClass.deleteDocuments([], { deleteAll: true })
+		: null;
+
 /* UI CLOSE HELPERS */
 export const openWindows = className =>
 	Object.values(ui.windows).filter(o =>
