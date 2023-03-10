@@ -15,6 +15,11 @@ import sheetsActorTests, {
 	key as sheetsActorKey,
 	options as sheetsActorOptions,
 } from "../sheets/__tests__/sheets-actor.test.mjs";
+import sheetsItemTests, {
+	key as sheetsItemKey,
+	options as sheetsItemOptions,
+} from "../sheets/__tests__/sheets-item.test.mjs";
+
 
 Hooks.on("quenchReady", async quench => {
 	// Document tests
@@ -34,5 +39,10 @@ Hooks.on("quenchReady", async quench => {
 		sheetsActorKey,
 		sheetsActorTests,
 		sheetsActorOptions
+	);
+	quench.registerBatch(
+		sheetsItemKey,
+		sheetsItemTests,
+		sheetsItemOptions
 	);
 });
