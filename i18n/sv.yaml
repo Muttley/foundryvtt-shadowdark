@@ -1,0 +1,102 @@
+SHADOWDARK.ability_cha: KAR
+SHADOWDARK.ability_charisma: Karisma
+SHADOWDARK.ability_con: FYS
+SHADOWDARK.ability_constitution: Fysik
+SHADOWDARK.ability_dex: SMI
+SHADOWDARK.ability_dexterity: Smidighet
+SHADOWDARK.ability_int: INT
+SHADOWDARK.ability_intelligence: Intelligens
+SHADOWDARK.ability_str: STY
+SHADOWDARK.ability_strength: Styrka
+SHADOWDARK.ability_wis: VIS
+SHADOWDARK.ability_wisdom: Vishet
+SHADOWDARK.app.item-properties.save: Spara
+SHADOWDARK.app.item-properties.title: Egenskaper
+SHADOWDARK.armor.properties.disadvStealth: Nackdel/Smyga
+SHADOWDARK.armor.properties.disadvSwim: Nackdel/Simma
+SHADOWDARK.armor.properties.noSwim: Ingen Simma
+SHADOWDARK.armor.properties.oneHanded: Upptar en hand
+SHADOWDARK.armor.properties.shield: Sköld
+SHADOWDARK.coins.cp: KP
+SHADOWDARK.coins.gp: GP
+SHADOWDARK.coins.sp: SP
+SHADOWDARK.dialog.general.are_you_sure: Är du säker?
+SHADOWDARK.dialog.item.delete: Ta bort
+SHADOWDARK.inventory.coins: Mynt
+SHADOWDARK.inventory.label.quantity: Kvantitet
+SHADOWDARK.inventory.label.slots: Platser
+SHADOWDARK.inventory.slots_max: Max
+SHADOWDARK.inventory.slots_used: Använda
+SHADOWDARK.inventory.slots: Platser
+SHADOWDARK.inventory.tooltip.gem_bag: Öppna ädelstenspåse
+SHADOWDARK.inventory.tooltip.item_decrement: Minska kvantitet
+SHADOWDARK.inventory.tooltip.item_increment: Öka kvantitet
+SHADOWDARK.inventory.tooltip.toggle_equipped: På/Av Buren
+SHADOWDARK.inventory.total_coins: Totalt antal mynt
+SHADOWDARK.inventory.total_gems: Totalt antal ädelstenar
+SHADOWDARK.item_type.armor: Rustning
+SHADOWDARK.item_type.basic: Grundläggande
+SHADOWDARK.item_type.gem: Ädelsten
+SHADOWDARK.item_type.spell: Besvärjelse
+SHADOWDARK.item_type.talent: Talang
+SHADOWDARK.item_type.weapon: Vapen
+SHADOWDARK.item.armor_ac_modifier: AC Bonus
+SHADOWDARK.item.armor_ac: AC
+SHADOWDARK.item.armor_bonus_attribute: Bonus Egenskap
+SHADOWDARK.item.cost: Kostnad
+SHADOWDARK.item.description: Beskrivning
+SHADOWDARK.item.equipped: Buren
+SHADOWDARK.item.inventory_free_carry: Fri kapacitet
+SHADOWDARK.item.inventory_per_slot: Max antal per plats
+SHADOWDARK.item.inventory_quantity: Kvantitet
+SHADOWDARK.item.inventory_slots: Platser per föremål
+SHADOWDARK.item.properties: Egenskaper
+SHADOWDARK.item.weapon_damage.1h: 1H Skada
+SHADOWDARK.item.weapon_damage.2h: 2H Skada
+SHADOWDARK.item.weapon_range: Avstånd
+SHADOWDARK.item.weapon_type: Typ
+SHADOWDARK.range.close: Kroppsnära
+SHADOWDARK.range.far: Avstånd
+SHADOWDARK.range.near: Nära
+SHADOWDARK.sheet.ClassItem: Shadowdark Föremålsblad
+SHADOWDARK.sheet.ClassPlayer: Shadowdark Spelarblad
+SHADOWDARK.sheet.general.item_delete.title: Ta bort föremål
+SHADOWDARK.sheet.general.item_edit.title: Förändra föremål
+SHADOWDARK.sheet.player.ac: AC
+SHADOWDARK.sheet.player.alignment: Moralisk lutning
+SHADOWDARK.sheet.player.ancestry: Ursprung
+SHADOWDARK.sheet.player.attacks: Attacker
+SHADOWDARK.sheet.player.background: Bakgrund
+SHADOWDARK.sheet.player.class: Klass
+SHADOWDARK.sheet.player.deity: Gud
+SHADOWDARK.sheet.player.hp_max: Max
+SHADOWDARK.sheet.player.hp: KP
+SHADOWDARK.sheet.player.level: Erfarenhetsnivå
+SHADOWDARK.sheet.player.luck: Tur
+SHADOWDARK.sheet.player.name: Namn
+SHADOWDARK.sheet.player.notes: Karaktärsanteckningar
+SHADOWDARK.sheet.player.spells: Besvärjelser
+SHADOWDARK.sheet.player.tab.abilities: Förmågor
+SHADOWDARK.sheet.player.tab.background: Bakgrund
+SHADOWDARK.sheet.player.tab.inventory: Inventarie
+SHADOWDARK.sheet.player.tab.spells: Besvärjelser
+SHADOWDARK.sheet.player.tab.talents: Talanger
+SHADOWDARK.sheet.player.talents: Talanger
+SHADOWDARK.sheet.player.title: Titel
+SHADOWDARK.sheet.player.xp: Erfarenhetspoäng
+SHADOWDARK.spell_duration.focus: Fokus
+SHADOWDARK.spell_duration.instant: Ögonblicklig
+SHADOWDARK.spell_duration.rounds: Rundor
+SHADOWDARK.spell_range.close: Kroppsnära
+SHADOWDARK.spell_range.far: Avstånd
+SHADOWDARK.spell_range.near: Nära
+SHADOWDARK.weapon.properties.finesse: Finess
+SHADOWDARK.weapon.properties.loading: Ladda
+SHADOWDARK.weapon.properties.thrown: Kasta
+SHADOWDARK.weapon.properties.twoHanded: Två-handat
+SHADOWDARK.weapon.properties.versatile: Versatilt
+SHADOWDARK.weapon.type.melee: Närstrid
+SHADOWDARK.weapon.type.ranged: Avståndsstrid
+SHADOWDARK.inventory.section.armor: Rustning
+SHADOWDARK.inventory.section.weapon: Vapen
+SHADOWDARK.inventory.section.basic: Grundläggande Utrustning
