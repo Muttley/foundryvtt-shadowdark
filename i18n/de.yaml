@@ -1,0 +1,102 @@
+SHADOWDARK.ability_cha: CH
+SHADOWDARK.ability_charisma: Charisma
+SHADOWDARK.ability_con: KO
+SHADOWDARK.ability_constitution: Konstitution
+SHADOWDARK.ability_dex: GE
+SHADOWDARK.ability_dexterity: Geschicklichkeit
+SHADOWDARK.ability_int: IN
+SHADOWDARK.ability_intelligence: Intelligenz
+SHADOWDARK.ability_str: ST
+SHADOWDARK.ability_strength: Stärke
+SHADOWDARK.ability_wis: WI
+SHADOWDARK.ability_wisdom: Weisheit
+SHADOWDARK.app.item-properties.save: Rettung
+SHADOWDARK.app.item-properties.title: Eigenschaften
+SHADOWDARK.armor.properties.disadvStealth: Nachteil/Heimlicheit
+SHADOWDARK.armor.properties.disadvSwim: Nachteil/Schwimmen
+SHADOWDARK.armor.properties.noSwim: Kein Schwimmen
+SHADOWDARK.armor.properties.oneHanded: Benötigt eine Hand
+SHADOWDARK.armor.properties.shield: Schild
+SHADOWDARK.coins.cp: KM
+SHADOWDARK.coins.gp: GM
+SHADOWDARK.coins.sp: SM
+SHADOWDARK.dialog.general.are_you_sure: Bist du dir sicher?
+SHADOWDARK.dialog.item.delete: Löschen
+SHADOWDARK.inventory.coins: Münzen
+SHADOWDARK.inventory.label.quantity: Menge
+SHADOWDARK.inventory.label.slots: Plätze
+SHADOWDARK.inventory.slots_max: Max
+SHADOWDARK.inventory.slots_used: Benutzt
+SHADOWDARK.inventory.slots: Plätze
+SHADOWDARK.inventory.tooltip.gem_bag: Öffne Edelsteintasche
+SHADOWDARK.inventory.tooltip.item_decrement: Menge erhöhen
+SHADOWDARK.inventory.tooltip.item_increment: Menge verringern
+SHADOWDARK.inventory.tooltip.toggle_equipped: An-/Ablegen
+SHADOWDARK.inventory.total_coins: Münzen gesamt
+SHADOWDARK.inventory.total_gems: Edelsteine gesamt
+SHADOWDARK.item_type.armor: Rüstung
+SHADOWDARK.item_type.basic: Basis
+SHADOWDARK.item_type.gem: Edelstein
+SHADOWDARK.item_type.spell: Zauber
+SHADOWDARK.item_type.talent: Talent
+SHADOWDARK.item_type.weapon: Waffe
+SHADOWDARK.item.armor_ac_modifier: Modifikator
+SHADOWDARK.item.armor_ac: RK
+SHADOWDARK.item.armor_bonus_attribute: Bonus Attribut
+SHADOWDARK.item.cost: Kosten
+SHADOWDARK.item.description: Beschreibung
+SHADOWDARK.item.equipped: Angelegt
+SHADOWDARK.item.inventory_free_carry: Freies Tragen
+SHADOWDARK.item.inventory_per_slot: Max pro Platz
+SHADOWDARK.item.inventory_quantity: Menge
+SHADOWDARK.item.inventory_slots: Plätze pro Gegenstand
+SHADOWDARK.item.properties: Eigenschaften
+SHADOWDARK.item.weapon_damage.1h: 1H Schaden
+SHADOWDARK.item.weapon_damage.2h: 2H Schaden
+SHADOWDARK.item.weapon_range: Distanz
+SHADOWDARK.item.weapon_type: Typ
+SHADOWDARK.range.close: Direkt
+SHADOWDARK.range.far: Weit
+SHADOWDARK.range.near: Nah
+SHADOWDARK.sheet.ClassItem: Shadowdark Gegenstandsblatt
+SHADOWDARK.sheet.ClassPlayer: Shadowdark Spielerblatt
+SHADOWDARK.sheet.general.item_delete.title: Gegenstand löschen
+SHADOWDARK.sheet.general.item_edit.title: Gegenstand bearbeiten
+SHADOWDARK.sheet.player.ac: RK
+SHADOWDARK.sheet.player.alignment: Gesinnung
+SHADOWDARK.sheet.player.ancestry: Abstammung
+SHADOWDARK.sheet.player.attacks: Angriffe
+SHADOWDARK.sheet.player.background: Hintergrund
+SHADOWDARK.sheet.player.class: Klasse
+SHADOWDARK.sheet.player.deity: Gottheit
+SHADOWDARK.sheet.player.hp_max: Max
+SHADOWDARK.sheet.player.hp: TP
+SHADOWDARK.sheet.player.level: Level
+SHADOWDARK.sheet.player.luck: Glück
+SHADOWDARK.sheet.player.name: Name
+SHADOWDARK.sheet.player.notes: Charakternotizen
+SHADOWDARK.sheet.player.spells: Zauber
+SHADOWDARK.sheet.player.tab.abilities: Fähigkeiten
+SHADOWDARK.sheet.player.tab.background: Hintergrund
+SHADOWDARK.sheet.player.tab.inventory: Inventar
+SHADOWDARK.sheet.player.tab.spells: Zauber
+SHADOWDARK.sheet.player.tab.talents: Talente
+SHADOWDARK.sheet.player.talents: Talente
+SHADOWDARK.sheet.player.title: Titel
+SHADOWDARK.sheet.player.xp: EP
+SHADOWDARK.spell_duration.focus: Fokus
+SHADOWDARK.spell_duration.instant: Sofort
+SHADOWDARK.spell_duration.rounds: Runden
+SHADOWDARK.spell_range.close: Direkt
+SHADOWDARK.spell_range.far: Weit
+SHADOWDARK.spell_range.near: Nah
+SHADOWDARK.weapon.properties.finesse: Finesse
+SHADOWDARK.weapon.properties.loading: laden
+SHADOWDARK.weapon.properties.thrown: Wurfwaffe
+SHADOWDARK.weapon.properties.twoHanded: zweihändig
+SHADOWDARK.weapon.properties.versatile: vielseitig
+SHADOWDARK.weapon.type.melee: Nahkampf
+SHADOWDARK.weapon.type.ranged: Fernkampf
+SHADOWDARK.inventory.section.armor: Rüstung
+SHADOWDARK.inventory.section.weapon: Waffen
+SHADOWDARK.inventory.section.basic: Grundausrüstung
