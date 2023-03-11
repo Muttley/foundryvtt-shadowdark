@@ -170,27 +170,10 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 
 		// @todo: i18n
-		it("contains 'edit' option", async () => {
-			const contextMenuItems  = document.querySelectorAll(".context-item");
-			expect(contextMenuItems.length).equal(2);
-			expect(contextMenuItems[0].innerText).equal("Edit Item");
-		});
-
-		// @todo: i18n
 		it("contains 'delete' option", async () => {
 			const contextMenuItems  = document.querySelectorAll(".context-item");
-			expect(contextMenuItems.length).equal(2);
-			expect(contextMenuItems[1].innerText).equal("Delete Item");
-		});
-
-		it("clicking Edit Item opens the Item sheet", async () => {
-			const contextMenuItems = document.querySelectorAll(".context-item");
-			contextMenuItems[0].click();
-			await waitForInput();
-			const itemSheet = Object.values(ui.windows).filter(o => o.options.classes.includes("item"));
-			expect(itemSheet.length).equal(1);
-			// Close the item sheet
-			await itemSheet[0].close();
+			expect(contextMenuItems.length).equal(1);
+			expect(contextMenuItems[0].innerText).equal("Delete Item");
 		});
 
 		it("clicking Delete Item spawns a dialog asking for confirmation", async () => {
@@ -199,7 +182,7 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 
 			const contextMenuItems = document.querySelectorAll(".context-item");
-			contextMenuItems[1].click();
+			contextMenuItems[0].click();
 			await waitForInput();
 
 			const deleteDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("dialog"));
@@ -274,4 +257,42 @@ export default ({ describe, it, after, before, expect }) => {
 			await closeDialogs();
 		});
 	});
+
+	describe("_onOpenItem(event)", () => {
+		let actor = {};
+		let actorItem = {};
+
+		before(async () => {
+			actor = await createMockActor("Player");
+			await actor.sheet.render(true);
+			await waitForInput();
+
+			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
+			await waitForInput();
+
+			const item = await createMockItem("Basic");
+			await item.update({"system.treasure": true});
+			[actorItem] = await actor.createEmbeddedDocuments("Item", [item]);
+			await item.delete();
+		});
+
+		it("clicking the item name renders the item sheet", async () => {
+			const sellElement = document.querySelector("a.open-item");
+			expect(sellElement).is.not.null;
+			await sellElement.click();
+			await waitForInput();
+
+			const openWindows = Object.values(ui.windows).filter(o =>
+				o.options.classes.includes("item"));
+			expect(openWindows.length).equal(1);
+			await openWindows.pop().close();
+		});
+
+		after(async () => {
+			await closeSheets();
+			cleanUpActorsByKey(key);
+			cleanUpItemsByKey(key);
+		});
+	});
+
 };

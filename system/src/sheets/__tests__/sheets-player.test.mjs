@@ -36,6 +36,21 @@ export default ({ describe, it, after, before, expect }) => {
 		cleanUpActorsByKey(key);
 	});
 
+	describe("constructor(object, options)", () => {
+		let actor = {};
+		before(async () => {
+			actor = await createMockActor("Player");
+		});
+
+		it("attackes gembag app", async () => {
+			expect(actor.sheet.gemBag).is.not.undefined;
+		});
+
+		after(async () => {
+			await actor.delete();
+		});
+	});
+
 	describe("defaultOptions", () => {
 		let actor = {};
 		before(async () => {
@@ -73,6 +88,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actor.sheet.options.tabs[0].contentSelector).equal(".player-body");
 			expect(actor.sheet.options.tabs[0].initial).is.not.undefined;
 			expect(actor.sheet.options.tabs[0].initial).equal("pc-tab-abilities");
+		});
+
+		after(async () => {
+			await actor.delete();
 		});
 	});
 
@@ -142,6 +161,60 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
+	describe("_onOpenGemBag(event)", () => {
+		before(async () => {
+			await trashChat();
+			actor = await createMockActor("Player");
+			await actor.sheet.render(true);
+			await waitForInput();
+
+			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
+			await waitForInput();
+
+			const item = await createMockItem("Gem");
+			await actor.createEmbeddedDocuments("Item", [item]);
+			await item.delete();
+		});
+
+		it("clicking the bag, renders the gembag", async () => {
+			const bagElement = document.querySelector("a.open-gem-bag");
+			expect(bagElement).is.not.null;
+			await bagElement.click();
+			await waitForInput();
+
+			const openWindows = Object.values(ui.windows).filter(o =>
+				o.options.classes.includes("gem-bag"));
+
+			expect(openWindows.length).equal(1);
+			await openWindows.pop().close();
+		});
+
+		it("clicking the 'sell all gems' button renders the 'sell treasure' dialog", async () => {
+			const bagElement = document.querySelector("a.open-gem-bag");
+			await bagElement.click();
+			await waitForInput();
+
+			const sellElement = document.querySelector("button.sell-all-button");
+			expect(sellElement).is.not.null;
+			await sellElement.click();
+			await waitForInput();
+
+			const dialogs = openDialogs();
+			expect(dialogs.length).equal(1);
+			await dialogs.pop().close();
+
+			const openWindows = Object.values(ui.windows).filter(o =>
+				o.options.classes.includes("gem-bag"));
+			await openWindows.pop().close();
+		});
+
+		after(async () => {
+			await closeSheets();
+			cleanUpActorsByKey(key);
+			cleanUpItemsByKey(key);
+		});
+	});
+
 	describe("_onRollAbilityCheck(event)", () => {
 		let actor = {};
 
@@ -190,6 +263,40 @@ export default ({ describe, it, after, before, expect }) => {
 			await actor.delete();
 			await closeSheets();
 			await trashChat();
+		});
+	});
+
+	describe("_onSellTreasure(event)", () => {
+		before(async () => {
+			await trashChat();
+			actor = await createMockActor("Player");
+			await actor.sheet.render(true);
+			await waitForInput();
+
+			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
+			await waitForInput();
+
+			const item = await createMockItem("Basic");
+			await item.update({"system.treasure": true});
+			await actor.createEmbeddedDocuments("Item", [item]);
+			await item.delete();
+		});
+
+		it("clicking the 'Sell Treasure' button renders the 'sell treasure' dialog", async () => {
+			const sellElement = document.querySelector("a.sell-treasure");
+			expect(sellElement).is.not.null;
+			await sellElement.click();
+			await waitForInput();
+
+			const dialogs = openDialogs();
+			expect(dialogs.length).equal(1);
+			await dialogs.pop().close();
+		});
+
+		after(async () => {
+			await closeSheets();
+			cleanUpActorsByKey(key);
+			cleanUpItemsByKey(key);
 		});
 	});
 
