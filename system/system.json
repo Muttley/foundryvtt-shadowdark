@@ -21,11 +21,56 @@
 	"styles": ["css/shadowdark.css"],
 	"packs": [
 		{
+			"name": "armor",
+			"label": "Armor",
+			"system": "shadowdark",
+			"path": "packs/armor.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "basic-gear",
+			"label": "Basic Gear",
+			"system": "shadowdark",
+			"path": "packs/basic-gear.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "spells",
 			"label": "Spells",
 			"system": "shadowdark",
 			"path": "packs/spells.db",
 			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "weapons",
+			"label": "Weapons",
+			"system": "shadowdark",
+			"path": "packs/weapons.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "rollable-tables",
+			"label": "Rollable Tables",
+			"system": "shadowdark",
+			"path": "packs/rollable-tables.db",
+			"type": "RollTable",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "wizard-mishap",
+			"label": "Wizard Mishap",
+			"system": "shadowdark",
+			"path": "packs/wizard-mishap.db",
+			"type": "RollTable",
 			"private": false,
 			"flags": {}
 		}
