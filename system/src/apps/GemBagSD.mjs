@@ -49,10 +49,18 @@ export default class GemBagSD extends Application {
 
 	/** @override */
 	async getData(options) {
-		const items = this.actor.items.filter(item => item.type === "Gem");
+		const items = this.getGems();
 		const totals = this.getGemValueTotal(items);
 
 		return {items, totals};
+	}
+
+	gemBagIsEmpty() {
+		return this.getGems().length === 0;
+	}
+
+	getGems() {
+		return this.actor.items.filter(item => item.type === "Gem");
 	}
 
 	getGemValueTotal(items) {
@@ -118,10 +126,14 @@ export default class GemBagSD extends Application {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							this.actor.deleteEmbeddedDocuments(
+							await this.actor.deleteEmbeddedDocuments(
 								"Item",
 								[itemId]
 							);
+
+							if (this.gemBagIsEmpty()) {
+								this.close();
+							}
 						},
 					},
 					Cancel: {
@@ -163,7 +175,11 @@ export default class GemBagSD extends Application {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							actor.sellItemById(itemId);
+							await actor.sellItemById(itemId);
+
+							if (this.gemBagIsEmpty()) {
+								this.close();
+							}
 						},
 					},
 					Cancel: {
