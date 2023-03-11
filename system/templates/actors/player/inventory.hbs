@@ -18,7 +18,12 @@
 					{{#each section.items as |item|}}
 						<tr class="item" data-item-id="{{item._id}}">
 							<td>
-								{{item.name}}
+								<a
+									class="item-control open-item"
+									data-item-id="{{item._id}}"
+								>
+									{{item.name}}
+								</a>
 							</td>
 							<td class="item-list-centered">
 								{{#if item.showQuantity}}
@@ -94,9 +99,11 @@
 				</tr>
 			</table>
 		</div>
-		<div class="inventory-sidebar">
-			{{> actors/player/inventory/coins.hbs }}
-			{{> actors/player/inventory/slots.hbs }}
+		<div>
+			<div class="inventory-sidebar">
+				{{> actors/player/inventory/coins.hbs }}
+				{{> actors/player/inventory/slots.hbs }}
+			</div>
 		</div>
 	</section>
 </section>

@@ -256,7 +256,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.inventory = inventory;
 		context.slotsUsed = slotCount + coinSlots + gemSlots;
 		context.spells = spells;
-		context.talents = talents;
+
+		// Sort these by level for display...
+		context.talents = talents.sort(
+			(a, b) => a.system.level - b.system.level
+		);
 	}
 
 	_sortAllItems(context) {

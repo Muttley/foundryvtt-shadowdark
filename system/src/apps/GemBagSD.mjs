@@ -28,6 +28,10 @@ export default class GemBagSD extends Application {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find(".open-item").click(
+			event => this._onOpenItem(event)
+		);
+
 		html.find(".sell-all-button").click(
 			event => this._onSellAllGems(event)
 		);
@@ -88,16 +92,6 @@ export default class GemBagSD extends Application {
 
 		return [
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
-				icon: '<i class="fas fa-edit"></i>',
-				condition: tr => canEdit(tr),
-				callback: tr => {
-					const itemId = tr.data("item-id");
-					const item = this.actor.items.get(itemId);
-					item.sheet.render(true);
-				},
-			},
-			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
 				condition: tr => canEdit(tr),
@@ -138,6 +132,15 @@ export default class GemBagSD extends Application {
 				default: "Yes",
 			}).render(true);
 		});
+	}
+
+	async _onOpenItem(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+
+		return item.sheet.render(true);
 	}
 
 	_onSellGem(event) {

@@ -2,11 +2,15 @@ export default class ActorSheetSD extends ActorSheet {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		// Handle default listeners last so system listeners are triggered first
-		super.activateListeners(html);
+		html.find(".open-item").click(
+			event => this._onOpenItem(event)
+		);
 
 		// Create context menu for items on both sheets
 		this._contextMenu(html);
+
+		// Handle default listeners last so system listeners are triggered first
+		super.activateListeners(html);
 	}
 
 	/** @override */
@@ -47,9 +51,9 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	_getItemContextOptions() {
-		const canEdit = function(tr) {
+		const canEdit = function(element) {
 			let result = false;
-			const itemId = tr.data("item-id");
+			const itemId = element.data("item-id");
 
 			if (game.user.isGM) {
 				result = true;
@@ -65,21 +69,11 @@ export default class ActorSheetSD extends ActorSheet {
 
 		return [
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
-				icon: '<i class="fas fa-edit"></i>',
-				condition: tr => canEdit(tr),
-				callback: tr => {
-					const itemId = tr.data("item-id");
-					const item = this.actor.items.get(itemId);
-					return item.sheet.render(true);
-				},
-			},
-			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: tr => canEdit(tr),
-				callback: tr => {
-					const itemId = tr.data("item-id");
+				condition: element => canEdit(element),
+				callback: element => {
+					const itemId = element.data("item-id");
 					this._onItemDelete(itemId);
 				},
 			},
@@ -115,6 +109,15 @@ export default class ActorSheetSD extends ActorSheet {
 				default: "Yes",
 			}).render(true);
 		});
+	}
+
+	async _onOpenItem(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+
+		return item.sheet.render(true);
 	}
 
 }

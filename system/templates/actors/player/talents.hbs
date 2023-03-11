@@ -1,10 +1,25 @@
 <section class="tab tab-talents" data-group="primary" data-tab="tab-talents">
-	<div class="value-box__bold grid-colspan-2">
-		<label>{{localize 'SHADOWDARK.sheet.player.talents'}}</label>
-		<ol>
-			<li class="rollable">Quidem excepturi odio enim obcaecati temporibus fugit possimus ad ea!</li>
-			<li class="rollable">Vero, asperiores minima dolorem voluptate fugiat totam dolorum vel debitis?</li>
-			<li class="rollable">Mollitia excepturi, ipsam exercitationem sequi dolore aut pariatur veniam. Obcaecati?</li>
-		</ol>
-	</div>
+	<section class="talents-body">
+		<div class="talents-list">
+			<table>
+				<tr>
+					<th>{{localize 'SHADOWDARK.sheet.player.talents_level'}}</th>
+					<th>{{localize 'SHADOWDARK.sheet.player.talents_name'}}</th>
+				</tr>
+				{{#each talents as |talent|}}
+					<tr class="item" data-item-id="{{talent._id}}">
+						<td>{{talent.system.level}}</td>
+						<td>
+							<a
+								class="item-control open-item"
+								data-item-id="{{talent._id}}"
+							>
+								{{talent.name}}
+							</a>
+						</td>
+					</tr>
+				{{/each}}
+			</table>
+		</div>
+	</section>
 </section>

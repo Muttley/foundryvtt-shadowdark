@@ -60,12 +60,12 @@ SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
-SHADOWDARK.item.level: Level
 SHADOWDARK.item.equipped: Equipped
 SHADOWDARK.item.inventory_free_carry: Free Carry
 SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantity
 SHADOWDARK.item.inventory_slots: Slots per Item
+SHADOWDARK.item.level: Level
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.weapon_damage.1h: 1H Damage
@@ -99,6 +99,8 @@ SHADOWDARK.sheet.player.tab.inventory: Inventory
 SHADOWDARK.sheet.player.tab.spells: Spells
 SHADOWDARK.sheet.player.tab.talents: Talents
 SHADOWDARK.sheet.player.talents: Talents
+SHADOWDARK.sheet.player.talents_level: Level
+SHADOWDARK.sheet.player.talents_name: Name
 SHADOWDARK.sheet.player.title: Title
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.spell_duration.focus: Focus

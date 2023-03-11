@@ -12,7 +12,12 @@
 				{{#each items as |item|}}
 					<tr class="item" data-item-id="{{item._id}}">
 						<td>
-							{{item.name}}
+							<a
+								class="item-control open-item"
+								data-item-id="{{item._id}}"
+							>
+								{{item.name}}
+							</a>
 						</td>
 						<td class="item-list-centered">
 							{{item.system.cost.gp}}

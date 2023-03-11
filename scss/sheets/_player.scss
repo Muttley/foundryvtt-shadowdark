@@ -274,7 +274,7 @@
 	.inventory-sidebar {
 		@include p-reset;
 		display: grid;
-		grid-template-rows: 120px 85px 1fr;
+		align-items: start;
 		row-gap: 8px;
 	}
 
@@ -419,6 +419,53 @@
 		label {
 			font-size: 18px;
 			font-weight: normal;
+		}
+	}
+
+	.talents-body {
+		@include p-reset;
+		margin: 4px;
+		display: grid;
+	}
+
+	.talents-list {
+		margin-bottom: 8px;
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 15px;
+			text-align: left;
+			border: none;
+
+			& td:first-child {
+				text-align: center;
+			}
+
+			& th:first-child {
+				text-align: center;
+			}
+
+			& tr:first-child {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(:first-child) {
+				font-size: 14px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
 		}
 	}
 
