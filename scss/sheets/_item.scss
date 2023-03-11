@@ -135,6 +135,14 @@
 		background-color: var(--form-background);
 	}
 
+	.spell-details {
+		@include p-reset;
+		display: grid;
+		// grid-template-columns: repeat(4, 1fr);
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
 	.weapon-details {
 		@include p-reset;
 		display: grid;

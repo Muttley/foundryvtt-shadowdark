@@ -1,17 +1,19 @@
 export default class ItemPropertiesSD extends FormApplication {
-	constructor(object, options, properties) {
+	constructor(object, options) {
 		super(object, options);
 
 		this.properties = {};
 
-		for (const [key] of Object.entries(properties)) {
+		for (const [key] of Object.entries(options.data)) {
 			this.properties[key] = {
 				selected: false,
-				title: properties[key],
+				title: this.options.data[key],
 			};
 		}
 
-		for (const key of this.object.system.properties) {
+		const values = this.object.system[this.options.systemKey];
+
+		for (const key of values) {
 			this.properties[key].selected = true;
 		}
 	}
@@ -77,6 +79,9 @@ export default class ItemPropertiesSD extends FormApplication {
 			}
 		}
 
-		this.object.update({"system.properties": selectedProperties});
+		const update = {};
+		update[`system.${this.options.systemKey}`] = selectedProperties;
+
+		this.object.update(update);
 	}
 }

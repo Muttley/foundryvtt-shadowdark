@@ -22,6 +22,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onArmorProperties(event)
 		);
 
+		html.find(".item-property-list.spell").click(
+			event => this._onSpellCasterClasses(event)
+		);
+
 		html.find(".item-property-list.weapon").click(
 			event => this._onWeaponProperties(event)
 		);
@@ -39,19 +43,20 @@ export default class ItemSheetSD extends ItemSheet {
 		const source = item.toObject();
 
 		foundry.utils.mergeObject(context, {
+			armorBonusAttributes: CONFIG.SHADOWDARK.ARMOR_BONUS_ATTRIBUTES,
+			armorProperties: CONFIG.SHADOWDARK.ARMOR_PROPERTIES,
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			ranges: CONFIG.SHADOWDARK.RANGES,
-			source: source.system,
-			system: item.system,
-			usesSlots: item.system.slots !== undefined,
-			armorBonusAttributes: CONFIG.SHADOWDARK.ARMOR_BONUS_ATTRIBUTES,
-			weaponBaseDamageDice: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE,
-			weaponProperties: CONFIG.SHADOWDARK.WEAPON_PROPERTIES,
-			armorProperties: CONFIG.SHADOWDARK.ARMOR_PROPERTIES,
-			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 			properties: [],
 			propertiesDisplay: "",
+			ranges: CONFIG.SHADOWDARK.RANGES,
+			source: source.system,
+
+			system: item.system,
+			usesSlots: item.system.slots !== undefined,
+			weaponBaseDamageDice: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE,
+			weaponProperties: CONFIG.SHADOWDARK.WEAPON_PROPERTIES,
+			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 		});
 
 		if (item.type === "Armor" || item.type === "Weapon") {
@@ -67,6 +72,16 @@ export default class ItemSheetSD extends ItemSheet {
 			context.propertiesDisplay = context.properties.join(", ");
 		}
 
+		if (item.type === "Spell") {
+			context.casterClasses = [];
+			context.spellCasterClasses = CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES;
+
+			for (const key of this.item.system.class) {
+				context.casterClasses.push(context.spellCasterClasses[key]);
+			}
+
+			context.casterClassesDisplay = context.casterClasses.join(", ");
+		}
 		return context;
 	}
 
@@ -74,6 +89,14 @@ export default class ItemSheetSD extends ItemSheet {
 		event.preventDefault();
 
 		new shadowdark.apps.ArmorPropertiesSD(
+			this.item, {event: event}
+		).render(true);
+	}
+
+	_onSpellCasterClasses(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.SpellCasterClassSD(
 			this.item, {event: event}
 		).render(true);
 	}

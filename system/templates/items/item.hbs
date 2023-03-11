@@ -18,12 +18,17 @@
 		</h1>
 	</header>
 	<section class="item-body">
-		{{#ifEq item.type "Weapon"}}
-			{{> items/partials/weapon.hbs }}
-		{{/ifEq}}
 
 		{{#ifEq item.type "Armor"}}
 			{{> items/partials/armor.hbs }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Spell"}}
+			{{> items/partials/spell.hbs }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Weapon"}}
+			{{> items/partials/weapon.hbs }}
 		{{/ifEq}}
 
 		{{> items/partials/description.hbs }}

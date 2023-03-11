@@ -35,6 +35,11 @@ SHADOWDARK.SPELL_DURATIONS = {
 	rounds: "SHADOWDARK.spell_duration.rounds",
 };
 
+SHADOWDARK.SPELL_CASTER_CLASSES = {
+	priest: "SHADOWDARK.spell_caster.priest",
+	wizard: "SHADOWDARK.spell_caster.wizard",
+};
+
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
 	d4: "1d4",
 	d6: "1d6",
