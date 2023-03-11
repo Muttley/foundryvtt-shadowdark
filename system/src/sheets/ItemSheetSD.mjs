@@ -87,6 +87,13 @@ export default class ItemSheetSD extends ItemSheet {
 
 			context.casterClassesDisplay = context.casterClasses.join(", ");
 		}
+
+		context.descriptionHTML = await TextEditor.enrichHTML(
+			context.system.description,
+			{
+				async: true,
+			}
+		);
 		return context;
 	}
 

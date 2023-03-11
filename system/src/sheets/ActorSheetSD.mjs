@@ -43,6 +43,15 @@ export default class ActorSheetSD extends ActorSheet {
 			}
 		}
 
+		context.notesHTML = await TextEditor.enrichHTML(
+			context.system.notes,
+			{
+				secrets: this.actor.isOwner,
+				async: true,
+				relativeTo: this.actor,
+			}
+		);
+
 		return context;
 	}
 
