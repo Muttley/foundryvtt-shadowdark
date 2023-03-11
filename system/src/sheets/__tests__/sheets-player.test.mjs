@@ -43,7 +43,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 
 		it("attackes gembag app", async () => {
-			expect(actor.sheet.gemBah).is.not.undefined;
+			expect(actor.sheet.gemBag).is.not.undefined;
 		});
 
 		after(async () => {
