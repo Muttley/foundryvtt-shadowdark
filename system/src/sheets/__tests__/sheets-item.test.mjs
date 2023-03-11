@@ -8,10 +8,7 @@ import {
 	waitForInput,
 	cleanUpItemsByKey,
 	itemTypes,
-	openWindows,
-	openDialogs,
 } from "../../testing/testUtils.mjs";
-import ItemSheetSD from "../ItemSheetSD.mjs";
 
 export const key = "shadowdark.sheets.item";
 export const options = {
@@ -65,12 +62,12 @@ export default ({ describe, it, after, before, expect }) => {
 
 				it("has the expected window width", async () => {
 					expect(item.sheet.options.width).is.not.undefined;
-					expect(item.sheet.options.width).equal(490);
+					expect(item.sheet.options.width).equal(550);
 				});
 
 				it("has the expected window height", async () => {
 					expect(item.sheet.options.height).is.not.undefined;
-					expect(item.sheet.options.height).equal(515);
+					expect(item.sheet.options.height).equal(560);
 				});
 
 				after(async () => {
