@@ -93,24 +93,26 @@
 	.background-grid {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 1fr 2fr;
-		column-gap: 8px;
+		row-gap: 8px;
 	}
 
 	.background-details {
 		display: grid;
 		row-gap: 4px;
-		background-color: var(--form-background);
 	}
 
 	.background-notes {
 		@include p-reset;
-		background-color: var(--form-background);
-		grid-row: span 2;
+		display: grid;
+		grid-template-rows: min-content minmax(200px, max-content);
+
+		.editor {
+			background-color: var(--form-background);
+		}
 
 		label {
-			@include p-reset;
 			display: block;
+			@include p-reset;
 
 			font-family: "Old Newspaper Font";
 			font-size: 20px;
@@ -120,6 +122,7 @@
 
 			border: none;
 		}
+
 	}
 
 	.coins {
@@ -172,7 +175,8 @@
 	.detail-box {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: minmax(min-content, max-content) 1fr;
+		background-color: var(--form-background);
 		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
@@ -192,7 +196,7 @@
 	}
 
 	.detail-value {
-		text-align: right;
+		text-align: left;
 	}
 
 	.open-gem-bag {
@@ -290,9 +294,16 @@
 		color: #A0A09A;
 	}
 
+	.language-list {
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0 5px var(--color-shadow-primary);
+		}
+	}
+
 	.level-xp {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 3fr;
+		grid-template-columns: min-content 1fr min-content 1fr;
 		column-gap: 8px;
 		align-items: center;
 		text-align: center;
@@ -351,6 +362,7 @@
 		&__flex {
 			display: flex;
 			justify-content: space-evenly;
+			align-items: baseline;
 
 			a {
 				@include p-reset;
@@ -365,6 +377,7 @@
 				&.active {
 					text-decoration: underline;
 					font-weight: bold;
+					font-size: 1.6rem;
 				}
 			}
 		}

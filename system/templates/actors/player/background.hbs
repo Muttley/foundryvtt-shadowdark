@@ -1,78 +1,90 @@
 <section class="tab tab-background" data-group="primary" data-tab="tab-background">
 	<div class="background-grid">
 		<div class="background-details">
-			<div class="level-xp">
-				<label>{{localize 'SHADOWDARK.sheet.player.level'}}</label>
-				{{numberInput
-					system.level.value
-					name="system.level.value"
-					class="ability-score"
-				}}
-				<label>{{localize 'SHADOWDARK.sheet.player.xp'}}</label>
-				<div class="xp-score">
+			<div class="grid-3-columns">
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.ancestry'}}</label>
+					<input
+						name="system.ancestry"
+						type="text"
+						class="detail-value"
+						value="{{ system.ancestry }}"
+					/>
+				</div>
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
+					<input
+						name="system.class"
+						type="text"
+						class="detail-value"
+						value="{{ system.class }}"
+					/>
+				</div>
+				<div class="level-xp">
+					<label>{{localize 'SHADOWDARK.sheet.player.level'}}</label>
 					{{numberInput
-						system.level.xp
-						name="system.level.xp"
+						system.level.value
+						name="system.level.value"
 						class="ability-score"
-						placeholder="0"
 					}}
-					<p>/</p>
-					<p>{{xpNextLevel}}</p>
+					<label>{{localize 'SHADOWDARK.sheet.player.xp'}}</label>
+					<div class="xp-score">
+						{{numberInput
+							system.level.xp
+							name="system.level.xp"
+							class="ability-score"
+							placeholder="0"
+						}}
+						<p>/</p>
+						<p>{{xpNextLevel}}</p>
+					</div>
 				</div>
 			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.ancestry'}}</label>
-				<input
-					name="system.ancestry"
-					type="text"
-					class="detail-value"
-					value="{{ system.ancestry }}"
-				/>
+			<div class="grid-2-columns">
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
+					<input
+						name="system.title"
+						type="text"
+						class="detail-value"
+						value="{{ system.title }}"
+					/>
+				</div>
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.alignment'}}</label>
+					<input
+						name="system.alignment"
+						type="text"
+						class="detail-value"
+						value="{{ system.alignment }}"
+					/>
+				</div>
 			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
-				<input
-					name="system.class"
-					type="text"
-					class="detail-value"
-					value="{{ system.class }}"
-				/>
+			<div class="grid-2-columns">
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.background'}}</label>
+					<input
+						name="system.background"
+						type="text"
+						class="detail-value"
+						value="{{ system.background }}"
+					/>
+				</div>
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
+					<input
+						name="system.deity"
+						type="text"
+						class="detail-value"
+						value="{{ system.deity }}"
+					/>
+				</div>
 			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
-				<input
-					name="system.title"
-					type="text"
-					class="detail-value"
-					value="{{ system.title }}"
-				/>
-			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.alignment'}}</label>
-				<input
-					name="system.alignment"
-					type="text"
-					class="detail-value"
-					value="{{ system.alignment }}"
-				/>
-			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.background'}}</label>
-				<input
-					name="system.background"
-					type="text"
-					class="detail-value"
-					value="{{ system.background }}"
-				/>
-			</div>
-			<div class="detail-box">
-				<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
-				<input
-					name="system.deity"
-					type="text"
-					class="detail-value"
-					value="{{ system.deity }}"
-				/>
+			<div class="grid-1-columns">
+				<div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
+					<p class="language-list languages">{{knownLanguagesDisplay}}</p>
+				</div>
 			</div>
 		</div>
 		<div class="background-notes">

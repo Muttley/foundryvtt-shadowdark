@@ -48,6 +48,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find(".language-list.languages").click(
+			event => this._onKnownLanguages(event)
+		);
+
 		html.find(".open-gem-bag").click(
 			event => this._onOpenGemBag(event)
 		);
@@ -75,8 +79,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();
 
-		// TODO Languages!
+		// Languages
+		context.knownLanguages = [];
+		for (const key of this.actor.system.languages) {
+			context.knownLanguages.push(CONFIG.SHADOWDARK.LANGUAGES[key]);
+		}
+		context.knownLanguagesDisplay = context.knownLanguages.join(", ");
 
+		// Get the inventory ready
 		this._prepareItems(context);
 
 		return context;
@@ -112,6 +122,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				},
 			]);
 		}
+	}
+
+	_onKnownLanguages(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.PlayerLanguagesSD(
+			this.actor, {event: event}
+		).render(true);
 	}
 
 	async _onOpenGemBag(event) {

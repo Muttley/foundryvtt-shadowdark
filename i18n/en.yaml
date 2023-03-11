@@ -14,8 +14,12 @@ SHADOWDARK.app.gem-bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem-bag.title: Gem Bag
 SHADOWDARK.app.gem-bag.tooltip.sell_gem: Sell Gem
 SHADOWDARK.app.gem-bag.total_value: Total Value
+SHADOWDARK.app.item-properties.armor.title: Armor Properties
+SHADOWDARK.app.item-properties.caster_classes.title: Caster Classes
+SHADOWDARK.app.item-properties.languages.title: Languages
 SHADOWDARK.app.item-properties.save: Save
 SHADOWDARK.app.item-properties.title: Properties
+SHADOWDARK.app.item-properties.weapon.title: Weapon Properties
 SHADOWDARK.armor.properties.disadvStealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvSwim: Disadvantage/Swim
 SHADOWDARK.armor.properties.noSwim: No Swim
@@ -76,6 +80,20 @@ SHADOWDARK.item.weapon_damage.1h: 1H Damage
 SHADOWDARK.item.weapon_damage.2h: 2H Damage
 SHADOWDARK.item.weapon_range: Range
 SHADOWDARK.item.weapon_type: Type
+SHADOWDARK.language.celestial: Celestial
+SHADOWDARK.language.common: Common
+SHADOWDARK.language.diabolic: Diabolic
+SHADOWDARK.language.draconic: Draconic
+SHADOWDARK.language.dwarvish: Dwarvish
+SHADOWDARK.language.elvish: Elvish
+SHADOWDARK.language.giant: Giant
+SHADOWDARK.language.goblin: Goblin
+SHADOWDARK.language.merran: Merran
+SHADOWDARK.language.orcish: Orcish
+SHADOWDARK.language.primordial: Primordial
+SHADOWDARK.language.reptilian: Reptilian
+SHADOWDARK.language.sylvan: Sylvan
+SHADOWDARK.language.thanian: Thanian
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far: Far
 SHADOWDARK.range.near: Near
@@ -93,6 +111,7 @@ SHADOWDARK.sheet.player.class: Class
 SHADOWDARK.sheet.player.deity: Deity
 SHADOWDARK.sheet.player.hp_max: Max
 SHADOWDARK.sheet.player.hp: HP
+SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.level: Level
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.name: Name

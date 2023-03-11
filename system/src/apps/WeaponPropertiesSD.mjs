@@ -10,4 +10,10 @@ export default class WeaponPropertiesSD extends ItemPropertiesSD {
 			}
 		);
 	}
+
+	/** @inheritdoc */
+	get title() {
+		const title = game.i18n.localize("SHADOWDARK.app.item-properties.weapon.title");
+		return `${title}: ${this.object.name}`;
+	}
 }

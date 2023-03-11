@@ -10,4 +10,10 @@ export default class SpellCasterClassSD extends ItemPropertiesSD {
 			}
 		);
 	}
+
+	/** @inheritdoc */
+	get title() {
+		const title = game.i18n.localize("SHADOWDARK.app.item-properties.caster_classes.title");
+		return `${title}: ${this.object.name}`;
+	}
 }

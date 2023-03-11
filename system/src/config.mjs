@@ -29,15 +29,32 @@ SHADOWDARK.RANGES = {
 	far: "SHADOWDARK.range.far",
 };
 
-SHADOWDARK.SPELL_DURATIONS = {
-	focus: "SHADOWDARK.spell_duration.focus",
-	instant: "SHADOWDARK.spell_duration.instant",
-	rounds: "SHADOWDARK.spell_duration.rounds",
+SHADOWDARK.LANGUAGES = {
+	celestial: "SHADOWDARK.language.celestial",
+	common: "SHADOWDARK.language.common",
+	diabolic: "SHADOWDARK.language.diabolic",
+	draconic: "SHADOWDARK.language.draconic",
+	dwarvish: "SHADOWDARK.language.dwarvish",
+	elvish: "SHADOWDARK.language.elvish",
+	giant: "SHADOWDARK.language.giant",
+	goblin: "SHADOWDARK.language.goblin",
+	merran: "SHADOWDARK.language.merran",
+	orcish: "SHADOWDARK.language.orcish",
+	primordial: "SHADOWDARK.language.primordial",
+	reptilian: "SHADOWDARK.language.reptilian",
+	sylvan: "SHADOWDARK.language.sylvan",
+	thanian: "SHADOWDARK.language.thanian",
 };
 
 SHADOWDARK.SPELL_CASTER_CLASSES = {
 	priest: "SHADOWDARK.spell_caster.priest",
 	wizard: "SHADOWDARK.spell_caster.wizard",
+};
+
+SHADOWDARK.SPELL_DURATIONS = {
+	focus: "SHADOWDARK.spell_duration.focus",
+	instant: "SHADOWDARK.spell_duration.instant",
+	rounds: "SHADOWDARK.spell_duration.rounds",
 };
 
 SHADOWDARK.SPELL_RANGES = {
