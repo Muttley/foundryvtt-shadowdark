@@ -162,6 +162,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("_onOpenGemBag(event)", () => {
+		let actor = {};
 		before(async () => {
 			await trashChat();
 			actor = await createMockActor("Player");
@@ -245,9 +246,13 @@ export default ({ describe, it, after, before, expect }) => {
 				const dialogs = openDialogs();
 				expect(dialogs.length).equal(1);
 
-				const rollElement = document.querySelector(".dialog .OK");
-				expect(rollElement).is.not.null;
-				await rollElement.click();
+				const advButtonElement = document.querySelector(".dialog .advantage");
+				expect(advButtonElement).is.not.null;
+				const disadvButtonElement = document.querySelector(".dialog .disadvantage");
+				expect(disadvButtonElement).is.not.null;
+				const normalButtonElement = document.querySelector(".dialog .normal");
+				expect(normalButtonElement).is.not.null;
+				await normalButtonElement.click();
 				await waitForInput();
 
 				expect(game.messages.size).equal(1);
@@ -256,6 +261,7 @@ export default ({ describe, it, after, before, expect }) => {
 				// @todo: Test the resulting roll chat card
 
 				await message.delete();
+				await waitForInput();
 			});
 		});
 
@@ -267,6 +273,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("_onSellTreasure(event)", () => {
+		let actor = {};
 		before(async () => {
 			await trashChat();
 			actor = await createMockActor("Player");
