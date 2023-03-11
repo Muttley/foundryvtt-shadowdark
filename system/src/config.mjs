@@ -40,6 +40,13 @@ SHADOWDARK.SPELL_CASTER_CLASSES = {
 	wizard: "SHADOWDARK.spell_caster.wizard",
 };
 
+SHADOWDARK.SPELL_RANGES = {
+	self: "SHADOWDARK.range.self",
+	close: "SHADOWDARK.range.close",
+	near: "SHADOWDARK.range.near",
+	far: "SHADOWDARK.range.far",
+};
+
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
 	d4: "1d4",
 	d6: "1d6",

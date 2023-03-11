@@ -68,6 +68,9 @@ SHADOWDARK.item.inventory_slots: Slots per Item
 SHADOWDARK.item.level: Level
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.spell_caster_classes: Caster Classes
+SHADOWDARK.item.spell_duration: Duration
+SHADOWDARK.item.spell_range: Range
+SHADOWDARK.item.spell_tier: Tier
 SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.weapon_damage.1h: 1H Damage
 SHADOWDARK.item.weapon_damage.2h: 2H Damage
@@ -76,6 +79,7 @@ SHADOWDARK.item.weapon_type: Type
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far: Far
 SHADOWDARK.range.near: Near
+SHADOWDARK.range.self: Self
 SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item

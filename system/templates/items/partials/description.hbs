@@ -1,4 +1,9 @@
-<div class="item-description">
+<div
+	class="item-description"
+	{{#ifEq item.type "Spell"}}
+		style="grid-column: span 2;"
+	{{/ifEq}}
+>
 	<label>{{localize 'SHADOWDARK.item.description'}}</label>
 	{{editor
 		system.description

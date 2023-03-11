@@ -11,7 +11,6 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/inventory/slots.hbs",
 		"systems/shadowdark/templates/actors/player/spells.hbs",
 		"systems/shadowdark/templates/actors/player/talents.hbs",
-		"systems/shadowdark/templates/apps/weapon-properties.hbs",
 		"systems/shadowdark/templates/items/partials/armor.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/description.hbs",

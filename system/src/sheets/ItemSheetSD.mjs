@@ -74,7 +74,12 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (item.type === "Spell") {
 			context.casterClasses = [];
+
 			context.spellCasterClasses = CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES;
+			context.spellDurations = CONFIG.SHADOWDARK.SPELL_DURATIONS;
+			context.spellRanges = CONFIG.SHADOWDARK.SPELL_RANGES;
+
+			context.showRoundValue = item.system.duration.type === "rounds";
 
 			for (const key of this.item.system.class) {
 				context.casterClasses.push(context.spellCasterClasses[key]);
