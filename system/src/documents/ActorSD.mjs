@@ -53,8 +53,18 @@ export default class ActorSD extends Actor {
 	prepareDerivedData() {}
 
 	async rollAbility(abilityId, options={}) {
-		// TODO Implement
-		console.log(`Rolling ability check: ${abilityId}`);
+		const bonus = this.abilityModifier(abilityId);
+		const parts = ["@bonus"];
+		const title = game.i18n.localize(`SHADOWDARK.dialog.AbilityCheck.${abilityId}`);
+		const data = { bonus };
+		const speaker = ChatMessage.getSpeaker({ actor: this });
+
+		await CONFIG.Dice.D20RollSD.d20Roll({
+			parts,
+			data,
+			title,
+			speaker,
+		});
 	}
 
 	async sellAllGems() {
