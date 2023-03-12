@@ -1,0 +1,57 @@
+<div class="shadowdark chat-card item-card" data-actor-id="{{actor.id}}" data-item-id="{{data.item.id}}"
+  {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}} {{#if isSpell}}data-spell-tier="{{data.item.system.tier}}"{{/if}}>
+  <header class="card-header flexrow">
+    {{#if data.item}}
+    <img src="{{data.item.img}}" title="{{data.item.name}}"/>
+    <h3 class="item-name">{{data.item.name}}</h3>
+    {{else}}
+    <img src="{{data.actor.img}}" title="{{title}}"/>
+    <h3 class="item-name">{{title}}</h3>
+    {{/if}}
+  </header>
+
+  <div class="card-content">
+    {{{data.item.system.description}}}
+  </div>
+
+  <div class="card-attack-rolls">
+    <div class="card-attack-roll blindable" data-blind="{{data.roll.blindroll}}">
+      {{#if rollSD}}
+        <div><h3>
+          {{#if isSpell}}
+          {{localize "SHADOWDARK.roll.spellCastingCheck"}}
+          {{/if}}
+          {{#if isWeapon}}
+          {{title}}
+          {{/if}}
+        </h3></div>
+        <div>{{{rollSD}}}</div>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="card-damage-rolls">
+    {{#if damageRollSD}}
+    <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
+        <div><h3>{{localize "SHADOWDARK.roll.damage"}}::</h3></div>
+        <div>{{{damageRollSD}}}</div>
+    </div>
+    {{/if}}
+  </div>
+
+  <footer class="card-footer">
+    {{#if isWeapon}}
+    <span>{{localize "SHADOWDARK.item.weapon_type"}}: {{localizeVar "SHADOWDARK.weapon.type." data.item.system.type }}</span>
+    <span>{{localize "SHADOWDARK.item.weapon_range"}}: {{localizeVar "SHADOWDARK.range."  data.item.system.range }}</span>
+    {{#each data.item.system.properties as |prop|}}
+    <span>{{localizeVar "SHADOWDARK.weapon.properties." prop }}</span>
+    {{/each}}
+    <span></span>
+    {{/if}}
+    {{#if isSpell}}
+    <span>{{localize "SHADOWDARK.item.spell_tier"}}: {{ data.item.system.tier }}</span>
+    <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{localizeVar "SHADOWDARK.spell_duration."  data.item.system.duration.type }}</span>
+    <span>{{localize "SHADOWDARK.item.spell_range"}}: {{localizeVar "SHADOWDARK.spell_range." data.item.system.range }}</span>
+    {{/if}}
+  </footer>
+</div>

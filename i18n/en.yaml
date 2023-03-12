@@ -25,11 +25,13 @@ SHADOWDARK.armor.properties.disadvSwim: Disadvantage/Swim
 SHADOWDARK.armor.properties.noSwim: No Swim
 SHADOWDARK.armor.properties.oneHanded: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.Attack: Attack
 SHADOWDARK.chat.ItemRoll.Title: Attack roll with {name}
 SHADOWDARK.chat.SpellRoll.Title: Casting {name} at tier {tier} with spell DC {spellDC}
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
+SHADOWDARK.Damage: Damage
 SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
 SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
 SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
@@ -116,9 +118,15 @@ SHADOWDARK.range.near: Near
 SHADOWDARK.range.self: Self
 SHADOWDARK.Roll.Advantage: Advantage
 SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
+SHADOWDARK.Roll.CriticalFailure: Critical Failure! ({value})
+SHADOWDARK.Roll.CriticalSuccess: Critical Success! ({value})
+SHADOWDARK.roll.damage: Damage Roll
 SHADOWDARK.Roll.Disadvantage: Disadvantage
 SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
+SHADOWDARK.Roll.Failure: Failure! ({value})
 SHADOWDARK.Roll.Normal: Normal
+SHADOWDARK.roll.spellCastingCheck: Spellcasting Check
+SHADOWDARK.Roll.Success: Success! ({value})
 SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
@@ -159,6 +167,7 @@ SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
+SHADOWDARK.Versatile: Versatile
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown

@@ -201,7 +201,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+		await this.actor.updateEmbeddedDocuments("Item", [
 			{
 				_id: itemId,
 				"system.lost": !item.system.lost,
