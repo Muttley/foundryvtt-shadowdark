@@ -25,6 +25,7 @@ SHADOWDARK.armor.properties.disadvSwim: Disadvantage/Swim
 SHADOWDARK.armor.properties.noSwim: No Swim
 SHADOWDARK.armor.properties.oneHanded: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.chat.ItemRoll.Title: Attack roll with {name}
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
@@ -43,6 +44,11 @@ SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
+SHADOWDARK.dialog.ItemRoll.AbilityBonus: Ability Bonus
+SHADOWDARK.dialog.ItemRoll.ItemBonus: Item Bonus
+SHADOWDARK.dialog.ItemRoll.TalentBonus: Talent Bonus
+SHADOWDARK.dialog.ItemRoll.Title: Roll Attack with
+SHADOWDARK.dialog.Roll: Roll
 SHADOWDARK.dialog.RollModeLabel: Select rolling mode
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
@@ -158,22 +164,3 @@ SHADOWDARK.weapon.properties.twoHanded: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.Roll.Normal: Normal
-SHADOWDARK.Roll.Advantage: Advantage
-SHADOWDARK.Roll.Disadvantage: Disadvantage
-SHADOWDARK.dialog.AbilityCheck.str: Strength Check
-SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
-SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
-SHADOWDARK.dialog.AbilityCheck.int: Intelligence Check
-SHADOWDARK.dialog.AbilityCheck.wis: Wisdom Check
-SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
-SHADOWDARK.dialog.RollModeLabel: Select rolling mode
-SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
-SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
-SHADOWDARK.dialog.AbilityCheck.title: Ability Check
-SHADOWDARK.dialog.Roll: Roll
-SHADOWDARK.chat.ItemRoll.Title: Attack roll with {name}
-SHADOWDARK.dialog.ItemRoll.Title: Roll Attack with
-SHADOWDARK.dialog.ItemRoll.ItemBonus: Item Bonus
-SHADOWDARK.dialog.ItemRoll.AbilityBonus: Ability Bonus
-SHADOWDARK.dialog.ItemRoll.TalentBonus: Talent Bonus
