@@ -109,8 +109,8 @@ export default class D20RollSD extends Roll {
 					console.log("Oh no, critical failure!");
 				}
 				else if ( data.item.isVersatile() ) {
-					const oneHandedDamageRollParts = [data.item.system.damage["one-handed"]];
-					const twoHandedDamageRollParts = [data.item.system.damage["two-handed"]];
+					const oneHandedDamageRollParts = [data.item.system.damage.oneHanded];
+					const twoHandedDamageRollParts = [data.item.system.damage.twoHanded];
 					console.log(oneHandedDamageRollParts);
 					console.log(twoHandedDamageRollParts);
 
