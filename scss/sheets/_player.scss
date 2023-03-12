@@ -237,6 +237,19 @@
 			text-align: center;
 			border: none;
 
+			.item-image {
+				width: 24px;
+				height: 24px;
+				border-radius: 3px;
+				background-size: cover;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			& .item-rollable:hover {		
+				background-image: url("/icons/svg/d20-grey.svg") !important;
+			}
+
 			& td:first-child {
 				padding-left: 8px;
 				text-align: left;

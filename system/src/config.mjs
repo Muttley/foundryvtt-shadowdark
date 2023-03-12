@@ -1,6 +1,15 @@
 // Namespace Configuration Values
 const SHADOWDARK = {};
 
+SHADOWDARK.ABILITIES_LONG = {
+	str: "SHADOWDARK.ability_strength",
+	int: "SHADOWDARK.ability_intelligence",
+	wis: "SHADOWDARK.ability_wisdom",
+	con: "SHADOWDARK.ability_constitution",
+	cha: "SHADOWDARK.ability_charisma",
+	dex: "SHADOWDARK.ability_dexterity",
+};
+
 SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
 };

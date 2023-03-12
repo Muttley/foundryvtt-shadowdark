@@ -35,6 +35,18 @@ export default class D20RollSD extends Roll {
 				flav = game.i18n.format("SHADOWDARK.Roll.DisadvantageTitle", { title: title });
 			}
 
+			// Check if itemBonus is defined
+			if ($form) data.itemBonus = $form.find("[name=item-bonus]").val();
+			if ((!data.itemBonus || data.itemBonus === 0) && rollParts.indexOf("@itemBonus") !== -1) rollParts.splice(rollParts.indexOf("@itemBonus"), 1);
+
+			// Check if abilityBonus is defined
+			if ($form) data.abilityBonus = $form.find("[name=ability-bonus]").val();
+			if ((!data.abilityBonus || data.abilityBonus === 0) && rollParts.indexOf("@abilityBonus") !== -1) rollParts.splice(rollParts.indexOf("@abilityBonus"), 1);
+
+			// Check if talentBonus is defind
+			if ($form) data.talentBonus = $form.find("[name=talent-bonus]").val();
+			if ((!data.talentBonus || data.abilityBonus === 0) && rollParts.indexOf("@talentBonus") !== -1) rollParts.splice(rollParts.indexOf("@talentBonus"), 1);
+
 			// Execute roll and send it to chat
 			const roll = await new Roll(rollParts.join("+"), data).roll({ async: true });
 			const origin = item ? { uuid: item.uuid, type: item.type } : null;
@@ -63,6 +75,10 @@ export default class D20RollSD extends Roll {
 			return _roll(parts, 0);
 		}
 		else {
+			if (parts.indexOf("@abilityBonus") === -1) parts = parts.concat(["@abilityBonus"]);
+			if (parts.indexOf("@itemBonus") === -1) parts = parts.concat(["@itemBonus"]);
+			if (parts.indexOf("@talentBonus") === -1) parts = parts.concat(["@talentBonus"]);
+
 			// Render dialog
 			template = template || "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 			const dialogData = {

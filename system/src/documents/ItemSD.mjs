@@ -15,6 +15,21 @@ export default class ItemSD extends Item {
 		}
 	}
 
+	async roll(parts, bonus, talents, options={}) {
+		const title = game.i18n.format("SHADOWDARK.chat.ItemRoll.Title", {name: this.name});
+		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
+		console.log(`rolling ${this}`);
+
+		await CONFIG.Dice.D20RollSD.d20Roll({
+			parts,
+			data: { bonus, talents, item: this },
+			title,
+			speaker,
+			template: "systems/shadowdark/templates/dialog/roll-item-dialog.hbs",
+		});
+	}
+
+
 	hasProperty(property) {
 		for (const key of this.system.properties) {
 			if (key === property) return true;
