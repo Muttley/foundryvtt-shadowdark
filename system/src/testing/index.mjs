@@ -10,6 +10,10 @@ import documentsItemsTests, {
 	key as documentsItemsKey,
 	options as documentsItemsOptions,
 } from "../documents/__tests__/documents-item.test.mjs";
+import documentsItemsSpellsTests, {
+	key as documentsItemsSpellsKey,
+	options as documentsItemsSpellsOptions,
+} from "../documents/__tests__/documents-item-spell.test.mjs";
 
 import sheetsActorTests, {
 	key as sheetsActorKey,
@@ -36,6 +40,11 @@ Hooks.on("quenchReady", async quench => {
 		documentsItemsKey,
 		documentsItemsTests,
 		documentsItemsOptions
+	);
+	quench.registerBatch(
+		documentsItemsSpellsKey,
+		documentsItemsSpellsTests,
+		documentsItemsSpellsOptions
 	);
 
 	// Sheet tests
