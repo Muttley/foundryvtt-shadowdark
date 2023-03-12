@@ -38,6 +38,12 @@ SHADOWDARK.RANGES = {
 	far: "SHADOWDARK.range.far",
 };
 
+SHADOWDARK.RANGES_SHORT = {
+	close: "SHADOWDARK.range.close_short",
+	near: "SHADOWDARK.range.near_short",
+	far: "SHADOWDARK.range.far_short",
+};
+
 SHADOWDARK.LANGUAGES = {
 	celestial: "SHADOWDARK.language.celestial",
 	common: "SHADOWDARK.language.common",

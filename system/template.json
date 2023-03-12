@@ -173,8 +173,8 @@
 			"canBeEquipped": true,
 			"damage": {
 				"bonus": 0,
-				"one-handed": "",
-				"two-handed": ""
+				"oneHanded": "",
+				"twoHanded": ""
 			},
 			"range": "close",
 			"type": "melee",

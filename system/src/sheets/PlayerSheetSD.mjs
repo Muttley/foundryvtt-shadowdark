@@ -92,7 +92,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.knownLanguagesDisplay = context.knownLanguages.join(", ");
 
 		// Get the inventory ready
-		this._prepareItems(context);
+		await this._prepareItems(context);
 
 		return context;
 	}
@@ -201,7 +201,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		await this.actor.updateEmbeddedDocuments("Item", [
+		this.actor.updateEmbeddedDocuments("Item", [
 			{
 				_id: itemId,
 				"system.lost": !item.system.lost,
@@ -209,7 +209,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		]);
 	}
 
-	_prepareItems(context) {
+	async _prepareItems(context) {
 		const gems = [];
 		const inventory = {
 			armor: {
@@ -231,6 +231,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		};
 		const spells = {};
 		const talents = [];
+		const attacks = {melee: [], ranged: []};
 
 		let slotCount = 0;
 
@@ -258,6 +259,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					: i.type.toLowerCase();
 
 				inventory[section].items.push(i);
+
+				if (i.type === "Weapon" && i.system.equipped) {
+					const weaponAttacks = await this.actor.buildWeaponDisplays(i._id);
+					attacks.melee.push(...weaponAttacks.melee);
+					attacks.ranged.push(...weaponAttacks.ranged);
+				}
 			}
 			else if (i.type === "Gem") {
 				gems.push(i);
@@ -290,6 +297,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
 		}
 
+		context.attacks = attacks;
 		context.coins = {totalCoins, coinSlots};
 		context.gems = {items: gems, totalGems, gemSlots};
 		context.inventory = inventory;
