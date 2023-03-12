@@ -18,7 +18,13 @@
 					{{#each section.items as |item|}}
 						<tr class="item" data-item-id="{{item._id}}">
 							<td>
-								<div class="{{#ifEq section.label "Weapons" }}item-rollable {{/ifEq}}item-image" data-action="item-attack" style="background-image: url({{item.img}})" data-item-id="{{item._id}}"></div>
+								<div
+									class="item-image {{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}"
+									{{#ifEq item.type "Weapon" }}data-action="item-attack"{{/ifEq}}
+									style="background-image: url({{item.img}})"
+									data-item-id="{{item._id}}"
+								>
+								</div>
 								<a
 									class="item-control open-item"
 									data-item-id="{{item._id}}"

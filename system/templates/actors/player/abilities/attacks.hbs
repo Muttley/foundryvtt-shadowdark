@@ -1,11 +1,26 @@
 <div class="attacks-grid">
-	<label class="attacks-label">{{localize 'SHADOWDARK.sheet.player.attacks'}}</label>
-		<ol>
-			<li class="rollable">
-				<b>Mace</b>, +2, 1d6
+	<label class="attacks-label">{{localize 'SHADOWDARK.sheet.player.melee_attacks'}}</label>
+	<ol>
+		{{#each attacks.melee as |attack|}}
+			<li
+				class="rollable item-rollable"
+				data-action="item-attack"
+				data-item-id="{{attack.itemId}}"
+			>
+				{{{attack.display}}}
 			</li>
-			<li class="rollable">
-				<b>Crossbow</b>, +0 (F), 1d6, Two-handed, Loading
+		{{/each}}
+	</ol>
+	<label class="attacks-label">{{localize 'SHADOWDARK.sheet.player.ranged_attacks'}}</label>
+	<ol>
+		{{#each attacks.ranged as |attack|}}
+			<li
+				class="rollable item-rollable"
+				data-action="item-attack"
+				data-item-id="{{attack.itemId}}"
+			>
+				{{{attack.display}}}
 			</li>
-		</ol>
+		{{/each}}
+	</ol>
 </div>

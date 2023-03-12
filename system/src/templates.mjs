@@ -20,6 +20,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/talent.hbs",
 		"systems/shadowdark/templates/items/partials/treasure.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
+		"systems/shadowdark/templates/partials/weapon-attack.hbs",
 	];
 
 	const paths = {};

@@ -2,7 +2,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		// TODO Custom window sizes per item class?
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			width: 550,
 			height: 560,
@@ -59,18 +58,20 @@ export default class ItemSheetSD extends ItemSheet {
 			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 		});
 
-		if (item.type === "Armor" || item.type === "Weapon") {
-			for (const key of this.item.system.properties) {
-				if (item.type === "Armor") {
-					context.properties.push(context.armorProperties[key]);
-				}
-				else if (item.type === "Weapon") {
-					context.properties.push(context.weaponProperties[key]);
-				}
-			}
+		context.propertiesDisplay = item.propertiesDisplay();
 
-			context.propertiesDisplay = context.properties.join(", ");
-		}
+		// if (item.type === "Armor" || item.type === "Weapon") {
+		// 	for (const key of this.item.system.properties) {
+		// 		if (item.type === "Armor") {
+		// 			context.properties.push(context.armorProperties[key]);
+		// 		}
+		// 		else if (item.type === "Weapon") {
+		// 			context.properties.push(context.weaponProperties[key]);
+		// 		}
+		// 	}
+
+		// 	context.propertiesDisplay = context.properties.join(", ");
+		// }
 
 		if (item.type === "Spell") {
 			context.casterClasses = [];
@@ -94,6 +95,7 @@ export default class ItemSheetSD extends ItemSheet {
 				async: true,
 			}
 		);
+
 		return context;
 	}
 

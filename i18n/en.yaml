@@ -92,8 +92,10 @@ SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
 SHADOWDARK.item.treasure: Treasure
-SHADOWDARK.item.weapon_damage.1h: 1H Damage
-SHADOWDARK.item.weapon_damage.2h: 2H Damage
+SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
+SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
+SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
+SHADOWDARK.item.weapon_damage.twoHanded: 2H Damage
 SHADOWDARK.item.weapon_range: Range
 SHADOWDARK.item.weapon_type: Type
 SHADOWDARK.language.celestial: Celestial
@@ -110,9 +112,13 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
+SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
+SHADOWDARK.range.far_short: F
 SHADOWDARK.range.far: Far
+SHADOWDARK.range.near_short: "N"
 SHADOWDARK.range.near: Near
+SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
 SHADOWDARK.Roll.Advantage: Advantage
 SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
@@ -126,7 +132,6 @@ SHADOWDARK.sheet.general.item_edit.title: Edit Item
 SHADOWDARK.sheet.player.ac: AC
 SHADOWDARK.sheet.player.alignment: Alignment
 SHADOWDARK.sheet.player.ancestry: Ancestry
-SHADOWDARK.sheet.player.attacks: Attacks
 SHADOWDARK.sheet.player.background: Background
 SHADOWDARK.sheet.player.class: Class
 SHADOWDARK.sheet.player.deity: Deity
@@ -135,8 +140,10 @@ SHADOWDARK.sheet.player.hp: HP
 SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.level: Level
 SHADOWDARK.sheet.player.luck: Luck
+SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
 SHADOWDARK.sheet.player.name: Name
 SHADOWDARK.sheet.player.notes: Character Notes
+SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
 SHADOWDARK.sheet.player.spells_tier: Tier
 SHADOWDARK.sheet.player.spells: Spells
 SHADOWDARK.sheet.player.tab.abilities: Abilities

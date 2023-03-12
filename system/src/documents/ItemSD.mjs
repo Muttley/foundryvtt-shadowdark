@@ -67,4 +67,26 @@ export default class ItemSD extends Item {
 	isNotAShield() {
 		return !this.isAShield();
 	}
+
+	propertiesDisplay() {
+		let properties = [];
+
+		if (this.type === "Armor" || this.type === "Weapon") {
+			for (const key of this.system.properties) {
+				if (this.type === "Armor") {
+					properties.push(
+						CONFIG.SHADOWDARK.ARMOR_PROPERTIES[key]
+					);
+				}
+				else if (this.type === "Weapon") {
+					properties.push(
+						CONFIG.SHADOWDARK.WEAPON_PROPERTIES[key]
+					);
+				}
+			}
+
+		}
+
+		return properties.join(", ");
+	}
 }
