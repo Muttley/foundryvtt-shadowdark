@@ -33,6 +33,7 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 		column-gap: 8px;
+		align-items: start;
 	}
 
 	.ability-scores {
@@ -254,7 +255,7 @@
 				vertical-align: middle;
 			}
 
-			& .item-rollable:hover {		
+			& .item-rollable:hover {
 				background-image: url("/icons/svg/d20-grey.svg") !important;
 			}
 
