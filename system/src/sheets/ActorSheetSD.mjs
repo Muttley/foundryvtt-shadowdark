@@ -10,6 +10,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollItem(event)
 		);
 
+		html.find(".cast-spell").click(
+			event => this._onCastSpell(event)
+		);
+
 		// Create context menu for items on both sheets
 		this._contextMenu(html);
 
@@ -140,18 +144,45 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 
 		const parts = [];
-		let bonus;
+		let abilityBonus;
+		let talentBonus;
+		let itemBonus;
 
 		if ( item.type === "Weapon" ) {
 			const abilityId = item.system.type === "melee" ? "str" : "dex";
-			parts.push("@itemBonus", "@talentBonus", "@abilityBonus");
-			bonus = this.actor.abilityModifier(abilityId);
+			parts.push("@abilityBonus");
+			abilityBonus = this.actor.abilityModifier(abilityId);
+
+			if ( item.system.attackBonus !== 0 ) {
+				parts.push("@itemBonus");
+				itemBonus = item.system.attackBonus;
+			}
 		}
 
-		// @todo: push to parts & for talents affecting attack rolls
-		let talents;
+		// @todo: push to parts & for set talentBonus as sum of talents affecting attack rolls
 
-		return item.roll(parts, bonus, talents, {event: event});
+		return item.rollItem(parts, abilityBonus, itemBonus, talentBonus, {event: event});
+	}
+
+	async _onCastSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+		const tier = item.system.tier;
+
+		const parts = [];
+		let abilityBonus;
+		let talentBonus;
+
+		// @todo: How do we solve this with custom classes? Spellcasting modifier in system?
+		const abilityId = this.actor.system.class === "Wizard" ? "int" : "wis";
+		parts.push("@abilityBonus");
+		abilityBonus = this.actor.abilityModifier(abilityId);
+
+		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
+
+		return item.rollSpell(parts, abilityBonus, talentBonus, tier, {event: event});
 	}
 
 }
