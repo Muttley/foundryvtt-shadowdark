@@ -126,6 +126,16 @@
 
 	}
 
+	.cast-spell {
+		text-align: right;
+		padding-right: 8px;
+
+		&:hover {
+			color: lightskyblue;
+			text-shadow: 2px 2px 2px black;
+		}
+	}
+
 	.coins {
 		display: grid;
 		row-gap: 4px;
@@ -223,9 +233,7 @@
 		margin: 4px;
 		display: grid;
 		grid-template-columns: 4fr 1fr;
-		grid-template-rows: 1fr;
 		column-gap: 12px;
-		row-gap: 12px;
 	}
 
 	.inventory-list {
@@ -400,7 +408,7 @@
 
 		&:hover {
 			color: gold;
-			text-shadow: 1px 1px 1px black;
+			text-shadow: 2px 2px 2px black;
 		}
 	}
 
@@ -434,6 +442,67 @@
 		label {
 			font-size: 18px;
 			font-weight: normal;
+		}
+	}
+
+	.spell-lost {
+		text-decoration: line-through;
+	}
+
+	.spells-body {
+		@include p-reset;
+		margin: 4px;
+		display: grid;
+	}
+
+	.spells-list {
+		margin-bottom: 8px;
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 15px;
+			text-align: left;
+			border: none;
+
+			& td {
+				@include p-reset;
+				padding-left: 8px;
+			}
+
+			& tr:first-child {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+					padding-left: 4px;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				.spell-tier-header
+			) {
+				font-size: 14px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+
+			.spell-tier-header {
+				@include p-reset;
+				background-color: #00000020;
+			}
+
+			.spell-tier-header-padding {
+				padding-left: 4px;
+			}
 		}
 	}
 

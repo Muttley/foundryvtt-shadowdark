@@ -156,12 +156,13 @@
 				"type": "",
 				"value": 0
 			},
+			"lost": false,
 			"range": "",
 			"tier": 1
 		},
 		"Talent": {
 			"templates": ["common"],
-			"level": 1
+			"level": null
 		},
 		"Weapon": {
 			"templates": [

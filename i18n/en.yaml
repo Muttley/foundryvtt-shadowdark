@@ -28,6 +28,13 @@ SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
+SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
+SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
+SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
+SHADOWDARK.dialog.AbilityCheck.int: Intelligence Check
+SHADOWDARK.dialog.AbilityCheck.str: Strength Check
+SHADOWDARK.dialog.AbilityCheck.title: Ability Check
+SHADOWDARK.dialog.AbilityCheck.wis: Wisdom Check
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.yes: Yes
@@ -36,6 +43,7 @@ SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
+SHADOWDARK.dialog.RollModeLabel: Select rolling mode
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
@@ -98,6 +106,11 @@ SHADOWDARK.range.close: Close
 SHADOWDARK.range.far: Far
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.self: Self
+SHADOWDARK.Roll.Advantage: Advantage
+SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
+SHADOWDARK.Roll.Disadvantage: Disadvantage
+SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
+SHADOWDARK.Roll.Normal: Normal
 SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
 SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
@@ -116,6 +129,7 @@ SHADOWDARK.sheet.player.level: Level
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.name: Name
 SHADOWDARK.sheet.player.notes: Character Notes
+SHADOWDARK.sheet.player.spells_tier: Tier
 SHADOWDARK.sheet.player.spells: Spells
 SHADOWDARK.sheet.player.tab.abilities: Abilities
 SHADOWDARK.sheet.player.tab.background: Background
@@ -126,6 +140,8 @@ SHADOWDARK.sheet.player.talents_level: Level
 SHADOWDARK.sheet.player.talents_name: Name
 SHADOWDARK.sheet.player.talents: Talents
 SHADOWDARK.sheet.player.title: Title
+SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
+SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.spell_caster.priest: Priest
 SHADOWDARK.spell_caster.wizard: Wizard
@@ -142,16 +158,3 @@ SHADOWDARK.weapon.properties.twoHanded: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.Roll.Normal: Normal
-SHADOWDARK.Roll.Advantage: Advantage
-SHADOWDARK.Roll.Disadvantage: Disadvantage
-SHADOWDARK.dialog.AbilityCheck.str: Strength Check
-SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
-SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
-SHADOWDARK.dialog.AbilityCheck.int: Intelligence Check
-SHADOWDARK.dialog.AbilityCheck.wis: Wisdom Check
-SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
-SHADOWDARK.dialog.RollModeLabel: Select rolling mode
-SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
-SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
-SHADOWDARK.dialog.AbilityCheck.title: Ability Check
