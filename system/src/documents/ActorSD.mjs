@@ -52,22 +52,30 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareDerivedData() {}
 
+	/* -------------------------------------------- */
+	/*  Roll Methods                                */
+	/* -------------------------------------------- */
+
 	async rollAbility(abilityId, options={}) {
-		const bonus = this.abilityModifier(abilityId);
-		const parts = ["@bonus"];
-		const title = game.i18n.localize(`SHADOWDARK.dialog.AbilityCheck.${abilityId}`);
+		const parts = ["@abilityBonus"];
+		const abilityBonus = this.abilityModifier(abilityId);
+
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
-		const data = { bonus, ability };
+		const title = game.i18n.localize(`SHADOWDARK.dialog.AbilityCheck.${abilityId}`);
 		const speaker = ChatMessage.getSpeaker({ actor: this });
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
 			parts,
-			data,
+			data: { abilityBonus, ability },
 			title,
 			speaker,
 			template: "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs",
 		});
 	}
+
+	/* -------------------------------------------- */
+	/*  Selling Methods                             */
+	/* -------------------------------------------- */
 
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");

@@ -26,6 +26,7 @@ SHADOWDARK.armor.properties.noSwim: No Swim
 SHADOWDARK.armor.properties.oneHanded: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.chat.ItemRoll.Title: Attack roll with {name}
+SHADOWDARK.chat.SpellRoll.Title: Casting {name}
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
@@ -38,7 +39,7 @@ SHADOWDARK.dialog.AbilityCheck.title: Ability Check
 SHADOWDARK.dialog.AbilityCheck.wis: Wisdom Check
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
-SHADOWDARK.dialog.general.yes: "Yes"
+SHADOWDARK.dialog.general.yes: 'Yes'
 SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
 SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
@@ -50,6 +51,7 @@ SHADOWDARK.dialog.ItemRoll.TalentBonus: Talent Bonus
 SHADOWDARK.dialog.ItemRoll.Title: Roll Attack with
 SHADOWDARK.dialog.Roll: Roll
 SHADOWDARK.dialog.RollModeLabel: Select rolling mode
+SHADOWDARK.dialog.SpellRoll.Title: Roll Spell with
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots

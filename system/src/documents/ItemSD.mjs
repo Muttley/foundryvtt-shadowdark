@@ -15,20 +15,39 @@ export default class ItemSD extends Item {
 		}
 	}
 
-	async roll(parts, bonus, talents, options={}) {
+	/* -------------------------------------------- */
+	/*  Roll Methods                                */
+	/* -------------------------------------------- */
+
+	async rollItem(parts, abilityBonus, itemBonus, talentBonus, options={}) {
 		const title = game.i18n.format("SHADOWDARK.chat.ItemRoll.Title", {name: this.name});
 		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-		console.log(`rolling ${this}`);
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
 			parts,
-			data: { bonus, talents, item: this },
+			data: { abilityBonus, itemBonus, talentBonus, item: this },
 			title,
 			speaker,
 			template: "systems/shadowdark/templates/dialog/roll-item-dialog.hbs",
 		});
 	}
 
+	async rollSpell(parts, abilityBonus, talentBonus, tier, options={}) {
+		const title = game.i18n.format("SHADOWDARK.chat.SpellRoll.Title", {name: this.name});
+		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
+
+		await CONFIG.Dice.D20RollSD.d20Roll({
+			parts,
+			data: { abilityBonus, talentBonus, item: this },
+			title,
+			speaker,
+			template: "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs",
+		});
+	}
+
+	/* -------------------------------------------- */
+	/*  Getter Methods                              */
+	/* -------------------------------------------- */
 
 	hasProperty(property) {
 		for (const key of this.system.properties) {

@@ -260,7 +260,6 @@ export default ({ describe, it, after, before, expect }) => {
 
 	describe("_onOpenItem(event)", () => {
 		let actor = {};
-		let actorItem = {};
 
 		before(async () => {
 			actor = await createMockActor("Player");
