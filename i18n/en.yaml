@@ -32,6 +32,8 @@ SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
 SHADOWDARK.Damage: Damage
+SHADOWDARK.damage.OneHanded: 'One-Handed Damage:'
+SHADOWDARK.damage.TwoHanded: 'Two-Handed Damage:'
 SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
 SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
 SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
@@ -118,7 +120,7 @@ SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far_short: F
 SHADOWDARK.range.far: Far
-SHADOWDARK.range.near_short: "N"
+SHADOWDARK.range.near_short: 'N'
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
@@ -126,7 +128,7 @@ SHADOWDARK.Roll.Advantage: Advantage
 SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
 SHADOWDARK.Roll.CriticalFailure: Critical Failure! ({value})
 SHADOWDARK.Roll.CriticalSuccess: Critical Success! ({value})
-SHADOWDARK.roll.damage: Damage Roll
+SHADOWDARK.roll.damage: 'Damage Roll:'
 SHADOWDARK.Roll.Disadvantage: Disadvantage
 SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
 SHADOWDARK.Roll.Failure: Failure! ({value})

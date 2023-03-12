@@ -1,21 +1,21 @@
 export function highlightSuccessFailure(app, html, data) {
 	if ( !app.flags.isRoll ) return;
-	const value = html.find(".dice-total").text();
+	const value = html.find(".d20-roll .dice-total").text();
 	if ( app.flags.critical === "failure" ) {
-		html.find(".dice-total").addClass("failure");
-		html.find(".dice-total").text( game.i18n.format("SHADOWDARK.Roll.CriticalFailure", { value: value }));
+		html.find(".d20-roll .dice-total").addClass("failure");
+		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.Roll.CriticalFailure", { value: value }));
 	}
 	else if ( app.flags.critical === "success" ) {
-		html.find(".dice-total").addClass("success");
-		html.find(".dice-total").text( game.i18n.format("SHADOWDARK.Roll.CriticalSuccess", { value: value }));
+		html.find(".d20-roll .dice-total").addClass("success");
+		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.Roll.CriticalSuccess", { value: value }));
 	}
 	else if ( app.flags.hasTarget && app.flags.success ) {
-		html.find(".dice-total").addClass("success");
-		html.find(".dice-total").text( game.i18n.format("SHADOWDARK.Roll.Success", { value: value }) );
+		html.find(".d20-roll .dice-total").addClass("success");
+		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.Roll.Success", { value: value }) );
 	}
 	else if ( app.flags.hasTarget && !app.flags.success ) {
-		html.find(".dice-total").addClass("failure");
-		html.find(".dice-total").text( game.i18n.format("SHADOWDARK.Roll.Failure", { value: value }) );
+		html.find(".d20-roll .dice-total").addClass("failure");
+		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.Roll.Failure", { value: value }) );
 	}
 }
 

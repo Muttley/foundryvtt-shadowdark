@@ -14,7 +14,7 @@
     {{{data.item.system.description}}}
   </div>
 
-  <div class="card-attack-rolls">
+  <div class="d20-roll card-attack-rolls">
     <div class="card-attack-roll blindable" data-blind="{{data.roll.blindroll}}">
       {{#if rollSD}}
         <div><h3>
@@ -30,17 +30,30 @@
     </div>
   </div>
 
-  {{#if damageRollSD}}
+  {{#if isSpell}}
+  {{#ifEq result.critical "success"}}
+  <div class="card-spell-critical">
+    <p>Double any one numerical value!</p>
+  </div>
+  {{/ifEq}}
+  {{#ifEq result.critical "failure"}}
+  <div class="card-spell-critical">
+    <p>Roll on the appropriate Mishap table!</p>
+  </div>
+  {{/ifEq}}
+  {{/if}}
+
+  {{#if isWeapon}}
   <div class="card-damage-rolls">
     <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
         {{#if isVersatile}}
-        <div><h3>{{localize "SHADOWDARK.damage.OneHanded"}}:</h3></div>
-        <div>{{{damageRollSD}}}</div>
-        <div><h3>{{localize "SHADOWDARK.damage.TwoHanded"}}:</h3></div>
-        <div>{{{secondaryDamageRollSD}}}</div>
+        <div><h3>{{localize "SHADOWDARK.damage.OneHanded"}}</h3></div>
+        <div>{{{primaryDamage}}}</div>
+        <div><h3>{{localize "SHADOWDARK.damage.TwoHanded"}}</h3></div>
+        <div>{{{secondaryDamage}}}</div>
         {{else}}
-        <div><h3>{{localize "SHADOWDARK.roll.damage"}}:</h3></div>
-        <div>{{{damageRollSD}}}</div>
+        <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
+        <div>{{{primaryDamage}}}</div>
         {{/if}}
     </div>
   </div>

@@ -93,41 +93,49 @@ export default class D20RollSD extends Roll {
 				data: data,
 				isSpell: data.item ? data.item.isSpell() : false,
 				isWeapon: data.item ? data.item.isWeapon() : false,
+				isVersatile: data.item ? data.item.isVersatile() : false,
 				result: result,
 			};
 
 			// Roll weapon damage
 			if ( templateData.isWeapon ) {
-				if ( data.item.hasProperty("two-handed") ) {
-					const damageRollParts = [data.item.system.damage["two-handed"]];
-				}
-				else {
-					const damageRollParts = [data.item.system.damage["one-handed"]];
-				}
+				let numDice = data.item.system.damage.numDice;
+				const damageRollParts = data.item.isTwoHanded()
+					? data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
 
-				if ( result.critical === "failure" ) {
-					console.log("Oh no, critical failure!");
-				}
-				else if ( data.item.isVersatile() ) {
-					const oneHandedDamageRollParts = [data.item.system.damage.oneHanded];
-					const twoHandedDamageRollParts = [data.item.system.damage.twoHanded];
-					console.log(oneHandedDamageRollParts);
-					console.log(twoHandedDamageRollParts);
+				if ( result.critical !== "failure" ) {
+					if ( result.critical === "success" ) {
+						numDice *= 2;
+					}
 
-					// const oneHandedDamageRoll = await new Roll(oneHandedDamageRollParts.join("+"), data).evaluate({ async: true });
-					// const twoHandedDamageRoll = await new Roll(twoHandedDamageRollParts.join("+"), data).evaluate({ async: true });
+					const oneHandedDamageRoll = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+					await oneHandedDamageRoll.render().then(r => {
+						templateData.primaryDamage = r;
+						if (game.dice3d) {
+							game.dice3d
+								.showForRoll(
+									oneHandedDamageRoll,
+									game.user,
+									true
+								);
+						}
+					});
 
-					templateData.damageRollSD = "<p>Roll both one and two-handed damage</p>";
-					templateData.secondaryDamageRollSD = "<p>Roll both one and two-handed damage</p>";
-
-					console.log("Roll both one and two-handed damage");
-				}
-				else if ( result.critical === "success" ) {
-					console.log("Nice, critical! Double the amount of damage dice!");
-					templateData.damageRollSD = "<p>Nice, critical! Double the amount of damage dice!</p>";
-				}
-				else {
-					templateData.damageRollSD = "<p>Normal, boring damage...</p>";
+					if ( data.item.isVersatile() ) {
+						const secondaryRollParts = data.item.system.damage.twoHanded;
+						const twoHandedDamageRoll = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+						await twoHandedDamageRoll.render().then(r => {
+							templateData.secondaryDamage = r;
+							if (game.dice3d) {
+								game.dice3d
+									.showForRoll(
+										twoHandedDamageRoll,
+										game.user,
+										true
+									);
+							}
+						});
+					}
 				}
 			}
 
