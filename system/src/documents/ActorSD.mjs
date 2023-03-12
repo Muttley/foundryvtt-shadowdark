@@ -56,7 +56,8 @@ export default class ActorSD extends Actor {
 		const bonus = this.abilityModifier(abilityId);
 		const parts = ["@bonus"];
 		const title = game.i18n.localize(`SHADOWDARK.dialog.AbilityCheck.${abilityId}`);
-		const data = { bonus };
+		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
+		const data = { bonus, ability };
 		const speaker = ChatMessage.getSpeaker({ actor: this });
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
@@ -64,6 +65,7 @@ export default class ActorSD extends Actor {
 			data,
 			title,
 			speaker,
+			template: "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs",
 		});
 	}
 

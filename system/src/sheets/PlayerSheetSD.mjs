@@ -145,6 +145,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
+
 		let ability = $(event.currentTarget).data("ability");
 		this.actor.rollAbility(ability, {event: event});
 	}

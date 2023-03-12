@@ -6,6 +6,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
+		html.find(".item-rollable").click(
+			event => this._onRollItem(event)
+		);
+
 		// Create context menu for items on both sheets
 		this._contextMenu(html);
 
@@ -127,6 +131,27 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 
 		return item.sheet.render(true);
+	}
+
+	async _onRollItem(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+
+		const parts = [];
+		let bonus;
+
+		if ( item.type === "Weapon" ) {
+			const abilityId = item.system.type === "melee" ? "str" : "dex";
+			parts.push("@itemBonus", "@talentBonus", "@abilityBonus");
+			bonus = this.actor.abilityModifier(abilityId);
+		}
+
+		// @todo: push to parts & for talents affecting attack rolls
+		let talents;
+
+		return item.roll(parts, bonus, talents, {event: event});
 	}
 
 }
