@@ -1,10 +1,53 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
-	<div class="value-box__bold grid-colspan-2">
-		<label>{{localize 'SHADOWDARK.sheet.player.spells'}}</label>
-		<ol>
-			<li class="rollable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, molestiae.</li>
-			<li class="rollable">Vero, asperiores minima dolorem voluptate fugiat totam dolorum vel debitis?</li>
-			<li class="rollable">Mollitia excepturi, ipsam exercitationem sequi dolore aut pariatur veniam. Obcaecati?</li>
-		</ol>
-	</div>
+	<section class="spells-body">
+		<div class="spells-list">
+			<table>
+				{{#each spells as |tier tid|}}
+					<tr class="spell-tier-header">
+						<th class="spell-tier-header-padding">
+							{{localize 'SHADOWDARK.sheet.player.spells_tier'}} {{tid}}
+						</th>
+						<th>&nbsp;</th>
+					</tr>
+					{{#each tier as |spell|}}
+						<tr
+							class="item {{#if spell.system.lost}}spell-lost{{/if}}"
+							data-item-id="{{spell._id}}"
+						>
+							<td>
+								<a
+									class="item-control open-item"
+									data-item-id="{{spell._id}}"
+								>
+									{{spell.name}}
+								</a>
+							</td>
+							<td style="text-align: right; padding-right: 4px;">
+								{{#unless spell.system.lost}}
+									<a
+										class="item-control cast-spell"
+										data-item-id="{{spell._id}}"
+										title="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+									>
+										<i class="fa-solid fa-wand-magic-sparkles"></i>
+									</a>
+								{{/unless}}
+								<a
+									class="item-control toggle-spell-lost"
+									data-item-id="{{spell._id}}"
+									title="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
+								>
+									{{#if spell.system.lost}}
+										<i style="color:red;" class="fa-solid fa-xmark"></i>
+									{{else}}
+										<i style="color:green;" class="fa-solid fa-check"></i>
+									{{/if}}
+								</a>
+							</td>
+						</tr>
+					{{/each}}
+				{{/each}}
+			</table>
+		</div>
+	</section>
 </section>

@@ -60,6 +60,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onSellTreasure(event)
 		);
 
+		html.find(".toggle-spell-lost").click(
+			event => this._onToggleSpellLost(event)
+		);
+
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -191,6 +196,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
+	async _onToggleSpellLost(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+			{
+				_id: itemId,
+				"system.lost": !item.system.lost,
+			},
+		]);
+	}
+
 	_prepareItems(context) {
 		const gems = [];
 		const inventory = {
@@ -211,7 +229,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				items: [],
 			},
 		};
-		const spells = [];
+		const spells = {};
 		const talents = [];
 
 		let slotCount = 0;
@@ -245,7 +263,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				gems.push(i);
 			}
 			else if (i.type === "Spell") {
-				spells.push(i);
+				const spellTier = i.system.tier;
+				spells[spellTier] ||= [];
+				spells[spellTier].push(i);
 			}
 			else if (i.type === "Talent") {
 				talents.push(i);
