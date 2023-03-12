@@ -34,8 +34,10 @@ export default class ItemSD extends Item {
 	}
 
 	async rollSpell(parts, abilityBonus, talentBonus, tier, options={}) {
-		const title = game.i18n.format("SHADOWDARK.chat.SpellRoll.Title", {name: this.name});
 		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
+		const spellDC = 10 + tier;
+
+		const title = game.i18n.format("SHADOWDARK.chat.SpellRoll.Title", {name: this.name, tier, spellDC});
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
 			parts,

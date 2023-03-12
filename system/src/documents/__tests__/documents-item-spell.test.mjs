@@ -109,7 +109,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				expect(game.messages.size).equal(1);
 
 				const chatMessage = game.messages.contents.pop();
-				expect(chatMessage.content.indexOf("<p>Casting Tier 3 spell with DC 13</p>")).not.equal(-1);
+				expect(chatMessage.flavor.indexOf("at tier 3 with spell DC 13")).not.equal(-1);
 			});
 		});
 
