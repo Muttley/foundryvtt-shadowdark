@@ -10,12 +10,6 @@ export default class D20RollSD extends Roll {
 		this.options.configured = true;
 	}
 
-	static fromRoll(roll) {
-		const newRoll = new this(roll.formula, roll.data, roll.options);
-		Object.assign(newRoll, roll);
-		return newRoll;
-	}
-
 	static digestCritical(roll) {
 		if ( roll.terms[0].faces !== 20 ) return null;
 		// Get the final result if using adv/disadv
@@ -102,11 +96,38 @@ export default class D20RollSD extends Roll {
 				result: result,
 			};
 
-			// If success, roll damage
-			// @todo: fix for weapon
-			if ( templateData.isWeapon && result.critical !== "failure" ) {
-				if ( result.critical === "success" ) {
+			// Roll weapon damage
+			if ( templateData.isWeapon ) {
+				if ( data.item.hasProperty("two-handed") ) {
+					const damageRollParts = [data.item.system.damage["two-handed"]];
+				}
+				else {
+					const damageRollParts = [data.item.system.damage["one-handed"]];
+				}
+
+				if ( result.critical === "failure" ) {
+					console.log("Oh no, critical failure!");
+				}
+				else if ( data.item.isVersatile() ) {
+					const oneHandedDamageRollParts = [data.item.system.damage["one-handed"]];
+					const twoHandedDamageRollParts = [data.item.system.damage["two-handed"]];
+					console.log(oneHandedDamageRollParts);
+					console.log(twoHandedDamageRollParts);
+
+					// const oneHandedDamageRoll = await new Roll(oneHandedDamageRollParts.join("+"), data).evaluate({ async: true });
+					// const twoHandedDamageRoll = await new Roll(twoHandedDamageRollParts.join("+"), data).evaluate({ async: true });
+
+					templateData.damageRollSD = "<p>Roll both one and two-handed damage</p>";
+					templateData.secondaryDamageRollSD = "<p>Roll both one and two-handed damage</p>";
+
+					console.log("Roll both one and two-handed damage");
+				}
+				else if ( result.critical === "success" ) {
 					console.log("Nice, critical! Double the amount of damage dice!");
+					templateData.damageRollSD = "<p>Nice, critical! Double the amount of damage dice!</p>";
+				}
+				else {
+					templateData.damageRollSD = "<p>Normal, boring damage...</p>";
 				}
 			}
 
