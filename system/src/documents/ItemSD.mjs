@@ -29,6 +29,7 @@ export default class ItemSD extends Item {
 			title,
 			speaker,
 			template: "systems/shadowdark/templates/dialog/roll-item-dialog.hbs",
+			fastForward: options.fastForward ?? false,
 		});
 	}
 
@@ -42,6 +43,7 @@ export default class ItemSD extends Item {
 			title,
 			speaker,
 			template: "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs",
+			fastForward: options.fastForward ?? false,
 		});
 	}
 
