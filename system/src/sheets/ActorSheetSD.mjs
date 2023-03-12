@@ -144,7 +144,7 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 
 		const parts = [];
-		let	abilityBonus;
+		let abilityBonus;
 		let talentBonus;
 		let itemBonus;
 
