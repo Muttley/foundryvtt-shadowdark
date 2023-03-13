@@ -20,18 +20,17 @@ SHADOWDARK.app.item_properties.languages.title: Languages
 SHADOWDARK.app.item_properties.save: Save
 SHADOWDARK.app.item_properties.title: Properties
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
-SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
-SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
+SHADOWDARK.armor.properties.disadvantage_stealth: 'Disadvantage/Stealth'
+SHADOWDARK.armor.properties.disadvantage_swimming: 'Disadvantage/Swim'
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.attack: Attack
-SHADOWDARK.chat.item_roll.title: Attack roll with {name}
-SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chat.item_roll.title: 'Attack roll with {name}'
+SHADOWDARK.chat.spell_roll.title: 'Casting {name} at tier {tier} with spell DC {spellDC}'
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.damage: Damage
 SHADOWDARK.damage.one_handed: 'One-Handed Damage:'
 SHADOWDARK.damage.two_handed: 'Two-Handed Damage:'
 SHADOWDARK.dialog.ability_check.cha: Charisma Check
@@ -126,15 +125,15 @@ SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.advantage_title: '{title} with Advantage'
-SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
-SHADOWDARK.roll.critical.success: Critical Success! ({value})
+SHADOWDARK.roll.critical.failure: 'Critical Failure! ({value})'
+SHADOWDARK.roll.critical.success: 'Critical Success! ({value})'
 SHADOWDARK.roll.damage: 'Damage Roll:'
 SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
-SHADOWDARK.roll.failure: Failure! ({value})
+SHADOWDARK.roll.failure: 'Failure! ({value})'
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
-SHADOWDARK.roll.success: Success! ({value})
+SHADOWDARK.roll.success: 'Success! ({value})'
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
