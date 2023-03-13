@@ -10,20 +10,58 @@ export default class D20RollSD extends Roll {
 		this.options.configured = true;
 	}
 
+	/**
+	 * Analyze a roll result for critical hit
+	 * @param {Roll} roll - Roll results
+	 * @returns {string|null} - Either the type of critical as string, or null
+	 */
+	static digestCritical(roll) {
+		if ( roll.terms[0].faces !== 20 ) return null;
+		// Get the final result if using adv/disadv
+		else if ( roll.terms[0].total === 20 ) return "success";
+		else if ( roll.terms[0].total === 1 ) return "failure";
+		return null;
+	}
+
+	/**
+	 * Parses an evaluated roll
+	 * @param {object} data - Data supplied to the roll
+	 * @param {roll} roll - Evaluated Roll
+	 * @returns {object}
+	 */
+	static digestResult(data, roll) {
+		const result = {
+			critical: this.digestCritical(roll),
+			total: roll.total,
+		};
+
+		return result;
+	}
+
 	static async d20Roll({
 		item = null,
 		parts,
 		data,
-		template,
+		dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs",
+		chatCardTemplate,
 		title,
 		speaker,
 		flavor,
 		onClose,
 		dialogOptions,
+		targetValue,
 		rollMode = game.settings.get("core", "rollMode"),
 		rollType = "",
 		fastForward = false,
+		chatMessage = true,
 	}) {
+		/**
+		 *
+		 * @param {Array<string>} rollParts - Modifiers to be used in roll
+		 * @param {number} adv - Advantage(1)/Disadvantage(-1)
+		 * @param {jQuery} $form - Callback HTML from dialog
+		 * @returns {Promise<>}
+		 */
 		const _roll = async (rollParts, adv, $form) => {
 			let flav = flavor instanceof Function ? flavor(rollParts, data) : title;
 			if (adv === 1) {
@@ -48,25 +86,103 @@ export default class D20RollSD extends Roll {
 			if ((!data.talentBonus || data.abilityBonus === 0) && rollParts.indexOf("@talentBonus") !== -1) rollParts.splice(rollParts.indexOf("@talentBonus"), 1);
 
 			// Execute roll and send it to chat
-			const roll = await new Roll(rollParts.join("+"), data).roll({ async: true });
-			const origin = item ? { uuid: item.uuid, type: item.type } : null;
-			roll.toMessage(
-				{
-					speaker,
-					flavor: flav,
-					flags: {
-						shadowdark: {
-							context: {
-								type: rollType,
-							},
-							origin,
-						},
-					},
+			const roll = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
+
+			const result = D20RollSD.digestResult(data, roll);
+
+			const chatData = {
+				user: game.user.id,
+				speaker,
+				flags: {
+					isRoll: true,
+					"core.canPopout": true,
+					hasTarget: targetValue ? true : false,
+					success: roll.total >= targetValue,
+					critical: result.critical,
 				},
-				{
-					rollMode: $form ? ($form.find("[name=rollMode]").val()) : rollMode,
+			};
+
+			data.target = targetValue || "";
+
+			// Build templateData
+			const templateData = {
+				title: title,
+				flavor: flav,
+				data: data,
+				isSpell: data.item ? data.item.isSpell() : false,
+				isWeapon: data.item ? data.item.isWeapon() : false,
+				isVersatile: data.item ? data.item.isVersatile() : false,
+				result: result,
+			};
+
+			// Roll weapon damage
+			let twoHandedDamageRoll;
+			let oneHandedDamageRoll;
+			if ( templateData.isWeapon ) {
+				let numDice = data.item.system.damage.numDice;
+				const damageRollParts = data.item.isTwoHanded()
+					? data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
+
+				if ( result.critical !== "failure" ) {
+					if ( result.critical === "success" ) {
+						numDice *= 2;
+					}
+
+					oneHandedDamageRoll = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+
+					// Render HTML for roll
+					await oneHandedDamageRoll.render().then(r => {
+						templateData.primaryDamage = r;
+					});
+
+					if ( data.item.isVersatile() ) {
+						const secondaryRollParts = data.item.system.damage.twoHanded;
+						twoHandedDamageRoll = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+
+						// Render HTML for roll
+						await twoHandedDamageRoll.render().then(r => {
+							templateData.secondaryDamage = r;
+						});
+					}
 				}
-			);
+			}
+
+			return new Promise(resolve => {
+				roll.render().then(r => {
+					templateData.rollSD = r;
+					renderTemplate(chatCardTemplate, templateData).then(content => {
+						chatData.content = content;
+						// Integration with Dice So Nice
+						if (game.dice3d) {
+							game.dice3d
+								.showForRoll(
+									roll,
+									game.user,
+									true
+								)
+								.then(() => {
+									if ( oneHandedDamageRoll ) {
+										game.dice3d
+											.showForRoll(oneHandedDamageRoll, game.user, true);
+									}
+									if ( twoHandedDamageRoll ) {
+										game.dice3d
+											.showForRoll(twoHandedDamageRoll, game.user, true);
+									}
+								})
+								.then(() => {
+									if (chatMessage !== false) ChatMessage.create(chatData);
+									resolve(roll);
+								});
+						}
+						else {
+							chatData.sound = CONFIG.sounds.dice;
+							if (chatMessage !== false) ChatMessage.create(chatData);
+							resolve(roll);
+						}
+					});
+				});
+			});
 		};
 
 		// Modify the roll and handle fast-forwarding
@@ -80,7 +196,6 @@ export default class D20RollSD extends Roll {
 			if (parts.indexOf("@talentBonus") === -1) parts = parts.concat(["@talentBonus"]);
 
 			// Render dialog
-			template = template || "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 			const dialogData = {
 				data,
 				rollMode,
@@ -88,7 +203,7 @@ export default class D20RollSD extends Roll {
 				rollModes: CONFIG.Dice.rollModes,
 			};
 
-			const content = await renderTemplate(template, dialogData);
+			const content = await renderTemplate(dialogTemplate, dialogData);
 			let roll;
 
 			return new Promise(resolve => {

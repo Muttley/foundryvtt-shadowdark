@@ -163,10 +163,11 @@ export default class ActorSD extends Actor {
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
 			parts,
-			data: { abilityBonus, ability },
+			data: { abilityBonus, ability, actor: this },
 			title,
 			speaker,
-			template: "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs",
+			dialogTemplate: "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs",
+			chatCardTemplate: "systems/shadowdark/templates/chat/ability-card.hbs",
 		});
 	}
 

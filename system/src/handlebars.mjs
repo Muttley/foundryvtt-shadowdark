@@ -39,4 +39,8 @@ export default function registerHandlebarsHelpers() {
 		return obj[index] ? options.fn(this) : options.inverse(this);
 	});
 
+	Handlebars.registerHelper("localizeVar", function(arg1, arg2, options) {
+		return game.i18n.localize(`${arg1}${arg2}`);
+	});
+
 }

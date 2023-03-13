@@ -3,7 +3,7 @@
  * @file Contains tests for spell item documents
  */
 import ItemSD from "../ItemSD.mjs";
-import { cleanUpItemsByKey, closeDialogs, itemTypes, openDialogs, trashChat, waitForInput } from "../../testing/testUtils.mjs";
+import { cleanUpItemsByKey, closeDialogs, openDialogs, trashChat, waitForInput } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.documents.item.spell";
 export const options = {
