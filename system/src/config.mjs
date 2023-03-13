@@ -42,6 +42,7 @@ SHADOWDARK.RANGES_SHORT = {
 	close: "SHADOWDARK.range.close_short",
 	near: "SHADOWDARK.range.near_short",
 	far: "SHADOWDARK.range.far_short",
+	self: "SHADOWDARK.range.self_short",
 };
 
 SHADOWDARK.LANGUAGES = {
