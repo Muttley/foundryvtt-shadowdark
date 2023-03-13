@@ -13,7 +13,7 @@ export default class ArmorPropertiesSD extends ItemPropertiesSD {
 
 	/** @inheritdoc */
 	get title() {
-		const title = game.i18n.localize("SHADOWDARK.app.item-properties.armor.title");
+		const title = game.i18n.localize("SHADOWDARK.app.item_properties.armor.title");
 		return `${title}: ${this.object.name}`;
 	}
 }

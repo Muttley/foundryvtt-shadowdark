@@ -66,11 +66,11 @@ export default class D20RollSD extends Roll {
 			let flav = flavor instanceof Function ? flavor(rollParts, data) : title;
 			if (adv === 1) {
 				rollParts[0] = ["2d20kh"];
-				flav = game.i18n.format("SHADOWDARK.Roll.AdvantageTitle", { title: title });
+				flav = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: title });
 			}
 			else if (adv === -1) {
 				rollParts[0] = ["2d20kl"];
-				flav = game.i18n.format("SHADOWDARK.Roll.DisadvantageTitle", { title: title });
+				flav = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: title });
 			}
 
 			// Check if itemBonus is defined
@@ -213,25 +213,25 @@ export default class D20RollSD extends Roll {
 						content,
 						buttons: {
 							advantage: {
-								label: game.i18n.localize("SHADOWDARK.Roll.Advantage"),
+								label: game.i18n.localize("SHADOWDARK.roll.advantage"),
 								callback: async html => {
 									roll = await _roll(parts, 1, html);
 								},
 							},
 							normal: {
-								label: game.i18n.localize("SHADOWDARK.Roll.Normal"),
+								label: game.i18n.localize("SHADOWDARK.roll.normal"),
 								callback: async html => {
 									roll = await _roll(parts, 0, html);
 								},
 							},
 							disadvantage: {
-								label: game.i18n.localize("SHADOWDARK.Roll.Disadvantage"),
+								label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 								callback: async html => {
 									roll = await _roll(parts, -1, html);
 								},
 							},
 						},
-						default: game.i18n.localize("SHADOWDARK.Roll.Normal"),
+						default: game.i18n.localize("SHADOWDARK.roll.normal"),
 						close: html => {
 							if (onClose) onClose(html, parts, data);
 							resolve(roll);

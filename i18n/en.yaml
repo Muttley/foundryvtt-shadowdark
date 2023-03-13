@@ -10,37 +10,35 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Strength
 SHADOWDARK.ability_wis: Wis
 SHADOWDARK.ability_wisdom: Wisdom
-SHADOWDARK.app.gem-bag.sell_all: Sell All Gems
-SHADOWDARK.app.gem-bag.title: Gem Bag
-SHADOWDARK.app.gem-bag.tooltip.sell_gem: Sell Gem
-SHADOWDARK.app.gem-bag.total_value: Total Value
-SHADOWDARK.app.item-properties.armor.title: Armor Properties
-SHADOWDARK.app.item-properties.caster_classes.title: Caster Classes
-SHADOWDARK.app.item-properties.languages.title: Languages
-SHADOWDARK.app.item-properties.save: Save
-SHADOWDARK.app.item-properties.title: Properties
-SHADOWDARK.app.item-properties.weapon.title: Weapon Properties
-SHADOWDARK.armor.properties.disadvStealth: Disadvantage/Stealth
-SHADOWDARK.armor.properties.disadvSwim: Disadvantage/Swim
-SHADOWDARK.armor.properties.noSwim: No Swim
-SHADOWDARK.armor.properties.oneHanded: Occupies One Hand
+SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
+SHADOWDARK.app.gem_bag.title: Gem Bag
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
+SHADOWDARK.app.gem_bag.total_value: Total Value
+SHADOWDARK.app.item_properties.armor.title: Armor Properties
+SHADOWDARK.app.item_properties.caster_classes.title: Caster Classes
+SHADOWDARK.app.item_properties.languages.title: Languages
+SHADOWDARK.app.item_properties.save: Save
+SHADOWDARK.app.item_properties.title: Properties
+SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
+SHADOWDARK.armor.properties.disadvantage_stealth: 'Disadvantage/Stealth'
+SHADOWDARK.armor.properties.disadvantage_swimming: 'Disadvantage/Swim'
+SHADOWDARK.armor.properties.no_swimming: No Swim
+SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
-SHADOWDARK.Attack: Attack
-SHADOWDARK.chat.ItemRoll.Title: Attack roll with {name}
-SHADOWDARK.chat.SpellRoll.Title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chat.item_roll.title: 'Attack roll with {name}'
+SHADOWDARK.chat.spell_roll.title: 'Casting {name} at tier {tier} with spell DC {spellDC}'
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.Damage: Damage
-SHADOWDARK.damage.OneHanded: 'One-Handed Damage:'
-SHADOWDARK.damage.TwoHanded: 'Two-Handed Damage:'
-SHADOWDARK.dialog.AbilityCheck.cha: Charisma Check
-SHADOWDARK.dialog.AbilityCheck.con: Constitution Check
-SHADOWDARK.dialog.AbilityCheck.dex: Dexterity Check
-SHADOWDARK.dialog.AbilityCheck.int: Intelligence Check
-SHADOWDARK.dialog.AbilityCheck.str: Strength Check
-SHADOWDARK.dialog.AbilityCheck.title: Ability Check
-SHADOWDARK.dialog.AbilityCheck.wis: Wisdom Check
+SHADOWDARK.damage.one_handed: 'One-Handed Damage:'
+SHADOWDARK.damage.two_handed: 'Two-Handed Damage:'
+SHADOWDARK.dialog.ability_check.cha: Charisma Check
+SHADOWDARK.dialog.ability_check.con: Constitution Check
+SHADOWDARK.dialog.ability_check.dex: Dexterity Check
+SHADOWDARK.dialog.ability_check.int: Intelligence Check
+SHADOWDARK.dialog.ability_check.str: Strength Check
+SHADOWDARK.dialog.ability_check.title: Ability Check
+SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.yes: 'Yes'
@@ -49,13 +47,13 @@ SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
-SHADOWDARK.dialog.ItemRoll.AbilityBonus: Ability Bonus
-SHADOWDARK.dialog.ItemRoll.ItemBonus: Item Bonus
-SHADOWDARK.dialog.ItemRoll.TalentBonus: Talent Bonus
-SHADOWDARK.dialog.ItemRoll.Title: Roll Attack with
-SHADOWDARK.dialog.Roll: Roll
-SHADOWDARK.dialog.RollModeLabel: Select rolling mode
-SHADOWDARK.dialog.SpellRoll.Title: Roll Spell with
+SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
+SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
+SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
+SHADOWDARK.dialog.item_roll.title: Roll Attack with
+SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.roll_mode_label: Select rolling mode
+SHADOWDARK.dialog.spell_roll.title: Roll Spell with
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
@@ -124,23 +122,19 @@ SHADOWDARK.range.near_short: 'N'
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
-SHADOWDARK.Roll.Advantage: Advantage
-SHADOWDARK.Roll.AdvantageTitle: '{title} with Advantage'
-SHADOWDARK.Roll.CriticalFailure: Critical Failure! ({value})
-SHADOWDARK.Roll.CriticalSuccess: Critical Success! ({value})
+SHADOWDARK.roll.advantage: Advantage
+SHADOWDARK.roll.advantage_title: '{title} with Advantage'
+SHADOWDARK.roll.critical.failure: 'Critical Failure! ({value})'
+SHADOWDARK.roll.critical.success: 'Critical Success! ({value})'
 SHADOWDARK.roll.damage: 'Damage Roll:'
-SHADOWDARK.Roll.Disadvantage: Disadvantage
-SHADOWDARK.Roll.DisadvantageTitle: '{title} with Disadvantage'
-SHADOWDARK.Roll.Failure: Failure! ({value})
-SHADOWDARK.Roll.Normal: Normal
-SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.hp: HP
-SHADOWDARK.sheet.actor.name: Name
-SHADOWDARK.roll.spellCastingCheck: Spellcasting Check
-SHADOWDARK.Roll.Success: Success! ({value})
-SHADOWDARK.sheet.ClassItem: Shadowdark Item Sheet
-SHADOWDARK.sheet.ClassNpc: Shadowdark NPC Sheet
-SHADOWDARK.sheet.ClassPlayer: Shadowdark Player Sheet
+SHADOWDARK.roll.disadvantage: Disadvantage
+SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
+SHADOWDARK.roll.failure: 'Failure! ({value})'
+SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.spell_casting_check: Spellcasting Check
+SHADOWDARK.roll.success: 'Success! ({value})'
+SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
+SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
 SHADOWDARK.sheet.player.alignment: Alignment
@@ -177,11 +171,10 @@ SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
-SHADOWDARK.Versatile: Versatile
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
-SHADOWDARK.weapon.properties.twoHanded: Two-handed
+SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged

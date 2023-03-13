@@ -15,10 +15,10 @@ SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 };
 
 SHADOWDARK.ARMOR_PROPERTIES = {
-	disadvStealth: "SHADOWDARK.armor.properties.disadvStealth",
-	disadvSwim: "SHADOWDARK.armor.properties.disadvSwim",
-	noSwim: "SHADOWDARK.armor.properties.noSwim",
-	oneHanded: "SHADOWDARK.armor.properties.oneHanded",
+	disadvStealth: "SHADOWDARK.armor.properties.disadvantage_stealth",
+	disadvSwim: "SHADOWDARK.armor.properties.disadvantage_swimming",
+	noSwim: "SHADOWDARK.armor.properties.no_swimming",
+	oneHanded: "SHADOWDARK.armor.properties.one_handed",
 	shield: "SHADOWDARK.armor.properties.shield",
 };
 
@@ -42,6 +42,7 @@ SHADOWDARK.RANGES_SHORT = {
 	close: "SHADOWDARK.range.close_short",
 	near: "SHADOWDARK.range.near_short",
 	far: "SHADOWDARK.range.far_short",
+	self: "SHADOWDARK.range.self_short",
 };
 
 SHADOWDARK.LANGUAGES = {
@@ -91,7 +92,7 @@ SHADOWDARK.WEAPON_PROPERTIES = {
 	finesse: "SHADOWDARK.weapon.properties.finesse",
 	loading: "SHADOWDARK.weapon.properties.loading",
 	thrown: "SHADOWDARK.weapon.properties.thrown",
-	twoHanded: "SHADOWDARK.weapon.properties.twoHanded",
+	twoHanded: "SHADOWDARK.weapon.properties.two_handed",
 	versatile: "SHADOWDARK.weapon.properties.versatile",
 };
 

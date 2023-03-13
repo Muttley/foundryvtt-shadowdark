@@ -10,12 +10,12 @@ SHADOWDARK.ability_str: Voi
 SHADOWDARK.ability_strength: Voimakkuus
 SHADOWDARK.ability_wis: Vii
 SHADOWDARK.ability_wisdom: Viisaus
-SHADOWDARK.app.item-properties.save: Tallenna
-SHADOWDARK.app.item-properties.title: Asetukset
-SHADOWDARK.armor.properties.disadvStealth: Haitta/Hiipiminen
-SHADOWDARK.armor.properties.disadvSwim: Haitta/Uiminen
-SHADOWDARK.armor.properties.noSwim: Ei voi uida
-SHADOWDARK.armor.properties.oneHanded: Varaa yhden käden
+SHADOWDARK.app.item_properties.save: Tallenna
+SHADOWDARK.app.item_properties.title: Asetukset
+SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
+SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
+SHADOWDARK.armor.properties.no_swimming: Ei voi uida
+SHADOWDARK.armor.properties.one_handed: Varaa yhden käden
 SHADOWDARK.armor.properties.shield: Kilpi
 SHADOWDARK.coins.cp: Kupari
 SHADOWDARK.coins.gp: Kulta
@@ -61,8 +61,8 @@ SHADOWDARK.item.weapon_type: Aseen tyyppi
 SHADOWDARK.range.close: Vieressä
 SHADOWDARK.range.far: Kaukana
 SHADOWDARK.range.near: Lähellä
-SHADOWDARK.sheet.ClassItem: Shadowdark esineikkuna
-SHADOWDARK.sheet.ClassPlayer: Shadowdark hahmoikkuna
+SHADOWDARK.sheet.class.item: Shadowdark esineikkuna
+SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
 SHADOWDARK.sheet.player.ac: Puolustus
@@ -96,7 +96,7 @@ SHADOWDARK.spell_range.near: Lähellä
 SHADOWDARK.weapon.properties.finesse: Hienovarainen
 SHADOWDARK.weapon.properties.loading: Ladattava
 SHADOWDARK.weapon.properties.thrown: Heitettävä
-SHADOWDARK.weapon.properties.twoHanded: Kaksikätinen
+SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
 SHADOWDARK.weapon.type.ranged: Kantama-ase

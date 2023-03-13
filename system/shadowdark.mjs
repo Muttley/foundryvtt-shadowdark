@@ -58,7 +58,7 @@ Hooks.once("init", () => {
 	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
 		types: ["Player"],
 		makeDefault: true,
-		label: "SHADOWDARK.sheet.ClassPlayer",
+		label: "SHADOWDARK.sheet.class.player",
 	});
 
 	Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
@@ -70,7 +70,7 @@ Hooks.once("init", () => {
 	Items.unregisterSheet("core", ItemSheet);
 	Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
 		makeDefault: true,
-		label: "SHADOWDARK.sheet.ClassItem",
+		label: "SHADOWDARK.sheet.class.item",
 	});
 });
 
