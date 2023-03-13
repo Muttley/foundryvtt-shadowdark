@@ -10,6 +10,11 @@ export default class D20RollSD extends Roll {
 		this.options.configured = true;
 	}
 
+	/**
+	 * Analyze a roll result for critical hit
+	 * @param {Roll} roll - Roll results
+	 * @returns {string|null} - Either the type of critical as string, or null
+	 */
 	static digestCritical(roll) {
 		if ( roll.terms[0].faces !== 20 ) return null;
 		// Get the final result if using adv/disadv
@@ -18,6 +23,12 @@ export default class D20RollSD extends Roll {
 		return null;
 	}
 
+	/**
+	 * Parses an evaluated roll
+	 * @param {object} data - Data supplied to the roll
+	 * @param {roll} roll - Evaluated Roll
+	 * @returns {object}
+	 */
 	static digestResult(data, roll) {
 		const result = {
 			critical: this.digestCritical(roll),
@@ -44,6 +55,13 @@ export default class D20RollSD extends Roll {
 		fastForward = false,
 		chatMessage = true,
 	}) {
+		/**
+		 *
+		 * @param {Array<string>} rollParts - Modifiers to be used in roll
+		 * @param {number} adv - Advantage(1)/Disadvantage(-1)
+		 * @param {jQuery} $form - Callback HTML from dialog
+		 * @returns {Promise<>}
+		 */
 		const _roll = async (rollParts, adv, $form) => {
 			let flav = flavor instanceof Function ? flavor(rollParts, data) : title;
 			if (adv === 1) {
@@ -98,6 +116,8 @@ export default class D20RollSD extends Roll {
 			};
 
 			// Roll weapon damage
+			let twoHandedDamageRoll;
+			let oneHandedDamageRoll;
 			if ( templateData.isWeapon ) {
 				let numDice = data.item.system.damage.numDice;
 				const damageRollParts = data.item.isTwoHanded()
@@ -108,32 +128,20 @@ export default class D20RollSD extends Roll {
 						numDice *= 2;
 					}
 
-					const oneHandedDamageRoll = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+					oneHandedDamageRoll = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+
+					// Render HTML for roll
 					await oneHandedDamageRoll.render().then(r => {
 						templateData.primaryDamage = r;
-						if (game.dice3d) {
-							game.dice3d
-								.showForRoll(
-									oneHandedDamageRoll,
-									game.user,
-									true
-								);
-						}
 					});
 
 					if ( data.item.isVersatile() ) {
 						const secondaryRollParts = data.item.system.damage.twoHanded;
-						const twoHandedDamageRoll = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+						twoHandedDamageRoll = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+
+						// Render HTML for roll
 						await twoHandedDamageRoll.render().then(r => {
 							templateData.secondaryDamage = r;
-							if (game.dice3d) {
-								game.dice3d
-									.showForRoll(
-										twoHandedDamageRoll,
-										game.user,
-										true
-									);
-							}
 						});
 					}
 				}
@@ -152,6 +160,16 @@ export default class D20RollSD extends Roll {
 									game.user,
 									true
 								)
+								.then(() => {
+									if ( oneHandedDamageRoll ) {
+										game.dice3d
+											.showForRoll(oneHandedDamageRoll, game.user, true);
+									}
+									if ( twoHandedDamageRoll ) {
+										game.dice3d
+											.showForRoll(twoHandedDamageRoll, game.user, true);
+									}
+								})
 								.then(() => {
 									if (chatMessage !== false) ChatMessage.create(chatData);
 									resolve(roll);

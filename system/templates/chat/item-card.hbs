@@ -44,6 +44,7 @@
   {{/if}}
 
   {{#if isWeapon}}
+  {{#ifNeq result.critical "failure"}}
   <div class="card-damage-rolls">
     <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
         {{#if isVersatile}}
@@ -57,6 +58,7 @@
         {{/if}}
     </div>
   </div>
+  {{/ifNeq}}
   {{/if}}
 
   <footer class="card-footer">
