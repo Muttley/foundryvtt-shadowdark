@@ -1,5 +1,14 @@
 <form autocomplete="off" spellcheck="off">
   <h2>{{ data.ability }} {{localize "SHADOWDARK.dialog.AbilityCheck.title"}}</h2>
+  <hr />
+
+  <div class="form-group">
+    <label>
+      {{localize "SHADOWDARK.dialog.ItemRoll.AbilityBonus"}}
+    </label>
+    <input type="number" name="ability-bonus" value="{{ data.abilityBonus }}" placeholder="0">
+  </div>
+
   <div class="form-group">
     <label>{{ localize "SHADOWDARK.dialog.RollModeLabel" }}</label>
     <select name="rollMode">

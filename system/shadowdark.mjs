@@ -8,6 +8,7 @@ import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
+import onRenderchatMessage from "./src/chat-message/ChatCardSD.mjs";
 
 import "./src/testing/index.mjs";
 
@@ -112,3 +113,4 @@ Hooks.once("setup", () => {
 });
 
 Hooks.on("updateWorldTime", onUpdateWorldTime);
+Hooks.on("renderChatMessage", onRenderchatMessage);

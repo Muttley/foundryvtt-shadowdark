@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+
+.shadowdark.item-card {
+  .card-header {
+    padding: 3px 0;
+    border-top: 2px groove #FFF;
+    border-bottom: 2px groove #FFF;
+
+    img {
+      flex: 0 0 36px;
+      margin-right: 5px;
+      width: 36px;
+      height: 36px;
+      border-radius: 3px;
+    }
+
+    h3 {
+      flex: 1;
+      margin: 0;
+      line-height: 36px;
+    }
+  }
+
+  .card-content {
+    padding: 3px 0 3px;
+
+    p {
+      padding: 3px 0 3px;
+    }
+  }
+
+  .card-attack-roll {
+    padding: 3px 0 3px;
+    border-top: 2px groove #FFF;
+  }
+
+  .card-damage-roll {
+    padding: 3px 0 3px;
+  }
+
+  .card-spell-critical {
+    font-size: 12px;
+    padding: 3px 0 0;
+  }
+  
+  .card-buttons {
+    padding: 3px 0 3px;
+    display: none;
+  }
+
+  .card-footer {
+    padding: 3px 0 0;
+    border-top: 2px groove #FFF;
+
+    span {
+      border-right: 2px groove #FFF;
+      padding: 0 3px 0 0;
+      font-size: 10px;
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+.shadowdark.ability-card {
+  .card-header {
+    padding: 3px 0;
+    border-top: 2px groove #FFF;
+    border-bottom: 2px groove #FFF;
+
+    img {
+      flex: 0 0 36px;
+      margin-right: 5px;
+      width: 36px;
+      height: 36px;
+      border-radius: 3px;
+    }
+
+    h3 {
+      flex: 1;
+      margin: 0;
+      line-height: 36px;
+    }
+  }
+
+  .card-content {
+    padding: 3px 0 3px;
+
+    p {
+      padding: 3px 0 3px;
+    }
+  }
+
+  .card-ability-roll {
+    padding: 3px 0 3px;
+    border-top: 2px groove #FFF;
+  }
+}

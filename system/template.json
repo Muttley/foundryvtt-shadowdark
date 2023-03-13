@@ -174,7 +174,8 @@
 			"damage": {
 				"bonus": 0,
 				"oneHanded": "",
-				"twoHanded": ""
+				"twoHanded": "",
+				"numDice": 1
 			},
 			"range": "close",
 			"type": "melee",

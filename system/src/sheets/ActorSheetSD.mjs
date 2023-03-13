@@ -159,6 +159,10 @@ export default class ActorSheetSD extends ActorSheet {
 		let talentBonus;
 		let itemBonus;
 
+		const damageParts = [];
+		let damageTalentBonus;
+		let damageDieTalentBonus;
+
 		if ( item.type === "Weapon" ) {
 			const abilityId = item.system.type === "melee" ? "str" : "dex";
 			parts.push("@abilityBonus");
@@ -166,13 +170,26 @@ export default class ActorSheetSD extends ActorSheet {
 
 			if ( item.system.attackBonus !== 0 ) {
 				parts.push("@itemBonus");
+				damageParts.push("@itemBonus");
 				itemBonus = item.system.attackBonus;
 			}
 		}
 
-		// @todo: push to parts & for set talentBonus as sum of talents affecting attack rolls
+		// @todo: push attackBonus from talents to talentBonus & "@talentBonus" to parts
+		// @todo: push damageBonus from talents to damageTalentBonus & "@damageTalentBonus" to parts
+		// @todo:
+		//  push dieBonus from talents to damageDieTalentBonus & "@damageDieTalentBonus" to parts
 
-		return item.rollItem(parts, abilityBonus, itemBonus, talentBonus, {event: event});
+		return item.rollItem(
+			parts,
+			abilityBonus,
+			itemBonus,
+			talentBonus,
+			damageParts,
+			damageTalentBonus,
+			damageDieTalentBonus,
+			{event: event}
+		);
 	}
 
 	async _onCastSpell(event) {
