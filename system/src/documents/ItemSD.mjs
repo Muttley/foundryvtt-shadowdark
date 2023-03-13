@@ -121,6 +121,14 @@ export default class ItemSD extends Item {
 		return this.type === "Spell";
 	}
 
+	isTalent() {
+		return this.type === "Talent";
+	}
+
+	isMagicItem() {
+		return this.hasProperty("magic");
+	}
+
 	isWeapon() {
 		return this.type === "Weapon";
 	}
@@ -148,7 +156,7 @@ export default class ItemSD extends Item {
 	propertiesDisplay() {
 		let properties = [];
 
-		if (this.type === "Armor" || this.type === "Weapon") {
+		if (this.type === "Armor" || this.type === "Weapon" || this.type === "Talent") {
 			for (const key of this.system.properties) {
 				if (this.type === "Armor") {
 					properties.push(
@@ -158,6 +166,11 @@ export default class ItemSD extends Item {
 				else if (this.type === "Weapon") {
 					properties.push(
 						CONFIG.SHADOWDARK.WEAPON_PROPERTIES[key]
+					);
+				}
+				else if (this.type === "Talent") {
+					properties.push(
+						CONFIG.SHADOWDARK.TALENT_TYPES[key]
 					);
 				}
 			}

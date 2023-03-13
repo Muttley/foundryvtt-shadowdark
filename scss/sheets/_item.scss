@@ -78,6 +78,32 @@
 			border: none;
 		}
 	}
+	
+	.item-list {
+		.effect-source {
+			font-size: 12px;
+		}
+		.effect-name {
+			padding: 3px 0;
+			border-top: 0px groove #FFF;
+			border-bottom: 0px groove #FFF;
+
+			img {
+				flex: 0 0 36px;
+				margin-right: 5px;
+				width: 36px;
+				height: 36px;
+				border-radius: 3px;
+			}
+
+			h4 {
+				font-size: 14px;
+				flex: 1;
+				margin: 0;
+				line-height: 36px;
+			}
+		}
+	}
 
 	.equipped,
 	.treasure {

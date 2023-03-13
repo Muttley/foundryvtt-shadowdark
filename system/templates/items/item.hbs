@@ -33,6 +33,10 @@
 
 		{{> items/partials/description.hbs }}
 
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/active-effects.hbs }}
+		{{/ifEq}}
+
 		<div>
 			<div class="item-sidebar">
 
