@@ -32,10 +32,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find(".ability-name.rollable").click(
-			event => this._onRollAbilityCheck(event)
-		);
-
 		html.find(".item-quantity-decrement").click(
 			event => this._onItemQuantityDecrement(event)
 		);
@@ -141,13 +137,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		this.gemBag.render(true);
-	}
-
-	async _onRollAbilityCheck(event) {
-		event.preventDefault();
-
-		let ability = $(event.currentTarget).data("ability");
-		this.actor.rollAbility(ability, {event: event});
 	}
 
 	_onSellTreasure(event) {
@@ -309,24 +298,4 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			(a, b) => a.system.level - b.system.level
 		);
 	}
-
-	_sortAllItems(context) {
-		// Pre-sort all items so that when they are filtered into their relevant
-		// categories they are already sorted alphabetically (case-sensitive)
-		const allItems = [];
-		(context.items ?? []).forEach(item => allItems.push(item));
-
-		allItems.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		});
-
-		return allItems;
-	}
-
 }

@@ -2,6 +2,10 @@ export default class ActorSheetSD extends ActorSheet {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find(".ability-name.rollable").click(
+			event => this._onRollAbilityCheck(event)
+		);
+
 		html.find(".open-item").click(
 			event => this._onOpenItem(event)
 		);
@@ -137,6 +141,13 @@ export default class ActorSheetSD extends ActorSheet {
 		return item.sheet.render(true);
 	}
 
+	async _onRollAbilityCheck(event) {
+		event.preventDefault();
+
+		let ability = $(event.currentTarget).data("ability");
+		this.actor.rollAbility(ability, {event: event});
+	}
+
 	async _onRollItem(event) {
 		event.preventDefault();
 
@@ -185,4 +196,22 @@ export default class ActorSheetSD extends ActorSheet {
 		return item.rollSpell(parts, abilityBonus, talentBonus, tier, {event: event});
 	}
 
+	_sortAllItems(context) {
+		// Pre-sort all items so that when they are filtered into their relevant
+		// categories they are already sorted alphabetically (case-sensitive)
+		const allItems = [];
+		(context.items ?? []).forEach(item => allItems.push(item));
+
+		allItems.sort((a, b) => {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return allItems;
+	}
 }

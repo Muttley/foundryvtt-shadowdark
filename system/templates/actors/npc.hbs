@@ -1,0 +1,30 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div>
+		<header class="npc-header">
+			<img
+				class="portrait"
+				src="{{ actor.img }}"
+				data-edit="img"
+				title="{{ actor.name }}"
+				height="110"
+				width="110"
+			/>
+			<div class="title">
+				<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
+			</div>
+			<h1>
+				<input
+					class="npc-name"
+					name="name"
+					type="text"
+					value="{{ actor.name }}"
+					placeholder="{{localize 'SHADOWDARK.sheet.actor.name'}}"
+				/>
+			</h1>
+		</header>
+	</div>
+	<hr	/>
+	<section class="npc-body">
+		{{> actors/npc/abilities.hbs }}
+	</section>
+</form>

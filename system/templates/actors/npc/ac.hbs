@@ -2,13 +2,12 @@
 	<label>{{localize 'SHADOWDARK.sheet.actor.ac'}}</label>
 	<div class="ac">
 		<div class="ac-value">
-			<input
-				type="number"
-				value="{{armorClass}}"
+			{{numberInput
+				actor.system.attributes.ac.value
+				name="system.attributes.ac.value"
 				class="ac-value"
-				disabled
-			>
+				placeholder="0"
+			}}
 		</div>
-		{{> actors/player/abilities/luck.hbs }}
 	</div>
 </div>

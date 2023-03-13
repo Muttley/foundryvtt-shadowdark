@@ -1,5 +1,8 @@
 export default function() {
 	const partials = [
+		"systems/shadowdark/templates/actors/npc/abilities.hbs",
+		"systems/shadowdark/templates/actors/npc/ac.hbs",
+		"systems/shadowdark/templates/actors/npc/hp.hbs",
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/attacks.hbs",

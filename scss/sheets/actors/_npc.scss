@@ -1,0 +1,119 @@
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
+
+.shadowdark.sheet.npc {
+	@include p-reset;
+	color: white;
+	font-size: 18px;
+
+	input {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+		font-size: 16px;
+
+		text-overflow: ellipsis;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.05);
+		border: none;
+	}
+
+	.abilities-grid {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		column-gap: 8px;
+		align-items: start;
+	}
+
+	.ability-scores {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 8px;
+		background-color: var(--form-background);
+	}
+
+	.ability-score {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+
+		text-align: center;
+
+		input {
+			@include p-reset;
+
+			text-overflow: ellipsis;
+			text-align: center;
+
+			background: rgba(0, 0, 0, 0.05);
+			border: none;
+		}
+	}
+
+	.ac {
+		text-align: center;
+	}
+
+	.ac-value,
+	.hp-value {
+		font-size: 38px;
+		height: auto;
+		line-height: 1;
+		margin-bottom: 2px;
+	}
+
+	.npc-body {
+		@include p-reset;
+		margin: 4px;
+	}
+
+	.npc-header {
+		@include p-reset;
+
+		display: grid;
+		grid-template-columns: 110px 1fr;
+
+		column-gap: 4px;
+
+		align-items: center;
+	}
+
+	.npc-name {
+		font-family: "Old Newspaper Font";
+		font-size: 2.5rem;
+
+		height: 100%;
+	}
+
+	.portrait {
+		grid-row: span 2;
+	}
+
+	.rollable {
+		&:hover {
+			cursor: pointer;
+			text-shadow: 0 0 8px var(--clickable);
+		}
+	}
+
+	.title {
+		@include p-reset;
+
+		font-family: "JSL Blackletter";
+		font-size: 3.5rem;
+
+		text-align: right;
+		line-height: 1;
+
+		&__prefix {
+			color: $secondary-color;
+			text-shadow: -0.2rem -0.2rem $primary-color;
+		}
+
+		&__suffix {
+			color: $primary-color;
+			text-shadow: -0.2rem -0.2rem $secondary-color;
+		}
+	}
+}
