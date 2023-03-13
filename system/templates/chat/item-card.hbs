@@ -19,7 +19,7 @@
       {{#if rollSD}}
         <div><h3>
           {{#if isSpell}}
-          {{localize "SHADOWDARK.roll.spellCastingCheck"}}:
+          {{localize "SHADOWDARK.roll.spell_casting_check"}}:
           {{/if}}
           {{#if isWeapon}}
           {{title}}:
@@ -48,9 +48,9 @@
   <div class="card-damage-rolls">
     <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
         {{#if isVersatile}}
-        <div><h3>{{localize "SHADOWDARK.damage.OneHanded"}}</h3></div>
+        <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
         <div>{{{primaryDamage}}}</div>
-        <div><h3>{{localize "SHADOWDARK.damage.TwoHanded"}}</h3></div>
+        <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
         <div>{{{secondaryDamage}}}</div>
         {{else}}
         <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
@@ -63,17 +63,17 @@
 
   <footer class="card-footer">
     {{#if isWeapon}}
-    <span>{{localize "SHADOWDARK.item.weapon_type"}}: {{localizeVar "SHADOWDARK.weapon.type." data.item.system.type }}</span>
-    <span>{{localize "SHADOWDARK.item.weapon_range"}}: {{localizeVar "SHADOWDARK.range."  data.item.system.range }}</span>
+    <span>{{localize "SHADOWDARK.item.weapon_type"}}: {{fromConfig "WEAPON_TYPES" data.item.system.type }}</span>
+    <span>{{localize "SHADOWDARK.item.weapon_range"}}: {{fromConfig "RANGES"  data.item.system.range }}</span>
     {{#each data.item.system.properties as |prop|}}
-    <span>{{localizeVar "SHADOWDARK.weapon.properties." prop }}</span>
+    <span>{{fromConfig "WEAPON_PROPERTIES" prop }}</span>
     {{/each}}
     <span></span>
     {{/if}}
     {{#if isSpell}}
     <span>{{localize "SHADOWDARK.item.spell_tier"}}: {{ data.item.system.tier }}</span>
-    <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{localizeVar "SHADOWDARK.spell_duration."  data.item.system.duration.type }}</span>
-    <span>{{localize "SHADOWDARK.item.spell_range"}}: {{localizeVar "SHADOWDARK.spell_range." data.item.system.range }}</span>
+    <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{fromConfig "SPELL_DURATIONS"  data.item.system.duration.type }}</span>
+    <span>{{localize "SHADOWDARK.item.spell_range"}}: {{fromConfig "SPELL_RANGES" data.item.system.range }}</span>
     {{/if}}
   </footer>
 </div>

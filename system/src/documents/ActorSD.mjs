@@ -158,7 +158,7 @@ export default class ActorSD extends Actor {
 		const abilityBonus = this.abilityModifier(abilityId);
 
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
-		const title = game.i18n.localize(`SHADOWDARK.dialog.AbilityCheck.${abilityId}`);
+		const title = game.i18n.localize(`SHADOWDARK.dialog.ability_check.${abilityId}`);
 		const speaker = ChatMessage.getSpeaker({ actor: this });
 
 		await CONFIG.Dice.D20RollSD.d20Roll({

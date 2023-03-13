@@ -22,7 +22,7 @@ export default class GemBagSD extends Application {
 
 	/** @inheritdoc */
 	get title() {
-		const title = game.i18n.localize("SHADOWDARK.app.gem-bag.title");
+		const title = game.i18n.localize("SHADOWDARK.app.gem_bag.title");
 		return `${title}: ${this.actor.name}`;
 	}
 
