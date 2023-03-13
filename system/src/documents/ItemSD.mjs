@@ -65,7 +65,7 @@ export default class ItemSD extends Item {
 		damageDieTalentBonus,
 		options={}
 	) {
-		const title = game.i18n.format("SHADOWDARK.chat.ItemRoll.Title", {name: this.name});
+		const title = game.i18n.format("SHADOWDARK.chat.item_roll.title", {name: this.name});
 		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
@@ -91,7 +91,7 @@ export default class ItemSD extends Item {
 		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
 		const spellDC = 10 + tier;
 
-		const title = game.i18n.format("SHADOWDARK.chat.SpellRoll.Title", {name: this.name, tier, spellDC});
+		const title = game.i18n.format("SHADOWDARK.chat.spell_roll.title", {name: this.name, tier, spellDC});
 
 		await CONFIG.Dice.D20RollSD.d20Roll({
 			parts,

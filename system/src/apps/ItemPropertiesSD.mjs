@@ -35,7 +35,7 @@ export default class ItemPropertiesSD extends FormApplication {
 
 	/** @inheritdoc */
 	get title() {
-		const title = game.i18n.localize("SHADOWDARK.app.item-properties.title");
+		const title = game.i18n.localize("SHADOWDARK.app.item_properties.title");
 		return `${title}: ${this.object.name}`;
 	}
 

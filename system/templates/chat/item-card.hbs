@@ -19,7 +19,7 @@
       {{#if rollSD}}
         <div><h3>
           {{#if isSpell}}
-          {{localize "SHADOWDARK.roll.spellCastingCheck"}}:
+          {{localize "SHADOWDARK.roll.spell_casting_check"}}:
           {{/if}}
           {{#if isWeapon}}
           {{title}}:
@@ -48,9 +48,9 @@
   <div class="card-damage-rolls">
     <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
         {{#if isVersatile}}
-        <div><h3>{{localize "SHADOWDARK.damage.OneHanded"}}</h3></div>
+        <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
         <div>{{{primaryDamage}}}</div>
-        <div><h3>{{localize "SHADOWDARK.damage.TwoHanded"}}</h3></div>
+        <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
         <div>{{{secondaryDamage}}}</div>
         {{else}}
         <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>

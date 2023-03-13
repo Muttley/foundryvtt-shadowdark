@@ -10,12 +10,12 @@ SHADOWDARK.ability_str: ST
 SHADOWDARK.ability_strength: Stärke
 SHADOWDARK.ability_wis: WI
 SHADOWDARK.ability_wisdom: Weisheit
-SHADOWDARK.app.item-properties.save: Rettung
-SHADOWDARK.app.item-properties.title: Eigenschaften
-SHADOWDARK.armor.properties.disadvStealth: Nachteil/Heimlicheit
-SHADOWDARK.armor.properties.disadvSwim: Nachteil/Schwimmen
-SHADOWDARK.armor.properties.noSwim: Kein Schwimmen
-SHADOWDARK.armor.properties.oneHanded: Benötigt eine Hand
+SHADOWDARK.app.item_properties.save: Rettung
+SHADOWDARK.app.item_properties.title: Eigenschaften
+SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
+SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
+SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
+SHADOWDARK.armor.properties.one_handed: Benötigt eine Hand
 SHADOWDARK.armor.properties.shield: Schild
 SHADOWDARK.coins.cp: KM
 SHADOWDARK.coins.gp: GM
@@ -61,8 +61,8 @@ SHADOWDARK.item.weapon_type: Typ
 SHADOWDARK.range.close: Direkt
 SHADOWDARK.range.far: Weit
 SHADOWDARK.range.near: Nah
-SHADOWDARK.sheet.ClassItem: Shadowdark Gegenstandsblatt
-SHADOWDARK.sheet.ClassPlayer: Shadowdark Spielerblatt
+SHADOWDARK.sheet.class.item: Shadowdark Gegenstandsblatt
+SHADOWDARK.sheet.class.player: Shadowdark Spielerblatt
 SHADOWDARK.sheet.general.item_delete.title: Gegenstand löschen
 SHADOWDARK.sheet.general.item_edit.title: Gegenstand bearbeiten
 SHADOWDARK.sheet.player.ac: RK
@@ -96,7 +96,7 @@ SHADOWDARK.spell_range.near: Nah
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: laden
 SHADOWDARK.weapon.properties.thrown: Wurfwaffe
-SHADOWDARK.weapon.properties.twoHanded: zweihändig
+SHADOWDARK.weapon.properties.two_handed: zweihändig
 SHADOWDARK.weapon.properties.versatile: vielseitig
 SHADOWDARK.weapon.type.melee: Nahkampf
 SHADOWDARK.weapon.type.ranged: Fernkampf
