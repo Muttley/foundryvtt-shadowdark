@@ -1,9 +1,7 @@
-
-
 export default class ActiveEffectSD extends ActiveEffect {
 
 	/**
-	 * 
+	 *
 	 * @param {Event} event 					- The event that triggers the change
 	 * @param {ActorSD|ItemSD} owner 	-	Owning document from which the change was triggered
 	 */
