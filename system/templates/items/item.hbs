@@ -34,20 +34,16 @@
 		{{#ifEq item.type "NPC Attack"}}
 			{{> items/partials/npc-attack }}
 		{{/ifEq}}
-		
+
 		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent.hbs }}
-			{{> items/partials/talent-active-effects.hbs }}
+			{{> items/partials/talent }}
+			{{> items/partials/talent-active-effects }}
 		{{/ifEq}}
 
 		{{> items/partials/description }}
 
 		<div>
 			<div class="item-sidebar">
-
-				{{#ifEq item.type "Talent"}}
-					{{> items/partials/talent }}
-				{{/ifEq}}
 
 				{{#if hasCost}}
 					{{> items/partials/cost }}
