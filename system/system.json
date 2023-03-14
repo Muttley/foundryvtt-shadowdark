@@ -44,6 +44,15 @@
 			"flags": {}
 		},
 		{
+			"name": "talents",
+			"label": "Talents",
+			"system": "shadowdark",
+			"path": "packs/talents.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "spells",
 			"label": "Spells",
 			"system": "shadowdark",
