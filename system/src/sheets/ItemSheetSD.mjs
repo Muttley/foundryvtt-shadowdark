@@ -1,3 +1,5 @@
+import ActiveEffectSD from "../documents/ActiveEffectSD.mjs";
+
 export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
@@ -27,6 +29,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 		html.find(".item-property-list.weapon").click(
 			event => this._onWeaponProperties(event)
+		);
+
+		html.find(".effect-control").click(ev => {
+			ActiveEffectSD.onManageActiveEffect(ev, this.item);
+		});
+
+		html.find(".item-property-list.talent-type").click(
+			event => this._onTalentTypeProperties(event)
 		);
 
 		// Handle default listeners last so system listeners are triggered first
@@ -73,6 +83,11 @@ export default class ItemSheetSD extends ItemSheet {
 		// 	context.propertiesDisplay = context.properties.join(", ");
 		// }
 
+		if (item.type === "Talent" || item.type === "Spell") {
+			// Effects
+			context.effects = ActiveEffectSD.prepareActiveEffectCategories(item.effects, item);
+		}
+
 		if (item.type === "Spell") {
 			context.casterClasses = [];
 
@@ -87,6 +102,10 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 
 			context.casterClassesDisplay = context.casterClasses.join(", ");
+
+			context.effects.talent.hidden = true;
+			context.effects.item.hidden = true;
+			context.effects.temporary.hidden = true;
 		}
 
 		context.descriptionHTML = await TextEditor.enrichHTML(
@@ -97,6 +116,14 @@ export default class ItemSheetSD extends ItemSheet {
 		);
 
 		return context;
+	}
+
+	_onTalentTypeProperties(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.TalentTypesSD(
+			this.item, {event: event}
+		).render(true);
 	}
 
 	_onArmorProperties(event) {
@@ -122,4 +149,15 @@ export default class ItemSheetSD extends ItemSheet {
 			this.item, {event: event}
 		).render(true);
 	}
+
+	_updateObject(event, formData) {
+		// Manage changes to ActiveEffects
+		if (this.item.type === "Talent") {
+			ActiveEffectSD.onChangeActiveEffect(event, this.item);
+		}
+
+		super._updateObject(event, formData);
+	}
+
+
 }

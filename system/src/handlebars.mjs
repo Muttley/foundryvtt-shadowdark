@@ -40,7 +40,7 @@ export default function registerHandlebarsHelpers() {
 	});
 
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2, options) {
-		return CONFIG.SHADOWDARK[arg1][arg2];
+		return CONFIG.SHADOWDARK[arg1][arg2] ? CONFIG.SHADOWDARK[arg1][arg2] : arg2;
 	});
 
 }

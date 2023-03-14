@@ -31,14 +31,15 @@
 			{{> items/partials/weapon.hbs }}
 		{{/ifEq}}
 
-		{{> items/partials/description.hbs }}
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/talent.hbs }}
+			{{> items/partials/talent-active-effects.hbs }}
+		{{/ifEq}}
+
+		{{> items/partials/description.hbs }}			
 
 		<div>
 			<div class="item-sidebar">
-
-				{{#ifEq item.type "Talent"}}
-					{{> items/partials/talent.hbs }}
-				{{/ifEq}}
 
 				{{#if hasCost}}
 					{{> items/partials/cost.hbs }}

@@ -18,6 +18,8 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/slots.hbs",
 		"systems/shadowdark/templates/items/partials/spell.hbs",
 		"systems/shadowdark/templates/items/partials/talent.hbs",
+		"systems/shadowdark/templates/items/partials/talent-active-effects.hbs",
+		"systems/shadowdark/templates/items/partials/active-effects.hbs",
 		"systems/shadowdark/templates/items/partials/treasure.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
 		"systems/shadowdark/templates/partials/weapon-attack.hbs",

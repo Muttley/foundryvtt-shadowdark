@@ -18,15 +18,16 @@ SHADOWDARK.app.item_properties.armor.title: Armor Properties
 SHADOWDARK.app.item_properties.caster_classes.title: Caster Classes
 SHADOWDARK.app.item_properties.languages.title: Languages
 SHADOWDARK.app.item_properties.save: Save
+SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
 SHADOWDARK.app.item_properties.title: Properties
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
-SHADOWDARK.armor.properties.disadvantage_stealth: 'Disadvantage/Stealth'
-SHADOWDARK.armor.properties.disadvantage_swimming: 'Disadvantage/Swim'
+SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
+SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
-SHADOWDARK.chat.item_roll.title: 'Attack roll with {name}'
-SHADOWDARK.chat.spell_roll.title: 'Casting {name} at tier {tier} with spell DC {spellDC}'
+SHADOWDARK.chat.item_roll.title: Attack roll with {name}
+SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
@@ -41,19 +42,32 @@ SHADOWDARK.dialog.ability_check.title: Ability Check
 SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
+SHADOWDARK.dialog.general.no: 'No'
 SHADOWDARK.dialog.general.yes: 'Yes'
+SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
+SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
+SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
+SHADOWDARK.dialog.item_roll.title: Roll Attack with
 SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
 SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
-SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
-SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
-SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
-SHADOWDARK.dialog.item_roll.title: Roll Attack with
-SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.roll_mode_label: Select rolling mode
+SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.spell_roll.title: Roll Spell with
+SHADOWDARK.effect.footer.add_custom: Add Custom Effect
+SHADOWDARK.effect.header.active: Active
+SHADOWDARK.effect.header.delete: Delete
+SHADOWDARK.effect.header.edit: Edit
+SHADOWDARK.effect.header.name: Effect
+SHADOWDARK.effect.header.options: Options
+SHADOWDARK.effect.item: Item Effects
+SHADOWDARK.effect.new: New Effect
+SHADOWDARK.effect.spell: Spell Effects
+SHADOWDARK.effect.talent: Talent Effects
+SHADOWDARK.effect.temporary: Temporary Effects
+SHADOWDARK.effect.unavailable: Disabled Effects
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
@@ -122,17 +136,17 @@ SHADOWDARK.range.near_short: 'N'
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
-SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.advantage_title: '{title} with Advantage'
-SHADOWDARK.roll.critical.failure: 'Critical Failure! ({value})'
-SHADOWDARK.roll.critical.success: 'Critical Success! ({value})'
+SHADOWDARK.roll.advantage: Advantage
+SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
+SHADOWDARK.roll.critical.success: Critical Success! ({value})
 SHADOWDARK.roll.damage: 'Damage Roll:'
-SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
-SHADOWDARK.roll.failure: 'Failure! ({value})'
+SHADOWDARK.roll.disadvantage: Disadvantage
+SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
-SHADOWDARK.roll.success: 'Success! ({value})'
+SHADOWDARK.roll.success: Success! ({value})
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
@@ -174,6 +188,16 @@ SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
+SHADOWDARK.talent.type.ability_improvement: Ability Improvement
+SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
+SHADOWDARK.talent.type.attack_bonus: Attack Roll Bonus
+SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
+SHADOWDARK.talent.type.damage_bonus: Damage Roll Bonus
+SHADOWDARK.talent.type.initiative_advantage: Initiative Advantage
+SHADOWDARK.talent.type.spell_advantage: Spellcasting Advantage
+SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
+SHADOWDARK.talent.type.title: Talent Type(s)
+SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
