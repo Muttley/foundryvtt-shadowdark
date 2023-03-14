@@ -5,7 +5,12 @@ export default class ActorSD extends Actor {
 	/* -------------------------------------------- */
 
 	abilityModifier(ability) {
-		return this._abilityModifier(this.system.abilities[ability].value);
+		if (this.type === "Player") {
+			return this._abilityModifier(this.system.abilities[ability].value);
+		}
+		else {
+			return this.system.abilities[ability].mod;
+		}
 	}
 
 	attackBonus(attackType) {

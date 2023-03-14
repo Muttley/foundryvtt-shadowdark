@@ -20,46 +20,50 @@
 	<section class="item-body">
 
 		{{#ifEq item.type "Armor"}}
-			{{> items/partials/armor.hbs }}
+			{{> items/partials/armor }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Spell"}}
-			{{> items/partials/spell.hbs }}
+			{{> items/partials/spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Weapon"}}
-			{{> items/partials/weapon.hbs }}
+			{{> items/partials/weapon }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "NPC Attack"}}
+			{{> items/partials/npc-attack }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent.hbs }}
-			{{> items/partials/talent-active-effects.hbs }}
+			{{> items/partials/talent }}
+			{{> items/partials/talent-active-effects }}
 		{{/ifEq}}
 
-		{{> items/partials/description.hbs }}			
+		{{> items/partials/description }}
 
 		<div>
 			<div class="item-sidebar">
 
 				{{#if hasCost}}
-					{{> items/partials/cost.hbs }}
+					{{> items/partials/cost }}
 				{{/if}}
 
 				{{#if usesSlots}}
 					{{!-- Gems have non-configurable slot settings --}}
 					{{#ifNeq item.type "Gem"}}
-						{{> items/partials/slots.hbs }}
+						{{> items/partials/slots }}
 					{{else}}
 						<div></div>
 					{{/ifNeq}}
 
 					{{#if item.system.canBeEquipped}}
-						{{> items/partials/equipped.hbs }}
+						{{> items/partials/equipped }}
 					{{/if}}
 				{{/if}}
 
 				{{#ifEq item.type "Basic"}}
-					{{> items/partials/treasure.hbs }}
+					{{> items/partials/treasure }}
 				{{/ifEq}}
 
 			</div>

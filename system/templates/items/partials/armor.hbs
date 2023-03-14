@@ -21,7 +21,11 @@
 		<label>{{localize 'SHADOWDARK.item.armor_bonus_attribute'}}</label>
 		<select name="system.ac.attribute">
 			<option value="">&mdash;</option>
-			{{selectOptions armorBonusAttributes selected=system.ac.attribute localize=false}}
+			{{selectOptions
+				config.ARMOR_BONUS_ATTRIBUTES
+				selected=system.ac.attribute
+				localize=false
+			}}
 		</select>
 	</div>
 </div>

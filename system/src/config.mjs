@@ -10,6 +10,18 @@ SHADOWDARK.ABILITIES_LONG = {
 	dex: "SHADOWDARK.ability_dexterity",
 };
 
+SHADOWDARK.ALIGNMENTS = {
+	lawful: "SHADOWDARK.alignment.lawful",
+	neutral: "SHADOWDARK.alignment.neutral",
+	chaotic: "SHADOWDARK.alignment.chaotic",
+};
+
+SHADOWDARK.ALIGNMENTS_SHORT = {
+	lawful: "SHADOWDARK.alignment.lawful_short",
+	neutral: "SHADOWDARK.alignment.neutral_short",
+	chaotic: "SHADOWDARK.alignment.chaotic_short",
+};
+
 SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
 };
@@ -20,6 +32,13 @@ SHADOWDARK.ARMOR_PROPERTIES = {
 	noSwim: "SHADOWDARK.armor.properties.no_swimming",
 	oneHanded: "SHADOWDARK.armor.properties.one_handed",
 	shield: "SHADOWDARK.armor.properties.shield",
+};
+
+SHADOWDARK.CLASSES = {
+	fighter: "SHADOWDARK.class.fighter",
+	priest: "SHADOWDARK.class.priest",
+	thief: "SHADOWDARK.class.thief",
+	wizard: "SHADOWDARK.class.wizard",
 };
 
 SHADOWDARK.DEFAULTS = {

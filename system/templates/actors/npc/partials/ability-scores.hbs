@@ -1,0 +1,50 @@
+<div class="ability-scores">
+	{{#each actor.system.abilities as |ability id|}}
+		<div class="value-box ability" data-ability="{{id}}">
+			<label
+				for="{{concat "system.abilities." id ".value"}}"
+				class="ability-name rollable"
+				data-ability="{{id}}"
+			>
+				{{ability.label}}
+			</label>
+			<div class="ability-score">
+				{{numberInput
+					ability.mod
+					name=(concat "system.abilities." id ".mod")
+					class="ability-score" placeholder="0"
+				}}
+			</div>
+		</div>
+	{{/each}}
+	{{> actors/npc/partials/hp }}
+	{{> actors/npc/partials/ac }}
+	<div class="npc-details">
+		<div class="detail-box">
+			<label>{{localize 'SHADOWDARK.sheet.npc.movement'}}</label>
+			<select name="system.move">
+				{{selectOptions
+					config.RANGES
+					selected=system.move
+					localize=false
+				}}
+			</select>
+		</div>
+		<div class="detail-box">
+			<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+			<select name="system.alignment">
+				{{selectOptions
+					config.ALIGNMENTS
+					selected=system.alignment
+					localize=false
+				}}
+			</select>
+		</div>
+		<div class="npc-dark-adapted">
+			<label>{{localize 'SHADOWDARK.sheet.npc.dark-adapted'}}</label>
+			<div style="text-align:center;">
+				<input type="checkbox" name="system.darkAdapted" {{checked system.darkAdapted}}>
+			</div>
+		</div>
+	</div>
+</div>

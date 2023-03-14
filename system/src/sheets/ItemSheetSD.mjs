@@ -52,37 +52,17 @@ export default class ItemSheetSD extends ItemSheet {
 		const source = item.toObject();
 
 		foundry.utils.mergeObject(context, {
-			armorBonusAttributes: CONFIG.SHADOWDARK.ARMOR_BONUS_ATTRIBUTES,
-			armorProperties: CONFIG.SHADOWDARK.ARMOR_PROPERTIES,
+			config: CONFIG.SHADOWDARK,
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
 			properties: [],
 			propertiesDisplay: "",
-			ranges: CONFIG.SHADOWDARK.RANGES,
 			source: source.system,
-
 			system: item.system,
 			usesSlots: item.system.slots !== undefined,
-			weaponBaseDamageDice: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE,
-			weaponProperties: CONFIG.SHADOWDARK.WEAPON_PROPERTIES,
-			weaponTypes: CONFIG.SHADOWDARK.WEAPON_TYPES,
 		});
 
 		context.propertiesDisplay = item.propertiesDisplay();
-
-		// if (item.type === "Armor" || item.type === "Weapon") {
-		// 	for (const key of this.item.system.properties) {
-		// 		if (item.type === "Armor") {
-		// 			context.properties.push(context.armorProperties[key]);
-		// 		}
-		// 		else if (item.type === "Weapon") {
-		// 			context.properties.push(context.weaponProperties[key]);
-		// 		}
-		// 	}
-
-		// 	context.propertiesDisplay = context.properties.join(", ");
-		// }
-
 		if (item.type === "Talent" || item.type === "Spell") {
 			// Effects
 			context.effects = ActiveEffectSD.prepareActiveEffectCategories(item.effects, item);
@@ -91,14 +71,12 @@ export default class ItemSheetSD extends ItemSheet {
 		if (item.type === "Spell") {
 			context.casterClasses = [];
 
-			context.spellCasterClasses = CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES;
-			context.spellDurations = CONFIG.SHADOWDARK.SPELL_DURATIONS;
-			context.spellRanges = CONFIG.SHADOWDARK.SPELL_RANGES;
-
 			context.showRoundValue = item.system.duration.type === "rounds";
 
 			for (const key of this.item.system.class) {
-				context.casterClasses.push(context.spellCasterClasses[key]);
+				context.casterClasses.push(
+					CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[key]
+				);
 			}
 
 			context.casterClassesDisplay = context.casterClasses.join(", ");
