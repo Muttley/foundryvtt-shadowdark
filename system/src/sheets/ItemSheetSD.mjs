@@ -155,6 +155,8 @@ export default class ItemSheetSD extends ItemSheet {
 		if (this.item.type === "Talent") {
 			ActiveEffectSD.onChangeActiveEffect(event, this.item);
 		}
+
+		super._updateObject(event, formData);
 	}
 
 
