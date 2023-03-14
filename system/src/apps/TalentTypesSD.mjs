@@ -145,8 +145,5 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 		}
 
 		this.object.sheet.render(true);
-
-		console.log(`new: ${newEffects}`);
-		console.log(`flip: ${flipEffects}`);
 	}
 }
