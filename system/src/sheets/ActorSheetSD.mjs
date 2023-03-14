@@ -19,7 +19,7 @@ export default class ActorSheetSD extends ActorSheet {
 		);
 
 		// Create context menu for items on both sheets
-		this._contextMenu(html);
+		this._itemContextMenu(html);
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
@@ -67,10 +67,6 @@ export default class ActorSheetSD extends ActorSheet {
 		return context;
 	}
 
-	_contextMenu(html) {
-		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
-	}
-
 	_getItemContextOptions() {
 		const canEdit = function(element) {
 			let result = false;
@@ -99,6 +95,10 @@ export default class ActorSheetSD extends ActorSheet {
 				},
 			},
 		];
+	}
+
+	_itemContextMenu(html) {
+		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
 	}
 
 	_onItemDelete(itemId) {

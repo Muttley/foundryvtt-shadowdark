@@ -19,7 +19,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				{
 					navSelector: ".player-navigation",
 					contentSelector: ".player-body",
-					initial: "pc-tab-abilities",
+					initial: "tab-abilities",
 				},
 			],
 		});

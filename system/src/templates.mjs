@@ -1,8 +1,11 @@
 export default function() {
 	const partials = [
 		"systems/shadowdark/templates/actors/npc/abilities.hbs",
-		"systems/shadowdark/templates/actors/npc/ac.hbs",
-		"systems/shadowdark/templates/actors/npc/hp.hbs",
+		"systems/shadowdark/templates/actors/npc/abilities/attacks.hbs",
+		"systems/shadowdark/templates/actors/npc/description.hbs",
+		"systems/shadowdark/templates/actors/npc/partials/ability-scores.hbs",
+		"systems/shadowdark/templates/actors/npc/partials/ac.hbs",
+		"systems/shadowdark/templates/actors/npc/partials/hp.hbs",
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/attacks.hbs",
@@ -18,6 +21,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/description.hbs",
 		"systems/shadowdark/templates/items/partials/equipped.hbs",
+		"systems/shadowdark/templates/items/partials/npc-attack.hbs",
 		"systems/shadowdark/templates/items/partials/slots.hbs",
 		"systems/shadowdark/templates/items/partials/spell.hbs",
 		"systems/shadowdark/templates/items/partials/talent.hbs",
@@ -28,7 +32,7 @@ export default function() {
 
 	const paths = {};
 	for (const path of partials) {
-		const key = path.split("/").slice(3).join("/");
+		const [key] = path.split("/").slice(3).join("/").split(".");
 		paths[key] = path;
 	}
 

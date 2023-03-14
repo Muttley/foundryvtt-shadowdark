@@ -31,6 +31,10 @@
 			{{> items/partials/weapon }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "NPC Attack"}}
+			{{> items/partials/npc-attack }}
+		{{/ifEq}}
+
 		{{> items/partials/description }}
 
 		<div>

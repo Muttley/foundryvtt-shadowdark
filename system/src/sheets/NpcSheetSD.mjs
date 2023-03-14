@@ -6,9 +6,16 @@ export default class NpcSheetSD extends ActorSheetSD {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "npc"],
-			width: 560,
-			height: 560,
+			width: 600,
+			height: 630,
 			resizable: true,
+			tabs: [
+				{
+					navSelector: ".npc-navigation",
+					contentSelector: ".npc-body-content",
+					initial: "tab-details",
+				},
+			],
 		});
 	}
 
@@ -26,6 +33,8 @@ export default class NpcSheetSD extends ActorSheetSD {
 	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
+
+		context.attacks = [];
 
 		return context;
 	}

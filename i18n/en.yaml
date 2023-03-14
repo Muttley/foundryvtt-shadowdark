@@ -10,6 +10,12 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Strength
 SHADOWDARK.ability_wis: Wis
 SHADOWDARK.ability_wisdom: Wisdom
+SHADOWDARK.alignment.chaotic_short: C
+SHADOWDARK.alignment.chaotic: Chaotic
+SHADOWDARK.alignment.lawful_short: L
+SHADOWDARK.alignment.lawful: Lawful
+SHADOWDARK.alignment.neutral_short: 'N'
+SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
@@ -27,6 +33,10 @@ SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.chat.item_roll.title: 'Attack roll with {name}'
 SHADOWDARK.chat.spell_roll.title: 'Casting {name} at tier {tier} with spell DC {spellDC}'
+SHADOWDARK.class.fighter: Fighter
+SHADOWDARK.class.priest: Priest
+SHADOWDARK.class.thief: Thief
+SHADOWDARK.class.wizard: Wizard
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
@@ -42,17 +52,17 @@ SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.yes: 'Yes'
+SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
+SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
+SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
+SHADOWDARK.dialog.item_roll.title: Roll Attack with
 SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
 SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
-SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
-SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
-SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
-SHADOWDARK.dialog.item_roll.title: Roll Attack with
-SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.roll_mode_label: Select rolling mode
+SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.spell_roll.title: Roll Spell with
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.label.quantity: Qty
@@ -122,30 +132,37 @@ SHADOWDARK.range.near_short: 'N'
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
-SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.advantage_title: '{title} with Advantage'
+SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: 'Critical Failure! ({value})'
 SHADOWDARK.roll.critical.success: 'Critical Success! ({value})'
 SHADOWDARK.roll.damage: 'Damage Roll:'
-SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
+SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: 'Failure! ({value})'
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: 'Success! ({value})'
+SHADOWDARK.sheet.actor.ac: AC
+SHADOWDARK.sheet.actor.alignment_short: Align
+SHADOWDARK.sheet.actor.alignment: Alignment
+SHADOWDARK.sheet.actor.hp_max: Max
+SHADOWDARK.sheet.actor.hp: HP
+SHADOWDARK.sheet.actor.level: Level
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
-SHADOWDARK.sheet.player.alignment: Alignment
+SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
+SHADOWDARK.sheet.npc.dark-adapted: Dark-Adapted
+SHADOWDARK.sheet.npc.movement_short: Move
+SHADOWDARK.sheet.npc.movement: Movement
 SHADOWDARK.sheet.player.ancestry: Ancestry
 SHADOWDARK.sheet.player.background: Background
 SHADOWDARK.sheet.player.class: Class
 SHADOWDARK.sheet.player.deity: Deity
-SHADOWDARK.sheet.player.hp_max: Max
 SHADOWDARK.sheet.player.languages: Languages
-SHADOWDARK.sheet.player.level: Level
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
 SHADOWDARK.sheet.player.notes: Character Notes
@@ -179,3 +196,8 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
+SHADOWDARK.sheet.npc.attacks_label: Attacks
+SHADOWDARK.sheet.npc.description_label: Description
+SHADOWDARK.sheet.npc.tab.abilities: Abilities
+SHADOWDARK.sheet.npc.tab.description: Description

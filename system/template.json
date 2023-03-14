@@ -13,6 +13,9 @@
 						"value": 0
 					}
 				},
+				"level": {
+					"value": 1
+				},
 				"notes": ""
 			}
 		},
@@ -45,7 +48,9 @@
 				"ac": {
 					"value": 10
 				}
-			}
+			},
+			"darkAdapted": true,
+			"move": ""
 		},
 		"Player": {
 			"templates": ["shared_details"],
@@ -86,7 +91,6 @@
 			"deity": "",
 			"languages": [],
 			"level": {
-				"value": 1,
 				"xp": 0
 			},
 			"luck": false,
@@ -99,11 +103,23 @@
 			"Armor",
 			"Basic",
 			"Gem",
+			"NPC Attack",
 			"Spell",
 			"Talent",
 			"Weapon"
 		],
 		"templates": {
+			"attacks": {
+				"attackBonus": 0,
+				"damage": {
+					"bonus": 0,
+					"oneHanded": "",
+					"twoHanded": "",
+					"numDice": 1
+				},
+				"range": "close",
+				"type": "melee"
+			},
 			"common": {
 				"description": "",
 				"properties": []
@@ -149,6 +165,12 @@
 				"physical"
 			]
 		},
+		"NPC Attack": {
+			"templates": [
+				"attacks",
+				"common"
+			]
+		},
 		"Spell": {
 			"templates": ["common"],
 			"class": [],
@@ -166,19 +188,11 @@
 		},
 		"Weapon": {
 			"templates": [
+				"attacks",
 				"physical",
 				"common"
 			],
-			"attackBonus": 0,
 			"canBeEquipped": true,
-			"damage": {
-				"bonus": 0,
-				"oneHanded": "",
-				"twoHanded": "",
-				"numDice": 1
-			},
-			"range": "close",
-			"type": "melee",
 			"weaponMastery": false
 		}
 	}
