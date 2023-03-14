@@ -3,6 +3,34 @@
 export default class ActiveEffectSD extends ActiveEffect {
 
 	/**
+	 * 
+	 * @param {Event} event 					- The event that triggers the change
+	 * @param {ActorSD|ItemSD} owner 	-	Owning document from which the change was triggered
+	 */
+	static onChangeActiveEffect(event, owner) {
+		event.preventDefault();
+
+		if (!event.currentTarget) return;
+		if (event.target.className !== "talent-option-data") return;
+
+		// Get the target
+		const target = $(event.currentTarget);
+		const li = target.closest("li");
+		const targetEffect = li[0].dataset.effectId
+			? owner.effects.get(li[0].dataset.effectId) : null;
+
+		// Get Effect Attribute Key & new value
+		const attributeKey = target.attr("name");
+		const newValue = event.currentTarget.value;
+
+		const updates = targetEffect.changes.map(c =>
+			c.key === attributeKey ? {...c, value: newValue } : c);
+
+		// Update the effect
+		return targetEffect.update({ changes: updates });
+	}
+
+	/**
    *
    * @param {MouseEvent} event      - The left-click event on the effect control
    * @param {ActorSD|ItemSD} owner  - The owning document which manages this effect
@@ -14,6 +42,8 @@ export default class ActiveEffectSD extends ActiveEffect {
 		const li = a.closest("li");
 		const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
 		switch ( a.dataset.action ) {
+			case "activate":
+				return effect.update({disabled: !effect.disabled});
 			case "create":
 				return owner.createEmbeddedDocuments("ActiveEffect", [{
 					label: game.i18n.localize("SHADOWDARK.effect.new"),
@@ -69,6 +99,12 @@ export default class ActiveEffectSD extends ActiveEffect {
 				effects: [],
 				hidden: true,
 			},
+			custom: {
+				type: "custom",
+				label: game.i18n.localize("SHADOWDARK.effect.custom"),
+				effects: [],
+				hidden: true,
+			},
 		};
 
 		let category;
@@ -85,7 +121,12 @@ export default class ActiveEffectSD extends ActiveEffect {
 
 		for ( let e of effects ) {
 			e._getSourceName();
-			if ( e.disabled ) categories.suppressed.effects.push(e);
+			// Push custom talent effects to category, always
+			if (
+				owner.isTalent()
+				&& !Object.keys(CONFIG.SHADOWDARK.TALENT_TYPES).includes(e.label)
+			) categories.talent.effects.push(e);
+			else if ( e.disabled ) categories.suppressed.effects.push(e);
 			else category.effects.push(e);
 		}
 

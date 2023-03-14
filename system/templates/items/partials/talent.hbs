@@ -1,9 +1,14 @@
-<div>
-	<label>{{localize 'SHADOWDARK.item.level'}}</label>
-	{{numberInput
-		item.system.level
-		name="system.level"
-		placeholder="0"
-	}}
-	<p class="item-property-list talent-type">{{propertiesDisplay}}</p>
+<div class="talent-properties">
+	<div class="talent-property">
+		<label>{{localize 'SHADOWDARK.item.level'}}</label>
+		{{numberInput
+			item.system.level
+			name="system.level"
+			placeholder="0"
+		}}
+	</div>
+	<div class="talent-property">
+		<label>{{localize "SHADOWDARK.talent.type.title"}}</label>
+		<p class="item-property-list talent-type">{{propertiesDisplay}}</p>
+	</div>
 </div>
