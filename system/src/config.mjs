@@ -109,6 +109,7 @@ SHADOWDARK.TALENT_TYPES = {
 	spellAdvantage: "SHADOWDARK.talent.type.spell_advantage",
 	weaponMastery: "SHADOWDARK.talent.type.weapon_mastery",
 	backstabDie: "SHADOWDARK.talent.type.backstab_die",
+	custom: "SHADOWDARK.talent.type.custom",
 };
 
 SHADOWDARK.TALENT_PROPERTIES = {
