@@ -34,6 +34,11 @@
 		{{#ifEq item.type "NPC Attack"}}
 			{{> items/partials/npc-attack }}
 		{{/ifEq}}
+		
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/talent.hbs }}
+			{{> items/partials/talent-active-effects.hbs }}
+		{{/ifEq}}
 
 		{{> items/partials/description }}
 
