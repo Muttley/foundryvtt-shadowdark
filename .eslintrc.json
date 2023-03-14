@@ -139,7 +139,7 @@
 		"no-multi-spaces": "off",
 		"no-tabs": "off",
 		"no-throw-literal": "error",
-		"no-trailing-spaces": "warn",
+		"no-trailing-spaces": "error",
 		"no-useless-escape": "warn",
 		"no-unused-vars": ["warn", {"args": "none"}],
 		"nonblock-statement-body-position": ["warn", "beside"],
