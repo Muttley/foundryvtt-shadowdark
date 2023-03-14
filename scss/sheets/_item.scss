@@ -87,6 +87,30 @@
 		grid-template-columns: 1fr 10fr;
 	}
 
+	.talent-property {
+		label {
+			@include p-reset;
+			padding-left: 4px;
+			padding-right: 4px;
+	
+			display: block;
+	
+			font-family: "Old Newspaper Font";
+			font-size: 22px;
+			font-weight: bold;
+	
+			line-height: 1.1;
+	
+			border: none;
+			background-color: var(--form-background);
+		}
+	
+		p {
+			background-color: var(--form-background);
+			height: 26px;
+		}
+	}
+	
 	.talent-details {
 		@include p-reset;
 		grid-column: span 2;
