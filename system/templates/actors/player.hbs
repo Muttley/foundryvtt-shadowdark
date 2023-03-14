@@ -18,7 +18,7 @@
 					name="name"
 					type="text"
 					value="{{ actor.name }}"
-					placeholder="{{localize 'SHADOWDARK.sheet.actor.name'}}"
+					placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
 				/>
 			</h1>
 		</header>
@@ -51,10 +51,10 @@
 	</div>
 	<hr	/>
 	<section class="player-body">
-		{{> actors/player/abilities.hbs }}
-		{{> actors/player/spells.hbs }}
-		{{> actors/player/talents.hbs }}
-		{{> actors/player/inventory.hbs }}
-		{{> actors/player/background.hbs }}
+		{{> actors/player/abilities }}
+		{{> actors/player/spells }}
+		{{> actors/player/talents }}
+		{{> actors/player/inventory }}
+		{{> actors/player/background }}
 	</section>
 </form>

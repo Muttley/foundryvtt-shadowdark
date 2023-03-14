@@ -13,15 +13,12 @@
 				</div>
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
-					<input
-						name="system.class"
-						type="text"
-						class="detail-value"
-						value="{{ system.class }}"
-					/>
+					<select name="system.class">
+						{{selectOptions config.CLASSES selected=system.class localize=false}}
+					</select>
 				</div>
 				<div class="level-xp">
-					<label>{{localize 'SHADOWDARK.sheet.player.level'}}</label>
+					<label>{{localize 'SHADOWDARK.sheet.actor.level'}}</label>
 					{{numberInput
 						system.level.value
 						name="system.level.value"
@@ -51,13 +48,10 @@
 					/>
 				</div>
 				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.alignment'}}</label>
-					<input
-						name="system.alignment"
-						type="text"
-						class="detail-value"
-						value="{{ system.alignment }}"
-					/>
+					<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+					<select name="system.alignment">
+						{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
+					</select>
 				</div>
 			</div>
 			<div class="grid-2-columns">

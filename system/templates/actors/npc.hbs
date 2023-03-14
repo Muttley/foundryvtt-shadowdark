@@ -12,19 +12,57 @@
 			<div class="title">
 				<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
 			</div>
-			<h1>
-				<input
-					class="npc-name"
-					name="name"
-					type="text"
-					value="{{ actor.name }}"
-					placeholder="{{localize 'SHADOWDARK.sheet.actor.name'}}"
-				/>
-			</h1>
+			<div class="npc-name-and-level">
+				<h1>
+					<input
+						class="npc-name"
+						name="name"
+						type="text"
+						value="{{ actor.name }}"
+						placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
+					/>
+				</h1>
+				<div class="value-box">
+					<label class="npc-level">Level</label>
+					<div>
+						<div class="level-value">
+							{{numberInput
+								actor.system.level.value
+								name="system.level.value"
+								class="level-value"
+								placeholder="0"
+								step="1"
+							}}
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 	</div>
 	<hr	/>
 	<section class="npc-body">
-		{{> actors/npc/abilities.hbs }}
+		{{> actors/npc/partials/ability-scores }}
+
+		<div class="npc-body-grid">
+			<nav class="npc-navigation" data-group="primary">
+				<div class="npc-navigation__flex">
+
+					<a class="item active" data-tab="tab-abilities">
+						{{localize "SHADOWDARK.sheet.npc.tab.abilities"}}
+					</a>
+
+					<a class="item" data-tab="tab-description">
+						{{localize "SHADOWDARK.sheet.npc.tab.description"}}
+					</a>
+
+				</div>
+			</nav>
+
+			<div class="npc-body-content">
+				{{> actors/npc/abilities }}
+				{{> actors/npc/description }}
+			</div>
+		</div>
+
 	</section>
 </form>
