@@ -163,15 +163,20 @@ SHADOWDARK.sheet.actor.alignment: Alignment
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: HP
 SHADOWDARK.sheet.actor.level: Level
+SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
+SHADOWDARK.sheet.npc.attacks_label: Attacks
 SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
 SHADOWDARK.sheet.npc.dark-adapted: Dark-Adapted
+SHADOWDARK.sheet.npc.description_label: Description
 SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
+SHADOWDARK.sheet.npc.tab.abilities: Abilities
+SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.player.ancestry: Ancestry
 SHADOWDARK.sheet.player.background: Background
 SHADOWDARK.sheet.player.class: Class
@@ -220,8 +225,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
-SHADOWDARK.sheet.npc.attacks_label: Attacks
-SHADOWDARK.sheet.npc.description_label: Description
-SHADOWDARK.sheet.npc.tab.abilities: Abilities
-SHADOWDARK.sheet.npc.tab.description: Description
