@@ -27,6 +27,7 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			case "spellAdvantage": return "icons/magic/air/air-smoke-casting.webp";
 			case "weaponMastery": return "icons/skills/melee/weapons-crossed-swords-white-blue.webp";
 			case "backstabDie": return "icons/skills/melee/strike-dagger-white-orange.webp";
+			case "custom": return "icons/svg/upgrade.svg";
 		}
 	}
 
@@ -103,6 +104,14 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 				changes.push({
 					key: "system.talent.backstabDie",
 					value: 1,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				});
+				break;
+			}
+			case "custom": {
+				changes.push({
+					key: "",
+					value: "",
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
