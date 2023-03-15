@@ -424,7 +424,45 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_roll()", () => {});
 
 	// @todo: Refactor, dice rolling to another module?
-	describe("_rollWeapon()", () => {});
+	describe("_rollWeapon()", () => {
+		const data = {};
+		before(async () => {
+			data.item = await createMockItemByKey(key, "Weapon");
+			await data.item.update({
+				"system.properties": ["versatile"],
+				"system.damage": { oneHanded: "d8", twoHanded: "d10", numDice: 1},
+			});
+		});
+
+		after(() => {
+			cleanUpItemsByKey(key);
+		});
+
+		it("normal attack rolls the dice", async () => {
+			data.result = {	critical: null};
+			const rolls = await D20RollSD._rollWeapon(data);
+			expect(rolls.rollPrimaryDamage.terms[0].faces).equal(8);
+			expect(rolls.rollPrimaryDamage.terms[0].number).equal(1);
+			expect(rolls.rollSecondaryDamage.terms[0].faces).equal(10);
+			expect(rolls.rollSecondaryDamage.terms[0].number).equal(1);
+		});
+
+		it("critical success doubles the dice", async () => {
+			data.result = {	critical: "success"	};
+			const rolls = await D20RollSD._rollWeapon(data);
+			expect(rolls.rollPrimaryDamage.terms[0].faces).equal(8);
+			expect(rolls.rollPrimaryDamage.terms[0].number).equal(2);
+			expect(rolls.rollSecondaryDamage.terms[0].faces).equal(10);
+			expect(rolls.rollSecondaryDamage.terms[0].number).equal(2);
+		});
+
+		it("critical failure rolls no dice", async () => {
+			data.result = {	critical: "failure"	};
+			const rolls = await D20RollSD._rollWeapon(data);
+			expect(Object.entries(rolls.rollPrimaryDamage).length).equal(0);
+			expect(Object.entries(rolls.rollSecondaryDamage).length).equal(0);
+		});
+	});
 
 	/* -------------------------------------------- */
 	/*  Integrations                                */
