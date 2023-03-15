@@ -109,9 +109,10 @@ export default class D20RollSD extends Roll {
 	 * @param {string} title 		- Headline of chatcard
 	 * @param {string} flavor 	- Flavor text to put under the actor name in chat card
 	 * @param {object} data 		- Optional data containing .item and .actor
+	 * @param {object} rolls		- Object containing the rolls that have been made
 	 * @returns {object}				- data to populate the Chat Card template
 	 */
-	static _getChatCardTemplateData(title, flavor, data, result) {
+	static _getChatCardTemplateData(title, flavor, data, rolls) {
 		const templateData = {
 			title: title,
 			flavor: flavor,
@@ -119,8 +120,8 @@ export default class D20RollSD extends Roll {
 			isSpell: false,
 			isWeapon: false,
 			isVersatile: false,
-			result: result,
-			rolls: {},
+			critical: data.result.critical,
+			rolls,
 		};
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
@@ -186,10 +187,9 @@ export default class D20RollSD extends Roll {
 			chatMessage,
 		}) {
 
-		const rolls = {
-			rollD20Result: {},
-			rollPrimaryDamage: {},
-			rollSecondaryDamage: {},
+		data.rolls = {
+			rollD20: {},
+			rollD20Result: "",
 		};
 
 		// @todo: use this to correctly show the message in chat
@@ -210,20 +210,17 @@ export default class D20RollSD extends Roll {
 		rollParts = this._checkBonusesFromForm(rollParts, data, $form);
 
 		// Evaluate the roll
-		rolls.rollD20Result = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
+		data.rolls.rollD20 = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
 
-		// Process the roll results into HTML for Chat displaying
-		data.result = this._digestResult(rolls.rollD20Result);
+		// Digest the D20 roll
+		data.result = this._digestResult(data.rolls.rollD20);
 
-		const chatData = this._getChatCardData(
-			rolls.rollD20Result,
-			options.speaker,
-			options.targetValue
-		);
-
-		// @todo: Check the chatData instead?
-		// Set the target if specified
-		data.target = options.targetValue || "";
+		// @todo: This needs a better structure
+		// Roll weapon damage
+		if ( data.item?.isWeapon() ) {
+			const weaponRolls = await this._rollWeapon(data);
+			data.rolls = foundry.utils.mergeObject(data.rolls, weaponRolls);
+		}
 
 		// @todo: Tighten this up and move to after the rolls are created
 		// Build templateData
@@ -231,33 +228,29 @@ export default class D20RollSD extends Roll {
 			options.title,
 			options.flavor,
 			data,
-			data.result
+			data.rolls
 		);
 
-		// @todo: This needs a better structure
-		// Roll weapon damage
-		if ( data.item?.isWeapon() ) {
-			const damageRolls = await this._rollWeapon(data);
-			rolls.rollPrimaryDamage = damageRolls.rollPrimaryDamage;
-			rolls.rollSecondaryDamage = damageRolls.rollSecondaryDamage;
-			templateData.rolls.primaryDamage = damageRolls.primaryDamage;
-			templateData.rolls.secondaryDamage = damageRolls.secondaryDamage;
-		}
+		const chatData = this._getChatCardData(
+			data.rolls.rollD20,
+			options.speaker,
+			options.targetValue
+		);
 
 		// Render the roll to chat if not chatMessage is false.
 		return new Promise(resolve => {
-			rolls.rollD20Result.render().then(r => {
+			data.rolls.rollD20.render().then(r => {
 				templateData.rolls.rollD20Result = r;
 				renderTemplate(options.chatCardTemplate, templateData).then(content => {
 					chatData.content = content;
 					// Integration with Dice So Nice
 					if (game.dice3d) {
-						resolve(this._rollDiceSoNice(rolls, chatData, options.chatMessage));
+						resolve(this._rollDiceSoNice(data.rolls, chatData, options.chatMessage));
 					}
 					else {
 						chatData.sound = CONFIG.sounds.dice;
 						if (options.chatMessage !== false) ChatMessage.create(chatData);
-						resolve(rolls.rollD20Result);
+						resolve(data.rolls.rollD20Result);
 					}
 				});
 			});
@@ -265,7 +258,11 @@ export default class D20RollSD extends Roll {
 	}
 
 	// @todo: Cleanup
-	// @todo: Docs
+	/**
+	 * Rolls a weapon and it's associated damage dice
+	 * @param {object} data 	- Data with the item to be rolled
+	 * @returns {object} 			- Object with HTML results from rolls as values
+	 */
 	static async _rollWeapon(data) {
 		const damageRolls = {
 			rollPrimaryDamage: {},
@@ -320,12 +317,12 @@ export default class D20RollSD extends Roll {
 	static async _rollDiceSoNice(rolls, chatData, chatMessage) {
 		game.dice3d
 			.showForRoll(
-				rolls.rollD20Result,
+				rolls.rollD20,
 				game.user,
 				true
 			)
 			.then(() => {
-				if ( Object.keys(rolls.rollPrimaryDamage).length > 0 ) {
+				if ( rolls.rollPrimaryDamage ) {
 					game.dice3d
 						.showForRoll(
 							rolls.rollPrimaryDamage,
@@ -333,7 +330,7 @@ export default class D20RollSD extends Roll {
 							true
 						);
 				}
-				if ( Object.keys(rolls.rollSecondaryDamage).length > 0 ) {
+				if ( rolls.rollSecondaryDamage ) {
 					game.dice3d
 						.showForRoll(
 							rolls.rollSecondaryDamage,
@@ -364,7 +361,6 @@ export default class D20RollSD extends Roll {
 		chatCardTemplate,
 		title,
 		speaker,
-		flavor,
 		onClose,
 		dialogOptions,
 		targetValue,

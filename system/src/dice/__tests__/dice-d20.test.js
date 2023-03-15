@@ -278,9 +278,16 @@ export default ({ describe, it, after, before, expect }) => {
 			data.actor = await createMockActorByKey(key, "Player");
 			const title = "test title";
 			const flavor = "test flavor";
-			const roll = mockRollResult(20, 15);
-			const results = D20RollSD._digestResult(roll);
-			templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, results);
+			const rolls = {
+				rollD20: mockRollResult(20, 15),
+				rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+				rollPrimaryDamage: mockRollResult(8, 4),
+				primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
+				rollSecondaryDamage: mockRollResult(10, 7),
+				secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
+			};
+			data.result = D20RollSD._digestResult(rolls.rollD20);
+			templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
 		});
 
 		after(() => {
@@ -331,9 +338,16 @@ export default ({ describe, it, after, before, expect }) => {
 				await waitForInput();
 				const title = "test title";
 				const flavor = "test flavor";
-				const roll = mockRollResult(20, 15);
-				const results = D20RollSD._digestResult(roll);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, results);
+				const rolls = {
+					rollD20: mockRollResult(20, 15),
+					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+					rollPrimaryDamage: mockRollResult(8, 4),
+					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
+					rollSecondaryDamage: mockRollResult(10, 7),
+					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
+				};
+				data.result = D20RollSD._digestResult(rolls.rollD20);
+				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
 				expect(templateData.isSpell).is.false;
 				expect(templateData.isWeapon).is.true;
 				expect(templateData.isVersatile).is.true;
@@ -343,20 +357,35 @@ export default ({ describe, it, after, before, expect }) => {
 			it("critical", async () => {
 				const title = "test title";
 				const flavor = "test flavor";
-				const roll = mockRollResult(20, 20);
-				const results = D20RollSD._digestResult(roll);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, results);
-				expect(templateData.result).is.not.undefined;
-				expect(templateData.result.critical).is.not.undefined;
+				const rolls = {
+					rollD20: mockRollResult(20, 20),
+					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 20)),
+					rollPrimaryDamage: mockRollResult(8, 4),
+					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
+					rollSecondaryDamage: mockRollResult(10, 7),
+					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
+				};
+				data.result = D20RollSD._digestResult(rolls.rollD20);
+				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
+				expect(templateData.rolls.rollD20Result).is.not.undefined;
+				expect(templateData.critical).is.not.undefined;
+				expect(templateData.critical).equal("success");
 			});
 
 			it("spells", async () => {
 				data.item = await createMockItemByKey(key, "Spell");
 				const title = "test title";
 				const flavor = "test flavor";
-				const roll = mockRollResult(20, 15);
-				const results = D20RollSD._digestResult(roll);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, results);
+				const rolls = {
+					rollD20: mockRollResult(20, 15),
+					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+					rollPrimaryDamage: mockRollResult(8, 4),
+					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
+					rollSecondaryDamage: mockRollResult(10, 7),
+					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
+				};
+				data.result = D20RollSD._digestResult(rolls.rollD20);
+				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
 				expect(templateData.isSpell).is.true;
 				expect(templateData.isWeapon).is.false;
 				expect(templateData.isVersatile).is.false;
@@ -395,7 +424,7 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_roll()", () => {});
 
 	// @todo: Refactor, dice rolling to another module?
-	describe("_rollWeapon()");
+	describe("_rollWeapon()", () => {});
 
 	/* -------------------------------------------- */
 	/*  Integrations                                */
