@@ -109,17 +109,6 @@
 			"Weapon"
 		],
 		"templates": {
-			"attacks": {
-				"attackBonus": 0,
-				"damage": {
-					"bonus": 0,
-					"oneHanded": "",
-					"twoHanded": "",
-					"numDice": 1
-				},
-				"range": "close",
-				"type": "melee"
-			},
 			"common": {
 				"description": "",
 				"properties": []
@@ -167,9 +156,20 @@
 		},
 		"NPC Attack": {
 			"templates": [
-				"attacks",
 				"common"
-			]
+			],
+			"damage": {
+				"bonus": 0,
+				"numDice": 1,
+				"value": "d4"
+
+			},
+			"numAttacks": 1,
+			"type": "physical",
+			"range": "close"
+		},
+		"NPC Talent": {
+			"templates": ["common"]
 		},
 		"Spell": {
 			"templates": ["common"],
@@ -188,11 +188,19 @@
 		},
 		"Weapon": {
 			"templates": [
-				"attacks",
 				"physical",
 				"common"
 			],
+			"attackBonus": 0,
 			"canBeEquipped": true,
+			"damage": {
+				"bonus": 0,
+				"oneHanded": "",
+				"twoHanded": "",
+				"numDice": 1
+			},
+			"range": "close",
+			"type": "melee",
 			"weaponMastery": false
 		}
 	}
