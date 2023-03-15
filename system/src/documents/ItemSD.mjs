@@ -83,7 +83,7 @@ export default class ItemSD extends Item {
 			speaker,
 			dialogTemplate: "systems/shadowdark/templates/dialog/roll-item-dialog.hbs",
 			chatCardTemplate: "systems/shadowdark/templates/chat/item-card.hbs",
-			fastForward: options.fastForward ?? false,
+			options,
 		});
 	}
 
@@ -102,7 +102,7 @@ export default class ItemSD extends Item {
 			targetValue: spellDC,
 			dialogTemplate: "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs",
 			chatCardTemplate: "systems/shadowdark/templates/chat/item-card.hbs",
-			fastForward: options.fastForward ?? false,
+			options,
 		});
 	}
 
@@ -125,12 +125,12 @@ export default class ItemSD extends Item {
 		return this.type === "Talent";
 	}
 
-	isMagicItem() {
-		return this.hasProperty("magic");
-	}
-
 	isWeapon() {
 		return this.type === "Weapon";
+	}
+
+	isMagicItem() {
+		return this.hasProperty("magic");
 	}
 
 	isVersatile() {

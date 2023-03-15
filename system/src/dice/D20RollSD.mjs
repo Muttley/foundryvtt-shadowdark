@@ -1,21 +1,14 @@
 export default class D20RollSD extends Roll {
-
-	constructor(formula, data, options) {
-		super(formula, data, options);
-
-		if (!this.options.configured) this.configureModifiers();
-	}
-
-	configureModifiers() {
-		this.options.configured = true;
-	}
+	/* -------------------------------------------- */
+	/*  Roll Analysis                               */
+	/* -------------------------------------------- */
 
 	/**
 	 * Analyze a roll result for critical hit
 	 * @param {Roll} roll - Roll results
 	 * @returns {string|null} - Either the type of critical as string, or null
 	 */
-	static digestCritical(roll) {
+	static _digestCritical(roll) {
 		if ( roll.terms[0].faces !== 20 ) return null;
 		// Get the final result if using adv/disadv
 		else if ( roll.terms[0].total === 20 ) return "success";
@@ -26,20 +19,234 @@ export default class D20RollSD extends Roll {
 	/**
 	 * Parses an evaluated roll
 	 * @param {object} data - Data supplied to the roll
-	 * @param {roll} roll - Evaluated Roll
-	 * @returns {object}
+	 * @param {roll} roll 	- Evaluated Roll
+	 * @returns {object}		- Data object augmented with roll digest
 	 */
-	static digestResult(data, roll) {
+	static _digestResult(data, roll) {
 		const result = {
-			critical: this.digestCritical(roll),
+			critical: this._digestCritical(roll),
 			total: roll.total,
 		};
 
 		return result;
 	}
 
+	/* -------------------------------------------- */
+	/*  Getters from parents                        */
+	/* -------------------------------------------- */
+
+	static _getTalentAdvantage(actor) {
+		// Check if the actor has talents
+		// Check if talents are advantage types
+		// If current context, item or whatever, fulfills the conditions, return
+		//    that the user should have advantage.
+		// This should be implemented as coloring the Dialog button?
+	}
+
+	/* -------------------------------------------- */
+	/*  Form & Dialog Digestion                     */
+	/* -------------------------------------------- */
+
+	/**
+	 * Extract the roll mode from a form
+	 * @param {jQuery} $form 	- Callback HTML from dialog
+	 * @return {string}				- Selected Rollmode
+	 */
+	static _getRollModeFromForm($form) {
+		return $form.find("[name=rollMode]").val();
+	}
+
+	/**
+	 * Checks the forms and removes @bonus fields from the parts if not present
+	 * or 0.
+	 * @param {Array<string>} rollParts	- Roll parts to be modified
+	 * @param {object} data 						- Data provided to the roll
+	 * @param {jQuery} $form 						- Callback HTML from dialog
+	 * @return {Array<string>}					- Modified rollParts
+	 */
+	static _checkBonusesFromForm(rollParts, data, $form) {
+		if ($form) data.itemBonus = $form.find("[name=item-bonus]").val();
+		if ((!data.itemBonus || data.itemBonus === 0) && rollParts.indexOf("@itemBonus") !== -1) rollParts.splice(rollParts.indexOf("@itemBonus"), 1);
+
+		// Check if abilityBonus is defined
+		if ($form) data.abilityBonus = $form.find("[name=ability-bonus]").val();
+		if ((!data.abilityBonus || data.abilityBonus === 0) && rollParts.indexOf("@abilityBonus") !== -1) rollParts.splice(rollParts.indexOf("@abilityBonus"), 1);
+
+		// Check if talentBonus is defind
+		if ($form) data.talentBonus = $form.find("[name=talent-bonus]").val();
+		if ((!data.talentBonus || data.abilityBonus === 0) && rollParts.indexOf("@talentBonus") !== -1) rollParts.splice(rollParts.indexOf("@talentBonus"), 1);
+
+		return rollParts;
+	}
+
+	/* -------------------------------------------- */
+	/*  Data Generation for Displaying              */
+	/* -------------------------------------------- */
+
+	/**
+	 * Parse roll data and optional target value
+	 * @param {Roll} roll 						- Evaluated roll data
+	 * @param {object} speaker  			- ChatMessage.getSpeaker who will be sending the message
+	 * @param {number|false} target 	- Target value to beat with the roll
+	 * @return {object}								- Data for rendering a chatcard
+	 */
+	static _getChatCardData(roll, speaker, target=false) {
+		const chatData = {
+			user: game.user.id,
+			speaker: speaker,
+			flags: {
+				isRoll: true,
+				"core.canPopout": true,
+				hasTarget: target !== false,
+				critical: this._digestCritical(roll),
+			},
+		};
+		if (target) chatData.flags.success = roll.total >= target;
+		return chatData;
+	}
+
+	/**
+	 * Generate Template Data for displaying custom chat cards
+	 * @param {string} title 		- Headline of chatcard
+	 * @param {string} flavor 	- Flavor text to put under the actor name in chat card
+	 * @param {object} data 		- Optional data containing .item and .actor
+	 * @returns {object}				- data to populate the Chat Card template
+	 */
+	static _getChatCardTemplateData(title, flavor, data, result) {
+		const templateData = {
+			title: title,
+			flavor: flavor,
+			data: data,
+			isSpell: false,
+			isWeapon: false,
+			isVersatile: false,
+			result: result,
+			rolls: {},
+		};
+		if (data.item) {
+			templateData.isSpell = data.item.isSpell();
+			templateData.isWeapon = data.item.isWeapon();
+			templateData.isVersatile = data.item.isVersatile();
+		}
+		return templateData;
+	}
+
+	/**
+	 * Renders HTML for display as roll dialog
+	 * @param {object} data 					- Data for use in the dialog
+	 * @param {string} rollMode 			- Default roll mode
+	 * @param {object} parts 					- Dice formula parts
+	 * @param {string} dialogTemplate - Handlebars Template to construct from
+	 * @returns {HTML}
+	 */
+	static async _getRollDialogContent(data, rollMode, parts, dialogTemplate) {
+		const dialogData = {
+			data,
+			rollMode,
+			formula: parts.join(" + "),
+			rollModes: CONFIG.Dice.rollModes,
+		};
+
+		return renderTemplate(dialogTemplate, dialogData);
+	}
+
+	/* -------------------------------------------- */
+	/*  Dice Rolling                                */
+	/* -------------------------------------------- */
+
+	// @todo: Cleanup
+	static async _rollWeapon(rolls, data) {
+		const damageRolls = {
+			rollPrimaryDamage: {},
+			rollSecondaryDamage: {},
+			primaryDamage: "",
+			secondaryDamage: "",
+		};
+
+		let numDice = data.item.system.damage.numDice;
+		const damageRollParts = data.item.isTwoHanded()
+			? data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
+
+		if ( data.result.critical !== "failure" ) {
+			if ( data.result.critical === "success" ) {
+				numDice *= 2;
+			}
+
+			damageRolls.rollPrimaryDamage = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+
+			// Render HTML for roll
+			await damageRolls.rollPrimaryDamage.render().then(r => {
+				damageRolls.primaryDamage = r;
+			});
+
+			if ( data.item.isVersatile() ) {
+				const secondaryRollParts = data.item.system.damage.twoHanded;
+				damageRolls.rollSecondaryDamage = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+
+				// Render HTML for roll
+				await damageRolls.rollSecondaryDamage.render().then(r => {
+					damageRolls.secondaryDamage = r;
+				});
+			}
+		}
+		return damageRolls;
+	}
+
+	/* -------------------------------------------- */
+	/*  Integrations                                */
+	/* -------------------------------------------- */
+
+	/**
+	 * Renders Dice So Nice in order of D20 -> Damage Rolls and creates
+	 * a chat message with the generated content.
+	 * @param {object} rolls 					- Object containing evaluated rolls
+	 * @param {object} chatData 			- Parsed roll data as generated by _getchatCardData
+	 * 																  augmented with content from
+	 *                                  _getChatCardTemplateData
+	 * @param {boolean} chatMessage 	- Boolean to display chat message or just generate it
+	 * @return {object}								- Returns the D20 result
+	 */
+	static async _rollDiceSoNice(rolls, chatData, chatMessage) {
+		game.dice3d
+			.showForRoll(
+				rolls.rollD20Result,
+				game.user,
+				true
+			)
+			.then(() => {
+				if ( Object.keys(rolls.rollPrimaryDamage).length > 0 ) {
+					game.dice3d
+						.showForRoll(
+							rolls.rollPrimaryDamage,
+							game.user,
+							true
+						);
+				}
+				if ( Object.keys(rolls.rollSecondaryDamage).length > 0 ) {
+					game.dice3d
+						.showForRoll(
+							rolls.rollSecondaryDamage,
+							game.user,
+							true
+						);
+				}
+			})
+			.then(() => {
+				if (chatMessage !== false) ChatMessage.create(chatData);
+				return rolls.rollD20Result;
+			});
+	}
+
+	/* -------------------------------------------- */
+	/*  END Refactored Structure                    */
+	/* -------------------------------------------- */
+
+	/**
+	 *
+	 * @param {object} data - Object containing item, actor
+	 * @returns
+	 */
 	static async d20Roll({
-		item = null,
 		parts,
 		data,
 		dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs",
@@ -51,163 +258,110 @@ export default class D20RollSD extends Roll {
 		dialogOptions,
 		targetValue,
 		rollMode = game.settings.get("core", "rollMode"),
-		rollType = "",
-		fastForward = false,
 		chatMessage = true,
+		options = {
+			fastForward: false,
+		}
 	}) {
 		/**
-		 *
+		 * Rolls after the Roll Dialog has been submitted
 		 * @param {Array<string>} rollParts - Modifiers to be used in roll
-		 * @param {number} adv - Advantage(1)/Disadvantage(-1)
-		 * @param {jQuery} $form - Callback HTML from dialog
-		 * @returns {Promise<>}
+		 * @param {number} adv 							- Advantage(1)/Disadvantage(-1)
+		 * @param {jQuery} $form 						- Callback HTML from dialog
+		 * @returns {Promise<Roll>}					- Roll result
 		 */
 		const _roll = async (rollParts, adv, $form) => {
-			let flav = flavor instanceof Function ? flavor(rollParts, data) : title;
+			const rolls = {
+				rollD20Result: {},
+				rollPrimaryDamage: {},
+				rollSecondaryDamage: {},
+			};
+
+			// @todo: use this to correctly show the message later
+			// Extract the roll mode
+			const rollMode = this._getRollModeFromForm($form);
+
+			// Set the rollParts and flavor if advantage/disadvantage button has been clicked
 			if (adv === 1) {
 				rollParts[0] = ["2d20kh"];
-				flav = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: title });
+				flavor = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: title });
 			}
 			else if (adv === -1) {
 				rollParts[0] = ["2d20kl"];
-				flav = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: title });
+				flavor = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: title });
 			}
 
-			// Check if itemBonus is defined
-			if ($form) data.itemBonus = $form.find("[name=item-bonus]").val();
-			if ((!data.itemBonus || data.itemBonus === 0) && rollParts.indexOf("@itemBonus") !== -1) rollParts.splice(rollParts.indexOf("@itemBonus"), 1);
-
-			// Check if abilityBonus is defined
-			if ($form) data.abilityBonus = $form.find("[name=ability-bonus]").val();
-			if ((!data.abilityBonus || data.abilityBonus === 0) && rollParts.indexOf("@abilityBonus") !== -1) rollParts.splice(rollParts.indexOf("@abilityBonus"), 1);
-
-			// Check if talentBonus is defind
-			if ($form) data.talentBonus = $form.find("[name=talent-bonus]").val();
-			if ((!data.talentBonus || data.abilityBonus === 0) && rollParts.indexOf("@talentBonus") !== -1) rollParts.splice(rollParts.indexOf("@talentBonus"), 1);
+			// Parse $form to remove unecessary @bonus fields
+			rollParts = this._checkBonusesFromForm(rollParts, data, $form);
 
 			// Execute roll and send it to chat
-			const roll = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
+			rolls.rollD20Result = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
 
-			const result = D20RollSD.digestResult(data, roll);
+			data.result = this._digestResult(data, rolls.rollD20Result);
 
-			const chatData = {
-				user: game.user.id,
-				speaker,
-				flags: {
-					isRoll: true,
-					"core.canPopout": true,
-					hasTarget: targetValue ? true : false,
-					success: roll.total >= targetValue,
-					critical: result.critical,
-				},
-			};
+			const chatData = this._getChatCardData(rolls.rollD20Result, speaker, targetValue);
 
+			// @todo: Check the chatData instead?
 			// Set the target if specified
 			data.target = targetValue || "";
 
+			// @todo: Tighten this up
 			// Build templateData
-			const templateData = {
-				title: title,
-				flavor: flav,
-				data: data,
-				isSpell: data.item ? data.item.isSpell() : false,
-				isWeapon: data.item ? data.item.isWeapon() : false,
-				isVersatile: data.item ? data.item.isVersatile() : false,
-				result: result,
-			};
+			const templateData = this._getChatCardTemplateData(title, flavor, data, data.result);
 
+			// @todo: This needs a better structure
 			// Roll weapon damage
-			let twoHandedDamageRoll;
-			let oneHandedDamageRoll;
-			if ( templateData.isWeapon ) {
-				let numDice = data.item.system.damage.numDice;
-				const damageRollParts = data.item.isTwoHanded()
-					? data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
-
-				if ( result.critical !== "failure" ) {
-					if ( result.critical === "success" ) {
-						numDice *= 2;
-					}
-
-					oneHandedDamageRoll = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
-
-					// Render HTML for roll
-					await oneHandedDamageRoll.render().then(r => {
-						templateData.primaryDamage = r;
-					});
-
-					if ( data.item.isVersatile() ) {
-						const secondaryRollParts = data.item.system.damage.twoHanded;
-						twoHandedDamageRoll = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
-
-						// Render HTML for roll
-						await twoHandedDamageRoll.render().then(r => {
-							templateData.secondaryDamage = r;
-						});
-					}
-				}
+			if ( data.item?.isWeapon() ) {
+				const damageRolls = await this._rollWeapon(rolls, data);
+				rolls.rollPrimaryDamage = damageRolls.rollPrimaryDamage;
+				rolls.rollSecondaryDamage = damageRolls.rollSecondaryDamage;
+				templateData.rolls.primaryDamage = damageRolls.primaryDamage;
+				templateData.rolls.secondaryDamage = damageRolls.secondaryDamage;
 			}
 
+			// @todo: _renderRoll()
 			return new Promise(resolve => {
-				roll.render().then(r => {
-					templateData.rollSD = r;
+				rolls.rollD20Result.render().then(r => {
+					templateData.rolls.rollD20Result = r;
 					renderTemplate(chatCardTemplate, templateData).then(content => {
 						chatData.content = content;
 						// Integration with Dice So Nice
 						if (game.dice3d) {
-							game.dice3d
-								.showForRoll(
-									roll,
-									game.user,
-									true
-								)
-								.then(() => {
-									if ( oneHandedDamageRoll ) {
-										game.dice3d
-											.showForRoll(oneHandedDamageRoll, game.user, true);
-									}
-									if ( twoHandedDamageRoll ) {
-										game.dice3d
-											.showForRoll(twoHandedDamageRoll, game.user, true);
-									}
-								})
-								.then(() => {
-									if (chatMessage !== false) ChatMessage.create(chatData);
-									resolve(roll);
-								});
+							resolve(this._rollDiceSoNice(rolls, chatData, chatMessage));
 						}
 						else {
 							chatData.sound = CONFIG.sounds.dice;
 							if (chatMessage !== false) ChatMessage.create(chatData);
-							resolve(roll);
+							resolve(rolls.rollD20Result);
 						}
 					});
 				});
 			});
 		};
 
-		// Modify the roll and handle fast-forwarding
+		/* -------------------------------------------- */
+		/*  Roll Management                             */
+		/* -------------------------------------------- */
+		// Add 1d20 to roll parts
 		parts.unshift("1d20");
-		if ( fastForward ) {
+
+		// Shall we skip showing a dialog and just roll normally?
+		if ( options.fastForward ) {
 			return _roll(parts, 0);
 		}
 		else {
+			// @todo: Review how this is more useful than just using a fully populated
+			//        `parts`
+			// Add all the types of bonuses?
 			if (parts.indexOf("@abilityBonus") === -1) parts = parts.concat(["@abilityBonus"]);
 			if (parts.indexOf("@itemBonus") === -1) parts = parts.concat(["@itemBonus"]);
 			if (parts.indexOf("@talentBonus") === -1) parts = parts.concat(["@talentBonus"]);
 
 			// Render dialog
-			const dialogData = {
-				data,
-				rollMode,
-				formula: parts.join(" + "),
-				rollModes: CONFIG.Dice.rollModes,
-			};
+			const content = await this._getRollDialogContent(data, rollMode, parts, dialogTemplate);
 
-			const content = await renderTemplate(dialogTemplate, dialogData);
-			let roll;
-
-			return new Promise(resolve => {
+		  return new Promise(resolve => {
+				let roll;
 				new Dialog(
 					{
 						title,

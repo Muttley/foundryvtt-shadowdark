@@ -1,5 +1,5 @@
 <div class="shadowdark chat-card item-card" data-actor-id="{{actor.id}}" data-item-id="{{data.item.id}}"
-  {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}} {{#if isSpell}}data-spell-tier="{{data.item.system.tier}}"{{/if}}>
+  {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}} {{#if data.item.isSpell}}data-spell-tier="{{data.item.system.tier}}"{{/if}}>
   <header class="card-header flexrow">
     {{#if data.item}}
     <img src="{{data.item.img}}" title="{{data.item.name}}"/>
@@ -15,30 +15,30 @@
   </div>
 
   <div class="d20-roll card-attack-rolls">
-    <div class="card-attack-roll blindable" data-blind="{{data.roll.blindroll}}">
-      {{#if rollSD}}
+    <div class="card-attack-roll blindable" data-blind="{{rolls.rollD20Result.blindroll}}">
+      {{#if rolls.rollD20Result}}
         <div><h3>
-          {{#if isSpell}}
+          {{#if data.item.isSpell}}
           {{localize "SHADOWDARK.roll.spell_casting_check"}}:
           {{/if}}
-          {{#if isWeapon}}
+          {{#if data.item.isWeapon}}
           {{title}}:
           {{/if}}
         </h3></div>
-        <div>{{{rollSD}}}</div>
+        <div>{{{rolls.rollD20Result}}}</div>
       {{/if}}
     </div>
   </div>
 
-  {{#if isSpell}}
+  {{#if data.item.isSpell}}
   {{#ifEq result.critical "success"}}
   <div class="card-spell-critical">
-    <p>Double any one numerical value!</p>
+    <p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
   </div>
   {{/ifEq}}
   {{#ifEq result.critical "failure"}}
   <div class="card-spell-critical">
-    <p>Roll on the appropriate Mishap table!</p>
+    <p>{{localize "SHADOWDARK.chat.item_roll.mishap"}}</p>
   </div>
   {{/ifEq}}
   {{/if}}
@@ -46,15 +46,15 @@
   {{#if isWeapon}}
   {{#ifNeq result.critical "failure"}}
   <div class="card-damage-rolls">
-    <div class="card-damage-roll blindable" data-blind="{{data.roll.blindroll}}">
+    <div class="card-damage-roll blindable" data-blind="{{rolls.rollD20Result.blindroll}}">
         {{#if isVersatile}}
         <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
-        <div>{{{primaryDamage}}}</div>
+        <div>{{{rolls.primaryDamage}}}</div>
         <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
-        <div>{{{secondaryDamage}}}</div>
+        <div>{{{rolls.secondaryDamage}}}</div>
         {{else}}
         <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
-        <div>{{{primaryDamage}}}</div>
+        <div>{{{rolls.primaryDamage}}}</div>
         {{/if}}
     </div>
   </div>
@@ -70,7 +70,7 @@
     {{/each}}
     <span></span>
     {{/if}}
-    {{#if isSpell}}
+    {{#if data.item.isSpell}}
     <span>{{localize "SHADOWDARK.item.spell_tier"}}: {{ data.item.system.tier }}</span>
     <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{fromConfig "SPELL_DURATIONS"  data.item.system.duration.type }}</span>
     <span>{{localize "SHADOWDARK.item.spell_range"}}: {{fromConfig "SPELL_RANGES" data.item.system.range }}</span>
