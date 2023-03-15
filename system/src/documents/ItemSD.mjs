@@ -78,6 +78,7 @@ export default class ItemSD extends Item {
 				damageTalentBonus,
 				damageDieTalentBonus,
 				item: this,
+				actor: this.actor,
 			},
 			title,
 			speaker,
