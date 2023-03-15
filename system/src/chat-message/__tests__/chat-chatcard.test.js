@@ -2,25 +2,14 @@
 /**
  * @file Contains tests for ChatCards
  */
-import {
-	cleanUpActorsByKey,
-	waitForInput,
-} from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.chat.chatcards";
 export const options = {
 	displayName: "ShadowDark: Chat: ChatCards",
 };
 
-const createMockActor = async type => {
-	return ActorSD.create({
-		name: `Test Actor ${key}`,
-		type,
-	});
-};
-
 export default ({ describe, it, after, before, expect }) => {
-	after(() => {
-		cleanUpActorsByKey(key);
-	});
+	// @todo: implement these tests when the dice mocking tests are functional
+	//        so we can mock results properly.
+	describe("highlightSuccessFailure(app, html, data)");
 };

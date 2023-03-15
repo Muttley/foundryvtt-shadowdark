@@ -102,6 +102,7 @@ export default class D20RollSD extends Roll {
 				},
 			};
 
+			// Set the target if specified
 			data.target = targetValue || "";
 
 			// Build templateData
