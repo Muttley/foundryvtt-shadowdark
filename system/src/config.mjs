@@ -112,7 +112,7 @@ SHADOWDARK.TALENT_TYPES = {
 	spellAdvantage: "SHADOWDARK.talent.type.advantage.spell",
 	weaponMastery: "SHADOWDARK.talent.type.weapon_mastery",
 	backstabDie: "SHADOWDARK.talent.type.backstab_die",
-	custom: "SHADOWDARK.talent.type.custom"
+	custom: "SHADOWDARK.talent.type.custom",
 };
 
 SHADOWDARK.TALENT_PROPERTIES = {
@@ -122,8 +122,15 @@ SHADOWDARK.TALENT_PROPERTIES = {
 	"system.abilities.int.value": "SHADOWDARK.ability_int",
 	"system.abilities.str.value": "SHADOWDARK.ability_str",
 	"system.abilities.wis.value": "SHADOWDARK.ability_wis",
-	"system.talent.attackBonus": "SHADOWDARK.talent.type.attack_bonus",
-	"system.talent.damageBonus": "SHADOWDARK.talent.type.damage_bonus",
+	"system.bonuses.advantage": "SHADOWDARK.talent.type.advantage.title",
+	"system.bonuses.meleeAttackBonus": "SHADOWDARK.talent.type.melee_attack_bonus",
+	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
+	"system.bonuses.meleeDamageBonus": "SHADOWDARK.talent.type.melee_damage_bonus",
+	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
+	"system.bonuses.armorBonus": "SHADOWDARK.talent.type.armor_bonus",
+	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
+	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
+	"system.bonuses.backstabDie": "SHADOWDARK.talent.type.backstab_die",
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
