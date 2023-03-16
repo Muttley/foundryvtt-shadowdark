@@ -1,4 +1,5 @@
 export default class D20RollSD extends Roll {
+
 	/* -------------------------------------------- */
 	/*  Roll Analysis                               */
 	/* -------------------------------------------- */
@@ -16,6 +17,7 @@ export default class D20RollSD extends Roll {
 		return null;
 	}
 
+	// @todo: Potentially can be removed
 	/**
 	 * Parses an evaluated roll
 	 * @param {roll} roll 	- Evaluated Roll
@@ -30,10 +32,27 @@ export default class D20RollSD extends Roll {
 		return result;
 	}
 
+	/**
+	 * Compares requested parts to provided data values
+	 * @param {Array<string>} parts - Parts with @bonuses to add to roll
+	 * @param {object} data 				- Data object containing data.bonuses values
+	 * @returns {Array<string>}			- Parts with only relevant bonuses
+	 */
+	static _digestParts(parts, data) {
+		parts.forEach(part => {
+			if (part[0] !== "@") return;
+			// If the bonus doesn't exists, or is 0, remove bonus from parts
+			if (!data[part.slice(1)] || data[part.slice(1)] === 0) parts.splice(
+				parts.indexOf(part), 1);
+		});
+		return parts;
+	}
+
 	/* -------------------------------------------- */
 	/*  Getters from parents                        */
 	/* -------------------------------------------- */
 
+	// @todo: Implement on the actor sheet instead
 	static _getTalentAdvantage(actor) {
 		// Check if the actor has talents
 		// Check if talents are advantage types
@@ -55,6 +74,22 @@ export default class D20RollSD extends Roll {
 		return $form.find("[name=rollMode]").val();
 	}
 
+	/**
+	 * Parses a submitted dialog form for bonuses
+	 * @param {jQuery} $form 	- Submitted dialog form
+	 */
+	static _getBonusesFromFrom($form) {
+		itemBonus = $form.find("[name=item-bonus]").val();
+		abilityBonus = $form.find("[name=ability-bonus]").val();
+		talentBonus = $form.find("[name=talent-bonus]").val();
+		return {
+			itemBonus,
+			abilityBonus,
+			talentBonus,
+		};
+	}
+
+	// @todo: May be removed?
 	/**
 	 * Checks the forms and removes @bonus fields from the parts if not present
 	 * or 0.
@@ -107,21 +142,18 @@ export default class D20RollSD extends Roll {
 	/**
 	 * Generate Template Data for displaying custom chat cards
 	 * @param {string} title 		- Headline of chatcard
-	 * @param {string} flavor 	- Flavor text to put under the actor name in chat card
 	 * @param {object} data 		- Optional data containing .item and .actor
-	 * @param {object} rolls		- Object containing the rolls that have been made
 	 * @returns {object}				- data to populate the Chat Card template
 	 */
-	static _getChatCardTemplateData(title, flavor, data, rolls) {
+	static _getChatCardTemplateData(title, data) {
 		const templateData = {
 			title: title,
-			flavor: flavor,
 			data: data,
 			isSpell: false,
 			isWeapon: false,
 			isVersatile: false,
-			critical: data.result.critical,
-			rolls,
+			critical: data.rolls.rollD20Result.critical,
+			rolls: data.rolls,
 		};
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
@@ -164,16 +196,84 @@ export default class D20RollSD extends Roll {
 	/*  Dice Rolling                                */
 	/* -------------------------------------------- */
 
+	/**
+	 *
+	 * @param {Array<string>} rollParts	- Array containing parts for rolling
+	 * @param {-1|0|1} adv 							- Pre-determined Advantage
+	 * @returns {Array<string>}					- Modified rollParts
+	 */
+	static _partsAdvantage(rollParts, adv = 0) {
+		const splitDice = rollParts[0].split("d");
+
+		if (adv === 1) {
+			rollParts[0] = `${splitDice[0] * 2}d${splitDice[1]}kh`;
+		}
+		else if (adv === -1) {
+			rollParts[0] = `${splitDice[0] * 2}d${splitDice[1]}kl`;
+		}
+		return rollParts;
+	}
+
+	/**
+	 * Rolls dice, with parts. Evaluates them, and returns the data.
+	 * @param {Array<string>}	parts	- Dice and Bonuses associated with the roll (@bonus)
+	 * @param {object} data					- Data containing requivalent @bonus fields
+	 * 																like `data.bonus`
+	 * @returns {object} 						- Returns the evaluated `roll`, the rendered
+	 * 							                	HTML `renderedHTML`, and `critical` info.
+	 */
+	static async _rollDice(parts, data = {}) {
+		if (parts[0] === "d") parts[0] = `1${parts[0]}`;
+
+		// Remove bonuses lacking equivalent bonus in data
+		parts = this._digestParts(parts, data);
+
+		const roll = await new Roll(parts.join(" + "), data).evaluate({async: true});
+		const renderedHTML = await roll.render();
+		const critical = this._digestCritical(roll);
+
+		return {
+			roll,
+			renderedHTML,
+			critical,
+		};
+	}
+
+
+	static async RollD20(parts, data, $form, adv=0, options={}) {
+		// const rollMode = this._getRollModeFromForm($form);
+
+		// Augment data with form bonuses
+		const formBonuses = this._getBonusesFromForm(data, $form);
+
+		// Combine bonuses from form with the data
+		data = foundry.utils.mergeObjects(data, formBonuses);
+
+		// Modify the d20 to take advantage in consideration
+		parts.unshift("1d20");
+		parts = this._partsAdvantage(parts, adv);
+
+		return await this._rollDice(parts, data);
+	}
+
+
 	// @todo: Cleanup
-	// @todo: doc review
 	/**
 	 * Rolls after the Roll Dialog has been submitted
-	 * @param {Array<string>} rollParts - Modifiers to be used in roll
-	 * @param {number} adv 							- Advantage(1)/Disadvantage(-1)
-	 * @param {jQuery} $form 						- Callback HTML from dialog
-	 * @returns {Promise<Roll>}					- Roll result
+	 * @param {Array<string>} rollParts 			- Modifiers to be used in roll
+	 * @param {number} adv 										- Advantage(1)/Disadvantage(-1)
+	 * @param {jQuery} $form 									- Callback HTML from dialog
+	 * @param {object} data										- Object containing item, actor
+	 * @param {object} options								- Options for the chat message
+	 * @param {string} options.title					- Title to display on chat card
+	 * @param {string} options.flavor					- Flavor text for the chat card
+	 * @param {User} options.speaker  				- Who the message comes from
+	 * @param {number} options.targetValue		- Target value to meet or beat
+	 * @param {HTML} options.chatCardTemplate	- Template to render chat message
+	 * @param {boolean} options.chatMessage		- Flag if to render message or not
+	 * @returns {Promise<Roll>}								- Roll result
 	 */
-	static async _roll(
+	static async _rollD20(
 		rollParts,
 		adv,
 		$form,
@@ -187,48 +287,34 @@ export default class D20RollSD extends Roll {
 			chatMessage,
 		}) {
 
-		data.rolls = {
-			rollD20: {},
-			rollD20Result: "",
-		};
+		data.rolls = {};
 
 		// @todo: use this to correctly show the message in chat
 		// Extract the roll mode
 		const rollMode = this._getRollModeFromForm($form);
 
-		// Set the rollParts and flavor if advantage/disadvantage button has been clicked
-		if (adv === 1) {
-			rollParts[0] = ["2d20kh"];
-			options.flavor = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: options.title });
-		}
-		else if (adv === -1) {
-			rollParts[0] = ["2d20kl"];
-			options.flavor = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: options.title });
-		}
+		// Augment the rollParts if advantage/disadvantage button has been clicked
+		rollParts = this._partsAdvantage(rollParts, data, adv);
 
 		// Parse provided HTMLForm to remove unecessary @bonus fields
 		rollParts = this._checkBonusesFromForm(rollParts, data, $form);
 
-		// Evaluate the roll
+		// Evaluate & digest the roll
 		data.rolls.rollD20 = await new Roll(rollParts.join("+"), data).evaluate({ async: true });
+		data.rolls.rollD20Result = this._digestResult(data.rolls.rollD20);
 
-		// Digest the D20 roll
-		data.result = this._digestResult(data.rolls.rollD20);
+		// Render the roll and store rendered HTML
+		await data.rolls.rollD20.render().then(r => {
+			data.rolls.rollD20HTML= r;
+		});
 
-		// @todo: This needs a better structure
 		// Roll weapon damage
-		if ( data.item?.isWeapon() ) {
-			const weaponRolls = await this._rollWeapon(data);
-			data.rolls = foundry.utils.mergeObject(data.rolls, weaponRolls);
-		}
+		if ( data.item?.isWeapon() ) data = await this._rollWeapon(data);
 
-		// @todo: Tighten this up and move to after the rolls are created
 		// Build templateData
 		const templateData = this._getChatCardTemplateData(
 			options.title,
-			options.flavor,
-			data,
-			data.rolls
+			data
 		);
 
 		const chatData = this._getChatCardData(
@@ -237,22 +323,28 @@ export default class D20RollSD extends Roll {
 			options.targetValue
 		);
 
-		// Render the roll to chat if not chatMessage is false.
 		return new Promise(resolve => {
-			data.rolls.rollD20.render().then(r => {
-				templateData.rolls.rollD20Result = r;
-				renderTemplate(options.chatCardTemplate, templateData).then(content => {
-					chatData.content = content;
-					// Integration with Dice So Nice
-					if (game.dice3d) {
-						resolve(this._rollDiceSoNice(data.rolls, chatData, options.chatMessage));
-					}
-					else {
-						chatData.sound = CONFIG.sounds.dice;
-						if (options.chatMessage !== false) ChatMessage.create(chatData);
-						resolve(data.rolls.rollD20Result);
-					}
-				});
+			renderTemplate(options.chatCardTemplate, templateData).then(content => {
+				// Setup the chat card
+				if ( rollMode === "blindroll" ) chatData.blind = true;
+				chatData.content = content;
+
+				// Determine the flavor of the chat card
+				switch (adv) {
+					case 1: chatData.flavor = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: options.flavor }); break;
+					case 2: chatData.flavor = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: options.flavor }); break;
+					default: chatData.flavor = options.flavor;
+				}
+
+				// Integration with Dice So Nice
+				if (game.dice3d) {
+					resolve(this._rollDiceSoNice(data.rolls, chatData, options.chatMessage));
+				}
+				else {
+					chatData.sound = CONFIG.sounds.dice;
+					if (options.chatMessage !== false) ChatMessage.create(chatData);
+					resolve(data.rolls.rollD20Result);
+				}
 			});
 		});
 	}
@@ -261,43 +353,35 @@ export default class D20RollSD extends Roll {
 	/**
 	 * Rolls a weapon and it's associated damage dice
 	 * @param {object} data 	- Data with the item to be rolled
-	 * @returns {object} 			- Object with HTML results from rolls as values
+	 * @returns {object} data - Returns 'data' augmented with weapon damage rolls
 	 */
 	static async _rollWeapon(data) {
-		const damageRolls = {
-			rollPrimaryDamage: {},
-			rollSecondaryDamage: {},
-			primaryDamage: "",
-			secondaryDamage: "",
-		};
-
 		let numDice = data.item.system.damage.numDice;
 		const damageRollParts = data.item.isTwoHanded()
 			? data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
 
-		if ( data.result.critical !== "failure" ) {
-			if ( data.result.critical === "success" ) {
+		if ( data.rolls.rollD20Result.critical !== "failure" ) {
+			if ( data.rolls.rollD20Result.critical === "success" ) {
 				numDice *= 2;
 			}
-
-			damageRolls.rollPrimaryDamage = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
+			data.rolls.rollPrimaryDamage = await new Roll(`${numDice}${damageRollParts}`, data).evaluate({ async: true });
 
 			// Render HTML for roll
-			await damageRolls.rollPrimaryDamage.render().then(r => {
-				damageRolls.primaryDamage = r;
+			await data.rolls.rollPrimaryDamage.render().then(r => {
+				data.rolls.primaryDamageHTML = r;
 			});
 
 			if ( data.item.isVersatile() ) {
 				const secondaryRollParts = data.item.system.damage.twoHanded;
-				damageRolls.rollSecondaryDamage = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
+				data.rolls.rollSecondaryDamage = await new Roll(`${numDice}${secondaryRollParts}`, data).evaluate({ async: true });
 
 				// Render HTML for roll
-				await damageRolls.rollSecondaryDamage.render().then(r => {
-					damageRolls.secondaryDamage = r;
+				await data.rolls.rollSecondaryDamage.render().then(r => {
+					data.rolls.secondaryDamageHTML = r;
 				});
 			}
 		}
-		return damageRolls;
+		return data;
 	}
 
 	/* -------------------------------------------- */
@@ -370,9 +454,6 @@ export default class D20RollSD extends Roll {
 			fastForward: false,
 		},
 	}) {
-		/* -------------------------------------------- */
-		/*  Roll Management                             */
-		/* -------------------------------------------- */
 		// Add 1d20 to roll parts
 		parts.unshift("1d20");
 
@@ -389,7 +470,7 @@ export default class D20RollSD extends Roll {
 
 		// Shall we skip showing a dialog and just roll normally?
 		if ( options.fastForward ) {
-			return _roll(parts, 0, data, options);
+			return _rollD20(parts, 0, data, options);
 		}
 		else {
 			// @todo: Review how this is more useful than just using a fully populated
@@ -412,19 +493,19 @@ export default class D20RollSD extends Roll {
 							advantage: {
 								label: game.i18n.localize("SHADOWDARK.roll.advantage"),
 								callback: async html => {
-									roll = await this._roll(parts, 1, html, data, options);
+									roll = await this._rollD20(parts, 1, html, data, options);
 								},
 							},
 							normal: {
 								label: game.i18n.localize("SHADOWDARK.roll.normal"),
 								callback: async html => {
-									roll = await this._roll(parts, 0, html, data, options);
+									roll = await this._rollD20(parts, 0, html, data, options);
 								},
 							},
 							disadvantage: {
 								label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 								callback: async html => {
-									roll = await this._roll(parts, -1, html, data, options);
+									roll = await this._rollD20(parts, -1, html, data, options);
 								},
 							},
 						},

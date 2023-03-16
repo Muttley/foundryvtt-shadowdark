@@ -88,7 +88,14 @@ export default class ItemSD extends Item {
 		});
 	}
 
-	async rollSpell(parts, abilityBonus, talentBonus, tier, options={}) {
+	async rollSpell(parts, data, options={}) {
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+
+		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+	}
+
+	async rollSpellA(parts, abilityBonus, talentBonus, tier, options={}) {
 		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
 		const spellDC = 10 + tier;
 

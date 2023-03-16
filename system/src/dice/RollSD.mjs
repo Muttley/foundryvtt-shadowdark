@@ -354,7 +354,7 @@ export default class RollSD extends Roll {
 		const chatData = this._getChatCardData(
 			data.rolls.d20.roll,
 			options.speaker,
-			options.targetValue
+			options.target
 		);
 
 		const content = await this._getChatCardContent(data, options);

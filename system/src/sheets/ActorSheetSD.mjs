@@ -197,20 +197,18 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
-		const tier = item.system.tier;
-
-		const parts = [];
-		let abilityBonus;
-		let talentBonus;
-
-		// @todo: How do we solve this with custom classes? Spellcasting modifier in system?
 		const abilityId = this.actor.system.class === "Wizard" ? "int" : "wis";
-		parts.push("@abilityBonus");
-		abilityBonus = this.actor.abilityModifier(abilityId);
+		const data = {
+			item: item,
+			actor: this.actor,
+			abilityBonus: this.actor.abilityModifier(abilityId),
+		};
+
+		const parts = ["@abilityBonus"];
 
 		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
 
-		return item.rollSpell(parts, abilityBonus, talentBonus, tier, {event: event});
+		return item.rollSpell(parts, data);
 	}
 
 	_sortAllItems(context) {

@@ -16,7 +16,7 @@
 
   <div class="d20-roll card-attack-rolls">
     <div class="card-attack-roll blindable" data-blind="{{rolls.rollD20Result.blindroll}}">
-      {{#if rolls.rollD20Result}}
+      {{#if rolls.d20}}
         <div><h3>
           {{#if data.item.isSpell}}
           {{localize "SHADOWDARK.roll.spell_casting_check"}}:
@@ -25,7 +25,7 @@
           {{title}}:
           {{/if}}
         </h3></div>
-        <div>{{{rolls.rollD20Result}}}</div>
+        <div>{{{rolls.d20.renderedHTML}}}</div>
       {{/if}}
     </div>
   </div>
@@ -49,12 +49,12 @@
     <div class="card-damage-roll blindable" data-blind="{{rolls.rollD20Result.blindroll}}">
         {{#if isVersatile}}
         <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
-        <div>{{{rolls.primaryDamage}}}</div>
+        <div>{{{rolls.primaryDamageHTML}}}</div>
         <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
-        <div>{{{rolls.secondaryDamage}}}</div>
+        <div>{{{rolls.secondaryDamageHTML}}}</div>
         {{else}}
         <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
-        <div>{{{rolls.primaryDamage}}}</div>
+        <div>{{{rolls.primaryDamageHTML}}}</div>
         {{/if}}
     </div>
   </div>
