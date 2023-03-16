@@ -46,8 +46,7 @@ Hooks.once("init", () => {
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
-	CONFIG.Dice.D20RollSD = dice.D20RollSD;
-	CONFIG.Dice.DamageRoll = dice.DamageRollSD;
+	CONFIG.DiceSD = dice.DiceSD;
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();

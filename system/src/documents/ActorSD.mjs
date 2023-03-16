@@ -160,20 +160,22 @@ export default class ActorSD extends Actor {
 
 	async rollAbility(abilityId, options={}) {
 		const parts = ["@abilityBonus"];
+
 		const abilityBonus = this.abilityModifier(abilityId);
-
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
-		const title = game.i18n.localize(`SHADOWDARK.dialog.ability_check.${abilityId}`);
-		const speaker = ChatMessage.getSpeaker({ actor: this });
+		const data = {
+			abilityBonus,
+			ability,
+			actor: this,
+		};
 
-		await CONFIG.Dice.D20RollSD.d20Roll({
-			parts,
-			data: { abilityBonus, ability, actor: this },
-			title,
-			speaker,
-			dialogTemplate: "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs",
-			chatCardTemplate: "systems/shadowdark/templates/chat/ability-card.hbs",
-		});
+		options.title = game.i18n.localize(`SHADOWDARK.dialog.ability_check.${abilityId}`);
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
+
+		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
 	}
 
 	/* -------------------------------------------- */

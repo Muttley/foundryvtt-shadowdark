@@ -2,6 +2,22 @@
  * @file Orchestration for our Quench tests
  */
 
+/* Utils Import */
+import chatChatcardTests, {
+	key as chatChatcardKey,
+	options as chatChatcardOptions,
+} from "../chat-message/__tests__/chat-chatcard.test.js";
+
+import diceTests, {
+	key as diceKey,
+	options as diceOptions,
+} from "../dice/__tests__/dice.test.js";
+import diceChatTemplateTests, {
+	key as diceChatTemplateKey,
+	options as diceChatTemplateOptions,
+} from "../dice/__tests__/dice-chat-templates.test.js";
+
+/* Document imports */
 import documentsActorTests, {
 	key as documentsActorKey,
 	options as documentsActorOptions,
@@ -15,6 +31,7 @@ import documentsItemsSpellsTests, {
 	options as documentsItemsSpellsOptions,
 } from "../documents/__tests__/documents-item-spell.test.mjs";
 
+/* Sheet Imports */
 import sheetsActorTests, {
 	key as sheetsActorKey,
 	options as sheetsActorOptions,
@@ -28,8 +45,27 @@ import sheetsPlayerTests, {
 	options as sheetsPlayerOptions,
 } from "../sheets/__tests__/sheets-player.test.mjs";
 
+/* Apps import */
+
 
 Hooks.on("quenchReady", async quench => {
+	// Utils test
+	quench.registerBatch(
+		chatChatcardKey,
+		chatChatcardTests,
+		chatChatcardOptions
+	);
+	quench.registerBatch(
+		diceKey,
+		diceTests,
+		diceOptions
+	);
+	quench.registerBatch(
+		diceChatTemplateKey,
+		diceChatTemplateTests,
+		diceChatTemplateOptions
+	);
+
 	// Document tests
 	quench.registerBatch(
 		documentsActorKey,
@@ -63,4 +99,6 @@ Hooks.on("quenchReady", async quench => {
 		sheetsPlayerTests,
 		sheetsPlayerOptions
 	);
+
+	// Apps test
 });
