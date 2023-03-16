@@ -27,7 +27,7 @@ export default class RollSD extends Roll {
 
 		// Weapon? -> Roll Damage dice
 		if (data.item?.isWeapon()) {
-			data.rolls = this._rollWeapon(data);
+			data = await this._rollWeapon(data);
 		}
 
 		// Spell? -> Set a target
@@ -69,7 +69,9 @@ export default class RollSD extends Roll {
 		const reducedParts = [];
 		parts.forEach(part => {
 			// If both the bonus is defined, and not 0, push to the results
-			if (data[part.substring(1)] && data[part.substring(1)] !== 0) reducedParts.push(part);
+			if (
+				data[part.substring(1)] && parseInt(data[part.substring(1)], 10) !== 0
+			) reducedParts.push(part);
 		});
 		return reducedParts;
 	}
@@ -162,13 +164,16 @@ export default class RollSD extends Roll {
 			if ( data.rolls.d20.critical === "success" ) numDice *= 2;
 
 			// @todo: Check for bonus dice and add to numDice
+			if (data.damageDie) numDice += data.damageDie;
 
-			const primaryParts = [`${numDice}${damageDie}`];
+			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
 			data.rolls.primaryDamage = await this._rollDice(primaryParts, data);
 
 			if ( data.item.isVersatile() ) {
-				const secondaryParts = [`${numDice}${data.item.system.damage.twoHanded}`];
+				const secondaryParts = [
+					`${numDice}${data.item.system.damage.twoHanded}`,
+					...data.damageParts];
 				data.rolls.secondaryDamage = await this._rollDice(secondaryParts, data);
 			}
 		}
@@ -351,7 +356,7 @@ export default class RollSD extends Roll {
 
 	static async _renderRoll(data, options) {
 		// @todo : Review
-		const chatData = this._getChatCardData(
+		const chatData = await this._getChatCardData(
 			data.rolls.d20.roll,
 			options.speaker,
 			options.target

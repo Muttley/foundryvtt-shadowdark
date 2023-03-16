@@ -49,12 +49,12 @@
     <div class="card-damage-roll blindable" data-blind="{{rolls.rollD20Result.blindroll}}">
         {{#if isVersatile}}
         <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
-        <div>{{{rolls.primaryDamageHTML}}}</div>
+        <div>{{{rolls.primaryDamage.renderedHTML}}}</div>
         <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
-        <div>{{{rolls.secondaryDamageHTML}}}</div>
+        <div>{{{rolls.secondaryDamage.renderedHTML}}}</div>
         {{else}}
         <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
-        <div>{{{rolls.primaryDamageHTML}}}</div>
+        <div>{{{rolls.primaryDamage.renderedHTML}}}</div>
         {{/if}}
     </div>
   </div>

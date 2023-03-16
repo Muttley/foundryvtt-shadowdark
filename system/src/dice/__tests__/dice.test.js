@@ -73,6 +73,7 @@ const mockData = () => {
 					rangedAttackBonus: 1,
 					rangedDamageBonus: 2,
 					spellcastingCheckBonus: 5,
+					damageDie: 3,
 				},
 			},
 		},
@@ -427,6 +428,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("data expected to be augmented with 3 rolls", async () => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { d20: { critical: null } };
+			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);
@@ -446,6 +448,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("critical success expected to roll double dice", async () => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { d20: { critical: "success" } };
+			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);
@@ -465,6 +468,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("critical failure expected to not roll damage dice", async () => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { d20: { critical: "failure" } };
+			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);
