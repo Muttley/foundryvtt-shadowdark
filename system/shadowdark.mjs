@@ -48,6 +48,7 @@ Hooks.once("init", () => {
 	CONFIG.Item.documentClass = documents.ItemSD;
 	CONFIG.Dice.D20RollSD = dice.D20RollSD;
 	CONFIG.Dice.DamageRoll = dice.DamageRollSD;
+	CONFIG.DiceSD = dice.DiceSD;
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();

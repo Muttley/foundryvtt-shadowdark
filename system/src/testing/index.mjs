@@ -8,10 +8,14 @@ import chatChatcardTests, {
 	options as chatChatcardOptions,
 } from "../chat-message/__tests__/chat-chatcard.test.js";
 
-import diceD20Tests, {
-	key as diceD20Key,
-	options as diceD20Options,
-} from "../dice/__tests__/dice-d20.test.js";
+import diceTests, {
+	key as diceKey,
+	options as diceOptions,
+} from "../dice/__tests__/dice.test.js";
+import diceChatTemplateTests, {
+	key as diceChatTemplateKey,
+	options as diceChatTemplateOptions,
+} from "../dice/__tests__/dice-chat-templates.test.js";
 
 /* Document imports */
 import documentsActorTests, {
@@ -52,9 +56,14 @@ Hooks.on("quenchReady", async quench => {
 		chatChatcardOptions
 	);
 	quench.registerBatch(
-		diceD20Key,
-		diceD20Tests,
-		diceD20Options
+		diceKey,
+		diceTests,
+		diceOptions
+	);
+	quench.registerBatch(
+		diceChatTemplateKey,
+		diceChatTemplateTests,
+		diceChatTemplateOptions
 	);
 
 	// Document tests

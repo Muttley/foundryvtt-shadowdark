@@ -54,31 +54,6 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	describe("_digestResult(roll)", () => {
-		describe("returns an object with critical", () => {
-			it("1 returns 'failure'", () => {
-				const roll = mockRollResult(20, 1);
-				expect(D20RollSD._digestResult(roll).critical).equal("failure");
-				expect(D20RollSD._digestResult(roll).total).equal(1);
-			});
-			it("20 returns 'success'", () => {
-				const roll = mockRollResult(20, 20);
-				expect(D20RollSD._digestResult(roll).critical).equal("success");
-				expect(D20RollSD._digestResult(roll).total).equal(20);
-			});
-			it("10 returns null", () => {
-				const roll = mockRollResult(20, 12);
-				expect(D20RollSD._digestResult(roll).critical).is.null;
-				expect(D20RollSD._digestResult(roll).total).equal(12);
-			});
-		});
-
-		it("returns the roll total in object", () => {
-			const roll = mockRollResult(20, 499);
-			expect(D20RollSD._digestResult(roll).total).equal(499);
-		});
-	});
-
 	/* -------------------------------------------- */
 	/*  Getters from parents                        */
 	/* -------------------------------------------- */
@@ -112,323 +87,266 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	/* -------------------------------------------- */
-	/*  Data Generation for Displaying              */
-	/* -------------------------------------------- */
-	describe("_getChatCardData(roll, speaker, target=false)", () => {
-		it("normal roll", () => {
-			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "");
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.false;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).is.null;
-			expect(chatData.flags.success).is.undefined;
-		});
-
-		it("critical success roll", () => {
-			const roll = mockRollResult(20, 20);
-			const chatData = D20RollSD._getChatCardData(roll, "");
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.false;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).equal("success");
-			expect(chatData.flags.success).is.undefined;
-		});
-
-		it("critical failure roll", () => {
-			const roll = mockRollResult(20, 1);
-			const chatData = D20RollSD._getChatCardData(roll, "");
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.false;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).equal("failure");
-			expect(chatData.flags.success).is.undefined;
-		});
-
-		it("provided a target, determination of success is return", () => {
-			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 12);
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.true;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).is.null;
-			expect(chatData.flags.success).is.not.undefined;
-		});
-
-		it("rolling under target leads to failure", () => {
-			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 13);
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.true;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).is.null;
-			expect(chatData.flags.success).is.not.undefined;
-			expect(chatData.flags.success).is.false;
-		});
-
-		it("rolling equal to target leads to success", () => {
-			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 12);
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.true;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).is.null;
-			expect(chatData.flags.success).is.not.undefined;
-			expect(chatData.flags.success).is.true;
-		});
-
-		it("rolling over target leads to success", () => {
-			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 11);
-
-			expect(chatData).is.not.undefined;
-			expect(chatData.user).is.not.undefined;
-			expect(chatData.user).equal(game.user.id);
-			expect(chatData.speaker).is.not.undefined;
-			expect(chatData.speaker).equal("");
-			expect(chatData.flags).is.not.undefined;
-			expect(chatData.flags.isRoll).is.not.undefined;
-			expect(chatData.flags.isRoll).is.true;
-			expect(chatData.flags["core.canPopout"]).is.not.undefined;
-			expect(chatData.flags["core.canPopout"]).is.true;
-			expect(chatData.flags.hasTarget).is.not.undefined;
-			expect(chatData.flags.hasTarget).is.true;
-			expect(chatData.flags.critical).is.not.undefined;
-			expect(chatData.flags.critical).is.null;
-			expect(chatData.flags.success).is.not.undefined;
-			expect(chatData.flags.success).is.true;
-		});
-	});
-
-	// @todo: Refactor the Handlebar templates to make better sense
-	// @todo: Refactor to read the rolls into the chat card instead of
-	//        patching them afterwards.
-	describe("_getChatCardTemplateData(title, flavor, data, result)", () => {
-		const data = {};
-		let templateData = {};
-
-		before(async () => {
-			data.item = await createMockItemByKey(key, "Weapon");
-			data.actor = await createMockActorByKey(key, "Player");
-			const title = "test title";
-			const flavor = "test flavor";
-			const rolls = {
-				rollD20: mockRollResult(20, 15),
-				rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
-				rollPrimaryDamage: mockRollResult(8, 4),
-				primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
-				rollSecondaryDamage: mockRollResult(10, 7),
-				secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
-			};
-			data.result = D20RollSD._digestResult(rolls.rollD20);
-			templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
-		});
-
-		after(() => {
-			cleanUpItemsByKey(key);
-			cleanUpActorsByKey(key);
-		});
-
-		it("generate data for ability-card.hbs", () => {
-			expect(templateData.title).is.not.undefined;
-			expect(templateData.data).is.not.undefined;
-			expect(templateData.data.actor).is.not.undefined;
-			expect(templateData.data.actor.img).is.not.undefined;
-			expect(templateData.data.actor.id).is.not.undefined;
-			expect(templateData.rolls).is.not.undefined;
-			expect(templateData.rolls.rollD20Result).is.not.undefined;
-		});
-
-		describe("generate data for item-card.hbs", () => {
-			it("default", () => {
-				expect(templateData.title).is.not.undefined;
-				expect(templateData.data).is.not.undefined;
-				expect(templateData.data.actor).is.not.undefined;
-				expect(templateData.data.actor.img).is.not.undefined;
-				expect(templateData.data.actor.id).is.not.undefined;
-				expect(templateData.data.item).is.not.undefined;
-				expect(templateData.data.item.id).is.not.undefined;
-				expect(templateData.data.item.img).is.not.undefined;
-				expect(templateData.data.item.name).is.not.undefined;
-				expect(templateData.data.item.system.description).is.not.undefined;
-				expect(templateData.rolls).is.not.undefined;
-				expect(templateData.rolls.rollD20Result).is.not.undefined;
-				expect(templateData.rolls.primaryDamage).is.not.undefined;
-			});
-
-			it("weapon", () => {
-				expect(templateData.isSpell).is.false;
-				expect(templateData.isWeapon).is.true;
-				expect(templateData.isVersatile).is.false;
-
-				expect(templateData.data.item.system).is.not.undefined;
-				expect(templateData.data.item.system.type).is.not.undefined;
-				expect(templateData.data.item.system.range).is.not.undefined;
-				expect(templateData.data.item.system.properties).is.not.undefined;
-			});
-
-			it("versatile weapon", async () => {
-				await data.item.update({"system.properties": ["versatile"], "system.damage": { oneHanded: "d8", twoHanded: "d10"}});
-				await waitForInput();
-				const title = "test title";
-				const flavor = "test flavor";
-				const rolls = {
-					rollD20: mockRollResult(20, 15),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
-					rollPrimaryDamage: mockRollResult(8, 4),
-					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
-					rollSecondaryDamage: mockRollResult(10, 7),
-					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
-				};
-				data.result = D20RollSD._digestResult(rolls.rollD20);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
-				expect(templateData.isSpell).is.false;
-				expect(templateData.isWeapon).is.true;
-				expect(templateData.isVersatile).is.true;
-				expect(templateData.rolls.secondaryDamage).is.not.undefined;
-			});
-
-			it("critical", async () => {
-				const title = "test title";
-				const flavor = "test flavor";
-				const rolls = {
-					rollD20: mockRollResult(20, 20),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 20)),
-					rollPrimaryDamage: mockRollResult(8, 4),
-					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
-					rollSecondaryDamage: mockRollResult(10, 7),
-					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
-				};
-				data.result = D20RollSD._digestResult(rolls.rollD20);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
-				expect(templateData.rolls.rollD20Result).is.not.undefined;
-				expect(templateData.critical).is.not.undefined;
-				expect(templateData.critical).equal("success");
-			});
-
-			it("spells", async () => {
-				data.item = await createMockItemByKey(key, "Spell");
-				const title = "test title";
-				const flavor = "test flavor";
-				const rolls = {
-					rollD20: mockRollResult(20, 15),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
-					rollPrimaryDamage: mockRollResult(8, 4),
-					primaryDamage: D20RollSD._digestResult(mockRollResult(8, 4)),
-					rollSecondaryDamage: mockRollResult(10, 7),
-					secondaryDamage: D20RollSD._digestResult(mockRollResult(10, 7)),
-				};
-				data.result = D20RollSD._digestResult(rolls.rollD20);
-				templateData = D20RollSD._getChatCardTemplateData(title, flavor, data, rolls);
-				expect(templateData.isSpell).is.true;
-				expect(templateData.isWeapon).is.false;
-				expect(templateData.isVersatile).is.false;
-				expect(templateData.data.item.system).is.not.undefined;
-				expect(templateData.data.item.system.tier).is.not.undefined;
-				expect(templateData.data.item.system.duration).is.not.undefined;
-				expect(templateData.data.item.system.duration.type).is.not.undefined;
-				expect(templateData.data.item.system.duration.value).is.not.undefined;
-				expect(templateData.data.item.system.range).is.not.undefined;
-			});
-		});
-	});
-
-	describe("_getRollDialogData(data, rollMode, parts)", () => {
-		it("returns proper data", () => {
-			const data = {};
-			const rollMode = "blindroll";
-			const parts = ["1d20", "1d4"];
-			const dialogData = D20RollSD._getRollDialogData(data, rollMode, parts);
-			expect(dialogData.data).equal(data);
-			expect(dialogData.rollMode).equal(rollMode);
-			expect(dialogData.formula).equal("1d20 + 1d4");
-			expect(dialogData.rollModes).is.not.undefined;
-		});
-	});
-
-	describe("_getRollDialogContent(data, rollMode, parts, dialogTemplate)", () => {
-		// Skipping tests as this is just rendering a template
-	});
-
-	/* -------------------------------------------- */
 	/*  Dice Rolling                                */
 	/* -------------------------------------------- */
 
+	describe("_rollDice(parts, data={})", () => {
+		describe("rolling just a dice", () => {
+			it("specifying dice without numDice works", async () => {
+				const parts = ["d20"];
+
+				const results = await D20RollSD._rollDice(parts);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("specifying dice with numDice works", async () => {
+				const parts = ["1d20"];
+
+				const results = await D20RollSD._rollDice(parts);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("specifying dice with non-one numDice works", async () => {
+				const parts = ["3d20"];
+
+				const results = await D20RollSD._rollDice(parts);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(3);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.critical).is.not.undefined;
+			});
+		});
+
+		describe("rolling with bonuses", () => {
+			const die = "1d20";
+
+			it("@abilityBonus without data.abilityBonus adds no extra", async () => {
+				const parts = [die, "@abilityBonus"];
+				const data = {};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20");
+			});
+
+			it("@abilityBonus with data.abilityBonus adds no extra", async () => {
+				const parts = [die, "@abilityBonus"];
+				const data = {
+					abilityBonus: 12,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20 + 12");
+			});
+
+			it("@itemBonus without data.itemBonus adds no extra", async () => {
+				const parts = [die, "@itemBonus"];
+				const data = {
+					abilityBonus: 12,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20");
+			});
+
+			it("@itemBonus with data.itemBonus adds no extra", async () => {
+				const parts = [die, "@itemBonus"];
+				const data = {
+					abilityBonus: 12,
+					itemBonus: 19,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20 + 19");
+			});
+
+			it("@talentBonus without data.talentBonus adds no extra", async () => {
+				const parts = [die, "@talentBonus"];
+				const data = {};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20");
+			});
+
+			it("@talentBonus with data.talentBonus adds no extra", async () => {
+				const parts = [die, "@talentBonus"];
+				const data = {
+					talentBonus: 8,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20 + 8");
+			});
+
+			it("@talentBonus with data.talentBonus adds no extra", async () => {
+				const parts = [die, "@talentBonus", "@itemBonus"];
+				const data = {
+					talentBonus: 8,
+					itemBonus: 12,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20 + 8 + 12");
+			});
+
+			it("@customBonus without data.customBonus adds no extra", async () => {
+				const parts = [die, "@customBonus"];
+				const data = {};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20");
+			});
+
+			it("@customBonus with data.customBonus adds no extra", async () => {
+				const parts = [die, "@customBonus"];
+				const data = {
+					customBonus: 8,
+				};
+
+				const results = await D20RollSD._rollDice(parts, data);
+				expect(results.roll.formula).equal("1d20 + 8");
+			});
+		});
+	});
+
+	describe("_partsAdvantage(rollParts, adv)", () => {
+		it("skipping `adv` gives normal roll", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = D20RollSD._partsAdvantage(parts);
+			expect(parts[0]).equal("1d8");
+		});
+
+		it("supplying number for advantage works", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = D20RollSD._partsAdvantage(parts, 1);
+			expect(parts[0]).equal("2d8kh");
+		});
+
+		it("supplying number for disadvantage works", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = D20RollSD._partsAdvantage(parts, -1);
+			expect(parts[0]).equal("2d8kl");
+		});
+	});
+
+	/* -------------------------------------------- */
+	/*  Specific Dice Rolling                       */
+	/* -------------------------------------------- */
+
+	// @todo: Write tests with updated code
+	describe("rollD20(parts, adv, $form, data, options={})", () => {
+		const responseData = {
+			renderedHTML: "",
+			roll: "",
+			critical: null,
+		};
+
+		const data = {
+			actor: {
+				system: {
+					abilities: {
+						cha: {
+							value: 10,
+						},
+						con: {
+							value: 10,
+						},
+						dex: {
+							value: 10,
+						},
+						int: {
+							value: 10,
+						},
+						str: {
+							value: 10,
+						},
+						wis: {
+							value: 10,
+						},
+					},
+					attributes: {
+						hp: {
+							max: 0,
+							value: 0,
+						},
+						ac: {
+							value: 10,
+						},
+					},
+					luck: true,
+					bonuses: {
+						advantage: ["hp", "meleeAttack"],
+						weaponMastery: ["whip", "bastardSword"],
+						meleeAttackBonus: 4,
+						meleeDamageBonus: 1,
+						rangedAttackBonus: 1,
+						rangedDamageBonus: 2,
+						spellcastingCheckBonus: 5,
+					},
+				},
+			},
+			item: {
+				system: {
+					attackBonus: 3,
+					damage: {
+						bonus: 0,
+						numDice: 1,
+						oneHanded: "d8",
+						twoHanded: "d10",
+					},
+					tier: 0, // spells
+					properties: [
+						"finesse",
+						"twoHanded",
+						"versatile",
+					],
+					weaponMastery: false,
+				},
+			},
+		};
+
+		const parts = ["@abilityBonus", "@itemBonus", "@talentBonus"];
+
+		it("returns the correct object structure", async () => {
+			// Mock clicking
+			const responseData = await D20RollSD.RollD20(parts, {}, "");
+			console.log(responseData);
+			expect(Object.keys(responseData).length).equal(3);
+			expect(responseData.renderedHTML).is.not.undefined;
+			expect(responseData.roll).is.not.undefined;
+			expect(responseData.critical).is.not.undefined;
+		});
+
+		it("supplying dice without amount before", async () => {
+			const parts = D20RollSD._rollDice("d8", ["@bonus"], {});
+			expect(parts).contain("1d8");
+			expect(parts).contain("@bonus");
+		});
+
+		it("supplying dice with amount before", async () => {
+			const parts = D20RollSD._rollDice("3d8", ["@bonus"], {});
+			expect(parts).contain("3d8");
+		});
+	});
+
 	// @todo: Write tests
-	describe("_roll()", () => {});
+	describe("_rollD20()", () => {});
 
 	// @todo: Refactor, dice rolling to another module?
 	describe("_rollWeapon()", () => {
-		const data = {};
+		let item;
+
 		before(async () => {
-			data.item = await createMockItemByKey(key, "Weapon");
-			await data.item.update({
+			item = await createMockItemByKey(key, "Weapon");
+			await item.update({
 				"system.properties": ["versatile"],
 				"system.damage": { oneHanded: "d8", twoHanded: "d10", numDice: 1},
 			});
@@ -439,28 +357,49 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 
 		it("normal attack rolls the dice", async () => {
-			data.result = {	critical: null};
-			const rolls = await D20RollSD._rollWeapon(data);
-			expect(rolls.rollPrimaryDamage.terms[0].faces).equal(8);
-			expect(rolls.rollPrimaryDamage.terms[0].number).equal(1);
-			expect(rolls.rollSecondaryDamage.terms[0].faces).equal(10);
-			expect(rolls.rollSecondaryDamage.terms[0].number).equal(1);
+			let data = {
+				item,
+				rolls: {
+					rollD20Result: {
+						critical: null,
+					},
+				},
+			};
+			data = await D20RollSD._rollWeapon(data);
+			expect(data.rolls.rollPrimaryDamage.terms[0].faces).equal(8);
+			expect(data.rolls.rollPrimaryDamage.terms[0].number).equal(1);
+			expect(data.rolls.rollSecondaryDamage.terms[0].faces).equal(10);
+			expect(data.rolls.rollSecondaryDamage.terms[0].number).equal(1);
 		});
 
 		it("critical success doubles the dice", async () => {
-			data.result = {	critical: "success"	};
-			const rolls = await D20RollSD._rollWeapon(data);
-			expect(rolls.rollPrimaryDamage.terms[0].faces).equal(8);
-			expect(rolls.rollPrimaryDamage.terms[0].number).equal(2);
-			expect(rolls.rollSecondaryDamage.terms[0].faces).equal(10);
-			expect(rolls.rollSecondaryDamage.terms[0].number).equal(2);
+			let data = {
+				item,
+				rolls: {
+					rollD20Result: {
+						critical: "success",
+					},
+				},
+			};
+			data = await D20RollSD._rollWeapon(data);
+			expect(data.rolls.rollPrimaryDamage.terms[0].faces).equal(8);
+			expect(data.rolls.rollPrimaryDamage.terms[0].number).equal(2);
+			expect(data.rolls.rollSecondaryDamage.terms[0].faces).equal(10);
+			expect(data.rolls.rollSecondaryDamage.terms[0].number).equal(2);
 		});
 
 		it("critical failure rolls no dice", async () => {
-			data.result = {	critical: "failure"	};
-			const rolls = await D20RollSD._rollWeapon(data);
-			expect(Object.entries(rolls.rollPrimaryDamage).length).equal(0);
-			expect(Object.entries(rolls.rollSecondaryDamage).length).equal(0);
+			let data = {
+				item,
+				rolls: {
+					rollD20Result: {
+						critical: "failure",
+					},
+				},
+			};
+			data = await D20RollSD._rollWeapon(data);
+			expect(data.rolls.rollPrimaryDamage).is.undefined;
+			expect(data.rolls.rollSecondaryDamage).is.undefined;
 		});
 	});
 
