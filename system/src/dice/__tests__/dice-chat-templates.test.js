@@ -3,7 +3,7 @@
  * @file Contains tests for Dice, D20 rolls
  */
 import { cleanUpActorsByKey, cleanUpItemsByKey, createMockActorByKey, createMockItemByKey, waitForInput } from "../../testing/testUtils.mjs";
-import D20RollSD from "../D20RollSD.mjs";
+import RollSD from "../RollSD.mjs";
 
 export const key = "shadowdark.dice.chat-templates";
 export const options = {
@@ -39,7 +39,7 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_getChatCardData(roll, speaker, target=false)", () => {
 		it("normal roll", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "");
+			const chatData = RollSD._getChatCardData(roll, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -60,7 +60,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical success roll", () => {
 			const roll = mockRollResult(20, 20);
-			const chatData = D20RollSD._getChatCardData(roll, "");
+			const chatData = RollD20._getChatCardData(roll, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -81,7 +81,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical failure roll", () => {
 			const roll = mockRollResult(20, 1);
-			const chatData = D20RollSD._getChatCardData(roll, "");
+			const chatData = RollD20._getChatCardData(roll, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -102,7 +102,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("provided a target, determination of success is return", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 12);
+			const chatData = RollD20._getChatCardData(roll, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -123,7 +123,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling under target leads to failure", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 13);
+			const chatData = RollD20._getChatCardData(roll, "", 13);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -145,7 +145,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling equal to target leads to success", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 12);
+			const chatData = RollD20._getChatCardData(roll, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -167,7 +167,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling over target leads to success", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = D20RollSD._getChatCardData(roll, "", 11);
+			const chatData = RollD20._getChatCardData(roll, "", 11);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -203,11 +203,11 @@ export default ({ describe, it, after, before, expect }) => {
 			const title = "test title";
 			data.rolls = {
 				rollD20: mockRollResult(20, 15),
-				rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+				rollD20Result: RollD20._digestResult(mockRollResult(20, 15)),
 				rollPrimaryDamage: mockRollResult(8, 4),
 				rollSecondaryDamage: mockRollResult(10, 7),
 			};
-			templateData = D20RollSD._getChatCardTemplateData(title, data);
+			templateData = RollD20._getChatCardTemplateData(title, data);
 		});
 
 		after(() => {
@@ -258,11 +258,11 @@ export default ({ describe, it, after, before, expect }) => {
 				const title = "test title";
 				data.rolls = {
 					rollD20: mockRollResult(20, 15),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+					rollD20Result: RollD20._digestResult(mockRollResult(20, 15)),
 					rollPrimaryDamage: mockRollResult(8, 4),
 					rollSecondaryDamage: mockRollResult(10, 7),
 				};
-				templateData = D20RollSD._getChatCardTemplateData(title, data);
+				templateData = RollD20._getChatCardTemplateData(title, data);
 				expect(templateData.isSpell).is.false;
 				expect(templateData.isWeapon).is.true;
 				expect(templateData.isVersatile).is.true;
@@ -272,12 +272,12 @@ export default ({ describe, it, after, before, expect }) => {
 				const title = "test title";
 				data.rolls = {
 					rollD20: mockRollResult(20, 20),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 20)),
+					rollD20Result: RollD20._digestResult(mockRollResult(20, 20)),
 					rollPrimaryDamage: mockRollResult(8, 4),
 					rollSecondaryDamage: mockRollResult(10, 7),
 				};
-				data.result = D20RollSD._digestResult(data.rolls.rollD20);
-				templateData = D20RollSD._getChatCardTemplateData(title, data);
+				data.result = RollD20._digestResult(data.rolls.rollD20);
+				templateData = RollD20._getChatCardTemplateData(title, data);
 				expect(templateData.rolls.rollD20Result).is.not.undefined;
 				expect(templateData.critical).is.not.undefined;
 				expect(templateData.critical).equal("success");
@@ -288,12 +288,12 @@ export default ({ describe, it, after, before, expect }) => {
 				const title = "test title";
 				data.rolls = {
 					rollD20: mockRollResult(20, 15),
-					rollD20Result: D20RollSD._digestResult(mockRollResult(20, 15)),
+					rollD20Result: RollD20._digestResult(mockRollResult(20, 15)),
 					rollPrimaryDamage: mockRollResult(8, 4),
 					rollSecondaryDamage: mockRollResult(10, 7),
 				};
-				data.result = D20RollSD._digestResult(data.rolls.rollD20);
-				templateData = D20RollSD._getChatCardTemplateData(title, data);
+				data.result = RollD20._digestResult(data.rolls.rollD20);
+				templateData = RollD20._getChatCardTemplateData(title, data);
 				expect(templateData.isSpell).is.true;
 				expect(templateData.isWeapon).is.false;
 				expect(templateData.isVersatile).is.false;
@@ -312,7 +312,7 @@ export default ({ describe, it, after, before, expect }) => {
 			const data = {};
 			const rollMode = "blindroll";
 			const parts = ["1d20", "1d4"];
-			const dialogData = D20RollSD._getRollDialogData(data, rollMode, parts);
+			const dialogData = RollD20._getRollDialogData(data, rollMode, parts);
 			expect(dialogData.data).equal(data);
 			expect(dialogData.rollMode).equal(rollMode);
 			expect(dialogData.formula).equal("1d20 + 1d4");
