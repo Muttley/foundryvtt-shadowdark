@@ -19,10 +19,13 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 	_getIcon(key) {
 		switch (key) {
 			case "abilityImprovement": return "icons/skills/melee/hand-grip-staff-yellow-brown.webp";
-			case "attackBonus": return "icons/skills/melee/strike-polearm-glowing-white.webp";
-			case "damageBonus": return "icons/skills/melee/strike-axe-blood-red.webp";
+			case "meleeAttackBonus": return "icons/skills/melee/strike-polearm-glowing-white.webp";
+			case "rangedAttackBonus": return "icons/weapons/ammunition/arrow-head-war-flight.webp";
+			case "meleeDamageBonus": return "icons/skills/melee/strike-axe-blood-red.webp";
+			case "rangedDamageBonus": return "icons/skills/melee/strike-axe-blood-red.webp";
 			case "armorBonus": return "icons/magic/defensive/shield-barrier-deflect-teal.webp";
 			case "spellBonus": return "icons/magic/fire/flame-burning-fist-strike.webp";
+			case "hpAdvantage": return "icons/magic/life/cross-area-circle-green-white.webp";
 			case "initAdvantage": return "icons/skills/movement/feet-winged-boots-glowing-yellow.webp";
 			case "spellAdvantage": return "icons/magic/air/air-smoke-casting.webp";
 			case "weaponMastery": return "icons/skills/melee/weapons-crossed-swords-white-blue.webp";
@@ -44,17 +47,33 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 				});
 				break;
 			}
-			case "attackBonus": {
+			case "meleeAttackBonus": {
 				changes.push({
-					key: "system.talent.attackBonus",
+					key: "system.bonuses.meleeAttackBonus",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
-			case "damageBonus": {
+			case "rangedAttackBonus": {
 				changes.push({
-					key: "system.talent.damageBonus",
+					key: "system.bonuses.rangedAttackBonus",
+					value: 1,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				});
+				break;
+			}
+			case "meleeDamageBonus": {
+				changes.push({
+					key: "system.bonuses.meleeDamageBonus",
+					value: 1,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				});
+				break;
+			}
+			case "rangedDamageBonus": {
+				changes.push({
+					key: "system.bonuses.rangedDamageBonus",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
@@ -62,7 +81,7 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			}
 			case "armorBonus": {
 				changes.push({
-					key: "system.talent.acBonus",
+					key: "system.bonuses.acBonus",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
@@ -70,24 +89,32 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			}
 			case "spellBonus": {
 				changes.push({
-					key: "system.talent.spellCheckBonus",
+					key: "system.bonuses.spellcastingCheckBonus",
 					value: 1,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				});
+				break;
+			}
+			case "hpAdvantage": {
+				changes.push({
+					key: "system.bonuses.advantage",
+					value: "hp",
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
 			case "initAdvantage": {
 				changes.push({
-					key: "system.talent.initiativeAdvantage",
-					value: 1,
-					mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+					key: "system.bonuses.advantage",
+					value: "initiative",
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
 			case "spellAdvantage": {
 				changes.push({
-					key: "system.talent.advantageSpells",
-					value: "this.object.system.spellName",
+					key: "system.bonuses.advantage",
+					value: "this.object.system.spellName", // @todo
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
@@ -95,14 +122,14 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			case "weaponMastery": {
 				changes.push({
 					key: "system.talent.weaponMasteryTypes",
-					value: "this.object.system.weaponType",
+					value: "this.object.system.weaponType", // @todo
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
 			case "backstabDie": {
 				changes.push({
-					key: "system.talent.backstabDie",
+					key: "system.bonuses.damageDie",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});

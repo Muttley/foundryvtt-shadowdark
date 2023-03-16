@@ -101,15 +101,18 @@ SHADOWDARK.SPELL_RANGES = {
 
 SHADOWDARK.TALENT_TYPES = {
 	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
-	attackBonus: "SHADOWDARK.talent.type.attack_bonus",
-	damageBonus: "SHADOWDARK.talent.type.damage_bonus",
+	meleeAttackBonus: "SHADOWDARK.talent.type.melee_attack_bonus",
+	rangedAttackBonus: "SHADOWDARK.talent.type.ranged_attack_bonus",
+	meleeDamageBonus: "SHADOWDARK.talent.type.melee_damage_bonus",
+	rangedDamageBonus: "SHADOWDARK.talent.type.ranged_damage_bonus",
 	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
 	spellBonus: "SHADOWDARK.talent.type.spell_bonus",
-	initAdvantage: "SHADOWDARK.talent.type.initiative_advantage",
-	spellAdvantage: "SHADOWDARK.talent.type.spell_advantage",
+	hpAdvantage: "SHADOWDARK.talent.type.advantage.hp",
+	initAdvantage: "SHADOWDARK.talent.type.advantage.initiative",
+	spellAdvantage: "SHADOWDARK.talent.type.advantage.spell",
 	weaponMastery: "SHADOWDARK.talent.type.weapon_mastery",
 	backstabDie: "SHADOWDARK.talent.type.backstab_die",
-	custom: "SHADOWDARK.talent.type.custom",
+	custom: "SHADOWDARK.talent.type.custom"
 };
 
 SHADOWDARK.TALENT_PROPERTIES = {

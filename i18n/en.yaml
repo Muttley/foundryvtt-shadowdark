@@ -210,12 +210,15 @@ SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
 SHADOWDARK.talent.type.ability_improvement: Ability Improvement
 SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
-SHADOWDARK.talent.type.attack_bonus: Attack Roll Bonus
+SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
+SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
 SHADOWDARK.talent.type.custom: Custom Talent
 SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
-SHADOWDARK.talent.type.damage_bonus: Damage Roll Bonus
-SHADOWDARK.talent.type.initiative_advantage: Initiative Advantage
-SHADOWDARK.talent.type.spell_advantage: Spellcasting Advantage
+SHADOWDARK.talent.type.nelee_damage_bonus: Melee Damage Roll Bonus
+SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
+SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
+SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
+SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
