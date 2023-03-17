@@ -44,7 +44,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		it("renders dialog by default", async () => {
 			await closeDialogs();
 			expect(openDialogs().length).equal(0);
-			spell.rollSpell([], 0, 0, 0, {});
+			spell.rollSpell([], {item: spell});
 			await waitForInput();
 			expect(openDialogs().length).equal(1);
 			await openDialogs().pop().close();
@@ -54,7 +54,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		it("rolls and displays chat message", async () => {
 			expect(openDialogs().length).equal(0);
 			expect(game.messages.size).equal(0);
-			spell.rollSpell([], 0, 0, 0, {});
+			spell.rollSpell([], {item: spell});
 			await waitForInput();
 			expect(openDialogs().length).equal(1);
 			await clickNormal();
@@ -65,7 +65,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 
 		it("just rolls when given fastForward options", async () => {
 			expect(openDialogs().length).equal(0);
-			await spell.rollSpell([], 0, 0, 0, { fastForward: true });
+			spell.rollSpell([], {item: spell}, { fastForward: true });
 			await waitForInput();
 			expect(openDialogs().length).equal(0);
 			expect(game.messages.size).equal(1);
@@ -73,42 +73,91 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 
 		describe("ability bonus", () => {
 			it("ignores ability bonus without appropriate parts", async () => {
-				await spell.rollSpell([], 1, 2, 0, { fastForward: true });
+				await spell.rollSpell(
+					[],
+					{
+						item: spell,
+						abilityBonus: 2,
+					},
+					{
+						fastForward: true,
+					}
+				);
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				const chatMessage = game.messages.contents.pop();
-				expect(chatMessage.rolls.pop()._formula).equal("1d20");
+				// @todo: This should probably dig inside chatcard instead
+				const formula = $(".dice-formula")[0].innerText;
+				expect(formula).equal("1d20");
 			});
 
 			it("adds ability bonus with appropriate parts", async () => {
-				await spell.rollSpell(["@abilityBonus"], 1, 2, 0, { fastForward: true });
+				await spell.rollSpell(
+					[
+						"@abilityBonus",
+					],
+					{
+						item: spell,
+						itemBonus: 2,
+						abilityBonus: 1,
+					},
+					{
+						fastForward: true,
+					}
+				);
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				const chatMessage = game.messages.contents.pop();
-				expect(chatMessage.rolls.pop()._formula).equal("1d20 + 1");
+				// @todo: This should probably dig inside chatcard instead
+				const formula = $(".dice-formula")[0].innerText;
+				expect(formula).equal("1d20 + 1");
 			});
 		});
 
 		describe("talent bonus", () => {
 			it("adds talent bonus with appropriate parts", async () => {
-				await spell.rollSpell(["@talentBonus"], 1, 2, 0, { fastForward: true });
+				await spell.rollSpell(
+					[
+						"@talentBonus",
+					],
+					{
+						item: spell,
+						itemBonus: 2,
+						abilityBonus: 1,
+						talentBonus: 3,
+					},
+					{
+						fastForward: true,
+					}
+				);
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				const chatMessage = game.messages.contents.pop();
-				expect(chatMessage.rolls.pop()._formula).equal("1d20 + 2");
+				// @todo: This should probably dig inside chatcard instead
+				const formula = $(".dice-formula")[0].innerText;
+				expect(formula).equal("1d20 + 3");
 			});
 		});
 
 		describe("tier", () => {
 			it("sets the DC appropriately according to spell tier", async () => {
-				await spell.rollSpell([], 0, 0, 3, { fastForward: true });
+				await spell.update({ system: { tier: 3 } } );
+				await spell.rollSpell(
+					[
+						"@talentBonus",
+					],
+					{
+						item: spell,
+					},
+					{
+						fastForward: true,
+					}
+				);
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
 				const chatMessage = game.messages.contents.pop();
+				console.log(chatMessage);
 				expect(chatMessage.flavor.indexOf("at tier 3 with spell DC 13")).not.equal(-1);
 			});
 		});
