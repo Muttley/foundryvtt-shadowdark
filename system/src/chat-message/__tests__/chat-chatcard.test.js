@@ -11,5 +11,5 @@ export const options = {
 export default ({ describe, it, after, before, expect }) => {
 	// @todo: implement these tests when the dice mocking tests are functional
 	//        so we can mock results properly.
-	describe("highlightSuccessFailure(app, html, data)");
+	describe("highlightSuccessFailure(app, html, data)", () => {});
 };
