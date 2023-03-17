@@ -51,6 +51,10 @@ export default class ItemSD extends Item {
 		return card;
 	}
 
+	setLightRemaining(remainingSeconds) {
+		this.update({"system.light.remainingSecs": remainingSeconds});
+	}
+
 	/* -------------------------------------------- */
 	/*  Roll Methods                                */
 	/* -------------------------------------------- */

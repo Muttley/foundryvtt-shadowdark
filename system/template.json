@@ -78,6 +78,7 @@
 			"attributes": {
 				"hp": {
 					"max": 0,
+					"bonus": 0,
 					"value": 0
 				}
 			},
@@ -146,6 +147,13 @@
 				"common",
 				"physical"
 			],
+			"light": {
+				"active": false,
+				"hasBeenUsed": false,
+				"isSource": false,
+				"longevityMins": 60,
+				"remainingSecs": 3600
+			},
 			"treasure": false
 		},
 		"Gem": {
@@ -167,9 +175,6 @@
 			"numAttacks": 1,
 			"type": "physical",
 			"range": "close"
-		},
-		"NPC Talent": {
-			"templates": ["common"]
 		},
 		"Spell": {
 			"templates": ["common"],

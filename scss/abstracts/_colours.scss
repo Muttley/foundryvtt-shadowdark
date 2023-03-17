@@ -1,6 +1,7 @@
 $primary-color: black !default;
 $secondary-color: #78557e !default;
 $form-background-color: #0000000a !default;
+$inactive-control: #A0A09A !default;
 
 $clickable: red !default;
 
@@ -9,4 +10,5 @@ $clickable: red !default;
 	--secondary: #{$secondary-color};
 	--clickable: #{$clickable};
 	--form-background: #{$form-background-color};
+	--inactive-control: #{$inactive-control};
 }

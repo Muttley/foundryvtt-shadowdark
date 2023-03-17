@@ -1,0 +1,33 @@
+<div class="light-source">
+		<label>{{localize 'SHADOWDARK.item.light.is_source'}}</label>
+		<input
+			type="checkbox"
+			name="system.light.isSource"
+			{{checked system.light.isSource}}
+		>
+</div>
+{{#if item.system.light.isSource}}
+	<div class="coin-box">
+		<label>{{localize 'SHADOWDARK.item.light.longevity'}}</label>
+		<div class="coin-value">
+			<input
+				type="number"
+				value={{item.system.light.longevityMins}}
+				name="system.light.longevityMins"
+				{{#if item.system.light.hasBeenUsed}}
+					disabled
+				{{/if}}
+			>
+		</div>
+	</div>
+	<div class="coin-box">
+		<label>{{localize 'SHADOWDARK.item.light.remaining'}}</label>
+		<div class="coin-value">
+			<input
+				type="number"
+				value={{lightRemainingMins}}
+				disabled
+			>
+		</div>
+	</div>
+{{/if}}

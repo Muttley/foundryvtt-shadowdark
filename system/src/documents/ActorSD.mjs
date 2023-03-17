@@ -125,6 +125,13 @@ export default class ActorSD extends Actor {
 		return await this.updateArmorClass();
 	}
 
+	async isClaimedByUser() {
+		// Check that the Actor is claimed by a User
+		return game.users.find(user => user.character?.id === this.id)
+			? true
+			: false;
+	}
+
 	numGearSlots() {
 		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
 
@@ -179,6 +186,20 @@ export default class ActorSD extends Actor {
 	/* -------------------------------------------- */
 	/*  Selling Methods                             */
 	/* -------------------------------------------- */
+
+	async getActiveLightSources() {
+		const items = this.items.filter(
+			item => item.type === "Basic"
+		).filter(
+			item => item.system.light.isSource && item.system.light.active
+		);
+
+		return items;
+	}
+
+	async hasNoActiveLightSources() {
+		return this.getActiveLightSources.length <= 0;
+	}
 
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");

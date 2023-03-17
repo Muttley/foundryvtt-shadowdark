@@ -1,6 +1,5 @@
 import SHADOWDARK from "./src/config.mjs";
 import loadTemplates from "./src/templates.mjs";
-import onUpdateWorldTime from "./src/time.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 
@@ -8,6 +7,7 @@ import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
+
 import onRenderchatMessage from "./src/chat-message/ChatCardSD.mjs";
 
 import "./src/testing/index.mjs";
@@ -37,10 +37,11 @@ Hooks.once("init", () => {
 		globalThis.shadowdark
 	);
 
-	console.log("Shadowdark | Initialising the Shadowdark RPG Game System");
+	console.log("Shadowdark RPG | Initialising the Shadowdark RPG Game System");
 
 	game.shadowdark = {
 		config: SHADOWDARK,
+		lightSourceTracker: new apps.LightSourceTrackerSD(),
 	};
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
@@ -81,7 +82,25 @@ Hooks.once("init", () => {
 // A hook event that fires when the game is fully ready.
 //
 Hooks.on("ready", () => {
-	console.log("Shadowdark | Game Ready");
+
+	// Hooks used by the Light Source Tracker
+	const lst = game.shadowdark.lightSourceTracker;
+	if (game.user.isGM) {
+		game.shadowdark.lightSourceTracker.start();
+		Hooks.on("deleteItem", lst._onDeleteItem.bind(lst));
+		Hooks.on("userConnected", lst._onUserConnected.bind(lst));
+	}
+
+	game.socket.on("system.shadowdark", event => {
+		if (event.type === "toggleLightSource" && game.user.isGM) {
+			game.shadowdark.lightSourceTracker.toggleLightSource(
+				event.data.actor,
+				event.data.item
+			);
+		}
+	});
+
+	console.log("Shadowdark RPG | Game Ready");
 });
 
 /* -------------------------------------------- */
@@ -93,7 +112,7 @@ Hooks.on("ready", () => {
 // or the Canvas have been initialized.
 //
 Hooks.once("setup", () => {
-	console.log("Shadowdark | Setup Hook");
+	console.log("Shadowdark RPG | Setup Hook");
 
 	// Localize all the strings in the game config in advance
 	//
@@ -112,5 +131,4 @@ Hooks.once("setup", () => {
 	}
 });
 
-Hooks.on("updateWorldTime", onUpdateWorldTime);
 Hooks.on("renderChatMessage", onRenderchatMessage);
