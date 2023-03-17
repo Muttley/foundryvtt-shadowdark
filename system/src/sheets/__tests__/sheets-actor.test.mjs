@@ -271,7 +271,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 			const item = await createMockItem("Basic");
 			await item.update({"system.treasure": true});
-			[actorItem] = await actor.createEmbeddedDocuments("Item", [item]);
+			await actor.createEmbeddedDocuments("Item", [item]);
 			await item.delete();
 		});
 

@@ -59,55 +59,16 @@ export default class ItemSD extends Item {
 	/*  Roll Methods                                */
 	/* -------------------------------------------- */
 
-	async rollItem(
-		parts,
-		abilityBonus,
-		itemBonus,
-		talentBonus,
-		damageParts,
-		damageTalentBonus,
-		damageDieTalentBonus,
-		options={}
-	) {
-		const title = game.i18n.format("SHADOWDARK.chat.item_roll.title", {name: this.name});
-		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-
-		await CONFIG.Dice.D20RollSD.d20Roll({
-			parts,
-			damageParts,
-			data: {
-				abilityBonus,
-				itemBonus,
-				talentBonus,
-				damageTalentBonus,
-				damageDieTalentBonus,
-				item: this,
-			},
-			title,
-			speaker,
-			dialogTemplate: "systems/shadowdark/templates/dialog/roll-item-dialog.hbs",
-			chatCardTemplate: "systems/shadowdark/templates/chat/item-card.hbs",
-			fastForward: options.fastForward ?? false,
-		});
+	async rollItem(parts, data, options={}) {
+		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
 	}
 
-	async rollSpell(parts, abilityBonus, talentBonus, tier, options={}) {
-		const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-		const spellDC = 10 + tier;
-
-		const title = game.i18n.format("SHADOWDARK.chat.spell_roll.title", {name: this.name, tier, spellDC});
-
-		await CONFIG.Dice.D20RollSD.d20Roll({
-			parts,
-			data: { abilityBonus, talentBonus, item: this },
-			title,
-			speaker,
-			isAttack: true,
-			targetValue: spellDC,
-			dialogTemplate: "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs",
-			chatCardTemplate: "systems/shadowdark/templates/chat/item-card.hbs",
-			fastForward: options.fastForward ?? false,
-		});
+	async rollSpell(parts, data, options={}) {
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
 	}
 
 	/* -------------------------------------------- */
@@ -129,12 +90,12 @@ export default class ItemSD extends Item {
 		return this.type === "Talent";
 	}
 
-	isMagicItem() {
-		return this.hasProperty("magic");
-	}
-
 	isWeapon() {
 		return this.type === "Weapon";
+	}
+
+	isMagicItem() {
+		return this.hasProperty("magic");
 	}
 
 	isVersatile() {

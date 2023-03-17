@@ -32,8 +32,11 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
+SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class.fighter: Fighter
 SHADOWDARK.class.priest: Priest
 SHADOWDARK.class.thief: Thief
@@ -150,6 +153,7 @@ SHADOWDARK.roll.advantage_title: '{title} with Advantage'
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
+SHADOWDARK.roll.D20: Roll D20
 SHADOWDARK.roll.damage: 'Damage Roll:'
 SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
 SHADOWDARK.roll.disadvantage: Disadvantage
@@ -209,13 +213,17 @@ SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
 SHADOWDARK.talent.type.ability_improvement: Ability Improvement
+SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
+SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
+SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
+SHADOWDARK.talent.type.advantage.title: Advantage Bonus
 SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
-SHADOWDARK.talent.type.attack_bonus: Attack Roll Bonus
-SHADOWDARK.talent.type.custom: Custom Talent
 SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
-SHADOWDARK.talent.type.damage_bonus: Damage Roll Bonus
-SHADOWDARK.talent.type.initiative_advantage: Initiative Advantage
-SHADOWDARK.talent.type.spell_advantage: Spellcasting Advantage
+SHADOWDARK.talent.type.custom: Custom Talent
+SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
+SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
+SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
+SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
 SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
