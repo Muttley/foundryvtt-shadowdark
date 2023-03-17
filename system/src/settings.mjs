@@ -15,14 +15,6 @@ export default function registerSystemSettings() {
 		default: 0, // TODO sensible default
 	});
 
-	game.settings.register("shadowdark", "lightSources", {
-		name: "lightSources",
-		scope: "world",
-		config: false,
-		default: [],
-		type: Array,
-	});
-
 	// -----------------------
 	//  CONFIGURABLE SETTINGS
 	// -----------------------
@@ -35,9 +27,7 @@ export default function registerSystemSettings() {
 		default: true,
 		type: Boolean,
 		requiresReload: true,
-		onChange: value => {
-			game.shadowdark.lightSourceTracker._onTrackerEnabledToggle(value);
-		},
+		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
 	game.settings.register("shadowdark", "trackLightSourcesOpen", {
@@ -56,6 +46,17 @@ export default function registerSystemSettings() {
 		config: true,
 		default: false,
 		type: Boolean,
+		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
+	});
+
+	game.settings.register("shadowdark", "pauseLightTrackingWithGame", {
+		name: "SHADOWDARK.settings.track_light_sources.pause_with_game.name",
+		hint: "SHADOWDARK.settings.track_light_sources.pause_with_game.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
 	game.settings.register("shadowdark", "trackLightSourcesInterval", {

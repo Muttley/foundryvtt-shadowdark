@@ -86,8 +86,10 @@ Hooks.on("ready", () => {
 	const lst = game.shadowdark.lightSourceTracker;
 	if (game.user.isGM) {
 		game.shadowdark.lightSourceTracker.start();
-		Hooks.on("deleteItem", lst._onDeleteItem.bind(lst));
-		Hooks.on("userConnected", lst._onUserConnected.bind(lst));
+		Hooks.on("deleteItem", lst._updateLightSources.bind(lst));
+		Hooks.on("deleteActor", lst._updateLightSources.bind(lst));
+		Hooks.on("pauseGame", lst._updateLightSources.bind(lst));
+		Hooks.on("userConnected", lst._updateLightSources.bind(lst));
 	}
 
 	game.socket.on("system.shadowdark", event => {
