@@ -15,9 +15,9 @@ export default function registerSystemSettings() {
 		default: 0, // TODO sensible default
 	});
 
-	// -----------------------
-	//  CONFIGURABLE SETTINGS
-	// -----------------------
+	// ------------------------
+	//  LIGHT TRACKER SETTINGS
+	// ------------------------
 	//
 	game.settings.register("shadowdark", "trackLightSources", {
 		name: "SHADOWDARK.settings.track_light_sources.name",

@@ -27,6 +27,11 @@ export default class LightSourceTrackerSD extends Application {
 		return "systems/shadowdark/templates/apps/light-tracker.hbs";
 	}
 
+	/** @inheritdoc */
+	get title() {
+		return game.i18n.localize("SHADOWDARK.app.light_tracker.title");
+	}
+
 	/** @override */
 	async getData(options) {
 		const context = {
@@ -136,6 +141,7 @@ export default class LightSourceTrackerSD extends Application {
 			this.monitoredLightSources[actor.id] = {
 				actorId: actor.id,
 				actorName: actor.name,
+				actorImg: actor.img,
 				lightSources: {},
 			};
 

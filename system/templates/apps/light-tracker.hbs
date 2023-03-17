@@ -1,20 +1,68 @@
 <form class="{{cssClass}}" autocomplete="off">
 	<header>
-		<h1>Light Source Tracker</h1>
-		{{#if paused}}
-			<h3 style="color: red; text-align:center;">Paused</h3>
-		{{/if}}
+		<div class="title">
+			<span class="title__prefix">
+				{{localize 'SHADOWDARK.light-tracker.title.prefix'}}
+			</span>
+			<span class="title__suffix">
+				{{localize 'SHADOWDARK.light-tracker.title.suffix'}}
+			</span>
+		</div>
+		<div class="status">
+			<p class="status__label">
+				{{localize 'SHADOWDARK.light-tracker.status.label'}}:
+			</p>
+			<p class="status__value">
+			{{#if paused}}
+				<i
+					class="status__paused fa-solid fa-circle-pause"
+					text={{localize 'SHADOWDARK.light-tracker.paused'}}
+				>
+				</i>
+				Paused
+			{{else}}
+				<i
+					class="status__active fa-solid fa-circle-play"
+					text={{localize 'SHADOWDARK.light-tracker.active'}}
+				>
+				</i>
+				Active
+			{{/if}}
+			</p>
+		</div>
 	</header>
+	<hr />
 	<section class="light-sources">
 		{{#each monitoredLightSources as |user|}}
-			<div class="light-source-owner">
-				<p><b>{{user.actorName}}</b></p>
-				<ol>
-					{{#each user.lightSources as |lightSource key|}}
-						<li>{{lightSource.name}} ({{secondsToMins lightSource.light.remainingSecs}} minutes remaining)</li>
-					{{/each}}
-				</ol>
+			<div class="character">
+				<div class="character-portrait">
+					<img
+						src="{{user.actorImg}}"
+						title="{{user.actorName}}"
+						height="64"
+						width="64"
+					/>
+				</div>
+				<div class="character-name">
+					{{user.actorName}}
+				</div>
+				<div>
+					<ol>
+						{{#each user.lightSources as |lightSource key|}}
+							<li>
+								{{lightSource.name}}
+								({{secondsToMins lightSource.light.remainingSecs}}
+								{{#ifCond lightSource.light.remainingSecs '<=' 60}}
+									{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
+								{{else}}
+									{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
+								{{/ifCond}}
+							</li>
+						{{/each}}
+					</ol>
+				</div>
 			</div>
 		{{/each}}
 	</section>
+	<button>Turn Out the Lights</button>
 </form>
