@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  {{#if data.item.isSpell}}
+  {{#if isSpell}}
   {{#ifEq critical "success"}}
   <div class="card-spell-critical">
     <p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
@@ -70,7 +70,7 @@
     {{/each}}
     <span></span>
     {{/if}}
-    {{#if data.item.isSpell}}
+    {{#if isSpell}}
     <span>{{localize "SHADOWDARK.item.spell_tier"}}: {{ data.item.system.tier }}</span>
     <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{fromConfig "SPELL_DURATIONS"  data.item.system.duration.type }}</span>
     <span>{{localize "SHADOWDARK.item.spell_range"}}: {{fromConfig "SPELL_RANGES" data.item.system.range }}</span>
