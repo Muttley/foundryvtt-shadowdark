@@ -82,6 +82,17 @@
 				}
 			},
 			"background": "",
+			"bonuses": {
+				"acBonus": 0,
+				"advantage": [],
+				"weaponMastery": [],
+				"meleeAttackBonus": 0,
+				"meleeDamageBonus": 0,
+				"rangedAttackBonus": 0,
+				"rangeDamageBonus": 0,
+				"spellcastingCheckBonus": 0,
+				"damageDie": 0
+			},
 			"class": "",
 			"coins": {
 				"gp": 0,
