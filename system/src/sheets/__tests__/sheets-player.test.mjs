@@ -87,7 +87,7 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actor.sheet.options.tabs[0].contentSelector).is.not.undefined;
 			expect(actor.sheet.options.tabs[0].contentSelector).equal(".player-body");
 			expect(actor.sheet.options.tabs[0].initial).is.not.undefined;
-			expect(actor.sheet.options.tabs[0].initial).equal("pc-tab-abilities");
+			expect(actor.sheet.options.tabs[0].initial).equal("tab-abilities");
 		});
 
 		after(async () => {
