@@ -12,11 +12,14 @@ export default class RollSD extends Roll {
 	 * @returns {Promise}			- Promise for...
 	 */
 	static async RollD20(parts, data, $form, adv=0, options={}) {
-		// Augment data with form bonuses
-		const formBonuses = this._getBonusesFromFrom($form);
+		// If the dice has been fastForwarded, there is no form
+		if (!options.fastForward) {
+			// Augment data with form bonuses
+			const formBonuses = this._getBonusesFromFrom($form);
 
-		// Combine bonuses from form with the data
-		data = foundry.utils.mergeObject(data, formBonuses);
+			// Combine bonuses from form with the data
+			data = foundry.utils.mergeObject(data, formBonuses);
+		}
 
 		options.rollMode = $form ? this._getRollModeFromForm($form) : game.settings.get("core", "rollMode");
 
@@ -28,11 +31,21 @@ export default class RollSD extends Roll {
 		// Weapon? -> Roll Damage dice
 		if (data.item?.isWeapon()) {
 			data = await this._rollWeapon(data);
+			if (!options.flavor) options.flavor = game.i18n.format("SHADOWDARK.chat.item_roll.title", {name: data.item.name});
 		}
 
 		// Spell? -> Set a target
 		if (data.item?.isSpell()) {
 			options.target = data.item.system.tier + 10;
+			if (!options.flavor) {
+				options.flavor = game.i18n.format(
+					"SHADOWDARK.chat.spell_roll.title",
+					{
+						name: data.item.name,
+						tier: data.item.system.tier,
+						spellDC: options.target,
+					});
+			}
 		}
 
 		// Store the advantage for generating chat card
@@ -250,6 +263,10 @@ export default class RollSD extends Roll {
 		let content;
 		content = await this._getRollDialogContent(parts, data, options);
 
+		if ( options.fastForward ) {
+			return await this.RollD20(parts, data, false, 0, options);
+		}
+
 		return new Promise(resolve => {
 			let roll;
 			new Dialog(
@@ -302,7 +319,6 @@ export default class RollSD extends Roll {
 		const chatData = {
 			user: game.user.id,
 			speaker: speaker,
-			flavor: "bob",
 			flags: {
 				isRoll: true,
 				"core.canPopout": true,
@@ -330,7 +346,11 @@ export default class RollSD extends Roll {
 			isVersatile: false,
 			critical: data.rolls.d20.critical,
 			rolls: data.rolls,
+			isRoll: true,
 		};
+		if (data.rolls.d20) {
+			templateData._formula = data.rolls.d20._formula;
+		}
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
 			templateData.isWeapon = data.item.isWeapon();
@@ -370,11 +390,13 @@ export default class RollSD extends Roll {
 			if ( options.rollMode === "blindroll" ) chatData.blind = true;
 			chatData.content = content;
 
-			// Determine the flavor of the chat card
-			switch (data.adv) {
-				case 1: chatData.flavor = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: options.flavor }); break;
-				case -1: chatData.flavor = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: options.flavor }); break;
-				default: chatData.flavor = options.flavor;
+			// Modify the flavor of the chat card
+			if (options.flavor) {
+				chatData.flavor = options.flavor;
+				switch (data.adv) {
+					case 1: chatData.flavor = game.i18n.format("SHADOWDARK.roll.advantage_title", { title: options.flavor }); break;
+					case -1: chatData.flavor = game.i18n.format("SHADOWDARK.roll.disadvantage_title", { title: options.flavor }); break;
+				}
 			}
 
 			// Integration with Dice So Nice

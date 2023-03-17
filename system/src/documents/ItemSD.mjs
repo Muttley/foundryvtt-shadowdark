@@ -56,7 +56,6 @@ export default class ItemSD extends Item {
 	/* -------------------------------------------- */
 
 	async rollItem(parts, data, options={}) {
-		options.flavor = game.i18n.format("SHADOWDARK.chat.item_roll.title", {name: this.name});
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
@@ -65,7 +64,6 @@ export default class ItemSD extends Item {
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-
 		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
 	}
 

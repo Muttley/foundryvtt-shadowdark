@@ -2,7 +2,6 @@
 /**
  * @file Contains tests for Dice
  */
-import { cleanUpActorsByKey, cleanUpItemsByKey, createMockActorByKey, createMockItemByKey, waitForInput } from "../../testing/testUtils.mjs";
 import RollSD from "../RollSD.mjs";
 
 export const key = "shadowdark.dice";
@@ -419,6 +418,25 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(response.roll.terms[0].faces).equal(20);
 			expect(response.critical).is.not.undefined;
 		});
+
+		it("rolling with dice parts and bonuses", async () => {
+			const parts = ["@abilityBonus", "@itemBonus", "@talentBonus"];
+			const response = await RollSD._rollD20(
+				parts,
+				{ abilityBonus: "1d12", itemBonus: "3d4" }
+			);
+			expect(response.renderedHTML).is.not.undefined;
+			expect(response.roll).is.not.undefined;
+			expect(response.roll.formula).equal("1d20 + 1d12 + 3d4");
+			expect(response.roll.terms.length).equal(5);
+			expect(response.roll.terms[0].number).equal(1);
+			expect(response.roll.terms[0].faces).equal(20);
+			expect(response.roll.terms[2].number).equal(1);
+			expect(response.roll.terms[2].faces).equal(12);
+			expect(response.roll.terms[4].number).equal(3);
+			expect(response.roll.terms[4].faces).equal(4);
+			expect(response.critical).is.not.undefined;
+		});
 	});
 
 	/* -------------------------------------------- */
@@ -474,13 +492,5 @@ export default ({ describe, it, after, before, expect }) => {
 			const response = await RollSD._rollWeapon(mockItemData);
 			expect(Object.keys(response.rolls).length).equal(1);
 		});
-	});
-
-	describe("Spell Rolling", () => {
-		it("", async () => {});
-	});
-
-	describe("Ability Rolling", () => {
-		it("", async () => {});
 	});
 };

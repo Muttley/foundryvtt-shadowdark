@@ -238,10 +238,11 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has level", () => {
 			expect(actor.system.level).is.not.undefined;
 		});
-		it("has movement", () => {
-			expect(actor.system.movement).is.not.undefined;
+		it("has move", () => {
+			expect(actor.system.move).is.not.undefined;
 		});
 		// Expecting attacks to be items rather than system data
+		// @todo: Write tests for attacks
 
 		after(async () => {
 			await actor.delete();

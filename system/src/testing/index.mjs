@@ -8,6 +8,7 @@ import chatChatcardTests, {
 	options as chatChatcardOptions,
 } from "../chat-message/__tests__/chat-chatcard.test.js";
 
+/* Dice Import */
 import diceTests, {
 	key as diceKey,
 	options as diceOptions,
@@ -30,6 +31,10 @@ import documentsItemsSpellsTests, {
 	key as documentsItemsSpellsKey,
 	options as documentsItemsSpellsOptions,
 } from "../documents/__tests__/documents-item-spell.test.mjs";
+import documentsItemsTalentTests, {
+	key as documentsItemsTalentKey,
+	options as documentsItemsTalentOptions,
+} from "../documents/__tests__/documents-item-talent.test.mjs";
 
 /* Sheet Imports */
 import sheetsActorTests, {
@@ -46,7 +51,7 @@ import sheetsPlayerTests, {
 } from "../sheets/__tests__/sheets-player.test.mjs";
 
 /* Apps import */
-
+// @todo: Write tests
 
 Hooks.on("quenchReady", async quench => {
 	// Utils test
@@ -55,6 +60,8 @@ Hooks.on("quenchReady", async quench => {
 		chatChatcardTests,
 		chatChatcardOptions
 	);
+
+	// Dice test
 	quench.registerBatch(
 		diceKey,
 		diceTests,
@@ -81,6 +88,11 @@ Hooks.on("quenchReady", async quench => {
 		documentsItemsSpellsKey,
 		documentsItemsSpellsTests,
 		documentsItemsSpellsOptions
+	);
+	quench.registerBatch(
+		documentsItemsTalentKey,
+		documentsItemsTalentTests,
+		documentsItemsTalentOptions
 	);
 
 	// Sheet tests
