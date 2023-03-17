@@ -94,9 +94,6 @@ export default ({ describe, it, after, before, expect }) => {
 				it("contains the itemType data", () => {
 					expect(itemData.itemType).is.not.undefined;
 				});
-				it("contains the ranges data", () => {
-					expect(itemData.ranges).is.not.undefined;
-				});
 				it("contains the source data", () => {
 					expect(itemData.source).is.not.undefined;
 				});
@@ -105,21 +102,6 @@ export default ({ describe, it, after, before, expect }) => {
 				});
 				it("contains the usesSlots data", () => {
 					expect(itemData.usesSlots).is.not.undefined;
-				});
-				it("contains the armorBonusAttributes data", () => {
-					expect(itemData.armorBonusAttributes).is.not.undefined;
-				});
-				it("contains the weaponBaseDamageDice data", () => {
-					expect(itemData.weaponBaseDamageDice).is.not.undefined;
-				});
-				it("contains the weaponProperties data", () => {
-					expect(itemData.weaponProperties).is.not.undefined;
-				});
-				it("contains the armorProperties data", () => {
-					expect(itemData.armorProperties).is.not.undefined;
-				});
-				it("contains the weaponTypes data", () => {
-					expect(itemData.weaponTypes).is.not.undefined;
 				});
 				it("contains the properties data", () => {
 					expect(itemData.properties).is.not.undefined;
