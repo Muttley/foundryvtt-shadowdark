@@ -62,6 +62,26 @@ export default class ItemSheetSD extends ItemSheet {
 			usesSlots: item.system.slots !== undefined,
 		});
 
+		if (item.type === "Basic" && item.system.light.isSource) {
+			if (!item.system.light.hasBeenUsed) {
+				// Unused light sources should always have their remaining time
+				// at maximum
+				const maxRemaining = item.system.light.longevityMins * 60; // seconds
+
+				if (item.system.light.remainingSecs !== maxRemaining) {
+					item.setLightRemaining(maxRemaining);
+					item.system.light.remainingSecs = maxRemaining;
+				}
+
+				context.lightRemainingMins = item.system.light.longevityMins;
+			}
+			else {
+				context.lightRemainingMins = Math.ceil(
+					item.system.light.remainingSecs / 60
+				);
+			}
+		}
+
 		context.propertiesDisplay = item.propertiesDisplay();
 		if (item.type === "Talent" || item.type === "Spell") {
 			// Effects

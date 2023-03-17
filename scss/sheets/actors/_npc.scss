@@ -6,6 +6,10 @@
 	color: white;
 	font-size: 18px;
 
+	.editor {
+		min-height: 415px;
+	}
+
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";

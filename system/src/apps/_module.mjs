@@ -6,3 +6,5 @@ export {default as WeaponPropertiesSD} from "./WeaponPropertiesSD.mjs";
 export {default as TalentTypesSD} from "./TalentTypesSD.mjs";
 
 export {default as GemBagSD} from "./GemBagSD.mjs";
+
+export {default as LightSourceTrackerSD} from "./LightSourceTrackerSD.mjs";

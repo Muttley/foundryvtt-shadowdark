@@ -78,6 +78,7 @@
 			"attributes": {
 				"hp": {
 					"max": 0,
+					"bonus": 0,
 					"value": 0
 				}
 			},
@@ -120,17 +121,6 @@
 			"Weapon"
 		],
 		"templates": {
-			"attacks": {
-				"attackBonus": 0,
-				"damage": {
-					"bonus": 0,
-					"oneHanded": "",
-					"twoHanded": "",
-					"numDice": 1
-				},
-				"range": "close",
-				"type": "melee"
-			},
 			"common": {
 				"description": "",
 				"properties": []
@@ -168,6 +158,13 @@
 				"common",
 				"physical"
 			],
+			"light": {
+				"active": false,
+				"hasBeenUsed": false,
+				"isSource": false,
+				"longevityMins": 60,
+				"remainingSecs": 3600
+			},
 			"treasure": false
 		},
 		"Gem": {
@@ -178,9 +175,17 @@
 		},
 		"NPC Attack": {
 			"templates": [
-				"attacks",
 				"common"
-			]
+			],
+			"damage": {
+				"bonus": 0,
+				"numDice": 1,
+				"value": "d4"
+
+			},
+			"numAttacks": 1,
+			"type": "physical",
+			"range": "close"
 		},
 		"Spell": {
 			"templates": ["common"],
@@ -199,11 +204,19 @@
 		},
 		"Weapon": {
 			"templates": [
-				"attacks",
 				"physical",
 				"common"
 			],
+			"attackBonus": 0,
 			"canBeEquipped": true,
+			"damage": {
+				"bonus": 0,
+				"oneHanded": "",
+				"twoHanded": "",
+				"numDice": 1
+			},
+			"range": "close",
+			"type": "melee",
 			"weaponMastery": false
 		}
 	}

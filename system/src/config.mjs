@@ -51,19 +51,6 @@ SHADOWDARK.INVENTORY = {
 	GEMS_PER_SLOT: 10,
 };
 
-SHADOWDARK.RANGES = {
-	close: "SHADOWDARK.range.close",
-	near: "SHADOWDARK.range.near",
-	far: "SHADOWDARK.range.far",
-};
-
-SHADOWDARK.RANGES_SHORT = {
-	close: "SHADOWDARK.range.close_short",
-	near: "SHADOWDARK.range.near_short",
-	far: "SHADOWDARK.range.far_short",
-	self: "SHADOWDARK.range.self_short",
-};
-
 SHADOWDARK.LANGUAGES = {
 	celestial: "SHADOWDARK.language.celestial",
 	common: "SHADOWDARK.language.common",
@@ -79,6 +66,24 @@ SHADOWDARK.LANGUAGES = {
 	reptilian: "SHADOWDARK.language.reptilian",
 	sylvan: "SHADOWDARK.language.sylvan",
 	thanian: "SHADOWDARK.language.thanian",
+};
+
+SHADOWDARK.NPC_ATTACK_TYPES = {
+	physical: "SHADOWDARK.npc_attack.type.physical",
+	ability: "SHADOWDARK.npc_attack.type.ability",
+};
+
+SHADOWDARK.RANGES = {
+	close: "SHADOWDARK.range.close",
+	near: "SHADOWDARK.range.near",
+	far: "SHADOWDARK.range.far",
+};
+
+SHADOWDARK.RANGES_SHORT = {
+	close: "SHADOWDARK.range.close_short",
+	near: "SHADOWDARK.range.near_short",
+	far: "SHADOWDARK.range.far_short",
+	self: "SHADOWDARK.range.self_short",
 };
 
 SHADOWDARK.SPELL_CASTER_CLASSES = {

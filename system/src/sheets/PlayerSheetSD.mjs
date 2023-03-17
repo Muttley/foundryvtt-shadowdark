@@ -22,6 +22,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					initial: "tab-abilities",
 				},
 			],
+			dragDrop: [{
+				dragSelector: ".item[draggable=true]",
+			}],
 		});
 	}
 
@@ -44,6 +47,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find(".item-toggle-light").click(
+			event => this._onToggleLightSource(event)
+		);
+
 		html.find(".language-list.languages").click(
 			event => this._onKnownLanguages(event)
 		);
@@ -59,7 +66,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		html.find(".toggle-spell-lost").click(
 			event => this._onToggleSpellLost(event)
 		);
-
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
@@ -172,6 +178,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _onToggleEquipped(event) {
 		event.preventDefault();
+
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
@@ -183,6 +190,37 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		]);
 
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
+	}
+
+	async _onToggleLightSource(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		const active = !item.system.light.active;
+		const dataUpdate = {
+			_id: itemId,
+			"system.light.active": active,
+		};
+
+		if (!item.system.light.hasBeenUsed) {
+			dataUpdate["system.light.hasBeenUsed"] = true;
+		}
+
+		const [updatedLight] = await this.actor.updateEmbeddedDocuments(
+			"Item", [dataUpdate]
+		);
+
+		// We only update the Light Source Tracker if this Actor is currently
+		// selected by a User as their character
+		//
+		if (this.actor.isClaimedByUser()) {
+			game.shadowdark.lightSourceTracker.toggleLightSource(
+				this.actor,
+				updatedLight
+			);
+		}
 	}
 
 	async _onToggleSpellLost(event) {
@@ -248,6 +286,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					: i.type.toLowerCase();
 
 				inventory[section].items.push(i);
+
+				if (i.type === "Basic" && i.system.light.isSource) {
+					i.isLightSource = true;
+					i.lightSourceActive = i.system.light.active;
+					i.lightSourceUsed = i.system.light.hasBeenUsed;
+
+					const timeRemaining = Math.ceil(
+						i.system.light.remainingSecs / 60
+					);
+
+					i.lightSourceTimeRemaining = game.i18n.format(
+						"SHADOWDARK.inventory.item.light_remaining",
+						{ timeRemaining }
+					);
+				}
 
 				if (i.type === "Weapon" && i.system.equipped) {
 					const weaponAttacks = await this.actor.buildWeaponDisplays(i._id);

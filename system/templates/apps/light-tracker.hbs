@@ -1,0 +1,20 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header>
+		<h1>Light Source Tracker</h1>
+		{{#if paused}}
+			<h3 style="color: red; text-align:center;">Paused</h3>
+		{{/if}}
+	</header>
+	<section class="light-sources">
+		{{#each monitoredLightSources as |user|}}
+			<div class="light-source-owner">
+				<p><b>{{user.actorName}}</b></p>
+				<ol>
+					{{#each user.lightSources as |lightSource key|}}
+						<li>{{lightSource.name}} ({{secondsToMins lightSource.light.remainingSecs}} minutes remaining)</li>
+					{{/each}}
+				</ol>
+			</div>
+		{{/each}}
+	</section>
+</form>

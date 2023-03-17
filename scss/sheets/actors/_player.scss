@@ -277,12 +277,10 @@
 			// Only highlight on hover rows that have actual items in them,
 			// not the section headers or header/footer rows
 			//
-			& tr:not(
-				:first-child,
+			& tr:not(:first-child,
 				:nth-last-child(2),
 				:last-child,
-				.inventory-section-header
-			) {
+				.inventory-section-header) {
 				font-size: 13px;
 
 				&:hover {
@@ -306,15 +304,23 @@
 	}
 
 	.item-toggle-equipped {
-		color: #A0A09A;
+		color: var(--inactive-control);
 
 		&.equipped {
 			color: black;
 		}
 	}
 
+	.item-toggle-light {
+		color: var(--inactive-control);
+
+		&.lit {
+			color: darkorange;
+		}
+	}
+
 	.inactive {
-		color: #A0A09A;
+		color: var(--inactive-control);
 	}
 
 	.language-list {
@@ -418,7 +424,7 @@
 	}
 
 	.sell-treasure {
-		color: #A0A09A;
+		color: var(--inactive-control);
 
 		&:hover {
 			color: gold;
@@ -496,10 +502,8 @@
 			// Only highlight on hover rows that have actual items in them,
 			// not the section headers or header/footer rows
 			//
-			& tr:not(
-				:first-child,
-				.spell-tier-header
-			) {
+			& tr:not(:first-child,
+				.spell-tier-header) {
 				font-size: 14px;
 
 				&:hover {

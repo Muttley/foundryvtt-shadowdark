@@ -16,7 +16,7 @@
 						<th>&nbsp;</th>
 					</tr>
 					{{#each section.items as |item|}}
-						<tr class="item" data-item-id="{{item._id}}">
+						<tr class="item" data-item-id="{{item._id}}" draggable="true">
 							<td>
 								<div
 									class="item-image {{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}"
@@ -28,8 +28,16 @@
 								<a
 									class="item-control open-item"
 									data-item-id="{{item._id}}"
+									{{#if item.isLightSource}}
+										title="{{lightSourceTimeRemaining}}"
+									{{/if}}
 								>
 									{{item.name}}
+									{{#if item.isLightSource}}
+										{{#if item.lightSourceUsed}}
+											<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
+										{{/if}}
+									{{/if}}
 								</a>
 							</td>
 							<td class="item-list-centered">
@@ -75,6 +83,15 @@
 										title="{{localize 'SHADOWDARK.inventory.tooltip.sell_treasure'}}"
 									>
 										<i class="fa-solid fa-coins"></i>
+									</a>
+								{{/if}}
+								{{#if item.system.light.isSource}}
+									<a
+										class="item-control item-toggle-light {{#if item.system.light.active}}lit{{/if}}"
+										data-item-id="{{item._id}}"
+										title="{{localize 'SHADOWDARK.inventory.tooltip.toggle_light_source'}}"
+									>
+										<i class="fa-solid fa-fire-flame-curved"></i>
 									</a>
 								{{/if}}
 							</td>
