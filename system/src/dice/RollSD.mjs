@@ -95,42 +95,6 @@ export default class RollSD extends Roll {
 		this.Roll(parts, data, $form, adv, options);
 	}
 
-	// @todo: Refactor this to not have Roll and RollD20Dialog being so similar
-	/**
-	 * Main roll method for rolling any dice. Looks if it has been supplied
-	 * a weapon and rolls that special case.
-	 * @param {Array<string>}	- Parts for the roll
-	 * @param {object} data 	- Data that carries actor and/or item
-	 * @param {jQuery} $form 	- Form from an evaluated dialog
-	 * @param {number} adv		- Determine the direction of advantage (1)
-	 * 																/ disadvantage (-1)
-	 * @param {*} options 		- Options to modify behavior
-	 * @returns {Promise}			- Promise for...
-	 */
-	static async Roll(parts, data, $form, adv=0, options={}) {
-		// If the dice has been fastForwarded, there is no form
-		if (!options.fastForward) {
-			// Augment data with form bonuses
-			const formBonuses = this._getBonusesFromFrom($form);
-
-			// Combine bonuses from form with the data
-			data = foundry.utils.mergeObject(data, formBonuses);
-		}
-
-		options.rollMode = $form ? this._getRollModeFromForm($form) : game.settings.get("core", "rollMode");
-
-		// Roll the Dice
-		data.rolls = {
-			result: await this._rollDice(parts, data, adv),
-		};
-
-		// Store the advantage for generating chat card
-		data.adv = adv;
-
-		// Build the Chat Data
-		return this._renderRoll(data, options);
-	}
-
 	/* -------------------------------------------- */
 	/*  Roll Analysis                               */
 	/* -------------------------------------------- */
