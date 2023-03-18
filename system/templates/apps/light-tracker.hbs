@@ -33,26 +33,26 @@
 	</header>
 	<hr />
 	<section class="light-sources">
-		{{#each monitoredLightSources as |user|}}
+		{{#each monitoredLightSources as |actor|}}
 			<div class="character">
 				<div class="character-portrait">
 					<img
-						src="{{user.actorImg}}"
-						title="{{user.actorName}}"
+						src="{{actor.img}}"
+						title="{{actor.name}}"
 						height="64"
 						width="64"
 					/>
 				</div>
 				<div class="character-name">
-					{{user.actorName}}
+					{{actor.name}}
 				</div>
 				<div>
 					<ol>
-						{{#each user.lightSources as |lightSource key|}}
+						{{#each actor.lightSources as |light|}}
 							<li>
-								{{lightSource.name}}
-								({{secondsToMins lightSource.light.remainingSecs}}
-								{{#ifCond lightSource.light.remainingSecs '<=' 60}}
+								{{light.name}}
+								({{secondsToMins light.system.light.remainingSecs}}
+								{{#ifCond light.light.remainingSecs '<=' 60}}
 									{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
 								{{else}}
 									{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})

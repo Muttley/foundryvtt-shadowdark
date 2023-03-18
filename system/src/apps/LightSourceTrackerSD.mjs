@@ -5,7 +5,7 @@ export default class LightSourceTrackerSD extends Application {
 	constructor(object, options) {
 		super(object, options);
 
-		this.monitoredLightSources = {};
+		this.monitoredLightSources = [];
 		this.updateInterval = DEFAULT_UPDATE_INTERVAL_MS;
 		this.updateIntervalId = null;
 
@@ -124,38 +124,37 @@ export default class LightSourceTrackerSD extends Application {
 			return;
 		}
 
-		this._onToggleLightSource(actor, item);
+		this._onToggleLightSource();
 	}
 
 	async _gatherLightSources() {
-		this.monitoredLightSources = {};
+		this.monitoredLightSources = [];
+
+		const workingLightSources = [];
 
 		for (const user of game.users) {
 			if (user.isGM) continue;
+
 			if (!(user.active || this._monitorInactiveUsers())) continue;
 
 			const actor = user.character;
-			if (!actor) continue;
+			if (!actor) continue; // User may not have an Actor yet
+
+			const actorData = actor.toObject(false);
+			actorData.lightSources = [];
 
 			const activeLightSources = await actor.getActiveLightSources();
-			this.monitoredLightSources[actor.id] = {
-				actorId: actor.id,
-				actorName: actor.name,
-				actorImg: actor.img,
-				lightSources: {},
-			};
 
-			for (const lightSource of activeLightSources) {
-				const newLightSource = {
-					itemId: lightSource.id,
-					name: lightSource.name,
-					light: lightSource.system.light,
-				};
-
-				this.monitoredLightSources[actor.id]
-					.lightSources[lightSource.id] = newLightSource;
+			for (const item of activeLightSources) {
+				actorData.lightSources.push(
+					item.toObject(false)
+				);
 			}
+
+			workingLightSources.push(actorData);
 		}
+
+		this.monitoredLightSources = workingLightSources;
 	}
 
 	_isDisabled() {
@@ -174,7 +173,7 @@ export default class LightSourceTrackerSD extends Application {
 		return game.settings.get("shadowdark", "trackInactiveUserLightSources");
 	}
 
-	async _onToggleLightSource(actor, item) {
+	async _onToggleLightSource() {
 		if (!(this._isEnabled() && game.user.isGM)) return;
 
 		this._updateLightSources();
@@ -205,19 +204,17 @@ export default class LightSourceTrackerSD extends Application {
 
 		if (this._isPaused()) return;
 
-		for (const actorId in this.monitoredLightSources) {
-			const actorData = this.monitoredLightSources[actorId];
+		for (const actorData in this.monitoredLightSources) {
 			console.log(`Updating Light Sources for ${actorData.actorName}`);
 
-			for (const lightId in actorData.lightSources) {
-				const itemData = actorData.lightSources[lightId];
+			for (const itemData in actorData.lightSources) {
+				const light = itemData.system.light;
+
+				light.remainingSecs -= (this.updateInterval / 1000);
 
 				const actor = await game.actors.get(actorId);
-
-				itemData.light.remainingSecs -= (this.updateInterval / 1000);
-
-				if (itemData.light.remainingSecs <= 0) {
-					await actor.deleteEmbeddedDocuments("Item", [lightId]);
+				if (light.remainingSecs <= 0) {
+					await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
 					await this._gatherLightSources();
 				}
 				else {
@@ -226,7 +223,7 @@ export default class LightSourceTrackerSD extends Application {
 					);
 
 					item.update({
-						"system.light.remainingSecs": itemData.light.remainingSecs,
+						"system.light.remainingSecs": light.remainingSecs,
 					});
 				}
 
