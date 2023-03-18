@@ -6,6 +6,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollAbilityCheck(event)
 		);
 
+		html.find(".hp.rollable").click(
+			event => this._onRollHP(event)
+		);
+
 		html.find(".open-item").click(
 			event => this._onOpenItem(event)
 		);
@@ -139,6 +143,12 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 
 		return item.sheet.render(true);
+	}
+
+	async _onRollHP(event) {
+		event.preventDefault();
+
+		this.actor.rollHP();
 	}
 
 	async _onRollAbilityCheck(event) {
