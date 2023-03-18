@@ -157,7 +157,6 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				expect(game.messages.size).equal(1);
 
 				const chatMessage = game.messages.contents.pop();
-				console.log(chatMessage);
 				expect(chatMessage.flavor.indexOf("at tier 3 with spell DC 13")).not.equal(-1);
 			});
 		});

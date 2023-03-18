@@ -168,15 +168,19 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked.
+SHADOWDARK.settings.track_light_sources.hint: >-
+  If checked the system will track and update the time remaining on any active
+  light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
+  If checked light sources belonging to inactive (not logged in) users will
+  still be tracked.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval (secs)
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
-SHADOWDARK.settings.track_light_sources.open_on_start.hint:	If checked the Light Tracking interface will open on startup (GM only).
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
-SHADOWDARK.settings.track_light_sources.pause_with_game.hint:	If checked the Light Tracking will pause whenever Foundry is paused.
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment_short: Align
@@ -251,3 +255,5 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.dialog.hp_roll: HP Roll
+SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll

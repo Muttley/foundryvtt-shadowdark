@@ -143,6 +143,10 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+	hasAdvantage(data) {
+		return this.system.bonuses.advantage.includes(data.rollType);
+	}
+
 	/** @inheritDoc */
 	prepareBaseData() {
 		switch (this.type) {
@@ -171,6 +175,7 @@ export default class ActorSD extends Actor {
 		const abilityBonus = this.abilityModifier(abilityId);
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
 		const data = {
+			rollType: "ability",
 			abilityBonus,
 			ability,
 			actor: this,
@@ -184,6 +189,24 @@ export default class ActorSD extends Actor {
 
 		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
 	}
+
+	async rollHP(options={}) {
+		const data = {
+			rollType: "hp",
+			actor: this,
+		};
+
+		const parts = [this.system.attributes.hp.hd];
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
 
 	/* -------------------------------------------- */
 	/*  Selling Methods                             */
