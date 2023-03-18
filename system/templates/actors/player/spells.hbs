@@ -1,5 +1,21 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
 	<section class="spells-body">
+		<div class="spellcasting-ability">
+			<label class="spellcasting-ability-label">
+				{{localize "SHADOWDARK.spellcasting_ability"}}:
+			</label>
+			<select
+				name="system.spellcastingAbility"
+				style="grid-column: span 2;"
+			>
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.ABILITIES_LONG
+				selected=system.spellcastingAbility
+				localize=false
+			}}
+			</select>
+		</div>
 		<div class="spells-list">
 			<table>
 				{{#each spells as |tier tid|}}
