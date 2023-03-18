@@ -201,6 +201,7 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 		const abilityId = this.actor.system.class === "Wizard" ? "int" : "wis";
 		const data = {
+			rollType: item.name.slugify(),
 			item: item,
 			actor: this.actor,
 			abilityBonus: this.actor.abilityModifier(abilityId),
