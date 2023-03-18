@@ -39,12 +39,12 @@ export default class RollSD extends Roll {
 		options.rollMode = $form ? this._getRollModeFromForm($form) : game.settings.get("core", "rollMode");
 
 		// Roll the Dice
-		data.rolls = {};
+		data.rolls = {
+			main: await this._rollAdvantage(parts, data, adv),
+		};
 
 		// Special cases for D20 rolls
 		if (this._isD20(parts)) {
-			data.rolls.main = await this._rollAdvantage(parts, data, adv);
-
 			// Weapon? -> Roll Damage dice
 			if (data.item?.isWeapon()) {
 				data = await this._rollWeapon(data);
@@ -72,9 +72,6 @@ export default class RollSD extends Roll {
 					);
 				}
 			}
-		}
-		else {
-			data.rolls.main = await this._roll(parts, data, adv);
 		}
 
 		// Build the Chat Data
