@@ -30,10 +30,43 @@
 		}
 	}
 
-	.light-sources {
+	.light-controls {
+		text-align: center;
+	}
+
+	.light-source-grid {
 		display: grid;
 		row-gap: 4px;
+		margin-top: 4px;
 		margin-bottom: 4px;
+	}
+
+	.light-sources {
+		@include p-reset;
+		display: grid;
+		padding-left: 8px;
+		row-gap: 4px;
+		align-items: start;
+	}
+
+	.light-source {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 1fr max-content 24px;
+		align-items: center;
+		column-gap: 4px;
+
+		font-family: "Montserrat-Medium";
+		font-weight: bold;
+		font-size: 14px;
+
+		&:hover {
+			background-color: var(--background-highlight);
+		}
+	}
+
+	.disable-light {
+		color: darkorange;
 	}
 
 	.status {
@@ -62,6 +95,11 @@
 		&__paused {
 			color: red;
 		}
+	}
+
+	.time-remaining {
+		font-style: italic;
+		font-weight: normal;
 	}
 
 	.title {
