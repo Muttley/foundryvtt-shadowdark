@@ -78,10 +78,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const context = await super.getData(options);
 
-		// TODO Calculate this once we have ActiveEffects as it can be affected
-		// by talents.
-		//
-		// context.gearSlots = this.actor.numGearSlots();
+		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();

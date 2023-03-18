@@ -168,6 +168,12 @@ export default class ActorSD extends Actor {
 		if (this.type === "Player") {
 			const strength = this.system.abilities.str.value;
 			gearSlots = strength > gearSlots ? strength : gearSlots;
+
+			// Hauler's get to add their Con modifer (if positive)
+			const conModifier = this.abilityModifier("con");
+			gearSlots += this.system.bonuses.hauler && conModifier > 0
+				? conModifier
+				: 0;
 		}
 
 		return gearSlots;
@@ -226,7 +232,7 @@ export default class ActorSD extends Actor {
 			actor: this,
 		};
 
-		const parts = [this.system.attributes.hp.hd];
+		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
 
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
 		options.flavor = options.title;
@@ -247,13 +253,27 @@ export default class ActorSD extends Actor {
 			item => item.type === "Basic"
 		).filter(
 			item => item.system.light.isSource && item.system.light.active
-		);
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
 
 		return items;
 	}
 
 	async hasNoActiveLightSources() {
 		return this.getActiveLightSources.length <= 0;
+	}
+
+	async yourLightWentOut(itemId) {
+		console.log(`${this.name}'s Light Went Out`);
 	}
 
 	async sellAllGems() {

@@ -32,37 +32,51 @@
 		</div>
 	</header>
 	<hr />
-	<section class="light-sources">
-		{{#each monitoredLightSources as |user|}}
+	<section class="light-source-grid">
+		{{#each monitoredLightSources as |actor|}}
 			<div class="character">
 				<div class="character-portrait">
 					<img
-						src="{{user.actorImg}}"
-						title="{{user.actorName}}"
+						src="{{actor.img}}"
+						title="{{actor.name}}"
 						height="64"
 						width="64"
 					/>
 				</div>
 				<div class="character-name">
-					{{user.actorName}}
+					{{actor.name}}
 				</div>
-				<div>
-					<ol>
-						{{#each user.lightSources as |lightSource key|}}
-							<li>
-								{{lightSource.name}}
-								({{secondsToMins lightSource.light.remainingSecs}}
-								{{#ifCond lightSource.light.remainingSecs '<=' 60}}
+				<div class="light-sources">
+					{{#each actor.lightSources as |light|}}
+						<div class="light-source">
+							<div class="light-controls">
+								<a
+									class="disable-light"
+									data-actor-id="{{actor._id}}"
+									data-item-id="{{light._id}}"
+									title="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
+								>
+									<i class="fa-solid fa-fire-flame-curved"></i>
+								</a>
+							</div>
+							<div>
+								{{light.name}}
+							</div>
+							<div class="time-remaining">
+								({{secondsToMins light.system.light.remainingSecs}}
+								{{#ifCond light.system.light.remainingSecs '<=' 60}}
 									{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
 								{{else}}
 									{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
 								{{/ifCond}}
-							</li>
-						{{/each}}
-					</ol>
+							</div>
+						</div>
+					{{/each}}
 				</div>
 			</div>
 		{{/each}}
 	</section>
-	<button>Turn Out the Lights</button>
+	<button class="disable-all-lights" type="submit" name="submit" value="1">
+		<i class="fa-regular fa-face-fearful"></i> {{localize "SHADOWDARK.app.light-tracker.turn-out-the-lights"}}
+	</button>
 </form>
