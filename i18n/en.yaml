@@ -1,7 +1,3 @@
-  If checked light sources belonging to inactive (not logged in) users will
-  If checked the system will track and update the time remaining on any active
-  light sources.
-  still be tracked.
 SHADOWDARK.ability_cha: Cha
 SHADOWDARK.ability_charisma: Charisma
 SHADOWDARK.ability_con: Con
@@ -182,8 +178,8 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.track_light_sources.hint: >-
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
+SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval (secs)
