@@ -45,7 +45,7 @@
 		grid-template-columns: 1fr 1fr;
 		column-gap: 4px;
 
-		background-color: rgb(255 255 255 / 25%);
+		background-color: var(--background-highlight);
 
 		&__label {
 			text-align: right;

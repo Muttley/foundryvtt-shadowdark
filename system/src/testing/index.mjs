@@ -6,7 +6,7 @@
 import chatChatcardTests, {
 	key as chatChatcardKey,
 	options as chatChatcardOptions,
-} from "../chat-message/__tests__/chat-chatcard.test.js";
+} from "../chat/__tests__/chat-chatcard.test.js";
 
 /* Dice Import */
 import diceTests, {

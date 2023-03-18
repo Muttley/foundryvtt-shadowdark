@@ -3,6 +3,9 @@
 	{{#ifEq item.type "Spell"}}
 		style="grid-column: span 2;"
 	{{/ifEq}}
+	{{#ifEq item.type "Talent"}}
+		style="grid-column: span 2;"
+	{{/ifEq}}
 >
 	<label>{{localize 'SHADOWDARK.item.description'}}</label>
 	{{editor

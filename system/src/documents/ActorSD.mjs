@@ -54,7 +54,7 @@ export default class ActorSD extends Actor {
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 		const baseAttackBonus = this.attackBonus(item.system.type);
-		const options = {
+		const weaponOptions = {
 			weaponName: item.name,
 			handedness: "",
 			attackBonus: 0,
@@ -63,7 +63,7 @@ export default class ActorSD extends Actor {
 			bonusDamage: 0,
 			properties: item.propertiesDisplay(),
 			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
-			rangeAttackBonus: this.system.bonuses.rangeAttackBonus,
+			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
 
 		// TODO Add weapon master talent bonus
@@ -71,75 +71,78 @@ export default class ActorSD extends Actor {
 		const weaponDisplays = {melee: [], ranged: []};
 
 		if (item.system.type === "melee") {
-			options.attackBonus =
+			weaponOptions.attackBonus =
 				baseAttackBonus + this.system.bonuses.meleeAttackBonus;
 
-			options.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
+			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
 			if (item.system.damage.oneHanded) {
-				options.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.oneHanded
 				];
-				options.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 
 				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(options),
+					display: await this.buildWeaponDisplay(weaponOptions),
 					itemId,
 				});
 			}
 			if (item.system.damage.twoHanded) {
-				options.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.twoHanded
 				];
-				options.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
 
 				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(options),
+					display: await this.buildWeaponDisplay(weaponOptions),
 					itemId,
 				});
 			}
 			if (item.hasProperty("thrown")) {
-				options.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				weaponOptions.attackBonus =
+					baseAttackBonus + this.system.bonuses.rangedAttackBonus;
+
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.oneHanded
 				];
-				options.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-				options.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
 				];
 
 				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(options),
+					display: await this.buildWeaponDisplay(weaponOptions),
 					itemId,
 				});
 			}
 		}
 		else if (item.system.type === "ranged") {
-			options.attackBonus =
-				baseAttackBonus + this.system.bonuses.rangeAttackBonus;
+			weaponOptions.attackBonus =
+				baseAttackBonus + this.system.bonuses.rangedAttackBonus;
 
-			options.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
+			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
 			];
 
 			if (item.system.damage.oneHanded) {
-				options.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.oneHanded
 				];
-				options.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 
 				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(options),
+					display: await this.buildWeaponDisplay(weaponOptions),
 					itemId,
 				});
 			}
 			if (item.system.damage.twoHanded) {
-				options.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.twoHanded
 				];
-				options.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
 
 				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(options),
+					display: await this.buildWeaponDisplay(weaponOptions),
 					itemId,
 				});
 			}
