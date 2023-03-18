@@ -44,7 +44,7 @@
 	.light-sources {
 		@include p-reset;
 		display: grid;
-		padding-left: 8px;
+		padding-left: 4px;
 		row-gap: 4px;
 		align-items: start;
 	}
@@ -52,7 +52,7 @@
 	.light-source {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 1fr max-content 24px;
+		grid-template-columns: min-content 1fr max-content;
 		align-items: center;
 		column-gap: 4px;
 

@@ -49,6 +49,16 @@
 				<div class="light-sources">
 					{{#each actor.lightSources as |light|}}
 						<div class="light-source">
+							<div class="light-controls">
+								<a
+									class="disable-light"
+									data-actor-id="{{actor._id}}"
+									data-item-id="{{light._id}}"
+									title="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
+								>
+									<i class="fa-solid fa-fire-flame-curved"></i>
+								</a>
+							</div>
 							<div>
 								{{light.name}}
 							</div>
@@ -59,16 +69,6 @@
 								{{else}}
 									{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
 								{{/ifCond}}
-							</div>
-							<div class="light-controls">
-								<a
-									class="disable-light"
-									data-actor-id="{{actor._id}}"
-									data-item-id="{{light._id}}"
-									title="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
-								>
-									<i class="fa-solid fa-fire-flame-curved"></i>
-								</a>
 							</div>
 						</div>
 					{{/each}}

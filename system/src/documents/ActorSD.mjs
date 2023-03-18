@@ -272,6 +272,10 @@ export default class ActorSD extends Actor {
 		return this.getActiveLightSources.length <= 0;
 	}
 
+	async yourLightWentOut(itemId) {
+		console.log(`${this.name}'s Light Went Out`);
+	}
+
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");
 		return this.sellAllItems(items);

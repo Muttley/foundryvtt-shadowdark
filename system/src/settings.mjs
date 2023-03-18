@@ -64,8 +64,13 @@ export default function registerSystemSettings() {
 		hint: "SHADOWDARK.settings.track_light_sources.interval.hint",
 		scope: "world",
 		config: true,
-		default: 10,
+		default: 1,
 		type: Number,
+		range: {
+			min: 1,
+			max: 10,
+			step: 1,
+		},
 		requiresReload: true,
 	});
 }
