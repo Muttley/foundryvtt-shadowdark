@@ -55,6 +55,7 @@ export default class RollSD extends Roll {
 		return this._renderRoll(data, options);
 	}
 
+	// @todo: Refactor this to not have Roll and RollD20Dialog being so similar
 	/**
 	 * Main roll method for rolling any dice. Looks if it has been supplied
 	 * a weapon and rolls that special case.
@@ -345,6 +346,7 @@ export default class RollSD extends Roll {
 		});
 	}
 
+	// @todo: Refactor this to not have RollDialog and RollD20Dialog being so similar
 	/**
 	 * Renders a Roll Dialog and displays the appropriate bonuses
 	 * @param {Array<string>} parts - Predetermined roll dice & @bonuses
