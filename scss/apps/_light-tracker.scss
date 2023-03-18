@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.light-tracker {
+	@include p-reset;
+	margin: 4px;
+	min-width: 300px;
+
+	ol {
+		list-style: none;
+	}
+
+	.character {
+		display: grid;
+		grid-template-columns: 64px 1fr;
+		grid-template-rows: min-content 1fr;
+		column-gap: 8px;
+
+		&-name {
+			align-self: start;
+			font-family: "Old Newspaper Font";
+			font-size: 1.5rem;
+			font-weight: bold;
+			line-height: 1;
+		}
+
+		&-portrait {
+			grid-row: span 2;
+			align-self: start;
+		}
+	}
+
+	.light-sources {
+		display: grid;
+		row-gap: 4px;
+		margin-bottom: 4px;
+	}
+
+	.status {
+		@include p-reset;
+		margin-bottom: 8px;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 4px;
+
+		background-color: rgb(255 255 255 / 25%);
+
+		&__label {
+			text-align: right;
+		}
+
+		&__value {
+			text-align: left;
+		}
+
+		&__active {
+			color: green;
+		}
+
+		&__paused {
+			color: red;
+		}
+	}
+
+	.title {
+		@include p-reset;
+
+		font-family: "JSL Blackletter";
+		font-size: 3rem;
+
+		text-align: center;
+		line-height: 1;
+
+		&__prefix {
+			color: $secondary-color;
+			text-shadow: -0.2rem -0.2rem $primary-color;
+		}
+
+		&__suffix {
+			color: $primary-color;
+			text-shadow: -0.2rem -0.2rem $secondary-color;
+		}
+	}
+}

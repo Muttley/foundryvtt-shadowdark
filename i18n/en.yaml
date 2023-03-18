@@ -27,6 +27,9 @@ SHADOWDARK.app.item_properties.save: Save
 SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
 SHADOWDARK.app.item_properties.title: Properties
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
+SHADOWDARK.app.light_tracker.minute_short: min
+SHADOWDARK.app.light_tracker.minutes_short: mins
+SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
@@ -57,6 +60,7 @@ SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.no: 'No'
 SHADOWDARK.dialog.general.yes: 'Yes'
+SHADOWDARK.dialog.hp_roll: HP Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
 SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
@@ -69,6 +73,7 @@ SHADOWDARK.dialog.item.sell: Sell
 SHADOWDARK.dialog.roll_mode_label: Select rolling mode
 SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.spell_roll.title: Roll Spell with
+SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
 SHADOWDARK.effect.footer.add_custom: Add Custom Effect
 SHADOWDARK.effect.header.active: Active
 SHADOWDARK.effect.header.delete: Delete
@@ -148,6 +153,11 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
+SHADOWDARK.light-tracker.active: Active
+SHADOWDARK.light-tracker.paused: Paused
+SHADOWDARK.light-tracker.status.label: Status
+SHADOWDARK.light-tracker.title.prefix: Light
+SHADOWDARK.light-tracker.title.suffix: Tracker
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far_short: F
@@ -168,12 +178,8 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.track_light_sources.hint: >-
-  If checked the system will track and update the time remaining on any active
-  light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
-  If checked light sources belonging to inactive (not logged in) users will
-  still be tracked.
+SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval (secs)
@@ -255,5 +261,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.dialog.hp_roll: HP Roll
-SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll

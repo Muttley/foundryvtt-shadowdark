@@ -1,5 +1,25 @@
 export default class ActorSD extends Actor {
 
+	async _preCreate(data, options, user) {
+		await super._preCreate(data, options, user);
+
+		// Some sensible token defaults for Actors
+		const prototypeToken = {
+			actorLink: false,
+			disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+			sight: {
+				enabled: false,
+			},
+		};
+
+		if (data.type === "Player") {
+			prototypeToken.sight.enabled = true;
+			prototypeToken.actorLink = true;
+		}
+
+		this.updateSource({prototypeToken});
+	}
+
 	/* -------------------------------------------- */
 	/*  Methods                                     */
 	/* -------------------------------------------- */
@@ -33,23 +53,27 @@ export default class ActorSD extends Actor {
 
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
-
+		const baseAttackBonus = this.attackBonus(item.system.type);
 		const options = {
 			weaponName: item.name,
 			handedness: "",
-			attackBonus: this.attackBonus(item.system.type),
+			attackBonus: 0,
 			attackRange: "",
 			baseDamage: "",
-			bonusDamage: "",
+			bonusDamage: 0,
 			properties: item.propertiesDisplay(),
+			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
+			rangeAttackBonus: this.system.bonuses.rangeAttackBonus,
 		};
 
-		// TODO Grab talent attack dice and damage bonuses once we have
-		// ActiveEffects support added for Talents.
+		// TODO Add weapon master talent bonus
 
 		const weaponDisplays = {melee: [], ranged: []};
 
 		if (item.system.type === "melee") {
+			options.attackBonus =
+				baseAttackBonus + this.system.bonuses.meleeAttackBonus;
+
 			options.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
 			if (item.system.damage.oneHanded) {
@@ -90,6 +114,9 @@ export default class ActorSD extends Actor {
 			}
 		}
 		else if (item.system.type === "ranged") {
+			options.attackBonus =
+				baseAttackBonus + this.system.bonuses.rangeAttackBonus;
+
 			options.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
 			];
