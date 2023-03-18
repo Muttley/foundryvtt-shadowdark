@@ -338,7 +338,9 @@ export default class RollSD extends Roll {
 					},
 					render: () => {
 						// Check if the actor has advantage, and add highlight if that is the case
-						if (data.actor?.hasAdvantage(data))	$("button.advantage").addClass("talent-highlight");
+						if (data.actor?.hasAdvantage(data))	$("button.advantage")
+							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
+							.addClass("talent-highlight");
 					},
 				},
 				options.dialogOptions
@@ -396,7 +398,9 @@ export default class RollSD extends Roll {
 					},
 					render: () => {
 						// Check if the actor has advantage, and add highlight if that is the case
-						if (data.actor?.hasAdvantage(data))	$("button.advantage").addClass("talent-highlight");
+						if (data.actor?.hasAdvantage(data))	$("button.advantage")
+							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
+							.addClass("talent-highlight");
 					},
 				},
 				options.dialogOptions
