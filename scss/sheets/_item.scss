@@ -6,15 +6,28 @@
 	color: white;
 	font-size: 18px;
 
+	input {
+		@include p-reset;
+		font-family: "Montserrat-Medium";
+		font-size: 16px;
+		background-color: var(--form-background);
+
+		text-overflow: ellipsis;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.05);
+		border: none;
+	}
+
 	label {
 		@include p-reset;
 		display: block;
 
 		font-family: "Old Newspaper Font";
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: bold;
 
-		line-height: 1;
+		line-height: 1.1;
 
 		border: none;
 	}
@@ -72,46 +85,21 @@
 		grid-column: span 2;
 		gap: 4px;
 		display: grid;
-		grid-template-columns: 1fr 10fr;
-	}
-
-	.talent-property {
-		label {
-			@include p-reset;
-			padding-left: 4px;
-			padding-right: 4px;
-
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 22px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-			background-color: var(--form-background);
-		}
-
-		p {
-			background-color: var(--form-background);
-			height: 26px;
-		}
+		grid-template-columns: 80px 1fr;
 	}
 
 	.talent-details {
 		@include p-reset;
-		grid-column: span 2;
 		display: grid;
+		grid-column: span 2;
+
 		column-gap: 4px;
+		row-gap: 8px;
 
 		li {
 			list-style-type: none;
+			background-color: var(--background-highlight);
 		}
-	}
-
-	.effects {
-		grid-column-start: 1;
 	}
 
 	.effect-header-data,
@@ -122,6 +110,7 @@
 		grid-template-columns: 30px 150px 50px 50px 50px 1fr;
 		font-weight: bold;
 		font-size: 14px;
+		align-items: center;
 
 		effect-icon {
 			img {
@@ -131,6 +120,14 @@
 				display: inline-block;
 			}
 		}
+	}
+
+	.effect-header {
+		font-size: 16px;
+	}
+
+	.effect-data {
+		background: var(--form-background);
 	}
 
 	.item-list {
@@ -180,10 +177,26 @@
 
 	.item-description {
 		@include p-reset;
-		grid-column: 1;
-		padding: 4px;
-		min-height: 260px;
-		background-color: var(--form-background);
+		display: grid;
+		grid-template-rows: min-content minmax(350px, max-content);
+
+		.editor {
+			background-color: var(--form-background);
+		}
+
+		label {
+			display: block;
+			@include p-reset;
+
+			font-family: "Old Newspaper Font";
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: underline;
+
+			line-height: 1.1;
+
+			border: none;
+		}
 	}
 
 	.item-header {
@@ -267,23 +280,6 @@
 		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
-
-		label {
-			@include p-reset;
-			padding-left: 4px;
-			padding-right: 4px;
-
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 22px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-			background-color: var(--form-background);
-		}
 
 		p {
 			background-color: var(--form-background);

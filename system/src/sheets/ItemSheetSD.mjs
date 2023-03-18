@@ -5,8 +5,8 @@ export default class ItemSheetSD extends ItemSheet {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			width: 550,
-			height: 560,
+			width: 665,
+			height: 620,
 			classes: ["shadowdark", "sheet", "item"],
 			resizable: true,
 		});
