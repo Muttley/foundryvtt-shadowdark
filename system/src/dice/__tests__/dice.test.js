@@ -103,33 +103,32 @@ const mockData = () => {
 	};
 };
 
-export default ({ describe, it, after, before, expect }) => {
-	/* -------------------------------------------- */
-	/*  Dice Utils                                  */
-	/* -------------------------------------------- */
-	describe("_partsAdvantage(rollParts, adv)", () => {
-		it("skipping `adv` gives normal roll", () => {
-			let parts = ["1d8", "@bonuses"];
-			parts = RollSD._partsAdvantage(parts);
-			expect(parts[0]).equal("1d8");
-		});
+export default ({ describe, it, expect }) => {
+	describe("Roll(parts, data, $form, adv=0, options={})", () => {
+		// Skipping as this is more E2E with form parsing et.c.
+	});
 
-		it("supplying number for advantage works", () => {
-			let parts = ["1d8", "@bonuses"];
-			parts = RollSD._partsAdvantage(parts, 1);
-			expect(parts[0]).equal("2d8kh");
-		});
-
-		it("supplying number for disadvantage works", () => {
-			let parts = ["1d8", "@bonuses"];
-			parts = RollSD._partsAdvantage(parts, -1);
-			expect(parts[0]).equal("2d8kl");
-		});
+	describe("RollD20(parts, data, $form, adv=0, options={})", () => {
+		// Skipping as this is more E2E with form parsing et.c.
 	});
 
 	/* -------------------------------------------- */
-	/*  Dice Roll Analysis                          */
+	/*  Roll Analysis                               */
 	/* -------------------------------------------- */
+	describe("_isD20(parts)", () => {
+		it("non-d20 returns false", () => {
+			expect(RollSD._isD20(["1d8"])).is.false;
+			expect(RollSD._isD20(["string"])).is.false;
+			expect(RollSD._isD20([1])).is.false;
+		});
+
+		it("d20 returns true", () => {
+			expect(RollSD._isD20(["1d20"])).is.true;
+			expect(RollSD._isD20(["d20"])).is.true;
+			expect(RollSD._isD20(["3d20"])).is.true;
+		});
+	});
+
 	describe("_digestCritical(roll)", () => {
 		it("providing a non-d20 roll returns null", () => {
 			const roll = mockRollResult(10, 1);
@@ -197,16 +196,42 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
+	describe("_partsAdvantage(rollParts, adv)", () => {
+		it("skipping `adv` gives normal roll", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = RollSD._partsAdvantage(parts);
+			expect(parts[0]).equal("1d8");
+		});
+
+		it("supplying number for advantage works", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = RollSD._partsAdvantage(parts, 1);
+			expect(parts[0]).equal("2d8kh");
+		});
+
+		it("supplying number for disadvantage works", () => {
+			let parts = ["1d8", "@bonuses"];
+			parts = RollSD._partsAdvantage(parts, -1);
+			expect(parts[0]).equal("2d8kl");
+		});
+
+		it("non single-die with advantage returns parts as is", () => {
+			let parts = ["2d8", "@bonuses"];
+			parts = RollSD._partsAdvantage(parts, -1);
+			expect(parts[0]).equal("2d8");
+		});
+	});
+
 	/* -------------------------------------------- */
 	/*  Dice Rolling                                */
 	/* -------------------------------------------- */
 
-	describe("_rollDice(parts, data={})", () => {
+	describe("_roll(parts, data={})", () => {
 		describe("rolling just a dice", () => {
 			it("specifying dice without numDice works", async () => {
 				const parts = ["d20"];
 
-				const results = await RollSD._rollDice(parts);
+				const results = await RollSD._roll(parts);
 				expect(results.renderedHTML).is.not.undefined;
 				expect(results.roll).is.not.undefined;
 				expect(results.roll.terms[0].number).equal(1);
@@ -217,7 +242,7 @@ export default ({ describe, it, after, before, expect }) => {
 			it("specifying dice with numDice works", async () => {
 				const parts = ["1d20"];
 
-				const results = await RollSD._rollDice(parts);
+				const results = await RollSD._roll(parts);
 				expect(results.renderedHTML).is.not.undefined;
 				expect(results.roll).is.not.undefined;
 				expect(results.roll.terms[0].number).equal(1);
@@ -228,7 +253,7 @@ export default ({ describe, it, after, before, expect }) => {
 			it("specifying dice with non-one numDice works", async () => {
 				const parts = ["3d20"];
 
-				const results = await RollSD._rollDice(parts);
+				const results = await RollSD._roll(parts);
 				expect(results.renderedHTML).is.not.undefined;
 				expect(results.roll).is.not.undefined;
 				expect(results.roll.terms[0].number).equal(3);
@@ -244,7 +269,7 @@ export default ({ describe, it, after, before, expect }) => {
 				const parts = [die, "@abilityBonus"];
 				const data = {};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20");
 			});
 
@@ -254,7 +279,7 @@ export default ({ describe, it, after, before, expect }) => {
 					abilityBonus: 12,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20 + 12");
 			});
 
@@ -264,7 +289,7 @@ export default ({ describe, it, after, before, expect }) => {
 					abilityBonus: 12,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20");
 			});
 
@@ -275,7 +300,7 @@ export default ({ describe, it, after, before, expect }) => {
 					itemBonus: 19,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20 + 19");
 			});
 
@@ -283,7 +308,7 @@ export default ({ describe, it, after, before, expect }) => {
 				const parts = [die, "@talentBonus"];
 				const data = {};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20");
 			});
 
@@ -293,7 +318,7 @@ export default ({ describe, it, after, before, expect }) => {
 					talentBonus: 8,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20 + 8");
 			});
 
@@ -304,7 +329,7 @@ export default ({ describe, it, after, before, expect }) => {
 					itemBonus: 12,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20 + 8 + 12");
 			});
 
@@ -312,7 +337,7 @@ export default ({ describe, it, after, before, expect }) => {
 				const parts = [die, "@customBonus"];
 				const data = {};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20");
 			});
 
@@ -322,8 +347,108 @@ export default ({ describe, it, after, before, expect }) => {
 					customBonus: 8,
 				};
 
-				const results = await RollSD._rollDice(parts, data);
+				const results = await RollSD._roll(parts, data);
 				expect(results.roll.formula).equal("1d20 + 8");
+			});
+		});
+	});
+
+	describe("_rollAdvantage(parts, adv=0 data={})", () => {
+		describe("rolling just a dice", () => {
+			it("by default rolls without any advantage for missing numDice", async () => {
+				const parts = ["d20"];
+
+				const results = await RollSD._rollAdvantage(parts);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.roll._formula).equal("1d20");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("by default rolls without any advantage", async () => {
+				const parts = ["1d20"];
+
+				const results = await RollSD._rollAdvantage(parts);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.roll._formula).equal("1d20");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=1 gives an advantage roll for d20", async () => {
+				const parts = ["1d20"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, 1);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(2);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.roll._formula).equal("2d20kh");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=1 gives an advantage roll for non-d20", async () => {
+				const parts = ["1d10"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, 1);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(2);
+				expect(results.roll.terms[0].faces).equal(10);
+				expect(results.roll._formula).equal("2d10kh");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=-1 gives an disadvantage roll for d20", async () => {
+				const parts = ["1d20"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, -1);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(2);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.roll._formula).equal("2d20kl");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=-1 gives an disadvantage roll for non-d20", async () => {
+				const parts = ["1d10"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, -1);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(2);
+				expect(results.roll.terms[0].faces).equal(10);
+				expect(results.roll._formula).equal("2d10kl");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=0 gives a normal roll for d20", async () => {
+				const parts = ["1d20"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, 0);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(20);
+				expect(results.roll._formula).equal("1d20");
+				expect(results.critical).is.not.undefined;
+			});
+
+			it("adv=1 gives a normal roll for non-d20", async () => {
+				const parts = ["1d10"];
+
+				const results = await RollSD._rollAdvantage(parts, {}, 0);
+				expect(results.renderedHTML).is.not.undefined;
+				expect(results.roll).is.not.undefined;
+				expect(results.roll.terms[0].number).equal(1);
+				expect(results.roll.terms[0].faces).equal(10);
+				expect(results.roll._formula).equal("1d10");
+				expect(results.critical).is.not.undefined;
 			});
 		});
 	});
@@ -445,7 +570,7 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_rollWeapon(data)", () => {
 		it("data expected to be augmented with 3 rolls", async () => {
 			const mockItemData = mockData();
-			mockItemData.rolls = { d20: { critical: null } };
+			mockItemData.rolls = { main: { critical: null } };
 			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
@@ -465,7 +590,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical success expected to roll double dice", async () => {
 			const mockItemData = mockData();
-			mockItemData.rolls = { d20: { critical: "success" } };
+			mockItemData.rolls = { main: { critical: "success" } };
 			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
@@ -485,7 +610,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical failure expected to not roll damage dice", async () => {
 			const mockItemData = mockData();
-			mockItemData.rolls = { d20: { critical: "failure" } };
+			mockItemData.rolls = { main: { critical: "failure" } };
 			mockItemData.damageParts = [];
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
