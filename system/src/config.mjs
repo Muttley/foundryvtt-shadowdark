@@ -34,6 +34,13 @@ SHADOWDARK.ARMOR_PROPERTIES = {
 	shield: "SHADOWDARK.armor.properties.shield",
 };
 
+SHADOWDARK.CLASS_HD = {
+	fighter: "1d8",
+	priest: "1d6",
+	thief: "1d4",
+	wizard: "1d4",
+};
+
 SHADOWDARK.CLASSES = {
 	fighter: "SHADOWDARK.class.fighter",
 	priest: "SHADOWDARK.class.priest",

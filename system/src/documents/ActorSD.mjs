@@ -168,6 +168,12 @@ export default class ActorSD extends Actor {
 		if (this.type === "Player") {
 			const strength = this.system.abilities.str.value;
 			gearSlots = strength > gearSlots ? strength : gearSlots;
+
+			// Hauler's get to add their Con modifer (if positive)
+			const conModifier = this.abilityModifier("con");
+			gearSlots += this.system.bonuses.hauler && conModifier > 0
+				? conModifier
+				: 0;
 		}
 
 		return gearSlots;
@@ -226,7 +232,7 @@ export default class ActorSD extends Actor {
 			actor: this,
 		};
 
-		const parts = [this.system.attributes.hp.hd];
+		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
 
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
 		options.flavor = options.title;
