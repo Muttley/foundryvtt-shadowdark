@@ -27,6 +27,9 @@ SHADOWDARK.app.item_properties.save: Speichern
 SHADOWDARK.app.item_properties.talent.effects.title: Talenteffekttypen
 SHADOWDARK.app.item_properties.title: Eigenschaften
 SHADOWDARK.app.item_properties.weapon.title: Waffeneigenschaften
+SHADOWDARK.app.light_tracker.minute_short: min
+SHADOWDARK.app.light_tracker.minutes_short: mins
+SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
@@ -57,6 +60,7 @@ SHADOWDARK.dialog.general.are_you_sure: Bist du dir sicher?
 SHADOWDARK.dialog.general.cancel: Abbrechen
 SHADOWDARK.dialog.general.no: 'Nein'
 SHADOWDARK.dialog.general.yes: 'Ja'
+SHADOWDARK.dialog.hp_roll: HP Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Fähigkeitsbonus
 SHADOWDARK.dialog.item_roll.item_bonus: Gegenstandsbonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talentbonus
@@ -69,6 +73,7 @@ SHADOWDARK.dialog.item.sell: Verkaufen
 SHADOWDARK.dialog.roll_mode_label: Wurfmodus wählen
 SHADOWDARK.dialog.roll: Wurf
 SHADOWDARK.dialog.spell_roll.title: Zauberwurf mit
+SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
 SHADOWDARK.effect.footer.add_custom: Eigenen Effect hinzufügen
 SHADOWDARK.effect.header.active: Aktiv
 SHADOWDARK.effect.header.delete: Löschen
@@ -148,6 +153,11 @@ SHADOWDARK.language.primordial: Urtümlich
 SHADOWDARK.language.reptilian: Reptilisch
 SHADOWDARK.language.sylvan: Sylvanisch
 SHADOWDARK.language.thanian: Thanisch
+SHADOWDARK.light-tracker.active: Active
+SHADOWDARK.light-tracker.paused: Paused
+SHADOWDARK.light-tracker.status.label: Status
+SHADOWDARK.light-tracker.title.prefix: Light
+SHADOWDARK.light-tracker.title.suffix: Tracker
 SHADOWDARK.range.close_short: D
 SHADOWDARK.range.close: Direkt
 SHADOWDARK.range.far_short: W
@@ -174,9 +184,9 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User 
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval (secs)
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
-0: SHADOWDARK.settings.track_light_sources.open_on_start.hint:	If checked the Light Tracking interface will open on startup (GM only).
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
-1: SHADOWDARK.settings.track_light_sources.pause_with_game.hint:	If checked the Light Tracking will pause whenever Foundry is paused.
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.sheet.actor.ac: RK
 SHADOWDARK.sheet.actor.alignment_short: Gesinn
