@@ -34,6 +34,8 @@ SHADOWDARK.ARMOR_PROPERTIES = {
 	shield: "SHADOWDARK.armor.properties.shield",
 };
 
+SHADOWDARK.BACKSTAB_CLASSES = ["thief"];
+
 SHADOWDARK.CLASSES = {
 	fighter: "SHADOWDARK.class.fighter",
 	priest: "SHADOWDARK.class.priest",
@@ -86,6 +88,11 @@ SHADOWDARK.RANGES_SHORT = {
 	self: "SHADOWDARK.range.self_short",
 };
 
+SHADOWDARK.SPELLCASTING_ABILITY = {
+	priest: "wis",
+	wizard: "int",
+};
+
 SHADOWDARK.SPELL_CASTER_CLASSES = {
 	priest: "SHADOWDARK.spell_caster.priest",
 	wizard: "SHADOWDARK.spell_caster.wizard",
@@ -95,7 +102,11 @@ SHADOWDARK.SPELL_DURATIONS = {
 	focus: "SHADOWDARK.spell_duration.focus",
 	instant: "SHADOWDARK.spell_duration.instant",
 	rounds: "SHADOWDARK.spell_duration.rounds",
+	days: "SHADOWDARK.spell_duration.days",
+	realTime: "SHADOWDARK.spell_duration.real_time",
 };
+
+SHADOWDARK.VARIABLE_SPELL_DURATIONS = ["days", "rounds", "realTime"];
 
 SHADOWDARK.SPELL_RANGES = {
 	self: "SHADOWDARK.range.self",

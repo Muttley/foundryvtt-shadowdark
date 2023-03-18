@@ -114,22 +114,22 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			case "spellAdvantage": {
 				changes.push({
 					key: "system.bonuses.advantage",
-					value: "this.object.system.spellName", // @todo
+					value: "", // @todo
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
 			case "weaponMastery": {
 				changes.push({
-					key: "system.talent.weaponMasteryTypes",
-					value: "this.object.system.weaponType", // @todo
+					key: "system.bonuses.weaponMastery",
+					value: "", // @todo
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});
 				break;
 			}
 			case "backstabDie": {
 				changes.push({
-					key: "system.bonuses.damageDie",
+					key: "system.bonuses.backstabDie",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});

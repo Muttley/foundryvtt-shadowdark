@@ -4,8 +4,17 @@
 .shadowdark-dialog {
 	@include p-reset;
 	padding: 4px;
-}
+	
+	color: black;
+	font-size: 18px;
 
-.talent-highlight {
-	background-color: #c1e0be !important;
+	.talent-highlight {
+		background-color: #c1e0be !important;
+	}
+	
+	.pc-backstab-class {
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		background-color: var(--form-background);
+	}
 }
