@@ -52,6 +52,12 @@ export default function registerHandlebarsHelpers() {
 			.includes(value) ? options.fn(this) : options.inverse(this);
 	});
 
+	Handlebars.registerHelper("getSpellDuration", (type, value) => {
+		return (CONFIG.SHADOWDARK.VARIABLE_SPELL_DURATIONS.includes(type))
+			? `${value} ${CONFIG.SHADOWDARK.SPELL_DURATIONS[type]}`
+			: CONFIG.SHADOWDARK.SPELL_DURATIONS[type];
+	});
+
 	Handlebars.registerHelper("ifBackstabClass", (value, options) => {
 		return CONFIG.SHADOWDARK.BACKSTAB_CLASSES
 			.includes(value) ? options.fn(this) : options.inverse(this);
