@@ -63,16 +63,19 @@ const mockData = () => {
 						value: 10,
 					},
 				},
+				level: {
+					value: 5,
+				},
 				luck: true,
 				bonuses: {
 					advantage: ["hp", "meleeAttack"],
-					weaponMastery: ["whip", "bastardSword"],
+					weaponMastery: ["whip", "bastard-sword"],
 					meleeAttackBonus: 4,
 					meleeDamageBonus: 1,
 					rangedAttackBonus: 1,
 					rangedDamageBonus: 2,
 					spellcastingCheckBonus: 5,
-					damageDie: 3,
+					backstabDie: 3,
 				},
 			},
 		},
@@ -98,6 +101,7 @@ const mockData = () => {
 					"versatile",
 				],
 				weaponMastery: false,
+				baseWeapon: "",
 			},
 		},
 	};
@@ -616,6 +620,48 @@ export default ({ describe, it, expect }) => {
 
 			const response = await RollSD._rollWeapon(mockItemData);
 			expect(Object.keys(response.rolls).length).equal(1);
+		});
+
+		describe("Backstabbing", () => {
+			it("Backstab rolls the expected dice", async () => {
+				const mockItemData = mockData();
+				mockItemData.rolls = { main: { critical: null } };
+				mockItemData.backstab = true;
+				mockItemData.damageParts = [];
+				const response = await RollSD._rollWeapon(mockItemData);
+				expect(Object.keys(mockItemData.rolls).length).equal(3);
+				expect(response.rolls.primaryDamage).is.not.undefined;
+				expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll.terms.length).equal(1);
+				expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll.terms[0].number).equal(1+1+3+2);
+				expect(response.rolls.secondaryDamage).is.not.undefined;
+				expect(response.rolls.secondaryDamage.renderedHTML).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll.terms[0].number).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll.terms[0].number).equal(7);
+			});
+
+			it("Critical backstab rolls the expected dice", async () => {
+				const mockItemData = mockData();
+				mockItemData.rolls = { main: { critical: "success" } };
+				mockItemData.backstab = true;
+				mockItemData.damageParts = [];
+				const response = await RollSD._rollWeapon(mockItemData);
+				expect(Object.keys(mockItemData.rolls).length).equal(3);
+				expect(response.rolls.primaryDamage).is.not.undefined;
+				expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll.terms.length).equal(1);
+				expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+				expect(response.rolls.primaryDamage.roll.terms[0].number).equal(14);
+				expect(response.rolls.secondaryDamage).is.not.undefined;
+				expect(response.rolls.secondaryDamage.renderedHTML).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll.terms[0].number).is.not.undefined;
+				expect(response.rolls.secondaryDamage.roll.terms[0].number).equal(14);
+			});
 		});
 	});
 };

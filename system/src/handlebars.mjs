@@ -43,8 +43,12 @@ export default function registerHandlebarsHelpers() {
 		return obj[index] ? options.fn(this) : options.inverse(this);
 	});
 
-	Handlebars.registerHelper("fromConfig", function(arg1, arg2, options) {
+	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
 		return CONFIG.SHADOWDARK[arg1][arg2] ? CONFIG.SHADOWDARK[arg1][arg2] : arg2;
 	});
 
+	Handlebars.registerHelper("ifBackstabClass", (value, options) => {
+		return CONFIG.SHADOWDARK.BACKSTAB_CLASSES
+			.includes(value) ? options.fn(this) : options.inverse(this);
+	});
 }

@@ -91,7 +91,8 @@ export default class ItemSheetSD extends ItemSheet {
 		if (item.type === "Spell") {
 			context.casterClasses = [];
 
-			context.showRoundValue = item.system.duration.type === "rounds";
+			context.showRoundValue = CONFIG.SHADOWDARK.VARIABLE_SPELL_DURATIONS
+				.includes(item.system.duration.type);
 
 			for (const key of this.item.system.class) {
 				context.casterClasses.push(
