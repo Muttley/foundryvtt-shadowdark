@@ -79,7 +79,8 @@
 				"hp": {
 					"max": 0,
 					"bonus": 0,
-					"value": 0
+					"value": 0,
+					"hd": "1d6"
 				}
 			},
 			"background": "",
@@ -217,7 +218,8 @@
 			},
 			"range": "close",
 			"type": "melee",
-			"weaponMastery": false
+			"weaponMastery": false,
+			"baseWeapon": ""
 		}
 	}
 }

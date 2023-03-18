@@ -55,6 +55,42 @@ export default class RollSD extends Roll {
 		return this._renderRoll(data, options);
 	}
 
+	// @todo: Refactor this to not have Roll and RollD20Dialog being so similar
+	/**
+	 * Main roll method for rolling any dice. Looks if it has been supplied
+	 * a weapon and rolls that special case.
+	 * @param {Array<string>}	- Parts for the roll
+	 * @param {object} data 	- Data that carries actor and/or item
+	 * @param {jQuery} $form 	- Form from an evaluated dialog
+	 * @param {number} adv		- Determine the direction of advantage (1)
+	 * 																/ disadvantage (-1)
+	 * @param {*} options 		- Options to modify behavior
+	 * @returns {Promise}			- Promise for...
+	 */
+	static async Roll(parts, data, $form, adv=0, options={}) {
+		// If the dice has been fastForwarded, there is no form
+		if (!options.fastForward) {
+			// Augment data with form bonuses
+			const formBonuses = this._getBonusesFromFrom($form);
+
+			// Combine bonuses from form with the data
+			data = foundry.utils.mergeObject(data, formBonuses);
+		}
+
+		options.rollMode = $form ? this._getRollModeFromForm($form) : game.settings.get("core", "rollMode");
+
+		// Roll the Dice
+		data.rolls = {
+			result: await this._rollDice(parts, data, adv),
+		};
+
+		// Store the advantage for generating chat card
+		data.adv = adv;
+
+		// Build the Chat Data
+		return this._renderRoll(data, options);
+	}
+
 	/* -------------------------------------------- */
 	/*  Roll Analysis                               */
 	/* -------------------------------------------- */
@@ -116,11 +152,14 @@ export default class RollSD extends Roll {
 	 * @param {Array<string>}	parts	- Dice and Bonuses associated with the roll (@bonus)
 	 * @param {object} data					- Data containing requivalent @bonus fields
 	 * 																like `data.bonus`
+	 * @param {-1|0|1} adv 					- Determine the direction of advantage (1)
+	 * 																/ disadvantage (-1)
 	 * @returns {object} 						- Returns the evaluated `roll`, the rendered
 	 * 							                	HTML `renderedHTML`, and `critical` info.
 	 */
-	static async _rollDice(parts, data = {}) {
+	static async _rollDice(parts, data = {}, adv=0) {
 		if (parts[0] === "d") parts[0] = `1${parts[0]}`;
+		parts = this._partsAdvantage(parts, adv);
 
 		// Store the first entry, assuming this is the main dice
 		const mainDice = parts[0];
@@ -152,9 +191,8 @@ export default class RollSD extends Roll {
 	static async _rollD20(parts = [], data={}, adv=0) {
 		// Modify the d20 to take advantage in consideration
 		parts.unshift("1d20");
-		parts = this._partsAdvantage(parts, adv);
 
-		return this._rollDice(parts, data);
+		return this._rollDice(parts, data, adv);
 	}
 
 	/* -------------------------------------------- */
@@ -298,6 +336,72 @@ export default class RollSD extends Roll {
 					close: () => {
 						resolve(roll);
 					},
+					render: () => {
+						// Check if the actor has advantage, and add highlight if that is the case
+						if (data.actor?.hasAdvantage(data))	$("button.advantage")
+							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
+							.addClass("talent-highlight");
+					},
+				},
+				options.dialogOptions
+			).render(true);
+		});
+	}
+
+	// @todo: Refactor this to not have RollDialog and RollD20Dialog being so similar
+	/**
+	 * Renders a Roll Dialog and displays the appropriate bonuses
+	 * @param {Array<string>} parts - Predetermined roll dice & @bonuses
+	 * @param {object} data 				- Data container with dialogTitle
+	 * @param {object} options 			- Configuration options for dialog
+	 * @returns {Promise(Roll)}			- Returns the promise of evaluated roll(s)
+	 */
+	static async RollDialog(parts, data, options={}) {
+		// Render the HTML for the dialog
+		let content;
+		content = await this._getRollDialogContent(parts, data, options);
+
+		if ( options.fastForward ) {
+			return await this.Roll(parts, data, false, 0, options);
+		}
+
+		return new Promise(resolve => {
+			let roll;
+			new Dialog(
+				{
+					title: options.dialogTitle
+						? options.dialogTitle : game.i18n.localize("SHADOWDARK.roll.D20"),
+					content,
+					buttons: {
+						advantage: {
+							label: game.i18n.localize("SHADOWDARK.roll.advantage"),
+							callback: async html => {
+								roll = await this.Roll(parts, data, html, 1, options);
+							},
+						},
+						normal: {
+							label: game.i18n.localize("SHADOWDARK.roll.normal"),
+							callback: async html => {
+								roll = await this.Roll(parts, data, html, 0, options);
+							},
+						},
+						disadvantage: {
+							label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
+							callback: async html => {
+								roll = await this.Roll(parts, data, html, -1, options);
+							},
+						},
+					},
+					default: "normal",
+					close: () => {
+						resolve(roll);
+					},
+					render: () => {
+						// Check if the actor has advantage, and add highlight if that is the case
+						if (data.actor?.hasAdvantage(data))	$("button.advantage")
+							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
+							.addClass("talent-highlight");
+					},
 				},
 				options.dialogOptions
 			).render(true);
@@ -344,12 +448,12 @@ export default class RollSD extends Roll {
 			isSpell: false,
 			isWeapon: false,
 			isVersatile: false,
-			critical: data.rolls.d20.critical,
 			rolls: data.rolls,
 			isRoll: true,
 		};
 		if (data.rolls.d20) {
 			templateData._formula = data.rolls.d20._formula;
+			templateData.critical = data.rolls.d20.critical;
 		}
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
@@ -365,7 +469,7 @@ export default class RollSD extends Roll {
 	) {
 		const chatCardTemplate = options.chatCardTemplate
 			? options.chatCardTemplate
-			: "systems/shadowdark/templates/chat/roll-card.hbs";
+			: "systems/shadowdark/templates/chat/roll-d20-card.hbs";
 
 		const title = options.title
 			? options.title
@@ -378,7 +482,7 @@ export default class RollSD extends Roll {
 
 	static async _renderRoll(data, options) {
 		const chatData = await this._getChatCardData(
-			data.rolls.d20.roll,
+			(data.rolls.d20) ? data.rolls.d20.roll : data.rolls.result.roll,
 			options.speaker,
 			options.target
 		);

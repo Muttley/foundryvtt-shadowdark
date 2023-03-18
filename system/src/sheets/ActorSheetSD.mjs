@@ -6,6 +6,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollAbilityCheck(event)
 		);
 
+		html.find(".hp.rollable").click(
+			event => this._onRollHP(event)
+		);
+
 		html.find(".open-item").click(
 			event => this._onOpenItem(event)
 		);
@@ -141,6 +145,12 @@ export default class ActorSheetSD extends ActorSheet {
 		return item.sheet.render(true);
 	}
 
+	async _onRollHP(event) {
+		event.preventDefault();
+
+		this.actor.rollHP();
+	}
+
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
 
@@ -155,6 +165,7 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 		const data = {
 			item: item,
+			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
 			actor: this.actor,
 		};
 
@@ -191,6 +202,7 @@ export default class ActorSheetSD extends ActorSheet {
 		const item = this.actor.items.get(itemId);
 		const abilityId = this.actor.system.class === "Wizard" ? "int" : "wis";
 		const data = {
+			rollType: item.name.slugify(),
 			item: item,
 			actor: this.actor,
 			abilityBonus: this.actor.abilityModifier(abilityId),

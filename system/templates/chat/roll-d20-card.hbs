@@ -3,9 +3,10 @@
     <img src="{{data.actor.img}}" title="{{title}}"/>
     <h3 class="roll-name">{{title}}</h3>
   </header>
-  <div class="roll card-roll blindable" data-blind="{{rolls.blindroll}}">
-    {{#if rolls.result}}
-      <div>{{{rolls.result.renderedHTML}}}</div>
+  {{{rolls.d20.renderedHTML}}}
+  <div class="d20-roll card-roll blindable" data-blind="{{rolls.blindroll}}">
+    {{#if rolls.d20}}
+      <div>{{{rolls.d20.renderedHTML}}}</div>
     {{/if}}
   </div>
 </div>
