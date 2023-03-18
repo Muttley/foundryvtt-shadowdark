@@ -247,7 +247,17 @@ export default class ActorSD extends Actor {
 			item => item.type === "Basic"
 		).filter(
 			item => item.system.light.isSource && item.system.light.active
-		);
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
 
 		return items;
 	}

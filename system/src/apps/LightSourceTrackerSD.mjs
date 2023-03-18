@@ -154,7 +154,15 @@ export default class LightSourceTrackerSD extends Application {
 			workingLightSources.push(actorData);
 		}
 
-		this.monitoredLightSources = workingLightSources;
+		this.monitoredLightSources = workingLightSources.sort((a, b) => {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
 	}
 
 	_isDisabled() {
