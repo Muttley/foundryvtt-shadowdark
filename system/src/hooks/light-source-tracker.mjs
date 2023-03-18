@@ -1,4 +1,4 @@
-// Hooks used by the Light Source Tracker
+// Hooks and socket events used by the Light Source Tracker
 export const LightSourceTrackerHooks = {
 	attach: () => {
 		const lst = game.shadowdark.lightSourceTracker;

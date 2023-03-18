@@ -6,12 +6,9 @@ import registerSystemSettings from "./src/settings.mjs";
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
-
-import { HooksSD } from "./src/hooks.mjs";
-
 import * as sheets from "./src/sheets/_module.mjs";
 
-import onRenderchatMessage from "./src/chat-message/ChatCardSD.mjs";
+import { HooksSD } from "./src/hooks.mjs";
 
 import "./src/testing/index.mjs";
 
@@ -117,5 +114,3 @@ Hooks.once("setup", () => {
 		}
 	}
 });
-
-Hooks.on("renderChatMessage", onRenderchatMessage);
