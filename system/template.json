@@ -92,7 +92,7 @@
 				"rangedAttackBonus": 0,
 				"rangeDamageBonus": 0,
 				"spellcastingCheckBonus": 0,
-				"damageDie": 0
+				"backstabDie": 0
 			},
 			"class": "",
 			"coins": {
@@ -107,6 +107,7 @@
 			},
 			"luck": false,
 			"slots": 10,
+			"spellcastingAbility": "",
 			"title": ""
 		}
 	},
@@ -151,7 +152,8 @@
 				"modifier": 0,
 				"attribute": ""
 			},
-			"canBeEquipped": true
+			"canBeEquipped": true,
+			"baseArmor": ""
 		},
 		"Basic": {
 			"templates": [
@@ -192,7 +194,7 @@
 			"class": [],
 			"duration": {
 				"type": "",
-				"value": 0
+				"value": ""
 			},
 			"lost": false,
 			"range": "",

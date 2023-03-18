@@ -240,14 +240,21 @@ export default class RollSD extends Roll {
 
 		// Check and handle critical failure/success
 		if ( data.rolls.main.critical !== "failure" ) {
+			let primaryParts = [];
+
+			// Adds dice if backstabbing
+			if (data.backstab) {
+				// Additional dice
+				numDice += 1;
+				if (data.actor.system.bonuses.backstabDie) numDice +=
+					parseInt(data.actor.system.bonuses.backstabDie, 10)
+					+ Math.floor(data.actor.system.level.value / 2);
+			}
+
+			// Double the dice if critical
 			if ( data.rolls.main.critical === "success" ) numDice *= 2;
 
-			// @todo: This most likely needs to be checked if the user
-			//        is running backstab.
-			// Check for bonus dice and add to numDice
-			if (data.damageDie) numDice += data.damageDie;
-
-			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
+			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
 			data.rolls.primaryDamage = await this._roll(primaryParts, data);
 
@@ -284,6 +291,7 @@ export default class RollSD extends Roll {
 		if ($form.find("[name=item-bonus]").length) bonuses.itemBonus = $form.find("[name=item-bonus]")?.val();
 		if ($form.find("[name=ability-bonus]").length) bonuses.abilityBonus = $form.find("[name=ability-bonus]")?.val();
 		if ($form.find("[name=talent-bonus]").length) bonuses.talentBonus = $form.find("[name=talent-bonus]")?.val();
+		if ($form.find("[name=weapon-backstab]").length) bonuses.backstab = $form.find("[name=weapon-backstab]")?.prop("checked");
 		return bonuses;
 	}
 

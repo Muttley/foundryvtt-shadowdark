@@ -171,25 +171,35 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const bonuses = this.actor.system.bonuses;
 
-		// @todo: This needs improvement, very faulty logic here.
 		// Summarize the bonuses for the attack roll
 		const parts = ["@abilityBonus", "@talentBonus", "@itemBonus"];
 		data.damageParts = [];
 
 		data.itemBonus = item.system.damage.bonus;
+
 		if (item.system.type === "melee") {
 			data.abilityBonus = this.actor.abilityModifier("str");
-			data.talentBonus = bonuses.meleeAttackBonus + item.system.weaponMastery;
-			data.meleeDamageBonus = bonuses.meleeDamageBonus + item.system.weaponMastery;
+			data.talentBonus = bonuses.meleeAttackBonus;
+			data.meleeDamageBonus = bonuses.meleeDamageBonus;
 			data.damageParts.push("@meleeDamageBonus");
 			data.damageDie = bonuses.damageDie;
 		}
 		else {
 			data.abilityBonus = this.actor.abilityModifier("dex");
-			data.talentBonus = bonuses.rangedAttackBonus + item.system.weaponMastery;
-			data.rangedDamageBonus = bonuses.rangedDamageBonus + item.system.weaponMastery;
+			data.talentBonus = bonuses.rangedAttackBonus;
+			data.rangedDamageBonus = bonuses.rangedDamageBonus;
 			data.damageParts.push("@rangedDamageBonus");
 			data.damageDie = bonuses.damageDie;
+		}
+
+		// Check Weapon Mastery & add if applicable
+		if (
+			item.system.weaponMastery
+			|| this.actor.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
+		) {
+			data.weaponMasteryBonus = 1 + Math.floor(this.actor.system.level.value / 2);
+			data.talentBonus += data.weaponMasteryBonus;
+			data.damageParts.push("@weaponMasteryBonus");
 		}
 
 		return item.rollItem(parts, data);
@@ -200,11 +210,7 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
-
-		const abilityId = this.actor.system.class.toLowerCase() === "wizard"
-			? "int"
-			: "wis";
-
+		const abilityId = this.actor.system.spellcastingAbility;
 		const data = {
 			rollType: item.name.slugify(),
 			item: item,

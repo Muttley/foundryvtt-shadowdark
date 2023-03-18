@@ -62,12 +62,12 @@ export default ({ describe, it, after, before, expect }) => {
 
 				it("has the expected window width", async () => {
 					expect(item.sheet.options.width).is.not.undefined;
-					expect(item.sheet.options.width).equal(550);
+					expect(item.sheet.options.width).equal(665);
 				});
 
 				it("has the expected window height", async () => {
 					expect(item.sheet.options.height).is.not.undefined;
-					expect(item.sheet.options.height).equal(560);
+					expect(item.sheet.options.height).equal(620);
 				});
 
 				after(async () => {
