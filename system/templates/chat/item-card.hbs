@@ -46,17 +46,21 @@
   {{#if isWeapon}}
   {{#ifNeq data.rolls.main.critical "failure"}}
   <div class="card-damage-rolls">
+    {{#if isVersatile}}
     <div class="card-damage-roll blindable" data-blind="{{data.rolls.main.roll.blindroll}}">
-        {{#if isVersatile}}
-        <div><h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3></div>
-        <div>{{{data.rolls.primaryDamage.renderedHTML}}}</div>
-        <div><h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3></div>
-        <div>{{{data.rolls.secondaryDamage.renderedHTML}}}</div>
-        {{else}}
-        <div><h3>{{localize "SHADOWDARK.roll.damage"}}</h3></div>
-        <div>{{{data.rolls.primaryDamage.renderedHTML}}}</div>
-        {{/if}}
+      <h3>{{localize "SHADOWDARK.damage.one_handed"}}</h3>
+      {{{data.rolls.primaryDamage.renderedHTML}}}
     </div>
+    <div class="card-damage-roll blindable" data-blind="{{data.rolls.main.roll.blindroll}}">
+      <h3>{{localize "SHADOWDARK.damage.two_handed"}}</h3>
+      {{{data.rolls.secondaryDamage.renderedHTML}}}
+    </div>
+    {{else}}
+    <div class="card-damage-roll-single blindable" data-blind="{{data.rolls.main.roll.blindroll}}">
+      <h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
+      {{{data.rolls.primaryDamage.renderedHTML}}}
+    </div>
+    {{/if}}
   </div>
   {{/ifNeq}}
   {{/if}}
@@ -72,7 +76,7 @@
     {{/if}}
     {{#if isSpell}}
     <span>{{localize "SHADOWDARK.item.spell_tier"}}: {{ data.item.system.tier }}</span>
-    <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{#ifEq data.item.system.duration.type "rounds" }}{{ data.item.system.duration.value }} {{/ifEq}}{{fromConfig "SPELL_DURATIONS"  data.item.system.duration.type }}</span>
+    <span>{{localize "SHADOWDARK.item.spell_duration"}}: {{getSpellDuration data.item.system.duration.type data.item.system.duration.value }}</span>
     <span>{{localize "SHADOWDARK.item.spell_range"}}: {{fromConfig "SPELL_RANGES" data.item.system.range }}</span>
     {{/if}}
   </footer>

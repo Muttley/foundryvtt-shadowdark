@@ -42,12 +42,13 @@
     </article>
     <article class="effect-data" style="grid-template-columns: repeat({{effect.changes.length}}, 1fr)">
       {{#each effect.changes as |change|}}
-      {{numberInput
-        change.value
-        name=change.key
+      <input
+        name="{{change.key}}"
+        type="text"
         class="talent-option-data"
+        value="{{change.value}}"
         placeholder="0"
-      }}
+      >
       {{/each}}
     </article>
   </div>
