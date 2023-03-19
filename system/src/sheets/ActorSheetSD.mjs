@@ -210,7 +210,17 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
-		const abilityId = this.actor.system.spellcastingAbility;
+
+		let abilityId;
+		if (this.actor.type === "Player") {
+			abilityId = CONFIG.SHADOWDARK.SPELLCASTING_ABILITY[
+				this.actor.system.class
+			] || "int";
+		}
+		else {
+			abilityId = this.actor.system.spellCastingAbility || "int";
+		}
+
 		const data = {
 			rollType: item.name.slugify(),
 			item: item,
