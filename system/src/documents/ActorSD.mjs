@@ -179,6 +179,10 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+	getSpellcastingAbility() {
+		return this.system.spellcastingAbility;
+	}
+
 	hasAdvantage(data) {
 		return this.system.bonuses.advantage.includes(data.rollType);
 	}
