@@ -69,7 +69,7 @@ export default class ItemSD extends Item {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		const result = await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
-		if (!result?.rolls?.main?.success) this.update({"system.lost": true});
+		if (result && !result?.rolls?.main?.success) this.update({"system.lost": true});
 	}
 
 	/* -------------------------------------------- */
