@@ -12,12 +12,12 @@
 		<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
 		<div class="spell-duration">
 			{{#if showRoundValue}}
-				{{numberInput
-					system.duration.value
-					name="system.duration.value"
-					class="spell-duration-value"
-					placeholder="0"
-				}}
+				<input
+						name="system.duration.value"
+						type="text"
+						class="spell-duration-value"
+						value="{{system.duration.value}}"
+				/>
 			{{/if}}
 			<select
 				name="system.duration.type"

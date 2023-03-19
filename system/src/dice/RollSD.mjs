@@ -89,7 +89,7 @@ export default class RollSD extends Roll {
 	 */
 	static async RollD20(parts, data, $form, adv=0, options={}) {
 		if ( parts[0] !== "1d20") parts.unshift("1d20");
-		this.Roll(parts, data, $form, adv, options);
+		return this.Roll(parts, data, $form, adv, options);
 	}
 
 	/* -------------------------------------------- */
@@ -330,7 +330,7 @@ export default class RollSD extends Roll {
 	 * @param {Array<string>} parts - Predetermined roll @bonuses
 	 * @param {object} data 				- Data container with dialogTitle
 	 * @param {object} options 			- Configuration options for dialog
-	 * @returns {Promise(Roll)}			- Returns the promise of evaluated roll(s)
+	 * @returns {object}						- Returns final data structure
 	 */
 	static async RollD20Dialog(parts, data, options={}) {
 		// Render the HTML for the dialog
@@ -340,7 +340,7 @@ export default class RollSD extends Roll {
 			return await this.RollD20(parts, data, false, 0, options);
 		}
 
-		return new Promise(resolve => {
+		return await new Promise(resolve => {
 			let roll;
 			new Dialog(
 				{
@@ -351,19 +351,19 @@ export default class RollSD extends Roll {
 						advantage: {
 							label: game.i18n.localize("SHADOWDARK.roll.advantage"),
 							callback: async html => {
-								roll = await this.RollD20(parts, data, html, 1, options);
+								resolve(this.RollD20(parts, data, html, 1, options));
 							},
 						},
 						normal: {
 							label: game.i18n.localize("SHADOWDARK.roll.normal"),
 							callback: async html => {
-								roll = await this.RollD20(parts, data, html, 0, options);
+								resolve(this.RollD20(parts, data, html, 0, options));
 							},
 						},
 						disadvantage: {
 							label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 							callback: async html => {
-								roll = await this.RollD20(parts, data, html, -1, options);
+								resolve(this.RollD20(parts, data, html, -11, options));
 							},
 						},
 					},
@@ -533,6 +533,10 @@ export default class RollSD extends Roll {
 			options.target
 		);
 
+		// @todo: Write tests for this.
+		// Add whether the roll succeeded or not to the roll data
+		data.rolls.main.success = (chatData.flags.success) ? chatData.flags.success : null;
+
 		const content = await this._getChatCardContent(data, options);
 
 		return new Promise(resolve => {
@@ -556,7 +560,7 @@ export default class RollSD extends Roll {
 			else {
 				chatData.sound = CONFIG.sounds.dice;
 				if (options.chatMessage !== false) ChatMessage.create(chatData);
-				resolve(data.rolls);
+				resolve(data);
 			}
 		});
 	}
