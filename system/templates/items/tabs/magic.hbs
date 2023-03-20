@@ -1,0 +1,10 @@
+<section class="tab tab-magic" data-group="primary" data-tab="tab-magic">
+	<div class="item-magic">
+		{{#if item.system.magicItem}}
+			<div>
+					{{> items/partials/magic-item }}
+			</div>
+			{{> items/partials/magic-active-effects }}
+		{{/if}}
+	</div>
+</section>

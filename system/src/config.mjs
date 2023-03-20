@@ -111,9 +111,13 @@ SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES = {
 };
 
 SHADOWDARK.NPC_ATTACK_TYPES = {
-	magic: "SHADOWDARK.npc_attack.type.ability",
 	physical: "SHADOWDARK.npc_attack.type.physical",
-	special: "SHADOWDARK.npc_attack.type.ability",
+	special: "SHADOWDARK.npc_attack.type.special",
+};
+
+SHADOWDARK.NPC_MOVES = {
+	near: "SHADOWDARK.npc_move.near",
+	doulbeNear: "SHADOWDARK.npc_move.double_near",
 };
 
 SHADOWDARK.RANGES = {

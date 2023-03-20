@@ -22,6 +22,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onCastSpell(event)
 		);
 
+		html.find(".item-create").click(
+			event => this._onItemCreate(event)
+		);
+
 		// Create context menu for items on both sheets
 		this._itemContextMenu(html);
 
@@ -89,6 +93,16 @@ export default class ActorSheetSD extends ActorSheet {
 		};
 
 		return [
+			{
+				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
+				icon: '<i class="fas fa-edit"></i>',
+				condition: element => canEdit(element),
+				callback: element => {
+					const itemId = element.data("item-id");
+					const item = this.actor.items.get(itemId);
+					return item.sheet.render(true);
+				},
+			},
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
@@ -235,6 +249,18 @@ export default class ActorSheetSD extends ActorSheet {
 		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
 
 		return item.rollSpell(parts, data);
+	}
+
+	_onItemCreate(event) {
+		event.preventDefault();
+		const itemType = $(event.currentTarget).data("item-type");
+
+		const newName = `New ${itemType}`;
+
+		this.actor.createEmbeddedDocuments("Item", [{
+			name: newName,
+			type: itemType,
+		}]);
 	}
 
 	_sortAllItems(context) {

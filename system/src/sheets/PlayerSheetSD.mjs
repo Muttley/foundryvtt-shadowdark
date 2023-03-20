@@ -238,14 +238,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
+				type: "Armor",
 				items: [],
 			},
 			weapon: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.weapon"),
+				type: "Weapon",
 				items: [],
 			},
 			basic: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.basic"),
+				type: "Basic",
 				items: [],
 			},
 			treasure: {

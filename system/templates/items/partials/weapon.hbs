@@ -41,6 +41,17 @@
 			}}
 		</select>
 	</div>
+	<div class="armor-detail">
+		<label>{{localize "SHADOWDARK.item.armor.base_weapon.title"}}</label>
+		<select name="system.baseWeapon">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_WEAPON
+				selected=system.baseWeapon
+				localize=false
+			}}
+		</select>
+	</div>
 </div>
 <div class="item-properties">
 	<div class="item-property">

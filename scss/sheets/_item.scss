@@ -35,8 +35,8 @@
 	.armor-details {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column: span 2;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column: span 3;
 		column-gap: 4px;
 	}
 
@@ -83,7 +83,7 @@
 	.magic-item-properties,
 	.talent-properties {
 		@include p-reset;
-		grid-column: span 2;
+		grid-column: span 3;
 		gap: 4px;
 		display: grid;
 		grid-template-columns: 80px 1fr;
@@ -93,7 +93,7 @@
 	.talent-details {
 		@include p-reset;
 		display: grid;
-		grid-column: span 2;
+		grid-column: span 3;
 
 		column-gap: 4px;
 		row-gap: 8px;
@@ -158,6 +158,11 @@
 		}
 	}
 
+	.item-toggles {
+		display: grid;
+		row-gap: 4px;
+	}
+
 	.equipped,
 	.light-source,
 	.magic-item,
@@ -169,18 +174,26 @@
 		background-color: var(--form-background);
 	}
 
-	.item-body {
+	.item-light {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.item-details {
 		@include p-reset;
 		margin: 4px;
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		column-gap: 4px;
 		row-gap: 8px;
+		align-items: start;
 	}
 
 	.item-description {
 		@include p-reset;
 		display: grid;
+		row-gap: 8px;
 		grid-template-rows: min-content minmax(350px, max-content);
 
 		.editor {
@@ -227,6 +240,27 @@
 		row-gap: 8px;
 	}
 
+	.light-timer {
+		display: grid;
+		row-gap: 4px;
+		background-color: var(--form-background);
+	}
+
+
+	.npc-attack-details {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
+	.npc-attack-detail {
+		background-color: var(--form-background);
+		display: grid;
+		row-gap: 4px;
+	}
+
 	.slots {
 		display: grid;
 		row-gap: 4px;
@@ -237,7 +271,7 @@
 		@include p-reset;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-column: span 2;
+		grid-column: span 3;
 		column-gap: 4px;
 	}
 
@@ -258,8 +292,8 @@
 	.weapon-details {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-column: span 2;
+		grid-template-columns: repeat(5, 1fr);
+		grid-column: span 3;
 		column-gap: 4px;
 	}
 
@@ -269,10 +303,35 @@
 		row-gap: 4px;
 	}
 
+	.item-navigation {
+		&__flex {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: baseline;
+
+			a {
+				@include p-reset;
+				margin: 4px;
+
+				font-family: "Old Newspaper Font";
+				font-size: 1.5rem;
+				line-height: 1;
+
+				color: $primary-color;
+
+				&.active {
+					text-decoration: underline;
+					font-weight: bold;
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+
 	.item-properties {
 		@include p-reset;
 		display: grid;
-		grid-column: span 2;
+		grid-column: span 3;
 		column-gap: 4px;
 	}
 
