@@ -21,6 +21,7 @@
 
 		{{#ifEq item.type "Armor"}}
 			{{> items/partials/armor }}
+			{{> items/partials/base-item }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Spell"}}
@@ -29,6 +30,7 @@
 
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon }}
+			{{> items/partials/base-item }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "NPC Attack"}}

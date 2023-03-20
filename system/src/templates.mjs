@@ -20,6 +20,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/talents.hbs",
 		"systems/shadowdark/templates/items/partials/active-effects.hbs",
 		"systems/shadowdark/templates/items/partials/armor.hbs",
+		"systems/shadowdark/templates/items/partials/base-item.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/description.hbs",
 		"systems/shadowdark/templates/items/partials/equipped.hbs",

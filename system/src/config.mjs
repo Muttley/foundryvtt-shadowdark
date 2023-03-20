@@ -191,6 +191,14 @@ SHADOWDARK.TALENT_PROPERTIES = {
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
+	d4: "1d4",
+	d6: "1d6",
+	d8: "1d8",
+	d10: "1d10",
+	d12: "1d12",
+};
+
+SHADOWDARK.WEAPON_BASE_WEAPON = {
 	"bastard-sword": "SHADOWDARK.item.weapon.base_weapon.bastard_sword",
 	club: "SHADOWDARK.item.weapon.base_weapon.club",
 	crossbow: "SHADOWDARK.item.weapon.base_weapon.crossbow",
@@ -206,14 +214,6 @@ SHADOWDARK.WEAPON_BASE_DAMAGE = {
 	spear: "SHADOWDARK.item.weapon.base_weapon.spear",
 	staff: "SHADOWDARK.item.weapon.base_weapon.staff",
 	warhammer: "SHADOWDARK.item.weapon.base_weapon.warhammer",
-};
-
-SHADOWDARK.WEAPON_BASE_WEAPON = {
-	d4: "1d4",
-	d6: "1d6",
-	d8: "1d8",
-	d10: "1d10",
-	d12: "1d12",
 };
 
 SHADOWDARK.WEAPON_PROPERTIES = {
