@@ -189,6 +189,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
+	async _sendToggledLightSourceToChat(active, item) {
+		const cardData = {
+			active: active,
+			name: item.name,
+			timeRemaining: Math.floor(item.system.light.remainingSecs / 60),
+			longevity: item.system.light.longevityMins,
+			actor: this,
+			item: item,
+		};
+
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		await ChatMessage.create({
+			content,
+			speaker: ChatMessage.getSpeaker(),
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+		});
+	}
+
 	async _onToggleLightSource(event) {
 		event.preventDefault();
 
@@ -213,6 +234,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// selected by a User as their character
 		//
 		if (this.actor.isClaimedByUser()) {
+			this._sendToggledLightSourceToChat(active, item);
 			game.shadowdark.lightSourceTracker.toggleLightSource(
 				this.actor,
 				updatedLight

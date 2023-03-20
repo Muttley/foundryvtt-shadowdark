@@ -290,7 +290,21 @@ export default class ActorSD extends Actor {
 	}
 
 	async yourLightWentOut(itemId) {
-		console.log(`${this.name}'s Light Went Out`);
+		const cardData = {
+			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+			actor: this,
+			message: game.i18n.localize("SHADOWDARK.chat.light_source.source.all"),
+		};
+
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle-all.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		await ChatMessage.create({
+			content,
+			speaker: ChatMessage.getSpeaker(),
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+		});
 	}
 
 	async sellAllGems() {
