@@ -213,6 +213,7 @@ SHADOWDARK.WEAPON_BASE_WEAPON = {
 	shortsword: "SHADOWDARK.item.weapon.base_weapon.shortsword",
 	spear: "SHADOWDARK.item.weapon.base_weapon.spear",
 	staff: "SHADOWDARK.item.weapon.base_weapon.staff",
+	wand: "SHADOWDARK.item.weapon.base_weapon.wand",
 	warhammer: "SHADOWDARK.item.weapon.base_weapon.warhammer",
 };
 
