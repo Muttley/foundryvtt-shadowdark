@@ -85,8 +85,12 @@
 	.detail-box {
 		@include p-reset;
 		display: grid;
-		background-color: var(--form-background);
+
 		column-gap: 8px;
+		row-gap: 4px;
+
+		background-color: var(--form-background);
+
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
 
@@ -108,6 +112,11 @@
 		font-size: 20px;
 		height: auto;
 		line-height: 1;
+	}
+
+	.move-note {
+		text-align: left;
+		padding-left: 4px;
 	}
 
 	.npc-body {

@@ -2,6 +2,7 @@ export default function() {
 	const partials = [
 		"systems/shadowdark/templates/actors/npc/abilities.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/attacks.hbs",
+		"systems/shadowdark/templates/actors/npc/abilities/special.hbs",
 		"systems/shadowdark/templates/actors/npc/description.hbs",
 		"systems/shadowdark/templates/actors/npc/partials/ability-scores.hbs",
 		"systems/shadowdark/templates/actors/npc/partials/ac.hbs",
