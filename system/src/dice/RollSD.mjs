@@ -426,7 +426,7 @@ export default class RollSD extends Roll {
 					},
 					render: () => {
 						// Check if the Player has advantage, and add highlight if that is the case
-						if (data.actor.type === "Player" && data.actor?.hasAdvantage(data))	$("button.advantage")
+						if (data.actor?.type === "Player" && data.actor?.hasAdvantage(data))	$("button.advantage")
 							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
 							.addClass("talent-highlight");
 					},
