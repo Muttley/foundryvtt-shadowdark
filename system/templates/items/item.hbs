@@ -1,90 +1,55 @@
 <form class="{{cssClass}}" autocomplete="off">
-	<header class="item-header">
-		<img
-			src="{{item.img}}"
-			data-edit="img"
-			title="{{item.name}}"
-			height="64"
-			width="64"
-		/>
-		<h1>
-			<input
-				class="item-name"
-				name="name"
-				type="text"
-				value="{{item.name}}"
-				placeholder="{{localize 'Name'}}"
+	<div>
+		<header class="item-header">
+			<img
+				src="{{item.img}}"
+				data-edit="img"
+				title="{{item.name}}"
+				height="64"
+				width="64"
 			/>
-		</h1>
-	</header>
+			<h1>
+				<input
+					class="item-name"
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="{{localize 'Name'}}"
+				/>
+			</h1>
+		</header>
+		<nav class="item-navigation" data-group="primary">
+			<div class="item-navigation__flex">
+
+				<a class="item active" data-tab="tab-details">
+					{{localize "SHADOWDARK.sheet.item.tab.details"}}
+				</a>
+
+				{{#if item.system.light.isSource}}
+					<a class="item active" data-tab="tab-light">
+						{{localize "SHADOWDARK.sheet.item.tab.light"}}
+					</a>
+				{{/if}}
+
+				{{#if item.system.magicItem}}
+					<a class="item active" data-tab="tab-magic">
+						{{localize "SHADOWDARK.sheet.item.tab.magic"}}
+					</a>
+				{{/if}}
+
+				<a class="item" data-tab="tab-description">
+					{{localize "SHADOWDARK.sheet.item.tab.description"}}
+				</a>
+			</div>
+		</nav>
+	</div>
+	<hr />
 	<section class="item-body">
 
-		{{#ifEq item.type "Armor"}}
-			{{> items/partials/armor }}
-		{{/ifEq}}
+		{{> items/tabs/details }}
+		{{> items/tabs/light }}
+		{{> items/tabs/magic }}
+		{{> items/tabs/description }}
 
-		{{#ifEq item.type "Spell"}}
-			{{> items/partials/spell }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "Weapon"}}
-			{{> items/partials/weapon }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "NPC Attack"}}
-			{{> items/partials/npc-attack }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent }}
-			{{> items/partials/talent-active-effects }}
-		{{/ifEq}}
-
-		{{#if item.system.magicItem}}
-			{{> items/partials/magic-item }}
-			{{> items/partials/magic-active-effects }}
-		{{/if}}
-
-		{{> items/partials/description }}
-
-		<div>
-			<div class="item-sidebar">
-
-				{{#if hasCost}}
-					{{> items/partials/cost }}
-				{{/if}}
-
-				{{#if usesSlots}}
-					{{!-- Gems have non-configurable slot settings --}}
-					{{#ifNeq item.type "Gem"}}
-						{{> items/partials/slots }}
-					{{else}}
-						<div></div>
-					{{/ifNeq}}
-
-					{{#if item.system.canBeEquipped}}
-						{{> items/partials/equipped }}
-					{{/if}}
-				{{/if}}
-
-				{{#ifEq item.type "Armor"}}
-					{{> items/partials/base-item }}
-				{{/ifEq}}
-
-				{{#ifEq item.type "Weapon"}}
-					{{> items/partials/base-item }}
-				{{/ifEq}}
-
-				{{#ifEq item.type "Basic"}}
-					{{> items/partials/light-source }}
-					{{> items/partials/treasure }}
-				{{/ifEq}}
-
-				{{#if item.system.isPhysical}}
-					{{> items/partials/magic }}
-				{{/if}}
-
-			</div>
-		</div>
 	</section>
 </form>
