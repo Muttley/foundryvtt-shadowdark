@@ -69,6 +69,7 @@ export default class ItemSD extends Item {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		const result = await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+		// The spell is lost if the cast wasn't successful
 		if (result && !result?.rolls?.main?.success) this.update({"system.lost": true});
 	}
 
@@ -96,7 +97,7 @@ export default class ItemSD extends Item {
 	}
 
 	isMagicItem() {
-		return this.hasProperty("magic");
+		return this.system.magicItem;
 	}
 
 	isVersatile() {
@@ -119,10 +120,42 @@ export default class ItemSD extends Item {
 		return !this.isAShield();
 	}
 
+	magicItemEffectsDisplay() {
+		let properties = [];
+
+		if (this.isMagicItem()) {
+			for (const key of this.effects) {
+				if (!key.disabled) {
+					properties.push(
+						CONFIG.SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES[key.label]
+					);
+				}
+			}
+		}
+
+		return properties.join(", ");
+	}
+
+	talentEffectsDisplay() {
+		let properties = [];
+
+		if (this.isTalent()) {
+			for (const key of this.effects) {
+				if (!key.disabled) {
+					properties.push(
+						CONFIG.SHADOWDARK.TALENT_TYPES[key.label]
+					);
+				}
+			}
+		}
+
+		return properties.join(", ");
+	}
+
 	propertiesDisplay() {
 		let properties = [];
 
-		if (this.type === "Armor" || this.type === "Weapon" || this.type === "Talent") {
+		if (this.type === "Armor" || this.type === "Weapon") {
 			for (const key of this.system.properties) {
 				if (this.type === "Armor") {
 					properties.push(
@@ -132,11 +165,6 @@ export default class ItemSD extends Item {
 				else if (this.type === "Weapon") {
 					properties.push(
 						CONFIG.SHADOWDARK.WEAPON_PROPERTIES[key]
-					);
-				}
-				else if (this.type === "Talent") {
-					properties.push(
-						CONFIG.SHADOWDARK.TALENT_TYPES[key]
 					);
 				}
 			}

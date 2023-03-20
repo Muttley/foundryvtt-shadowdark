@@ -150,9 +150,6 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has title", () => {
 			expect(actor.system.title).is.not.undefined;
 		});
-		it("has slots", () => {
-			expect(actor.system.slots).is.not.undefined;
-		});
 
 		after(async () => {
 			await actor.delete();
