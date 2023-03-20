@@ -21,7 +21,6 @@
 
 		{{#ifEq item.type "Armor"}}
 			{{> items/partials/armor }}
-			{{> items/partials/base-item }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Spell"}}
@@ -30,7 +29,6 @@
 
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon }}
-			{{> items/partials/base-item }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "NPC Attack"}}
@@ -69,14 +67,22 @@
 					{{/if}}
 				{{/if}}
 
+				{{#ifEq item.type "Armor"}}
+					{{> items/partials/base-item }}
+				{{/ifEq}}
+
+				{{#ifEq item.type "Weapon"}}
+					{{> items/partials/base-item }}
+				{{/ifEq}}
+
 				{{#ifEq item.type "Basic"}}
 					{{> items/partials/light-source }}
 					{{> items/partials/treasure }}
 				{{/ifEq}}
 
-				{{#ifNeq item.type "Talent"}}
+				{{#if item.system.isPhysical}}
 					{{> items/partials/magic }}
-				{{/ifNeq}}
+				{{/if}}
 
 			</div>
 		</div>
