@@ -180,12 +180,8 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.track_light_sources.hint: >-
-  If checked the system will track and update the time remaining on any active
-  light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
-  If checked light sources belonging to inactive (not logged in) users will
-  still be tracked.
+SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in minutes.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
@@ -285,3 +281,22 @@ SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.effect.custom: Custom Effects
 SHADOWDARK.app.active_effects.title: Active Effects
 SHADOWDARK.sheet.player.available_spells: Available Spells
+SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
+SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
+SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
+SHADOWDARK.item.armor.base_armor.shield: Shield
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastard Sword
+SHADOWDARK.item.weapon.base_weapon.club: Club
+SHADOWDARK.item.weapon.base_weapon.crossbow: Crossbow
+SHADOWDARK.item.weapon.base_weapon.dagger: Dagger
+SHADOWDARK.item.weapon.base_weapon.greataxe: Greataxe
+SHADOWDARK.item.weapon.base_weapon.greatsword: Greatsword
+SHADOWDARK.item.weapon.base_weapon.javelin: Javelin
+SHADOWDARK.item.weapon.base_weapon.longbow: Longbow
+SHADOWDARK.item.weapon.base_weapon.longsword: Longsword
+SHADOWDARK.item.weapon.base_weapon.mace: Mace
+SHADOWDARK.item.weapon.base_weapon.shortbow: Shortbow
+SHADOWDARK.item.weapon.base_weapon.shortsword: Shortsword
+SHADOWDARK.item.weapon.base_weapon.spear: Spear
+SHADOWDARK.item.weapon.base_weapon.staff: Staff
+SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer

@@ -22,6 +22,13 @@ SHADOWDARK.ALIGNMENTS_SHORT = {
 	chaotic: "SHADOWDARK.alignment.chaotic_short",
 };
 
+SHADOWDARK.ARMOR_BASE_ARMOR = {
+	chainmail: "SHADOWDARK.item.armor.base_armor.chainmail",
+	"leather-armor": "SHADOWDARK.item.armor.base_armor.leather_armor",
+	"plate-mail": "SHADOWDARK.item.armor.base_armor.plate_mail",
+	shield: "SHADOWDARK.item.armor.base_armor.shield",
+};
+
 SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
 };
@@ -184,6 +191,24 @@ SHADOWDARK.TALENT_PROPERTIES = {
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
+	"bastard-sword": "SHADOWDARK.item.weapon.base_weapon.bastard_sword",
+	club: "SHADOWDARK.item.weapon.base_weapon.club",
+	crossbow: "SHADOWDARK.item.weapon.base_weapon.crossbow",
+	dagger: "SHADOWDARK.item.weapon.base_weapon.dagger",
+	greataxe: "SHADOWDARK.item.weapon.base_weapon.greataxe",
+	greatsword: "SHADOWDARK.item.weapon.base_weapon.greatsword",
+	javelin: "SHADOWDARK.item.weapon.base_weapon.javelin",
+	longbow: "SHADOWDARK.item.weapon.base_weapon.longbow",
+	longsword: "SHADOWDARK.item.weapon.base_weapon.longsword",
+	mace: "SHADOWDARK.item.weapon.base_weapon.mace",
+	shortbow: "SHADOWDARK.item.weapon.base_weapon.shortbow",
+	shortsword: "SHADOWDARK.item.weapon.base_weapon.shortsword",
+	spear: "SHADOWDARK.item.weapon.base_weapon.spear",
+	staff: "SHADOWDARK.item.weapon.base_weapon.staff",
+	warhammer: "SHADOWDARK.item.weapon.base_weapon.warhammer",
+};
+
+SHADOWDARK.WEAPON_BASE_WEAPON = {
 	d4: "1d4",
 	d6: "1d6",
 	d8: "1d8",
