@@ -95,7 +95,11 @@
 				"rangeDamageBonus": 0,
 				"spellcastingCheckBonus": 0,
 				"backstabDie": 0,
-				"hauler": false
+				"hauler": false,
+				"critical": {
+					"successThreshold": 20,
+					"failureThreshold": 1
+				}
 			},
 			"class": "",
 			"coins": {
@@ -126,7 +130,8 @@
 		"templates": {
 			"common": {
 				"description": "",
-				"properties": []
+				"properties": [],
+				"magicItem": false
 			},
 			"physical": {
 				"cost": {
@@ -220,7 +225,8 @@
 				"bonus": 0,
 				"oneHanded": "",
 				"twoHanded": "",
-				"numDice": 1
+				"numDice": 1,
+				"critMultiplier": 2
 			},
 			"range": "close",
 			"type": "melee",

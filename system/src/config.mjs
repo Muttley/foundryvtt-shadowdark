@@ -77,6 +77,32 @@ SHADOWDARK.LANGUAGES = {
 	thanian: "SHADOWDARK.language.thanian",
 };
 
+SHADOWDARK.MAGIC_ITEM_PROPERTIES = {
+	"system.damage.critMultiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
+	"system.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",
+	"system.damage.bonus": "SHADOWDARK.item.magic_item.type.damageBonus",
+	"system.ac.base": "SHADOWDARK.talent.type.armor_bonus",
+	"system.abilities.cha.value": "SHADOWDARK.ability_cha",
+	"system.abilities.con.value": "SHADOWDARK.ability_con",
+	"system.abilities.dex.value": "SHADOWDARK.ability_dex",
+	"system.abilities.int.value": "SHADOWDARK.ability_int",
+	"system.abilities.str.value": "SHADOWDARK.ability_str",
+	"system.abilities.wis.value": "SHADOWDARK.ability_wis",
+	"system.bonuses.critical.successThreshold": "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
+	"system.bonuses.critical.failureThreshold": "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
+};
+
+SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES = {
+	critMultiplier: "SHADOWDARK.item.magic_item.type.critMultiplier",
+	attackBonus: "SHADOWDARK.item.magic_item.type.attackBonus",
+	damageBonus: "SHADOWDARK.item.magic_item.type.damageBonus",
+	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
+	permanentAbility: "SHADOWDARK.item.magic_item.type.permanentAbility",
+	criticalSuccessThreshold: "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
+	criticalFailureThreshold: "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
+	custom: "SHADOWDARK.item.magic_item.type.custom",
+};
+
 SHADOWDARK.NPC_ATTACK_TYPES = {
 	magic: "SHADOWDARK.npc_attack.type.ability",
 	physical: "SHADOWDARK.npc_attack.type.physical",

@@ -172,24 +172,33 @@ export default class ActorSheetSD extends ActorSheet {
 		const bonuses = this.actor.system.bonuses;
 
 		// Summarize the bonuses for the attack roll
-		const parts = ["@abilityBonus", "@talentBonus", "@itemBonus"];
+		const parts = ["@abilityBonus", "@talentBonus"];
 		data.damageParts = [];
 
-		data.itemBonus = item.system.damage.bonus;
+		// Magic Item bonuses
+		if (item.system.attackBonus) {
+			parts.push("@itemBonus");
+			data.itemBonus = item.system.attackBonus;
+		}
+		if (item.system.damage.bonus) {
+			data.damageParts.push("@itemDamageBonus");
+			data.itemDamageBonus = item.system.damage.bonus;
+		}
 
+		// Talents & Ability modifiers
 		if (item.system.type === "melee") {
 			data.abilityBonus = this.actor.abilityModifier("str");
+
 			data.talentBonus = bonuses.meleeAttackBonus;
 			data.meleeDamageBonus = bonuses.meleeDamageBonus;
 			data.damageParts.push("@meleeDamageBonus");
-			data.damageDie = bonuses.damageDie;
 		}
 		else {
 			data.abilityBonus = this.actor.abilityModifier("dex");
+
 			data.talentBonus = bonuses.rangedAttackBonus;
 			data.rangedDamageBonus = bonuses.rangedDamageBonus;
 			data.damageParts.push("@rangedDamageBonus");
-			data.damageDie = bonuses.damageDie;
 		}
 
 		// Check Weapon Mastery & add if applicable

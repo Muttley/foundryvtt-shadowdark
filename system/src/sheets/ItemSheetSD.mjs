@@ -39,6 +39,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onTalentTypeProperties(event)
 		);
 
+		html.find(".item-property-list.magic-type").click(
+			event => this._onMagicItemTypeProperties(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -57,6 +61,8 @@ export default class ItemSheetSD extends ItemSheet {
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
 			properties: [],
 			propertiesDisplay: "",
+			magicItemEffectsDisplay: "",
+			talentEffectsDisplay: "",
 			source: source.system,
 			system: item.system,
 			usesSlots: item.system.slots !== undefined,
@@ -83,7 +89,9 @@ export default class ItemSheetSD extends ItemSheet {
 		}
 
 		context.propertiesDisplay = item.propertiesDisplay();
-		if (item.type === "Talent" || item.type === "Spell") {
+		context.magicItemEffectsDisplay = item.magicItemEffectsDisplay();
+		context.talentEffectsDisplay = item.talentEffectsDisplay();
+		if (item.type === "Talent" || item.type === "Spell" || item.isMagicItem()) {
 			// Effects
 			context.effects = ActiveEffectSD.prepareActiveEffectCategories(item.effects, item);
 		}
@@ -125,6 +133,14 @@ export default class ItemSheetSD extends ItemSheet {
 		).render(true);
 	}
 
+	_onMagicItemTypeProperties(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.MagicItemEffectsSD(
+			this.item, {event: event}
+		).render(true);
+	}
+
 	_onArmorProperties(event) {
 		event.preventDefault();
 
@@ -151,7 +167,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 	_updateObject(event, formData) {
 		// Manage changes to ActiveEffects
-		if (this.item.type === "Talent") {
+		if (this.item.type === "Talent" || this.item.isMagicItem()) {
 			ActiveEffectSD.onChangeActiveEffect(event, this.item);
 		}
 

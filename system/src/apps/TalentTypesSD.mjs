@@ -1,12 +1,11 @@
-import ItemPropertiesSD from "./ItemPropertiesSD.mjs";
+import ActiveEffectsSD from "./ActiveEffectsSD.mjs";
 
-export default class TalentTypesSD extends ItemPropertiesSD {
+export default class TalentTypesSD extends ActiveEffectsSD {
 	constructor(object, options) {
 		super(
 			object,
 			{
 				data: CONFIG.SHADOWDARK.TALENT_TYPES,
-				systemKey: "properties",
 			});
 	}
 
@@ -147,14 +146,13 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 		return changes;
 	}
 
-	async _onPropertySelect(event) {
-		await super._onPropertySelect(event);
+	async _updateObject(event, formData) {
+		const newEffects = [];
+		const flipEffects = [];
 
-		let newEffects = [];
-		let flipEffects = [];
-
-		for ( const [key, value] of Object.entries(this.properties)) {
+		for ( const [key, value] of Object.entries(this.effects)) {
 			const effectExists = this.object.effects.find(ef => ef.label === key);
+			const [changes, transfer] = this._getChanges(key);
 			if (effectExists && value.selected && effectExists.disabled) {
 				flipEffects.push(effectExists);
 			}
@@ -166,9 +164,9 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 					label: key,
 					icon: this._getIcon(key),
 					origin: this.object.uuid,
-					changes: this._getChanges(key),
+					changes,
 					disabled: false,
-					transfer: true,
+					transfer,
 				});
 			}
 		}
@@ -180,6 +178,6 @@ export default class TalentTypesSD extends ItemPropertiesSD {
 			flipEffects.forEach(async ef => await ef.update({disabled: !ef.disabled}));
 		}
 
-		this.object.sheet.render(true);
+		super._updateObject(event, formData);
 	}
 }

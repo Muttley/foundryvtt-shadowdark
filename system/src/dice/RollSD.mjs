@@ -110,14 +110,28 @@ export default class RollSD extends Roll {
 	/**
 	 * Checks if a d20 has been rolled with either a result of
 	 * 1 (failure) or 20 (success) and returns that as a string.
+	 *
+	 * Options:
+	 * - critical.failureThreshold: Modified lower threshold for critical failure
+	 * - critical.successThreshold: Modified higher threshold for critical success
+	 *
 	 * @param {Roll} roll 			- Roll results
+	 * @param {object} options	- Options for the critical check
 	 * @returns {string|null} 	- Analysis result
 	 */
-	static _digestCritical(roll) {
+	static _digestCritical(roll, options={}) {
 		if ( roll.terms[0].faces !== 20 ) return null;
+
+		// Check if different threshold are given as options
+		const failureThreshold = (options.critical?.failureThreshold)
+			? options.critical.failureThreshold : 1;
+
+		const successThreshold = (options.critical?.successThreshold)
+			? options.critical.successThreshold : 20;
+
 		// Get the final result if using adv/disadv
-		else if ( roll.terms[0].total === 20 ) return "success";
-		else if ( roll.terms[0].total === 1 ) return "failure";
+		if ( roll.terms[0].total >= successThreshold ) return "success";
+		else if ( roll.terms[0].total <= failureThreshold ) return "failure";
 		return null;
 	}
 
@@ -146,7 +160,7 @@ export default class RollSD extends Roll {
 	 * @param {-1|0|1} adv 							- Pre-determined Advantage
 	 * @returns {Array<string>}					- Modified rollParts
 	 */
-	static _partsAdvantage(rollParts, adv=0) {
+	static _partsAdvantage(rollParts,	adv=0) {
 		const splitDice = rollParts[0].split("d");
 		if (parseInt(splitDice[0], 10) !== 1) return rollParts;
 
@@ -185,7 +199,9 @@ export default class RollSD extends Roll {
 
 		const roll = await new Roll(parts.join(" + "), data).evaluate({async: true});
 		const renderedHTML = await roll.render();
-		const critical = this._digestCritical(roll);
+
+		// Also send the actors critical bonuses in case it has modified thresholds
+		const critical = this._digestCritical(roll, data.actor?.system?.bonuses);
 
 		return {
 			roll,
@@ -251,8 +267,8 @@ export default class RollSD extends Roll {
 					+ Math.floor(data.actor.system.level.value / 2);
 			}
 
-			// Double the dice if critical
-			if ( data.rolls.main.critical === "success" ) numDice *= 2;
+			// Multiply the dice with the items critical multiplier
+			if ( data.rolls.main.critical === "success" ) numDice *= data.item.system.damage.critMultiplier;
 
 			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
@@ -462,6 +478,7 @@ export default class RollSD extends Roll {
 				isRoll: true,
 				"core.canPopout": true,
 				hasTarget: target !== false,
+				critical: rollResult.critical,
 			},
 		};
 		if (target) chatData.flags.success = rollResult.roll.total >= target;

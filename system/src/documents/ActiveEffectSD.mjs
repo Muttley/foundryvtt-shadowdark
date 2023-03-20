@@ -8,8 +8,10 @@ export default class ActiveEffectSD extends ActiveEffect {
 	static onChangeActiveEffect(event, owner) {
 		event.preventDefault();
 
+		const activeEffectDataClasses = ["talent-option-data", "magic-item-option-data"];
+
 		if (!event.currentTarget) return;
-		if (event.target.className !== "talent-option-data") return;
+		if (!activeEffectDataClasses.includes(event.target.className)) return;
 
 		// Get the target
 		const target = $(event.currentTarget);
@@ -124,6 +126,10 @@ export default class ActiveEffectSD extends ActiveEffect {
 				owner.isTalent()
 				&& !Object.keys(CONFIG.SHADOWDARK.TALENT_TYPES).includes(e.label)
 			) categories.talent.effects.push(e);
+			if (
+				owner.isMagicItem()
+				&& !Object.keys(CONFIG.SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES).includes(e.label)
+			) categories.item.effects.push(e);
 			else if ( e.disabled ) categories.suppressed.effects.push(e);
 			else category.effects.push(e);
 		}
