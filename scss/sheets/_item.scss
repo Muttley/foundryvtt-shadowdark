@@ -80,6 +80,7 @@
 		}
 	}
 
+	.magic-item-properties,
 	.talent-properties {
 		@include p-reset;
 		grid-column: span 2;
@@ -88,6 +89,7 @@
 		grid-template-columns: 80px 1fr;
 	}
 
+	.magic-details,
 	.talent-details {
 		@include p-reset;
 		display: grid;
@@ -158,6 +160,7 @@
 
 	.equipped,
 	.light-source,
+	.magic-item,
 	.treasure {
 		display: grid;
 		grid-template-columns: 2fr 1fr;

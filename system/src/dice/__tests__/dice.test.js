@@ -76,6 +76,10 @@ const mockData = () => {
 					rangedDamageBonus: 2,
 					spellcastingCheckBonus: 5,
 					backstabDie: 3,
+					critical: {
+						successThreshold: 20,
+						failureThreshold: 3,
+					},
 				},
 			},
 		},
@@ -93,6 +97,7 @@ const mockData = () => {
 					numDice: 1,
 					oneHanded: "d8",
 					twoHanded: "d10",
+					critMultiplier: 2,
 				},
 				tier: 0, // spells
 				properties: [
@@ -133,7 +138,7 @@ export default ({ describe, it, expect }) => {
 		});
 	});
 
-	describe("_digestCritical(roll)", () => {
+	describe("_digestCritical(roll, options={})", () => {
 		it("providing a non-d20 roll returns null", () => {
 			const roll = mockRollResult(10, 1);
 			expect(RollSD._digestCritical(roll)).is.null;
@@ -149,6 +154,36 @@ export default ({ describe, it, expect }) => {
 		it("providing any other d20 result returns 'null", () => {
 			const roll = mockRollResult(20, 10);
 			expect(RollSD._digestCritical(roll)).is.null;
+		});
+
+		describe("options with critical threshold values", () => {
+			it("increased lower threshold results in failure", () => {
+				const options = { critical: { failureThreshold: 3 } };
+				expect(RollSD._digestCritical(mockRollResult(20, 4), options)).is.null;
+				expect(RollSD._digestCritical(mockRollResult(20, 3), options)).equal("failure");
+				expect(RollSD._digestCritical(mockRollResult(20, 2), options)).equal("failure");
+				expect(RollSD._digestCritical(mockRollResult(20, 1), options)).equal("failure");
+			});
+
+			it("decreased higher threshold results in success", () => {
+				const options = { critical: { successThreshold: 18 } };
+				expect(RollSD._digestCritical(mockRollResult(20, 17), options)).is.null;
+				expect(RollSD._digestCritical(mockRollResult(20, 18), options)).equal("success");
+				expect(RollSD._digestCritical(mockRollResult(20, 19), options)).equal("success");
+				expect(RollSD._digestCritical(mockRollResult(20, 20), options)).equal("success");
+			});
+
+			it("both threhshold modified", () => {
+				const options = { critical: { successThreshold: 18, failureThreshold: 3 } };
+				expect(RollSD._digestCritical(mockRollResult(20, 1), options)).equal("failure");
+				expect(RollSD._digestCritical(mockRollResult(20, 2), options)).equal("failure");
+				expect(RollSD._digestCritical(mockRollResult(20, 3), options)).equal("failure");
+				expect(RollSD._digestCritical(mockRollResult(20, 4), options)).is.null;
+				expect(RollSD._digestCritical(mockRollResult(20, 17), options)).is.null;
+				expect(RollSD._digestCritical(mockRollResult(20, 18), options)).equal("success");
+				expect(RollSD._digestCritical(mockRollResult(20, 19), options)).equal("success");
+				expect(RollSD._digestCritical(mockRollResult(20, 20), options)).equal("success");
+			});
 		});
 	});
 
@@ -610,6 +645,27 @@ export default ({ describe, it, expect }) => {
 			expect(response.rolls.secondaryDamage.roll).is.not.undefined;
 			expect(response.rolls.secondaryDamage.roll.terms[0].number).is.not.undefined;
 			expect(response.rolls.secondaryDamage.roll.terms[0].number).equal(2);
+		});
+
+		it("critical success expected to roll 4x dice with a 4 crit multiplier", async () => {
+			const mockItemData = mockData();
+			mockItemData.rolls = { main: { critical: "success" } };
+			mockItemData.damageParts = [];
+			mockItemData.item.system.damage.critMultiplier = 4;
+			expect(Object.keys(mockItemData.rolls).length).equal(1);
+
+			const response = await RollSD._rollWeapon(mockItemData);
+			expect(Object.keys(response.rolls).length).equal(3);
+			expect(response.rolls.primaryDamage).is.not.undefined;
+			expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).equal(4);
+			expect(response.rolls.secondaryDamage).is.not.undefined;
+			expect(response.rolls.secondaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll.terms[0].number).equal(4);
 		});
 
 		it("critical failure expected to not roll damage dice", async () => {

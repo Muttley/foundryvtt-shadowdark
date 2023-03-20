@@ -40,6 +40,11 @@
 			{{> items/partials/talent-active-effects }}
 		{{/ifEq}}
 
+		{{#if item.system.magicItem}}
+			{{> items/partials/magic-item }}
+			{{> items/partials/magic-active-effects }}
+		{{/if}}
+
 		{{> items/partials/description }}
 
 		<div>
@@ -66,6 +71,10 @@
 					{{> items/partials/light-source }}
 					{{> items/partials/treasure }}
 				{{/ifEq}}
+
+				{{#ifNeq item.type "Talent"}}
+					{{> items/partials/magic }}
+				{{/ifNeq}}
 
 			</div>
 		</div>
