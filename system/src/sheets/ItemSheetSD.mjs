@@ -9,6 +9,13 @@ export default class ItemSheetSD extends ItemSheet {
 			height: 620,
 			classes: ["shadowdark", "sheet", "item"],
 			resizable: true,
+			tabs: [
+				{
+					navSelector: ".item-navigation",
+					contentSelector: ".item-body",
+					initial: "tab-details",
+				},
+			],
 		});
 	}
 
