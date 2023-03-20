@@ -130,6 +130,7 @@
 	],
 	"socket": true,
 	"gridDistance": 5,
+	"initiative": "@initiativeFormula + @initiativeBonus",
 	"gridUnits": "ft",
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json"

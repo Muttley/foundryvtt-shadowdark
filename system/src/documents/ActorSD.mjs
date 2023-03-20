@@ -179,6 +179,19 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+	getRollData() {
+		const rollData = super.getRollData();
+
+		rollData.initiativeBonus = this.abilityModifier("dex");
+
+		rollData.initiativeFormula = "1d20";
+		if (this.system.bonuses?.advantage?.includes("initiative")) {
+			rollData.initiativeFormula = "2d20kh1";
+		}
+
+		return rollData;
+	}
+
 	getSpellcastingAbility() {
 		return this.system.spellcastingAbility;
 	}
