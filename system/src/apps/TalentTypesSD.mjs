@@ -152,7 +152,7 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 
 		for ( const [key, value] of Object.entries(this.effects)) {
 			const effectExists = this.object.effects.find(ef => ef.label === key);
-			const [changes, transfer] = this._getChanges(key);
+			const changes = this._getChanges(key);
 			if (effectExists && value.selected && effectExists.disabled) {
 				flipEffects.push(effectExists);
 			}
@@ -166,7 +166,7 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 					origin: this.object.uuid,
 					changes,
 					disabled: false,
-					transfer,
+					transfer: true,
 				});
 			}
 		}
