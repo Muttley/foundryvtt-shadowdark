@@ -16,7 +16,8 @@
 				"level": {
 					"value": 1
 				},
-				"notes": ""
+				"notes": "",
+				"spellcastingAbility": ""
 			}
 		},
 		"NPC": {
@@ -50,7 +51,8 @@
 				}
 			},
 			"darkAdapted": true,
-			"move": ""
+			"move": "near",
+			"moveNote": ""
 		},
 		"Player": {
 			"templates": ["shared_details"],
@@ -111,7 +113,7 @@
 				"xp": 0
 			},
 			"luck": false,
-			"spellcastingAbility": "",
+			"slots": 10,
 			"title": ""
 		}
 	},
@@ -184,13 +186,16 @@
 			"templates": [
 				"common"
 			],
+			"attack": {
+				"num": 1,
+				"bonus": 0
+			},
 			"damage": {
 				"bonus": 0,
 				"numDice": 1,
-				"value": "d4"
-
+				"value": "d4",
+				"special": ""
 			},
-			"numAttacks": 1,
 			"type": "physical",
 			"range": "close"
 		},

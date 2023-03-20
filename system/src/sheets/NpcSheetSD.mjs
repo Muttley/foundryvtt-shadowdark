@@ -7,7 +7,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "npc"],
 			width: 600,
-			height: 630,
+			height: 666, // Memnon says "Hi!"
 			resizable: true,
 			tabs: [
 				{

@@ -104,8 +104,9 @@ SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES = {
 };
 
 SHADOWDARK.NPC_ATTACK_TYPES = {
+	magic: "SHADOWDARK.npc_attack.type.ability",
 	physical: "SHADOWDARK.npc_attack.type.physical",
-	ability: "SHADOWDARK.npc_attack.type.ability",
+	special: "SHADOWDARK.npc_attack.type.ability",
 };
 
 SHADOWDARK.RANGES = {

@@ -180,8 +180,12 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked.
+SHADOWDARK.settings.track_light_sources.hint: >-
+  If checked the system will track and update the time remaining on any active
+  light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
+  If checked light sources belonging to inactive (not logged in) users will
+  still be tracked.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in minutes.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
@@ -208,6 +212,7 @@ SHADOWDARK.sheet.npc.dark-adapted: Dark-Adapted
 SHADOWDARK.sheet.npc.description_label: Description
 SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
+SHADOWDARK.sheet.npc.special_label: Special
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.player.ancestry: Ancestry
@@ -233,17 +238,18 @@ SHADOWDARK.sheet.player.title: Title
 SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
 SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
 SHADOWDARK.sheet.player.xp: XP
-SHADOWDARK.spellcasting_ability: Spellcasting Ability
 SHADOWDARK.spell_caster.priest: Priest
 SHADOWDARK.spell_caster.wizard: Wizard
+SHADOWDARK.spell_duration.days: Days
 SHADOWDARK.spell_duration.focus: Focus
 SHADOWDARK.spell_duration.instant: Instant
-SHADOWDARK.spell_duration.rounds: Rounds
-SHADOWDARK.spell_duration.days: Days
 SHADOWDARK.spell_duration.real_time: Real Time
+SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
+SHADOWDARK.spellcasting_ability: Spellcasting Ability
+SHADOWDARK.talent.backstab: Backstab
 SHADOWDARK.talent.type.ability_improvement: Ability Improvement
 SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
@@ -259,7 +265,6 @@ SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
 SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
-SHADOWDARK.talent.backstab: Backstab
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
@@ -279,3 +284,4 @@ SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.effect.custom: Custom Effects
 SHADOWDARK.app.active_effects.title: Active Effects
+SHADOWDARK.sheet.player.available_spells: Available Spells

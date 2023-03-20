@@ -219,7 +219,9 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
-		const abilityId = this.actor.system.spellcastingAbility;
+
+		const abilityId = this.actor.getSpellcastingAbility();
+
 		const data = {
 			rollType: item.name.slugify(),
 			item: item,
