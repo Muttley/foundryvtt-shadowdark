@@ -1,3 +1,26 @@
 <div class="npc-special">
-	<label class="npc-attacks-label">{{localize 'SHADOWDARK.sheet.npc.special_label'}}</label>
+	<label class="npc-label">
+		{{localize 'SHADOWDARK.sheet.npc.features_label'}}
+		<span class="item-controls">
+			<a
+				class="item-control item-create"
+				title="{{localize SHADOWDARK.sheet.npc.create_feature}}"
+				data-item-type="NPC Feature"
+			>
+				<i class="fa-duotone fa-square-plus"></i>
+			</a>
+		</span>
+	</label>
+	<ol>
+		{{#each features as |feature|}}
+			<li>
+				<a
+					class="item open-item"
+					data-item-id="{{feature.itemId}}"
+				>
+					{{{feature.display}}}
+				</a>
+			</li>
+		{{/each}}
+	</ol>
 </div>

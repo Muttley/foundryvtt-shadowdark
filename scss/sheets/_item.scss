@@ -227,6 +227,20 @@
 		row-gap: 8px;
 	}
 
+	.npc-attack-details {
+		@include p-reset;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column: span 2;
+		column-gap: 4px;
+	}
+
+	.npc-attack-detail {
+		background-color: var(--form-background);
+		display: grid;
+		row-gap: 4px;
+	}
+
 	.slots {
 		display: grid;
 		row-gap: 4px;

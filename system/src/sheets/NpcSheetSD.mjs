@@ -34,8 +34,37 @@ export default class NpcSheetSD extends ActorSheetSD {
 	async getData(options) {
 		const context = await super.getData(options);
 
-		context.attacks = [];
+		await this._prepareItems(context);
 
 		return context;
+	}
+
+	async _prepareItems(context) {
+		const attacks = [];
+		const features = [];
+
+		for (const i of this._sortAllItems(context)) {
+			if (i.type === "NPC Attack") {
+				const display = await this.actor.buildNpcAttackDisplays(i._id);
+				attacks.push({itemId: i._id, display});
+			}
+			if (i.type === "NPC Feature") {
+				const description = jQuery(i.system.description).text();
+				const display = await renderTemplate(
+					"systems/shadowdark/templates/partials/npc-feature.hbs",
+					{
+						name: i.name,
+						description,
+					}
+				);
+				features.push({
+					itemId: i._id,
+					display,
+				});
+			}
+		}
+
+		context.attacks = attacks;
+		context.features = features;
 	}
 }

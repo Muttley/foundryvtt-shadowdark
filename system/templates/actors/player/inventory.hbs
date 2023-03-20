@@ -10,7 +10,18 @@
 				</tr>
 				{{#each inventory as |section sid|}}
 					<tr class="inventory-section-header">
-						<th>{{section.label}}</th>
+						<th>
+							{{#ifNeq sid "treasure"}}
+								<a
+									class="item-control item-create"
+									title="{{localize SHADOWDARK.inventory.create_item}}"
+									data-item-type="{{section.type}}"
+								>
+									<i class="fa-regular fa-square-plus"></i>
+								</a>
+							{{/ifNeq}}
+							{{section.label}}
+						</th>
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
