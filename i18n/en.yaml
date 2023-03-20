@@ -316,3 +316,42 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.item.magic_item.is_magic: Magic Item
+SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
+SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
+SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus
+SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
+SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Lower Critical Success Threshold
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Higher Critical Failure Threshold
+SHADOWDARK.item.magic_item.type.custom: Custom Effect
+SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
+SHADOWDARK.effect.custom: Custom Effects
+SHADOWDARK.app.active_effects.title: Active Effects
+SHADOWDARK.sheet.player.available_spells: Available Spells
+SHADOWDARK.item.armor.base_armor.title: Base Armor
+SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
+SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
+SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
+SHADOWDARK.item.armor.base_armor.shield: Shield
+SHADOWDARK.item.armor.base_weapon.title: Base Weapon
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastard Sword
+SHADOWDARK.item.weapon.base_weapon.club: Club
+SHADOWDARK.item.weapon.base_weapon.crossbow: Crossbow
+SHADOWDARK.item.weapon.base_weapon.dagger: Dagger
+SHADOWDARK.item.weapon.base_weapon.greataxe: Greataxe
+SHADOWDARK.item.weapon.base_weapon.greatsword: Greatsword
+SHADOWDARK.item.weapon.base_weapon.javelin: Javelin
+SHADOWDARK.item.weapon.base_weapon.longbow: Longbow
+SHADOWDARK.item.weapon.base_weapon.longsword: Longsword
+SHADOWDARK.item.weapon.base_weapon.mace: Mace
+SHADOWDARK.item.weapon.base_weapon.shortbow: Shortbow
+SHADOWDARK.item.weapon.base_weapon.shortsword: Shortsword
+SHADOWDARK.item.weapon.base_weapon.spear: Spear
+SHADOWDARK.item.weapon.base_weapon.staff: Staff
+SHADOWDARK.item.weapon.base_weapon.wand: Wand
+SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer
+SHADOWDARK.chat.light_source.source.toggle.on: was lit
+SHADOWDARK.chat.light_source.source.toggle.off: was doused
+SHADOWDARK.chat.light_source.remaining: minutes remaining
+SHADOWDARK.chat.light_source.source.all: All light sources were doused
