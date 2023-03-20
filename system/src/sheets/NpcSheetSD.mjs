@@ -24,6 +24,26 @@ export default class NpcSheetSD extends ActorSheetSD {
 		return "systems/shadowdark/templates/actors/npc.hbs";
 	}
 
+	async _onRollItem(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+		const data = {
+			item: item,
+			actor: this.actor,
+		};
+
+		// Summarize the bonuses for the attack roll
+		const parts = ["@attackBonus"];
+		data.attackBonus = item.system.attack.bonus;
+
+		data.damageParts = ["@damageBonus"];
+		data.damageBonus = item.system.damage.bonus;
+
+		return item.rollItem(parts, data);
+	}
+
 	/** @inheritdoc */
 	activateListeners(html) {
 		// Handle default listeners last so system listeners are triggered first
