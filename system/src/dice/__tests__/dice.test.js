@@ -606,6 +606,55 @@ export default ({ describe, it, expect }) => {
 	/* -------------------------------------------- */
 	/*  Special Case Rolling                        */
 	/* -------------------------------------------- */
+	describe("_rollNpcAttack(data)", () => {
+		const mockData = {
+			item: {
+				system: {
+					damage: {
+						numDice: 1,
+						value: "d6",
+					},
+				},
+			},
+		};
+
+		it("non-critical rolls as intended", async () => {
+			mockData.rolls = { main: { critical: null } };
+			mockData.damageParts = [];
+
+			const response = await RollSD._rollNpcAttack(mockData);
+			expect(response.rolls.primaryDamage).is.not.undefined;
+			expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).equal(1);
+			expect(response.rolls.primaryDamage.roll.terms[0].faces).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].faces).equal(6);
+		});
+
+		it("critical success rolls double dice", async () => {
+			mockData.rolls = { main: { critical: "success" } };
+			mockData.damageParts = [];
+
+			const response = await RollSD._rollNpcAttack(mockData);
+			expect(response.rolls.primaryDamage).is.not.undefined;
+			expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].number).equal(2);
+			expect(response.rolls.primaryDamage.roll.terms[0].faces).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[0].faces).equal(6);
+		});
+
+		it("critical failure rolls no damage dice", async () => {
+			mockData.rolls = { main: { critical: "failure" } };
+			mockData.damageParts = [];
+
+			const response = await RollSD._rollNpcAttack(mockData);
+			expect(Object.keys(response.rolls).length).equal(1);
+		});
+	});
+
 	describe("_rollWeapon(data)", () => {
 		it("data expected to be augmented with 3 rolls", async () => {
 			const mockItemData = mockData();

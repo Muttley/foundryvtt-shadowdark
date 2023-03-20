@@ -1,9 +1,20 @@
 <div class="npc-attacks">
-	<label class="npc-attacks-label">{{localize 'SHADOWDARK.sheet.npc.attacks_label'}}</label>
+	<label class="npc-label">
+		{{localize 'SHADOWDARK.sheet.npc.attacks_label'}}
+		<span class="item-controls">
+			<a
+				class="item-control item-create"
+				title="{{localize SHADOWDARK.sheet.npc.create_attack}}"
+				data-item-type="NPC Attack"
+			>
+				<i class="fa-duotone fa-square-plus"></i>
+			</a>
+		</span>
+	</label>
 	<ol>
 		{{#each attacks as |attack|}}
 			<li
-				class="rollable item-rollable"
+				class="item rollable item-rollable"
 				data-action="item-attack"
 				data-item-id="{{attack.itemId}}"
 			>

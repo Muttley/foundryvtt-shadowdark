@@ -44,6 +44,27 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	async buildNpcAttackDisplays(itemId) {
+		const item = this.getEmbeddedDocument("Item", itemId);
+
+		const attackOptions = {
+			attackType: item.system.attackType,
+			attackName: item.name,
+			numAttacks: item.system.attack.num,
+			attackBonus: item.system.attack.bonus,
+			baseDamage: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+				item.system.damage.value
+			],
+			bonusDamage: item.system.damage.bonus,
+			special: item.system.damage.special,
+		};
+
+		return await renderTemplate(
+			"systems/shadowdark/templates/partials/npc-attack.hbs",
+			attackOptions
+		);
+	}
+
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/weapon-attack.hbs",

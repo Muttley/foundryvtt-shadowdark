@@ -123,6 +123,7 @@
 			"Basic",
 			"Gem",
 			"NPC Attack",
+			"NPC Feature",
 			"Spell",
 			"Talent",
 			"Weapon"
@@ -141,6 +142,7 @@
 				},
 				"canBeEquipped": false,
 				"equipped": false,
+				"isPhysical": true,
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -193,11 +195,15 @@
 			"damage": {
 				"bonus": 0,
 				"numDice": 1,
-				"value": "d4",
+				"value": "",
 				"special": ""
 			},
-			"type": "physical",
-			"range": "close"
+			"attackType": "physical"
+		},
+		"NPC Feature": {
+			"templates": [
+				"common"
+			]
 		},
 		"Spell": {
 			"templates": ["common"],
