@@ -54,37 +54,36 @@ export default class RollSD extends Roll {
 					}
 				);
 			}
+			return this._renderRoll(data, adv, options);
 		}
 
 		// Special cases for D20 rolls
-		if (data.actor?.type === "Player") {
-			if (this._isD20(parts)) {
-				// Weapon? -> Roll Damage dice
-				if (data.item?.isWeapon()) {
-					data = await this._rollWeapon(data);
-					if (!options.flavor) {
-						options.flavor = game.i18n.format(
-							"SHADOWDARK.chat.item_roll.title",
-							{
-								name: data.item.name,
-							}
-						);
-					}
+		if (this._isD20(parts)) {
+			// Weapon? -> Roll Damage dice
+			if (data.item?.isWeapon()) {
+				data = await this._rollWeapon(data);
+				if (!options.flavor) {
+					options.flavor = game.i18n.format(
+						"SHADOWDARK.chat.item_roll.title",
+						{
+							name: data.item.name,
+						}
+					);
 				}
+			}
 
-				// Spell? -> Set a target
-				if (data.item?.isSpell()) {
-					options.target = data.item.system.tier + 10;
-					if (!options.flavor) {
-						options.flavor = game.i18n.format(
-							"SHADOWDARK.chat.spell_roll.title",
-							{
-								name: data.item.name,
-								tier: data.item.system.tier,
-								spellDC: options.target,
-							}
-						);
-					}
+			// Spell? -> Set a target
+			if (data.item?.isSpell()) {
+				options.target = data.item.system.tier + 10;
+				if (!options.flavor) {
+					options.flavor = game.i18n.format(
+						"SHADOWDARK.chat.spell_roll.title",
+						{
+							name: data.item.name,
+							tier: data.item.system.tier,
+							spellDC: options.target,
+						}
+					);
 				}
 			}
 		}
