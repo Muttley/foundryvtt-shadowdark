@@ -43,33 +43,48 @@ export default class RollSD extends Roll {
 			main: await this._rollAdvantage(parts, data, adv),
 		};
 
-		// Special cases for D20 rolls
-		if (this._isD20(parts)) {
-			// Weapon? -> Roll Damage dice
-			if (data.item?.isWeapon()) {
-				data = await this._rollWeapon(data);
-				if (!options.flavor) {
-					options.flavor = game.i18n.format(
-						"SHADOWDARK.chat.item_roll.title",
-						{
-							name: data.item.name,
-						}
-					);
-				}
+		// Roll damage for NPCs
+		if (data.actor?.type === "NPC") {
+			data = await this._rollNpcAttack(data);
+			if (!options.flavor) {
+				options.flavor = game.i18n.format(
+					"SHADOWDARK.chat.item_roll.title",
+					{
+						name: data.item.name,
+					}
+				);
 			}
+		}
 
-			// Spell? -> Set a target
-			if (data.item?.isSpell()) {
-				options.target = data.item.system.tier + 10;
-				if (!options.flavor) {
-					options.flavor = game.i18n.format(
-						"SHADOWDARK.chat.spell_roll.title",
-						{
-							name: data.item.name,
-							tier: data.item.system.tier,
-							spellDC: options.target,
-						}
-					);
+		// Special cases for D20 rolls
+		if (data.actor?.type === "Player") {
+			if (this._isD20(parts)) {
+				// Weapon? -> Roll Damage dice
+				if (data.item?.isWeapon()) {
+					data = await this._rollWeapon(data);
+					if (!options.flavor) {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.item_roll.title",
+							{
+								name: data.item.name,
+							}
+						);
+					}
+				}
+
+				// Spell? -> Set a target
+				if (data.item?.isSpell()) {
+					options.target = data.item.system.tier + 10;
+					if (!options.flavor) {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.spell_roll.title",
+							{
+								name: data.item.name,
+								tier: data.item.system.tier,
+								spellDC: options.target,
+							}
+						);
+					}
 				}
 			}
 		}
@@ -244,6 +259,29 @@ export default class RollSD extends Roll {
 	/* -------------------------------------------- */
 
 	/**
+	 * Rolls an NPC attack.
+	 * @param {object} data - Object containing the item document of rolled item
+	 * @returns {object}		- Returns the data object, with additional roll evaluations
+	 */
+	static async _rollNpcAttack(data) {
+		// Get the damage Die
+		let numDice = (data.item.system.damage.numDice)
+			? data.item.system.damage.numDice
+			: 1;
+		const damageDie = data.item.system.damage.value;
+
+		if ( data.rolls.main.critical !== "failure" ) {
+			if ( data.rolls.main.critical === "success" ) numDice *= 2;
+
+			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
+
+			data.rolls.primaryDamage = await this._roll(primaryParts, data);
+		}
+
+		return data;
+	}
+
+	/**
 	 * Rolls a weapon when suppled in the `data` object.
 	 * @param {object} data - Object containing the item document of rolled item
 	 * @returns {object}		- Returns the data object, with additional roll evaluations
@@ -379,7 +417,7 @@ export default class RollSD extends Roll {
 						disadvantage: {
 							label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 							callback: async html => {
-								resolve(this.RollD20(parts, data, html, -11, options));
+								resolve(this.RollD20(parts, data, html, -1, options));
 							},
 						},
 					},
@@ -388,8 +426,8 @@ export default class RollSD extends Roll {
 						resolve(roll);
 					},
 					render: () => {
-						// Check if the actor has advantage, and add highlight if that is the case
-						if (data.actor?.hasAdvantage(data))	$("button.advantage")
+						// Check if the Player has advantage, and add highlight if that is the case
+						if (data.actor.type === "Player" && data.actor?.hasAdvantage(data))	$("button.advantage")
 							.attr("title", game.i18n.localize("SHADOWDARK.dialog.tooltip.talent_advantage"))
 							.addClass("talent-highlight");
 					},
@@ -503,6 +541,7 @@ export default class RollSD extends Roll {
 			isWeapon: false,
 			isVersatile: false,
 			isRoll: true,
+			isNPC: data.actor?.type === "NPC",
 		};
 		if (data.rolls.main) {
 			templateData._formula = data.rolls.main._formula;
