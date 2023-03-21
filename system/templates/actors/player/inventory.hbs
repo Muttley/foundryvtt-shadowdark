@@ -14,12 +14,12 @@
 								<a
 									class="item-control item-create"
 									title="{{localize SHADOWDARK.inventory.create_item}}"
-							{{#ifEq sid "treasure"}}
-									data-item-type="Basic"
-									data-item-treasure=true
-							{{else}}
-									data-item-type="{{section.type}}"
-							{{/ifEq}}
+									{{#ifEq sid "treasure"}}
+										data-item-type="Basic"
+										data-item-treasure=true
+									{{else}}
+										data-item-type="{{section.type}}"
+									{{/ifEq}}
 								>
 									<i class="fa-regular fa-square-plus"></i>
 								</a>
@@ -123,16 +123,12 @@
 					<td class="item-list-centered"><b>{{gems.totalGems}}</b></td>
 					<td class="item-list-centered"><b>{{gems.gemSlots}}</b></td>
 					<td class="item-list-centered">
-						{{#ifCond gems.totalGems '>' 0}}
-							<a
-								class="item-control open-gem-bag"
-								title="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
-							>
-								<i class="fa-solid fa-sack"></i>
-							</a>
-						{{else}}
-								<i class="fa-solid fa-sack inactive"></i>
-						{{/ifCond}}
+						<a
+							class="item-control open-gem-bag"
+							title="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
+						>
+							<i class="fa-solid fa-sack"></i>
+						</a>
 					</td>
 				</tr>
 			</table>

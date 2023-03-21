@@ -42,10 +42,12 @@ SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
+SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining
-SHADOWDARK.chat.light_source.source.all: All light sources were doused
+SHADOWDARK.chat.light_source.source.all: All light sources went out
 SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
+SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
 SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class.fighter: Fighter
@@ -142,6 +144,7 @@ SHADOWDARK.item.level: Level
 SHADOWDARK.item.light.is_source: Light Source
 SHADOWDARK.item.light.longevity: Longevity (Mins)
 SHADOWDARK.item.light.remaining: Remaining (Mins)
+SHADOWDARK.item.light.template: Light Template
 SHADOWDARK.item.magic_item.is_magic: Magic Item
 SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
 SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus
@@ -157,11 +160,13 @@ SHADOWDARK.item.npc_attack_damage_bonus: Damage Bonus
 SHADOWDARK.item.npc_attack_damage: Damage Die
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Type
+SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
+SHADOWDARK.item.talent_class: Talent Class
 SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
@@ -199,6 +204,8 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
+SHADOWDARK.light_source.lantern: Lantern
+SHADOWDARK.light_source.torch: Torch
 SHADOWDARK.light-tracker.active: Active
 SHADOWDARK.light-tracker.paused: Paused
 SHADOWDARK.light-tracker.status.label: Status
@@ -323,5 +330,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.item.talent_class: Talent Class
-SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice

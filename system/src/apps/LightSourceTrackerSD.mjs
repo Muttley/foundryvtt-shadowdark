@@ -37,8 +37,10 @@ export default class LightSourceTrackerSD extends Application {
 
 	activateListeners(html) {
 		html.find(".disable-all-lights").click(
-			event => {
+			async event => {
 				event.preventDefault();
+
+				if (this.monitoredLightSources.length <= 0) return;
 
 				for (const actorData of this.monitoredLightSources) {
 					if (actorData.lightSources.length <= 0) continue;
@@ -51,9 +53,25 @@ export default class LightSourceTrackerSD extends Application {
 							"system.light.active": false,
 						}]);
 
-						actor.yourLightWentOut(itemData._id);
+						actor.turnLightOff();
 					}
 				}
+
+				const cardData = {
+					img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+					actor: this,
+					message: game.i18n.localize("SHADOWDARK.chat.light_source.source.all"),
+				};
+
+				let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
+
+				const content = await renderTemplate(template, cardData);
+
+				await ChatMessage.create({
+					content,
+					speaker: ChatMessage.getSpeaker(),
+					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+				});
 			}
 		);
 
