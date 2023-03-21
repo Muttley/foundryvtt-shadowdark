@@ -80,7 +80,24 @@
 		}
 	}
 
-	.magic-item-properties,
+	.magic-properties {
+		@include p-reset;
+		grid-column: span 3;
+		row-gap: 4px;
+		column-gap: 8px;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		.magic-type {
+			background-color: var(--form-background);
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0 0 5px var(--color-shadow-primary);
+			}
+		}
+	}
+
 	.talent-properties {
 		@include p-reset;
 		grid-column: span 3;
