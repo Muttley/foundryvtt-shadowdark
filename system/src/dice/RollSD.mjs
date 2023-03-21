@@ -43,6 +43,10 @@ export default class RollSD extends Roll {
 			main: await this._rollAdvantage(parts, data, adv),
 		};
 
+		if (data.rollType === "ability") {
+			return this._renderRoll(data, adv, options);
+		}
+
 		// Roll damage for NPCs
 		if (data.actor?.type === "NPC") {
 			data = await this._rollNpcAttack(data);
