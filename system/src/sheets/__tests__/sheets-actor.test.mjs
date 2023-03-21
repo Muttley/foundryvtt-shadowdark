@@ -169,14 +169,19 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(contextMenu).is.not.null;
 		});
 
-		// @todo: i18n
-		it("contains 'delete' option", async () => {
+		it("contains 'edit' option", async () => {
 			const contextMenuItems  = document.querySelectorAll(".context-item");
-			expect(contextMenuItems.length).equal(1);
-			expect(contextMenuItems[0].innerText).equal("Delete Item");
+			expect(contextMenuItems.length).equal(2);
+			expect(contextMenuItems[0].innerText).equal(game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"));
 		});
 
-		it("clicking Delete Item spawns a dialog asking for confirmation", async () => {
+		it("contains 'delete' option", async () => {
+			const contextMenuItems  = document.querySelectorAll(".context-item");
+			expect(contextMenuItems.length).equal(2);
+			expect(contextMenuItems[1].innerText).equal(game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"));
+		});
+
+		it("clicking Edit Item spawns a the item sheet", async () => {
 			const element = document.querySelector(`tr[data-item-id="${actorItem.id}"]`);
 			mockContextMenuClick(element);
 			await waitForInput();
@@ -185,10 +190,23 @@ export default ({ describe, it, after, before, expect }) => {
 			contextMenuItems[0].click();
 			await waitForInput();
 
+			const itemSheets = Object.values(ui.windows).filter(o => o.options.classes.includes("item"));
+			expect(itemSheets.length).equal(1);
+			await itemSheets[0].close();
+		});
+
+		it("clicking Delete Item spawns a dialog asking for confirmation", async () => {
+			const element = document.querySelector(`tr[data-item-id="${actorItem.id}"]`);
+			mockContextMenuClick(element);
+			await waitForInput();
+
+			const contextMenuItems = document.querySelectorAll(".context-item");
+			contextMenuItems[1].click();
+			await waitForInput();
+
 			const deleteDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("dialog"));
 			expect(deleteDialogs.length).equal(1);
-			// @todo: i18n
-			expect(deleteDialogs[0].data.title).equal("Confirm Deletion");
+			expect(deleteDialogs[0].data.title).equal(game.i18n.localize("SHADOWDARK.dialog.item.confirm_delete"));
 			await deleteDialogs[0].close();
 		});
 
