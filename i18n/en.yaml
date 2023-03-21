@@ -157,11 +157,13 @@ SHADOWDARK.item.npc_attack_damage_bonus: Damage Bonus
 SHADOWDARK.item.npc_attack_damage: Damage Die
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Type
+SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
+SHADOWDARK.item.talent_class: Talent Class
 SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
@@ -323,5 +325,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.item.talent_class: Talent Class
-SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
