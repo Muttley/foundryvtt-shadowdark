@@ -86,13 +86,15 @@ SHADOWDARK.LANGUAGES = {
 
 SHADOWDARK.LIGHT_SETTING_NAMES = {
 	lantern: "SHADOWDARK.light_source.lantern",
+	lightSpellDouble: "SHADOWDARK.light_source.light_spell.double_near",
+	lightSpellNear: "SHADOWDARK.light_source.light_spell.near",
 	torch: "SHADOWDARK.light_source.torch",
 };
 
 SHADOWDARK.LIGHT_SETTINGS = {
 	lantern: {
 		alpha: 0.2,
-		angle: 0,
+		angle: 360,
 		animation: {
 			speed: 1,
 			intensity: 1,
@@ -113,9 +115,55 @@ SHADOWDARK.LIGHT_SETTINGS = {
 		saturation: 0,
 		shadows: 0,
 	},
+	lightSpellDouble: {
+		alpha: 0.2,
+		angle: 360,
+		animation: {
+			speed: 1,
+			intensity: 1,
+			reverse: false,
+			type: null,
+		},
+		attentuation: 0.5,
+		bright: 60,
+		color: null,
+		coloration: 1,
+		contrast: 0,
+		darkness: {
+			min: 0,
+			max: 1,
+		},
+		dim: 0,
+		luminosity: 0.5,
+		saturation: 0,
+		shadows: 0,
+	},
+	lightSpellNear: {
+		alpha: 0.2,
+		angle: 360,
+		animation: {
+			speed: 1,
+			intensity: 1,
+			reverse: false,
+			type: null,
+		},
+		attentuation: 0.5,
+		bright: 30,
+		color: null,
+		coloration: 1,
+		contrast: 0,
+		darkness: {
+			min: 0,
+			max: 1,
+		},
+		dim: 0,
+		luminosity: 0.5,
+		saturation: 0,
+		shadows: 0,
+	},
 	torch: {
 		alpha: 0.2,
-		angle: 0,
+		angle: 360,
 		animation: {
 			speed: 1,
 			intensity: 1,
