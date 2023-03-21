@@ -498,12 +498,11 @@
 		table {
 			@include p-reset;
 			font-family: "Montserrat-Medium";
-			font-size: 15px;
+			font-size: 14px;
 			text-align: left;
 			border: none;
 
 			& td {
-				@include p-reset;
 				padding-left: 8px;
 			}
 
@@ -519,10 +518,10 @@
 			// Only highlight on hover rows that have actual items in them,
 			// not the section headers or header/footer rows
 			//
-			& tr:not(:first-child,
-				.spell-tier-header) {
-				font-size: 14px;
-
+			& tr:not(
+				:first-child,
+				.spell-tier-header
+			) {
 				&:hover {
 					cursor: pointer;
 					background-color: var(--secondary);
@@ -556,7 +555,6 @@
 			font-size: 14px;
 			text-align: left;
 			border: none;
-			text-align: left;
 
 			& td:first-child {
 				padding-left: 8px;
@@ -589,8 +587,6 @@
 				:first-child,
 				.talent-section-header
 			) {
-				font-size: 14px;
-
 				&:hover {
 					cursor: pointer;
 					background-color: var(--secondary);
