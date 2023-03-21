@@ -34,11 +34,11 @@ SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 };
 
 SHADOWDARK.ARMOR_PROPERTIES = {
+	shield: "SHADOWDARK.armor.properties.shield",
 	disadvStealth: "SHADOWDARK.armor.properties.disadvantage_stealth",
+	oneHanded: "SHADOWDARK.armor.properties.one_handed",
 	disadvSwim: "SHADOWDARK.armor.properties.disadvantage_swimming",
 	noSwim: "SHADOWDARK.armor.properties.no_swimming",
-	oneHanded: "SHADOWDARK.armor.properties.one_handed",
-	shield: "SHADOWDARK.armor.properties.shield",
 };
 
 SHADOWDARK.BACKSTAB_CLASSES = ["thief"];
@@ -187,10 +187,10 @@ SHADOWDARK.LIGHT_SETTINGS = {
 };
 
 SHADOWDARK.MAGIC_ITEM_PROPERTIES = {
-	"system.damage.critMultiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
-	"system.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",
-	"system.damage.bonus": "SHADOWDARK.item.magic_item.type.damageBonus",
 	"system.ac.base": "SHADOWDARK.talent.type.armor_bonus",
+	"system.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",
+	"system.damage.critMultiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
+	"system.damage.bonus": "SHADOWDARK.item.magic_item.type.damageBonus",
 	"system.abilities.cha.value": "SHADOWDARK.ability_cha",
 	"system.abilities.con.value": "SHADOWDARK.ability_con",
 	"system.abilities.dex.value": "SHADOWDARK.ability_dex",
@@ -202,13 +202,13 @@ SHADOWDARK.MAGIC_ITEM_PROPERTIES = {
 };
 
 SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES = {
-	critMultiplier: "SHADOWDARK.item.magic_item.type.critMultiplier",
-	attackBonus: "SHADOWDARK.item.magic_item.type.attackBonus",
-	damageBonus: "SHADOWDARK.item.magic_item.type.damageBonus",
 	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
-	permanentAbility: "SHADOWDARK.item.magic_item.type.permanentAbility",
-	criticalSuccessThreshold: "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
+	attackBonus: "SHADOWDARK.item.magic_item.type.attackBonus",
+	critMultiplier: "SHADOWDARK.item.magic_item.type.critMultiplier",
+	damageBonus: "SHADOWDARK.item.magic_item.type.damageBonus",
 	criticalFailureThreshold: "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
+	criticalSuccessThreshold: "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
+	permanentAbility: "SHADOWDARK.item.magic_item.type.permanentAbility",
 	custom: "SHADOWDARK.item.magic_item.type.custom",
 };
 
@@ -270,17 +270,17 @@ SHADOWDARK.TALENT_CLASSES = {
 
 SHADOWDARK.TALENT_TYPES = {
 	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
-	meleeAttackBonus: "SHADOWDARK.talent.type.melee_attack_bonus",
-	rangedAttackBonus: "SHADOWDARK.talent.type.ranged_attack_bonus",
-	meleeDamageBonus: "SHADOWDARK.talent.type.melee_damage_bonus",
-	rangedDamageBonus: "SHADOWDARK.talent.type.ranged_damage_bonus",
 	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
-	spellBonus: "SHADOWDARK.talent.type.spell_bonus",
+	backstabDie: "SHADOWDARK.talent.type.backstab_die",
 	hpAdvantage: "SHADOWDARK.talent.type.advantage.hp",
 	initAdvantage: "SHADOWDARK.talent.type.advantage.initiative",
+	meleeAttackBonus: "SHADOWDARK.talent.type.melee_attack_bonus",
+	meleeDamageBonus: "SHADOWDARK.talent.type.melee_damage_bonus",
+	rangedAttackBonus: "SHADOWDARK.talent.type.ranged_attack_bonus",
+	rangedDamageBonus: "SHADOWDARK.talent.type.ranged_damage_bonus",
 	spellAdvantage: "SHADOWDARK.talent.type.advantage.spell",
+	spellBonus: "SHADOWDARK.talent.type.spell_bonus",
 	weaponMastery: "SHADOWDARK.talent.type.weapon_mastery",
-	backstabDie: "SHADOWDARK.talent.type.backstab_die",
 	custom: "SHADOWDARK.talent.type.custom",
 };
 
