@@ -155,10 +155,6 @@ export default class GemBagSD extends Application {
 								"Item",
 								[itemId]
 							);
-
-							if (this.gemBagIsEmpty()) {
-								this.close();
-							}
 						},
 					},
 					Cancel: {
