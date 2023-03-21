@@ -1,28 +1,23 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
 	<section class="spells-body">
 		<div class="spells-list">
-			<label class="spellcasting-ability-label">
-				<a
-					class="item-control item-create"
-					title="{{localize SHADOWDARK.inventory.create_item}}"
-					data-item-type="Spell"
-				>
-					<i class="fa-regular fa-square-plus"></i>
-				</a>
-				{{localize "SHADOWDARK.sheet.player.available_spells"}}
-			</label>
 			<table>
+				<tr>
+					<th>
+						<a
+							class="item-control item-create"
+							title="{{localize SHADOWDARK.inventory.create_item}}"
+							data-item-type="Spell"
+						>
+							<i class="fa-regular fa-square-plus"></i>
+						</a>
+						{{localize "SHADOWDARK.sheet.player.available_spells"}}
+					</th>
+					<th>&nbsp;</th>
+				</tr>
 				{{#each spells as |tier tid|}}
 					<tr class="spell-tier-header">
 						<th class="spell-tier-header-padding">
-							<a
-									class="item-control item-create"
-									title="{{localize SHADOWDARK.inventory.create_item}}"
-									data-item-type="Spell"
-									data-spell-tier="{{tid}}"
-								>
-									<i class="fa-regular fa-square-plus"></i>
-								</a>
 							{{localize 'SHADOWDARK.sheet.player.spells_tier'}} {{tid}}
 						</th>
 						<th>&nbsp;</th>

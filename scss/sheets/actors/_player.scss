@@ -474,9 +474,9 @@
 		@include p-reset;
 		margin: 4px;
 		display: grid;
-		grid-template-columns: 1fr min-content;
+		grid-template-columns: 1fr max-content;
 		row-gap: 4px;
-		column-gap: 4px;
+		column-gap: 8px;
 
 		label {
 			display: block;
@@ -502,8 +502,21 @@
 			text-align: left;
 			border: none;
 
-			& td {
+			& td:first-child {
 				padding-left: 8px;
+			}
+
+			& th:first-child {
+				text-align: left;
+				padding-left: 4px;
+			}
+
+			& th:last-child {
+				text-align: center;
+			}
+
+			& td:last-child {
+				text-align: center;
 			}
 
 			& tr:first-child {
@@ -511,7 +524,6 @@
 
 				& td {
 					@include p-reset;
-					padding-left: 4px;
 				}
 			}
 
@@ -527,15 +539,6 @@
 					background-color: var(--secondary);
 					color: white;
 				}
-			}
-
-			.spell-tier-header {
-				@include p-reset;
-				background-color: #00000020;
-			}
-
-			.spell-tier-header-padding {
-				padding-left: 4px;
 			}
 		}
 	}
