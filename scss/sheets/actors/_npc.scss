@@ -178,6 +178,7 @@
 		@include p-reset;
 		display: grid;
 		grid-template-rows: min-content minmax(416px, max-content);
+		row-gap: 8px;
 	}
 
 	.npc-description-wrapper {

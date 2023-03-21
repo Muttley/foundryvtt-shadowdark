@@ -160,6 +160,12 @@ SHADOWDARK.SPELL_RANGES = {
 	far: "SHADOWDARK.range.far",
 };
 
+SHADOWDARK.TALENT_CLASSES = {
+	ancestry: "SHADOWDARK.talent.class.ancestry",
+	class: "SHADOWDARK.talent.class.class",
+	level: "SHADOWDARK.talent.class.level",
+};
+
 SHADOWDARK.TALENT_TYPES = {
 	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
 	meleeAttackBonus: "SHADOWDARK.talent.type.melee_attack_bonus",

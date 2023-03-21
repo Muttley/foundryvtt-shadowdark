@@ -84,9 +84,14 @@
 	.talent-properties {
 		@include p-reset;
 		grid-column: span 3;
-		gap: 4px;
+		row-gap: 4px;
+		column-gap: 8px;
 		display: grid;
-		grid-template-columns: 80px 1fr;
+		grid-template-columns: max-content min-content 1fr;
+	}
+
+	.talent-property.talent-effects {
+		grid-column: span 3;
 	}
 
 	.magic-details,

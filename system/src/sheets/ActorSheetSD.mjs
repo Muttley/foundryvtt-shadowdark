@@ -251,16 +251,34 @@ export default class ActorSheetSD extends ActorSheet {
 		return item.rollSpell(parts, data);
 	}
 
-	_onItemCreate(event) {
+	async _onItemCreate(event) {
 		event.preventDefault();
 		const itemType = $(event.currentTarget).data("item-type");
 
-		const newName = `New ${itemType}`;
-
-		this.actor.createEmbeddedDocuments("Item", [{
-			name: newName,
+		const itemData = {
+			name: `New ${itemType}`,
 			type: itemType,
-		}]);
+			system: {},
+		};
+
+		switch (itemType) {
+			case "Basic":
+				if ($(event.currentTarget).data("item-treasure")) {
+					itemData.system.treasure = true;
+				}
+				break;
+			case "Spell":
+				itemData.system.tier =
+					$(event.currentTarget).data("spell-tier") || 1;
+				break;
+			case "Talent":
+				itemData.system.talentClass =
+					$(event.currentTarget).data("talent-class") || "level";
+				break;
+		}
+
+		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+		newItem.sheet.render(true);
 	}
 
 	_sortAllItems(context) {

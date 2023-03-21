@@ -91,9 +91,18 @@ export default class ActorSD extends Actor {
 
 		const weaponDisplays = {melee: [], ranged: []};
 
+		let weaponMasterBonus = 0;
+		if (this.system.bonuses.weaponMastery.find(
+			mastery => mastery === item.name.slugify()
+		)) {
+			weaponMasterBonus += 1; // TODO Can stack Weapon Master?
+			weaponOptions.bonusDamage = weaponMasterBonus;
+		}
+
 		if (item.system.type === "melee") {
-			weaponOptions.attackBonus =
-				baseAttackBonus + this.system.bonuses.meleeAttackBonus;
+			weaponOptions.attackBonus =	baseAttackBonus
+				+ this.system.bonuses.meleeAttackBonus
+				+ weaponMasterBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
