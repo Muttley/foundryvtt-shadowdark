@@ -279,7 +279,22 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 		const spells = {};
-		const talents = [];
+
+		const talents = {
+			ancestry: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.ancestry"),
+				items: [],
+			},
+			class: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.class"),
+				items: [],
+			},
+			level: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.level"),
+				items: [],
+			},
+		};
+
 		const attacks = {melee: [], ranged: []};
 
 		let slotCount = 0;
@@ -339,7 +354,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				spells[spellTier].push(i);
 			}
 			else if (i.type === "Talent") {
-				talents.push(i);
+				const talentClass = i.system.talentClass;
+				talents[talentClass].items.push(i);
 			}
 		}
 
@@ -369,8 +385,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.spells = spells;
 
 		// Sort these by level for display...
-		context.talents = talents.sort(
+		talents.level.items = talents.level.items.sort(
 			(a, b) => a.system.level - b.system.level
 		);
+		context.talents = talents;
 	}
 }

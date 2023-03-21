@@ -247,15 +247,6 @@
 			text-align: center;
 			border: none;
 
-			.item-image {
-				width: 24px;
-				height: 24px;
-				border-radius: 3px;
-				background-size: cover;
-				display: inline-block;
-				vertical-align: middle;
-			}
-
 			& .item-rollable:hover {
 				background-image: url("/icons/svg/d20-grey.svg") !important;
 			}
@@ -302,6 +293,15 @@
 		display: grid;
 		align-items: start;
 		row-gap: 8px;
+	}
+
+	.item-image {
+		width: 24px;
+		height: 24px;
+		border-radius: 3px;
+		background-size: cover;
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	.item-toggle-equipped {
@@ -553,15 +553,24 @@
 		table {
 			@include p-reset;
 			font-family: "Montserrat-Medium";
-			font-size: 15px;
+			font-size: 14px;
 			text-align: left;
 			border: none;
+			text-align: left;
 
 			& td:first-child {
-				text-align: center;
+				padding-left: 8px;
 			}
 
 			& th:first-child {
+				text-align: left;
+			}
+
+			& th:last-child {
+				text-align: center;
+			}
+
+			& td:last-child {
 				text-align: center;
 			}
 
@@ -576,7 +585,10 @@
 			// Only highlight on hover rows that have actual items in them,
 			// not the section headers or header/footer rows
 			//
-			& tr:not(:first-child) {
+			& tr:not(
+				:first-child,
+				.talent-section-header
+			) {
 				font-size: 14px;
 
 				&:hover {

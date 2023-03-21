@@ -3,21 +3,33 @@
 		<div class="talents-list">
 			<table>
 				<tr>
+					<th>&nbsp;</th>
 					<th>{{localize 'SHADOWDARK.sheet.player.talents_level'}}</th>
-					<th>{{localize 'SHADOWDARK.sheet.player.talents_name'}}</th>
 				</tr>
-				{{#each talents as |talent|}}
-					<tr class="item" data-item-id="{{talent._id}}">
-						<td>{{talent.system.level}}</td>
-						<td>
-							<a
-								class="item-control open-item"
-								data-item-id="{{talent._id}}"
-							>
-								{{talent.name}}
-							</a>
-						</td>
+				{{#each talents as |section sid|}}
+					<tr class="talent-section-header">
+						<th>{{section.label}}</th>
+						<th>&nbsp;</th>
 					</tr>
+					{{#each section.items as |talent|}}
+						<tr class="item" data-item-id="{{talent._id}}">
+							<td>
+								<div
+									class="item-image"
+									style="background-image: url({{talent.img}})"
+								>
+								</div>
+								{{talent.name}}
+							</td>
+							<td>
+								{{#ifEq sid "level"}}
+									{{talent.system.level}}
+								{{else}}
+									&mdash;
+								{{/ifEq}}
+							</td>
+						</tr>
+					{{/each}}
 				{{/each}}
 			</table>
 		</div>

@@ -218,7 +218,8 @@
 		},
 		"Talent": {
 			"templates": ["common"],
-			"level": null
+			"level": 1,
+			"talentClass": "level"
 		},
 		"Weapon": {
 			"templates": [
