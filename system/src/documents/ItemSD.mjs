@@ -59,6 +59,12 @@ export default class ItemSD extends Item {
 	/*  Roll Methods                                */
 	/* -------------------------------------------- */
 
+	async rollNpcAttack(parts, data, options={}) {
+		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-npc-attack-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+	}
+
 	async rollItem(parts, data, options={}) {
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
