@@ -208,6 +208,14 @@ SHADOWDARK.WEAPON_BASE_DAMAGE = {
 	d12: "1d12",
 };
 
+SHADOWDARK.WEAPON_BASE_DAMAGE_DIE_ONLY = {
+	d4: "d4",
+	d6: "d6",
+	d8: "d8",
+	d10: "d10",
+	d12: "d12",
+};
+
 SHADOWDARK.WEAPON_BASE_WEAPON = {
 	"bastard-sword": "SHADOWDARK.item.weapon.base_weapon.bastard_sword",
 	club: "SHADOWDARK.item.weapon.base_weapon.club",
