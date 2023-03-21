@@ -56,14 +56,16 @@
 			{{/ifEq}}
 
 			{{#if item.system.isPhysical}}
-				<div class="magic-item">
-					<label>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</label>
-					<input
-						type="checkbox"
-						name="system.magicItem"
-						{{checked system.magicItem}}
-					>
-				</div>
+				{{#ifNeq item.type "Gem"}}
+					<div class="magic-item">
+						<label>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</label>
+						<input
+							type="checkbox"
+							name="system.magicItem"
+							{{checked system.magicItem}}
+						>
+					</div>
+				{{/ifNeq}}
 			{{/if}}
 
 			{{#ifEq item.type "Basic"}}
