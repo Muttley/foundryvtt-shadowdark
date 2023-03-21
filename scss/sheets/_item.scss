@@ -199,6 +199,7 @@
 	.item-light {
 		@include p-reset;
 		display: grid;
+		column-gap: 8px;
 		grid-template-columns: 1fr 1fr;
 	}
 
@@ -268,6 +269,13 @@
 		background-color: var(--form-background);
 	}
 
+	.light-settings {
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		row-gap: 4px;
+		align-items: start;
+		background-color: var(--form-background);
+	}
 
 	.npc-attack-details {
 		@include p-reset;
