@@ -52,9 +52,7 @@ export default class ActorSD extends Actor {
 			attackName: item.name,
 			numAttacks: item.system.attack.num,
 			attackBonus: item.system.attack.bonus,
-			baseDamage: CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-				item.system.damage.value
-			],
+			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
 			bonusDamage: item.system.damage.bonus,
 			special: item.system.damage.special,
 		};
