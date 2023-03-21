@@ -40,6 +40,10 @@ export default class GemBagSD extends Application {
 			event => this._onSellGem(event)
 		);
 
+		html.find(".item-create").click(
+			event => this._onItemCreate(event)
+		);
+
 		// Create context menu for items on both sheets
 		this._contextMenu(html);
 
@@ -100,6 +104,16 @@ export default class GemBagSD extends Application {
 
 		return [
 			{
+				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
+				icon: '<i class="fas fa-edit"></i>',
+				condition: element => canEdit(element),
+				callback: element => {
+					const itemId = element.data("item-id");
+					const item = this.actor.items.get(itemId);
+					return item.sheet.render(true);
+				},
+			},
+			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
 				condition: tr => canEdit(tr),
@@ -109,6 +123,17 @@ export default class GemBagSD extends Application {
 				},
 			},
 		];
+	}
+
+	async _onItemCreate(event) {
+		event.preventDefault();
+		const itemType = $(event.currentTarget).data("item-type");
+
+		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [{
+			name: "New Gem",
+			type: itemType,
+		}]);
+		newItem.sheet.render(true);
 	}
 
 	_onItemDelete(itemId) {
