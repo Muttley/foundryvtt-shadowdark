@@ -126,7 +126,7 @@ export default class ActiveEffectSD extends ActiveEffect {
 				owner.isTalent()
 				&& !Object.keys(CONFIG.SHADOWDARK.TALENT_TYPES).includes(e.label)
 			) categories.talent.effects.push(e);
-			if (
+			else if (
 				owner.isMagicItem()
 				&& !Object.keys(CONFIG.SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES).includes(e.label)
 			) categories.item.effects.push(e);

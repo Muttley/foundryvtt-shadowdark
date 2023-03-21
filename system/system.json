@@ -52,6 +52,15 @@
 			"flags": {}
 		},
 		{
+			"name": "monster",
+			"label": "Monster",
+			"system": "shadowdark",
+			"path": "packs/monster.db",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "talents",
 			"label": "Talents",
 			"system": "shadowdark",
