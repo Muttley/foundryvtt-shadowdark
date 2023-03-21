@@ -21,9 +21,11 @@
 		<nav class="item-navigation" data-group="primary">
 			<div class="item-navigation__flex">
 
-				<a class="item active" data-tab="tab-details">
-					{{localize "SHADOWDARK.sheet.item.tab.details"}}
-				</a>
+				{{#ifNeq item.type 'NPC Feature'}}
+					<a class="item active" data-tab="tab-details">
+						{{localize "SHADOWDARK.sheet.item.tab.details"}}
+					</a>
+				{{/ifNeq}}
 
 				{{#if item.system.light.isSource}}
 					<a class="item active" data-tab="tab-light">
@@ -37,7 +39,13 @@
 					</a>
 				{{/if}}
 
-				<a class="item" data-tab="tab-description">
+				<a
+					class="item {{#ifEq item.type 'NPC Feature'}}active{{/ifEq}}"
+					data-tab="tab-description"
+					{{#ifEq item.type 'NPC Feature'}}
+						style="display: none;"
+					{{/ifEq}}
+				>
 					{{localize "SHADOWDARK.sheet.item.tab.description"}}
 				</a>
 			</div>
