@@ -637,23 +637,23 @@ export default class RollSD extends Roll {
 	static async _rollDiceSoNice(rolls, chatData, chatMessage) {
 		game.dice3d
 			.showForRoll(
-				rolls.rollD20,
+				rolls.main.roll,
 				game.user,
 				true
 			)
 			.then(() => {
-				if ( rolls.rollPrimaryDamage ) {
+				if ( rolls.primaryDamage ) {
 					game.dice3d
 						.showForRoll(
-							rolls.rollPrimaryDamage,
+							rolls.primaryDamage.roll,
 							game.user,
 							true
 						);
 				}
-				if ( rolls.rollSecondaryDamage ) {
+				if ( rolls.secondaryDamage ) {
 					game.dice3d
 						.showForRoll(
-							rolls.rollSecondaryDamage,
+							rolls.secondaryDamage.roll,
 							game.user,
 							true
 						);
