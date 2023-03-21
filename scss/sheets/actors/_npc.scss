@@ -10,6 +10,11 @@
 		min-height: 415px;
 	}
 
+	.editor-content {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
