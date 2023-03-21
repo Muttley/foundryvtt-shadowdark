@@ -27,12 +27,22 @@
 			placeholder="1"
 		}}
 	</div>
+</div>
+<div class="npc-attack-details">
+	<div class="npc-attack-detail">
+		<label>{{localize 'SHADOWDARK.item.npc_attack.num_damage_dice'}}</label>
+		{{numberInput
+			system.attack.damage.numDice
+			name="system.attack.damage.numDice"
+			placeholder="1"
+		}}
+	</div>
 	<div class="npc-attack-detail">
 		<label>{{localize 'SHADOWDARK.item.npc_attack_damage'}}</label>
 		<select name="system.damage.value">
 			<option value="">&mdash;</option>
 			{{selectOptions
-				config.WEAPON_BASE_DAMAGE
+				config.WEAPON_BASE_DAMAGE_DIE_ONLY
 				selected=system.damage.value
 				localize=false
 			}}
@@ -46,9 +56,15 @@
 			placeholder="0"
 		}}
 	</div>
-	<div class="npc-attack-detail">
+</div>
+<div class="npc-attack-details">
+	<div
+		class="npc-attack-detail"
+		style="grid-column: span 3;"
+	>
 		<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
 		<input
+			style="text-align: left;"
 			name="system.damage.special"
 			type="text"
 			value="{{item.system.damage.special}}"
