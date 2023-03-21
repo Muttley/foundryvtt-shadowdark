@@ -217,6 +217,20 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		const active = !item.system.light.active;
+
+		if (active) {
+			// Find any currently active lights and turn them off
+			const activeLightSources = await this.actor.getActiveLightSources();
+			for (const lightSource of activeLightSources) {
+				this.actor.updateEmbeddedDocuments(
+					"Item", [{
+						_id: lightSource.id,
+						"system.light.active": false,
+					}]
+				);
+			}
+		}
+
 		const dataUpdate = {
 			_id: itemId,
 			"system.light.active": active,
@@ -240,6 +254,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				updatedLight
 			);
 		}
+
+		this.actor.toggleLight(active, itemId);
 	}
 
 	async _onToggleSpellLost(event) {

@@ -209,6 +209,13 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+	getCanvasToken() {
+		const ownedTokens = canvas.tokens.ownedTokens;
+		return ownedTokens.find(
+			token => token.document.actorId === this._id
+		);
+	}
+
 	getRollData() {
 		const rollData = super.getRollData();
 
@@ -290,11 +297,6 @@ export default class ActorSD extends Actor {
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
-
-	/* -------------------------------------------- */
-	/*  Selling Methods                             */
-	/* -------------------------------------------- */
-
 	async getActiveLightSources() {
 		const items = this.items.filter(
 			item => item.type === "Basic"
@@ -319,14 +321,52 @@ export default class ActorSD extends Actor {
 		return this.getActiveLightSources.length <= 0;
 	}
 
-	async yourLightWentOut(itemId) {
+	async yourLightExpired(itemId) {
+		this.turnLightOff(itemId);
+
+		const item = this.items.get(itemId);
+
 		const cardData = {
 			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
 			actor: this,
-			message: game.i18n.localize("SHADOWDARK.chat.light_source.source.all"),
+			message: game.i18n.format(
+				"SHADOWDARK.chat.light_source.expired",
+				{
+					name: this.name,
+					lightSource: item.name,
+				}
+			),
 		};
 
-		let template = "systems/shadowdark/templates/chat/lightsource-toggle-all.hbs";
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		await ChatMessage.create({
+			content,
+			speaker: ChatMessage.getSpeaker(),
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+		});
+	}
+
+	async yourLightWentOut(itemId) {
+		this.toggleLight(false, itemId);
+
+		const item = this.items.get(itemId);
+
+		const cardData = {
+			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+			actor: this,
+			message: game.i18n.format(
+				"SHADOWDARK.chat.light_source.went_out",
+				{
+					name: this.name,
+					lightSource: item.name,
+				}
+			),
+		};
+
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
 		const content = await renderTemplate(template, cardData);
 
@@ -383,6 +423,48 @@ export default class ActorSD extends Actor {
 		Actor.updateDocuments([{
 			_id: this._id,
 			"system.coins": coins,
+		}]);
+	}
+
+	async toggleLight(active, itemId) {
+		const item = this.items.get(itemId);
+
+		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
+			item.system.light.template
+		];
+
+		if (active) {
+			this.turnLightOn(lightData);
+		}
+		else {
+			this.turnLightOff();
+		}
+	}
+
+	async turnLightOff() {
+		const noLight = {
+			dim: 0,
+			bright: 0,
+		};
+
+		this.getCanvasToken().document.update({light: noLight});
+
+		// Update the prototype as well
+		Actor.updateDocuments([{
+			_id: this._id,
+			"prototypeToken.light": noLight,
+		}]);
+	}
+
+	async turnLightOn(lightData) {
+		this.getCanvasToken().document.update({
+			light: lightData,
+		});
+
+		// Update the prototype as well
+		Actor.updateDocuments([{
+			_id: this._id,
+			"prototypeToken.light": lightData,
 		}]);
 	}
 

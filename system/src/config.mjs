@@ -84,6 +84,60 @@ SHADOWDARK.LANGUAGES = {
 	thanian: "SHADOWDARK.language.thanian",
 };
 
+SHADOWDARK.LIGHT_SETTING_NAMES = {
+	lantern: "SHADOWDARK.light_source.lantern",
+	torch: "SHADOWDARK.light_source.torch",
+};
+
+SHADOWDARK.LIGHT_SETTINGS = {
+	lantern: {
+		alpha: 0.2,
+		angle: 0,
+		animation: {
+			speed: 1,
+			intensity: 1,
+			reverse: false,
+			type: "torch",
+		},
+		attentuation: 0.5,
+		bright: 15,
+		color: "#d1c846",
+		coloration: 1,
+		contrast: 0,
+		darkness: {
+			min: 0,
+			max: 1,
+		},
+		dim: 60,
+		luminosity: 0.5,
+		saturation: 0,
+		shadows: 0,
+	},
+	torch: {
+		alpha: 0.2,
+		angle: 0,
+		animation: {
+			speed: 1,
+			intensity: 1,
+			reverse: false,
+			type: "torch",
+		},
+		attentuation: 0.5,
+		bright: 5,
+		color: "#d1c846",
+		coloration: 1,
+		contrast: 0,
+		darkness: {
+			min: 0,
+			max: 1,
+		},
+		dim: 30,
+		luminosity: 0.5,
+		saturation: 0,
+		shadows: 0,
+	},
+};
+
 SHADOWDARK.MAGIC_ITEM_PROPERTIES = {
 	"system.damage.critMultiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
 	"system.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",

@@ -174,7 +174,8 @@
 				"hasBeenUsed": false,
 				"isSource": false,
 				"longevityMins": 60,
-				"remainingSecs": 3600
+				"remainingSecs": 3600,
+				"template": "torch"
 			},
 			"treasure": false
 		},
