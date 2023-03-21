@@ -41,7 +41,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		data.damageParts = ["@damageBonus"];
 		data.damageBonus = item.system.damage.bonus;
 
-		return item.rollItem(parts, data);
+		return item.rollNpcAttack(parts, data);
 	}
 
 	/** @inheritdoc */
