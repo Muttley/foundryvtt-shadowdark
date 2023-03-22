@@ -199,7 +199,8 @@
 				"value": "",
 				"special": ""
 			},
-			"attackType": "physical"
+			"attackType": "physical",
+			"ranges": ["close"]
 		},
 		"NPC Feature": {
 			"templates": [

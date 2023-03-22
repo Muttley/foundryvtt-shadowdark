@@ -179,4 +179,18 @@ export default class ItemSD extends Item {
 
 		return properties.join(", ");
 	}
+
+	npcAttackRangesDisplay() {
+		let ranges = [];
+
+		if (this.type === "NPC Attack") {
+			for (const key of this.system.ranges) {
+				ranges.push(
+					CONFIG.SHADOWDARK.RANGES[key]
+				);
+			}
+		}
+
+		return ranges.join(", ");
+	}
 }

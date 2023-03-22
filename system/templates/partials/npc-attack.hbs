@@ -1,9 +1,7 @@
-{{#ifEq attackType "physical"}}
-<b>{{numAttacks}} {{attackName}}</b>,
-{{numberFormat attackBonus decimals=0 sign=true}}
-({{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond special '!==' ''}} + {{special}}{{/ifCond}})
-{{else}}
 <b>{{numAttacks}} {{attackName}}</b>
-{{#ifCond attackBonus '!=' 0}}, {{numberFormat attackBonus decimals=0 sign=true}}{{/ifCond}}
-{{special}}
+({{ranges}})
+{{#ifEq attackType "physical"}}
+{{#ifCond attackBonus '!=' 0}}{{numberFormat attackBonus decimals=0 sign=true}}{{/ifCond}}
+{{!-- {{numberFormat attackBonus decimals=0 sign=true}} --}}
+({{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond special '!==' ''}} + {{special}}{{/ifCond}})
 {{/ifEq}}

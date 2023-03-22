@@ -29,6 +29,14 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
+
+		if (item.type === "NPC Attack" && item.system.attackType === "special") {
+			// TODO These are not technically rollable, but maybe in the
+			// future we could add an interactive chat card for contested
+			// checks, etc.
+			return;
+		}
+
 		const data = {
 			item: item,
 			actor: this.actor,
