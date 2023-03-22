@@ -58,7 +58,7 @@
     font-size: 12px;
     padding: 3px 0 0;
   }
-  
+
   .card-buttons {
     padding: 3px 0 3px;
     display: none;
@@ -73,10 +73,6 @@
       border-radius: 5px;
       padding: 0 4px 0 4px;
       font-size: 10px;
-
-      &:last-child {
-        border: none;
-      }
     }
   }
 }
