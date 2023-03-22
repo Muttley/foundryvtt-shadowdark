@@ -233,7 +233,10 @@ export default class ActorSD extends Actor {
 	}
 
 	hasAdvantage(data) {
-		return this.system.bonuses.advantage.includes(data.rollType);
+		if (this.type === "Player") {
+			return this.system.bonuses.advantage.includes(data.rollType);
+		}
+		return false;
 	}
 
 	/** @inheritDoc */
@@ -276,24 +279,16 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
 
-		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	async rollHP(options={}) {
-		const data = {
-			rollType: "hp",
-			actor: this,
-		};
-
-		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
-
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
-
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		if (this.type === "Player") {
+			this._playerRollHP(options);
+		}
+		else if (this.type === "NPC") {
+			this._npcRollHP(options);
+		}
 	}
 
 	async getActiveLightSources() {
@@ -567,5 +562,42 @@ export default class ActorSD extends Actor {
 		if (abilityScore >= 14 && abilityScore <= 15) return 2;
 		if (abilityScore >= 16 && abilityScore <= 17) return 3;
 		if (abilityScore >= 18) return 4;
+	}
+
+	async _npcRollHP(options={}) {
+		const data = {
+			rollType: "hp",
+			actor: this,
+		};
+
+		const parts = [`${this.system.level.value}d8`];
+
+		options.fastForward = true;
+		options.chatMessage = false;
+
+		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+
+		const newHp = Number(result.main.roll.result);
+		this.update({
+			"system.attributes.hp.max": newHp,
+			"system.attributes.hp.value": newHp,
+		});
+	}
+
+	async _playerRollHP(options={}) {
+		const data = {
+			rollType: "hp",
+			actor: this,
+		};
+
+		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+
+		CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 }

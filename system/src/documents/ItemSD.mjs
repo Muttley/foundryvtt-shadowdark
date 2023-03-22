@@ -62,19 +62,19 @@ export default class ItemSD extends Item {
 	async rollNpcAttack(parts, data, options={}) {
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-npc-attack-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	async rollItem(parts, data, options={}) {
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		const result = await CONFIG.DiceSD.RollD20Dialog(parts, data, options);
+		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 		// The spell is lost if the cast wasn't successful
 		if (result && !result?.rolls?.main?.success) this.update({"system.lost": true});
 	}
