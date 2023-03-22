@@ -30,6 +30,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onArmorProperties(event)
 		);
 
+		html.find(".item-property-list.npc-attack-ranges").click(
+			event => this._onNpcAttackRanges(event)
+		);
+
 		html.find(".item-property-list.spell").click(
 			event => this._onSpellCasterClasses(event)
 		);
@@ -95,6 +99,10 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 		}
 
+		if (item.type === "NPC Attack") {
+			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
+		}
+
 		context.propertiesDisplay = item.propertiesDisplay();
 		context.magicItemEffectsDisplay = item.magicItemEffectsDisplay();
 		context.talentEffectsDisplay = item.talentEffectsDisplay();
@@ -132,10 +140,10 @@ export default class ItemSheetSD extends ItemSheet {
 		return context;
 	}
 
-	_onTalentTypeProperties(event) {
+	_onArmorProperties(event) {
 		event.preventDefault();
 
-		new shadowdark.apps.TalentTypesSD(
+		new shadowdark.apps.ArmorPropertiesSD(
 			this.item, {event: event}
 		).render(true);
 	}
@@ -148,10 +156,10 @@ export default class ItemSheetSD extends ItemSheet {
 		).render(true);
 	}
 
-	_onArmorProperties(event) {
+	_onNpcAttackRanges(event) {
 		event.preventDefault();
 
-		new shadowdark.apps.ArmorPropertiesSD(
+		new shadowdark.apps.NpcAttackRangesSD(
 			this.item, {event: event}
 		).render(true);
 	}
@@ -160,6 +168,14 @@ export default class ItemSheetSD extends ItemSheet {
 		event.preventDefault();
 
 		new shadowdark.apps.SpellCasterClassSD(
+			this.item, {event: event}
+		).render(true);
+	}
+
+	_onTalentTypeProperties(event) {
+		event.preventDefault();
+
+		new shadowdark.apps.TalentTypesSD(
 			this.item, {event: event}
 		).render(true);
 	}

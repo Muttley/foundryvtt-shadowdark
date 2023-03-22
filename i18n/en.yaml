@@ -34,6 +34,7 @@ SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.app.light-tracker.douse-light: Douse Light
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
+SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
 SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
@@ -80,7 +81,7 @@ SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
-SHADOWDARK.dialog.roll_mode_label: Select rolling mode
+SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.spell_roll.title: Roll Spell with
 SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
@@ -205,6 +206,8 @@ SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
 SHADOWDARK.light_source.lantern: Lantern
+SHADOWDARK.light_source.light_spell.double_near: Light Spell (Double Near)
+SHADOWDARK.light_source.light_spell.near: Light Spell (Near)
 SHADOWDARK.light_source.torch: Torch
 SHADOWDARK.light-tracker.active: Active
 SHADOWDARK.light-tracker.paused: Paused
@@ -330,5 +333,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.light_source.light_spell.double_near: Light Spell (Double Near)
-SHADOWDARK.light_source.light_spell.near: Light Spell (Near)

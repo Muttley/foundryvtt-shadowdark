@@ -55,6 +55,7 @@ export default class ActorSD extends Actor {
 			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
 			bonusDamage: item.system.damage.bonus,
 			special: item.system.damage.special,
+			ranges: item.system.ranges.join("/"),
 		};
 
 		return await renderTemplate(

@@ -177,6 +177,7 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
+
 		const data = {
 			item: item,
 			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
