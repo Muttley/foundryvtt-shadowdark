@@ -124,6 +124,15 @@
 			"flags": {}
 		},
 		{
+			"name": "quickstart-guide",
+			"label": "Quickstart Guide",
+			"system": "shadowdark",
+			"path": "packs/quickstart-guide.db",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "the-lost-citadel-adventure",
 			"label": "The Lost Citadel: Adventure",
 			"system": "shadowdark",
