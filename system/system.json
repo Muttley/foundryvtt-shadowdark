@@ -113,6 +113,24 @@
 			"type": "Macro",
 			"private": false,
 			"flags": {}
+		},
+		{
+			"name": "the-lost-citadel",
+			"label": "The Lost Citadel",
+			"system": "shadowdark",
+			"path": "packs/the-lost-citadel.db",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "the-lost-citadel-adventure",
+			"label": "The Lost Citadel: Adventure",
+			"system": "shadowdark",
+			"path": "packs/the-lost-citadel-adventure.db",
+			"type": "Adventure",
+			"private": false,
+			"flags": {}
 		}
 	],
 	"languages": [
