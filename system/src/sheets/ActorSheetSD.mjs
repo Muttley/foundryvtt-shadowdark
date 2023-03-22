@@ -220,6 +220,7 @@ export default class ActorSheetSD extends ActorSheet {
 		if (
 			item.system.weaponMastery
 			|| this.actor.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
+			|| this.actor.system.bonuses.weaponMastery.includes(item.name.slugify())
 		) {
 			data.weaponMasteryBonus = 1 + Math.floor(this.actor.system.level.value / 2);
 			data.talentBonus += data.weaponMasteryBonus;
