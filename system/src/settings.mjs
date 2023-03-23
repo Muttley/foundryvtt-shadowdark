@@ -54,7 +54,7 @@ export default function registerSystemSettings() {
 		hint: "SHADOWDARK.settings.track_light_sources.pause_with_game.hint",
 		scope: "world",
 		config: true,
-		default: false,
+		default: true,
 		type: Boolean,
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
