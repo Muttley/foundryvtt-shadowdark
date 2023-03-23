@@ -43,6 +43,15 @@
 			"flags": {}
 		},
 		{
+			"name": "macros",
+			"label": "Macros",
+			"system": "shadowdark",
+			"path": "packs/macros.db",
+			"type": "Macro",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "magic-items",
 			"label": "Magic Items",
 			"system": "shadowdark",
@@ -61,11 +70,20 @@
 			"flags": {}
 		},
 		{
-			"name": "talents",
-			"label": "Talents",
+			"name": "quickstart-guide",
+			"label": "Quickstart Guide",
 			"system": "shadowdark",
-			"path": "packs/talents.db",
-			"type": "Item",
+			"path": "packs/quickstart-guide.db",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-pregens",
+			"label": "Quickstart Pregens",
+			"system": "shadowdark",
+			"path": "packs/quickstart-pregens.db",
+			"type": "Actor",
 			"private": false,
 			"flags": {}
 		},
@@ -74,15 +92,6 @@
 			"label": "Spells",
 			"system": "shadowdark",
 			"path": "packs/spells.db",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "weapons",
-			"label": "Weapons",
-			"system": "shadowdark",
-			"path": "packs/weapons.db",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -97,20 +106,11 @@
 			"flags": {}
 		},
 		{
-			"name": "wizard-mishap",
-			"label": "Wizard Mishap",
+			"name": "talents",
+			"label": "Talents",
 			"system": "shadowdark",
-			"path": "packs/wizard-mishap.db",
-			"type": "RollTable",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "macros",
-			"label": "Macros",
-			"system": "shadowdark",
-			"path": "packs/macros.db",
-			"type": "Macro",
+			"path": "packs/talents.db",
+			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
@@ -124,20 +124,29 @@
 			"flags": {}
 		},
 		{
-			"name": "quickstart-guide",
-			"label": "Quickstart Guide",
-			"system": "shadowdark",
-			"path": "packs/quickstart-guide.db",
-			"type": "JournalEntry",
-			"private": false,
-			"flags": {}
-		},
-		{
 			"name": "the-lost-citadel-adventure",
 			"label": "The Lost Citadel: Adventure",
 			"system": "shadowdark",
 			"path": "packs/the-lost-citadel-adventure.db",
 			"type": "Adventure",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "weapons",
+			"label": "Weapons",
+			"system": "shadowdark",
+			"path": "packs/weapons.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "wizard-mishap",
+			"label": "Wizard Mishap",
+			"system": "shadowdark",
+			"path": "packs/wizard-mishap.db",
+			"type": "RollTable",
 			"private": false,
 			"flags": {}
 		}
