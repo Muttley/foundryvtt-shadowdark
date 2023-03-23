@@ -74,9 +74,7 @@ export default class ItemSD extends Item {
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
-		// The spell is lost if the cast wasn't successful
-		if (result && !result?.rolls?.main?.success) this.update({"system.lost": true});
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	/* -------------------------------------------- */

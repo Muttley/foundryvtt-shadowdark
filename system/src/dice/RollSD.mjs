@@ -98,8 +98,14 @@ export default class RollSD extends Roll {
 			}
 		}
 
-		// Build the Chat Data
-		return this._renderRoll(data, adv, options);
+		// Check if it was a spell, and if it failed, lose it
+		const result = await this._renderRoll(data, adv, options);
+		if (
+			data.item?.isSpell()
+			&& result
+			&& !result?.rolls?.main?.success
+		) data.item.update({"system.lost": true});
+		return result;
 	}
 
 	/* -------------------------------------------- */
