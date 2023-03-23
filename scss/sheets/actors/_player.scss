@@ -11,6 +11,11 @@
 		padding-bottom: 8px;
 	}
 
+	img.portrait {
+		object-fit: cover;
+		object-position: 100% 0;
+	}
+
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
