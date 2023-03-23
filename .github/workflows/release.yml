@@ -68,6 +68,8 @@ jobs:
     - name: Build
       run: |
         npm run build
+        cp --force LICENSE.txt system/.
+        cp --force README.md system/.
 
     - run: cd system && zip ../${{steps.get_vars.outputs.ZIP_NAME}} -r assets css fonts i18n packs/*.db src templates shadowdark-compiled.mjs shadowdark-compiled.mjs.map LICENSE.txt README.md system.json template.json
 

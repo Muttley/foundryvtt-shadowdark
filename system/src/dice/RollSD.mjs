@@ -300,10 +300,9 @@ export default class RollSD extends Roll {
 			// Adds dice if backstabbing
 			if (data.backstab) {
 				// Additional dice
-				numDice += 1;
+				numDice += 1 + Math.floor(data.actor.system.level.value / 2);
 				if (data.actor.system.bonuses.backstabDie) numDice +=
-					parseInt(data.actor.system.bonuses.backstabDie, 10)
-					+ Math.floor(data.actor.system.level.value / 2);
+					parseInt(data.actor.system.bonuses.backstabDie, 10);
 			}
 
 			// Multiply the dice with the items critical multiplier

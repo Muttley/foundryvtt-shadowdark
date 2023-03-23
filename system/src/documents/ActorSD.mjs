@@ -73,7 +73,14 @@ export default class ActorSD extends Actor {
 
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
-		const baseAttackBonus = this.attackBonus(item.system.type);
+
+		const meleeAttack = this.attackBonus("melee");
+		const rangedAttack = this.attackBonus("ranged");
+
+		const baseAttackBonus = item.isFinesseWeapon()
+			? Math.max(meleeAttack, rangedAttack)
+			: this.attackBonus(item.system.type);
+
 		const weaponOptions = {
 			weaponName: item.name,
 			handedness: "",
@@ -94,7 +101,7 @@ export default class ActorSD extends Actor {
 		if (this.system.bonuses.weaponMastery.find(
 			mastery => mastery === item.name.slugify()
 		)) {
-			weaponMasterBonus += 1; // TODO Can stack Weapon Master?
+			weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
 			weaponOptions.bonusDamage = weaponMasterBonus;
 		}
 
