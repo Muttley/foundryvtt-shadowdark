@@ -1,0 +1,246 @@
+{
+	"Actor": {
+		"types": [
+			"NPC",
+			"Player"
+		],
+		"templates": {
+			"shared_details": {
+				"alignment": "",
+				"attributes": {
+					"hp": {
+						"max": 0,
+						"value": 0
+					}
+				},
+				"level": {
+					"value": 1
+				},
+				"notes": "",
+				"spellcastingAbility": ""
+			}
+		},
+		"NPC": {
+			"templates": ["shared_details"],
+			"abilities": {
+				"str": {
+					"mod": 0
+				},
+				"int": {
+					"mod": 0
+				},
+				"dex": {
+					"mod": 0
+				},
+				"wis": {
+					"mod": 0
+				},
+				"con": {
+					"mod": 0
+				},
+				"cha": {
+					"mod": 0
+				}
+			},
+			"attributes": {
+				"hp": {
+					"hd": 0
+				},
+				"ac": {
+					"value": 10
+				}
+			},
+			"darkAdapted": true,
+			"move": "near",
+			"moveNote": ""
+		},
+		"Player": {
+			"templates": ["shared_details"],
+			"abilities": {
+				"str": {
+					"value": 10
+				},
+				"int": {
+					"value": 10
+				},
+				"dex": {
+					"value": 10
+				},
+				"wis": {
+					"value": 10
+				},
+				"con": {
+					"value": 10
+				},
+				"cha": {
+					"value": 10
+				}
+			},
+			"ancestry": "",
+			"attributes": {
+				"hp": {
+					"max": 0,
+					"bonus": 0,
+					"value": 0
+				}
+			},
+			"background": "",
+			"bonuses": {
+				"acBonus": 0,
+				"advantage": [],
+				"weaponMastery": [],
+				"meleeAttackBonus": 0,
+				"meleeDamageBonus": 0,
+				"rangedAttackBonus": 0,
+				"rangeDamageBonus": 0,
+				"spellcastingCheckBonus": 0,
+				"backstabDie": 0,
+				"hauler": false,
+				"critical": {
+					"successThreshold": 20,
+					"failureThreshold": 1
+				}
+			},
+			"class": "",
+			"coins": {
+				"gp": 0,
+				"sp": 0,
+				"cp": 0
+			},
+			"deity": "",
+			"languages": [],
+			"level": {
+				"xp": 0
+			},
+			"luck": false,
+			"slots": 10,
+			"title": ""
+		}
+	},
+	"Item": {
+		"types": [
+			"Armor",
+			"Basic",
+			"Gem",
+			"NPC Attack",
+			"NPC Feature",
+			"Spell",
+			"Talent",
+			"Weapon"
+		],
+		"templates": {
+			"common": {
+				"description": "",
+				"properties": [],
+				"magicItem": false
+			},
+			"physical": {
+				"cost": {
+					"gp": 0,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				}
+			}
+		},
+		"Armor": {
+			"templates": [
+				"common",
+				"physical"
+			],
+			"ac": {
+				"base": 0,
+				"modifier": 0,
+				"attribute": ""
+			},
+			"canBeEquipped": true,
+			"baseArmor": ""
+		},
+		"Basic": {
+			"templates": [
+				"common",
+				"physical"
+			],
+			"light": {
+				"active": false,
+				"hasBeenUsed": false,
+				"isSource": false,
+				"longevityMins": 60,
+				"remainingSecs": 3600,
+				"template": "torch"
+			},
+			"treasure": false
+		},
+		"Gem": {
+			"templates": [
+				"common",
+				"physical"
+			]
+		},
+		"NPC Attack": {
+			"templates": [
+				"common"
+			],
+			"attack": {
+				"num": 1,
+				"bonus": 0
+			},
+			"damage": {
+				"bonus": 0,
+				"numDice": 1,
+				"value": "",
+				"special": ""
+			},
+			"attackType": "physical",
+			"ranges": ["close"]
+		},
+		"NPC Feature": {
+			"templates": [
+				"common"
+			]
+		},
+		"Spell": {
+			"templates": ["common"],
+			"class": [],
+			"duration": {
+				"type": "",
+				"value": ""
+			},
+			"lost": false,
+			"range": "",
+			"tier": 1
+		},
+		"Talent": {
+			"templates": ["common"],
+			"level": 1,
+			"talentClass": "level"
+		},
+		"Weapon": {
+			"templates": [
+				"physical",
+				"common"
+			],
+			"attackBonus": 0,
+			"canBeEquipped": true,
+			"damage": {
+				"bonus": 0,
+				"oneHanded": "",
+				"twoHanded": "",
+				"numDice": 1,
+				"critMultiplier": 2
+			},
+			"range": "close",
+			"type": "melee",
+			"weaponMastery": false,
+			"baseWeapon": ""
+		}
+	}
+}

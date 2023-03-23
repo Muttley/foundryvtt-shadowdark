@@ -1,0 +1,61 @@
+<div class="weapon-details">
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_type'}}</label>
+		<select name="system.type">
+			{{selectOptions
+				config.WEAPON_TYPES
+				selected=system.type
+				localize=false
+			}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_range'}}</label>
+		<select name="system.range">
+			{{selectOptions
+				config.RANGES
+				selected=system.range
+				localize=false
+			}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}</label>
+		<select name="system.damage.oneHanded">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_DAMAGE
+				selected=system.damage.oneHanded
+				localize=false
+			}}
+		</select>
+	</div>
+	<div class="weapon-detail">
+		<label>{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}</label>
+		<select name="system.damage.twoHanded">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_DAMAGE
+				selected=system.damage.twoHanded
+				localize=false
+			}}
+		</select>
+	</div>
+	<div class="armor-detail">
+		<label>{{localize "SHADOWDARK.item.armor.base_weapon.title"}}</label>
+		<select name="system.baseWeapon">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_WEAPON
+				selected=system.baseWeapon
+				localize=false
+			}}
+		</select>
+	</div>
+</div>
+<div class="item-properties">
+	<div class="item-property">
+		<label>{{localize 'SHADOWDARK.item.properties'}}</label>
+		<p class="item-property-list weapon">{{propertiesDisplay}}</p>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+<b>{{numAttacks}} {{attackName}}</b>
+({{ranges}})
+{{#ifCond attackBonus '!=' 0}}{{numberFormat attackBonus decimals=0 sign=true}}{{/ifCond}}
+{{#ifCond attackType '!==' "special"}}
+({{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond special '!==' ''}} + {{special}}{{/ifCond}})
+{{/ifCond}}

@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.gem-bag {
+
+	.gem-bag-body {
+		@include p-reset;
+		display: grid;
+	}
+
+	.gem-bag-footer {
+		font-size: 18px;
+	}
+
+	.gem-list {
+		margin-bottom: 8px;
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 14px;
+			text-align: center;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+				text-align: left;
+			}
+
+			& tr:first-child,
+			& tr:last-child {
+				background-color: #00000020;
+
+				& td {
+					padding-left: 4px;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				:last-child
+			) {
+				font-size: 13px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+		}
+	}
+
+	.sell-gem {
+		color: #A0A09A;
+
+		&:hover {
+			color: gold;
+			text-shadow: 1px 1px 1px black;
+		}
+	}
+}

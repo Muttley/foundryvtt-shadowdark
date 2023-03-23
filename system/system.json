@@ -1,0 +1,182 @@
+{
+	"id": "shadowdark",
+	"title": "Shadowdark RPG",
+	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
+	"version": "0.9.0",
+	"schema": "230321.4",
+	"compatibility": {
+		"minimum": "10",
+		"verified": "10"
+	},
+	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
+	"manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json",
+	"authors": [
+		{
+			"name": "Paul Maskelyne",
+			"discord": "Muttley#3296",
+			"email": "mu77ley@gmail.com",
+			"mastodon": "@muttley@dice.camp"
+		},
+		{
+			"name": "Bakbakbakbakbak",
+			"github": "https://github.com/bakbakbakbakbak",
+			"discord": "bakbak#2827"
+		}
+	],
+	"esmodules": ["shadowdark-compiled.mjs"],
+	"styles": ["css/shadowdark.css"],
+	"packs": [
+		{
+			"name": "armor",
+			"label": "Armor",
+			"system": "shadowdark",
+			"path": "packs/armor.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "basic-gear",
+			"label": "Basic Gear",
+			"system": "shadowdark",
+			"path": "packs/basic-gear.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "macros",
+			"label": "Macros",
+			"system": "shadowdark",
+			"path": "packs/macros.db",
+			"type": "Macro",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "magic-items",
+			"label": "Magic Items",
+			"system": "shadowdark",
+			"path": "packs/magic-items.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "monster",
+			"label": "Monster",
+			"system": "shadowdark",
+			"path": "packs/monster.db",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-guide",
+			"label": "Quickstart Guide",
+			"system": "shadowdark",
+			"path": "packs/quickstart-guide.db",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-pregens",
+			"label": "Quickstart Pregens",
+			"system": "shadowdark",
+			"path": "packs/quickstart-pregens.db",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "spells",
+			"label": "Spells",
+			"system": "shadowdark",
+			"path": "packs/spells.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "rollable-tables",
+			"label": "Rollable Tables",
+			"system": "shadowdark",
+			"path": "packs/rollable-tables.db",
+			"type": "RollTable",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "talents",
+			"label": "Talents",
+			"system": "shadowdark",
+			"path": "packs/talents.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "the-lost-citadel",
+			"label": "The Lost Citadel",
+			"system": "shadowdark",
+			"path": "packs/the-lost-citadel.db",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "the-lost-citadel-adventure",
+			"label": "The Lost Citadel: Adventure",
+			"system": "shadowdark",
+			"path": "packs/the-lost-citadel-adventure.db",
+			"type": "Adventure",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "weapons",
+			"label": "Weapons",
+			"system": "shadowdark",
+			"path": "packs/weapons.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "wizard-mishap",
+			"label": "Wizard Mishap",
+			"system": "shadowdark",
+			"path": "packs/wizard-mishap.db",
+			"type": "RollTable",
+			"private": false,
+			"flags": {}
+		}
+	],
+	"languages": [
+		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "i18n/de.json"
+		},
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "i18n/en.json"
+		},
+		{
+			"lang": "fi",
+			"name": "suomen kieli",
+			"path": "i18n/fi.json"
+		},
+		{
+			"lang": "sv",
+			"name": "svenska",
+			"path": "i18n/sv.json"
+		}
+	],
+	"socket": true,
+	"gridDistance": 5,
+	"initiative": "@initiativeFormula + @initiativeBonus",
+	"gridUnits": "ft"
+}

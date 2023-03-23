@@ -1,0 +1,47 @@
+<section class="tab tab-talents" data-group="primary" data-tab="tab-talents">
+	<section class="talents-body">
+		<div class="talents-list">
+			<table>
+				<tr>
+					<th>&nbsp;</th>
+					<th>{{localize 'SHADOWDARK.sheet.player.talents_level'}}</th>
+				</tr>
+				{{#each talents as |section sid|}}
+					<tr class="talent-section-header">
+						<th>
+							<a
+								class="item-control item-create"
+								title="{{localize SHADOWDARK.inventory.create_item}}"
+								data-item-type="Talent"
+								data-talent-class="{{sid}}"
+							>
+								<i class="fa-regular fa-square-plus"></i>
+							</a>
+							{{section.label}}
+						</th>
+						<th>&nbsp;</th>
+					</tr>
+					{{#each section.items as |talent|}}
+						<tr class="item" data-item-id="{{talent._id}}">
+							<td>
+								<div
+									class="item-image"
+									style="background-image: url({{talent.img}})"
+								>
+								</div>
+								{{talent.name}}
+							</td>
+							<td>
+								{{#ifEq sid "level"}}
+									{{talent.system.level}}
+								{{else}}
+									&mdash;
+								{{/ifEq}}
+							</td>
+						</tr>
+					{{/each}}
+				{{/each}}
+			</table>
+		</div>
+	</section>
+</section>

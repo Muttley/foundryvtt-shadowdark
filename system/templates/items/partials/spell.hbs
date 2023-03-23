@@ -1,0 +1,54 @@
+<div class="spell-details">
+	<div class="spell-detail">
+		<label>{{localize 'SHADOWDARK.item.spell_tier'}}</label>
+		{{numberInput
+			system.tier
+			name="system.tier"
+			class="spell-tier-value"
+			placeholder="0"
+		}}
+	</div>
+	<div class="spell-detail">
+		<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
+		<div class="spell-duration">
+			{{#if showRoundValue}}
+				<input
+						name="system.duration.value"
+						type="text"
+						class="spell-duration-value"
+						value="{{system.duration.value}}"
+				/>
+			{{/if}}
+			<select
+				name="system.duration.type"
+				{{#unless showRoundValue}}
+					style="grid-column: span 2;"
+				{{/unless}}
+			>
+				<option value="">&mdash;</option>
+				{{selectOptions
+					config.SPELL_DURATIONS
+					selected=system.duration.type
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+	<div class="spell-detail">
+		<label>{{localize 'SHADOWDARK.item.spell_range'}}</label>
+		<select name="system.range">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.SPELL_RANGES
+				selected=system.range
+				localize=false
+			}}
+		</select>
+	</div>
+</div>
+<div class="item-properties">
+	<div class="item-property">
+		<label>{{localize 'SHADOWDARK.item.spell_caster_classes'}}</label>
+		<p class="item-property-list spell">{{casterClassesDisplay}}</p>
+	</div>
+</div>

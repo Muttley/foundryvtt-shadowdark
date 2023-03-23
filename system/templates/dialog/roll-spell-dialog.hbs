@@ -1,0 +1,31 @@
+<form autocomplete="off" spellcheck="off">
+	<div class="shadowdark-dialog">
+		<h2>{{localize "SHADOWDARK.dialog.spell_roll.title"}} {{ data.item.name }}</h2>
+		<hr />
+		<div class="form-group">
+			<label>
+				{{localize "SHADOWDARK.dialog.item_roll.ability_bonus"}}
+			</label>
+			<input type="number" name="ability-bonus" value="{{ data.abilityBonus }}" placeholder="0">
+		</div>
+		<div class="form-group">
+			<label>
+				{{localize "SHADOWDARK.dialog.item_roll.talent_bonus"}}
+			</label>
+			<input type="number" name="talent-bonus" value="{{ data.talentBonus }}" placeholder="0">
+		</div>
+		<hr />
+
+		<div class="form-group">
+			<label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
+			<select name="rollMode">
+				{{#select rollMode}}
+					{{#each rollModes as |label mode|}}
+						<option value="{{mode}}">{{localize label}}</option>
+					{{/each}}
+				{{/select}}
+			</select>
+		</div>
+		<hr />
+	</div>
+</form>

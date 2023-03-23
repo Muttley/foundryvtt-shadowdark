@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark-dialog {
+	@include p-reset;
+	padding: 4px;
+
+	color: black;
+	font-size: 18px;
+
+	.pc-backstab-class {
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		background-color: var(--form-background);
+	}
+}
+
+.dialog-button.advantage.talent-highlight {
+	background-color: #c1e0be;
+}

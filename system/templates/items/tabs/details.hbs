@@ -1,0 +1,78 @@
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
+	<div class="item-details">
+
+		{{#ifEq item.type "Armor"}}
+			{{> items/partials/armor }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Spell"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Weapon"}}
+			{{> items/partials/weapon }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "NPC Attack"}}
+			{{> items/partials/npc-attack }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/talent }}
+			{{> items/partials/talent-active-effects }}
+		{{/ifEq}}
+
+		{{#if usesSlots}}
+			{{!-- Gems have non-configurable slot settings --}}
+			{{#ifNeq item.type "Gem"}}
+				{{> items/partials/slots }}
+			{{/ifNeq}}
+		{{/if}}
+
+		{{#if hasCost}}
+			{{> items/partials/cost }}
+		{{/if}}
+
+		<div class="item-toggles">
+
+			{{#if item.system.canBeEquipped}}
+				<div class="equipped">
+					{{#if item.isOwned}}
+						<label>{{localize 'SHADOWDARK.item.equipped'}}</label>
+						<input type="checkbox" name="system.equipped" {{checked system.equipped}}>
+					{{/if}}
+				</div>
+			{{/if}}
+
+			{{#ifEq item.type "Basic"}}
+				<div class="light-source">
+					<label>{{localize 'SHADOWDARK.item.light.is_source'}}</label>
+					<input
+						type="checkbox"
+						name="system.light.isSource"
+						{{checked system.light.isSource}}
+					>
+				</div>
+			{{/ifEq}}
+
+			{{#if item.system.isPhysical}}
+				{{#ifNeq item.type "Gem"}}
+					<div class="magic-item">
+						<label>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</label>
+						<input
+							type="checkbox"
+							name="system.magicItem"
+							{{checked system.magicItem}}
+						>
+					</div>
+				{{/ifNeq}}
+			{{/if}}
+
+			{{#ifEq item.type "Basic"}}
+				{{> items/partials/treasure }}
+			{{/ifEq}}
+
+		</div>
+
+	</div>
+</section>

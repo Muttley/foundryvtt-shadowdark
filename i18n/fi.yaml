@@ -1,0 +1,305 @@
+SHADOWDARK.ability_cha: Kar
+SHADOWDARK.ability_charisma: Karisma
+SHADOWDARK.ability_con: Sit
+SHADOWDARK.ability_constitution: Sitkeys
+SHADOWDARK.ability_dex: Ket
+SHADOWDARK.ability_dexterity: Ketteryys
+SHADOWDARK.ability_int: Äly
+SHADOWDARK.ability_intelligence: Älykkyys
+SHADOWDARK.ability_str: Voi
+SHADOWDARK.ability_strength: Voimakkuus
+SHADOWDARK.ability_wis: Vii
+SHADOWDARK.ability_wisdom: Viisaus
+SHADOWDARK.alignment.chaotic_short: C
+SHADOWDARK.alignment.chaotic: Chaotic
+SHADOWDARK.alignment.lawful_short: L
+SHADOWDARK.alignment.lawful: Lawful
+SHADOWDARK.alignment.neutral_short: 'N'
+SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
+SHADOWDARK.app.gem_bag.title: Gem Bag
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
+SHADOWDARK.app.gem_bag.total_value: Total Value
+SHADOWDARK.app.item_properties.armor.title: Armor Properties
+SHADOWDARK.app.item_properties.caster_classes.title: Caster Classes
+SHADOWDARK.app.item_properties.languages.title: Languages
+SHADOWDARK.app.item_properties.save: Tallenna
+SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
+SHADOWDARK.app.item_properties.title: Asetukset
+SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
+SHADOWDARK.app.light_tracker.minute_short: min
+SHADOWDARK.app.light_tracker.minutes_short: mins
+SHADOWDARK.app.light_tracker.title: Light Tracker
+SHADOWDARK.app.light-tracker.douse-light: Douse Light
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
+SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
+SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
+SHADOWDARK.armor.properties.no_swimming: Ei voi uida
+SHADOWDARK.armor.properties.one_handed: Varaa yhden käden
+SHADOWDARK.armor.properties.shield: Kilpi
+SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
+SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
+SHADOWDARK.chat.item_roll.title: Attack roll with {name}
+SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chatcard.default: Roll
+SHADOWDARK.class.fighter: Fighter
+SHADOWDARK.class.priest: Priest
+SHADOWDARK.class.thief: Thief
+SHADOWDARK.class.wizard: Wizard
+SHADOWDARK.coins.cp: Kupari
+SHADOWDARK.coins.gp: Kulta
+SHADOWDARK.coins.sp: Hopea
+SHADOWDARK.damage.one_handed: 'One-Handed Damage:'
+SHADOWDARK.damage.two_handed: 'Two-Handed Damage:'
+SHADOWDARK.dialog.ability_check.cha: Charisma Check
+SHADOWDARK.dialog.ability_check.con: Constitution Check
+SHADOWDARK.dialog.ability_check.dex: Dexterity Check
+SHADOWDARK.dialog.ability_check.int: Intelligence Check
+SHADOWDARK.dialog.ability_check.str: Strength Check
+SHADOWDARK.dialog.ability_check.title: Ability Check
+SHADOWDARK.dialog.ability_check.wis: Wisdom Check
+SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
+SHADOWDARK.dialog.general.cancel: Cancel
+SHADOWDARK.dialog.general.no: 'No'
+SHADOWDARK.dialog.general.yes: 'Yes'
+SHADOWDARK.dialog.hp_roll: HP Roll
+SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
+SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
+SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
+SHADOWDARK.dialog.item_roll.title: Roll Attack with
+SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
+SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
+SHADOWDARK.dialog.item.delete: Poista
+SHADOWDARK.dialog.item.sell_all: Sell All
+SHADOWDARK.dialog.item.sell: Sell
+SHADOWDARK.dialog.roll_mode_label: Select rolling mode
+SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.spell_roll.title: Roll Spell with
+SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
+SHADOWDARK.effect.footer.add_custom: Add Custom Effect
+SHADOWDARK.effect.header.active: Active
+SHADOWDARK.effect.header.delete: Delete
+SHADOWDARK.effect.header.edit: Edit
+SHADOWDARK.effect.header.name: Effect
+SHADOWDARK.effect.header.options: Options
+SHADOWDARK.effect.item: Item Effects
+SHADOWDARK.effect.new: New Effect
+SHADOWDARK.effect.spell: Spell Effects
+SHADOWDARK.effect.talent: Talent Effects
+SHADOWDARK.effect.temporary: Temporary Effects
+SHADOWDARK.effect.unavailable: Disabled Effects
+SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
+SHADOWDARK.inventory.coins: Kolikot
+SHADOWDARK.inventory.item.light_remaining: '{timeRemaining} Mins Remaining'
+SHADOWDARK.inventory.item.light_used: (partially used)
+SHADOWDARK.inventory.label.quantity: Kpl
+SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
+SHADOWDARK.inventory.section.armor: Panssari
+SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet
+SHADOWDARK.inventory.section.treasure: Treasure
+SHADOWDARK.inventory.section.weapon: Aseet
+SHADOWDARK.inventory.slots_max: Maksimi
+SHADOWDARK.inventory.slots_used: Täytetty
+SHADOWDARK.inventory.slots: Tarviketila
+SHADOWDARK.inventory.tooltip.gem_bag: Avaa jalokivipussi
+SHADOWDARK.inventory.tooltip.item_decrement: Vähennä määrää
+SHADOWDARK.inventory.tooltip.item_increment: Lisää määrää
+SHADOWDARK.inventory.tooltip.sell_treasure: Sell Treasure
+SHADOWDARK.inventory.tooltip.toggle_equipped: Ota käyttöön
+SHADOWDARK.inventory.tooltip.toggle_light_source: Toggle Light Source
+SHADOWDARK.inventory.total_coins: Kolikoita yhteensä
+SHADOWDARK.inventory.total_gems: Jalokiviä yhteensä
+SHADOWDARK.item_type.armor: Panssari
+SHADOWDARK.item_type.basic: Esine
+SHADOWDARK.item_type.gem: Jalokivi
+SHADOWDARK.item_type.spell: Loitsu
+SHADOWDARK.item_type.talent: Lahjakkuus
+SHADOWDARK.item_type.weapon: Ase
+SHADOWDARK.item.armor_ac_modifier: Lisäpisteet
+SHADOWDARK.item.armor_ac: Puolustuspisteet
+SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
+SHADOWDARK.item.cost: Hinta
+SHADOWDARK.item.description: Kuvaus
+SHADOWDARK.item.equipped: Käytössä
+SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
+SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
+SHADOWDARK.item.inventory_quantity: Lukumäärä
+SHADOWDARK.item.inventory_slots: Tarviketiloja per esine
+SHADOWDARK.item.level: Level
+SHADOWDARK.item.light.is_source: Light Source
+SHADOWDARK.item.light.longevity: Longevity (Mins)
+SHADOWDARK.item.light.remaining: Remaining (Mins)
+SHADOWDARK.item.properties: Asetukset
+SHADOWDARK.item.spell_caster_classes: Caster Classes
+SHADOWDARK.item.spell_duration: Duration
+SHADOWDARK.item.spell_range: Range
+SHADOWDARK.item.spell_tier: Tier
+SHADOWDARK.item.treasure: Treasure
+SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
+SHADOWDARK.item.weapon_damage.oneHanded: Vahinkoa yhdellä kädellä
+SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
+SHADOWDARK.item.weapon_damage.twoHanded: Vahinkoa kahdella kädellä
+SHADOWDARK.item.weapon_range: Kantama
+SHADOWDARK.item.weapon_type: Aseen tyyppi
+SHADOWDARK.language.celestial: Celestial
+SHADOWDARK.language.common: Common
+SHADOWDARK.language.diabolic: Diabolic
+SHADOWDARK.language.draconic: Draconic
+SHADOWDARK.language.dwarvish: Dwarvish
+SHADOWDARK.language.elvish: Elvish
+SHADOWDARK.language.giant: Giant
+SHADOWDARK.language.goblin: Goblin
+SHADOWDARK.language.merran: Merran
+SHADOWDARK.language.orcish: Orcish
+SHADOWDARK.language.primordial: Primordial
+SHADOWDARK.language.reptilian: Reptilian
+SHADOWDARK.language.sylvan: Sylvan
+SHADOWDARK.language.thanian: Thanian
+SHADOWDARK.light-tracker.active: Active
+SHADOWDARK.light-tracker.paused: Paused
+SHADOWDARK.light-tracker.status.label: Status
+SHADOWDARK.light-tracker.title.prefix: Light
+SHADOWDARK.light-tracker.title.suffix: Tracker
+SHADOWDARK.range.close_short: C
+SHADOWDARK.range.close: Vieressä
+SHADOWDARK.range.far_short: F
+SHADOWDARK.range.far: Kaukana
+SHADOWDARK.range.near_short: 'N'
+SHADOWDARK.range.near: Lähellä
+SHADOWDARK.range.self_short: S
+SHADOWDARK.range.self: Self
+SHADOWDARK.roll.advantage_title: '{title} with Advantage'
+SHADOWDARK.roll.advantage: Advantage
+SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
+SHADOWDARK.roll.critical.success: Critical Success! ({value})
+SHADOWDARK.roll.D20: Roll D20
+SHADOWDARK.roll.damage: 'Damage Roll:'
+SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
+SHADOWDARK.roll.disadvantage: Disadvantage
+SHADOWDARK.roll.failure: Failure! ({value})
+SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.spell_casting_check: Spellcasting Check
+SHADOWDARK.roll.success: Success! ({value})
+SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
+SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
+SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in minutes.
+SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
+SHADOWDARK.settings.track_light_sources.name: Track Light Sources
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
+SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Light Tracking will pause whenever Foundry is paused.
+SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
+SHADOWDARK.sheet.actor.ac: AC
+SHADOWDARK.sheet.actor.alignment_short: Align
+SHADOWDARK.sheet.actor.alignment: Alignment
+SHADOWDARK.sheet.actor.hp_max: Max
+SHADOWDARK.sheet.actor.hp: HP
+SHADOWDARK.sheet.actor.level: Level
+SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
+SHADOWDARK.sheet.class.item: Shadowdark esineikkuna
+SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
+SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
+SHADOWDARK.sheet.general.item_delete.title: Poista esine
+SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
+SHADOWDARK.sheet.npc.attacks_label: Attacks
+SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
+SHADOWDARK.sheet.npc.dark-adapted: Dark-Adapted
+SHADOWDARK.sheet.npc.description_label: Description
+SHADOWDARK.sheet.npc.movement_short: Move
+SHADOWDARK.sheet.npc.movement: Movement
+SHADOWDARK.sheet.npc.special_label: Special
+SHADOWDARK.sheet.npc.tab.abilities: Abilities
+SHADOWDARK.sheet.npc.tab.description: Description
+SHADOWDARK.sheet.player.ancestry: Laji
+SHADOWDARK.sheet.player.background: Tausta
+SHADOWDARK.sheet.player.class: Hahmoluokka
+SHADOWDARK.sheet.player.deity: Jumala
+SHADOWDARK.sheet.player.languages: Languages
+SHADOWDARK.sheet.player.luck: Tuuripiste
+SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
+SHADOWDARK.sheet.player.notes: Muistiinpanot
+SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
+SHADOWDARK.sheet.player.spells_tier: Tier
+SHADOWDARK.sheet.player.spells: Loitsut
+SHADOWDARK.sheet.player.tab.abilities: Kyvyt
+SHADOWDARK.sheet.player.tab.background: Tausta
+SHADOWDARK.sheet.player.tab.inventory: Kantamukset
+SHADOWDARK.sheet.player.tab.spells: Loitsut
+SHADOWDARK.sheet.player.tab.talents: Lahjakkuudet
+SHADOWDARK.sheet.player.talents_level: Level
+SHADOWDARK.sheet.player.talents_name: Name
+SHADOWDARK.sheet.player.talents: Lahjakkuudet
+SHADOWDARK.sheet.player.title: Arvonimi
+SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
+SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
+SHADOWDARK.sheet.player.xp: Kokemuspisteet
+SHADOWDARK.spell_caster.priest: Priest
+SHADOWDARK.spell_caster.wizard: Wizard
+SHADOWDARK.spell_duration.days: Days
+SHADOWDARK.spell_duration.focus: Keskittyessä
+SHADOWDARK.spell_duration.instant: Välitön
+SHADOWDARK.spell_duration.real_time: Real Time
+SHADOWDARK.spell_duration.rounds: Kierrosta
+SHADOWDARK.spell_range.close: Vieressä
+SHADOWDARK.spell_range.far: Kaukana
+SHADOWDARK.spell_range.near: Lähellä
+SHADOWDARK.spellcasting_ability: Spellcasting Ability
+SHADOWDARK.talent.backstab: Backstab
+SHADOWDARK.talent.type.ability_improvement: Ability Improvement
+SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
+SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
+SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
+SHADOWDARK.talent.type.advantage.title: Advantage Bonus
+SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
+SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
+SHADOWDARK.talent.type.custom: Custom Talent
+SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
+SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
+SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
+SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
+SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
+SHADOWDARK.talent.type.title: Talent Type(s)
+SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
+SHADOWDARK.weapon.properties.finesse: Hienovarainen
+SHADOWDARK.weapon.properties.loading: Ladattava
+SHADOWDARK.weapon.properties.thrown: Heitettävä
+SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
+SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
+SHADOWDARK.weapon.type.melee: Lähitaistelu ase
+SHADOWDARK.weapon.type.ranged: Kantama-ase
+SHADOWDARK.item.magic_item.is_magic: Magic Item
+SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
+SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
+SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus
+SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
+SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Lower Critical Success Threshold
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Higher Critical Failure Threshold
+SHADOWDARK.item.magic_item.type.custom: Custom Effect
+SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
+SHADOWDARK.effect.custom: Custom Effects
+SHADOWDARK.app.active_effects.title: Active Effects
+SHADOWDARK.sheet.player.available_spells: Available Spells
+SHADOWDARK.item.armor.base_armor.title: Base Armor
+SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
+SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
+SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
+SHADOWDARK.item.armor.base_armor.shield: Shield
+SHADOWDARK.item.armor.base_weapon.title: Base Weapon
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastard Sword
+SHADOWDARK.item.weapon.base_weapon.club: Club
+SHADOWDARK.item.weapon.base_weapon.crossbow: Crossbow
+SHADOWDARK.item.weapon.base_weapon.dagger: Dagger
+SHADOWDARK.item.weapon.base_weapon.greataxe: Greataxe
+SHADOWDARK.item.weapon.base_weapon.greatsword: Greatsword
+SHADOWDARK.item.weapon.base_weapon.javelin: Javelin
+SHADOWDARK.item.weapon.base_weapon.longbow: Longbow
+SHADOWDARK.item.weapon.base_weapon.longsword: Longsword
+SHADOWDARK.item.weapon.base_weapon.mace: Mace
+SHADOWDARK.item.weapon.base_weapon.shortbow: Shortbow
+SHADOWDARK.item.weapon.base_weapon.shortsword: Shortsword
+SHADOWDARK.item.weapon.base_weapon.spear: Spear
+SHADOWDARK.item.weapon.base_weapon.staff: Staff
+SHADOWDARK.item.weapon.base_weapon.wand: Wand
+SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer

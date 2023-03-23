@@ -1,0 +1,48 @@
+<div class="armor-details">
+	<div class="armor-detail">
+		<label>{{localize 'SHADOWDARK.item.armor_ac'}}</label>
+		{{numberInput
+			system.ac.base
+			name="system.ac.base"
+			class="ac-value"
+			placeholder="0"
+		}}
+	</div>
+	<div class="armor-detail">
+		<label>{{localize 'SHADOWDARK.item.armor_ac_modifier'}}</label>
+		{{numberInput
+			system.ac.modifier
+			name="system.ac.modifier"
+			class="ac-value"
+			placeholder="0"
+		}}
+	</div>
+	<div class="armor-detail">
+		<label>{{localize 'SHADOWDARK.item.armor_bonus_attribute'}}</label>
+		<select name="system.ac.attribute">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.ARMOR_BONUS_ATTRIBUTES
+				selected=system.ac.attribute
+				localize=false
+			}}
+		</select>
+	</div>
+	<div class="armor-detail">
+		<label>{{localize "SHADOWDARK.item.armor.base_armor.title"}}</label>
+		<select name="system.baseArmor">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.ARMOR_BASE_ARMOR
+				selected=system.baseArmor
+				localize=false
+			}}
+		</select>
+	</div>
+</div>
+<div class="item-properties">
+	<div class="item-property">
+		<label>{{localize 'SHADOWDARK.item.properties'}}</label>
+		<p class="item-property-list armor">{{propertiesDisplay}}</p>
+	</div>
+</div>

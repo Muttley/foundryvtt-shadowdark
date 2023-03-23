@@ -1,0 +1,28 @@
+<section class="tab tab-abilities" data-group="primary" data-tab="tab-abilities">
+	<div class="abilities-grid">
+		<div class="ability-scores">
+			{{#each actor.system.abilities as |ability id|}}
+				<div class="value-box ability" data-ability="{{id}}">
+					<label
+						for="{{concat "system.abilities." id ".value"}}"
+						class="ability-name rollable"
+						data-ability="{{id}}"
+					>
+						{{ability.label}}
+					</label>
+					<div class="ability-score">
+						{{numberInput
+							ability.value
+							name=(concat "system.abilities." id ".value")
+							class="ability-score" placeholder="10"
+						}}
+						<p>({{numberFormat ability.modifier decimals=0 sign=true}})</p>
+					</div>
+				</div>
+			{{/each}}
+			{{> actors/player/abilities/hp }}
+			{{> actors/player/abilities/ac }}
+		</div>
+		{{> actors/player/abilities/attacks }}
+	</div>
+</section>

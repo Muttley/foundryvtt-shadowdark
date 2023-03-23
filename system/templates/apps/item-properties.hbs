@@ -1,0 +1,15 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<section class="properties-grid">
+		{{#each properties as |value key|}}
+			<div
+				class="property {{#if value.selected}}selected{{/if}}"
+				data-property="{{key}}"
+			>
+				{{value.title}}
+			</div>
+		{{/each}}
+		<button class="properties-footer" type="submit" name="submit" value="1">
+			<i class="far fa-save"></i> {{localize "SHADOWDARK.app.item_properties.save"}}
+		</button>
+	</section>
+</form>

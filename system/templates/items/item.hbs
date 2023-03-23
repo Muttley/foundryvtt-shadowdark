@@ -1,0 +1,63 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div>
+		<header class="item-header">
+			<img
+				src="{{item.img}}"
+				data-edit="img"
+				title="{{item.name}}"
+				height="64"
+				width="64"
+			/>
+			<h1>
+				<input
+					class="item-name"
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="{{localize 'Name'}}"
+				/>
+			</h1>
+		</header>
+		<nav class="item-navigation" data-group="primary">
+			<div class="item-navigation__flex">
+
+				{{#ifNeq item.type 'NPC Feature'}}
+					<a class="item active" data-tab="tab-details">
+						{{localize "SHADOWDARK.sheet.item.tab.details"}}
+					</a>
+				{{/ifNeq}}
+
+				{{#if item.system.light.isSource}}
+					<a class="item active" data-tab="tab-light">
+						{{localize "SHADOWDARK.sheet.item.tab.light"}}
+					</a>
+				{{/if}}
+
+				{{#if item.system.magicItem}}
+					<a class="item active" data-tab="tab-magic">
+						{{localize "SHADOWDARK.sheet.item.tab.magic"}}
+					</a>
+				{{/if}}
+
+				<a
+					class="item {{#ifEq item.type 'NPC Feature'}}active{{/ifEq}}"
+					data-tab="tab-description"
+					{{#ifEq item.type 'NPC Feature'}}
+						style="display: none;"
+					{{/ifEq}}
+				>
+					{{localize "SHADOWDARK.sheet.item.tab.description"}}
+				</a>
+			</div>
+		</nav>
+	</div>
+	<hr />
+	<section class="item-body">
+
+		{{> items/tabs/details }}
+		{{> items/tabs/light }}
+		{{> items/tabs/magic }}
+		{{> items/tabs/description }}
+
+	</section>
+</form>
