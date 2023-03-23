@@ -202,7 +202,15 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// Talents & Ability modifiers
 		if (item.system.type === "melee") {
-			data.abilityBonus = this.actor.abilityModifier("str");
+			if (item.isFinesseWeapon()) {
+				data.abilityBonus = Math.max(
+					this.actor.abilityModifier("str"),
+					this.actor.abilityModifier("dex")
+				);
+			}
+			else {
+				data.abilityBonus = this.actor.abilityModifier("str");
+			}
 
 			data.talentBonus = bonuses.meleeAttackBonus;
 			data.meleeDamageBonus = bonuses.meleeDamageBonus;
