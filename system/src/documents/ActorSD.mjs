@@ -101,7 +101,7 @@ export default class ActorSD extends Actor {
 		if (this.system.bonuses.weaponMastery.find(
 			mastery => mastery === item.name.slugify()
 		)) {
-			weaponMasterBonus += 1; // TODO Can stack Weapon Master?
+			weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
 			weaponOptions.bonusDamage = weaponMasterBonus;
 		}
 
