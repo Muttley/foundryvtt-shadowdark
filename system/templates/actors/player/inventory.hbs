@@ -11,23 +11,24 @@
 				{{#each inventory as |section sid|}}
 					<tr class="inventory-section-header">
 						<th>
-								<a
-									class="item-control item-create"
-									title="{{localize SHADOWDARK.inventory.create_item}}"
-									{{#ifEq sid "treasure"}}
-										data-item-type="Basic"
-										data-item-treasure=true
-									{{else}}
-										data-item-type="{{section.type}}"
-									{{/ifEq}}
-								>
-									<i class="fa-regular fa-square-plus"></i>
-								</a>
 							{{section.label}}
 						</th>
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
-						<th>&nbsp;</th>
+						<th>
+							<a
+								class="item-control item-create"
+								title="{{localize SHADOWDARK.inventory.create_item}}"
+								{{#ifEq sid "treasure"}}
+									data-item-type="Basic"
+									data-item-treasure=true
+								{{else}}
+									data-item-type="{{section.type}}"
+								{{/ifEq}}
+							>
+								<i class="fa-solid fa-file-plus"></i>
+								</a>
+							</th>
 					</tr>
 					{{#each section.items as |item|}}
 						<tr class="item" data-item-id="{{item._id}}" draggable="true">

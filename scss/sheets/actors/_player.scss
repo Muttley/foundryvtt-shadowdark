@@ -266,6 +266,10 @@
 				text-align: left;
 			}
 
+			& th:last-child {
+				text-align: center;
+			}
+
 			& tr:first-child,
 			& tr:last-child,
 			& tr:nth-last-child(2) {
@@ -522,11 +526,13 @@
 			}
 
 			& th:last-child {
-				text-align: center;
+				text-align: right;
+				padding-right: 4px;
 			}
 
 			& td:last-child {
 				text-align: center;
+				padding-right: 4px;
 			}
 
 			& tr:first-child {
@@ -566,22 +572,19 @@
 			@include p-reset;
 			font-family: "Montserrat-Medium";
 			font-size: 14px;
-			text-align: left;
+			text-align: center;
 			border: none;
 
 			& td:first-child {
 				padding-left: 8px;
-			}
-
-			& th:first-child {
 				text-align: left;
 			}
 
-			& th:last-child {
-				text-align: center;
+			& th:first-child {
+				text-align: left
 			}
 
-			& td:last-child {
+			& th:last-child {
 				text-align: center;
 			}
 
