@@ -93,6 +93,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Get the inventory ready
 		await this._prepareItems(context);
 
+		context.abilitiesOverrides = Object.keys(
+			foundry.utils.flattenObject(
+				this.actor.overrides?.system?.abilities || {}
+			)
+		);
+		context.attributeOverrides = Object.keys(
+			foundry.utils.flattenObject(
+				this.actor.overrides?.system?.attributes || {}
+			)
+		);
+
 		return context;
 	}
 
@@ -406,4 +417,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 		context.talents = talents;
 	}
+
+	// async _updateObject(event, formData) {
+	// 	const actor = this.object;
+	// 	let updateData = foundry.utils.expandObject(formData)
+	// 	const src = actor.toObject();
+
+	// }
 }
