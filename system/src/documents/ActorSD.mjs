@@ -74,8 +74,8 @@ export default class ActorSD extends Actor {
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 
-		const meleeAttack = this.attackBonus("str");
-		const rangedAttack = this.attackBonus("dex");
+		const meleeAttack = this.attackBonus("melee");
+		const rangedAttack = this.attackBonus("ranged");
 
 		const baseAttackBonus = item.isFinesseWeapon()
 			? Math.max(meleeAttack, rangedAttack)
