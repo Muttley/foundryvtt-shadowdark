@@ -102,6 +102,10 @@ export default class ItemSD extends Item {
 		return this.type === "Weapon";
 	}
 
+	isFinesseWeapon() {
+		return this.hasProperty("finesse");
+	}
+
 	isMagicItem() {
 		return this.system.magicItem;
 	}
