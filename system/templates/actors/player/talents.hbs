@@ -5,9 +5,14 @@
 				<tr>
 					<th>&nbsp;</th>
 					<th>{{localize 'SHADOWDARK.sheet.player.talents_level'}}</th>
+					<th>&nbsp;</th>
 				</tr>
 				{{#each talents as |section sid|}}
 					<tr class="talent-section-header">
+						<th>
+							{{section.label}}
+						</th>
+						<th>&nbsp;</th>
 						<th>
 							<a
 								class="item-control item-create"
@@ -15,11 +20,9 @@
 								data-item-type="Talent"
 								data-talent-class="{{sid}}"
 							>
-								<i class="fa-regular fa-square-plus"></i>
+								<i class="fa-solid fa-file-plus"></i>
 							</a>
-							{{section.label}}
-						</th>
-						<th>&nbsp;</th>
+					</th>
 					</tr>
 					{{#each section.items as |talent|}}
 						<tr class="item" data-item-id="{{talent._id}}">
@@ -38,6 +41,7 @@
 									&mdash;
 								{{/ifEq}}
 							</td>
+							<td></td>
 						</tr>
 					{{/each}}
 				{{/each}}
