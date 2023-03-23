@@ -20,12 +20,12 @@ jobs:
       id: get_vars
       run: |
         TAG=${GITHUB_REF/refs\/tags\//}
-        echo ::set-output name=TAG_NAME::$TAG
-        echo ::set-output name=ZIP_NAME::shadowdark-$TAG.zip
-        echo ::set-output name=RELEASE_DOWNLOAD_URL::https://github.com/${{github.repository}}/releases/download/$TAG/shadowdark-$TAG.zip
-        echo ::set-output name=RELEASE_INSTALL_URL::https://github.com/${{github.repository}}/releases/download/$TAG/system.json
+        echo "TAG_NAME=$TAG" >> $GITHUB_STATE
+        echo "ZIP_NAME=shadowdark-$TAG.zip" >> $GITHUB_STATE
+        echo "RELEASE_DOWNLOAD_URL=https://github.com/${{github.repository}}/releases/download/$TAG/shadowdark-$TAG.zip" >> $GITHUB_STATE
+        echo "RELEASE_INSTALL_URL=https://github.com/${{github.repository}}/releases/download/$TAG/system.json" >> $GITHUB_STATE
         JSON=$(cat ./system/system.json)
-        echo ::set-output name=SYSTEM_JSON::${JSON//'%'/'%25'}
+        echo "SYSTEM_JSON=${JSON//'%'/'%25'}" >> $GITHUB_STATE
 
     # Run some tests to make sure our `system.json` is correct
     # Exit before setting up node if not
@@ -81,6 +81,6 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './system.json, ./${{steps.get_vars.outputs.ZIP_NAME}}'
+        artifacts: './system/system.json, ./${{steps.get_vars.outputs.ZIP_NAME}}'
         tag: ${{steps.get_vars.outputs.TAG_NAME}}
         body: '**Installation:** To manually install this release, please use the following manifest URL: ${{steps.get_vars.outputs.RELEASE_INSTALL_URL}}'
