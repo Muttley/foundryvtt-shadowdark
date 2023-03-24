@@ -83,6 +83,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();
 
+		context.maxHp = this.actor.system.attributes.hp.max
+			+ this.actor.system.attributes.hp.bonus;
+
 		// Languages
 		context.knownLanguages = [];
 		for (const key of this.actor.system.languages) {
@@ -418,10 +421,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.talents = talents;
 	}
 
-	// async _updateObject(event, formData) {
-	// 	const actor = this.object;
-	// 	let updateData = foundry.utils.expandObject(formData)
-	// 	const src = actor.toObject();
+	async _updateObject(event, formData) {
+		const hpValues = this.object.system.attributes.hp;
 
-	// }
+		// Right now just a stop gap fix for the Stout / HP Max conflict
+		//
+		// TODO: Work out how to properly handle updating system values that
+		// may or may not have effects applied
+		if (formData["system.attributes.hp.max"] !== hpValues.max) {
+			formData["system.attributes.hp.max"] -= hpValues.bonus;
+		}
+
+		super._updateObject(event, formData);
+	}
 }
