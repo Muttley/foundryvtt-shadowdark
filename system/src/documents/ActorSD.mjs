@@ -93,24 +93,17 @@ export default class ActorSD extends Actor {
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
 
-		// TODO Add weapon master talent bonus
-
 		const weaponDisplays = {melee: [], ranged: []};
 
 		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
 		weaponOptions.bonusDamage = weaponMasterBonus;
 
-		// if (this.system.bonuses.weaponMastery.find(
-		// 	mastery => mastery === item.name.slugify()
-		// )) {
-		// 	weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
-		// 	weaponOptions.bonusDamage = weaponMasterBonus;
-		// }
-
 		if (item.system.type === "melee") {
 			weaponOptions.attackBonus =	baseAttackBonus
 				+ this.system.bonuses.meleeAttackBonus
 				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage += this.system.bonuses.meleeDamageBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
@@ -159,6 +152,8 @@ export default class ActorSD extends Actor {
 			weaponOptions.attackBonus = baseAttackBonus
 				+ this.system.bonuses.rangedAttackBonus
 				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage += this.system.bonuses.rangedDamageBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
