@@ -6,7 +6,7 @@ export default class ActorSD extends Actor {
 		// Some sensible token defaults for Actors
 		const prototypeToken = {
 			actorLink: false,
-			disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+			// disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
 			sight: {
 				enabled: false,
 			},
@@ -93,24 +93,17 @@ export default class ActorSD extends Actor {
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
 
-		// TODO Add weapon master talent bonus
-
 		const weaponDisplays = {melee: [], ranged: []};
 
 		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
 		weaponOptions.bonusDamage = weaponMasterBonus;
 
-		// if (this.system.bonuses.weaponMastery.find(
-		// 	mastery => mastery === item.name.slugify()
-		// )) {
-		// 	weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
-		// 	weaponOptions.bonusDamage = weaponMasterBonus;
-		// }
-
 		if (item.system.type === "melee") {
 			weaponOptions.attackBonus =	baseAttackBonus
 				+ this.system.bonuses.meleeAttackBonus
 				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage += this.system.bonuses.meleeDamageBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
@@ -159,6 +152,8 @@ export default class ActorSD extends Actor {
 			weaponOptions.attackBonus = baseAttackBonus
 				+ this.system.bonuses.rangedAttackBonus
 				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage += this.system.bonuses.rangedDamageBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
@@ -596,11 +591,17 @@ export default class ActorSD extends Actor {
 		const parts = [`${this.system.level.value}d8`];
 
 		options.fastForward = true;
-		options.chatMessage = false;
+		options.chatMessage = true;
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
-		const newHp = Number(result.main.roll.result);
+		const newHp = Number(result.rolls.main.roll.result);
 		this.update({
 			"system.attributes.hp.max": newHp,
 			"system.attributes.hp.value": newHp,

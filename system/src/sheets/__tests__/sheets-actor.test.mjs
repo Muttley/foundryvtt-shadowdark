@@ -13,7 +13,8 @@ import {
 
 export const key = "shadowdark.sheets.actor";
 export const options = {
-	displayName: "ShadowDark: Sheets: Actor",
+	displayName: "Shadowdark: Sheets: Actor",
+	preSelected: false,
 };
 
 const createMockActor = async type => {

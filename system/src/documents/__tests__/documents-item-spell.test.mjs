@@ -7,7 +7,8 @@ import { cleanUpItemsByKey, closeDialogs, openDialogs, trashChat, waitForInput }
 
 export const key = "shadowdark.documents.item.spell";
 export const options = {
-	displayName: "ShadowDark: Documents: Item, Spell",
+	displayName: "Shadowdark: Documents: Item, Spell",
+	preSelected: false,
 };
 
 const createMockItem = async type => {
