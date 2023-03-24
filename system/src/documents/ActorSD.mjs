@@ -591,11 +591,17 @@ export default class ActorSD extends Actor {
 		const parts = [`${this.system.level.value}d8`];
 
 		options.fastForward = true;
-		options.chatMessage = false;
+		options.chatMessage = true;
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
-		const newHp = Number(result.main.roll.result);
+		const newHp = Number(result.rolls.main.roll.result);
 		this.update({
 			"system.attributes.hp.max": newHp,
 			"system.attributes.hp.value": newHp,
