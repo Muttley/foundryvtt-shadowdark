@@ -97,13 +97,15 @@ export default class ActorSD extends Actor {
 
 		const weaponDisplays = {melee: [], ranged: []};
 
-		let weaponMasterBonus = 0;
-		if (this.system.bonuses.weaponMastery.find(
-			mastery => mastery === item.name.slugify()
-		)) {
-			weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
-			weaponOptions.bonusDamage = weaponMasterBonus;
-		}
+		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
+		weaponOptions.bonusDamage = weaponMasterBonus;
+
+		// if (this.system.bonuses.weaponMastery.find(
+		// 	mastery => mastery === item.name.slugify()
+		// )) {
+		// 	weaponMasterBonus += 1 + Math.floor(this.system.level.value / 2);
+		// 	weaponOptions.bonusDamage = weaponMasterBonus;
+		// }
 
 		if (item.system.type === "melee") {
 			weaponOptions.attackBonus =	baseAttackBonus
@@ -135,8 +137,9 @@ export default class ActorSD extends Actor {
 				});
 			}
 			if (item.hasProperty("thrown")) {
-				weaponOptions.attackBonus =
-					baseAttackBonus + this.system.bonuses.rangedAttackBonus;
+				weaponOptions.attackBonus = baseAttackBonus
+					+ this.system.bonuses.rangedAttackBonus
+					+ weaponMasterBonus;
 
 				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.oneHanded
@@ -153,8 +156,9 @@ export default class ActorSD extends Actor {
 			}
 		}
 		else if (item.system.type === "ranged") {
-			weaponOptions.attackBonus =
-				baseAttackBonus + this.system.bonuses.rangedAttackBonus;
+			weaponOptions.attackBonus = baseAttackBonus
+				+ this.system.bonuses.rangedAttackBonus
+				+ weaponMasterBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
@@ -185,6 +189,18 @@ export default class ActorSD extends Actor {
 		}
 
 		return weaponDisplays;
+	}
+
+	calcWeaponMasterBonus(item) {
+		let bonus = 0;
+
+		if (this.system.bonuses.weaponMastery.find(
+			mastery => mastery === item.name.slugify()
+		)) {
+			bonus += 1 + Math.floor(this.system.level.value / 2);
+		}
+
+		return bonus;
 	}
 
 	async getArmorClass() {
