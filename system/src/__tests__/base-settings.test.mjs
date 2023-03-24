@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-expressions */
 /**
- * @file Contains tests for talent item documents
+ * @file Contains tests for the Settings
  */
 
-export const key = "shadowdark.documents.item.talent";
+export const key = "shadowdark.root.Settings";
 export const options = {
-	displayName: "Shadowdark: Documents: Item, Talent",
+	displayName: "Shadowdark: Settings",
 	preSelected: true,
 };
 
