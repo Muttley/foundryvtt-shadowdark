@@ -2,7 +2,7 @@
 
 **foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][1] with the [Foundry VTT][2] virtual tabletop software.
 
-## List of Features
+## Features
 - **Classes**
   - All base classes from Quickstart guides are available
   - Rolltables for rolling talents
@@ -18,10 +18,10 @@
   - We currenly have partial support for German & Finnish
 - **Lightsource Tracker**
   - Interface only available for GMs
-    - GMs are tracking the remaining burn time of lightsources, see system options
-    - GMs have to ability to douse them all at once
+    - GMs can track the remaining burn time of lightsources, see system options
+    - GMs have to ability to douse individual lightsources, or douse them all at once
   - Individual tracking per player and item
-  - Tracks associated actors per player
+  - Tracks associated actors per player. A Player character *must* be claimed by a user to enable tracking
 - **Macros**
   - Macros for drawing traps, hazards, random ruin encounters, rumors, what is happening, random magic item names, and adventure site names available from the Game Master guide
   - Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
@@ -29,10 +29,10 @@
   - Compendium full of monsters from the Quickstart Guide, including the Lost Citadel of the Scarlet Minotaur
   - (Note: Complex attack patterns are not implemented, such as the combinations of AND & OR and multiples of attacks)
 - **Quickstarter Guides**
-  - Both the Player Guide and the Gamemaster Guide are available as journals
+  - Both the Player Guide and the Gamemaster Guide from the Quickstart are available as journals
   - Compendium containing the content available for: Items, Talents, Spells, Monster, Rollable tables, Pregenerated Characters, and the Lost Citadel of the Scarlet Minotaur
 - **Sheets**
-  - Fully featured sheets for: 
+  - Fully featured sheets for:
     - Players
       - Automatic calculations for HP (augmented by talents), AC (based on equipped armor), ability modifiers
       - Attacks summarized on the Abilities sheet based on equipped weapon
@@ -51,8 +51,8 @@
     - Weapon Mastery
       - Uses either the weapon name, or the base weapon as selected per item basis
     - Additional damage dice during Backstab
-  - Custom talents available to be defined
-  - (Note: Foundry limitations doesn't allow changing talents on the actors, so they need to be imported and changed before dragged to the actor in some cases)
+  - Custom talents can be defined
+  - (Note: Foundry limitations doesn't allow changing talents on the actors, so they need to be imported and changed before being dragged to the actor in some cases)
 - **The Lost Citadel of the Scarlet Minotaur Adventure**
   - The intro adventure in the Quickstart guide is available as an Adventure Import using the built-in compendium
 - **Pregen Player characters**
