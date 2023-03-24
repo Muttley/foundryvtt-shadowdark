@@ -6,7 +6,7 @@ export default class ActorSD extends Actor {
 		// Some sensible token defaults for Actors
 		const prototypeToken = {
 			actorLink: false,
-			disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+			// disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
 			sight: {
 				enabled: false,
 			},
