@@ -6,7 +6,8 @@ import RollSD from "../RollSD.mjs";
 
 export const key = "shadowdark.dice";
 export const options = {
-	displayName: "ShadowDark: Dice",
+	displayName: "Shadowdark: Dice",
+	preSelected: true,
 };
 
 const mockRollResult = (faces, result) => {

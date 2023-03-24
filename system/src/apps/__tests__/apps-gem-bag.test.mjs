@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-expressions */
 /**
- * @file Contains tests for talent item documents
+ * @file Contains tests for the Gem Bag app
  */
 
-export const key = "shadowdark.documents.item.talent";
+export const key = "shadowdark.apps.gembag";
 export const options = {
-	displayName: "Shadowdark: Documents: Item, Talent",
+	displayName: "Shadowdark: Apps: Gem Bag",
 	preSelected: true,
 };
 
