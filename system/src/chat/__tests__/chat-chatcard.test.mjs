@@ -5,7 +5,8 @@
 
 export const key = "shadowdark.chat.chatcards";
 export const options = {
-	displayName: "ShadowDark: Chat: ChatCards",
+	displayName: "Shadowdark: Chat: ChatCards",
+	preSelected: true,
 };
 
 export default ({ describe, it, after, before, expect }) => {

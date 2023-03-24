@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-expressions */
 /**
- * @file Contains tests for talent item documents
+ * @file Contains tests for the Handlebar helpers
  */
 
-export const key = "shadowdark.documents.item.talent";
+export const key = "shadowdark.root.handlebars";
 export const options = {
-	displayName: "Shadowdark: Documents: Item, Talent",
+	displayName: "Shadowdark: Handlebar Helpers",
 	preSelected: true,
 };
 

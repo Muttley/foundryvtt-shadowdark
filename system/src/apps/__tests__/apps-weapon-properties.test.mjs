@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-expressions */
 /**
- * @file Contains tests for talent item documents
+ * @file Contains tests for the Weapon Properties app
  */
 
-export const key = "shadowdark.documents.item.talent";
+export const key = "shadowdark.apps.weapon-properties";
 export const options = {
-	displayName: "Shadowdark: Documents: Item, Talent",
+	displayName: "Shadowdark: Apps: Weapon Properties",
 	preSelected: true,
 };
 

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-expressions */
 /**
- * @file Contains tests for talent item documents
+ * @file Contains tests for the Lightsource Tracker hooks
  */
 
-export const key = "shadowdark.documents.item.talent";
+export const key = "shadowdark.hooks.lightsource-tracker";
 export const options = {
-	displayName: "Shadowdark: Documents: Item, Talent",
+	displayName: "Shadowdark: Hooks: Lightsource Tracker",
 	preSelected: true,
 };
 

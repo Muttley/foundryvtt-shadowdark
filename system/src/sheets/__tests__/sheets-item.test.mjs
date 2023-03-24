@@ -12,7 +12,8 @@ import {
 
 export const key = "shadowdark.sheets.item";
 export const options = {
-	displayName: "ShadowDark: Sheets: Item",
+	displayName: "Shadowdark: Sheets: Item",
+	preSelected: false,
 };
 
 const createMockItem = async type => {

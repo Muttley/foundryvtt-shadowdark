@@ -7,7 +7,8 @@ import RollSD from "../RollSD.mjs";
 
 export const key = "shadowdark.dice.chat-templates";
 export const options = {
-	displayName: "ShadowDark: Dice: Chat Templates",
+	displayName: "Shadowdark: Dice: Chat Templates",
+	preSelected: true,
 };
 
 const mockRollResult = (faces, result, critical=null) => {

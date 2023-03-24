@@ -12,9 +12,10 @@ import {
 	cleanUpItemsByKey,
 } from "../../testing/testUtils.mjs";
 
-export const key = "shadowdark.sheets.player";
+export const key = "shadowdark.sheets.actor.player";
 export const options = {
-	displayName: "ShadowDark: Sheets: Player",
+	displayName: "Shadowdark: Sheets: Actor, Player",
+	preSelected: false,
 };
 
 const createMockActor = async type => {

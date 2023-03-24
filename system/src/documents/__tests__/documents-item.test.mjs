@@ -7,7 +7,8 @@ import { cleanUpItemsByKey, itemTypes } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.documents.item";
 export const options = {
-	displayName: "ShadowDark: Documents: Item",
+	displayName: "Shadowdark: Documents: Item",
+	preSelected: true,
 };
 
 const createMockItem = async type => {
