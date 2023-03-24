@@ -153,7 +153,7 @@ export default class ActorSD extends Actor {
 				+ this.system.bonuses.rangedAttackBonus
 				+ weaponMasterBonus;
 
-			weaponOptions.bonusDamage += this.system.bonuses.rangedDamageBonus;
+			weaponOptions.bonusDamage += this.system.bonuses.rangeDamageBonus;
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
