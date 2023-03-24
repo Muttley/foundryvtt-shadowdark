@@ -138,7 +138,7 @@ export default class ActorSD extends Actor {
 			}
 			if (item.hasProperty("thrown")) {
 				weaponOptions.attackBonus = baseAttackBonus
-					+ this.system.bonuses.rangedAttackBonus +
+					+ this.system.bonuses.rangedAttackBonus
 					+ weaponMasterBonus;
 
 				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
