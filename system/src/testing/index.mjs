@@ -15,6 +15,10 @@ import baseHooksTests, {
 	key as baseHooksKey,
 	options as baseHooksOptions,
 } from "../__tests__/base-hooks.test.mjs";
+import baseMigrationsTests, {
+	key as baseMigrationsKey,
+	options as baseMigrationsOptions,
+} from "../__tests__/base-migrations.test.mjs";
 import baseSettingsTests, {
 	key as baseSettingsKey,
 	options as baseSettingsOptions,
@@ -158,6 +162,11 @@ Hooks.on("quenchReady", async quench => {
 		baseHooksKey,
 		baseHooksTests,
 		baseHooksOptions
+	);
+	quench.registerBatch(
+		baseMigrationsKey,
+		baseMigrationsTests,
+		baseMigrationsOptions
 	);
 	quench.registerBatch(
 		baseSettingsKey,
