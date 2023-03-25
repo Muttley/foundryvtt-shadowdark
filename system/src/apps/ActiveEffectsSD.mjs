@@ -15,8 +15,10 @@ export default class ActiveEffectsSD extends FormApplication {
 		const values = this.object.effects.contents.filter(ae => !ae.disabled);
 
 		for (const key of values) {
-			this.effects[key.label].selected = true;
-			this.effects[key.label].id = key._id;
+			if (Object.keys(this.effects).includes(key.label)) {
+				this.effects[key.label].selected = true;
+				this.effects[key.label].id = key._id;
+			}
 		}
 	}
 
