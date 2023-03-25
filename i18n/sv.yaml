@@ -14,8 +14,9 @@ SHADOWDARK.alignment.chaotic_short: K
 SHADOWDARK.alignment.chaotic: Kaotisk
 SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Laglydig
-SHADOWDARK.alignment.neutral_short: 'N'
+SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.app.active_effects.title: Aktiva effekter
 SHADOWDARK.app.gem_bag.sell_all: Sälj alla ädelstenar
 SHADOWDARK.app.gem_bag.title: Ädelstenspåse
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sälj ädelsten
@@ -23,6 +24,7 @@ SHADOWDARK.app.gem_bag.total_value: Totalt Värde
 SHADOWDARK.app.item_properties.armor.title: Rustningegenskaper
 SHADOWDARK.app.item_properties.caster_classes.title: Besvärjelseklasser
 SHADOWDARK.app.item_properties.languages.title: Språk
+SHADOWDARK.app.item_properties.magic_item.effects.title: Magiska Föremålseffekter
 SHADOWDARK.app.item_properties.save: Spara
 SHADOWDARK.app.item_properties.talent.effects.title: Typer av talangeffekt
 SHADOWDARK.app.item_properties.title: Egenskaper
@@ -32,6 +34,7 @@ SHADOWDARK.app.light_tracker.minutes_short: min
 SHADOWDARK.app.light_tracker.title: Ljuskällespårare
 SHADOWDARK.app.light-tracker.douse-light: Släck ljus
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
+SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
 SHADOWDARK.armor.properties.disadvantage_stealth: Nackdel/Smyga
 SHADOWDARK.armor.properties.disadvantage_swimming: Nackdel/Simma
 SHADOWDARK.armor.properties.no_swimming: Ingen Simma
@@ -40,6 +43,12 @@ SHADOWDARK.armor.properties.shield: Sköld
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
 SHADOWDARK.chat.item_roll.title: Attackerar med {name}
+SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} slocknade"
+SHADOWDARK.chat.light_source.remaining: minuter kvar
+SHADOWDARK.chat.light_source.source.all: Alla ljuskällor slocknade
+SHADOWDARK.chat.light_source.source.toggle.off: släcktes
+SHADOWDARK.chat.light_source.source.toggle.on: tändes
+SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} slocknade"
 SHADOWDARK.chat.spell_roll.title: Kastar {name} som grad {tier} med svårighetsgrad {spellDC}
 SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class.fighter: Krigare
@@ -49,8 +58,8 @@ SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
 SHADOWDARK.coins.gp: GM
 SHADOWDARK.coins.sp: SM
-SHADOWDARK.damage.one_handed: 'Enhandsskada:'
-SHADOWDARK.damage.two_handed: 'Tvåhandsskada:'
+SHADOWDARK.damage.one_handed: "Enhandsskada:"
+SHADOWDARK.damage.two_handed: "Tvåhandsskada:"
 SHADOWDARK.dialog.ability_check.cha: Karisma Check
 SHADOWDARK.dialog.ability_check.con: Kondition Check
 SHADOWDARK.dialog.ability_check.dex: Smidighet Check
@@ -60,8 +69,8 @@ SHADOWDARK.dialog.ability_check.title: Förmåge Check
 SHADOWDARK.dialog.ability_check.wis: Vishet Check
 SHADOWDARK.dialog.general.are_you_sure: Är du säker?
 SHADOWDARK.dialog.general.cancel: Avbryt
-SHADOWDARK.dialog.general.no: 'Nej'
-SHADOWDARK.dialog.general.yes: 'Ja'
+SHADOWDARK.dialog.general.no: "Nej"
+SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.hp_roll: Rulla KP
 SHADOWDARK.dialog.item_roll.ability_bonus: Förmågebonus
 SHADOWDARK.dialog.item_roll.item_bonus: Föremålsbonus
@@ -72,10 +81,11 @@ SHADOWDARK.dialog.item.confirm_sale: Bekräfta försäljning
 SHADOWDARK.dialog.item.delete: Ta bort
 SHADOWDARK.dialog.item.sell_all: Sälj allt
 SHADOWDARK.dialog.item.sell: Sälj
-SHADOWDARK.dialog.roll_mode_label: Välj rullningsläge
+SHADOWDARK.dialog.roll_mode_label: Rull-läge
 SHADOWDARK.dialog.roll: Rulla
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
 SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
+SHADOWDARK.effect.custom: Anpassade effekter
 SHADOWDARK.effect.footer.add_custom: Lägg till egen effekt
 SHADOWDARK.effect.header.active: Aktiv
 SHADOWDARK.effect.header.delete: Ta bort
@@ -90,7 +100,7 @@ SHADOWDARK.effect.temporary: Temporära effekter
 SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.inventory.coins: Mynt
-SHADOWDARK.inventory.item.light_remaining: '{timeRemaining} minuter kvar'
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_used: (delvis använd)
 SHADOWDARK.inventory.label.quantity: Kvantitet
 SHADOWDARK.inventory.label.slots: Platser
@@ -118,6 +128,12 @@ SHADOWDARK.item_type.weapon: Vapen
 SHADOWDARK.item.armor_ac_modifier: AC Bonus
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Egenskap
+SHADOWDARK.item.armor.base_armor.chainmail: Ringbrynja
+SHADOWDARK.item.armor.base_armor.leather_armor: Läderrustning
+SHADOWDARK.item.armor.base_armor.plate_mail: Pansarrustning
+SHADOWDARK.item.armor.base_armor.shield: Sköld
+SHADOWDARK.item.armor.base_armor.title: Grundrustning
+SHADOWDARK.item.armor.base_weapon.title: Grundvapen
 SHADOWDARK.item.cost: Kostnad
 SHADOWDARK.item.description: Beskrivning
 SHADOWDARK.item.equipped: Buren
@@ -129,11 +145,29 @@ SHADOWDARK.item.level: Nivå
 SHADOWDARK.item.light.is_source: Ljuskälla
 SHADOWDARK.item.light.longevity: Livslängd (min)
 SHADOWDARK.item.light.remaining: Återstående (min)
+SHADOWDARK.item.light.template: Ljusmall
+SHADOWDARK.item.magic_item.is_magic: Magiskt föremål
+SHADOWDARK.item.magic_item.title: Magiska Föremålseffekter
+SHADOWDARK.item.magic_item.type.attackBonus: Attackbonus
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Högre tröskel för kritiskt misslyckande
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Lägre tröskel för kritisk träff
+SHADOWDARK.item.magic_item.type.critMultiplier: Multiplikator vid kritiskt träff
+SHADOWDARK.item.magic_item.type.custom: Anpassad effekt
+SHADOWDARK.item.magic_item.type.damageBonus: Skadebonus
+SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Förmågeförändring
+SHADOWDARK.item.npc_attack_bonus: Attackbonus
+SHADOWDARK.item.npc_attack_count: Antal Attacker
+SHADOWDARK.item.npc_attack_damage_bonus: Skadebonus
+SHADOWDARK.item.npc_attack_damage: Skadetärning
+SHADOWDARK.item.npc_attack_special: Special
+SHADOWDARK.item.npc_attack_type: Typ
+SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.properties: Egenskaper
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_duration: Varaktighet
 SHADOWDARK.item.spell_range: Räckvidd
 SHADOWDARK.item.spell_tier: Grad
+SHADOWDARK.item.talent_class: Talangklass
 SHADOWDARK.item.treasure: Skatt
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Skada
@@ -141,6 +175,22 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
 SHADOWDARK.item.weapon_damage.twoHanded: 2H Skada
 SHADOWDARK.item.weapon_range: Avstånd
 SHADOWDARK.item.weapon_type: Typ
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastardsvärd
+SHADOWDARK.item.weapon.base_weapon.club: Knölpåk
+SHADOWDARK.item.weapon.base_weapon.crossbow: Armborst
+SHADOWDARK.item.weapon.base_weapon.dagger: Dolk
+SHADOWDARK.item.weapon.base_weapon.greataxe: Storyxa
+SHADOWDARK.item.weapon.base_weapon.greatsword: Storsvärd
+SHADOWDARK.item.weapon.base_weapon.javelin: Kastspjut
+SHADOWDARK.item.weapon.base_weapon.longbow: Långbåge
+SHADOWDARK.item.weapon.base_weapon.longsword: Långsvärd
+SHADOWDARK.item.weapon.base_weapon.mace: Spikklubba
+SHADOWDARK.item.weapon.base_weapon.shortbow: Kortbåge
+SHADOWDARK.item.weapon.base_weapon.shortsword: Kortsvärd
+SHADOWDARK.item.weapon.base_weapon.spear: Spjut
+SHADOWDARK.item.weapon.base_weapon.staff: Stav
+SHADOWDARK.item.weapon.base_weapon.wand: Trollstav
+SHADOWDARK.item.weapon.base_weapon.warhammer: Stridshammare
 SHADOWDARK.language.celestial: Himmelska
 SHADOWDARK.language.common: Allmänna
 SHADOWDARK.language.diabolic: Diaboliska
@@ -155,26 +205,34 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.reptilian: Reptiliska
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thaniska
+SHADOWDARK.light_source.lantern: Lykta
+SHADOWDARK.light_source.light_spell.double_near: Ljusmagi (Dubbelnära)
+SHADOWDARK.light_source.light_spell.near: Ljusmagi (Nära)
+SHADOWDARK.light_source.torch: Fackla
 SHADOWDARK.light-tracker.active: Aktiv
 SHADOWDARK.light-tracker.paused: Pausad
 SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title.prefix: Ljus
 SHADOWDARK.light-tracker.title.suffix: Spårare
+SHADOWDARK.npc_attack.type.physical: Fysisk
+SHADOWDARK.npc_attack.type.special: Special
+SHADOWDARK.npc_move.double_near: Dubbelnära
+SHADOWDARK.npc_move.near: Nära
 SHADOWDARK.range.close_short: K
 SHADOWDARK.range.close: Kroppsnära
 SHADOWDARK.range.far_short: A
 SHADOWDARK.range.far: Avstånd
-SHADOWDARK.range.near_short: 'N'
+SHADOWDARK.range.near_short: "N"
 SHADOWDARK.range.near: Nära
 SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Själv
-SHADOWDARK.roll.advantage_title: '{title} med fördel'
+SHADOWDARK.roll.advantage_title: "{title} med fördel"
 SHADOWDARK.roll.advantage: Fördel
 SHADOWDARK.roll.critical.failure: Kritiskt misslyckande! ({value})
 SHADOWDARK.roll.critical.success: Kritisk framgång! ({value})
 SHADOWDARK.roll.D20: Rulla D20
-SHADOWDARK.roll.damage: 'Skaderull:'
-SHADOWDARK.roll.disadvantage_title: '{title} med nackdel'
+SHADOWDARK.roll.damage: "Skaderull:"
+SHADOWDARK.roll.disadvantage_title: "{title} med nackdel"
 SHADOWDARK.roll.disadvantage: Nackdel
 SHADOWDARK.roll.failure: Misslyckades! ({value})
 SHADOWDARK.roll.normal: Normal
@@ -202,16 +260,20 @@ SHADOWDARK.sheet.class.npc: Shadowdark NPC Ark
 SHADOWDARK.sheet.class.player: Shadowdark Spelarblad
 SHADOWDARK.sheet.general.item_delete.title: Ta bort föremål
 SHADOWDARK.sheet.general.item_edit.title: Förändra föremål
+SHADOWDARK.sheet.item.tab.description: Beskrivning
+SHADOWDARK.sheet.item.tab.details: Detaljer
+SHADOWDARK.sheet.item.tab.light: Ljus
+SHADOWDARK.sheet.item.tab.magic: Magi
 SHADOWDARK.sheet.npc.attacks_label: Attacker
 SHADOWDARK.sheet.npc.dark_adapted: Mörkanpassad
-SHADOWDARK.sheet.npc.dark-adapted: Mörkanpassad
 SHADOWDARK.sheet.npc.description_label: Beskrivning
+SHADOWDARK.sheet.npc.features_label: Funktioner
 SHADOWDARK.sheet.npc.movement_short: Flytta
 SHADOWDARK.sheet.npc.movement: Förflyttning
-SHADOWDARK.sheet.npc.special_label: Special
 SHADOWDARK.sheet.npc.tab.abilities: Förmågor
 SHADOWDARK.sheet.npc.tab.description: Beskrivning
 SHADOWDARK.sheet.player.ancestry: Ursprung
+SHADOWDARK.sheet.player.available_spells: Tillgängliga besvärjelser
 SHADOWDARK.sheet.player.background: Bakgrund
 SHADOWDARK.sheet.player.class: Klass
 SHADOWDARK.sheet.player.deity: Gud
@@ -246,6 +308,9 @@ SHADOWDARK.spell_range.far: Avstånd
 SHADOWDARK.spell_range.near: Nära
 SHADOWDARK.spellcasting_ability: Besvärjelseförmåga
 SHADOWDARK.talent.backstab: Rygghugg
+SHADOWDARK.talent.class.ancestry: Ursprung
+SHADOWDARK.talent.class.class: Klass
+SHADOWDARK.talent.class.level: Nivå
 SHADOWDARK.talent.type.ability_improvement: Förbättring av förmåga
 SHADOWDARK.talent.type.advantage.hp: Fördel KP Rullning
 SHADOWDARK.talent.type.advantage.initiative: Fördel på Initiativ
@@ -268,38 +333,3 @@ SHADOWDARK.weapon.properties.two_handed: Två-handat
 SHADOWDARK.weapon.properties.versatile: Versatilt
 SHADOWDARK.weapon.type.melee: Närstrid
 SHADOWDARK.weapon.type.ranged: Avståndsstrid
-SHADOWDARK.item.magic_item.is_magic: Magiskt föremål
-SHADOWDARK.item.magic_item.title: Magiska Föremålseffekter
-SHADOWDARK.item.magic_item.type.critMultiplier: Multiplikator vid kritiskt träff
-SHADOWDARK.item.magic_item.type.attackBonus: Attackbonus
-SHADOWDARK.item.magic_item.type.damageBonus: Skadebonus
-SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Förmågeförändring
-SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Lägre tröskel för kritisk träff
-SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Högre tröskel för kritiskt misslyckande
-SHADOWDARK.item.magic_item.type.custom: Anpassad effekt
-SHADOWDARK.app.item_properties.magic_item.effects.title: Magiska Föremålseffekter
-SHADOWDARK.effect.custom: Anpassade effekter
-SHADOWDARK.app.active_effects.title: Aktiva effekter
-SHADOWDARK.sheet.player.available_spells: Tillgängliga besvärjelser
-SHADOWDARK.item.armor.base_armor.title: Grundrustning
-SHADOWDARK.item.armor.base_armor.chainmail: Ringbrynja
-SHADOWDARK.item.armor.base_armor.leather_armor: Läderrustning
-SHADOWDARK.item.armor.base_armor.plate_mail: Pansarrustning
-SHADOWDARK.item.armor.base_armor.shield: Sköld
-SHADOWDARK.item.armor.base_weapon.title: Grundvapen
-SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastardsvärd
-SHADOWDARK.item.weapon.base_weapon.club: Knölpåk
-SHADOWDARK.item.weapon.base_weapon.crossbow: Armborst
-SHADOWDARK.item.weapon.base_weapon.dagger: Dolk
-SHADOWDARK.item.weapon.base_weapon.greataxe: Storyxa
-SHADOWDARK.item.weapon.base_weapon.greatsword: Storsvärd
-SHADOWDARK.item.weapon.base_weapon.javelin: Kastspjut
-SHADOWDARK.item.weapon.base_weapon.longbow: Långbåge
-SHADOWDARK.item.weapon.base_weapon.longsword: Långsvärd
-SHADOWDARK.item.weapon.base_weapon.mace: Spikklubba
-SHADOWDARK.item.weapon.base_weapon.shortbow: Kortbåge
-SHADOWDARK.item.weapon.base_weapon.shortsword: Kortsvärd
-SHADOWDARK.item.weapon.base_weapon.spear: Spjut
-SHADOWDARK.item.weapon.base_weapon.staff: Stav
-SHADOWDARK.item.weapon.base_weapon.wand: Trollstav
-SHADOWDARK.item.weapon.base_weapon.warhammer: Stridshammare
