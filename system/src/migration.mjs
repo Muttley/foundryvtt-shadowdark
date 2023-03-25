@@ -35,7 +35,7 @@ export const migrateWorld = async () => {
 	}
 
 	// Set the migration as compelte
-	game.settings.set("shadowdark", "systemMigrationVersion", game.system.version);
+	game.settings.set("shadowdark", "systemVersion", game.system.version);
 	ui.notifications.info(game.i18n.format(
 		"SHADOWDARK.migration.complete", {version}
 	), {permanent: true});

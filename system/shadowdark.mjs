@@ -88,7 +88,7 @@ Hooks.on("ready", () => {
 
 	// Migration checks
 	if ( !game.user.isGM ) return;
-	const currentMigrationVersion = game.settings.get("shadowdark", "systemMigrationVersion");
+	const currentMigrationVersion = game.settings.get("shadowdark", "systemVersion");
 	const needsMigrationVersion = game.system.flags.needsMigrationVersion;
 	const totalDocuments = game.actors.size + game.packs.size;
 
@@ -96,7 +96,7 @@ Hooks.on("ready", () => {
 	if (
 		!currentMigrationVersion
 		&& totalDocuments === 0
-	) return game.settings.set("shadowdark", "systemMigrationVersion", game.system.version);
+	) return game.settings.set("shadowdark", "systemVersion", game.system.version);
 
 	// If the current migration exists, but doesn't need migration, return.
 	if (
