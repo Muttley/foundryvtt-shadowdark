@@ -426,6 +426,7 @@ export default class RollSD extends Roll {
 					},
 				},
 			},
+			close: () => null,
 			default: "normal",
 			render: html => {
 				// Check if the actor has advantage, and add highlight if that
