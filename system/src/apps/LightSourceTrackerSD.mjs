@@ -12,6 +12,8 @@ export default class LightSourceTrackerSD extends Application {
 		this.lastUpdate = Date.now();
 		this.updatingLightSources = false;
 
+		this.performingTick = false;
+
 		this.pauseWithGame = true;
 	}
 
@@ -194,44 +196,53 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async _gatherLightSources() {
+
+		if (this.performingTick) return;
+
 		this.updatingLightSources = true;
 		this.monitoredLightSources = [];
 
 		const workingLightSources = [];
 
-		for (const user of game.users) {
-			if (user.isGM) continue;
+		try {
+			for (const user of game.users) {
+				if (user.isGM) continue;
 
-			if (!(user.active || this._monitorInactiveUsers())) continue;
+				if (!(user.active || this._monitorInactiveUsers())) continue;
 
-			const actor = user.character;
-			if (!actor) continue; // User may not have an Actor yet
+				const actor = user.character;
+				if (!actor) continue; // User may not have an Actor yet
 
-			const actorData = actor.toObject(false);
-			actorData.lightSources = [];
+				const actorData = actor.toObject(false);
+				actorData.lightSources = [];
 
-			const activeLightSources = await actor.getActiveLightSources();
+				const activeLightSources = await actor.getActiveLightSources();
 
-			for (const item of activeLightSources) {
-				actorData.lightSources.push(
-					item.toObject(false)
-				);
+				for (const item of activeLightSources) {
+					actorData.lightSources.push(
+						item.toObject(false)
+					);
+				}
+
+				workingLightSources.push(actorData);
+
 			}
-
-			workingLightSources.push(actorData);
+			this.monitoredLightSources = workingLightSources.sort((a, b) => {
+				if (a.name < b.name) {
+					return -1;
+				}
+				if (a.name > b.name) {
+					return 1;
+				}
+				return 0;
+			});
 		}
-
-		this.monitoredLightSources = workingLightSources.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		});
-
-		this.updatingLightSources = false;
+		catch(error) {
+			console.error(error);
+		}
+		finally {
+			this.updatingLightSources = false;
+		}
 	}
 
 	_isDisabled() {
@@ -283,39 +294,51 @@ export default class LightSourceTrackerSD extends Application {
 
 		if (this.updatingLightSources) return; // Updating light sources
 
+		this.performingTick = true;
+
 		const now = Date.now();
 		const elapsed = (now - this.lastUpdate) / 1000;
 
 		this.lastUpdate = now;
 
-		for (const actorData of this.monitoredLightSources) {
-			console.log(`Shadowdark RPG::LightSourceTrackerSD | Updating Light Sources for ${actorData.name}`);
+		try {
+			for (const actorData of this.monitoredLightSources) {
+				console.log(`Shadowdark RPG::LightSourceTrackerSD | Updating Light Sources for ${actorData.name}`);
 
-			for (const itemData of actorData.lightSources) {
-				const light = itemData.system.light;
+				for (const itemData of actorData.lightSources) {
+					const light = itemData.system.light;
 
-				light.remainingSecs -= elapsed;
+					light.remainingSecs -= elapsed;
 
-				const actor = await game.actors.get(actorData._id);
-				if (light.remainingSecs <= 0) {
-					await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+					const actor = await game.actors.get(actorData._id);
+					if (light.remainingSecs <= 0) {
+						await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
 
-					actor.yourLightWentOut(itemData._id);
+						actor.yourLightWentOut(itemData._id);
 
-					await this._gatherLightSources();
+						await this._gatherLightSources();
+					}
+					else {
+						const item = await actor.getEmbeddedDocument(
+							"Item", itemData._id
+						);
+
+						item.update({
+							"system.light.remainingSecs": light.remainingSecs,
+						});
+					}
+
+					this.render(false);
 				}
-				else {
-					const item = await actor.getEmbeddedDocument(
-						"Item", itemData._id
-					);
-
-					item.update({
-						"system.light.remainingSecs": light.remainingSecs,
-					});
-				}
-
-				this.render(false);
 			}
+		}
+		catch(error) {
+			console.error(error);
+		}
+		finally {
+			this.performingTick = false;
+
+			this._updateLightSources();
 		}
 	}
 
@@ -325,6 +348,7 @@ export default class LightSourceTrackerSD extends Application {
 		console.log("Shadowdark RPG::LightSourceTrackerSD | Updating light sources");
 
 		await this._gatherLightSources();
+
 		this.render(false);
 	}
 }
