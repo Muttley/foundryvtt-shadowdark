@@ -16,6 +16,7 @@ SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Lainkuuliainen
 SHADOWDARK.alignment.neutral_short: 'N'
 SHADOWDARK.alignment.neutral: Neutraali
+SHADOWDARK.app.active_effects.title: Aktiiviset efektit
 SHADOWDARK.app.gem_bag.sell_all: Myy kaikki jalokivet
 SHADOWDARK.app.gem_bag.title: Jalokivipussi
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Myy jalokivi
@@ -23,6 +24,7 @@ SHADOWDARK.app.gem_bag.total_value: Yhteisarvo
 SHADOWDARK.app.item_properties.armor.title: Panssarin ominaisuudet
 SHADOWDARK.app.item_properties.caster_classes.title: Loihtimisluokat
 SHADOWDARK.app.item_properties.languages.title: Kielet
+SHADOWDARK.app.item_properties.magic_item.effects.title: Taikaesineiden efektit
 SHADOWDARK.app.item_properties.save: Tallenna
 SHADOWDARK.app.item_properties.talent.effects.title: Lahjakkuus efektien tyypit
 SHADOWDARK.app.item_properties.title: Asetukset
@@ -76,6 +78,7 @@ SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
 SHADOWDARK.dialog.spell_roll.title: Heitä loihtimisheitto käyttäen
 SHADOWDARK.dialog.tooltip.talent_advantage: Jokin lahjakkuuksistasi antaa sinulle edun tähän heittoon
+SHADOWDARK.effect.custom: Mukautetut efektit
 SHADOWDARK.effect.footer.add_custom: Lisää mukautettu efekti
 SHADOWDARK.effect.header.active: Aktivoi
 SHADOWDARK.effect.header.delete: Poista
@@ -118,6 +121,12 @@ SHADOWDARK.item_type.weapon: Ase
 SHADOWDARK.item.armor_ac_modifier: Lisäpisteet
 SHADOWDARK.item.armor_ac: Puolustuspisteet
 SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
+SHADOWDARK.item.armor.base_armor.chainmail: Rengaspanssari
+SHADOWDARK.item.armor.base_armor.leather_armor: Nahkapanssari
+SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
+SHADOWDARK.item.armor.base_armor.shield: Shield
+SHADOWDARK.item.armor.base_armor.title: Pohjapuolustus
+SHADOWDARK.item.armor.base_weapon.title: Pohja-ase
 SHADOWDARK.item.cost: Hinta
 SHADOWDARK.item.description: Kuvaus
 SHADOWDARK.item.equipped: Käytössä
@@ -129,6 +138,15 @@ SHADOWDARK.item.level: Taso
 SHADOWDARK.item.light.is_source: Valonlähde
 SHADOWDARK.item.light.longevity: Kestoaika (min)
 SHADOWDARK.item.light.remaining: Jäljellä (min)
+SHADOWDARK.item.magic_item.is_magic: Taikaesine
+SHADOWDARK.item.magic_item.title: Taikaesineen efektit
+SHADOWDARK.item.magic_item.type.attackBonus: Hyökkäysbonus
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Korkeampi kynnys kriittiseen epäonnistumiseen
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Alempi kynnys kriittiseen onnistumiseen
+SHADOWDARK.item.magic_item.type.critMultiplier: Kriittisen kerroin
+SHADOWDARK.item.magic_item.type.custom: Mukautettu efekti
+SHADOWDARK.item.magic_item.type.damageBonus: Vahinkobonus
+SHADOWDARK.item.magic_item.type.permanentAbility: Pysyvä muutos kykyyn
 SHADOWDARK.item.properties: Asetukset
 SHADOWDARK.item.spell_caster_classes: Loihtimisluokat
 SHADOWDARK.item.spell_duration: Kestoaika
@@ -141,6 +159,22 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
 SHADOWDARK.item.weapon_damage.twoHanded: Vahinkoa kahdella kädellä
 SHADOWDARK.item.weapon_range: Kantama
 SHADOWDARK.item.weapon_type: Aseen tyyppi
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Äpärämiekka
+SHADOWDARK.item.weapon.base_weapon.club: Nuija
+SHADOWDARK.item.weapon.base_weapon.crossbow: Varsijousi
+SHADOWDARK.item.weapon.base_weapon.dagger: Tikari
+SHADOWDARK.item.weapon.base_weapon.greataxe: Suurkirves
+SHADOWDARK.item.weapon.base_weapon.greatsword: Suurmiekka
+SHADOWDARK.item.weapon.base_weapon.javelin: Heittokeihäs
+SHADOWDARK.item.weapon.base_weapon.longbow: Pitkäjousi
+SHADOWDARK.item.weapon.base_weapon.longsword: Pitkämiekka
+SHADOWDARK.item.weapon.base_weapon.mace: Rautanuija
+SHADOWDARK.item.weapon.base_weapon.shortbow: Lyhytjousi
+SHADOWDARK.item.weapon.base_weapon.shortsword: Lyhytmiekka
+SHADOWDARK.item.weapon.base_weapon.spear: Keihäs
+SHADOWDARK.item.weapon.base_weapon.staff: Sauva
+SHADOWDARK.item.weapon.base_weapon.wand: Taikasauva
+SHADOWDARK.item.weapon.base_weapon.warhammer: Sotavasara
 SHADOWDARK.language.celestial: Valonkieli
 SHADOWDARK.language.common: Yleiskieli
 SHADOWDARK.language.diabolic: Pimeydenpuhe
@@ -212,6 +246,7 @@ SHADOWDARK.sheet.npc.special_label: Erikoisuudet
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus
 SHADOWDARK.sheet.player.ancestry: Laji
+SHADOWDARK.sheet.player.available_spells: Saatavilla olevat loitsut
 SHADOWDARK.sheet.player.background: Tausta
 SHADOWDARK.sheet.player.class: Hahmoluokka
 SHADOWDARK.sheet.player.deity: Jumala
@@ -268,38 +303,3 @@ SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
 SHADOWDARK.weapon.type.ranged: Kantama-ase
-SHADOWDARK.item.magic_item.is_magic: Taikaesine
-SHADOWDARK.item.magic_item.title: Taikaesineen efektit
-SHADOWDARK.item.magic_item.type.critMultiplier: Kriittisen kerroin
-SHADOWDARK.item.magic_item.type.attackBonus: Hyökkäysbonus
-SHADOWDARK.item.magic_item.type.damageBonus: Vahinkobonus
-SHADOWDARK.item.magic_item.type.permanentAbility: Pysyvä muutos kykyyn
-SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Alempi kynnys kriittiseen onnistumiseen
-SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Korkeampi kynnys kriittiseen epäonnistumiseen
-SHADOWDARK.item.magic_item.type.custom: Mukautettu efekti
-SHADOWDARK.app.item_properties.magic_item.effects.title: Taikaesineiden efektit
-SHADOWDARK.effect.custom: Mukautetut efektit
-SHADOWDARK.app.active_effects.title: Aktiiviset efektit
-SHADOWDARK.sheet.player.available_spells: Saatavilla olevat loitsut
-SHADOWDARK.item.armor.base_armor.title: Pohjapuolustus
-SHADOWDARK.item.armor.base_armor.chainmail: Rengaspanssari
-SHADOWDARK.item.armor.base_armor.leather_armor: Nahkapanssari
-SHADOWDARK.item.armor.base_armor.plate_mail: Levypanssari
-SHADOWDARK.item.armor.base_armor.shield: Kilpi
-SHADOWDARK.item.armor.base_weapon.title: Pohja-ase
-SHADOWDARK.item.weapon.base_weapon.bastard_sword: Äpärämiekka
-SHADOWDARK.item.weapon.base_weapon.club: Nuija
-SHADOWDARK.item.weapon.base_weapon.crossbow: Varsijousi
-SHADOWDARK.item.weapon.base_weapon.dagger: Tikari
-SHADOWDARK.item.weapon.base_weapon.greataxe: Suurkirves
-SHADOWDARK.item.weapon.base_weapon.greatsword: Suurmiekka
-SHADOWDARK.item.weapon.base_weapon.javelin: Heittokeihäs
-SHADOWDARK.item.weapon.base_weapon.longbow: Pitkäjousi
-SHADOWDARK.item.weapon.base_weapon.longsword: Pitkämiekka
-SHADOWDARK.item.weapon.base_weapon.mace: Rautanuija
-SHADOWDARK.item.weapon.base_weapon.shortbow: Lyhytjousi
-SHADOWDARK.item.weapon.base_weapon.shortsword: Lyhytmiekka
-SHADOWDARK.item.weapon.base_weapon.spear: Keihäs
-SHADOWDARK.item.weapon.base_weapon.staff: Sauva
-SHADOWDARK.item.weapon.base_weapon.wand: Taikasauva
-SHADOWDARK.item.weapon.base_weapon.warhammer: Sotavasara
