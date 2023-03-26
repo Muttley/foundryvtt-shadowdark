@@ -1,3 +1,8 @@
+## v1.1.0
+
+### Enhancements
+* [#139] Added Guided Tour for explaining the Lightsource Tracker
+
 ## v1.0.2
 
 ### Bugfixes
