@@ -5,17 +5,19 @@ export default class MigrationRunnerSD {
 
 	currentMigrationTask;
 
-	latestVersion;
+	latestVersion = 0;
 
 	constructor() {
 		const unsortedMigrations = [];
 
 		for (const migration in migrations) {
-			this.latestVersion = migration.version > this.latestVersion
-				? migration.version
+			const migrationVersion = migrations[migration].version;
+
+			this.latestVersion = migrationVersion > this.latestVersion
+				? migrationVersion
 				: this.latestVersion;
 
-			if (migrations[migration].version > this.currentVersion) {
+			if (migrationVersion > this.currentVersion) {
 				unsortedMigrations.push(new migrations[migration]());
 			}
 		}
