@@ -8,7 +8,8 @@
 	"ignorePatterns": ["**/*compiled.mjs"],
 	"parserOptions": {
 		"requireConfigFile": false,
-		"sourceType": "module"
+		"sourceType": "module",
+		"ecmaVersion": 2022
 	},
 	"rules": {
 		"array-bracket-spacing": ["warn", "never"],
