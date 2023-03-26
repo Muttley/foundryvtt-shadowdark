@@ -1,14 +1,13 @@
 import SHADOWDARK from "./src/config.mjs";
 import loadTemplates from "./src/templates.mjs";
+import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
-import performDataMigration from "./src/migration.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
-// import * as migrations from "./src/migrations/updates/_module.mjs";
 
 import { HooksSD } from "./src/hooks.mjs";
 
@@ -83,8 +82,7 @@ Hooks.once("init", () => {
 // A hook event that fires when the game is fully ready.
 //
 Hooks.on("ready", () => {
-	// Check to see if any data migrations need to be run, and run them if
-	// necessary
+	// Check to see if any data migrations need to be run, and then run them
 	performDataMigration();
 
 	HooksSD.attach();
