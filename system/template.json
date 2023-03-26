@@ -80,6 +80,7 @@
 			"attributes": {
 				"hp": {
 					"max": 0,
+					"base": 0,
 					"bonus": 0,
 					"value": 0
 				}
@@ -108,6 +109,9 @@
 				"cp": 0
 			},
 			"deity": "",
+			"flags": {
+				"hpRollLevels": []
+			},
 			"languages": [],
 			"level": {
 				"xp": 0

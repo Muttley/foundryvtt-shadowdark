@@ -14,9 +14,9 @@ SHADOWDARK.alignment.chaotic_short: K
 SHADOWDARK.alignment.chaotic: Kaoottinen
 SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Lainkuuliainen
-SHADOWDARK.alignment.neutral_short: 'N'
+SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutraali
-SHADOWDARK.app.active_effects.title: Aktiiviset efektit
+SHADOWDARK.app.active_effects.title: Aktiiviset Efektit
 SHADOWDARK.app.gem_bag.sell_all: Myy kaikki jalokivet
 SHADOWDARK.app.gem_bag.title: Jalokivipussi
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Myy jalokivi
@@ -26,14 +26,15 @@ SHADOWDARK.app.item_properties.caster_classes.title: Loihtimisluokat
 SHADOWDARK.app.item_properties.languages.title: Kielet
 SHADOWDARK.app.item_properties.magic_item.effects.title: Taikaesineiden efektit
 SHADOWDARK.app.item_properties.save: Tallenna
-SHADOWDARK.app.item_properties.talent.effects.title: Lahjakkuus efektien tyypit
+SHADOWDARK.app.item_properties.talent.effects.title: Lahjakkuusefektien Tyypit
 SHADOWDARK.app.item_properties.title: Asetukset
-SHADOWDARK.app.item_properties.weapon.title: Aseen ominaisuudet
+SHADOWDARK.app.item_properties.weapon.title: Aseiden ominaisuudet
 SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: min
-SHADOWDARK.app.light_tracker.title: Valon seuranta
-SHADOWDARK.app.light-tracker.douse-light: Sammuta valo
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valot
+SHADOWDARK.app.light_tracker.title: Valonlähteen seuranta
+SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
+SHADOWDARK.app.npc_attack_ranges.title: Kantamat
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
@@ -42,6 +43,12 @@ SHADOWDARK.armor.properties.shield: Kilpi
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
 SHADOWDARK.chat.item_roll.title: Hyökkäysheitto käyttäen {name}
+SHADOWDARK.chat.light_source.expired: "Hahmon {name} {lightSource} valonlähde paloi loppuun tai vanhentui"
+SHADOWDARK.chat.light_source.remaining: minuuttia jäljellä
+SHADOWDARK.chat.light_source.source.all: Kaikki valonlähteet sammuivat
+SHADOWDARK.chat.light_source.source.toggle.off: valonlähde sammui
+SHADOWDARK.chat.light_source.source.toggle.on: valonlähde syttyi
+SHADOWDARK.chat.light_source.went_out: "Hahmon {name} {lightSource} valonlähde sammui"
 SHADOWDARK.chat.spell_roll.title: Loihditaan {name} tasolla {tier} jolloin vaikeusaste on {spellDC}
 SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class.fighter: Taistelija
@@ -51,8 +58,8 @@ SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
 SHADOWDARK.coins.gp: Kulta
 SHADOWDARK.coins.sp: Hopea
-SHADOWDARK.damage.one_handed: 'Yksikätinen vahinko:'
-SHADOWDARK.damage.two_handed: 'Kaksikätinen vahinko:'
+SHADOWDARK.damage.one_handed: "Yksikätinen vahinko:"
+SHADOWDARK.damage.two_handed: "Kaksikätinen vahinko:"
 SHADOWDARK.dialog.ability_check.cha: Karismaheitto
 SHADOWDARK.dialog.ability_check.con: Sitkeysheitto
 SHADOWDARK.dialog.ability_check.dex: Ketteryysheitto
@@ -62,8 +69,8 @@ SHADOWDARK.dialog.ability_check.title: Kyvykkyysheitto
 SHADOWDARK.dialog.ability_check.wis: Viisausheitto
 SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
-SHADOWDARK.dialog.general.no: 'Ei'
-SHADOWDARK.dialog.general.yes: 'Kyllä'
+SHADOWDARK.dialog.general.no: "Ei"
+SHADOWDARK.dialog.general.yes: "Kyllä"
 SHADOWDARK.dialog.hp_roll: Osumapisteheitto
 SHADOWDARK.dialog.item_roll.ability_bonus: Kykybonus
 SHADOWDARK.dialog.item_roll.item_bonus: Esinebonus
@@ -80,7 +87,7 @@ SHADOWDARK.dialog.spell_roll.title: Heitä loihtimisheitto käyttäen
 SHADOWDARK.dialog.tooltip.talent_advantage: Jokin lahjakkuuksistasi antaa sinulle edun tähän heittoon
 SHADOWDARK.effect.custom: Mukautetut efektit
 SHADOWDARK.effect.footer.add_custom: Lisää mukautettu efekti
-SHADOWDARK.effect.header.active: Aktivoi
+SHADOWDARK.effect.header.active: Aktiivinen
 SHADOWDARK.effect.header.delete: Poista
 SHADOWDARK.effect.header.edit: Muokkaa
 SHADOWDARK.effect.header.name: Efekti
@@ -93,13 +100,13 @@ SHADOWDARK.effect.temporary: Väliaikaiset efektit
 SHADOWDARK.effect.unavailable: Poissaolevat efektit
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
 SHADOWDARK.inventory.coins: Kolikot
-SHADOWDARK.inventory.item.light_remaining: '{timeRemaining} minuuttia jäljellä'
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
 SHADOWDARK.inventory.item.light_used: (osittain käytetty)
 SHADOWDARK.inventory.label.quantity: Kpl
 SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
 SHADOWDARK.inventory.section.armor: Panssari
 SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet
-SHADOWDARK.inventory.section.treasure: Treasure
+SHADOWDARK.inventory.section.treasure: Aarre
 SHADOWDARK.inventory.section.weapon: Aseet
 SHADOWDARK.inventory.slots_max: Maksimi
 SHADOWDARK.inventory.slots_used: Täytetty
@@ -123,10 +130,10 @@ SHADOWDARK.item.armor_ac: Puolustuspisteet
 SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
 SHADOWDARK.item.armor.base_armor.chainmail: Rengaspanssari
 SHADOWDARK.item.armor.base_armor.leather_armor: Nahkapanssari
-SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
-SHADOWDARK.item.armor.base_armor.shield: Shield
-SHADOWDARK.item.armor.base_armor.title: Pohjapuolustus
-SHADOWDARK.item.armor.base_weapon.title: Pohja-ase
+SHADOWDARK.item.armor.base_armor.plate_mail: Levyhaarniska
+SHADOWDARK.item.armor.base_armor.shield: Kilpi
+SHADOWDARK.item.armor.base_armor.title: Pohjapanssari
+SHADOWDARK.item.armor.base_weapon.title: Asetyyppi
 SHADOWDARK.item.cost: Hinta
 SHADOWDARK.item.description: Kuvaus
 SHADOWDARK.item.equipped: Käytössä
@@ -138,6 +145,7 @@ SHADOWDARK.item.level: Taso
 SHADOWDARK.item.light.is_source: Valonlähde
 SHADOWDARK.item.light.longevity: Kestoaika (min)
 SHADOWDARK.item.light.remaining: Jäljellä (min)
+SHADOWDARK.item.light.template: Valonlähteen templaatti
 SHADOWDARK.item.magic_item.is_magic: Taikaesine
 SHADOWDARK.item.magic_item.title: Taikaesineen efektit
 SHADOWDARK.item.magic_item.type.attackBonus: Hyökkäysbonus
@@ -147,11 +155,19 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Kriittisen kerroin
 SHADOWDARK.item.magic_item.type.custom: Mukautettu efekti
 SHADOWDARK.item.magic_item.type.damageBonus: Vahinkobonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Pysyvä muutos kykyyn
+SHADOWDARK.item.npc_attack_bonus: Hyökkäysbonus
+SHADOWDARK.item.npc_attack_count: Hyökkäyksien lukumäärä
+SHADOWDARK.item.npc_attack_damage_bonus: Vahinkobonus
+SHADOWDARK.item.npc_attack_damage: Vahinkonoppa
+SHADOWDARK.item.npc_attack_special: Erikoiskyky
+SHADOWDARK.item.npc_attack_type: Tyyppi
+SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
 SHADOWDARK.item.properties: Asetukset
 SHADOWDARK.item.spell_caster_classes: Loihtimisluokat
 SHADOWDARK.item.spell_duration: Kestoaika
 SHADOWDARK.item.spell_range: Kantama
-SHADOWDARK.item.spell_tier: Loitsutaso
+SHADOWDARK.item.spell_tier: Loihtimistaso
+SHADOWDARK.item.talent_class: Lahjakkuusluokka
 SHADOWDARK.item.treasure: Aarre
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: Vahinkoa yhdellä kädellä
@@ -186,41 +202,49 @@ SHADOWDARK.language.goblin: Peikkolaiskieli
 SHADOWDARK.language.merran: Meripuhe
 SHADOWDARK.language.orcish: Örkki
 SHADOWDARK.language.primordial: Alkukieli
-SHADOWDARK.language.reptilian: Reptilian
+SHADOWDARK.language.reptilian: Reptiliaani
 SHADOWDARK.language.sylvan: Salokieli
 SHADOWDARK.language.thanian: Petopuhe
+SHADOWDARK.light_source.lantern: Lyhty
+SHADOWDARK.light_source.light_spell.double_near: Valotaika (Tuplakantama)
+SHADOWDARK.light_source.light_spell.near: Valotaika (Lähellä)
+SHADOWDARK.light_source.torch: Soihtu
 SHADOWDARK.light-tracker.active: Aktiivinen
 SHADOWDARK.light-tracker.paused: Pausetettu
-SHADOWDARK.light-tracker.status.label: Tila
-SHADOWDARK.light-tracker.title.prefix: Valo
-SHADOWDARK.light-tracker.title.suffix: Seurain
+SHADOWDARK.light-tracker.status.label: Statut
+SHADOWDARK.light-tracker.title.prefix: Valonlähteiden
+SHADOWDARK.light-tracker.title.suffix: seuranta
+SHADOWDARK.npc_attack.type.physical: Fyysinen
+SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
+SHADOWDARK.npc_move.double_near: '"Lähellä" etäisyys tuplana'
+SHADOWDARK.npc_move.near: Lähellä
 SHADOWDARK.range.close_short: V
 SHADOWDARK.range.close: Vieressä
 SHADOWDARK.range.far_short: K
 SHADOWDARK.range.far: Kaukana
-SHADOWDARK.range.near_short: 'L'
+SHADOWDARK.range.near_short: "L"
 SHADOWDARK.range.near: Lähellä
 SHADOWDARK.range.self_short: I
 SHADOWDARK.range.self: Itse
-SHADOWDARK.roll.advantage_title: '{title} edun kanssa'
+SHADOWDARK.roll.advantage_title: "{title} edun kanssa"
 SHADOWDARK.roll.advantage: Etu
 SHADOWDARK.roll.critical.failure: Kriittinen epäonnistuminen! ({value})
 SHADOWDARK.roll.critical.success: Kriittinen onnistuminen! ({value})
 SHADOWDARK.roll.D20: Heitä n20
-SHADOWDARK.roll.damage: 'Heitä vahinkonoppa:'
-SHADOWDARK.roll.disadvantage_title: '{title} haitan kanssa'
+SHADOWDARK.roll.damage: "Vahinkoheitto:"
+SHADOWDARK.roll.disadvantage_title: "{title} haitan kanssa"
 SHADOWDARK.roll.disadvantage: Haitta
 SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
-SHADOWDARK.roll.spell_casting_check: Loihtimistesti
+SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
 SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelmä seuraa ja päivittää aktiivisten valonlähteiden jäljellä olevaa aikaa.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.interval.hint: Kuinka usein seurattuja valonlähteitä päivitetään (minuuteissa).
 SHADOWDARK.settings.track_light_sources.interval.name: Valonlähteiden seurannan intervalli
 SHADOWDARK.settings.track_light_sources.name: Seuraa valonlähteiden aikaa
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Jos valitset tämän, valonlähteiden seurannan ikkuna avautuu järjestelmän käynnistyksen yhteydessä. (vain pelimestarille)
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: Jos valitset tämän, valonlähteiden seurannan ikkuna avautuu järjestelmän käynnistyksen yhteydessä (vain pelimestarille).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Avaa valonlähteiden seurannan ikkuna käynnistyksen yhteydessä
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset tämän, valonlähteiden seurannan ajastimet eivät tikitä Foundryn ollessa pausella.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
@@ -236,13 +260,16 @@ SHADOWDARK.sheet.class.npc: Shadowdark NPC ikkuna
 SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
+SHADOWDARK.sheet.item.tab.description: Kuvaus
+SHADOWDARK.sheet.item.tab.details: Yksityiskohdat
+SHADOWDARK.sheet.item.tab.light: Valonlähde
+SHADOWDARK.sheet.item.tab.magic: Taikuus
 SHADOWDARK.sheet.npc.attacks_label: Hyökkäykset
 SHADOWDARK.sheet.npc.dark_adapted: Sopeutunut pimeään
-SHADOWDARK.sheet.npc.dark-adapted: Sopeutunut pimeään
 SHADOWDARK.sheet.npc.description_label: Kuvaus
+SHADOWDARK.sheet.npc.features_label: Ominaisuudet
 SHADOWDARK.sheet.npc.movement_short: Liike
 SHADOWDARK.sheet.npc.movement: Liikkumisnopeus
-SHADOWDARK.sheet.npc.special_label: Erikoisuudet
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus
 SHADOWDARK.sheet.player.ancestry: Laji
@@ -250,9 +277,9 @@ SHADOWDARK.sheet.player.available_spells: Saatavilla olevat loitsut
 SHADOWDARK.sheet.player.background: Tausta
 SHADOWDARK.sheet.player.class: Hahmoluokka
 SHADOWDARK.sheet.player.deity: Jumala
-SHADOWDARK.sheet.player.languages: Languages
+SHADOWDARK.sheet.player.languages: Kielet
 SHADOWDARK.sheet.player.luck: Tuuripiste
-SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäykset
+SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäys
 SHADOWDARK.sheet.player.notes: Muistiinpanot
 SHADOWDARK.sheet.player.ranged_attacks: Kantamahyökkäykset
 SHADOWDARK.sheet.player.spells_tier: Loitsutaso
@@ -281,6 +308,9 @@ SHADOWDARK.spell_range.far: Kaukana
 SHADOWDARK.spell_range.near: Lähellä
 SHADOWDARK.spellcasting_ability: Loihtimiskyky
 SHADOWDARK.talent.backstab: Yllätyshyökkäys
+SHADOWDARK.talent.class.ancestry: Laji
+SHADOWDARK.talent.class.class: Hahmoluokka
+SHADOWDARK.talent.class.level: Taso
 SHADOWDARK.talent.type.ability_improvement: Kyvyn parannus
 SHADOWDARK.talent.type.advantage.hp: Osumapisteiden heitto edun kanssa
 SHADOWDARK.talent.type.advantage.initiative: Aloiteheitot edun kanssa

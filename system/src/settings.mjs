@@ -11,8 +11,8 @@ export default function registerSystemSettings() {
 		name: "System Version",
 		scope: "world",
 		config: false,
-		type: Number,
-		default: 0, // TODO sensible default
+		type: String,
+		default: "",
 	});
 
 	// ------------------------
