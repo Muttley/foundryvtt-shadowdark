@@ -2,12 +2,13 @@ import SHADOWDARK from "./src/config.mjs";
 import loadTemplates from "./src/templates.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
+import performDataMigration from "./src/migration.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
-import * as migrations from "./src/migration.mjs";
+// import * as migrations from "./src/migrations/updates/_module.mjs";
 
 import { HooksSD } from "./src/hooks.mjs";
 
@@ -23,7 +24,6 @@ globalThis.shadowdark = {
 	dice,
 	documents,
 	sheets,
-	migrations,
 };
 
 /* -------------------------------------------- */
@@ -83,28 +83,11 @@ Hooks.once("init", () => {
 // A hook event that fires when the game is fully ready.
 //
 Hooks.on("ready", () => {
+	// Check to see if any data migrations need to be run, and run them if
+	// necessary
+	performDataMigration();
 
 	HooksSD.attach();
-
-	// Migration checks
-	if ( !game.user.isGM ) return;
-	const currentMigrationVersion = game.settings.get("shadowdark", "systemVersion");
-	const needsMigrationVersion = game.system.flags.needsMigrationVersion;
-	const totalDocuments = game.actors.size + game.packs.size;
-
-	// If no currentMigrationVersion is set and there are no documents, there is no need to migrate
-	if (
-		!currentMigrationVersion
-		&& totalDocuments === 0
-	) return game.settings.set("shadowdark", "systemVersion", game.system.version);
-
-	// If the current migration exists, but doesn't need migration, return.
-	if (
-		currentMigrationVersion
-		&& !isNewerVersion(needsMigrationVersion, currentMigrationVersion)
-	) return console.log("Shadowdark RPG | Game Ready");
-
-	migrations.migrateWorld();
 
 	console.log("Shadowdark RPG | Game Ready");
 });

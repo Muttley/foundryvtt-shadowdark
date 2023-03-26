@@ -339,6 +339,8 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.migration.begin: Beginning migration for Shadowdark RPG version {version}
-SHADOWDARK.migration.complete: Completed migrating to Shadowdark RPG version {version}
-SHADOWDARK.migration.too_old_version: Shadowdark RPG version is too old to migrate.
+SHADOWDARK.migration.begin_migration: Performing necessary data upgrades for Shadowdark RPG
+SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.migration.completed_migration: Completed necessary data updgrades for Shadowdark RPG
+SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.migration.too_old_version: Shadowdark RPG schema version is too old to migrate.
