@@ -60,7 +60,7 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 					id: "sd-lightsourcetracker-activate-torch-tracker",
 					selector: ".shadowdark.light-tracker div.tourguideactor div.light-sources",
 					title: "Torch Activated Tracker",
-					content: "<p>... it also shows up in the Lightsource Tracker.</p>",
+					content: "<p>... it also shows up in the Lightsource Tracker.</p>\n<p>If the player has a token in a scene, a pre-determined light-setting will activate, providing visibility.</p>",
 					action: "scrollTo",
 				},
 				{
@@ -75,6 +75,20 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 					selector: "p.status__value",
 					title: "Tracking Status",
 					content: "<p>The tracking status indicates if lightsources are being actively depleted.</p>\n<p>Depending on your settings, this will pause with the game.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-lightsourcetracker-douse-torch",
+					selector: ".shadowdark.light-tracker div.tourguideactor div.light-sources div.light-controls",
+					title: "Douse individual lightsource",
+					content: "<p>The GM may douse individual light sources by clicking the flame.</p>\n<p>This will also turn the lights off on any tokens the player has.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-lightsourcetracker-douse-all",
+					selector: ".shadowdark.light-tracker button.disable-all-lights",
+					title: "Douse all lightsources",
+					content: "<p>The GM may also turn off all the light sources, leaving them in darkness as the light from their tokens also deactivates.</p>",
 					action: "scrollTo",
 				},
 				{
@@ -190,7 +204,12 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 		}
 
 		if (
-			["sd-lightsourcetracker-activate-torch-tracker", "sd-lightsourcetracker-time-tracking"].includes(this.currentStep.id)
+			[
+				"sd-lightsourcetracker-activate-torch-tracker",
+				"sd-lightsourcetracker-time-tracking",
+				"sd-lightsourcetracker-douse-torch",
+				"sd-lightsourcetracker-douse-all",
+			].includes(this.currentStep.id)
 		) {
 			// Add anchor to the div so we can find it later
 			$(`div.character-name:contains(${MOCK_ACTOR_NAME})`).parent().addClass('tourguideactor');
@@ -204,7 +223,6 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 		if (this.currentStep.id === "sd-lightsourcetracker-activate-torch-tracker") {
 			const actor = game.actors.find(a => a.name === MOCK_ACTOR_NAME);
 			await actor.sheet.close();
-			await delay(300);
 		}
 
 		if (this.currentStep.id === "sd-lightsourcetracker-end-tour") {
