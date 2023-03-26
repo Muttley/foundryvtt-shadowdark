@@ -1,7 +1,14 @@
-## v1.1.0
+## v1.x.x
+
+### Bugfixes
+* [#185] Refactored HP and updated schema to account fix HP issues on PCs
 
 ### Enhancements
 * [#139] Added Guided Tour for explaining the Lightsource Tracker
+* [#190] Added HP rolling for players by level, including data migration
+* [#195] Added gulp livereloading for developers
+* [#196] Added Lightsource Tracker testing
+* [#198] Added contributed i18n updates for German, Finnish, and possibility to translate to French
 
 ## v1.0.2
 
