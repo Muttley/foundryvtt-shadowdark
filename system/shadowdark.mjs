@@ -8,6 +8,7 @@ import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
+import * as tours from "./src/tours/_module.mjs";
 
 import { HooksSD } from "./src/hooks.mjs";
 
@@ -86,6 +87,12 @@ Hooks.on("ready", () => {
 	performDataMigration();
 
 	HooksSD.attach();
+	// Tours
+	game.tours.register(
+		"shadowdark",
+		"shadowdark-lightsource-tracker-tour",
+		new tours.ShadowdarkLightsourceTrackerTour()
+	);
 
 	console.log("Shadowdark RPG | Game Ready");
 });
