@@ -198,6 +198,17 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async changeLightSettings(lightData) {
+		const token = this.getCanvasToken();
+		if (token) token.document.update({light: lightData});
+
+		// Update the prototype as well
+		Actor.updateDocuments([{
+			_id: this._id,
+			"prototypeToken.light": lightData,
+		}]);
+	}
+
 	async getArmorClass() {
 		return await this.updateArmorClass();
 	}
@@ -439,14 +450,8 @@ export default class ActorSD extends Actor {
 	}
 
 	async toggleLight(active, itemId) {
-		const item = this.items.get(itemId);
-
-		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
-			item.system.light.template
-		];
-
 		if (active) {
-			this.turnLightOn(lightData);
+			this.turnLightOn();
 		}
 		else {
 			this.turnLightOff();
@@ -459,18 +464,17 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.turnLightOn(noLight);
+		this.changeLightSettings(noLight);
 	}
 
-	async turnLightOn(lightData) {
-		const token = this.getCanvasToken();
-		if (token) token.document.update({light: lightData});
+	async turnLightOn() {
+		const item = this.items.get(itemId);
 
-		// Update the prototype as well
-		Actor.updateDocuments([{
-			_id: this._id,
-			"prototypeToken.light": lightData,
-		}]);
+		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
+			item.system.light.template
+		];
+
+		this.changeLightSettings(lightData);
 	}
 
 	async updateArmor(updatedItem) {
