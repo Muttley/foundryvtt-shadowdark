@@ -179,9 +179,5 @@
 	"socket": true,
 	"gridDistance": 5,
 	"initiative": "@initiativeFormula + @initiativeBonus",
-	"gridUnits": "ft",
-	"flags": {
-		"compatibleMigrationVersion": "1.0.0",
-		"needsMigrationVersion": "1.1.0"
-	}
+	"gridUnits": "ft"
 }

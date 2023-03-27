@@ -225,6 +225,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 	});
 
 	describe("_performTick()", () => {
+		// TODO This test will fail if the game is paused.
 		const app = new LightSourceTrackerSD();
 		it("updates the date", () => {
 			const datePre = app.lastUpdate;

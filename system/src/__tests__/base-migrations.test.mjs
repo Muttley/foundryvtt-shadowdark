@@ -3,7 +3,7 @@
  * @file Contains tests for the migrations
  */
 
-import { _migrateHpBase } from "../migration.mjs";
+import Update_230325_1 from "../migrations/updates/Update_230325_1.mjs";
 
 export const key = "shadowdark.root.migrations";
 export const options = {
@@ -37,17 +37,18 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 			},
 		};
 
+		const update = new Update_230325_1();
 
-		it("migrates actor with bonus correctly", () => {
-			const migratedData = _migrateHpBase(actorPreMigrationBonus, {});
+		it("migrates actor with bonus correctly", async () => {
+			const migratedData = await update.updateActor(actorPreMigrationBonus);
 			expect(Object.keys(migratedData).includes("system.attributes.hp.base")).is.true;
 			expect(Object.keys(migratedData).includes("system.attributes.hp.max")).is.true;
 			expect(migratedData["system.attributes.hp.base"]).equal(8);
 			expect(migratedData["system.attributes.hp.max"]).equal(10);
 		});
 
-		it("migrates actor without bonus correctly", () => {
-			const migratedData = _migrateHpBase(actorPreMigration, {});
+		it("migrates actor without bonus correctly", async () => {
+			const migratedData = await update.updateActor(actorPreMigration);
 			expect(Object.keys(migratedData).includes("system.attributes.hp.base")).is.true;
 			expect(Object.keys(migratedData).includes("system.attributes.hp.max")).is.true;
 			expect(migratedData["system.attributes.hp.base"]).equal(10);
