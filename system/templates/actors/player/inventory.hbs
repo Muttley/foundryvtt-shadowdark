@@ -11,11 +11,6 @@
 				{{#each inventory as |section sid|}}
 					<tr class="inventory-section-header">
 						<th>
-							{{section.label}}
-						</th>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>
 							<a
 								class="item-control item-create"
 								title="{{localize SHADOWDARK.inventory.create_item}}"
@@ -26,9 +21,13 @@
 									data-item-type="{{section.type}}"
 								{{/ifEq}}
 							>
-								<i class="fa-solid fa-file-plus"></i>
-								</a>
-							</th>
+								<i class="fa-duotone fa-file-plus"></i>
+							</a>
+							{{section.label}}
+						</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
 					</tr>
 					{{#each section.items as |item|}}
 						<tr class="item" data-item-id="{{item._id}}" draggable="true">
