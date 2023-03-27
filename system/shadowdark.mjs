@@ -87,6 +87,7 @@ Hooks.on("ready", () => {
 	performDataMigration();
 
 	HooksSD.attach();
+
 	// Tours
 	game.tours.register(
 		"shadowdark",
