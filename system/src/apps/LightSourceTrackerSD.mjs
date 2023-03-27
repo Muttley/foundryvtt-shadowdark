@@ -298,9 +298,9 @@ export default class LightSourceTrackerSD extends Application {
 
 				const actor = await game.actors.get(actorData._id);
 				if (light.remainingSecs <= 0) {
-					await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
-
 					actor.yourLightWentOut(itemData._id);
+
+					await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
 
 					await this._gatherLightSources();
 				}
