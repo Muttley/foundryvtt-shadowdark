@@ -125,7 +125,7 @@ export default class LightSourceTrackerSD extends Application {
 		// Make sure we're actualled enable and are supposed to be running.
 		//
 		if (this._isDisabled()) {
-			console.log("Shadowdark RPG::LightSourceTrackerSD | Disabled in Settings");
+			console.log(`${this._logHeader()} Disabled in Settings`);
 			return;
 		}
 
@@ -134,7 +134,7 @@ export default class LightSourceTrackerSD extends Application {
 
 		// Now we can actually start properly
 		//
-		console.log("Shadowdark RPG::LightSourceTrackerSD | Starting");
+		console.log(`${this._logHeader()} Starting`);
 
 		// First get a list of all active light sources in the world
 		//
@@ -152,7 +152,7 @@ export default class LightSourceTrackerSD extends Application {
 			this.updateInterval
 		);
 
-		console.log(`Shadowdark RPG::LightSourceTrackerSD | Updating every ${updateMins} minutes.`);
+		console.log(`${this._logHeader()} Updating every ${updateMins} minutes.`);
 
 		if (game.settings.get("shadowdark", "trackLightSourcesOpen")) {
 			this.render(true);
@@ -257,6 +257,10 @@ export default class LightSourceTrackerSD extends Application {
 		return game.paused && this.pauseWithGame;
 	}
 
+	_logHeader() {
+		return `LightSourceTrackerSD | (${new Date().toISOString()})`;
+	}
+
 	_monitorInactiveUsers() {
 		return game.settings.get("shadowdark", "trackInactiveUserLightSources");
 	}
@@ -286,7 +290,7 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async _performTick() {
-		console.log("Shadowdark RPG::LightSourceTrackerSD | Performing Tick.");
+		console.log(`${this._logHeader()} Performing Tick.`);
 
 		if (!(this._isEnabled() && game.user.isGM)) return;
 
@@ -303,7 +307,7 @@ export default class LightSourceTrackerSD extends Application {
 
 		try {
 			for (const actorData of this.monitoredLightSources) {
-				console.log(`Shadowdark RPG::LightSourceTrackerSD | Updating Light Sources for ${actorData.name}`);
+				console.log(`${this._logHeader()} Updating Light Sources for ${actorData.name}`);
 
 				for (const itemData of actorData.lightSources) {
 					const light = itemData.system.light;
@@ -311,21 +315,23 @@ export default class LightSourceTrackerSD extends Application {
 					light.remainingSecs -= elapsed;
 
 					const actor = await game.actors.get(actorData._id);
-					if (light.remainingSecs <= 0) {
+
+					const item = await actor.getEmbeddedDocument(
+						"Item", itemData._id
+					);
+
+					await item.update({
+						"system.light.remainingSecs": light.remainingSecs,
+					});
+
+					if (light.remainingSecs < 0) {
+						console.log(`${this._logHeader()} Light Source '${itemData.name}' has expired.`);
+						await actor.yourLightExpired(itemData._id);
+
 						await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
-
-						actor.yourLightWentOut(itemData._id);
-
-						await this._gatherLightSources();
 					}
 					else {
-						const item = await actor.getEmbeddedDocument(
-							"Item", itemData._id
-						);
-
-						item.update({
-							"system.light.remainingSecs": light.remainingSecs,
-						});
+						console.log(`${this._logHeader()} Light Source '${itemData.name}' has ${light.remainingSecs}s remaining`);
 					}
 
 					this.render(false);
@@ -333,6 +339,7 @@ export default class LightSourceTrackerSD extends Application {
 			}
 		}
 		catch(error) {
+			console.log(`${this._logHeader()} An error ocurred: ${error}`);
 			console.error(error);
 		}
 		finally {
@@ -345,7 +352,7 @@ export default class LightSourceTrackerSD extends Application {
 	async _updateLightSources() {
 		if (!(this._isEnabled() && game.user.isGM)) return;
 
-		console.log("Shadowdark RPG::LightSourceTrackerSD | Updating light sources");
+		console.log(`${this._logHeader()} Updating light sources`);
 
 		await this._gatherLightSources();
 

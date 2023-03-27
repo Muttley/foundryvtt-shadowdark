@@ -93,7 +93,7 @@ export default class ItemSheetSD extends ItemSheet {
 				context.lightRemainingMins = item.system.light.longevityMins;
 			}
 			else {
-				context.lightRemainingMins = Math.ceil(
+				context.lightRemainingMins = Math.floor(
 					item.system.light.remainingSecs / 60
 				);
 			}
