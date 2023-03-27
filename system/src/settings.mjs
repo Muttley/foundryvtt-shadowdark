@@ -7,12 +7,12 @@ export default function registerSystemSettings() {
 	//  INTERNAL SETTINGS
 	// -------------------
 	//
-	game.settings.register("shadowdark", "systemVersion", {
-		name: "System Version",
+	game.settings.register("shadowdark", "schemaVersion", {
+		name: "Schema Version",
 		scope: "world",
 		config: false,
-		type: String,
-		default: "",
+		type: Number,
+		default: 0,
 	});
 
 	// ------------------------

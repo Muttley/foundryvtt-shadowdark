@@ -159,8 +159,8 @@ export default class LightSourceTrackerSD extends Application {
 		}
 	}
 
-	async toggleInterface() {
-		if (!game.user.isGM) {
+	async toggleInterface(force=false) {
+		if (!force && !game.user.isGM) {
 			ui.notifications.error(
 				game.i18n.localize("SHADOWDARK.error.general.gm_required")
 			);
