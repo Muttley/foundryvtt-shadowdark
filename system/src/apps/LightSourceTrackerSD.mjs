@@ -12,6 +12,11 @@ export default class LightSourceTrackerSD extends Application {
 		this.lastUpdate = Date.now();
 		this.updatingLightSources = false;
 
+		this.housekeepingInterval = 1000;
+		this.housekeepingIntervalId = null;
+
+		this.dirty = true;
+
 		this.performingTick = false;
 
 		this.pauseWithGame = true;
@@ -71,9 +76,10 @@ export default class LightSourceTrackerSD extends Application {
 
 				await ChatMessage.create({
 					content,
-					speaker: ChatMessage.getSpeaker(),
 					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 				});
+
+				this.dirty = true;
 			}
 		);
 
@@ -96,6 +102,8 @@ export default class LightSourceTrackerSD extends Application {
 				actor.updateEmbeddedDocuments("Item", [dataUpdate]);
 
 				actor.yourLightWentOut(itemId);
+
+				this.dirty = true;
 			}
 		);
 	}
@@ -139,6 +147,14 @@ export default class LightSourceTrackerSD extends Application {
 		// First get a list of all active light sources in the world
 		//
 		await this._gatherLightSources();
+
+		// Setup the housekeeping interval which will check for changes
+		// to lightsources
+		//
+		this.housekeepingIntervalId = setInterval(
+			this._updateLightSources.bind(this),
+			this.housekeepingInterval
+		);
 
 		// Now set up the timer interval used to update all light sources
 		//
@@ -195,11 +211,30 @@ export default class LightSourceTrackerSD extends Application {
 		this._onToggleLightSource();
 	}
 
+	async _deleteActorHook(actor, options, userId) {
+		if (!(this._isEnabled() && game.user.isGM)) return;
+
+		console.log("_deleteActorHook");
+
+		if (actor.hasActiveLightSources()) this.dirty = true;
+	}
+
+	async _deleteItemHook(item, options, userId) {
+		if (!(this._isEnabled() && game.user.isGM)) return;
+
+		if (item.isActiveLight()) this.dirty = true;
+	}
+
 	async _gatherLightSources() {
-
 		if (this.performingTick) return;
+		if (this.updatingLightSources) return;
+		if (!this.dirty) return;
 
+		this.dirty = false;
 		this.updatingLightSources = true;
+
+		console.log(`${this._logHeader()} Checking for new/changed light sources`);
+
 		this.monitoredLightSources = [];
 
 		const workingLightSources = [];
@@ -227,6 +262,7 @@ export default class LightSourceTrackerSD extends Application {
 				workingLightSources.push(actorData);
 
 			}
+
 			this.monitoredLightSources = workingLightSources.sort((a, b) => {
 				if (a.name < b.name) {
 					return -1;
@@ -258,7 +294,11 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	_logHeader() {
-		return `LightSourceTrackerSD | (${new Date().toISOString()})`;
+		return `LightSourceTrackerSD | ${new Date().toISOString()} |`;
+	}
+
+	async _makeDirty() {
+		if (this._isEnabled() && game.user.isGM) this.dirty = true;
 	}
 
 	_monitorInactiveUsers() {
@@ -267,25 +307,10 @@ export default class LightSourceTrackerSD extends Application {
 
 	async _onToggleLightSource() {
 		if (!(this._isEnabled() && game.user.isGM)) return;
-
-		this._updateLightSources();
+		this.dirty = true;
 	}
 
-	async _settingsChanged() {
-		if (!game.user.isGM) return;
-
-		this.pauseWithGame = game.settings.get(
-			"shadowdark", "pauseLightTrackingWithGame"
-		);
-
-		if (this._isEnabled()) {
-			this._gatherLightSources();
-			this.render();
-		}
-		else {
-			this.close();
-			this.monitoredLightSources = {};
-		}
+	async _pauseGameHook() {
 		this.render(false);
 	}
 
@@ -310,52 +335,69 @@ export default class LightSourceTrackerSD extends Application {
 				console.log(`${this._logHeader()} Updating Light Sources for ${actorData.name}`);
 
 				for (const itemData of actorData.lightSources) {
+					const actor = await game.actors.get(actorData._id);
+
 					const light = itemData.system.light;
 
 					light.remainingSecs -= elapsed;
 
-					const actor = await game.actors.get(actorData._id);
-
-					const item = await actor.getEmbeddedDocument(
-						"Item", itemData._id
-					);
-
-					await item.update({
-						"system.light.remainingSecs": light.remainingSecs,
-					});
-
-					if (light.remainingSecs < 0) {
+					if (light.remainingSecs <= 0) {
 						console.log(`${this._logHeader()} Light Source '${itemData.name}' has expired.`);
+
 						await actor.yourLightExpired(itemData._id);
 
 						await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
 					}
 					else {
 						console.log(`${this._logHeader()} Light Source '${itemData.name}' has ${light.remainingSecs}s remaining`);
-					}
 
-					this.render(false);
+						const item = await actor.getEmbeddedDocument(
+							"Item", itemData._id
+						);
+
+						await item.update({
+							"system.light.remainingSecs": light.remainingSecs,
+						});
+					}
 				}
 			}
+
+			this.render(false);
 		}
 		catch(error) {
 			console.log(`${this._logHeader()} An error ocurred: ${error}`);
 			console.error(error);
 		}
-		finally {
-			this.performingTick = false;
 
-			this._updateLightSources();
+		this.performingTick = false;
+	}
+
+	async _settingsChanged() {
+		if (!game.user.isGM) return;
+
+		this.pauseWithGame = game.settings.get(
+			"shadowdark", "pauseLightTrackingWithGame"
+		);
+
+		if (this._isEnabled()) {
+			this._gatherLightSources();
+			this.render();
 		}
+		else {
+			this.close();
+			this.monitoredLightSources = {};
+		}
+		this.render(false);
 	}
 
 	async _updateLightSources() {
 		if (!(this._isEnabled() && game.user.isGM)) return;
-
-		console.log(`${this._logHeader()} Updating light sources`);
+		if (!this.dirty) return;
+		if (this.performingTick) return;
 
 		await this._gatherLightSources();
 
 		this.render(false);
 	}
+
 }

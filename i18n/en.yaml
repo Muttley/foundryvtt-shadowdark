@@ -45,6 +45,7 @@ SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining
+SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.chat.light_source.source.all: All light sources went out
 SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
@@ -106,7 +107,8 @@ SHADOWDARK.effect.temporary: Temporary Effects
 SHADOWDARK.effect.unavailable: Disabled Effects
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.inventory.coins: Coins
-SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Mins Remaining"
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
+SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (partially used)
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots

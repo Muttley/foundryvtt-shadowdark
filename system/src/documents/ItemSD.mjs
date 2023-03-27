@@ -51,6 +51,26 @@ export default class ItemSD extends Item {
 		return card;
 	}
 
+	lightRemainingString() {
+		if (this.type !== "Basic" && !this.system.light.isSource) return;
+
+		const timeRemaining = Math.ceil(
+			this.system.light.remainingSecs / 60
+		);
+
+		if (this.system.light.remainingSecs < 60) {
+			this.lightSourceTimeRemaining = game.i18n.localize(
+				"SHADOWDARK.inventory.item.light_seconds_remaining"
+			);
+		}
+		else {
+			this.lightSourceTimeRemaining = game.i18n.format(
+				"SHADOWDARK.inventory.item.light_remaining",
+				{ timeRemaining }
+			);
+		}
+	}
+
 	setLightRemaining(remainingSeconds) {
 		this.update({"system.light.remainingSecs": remainingSeconds});
 	}
@@ -86,6 +106,14 @@ export default class ItemSD extends Item {
 			if (key === property) return true;
 		}
 		return false;
+	}
+
+	isActiveLight() {
+		return this.isLight() && this.system.light.active;
+	}
+
+	isLight() {
+		return this.type === "Basic" && this.system.light.isSource;
 	}
 
 	isSpell() {

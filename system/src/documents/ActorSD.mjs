@@ -340,6 +340,10 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async hasActiveLightSources() {
+		return this.getActiveLightSources.length > 0;
+	}
+
 	async hasNoActiveLightSources() {
 		return this.getActiveLightSources.length <= 0;
 	}
@@ -367,7 +371,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -395,7 +398,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -451,7 +453,7 @@ export default class ActorSD extends Actor {
 
 	async toggleLight(active, itemId) {
 		if (active) {
-			this.turnLightOn();
+			this.turnLightOn(itemId);
 		}
 		else {
 			this.turnLightOff();
@@ -467,7 +469,7 @@ export default class ActorSD extends Actor {
 		this.changeLightSettings(noLight);
 	}
 
-	async turnLightOn() {
+	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
 
 		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[

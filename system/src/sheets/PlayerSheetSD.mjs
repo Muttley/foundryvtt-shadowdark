@@ -363,10 +363,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						i.system.light.remainingSecs / 60
 					);
 
-					i.lightSourceTimeRemaining = game.i18n.format(
-						"SHADOWDARK.inventory.item.light_remaining",
-						{ timeRemaining }
-					);
+					if (i.system.light.remainingSecs < 60) {
+						i.lightSourceTimeRemaining = game.i18n.localize(
+							"SHADOWDARK.inventory.item.light_seconds_remaining"
+						);
+					}
+					else {
+						i.lightSourceTimeRemaining = game.i18n.format(
+							"SHADOWDARK.inventory.item.light_remaining",
+							{ timeRemaining }
+						);
+					}
 				}
 
 				if (i.type === "Weapon" && i.system.equipped) {
