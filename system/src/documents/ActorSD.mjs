@@ -459,19 +459,12 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.getCanvasToken().document.update({light: noLight});
-
-		// Update the prototype as well
-		Actor.updateDocuments([{
-			_id: this._id,
-			"prototypeToken.light": noLight,
-		}]);
+		this.turnLightOn(noLight);
 	}
 
 	async turnLightOn(lightData) {
-		this.getCanvasToken().document.update({
-			light: lightData,
-		});
+		const token = this.getCanvasToken();
+		if (token) token.document.update({light: lightData});
 
 		// Update the prototype as well
 		Actor.updateDocuments([{

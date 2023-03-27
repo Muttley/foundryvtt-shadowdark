@@ -2,6 +2,10 @@
 
 ### Bugfixes
 * [#185] Refactored HP and updated schema to account fix HP issues on PCs
+* [#207] Fixes
+  * issue where item was deleted before light could be activated
+  * issue [#199] throwing error without a token on scene
+  * issue [#202] where the thrown error prevented the light from being updated
 
 ### Enhancements
 * [#139] Added Guided Tour for explaining the Lightsource Tracker
