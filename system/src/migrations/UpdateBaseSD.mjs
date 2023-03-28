@@ -1,4 +1,3 @@
-
 export class UpdateBaseSD {
 
 	static version;
@@ -12,5 +11,9 @@ export class UpdateBaseSD {
 	// Update the item to the latest schema version.
 	//
 	async updateItem(itemData) {}
+
+	// And updates required to system settings can be performed here.
+	//
+	async updateSettings() {}
 
 }
