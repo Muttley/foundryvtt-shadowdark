@@ -1,4 +1,4 @@
-## v1.x.x
+## v1.1.0
 
 ### Bugfixes
 * [#185] Refactored HP and updated schema to account fix HP issues on PCs
@@ -14,7 +14,7 @@
 * [#190] Added HP rolling for players by level, including data migration
 * [#195] Added gulp livereloading for developers
 * [#196] Added Lightsource Tracker testing
-* [#198] Added contributed i18n updates for German, Finnish, and ground work to support a French translation that someone has offered to work on
+* [#198] & [#216] Added contributed i18n updates for German, Finnish, French translation
 * [#211] Increase granularity of Light Tracker intervals as allowed by performance enhancements
 * Various small tweaks to character sheet CSS and layout
 
