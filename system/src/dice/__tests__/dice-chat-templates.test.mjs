@@ -242,7 +242,6 @@ export default ({ describe, it, after, before, expect }) => {
 			it("versatile weapon", async () => {
 				await data.item.update({"system.properties": ["versatile"], "system.damage": { oneHanded: "d8", twoHanded: "d10"}});
 				await waitForInput();
-				const title = "test title";
 				templateData = RollSD._getChatCardTemplateData(data);
 				expect(templateData.isSpell).is.false;
 				expect(templateData.isWeapon).is.true;
@@ -250,7 +249,6 @@ export default ({ describe, it, after, before, expect }) => {
 			});
 
 			it("critical", async () => {
-				const title = "test title";
 				data.rolls.main.critical = "success";
 				templateData = RollSD._getChatCardTemplateData(data);
 				expect(templateData.data.rolls).is.not.undefined;
@@ -262,7 +260,6 @@ export default ({ describe, it, after, before, expect }) => {
 
 			it("spells", async () => {
 				data.item = await createMockItemByKey(key, "Spell");
-				const title = "test title";
 				data.rolls.main.critical = null;
 				templateData = RollSD._getChatCardTemplateData(data);
 				expect(templateData.isSpell).is.true;

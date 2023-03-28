@@ -7,12 +7,12 @@ export default function registerSystemSettings() {
 	//  INTERNAL SETTINGS
 	// -------------------
 	//
-	game.settings.register("shadowdark", "systemVersion", {
-		name: "System Version",
+	game.settings.register("shadowdark", "schemaVersion", {
+		name: "Schema Version",
 		scope: "world",
 		config: false,
 		type: Number,
-		default: 0, // TODO sensible default
+		default: 0,
 	});
 
 	// ------------------------
@@ -64,12 +64,12 @@ export default function registerSystemSettings() {
 		hint: "SHADOWDARK.settings.track_light_sources.interval.hint",
 		scope: "world",
 		config: true,
-		default: 1,
+		default: shadowdark.defaults.LIGHT_TRACKER_UPDATE_INTERVAL_SECS,
 		type: Number,
 		range: {
-			min: 1,
-			max: 10,
-			step: 1,
+			min: 10,
+			max: 120,
+			step: 10,
 		},
 		requiresReload: true,
 	});

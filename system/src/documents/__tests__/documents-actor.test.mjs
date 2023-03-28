@@ -299,23 +299,23 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("numGearSlots()", () => {
 		it("returns default gearslots for NPC", async () => {
 			const actor = await createMockActor("NPC");
-			expect(actor.numGearSlots()).equal(CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS);
+			expect(actor.numGearSlots()).equal(shadowdark.defaults.GEAR_SLOTS);
 			await actor.delete();
 		});
 
 		it("returns default gearslots for Player actor with lower str", async () => {
 			const actor = await createMockActor("Player");
 			await actor.update({"system.abilities.str.value": 3});
-			expect(actor.numGearSlots()).equal(CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS);
+			expect(actor.numGearSlots()).equal(shadowdark.defaults.GEAR_SLOTS);
 			await actor.delete();
 		});
 
 		it("returns str gearslots when higher than default gearslots", async () => {
 			const actor = await createMockActor("Player");
 			await actor.update({
-				"system.abilities.str.value": CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS + 1,
+				"system.abilities.str.value": shadowdark.defaults.GEAR_SLOTS + 1,
 			});
-			expect(actor.numGearSlots()).equal(CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS + 1);
+			expect(actor.numGearSlots()).equal(shadowdark.defaults.GEAR_SLOTS + 1);
 			await actor.delete();
 		});
 	});

@@ -83,7 +83,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();
 
-		context.maxHp = this.actor.system.attributes.hp.max
+		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
 
 		// Languages
@@ -363,10 +363,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						i.system.light.remainingSecs / 60
 					);
 
-					i.lightSourceTimeRemaining = game.i18n.format(
-						"SHADOWDARK.inventory.item.light_remaining",
-						{ timeRemaining }
-					);
+					if (i.system.light.remainingSecs < 60) {
+						i.lightSourceTimeRemaining = game.i18n.localize(
+							"SHADOWDARK.inventory.item.light_seconds_remaining"
+						);
+					}
+					else {
+						i.lightSourceTimeRemaining = game.i18n.format(
+							"SHADOWDARK.inventory.item.light_remaining",
+							{ timeRemaining }
+						);
+					}
 				}
 
 				if (i.type === "Weapon" && i.system.equipped) {
@@ -394,7 +401,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const totalCoins = coins.gp + coins.sp + coins.cp;
 
 		let coinSlots = 0;
-		const freeCoins = CONFIG.SHADOWDARK.DEFAULTS.FREE_COIN_CARRY;
+		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
 		if (totalCoins > freeCoins) {
 			coinSlots = Math.ceil((totalCoins - freeCoins) / freeCoins);
 		}
@@ -421,15 +428,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.talents = talents;
 	}
 
-	async _updateObject(event, formData) {
+ 	async _updateObject(event, formData) {
 		const hpValues = this.object.system.attributes.hp;
 
-		// Right now just a stop gap fix for the Stout / HP Max conflict
-		//
-		// TODO: Work out how to properly handle updating system values that
-		// may or may not have effects applied
+		// Modify the underlying base hp value if the max is changed manually
 		if (formData["system.attributes.hp.max"] !== hpValues.max) {
-			formData["system.attributes.hp.max"] -= hpValues.bonus;
+			formData["system.attributes.hp.base"] = formData["system.attributes.hp.max"] - hpValues.bonus;
 		}
 
 		super._updateObject(event, formData);

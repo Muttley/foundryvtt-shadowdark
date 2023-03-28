@@ -4,17 +4,16 @@
 			<table>
 				<tr>
 					<th>
-						{{localize "SHADOWDARK.sheet.player.available_spells"}}
-					</th>
-					<th style="text-align: right; padding-right: 4px;">
 						<a
 							class="item-control item-create"
 							title="{{localize SHADOWDARK.inventory.create_item}}"
 							data-item-type="Spell"
 						>
-							<i class="fa-solid fa-file-plus"></i>
+							<i class="fa-duotone fa-file-plus"></i>
 						</a>
+						{{localize "SHADOWDARK.sheet.player.available_spells"}}
 					</th>
+					<th>&nbsp;</th>
 				</tr>
 				{{#each spells as |tier tid|}}
 					<tr class="spell-tier-header">

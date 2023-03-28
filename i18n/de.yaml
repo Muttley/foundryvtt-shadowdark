@@ -71,7 +71,13 @@ SHADOWDARK.dialog.general.are_you_sure: Bist du dir sicher?
 SHADOWDARK.dialog.general.cancel: Abbrechen
 SHADOWDARK.dialog.general.no: "Nein"
 SHADOWDARK.dialog.general.yes: "Ja"
-SHADOWDARK.dialog.hp_roll: TP Wurf
+SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
+SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
+SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
+SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
+SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
+SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
+SHADOWDARK.dialog.hp_roll.title: HD Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Fähigkeitsbonus
 SHADOWDARK.dialog.item_roll.item_bonus: Gegenstandsbonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talentbonus
@@ -131,7 +137,7 @@ SHADOWDARK.item.armor_bonus_attribute: Bonus Attribut
 SHADOWDARK.item.armor.base_armor.chainmail: Kettenrüstung
 SHADOWDARK.item.armor.base_armor.leather_armor: Lederrüstung
 SHADOWDARK.item.armor.base_armor.plate_mail: Plattenrüstung
-SHADOWDARK.item.armor.base_armor.shield: Shield
+SHADOWDARK.item.armor.base_armor.shield: Schild
 SHADOWDARK.item.armor.base_armor.title: Basisrüstung
 SHADOWDARK.item.armor.base_weapon.title: Basiswaffe
 SHADOWDARK.item.cost: Kosten
@@ -152,7 +158,7 @@ SHADOWDARK.item.magic_item.type.attackBonus: Angriffsbonus
 SHADOWDARK.item.magic_item.type.criticalFailureThreshold: Höherer Grenzwert für kritische Fehlschläge
 SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Niedrigerer Grenzwert für kritische Erfolge
 SHADOWDARK.item.magic_item.type.critMultiplier: Krit-Multiplikator
-SHADOWDARK.item.magic_item.type.custom: Custom Effect
+SHADOWDARK.item.magic_item.type.custom: Benutzerdefinierter Effekt
 SHADOWDARK.item.magic_item.type.damageBonus: Schadensbonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanente Fähigkeitsänderung
 SHADOWDARK.item.npc_attack_bonus: Angriffsbonus
@@ -177,7 +183,7 @@ SHADOWDARK.item.weapon_range: Distanz
 SHADOWDARK.item.weapon_type: Typ
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastardschwert
 SHADOWDARK.item.weapon.base_weapon.club: Knüppel
-SHADOWDARK.item.weapon.base_weapon.crossbow: Crossbow
+SHADOWDARK.item.weapon.base_weapon.crossbow: Armbrust
 SHADOWDARK.item.weapon.base_weapon.dagger: Dolch
 SHADOWDARK.item.weapon.base_weapon.greataxe: Streitaxt
 SHADOWDARK.item.weapon.base_weapon.greatsword: Zweihänder
@@ -214,6 +220,10 @@ SHADOWDARK.light-tracker.paused: Pausiert
 SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title.prefix: Licht
 SHADOWDARK.light-tracker.title.suffix: Tracker
+SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
+SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
+SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.npc_attack.type.physical: Physisch
 SHADOWDARK.npc_attack.type.special: Spezial
 SHADOWDARK.npc_move.double_near: Doppelt Nah

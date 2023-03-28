@@ -6,7 +6,6 @@ export default class ActorSD extends Actor {
 		// Some sensible token defaults for Actors
 		const prototypeToken = {
 			actorLink: false,
-			// disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
 			sight: {
 				enabled: false,
 			},
@@ -198,6 +197,17 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async changeLightSettings(lightData) {
+		const token = this.getCanvasToken();
+		if (token) token.document.update({light: lightData});
+
+		// Update the prototype as well
+		Actor.updateDocuments([{
+			_id: this._id,
+			"prototypeToken.light": lightData,
+		}]);
+	}
+
 	async getArmorClass() {
 		return await this.updateArmorClass();
 	}
@@ -210,7 +220,7 @@ export default class ActorSD extends Actor {
 	}
 
 	numGearSlots() {
-		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
+		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
 			const strength = this.system.abilities.str.value;
@@ -329,6 +339,10 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async hasActiveLightSources() {
+		return this.getActiveLightSources.length > 0;
+	}
+
 	async hasNoActiveLightSources() {
 		return this.getActiveLightSources.length <= 0;
 	}
@@ -356,7 +370,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -384,7 +397,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -439,14 +451,8 @@ export default class ActorSD extends Actor {
 	}
 
 	async toggleLight(active, itemId) {
-		const item = this.items.get(itemId);
-
-		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
-			item.system.light.template
-		];
-
 		if (active) {
-			this.turnLightOn(lightData);
+			this.turnLightOn(itemId);
 		}
 		else {
 			this.turnLightOff();
@@ -459,25 +465,17 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.getCanvasToken().document.update({light: noLight});
-
-		// Update the prototype as well
-		Actor.updateDocuments([{
-			_id: this._id,
-			"prototypeToken.light": noLight,
-		}]);
+		this.changeLightSettings(noLight);
 	}
 
-	async turnLightOn(lightData) {
-		this.getCanvasToken().document.update({
-			light: lightData,
-		});
+	async turnLightOn(itemId) {
+		const item = this.items.get(itemId);
 
-		// Update the prototype as well
-		Actor.updateDocuments([{
-			_id: this._id,
-			"prototypeToken.light": lightData,
-		}]);
+		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
+			item.system.light.template
+		];
+
+		this.changeLightSettings(lightData);
 	}
 
 	async updateArmor(updatedItem) {
@@ -521,7 +519,7 @@ export default class ActorSD extends Actor {
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
 
-		let baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
+		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
 
 		let newArmorClass = baseArmorClass;
@@ -593,11 +591,12 @@ export default class ActorSD extends Actor {
 		options.fastForward = true;
 		options.chatMessage = true;
 
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
@@ -614,14 +613,88 @@ export default class ActorSD extends Actor {
 			actor: this,
 		};
 
-		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
-
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
 
-		CONFIG.DiceSD.RollDialog(parts, data, options);
+		// Record original HP for the chatcard later
+		const originalHpMax = this.system.attributes.hp.max;
+		let hpRollLevels = this.system.flags.hpRollLevels;
+		const newHpRollLevels = [];
+
+		// If no HP rolls have been made, roll them all up to the player level
+		for (let lvl = 1; lvl <= this.system.level.value; lvl++) {
+			// Skip if this level already has been rolled
+			if ( hpRollLevels.length > 0 && hpRollLevels.find(o => o.level === lvl)) {
+				continue;
+			}
+
+			// Roll the dice
+			options.title = game.i18n.format("SHADOWDARK.dialog.hp_roll.per_level", {level: lvl});
+			const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+			const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+			if (!result) return;
+
+			// Parse and augment the roll
+			let additionalHP = parseInt(result.rolls.main.roll.result, 10);
+
+			if ( lvl === 1 ) {
+				additionalHP += this.abilityModifier("con");
+				additionalHP = Math.max(1, additionalHP);
+			}
+
+			// Record data of the roll
+			newHpRollLevels.push(
+				{
+					level: lvl,
+					hp: additionalHP,
+					chatCardData: (lvl === 1)
+						? game.i18n.format(
+							"SHADOWDARK.dialog.hp_roll.roll_level_1",
+							{hp: additionalHP}
+						)
+						: game.i18n.format(
+							"SHADOWDARK.dialog.hp_roll.roll_per_level",
+							{level: lvl, hp: additionalHP}
+						),
+				}
+			);
+		}
+
+		// Allow to roll HD if there is no new levels to roll HP for
+		if (newHpRollLevels.length === 0) {
+			const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+			const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+			return result;
+		}
+
+		// Concatenate arrays and sum the total HP
+		hpRollLevels = [...hpRollLevels, ...newHpRollLevels];
+		let sumHP = hpRollLevels.reduce((a, b) => a + b.hp, 0);
+
+		// Update the actor
+		await this.update({
+			"system.attributes.hp.base": sumHP,
+			"system.flags.hpRollLevels": hpRollLevels,
+		});
+
+		// Create chatcard for displaying the result of the roll, as well as the new total
+		const resultOptions = {
+			chatCardTemplate: "systems/shadowdark/templates/chat/roll-hp-diff.hbs",
+			title: game.i18n.localize("SHADOWDARK.dialog.hp_roll.summary"),
+			speaker: ChatMessage.getSpeaker({ actor: this }),
+			results: newHpRollLevels,
+			total: game.i18n.format("SHADOWDARK.dialog.hp_roll.sum_total", {total: this.system.attributes.hp.base + this.system.attributes.hp.bonus}),
+			previous: game.i18n.format("SHADOWDARK.dialog.hp_roll.previous_hp", {hp: originalHpMax}),
+			actor: this,
+		};
+
+		const chatCardContent = await renderTemplate(resultOptions.chatCardTemplate, resultOptions);
+		ChatMessage.create({
+			speaker: resultOptions.speaker,
+			content: chatCardContent,
+		});
 	}
 }

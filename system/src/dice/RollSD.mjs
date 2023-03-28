@@ -36,9 +36,13 @@ export default class RollSD extends Roll {
 			data = foundry.utils.mergeObject(data, formBonuses);
 		}
 
-		options.rollMode = $form
-			? this._getRollModeFromForm($form)
-			: game.settings.get("core", "rollMode");
+		if (!options.rollMode) {
+			// only override if it's actually been set on the form (some rolls
+			// will have no form)
+			options.rollMode = $form
+				? this._getRollModeFromForm($form)
+				: game.settings.get("core", "rollMode");
+		}
 
 		// Roll the Dice
 		data.rolls = {
@@ -372,10 +376,15 @@ export default class RollSD extends Roll {
 		const dialogData = {
 			data,
 			title: options.title,
-			rollMode: game.settings.get("core", "rollMode"),
 			formula: Array.from(parts).join(" + "),
 			rollModes: CONFIG.Dice.rollModes,
+			rollMode: options.rollMode,
 		};
+
+		// If rollMode is already specified, don't override it
+		if (!dialogData.rollMode) {
+			dialogData.rollMode = game.settings.get("core", "rollMode");
+		}
 
 		return renderTemplate(dialogTemplate, dialogData);
 	}
@@ -402,8 +411,7 @@ export default class RollSD extends Roll {
 		// Render the HTML for the dialog
 		let content = await this._getRollDialogContent(parts, data, options);
 
-		let roll;
-		await new Dialog({
+		const dialogData = {
 			title: options.title,
 			content,
 			classes: ["shadowdark-dialog"],
@@ -411,22 +419,23 @@ export default class RollSD extends Roll {
 				advantage: {
 					label: game.i18n.localize("SHADOWDARK.roll.advantage"),
 					callback: async html => {
-						roll = await this.Roll(parts, data, html, 1, options);
+						return this.Roll(parts, data, html, 1, options);
 					},
 				},
 				normal: {
 					label: game.i18n.localize("SHADOWDARK.roll.normal"),
 					callback: async html => {
-						roll = await this.Roll(parts, data, html, 0, options);
+						return this.Roll(parts, data, html, 0, options);
 					},
 				},
 				disadvantage: {
 					label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 					callback: async html => {
-						roll = await this.Roll(parts, data, html, -1, options);
+						return this.Roll(parts, data, html, -1, options);
 					},
 				},
 			},
+			close: () => null,
 			default: "normal",
 			render: html => {
 				// Check if the actor has advantage, and add highlight if that
@@ -439,9 +448,9 @@ export default class RollSD extends Roll {
 						.addClass("talent-highlight");
 				}
 			},
-		}, options.dialogOptions).render(true);
+		};
 
-		return roll;
+		return Dialog.wait(dialogData, options.dialogOptions);
 	}
 
 	/* -------------------------------------------- */
@@ -575,7 +584,10 @@ export default class RollSD extends Roll {
 			chatData.sound = CONFIG.sounds.dice;
 		}
 
-		if (options.chatMessage !== false) ChatMessage.create(chatData);
+		if (options.chatMessage !== false) {
+			ChatMessage.applyRollMode(chatData, options.rollMode);
+			ChatMessage.create(chatData);
+		}
 
 		return data;
 	}
