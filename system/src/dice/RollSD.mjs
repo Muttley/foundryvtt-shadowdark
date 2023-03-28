@@ -36,9 +36,13 @@ export default class RollSD extends Roll {
 			data = foundry.utils.mergeObject(data, formBonuses);
 		}
 
-		options.rollMode = $form
-			? this._getRollModeFromForm($form)
-			: game.settings.get("core", "rollMode");
+		if (!options.rollMode) {
+			// only override if it's actually been set on the form (some rolls
+			// will have no form)
+			options.rollMode = $form
+				? this._getRollModeFromForm($form)
+				: game.settings.get("core", "rollMode");
+		}
 
 		// Roll the Dice
 		data.rolls = {
@@ -372,10 +376,15 @@ export default class RollSD extends Roll {
 		const dialogData = {
 			data,
 			title: options.title,
-			rollMode: game.settings.get("core", "rollMode"),
 			formula: Array.from(parts).join(" + "),
 			rollModes: CONFIG.Dice.rollModes,
+			rollMode: options.rollMode,
 		};
+
+		// If rollMode is already specified, don't override it
+		if (!dialogData.rollMode) {
+			dialogData.rollMode = game.settings.get("core", "rollMode");
+		}
 
 		return renderTemplate(dialogTemplate, dialogData);
 	}
@@ -575,7 +584,10 @@ export default class RollSD extends Roll {
 			chatData.sound = CONFIG.sounds.dice;
 		}
 
-		if (options.chatMessage !== false) ChatMessage.create(chatData);
+		if (options.chatMessage !== false) {
+			ChatMessage.applyRollMode(chatData, options.rollMode);
+			ChatMessage.create(chatData);
+		}
 
 		return data;
 	}

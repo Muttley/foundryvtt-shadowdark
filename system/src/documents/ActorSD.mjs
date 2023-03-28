@@ -591,11 +591,12 @@ export default class ActorSD extends Actor {
 		options.fastForward = true;
 		options.chatMessage = true;
 
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll");
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
