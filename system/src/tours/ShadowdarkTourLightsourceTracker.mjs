@@ -212,7 +212,7 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 			].includes(this.currentStep.id)
 		) {
 			// Add anchor to the div so we can find it later
-			$(`div.character-name:contains(${MOCK_ACTOR_NAME})`).parent().addClass('tourguideactor');
+			$(`div.character-name:contains(${MOCK_ACTOR_NAME})`).parent().addClass("tourguideactor");
 		}
 
 		if (this.currentStep.id === "sd-lightsourcetracker-open-actor-sheet") {

@@ -84,7 +84,7 @@ export default class ActorSheetSD extends ActorSheet {
 				result = true;
 			}
 			else {
-				result = this.actor.items.find(item => item._id === itemId)
+				result = game.user.character.items.find(item => item._id === itemId)
 					? true
 					: false;
 			}

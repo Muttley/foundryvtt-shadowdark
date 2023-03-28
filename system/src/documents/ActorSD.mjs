@@ -6,7 +6,6 @@ export default class ActorSD extends Actor {
 		// Some sensible token defaults for Actors
 		const prototypeToken = {
 			actorLink: false,
-			// disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
 			sight: {
 				enabled: false,
 			},
@@ -198,6 +197,17 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async changeLightSettings(lightData) {
+		const token = this.getCanvasToken();
+		if (token) token.document.update({light: lightData});
+
+		// Update the prototype as well
+		Actor.updateDocuments([{
+			_id: this._id,
+			"prototypeToken.light": lightData,
+		}]);
+	}
+
 	async getArmorClass() {
 		return await this.updateArmorClass();
 	}
@@ -210,7 +220,7 @@ export default class ActorSD extends Actor {
 	}
 
 	numGearSlots() {
-		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
+		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
 			const strength = this.system.abilities.str.value;
@@ -329,6 +339,10 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async hasActiveLightSources() {
+		return this.getActiveLightSources.length > 0;
+	}
+
 	async hasNoActiveLightSources() {
 		return this.getActiveLightSources.length <= 0;
 	}
@@ -356,7 +370,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -384,7 +397,6 @@ export default class ActorSD extends Actor {
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -439,14 +451,8 @@ export default class ActorSD extends Actor {
 	}
 
 	async toggleLight(active, itemId) {
-		const item = this.items.get(itemId);
-
-		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
-			item.system.light.template
-		];
-
 		if (active) {
-			this.turnLightOn(lightData);
+			this.turnLightOn(itemId);
 		}
 		else {
 			this.turnLightOff();
@@ -459,18 +465,17 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.turnLightOn(noLight);
+		this.changeLightSettings(noLight);
 	}
 
-	async turnLightOn(lightData) {
-		const token = this.getCanvasToken();
-		if (token) token.document.update({light: lightData});
+	async turnLightOn(itemId) {
+		const item = this.items.get(itemId);
 
-		// Update the prototype as well
-		Actor.updateDocuments([{
-			_id: this._id,
-			"prototypeToken.light": lightData,
-		}]);
+		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
+			item.system.light.template
+		];
+
+		this.changeLightSettings(lightData);
 	}
 
 	async updateArmor(updatedItem) {
@@ -514,7 +519,7 @@ export default class ActorSD extends Actor {
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
 
-		let baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
+		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
 
 		let newArmorClass = baseArmorClass;

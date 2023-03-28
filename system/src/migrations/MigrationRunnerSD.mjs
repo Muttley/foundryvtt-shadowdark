@@ -61,7 +61,7 @@ export default class MigrationRunnerSD {
 				// Save the entry if data was updated
 				if (foundry.utils.isEmpty(updateData)) continue;
 				await doc.update(updateData);
-				console.log(`Migrated ${documentName} document '${doc.name}' in Compendium '${pack.collection}'`);
+				shadowdark.log(`Migrated ${documentName} document '${doc.name}' in Compendium '${pack.collection}'`);
 			}
 			catch(err) {
 				err.message = `Failed Shadowdark system migration for document '${doc.name}' in pack '${pack.collection}': ${err.message}`;
@@ -72,7 +72,11 @@ export default class MigrationRunnerSD {
 		// Apply the original locked status for the pack
 		await pack.configure({locked: wasLocked});
 
-		console.log(`Migrated all '${documentName}' documents from Compendium '${pack.collection}'`);
+		shadowdark.log(`Migrated all '${documentName}' documents from Compendium '${pack.collection}'`);
+	}
+
+	async migrateSettings() {
+		await this.currentMigrationTask.updateSettings();
 	}
 
 	async migrateWorldCompendiums() {
@@ -100,7 +104,7 @@ export default class MigrationRunnerSD {
 				const updateData = await this.currentMigrationTask.updateActor(source);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					console.log(`Migrating Actor document '${actor.name}'`);
+					shadowdark.log(`Migrating Actor document '${actor.name}'`);
 					await actor.update(updateData);
 				}
 			}
@@ -127,7 +131,7 @@ export default class MigrationRunnerSD {
 				const updateData = this.currentMigrationTask.updateItem(source);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					console.log(`Migrating Item document '${item.name}'`);
+					shadowdark.log(`Migrating Item document '${item.name}'`);
 					item.update(updateData);
 				}
 			}
@@ -146,6 +150,7 @@ export default class MigrationRunnerSD {
 			{permanent: false}
 		);
 
+		await this.migrateSettings();
 		await this.migrateWorldActors();
 		await this.migrateWorldItems();
 		await this.migrateWorldCompendiums();

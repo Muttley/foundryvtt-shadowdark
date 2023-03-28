@@ -363,10 +363,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						i.system.light.remainingSecs / 60
 					);
 
-					i.lightSourceTimeRemaining = game.i18n.format(
-						"SHADOWDARK.inventory.item.light_remaining",
-						{ timeRemaining }
-					);
+					if (i.system.light.remainingSecs < 60) {
+						i.lightSourceTimeRemaining = game.i18n.localize(
+							"SHADOWDARK.inventory.item.light_seconds_remaining"
+						);
+					}
+					else {
+						i.lightSourceTimeRemaining = game.i18n.format(
+							"SHADOWDARK.inventory.item.light_remaining",
+							{ timeRemaining }
+						);
+					}
 				}
 
 				if (i.type === "Weapon" && i.system.equipped) {
@@ -394,7 +401,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const totalCoins = coins.gp + coins.sp + coins.cp;
 
 		let coinSlots = 0;
-		const freeCoins = CONFIG.SHADOWDARK.DEFAULTS.FREE_COIN_CARRY;
+		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
 		if (totalCoins > freeCoins) {
 			coinSlots = Math.ceil((totalCoins - freeCoins) / freeCoins);
 		}

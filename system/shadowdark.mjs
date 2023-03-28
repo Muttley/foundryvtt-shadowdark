@@ -3,6 +3,7 @@ import loadTemplates from "./src/templates.mjs";
 import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
+import log from "./src/utils/logging.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
@@ -21,8 +22,10 @@ import "./src/testing/index.mjs";
 globalThis.shadowdark = {
 	apps,
 	config: SHADOWDARK,
+	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
+	log,
 	sheets,
 };
 
@@ -39,7 +42,7 @@ Hooks.once("init", () => {
 		globalThis.shadowdark
 	);
 
-	console.log("Shadowdark RPG | Initialising the Shadowdark RPG Game System");
+	shadowdark.log("Initialising the Shadowdark RPG Game System");
 
 	game.shadowdark = {
 		config: SHADOWDARK,
@@ -95,7 +98,7 @@ Hooks.on("ready", () => {
 		new tours.ShadowdarkLightsourceTrackerTour()
 	);
 
-	console.log("Shadowdark RPG | Game Ready");
+	shadowdark.log("Game Ready");
 });
 
 /* -------------------------------------------- */
@@ -107,7 +110,7 @@ Hooks.on("ready", () => {
 // or the Canvas have been initialized.
 //
 Hooks.once("setup", () => {
-	console.log("Shadowdark RPG | Setup Hook");
+	shadowdark.log("Setup Hook");
 
 	// Localize all the strings in the game config in advance
 	//
