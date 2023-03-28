@@ -1,5 +1,5 @@
 SHADOWDARK.ability_cha: Kar
-SHADOWDARK.ability_charisma: Karisma
+SHADOWDARK.ability_charisma: Charisma
 SHADOWDARK.ability_con: Sit
 SHADOWDARK.ability_constitution: Sitkeys
 SHADOWDARK.ability_dex: Ket
@@ -71,7 +71,13 @@ SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.yes: "Kyllä"
-SHADOWDARK.dialog.hp_roll: Osumapisteheitto
+SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
+SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
+SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
+SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
+SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
+SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
+SHADOWDARK.dialog.hp_roll.title: HD Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Kykybonus
 SHADOWDARK.dialog.item_roll.item_bonus: Esinebonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Lahjakkuusbonus
@@ -214,6 +220,10 @@ SHADOWDARK.light-tracker.paused: Pausetettu
 SHADOWDARK.light-tracker.status.label: Statut
 SHADOWDARK.light-tracker.title.prefix: Valonlähteiden
 SHADOWDARK.light-tracker.title.suffix: seuranta
+SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
+SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
+SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.npc_attack.type.physical: Fyysinen
 SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
 SHADOWDARK.npc_move.double_near: '"Lähellä" etäisyys tuplana'
