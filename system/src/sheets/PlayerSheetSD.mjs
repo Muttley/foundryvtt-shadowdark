@@ -401,7 +401,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const totalCoins = coins.gp + coins.sp + coins.cp;
 
 		let coinSlots = 0;
-		const freeCoins = CONFIG.SHADOWDARK.DEFAULTS.FREE_COIN_CARRY;
+		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
 		if (totalCoins > freeCoins) {
 			coinSlots = Math.ceil((totalCoins - freeCoins) / freeCoins);
 		}

@@ -6,7 +6,6 @@ export default class ActorSD extends Actor {
 		// Some sensible token defaults for Actors
 		const prototypeToken = {
 			actorLink: false,
-			// disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
 			sight: {
 				enabled: false,
 			},
@@ -221,7 +220,7 @@ export default class ActorSD extends Actor {
 	}
 
 	numGearSlots() {
-		let gearSlots = CONFIG.SHADOWDARK.DEFAULTS.GEAR_SLOTS;
+		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
 			const strength = this.system.abilities.str.value;
@@ -520,7 +519,7 @@ export default class ActorSD extends Actor {
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
 
-		let baseArmorClass = CONFIG.SHADOWDARK.DEFAULTS.BASE_ARMOR_CLASS;
+		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
 
 		let newArmorClass = baseArmorClass;

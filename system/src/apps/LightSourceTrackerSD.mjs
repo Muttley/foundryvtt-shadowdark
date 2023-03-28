@@ -1,18 +1,20 @@
-const DEFAULT_UPDATE_INTERVAL_MINS = 60 * 1000;
 
 export default class LightSourceTrackerSD extends Application {
+
+	DEFAULT_UPDATE_INTERVAL =
+		shadowdark.defaults.LIGHT_TRACKER_UPDATE_INTERVAL_SECS * 1000;
 
 	constructor(object, options) {
 		super(object, options);
 
 		this.monitoredLightSources = [];
-		this.updateInterval = DEFAULT_UPDATE_INTERVAL_MINS;
+		this.updateInterval = this.DEFAULT_UPDATE_INTERVAL;
 		this.updateIntervalId = null;
 
 		this.lastUpdate = Date.now();
 		this.updatingLightSources = false;
 
-		this.housekeepingInterval = 1000;
+		this.housekeepingInterval = 1000; // 1 sec
 		this.housekeepingIntervalId = null;
 
 		this.dirty = true;
@@ -47,6 +49,8 @@ export default class LightSourceTrackerSD extends Application {
 			async event => {
 				event.preventDefault();
 
+				shadowdark.log("Turning out all the lights");
+
 				if (this.monitoredLightSources.length <= 0) return;
 
 				for (const actorData of this.monitoredLightSources) {
@@ -55,6 +59,8 @@ export default class LightSourceTrackerSD extends Application {
 					const actor = game.actors.get(actorData._id);
 
 					for (const itemData of actorData.lightSources) {
+						shadowdark.log(`Turning off ${actor.name}'s ${itemData.name} light source`);
+
 						actor.updateEmbeddedDocuments("Item", [{
 							_id: itemData._id,
 							"system.light.active": false,
@@ -91,6 +97,8 @@ export default class LightSourceTrackerSD extends Application {
 
 				const actor = game.actors.get(actorId);
 				const item = actor.getEmbeddedDocument("Item", itemId);
+
+				shadowdark.log(`Turning off ${actor.name}'s ${item.name} light source`);
 
 				const active = !item.system.light.active;
 
@@ -131,9 +139,8 @@ export default class LightSourceTrackerSD extends Application {
 		);
 
 		// Make sure we're actualled enable and are supposed to be running.
-		//
 		if (this._isDisabled()) {
-			console.log(`${this._logHeader()} Disabled in Settings`);
+			shadowdark.log("Light Tracker is disabled in settings");
 			return;
 		}
 
@@ -141,34 +148,30 @@ export default class LightSourceTrackerSD extends Application {
 		if (!game.user.isGM) return;
 
 		// Now we can actually start properly
-		//
-		console.log(`${this._logHeader()} Starting`);
+		shadowdark.log("Light Tracker starting");
 
 		// First get a list of all active light sources in the world
-		//
 		await this._gatherLightSources();
 
 		// Setup the housekeeping interval which will check for changes
 		// to lightsources
-		//
 		this.housekeepingIntervalId = setInterval(
 			this._updateLightSources.bind(this),
 			this.housekeepingInterval
 		);
 
 		// Now set up the timer interval used to update all light sources
-		//
-		const updateMins = game.settings.get(
+		const updateSecs = game.settings.get(
 			"shadowdark", "trackLightSourcesInterval"
 		);
 
-		this.updateInterval = updateMins * 60 * 1000 || DEFAULT_UPDATE_INTERVAL_MS;
+		this.updateInterval = updateSecs * 1000 || this.DEFAULT_UPDATE_INTERVAL;
 		this.updateIntervalId = setInterval(
 			this._performTick.bind(this),
 			this.updateInterval
 		);
 
-		console.log(`${this._logHeader()} Updating every ${updateMins} minutes.`);
+		shadowdark.log(`Updating light sources every ${updateSecs} seconds`);
 
 		if (game.settings.get("shadowdark", "trackLightSourcesOpen")) {
 			this.render(true);
@@ -208,13 +211,15 @@ export default class LightSourceTrackerSD extends Application {
 			return;
 		}
 
+		const status = item.system.light.active ? "on" : "off";
+
+		shadowdark.log(`Turning ${status} ${actor.name}'s ${item.name} light source`);
+
 		this._onToggleLightSource();
 	}
 
 	async _deleteActorHook(actor, options, userId) {
 		if (!(this._isEnabled() && game.user.isGM)) return;
-
-		console.log("_deleteActorHook");
 
 		if (actor.hasActiveLightSources()) this.dirty = true;
 	}
@@ -230,10 +235,10 @@ export default class LightSourceTrackerSD extends Application {
 		if (this.updatingLightSources) return;
 		if (!this.dirty) return;
 
-		this.dirty = false;
 		this.updatingLightSources = true;
+		this.dirty = false;
 
-		console.log(`${this._logHeader()} Checking for new/changed light sources`);
+		shadowdark.log("Checking for new/changed light sources");
 
 		this.monitoredLightSources = [];
 
@@ -293,10 +298,6 @@ export default class LightSourceTrackerSD extends Application {
 		return game.paused && this.pauseWithGame;
 	}
 
-	_logHeader() {
-		return `LightSourceTrackerSD | ${new Date().toISOString()} |`;
-	}
-
 	async _makeDirty() {
 		if (this._isEnabled() && game.user.isGM) this.dirty = true;
 	}
@@ -315,47 +316,47 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async _performTick() {
-		console.log(`${this._logHeader()} Performing Tick.`);
-
 		if (!(this._isEnabled() && game.user.isGM)) return;
-
 		if (this._isPaused()) return;
-
-		if (this.updatingLightSources) return; // Updating light sources
+		if (this.updatingLightSources) return;
 
 		this.performingTick = true;
 
+		shadowdark.log("Updating light sources");
+
 		const now = Date.now();
-		const elapsed = (now - this.lastUpdate) / 1000;
+		const elapsedSeconds = (now - this.lastUpdate) / 1000;
 
 		this.lastUpdate = now;
 
 		try {
 			for (const actorData of this.monitoredLightSources) {
-				console.log(`${this._logHeader()} Updating Light Sources for ${actorData.name}`);
+				const numLightSources = actorData.lightSources.length;
+
+				shadowdark.log(`Updating ${numLightSources} light sources for ${actorData.name}`);
 
 				for (const itemData of actorData.lightSources) {
 					const actor = await game.actors.get(actorData._id);
 
 					const light = itemData.system.light;
 
-					light.remainingSecs -= elapsed;
+					light.remainingSecs -= elapsedSeconds;
 
 					if (light.remainingSecs <= 0) {
-						console.log(`${this._logHeader()} Light Source '${itemData.name}' has expired.`);
+						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has expired`);
 
 						await actor.yourLightExpired(itemData._id);
 
-						await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+						actor.deleteEmbeddedDocuments("Item", [itemData._id]);
 					}
 					else {
-						console.log(`${this._logHeader()} Light Source '${itemData.name}' has ${light.remainingSecs}s remaining`);
+						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has ${Math.ceil(light.remainingSecs)} seconds remaining`);
 
 						const item = await actor.getEmbeddedDocument(
 							"Item", itemData._id
 						);
 
-						await item.update({
+						item.update({
 							"system.light.remainingSecs": light.remainingSecs,
 						});
 					}
@@ -365,11 +366,14 @@ export default class LightSourceTrackerSD extends Application {
 			this.render(false);
 		}
 		catch(error) {
-			console.log(`${this._logHeader()} An error ocurred: ${error}`);
+			shadowdark.log(`An error ocurred updating light sources: ${error}`);
 			console.error(error);
 		}
+		finally {
+			this.performingTick = false;
+		}
 
-		this.performingTick = false;
+		shadowdark.log("Finished updating light sources");
 	}
 
 	async _settingsChanged() {
