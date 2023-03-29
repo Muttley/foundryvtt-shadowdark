@@ -152,12 +152,35 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 		});
 	}
 
+	async _setSettings(settings) {
+		for (const [key, value] of Object.entries(settings)) {
+			await game.settings.set("shadowdark", key, value);
+		}
+	}
+
 	/**
    * Override _preStep to wait for elements to exist in the DOM
    */
 	async _preStep() {
+		if (!game.settings.get("shadowdark", "trackLightSources")) {
+			ui.notifications.info(
+				game.i18n.localize("SHADOWDARK.tours.lightsource.notification.not_enabled"),
+				{permanent: true}
+			);
+			await document.querySelector("button[data-action=configure]").click();
+			await delay(200);
+			await document.querySelector("a.category-tab[data-tab=system]").click();
+			await this.reset();
+			return this.exit();
+		}
+
 		const MOCK_ACTOR_NAME = "Ms Fire-guide";
 		const MOCK_USER = "The Tour Guide";
+		const TOUR_SETTINGS = {
+			trackLightSourcesOpen: false,
+			trackInactiveUserLightSources: true,
+			pauseLightTrackingWithGame: true,
+		};
 
 		if (this.currentStep.id === "sd-lightsourcetracker-goto-tracker") {
 			// Clean-up previous tours if we have restarted
@@ -188,6 +211,30 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 
 			// Go to chat
 			document.querySelector('a[data-tab="chat"]').click();
+
+			// Check if the tour was started the last 10 minutes, if it was, then do not
+			// re-record the original settings. Otherwise, store current settings with runtime data.
+			if (!(
+				game.world.flags.tours
+				&& game.world.flags.tours.lightSourceTracker
+				&& (game.world.flags.tours.lightSourceTracker.lastRun - Date.now()) < 10*60*1000
+			)) {
+				// Store data for the run
+				game.world.flags.tours = {
+					lightsourceTracker: {
+						lastRun: Date.now(),
+						schemaVersion: game.settings.get("shadowdark", "schemaVersion"),
+						originalSettings: {
+							trackLightSourcesOpen: game.settings.get("shadowdark", "trackLightSourcesOpen"),
+							trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
+							pauseLightTrackingWithGame: game.settings.get("shadowdark", "pauseLightTrackingWithGame"),
+						},
+					},
+				};
+			}
+
+			// Set the temporary settings
+			await this._setSettings(TOUR_SETTINGS);
 
 			// Render the lighttracker UI
 			if (!game.shadowdark.lightSourceTracker.rendered) {
@@ -231,6 +278,9 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 			await delay(200);
 			game.actors.filter(a => a.name === MOCK_ACTOR_NAME).forEach(a => a.delete());
 			game.users.find(u => u.name === MOCK_USER).delete();
+
+			// Restore the settings
+			await this._setSettings(game.world.flags.tours.lightsourceTracker.originalSettings);
 		}
 
 		await super._preStep();
