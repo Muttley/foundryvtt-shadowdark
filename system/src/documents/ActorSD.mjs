@@ -608,6 +608,14 @@ export default class ActorSD extends Actor {
 	}
 
 	async _playerRollHP(options={}) {
+		if (this.system.class === "") {
+			ui.notifications.error(
+				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
+				{permanent: false}
+			);
+			return;
+		}
+
 		const data = {
 			rollType: "hp",
 			actor: this,
