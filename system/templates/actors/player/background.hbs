@@ -14,6 +14,7 @@
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
 					<select name="system.class">
+						<option value="">&mdash;</option>
 						{{selectOptions config.CLASSES selected=system.class localize=false}}
 					</select>
 				</div>
@@ -50,6 +51,7 @@
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
 					<select name="system.alignment">
+						<option value="">&mdash;</option>
 						{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
 					</select>
 				</div>
