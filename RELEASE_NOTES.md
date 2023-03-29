@@ -1,3 +1,10 @@
+## v1.x.x
+
+### Bugfixes
+* [#232] Martin Rast got incorrect dex in the Pregen characters.
+
+### Enhancements
+
 ## v1.1.1
 
 ### Bugfixes
