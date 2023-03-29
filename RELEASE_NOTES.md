@@ -1,3 +1,10 @@
+## v1.x.x
+
+### Bugfixes
+* [#227] Reverted HP Rolling automation. Instead provides a "Apply HP Roll to max HP" button on the HP roll card. All HP modifications are now manual (except talent bonuses).
+
+### Enhancements
+
 ## v1.1.1
 
 ### Bugfixes

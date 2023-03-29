@@ -43,6 +43,13 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	async addToHpBase(hp) {
+		const currentHpBase = this.system.attributes.hp.base;
+		this.update({
+			"system.attributes.hp.base": currentHpBase + hp,
+		});
+	}
+
 	async buildNpcAttackDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 
@@ -627,82 +634,14 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
 
-		// Record original HP for the chatcard later
-		const originalHpMax = this.system.attributes.hp.max;
-		let hpRollLevels = this.system.flags.hpRollLevels;
-		const newHpRollLevels = [];
+		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
 
-		// If no HP rolls have been made, roll them all up to the player level
-		for (let lvl = 1; lvl <= this.system.level.value; lvl++) {
-			// Skip if this level already has been rolled
-			if ( hpRollLevels.length > 0 && hpRollLevels.find(o => o.level === lvl)) {
-				continue;
-			}
-
-			// Roll the dice
-			options.title = game.i18n.format("SHADOWDARK.dialog.hp_roll.per_level", {level: lvl});
-			const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
-			const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
-			if (!result) return;
-
-			// Parse and augment the roll
-			let additionalHP = parseInt(result.rolls.main.roll.result, 10);
-
-			if ( lvl === 1 ) {
-				additionalHP += this.abilityModifier("con");
-				additionalHP = Math.max(1, additionalHP);
-			}
-
-			// Record data of the roll
-			newHpRollLevels.push(
-				{
-					level: lvl,
-					hp: additionalHP,
-					chatCardData: (lvl === 1)
-						? game.i18n.format(
-							"SHADOWDARK.dialog.hp_roll.roll_level_1",
-							{hp: additionalHP}
-						)
-						: game.i18n.format(
-							"SHADOWDARK.dialog.hp_roll.roll_per_level",
-							{level: lvl, hp: additionalHP}
-						),
-				}
-			);
-		}
-
-		// Allow to roll HD if there is no new levels to roll HP for
-		if (newHpRollLevels.length === 0) {
-			const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
-			const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
-			return result;
-		}
-
-		// Concatenate arrays and sum the total HP
-		hpRollLevels = [...hpRollLevels, ...newHpRollLevels];
-		let sumHP = hpRollLevels.reduce((a, b) => a + b.hp, 0);
-
-		// Update the actor
+	async _applyHpRollToMax(value) {
+		const currentHpBase = this.system.attributes.hp.base;
 		await this.update({
-			"system.attributes.hp.base": sumHP,
-			"system.flags.hpRollLevels": hpRollLevels,
-		});
-
-		// Create chatcard for displaying the result of the roll, as well as the new total
-		const resultOptions = {
-			chatCardTemplate: "systems/shadowdark/templates/chat/roll-hp-diff.hbs",
-			title: game.i18n.localize("SHADOWDARK.dialog.hp_roll.summary"),
-			speaker: ChatMessage.getSpeaker({ actor: this }),
-			results: newHpRollLevels,
-			total: game.i18n.format("SHADOWDARK.dialog.hp_roll.sum_total", {total: this.system.attributes.hp.base + this.system.attributes.hp.bonus}),
-			previous: game.i18n.format("SHADOWDARK.dialog.hp_roll.previous_hp", {hp: originalHpMax}),
-			actor: this,
-		};
-
-		const chatCardContent = await renderTemplate(resultOptions.chatCardTemplate, resultOptions);
-		ChatMessage.create({
-			speaker: resultOptions.speaker,
-			content: chatCardContent,
+			"system.attributes.hp.base": currentHpBase + value,
 		});
 	}
 }
