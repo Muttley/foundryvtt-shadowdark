@@ -143,6 +143,8 @@ export default class ItemSheetSD extends ItemSheet {
 	_onArmorProperties(event) {
 		event.preventDefault();
 
+		if (!this.isEditable) return;
+
 		new shadowdark.apps.ArmorPropertiesSD(
 			this.item, {event: event}
 		).render(true);
@@ -150,6 +152,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	_onMagicItemTypeProperties(event) {
 		event.preventDefault();
+
+		if (!this.isEditable) return;
 
 		new shadowdark.apps.MagicItemEffectsSD(
 			this.item, {event: event}
@@ -159,6 +163,8 @@ export default class ItemSheetSD extends ItemSheet {
 	_onNpcAttackRanges(event) {
 		event.preventDefault();
 
+		if (!this.isEditable) return;
+
 		new shadowdark.apps.NpcAttackRangesSD(
 			this.item, {event: event}
 		).render(true);
@@ -166,6 +172,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	_onSpellCasterClasses(event) {
 		event.preventDefault();
+
+		if (!this.isEditable) return;
 
 		new shadowdark.apps.SpellCasterClassSD(
 			this.item, {event: event}
@@ -175,6 +183,8 @@ export default class ItemSheetSD extends ItemSheet {
 	_onTalentTypeProperties(event) {
 		event.preventDefault();
 
+		if (!this.isEditable) return;
+
 		new shadowdark.apps.TalentTypesSD(
 			this.item, {event: event}
 		).render(true);
@@ -182,6 +192,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	_onWeaponProperties(event) {
 		event.preventDefault();
+
+		if (!this.isEditable) return;
 
 		new shadowdark.apps.WeaponPropertiesSD(
 			this.item, {event: event}

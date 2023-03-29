@@ -43,6 +43,11 @@
 <div class="item-properties">
 	<div class="item-property">
 		<label>{{localize 'SHADOWDARK.item.properties'}}</label>
-		<p class="item-property-list armor">{{propertiesDisplay}}</p>
+		<p
+			class="item-property-list armor"
+			{{#unless editable}}disabled{{/unless}}
+		>
+			{{propertiesDisplay}}
+		</p>
 	</div>
 </div>
