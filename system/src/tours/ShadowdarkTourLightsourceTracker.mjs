@@ -164,7 +164,7 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 	async _preStep() {
 		if (!game.settings.get("shadowdark", "trackLightSources")) {
 			ui.notifications.info(
-				"You need to enable the Lightsource Tracker in settings to be able to run the Tour",
+				game.i18n.localize("SHADOWDARK.tours.lightsource.notification.not_enabled"),
 				{permanent: true}
 			);
 			await document.querySelector("button[data-action=configure]").click();
