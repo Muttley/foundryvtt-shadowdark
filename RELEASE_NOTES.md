@@ -1,3 +1,10 @@
+## v1.x.x
+
+### Bugfixes
+* [#221] Lightsource tracker tour now require the tracker to be on, otherwise warns. Also stores and restores original settings (assuming the user doesn't restart the world or the tour within a 10 minute interval).
+
+### Enhancements
+
 ## v1.1.0
 
 ### Bugfixes
