@@ -96,7 +96,7 @@
 		.magic-type {
 			background-color: var(--form-background);
 
-			&:hover {
+			&:not([disabled]):hover {
 				cursor: pointer;
 				box-shadow: 0 0 5px var(--color-shadow-primary);
 			}
@@ -384,7 +384,7 @@
 	}
 
 	.item-property-list {
-		&:hover {
+		&:not([disabled]):hover {
 			cursor: pointer;
 			box-shadow: 0 0 5px var(--color-shadow-primary);
 		}

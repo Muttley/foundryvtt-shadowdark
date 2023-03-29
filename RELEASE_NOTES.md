@@ -1,3 +1,10 @@
+## v1.1.1
+
+### Bugfixes
+* [#209] Items in locked system compediums partially editable
+* [#221] Lightsource tracker tour now require the tracker to be on, otherwise warns. Also stores and restores original settings (assuming the user doesn't restart the world or the tour within a 10 minute interval).
+* [#222] Rolling HP for a newly created 1st level character fails, if the class entry is left at the default
+
 ## v1.1.0
 
 ### Bugfixes
