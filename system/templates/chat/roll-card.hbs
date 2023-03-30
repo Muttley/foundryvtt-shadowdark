@@ -8,11 +8,4 @@
       <div>{{{data.rolls.main.renderedHTML}}}</div>
     {{/if}}
   </div>
-  {{#ifEq data.rollType "hp"}}
-  <div class="card-buttons hp">
-    <button data-action="apply-hp-to-max" data-value="{{data.rolls.main.roll.result}}">
-      {{localize "SHADOWDARK.chat.hp_roll.apply_to_max"}}
-    </button>
-  </div>
-  {{/ifEq}}
 </div>
