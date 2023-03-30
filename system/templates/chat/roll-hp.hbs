@@ -1,4 +1,4 @@
-<div class="shadowdark chat-card roll-card" data-actor-id="{{actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
+<div class="shadowdark chat-card roll-card" data-actor-id="{{data.actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
   <header class="card-header flexrow">
     <img src="{{data.actor.img}}" title="{{title}}"/>
     <h3 class="roll-name">{{title}}</h3>
@@ -8,7 +8,7 @@
       <div>{{{data.rolls.main.renderedHTML}}}</div>
     {{/if}}
   </div>
-  <div class="card-buttons">
+  <div class="card-buttons hp">
     <button data-action="apply-hp-to-max" data-value="{{data.rolls.main.roll.result}}">
       {{localize "SHADOWDARK.chat.hp_roll.apply_to_max"}}
     </button>
