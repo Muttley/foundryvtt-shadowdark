@@ -1,6 +1,7 @@
 ## v1.x.x
 
 ### Bugfixes
+* [#227] Reverted HP Rolling automation. Instead provides a "Apply HP Roll to max HP" button on the HP roll card. All HP modifications are now manual (except talent bonuses).
 * [#232] Martin Rast got incorrect dex in the Pregen characters.
 
 ### Enhancements

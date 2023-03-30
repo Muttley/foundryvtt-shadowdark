@@ -1,7 +1,7 @@
-import onRenderchatMessage from "../chat/hooks.mjs";
+import onRenderChatMessage from "../chat/hooks.mjs";
 
 export const ChatMessageHooks = {
 	attach: () => {
-		Hooks.on("renderChatMessage", onRenderchatMessage);
+		Hooks.on("renderChatMessage", (app, html, data) => onRenderChatMessage(app, html, data));
 	},
 };
