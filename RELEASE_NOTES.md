@@ -1,6 +1,7 @@
 ## v1.x.x
 
 ### Bugfixes
+* [#232] Martin Rast got incorrect dex in the Pregen characters.
 
 ### Enhancements
 * [#234] Added finding the Macro for the lightsource tracker tour.
