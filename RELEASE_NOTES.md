@@ -1,3 +1,10 @@
+## v1.x.x
+
+### Bugfixes
+
+### Enhancements
+* [#234] Added finding the Macro for the lightsource tracker tour.
+
 ## v1.1.1
 
 ### Bugfixes

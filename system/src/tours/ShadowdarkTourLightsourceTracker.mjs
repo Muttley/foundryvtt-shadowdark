@@ -92,6 +92,27 @@ export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 					action: "scrollTo",
 				},
 				{
+					id: "sd-lightsourcetracker-macro-sidebar",
+					selector: "a.item[data-tab=compendium]",
+					title: "Compendium",
+					content: "<p>In case you close the Lightsource Tracker UI by mistake and want to get it back, you need to head to the Macro compendium.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-lightsourcetracker-macro-compendium-click",
+					selector: "li.compendium-pack[data-pack='shadowdark.macros']",
+					title: "Macro Compendium",
+					content: "<p>By opening the Macro Compendium, you can find various macros for Shadowdark RPG.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-lightsourcetracker-macro",
+					selector: "li[data-document-id=VgfWt2xWzYJyVMbA]",
+					title: "Lightsource Tracker Macro",
+					content: "<p>This macro you can drag to the hotbar if you want a convenient way of accessing the Lightsource Tracker UI.</p>",
+					action: "scrollTo",
+				},
+				{
 					id: "sd-lightsourcetracker-goto-settings",
 					selector: "button[data-action=configure]",
 					title: "Go to Settings",
