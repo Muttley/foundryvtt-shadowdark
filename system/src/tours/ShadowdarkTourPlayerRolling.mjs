@@ -2,7 +2,7 @@
  * @file defines the system user guide tour
  */
 import ShadowdarkTour from "./ShadowdarkTour.mjs";
-import { closeDialogs, delay } from "../testing/testUtils.mjs";
+import { closeDialogs, delay, waitForInput } from "../testing/testUtils.mjs";
 
 export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 	constructor() {
@@ -91,6 +91,13 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					action: "click",
 				},
 				{
+					id: "sd-playerroll-hp-dialog",
+					selector: ".dialog",
+					title: "Rolling HD Dialog",
+					content: "<p>This is the dialog for rolling HP / HD.</p>",
+					action: "scrollTo",
+				},
+				{
 					id: "sd-playerroll-hp-normal",
 					selector: "button.normal",
 					title: "Rolling HD: Normal",
@@ -99,8 +106,15 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-hp-roll-message",
-					selector: ".message:last-child button[data-action='apply-hp-to-max']",
+					selector: ".message:last-child",
 					title: "HP Chat Card",
+					content: "<p>The HP card is slightly different, as it has a button.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-hp-roll-message-button",
+					selector: ".message:last-child button[data-action='apply-hp-to-max']",
+					title: "HP Chat Card: Button",
 					content: "<p>The HP card has a button that allows you to add the roll result to your maximum HP if you want to.</p>",
 					action: "scrollTo",
 				},
@@ -138,6 +152,13 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					title: "Cast Spell",
 					content: "<p>Clicking the <b>wand</b> icon will give you a cast dialog and cast the spell.</p>",
 					action: "click",
+				},
+				{
+					id: "sd-playerroll-hp-dialog",
+					selector: ".dialog",
+					title: "Rolling Spell Dialog",
+					content: "<p>This is the dialog for rolling a spell.</p>",
+					action: "scrollTo",
 				},
 				{
 					id: "sd-playerroll-spells-spell-roll-talent",
@@ -187,6 +208,13 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					title: "Rolling Weapon",
 					content: "<p>Clicking the icon will ask you to roll the item.</p>",
 					action: "click",
+				},
+				{
+					id: "sd-playerroll-items-dialog",
+					selector: ".dialog",
+					title: "Roll Weapon Dialog",
+					content: "<p>The Roll Weapon dialog has more options than the previous ones.</p>",
+					action: "scrollTo",
 				},
 				{
 					id: "sd-playerroll-items-dialog-item-bonus",
@@ -313,14 +341,17 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			// Delay so the UI has time to catch up
 			await tourActor.sheet.render(true);
 			await delay(200);
+		}
 
+		if (this.currentStep.selector.includes(".message")) {
+			await waitForInput();
 		}
 
 		if (this.currentStep === "sd-playerroll-hp") {
 			await closeDialogs();
 		}
 
-		if (this.currentStep.id === "sd-lightsourcetracker-end-tour") {
+		if (this.currentStep.id === "sd-playerroll-end-tour") {
 			await $("#client-settings a.close").click();
 			await $("#settings button[data-action=tours]").click();
 			await delay(200);
