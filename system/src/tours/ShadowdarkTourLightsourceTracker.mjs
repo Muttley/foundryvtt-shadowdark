@@ -1,11 +1,10 @@
-/* eslint-disable no-underscore-dangle */
 /**
- * @file defines the system user guide tour
+ * @file Defines the Guided Tour for the Lightsource Tracker
  */
 import ShadowdarkTour from "./ShadowdarkTour.mjs";
 import { delay } from "../testing/testUtils.mjs";
 
-export default class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
+export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 	constructor() {
 		super({
 			title: "Lightsource Tracking: How it works",
