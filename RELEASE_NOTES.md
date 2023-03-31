@@ -1,6 +1,7 @@
 ## V1.x.x
 
 ### Bugfixes
+* [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
 
 ### Enhancements
 * [#241] Adds end to end testing for Lightsource Tracker

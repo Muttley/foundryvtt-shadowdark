@@ -384,8 +384,9 @@ export default class LightSourceTrackerSD extends Application {
 		);
 
 		if (this._isEnabled()) {
-			this._gatherLightSources();
-			this.render();
+			this.dirty = true;
+			await this._updateLightSources();
+			this.render(true);
 		}
 		else {
 			this.close();
