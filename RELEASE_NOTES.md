@@ -1,8 +1,10 @@
 ## V1.x.x
 
 ### Bugfixes
+* [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
 
 ### Enhancements
+* [#235] Allow opening of character sheet by clicking on portrait on light tracker
 * [#241] Adds end to end testing for Lightsource Tracker
 * [#242] Adds a guided tour for rolling from the Player character sheet
 
