@@ -4,6 +4,7 @@
 
 ### Enhancements
 * [#241] Adds end to end testing for Lightsource Tracker
+* [#242] Adds a guided tour for rolling from the Player character sheet
 
 ## v1.1.2
 
