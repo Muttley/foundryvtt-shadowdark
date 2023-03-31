@@ -8,8 +8,25 @@ export const delay = ms =>
 		setTimeout(resolve, ms);
 	});
 
-export const abilities = ["str", "dex", "con", "int", "wis", "cha"];
-export const itemTypes = ["Armor", "Basic", "Gem", "Spell", "Talent", "Weapon"];
+export const abilities = [
+	"str",
+	"dex",
+	"con",
+	"int",
+	"wis",
+	"cha",
+];
+
+export const itemTypes = [
+	"Armor",
+	"Basic",
+	"Gem",
+	"Spell",
+	"Talent",
+	"Weapon",
+	"NPC Attack",
+	"NPC Feature",
+];
 
 export const waitForInput = () => delay(inputDelay);
 
@@ -28,6 +45,12 @@ export const createMockItemByKey = async (key, type) => {
 	});
 };
 
+export const createMockUserByKey = async key => {
+	return User.create({
+		name: `Test User ${key}`,
+	});
+};
+
 /* CLEAN UP HELPERS */
 export const cleanUpActorsByKey = key => {
 	game.actors
@@ -39,6 +62,12 @@ export const cleanUpItemsByKey = key => {
 	game.items
 		?.filter(i => i.name.includes(`Test Item ${key}:`))
 		.forEach(i => i.delete());
+};
+
+export const cleanUpUsersByKey = key => {
+	game.users
+		?.filter(u => u.name === `Test User ${key}`)
+		.forEach(u => u.delete());
 };
 
 /**
@@ -68,5 +97,12 @@ export const openDialogs = () =>
 export const closeDialogs = async () => {
 	openDialogs()?.forEach(async o => {
 		await o.close();
+	});
+};
+
+/* HELPERS */
+export const assignActorToUser = async (actor, user) => {
+	return user.update({
+		character: actor.id,
 	});
 };

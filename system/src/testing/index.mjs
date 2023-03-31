@@ -118,6 +118,12 @@ import documentsItemsTests, {
 	options as documentsItemsOptions,
 } from "../documents/__tests__/documents-item.test.mjs";
 
+/* E2E Tests */
+import e2eAppsLightsourceTrackerTests, {
+	key as e2eAppsLightsourceTrackerKey,
+	options as e2eAppsLightsourceTrackerOptions,
+} from "../apps/__tests__/e2e-apps-lightsource-tracker.test.mjs";
+
 /* Hooks Imports */
 import hooksChatMessageTests, {
 	key as hooksChatMessageKey,
@@ -234,6 +240,13 @@ Hooks.on("quenchReady", async quench => {
 		appsWeaponPropertiesKey,
 		appsWeaponPropertiesTests,
 		appsWeaponPropertiesOptions
+	);
+
+	// E2E Apps test
+	quench.registerBatch(
+		e2eAppsLightsourceTrackerKey,
+		e2eAppsLightsourceTrackerTests,
+		e2eAppsLightsourceTrackerOptions
 	);
 
 	// Chat test
