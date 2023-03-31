@@ -1,3 +1,10 @@
+## V1.x.x
+
+### Bugfixes
+
+### Enhancements
+* [#241] Adds end to end testing for Lightsource Tracker
+
 ## v1.1.2
 
 ### Bugfixes
