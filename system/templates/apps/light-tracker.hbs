@@ -35,7 +35,10 @@
 	<section class="light-source-grid">
 		{{#each monitoredLightSources as |actor|}}
 			<div class="character">
-				<div class="character-portrait">
+				<div
+					class="character-portrait"
+					data-actor-id="{{actor._id}}"
+				>
 					<img
 						src="{{actor.img}}"
 						title="{{actor.name}}"
