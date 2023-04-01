@@ -188,6 +188,14 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					content: "<p>For Magic Missile we get the chance to roll a 1d4 damage.</p>",
 					action: "scrollTo",
 				},
+
+				{
+					id: "sd-playerroll-spells-miscast",
+					selector: ".player a.toggle-spell-lost",
+					title: "Lost Spell",
+					content: "<p>If a spell is lost due to failed spell cast, clicking the cross will restore it.</p>",
+					action: "scrollTo",
+				},
 				{
 					id: "sd-playerroll-items-navigate",
 					selector: "a.item[data-tab='tab-inventory']",
