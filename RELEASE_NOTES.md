@@ -7,6 +7,7 @@
 * [#235] Allow opening of character sheet by clicking on portrait on light tracker
 * [#241] Adds end to end testing for Lightsource Tracker
 * [#242] Adds a guided tour for rolling from the Player character sheet
+* [#248] Adds a guided tour for importing the Lost Citadel of the Scarlet Minotaur into the world
 
 ## v1.1.2
 
