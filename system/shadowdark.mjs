@@ -10,7 +10,7 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { HooksSD } from "./src/hooks.mjs";
+import { HooksSD, HooksInitSD } from "./src/hooks.mjs";
 import { ToursSD } from "./src/tours.mjs";
 
 import "./src/testing/index.mjs";
@@ -77,6 +77,9 @@ Hooks.once("init", () => {
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.item",
 	});
+
+	// Attack init hooks
+	HooksInitSD.attach();
 });
 
 /* -------------------------------------------- */
