@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
+* [#249] Some default token sizes not corrent in monster pack
 
 ### Enhancements
 * [#235] Allow opening of character sheet by clicking on portrait on light tracker
