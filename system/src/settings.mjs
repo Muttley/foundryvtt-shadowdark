@@ -1,3 +1,5 @@
+import { ModuleArtConfig } from "./utils/module-art.mjs";
+
 /**
  * Register all of the system"s settings.
  */
@@ -13,6 +15,32 @@ export default function registerSystemSettings() {
 		config: false,
 		type: Number,
 		default: 0,
+	});
+
+	// -----------------
+	//  DYNAMIC ARTWORK
+	// -----------------
+	//
+	game.settings.registerMenu("shadowdark", "moduleArtConfiguration", {
+		name: "SHADOWDARK.settings.module_art.name",
+		label: "SHADOWDARK.settings.module_art.label",
+		hint: "SHADOWDARK.settings.module_art.hint",
+		icon: "fa-solid fa-palette",
+		type: ModuleArtConfig,
+		restricted: true,
+	});
+
+	game.settings.register("shadowdark", "moduleArtConfiguration", {
+		name: "Module Art Configuration",
+		scope: "world",
+		config: false,
+		type: Object,
+		default: {
+			shadowdark: {
+				portraits: true,
+				tokens: true,
+			},
+		},
 	});
 
 	// ------------------------

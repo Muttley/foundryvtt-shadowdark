@@ -10,8 +10,9 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { HooksSD } from "./src/hooks.mjs";
-import { ToursSD } from "./src/tours.mjs";
+import {ModuleArt} from "./src/utils/module-art.mjs";
+import {HooksSD} from "./src/hooks.mjs";
+import {ToursSD} from "./src/tours.mjs";
 
 import "./src/testing/index.mjs";
 
@@ -57,6 +58,8 @@ Hooks.once("init", () => {
 	registerHandlebarsHelpers();
 	registerSystemSettings();
 	loadTemplates();
+
+	game.shadowdark.moduleArt = new ModuleArt();
 
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
@@ -105,6 +108,8 @@ Hooks.on("ready", () => {
 //
 Hooks.once("setup", () => {
 	shadowdark.log("Setup Hook");
+
+	game.shadowdark.moduleArt.registerModuleArt();
 
 	// Localize all the strings in the game config in advance
 	//

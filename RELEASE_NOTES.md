@@ -5,6 +5,7 @@
 * [#249] Some default token sizes not corrent in monster pack
 
 ### Enhancements
+* [#170] Dynamically use tokens from the PF2e Bestiary module if users have it installed/enabled (also provides support for additional token packs in the future)
 * [#235] Allow opening of character sheet by clicking on portrait on light tracker
 * [#241] Adds end to end testing for Lightsource Tracker
 * [#242] Adds a guided tour for rolling from the Player character sheet
