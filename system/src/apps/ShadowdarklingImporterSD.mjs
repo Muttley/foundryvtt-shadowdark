@@ -101,16 +101,18 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		if (json.gear.length === 0) return items;
 
 		json.gear.forEach(async item => {
-			const armor = await this._findInCompendium(item.name, "shadowdark.armor");
-			if (armor) items.push(armor);
-			const weapon = await this._findInCompendium(item.name, "shadowdark.weapons");
-			if (weapon) items.push(weapon);
-			const basic = (item.name.includes("Caltrops"))
-				? await this._findInCompendium("Caltrops", "shadowdark.basic-gear")
-				: (item.name.includes("Flask"))
-					? await this._findInCompendium("Flask", "shadowdark.basic-gear")
-					: await this._findInCompendium(item.name, "shadowdark.basic-gear");
-			if (basic) items.push(basic);
+			for (let i = 1; i <= item.quantity; i++) {
+				const armor = await this._findInCompendium(item.name, "shadowdark.armor");
+				if (armor) items.push(armor);
+				const weapon = await this._findInCompendium(item.name, "shadowdark.weapons");
+				if (weapon) items.push(weapon);
+				const basic = (item.name.includes("Caltrops"))
+					? await this._findInCompendium("Caltrops", "shadowdark.basic-gear")
+					: (item.name.includes("Flask"))
+						? await this._findInCompendium("Flask", "shadowdark.basic-gear")
+						: await this._findInCompendium(item.name, "shadowdark.basic-gear");
+				if (basic) items.push(basic);
+			}
 		});
 
 		return items;
