@@ -5,6 +5,7 @@ import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import log from "./src/utils/logging.mjs";
 
+import * as chat from "./src/chat/_module.mjs";
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
@@ -97,6 +98,8 @@ Hooks.on("ready", () => {
 
 	HooksSD.attach();
 	ToursSD.register();
+
+	chat.messages.welcomeMessage();
 
 	shadowdark.log("Game Ready");
 });
