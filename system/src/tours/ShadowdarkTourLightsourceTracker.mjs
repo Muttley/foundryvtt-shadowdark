@@ -157,7 +157,7 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 					id: "sd-lightsourcetracker-settings-track-intervall",
 					selector: "input[name='shadowdark.trackLightSourcesInterval']",
 					title: "Update frequency",
-					content: "<p>This slider will select how often the lightsources should be updated</p>\n<p>The number indicated the number of minutes between updates</p>",
+					content: "<p>This slider will select how often the lightsources should be updated</p>\n<p>The number indicates the number of seconds between updates</p>",
 					action: "scrollTo",
 				},
 				{

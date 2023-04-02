@@ -6,6 +6,7 @@
 * [#259] Implements Armor Mastery talents properly
 * [#261] Create Item button tooltips not working on character and NPC sheets
 * [#265] Always shows the properties field for magic items and talents
+* [#267] Typo in lightsource tour step 21
 
 ### Enhancements
 * [#147] Hide Spells tab on character sheet for classes that cannot cast.
