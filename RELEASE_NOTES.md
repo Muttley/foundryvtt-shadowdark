@@ -6,7 +6,7 @@
 
 ### Enhancements
 * [#147] Hide Spells tab on character sheet for classes that cannot cast.
-* [#170] Dynamically use tokens from the PF2e Bestiary module if users have it installed/enabled (also provides support for additional token packs in the future).  Requires the [https://foundryvtt.com/packages/pf2e-tokens-bestiaries](Pathfinder Token Pack: Bestiaries) module.
+* [#170] Dynamically use tokens from the PF2e Bestiary module if users have it installed/enabled (also provides support for additional token packs in the future).  Requires v1.0.5 or higher of the [https://foundryvtt.com/packages/pf2e-tokens-bestiaries](Pathfinder Token Pack: Bestiaries) module.
 * [#187] Disable Fog Exploration on The Lost Citadel map
 * [#235] Allow opening of character sheet by clicking on portrait on light tracker
 * [#241] Adds end to end testing for Lightsource Tracker
