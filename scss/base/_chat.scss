@@ -83,8 +83,12 @@
   }
 }
 
+.shadowdark.welcome-message img {
+		background: var(--secondary);
+}
+
 .shadowdark.welcome-message {
-  .message-content {
+  &.message-content {
     p {
       padding: 3px 0 3px;
     }
