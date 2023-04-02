@@ -79,14 +79,6 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 				});
 				break;
 			}
-			case "armorBonus": {
-				changes.push({
-					key: "system.bonuses.acBonus",
-					value: 1,
-					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-				});
-				break;
-			}
 			case "armorMastery": {
 				changes.push({
 					key: "system.bonuses.armorMastery",
