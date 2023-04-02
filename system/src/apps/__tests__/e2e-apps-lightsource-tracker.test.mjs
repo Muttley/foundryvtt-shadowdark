@@ -29,6 +29,14 @@ export default ({ describe, it, after, before, expect }) => {
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
 	};
 
+	before(async () => {
+		await game.shadowdark.lightSourceTracker.close();
+		await delay(300);
+
+		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
+		await delay(300);
+	});
+
 	after(async () => {
 		for (const [key, value] of Object.entries(originalSettings)) {
 			await game.settings.set(
@@ -36,6 +44,8 @@ export default ({ describe, it, after, before, expect }) => {
 			);
 		}
 		game.togglePause(wasPaused);
+		await waitForInput();
+		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
 	});
 
 	describe("render(force, options)", () => {
