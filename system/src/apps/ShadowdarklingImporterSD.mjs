@@ -25,20 +25,6 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return `${title}`;
 	}
 
-	/** @inheritdoc */
-	activeListeners(html) {
-		super.activeListeners(html);
-
-		// Import button
-		html.find(".shadowdarkling-importer .import").click( async event => {
-			event.preventDefault();
-			shadowdark.log("Importing a Shadowdarkling");
-
-			const jsonData = html.find("textarea").innerHTML();
-			return console.log(jsonData);
-		});
-	}
-
 	_updateObject(event, formData) {
 		event.preventDefault();
 
