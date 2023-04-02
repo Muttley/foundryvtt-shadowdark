@@ -272,6 +272,7 @@ SHADOWDARK.TALENT_CLASSES = {
 SHADOWDARK.TALENT_TYPES = {
 	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
 	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
+	armorMastery: "SHADOWDARK.talent.type.armor_mastery",
 	backstabDie: "SHADOWDARK.talent.type.backstab_die",
 	hpAdvantage: "SHADOWDARK.talent.type.advantage.hp",
 	initAdvantage: "SHADOWDARK.talent.type.advantage.initiative",

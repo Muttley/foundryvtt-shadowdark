@@ -22,6 +22,7 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 			case "rangedAttackBonus": return "icons/weapons/ammunition/arrow-head-war-flight.webp";
 			case "meleeDamageBonus": return "icons/skills/melee/strike-axe-blood-red.webp";
 			case "rangedDamageBonus": return "icons/skills/melee/strike-axe-blood-red.webp";
+			case "armorMastery": return "icons/magic/defensive/shield-barrier-deflect-teal.webp";
 			case "armorBonus": return "icons/magic/defensive/shield-barrier-deflect-teal.webp";
 			case "spellBonus": return "icons/magic/fire/flame-burning-fist-strike.webp";
 			case "hpAdvantage": return "icons/magic/life/cross-area-circle-green-white.webp";
@@ -81,6 +82,14 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 			case "armorBonus": {
 				changes.push({
 					key: "system.bonuses.acBonus",
+					value: 1,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				});
+				break;
+			}
+			case "armorMastery": {
+				changes.push({
+					key: "system.bonuses.armorMastery",
 					value: 1,
 					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 				});

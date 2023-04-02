@@ -89,6 +89,7 @@
 			"bonuses": {
 				"acBonus": 0,
 				"advantage": [],
+				"armorMastery": [],
 				"weaponMastery": [],
 				"meleeAttackBonus": 0,
 				"meleeDamageBonus": 0,
@@ -178,7 +179,8 @@
 				"remainingSecs": 3600,
 				"template": "torch"
 			},
-			"treasure": false
+			"treasure": false,
+			"scroll": false
 		},
 		"Gem": {
 			"templates": [

@@ -3,7 +3,9 @@
 ### Bugfixes
 * [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
 * [#249] Some default token sizes not corrent in monster pack
+* [#259] Implements Armor Mastery talents properly
 * [#261] Create Item button tooltips not working on character and NPC sheets
+* [#265] Always shows the properties field for magic items and talents
 
 ### Enhancements
 * [#147] Hide Spells tab on character sheet for classes that cannot cast.

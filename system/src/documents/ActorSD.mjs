@@ -534,6 +534,7 @@ export default class ActorSD extends Actor {
 		baseArmorClass += dexModifier;
 
 		let newArmorClass = baseArmorClass;
+		let armorMasteryBonus = 0;
 
 		const equippedArmor = this.items.filter(
 			item => item.type === "Armor" && item.system.equipped
@@ -544,10 +545,17 @@ export default class ActorSD extends Actor {
 			for (let i = 0; i < equippedArmor.length; i++) {
 				const armor = equippedArmor[i];
 
-				if (armor.isNotAShield()) nonShieldEquipped = true;
+				if (armor.isNotAShield()) {
+					nonShieldEquipped = true;
+					if (
+						this.system.bonuses.armorMastery.includes(armor.name.slugify())
+						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+					) armorMasteryBonus += 1;
+				}
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
+				newArmorClass += armorMasteryBonus;
 
 				const attribute = armor.system.ac.attribute;
 				if (attribute) {
