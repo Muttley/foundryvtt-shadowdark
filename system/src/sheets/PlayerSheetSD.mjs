@@ -83,6 +83,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.armorClass = await this.actor.getArmorClass();
 
+		context.isSpellcaster = await this.actor.isSpellcaster();
+		context.showSpellsTab = context.isSpellcaster || this.actor.system.class === "";
+
 		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
 
