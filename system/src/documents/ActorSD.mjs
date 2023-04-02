@@ -555,7 +555,6 @@ export default class ActorSD extends Actor {
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
-				newArmorClass += armorMasteryBonus;
 
 				const attribute = armor.system.ac.attribute;
 				if (attribute) {
@@ -565,6 +564,8 @@ export default class ActorSD extends Actor {
 
 			// Someone with no armor but a shield equipped
 			if (!nonShieldEquipped) newArmorClass += baseArmorClass;
+
+			newArmorClass += armorMasteryBonus;
 		}
 
 		Actor.updateDocuments([{
