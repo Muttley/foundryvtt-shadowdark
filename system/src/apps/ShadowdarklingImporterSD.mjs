@@ -198,7 +198,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				}
 				if (bonus.name === "ArmorMastery") {
 					talents.push(
-						await this._findInCompendium("Armor Mastery", "shadowdark.talents")
+						await this._findInCompendium(`Armor Mastery (${bonus.bonusTo})`, "shadowdark.talents")
 					);
 				}
 				// Thief
