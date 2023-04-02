@@ -113,6 +113,45 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		return context;
 	}
 
+	/** @inheritdoc */
+	async _onDropItem(event, data) {
+		switch ( data.type ) {
+			case "Item":
+				return this._onDropItemSD(event, data);
+		}
+		super._onDropItem(event, data);
+	}
+
+	/**
+	 * Checks if the dropped item should be handled in a special way
+	 * @param {Event} event - The triggering event
+	 * @param {object} data - Contains the type of dropped item, and the uuid
+	 * @returns {Promise<any>}
+	 */
+	async _onDropItemSD(event, data) {
+		const item = await fromUuid(data.uuid);
+		const activeTab = $(document).find(".player section.active").data("tab");
+
+		// Spells dropped on the inventory should create spell scrolls instead of spells
+		if (item.type === "Spell" && activeTab === "tab-inventory") return this._createScroll(item);
+
+		super._onDropItem(event, data);
+	}
+
+	async _createScroll(spell) {
+		const scroll = {
+			type: "Basic",
+			img: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+			name: `Spell Scroll: ${spell.name}`,
+			system: {
+				description: `<p>@UUID[${spell.uuid}]</p>`,
+				treasure: true,
+				scroll: true,
+			},
+		};
+		super._onDropItemCreate(scroll);
+	}
+
 	async _onItemQuantityDecrement(event) {
 		event.preventDefault();
 
