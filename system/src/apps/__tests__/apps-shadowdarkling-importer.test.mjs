@@ -737,9 +737,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					gearId: "w2",
 					name: "Club",
 					type: "weapon",
-					quantity: 3,
-					totalUnits: 3,
-					slots: 3,
+					quantity: 1,
+					totalUnits: 1,
+					slots: 1,
 					cost: 15,
 					currency: "cp",
 				},
@@ -792,9 +792,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					gearId: "w7",
 					name: "Javelin",
 					type: "weapon",
-					quantity: 2,
-					totalUnits: 2,
-					slots: 2,
+					quantity: 1,
+					totalUnits: 1,
+					slots: 1,
 					cost: 10,
 					currency: "sp",
 				},
@@ -887,6 +887,27 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					currency: "gp",
 				},
 			];
+
+			it("higher quantity creates more items", async () => {
+				json.gear = [
+					{
+						instanceId: "lfxz8q7y",
+						gearId: "w15",
+						name: "Warhammer",
+						type: "weapon",
+						quantity: 2,
+						totalUnits: 2,
+						slots: 2,
+						cost: 10,
+						currency: "gp",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.items.contents.length).equal(2);
+				expect(actor.items.contents[0].name).equal("Warhammer");
+				expect(actor.items.contents[1].name).equal("Warhammer");
+				await actor.delete();
+			});
 
 			weapons.forEach(weapon => {
 				it(`${weapon.name} is successfully added`, async () => {
