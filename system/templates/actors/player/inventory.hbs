@@ -13,7 +13,7 @@
 						<th>
 							<a
 								class="item-control item-create"
-								title="{{localize SHADOWDARK.inventory.create_item}}"
+								title="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type=section.label}}"
 								{{#ifEq sid "treasure"}}
 									data-item-type="Basic"
 									data-item-treasure=true
@@ -33,7 +33,7 @@
 						<tr class="item" data-item-id="{{item._id}}" draggable="true">
 							<td>
 								<div
-									class="item-image 
+									class="item-image
 									{{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}
 									{{#if item.system.scroll }}item-rollable{{/if}}
 									"
