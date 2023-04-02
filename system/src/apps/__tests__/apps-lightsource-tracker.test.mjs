@@ -3,6 +3,7 @@
  * @file Contains tests for the Lightsource Tracker app
  */
 
+import { waitForInput } from "../../testing/testUtils.mjs";
 import LightSourceTrackerSD from "../LightSourceTrackerSD.mjs";
 
 export const key = "shadowdark.apps.lightsource-tracker";
@@ -11,7 +12,7 @@ export const options = {
 	preSelected: true,
 };
 
-export default ({ describe, it, after, beforeEach, before, expect }) => {
+export default ({ describe, it, after, expect }) => {
 	const originalSettings = {
 		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
@@ -25,6 +26,8 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 			);
 		}
 		game.togglePause(wasPaused);
+		await waitForInput();
+		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
 	});
 
 	describe("constructor(object, options)", () => {
