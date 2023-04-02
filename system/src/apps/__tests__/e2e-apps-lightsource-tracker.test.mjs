@@ -30,10 +30,7 @@ export default ({ describe, it, after, before, expect }) => {
 	};
 
 	before(async () => {
-		await game.shadowdark.lightSourceTracker.close();
-		await delay(300);
-
-		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
+		openWindows("light-tracker").forEach(async w => await w.close());
 		await delay(300);
 	});
 
@@ -45,7 +42,7 @@ export default ({ describe, it, after, before, expect }) => {
 		}
 		game.togglePause(wasPaused);
 		await waitForInput();
-		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
+		openWindows("light-tracker").forEach(async w => await w.close());
 	});
 
 	describe("render(force, options)", () => {
@@ -53,20 +50,14 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("toggleInterface()", () => {
-		before(async () => {
-			await game.shadowdark.lightSourceTracker.close();
-			await delay(300);
-		});
-
 		it("renders for GM on toggle", async () => {
 			// Assume the window is the currently open window
 			const pre = openWindows("light-tracker");
 			expect(pre.length).equal(0);
 
 			await game.shadowdark.lightSourceTracker.toggleInterface();
-			await waitForInput();
-			const post = openWindows("light-tracker");
-			expect(post.length).equal(1);
+			await delay(300);
+			expect(openWindows("light-tracker").length).equal(1);
 		});
 
 		it("closes for GM on another toggle", async () => {
@@ -76,8 +67,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 			await game.shadowdark.lightSourceTracker.toggleInterface();
 			await delay(300);
-			const post = openWindows("light-tracker");
-			expect(post.length).equal(0);
+			expect(openWindows("light-tracker").length).equal(0);
 		});
 	});
 
@@ -91,6 +81,7 @@ export default ({ describe, it, after, before, expect }) => {
 		let mockActor;
 		let mockUser;
 		let mockItem;
+		let preexistingSources = game.shadowdark.lightSourceTracker.monitoredLightSources.length;
 
 		before(async () => {
 			cleanUpActorsByKey(key);
@@ -147,9 +138,6 @@ export default ({ describe, it, after, before, expect }) => {
 
 		// Create a light tracker and replace the built in for now
 		const app = game.shadowdark.lightSourceTracker;
-		const preexistingSources = (app.monitoredLightSources.length)
-			? app.monitoredLightSources.length
-			: 0;
 
 		it("actor sanity check", () => {
 			expect(mockActor).is.not.undefined;
