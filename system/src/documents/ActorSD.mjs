@@ -274,6 +274,10 @@ export default class ActorSD extends Actor {
 		return false;
 	}
 
+	async isSpellcaster() {
+		return CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[this.system.class] ? true : false;
+	}
+
 	/** @inheritDoc */
 	prepareBaseData() {
 		switch (this.type) {
