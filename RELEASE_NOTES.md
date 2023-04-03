@@ -20,6 +20,7 @@
 * [#252] Adds tests to ensure monster compendium doesn't change IDs, as that would break integration with PF2e beastiary token module
 * [#254] Adds a welcome message when first starting the system, referring to the tours as well as the issue tracker
 * [#256] Adds spell scroll creation (Drag a spell to a players inventory) & scroll rolling if player is caster (click scroll icon)
+* [#270] ADds contributions to Swedish, Finnish, German, and French from [https://crowdin.com/project/shadowdark-rpg-for-foundry-vtt](Crowdin)
 
 ## v1.1.2
 

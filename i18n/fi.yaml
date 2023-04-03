@@ -35,21 +35,31 @@ SHADOWDARK.app.light_tracker.title: Valonlähteen seuranta
 SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.instruction: Visit shadowdarklings.net and save as JSON. Copy the content of file into this box and click import
+SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
 SHADOWDARK.armor.properties.one_handed: Varaa yhden käden
 SHADOWDARK.armor.properties.shield: Kilpi
+SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
 SHADOWDARK.chat.item_roll.title: Hyökkäysheitto käyttäen {name}
 SHADOWDARK.chat.light_source.expired: "Hahmon {name} {lightSource} valonlähde paloi loppuun tai vanhentui"
 SHADOWDARK.chat.light_source.remaining: minuuttia jäljellä
+SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.chat.light_source.source.all: Kaikki valonlähteet sammuivat
 SHADOWDARK.chat.light_source.source.toggle.off: valonlähde sammui
 SHADOWDARK.chat.light_source.source.toggle.on: valonlähde syttyi
 SHADOWDARK.chat.light_source.went_out: "Hahmon {name} {lightSource} valonlähde sammui"
 SHADOWDARK.chat.spell_roll.title: Loihditaan {name} tasolla {tier} jolloin vaikeusaste on {spellDC}
+SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
+SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
+SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class.fighter: Taistelija
 SHADOWDARK.class.priest: Pappi
@@ -77,7 +87,7 @@ SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mo
 SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
 SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
 SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
-SHADOWDARK.dialog.hp_roll.title: HD Roll
+SHADOWDARK.dialog.hp_roll.title: HP Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Kykybonus
 SHADOWDARK.dialog.item_roll.item_bonus: Esinebonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Lahjakkuusbonus
@@ -105,8 +115,10 @@ SHADOWDARK.effect.talent: Lahjakkuuden efektit
 SHADOWDARK.effect.temporary: Väliaikaiset efektit
 SHADOWDARK.effect.unavailable: Poissaolevat efektit
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
+SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.inventory.coins: Kolikot
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
+SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (osittain käytetty)
 SHADOWDARK.inventory.label.quantity: Kpl
 SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
@@ -224,6 +236,8 @@ SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RP
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
 SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.module_art_config.portraits: Portraits
+SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Fyysinen
 SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
 SHADOWDARK.npc_move.double_near: '"Lähellä" etäisyys tuplana'
@@ -248,6 +262,10 @@ SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
+SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
+SHADOWDARK.settings.module_art.label: Configure Art
+SHADOWDARK.settings.module_art.name: Module-provided Art
+SHADOWDARK.settings.module_art.save: Save Changes
 SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelmä seuraa ja päivittää aktiivisten valonlähteiden jäljellä olevaa aikaa.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
@@ -268,6 +286,7 @@ SHADOWDARK.sheet.actor.placeholder.name: Uusi nimi
 SHADOWDARK.sheet.class.item: Shadowdark esineikkuna
 SHADOWDARK.sheet.class.npc: Shadowdark NPC ikkuna
 SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
+SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
 SHADOWDARK.sheet.item.tab.description: Kuvaus
@@ -327,6 +346,7 @@ SHADOWDARK.talent.type.advantage.initiative: Aloiteheitot edun kanssa
 SHADOWDARK.talent.type.advantage.spell: Loihtiminen edun kanssa
 SHADOWDARK.talent.type.advantage.title: Etubonus
 SHADOWDARK.talent.type.armor_bonus: Puolustuspistebonus panssarista
+SHADOWDARK.talent.type.armor_mastery: Armor Mastery
 SHADOWDARK.talent.type.backstab_die: Lisänoppa yllätyshyökkäykseen
 SHADOWDARK.talent.type.custom: Mukautettu lahjakkuus
 SHADOWDARK.talent.type.melee_attack_bonus: Lähitaistelun hyökkäysheittoihin bonus
@@ -336,6 +356,7 @@ SHADOWDARK.talent.type.ranged_damage_bonus: Kantama-aseiden vahinkoheittoihin bo
 SHADOWDARK.talent.type.spell_bonus: Loihtimisbonus
 SHADOWDARK.talent.type.title: Lahjakkuustyypit
 SHADOWDARK.talent.type.weapon_mastery: Asemestaruus
+SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
 SHADOWDARK.weapon.properties.finesse: Hienovarainen
 SHADOWDARK.weapon.properties.loading: Ladattava
 SHADOWDARK.weapon.properties.thrown: Heitettävä
