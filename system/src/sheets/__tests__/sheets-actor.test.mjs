@@ -33,9 +33,9 @@ const createMockItem = async type => {
 
 export default ({ describe, it, after, before, expect }) => {
 	after(async () => {
-		cleanUpActorsByKey(key);
-		cleanUpItemsByKey(key);
-		// await closeSheets();
+		await closeSheets();
+		await cleanUpActorsByKey(key);
+		await cleanUpItemsByKey(key);
 		await closeDialogs();
 	});
 
@@ -305,12 +305,5 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(openWindows.length).equal(1);
 			await openWindows.pop().close();
 		});
-
-		after(async () => {
-			await closeSheets();
-			cleanUpActorsByKey(key);
-			cleanUpItemsByKey(key);
-		});
 	});
-
 };
