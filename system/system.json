@@ -3,10 +3,12 @@
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
 	"version": "1.1.2",
-	"schema": "230403.1",
 	"compatibility": {
 		"minimum": "10",
 		"verified": "10"
+	},
+	"flags": {
+		"schemaVersion": "230403.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",

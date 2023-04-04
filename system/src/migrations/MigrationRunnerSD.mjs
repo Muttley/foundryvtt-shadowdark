@@ -51,10 +51,10 @@ export default class MigrationRunnerSD {
 				const objectData = doc.toObject();
 				switch (documentName) {
 					case "Actor":
-						updateData = this.currentMigrationTask.updateActor(objectData);
+						updateData = await this.currentMigrationTask.updateActor(objectData);
 						break;
 					case "Item":
-						updateData = this.currentMigrationTask.updateItem(objectData);
+						updateData = await this.currentMigrationTask.updateItem(objectData);
 						break;
 				}
 
@@ -81,8 +81,10 @@ export default class MigrationRunnerSD {
 
 	async migrateWorldCompendiums() {
 		for (let pack of game.packs) {
+			// don't migrate system packs
 			if (pack.metadata.packageType !== "world") continue;
-			if (!["Actor"].includes(pack.documentName)) continue;
+
+			if (!["Actor", "Item"].includes(pack.documentName)) continue;
 
 			await migrateCompendium(pack);
 		}
@@ -149,7 +151,7 @@ export default class MigrationRunnerSD {
 					? item.toObject()
 					: game.items.find(a => a._id === item.id);
 
-				const updateData = this.currentMigrationTask.updateItem(source);
+				const updateData = await this.currentMigrationTask.updateItem(source);
 
 				if (!foundry.utils.isEmpty(updateData)) {
 					shadowdark.log(`Migrating Item document '${item.name}'`);
