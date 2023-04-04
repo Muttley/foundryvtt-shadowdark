@@ -13,10 +13,10 @@ SHADOWDARK.ABILITIES_LONG = {
 SHADOWDARK.ABILITY_KEYS = [
 	"str",
 	"int",
+	"dex",
 	"wis",
 	"con",
 	"cha",
-	"dex",
 ];
 
 SHADOWDARK.ALIGNMENTS = {
