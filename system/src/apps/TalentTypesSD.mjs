@@ -40,7 +40,7 @@ export default class TalentTypesSD extends ActiveEffectsSD {
 			case "abilityImprovement": {
 				Object.keys(CONFIG.SHADOWDARK.ABILITIES_LONG).forEach(ability => {
 					changes.push({
-						key: `system.abilities.${ability}.value`,
+						key: `system.abilities.${ability}.bonus`,
 						value: "",
 						mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 					});

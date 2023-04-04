@@ -1,5 +1,10 @@
 <div class="value-box__bold">
-	<label class="hp-header hp rollable">{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
+	<label
+		class="hp-header hp rollable"
+		data-tooltip="{{localize 'SHADOWDARK.sheet.general.roll_hp'}}"
+	>
+		{{localize 'SHADOWDARK.sheet.actor.hp'}}
+	</label>
 	<div class="hit-points">
 		<div class="hp-value">
 			{{numberInput

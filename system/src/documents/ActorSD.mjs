@@ -25,7 +25,11 @@ export default class ActorSD extends Actor {
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
-			return this._abilityModifier(this.system.abilities[ability].value);
+
+			return this._abilityModifier(
+				this.system.abilities[ability].base
+					+ this.system.abilities[ability].bonus
+			);
 		}
 		else {
 			return this.system.abilities[ability].mod;
@@ -192,6 +196,21 @@ export default class ActorSD extends Actor {
 		return weaponDisplays;
 	}
 
+	calcAbilityValues(ability) {
+		const value = this.system.abilities[ability].base
+			+ this.system.abilities[ability].bonus;
+
+		const labelKey = `SHADOWDARK.ability_${ability}`;
+
+		return {
+			value,
+			bonus: this.system.abilities[ability].bonus,
+			base: this.system.abilities[ability].base,
+			modifier: this._abilityModifier(value),
+			label: `${game.i18n.localize(labelKey)}`,
+		};
+	}
+
 	calcWeaponMasterBonus(item) {
 		let bonus = 0;
 
@@ -230,7 +249,9 @@ export default class ActorSD extends Actor {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
-			const strength = this.system.abilities.str.value;
+			const strength = this.system.abilities.str.base
+				+ this.system.abilities.str.bonus;
+
 			gearSlots = strength > gearSlots ? strength : gearSlots;
 
 			// Hauler's get to add their Con modifer (if positive)
@@ -241,6 +262,16 @@ export default class ActorSD extends Actor {
 		}
 
 		return gearSlots;
+	}
+
+	getCalculatedAbilities() {
+		const abilities = {};
+
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			abilities[ability] = this.calcAbilityValues(ability);
+		}
+
+		return abilities;
 	}
 
 	getCanvasToken() {
@@ -291,6 +322,13 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
+
+		if (this.type === "Player") {
+			this._preparePlayerData();
+		}
+		else if (this.type === "NPC") {
+			this._prepareNPCData();
+		}
 	}
 
 	/** @inheritDoc */

@@ -1,13 +1,13 @@
 <div class="shadowdark chat-card light-source-card" data-actor-id="{{data.actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
   <header class="card-header flexrow">
-    <img src="{{item.img}}" title="
-      {{name}}
+    <img
+			src="{{item.img}}"
       {{#if active}}
-      {{localize "SHADOWDARK.chat.light_source.source.toggle.on"}}
+				data-tooltip="{{name}} {{localize 'SHADOWDARK.chat.light_source.source.toggle.on'}}"
       {{else}}
-      {{localize "SHADOWDARK.chat.light_source.source.toggle.off"}}
+				data-tooltip="{{name}} {{localize 'SHADOWDARK.chat.light_source.source.toggle.off'}}"
       {{/if}}
-    "/>
+		/>
     <h3 class="light-source-name">
       {{name}}
       {{#if active}}

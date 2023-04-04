@@ -89,6 +89,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
 
+		context.abilities = this.actor.getCalculatedAbilities();
+
 		// Languages
 		context.knownLanguages = [];
 		for (const key of this.actor.system.languages) {
@@ -475,7 +477,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		// Modify the underlying base hp value if the max is changed manually
 		if (formData["system.attributes.hp.max"] !== hpValues.max) {
-			formData["system.attributes.hp.base"] = formData["system.attributes.hp.max"] - hpValues.bonus;
+			formData["system.attributes.hp.base"] =
+				formData["system.attributes.hp.max"] - hpValues.bonus;
+		}
+
+		const abilities = this.object.system.abilities;
+
+		// Modify the underlying base ability value if it is changed manually
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			const key = `system.abilities.${ability}.base`;
+
+			if (formData[key] !== abilities[ability].base) {
+				formData[key] = formData[key] - abilities[ability].bonus;
+			}
 		}
 
 		super._updateObject(event, formData);
