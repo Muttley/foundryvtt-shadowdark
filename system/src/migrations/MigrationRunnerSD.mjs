@@ -97,15 +97,36 @@ export default class MigrationRunnerSD {
 
 		for (const [actor, valid] of actors) {
 			try {
-				const source = valid
+				const actorSource = valid
 					? actor.toObject()
 					: game.actors.find(a => a._id === actor.id);
 
-				const updateData = await this.currentMigrationTask.updateActor(source);
+				const updateData = await this.currentMigrationTask.updateActor(actorSource);
 
 				if (!foundry.utils.isEmpty(updateData)) {
 					shadowdark.log(`Migrating Actor document '${actor.name}'`);
 					await actor.update(updateData);
+				}
+
+				const items = actor.items.map(a => [a, true])
+					.concat(Array.from(actor.items.invalidDocumentIds).map(
+						id => [actor.items.getInvalid(id), false]
+					));
+
+				for (const [item, validItem] of items) {
+					const itemSource = validItem
+						? item.toObject()
+						: actor.items.find(a => a._id === item.id);
+
+					const updateData = await this.currentMigrationTask.updateItem(
+						itemSource,
+						actorSource
+					);
+
+					if (!foundry.utils.isEmpty(updateData)) {
+						shadowdark.log(`Migrating Actor Item document '${item.name}'`);
+						await item.update(updateData);
+					}
 				}
 			}
 			catch(err) {

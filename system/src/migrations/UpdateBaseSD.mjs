@@ -10,7 +10,7 @@ export class UpdateBaseSD {
 
 	// Update the item to the latest schema version.
 	//
-	async updateItem(itemData) {}
+	async updateItem(itemData, actorData) {}
 
 	// And updates required to system settings can be performed here.
 	//
