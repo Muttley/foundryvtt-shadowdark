@@ -115,12 +115,30 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			type: "Player",
 			system: {
 				abilities: {
-					str: { value: json.stats.STR },
-					dex: { value: json.stats.DEX },
-					con: { value: json.stats.CON },
-					int: { value: json.stats.INT },
-					wis: { value: json.stats.WIS },
-					cha: { value: json.stats.CHA },
+					str: {
+						base: json.stats.STR,
+						bonus: 0,
+					},
+					dex: {
+						base: json.stats.DEX,
+						bonus: 0,
+					},
+					con: {
+						base: json.stats.CON,
+						bonus: 0,
+					},
+					int: {
+						base: json.stats.INT,
+						bonus: 0,
+					},
+					wis: {
+						base: json.stats.WIS,
+						bonus: 0,
+					},
+					cha: {
+						base: json.stats.CHA,
+						bonus: 0,
+					},
 				},
 				alignment: json.alignment.toLowerCase(),
 				ancestry: json.ancestry,
@@ -170,6 +188,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			"WIS:+2": "+2 to Wisdom",
 			"CHA:+2": "+2 to Charisma",
 		};
+
 		json.bonuses.forEach(async bonus => {
 			if (bonus.name.includes("Spell:") || bonus.name === "LearnExtraSpell") {
 				const spell = await this._findInCompendium(bonus.bonusName, "shadowdark.spells");
@@ -180,9 +199,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				}
 			}
 			if (bonus.bonusName === "StatBonus") {
-				talents.push(
-					await this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents")
-				);
+				const talent = await this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents");
+				talents.push(talent);
+
+				// Keep running total of talent bonuses
+				for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+					importedActor.system.abilities[ability].bonus +=
+						talent.system.abilities[ability].bonus;
+				}
 			}
 			if (bonus.sourceCategory === "Talent" || bonus.sourceCategory === "Ability") {
 				// Fighter
@@ -293,6 +317,17 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			talents.push(
 				await this._findInCompendium("Keen Senses", "shadowdark.talents")
 			);
+		}
+
+		// Adjust the base ability values to take into account any bonuses
+		// from talents
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			importedActor.system.abilities[ability].base -=
+				importedActor.system.abilities[ability].bonus;
+
+			// These are dynamically set by the ActiveEffects, so actually
+			// need to be zero
+			importedActor.system.abilities[ability].bonus = 0;
 		}
 
 		// Create the actor

@@ -10,6 +10,7 @@
 * [#267] Typo in lightsource tour step 21
 * [#268] Removed `acBonus` talents. **BREAKING**: Users that already picked the Armor Bonus talent needs to re-pick it.
 * [#269] Fix incorrect ability scores on a couple of pregens
+* [#274] Changes to how we store Ability scores broke the character importer
 
 ### Enhancements
 * [#147] Hide Spells tab on character sheet for classes that cannot cast.
