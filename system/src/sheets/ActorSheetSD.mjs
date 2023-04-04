@@ -56,17 +56,6 @@ export default class ActorSheetSD extends ActorSheet {
 			system: actorData.system,
 		};
 
-		// Ability Scores
-		for (const [key, ability] of Object.entries(context.system.abilities)) {
-			const labelKey = `SHADOWDARK.ability_${key}`;
-			ability.label = `${game.i18n.localize(labelKey)}`;
-
-			// Players need to have their ability modifier calculated
-			if (this.actor.type === "Player") {
-				ability.modifier = this.actor.abilityModifier(key);
-			}
-		}
-
 		context.notesHTML = await TextEditor.enrichHTML(
 			context.system.notes,
 			{
@@ -77,6 +66,10 @@ export default class ActorSheetSD extends ActorSheet {
 		);
 
 		return context;
+	}
+
+	_getActorOverrides() {
+		return Object.keys(foundry.utils.flattenObject(this.object.overrides || {}));
 	}
 
 	_getItemContextOptions() {

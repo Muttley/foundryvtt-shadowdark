@@ -289,6 +289,7 @@ SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
+SHADOWDARK.sheet.general.roll_hp: Roll HP
 SHADOWDARK.sheet.item.tab.description: Description
 SHADOWDARK.sheet.item.tab.details: Details
 SHADOWDARK.sheet.item.tab.light: Light
@@ -301,6 +302,7 @@ SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
+SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry: Ancestry
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background: Background
