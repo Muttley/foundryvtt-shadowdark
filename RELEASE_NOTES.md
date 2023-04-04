@@ -25,6 +25,7 @@
 * [#254] Adds a welcome message when first starting the system, referring to the tours as well as the issue tracker
 * [#256] Adds spell scroll creation (Drag a spell to a players inventory) & scroll rolling if player is caster (click scroll icon)
 * [#270] Adds contributions to Swedish, Finnish, German, and French from [Crowdin](https://crowdin.com/project/shadowdark-rpg-for-foundry-vtt)
+* [#271] Adjustments for Shadowdarkling importer & sheet tests for v11 compatability
 
 ## v1.1.2
 

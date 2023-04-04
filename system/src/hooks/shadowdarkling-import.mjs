@@ -3,7 +3,7 @@
 export const ShadowdarklingImport = {
 	attach: () => {
 		Hooks.on("renderSidebarTab", function(app, html) {
-			if (app.options.id === "actors") {
+			if (app.options.classes.includes("actors-sidebar")) {
 				const importButton = $(
 					`<button class="shadowdarkling-import-button" 
           data-tooltop="SHADOWDARK.apps.shadowdarkling-importer.title">

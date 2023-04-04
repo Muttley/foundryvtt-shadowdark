@@ -52,22 +52,22 @@ export const createMockUserByKey = async key => {
 };
 
 /* CLEAN UP HELPERS */
-export const cleanUpActorsByKey = key => {
+export const cleanUpActorsByKey = async key => {
 	game.actors
 		?.filter(a => a.name.includes(`Test Actor ${key}`))
-		.forEach(a => a.delete());
+		.forEach(async a => await a.delete());
 };
 
-export const cleanUpItemsByKey = key => {
+export const cleanUpItemsByKey = async key => {
 	game.items
 		?.filter(i => i.name.includes(`Test Item ${key}:`))
-		.forEach(i => i.delete());
+		.forEach(async i => await i.delete());
 };
 
-export const cleanUpUsersByKey = key => {
+export const cleanUpUsersByKey = async key => {
 	game.users
 		?.filter(u => u.name === `Test User ${key}`)
-		.forEach(u => u.delete());
+		.forEach(async u => await u.delete());
 };
 
 /**
