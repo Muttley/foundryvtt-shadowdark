@@ -329,7 +329,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			const tourActor = await Actor.create({
 				name: MOCK_ACTOR_NAME,
 				type: "Player",
-				system: { class: "thief", spellcastingAbility: "int" },
+				system: { class: "thief" },
 				ownership: { default: 3 },
 				img: "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_portrait.webp",
 			});
@@ -340,15 +340,27 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			const weaponId = weaponsPack.index.find(i => i.name === "Greataxe")._id;
 			items.push(await weaponsPack.getDocument(weaponId));
 
-			const spellsPack = game.packs.get("shadowdark.spells");
-			const spellId = spellsPack.index.find(i => i.name === "Magic Missile")._id;
-			items.push(await spellsPack.getDocument(spellId));
-
 			await tourActor.createEmbeddedDocuments("Item", items);
 
 			// Delay so the UI has time to catch up
 			await tourActor.sheet.render(true);
 			await delay(200);
+		}
+
+		if (this.currentStep.id === "sd-playerroll-back-to-actor") {
+			let tourActor = await game.actors.find(actor => actor.name === MOCK_ACTOR_NAME);
+
+			tourActor = await tourActor.update({
+				"system.class": "wizard",
+				"system.spellcastingAbility": "int",
+			});
+
+			const items = [];
+			const spellsPack = game.packs.get("shadowdark.spells");
+			const spellId = spellsPack.index.find(i => i.name === "Magic Missile")._id;
+			items.push(await spellsPack.getDocument(spellId));
+
+			await tourActor.createEmbeddedDocuments("Item", items);
 		}
 
 		if (this.currentStep.selector.includes(".message")) {
