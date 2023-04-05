@@ -25,7 +25,11 @@ export default class ActorSD extends Actor {
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
-			return this._abilityModifier(this.system.abilities[ability].value);
+
+			return this._abilityModifier(
+				this.system.abilities[ability].base
+					+ this.system.abilities[ability].bonus
+			);
 		}
 		else {
 			return this.system.abilities[ability].mod;
@@ -192,6 +196,21 @@ export default class ActorSD extends Actor {
 		return weaponDisplays;
 	}
 
+	calcAbilityValues(ability) {
+		const value = this.system.abilities[ability].base
+			+ this.system.abilities[ability].bonus;
+
+		const labelKey = `SHADOWDARK.ability_${ability}`;
+
+		return {
+			value,
+			bonus: this.system.abilities[ability].bonus,
+			base: this.system.abilities[ability].base,
+			modifier: this.system.abilities[ability].mod,
+			label: `${game.i18n.localize(labelKey)}`,
+		};
+	}
+
 	calcWeaponMasterBonus(item) {
 		let bonus = 0;
 
@@ -230,7 +249,9 @@ export default class ActorSD extends Actor {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
-			const strength = this.system.abilities.str.value;
+			const strength = this.system.abilities.str.base
+				+ this.system.abilities.str.bonus;
+
 			gearSlots = strength > gearSlots ? strength : gearSlots;
 
 			// Hauler's get to add their Con modifer (if positive)
@@ -241,6 +262,16 @@ export default class ActorSD extends Actor {
 		}
 
 		return gearSlots;
+	}
+
+	getCalculatedAbilities() {
+		const abilities = {};
+
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			abilities[ability] = this.calcAbilityValues(ability);
+		}
+
+		return abilities;
 	}
 
 	getCanvasToken() {
@@ -274,6 +305,10 @@ export default class ActorSD extends Actor {
 		return false;
 	}
 
+	async isSpellcaster() {
+		return CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[this.system.class] ? true : false;
+	}
+
 	/** @inheritDoc */
 	prepareBaseData() {
 		switch (this.type) {
@@ -287,6 +322,13 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
+
+		if (this.type === "Player") {
+			this._preparePlayerData();
+		}
+		else if (this.type === "NPC") {
+			this._prepareNPCData();
+		}
 	}
 
 	/** @inheritDoc */
@@ -530,6 +572,7 @@ export default class ActorSD extends Actor {
 		baseArmorClass += dexModifier;
 
 		let newArmorClass = baseArmorClass;
+		let armorMasteryBonus = 0;
 
 		const equippedArmor = this.items.filter(
 			item => item.type === "Armor" && item.system.equipped
@@ -540,7 +583,13 @@ export default class ActorSD extends Actor {
 			for (let i = 0; i < equippedArmor.length; i++) {
 				const armor = equippedArmor[i];
 
-				if (armor.isNotAShield()) nonShieldEquipped = true;
+				if (armor.isNotAShield()) {
+					nonShieldEquipped = true;
+					if (
+						this.system.bonuses.armorMastery.includes(armor.name.slugify())
+						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+					) armorMasteryBonus += 1;
+				}
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
@@ -553,6 +602,8 @@ export default class ActorSD extends Actor {
 
 			// Someone with no armor but a shield equipped
 			if (!nonShieldEquipped) newArmorClass += baseArmorClass;
+
+			newArmorClass += armorMasteryBonus;
 		}
 
 		Actor.updateDocuments([{
@@ -567,7 +618,9 @@ export default class ActorSD extends Actor {
 	/*  Base Data Preparation Helpers               */
 	/* -------------------------------------------- */
 
-	_preparePlayerData() {}
+	_preparePlayerData() {
+		this._populatePlayerModifiers();
+	}
 
 	_prepareNPCData() {}
 
@@ -643,5 +696,36 @@ export default class ActorSD extends Actor {
 		await this.update({
 			"system.attributes.hp.base": currentHpBase + value,
 		});
+	}
+
+	/** @inheritdoc */
+	_initializeSource(source, options={}) {
+		source = super._initializeSource(source, options);
+
+		if (!source._id || !options.pack || game.shadowdark.moduleArt.suppressArt) {
+			return source;
+		}
+
+		const uuid = `Compendium.${options.pack}.${source._id}`;
+
+		const art = game.shadowdark.moduleArt.map.get(uuid);
+
+		if (art?.actor || art?.token) {
+			if (art.actor) source.img = art.actor;
+
+			if (typeof art.token === "string") {
+				source.prototypeToken.texture.src = art.token;
+			}
+			else if (art.token) {
+				foundry.utils.mergeObject(source.prototypeToken, art.token);
+			}
+		}
+		return source;
+	}
+
+	_populatePlayerModifiers() {
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			this.system.abilities[ability].mod = this.abilityModifier(ability);
+		}
 	}
 }

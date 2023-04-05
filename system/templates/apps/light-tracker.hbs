@@ -35,10 +35,13 @@
 	<section class="light-source-grid">
 		{{#each monitoredLightSources as |actor|}}
 			<div class="character">
-				<div class="character-portrait">
+				<div
+					class="character-portrait"
+					data-actor-id="{{actor._id}}"
+				>
 					<img
 						src="{{actor.img}}"
-						title="{{actor.name}}"
+						data-tooltip="{{actor.name}}"
 						height="64"
 						width="64"
 					/>
@@ -54,7 +57,7 @@
 									class="disable-light"
 									data-actor-id="{{actor._id}}"
 									data-item-id="{{light._id}}"
-									title="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
+									data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
 								>
 									<i class="fa-solid fa-fire-flame-curved"></i>
 								</a>

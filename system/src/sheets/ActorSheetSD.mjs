@@ -14,12 +14,16 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
-		html.find(".item-rollable").click(
+		html.find("div[data-action='item-attack']").click(
 			event => this._onRollItem(event)
 		);
 
-		html.find(".cast-spell").click(
+		html.find("a[data-action='cast-spell']").click(
 			event => this._onCastSpell(event)
+		);
+
+		html.find("div[data-action='cast-scroll']").click(
+			event => this._onCastSpellScroll(event)
 		);
 
 		html.find(".item-create").click(
@@ -52,17 +56,6 @@ export default class ActorSheetSD extends ActorSheet {
 			system: actorData.system,
 		};
 
-		// Ability Scores
-		for (const [key, ability] of Object.entries(context.system.abilities)) {
-			const labelKey = `SHADOWDARK.ability_${key}`;
-			ability.label = `${game.i18n.localize(labelKey)}`;
-
-			// Players need to have their ability modifier calculated
-			if (this.actor.type === "Player") {
-				ability.modifier = this.actor.abilityModifier(key);
-			}
-		}
-
 		context.notesHTML = await TextEditor.enrichHTML(
 			context.system.notes,
 			{
@@ -73,6 +66,10 @@ export default class ActorSheetSD extends ActorSheet {
 		);
 
 		return context;
+	}
+
+	_getActorOverrides() {
+		return Object.keys(foundry.utils.flattenObject(this.object.overrides || {}));
 	}
 
 	_getItemContextOptions() {
@@ -195,7 +192,7 @@ export default class ActorSheetSD extends ActorSheet {
 			parts.push("@itemBonus");
 			data.itemBonus = item.system.attackBonus;
 		}
-		if (item.system.damage.bonus) {
+		if (item.system.damage?.bonus) {
 			data.damageParts.push("@itemDamageBonus");
 			data.itemDamageBonus = item.system.damage.bonus;
 		}
@@ -238,6 +235,37 @@ export default class ActorSheetSD extends ActorSheet {
 		return item.rollItem(parts, data);
 	}
 
+	async _onCastSpellScroll(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+
+		const spellUuid = item.system.description.substring(
+			item.system.description.indexOf("[") + 1,
+			item.system.description.lastIndexOf("]")
+		);
+
+		const spell = await fromUuid(spellUuid);
+
+		// Do nothing if not a spellcaster
+		const abilityId = this.actor.getSpellcastingAbility();
+		if (!abilityId) return;
+
+		const data = {
+			rollType: spell.name.slugify(),
+			item: spell,
+			scroll: item,
+			actor: this.actor,
+			abilityBonus: this.actor.abilityModifier(abilityId),
+			talentBonus: this.actor.system.bonuses.spellcastingCheckBonus,
+		};
+
+		const parts = ["@abilityBonus", "@talentBonus"];
+
+		return spell.rollSpell(parts, data);
+	}
+
 	async _onCastSpell(event) {
 		event.preventDefault();
 
@@ -249,6 +277,7 @@ export default class ActorSheetSD extends ActorSheet {
 		const data = {
 			rollType: item.name.slugify(),
 			item: item,
+			scroll: false,
 			actor: this.actor,
 			abilityBonus: this.actor.abilityModifier(abilityId),
 			talentBonus: this.actor.system.bonuses.spellcastingCheckBonus,

@@ -51,10 +51,10 @@ export default class MigrationRunnerSD {
 				const objectData = doc.toObject();
 				switch (documentName) {
 					case "Actor":
-						updateData = this.currentMigrationTask.updateActor(objectData);
+						updateData = await this.currentMigrationTask.updateActor(objectData);
 						break;
 					case "Item":
-						updateData = this.currentMigrationTask.updateItem(objectData);
+						updateData = await this.currentMigrationTask.updateItem(objectData);
 						break;
 				}
 
@@ -81,8 +81,10 @@ export default class MigrationRunnerSD {
 
 	async migrateWorldCompendiums() {
 		for (let pack of game.packs) {
+			// don't migrate system packs
 			if (pack.metadata.packageType !== "world") continue;
-			if (!["Actor"].includes(pack.documentName)) continue;
+
+			if (!["Actor", "Item"].includes(pack.documentName)) continue;
 
 			await migrateCompendium(pack);
 		}
@@ -97,15 +99,36 @@ export default class MigrationRunnerSD {
 
 		for (const [actor, valid] of actors) {
 			try {
-				const source = valid
+				const actorSource = valid
 					? actor.toObject()
 					: game.actors.find(a => a._id === actor.id);
 
-				const updateData = await this.currentMigrationTask.updateActor(source);
+				const updateData = await this.currentMigrationTask.updateActor(actorSource);
 
 				if (!foundry.utils.isEmpty(updateData)) {
 					shadowdark.log(`Migrating Actor document '${actor.name}'`);
 					await actor.update(updateData);
+				}
+
+				const items = actor.items.map(a => [a, true])
+					.concat(Array.from(actor.items.invalidDocumentIds).map(
+						id => [actor.items.getInvalid(id), false]
+					));
+
+				for (const [item, validItem] of items) {
+					const itemSource = validItem
+						? item.toObject()
+						: actor.items.find(a => a._id === item.id);
+
+					const updateData = await this.currentMigrationTask.updateItem(
+						itemSource,
+						actorSource
+					);
+
+					if (!foundry.utils.isEmpty(updateData)) {
+						shadowdark.log(`Migrating Actor Item document '${item.name}'`);
+						await item.update(updateData);
+					}
 				}
 			}
 			catch(err) {
@@ -128,7 +151,7 @@ export default class MigrationRunnerSD {
 					? item.toObject()
 					: game.items.find(a => a._id === item.id);
 
-				const updateData = this.currentMigrationTask.updateItem(source);
+				const updateData = await this.currentMigrationTask.updateItem(source);
 
 				if (!foundry.utils.isEmpty(updateData)) {
 					shadowdark.log(`Migrating Item document '${item.name}'`);

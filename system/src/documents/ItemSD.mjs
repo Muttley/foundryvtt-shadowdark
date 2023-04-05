@@ -94,7 +94,10 @@ export default class ItemSD extends Item {
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
+		// Special case for scrolls
+		if (data.scroll && roll) data.actor.deleteEmbeddedDocuments("Item", [data.scroll._id]);
+		return roll;
 	}
 
 	/* -------------------------------------------- */

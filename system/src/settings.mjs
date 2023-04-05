@@ -1,3 +1,5 @@
+import { ModuleArtConfig } from "./utils/module-art.mjs";
+
 /**
  * Register all of the system"s settings.
  */
@@ -12,7 +14,46 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: false,
 		type: Number,
-		default: 0,
+		default: Number(game.system.flags.schemaVersion),
+	});
+
+	// -----------------
+	//  DYNAMIC ARTWORK
+	// -----------------
+	//
+	game.settings.registerMenu("shadowdark", "moduleArtConfiguration", {
+		name: "SHADOWDARK.settings.module_art.name",
+		label: "SHADOWDARK.settings.module_art.label",
+		hint: "SHADOWDARK.settings.module_art.hint",
+		icon: "fa-solid fa-palette",
+		type: ModuleArtConfig,
+		restricted: true,
+	});
+
+	game.settings.register("shadowdark", "moduleArtConfiguration", {
+		name: "Module Art Configuration",
+		scope: "world",
+		config: false,
+		type: Object,
+		default: {
+			shadowdark: {
+				portraits: true,
+				tokens: true,
+			},
+		},
+	});
+
+	// ----------------
+	//  NPC HIT POINTS
+	// ----------------
+	//
+	game.settings.register("shadowdark", "rollNpcHpWhenAddedToScene", {
+		name: "SHADOWDARK.settings.roll_npc_hp.name",
+		hint: "SHADOWDARK.settings.roll_npc_hp.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
 	});
 
 	// ------------------------

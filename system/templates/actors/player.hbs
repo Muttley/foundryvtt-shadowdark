@@ -5,7 +5,7 @@
 				class="portrait"
 				src="{{ actor.img }}"
 				data-edit="img"
-				title="{{ actor.name }}"
+				data-tooltip="{{ actor.name }}"
 				height="110"
 				width="110"
 			/>
@@ -30,9 +30,11 @@
 					{{localize "SHADOWDARK.sheet.player.tab.abilities"}}
 				</a>
 
-				<a class="item" data-tab="tab-spells">
-					{{localize "SHADOWDARK.sheet.player.tab.spells"}}
-				</a>
+				{{#if showSpellsTab}}
+					<a class="item" data-tab="tab-spells">
+						{{localize "SHADOWDARK.sheet.player.tab.spells"}}
+					</a>
+				{{/if}}
 
 				<a class="item" data-tab="tab-inventory">
 					{{localize "SHADOWDARK.sheet.player.tab.inventory"}}

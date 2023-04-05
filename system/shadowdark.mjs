@@ -5,13 +5,15 @@ import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import log from "./src/utils/logging.mjs";
 
+import * as chat from "./src/chat/_module.mjs";
 import * as apps from "./src/apps/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
-import * as tours from "./src/tours/_module.mjs";
 
-import { HooksSD } from "./src/hooks.mjs";
+import {HooksSD, HooksInitSD} from "./src/hooks.mjs";
+import {ModuleArt} from "./src/utils/module-art.mjs";
+import {ToursSD} from "./src/tours.mjs";
 
 import "./src/testing/index.mjs";
 
@@ -58,6 +60,8 @@ Hooks.once("init", () => {
 	registerSystemSettings();
 	loadTemplates();
 
+	game.shadowdark.moduleArt = new ModuleArt();
+
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
 	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
@@ -77,6 +81,9 @@ Hooks.once("init", () => {
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.item",
 	});
+
+	// Attack init hooks
+	HooksInitSD.attach();
 });
 
 /* -------------------------------------------- */
@@ -90,13 +97,9 @@ Hooks.on("ready", () => {
 	performDataMigration();
 
 	HooksSD.attach();
+	ToursSD.register();
 
-	// Tours
-	game.tours.register(
-		"shadowdark",
-		"shadowdark-lightsource-tracker-tour",
-		new tours.ShadowdarkLightsourceTrackerTour()
-	);
+	chat.messages.welcomeMessage();
 
 	shadowdark.log("Game Ready");
 });
@@ -111,6 +114,8 @@ Hooks.on("ready", () => {
 //
 Hooks.once("setup", () => {
 	shadowdark.log("Setup Hook");
+
+	game.shadowdark.moduleArt.registerModuleArt();
 
 	// Localize all the strings in the game config in advance
 	//

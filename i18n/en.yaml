@@ -1,3 +1,4 @@
+
 SHADOWDARK.ability_cha: Cha
 SHADOWDARK.ability_charisma: Charisma
 SHADOWDARK.ability_con: Con
@@ -35,6 +36,9 @@ SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.app.light-tracker.douse-light: Douse Light
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
 SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.instruction: Visit shadowdarklings.net and save as JSON. Copy the content of file into this box and click import
+SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
@@ -52,6 +56,11 @@ SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
 SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
+SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
+SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class.fighter: Fighter
 SHADOWDARK.class.priest: Priest
@@ -228,6 +237,8 @@ SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RP
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
 SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.module_art_config.portraits: Portraits
+SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.double_near: Double Near
@@ -252,6 +263,12 @@ SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
+SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
+SHADOWDARK.settings.module_art.label: Configure Art
+SHADOWDARK.settings.module_art.name: Module-provided Art
+SHADOWDARK.settings.module_art.save: Save Changes
+SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
+SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
 SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
@@ -272,8 +289,10 @@ SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
+SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
 SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
+SHADOWDARK.sheet.general.roll_hp: Roll HP
 SHADOWDARK.sheet.item.tab.description: Description
 SHADOWDARK.sheet.item.tab.details: Details
 SHADOWDARK.sheet.item.tab.light: Light
@@ -286,6 +305,7 @@ SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
+SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry: Ancestry
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background: Background
@@ -331,6 +351,7 @@ SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
 SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
 SHADOWDARK.talent.type.advantage.title: Advantage Bonus
 SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
+SHADOWDARK.talent.type.armor_mastery: Armor Mastery
 SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
 SHADOWDARK.talent.type.custom: Custom Talent
 SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus

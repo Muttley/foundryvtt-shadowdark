@@ -10,6 +10,15 @@ SHADOWDARK.ABILITIES_LONG = {
 	dex: "SHADOWDARK.ability_dexterity",
 };
 
+SHADOWDARK.ABILITY_KEYS = [
+	"str",
+	"int",
+	"dex",
+	"wis",
+	"con",
+	"cha",
+];
+
 SHADOWDARK.ALIGNMENTS = {
 	lawful: "SHADOWDARK.alignment.lawful",
 	neutral: "SHADOWDARK.alignment.neutral",
@@ -220,7 +229,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 
 SHADOWDARK.NPC_MOVES = {
 	near: "SHADOWDARK.npc_move.near",
-	doulbeNear: "SHADOWDARK.npc_move.double_near",
+	doulbeNear: "SHADOWDARK.npc_move.double_near", // @todo: Fix typo
 };
 
 SHADOWDARK.RANGES = {
@@ -272,6 +281,7 @@ SHADOWDARK.TALENT_CLASSES = {
 SHADOWDARK.TALENT_TYPES = {
 	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
 	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
+	armorMastery: "SHADOWDARK.talent.type.armor_mastery",
 	backstabDie: "SHADOWDARK.talent.type.backstab_die",
 	hpAdvantage: "SHADOWDARK.talent.type.advantage.hp",
 	initAdvantage: "SHADOWDARK.talent.type.advantage.initiative",
@@ -286,12 +296,12 @@ SHADOWDARK.TALENT_TYPES = {
 };
 
 SHADOWDARK.TALENT_PROPERTIES = {
-	"system.abilities.cha.value": "SHADOWDARK.ability_cha",
-	"system.abilities.con.value": "SHADOWDARK.ability_con",
-	"system.abilities.dex.value": "SHADOWDARK.ability_dex",
-	"system.abilities.int.value": "SHADOWDARK.ability_int",
-	"system.abilities.str.value": "SHADOWDARK.ability_str",
-	"system.abilities.wis.value": "SHADOWDARK.ability_wis",
+	"system.abilities.cha.bonus": "SHADOWDARK.ability_cha",
+	"system.abilities.con.bonus": "SHADOWDARK.ability_con",
+	"system.abilities.dex.bonus": "SHADOWDARK.ability_dex",
+	"system.abilities.int.bonus": "SHADOWDARK.ability_int",
+	"system.abilities.str.bonus": "SHADOWDARK.ability_str",
+	"system.abilities.wis.bonus": "SHADOWDARK.ability_wis",
 	"system.bonuses.advantage": "SHADOWDARK.talent.type.advantage.title",
 	"system.bonuses.meleeAttackBonus": "SHADOWDARK.talent.type.melee_attack_bonus",
 	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",

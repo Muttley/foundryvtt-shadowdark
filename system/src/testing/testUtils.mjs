@@ -8,8 +8,25 @@ export const delay = ms =>
 		setTimeout(resolve, ms);
 	});
 
-export const abilities = ["str", "dex", "con", "int", "wis", "cha"];
-export const itemTypes = ["Armor", "Basic", "Gem", "Spell", "Talent", "Weapon"];
+export const abilities = [
+	"str",
+	"dex",
+	"con",
+	"int",
+	"wis",
+	"cha",
+];
+
+export const itemTypes = [
+	"Armor",
+	"Basic",
+	"Gem",
+	"Spell",
+	"Talent",
+	"Weapon",
+	"NPC Attack",
+	"NPC Feature",
+];
 
 export const waitForInput = () => delay(inputDelay);
 
@@ -28,17 +45,29 @@ export const createMockItemByKey = async (key, type) => {
 	});
 };
 
-/* CLEAN UP HELPERS */
-export const cleanUpActorsByKey = key => {
-	game.actors
-		?.filter(a => a.name.includes(`Test Actor ${key}`))
-		.forEach(a => a.delete());
+export const createMockUserByKey = async key => {
+	return User.create({
+		name: `Test User ${key}`,
+	});
 };
 
-export const cleanUpItemsByKey = key => {
+/* CLEAN UP HELPERS */
+export const cleanUpActorsByKey = async key => {
+	game.actors
+		?.filter(a => a.name.includes(`Test Actor ${key}`))
+		.forEach(async a => await a.delete());
+};
+
+export const cleanUpItemsByKey = async key => {
 	game.items
 		?.filter(i => i.name.includes(`Test Item ${key}:`))
-		.forEach(i => i.delete());
+		.forEach(async i => await i.delete());
+};
+
+export const cleanUpUsersByKey = async key => {
+	game.users
+		?.filter(u => u.name === `Test User ${key}`)
+		.forEach(async u => await u.delete());
 };
 
 /**
@@ -68,5 +97,12 @@ export const openDialogs = () =>
 export const closeDialogs = async () => {
 	openDialogs()?.forEach(async o => {
 		await o.close();
+	});
+};
+
+/* HELPERS */
+export const assignActorToUser = async (actor, user) => {
+	return user.update({
+		character: actor.id,
 	});
 };

@@ -57,11 +57,14 @@ import appsNPCAttackRangesTests, {
 	key as appsNPCAttackRangesKey,
 	options as appsNPCAttackRangesOptions,
 } from "../apps/__tests__/apps-npc-attack-ranges.test.mjs";
-
 import appsPlayerLanguagesTests, {
 	key as appsPlayerLanguagesKey,
 	options as appsPlayerLanguagesOptions,
 } from "../apps/__tests__/apps-player-languages.test.mjs";
+import appsShadowdarklingImporterTests, {
+	key as appsShadowdarklingImporterKey,
+	options as appsShadowdarklingImporterOptions,
+} from "../apps/__tests__/apps-shadowdarkling-importer.test.mjs";
 import appsSpellcasterClassTests, {
 	key as appsSpellcasterClassKey,
 	options as appsSpellcasterClassOptions,
@@ -118,6 +121,12 @@ import documentsItemsTests, {
 	options as documentsItemsOptions,
 } from "../documents/__tests__/documents-item.test.mjs";
 
+/* E2E Tests */
+import e2eAppsLightsourceTrackerTests, {
+	key as e2eAppsLightsourceTrackerKey,
+	options as e2eAppsLightsourceTrackerOptions,
+} from "../apps/__tests__/e2e-apps-lightsource-tracker.test.mjs";
+
 /* Hooks Imports */
 import hooksChatMessageTests, {
 	key as hooksChatMessageKey,
@@ -127,6 +136,10 @@ import hooksLightsourceTrackerTests, {
 	key as hooksLightsourceTrackerKey,
 	options as hooksLightsourceTrackerOptions,
 } from "../hooks/__tests__/hooks-light-source-tracker.test.mjs";
+import hooksShadowdarklingImportTests, {
+	key as hooksShadowdarklingImportKey,
+	options as hooksShadowdarklingImportOptions,
+} from "../hooks/__tests__/hooks-shadowdarkling-import.test.mjs";
 
 /* Sheet Imports */
 import sheetsActorTests, {
@@ -226,6 +239,11 @@ Hooks.on("quenchReady", async quench => {
 		appsSpellcasterClassOptions
 	);
 	quench.registerBatch(
+		appsShadowdarklingImporterKey,
+		appsShadowdarklingImporterTests,
+		appsShadowdarklingImporterOptions
+	);
+	quench.registerBatch(
 		appsTalentTypesKey,
 		appsTalentTypesTests,
 		appsTalentTypesOptions
@@ -234,6 +252,13 @@ Hooks.on("quenchReady", async quench => {
 		appsWeaponPropertiesKey,
 		appsWeaponPropertiesTests,
 		appsWeaponPropertiesOptions
+	);
+
+	// E2E Apps test
+	quench.registerBatch(
+		e2eAppsLightsourceTrackerKey,
+		e2eAppsLightsourceTrackerTests,
+		e2eAppsLightsourceTrackerOptions
 	);
 
 	// Chat test
@@ -297,6 +322,11 @@ Hooks.on("quenchReady", async quench => {
 		hooksLightsourceTrackerKey,
 		hooksLightsourceTrackerTests,
 		hooksLightsourceTrackerOptions
+	);
+	quench.registerBatch(
+		hooksShadowdarklingImportKey,
+		hooksShadowdarklingImportTests,
+		hooksShadowdarklingImportOptions
 	);
 
 

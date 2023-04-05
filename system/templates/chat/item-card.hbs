@@ -8,13 +8,13 @@
   <header class="card-header flexrow">
     {{#if data.item}}
     {{#if isNPC}}
-    <img src="{{data.actor.img}}" title="{{data.item.name}}"/>
+    <img src="{{data.actor.img}}" data-tooltip="{{data.item.name}}"/>
     {{else}}
-    <img src="{{data.item.img}}" title="{{data.item.name}}"/>
+    <img src="{{data.item.img}}" data-tooltip="{{data.item.name}}"/>
     {{/if}}
     <h3 class="item-name">{{data.item.name}}</h3>
     {{else}}
-    <img src="{{data.actor.img}}" title="{{title}}"/>
+    <img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
     <h3 class="item-name">{{title}}</h3>
     {{/if}}
   </header>

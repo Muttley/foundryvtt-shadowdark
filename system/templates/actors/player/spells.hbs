@@ -6,7 +6,7 @@
 					<th>
 						<a
 							class="item-control item-create"
-							title="{{localize SHADOWDARK.inventory.create_item}}"
+							data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='Spell'}}"
 							data-item-type="Spell"
 						>
 							<i class="fa-duotone fa-file-plus"></i>
@@ -44,8 +44,9 @@
 								{{#unless spell.system.lost}}
 									<a
 										class="item-control cast-spell"
+										data-action="cast-spell"
 										data-item-id="{{spell._id}}"
-										title="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
 									>
 										<i class="fa-solid fa-wand-magic-sparkles"></i>
 									</a>
@@ -53,7 +54,7 @@
 								<a
 									class="item-control toggle-spell-lost"
 									data-item-id="{{spell._id}}"
-									title="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
+									data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 								>
 									{{#if spell.system.lost}}
 										<i style="color:red;" class="fa-solid fa-xmark"></i>

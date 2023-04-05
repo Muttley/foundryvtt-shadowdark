@@ -58,22 +58,28 @@
 			"templates": ["shared_details"],
 			"abilities": {
 				"str": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				},
 				"int": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				},
 				"dex": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				},
 				"wis": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				},
 				"con": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				},
 				"cha": {
-					"value": 10
+					"base": 10,
+					"bonus": 0
 				}
 			},
 			"ancestry": "",
@@ -87,8 +93,8 @@
 			},
 			"background": "",
 			"bonuses": {
-				"acBonus": 0,
 				"advantage": [],
+				"armorMastery": [],
 				"weaponMastery": [],
 				"meleeAttackBonus": 0,
 				"meleeDamageBonus": 0,
@@ -178,7 +184,8 @@
 				"remainingSecs": 3600,
 				"template": "torch"
 			},
-			"treasure": false
+			"treasure": false,
+			"scroll": false
 		},
 		"Gem": {
 			"templates": [

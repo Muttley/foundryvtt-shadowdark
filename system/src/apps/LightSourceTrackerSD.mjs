@@ -45,6 +45,23 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	activateListeners(html) {
+		html.find(".character-portrait").click(
+			async event => {
+				event.preventDefault();
+
+				const actorId = $(event.currentTarget).data("actor-id");
+
+				const actor = game.actors.get(actorId);
+
+				if (actor.sheet.rendered) {
+					actor.sheet.close();
+				}
+				else {
+					actor.sheet.render(true);
+				}
+			}
+		);
+
 		html.find(".disable-all-lights").click(
 			async event => {
 				event.preventDefault();
@@ -384,8 +401,9 @@ export default class LightSourceTrackerSD extends Application {
 		);
 
 		if (this._isEnabled()) {
-			this._gatherLightSources();
-			this.render();
+			this.dirty = true;
+			await this._updateLightSources();
+			this.render(true);
 		}
 		else {
 			this.close();

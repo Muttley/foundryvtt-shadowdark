@@ -3,6 +3,7 @@
  * @file Contains tests for the Lightsource Tracker app
  */
 
+import { waitForInput } from "../../testing/testUtils.mjs";
 import LightSourceTrackerSD from "../LightSourceTrackerSD.mjs";
 
 export const key = "shadowdark.apps.lightsource-tracker";
@@ -11,7 +12,24 @@ export const options = {
 	preSelected: true,
 };
 
-export default ({ describe, it, after, beforeEach, before, expect }) => {
+export default ({ describe, it, after, expect }) => {
+	const originalSettings = {
+		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
+		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
+	};
+	const wasPaused = game.paused;
+
+	after(async () => {
+		for (const [key, value] of Object.entries(originalSettings)) {
+			await game.settings.set(
+				"shadowdark", key, value
+			);
+		}
+		game.togglePause(wasPaused);
+		await waitForInput();
+		Object.values(ui.windows).filter(w => w.options.classes.includes("light-tracker")).forEach(async w => await w.close());
+	});
+
 	describe("constructor(object, options)", () => {
 		it("can construct", () => {
 			const app = new LightSourceTrackerSD();
@@ -22,10 +40,14 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 			const app = new LightSourceTrackerSD();
 			it("has the expected data", () => {
 				expect(app.monitoredLightSources.length).equal(0);
-				expect(app.updateInterval).equal(60*1000);
+				expect(app.updateInterval).equal(30*1000);
 				expect(app.updateIntervalId).is.null;
 				expect(app.lastUpdate).is.not.null;
 				expect(app.updatingLightSources).is.false;
+				expect(app.housekeepingInterval).equal(1000);
+				expect(app.housekeepingIntervalId).is.null;
+				expect(app.dirty).is.true;
+				expect(app.performingTick).is.false;
 				expect(app.pauseWithGame).is.true;
 			});
 		});
@@ -75,7 +97,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 	});
 
 	describe("render(force, options)", () => {
-		// @todo: Write tests if you figure out how to mock another user
+		// Tested by E2E
 	});
 
 	describe("start()", () => {
@@ -102,38 +124,37 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 	});
 
 	describe("toggleInterface()", () => {
-		// @todo: Write tests if you figure out how to mock another user
+		// Tested by E2E
 	});
 
 	describe("toggleLightSource()", () => {
-		// @todo: Figure out how to test sockets
-		// @todo: Mock an actor and test if there is a socket message in console
-		// @todo: Mock actor and activate a lightsource
+		// Tested by E2E
 	});
 
 	describe("_gatherLightSources()", () => {
-		// @todo: Mock actor and activate a lightsource
+		// Tested by E2E
 	});
 
-	describe("_isDisabled()", () => {
-		it("opposite of setting", () => {
-			const setting = game.settings.get(
-				"shadowdark", "trackLightSources"
-			);
-			expect(setting).is.not.undefined;
-			const app = new LightSourceTrackerSD();
-			expect(app._isDisabled()).equal(!setting);
+	describe("_deleteActorHook(actor, options, userId)", () => {
+		// Unable to test this with potential active tracker
+	});
+
+	describe("_deleteItemHook(item, options, userId)", () => {
+		// Unable to test this with potential active tracker
+	});
+
+	describe("_isEnabled() & _isDisabled()", () => {
+		const app = new LightSourceTrackerSD();
+		it("returns false when not enabled", async () => {
+			await game.settings.set("shadowdark", "trackLightSources", false);
+			expect(app._isEnabled()).is.false;
+			expect(app._isDisabled()).is.true;
 		});
-	});
 
-	describe("_isEnabled()", () => {
-		it("required trackLightSources settings exists", () => {
-			const setting = game.settings.get(
-				"shadowdark", "trackLightSources"
-			);
-			expect(setting).is.not.undefined;
-			const app = new LightSourceTrackerSD();
-			expect(app._isEnabled()).equal(setting);
+		it("returns false when not enabled", async () => {
+			await game.settings.set("shadowdark", "trackLightSources", true);
+			expect(app._isEnabled()).is.true;
+			expect(app._isDisabled()).is.false;
 		});
 	});
 
@@ -205,39 +226,42 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		});
 	});
 
+	describe("_makeDirty()", () => {
+		// This marks the lightsourceTracker as dirty, which then
+		// will have _updateLightSources() run through the interval.
+		// Thus tested by _updateLightSources()
+	});
+
 	describe("_monitorInactiveUsers()", () => {
-		it("required trackInactiveUserLightSources settings exists", () => {
-			const setting = game.settings.get(
-				"shadowdark", "trackInactiveUserLightSources"
-			);
-			expect(setting).is.not.undefined;
-			const app = new LightSourceTrackerSD();
-			expect(app._monitorInactiveUsers()).equal(setting);
+		const app = new LightSourceTrackerSD();
+		it("returns false when not enabled", async () => {
+			await game.settings.set("shadowdark", "trackInactiveUserLightSources", false);
+			expect(app._monitorInactiveUsers()).is.false;
+		});
+
+		it("returns false when not enabled", async () => {
+			await game.settings.set("shadowdark", "trackInactiveUserLightSources", true);
+			expect(app._monitorInactiveUsers()).is.true;
 		});
 	});
 
 	describe("_onToggleLightSource()", () => {
-		// Skipping tests as it is just a gatekeeping method
+		// Skipping tests as it is just a forwarding method
+	});
+
+	describe("_pauseGameHook()", () => {
+		// Skipping tests
+	});
+
+	describe("_performTick()", () => {
+		// Tested by E2E
 	});
 
 	describe("_settingsChanged()", () => {
 		// Tested in _isPaused(), as if this fails, the tests there fails
 	});
 
-	describe("_performTick()", () => {
-		// TODO This test will fail if the game is paused.
-		const app = new LightSourceTrackerSD();
-		it("updates the date", () => {
-			const datePre = app.lastUpdate;
-			app._performTick();
-			expect(app.lastUpdate > datePre).is.true;
-		});
-
-		// @todo: e2e tests with sheets
-	});
-
 	describe("_updateLightSources()", () => {
-		// Skipping tests as they are tested later when _gatherLightSources
-		//   tests are written
+		// Tested in _gatherLightSources()
 	});
 };

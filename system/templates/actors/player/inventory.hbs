@@ -13,7 +13,7 @@
 						<th>
 							<a
 								class="item-control item-create"
-								title="{{localize SHADOWDARK.inventory.create_item}}"
+								data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type=section.label}}"
 								{{#ifEq sid "treasure"}}
 									data-item-type="Basic"
 									data-item-treasure=true
@@ -33,8 +33,12 @@
 						<tr class="item" data-item-id="{{item._id}}" draggable="true">
 							<td>
 								<div
-									class="item-image {{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}"
+									class="item-image
+									{{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}
+									{{#if item.system.scroll }}item-rollable{{/if}}
+									"
 									{{#ifEq item.type "Weapon" }}data-action="item-attack"{{/ifEq}}
+									{{#if item.system.scroll}}data-action="cast-scroll"{{/if}}
 									style="background-image: url({{item.img}})"
 									data-item-id="{{item._id}}"
 								>
@@ -43,7 +47,7 @@
 									class="item-control open-item"
 									data-item-id="{{item._id}}"
 									{{#if item.isLightSource}}
-										title="{{lightSourceTimeRemaining}}"
+										data-tooltip="{{lightSourceTimeRemaining}}"
 									{{/if}}
 								>
 									{{item.name}}
@@ -60,7 +64,7 @@
 										<a
 											class="item-control item-quantity-decrement"
 											data-item-id="{{item._id}}"
-											title="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
+											data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
 										>
 											<i class="fa-regular fa-minus fa-xs"></i>
 										</a>
@@ -70,7 +74,7 @@
 										<a
 											class="item-control item-quantity-increment"
 											data-item-id="{{item._id}}"
-											title="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
+											data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
 										>
 											<i class="fa-regular fa-plus fa-xs"></i>
 										</a>
@@ -85,7 +89,7 @@
 									<a
 										class="item-control item-toggle-equipped {{#if item.system.equipped}}equipped{{/if}}"
 										data-item-id="{{item._id}}"
-										title="{{localize 'SHADOWDARK.inventory.tooltip.toggle_equipped'}}"
+										data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_equipped'}}"
 									>
 										<i class="fas fa-shirt"></i>
 									</a>
@@ -94,7 +98,7 @@
 									<a
 										class="item-control sell-treasure"
 										data-item-id="{{item._id}}"
-										title="{{localize 'SHADOWDARK.inventory.tooltip.sell_treasure'}}"
+										data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.sell_treasure'}}"
 									>
 										<i class="fa-solid fa-coins"></i>
 									</a>
@@ -103,7 +107,7 @@
 									<a
 										class="item-control item-toggle-light {{#if item.system.light.active}}lit{{/if}}"
 										data-item-id="{{item._id}}"
-										title="{{localize 'SHADOWDARK.inventory.tooltip.toggle_light_source'}}"
+										data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_light_source'}}"
 									>
 										<i class="fa-solid fa-fire-flame-curved"></i>
 									</a>
@@ -125,7 +129,7 @@
 					<td class="item-list-centered">
 						<a
 							class="item-control open-gem-bag"
-							title="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
+							data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.gem_bag'}}"
 						>
 							<i class="fa-solid fa-sack"></i>
 						</a>

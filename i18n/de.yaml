@@ -35,21 +35,31 @@ SHADOWDARK.app.light_tracker.title: Licht-Tracker
 SHADOWDARK.app.light-tracker.douse-light: Licht löschen
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Licht ausschalten
 SHADOWDARK.app.npc_attack_ranges.title: Angriffsreichweite
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.instruction: Visit shadowdarklings.net and save as JSON. Copy the content of file into this box and click import
+SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
 SHADOWDARK.armor.properties.one_handed: Benötigt eine Hand
 SHADOWDARK.armor.properties.shield: Schild
+SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
 SHADOWDARK.chat.item_roll.title: Angirffswurf mit {name}
 SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} ist abgelaufen"
 SHADOWDARK.chat.light_source.remaining: Minuten verbleibend
+SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.chat.light_source.source.all: Alle Lichtquellen sind ausgegangen
 SHADOWDARK.chat.light_source.source.toggle.off: wurde gelöscht
 SHADOWDARK.chat.light_source.source.toggle.on: wurde entzündet
 SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} ging aus"
 SHADOWDARK.chat.spell_roll.title: Zaubere {name} auf Stufe {tier} mit Zauber-SK {spellDC}
+SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
+SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
+SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class.fighter: Kämpfer
 SHADOWDARK.class.priest: Priester
@@ -77,7 +87,7 @@ SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mo
 SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
 SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
 SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
-SHADOWDARK.dialog.hp_roll.title: HD Roll
+SHADOWDARK.dialog.hp_roll.title: HP Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Fähigkeitsbonus
 SHADOWDARK.dialog.item_roll.item_bonus: Gegenstandsbonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talentbonus
@@ -105,8 +115,10 @@ SHADOWDARK.effect.talent: Talenteffekte
 SHADOWDARK.effect.temporary: Temporäre Effekte
 SHADOWDARK.effect.unavailable: Deaktivierter Effekt
 SHADOWDARK.error.general.gm_required: Dazu musst du die Rolle des Game Master haben.
+SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.inventory.coins: Münzen
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minuten verbleibend"
+SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (teilweise benutzt)
 SHADOWDARK.inventory.label.quantity: Menge
 SHADOWDARK.inventory.label.slots: Plätze
@@ -224,6 +236,8 @@ SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RP
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
 SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
+SHADOWDARK.module_art_config.portraits: Portraits
+SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physisch
 SHADOWDARK.npc_attack.type.special: Spezial
 SHADOWDARK.npc_move.double_near: Doppelt Nah
@@ -248,6 +262,10 @@ SHADOWDARK.roll.failure: Fehlschlag! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Zauberwurf
 SHADOWDARK.roll.success: Erfolg! ({value})
+SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
+SHADOWDARK.settings.module_art.label: Configure Art
+SHADOWDARK.settings.module_art.name: Module-provided Art
+SHADOWDARK.settings.module_art.save: Save Changes
 SHADOWDARK.settings.track_light_sources.hint: Wenn aktiviert, wird das System die verbleibende Zeit auf allen aktiven Lichtquellen tracken und aktualisieren.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Wenn aktiviert, werden Lichtquellen, die zu inaktiven (nicht angemeldeten) Benutzern gehören weiterhin getrackt
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Lichtquellen inaktiver Benutzer tracken
@@ -268,6 +286,7 @@ SHADOWDARK.sheet.actor.placeholder.name: Neuer Charakter Name
 SHADOWDARK.sheet.class.item: Shadowdark Gegenstandsblatt
 SHADOWDARK.sheet.class.npc: Shadowdark NPC-Blatt
 SHADOWDARK.sheet.class.player: Shadowdark Spielerblatt
+SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
 SHADOWDARK.sheet.general.item_delete.title: Gegenstand löschen
 SHADOWDARK.sheet.general.item_edit.title: Gegenstand bearbeiten
 SHADOWDARK.sheet.item.tab.description: Beschreibung
@@ -328,6 +347,7 @@ SHADOWDARK.talent.type.advantage.initiative: Initiativvorteil
 SHADOWDARK.talent.type.advantage.spell: Zaubervorteil
 SHADOWDARK.talent.type.advantage.title: Vorteilsbonus
 SHADOWDARK.talent.type.armor_bonus: Rüstungs-RK-Bonus
+SHADOWDARK.talent.type.armor_mastery: Armor Mastery
 SHADOWDARK.talent.type.backstab_die: Zusätzlicher Meuchelwürfel
 SHADOWDARK.talent.type.custom: Eigenes Talent
 SHADOWDARK.talent.type.melee_attack_bonus: Nahkampfangriffswurfbonus
@@ -337,6 +357,7 @@ SHADOWDARK.talent.type.ranged_damage_bonus: Fernkampfschadenswurfbonus
 SHADOWDARK.talent.type.spell_bonus: Zauberbonus
 SHADOWDARK.talent.type.title: Talenttyp(en)
 SHADOWDARK.talent.type.weapon_mastery: Waffenmeisterung
+SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: laden
 SHADOWDARK.weapon.properties.thrown: Wurfwaffe
