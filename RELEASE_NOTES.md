@@ -1,4 +1,9 @@
-## V1.2.0
+## v1.2.1
+
+### Bugfixes
+* [#283] Attribute labels missing from NPC sheet
+
+## v1.2.0
 
 ### Bugfixes
 * [#75] Implements Armor Mastery talents properly
