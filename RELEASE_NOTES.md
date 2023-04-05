@@ -18,6 +18,7 @@
 * [#187] Disable Fog Exploration on The Lost Citadel map
 * [#197] Add ability to import characters created in the [ShadowDarklings](http://shadowdarklings.net/) character generator
 * [#213] Make PC ability modifiers available for scripted rolls. They will now be available as `@abilities.[ability].mod`, for example `@abilities.str.mod`, etc.
+* [#219] Optionally roll NPC Hit Points when they are added to a Scene
 * [#235] Allow opening of character sheet by clicking on portrait on light tracker
 * [#240] Add system welcome chat message pointing out that we have tours available
 * [#241] Adds end to end testing for Lightsource Tracker
