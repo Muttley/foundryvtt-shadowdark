@@ -14,19 +14,15 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
-		html.find(".item-rollable").click(
+		html.find("[data-action='item-attack']").click(
 			event => this._onRollItem(event)
 		);
 
-		html.find("div[data-action='item-attack']").click(
-			event => this._onRollItem(event)
-		);
-
-		html.find("a[data-action='cast-spell']").click(
+		html.find("[data-action='cast-spell']").click(
 			event => this._onCastSpell(event)
 		);
 
-		html.find("div[data-action='cast-scroll']").click(
+		html.find("[data-action='cast-scroll']").click(
 			event => this._onCastSpellScroll(event)
 		);
 
