@@ -70,12 +70,12 @@ export default ({ describe, it, after, afterEach, expect }) => {
 
 		it("actor has the correct ability scores", async () => {
 			const actor = await _getActor();
-			expect(actor.system.abilities.str.value).equal(json.stats.STR);
-			expect(actor.system.abilities.dex.value).equal(json.stats.DEX);
-			expect(actor.system.abilities.con.value).equal(json.stats.CON);
-			expect(actor.system.abilities.int.value).equal(json.stats.INT);
-			expect(actor.system.abilities.wis.value).equal(json.stats.WIS);
-			expect(actor.system.abilities.cha.value).equal(json.stats.CHA);
+			expect(actor.system.abilities.str.base).equal(json.stats.STR);
+			expect(actor.system.abilities.dex.base).equal(json.stats.DEX);
+			expect(actor.system.abilities.con.base).equal(json.stats.CON);
+			expect(actor.system.abilities.int.base).equal(json.stats.INT);
+			expect(actor.system.abilities.wis.base).equal(json.stats.WIS);
+			expect(actor.system.abilities.cha.base).equal(json.stats.CHA);
 		});
 
 		it("actor has the correct alignment", async () => {
@@ -372,13 +372,23 @@ export default ({ describe, it, after, afterEach, expect }) => {
 			talents.forEach(t => {
 				it(`${t.bonusTo} talent gives correct bonus`, async () => {
 					const ability = t.bonusTo.split(":")[0].toLowerCase();
-					const originalValue = json.stats[t.bonusTo.split(":")[0]];
+					const originalValue = Number(json.stats[t.bonusTo.split(":")[0]]);
 
 					json.bonuses = [t];
 					const actor = await app._importActor(json);
-					expect(actor.system.abilities[ability].value).equal(
-						originalValue + parseInt(t.bonusTo.split("+")[1], 10)
+					expect(actor.system.abilities[ability].bonus).equal(
+						parseInt(t.bonusTo.split("+")[1], 10)
 					);
+
+					expect(
+						actor.system.abilities[ability].base
+							+ actor.system.abilities[ability].bonus
+					).equal(originalValue);
+
+					expect(actor.system.abilities[ability].base).equal(
+						originalValue - parseInt(t.bonusTo.split("+")[1], 10)
+					);
+
 					await actor.delete();
 				});
 			});

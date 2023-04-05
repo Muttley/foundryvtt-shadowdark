@@ -75,38 +75,56 @@ export default ({ describe, it, after, before, expect }) => {
 		it("has abilities.str", () => {
 			expect(actor.system.abilities.str).is.not.undefined;
 		});
-		it("has abilities.str.value", () => {
-			expect(actor.system.abilities.str.value).is.not.undefined;
+		it("has abilities.str.base", () => {
+			expect(actor.system.abilities.str.base).is.not.undefined;
+		});
+		it("has abilities.str.bonus", () => {
+			expect(actor.system.abilities.str.bonus).is.not.undefined;
 		});
 		it("has abilities.dex", () => {
 			expect(actor.system.abilities.dex).is.not.undefined;
 		});
-		it("has abilities.dex.value", () => {
-			expect(actor.system.abilities.dex.value).is.not.undefined;
+		it("has abilities.dex.base", () => {
+			expect(actor.system.abilities.dex.base).is.not.undefined;
+		});
+		it("has abilities.dex.bonus", () => {
+			expect(actor.system.abilities.dex.bonus).is.not.undefined;
 		});
 		it("has abilities.con", () => {
 			expect(actor.system.abilities.con).is.not.undefined;
 		});
-		it("has abilities.con.value", () => {
-			expect(actor.system.abilities.con.value).is.not.undefined;
+		it("has abilities.con.base", () => {
+			expect(actor.system.abilities.con.base).is.not.undefined;
+		});
+		it("has abilities.con.bonus", () => {
+			expect(actor.system.abilities.con.bonus).is.not.undefined;
 		});
 		it("has abilities.int", () => {
 			expect(actor.system.abilities.int).is.not.undefined;
 		});
-		it("has abilities.int.value", () => {
-			expect(actor.system.abilities.int.value).is.not.undefined;
+		it("has abilities.int.base", () => {
+			expect(actor.system.abilities.int.base).is.not.undefined;
+		});
+		it("has abilities.int.bonus", () => {
+			expect(actor.system.abilities.int.bonus).is.not.undefined;
 		});
 		it("has abilities.wis", () => {
 			expect(actor.system.abilities.wis).is.not.undefined;
 		});
-		it("has abilities.wis.value", () => {
-			expect(actor.system.abilities.wis.value).is.not.undefined;
+		it("has abilities.wis.base", () => {
+			expect(actor.system.abilities.wis.base).is.not.undefined;
+		});
+		it("has abilities.wis.bonus", () => {
+			expect(actor.system.abilities.wis.bonus).is.not.undefined;
 		});
 		it("has abilities.cha", () => {
 			expect(actor.system.abilities.cha).is.not.undefined;
 		});
-		it("has abilities.cha.value", () => {
-			expect(actor.system.abilities.cha.value).is.not.undefined;
+		it("has abilities.cha.base", () => {
+			expect(actor.system.abilities.cha.base).is.not.undefined;
+		});
+		it("has abilities.cha.bonus", () => {
+			expect(actor.system.abilities.cha.bonus).is.not.undefined;
 		});
 		it("has ancestry", () => {
 			expect(actor.system.ancestry).is.not.undefined;
@@ -280,11 +298,10 @@ export default ({ describe, it, after, before, expect }) => {
 			describe(`${value} as value generates correct modifier`, () => {
 				abilities.forEach(ability => {
 					it(`for ${ability}`, async () => {
-						const actor = await game.actors.getName(`Test Actor ${key}`);
+						let actor = await game.actors.getName(`Test Actor ${key}`);
 						const updateData = {};
-						updateData[`system.abilities.${ability}.value`] = value;
+						updateData[`system.abilities.${ability}.base`] = Number(value);
 						await actor.update(updateData);
-
 						expect(actor.abilityModifier(ability)).equal(modifier);
 					});
 				});
@@ -305,7 +322,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("returns default gearslots for Player actor with lower str", async () => {
 			const actor = await createMockActor("Player");
-			await actor.update({"system.abilities.str.value": 3});
+			await actor.update({"system.abilities.str.base": 3});
 			expect(actor.numGearSlots()).equal(shadowdark.defaults.GEAR_SLOTS);
 			await actor.delete();
 		});
@@ -313,7 +330,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("returns str gearslots when higher than default gearslots", async () => {
 			const actor = await createMockActor("Player");
 			await actor.update({
-				"system.abilities.str.value": shadowdark.defaults.GEAR_SLOTS + 1,
+				"system.abilities.str.base": shadowdark.defaults.GEAR_SLOTS + 1,
 			});
 			expect(actor.numGearSlots()).equal(shadowdark.defaults.GEAR_SLOTS + 1);
 			await actor.delete();
@@ -326,8 +343,8 @@ export default ({ describe, it, after, before, expect }) => {
 		before(async () => {
 			actor = await createMockActor("Player");
 			await actor.update({
-				"system.abilities.str.value": 18,
-				"system.abilities.dex.value": 3,
+				"system.abilities.str.base": 18,
+				"system.abilities.dex.base": 3,
 			});
 		});
 
@@ -349,7 +366,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("returns the correct armor class", async () => {
 			const actor = await createMockActor("Player");
 			await actor.update({
-				"system.abilities.dex.value": 1,
+				"system.abilities.dex.base": 1,
 			});
 
 			expect(await actor.getArmorClass()).equal(10 - 4);
@@ -415,7 +432,7 @@ export default ({ describe, it, after, before, expect }) => {
 		before(async () => {
 			actor = await createMockActor("Player");
 			await actor.update({
-				"system.abilities.dex.value": 18,
+				"system.abilities.dex.base": 18,
 			});
 		});
 
