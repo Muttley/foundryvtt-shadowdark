@@ -43,6 +43,19 @@ export default function registerSystemSettings() {
 		},
 	});
 
+	// ----------------
+	//  NPC HIT POINTS
+	// ----------------
+	//
+	game.settings.register("shadowdark", "rollNpcHpWhenAddedToScene", {
+		name: "SHADOWDARK.settings.roll_npc_hp.name",
+		hint: "SHADOWDARK.settings.roll_npc_hp.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+	});
+
 	// ------------------------
 	//  LIGHT TRACKER SETTINGS
 	// ------------------------
