@@ -201,12 +201,6 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			if (bonus.bonusName === "StatBonus") {
 				const talent = await this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents");
 				talents.push(talent);
-
-				// Keep running total of talent bonuses
-				for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-					importedActor.system.abilities[ability].bonus +=
-						talent.system.abilities[ability].bonus;
-				}
 			}
 			if (bonus.sourceCategory === "Talent" || bonus.sourceCategory === "Ability") {
 				// Fighter

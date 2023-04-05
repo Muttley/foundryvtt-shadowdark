@@ -369,28 +369,46 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				},
 			];
 
-			talents.forEach(t => {
+			talents.forEach(async t => {
 				it(`${t.bonusTo} talent gives correct bonus`, async () => {
 					const ability = t.bonusTo.split(":")[0].toLowerCase();
-					const originalValue = Number(json.stats[t.bonusTo.split(":")[0]]);
+					const abilityBase = parseInt(json.stats[t.bonusTo.split(":")[0]], 10);
+					const abilityBonus = parseInt(t.bonusTo.split("+")[1], 10);
 
 					json.bonuses = [t];
 					const actor = await app._importActor(json);
-					expect(actor.system.abilities[ability].bonus).equal(
-						parseInt(t.bonusTo.split("+")[1], 10)
-					);
 
-					expect(
-						actor.system.abilities[ability].base
-							+ actor.system.abilities[ability].bonus
-					).equal(originalValue);
-
-					expect(actor.system.abilities[ability].base).equal(
-						originalValue - parseInt(t.bonusTo.split("+")[1], 10)
-					);
+					// We expect the base to remain, and the bonus to be added to the bonus field
+					expect(actor.system.abilities[ability].base).equal(abilityBase);
+					expect(actor.system.abilities[ability].bonus).equal(abilityBonus);
 
 					await actor.delete();
 				});
+			});
+
+			it("multiple bonuses provides correct bonus", async () => {
+				const bonus = {
+					sourceType: "Class",
+					sourceName: "Thief",
+					sourceCategory: "Talent",
+					gainedAtLevel: 1,
+					name: "StatBonus",
+					bonusName: "StatBonus",
+					bonusTo: "STR:+2",
+				};
+
+				const ability = "str";
+				const abilityBase = parseInt(json.stats.STR, 10);
+				const abilityBonus = 4;
+
+				json.bonuses = [bonus, bonus];
+				const actor = await app._importActor(json);
+
+				// We expect the base to remain, and the double bonus to be added as bonus
+				expect(actor.system.abilities[ability].base).equal(abilityBase);
+				expect(actor.system.abilities[ability].bonus).equal(abilityBonus);
+
+				await actor.delete();
 			});
 		});
 
