@@ -206,7 +206,7 @@ export default class ActorSD extends Actor {
 			value,
 			bonus: this.system.abilities[ability].bonus,
 			base: this.system.abilities[ability].base,
-			modifier: this._abilityModifier(value),
+			modifier: this.system.abilities[ability].mod,
 			label: `${game.i18n.localize(labelKey)}`,
 		};
 	}
@@ -618,7 +618,9 @@ export default class ActorSD extends Actor {
 	/*  Base Data Preparation Helpers               */
 	/* -------------------------------------------- */
 
-	_preparePlayerData() {}
+	_preparePlayerData() {
+		this._populatePlayerModifiers();
+	}
 
 	_prepareNPCData() {}
 
@@ -719,5 +721,11 @@ export default class ActorSD extends Actor {
 			}
 		}
 		return source;
+	}
+
+	_populatePlayerModifiers() {
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			this.system.abilities[ability].mod = this.abilityModifier(ability);
+		}
 	}
 }
