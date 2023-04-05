@@ -14,6 +14,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
+		html.find(".item-rollable").click(
+			event => this._onRollItem(event)
+		);
+
 		html.find("div[data-action='item-attack']").click(
 			event => this._onRollItem(event)
 		);

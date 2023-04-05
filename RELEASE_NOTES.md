@@ -1,3 +1,8 @@
+## v1.2.2
+
+### Bugfixes
+* [#288] Unable to make attack using Attack/Actions shortcuts
+
 ## v1.2.1
 
 ### Bugfixes
