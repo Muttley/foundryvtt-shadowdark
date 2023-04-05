@@ -1,4 +1,4 @@
-## V1.x.x
+## V1.2.0
 
 ### Bugfixes
 * [#75] Implements Armor Mastery talents properly
