@@ -4,7 +4,7 @@
 * [#75] Implements Armor Mastery talents properly
 * [#110] Ensure manual edits to attribute values after ActiveEffects have been applied to a character do not result in incorrect values
 * [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
-* [#249] Some default token sizes not corrent in monster pack
+* [#249] Some default token sizes not correct in monster pack
 * [#261] Create Item button tooltips not working on character and NPC sheets
 * [#265] Always shows the properties field for magic items and talents
 * [#267] Typo in lightsource tour step 21
