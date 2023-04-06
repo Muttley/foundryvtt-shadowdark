@@ -119,84 +119,6 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					action: "scrollTo",
 				},
 				{
-					id: "sd-playerroll-back-to-actor",
-					selector: ".sheet.player",
-					title: "Spells",
-					content: "<p>Lets look at how you roll spells!</p>",
-					action: "scrollTo",
-				},
-				{
-					id: "sd-playerroll-spells-navigate",
-					selector: ".sheet.player a.item[data-tab='tab-spells']",
-					title: "Spells: Tab",
-					content: "<p>Lets look at the spells tab.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-playerroll-spells-spell-list",
-					selector: ".spells-list",
-					title: "Spells",
-					content: "<p>In this example, the Player has access to Magic Missile.</p>",
-					action: "scrollTo",
-				},
-				{
-					id: "sd-playerroll-spells-spell-available",
-					selector: "a.toggle-spell-lost",
-					title: "Spell Available?",
-					content: "<p>This check-mark means the spell is available.</p>\n<p>A miscast will automatically lose the spell for the day, turning the check-mark to a cross</p>",
-					action: "scrollTo",
-				},
-				{
-					id: "sd-playerroll-spells-spell-roll",
-					selector: "a.cast-spell",
-					title: "Cast Spell",
-					content: "<p>Clicking the <b>wand</b> icon will give you a cast dialog and cast the spell.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-playerroll-hp-dialog",
-					selector: ".dialog",
-					title: "Rolling Spell Dialog",
-					content: "<p>This is the dialog for rolling a spell.</p>",
-					action: "scrollTo",
-				},
-				{
-					id: "sd-playerroll-spells-spell-roll-talent",
-					selector: "input[name='talent-bonus']",
-					title: "Talent Bonus",
-					content: "<p>If you are lucky and get +1 to spell checks through talents, the bonuses will be added and displayed here.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-playerroll-spells-spell-roll-cast",
-					selector: "button.disadvantage",
-					title: "Cast Spell with Disadadvantage",
-					content: "<p>Let's try a roll at disadvantage!</p>",
-					action: "click",
-				},
-				{
-					id: "sd-playerroll-spells-roll-message",
-					selector: ".message:last-child",
-					title: "Spell Chat Card",
-					content: "<p>The Spell chat cards contains the information for the spell. In some cases it includes a clickable roll for damage rolls e.g.</p>",
-					action: "scrollTo",
-				},
-				{
-					id: "sd-playerroll-spells-roll-message-damage",
-					selector: ".message:last-child .inline-roll",
-					title: "Rollable button",
-					content: "<p>For Magic Missile we get the chance to roll a 1d4 damage.</p>",
-					action: "scrollTo",
-				},
-
-				{
-					id: "sd-playerroll-spells-miscast",
-					selector: ".player a.toggle-spell-lost",
-					title: "Lost Spell",
-					content: "<p>If a spell is lost due to failed spell cast, clicking the cross will restore it.</p>",
-					action: "scrollTo",
-				},
-				{
 					id: "sd-playerroll-items-navigate",
 					selector: "a.item[data-tab='tab-inventory']",
 					title: "Items",
@@ -295,6 +217,84 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 					action: "scrollTo",
 				},
 				{
+					id: "sd-playerroll-back-to-actor",
+					selector: ".sheet.player",
+					title: "Spells",
+					content: "<p>Lets transform our hero into a Wizard and look at how you roll spells!</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-spells-navigate",
+					selector: ".sheet.player a.item[data-tab='tab-spells']",
+					title: "Spells: Tab",
+					content: "<p>Lets look at the spells tab.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-playerroll-spells-spell-list",
+					selector: ".spells-list",
+					title: "Spells",
+					content: "<p>In this example, the Player has access to Magic Missile.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-spells-spell-available",
+					selector: "a.toggle-spell-lost",
+					title: "Spell Available?",
+					content: "<p>This check-mark means the spell is available.</p>\n<p>A miscast will automatically lose the spell for the day, turning the check-mark to a cross</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-spells-spell-roll",
+					selector: "a.cast-spell",
+					title: "Cast Spell",
+					content: "<p>Clicking the <b>wand</b> icon will give you a cast dialog and cast the spell.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-playerroll-hp-dialog",
+					selector: ".dialog",
+					title: "Rolling Spell Dialog",
+					content: "<p>This is the dialog for rolling a spell.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-spells-spell-roll-talent",
+					selector: "input[name='talent-bonus']",
+					title: "Talent Bonus",
+					content: "<p>If you are lucky and get +1 to spell checks through talents, the bonuses will be added and displayed here.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-playerroll-spells-spell-roll-cast",
+					selector: "button.disadvantage",
+					title: "Cast Spell with Disadadvantage",
+					content: "<p>Let's try a roll at disadvantage!</p>",
+					action: "click",
+				},
+				{
+					id: "sd-playerroll-spells-roll-message",
+					selector: ".message:last-child",
+					title: "Spell Chat Card",
+					content: "<p>The Spell chat cards contains the information for the spell. In some cases it includes a clickable roll for damage rolls e.g.</p>",
+					action: "scrollTo",
+				},
+				{
+					id: "sd-playerroll-spells-roll-message-damage",
+					selector: ".message:last-child .inline-roll",
+					title: "Rollable button",
+					content: "<p>For Magic Missile we get the chance to roll a 1d4 damage.</p>",
+					action: "scrollTo",
+				},
+
+				{
+					id: "sd-playerroll-spells-miscast",
+					selector: ".player a.toggle-spell-lost",
+					title: "Lost Spell",
+					content: "<p>If a spell is lost due to failed spell cast, clicking the cross will restore it.</p>",
+					action: "scrollTo",
+				},
+				{
 					id: "sd-playerroll-end-tour",
 					selector: "#tours-management .window-title",
 					title: "Thank you!",
@@ -329,7 +329,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			const tourActor = await Actor.create({
 				name: MOCK_ACTOR_NAME,
 				type: "Player",
-				system: { class: "thief", spellcastingAbility: "int" },
+				system: { class: "thief" },
 				ownership: { default: 3 },
 				img: "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_portrait.webp",
 			});
@@ -340,15 +340,27 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			const weaponId = weaponsPack.index.find(i => i.name === "Greataxe")._id;
 			items.push(await weaponsPack.getDocument(weaponId));
 
-			const spellsPack = game.packs.get("shadowdark.spells");
-			const spellId = spellsPack.index.find(i => i.name === "Magic Missile")._id;
-			items.push(await spellsPack.getDocument(spellId));
-
 			await tourActor.createEmbeddedDocuments("Item", items);
 
 			// Delay so the UI has time to catch up
 			await tourActor.sheet.render(true);
 			await delay(200);
+		}
+
+		if (this.currentStep.id === "sd-playerroll-back-to-actor") {
+			let tourActor = await game.actors.find(actor => actor.name === MOCK_ACTOR_NAME);
+
+			tourActor = await tourActor.update({
+				"system.class": "wizard",
+				"system.spellcastingAbility": "int",
+			});
+
+			const items = [];
+			const spellsPack = game.packs.get("shadowdark.spells");
+			const spellId = spellsPack.index.find(i => i.name === "Magic Missile")._id;
+			items.push(await spellsPack.getDocument(spellId));
+
+			await tourActor.createEmbeddedDocuments("Item", items);
 		}
 
 		if (this.currentStep.selector.includes(".message")) {

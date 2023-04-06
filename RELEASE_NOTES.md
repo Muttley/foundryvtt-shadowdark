@@ -1,3 +1,11 @@
+## v1.2.3
+
+### Bugfixes
+* [#292] Clicking a rollable item on the inventory screen triggers two dialog boxes
+* [#294] Player rolls tour stalls due to us hiding the spell casting tab for non-casters
+* [#296] Placing a Monster with Auto Roll NPC HP causes multiple HP rolls
+* [#297] Quickstart pregens have all have zero current hit points
+
 ## v1.2.2
 
 ### Bugfixes
