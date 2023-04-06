@@ -1,4 +1,4 @@
-## v1.x.x
+## v1.2.3
 
 ### Bugfixes
 * [#292] Clicking a rollable item on the inventory screen triggers two dialog boxes
