@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#292] Clicking a rollable item on the inventory screen triggers two dialog boxes
+* [#294] Player rolls tour stalls due to us hiding the spell casting tab for non-casters
 * [#297] Quickstart pregens have all have zero current hit points
 
 ## v1.2.2
