@@ -1,3 +1,8 @@
+![GitHub Release](https://img.shields.io/github/release-date/Muttley/foundryvtt-shadowdark)
+![All Versions](https://img.shields.io/github/downloads/Muttley/foundryvtt-shadowdark/total)
+![Latest Version](https://img.shields.io/github/downloads/Muttley/foundryvtt-shadowdark/latest/total)
+![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fshadowdark)
+
 # Shadowdark RPG for Foundry VTT
 
 **foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][1] with the [Foundry VTT][2] virtual tabletop software.
