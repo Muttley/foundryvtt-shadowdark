@@ -9,7 +9,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return mergeObject(super.defaultOptions, {
 			classes: ["shadowdark-importer"],
 			width: 300,
-			height: 235,
+			height: 310,
 			resizable: false,
 		});
 	}
@@ -25,14 +25,35 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return `${title}`;
 	}
 
+	/** @inheritdoc */
 	_updateObject(event, formData) {
 		event.preventDefault();
 
-		const json = JSON.parse(formData.json);
-		return this._importActor(json);
+		try {
+			const json = JSON.parse(formData.json);
+			return this._importActor(json);
+		}
+		catch(error) {
+			ui.notifications.error(`Couldn't parse the JSON. ${error}`);
+		}
+	}
+
+	/** @inheritdoc */
+	_onSubmit(event) {
+		event.preventDefault();
+		if (event.submitter.className === "open-generator") {
+			return this._openImporter();
+		}
+		super._onSubmit(event);
 	}
 
 	/** Specific methods */
+
+	_openImporter() {
+		return new FrameViewer("http://shadowdarklings.net", {
+			title: "Shadowdarklings.net",
+		}).render(true);
+	}
 
 	/**
 	 * Parse the spellcasting modifier through the config
@@ -344,4 +365,3 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return newActor;
 	}
 }
-
