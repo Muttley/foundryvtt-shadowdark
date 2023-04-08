@@ -16,6 +16,7 @@ export default ({ describe, it, after, expect }) => {
 	const originalSettings = {
 		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
+		realtimeLightTracking: game.settings.get("shadowdark", "realtimeLightTracking"),
 	};
 	const wasPaused = game.paused;
 
@@ -40,15 +41,12 @@ export default ({ describe, it, after, expect }) => {
 			const app = new LightSourceTrackerSD();
 			it("has the expected data", () => {
 				expect(app.monitoredLightSources.length).equal(0);
-				expect(app.updateInterval).equal(30*1000);
-				expect(app.updateIntervalId).is.null;
-				expect(app.lastUpdate).is.not.null;
+				expect(app.lastUpdate).equal(0);
 				expect(app.updatingLightSources).is.false;
 				expect(app.housekeepingInterval).equal(1000);
 				expect(app.housekeepingIntervalId).is.null;
 				expect(app.dirty).is.true;
 				expect(app.performingTick).is.false;
-				expect(app.pauseWithGame).is.true;
 			});
 		});
 	});
@@ -159,6 +157,8 @@ export default ({ describe, it, after, expect }) => {
 	});
 
 	describe("_isPaused()", () => {
+		// Ensure that realtime tracking is enabled.
+		game.setting.set("shadodark", "realtimeLightTracking", true);
 		// Store original setting
 		const setting = game.settings.get(
 			"shadowdark", "pauseLightTrackingWithGame"
@@ -253,7 +253,7 @@ export default ({ describe, it, after, expect }) => {
 		// Skipping tests
 	});
 
-	describe("_performTick()", () => {
+	describe("onUpdateWorldTime", () => {
 		// Tested by E2E
 	});
 

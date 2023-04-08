@@ -1,17 +1,16 @@
+import RealTimeSD from "./RealTimeSD.mjs";
 
 export default class LightSourceTrackerSD extends Application {
 
 	DEFAULT_UPDATE_INTERVAL =
-		shadowdark.defaults.LIGHT_TRACKER_UPDATE_INTERVAL_SECS * 1000;
+		shadowdark.defaults.LIGHT_TRACKER_UPDATE_INTERVAL_SECS;
 
 	constructor(object, options) {
 		super(object, options);
 
 		this.monitoredLightSources = [];
-		this.updateInterval = this.DEFAULT_UPDATE_INTERVAL;
-		this.updateIntervalId = null;
 
-		this.lastUpdate = Date.now();
+		this.lastUpdate = 0;
 		this.updatingLightSources = false;
 
 		this.housekeepingInterval = 1000; // 1 sec
@@ -20,8 +19,7 @@ export default class LightSourceTrackerSD extends Application {
 		this.dirty = true;
 
 		this.performingTick = false;
-
-		this.pauseWithGame = true;
+		this.realTime = new RealTimeSD();
 	}
 
 	/** @inheritdoc */
@@ -137,6 +135,7 @@ export default class LightSourceTrackerSD extends Application {
 	async getData(options) {
 		const context = {
 			monitoredLightSources: this.monitoredLightSources,
+			isRealtimeEnabled: this.realTime.isEnabled(),
 			paused: this._isPaused(),
 		};
 
@@ -151,10 +150,6 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async start() {
-		this.pauseWithGame = game.settings.get(
-			"shadowdark", "pauseLightTrackingWithGame"
-		);
-
 		// Make sure we're actualled enable and are supposed to be running.
 		if (this._isDisabled()) {
 			shadowdark.log("Light Tracker is disabled in settings");
@@ -167,6 +162,9 @@ export default class LightSourceTrackerSD extends Application {
 		// Now we can actually start properly
 		shadowdark.log("Light Tracker starting");
 
+		// Start the realtime clock (if enabled).
+		this.realTime.start();
+
 		// First get a list of all active light sources in the world
 		await this._gatherLightSources();
 
@@ -176,19 +174,6 @@ export default class LightSourceTrackerSD extends Application {
 			this._updateLightSources.bind(this),
 			this.housekeepingInterval
 		);
-
-		// Now set up the timer interval used to update all light sources
-		const updateSecs = game.settings.get(
-			"shadowdark", "trackLightSourcesInterval"
-		);
-
-		this.updateInterval = updateSecs * 1000 || this.DEFAULT_UPDATE_INTERVAL;
-		this.updateIntervalId = setInterval(
-			this._performTick.bind(this),
-			this.updateInterval
-		);
-
-		shadowdark.log(`Updating light sources every ${updateSecs} seconds`);
 
 		if (game.settings.get("shadowdark", "trackLightSourcesOpen")) {
 			this.render(true);
@@ -311,10 +296,6 @@ export default class LightSourceTrackerSD extends Application {
 		return game.settings.get("shadowdark", "trackLightSources");
 	}
 
-	_isPaused() {
-		return game.paused && this.pauseWithGame;
-	}
-
 	async _makeDirty() {
 		if (this._isEnabled() && game.user.isGM) this.dirty = true;
 	}
@@ -332,19 +313,26 @@ export default class LightSourceTrackerSD extends Application {
 		this.render(false);
 	}
 
-	async _performTick() {
+	async onUpdateWorldTime(worldTime, worldDelta) {
 		if (!(this._isEnabled() && game.user.isGM)) return;
-		if (this._isPaused()) return;
 		if (this.updatingLightSources) return;
 
 		this.performingTick = true;
 
+		const updateSecs = game.settings.get(
+			"shadowdark", "trackLightSourcesInterval"
+		) || this.DEFAULT_UPDATE_INTERVAL;
+
+		// If time moves forward, check if enough time has passed to update the
+		// light timers. Updating too often results in inventory rerendering. If
+		// the time moved backwards, always update.
+		const delta = worldTime - this.lastUpdate;
+		if (worldDelta > 0 && delta < updateSecs) {
+			return;
+		}
+		this.lastUpdate = worldTime;
+
 		shadowdark.log("Updating light sources");
-
-		const now = Date.now();
-		const elapsedSeconds = (now - this.lastUpdate) / 1000;
-
-		this.lastUpdate = now;
 
 		try {
 			for (const actorData of this.monitoredLightSources) {
@@ -357,7 +345,11 @@ export default class LightSourceTrackerSD extends Application {
 
 					const light = itemData.system.light;
 
-					light.remainingSecs -= elapsedSeconds;
+					const longevitySecs = light.longevityMins * 60;
+					light.remainingSecs = Math.max(
+						0,
+						Math.min(longevitySecs, light.remainingSecs - delta)
+					);
 
 					if (light.remainingSecs <= 0) {
 						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has expired`);
@@ -396,9 +388,12 @@ export default class LightSourceTrackerSD extends Application {
 	async _settingsChanged() {
 		if (!game.user.isGM) return;
 
-		this.pauseWithGame = game.settings.get(
-			"shadowdark", "pauseLightTrackingWithGame"
-		);
+		if (this.realTime.isEnabled()) {
+			this.realTime.start();
+		}
+		else {
+			this.realTime.stop();
+		}
 
 		if (this._isEnabled()) {
 			this.dirty = true;
@@ -422,4 +417,7 @@ export default class LightSourceTrackerSD extends Application {
 		this.render(false);
 	}
 
+	_isPaused() {
+		return this.realTime.isPaused();
+	}
 }

@@ -10,6 +10,7 @@ export const LightSourceTrackerHooks = {
 			Hooks.on("pauseGame", lst._pauseGameHook.bind(lst));
 			Hooks.on("updateUser", lst._makeDirty.bind(lst));
 			Hooks.on("userConnected", lst._makeDirty.bind(lst));
+			Hooks.on("updateWorldTime", lst.onUpdateWorldTime.bind(lst));
 		}
 
 		game.socket.on("system.shadowdark", event => {
