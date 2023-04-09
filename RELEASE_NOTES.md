@@ -1,3 +1,10 @@
+## v1.x.x
+
+### Bugfixes
+
+### Enhancements
+* [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
+
 ## v1.2.3
 
 ### Bugfixes

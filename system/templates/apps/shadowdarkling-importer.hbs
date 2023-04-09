@@ -1,12 +1,19 @@
-<form class="shadowdarling-importer" autocomplete="off">
+<form class="shadowdarkling-importer" autocomplete="off">
   <section>
     <div>
-      <p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction"}}</p>
-    <a href="http://shadowdarklings.net">Shadowdarklings.net</a>
-    <hr />
+      <p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction1"}}</p>
+      <button class="open-generator">
+        {{localize "SHADOWDARK.apps.shadowdarkling-importer.open-generator"}}
+      </button>
+      <hr />
+      <p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction2"}}</p>
+      <hr />
+      <p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction3"}}</p>
+      <textarea name="json"></textarea>
+      <hr />
+      <p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction4"}}</p>
     </div>
   </section>
-  <textarea name="json"></textarea>
   <footer class="sheet-footer flexrow">
     <button class="import">
       {{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button"}}
