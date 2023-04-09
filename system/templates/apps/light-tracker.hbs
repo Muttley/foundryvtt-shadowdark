@@ -8,28 +8,30 @@
 				{{localize 'SHADOWDARK.light-tracker.title.suffix'}}
 			</span>
 		</div>
-		<div class="status">
-			<p class="status__label">
-				{{localize 'SHADOWDARK.light-tracker.status.label'}}:
-			</p>
-			<p class="status__value">
-			{{#if paused}}
-				<i
-					class="status__paused fa-solid fa-circle-pause"
-					text={{localize 'SHADOWDARK.light-tracker.paused'}}
-				>
-				</i>
-				Paused
-			{{else}}
-				<i
-					class="status__active fa-solid fa-circle-play"
-					text={{localize 'SHADOWDARK.light-tracker.active'}}
-				>
-				</i>
-				Active
-			{{/if}}
-			</p>
-		</div>
+		{{#if isRealtimeEnabled}}
+			<div class="status">
+				<p class="status__label">
+					{{localize 'SHADOWDARK.light-tracker.status.label'}}:
+				</p>
+				<p class="status__value">
+				{{#if paused}}
+					<i
+						class="status__paused fa-solid fa-circle-pause"
+						text={{localize 'SHADOWDARK.light-tracker.paused'}}
+					>
+					</i>
+					Paused
+				{{else}}
+					<i
+						class="status__active fa-solid fa-circle-play"
+						text={{localize 'SHADOWDARK.light-tracker.active'}}
+					>
+					</i>
+					Active
+				{{/if}}
+				</p>
+			</div>
+		{{/if}}
 	</header>
 	<hr />
 	<section class="light-source-grid">

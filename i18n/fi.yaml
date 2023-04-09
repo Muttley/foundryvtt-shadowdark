@@ -274,6 +274,8 @@ SHADOWDARK.settings.track_light_sources.interval.name: Valonlähteiden seurannan
 SHADOWDARK.settings.track_light_sources.name: Seuraa valonlähteiden aikaa
 SHADOWDARK.settings.track_light_sources.open_on_start.hint: Jos valitset tämän, valonlähteiden seurannan ikkuna avautuu järjestelmän käynnistyksen yhteydessä (vain pelimestarille).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Avaa valonlähteiden seurannan ikkuna käynnistyksen yhteydessä
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
+SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset tämän, valonlähteiden seurannan ajastimet eivät tikitä Foundryn ollessa pausella.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet

@@ -27,6 +27,7 @@ export default ({ describe, it, after, before, expect }) => {
 	const originalSettings = {
 		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
+		realtimeLightTracking: game.settings.get("shadowdark", "realtimeLightTracking"),
 	};
 
 	before(async () => {
@@ -185,7 +186,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	describe("_performTick()", () => {
+	describe("onUpdateWorldTime", () => {
 		// @todo: figure out how to test
 	});
 };
