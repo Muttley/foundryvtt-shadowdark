@@ -76,7 +76,7 @@ export default class LightSourceTrackerSD extends Application {
 					for (const itemData of actorData.lightSources) {
 						shadowdark.log(`Turning off ${actor.name}'s ${itemData.name} light source`);
 
-						actor.updateEmbeddedDocuments("Item", [{
+						await actor.updateEmbeddedDocuments("Item", [{
 							_id: itemData._id,
 							"system.light.active": false,
 						}]);
@@ -101,11 +101,12 @@ export default class LightSourceTrackerSD extends Application {
 				});
 
 				this.dirty = true;
+				this._updateLightSources();
 			}
 		);
 
 		html.find(".disable-light").click(
-			event => {
+			async event => {
 				event.preventDefault();
 				const itemId = $(event.currentTarget).data("item-id");
 				const actorId = $(event.currentTarget).data("actor-id");
@@ -127,6 +128,7 @@ export default class LightSourceTrackerSD extends Application {
 				actor.yourLightWentOut(itemId);
 
 				this.dirty = true;
+				this._updateLightSources();
 			}
 		);
 	}

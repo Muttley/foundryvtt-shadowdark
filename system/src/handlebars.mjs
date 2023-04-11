@@ -1,7 +1,7 @@
 export default function registerHandlebarsHelpers() {
 
 	Handlebars.registerHelper("secondsToMins", seconds => {
-		return Math.floor(seconds / 60);
+		return Math.ceil(seconds / 60);
 	});
 
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
