@@ -51,6 +51,45 @@ export default class ItemSD extends Item {
 		return card;
 	}
 
+	async getDetailsContent() {
+		const description = await TextEditor.enrichHTML(
+			this.system.description,
+			{
+				async: true,
+			}
+		);
+
+		const data = {
+			description,
+			itemData: this.toObject(),
+		};
+
+		const baseTemplatePath = "systems/shadowdark/templates/partials/details";
+
+		let detailsTemplate;
+
+		switch (this.type) {
+			case "Armor":
+				detailsTemplate = "armor.hbs";
+				break;
+			case "Spell":
+				detailsTemplate = "spell.hbs";
+				break;
+			case "Weapon":
+				detailsTemplate = "weapon.hbs";
+				break;
+			default:
+				detailsTemplate = "description.hbs";
+		}
+
+		const html = await renderTemplate(
+			`${baseTemplatePath}/${detailsTemplate}`,
+			data
+		);
+
+		return html;
+	}
+
 	lightRemainingString() {
 		if (this.type !== "Basic" && !this.system.light.isSource) return;
 

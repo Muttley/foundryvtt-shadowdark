@@ -62,4 +62,9 @@ export default function registerHandlebarsHelpers() {
 		return CONFIG.SHADOWDARK.BACKSTAB_CLASSES
 			.includes(value) ? options.fn(this) : options.inverse(this);
 	});
+
+	Handlebars.registerHelper("joinStrings", value => {
+		value = value ? value : [];
+		return value.join(", ");
+	});
 }

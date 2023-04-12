@@ -1,0 +1,27 @@
+<p>
+	<b>Type</b> <em>{{fromConfig "WEAPON_TYPES" itemData.system.type}}</em>
+</p>
+<p>
+	<b>Range</b> <em>{{fromConfig "RANGES" itemData.system.range}}</em>
+</p>
+{{#if itemData.system.damage.oneHanded}}
+	<p>
+		<b>1H Damage</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" itemData.system.damage.oneHanded}}</em>
+	</p>
+{{/if}}
+{{#if itemData.system.damage.twoHanded}}
+	<p>
+		<b>2H Damage</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" itemData.system.damage.twoHanded}}</em>
+	</p>
+{{/if}}
+<p>
+	{{#if itemData.system.baseWeapon}}
+	<b>Base Type</b> <em>{{fromConfig "WEAPON_BASE_WEAPON" itemData.system.baseWeapon}}</em>
+	{{/if}}
+</p>
+{{{description}}}
+<footer class="details-footer">
+	{{#each itemData.system.properties as |prop|}}
+		<span>{{fromConfig "WEAPON_PROPERTIES" prop}}</span>
+	{{/each}}
+</footer>

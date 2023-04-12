@@ -1,0 +1,15 @@
+<p>
+	<b>Tier</b> {{itemData.system.tier}},
+	<b>Class</b> <em>{{joinStrings itemData.system.class}}</em>
+</p>
+<p>
+	<b>Range</b> {{itemData.system.range}}
+</p>
+<p>
+	<b>Duration</b>
+	{{#if itemData.system.duration.value}}
+		{{itemData.system.duration.value}}
+	{{/if}}
+	{{itemData.system.duration.type}}
+</p>
+{{{description}}}

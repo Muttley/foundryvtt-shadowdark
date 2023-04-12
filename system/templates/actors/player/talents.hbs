@@ -21,7 +21,12 @@
 									style="background-image: url({{talent.img}})"
 								>
 								</div>
-								{{talent.name}}
+								<a
+									class="item-control show-details"
+									data-item-id="{{talent._id}}"
+								>
+									{{talent.name}}
+								</a>
 							</td>
 							<td>
 								{{#ifEq sid "level"}}
