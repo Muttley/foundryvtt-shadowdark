@@ -7,6 +7,11 @@
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
 * [#305] Added option for using game world time instead of real time to track lightsources. New contributor: [Kaali](https://github.com/Kaali)
 
+## v1.2.4
+
+### Bugfixes
+* [#313] Fixed a typo in the books where flasks & bottles cost 3 GP instead of SP
+
 ## v1.2.3
 
 ### Bugfixes
