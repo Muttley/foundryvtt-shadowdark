@@ -1,3 +1,8 @@
+## v1.2.4
+
+### Bugfixes
+* [#313] Fixed a typo in the books where flasks & bottles cost 3 GP instead of SP
+
 ## v1.2.3
 
 ### Bugfixes
