@@ -222,6 +222,17 @@
 		text-align: left;
 	}
 
+	.details-footer {
+		padding: 3px 0 0;
+
+		span {
+			border: 2px groove #FFF;
+			border-radius: 5px;
+			padding: 0 4px 0 4px;
+			font-size: 10px;
+		}
+	}
+
 	.open-gem-bag {
 		color: sienna;
 	}

@@ -1,0 +1,19 @@
+<p>
+	<b>Armor Class</b> <em>{{itemData.system.ac.base}}{{#if itemData.system.ac.modifier}}{{numberFormat itemData.system.ac.modifier decimals=0 sign=true}}{{/if}}</em>
+</p>
+<p>
+	{{#if itemData.system.ac.attribute}}
+	<b>Bonus Attribute</b> <em>{{fromConfig "ABILITIES_LONG" itemData.system.ac.attribute}}</em>
+	{{/if}}
+</p>
+<p>
+	{{#if itemData.system.baseArmor}}
+	<b>Base Type</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" itemData.system.baseArmor}}</em>
+	{{/if}}
+</p>
+{{{description}}}
+<footer class="details-footer">
+	{{#each itemData.system.properties as |prop|}}
+		<span>{{fromConfig "ARMOR_PROPERTIES" prop}}</span>
+	{{/each}}
+</footer>

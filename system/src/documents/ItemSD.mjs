@@ -64,14 +64,22 @@ export default class ItemSD extends Item {
 			itemData: this.toObject(),
 		};
 
-		const baseTemplatePath = "systems/shadowdark/templates/partials";
-		let detailsTemplate = "details-description.hbs";
+		const baseTemplatePath = "systems/shadowdark/templates/partials/details";
+
+		let detailsTemplate;
 
 		switch (this.type) {
-			case "Spell": {
-				detailsTemplate = "details-spell.hbs";
+			case "Armor":
+				detailsTemplate = "armor.hbs";
 				break;
-			}
+			case "Spell":
+				detailsTemplate = "spell.hbs";
+				break;
+			case "Weapon":
+				detailsTemplate = "weapon.hbs";
+				break;
+			default:
+				detailsTemplate = "description.hbs";
 		}
 
 		const html = await renderTemplate(
