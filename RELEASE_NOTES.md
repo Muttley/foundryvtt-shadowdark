@@ -1,6 +1,7 @@
 ## v1.x.x
 
 ### Bugfixes
+* [#319] Right-Click context menu binding to tab links on character sheets
 
 ### Enhancements
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
