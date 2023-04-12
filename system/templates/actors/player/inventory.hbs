@@ -4,9 +4,9 @@
 			<table>
 				<tr>
 					<th>&nbsp;</th>
-					<th>{{localize 'SHADOWDARK.inventory.label.quantity'}}</th>
-					<th>{{localize 'SHADOWDARK.inventory.label.slots'}}</th>
-					<th>&nbsp;</th>
+					<th width="95px">{{localize 'SHADOWDARK.inventory.label.quantity'}}</th>
+					<th width="55px">{{localize 'SHADOWDARK.inventory.label.slots'}}</th>
+					<th width="30px">&nbsp;</th>
 				</tr>
 				{{#each inventory as |section sid|}}
 					<tr class="inventory-section-header">
@@ -44,7 +44,7 @@
 								>
 								</div>
 								<a
-									class="item-control open-item"
+									class="item-control show-details"
 									data-item-id="{{item._id}}"
 									{{#if item.isLightSource}}
 										data-tooltip="{{lightSourceTimeRemaining}}"

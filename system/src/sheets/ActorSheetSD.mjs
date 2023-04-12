@@ -14,6 +14,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
+		html.find(".show-details").click(
+			event => this._onShowDetails(event)
+		);
+
 		html.find("[data-action='item-attack']").click(
 			event => this._onRollItem(event)
 		);
@@ -233,6 +237,49 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 
 		return item.rollItem(parts, data);
+	}
+
+	async _onShowDetails(event) {
+		event.preventDefault();
+
+		const parentTableRow = $(event.currentTarget).parent().parent();
+		const numColumns = parentTableRow.find("td").length;
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.items.get(itemId);
+
+		if (parentTableRow.hasClass("expanded")) {
+			const detailsRow = parentTableRow.next(".item-details");
+			const detailsDiv = detailsRow.find("td > .item-details__slidedown");
+			detailsDiv.slideUp(200, () => detailsRow.remove());
+		}
+		else {
+			const content = await item.getDetailsContent();
+
+			// don't do anything if there are no details to show
+			if (content.trim() === "") return;
+
+			const detailsRow = document.createElement("tr");
+			detailsRow.classList.add("item-details");
+
+			const detailsData = document.createElement("td");
+			detailsData.setAttribute("colspan", numColumns);
+
+			const detailsDiv = document.createElement("div");
+			detailsDiv.setAttribute("style", "display: none");
+
+			detailsDiv.insertAdjacentHTML("afterbegin", content);
+			detailsDiv.classList.add("item-details__slidedown");
+
+			detailsData.appendChild(detailsDiv);
+			detailsRow.appendChild(detailsData);
+
+			parentTableRow.after(detailsRow);
+
+			$(detailsDiv).slideDown(200);
+		}
+
+		parentTableRow.toggleClass("expanded");
 	}
 
 	async _onCastSpellScroll(event) {
