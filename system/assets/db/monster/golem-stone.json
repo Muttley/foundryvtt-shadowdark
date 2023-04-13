@@ -1,0 +1,254 @@
+{
+	"_id": "zLDg6vIYEj4wB0lQ",
+	"name": "Golem, Stone",
+	"type": "NPC",
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"system": {
+		"alignment": "neutral",
+		"attributes": {
+			"hp": {
+				"max": 40,
+				"value": 40,
+				"hd": 0
+			},
+			"ac": {
+				"value": 18
+			}
+		},
+		"level": {
+			"value": 8
+		},
+		"notes": "<p><em>A wide-limbed, lumbering statue that shakes the ground.</em></p><p></p><p><strong>AC</strong> 18, <strong>HP</strong> 40, <strong>ATK</strong> 1 slow and 3 slam +6 (1d10), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 8</p><p></p><p><strong>Golem</strong>. Immune to damage from fire, cold, electricity, or non-magical sources.</p><p></p><p><strong>Slow</strong>. Far range, one target. DC 15 CON or speed halved 1d4 rounds.</p>",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"mod": 4
+			},
+			"int": {
+				"mod": -2
+			},
+			"dex": {
+				"mod": -1
+			},
+			"wis": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 4
+			},
+			"cha": {
+				"mod": -2
+			}
+		},
+		"darkAdapted": true,
+		"move": "near",
+		"moveNote": ""
+	},
+	"prototypeToken": {
+		"name": "Golem, Stone",
+		"displayName": 20,
+		"actorLink": false,
+		"texture": {
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 2,
+		"height": 2,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Golem",
+			"type": "NPC Feature",
+			"system": {
+				"description": "<p><span style=\"font-family: Signika, sans-serif\">Immune to damage from fire, cold, electricity, or non-magical sources.</span></p>",
+				"properties": [],
+				"magicItem": false
+			},
+			"_id": "oySxFnphWlWj2S0x",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426140521,
+				"modifiedTime": 1679426146121,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Slow",
+			"type": "NPC Feature",
+			"system": {
+				"description": "<p><span style=\"font-family: Signika, sans-serif\">Far range, one target. DC 15 CON or speed halved 1d4 rounds.</span></p>",
+				"properties": [],
+				"magicItem": false
+			},
+			"_id": "WCgeRKkVzpcLQ4h9",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426153552,
+				"modifiedTime": 1679426163778,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Slow",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 0
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"far"
+				]
+			},
+			"_id": "qvTLXopfPX4SvMTr",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426167869,
+				"modifiedTime": 1679452494865,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		},
+		{
+			"name": "Slam",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 3,
+					"bonus": 6
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d10",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "Y9E6Qzz05KPTdroV",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426188860,
+				"modifiedTime": 1679452513912,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

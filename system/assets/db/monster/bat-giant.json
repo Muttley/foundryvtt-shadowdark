@@ -1,0 +1,162 @@
+{
+	"_id": "EJ94w4A9mb9ETSGA",
+	"name": "Bat, Giant",
+	"type": "NPC",
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"system": {
+		"alignment": "neutral",
+		"attributes": {
+			"hp": {
+				"max": 9,
+				"value": 9,
+				"hd": 0
+			},
+			"ac": {
+				"value": 12
+			}
+		},
+		"level": {
+			"value": 2
+		},
+		"notes": "<p><em>Leathery, eagle-sized mammal with a taste for flesh.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 9, <strong>ATK</strong> 1 bite +2 (1d6), <strong>MV</strong> near (fly), <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"mod": -1
+			},
+			"int": {
+				"mod": -3
+			},
+			"dex": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			},
+			"con": {
+				"mod": 0
+			},
+			"cha": {
+				"mod": -3
+			}
+		},
+		"darkAdapted": true,
+		"move": "near",
+		"moveNote": "Fly"
+	},
+	"prototypeToken": {
+		"name": "Bat, Giant",
+		"displayName": 20,
+		"actorLink": false,
+		"texture": {
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Bite",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 2,
+					"damage": {
+						"numDice": null
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d6",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "ejrmOnSJ1sqjTQcl",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419758403,
+				"modifiedTime": 1679419766525,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

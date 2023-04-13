@@ -1,0 +1,227 @@
+{
+	"_id": "I7CMFbyFmFHVwE5U",
+	"name": "Goblin",
+	"type": "NPC",
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"system": {
+		"alignment": "chaotic",
+		"attributes": {
+			"hp": {
+				"max": 5,
+				"value": 5,
+				"hd": 0
+			},
+			"ac": {
+				"value": 11
+			}
+		},
+		"level": {
+			"value": 1
+		},
+		"notes": "<p><em>A short, hairless humanoid with green skin and pointy ears.</em></p><p></p><p><strong>AC</strong> 11, <strong>HP</strong> 5, <strong>ATK</strong> 1 club +0 (1d4) or 1 shortbow (far) +1 (1d4), <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> -1, <strong>Ch</strong> -2, <strong>AL </strong>C, <strong>LV</strong> 1</p><p></p><p><strong>Keen Senses</strong>. Can't be surprised.</p>",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"mod": 0
+			},
+			"int": {
+				"mod": -1
+			},
+			"dex": {
+				"mod": 1
+			},
+			"wis": {
+				"mod": -1
+			},
+			"con": {
+				"mod": 1
+			},
+			"cha": {
+				"mod": -2
+			}
+		},
+		"darkAdapted": true,
+		"move": "near",
+		"moveNote": ""
+	},
+	"prototypeToken": {
+		"name": "Goblin",
+		"displayName": 20,
+		"actorLink": false,
+		"texture": {
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Keen Senses",
+			"type": "NPC Feature",
+			"system": {
+				"description": "<p><span style=\"font-family: Signika, sans-serif\">Can't be surprised.</span></p>",
+				"properties": [],
+				"magicItem": false
+			},
+			"_id": "ZSuJd7G2g3jX3P6B",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426013817,
+				"modifiedTime": 1679426022979,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Club",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 0
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "CNjmcq9VGFmAcTMC",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426026037,
+				"modifiedTime": 1679426041136,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Shortbow",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 1
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"far"
+				]
+			},
+			"_id": "yAx0lxybTJgA1FCd",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679426046502,
+				"modifiedTime": 1679452425860,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

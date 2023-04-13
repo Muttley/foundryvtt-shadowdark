@@ -1,0 +1,106 @@
+{
+	"_id": "iFdrtN3kJk5yth9S",
+	"name": "The Lost Citadel: Rumors",
+	"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+	"description": "",
+	"formula": "1d6",
+	"replacement": true,
+	"displayRoll": false,
+	"results": [
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "i6g6ZhMkWdRw9emF",
+			"text": "Ancient kings who dwelt in the citadel possessed magical weapons that were feared far and wide.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				2,
+				2
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "WgFjcngGtx6xwrS5",
+			"text": "A savage minotaur drenched in blood stalks the citadel's halls.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				3,
+				3
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "WHE79Lp99Q3aTTs4",
+			"text": "Piles of gems and gold lie about as if totally forgotten.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				4,
+				4
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "mdUxcanzIZ5xEGN9",
+			"text": "Beware when touching the body of a dead citadel dweller.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				5,
+				5
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "evkxhl9nXFRrFmXk",
+			"text": "Opportunistic, grey-furred beastmen haunt the shadows.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				6,
+				6
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "4LWh1Sa4QQFqUBKe",
+			"text": "The citadel is rife with secret rooms and passageways.",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

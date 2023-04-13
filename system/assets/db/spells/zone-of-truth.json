@@ -1,0 +1,24 @@
+{
+	"_id": "rbxbreRgifutM9by",
+	"name": "Zone of Truth",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You compel a creature you can see to speak truth. It can\u2019t utter a deliberate lie while within range.</p>",
+		"properties": [],
+		"class": [
+			"priest"
+		],
+		"duration": {
+			"type": "focus",
+			"value": ""
+		},
+		"range": "near",
+		"tier": 2
+	},
+	"img": "icons/skills/social/trading-justice-scale-gold.webp",
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

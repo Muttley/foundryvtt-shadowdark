@@ -1,0 +1,196 @@
+{
+	"_id": "yVogBTQYwjpWB7YI",
+	"name": "Random Gear",
+	"img": "icons/environment/people/group.webp",
+	"description": "",
+	"formula": "1d12",
+	"replacement": true,
+	"displayRoll": true,
+	"results": [
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"drawn": false,
+			"text": "Torch",
+			"img": "icons/sundries/lights/torch-purple.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "z3xc7HGysC4ZCU8e",
+			"_id": "3zhe48OPGcv1cIf3",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				2,
+				2
+			],
+			"drawn": false,
+			"text": "Dagger",
+			"img": "icons/weapons/daggers/dagger-jeweled-purple.webp",
+			"documentCollection": "shadowdark.weapons",
+			"documentId": "C3mc5OlKPSJNMrng",
+			"_id": "nbxZMn4xLU6LveY6",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				3,
+				3
+			],
+			"drawn": false,
+			"text": "Pole",
+			"img": "icons/commodities/wood/wood-pole.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "15X5GTX96y339EKY",
+			"_id": "fwH16D7XyZ52DMgd",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				4,
+				4
+			],
+			"drawn": false,
+			"text": "Rations",
+			"img": "icons/consumables/food/berries-ration-round-red.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "GX6OmWQiE7MzTmjX",
+			"_id": "8Kq6kopPa6QNltoo",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				5,
+				5
+			],
+			"drawn": false,
+			"text": "Rope, 60'",
+			"img": "icons/sundries/survival/rope-wrapped-brown.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "6ZRwVHFlh5QiyZWC",
+			"_id": "9gZerSbKONUR4m4B",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				6,
+				6
+			],
+			"drawn": false,
+			"text": "Oil, Flask",
+			"img": "icons/consumables/potions/potion-bottle-corked-blue.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "80bCpXdZcj0Cz1fE",
+			"_id": "vmTW9ClNUDGi8PGM",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				7,
+				7
+			],
+			"drawn": false,
+			"text": "Crowbar",
+			"img": "icons/tools/hand/wrench-steel-grey.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "GbO6CggW71qMkgrG",
+			"_id": "BpH3W0NcFbWvn8SW",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				8,
+				8
+			],
+			"drawn": false,
+			"text": "Iron Spikes",
+			"img": "icons/tools/fasteners/pin-spiked.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "EPndk3DPOEOSvbga",
+			"_id": "wV9djdj4U1SqWz6h",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				9,
+				9
+			],
+			"drawn": false,
+			"text": "Flint and Steel",
+			"img": "icons/commodities/stone/paver-grey.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "ERprfuTIFRFEix9G",
+			"_id": "kPXOOyfOuKzSB9gs",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				10,
+				10
+			],
+			"drawn": false,
+			"text": "Grappling Hook",
+			"img": "icons/tools/fishing/hook-multi-steel-brown.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "fqsLWV46NWH0L53l",
+			"_id": "38diN4JQTgE8RplC",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				11,
+				11
+			],
+			"drawn": false,
+			"text": "Shield",
+			"img": "icons/equipment/shield/shield-round-boss-wood-brown.webp",
+			"documentCollection": "shadowdark.armor",
+			"documentId": "UWp4WkkiaBMSXYPE",
+			"_id": "t3b2Bvsu1OUyMmrC",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				12,
+				12
+			],
+			"drawn": false,
+			"text": "Caltrops",
+			"img": "icons/commodities/metal/fragments-steel-barbed.webp",
+			"documentCollection": "shadowdark.basic-gear",
+			"documentId": "SzpjMuJrhF5nMJ7H",
+			"_id": "6qqMRMr95IiMogc0",
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

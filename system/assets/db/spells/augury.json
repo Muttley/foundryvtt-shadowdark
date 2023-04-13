@@ -1,0 +1,24 @@
+{
+	"_id": "3yI7Ejl7UrYMMdTe",
+	"name": "Augury",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to \u201cweal\u201d or \u201cwoe.\u201d</p>",
+		"properties": [],
+		"class": [
+			"priest"
+		],
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"range": "self",
+		"tier": 2
+	},
+	"img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}
