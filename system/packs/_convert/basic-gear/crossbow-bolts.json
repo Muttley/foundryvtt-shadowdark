@@ -1,0 +1,30 @@
+{
+	"_id": "iv8fMPiRYfsN8ICy",
+	"name": "Crossbow Bolts",
+	"type": "Basic",
+	"img": "icons/weapons/ammunition/arrow-broadhead-white.webp",
+	"system": {
+		"description": "<p>Ammunition for crossbows.</p>",
+		"properties": [],
+		"cost": {
+			"gp": 1,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 20,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 20,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

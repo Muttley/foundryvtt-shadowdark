@@ -1,0 +1,36 @@
+{
+	"_id": "UDyHeJCreIFZ9y2I",
+	"name": "Mithral Chainmail",
+	"type": "Armor",
+	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
+	"system": {
+		"description": "",
+		"properties": [],
+		"magicItem": false,
+		"cost": {
+			"gp": 240,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"ac": {
+			"base": 13,
+			"modifier": 0,
+			"attribute": "dex"
+		},
+		"baseArmor": "chainmail"
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

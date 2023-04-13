@@ -1,0 +1,66 @@
+{
+	"name": "Backstab +1 Damage Dice",
+	"type": "Talent",
+	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Your Backstab deals +1 dice of damage</span>.</p>",
+		"properties": [
+			"backstabDie"
+		],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level",
+		"bonuses": {
+			"backstabDie": "1"
+		}
+	},
+	"effects": [
+		{
+			"label": "backstabDie",
+			"icon": "icons/skills/melee/strike-dagger-white-orange.webp",
+			"origin": "Item.TP3Q3TgZ5rsq0E7n",
+			"changes": [
+				{
+					"key": "system.bonuses.backstabDie",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "yqNPrx6PLUsjqFuC",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {
+		"core": {
+			"sourceId": "Item.TP3Q3TgZ5rsq0E7n"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679010417690,
+		"modifiedTime": 1680571735525,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"_id": "HzzgAIdhoAyfeItJ",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"aUdswNccq2u0SxEP": 3
+	}
+}

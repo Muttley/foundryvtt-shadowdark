@@ -1,0 +1,39 @@
+{
+	"name": "Mage Armor",
+	"type": "Spell",
+	"system": {
+		"description": "<p>An invisible layer of magical force protects your vitals. Your armor class becomes 14 (18 on a critical spellcasting check) for the spell\u2019s duration.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"range": "self",
+		"tier": 1
+	},
+	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.5238nq4yqxIA53wL"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079834,
+		"modifiedTime": 1678464177937,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "5238nq4yqxIA53wL",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

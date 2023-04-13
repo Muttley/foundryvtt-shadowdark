@@ -1,0 +1,795 @@
+{
+	"name": "Treasure 0-3",
+	"img": "icons/containers/chest/chest-reinforced-steel-walnut-brown.webp",
+	"description": "",
+	"results": [
+		{
+			"text": "Bent, tin fork (1 cp)",
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"_id": "y3JSH3P3rcTtKnsG",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Muddy torch (2 cp)",
+			"weight": 2,
+			"range": [
+				2,
+				3
+			],
+			"_id": "aNBvz6nBqwlJOdIb",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Bag of smooth pebbles (2 cp)",
+			"weight": 2,
+			"range": [
+				4,
+				5
+			],
+			"_id": "7kBxJi6C9iKMhHI1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "10 cp in a greasy pouch",
+			"weight": 2,
+			"range": [
+				6,
+				7
+			],
+			"_id": "50Q7fvM4ngHyQ1kS",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Rusty lantern with shattered glass (1 gp)",
+			"weight": 2,
+			"range": [
+				8,
+				9
+			],
+			"_id": "BD0epZPxutVlSylZ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Silver tooth (1 gp)",
+			"weight": 2,
+			"range": [
+				10,
+				11
+			],
+			"_id": "gYe9bAGW9HBk2GIV",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Dull dagger (1 gp)",
+			"weight": 2,
+			"range": [
+				12,
+				13
+			],
+			"_id": "f3wJ3dgen61ufMFx",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Two empty, glass vials (6 gp)",
+			"weight": 2,
+			"range": [
+				14,
+				15
+			],
+			"_id": "ud2fR62FNhIVjRcv",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "60 sp in a rotten boot",
+			"weight": 2,
+			"range": [
+				16,
+				17
+			],
+			"_id": "fzb1c3wLMiwj8OgC",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Cracked, handheld mirror (8 gp)",
+			"weight": 2,
+			"range": [
+				18,
+				19
+			],
+			"_id": "doNy9RhhAkFd2gse",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Chipped greataxe (9 gp)",
+			"weight": 2,
+			"range": [
+				20,
+				21
+			],
+			"_id": "ZQxvZhnETZwwGKvZ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "10 gp in a moldy, wood box",
+			"weight": 2,
+			"range": [
+				22,
+				23
+			],
+			"_id": "j0hNR72GEThdqEwL",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Chip of an emerald (10 gp)",
+			"weight": 2,
+			"range": [
+				24,
+				25
+			],
+			"_id": "c9gcEhzWpkvAtlJm",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Longbow and bundle of 40 arrows (10 gp)",
+			"weight": 2,
+			"range": [
+				26,
+				27
+			],
+			"_id": "chjnMIgxqAbiDHGo",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Dusty, leather armor dyed black (10 gp)",
+			"weight": 2,
+			"range": [
+				28,
+				29
+			],
+			"_id": "vpmh2afw8K2g8Nc9",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Scuffed, heavy shield (10 gp)",
+			"weight": 2,
+			"range": [
+				30,
+				31
+			],
+			"_id": "FRxc7VYylIcFzWnF",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Simple, well-made bastard sword (10 gp)",
+			"weight": 2,
+			"range": [
+				32,
+				33
+			],
+			"_id": "khQvnkUVV3PV4OeN",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "12 gp in the pocket of a ripped cloak",
+			"weight": 2,
+			"range": [
+				34,
+				35
+			],
+			"_id": "VTQM1VzjyUkg9uTQ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Wavy-bladed greatsword (12 gp)",
+			"weight": 2,
+			"range": [
+				36,
+				37
+			],
+			"_id": "zFUB8HUkJraB9D3a",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Pair of elf-forged shortswords (14 gp)",
+			"weight": 2,
+			"range": [
+				38,
+				39
+			],
+			"_id": "gw4lEv3jkPRrQnIo",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Golden bowl (15 gp)",
+			"weight": 2,
+			"range": [
+				40,
+				41
+			],
+			"_id": "85AGcqLrb72P4510",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Obsidian statuette of Shune the Vile (15 gp)",
+			"weight": 2,
+			"range": [
+				42,
+				43
+			],
+			"_id": "PkJCUlmMachvlfxR",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Undersized pearl (20 gp)",
+			"weight": 2,
+			"range": [
+				44,
+				45
+			],
+			"_id": "5Ic9epRE3h8ayzXc",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Jade-and-gold scarab pin (20 gp)",
+			"weight": 2,
+			"range": [
+				46,
+				47
+			],
+			"_id": "3vY1G5QAZTZDEkzJ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Bag of 10 silver spikes (2 gp each)",
+			"weight": 2,
+			"range": [
+				48,
+				49
+			],
+			"_id": "rO6ckWNGfraRCmcn",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Mithral locket with a painting of a halfling (20 gp)",
+			"weight": 4,
+			"range": [
+				50,
+				53
+			],
+			"_id": "dtABLOIvRESdeqqZ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Two finely forged dwarven shields (20 gp)",
+			"weight": 2,
+			"range": [
+				54,
+				55
+			],
+			"_id": "LC5aGBM1Yj49JKh4",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Pair of silvered daggers (10 gp each)",
+			"weight": 2,
+			"range": [
+				56,
+				57
+			],
+			"_id": "yE2NESlZdsLYmAbQ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Copper-and-gold mead tankard (20 gp)",
+			"weight": 2,
+			"range": [
+				58,
+				59
+			],
+			"_id": "Gatw5KlYB2U9Jgd1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Bundle of five red dragon scales (5 gp each)",
+			"weight": 2,
+			"range": [
+				60,
+				61
+			],
+			"_id": "khB4IYxRICpNE2Hg",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Light, warm cloak woven of spidersilk (25 gp)",
+			"weight": 2,
+			"range": [
+				62,
+				63
+			],
+			"_id": "m4ifkL3b7gDzkeCb",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Fine set of ivory game pieces (25 gp)",
+			"weight": 2,
+			"range": [
+				64,
+				65
+			],
+			"_id": "xAfL4betHk7Jv5bR",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Half-finished suit of chainmail (30 gp)",
+			"weight": 2,
+			"range": [
+				66,
+				67
+			],
+			"_id": "7NakkJYO8NxoAUzr",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Matched trio of warhammers (10 gp each)",
+			"weight": 2,
+			"range": [
+				68,
+				69
+			],
+			"_id": "hmnynSQOiTp2HF0s",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Fragment of a sapphire (30 gp)",
+			"weight": 2,
+			"range": [
+				70,
+				71
+			],
+			"_id": "ikxfWmHWu4KwvmNe",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Set of silk slippers and a robe (35 gp)",
+			"weight": 2,
+			"range": [
+				72,
+				73
+			],
+			"_id": "ssXS3ezJda75tWcB",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Silver-and-gold circlet (40 gp)",
+			"weight": 2,
+			"range": [
+				74,
+				75
+			],
+			"_id": "j0Qn8D6wQeECSeKl",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Radiant, polished pearl (40 gp)",
+			"weight": 2,
+			"range": [
+				76,
+				77
+			],
+			"_id": "OPQdcFIdbJUp2Ax8",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Mithral shield etched with soaring dragons (40 gp)",
+			"weight": 2,
+			"range": [
+				78,
+				79
+			],
+			"_id": "KVv05E480SR9v9BN",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Gold monkey idol with a ruby gripped in its teeth (60 gp)",
+			"weight": 2,
+			"range": [
+				80,
+				81
+			],
+			"_id": "nMg8xeiVsEr8eiLW",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Fine suit of chainmail (60 gp)",
+			"weight": 2,
+			"range": [
+				82,
+				83
+			],
+			"_id": "cFlcnwcIlFq076UW",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Cracked emerald (60 gp)",
+			"weight": 2,
+			"range": [
+				84,
+				85
+			],
+			"_id": "xPmhGAMWKtXZiVIt",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Two lustrous pearls (40 gp each)",
+			"weight": 2,
+			"range": [
+				86,
+				87
+			],
+			"_id": "BvNitQo5CeXieZWT",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "1st-tier spell scroll (80 gp)",
+			"weight": 2,
+			"range": [
+				88,
+				89
+			],
+			"_id": "TpxjmlUWD8PYMMx2",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Magic wand, 2nd-tier spell (100 gp)",
+			"weight": 2,
+			"range": [
+				92,
+				93
+			],
+			"_id": "r15yTT1iJVKdW7ew",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Egg of The Cockatrice (100 gp)",
+			"weight": 2,
+			"range": [
+				94,
+				95
+			],
+			"_id": "pwnLoUbwe1SN8Sty",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "+1 armor (benefit, curse) (150 gp)",
+			"weight": 2,
+			"range": [
+				96,
+				97
+			],
+			"_id": "5uGWJ4xk04sw3x7N",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Bag of Holding (virtue, flaw) (150 gp)",
+			"weight": 2,
+			"range": [
+				98,
+				99
+			],
+			"_id": "LrPulVPODNfN1Sf1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "+1 magic weapon (benefit) (200 gp)",
+			"weight": 1,
+			"range": [
+				100,
+				100
+			],
+			"_id": "0axkkwGmzwlqRhQV",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				98,
+				99
+			],
+			"drawn": false,
+			"text": "Bag of Holding",
+			"img": "icons/containers/bags/sack-leather-purple.webp",
+			"documentCollection": "shadowdark.magic-items",
+			"documentId": "vHwzxeO0sX9GlRbj",
+			"_id": "94ieXNNg3I6n8KwY",
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				90,
+				91
+			],
+			"drawn": false,
+			"text": "Potion of Invisibility",
+			"img": "icons/consumables/potions/vial-cork-empty.webp",
+			"documentCollection": "shadowdark.magic-items",
+			"documentId": "KAx02m6uAzOSBGXX",
+			"_id": "nLjfBMOP3PPs1sYK",
+			"flags": {}
+		}
+	],
+	"formula": "1d100",
+	"replacement": true,
+	"displayRoll": true,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "RollTable.Tr3DOJo0eN4wVvCu"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1679296368882,
+		"modifiedTime": 1679296650245,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "Pi9nnnLeXpTKCSMY"
+}

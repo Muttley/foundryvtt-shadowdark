@@ -1,0 +1,39 @@
+{
+	"name": "Web",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You create a near-sized cube of sticky, dense spider web within the spell\u2019s range. A creature stuck in the web can\u2019t move and must succeed on a Strength check opposed by your spellcasting check to free itself.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"range": "far",
+		"tier": 2
+	},
+	"img": "icons/commodities/materials/material-webbing.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.JwaJs0s9eVpPHgA3"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079848,
+		"modifiedTime": 1678464177941,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "JwaJs0s9eVpPHgA3",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

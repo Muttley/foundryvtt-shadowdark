@@ -1,0 +1,43 @@
+{
+	"_id": "C3mc5OlKPSJNMrng",
+	"name": "Dagger",
+	"type": "Weapon",
+	"img": "icons/weapons/daggers/dagger-jeweled-purple.webp",
+	"system": {
+		"cost": {
+			"gp": 1,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"description": "",
+		"properties": [
+			"finesse",
+			"thrown"
+		],
+		"attackBonus": 0,
+		"damage": {
+			"bonus": 0,
+			"oneHanded": "d4",
+			"twoHanded": "",
+			"numDice": 1
+		},
+		"range": "near",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": ""
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"name": "Levitate",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You can float a near distance vertically per round on your turn.</p><p>You can also push against solid objects to move horizontally.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "focus",
+			"value": ""
+		},
+		"range": "self",
+		"tier": 2
+	},
+	"img": "icons/magic/air/air-smoke-casting.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.cGsiYBXDxKLvYEK0"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079832,
+		"modifiedTime": 1678464177937,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "cGsiYBXDxKLvYEK0",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

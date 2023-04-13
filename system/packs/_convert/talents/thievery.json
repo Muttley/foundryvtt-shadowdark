@@ -1,0 +1,33 @@
+{
+	"name": "Thievery",
+	"type": "Talent",
+	"img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</span></p><p></p><p><span class=\"fontstyle0\">You are trained in the following tasks and have advantage on any associated checks:</span></p><p></p><ul><li><p><span class=\"fontstyle0\">Climbing</span></p></li><li><p><span class=\"fontstyle0\">Sneaking and hiding</span></p></li><li><p><span class=\"fontstyle0\">Applying disguises</span></p></li><li><p><span class=\"fontstyle0\">Finding and disabling traps</span></p></li><li><p><span class=\"fontstyle0\">Delicate tasks such as picking pockets and opening locks</span></p></li></ul><p></p>",
+		"properties": [],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "class"
+	},
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Compendium.shadowdark.talents.TiaXUSTLoJpjfyxD"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679528110233,
+		"modifiedTime": 1680571735528,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"_id": "TiaXUSTLoJpjfyxD",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"aUdswNccq2u0SxEP": 3
+	}
+}

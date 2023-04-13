@@ -1,0 +1,99 @@
+{
+	"_id": "jEeDexWHYy7wKsfa",
+	"name": "Staff of Healing",
+	"type": "Weapon",
+	"img": "icons/weapons/staves/staff-engraved-red.webp",
+	"system": {
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"description": "<p><em>A knotted, oak stave with a heavy knurl on one end.</em></p><p></p><p><strong>Bonus</strong>. +1 staff.</p><p></p><p><strong>Benefit</strong>. Once per day, you can touch a creature with the staff to heal it for [[/r 1d6]] hit points.</p>",
+		"properties": [
+			"twoHanded"
+		],
+		"magicItem": true,
+		"attackBonus": "1",
+		"damage": {
+			"bonus": "1",
+			"oneHanded": "d4",
+			"twoHanded": "",
+			"numDice": 1,
+			"critMultiplier": 2
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": "staff"
+	},
+	"effects": [
+		{
+			"label": "attackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.0iar28HBkLjWywyR",
+			"changes": [
+				{
+					"key": "system.attackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "irkc1H76tdeCYiYF",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "damageBonus",
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"origin": "Item.0iar28HBkLjWywyR",
+			"changes": [
+				{
+					"key": "system.damage.bonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "jCEbtrabJZ0TETBI",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

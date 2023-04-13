@@ -1,0 +1,42 @@
+{
+	"_id": "9eTpsuEuzL3Vaxge",
+	"name": "Staff",
+	"type": "Weapon",
+	"img": "icons/weapons/staves/staff-ornate-purple.webp",
+	"system": {
+		"cost": {
+			"gp": 0,
+			"sp": 5,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"description": "",
+		"properties": [
+			"twoHanded"
+		],
+		"attackBonus": 0,
+		"damage": {
+			"bonus": 0,
+			"oneHanded": "",
+			"twoHanded": "d4",
+			"numDice": 1
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": ""
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

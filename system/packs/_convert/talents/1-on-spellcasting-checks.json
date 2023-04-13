@@ -1,0 +1,64 @@
+{
+	"name": "+1 on Spellcasting Checks",
+	"type": "Talent",
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"system": {
+		"description": "",
+		"properties": [],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level",
+		"bonuses": {
+			"spellcastingCheckBonus": "1"
+		}
+	},
+	"effects": [
+		{
+			"label": "spellBonus",
+			"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+			"origin": "Item.m7pw2qU4DtZNsfGR",
+			"changes": [
+				{
+					"key": "system.bonuses.spellcastingCheckBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "QjI0jzZJOSbCfDAe",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {
+		"core": {
+			"sourceId": "Item.m7pw2qU4DtZNsfGR"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679010370643,
+		"modifiedTime": 1680571735517,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"_id": "0WmG5j0Wv685YTqO",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"aUdswNccq2u0SxEP": 3
+	}
+}

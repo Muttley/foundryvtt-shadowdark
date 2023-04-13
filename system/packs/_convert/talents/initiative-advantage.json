@@ -1,0 +1,66 @@
+{
+	"name": "Initiative Advantage",
+	"type": "Talent",
+	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"system": {
+		"description": "<p>Gain advantage on initiative rolls (reroll if duplicate)</p>",
+		"properties": [
+			"initAdvantage"
+		],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level",
+		"bonuses": {
+			"advantage": "initiative"
+		}
+	},
+	"effects": [
+		{
+			"label": "initAdvantage",
+			"icon": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+			"origin": "Item.CHYRyBYOJyzB2XEv",
+			"changes": [
+				{
+					"key": "system.bonuses.advantage",
+					"value": "initiative",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "Sbe1W55EgCxDS5Qe",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.CHYRyBYOJyzB2XEv"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679010467201,
+		"modifiedTime": 1680571735526,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "UVsf7VJCOrBm42Yz"
+}

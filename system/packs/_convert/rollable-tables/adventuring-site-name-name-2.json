@@ -1,0 +1,330 @@
+{
+	"name": "Adventuring Site Name: Name 2",
+	"img": "icons/environment/wilderness/cave-entrance.webp",
+	"description": "",
+	"results": [
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "z2PdENX5f5NC58Sq",
+			"text": "Cursed",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				2,
+				2
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "HOpuYajHRjlWDGUu",
+			"text": "Whispering",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				3,
+				3
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "3DaqtfaXKwt0RK01",
+			"text": "Bleeding",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				4,
+				4
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "YixFM0hGoL4KLmWx",
+			"text": "Shrouded",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				5,
+				5
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "xE3SIxGZQ6ChpvQm",
+			"text": "Lost",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				6,
+				6
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "3hBUHVHC1e45QlmH",
+			"text": "Dead",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				7,
+				7
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "xc34jgWvPoEOrJad",
+			"text": "Deepwood",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				8,
+				8
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "VjUou2PJGJepmhwm",
+			"text": "Fallen",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				9,
+				9
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "H6YK6jFZbNkijWRH",
+			"text": "Revenant",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				10,
+				10
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "bHPgrlVZafc4PigN",
+			"text": "Frozen",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				11,
+				11
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "GPaRJPXAsbqOl1hU",
+			"text": "Shimmering",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				12,
+				12
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "pd5V1XfUO15B4edI",
+			"text": "Chaos",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				13,
+				13
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "7W8AFHBDPQawdJBF",
+			"text": "Abandoned",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				14,
+				14
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "kHcQi0XEtFPb9bot",
+			"text": "Blighted",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				15,
+				15
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "hMXwSnmUMmvbQCsL",
+			"text": "Forgotten",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				16,
+				16
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "CgzMhPjwYzldE2Me",
+			"text": "Slumbering",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				17,
+				17
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "hFyBJgJCikxmyvEC",
+			"text": "Savage",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				18,
+				18
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "wMFniFTYBEE2PQSl",
+			"text": "Unholy",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				19,
+				19
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "NzFnhJCEQgYxUT7K",
+			"text": "Enchanted",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				20,
+				20
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "5WPyeZGoaWTPA7DA",
+			"text": "Immortal",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		}
+	],
+	"formula": "1d20",
+	"replacement": true,
+	"displayRoll": true,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "RollTable.an8Lts8WcBSWOwIV"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1679228967726,
+		"modifiedTime": 1679229316130,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "2nHdxMs1BHY1FUhq"
+}

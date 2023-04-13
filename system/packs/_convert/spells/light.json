@@ -1,0 +1,41 @@
+{
+	"name": "Light",
+	"type": "Spell",
+	"system": {
+		"description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p>",
+		"properties": [],
+		"class": [
+			"priest",
+			"wizard"
+		],
+		"duration": {
+			"type": "realTime",
+			"value": "1h"
+		},
+		"lost": false,
+		"range": "close",
+		"tier": 1
+	},
+	"img": "icons/magic/light/explosion-star-glow-yellow.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.N4v17mtxJlVBbgpn"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079833,
+		"modifiedTime": 1679160274468,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "N4v17mtxJlVBbgpn",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

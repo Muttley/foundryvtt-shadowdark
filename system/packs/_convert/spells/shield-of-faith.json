@@ -1,0 +1,39 @@
+{
+	"name": "Shield of Faith",
+	"type": "Spell",
+	"system": {
+		"description": "<p>A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.</p>",
+		"properties": [],
+		"class": [
+			"priest"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"range": "self",
+		"tier": 1
+	},
+	"img": "icons/magic/defensive/shield-barrier-blue.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.fWuTV4r9FIUDe1EX"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079839,
+		"modifiedTime": 1678464177939,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "fWuTV4r9FIUDe1EX",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

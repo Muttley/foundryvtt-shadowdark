@@ -1,0 +1,69 @@
+{
+	"name": "Hauler",
+	"type": "Talent",
+	"img": "icons/containers/bags/sack-leather-tan.webp",
+	"system": {
+		"description": "<p>Add your Constitution modifier, if positive, to your gear slots.</p>",
+		"properties": [
+			"custom"
+		],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "class",
+		"bonuses": {
+			"hauler": [
+				"true",
+				"true"
+			]
+		}
+	},
+	"effects": [
+		{
+			"label": "Hauler",
+			"icon": "icons/containers/bags/sack-leather-tan.webp",
+			"origin": "Compendium.shadowdark.talents.7JTDRLtHc6FOrIEc",
+			"changes": [
+				{
+					"key": "system.bonuses.hauler",
+					"mode": 5,
+					"value": "true",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "rqplFhIShnvmV0U4",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.jMXZEZYGdCzW6rc7"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679009841002,
+		"modifiedTime": 1680571735526,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "7JTDRLtHc6FOrIEc"
+}

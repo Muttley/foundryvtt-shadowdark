@@ -1,0 +1,39 @@
+{
+	"name": "Cleansing Weapon",
+	"type": "Spell",
+	"system": {
+		"description": "<p>One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</p>",
+		"properties": [],
+		"class": [
+			"priest"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"range": "close",
+		"tier": 2
+	},
+	"img": "icons/weapons/swords/sword-winged-pink.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.2v8sc7cnMSzpECyi"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079812,
+		"modifiedTime": 1678464177925,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "2v8sc7cnMSzpECyi",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

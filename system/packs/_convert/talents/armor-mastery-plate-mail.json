@@ -1,0 +1,64 @@
+{
+	"name": "Armor Mastery (Plate Mail)",
+	"type": "Talent",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"system": {
+		"description": "",
+		"properties": [],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "level",
+		"bonuses": {
+			"armorMastery": "plate-mail"
+		}
+	},
+	"effects": [
+		{
+			"label": "armorMastery",
+			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+			"origin": "Item.7xXoilEJU2ZMb5Pm",
+			"changes": [
+				{
+					"key": "system.bonuses.armorMastery",
+					"value": "plate-mail",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "jkN6KdrnbkUPxZZa",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.7xXoilEJU2ZMb5Pm"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1680461193989,
+		"modifiedTime": 1680571735524,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "lDpO78DJOble2WeK"
+}

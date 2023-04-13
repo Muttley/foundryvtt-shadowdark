@@ -1,0 +1,66 @@
+{
+	"name": "+1 to Melee Attacks",
+	"type": "Talent",
+	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"system": {
+		"description": "",
+		"properties": [
+			"meleeAttackBonus"
+		],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level",
+		"bonuses": {
+			"meleeAttackBonus": "1"
+		}
+	},
+	"effects": [
+		{
+			"label": "meleeAttackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.YIQtQJ0SHwnP8jdl",
+			"changes": [
+				{
+					"key": "system.bonuses.meleeAttackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "TUNmKXOye5ncyoFW",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.YIQtQJ0SHwnP8jdl"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679010031711,
+		"modifiedTime": 1680571735520,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "93QoQQ6cI7xa4TCm"
+}

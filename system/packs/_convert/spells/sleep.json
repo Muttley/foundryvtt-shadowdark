@@ -1,0 +1,39 @@
+{
+	"name": "Sleep",
+	"type": "Spell",
+	"system": {
+		"description": "<p>This spell fills a near-sized cube extending from you. Choose a number of living creatures in the area up to your level. Those creatures fall into a deep sleep if they are LV 2 or less. Injury or vigorous shaking wakes them.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"range": "near",
+		"tier": 1
+	},
+	"img": "icons/magic/control/sleep-bubble-purple.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.n1I5OLR6M2e0jLbi"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079844,
+		"modifiedTime": 1678464177940,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "n1I5OLR6M2e0jLbi",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

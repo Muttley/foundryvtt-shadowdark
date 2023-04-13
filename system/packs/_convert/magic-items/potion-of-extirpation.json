@@ -1,0 +1,31 @@
+{
+	"_id": "oS1VcB7hqcsjkUZv",
+	"name": "Potion of Extirpation",
+	"type": "Basic",
+	"img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+	"system": {
+		"description": "<p><em>An acrid, tarry substance in an iron flask with a lead stopper.</em></p><p></p><p><strong>Benefit</strong>. You can pour the potion on one object or creature filling up to a close area. The target is utterly removed from reality and cannot be returned by anything short of a <em>wish</em> spell.</p><p></p><p><strong>Personality</strong>. Chaotic. Protests loudly while being used and never agrees that the target is the right choice for extirpation.</p>",
+		"properties": [],
+		"magicItem": true,
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

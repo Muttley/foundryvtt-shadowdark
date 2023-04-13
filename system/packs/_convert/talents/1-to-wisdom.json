@@ -1,0 +1,113 @@
+{
+	"name": "+1 to Wisdom",
+	"type": "Talent",
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"system": {
+		"description": "",
+		"properties": [
+			"abilityImprovement"
+		],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level",
+		"abilities": {
+			"str": {
+				"bonus": 0
+			},
+			"int": {
+				"bonus": 0
+			},
+			"wis": {
+				"bonus": 1
+			},
+			"con": {
+				"bonus": 0
+			},
+			"cha": {
+				"bonus": 0
+			},
+			"dex": {
+				"bonus": 0
+			}
+		}
+	},
+	"effects": [
+		{
+			"label": "abilityImprovement",
+			"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+			"origin": "Item.6iZplEBazA2f66A3",
+			"changes": [
+				{
+					"key": "system.abilities.str.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.int.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.wis.bonus",
+					"mode": 2,
+					"value": "1",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.con.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.cha.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.dex.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "GJXEM96MY9ydNQ47",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {
+		"core": {
+			"sourceId": "Item.6iZplEBazA2f66A3"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1678821268710,
+		"modifiedTime": 1680571735521,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "vRW8GSIKWXyOAKbw"
+}

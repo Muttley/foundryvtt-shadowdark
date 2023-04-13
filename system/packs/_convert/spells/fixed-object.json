@@ -1,0 +1,39 @@
+{
+	"name": "Fixed Object",
+	"type": "Spell",
+	"system": {
+		"description": "<p>An object you touch that weighs no more than 5 pounds becomes fixed in its current location. It can support up to 5,000 pounds of weight for the duration of the spell.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"range": "close",
+		"tier": 2
+	},
+	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.oeJmT9gfvZ5Ha19w"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079819,
+		"modifiedTime": 1678464177929,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "oeJmT9gfvZ5Ha19w",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

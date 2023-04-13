@@ -1,0 +1,42 @@
+{
+	"_id": "9Pnhl6SOsbf6qDmt",
+	"name": "Greataxe",
+	"type": "Weapon",
+	"img": "icons/weapons/axes/axe-broad-engraved-chipped-blue.webp",
+	"system": {
+		"cost": {
+			"gp": 10,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"description": "",
+		"properties": [
+			"versatile"
+		],
+		"attackBonus": 0,
+		"damage": {
+			"bonus": 0,
+			"oneHanded": "d8",
+			"twoHanded": "d10",
+			"numDice": 1
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": ""
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

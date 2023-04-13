@@ -1,0 +1,31 @@
+{
+	"_id": "gNah418e2ykhDWDE",
+	"name": "True Name",
+	"type": "Basic",
+	"img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
+	"system": {
+		"description": "<p><em>The secret, unique name borne by a creature and documented in The Covenant. Few creatures know their own True Names.</em></p><p></p><p><strong>Benefit</strong>. You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.</p>",
+		"properties": [],
+		"magicItem": true,
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

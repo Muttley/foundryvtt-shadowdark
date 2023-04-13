@@ -1,0 +1,95 @@
+{
+	"name": "Mighty",
+	"type": "Talent",
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"system": {
+		"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
+		"properties": [
+			"meleeAttackBonus",
+			"meleeDamageBonus"
+		],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "ancestry",
+		"bonuses": {
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1"
+		}
+	},
+	"effects": [
+		{
+			"label": "meleeAttackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.qj2MYnP9srYJk4YT",
+			"changes": [
+				{
+					"key": "system.bonuses.meleeAttackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "SvyalWCJf4WmMCCE",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "meleeDamageBonus",
+			"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+			"origin": "Item.qj2MYnP9srYJk4YT",
+			"changes": [
+				{
+					"key": "system.bonuses.meleeDamageBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "gNqZPDcYTjO6v0d6",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.qj2MYnP9srYJk4YT"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679009769211,
+		"modifiedTime": 1680571735527,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "LR6h4lXVXwx7AFQ6"
+}

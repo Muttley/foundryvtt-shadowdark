@@ -1,0 +1,210 @@
+{
+	"name": "Hazard: Weaken",
+	"img": "icons/environment/wilderness/terrain-stone-stalagtite.webp",
+	"description": "",
+	"results": [
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "0p4jnOR2byA9vYBm",
+			"text": "Blinding smoke",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				2,
+				2
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "bvgB3HyCshDQLbYA",
+			"text": "Magnetic field",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				3,
+				3
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "AdDsRK21U3kQRmHS",
+			"text": "Exhausting runes",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				4,
+				4
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "JY17MyvXNA8UVqjT",
+			"text": "Antimagic znoe",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				5,
+				5
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "UR0v5qT5WGnVfsrY",
+			"text": "Snuffs light sources",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				6,
+				6
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "6Zp3j1iG75d6fDzW",
+			"text": "Disorienting sound",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				7,
+				7
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "SlGGjdqWvICNIm8o",
+			"text": "Magic silence",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				8,
+				8
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "ojmYXfIDp378LKDC",
+			"text": "Numbing cold",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				9,
+				9
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "sYWHR1sWSv9d7BRp",
+			"text": "Sickening smell",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				10,
+				10
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "1cQhUE8nkQiINcha",
+			"text": "Sleep-inducing spores",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				11,
+				11
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "scDhPVRcYecZ0L6w",
+			"text": "Confusing reflections",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				12,
+				12
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "SVmht2tV7hLMHLF6",
+			"text": "Memory-stealing",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		}
+	],
+	"formula": "1d12",
+	"replacement": true,
+	"displayRoll": true,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "RollTable.9jPtF9sMfkd9Qh6M"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1679218605990,
+		"modifiedTime": 1679307485337,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "dZI4pD5LANhtod9O"
+}

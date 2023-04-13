@@ -1,0 +1,180 @@
+{
+	"name": "The Lost Citadel: Beastmen Appearances",
+	"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+	"description": "",
+	"results": [
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "i1UNCtMUrYn0mvJ3",
+			"text": "Patchy / Sickly",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				2,
+				2
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "3I0u5nKPamYsnP2O",
+			"text": "Scarred / Fat",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				3,
+				3
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "n98vO3wqbEQriBAi",
+			"text": "Jaw or Nose Broken",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				4,
+				4
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "eDsrbV4lIQ0MoqKa",
+			"text": "Stooped / Short",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				5,
+				5
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "3IYPHFRhWcwKD5cW",
+			"text": "Elderly / Stout",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				6,
+				6
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "iJPR52RsJybSVu2f",
+			"text": "Ear or Tooth Missing",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				7,
+				7
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "0nCYUoTSNEeI5Zhh",
+			"text": "Hair-braided / Bald",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				8,
+				8
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "DfukqBRvgrBiZA9d",
+			"text": "White furred / Skinny",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				9,
+				9
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "O8SBQgDuyZhZTmR1",
+			"text": "Clean / Blank staring",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				10,
+				10
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "LHNPRzLjqUevyT48",
+			"text": "Wild eyed / Lanky",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		}
+	],
+	"formula": "1d10",
+	"replacement": true,
+	"displayRoll": false,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "RollTable.4z8CHjnGVhPZiuGS"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1679224401782,
+		"modifiedTime": 1679228639617,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "jDOXbODgNkT69ii5"
+}

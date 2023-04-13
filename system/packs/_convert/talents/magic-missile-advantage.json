@@ -1,0 +1,91 @@
+{
+	"name": "Magic Missile Advantage",
+	"type": "Talent",
+	"img": "icons/magic/light/projectiles-trio-pink.webp",
+	"system": {
+		"description": "<p>Wizards always have advantage on casting Magic Missile.</p>",
+		"properties": [],
+		"magicItem": false,
+		"level": null,
+		"talentClass": "class",
+		"bonuses": {
+			"advantage": "magic-missile"
+		}
+	},
+	"effects": [
+		{
+			"label": "spellBonus",
+			"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+			"origin": "Item.0rykwfxFtHirvDCZ",
+			"changes": [
+				{
+					"key": "system.bonuses.spellcastingCheckBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": true,
+			"transfer": true,
+			"_id": "cXBEqUQJ5LqYMrMN",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "spellAdvantage",
+			"icon": "icons/magic/air/air-smoke-casting.webp",
+			"origin": "Item.0rykwfxFtHirvDCZ",
+			"changes": [
+				{
+					"key": "system.bonuses.advantage",
+					"mode": 2,
+					"value": "magic-missile",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "iTEJN8fHVUUaFTif",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "Item.0rykwfxFtHirvDCZ"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "1.1.2",
+		"coreVersion": "10.291",
+		"createdTime": 1679057011898,
+		"modifiedTime": 1680571735527,
+		"lastModifiedBy": "xsKW3bDwjkX1myUk"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "VRZxd1xswPr1GaKs"
+}

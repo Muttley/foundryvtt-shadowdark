@@ -1,0 +1,39 @@
+{
+	"name": "Silence",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You magically mute sound in a near cube within the spell\u2019s range. Creatures inside the area are deafened, and any sounds they create cannot be heard.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "focus",
+			"value": ""
+		},
+		"range": "far",
+		"tier": 2
+	},
+	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.1kzQiWXZDs6BOVxs"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079840,
+		"modifiedTime": 1678464177940,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "1kzQiWXZDs6BOVxs",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "Shortsword",
+	"type": "Weapon",
+	"img": "icons/weapons/swords/shortsword-guard-worn.webp",
+	"system": {
+		"cost": {
+			"gp": 7,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"description": "",
+		"properties": [],
+		"attackBonus": 0,
+		"damage": {
+			"bonus": 0,
+			"oneHanded": "d6",
+			"twoHanded": "",
+			"numDice": 1
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": ""
+	},
+	"effects": [],
+	"flags": {},
+	"_id": "KQTWQwznjK80gVEU",
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

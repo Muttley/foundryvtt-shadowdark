@@ -1,0 +1,30 @@
+{
+	"_id": "fqsLWV46NWH0L53l",
+	"name": "Grappling Hook",
+	"type": "Basic",
+	"img": "icons/tools/fishing/hook-multi-steel-brown.webp",
+	"system": {
+		"description": "<p>A rope anchor with three, curved tines.</p>",
+		"properties": [],
+		"cost": {
+			"gp": 1,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

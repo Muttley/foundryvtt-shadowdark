@@ -1,0 +1,39 @@
+{
+	"name": "Holy Weapon",
+	"type": "Spell",
+	"system": {
+		"description": "<p>One weapon you touch is imbued with a sacred blessing.</p><p>The weapon becomes magical and has +1 to attack and damage rolls for the duration.</p>",
+		"properties": [],
+		"class": [
+			"priest"
+		],
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"range": "close",
+		"tier": 1
+	},
+	"img": "icons/weapons/swords/sword-gold-holy.webp",
+	"effects": [],
+	"flags": {
+		"core": {
+			"sourceId": "Item.55VYMMlUp2BhYyeR"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1678463079826,
+		"modifiedTime": 1678464177931,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"_id": "55VYMMlUp2BhYyeR",
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	}
+}

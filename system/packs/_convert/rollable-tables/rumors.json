@@ -1,0 +1,780 @@
+{
+	"name": "Rumors",
+	"img": "icons/magic/perception/hand-eye-pink.webp",
+	"description": "",
+	"results": [
+		{
+			"text": "An armored beast the size of a ship is rampaging nearby",
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"_id": "m4o9hmboTUcNcQlp",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A team of assassins is on its way to kill your group",
+			"weight": 2,
+			"range": [
+				2,
+				3
+			],
+			"_id": "lkPhcVn4Cqjo3lXH",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The local ruler has placed a 2,000 gp bounty on your heads",
+			"weight": 2,
+			"range": [
+				4,
+				5
+			],
+			"_id": "B4H6xpSlTsDNCLYz",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The cult of Shune is planning a fiery coup at midnight",
+			"weight": 2,
+			"range": [
+				6,
+				7
+			],
+			"_id": "Y0CTCVTFPdS6v9Df",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An ancient, stone door has been found in the castle cellar",
+			"weight": 2,
+			"range": [
+				8,
+				9
+			],
+			"_id": "liK5UCP9gIbIBbYB",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Lizardfolk have been raiding caravans near the swamp",
+			"weight": 2,
+			"range": [
+				10,
+				11
+			],
+			"_id": "Cjh10oelUB3RG1P8",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Armored skeletons are roaming the misty graveyard",
+			"weight": 2,
+			"range": [
+				12,
+				13
+			],
+			"_id": "UcbJZedrl1FInkva",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An earthquake uncovered a ruin inside a deep rift",
+			"weight": 2,
+			"range": [
+				14,
+				15
+			],
+			"_id": "Dc50WQCqc87G3eD1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A warband of orcs has taken over an abandoned keep",
+			"weight": 2,
+			"range": [
+				16,
+				17
+			],
+			"_id": "s8Rm4t3Ys9222npg",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "There is a hall of golden statues underneath the well",
+			"weight": 2,
+			"range": [
+				18,
+				19
+			],
+			"_id": "zEdSgu3fYUl75UKB",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Those who survive the Trial of the Lotus gain a strange gift",
+			"weight": 2,
+			"range": [
+				20,
+				21
+			],
+			"_id": "IZChEeMtBlQIX5bd",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A Captain of the Guard has been taken hostage by thugs",
+			"weight": 2,
+			"range": [
+				22,
+				23
+			],
+			"_id": "FDuz8VZVNqKa01kG",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The Crystal Caves are home to a cult of psychic sorcerers",
+			"weight": 2,
+			"range": [
+				24,
+				25
+			],
+			"_id": "PUbQnMDHWWwbyUTd",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A crocodile dragged a richly-laden mule into the sewers",
+			"weight": 2,
+			"range": [
+				26,
+				27
+			],
+			"_id": "5kTRYjkh2Sv4QnLn",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A fortune-telling witch speaks true omens and portents",
+			"weight": 2,
+			"range": [
+				28,
+				29
+			],
+			"_id": "1DWLP6qu4lWncPgj",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Every full moon, the Prancing Unicorn's larder is robbed",
+			"weight": 2,
+			"range": [
+				30,
+				31
+			],
+			"_id": "GNHPpqeTw0Yhfryv",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A famous group of crawlers hasn't returned from a delve",
+			"weight": 2,
+			"range": [
+				32,
+				33
+			],
+			"_id": "vxW5e24pKfDESToH",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A glowing meteor crashed deep inside the marshlands",
+			"weight": 2,
+			"range": [
+				34,
+				35
+			],
+			"_id": "sMxvLDXLOZ2w5Xfs",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Fire will not light or burn within sight of the Lion Fountain",
+			"weight": 2,
+			"range": [
+				36,
+				37
+			],
+			"_id": "RRWpYDOPKoWPt5qZ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The lost <i>Jewel of Barbalt</i> is hidden in the Howling Caves",
+			"weight": 2,
+			"range": [
+				38,
+				39
+			],
+			"_id": "4QEZAiKdYf1W8ftu",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A dwarven mining team has uncovered a tentacled statue",
+			"weight": 2,
+			"range": [
+				40,
+				41
+			],
+			"_id": "IznEzC3q4bZfpBbS",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The Red Owl tavern has a trapdoor to the Shadowdark",
+			"weight": 2,
+			"range": [
+				42,
+				43
+			],
+			"_id": "NLBs5DZrQoomQih5",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Viperian warriors guard a shrine to a medusa in the jungle",
+			"weight": 2,
+			"range": [
+				44,
+				45
+			],
+			"_id": "wkthsQPGmi3aNvuK",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Three thieves just pulled off a gemstone heist nearby",
+			"weight": 2,
+			"range": [
+				46,
+				47
+			],
+			"_id": "er2Myx3pfBPSR4uq",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Harpies keep watch from the cliffs around Diridia's Tomb",
+			"weight": 2,
+			"range": [
+				48,
+				49
+			],
+			"_id": "AIqtDe4fUi67Oqmr",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A gorgon stalks the ruins of the Underhill Halls",
+			"weight": 4,
+			"range": [
+				50,
+				53
+			],
+			"_id": "wrlz4ZRrbJVKKmjn",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Beneath the Red Abbey is the forgotten Barrow of Ur-Din",
+			"weight": 2,
+			"range": [
+				54,
+				55
+			],
+			"_id": "mR6TgWY4m7QNgtnY",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A dying sage is calling for a mighty group of heroes",
+			"weight": 2,
+			"range": [
+				56,
+				57
+			],
+			"_id": "RCV6HvtrGisJ4fLu",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A wizard accidentally let his trio of cockatrices escape",
+			"weight": 2,
+			"range": [
+				58,
+				59
+			],
+			"_id": "QJfn5kyj8U4ZMNj0",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A local lord has somehow been stranded atop a high roof",
+			"weight": 2,
+			"range": [
+				60,
+				61
+			],
+			"_id": "NZmlOJS6dQJ0CUip",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Bartomeu the Pirate Prince will be hanged at noon",
+			"weight": 2,
+			"range": [
+				62,
+				63
+			],
+			"_id": "SuMD0iHWC5BRNEsi",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Goblin spelunkers found an underground cathedral",
+			"weight": 2,
+			"range": [
+				64,
+				65
+			],
+			"_id": "nx5GiVHmncM0KGfJ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A <i>Kytherian Cog</i> was lost in the sea near Myrkhos",
+			"weight": 2,
+			"range": [
+				66,
+				67
+			],
+			"_id": "rsgSnyQDqptZSR15",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Rare and valuable mushrooms grow inside an old crypt",
+			"weight": 2,
+			"range": [
+				68,
+				69
+			],
+			"_id": "zPXHo3NNCH6RthQB",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The Church of St. Terragnis will pay for the return of a relic",
+			"weight": 2,
+			"range": [
+				70,
+				71
+			],
+			"_id": "gp4nHWElOIrQVDp1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A volcanic eruption revealed tunnels in the caldera's walls",
+			"weight": 2,
+			"range": [
+				72,
+				73
+			],
+			"_id": "iOsyIjr02kGXfTrJ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The cyclopean ruins of Tal-Yool lie deep within the forest",
+			"weight": 2,
+			"range": [
+				74,
+				75
+			],
+			"_id": "dM0U2mgtvBKvUKh4",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A famous gambler will bet a ruby on a Wizard Thief game",
+			"weight": 2,
+			"range": [
+				76,
+				77
+			],
+			"_id": "QHYJ1w9PoaDg9qqo",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The Moon Druids will bless a sword used to slay a werewolf",
+			"weight": 2,
+			"range": [
+				78,
+				79
+			],
+			"_id": "lvXf0H1a8rjZjEX1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Gravediggers found a chained coffin in an unmarked plot",
+			"weight": 2,
+			"range": [
+				80,
+				81
+			],
+			"_id": "lUGYyRTv3DekkRUJ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An abandoned wizard's tower is full of clockwork creatures",
+			"weight": 2,
+			"range": [
+				82,
+				83
+			],
+			"_id": "V1tXTqx5nqR4m5et",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The Thieves' Guild is about to attack a rival merchant lord",
+			"weight": 2,
+			"range": [
+				84,
+				85
+			],
+			"_id": "EainBx3SmsDrZafc",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Windstorms uncovered a stone monolith in the desert",
+			"weight": 2,
+			"range": [
+				86,
+				87
+			],
+			"_id": "Bj2VjnHRoxXtIZRh",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A rival group of crawlers found the map to Jiraal's Hoard",
+			"weight": 2,
+			"range": [
+				88,
+				89
+			],
+			"_id": "7W1x6TvODGFC4uzd",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A monstrosity called The Oracle lurks below the university",
+			"weight": 2,
+			"range": [
+				90,
+				91
+			],
+			"_id": "kgj2Esiwy4YorWNI",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The <i>Ophidian Armor</i> is in Ekmara's Keep in the wasteland",
+			"weight": 2,
+			"range": [
+				92,
+				93
+			],
+			"_id": "OxtbrWHDjIK763N7",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The princess has been kidnapped by a group of sorcerers",
+			"weight": 2,
+			"range": [
+				94,
+				95
+			],
+			"_id": "eXvQB96fJIX2TTTU",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A Chaos Knight's tomb has been found beneath a temple",
+			"weight": 2,
+			"range": [
+				96,
+				97
+			],
+			"_id": "FqQUxlYAvtiRPy2H",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The fabled Library of Gehemna appeared outside the city",
+			"weight": 2,
+			"range": [
+				98,
+				99
+			],
+			"_id": "9NMSMFlB98oGT4EV",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The dragon Ixamir has awoken from her 200-year slumber",
+			"weight": 1,
+			"range": [
+				100,
+				100
+			],
+			"_id": "V4zcMs8UEs1Z81lX",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		}
+	],
+	"formula": "1d100",
+	"replacement": true,
+	"displayRoll": false,
+	"ownership": {
+		"default": 0,
+		"EKVggA45fx6fzkCK": 3
+	},
+	"flags": {
+		"core": {
+			"sourceId": "RollTable.NgrPwq2KKM0UbpvL"
+		}
+	},
+	"_stats": {
+		"systemId": "shadowdark",
+		"systemVersion": "0.1.0",
+		"coreVersion": "10.291",
+		"createdTime": 1679219861591,
+		"modifiedTime": 1679337710540,
+		"lastModifiedBy": "EKVggA45fx6fzkCK"
+	},
+	"folder": null,
+	"sort": 0,
+	"_id": "MlSMyJcXaJWuZ56O"
+}

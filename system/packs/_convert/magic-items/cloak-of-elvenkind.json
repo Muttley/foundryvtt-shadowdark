@@ -1,0 +1,31 @@
+{
+	"_id": "z4eAFex0bk8qiQWl",
+	"name": "Cloak of Elvenkind",
+	"type": "Basic",
+	"img": "icons/equipment/back/cloak-collared-feathers-green.webp",
+	"system": {
+		"description": "<p><em>A hooded, billowing cloak that shifts colors to match its surroundings.</em></p><p></p><p><strong>Benefit</strong>. Your checks to hide are always easy (DC 9). Once per day, you can become invisible for 5 rounds. The invisibility ends if you attack or cast a spell.</p>",
+		"properties": [],
+		"magicItem": true,
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

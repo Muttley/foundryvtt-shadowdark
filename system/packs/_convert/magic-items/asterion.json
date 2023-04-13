@@ -1,0 +1,99 @@
+{
+	"_id": "X5FwZjvgzeSXvNDQ",
+	"name": "Asterion",
+	"type": "Weapon",
+	"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
+	"system": {
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
+		"properties": [
+			"twoHanded"
+		],
+		"magicItem": true,
+		"attackBonus": "1",
+		"damage": {
+			"bonus": "1",
+			"oneHanded": "",
+			"twoHanded": "d12",
+			"numDice": 1,
+			"critMultiplier": 2
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": "greatsword"
+	},
+	"effects": [
+		{
+			"label": "attackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.JpRmSUeNd7qwnXZa",
+			"changes": [
+				{
+					"key": "system.attackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "YdSXQDooWvID0Omk",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "damageBonus",
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"origin": "Item.JpRmSUeNd7qwnXZa",
+			"changes": [
+				{
+					"key": "system.damage.bonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "Ep6ApxGF6IQgIcZJ",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"ownership": {
+		"default": 0
+	},
+	"sort": 0
+}
