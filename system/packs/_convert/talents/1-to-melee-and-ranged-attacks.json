@@ -1,4 +1,5 @@
 {
+	"_id": "WSm6JESNoyFBnkW2",
 	"name": "+1 to Melee and Ranged Attacks",
 	"type": "Talent",
 	"img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
@@ -100,23 +101,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.Pdc3xhJ5Z57yu1A5"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010318129,
-		"modifiedTime": 1680571735520,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "WSm6JESNoyFBnkW2"
+	"flags": {},
+	"sort": 0
 }

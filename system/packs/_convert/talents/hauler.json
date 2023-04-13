@@ -1,4 +1,5 @@
 {
+	"_id": "7JTDRLtHc6FOrIEc",
 	"name": "Hauler",
 	"type": "Talent",
 	"img": "icons/containers/bags/sack-leather-tan.webp",
@@ -9,13 +10,7 @@
 		],
 		"magicItem": false,
 		"level": 1,
-		"talentClass": "class",
-		"bonuses": {
-			"hauler": [
-				"true",
-				"true"
-			]
-		}
+		"talentClass": "class"
 	},
 	"effects": [
 		{
@@ -47,23 +42,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.jMXZEZYGdCzW6rc7"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679009841002,
-		"modifiedTime": 1680571735526,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "7JTDRLtHc6FOrIEc"
+	"flags": {},
+	"sort": 0
 }

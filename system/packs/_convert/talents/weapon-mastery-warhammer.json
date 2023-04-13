@@ -1,22 +1,13 @@
 {
+	"_id": "ggKm5SY0ehOUf2SQ",
 	"name": "Weapon Mastery (Warhammer)",
 	"type": "Talent",
 	"img": "icons/skills/melee/strike-axe-energy-pink.webp",
 	"system": {
 		"description": "<p>Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p>",
-		"properties": [
-			"weaponMastery"
-		],
 		"magicItem": false,
 		"level": 1,
-		"talentClass": "level",
-		"talent": {
-			"weaponMasteryTypes": null,
-			"weaponMastery": null
-		},
-		"bonuses": {
-			"weaponMastery": "warhammer"
-		}
+		"talentClass": "level"
 	},
 	"effects": [
 		{
@@ -47,24 +38,9 @@
 			"flags": {}
 		}
 	],
-	"flags": {
-		"core": {
-			"sourceId": "Item.xUpaOaabDFBopP9x"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679009972110,
-		"modifiedTime": 1680571735532,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "ggKm5SY0ehOUf2SQ",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

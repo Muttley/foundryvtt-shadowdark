@@ -1,4 +1,5 @@
 {
+	"_id": "eJHwfYQZ9LmLQeSn",
 	"name": "+1 to Dexterity",
 	"type": "Talent",
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
@@ -94,24 +95,9 @@
 			"flags": {}
 		}
 	],
-	"flags": {
-		"core": {
-			"sourceId": "Item.6iZplEBazA2f66A3"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1678821268710,
-		"modifiedTime": 1680571735518,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
+	"flags": {},
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"folder": null,
-	"sort": 0,
-	"_id": "eJHwfYQZ9LmLQeSn"
+	"sort": 0
 }

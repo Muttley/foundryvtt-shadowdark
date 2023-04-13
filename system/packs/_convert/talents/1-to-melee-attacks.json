@@ -1,4 +1,5 @@
 {
+	"_id": "93QoQQ6cI7xa4TCm",
 	"name": "+1 to Melee Attacks",
 	"type": "Talent",
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
@@ -44,23 +45,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.YIQtQJ0SHwnP8jdl"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010031711,
-		"modifiedTime": 1680571735520,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "93QoQQ6cI7xa4TCm"
+	"flags": {},
+	"sort": 0
 }

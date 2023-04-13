@@ -1,4 +1,5 @@
 {
+	"_id": "DGZqkVUtcmxejdm1",
 	"name": "Grit (Dexterity)",
 	"type": "Talent",
 	"img": "icons/environment/people/infantry.webp",
@@ -10,24 +11,9 @@
 		"talentClass": "class"
 	},
 	"effects": [],
-	"flags": {
-		"core": {
-			"sourceId": "Compendium.shadowdark.talents.DGZqkVUtcmxejdm1"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679436791285,
-		"modifiedTime": 1680571735525,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "DGZqkVUtcmxejdm1",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

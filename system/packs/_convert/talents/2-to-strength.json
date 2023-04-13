@@ -1,4 +1,5 @@
 {
+	"_id": "6t06nSjj1hd6o5SV",
 	"name": "+2 to Strength",
 	"type": "Talent",
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
@@ -9,27 +10,7 @@
 		],
 		"magicItem": false,
 		"level": null,
-		"talentClass": "level",
-		"abilities": {
-			"str": {
-				"bonus": 2
-			},
-			"int": {
-				"bonus": 0
-			},
-			"wis": {
-				"bonus": 0
-			},
-			"con": {
-				"bonus": 0
-			},
-			"cha": {
-				"bonus": 0
-			},
-			"dex": {
-				"bonus": 0
-			}
-		}
+		"talentClass": "level"
 	},
 	"effects": [
 		{
@@ -90,24 +71,9 @@
 			"flags": {}
 		}
 	],
-	"flags": {
-		"core": {
-			"sourceId": "Item.6iZplEBazA2f66A3"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1678821268710,
-		"modifiedTime": 1680571735522,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
+	"flags": {},
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"folder": null,
-	"sort": 0,
-	"_id": "6t06nSjj1hd6o5SV"
+	"sort": 0
 }

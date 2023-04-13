@@ -1,4 +1,5 @@
 {
+	"_id": "TDKf7Cqjd9xTI8Nt",
 	"name": "Wizard Mishap Tier 1-2",
 	"img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
 	"description": "",
@@ -29,7 +30,7 @@
 			"text": "Wizard Mishap Tier 1-2",
 			"img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
 			"documentCollection": "shadowdark.wizard-mishap",
-			"documentId": "n9q8YBQ3NFjFh3q9",
+			"documentId": "TDKf7Cqjd9xTI8Nt",
 			"_id": "y1lafduW3hINmggm",
 			"flags": {}
 		},
@@ -203,23 +204,8 @@
 	"replacement": true,
 	"displayRoll": true,
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "RollTable.HnRcaGmyR2wWpGll"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "0.1.0",
-		"coreVersion": "10.291",
-		"createdTime": 1679418437593,
-		"modifiedTime": 1679503676934,
-		"lastModifiedBy": "EKVggA45fx6fzkCK"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "TDKf7Cqjd9xTI8Nt"
+	"flags": {},
+	"sort": 0
 }

@@ -1,24 +1,13 @@
 {
+	"_id": "MW43tnJr6lqE1Ty8",
 	"name": "Stout",
 	"type": "Talent",
 	"img": "icons/environment/people/group.webp",
 	"system": {
 		"description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
-		"properties": [
-			"hpAdvantage"
-		],
 		"magicItem": false,
 		"level": 1,
-		"talentClass": "ancestry",
-		"bonuses": {
-			"advantage": "hp"
-		},
-		"attributes": {
-			"hp": {
-				"bonus": "2",
-				"max": "2"
-			}
-		}
+		"talentClass": "ancestry"
 	},
 	"effects": [
 		{
@@ -76,24 +65,9 @@
 			"flags": {}
 		}
 	],
-	"flags": {
-		"core": {
-			"sourceId": "Item.SXuw8zzD6a8dwmJE"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679009576960,
-		"modifiedTime": 1680571735527,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "MW43tnJr6lqE1Ty8",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

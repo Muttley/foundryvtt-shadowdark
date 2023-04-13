@@ -1,4 +1,5 @@
 {
+	"_id": "Gf5dApLfOorbQn4R",
 	"name": "Keen Senses",
 	"type": "Talent",
 	"img": "icons/environment/people/group.webp",
@@ -10,24 +11,9 @@
 		"talentClass": "ancestry"
 	},
 	"effects": [],
-	"flags": {
-		"core": {
-			"sourceId": "Compendium.shadowdark.talents.Gf5dApLfOorbQn4R"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679526305437,
-		"modifiedTime": 1680571735526,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "Gf5dApLfOorbQn4R",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

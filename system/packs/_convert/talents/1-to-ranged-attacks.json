@@ -1,4 +1,5 @@
 {
+	"_id": "Y3Ytsye5zrP43w70",
 	"name": "+1 to Ranged Attacks",
 	"type": "Talent",
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
@@ -71,23 +72,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.VnkC1inImR9OBd7u"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010056691,
-		"modifiedTime": 1680571735520,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "Y3Ytsye5zrP43w70"
+	"flags": {},
+	"sort": 0
 }

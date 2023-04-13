@@ -1,18 +1,13 @@
 {
+	"_id": "HzzgAIdhoAyfeItJ",
 	"name": "Backstab +1 Damage Dice",
 	"type": "Talent",
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">Your Backstab deals +1 dice of damage</span>.</p>",
-		"properties": [
-			"backstabDie"
-		],
 		"magicItem": false,
 		"level": null,
-		"talentClass": "level",
-		"bonuses": {
-			"backstabDie": "1"
-		}
+		"talentClass": "level"
 	},
 	"effects": [
 		{
@@ -43,24 +38,9 @@
 			"flags": {}
 		}
 	],
-	"flags": {
-		"core": {
-			"sourceId": "Item.TP3Q3TgZ5rsq0E7n"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010417690,
-		"modifiedTime": 1680571735525,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "HzzgAIdhoAyfeItJ",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

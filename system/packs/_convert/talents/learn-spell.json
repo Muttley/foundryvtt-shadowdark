@@ -1,4 +1,5 @@
 {
+	"_id": "T5nkdUM75LSnDpu5",
 	"name": "Learn Spell",
 	"type": "Talent",
 	"img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
@@ -10,24 +11,9 @@
 		"talentClass": "level"
 	},
 	"effects": [],
-	"flags": {
-		"core": {
-			"sourceId": "Compendium.shadowdark.talents.T5nkdUM75LSnDpu5"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679523678267,
-		"modifiedTime": 1680571735526,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "T5nkdUM75LSnDpu5",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

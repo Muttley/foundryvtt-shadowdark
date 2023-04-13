@@ -1,20 +1,13 @@
 {
+	"_id": "LR6h4lXVXwx7AFQ6",
 	"name": "Mighty",
 	"type": "Talent",
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"system": {
 		"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
-		"properties": [
-			"meleeAttackBonus",
-			"meleeDamageBonus"
-		],
 		"magicItem": false,
 		"level": 1,
-		"talentClass": "ancestry",
-		"bonuses": {
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1"
-		}
+		"talentClass": "ancestry"
 	},
 	"effects": [
 		{
@@ -73,23 +66,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.qj2MYnP9srYJk4YT"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679009769211,
-		"modifiedTime": 1680571735527,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "LR6h4lXVXwx7AFQ6"
+	"flags": {},
+	"sort": 0
 }

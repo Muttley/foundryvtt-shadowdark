@@ -1,4 +1,5 @@
 {
+	"_id": "5RuSqjsSkGChVL51",
 	"name": "Armor Mastery (Shield)",
 	"type": "Talent",
 	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
@@ -7,10 +8,7 @@
 		"properties": [],
 		"magicItem": false,
 		"level": 1,
-		"talentClass": "level",
-		"bonuses": {
-			"armorMastery": "shield"
-		}
+		"talentClass": "level"
 	},
 	"effects": [
 		{
@@ -42,23 +40,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.O85k4YTPvO3C1AH7"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1680461193989,
-		"modifiedTime": 1680571735524,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "5RuSqjsSkGChVL51"
+	"flags": {},
+	"sort": 0
 }

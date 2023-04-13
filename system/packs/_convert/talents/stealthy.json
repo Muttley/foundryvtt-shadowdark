@@ -1,4 +1,5 @@
 {
+	"_id": "zkOiprnKS5uttiO6",
 	"name": "Stealthy",
 	"type": "Talent",
 	"img": "icons/environment/people/group.webp",
@@ -10,24 +11,9 @@
 		"talentClass": "ancestry"
 	},
 	"effects": [],
-	"flags": {
-		"core": {
-			"sourceId": "Item.DYWFJu5XeazJYc0P"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679526305437,
-		"modifiedTime": 1680571735527,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"_id": "zkOiprnKS5uttiO6",
-	"folder": null,
+	"flags": {},
 	"sort": 0,
 	"ownership": {
-		"default": 0,
-		"aUdswNccq2u0SxEP": 3
+		"default": 0
 	}
 }

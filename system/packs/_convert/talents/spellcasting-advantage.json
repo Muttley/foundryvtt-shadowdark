@@ -1,18 +1,13 @@
 {
+	"_id": "IZZnFjWhZurAIZPP",
 	"name": "Spellcasting Advantage",
 	"type": "Talent",
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"system": {
 		"description": "<p>Gain advantage on casting one spell you know.</p><p></p><blockquote><p>Import the talent and edit the \"EDITME\" above. It should be the spell name slugified. Example: Magic Missile =&gt; 'magic-missle'.</p></blockquote>",
-		"properties": [
-			"spellAdvantage"
-		],
 		"magicItem": false,
 		"level": null,
-		"talentClass": "level",
-		"bonuses": {
-			"advantage": "EDITME"
-		}
+		"talentClass": "level"
 	},
 	"effects": [
 		{
@@ -44,23 +39,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.ZcDq09YwdAZxvZ0C"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010271598,
-		"modifiedTime": 1680571735527,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "IZZnFjWhZurAIZPP"
+	"flags": {},
+	"sort": 0
 }

@@ -1,104 +1,15 @@
 {
+	"_id": "BsRPGhKXYwJBI9ex",
 	"name": "Armor Mastery (Chainmail)",
 	"type": "Talent",
 	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 	"system": {
 		"description": "",
-		"properties": [
-			"meleeAttackBonus",
-			"rangedAttackBonus"
-		],
 		"magicItem": false,
 		"level": null,
-		"talentClass": "level",
-		"bonuses": {
-			"meleeAttackBonus": "1",
-			"rangedAttackBonus": "1",
-			"armorMastery": "chainmail"
-		}
+		"talentClass": "level"
 	},
 	"effects": [
-		{
-			"label": "meleeAttackBonus",
-			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
-			"origin": "Item.Pdc3xhJ5Z57yu1A5",
-			"changes": [
-				{
-					"key": "system.bonuses.meleeAttackBonus",
-					"value": "1",
-					"mode": 2,
-					"priority": null
-				}
-			],
-			"disabled": true,
-			"transfer": true,
-			"_id": "VlMrpb3sCnL1z8c3",
-			"duration": {
-				"startTime": null,
-				"seconds": null,
-				"combat": null,
-				"rounds": null,
-				"turns": null,
-				"startRound": null,
-				"startTurn": null
-			},
-			"tint": null,
-			"flags": {}
-		},
-		{
-			"label": "meleeDamageBonus",
-			"icon": "icons/skills/melee/strike-axe-blood-red.webp",
-			"origin": "Item.Pdc3xhJ5Z57yu1A5",
-			"changes": [
-				{
-					"key": "system.bonuses.meleeDamageBonus",
-					"value": "1",
-					"mode": 2,
-					"priority": null
-				}
-			],
-			"disabled": true,
-			"transfer": true,
-			"_id": "TE66dL9wHosn08wu",
-			"duration": {
-				"startTime": null,
-				"seconds": null,
-				"combat": null,
-				"rounds": null,
-				"turns": null,
-				"startRound": null,
-				"startTurn": null
-			},
-			"tint": null,
-			"flags": {}
-		},
-		{
-			"label": "rangedAttackBonus",
-			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-			"origin": "Item.Pdc3xhJ5Z57yu1A5",
-			"changes": [
-				{
-					"key": "system.bonuses.rangedAttackBonus",
-					"value": "1",
-					"mode": 2,
-					"priority": null
-				}
-			],
-			"disabled": true,
-			"transfer": true,
-			"_id": "0U9Xe4pzNwH928O5",
-			"duration": {
-				"startTime": null,
-				"seconds": null,
-				"combat": null,
-				"rounds": null,
-				"turns": null,
-				"startRound": null,
-				"startTurn": null
-			},
-			"tint": null,
-			"flags": {}
-		},
 		{
 			"label": "armorMastery",
 			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
@@ -128,23 +39,8 @@
 		}
 	],
 	"ownership": {
-		"default": 0,
-		"EKVggA45fx6fzkCK": 3
+		"default": 0
 	},
-	"flags": {
-		"core": {
-			"sourceId": "Item.Pdc3xhJ5Z57yu1A5"
-		}
-	},
-	"_stats": {
-		"systemId": "shadowdark",
-		"systemVersion": "1.1.2",
-		"coreVersion": "10.291",
-		"createdTime": 1679010318129,
-		"modifiedTime": 1680571735524,
-		"lastModifiedBy": "xsKW3bDwjkX1myUk"
-	},
-	"folder": null,
-	"sort": 0,
-	"_id": "BsRPGhKXYwJBI9ex"
+	"flags": {},
+	"sort": 0
 }
