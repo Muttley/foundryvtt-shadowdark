@@ -68,6 +68,26 @@ export function chatCardButtonAction(app, html, data) {
 		ev.preventDefault();
 		applyHpToMax(ev);
 	});
+
+	const castSpellButton = html.find("button[data-action=cast-spell]");
+	castSpellButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.castSpell(itemId);
+	});
+
+	const weaponAttackButton = html.find("button[data-action=roll-attack]");
+	weaponAttackButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.rollAttack(itemId);
+	});
 }
 
 /**
