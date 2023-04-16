@@ -616,6 +616,8 @@ export default class RollSD extends Roll {
 			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
+		// TODO Make sure we honor the whisper and/or blind settings of the roll
+		//
 		// Only await on the final dice roll of the sequence as it looks nicer
 		// if all the dice roll before the chat message appears
 		const numRolls = rollsToShow.length;
