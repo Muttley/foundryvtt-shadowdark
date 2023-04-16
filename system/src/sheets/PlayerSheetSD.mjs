@@ -35,6 +35,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find(".item-image").click(
+			event => this._onItemChatClick(event)
+		);
+
 		html.find(".item-quantity-decrement").click(
 			event => this._onItemQuantityDecrement(event)
 		);
@@ -152,6 +156,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 		super._onDropItemCreate(scroll);
+	}
+
+	async _onItemChatClick(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		item.displayCard();
 	}
 
 	async _onItemQuantityDecrement(event) {

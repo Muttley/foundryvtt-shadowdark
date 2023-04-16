@@ -1,19 +1,19 @@
 <p>
-	<b>Armor Class</b> <em>{{itemData.system.ac.base}}{{#if itemData.system.ac.modifier}}{{numberFormat itemData.system.ac.modifier decimals=0 sign=true}}{{/if}}</em>
+	<b>{{localize 'SHADOWDARK.item.armor_class'}}</b> <em>{{item.system.ac.base}}{{#if item.system.ac.modifier}}{{numberFormat item.system.ac.modifier decimals=0 sign=true}}{{/if}}</em>
 </p>
 <p>
-	{{#if itemData.system.ac.attribute}}
-	<b>Bonus Attribute</b> <em>{{fromConfig "ABILITIES_LONG" itemData.system.ac.attribute}}</em>
+	{{#if item.system.ac.attribute}}
+	<b>{{localize 'SHADOWDARK.item.armor_bonus_attribute'}}</b> <em>{{fromConfig "ABILITIES_LONG" item.system.ac.attribute}}</em>
 	{{/if}}
 </p>
 <p>
-	{{#if itemData.system.baseArmor}}
-	<b>Base Type</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" itemData.system.baseArmor}}</em>
+	{{#if item.system.baseArmor}}
+	<b>{{localize 'SHADOWDARK.item.armor.base_armor.title'}}</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" item.system.baseArmor}}</em>
 	{{/if}}
 </p>
 {{{description}}}
 <footer class="details-footer">
-	{{#each itemData.system.properties as |prop|}}
+	{{#each item.system.properties as |prop|}}
 		<span>{{fromConfig "ARMOR_PROPERTIES" prop}}</span>
 	{{/each}}
 </footer>

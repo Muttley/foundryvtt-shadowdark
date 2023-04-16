@@ -16,23 +16,31 @@ export default class ItemSD extends Item {
 	}
 
 	async getChatData(htmlOptions={}) {
+		const description = await TextEditor.enrichHTML(
+			this.system.description,
+			{
+				async: true,
+			}
+		);
+
 		const data = {
+			actor: this.actor,
+			description,
 			item: this.toObject(),
 		};
+
 		return data;
 	}
 
 	async displayCard(options={}) {
 		// Render the chat card template
 		const token = this.actor.token;
-		const templateData = {
-			actor: this.actor,
-			tokenId: token?.uuis || null,
-			data: await this.getChatData(),
-			isSpell: this.isSpell(),
-			isWeapon: this.isWeapon(),
-		};
-		const html = await renderTemplate("systems/shadowdark/templates/chat/item-card.hbs", templateData);
+
+		const templateData = await this.getChatData();
+
+		const template = this.getItemTemplate("systems/shadowdark/templates/chat/item");
+
+		const html = await renderTemplate(template, templateData);
 
 		const chatData = {
 			user: game.user.id,
@@ -52,42 +60,28 @@ export default class ItemSD extends Item {
 	}
 
 	async getDetailsContent() {
-		const description = await TextEditor.enrichHTML(
-			this.system.description,
-			{
-				async: true,
-			}
+		const templateData = await this.getChatData();
+
+		const templatePath = this.getItemTemplate(
+			"systems/shadowdark/templates/partials/details"
 		);
 
-		const data = {
-			description,
-			itemData: this.toObject(),
-		};
-
-		const baseTemplatePath = "systems/shadowdark/templates/partials/details";
-
-		let detailsTemplate;
-
-		switch (this.type) {
-			case "Armor":
-				detailsTemplate = "armor.hbs";
-				break;
-			case "Spell":
-				detailsTemplate = "spell.hbs";
-				break;
-			case "Weapon":
-				detailsTemplate = "weapon.hbs";
-				break;
-			default:
-				detailsTemplate = "description.hbs";
-		}
-
-		const html = await renderTemplate(
-			`${baseTemplatePath}/${detailsTemplate}`,
-			data
-		);
+		const html = await renderTemplate(templatePath,	templateData);
 
 		return html;
+	}
+
+	getItemTemplate(basePath) {
+		switch (this.type) {
+			case "Armor":
+				return `${basePath}/armor.hbs`;
+			case "Spell":
+				return `${basePath}/spell.hbs`;
+			case "Weapon":
+				return `${basePath}/weapon.hbs`;
+			default:
+				return `${basePath}/default.hbs`;
+		}
 	}
 
 	lightRemainingString() {

@@ -39,7 +39,7 @@ SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box. 
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
@@ -48,6 +48,8 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.chat_card.button.attack: Roll Attack
+SHADOWDARK.chat_card.button.cast_spell: Cast Spell
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
@@ -151,12 +153,12 @@ SHADOWDARK.item_type.weapon: Weapon
 SHADOWDARK.item.armor_ac_modifier: Modifier
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
+SHADOWDARK.item.armor_class: Armor Class
 SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
 SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
 SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
 SHADOWDARK.item.armor.base_armor.shield: Shield
 SHADOWDARK.item.armor.base_armor.title: Base Armor
-SHADOWDARK.item.armor.base_weapon.title: Base Weapon
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.equipped: Equipped
@@ -187,6 +189,7 @@ SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.spell_caster_classes: Caster Classes
+SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
@@ -212,6 +215,7 @@ SHADOWDARK.item.weapon.base_weapon.shortbow: Shortbow
 SHADOWDARK.item.weapon.base_weapon.shortsword: Shortsword
 SHADOWDARK.item.weapon.base_weapon.spear: Spear
 SHADOWDARK.item.weapon.base_weapon.staff: Staff
+SHADOWDARK.item.weapon.base_weapon.title: Base Weapon
 SHADOWDARK.item.weapon.base_weapon.wand: Wand
 SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer
 SHADOWDARK.language.celestial: Celestial
@@ -281,10 +285,10 @@ SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
 SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
-SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
-SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
+SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment_short: Align
 SHADOWDARK.sheet.actor.alignment: Alignment

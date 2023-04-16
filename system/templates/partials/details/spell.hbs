@@ -1,15 +1,23 @@
 <p>
-	<b>Tier</b> {{itemData.system.tier}},
-	<b>Class</b> <em>{{joinStrings itemData.system.class}}</em>
+	<b>{{localize "SHADOWDARK.item.spell_tier"}}</b> {{item.system.tier}},
+	<b>{{localize "SHADOWDARK.item.spell_class"}}</b> <em>{{joinStrings item.system.class}}</em>
 </p>
 <p>
-	<b>Range</b> {{itemData.system.range}}
+	<b>{{localize 'SHADOWDARK.item.spell_range'}}</b> {{item.system.range}}
 </p>
 <p>
-	<b>Duration</b>
-	{{#if itemData.system.duration.value}}
-		{{itemData.system.duration.value}}
+	<b>{{localize 'SHADOWDARK.item.spell_duration'}}</b>
+	{{#if item.system.duration.value}}
+		{{item.system.duration.value}}
 	{{/if}}
-	{{itemData.system.duration.type}}
+	{{item.system.duration.type}}
 </p>
 {{{description}}}
+<button
+	class="item-control"
+	data-actor-id="{{actor._id}}"
+	data-item-id="{{item._id}}"
+	data-action="cast-spell"
+>
+	{{localize 'SHADOWDARK.chat_card.button.cast_spell'}}
+</button>

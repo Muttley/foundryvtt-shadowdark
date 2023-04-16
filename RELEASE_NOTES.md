@@ -6,7 +6,8 @@
 ### Enhancements
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
-* [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item.
+* [#309] More consistent behaviour when clicking item icons on character sheet. Now they post the item to chat, and the chat item has buttons to perform relevant actions
+* [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item along buttons to perform relevant actions
 
 ## v1.2.4
 

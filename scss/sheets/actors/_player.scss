@@ -268,10 +268,6 @@
 			text-align: center;
 			border: none;
 
-			& .item-rollable:hover {
-				background-image: url("/icons/svg/d20-grey.svg") !important;
-			}
-
 			& td:first-child {
 				padding-left: 8px;
 				text-align: left;
@@ -341,12 +337,24 @@
 	}
 
 	.item-image {
+		@include p-reset;
+		display: inline-block;
 		width: 24px;
 		height: 24px;
-		border-radius: 3px;
-		background-size: cover;
-		display: inline-block;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
 		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+		&:hover {
+			background: none !important;
+			color: white;
+		}
 	}
 
 	.item-toggle-equipped {

@@ -223,6 +223,27 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async castSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const abilityId = this.getSpellcastingAbility();
+
+		const data = {
+			rollType: item.name.slugify(),
+			item: item,
+			scroll: false,
+			actor: this.actor,
+			abilityBonus: this.abilityModifier(abilityId),
+			talentBonus: this.system.bonuses.spellcastingCheckBonus,
+		};
+
+		const parts = ["@abilityBonus", "@talentBonus"];
+
+		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
+
+		return item.rollSpell(parts, data);
+	}
+
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
 		if (token) token.document.update({light: lightData});
@@ -357,6 +378,69 @@ export default class ActorSD extends Actor {
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
 
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
+	async rollAttack(itemId) {
+		const item = this.items.get(itemId);
+
+		const data = {
+			item: item,
+			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
+			actor: this,
+		};
+
+		const bonuses = this.system.bonuses;
+
+		// Summarize the bonuses for the attack roll
+		const parts = ["@abilityBonus", "@talentBonus"];
+		data.damageParts = [];
+
+		// Magic Item bonuses
+		if (item.system.attackBonus) {
+			parts.push("@itemBonus");
+			data.itemBonus = item.system.attackBonus;
+		}
+		if (item.system.damage?.bonus) {
+			data.damageParts.push("@itemDamageBonus");
+			data.itemDamageBonus = item.system.damage.bonus;
+		}
+
+		// Talents & Ability modifiers
+		if (item.system.type === "melee") {
+			if (item.isFinesseWeapon()) {
+				data.abilityBonus = Math.max(
+					this.abilityModifier("str"),
+					this.abilityModifier("dex")
+				);
+			}
+			else {
+				data.abilityBonus = this.abilityModifier("str");
+			}
+
+			data.talentBonus = bonuses.meleeAttackBonus;
+			data.meleeDamageBonus = bonuses.meleeDamageBonus;
+			data.damageParts.push("@meleeDamageBonus");
+		}
+		else {
+			data.abilityBonus = this.abilityModifier("dex");
+
+			data.talentBonus = bonuses.rangedAttackBonus;
+			data.rangedDamageBonus = bonuses.rangedDamageBonus;
+			data.damageParts.push("@rangedDamageBonus");
+		}
+
+		// Check Weapon Mastery & add if applicable
+		if (
+			item.system.weaponMastery
+			|| this.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
+			|| this.system.bonuses.weaponMastery.includes(item.name.slugify())
+		) {
+			data.weaponMasteryBonus = 1 + Math.floor(this.system.level.value / 2);
+			data.talentBonus += data.weaponMasteryBonus;
+			data.damageParts.push("@weaponMasteryBonus");
+		}
+
+		return item.rollItem(parts, data);
 	}
 
 	async rollHP(options={}) {
