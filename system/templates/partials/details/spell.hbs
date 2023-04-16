@@ -1,12 +1,12 @@
 <p>
-	<b>Tier</b> {{item.system.tier}},
-	<b>Class</b> <em>{{joinStrings item.system.class}}</em>
+	<b>{{localize "SHADOWDARK.item.spell_tier"}}</b> {{item.system.tier}},
+	<b>{{localize "SHADOWDARK.item.spell_class"}}</b> <em>{{joinStrings item.system.class}}</em>
 </p>
 <p>
-	<b>Range</b> {{item.system.range}}
+	<b>{{localize 'SHADOWDARK.item.spell_range'}}</b> {{item.system.range}}
 </p>
 <p>
-	<b>Duration</b>
+	<b>{{localize 'SHADOWDARK.item.spell_duration'}}</b>
 	{{#if item.system.duration.value}}
 		{{item.system.duration.value}}
 	{{/if}}

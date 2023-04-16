@@ -1,14 +1,14 @@
 <p>
-	<b>{{localize 'SHADOWDARK.chat_card.label.armor_class'}}</b> <em>{{item.system.ac.base}}{{#if item.system.ac.modifier}}{{numberFormat item.system.ac.modifier decimals=0 sign=true}}{{/if}}</em>
+	<b>{{localize 'SHADOWDARK.item.armor_class'}}</b> <em>{{item.system.ac.base}}{{#if item.system.ac.modifier}}{{numberFormat item.system.ac.modifier decimals=0 sign=true}}{{/if}}</em>
 </p>
 <p>
 	{{#if item.system.ac.attribute}}
-	<b>{{localize 'SHADOWDARK.chat_card.label.bonus_attribute'}}</b> <em>{{fromConfig "ABILITIES_LONG" item.system.ac.attribute}}</em>
+	<b>{{localize 'SHADOWDARK.item.armor_bonus_attribute'}}</b> <em>{{fromConfig "ABILITIES_LONG" item.system.ac.attribute}}</em>
 	{{/if}}
 </p>
 <p>
 	{{#if item.system.baseArmor}}
-	<b>{{localize 'SHADOWDARK.chat_card.label.base_type'}}</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" item.system.baseArmor}}</em>
+	<b>{{localize 'SHADOWDARK.item.armor.base_armor.title'}}</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" item.system.baseArmor}}</em>
 	{{/if}}
 </p>
 {{{description}}}
