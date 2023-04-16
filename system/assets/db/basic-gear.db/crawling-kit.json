@@ -1,0 +1,32 @@
+{
+	"_id": "fJHwwn6TEfbdr8CM",
+	"name": "Crawling Kit",
+	"type": "Basic",
+	"img": "icons/containers/bags/satchel-worn-leather-brown.webp",
+	"system": {
+		"description": "<p>A crawling kit costs 7 gp. It uses 7 gear slots and contains the following items.</p><p></p><ul><li><p>@UUID[Compendium.shadowdark.basic-gear.oSnfz4qcWlUL6cDZ]{Backpack}</p></li><li><p>@UUID[Compendium.shadowdark.basic-gear.ERprfuTIFRFEix9G]{Flint and Steel}</p></li><li><p>2x @UUID[Compendium.shadowdark.basic-gear.z3xc7HGysC4ZCU8e]{Torch}</p></li><li><p>@UUID[Compendium.shadowdark.basic-gear.EPndk3DPOEOSvbga]{Iron Spikes}</p></li><li><p>@UUID[Compendium.shadowdark.basic-gear.GX6OmWQiE7MzTmjX]{Rations}</p></li><li><p>@UUID[Compendium.shadowdark.basic-gear.fqsLWV46NWH0L53l]{Grappling Hook}</p></li><li><p>@UUID[Compendium.shadowdark.basic-gear.6ZRwVHFlh5QiyZWC]{Rope, 60'}</p></li></ul>",
+		"properties": [],
+		"magicItem": false,
+		"cost": {
+			"gp": 7,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"isPhysical": true,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 7
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

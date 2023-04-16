@@ -1,0 +1,233 @@
+{
+	"_id": "0JAEN5FsKjaXXZaA",
+	"name": "Darkmantle",
+	"type": "NPC",
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"system": {
+		"alignment": "neutral",
+		"attributes": {
+			"hp": {
+				"max": 4,
+				"value": 4,
+				"hd": 0
+			},
+			"ac": {
+				"value": 13
+			}
+		},
+		"level": {
+			"value": 1
+		},
+		"notes": "<p><em>A floating, black octopus with rows of red eyes and a webbed skirt of tentacles.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 4 <strong>ATK</strong> 1 bite +3 (1d4) or 1 darkness, <strong>MV </strong>near (fly), <strong>S</strong> -2, <strong>D </strong>+3, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p><p><strong>Darkness</strong>. Extinguish all light sources in near (magic 3:6).</p>",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"mod": -2
+			},
+			"int": {
+				"mod": -3
+			},
+			"dex": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 0
+			},
+			"cha": {
+				"mod": -3
+			}
+		},
+		"darkAdapted": true,
+		"move": "near",
+		"moveNote": "Fly"
+	},
+	"prototypeToken": {
+		"name": "Darkmantle",
+		"displayName": 20,
+		"actorLink": false,
+		"texture": {
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Bite",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 3,
+					"damage": {
+						"numDice": null
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "cxEeogA0M8MfO01H",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679422360169,
+				"modifiedTime": 1679422371552,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Darkness",
+			"type": "NPC Feature",
+			"system": {
+				"description": "<p>Extinguish all light sources in near (magic 3:6).</p>",
+				"properties": [],
+				"magicItem": false
+			},
+			"_id": "QnSlbNpbIsYFgrJC",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679422381628,
+				"modifiedTime": 1679422393501,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Darkness",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 0,
+					"damage": {
+						"numDice": null
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 0,
+					"value": "",
+					"special": "Darkness"
+				},
+				"attackType": "special",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "KkTYwbHvLOHetnPg",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679422399775,
+				"modifiedTime": 1679497350321,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

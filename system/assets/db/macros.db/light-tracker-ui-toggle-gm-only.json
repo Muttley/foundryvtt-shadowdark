@@ -1,0 +1,14 @@
+{
+	"_id": "VgfWt2xWzYJyVMbA",
+	"name": "Light Tracker UI Toggle (GM Only)",
+	"type": "script",
+	"scope": "global",
+	"author": "EjRYV38yldItTITy",
+	"img": "icons/tools/navigation/hourglass-grey.webp",
+	"command": "// This toggles the Light Source Tracker interface on/off.\n//\n// Only available to users with the Game Master role.\n//\ngame.shadowdark.lightSourceTracker.toggleInterface();",
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

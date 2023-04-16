@@ -1,0 +1,52 @@
+{
+  "name": "Greatsword",
+  "type": "Weapon",
+  "img": "icons/weapons/swords/greatsword-crossguard-flanged-purple.webp",
+  "system": {
+    "cost": {
+      "gp": 12,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "description": "",
+    "properties": [
+      "twoHanded"
+    ],
+    "attackBonus": 0,
+    "damage": {
+      "bonus": 0,
+      "oneHanded": "",
+      "twoHanded": "d12",
+      "numDice": 1
+    },
+    "range": "close",
+    "type": "melee",
+    "weaponMastery": false,
+    "baseWeapon": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678531743135,
+    "modifiedTime": 1679213106171,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "eqUuf9OGupuGPsBM",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eqUuf9OGupuGPsBM"
+}

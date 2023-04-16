@@ -1,0 +1,30 @@
+{
+	"_id": "W2fFimb0y85wmOMb",
+	"name": "Flask",
+	"type": "Basic",
+	"img": "icons/consumables/potions/bottle-corked-empty.webp",
+	"system": {
+		"description": "<p>Glass containers that hold one draught of liquid.</p>",
+		"properties": [],
+		"cost": {
+			"gp": 0,
+			"sp": 3,
+			"cp": 0
+		},
+		"canBeEquipped": false,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

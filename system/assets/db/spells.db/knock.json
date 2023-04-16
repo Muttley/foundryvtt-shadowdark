@@ -1,0 +1,24 @@
+{
+	"_id": "SHQa9bCk8v8wQweV",
+	"name": "Knock",
+	"type": "Spell",
+	"system": {
+		"description": "<p>A door, window, gate, chest, or portal you can see within range instantly opens, defeating all mundane locks and barriers.</p><p>This spell creates a loud knock audible to all within earshot.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"range": "near",
+		"tier": 2
+	},
+	"img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

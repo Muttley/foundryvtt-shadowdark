@@ -1,0 +1,19 @@
+{
+	"_id": "Gf5dApLfOorbQn4R",
+	"name": "Keen Senses",
+	"type": "Talent",
+	"img": "icons/environment/people/group.webp",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You can't be surprised.</span></p>",
+		"properties": [],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "ancestry"
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"_id": "h8iHwWnDUMCoPDl3",
+	"name": "Armor Mastery (Leather Armor)",
+	"type": "Talent",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"system": {
+		"description": "",
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level"
+	},
+	"effects": [
+		{
+			"label": "armorMastery",
+			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+			"origin": "Item.Pdc3xhJ5Z57yu1A5",
+			"changes": [
+				{
+					"key": "system.bonuses.armorMastery",
+					"value": "leather-armor",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "zJLo7tUBPkwuCNqN",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0
+	},
+	"flags": {},
+	"sort": 0
+}

@@ -1,0 +1,47 @@
+{
+	"_id": "lDpO78DJOble2WeK",
+	"name": "Armor Mastery (Plate Mail)",
+	"type": "Talent",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"system": {
+		"description": "",
+		"properties": [],
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "level"
+	},
+	"effects": [
+		{
+			"label": "armorMastery",
+			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+			"origin": "Item.7xXoilEJU2ZMb5Pm",
+			"changes": [
+				{
+					"key": "system.bonuses.armorMastery",
+					"value": "plate-mail",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "jkN6KdrnbkUPxZZa",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0
+	},
+	"flags": {},
+	"sort": 0
+}

@@ -1,0 +1,781 @@
+{
+	"_id": "PJmTjgwiPdZcYBYT",
+	"name": "Ruin Encounters",
+	"img": "icons/environment/wilderness/wall-ruins.webp",
+	"description": "",
+	"formula": "1d100",
+	"replacement": true,
+	"displayRoll": false,
+	"results": [
+		{
+			"text": "A mutated @UUID[Compendium.shadowdark.monster.nhKDBbnOnXXTzfBr]{Cave Brute} explodes through a crumbling wall",
+			"weight": 1,
+			"range": [
+				1,
+				1
+			],
+			"_id": "MNXczdeJO7TWUGAj",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A silent @UUID[Compendium.shadowdark.monster.udRspLiTyURGmLav]{Gelatinous Cube} sweeps up a corridor",
+			"weight": 2,
+			"range": [
+				2,
+				3
+			],
+			"_id": "9dEznuemkLTLmhYp",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A roving @UUID[Compendium.shadowdark.monster.RG84tprafQTDEFCa]{Brown Bear} scavenges for dead bodies to eat",
+			"weight": 2,
+			"range": [
+				4,
+				5
+			],
+			"_id": "loaxCAEIlNdilQky",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Rival crawlers confront the PCs; they were \"here first\"",
+			"weight": 2,
+			"range": [
+				6,
+				7
+			],
+			"_id": "rZjEZP25NtK6L62z",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monster.qISCrzLvHr4uQ9Q8]{Rust Monsters} swarm a crack bubbling with mercury",
+			"weight": 2,
+			"range": [
+				8,
+				9
+			],
+			"_id": "9PXpblnDiaoomi1j",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A legless suit of @UUID[Compendium.shadowdark.monster.qSeHWgP59WltutCz]{Animated Armor} pulls itself along the floor",
+			"weight": 2,
+			"range": [
+				10,
+				11
+			],
+			"_id": "4AUTqIIM1oyuSakC",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A groaning wall collapses at the slightest touch",
+			"weight": 2,
+			"range": [
+				12,
+				13
+			],
+			"_id": "ENBMi3hHnPMzE9SM",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A chalk note on the wall: \"Karov, we'll be at the Loyal Hog\"",
+			"weight": 2,
+			"range": [
+				14,
+				15
+			],
+			"_id": "Ds7n8HhTykEQVYuY",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Mort the goblin is digging in cracks for grubs and beetles",
+			"weight": 2,
+			"range": [
+				16,
+				17
+			],
+			"_id": "n6jLyzVlqTuuLKWg",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The floor collapses into a pit [[/r 1d6*10]] feet deep",
+			"weight": 2,
+			"range": [
+				18,
+				19
+			],
+			"_id": "M50NwNTfPgNfz1Gt",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A raiding team of [[/r 2d4]] @UUID[Compendium.shadowdark.monster.uqHIz56KiBwTnbTJ]{Hobgoblins} moves in tight formation",
+			"weight": 2,
+			"range": [
+				20,
+				21
+			],
+			"_id": "UbWOa7xk7UTNppVJ",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] web-covered @UUID[Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6]{Skeletons} form from scattered bones",
+			"weight": 2,
+			"range": [
+				22,
+				23
+			],
+			"_id": "h12KW8hoBBdvu2M1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 1d4]] @UUID[Compendium.shadowdark.monster.99s2guSyYKPWp1oy]{Giant Dung Beetles} roll huge balls of dried excrement",
+			"weight": 2,
+			"range": [
+				24,
+				25
+			],
+			"_id": "w91bQCy7fr2bOBfF",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An @UUID[Compendium.shadowdark.monster.QErMaMVIbddgk9MX]{Ochre Jelly} hides inside a pond or sinkhole",
+			"weight": 2,
+			"range": [
+				26,
+				27
+			],
+			"_id": "87Tv3yNl0DlQGdww",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A single, perfect rose grows up between the flagstones",
+			"weight": 2,
+			"range": [
+				28,
+				29
+			],
+			"_id": "kM70wEJSXRdmLSNm",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monster.AMSI3MCLvpcZpJPO]{Bandits} shutter lanterns and set up a hasty ambush",
+			"weight": 2,
+			"range": [
+				30,
+				31
+			],
+			"_id": "8vnVSnCaccSGcbxD",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Three @UUID[Compendium.shadowdark.monster.I7CMFbyFmFHVwE5U]{Goblins} toughen each other's skulls with frying pans",
+			"weight": 2,
+			"range": [
+				32,
+				33
+			],
+			"_id": "9iUqJ0hZWqU3CCmf",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d6]] @UUID[Compendium.shadowdark.monster.k8tAgECWIzPIStGU]{Beastmen} pummel a giant centipede with rocks",
+			"weight": 2,
+			"range": [
+				34,
+				35
+			],
+			"_id": "TQXW7adTiYLTlgO0",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A gas leak causes all light sources to explode and go out",
+			"weight": 2,
+			"range": [
+				36,
+				37
+			],
+			"_id": "Aebea7WwN9xB0ajX",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.udRspLiTyURGmLav]{Gelatinous Cube} full of handy items is stuck inside a pit",
+			"weight": 2,
+			"range": [
+				38,
+				39
+			],
+			"_id": "g1JsCR7uKVnsgaXD",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A swarm of clattering, @UUID[Compendium.shadowdark.monster.U9moCUg8DnL6C0Sq]{Gold Scarab Beetles} flies into sight",
+			"weight": 2,
+			"range": [
+				40,
+				41
+			],
+			"_id": "kMsydYKwOiwfRaX1",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A wounded NPC staggers up to the PCs and begs for help",
+			"weight": 2,
+			"range": [
+				42,
+				43
+			],
+			"_id": "G1lkaYji8pjRvksh",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A rusty portcullis slams down, separating the PCs",
+			"weight": 2,
+			"range": [
+				44,
+				45
+			],
+			"_id": "uiEhUtiCcvhlSPtd",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.p9PayU4K9nBZ8JRl]{Giant Spider} hides above an old, rotten backpack",
+			"weight": 2,
+			"range": [
+				46,
+				47
+			],
+			"_id": "hKISMmDaHYV4LR4F",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A weeping @UUID[Compendium.shadowdark.monster.LV2ZWlK1qUQz5J4K]{Ghost} floats by, distracted by its own ranting",
+			"weight": 2,
+			"range": [
+				48,
+				49
+			],
+			"_id": "HekPkiaU8FFelCNv",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monster.BxilUr9Ac6zgekYU]{Kobolds} sneak up behind the PCs for a surprise attack",
+			"weight": 4,
+			"range": [
+				50,
+				53
+			],
+			"_id": "fYxfqezwrkyWRHZC",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Ancient clay pots vibrate with hypnotizing resonance",
+			"weight": 2,
+			"range": [
+				54,
+				55
+			],
+			"_id": "z6vxiUlI6PdxPOYC",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monster.Jn5JjEPCUT86txAg]{Gricks} shred dead giant rats and use the fur for nesting",
+			"weight": 2,
+			"range": [
+				56,
+				57
+			],
+			"_id": "rNSFUpyfnVTGACEO",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Rival crawlers escort a frail noble tourist on an \"adventure\"",
+			"weight": 2,
+			"range": [
+				58,
+				59
+			],
+			"_id": "9DH4iei90ecfMNjb",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 3d4]] @UUID[Compendium.shadowdark.monster.I7CMFbyFmFHVwE5U]{Goblin} scavengers barter and trade for odd trinkets",
+			"weight": 2,
+			"range": [
+				60,
+				61
+			],
+			"_id": "b5BykPXgIz62eE15",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] dwarven miners (@UUID[Compendium.shadowdark.monster.Kw5KEyZVy5ugaTTy]{Soldiers}) shore up a collapsing wall",
+			"weight": 2,
+			"range": [
+				62,
+				63
+			],
+			"_id": "czdsovaXEkCbHRjY",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monster.K9M3BA8PlvYWFADe]{Giant Wasps} build a huge, papery nest on the ceiling",
+			"weight": 2,
+			"range": [
+				64,
+				65
+			],
+			"_id": "NSXw2JxCczPZLv9a",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A dense cloud of sulfuric mist rises from a floor crack",
+			"weight": 2,
+			"range": [
+				66,
+				67
+			],
+			"_id": "vK4QZDDD9Oexnpfz",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.rwE58nsTLAG7pW1u]{Swarm of Spiders} surges out of a gauzy egg sack",
+			"weight": 2,
+			"range": [
+				68,
+				69
+			],
+			"_id": "3pRG7fxQRXBojepq",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An @UUID[Compendium.shadowdark.monster.VrYTiPjDOH1LIEBr]{Ogre} named Lud scratches rude words into the wall",
+			"weight": 2,
+			"range": [
+				70,
+				71
+			],
+			"_id": "tDg9Hc7IuVKaUsdS",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monster.I7CMFbyFmFHVwE5U]{Goblins} brawl with [[/r 2d4]] @UUID[Compendium.shadowdark.monster.BxilUr9Ac6zgekYU]{Kobolds} over a @UUID[Compendium.shadowdark.monster.Jn5JjEPCUT86txAg]{Grick} carcass",
+			"weight": 2,
+			"range": [
+				72,
+				73
+			],
+			"_id": "GG63tQrSd7W4hAlU",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]]@UUID[Compendium.shadowdark.monster.EJ94w4A9mb9ETSGA]{Giant Bats} roost on the ceiling; light disturbs them",
+			"weight": 2,
+			"range": [
+				74,
+				75
+			],
+			"_id": "5PnKd7vcRy7OpaTp",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "An @UUID[Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx]{Ettercap} spins web cocoons around its still-living prey",
+			"weight": 2,
+			"range": [
+				76,
+				77
+			],
+			"_id": "xsuj9CjhWcTppTFm",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monster.CpHttsoemSoZRiDe]{Cultists} hunt for humanoid bones for a nefarious ritual",
+			"weight": 2,
+			"range": [
+				78,
+				79
+			],
+			"_id": "JQ8WHrxCabEcJCGV",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.vXaqgfDykZPdXnIm]{Dryad} searches for her tree that bugbears chopped up",
+			"weight": 2,
+			"range": [
+				80,
+				81
+			],
+			"_id": "n5zcpLK3OQQGXtBA",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.WMw4J1wECaLGf3Am]{Deep Gnome} plays haunting music on humming fungi",
+			"weight": 2,
+			"range": [
+				82,
+				83
+			],
+			"_id": "qa77AfOdZWxSQF9j",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d6]] @UUID[Compendium.shadowdark.monster.BxilUr9Ac6zgekYU]{Kobolds} work in a makeshift, volatile alchemy lab",
+			"weight": 2,
+			"range": [
+				84,
+				85
+			],
+			"_id": "rBdSPxlp1M8vYCne",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.zLDg6vIYEj4wB0lQ]{Stone Golem} endlessly stacks the same rocks into piles",
+			"weight": 2,
+			"range": [
+				86,
+				87
+			],
+			"_id": "EfaKoCEm6iQUfoI6",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Two @UUID[Compendium.shadowdark.monster.0JAEN5FsKjaXXZaA]{Darkmantles} circle each other in a duel of intimidation",
+			"weight": 2,
+			"range": [
+				88,
+				89
+			],
+			"_id": "etv8QoKMVul9buwh",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d6]] @UUID[Compendium.shadowdark.monster.I7CMFbyFmFHVwE5U]{Goblins} carry their bugbear king on a rickety litter",
+			"weight": 2,
+			"range": [
+				90,
+				91
+			],
+			"_id": "xivZgppBNtHQ9jdc",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monster.j7sQ6Km2jSx5twCC]{Cave Creepers} swarm up the hallway",
+			"weight": 2,
+			"range": [
+				92,
+				93
+			],
+			"_id": "XJdimFuk996dIiov",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A recent campfire still burns with glowing cinders",
+			"weight": 2,
+			"range": [
+				94,
+				95
+			],
+			"_id": "GAseV1QQJjuvRVUI",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "A @UUID[Compendium.shadowdark.monster.c3Nvj86e0Layz3NG]{Minotaur} guides a mysterious merchant along a path",
+			"weight": 2,
+			"range": [
+				96,
+				97
+			],
+			"_id": "2mWuQ0w0JWZl7Xpu",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "Roll two encounters and combine the results (reroll 98-99)",
+			"weight": 2,
+			"range": [
+				98,
+				99
+			],
+			"_id": "VNXLPRaUr8qpXVO2",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"text": "The body of a dead crawler holds a random magic item",
+			"weight": 1,
+			"range": [
+				100,
+				100
+			],
+			"_id": "9YD7Wi8autHajycy",
+			"type": 0,
+			"img": "icons/svg/d20-black.svg",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {}
+		},
+		{
+			"type": 2,
+			"weight": 1,
+			"range": [
+				98,
+				99
+			],
+			"drawn": false,
+			"text": "Ruin Encounters",
+			"img": "icons/environment/wilderness/wall-ruins.webp",
+			"documentCollection": "shadowdark.rollable-tables",
+			"documentId": "PJmTjgwiPdZcYBYT",
+			"_id": "bzOTVXRwSmc4TBit",
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

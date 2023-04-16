@@ -1,0 +1,1495 @@
+{
+	"_id": "wnjtoBC4k5dIiG8X",
+	"name": "Jorbin Ironhelm",
+	"type": "Player",
+	"img": "systems/shadowdark/assets/quickstart/pregens/Jorbin_Ironhelm_portrait.webp",
+	"system": {
+		"alignment": "lawful",
+		"attributes": {
+			"hp": {
+				"max": 10,
+				"value": 10,
+				"base": 8,
+				"bonus": 0
+			},
+			"ac": {
+				"value": 15
+			}
+		},
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"notes": "",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"base": 15,
+				"bonus": 0
+			},
+			"int": {
+				"base": 9,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 10,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 12,
+				"bonus": 0
+			},
+			"con": {
+				"base": 16,
+				"bonus": 0
+			},
+			"cha": {
+				"base": 11,
+				"bonus": 0
+			}
+		},
+		"ancestry": "Dwarf",
+		"background": "Soldier",
+		"bonuses": {
+			"advantage": [],
+			"armorMastery": [],
+			"weaponMastery": [],
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangeDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"backstabDie": 0,
+			"hauler": false,
+			"critical": {
+				"successThreshold": 20,
+				"failureThreshold": 1
+			}
+		},
+		"class": "fighter",
+		"coins": {
+			"gp": 4,
+			"sp": 0,
+			"cp": 0
+		},
+		"deity": "Madeera",
+		"languages": [
+			"common",
+			"dwarvish"
+		],
+		"luck": false,
+		"slots": 10,
+		"title": "Squire",
+		"flags": {
+			"hpRollLevels": []
+		}
+	},
+	"prototypeToken": {
+		"name": "Jorbin Ironhelm",
+		"displayName": 40,
+		"actorLink": true,
+		"texture": {
+			"src": "systems/shadowdark/assets/quickstart/pregens/Jorbin_Ironhelm_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": 1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": true,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"folder": "McnrA7QbfwSiUOit",
+			"name": "Grit (Strength)",
+			"type": "Talent",
+			"img": "icons/environment/people/infantry.webp",
+			"system": {
+				"description": "<p><span class=\"fontstyle0\">Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</span></p>",
+				"properties": [],
+				"magicItem": false,
+				"level": 1,
+				"talentClass": "class"
+			},
+			"effects": [],
+			"sort": 800000,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			},
+			"flags": {
+				"core": {
+					"sourceId": "Item.F0NXUJcnBOYKzhMi"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679436791285,
+				"modifiedTime": 1679531734736,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "BNTWzLW0bchXGlJe"
+		},
+		{
+			"name": "Hauler",
+			"type": "Talent",
+			"img": "icons/containers/bags/sack-leather-tan.webp",
+			"system": {
+				"description": "<p>Add your Constitution modifier, if positive, to your gear slots.</p>",
+				"properties": [
+					"custom"
+				],
+				"magicItem": false,
+				"level": 1,
+				"talentClass": "class",
+				"bonuses": {
+					"hauler": [
+						"true",
+						"true"
+					]
+				}
+			},
+			"effects": [
+				{
+					"label": "Hauler",
+					"icon": "icons/containers/bags/sack-leather-tan.webp",
+					"origin": "Compendium.shadowdark.talents.7JTDRLtHc6FOrIEc",
+					"changes": [
+						{
+							"key": "system.bonuses.hauler",
+							"mode": 5,
+							"value": "true",
+							"priority": null
+						}
+					],
+					"disabled": false,
+					"transfer": true,
+					"_id": "rqplFhIShnvmV0U4",
+					"duration": {
+						"startTime": null,
+						"seconds": null,
+						"combat": null,
+						"rounds": null,
+						"turns": null,
+						"startRound": null,
+						"startTurn": null
+					},
+					"tint": null,
+					"flags": {}
+				}
+			],
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3,
+				"aUdswNccq2u0SxEP": 3
+			},
+			"flags": {
+				"core": {
+					"sourceId": "Item.jMXZEZYGdCzW6rc7"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679009841002,
+				"modifiedTime": 1679531743976,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"folder": null,
+			"sort": 0,
+			"_id": "nVgVPLf4cW7FdcGu"
+		},
+		{
+			"name": "Weapon Mastery (Greataxe)",
+			"type": "Talent",
+			"img": "icons/skills/melee/strike-axe-energy-pink.webp",
+			"system": {
+				"description": "<p>Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p>",
+				"properties": [
+					"weaponMastery"
+				],
+				"magicItem": false,
+				"level": 1,
+				"talentClass": "class",
+				"talent": {
+					"weaponMasteryTypes": null,
+					"weaponMastery": null
+				},
+				"bonuses": {
+					"weaponMastery": "greataxe"
+				}
+			},
+			"effects": [
+				{
+					"label": "weaponMastery",
+					"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+					"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
+					"changes": [
+						{
+							"key": "system.bonuses.weaponMastery",
+							"mode": 2,
+							"value": "greataxe",
+							"priority": null
+						}
+					],
+					"disabled": false,
+					"transfer": true,
+					"_id": "E7SwrOhzSAyMZ1Ec",
+					"duration": {
+						"startTime": null,
+						"seconds": null,
+						"combat": null,
+						"rounds": null,
+						"turns": null,
+						"startRound": null,
+						"startTurn": null
+					},
+					"tint": null,
+					"flags": {}
+				}
+			],
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3,
+				"aUdswNccq2u0SxEP": 3
+			},
+			"flags": {
+				"core": {
+					"sourceId": "Item.xUpaOaabDFBopP9x"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679009972110,
+				"modifiedTime": 1679531757034,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"folder": "McnrA7QbfwSiUOit",
+			"sort": 1400000,
+			"_id": "Js12kQYOZzoPW8xx"
+		},
+		{
+			"name": "Chainmail",
+			"type": "Armor",
+			"img": "icons/equipment/chest/breastplate-scale-grey.webp",
+			"system": {
+				"description": "",
+				"properties": [
+					"disadvStealth",
+					"disadvSwim"
+				],
+				"magicItem": false,
+				"cost": {
+					"gp": 60,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": true,
+				"equipped": true,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 2
+				},
+				"ac": {
+					"base": 13,
+					"modifier": 0,
+					"attribute": "dex"
+				},
+				"baseArmor": ""
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.armor.DeqtKQQzI6HTYvV0"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678531053444,
+				"modifiedTime": 1679531821037,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "nLo8dmIQPbQUk3Dz",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Shield",
+			"type": "Armor",
+			"img": "icons/equipment/shield/shield-round-boss-wood-brown.webp",
+			"system": {
+				"description": "",
+				"properties": [
+					"oneHanded",
+					"shield"
+				],
+				"magicItem": false,
+				"cost": {
+					"gp": 10,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": true,
+				"equipped": true,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"ac": {
+					"base": 0,
+					"modifier": 2,
+					"attribute": ""
+				},
+				"baseArmor": ""
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.armor.UWp4WkkiaBMSXYPE"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678531204277,
+				"modifiedTime": 1679531827332,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "V5sHlwgAFiLTc8jy",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Greataxe",
+			"type": "Weapon",
+			"img": "icons/weapons/axes/axe-broad-engraved-chipped-blue.webp",
+			"system": {
+				"cost": {
+					"gp": 10,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": true,
+				"equipped": true,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 2
+				},
+				"description": "",
+				"properties": [
+					"versatile"
+				],
+				"magicItem": false,
+				"attackBonus": 0,
+				"damage": {
+					"bonus": 0,
+					"oneHanded": "d8",
+					"twoHanded": "d10",
+					"numDice": 1,
+					"critMultiplier": 2
+				},
+				"range": "close",
+				"type": "melee",
+				"weaponMastery": false,
+				"baseWeapon": ""
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.weapons.9Pnhl6SOsbf6qDmt"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678531674086,
+				"modifiedTime": 1679531860749,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "ltQWOrTHj9OjvFRf",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Spear",
+			"type": "Weapon",
+			"img": "icons/weapons/polearms/spear-hooked-double.webp",
+			"system": {
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": true,
+				"equipped": true,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"description": "",
+				"properties": [
+					"thrown"
+				],
+				"magicItem": false,
+				"attackBonus": 0,
+				"damage": {
+					"bonus": 0,
+					"oneHanded": "d6",
+					"twoHanded": "",
+					"numDice": 1,
+					"critMultiplier": 2
+				},
+				"range": "near",
+				"type": "melee",
+				"weaponMastery": false,
+				"baseWeapon": ""
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.weapons.brIFMH0sOVmqX02N"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678532072695,
+				"modifiedTime": 1679531866158,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "2TmcDDiA6gL3ZuEQ",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Spear",
+			"type": "Weapon",
+			"img": "icons/weapons/polearms/spear-hooked-double.webp",
+			"system": {
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": true,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"description": "",
+				"properties": [
+					"thrown"
+				],
+				"magicItem": false,
+				"attackBonus": 0,
+				"damage": {
+					"bonus": 0,
+					"oneHanded": "d6",
+					"twoHanded": "",
+					"numDice": 1,
+					"critMultiplier": 2
+				},
+				"range": "near",
+				"type": "melee",
+				"weaponMastery": false,
+				"baseWeapon": ""
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.weapons.brIFMH0sOVmqX02N"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678532072695,
+				"modifiedTime": 1679531876227,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "UI6K4mMWb1dYqmjq",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Backpack",
+			"type": "Basic",
+			"img": "icons/containers/bags/pack-leather-red.webp",
+			"system": {
+				"description": "<p>Holds all the gear you can carry. Don't lose it.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 2,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 1,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.oSnfz4qcWlUL6cDZ"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678529576332,
+				"modifiedTime": 1679531890083,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "eHjjMhwUh3ARPpmL",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Iron Spikes",
+			"type": "Basic",
+			"img": "icons/tools/fasteners/pin-spiked.webp",
+			"system": {
+				"description": "<p>Strong spikes. Each has a hole for threading</p><p>rope. Can be hammered in with weapons or other iron spikes.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 1,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 10,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 10,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.EPndk3DPOEOSvbga"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530233302,
+				"modifiedTime": 1679531914432,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "6f2SlF0mXnQ51TED",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Grappling Hook",
+			"type": "Basic",
+			"img": "icons/tools/fishing/hook-multi-steel-brown.webp",
+			"system": {
+				"description": "<p>A rope anchor with three, curved tines.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 1,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.fqsLWV46NWH0L53l"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530178765,
+				"modifiedTime": 1679531918604,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "Cr7qzqzaDWhilQkk",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Rope, 60'",
+			"type": "Basic",
+			"img": "icons/sundries/survival/rope-wrapped-brown.webp",
+			"system": {
+				"description": "<p>Hemp, 60\u2019 long.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 1,
+					"sp": 0,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.6ZRwVHFlh5QiyZWC"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530679622,
+				"modifiedTime": 1679531922265,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "afq1X2Gkjm0jcH2f",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Flint and Steel",
+			"type": "Basic",
+			"img": "icons/commodities/stone/paver-grey.webp",
+			"system": {
+				"description": "<p>A small fire starter. With it, routine attempts to light a fire always succeed.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.ERprfuTIFRFEix9G"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678529971809,
+				"modifiedTime": 1679531934010,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "Thp4uasF5BQqWebW",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Torch",
+			"type": "Basic",
+			"img": "icons/sundries/lights/torch-purple.webp",
+			"system": {
+				"description": "<p>Sheds light to a near distance (see Light Sources, pg. 46). Burns for one hour of real time.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": true,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.BlliDMo6y2tu9ueS"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530792513,
+				"modifiedTime": 1679531937143,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"ownership": {
+				"default": 0,
+				"M2bo9rZZzTMUP2hR": 3,
+				"aUdswNccq2u0SxEP": 3
+			},
+			"folder": null,
+			"sort": 0,
+			"_id": "yweKz9055Wr2X6KT"
+		},
+		{
+			"name": "Torch",
+			"type": "Basic",
+			"img": "icons/sundries/lights/torch-purple.webp",
+			"system": {
+				"description": "<p>Sheds light to a near distance (see Light Sources, pg. 46). Burns for one hour of real time.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": true,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.BlliDMo6y2tu9ueS"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530792513,
+				"modifiedTime": 1679531939260,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"ownership": {
+				"default": 0,
+				"M2bo9rZZzTMUP2hR": 3,
+				"aUdswNccq2u0SxEP": 3
+			},
+			"folder": null,
+			"sort": 0,
+			"_id": "nIlTwpCCTFzsBYGR"
+		},
+		{
+			"name": "Pole",
+			"type": "Basic",
+			"img": "icons/commodities/wood/wood-pole.webp",
+			"system": {
+				"description": "<p>Wooden, 10' long.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 1,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 1,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.15X5GTX96y339EKY"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530594719,
+				"modifiedTime": 1679531946460,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "BQhCxvXqYDTbtakk",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Rations",
+			"type": "Basic",
+			"img": "icons/consumables/food/berries-ration-round-red.webp",
+			"system": {
+				"description": "<p>One day of food and water supply for one person.</p>",
+				"properties": [],
+				"magicItem": false,
+				"cost": {
+					"gp": 0,
+					"sp": 5,
+					"cp": 0
+				},
+				"canBeEquipped": false,
+				"equipped": false,
+				"isPhysical": true,
+				"quantity": 3,
+				"slots": {
+					"free_carry": 0,
+					"per_slot": 3,
+					"slots_used": 1
+				},
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				},
+				"treasure": false,
+				"scroll": false
+			},
+			"effects": [],
+			"flags": {
+				"core": {
+					"sourceId": "Compendium.shadowdark.basic-gear.GX6OmWQiE7MzTmjX"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1678530629876,
+				"modifiedTime": 1679531949099,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			},
+			"_id": "lkntck7at9tHx5Qh",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3
+			}
+		},
+		{
+			"name": "Stout",
+			"type": "Talent",
+			"img": "icons/environment/people/group.webp",
+			"system": {
+				"description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
+				"properties": [
+					"hpAdvantage"
+				],
+				"magicItem": false,
+				"level": 1,
+				"talentClass": "ancestry",
+				"bonuses": {
+					"advantage": "hp"
+				},
+				"attributes": {
+					"hp": {
+						"bonus": "2",
+						"max": "2"
+					}
+				}
+			},
+			"effects": [
+				{
+					"label": "hpAdvantage",
+					"icon": "icons/magic/life/cross-area-circle-green-white.webp",
+					"origin": "Item.SXuw8zzD6a8dwmJE",
+					"changes": [
+						{
+							"key": "system.bonuses.advantage",
+							"value": "hp",
+							"mode": 2,
+							"priority": null
+						}
+					],
+					"disabled": false,
+					"transfer": true,
+					"_id": "dqBR2moCYSQP4s0H",
+					"duration": {
+						"startTime": null,
+						"seconds": null,
+						"combat": null,
+						"rounds": null,
+						"turns": null,
+						"startRound": null,
+						"startTurn": null
+					},
+					"tint": null,
+					"flags": {}
+				},
+				{
+					"label": "Extra HP Max",
+					"icon": "icons/magic/life/heart-shadow-red.webp",
+					"origin": "Item.SXuw8zzD6a8dwmJE",
+					"changes": [
+						{
+							"key": "system.attributes.hp.bonus",
+							"mode": 2,
+							"value": "2",
+							"priority": null
+						}
+					],
+					"disabled": false,
+					"transfer": true,
+					"_id": "qIFVq4PAB70lPkf9",
+					"duration": {
+						"startTime": null,
+						"seconds": null,
+						"combat": null,
+						"rounds": null,
+						"turns": null,
+						"startRound": null,
+						"startTurn": null
+					},
+					"tint": null,
+					"flags": {}
+				}
+			],
+			"flags": {
+				"core": {
+					"sourceId": "Item.SXuw8zzD6a8dwmJE"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "1.0.1",
+				"coreVersion": "10.291",
+				"createdTime": 1679009576960,
+				"modifiedTime": 1679744969053,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			},
+			"_id": "MicNV8qa2MJNJlqy",
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"aUdswNccq2u0SxEP": 3,
+				"EKVggA45fx6fzkCK": 3
+			}
+		},
+		{
+			"name": "+2 to Strength",
+			"type": "Talent",
+			"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+			"system": {
+				"description": "",
+				"properties": [
+					"abilityImprovement"
+				],
+				"magicItem": false,
+				"level": null,
+				"talentClass": "level",
+				"abilities": {
+					"str": {
+						"bonus": 2
+					},
+					"int": {
+						"bonus": 0
+					},
+					"wis": {
+						"bonus": 0
+					},
+					"con": {
+						"bonus": 0
+					},
+					"cha": {
+						"bonus": 0
+					},
+					"dex": {
+						"bonus": 0
+					}
+				}
+			},
+			"effects": [
+				{
+					"label": "abilityImprovement",
+					"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+					"origin": "Item.6iZplEBazA2f66A3",
+					"changes": [
+						{
+							"key": "system.abilities.str.bonus",
+							"mode": 2,
+							"value": "2",
+							"priority": null
+						},
+						{
+							"key": "system.abilities.int.bonus",
+							"mode": 2,
+							"value": "0",
+							"priority": null
+						},
+						{
+							"key": "system.abilities.wis.bonus",
+							"mode": 2,
+							"value": "0",
+							"priority": null
+						},
+						{
+							"key": "system.abilities.con.bonus",
+							"mode": 2,
+							"value": "0",
+							"priority": null
+						},
+						{
+							"key": "system.abilities.cha.bonus",
+							"mode": 2,
+							"value": "0",
+							"priority": null
+						},
+						{
+							"key": "system.abilities.dex.bonus",
+							"mode": 2,
+							"value": "0",
+							"priority": null
+						}
+					],
+					"disabled": false,
+					"transfer": true,
+					"_id": "GJXEM96MY9ydNQ47",
+					"duration": {
+						"startTime": null,
+						"seconds": null,
+						"combat": null,
+						"rounds": null,
+						"turns": null,
+						"startRound": null,
+						"startTurn": null
+					},
+					"tint": null,
+					"flags": {}
+				}
+			],
+			"flags": {
+				"core": {
+					"sourceId": "Item.6iZplEBazA2f66A3"
+				}
+			},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "1.1.2",
+				"coreVersion": "10.291",
+				"createdTime": 1678821268710,
+				"modifiedTime": 1680648591236,
+				"lastModifiedBy": "78E04VOVf3rpty2x"
+			},
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3,
+				"78E04VOVf3rpty2x": 3
+			},
+			"folder": null,
+			"sort": 0,
+			"_id": "PB33XQhTKzC9dwOM"
+		}
+	],
+	"effects": [
+		{
+			"label": "Hauler",
+			"icon": "icons/containers/bags/sack-leather-tan.webp",
+			"origin": "Actor.wnjtoBC4k5dIiG8X.Item.nVgVPLf4cW7FdcGu",
+			"changes": [
+				{
+					"key": "system.bonuses.hauler",
+					"mode": 5,
+					"value": "true",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "xWOTk9MJXx1VJWAW",
+			"duration": {
+				"startTime": 0,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "weaponMastery",
+			"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+			"origin": "Actor.wnjtoBC4k5dIiG8X.Item.Js12kQYOZzoPW8xx",
+			"changes": [
+				{
+					"key": "system.bonuses.weaponMastery",
+					"mode": 2,
+					"value": "greataxe",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "jQUfWG3jOCteT9rT",
+			"duration": {
+				"startTime": 0,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "hpAdvantage",
+			"icon": "icons/magic/life/cross-area-circle-green-white.webp",
+			"origin": "Actor.wnjtoBC4k5dIiG8X.Item.MicNV8qa2MJNJlqy",
+			"changes": [
+				{
+					"key": "system.bonuses.advantage",
+					"value": "hp",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "adcEo5zTTsQGi9Sf",
+			"duration": {
+				"startTime": 0,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "Extra HP Max",
+			"icon": "icons/magic/life/heart-shadow-red.webp",
+			"origin": "Actor.wnjtoBC4k5dIiG8X.Item.MicNV8qa2MJNJlqy",
+			"changes": [
+				{
+					"key": "system.attributes.hp.bonus",
+					"mode": 2,
+					"value": "2",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "m1ZCYeFMcA5sU5kk",
+			"duration": {
+				"startTime": 0,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "abilityImprovement",
+			"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+			"origin": "Actor.wnjtoBC4k5dIiG8X.Item.PB33XQhTKzC9dwOM",
+			"changes": [
+				{
+					"key": "system.abilities.str.bonus",
+					"mode": 2,
+					"value": "2",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.int.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.wis.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.con.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.cha.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				},
+				{
+					"key": "system.abilities.dex.bonus",
+					"mode": 2,
+					"value": "0",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "6ne3JsZPG5AHKde1",
+			"duration": {
+				"startTime": 0,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

@@ -1,0 +1,97 @@
+{
+	"_id": "98cxnRdtTLv0Onka",
+	"name": "Shoftsword of the Thief",
+	"type": "Weapon",
+	"img": "icons/weapons/swords/sword-guard-worn-purple.webp",
+	"system": {
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"description": "<p><em>A stubby, grey blade riddled with notches and scars.</em></p><p></p><p><strong>Bonus</strong>. +1 shortsword. +2 if wielded by a halfling or thief.</p><p></p><p><strong>Benefit</strong>. Once per day, regain a luck token you just spent.</p>",
+		"properties": [],
+		"magicItem": true,
+		"attackBonus": "1",
+		"damage": {
+			"bonus": "1",
+			"oneHanded": "d6",
+			"twoHanded": "",
+			"numDice": 1,
+			"critMultiplier": 2
+		},
+		"range": "close",
+		"type": "melee",
+		"weaponMastery": false,
+		"baseWeapon": "shortsword"
+	},
+	"effects": [
+		{
+			"label": "attackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.Ub2A86OEt5hyBMdm",
+			"changes": [
+				{
+					"key": "system.attackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "ThRvXKgB8jki3n52",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "damageBonus",
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"origin": "Item.Ub2A86OEt5hyBMdm",
+			"changes": [
+				{
+					"key": "system.damage.bonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": false,
+			"_id": "SVq77etZJP450ez8",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"_id": "LR6h4lXVXwx7AFQ6",
+	"name": "Mighty",
+	"type": "Talent",
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"system": {
+		"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
+		"magicItem": false,
+		"level": 1,
+		"talentClass": "ancestry"
+	},
+	"effects": [
+		{
+			"label": "meleeAttackBonus",
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"origin": "Item.qj2MYnP9srYJk4YT",
+			"changes": [
+				{
+					"key": "system.bonuses.meleeAttackBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "SvyalWCJf4WmMCCE",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		},
+		{
+			"label": "meleeDamageBonus",
+			"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+			"origin": "Item.qj2MYnP9srYJk4YT",
+			"changes": [
+				{
+					"key": "system.bonuses.meleeDamageBonus",
+					"value": "1",
+					"mode": 2,
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "gNqZPDcYTjO6v0d6",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0
+	},
+	"flags": {},
+	"sort": 0
+}

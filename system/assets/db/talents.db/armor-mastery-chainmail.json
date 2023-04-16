@@ -1,0 +1,46 @@
+{
+	"_id": "BsRPGhKXYwJBI9ex",
+	"name": "Armor Mastery (Chainmail)",
+	"type": "Talent",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"system": {
+		"description": "",
+		"magicItem": false,
+		"level": null,
+		"talentClass": "level"
+	},
+	"effects": [
+		{
+			"label": "armorMastery",
+			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+			"origin": "Item.Pdc3xhJ5Z57yu1A5",
+			"changes": [
+				{
+					"key": "system.bonuses.armorMastery",
+					"mode": 2,
+					"value": "chainmail",
+					"priority": null
+				}
+			],
+			"disabled": false,
+			"transfer": true,
+			"_id": "zJLo7tUBPkwuCNqN",
+			"duration": {
+				"startTime": null,
+				"seconds": null,
+				"combat": null,
+				"rounds": null,
+				"turns": null,
+				"startRound": null,
+				"startTurn": null
+			},
+			"tint": null,
+			"flags": {}
+		}
+	],
+	"ownership": {
+		"default": 0
+	},
+	"flags": {},
+	"sort": 0
+}

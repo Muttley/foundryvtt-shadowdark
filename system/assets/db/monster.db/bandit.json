@@ -1,0 +1,321 @@
+{
+	"_id": "AMSI3MCLvpcZpJPO",
+	"name": "Bandit",
+	"type": "NPC",
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"system": {
+		"alignment": "chaotic",
+		"attributes": {
+			"hp": {
+				"max": 4,
+				"value": 4,
+				"hd": 0
+			},
+			"ac": {
+				"value": 13
+			}
+		},
+		"level": {
+			"value": 1
+		},
+		"notes": "<p><em>Hard-bitten rogue in tattered leathers and a hooded cloak.</em></p><p></p><p><strong>AC</strong> 13 (leather + shield), <strong>HP</strong> 4, <strong>ATK </strong>1 club +1 (1d4) or 1 shortbow (far) +0 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> C, <strong>LV</strong> 1</p><p></p><p><strong>Ambush</strong>. Deal an extra die of damage when undetected.</p>",
+		"spellcastingAbility": "",
+		"abilities": {
+			"str": {
+				"mod": 1
+			},
+			"int": {
+				"mod": -1
+			},
+			"dex": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 0
+			},
+			"cha": {
+				"mod": -1
+			}
+		},
+		"darkAdapted": true,
+		"move": "near",
+		"moveNote": ""
+	},
+	"prototypeToken": {
+		"name": "Bandit",
+		"displayName": 20,
+		"actorLink": false,
+		"texture": {
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"tint": null
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": null,
+			"angle": 360,
+			"visionMode": "basic",
+			"color": null,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Ambush",
+			"type": "NPC Feature",
+			"system": {
+				"description": "<p><span style=\"font-family: Signika, sans-serif\">Deal an extra die of damage when undetected.</span></p>",
+				"properties": [],
+				"magicItem": false
+			},
+			"_id": "MCM2UX1jwTiz6Af0",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419603453,
+				"modifiedTime": 1679419610837,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Club",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 1,
+					"damage": {
+						"numDice": null
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "TGyIidAaaKzSKy4T",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419612894,
+				"modifiedTime": 1679419623395,
+				"lastModifiedBy": "EKVggA45fx6fzkCK"
+			}
+		},
+		{
+			"name": "Club (Ambush)",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 1,
+					"damage": {
+						"numDice": 2
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 2,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"close"
+				]
+			},
+			"_id": "MM2bwR8bregKnTei",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419630802,
+				"modifiedTime": 1679451173081,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		},
+		{
+			"name": "Shortbow",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 0,
+					"damage": {
+						"numDice": null
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"far"
+				]
+			},
+			"_id": "s8uppYkv726VSKN6",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419644303,
+				"modifiedTime": 1679451230662,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		},
+		{
+			"name": "Shortbow (Ambush)",
+			"type": "NPC Attack",
+			"system": {
+				"description": "",
+				"properties": [],
+				"magicItem": false,
+				"attack": {
+					"num": 1,
+					"bonus": 0,
+					"damage": {
+						"numDice": 2
+					}
+				},
+				"damage": {
+					"bonus": 0,
+					"numDice": 2,
+					"value": "d4",
+					"special": ""
+				},
+				"attackType": "physical",
+				"ranges": [
+					"far"
+				]
+			},
+			"_id": "DSiD9jUHa5gZwcdl",
+			"img": "icons/svg/item-bag.svg",
+			"effects": [],
+			"folder": null,
+			"sort": 0,
+			"ownership": {
+				"default": 0,
+				"EKVggA45fx6fzkCK": 3
+			},
+			"flags": {},
+			"_stats": {
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0",
+				"coreVersion": "10.291",
+				"createdTime": 1679419659658,
+				"modifiedTime": 1679451189093,
+				"lastModifiedBy": "aUdswNccq2u0SxEP"
+			}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

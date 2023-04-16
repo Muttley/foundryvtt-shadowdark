@@ -1,0 +1,24 @@
+{
+	"_id": "T17hSoJlvZ9kfvNY",
+	"name": "Magic Missile",
+	"type": "Spell",
+	"system": {
+		"description": "<p>You have advantage on your check to cast this spell.</p><p>A glowing bolt of force streaks from your open hand, dealing [[/r 1d4]] damage to one target.</p>",
+		"properties": [],
+		"class": [
+			"wizard"
+		],
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"range": "far",
+		"tier": 1
+	},
+	"img": "icons/magic/light/projectiles-trio-pink.webp",
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

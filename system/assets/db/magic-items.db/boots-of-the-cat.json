@@ -1,0 +1,36 @@
+{
+	"_id": "WB4r3ZgJ3TfRBEx5",
+	"name": "Boots of the Cat",
+	"type": "Armor",
+	"img": "icons/equipment/feet/boots-leather-black.webp",
+	"system": {
+		"description": "<p><em>Grey, doeskin boots as thin and soft as slippers.</em></p><p></p><p><strong>Benefit</strong>. You can jump up to a near distance from a standstill. Your checks to move silently are always easy (DC 9).</p>",
+		"properties": [],
+		"magicItem": true,
+		"cost": {
+			"gp": 0,
+			"sp": 0,
+			"cp": 0
+		},
+		"canBeEquipped": true,
+		"equipped": false,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"ac": {
+			"base": 0,
+			"modifier": 0,
+			"attribute": ""
+		},
+		"baseArmor": ""
+	},
+	"effects": [],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}

@@ -1,0 +1,106 @@
+{
+	"_id": "ljbaTPUHqeNzyM2b",
+	"name": "Random Ancestry",
+	"img": "icons/environment/people/group.webp",
+	"description": "",
+	"formula": "1d12",
+	"replacement": true,
+	"displayRoll": true,
+	"results": [
+		{
+			"type": 0,
+			"weight": 4,
+			"range": [
+				1,
+				4
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "yO1XtT8BhdEIWNkJ",
+			"text": "Human",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 2,
+			"range": [
+				5,
+				6
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "qFrbV5pNu2s7mTAQ",
+			"text": "Elf",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 2,
+			"range": [
+				7,
+				8
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "AQR8lpoKkOwT29iQ",
+			"text": "Dwarf",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 2,
+			"range": [
+				9,
+				10
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "JkAS2cNlOJT2E23G",
+			"text": "Halfling",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				11,
+				11
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "yr517Rct078mIfuA",
+			"text": "Half-Orc",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		},
+		{
+			"type": 0,
+			"weight": 1,
+			"range": [
+				12,
+				12
+			],
+			"drawn": false,
+			"documentCollection": "",
+			"_id": "b7ahxXdKtc9xqRMv",
+			"text": "Goblin",
+			"img": "icons/svg/d20-black.svg",
+			"documentId": null,
+			"flags": {}
+		}
+	],
+	"flags": {},
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	}
+}
