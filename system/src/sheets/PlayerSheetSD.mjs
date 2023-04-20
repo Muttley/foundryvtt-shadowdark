@@ -381,6 +381,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
+		const effects = {
+			effect: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.effect"),
+				items: [],
+			},
+			condition: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.condition"),
+				items: [],
+			},
+		};
+
 		const attacks = {melee: [], ranged: []};
 
 		let slotCount = 0;
@@ -450,6 +461,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const talentClass = i.system.talentClass;
 				talents[talentClass].items.push(i);
 			}
+			else if (i.type === "Effect") {
+				const category = i.system.category;
+				effects[category].items.push(i);
+			}
 		}
 
 		// Work out how many slots all these coins are taking up...
@@ -482,6 +497,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			(a, b) => a.system.level - b.system.level
 		);
 		context.talents = talents;
+		context.effects = effects;
 	}
 
  	async _updateObject(event, formData) {

@@ -51,6 +51,10 @@
 						{{localize "SHADOWDARK.sheet.npc.tab.abilities"}}
 					</a>
 
+					<a class="navigation-tab" data-tab="tab-effects">
+						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+					</a>
+
 					<a class="navigation-tab" data-tab="tab-description">
 						{{localize "SHADOWDARK.sheet.npc.tab.description"}}
 					</a>
@@ -60,6 +64,7 @@
 
 			<div class="npc-body-content">
 				{{> actors/npc/abilities }}
+				{{> actors/partials/effects }}
 				{{> actors/npc/description }}
 			</div>
 		</div>

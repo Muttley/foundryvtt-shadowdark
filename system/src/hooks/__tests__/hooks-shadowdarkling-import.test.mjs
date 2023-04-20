@@ -68,8 +68,9 @@ export default ({ describe, it, expect }) => {
 			expect(element.find("textarea")[0].name).equal("json");
 
 			// Has button
-			expect(element.find("button").length).equal(1);
-			expect(element.find("button")[0].className).equal("import");
+			expect(element.find("button").length).equal(2);
+			expect(element.find("button")[0].className).equal("open-generator");
+			expect(element.find("button")[1].className).equal("import");
 		});
 	});
 };

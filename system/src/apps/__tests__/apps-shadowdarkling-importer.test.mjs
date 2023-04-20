@@ -369,6 +369,16 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				},
 			];
 
+			it("sanity check", async () => {
+				const actor = await app._importActor(json);
+				expect(actor.system.abilities.str.base).equal(3);
+				expect(actor.system.abilities.dex.base).equal(4);
+				expect(actor.system.abilities.con.base).equal(5);
+				expect(actor.system.abilities.int.base).equal(6);
+				expect(actor.system.abilities.wis.base).equal(7);
+				expect(actor.system.abilities.cha.base).equal(8);
+			});
+
 			talents.forEach(t => {
 				it(`${t.bonusTo} talent gives correct bonus`, async () => {
 					const ability = t.bonusTo.split(":")[0].toLowerCase();
@@ -731,7 +741,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				expect(actor.system.class).equal("wizard");
 
-				const talent = actor.items.find(o => o.name === "Created Random Magic Item");
+				const talent = actor.items.find(o => o.name === "Make a Random Magic Item");
 				expect(talent).is.not.undefined;
 			});
 		});

@@ -1,0 +1,73 @@
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
+
+.shadowdark.sheet.npc,
+.shadowdark.sheet.player {
+
+	.effects-body {
+		@include p-reset;
+		margin: 4px;
+		display: grid;
+	}
+
+	.effects-list {
+		margin-bottom: 8px;
+
+		.item-image {
+			width: 24px;
+			height: 24px;
+			border-radius: 3px;
+			background-size: cover;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.item-control {
+			color: rgb(25, 24, 19);
+		}
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 14px;
+			text-align: center;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+				text-align: left;
+			}
+
+			& th:first-child {
+				text-align: left
+			}
+
+			& th:last-child {
+				text-align: center;
+			}
+
+			& tr:first-child {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				.effects-section-header,
+				.item-details
+			) {
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+		}
+	}
+}

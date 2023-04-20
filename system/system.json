@@ -8,7 +8,7 @@
 		"verified": "10"
 	},
 	"flags": {
-		"schemaVersion": "230403.1"
+		"schemaVersion": "230419.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
@@ -97,6 +97,15 @@
 			"label": "Spells",
 			"system": "shadowdark",
 			"path": "packs/spells.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "spell-effects",
+			"label": "Spell Effects",
+			"system": "shadowdark",
+			"path": "packs/spell-effects.db",
 			"type": "Item",
 			"private": false,
 			"flags": {}

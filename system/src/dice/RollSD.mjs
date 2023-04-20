@@ -276,7 +276,8 @@ export default class RollSD extends Roll {
 		const damageDie = data.item.system.damage.value;
 
 		if ( data.rolls.main.critical !== "failure" ) {
-			if ( data.rolls.main.critical === "success" ) numDice *= 2;
+			if ( data.rolls.main.critical === "success" ) numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
 			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
@@ -310,7 +311,8 @@ export default class RollSD extends Roll {
 			}
 
 			// Multiply the dice with the items critical multiplier
-			if ( data.rolls.main.critical === "success" ) numDice *= data.item.system.damage.critMultiplier;
+			if ( data.rolls.main.critical === "success") numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
 			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 

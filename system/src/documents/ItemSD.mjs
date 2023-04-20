@@ -1,20 +1,5 @@
 export default class ItemSD extends Item {
 
-	async _preCreate(data, options, user) {
-		await super._preCreate(data, options, user);
-
-		// Gems have non-configurable slot settings
-		if (data.type === "Gem") {
-			const slots = {
-				free_carry: 0,
-				per_slot: CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT,
-				slots_used: 1,
-			};
-
-			this.updateSource({"system.slots": slots});
-		}
-	}
-
 	async getChatData(htmlOptions={}) {
 		const description = await TextEditor.enrichHTML(
 			this.system.description,
@@ -156,6 +141,10 @@ export default class ItemSD extends Item {
 		return this.type === "Spell";
 	}
 
+	isEffect() {
+		return this.type === "Effect";
+	}
+
 	isTalent() {
 		return this.type === "Talent";
 	}
@@ -192,38 +181,6 @@ export default class ItemSD extends Item {
 		return !this.isAShield();
 	}
 
-	magicItemEffectsDisplay() {
-		let properties = [];
-
-		if (this.isMagicItem()) {
-			for (const key of this.effects) {
-				if (!key.disabled) {
-					properties.push(
-						CONFIG.SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES[key.label]
-					);
-				}
-			}
-		}
-
-		return properties.join(", ");
-	}
-
-	talentEffectsDisplay() {
-		let properties = [];
-
-		if (this.isTalent()) {
-			for (const key of this.effects) {
-				if (!key.disabled) {
-					properties.push(
-						CONFIG.SHADOWDARK.TALENT_TYPES[key.label]
-					);
-				}
-			}
-		}
-
-		return properties.join(", ");
-	}
-
 	propertiesDisplay() {
 		let properties = [];
 
@@ -258,5 +215,118 @@ export default class ItemSD extends Item {
 		}
 
 		return ranges.join(", ");
+	}
+
+	// Duration getters
+	get totalDuration() {
+		const { duration } = this.system;
+		if (["unlimited", "focus"].includes(duration.type)) {
+			return Infinity;
+		}
+		else if (["instant"].includes(duration.type)) {
+			return 0;
+		}
+		else {
+			return duration.value
+				* (CONFIG.SHADOWDARK.DURATION_UNITS[duration.type] ?? 0);
+		}
+	}
+
+	get remainingDuration() {
+		if (this.type !== "Effect") return false;
+
+		// Handle rounds-effects
+		if (this.system.duration.type === "rounds") {
+			// If there is combat, check if it was added during combat, otherwise
+			// consider it expired
+			if (game.combat) {
+				const startCombatTime = this.system.start.combatTime;
+				if (!startCombatTime) return { expired: true, remaining: 0, progress: 100 };
+
+				const round = startCombatTime.split(".")[0];
+				const turn = startCombatTime.split(".")[1];
+
+				// If it is a new round or the same turn the effect
+				// was initiated, calculate duration
+				if (
+					round !== game.combat.round
+					|| turn !== game.combat.turn
+				) {
+					const duration = parseInt(this.system.duration.value, 10);
+					const remaining = parseInt(round, 10) + duration - game.combat.round;
+					const progress = (100 - Math.floor(100 * remaining / duration));
+					return {
+						expired: remaining <= 0,
+						remaining,
+						progress,
+					};
+				}
+				else {
+					return false;
+				}
+			}
+			// If added outside combat, expire the effect
+			else {
+				return { expired: true, remaining: 0, progress: 100 };
+			}
+		}
+
+		// Handle timing effects
+		const duration = this.totalDuration;
+
+		if (duration === Infinity) {
+			return { expired: false, remaining: Infinity, progress: 0 };
+		}
+		else if (!duration) {
+			return { expired: true, remaining: 0, progress: 0 };
+		}
+		else {
+			const start = this.system.start?.value ?? 0;
+			const remaining = start + duration - game.time.worldTime;
+			const progress = (100 - Math.floor(100 * remaining / duration));
+			const result = { expired: remaining <= 0, remaining, progress };
+			return result;
+		}
+	}
+
+	/* -------------------------------------------- */
+	/*  Event Handlers                              */
+	/* -------------------------------------------- */
+
+	/* Set the start time and initiative roll of newly created effect */
+	/** @override */
+	async _preCreate(data, options, user) {
+		await super._preCreate(data, options, user);
+
+		// Store the creation time & initiative on the effect
+		if (data.type === "Effect") {
+			if (this.system.duration.type === "rounds" && !game.combat) {
+				ui.notifications.warn(
+					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+				);
+				return false;
+			}
+
+			const combatTime = (game.combat)
+				? `${game.combat.round}.${game.combat.turn}`
+				: null;
+			this.updateSource({
+				"system.start": {
+					value: game.time.worldTime,
+					combatTime,
+				},
+			});
+		}
+
+		// Gems have non-configurable slot settings
+		if (data.type === "Gem") {
+			const slots = {
+				free_carry: 0,
+				per_slot: CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT,
+				slots_used: 1,
+			};
+
+			this.updateSource({"system.slots": slots});
+		}
 	}
 }

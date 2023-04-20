@@ -1,0 +1,45 @@
+<section class="tab tab-effects" data-group="primary" data-tab="tab-effects">
+	<section class="effects-body">
+		<div class="effects-list">
+			<table>
+				<tr>
+					<th>&nbsp;</th>
+					<th>{{localize 'SHADOWDARK.item.npc_attack_type'}}</th>
+				</tr>
+				{{#each effects as |section sid|}}
+					<tr class="effects-section-header">
+						<th>
+							{{section.label}}
+						</th>
+						<th>&nbsp;</th>
+					</tr>
+					{{#each section.items as |effect|}}
+						<tr class="item" data-item-id="{{effect._id}}">
+							<td>
+								<div
+									class="item-image"
+									style="background-image: url({{effect.img}})"
+									data-item-id="{{effect._id}}"
+								>
+								</div>
+								<a
+									class="item-control show-details"
+									data-item-id="{{effect._id}}"
+								>
+									{{effect.name}}
+								</a>
+							</td>
+							<td>
+								{{#ifEq effect.system.duration.type "unlimited" }}
+									<i class="fas fa-infinity"></i>
+								{{else}}
+									<i class="fas fa-clock"></i>
+								{{/ifEq}}
+							</td>
+						</tr>
+					{{/each}}
+				{{/each}}
+			</table>
+		</div>
+	</section>
+</section>

@@ -1,0 +1,92 @@
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
+
+.shadowdark.sheet.item {
+	// Effect details (Details tab)
+	.effect-panel,
+	.effect-token-icon {
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		align-items: center;
+		column-gap: 8px;
+		background-color: var(--form-background);
+	}
+
+	.effect-details {
+		display: grid;
+		grid-column: span 2;
+		column-gap: 4px;
+		background-color: var(--form-background);
+
+		.effect-detail {
+			padding-bottom: 12px;
+		}
+
+		.effect-duration {
+			@include p-reset;
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+			column-gap: 4px;
+		}
+
+		.effect-source,
+		.effect-category {
+			@include p-reset;
+			display: grid;
+		}
+	}
+
+	// The list of effects (Effect-tab)
+  .effect-list-table {
+    font-size: 14px;
+
+    li {
+      list-style-type: none;
+      background-color: var(--background-highlight);
+      padding: 2px 0;
+    }
+
+    .item-control {
+      text-align: center;
+
+			&.effect-list-transfer {
+				padding-right: 2px;
+			}
+    }
+  }
+
+  .effect-list-header {
+    height: 25px;
+		align-items: center;
+  }
+
+  .effect-list-header,
+  .effect-list-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 150px 40px 40px 40px 1fr 22px;
+    column-gap: 4px;
+
+		.effect-list-name {
+			max-height: 42px;
+			overflow: hidden;
+		}
+  }
+
+  .effect-list-header-icon,
+  .effect-list-icon {
+    align-items: center;
+    text-align: center;
+  }
+
+  .effect-list-changes {
+    display: grid;
+    column-gap: 8px;
+    text-align: center;
+    font-size: 14px;
+
+    input {
+      max-width: 100%;
+    }
+  }
+}

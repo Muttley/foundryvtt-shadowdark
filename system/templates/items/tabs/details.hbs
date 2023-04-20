@@ -5,6 +5,10 @@
 			{{> items/partials/armor }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Effect"}}
+			{{> items/partials/effect }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Spell"}}
 			{{> items/partials/spell }}
 		{{/ifEq}}
@@ -19,7 +23,6 @@
 
 		{{#ifEq item.type "Talent"}}
 			{{> items/partials/talent }}
-			{{> items/partials/talent-active-effects }}
 		{{/ifEq}}
 
 		{{#if usesSlots}}
@@ -70,6 +73,10 @@
 
 			{{#ifEq item.type "Basic"}}
 				{{> items/partials/treasure }}
+			{{/ifEq}}
+
+			{{#ifEq item.type "Effect"}}
+				{{> items/partials/effect-toggle-items }}
 			{{/ifEq}}
 
 		</div>
