@@ -9,6 +9,14 @@
 			{{> items/partials/spell }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Scroll"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Wand"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon }}
 		{{/ifEq}}
@@ -55,7 +63,7 @@
 				</div>
 			{{/ifEq}}
 
-			{{#if item.system.isPhysical}}
+			{{#if showMagicItemCheckbox}}
 				{{#ifNeq item.type "Gem"}}
 					<div class="magic-item">
 						<label>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</label>

@@ -14,7 +14,7 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: false,
 		type: Number,
-		default: Number(game.system.flags.schemaVersion),
+		default: 0,
 	});
 
 	// -----------------

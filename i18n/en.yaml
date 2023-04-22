@@ -50,6 +50,7 @@ SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.chat_card.button.attack: Roll Attack
 SHADOWDARK.chat_card.button.cast_spell: Cast Spell
+SHADOWDARK.chat_card.button.learn_spell: Learn Spell
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
@@ -101,6 +102,7 @@ SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
 SHADOWDARK.dialog.item_roll.title: Roll Attack with
 SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
 SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
+SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
@@ -131,7 +133,10 @@ SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
 SHADOWDARK.inventory.section.armor: Armor
 SHADOWDARK.inventory.section.basic: Basic Equipment
+SHADOWDARK.inventory.section.potions: Potions
+SHADOWDARK.inventory.section.scrolls: Scrolls
 SHADOWDARK.inventory.section.treasure: Treasure
+SHADOWDARK.inventory.section.wands: Wands
 SHADOWDARK.inventory.section.weapon: Weapons
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Used
@@ -180,6 +185,9 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
 SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
+SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
+SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
 SHADOWDARK.item.npc_attack_bonus: Attack Bonus
 SHADOWDARK.item.npc_attack_count: Num. Attacks
 SHADOWDARK.item.npc_attack_damage_bonus: Damage Bonus
@@ -187,14 +195,18 @@ SHADOWDARK.item.npc_attack_damage: Damage Die
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
+SHADOWDARK.item.potion.label: Potion
 SHADOWDARK.item.properties: Properties
+SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
+SHADOWDARK.item.spell.label: Spell
 SHADOWDARK.item.talent_class: Talent Class
 SHADOWDARK.item.treasure: Treasure
+SHADOWDARK.item.wand.label: Wand
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
 SHADOWDARK.item.weapon_damage.twoHanded_short: 2H

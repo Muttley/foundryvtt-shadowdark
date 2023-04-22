@@ -222,6 +222,12 @@
 		text-align: left;
 	}
 
+	.details-description {
+		@include p-reset;
+		padding-top: 4px;
+		padding-bottom: 8px;
+	}
+
 	.details-footer {
 		padding: 3px 0 0;
 

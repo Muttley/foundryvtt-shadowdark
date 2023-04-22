@@ -11,7 +11,9 @@
 	<b>{{localize 'SHADOWDARK.item.armor.base_armor.title'}}</b> <em>{{fromConfig "ARMOR_BASE_ARMOR" item.system.baseArmor}}</em>
 	{{/if}}
 </p>
-{{{description}}}
+<div class="details-description">
+	{{{description}}}
+</div>
 <footer class="details-footer">
 	{{#each item.system.properties as |prop|}}
 		<span>{{fromConfig "ARMOR_PROPERTIES" prop}}</span>

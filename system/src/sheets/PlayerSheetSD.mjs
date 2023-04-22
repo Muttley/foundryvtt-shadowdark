@@ -136,26 +136,73 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
-		const activeTab = $(document).find(".player section.active").data("tab");
 
-		// Spells dropped on the inventory should create spell scrolls instead of spells
-		if (item.type === "Spell" && activeTab === "tab-inventory") return this._createScroll(item);
+		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
 		super._onDropItem(event, data);
 	}
 
-	async _createScroll(spell) {
-		const scroll = {
-			type: "Basic",
-			img: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
-			name: `Spell Scroll: ${spell.name}`,
-			system: {
-				description: `<p>@UUID[${spell.uuid}]</p>`,
-				treasure: true,
-				scroll: true,
+	async _createItemFromSpellDialog(item) {
+		const content = await renderTemplate(
+			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
+			{
+				spellName: item.name,
+				isGM: game.user.isGM,
+			}
+		);
+
+		const buttons = {
+			potion: {
+				icon: '<i class="fas fa-prescription-bottle"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.potion.label"),
+				callback: () => this._createItemFromSpell(item, "Potion"),
+			},
+			scroll: {
+				icon: '<i class="fas fa-scroll"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.scroll.label"),
+				callback: () => this._createItemFromSpell(item, "Scroll"),
+			},
+			spell: {
+				icon: '<i class="fas fa-hand-sparkles"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.spell.label"),
+				callback: () => this._createItemFromSpell(item, "Spell"),
+			},
+			wand: {
+				icon: '<i class="fas fa-magic"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.wand.label"),
+				callback: () => this._createItemFromSpell(item, "Wand"),
 			},
 		};
-		super._onDropItemCreate(scroll);
+
+		return Dialog.wait({
+			title: game.i18n.format("SHADOWDARK.dialog.item.create_from_spell", { spellName: item.name }),
+			content,
+			buttons,
+			close: () => false,
+			default: "scroll",
+		});
+	}
+
+	async _createItemFromSpell(spell, type) {
+		const name = (type !== "Spell")
+			? game.i18n.format(
+				`SHADOWDARK.item.name_from_spell.${type}`,
+				{spellName: spell.name}
+			)
+			: spell.name;
+
+		const itemData = {
+			type,
+			name,
+			system: spell.system,
+		};
+
+		if (type !== "Spell") {
+			delete itemData.system.lost;
+			itemData.system.magicItem = true;
+		}
+
+		super._onDropItemCreate(itemData);
 	}
 
 	async _onItemChatClick(event) {
@@ -343,6 +390,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _prepareItems(context) {
 		const gems = [];
+
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
@@ -359,11 +407,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				type: "Basic",
 				items: [],
 			},
+			potion: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.potions"),
+				type: "Potion",
+				items: [],
+			},
+			scroll: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.scrolls"),
+				type: "Scroll",
+				items: [],
+			},
 			treasure: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
 				items: [],
 			},
+			wand: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.wands"),
+				type: "Wand",
+				items: [],
+			},
 		};
+
 		const spells = {};
 
 		const talents = {
@@ -440,6 +504,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 			else if (i.type === "Gem") {
 				gems.push(i);
+			}
+			else if (i.type === "Potion") {
+				inventory.potion.items.push(i);
+			}
+			else if (i.type === "Scroll") {
+				inventory.scroll.items.push(i);
+			}
+			else if (i.type === "Wand") {
+				inventory.wand.items.push(i);
 			}
 			else if (i.type === "Spell") {
 				const spellTier = i.system.tier;

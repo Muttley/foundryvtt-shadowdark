@@ -15,11 +15,21 @@
 <div class="details-description">
 	{{{description}}}
 </div>
-<button
-	class="item-control"
-	data-actor-id="{{actor._id}}"
-	data-item-id="{{item._id}}"
-	data-action="cast-spell"
->
-	{{localize 'SHADOWDARK.chat_card.button.cast_spell'}}
-</button>
+<div class="grid-2-columns">
+	<button
+		class="item-control"
+		data-actor-id="{{actor._id}}"
+		data-item-id="{{item._id}}"
+		data-action="cast-spell"
+	>
+		{{localize 'SHADOWDARK.chat_card.button.cast_spell'}}
+	</button>
+	<button
+		class="item-control"
+		data-actor-id="{{actor._id}}"
+		data-item-id="{{item._id}}"
+		data-action="learn-spell"
+	>
+		{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
+	</button>
+</div>
