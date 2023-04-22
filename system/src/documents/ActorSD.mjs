@@ -61,9 +61,9 @@ export default class ActorSD extends Actor {
 			attackType: item.system.attackType,
 			attackName: item.name,
 			numAttacks: item.system.attack.num,
-			attackBonus: item.system.attack.bonus,
+			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
 			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
-			bonusDamage: item.system.damage.bonus,
+			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
 			special: item.system.damage.special,
 			ranges: item.system.ranges.join("/"),
 		};
@@ -110,10 +110,13 @@ export default class ActorSD extends Actor {
 
 		if (item.system.type === "melee") {
 			weaponOptions.attackBonus =	baseAttackBonus
-				+ this.system.bonuses.meleeAttackBonus
+				+ parseInt(this.system.bonuses.meleeAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
 				+ weaponMasterBonus;
 
-			weaponOptions.bonusDamage += this.system.bonuses.meleeDamageBonus;
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.meleeDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
@@ -141,12 +144,14 @@ export default class ActorSD extends Actor {
 			}
 			if (item.hasProperty("thrown")) {
 				weaponOptions.attackBonus = baseAttackBonus
-					+ this.system.bonuses.rangedAttackBonus
+					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+					+ parseInt(item.system.bonuses.attackBonus, 10)
 					+ weaponMasterBonus;
 
 				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
 					item.system.damage.oneHanded
 				];
+
 				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
@@ -160,10 +165,13 @@ export default class ActorSD extends Actor {
 		}
 		else if (item.system.type === "ranged") {
 			weaponOptions.attackBonus = baseAttackBonus
-				+ this.system.bonuses.rangedAttackBonus
+				+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
 				+ weaponMasterBonus;
 
-			weaponOptions.bonusDamage += this.system.bonuses.rangeDamageBonus;
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.rangedDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
@@ -211,12 +219,21 @@ export default class ActorSD extends Actor {
 		};
 	}
 
+	/**
+	 * Checks if the item (weapon) has any combination of settings
+	 * or the actor has bonuses that would mean it should have weapon
+	 * mastery bonuses applied to it.
+	 * @param {Item} item - Item to calculate bonus for
+	 * @returns {number} bonus
+	 */
 	calcWeaponMasterBonus(item) {
 		let bonus = 0;
 
-		if (this.system.bonuses.weaponMastery.find(
-			mastery => mastery === item.name.slugify()
-		)) {
+		if (
+			item.system.weaponMastery
+			|| this.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
+			|| this.system.bonuses.weaponMastery.includes(item.name.slugify())
+		) {
 			bonus += 1 + Math.floor(this.system.level.value / 2);
 		}
 
@@ -286,6 +303,9 @@ export default class ActorSD extends Actor {
 			gearSlots += this.system.bonuses.hauler && conModifier > 0
 				? conModifier
 				: 0;
+
+			// Add effects that modify gearslots
+			gearSlots += parseInt(this.system.bonuses.gearSlots, 10);
 		}
 
 		return gearSlots;
@@ -352,6 +372,10 @@ export default class ActorSD extends Actor {
 
 		if (this.type === "Player") {
 			this._preparePlayerData();
+
+			if (canvas.ready && game.user.character === this) {
+				game.shadowdark.effectPanel.refresh();
+			}
 		}
 		else if (this.type === "NPC") {
 			this._prepareNPCData();
@@ -402,48 +426,44 @@ export default class ActorSD extends Actor {
 		data.damageParts = [];
 
 		// Magic Item bonuses
-		if (item.system.attackBonus) {
+		if (item.system.bonuses.attackBonus) {
 			parts.push("@itemBonus");
-			data.itemBonus = item.system.attackBonus;
+			data.itemBonus = item.system.bonuses.attackBonus;
 		}
-		if (item.system.damage?.bonus) {
+		if (item.system.bonuses.damageBonus) {
 			data.damageParts.push("@itemDamageBonus");
-			data.itemDamageBonus = item.system.damage.bonus;
+			data.itemDamageBonus = item.system.bonuses.damageBonus;
 		}
 
 		// Talents & Ability modifiers
-		if (item.system.type === "melee") {
-			if (item.isFinesseWeapon()) {
-				data.abilityBonus = Math.max(
-					this.abilityModifier("str"),
-					this.abilityModifier("dex")
-				);
+		if (this.type === "Player") {
+			if (item.system.type === "melee") {
+				if (item.isFinesseWeapon()) {
+					data.abilityBonus = Math.max(
+						this.abilityModifier("str"),
+						this.abilityModifier("dex")
+					);
+				}
+				else {
+					data.abilityBonus = this.abilityModifier("str");
+				}
+
+				data.talentBonus = bonuses.meleeAttackBonus;
+				data.meleeDamageBonus = bonuses.meleeDamageBonus;
+				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
-				data.abilityBonus = this.abilityModifier("str");
+				data.abilityBonus = this.abilityModifier("dex");
+
+				data.talentBonus = bonuses.rangedAttackBonus;
+				data.rangedDamageBonus = bonuses.rangedDamageBonus;
+				data.damageParts.push("@rangedDamageBonus");
 			}
 
-			data.talentBonus = bonuses.meleeAttackBonus;
-			data.meleeDamageBonus = bonuses.meleeDamageBonus;
-			data.damageParts.push("@meleeDamageBonus");
-		}
-		else {
-			data.abilityBonus = this.abilityModifier("dex");
-
-			data.talentBonus = bonuses.rangedAttackBonus;
-			data.rangedDamageBonus = bonuses.rangedDamageBonus;
-			data.damageParts.push("@rangedDamageBonus");
-		}
-
-		// Check Weapon Mastery & add if applicable
-		if (
-			item.system.weaponMastery
-			|| this.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
-			|| this.system.bonuses.weaponMastery.includes(item.name.slugify())
-		) {
-			data.weaponMasteryBonus = 1 + Math.floor(this.system.level.value / 2);
+			// Check Weapon Mastery & add if applicable
+			data.weaponMasteryBonus = this.calcWeaponMasterBonus(item);
 			data.talentBonus += data.weaponMasteryBonus;
-			data.damageParts.push("@weaponMasteryBonus");
+			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
 		}
 
 		return item.rollItem(parts, data);
@@ -675,11 +695,13 @@ export default class ActorSD extends Actor {
 
 				if (armor.isNotAShield()) {
 					nonShieldEquipped = true;
-					if (
-						this.system.bonuses.armorMastery.includes(armor.name.slugify())
-						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-					) armorMasteryBonus += 1;
 				}
+
+				// Check if armor mastery should apply to the AC
+				if (
+					this.system.bonuses.armorMastery.includes(armor.name.slugify())
+					|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+				) armorMasteryBonus += 1;
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
@@ -695,6 +717,9 @@ export default class ActorSD extends Actor {
 
 			newArmorClass += armorMasteryBonus;
 		}
+
+		// Add AC from effects
+		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 
 		Actor.updateDocuments([{
 			_id: this._id,

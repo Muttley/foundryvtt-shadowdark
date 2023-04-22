@@ -292,6 +292,11 @@ export default class ActorSheetSD extends ActorSheet {
 		this.actor.castSpell(itemId);
 	}
 
+	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
+	async emulateItemDrop(data) {
+		return this._onDropItem({}, data);
+	}
+
 	async _onItemCreate(event) {
 		event.preventDefault();
 		const itemType = $(event.currentTarget).data("item-type");

@@ -2,6 +2,8 @@
 
 ### Bugfixes
 * [#319] Right-Click context menu binding to tab links on character sheets
+* [#321] We can now add AC Bonus effects to items
+* [#325] Bonuses from Weapon Mastery now functions as intended
 * [#336] Data migration always run for new worlds the first time they are opened
 
 ### Enhancements
@@ -9,6 +11,18 @@
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
 * [#309] More consistent behaviour when clicking item icons on character sheet. Now they post the item to chat, and the chat item has buttons to perform relevant actions
 * [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item along buttons to perform relevant actions
+* [#338] Complete overhaul of effects:
+	- Introducing Effect items that comes in two flavors, "condition" and "effect"
+	- Introduction of the Effect Panel that will show temporary effects (And passive if setting is checked)
+	- Now uses datalists instead of popup windows for determining effect types, making them searchable
+		- [#68] Selecting an effect type that requires input from the user will now ask for it (e.g. Weapon & Armor Mastery + Spell Advantage)
+		- [#258] Adding a talent/effect that requires input will ask the user to choose when dragging onto the sheet
+	- Time tracking including rounds tracking of temporary effects
+	- Automatic cleanup of expired effects
+	- [#272] Active Effects are ready for V11
+	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
+* [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
+* [#339] Adds "Unlimited" as a choice for Spell Ranges
 
 ## v1.2.4
 

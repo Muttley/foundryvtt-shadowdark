@@ -29,7 +29,7 @@ export default class RealTimeSD {
 	}
 
 	isPaused() {
-		return game.paused && this._shouldPauseWithGame;
+		return game.paused && this._shouldPauseWithGame();
 	}
 
 	_shouldPauseWithGame() {

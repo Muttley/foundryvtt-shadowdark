@@ -135,7 +135,7 @@ export default class ItemSD extends Item {
 	}
 
 	/* -------------------------------------------- */
-	/*  Getter Methods                              */
+	/*  Methods                                     */
 	/* -------------------------------------------- */
 
 	hasProperty(property) {
@@ -155,6 +155,10 @@ export default class ItemSD extends Item {
 
 	isSpell() {
 		return this.type === "Spell";
+	}
+
+	isEffect() {
+		return this.type === "Effect";
 	}
 
 	isTalent() {
@@ -193,38 +197,6 @@ export default class ItemSD extends Item {
 		return !this.isAShield();
 	}
 
-	magicItemEffectsDisplay() {
-		let properties = [];
-
-		if (this.isMagicItem()) {
-			for (const key of this.effects) {
-				if (!key.disabled) {
-					properties.push(
-						CONFIG.SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES[key.label]
-					);
-				}
-			}
-		}
-
-		return properties.join(", ");
-	}
-
-	talentEffectsDisplay() {
-		let properties = [];
-
-		if (this.isTalent()) {
-			for (const key of this.effects) {
-				if (!key.disabled) {
-					properties.push(
-						CONFIG.SHADOWDARK.TALENT_TYPES[key.label]
-					);
-				}
-			}
-		}
-
-		return properties.join(", ");
-	}
-
 	propertiesDisplay() {
 		let properties = [];
 
@@ -259,5 +231,212 @@ export default class ItemSD extends Item {
 		}
 
 		return ranges.join(", ");
+	}
+
+	/* ---------- Effect Methods ---------- */
+
+	/**
+	 * Creates a dialog that allows the user to pick from a list. Returns
+	 * a slugified name to be used in effect values.
+	 * @param {string} choiceType - Type of input to ask about
+	 * @param {Array<string>} choices - The list of options to choose from
+	 * @returns {string}
+	 */
+	async _askEffectInput(choiceType, choices) {
+		let options = "";
+		for (const [key, value] of Object.entries(choices)) {
+			options += `<option value="${key}">${value}</option>`;
+		}
+
+		const title = game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
+		const data = {
+			title: title,
+			content: `
+				<form>
+					<h3>${title}</h3>
+					<div class="form-group">
+						<div class="form-fields">
+							<input list="selections" type="text" value="" placeholder="" />
+							<datalist id="selections">${options}</select>
+						</div>
+					</div>
+				</form>
+			`,
+			classes: ["shadowdark-dialog"],
+ 			buttons: {
+				submit: {
+					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
+					callback: html => (html[0].querySelector("input").value)
+						? html[0].querySelector("input").value
+						: false,
+				},
+			},
+			close: () => false,
+		};
+
+		const result = await Dialog.wait(data);
+		return result;
+	}
+
+	/**
+	 * Handles special cases for predefined effect mappings that use the
+	 * 'askInput' fields.
+	 * @param {string} key - effectKey from mapping
+	 * @param {Object} value - data value from mapping
+	 * @returns {Object}
+	 */
+	async _handlePredefinedEffect(key, value) {
+		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
+		if (key === "weaponMastery") {
+			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+		}
+		else if (key === "armorMastery") {
+			return this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
+		}
+		else if (key === "spellAdvantage") {
+			// @todo: CUSTOMIZATION Allow custom spell compendiums
+			const spellNames = await this.getSpellListSlugified();
+			return this._askEffectInput("spell", spellNames);
+		}
+		return value;
+	}
+
+	// Duration getters
+
+	/**
+	 * Returns the total duration depending on the type
+	 * of effect that is configured.
+	 * @return {number|Infinity}
+	 */
+	get totalDuration() {
+		const { duration } = this.system;
+		if (["unlimited", "focus"].includes(duration.type)) {
+			return Infinity;
+		}
+		else if (["instant"].includes(duration.type)) {
+			return 0;
+		}
+		else {
+			return duration.value
+				* (CONFIG.SHADOWDARK.DURATION_UNITS[duration.type] ?? 0);
+		}
+	}
+
+	/**
+	 * Calculates the remaining duration, if the Effect is expired, and
+	 * the progress of the effect (current vs total time).
+	 * Returns false for non-Effect items
+	 * @returns {false|{expired: boolean, remaining: Int, progress: Int}}
+	 */
+	get remainingDuration() {
+		if (this.type !== "Effect") return false;
+
+		// Handle rounds-effects
+		if (this.system.duration.type === "rounds") {
+			// If there is combat, check if it was added during combat, otherwise
+			// consider it expired
+			if (game.combat) {
+				const startCombatTime = this.system.start.combatTime;
+				if (!startCombatTime) return { expired: true, remaining: 0, progress: 100 };
+
+				const round = startCombatTime.split(".")[0];
+				const turn = startCombatTime.split(".")[1];
+
+				// If it is a new round or the same turn the effect
+				// was initiated, calculate duration
+				if (
+					round !== game.combat.round
+					|| turn !== game.combat.turn
+				) {
+					const duration = parseInt(this.system.duration.value, 10);
+					const remaining = parseInt(round, 10) + duration - game.combat.round;
+					const progress = (100 - Math.floor(100 * remaining / duration));
+					return {
+						expired: remaining <= 0,
+						remaining,
+						progress,
+					};
+				}
+				else {
+					return false;
+				}
+			}
+			// If added outside combat, expire the effect
+			else {
+				return { expired: true, remaining: 0, progress: 100 };
+			}
+		}
+
+		// Handle timing effects
+		const duration = this.totalDuration;
+
+		if (duration === Infinity) {
+			return { expired: false, remaining: Infinity, progress: 0 };
+		}
+		else if (!duration) {
+			return { expired: true, remaining: 0, progress: 0 };
+		}
+		else {
+			const start = this.system.start?.value ?? 0;
+			const remaining = start + duration - game.time.worldTime;
+			const progress = (100 - Math.floor(100 * remaining / duration));
+			const result = { expired: remaining <= 0, remaining, progress };
+			return result;
+		}
+	}
+
+	/**
+	 * Makes an array with all available spell names, slugified. This
+	 * is used for the predefined effects for Spell Advantage.
+	 * @returns {Array<string>}
+	 */
+	async getSpellListSlugified() {
+		// @todo: CUSTOMIZATION Allow custom spell compendiums
+		const spellPack = game.packs.get("shadowdark.spells");
+		const spellDocuments = await spellPack.getDocuments();
+		const spellNames = {};
+		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
+		return spellNames;
+	}
+
+	/* -------------------------------------------- */
+	/*  Event Handlers                              */
+	/* -------------------------------------------- */
+
+	/* Set the start time and initiative roll of newly created effect */
+	/** @override */
+	async _preCreate(data, options, user) {
+		await super._preCreate(data, options, user);
+
+		// Store the creation time & initiative on the effect
+		if (data.type === "Effect") {
+			if (this.system.duration.type === "rounds" && !game.combat) {
+				ui.notifications.warn(
+					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+				);
+				return false;
+			}
+
+			const combatTime = (game.combat)
+				? `${game.combat.round}.${game.combat.turn}`
+				: null;
+			this.updateSource({
+				"system.start": {
+					value: game.time.worldTime,
+					combatTime,
+				},
+			});
+		}
+
+		// Gems have non-configurable slot settings
+		if (data.type === "Gem") {
+			const slots = {
+				free_carry: 0,
+				per_slot: CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT,
+				slots_used: 1,
+			};
+
+			this.updateSource({"system.slots": slots});
+		}
 	}
 }
