@@ -141,9 +141,93 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Spells dropped on the inventory should create spell scrolls instead of spells
 		if (item.type === "Spell" && activeTab === "tab-inventory") return this._createScroll(item);
 
+		// Talents & Effects may need some user input
+		if (["Talent", "Effect"].includes(item.type)) return this._createItemWithEffect(item);
+
 		super._onDropItem(event, data);
 	}
 
+	/**
+	 * Asks the user for input if necessary for an effect that requires said input.
+	 * @param {Item} item - Item that has the effects
+	 * @param {*} effect - The effect being analyzed
+	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
+	 * @returns {Object} - Object updated with the changes
+	 */
+	async _modifyEffectChangesWithInput(item, effect, key = false) {
+		// Create an object out of the item to modify before creating
+		const itemObject = item.toObject();
+		let name = itemObject.name;
+
+		const changes = await Promise.all(
+			effect.changes.map(async c => {
+				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
+					const effectKey = (key) ? key : c.key.split(".")[2];
+
+					// Ask for user input
+					c.value = await item._handlePredefinedEffect(effectKey);
+
+					if (c.value) {
+						name += ` (${game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[c.value])})`;
+					}
+				}
+				return c;
+			})
+		);
+
+		// Modify the Effect object
+		itemObject.effects.map(e => {
+			if (e._id === effect._id) {
+				e.changes = changes;
+				itemObject.name = name;
+			}
+			return e;
+		});
+
+		return itemObject;
+	}
+
+	/**
+	 * Contains logic that handles any complex effects, where the user
+	 * needs to provide input to determine the effect.
+	 * @param {Item} item - The item being created
+	 */
+	async _createItemWithEffect(item) {
+		await Promise.all(item.effects?.map(async e => {
+
+			// If the item contains effects that require user input,
+			// ask and modify talent before creating
+			if (
+				e.changes?.some(c =>
+					CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)
+				)
+			) {
+				// Spell Advantage requires special handling as it uses the `advantage` bons
+				if (
+					[e.label, e.name].includes(
+						game.i18n.localize("SHADOWDARK.item.effect.predefined_effect.spellAdvantage")
+					)
+				) {
+					const key = "spellAdvantage";
+					item = await this._modifyEffectChangesWithInput(item, e, key);
+				}
+				else {
+					item = await this._modifyEffectChangesWithInput(item, e);
+				}
+			}
+		}));
+
+		// If any effects was created without a value, we don't create the item
+		if (item.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
+			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
+		);
+
+		super._onDropItemCreate(item);
+	}
+
+	/**
+	 * Creates a scroll from a spell item
+	 */
 	async _createScroll(spell) {
 		const scroll = {
 			type: "Basic",
@@ -381,6 +465,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
+		const effects = {
+			effect: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.effect"),
+				items: [],
+			},
+			condition: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.condition"),
+				items: [],
+			},
+		};
+
 		const attacks = {melee: [], ranged: []};
 
 		let slotCount = 0;
@@ -450,6 +545,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const talentClass = i.system.talentClass;
 				talents[talentClass].items.push(i);
 			}
+			else if (i.type === "Effect") {
+				const category = i.system.category;
+				effects[category].items.push(i);
+			}
 		}
 
 		// Work out how many slots all these coins are taking up...
@@ -482,6 +581,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			(a, b) => a.system.level - b.system.level
 		);
 		context.talents = talents;
+		context.effects = effects;
 	}
 
  	async _updateObject(event, formData) {

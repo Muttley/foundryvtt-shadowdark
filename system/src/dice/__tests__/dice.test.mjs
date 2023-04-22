@@ -92,13 +92,17 @@ const mockData = () => {
 				return true;
 			},
 			system: {
-				attackBonus: 3,
 				damage: {
-					bonus: 0,
 					numDice: 1,
 					oneHanded: "d8",
 					twoHanded: "d10",
-					critMultiplier: 2,
+				},
+				bonuses: {
+					attackBonus: 3,
+					damageBonus: 0,
+					critical: {
+						multiplier: 2,
+					},
 				},
 				tier: 0, // spells
 				properties: [
@@ -615,6 +619,13 @@ export default ({ describe, it, expect }) => {
 						numDice: 1,
 						value: "d6",
 					},
+					bonuses: {
+						attackBonus: 0,
+						damagebonus: 0,
+						critical: {
+							multiplier: 2,
+						},
+					},
 				},
 			},
 		};
@@ -701,7 +712,7 @@ export default ({ describe, it, expect }) => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { main: { critical: "success" } };
 			mockItemData.damageParts = [];
-			mockItemData.item.system.damage.critMultiplier = 4;
+			mockItemData.item.system.bonuses.critical.multiplier = 4;
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);

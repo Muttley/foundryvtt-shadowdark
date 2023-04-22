@@ -123,4 +123,17 @@ export default function registerSystemSettings() {
 		},
 		requiresReload: true,
 	});
+
+	// ----------------------
+	//  EFFECT PANEL SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "showPassiveEffects", {
+		name: "SHADOWDARK.settings.effect_panel.show_passive.name",
+		hint: "SHADOWDARK.settings.effect_panel.show_passive.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+	});
 }

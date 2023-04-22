@@ -1,0 +1,116 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+section.effect-panel {
+
+	position: fixed;
+	z-index: 50;
+
+	hr {
+		margin-right: 0;
+		width: 42px;
+	}
+
+	.icon {
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 0 1px rgb(150, 111, 158), 0 0 0 2px rgb(70, 33, 139); // 132, 75, 236
+		box-shadow: 0 0 0 1px rgb(150, 111, 158), 0 0 0 2px rgb(70, 33, 139), inset 0 0 4px rgba(0, 0, 0, 0.5);
+		color: transparent;
+		display: flex;
+		height: 42px;
+		justify-content: center;
+		margin: 2px 0;
+		position: relative;
+		width: 42px;
+
+		.progress {
+			width: 42px;
+			height: 42px;
+			background:
+				conic-gradient(
+					var(--progress-color, rgba(214, 102, 241, 0.534)) var(--progress, 0%),
+					rgba(241, 95, 58, 0) var(--progress, 0%) 100%
+				);
+		}
+
+		.badge {
+			bottom: 1px;
+			color: #fff;
+			display: inline-block;
+			left: 1px;
+			bottom: 4px;
+			position: absolute;
+			text-shadow: 0px 0px 2px black;
+
+			&.unlimited {
+				color: orange;
+			}
+		}
+		}
+
+	.effect-item {
+		display: flex;
+		justify-content: flex-end;
+		height: 46px;
+		margin-bottom: 4px;
+
+		&:hover {
+			.effect-info {
+				display: block;
+			}
+		}
+
+		.effect-info {
+			background-color: rgba(0, 0, 0, 0.75);
+			display: none;
+			border-radius: 5px;
+			height: 100%;
+			margin: 0 0.5em;
+			padding: 0.1em 0.25em;
+
+			h1,
+			h2 {
+				border: none;
+				color: #fff;
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				text-align: right;
+			}
+
+			h2 {
+				font-size: 12px;
+			}
+
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2px;
+				list-style-type: none;
+				margin-bottom: 2px;
+
+				.talent,
+				.duration {
+					text-rendering: optimizeLegibility;
+					background-color: hsl(278, 71%, 41%);
+					border-radius: 2px;
+					box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+					color: #fff;
+					font-size: 10px;
+					font-weight: 500;
+					letter-spacing: 0.05em;
+					line-height: 1px;
+					padding: 3px 4px;
+					text-transform: uppercase;
+				}
+
+				.talent {
+					background-color: hsl(258, 81%, 69%);
+				}
+			}
+		}
+	}
+}
