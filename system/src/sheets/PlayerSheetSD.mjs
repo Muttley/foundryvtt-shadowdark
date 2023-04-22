@@ -450,7 +450,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let slotCount = 0;
 
 		for (const i of this._sortAllItems(context)) {
-			if (i.type === "Armor" || i.type === "Basic" || i.type === "Weapon") {
+			if (i.system.isPhysical && i.type !== "Gem") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
 
 				// We calculate how many slots are used by this item, taking
@@ -504,15 +504,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 			else if (i.type === "Gem") {
 				gems.push(i);
-			}
-			else if (i.type === "Potion") {
-				inventory.potion.items.push(i);
-			}
-			else if (i.type === "Scroll") {
-				inventory.scroll.items.push(i);
-			}
-			else if (i.type === "Wand") {
-				inventory.wand.items.push(i);
 			}
 			else if (i.type === "Spell") {
 				const spellTier = i.system.tier;

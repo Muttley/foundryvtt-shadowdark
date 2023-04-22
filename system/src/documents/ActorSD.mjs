@@ -228,11 +228,17 @@ export default class ActorSD extends Actor {
 
 		const abilityId = this.getSpellcastingAbility();
 
+		const slugName = item.name.slugify();
+
+		const re = /^(wand|scroll|potion)-of-(.*)$/;
+		const match = slugName.match(re);
+
+		const rollType = match ? match[2] : slugName;
+
 		const data = {
-			rollType: item.name.slugify(),
+			rollType,
 			item: item,
-			scroll: false,
-			actor: this.actor,
+			actor: this,
 			abilityBonus: this.abilityModifier(abilityId),
 			talentBonus: this.system.bonuses.spellcastingCheckBonus,
 		};

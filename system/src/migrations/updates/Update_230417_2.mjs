@@ -5,8 +5,8 @@ export default class Update_230417_2 extends UpdateBaseSD {
 	static version = 230417.2;
 
 	async updateItem(itemData, actorData) {
+		if (!actorData) return;
 		if (itemData.type !== "Basic") return;
-		if (actorData.type === "NPC") return;
 
 		const updateData = {
 			"system.-=scroll": null,

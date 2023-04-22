@@ -70,10 +70,14 @@ export default class ItemSD extends Item {
 		switch (this.type) {
 			case "Armor":
 				return `${basePath}/armor.hbs`;
+			case "Potion":
+				return `${basePath}/potion.hbs`;
 			case "Scroll":
 				return `${basePath}/scroll.hbs`;
 			case "Spell":
 				return `${basePath}/spell.hbs`;
+			case "Wand":
+				return `${basePath}/wand.hbs`;
 			case "Weapon":
 				return `${basePath}/weapon.hbs`;
 			default:
@@ -126,7 +130,7 @@ export default class ItemSD extends Item {
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 		// Special case for scrolls
-		if (data.scroll && roll) data.actor.deleteEmbeddedDocuments("Item", [data.scroll._id]);
+		if (this.type === "Scroll" && roll) data.actor.deleteEmbeddedDocuments("Item", [this._id]);
 		return roll;
 	}
 
