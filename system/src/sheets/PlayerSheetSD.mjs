@@ -158,11 +158,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Create an object out of the item to modify before creating
 		const itemObject = item.toObject();
 		let name = itemObject.name;
-		const effectKey = (key) ? key : c.key.split(".")[2];
 
 		const changes = await Promise.all(
 			effect.changes.map(async c => {
 				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
+					const effectKey = (key) ? key : c.key.split(".")[2];
+
 					// Ask for user input
 					c.value = await item._handlePredefinedEffect(effectKey);
 
