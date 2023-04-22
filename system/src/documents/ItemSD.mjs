@@ -119,7 +119,7 @@ export default class ItemSD extends Item {
 	}
 
 	/* -------------------------------------------- */
-	/*  Getter Methods                              */
+	/*  Methods                                     */
 	/* -------------------------------------------- */
 
 	hasProperty(property) {
@@ -217,6 +217,74 @@ export default class ItemSD extends Item {
 		return ranges.join(", ");
 	}
 
+	/* ---------- Effect Methods ---------- */
+
+	/**
+	 * Creates a dialog that allows the user to pick from a list. Returns
+	 * a slugified name to be used in effect values.
+	 * @param {string} choiceType - Type of input to ask about
+	 * @param {Array<string>} choices - The list of options to choose from
+	 * @returns {string}
+	 */
+	async _askEffectInput(choiceType, choices) {
+		let options = "";
+		for (const [key, value] of Object.entries(choices)) {
+			options += `<option value="${key}">${value}</option>`;
+		}
+
+		const title = game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
+		const data = {
+			title: title,
+			content: `
+				<form>
+					<h3>${title}</h3>
+					<div class="form-group">
+						<div class="form-fields">
+							<input list="selections" type="text" value="" placeholder="" />
+							<datalist id="selections">${options}</select>
+						</div>
+					</div>
+				</form>
+			`,
+			classes: ["shadowdark-dialog"],
+ 			buttons: {
+				submit: {
+					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
+					callback: html => (html[0].querySelector("input").value)
+						? html[0].querySelector("input").value
+						: false,
+				},
+			},
+			close: () => false,
+		};
+
+		const result = await Dialog.wait(data);
+		return result;
+	}
+
+	/**
+	 * Handles special cases for predefined effect mappings that use the
+	 * 'askInput' fields.
+	 * @param {string} key - effectKey from mapping
+	 * @param {Object} value - data value from mapping
+	 * @returns {Object}
+	 */
+	async _handlePredefinedEffect(key, value) {
+		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
+		if (key === "weaponMastery") {
+			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+		}
+		else if (key === "armorMastery") {
+			return this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
+		}
+		else if (key === "spellAdvantage") {
+			// @todo: CUSTOMIZATION Allow custom spell compendiums
+			const spellNames = await this.getSpellListSlugified();
+			return this._askEffectInput("spell", spellNames);
+		}
+		return value;
+	}
+
 	// Duration getters
 	get totalDuration() {
 		const { duration } = this.system;
@@ -287,6 +355,20 @@ export default class ItemSD extends Item {
 			const result = { expired: remaining <= 0, remaining, progress };
 			return result;
 		}
+	}
+
+	/**
+	 * Makes an array with all available spell names, slugified. This
+	 * is used for the predefined effects for Spell Advantage.
+	 * @returns {Array<string>}
+	 */
+	async getSpellListSlugified() {
+		// @todo: CUSTOMIZATION Allow custom spell compendiums
+		const spellPack = game.packs.get("shadowdark.spells");
+		const spellDocuments = await spellPack.getDocuments();
+		const spellNames = {};
+		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
+		return spellNames;
 	}
 
 	/* -------------------------------------------- */

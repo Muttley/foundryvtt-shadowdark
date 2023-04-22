@@ -389,6 +389,11 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/* ---------- Predefined Effect Methods ---------- */
 
+	/**
+	 * Returns an object containing the effect key, and the
+	 * translated name into the current language.
+	 * @returns {Object}
+	 */
 	async _getPredefinedEffectsList() {
 		const effects = {};
 		const jsonData = await this._getPredefinedEffectsData();
@@ -404,78 +409,30 @@ export default class ItemSheetSD extends ItemSheet {
 	}
 
 	// @todo: CUSTOMIZATION Extend this with custom paths as for the art mapping
+	/**
+	 * Reads the predefined effects mapping json file and returns it as a JSON object.
+	 * @returns {Object}
+	 */
 	async _getPredefinedEffectsData() {
 		return await foundry.utils.fetchJsonWithTimeout(
 			"systems/shadowdark/assets/mappings/map-predefined-effects.json"
 		);
 	}
 
-	async _askEffectInput(choiceType, choices) {
-		let options = "";
-		for (const [key, value] of Object.entries(choices)) {
-			options += `<option value="${key}">${value}</option>`;
-		}
-
-		const title = game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
-		const data = {
-			title: title,
-			content: `
-				<form>
-					<h3>${title}</h3>
-					<div class="form-group">
-						<div class="form-fields">
-							<input list="selections" type="text" value="" placeholder="" />
-							<datalist id="selections">${options}</select>
-						</div>
-					</div>
-				</form>
-			`,
-			classes: ["shadowdark-dialog"],
- 			buttons: {
-				submit: {
-					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
-					callback: html => html[0].querySelector("input").value,
-				},
-			},
-			close: () => false,
-		};
-
-		const result = await Dialog.wait(data);
-		return result;
-	}
-
 	/**
-	 * Handles special cases for predefined effect mappings that use the
-	 * 'askInput' fields.
-	 * @param {string} key - effectKey from mapping
-	 * @param {Object} data - data from mapping
-	 * @returns {Object}
+	 * Creates effects based on predefined effect choices and the supplied
+	 * predefined effect mappings.
+	 * @param {string} key - Name of the predefined effect
+	 * @param {Object} data - The item data of the item to be created
+	 * @returns {ActiveEffect}
 	 */
-	async _handlePredefinedEffect(key, data) {
-		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
-		if (key === "weaponMastery") {
-			data.defaultValue = await this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
-			if (!data.defaultValue) return;
-		}
-		else if (key === "armorMastery") {
-			data.defaultValue = await this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
-			if (!data.defaultValue) return;
-		}
-		else if (key === "spellAdvantage") {
-			// @todo: CUSTOMIZATION Allow custom spell compendiums
-			const spellPack = game.packs.get("shadowdark.spells");
-			const spellDocuments = await spellPack.getDocuments();
-			const spellNames = {};
-			spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
-			data.defaultValue = await this._askEffectInput("spell", spellNames);
-			if (!data.defaultValue) return;
-		}
-		return data;
-	}
-
 	async _createPredefinedEffect(key, data) {
-		const handledData = await this._handlePredefinedEffect(key, data);
-		if (!handledData) shadowdark.log("Can't create effect without selecting a value.");
+		const handledData = data;
+		handledData.defaultValue = await this.item._handlePredefinedEffect(key, data.defaultValue);
+
+		if (handledData.defaultValue === "REPLACEME") {
+			return shadowdark.log("Can't create effect without selecting a value.");
+		}
 
 		const effectMode = foundry.utils.getProperty(
 			CONST.ACTIVE_EFFECT_MODES,

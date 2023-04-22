@@ -290,7 +290,7 @@ export class EffectPanelControllerSD {
 
 		const sourceItem = this._getSource(effect);
 
-		// @todo: Consider allowing default behavior in settings.
+		// @todo: Consider allowing default behavior to just delete effect item in settings.
 		return Dialog.confirm({
 			title: game.i18n.localize("SHADOWDARK.apps.effect_panel.dialog.delete_effect.title"),
 			content: `<h4>${game.i18n.format(

@@ -14,6 +14,7 @@
 	- Introduction of the Effect Panel that will show temporary effects (And passive if setting is checked)
 	- Now uses datalists instead of popup windows for determining effect types, making them searchable
 		- Selecting an effect type that requires input from the user will now ask for it (e.g. Weapon & Armor Mastery + Spell Advantage)
+		- Adding a talent/effect that requires input will ask the user to choose when dragging onto the sheet [#258]
 	- Time tracking including rounds tracking of temporary effects
 	- Automatic cleanup of expired effects
 
