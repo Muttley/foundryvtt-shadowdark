@@ -13,10 +13,12 @@
 	- Introducing Effect items that comes in two flavors, "condition" and "effect"
 	- Introduction of the Effect Panel that will show temporary effects (And passive if setting is checked)
 	- Now uses datalists instead of popup windows for determining effect types, making them searchable
-		- Selecting an effect type that requires input from the user will now ask for it (e.g. Weapon & Armor Mastery + Spell Advantage)
-		- Adding a talent/effect that requires input will ask the user to choose when dragging onto the sheet [#258]
+		- [#68] Selecting an effect type that requires input from the user will now ask for it (e.g. Weapon & Armor Mastery + Spell Advantage)
+		- [#258] Adding a talent/effect that requires input will ask the user to choose when dragging onto the sheet
 	- Time tracking including rounds tracking of temporary effects
 	- Automatic cleanup of expired effects
+	- [#272] Active Effects are ready for V11
+	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
 
 ## v1.2.4
 
