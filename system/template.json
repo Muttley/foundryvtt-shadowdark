@@ -93,20 +93,24 @@
 			},
 			"background": "",
 			"bonuses": {
+				"acBonus": 0,
 				"advantage": [],
 				"armorMastery": [],
-				"weaponMastery": [],
+				"backstabDie": 0,
+				"critical": {
+					"successThreshold": 20,
+					"failureThreshold": 1,
+					"multiplier": 2
+				},
+				"gearSlots": 0,
+				"hauler": false,
+				"lightSource": "",
 				"meleeAttackBonus": 0,
 				"meleeDamageBonus": 0,
 				"rangedAttackBonus": 0,
-				"rangeDamageBonus": 0,
+				"rangedDamageBonus": 0,
 				"spellcastingCheckBonus": 0,
-				"backstabDie": 0,
-				"hauler": false,
-				"critical": {
-					"successThreshold": 20,
-					"failureThreshold": 1
-				}
+				"weaponMastery": []
 			},
 			"class": "",
 			"coins": {
@@ -129,6 +133,7 @@
 			"Armor",
 			"Basic",
 			"Gem",
+			"Effect",
 			"NPC Attack",
 			"NPC Feature",
 			"Spell",
@@ -193,19 +198,46 @@
 				"physical"
 			]
 		},
+		"Effect": {
+			"templates": [
+				"common"
+			],
+			"duration": {
+				"value": -1,
+				"type": "unlimited"
+			},
+			"start": {
+				"value": 0,
+				"combatTime": null
+			},
+			"tokenIcon": {
+				"show": true
+			},
+			"effectPanel": {
+				"show": true
+			},
+			"category": "effect"
+		},
 		"NPC Attack": {
 			"templates": [
 				"common"
 			],
 			"attack": {
-				"num": 1,
-				"bonus": 0
+				"num": 1
 			},
 			"damage": {
-				"bonus": 0,
 				"numDice": 1,
 				"value": "",
 				"special": ""
+			},
+			"bonuses": {
+				"damageBonus": 0,
+				"attackBonus": 0,
+				"critical": {
+					"failureThreshold": 1,
+					"successThreshold": 20,
+					"multiplier": 2
+				}
 			},
 			"attackType": "physical",
 			"ranges": ["close"]
@@ -236,14 +268,20 @@
 				"physical",
 				"common"
 			],
-			"attackBonus": 0,
 			"canBeEquipped": true,
 			"damage": {
-				"bonus": 0,
 				"oneHanded": "",
 				"twoHanded": "",
-				"numDice": 1,
-				"critMultiplier": 2
+				"numDice": 1
+			},
+			"bonuses": {
+				"damageBonus": 0,
+				"attackBonus": 0,
+				"critical": {
+					"failureThreshold": 1,
+					"successThreshold": 20,
+					"multiplier": 2
+				}
 			},
 			"range": "close",
 			"type": "melee",

@@ -196,32 +196,6 @@ SHADOWDARK.LIGHT_SETTINGS = {
 	},
 };
 
-SHADOWDARK.MAGIC_ITEM_PROPERTIES = {
-	"system.ac.base": "SHADOWDARK.talent.type.armor_bonus",
-	"system.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",
-	"system.damage.critMultiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
-	"system.damage.bonus": "SHADOWDARK.item.magic_item.type.damageBonus",
-	"system.abilities.cha.value": "SHADOWDARK.ability_cha",
-	"system.abilities.con.value": "SHADOWDARK.ability_con",
-	"system.abilities.dex.value": "SHADOWDARK.ability_dex",
-	"system.abilities.int.value": "SHADOWDARK.ability_int",
-	"system.abilities.str.value": "SHADOWDARK.ability_str",
-	"system.abilities.wis.value": "SHADOWDARK.ability_wis",
-	"system.bonuses.critical.successThreshold": "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
-	"system.bonuses.critical.failureThreshold": "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
-};
-
-SHADOWDARK.MAGIC_ITEM_EFFECT_TYPES = {
-	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
-	attackBonus: "SHADOWDARK.item.magic_item.type.attackBonus",
-	critMultiplier: "SHADOWDARK.item.magic_item.type.critMultiplier",
-	damageBonus: "SHADOWDARK.item.magic_item.type.damageBonus",
-	criticalFailureThreshold: "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
-	criticalSuccessThreshold: "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
-	permanentAbility: "SHADOWDARK.item.magic_item.type.permanentAbility",
-	custom: "SHADOWDARK.item.magic_item.type.custom",
-};
-
 SHADOWDARK.NPC_ATTACK_TYPES = {
 	physical: "SHADOWDARK.npc_attack.type.physical",
 	special: "SHADOWDARK.npc_attack.type.special",
@@ -229,7 +203,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 
 SHADOWDARK.NPC_MOVES = {
 	near: "SHADOWDARK.npc_move.near",
-	doulbeNear: "SHADOWDARK.npc_move.double_near", // @todo: Fix typo
+	doubleNear: "SHADOWDARK.npc_move.double_near",
 };
 
 SHADOWDARK.RANGES = {
@@ -263,7 +237,75 @@ SHADOWDARK.SPELL_DURATIONS = {
 	realTime: "SHADOWDARK.spell_duration.real_time",
 };
 
-SHADOWDARK.VARIABLE_SPELL_DURATIONS = ["days", "rounds", "realTime"];
+SHADOWDARK.EFFECT_ASK_INPUT = [
+	"system.bonuses.weaponMastery",
+	"system.bonuses.armorMastery",
+	"system.bonuses.advantage",
+];
+
+SHADOWDARK.EFFECT_CATEGORIES = {
+	effect: "SHADOWDARK.item.effect.category.effect",
+	condition: "SHADOWDARK.item.effect.category.condition",
+};
+
+SHADOWDARK.EFFECT_DURATIONS = {
+	instant: "SHADOWDARK.spell_duration.instant",
+	rounds: "SHADOWDARK.spell_duration.rounds",
+	seconds: "SHADOWDARK.effect_duration.seconds",
+	minutes: "SHADOWDARK.effect_duration.minutes",
+	hours: "SHADOWDARK.effect_duration.hours",
+	days: "SHADOWDARK.spell_duration.days",
+	focus: "SHADOWDARK.spell_duration.focus",
+	unlimited: "SHADOWDARK.effect_duration.unlimited",
+};
+
+SHADOWDARK.EFFECT_TRANSLATIONS = {
+	"system.abilities.cha.base": "SHADOWDARK.ability_cha",
+	"system.abilities.cha.bonus": "SHADOWDARK.ability_cha",
+	"system.abilities.con.base": "SHADOWDARK.ability_con",
+	"system.abilities.con.bonus": "SHADOWDARK.ability_con",
+	"system.abilities.dex.base": "SHADOWDARK.ability_dex",
+	"system.abilities.dex.bonus": "SHADOWDARK.ability_dex",
+	"system.abilities.int.base": "SHADOWDARK.ability_int",
+	"system.abilities.int.bonus": "SHADOWDARK.ability_int",
+	"system.abilities.str.base": "SHADOWDARK.ability_str",
+	"system.abilities.str.bonus": "SHADOWDARK.ability_str",
+	"system.abilities.wis.base": "SHADOWDARK.ability_wis",
+	"system.abilities.wis.bonus": "SHADOWDARK.ability_wis",
+	"system.bonuses.acBonus": "SHADOWDARK.talent.type.armor_bonus",
+	"system.bonuses.advantage": "SHADOWDARK.talent.type.advantage.title",
+	"system.bonuses.armorMastery": "SHADOWDARK.item.effect.predefined_effect.armorMastery",
+	"system.bonuses.attackBonus": "SHADOWDARK.item.magic_item.type.attackBonus",
+	"system.bonuses.backstabDie": "SHADOWDARK.talent.type.backstab_die",
+	"system.bonuses.critical.failureThreshold": "SHADOWDARK.item.magic_item.type.criticalFailureThreshold",
+	"system.bonuses.critical.multiplier": "SHADOWDARK.item.magic_item.type.critMultiplier",
+	"system.bonuses.critical.successThreshold": "SHADOWDARK.item.magic_item.type.criticalSuccessThreshold",
+	"system.bonuses.damageBonus": "SHADOWDARK.item.magic_item.type.damageBonus",
+	"system.bonuses.gearSlots": "SHADOWDARK.inventory.slots",
+	"system.bonuses.meleeAttackBonus": "SHADOWDARK.talent.type.melee_attack_bonus",
+	"system.bonuses.meleeDamageBonus": "SHADOWDARK.talent.type.melee_damage_bonus",
+	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
+	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
+	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
+	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
+};
+
+SHADOWDARK.VARIABLE_DURATIONS = [
+	"days",
+	"rounds",
+	"realTime",
+	"seconds",
+	"minutes",
+	"hours",
+];
+
+SHADOWDARK.DURATION_UNITS = {
+	seconds: 1,
+	minutes: 60,
+	rounds: 360,
+	hours: 3600,
+	days: 86400,
+};
 
 SHADOWDARK.SPELL_RANGES = {
 	self: "SHADOWDARK.range.self",
@@ -277,41 +319,6 @@ SHADOWDARK.TALENT_CLASSES = {
 	ancestry: "SHADOWDARK.talent.class.ancestry",
 	class: "SHADOWDARK.talent.class.class",
 	level: "SHADOWDARK.talent.class.level",
-};
-
-SHADOWDARK.TALENT_TYPES = {
-	abilityImprovement: "SHADOWDARK.talent.type.ability_improvement",
-	armorBonus: "SHADOWDARK.talent.type.armor_bonus",
-	armorMastery: "SHADOWDARK.talent.type.armor_mastery",
-	backstabDie: "SHADOWDARK.talent.type.backstab_die",
-	hpAdvantage: "SHADOWDARK.talent.type.advantage.hp",
-	initAdvantage: "SHADOWDARK.talent.type.advantage.initiative",
-	meleeAttackBonus: "SHADOWDARK.talent.type.melee_attack_bonus",
-	meleeDamageBonus: "SHADOWDARK.talent.type.melee_damage_bonus",
-	rangedAttackBonus: "SHADOWDARK.talent.type.ranged_attack_bonus",
-	rangedDamageBonus: "SHADOWDARK.talent.type.ranged_damage_bonus",
-	spellAdvantage: "SHADOWDARK.talent.type.advantage.spell",
-	spellBonus: "SHADOWDARK.talent.type.spell_bonus",
-	weaponMastery: "SHADOWDARK.talent.type.weapon_mastery",
-	custom: "SHADOWDARK.talent.type.custom",
-};
-
-SHADOWDARK.TALENT_PROPERTIES = {
-	"system.abilities.cha.bonus": "SHADOWDARK.ability_cha",
-	"system.abilities.con.bonus": "SHADOWDARK.ability_con",
-	"system.abilities.dex.bonus": "SHADOWDARK.ability_dex",
-	"system.abilities.int.bonus": "SHADOWDARK.ability_int",
-	"system.abilities.str.bonus": "SHADOWDARK.ability_str",
-	"system.abilities.wis.bonus": "SHADOWDARK.ability_wis",
-	"system.bonuses.advantage": "SHADOWDARK.talent.type.advantage.title",
-	"system.bonuses.meleeAttackBonus": "SHADOWDARK.talent.type.melee_attack_bonus",
-	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
-	"system.bonuses.meleeDamageBonus": "SHADOWDARK.talent.type.melee_damage_bonus",
-	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
-	"system.bonuses.armorBonus": "SHADOWDARK.talent.type.armor_bonus",
-	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
-	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
-	"system.bonuses.backstabDie": "SHADOWDARK.talent.type.backstab_die",
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {

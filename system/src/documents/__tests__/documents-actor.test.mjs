@@ -348,7 +348,6 @@ export default ({ describe, it, after, before, expect }) => {
 			});
 		});
 
-		// @todo: talent bonus for both melee & ranged
 		it("melee attack returns str modifier", async () => {
 			expect(actor.attackBonus("melee")).equal(4);
 		});
