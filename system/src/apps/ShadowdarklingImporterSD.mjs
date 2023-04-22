@@ -81,6 +81,21 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	}
 
 	/**
+	 * Manipulates the Weapon/Armor Mastery talent so it may be used on the actor
+	 * @param {string} type - What type of item (armor/weapon)
+	 * @param {string} choice - The actual item to be affected
+	 * @returns {ItemSD}
+	 */
+	async _masteryTalent(type, choice) {
+		const itemName = choice.split(" ").map(s => s.capitalize()).join(" ");
+		const talent = await this._findInCompendium(`${type.capitalize()} Mastery`, "shadowdark.talents");
+		const modifiedTalent = talent.toObject();
+		modifiedTalent.effects[0].changes[0].value = choice.slugify();
+		modifiedTalent.name += ` (${itemName})`;
+		return modifiedTalent;
+	}
+
+	/**
 	 * Searches a compendium pack and returns the stored data if a match is found
 	 * @param {string} contentName - Name of something that may exist in a compendium
 	 * @param {string} packName - id of compendium pack to look inside
@@ -242,7 +257,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		const talents = await Promise.all(json.bonuses.filter(
 			b => supportedTalents.includes(b.name) || supportedTalents.includes(b.bonusName)
-		).map(bonus => {
+		).map(async bonus => {
 			if (bonus.name === "LearnExtraSpell") {
 				return this._findInCompendium("Learn Spell", "shadowdark.talents");
 			}
@@ -257,13 +272,13 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			if (bonus.sourceCategory === "Talent" || bonus.sourceCategory === "Ability") {
 				// Fighter
 				if (bonus.name === "WeaponMastery") {
-					return this._findInCompendium(`Weapon Mastery (${bonus.bonusTo})`, "shadowdark.talents");
+					return this._masteryTalent("weapon", bonus.bonusTo);
 				}
 				if (bonus.name === "Grit") {
 					return this._findInCompendium(`Grit (${bonus.bonusName})`, "shadowdark.talents");
 				}
 				if (bonus.name === "ArmorMastery") {
-					return this._findInCompendium(`Armor Mastery (${bonus.bonusTo})`, "shadowdark.talents");
+					return this._masteryTalent("armor", bonus.bonusTo);
 				}
 				// Thief
 				if (bonus.name === "BackstabIncrease") {
