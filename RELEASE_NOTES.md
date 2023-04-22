@@ -8,6 +8,7 @@
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
 * [#309] More consistent behaviour when clicking item icons on character sheet. Now they post the item to chat, and the chat item has buttons to perform relevant actions
 * [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item along buttons to perform relevant actions
+* [#339] Adds "Unlimited" as a choice for Spell Ranges
 
 ## v1.2.4
 
