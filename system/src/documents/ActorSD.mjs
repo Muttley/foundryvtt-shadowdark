@@ -219,6 +219,13 @@ export default class ActorSD extends Actor {
 		};
 	}
 
+	/**
+	 * Checks if the item (weapon) has any combination of settings
+	 * or the actor has bonuses that would mean it should have weapon
+	 * mastery bonuses applied to it.
+	 * @param {Item} item - Item to calculate bonus for
+	 * @returns {number} bonus
+	 */
 	calcWeaponMasterBonus(item) {
 		let bonus = 0;
 
@@ -682,11 +689,13 @@ export default class ActorSD extends Actor {
 
 				if (armor.isNotAShield()) {
 					nonShieldEquipped = true;
-					if (
-						this.system.bonuses.armorMastery.includes(armor.name.slugify())
-						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-					) armorMasteryBonus += 1;
 				}
+
+				// Check if armor mastery should apply to the AC
+				if (
+					this.system.bonuses.armorMastery.includes(armor.name.slugify())
+					|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+				) armorMasteryBonus += 1;
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;

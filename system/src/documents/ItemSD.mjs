@@ -286,6 +286,12 @@ export default class ItemSD extends Item {
 	}
 
 	// Duration getters
+
+	/**
+	 * Returns the total duration depending on the type
+	 * of effect that is configured.
+	 * @return {number|Infinity}
+	 */
 	get totalDuration() {
 		const { duration } = this.system;
 		if (["unlimited", "focus"].includes(duration.type)) {
@@ -300,6 +306,12 @@ export default class ItemSD extends Item {
 		}
 	}
 
+	/**
+	 * Calculates the remaining duration, if the Effect is expired, and
+	 * the progress of the effect (current vs total time).
+	 * Returns false for non-Effect items
+	 * @returns {false|{expired: boolean, remaining: Int, progress: Int}}
+	 */
 	get remainingDuration() {
 		if (this.type !== "Effect") return false;
 

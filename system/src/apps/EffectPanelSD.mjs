@@ -99,6 +99,7 @@ export default class EffectPanelSD extends Application {
 
 	/**
 	 * Deletes the items that provide effects once expired
+	 * @returns {void}
 	 */
 	deleteExpiredEffects() {
 		const effectData = this._controller.getEffectData();
@@ -114,6 +115,10 @@ export default class EffectPanelSD extends Application {
 		});
 	}
 
+	/**
+	 * Calculates a new x-axis position for the effect panel.
+	 * @returns {string}
+	 */
 	getRightPx() {
 		return `${ui.sidebar.element.outerWidth()
 			+ ui.webrtc.element.outerWidth()
@@ -121,6 +126,10 @@ export default class EffectPanelSD extends Application {
 		}px`;
 	}
 
+	/**
+	 * Animates the Effect panel to the newly calculated x-position.
+	 * @returns {void}
+	 */
 	updateFromRightPx() {
 		this.element.animate({ right: this.getRightPx });
 	}

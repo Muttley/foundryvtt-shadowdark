@@ -273,6 +273,12 @@ export default class ItemSheetSD extends ItemSheet {
 	}
 
 	/* ---------- Effect Event Handlers ---------- */
+	/**
+	 * Creates a new effect and renders the effect sheet. This is used
+	 * for adding custom effects to an item with effects enabled.
+	 * @param {Event} event - Event with information about the effect to create
+	 * @returns {void}
+	 */
 	async _onEffectCreate(event) {
 		event.preventDefault();
 		if (!this.isEditable) return;
@@ -286,6 +292,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return effect[0]?.sheet.render(true);
 	}
 
+	/**
+	 * Toggles an ActiveEffect as active/inactive.
+	 * @param {Event} event - Clicking event
+	 * @returns {void}
+	 */
 	_onEffectActivate(event) {
 		event.preventDefault();
 		if (!this.isEditable) return;
@@ -296,6 +307,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return this._activateEffect(effect);
 	}
 
+	/**
+	 * Renders an ActiveEffect sheet for editing.
+	 * @param {Event} event - Clicking event
+	 * @returns {void}
+	 */
 	_onEffectEdit(event) {
 		event.preventDefault();
 		if (!this.isEditable) return;
@@ -304,6 +320,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return effect.sheet.render(true);
 	}
 
+	/**
+	 * Deletes an ActiveEffect.
+	 * @param {Event} event - Clicking event
+	 * @returns {void}
+	 */
 	_onEffectDelete(event) {
 		event.preventDefault();
 		if (!this.isEditable) return;
@@ -312,6 +333,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return this._deleteEffect(effect);
 	}
 
+	/**
+	 * Toggles an ActiveEffect as being transferred ot nor.
+	 * @param {Event} event - Clicking event
+	 * @returns {void}
+	 */
 	_onEffectTransfer(event) {
 		event.preventDefault();
 		if (!this.isEditable) return;
@@ -353,6 +379,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return effect.delete();
 	}
 
+	/**
+	 * Returns duration data for an active effect. This is used
+	 * to make sure the effect will show on a token icon.
+	 * @returns {object}
+	 */
 	_getDuration() {
 		const duration = {
 			rounds: null,
