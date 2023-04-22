@@ -21,6 +21,7 @@
 	- [#272] Active Effects are ready for V11
 	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
 * [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
+* [#339] Adds "Unlimited" as a choice for Spell Ranges
 
 ## v1.2.4
 
