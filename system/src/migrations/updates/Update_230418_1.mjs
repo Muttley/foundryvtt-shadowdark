@@ -94,11 +94,26 @@ export default class Updated_230418_1 extends UpdateBaseSD {
 				}
 			}
 
+			// Special handling of all the weapon & armor mastery talents
+			let masteryItemRe = /\((.*)\)/;
+			let masteryItem = "";
+			if (item.name.includes("Mastery")) {
+				itemName = item.name.split(" (")[0];
+				masteryItem = item.name.match(masteryItemRe)[1];
+			}
+
 			shadowdark.log(`Replacing out of date Talent ('${item.name}') belonging to Actor ('${actorData.name}')`);
 
 			const talentsPack = game.packs.get("shadowdark.talents");
 			const talentId = talentsPack.index.find(i => i.name === itemName)?._id;
-			const talent = await talentsPack.getDocument(talentId);
+			let talent = await talentsPack.getDocument(talentId);
+
+			// Modify the type for the mastery items
+			if (masteryItem) {
+				talent = talent.toObject();
+				talent.effects[0].changes[0].value = masteryItem.slugify();
+				talent.name += ` (${masteryItem})`;
+			}
 
 			if (talent) {
 				// Delete associated effects
