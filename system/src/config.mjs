@@ -203,7 +203,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 
 SHADOWDARK.NPC_MOVES = {
 	near: "SHADOWDARK.npc_move.near",
-	doulbeNear: "SHADOWDARK.npc_move.double_near", // @todo: Fix typo
+	doubleNear: "SHADOWDARK.npc_move.double_near",
 };
 
 SHADOWDARK.RANGES = {
@@ -237,6 +237,17 @@ SHADOWDARK.SPELL_DURATIONS = {
 	realTime: "SHADOWDARK.spell_duration.real_time",
 };
 
+SHADOWDARK.EFFECT_ASK_INPUT = [
+	"system.bonuses.weaponMastery",
+	"system.bonuses.armorMastery",
+	"system.bonuses.advantage",
+];
+
+SHADOWDARK.EFFECT_CATEGORIES = {
+	effect: "SHADOWDARK.item.effect.category.effect",
+	condition: "SHADOWDARK.item.effect.category.condition",
+};
+
 SHADOWDARK.EFFECT_DURATIONS = {
 	instant: "SHADOWDARK.spell_duration.instant",
 	rounds: "SHADOWDARK.spell_duration.rounds",
@@ -246,11 +257,6 @@ SHADOWDARK.EFFECT_DURATIONS = {
 	days: "SHADOWDARK.spell_duration.days",
 	focus: "SHADOWDARK.spell_duration.focus",
 	unlimited: "SHADOWDARK.effect_duration.unlimited",
-};
-
-SHADOWDARK.EFFECT_CATEGORIES = {
-	effect: "SHADOWDARK.item.effect.category.effect",
-	condition: "SHADOWDARK.item.effect.category.condition",
 };
 
 SHADOWDARK.EFFECT_TRANSLATIONS = {
