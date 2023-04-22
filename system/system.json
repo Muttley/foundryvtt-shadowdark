@@ -48,6 +48,15 @@
 			"flags": {}
 		},
 		{
+			"name": "conditions",
+			"label": "Conditions",
+			"system": "shadowdark",
+			"path": "packs/conditions.db",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "macros",
 			"label": "Macros",
 			"system": "shadowdark",
