@@ -270,6 +270,7 @@ SHADOWDARK.SPELL_RANGES = {
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
 	far: "SHADOWDARK.range.far",
+	unlimited: "SHADOWDARK.range.unlimited",
 };
 
 SHADOWDARK.TALENT_CLASSES = {
