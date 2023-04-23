@@ -4,6 +4,7 @@
 * [#319] Right-Click context menu binding to tab links on character sheets
 * [#321] We can now add AC Bonus effects to items
 * [#325] Bonuses from Weapon Mastery now functions as intended
+* [#341] Wizard Mishap Tier 1-2 table now rerolls itself twice on a 1
 * [#350] Inline rolls of NPC Features now render properly
 
 ### Enhancements
