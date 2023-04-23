@@ -323,6 +323,7 @@ SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.double_near: Double Near
+SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.npc_move.near: Near
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
@@ -338,6 +339,8 @@ SHADOWDARK.range.touch_short: T
 SHADOWDARK.range.touch: Touch
 SHADOWDARK.range.samePlane_short: SP
 SHADOWDARK.range.samePlane: On the same plane
+SHADOWDARK.range.nearLine: Near Line
+SHADOWDARK.range.nearLine_short: NL
 SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
