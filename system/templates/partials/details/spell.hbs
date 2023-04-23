@@ -1,16 +1,5 @@
 <p>
-	<b>{{localize "SHADOWDARK.item.spell_tier"}}</b> {{item.system.tier}},
 	<b>{{localize "SHADOWDARK.item.spell_class"}}</b> <em>{{joinStrings item.system.class}}</em>
-</p>
-<p>
-	<b>{{localize 'SHADOWDARK.item.spell_range'}}</b> {{item.system.range}}
-</p>
-<p>
-	<b>{{localize 'SHADOWDARK.item.spell_duration'}}</b>
-	{{#if item.system.duration.value}}
-		{{item.system.duration.value}}
-	{{/if}}
-	{{item.system.duration.type}}
 </p>
 <div class="details-description">
 	{{{description}}}
@@ -23,3 +12,20 @@
 >
 	{{localize 'SHADOWDARK.chat_card.button.cast_spell'}}
 </button>
+<footer class="details-footer">
+	<span>
+		{{localize "SHADOWDARK.item.spell_tier"}}:
+		{{ item.system.tier }}
+	</span>
+	<span>
+		{{localize "SHADOWDARK.item.spell_duration"}}:
+		{{getSpellDuration
+			item.system.duration.type
+			item.system.duration.value
+		}}
+	</span>
+	<span>
+		{{localize "SHADOWDARK.item.spell_range"}}:
+		{{fromConfig "SPELL_RANGES" item.system.range }}
+	</span>
+</footer>

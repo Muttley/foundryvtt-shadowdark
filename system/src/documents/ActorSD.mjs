@@ -243,11 +243,19 @@ export default class ActorSD extends Actor {
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
 
+		if (!item) {
+			ui.notifications.warn(
+				"Item no longer exists",
+				{ permanent: false }
+			);
+			return;
+		}
+
 		const abilityId = this.getSpellcastingAbility();
 
 		const slugName = item.name.slugify();
 
-		const re = /^(wand|scroll|potion)-of-(.*)$/;
+		const re = /^(wand|scroll)-of-(.*)$/;
 		const match = slugName.match(re);
 
 		const rollType = match ? match[2] : slugName;
@@ -727,6 +735,63 @@ export default class ActorSD extends Actor {
 		}]);
 
 		return newArmorClass;
+	}
+
+	async usePotion(itemId) {
+		const item = this.items.get(itemId);
+
+		renderTemplate(
+			"systems/shadowdark/templates/dialog/confirm-use-potion.hbs",
+			{name: item.name}
+		).then(html => {
+			new Dialog({
+				title: "Confirm Use",
+				content: html,
+				buttons: {
+					Yes: {
+						icon: "<i class=\"fa fa-check\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						callback: async () => {
+							const potionDescription = await item.getEnrichedDescription();
+
+							const cardData = {
+								actor: this,
+								item: item,
+								message: game.i18n.format(
+									"SHADOWDARK.chat.potion_used",
+									{
+										name: this.name,
+										potionName: item.name,
+									}
+								),
+								potionDescription,
+							};
+
+							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
+
+							const content = await renderTemplate(template, cardData);
+
+							await ChatMessage.create({
+								content,
+								rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+							});
+
+							await this.deleteEmbeddedDocuments(
+								"Item",
+								[itemId]
+							);
+						},
+					},
+					Cancel: {
+						icon: "<i class=\"fa fa-times\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+					},
+				},
+				default: "Yes",
+			}).render(true);
+		});
+
+
 	}
 
 	/* -------------------------------------------- */

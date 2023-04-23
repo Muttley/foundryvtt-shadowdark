@@ -71,6 +71,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleSpellLost(event)
 		);
 
+		html.find("[data-action='use-potion']").click(
+			event => this._onUsePotion(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -136,7 +140,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
-		const activeTab = $(document).find(".player section.active").data("tab");
 
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
@@ -391,6 +394,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
+	async _onUsePotion(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.usePotion(itemId);
+	}
+
 	async _sendToggledLightSourceToChat(active, item) {
 		const cardData = {
 			active: active,
@@ -502,13 +513,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				type: "Scroll",
 				items: [],
 			},
-			treasure: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
-				items: [],
-			},
 			wand: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.wands"),
 				type: "Wand",
+				items: [],
+			},
+			treasure: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
 				items: [],
 			},
 		};

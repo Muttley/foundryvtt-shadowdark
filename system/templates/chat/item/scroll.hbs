@@ -16,22 +16,24 @@
   </div>
 
 	<div class="chat-card-buttons grid-2-columns">
-		<button
-			class="item-control"
-			data-actor-id="{{actor.id}}"
-			data-item-id="{{item._id}}"
-			data-action="cast-spell"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
-		</button>
-		<button
-			class="item-control"
-			data-actor-id="{{actor.id}}"
-			data-item-id="{{item._id}}"
-			data-action="learn-spell"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
-		</button>
+		{{#if isSpellcaster}}
+			<button
+				class="item-control"
+				data-actor-id="{{actor.id}}"
+				data-item-id="{{item._id}}"
+				data-action="cast-spell"
+			>
+				{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
+			</button>
+			<button
+				class="item-control"
+				data-actor-id="{{actor.id}}"
+				data-item-id="{{item._id}}"
+				data-action="learn-spell"
+			>
+				{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
+			</button>
+		{{/if}}
 	</div>
 
   <footer class="card-footer">

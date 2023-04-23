@@ -1,25 +1,52 @@
 export default class ItemSD extends Item {
 
+	/* Set the start time and initiative roll of newly created effect */
+	/** @override */
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
+		const updateData = {};
+
+		const replaceImage = data.img === undefined || data.img === "icons/svg/item-bag.svg";
 		const defaultImage = CONFIG.SHADOWDARK.DEFAULTS.ITEM_IMAGES[this.type];
 
-		if (defaultImage) {
-			this.updateSource({img: defaultImage});
+		// Only change the image if it is the default Foundry item icon
+		if (defaultImage && replaceImage) {
+			updateData.img = defaultImage;
+		}
+
+		// Store the creation time & initiative on the effect
+		if (data.type === "Effect") {
+			if (this.system.duration.type === "rounds" && !game.combat) {
+				ui.notifications.warn(
+					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+				);
+				return false;
+			}
+
+			const combatTime = (game.combat)
+				? `${game.combat.round}.${game.combat.turn}`
+				: null;
+
+			updateData["system.start"] = {
+				value: game.time.worldTime,
+				combatTime,
+			};
+		}
+
+		if (!foundry.utils.isEmpty(updateData)) {
+			this.updateSource(updateData);
 		}
 	}
 
 	async getChatData(htmlOptions={}) {
-		const description = await TextEditor.enrichHTML(
-			this.system.description,
-			{
-				async: true,
-			}
-		);
+		const description = await this.getEnrichedDescription();
+
+		const isSpellcaster = await this.actor.isSpellcaster();
 
 		const data = {
 			actor: this.actor,
+			isSpellcaster,
 			description,
 			item: this.toObject(),
 		};
@@ -64,6 +91,15 @@ export default class ItemSD extends Item {
 		const html = await renderTemplate(templatePath,	templateData);
 
 		return html;
+	}
+
+	async getEnrichedDescription() {
+		return await TextEditor.enrichHTML(
+			this.system.description,
+			{
+				async: true,
+			}
+		);
 	}
 
 	getItemTemplate(basePath) {
@@ -129,8 +165,18 @@ export default class ItemSD extends Item {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
-		// Special case for scrolls
-		if (this.type === "Scroll" && roll) data.actor.deleteEmbeddedDocuments("Item", [this._id]);
+
+		if (roll) {
+			if (this.type === "Scroll") {
+				data.actor.deleteEmbeddedDocuments("Item", [this._id]);
+			}
+			else if (this.type === "Wand") {
+				if (roll.rolls.main.critical === "failure") {
+					data.actor.deleteEmbeddedDocuments("Item", [this._id]);
+				}
+			}
+		}
+
 		return roll;
 	}
 
@@ -154,7 +200,7 @@ export default class ItemSD extends Item {
 	}
 
 	isSpell() {
-		return this.type === "Spell";
+		return ["Scroll", "Spell", "Wand"].includes(this.type);
 	}
 
 	isEffect() {
@@ -397,46 +443,5 @@ export default class ItemSD extends Item {
 		const spellNames = {};
 		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
 		return spellNames;
-	}
-
-	/* -------------------------------------------- */
-	/*  Event Handlers                              */
-	/* -------------------------------------------- */
-
-	/* Set the start time and initiative roll of newly created effect */
-	/** @override */
-	async _preCreate(data, options, user) {
-		await super._preCreate(data, options, user);
-
-		// Store the creation time & initiative on the effect
-		if (data.type === "Effect") {
-			if (this.system.duration.type === "rounds" && !game.combat) {
-				ui.notifications.warn(
-					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
-				);
-				return false;
-			}
-
-			const combatTime = (game.combat)
-				? `${game.combat.round}.${game.combat.turn}`
-				: null;
-			this.updateSource({
-				"system.start": {
-					value: game.time.worldTime,
-					combatTime,
-				},
-			});
-		}
-
-		// Gems have non-configurable slot settings
-		if (data.type === "Gem") {
-			const slots = {
-				free_carry: 0,
-				per_slot: CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT,
-				slots_used: 1,
-			};
-
-			this.updateSource({"system.slots": slots});
-		}
 	}
 }

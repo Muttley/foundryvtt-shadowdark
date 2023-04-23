@@ -7,15 +7,15 @@
 >
   <header class="card-header flexrow">
     {{#if data.item}}
-    {{#if isNPC}}
-    <img src="{{data.actor.img}}" data-tooltip="{{data.item.name}}"/>
+			{{#if isNPC}}
+				<img src="{{data.actor.img}}" data-tooltip="{{data.item.name}}"/>
+			{{else}}
+				<img src="{{data.item.img}}" data-tooltip="{{data.item.name}}"/>
+			{{/if}}
+ 	  	<h3 class="item-name">{{data.item.name}}</h3>
     {{else}}
-    <img src="{{data.item.img}}" data-tooltip="{{data.item.name}}"/>
-    {{/if}}
-    <h3 class="item-name">{{data.item.name}}</h3>
-    {{else}}
-    <img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
-    <h3 class="item-name">{{title}}</h3>
+    	<img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
+    	<h3 class="item-name">{{title}}</h3>
     {{/if}}
   </header>
 
@@ -50,7 +50,10 @@
   {{/ifEq}}
   {{#ifEq data.rolls.main.critical "failure"}}
 		<div class="card-spell-critical">
-			<p>{{localize "SHADOWDARK.chat.item_roll.mishap"}}</p>
+			{{#ifEq data.item.type "Wand"}}
+				<p>{{localize "SHADOWDARK.chat.item_roll.wand_mishap"}}</p>
+			{{/ifEq}}
+				<p>{{localize "SHADOWDARK.chat.item_roll.mishap"}}</p>
 		</div>
   {{/ifEq}}
   {{/if}}

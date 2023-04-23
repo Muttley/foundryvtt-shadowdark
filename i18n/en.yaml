@@ -70,10 +70,14 @@ SHADOWDARK.armor.properties.shield: Shield
 SHADOWDARK.chat_card.button.attack: Roll Attack
 SHADOWDARK.chat_card.button.cast_spell: Cast Spell
 SHADOWDARK.chat_card.button.learn_spell: Learn Spell
+SHADOWDARK.chat_card.button.use_potion: Use Potion
+SHADOWDARK.chat_card.button.use_scroll: Use Scroll
+SHADOWDARK.chat_card.button.use_wand: Use Wand
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
+SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining
 SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
@@ -81,7 +85,8 @@ SHADOWDARK.chat.light_source.source.all: All light sources went out
 SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
-SHADOWDARK.chat.spell_roll.title: Casting {name} at tier {tier} with spell DC {spellDC}
+SHADOWDARK.chat.potion_used: "{name} used a Potion"
+SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
 SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
@@ -128,9 +133,10 @@ SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
 SHADOWDARK.dialog.item.delete: Delete
 SHADOWDARK.dialog.item.sell_all: Sell All
 SHADOWDARK.dialog.item.sell: Sell
+SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
-SHADOWDARK.dialog.spell_roll.title: Roll Spell with
+SHADOWDARK.dialog.spell_roll.title: Cast Spell with
 SHADOWDARK.dialog.submit: Submit
 SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
 SHADOWDARK.effect_duration.hours: Hours
@@ -237,8 +243,8 @@ SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel
 SHADOWDARK.item.effect.show-token-icon: Show token icon
 SHADOWDARK.item.effect.source.title: Item Source
-SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects with Rounds type duration outside of combat.
 SHADOWDARK.item.effect.warning.add_effect_without_value: Can't add effects without selecting a value when asked.
+SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects with Rounds type duration outside of combat.
 SHADOWDARK.item.equipped: Equipped
 SHADOWDARK.item.inventory_free_carry: Free Carry
 SHADOWDARK.item.inventory_per_slot: Max per Slot
@@ -429,6 +435,9 @@ SHADOWDARK.sheet.player.talents: Talents
 SHADOWDARK.sheet.player.title: Title
 SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
 SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
+SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
+SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
+SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.spell_caster.priest: Priest
 SHADOWDARK.spell_caster.wizard: Wizard
@@ -465,10 +474,7 @@ SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Li
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
-SHADOWDARK.weapon.properties.two_handed: Two-handed
+SHADOWDARK.weapon.properties.two_handed: Two-Handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.chat_card.button.use_scroll: Use Scroll
-SHADOWDARK.chat_card.button.use_wand: Use Wand
-SHADOWDARK.chat_card.button.drink_potion: Drink Potion

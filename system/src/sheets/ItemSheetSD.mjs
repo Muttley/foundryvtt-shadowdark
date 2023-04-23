@@ -173,7 +173,7 @@ export default class ItemSheetSD extends ItemSheet {
 	_canDragDrop(selector) {
 		return this.isEditable;
 	}
-	
+
 	/** @inheritdoc */
 	async _onChangeInput(event) {
 		// Modify the effect when field is modified

@@ -4,26 +4,16 @@
 <div class="details-description">
 	{{{description}}}
 </div>
-<div class="grid-2-columns">
-	{{#if isSpellcaster}}
-		<button
-				class="item-control"
-				data-actor-id="{{actor.id}}"
-				data-item-id="{{item._id}}"
-				data-action="cast-spell"
-			>
-				{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
-			</button>
-		<button
-			class="item-control"
-			data-actor-id="{{actor._id}}"
-			data-item-id="{{item._id}}"
-			data-action="learn-spell"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
-		</button>
-	{{/if}}
-</div>
+{{#if isSpellcaster}}
+	<button
+		class="item-control"
+		data-actor-id="{{actor._id}}"
+		data-item-id="{{item._id}}"
+		data-action="cast-spell"
+	>
+		{{localize 'SHADOWDARK.chat_card.button.use_wand'}}
+	</button>
+{{/if}}
 <footer class="details-footer">
 	<span>
 		{{localize "SHADOWDARK.item.spell_tier"}}:

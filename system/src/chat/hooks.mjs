@@ -79,6 +79,16 @@ export function chatCardButtonAction(app, html, data) {
 		actor.castSpell(itemId);
 	});
 
+	const usePotionButton = html.find("button[data-action=use-potion]");
+	usePotionButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.usePotion(itemId);
+	});
+
 	const weaponAttackButton = html.find("button[data-action=roll-attack]");
 	weaponAttackButton.on("click", ev => {
 		ev.preventDefault();

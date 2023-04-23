@@ -74,6 +74,7 @@ SHADOWDARK.DEFAULTS = {
 	ITEM_IMAGES: {
 		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
+		Effect: "icons/commodities/tech/cog-brass.webp",
 		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",

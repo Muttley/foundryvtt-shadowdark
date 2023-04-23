@@ -9,9 +9,6 @@
   </header>
 
   <div class="card-content">
-		<p>
-			<b>{{localize "SHADOWDARK.item.spell_class"}}</b> <em>{{joinStrings item.system.class}}</em>
-		</p>
     {{{description}}}
   </div>
 
@@ -20,27 +17,9 @@
 			class="item-control"
 			data-actor-id="{{actor.id}}"
 			data-item-id="{{item._id}}"
-			data-action="drink-potion"
+			data-action="use-potion"
 		>
-			{{localize 'SHADOWDARK.chat_card.button.drink_potion'}}
+			{{localize 'SHADOWDARK.chat_card.button.use_potion'}}
 		</button>
 	</div>
-
-  <footer class="card-footer">
-		<span>
-			{{localize "SHADOWDARK.item.spell_tier"}}:
-			{{ item.system.tier }}
-		</span>
-		<span>
-			{{localize "SHADOWDARK.item.spell_duration"}}:
-			{{getSpellDuration
-				item.system.duration.type
-				item.system.duration.value
-			}}
-		</span>
-		<span>
-			{{localize "SHADOWDARK.item.spell_range"}}:
-			{{fromConfig "SPELL_RANGES" item.system.range }}
-		</span>
-  </footer>
 </div>
