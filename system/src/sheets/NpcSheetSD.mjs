@@ -94,7 +94,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 				attacks.push({itemId: i._id, display});
 			}
 			if (i.type === "NPC Feature") {
-				const description = jQuery(i.system.description).text();
+				const description = TextEditor.enrichHTML(jQuery(i.system.description).text());
 				const display = await renderTemplate(
 					"systems/shadowdark/templates/partials/npc-feature.hbs",
 					{
