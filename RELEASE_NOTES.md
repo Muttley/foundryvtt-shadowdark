@@ -4,6 +4,7 @@
 * [#319] Right-Click context menu binding to tab links on character sheets
 * [#321] We can now add AC Bonus effects to items
 * [#325] Bonuses from Weapon Mastery now functions as intended
+* [#350] Inline rolls of NPC Features now render properly
 
 ### Enhancements
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
