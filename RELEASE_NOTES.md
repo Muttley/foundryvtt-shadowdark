@@ -22,6 +22,7 @@
 	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
 * [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
 * [#339] Adds "Unlimited" as a choice for Spell Ranges
+* [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 
 ## v1.2.4
 
