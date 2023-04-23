@@ -204,6 +204,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 SHADOWDARK.NPC_MOVES = {
 	near: "SHADOWDARK.npc_move.near",
 	doubleNear: "SHADOWDARK.npc_move.double_near",
+	close: "SHADOWDARK.range.close",
 };
 
 SHADOWDARK.RANGES = {
