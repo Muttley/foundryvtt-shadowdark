@@ -5,6 +5,8 @@
 * [#321] We can now add AC Bonus effects to items
 * [#325] Bonuses from Weapon Mastery now functions as intended
 * [#336] Data migration always run for new worlds the first time they are opened
+* [#341] Wizard Mishap Tier 1-2 table now rerolls itself twice on a 1
+* [#350] Inline rolls of NPC Features now render properly
 
 ### Enhancements
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
@@ -23,6 +25,7 @@
 	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
 * [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
 * [#339] Adds "Unlimited" as a choice for Spell Ranges
+* [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 
 ## v1.2.4
 

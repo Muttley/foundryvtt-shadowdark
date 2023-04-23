@@ -356,7 +356,7 @@ export default class ItemSD extends Item {
 	 */
 	get totalDuration() {
 		const { duration } = this.system;
-		if (["unlimited", "focus"].includes(duration.type)) {
+		if (["unlimited", "focus", "permanent"].includes(duration.type)) {
 			return Infinity;
 		}
 		else if (["instant"].includes(duration.type)) {
