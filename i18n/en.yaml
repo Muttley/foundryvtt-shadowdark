@@ -334,6 +334,10 @@ SHADOWDARK.range.self_short: S
 SHADOWDARK.range.self: Self
 SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unlimited
+SHADOWDARK.range.touch_short: T
+SHADOWDARK.range.touch: Touch
+SHADOWDARK.range.samePlane_short: SP
+SHADOWDARK.range.samePlane: On the same plane
 SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
@@ -425,6 +429,7 @@ SHADOWDARK.spell_duration.focus: Focus
 SHADOWDARK.spell_duration.instant: Instant
 SHADOWDARK.spell_duration.real_time: Real Time
 SHADOWDARK.spell_duration.rounds: Rounds
+SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near

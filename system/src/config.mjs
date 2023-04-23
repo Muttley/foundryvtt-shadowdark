@@ -235,6 +235,7 @@ SHADOWDARK.SPELL_DURATIONS = {
 	rounds: "SHADOWDARK.spell_duration.rounds",
 	days: "SHADOWDARK.spell_duration.days",
 	realTime: "SHADOWDARK.spell_duration.real_time",
+	permanent: "SHADOWDARK.spell_duration.permanent",
 };
 
 SHADOWDARK.EFFECT_ASK_INPUT = [
@@ -256,6 +257,7 @@ SHADOWDARK.EFFECT_DURATIONS = {
 	hours: "SHADOWDARK.effect_duration.hours",
 	days: "SHADOWDARK.spell_duration.days",
 	focus: "SHADOWDARK.spell_duration.focus",
+	permanent: "SHADOWDARK.spell_duration.permanent",
 	unlimited: "SHADOWDARK.effect_duration.unlimited",
 };
 
@@ -312,6 +314,8 @@ SHADOWDARK.SPELL_RANGES = {
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
 	far: "SHADOWDARK.range.far",
+	touch: "SHADOWDARK.range.touch",
+	samePlane: "SHADOWDARK.range.samePlane",
 	unlimited: "SHADOWDARK.range.unlimited",
 };
 

@@ -393,7 +393,7 @@ export default class ItemSheetSD extends ItemSheet {
 		// Set duration
 		if (
 			this.item.system.tokenIcon?.show
-			&& !["unlimited", "focus", "instant"].includes(this.item.system.duration.type)
+			&& !["unlimited", "focus", "instant", "permanent"].includes(this.item.system.duration.type)
 		) {
 			if (this.item.system.duration.type === "rounds") {
 				duration.rounds = this.item.system.duration.value;
@@ -409,7 +409,7 @@ export default class ItemSheetSD extends ItemSheet {
 		if (
 			this.item.system.tokenIcon?.show
 			&& this.item.system.category === "condition"
-			&& ["unlimited", "focus", "instant"].includes(this.item.system.duration.type)
+			&& ["unlimited", "focus", "instant", "permanent"].includes(this.item.system.duration.type)
 		) {
 			duration.seconds = 1;
 		}
