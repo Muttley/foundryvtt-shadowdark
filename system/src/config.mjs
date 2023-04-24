@@ -101,6 +101,12 @@ SHADOWDARK.LIGHT_SETTING_NAMES = {
 	torch: "SHADOWDARK.light_source.torch",
 };
 
+SHADOWDARK.LIGHT_SOURCE_ITEM_IDS = [
+	"PkQXG3AaHNMVwGTc", // Light Spell
+	"rjNBToTJCYLLdVcT", // Light Spell (Double Time)
+	"BBDG7QpHOFXG6sKe", // Light Spell (Double Range)
+];
+
 SHADOWDARK.LIGHT_SETTINGS = {
 	lantern: {
 		alpha: 0.2,

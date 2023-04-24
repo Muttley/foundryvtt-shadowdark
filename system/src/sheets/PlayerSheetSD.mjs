@@ -144,7 +144,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Talents & Effects may need some user input
 		if (["Talent", "Effect"].includes(item.type)) return this._createItemWithEffect(item);
 
+		// Activate light spell if dropped onto the sheet
+		if (CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item.id)) {
+			return this._dropActivateLightSource(item);
+		}
+
 		super._onDropItem(event, data);
+	}
+
+	/**
+	 * Creates an item being a lightsource and activates it
+	 * @param {Item} item - Item that is a lightsource
+	 */
+	async _dropActivateLightSource(item) {
+		const actorItem = await super._onDropItemCreate(item);
+		this._toggleLightSource(actorItem[0]);
 	}
 
 	/**
@@ -370,6 +384,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
+		this._toggleLightSource(item);
+	}
+
+	async _onToggleSpellLost(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		this.actor.updateEmbeddedDocuments("Item", [
+			{
+				_id: itemId,
+				"system.lost": !item.system.lost,
+			},
+		]);
+	}
+
+	async _toggleLightSource(item) {
 		const active = !item.system.light.active;
 
 		if (active) {
@@ -386,7 +417,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		const dataUpdate = {
-			_id: itemId,
+			_id: item.id,
 			"system.light.active": active,
 		};
 
@@ -409,20 +440,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			);
 		}
 
-		this.actor.toggleLight(active, itemId);
-	}
-
-	async _onToggleSpellLost(event) {
-		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.getEmbeddedDocument("Item", itemId);
-
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				_id: itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
+		this.actor.toggleLight(active, item.id);
 	}
 
 	async _prepareItems(context) {
