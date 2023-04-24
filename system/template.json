@@ -161,6 +161,16 @@
 					"per_slot": 1,
 					"slots_used": 1
 				}
+			},
+			"lightSource": {
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				}
 			}
 		},
 		"Armor": {
@@ -179,16 +189,9 @@
 		"Basic": {
 			"templates": [
 				"common",
-				"physical"
+				"physical",
+				"lightSource"
 			],
-			"light": {
-				"active": false,
-				"hasBeenUsed": false,
-				"isSource": false,
-				"longevityMins": 60,
-				"remainingSecs": 3600,
-				"template": "torch"
-			},
 			"treasure": false,
 			"scroll": false
 		},
@@ -200,7 +203,8 @@
 		},
 		"Effect": {
 			"templates": [
-				"common"
+				"common",
+				"lightSource"
 			],
 			"duration": {
 				"value": -1,

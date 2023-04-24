@@ -282,6 +282,16 @@ export default class ItemSD extends Item {
 			const spellNames = await this.getSpellListSlugified();
 			return this._askEffectInput("spell", spellNames);
 		}
+		else if (key === "lightSource") {
+			const lightSourceList = await foundry.utils.fetchJsonWithTimeout(
+				"systems/shadowdark/assets/mappings/map-light-sources.json"
+			);
+			const lightSources = {};
+			Object.keys(lightSourceList).map(i => {
+				return lightSources[i] = game.i18n.localize(lightSourceList[i].lang);
+			});
+			return this._askEffectInput("lightSource", lightSources);
+		}
 		return value;
 	}
 

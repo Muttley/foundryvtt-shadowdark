@@ -111,8 +111,8 @@
     "mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
   },
   "lightSource": {
-    "defaultValue": "torch",
-    "effectKey": "system.bonuses.lightSource",
+    "defaultValue": "REPLACEME",
+    "effectKey": "system.light.template",
     "icon": "icons/magic/light/torch-fire-orange.webp",
     "lang": "SHADOWDARK.item.effect.predefined_effect.lightSource",
     "mode": "CONST.ACTIVE_EFFECT_MODES.OVERRIDE"

@@ -236,7 +236,20 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
 		);
 
-		super._onDropItemCreate(item);
+		// Activate lightsource tracking
+		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			const duration = item.totalDuration;
+			item = item.toObject();
+			item.system.light.longevitySecs = duration;
+			item.system.light.remainingSecs = duration;
+			item.system.light.longevityMins = duration / 60;
+		}
+
+		// Create the item
+		const actorItem = await super._onDropItemCreate(item);
+		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			this._toggleLightSource(actorItem[0]);
+		}
 	}
 
 	/**
