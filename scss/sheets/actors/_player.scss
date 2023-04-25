@@ -222,6 +222,12 @@
 		text-align: left;
 	}
 
+	.details-description {
+		@include p-reset;
+		padding-top: 4px;
+		padding-bottom: 8px;
+	}
+
 	.details-footer {
 		padding: 3px 0 0;
 
@@ -373,9 +379,22 @@
 		}
 	}
 
-	.inactive {
+	.inactive,
+	.use-potion,
+	.use-scroll,
+	.use-wand {
 		color: var(--inactive-control);
 	}
+
+	.use-potion,
+	.use-scroll,
+	.use-wand {
+		&:hover {
+			color: lightskyblue;
+			text-shadow: 2px 2px 2px black;
+		}
+	}
+
 
 	.language-list {
 		&:hover {

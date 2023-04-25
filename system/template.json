@@ -136,8 +136,11 @@
 			"Effect",
 			"NPC Attack",
 			"NPC Feature",
+			"Potion",
+			"Scroll",
 			"Spell",
 			"Talent",
+			"Wand",
 			"Weapon"
 		],
 		"templates": {
@@ -146,7 +149,17 @@
 				"properties": [],
 				"magicItem": false
 			},
+			"magic": {
+				"class": [],
+				"duration": {
+					"type": "",
+					"value": ""
+				},
+				"range": "",
+				"tier": 1
+			},
 			"physical": {
+				"broken": false,
 				"cost": {
 					"gp": 0,
 					"sp": 0,
@@ -196,7 +209,12 @@
 			"templates": [
 				"common",
 				"physical"
-			]
+			],
+			"slots": {
+				"free_carry": 0,
+				"per_slot": 10,
+				"slots_used": 1
+			}
 		},
 		"Effect": {
 			"templates": [
@@ -247,21 +265,30 @@
 				"common"
 			]
 		},
+		"Potion": {
+			"templates": ["common", "magic", "physical"],
+			"magicItem": true,
+			"spellName": ""
+		},
+		"Scroll": {
+			"templates": ["common", "magic", "physical"],
+			"magicItem": true,
+			"spellName": ""
+		},
 		"Spell": {
-			"templates": ["common"],
-			"class": [],
-			"duration": {
-				"type": "",
-				"value": ""
-			},
-			"lost": false,
-			"range": "",
-			"tier": 1
+			"templates": ["common", "magic"],
+			"lost": false
 		},
 		"Talent": {
 			"templates": ["common"],
 			"level": 1,
 			"talentClass": "level"
+		},
+		"Wand": {
+			"templates": ["common", "magic", "physical"],
+			"lost": false,
+			"magicItem": true,
+			"spellName": ""
 		},
 		"Weapon": {
 			"templates": [

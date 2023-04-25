@@ -1,4 +1,15 @@
 <div class="spell-details">
+	{{#ifNeq item.type "Spell"}}
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_name'}}</label>
+			<input
+				name="sytem.spellName"
+				type="text"
+				value="{{item.system.spellName}}"
+				placeholder="{{localize 'SHADOWDARK.item.spell_name'}}"
+			/>
+		</div>
+	{{/ifNeq}}
 	<div class="spell-detail">
 		<label>{{localize 'SHADOWDARK.item.spell_tier'}}</label>
 		{{numberInput

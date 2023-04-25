@@ -19,6 +19,7 @@ export default class ItemSheetSD extends ItemSheet {
 					initial: "tab-details",
 				},
 			],
+			dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}],
 		});
 	}
 
@@ -99,6 +100,7 @@ export default class ItemSheetSD extends ItemSheet {
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
 			properties: [],
 			propertiesDisplay: "",
+			showMagicItemCheckbox: item.system.isPhysical && !["Potion", "Scroll", "Wand"].includes(item.type),
 			source: source.system,
 			system: item.system,
 			usesSlots: item.system.slots !== undefined,
@@ -141,7 +143,7 @@ export default class ItemSheetSD extends ItemSheet {
 			context.effects = item.effects;
 		}
 
-		if (item.type === "Spell") {
+		if (["Potion", "Scroll", "Spell", "Wand"].includes(item.type)) {
 			context.casterClasses = [];
 
 			for (const key of this.item.system.class) {
@@ -166,6 +168,11 @@ export default class ItemSheetSD extends ItemSheet {
 	/* -------------------------------------------- */
 	/*  Event Handling                              */
 	/* -------------------------------------------- */
+
+	/** @inheritdoc */
+	_canDragDrop(selector) {
+		return this.isEditable;
+	}
 
 	/** @inheritdoc */
 	async _onChangeInput(event) {
@@ -212,6 +219,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/* ---------- Item Property Apps ---------- */
 
+
 	_onArmorProperties(event) {
 		event.preventDefault();
 
@@ -220,6 +228,42 @@ export default class ItemSheetSD extends ItemSheet {
 		new shadowdark.apps.ArmorPropertiesSD(
 			this.item, {event: event}
 		).render(true);
+	}
+
+	/** @inheritdoc */
+	async _onDrop(event) {
+		const data = TextEditor.getDragEventData(event);
+
+		switch (data.type) {
+			case "Item":
+				return this._onDropItemSD(event, data);
+		}
+	}
+
+	async _onDropItemSD(event, data) {
+		const myType = this.item.type;
+
+		if (!["Potion", "Scroll", "Wand"].includes(myType)) return;
+
+		const droppedItem = await fromUuid(data.uuid);
+		if (droppedItem.type !== "Spell") return;
+
+		const name = game.i18n.format(
+			`SHADOWDARK.item.name_from_spell.${myType}`,
+			{spellName: droppedItem.name}
+		);
+
+		const updateData = {
+			name,
+			system: droppedItem.system,
+			// TODO Add some kind of default cost to the new item?
+		};
+
+		delete updateData.system.lost;
+		updateData.system.magicItem = true;
+		updateData.system.spellName = droppedItem.name;
+
+		this.item.update(updateData);
 	}
 
 	_onMagicItemTypeProperties(event) {

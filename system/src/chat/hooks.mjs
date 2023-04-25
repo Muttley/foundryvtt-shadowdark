@@ -62,7 +62,7 @@ async function applyHpToMax(event) {
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
-export function chatCardButtonAction(app, html, data) {
+async function chatCardButtonAction(app, html, data) {
 	const hpButton = html.find("button[data-action=apply-hp-to-max]");
 	hpButton.on("click", ev => {
 		ev.preventDefault();
@@ -79,6 +79,26 @@ export function chatCardButtonAction(app, html, data) {
 		actor.castSpell(itemId);
 	});
 
+	const learnSpellButton = html.find("button[data-action=learn-spell]");
+	learnSpellButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.learnSpell(itemId);
+	});
+
+	const usePotionButton = html.find("button[data-action=use-potion]");
+	usePotionButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.usePotion(itemId);
+	});
+
 	const weaponAttackButton = html.find("button[data-action=roll-attack]");
 	weaponAttackButton.on("click", ev => {
 		ev.preventDefault();
@@ -91,13 +111,14 @@ export function chatCardButtonAction(app, html, data) {
 }
 
 export function chatCardBlind(app, html, data) {
-	if (app.blind && !game.user.isGM) {
+	if (game.user.isGM) return false;
+	if (app.blind) {
 		$(html).find(".blindable .dice-total").text("???");
 		$(html).find(".dice-rolls").remove();
 		$(html).find(".dice .part-total").remove();
-		return false; // Prevent further actions to happen
+		return true; // Prevent further actions to happen
 	}
-	return true;
+	return false;
 }
 
 /**
