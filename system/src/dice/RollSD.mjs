@@ -525,7 +525,7 @@ export default class RollSD extends Roll {
 	) {
 		const chatCardTemplate = options.chatCardTemplate
 			? options.chatCardTemplate
-			: "systems/shadowdark/templates/chat/roll-d20-card.hbs";
+			: "systems/shadowdark/templates/chat/roll-card.hbs";
 
 		const chatCardData = this._getChatCardTemplateData(data, options);
 
@@ -553,9 +553,10 @@ export default class RollSD extends Roll {
 			? chatData.flags.success
 			: null;
 
+		if ( options.rollMode === "blindroll" ) data.rolls.main.blind = true;
+
 		const content = await this._getChatCardContent(data, options);
 
-		if ( options.rollMode === "blindroll" ) chatData.blind = true;
 		chatData.content = content;
 
 		// Modify the flavor of the chat card

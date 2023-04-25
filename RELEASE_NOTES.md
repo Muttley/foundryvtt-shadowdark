@@ -7,6 +7,7 @@
 * [#341] Wizard Mishap Tier 1-2 table now rerolls itself twice on a 1
 * [#350] Inline rolls of NPC Features now render properly
 * [#322] Flask or Bottle had typo-cost in the Shadowdarkling tests
+* [#358] Updated Sleep spell description according to errata
 
 ### Enhancements
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
@@ -28,6 +29,7 @@
 * [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 * [#353] Shadowdarkling now tests basic items to have the correct cost
 * [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
+* [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
 
 ## v1.2.4

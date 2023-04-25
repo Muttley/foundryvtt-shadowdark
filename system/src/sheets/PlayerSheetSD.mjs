@@ -203,13 +203,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				)
 			) {
 				// Spell Advantage requires special handling as it uses the `advantage` bons
-				if (
-					[e.label, e.name].includes(
-						game.i18n.localize("SHADOWDARK.item.effect.predefined_effect.spellAdvantage")
-					)
-				) {
-					const key = "spellAdvantage";
-					item = await this._modifyEffectChangesWithInput(item, e, key);
+				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
+					// If there is no value with REPLACME, it is another type of advantage talent
+					if (e.changes.some(c => c.value === "REPLACME")) {
+						const key = "spellAdvantage";
+						item = await this._modifyEffectChangesWithInput(item, e, key);
+					}
 				}
 				else {
 					item = await this._modifyEffectChangesWithInput(item, e);
