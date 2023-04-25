@@ -7,7 +7,7 @@ export default class MigrationRunnerSD {
 
 	latestVersion = 0;
 
-	constructor() {
+	async buildMigrations() {
 		const unsortedMigrations = [];
 
 		for (const migration in migrations) {
@@ -189,6 +189,29 @@ export default class MigrationRunnerSD {
 	}
 
 	async run() {
+		shadowdark.log(`Current schema version ${this.currentVersion}`);
+
+		// Unless you actually set the value, the default is not stored in the db
+		// which causes issues with old schema updates being run unecessarily on
+		// brand new worlds.  So here we set the schemaVersion to the current
+		// system value if it has not already been set by a previous data migration
+		// running.
+		//
+		// We have to special case the 230417.2 schema version as this is where
+		// the migration fix was applied, and we need to make sure this particular
+		// schema update is run.
+		//
+		const systemSchemaVersion = game.system.flags.schemaVersion;
+
+		if (this.currentVersion === 0 && systemSchemaVersion > 230417.2) {
+			await game.settings.set(
+				"shadowdark", "schemaVersion",
+				Number(game.system.flags.schemaVersion)
+			);
+		}
+
+		await this.buildMigrations();
+
 		if (!this.needsMigration()) return;
 
 		ui.notifications.info(

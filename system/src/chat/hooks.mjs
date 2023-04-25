@@ -62,7 +62,7 @@ async function applyHpToMax(event) {
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
-export function chatCardButtonAction(app, html, data) {
+async function chatCardButtonAction(app, html, data) {
 	const hpButton = html.find("button[data-action=apply-hp-to-max]");
 	hpButton.on("click", ev => {
 		ev.preventDefault();
@@ -79,6 +79,26 @@ export function chatCardButtonAction(app, html, data) {
 		actor.castSpell(itemId);
 	});
 
+	const learnSpellButton = html.find("button[data-action=learn-spell]");
+	learnSpellButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.learnSpell(itemId);
+	});
+
+	const usePotionButton = html.find("button[data-action=use-potion]");
+	usePotionButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.usePotion(itemId);
+	});
+
 	const weaponAttackButton = html.find("button[data-action=roll-attack]");
 	weaponAttackButton.on("click", ev => {
 		ev.preventDefault();
@@ -90,6 +110,17 @@ export function chatCardButtonAction(app, html, data) {
 	});
 }
 
+export function chatCardBlind(app, html, data) {
+	if (game.user.isGM) return false;
+	if (app.blind) {
+		$(html).find(".blindable .dice-total").text("???");
+		$(html).find(".dice-rolls").remove();
+		$(html).find(".dice .part-total").remove();
+		return true; // Prevent further actions to happen
+	}
+	return false;
+}
+
 /**
  * Handles the rendering of a chat message to the log
  * @param {ChatLog} app - The ChatLog instance
@@ -98,5 +129,6 @@ export function chatCardButtonAction(app, html, data) {
  */
 export default function onRenderChatMessage(app, html, data) {
 	chatCardButtonAction(app, html, data);
-	highlightSuccessFailure(app, html, data);
+	const blind = chatCardBlind(app, html, data);
+	if (!blind) highlightSuccessFailure(app, html, data);
 }

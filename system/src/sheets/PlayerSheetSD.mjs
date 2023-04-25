@@ -71,6 +71,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleSpellLost(event)
 		);
 
+		html.find("[data-action='use-potion']").click(
+			event => this._onUsePotion(event)
+		);
+
+		html.find("[data-action='learn-spell']").click(
+			event => this._onLearnSpell(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -136,10 +144,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
-		const activeTab = $(document).find(".player section.active").data("tab");
 
-		// Spells dropped on the inventory should create spell scrolls instead of spells
-		if (item.type === "Spell" && activeTab === "tab-inventory") return this._createScroll(item);
+		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
 		// Talents & Effects may need some user input
 		if (["Talent", "Effect"].includes(item.type)) return this._createItemWithEffect(item);
@@ -217,13 +223,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				)
 			) {
 				// Spell Advantage requires special handling as it uses the `advantage` bons
-				if (
-					[e.label, e.name].includes(
-						game.i18n.localize("SHADOWDARK.item.effect.predefined_effect.spellAdvantage")
-					)
-				) {
-					const key = "spellAdvantage";
-					item = await this._modifyEffectChangesWithInput(item, e, key);
+				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
+					// If there is no value with REPLACME, it is another type of advantage talent
+					if (e.changes.some(c => c.value === "REPLACME")) {
+						const key = "spellAdvantage";
+						item = await this._modifyEffectChangesWithInput(item, e, key);
+					}
 				}
 				else {
 					item = await this._modifyEffectChangesWithInput(item, e);
@@ -255,18 +260,71 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	/**
 	 * Creates a scroll from a spell item
 	 */
-	async _createScroll(spell) {
-		const scroll = {
-			type: "Basic",
-			img: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
-			name: `Spell Scroll: ${spell.name}`,
-			system: {
-				description: `<p>@UUID[${spell.uuid}]</p>`,
-				treasure: true,
-				scroll: true,
+	async _createItemFromSpellDialog(item) {
+		const content = await renderTemplate(
+			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
+			{
+				spellName: item.name,
+				isGM: game.user.isGM,
+			}
+		);
+
+		const buttons = {
+			potion: {
+				icon: '<i class="fas fa-prescription-bottle"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.potion.label"),
+				callback: () => this._createItemFromSpell(item, "Potion"),
+			},
+			scroll: {
+				icon: '<i class="fas fa-scroll"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.scroll.label"),
+				callback: () => this._createItemFromSpell(item, "Scroll"),
+			},
+			spell: {
+				icon: '<i class="fas fa-hand-sparkles"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.spell.label"),
+				callback: () => this._createItemFromSpell(item, "Spell"),
+			},
+			wand: {
+				icon: '<i class="fas fa-magic"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.wand.label"),
+				callback: () => this._createItemFromSpell(item, "Wand"),
 			},
 		};
-		super._onDropItemCreate(scroll);
+
+		return Dialog.wait({
+			title: game.i18n.format("SHADOWDARK.dialog.item.create_from_spell", { spellName: item.name }),
+			content,
+			buttons,
+			close: () => false,
+			default: "scroll",
+		});
+	}
+
+	async _createItemFromSpell(spell, type) {
+		const name = (type !== "Spell")
+			? game.i18n.format(
+				`SHADOWDARK.item.name_from_spell.${type}`,
+				{spellName: spell.name}
+			)
+			: spell.name;
+
+		const itemData = {
+			type,
+			name,
+			system: spell.system,
+		};
+
+		if (type === "Spell") {
+			itemData.img = spell.img;
+		}
+		else {
+			delete itemData.system.lost;
+			itemData.system.magicItem = true;
+			itemData.system.spellName = spell.name;
+		}
+
+		super._onDropItemCreate(itemData);
 	}
 
 	async _onItemChatClick(event) {
@@ -315,6 +373,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		new shadowdark.apps.PlayerLanguagesSD(
 			this.actor, {event: event}
 		).render(true);
+	}
+
+	async _onLearnSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.learnSpell(itemId);
 	}
 
 	async _onOpenGemBag(event) {
@@ -368,6 +434,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		]);
 
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
+	}
+
+	async _onUsePotion(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.usePotion(itemId);
 	}
 
 	async _sendToggledLightSourceToChat(active, item) {
@@ -458,6 +532,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _prepareItems(context) {
 		const gems = [];
+
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
@@ -474,11 +549,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				type: "Basic",
 				items: [],
 			},
+			potion: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.potions"),
+				type: "Potion",
+				items: [],
+			},
+			scroll: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.scrolls"),
+				type: "Scroll",
+				items: [],
+			},
+			wand: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.wands"),
+				type: "Wand",
+				items: [],
+			},
 			treasure: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
 				items: [],
 			},
 		};
+
 		const spells = {};
 
 		const talents = {
@@ -512,7 +603,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let slotCount = 0;
 
 		for (const i of this._sortAllItems(context)) {
-			if (i.type === "Armor" || i.type === "Basic" || i.type === "Weapon") {
+			if (i.system.isPhysical && i.type !== "Gem") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
 
 				// We calculate how many slots are used by this item, taking

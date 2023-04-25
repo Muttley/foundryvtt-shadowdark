@@ -26,10 +26,6 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onCastSpell(event)
 		);
 
-		html.find("[data-action='cast-scroll']").click(
-			event => this._onCastSpellScroll(event)
-		);
-
 		html.find(".item-create").click(
 			event => this._onItemCreate(event)
 		);
@@ -42,7 +38,7 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	async attachDetailsButtonEvents(item, detailsDiv) {
-		if (item.type === "Spell") {
+		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
 			const castSpellButton = $(detailsDiv).find("button[data-action=cast-spell]");
 
 			castSpellButton.on("click", ev => {
@@ -55,10 +51,36 @@ export default class ActorSheetSD extends ActorSheet {
 			});
 		}
 
-		if (item.type === "Weapon") {
-			const castSpellButton = $(detailsDiv).find("button[data-action=roll-attack]");
+		if (item.type === "Scroll") {
+			const learnSpellButton = $(detailsDiv).find("button[data-action=learn-spell]");
 
-			castSpellButton.on("click", ev => {
+			learnSpellButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.learnSpell(itemId);
+			});
+		}
+
+		if (item.type === "Potion") {
+			const usePotionButton = $(detailsDiv).find("button[data-action=use-potion]");
+
+			usePotionButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.usePotion(itemId);
+			});
+		}
+
+		if (item.type === "Weapon") {
+			const useWeaponButton = $(detailsDiv).find("button[data-action=roll-attack]");
+
+			useWeaponButton.on("click", ev => {
 				ev.preventDefault();
 				const itemId = $(ev.currentTarget).data("item-id");
 				const actorId = $(ev.currentTarget).data("actor-id");
@@ -251,37 +273,6 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 
 		parentTableRow.toggleClass("expanded");
-	}
-
-	async _onCastSpellScroll(event) {
-		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		const spellUuid = item.system.description.substring(
-			item.system.description.indexOf("[") + 1,
-			item.system.description.lastIndexOf("]")
-		);
-
-		const spell = await fromUuid(spellUuid);
-
-		// Do nothing if not a spellcaster
-		const abilityId = this.actor.getSpellcastingAbility();
-		if (!abilityId) return;
-
-		const data = {
-			rollType: spell.name.slugify(),
-			item: spell,
-			scroll: item,
-			actor: this.actor,
-			abilityBonus: this.actor.abilityModifier(abilityId),
-			talentBonus: this.actor.system.bonuses.spellcastingCheckBonus,
-		};
-
-		const parts = ["@abilityBonus", "@talentBonus"];
-
-		return spell.rollSpell(parts, data);
 	}
 
 	async _onCastSpell(event) {

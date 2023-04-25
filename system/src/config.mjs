@@ -70,7 +70,22 @@ SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
 	FREE_COIN_CARRY: 100,
+	LEARN_SPELL_DC: 15,
 	LIGHT_TRACKER_UPDATE_INTERVAL_SECS: 30,
+	ITEM_IMAGES: {
+		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+		Basic: "icons/containers/bags/pouch-simple-brown.webp",
+		Effect: "icons/commodities/tech/cog-brass.webp",
+		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
+		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
+		Potion: "icons/consumables/potions/bottle-corked-red.webp",
+		Scroll: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+		Spell: "icons/magic/symbols/runes-star-blue.webp",
+		Talent: "icons/sundries/books/book-worn-brown-grey.webp",
+		Wand: "icons/weapons/wands/wand-gem-violet.webp",
+		Weapon: "icons/weapons/swords/swords-short.webp",
+	},
 };
 
 SHADOWDARK.INVENTORY = {

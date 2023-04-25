@@ -243,13 +243,28 @@ export default class ActorSD extends Actor {
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
 
+		if (!item) {
+			ui.notifications.warn(
+				"Item no longer exists",
+				{ permanent: false }
+			);
+			return;
+		}
+
 		const abilityId = this.getSpellcastingAbility();
 
+		let rollType;
+		if (item.type === "Spell") {
+			rollType = item.name.slugify();
+		}
+		else {
+			rollType = item.system.spellName.slugify();
+		}
+
 		const data = {
-			rollType: item.name.slugify(),
+			rollType,
 			item: item,
-			scroll: false,
-			actor: this.actor,
+			actor: this,
 			abilityBonus: this.abilityModifier(abilityId),
 			talentBonus: this.system.bonuses.spellcastingCheckBonus,
 		};
@@ -281,6 +296,75 @@ export default class ActorSD extends Actor {
 		return game.users.find(user => user.character?.id === this.id)
 			? true
 			: false;
+	}
+
+	async learnSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const result = await this.rollAbility(
+			"int",
+			{target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC}
+		);
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.spell_learn.success"
+			: "SHADOWDARK.chat.spell_learn.failure";
+
+		const message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				spellName: item.system.spellName,
+			}
+		);
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (success) {
+			const spell = {
+				type: "Spell",
+				img: item.img,
+				name: item.system.spellName,
+				system: {
+					class: item.system.class,
+					description: item.system.description,
+					duration: item.system.duration,
+					properties: item.system.properties,
+					range: item.system.range,
+					tier: item.system.tier,
+				},
+			};
+
+			this.createEmbeddedDocuments("Item", [spell]);
+		}
+
+		// original scroll always lost regardless of outcome
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			[itemId]
+		);
 	}
 
 	numGearSlots() {
@@ -401,7 +485,7 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	async rollAttack(itemId) {
@@ -726,6 +810,61 @@ export default class ActorSD extends Actor {
 		}]);
 
 		return newArmorClass;
+	}
+
+	async usePotion(itemId) {
+		const item = this.items.get(itemId);
+
+		renderTemplate(
+			"systems/shadowdark/templates/dialog/confirm-use-potion.hbs",
+			{name: item.name}
+		).then(html => {
+			new Dialog({
+				title: "Confirm Use",
+				content: html,
+				buttons: {
+					Yes: {
+						icon: "<i class=\"fa fa-check\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						callback: async () => {
+							const potionDescription = await item.getEnrichedDescription();
+
+							const cardData = {
+								actor: this,
+								item: item,
+								message: game.i18n.format(
+									"SHADOWDARK.chat.potion_used",
+									{
+										name: this.name,
+										potionName: item.name,
+									}
+								),
+								potionDescription,
+							};
+
+							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
+
+							const content = await renderTemplate(template, cardData);
+
+							await ChatMessage.create({
+								content,
+								rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+							});
+
+							await this.deleteEmbeddedDocuments(
+								"Item",
+								[itemId]
+							);
+						},
+					},
+					Cancel: {
+						icon: "<i class=\"fa fa-times\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+					},
+				},
+				default: "Yes",
+			}).render(true);
+		});
 	}
 
 	/* -------------------------------------------- */
