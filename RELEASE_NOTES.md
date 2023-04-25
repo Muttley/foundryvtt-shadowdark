@@ -30,6 +30,7 @@
 * [#353] Shadowdarkling now tests basic items to have the correct cost
 * [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
+* [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
 
 ## v1.2.4
 
