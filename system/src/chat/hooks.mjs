@@ -110,6 +110,16 @@ async function chatCardButtonAction(app, html, data) {
 	});
 }
 
+export function chatCardBlind(app, html, data) {
+	if (app.blind && !game.user.isGM) {
+		$(html).find(".blindable .dice-total").text("???");
+		$(html).find(".dice-rolls").remove();
+		$(html).find(".dice .part-total").remove();
+		return false; // Prevent further actions to happen
+	}
+	return true;
+}
+
 /**
  * Handles the rendering of a chat message to the log
  * @param {ChatLog} app - The ChatLog instance
@@ -118,5 +128,6 @@ async function chatCardButtonAction(app, html, data) {
  */
 export default function onRenderChatMessage(app, html, data) {
 	chatCardButtonAction(app, html, data);
-	highlightSuccessFailure(app, html, data);
+	const blind = chatCardBlind(app, html, data);
+	if (!blind) highlightSuccessFailure(app, html, data);
 }

@@ -91,14 +91,14 @@ export default function registerHandlebarsHelpers() {
 
 	Handlebars.registerHelper("remainingTimeLabel", (effect, options) => {
 		const remainingDuration = effect.remainingDuration.remaining;
-		if (remainingDuration === Infinity && effect.rounds) {
-			if (effect.rounds === 1) {
+		if (effect.rounds > 0) {
+			if (remainingDuration === 1) {
 				return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_round");
 			}
 			else {
 				return game.i18n.format(
 					"SHADOWDARK.apps.effect_panel.duration_label.x_rounds",
-					{turns: effect.rounds}
+					{rounds: remainingDuration }
 				);
 			}
 		}

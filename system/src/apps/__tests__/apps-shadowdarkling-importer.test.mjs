@@ -1043,7 +1043,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					totalUnits: 1,
 					slots: 1,
 					cost: 3,
-					currency: "gp",
+					currency: "sp",
 				},
 				{
 					instanceId: "lfxz9pod",
@@ -1169,6 +1169,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 							: item.name;
 					expect(actor.items.contents[0].name.toLowerCase()).equal(
 						name.toLowerCase());
+					expect(actor.items.contents[0].system.cost[item.currency]).equal(item.cost);
 					await actor.delete();
 				});
 			});
