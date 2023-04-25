@@ -253,7 +253,13 @@ export default class ActorSD extends Actor {
 
 		const abilityId = this.getSpellcastingAbility();
 
-		const slugName = item.system.spellName.slugify();
+		let slugName;
+		if (item.type === "Spell") {
+			slugName = item.name.slugify();
+		}
+		else {
+			slugName = item.system.spellName.slugify();
+		}
 
 		const data = {
 			slugName,

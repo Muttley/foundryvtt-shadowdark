@@ -111,13 +111,14 @@ async function chatCardButtonAction(app, html, data) {
 }
 
 export function chatCardBlind(app, html, data) {
-	if (app.blind && !game.user.isGM) {
+	if (game.user.isGM) return false;
+	if (app.blind) {
 		$(html).find(".blindable .dice-total").text("???");
 		$(html).find(".dice-rolls").remove();
 		$(html).find(".dice .part-total").remove();
-		return false; // Prevent further actions to happen
+		return true; // Prevent further actions to happen
 	}
-	return true;
+	return false;
 }
 
 /**
