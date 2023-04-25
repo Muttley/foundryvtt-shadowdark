@@ -27,6 +27,7 @@
 * [#339] Adds "Unlimited" as a choice for Spell Ranges
 * [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 * [#353] Shadowdarkling now tests basic items to have the correct cost
+* [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
 
 ## v1.2.4
 
