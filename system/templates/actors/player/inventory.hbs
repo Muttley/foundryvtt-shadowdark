@@ -132,6 +132,15 @@
 											>
 												<i class="fa-solid fa-scroll"></i>
 											</a>
+											&nbsp;
+											<a
+												class="item-control use-scroll"
+												data-action="learn-spell"
+												data-item-id="{{item._id}}"
+												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.learn_spell'}}"
+											>
+												<i class="fa-solid fa-graduation-cap"></i>
+											</a>
 									{{/ifEq}}
 									{{#ifEq item.type "Wand"}}
 										{{#unless item.system.lost}}
@@ -143,6 +152,7 @@
 											>
 												<i class="fa-solid fa-wand-magic-sparkles"></i>
 											</a>
+											&nbsp;
 										{{/unless}}
 										<a
 											class="item-control toggle-spell-lost"

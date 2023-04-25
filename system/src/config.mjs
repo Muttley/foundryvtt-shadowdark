@@ -70,6 +70,7 @@ SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
 	FREE_COIN_CARRY: 100,
+	LEARN_SPELL_DC: 15,
 	LIGHT_TRACKER_UPDATE_INTERVAL_SECS: 30,
 	ITEM_IMAGES: {
 		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",

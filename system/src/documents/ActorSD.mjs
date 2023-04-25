@@ -253,15 +253,10 @@ export default class ActorSD extends Actor {
 
 		const abilityId = this.getSpellcastingAbility();
 
-		const slugName = item.name.slugify();
-
-		const re = /^(wand|scroll)-of-(.*)$/;
-		const match = slugName.match(re);
-
-		const rollType = match ? match[2] : slugName;
+		const slugName = item.system.spellName.slugify();
 
 		const data = {
-			rollType,
+			slugName,
 			item: item,
 			actor: this,
 			abilityBonus: this.abilityModifier(abilityId),
@@ -295,6 +290,75 @@ export default class ActorSD extends Actor {
 		return game.users.find(user => user.character?.id === this.id)
 			? true
 			: false;
+	}
+
+	async learnSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const result = await this.rollAbility(
+			"int",
+			{target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC}
+		);
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.spell_learn.success"
+			: "SHADOWDARK.chat.spell_learn.failure";
+
+		const message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				spellName: item.system.spellName,
+			}
+		);
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (success) {
+			const spell = {
+				type: "Spell",
+				img: item.img,
+				name: item.system.spellName,
+				system: {
+					class: item.system.class,
+					description: item.system.description,
+					duration: item.system.duration,
+					properties: item.system.properties,
+					range: item.system.range,
+					tier: item.system.tier,
+				},
+			};
+
+			this.createEmbeddedDocuments("Item", [spell]);
+		}
+
+		// original scroll always lost regardless of outcome
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			[itemId]
+		);
 	}
 
 	numGearSlots() {
@@ -415,7 +479,7 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 	async rollAttack(itemId) {
@@ -790,8 +854,6 @@ export default class ActorSD extends Actor {
 				default: "Yes",
 			}).render(true);
 		});
-
-
 	}
 
 	/* -------------------------------------------- */

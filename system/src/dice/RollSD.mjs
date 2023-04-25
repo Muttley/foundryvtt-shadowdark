@@ -86,6 +86,7 @@ export default class RollSD extends Roll {
 				}
 			}
 
+			// TODO This should really be set in the ItemSD rollSpell method...
 			// Spell? -> Set a target
 			if (data.item?.isSpell()) {
 				options.target = data.item.system.tier + 10;

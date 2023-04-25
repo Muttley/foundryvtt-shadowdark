@@ -267,11 +267,13 @@
 		},
 		"Potion": {
 			"templates": ["common", "magic", "physical"],
-			"magicItem": true
+			"magicItem": true,
+			"spellName": ""
 		},
 		"Scroll": {
 			"templates": ["common", "magic", "physical"],
-			"magicItem": true
+			"magicItem": true,
+			"spellName": ""
 		},
 		"Spell": {
 			"templates": ["common", "magic"],
@@ -285,7 +287,8 @@
 		"Wand": {
 			"templates": ["common", "magic", "physical"],
 			"lost": false,
-			"magicItem": true
+			"magicItem": true,
+			"spellName": ""
 		},
 		"Weapon": {
 			"templates": [

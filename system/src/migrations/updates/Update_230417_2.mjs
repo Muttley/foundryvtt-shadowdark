@@ -34,7 +34,7 @@ export default class Update_230417_2 extends UpdateBaseSD {
 
 			delete scroll.system.lost;
 			scroll.system.magicItem = true;
-
+			scroll.system.spellName = spell.name;
 
 			const actor = game.actors.get(actorData._id);
 			actor.createEmbeddedDocuments("Item", [scroll]);

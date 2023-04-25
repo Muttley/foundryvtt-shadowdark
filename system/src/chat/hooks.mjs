@@ -62,7 +62,7 @@ async function applyHpToMax(event) {
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
-export function chatCardButtonAction(app, html, data) {
+async function chatCardButtonAction(app, html, data) {
 	const hpButton = html.find("button[data-action=apply-hp-to-max]");
 	hpButton.on("click", ev => {
 		ev.preventDefault();
@@ -77,6 +77,16 @@ export function chatCardButtonAction(app, html, data) {
 		const actor = game.actors.get(actorId);
 
 		actor.castSpell(itemId);
+	});
+
+	const learnSpellButton = html.find("button[data-action=learn-spell]");
+	learnSpellButton.on("click", ev => {
+		ev.preventDefault();
+		const itemId = $(ev.currentTarget).data("item-id");
+		const actorId = $(ev.currentTarget).data("actor-id");
+		const actor = game.actors.get(actorId);
+
+		actor.learnSpell(itemId);
 	});
 
 	const usePotionButton = html.find("button[data-action=use-potion]");

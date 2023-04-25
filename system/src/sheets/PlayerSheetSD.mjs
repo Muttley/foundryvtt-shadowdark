@@ -75,6 +75,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onUsePotion(event)
 		);
 
+		html.find("[data-action='learn-spell']").click(
+			event => this._onLearnSpell(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -285,9 +289,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			system: spell.system,
 		};
 
-		if (type !== "Spell") {
+		if (type === "Spell") {
+			itemData.img = spell.img;
+		}
+		else {
 			delete itemData.system.lost;
 			itemData.system.magicItem = true;
+			itemData.system.spellName = spell.name;
 		}
 
 		super._onDropItemCreate(itemData);
@@ -339,6 +347,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		new shadowdark.apps.PlayerLanguagesSD(
 			this.actor, {event: event}
 		).render(true);
+	}
+
+	async _onLearnSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.learnSpell(itemId);
 	}
 
 	async _onOpenGemBag(event) {

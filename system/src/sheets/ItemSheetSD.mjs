@@ -261,6 +261,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		delete updateData.system.lost;
 		updateData.system.magicItem = true;
+		updateData.system.spellName = droppedItem.name;
 
 		this.item.update(updateData);
 	}

@@ -51,6 +51,19 @@ export default class ActorSheetSD extends ActorSheet {
 			});
 		}
 
+		if (item.type === "Scroll") {
+			const learnSpellButton = $(detailsDiv).find("button[data-action=learn-spell]");
+
+			learnSpellButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.learnSpell(itemId);
+			});
+		}
+
 		if (item.type === "Potion") {
 			const usePotionButton = $(detailsDiv).find("button[data-action=use-potion]");
 

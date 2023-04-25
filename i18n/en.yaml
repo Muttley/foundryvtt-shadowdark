@@ -86,6 +86,9 @@ SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
 SHADOWDARK.chat.potion_used: "{name} used a Potion"
+SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
+SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
+SHADOWDARK.chat.spell_learn.title: Learning Spell
 SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
@@ -280,6 +283,7 @@ SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
+SHADOWDARK.item.spell_name: Spell Name
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
 SHADOWDARK.item.spell.label: Spell
@@ -341,24 +345,24 @@ SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.double_near: Double Near
-SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.npc_move.near: Near
+SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far_short: F
 SHADOWDARK.range.far: Far
 SHADOWDARK.range.near_short: "N"
 SHADOWDARK.range.near: Near
-SHADOWDARK.range.self_short: S
-SHADOWDARK.range.self: Self
-SHADOWDARK.range.unlimited_short: U
-SHADOWDARK.range.unlimited: Unlimited
-SHADOWDARK.range.touch_short: T
-SHADOWDARK.range.touch: Touch
+SHADOWDARK.range.nearLine_short: NL
+SHADOWDARK.range.nearLine: Near Line
 SHADOWDARK.range.samePlane_short: SP
 SHADOWDARK.range.samePlane: On the same plane
-SHADOWDARK.range.nearLine: Near Line
-SHADOWDARK.range.nearLine_short: NL
+SHADOWDARK.range.self_short: S
+SHADOWDARK.range.self: Self
+SHADOWDARK.range.touch_short: T
+SHADOWDARK.range.touch: Touch
+SHADOWDARK.range.unlimited_short: U
+SHADOWDARK.range.unlimited: Unlimited
 SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
@@ -442,6 +446,7 @@ SHADOWDARK.sheet.player.talents: Talents
 SHADOWDARK.sheet.player.title: Title
 SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
 SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
+SHADOWDARK.sheet.player.tooltip.learn_spell: Learn Spell
 SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
 SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
@@ -451,9 +456,9 @@ SHADOWDARK.spell_caster.wizard: Wizard
 SHADOWDARK.spell_duration.days: Days
 SHADOWDARK.spell_duration.focus: Focus
 SHADOWDARK.spell_duration.instant: Instant
+SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_duration.real_time: Real Time
 SHADOWDARK.spell_duration.rounds: Rounds
-SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
