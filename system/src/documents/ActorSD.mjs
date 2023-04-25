@@ -253,16 +253,16 @@ export default class ActorSD extends Actor {
 
 		const abilityId = this.getSpellcastingAbility();
 
-		let slugName;
+		let rollType;
 		if (item.type === "Spell") {
-			slugName = item.name.slugify();
+			rollType = item.name.slugify();
 		}
 		else {
-			slugName = item.system.spellName.slugify();
+			rollType = item.system.spellName.slugify();
 		}
 
 		const data = {
-			slugName,
+			rollType,
 			item: item,
 			actor: this,
 			abilityBonus: this.abilityModifier(abilityId),
