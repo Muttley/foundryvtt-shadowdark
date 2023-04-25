@@ -28,6 +28,7 @@
 * [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 * [#353] Shadowdarkling now tests basic items to have the correct cost
 * [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
+* [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 
 ## v1.2.4
 
