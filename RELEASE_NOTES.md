@@ -35,6 +35,7 @@
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
 * [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
+* [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
 
 ## v1.2.4
 
