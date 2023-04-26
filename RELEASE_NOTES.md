@@ -27,11 +27,13 @@
 	- Automatic cleanup of expired effects
 	- [#272] Active Effects are ready for V11
 	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
+	- [#357] Added Light Source effects that are working like prior lightsources
 * [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
 * [#339] Adds "Unlimited" as a choice for Spell Ranges
 * [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
 * [#353] Shadowdarkling now tests basic items to have the correct cost
 * [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
+* [#357] Added Light Source mappings for easy additions of new light source types
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
 * [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.

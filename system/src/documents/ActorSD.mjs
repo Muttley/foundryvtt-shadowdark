@@ -708,9 +708,14 @@ export default class ActorSD extends Actor {
 	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
 
-		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
+		// Get the mappings
+		const lightSources = await foundry.utils.fetchJsonWithTimeout(
+			"systems/shadowdark/assets/mappings/map-light-sources.json"
+		);
+
+		const lightData = lightSources[
 			item.system.light.template
-		];
+		].light;
 
 		this.changeLightSettings(lightData);
 	}
