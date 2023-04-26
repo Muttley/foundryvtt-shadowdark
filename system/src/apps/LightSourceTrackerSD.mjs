@@ -20,6 +20,8 @@ export default class LightSourceTrackerSD extends Application {
 
 		this.performingTick = false;
 		this.realTime = new RealTimeSD();
+
+		this.showUserWarning = false;
 	}
 
 	/** @inheritdoc */
@@ -139,6 +141,7 @@ export default class LightSourceTrackerSD extends Application {
 			monitoredLightSources: this.monitoredLightSources,
 			isRealtimeEnabled: this.realTime.isEnabled(),
 			paused: this._isPaused(),
+			showUserWarning: this.showUserWarning,
 		};
 
 		return context;
@@ -248,6 +251,7 @@ export default class LightSourceTrackerSD extends Application {
 
 		const workingLightSources = [];
 
+		let usersWithoutCharacters = 0;
 		try {
 			for (const user of game.users) {
 				if (user.isGM) continue;
@@ -255,7 +259,10 @@ export default class LightSourceTrackerSD extends Application {
 				if (!(user.active || this._monitorInactiveUsers())) continue;
 
 				const actor = user.character;
-				if (!actor) continue; // User may not have an Actor yet
+				if (!actor) {
+					usersWithoutCharacters++;
+					continue;
+				}
 
 				const actorData = actor.toObject(false);
 				actorData.lightSources = [];
@@ -269,8 +276,9 @@ export default class LightSourceTrackerSD extends Application {
 				}
 
 				workingLightSources.push(actorData);
-
 			}
+
+			this.showUserWarning = usersWithoutCharacters > 0 ? true : false;
 
 			this.monitoredLightSources = workingLightSources.sort((a, b) => {
 				if (a.name < b.name) {

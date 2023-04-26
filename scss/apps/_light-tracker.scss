@@ -127,4 +127,10 @@
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
 	}
+
+	.warning {
+		@include p-reset;
+		color: red;
+		text-align: center;
+	}
 }
