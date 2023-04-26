@@ -34,6 +34,7 @@
 * [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
+* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
 
 ## v1.2.4
 
