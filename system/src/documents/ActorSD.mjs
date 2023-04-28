@@ -278,10 +278,10 @@ export default class ActorSD extends Actor {
 
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
-		if (token) token.document.update({light: lightData});
+		if (token) await token.document.update({light: lightData});
 
 		// Update the prototype as well
-		Actor.updateDocuments([{
+		await Actor.updateDocuments([{
 			_id: this._id,
 			"prototypeToken.light": lightData,
 		}]);
@@ -558,9 +558,7 @@ export default class ActorSD extends Actor {
 
 	async getActiveLightSources() {
 		const items = this.items.filter(
-			item => item.type === "Basic"
-		).filter(
-			item => item.system.light.isSource && item.system.light.active
+			item => item.isActiveLight()
 		).sort((a, b) => {
 			const a_name = a.name.toLowerCase();
 			const b_name = b.name.toLowerCase();
@@ -689,10 +687,10 @@ export default class ActorSD extends Actor {
 
 	async toggleLight(active, itemId) {
 		if (active) {
-			this.turnLightOn(itemId);
+			await this.turnLightOn(itemId);
 		}
 		else {
-			this.turnLightOff();
+			await this.turnLightOff();
 		}
 	}
 
@@ -702,7 +700,7 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.changeLightSettings(noLight);
+		await this.changeLightSettings(noLight);
 	}
 
 	async turnLightOn(itemId) {
@@ -717,7 +715,7 @@ export default class ActorSD extends Actor {
 			item.system.light.template
 		].light;
 
-		this.changeLightSettings(lightData);
+		await this.changeLightSettings(lightData);
 	}
 
 	async updateArmor(updatedItem) {

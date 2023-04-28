@@ -67,7 +67,11 @@
 									data-item-id="{{light._id}}"
 									data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
 								>
-									<i class="fa-solid fa-fire-flame-curved"></i>
+									{{#ifEq light.type "Basic"}}
+										<i class="flame fa-solid fa-fire-flame-curved"></i>
+									{{else}}
+										<i class="magic fa-solid fa-wand-magic-sparkles"></i>
+									{{/ifEq}}
 								</a>
 							</div>
 							<div>
