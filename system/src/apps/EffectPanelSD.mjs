@@ -105,17 +105,13 @@ export default class EffectPanelSD extends Application {
 		const effectData = this._controller.getEffectData();
 		// Get effects that have unique origin
 		const expiredEffects = effectData.temporaryEffects
-			.filter(e => e.isExpired)
+			.filter(e => {
+				// Light source Effects are cleaned up by the Light Source Tracker
+				return e.isExpired && !e.effectName === "Light Source";
+			})
 			.filter((value, index, self) => {
 				return self.findIndex(v => v.origin === value.origin) === index;
 			});
-
-		// Turn of all expired effects that are light source
-		await Promise.all(expiredEffects.map(e => {
-			const i = this._controller._getSource(e);
-			if (e.changes.some(c => c.key === "system.light.template")) return i.parent.sheet._toggleLightSource(i);
-			return e;
-		}));
 
 		expiredEffects.forEach(e => {
 			const i = this._controller._getSource(e);
@@ -315,6 +311,9 @@ export class EffectPanelControllerSD {
 				{effectName: sourceItem.name}
 			)}</h4>`,
 			yes: async () => {
+				if (sourceItem.system.light.active) {
+					await sourceItem.parent.sheet._toggleLightSource(sourceItem);
+				}
 				await sourceItem.delete();
 				this._panel.refresh();
 			},

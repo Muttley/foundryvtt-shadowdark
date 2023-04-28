@@ -72,7 +72,13 @@
 	}
 
 	.disable-light {
-		color: darkorange;
+		.flame {
+			color: darkorange;
+		}
+
+		.magic {
+			color: darkcyan;
+		}
 	}
 
 	.status {

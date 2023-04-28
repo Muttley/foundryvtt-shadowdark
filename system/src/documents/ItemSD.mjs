@@ -196,7 +196,7 @@ export default class ItemSD extends Item {
 	}
 
 	isLight() {
-		return this.type === "Basic" && this.system.light.isSource;
+		return ["Basic", "Effect"].includes(this.type) && this.system.light.isSource;
 	}
 
 	isSpell() {

@@ -245,6 +245,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
 			const duration = item.totalDuration;
 			item = item.toObject();
+			item.system.light.isSource = true;
 			item.system.light.longevitySecs = duration;
 			item.system.light.remainingSecs = duration;
 			item.system.light.longevityMins = duration / 60;
@@ -516,6 +517,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			"Item", [dataUpdate]
 		);
 
+		await this.actor.toggleLight(active, item.id);
+
 		// We only update the Light Source Tracker if this Actor is currently
 		// selected by a User as their character
 		//
@@ -526,8 +529,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				updatedLight
 			);
 		}
-
-		this.actor.toggleLight(active, item.id);
 	}
 
 	async _prepareItems(context) {
