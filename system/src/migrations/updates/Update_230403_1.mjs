@@ -31,8 +31,10 @@ export default class Update_230403_1 extends UpdateBaseSD {
 		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
 			const value = actorData.system.abilities[ability].value;
 
-			updateData[`system.abilities.${ability}.-=value`] = null;
-			updateData[`system.abilities.${ability}.base`] = value - bonuses[ability];
+			if (value) {
+				updateData[`system.abilities.${ability}.-=value`] = null;
+				updateData[`system.abilities.${ability}.base`] = value - bonuses[ability];
+			}
 		}
 
 		return updateData;
@@ -77,9 +79,11 @@ export default class Update_230403_1 extends UpdateBaseSD {
 			// attached to an actor
 			//
 			for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-				const value = Number(itemData.system.abilities[ability].value || 0);
-				updateData[`system.abilities.${ability}.-=value`] = null;
-				updateData[`system.abilities.${ability}.bonus`] = value;
+				const value = itemData.system.abilities[ability].value;
+				if (value) {
+					updateData[`system.abilities.${ability}.-=value`] = null;
+					updateData[`system.abilities.${ability}.bonus`] = Number(value);
+				}
 			}
 
 			const effect = item.effects.find(e => e.label === "abilityImprovement");

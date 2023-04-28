@@ -86,6 +86,7 @@ export default class RollSD extends Roll {
 				}
 			}
 
+			// TODO This should really be set in the ItemSD rollSpell method...
 			// Spell? -> Set a target
 			if (data.item?.isSpell()) {
 				options.target = data.item.system.tier + 10;
@@ -276,7 +277,8 @@ export default class RollSD extends Roll {
 		const damageDie = data.item.system.damage.value;
 
 		if ( data.rolls.main.critical !== "failure" ) {
-			if ( data.rolls.main.critical === "success" ) numDice *= 2;
+			if ( data.rolls.main.critical === "success" ) numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
 			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
@@ -310,7 +312,8 @@ export default class RollSD extends Roll {
 			}
 
 			// Multiply the dice with the items critical multiplier
-			if ( data.rolls.main.critical === "success" ) numDice *= data.item.system.damage.critMultiplier;
+			if ( data.rolls.main.critical === "success") numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
 			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
@@ -523,7 +526,7 @@ export default class RollSD extends Roll {
 	) {
 		const chatCardTemplate = options.chatCardTemplate
 			? options.chatCardTemplate
-			: "systems/shadowdark/templates/chat/roll-d20-card.hbs";
+			: "systems/shadowdark/templates/chat/roll-card.hbs";
 
 		const chatCardData = this._getChatCardTemplateData(data, options);
 
@@ -551,9 +554,10 @@ export default class RollSD extends Roll {
 			? chatData.flags.success
 			: null;
 
+		if ( options.rollMode === "blindroll" ) data.rolls.main.blind = true;
+
 		const content = await this._getChatCardContent(data, options);
 
-		if ( options.rollMode === "blindroll" ) chatData.blind = true;
 		chatData.content = content;
 
 		// Modify the flavor of the chat card
@@ -616,6 +620,8 @@ export default class RollSD extends Roll {
 			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
+		// TODO Make sure we honor the whisper and/or blind settings of the roll
+		//
 		// Only await on the final dice roll of the sequence as it looks nicer
 		// if all the dice roll before the chat message appears
 		const numRolls = rollsToShow.length;

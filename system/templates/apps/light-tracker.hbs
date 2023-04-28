@@ -32,6 +32,12 @@
 				</p>
 			</div>
 		{{/if}}
+		{{#if showUserWarning}}
+			<div class="warning">
+				<span><i class="fa-solid fa-circle-exclamation"></i></span>
+				{{localize 'SHADOWDARK.light-tracker.user_warning'}}
+			</div>
+		{{/if}}
 	</header>
 	<hr />
 	<section class="light-source-grid">
@@ -61,7 +67,11 @@
 									data-item-id="{{light._id}}"
 									data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
 								>
-									<i class="fa-solid fa-fire-flame-curved"></i>
+									{{#ifEq light.type "Basic"}}
+										<i class="flame fa-solid fa-fire-flame-curved"></i>
+									{{else}}
+										<i class="magic fa-solid fa-wand-magic-sparkles"></i>
+									{{/ifEq}}
 								</a>
 							</div>
 							<div>

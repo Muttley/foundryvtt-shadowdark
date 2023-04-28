@@ -1,27 +1,37 @@
 <p>
-	<b>Type</b> <em>{{fromConfig "WEAPON_TYPES" itemData.system.type}}</em>
+	<b>{{localize 'SHADOWDARK.item.weapon_type'}}</b> <em>{{fromConfig "WEAPON_TYPES" item.system.type}}</em>
 </p>
 <p>
-	<b>Range</b> <em>{{fromConfig "RANGES" itemData.system.range}}</em>
+	<b>{{localize 'SHADOWDARK.item.weapon_range'}}</b> <em>{{fromConfig "RANGES" item.system.range}}</em>
 </p>
-{{#if itemData.system.damage.oneHanded}}
+{{#if item.system.damage.oneHanded}}
 	<p>
-		<b>1H Damage</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" itemData.system.damage.oneHanded}}</em>
+		<b>{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" item.system.damage.oneHanded}}</em>
 	</p>
 {{/if}}
-{{#if itemData.system.damage.twoHanded}}
+{{#if item.system.damage.twoHanded}}
 	<p>
-		<b>2H Damage</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" itemData.system.damage.twoHanded}}</em>
+		<b>{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}</b> <em>{{fromConfig "WEAPON_BASE_DAMAGE" item.system.damage.twoHanded}}</em>
 	</p>
 {{/if}}
 <p>
-	{{#if itemData.system.baseWeapon}}
-	<b>Base Type</b> <em>{{fromConfig "WEAPON_BASE_WEAPON" itemData.system.baseWeapon}}</em>
+	{{#if item.system.baseWeapon}}
+	<b>{{localize 'SHADOWDARK.item.weapon.base_weapon.title'}}</b> <em>{{fromConfig "WEAPON_BASE_WEAPON" item.system.baseWeapon}}</em>
 	{{/if}}
 </p>
-{{{description}}}
+<div class="details-description">
+	{{{description}}}
+</div>
+<button
+	class="item-control"
+	data-actor-id="{{actor.id}}"
+	data-item-id="{{item._id}}"
+	data-action="roll-attack"
+>
+	{{localize 'SHADOWDARK.chat_card.button.attack'}}
+</button>
 <footer class="details-footer">
-	{{#each itemData.system.properties as |prop|}}
+	{{#each item.system.properties as |prop|}}
 		<span>{{fromConfig "WEAPON_PROPERTIES" prop}}</span>
 	{{/each}}
 </footer>

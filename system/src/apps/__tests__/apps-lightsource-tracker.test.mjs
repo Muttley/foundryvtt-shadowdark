@@ -12,7 +12,7 @@ export const options = {
 	preSelected: true,
 };
 
-export default ({ describe, it, after, expect }) => {
+export default ({ describe, it, after, before, expect }) => {
 	const originalSettings = {
 		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
@@ -157,14 +157,17 @@ export default ({ describe, it, after, expect }) => {
 	});
 
 	describe("_isPaused()", () => {
-		// Ensure that realtime tracking is enabled.
-		game.setting.set("shadodark", "realtimeLightTracking", true);
 		// Store original setting
 		const setting = game.settings.get(
 			"shadowdark", "pauseLightTrackingWithGame"
 		);
 		const paused = game.paused;
-		game.togglePause(false);
+
+		before(async () => {
+			// Ensure that realtime tracking is enabled.
+			await game.settings.set("shadowdark", "trackLightSources", true);
+			game.togglePause(false);
+		});
 
 		// Restore settings
 		after(() => {

@@ -6,7 +6,7 @@
 					<th>&nbsp;</th>
 					<th width="95px">{{localize 'SHADOWDARK.inventory.label.quantity'}}</th>
 					<th width="55px">{{localize 'SHADOWDARK.inventory.label.slots'}}</th>
-					<th width="30px">&nbsp;</th>
+					<th width="50px">&nbsp;</th>
 				</tr>
 				{{#each inventory as |section sid|}}
 					<tr class="inventory-section-header">
@@ -30,21 +30,21 @@
 						<th>&nbsp;</th>
 					</tr>
 					{{#each section.items as |item|}}
-						<tr class="item" data-item-id="{{item._id}}" draggable="true">
+						<tr
+							class="item"
+							data-item-id="{{item._id}}"
+							draggable="true"
+						>
 							<td>
 								<div
-									class="item-image
-									{{#ifEq item.type "Weapon" }}item-rollable{{/ifEq}}
-									{{#if item.system.scroll }}item-rollable{{/if}}
-									"
-									{{#ifEq item.type "Weapon" }}data-action="item-attack"{{/ifEq}}
-									{{#if item.system.scroll}}data-action="cast-scroll"{{/if}}
+									class="item-image"
 									style="background-image: url({{item.img}})"
 									data-item-id="{{item._id}}"
 								>
+									<i class="fas fa-comment fa-lg"></i>
 								</div>
 								<a
-									class="item-control show-details"
+									class="item-control show-details {{#if item.system.lost}}spell-lost{{/if}}"
 									data-item-id="{{item._id}}"
 									{{#if item.isLightSource}}
 										data-tooltip="{{lightSourceTimeRemaining}}"
@@ -111,6 +111,61 @@
 									>
 										<i class="fa-solid fa-fire-flame-curved"></i>
 									</a>
+								{{/if}}
+								{{#ifEq item.type "Potion"}}
+										<a
+											class="item-control use-potion"
+											data-action="use-potion"
+											data-item-id="{{item._id}}"
+											data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_potion'}}"
+										>
+											<i class="fas fa-prescription-bottle"></i>
+										</a>
+								{{/ifEq}}
+								{{#if ../../isSpellcaster}}
+									{{#ifEq item.type "Scroll"}}
+											<a
+												class="item-control use-scroll"
+												data-action="cast-spell"
+												data-item-id="{{item._id}}"
+												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
+											>
+												<i class="fa-solid fa-scroll"></i>
+											</a>
+											&nbsp;
+											<a
+												class="item-control use-scroll"
+												data-action="learn-spell"
+												data-item-id="{{item._id}}"
+												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.learn_spell'}}"
+											>
+												<i class="fa-solid fa-graduation-cap"></i>
+											</a>
+									{{/ifEq}}
+									{{#ifEq item.type "Wand"}}
+										{{#unless item.system.lost}}
+											<a
+												class="item-control use-wand"
+												data-action="cast-spell"
+												data-item-id="{{item._id}}"
+												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_wand'}}"
+											>
+												<i class="fa-solid fa-wand-magic-sparkles"></i>
+											</a>
+											&nbsp;
+										{{/unless}}
+										<a
+											class="item-control toggle-spell-lost"
+											data-item-id="{{item._id}}"
+											data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
+										>
+											{{#if item.system.lost}}
+												<i style="color:red;" class="fa-solid fa-xmark"></i>
+											{{else}}
+												<i style="color:green;" class="fa-solid fa-check"></i>
+											{{/if}}
+										</a>
+									{{/ifEq}}
 								{{/if}}
 							</td>
 						</tr>

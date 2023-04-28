@@ -8,10 +8,11 @@
 		"fvtt": "fvtt",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
-		"test": "jest"
+		"test": "jest",
+		"fvtt": "fvtt"
 	},
 	"devDependencies": {
-		"@foundryvtt/foundryvtt-cli": "^0.0.6",
+		"@foundryvtt/foundryvtt-cli": "^0.0.7",
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"del": "^7.0.0",
 		"fancy-log": "^2.0.0",

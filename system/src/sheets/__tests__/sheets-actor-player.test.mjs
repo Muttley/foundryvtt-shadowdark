@@ -118,6 +118,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	/* Event-based methods */
+	// @todo: Write tests
 	describe("_onItemQuantityDecrement(event)", () => {
 		let actor = {};
 
@@ -140,6 +141,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
+	// @todo: Write tests
 	describe("_onItemQuantityIncrement(event)", () => {
 		let actor = {};
 
@@ -229,7 +231,8 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 		});
 
-		// @todo: If implementing invertedCtrlBehavior - store & restore settings
+		// @todo: If implementing quick-keys for rolling with adv/disadv
+		//        store & restore settings here!
 
 		abilities.forEach(ability => {
 			it(`rolls and displays result in chat for ${ability} ability roll`, async () => {
@@ -359,9 +362,11 @@ export default ({ describe, it, after, before, expect }) => {
 	/* Non-event tests */
 
 	// @todo: determine what tests are needed here, has a lot of branches
+	// @todo: Write tests
 	describe("_prepareItems(context)", () => {});
 
 	// @todo: is there any circumstance where this needs to be tested more than
 	//        already done in _prepareItems(context)?
+	// @todo: Write tests
 	describe("_sortAllItems(context)", () => {});
 };

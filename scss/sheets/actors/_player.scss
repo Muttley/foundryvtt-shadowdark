@@ -222,6 +222,12 @@
 		text-align: left;
 	}
 
+	.details-description {
+		@include p-reset;
+		padding-top: 4px;
+		padding-bottom: 8px;
+	}
+
 	.details-footer {
 		padding: 3px 0 0;
 
@@ -267,10 +273,6 @@
 			font-size: 14px;
 			text-align: center;
 			border: none;
-
-			& .item-rollable:hover {
-				background-image: url("/icons/svg/d20-grey.svg") !important;
-			}
 
 			& td:first-child {
 				padding-left: 8px;
@@ -341,12 +343,24 @@
 	}
 
 	.item-image {
+		@include p-reset;
+		display: inline-block;
 		width: 24px;
 		height: 24px;
-		border-radius: 3px;
-		background-size: cover;
-		display: inline-block;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
 		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+		&:hover {
+			background: none !important;
+			color: white;
+		}
 	}
 
 	.item-toggle-equipped {
@@ -365,9 +379,22 @@
 		}
 	}
 
-	.inactive {
+	.inactive,
+	.use-potion,
+	.use-scroll,
+	.use-wand {
 		color: var(--inactive-control);
 	}
+
+	.use-potion,
+	.use-scroll,
+	.use-wand {
+		&:hover {
+			color: lightskyblue;
+			text-shadow: 2px 2px 2px black;
+		}
+	}
+
 
 	.language-list {
 		&:hover {

@@ -1,5 +1,5 @@
-@use "../abstracts" as *;
-@use "../mixins" as *;
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
 
 .shadowdark.sheet.item {
 	@include p-reset;
@@ -129,34 +129,6 @@
 			list-style-type: none;
 			background-color: var(--background-highlight);
 		}
-	}
-
-	.effect-header-data,
-	.effect-header,
-	.effect-data {
-		display: grid;
-		gap: 4px;
-		grid-template-columns: 30px 150px 50px 50px 50px 1fr;
-		font-weight: bold;
-		font-size: 14px;
-		align-items: center;
-
-		effect-icon {
-			img {
-				height: 24px;
-				width: 24px;
-				border-radius: 2px;
-				display: inline-block;
-			}
-		}
-	}
-
-	.effect-header {
-		font-size: 16px;
-	}
-
-	.effect-data {
-		background: var(--form-background);
 	}
 
 	.item-list {
@@ -305,7 +277,7 @@
 	.spell-details {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-column: span 3;
 		column-gap: 4px;
 	}
@@ -321,7 +293,6 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 		column-gap: 4px;
-
 	}
 
 	.weapon-details {

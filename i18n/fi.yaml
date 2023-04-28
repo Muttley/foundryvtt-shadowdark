@@ -36,7 +36,11 @@ SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
-SHADOWDARK.apps.shadowdarkling-importer.instruction: Visit shadowdarklings.net and save as JSON. Copy the content of file into this box and click import
+SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
+SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
+SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
@@ -270,6 +274,8 @@ SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelm�
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.interval.hint: Kuinka usein seurattuja valonlähteitä päivitetään (minuuteissa).
+SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
+SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
 SHADOWDARK.settings.track_light_sources.interval.name: Valonlähteiden seurannan intervalli
 SHADOWDARK.settings.track_light_sources.name: Seuraa valonlähteiden aikaa
 SHADOWDARK.settings.track_light_sources.open_on_start.hint: Jos valitset tämän, valonlähteiden seurannan ikkuna avautuu järjestelmän käynnistyksen yhteydessä (vain pelimestarille).
@@ -291,6 +297,7 @@ SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
 SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
+SHADOWDARK.sheet.general.roll_hp: Roll HP
 SHADOWDARK.sheet.item.tab.description: Kuvaus
 SHADOWDARK.sheet.item.tab.details: Yksityiskohdat
 SHADOWDARK.sheet.item.tab.light: Valonlähde
@@ -303,6 +310,7 @@ SHADOWDARK.sheet.npc.movement_short: Liike
 SHADOWDARK.sheet.npc.movement: Liikkumisnopeus
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus
+SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry: Laji
 SHADOWDARK.sheet.player.available_spells: Saatavilla olevat loitsut
 SHADOWDARK.sheet.player.background: Tausta

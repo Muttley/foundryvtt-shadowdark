@@ -14,7 +14,7 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: false,
 		type: Number,
-		default: Number(game.system.flags.schemaVersion),
+		default: 0,
 	});
 
 	// -----------------
@@ -122,5 +122,18 @@ export default function registerSystemSettings() {
 			step: 10,
 		},
 		requiresReload: true,
+	});
+
+	// ----------------------
+	//  EFFECT PANEL SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "showPassiveEffects", {
+		name: "SHADOWDARK.settings.effect_panel.show_passive.name",
+		hint: "SHADOWDARK.settings.effect_panel.show_passive.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
 	});
 }

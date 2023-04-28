@@ -1,4 +1,15 @@
 <div class="spell-details">
+	{{#ifNeq item.type "Spell"}}
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_name'}}</label>
+			<input
+				name="sytem.spellName"
+				type="text"
+				value="{{item.system.spellName}}"
+				placeholder="{{localize 'SHADOWDARK.item.spell_name'}}"
+			/>
+		</div>
+	{{/ifNeq}}
 	<div class="spell-detail">
 		<label>{{localize 'SHADOWDARK.item.spell_tier'}}</label>
 		{{numberInput
@@ -10,29 +21,13 @@
 	</div>
 	<div class="spell-detail">
 		<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
-		<div class="spell-duration">
-			{{#if showRoundValue}}
-				<input
-						name="system.duration.value"
-						type="text"
-						class="spell-duration-value"
-						value="{{system.duration.value}}"
-				/>
-			{{/if}}
-			<select
-				name="system.duration.type"
-				{{#unless showRoundValue}}
-					style="grid-column: span 2;"
-				{{/unless}}
-			>
-				<option value="">&mdash;</option>
-				{{selectOptions
-					config.SPELL_DURATIONS
-					selected=system.duration.type
-					localize=false
-				}}
-			</select>
-		</div>
+		{{> items/partials/duration
+			base="system.duration"
+			duration=system.duration
+			type="spell"
+			choices=config.SPELL_DURATIONS
+			variableDuration=variableDuration
+		}}
 	</div>
 	<div class="spell-detail">
 		<label>{{localize 'SHADOWDARK.item.spell_range'}}</label>
