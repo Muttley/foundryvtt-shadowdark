@@ -8,14 +8,14 @@
 		"fvtt": "fvtt",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
-		"test": "jest",
-		"fvtt": "fvtt"
+		"test": "jest"
 	},
 	"devDependencies": {
 		"@foundryvtt/foundryvtt-cli": "^0.0.7",
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"del": "^7.0.0",
 		"fancy-log": "^2.0.0",
+		"glob": "^10.2.2",
 		"gulp": "^4.0.2",
 		"gulp-eslint-new": "^1.7.2",
 		"gulp-if": "^3.0.0",
@@ -24,8 +24,10 @@
 		"gulp-yaml": "^2.0.4",
 		"jest": "^29.5.0",
 		"merge-stream": "^2.0.0",
+		"nedb-promises": "^6.2.1",
 		"rollup": "^3.17.3",
 		"sass": "^1.58.3",
-		"yargs": "^17.7.1"
+		"yaml": "^2.2.2",
+		"yargs": "^17.7.2"
 	}
 }
