@@ -1,0 +1,42 @@
+{
+  "name": "Hold Portal",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You magically hold a portal closed for the duration. A creature must make a successful STR check vs. your spellcasting check to open the portal.</p><p>The knock spell ends this spell.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.q109XEqMceJBEX7m]{Spell Effect: Hold Portal}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "rounds",
+      "value": "10"
+    },
+    "lost": false,
+    "range": "near",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.q600IZtPTAgkz6vB"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079824,
+    "modifiedTime": 1681852769088,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "q600IZtPTAgkz6vB",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

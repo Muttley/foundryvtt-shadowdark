@@ -1,0 +1,39 @@
+{
+  "name": "Iron Spikes",
+  "type": "Basic",
+  "img": "icons/tools/fasteners/pin-spiked.webp",
+  "system": {
+    "description": "<p>Strong spikes. Each has a hole for threading</p><p>rope. Can be hammered in with weapons or other iron spikes.</p>",
+    "properties": [],
+    "cost": {
+      "gp": 1,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "quantity": 10,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 10,
+      "slots_used": 1
+    },
+    "treasure": false
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678530233302,
+    "modifiedTime": 1678530916604,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "EPndk3DPOEOSvbga",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

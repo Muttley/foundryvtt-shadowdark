@@ -1,0 +1,42 @@
+{
+  "name": "Alarm",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You touch one object, such as a door threshold, setting a magical alarm on it.</p><p>If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.</p><p></p><p>If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "days",
+      "value": "1"
+    },
+    "lost": false,
+    "range": "close",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/sonic/bell-alarm-red-purple.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.dBBfp7KpHXBcSEjg"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079771,
+    "modifiedTime": 1681328060447,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "dBBfp7KpHXBcSEjg",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

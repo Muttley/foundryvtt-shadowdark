@@ -1,0 +1,42 @@
+{
+  "name": "Sleep",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You weave a lulling spell that fills a near-sized cube extending from you. Creatures in the area of effect fall into a deep sleep if they are LV 2 or less. </p><p>Vigorous shaking or being injured wakes them.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Spell Effect: Sleep}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": -1
+    },
+    "lost": false,
+    "range": "near",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/control/sleep-bubble-purple.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.n1I5OLR6M2e0jLbi"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079844,
+    "modifiedTime": 1682402295311,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "_id": "n1I5OLR6M2e0jLbi",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

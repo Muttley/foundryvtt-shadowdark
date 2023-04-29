@@ -1,0 +1,64 @@
+{
+  "name": "Condition: Unconscious",
+  "type": "Effect",
+  "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+  "system": {
+    "description": "<p>The character is unconscious.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 123910236890,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Condition: Unconscious",
+      "icon": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+      "origin": "Item.2UFWFSeffj7vrSSR",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "iTrME6gdEDXnxloZ",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1682147372310,
+    "modifiedTime": 1682175741061,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "2UFWFSeffj7vrSSR",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

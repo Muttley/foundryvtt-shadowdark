@@ -1,0 +1,42 @@
+{
+  "name": "Charm Person",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You magically beguile one humanoid of LV 2 or less within near range, who regards you as a friend for the duration.</p><p>The spell ends if you or your allies do anything harmful to the target.</p><p>The target knows it was magically charmed after the spell ends.</p><p>Roll [[/r 1d8]] to determine amount of days effective</p><p>@UUID[Compendium.shadowdark.spell-effects.Z0YwWUGs3WYC6OGn]{Spell Effect: Charm Person}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "days",
+      "value": "1d8"
+    },
+    "lost": false,
+    "range": "near",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/life/heart-shadow-red.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.0VCMisYBNpLkx28M"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079799,
+    "modifiedTime": 1681852714851,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "0VCMisYBNpLkx28M",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

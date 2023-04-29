@@ -1,0 +1,64 @@
+{
+  "name": "Spell Effect: Zone of Truth",
+  "type": "Effect",
+  "img": "icons/skills/social/trading-justice-scale-gold.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Signika, sans-serif\">Can’t utter a deliberate lie when within range from source.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "focus"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Truthful",
+      "icon": "icons/skills/social/trading-justice-scale-gold.webp",
+      "origin": "Item.cL5aPfXcad9FtHoK",
+      "duration": {
+        "rounds": 1,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "tx8UjK6umZHVyLJ6",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681851833739,
+    "modifiedTime": 1681852603015,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "cL5aPfXcad9FtHoK",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

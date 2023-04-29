@@ -1,0 +1,39 @@
+{
+  "name": "Pole",
+  "type": "Basic",
+  "img": "icons/commodities/wood/wood-pole.webp",
+  "system": {
+    "description": "<p>Wooden, 10' long.</p>",
+    "properties": [],
+    "cost": {
+      "gp": 0,
+      "sp": 5,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "treasure": false
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678530594719,
+    "modifiedTime": 1678530916607,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "15X5GTX96y339EKY",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

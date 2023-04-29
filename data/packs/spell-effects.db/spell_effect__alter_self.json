@@ -1,0 +1,64 @@
+{
+  "name": "Spell Effect: Alter Self",
+  "type": "Effect",
+  "img": "icons/magic/control/energy-stream-link-spiral-orange.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "5",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Alter Self",
+      "icon": "icons/magic/control/energy-stream-link-spiral-orange.webp",
+      "origin": "Item.f2RsbovyTLEZvxuF",
+      "duration": {
+        "rounds": 5,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "W3lcwErj4xWLokVF",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681850783271,
+    "modifiedTime": 1681852603012,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "f2RsbovyTLEZvxuF",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Make a Random Magic Item",
+  "type": "Talent",
+  "img": "icons/equipment/neck/pendant-faceted-silver-green.webp",
+  "system": {
+    "description": "<p>Make one random magic item. See <em>Magic Items</em> compendium.</p>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.w6v6rp1rdhJs5Zxj"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1682008883125,
+    "modifiedTime": 1682009019175,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "Brm7tpVnXnx0ZpND"
+}

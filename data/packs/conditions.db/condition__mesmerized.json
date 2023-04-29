@@ -1,0 +1,64 @@
+{
+  "name": "Condition: Mesmerized",
+  "type": "Effect",
+  "img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "focus"
+    },
+    "start": {
+      "value": 123910258779,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Condition: Mesmerized",
+      "icon": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+      "origin": "Item.vmcHEQWOyX933G1R",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "3XkiakzqwT78EG4j",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1682169475160,
+    "modifiedTime": 1682175741061,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "vmcHEQWOyX933G1R",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

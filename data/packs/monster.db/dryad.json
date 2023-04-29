@@ -1,0 +1,275 @@
+{
+  "name": "Dryad",
+  "type": "NPC",
+  "img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+  "system": {
+    "alignment": "neutral",
+    "attributes": {
+      "hp": {
+        "max": 19,
+        "value": 19,
+        "hd": 0
+      },
+      "ac": {
+        "value": 13
+      }
+    },
+    "level": {
+      "value": 4
+    },
+    "notes": "<p><em>A coy, emerald-skinned fey covered in leaves. It bonds with and protects a tree.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 staff -1 (1d4) or 1 charm, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p><p><strong>Charm</strong>. Near, one creature, DC 14 CHA or friendship for 1d8 days.</p><p></p><p><strong>Meld</strong>. Step inside bonded tree.</p>",
+    "spellcastingAbility": "",
+    "abilities": {
+      "str": {
+        "mod": -1
+      },
+      "int": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "darkAdapted": true,
+    "move": "near",
+    "moveNote": ""
+  },
+  "prototypeToken": {
+    "name": "Dryad",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "name": "Staff",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 1,
+          "bonus": -1,
+          "damage": {
+            "numDice": null
+          }
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d4",
+          "special": ""
+        },
+        "attackType": "physical",
+        "ranges": [
+          "close"
+        ]
+      },
+      "_id": "eUzu9yoKiawo2RNU",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679422703849,
+        "modifiedTime": 1679422712819,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    },
+    {
+      "name": "Charm",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 1,
+          "bonus": 0,
+          "damage": {
+            "numDice": null
+          }
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d8",
+          "special": "Charm"
+        },
+        "attackType": "special",
+        "ranges": [
+          "near"
+        ]
+      },
+      "_id": "0aLFEGglOehZZfnT",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679422717380,
+        "modifiedTime": 1679497441709,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    },
+    {
+      "name": "Charm",
+      "type": "NPC Feature",
+      "system": {
+        "description": "<p>Near, one creature, DC 14 CHA or friendship for 1d8 days.</p>",
+        "properties": [],
+        "magicItem": false
+      },
+      "_id": "xii04KaH82Q3bOPv",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679422735705,
+        "modifiedTime": 1679422745164,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    },
+    {
+      "name": "Meld",
+      "type": "NPC Feature",
+      "system": {
+        "description": "<p>Step inside bonded tree.</p>",
+        "properties": [],
+        "magicItem": false
+      },
+      "_id": "uDqKreLkC9dEb47t",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679422748486,
+        "modifiedTime": 1679422756905,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.monster.vXaqgfDykZPdXnIm"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.1.2",
+    "coreVersion": "10.291",
+    "createdTime": 1679422638434,
+    "modifiedTime": 1680381104019,
+    "lastModifiedBy": "5tzCT7bJKM9kuuO3"
+  },
+  "_id": "vXaqgfDykZPdXnIm",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

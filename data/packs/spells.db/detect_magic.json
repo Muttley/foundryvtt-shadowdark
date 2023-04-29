@@ -1,0 +1,42 @@
+{
+  "name": "Detect Magic",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.74WjFjHmUmLAiNGC]{Spell Effect: Detect Magic}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "focus",
+      "value": -1
+    },
+    "lost": false,
+    "range": "near",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/perception/eye-slit-pink.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Rt1sdRbZ43mfec1t"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079816,
+    "modifiedTime": 1681852734990,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "Rt1sdRbZ43mfec1t",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}
