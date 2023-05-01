@@ -743,7 +743,7 @@ export default ({ describe, it, expect }) => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { main: { critical: null } };
 			mockItemData.damageParts = [];
-			mockItemData.item.system.bonuses.damageMultiplier = 4;
+			mockItemData.actor.system.bonuses.damageMultiplier = 4;
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);

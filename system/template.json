@@ -102,6 +102,7 @@
 					"failureThreshold": 1,
 					"multiplier": 2
 				},
+				"damageMultiplier": 1,
 				"gearSlots": 0,
 				"hauler": false,
 				"lightSource": "",
@@ -312,8 +313,7 @@
 					"failureThreshold": 1,
 					"successThreshold": 20,
 					"multiplier": 2
-				},
-				"damageMultiplier": 1
+				}
 			},
 			"range": "close",
 			"type": "melee",

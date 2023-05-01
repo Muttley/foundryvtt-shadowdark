@@ -403,7 +403,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				await _e.sheet._createPredefinedEffect(testKey, _pde);
 				await waitForInput();
 
-				expect(_e.effects.contents[0].transfer).is.false;
+				expect(_e.effects.contents[0].transfer).is.true;
 
 				const _pe = await _p.createEmbeddedDocuments("Item", [_e]);
 				expect(_pe.length).equal(1);
@@ -412,7 +412,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				expect(_pe[0].effects.contents[0].changes[0].value).equal("2");
 				expect(_p.items.size).equal(1);
 
-				expect(_p.system.bonuses.damageMultiplier).is.undefined;
+				expect(_p.system.bonuses.damageMultiplier).equal(2);
 				await _pe[0].delete();
 			});
 		});

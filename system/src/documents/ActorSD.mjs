@@ -511,7 +511,7 @@ export default class ActorSD extends Actor {
 		if (item.system.bonuses.damageBonus) {
 			data.damageParts.push("@itemDamageBonus");
 			data.itemDamageBonus = item.system.bonuses.damageBonus
-				*= item.system.bonuses.damageMultiplier;
+				*= parseInt(this.system.bonuses.damageMultiplier, 10);
 		}
 
 		// Talents & Ability modifiers
@@ -530,7 +530,7 @@ export default class ActorSD extends Actor {
 
 				data.talentBonus = bonuses.meleeAttackBonus;
 				data.meleeDamageBonus = bonuses.meleeDamageBonus
-					*= item.system.bonuses.damageMultiplier;
+					*= parseInt(this.system.bonuses.damageMultiplier, 10);
 				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
@@ -538,7 +538,7 @@ export default class ActorSD extends Actor {
 
 				data.talentBonus = bonuses.rangedAttackBonus;
 				data.rangedDamageBonus = bonuses.rangedDamageBonus
-					*= item.system.bonuses.damageMultiplier;
+					*= parseInt(this.system.bonuses.damageMultiplier, 10);
 				data.damageParts.push("@rangedDamageBonus");
 			}
 
@@ -546,7 +546,7 @@ export default class ActorSD extends Actor {
 			const weaponMasterBonus = this.calcWeaponMasterBonus(item);
 			data.talentBonus += weaponMasterBonus;
 			data.weaponMasteryBonus = weaponMasterBonus
-				* item.system.bonuses.damageMultiplier;
+				* parseInt(this.system.bonuses.damageMultiplier, 10);
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
 		}
 
