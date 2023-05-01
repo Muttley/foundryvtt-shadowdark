@@ -322,7 +322,7 @@ export default class RollSD extends Roll {
 				1);
 
 			const primaryDmgRoll = (damageMultiplier > 1)
-				? `${numDice}${damageDie}*${damageMultiplier}`
+				? `${numDice}${damageDie} * ${damageMultiplier}`
 				: `${numDice}${damageDie}`;
 
 			primaryParts = [primaryDmgRoll, ...data.damageParts];
