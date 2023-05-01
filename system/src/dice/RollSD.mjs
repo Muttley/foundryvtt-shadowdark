@@ -315,7 +315,11 @@ export default class RollSD extends Roll {
 			if ( data.rolls.main.critical === "success") numDice
 				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
-			const damageMultiplier = parseInt(data.actor.system.bonuses?.damageMultiplier, 10) ?? 1;
+			// Check if a damage multiplier is active for either Weapon or Actor
+			const damageMultiplier = Math.max(
+				parseInt(data.item.system.bonuses?.damageMultiplier, 10),
+				parseInt(data.actor.system.bonuses?.damageMultiplier, 10),
+				1);
 
 			const primaryDmgRoll = (damageMultiplier > 1)
 				? `${numDice}${damageDie}*${damageMultiplier}`

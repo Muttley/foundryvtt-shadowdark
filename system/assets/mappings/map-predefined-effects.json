@@ -103,6 +103,14 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.OVERRIDE"
 	},
+	"weaponDamageMultiplier": {
+		"defaultValue": 2,
+		"effectKey": "system.bonuses.damageMultiplier",
+		"icon": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		"transfer": false
+	},
   "hpAdvantage": {
     "defaultValue": "hp",
     "effectKey": "system.bonuses.advantage",
