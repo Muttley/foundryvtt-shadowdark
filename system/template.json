@@ -312,7 +312,8 @@
 					"failureThreshold": 1,
 					"successThreshold": 20,
 					"multiplier": 2
-				}
+				},
+				"damageMultiplier": 1
 			},
 			"range": "close",
 			"type": "melee",

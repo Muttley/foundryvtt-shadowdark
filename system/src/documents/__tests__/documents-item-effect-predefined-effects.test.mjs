@@ -379,6 +379,44 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			});
 		});
 
+		describe("Damage multiplier", () => {
+			after(async () => {
+				await cleanUpActorItems(_p);
+				await cleanUpItemsByKey(key);
+			});
+
+			// @todo: This only checks that the effects are carried over to the
+			//        item. This seems to be the way Foundry works, and will probably
+			//        change with V11.
+			it("damageMultiplier", async () => {
+				const testKey = "damageMultiplier";
+				expect(_p.items.size).equal(0);
+				expect(_p.system.bonuses.damageMultiplier).is.undefined;
+
+				const _pde = predefinedEffects[testKey];
+				expect(_pde).is.not.undefined;
+
+				// @note: Only for weapons!
+				const _e = await createMockItemByKey(key, "Weapon");
+				expect(_e.system.bonuses.damageMultiplier).equal(1);
+
+				await _e.sheet._createPredefinedEffect(testKey, _pde);
+				await waitForInput();
+
+				expect(_e.effects.contents[0].transfer).is.false;
+
+				const _pe = await _p.createEmbeddedDocuments("Item", [_e]);
+				expect(_pe.length).equal(1);
+				expect(_pe[0]).is.not.undefined;
+				expect(_pe[0].effects.contents[0].changes[0].key).equal("system.bonuses.damageMultiplier");
+				expect(_pe[0].effects.contents[0].changes[0].value).equal("2");
+				expect(_p.items.size).equal(1);
+
+				expect(_p.system.bonuses.damageMultiplier).is.undefined;
+				await _pe[0].delete();
+			});
+		});
+
 		describe("Advantage: HP Rolls", () => {
 			after(async () => {
 				await cleanUpActorItems(_p);

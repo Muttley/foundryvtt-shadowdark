@@ -315,14 +315,21 @@ export default class RollSD extends Roll {
 			if ( data.rolls.main.critical === "success") numDice
 				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
-			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
+			const damageMultiplier = parseInt(data.item.system.bonuses?.damageMultiplier, 10) ?? 1;
+
+			const primaryDmgRoll = (damageMultiplier > 1)
+				? `${numDice}${damageDie}*${damageMultiplier}`
+				: `${numDice}${damageDie}`;
+
+			primaryParts = [primaryDmgRoll, ...data.damageParts];
 
 			data.rolls.primaryDamage = await this._roll(primaryParts, data);
 
 			if ( data.item.isVersatile() ) {
-				const secondaryParts = [
-					`${numDice}${data.item.system.damage.twoHanded}`,
-					...data.damageParts];
+				const secondaryDmgRoll = (damageMultiplier > 1)
+					? `${numDice}${data.item.system.damage.twoHanded} * ${damageMultiplier}`
+					: `${numDice}${data.item.system.damage.twoHanded}`;
+				const secondaryParts = [secondaryDmgRoll, ...data.damageParts];
 				data.rolls.secondaryDamage = await this._roll(secondaryParts, data);
 			}
 		}
