@@ -41,7 +41,7 @@ export default ({ describe, it, after, before, expect }) => {
 			const app = new LightSourceTrackerSD();
 			it("has the expected data", () => {
 				expect(app.monitoredLightSources.length).equal(0);
-				expect(app.lastUpdate).equal(0);
+				expect(app.lastUpdate).is.null;
 				expect(app.updatingLightSources).is.false;
 				expect(app.housekeepingInterval).equal(1000);
 				expect(app.housekeepingIntervalId).is.null;
