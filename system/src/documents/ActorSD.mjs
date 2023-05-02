@@ -503,6 +503,13 @@ export default class ActorSD extends Actor {
 		const parts = ["@abilityBonus", "@talentBonus"];
 		data.damageParts = [];
 
+		// Check damage multiplier
+		const damageMultiplier = Math.max(
+			parseInt(data.item.system.bonuses?.damageMultiplier, 10),
+			parseInt(data.actor.system.bonuses?.damageMultiplier, 10),
+			1);
+
+
 		// Magic Item bonuses
 		if (item.system.bonuses.attackBonus) {
 			parts.push("@itemBonus");
@@ -510,11 +517,12 @@ export default class ActorSD extends Actor {
 		}
 		if (item.system.bonuses.damageBonus) {
 			data.damageParts.push("@itemDamageBonus");
-			data.itemDamageBonus = item.system.bonuses.damageBonus;
+			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
 		}
 
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
+
 			if (item.system.type === "melee") {
 				if (item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
@@ -527,20 +535,21 @@ export default class ActorSD extends Actor {
 				}
 
 				data.talentBonus = bonuses.meleeAttackBonus;
-				data.meleeDamageBonus = bonuses.meleeDamageBonus;
+				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
 				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
 				data.abilityBonus = this.abilityModifier("dex");
 
 				data.talentBonus = bonuses.rangedAttackBonus;
-				data.rangedDamageBonus = bonuses.rangedDamageBonus;
+				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
 				data.damageParts.push("@rangedDamageBonus");
 			}
 
 			// Check Weapon Mastery & add if applicable
-			data.weaponMasteryBonus = this.calcWeaponMasterBonus(item);
-			data.talentBonus += data.weaponMasteryBonus;
+			const weaponMasterBonus = this.calcWeaponMasterBonus(item);
+			data.talentBonus += weaponMasterBonus;
+			data.weaponMasteryBonus = weaponMasterBonus * damageMultiplier;
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
 		}
 

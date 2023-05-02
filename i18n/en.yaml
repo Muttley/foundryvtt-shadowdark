@@ -113,9 +113,9 @@ SHADOWDARK.dialog.ability_check.str: Strength Check
 SHADOWDARK.dialog.ability_check.title: Ability Check
 SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
+SHADOWDARK.dialog.effect.choice.lightSource: Choose Light Source
 SHADOWDARK.dialog.effect.choice.spell: Choose Spell
 SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
-SHADOWDARK.dialog.effect.choice.lightSource: Choose Light Source
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.no: "No"
@@ -212,13 +212,13 @@ SHADOWDARK.item.description: Description
 SHADOWDARK.item.effect.category.condition: Condition
 SHADOWDARK.item.effect.category.effect: Effect
 SHADOWDARK.item.effect.category.title: Effect Category
-SHADOWDARK.item.effect.pre-defined.title: Pre-defined effects
 SHADOWDARK.item.effect.lightSource.lantern: Lantern
 SHADOWDARK.item.effect.lightSource.lightSpellDouble: Light (Double Range)
 SHADOWDARK.item.effect.lightSource.lightSpellNear: Light
-SHADOWDARK.item.effect.lightSource.torch: Torch
-SHADOWDARK.item.effect.lightSource.purpleGlow: Purple Glow
 SHADOWDARK.item.effect.lightSource.lightSuppression: Light Suppression
+SHADOWDARK.item.effect.lightSource.purpleGlow: Purple Glow
+SHADOWDARK.item.effect.lightSource.torch: Torch
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Ability Score Improvement
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Ability Score Improvement (Cha)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Ability Score Improvement (Con)
@@ -233,6 +233,7 @@ SHADOWDARK.item.effect.predefined_effect.backstabDie: Additional Backstab Die
 SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: Critical Failure Threshold
 SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: Critical Success Threshold
 SHADOWDARK.item.effect.predefined_effect.critMultiplier: Critical Multiplier
+SHADOWDARK.item.effect.predefined_effect.damageMultiplier: Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.hpAdvantage: HP Roll Advantage
 SHADOWDARK.item.effect.predefined_effect.initAdvantage: Initiative Advantage
 SHADOWDARK.item.effect.predefined_effect.lightSource: Light Source
@@ -248,8 +249,9 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Ranged Attack Roll B
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Ranged Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Spellcasting Advantage on Spell
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Spellcasting Check Bonus
-SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Attack Damage Bonus
+SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
+SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
+SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel
 SHADOWDARK.item.effect.show-token-icon: Show token icon
