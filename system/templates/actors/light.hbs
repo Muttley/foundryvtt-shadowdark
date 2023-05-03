@@ -1,0 +1,35 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div>
+		<header class="light-header">
+			<img
+				class="portrait"
+				src="{{ actor.img }}"
+				data-edit="img"
+				data-tooltip="{{ actor.name }}"
+				height="110"
+				width="110"
+			/>
+			<div class="title">
+				<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
+			</div>
+			<div class="light-name-and-level">
+				<h1>
+					<input
+						class="light-name"
+						name="name"
+						type="text"
+						value="{{ actor.name }}"
+						placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
+					/>
+				</h1>
+			</div>
+		</header>
+	</div>
+	<hr	/>
+	<section class="light-body">
+		<button class="pick-up-light">
+			<i class="fa-regular fa-hand-spock"></i>
+			 {{localize "SHADOWDARK.light-source.pick-up-lightsource.tooltip"}}
+		</button>
+	</section>
+</form>

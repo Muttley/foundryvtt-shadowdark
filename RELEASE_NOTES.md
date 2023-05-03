@@ -28,6 +28,7 @@
 	- [#272] Active Effects are ready for V11
 	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
 	- [#357] Added Light Source effects that are working like prior lightsources
+	- [#385] Added Damage Multiplier effects for both actors (should be used as temporary effects only) and items (may be permanent)
 * [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
 * [#339] Adds "Unlimited" as a choice for Spell Ranges
 * [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
@@ -39,6 +40,7 @@
 * [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
 * [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
 * [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
+* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker.
 
 ## v1.2.4
 

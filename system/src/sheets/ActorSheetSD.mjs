@@ -185,7 +185,7 @@ export default class ActorSheetSD extends ActorSheet {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							if (itemData.system.light.active) {
+							if (itemData.system.light?.active) {
 								await itemData.parent.sheet._toggleLightSource(itemData);
 							}
 							await this.actor.deleteEmbeddedDocuments(
