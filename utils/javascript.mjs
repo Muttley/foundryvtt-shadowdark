@@ -56,7 +56,7 @@ export const lint = lintJavascript;
 // Wait
 //
 export const wait = async () => {
-	await delay(1000);
+	await delay(1500);
 	livereload.reload();
 };
 

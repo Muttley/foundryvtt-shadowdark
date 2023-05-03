@@ -317,8 +317,8 @@ export default class RollSD extends Roll {
 
 			// Check if a damage multiplier is active for either Weapon or Actor
 			const damageMultiplier = Math.max(
-				parseInt(data.item.system.bonuses?.damageMultiplier, 10),
-				parseInt(data.actor.system.bonuses?.damageMultiplier, 10),
+				parseInt(data.item.system.bonuses.damageMultiplier ?? 0, 10),
+				parseInt(data.actor.system.bonuses.damageMultiplier ?? 0, 10),
 				1);
 
 			const primaryDmgRoll = (damageMultiplier > 1)
