@@ -3,6 +3,7 @@ import Datastore from "nedb-promises";
 import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
+import * as url from "url";
 
 import Logger from "../logger.mjs";
 
