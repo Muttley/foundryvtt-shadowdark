@@ -13,6 +13,7 @@
 	"devDependencies": {
 		"@foundryvtt/foundryvtt-cli": "^0.0.7",
 		"@rollup/plugin-node-resolve": "^15.0.1",
+		"chalk": "^5.2.0",
 		"del": "^7.0.0",
 		"fancy-log": "^2.0.0",
 		"glob": "^10.2.2",
