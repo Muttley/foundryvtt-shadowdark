@@ -391,7 +391,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			it("damageMultiplier", async () => {
 				const testKey = "damageMultiplier";
 				expect(_p.items.size).equal(0);
-				expect(_p.system.bonuses.damageMultiplier).is.undefined;
+				expect(_p.system.bonuses.damageMultiplier).equal(1);
 
 				const _pde = predefinedEffects[testKey];
 				expect(_pde).is.not.undefined;
