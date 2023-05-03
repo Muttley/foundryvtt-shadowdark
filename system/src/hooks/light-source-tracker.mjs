@@ -20,6 +20,25 @@ export const LightSourceTrackerHooks = {
 					event.data.item
 				);
 			}
+
+			if (event.type === "dropLightSourceOnScene" && game.user.isGM) {
+				game.shadowdark.lightSourceTracker.dropLightSourceOnScene(
+					event.data.item,
+					event.data.itemOwner,
+					event.data.actorData,
+					event.data.dropData,
+					event.data.speaker
+				);
+			}
+
+			if (event.type === "pickupLightSourceFromScene" && game.user.isGM) {
+				game.shadowdark.lightSourceTracker.pickupLightSourceFromScene(
+					event.data.character,
+					event.data.lightActor,
+					event.data.lightToken,
+					event.data.speaker
+				);
+			}
 		});
 	},
 };

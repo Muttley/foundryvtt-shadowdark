@@ -1,5 +1,6 @@
 import { CanvasHooks } from "./hooks/canvas.mjs";
 import { ChatMessageHooks } from "./hooks/chat-messages.mjs";
+import { DropLightsourceHooks } from "./hooks/drop-lightsource-on-scene.mjs";
 import { EffectHooks } from "./hooks/effects.mjs";
 import { EffectPanelHooks } from "./hooks/effect-panel.mjs";
 import { LightSourceTrackerHooks } from "./hooks/light-source-tracker.mjs";
@@ -11,6 +12,7 @@ export const HooksSD = {
 		const listeners = [
 			CanvasHooks,
 			ChatMessageHooks,
+			DropLightsourceHooks,
 			EffectHooks,
 			LightSourceTrackerHooks,
 			NPCHooks,

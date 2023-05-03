@@ -289,6 +289,26 @@ export default class LightSourceTrackerSD extends Application {
 				workingLightSources.push(actorData);
 			}
 
+			// Gather scene Light actors that have been dropped onto the scene
+			if (canvas.scene) {
+				for (const token of canvas.scene.tokens) {
+					if (token.actor.type !== "Light") continue;
+
+					const actorData = token.actor.toObject(false);
+					actorData.lightSources = actorData.lightSources ?? [];
+
+					const activeLightSources = await token.actor.getActiveLightSources();
+
+					for (const item of activeLightSources) {
+						actorData.lightSources.push(item.toObject(false));
+					}
+
+					if (!workingLightSources.some(a => a._id === actorData._id)) {
+						workingLightSources.push(actorData);
+					}
+				}
+			}
+
 			this.showUserWarning = usersWithoutCharacters > 0 ? true : false;
 
 			this.monitoredLightSources = workingLightSources.sort((a, b) => {
@@ -394,9 +414,19 @@ export default class LightSourceTrackerSD extends Application {
 					if (light.remainingSecs <= 0) {
 						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has expired`);
 
-						await actor.yourLightExpired(itemData._id);
+						if (actor.type !== "Light") {
+							await actor.yourLightExpired(itemData._id);
 
-						await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+							await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+						}
+						else {
+							// For light actors, we want to remove the token AND the actor
+							await actor.yourLightExpired(itemData._id);
+							await canvas.scene.tokens
+								.filter(t => t.actor._id === actor._id)
+								.forEach(t => t.delete());
+							await actor.delete();
+						}
 
 						this.dirty = true;
 					}
@@ -461,5 +491,89 @@ export default class LightSourceTrackerSD extends Application {
 
 	_isPaused() {
 		return this.realTime.isPaused();
+	}
+
+	/**
+	 * Transfers a token/actor that has been dropped for light to a held object again.
+	 * Triggers through socket so it doesn't matter if the user has permission or not.
+	 *
+	 * @param {ActorSD} character - Assigned actor
+	 * @param {ActorSD} lightActor - Actor associated with dropped lightsource
+	 * @param {Token} lightToken - Token associated with dropped lightsource
+	 * @param {object} speaker - Speaker data
+	 */
+	async pickupLightSourceFromScene(character, lightActor, lightToken, speaker = false) {
+		if (!character) return false;
+
+		const characterId = character._id;
+		const actorId = lightActor._id;
+		const tokenId = lightToken._id;
+
+		// Create the items onto the assigned character
+		const [item] = await game.actors.get(characterId).createEmbeddedDocuments(
+			"Item",
+			game.actors.get(actorId).items.contents
+		);
+
+		// Inactivate light source
+		await item.update({"system.light.active": false});
+
+		// Delete the actor
+		game.actors.get(actorId).delete();
+
+		// Delete the token
+		canvas.scene.tokens.get(tokenId).delete();
+
+		// Activate the light on the item
+		game.actors.get(characterId).sheet._toggleLightSource(item, {
+			speaker: speaker ?? ChatMessage.getSpeaker(),
+			picked_up: true,
+			template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
+		});
+
+		// Flag the housekeeper to get to work
+		this.dirty = true;
+	}
+
+	/**
+	 * Drops a lightsource on a scene by creating an actor and a token. It deletes the item
+	 * from the source actor, but retains the information. It also flags the lightsource tracker
+	 * to start tracking it.
+	 *
+	 * @param {object} item - Lightsource Item to be dropped on scene
+	 * @param {object} itemOwner - The owner of the lightsource item to be dropped
+	 * @param {object} actorData - Uncreated Actor data
+	 * @param {object} dropData - Information the carries the coordinates of the drop
+	 */
+	async dropLightSourceOnScene(item, itemOwner, actorData, dropData, speaker = false) {
+		// Create a new actor
+		const lightActor = await Actor.create(actorData);
+
+		// Create a copy of the item
+		lightActor.createEmbeddedDocuments("Item", [item]);
+
+		// Remove light from items parents
+		game.actors.get(itemOwner._id).sheet._toggleLightSource(
+			game.actors.get(itemOwner._id).items.get(item._id),
+			{
+				speaker: speaker ?? ChatMessage.getSpeaker(),
+				picked_up: false,
+				template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
+			}
+		);
+
+		// Remove item from the items parents
+		game.actors.get(itemOwner._id).items.get(item._id).delete();
+
+		// Create token
+		canvas.tokens._onDropActorData({}, {
+			type: "Actor",
+			uuid: lightActor.uuid,
+			x: dropData.x,
+			y: dropData.y,
+		});
+
+		// Flag the housekeeper to get to work
+		this.dirty = true;
 	}
 }

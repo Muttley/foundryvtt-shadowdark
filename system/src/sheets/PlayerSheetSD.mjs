@@ -445,7 +445,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.actor.usePotion(itemId);
 	}
 
-	async _sendToggledLightSourceToChat(active, item) {
+	async _sendToggledLightSourceToChat(active, item, options = {}) {
 		const cardData = {
 			active: active,
 			name: item.name,
@@ -453,15 +453,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			longevity: item.system.light.longevityMins,
 			actor: this,
 			item: item,
+			picked_up: options.picked_up ?? false,
 		};
 
-		let template = "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
+		let template = options.template ?? "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
 
 		const content = await renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
+			speaker: options.speaker ?? ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -488,7 +489,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		]);
 	}
 
-	async _toggleLightSource(item) {
+	async _toggleLightSource(item, options = {}) {
 		const active = !item.system.light.active;
 
 		if (active) {
@@ -523,7 +524,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// selected by a User as their character
 		//
 		if (this.actor.isClaimedByUser()) {
-			this._sendToggledLightSourceToChat(active, item);
+			this._sendToggledLightSourceToChat(active, item, options);
 			game.shadowdark.lightSourceTracker.toggleLightSource(
 				this.actor,
 				updatedLight
