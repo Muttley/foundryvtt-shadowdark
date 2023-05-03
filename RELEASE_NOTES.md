@@ -40,6 +40,7 @@
 * [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
 * [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
 * [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
+* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker.
 
 ## v1.2.4
 

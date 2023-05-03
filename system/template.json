@@ -2,7 +2,8 @@
 	"Actor": {
 		"types": [
 			"NPC",
-			"Player"
+			"Player",
+			"Light"
 		],
 		"templates": {
 			"shared_details": {
