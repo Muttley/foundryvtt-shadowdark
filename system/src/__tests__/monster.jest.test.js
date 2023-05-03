@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 describe("import", () => {
-	const data = fs.readFileSync(path.resolve(__dirname, "../monster.db"));
+	const data = fs.readFileSync(path.resolve(__dirname, "../../packs/monster.db"));
 	const fixtureData = fs.readFileSync(path.resolve(__dirname, "./fixture/monster.json")).toString();
 	const expectedIds = JSON.parse(fixtureData);
 
