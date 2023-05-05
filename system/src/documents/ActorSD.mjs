@@ -65,7 +65,8 @@ export default class ActorSD extends Actor {
 			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
 			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
 			special: item.system.damage.special,
-			ranges: item.system.ranges.join("/"),
+			ranges: item.system.ranges.map(s => game.i18n.localize(
+				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
 
 		return await renderTemplate(
