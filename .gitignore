@@ -1,8 +1,9 @@
 .vscode/
-system/css/
-system/i18n/
 node_modules/
 scratch/
+system/css/
+system/i18n/
+system/packs/
 
 *.code-workspace
 shadowdark-compiled*
