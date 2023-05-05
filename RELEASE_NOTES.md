@@ -9,6 +9,7 @@
 * [#350] Inline rolls of NPC Features now render properly
 * [#322] Flask or Bottle had typo-cost in the Shadowdarkling tests
 * [#358] Updated Sleep spell description according to errata
+* [#394] Dragging a light from one character sheet to another should delete it from the original owner
 
 ### Enhancements
 * [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
