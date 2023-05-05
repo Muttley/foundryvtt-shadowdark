@@ -71,6 +71,7 @@ const mockData = () => {
 				bonuses: {
 					advantage: ["hp", "meleeAttack"],
 					weaponMastery: ["whip", "bastard-sword"],
+					weaponDamageDieD12: [],
 					meleeAttackBonus: 4,
 					meleeDamageBonus: 1,
 					rangedAttackBonus: 1,
