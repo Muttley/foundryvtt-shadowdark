@@ -42,6 +42,7 @@
 * [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
 * [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker
 * [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
+* [#393] Support for Ranger class, including importing from Shadowdarklings.net
 
 ## v1.2.4
 
