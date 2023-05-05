@@ -259,6 +259,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			"BackstabIncrease",
 			"AdvOnInitiative",
 			"Plus1ToHit",
+			"Plus1ToHitAndDamage",
 			"Plus1ToCastingSpells",
 			"AdvOnCastOneSpell",
 			"MakeRandomMagicItem",
@@ -297,6 +298,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				}
 				if (bonus.name === "ReduceHerbalismDC") {
 					return this._findInCompendium("Reduced Herbalism DC", "shadowdark.talents");
+				}
+				if (bonus.name === "Plus1ToHitAndDamage") {
+					if (bonus.bonusTo === "Melee attacks") {
+						return this._findInCompendium("+1 to Melee Attacks and Damage", "shadowdark.talents");
+					}
+					if (bonus.bonusTo === "Ranged attacks") {
+						return this._findInCompendium("+1 to Ranged Attacks and Damage", "shadowdark.talents");
+					}
 				}
 				// Thief
 				if (bonus.name === "BackstabIncrease") {

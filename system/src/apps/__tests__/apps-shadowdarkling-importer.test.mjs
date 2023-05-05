@@ -811,6 +811,44 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				expect(talent).is.not.undefined;
 			});
 
+			it("+1 to Melee Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Melee attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Melee Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("+1 to Ranged Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Ranged attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Ranged Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
 			it("Reduce Herbalism DC", async () => {
 				json.bonuses = [
 					{
