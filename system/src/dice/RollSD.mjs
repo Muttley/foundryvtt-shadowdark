@@ -296,8 +296,21 @@ export default class RollSD extends Roll {
 	static async _rollWeapon(data) {
 		// Get dice information from the weapon
 		let numDice = data.item.system.damage.numDice;
-		const damageDie = data.item.isTwoHanded()
-			?	data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
+		let damageDie = data.item.isTwoHanded()
+			?	data.item.system.damage.twoHanded
+			: data.item.system.damage.oneHanded;
+
+		let versatileDamageDie = data.item.isVersatile()
+			? data.item.system.damage.twoHanded
+			: false;
+
+		// Check if damage die is modified by talent
+		if (data.actor.system.bonuses.weaponDamageDieD12.some(
+			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
+		)) {
+			damageDie = "d12";
+			versatileDamageDie = "d12";
+		}
 
 		// Check and handle critical failure/success
 		if ( data.rolls.main.critical !== "failure" ) {
@@ -329,10 +342,10 @@ export default class RollSD extends Roll {
 
 			data.rolls.primaryDamage = await this._roll(primaryParts, data);
 
-			if ( data.item.isVersatile() ) {
+			if (versatileDamageDie) {
 				const secondaryDmgRoll = (damageMultiplier > 1)
-					? `${numDice}${data.item.system.damage.twoHanded} * ${damageMultiplier}`
-					: `${numDice}${data.item.system.damage.twoHanded}`;
+					? `${numDice}${versatileDamageDie} * ${damageMultiplier}`
+					: `${numDice}${versatileDamageDie}`;
 				const secondaryParts = [secondaryDmgRoll, ...data.damageParts];
 				data.rolls.secondaryDamage = await this._roll(secondaryParts, data);
 			}

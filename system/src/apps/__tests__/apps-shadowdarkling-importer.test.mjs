@@ -747,6 +747,129 @@ export default ({ describe, it, after, afterEach, expect }) => {
 		});
 	});
 
+	describe("ranger", () => {
+		const json = _jsonTestActor();
+		json.class = "Ranger";
+
+		describe("build-in talents", () => {
+			it("Wayfinder", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Ability",
+						gainedAtLevel: 1,
+						name: "Grit",
+						bonusName: "Strength",
+						bonusTo: "AdvantageOnStatChecks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Wayfinder"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("Herbalism", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Ability",
+						gainedAtLevel: 1,
+						name: "Grit",
+						bonusName: "Strength",
+						bonusTo: "AdvantageOnStatChecks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Herbalism"));
+				expect(talent).is.not.undefined;
+			});
+		});
+
+		describe("level talents", () => {
+			it("Set Weapon Type Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "SetWeaponTypeDamage",
+						bonusName: "SetWeaponTypeDamage",
+						bonusTo: "Longbow:12",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Increased Weapon Damage Die (Longbow)"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("+1 to Melee Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Melee attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Melee Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("+1 to Ranged Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Ranged attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Ranged Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("Reduce Herbalism DC", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "ReduceHerbalismDC",
+						bonusName: "",
+						bonusTo: "ReduceHerbalismDC",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Reduced Herbalism DC"));
+				expect(talent).is.not.undefined;
+			});
+		});
+	});
+
 	describe("gear", () => {
 		const json = _jsonTestActor();
 

@@ -111,6 +111,13 @@
 		"mode": "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
 		"transfer": false
 	},
+	"weaponDamageDieD12": {
+		"defaultValue": "REPLACEME",
+		"effectKey": "system.bonuses.weaponDamageDieD12",
+		"icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
   "hpAdvantage": {
     "defaultValue": "hp",
     "effectKey": "system.bonuses.advantage",

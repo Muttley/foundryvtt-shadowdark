@@ -119,6 +119,80 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			expect(_p.system.bonuses[bonus].length).equal(0);
 		};
 
+		const damageDieTest = async (choices, itemName, translatedName) => {
+			const _pde = predefinedEffects["weaponDamageDieD12"];
+			createPrefabEffect("weaponDamageDieD12", _pde);
+			await delay(300);
+
+			// Expect a dialog
+			const dialogs = openDialogs();
+			expect(dialogs.length).equal(1);
+			const dialog = dialogs[0];
+
+			// Expect the item to exist in the curated list
+			const dataLists = dialog.element.find("datalist");
+			expect(dataLists.length).equal(1);
+			const dataList = dataLists[0];
+			const options = Array.from(dataList.options);
+			expect(options.length).equal(choices.length);
+			expect(options.map(o => o.innerText)).contains(translatedName);
+
+			// Select item
+			const inputFields = dialog.element.find("input");
+			expect(inputFields.length).equal(1);
+			const input = inputFields[0];
+			input.value = itemName;
+
+			// Click Submit
+			await $(".submit").click();
+			await delay(300);
+			const postClickDialogs = openDialogs();
+			expect(postClickDialogs.length).equal(0);
+
+			// Check that the effect is created
+			const _a = await game.items.getName(`Test Item ${key}: Effect`);
+			expect(_a).is.not.undefined;
+			expect(_a.type).equal("Effect");
+
+			// Put the effect on the actor
+			const _pa = await _p.createEmbeddedDocuments("Item", [_a]);
+			expect(_pa).is.not.undefined;
+			expect(_p.system.bonuses["weaponDamageDieD12"]).contains(itemName);
+
+			// Delete the effect
+			await cleanUpActorItems(_p);
+
+			// Expect the bonus.`weaponDamageDieD12` to be empty
+			expect(_p.system.bonuses["weaponDamageDieD12"].length).equal(0);
+		};
+
+		describe("Weapon Damage Die D12", () => {
+			const weapons = Object.keys(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+
+			it("Sanity checks", () => {
+				expect(weapons.length).not.equal(0);
+			});
+
+			beforeEach(async () => {
+				await cleanUpItemsByKey(key);
+				await closeDialogs();
+			});
+
+			after(async () => {
+				await closeDialogs();
+			});
+
+			weapons.forEach(w => {
+				it(`${w} weaponDamageDieD12`, async () => {
+					await damageDieTest(
+						weapons,
+						w,
+						game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[w])
+					);
+				});
+			});
+		});
+
 		describe("Armor mastery", () => {
 			const armor = Object.keys(CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
 
