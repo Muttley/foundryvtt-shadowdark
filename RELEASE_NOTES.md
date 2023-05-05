@@ -37,10 +37,11 @@
 * [#357] Added Light Source mappings for easy additions of new light source types
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
-* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
+* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier
 * [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
 * [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
-* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker.
+* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker
+* [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
 
 ## v1.2.4
 
