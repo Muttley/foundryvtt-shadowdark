@@ -189,7 +189,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/**
-	 * Creates an item being a lightsource and activates it
+	 * Actives a lightsource if dropped onto the Player sheet. Used for
+	 * activating Light spell et.c.
+	 *
 	 * @param {Item} item - Item that is a lightsource
 	 */
 	async _dropActivateLightSource(item) {

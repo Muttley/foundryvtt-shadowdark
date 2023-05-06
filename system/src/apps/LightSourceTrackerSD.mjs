@@ -515,8 +515,8 @@ export default class LightSourceTrackerSD extends Application {
 			game.actors.get(actorId).items.contents
 		);
 
-		// Inactivate light source
-		await item.update({"system.light.active": false});
+		// Invert the active setting of the light source, so the toggling works later
+		await item.update({"system.light.active": !item.system.light.active});
 
 		// Delete the actor
 		game.actors.get(actorId).delete();
@@ -553,8 +553,12 @@ export default class LightSourceTrackerSD extends Application {
 		lightActor.createEmbeddedDocuments("Item", [item]);
 
 		// Remove light from items parents
-		game.actors.get(itemOwner._id).sheet._toggleLightSource(
-			game.actors.get(itemOwner._id).items.get(item._id),
+		game.actors.get(itemOwner._id).toggleLight(false, "");
+
+		// Send message that the torch was dropped
+		game.actors.get(itemOwner._id).sheet._sendToggledLightSourceToChat(
+			false,
+			item,
 			{
 				speaker: speaker ?? ChatMessage.getSpeaker(),
 				picked_up: false,
