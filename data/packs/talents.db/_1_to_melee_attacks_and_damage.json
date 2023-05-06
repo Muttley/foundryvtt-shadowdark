@@ -1,0 +1,100 @@
+{
+  "name": "+1 to Melee Attacks and Damage",
+  "type": "Talent",
+  "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "meleeAttackBonus"
+    ],
+    "magicItem": false,
+    "level": null,
+    "talentClass": "level",
+    "bonuses": {
+      "critical": {
+        "successThreshold": 20,
+        "failureThreshold": 1,
+        "multiplier": 2
+      },
+      "meleeAttackBonus": "1",
+      "meleeDamageBonus": "1"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Melee Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "y00ihJhSPjoGVmKZ",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Melee Damage Bonus",
+      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeDamageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "JOP97BP4aJ0kjcgL",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.YIQtQJ0SHwnP8jdl"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679010031711,
+    "modifiedTime": 1683315483424,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "0yk16c9qcJ9vCekD"
+}

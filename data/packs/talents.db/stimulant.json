@@ -1,0 +1,55 @@
+{
+  "name": "Stimulant",
+  "type": "Potion",
+  "img": "icons/commodities/materials/powder-grey.webp",
+  "system": {
+    "description": "<p>ADV on WIS checks to perceive hidden things for 5 rounds</p><p></p><p>@UUID[Compendium.shadowdark.conditions.MUNwczWej0Bo8x4S]{Effect: Stimulant}</p>",
+    "properties": [],
+    "magicItem": true,
+    "class": [],
+    "duration": {
+      "type": "",
+      "value": ""
+    },
+    "range": "",
+    "tier": 1,
+    "broken": false,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 1,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "spellName": "",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pMZNyMHCqFKpUwaj"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683313592556,
+    "modifiedTime": 1683314152540,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "dBQr9YPyhvwyPm0g"
+}

@@ -1,0 +1,375 @@
+{
+  "name": "Ranger Talents",
+  "img": "icons/weapons/bows/shortbow-recurve-yellow.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        9
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "uNZorUCaIeUByjH4",
+      "text": "Pick one",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "O3wnXDlcYG0ciYnr",
+      "text": "Choose 1 (or two +1 ability improvements)",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Increased Weapon Damage Die",
+      "img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "98HEgBRJSED5epGt",
+      "_id": "6YHmI605gJPGbb58",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        3,
+        6
+      ],
+      "drawn": false,
+      "text": "+1 to Melee Attacks and Damage",
+      "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "0yk16c9qcJ9vCekD",
+      "_id": "Jz40blnoAc4k8LNA",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        3,
+        6
+      ],
+      "drawn": false,
+      "text": "+1 to Ranged Attacks and Damage",
+      "img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "2IfYKGhWxyd3Ldr5",
+      "_id": "ouO9igdo4GShlpzb",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        7,
+        9
+      ],
+      "drawn": false,
+      "text": "+2 to Strength",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "6t06nSjj1hd6o5SV",
+      "_id": "udQwJeodk1RM2yyr",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        7,
+        9
+      ],
+      "drawn": false,
+      "text": "+2 to Dexterity",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "vIbwotCa1eqCVZMU",
+      "_id": "0YodW7OxmfP9Ehq1",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        7,
+        9
+      ],
+      "drawn": false,
+      "text": "+2 to Intelligence",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "aRY0hjpvzYpdRbfR",
+      "_id": "it1KXZxh17RKYsG2",
+      "flags": {}
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        6
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "qaxtytgC14dTLeaE",
+      "text": "Pick one",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        10,
+        11
+      ],
+      "drawn": false,
+      "text": "Reduced Herbalism DC",
+      "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "p4Zh8LNyBp8UwhRD",
+      "_id": "cRnbilUmms23Xcsf",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Reduced Herbalism DC",
+      "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "p4Zh8LNyBp8UwhRD",
+      "_id": "u2rNcoHFKXGOogXr",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+2 to Strength",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "6t06nSjj1hd6o5SV",
+      "_id": "xuDytbHPirYoFumS",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+2 to Intelligence",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "aRY0hjpvzYpdRbfR",
+      "_id": "UnScpUE1PeLpYzOY",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+2 to Dexterity",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "vIbwotCa1eqCVZMU",
+      "_id": "CmGCHzjY15gr49q1",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Wisdom",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "vRW8GSIKWXyOAKbw",
+      "_id": "QKG6Assa6z7ClJC1",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Strength",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "IDGFaxKnYJWWuWQ7",
+      "_id": "11p32X5y8Oe7kQ4y",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Ranged Attacks and Damage",
+      "img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "2IfYKGhWxyd3Ldr5",
+      "_id": "xzpDP9BdOX2DEDF4",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Melee Attacks and Damage",
+      "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "0yk16c9qcJ9vCekD",
+      "_id": "vuMoP92p2ieXSIBM",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Intelligence",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "LDJCx5syOcenLMZf",
+      "_id": "aMDZVlvIcQ3luxfk",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Dexterity",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "eJHwfYQZ9LmLQeSn",
+      "_id": "NSYbJZJDZbckDQzi",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Constitution",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "8SXPsiWvG2UcXGgW",
+      "_id": "39aLYnrm2lZiUn2W",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "+1 to Charisma",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "5INkcbMVFxK6cW5Z",
+      "_id": "4MWmFIvfkjHzXCxZ",
+      "flags": {}
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Increased Weapon Damage Die",
+      "img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+      "documentCollection": "shadowdark.talents",
+      "documentId": "98HEgBRJSED5epGt",
+      "_id": "KrHtmdHezfFxbknt",
+      "flags": {}
+    }
+  ],
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "RollTable.RwnS8W9i0EHEXe2p"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683315269662,
+    "modifiedTime": 1683315771535,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "PPsLlxyDTbhy1aRI"
+}

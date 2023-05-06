@@ -1,0 +1,65 @@
+{
+  "name": "Increased Weapon Damage Die",
+  "type": "Talent",
+  "img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "predefinedEffects": "",
+    "bonuses": {
+      "weaponDamageDieD12": "REPLACEME"
+    }
+  },
+  "effects": [
+    {
+      "label": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
+      "icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.weaponDamageDieD12",
+          "value": "REPLACEME",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "UGQKMdNcgb1O8qwy",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.n1kNsfniN8WMb7C7"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683312287189,
+    "modifiedTime": 1683314433704,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "98HEgBRJSED5epGt"
+}

@@ -1,0 +1,95 @@
+{
+  "name": "+1 to Ranged Attacks and Damage",
+  "type": "Talent",
+  "img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "rangedAttackBonus"
+    ],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "bonuses": {
+      "rangedAttackBonus": "1",
+      "rangedDamageBonus": "1"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Ranged Attack Roll Bonus",
+      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.rangedAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "ODBe0yE8vkVOD2qZ",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Ranged Damage Bonus",
+      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.rangedDamageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "lodEOfzuI5jDWc4h",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.VnkC1inImR9OBd7u"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679010056691,
+    "modifiedTime": 1683315484285,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "2IfYKGhWxyd3Ldr5"
+}

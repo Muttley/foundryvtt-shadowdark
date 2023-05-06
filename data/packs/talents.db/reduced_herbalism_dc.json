@@ -1,0 +1,34 @@
+{
+  "name": "Reduced Herbalism DC",
+  "type": "Talent",
+  "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.JMJwhyHpGCek3Xj9"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683314533887,
+    "modifiedTime": 1683314561365,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "p4Zh8LNyBp8UwhRD"
+}
