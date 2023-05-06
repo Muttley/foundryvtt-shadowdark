@@ -1,0 +1,48 @@
+{
+  "name": "Shield",
+  "type": "Armor",
+  "img": "icons/equipment/shield/shield-round-boss-wood-brown.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "oneHanded",
+      "shield"
+    ],
+    "magicItem": false,
+    "cost": {
+      "gp": 10,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "ac": {
+      "base": 0,
+      "modifier": 2,
+      "attribute": ""
+    },
+    "baseArmor": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678531204277,
+    "modifiedTime": 1679307171456,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "UWp4WkkiaBMSXYPE",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

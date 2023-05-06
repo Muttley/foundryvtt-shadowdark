@@ -1,0 +1,65 @@
+{
+  "name": "Condition: Fragile",
+  "type": "Effect",
+  "img": "icons/commodities/bones/bone-broken-grey.webp",
+  "system": {
+    "description": "<p>The character is fragile and takes double damage.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Fragile",
+      "icon": "icons/commodities/bones/bone-broken-grey.webp",
+      "origin": "Item.pcBuNszkAjGRJ0XX",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "XGGzrINaGvRwwXPC",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681635921066,
+    "modifiedTime": 1682175741060,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "pcBuNszkAjGRJ0XX",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

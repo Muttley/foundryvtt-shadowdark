@@ -1,0 +1,51 @@
+{
+  "name": "Javelin",
+  "type": "Weapon",
+  "img": "icons/weapons/polearms/javelin.webp",
+  "system": {
+    "cost": {
+      "gp": 0,
+      "sp": 5,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "description": "",
+    "properties": [
+      "thrown"
+    ],
+    "attackBonus": 0,
+    "damage": {
+      "bonus": 0,
+      "oneHanded": "d4",
+      "twoHanded": "",
+      "numDice": 1
+    },
+    "range": "far",
+    "type": "melee",
+    "weaponMastery": false,
+    "baseWeapon": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678531827920,
+    "modifiedTime": 1679213106172,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "B3ZPeUtbChN8lrDm",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

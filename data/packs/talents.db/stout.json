@@ -1,0 +1,100 @@
+{
+  "name": "Stout",
+  "type": "Talent",
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
+    "properties": [
+      "hpAdvantage"
+    ],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "ancestry",
+    "bonuses": {
+      "advantage": "hp"
+    },
+    "attributes": {
+      "hp": {
+        "bonus": "2",
+        "max": "2"
+      }
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Extra HP Max",
+      "icon": "icons/magic/life/heart-shadow-red.webp",
+      "origin": "Item.SXuw8zzD6a8dwmJE",
+      "changes": [
+        {
+          "key": "system.attributes.hp.bonus",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "qIFVq4PAB70lPkf9",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "HP Roll Advantage",
+      "icon": "icons/magic/life/cross-area-circle-green-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.advantage",
+          "value": "hp",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "0rcSjPSjHdvGwtOu",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.SXuw8zzD6a8dwmJE"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679009576960,
+    "modifiedTime": 1681850280235,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "_id": "MW43tnJr6lqE1Ty8",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

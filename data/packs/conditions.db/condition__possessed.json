@@ -1,0 +1,64 @@
+{
+  "name": "Condition: Possessed",
+  "type": "Effect",
+  "img": "icons/magic/perception/hand-eye-pink.webp",
+  "system": {
+    "description": "<p>The character is possessed.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 123910236845,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Condition: Possessed",
+      "icon": "icons/magic/perception/hand-eye-pink.webp",
+      "origin": "Item.OL2kOP05K96L9JV9",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "rEjr6iPhgVuFTCWl",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1682147372310,
+    "modifiedTime": 1682175741061,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "OL2kOP05K96L9JV9",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

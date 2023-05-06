@@ -1,0 +1,55 @@
+{
+  "name": "Curative",
+  "type": "Potion",
+  "img": "icons/commodities/flowers/lily-white.webp",
+  "system": {
+    "description": "<p><strong>Benefit</strong>. The imbiber of this herb regains hit points based on its level.</p><p></p><p><strong>LV 1-3</strong>: [[/r 1d6]] hit points.</p><p><strong>LV 4-6</strong>: [[/r 2d8]] hit points.</p><p><strong>LV 7-9</strong>: [[/r 3d10]] hit points.</p><p><strong>LV 10+</strong>: [[/r 4d12]] hit points.</p>",
+    "properties": [],
+    "magicItem": true,
+    "class": [],
+    "duration": {
+      "type": "",
+      "value": ""
+    },
+    "range": "",
+    "tier": 1,
+    "broken": false,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "spellName": "",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.kO10aT9dmHaaEynE"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683313606557,
+    "modifiedTime": 1683314309061,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "VjFsjhM6CZjZ04RT"
+}

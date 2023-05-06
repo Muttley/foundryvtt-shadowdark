@@ -1,0 +1,76 @@
+{
+  "name": "Condition: Petrified",
+  "type": "Effect",
+  "img": "icons/creatures/magical/construct-stone-earth-gray.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "light": {
+      "active": false,
+      "hasBeenUsed": false,
+      "isSource": false,
+      "longevityMins": 60,
+      "remainingSecs": 3600,
+      "template": "torch"
+    },
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 123910349445,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Petrified",
+      "icon": "icons/creatures/magical/construct-stone-earth-gray.webp",
+      "origin": "Item.XbrayNCUis3pV0XU",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "Ck88Wezyv7vfvNGV",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.XbrayNCUis3pV0XU"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683023222684,
+    "modifiedTime": 1683023290999,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "DihIx1S94zeXV3oM"
+}

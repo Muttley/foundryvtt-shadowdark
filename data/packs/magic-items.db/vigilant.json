@@ -1,0 +1,124 @@
+{
+  "name": "Vigilant",
+  "type": "Weapon",
+  "img": "icons/weapons/polearms/pike-flared-brown.webp",
+  "system": {
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "description": "<p><strong>Benefit</strong>. The wielder cannot be surprised.</p>",
+    "properties": [
+      "thrown"
+    ],
+    "magicItem": true,
+    "damage": {
+      "oneHanded": "d6",
+      "twoHanded": "",
+      "numDice": 1,
+      "bonus": "1",
+      "critMultiplier": 2
+    },
+    "bonuses": {
+      "damageBonus": "1",
+      "attackBonus": "1",
+      "critical": {
+        "failureThreshold": 1,
+        "successThreshold": 20,
+        "multiplier": 2
+      }
+    },
+    "range": "near",
+    "type": "melee",
+    "weaponMastery": false,
+    "baseWeapon": "spear",
+    "attackBonus": "1",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.attackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": false,
+      "_id": "Rzbo47LZEvpyHfqg",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Attack Damage Bonus",
+      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.damageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": false,
+      "_id": "pwG7d70XZD8JJL5p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.cY0UIbpokdT448Pw"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679273406052,
+    "modifiedTime": 1682012138286,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "iEbHLvRPWNXo32qm"
+}

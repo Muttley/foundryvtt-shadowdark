@@ -1,0 +1,84 @@
+{
+  "name": "+1 to Charisma",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "abilityImprovement"
+    ],
+    "magicItem": false,
+    "level": null,
+    "talentClass": "level",
+    "abilities": {
+      "str": {
+        "bonus": "0"
+      },
+      "int": {
+        "bonus": "0"
+      },
+      "wis": {
+        "bonus": "0"
+      },
+      "con": {
+        "bonus": "0"
+      },
+      "cha": {
+        "bonus": "1"
+      },
+      "dex": {
+        "bonus": "0"
+      }
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Ability Score Improvement (Cha)",
+      "icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.cha.bonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "pBT8eBhcaKSnzbcq",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6iZplEBazA2f66A3"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678821268710,
+    "modifiedTime": 1681849985834,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "5INkcbMVFxK6cW5Z"
+}

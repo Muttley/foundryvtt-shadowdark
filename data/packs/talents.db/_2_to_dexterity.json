@@ -1,0 +1,88 @@
+{
+  "name": "+2 to Dexterity",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "abilityImprovement",
+      "damageBonus"
+    ],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "abilities": {
+      "str": {
+        "bonus": "0"
+      },
+      "int": {
+        "bonus": "0"
+      },
+      "wis": {
+        "bonus": "0"
+      },
+      "con": {
+        "bonus": "0"
+      },
+      "cha": {
+        "bonus": "0"
+      },
+      "dex": {
+        "bonus": "2"
+      }
+    },
+    "talent": {
+      "damageBonus": 1
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Ability Score Improvement (Dex)",
+      "icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.dex.bonus",
+          "value": "2",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "sx2uVw9MzQNA7mnd",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6iZplEBazA2f66A3"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678821268710,
+    "modifiedTime": 1681850100387,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "vIbwotCa1eqCVZMU"
+}

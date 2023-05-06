@@ -1,0 +1,96 @@
+{
+  "name": "Mighty",
+  "type": "Talent",
+  "img": "icons/skills/melee/strike-axe-blood-red.webp",
+  "system": {
+    "description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
+    "properties": [
+      "meleeAttackBonus",
+      "meleeDamageBonus"
+    ],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "ancestry",
+    "bonuses": {
+      "meleeAttackBonus": "1",
+      "meleeDamageBonus": "1"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Melee Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "iR3hHoX6W9VOCfy0",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Melee Damage Bonus",
+      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeDamageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "9LnTbRJXNUH9wLTy",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.qj2MYnP9srYJk4YT"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679009769211,
+    "modifiedTime": 1681850254077,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "LR6h4lXVXwx7AFQ6"
+}

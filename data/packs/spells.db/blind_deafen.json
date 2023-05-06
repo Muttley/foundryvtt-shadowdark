@@ -1,0 +1,42 @@
+{
+  "name": "Blind/Deafen",
+  "type": "Spell",
+  "system": {
+    "description": "<p></p><p>You utter a divine censure, blinding or deafening one creature you can see in range. The creature has disadvantage on tasks requiring the lost sense.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.SOkcvkzrGMGQKhmk]{Spell Effect: Blind}</p><p>@UUID[Compendium.shadowdark.spell-effects.aAdqy5QwVJrT8JWE]{Spell Effect: Deaf}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "priest"
+    ],
+    "duration": {
+      "type": "focus",
+      "value": -1
+    },
+    "lost": false,
+    "range": "near",
+    "tier": 2,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.ItoZZ0nli29N5d7G"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079785,
+    "modifiedTime": 1681852703740,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "ItoZZ0nli29N5d7G",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

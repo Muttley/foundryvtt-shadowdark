@@ -1,0 +1,43 @@
+{
+  "name": "Condition: Banished",
+  "type": "Effect",
+  "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "5",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 123910260003,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1682170699099,
+    "modifiedTime": 1682175741059,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "NytuNX2lLUibvXSB",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

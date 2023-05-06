@@ -1,0 +1,54 @@
+{
+  "name": "Light Spell",
+  "type": "Basic",
+  "img": "icons/magic/light/explosion-star-glow-yellow.webp",
+  "system": {
+    "description": "<p>Dummy item that acts like a light source cast by the @UUID[Compendium.shadowdark.spells.N4v17mtxJlVBbgpn]{Light} spell.</p>",
+    "properties": [],
+    "magicItem": false,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 1,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "light": {
+      "active": false,
+      "hasBeenUsed": false,
+      "isSource": true,
+      "longevityMins": 60,
+      "remainingSecs": 3600,
+      "template": "lightSpellNear"
+    },
+    "treasure": false
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "M2bo9rZZzTMUP2hR": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.xOLwqsJz69wL5g4j"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1679412089226,
+    "modifiedTime": 1679413035706,
+    "lastModifiedBy": "M2bo9rZZzTMUP2hR"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "PkQXG3AaHNMVwGTc"
+}

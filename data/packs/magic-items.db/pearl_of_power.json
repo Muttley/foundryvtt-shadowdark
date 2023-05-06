@@ -1,0 +1,56 @@
+{
+  "name": "Pearl of Power",
+  "type": "Basic",
+  "img": "icons/commodities/gems/pearl-natural.webp",
+  "system": {
+    "description": "<p><em>A fat, opalescent pearl glowing with an inner radiance.</em></p><p></p><p><strong>Benefit</strong>. Once per day, you may regain the ability to cast a spell you have lost. This cannot restore a spell lost due to a critical spellcasting failure.</p>",
+    "properties": [],
+    "magicItem": true,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "light": {
+      "active": false,
+      "hasBeenUsed": false,
+      "isSource": false,
+      "longevityMins": 60,
+      "remainingSecs": 3600,
+      "template": "torch"
+    },
+    "treasure": false,
+    "scroll": false,
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.3igNEJo3htAVd6XV"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679271624570,
+    "modifiedTime": 1682012019746,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "_id": "t4RYKztP70zmAbGD"
+}

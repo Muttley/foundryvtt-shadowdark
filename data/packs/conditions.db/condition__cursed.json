@@ -1,0 +1,65 @@
+{
+  "name": "Condition: Cursed",
+  "type": "Effect",
+  "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+  "system": {
+    "description": "<p>The character is cursed.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Cursed",
+      "icon": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+      "origin": "Item.T7PD6qqfanwAMEzo",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "h8IoE9DUt8lyCAgQ",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681635314629,
+    "modifiedTime": 1682175741059,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "T7PD6qqfanwAMEzo",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

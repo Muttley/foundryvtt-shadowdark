@@ -1,0 +1,43 @@
+{
+  "name": "Protection From Evil",
+  "type": "Spell",
+  "system": {
+    "description": "<p>For the spell’s duration, chaotic beings have disadvantage on attack rolls and hostile spellcasting checks against the target. These beings also can’t possess, compel, or beguile it.</p><p>When cast on an already-possessed target, the possessing entity makes a CHA check vs. the last spellcasting check. On a failure, the entity is expelled.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.H7v5Izebo8O45DXB]{Spell Effect: Protection From Evil}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "priest",
+      "wizard"
+    ],
+    "duration": {
+      "type": "focus",
+      "value": -1
+    },
+    "lost": false,
+    "range": "close",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.ZNBBGiXdR7bEpE79"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079838,
+    "modifiedTime": 1681852836513,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "ZNBBGiXdR7bEpE79",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

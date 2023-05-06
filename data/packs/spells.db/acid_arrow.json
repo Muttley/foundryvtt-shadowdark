@@ -1,0 +1,42 @@
+{
+  "name": "Acid Arrow",
+  "type": "Spell",
+  "system": {
+    "description": "<p>You conjure a corrosive bolt that hits one foe, dealing [[/r 1d6]] damage a round. The bolt remains in the target for as long as you focus.</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "wizard"
+    ],
+    "duration": {
+      "type": "focus",
+      "value": -1
+    },
+    "lost": false,
+    "range": "far",
+    "tier": 2,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/acid/projectile-bolts-salvo-green.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.16XuBF2xjUnoepyp"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079765,
+    "modifiedTime": 1681328059709,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "16XuBF2xjUnoepyp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

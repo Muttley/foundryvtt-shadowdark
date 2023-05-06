@@ -1,0 +1,67 @@
+{
+  "name": "Spellcasting Advantage",
+  "type": "Talent",
+  "img": "icons/magic/air/air-smoke-casting.webp",
+  "system": {
+    "description": "<p>Gain advantage on casting one spell you know.</p>",
+    "properties": [
+      "spellAdvantage"
+    ],
+    "magicItem": false,
+    "level": null,
+    "talentClass": "level",
+    "bonuses": {
+      "advantage": "REPLACEME"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Spellcasting Advantage on Spell",
+      "icon": "icons/magic/air/air-smoke-casting.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.advantage",
+          "value": "REPLACEME",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "oEZ9BldTmIl6AS31",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.ZcDq09YwdAZxvZ0C"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679010271598,
+    "modifiedTime": 1682140128395,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "IZZnFjWhZurAIZPP"
+}

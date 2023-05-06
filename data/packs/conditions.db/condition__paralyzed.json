@@ -1,0 +1,65 @@
+{
+  "name": "Condition: Paralyzed",
+  "type": "Effect",
+  "img": "icons/magic/water/barrier-ice-crystal-wall-faceted-blue.webp",
+  "system": {
+    "description": "<p>The character is paralyzed.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Paralyzed",
+      "icon": "icons/magic/water/barrier-ice-crystal-wall-faceted-blue.webp",
+      "origin": "Item.ROTpAUAHx5s4AZZh",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "5Q6foTiBhvvLG7y3",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681634838620,
+    "modifiedTime": 1682175741061,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "ROTpAUAHx5s4AZZh",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

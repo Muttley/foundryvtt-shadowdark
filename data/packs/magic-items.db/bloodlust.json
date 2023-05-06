@@ -1,0 +1,151 @@
+{
+  "name": "Bloodlust",
+  "type": "Weapon",
+  "img": "icons/weapons/axes/axe-battle-eyes-red.webp",
+  "system": {
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "description": "",
+    "properties": [
+      "versatile"
+    ],
+    "magicItem": true,
+    "damage": {
+      "oneHanded": "d8",
+      "twoHanded": "d10",
+      "numDice": 1,
+      "bonus": "1",
+      "critMultiplier": "4"
+    },
+    "bonuses": {
+      "damageBonus": "1",
+      "attackBonus": "1",
+      "critical": {
+        "failureThreshold": 1,
+        "successThreshold": 20,
+        "multiplier": "4"
+      }
+    },
+    "range": "close",
+    "type": "melee",
+    "weaponMastery": false,
+    "baseWeapon": "greataxe",
+    "attackBonus": "1",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Critical Multiplier",
+      "icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.critical.multiplier",
+          "value": "4",
+          "mode": 5,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": false,
+      "_id": "2NdFJHTHy28UaTCh",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.attackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": false,
+      "_id": "A3cEweAbyqxNxdzl",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Attack Damage Bonus",
+      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.damageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": false,
+      "_id": "Qj2rqAj7XeIsjzzs",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.gtfx2i7YimBMi2bo"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679272614405,
+    "modifiedTime": 1682011796246,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "Mb7OBENXa5XnClS9"
+}

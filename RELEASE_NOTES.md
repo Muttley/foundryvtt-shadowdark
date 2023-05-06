@@ -17,6 +17,7 @@
 * [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
+* [#306] Create compendiums from source data at build time
 * [#309] More consistent behaviour when clicking item icons on character sheet. Now they post the item to chat, and the chat item has buttons to perform relevant actions
 * [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item along buttons to perform relevant actions
 * [#329] Promote Spell Scrolls basic items to full blown Items in their own right, and provide ability to learn spells from scrolls.
