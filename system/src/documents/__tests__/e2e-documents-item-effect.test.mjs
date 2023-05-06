@@ -120,7 +120,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 		};
 
 		const damageDieTest = async (choices, itemName, translatedName) => {
-			const _pde = predefinedEffects["weaponDamageDieD12"];
+			const _pde = predefinedEffects.weaponDamageDieD12;
 			createPrefabEffect("weaponDamageDieD12", _pde);
 			await delay(300);
 
@@ -157,13 +157,13 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			// Put the effect on the actor
 			const _pa = await _p.createEmbeddedDocuments("Item", [_a]);
 			expect(_pa).is.not.undefined;
-			expect(_p.system.bonuses["weaponDamageDieD12"]).contains(itemName);
+			expect(_p.system.bonuses.weaponDamageDieD12).contains(itemName);
 
 			// Delete the effect
 			await cleanUpActorItems(_p);
 
 			// Expect the bonus.`weaponDamageDieD12` to be empty
-			expect(_p.system.bonuses["weaponDamageDieD12"].length).equal(0);
+			expect(_p.system.bonuses.weaponDamageDieD12.length).equal(0);
 		};
 
 		describe("Weapon Damage Die D12", () => {
