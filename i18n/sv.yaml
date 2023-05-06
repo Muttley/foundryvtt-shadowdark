@@ -99,6 +99,7 @@ SHADOWDARK.chat.welcome_message.tour_button: Guidade turer för Shadowdark RPG
 SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class.fighter: Krigare
 SHADOWDARK.class.priest: Präst
+SHADOWDARK.class.ranger: Jägare
 SHADOWDARK.class.thief: Tjuv
 SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
@@ -121,6 +122,7 @@ SHADOWDARK.dialog.general.are_you_sure: Är du säker?
 SHADOWDARK.dialog.general.cancel: Avbryt
 SHADOWDARK.dialog.general.no: "Nej"
 SHADOWDARK.dialog.general.yes: "Ja"
+SHADOWDARK.dialog.general.select: Välj
 SHADOWDARK.dialog.hp_roll.per_level: Rulla KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "KP innan rullning: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rullade {hp} KP för nivå 1 (inkl. fys mod)
@@ -139,6 +141,7 @@ SHADOWDARK.dialog.item.delete: Ta bort
 SHADOWDARK.dialog.item.sell_all: Sälj allt
 SHADOWDARK.dialog.item.sell: Sälj
 SHADOWDARK.dialog.item.use: Användning
+SHADOWDARK.dialog.light_source.pick_up.title: Välj aktör för att ge ljuskällan
 SHADOWDARK.dialog.roll_mode_label: Rull-läge
 SHADOWDARK.dialog.roll: Rulla
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
@@ -505,3 +508,5 @@ SHADOWDARK.weapon.properties.two_handed: Två-handat
 SHADOWDARK.weapon.properties.versatile: Versatilt
 SHADOWDARK.weapon.type.melee: Närstrid
 SHADOWDARK.weapon.type.ranged: Avståndsstrid
+SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
+SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor

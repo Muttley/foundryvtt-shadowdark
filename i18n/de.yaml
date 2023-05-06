@@ -99,6 +99,7 @@ SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class.fighter: Kämpfer
 SHADOWDARK.class.priest: Priester
+SHADOWDARK.class.ranger: Ranger
 SHADOWDARK.class.thief: Dieb
 SHADOWDARK.class.wizard: Zauberer
 SHADOWDARK.coins.cp: KM
@@ -121,6 +122,7 @@ SHADOWDARK.dialog.general.are_you_sure: Bist du dir sicher?
 SHADOWDARK.dialog.general.cancel: Abbrechen
 SHADOWDARK.dialog.general.no: "Nein"
 SHADOWDARK.dialog.general.yes: "Ja"
+SHADOWDARK.dialog.general.select: Select
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -139,6 +141,7 @@ SHADOWDARK.dialog.item.delete: Löschen
 SHADOWDARK.dialog.item.sell_all: Alles verkaufen
 SHADOWDARK.dialog.item.sell: Verkaufen
 SHADOWDARK.dialog.item.use: Use
+SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Wurfmodus
 SHADOWDARK.dialog.roll: Wurf
 SHADOWDARK.dialog.spell_roll.title: Zauberwurf mit
@@ -505,3 +508,5 @@ SHADOWDARK.weapon.properties.two_handed: zweihändig
 SHADOWDARK.weapon.properties.versatile: vielseitig
 SHADOWDARK.weapon.type.melee: Nahkampf
 SHADOWDARK.weapon.type.ranged: Fernkampf
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
