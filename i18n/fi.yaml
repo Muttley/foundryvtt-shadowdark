@@ -99,6 +99,7 @@ SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class.fighter: Taistelija
 SHADOWDARK.class.priest: Pappi
+SHADOWDARK.class.ranger: Ranger
 SHADOWDARK.class.thief: Varas
 SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
@@ -121,6 +122,7 @@ SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.yes: "Kyllä"
+SHADOWDARK.dialog.general.select: Select
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -139,6 +141,7 @@ SHADOWDARK.dialog.item.delete: Poista
 SHADOWDARK.dialog.item.sell_all: Myy kaikki
 SHADOWDARK.dialog.item.sell: Myy
 SHADOWDARK.dialog.item.use: Use
+SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
 SHADOWDARK.dialog.spell_roll.title: Heitä loihtimisheitto käyttäen
@@ -505,3 +508,5 @@ SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
 SHADOWDARK.weapon.type.ranged: Kantama-ase
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
