@@ -1,0 +1,42 @@
+{
+  "name": "Shield of Faith",
+  "type": "Spell",
+  "system": {
+    "description": "<p>A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.4dCcpPeyRKWt9XkC]{Spell Effect: Shield of Faith}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "priest"
+    ],
+    "duration": {
+      "type": "rounds",
+      "value": "5"
+    },
+    "lost": false,
+    "range": "self",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/magic/defensive/shield-barrier-blue.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.fWuTV4r9FIUDe1EX"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079839,
+    "modifiedTime": 1681852852378,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "fWuTV4r9FIUDe1EX",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

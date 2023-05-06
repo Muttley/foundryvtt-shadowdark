@@ -1,0 +1,102 @@
+{
+  "name": "Spell Effect: Holy Weapon",
+  "type": "Effect",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "5",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": "",
+    "bonuses": {
+      "meleeAttackBonus": "1",
+      "meleeDamageBonus": "1"
+    }
+  },
+  "effects": [
+    {
+      "label": "Melee Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "biHCltDD6IGKwBkB",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Melee Damage Bonus",
+      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeDamageBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "wcR4lmjPbNZ5nr9N",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681852491719,
+    "modifiedTime": 1681852603018,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "r2JNgS2474vuq9oy",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

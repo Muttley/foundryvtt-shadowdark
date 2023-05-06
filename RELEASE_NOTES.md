@@ -1,3 +1,56 @@
+## v1.3.0
+
+### Bugfixes
+* [#319] Right-Click context menu binding to tab links on character sheets
+* [#321] We can now add AC Bonus effects to items
+* [#325] Bonuses from Weapon Mastery now functions as intended
+* [#336] Data migration always run for new worlds the first time they are opened
+* [#341] Wizard Mishap Tier 1-2 table now rerolls itself twice on a 1
+* [#350] Inline rolls of NPC Features now render properly
+* [#322] Flask or Bottle had typo-cost in the Shadowdarkling tests
+* [#358] Updated Sleep spell description according to errata
+* [#394] Dragging a light from one character sheet to another should delete it from the original owner
+* [#396] Dropped light sources retain their active status
+
+
+### Enhancements
+* [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
+* [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
+* [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
+* [#306] Create compendiums from source data at build time
+* [#309] More consistent behaviour when clicking item icons on character sheet. Now they post the item to chat, and the chat item has buttons to perform relevant actions
+* [#310] Clicking on the names of inventory items, spells and talents on the Player character sheet now reveals information about that item along buttons to perform relevant actions
+* [#329] Promote Spell Scrolls basic items to full blown Items in their own right, and provide ability to learn spells from scrolls.
+* [#338] Complete overhaul of effects:
+	- Introducing Effect items that comes in two flavors, "condition" and "effect"
+	- Introduction of the Effect Panel that will show temporary effects (And passive if setting is checked)
+	- Now uses datalists instead of popup windows for determining effect types, making them searchable
+		- [#68] Selecting an effect type that requires input from the user will now ask for it (e.g. Weapon & Armor Mastery + Spell Advantage)
+		- [#258] Adding a talent/effect that requires input will ask the user to choose when dragging onto the sheet
+	- Time tracking including rounds tracking of temporary effects
+	- Automatic cleanup of expired effects
+	- [#272] Active Effects are ready for V11
+	- [#317] Users on Foundry v10 will now be locked out from editing effects if owned by actor. For V11 this is allowed since the database allows such operations.
+	- [#357] Added Light Source effects that are working like prior lightsources
+	- [#385] Added Damage Multiplier effects for both actors (should be used as temporary effects only) and items (may be permanent)
+* [#338] Added a Condition compendium with drag-n-droppable conditions. [#266]
+* [#339] Adds "Unlimited" as a choice for Spell Ranges
+* [#348] Adds missing config values for NPC Movement, Spell Ranges, and Spell Durations (#346, #347)
+* [#353] Shadowdarkling now tests basic items to have the correct cost
+* [#356] Added Korean as fully translated system language thanks to (Twitter: @momslastson)
+* [#357] Added Light Source mappings for easy additions of new light source types
+* [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
+* [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
+* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier
+* [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
+* [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
+* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker
+* [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
+* [#393] Support for Ranger class, including importing from Shadowdarklings.net
+* [#395] Allows the GM to pick up light sources for users if they are logged in and have an assigned character
+* [#399] Show all Actors that have one or more Users with Owner permissions on the Light Tracker
+	- Also adds a toggle to the Light Tracker to show/hide actors with no active light source
+
 ## v1.2.4
 
 ### Bugfixes

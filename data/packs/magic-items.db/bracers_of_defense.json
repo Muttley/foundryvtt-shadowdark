@@ -1,0 +1,83 @@
+{
+  "name": "Bracers of Defense",
+  "type": "Armor",
+  "img": "icons/equipment/wrist/bracer-armored-steel-purple.webp",
+  "system": {
+    "description": "<p><em>Steel bracers traced with dwarvish runes of protection.</em></p><p></p><p><strong>Benefit</strong>. You get a +1 bonus to your armor class.</p>",
+    "properties": [],
+    "magicItem": true,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "ac": {
+      "base": 1,
+      "modifier": 0,
+      "attribute": ""
+    },
+    "baseArmor": "",
+    "predefinedEffects": "",
+    "bonuses": {
+      "acBonus": "1"
+    }
+  },
+  "effects": [
+    {
+      "label": "AC Bonus",
+      "icon": "icons/skills/melee/shield-block-gray-orange.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.acBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "J71TDxKnOnztuE6t",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.JFTg4mFE1VCY2svY"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679270679094,
+    "modifiedTime": 1682011812176,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "_id": "2Ht3xGj1QvHt3znG"
+}

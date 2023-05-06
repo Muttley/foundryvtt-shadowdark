@@ -1,0 +1,118 @@
+{
+  "name": "+1 to Dexterity",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "abilityImprovement",
+      "damageBonus"
+    ],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "abilities": {
+      "str": {
+        "bonus": "0"
+      },
+      "int": {
+        "bonus": "0"
+      },
+      "wis": {
+        "bonus": "0"
+      },
+      "con": {
+        "bonus": "0"
+      },
+      "cha": {
+        "bonus": "0"
+      },
+      "dex": {
+        "bonus": "1"
+      }
+    },
+    "talent": {
+      "damageBonus": 1
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "abilityImprovement",
+      "icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "origin": "Item.6iZplEBazA2f66A3",
+      "changes": [
+        {
+          "key": "system.abilities.str.bonus",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        },
+        {
+          "key": "system.abilities.int.bonus",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        },
+        {
+          "key": "system.abilities.wis.bonus",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        },
+        {
+          "key": "system.abilities.con.bonus",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        },
+        {
+          "key": "system.abilities.cha.bonus",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        },
+        {
+          "key": "system.abilities.dex.bonus",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "GJXEM96MY9ydNQ47",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6iZplEBazA2f66A3"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678821268710,
+    "modifiedTime": 1681850007676,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "eJHwfYQZ9LmLQeSn"
+}

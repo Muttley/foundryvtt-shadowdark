@@ -1,0 +1,11 @@
+@function getColor($progress) {
+	@if $progress < 50 {
+		@return rgba(214, 102, 241, 0.534);
+	} @else if $progress < 75 {
+		@return rgba(255, 243, 72, 0.678);
+	} @else if $progress < 90 {
+		@return rgba(253, 148, 61, 0.76);
+	} @else {
+		@return rgba(253, 61, 61, 0.76);
+	}
+}

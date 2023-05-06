@@ -1,0 +1,34 @@
+{
+  "name": "Learn Spell",
+  "type": "Talent",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">Learn one additional wizard spell of any tier you know</span>.</p>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "level",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.talents.T5nkdUM75LSnDpu5"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679523678267,
+    "modifiedTime": 1681850224813,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "_id": "T5nkdUM75LSnDpu5",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

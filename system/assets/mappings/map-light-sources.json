@@ -1,0 +1,158 @@
+{
+	"lantern": {
+		"lang": "SHADOWDARK.item.effect.lightSource.lantern",
+		"light": {
+			"alpha": 0.2,
+			"angle": 360,
+			"animation": {
+				"speed": 1,
+				"intensity": 1,
+				"reverse": false,
+				"type": "torch"
+			},
+			"attentuation": 0.5,
+			"bright": 15,
+			"color": "#d1c846",
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"min": 0,
+				"max": 1
+			},
+			"dim": 60,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		}
+	},
+	"lightSpellDouble": {
+		"lang": "SHADOWDARK.item.effect.lightSource.lightSpellDouble",
+		"light": {
+			"alpha": 0.2,
+			"angle": 360,
+			"animation": {
+				"speed": 1,
+				"intensity": 1,
+				"reverse": false,
+				"type": null
+			},
+			"attentuation": 0.5,
+			"bright": 60,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"min": 0,
+				"max": 1
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		}
+	},
+	"lightSpellNear": {
+		"lang": "SHADOWDARK.item.effect.lightSource.lightSpellNear",
+		"light": {
+			"alpha": 0.2,
+			"angle": 360,
+			"animation": {
+				"speed": 1,
+				"intensity": 1,
+				"reverse": false,
+				"type": null
+			},
+			"attentuation": 0.5,
+			"bright": 30,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"min": 0,
+				"max": 1
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		}
+	},
+	"torch": {
+		"lang": "SHADOWDARK.item.effect.lightSource.torch",
+		"light": {
+			"alpha": 0.2,
+			"angle": 360,
+			"animation": {
+				"speed": 1,
+				"intensity": 1,
+				"reverse": false,
+				"type": "torch"
+			},
+			"attentuation": 0.5,
+			"bright": 5,
+			"color": "#d1c846",
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"min": 0,
+				"max": 1
+			},
+			"dim": 30,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		}
+	},
+	"purple-glow": {
+		"lang": "SHADOWDARK.item.effect.lightSource.purpleGlow",
+		"light": {
+			"alpha": 1,
+			"angle": 360,
+			"bright": 1,
+			"color": "#a600ff",
+			"coloration": 1,
+			"dim": 5,
+			"attenuation": 0.65,
+			"luminosity": 0.5,
+			"saturation": 1,
+			"contrast": 0.2,
+			"shadows": 0.4,
+			"animation": {
+					"type": "roiling",
+					"speed": 10,
+					"intensity": 5,
+					"reverse": false
+			},
+			"darkness": {
+					"min": 0,
+					"max": 1
+			}
+		}
+	},
+	"light-suppression": {
+		"lang": "SHADOWDARK.item.effect.lightSource.lightSuppression",
+		"light": {
+			"alpha": 1,
+			"angle": 360,
+			"bright": 1,
+			"color": "#a600ff",
+			"coloration": 1,
+			"dim": 5,
+			"attenuation": 0.65,
+			"luminosity": -0.5,
+			"saturation": 1,
+			"contrast": 0.2,
+			"shadows": 0.4,
+			"animation": {
+					"type": "vortex",
+					"speed": 10,
+					"intensity": 5,
+					"reverse": false
+			},
+			"darkness": {
+					"min": 0,
+					"max": 1
+			}
+		}
+	}
+}

@@ -49,12 +49,18 @@ Hooks.once("init", () => {
 	game.shadowdark = {
 		config: SHADOWDARK,
 		lightSourceTracker: new apps.LightSourceTrackerSD(),
+		effectPanel: new apps.EffectPanelSD(),
 	};
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
 	CONFIG.DiceSD = dice.DiceSD;
+
+	// @todo: V11 Compatability legacyTransferral
+	//   Update to use the designed interface as specified here, once implemented into core
+	//   https://github.com/foundryvtt/foundryvtt/issues/9185
+	if (game.version.split(".")[0] >= 11) CONFIG.ActiveEffect.legacyTransferral = true;
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();
@@ -72,6 +78,12 @@ Hooks.once("init", () => {
 
 	Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
 		types: ["NPC"],
+		makeDefault: true,
+		label: "SHADOWDARK.sheet.class.npc",
+	});
+
+	Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
+		types: ["Light"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});

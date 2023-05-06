@@ -19,9 +19,16 @@
 								<div
 									class="item-image"
 									style="background-image: url({{talent.img}})"
+									data-item-id="{{talent._id}}"
 								>
+									<i class="fas fa-comment fa-lg"></i>
 								</div>
-								{{talent.name}}
+								<a
+									class="item-control show-details"
+									data-item-id="{{talent._id}}"
+								>
+									{{talent.name}}
+								</a>
 							</td>
 							<td>
 								{{#ifEq sid "level"}}

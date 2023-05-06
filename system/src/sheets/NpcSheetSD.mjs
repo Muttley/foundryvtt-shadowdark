@@ -44,10 +44,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		// Summarize the bonuses for the attack roll
 		const parts = ["@attackBonus"];
-		data.attackBonus = item.system.attack.bonus;
+		data.attackBonus = item.system.bonuses.attackBonus;
 
 		data.damageParts = ["@damageBonus"];
-		data.damageBonus = item.system.damage.bonus;
+		data.damageBonus = item.system.bonuses.damageBonus;
 
 		return item.rollNpcAttack(parts, data);
 	}
@@ -77,13 +77,30 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const attacks = [];
 		const features = [];
 
+		const effects = {
+			effect: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.effect"),
+				items: [],
+			},
+			condition: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.condition"),
+				items: [],
+			},
+		};
+
 		for (const i of this._sortAllItems(context)) {
 			if (i.type === "NPC Attack") {
 				const display = await this.actor.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
 			}
 			if (i.type === "NPC Feature") {
-				const description = jQuery(i.system.description).text();
+				const description = await TextEditor.enrichHTML(
+					jQuery(i.system.description).text(),
+					{
+						async: true,
+					}
+				);
+
 				const display = await renderTemplate(
 					"systems/shadowdark/templates/partials/npc-feature.hbs",
 					{
@@ -96,9 +113,14 @@ export default class NpcSheetSD extends ActorSheetSD {
 					display,
 				});
 			}
+			else if (i.type === "Effect") {
+				const category = i.system.category;
+				effects[category].items.push(i);
+			}
 		}
 
 		context.attacks = attacks;
 		context.features = features;
+		context.effects = effects;
 	}
 }

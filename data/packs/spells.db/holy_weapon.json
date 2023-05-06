@@ -1,0 +1,42 @@
+{
+  "name": "Holy Weapon",
+  "type": "Spell",
+  "system": {
+    "description": "<p>One weapon you touch is imbued with a sacred blessing.</p><p>The weapon becomes magical and has +1 to attack and damage rolls for the duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.r2JNgS2474vuq9oy]{Spell Effect: Holy Weapon}</p>",
+    "properties": [],
+    "magicItem": false,
+    "class": [
+      "priest"
+    ],
+    "duration": {
+      "type": "rounds",
+      "value": "5"
+    },
+    "lost": false,
+    "range": "close",
+    "tier": 1,
+    "predefinedEffects": ""
+  },
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.55VYMMlUp2BhYyeR"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1678463079826,
+    "modifiedTime": 1681852781430,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "55VYMMlUp2BhYyeR",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

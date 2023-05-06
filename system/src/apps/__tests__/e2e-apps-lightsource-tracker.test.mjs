@@ -27,6 +27,7 @@ export default ({ describe, it, after, before, expect }) => {
 	const originalSettings = {
 		trackLightSources: game.settings.get("shadowdark", "trackLightSources"),
 		trackInactiveUserLightSources: game.settings.get("shadowdark", "trackInactiveUserLightSources"),
+		realtimeLightTracking: game.settings.get("shadowdark", "realtimeLightTracking"),
 	};
 
 	before(async () => {
@@ -81,7 +82,11 @@ export default ({ describe, it, after, before, expect }) => {
 		let mockActor;
 		let mockUser;
 		let mockItem;
-		let preexistingSources = game.shadowdark.lightSourceTracker.monitoredLightSources.length;
+
+		// Create a light tracker and replace the built in for now
+		const app = game.shadowdark.lightSourceTracker;
+
+		let preexistingSources = app.monitoredLightSources.length;
 
 		before(async () => {
 			cleanUpActorsByKey(key);
@@ -98,12 +103,16 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 
 		before(async () => {
+			await game.settings.set("shadowdark", "trackLightSources", true);
 			await game.settings.set("shadowdark", "trackInactiveUserLightSources", true);
+			await game.settings.set("shadowdark", "realtimeLightTracking", true);
+
 			// Add another user
 			mockUser = await createMockUserByKey(key);
 
-			// Create actir
+			// Create actor
 			mockActor = await createMockActorByKey(key, "Player");
+			await mockActor.update({"ownership.default": 3});
 
 			// Create light source
 			mockItem = await createMockItemByKey(key, "Basic");
@@ -136,21 +145,28 @@ export default ({ describe, it, after, before, expect }) => {
 			await game.shadowdark.lightSourceTracker.toggleInterface();
 		});
 
-		// Create a light tracker and replace the built in for now
-		const app = game.shadowdark.lightSourceTracker;
+		it("world sanity check: less than 10 world actors", () => {
+			// These tests are sensitive to number of actors in the world,
+			// as it iterates over them. And it seems to not function very
+			// stable above 10 actors (on bakbak's machine).
+			//
+			// If you see this test failing, create a fresh world and run the suite.
+			expect(game.actors.contents.length).to.be.below(10);
+		});
 
 		it("actor sanity check", () => {
 			expect(mockActor).is.not.undefined;
 			expect(mockActor.items.contents.length).equal(1);
 			expect(mockActor.items.contents[0].isLight()).is.true;
 			expect(mockActor.items.contents[0].system.light.remainingSecs).equal(5);
+			expect(mockUser.character.id).equal(mockActor.id);
 		});
 
 		it("Turning the lightsource on puts it in a tracked state", async () => {
 			// click the torch button
 			await document.querySelector("a.item-toggle-light").click();
-			await app._gatherLightSources();
-			await waitForInput();
+			await app.onUpdateWorldTime(game.time.worldTime, -1);
+			await delay(1500);
 			expect(app.monitoredLightSources.length).equal(
 				preexistingSources + 1
 			);
@@ -168,8 +184,8 @@ export default ({ describe, it, after, before, expect }) => {
 		it("Turning the lightsource off puts it in a untracked state", async () => {
 			// click the torch button
 			await document.querySelector("a.item-toggle-light").click();
-			await app._gatherLightSources();
-			await waitForInput();
+			await app.onUpdateWorldTime(game.time.worldTime, -1);
+			await delay(1500);
 			expect(app.monitoredLightSources.length).equal(
 				preexistingSources + 1
 			);
@@ -185,7 +201,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	describe("_performTick()", () => {
+	describe("onUpdateWorldTime", () => {
 		// @todo: figure out how to test
 	});
 };

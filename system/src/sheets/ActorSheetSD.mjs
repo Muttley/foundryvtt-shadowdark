@@ -14,16 +14,16 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onOpenItem(event)
 		);
 
+		html.find(".show-details").click(
+			event => this._onShowDetails(event)
+		);
+
 		html.find("[data-action='item-attack']").click(
-			event => this._onRollItem(event)
+			event => this._onRollAttack(event)
 		);
 
 		html.find("[data-action='cast-spell']").click(
 			event => this._onCastSpell(event)
-		);
-
-		html.find("[data-action='cast-scroll']").click(
-			event => this._onCastSpellScroll(event)
 		);
 
 		html.find(".item-create").click(
@@ -35,6 +35,60 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
+	}
+
+	async attachDetailsButtonEvents(item, detailsDiv) {
+		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
+			const castSpellButton = $(detailsDiv).find("button[data-action=cast-spell]");
+
+			castSpellButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.castSpell(itemId);
+			});
+		}
+
+		if (item.type === "Scroll") {
+			const learnSpellButton = $(detailsDiv).find("button[data-action=learn-spell]");
+
+			learnSpellButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.learnSpell(itemId);
+			});
+		}
+
+		if (item.type === "Potion") {
+			const usePotionButton = $(detailsDiv).find("button[data-action=use-potion]");
+
+			usePotionButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.usePotion(itemId);
+			});
+		}
+
+		if (item.type === "Weapon") {
+			const useWeaponButton = $(detailsDiv).find("button[data-action=roll-attack]");
+
+			useWeaponButton.on("click", ev => {
+				ev.preventDefault();
+				const itemId = $(ev.currentTarget).data("item-id");
+				const actorId = $(ev.currentTarget).data("actor-id");
+				const actor = game.actors.get(actorId);
+
+				actor.rollAttack(itemId);
+			});
+		}
 	}
 
 	/** @override */
@@ -131,6 +185,9 @@ export default class ActorSheetSD extends ActorSheet {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
+							if (itemData.system.light?.active) {
+								await itemData.parent.sheet._toggleLightSource(itemData);
+							}
 							await this.actor.deleteEmbeddedDocuments(
 								"Item",
 								[itemId]
@@ -169,125 +226,69 @@ export default class ActorSheetSD extends ActorSheet {
 		this.actor.rollAbility(ability, {event: event});
 	}
 
-	async _onRollItem(event) {
+	async _onRollAttack(event) {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		const data = {
-			item: item,
-			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
-			actor: this.actor,
-		};
-
-		const bonuses = this.actor.system.bonuses;
-
-		// Summarize the bonuses for the attack roll
-		const parts = ["@abilityBonus", "@talentBonus"];
-		data.damageParts = [];
-
-		// Magic Item bonuses
-		if (item.system.attackBonus) {
-			parts.push("@itemBonus");
-			data.itemBonus = item.system.attackBonus;
-		}
-		if (item.system.damage?.bonus) {
-			data.damageParts.push("@itemDamageBonus");
-			data.itemDamageBonus = item.system.damage.bonus;
-		}
-
-		// Talents & Ability modifiers
-		if (item.system.type === "melee") {
-			if (item.isFinesseWeapon()) {
-				data.abilityBonus = Math.max(
-					this.actor.abilityModifier("str"),
-					this.actor.abilityModifier("dex")
-				);
-			}
-			else {
-				data.abilityBonus = this.actor.abilityModifier("str");
-			}
-
-			data.talentBonus = bonuses.meleeAttackBonus;
-			data.meleeDamageBonus = bonuses.meleeDamageBonus;
-			data.damageParts.push("@meleeDamageBonus");
-		}
-		else {
-			data.abilityBonus = this.actor.abilityModifier("dex");
-
-			data.talentBonus = bonuses.rangedAttackBonus;
-			data.rangedDamageBonus = bonuses.rangedDamageBonus;
-			data.damageParts.push("@rangedDamageBonus");
-		}
-
-		// Check Weapon Mastery & add if applicable
-		if (
-			item.system.weaponMastery
-			|| this.actor.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
-			|| this.actor.system.bonuses.weaponMastery.includes(item.name.slugify())
-		) {
-			data.weaponMasteryBonus = 1 + Math.floor(this.actor.system.level.value / 2);
-			data.talentBonus += data.weaponMasteryBonus;
-			data.damageParts.push("@weaponMasteryBonus");
-		}
-
-		return item.rollItem(parts, data);
+		this.actor.rollAttack(itemId);
 	}
 
-	async _onCastSpellScroll(event) {
+	async _onShowDetails(event) {
 		event.preventDefault();
+
+		const parentTableRow = $(event.currentTarget).parent().parent();
+		const numColumns = parentTableRow.find("td").length;
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.items.get(itemId);
 
-		const spellUuid = item.system.description.substring(
-			item.system.description.indexOf("[") + 1,
-			item.system.description.lastIndexOf("]")
-		);
+		if (parentTableRow.hasClass("expanded")) {
+			const detailsRow = parentTableRow.next(".item-details");
+			const detailsDiv = detailsRow.find("td > .item-details__slidedown");
+			detailsDiv.slideUp(200, () => detailsRow.remove());
+		}
+		else {
+			const content = await item.getDetailsContent();
 
-		const spell = await fromUuid(spellUuid);
+			// don't do anything if there are no details to show
+			if (content.trim() === "") return;
 
-		// Do nothing if not a spellcaster
-		const abilityId = this.actor.getSpellcastingAbility();
-		if (!abilityId) return;
+			const detailsRow = document.createElement("tr");
+			detailsRow.classList.add("item-details");
 
-		const data = {
-			rollType: spell.name.slugify(),
-			item: spell,
-			scroll: item,
-			actor: this.actor,
-			abilityBonus: this.actor.abilityModifier(abilityId),
-			talentBonus: this.actor.system.bonuses.spellcastingCheckBonus,
-		};
+			const detailsData = document.createElement("td");
+			detailsData.setAttribute("colspan", numColumns);
 
-		const parts = ["@abilityBonus", "@talentBonus"];
+			const detailsDiv = document.createElement("div");
+			detailsDiv.setAttribute("style", "display: none");
 
-		return spell.rollSpell(parts, data);
+			detailsDiv.insertAdjacentHTML("afterbegin", content);
+			detailsDiv.classList.add("item-details__slidedown");
+
+			this.attachDetailsButtonEvents(item, detailsDiv);
+
+			detailsData.appendChild(detailsDiv);
+			detailsRow.appendChild(detailsData);
+
+			parentTableRow.after(detailsRow);
+
+			$(detailsDiv).slideDown(200);
+		}
+
+		parentTableRow.toggleClass("expanded");
 	}
 
 	async _onCastSpell(event) {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
 
-		const abilityId = this.actor.getSpellcastingAbility();
+		this.actor.castSpell(itemId);
+	}
 
-		const data = {
-			rollType: item.name.slugify(),
-			item: item,
-			scroll: false,
-			actor: this.actor,
-			abilityBonus: this.actor.abilityModifier(abilityId),
-			talentBonus: this.actor.system.bonuses.spellcastingCheckBonus,
-		};
-
-		const parts = ["@abilityBonus", "@talentBonus"];
-
-		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
-
-		return item.rollSpell(parts, data);
+	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
+	async emulateItemDrop(data) {
+		return this._onDropItem({}, data);
 	}
 
 	async _onItemCreate(event) {

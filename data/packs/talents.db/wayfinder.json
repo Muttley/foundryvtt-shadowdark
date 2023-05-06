@@ -1,0 +1,34 @@
+{
+  "name": "Wayfinder",
+  "type": "Talent",
+  "img": "icons/environment/wilderness/carved-standing-stone.webp",
+  "system": {
+    "description": "<p>You have advantage on checks associated with:</p><ul><li><p>Navigaqtion</p></li><li><p>Tracking</p></li><li><p>Bushcraft</p></li><li><p>Stealth</p></li><li><p>Wild animals</p></li></ul>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "class",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Puaokkz47oMTxloF"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683313049779,
+    "modifiedTime": 1683315049991,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "cUz7U8n0amQd5QQM"
+}

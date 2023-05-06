@@ -9,7 +9,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return mergeObject(super.defaultOptions, {
 			classes: ["shadowdark-importer"],
 			width: 300,
-			height: 235,
+			height: 310,
 			resizable: false,
 		});
 	}
@@ -25,14 +25,35 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return `${title}`;
 	}
 
+	/** @inheritdoc */
 	_updateObject(event, formData) {
 		event.preventDefault();
 
-		const json = JSON.parse(formData.json);
-		return this._importActor(json);
+		try {
+			const json = JSON.parse(formData.json);
+			return this._importActor(json);
+		}
+		catch(error) {
+			ui.notifications.error(`Couldn't parse the JSON. ${error}`);
+		}
+	}
+
+	/** @inheritdoc */
+	_onSubmit(event) {
+		event.preventDefault();
+		if (event.submitter.className === "open-generator") {
+			return this._openImporter();
+		}
+		super._onSubmit(event);
 	}
 
 	/** Specific methods */
+
+	_openImporter() {
+		return new FrameViewer("http://shadowdarklings.net", {
+			title: "Shadowdarklings.net",
+		}).render(true);
+	}
 
 	/**
 	 * Parse the spellcasting modifier through the config
@@ -56,6 +77,30 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		const modifiedTalent = talent.toObject();
 		modifiedTalent.effects[0].changes[0].value = spell.slugify();
 		modifiedTalent.name += ` (${spell})`;
+		return modifiedTalent;
+	}
+
+	/**
+	 * Manipulates the Weapon/Armor Mastery talent so it may be used on the actor
+	 * @param {string} type - What type of item (armor/weapon)
+	 * @param {string} choice - The actual item to be affected
+	 * @returns {ItemSD}
+	 */
+	async _masteryTalent(type, choice) {
+		const itemName = choice.split(" ").map(s => s.capitalize()).join(" ");
+		const talent = await this._findInCompendium(`${type.capitalize()} Mastery`, "shadowdark.talents");
+		const modifiedTalent = talent.toObject();
+		modifiedTalent.effects[0].changes[0].value = choice.slugify();
+		modifiedTalent.name += ` (${itemName})`;
+		return modifiedTalent;
+	}
+
+	async _damageDieD12Talent(choice) {
+		const itemName = choice.split(":")[0];
+		const talent = await this._findInCompendium("Increased Weapon Damage Die", "shadowdark.talents");
+		const modifiedTalent = talent.toObject();
+		modifiedTalent.effects[0].changes[0].value = choice.split(":")[0].slugify();
+		modifiedTalent.name += ` (${itemName})`;
 		return modifiedTalent;
 	}
 
@@ -86,7 +131,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		if (json.gear.length === 0) return items;
 
-		json.gear.forEach(async item => {
+		await Promise.all(json.gear.map(async item => {
 			for (let i = 1; i <= item.quantity; i++) {
 				const armor = await this._findInCompendium(item.name, "shadowdark.armor");
 				if (armor) items.push(armor);
@@ -99,7 +144,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 						: await this._findInCompendium(item.name, "shadowdark.basic-gear");
 				if (basic) items.push(basic);
 			}
-		});
+		}));
 
 		return items;
 	}
@@ -171,9 +216,25 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		// Gear
 		const items = await this._getGear(json);
 
+		// Spells
+		const spells = await Promise.all(
+			json.bonuses.filter(b => b.name.includes("Spell:")).map(b => {
+				return this._findInCompendium(b.bonusName, "shadowdark.spells");
+			})
+		);
+
+		// Add spells granted from talents
+		const talentSpells = await Promise.all(json.bonuses
+			.filter(b => b.name === "LearnExtraSpell")
+			.map(b => {
+				return this._findInCompendium(
+					b.bonusName, "shadowdark.spells"
+				);
+			})
+		);
+		if (talentSpells.length > 0) talentSpells.forEach(s => spells.push(s));
+
 		// Spells & Bonuses
-		const spells = [];
-		const talents = [];
 		const statBonus = {
 			"STR:+1": "+1 to Strength",
 			"DEX:+1": "+1 to Dexterity",
@@ -189,73 +250,89 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			"CHA:+2": "+2 to Charisma",
 		};
 
-		json.bonuses.forEach(async bonus => {
-			if (bonus.name.includes("Spell:") || bonus.name === "LearnExtraSpell") {
-				const spell = await this._findInCompendium(bonus.bonusName, "shadowdark.spells");
-				spells.push(spell);
-				if (bonus.name === "LearnExtraSpell") {
-					const extraSpell = await this._findInCompendium("Learn Spell", "shadowdark.talents");
-					talents.push(extraSpell);
-				}
+		const supportedTalents = [
+			"LearnExtraSpell",
+			"StatBonus",
+			"WeaponMastery",
+			"Grit",
+			"ArmorMastery",
+			"BackstabIncrease",
+			"AdvOnInitiative",
+			"Plus1ToHit",
+			"Plus1ToHitAndDamage",
+			"Plus1ToCastingSpells",
+			"AdvOnCastOneSpell",
+			"MakeRandomMagicItem",
+			"SetWeaponTypeDamage",
+			"ReduceHerbalismDC",
+		];
+
+		const talents = await Promise.all(json.bonuses.filter(
+			b => supportedTalents.includes(b.name) || supportedTalents.includes(b.bonusName)
+		).map(async bonus => {
+			if (bonus.name === "LearnExtraSpell") {
+				return this._findInCompendium("Learn Spell", "shadowdark.talents");
 			}
 			if (bonus.bonusName === "StatBonus") {
-				const talent = await this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents");
-				talents.push(talent);
-
 				// Keep running total of talent bonuses
 				for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
 					importedActor.system.abilities[ability].bonus +=
-						talent.system.abilities[ability].bonus;
+						parseInt(bonus.bonusTo.split("+")[1], 10);
 				}
+				return this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents");
 			}
 			if (bonus.sourceCategory === "Talent" || bonus.sourceCategory === "Ability") {
 				// Fighter
 				if (bonus.name === "WeaponMastery") {
-					talents.push(
-						await this._findInCompendium(`Weapon Mastery (${bonus.bonusTo})`, "shadowdark.talents")
-					);
+					return this._masteryTalent("weapon", bonus.bonusTo);
 				}
 				if (bonus.name === "Grit") {
-					talents.push(
-						await this._findInCompendium(`Grit (${bonus.bonusName})`, "shadowdark.talents")
-					);
+					return this._findInCompendium(`Grit (${bonus.bonusName})`, "shadowdark.talents");
 				}
 				if (bonus.name === "ArmorMastery") {
-					talents.push(
-						await this._findInCompendium(`Armor Mastery (${bonus.bonusTo})`, "shadowdark.talents")
-					);
+					return this._masteryTalent("armor", bonus.bonusTo);
+				}
+				// Ranger
+				if (bonus.name === "SetWeaponTypeDamage") {
+					return this._damageDieD12Talent(bonus.bonusTo);
+				}
+				if (bonus.name === "ReduceHerbalismDC") {
+					return this._findInCompendium("Reduced Herbalism DC", "shadowdark.talents");
+				}
+				if (bonus.name === "Plus1ToHitAndDamage") {
+					if (bonus.bonusTo === "Melee attacks") {
+						return this._findInCompendium("+1 to Melee Attacks and Damage", "shadowdark.talents");
+					}
+					if (bonus.bonusTo === "Ranged attacks") {
+						return this._findInCompendium("+1 to Ranged Attacks and Damage", "shadowdark.talents");
+					}
 				}
 				// Thief
 				if (bonus.name === "BackstabIncrease") {
-					talents.push(
-						await this._findInCompendium("Backstab +1 Damage Dice", "shadowdark.talents")
-					);
+					return this._findInCompendium("Backstab +1 Damage Dice", "shadowdark.talents");
 				}
 				if (bonus.name === "AdvOnInitiative") {
-					talents.push(
-						await this._findInCompendium("Initiative Advantage", "shadowdark.talents")
-					);
+					return this._findInCompendium("Initiative Advantage", "shadowdark.talents");
 				}
 				// Priest
 				if (bonus.name === "Plus1ToHit") {
 					if (bonus.bonusTo === "Melee and ranged attacks") bonus.bonusTo = `+1 to ${bonus.bonusTo}`;
-					talents.push(
-						await this._findInCompendium(bonus.bonusTo, "shadowdark.talents")
-					);
+					return this._findInCompendium(bonus.bonusTo, "shadowdark.talents");
 				}
-				// Wizard
+				// Wizard & Priest
 				if (bonus.bonusName === "Plus1ToCastingSpells") {
-					talents.push(
-						await this._findInCompendium("+1 on Spellcasting Checks", "shadowdark.talents")
-					); // Also Priest
+					return this._findInCompendium("+1 on Spellcasting Checks", "shadowdark.talents");
 				}
 				if (bonus.name === "AdvOnCastOneSpell") {
-					talents.push(
-						await this._spellCastingAdvantageTalent(bonus.bonusName)
-					);
+					return this._spellCastingAdvantageTalent(bonus.bonusName);
+				}
+				// Wizard
+				if (bonus.name === "MakeRandomMagicItem") {
+					return this._findInCompendium("Make a Random Magic Item", "shadowdark.talents");
 				}
 			}
-		});
+			return false;
+		}));
 
 		// Class talents
 		if (json.class === "Thief") {
@@ -269,6 +346,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		if (json.class === "Fighter") {
 			talents.push(
 				await this._findInCompendium("Hauler", "shadowdark.talents")
+			);
+		}
+		if (json.class === "Ranger") {
+			talents.push(
+				await this._findInCompendium("Herbalism", "shadowdark.talents")
+			);
+			talents.push(
+				await this._findInCompendium("Wayfinder", "shadowdark.talents")
 			);
 		}
 		if (json.class === "Wizard") {
@@ -344,4 +429,3 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return newActor;
 	}
 }
-

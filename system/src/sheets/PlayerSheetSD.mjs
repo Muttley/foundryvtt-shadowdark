@@ -35,6 +35,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find(".item-image").click(
+			event => this._onItemChatClick(event)
+		);
+
 		html.find(".item-quantity-decrement").click(
 			event => this._onItemQuantityDecrement(event)
 		);
@@ -65,6 +69,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find(".toggle-spell-lost").click(
 			event => this._onToggleSpellLost(event)
+		);
+
+		html.find("[data-action='use-potion']").click(
+			event => this._onUsePotion(event)
+		);
+
+		html.find("[data-action='learn-spell']").click(
+			event => this._onLearnSpell(event)
 		);
 
 		// Handle default listeners last so system listeners are triggered first
@@ -132,26 +144,228 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
-		const activeTab = $(document).find(".player section.active").data("tab");
 
-		// Spells dropped on the inventory should create spell scrolls instead of spells
-		if (item.type === "Spell" && activeTab === "tab-inventory") return this._createScroll(item);
+		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
-		super._onDropItem(event, data);
+		// Talents & Effects may need some user input
+		if (["Talent", "Effect"].includes(item.type)) return this._createItemWithEffect(item);
+
+		// Activate light spell if dropped onto the sheet
+		if (CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item.id)) {
+			return this._dropActivateLightSource(item);
+		}
+
+		if (item.actor && item.isLight()) {
+			const isActiveLight = item.isActiveLight();
+
+			if (isActiveLight) {
+				// We're transferring an active light to this sheet, so turn off
+				// any existing light sources
+				const newActorLightSources = await this.actor.getActiveLightSources();
+				for (const activeLight of newActorLightSources) {
+					await this._toggleLightSource(activeLight);
+				}
+			}
+
+			// Now create a copy of the item on the target
+			const [newItem] = await super._onDropItem(event, data);
+
+			if (isActiveLight) {
+				// Turn the original light off before it gets deleted, and
+				// make sure the new one is turned on
+				item.actor.turnLightOff();
+				newItem.actor.turnLightOn(newItem._id);
+			}
+
+			// Now we can delete the original item
+			await item.actor.deleteEmbeddedDocuments(
+				"Item",
+				[item._id]
+			);
+		}
+		else {
+			super._onDropItem(event, data);
+		}
 	}
 
-	async _createScroll(spell) {
-		const scroll = {
-			type: "Basic",
-			img: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
-			name: `Spell Scroll: ${spell.name}`,
-			system: {
-				description: `<p>@UUID[${spell.uuid}]</p>`,
-				treasure: true,
-				scroll: true,
+	/**
+	 * Actives a lightsource if dropped onto the Player sheet. Used for
+	 * activating Light spell et.c.
+	 *
+	 * @param {Item} item - Item that is a lightsource
+	 */
+	async _dropActivateLightSource(item) {
+		const actorItem = await super._onDropItemCreate(item);
+		this._toggleLightSource(actorItem[0]);
+	}
+
+	/**
+	 * Asks the user for input if necessary for an effect that requires said input.
+	 * @param {Item} item - Item that has the effects
+	 * @param {*} effect - The effect being analyzed
+	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
+	 * @returns {Object} - Object updated with the changes
+	 */
+	async _modifyEffectChangesWithInput(item, effect, key = false) {
+		// Create an object out of the item to modify before creating
+		const itemObject = item.toObject();
+		let name = itemObject.name;
+
+		const changes = await Promise.all(
+			effect.changes.map(async c => {
+				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
+					const effectKey = (key) ? key : c.key.split(".")[2];
+
+					// Ask for user input
+					c.value = await item._handlePredefinedEffect(effectKey);
+
+					if (c.value) {
+						name += ` (${game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[c.value])})`;
+					}
+				}
+				return c;
+			})
+		);
+
+		// Modify the Effect object
+		itemObject.effects.map(e => {
+			if (e._id === effect._id) {
+				e.changes = changes;
+				itemObject.name = name;
+			}
+			return e;
+		});
+
+		return itemObject;
+	}
+
+	/**
+	 * Contains logic that handles any complex effects, where the user
+	 * needs to provide input to determine the effect.
+	 * @param {Item} item - The item being created
+	 */
+	async _createItemWithEffect(item) {
+		await Promise.all(item.effects?.map(async e => {
+
+			// If the item contains effects that require user input,
+			// ask and modify talent before creating
+			if (
+				e.changes?.some(c =>
+					CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)
+				)
+			) {
+				// Spell Advantage requires special handling as it uses the `advantage` bons
+				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
+					// If there is no value with REPLACME, it is another type of advantage talent
+					if (e.changes.some(c => c.value === "REPLACME")) {
+						const key = "spellAdvantage";
+						item = await this._modifyEffectChangesWithInput(item, e, key);
+					}
+				}
+				else {
+					item = await this._modifyEffectChangesWithInput(item, e);
+				}
+			}
+		}));
+
+		// If any effects was created without a value, we don't create the item
+		if (item.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
+			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
+		);
+
+		// Activate lightsource tracking
+		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			const duration = item.totalDuration;
+			item = item.toObject();
+			item.system.light.isSource = true;
+			item.system.light.longevitySecs = duration;
+			item.system.light.remainingSecs = duration;
+			item.system.light.longevityMins = duration / 60;
+		}
+
+		// Create the item
+		const actorItem = await super._onDropItemCreate(item);
+		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			this._toggleLightSource(actorItem[0]);
+		}
+	}
+
+	/**
+	 * Creates a scroll from a spell item
+	 */
+	async _createItemFromSpellDialog(item) {
+		const content = await renderTemplate(
+			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
+			{
+				spellName: item.name,
+				isGM: game.user.isGM,
+			}
+		);
+
+		const buttons = {
+			potion: {
+				icon: '<i class="fas fa-prescription-bottle"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.potion.label"),
+				callback: () => this._createItemFromSpell(item, "Potion"),
+			},
+			scroll: {
+				icon: '<i class="fas fa-scroll"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.scroll.label"),
+				callback: () => this._createItemFromSpell(item, "Scroll"),
+			},
+			spell: {
+				icon: '<i class="fas fa-hand-sparkles"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.spell.label"),
+				callback: () => this._createItemFromSpell(item, "Spell"),
+			},
+			wand: {
+				icon: '<i class="fas fa-magic"></i>',
+				label: game.i18n.localize("SHADOWDARK.item.wand.label"),
+				callback: () => this._createItemFromSpell(item, "Wand"),
 			},
 		};
-		super._onDropItemCreate(scroll);
+
+		return Dialog.wait({
+			title: game.i18n.format("SHADOWDARK.dialog.item.create_from_spell", { spellName: item.name }),
+			content,
+			buttons,
+			close: () => false,
+			default: "scroll",
+		});
+	}
+
+	async _createItemFromSpell(spell, type) {
+		const name = (type !== "Spell")
+			? game.i18n.format(
+				`SHADOWDARK.item.name_from_spell.${type}`,
+				{spellName: spell.name}
+			)
+			: spell.name;
+
+		const itemData = {
+			type,
+			name,
+			system: spell.system,
+		};
+
+		if (type === "Spell") {
+			itemData.img = spell.img;
+		}
+		else {
+			delete itemData.system.lost;
+			itemData.system.magicItem = true;
+			itemData.system.spellName = spell.name;
+		}
+
+		super._onDropItemCreate(itemData);
+	}
+
+	async _onItemChatClick(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		item.displayCard();
 	}
 
 	async _onItemQuantityDecrement(event) {
@@ -192,6 +406,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		new shadowdark.apps.PlayerLanguagesSD(
 			this.actor, {event: event}
 		).render(true);
+	}
+
+	async _onLearnSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.learnSpell(itemId);
 	}
 
 	async _onOpenGemBag(event) {
@@ -247,7 +469,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
-	async _sendToggledLightSourceToChat(active, item) {
+	async _onUsePotion(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.usePotion(itemId);
+	}
+
+	async _sendToggledLightSourceToChat(active, item, options = {}) {
 		const cardData = {
 			active: active,
 			name: item.name,
@@ -255,15 +485,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			longevity: item.system.light.longevityMins,
 			actor: this,
 			item: item,
+			picked_up: options.picked_up ?? false,
 		};
 
-		let template = "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
+		let template = options.template ?? "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
 
 		const content = await renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,
-			speaker: ChatMessage.getSpeaker(),
+			speaker: options.speaker ?? ChatMessage.getSpeaker(),
 			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
@@ -274,6 +505,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
+		this._toggleLightSource(item);
+	}
+
+	async _onToggleSpellLost(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		this.actor.updateEmbeddedDocuments("Item", [
+			{
+				_id: itemId,
+				"system.lost": !item.system.lost,
+			},
+		]);
+	}
+
+	async _toggleLightSource(item, options = {}) {
 		const active = !item.system.light.active;
 
 		if (active) {
@@ -290,7 +538,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		const dataUpdate = {
-			_id: itemId,
+			_id: item.id,
 			"system.light.active": active,
 		};
 
@@ -302,35 +550,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			"Item", [dataUpdate]
 		);
 
+		await this.actor.toggleLight(active, item.id);
+
 		// We only update the Light Source Tracker if this Actor is currently
 		// selected by a User as their character
 		//
 		if (this.actor.isClaimedByUser()) {
-			this._sendToggledLightSourceToChat(active, item);
+			this._sendToggledLightSourceToChat(active, item, options);
 			game.shadowdark.lightSourceTracker.toggleLightSource(
 				this.actor,
 				updatedLight
 			);
 		}
-
-		this.actor.toggleLight(active, itemId);
-	}
-
-	async _onToggleSpellLost(event) {
-		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.getEmbeddedDocument("Item", itemId);
-
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				_id: itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
 	}
 
 	async _prepareItems(context) {
 		const gems = [];
+
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
@@ -347,11 +583,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				type: "Basic",
 				items: [],
 			},
+			potion: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.potions"),
+				type: "Potion",
+				items: [],
+			},
+			scroll: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.scrolls"),
+				type: "Scroll",
+				items: [],
+			},
+			wand: {
+				label: game.i18n.localize("SHADOWDARK.inventory.section.wands"),
+				type: "Wand",
+				items: [],
+			},
 			treasure: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
 				items: [],
 			},
 		};
+
 		const spells = {};
 
 		const talents = {
@@ -369,12 +621,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
+		const effects = {
+			effect: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.effect"),
+				items: [],
+			},
+			condition: {
+				label: game.i18n.localize("SHADOWDARK.item.effect.category.condition"),
+				items: [],
+			},
+		};
+
 		const attacks = {melee: [], ranged: []};
 
 		let slotCount = 0;
 
 		for (const i of this._sortAllItems(context)) {
-			if (i.type === "Armor" || i.type === "Basic" || i.type === "Weapon") {
+			if (i.system.isPhysical && i.type !== "Gem") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
 
 				// We calculate how many slots are used by this item, taking
@@ -438,6 +701,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const talentClass = i.system.talentClass;
 				talents[talentClass].items.push(i);
 			}
+			else if (i.type === "Effect") {
+				const category = i.system.category;
+				effects[category].items.push(i);
+			}
 		}
 
 		// Work out how many slots all these coins are taking up...
@@ -470,6 +737,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			(a, b) => a.system.level - b.system.level
 		);
 		context.talents = talents;
+		context.effects = effects;
 	}
 
  	async _updateObject(event, formData) {

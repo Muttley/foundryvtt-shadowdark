@@ -14,7 +14,7 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: false,
 		type: Number,
-		default: Number(game.system.flags.schemaVersion),
+		default: 0,
 	});
 
 	// -----------------
@@ -90,6 +90,16 @@ export default function registerSystemSettings() {
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
+	game.settings.register("shadowdark", "realtimeLightTracking", {
+		name: "SHADOWDARK.settings.track_light_sources.realtime_tracking.name",
+		hint: "SHADOWDARK.settings.track_light_sources.realtime_tracking.hint",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
+	});
+
 	game.settings.register("shadowdark", "pauseLightTrackingWithGame", {
 		name: "SHADOWDARK.settings.track_light_sources.pause_with_game.name",
 		hint: "SHADOWDARK.settings.track_light_sources.pause_with_game.hint",
@@ -97,7 +107,6 @@ export default function registerSystemSettings() {
 		config: true,
 		default: true,
 		type: Boolean,
-		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
 	game.settings.register("shadowdark", "trackLightSourcesInterval", {
@@ -113,5 +122,18 @@ export default function registerSystemSettings() {
 			step: 10,
 		},
 		requiresReload: true,
+	});
+
+	// ----------------------
+	//  EFFECT PANEL SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "showPassiveEffects", {
+		name: "SHADOWDARK.settings.effect_panel.show_passive.name",
+		hint: "SHADOWDARK.settings.effect_panel.show_passive.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
 	});
 }

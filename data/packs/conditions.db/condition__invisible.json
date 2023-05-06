@@ -1,0 +1,68 @@
+{
+  "name": "Condition: Invisible",
+  "type": "Effect",
+  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "system": {
+    "description": "<p>The character is invisible.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "10",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Condition: Invisible",
+      "icon": "icons/magic/light/explosion-star-glow-silhouette.webp",
+      "origin": "Item.SMXbMbXcj5hLvTjY",
+      "duration": {
+        "rounds": 10,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "LmXXpHviIuB684gX",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681852444447,
+    "modifiedTime": 1682175741060,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "LDzTLiVPs1Qvyrzk",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

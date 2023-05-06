@@ -1,0 +1,65 @@
+{
+  "name": "Condition: Laughing",
+  "type": "Effect",
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "system": {
+    "description": "<p>The character is laughing.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Laughing",
+      "icon": "icons/magic/sonic/scream-wail-shout-teal.webp",
+      "origin": "Item.7yyr32LQtbwxDTAF",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "8N8VrjrYr7pGris5",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681635064967,
+    "modifiedTime": 1682175741060,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "7yyr32LQtbwxDTAF",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

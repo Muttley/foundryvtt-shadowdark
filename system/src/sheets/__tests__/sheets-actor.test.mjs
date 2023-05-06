@@ -276,34 +276,4 @@ export default ({ describe, it, after, before, expect }) => {
 			await closeDialogs();
 		});
 	});
-
-	describe("_onOpenItem(event)", () => {
-		let actor = {};
-
-		before(async () => {
-			actor = await createMockActor("Player");
-			await actor.sheet.render(true);
-			await waitForInput();
-
-			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
-			await waitForInput();
-
-			const item = await createMockItem("Basic");
-			await item.update({"system.treasure": true});
-			await actor.createEmbeddedDocuments("Item", [item]);
-			await item.delete();
-		});
-
-		it("clicking the item name renders the item sheet", async () => {
-			const sellElement = document.querySelector("a.open-item");
-			expect(sellElement).is.not.null;
-			await sellElement.click();
-			await waitForInput();
-
-			const openWindows = Object.values(ui.windows).filter(o =>
-				o.options.classes.includes("item"));
-			expect(openWindows.length).equal(1);
-			await openWindows.pop().close();
-		});
-	});
 };

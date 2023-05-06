@@ -1,0 +1,34 @@
+{
+  "name": "Turn Undead",
+  "type": "Talent",
+  "img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">You know the </span><span class=\"fontstyle2\">turn undead </span><span class=\"fontstyle0\">spell. It doesn’t count toward your number of known spells.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "class",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.talents.LfHTnYW8I65x8Y31"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679530099403,
+    "modifiedTime": 1681850285798,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "_id": "LfHTnYW8I65x8Y31",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

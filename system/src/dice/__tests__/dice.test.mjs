@@ -71,6 +71,7 @@ const mockData = () => {
 				bonuses: {
 					advantage: ["hp", "meleeAttack"],
 					weaponMastery: ["whip", "bastard-sword"],
+					weaponDamageDieD12: [],
 					meleeAttackBonus: 4,
 					meleeDamageBonus: 1,
 					rangedAttackBonus: 1,
@@ -92,13 +93,17 @@ const mockData = () => {
 				return true;
 			},
 			system: {
-				attackBonus: 3,
 				damage: {
-					bonus: 0,
 					numDice: 1,
 					oneHanded: "d8",
 					twoHanded: "d10",
-					critMultiplier: 2,
+				},
+				bonuses: {
+					attackBonus: 3,
+					damageBonus: 0,
+					critical: {
+						multiplier: 2,
+					},
 				},
 				tier: 0, // spells
 				properties: [
@@ -615,6 +620,13 @@ export default ({ describe, it, expect }) => {
 						numDice: 1,
 						value: "d6",
 					},
+					bonuses: {
+						attackBonus: 0,
+						damagebonus: 0,
+						critical: {
+							multiplier: 2,
+						},
+					},
 				},
 			},
 		};
@@ -701,7 +713,7 @@ export default ({ describe, it, expect }) => {
 			const mockItemData = mockData();
 			mockItemData.rolls = { main: { critical: "success" } };
 			mockItemData.damageParts = [];
-			mockItemData.item.system.damage.critMultiplier = 4;
+			mockItemData.item.system.bonuses.critical.multiplier = 4;
 			expect(Object.keys(mockItemData.rolls).length).equal(1);
 
 			const response = await RollSD._rollWeapon(mockItemData);
@@ -726,6 +738,32 @@ export default ({ describe, it, expect }) => {
 
 			const response = await RollSD._rollWeapon(mockItemData);
 			expect(Object.keys(response.rolls).length).equal(1);
+		});
+
+		it("damageMultiplier is expected to multiply the formula", async () => {
+			const mockItemData = mockData();
+			mockItemData.rolls = { main: { critical: null } };
+			mockItemData.damageParts = [];
+			mockItemData.actor.system.bonuses.damageMultiplier = 4;
+			expect(Object.keys(mockItemData.rolls).length).equal(1);
+
+			const response = await RollSD._rollWeapon(mockItemData);
+			expect(Object.keys(response.rolls).length).equal(3);
+			expect(response.rolls.primaryDamage).is.not.undefined;
+			expect(response.rolls.primaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms.length).equal(3);
+			expect(response.rolls.primaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.primaryDamage.roll.terms[1].operator).equal("*");
+			expect(response.rolls.primaryDamage.roll.terms[2].number).equal(4);
+			expect(response.rolls.primaryDamage.roll._formula).equal("1d8 * 4");
+			expect(response.rolls.secondaryDamage).is.not.undefined;
+			expect(response.rolls.secondaryDamage.renderedHTML).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll.terms.length).equal(3);
+			expect(response.rolls.secondaryDamage.roll.terms[0].number).is.not.undefined;
+			expect(response.rolls.secondaryDamage.roll.terms[1].operator).equal("*");
+			expect(response.rolls.secondaryDamage.roll.terms[2].number).equal(4);
 		});
 
 		describe("Backstabbing", () => {

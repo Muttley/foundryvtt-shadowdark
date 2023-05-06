@@ -222,6 +222,23 @@
 		text-align: left;
 	}
 
+	.details-description {
+		@include p-reset;
+		padding-top: 4px;
+		padding-bottom: 8px;
+	}
+
+	.details-footer {
+		padding: 3px 0 0;
+
+		span {
+			border: 2px groove #FFF;
+			border-radius: 5px;
+			padding: 0 4px 0 4px;
+			font-size: 10px;
+		}
+	}
+
 	.open-gem-bag {
 		color: sienna;
 	}
@@ -257,10 +274,6 @@
 			text-align: center;
 			border: none;
 
-			& .item-rollable:hover {
-				background-image: url("/icons/svg/d20-grey.svg") !important;
-			}
-
 			& td:first-child {
 				padding-left: 8px;
 				text-align: left;
@@ -268,6 +281,10 @@
 
 			& th:last-child {
 				text-align: center;
+			}
+
+			& tr {
+				vertical-align: top;
 			}
 
 			& tr:first-child,
@@ -286,7 +303,9 @@
 			& tr:not(:first-child,
 				:nth-last-child(2),
 				:last-child,
-				.inventory-section-header) {
+				.inventory-section-header,
+				.item-details
+			) {
 				font-size: 13px;
 
 				&:hover {
@@ -313,13 +332,35 @@
 		color: var(--secondary);
 	}
 
+	.item-details {
+		font-size: 12px;
+
+		&__slidedown {
+			@include p-reset;
+			padding-left: 8px;
+			text-align: left;
+		}
+	}
+
 	.item-image {
+		@include p-reset;
+		display: inline-block;
 		width: 24px;
 		height: 24px;
-		border-radius: 3px;
-		background-size: cover;
-		display: inline-block;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
 		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+		&:hover {
+			background: none !important;
+			color: white;
+		}
 	}
 
 	.item-toggle-equipped {
@@ -338,9 +379,22 @@
 		}
 	}
 
-	.inactive {
+	.inactive,
+	.use-potion,
+	.use-scroll,
+	.use-wand {
 		color: var(--inactive-control);
 	}
+
+	.use-potion,
+	.use-scroll,
+	.use-wand {
+		&:hover {
+			color: lightskyblue;
+			text-shadow: 2px 2px 2px black;
+		}
+	}
+
 
 	.language-list {
 		&:hover {
@@ -552,7 +606,8 @@
 			//
 			& tr:not(
 				:first-child,
-				.spell-tier-header
+				.spell-tier-header,
+				.item-details
 			) {
 				&:hover {
 					cursor: pointer;
@@ -605,7 +660,8 @@
 			//
 			& tr:not(
 				:first-child,
-				.talent-section-header
+				.talent-section-header,
+				.item-details
 			) {
 				&:hover {
 					cursor: pointer;

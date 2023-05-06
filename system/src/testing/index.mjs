@@ -29,10 +29,6 @@ import baseTemplatesTests, {
 } from "../__tests__/base-templates.test.mjs";
 
 /* Apps Imports */
-import appsActiveEffectsTests, {
-	key as appsActiveEffectsKey,
-	options as appsActiveEffectsOptions,
-} from "../apps/__tests__/apps-active-effects.test.mjs";
 import appsArmorPropertiesTests, {
 	key as appsArmorPropertiesKey,
 	options as appsArmorPropertiesOptions,
@@ -49,10 +45,6 @@ import appsLightsourceTrackerTests, {
 	key as appsLightsourceTrackerKey,
 	options as appsLightsourceTrackerOptions,
 } from "../apps/__tests__/apps-lightsource-tracker.test.mjs";
-import appsMagicItemEffectsTests, {
-	key as appsMagicItemEffectsKey,
-	options as appsMagicItemEffectsOptions,
-} from "../apps/__tests__/apps-magic-item-effects.test.mjs";
 import appsNPCAttackRangesTests, {
 	key as appsNPCAttackRangesKey,
 	options as appsNPCAttackRangesOptions,
@@ -69,10 +61,6 @@ import appsSpellcasterClassTests, {
 	key as appsSpellcasterClassKey,
 	options as appsSpellcasterClassOptions,
 } from "../apps/__tests__/apps-spellcaster-class.test.mjs";
-import appsTalentTypesTests, {
-	key as appsTalentTypesKey,
-	options as appsTalentTypesOptions,
-} from "../apps/__tests__/apps-talent-types.test.mjs";
 import appsWeaponPropertiesTests, {
 	key as appsWeaponPropertiesKey,
 	options as appsWeaponPropertiesOptions,
@@ -96,26 +84,22 @@ import diceChatTemplateTests, {
 } from "../dice/__tests__/dice-chat-templates.test.mjs";
 
 /* Document Imports */
-import documentsActiveEffectsTests, {
-	key as documentsActiveEffectsKey,
-	options as documentsActiveEffectsOptions,
-} from "../documents/__tests__/documents-active-effects.test.mjs";
 import documentsActorTests, {
 	key as documentsActorKey,
 	options as documentsActorOptions,
 } from "../documents/__tests__/documents-actor.test.mjs";
-import documentsItemMagicItemsTests, {
-	key as documentsItemMagicItemsKey,
-	options as documentsItemMagicItemsOptions,
-} from "../documents/__tests__/documents-item-magic-items.test.mjs";
+import documentsItemsEffectsTests, {
+	key as documentsItemsEffectsKey,
+	options as documentsItemsEffectsOptions,
+} from "../documents/__tests__/documents-item-effect.test.mjs";
+import documentsItemsEffectsPredefinedTests, {
+	key as documentsItemsEffectsPredefinedKey,
+	options as documentsItemsEffectsPredefinedOptions,
+} from "../documents/__tests__/documents-item-effect-predefined-effects.test.mjs";
 import documentsItemsSpellsTests, {
 	key as documentsItemsSpellsKey,
 	options as documentsItemsSpellsOptions,
 } from "../documents/__tests__/documents-item-spell.test.mjs";
-import documentsItemsTalentTests, {
-	key as documentsItemsTalentKey,
-	options as documentsItemsTalentOptions,
-} from "../documents/__tests__/documents-item-talent.test.mjs";
 import documentsItemsTests, {
 	key as documentsItemsKey,
 	options as documentsItemsOptions,
@@ -126,6 +110,10 @@ import e2eAppsLightsourceTrackerTests, {
 	key as e2eAppsLightsourceTrackerKey,
 	options as e2eAppsLightsourceTrackerOptions,
 } from "../apps/__tests__/e2e-apps-lightsource-tracker.test.mjs";
+import e2eDocumentsItemEffectTests, {
+	key as e2eDocumentsItemEffectKey,
+	options as e2eDocumentsItemEffectOptions,
+} from "../documents/__tests__/e2e-documents-item-effect.test.mjs";
 
 /* Hooks Imports */
 import hooksChatMessageTests, {
@@ -194,11 +182,6 @@ Hooks.on("quenchReady", async quench => {
 
 	// Apps test
 	quench.registerBatch(
-		appsActiveEffectsKey,
-		appsActiveEffectsTests,
-		appsActiveEffectsOptions
-	);
-	quench.registerBatch(
 		appsArmorPropertiesKey,
 		appsArmorPropertiesTests,
 		appsArmorPropertiesOptions
@@ -219,11 +202,6 @@ Hooks.on("quenchReady", async quench => {
 		appsLightsourceTrackerOptions
 	);
 	quench.registerBatch(
-		appsMagicItemEffectsKey,
-		appsMagicItemEffectsTests,
-		appsMagicItemEffectsOptions
-	);
-	quench.registerBatch(
 		appsNPCAttackRangesKey,
 		appsNPCAttackRangesTests,
 		appsNPCAttackRangesOptions
@@ -242,11 +220,6 @@ Hooks.on("quenchReady", async quench => {
 		appsShadowdarklingImporterKey,
 		appsShadowdarklingImporterTests,
 		appsShadowdarklingImporterOptions
-	);
-	quench.registerBatch(
-		appsTalentTypesKey,
-		appsTalentTypesTests,
-		appsTalentTypesOptions
 	);
 	quench.registerBatch(
 		appsWeaponPropertiesKey,
@@ -282,19 +255,9 @@ Hooks.on("quenchReady", async quench => {
 
 	// Document tests
 	quench.registerBatch(
-		documentsActiveEffectsKey,
-		documentsActiveEffectsTests,
-		documentsActiveEffectsOptions
-	);
-	quench.registerBatch(
 		documentsActorKey,
 		documentsActorTests,
 		documentsActorOptions
-	);
-	quench.registerBatch(
-		documentsItemMagicItemsKey,
-		documentsItemMagicItemsTests,
-		documentsItemMagicItemsOptions
 	);
 	quench.registerBatch(
 		documentsItemsKey,
@@ -307,9 +270,21 @@ Hooks.on("quenchReady", async quench => {
 		documentsItemsSpellsOptions
 	);
 	quench.registerBatch(
-		documentsItemsTalentKey,
-		documentsItemsTalentTests,
-		documentsItemsTalentOptions
+		documentsItemsEffectsKey,
+		documentsItemsEffectsTests,
+		documentsItemsEffectsOptions
+	);
+	quench.registerBatch(
+		documentsItemsEffectsPredefinedKey,
+		documentsItemsEffectsPredefinedTests,
+		documentsItemsEffectsPredefinedOptions
+	);
+
+	// E2E Document tests
+	quench.registerBatch(
+		e2eDocumentsItemEffectKey,
+		e2eDocumentsItemEffectTests,
+		e2eDocumentsItemEffectOptions
 	);
 
 	// Hooks test

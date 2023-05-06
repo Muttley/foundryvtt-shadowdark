@@ -1,0 +1,49 @@
+{
+  "name": "Mace",
+  "type": "Weapon",
+  "img": "icons/weapons/maces/mace-round-ornate-purple.webp",
+  "system": {
+    "cost": {
+      "gp": 5,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": true,
+    "equipped": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "description": "",
+    "properties": [],
+    "attackBonus": 0,
+    "damage": {
+      "bonus": 0,
+      "oneHanded": "d6",
+      "twoHanded": "",
+      "numDice": 1
+    },
+    "range": "close",
+    "type": "melee",
+    "weaponMastery": false,
+    "baseWeapon": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "0.1.0",
+    "coreVersion": "10.291",
+    "createdTime": 1678531969393,
+    "modifiedTime": 1679213106175,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "jGZyVuFJnW7QcBFX",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

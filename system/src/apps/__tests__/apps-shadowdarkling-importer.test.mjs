@@ -369,6 +369,16 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				},
 			];
 
+			it("sanity check", async () => {
+				const actor = await app._importActor(json);
+				expect(actor.system.abilities.str.base).equal(3);
+				expect(actor.system.abilities.dex.base).equal(4);
+				expect(actor.system.abilities.con.base).equal(5);
+				expect(actor.system.abilities.int.base).equal(6);
+				expect(actor.system.abilities.wis.base).equal(7);
+				expect(actor.system.abilities.cha.base).equal(8);
+			});
+
 			talents.forEach(t => {
 				it(`${t.bonusTo} talent gives correct bonus`, async () => {
 					const ability = t.bonusTo.split(":")[0].toLowerCase();
@@ -731,7 +741,130 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				expect(actor.system.class).equal("wizard");
 
-				const talent = actor.items.find(o => o.name === "Created Random Magic Item");
+				const talent = actor.items.find(o => o.name === "Make a Random Magic Item");
+				expect(talent).is.not.undefined;
+			});
+		});
+	});
+
+	describe("ranger", () => {
+		const json = _jsonTestActor();
+		json.class = "Ranger";
+
+		describe("build-in talents", () => {
+			it("Wayfinder", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Ability",
+						gainedAtLevel: 1,
+						name: "Grit",
+						bonusName: "Strength",
+						bonusTo: "AdvantageOnStatChecks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Wayfinder"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("Herbalism", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Ability",
+						gainedAtLevel: 1,
+						name: "Grit",
+						bonusName: "Strength",
+						bonusTo: "AdvantageOnStatChecks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Herbalism"));
+				expect(talent).is.not.undefined;
+			});
+		});
+
+		describe("level talents", () => {
+			it("Set Weapon Type Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "SetWeaponTypeDamage",
+						bonusName: "SetWeaponTypeDamage",
+						bonusTo: "Longbow:12",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Increased Weapon Damage Die (Longbow)"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("+1 to Melee Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Melee attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Melee Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("+1 to Ranged Attacks and Damage", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "Plus1ToHitAndDamage",
+						bonusName: "Plus1ToHitAndDamage",
+						bonusTo: "Ranged attacks",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("+1 to Ranged Attacks and Damage"));
+				expect(talent).is.not.undefined;
+			});
+
+			it("Reduce Herbalism DC", async () => {
+				json.bonuses = [
+					{
+						sourceType: "Class",
+						sourceName: "Ranger",
+						sourceCategory: "Talent",
+						gainedAtLevel: 1,
+						name: "ReduceHerbalismDC",
+						bonusName: "",
+						bonusTo: "ReduceHerbalismDC",
+					},
+				];
+				const actor = await app._importActor(json);
+				expect(actor.system.class).equal("ranger");
+
+				const talent = actor.items.find(o => o.name.includes("Reduced Herbalism DC"));
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -1033,7 +1166,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					totalUnits: 1,
 					slots: 1,
 					cost: 3,
-					currency: "gp",
+					currency: "sp",
 				},
 				{
 					instanceId: "lfxz9pod",
@@ -1159,6 +1292,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 							: item.name;
 					expect(actor.items.contents[0].name.toLowerCase()).equal(
 						name.toLowerCase());
+					expect(actor.items.contents[0].system.cost[item.currency]).equal(item.cost);
 					await actor.delete();
 				});
 			});

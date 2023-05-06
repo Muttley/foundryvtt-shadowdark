@@ -1,0 +1,56 @@
+{
+  "name": "Potion of Extirpation",
+  "type": "Basic",
+  "img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+  "system": {
+    "description": "<p><em>An acrid, tarry substance in an iron flask with a lead stopper.</em></p><p></p><p><strong>Benefit</strong>. You can pour the potion on one object or creature filling up to a close area. The target is utterly removed from reality and cannot be returned by anything short of a <em>wish</em> spell.</p><p></p><p><strong>Personality</strong>. Chaotic. Protests loudly while being used and never agrees that the target is the right choice for extirpation.</p>",
+    "properties": [],
+    "magicItem": true,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "light": {
+      "active": false,
+      "hasBeenUsed": false,
+      "isSource": false,
+      "longevityMins": 60,
+      "remainingSecs": 3600,
+      "template": "torch"
+    },
+    "treasure": false,
+    "scroll": false,
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.JzVrFI7iQO9bNeUM"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679271692881,
+    "modifiedTime": 1682012026353,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "_id": "oS1VcB7hqcsjkUZv"
+}

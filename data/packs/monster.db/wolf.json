@@ -1,0 +1,201 @@
+{
+  "name": "Wolf",
+  "type": "NPC",
+  "img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+  "system": {
+    "alignment": "neutral",
+    "attributes": {
+      "hp": {
+        "max": 10,
+        "value": 10,
+        "hd": 0
+      },
+      "ac": {
+        "value": 12
+      }
+    },
+    "level": {
+      "value": 2
+    },
+    "notes": "<p><span class=\"fontstyle0\"><em>A giant canine with a gray pelt, yellow eyes, and dripping jaws.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">10, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 bite +2 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">double near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Pack Hunter.</strong> </span><span class=\"fontstyle3\">Deals +1 damage while an ally is close.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "spellcastingAbility": "",
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -2
+      },
+      "dex": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "darkAdapted": true,
+    "move": "doulbeNear",
+    "moveNote": ""
+  },
+  "prototypeToken": {
+    "name": "Wolf",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "name": "Pack Hunter",
+      "type": "NPC Feature",
+      "system": {
+        "description": "<p><span class=\"fontstyle2\">Deals +1 damage while an ally is close.</span></p>",
+        "properties": [],
+        "magicItem": false
+      },
+      "_id": "0qMxitfGpbBTzDJf",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "aUdswNccq2u0SxEP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679450819149,
+        "modifiedTime": 1679450832101,
+        "lastModifiedBy": "aUdswNccq2u0SxEP"
+      }
+    },
+    {
+      "name": "Bite",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 1,
+          "bonus": 2
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d6",
+          "special": ""
+        },
+        "attackType": "physical",
+        "ranges": [
+          "close"
+        ]
+      },
+      "_id": "uGBqPwXAd5ntrzlg",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "aUdswNccq2u0SxEP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679450841717,
+        "modifiedTime": 1679450857315,
+        "lastModifiedBy": "aUdswNccq2u0SxEP"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.monster.FzBj2e0DzIjvQ0JE"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.1.2",
+    "coreVersion": "10.291",
+    "createdTime": 1679450781636,
+    "modifiedTime": 1680381103986,
+    "lastModifiedBy": "5tzCT7bJKM9kuuO3"
+  },
+  "_id": "FzBj2e0DzIjvQ0JE",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

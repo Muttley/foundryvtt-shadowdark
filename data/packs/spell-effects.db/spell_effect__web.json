@@ -1,0 +1,64 @@
+{
+  "name": "Spell Effect: Web",
+  "type": "Effect",
+  "img": "icons/commodities/materials/material-webbing.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Signika, sans-serif\">A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "5",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Stuck",
+      "icon": "icons/commodities/materials/material-webbing.webp",
+      "origin": "Item.28PPFz1MYTsfPwzh",
+      "duration": {
+        "rounds": 5,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "pTKFUJ3czAqssXCu",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681851902077,
+    "modifiedTime": 1681852603015,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "28PPFz1MYTsfPwzh",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

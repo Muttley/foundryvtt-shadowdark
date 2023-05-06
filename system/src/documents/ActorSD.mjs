@@ -61,11 +61,12 @@ export default class ActorSD extends Actor {
 			attackType: item.system.attackType,
 			attackName: item.name,
 			numAttacks: item.system.attack.num,
-			attackBonus: item.system.attack.bonus,
+			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
 			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
-			bonusDamage: item.system.damage.bonus,
+			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
 			special: item.system.damage.special,
-			ranges: item.system.ranges.join("/"),
+			ranges: item.system.ranges.map(s => game.i18n.localize(
+				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
 
 		return await renderTemplate(
@@ -108,19 +109,30 @@ export default class ActorSD extends Actor {
 		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
 		weaponOptions.bonusDamage = weaponMasterBonus;
 
+		// Find out if the user has a modified damage die
+		let oneHanded = item.system.damage.oneHanded ?? false;
+		let twoHanded = item.system.damage.twoHanded ?? false;
+		if (this.system.bonuses.weaponDamageDieD12.some(t =>
+			[item.name.slugify(), item.system.baseWeapon.slugify()].includes(t)
+		)) {
+			oneHanded = oneHanded ? "d12" : false;
+			twoHanded = twoHanded ? "d12" : false;
+		}
+
 		if (item.system.type === "melee") {
 			weaponOptions.attackBonus =	baseAttackBonus
-				+ this.system.bonuses.meleeAttackBonus
+				+ parseInt(this.system.bonuses.meleeAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
 				+ weaponMasterBonus;
 
-			weaponOptions.bonusDamage += this.system.bonuses.meleeDamageBonus;
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.meleeDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
 
-			if (item.system.damage.oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.oneHanded
-				];
+			if (oneHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
 				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 
 				weaponDisplays.melee.push({
@@ -141,12 +153,12 @@ export default class ActorSD extends Actor {
 			}
 			if (item.hasProperty("thrown")) {
 				weaponOptions.attackBonus = baseAttackBonus
-					+ this.system.bonuses.rangedAttackBonus
+					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+					+ parseInt(item.system.bonuses.attackBonus, 10)
 					+ weaponMasterBonus;
 
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.oneHanded
-				];
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
+
 				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
@@ -160,19 +172,20 @@ export default class ActorSD extends Actor {
 		}
 		else if (item.system.type === "ranged") {
 			weaponOptions.attackBonus = baseAttackBonus
-				+ this.system.bonuses.rangedAttackBonus
+				+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
 				+ weaponMasterBonus;
 
-			weaponOptions.bonusDamage += this.system.bonuses.rangeDamageBonus;
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.rangedDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 				item.system.range
 			];
 
-			if (item.system.damage.oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.oneHanded
-				];
+			if (oneHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
 				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
 
 				weaponDisplays.ranged.push({
@@ -180,10 +193,8 @@ export default class ActorSD extends Actor {
 					itemId,
 				});
 			}
-			if (item.system.damage.twoHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.twoHanded
-				];
+			if (twoHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[twoHanded];
 				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
 
 				weaponDisplays.ranged.push({
@@ -211,24 +222,69 @@ export default class ActorSD extends Actor {
 		};
 	}
 
+	/**
+	 * Checks if the item (weapon) has any combination of settings
+	 * or the actor has bonuses that would mean it should have weapon
+	 * mastery bonuses applied to it.
+	 * @param {Item} item - Item to calculate bonus for
+	 * @returns {number} bonus
+	 */
 	calcWeaponMasterBonus(item) {
 		let bonus = 0;
 
-		if (this.system.bonuses.weaponMastery.find(
-			mastery => mastery === item.name.slugify()
-		)) {
+		if (
+			item.system.weaponMastery
+			|| this.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
+			|| this.system.bonuses.weaponMastery.includes(item.name.slugify())
+		) {
 			bonus += 1 + Math.floor(this.system.level.value / 2);
 		}
 
 		return bonus;
 	}
 
+	async castSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		if (!item) {
+			ui.notifications.warn(
+				"Item no longer exists",
+				{ permanent: false }
+			);
+			return;
+		}
+
+		const abilityId = this.getSpellcastingAbility();
+
+		let rollType;
+		if (item.type === "Spell") {
+			rollType = item.name.slugify();
+		}
+		else {
+			rollType = item.system.spellName.slugify();
+		}
+
+		const data = {
+			rollType,
+			item: item,
+			actor: this,
+			abilityBonus: this.abilityModifier(abilityId),
+			talentBonus: this.system.bonuses.spellcastingCheckBonus,
+		};
+
+		const parts = ["@abilityBonus", "@talentBonus"];
+
+		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
+
+		return item.rollSpell(parts, data);
+	}
+
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
-		if (token) token.document.update({light: lightData});
+		if (token) await token.document.update({light: lightData});
 
 		// Update the prototype as well
-		Actor.updateDocuments([{
+		await Actor.updateDocuments([{
 			_id: this._id,
 			"prototypeToken.light": lightData,
 		}]);
@@ -245,6 +301,75 @@ export default class ActorSD extends Actor {
 			: false;
 	}
 
+	async learnSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const result = await this.rollAbility(
+			"int",
+			{target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC}
+		);
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.spell_learn.success"
+			: "SHADOWDARK.chat.spell_learn.failure";
+
+		const message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				spellName: item.system.spellName,
+			}
+		);
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (success) {
+			const spell = {
+				type: "Spell",
+				img: item.img,
+				name: item.system.spellName,
+				system: {
+					class: item.system.class,
+					description: item.system.description,
+					duration: item.system.duration,
+					properties: item.system.properties,
+					range: item.system.range,
+					tier: item.system.tier,
+				},
+			};
+
+			this.createEmbeddedDocuments("Item", [spell]);
+		}
+
+		// original scroll always lost regardless of outcome
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			[itemId]
+		);
+	}
+
 	numGearSlots() {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
@@ -259,6 +384,9 @@ export default class ActorSD extends Actor {
 			gearSlots += this.system.bonuses.hauler && conModifier > 0
 				? conModifier
 				: 0;
+
+			// Add effects that modify gearslots
+			gearSlots += parseInt(this.system.bonuses.gearSlots, 10);
 		}
 
 		return gearSlots;
@@ -282,6 +410,8 @@ export default class ActorSD extends Actor {
 	}
 
 	getRollData() {
+		if (this.type === "Light") return;
+
 		const rollData = super.getRollData();
 
 		rollData.initiativeBonus = this.abilityModifier("dex");
@@ -325,6 +455,10 @@ export default class ActorSD extends Actor {
 
 		if (this.type === "Player") {
 			this._preparePlayerData();
+
+			if (canvas.ready && game.user.character === this) {
+				game.shadowdark.effectPanel.refresh();
+			}
 		}
 		else if (this.type === "NPC") {
 			this._prepareNPCData();
@@ -356,7 +490,75 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		return await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
+	async rollAttack(itemId) {
+		const item = this.items.get(itemId);
+
+		const data = {
+			item: item,
+			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
+			actor: this,
+		};
+
+		const bonuses = this.system.bonuses;
+
+		// Summarize the bonuses for the attack roll
+		const parts = ["@abilityBonus", "@talentBonus"];
+		data.damageParts = [];
+
+		// Check damage multiplier
+		const damageMultiplier = Math.max(
+			parseInt(data.item.system.bonuses?.damageMultiplier, 10),
+			parseInt(data.actor.system.bonuses?.damageMultiplier, 10),
+			1);
+
+
+		// Magic Item bonuses
+		if (item.system.bonuses.attackBonus) {
+			parts.push("@itemBonus");
+			data.itemBonus = item.system.bonuses.attackBonus;
+		}
+		if (item.system.bonuses.damageBonus) {
+			data.damageParts.push("@itemDamageBonus");
+			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
+		}
+
+		// Talents & Ability modifiers
+		if (this.type === "Player") {
+
+			if (item.system.type === "melee") {
+				if (item.isFinesseWeapon()) {
+					data.abilityBonus = Math.max(
+						this.abilityModifier("str"),
+						this.abilityModifier("dex")
+					);
+				}
+				else {
+					data.abilityBonus = this.abilityModifier("str");
+				}
+
+				data.talentBonus = bonuses.meleeAttackBonus;
+				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
+				data.damageParts.push("@meleeDamageBonus");
+			}
+			else {
+				data.abilityBonus = this.abilityModifier("dex");
+
+				data.talentBonus = bonuses.rangedAttackBonus;
+				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
+				data.damageParts.push("@rangedDamageBonus");
+			}
+
+			// Check Weapon Mastery & add if applicable
+			const weaponMasterBonus = this.calcWeaponMasterBonus(item);
+			data.talentBonus += weaponMasterBonus;
+			data.weaponMasteryBonus = weaponMasterBonus * damageMultiplier;
+			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
+		}
+
+		return item.rollItem(parts, data);
 	}
 
 	async rollHP(options={}) {
@@ -370,9 +572,7 @@ export default class ActorSD extends Actor {
 
 	async getActiveLightSources() {
 		const items = this.items.filter(
-			item => item.type === "Basic"
-		).filter(
-			item => item.system.light.isSource && item.system.light.active
+			item => item.isActiveLight()
 		).sort((a, b) => {
 			const a_name = a.name.toLowerCase();
 			const b_name = b.name.toLowerCase();
@@ -501,10 +701,10 @@ export default class ActorSD extends Actor {
 
 	async toggleLight(active, itemId) {
 		if (active) {
-			this.turnLightOn(itemId);
+			await this.turnLightOn(itemId);
 		}
 		else {
-			this.turnLightOff();
+			await this.turnLightOff();
 		}
 	}
 
@@ -514,17 +714,22 @@ export default class ActorSD extends Actor {
 			bright: 0,
 		};
 
-		this.changeLightSettings(noLight);
+		await this.changeLightSettings(noLight);
 	}
 
 	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
 
-		const lightData = CONFIG.SHADOWDARK.LIGHT_SETTINGS[
-			item.system.light.template
-		];
+		// Get the mappings
+		const lightSources = await foundry.utils.fetchJsonWithTimeout(
+			"systems/shadowdark/assets/mappings/map-light-sources.json"
+		);
 
-		this.changeLightSettings(lightData);
+		const lightData = lightSources[
+			item.system.light.template
+		].light;
+
+		await this.changeLightSettings(lightData);
 	}
 
 	async updateArmor(updatedItem) {
@@ -585,11 +790,13 @@ export default class ActorSD extends Actor {
 
 				if (armor.isNotAShield()) {
 					nonShieldEquipped = true;
-					if (
-						this.system.bonuses.armorMastery.includes(armor.name.slugify())
-						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-					) armorMasteryBonus += 1;
 				}
+
+				// Check if armor mastery should apply to the AC
+				if (
+					this.system.bonuses.armorMastery.includes(armor.name.slugify())
+					|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+				) armorMasteryBonus += 1;
 
 				newArmorClass += armor.system.ac.modifier;
 				newArmorClass += armor.system.ac.base;
@@ -606,12 +813,70 @@ export default class ActorSD extends Actor {
 			newArmorClass += armorMasteryBonus;
 		}
 
+		// Add AC from effects
+		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
+
 		Actor.updateDocuments([{
 			_id: this._id,
 			"system.attributes.ac.value": newArmorClass,
 		}]);
 
 		return newArmorClass;
+	}
+
+	async usePotion(itemId) {
+		const item = this.items.get(itemId);
+
+		renderTemplate(
+			"systems/shadowdark/templates/dialog/confirm-use-potion.hbs",
+			{name: item.name}
+		).then(html => {
+			new Dialog({
+				title: "Confirm Use",
+				content: html,
+				buttons: {
+					Yes: {
+						icon: "<i class=\"fa fa-check\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						callback: async () => {
+							const potionDescription = await item.getEnrichedDescription();
+
+							const cardData = {
+								actor: this,
+								item: item,
+								message: game.i18n.format(
+									"SHADOWDARK.chat.potion_used",
+									{
+										name: this.name,
+										potionName: item.name,
+									}
+								),
+								potionDescription,
+							};
+
+							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
+
+							const content = await renderTemplate(template, cardData);
+
+							await ChatMessage.create({
+								content,
+								rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+							});
+
+							await this.deleteEmbeddedDocuments(
+								"Item",
+								[itemId]
+							);
+						},
+					},
+					Cancel: {
+						icon: "<i class=\"fa fa-times\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+					},
+				},
+				default: "Yes",
+			}).render(true);
+		});
 	}
 
 	/* -------------------------------------------- */

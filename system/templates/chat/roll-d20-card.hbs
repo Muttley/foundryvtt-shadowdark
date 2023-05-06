@@ -3,10 +3,10 @@
     <img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
     <h3 class="roll-name">{{title}}</h3>
   </header>
-  {{{rolls.d20.renderedHTML}}}
+  {{{data.rolls.d20.renderedHTML}}}
   <div class="d20-roll card-roll blindable" data-blind="{{rolls.blindroll}}">
-    {{#if rolls.d20}}
-      <div>{{{rolls.d20.renderedHTML}}}</div>
+    {{#if data.rolls.d20}}
+      <div>{{{data.rolls.d20.renderedHTML}}}</div>
     {{/if}}
   </div>
 </div>

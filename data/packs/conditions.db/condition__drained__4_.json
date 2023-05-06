@@ -1,0 +1,88 @@
+{
+  "name": "Condition: Drained (4)",
+  "type": "Effect",
+  "img": "icons/magic/unholy/strike-body-life-soul-green.webp",
+  "system": {
+    "description": "",
+    "properties": [],
+    "magicItem": false,
+    "light": {
+      "active": false,
+      "hasBeenUsed": false,
+      "isSource": false,
+      "longevityMins": 60,
+      "remainingSecs": 3600,
+      "template": "torch"
+    },
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 123910351929,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": "",
+    "abilities": {
+      "wis": {
+        "bonus": "-4"
+      }
+    }
+  },
+  "effects": [
+    {
+      "label": "Drained (4)",
+      "icon": "icons/magic/unholy/strike-body-life-soul-green.webp",
+      "changes": [
+        {
+          "key": "system.abilities.wis.bonus",
+          "mode": 2,
+          "value": "-4",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "iatMWq8uzO8KPaxd",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.RLa7Z1NEWUM0DQeh"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683025571687,
+    "modifiedTime": 1683025775183,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "GQDiR0cXfb86m83P"
+}

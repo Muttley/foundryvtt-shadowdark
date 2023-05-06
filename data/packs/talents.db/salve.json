@@ -1,0 +1,55 @@
+{
+  "name": "Salve",
+  "type": "Potion",
+  "img": "icons/commodities/materials/bowl-liquid-white.webp",
+  "system": {
+    "description": "<p>3:6 [[/r 1d6]] of Healing 1 HP</p>",
+    "properties": [],
+    "magicItem": true,
+    "class": [],
+    "duration": {
+      "type": "",
+      "value": ""
+    },
+    "range": "",
+    "tier": 1,
+    "broken": false,
+    "cost": {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "canBeEquipped": false,
+    "equipped": false,
+    "isPhysical": true,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 1,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "spellName": "",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "v363Ga8ZWiqa3r9H": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.6sjag91Pofr5PEJ8"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1683313577940,
+    "modifiedTime": 1683313922481,
+    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "m857P6MI00wAONTp"
+}

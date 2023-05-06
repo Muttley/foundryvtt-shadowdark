@@ -1,0 +1,34 @@
+{
+  "name": "Stealthy",
+  "type": "Talent",
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">Once per day, you can become invisible for 3 rounds.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "ancestry",
+    "predefinedEffects": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DYWFJu5XeazJYc0P"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679526305437,
+    "modifiedTime": 1681850270934,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "_id": "zkOiprnKS5uttiO6",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

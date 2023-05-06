@@ -1,3 +1,8 @@
+![GitHub Release](https://img.shields.io/github/release-date/Muttley/foundryvtt-shadowdark)
+![All Versions](https://img.shields.io/github/downloads/Muttley/foundryvtt-shadowdark/total)
+![Latest Version](https://img.shields.io/github/downloads/Muttley/foundryvtt-shadowdark/latest/total)
+![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fshadowdark)
+
 # Shadowdark RPG for Foundry VTT
 
 **foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][1] with the [Foundry VTT][2] virtual tabletop software.
@@ -93,7 +98,7 @@ Details for how to get started hacking on the system can be found in the [Wiki](
 
 **foundryvtt-shadowdark** is an independent product published under the Shadowdark RPG Third-Party License and is not affiliated with The Arcane Library, LLC. Shadowdark RPG © 2023 The Arcane Library, LLC.
 
-The [Arcane Library][1] logo and Quickstart images included within **foundryvtt-shadowdark** are used with the kind permission of Kelsey Dionne and [Arcane Library][1].
+The [Arcane Library][1] logo, and additional [Shadowdark RPG][1] images included within **foundryvtt-shadowdark** are used with the kind permission of Kelsey Dionne and [Arcane Library][1].
 
 [1]: https://www.thearcanelibrary.com
 [2]: https://www.thearcanelibrary.com/pages/shadowdark

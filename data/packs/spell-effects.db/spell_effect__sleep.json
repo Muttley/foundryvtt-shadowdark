@@ -1,0 +1,64 @@
+{
+  "name": "Spell Effect: Sleep",
+  "type": "Effect",
+  "img": "icons/magic/control/sleep-bubble-purple.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Signika, sans-serif\">Injury or vigorous shaking wakes the creature.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Asleep",
+      "icon": "icons/magic/control/sleep-bubble-purple.webp",
+      "origin": "Item.FrFilluk4S5VaWut",
+      "duration": {
+        "rounds": 1,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "qohPOvbaVcxpRumR",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681851995704,
+    "modifiedTime": 1681852603015,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "FrFilluk4S5VaWut",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

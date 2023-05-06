@@ -86,6 +86,7 @@ export default class RollSD extends Roll {
 				}
 			}
 
+			// TODO This should really be set in the ItemSD rollSpell method...
 			// Spell? -> Set a target
 			if (data.item?.isSpell()) {
 				options.target = data.item.system.tier + 10;
@@ -276,7 +277,8 @@ export default class RollSD extends Roll {
 		const damageDie = data.item.system.damage.value;
 
 		if ( data.rolls.main.critical !== "failure" ) {
-			if ( data.rolls.main.critical === "success" ) numDice *= 2;
+			if ( data.rolls.main.critical === "success" ) numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
 			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
 
@@ -294,8 +296,21 @@ export default class RollSD extends Roll {
 	static async _rollWeapon(data) {
 		// Get dice information from the weapon
 		let numDice = data.item.system.damage.numDice;
-		const damageDie = data.item.isTwoHanded()
-			?	data.item.system.damage.twoHanded : data.item.system.damage.oneHanded;
+		let damageDie = data.item.isTwoHanded()
+			?	data.item.system.damage.twoHanded
+			: data.item.system.damage.oneHanded;
+
+		let versatileDamageDie = data.item.isVersatile()
+			? data.item.system.damage.twoHanded
+			: false;
+
+		// Check if damage die is modified by talent
+		if (data.actor.system.bonuses.weaponDamageDieD12.some(
+			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
+		)) {
+			damageDie = "d12";
+			versatileDamageDie = "d12";
+		}
 
 		// Check and handle critical failure/success
 		if ( data.rolls.main.critical !== "failure" ) {
@@ -310,16 +325,28 @@ export default class RollSD extends Roll {
 			}
 
 			// Multiply the dice with the items critical multiplier
-			if ( data.rolls.main.critical === "success" ) numDice *= data.item.system.damage.critMultiplier;
+			if ( data.rolls.main.critical === "success") numDice
+				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
 
-			primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
+			// Check if a damage multiplier is active for either Weapon or Actor
+			const damageMultiplier = Math.max(
+				parseInt(data.item.system.bonuses.damageMultiplier ?? 0, 10),
+				parseInt(data.actor.system.bonuses.damageMultiplier ?? 0, 10),
+				1);
+
+			const primaryDmgRoll = (damageMultiplier > 1)
+				? `${numDice}${damageDie} * ${damageMultiplier}`
+				: `${numDice}${damageDie}`;
+
+			primaryParts = [primaryDmgRoll, ...data.damageParts];
 
 			data.rolls.primaryDamage = await this._roll(primaryParts, data);
 
-			if ( data.item.isVersatile() ) {
-				const secondaryParts = [
-					`${numDice}${data.item.system.damage.twoHanded}`,
-					...data.damageParts];
+			if (versatileDamageDie) {
+				const secondaryDmgRoll = (damageMultiplier > 1)
+					? `${numDice}${versatileDamageDie} * ${damageMultiplier}`
+					: `${numDice}${versatileDamageDie}`;
+				const secondaryParts = [secondaryDmgRoll, ...data.damageParts];
 				data.rolls.secondaryDamage = await this._roll(secondaryParts, data);
 			}
 		}
@@ -523,7 +550,7 @@ export default class RollSD extends Roll {
 	) {
 		const chatCardTemplate = options.chatCardTemplate
 			? options.chatCardTemplate
-			: "systems/shadowdark/templates/chat/roll-d20-card.hbs";
+			: "systems/shadowdark/templates/chat/roll-card.hbs";
 
 		const chatCardData = this._getChatCardTemplateData(data, options);
 
@@ -551,9 +578,10 @@ export default class RollSD extends Roll {
 			? chatData.flags.success
 			: null;
 
+		if ( options.rollMode === "blindroll" ) data.rolls.main.blind = true;
+
 		const content = await this._getChatCardContent(data, options);
 
-		if ( options.rollMode === "blindroll" ) chatData.blind = true;
 		chatData.content = content;
 
 		// Modify the flavor of the chat card
@@ -616,6 +644,8 @@ export default class RollSD extends Roll {
 			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
+		// TODO Make sure we honor the whisper and/or blind settings of the roll
+		//
 		// Only await on the final dice roll of the sequence as it looks nicer
 		// if all the dice roll before the chat message appears
 		const numRolls = rollsToShow.length;

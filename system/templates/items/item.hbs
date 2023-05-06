@@ -27,15 +27,15 @@
 					</a>
 				{{/ifNeq}}
 
-				{{#if item.system.light.isSource}}
-					<a class="item active" data-tab="tab-light">
-						{{localize "SHADOWDARK.sheet.item.tab.light"}}
+				{{#if (or (eq item.type "Effect") (eq item.type "Talent") (eq item.system.magicItem true) ) }}
+					<a class="item active" data-tab="tab-effects">
+						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
 					</a>
 				{{/if}}
 
-				{{#if item.system.magicItem}}
-					<a class="item active" data-tab="tab-magic">
-						{{localize "SHADOWDARK.sheet.item.tab.magic"}}
+				{{#if item.system.light.isSource}}
+					<a class="item active" data-tab="tab-light">
+						{{localize "SHADOWDARK.sheet.item.tab.light"}}
 					</a>
 				{{/if}}
 
@@ -56,7 +56,7 @@
 
 		{{> items/tabs/details }}
 		{{> items/tabs/light }}
-		{{> items/tabs/magic }}
+		{{> items/tabs/effects }}
 		{{> items/tabs/description }}
 
 	</section>

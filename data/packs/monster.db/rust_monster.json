@@ -1,0 +1,201 @@
+{
+  "name": "Rust Monster",
+  "type": "NPC",
+  "img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+  "system": {
+    "alignment": "neutral",
+    "attributes": {
+      "hp": {
+        "max": 19,
+        "value": 19,
+        "hd": 0
+      },
+      "ac": {
+        "value": 13
+      }
+    },
+    "level": {
+      "value": 4
+    },
+    "notes": "<p><span class=\"fontstyle0\"><em>A mud-brown insect as big as a wolf with two feathery antennae. Consumes metal.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">19, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 claw +3 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">4</span></p><p></p><p><span class=\"fontstyle2\"><strong>Corrosive.</strong> </span><span class=\"fontstyle3\">Metal that touches the rust monster is destroyed on a d6 roll of 1-3.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "spellcastingAbility": "",
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -3
+      },
+      "dex": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -3
+      }
+    },
+    "darkAdapted": true,
+    "move": "near",
+    "moveNote": "Climb"
+  },
+  "prototypeToken": {
+    "name": "Rust Monster",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "name": "Corrosive",
+      "type": "NPC Feature",
+      "system": {
+        "description": "<p><span class=\"fontstyle2\">Metal that touches the rust monster is destroyed on a d6 roll of 1-3.</span></p>",
+        "properties": [],
+        "magicItem": false
+      },
+      "_id": "Sp7hCTdnO8hZzykO",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "aUdswNccq2u0SxEP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679439867205,
+        "modifiedTime": 1679439877838,
+        "lastModifiedBy": "aUdswNccq2u0SxEP"
+      }
+    },
+    {
+      "name": "Claw",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 2,
+          "bonus": 3
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d6",
+          "special": ""
+        },
+        "attackType": "physical",
+        "ranges": [
+          "close"
+        ]
+      },
+      "_id": "YEKYWOhBDYxIgIil",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "aUdswNccq2u0SxEP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679439897193,
+        "modifiedTime": 1679439910428,
+        "lastModifiedBy": "aUdswNccq2u0SxEP"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.monster.qISCrzLvHr4uQ9Q8"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.1.2",
+    "coreVersion": "10.291",
+    "createdTime": 1679439741898,
+    "modifiedTime": 1680381104013,
+    "lastModifiedBy": "5tzCT7bJKM9kuuO3"
+  },
+  "_id": "qISCrzLvHr4uQ9Q8",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

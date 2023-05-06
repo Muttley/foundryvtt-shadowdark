@@ -5,7 +5,19 @@
 			{{> items/partials/armor }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Effect"}}
+			{{> items/partials/effect }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Spell"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Scroll"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Wand"}}
 			{{> items/partials/spell }}
 		{{/ifEq}}
 
@@ -19,7 +31,6 @@
 
 		{{#ifEq item.type "Talent"}}
 			{{> items/partials/talent }}
-			{{> items/partials/talent-active-effects }}
 		{{/ifEq}}
 
 		{{#if usesSlots}}
@@ -55,7 +66,7 @@
 				</div>
 			{{/ifEq}}
 
-			{{#if item.system.isPhysical}}
+			{{#if showMagicItemCheckbox}}
 				{{#ifNeq item.type "Gem"}}
 					<div class="magic-item">
 						<label>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</label>
@@ -70,6 +81,10 @@
 
 			{{#ifEq item.type "Basic"}}
 				{{> items/partials/treasure }}
+			{{/ifEq}}
+
+			{{#ifEq item.type "Effect"}}
+				{{> items/partials/effect-toggle-items }}
 			{{/ifEq}}
 
 		</div>

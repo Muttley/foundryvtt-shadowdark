@@ -1,0 +1,248 @@
+{
+  "name": "Cave Creeper",
+  "type": "NPC",
+  "img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+  "system": {
+    "alignment": "neutral",
+    "attributes": {
+      "hp": {
+        "max": 18,
+        "value": 18,
+        "hd": 0
+      },
+      "ac": {
+        "value": 12
+      }
+    },
+    "level": {
+      "value": 4
+    },
+    "notes": "<p><em>Chittering centipedes the size of horses with grasping tentacles.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 1 bite +3 (1d6) and 1 tentacles +3 (1d8 + toxin), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV </strong>4</p><p></p><p><strong>Toxin</strong>. DC 12 CON or paralyzed 1d4 rounds.</p>",
+    "spellcastingAbility": "",
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -3
+      },
+      "dex": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": -3
+      }
+    },
+    "darkAdapted": true,
+    "move": "near",
+    "moveNote": "Climb"
+  },
+  "prototypeToken": {
+    "name": "Cave Creeper",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "width": 2,
+    "height": 2,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "name": "Bite",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 1,
+          "bonus": 3,
+          "damage": {
+            "numDice": null
+          }
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d6",
+          "special": ""
+        },
+        "attackType": "physical",
+        "ranges": [
+          "close"
+        ]
+      },
+      "_id": "gnUvnCN25iosuxZh",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679421243637,
+        "modifiedTime": 1679421251748,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    },
+    {
+      "name": "Tentacles",
+      "type": "NPC Attack",
+      "system": {
+        "description": "",
+        "properties": [],
+        "magicItem": false,
+        "attack": {
+          "num": 1,
+          "bonus": 3,
+          "damage": {
+            "numDice": null
+          }
+        },
+        "damage": {
+          "bonus": 0,
+          "numDice": 1,
+          "value": "d8",
+          "special": "Toxin"
+        },
+        "attackType": "physical",
+        "ranges": [
+          "close"
+        ]
+      },
+      "_id": "gD3b4be6Z72Z0Wgl",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679421254770,
+        "modifiedTime": 1679421268943,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    },
+    {
+      "name": "Toxin",
+      "type": "NPC Feature",
+      "system": {
+        "description": "<p>DC 12 CON or paralyzed 1d4 rounds.</p>",
+        "properties": [],
+        "magicItem": false
+      },
+      "_id": "IWKGdw3vbV7Sq9BW",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "EKVggA45fx6fzkCK": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "shadowdark",
+        "systemVersion": "0.1.0",
+        "coreVersion": "10.291",
+        "createdTime": 1679421271330,
+        "modifiedTime": 1679421285781,
+        "lastModifiedBy": "EKVggA45fx6fzkCK"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.shadowdark.monster.j7sQ6Km2jSx5twCC"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.1.2",
+    "coreVersion": "10.291",
+    "createdTime": 1679421183359,
+    "modifiedTime": 1680381104009,
+    "lastModifiedBy": "5tzCT7bJKM9kuuO3"
+  },
+  "_id": "j7sQ6Km2jSx5twCC",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aUdswNccq2u0SxEP": 3
+  }
+}

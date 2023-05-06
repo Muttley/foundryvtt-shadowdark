@@ -1,0 +1,67 @@
+{
+  "name": "Spell Effect: Cleansing Weapon",
+  "type": "Effect",
+  "img": "icons/weapons/swords/sword-winged-pink.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Signika, sans-serif\">One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": "5",
+      "type": "rounds"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": "",
+    "bonuses": {
+      "meleeDamageBonus": "1d4"
+    }
+  },
+  "effects": [
+    {
+      "label": "Cleansing Weapon",
+      "icon": "icons/weapons/swords/sword-winged-pink.webp",
+      "origin": "Item.7hKYL9hdnsvCUM9c",
+      "duration": {
+        "rounds": 5,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "MA4nY85bYnfw0Kah",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681851325797,
+    "modifiedTime": 1681852603014,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "7hKYL9hdnsvCUM9c",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

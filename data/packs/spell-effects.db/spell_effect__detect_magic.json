@@ -1,0 +1,64 @@
+{
+  "name": "Spell Effect: Detect Magic",
+  "type": "Effect",
+  "img": "icons/magic/perception/eye-slit-pink.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Signika, sans-serif\">You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "focus"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "effect",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Detecting Magic",
+      "icon": "icons/magic/perception/eye-slit-pink.webp",
+      "origin": "Item.74WjFjHmUmLAiNGC",
+      "duration": {
+        "rounds": 1,
+        "seconds": null,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "4v6DbfBT6c4qzSEc",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681851604094,
+    "modifiedTime": 1681852603014,
+    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
+  },
+  "_id": "74WjFjHmUmLAiNGC",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Y4OcZjjFb7wdUI1c": 3
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "+1 to Melee and Ranged Attacks",
+  "type": "Talent",
+  "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "system": {
+    "description": "",
+    "properties": [
+      "meleeAttackBonus",
+      "rangedAttackBonus"
+    ],
+    "magicItem": false,
+    "level": null,
+    "talentClass": "level",
+    "bonuses": {
+      "critical": {
+        "successThreshold": 20,
+        "failureThreshold": 1,
+        "multiplier": 2
+      },
+      "meleeAttackBonus": "1",
+      "rangedAttackBonus": "1",
+      "meleeDamageBonus": "1"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Melee Attack Roll Bonus",
+      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.meleeAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "ZTDD2HwlrjLbEIQp",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    },
+    {
+      "label": "Ranged Attack Roll Bonus",
+      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.rangedAttackBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "njtjaSNJ4WQCV7n5",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Pdc3xhJ5Z57yu1A5"
+    }
+  },
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1679010318129,
+    "modifiedTime": 1681850039233,
+    "lastModifiedBy": "bShyiL1wN5LaWRF6"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "WSm6JESNoyFBnkW2"
+}

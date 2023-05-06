@@ -8,75 +8,98 @@
 				{{localize 'SHADOWDARK.light-tracker.title.suffix'}}
 			</span>
 		</div>
-		<div class="status">
-			<p class="status__label">
-				{{localize 'SHADOWDARK.light-tracker.status.label'}}:
-			</p>
-			<p class="status__value">
-			{{#if paused}}
-				<i
-					class="status__paused fa-solid fa-circle-pause"
-					text={{localize 'SHADOWDARK.light-tracker.paused'}}
-				>
-				</i>
-				Paused
-			{{else}}
-				<i
-					class="status__active fa-solid fa-circle-play"
-					text={{localize 'SHADOWDARK.light-tracker.active'}}
-				>
-				</i>
-				Active
-			{{/if}}
-			</p>
-		</div>
+		{{#if isRealtimeEnabled}}
+			<div class="status">
+				<p class="status__label">
+					{{localize 'SHADOWDARK.light-tracker.status.label'}}:
+				</p>
+				<p class="status__value">
+				{{#if paused}}
+					<i
+						class="status__paused fa-solid fa-circle-pause"
+						text={{localize 'SHADOWDARK.light-tracker.paused'}}
+					>
+					</i>
+					Paused
+				{{else}}
+					<i
+						class="status__active fa-solid fa-circle-play"
+						text={{localize 'SHADOWDARK.light-tracker.active'}}
+					>
+					</i>
+					Active
+				{{/if}}
+				</p>
+			</div>
+		{{/if}}
+		{{#if showUserWarning}}
+			<div class="warning">
+				<span><i class="fa-solid fa-circle-exclamation"></i></span>
+				{{localize 'SHADOWDARK.light-tracker.user_warning'}}
+			</div>
+		{{/if}}
+
+	<button class="toggle-show-all" type="submit" name="submit" value="1">
+		{{#if showAllPlayerActors}}
+			{{localize "SHADOWDARK.app.light-tracker.hide-inactive"}}
+		{{else}}
+			{{localize "SHADOWDARK.app.light-tracker.show-all-actors"}}
+		{{/if}}
+	</button>
+
 	</header>
 	<hr />
 	<section class="light-source-grid">
 		{{#each monitoredLightSources as |actor|}}
-			<div class="character">
-				<div
-					class="character-portrait"
-					data-actor-id="{{actor._id}}"
-				>
-					<img
-						src="{{actor.img}}"
-						data-tooltip="{{actor.name}}"
-						height="64"
-						width="64"
-					/>
-				</div>
-				<div class="character-name">
-					{{actor.name}}
-				</div>
-				<div class="light-sources">
-					{{#each actor.lightSources as |light|}}
-						<div class="light-source">
-							<div class="light-controls">
-								<a
-									class="disable-light"
-									data-actor-id="{{actor._id}}"
-									data-item-id="{{light._id}}"
-									data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
-								>
-									<i class="fa-solid fa-fire-flame-curved"></i>
-								</a>
+			{{#if actor.showOnTracker}}
+				<div class="character">
+					<div
+						class="character-portrait"
+						data-actor-id="{{actor._id}}"
+					>
+						<img
+							src="{{actor.img}}"
+							data-tooltip="{{actor.name}}"
+							height="64"
+							width="64"
+						/>
+					</div>
+					<div class="character-name">
+						{{actor.name}}
+					</div>
+					<div class="light-sources">
+						{{#each actor.lightSources as |light|}}
+							<div class="light-source">
+								<div class="light-controls">
+									<a
+										class="disable-light"
+										data-actor-id="{{actor._id}}"
+										data-item-id="{{light._id}}"
+										data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
+									>
+										{{#ifEq light.type "Basic"}}
+											<i class="flame fa-solid fa-fire-flame-curved"></i>
+										{{else}}
+											<i class="magic fa-solid fa-wand-magic-sparkles"></i>
+										{{/ifEq}}
+									</a>
+								</div>
+								<div>
+									{{light.name}}
+								</div>
+								<div class="time-remaining">
+									({{secondsToMins light.system.light.remainingSecs}}
+									{{#ifCond light.system.light.remainingSecs '<=' 60}}
+										{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
+									{{else}}
+										{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
+									{{/ifCond}}
+								</div>
 							</div>
-							<div>
-								{{light.name}}
-							</div>
-							<div class="time-remaining">
-								({{secondsToMins light.system.light.remainingSecs}}
-								{{#ifCond light.system.light.remainingSecs '<=' 60}}
-									{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
-								{{else}}
-									{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
-								{{/ifCond}}
-							</div>
-						</div>
-					{{/each}}
+						{{/each}}
+					</div>
 				</div>
-			</div>
+			{{/if}}
 		{{/each}}
 	</section>
 	<button class="disable-all-lights" type="submit" name="submit" value="1">

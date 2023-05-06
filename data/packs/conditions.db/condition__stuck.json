@@ -1,0 +1,65 @@
+{
+  "name": "Condition: Stuck",
+  "type": "Effect",
+  "img": "icons/environment/traps/trap-jaw-steel.webp",
+  "system": {
+    "description": "<p>The character can't move until freed.</p>",
+    "properties": [],
+    "magicItem": false,
+    "duration": {
+      "value": -1,
+      "type": "unlimited"
+    },
+    "start": {
+      "value": 0,
+      "combatTime": null,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "effectPanel": {
+      "show": true
+    },
+    "category": "condition",
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Stuck",
+      "icon": "icons/environment/traps/trap-jaw-steel.webp",
+      "origin": "Item.0McK66FvDi42pjiu",
+      "duration": {
+        "rounds": null,
+        "seconds": 1,
+        "startTime": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "_id": "Pw5zyo8apyAphCG2",
+      "changes": [],
+      "disabled": false,
+      "tint": null,
+      "transfer": true,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "systemId": "shadowdark",
+    "systemVersion": "1.2.4",
+    "coreVersion": "10.291",
+    "createdTime": 1681634498761,
+    "modifiedTime": 1682175741061,
+    "lastModifiedBy": "EKVggA45fx6fzkCK"
+  },
+  "_id": "0McK66FvDi42pjiu",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "EKVggA45fx6fzkCK": 3
+  }
+}

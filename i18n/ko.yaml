@@ -1,0 +1,512 @@
+SHADOWDARK.ability_cha: 매력
+SHADOWDARK.ability_charisma: 매력
+SHADOWDARK.ability_con: 건강
+SHADOWDARK.ability_constitution: 건강
+SHADOWDARK.ability_dex: 민첩
+SHADOWDARK.ability_dexterity: 민첩
+SHADOWDARK.ability_int: 지능
+SHADOWDARK.ability_intelligence: 지능
+SHADOWDARK.ability_str: 근력
+SHADOWDARK.ability_strength: 근력
+SHADOWDARK.ability_wis: 지혜
+SHADOWDARK.ability_wisdom: 지혜
+SHADOWDARK.alignment.chaotic_short: 혼돈
+SHADOWDARK.alignment.chaotic: 혼돈
+SHADOWDARK.alignment.lawful_short: 질서
+SHADOWDARK.alignment.lawful: 질서
+SHADOWDARK.alignment.neutral_short: "중립"
+SHADOWDARK.alignment.neutral: 중립
+SHADOWDARK.app.active_effects.title: 활성화된 효과
+SHADOWDARK.app.gem_bag.sell_all: 보석 전체 보기
+SHADOWDARK.app.gem_bag.title: 보석 가방
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: 보석 팔기
+SHADOWDARK.app.gem_bag.total_value: 총 가치
+SHADOWDARK.app.item_properties.armor.title: 방어구 속성
+SHADOWDARK.app.item_properties.caster_classes.title: 주문시전 클래스
+SHADOWDARK.app.item_properties.languages.title: 언어
+SHADOWDARK.app.item_properties.magic_item.effects.title: 마법 아이템 효과
+SHADOWDARK.app.item_properties.save: 저장
+SHADOWDARK.app.item_properties.talent.effects.title: 재능 효과 유형
+SHADOWDARK.app.item_properties.title: 속성
+SHADOWDARK.app.item_properties.weapon.title: 무기 속성
+SHADOWDARK.app.light_tracker.minute_short: 분
+SHADOWDARK.app.light_tracker.minutes_short: 분
+SHADOWDARK.app.light_tracker.title: 빛 트래커
+SHADOWDARK.app.light-tracker.douse-light: 불 끄기
+SHADOWDARK.app.light-tracker.turn-out-the-lights: 모든 불 끄기
+SHADOWDARK.app.npc_attack_ranges.title: 공격 범위
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '{effectName} 효과를 삭제할까요?'
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: 효과를 삭제할까요?
+SHADOWDARK.apps.effect_panel.duration_label.expired: 만료됨
+SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 일 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 시간 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 분 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 라운드 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 초 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 주 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 년 남았습니다
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: 지속시간 무제한
+SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} 일 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} 시간 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} 분 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} 라운드 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} 초 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} 주 남았습니다"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} 년 남았습니다"
+SHADOWDARK.apps.effect_panel.right_click_to_remove: "[오른쪽 클릭] 효과 삭제"
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Shadowdarkling에서 가져오기
+SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. shadowdarklings.net에 방문하세요.
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 캐릭터를 만들고 JSON 파일로 저장하세요.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. 파일의 내용을 이곳에 붙여넣어주세요.
+SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. 가져오기 버튼을 클릭하세요.
+SHADOWDARK.apps.shadowdarkling-importer.open-generator: 캐릭터 생성 창 열기
+SHADOWDARK.apps.shadowdarkling-importer.title: Shadowdarkling에서 가져오기
+SHADOWDARK.armor.properties.disadvantage_stealth: 불리함/은신
+SHADOWDARK.armor.properties.disadvantage_swimming: 불리함/수영
+SHADOWDARK.armor.properties.no_swimming: 수영 못함
+SHADOWDARK.armor.properties.one_handed: 한 손 사용
+SHADOWDARK.armor.properties.shield: 방패
+SHADOWDARK.chat_card.button.attack: 명중 굴림
+SHADOWDARK.chat_card.button.cast_spell: 주문 시전
+SHADOWDARK.chat_card.button.learn_spell: 주문 배우기
+SHADOWDARK.chat_card.button.use_potion: 물약 사용
+SHADOWDARK.chat_card.button.use_scroll: 두루마리 사용
+SHADOWDARK.chat_card.button.use_wand: 마법봉 사용
+SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
+SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
+SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
+SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
+SHADOWDARK.chat.item_roll.wand_mishap: 마법봉이 부서졌으며 영구적으로 효과를 잃었습니다
+SHADOWDARK.chat.light_source.expired: "{name} 의 {lightSource} 가 다 됐습니다"
+SHADOWDARK.chat.light_source.remaining: 분 남았습니다
+SHADOWDARK.chat.light_source.seconds_remaining: 1분 미만 남았습니다
+SHADOWDARK.chat.light_source.source.all: 모든 광원이 사라졌습니다
+SHADOWDARK.chat.light_source.source.dropped: 떨어트렸습니다
+SHADOWDARK.chat.light_source.source.picked_up: 주웠습니다
+SHADOWDARK.chat.light_source.source.toggle.off: 꺼졌습니다.
+SHADOWDARK.chat.light_source.source.toggle.on: 켜졌습니다
+SHADOWDARK.chat.light_source.went_out: "{name} 의 {lightSource} 가 꺼졌습니다"
+SHADOWDARK.chat.potion_used: "{name} 포션을 사용했습니다"
+SHADOWDARK.chat.spell_learn.failure: "{name} 두루마리로 주문 배우기를 실패했습니다"
+SHADOWDARK.chat.spell_learn.success: "{name} 성공적으로 {spellName} 주문을 배웠습니다"
+SHADOWDARK.chat.spell_learn.title: 주문 배우기
+SHADOWDARK.chat.spell_roll.title: "{tier} 등급 {name} 을 주문 DC {spellDC} 로 시전합니다."
+SHADOWDARK.chat.welcome_message.intro: "본 시스템에서 제공하는 길잡이 투어를 따라 버튼을 누르다 보면, 빠르게 적응할 수 있습니다:"
+SHADOWDARK.chat.welcome_message.issue_tracker_button: 문제 트래커
+SHADOWDARK.chat.welcome_message.issues: "시스템에 문제가 발생하거나 제안하고 싶은 새 기능이 있다면, 문제 트래커를 활용해주세요:"
+SHADOWDARK.chat.welcome_message.title: 섀도다크 RPG 파운드리 시스템
+SHADOWDARK.chat.welcome_message.tour_button: 섀도다크 RPG 투어
+SHADOWDARK.chatcard.default: 굴림
+SHADOWDARK.class.fighter: 전사
+SHADOWDARK.class.priest: 성직자
+SHADOWDARK.class.ranger: Ranger
+SHADOWDARK.class.thief: 도둑
+SHADOWDARK.class.wizard: 마법사
+SHADOWDARK.coins.cp: CP
+SHADOWDARK.coins.gp: GP
+SHADOWDARK.coins.sp: SP
+SHADOWDARK.damage.one_handed: "한손 피해:"
+SHADOWDARK.damage.two_handed: "양손 피해"
+SHADOWDARK.dialog.ability_check.cha: 매력 판정
+SHADOWDARK.dialog.ability_check.con: 건강 판정
+SHADOWDARK.dialog.ability_check.dex: 민첩 판정
+SHADOWDARK.dialog.ability_check.int: 지능 판정
+SHADOWDARK.dialog.ability_check.str: 근력 판정
+SHADOWDARK.dialog.ability_check.title: 능력 판정
+SHADOWDARK.dialog.ability_check.wis: 지혜 판정
+SHADOWDARK.dialog.effect.choice.armor: 방어구 유형 선택
+SHADOWDARK.dialog.effect.choice.lightSource: 광원 선택
+SHADOWDARK.dialog.effect.choice.spell: 주문 선택
+SHADOWDARK.dialog.effect.choice.weapon: 무기 유형 선택
+SHADOWDARK.dialog.general.are_you_sure: 정말 진행하실 건가요?
+SHADOWDARK.dialog.general.cancel: 취소
+SHADOWDARK.dialog.general.no: "아니오"
+SHADOWDARK.dialog.general.yes: "네"
+SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.hp_roll.per_level: '{level} 레벨 HP 굴림'
+SHADOWDARK.dialog.hp_roll.previous_hp: "굴리기 전 HP: {hp}"
+SHADOWDARK.dialog.hp_roll.roll_level_1: (건강 수정치 포함) 1 레벨 HP {hp} 를 굴렸습니다
+SHADOWDARK.dialog.hp_roll.roll_per_level: '{level} 레벨 HP {hp} 를 굴렸습니다'
+SHADOWDARK.dialog.hp_roll.sum_total: '{total} 만큼 최대 HP 증가'
+SHADOWDARK.dialog.hp_roll.summary: HP 굴림 요약
+SHADOWDARK.dialog.hp_roll.title: HP 굴림
+SHADOWDARK.dialog.item_roll.ability_bonus: 능력 보너스
+SHADOWDARK.dialog.item_roll.item_bonus: 아이템 보너스
+SHADOWDARK.dialog.item_roll.talent_bonus: 재능 보너스
+SHADOWDARK.dialog.item_roll.title: 명중 굴림
+SHADOWDARK.dialog.item.confirm_delete: 삭제 요청 확인
+SHADOWDARK.dialog.item.confirm_sale: 판매 요청 확인
+SHADOWDARK.dialog.item.create_from_spell: '{spellName} 로 아이템을 만듭니다'
+SHADOWDARK.dialog.item.delete: 삭제
+SHADOWDARK.dialog.item.sell_all: 모두 팔기
+SHADOWDARK.dialog.item.sell: 팔기
+SHADOWDARK.dialog.item.use: 사용
+SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
+SHADOWDARK.dialog.roll_mode_label: 굴림 모드
+SHADOWDARK.dialog.roll: 굴림
+SHADOWDARK.dialog.spell_roll.title: 주문시전 굴림
+SHADOWDARK.dialog.submit: 제출
+SHADOWDARK.dialog.tooltip.talent_advantage: 이 굴림에 유리함을 주는 재능이 있습니다
+SHADOWDARK.effect_duration.hours: 시간
+SHADOWDARK.effect_duration.minutes: 분
+SHADOWDARK.effect_duration.seconds: 초
+SHADOWDARK.effect_duration.unlimited: 무제한
+SHADOWDARK.effect.custom: 사용자지정 효과
+SHADOWDARK.effect.footer.add_custom: 사용자지정 효과 추가
+SHADOWDARK.effect.header.active: 활성화
+SHADOWDARK.effect.header.changes: 변경사항
+SHADOWDARK.effect.header.delete: 삭제
+SHADOWDARK.effect.header.edit: 편집
+SHADOWDARK.effect.header.inactive: 비활성화
+SHADOWDARK.effect.header.name: 이름
+SHADOWDARK.effect.header.options: 옵션
+SHADOWDARK.effect.header.transfer: 효과 부여
+SHADOWDARK.effect.item: 아이템 효과
+SHADOWDARK.effect.new: 새 효과
+SHADOWDARK.effect.spell: 주문 효과
+SHADOWDARK.effect.talent: 재능 효과
+SHADOWDARK.effect.temporary: 임시 효과
+SHADOWDARK.effect.tooltip.transfer.do_not: 부여 안 함
+SHADOWDARK.effect.tooltip.transfer.do: 부여함
+SHADOWDARK.effect.tooltip.transfer.header: 아이템이 추가됐을 때 액터에게 효과를 부여합니다
+SHADOWDARK.effect.unavailable: 비활성화된 효과
+SHADOWDARK.error.general.gm_required: 게임 마스터만 할 수 있습니다.
+SHADOWDARK.error.general.no_character_class: 캐릭터 클래스가 지정되지 않았습니다
+SHADOWDARK.inventory.coins: 동전
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
+SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
+SHADOWDARK.inventory.item.light_used: (부분 사용)
+SHADOWDARK.inventory.label.quantity: 수량
+SHADOWDARK.inventory.label.slots: 슬롯
+SHADOWDARK.inventory.section.armor: 방어구
+SHADOWDARK.inventory.section.basic: 기본 장비
+SHADOWDARK.inventory.section.potions: 물약
+SHADOWDARK.inventory.section.scrolls: 두루마리
+SHADOWDARK.inventory.section.treasure: 보물
+SHADOWDARK.inventory.section.wands: 마법봉
+SHADOWDARK.inventory.section.weapon: 무기
+SHADOWDARK.inventory.slots_max: 최대
+SHADOWDARK.inventory.slots_used: 사용중
+SHADOWDARK.inventory.slots: 슬롯
+SHADOWDARK.inventory.tooltip.gem_bag: 보석 가방 열기
+SHADOWDARK.inventory.tooltip.item_decrement: 수량 감소
+SHADOWDARK.inventory.tooltip.item_increment: 수량 증가
+SHADOWDARK.inventory.tooltip.sell_treasure: 보물 팔기
+SHADOWDARK.inventory.tooltip.toggle_equipped: 장착 중으로 표시
+SHADOWDARK.inventory.tooltip.toggle_light_source: 광원 표시
+SHADOWDARK.inventory.total_coins: 동전 총량
+SHADOWDARK.inventory.total_gems: 보석 총량
+SHADOWDARK.item_type.armor: 방어구
+SHADOWDARK.item_type.basic: 기본
+SHADOWDARK.item_type.gem: 보석
+SHADOWDARK.item_type.spell: 주문
+SHADOWDARK.item_type.talent: 재능
+SHADOWDARK.item_type.weapon: 무기
+SHADOWDARK.item.armor_ac_modifier: 수정치
+SHADOWDARK.item.armor_ac: AC
+SHADOWDARK.item.armor_bonus_attribute: 추가 속성
+SHADOWDARK.item.armor_class: 방어도 (AC)
+SHADOWDARK.item.armor.base_armor.chainmail: 체인메일
+SHADOWDARK.item.armor.base_armor.leather_armor: 가죽 갑옷
+SHADOWDARK.item.armor.base_armor.plate_mail: 판금 갑옷
+SHADOWDARK.item.armor.base_armor.shield: 방패
+SHADOWDARK.item.armor.base_armor.title: 기본 갑옷
+SHADOWDARK.item.cost: 가격
+SHADOWDARK.item.description: 설명
+SHADOWDARK.item.effect.category.condition: 상태
+SHADOWDARK.item.effect.category.effect: 효과
+SHADOWDARK.item.effect.category.title: 효과 종류
+SHADOWDARK.item.effect.lightSource.lantern: 등불
+SHADOWDARK.item.effect.lightSource.lightSpellDouble: 빛 (범위 2배)
+SHADOWDARK.item.effect.lightSource.lightSpellNear: 빛
+SHADOWDARK.item.effect.lightSource.lightSuppression: 빛 제거
+SHADOWDARK.item.effect.lightSource.purpleGlow: 보라색 형광
+SHADOWDARK.item.effect.lightSource.torch: 횃불
+SHADOWDARK.item.effect.pre-defined.title: 사전 지정된 효과
+SHADOWDARK.item.effect.predefined_effect.abilityImprovement: 능력 점수 향상
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: 능력 점수 향상 (매력)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: 능력 점수 향상 (건강)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: 능력 점수 향상 (민첩)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: 능력 점수 향상 (지능)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: 능력 점수 향상 (근력)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: 능력 점수 향상 (지혜)
+SHADOWDARK.item.effect.predefined_effect.acBonus: AC 보너스
+SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: 추가 장비 슬롯
+SHADOWDARK.item.effect.predefined_effect.armorMastery: 방어구 숙달
+SHADOWDARK.item.effect.predefined_effect.backstabDie: 추가 배후공격 주사위
+SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: 극단적인 실패 기준치
+SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: 극단적인 성공 기준치
+SHADOWDARK.item.effect.predefined_effect.critMultiplier: 극단적인 굴림 배수
+SHADOWDARK.item.effect.predefined_effect.damageMultiplier: 피해 배수
+SHADOWDARK.item.effect.predefined_effect.hpAdvantage: HP 굴림 유리함
+SHADOWDARK.item.effect.predefined_effect.initAdvantage: 우선권 유리함
+SHADOWDARK.item.effect.predefined_effect.lightSource: 광원
+SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: 근접 명중 굴림 보너스
+SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: 근접 피해 보너스
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: 영구 능력 (매력)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: 영구 능력 (건강)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: 영구 능력 (민첩)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: 영구 능력 (지능)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: 영구 능력 (근력)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: 영구 능력 (지혜)
+SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: 원거리 명중 굴림 보너스
+SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: 원거리 피해 보너스
+SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 주문시전에 유리함
+SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 주문시전 판정 보너스
+SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 무기 명중 굴림 보너스
+SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 무기 명중 피해 보너스
+SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: 무기 피해 배수
+SHADOWDARK.item.effect.predefined_effect.weaponMastery: 무기 숙달
+SHADOWDARK.item.effect.show-on-panel: 패널에서 보기
+SHADOWDARK.item.effect.show-token-icon: 토큰 아이콘 보기
+SHADOWDARK.item.effect.source.title: 아이템 출처
+SHADOWDARK.item.effect.warning.add_effect_without_value: 값을 지정하지 않은 효과를 추가할 수 없습니다
+SHADOWDARK.item.effect.warning.add_round_item_outside_combat: 전투가 아닐 때 라운드 단위로 지속시간을 세는 효과를 추가할 수 없습니다
+SHADOWDARK.item.equipped: 장착 중
+SHADOWDARK.item.inventory_free_carry: 슬롯 소모 안 함
+SHADOWDARK.item.inventory_per_slot: 슬롯 당 최대값
+SHADOWDARK.item.inventory_quantity: 수량
+SHADOWDARK.item.inventory_slots: 아이템별 슬롯
+SHADOWDARK.item.level: 레벨
+SHADOWDARK.item.light.is_source: 광원
+SHADOWDARK.item.light.longevity: 유지시간 (분)
+SHADOWDARK.item.light.remaining: 남은 시간 (분)
+SHADOWDARK.item.light.template: 빛 템플릿
+SHADOWDARK.item.magic_item.is_magic: 마법 아이템
+SHADOWDARK.item.magic_item.title: 마법 아이템 효과
+SHADOWDARK.item.magic_item.type.attackBonus: 명중 보너스
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: 더 높은 극단적인 실패 기준치
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: 더 낮은 극단적인 성공 기준치
+SHADOWDARK.item.magic_item.type.critMultiplier: 극단적인 굴림 배수
+SHADOWDARK.item.magic_item.type.custom: 사용자지정 효과
+SHADOWDARK.item.magic_item.type.damageBonus: 피해 보너스
+SHADOWDARK.item.magic_item.type.permanentAbility: 영구적인 능력 변화
+SHADOWDARK.item.name_from_spell.Potion: '{spellName} 물약'
+SHADOWDARK.item.name_from_spell.Scroll: '{spellName} 두루마리'
+SHADOWDARK.item.name_from_spell.Wand: '{spellName} 마법봉'
+SHADOWDARK.item.npc_attack_bonus: 명중 보너스
+SHADOWDARK.item.npc_attack_count: 공격 숫자
+SHADOWDARK.item.npc_attack_damage_bonus: 피해 보너스
+SHADOWDARK.item.npc_attack_damage: 피해 주사위
+SHADOWDARK.item.npc_attack_special: 특수
+SHADOWDARK.item.npc_attack_type: 유형
+SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
+SHADOWDARK.item.potion.label: 물약
+SHADOWDARK.item.properties: 속성
+SHADOWDARK.item.scroll.label: 두루마리
+SHADOWDARK.item.spell_caster_classes: 주문시전 클래스
+SHADOWDARK.item.spell_class: 주문 클래스
+SHADOWDARK.item.spell_duration: 지속시간
+SHADOWDARK.item.spell_name: 주문 이름
+SHADOWDARK.item.spell_range: 범위
+SHADOWDARK.item.spell_tier: 등급
+SHADOWDARK.item.spell.label: 주문
+SHADOWDARK.item.talent_class: 재능 클래스
+SHADOWDARK.item.treasure: 보물
+SHADOWDARK.item.wand.label: 마법봉
+SHADOWDARK.item.weapon_damage.oneHanded_short: 한손
+SHADOWDARK.item.weapon_damage.oneHanded: 한손 피해
+SHADOWDARK.item.weapon_damage.twoHanded_short: 두손
+SHADOWDARK.item.weapon_damage.twoHanded: 두손 피해
+SHADOWDARK.item.weapon_range: 범위
+SHADOWDARK.item.weapon_type: 유형
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: 바스타드 소드
+SHADOWDARK.item.weapon.base_weapon.club: 몽둥이
+SHADOWDARK.item.weapon.base_weapon.crossbow: 쇠뇌
+SHADOWDARK.item.weapon.base_weapon.dagger: 대거
+SHADOWDARK.item.weapon.base_weapon.greataxe: 대형 도끼
+SHADOWDARK.item.weapon.base_weapon.greatsword: 대검
+SHADOWDARK.item.weapon.base_weapon.javelin: 자벨린
+SHADOWDARK.item.weapon.base_weapon.longbow: 장궁
+SHADOWDARK.item.weapon.base_weapon.longsword: 장검
+SHADOWDARK.item.weapon.base_weapon.mace: 철퇴
+SHADOWDARK.item.weapon.base_weapon.shortbow: 단궁
+SHADOWDARK.item.weapon.base_weapon.shortsword: 단검
+SHADOWDARK.item.weapon.base_weapon.spear: 창
+SHADOWDARK.item.weapon.base_weapon.staff: 지팡이
+SHADOWDARK.item.weapon.base_weapon.title: 기본 무기
+SHADOWDARK.item.weapon.base_weapon.wand: 마법봉
+SHADOWDARK.item.weapon.base_weapon.warhammer: 전쟁망치
+SHADOWDARK.language.celestial: 천계어 Celestial
+SHADOWDARK.language.common: 공용어 Common
+SHADOWDARK.language.diabolic: 악마어 Diabolic
+SHADOWDARK.language.draconic: 용언 Draconic
+SHADOWDARK.language.dwarvish: 드워프어 Dwarvish
+SHADOWDARK.language.elvish: 엘프어 Elvish
+SHADOWDARK.language.giant: 거인어 Giant
+SHADOWDARK.language.goblin: 고블린어 Goblin
+SHADOWDARK.language.merran: 해양어 Merran
+SHADOWDARK.language.orcish: 오크어 Orcish
+SHADOWDARK.language.primordial: 원시어 Primordial
+SHADOWDARK.language.reptilian: 렙틸리언어 Reptilian
+SHADOWDARK.language.sylvan: 삼림어 Sylvan
+SHADOWDARK.language.thanian: 타니언어 Thanian
+SHADOWDARK.light_source.lantern: 등불
+SHADOWDARK.light_source.light_spell.double_near: 빛 주문 (단거리 2배)
+SHADOWDARK.light_source.light_spell.near: 빛 주문 (단거리)
+SHADOWDARK.light_source.torch: 횃불
+SHADOWDARK.light-source.dropped: '{name} 를 떨어트렸습니다'
+SHADOWDARK.light-source.pick-up-lightsource.tooltip: 광원 줍기
+SHADOWDARK.light-tracker.active: 활성화
+SHADOWDARK.light-tracker.paused: 멈춤
+SHADOWDARK.light-tracker.status.label: 상태
+SHADOWDARK.light-tracker.title.prefix: 빛
+SHADOWDARK.light-tracker.title.suffix: 트래커
+SHADOWDARK.light-tracker.user_warning: 한 명 이상의 유저가 캐릭터를 선택하지 않았습니다
+SHADOWDARK.migration.begin_migration: 섀도다크 RPG 데이터를 업그레이드하고 있습니다.
+SHADOWDARK.migration.begin_schema: 섀도다크 RPG v{version} 를 업데이트하고 있습니다.
+SHADOWDARK.migration.completed_migration: 섀도다크 RPG 데이터 업그레이드가 완료되었습니다.
+SHADOWDARK.migration.completed_schema: 섀도다크 RPG v{version} 업데이트가 완료되었습니다.
+SHADOWDARK.module_art_config.portraits: 포트레이트
+SHADOWDARK.module_art_config.tokens: 토큰
+SHADOWDARK.npc_attack.type.physical: 물리
+SHADOWDARK.npc_attack.type.special: 특수
+SHADOWDARK.npc_move.double_near: 단거리 2배
+SHADOWDARK.npc_move.near: 단거리
+SHADOWDARK.npc_move.triple_near: 단거리 3배
+SHADOWDARK.range.close_short: 인접
+SHADOWDARK.range.close: 인접
+SHADOWDARK.range.far_short: 장거리
+SHADOWDARK.range.far: 장거리
+SHADOWDARK.range.near_short: "단거리"
+SHADOWDARK.range.near: 단거리
+SHADOWDARK.range.nearLine_short: 직선
+SHADOWDARK.range.nearLine: 단거리 직선
+SHADOWDARK.range.samePlane_short: 차원
+SHADOWDARK.range.samePlane: 같은 차원 내
+SHADOWDARK.range.self_short: 자신
+SHADOWDARK.range.self: 자신
+SHADOWDARK.range.touch_short: 접
+SHADOWDARK.range.touch: 접촉
+SHADOWDARK.range.unlimited_short: 무
+SHADOWDARK.range.unlimited: 무제한
+SHADOWDARK.roll.advantage_title: "유리함으로 {title}"
+SHADOWDARK.roll.advantage: 유리함
+SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
+SHADOWDARK.roll.critical.success: 극단적인 성공! ({value})
+SHADOWDARK.roll.D20: D20 굴리기
+SHADOWDARK.roll.damage: "피해 굴림:"
+SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
+SHADOWDARK.roll.disadvantage: 불리함
+SHADOWDARK.roll.failure: 실패! ({value})
+SHADOWDARK.roll.normal: 일반
+SHADOWDARK.roll.spell_casting_check: 주문시전 판정
+SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.settings.effect_panel.show_passive.hint: 체크하면 재능과 그 외 패시브 효과를 효과 패널에 표시합니다
+SHADOWDARK.settings.effect_panel.show_passive.name: 패시브 효과 패널에 표시
+SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다
+SHADOWDARK.settings.module_art.label: 아트워크 설정
+SHADOWDARK.settings.module_art.name: 모듈에서 제공하는 아트워크
+SHADOWDARK.settings.module_art.save: 변경사항 저장
+SHADOWDARK.settings.roll_npc_hp.hint: NPC가 장면에 추가될 때 자동으로 히트 포인트 굴리기
+SHADOWDARK.settings.roll_npc_hp.name: 자동 NPC 히트 포인트 굴림
+SHADOWDARK.settings.track_light_sources.hint: 체크하면 시스템이 모든 활성 상태의 광원을 트래킹하고 남은 시간을 업데이트합니다.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: 체크하면 활동하지 않는 (로그아웃 상태의) 유저가 소유하고 있는 광원까지 트래킹합니다.
+SHADOWDARK.settings.track_light_sources.inactive_user.name: 활동하지 않는 유저의 광원 트래킹하기
+SHADOWDARK.settings.track_light_sources.interval.hint: 트래킹되는 광원을 얼마나 자주 업데이트할지 초 단위로 설정합니다.
+SHADOWDARK.settings.track_light_sources.interval.name: 빛 트래킹 주기
+SHADOWDARK.settings.track_light_sources.name: 광원 트래킹하기
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: 체크하면 시작할 때 빛 트래커 인터페이스가 (GM만) 자동으로 열립니다.
+SHADOWDARK.settings.track_light_sources.open_on_start.name: 시작할 때 빛 트래커 UI 열기
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 체크하면 파운드리가 일시 정지 상태일 때 실시간 빛 트래커도 멈춥니다.
+SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈추기
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
+SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
+SHADOWDARK.sheet.actor.ac: AC
+SHADOWDARK.sheet.actor.alignment_short: 성향
+SHADOWDARK.sheet.actor.alignment: 성향
+SHADOWDARK.sheet.actor.hp_max: 최대
+SHADOWDARK.sheet.actor.hp: HP
+SHADOWDARK.sheet.actor.level: 레벨
+SHADOWDARK.sheet.actor.placeholder.name: 새 액터 이름
+SHADOWDARK.sheet.class.item: 섀도다크 아이템 시트
+SHADOWDARK.sheet.class.npc: 섀도다크 NPC 시트
+SHADOWDARK.sheet.class.player: 섀도다크 플레이어 시트
+SHADOWDARK.sheet.general.item_create.tooltip: '{type} 아이템 만들기'
+SHADOWDARK.sheet.general.item_delete.title: 아이템 삭제
+SHADOWDARK.sheet.general.item_edit.title: 아이템 편집
+SHADOWDARK.sheet.general.roll_hp: HP 굴리기
+SHADOWDARK.sheet.item.tab.description: 설명
+SHADOWDARK.sheet.item.tab.details: 세부 사항
+SHADOWDARK.sheet.item.tab.effects: 효과
+SHADOWDARK.sheet.item.tab.light: 빛
+SHADOWDARK.sheet.item.tab.magic: 마법
+SHADOWDARK.sheet.npc.attacks_label: 공격
+SHADOWDARK.sheet.npc.dark_adapted: 어둠 적응
+SHADOWDARK.sheet.npc.description_label: 설명
+SHADOWDARK.sheet.npc.features_label: 기능
+SHADOWDARK.sheet.npc.movement_short: 이동
+SHADOWDARK.sheet.npc.movement: 이동
+SHADOWDARK.sheet.npc.tab.abilities: 능력
+SHADOWDARK.sheet.npc.tab.description: 설명
+SHADOWDARK.sheet.player.active_effect_override: 이것은 현재 활성화된 효과에 의해 변경된 것이며 수정할 수 없습니다. 수정하려면 해당 효과를 비활성화하세요.
+SHADOWDARK.sheet.player.ancestry: 선조
+SHADOWDARK.sheet.player.available_spells: 시전 가능한 주문
+SHADOWDARK.sheet.player.background: 배경
+SHADOWDARK.sheet.player.class: 클래스
+SHADOWDARK.sheet.player.deity: 신
+SHADOWDARK.sheet.player.languages: 언어
+SHADOWDARK.sheet.player.luck: 운
+SHADOWDARK.sheet.player.melee_attacks: 근접 공격
+SHADOWDARK.sheet.player.notes: 캐릭터 메모
+SHADOWDARK.sheet.player.ranged_attacks: 원거리 공격
+SHADOWDARK.sheet.player.spells_tier: 등급
+SHADOWDARK.sheet.player.spells: 주문
+SHADOWDARK.sheet.player.tab.abilities: 능력
+SHADOWDARK.sheet.player.tab.background: 배경
+SHADOWDARK.sheet.player.tab.inventory: 인벤토리
+SHADOWDARK.sheet.player.tab.spells: 주문
+SHADOWDARK.sheet.player.tab.talents: 재능
+SHADOWDARK.sheet.player.talents_level: 레벨
+SHADOWDARK.sheet.player.talents_name: 이름
+SHADOWDARK.sheet.player.talents: 재능
+SHADOWDARK.sheet.player.title: 칭호
+SHADOWDARK.sheet.player.toggle_spell_lost: 주문 불능 표시
+SHADOWDARK.sheet.player.tooltip.cast_spell: 주문 시전
+SHADOWDARK.sheet.player.tooltip.learn_spell: 주문 배우기
+SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용
+SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
+SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
+SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.spell_caster.priest: 성직자
+SHADOWDARK.spell_caster.wizard: 마법사
+SHADOWDARK.spell_duration.days: 일
+SHADOWDARK.spell_duration.focus: 집중
+SHADOWDARK.spell_duration.instant: 즉시
+SHADOWDARK.spell_duration.permanent: 영구
+SHADOWDARK.spell_duration.real_time: 실시간
+SHADOWDARK.spell_duration.rounds: 라운드
+SHADOWDARK.spell_range.close: 인접
+SHADOWDARK.spell_range.far: 장거리
+SHADOWDARK.spell_range.near: 단거리
+SHADOWDARK.spellcasting_ability: 주문시전 능력
+SHADOWDARK.talent.backstab: 배후공격
+SHADOWDARK.talent.class.ancestry: 선조
+SHADOWDARK.talent.class.class: 클래스
+SHADOWDARK.talent.class.level: 레벨
+SHADOWDARK.talent.type.ability_improvement: 능력 향상
+SHADOWDARK.talent.type.advantage.hp: HP 굴림 유리함
+SHADOWDARK.talent.type.advantage.initiative: 우선권 유리함
+SHADOWDARK.talent.type.advantage.spell: 주문시전 유리함
+SHADOWDARK.talent.type.advantage.title: 유리함 보너스
+SHADOWDARK.talent.type.armor_bonus: 방어구 AC 보너스
+SHADOWDARK.talent.type.armor_mastery: 방어구 숙달
+SHADOWDARK.talent.type.backstab_die: 추가 배후공격 주사위
+SHADOWDARK.talent.type.custom: 사용자지정 재능
+SHADOWDARK.talent.type.melee_attack_bonus: 근접 명중 굴림 보너스
+SHADOWDARK.talent.type.melee_damage_bonus: 근접 피해 굴림 보너스
+SHADOWDARK.talent.type.ranged_attack_bonus: 원거리 명중 굴림 보너스
+SHADOWDARK.talent.type.ranged_damage_bonus: 원거리 피해 굴림 보너스
+SHADOWDARK.talent.type.spell_bonus: 주문시전 보너스
+SHADOWDARK.talent.type.title: 재능 유형
+SHADOWDARK.talent.type.weapon_mastery: 무기 숙달
+SHADOWDARK.tours.lightsource.notification.not_enabled: 길잡이 투어를 실행하려면 빛 트래커를 활성화해야 합니다
+SHADOWDARK.weapon.properties.finesse: 기교
+SHADOWDARK.weapon.properties.loading: 장전
+SHADOWDARK.weapon.properties.thrown: 투척
+SHADOWDARK.weapon.properties.two_handed: 양손
+SHADOWDARK.weapon.properties.versatile: 다용도
+SHADOWDARK.weapon.type.melee: 근접
+SHADOWDARK.weapon.type.ranged: 원거리
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
