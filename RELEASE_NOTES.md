@@ -47,6 +47,8 @@
 * [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
 * [#393] Support for Ranger class, including importing from Shadowdarklings.net
 * [#395] Allows the GM to pick up light sources for users if they are logged in and have an assigned character
+* [#399] Show all Actors that have one or more Users with Owner permissions on the Light Tracker
+	- Also adds a toggle to the Light Tracker to show/hide actors with no active light source
 
 ## v1.2.4
 
