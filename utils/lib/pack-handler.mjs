@@ -14,6 +14,7 @@ export default class PackHandler {
 		this.inputFormat = options.inputFormat;
 		this.outputFormat = options.outputFormat;
 		this.source = options.source;
+		Logger.verbose = options.verbose ?? false;
 	}
 
 	async pack() {
