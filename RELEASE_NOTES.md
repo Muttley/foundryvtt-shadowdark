@@ -1,4 +1,4 @@
-## v1.x.x
+## v1.3.0
 
 ### Bugfixes
 * [#319] Right-Click context menu binding to tab links on character sheets
