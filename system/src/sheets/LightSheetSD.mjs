@@ -65,13 +65,16 @@ export default class LightSheetSD extends ActorSheetSD {
 		else {
 			// Display a dialog allowing the GM to choose which character to assign
 			// the dropped light source to.
-			const activeUsers = game.users
-				.filter(u => u.active && !u.isGM);
+			const playerActors = game.actors.filter(
+				actor => actor.type === "Player" && actor.hasPlayerOwner
+			);
+			// const activeUsers = game.users
+			// 	.filter(u => u.active && !u.isGM);
 
 			const content = await renderTemplate(
 				"systems/shadowdark/templates/dialog/assign-picked-up-lightsource.hbs",
 				{
-					users: activeUsers,
+					playerActors,
 				}
 			);
 

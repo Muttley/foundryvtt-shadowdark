@@ -410,6 +410,8 @@ export default class ActorSD extends Actor {
 	}
 
 	getRollData() {
+		if (this.type === "Light") return;
+
 		const rollData = super.getRollData();
 
 		rollData.initiativeBonus = this.abilityModifier("dex");
