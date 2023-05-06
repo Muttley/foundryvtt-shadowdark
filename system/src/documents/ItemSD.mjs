@@ -333,7 +333,7 @@ export default class ItemSD extends Item {
 	 */
 	async _handlePredefinedEffect(key, value) {
 		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
-		if (key === "weaponMastery") {
+		if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
 			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
 		}
 		else if (key === "armorMastery") {

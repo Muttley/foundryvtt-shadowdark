@@ -112,6 +112,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 			// Create actor
 			mockActor = await createMockActorByKey(key, "Player");
+			await mockActor.update({"ownership.default": 3});
 
 			// Create light source
 			mockItem = await createMockItemByKey(key, "Basic");

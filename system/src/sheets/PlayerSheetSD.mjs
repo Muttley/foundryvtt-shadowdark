@@ -155,11 +155,43 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			return this._dropActivateLightSource(item);
 		}
 
-		super._onDropItem(event, data);
+		if (item.actor && item.isLight()) {
+			const isActiveLight = item.isActiveLight();
+
+			if (isActiveLight) {
+				// We're transferring an active light to this sheet, so turn off
+				// any existing light sources
+				const newActorLightSources = await this.actor.getActiveLightSources();
+				for (const activeLight of newActorLightSources) {
+					await this._toggleLightSource(activeLight);
+				}
+			}
+
+			// Now create a copy of the item on the target
+			const [newItem] = await super._onDropItem(event, data);
+
+			if (isActiveLight) {
+				// Turn the original light off before it gets deleted, and
+				// make sure the new one is turned on
+				item.actor.turnLightOff();
+				newItem.actor.turnLightOn(newItem._id);
+			}
+
+			// Now we can delete the original item
+			await item.actor.deleteEmbeddedDocuments(
+				"Item",
+				[item._id]
+			);
+		}
+		else {
+			super._onDropItem(event, data);
+		}
 	}
 
 	/**
-	 * Creates an item being a lightsource and activates it
+	 * Actives a lightsource if dropped onto the Player sheet. Used for
+	 * activating Light spell et.c.
+	 *
 	 * @param {Item} item - Item that is a lightsource
 	 */
 	async _dropActivateLightSource(item) {

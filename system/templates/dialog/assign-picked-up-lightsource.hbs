@@ -1,0 +1,20 @@
+<form autocomplete="off" spellcheck="off">
+  <div class="shadowdark-dialog pickup-lightsource">
+    <h3>{{localize "SHADOWDARK.dialog.light_source.pick_up.title"}} {{ data.item.name }}</h3>
+    <hr />
+
+    <div class="form-group">
+			<div class="actor-selector">
+				{{#each playerActors as |actor|}}
+					<div class="actor">
+						<input type="radio" id="{{actor._id}}" name="selected-actor" value="{{actor.name}}">
+						<label for="{{actor._id}}">
+							<img src="{{actor.img}}" />{{actor.name}}
+						</label>
+					</div>
+				{{/each}}
+			</div>
+    </div>
+    <hr />
+  </div>
+</form>

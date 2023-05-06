@@ -22,6 +22,7 @@ export default class LightSourceTrackerSD extends Application {
 		this.realTime = new RealTimeSD();
 
 		this.showUserWarning = false;
+		this.showAllPlayerActors = true;
 	}
 
 	/** @inheritdoc */
@@ -144,18 +145,135 @@ export default class LightSourceTrackerSD extends Application {
 				this._updateLightSources();
 			}
 		);
+
+		html.find(".toggle-show-all").click(
+			async event => {
+				event.preventDefault();
+				this.showAllPlayerActors = !this.showAllPlayerActors;
+				this.render(false);
+			}
+		);
+	}
+
+	/**
+	 * Drops a lightsource on a scene by creating an actor and a token. It deletes the item
+	 * from the source actor, but retains the information. It also flags the lightsource tracker
+	 * to start tracking it.
+	 *
+	 * @param {object} item - Lightsource Item to be dropped on scene
+	 * @param {object} itemOwner - The owner of the lightsource item to be dropped
+	 * @param {object} actorData - Uncreated Actor data
+	 * @param {object} dropData - Information the carries the coordinates of the drop
+	 */
+	async dropLightSourceOnScene(item, itemOwner, actorData, dropData, speaker = false) {
+		// Create a new actor
+		const lightActor = await Actor.create(actorData);
+
+		// Create a copy of the item
+		lightActor.createEmbeddedDocuments("Item", [item]);
+
+		// Remove light from items parents
+		game.actors.get(itemOwner._id).toggleLight(false, "");
+
+		// Send message that the torch was dropped
+		game.actors.get(itemOwner._id).sheet._sendToggledLightSourceToChat(
+			false,
+			item,
+			{
+				speaker: speaker ?? ChatMessage.getSpeaker(),
+				picked_up: false,
+				template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
+			}
+		);
+
+		// Remove item from the items parents
+		game.actors.get(itemOwner._id).items.get(item._id).delete();
+
+		// Create token
+		canvas.tokens._onDropActorData({}, {
+			type: "Actor",
+			uuid: lightActor.uuid,
+			x: dropData.x,
+			y: dropData.y,
+		});
+
+		// Flag the housekeeper to get to work
+		this.dirty = true;
 	}
 
 	/** @override */
 	async getData(options) {
+
+		for (const actorData of this.monitoredLightSources) {
+			actorData.showOnTracker = this.showAllPlayerActors || actorData.lightSources.length > 0;
+		}
+
 		const context = {
-			monitoredLightSources: this.monitoredLightSources,
 			isRealtimeEnabled: this.realTime.isEnabled(),
+			monitoredLightSources: this.monitoredLightSources,
 			paused: this._isPaused(),
+			showAllPlayerActors: this.showAllPlayerActors,
 			showUserWarning: this.showUserWarning,
 		};
 
 		return context;
+	}
+
+	/**
+	 * Transfers a token/actor that has been dropped for light to a held object again.
+	 * Triggers through socket so it doesn't matter if the user has permission or not.
+	 *
+	 * @param {ActorSD} character - Assigned actor
+	 * @param {ActorSD} lightActor - Actor associated with dropped lightsource
+	 * @param {Token} lightToken - Token associated with dropped lightsource
+	 * @param {object} speaker - Speaker data
+	 */
+	async pickupLightSourceFromScene(actorData, lightActor, lightToken, speaker = false) {
+		if (!actorData) return false;
+
+		const actor = game.actors.get(actorData._id);
+
+		const lightActorId = lightActor._id;
+		const lightTokenId = lightToken._id;
+
+		// Create the items onto the assigned character
+		const [item] = await actor.createEmbeddedDocuments(
+			"Item",
+			game.actors.get(lightActorId).items.contents
+		);
+
+		if (item.isActiveLight()) {
+			item.actor.turnLightOn(item._id);
+		}
+
+		// Delete the actor
+		game.actors.get(lightActorId).delete();
+
+		// Delete the token
+		canvas.scene.tokens.get(lightTokenId).delete();
+
+		const cardData = {
+			active: item.isActiveLight(),
+			name: item.name,
+			timeRemaining: Math.floor(item.system.light.remainingSecs / 60),
+			longevity: item.system.light.longevityMins,
+			actor,
+			item,
+			picked_up: true,
+		};
+
+		let template = "systems/shadowdark/templates/chat/lightsource-drop.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		await ChatMessage.create({
+			content,
+			speaker: speaker ?? ChatMessage.getSpeaker(),
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+		});
+
+		// Flag the housekeeper to get to work
+		this.dirty = true;
 	}
 
 	async render(force, options) {
@@ -264,16 +382,27 @@ export default class LightSourceTrackerSD extends Application {
 
 		let usersWithoutCharacters = 0;
 		try {
-			for (const user of game.users) {
-				if (user.isGM) continue;
+			const playerActors = game.actors.filter(
+				actor => actor.type === "Player" && actor.hasPlayerOwner
+			);
 
-				if (!(user.active || this._monitorInactiveUsers())) continue;
+			const onlineUsers = game.users.filter(
+				user => !user.isGM && user.active
+			);
 
-				const actor = user.character;
-				if (!actor) {
-					usersWithoutCharacters++;
-					continue;
+			for (const actor of playerActors) {
+
+				let hasActiveOwner = false;
+				for (const user of onlineUsers) {
+					if (actor.ownership[user._id] === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER
+						|| actor.ownership.default === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER
+					) {
+						hasActiveOwner = true;
+						break;
+					}
 				}
+
+				if (!(hasActiveOwner || this._monitorInactiveUsers())) continue;
 
 				const actorData = actor.toObject(false);
 				actorData.lightSources = [];
@@ -337,6 +466,10 @@ export default class LightSourceTrackerSD extends Application {
 		return game.settings.get("shadowdark", "trackLightSources");
 	}
 
+	_isPaused() {
+		return this.realTime.isPaused();
+	}
+
 	async _makeDirty() {
 		if (this._isEnabled() && game.user.isGM) this.dirty = true;
 	}
@@ -348,10 +481,6 @@ export default class LightSourceTrackerSD extends Application {
 	async _onToggleLightSource() {
 		if (!(this._isEnabled() && game.user.isGM)) return;
 		this.dirty = true;
-	}
-
-	async _pauseGameHook() {
-		this.render(false);
 	}
 
 	async onUpdateWorldTime(worldTime, worldDelta) {
@@ -457,6 +586,10 @@ export default class LightSourceTrackerSD extends Application {
 		shadowdark.log("Finished updating light sources");
 	}
 
+	async _pauseGameHook() {
+		this.render(false);
+	}
+
 	async _settingsChanged() {
 		if (!game.user.isGM) return;
 
@@ -487,93 +620,5 @@ export default class LightSourceTrackerSD extends Application {
 		await this._gatherLightSources();
 
 		this.render(false);
-	}
-
-	_isPaused() {
-		return this.realTime.isPaused();
-	}
-
-	/**
-	 * Transfers a token/actor that has been dropped for light to a held object again.
-	 * Triggers through socket so it doesn't matter if the user has permission or not.
-	 *
-	 * @param {ActorSD} character - Assigned actor
-	 * @param {ActorSD} lightActor - Actor associated with dropped lightsource
-	 * @param {Token} lightToken - Token associated with dropped lightsource
-	 * @param {object} speaker - Speaker data
-	 */
-	async pickupLightSourceFromScene(character, lightActor, lightToken, speaker = false) {
-		if (!character) return false;
-
-		const characterId = character._id;
-		const actorId = lightActor._id;
-		const tokenId = lightToken._id;
-
-		// Create the items onto the assigned character
-		const [item] = await game.actors.get(characterId).createEmbeddedDocuments(
-			"Item",
-			game.actors.get(actorId).items.contents
-		);
-
-		// Inactivate light source
-		await item.update({"system.light.active": false});
-
-		// Delete the actor
-		game.actors.get(actorId).delete();
-
-		// Delete the token
-		canvas.scene.tokens.get(tokenId).delete();
-
-		// Activate the light on the item
-		game.actors.get(characterId).sheet._toggleLightSource(item, {
-			speaker: speaker ?? ChatMessage.getSpeaker(),
-			picked_up: true,
-			template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
-		});
-
-		// Flag the housekeeper to get to work
-		this.dirty = true;
-	}
-
-	/**
-	 * Drops a lightsource on a scene by creating an actor and a token. It deletes the item
-	 * from the source actor, but retains the information. It also flags the lightsource tracker
-	 * to start tracking it.
-	 *
-	 * @param {object} item - Lightsource Item to be dropped on scene
-	 * @param {object} itemOwner - The owner of the lightsource item to be dropped
-	 * @param {object} actorData - Uncreated Actor data
-	 * @param {object} dropData - Information the carries the coordinates of the drop
-	 */
-	async dropLightSourceOnScene(item, itemOwner, actorData, dropData, speaker = false) {
-		// Create a new actor
-		const lightActor = await Actor.create(actorData);
-
-		// Create a copy of the item
-		lightActor.createEmbeddedDocuments("Item", [item]);
-
-		// Remove light from items parents
-		game.actors.get(itemOwner._id).sheet._toggleLightSource(
-			game.actors.get(itemOwner._id).items.get(item._id),
-			{
-				speaker: speaker ?? ChatMessage.getSpeaker(),
-				picked_up: false,
-				template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
-			}
-		);
-
-		// Remove item from the items parents
-		game.actors.get(itemOwner._id).items.get(item._id).delete();
-
-		// Create token
-		canvas.tokens._onDropActorData({}, {
-			type: "Actor",
-			uuid: lightActor.uuid,
-			x: dropData.x,
-			y: dropData.y,
-		});
-
-		// Flag the housekeeper to get to work
-		this.dirty = true;
 	}
 }

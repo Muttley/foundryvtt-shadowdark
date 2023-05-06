@@ -95,6 +95,15 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return modifiedTalent;
 	}
 
+	async _damageDieD12Talent(choice) {
+		const itemName = choice.split(":")[0];
+		const talent = await this._findInCompendium("Increased Weapon Damage Die", "shadowdark.talents");
+		const modifiedTalent = talent.toObject();
+		modifiedTalent.effects[0].changes[0].value = choice.split(":")[0].slugify();
+		modifiedTalent.name += ` (${itemName})`;
+		return modifiedTalent;
+	}
+
 	/**
 	 * Searches a compendium pack and returns the stored data if a match is found
 	 * @param {string} contentName - Name of something that may exist in a compendium
@@ -250,9 +259,12 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			"BackstabIncrease",
 			"AdvOnInitiative",
 			"Plus1ToHit",
+			"Plus1ToHitAndDamage",
 			"Plus1ToCastingSpells",
 			"AdvOnCastOneSpell",
 			"MakeRandomMagicItem",
+			"SetWeaponTypeDamage",
+			"ReduceHerbalismDC",
 		];
 
 		const talents = await Promise.all(json.bonuses.filter(
@@ -279,6 +291,21 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				}
 				if (bonus.name === "ArmorMastery") {
 					return this._masteryTalent("armor", bonus.bonusTo);
+				}
+				// Ranger
+				if (bonus.name === "SetWeaponTypeDamage") {
+					return this._damageDieD12Talent(bonus.bonusTo);
+				}
+				if (bonus.name === "ReduceHerbalismDC") {
+					return this._findInCompendium("Reduced Herbalism DC", "shadowdark.talents");
+				}
+				if (bonus.name === "Plus1ToHitAndDamage") {
+					if (bonus.bonusTo === "Melee attacks") {
+						return this._findInCompendium("+1 to Melee Attacks and Damage", "shadowdark.talents");
+					}
+					if (bonus.bonusTo === "Ranged attacks") {
+						return this._findInCompendium("+1 to Ranged Attacks and Damage", "shadowdark.talents");
+					}
 				}
 				// Thief
 				if (bonus.name === "BackstabIncrease") {
@@ -319,6 +346,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		if (json.class === "Fighter") {
 			talents.push(
 				await this._findInCompendium("Hauler", "shadowdark.talents")
+			);
+		}
+		if (json.class === "Ranger") {
+			talents.push(
+				await this._findInCompendium("Herbalism", "shadowdark.talents")
+			);
+			talents.push(
+				await this._findInCompendium("Wayfinder", "shadowdark.talents")
 			);
 		}
 		if (json.class === "Wizard") {

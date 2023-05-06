@@ -9,6 +9,9 @@
 * [#350] Inline rolls of NPC Features now render properly
 * [#322] Flask or Bottle had typo-cost in the Shadowdarkling tests
 * [#358] Updated Sleep spell description according to errata
+* [#394] Dragging a light from one character sheet to another should delete it from the original owner
+* [#396] Dropped light sources retain their active status
+
 
 ### Enhancements
 * [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
@@ -37,10 +40,15 @@
 * [#357] Added Light Source mappings for easy additions of new light source types
 * [#364] Added Random Encounter: Reaction table, as well as a Macro to help draw from tables and summarize into a chat message
 * [#365] Added macro script (not in-game macro) for creating a Carousing macro with in-game Carousing roll table
-* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier.
+* [#373] Added Foundry VTT CLI to npm scripts to enable CI-compilations of compendium packs for both v11+ and earlier
 * [#377] Add warning message to Light Tracker interface when there are users who have not selected a character
 * [#381] Add ability to track/control Actor-based Active Effect light sources in the Light Tracker
-* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker.
+* [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker
+* [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
+* [#393] Support for Ranger class, including importing from Shadowdarklings.net
+* [#395] Allows the GM to pick up light sources for users if they are logged in and have an assigned character
+* [#399] Show all Actors that have one or more Users with Owner permissions on the Light Tracker
+	- Also adds a toggle to the Light Tracker to show/hide actors with no active light source
 
 ## v1.2.4
 

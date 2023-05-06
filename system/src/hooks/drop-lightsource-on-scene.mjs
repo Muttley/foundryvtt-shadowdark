@@ -14,6 +14,7 @@ async function addTorchButton(hud, hudHTML, _hudData) {
 			<i class="fas fa-fire-flame-simple"></i>
 		</div>
 	`);
+
 	hudHTML.find(".col.middle").prepend(button);
 
 	// Add listeners to button
@@ -21,21 +22,7 @@ async function addTorchButton(hud, hudHTML, _hudData) {
 		event.preventDefault();
 		event.stopPropagation();
 
-		// Put the housekeeper to work
-		if (!game.user.isGM) {
-			game.socket.emit(
-				"system.shadowdark",
-				{
-					type: "pickupLightSourceFromScene",
-					data: {
-						character: game.user.character,
-						lightActor: actor,
-						lightToken: token,
-						speaker: ChatMessage.getSpeaker(),
-					},
-				}
-			);
-		}
+		actor.sheet._onPickupLight(event, { actor, token });
 	});
 }
 
@@ -60,33 +47,32 @@ export const DropLightsourceHooks = {
 
 				// Check if the dropped item is a lightsource
 				if (item && item.isLight()) {
-
-					// Get the light source light data
-					const lightSources = await foundry.utils.fetchJsonWithTimeout(
-						"systems/shadowdark/assets/mappings/map-light-sources.json"
-					);
-
-					const lightData = lightSources[
-						item.system.light.template
-					].light;
-
 					const actorData = {
 						name: game.i18n.format("SHADOWDARK.light-source.dropped", {name: item.name}),
 						img: item.img,
 						type: "Light",
 						prototypeToken: {
-							light: lightData,
+							light: item.parent.prototypeToken.light,
 							texture: {
 								src: item.img,
 								scaleX: 0.5,
 								scaleY: 0.5,
 							},
 						},
-						ownership: item.ownership,
+						ownership: { default: 3 }, // Everyone is owner
 					};
 
 					// Let a GM handle the dropping as it requires elevated permissions
-					if (!game.user.isGM) {
+					if (game.user.isGM) {
+						game.shadowdark.lightSourceTracker.dropLightSourceOnScene(
+							item,
+							item.parent,
+							actorData,
+							data,
+							ChatMessage.getSpeaker()
+						);
+					}
+					else {
 						game.socket.emit(
 							"system.shadowdark",
 							{
