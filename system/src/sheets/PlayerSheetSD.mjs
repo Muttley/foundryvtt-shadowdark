@@ -183,6 +183,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				[item._id]
 			);
 		}
+		else {
+			super._onDropItem(event, data);
+		}
 	}
 
 	/**
