@@ -421,7 +421,7 @@ export default class LightSourceTrackerSD extends Application {
 			// Gather scene Light actors that have been dropped onto the scene
 			if (canvas.scene) {
 				for (const token of canvas.scene.tokens) {
-					if (token.actor.type !== "Light") continue;
+					if (!token.actor || token.actor.type !== "Light") continue;
 
 					const actorData = token.actor.toObject(false);
 					actorData.lightSources = actorData.lightSources ?? [];
