@@ -10,6 +10,8 @@
 * [#322] Flask or Bottle had typo-cost in the Shadowdarkling tests
 * [#358] Updated Sleep spell description according to errata
 * [#394] Dragging a light from one character sheet to another should delete it from the original owner
+* [#396] Dropped light sources retain their active status
+
 
 ### Enhancements
 * [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
@@ -44,6 +46,7 @@
 * [#388] Adds a Light actor that is only used for dropping a light source on a scene, and allows it to be picked up again. The dropped lightsource will continue being tracked by the lightsource tracker
 * [#392] Official GM screen artwork added as default World login background image (thanks to Kelsey for giving us permission to use this awesome artwork)
 * [#393] Support for Ranger class, including importing from Shadowdarklings.net
+* [#395] Allows the GM to pick up light sources for users if they are logged in and have an assigned character
 
 ## v1.2.4
 
