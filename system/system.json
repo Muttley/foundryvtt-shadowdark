@@ -27,6 +27,43 @@
 		}
 	],
 	"esmodules": ["shadowdark-compiled.mjs"],
+	"languages": [
+		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "i18n/de.json"
+		},
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "i18n/en.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "i18n/es.json"
+		},
+		{
+			"lang": "fi",
+			"name": "Suomen Kieli",
+			"path": "i18n/fi.json"
+		},
+		{
+			"lang": "fr",
+			"name": "Français",
+			"path": "i18n/fr.json"
+		},
+		{
+			"lang": "ko",
+			"name": "한국어",
+			"path": "i18n/ko.json"
+		},
+		{
+			"lang": "sv",
+			"name": "Svenska",
+			"path": "i18n/sv.json"
+		}
+	],
 	"styles": ["css/shadowdark.css"],
 	"packs": [
 		{
@@ -172,28 +209,6 @@
 			"type": "RollTable",
 			"private": false,
 			"flags": {}
-		}
-	],
-	"languages": [
-		{
-			"lang": "de",
-			"name": "Deutsch",
-			"path": "i18n/de.json"
-		},
-		{
-			"lang": "en",
-			"name": "English",
-			"path": "i18n/en.json"
-		},
-		{
-			"lang": "fi",
-			"name": "suomen kieli",
-			"path": "i18n/fi.json"
-		},
-		{
-			"lang": "sv",
-			"name": "svenska",
-			"path": "i18n/sv.json"
 		}
 	],
 	"socket": true,
