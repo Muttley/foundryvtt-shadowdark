@@ -99,7 +99,7 @@ SHADOWDARK.chat.welcome_message.tour_button: 섀도다크 RPG 투어
 SHADOWDARK.chatcard.default: 굴림
 SHADOWDARK.class.fighter: 전사
 SHADOWDARK.class.priest: 성직자
-SHADOWDARK.class.ranger: Ranger
+SHADOWDARK.class.ranger: 레인저
 SHADOWDARK.class.thief: 도둑
 SHADOWDARK.class.wizard: 마법사
 SHADOWDARK.coins.cp: CP
@@ -122,7 +122,7 @@ SHADOWDARK.dialog.general.are_you_sure: 정말 진행하실 건가요?
 SHADOWDARK.dialog.general.cancel: 취소
 SHADOWDARK.dialog.general.no: "아니오"
 SHADOWDARK.dialog.general.yes: "네"
-SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.select: 지정
 SHADOWDARK.dialog.hp_roll.per_level: '{level} 레벨 HP 굴림'
 SHADOWDARK.dialog.hp_roll.previous_hp: "굴리기 전 HP: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: (건강 수정치 포함) 1 레벨 HP {hp} 를 굴렸습니다
@@ -141,7 +141,7 @@ SHADOWDARK.dialog.item.delete: 삭제
 SHADOWDARK.dialog.item.sell_all: 모두 팔기
 SHADOWDARK.dialog.item.sell: 팔기
 SHADOWDARK.dialog.item.use: 사용
-SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
+SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
 SHADOWDARK.dialog.roll_mode_label: 굴림 모드
 SHADOWDARK.dialog.roll: 굴림
 SHADOWDARK.dialog.spell_roll.title: 주문시전 굴림
@@ -508,5 +508,5 @@ SHADOWDARK.weapon.properties.two_handed: 양손
 SHADOWDARK.weapon.properties.versatile: 다용도
 SHADOWDARK.weapon.type.melee: 근접
 SHADOWDARK.weapon.type.ranged: 원거리
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
+SHADOWDARK.app.light-tracker.show-all-actors: 모든 액터 보기
+SHADOWDARK.app.light-tracker.hide-inactive: 광원이 없는 액터 숨기기
