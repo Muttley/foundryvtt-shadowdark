@@ -1,3 +1,8 @@
+## v.1.3.1
+
+### Bugfixes
+* [#407] New languages are now activated and available in game
+
 ## v1.3.0
 
 ### Bugfixes
