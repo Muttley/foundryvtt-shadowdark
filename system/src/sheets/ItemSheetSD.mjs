@@ -132,7 +132,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		context.propertiesDisplay = item.propertiesDisplay();
 
-		if (item.type === "Spell" || item.type === "Effect") {
+		if (["Effect", "Potion", "Scroll", "Spell", "Wand"].includes(item.type)) {
 			context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 				.includes(item.system.duration.type);
 

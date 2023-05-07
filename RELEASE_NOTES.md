@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#407] New languages are now activated and available in game
+* [#411] Duration value not showing up on Potion, Scroll and Wand item sheet
 
 ## v1.3.0
 
