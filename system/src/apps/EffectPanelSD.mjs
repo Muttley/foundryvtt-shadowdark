@@ -103,8 +103,9 @@ export default class EffectPanelSD extends Application {
 	 */
 	async deleteExpiredEffects() {
 		const effectData = this._controller.getEffectData();
+
 		// Get effects that have unique origin
-		const expiredEffects = effectData.temporaryEffects
+		const expiredEffects = [...effectData.temporaryEffects, ...effectData.conditionEffects]
 			.filter(e => {
 				// Light source Effects are cleaned up by the Light Source Tracker
 				return e.isExpired && e.effectName !== "Light Source";
