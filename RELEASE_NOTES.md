@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#407] New languages are now activated and available in game
+* [#413] Effects durations are now updated when changing the duration values on the sheet, and temporary conditions are removed on expiry
 
 ## v1.3.0
 
