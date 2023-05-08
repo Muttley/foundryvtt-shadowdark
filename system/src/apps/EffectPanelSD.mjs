@@ -108,7 +108,11 @@ export default class EffectPanelSD extends Application {
 		const expiredEffects = [...effectData.temporaryEffects, ...effectData.conditionEffects]
 			.filter(e => {
 				// Light source Effects are cleaned up by the Light Source Tracker
-				return e.isExpired && e.effectName !== "Light Source";
+				return e.isExpired
+				&& !(
+					e.effectName === "Light Source"
+					|| e.changes.some(c => c.key === "system.light.template")
+				);
 			})
 			.filter((value, index, self) => {
 				return self.findIndex(v => v.origin === value.origin) === index;
