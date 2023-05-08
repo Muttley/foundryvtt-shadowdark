@@ -4,6 +4,7 @@
 * [#407] New languages are now activated and available in game
 * [#411] Duration value not showing up on Potion, Scroll and Wand item sheet
 * [#413] Effects durations are now updated when changing the duration values on the sheet, and temporary conditions are removed on expiry
+* [#417] Now catches effects providing light source using either name or if any change is manipulating the light template field
 
 ### Errata
 * [#412] Updated Ranger items to latest version
