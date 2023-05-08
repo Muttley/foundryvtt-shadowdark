@@ -1,3 +1,8 @@
+## v.1.3.x
+
+### Bugfixes
+* [#419] Shadowdarklings.net uses https instead of http
+
 ## v.1.3.1
 
 ### Bugfixes
