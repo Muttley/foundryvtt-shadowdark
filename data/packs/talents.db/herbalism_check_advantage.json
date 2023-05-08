@@ -1,9 +1,9 @@
 {
-  "name": "Reduced Herbalism DC",
+  "name": "Herbalism Check Advantage",
   "type": "Talent",
   "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
   "system": {
-    "description": "",
+    "description": "<p>You gain ADV on Herbalism checks for an herb you choose</p>",
     "properties": [],
     "magicItem": false,
     "level": 1,
@@ -22,11 +22,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683314533887,
-    "modifiedTime": 1683314561365,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683554631403,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,

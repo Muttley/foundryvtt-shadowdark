@@ -3,7 +3,7 @@
   "type": "Talent",
   "img": "icons/consumables/fruit/black-currant-leaf-purple.webp",
   "system": {
-    "description": "<p>Make an INT check (Wayfinder applies) to find an herb you choose. If you fail, you can't use this talent again until you successfully complete a rest.</p><p></p><p><strong>DC | Effect (Good for 1 Day)</strong></p><p>9 | <strong>@UUID[Compendium.shadowdark.talents.m857P6MI00wAONTp]{Salve}.</strong> 3:6 chance of Healing 1 HP</p><p>12 | <strong>@UUID[Compendium.shadowdark.talents.QV93CYmgcgJ3UCPf]{Antitoxin}. </strong>Steps the effect of a poison</p><p>15 | <strong>@UUID[Compendium.shadowdark.talents.dBQr9YPyhvwyPm0g]{Stimulant}. </strong>ADV on WIS checks to perceive hidden things for 5 rounds</p><p>18 | <strong>@UUID[Compendium.shadowdark.talents.FeoRamUTz5jakMJ8]{Foebane}. </strong>ADV on attacks against one creature type you choose for [[/r 1d6]] rounds</p><p>21 | <strong>@UUID[Compendium.shadowdark.talents.VjFsjhM6CZjZ04RT]{Curative}.</strong> Equivalent to a @UUID[Compendium.shadowdark.magic-items.jucTGEjsqJ1znHdf]{Potion of Healing}</p>",
+    "description": "<p>Make an INT check to find an herb you choose. If you fail, you can't try to find that herb again until you successfully complete a rest. Unused herbs lose their effect in 3 rounds.</p><p></p><p><strong>DC | Effect (Good for 1 Day)</strong></p><p>11 | <strong>@UUID[Compendium.shadowdark.talents.m857P6MI00wAONTp]{Salve}.</strong> Heals 1 HP</p><p>12 | <strong>@UUID[Compendium.shadowdark.talents.dBQr9YPyhvwyPm0g]{Stimulant}. </strong>You can't be surprised for 10 rounds</p><p>13 | <strong>@UUID[Compendium.shadowdark.talents.FeoRamUTz5jakMJ8]{Foebane}. </strong>ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p><p>14 | <strong>@UUID[Compendium.shadowdark.talents.QV93CYmgcgJ3UCPf]{Restorative}. </strong>Ends one poison or disease</p><p>15 | <strong>@UUID[Compendium.shadowdark.talents.VjFsjhM6CZjZ04RT]{Curative}.</strong> Equivalent to a @UUID[Compendium.shadowdark.magic-items.jucTGEjsqJ1znHdf]{Potion of Healing}</p>",
     "properties": [],
     "magicItem": false,
     "level": 1,
@@ -22,11 +22,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683313063635,
-    "modifiedTime": 1683315043330,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683554122921,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,
