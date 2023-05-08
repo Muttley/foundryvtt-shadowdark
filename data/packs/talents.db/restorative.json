@@ -1,9 +1,9 @@
 {
-  "name": "Antitoxin",
+  "name": "Restorative",
   "type": "Potion",
   "img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
   "system": {
-    "description": "<p>Stops the effect of a poison</p>",
+    "description": "<p>Ends one poison or disease</p>",
     "properties": [],
     "magicItem": true,
     "class": [],
@@ -43,11 +43,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683313586669,
-    "modifiedTime": 1683313978219,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683554078756,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,
