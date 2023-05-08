@@ -214,7 +214,15 @@ export default class ItemSheetSD extends ItemSheet {
 			await this._createPredefinedEffect(key, effectData);
 		}
 
-		super._onChangeInput(event);
+		await super._onChangeInput(event);
+
+		// If the change value is the duration field(s)
+		if (
+			["system.duration.type", "system.duration.value"].includes(event.target?.name)
+			&& event.target?.parentElement.className === "effect-duration"
+		) {
+			await this._onUpdateDurationEffect();
+		}
 	}
 
 	/* ---------- Item Property Apps ---------- */
@@ -390,6 +398,12 @@ export default class ItemSheetSD extends ItemSheet {
 		return this._toggleTransferEffect(effect);
 	}
 
+	async _onUpdateDurationEffect() {
+		if (!this.isEditable) return;
+		this.item.effects.map(e => e.update({duration: this._getDuration()}));
+	}
+
+
 	/* -------------------------------------------- */
 	/*  Methods                                     */
 	/* -------------------------------------------- */
@@ -449,13 +463,17 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 		}
 
-		// For conditions we always want duration so it shows on the token, if checked
+		// If the show token icon is checked and it is either a condition OR the setting for always
+		// showing passive effects is checked in settings, we set a duration that won't tick down.
 		if (
 			this.item.system.tokenIcon?.show
-			&& this.item.system.category === "condition"
+			&& (
+				this.item.system.category === "condition"
+				|| game.settings.get("shadowdark", "showPassiveEffects")
+			)
 			&& ["unlimited", "focus", "instant", "permanent"].includes(this.item.system.duration.type)
 		) {
-			duration.seconds = 1;
+			duration.seconds = 4201620;
 		}
 
 		return duration;
