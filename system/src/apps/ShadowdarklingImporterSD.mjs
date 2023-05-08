@@ -50,7 +50,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	/** Specific methods */
 
 	_openImporter() {
-		return new FrameViewer("http://shadowdarklings.net", {
+		return new FrameViewer("https://shadowdarklings.net", {
 			title: "Shadowdarklings.net",
 		}).render(true);
 	}
