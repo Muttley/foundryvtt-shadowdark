@@ -146,7 +146,7 @@
         11
       ],
       "drawn": false,
-      "text": "Reduced Herbalism DC",
+      "text": "Herbalism Check Advantage",
       "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
       "documentCollection": "shadowdark.talents",
       "documentId": "p4Zh8LNyBp8UwhRD",
@@ -161,7 +161,7 @@
         12
       ],
       "drawn": false,
-      "text": "Reduced Herbalism DC",
+      "text": "Herbalism Check Advantage",
       "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
       "documentCollection": "shadowdark.talents",
       "documentId": "p4Zh8LNyBp8UwhRD",
@@ -363,11 +363,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683315269662,
-    "modifiedTime": 1683315771535,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683554784698,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,

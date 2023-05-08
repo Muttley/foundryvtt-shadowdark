@@ -15,7 +15,7 @@
       "template": "torch"
     },
     "duration": {
-      "value": "5",
+      "value": "10",
       "type": "rounds"
     },
     "start": {
@@ -37,7 +37,7 @@
       "icon": "icons/magic/perception/eye-tendrils-web-purple.webp",
       "origin": "Item.E9GhofNgwIJ7N2A4",
       "duration": {
-        "rounds": 5,
+        "rounds": 10,
         "seconds": null,
         "startTime": null,
         "combat": null,
@@ -64,11 +64,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683314021970,
-    "modifiedTime": 1683314137440,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683553730776,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,

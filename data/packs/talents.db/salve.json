@@ -3,7 +3,7 @@
   "type": "Potion",
   "img": "icons/commodities/materials/bowl-liquid-white.webp",
   "system": {
-    "description": "<p>3:6 [[/r 1d6]] of Healing 1 HP</p>",
+    "description": "<p>Heals 1 HP</p>",
     "properties": [],
     "magicItem": true,
     "class": [],
@@ -43,11 +43,11 @@
   },
   "_stats": {
     "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
+    "systemVersion": "1.3.0",
     "coreVersion": "10.291",
     "createdTime": 1683313577940,
-    "modifiedTime": 1683313922481,
-    "lastModifiedBy": "v363Ga8ZWiqa3r9H"
+    "modifiedTime": 1683553881267,
+    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
   },
   "folder": null,
   "sort": 0,
