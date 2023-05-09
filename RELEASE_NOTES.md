@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#419] Shadowdarklings.net uses https instead of http
+* [#420] NPC attacks now rolls with the damage bonus as well
 
 ## v.1.3.1
 
