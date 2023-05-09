@@ -666,6 +666,16 @@ export default ({ describe, it, expect }) => {
 			const response = await RollSD._rollNpcAttack(mockData);
 			expect(Object.keys(response.rolls).length).equal(1);
 		});
+
+		it("#420 damage bonus is added to damage roll", async () => {
+			mockData.rolls = { main: { critical: null } };
+			mockData.damageParts = [];
+			mockData.item.system.bonuses.damageBonus = 3;
+
+			const response = await RollSD._rollNpcAttack(mockData);
+			expect(Object.keys(response.rolls).length).equal(2);
+			expect(response.rolls.primaryDamage.roll._formula).equal("1d6 + 3");
+		});
 	});
 
 	describe("_rollWeapon(data)", () => {
