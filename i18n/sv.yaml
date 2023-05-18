@@ -33,6 +33,8 @@ SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: min
 SHADOWDARK.app.light_tracker.title: Ljuskällespårare
 SHADOWDARK.app.light-tracker.douse-light: Släck ljus
+SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
+SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Vill du ta bort {effectName} effekten?
@@ -121,8 +123,8 @@ SHADOWDARK.dialog.effect.choice.weapon: Välj vapentyp
 SHADOWDARK.dialog.general.are_you_sure: Är du säker?
 SHADOWDARK.dialog.general.cancel: Avbryt
 SHADOWDARK.dialog.general.no: "Nej"
-SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.general.select: Välj
+SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.hp_roll.per_level: Rulla KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "KP innan rullning: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rullade {hp} KP för nivå 1 (inkl. fys mod)
@@ -508,5 +510,3 @@ SHADOWDARK.weapon.properties.two_handed: Två-handat
 SHADOWDARK.weapon.properties.versatile: Versatilt
 SHADOWDARK.weapon.type.melee: Närstrid
 SHADOWDARK.weapon.type.ranged: Avståndsstrid
-SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
-SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
