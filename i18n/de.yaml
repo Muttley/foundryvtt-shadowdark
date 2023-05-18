@@ -33,73 +33,75 @@ SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: min
 SHADOWDARK.app.light_tracker.title: Licht-Tracker
 SHADOWDARK.app.light-tracker.douse-light: Licht löschen
+SHADOWDARK.app.light-tracker.hide-inactive: Verberge Akteure ohne Licht
+SHADOWDARK.app.light-tracker.show-all-actors: Zeige alle Akteure
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Licht ausschalten
 SHADOWDARK.app.npc_attack_ranges.title: Angriffsreichweite
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Delete Effect?
-SHADOWDARK.apps.effect_panel.duration_label.expired: Expired
-SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 Day Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 Hour Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 Minute Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 Round Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Second Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Week Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Year Remaining
-SHADOWDARK.apps.effect_panel.duration_label.unlimited: Unlimited Duration
-SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} Days Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Hours Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minutes Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} Rounds Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
-SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
-SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
-SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
-SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
-SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Wollen Sie den Effekt {effectName} löschen?
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Effekt löschen?
+SHADOWDARK.apps.effect_panel.duration_label.expired: Abgelaufen
+SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 Tag verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 Stunde verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 Minute verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 Runde verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Sekunde verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Woche verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Jahr verbleibend
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: Unbegrenzte Dauer
+SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} Tage verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Stunden verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minuten verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} Runden verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Sekunden verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Wochen verbleibend"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Jahre verbleibend"
+SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Rechtsklick] Effekt entfernen"
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Shadowdarkling importieren
+SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Besuchen Sie Shadowdarklings.net.
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generiere deinen Charakter und speichere als JSON.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopieren Sie den Inhalt der Datei in dieses Feld.
+SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Klicken Sie auf Importieren.
+SHADOWDARK.apps.shadowdarkling-importer.open-generator: Öffne Generator
+SHADOWDARK.apps.shadowdarkling-importer.title: Shadowdarkling importieren
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
 SHADOWDARK.armor.properties.one_handed: Benötigt eine Hand
 SHADOWDARK.armor.properties.shield: Schild
-SHADOWDARK.chat_card.button.attack: Roll Attack
-SHADOWDARK.chat_card.button.cast_spell: Cast Spell
-SHADOWDARK.chat_card.button.learn_spell: Learn Spell
-SHADOWDARK.chat_card.button.use_potion: Use Potion
-SHADOWDARK.chat_card.button.use_scroll: Use Scroll
-SHADOWDARK.chat_card.button.use_wand: Use Wand
-SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
+SHADOWDARK.chat_card.button.attack: Angriff würfeln
+SHADOWDARK.chat_card.button.cast_spell: Zauber wirken
+SHADOWDARK.chat_card.button.learn_spell: Zauber erlernen
+SHADOWDARK.chat_card.button.use_potion: Trank verwenden
+SHADOWDARK.chat_card.button.use_scroll: Schriftrolle verwenden
+SHADOWDARK.chat_card.button.use_wand: Zauberstab benutzen
+SHADOWDARK.chat.hp_roll.apply_to_max: Zu Max HP hinzufügen
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
 SHADOWDARK.chat.item_roll.title: Angirffswurf mit {name}
-SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
+SHADOWDARK.chat.item_roll.wand_mishap: Der Zauberstab bricht und stoppt dauerhaft zu funktionieren
 SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} ist abgelaufen"
 SHADOWDARK.chat.light_source.remaining: Minuten verbleibend
-SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
+SHADOWDARK.chat.light_source.seconds_remaining: Weniger als eine Minute verbleibend
 SHADOWDARK.chat.light_source.source.all: Alle Lichtquellen sind ausgegangen
-SHADOWDARK.chat.light_source.source.dropped: was dropped
-SHADOWDARK.chat.light_source.source.picked_up: was picked up
+SHADOWDARK.chat.light_source.source.dropped: wurde fallen gelassen
+SHADOWDARK.chat.light_source.source.picked_up: wurde aufgehoben
 SHADOWDARK.chat.light_source.source.toggle.off: wurde gelöscht
 SHADOWDARK.chat.light_source.source.toggle.on: wurde entzündet
 SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} ging aus"
-SHADOWDARK.chat.potion_used: "{name} used a Potion"
-SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
-SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
-SHADOWDARK.chat.spell_learn.title: Learning Spell
+SHADOWDARK.chat.potion_used: "{name} hat einen Trank benutzt"
+SHADOWDARK.chat.spell_learn.failure: "{name} konnte nichts von der Schriftrolle lernen"
+SHADOWDARK.chat.spell_learn.success: "{name} hat den {spellName} Zauber erfolgreich gelernt"
+SHADOWDARK.chat.spell_learn.title: Lerne Zauber
 SHADOWDARK.chat.spell_roll.title: "Zaubere {name} auf Stufe {tier} mit Zauber-SK {spellDC}"
-SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
+SHADOWDARK.chat.welcome_message.intro: "Um sich schnell mit dem System vertraut zu machen, schauen Sie sich die angebotenen Führungen an, indem Sie auf den folgenden Button klicken:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
-SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
-SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
+SHADOWDARK.chat.welcome_message.issues: "Wenn du irgendwelche Probleme findest oder Ideen für neue Funktionen für das System hast, schaue dir unseren Fehlerverfolger an:"
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG für Foundry
+SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Touren
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class.fighter: Kämpfer
 SHADOWDARK.class.priest: Priester
-SHADOWDARK.class.ranger: Ranger
+SHADOWDARK.class.ranger: Waldläufer
 SHADOWDARK.class.thief: Dieb
 SHADOWDARK.class.wizard: Zauberer
 SHADOWDARK.coins.cp: KM
@@ -121,8 +123,8 @@ SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
 SHADOWDARK.dialog.general.are_you_sure: Bist du dir sicher?
 SHADOWDARK.dialog.general.cancel: Abbrechen
 SHADOWDARK.dialog.general.no: "Nein"
-SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -508,5 +510,3 @@ SHADOWDARK.weapon.properties.two_handed: zweihändig
 SHADOWDARK.weapon.properties.versatile: vielseitig
 SHADOWDARK.weapon.type.melee: Nahkampf
 SHADOWDARK.weapon.type.ranged: Fernkampf
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
