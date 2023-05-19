@@ -381,23 +381,35 @@ export default ({ describe, it, after, afterEach, expect }) => {
 
 			talents.forEach(t => {
 				it(`${t.bonusTo} talent gives correct bonus`, async () => {
-					const ability = t.bonusTo.split(":")[0].toLowerCase();
-					const originalValue = Number(json.stats[t.bonusTo.split(":")[0]]);
+					const bonusAbility = t.bonusTo.split(":")[0].toLowerCase();
 
 					json.bonuses = [t];
 					const actor = await app._importActor(json);
-					expect(actor.system.abilities[ability].bonus).equal(
-						parseInt(t.bonusTo.split("+")[1], 10)
-					);
 
-					expect(
-						actor.system.abilities[ability].base
-							+ actor.system.abilities[ability].bonus
-					).equal(originalValue);
+					// #422 Check other stats remain as before bonus
 
-					expect(actor.system.abilities[ability].base).equal(
-						originalValue - parseInt(t.bonusTo.split("+")[1], 10)
-					);
+					for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+						const originalValue = Number(json.stats[ability.toUpperCase()]);
+
+						if (ability === bonusAbility) {
+							expect(actor.system.abilities[ability].bonus).equal(
+								parseInt(t.bonusTo.split("+")[1], 10)
+							);
+
+							expect(
+								actor.system.abilities[ability].base
+								+ actor.system.abilities[ability].bonus
+							).equal(originalValue);
+
+							expect(actor.system.abilities[ability].base).equal(
+								originalValue - parseInt(t.bonusTo.split("+")[1], 10)
+							);
+						}
+						else {
+							expect(actor.system.abilities[ability].bonus).equal(0);
+							expect(actor.system.abilities[ability].base).equal(originalValue);
+						}
+					}
 
 					await actor.delete();
 				});

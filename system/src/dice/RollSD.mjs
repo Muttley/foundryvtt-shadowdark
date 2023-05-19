@@ -276,6 +276,10 @@ export default class RollSD extends Roll {
 			: 1;
 		const damageDie = data.item.system.damage.value;
 
+		// Get bonus damage
+		data.damageBonus = data.item.system.bonuses.damageBonus;
+		if (data.damageBonus) data.damageParts.push("@damageBonus");
+
 		if ( data.rolls.main.critical !== "failure" ) {
 			if ( data.rolls.main.critical === "success" ) numDice
 				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);

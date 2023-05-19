@@ -33,6 +33,8 @@ SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: min
 SHADOWDARK.app.light_tracker.title: Valonlähteen seuranta
 SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
@@ -121,8 +123,8 @@ SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
 SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
-SHADOWDARK.dialog.general.yes: "Kyllä"
 SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.yes: "Kyllä"
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -508,5 +510,3 @@ SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
 SHADOWDARK.weapon.type.ranged: Kantama-ase
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights

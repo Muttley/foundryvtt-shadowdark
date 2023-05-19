@@ -33,6 +33,8 @@ SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.app.light-tracker.douse-light: Douse Light
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
 SHADOWDARK.app.npc_attack_ranges.title: Portées d'Attaque
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
@@ -121,8 +123,8 @@ SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
 SHADOWDARK.dialog.general.are_you_sure: Êtes-vous sûr ?
 SHADOWDARK.dialog.general.cancel: Annuler
 SHADOWDARK.dialog.general.no: "Non"
-SHADOWDARK.dialog.general.yes: "Oui"
 SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.yes: "Oui"
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -508,5 +510,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights

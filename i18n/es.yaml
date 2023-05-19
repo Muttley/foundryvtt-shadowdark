@@ -33,6 +33,8 @@ SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light_tracker.title: Seguimiento de la luz
 SHADOWDARK.app.light-tracker.douse-light: Apagar la luz
+SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
+SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar las luces
 SHADOWDARK.app.npc_attack_ranges.title: Rangos de ataque
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '¿Quieres eliminar el efecto {effectName}?'
@@ -121,8 +123,8 @@ SHADOWDARK.dialog.effect.choice.weapon: Elige el tipo de arma
 SHADOWDARK.dialog.general.are_you_sure: '¿Estás seguro?'
 SHADOWDARK.dialog.general.cancel: Cancelar
 SHADOWDARK.dialog.general.no: "No"
-SHADOWDARK.dialog.general.yes: "Sí"
 SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.yes: "Sí"
 SHADOWDARK.dialog.hp_roll.per_level: Tirar PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de tirar: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Obtienes {hp} PV por nivel 1 (incluido modificador)
@@ -508,5 +510,3 @@ SHADOWDARK.weapon.properties.two_handed: A dos manos
 SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Cuerpo a Cuerpo
 SHADOWDARK.weapon.type.ranged: A distancia
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors With No Lights
