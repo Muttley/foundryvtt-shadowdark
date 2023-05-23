@@ -212,6 +212,9 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 				name: MOCK_ACTOR_NAME,
 				type: "Player",
 				img: "icons/magic/fire/elemental-fire-humanoid.webp",
+				ownership: {
+					default: 3,
+				},
 			});
 
 			// Mock a user for the tour

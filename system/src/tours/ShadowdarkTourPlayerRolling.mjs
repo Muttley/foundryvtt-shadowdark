@@ -120,7 +120,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-items-navigate",
-					selector: "a.item[data-tab='tab-inventory']",
+					selector: "a.navigation-tab[data-tab='tab-inventory']",
 					title: "Items",
 					content: "<p>Lets look at how you roll items.</p>",
 					action: "click",
@@ -134,9 +134,16 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-items-rollable",
-					selector: ".item-rollable",
+					selector: ".item-image",
 					title: "Rolling Weapon",
-					content: "<p>Clicking the icon will ask you to roll the item.</p>",
+					content: "<p>Clicking the icon will create a chat message with information about the item.</p>",
+					action: "click",
+				},
+				{
+					id: "sd-playerroll-items-chatcard",
+					selector: ".message:last-child button[data-action=roll-attack]",
+					title: "Roll weapon attack",
+					content: "<p>Clicking on the button on the chat card will open the roll weapon dialog",
 					action: "click",
 				},
 				{
@@ -190,7 +197,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-items-abilities-navigate",
-					selector: "a.item[data-tab='tab-abilities']",
+					selector: "a.navigation-tab[data-tab='tab-abilities']",
 					title: "Items",
 					content: "<p>Lets look at how you roll items.</p>",
 					action: "click",
@@ -225,7 +232,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-spells-navigate",
-					selector: ".sheet.player a.item[data-tab='tab-spells']",
+					selector: ".sheet.player a.navigation-tab[data-tab='tab-spells']",
 					title: "Spells: Tab",
 					content: "<p>Lets look at the spells tab.</p>",
 					action: "click",
