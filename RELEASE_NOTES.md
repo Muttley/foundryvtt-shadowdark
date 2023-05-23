@@ -1,3 +1,9 @@
+## v.1.3.x
+
+### Bugfixes
+* [#427] Tour for the lightsource tracker now works again
+* [#432] Tour for the Dice rolling mechanics now works again
+
 ## v.1.3.2
 
 ### Bugfixes
