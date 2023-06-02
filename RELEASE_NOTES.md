@@ -1,4 +1,4 @@
-## v.1.3.x
+## v.1.3.3
 
 ### Bugfixes
 * [#427] Tour for the lightsource tracker now works again
