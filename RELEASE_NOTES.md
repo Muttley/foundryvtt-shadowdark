@@ -1,3 +1,12 @@
+## v.1.3.3
+
+### Bugfixes
+* [#427] Tour for the lightsource tracker now works again
+* [#432] Tour for the Dice rolling mechanics now works again
+
+### Enhancements
+* [#435] Korean & Finnish fully translated system
+
 ## v.1.3.2
 
 ### Bugfixes

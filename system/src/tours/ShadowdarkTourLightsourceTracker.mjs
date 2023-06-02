@@ -99,7 +99,7 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-lightsourcetracker-macro-compendium-click",
-					selector: "li.compendium-pack[data-pack='shadowdark.macros']",
+					selector: "li.directory-item[data-pack='shadowdark.macros']",
 					title: "Macro Compendium",
 					content: "<p>By opening the Macro Compendium, you can find various macros for Shadowdark RPG.</p>",
 					action: "click",
@@ -212,6 +212,9 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 				name: MOCK_ACTOR_NAME,
 				type: "Player",
 				img: "icons/magic/fire/elemental-fire-humanoid.webp",
+				ownership: {
+					default: 3,
+				},
 			});
 
 			// Mock a user for the tour
