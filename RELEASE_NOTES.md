@@ -1,6 +1,4 @@
-## v.1.x.x
-
-### Bugfixes
+## v.1.3.4
 
 ### Enhancements
 * [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
