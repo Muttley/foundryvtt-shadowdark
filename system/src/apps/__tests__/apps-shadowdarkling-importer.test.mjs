@@ -250,7 +250,55 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				expect(talent).is.not.undefined;
 			});
 		});
+
+		describe("kobold", () => {
+			const kobold_talents = [
+				{
+					sourceType: "Ancestry",
+					sourceName: "Kobold",
+					sourceCategory: "Ability",
+					gainedAtLevel: 1,
+					name: "Knack",
+					bonusName: "LuckTokenAtStartOfSession",
+					bonusTo: "LuckTokenAtStartOfSession",
+					bonusAmount: 1,
+				},
+				{
+					sourceType: "Ancestry",
+					sourceName: "Kobold",
+					sourceCategory: "Ability",
+					gainedAtLevel: 1,
+					name: "Knack",
+					bonusName: "Plus1ToCastingSpells",
+					bonusTo: "Spellcasting",
+					bonusAmount: 1,
+				},
+			];
+
+			it("kobold has knack (luck) talent", async () => {
+				const json = _jsonTestActor();
+				json.ancestry = "Kobold";
+				json.bonuses.push(kobold_talents[0]);
+				const actor = await app._importActor(json);
+				const talent = actor.items.find(o => o.name.includes("Knack (Luck)"));
+
+				expect(actor.system.ancestry).equal("Kobold");
+				expect(talent).is.not.undefined;
+			});
+
+			it("kobold has knack (spellcasting) talent", async () => {
+				const json = _jsonTestActor();
+				json.ancestry = "Kobold";
+				json.bonuses.push(kobold_talents[1]);
+				const actor = await app._importActor(json);
+				const talent = actor.items.find(o => o.name.includes("Knack (Spellcasting)"));
+
+				expect(actor.system.ancestry).equal("Kobold");
+				expect(talent).is.not.undefined;
+			});
+		});
 	});
+
 
 	describe("class talents", () => {
 		afterEach(async () => _deleteTestActor());

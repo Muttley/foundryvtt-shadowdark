@@ -1,0 +1,52 @@
+{
+  "name": "Knack (Spellcasting)",
+  "type": "Talent",
+  "img": "icons/magic/control/sihouette-hold-beam-green.webp",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">You get +1 to spellcasting checks.</span></p>",
+    "properties": [],
+    "magicItem": false,
+    "level": 1,
+    "talentClass": "ancestry",
+    "bonuses": {
+      "spellcastingCheckBonus": "1"
+    },
+    "predefinedEffects": ""
+  },
+  "effects": [
+    {
+      "label": "Knack (Spellcasting)",
+      "icon": "icons/magic/control/sihouette-hold-beam-green.webp",
+      "changes": [
+        {
+          "key": "system.bonuses.spellcastingCheckBonus",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "transfer": true,
+      "_id": "OU9XGvWpbh2ADVNy",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {}
+    }
+
+	],
+  "_id": "GVAi0l6mfRillxwZ",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}
