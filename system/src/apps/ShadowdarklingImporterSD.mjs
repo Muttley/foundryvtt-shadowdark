@@ -377,6 +377,13 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				await this._findInCompendium(bonus, "shadowdark.talents")
 			);
 		}
+		if (json.ancestry === "Kobold") {
+			const knack = json.bonuses.find(o => o.name === "Knack");
+			const bonus = (knack.bonusTo === "LuckTokenAtStartOfSession") ? "Knack (Luck)" : "Knack (Spellcasting)";
+			talents.push(
+				await this._findInCompendium(bonus, "shadowdark.talents")
+			);
+		}
 		if (json.ancestry === "Half-Orc") {
 			talents.push(
 				await this._findInCompendium("Mighty", "shadowdark.talents")
