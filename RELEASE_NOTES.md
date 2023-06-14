@@ -1,9 +1,13 @@
 ## v.1.x.x
 
+We welcome @gatesvp as a contributor to the system!
+
 ### Bugfixes
+* [#452] Refers the issue tracker to the actual issue tracker instead of repo
 
 ### Enhancements
 * [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
+* [#452] Added special attack to chat card when applicable
 
 ## v.1.3.3
 
