@@ -103,6 +103,12 @@
 		{{/ifNeq}}
   {{/if}}
 
+  {{#if data.item.system.damage.special}}
+	<div class="card-content">
+		Special Effect: {{{data.item.system.damage.special}}}
+	</div>
+  {{/if}}
+
   <footer class="card-footer">
     {{#if isWeapon}}
 			<span>
