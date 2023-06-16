@@ -7,6 +7,8 @@ import yaml from "js-yaml";
 
 import Logger from "./logger.mjs";
 
+import stringify from "json-stable-stringify-pretty";
+
 export default class PackHandler {
 
 	constructor(options) {
@@ -269,14 +271,28 @@ export default class PackHandler {
 					? `${doc.name.replace(/[^a-z0-9]/gi, "_").toLowerCase()}`
 					: doc._id;
 
+				// Tidy up some junky top-level fields we don't want to store
+				delete doc._stats;
+				delete doc.ownership;
+				delete doc.flags;
+				delete doc.folder;
+				delete doc.sort;
+
 				const basefileName = `${outputDir}/${name}`;
 				switch (this.outputFormat) {
 					case "yaml":
 						Logger.log(`Writing ${basefileName}.yml`);
-						fs.writeFileSync(`${basefileName}.yml`, yaml.dump(doc));
+						let yamlData = yaml.dump(doc);
+						yamlData += "\n";
+
+						fs.writeFileSync(`${basefileName}.yml`, yamlData);
 					case "json":
 						Logger.log(`Writing ${basefileName}.json`);
-						fs.writeFileSync(`${basefileName}.json`, JSON.stringify(doc, null, 2));
+
+						let jsonData = stringify(doc, {space: "\t", undef: true});
+						jsonData += "\n";
+
+						fs.writeFileSync(`${basefileName}.json`, jsonData);
 				}
 			}
 		}
