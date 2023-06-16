@@ -1,42 +1,25 @@
 {
-  "name": "Hold Person",
-  "type": "Spell",
-  "system": {
-    "description": "<p>You magically paralyze one humanoid creature of LV 4 or less you can see within range.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Spell Effect: Hold Person}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "wizard"
-    ],
-    "duration": {
-      "type": "focus",
-      "value": -1
-    },
-    "lost": false,
-    "range": "near",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.9gjMszk1mGwEcSo6"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079822,
-    "modifiedTime": 1681852760105,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "9gjMszk1mGwEcSo6",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "9gjMszk1mGwEcSo6",
+	"effects": [
+	],
+	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+	"name": "Hold Person",
+	"system": {
+		"class": [
+			"wizard"
+		],
+		"description": "<p>You magically paralyze one humanoid creature of LV 4 or less you can see within range.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Spell Effect: Hold Person}</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "near",
+		"tier": 2
+	},
+	"type": "Spell"
 }

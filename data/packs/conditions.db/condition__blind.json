@@ -1,65 +1,53 @@
 {
-  "name": "Condition: Blind",
-  "type": "Effect",
-  "img": "icons/creatures/eyes/humanoid-single-blind.webp",
-  "system": {
-    "description": "<p>The blinded character has disadvantage on tasks requiring sight.</p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null,
-      "initiative": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Blind",
-      "icon": "icons/creatures/eyes/humanoid-single-blind.webp",
-      "origin": "Item.Grd46xo0lgHLtfVe",
-      "duration": {
-        "rounds": null,
-        "seconds": 1,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "xE08WjX14HjHwSJC",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681632709709,
-    "modifiedTime": 1682175741059,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "Grd46xo0lgHLtfVe",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "Grd46xo0lgHLtfVe",
+	"effects": [
+		{
+			"_id": "xE08WjX14HjHwSJC",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/creatures/eyes/humanoid-single-blind.webp",
+			"label": "Blind",
+			"origin": "Item.Grd46xo0lgHLtfVe",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
+	"name": "Condition: Blind",
+	"system": {
+		"category": "condition",
+		"description": "<p>The blinded character has disadvantage on tasks requiring sight.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

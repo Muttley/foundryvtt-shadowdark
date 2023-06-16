@@ -1,124 +1,107 @@
 {
-  "name": "Staff of Healing",
-  "type": "Weapon",
-  "img": "icons/weapons/staves/staff-engraved-red.webp",
-  "system": {
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "description": "<p><em>A knotted, oak stave with a heavy knurl on one end.</em></p><p></p><p><strong>Bonus</strong>. +1 staff.</p><p></p><p><strong>Benefit</strong>. Once per day, you can touch a creature with the staff to heal it for [[/r 1d6]] hit points.</p>",
-    "properties": [
-      "twoHanded"
-    ],
-    "magicItem": true,
-    "damage": {
-      "oneHanded": "d4",
-      "twoHanded": "",
-      "numDice": 1,
-      "bonus": "1",
-      "critMultiplier": 2
-    },
-    "bonuses": {
-      "damageBonus": "1",
-      "attackBonus": "1",
-      "critical": {
-        "failureThreshold": 1,
-        "successThreshold": 20,
-        "multiplier": 2
-      }
-    },
-    "range": "close",
-    "type": "melee",
-    "weaponMastery": false,
-    "baseWeapon": "staff",
-    "attackBonus": "1",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Attack Roll Bonus",
-      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.attackBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "HhILvM8lD0Nby5gq",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    },
-    {
-      "label": "Attack Damage Bonus",
-      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.damageBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "FqtIDxjhOFDvkQFn",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {
-    "core": {
-      "sourceId": "Item.0iar28HBkLjWywyR"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679272105366,
-    "modifiedTime": 1682012118550,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "jEeDexWHYy7wKsfa"
+	"_id": "jEeDexWHYy7wKsfa",
+	"effects": [
+		{
+			"_id": "HhILvM8lD0Nby5gq",
+			"changes": [
+				{
+					"key": "system.bonuses.attackBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"label": "Attack Roll Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		},
+		{
+			"_id": "FqtIDxjhOFDvkQFn",
+			"changes": [
+				{
+					"key": "system.bonuses.damageBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"label": "Attack Damage Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		}
+	],
+	"img": "icons/weapons/staves/staff-engraved-red.webp",
+	"name": "Staff of Healing",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "staff",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1"
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A knotted, oak stave with a heavy knurl on one end.</em></p><p></p><p><strong>Bonus</strong>. +1 staff.</p><p></p><p><strong>Benefit</strong>. Once per day, you can touch a creature with the staff to heal it for [[/r 1d6]] hit points.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

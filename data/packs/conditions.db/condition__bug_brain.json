@@ -1,76 +1,63 @@
 {
-  "name": "Condition: Bug Brain",
-  "type": "Effect",
-  "img": "icons/creatures/invertebrates/centipede-brown.webp",
-  "system": {
-    "description": "",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 123910243274,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": "",
-    "abilities": {
-      "int": {
-        "base": "1"
-      }
-    }
-  },
-  "effects": [
-    {
-      "label": "Condition: Bug Brain",
-      "icon": "icons/creatures/invertebrates/centipede-brown.webp",
-      "changes": [
-        {
-          "key": "system.abilities.int.base",
-          "mode": 5,
-          "value": "1",
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "YPYxo5WhLBPCnkRd",
-      "duration": {
-        "startTime": null,
-        "seconds": 1,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1682153916810,
-    "modifiedTime": 1682175741059,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "rbOmeG3R2mmiiIMT",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "rbOmeG3R2mmiiIMT",
+	"effects": [
+		{
+			"_id": "YPYxo5WhLBPCnkRd",
+			"changes": [
+				{
+					"key": "system.abilities.int.base",
+					"mode": 5,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/creatures/invertebrates/centipede-brown.webp",
+			"label": "Condition: Bug Brain",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/creatures/invertebrates/centipede-brown.webp",
+	"name": "Condition: Bug Brain",
+	"system": {
+		"abilities": {
+			"int": {
+				"base": "1"
+			}
+		},
+		"category": "condition",
+		"description": "",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910243274
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

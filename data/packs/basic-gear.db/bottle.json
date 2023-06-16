@@ -1,55 +1,38 @@
 {
-  "name": "Bottle",
-  "type": "Basic",
-  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
-  "system": {
-    "description": "<p>Glass containers that hold one draught of liquid.</p>",
-    "properties": [],
-    "magicItem": false,
-    "cost": {
-      "gp": 0,
-      "sp": 3,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600,
-      "template": "torch"
-    },
-    "treasure": false,
-    "scroll": false
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.shadowdark.basic-gear.W2fFimb0y85wmOMb"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.3",
-    "coreVersion": "10.291",
-    "createdTime": 1678529907061,
-    "modifiedTime": 1681229811713,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "bGrhQMkhE2qwjL4j"
+	"_id": "bGrhQMkhE2qwjL4j",
+	"effects": [
+	],
+	"img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+	"name": "Bottle",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 3
+		},
+		"description": "<p>Glass containers that hold one draught of liquid.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

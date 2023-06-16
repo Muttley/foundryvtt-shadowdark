@@ -1,120 +1,107 @@
 {
-  "name": "The Lost Citadel: Rumors",
-  "img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
-  "description": "",
-  "results": [
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        1,
-        1
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "i6g6ZhMkWdRw9emF",
-      "text": "Ancient kings who dwelt in the citadel possessed magical weapons that were feared far and wide.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        2,
-        2
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "WgFjcngGtx6xwrS5",
-      "text": "A savage minotaur drenched in blood stalks the citadel's halls.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        3,
-        3
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "WHE79Lp99Q3aTTs4",
-      "text": "Piles of gems and gold lie about as if totally forgotten.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        4,
-        4
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "mdUxcanzIZ5xEGN9",
-      "text": "Beware when touching the body of a dead citadel dweller.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        5,
-        5
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "evkxhl9nXFRrFmXk",
-      "text": "Opportunistic, grey-furred beastmen haunt the shadows.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        6,
-        6
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "4LWh1Sa4QQFqUBKe",
-      "text": "The citadel is rife with secret rooms and passageways.",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    }
-  ],
-  "formula": "1d6",
-  "replacement": true,
-  "displayRoll": false,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "RollTable.1cjMdnm26V85PFKT"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1679224020565,
-    "modifiedTime": 1679224419963,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "iFdrtN3kJk5yth9S"
+	"_id": "iFdrtN3kJk5yth9S",
+	"description": "",
+	"displayRoll": false,
+	"formula": "1d6",
+	"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+	"name": "The Lost Citadel: Rumors",
+	"replacement": true,
+	"results": [
+		{
+			"_id": "i6g6ZhMkWdRw9emF",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				1,
+				1
+			],
+			"text": "Ancient kings who dwelt in the citadel possessed magical weapons that were feared far and wide.",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "WgFjcngGtx6xwrS5",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				2,
+				2
+			],
+			"text": "A savage minotaur drenched in blood stalks the citadel's halls.",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "WHE79Lp99Q3aTTs4",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				3,
+				3
+			],
+			"text": "Piles of gems and gold lie about as if totally forgotten.",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "mdUxcanzIZ5xEGN9",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				4,
+				4
+			],
+			"text": "Beware when touching the body of a dead citadel dweller.",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "evkxhl9nXFRrFmXk",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				5,
+				5
+			],
+			"text": "Opportunistic, grey-furred beastmen haunt the shadows.",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "4LWh1Sa4QQFqUBKe",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				6,
+				6
+			],
+			"text": "The citadel is rife with secret rooms and passageways.",
+			"type": 0,
+			"weight": 1
+		}
+	]
 }

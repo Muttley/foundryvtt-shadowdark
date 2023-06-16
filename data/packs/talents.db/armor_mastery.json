@@ -1,70 +1,52 @@
 {
-  "name": "Armor Mastery",
-  "type": "Talent",
-  "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
-  "system": {
-    "description": "",
-    "properties": [
-      "meleeAttackBonus",
-      "rangedAttackBonus"
-    ],
-    "magicItem": false,
-    "level": null,
-    "talentClass": "level",
-    "bonuses": {
-      "meleeAttackBonus": "1",
-      "rangedAttackBonus": "1",
-      "armorMastery": "REPLACEME"
-    },
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Armor Mastery",
-      "icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.armorMastery",
-          "value": "REPLACEME",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "0g9MUhj9Tr3AWRXl",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.Pdc3xhJ5Z57yu1A5"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679010318129,
-    "modifiedTime": 1682140133918,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "BsRPGhKXYwJBI9ex"
+	"_id": "BsRPGhKXYwJBI9ex",
+	"effects": [
+		{
+			"_id": "0g9MUhj9Tr3AWRXl",
+			"changes": [
+				{
+					"key": "system.bonuses.armorMastery",
+					"mode": 2,
+					"priority": null,
+					"value": "REPLACEME"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+			"label": "Armor Mastery",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"name": "Armor Mastery",
+	"system": {
+		"bonuses": {
+			"armorMastery": "REPLACEME",
+			"meleeAttackBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"meleeAttackBonus",
+			"rangedAttackBonus"
+		],
+		"talentClass": "level"
+	},
+	"type": "Talent"
 }

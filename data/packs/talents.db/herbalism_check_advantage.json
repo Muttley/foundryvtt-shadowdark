@@ -1,34 +1,17 @@
 {
-  "name": "Herbalism Check Advantage",
-  "type": "Talent",
-  "img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
-  "system": {
-    "description": "<p>You gain ADV on Herbalism checks for an herb you choose</p>",
-    "properties": [],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "level",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "ownership": {
-    "default": 0,
-    "v363Ga8ZWiqa3r9H": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.JMJwhyHpGCek3Xj9"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.3.0",
-    "coreVersion": "10.291",
-    "createdTime": 1683314533887,
-    "modifiedTime": 1683554631403,
-    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "p4Zh8LNyBp8UwhRD"
+	"_id": "p4Zh8LNyBp8UwhRD",
+	"effects": [
+	],
+	"img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
+	"name": "Herbalism Check Advantage",
+	"system": {
+		"description": "<p>You gain ADV on Herbalism checks for an herb you choose</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "level"
+	},
+	"type": "Talent"
 }

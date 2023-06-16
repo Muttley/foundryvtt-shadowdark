@@ -1,52 +1,35 @@
 {
-  "name": "Scroll of Hold Portal",
-  "type": "Basic",
-  "img": "icons/sundries/scrolls/scroll-bound-green.webp",
-  "system": {
-    "description": "<p></p><p>@UUID[Compendium.shadowdark.spells.q600IZtPTAgkz6vB]{Hold Portal}</p>",
-    "properties": [],
-    "magicItem": true,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600
-    },
-    "treasure": false
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.Jo88wNZQdCtvuuuS"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1679272460086,
-    "modifiedTime": 1679272495099,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "mXkpNk8z0eZU8kKj"
+	"_id": "mXkpNk8z0eZU8kKj",
+	"effects": [
+	],
+	"img": "icons/sundries/scrolls/scroll-bound-green.webp",
+	"name": "Scroll of Hold Portal",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.q600IZtPTAgkz6vB]{Hold Portal}</p>",
+		"equipped": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

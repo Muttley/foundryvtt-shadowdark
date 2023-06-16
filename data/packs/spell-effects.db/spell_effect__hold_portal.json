@@ -1,64 +1,52 @@
 {
-  "name": "Spell Effect: Hold Portal",
-  "type": "Effect",
-  "img": "icons/magic/movement/portal-vortex-orange.webp",
-  "system": {
-    "description": "",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": "10",
-      "type": "rounds"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "effect",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Holding Portal",
-      "icon": "icons/magic/movement/portal-vortex-orange.webp",
-      "origin": "Item.q109XEqMceJBEX7m",
-      "duration": {
-        "rounds": 10,
-        "seconds": null,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "4OcH6wsgdH5jqY0k",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681852558641,
-    "modifiedTime": 1681852603019,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "q109XEqMceJBEX7m",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "Y4OcZjjFb7wdUI1c": 3
-  }
+	"_id": "q109XEqMceJBEX7m",
+	"effects": [
+		{
+			"_id": "4OcH6wsgdH5jqY0k",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": 10,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/movement/portal-vortex-orange.webp",
+			"label": "Holding Portal",
+			"origin": "Item.q109XEqMceJBEX7m",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/movement/portal-vortex-orange.webp",
+	"name": "Spell Effect: Hold Portal",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

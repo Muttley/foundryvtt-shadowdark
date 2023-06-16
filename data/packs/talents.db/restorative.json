@@ -1,55 +1,39 @@
 {
-  "name": "Restorative",
-  "type": "Potion",
-  "img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
-  "system": {
-    "description": "<p>Ends one poison or disease</p>",
-    "properties": [],
-    "magicItem": true,
-    "class": [],
-    "duration": {
-      "type": "",
-      "value": ""
-    },
-    "range": "",
-    "tier": 1,
-    "broken": false,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 1,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "spellName": "",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "ownership": {
-    "default": 0,
-    "v363Ga8ZWiqa3r9H": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.38396rpqh8ybEe5w"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.3.0",
-    "coreVersion": "10.291",
-    "createdTime": 1683313586669,
-    "modifiedTime": 1683554078756,
-    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "QV93CYmgcgJ3UCPf"
+	"_id": "QV93CYmgcgJ3UCPf",
+	"effects": [
+	],
+	"img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
+	"name": "Restorative",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"class": [
+		],
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>Ends one poison or disease</p>",
+		"duration": {
+			"type": "",
+			"value": ""
+		},
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "",
+		"slots": {
+			"free_carry": 1,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"spellName": "",
+		"tier": 1
+	},
+	"type": "Potion"
 }

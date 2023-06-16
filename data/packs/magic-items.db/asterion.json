@@ -1,124 +1,107 @@
 {
-  "name": "Asterion",
-  "type": "Weapon",
-  "img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
-  "system": {
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 2
-    },
-    "description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
-    "properties": [
-      "twoHanded"
-    ],
-    "magicItem": true,
-    "damage": {
-      "oneHanded": "",
-      "twoHanded": "d12",
-      "numDice": 1,
-      "bonus": "1",
-      "critMultiplier": 2
-    },
-    "bonuses": {
-      "damageBonus": "1",
-      "attackBonus": "1",
-      "critical": {
-        "failureThreshold": 1,
-        "successThreshold": 20,
-        "multiplier": 2
-      }
-    },
-    "range": "close",
-    "type": "melee",
-    "weaponMastery": false,
-    "baseWeapon": "greatsword",
-    "attackBonus": "1",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Attack Roll Bonus",
-      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.attackBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "qrgFpY2mTci173wM",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    },
-    {
-      "label": "Attack Damage Bonus",
-      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.damageBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "E7DKiIaxjDrxq64c",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {
-    "core": {
-      "sourceId": "Item.JpRmSUeNd7qwnXZa"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679272510579,
-    "modifiedTime": 1682011774625,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "X5FwZjvgzeSXvNDQ"
+	"_id": "X5FwZjvgzeSXvNDQ",
+	"effects": [
+		{
+			"_id": "qrgFpY2mTci173wM",
+			"changes": [
+				{
+					"key": "system.bonuses.attackBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"label": "Attack Roll Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		},
+		{
+			"_id": "E7DKiIaxjDrxq64c",
+			"changes": [
+				{
+					"key": "system.bonuses.damageBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"label": "Attack Damage Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		}
+	],
+	"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
+	"name": "Asterion",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "greatsword",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1"
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d12"
+		},
+		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

@@ -1,330 +1,331 @@
 {
-  "name": "Character Names: Halfling",
-  "img": "icons/environment/people/spearfighter.webp",
-  "description": "",
-  "results": [
-    {
-      "text": "Willow",
-      "weight": 1,
-      "range": [
-        1,
-        1
-      ],
-      "_id": "hEquXDlGCRHtddiO",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Benny",
-      "weight": 1,
-      "range": [
-        2,
-        2
-      ],
-      "_id": "fWGBeBqo3ts7ZUu6",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Annie",
-      "weight": 1,
-      "range": [
-        3,
-        3
-      ],
-      "_id": "topWwPDD9x4jrCwb",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Tucker",
-      "weight": 1,
-      "range": [
-        4,
-        4
-      ],
-      "_id": "ZlzvdmR8sveeVfPI",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Marie",
-      "weight": 1,
-      "range": [
-        5,
-        5
-      ],
-      "_id": "9CPAszHssUDgiw0B",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Hobb",
-      "weight": 1,
-      "range": [
-        6,
-        6
-      ],
-      "_id": "zPj8EPXeFZTXsSSu",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Cora",
-      "weight": 1,
-      "range": [
-        7,
-        7
-      ],
-      "_id": "HS0bkm1MhjPOklOR",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Gordie",
-      "weight": 1,
-      "range": [
-        8,
-        8
-      ],
-      "_id": "v28S4RNYe8o6BIbG",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Rose",
-      "weight": 1,
-      "range": [
-        9,
-        9
-      ],
-      "_id": "7ed943puZWDIh6Kl",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Ardo",
-      "weight": 1,
-      "range": [
-        10,
-        10
-      ],
-      "_id": "tbD3K5wZRwwy5TgD",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Alma",
-      "weight": 1,
-      "range": [
-        11,
-        11
-      ],
-      "_id": "5zB01FKKZ8z7caY1",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Norbert",
-      "weight": 1,
-      "range": [
-        12,
-        12
-      ],
-      "_id": "eQQjMZVQMRM1btn1",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Jennie",
-      "weight": 1,
-      "range": [
-        13,
-        13
-      ],
-      "_id": "ULddmA4N3BceGJdO",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Barvin",
-      "weight": 1,
-      "range": [
-        14,
-        14
-      ],
-      "_id": "npzK6G5FE2NPH3e7",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Tilly",
-      "weight": 1,
-      "range": [
-        15,
-        15
-      ],
-      "_id": "AmfzEz7L9hfqOL44",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Pike",
-      "weight": 1,
-      "range": [
-        16,
-        16
-      ],
-      "_id": "g8RSWNjHlR51QpPe",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Lydia",
-      "weight": 1,
-      "range": [
-        17,
-        17
-      ],
-      "_id": "PLG5mQ4PfV62u94e",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Marlow",
-      "weight": 1,
-      "range": [
-        18,
-        18
-      ],
-      "_id": "oOD4bxazW5ni9pdo",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Astrid",
-      "weight": 1,
-      "range": [
-        19,
-        19
-      ],
-      "_id": "vcQTPFbpPbuDXRQo",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Jasper",
-      "weight": 1,
-      "range": [
-        20,
-        20
-      ],
-      "_id": "TBZeupq6Yl2A1mQU",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    }
-  ],
-  "formula": "1d20",
-  "replacement": true,
-  "displayRoll": false,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "RollTable.vl6hpPf6QYWi3lg8"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1679338027086,
-    "modifiedTime": 1679338546960,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "zIJh954RRbmssIFq"
+	"_id": "zIJh954RRbmssIFq",
+	"description": "",
+	"displayRoll": false,
+	"formula": "1d20",
+	"img": "icons/environment/people/spearfighter.webp",
+	"name": "Character Names: Halfling",
+	"replacement": true,
+	"results": [
+		{
+			"_id": "hEquXDlGCRHtddiO",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				1,
+				1
+			],
+			"text": "Willow",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "fWGBeBqo3ts7ZUu6",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				2,
+				2
+			],
+			"text": "Benny",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "topWwPDD9x4jrCwb",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				3,
+				3
+			],
+			"text": "Annie",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "ZlzvdmR8sveeVfPI",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				4,
+				4
+			],
+			"text": "Tucker",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "9CPAszHssUDgiw0B",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				5,
+				5
+			],
+			"text": "Marie",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "zPj8EPXeFZTXsSSu",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				6,
+				6
+			],
+			"text": "Hobb",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "HS0bkm1MhjPOklOR",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				7,
+				7
+			],
+			"text": "Cora",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "v28S4RNYe8o6BIbG",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				8,
+				8
+			],
+			"text": "Gordie",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "7ed943puZWDIh6Kl",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				9,
+				9
+			],
+			"text": "Rose",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "tbD3K5wZRwwy5TgD",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				10,
+				10
+			],
+			"text": "Ardo",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "5zB01FKKZ8z7caY1",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				11,
+				11
+			],
+			"text": "Alma",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "eQQjMZVQMRM1btn1",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				12,
+				12
+			],
+			"text": "Norbert",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "ULddmA4N3BceGJdO",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				13,
+				13
+			],
+			"text": "Jennie",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "npzK6G5FE2NPH3e7",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				14,
+				14
+			],
+			"text": "Barvin",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "AmfzEz7L9hfqOL44",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				15,
+				15
+			],
+			"text": "Tilly",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "g8RSWNjHlR51QpPe",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				16,
+				16
+			],
+			"text": "Pike",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "PLG5mQ4PfV62u94e",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				17,
+				17
+			],
+			"text": "Lydia",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "oOD4bxazW5ni9pdo",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				18,
+				18
+			],
+			"text": "Marlow",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "vcQTPFbpPbuDXRQo",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				19,
+				19
+			],
+			"text": "Astrid",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "TBZeupq6Yl2A1mQU",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				20,
+				20
+			],
+			"text": "Jasper",
+			"type": 0,
+			"weight": 1
+		}
+	]
 }

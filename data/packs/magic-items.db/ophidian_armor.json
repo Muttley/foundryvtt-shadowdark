@@ -1,52 +1,35 @@
 {
-  "name": "Ophidian Armor",
-  "type": "Armor",
-  "img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
-  "system": {
-    "description": "<p><em>Glistening, smooth leather of dappled emerald scales.</em></p><p></p><p><strong>Bonus</strong>. +1 leather armor.</p><p></p><p><strong>Benefit</strong>. You have advantage on checks to avoid the effects of poison.</p>",
-    "properties": [],
-    "magicItem": true,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "ac": {
-      "base": 11,
-      "modifier": 1,
-      "attribute": "dex"
-    },
-    "baseArmor": "",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.t8lvBzu8WMI3uvGt"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679271522802,
-    "modifiedTime": 1682012015972,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "MyHXrPewu36OmWB6"
+	"_id": "MyHXrPewu36OmWB6",
+	"effects": [
+	],
+	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
+	"name": "Ophidian Armor",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 11,
+			"modifier": 1
+		},
+		"baseArmor": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Glistening, smooth leather of dappled emerald scales.</em></p><p></p><p><strong>Bonus</strong>. +1 leather armor.</p><p></p><p><strong>Benefit</strong>. You have advantage on checks to avoid the effects of poison.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		}
+	},
+	"type": "Armor"
 }
