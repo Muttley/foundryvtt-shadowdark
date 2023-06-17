@@ -909,9 +909,10 @@ export default class ActorSD extends Actor {
 		const data = {
 			rollType: "hp",
 			actor: this,
+			conBonus: Math.max(1, this.system.abilities.con.mod),
 		};
 
-		const parts = [`${this.system.level.value}d8`];
+		const parts = [`${this.system.level.value}d8`, "@conBonus"];
 
 		options.fastForward = true;
 		options.chatMessage = true;
