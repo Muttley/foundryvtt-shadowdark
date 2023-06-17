@@ -7,6 +7,7 @@ import {
 	cleanUpActorsByKey,
 	abilities,
 	waitForInput,
+	trashChat,
 } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.documents.actor";
@@ -373,6 +374,38 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("rollAbility(abilityId, options={})", () => {});
+
+	describe("_npcRollHP(options={})", () => {
+		describe("#450 NPC HP Roll has at least 1 con mod added to roll", async () => {
+			let actor = {};
+
+			before(async () => {
+				actor = await createMockActor("NPC");
+			});
+
+			Array.from(Array(9), (_, i) => (i - 4)).forEach(async mod => {
+				const conMod = Math.max(mod, 1);
+				it(`Mod ${mod} should have ${conMod} added to HP roll`, async () => {
+					await trashChat();
+					await actor.update({"system.abilities.con.mod": mod});
+					// Roll HP
+					await actor._npcRollHP();
+					await waitForInput();
+
+					// Catch the chat card
+					expect(game.messages?.size).equal(1);
+					const content = game.messages.contents[0].content;
+
+					// Check the formula
+					expect($(content).find(".dice-formula")[0].innerHTML).equal(`${actor.system.level.value}d8 + ${conMod}`);
+
+					// Remove chat card
+					await trashChat();
+				});
+			});
+
+		});
+	});
 
 	describe("updateArmor(updatedItem)", () => {
 		let actor = {};
