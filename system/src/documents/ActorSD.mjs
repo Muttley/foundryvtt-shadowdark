@@ -525,6 +525,17 @@ export default class ActorSD extends Actor {
 			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
 		}
 
+		/* Attach Special Ability if part of the attack.
+			Created in `data.itemSpecial` field.
+			Can be used in the rendering template or further automation.
+		*/
+		if (item.system.damage.special) {
+			const itemSpecial = data.actor.items.find(e => e.name === item.system.damage.special);
+			if (itemSpecial) {
+				data.itemSpecial = itemSpecial;
+			}
+		}
+
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
 
