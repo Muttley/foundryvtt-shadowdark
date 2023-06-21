@@ -573,7 +573,6 @@ export default class RollSD extends Roll {
 	static async _renderRoll(data, adv=0, options={}) {
 		const chatData = await this._getChatCardData(
 			data.rolls,
-			data.rolls.main,
 			(options.speaker) ? options.speaker : ChatMessage.getSpeaker(),
 			options.target
 		);
