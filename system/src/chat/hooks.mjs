@@ -144,10 +144,10 @@ export default function onRenderChatMessage(app, html, data) {
  */
 export function addChatMessageContextOptions(html, options) {
 	let canApplyDamage = li => {
-
 		const message = game.messages.get(li.data("messageId"));
 
-		return canvas.tokens?.controlled.length
+		return game.user.isGM
+			&& canvas.tokens?.controlled.length
 			&& (_chatMessageIsBasicRoll(message)
 				|| _chatMessageIsDamageCard(message));
 	};
