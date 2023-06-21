@@ -132,3 +132,91 @@ export default function onRenderChatMessage(app, html, data) {
 	const blind = chatCardBlind(app, html, data);
 	if (!blind) highlightSuccessFailure(app, html, data);
 }
+
+/**
+ * This function is used to hook into the Chat Log context menu, adds additional options to each
+ * These options make it easy to conveniently apply damage to tokens based on the value of a Roll
+ *
+ * @param {HTMLElement} html    The Chat Message being rendered
+ * @param {object[]} options    The Array of Context Menu options
+ *
+ * @returns {object[]}          The extended options Array including new context choices
+ */
+export function addChatMessageContextOptions(html, options) {
+	let canApplyDamage = li => {
+
+		const message = game.messages.get(li.data("messageId"));
+
+		return canvas.tokens?.controlled.length
+			&& (_chatMessageIsBasicRoll(message)
+				|| _chatMessageIsDamageCard(message));
+	};
+	options.push(
+	  {
+			name: game.i18n.localize("SHADOWDARK.chat_card.context.apply_damage"),
+			icon: '<i class="fas fa-user-minus"></i>',
+			condition: canApplyDamage,
+			callback: li => applyChatCardDamage(li, 1),
+	  },
+	  {
+			name: game.i18n.localize("SHADOWDARK.chat_card.context.apply_healing"),
+			icon: '<i class="fas fa-user-plus"></i>',
+			condition: canApplyDamage,
+			callback: li => applyChatCardDamage(li, -1),
+	  }
+	);
+	return options;
+}
+
+/**
+ * Apply rolled dice damage to the token or tokens which are currently controlled.
+ * The multipliers allows for damage to be scaled for healing, or other modifications
+ *
+ * @param {HTMLElement} li      The chat entry which contains the roll data
+ * @param {number} multiplier   A damage multiplier to apply to the rolled damage.
+ * @returns {Promise}
+ */
+function applyChatCardDamage(li, multiplier) {
+
+	const message = game.messages.get(li.data("messageId"));
+	let roll;
+
+	// There are two version of this check.
+	// Version #1, this is a single roll
+
+	if (_chatMessageIsBasicRoll(message)) {
+		roll = message.rolls[0];
+	}
+
+	if (_chatMessageIsDamageCard(message)) {
+		roll = message?.flags.rolls.secondaryDamage
+			? message?.flags.rolls.secondaryDamage.roll
+			: message?.flags.rolls.primaryDamage.roll;
+	}
+
+	return Promise.all(canvas.tokens.controlled.map(t => {
+	  const a = t.actor;
+	  return a.applyDamage(roll.total, multiplier);
+	}));
+}
+
+/**
+ * Identifies basic ChatMessage rolls like `/r d6`
+ * @param {ChatMessage} message
+ * @returns
+ */
+function _chatMessageIsBasicRoll (message) {
+	return message?.isRoll
+		&& message?.rolls[0];
+}
+
+/**
+ * Identifies our custom Attack + Damage cards
+ * @param {ChatMessage} message
+ * @returns
+ */
+function _chatMessageIsDamageCard (message) {
+	return message?.flags.isRoll
+	&& (message?.flags.rolls?.primaryDamage
+		|| message?.flags.rolls?.secondaryDamage)
+}

@@ -36,6 +36,30 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	/**
+	 * Applies the given number to the Actor or Token's HP value.
+	 * The multiplier is a convenience feature to apply healing
+	 *  or true multiples of a damage value.
+	 *  * 1 => damage as rolled
+	 *  * .05 => half damage (resistance)
+	 *  * -1 => healing
+	 *
+	 * @param {number} damageAmount
+	 * @param {number} multiplier
+	 */
+	async applyDamage(damageAmount, multiplier) {
+		const maxHpValue = this.system.attributes.hp.max;
+		const currentHpValue = this.system.attributes.hp.value;
+		const amountToApply = Math.floor(parseInt(damageAmount) * multiplier);
+
+		// Ensures that we don't go above Max or below Zero
+		const newHpValue = Math.clamped(currentHpValue - amountToApply, 0, maxHpValue)
+
+		this.update({
+			"system.attributes.hp.value": newHpValue,
+		});
+	}
+
 	attackBonus(attackType) {
 		switch (attackType) {
 			case "melee":

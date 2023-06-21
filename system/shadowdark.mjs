@@ -12,6 +12,7 @@ import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
 import {HooksSD, HooksInitSD} from "./src/hooks.mjs";
+import { addChatMessageContextOptions } from "./src/chat/hooks.mjs";
 import {ModuleArt} from "./src/utils/module-art.mjs";
 import {ToursSD} from "./src/tours.mjs";
 
@@ -145,3 +146,9 @@ Hooks.once("setup", () => {
 		}
 	}
 });
+
+/**
+ * A hook for embedding new options to the right-click / alt-click
+ * menu of the Chat entries.
+ */
+Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
