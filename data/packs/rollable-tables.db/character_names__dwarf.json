@@ -1,330 +1,331 @@
 {
-  "name": "Character Names: Dwarf",
-  "img": "icons/environment/people/spearfighter.webp",
-  "description": "",
-  "results": [
-    {
-      "text": "Hilde",
-      "weight": 1,
-      "range": [
-        1,
-        1
-      ],
-      "_id": "HjrOMKhyvOSA1Ugu",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Torbin",
-      "weight": 1,
-      "range": [
-        2,
-        2
-      ],
-      "_id": "x7aRpSEjf265xvPC",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Marga",
-      "weight": 1,
-      "range": [
-        3,
-        3
-      ],
-      "_id": "KRdSDUWjjU8rzEl6",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Bruno",
-      "weight": 1,
-      "range": [
-        4,
-        4
-      ],
-      "_id": "JDVZmxJU6LWZ16v9",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Karina",
-      "weight": 1,
-      "range": [
-        5,
-        5
-      ],
-      "_id": "tkxTNm8X3FISs6mr",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Naugrim",
-      "weight": 1,
-      "range": [
-        6,
-        6
-      ],
-      "_id": "ZFy0g6UEbVF2Tqgq",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Brenna",
-      "weight": 1,
-      "range": [
-        7,
-        7
-      ],
-      "_id": "keVuRfr5t1gIcQ9b",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Darvin",
-      "weight": 1,
-      "range": [
-        8,
-        8
-      ],
-      "_id": "5XYHalSUlIKkl6Vf",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Elga",
-      "weight": 1,
-      "range": [
-        9,
-        9
-      ],
-      "_id": "VD4I9XIEpgRRewnO",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Alric",
-      "weight": 1,
-      "range": [
-        10,
-        10
-      ],
-      "_id": "ZqxJu8onLmdmshKj",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Isolde",
-      "weight": 1,
-      "range": [
-        11,
-        11
-      ],
-      "_id": "tKrHdAEVSxEz1urj",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Gendry",
-      "weight": 1,
-      "range": [
-        12,
-        12
-      ],
-      "_id": "mz4SAC1WgHjdbq7Z",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Bruga",
-      "weight": 1,
-      "range": [
-        13,
-        13
-      ],
-      "_id": "6xWA0VE9nLqr1Qvs",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Junnor",
-      "weight": 1,
-      "range": [
-        14,
-        14
-      ],
-      "_id": "sS1n9shjz3QXo0Ut",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Vidrid",
-      "weight": 1,
-      "range": [
-        15,
-        15
-      ],
-      "_id": "7iXR2iTAZuMxmjc6",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Torson",
-      "weight": 1,
-      "range": [
-        16,
-        16
-      ],
-      "_id": "t54n1tJ7rPtuAQOK",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Brielle",
-      "weight": 1,
-      "range": [
-        17,
-        17
-      ],
-      "_id": "PUWhhJoXCzx4rKdD",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Ulfgar",
-      "weight": 1,
-      "range": [
-        18,
-        18
-      ],
-      "_id": "nPjMGEyIQIXVnDYq",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Sarna",
-      "weight": 1,
-      "range": [
-        19,
-        19
-      ],
-      "_id": "UmmdJQdljjVqY0TF",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    },
-    {
-      "text": "Grimm",
-      "weight": 1,
-      "range": [
-        20,
-        20
-      ],
-      "_id": "p5yFzITuIuKK8Hd7",
-      "type": 0,
-      "img": "icons/svg/d20-black.svg",
-      "documentCollection": "",
-      "documentId": null,
-      "drawn": false,
-      "flags": {}
-    }
-  ],
-  "formula": "1d20",
-  "replacement": true,
-  "displayRoll": false,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "RollTable.yc3odLZbczSegpQ1"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1679337832520,
-    "modifiedTime": 1679338544245,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "IVnsYyvJAM36YQsv"
+	"_id": "IVnsYyvJAM36YQsv",
+	"description": "",
+	"displayRoll": false,
+	"formula": "1d20",
+	"img": "icons/environment/people/spearfighter.webp",
+	"name": "Character Names: Dwarf",
+	"replacement": true,
+	"results": [
+		{
+			"_id": "HjrOMKhyvOSA1Ugu",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				1,
+				1
+			],
+			"text": "Hilde",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "x7aRpSEjf265xvPC",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				2,
+				2
+			],
+			"text": "Torbin",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "KRdSDUWjjU8rzEl6",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				3,
+				3
+			],
+			"text": "Marga",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "JDVZmxJU6LWZ16v9",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				4,
+				4
+			],
+			"text": "Bruno",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "tkxTNm8X3FISs6mr",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				5,
+				5
+			],
+			"text": "Karina",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "ZFy0g6UEbVF2Tqgq",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				6,
+				6
+			],
+			"text": "Naugrim",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "keVuRfr5t1gIcQ9b",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				7,
+				7
+			],
+			"text": "Brenna",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "5XYHalSUlIKkl6Vf",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				8,
+				8
+			],
+			"text": "Darvin",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "VD4I9XIEpgRRewnO",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				9,
+				9
+			],
+			"text": "Elga",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "ZqxJu8onLmdmshKj",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				10,
+				10
+			],
+			"text": "Alric",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "tKrHdAEVSxEz1urj",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				11,
+				11
+			],
+			"text": "Isolde",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "mz4SAC1WgHjdbq7Z",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				12,
+				12
+			],
+			"text": "Gendry",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "6xWA0VE9nLqr1Qvs",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				13,
+				13
+			],
+			"text": "Bruga",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "sS1n9shjz3QXo0Ut",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				14,
+				14
+			],
+			"text": "Junnor",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "7iXR2iTAZuMxmjc6",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				15,
+				15
+			],
+			"text": "Vidrid",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "t54n1tJ7rPtuAQOK",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				16,
+				16
+			],
+			"text": "Torson",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "PUWhhJoXCzx4rKdD",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				17,
+				17
+			],
+			"text": "Brielle",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "nPjMGEyIQIXVnDYq",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				18,
+				18
+			],
+			"text": "Ulfgar",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "UmmdJQdljjVqY0TF",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				19,
+				19
+			],
+			"text": "Sarna",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "p5yFzITuIuKK8Hd7",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				20,
+				20
+			],
+			"text": "Grimm",
+			"type": 0,
+			"weight": 1
+		}
+	]
 }

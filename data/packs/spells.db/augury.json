@@ -1,42 +1,25 @@
 {
-  "name": "Augury",
-  "type": "Spell",
-  "system": {
-    "description": "<p>You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "priest"
-    ],
-    "duration": {
-      "type": "instant",
-      "value": -1
-    },
-    "lost": false,
-    "range": "self",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.3yI7Ejl7UrYMMdTe"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079772,
-    "modifiedTime": 1681852908667,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "3yI7Ejl7UrYMMdTe",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "3yI7Ejl7UrYMMdTe",
+	"effects": [
+	],
+	"img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+	"name": "Augury",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "self",
+		"tier": 2
+	},
+	"type": "Spell"
 }

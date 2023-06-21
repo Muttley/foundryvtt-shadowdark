@@ -1,65 +1,48 @@
 {
-  "name": "Magic Missile Advantage",
-  "type": "Talent",
-  "img": "icons/magic/light/projectiles-trio-pink.webp",
-  "system": {
-    "description": "<p>Wizards always have advantage on casting Magic Missile.</p>",
-    "properties": [],
-    "magicItem": false,
-    "level": null,
-    "talentClass": "class",
-    "bonuses": {
-      "advantage": "magic-missile"
-    },
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Spellcasting Advantage on Spell",
-      "icon": "icons/magic/air/air-smoke-casting.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.advantage",
-          "value": "magic-missile",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "ZjpQVS9L1baZZ2PF",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.0rykwfxFtHirvDCZ"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679057011898,
-    "modifiedTime": 1681850240141,
-    "lastModifiedBy": "bShyiL1wN5LaWRF6"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "VRZxd1xswPr1GaKs"
+	"_id": "VRZxd1xswPr1GaKs",
+	"effects": [
+		{
+			"_id": "ZjpQVS9L1baZZ2PF",
+			"changes": [
+				{
+					"key": "system.bonuses.advantage",
+					"mode": 2,
+					"priority": null,
+					"value": "magic-missile"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/air/air-smoke-casting.webp",
+			"label": "Spellcasting Advantage on Spell",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/light/projectiles-trio-pink.webp",
+	"name": "Magic Missile Advantage",
+	"system": {
+		"bonuses": {
+			"advantage": "magic-missile"
+		},
+		"description": "<p>Wizards always have advantage on casting Magic Missile.</p>",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "class"
+	},
+	"type": "Talent"
 }

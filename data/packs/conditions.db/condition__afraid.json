@@ -1,64 +1,52 @@
 {
-  "name": "Condition: Afraid",
-  "type": "Effect",
-  "img": "icons/magic/control/fear-fright-white.webp",
-  "system": {
-    "description": "<p>The character is afraid.</p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 123910236815,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Condition: Afraid",
-      "icon": "icons/magic/control/fear-fright-white.webp",
-      "origin": "Item.6Hd5Dzf2TnXL9Gxs",
-      "duration": {
-        "rounds": null,
-        "seconds": 1,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "CyZNMVHNjIMTM0g7",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1682147372310,
-    "modifiedTime": 1682175741058,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "6Hd5Dzf2TnXL9Gxs",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "6Hd5Dzf2TnXL9Gxs",
+	"effects": [
+		{
+			"_id": "CyZNMVHNjIMTM0g7",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/control/fear-fright-white.webp",
+			"label": "Condition: Afraid",
+			"origin": "Item.6Hd5Dzf2TnXL9Gxs",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/control/fear-fright-white.webp",
+	"name": "Condition: Afraid",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is afraid.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910236815
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

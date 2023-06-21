@@ -1,120 +1,107 @@
 {
-  "name": "Random Encounter: Activity",
-  "img": "icons/environment/people/charge.webp",
-  "description": "",
-  "results": [
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        2,
-        4
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "YbKodmGiXLxZIIB1",
-      "text": "Hunting",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        5,
-        6
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "vTXKHPBrmm1BNNFk",
-      "text": "Eating",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        7,
-        8
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "9u8xUnAet44VwUpN",
-      "text": "Building / Nesting",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        9,
-        10
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "xkzPf9tqzdqjmOqB",
-      "text": "Socializing / Playing",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        11,
-        11
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "NKwenMXlBGatzJJF",
-      "text": "Guarding",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        12,
-        12
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "okGnFgeMZFwnLzkz",
-      "text": "Sleeping",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    }
-  ],
-  "formula": "2d6",
-  "replacement": true,
-  "displayRoll": false,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "RollTable.jYDeDOmHMF0N7wCw"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1679337521597,
-    "modifiedTime": 1679337640533,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "wPg13uAPhmRPtd8y"
+	"_id": "wPg13uAPhmRPtd8y",
+	"description": "",
+	"displayRoll": false,
+	"formula": "2d6",
+	"img": "icons/environment/people/charge.webp",
+	"name": "Random Encounter: Activity",
+	"replacement": true,
+	"results": [
+		{
+			"_id": "YbKodmGiXLxZIIB1",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				2,
+				4
+			],
+			"text": "Hunting",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "vTXKHPBrmm1BNNFk",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				5,
+				6
+			],
+			"text": "Eating",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "9u8xUnAet44VwUpN",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				7,
+				8
+			],
+			"text": "Building / Nesting",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "xkzPf9tqzdqjmOqB",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				9,
+				10
+			],
+			"text": "Socializing / Playing",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "NKwenMXlBGatzJJF",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				11,
+				11
+			],
+			"text": "Guarding",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "okGnFgeMZFwnLzkz",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				12,
+				12
+			],
+			"text": "Sleeping",
+			"type": 0,
+			"weight": 1
+		}
+	]
 }

@@ -1,52 +1,48 @@
 {
-  "name": "Knack (Spellcasting)",
-  "type": "Talent",
-  "img": "icons/magic/control/sihouette-hold-beam-green.webp",
-  "system": {
-    "description": "<p><span class=\"fontstyle0\">You get +1 to spellcasting checks.</span></p>",
-    "properties": [],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "ancestry",
-    "bonuses": {
-      "spellcastingCheckBonus": "1"
-    },
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Knack (Spellcasting)",
-      "icon": "icons/magic/control/sihouette-hold-beam-green.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.spellcastingCheckBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "OU9XGvWpbh2ADVNy",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-
+	"_id": "GVAi0l6mfRillxwZ",
+	"effects": [
+		{
+			"_id": "OU9XGvWpbh2ADVNy",
+			"changes": [
+				{
+					"key": "system.bonuses.spellcastingCheckBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/control/sihouette-hold-beam-green.webp",
+			"label": "Knack (Spellcasting)",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
 	],
-  "_id": "GVAi0l6mfRillxwZ",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"img": "icons/magic/control/sihouette-hold-beam-green.webp",
+	"name": "Knack (Spellcasting)",
+	"system": {
+		"bonuses": {
+			"spellcastingCheckBonus": "1"
+		},
+		"description": "<p><span class=\"fontstyle0\">You get +1 to spellcasting checks.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
 }

@@ -1,74 +1,61 @@
 {
-  "name": "Spell Effect: Shield of Faith",
-  "type": "Effect",
-  "img": "icons/magic/defensive/shield-barrier-blue.webp",
-  "system": {
-    "description": "",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": "5",
-      "type": "rounds"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "effect",
-    "predefinedEffects": "",
-    "bonuses": {
-      "acBonus": "2"
-    }
-  },
-  "effects": [
-    {
-      "label": "AC Bonus",
-      "icon": "icons/magic/defensive/shield-barrier-blue.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.acBonus",
-          "value": "2",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "GKcLELNdIj1o3OX3",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": 5,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681852073030,
-    "modifiedTime": 1681852603016,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "4dCcpPeyRKWt9XkC",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "Y4OcZjjFb7wdUI1c": 3
-  }
+	"_id": "4dCcpPeyRKWt9XkC",
+	"effects": [
+		{
+			"_id": "GKcLELNdIj1o3OX3",
+			"changes": [
+				{
+					"key": "system.bonuses.acBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "2"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": 5,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/defensive/shield-barrier-blue.webp",
+			"label": "AC Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/defensive/shield-barrier-blue.webp",
+	"name": "Spell Effect: Shield of Faith",
+	"system": {
+		"bonuses": {
+			"acBonus": "2"
+		},
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

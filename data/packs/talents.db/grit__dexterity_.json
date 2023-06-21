@@ -1,34 +1,17 @@
 {
-  "name": "Grit (Dexterity)",
-  "type": "Talent",
-  "img": "icons/environment/people/infantry.webp",
-  "system": {
-    "description": "<p><span class=\"fontstyle0\">Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</span></p>",
-    "properties": [],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "class",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.shadowdark.talents.DGZqkVUtcmxejdm1"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679436791285,
-    "modifiedTime": 1681850207174,
-    "lastModifiedBy": "bShyiL1wN5LaWRF6"
-  },
-  "_id": "DGZqkVUtcmxejdm1",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "aUdswNccq2u0SxEP": 3
-  }
+	"_id": "DGZqkVUtcmxejdm1",
+	"effects": [
+	],
+	"img": "icons/environment/people/infantry.webp",
+	"name": "Grit (Dexterity)",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "class"
+	},
+	"type": "Talent"
 }

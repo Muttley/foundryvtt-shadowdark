@@ -1,39 +1,22 @@
 {
-  "name": "Smite",
-  "type": "Spell",
-  "system": {
-    "description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
-    "properties": [],
-    "class": [
-      "priest"
-    ],
-    "duration": {
-      "type": "instant",
-      "value": ""
-    },
-    "range": "near",
-    "tier": 2
-  },
-  "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.XDCTxgslSO8DnEBa"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079845,
-    "modifiedTime": 1678464177940,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "XDCTxgslSO8DnEBa",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "XDCTxgslSO8DnEBa",
+	"effects": [
+	],
+	"img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+	"name": "Smite",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"properties": [
+		],
+		"range": "near",
+		"tier": 2
+	},
+	"type": "Spell"
 }

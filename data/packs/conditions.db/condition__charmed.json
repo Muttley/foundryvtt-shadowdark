@@ -1,65 +1,53 @@
 {
-  "name": "Condition: Charmed",
-  "type": "Effect",
-  "img": "icons/magic/life/heart-shadow-red.webp",
-  "system": {
-    "description": "<p>The character is charmed and regards the source as a friend.</p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null,
-      "initiative": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Charmed",
-      "icon": "icons/magic/life/heart-shadow-red.webp",
-      "origin": "Item.fDUPAItc64pmW5zM",
-      "duration": {
-        "rounds": null,
-        "seconds": 1,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "g02s1plvTDRI6Ido",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681635188048,
-    "modifiedTime": 1682175741059,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "fDUPAItc64pmW5zM",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "fDUPAItc64pmW5zM",
+	"effects": [
+		{
+			"_id": "g02s1plvTDRI6Ido",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/life/heart-shadow-red.webp",
+			"label": "Charmed",
+			"origin": "Item.fDUPAItc64pmW5zM",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/life/heart-shadow-red.webp",
+	"name": "Condition: Charmed",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is charmed and regards the source as a friend.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

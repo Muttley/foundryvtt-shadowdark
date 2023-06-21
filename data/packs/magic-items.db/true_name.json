@@ -1,56 +1,39 @@
 {
-  "name": "True Name",
-  "type": "Basic",
-  "img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
-  "system": {
-    "description": "<p><em>The secret, unique name borne by a creature and documented in The Covenant. Few creatures know their own True Names.</em></p><p></p><p><strong>Benefit</strong>. You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.</p>",
-    "properties": [],
-    "magicItem": true,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600,
-      "template": "torch"
-    },
-    "treasure": false,
-    "scroll": false,
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.fBN9HVWQO0UF3yjs"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679272334419,
-    "modifiedTime": 1682012121438,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "gNah418e2ykhDWDE"
+	"_id": "gNah418e2ykhDWDE",
+	"effects": [
+	],
+	"img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
+	"name": "True Name",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>The secret, unique name borne by a creature and documented in The Covenant. Few creatures know their own True Names.</em></p><p></p><p><strong>Benefit</strong>. You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

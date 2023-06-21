@@ -1,86 +1,69 @@
 {
-  "name": "Gauntlets of Might",
-  "type": "Armor",
-  "img": "icons/equipment/hand/gauntlet-clawed-steel-blue.webp",
-  "system": {
-    "description": "<p><em>Heavy, bronze gauntlets with engravings of Herculean giants.</em></p><p></p><p><strong>Benefit</strong>. Your Strength stat becomes 18 (+4) while wearing these gauntlets.</p>",
-    "properties": [],
-    "magicItem": true,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "ac": {
-      "base": 0,
-      "modifier": 0,
-      "attribute": ""
-    },
-    "baseArmor": "",
-    "abilities": {
-      "str": {
-        "value": "18",
-        "base": "18"
-      }
-    },
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Permanent Ability (Str)",
-      "icon": "icons/skills/melee/strike-axe-blood-red.webp",
-      "changes": [
-        {
-          "key": "system.abilities.str.base",
-          "value": "18",
-          "mode": 5,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "mEwSq29I1Sr8gG2t",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {
-    "core": {
-      "sourceId": "Item.bcCYE8A2FIun2cJF"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679271249815,
-    "modifiedTime": 1682011890906,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "FWQK9qFGagcEXCq5"
+	"_id": "FWQK9qFGagcEXCq5",
+	"effects": [
+		{
+			"_id": "mEwSq29I1Sr8gG2t",
+			"changes": [
+				{
+					"key": "system.abilities.str.base",
+					"mode": 5,
+					"priority": null,
+					"value": "18"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+			"label": "Permanent Ability (Str)",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/equipment/hand/gauntlet-clawed-steel-blue.webp",
+	"name": "Gauntlets of Might",
+	"system": {
+		"abilities": {
+			"str": {
+				"base": "18",
+				"value": "18"
+			}
+		},
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Heavy, bronze gauntlets with engravings of Herculean giants.</em></p><p></p><p><strong>Benefit</strong>. Your Strength stat becomes 18 (+4) while wearing these gauntlets.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		}
+	},
+	"type": "Armor"
 }

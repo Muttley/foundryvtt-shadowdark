@@ -75,6 +75,41 @@ export default class MigrationRunnerSD {
 		shadowdark.log(`Migrated all '${documentName}' documents from Compendium '${pack.collection}'`);
 	}
 
+	async migrateSceneTokens(scene) {
+		for (const token of scene.tokens) {
+			try {
+				// if the token is linked or has no actor, we don"t need to do anything
+				if (token.actorLink || !game.actors.has(token.actorId)) continue;
+
+				const baseActor = duplicate(game.actors.get(token.actorId));
+
+				const actorData = mergeObject(
+					baseActor,
+					token.actorData,
+					{inplace: false}
+				);
+
+				const updateData = await this.currentMigrationTask.updateActor(actorData);
+
+				if (!foundry.utils.isEmpty(updateData)) {
+					shadowdark.log(`Migrating Token document "${token.name}"`);
+
+					updateData._id = token.id;
+
+					await scene.updateEmbeddedDocuments(
+						"Token",
+						[updateData],
+						{enforceTypes: false}
+					);
+				}
+			}
+			catch(err) {
+				err.message = `Failed system migration for Token "${token.name}": ${err.message}`;
+				console.error(err);
+			}
+		}
+	}
+
 	async migrateSettings() {
 		await this.currentMigrationTask.updateSettings();
 	}
@@ -84,9 +119,7 @@ export default class MigrationRunnerSD {
 			// don't migrate system packs
 			if (pack.metadata.packageType !== "world") continue;
 
-			if (!["Actor", "Item"].includes(pack.documentName)) continue;
-
-			await migrateCompendium(pack);
+			await this.migrateCompendium(pack);
 		}
 	}
 
@@ -165,6 +198,12 @@ export default class MigrationRunnerSD {
 		}
 	}
 
+	async migrateWorldScenes() {
+		for (const scene of game.scenes) {
+			await this.migrateSceneTokens(scene);
+		}
+	}
+
 	async migrateWorld() {
 		const version = this.currentMigrationTask.version;
 
@@ -176,6 +215,7 @@ export default class MigrationRunnerSD {
 		await this.migrateSettings();
 		await this.migrateWorldActors();
 		await this.migrateWorldItems();
+		await this.migrateWorldScenes();
 		await this.migrateWorldCompendiums();
 
 		ui.notifications.info(

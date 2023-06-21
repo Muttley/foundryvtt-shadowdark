@@ -1,210 +1,203 @@
 {
-  "name": "Trap: Damage or Effect",
-  "img": "icons/environment/traps/trap-jaw-green.webp",
-  "description": "",
-  "results": [
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        1,
-        1
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "aHTA3iYyiEuI9cUN",
-      "text": "[[/r 1d6]]",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        2,
-        2
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "z7mDMm8UtSi15gXt",
-      "text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Sleep}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        3,
-        3
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "4yvnWJ3tbmZXpEpo",
-      "text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        4,
-        4
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "0ZrXxySTpXClNOHs",
-      "text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.SOkcvkzrGMGQKhmk]{Blind}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        5,
-        5
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "otUHbdYIKjEpBmFr",
-      "text": "[[/r 2d8]]",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        6,
-        6
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "rLG6ooWohew8fFGP",
-      "text": "[[/r 2d8]] / @UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Sleep}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        7,
-        7
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "E4oWbvCaawSHyN6a",
-      "text": "[[/r 2d8]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        8,
-        8
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "SnxRN8UgCgmizLci",
-      "text": "[[/r 2d8]] / confuse",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        9,
-        9
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "5K8QyOEp7PuxrlGD",
-      "text": "[[/r 3d10]]",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        10,
-        10
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "zYwjhDI2rcphWUO9",
-      "text": "[[/r 3d10]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        11,
-        11
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "GIHOheaoVT4wXZym",
-      "text": "[[/r 3d10]] / unconscious",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    },
-    {
-      "type": 0,
-      "weight": 1,
-      "range": [
-        12,
-        12
-      ],
-      "drawn": false,
-      "documentCollection": "",
-      "_id": "sanrRY839MyOTyTX",
-      "text": "[[/r 3d10]] / petrify",
-      "img": "icons/svg/d20-black.svg",
-      "documentId": null,
-      "flags": {}
-    }
-  ],
-  "formula": "1d12",
-  "replacement": true,
-  "displayRoll": false,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "RollTable.WRjbMJqstJ8G6PFq"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679216538195,
-    "modifiedTime": 1682012405310,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "Ji8vkF8Lj0ZFMnBO"
+	"_id": "Ji8vkF8Lj0ZFMnBO",
+	"description": "",
+	"displayRoll": false,
+	"formula": "1d12",
+	"img": "icons/environment/traps/trap-jaw-green.webp",
+	"name": "Trap: Damage or Effect",
+	"replacement": true,
+	"results": [
+		{
+			"_id": "aHTA3iYyiEuI9cUN",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				1,
+				1
+			],
+			"text": "[[/r 1d6]]",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "z7mDMm8UtSi15gXt",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				2,
+				2
+			],
+			"text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Sleep}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "4yvnWJ3tbmZXpEpo",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				3,
+				3
+			],
+			"text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "0ZrXxySTpXClNOHs",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				4,
+				4
+			],
+			"text": "[[/r 1d6]] / @UUID[Compendium.shadowdark.spell-effects.SOkcvkzrGMGQKhmk]{Blind}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "otUHbdYIKjEpBmFr",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				5,
+				5
+			],
+			"text": "[[/r 2d8]]",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "rLG6ooWohew8fFGP",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				6,
+				6
+			],
+			"text": "[[/r 2d8]] / @UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Sleep}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "E4oWbvCaawSHyN6a",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				7,
+				7
+			],
+			"text": "[[/r 2d8]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "SnxRN8UgCgmizLci",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				8,
+				8
+			],
+			"text": "[[/r 2d8]] / confuse",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "5K8QyOEp7PuxrlGD",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				9,
+				9
+			],
+			"text": "[[/r 3d10]]",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "zYwjhDI2rcphWUO9",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				10,
+				10
+			],
+			"text": "[[/r 3d10]] / @UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Paralyze}",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "GIHOheaoVT4wXZym",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				11,
+				11
+			],
+			"text": "[[/r 3d10]] / unconscious",
+			"type": 0,
+			"weight": 1
+		},
+		{
+			"_id": "sanrRY839MyOTyTX",
+			"documentCollection": "",
+			"documentId": null,
+			"drawn": false,
+			"flags": {
+			},
+			"img": "icons/svg/d20-black.svg",
+			"range": [
+				12,
+				12
+			],
+			"text": "[[/r 3d10]] / petrify",
+			"type": 0,
+			"weight": 1
+		}
+	]
 }

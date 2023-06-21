@@ -1,39 +1,27 @@
 {
-  "name": "Backpack",
-  "type": "Basic",
-  "img": "icons/containers/bags/pack-leather-red.webp",
-  "system": {
-    "description": "<p>Holds all the gear you can carry. Don't lose it.</p>",
-    "properties": [],
-    "cost": {
-      "gp": 2,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 1,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "treasure": false
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678529576332,
-    "modifiedTime": 1678530916598,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "oSnfz4qcWlUL6cDZ",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "oSnfz4qcWlUL6cDZ",
+	"effects": [
+	],
+	"img": "icons/containers/bags/pack-leather-red.webp",
+	"name": "Backpack",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 2,
+			"sp": 0
+		},
+		"description": "<p>Holds all the gear you can carry. Don't lose it.</p>",
+		"equipped": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 1,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

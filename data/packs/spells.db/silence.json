@@ -1,42 +1,25 @@
 {
-  "name": "Silence",
-  "type": "Spell",
-  "system": {
-    "description": "<p>You magically mute sound in a near cube within the spell’s range. Creatures inside the area are deafened, and any sounds they create cannot be heard.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.aAdqy5QwVJrT8JWE]{Spell Effect: Deaf}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "wizard"
-    ],
-    "duration": {
-      "type": "focus",
-      "value": -1
-    },
-    "lost": false,
-    "range": "far",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.1kzQiWXZDs6BOVxs"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079840,
-    "modifiedTime": 1681852862139,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "1kzQiWXZDs6BOVxs",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "1kzQiWXZDs6BOVxs",
+	"effects": [
+	],
+	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"name": "Silence",
+	"system": {
+		"class": [
+			"wizard"
+		],
+		"description": "<p>You magically mute sound in a near cube within the spell’s range. Creatures inside the area are deafened, and any sounds they create cannot be heard.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.aAdqy5QwVJrT8JWE]{Spell Effect: Deaf}</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "far",
+		"tier": 2
+	},
+	"type": "Spell"
 }

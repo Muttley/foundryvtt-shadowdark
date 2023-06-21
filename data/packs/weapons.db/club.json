@@ -1,49 +1,37 @@
 {
-  "name": "Club",
-  "type": "Weapon",
-  "img": "icons/weapons/clubs/club-banded-steel.webp",
-  "system": {
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 5
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "description": "",
-    "properties": [],
-    "attackBonus": 0,
-    "damage": {
-      "bonus": 0,
-      "oneHanded": "d4",
-      "twoHanded": "",
-      "numDice": 1
-    },
-    "range": "close",
-    "type": "melee",
-    "weaponMastery": false,
-    "baseWeapon": ""
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678531500189,
-    "modifiedTime": 1679213106167,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "JM2XN855QYNhgtre",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "JM2XN855QYNhgtre",
+	"effects": [
+	],
+	"img": "icons/weapons/clubs/club-banded-steel.webp",
+	"name": "Club",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 5,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "",
+		"equipped": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

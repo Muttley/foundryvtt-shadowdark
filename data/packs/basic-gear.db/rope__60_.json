@@ -1,39 +1,27 @@
 {
-  "name": "Rope, 60'",
-  "type": "Basic",
-  "img": "icons/sundries/survival/rope-wrapped-brown.webp",
-  "system": {
-    "description": "<p>Hemp, 60’ long.</p>",
-    "properties": [],
-    "cost": {
-      "gp": 1,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "treasure": false
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678530679622,
-    "modifiedTime": 1678530916608,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "6ZRwVHFlh5QiyZWC",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "6ZRwVHFlh5QiyZWC",
+	"effects": [
+	],
+	"img": "icons/sundries/survival/rope-wrapped-brown.webp",
+	"name": "Rope, 60'",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 1,
+			"sp": 0
+		},
+		"description": "<p>Hemp, 60’ long.</p>",
+		"equipped": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

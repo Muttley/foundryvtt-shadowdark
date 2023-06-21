@@ -1,42 +1,25 @@
 {
-  "name": "Bless",
-  "type": "Spell",
-  "system": {
-    "description": "<p>One creature you touch gains a luck token.</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "priest"
-    ],
-    "duration": {
-      "type": "instant",
-      "value": -1
-    },
-    "lost": false,
-    "range": "close",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.IaY71lOkmpEJpUSi"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079783,
-    "modifiedTime": 1681328061460,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "IaY71lOkmpEJpUSi",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "IaY71lOkmpEJpUSi",
+	"effects": [
+	],
+	"img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+	"name": "Bless",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>One creature you touch gains a luck token.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "close",
+		"tier": 2
+	},
+	"type": "Spell"
 }

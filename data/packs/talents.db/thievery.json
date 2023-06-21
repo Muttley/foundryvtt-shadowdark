@@ -1,34 +1,17 @@
 {
-  "name": "Thievery",
-  "type": "Talent",
-  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
-  "system": {
-    "description": "<p><span class=\"fontstyle0\">You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</span></p><p></p><p><span class=\"fontstyle0\">You are trained in the following tasks and have advantage on any associated checks:</span></p><p></p><ul><li><p><span class=\"fontstyle0\">Climbing</span></p></li><li><p><span class=\"fontstyle0\">Sneaking and hiding</span></p></li><li><p><span class=\"fontstyle0\">Applying disguises</span></p></li><li><p><span class=\"fontstyle0\">Finding and disabling traps</span></p></li><li><p><span class=\"fontstyle0\">Delicate tasks such as picking pockets and opening locks</span></p></li></ul><p></p>",
-    "properties": [],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "class",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.shadowdark.talents.TiaXUSTLoJpjfyxD"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679528110233,
-    "modifiedTime": 1681850286231,
-    "lastModifiedBy": "bShyiL1wN5LaWRF6"
-  },
-  "_id": "TiaXUSTLoJpjfyxD",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "aUdswNccq2u0SxEP": 3
-  }
+	"_id": "TiaXUSTLoJpjfyxD",
+	"effects": [
+	],
+	"img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+	"name": "Thievery",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</span></p><p></p><p><span class=\"fontstyle0\">You are trained in the following tasks and have advantage on any associated checks:</span></p><p></p><ul><li><p><span class=\"fontstyle0\">Climbing</span></p></li><li><p><span class=\"fontstyle0\">Sneaking and hiding</span></p></li><li><p><span class=\"fontstyle0\">Applying disguises</span></p></li><li><p><span class=\"fontstyle0\">Finding and disabling traps</span></p></li><li><p><span class=\"fontstyle0\">Delicate tasks such as picking pockets and opening locks</span></p></li></ul><p></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "class"
+	},
+	"type": "Talent"
 }
