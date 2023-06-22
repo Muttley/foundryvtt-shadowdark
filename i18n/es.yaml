@@ -101,7 +101,7 @@ SHADOWDARK.chat.welcome_message.tour_button: Tour de Shadowdark RPG
 SHADOWDARK.chatcard.default: Tirada
 SHADOWDARK.class.fighter: Luchador
 SHADOWDARK.class.priest: Clérigo
-SHADOWDARK.class.ranger: Ranger
+SHADOWDARK.class.ranger: Explorador
 SHADOWDARK.class.thief: Ladrón
 SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
@@ -123,7 +123,7 @@ SHADOWDARK.dialog.effect.choice.weapon: Elige el tipo de arma
 SHADOWDARK.dialog.general.are_you_sure: '¿Estás seguro?'
 SHADOWDARK.dialog.general.cancel: Cancelar
 SHADOWDARK.dialog.general.no: "No"
-SHADOWDARK.dialog.general.select: Select
+SHADOWDARK.dialog.general.select: Seleccionar
 SHADOWDARK.dialog.general.yes: "Sí"
 SHADOWDARK.dialog.hp_roll.per_level: Tirar PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de tirar: {hp}"
@@ -143,7 +143,7 @@ SHADOWDARK.dialog.item.delete: Eliminar
 SHADOWDARK.dialog.item.sell_all: Vender todo
 SHADOWDARK.dialog.item.sell: Vender
 SHADOWDARK.dialog.item.use: Usar
-SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
+SHADOWDARK.dialog.light_source.pick_up.title: Seleccionar actor para dar fuente de luz
 SHADOWDARK.dialog.roll_mode_label: Modo de tirada
 SHADOWDARK.dialog.roll: Tirada
 SHADOWDARK.dialog.spell_roll.title: Lanzar hechizo con
@@ -347,8 +347,8 @@ SHADOWDARK.light_source.lantern: Farol
 SHADOWDARK.light_source.light_spell.double_near: Hechizo de luz (doble próximo)
 SHADOWDARK.light_source.light_spell.near: Hechizo de luz (Próximo)
 SHADOWDARK.light_source.torch: Antorcha
-SHADOWDARK.light-source.dropped: Dropped {name}
-SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
+SHADOWDARK.light-source.dropped: '{name} caído'
+SHADOWDARK.light-source.pick-up-lightsource.tooltip: Recoger fuente de luz
 SHADOWDARK.light-tracker.active: Activo
 SHADOWDARK.light-tracker.paused: En pausa
 SHADOWDARK.light-tracker.status.label: Estado
