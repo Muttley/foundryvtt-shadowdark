@@ -11,9 +11,14 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import {HooksSD, HooksInitSD} from "./src/hooks.mjs";
-import {ModuleArt} from "./src/utils/module-art.mjs";
-import {ToursSD} from "./src/tours.mjs";
+import { cacheForeignDocuments } from "./src/documents/cacheForeignDocuments.js";
+import { ModuleArt } from "./src/utils/module-art.mjs";
+import { ToursSD } from "./src/tours.mjs";
+
+import {
+	HooksSD,
+	HooksInitSD,
+} from "./src/hooks.mjs";
 
 import "./src/testing/index.mjs";
 
@@ -96,6 +101,7 @@ Hooks.once("init", () => {
 
 	// Attack init hooks
 	HooksInitSD.attach();
+
 });
 
 /* -------------------------------------------- */
@@ -104,9 +110,12 @@ Hooks.once("init", () => {
 
 // A hook event that fires when the game is fully ready.
 //
-Hooks.on("ready", () => {
+Hooks.on("ready", async () => {
+	// Build the initial foreign document cache
+	await cacheForeignDocuments();
+
 	// Check to see if any data migrations need to be run, and then run them
-	performDataMigration();
+	await performDataMigration();
 
 	HooksSD.attach();
 	ToursSD.register();
