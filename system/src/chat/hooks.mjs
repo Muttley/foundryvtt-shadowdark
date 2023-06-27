@@ -208,9 +208,11 @@ function applyChatCardDamage(li, multiplier) {
 	if (_chatMessageIsBasicRoll(message)) {
 		roll = message.rolls[0];
 	}
-
-	if (_chatMessageIsDamageCard(message)) {
+	else if (_chatMessageIsDamageCard(message)) {
 		roll = message?.flags.rolls.primaryDamage.roll;
+	}
+	else {
+		return;
 	}
 
 	return Promise.all(canvas.tokens.controlled.map(t => {
@@ -250,7 +252,7 @@ function applyChatCardDamageSecondary(li, multiplier) {
  * @param {ChatMessage} message
  * @returns
  */
-function _chatMessageIsBasicRoll (message) {
+function _chatMessageIsBasicRoll(message) {
 	return message?.isRoll
 		&& message?.rolls[0];
 }
@@ -260,7 +262,7 @@ function _chatMessageIsBasicRoll (message) {
  * @param {ChatMessage} message
  * @returns
  */
-function _chatMessageIsDamageCard (message) {
+function _chatMessageIsDamageCard(message) {
 	return message?.flags.isRoll
 		&& (message?.flags.rolls?.primaryDamage);
 }
@@ -271,7 +273,7 @@ function _chatMessageIsDamageCard (message) {
  * @param {ChatMessage} message
  * @returns
  */
-function _chatMessageIsDamageCardSecondary (message) {
+function _chatMessageIsDamageCardSecondary(message) {
 	return message?.flags.isRoll
 		&& message?.flags.rolls?.secondaryDamage;
 }

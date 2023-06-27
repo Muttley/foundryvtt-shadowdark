@@ -41,7 +41,7 @@ export default class ActorSD extends Actor {
 	 * The multiplier is a convenience feature to apply healing
 	 *  or true multiples of a damage value.
 	 *  * 1 => damage as rolled
-	 *  * .05 => half damage (resistance)
+	 *  * 0.5 => half damage (resistance)
 	 *  * -1 => healing
 	 *
 	 * @param {number} damageAmount
@@ -53,7 +53,7 @@ export default class ActorSD extends Actor {
 		const amountToApply = Math.floor(parseInt(damageAmount) * multiplier);
 
 		// Ensures that we don't go above Max or below Zero
-		const newHpValue = Math.clamped(currentHpValue - amountToApply, 0, maxHpValue)
+		const newHpValue = Math.clamped(currentHpValue - amountToApply, 0, maxHpValue);
 
 		this.update({
 			"system.attributes.hp.value": newHpValue,
