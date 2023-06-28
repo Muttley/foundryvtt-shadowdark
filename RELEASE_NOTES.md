@@ -9,6 +9,7 @@ We welcome @gatesvp as a contributor to the system!
 ### Enhancements
 * [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
 * [#452] Added special attack to chat card when applicable
+* [#277] Partial implementation provides quick way to apply damage and healing directly from the chat card
 * [#311] Initiative field on PC sheets
 
 ## v.1.3.3

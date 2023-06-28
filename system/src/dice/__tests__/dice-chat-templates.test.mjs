@@ -44,7 +44,8 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_getChatCardData(rollResult, speaker, target=false)", () => {
 		it("normal roll", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = RollSD._getChatCardData(roll, "");
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -63,7 +64,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical success roll", () => {
 			const roll = mockRollResult(20, 20, "success");
-			const chatData = RollSD._getChatCardData(roll, "");
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -82,7 +84,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("critical failure roll", () => {
 			const roll = mockRollResult(20, 1, "failure");
-			const chatData = RollSD._getChatCardData(roll, "");
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -101,7 +104,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("provided a target, determination of success is return", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = RollSD._getChatCardData(roll, "", 12);
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -120,7 +124,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling under target leads to failure", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = RollSD._getChatCardData(roll, "", 13);
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "", 13);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -140,7 +145,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling equal to target leads to success", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = RollSD._getChatCardData(roll, "", 12);
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -160,7 +166,8 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("rolling over target leads to success", () => {
 			const roll = mockRollResult(20, 12);
-			const chatData = RollSD._getChatCardData(roll, "", 11);
+			const rolls = { main: roll };
+			const chatData = RollSD._getChatCardData(rolls, "", 11);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;

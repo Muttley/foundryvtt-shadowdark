@@ -495,18 +495,19 @@ export default class RollSD extends Roll {
 	 * @param {number|false} target 	- Target value to beat with the roll
 	 * @return {object}								- Data for rendering a chatcard
 	 */
-	static _getChatCardData(rollResult, speaker, target=false) {
+	static _getChatCardData(rolls, speaker, target=false) {
 		const chatData = {
 			user: game.user.id,
 			speaker: speaker,
 			flags: {
 				isRoll: true,
+				rolls: rolls,
 				"core.canPopout": true,
 				hasTarget: target !== false,
-				critical: rollResult.critical,
+				critical: rolls.main.critical,
 			},
 		};
-		if (target) chatData.flags.success = rollResult.roll.total >= target;
+		if (target) chatData.flags.success = rolls.main.roll.total >= target;
 		return chatData;
 	}
 
@@ -531,7 +532,7 @@ export default class RollSD extends Roll {
 			isNPC: data.actor?.type === "NPC",
 		};
 		if (data.rolls.main) {
-			templateData._formula = data.rolls.main._formula;
+			templateData._formula = data.rolls.main.roll._formula;
 		}
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
@@ -571,7 +572,7 @@ export default class RollSD extends Roll {
 	 */
 	static async _renderRoll(data, adv=0, options={}) {
 		const chatData = await this._getChatCardData(
-			data.rolls.main,
+			data.rolls,
 			(options.speaker) ? options.speaker : ChatMessage.getSpeaker(),
 			options.target
 		);
