@@ -10,6 +10,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollHP(event)
 		);
 
+		html.find(".pc-roll-initiative .rollable").click(
+			event => this._onRollInitiative(event)
+		);
+
 		html.find(".open-item").click(
 			event => this._onOpenItem(event)
 		);
@@ -217,6 +221,13 @@ export default class ActorSheetSD extends ActorSheet {
 		event.preventDefault();
 
 		this.actor.rollHP();
+	}
+
+	async _onRollInitiative(event) {
+		event.preventDefault();
+
+		// User the default roll available to each Actor / Token
+		await this.actor.rollInitiative({ createCombatants: true, rerollInitiative: true});
 	}
 
 	async _onRollAbilityCheck(event) {
