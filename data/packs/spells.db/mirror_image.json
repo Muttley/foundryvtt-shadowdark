@@ -1,42 +1,25 @@
 {
-  "name": "Mirror Image",
-  "type": "Spell",
-  "system": {
-    "description": "<p>You create a number of illusory duplicates of yourself equal to half your level rounded down (minimum 1). The duplicates surround you and mimic you.</p><p>Each time a creature attacks you, the attack misses and causes one of the duplicates to evaporate.</p><p>If all of the illusions have disappeared, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.vI70AaskCqH9tKJ7]{Spell Effect: Mirror Image}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "wizard"
-    ],
-    "duration": {
-      "type": "rounds",
-      "value": "5"
-    },
-    "lost": false,
-    "range": "self",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.Fm29B4cFuPRGGBNK"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079836,
-    "modifiedTime": 1681852826863,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "Fm29B4cFuPRGGBNK",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "Fm29B4cFuPRGGBNK",
+	"effects": [
+	],
+	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+	"name": "Mirror Image",
+	"system": {
+		"class": [
+			"wizard"
+		],
+		"description": "<p>You create a number of illusory duplicates of yourself equal to half your level rounded down (minimum 1). The duplicates surround you and mimic you.</p><p>Each time a creature attacks you, the attack misses and causes one of the duplicates to evaporate.</p><p>If all of the illusions have disappeared, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.vI70AaskCqH9tKJ7]{Spell Effect: Mirror Image}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "self",
+		"tier": 2
+	},
+	"type": "Spell"
 }

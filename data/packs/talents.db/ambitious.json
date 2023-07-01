@@ -1,34 +1,17 @@
 {
-  "name": "Ambitious",
-  "type": "Talent",
-  "img": "icons/environment/people/group.webp",
-  "system": {
-    "description": "<p><span class=\"fontstyle0\">You gain one additional talent roll at 1st level.</span></p>",
-    "properties": [],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "ancestry",
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.shadowdark.talents.DYWFJu5XeazJYc0P"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679526305437,
-    "modifiedTime": 1681850127111,
-    "lastModifiedBy": "bShyiL1wN5LaWRF6"
-  },
-  "_id": "DYWFJu5XeazJYc0P",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "aUdswNccq2u0SxEP": 3
-  }
+	"_id": "DYWFJu5XeazJYc0P",
+	"effects": [
+	],
+	"img": "icons/environment/people/group.webp",
+	"name": "Ambitious",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You gain one additional talent roll at 1st level.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
 }

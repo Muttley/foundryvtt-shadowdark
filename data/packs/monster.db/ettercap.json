@@ -1,242 +1,235 @@
 {
-  "name": "Ettercap",
-  "type": "NPC",
-  "img": "systems/shadowdark/assets/tokens/cowled_token.webp",
-  "system": {
-    "alignment": "chaotic",
-    "attributes": {
-      "hp": {
-        "max": 14,
-        "value": 14,
-        "hd": 0
-      },
-      "ac": {
-        "value": 12
-      }
-    },
-    "level": {
-      "value": 3
-    },
-    "notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-    "spellcastingAbility": "",
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 2
-      },
-      "wis": {
-        "mod": 0
-      },
-      "con": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": -1
-      }
-    },
-    "darkAdapted": true,
-    "move": "near",
-    "moveNote": "Climb"
-  },
-  "prototypeToken": {
-    "name": "Ettercap",
-    "displayName": 20,
-    "actorLink": false,
-    "texture": {
-      "src": "systems/shadowdark/assets/tokens/cowled_token.webp",
-      "scaleX": 1,
-      "scaleY": 1,
-      "offsetX": 0,
-      "offsetY": 0,
-      "rotation": 0,
-      "tint": null
-    },
-    "width": 1,
-    "height": 1,
-    "lockRotation": false,
-    "rotation": 0,
-    "alpha": 1,
-    "disposition": -1,
-    "displayBars": 0,
-    "bar1": {
-      "attribute": null
-    },
-    "bar2": {
-      "attribute": null
-    },
-    "light": {
-      "alpha": 0.5,
-      "angle": 360,
-      "bright": 0,
-      "color": null,
-      "coloration": 1,
-      "dim": 0,
-      "attenuation": 0.5,
-      "luminosity": 0.5,
-      "saturation": 0,
-      "contrast": 0,
-      "shadows": 0,
-      "animation": {
-        "type": null,
-        "speed": 5,
-        "intensity": 5,
-        "reverse": false
-      },
-      "darkness": {
-        "min": 0,
-        "max": 1
-      }
-    },
-    "sight": {
-      "enabled": false,
-      "range": null,
-      "angle": 360,
-      "visionMode": "basic",
-      "color": null,
-      "attenuation": 0.1,
-      "brightness": 0,
-      "saturation": 0,
-      "contrast": 0
-    },
-    "detectionModes": [],
-    "flags": {},
-    "randomImg": false
-  },
-  "items": [
-    {
-      "name": "Poison Web",
-      "type": "NPC Feature",
-      "system": {
-        "description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-        "properties": [],
-        "magicItem": false
-      },
-      "_id": "e020Tn4yv7Aj604M",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "aUdswNccq2u0SxEP": 3
-      },
-      "flags": {},
-      "_stats": {
-        "systemId": "shadowdark",
-        "systemVersion": "0.1.0",
-        "coreVersion": "10.291",
-        "createdTime": 1679451949785,
-        "modifiedTime": 1679451962678,
-        "lastModifiedBy": "aUdswNccq2u0SxEP"
-      }
-    },
-    {
-      "name": "Bite",
-      "type": "NPC Attack",
-      "system": {
-        "description": "",
-        "properties": [],
-        "magicItem": false,
-        "attack": {
-          "num": 2,
-          "bonus": 2
-        },
-        "damage": {
-          "bonus": 0,
-          "numDice": 1,
-          "value": "d6",
-          "special": ""
-        },
-        "attackType": "physical",
-        "ranges": [
-          "close"
-        ]
-      },
-      "_id": "hhkN0EkQbBFGgJfr",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "aUdswNccq2u0SxEP": 3
-      },
-      "flags": {},
-      "_stats": {
-        "systemId": "shadowdark",
-        "systemVersion": "0.1.0",
-        "coreVersion": "10.291",
-        "createdTime": 1679451967631,
-        "modifiedTime": 1679451981760,
-        "lastModifiedBy": "aUdswNccq2u0SxEP"
-      }
-    },
-    {
-      "name": "Poison Web",
-      "type": "NPC Attack",
-      "system": {
-        "description": "",
-        "properties": [],
-        "magicItem": false,
-        "attack": {
-          "num": 1,
-          "bonus": 2
-        },
-        "damage": {
-          "bonus": 0,
-          "numDice": 0,
-          "value": "",
-          "special": ""
-        },
-        "attackType": "special",
-        "ranges": [
-          "near"
-        ]
-      },
-      "_id": "xURhvz16GozH0j8f",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "aUdswNccq2u0SxEP": 3
-      },
-      "flags": {},
-      "_stats": {
-        "systemId": "shadowdark",
-        "systemVersion": "0.1.0",
-        "coreVersion": "10.291",
-        "createdTime": 1679452009254,
-        "modifiedTime": 1679452087881,
-        "lastModifiedBy": "aUdswNccq2u0SxEP"
-      }
-    }
-  ],
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.1.2",
-    "coreVersion": "10.291",
-    "createdTime": 1679451902332,
-    "modifiedTime": 1680381104008,
-    "lastModifiedBy": "5tzCT7bJKM9kuuO3"
-  },
-  "_id": "fcgq7uwsJEMMdRNx",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "aUdswNccq2u0SxEP": 3
-  }
+	"_id": "fcgq7uwsJEMMdRNx",
+	"effects": [
+	],
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		{
+			"_id": "e020Tn4yv7Aj604M",
+			"_stats": {
+				"coreVersion": "10.291",
+				"createdTime": 1679451949785,
+				"lastModifiedBy": "aUdswNccq2u0SxEP",
+				"modifiedTime": 1679451962678,
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0"
+			},
+			"effects": [
+			],
+			"flags": {
+			},
+			"folder": null,
+			"img": "icons/svg/item-bag.svg",
+			"name": "Poison Web",
+			"ownership": {
+				"aUdswNccq2u0SxEP": 3,
+				"default": 0
+			},
+			"sort": 0,
+			"system": {
+				"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+				"magicItem": false,
+				"properties": [
+				]
+			},
+			"type": "NPC Feature"
+		},
+		{
+			"_id": "hhkN0EkQbBFGgJfr",
+			"_stats": {
+				"coreVersion": "10.291",
+				"createdTime": 1679451967631,
+				"lastModifiedBy": "aUdswNccq2u0SxEP",
+				"modifiedTime": 1679451981760,
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0"
+			},
+			"effects": [
+			],
+			"flags": {
+			},
+			"folder": null,
+			"img": "icons/svg/item-bag.svg",
+			"name": "Bite",
+			"ownership": {
+				"aUdswNccq2u0SxEP": 3,
+				"default": 0
+			},
+			"sort": 0,
+			"system": {
+				"attack": {
+					"bonus": 2,
+					"num": 2
+				},
+				"attackType": "physical",
+				"damage": {
+					"bonus": 0,
+					"numDice": 1,
+					"special": "",
+					"value": "d6"
+				},
+				"description": "",
+				"magicItem": false,
+				"properties": [
+				],
+				"ranges": [
+					"close"
+				]
+			},
+			"type": "NPC Attack"
+		},
+		{
+			"_id": "xURhvz16GozH0j8f",
+			"_stats": {
+				"coreVersion": "10.291",
+				"createdTime": 1679452009254,
+				"lastModifiedBy": "aUdswNccq2u0SxEP",
+				"modifiedTime": 1679452087881,
+				"systemId": "shadowdark",
+				"systemVersion": "0.1.0"
+			},
+			"effects": [
+			],
+			"flags": {
+			},
+			"folder": null,
+			"img": "icons/svg/item-bag.svg",
+			"name": "Poison Web",
+			"ownership": {
+				"aUdswNccq2u0SxEP": 3,
+				"default": 0
+			},
+			"sort": 0,
+			"system": {
+				"attack": {
+					"bonus": 2,
+					"num": 1
+				},
+				"attackType": "special",
+				"damage": {
+					"bonus": 0,
+					"numDice": 0,
+					"special": "",
+					"value": ""
+				},
+				"description": "",
+				"magicItem": false,
+				"properties": [
+				],
+				"ranges": [
+					"near"
+				]
+			},
+			"type": "NPC Attack"
+		}
+	],
+	"name": "Ettercap",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Ettercap",
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": null,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -1
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 0
+			},
+			"str": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 14,
+				"value": 14
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "near",
+		"moveNote": "Climb",
+		"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
 }

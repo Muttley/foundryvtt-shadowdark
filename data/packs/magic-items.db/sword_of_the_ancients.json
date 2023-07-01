@@ -1,122 +1,106 @@
 {
-  "name": "Sword of the Ancients",
-  "type": "Weapon",
-  "img": "icons/weapons/swords/sword-guard-worn-brown.webp",
-  "system": {
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "description": "<p><em>A chipped and rusting blade with an oiled leather grip.</em></p><p></p><p><strong>Bonus</strong>. +2 longsword.</p><p></p><p><strong>Benefit</strong>. The sword is unbreakable and can carve through any material.</p><p></p><p>The owner can summon the sword to their hand if it's on the same plane.</p>",
-    "properties": [],
-    "magicItem": true,
-    "damage": {
-      "oneHanded": "d8",
-      "twoHanded": "",
-      "numDice": 1,
-      "bonus": "2",
-      "critMultiplier": 2
-    },
-    "bonuses": {
-      "damageBonus": "2",
-      "attackBonus": "2",
-      "critical": {
-        "failureThreshold": 1,
-        "successThreshold": 20,
-        "multiplier": 2
-      }
-    },
-    "range": "close",
-    "type": "melee",
-    "weaponMastery": false,
-    "baseWeapon": "",
-    "attackBonus": "2",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Attack Roll Bonus",
-      "icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.attackBonus",
-          "value": "2",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "9qMTrleWtCMKO3Xl",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    },
-    {
-      "label": "Attack Damage Bonus",
-      "icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.damageBonus",
-          "value": "2",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": false,
-      "_id": "78SoFRRmEjEMdPIT",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "flags": {
-    "core": {
-      "sourceId": "Item.yYNx9p3XcicwUBQH"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679272201647,
-    "modifiedTime": 1682012098234,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "ZamB6OED5J1EeU81"
+	"_id": "ZamB6OED5J1EeU81",
+	"effects": [
+		{
+			"_id": "9qMTrleWtCMKO3Xl",
+			"changes": [
+				{
+					"key": "system.bonuses.attackBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "2"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+			"label": "Attack Roll Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		},
+		{
+			"_id": "78SoFRRmEjEMdPIT",
+			"changes": [
+				{
+					"key": "system.bonuses.damageBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "2"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+			"label": "Attack Damage Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": false
+		}
+	],
+	"img": "icons/weapons/swords/sword-guard-worn-brown.webp",
+	"name": "Sword of the Ancients",
+	"system": {
+		"attackBonus": "2",
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": "2",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "2"
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "2",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d8",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A chipped and rusting blade with an oiled leather grip.</em></p><p></p><p><strong>Bonus</strong>. +2 longsword.</p><p></p><p><strong>Benefit</strong>. The sword is unbreakable and can carve through any material.</p><p></p><p>The owner can summon the sword to their hand if it's on the same plane.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

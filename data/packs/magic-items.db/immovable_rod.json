@@ -1,56 +1,39 @@
 {
-  "name": "Immovable Rod",
-  "type": "Basic",
-  "img": "icons/weapons/staves/staff-metal-mask.webp",
-  "system": {
-    "description": "<p><em>A short, bejeweled iron rod with a button on one end.</em></p><p></p><p><strong>Benefit</strong>. When you click the button, the rod becomes fixed in space. Clicking the button again ends the effect.</p>",
-    "properties": [],
-    "magicItem": true,
-    "cost": {
-      "gp": 0,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600,
-      "template": "torch"
-    },
-    "treasure": false,
-    "scroll": false,
-    "predefinedEffects": ""
-  },
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.yVMH1AQ46NYysrVB"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679271310001,
-    "modifiedTime": 1682011894948,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "_id": "RQyOkC3sGAe5gsn2"
+	"_id": "RQyOkC3sGAe5gsn2",
+	"effects": [
+	],
+	"img": "icons/weapons/staves/staff-metal-mask.webp",
+	"name": "Immovable Rod",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A short, bejeweled iron rod with a button on one end.</em></p><p></p><p><strong>Benefit</strong>. When you click the button, the rod becomes fixed in space. Clicking the button again ends the effect.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

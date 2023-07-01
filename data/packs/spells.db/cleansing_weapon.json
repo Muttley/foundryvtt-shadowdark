@@ -1,42 +1,25 @@
 {
-  "name": "Cleansing Weapon",
-  "type": "Spell",
-  "system": {
-    "description": "<p>One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.7hKYL9hdnsvCUM9c]{Spell Effect: Cleansing Weapon}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "priest"
-    ],
-    "duration": {
-      "type": "rounds",
-      "value": "5"
-    },
-    "lost": false,
-    "range": "close",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/weapons/swords/sword-winged-pink.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.2v8sc7cnMSzpECyi"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079812,
-    "modifiedTime": 1681852724685,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "2v8sc7cnMSzpECyi",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "2v8sc7cnMSzpECyi",
+	"effects": [
+	],
+	"img": "icons/weapons/swords/sword-winged-pink.webp",
+	"name": "Cleansing Weapon",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.7hKYL9hdnsvCUM9c]{Spell Effect: Cleansing Weapon}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "close",
+		"tier": 2
+	},
+	"type": "Spell"
 }

@@ -1,64 +1,52 @@
 {
-  "name": "Spell Effect: Mirror Image",
-  "type": "Effect",
-  "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
-  "system": {
-    "description": "",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": "5",
-      "type": "rounds"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "effect",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Mirror Image",
-      "icon": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
-      "origin": "Item.vI70AaskCqH9tKJ7",
-      "duration": {
-        "rounds": 5,
-        "seconds": null,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "P1QXkErKypSKB6bl",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681852203730,
-    "modifiedTime": 1681852603017,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "vI70AaskCqH9tKJ7",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "Y4OcZjjFb7wdUI1c": 3
-  }
+	"_id": "vI70AaskCqH9tKJ7",
+	"effects": [
+		{
+			"_id": "P1QXkErKypSKB6bl",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": 5,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+			"label": "Mirror Image",
+			"origin": "Item.vI70AaskCqH9tKJ7",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+	"name": "Spell Effect: Mirror Image",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

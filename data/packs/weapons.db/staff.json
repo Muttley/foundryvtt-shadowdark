@@ -1,51 +1,38 @@
 {
-  "name": "Staff",
-  "type": "Weapon",
-  "img": "icons/weapons/staves/staff-ornate-purple.webp",
-  "system": {
-    "cost": {
-      "gp": 0,
-      "sp": 5,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "description": "",
-    "properties": [
-      "twoHanded"
-    ],
-    "attackBonus": 0,
-    "damage": {
-      "bonus": 0,
-      "oneHanded": "",
-      "twoHanded": "d4",
-      "numDice": 1
-    },
-    "range": "close",
-    "type": "melee",
-    "weaponMastery": false,
-    "baseWeapon": ""
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678532119063,
-    "modifiedTime": 1679213106179,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "9eTpsuEuzL3Vaxge",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "9eTpsuEuzL3Vaxge",
+	"effects": [
+	],
+	"img": "icons/weapons/staves/staff-ornate-purple.webp",
+	"name": "Staff",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d4"
+		},
+		"description": "",
+		"equipped": false,
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

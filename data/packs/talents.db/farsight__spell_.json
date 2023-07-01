@@ -1,69 +1,51 @@
 {
-  "name": "Farsight (Spell)",
-  "type": "Talent",
-  "img": "icons/creatures/eyes/humanoid-single-blind.webp",
-  "system": {
-    "description": "<p>You get a +1 bonus to attack rolls with ranged</p><p>weapons <strong>or</strong> a +1 bonus to spellcasting checks.</p>",
-    "properties": [
-      "rangedAttackBonus",
-      "spellBonus"
-    ],
-    "magicItem": false,
-    "level": 1,
-    "talentClass": "ancestry",
-    "bonuses": {
-      "spellcastingCheckBonus": "1",
-      "rangedAttackBonus": "1"
-    },
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Spellcasting Check Bonus",
-      "icon": "icons/magic/fire/flame-burning-fist-strike.webp",
-      "changes": [
-        {
-          "key": "system.bonuses.spellcastingCheckBonus",
-          "value": "1",
-          "mode": 2,
-          "priority": null
-        }
-      ],
-      "disabled": false,
-      "transfer": true,
-      "_id": "etJKhGLqpcKvyloB",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {}
-    }
-  ],
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.Q2qgKckxU1qX0wmd"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1679009698440,
-    "modifiedTime": 1681850201967,
-    "lastModifiedBy": "bShyiL1wN5LaWRF6"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "E3EcGGdGYuEWWj47"
+	"_id": "E3EcGGdGYuEWWj47",
+	"effects": [
+		{
+			"_id": "etJKhGLqpcKvyloB",
+			"changes": [
+				{
+					"key": "system.bonuses.spellcastingCheckBonus",
+					"mode": 2,
+					"priority": null,
+					"value": "1"
+				}
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+			"label": "Spellcasting Check Bonus",
+			"origin": null,
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
+	"name": "Farsight (Spell)",
+	"system": {
+		"bonuses": {
+			"rangedAttackBonus": "1",
+			"spellcastingCheckBonus": "1"
+		},
+		"description": "<p>You get a +1 bonus to attack rolls with ranged</p><p>weapons <strong>or</strong> a +1 bonus to spellcasting checks.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"rangedAttackBonus",
+			"spellBonus"
+		],
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
 }

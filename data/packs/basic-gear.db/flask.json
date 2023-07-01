@@ -1,50 +1,38 @@
 {
-  "name": "Flask",
-  "type": "Basic",
-  "img": "icons/consumables/potions/bottle-corked-empty.webp",
-  "system": {
-    "description": "<p>Glass containers that hold one draught of liquid.</p>",
-    "properties": [],
-    "magicItem": false,
-    "cost": {
-      "gp": 0,
-      "sp": 3,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "isPhysical": true,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600,
-      "template": "torch"
-    },
-    "treasure": false,
-    "scroll": false
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.3",
-    "coreVersion": "10.291",
-    "createdTime": 1678529907061,
-    "modifiedTime": 1681229819264,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "W2fFimb0y85wmOMb",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "W2fFimb0y85wmOMb",
+	"effects": [
+	],
+	"img": "icons/consumables/potions/bottle-corked-empty.webp",
+	"name": "Flask",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 3
+		},
+		"description": "<p>Glass containers that hold one draught of liquid.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

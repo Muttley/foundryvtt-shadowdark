@@ -1,42 +1,25 @@
 {
-  "name": "Invisibility",
-  "type": "Spell",
-  "system": {
-    "description": "<p>A creature you touch becomes invisible for the spell’s duration.</p><p>The spell ends if the target attacks or casts a spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "wizard"
-    ],
-    "duration": {
-      "type": "rounds",
-      "value": "10"
-    },
-    "lost": false,
-    "range": "close",
-    "tier": 2,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.PZ0qPp6lG9SVMoAr"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079828,
-    "modifiedTime": 1681852795346,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "PZ0qPp6lG9SVMoAr",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "PZ0qPp6lG9SVMoAr",
+	"effects": [
+	],
+	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+	"name": "Invisibility",
+	"system": {
+		"class": [
+			"wizard"
+		],
+		"description": "<p>A creature you touch becomes invisible for the spell’s duration.</p><p>The spell ends if the target attacks or casts a spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "close",
+		"tier": 2
+	},
+	"type": "Spell"
 }

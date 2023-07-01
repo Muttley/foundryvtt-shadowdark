@@ -1,51 +1,38 @@
 {
-  "name": "Shortbow",
-  "type": "Weapon",
-  "img": "icons/weapons/bows/shortbow-recurve-blue.webp",
-  "system": {
-    "cost": {
-      "gp": 6,
-      "sp": 0,
-      "cp": 0
-    },
-    "canBeEquipped": true,
-    "equipped": false,
-    "quantity": 1,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 1,
-      "slots_used": 1
-    },
-    "description": "",
-    "properties": [
-      "twoHanded"
-    ],
-    "attackBonus": 0,
-    "damage": {
-      "bonus": 0,
-      "oneHanded": "",
-      "twoHanded": "d4",
-      "numDice": 1
-    },
-    "range": "far",
-    "type": "ranged",
-    "weaponMastery": false,
-    "baseWeapon": ""
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678531996983,
-    "modifiedTime": 1679213106176,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "UfHAWj5weH111Bea",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "UfHAWj5weH111Bea",
+	"effects": [
+	],
+	"img": "icons/weapons/bows/shortbow-recurve-blue.webp",
+	"name": "Shortbow",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 6,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d4"
+		},
+		"description": "",
+		"equipped": false,
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "ranged",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
 }

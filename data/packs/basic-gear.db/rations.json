@@ -1,39 +1,27 @@
 {
-  "name": "Rations",
-  "type": "Basic",
-  "img": "icons/consumables/food/berries-ration-round-red.webp",
-  "system": {
-    "description": "<p>One day of food and water supply for one person.</p>",
-    "properties": [],
-    "cost": {
-      "gp": 0,
-      "sp": 5,
-      "cp": 0
-    },
-    "canBeEquipped": false,
-    "equipped": false,
-    "quantity": 3,
-    "slots": {
-      "free_carry": 0,
-      "per_slot": 3,
-      "slots_used": 1
-    },
-    "treasure": false
-  },
-  "effects": [],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "0.1.0",
-    "coreVersion": "10.291",
-    "createdTime": 1678530629876,
-    "modifiedTime": 1678530916607,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "GX6OmWQiE7MzTmjX",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+	"_id": "GX6OmWQiE7MzTmjX",
+	"effects": [
+	],
+	"img": "icons/consumables/food/berries-ration-round-red.webp",
+	"name": "Rations",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"description": "<p>One day of food and water supply for one person.</p>",
+		"equipped": false,
+		"properties": [
+		],
+		"quantity": 3,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 3,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
 }

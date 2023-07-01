@@ -36,6 +36,30 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	/**
+	 * Applies the given number to the Actor or Token's HP value.
+	 * The multiplier is a convenience feature to apply healing
+	 *  or true multiples of a damage value.
+	 *  * 1 => damage as rolled
+	 *  * 0.5 => half damage (resistance)
+	 *  * -1 => healing
+	 *
+	 * @param {number} damageAmount
+	 * @param {number} multiplier
+	 */
+	async applyDamage(damageAmount, multiplier) {
+		const maxHpValue = this.system.attributes.hp.max;
+		const currentHpValue = this.system.attributes.hp.value;
+		const amountToApply = Math.floor(parseInt(damageAmount) * multiplier);
+
+		// Ensures that we don't go above Max or below Zero
+		const newHpValue = Math.clamped(currentHpValue - amountToApply, 0, maxHpValue);
+
+		this.update({
+			"system.attributes.hp.value": newHpValue,
+		});
+	}
+
 	attackBonus(attackType) {
 		switch (attackType) {
 			case "melee":
@@ -525,6 +549,17 @@ export default class ActorSD extends Actor {
 			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
 		}
 
+		/* Attach Special Ability if part of the attack.
+			Created in `data.itemSpecial` field.
+			Can be used in the rendering template or further automation.
+		*/
+		if (item.system.damage.special) {
+			const itemSpecial = data.actor.items.find(e => e.name === item.system.damage.special);
+			if (itemSpecial) {
+				data.itemSpecial = itemSpecial;
+			}
+		}
+
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
 
@@ -909,9 +944,10 @@ export default class ActorSD extends Actor {
 		const data = {
 			rollType: "hp",
 			actor: this,
+			conBonus: Math.max(1, this.system.abilities.con.mod),
 		};
 
-		const parts = [`${this.system.level.value}d8`];
+		const parts = [`${this.system.level.value}d8`, "@conBonus"];
 
 		options.fastForward = true;
 		options.chatMessage = true;

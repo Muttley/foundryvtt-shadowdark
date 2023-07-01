@@ -1,64 +1,52 @@
 {
-  "name": "Condition: Compelled",
-  "type": "Effect",
-  "img": "icons/magic/control/energy-stream-link-spiral-white.webp",
-  "system": {
-    "description": "<p>The character is compelled.</p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 123910236853,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Condition: Compelled",
-      "icon": "icons/magic/control/energy-stream-link-spiral-white.webp",
-      "origin": "Item.7DNtQwX31lpChHZH",
-      "duration": {
-        "rounds": null,
-        "seconds": 1,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "jtCuGSncFiHgfNgZ",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1682147372310,
-    "modifiedTime": 1682175741059,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "7DNtQwX31lpChHZH",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "7DNtQwX31lpChHZH",
+	"effects": [
+		{
+			"_id": "jtCuGSncFiHgfNgZ",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/control/energy-stream-link-spiral-white.webp",
+			"label": "Condition: Compelled",
+			"origin": "Item.7DNtQwX31lpChHZH",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/control/energy-stream-link-spiral-white.webp",
+	"name": "Condition: Compelled",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is compelled.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910236853
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

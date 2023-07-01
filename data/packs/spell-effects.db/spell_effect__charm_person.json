@@ -1,64 +1,52 @@
 {
-  "name": "Spell Effect: Charm Person",
-  "type": "Effect",
-  "img": "icons/magic/life/heart-shadow-red.webp",
-  "system": {
-    "description": "<p><span style=\"font-family: Signika, sans-serif\">The humanoid regards the caster as a friend for the duration.</span><br class=\"Apple-interchange-newline\"><span style=\"font-family: Signika, sans-serif\">The effect ends if you or your allies do anything harmful to the target.</span></p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": "1",
-      "type": "days"
-    },
-    "start": {
-      "value": 0,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "effect",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Charmed",
-      "icon": "icons/magic/life/heart-shadow-red.webp",
-      "origin": "Item.Z0YwWUGs3WYC6OGn",
-      "duration": {
-        "rounds": null,
-        "seconds": 86400,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "6ILACQIHM3Gp8EVG",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1681851221652,
-    "modifiedTime": 1681852603013,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "Z0YwWUGs3WYC6OGn",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "Y4OcZjjFb7wdUI1c": 3
-  }
+	"_id": "Z0YwWUGs3WYC6OGn",
+	"effects": [
+		{
+			"_id": "6ILACQIHM3Gp8EVG",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 86400,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/life/heart-shadow-red.webp",
+			"label": "Charmed",
+			"origin": "Item.Z0YwWUGs3WYC6OGn",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/life/heart-shadow-red.webp",
+	"name": "Spell Effect: Charm Person",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">The humanoid regards the caster as a friend for the duration.</span><br class=\"Apple-interchange-newline\"><span style=\"font-family: Signika, sans-serif\">The effect ends if you or your allies do anything harmful to the target.</span></p>",
+		"duration": {
+			"type": "days",
+			"value": "1"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

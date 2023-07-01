@@ -1,64 +1,52 @@
 {
-  "name": "Condition: Polymorphed",
-  "type": "Effect",
-  "img": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
-  "system": {
-    "description": "<p>The character is polymorphed.</p>",
-    "properties": [],
-    "magicItem": false,
-    "duration": {
-      "value": -1,
-      "type": "unlimited"
-    },
-    "start": {
-      "value": 123910236872,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "condition",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Condition: Polymorphed",
-      "icon": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
-      "origin": "Item.rW7oltlWDmteEpV7",
-      "duration": {
-        "rounds": null,
-        "seconds": 1,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "xyhx2skwDPYWZ20G",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "flags": {},
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1682147372310,
-    "modifiedTime": 1682175741061,
-    "lastModifiedBy": "EKVggA45fx6fzkCK"
-  },
-  "_id": "rW7oltlWDmteEpV7",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "rW7oltlWDmteEpV7",
+	"effects": [
+		{
+			"_id": "xyhx2skwDPYWZ20G",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": null,
+				"seconds": 1,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
+			"label": "Condition: Polymorphed",
+			"origin": "Item.rW7oltlWDmteEpV7",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
+	"name": "Condition: Polymorphed",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is polymorphed.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910236872
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

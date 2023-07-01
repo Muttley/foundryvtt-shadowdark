@@ -2,20 +2,22 @@
 
 export const ShadowdarklingImport = {
 	attach: () => {
-		Hooks.on("renderSidebarTab", function(app, html) {
+		Hooks.on("renderSidebarTab", async function(app, html) {
 			if (app.options.classes.includes("actors-sidebar")) {
-				const importButton = $(
-					`<button class="shadowdarkling-import-button" 
-          data-tooltop="SHADOWDARK.apps.shadowdarkling-importer.title">
-          <i class="fas fa-user-plus"></i>
-          <b class="button-text">${game.i18n.localize("SHADOWDARK.apps.shadowdarkling-importer.title")}</b></button>`
+				const title = game.i18n.localize("SHADOWDARK.apps.shadowdarkling-importer.title");
+
+				const button = $(
+					await renderTemplate(
+						"systems/shadowdark/templates/ui/shadowdarkling-import-button.hbs",
+						{ title }
+					)
 				);
 
-				importButton.click(() => {
+				button.click(() => {
 					new shadowdark.apps.ShadowdarklingImporterSD().render(true);
 				});
 
-				html.find(".directory-footer").append(importButton);
+				html.find(".directory-footer").append(button);
 			}
 		});
 	},

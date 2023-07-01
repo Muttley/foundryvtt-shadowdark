@@ -1,76 +1,60 @@
 {
-  "name": "Effect: Stimulant",
-  "type": "Effect",
-  "img": "icons/magic/perception/eye-tendrils-web-purple.webp",
-  "system": {
-    "description": "<p>Source: @UUID[Compendium.shadowdark.talents.dBQr9YPyhvwyPm0g]{Stimulant}</p>",
-    "properties": [],
-    "magicItem": false,
-    "light": {
-      "active": false,
-      "hasBeenUsed": false,
-      "isSource": false,
-      "longevityMins": 60,
-      "remainingSecs": 3600,
-      "template": "torch"
-    },
-    "duration": {
-      "value": "10",
-      "type": "rounds"
-    },
-    "start": {
-      "value": 16765,
-      "combatTime": null
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "effectPanel": {
-      "show": true
-    },
-    "category": "effect",
-    "predefinedEffects": ""
-  },
-  "effects": [
-    {
-      "label": "Perceiving Advantage",
-      "icon": "icons/magic/perception/eye-tendrils-web-purple.webp",
-      "origin": "Item.E9GhofNgwIJ7N2A4",
-      "duration": {
-        "rounds": 10,
-        "seconds": null,
-        "startTime": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "_id": "M044441XNDJq00mV",
-      "changes": [],
-      "disabled": false,
-      "tint": null,
-      "transfer": true,
-      "flags": {}
-    }
-  ],
-  "ownership": {
-    "default": 0,
-    "v363Ga8ZWiqa3r9H": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Item.E9GhofNgwIJ7N2A4"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.3.0",
-    "coreVersion": "10.291",
-    "createdTime": 1683314021970,
-    "modifiedTime": 1683553730776,
-    "lastModifiedBy": "dEgeJjCVKbwb2Ow8"
-  },
-  "folder": null,
-  "sort": 0,
-  "_id": "MUNwczWej0Bo8x4S"
+	"_id": "MUNwczWej0Bo8x4S",
+	"effects": [
+		{
+			"_id": "M044441XNDJq00mV",
+			"changes": [
+			],
+			"disabled": false,
+			"duration": {
+				"combat": null,
+				"rounds": 10,
+				"seconds": null,
+				"startRound": null,
+				"startTime": null,
+				"startTurn": null,
+				"turns": null
+			},
+			"flags": {
+			},
+			"icon": "icons/magic/perception/eye-tendrils-web-purple.webp",
+			"label": "Perceiving Advantage",
+			"origin": "Item.E9GhofNgwIJ7N2A4",
+			"tint": null,
+			"transfer": true
+		}
+	],
+	"img": "icons/magic/perception/eye-tendrils-web-purple.webp",
+	"name": "Effect: Stimulant",
+	"system": {
+		"category": "effect",
+		"description": "<p>Source: @UUID[Compendium.shadowdark.talents.dBQr9YPyhvwyPm0g]{Stimulant}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 16765
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
 }

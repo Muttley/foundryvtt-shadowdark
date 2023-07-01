@@ -33,6 +33,6 @@ function _initListeners() {
 
 	$(document).on("click", "button.shadowdark-issue-tracker", event => {
 		event.preventDefault();
-		window.open("https://github.com/Muttley/foundryvtt-shadowdark");
+		window.open("https://github.com/Muttley/foundryvtt-shadowdark/issues");
 	});
 }

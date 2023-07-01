@@ -1,43 +1,26 @@
 {
-  "name": "Light",
-  "type": "Spell",
-  "system": {
-    "description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p><p>@UUID[Compendium.shadowdark.basic-gear.PkQXG3AaHNMVwGTc]{Light Spell}</p><p>@UUID[Compendium.shadowdark.basic-gear.rjNBToTJCYLLdVcT]{Light Spell (Critical)}</p>",
-    "properties": [],
-    "magicItem": false,
-    "class": [
-      "priest",
-      "wizard"
-    ],
-    "duration": {
-      "type": "realTime",
-      "value": "1h"
-    },
-    "lost": false,
-    "range": "close",
-    "tier": 1,
-    "predefinedEffects": ""
-  },
-  "img": "icons/magic/light/explosion-star-glow-yellow.webp",
-  "effects": [],
-  "flags": {
-    "core": {
-      "sourceId": "Item.N4v17mtxJlVBbgpn"
-    }
-  },
-  "_stats": {
-    "systemId": "shadowdark",
-    "systemVersion": "1.2.4",
-    "coreVersion": "10.291",
-    "createdTime": 1678463079833,
-    "modifiedTime": 1682359633940,
-    "lastModifiedBy": "Y4OcZjjFb7wdUI1c"
-  },
-  "_id": "N4v17mtxJlVBbgpn",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "EKVggA45fx6fzkCK": 3
-  }
+	"_id": "N4v17mtxJlVBbgpn",
+	"effects": [
+	],
+	"img": "icons/magic/light/explosion-star-glow-yellow.webp",
+	"name": "Light",
+	"system": {
+		"class": [
+			"priest",
+			"wizard"
+		],
+		"description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p><p>@UUID[Compendium.shadowdark.basic-gear.PkQXG3AaHNMVwGTc]{Light Spell}</p><p>@UUID[Compendium.shadowdark.basic-gear.rjNBToTJCYLLdVcT]{Light Spell (Critical)}</p>",
+		"duration": {
+			"type": "realTime",
+			"value": "1h"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "close",
+		"tier": 1
+	},
+	"type": "Spell"
 }
