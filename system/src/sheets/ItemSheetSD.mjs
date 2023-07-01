@@ -553,7 +553,7 @@ export default class ItemSheetSD extends ItemSheet {
 		];
 
 		// Create the effect
-		this.item.createEmbeddedDocuments(
+		await this.item.createEmbeddedDocuments(
 			"ActiveEffect",
 			effectData
 		);
