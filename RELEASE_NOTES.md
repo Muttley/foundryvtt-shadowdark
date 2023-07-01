@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.3.5
 
 We welcome @gatesvp as a contributor to the system!
 
@@ -9,10 +9,14 @@ We welcome @gatesvp as a contributor to the system!
 * [#462] Properly awaiting Active Effects to be created for V11 compatability
 
 ### Enhancements
-* [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
 * [#452] Added special attack to chat card when applicable
 * [#277] Partial implementation provides quick way to apply damage and healing directly from the chat card
 * [#311] Initiative field on PC sheets
+
+## v.1.3.4
+
+### Enhancements
+* [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
 
 ## v.1.3.3
 
