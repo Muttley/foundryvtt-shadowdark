@@ -131,15 +131,15 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	_getItemContextOptions() {
-		const canEdit = function(element) {
+		const canEdit = function(element, actor) {
 			let result = false;
 			const itemId = element.data("item-id");
 
 			if (game.user.isGM) {
 				result = true;
 			}
-			else {
-				result = game.user.character.items.find(item => item._id === itemId)
+			else if (actor.canUserModify(game.user)) {
+				result = actor.items.find(item => item._id === itemId)
 					? true
 					: false;
 			}
@@ -151,7 +151,7 @@ export default class ActorSheetSD extends ActorSheet {
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
 				icon: '<i class="fas fa-edit"></i>',
-				condition: element => canEdit(element),
+				condition: element => canEdit(element, this.actor),
 				callback: element => {
 					const itemId = element.data("item-id");
 					const item = this.actor.items.get(itemId);
@@ -161,7 +161,7 @@ export default class ActorSheetSD extends ActorSheet {
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: element => canEdit(element),
+				condition: element => canEdit(element, this.actor),
 				callback: element => {
 					const itemId = element.data("item-id");
 					this._onItemDelete(itemId);
