@@ -8,6 +8,7 @@ import {
 	waitForInput,
 	cleanUpItemsByKey,
 	itemTypes,
+	delay,
 } from "../../testing/testUtils.mjs";
 
 export const key = "shadowdark.sheets.item";
@@ -164,6 +165,73 @@ export default ({ describe, it, after, before, expect }) => {
 
 		after(async () => {
 			await item.delete();
+		});
+	});
+
+	describe("_createPredefinedEffect(key, data", () => {
+		it("Adding a predefined effect adds an active effect", async () => {
+			// Create item
+			const item = await createMockItem("Effect");
+
+			await item.sheet.render(true);
+			await waitForInput();
+
+			await document.querySelector("a[data-tab=tab-effects]").click();
+			await waitForInput();
+
+			// Ensure no effects are on the items
+			expect(item.effects.contents.length).equal(0);
+
+			// Add the effect
+			const element = document.querySelector("input[name='system.predefinedEffects']");
+			element.value = "meleeAttackBonus";
+			element.dispatchEvent(new Event("change", { bubbles: true }));
+			await waitForInput();
+
+			// Check that there is an active effect on the item
+			expect(item.effects.contents.length).equal(1);
+
+			// Delete item
+			await item.delete();
+		});
+
+		it("#462: Modifying the effects actually modifies the active effects", async () => {
+			// Create item
+			const item = await createMockItem("Effect");
+
+			await item.sheet.render(true);
+			await waitForInput();
+
+			await document.querySelector("a[data-tab=tab-effects]").click();
+			await waitForInput();
+
+			// Ensure no effects are on the items
+			expect(item.effects.contents.length).equal(0);
+
+			// Add the effect
+			const element = document.querySelector("input[name='system.predefinedEffects']");
+			element.value = "meleeAttackBonus";
+			element.dispatchEvent(new Event("change", { bubbles: true }));
+			await waitForInput();
+
+			// Check that there is an active effect on the item
+			expect(item.effects.contents.length).equal(1);
+			const activeEffect = item.effects.contents[0];
+			expect(activeEffect.changes[0].value).equal("1");
+
+			// Modify the effects
+			const changeInput = document.querySelector("input.effect-change-value");
+			changeInput.value = "4";
+			changeInput.dispatchEvent(new Event("change", { bubbles: true }));
+			await delay(500);
+			expect(activeEffect.changes[0].value).equal("4");
+
+			// Delete item
+			await item.delete();
+		});
+
+		after(async () => {
+			await cleanUpItemsByKey(key);
 		});
 	});
 };

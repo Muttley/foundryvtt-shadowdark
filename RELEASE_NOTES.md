@@ -6,6 +6,7 @@ We welcome @gatesvp as a contributor to the system!
 * [#452] Refers the issue tracker to the actual issue tracker instead of repo
 * [#450] Rolling NPC HP now correctly adds CON mod bonus (minimum 1) to HP
 * [#461] Allows players with edit permission to get context menu on items on a character to edit and delete
+* [#462] Properly awaiting Active Effects to be created for V11 compatability
 
 ### Enhancements
 * [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
