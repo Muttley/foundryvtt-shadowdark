@@ -1,3 +1,8 @@
+## v.1.3.6
+
+### Bugfixes
+* [#466] Autorolling NPC HP now correctly applies HP to NPC
+
 ## v.1.3.5
 
 We welcome @gatesvp as a contributor to the system!

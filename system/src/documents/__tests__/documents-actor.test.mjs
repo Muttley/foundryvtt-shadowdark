@@ -378,9 +378,15 @@ export default ({ describe, it, after, before, expect }) => {
 	describe("_npcRollHP(options={})", () => {
 		describe("#450 NPC HP Roll has at least 1 con mod added to roll", async () => {
 			let actor = {};
+			const originalSetting = game.settings.get("shadowdark", "rollNpcHpWhenAddedToScene");
 
 			before(async () => {
 				actor = await createMockActor("NPC");
+			});
+
+			after(async () => {
+				game.settings.set("shadowdark", "rollNpcHpWhenAddedToScene", originalSetting);
+				await trashChat();
 			});
 
 			Array.from(Array(9), (_, i) => (i - 4)).forEach(async mod => {
@@ -402,6 +408,25 @@ export default ({ describe, it, after, before, expect }) => {
 					// Remove chat card
 					await trashChat();
 				});
+			});
+
+			it("#466 Autorolled NPC HP is applied to actor", async () => {
+				await trashChat();
+				// Set the settings
+				game.settings.set("shadowdark", "rollNpcHpWhenAddedToScene", true);
+
+				// Trigger the hook as a token was dropped
+				Hooks.call("createToken", {actor}, {}, {});
+				await waitForInput();
+
+				// Get the HP result
+				expect(game.messages?.size).equal(1);
+				const content = game.messages.contents[0].content;
+				const newHP = Number($(content).find(".dice-total")[0].innerText);
+
+				// Check the actor has updated HP
+				expect(actor.system.attributes.hp.max).equal(newHP);
+				expect(actor.system.attributes.hp.value).equal(newHP);
 			});
 
 		});

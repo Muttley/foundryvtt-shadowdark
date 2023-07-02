@@ -961,8 +961,8 @@ export default class ActorSD extends Actor {
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
-		const newHp = Number(result.rolls.main.roll.result);
-		this.update({
+		const newHp = Number(result.rolls.main.roll._total);
+		await this.update({
 			"system.attributes.hp.max": newHp,
 			"system.attributes.hp.value": newHp,
 		});
