@@ -11,7 +11,7 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { addChatMessageContextOptions } from "./src/chat/hooks.mjs";
+import { addChatMessageContextOptions, onRenderChatMessage } from "./src/chat/hooks.mjs";
 import { cacheForeignDocuments } from "./src/documents/cacheForeignDocuments.js";
 import { ModuleArt } from "./src/utils/module-art.mjs";
 import { ToursSD } from "./src/tours.mjs";
@@ -161,3 +161,8 @@ Hooks.once("setup", () => {
  * menu of the Chat entries.
  */
 Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
+
+/**
+ * Hooks for rendering the chat messages
+ */
+Hooks.on("renderChatMessage", (app, html, data) => onRenderChatMessage(app, html, data));

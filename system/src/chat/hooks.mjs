@@ -127,7 +127,7 @@ export function chatCardBlind(app, html, data) {
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
-export default function onRenderChatMessage(app, html, data) {
+export function onRenderChatMessage(app, html, data) {
 	chatCardButtonAction(app, html, data);
 	const blind = chatCardBlind(app, html, data);
 	if (!blind) highlightSuccessFailure(app, html, data);
