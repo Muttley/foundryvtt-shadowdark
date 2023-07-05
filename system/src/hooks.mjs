@@ -12,12 +12,23 @@ export const HooksSD = {
 	attach: () => {
 		const listeners = [
 			CanvasHooks,
-			ChatMessageHooks,
 			DropLightsourceHooks,
 			EffectHooks,
 			ForeignDocumentHooks,
 			LightSourceTrackerHooks,
 			NPCHooks,
+		];
+
+		for (const listener of listeners) {
+			listener.attach();
+		}
+	},
+};
+
+export const HooksImmediate = {
+	attach: () => {
+		const listeners = [
+			ChatMessageHooks,
 		];
 
 		for (const listener of listeners) {

@@ -1,21 +1,47 @@
 export function highlightSuccessFailure(app, html, data) {
 	if ( !app.flags.isRoll ) return;
+
 	const value = html.find(".d20-roll .dice-total").text();
+
 	if ( app.flags.critical === "failure" ) {
 		html.find(".d20-roll .dice-total").addClass("failure");
-		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.roll.critical.failure", { value: value }));
+
+		html.find(".d20-roll .dice-total").text(
+			game.i18n.format(
+				"SHADOWDARK.roll.critical.failure",
+				{value: value}
+			)
+		);
 	}
 	else if ( app.flags.critical === "success" ) {
 		html.find(".d20-roll .dice-total").addClass("success");
-		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.roll.critical.success", { value: value }));
+
+		html.find(".d20-roll .dice-total").text(
+			game.i18n.format(
+				"SHADOWDARK.roll.critical.success",
+				{value: value}
+			)
+		);
 	}
 	else if ( app.flags.hasTarget && app.flags.success ) {
 		html.find(".d20-roll .dice-total").addClass("success");
-		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.roll.success", { value: value }) );
+
+		html.find(".d20-roll .dice-total").text(
+			game.i18n.format(
+				"SHADOWDARK.roll.success",
+				{value: value}
+			)
+		);
 	}
 	else if ( app.flags.hasTarget && !app.flags.success ) {
 		html.find(".d20-roll .dice-total").addClass("failure");
-		html.find(".d20-roll .dice-total").text( game.i18n.format("SHADOWDARK.roll.failure", { value: value }) );
+
+		html.find(".d20-roll .dice-total").text(
+			game.i18n.format(
+				"SHADOWDARK.roll.failure",
+				{value: value}
+			)
+		);
 	}
 }
 
@@ -127,15 +153,18 @@ export function chatCardBlind(app, html, data) {
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
-export default function onRenderChatMessage(app, html, data) {
+export function onRenderChatMessage(app, html, data) {
 	chatCardButtonAction(app, html, data);
 	const blind = chatCardBlind(app, html, data);
 	if (!blind) highlightSuccessFailure(app, html, data);
 }
 
 /**
- * This function is used to hook into the Chat Log context menu, adds additional options to each
- * These options make it easy to conveniently apply damage to tokens based on the value of a Roll
+ * This function is used to hook into the Chat Log context menu, adds additional
+ * options to each
+ *
+ * These options make it easy to conveniently apply damage to tokens based on
+ * the value of a Roll
  *
  * @param {HTMLElement} html    The Chat Message being rendered
  * @param {object[]} options    The Array of Context Menu options
@@ -143,7 +172,7 @@ export default function onRenderChatMessage(app, html, data) {
  * @returns {object[]}          The extended options Array including new context choices
  */
 export function addChatMessageContextOptions(html, options) {
-	let canApplyDamage = li => {
+	const canApplyDamage = li => {
 		const message = game.messages.get(li.data("messageId"));
 
 		return game.user.isGM
@@ -152,7 +181,7 @@ export function addChatMessageContextOptions(html, options) {
 				|| _chatMessageIsDamageCard(message));
 	};
 
-	let canApplySecondaryDamage = li => {
+	const canApplySecondaryDamage = li => {
 		const message = game.messages.get(li.data("messageId"));
 
 		return game.user.isGM
@@ -186,6 +215,7 @@ export function addChatMessageContextOptions(html, options) {
 			callback: li => applyChatCardDamageSecondary(li, -1),
 		}
 	);
+
 	return options;
 }
 
