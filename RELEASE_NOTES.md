@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Bugfixes
+* [#470] Chat message Success/Fail messages only render once
+
 ## v.1.3.6
 
 ### Bugfixes
