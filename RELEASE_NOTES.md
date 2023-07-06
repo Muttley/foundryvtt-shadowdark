@@ -2,7 +2,7 @@
 
 ### Bugfixes
 * [#472] Handle situations where Spellcasting Ability is not set better
-* [*473] Incorrect damage rolls when only 2H damage set
+* [#473] Incorrect damage rolls when only 2H damage set
 
 ### Enhancements
 * [#460] Added additional Move options for NPCs (None, Far & Special)
