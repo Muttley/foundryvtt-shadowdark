@@ -295,7 +295,7 @@ export default class RollSD extends Roll {
 	/**
 	 * Rolls a weapon when suppled in the `data` object.
 	 * @param {object} data - Object containing the item document of rolled item
-	 * @returns {object}		- Returns the data object, with additional roll evaluations
+	 * @returns {object} - Returns the data object, with additional roll evaluations
 	 */
 	static async _rollWeapon(data) {
 		// Get dice information from the weapon
