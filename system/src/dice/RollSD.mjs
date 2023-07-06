@@ -32,7 +32,7 @@ export default class RollSD extends Roll {
 		// If the dice has been fastForwarded, there is no form
 		if (!options.fastForward) {
 			// Augment data with form bonuses & merge into data
-			const formBonuses = this._getBonusesFromFrom($form);
+			const formBonuses = this._getBonusesFromForm($form);
 			data = foundry.utils.mergeObject(data, formBonuses);
 		}
 
@@ -375,7 +375,7 @@ export default class RollSD extends Roll {
 	 * @param {jQuery} $form 	- Submitted dialog form
 	 * @returns {object}			- Bonuses from the dialog form
 	 */
-	static _getBonusesFromFrom($form) {
+	static _getBonusesFromForm($form) {
 		const bonuses = {};
 		if ($form.find("[name=item-bonus]").length) bonuses.itemBonus = $form.find("[name=item-bonus]")?.val();
 		if ($form.find("[name=ability-bonus]").length) bonuses.abilityBonus = $form.find("[name=ability-bonus]")?.val();
