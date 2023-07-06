@@ -75,10 +75,10 @@ SHADOWDARK.chat_card.button.learn_spell: Learn Spell
 SHADOWDARK.chat_card.button.use_potion: Use Potion
 SHADOWDARK.chat_card.button.use_scroll: Use Scroll
 SHADOWDARK.chat_card.button.use_wand: Use Wand
-SHADOWDARK.chat_card.context.apply_damage: Apply Damage
-SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
+SHADOWDARK.chat_card.context.apply_damage: Apply Damage
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
+SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
@@ -369,8 +369,12 @@ SHADOWDARK.module_art_config.portraits: Portraits
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
+SHADOWDARK.npc_move.close: Close
 SHADOWDARK.npc_move.double_near: Double Near
+SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Near
+SHADOWDARK.npc_move.none: None
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
