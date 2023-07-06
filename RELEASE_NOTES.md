@@ -1,3 +1,15 @@
+## v.1.3.7
+
+### Bugfixes
+* [#472] Handle situations where Spellcasting Ability is not set better
+* [*473] Incorrect damage rolls when only 2H damage set
+
+### Enhancements
+* [#460] Added additional Move options for NPCs (None, Far & Special)
+
+### Bugfixes
+* [#470] Chat message Success/Fail messages only render once
+
 ## v.1.3.6
 
 ### Bugfixes

@@ -232,7 +232,9 @@ export default class ItemSD extends Item {
 	}
 
 	isTwoHanded() {
-		return this.hasProperty("twoHanded");
+		const damage = this.system.damage;
+		return this.hasProperty("twoHanded")
+			|| (damage.oneHanded === "" && damage.twoHanded !== "");
 	}
 
 	isAShield() {

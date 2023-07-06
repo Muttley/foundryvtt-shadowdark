@@ -1,4 +1,4 @@
-import {cacheForeignDocuments} from "../documents/cacheForeignDocuments";
+import {cacheForeignDocuments} from "../documents/cacheForeignDocuments.mjs";
 
 export const ForeignDocumentHooks = {
 	attach: () => {

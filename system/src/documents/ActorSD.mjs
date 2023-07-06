@@ -280,6 +280,14 @@ export default class ActorSD extends Actor {
 
 		const abilityId = this.getSpellcastingAbility();
 
+		if (abilityId === "") {
+			ui.notifications.error(
+				game.i18n.format("SHADOWDARK.error.spells.no_spellcasting_ability_set"),
+				{permanent: false}
+			);
+			return;
+		}
+
 		let rollType;
 		if (item.type === "Spell") {
 			rollType = item.name.slugify();
@@ -554,7 +562,10 @@ export default class ActorSD extends Actor {
 			Can be used in the rendering template or further automation.
 		*/
 		if (item.system.damage.special) {
-			const itemSpecial = data.actor.items.find(e => e.name === item.system.damage.special);
+			const itemSpecial = data.actor.items.find(
+				e => e.name === item.system.damage.special
+			);
+
 			if (itemSpecial) {
 				data.itemSpecial = itemSpecial;
 			}

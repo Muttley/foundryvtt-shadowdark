@@ -11,13 +11,13 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { addChatMessageContextOptions } from "./src/chat/hooks.mjs";
-import { cacheForeignDocuments } from "./src/documents/cacheForeignDocuments.js";
+import { cacheForeignDocuments } from "./src/documents/cacheForeignDocuments.mjs";
 import { ModuleArt } from "./src/utils/module-art.mjs";
 import { ToursSD } from "./src/tours.mjs";
 
 import {
 	HooksSD,
+	HooksImmediate,
 	HooksInitSD,
 } from "./src/hooks.mjs";
 
@@ -156,8 +156,4 @@ Hooks.once("setup", () => {
 	}
 });
 
-/**
- * A hook for embedding new options to the right-click / alt-click
- * menu of the Chat entries.
- */
-Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
+HooksImmediate.attach();
