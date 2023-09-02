@@ -1,0 +1,52 @@
+{
+	"_id": "veYd8eMEg9lTCHrj",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.veYd8eMEg9lTCHrj",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/weapons/polearms/spear-hooked-double.webp",
+	"name": "Spear",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"bonus": 0,
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"thrown"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

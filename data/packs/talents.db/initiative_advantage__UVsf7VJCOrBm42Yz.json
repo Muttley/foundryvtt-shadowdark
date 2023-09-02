@@ -1,0 +1,23 @@
+{
+	"_id": "UVsf7VJCOrBm42Yz",
+	"_key": "!items!UVsf7VJCOrBm42Yz",
+	"effects": [
+		"k9wVrL0gDKPn2rNt"
+	],
+	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"name": "Initiative Advantage",
+	"system": {
+		"bonuses": {
+			"advantage": "initiative"
+		},
+		"description": "<p>Gain advantage on initiative rolls (reroll if duplicate)</p>",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"initAdvantage"
+		],
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

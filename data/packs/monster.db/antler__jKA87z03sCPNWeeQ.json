@@ -1,0 +1,30 @@
+{
+	"_id": "jKA87z03sCPNWeeQ",
+	"_key": "!actors.items!tfoTO9pQhnS0RAOH.jKA87z03sCPNWeeQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Antler",
+	"system": {
+		"attack": {
+			"bonus": 3,
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

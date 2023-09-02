@@ -1,0 +1,32 @@
+{
+	"_id": "7DNtQwX31lpChHZH",
+	"_key": "!items!7DNtQwX31lpChHZH",
+	"effects": [
+		"jtCuGSncFiHgfNgZ"
+	],
+	"img": "icons/magic/control/energy-stream-link-spiral-white.webp",
+	"name": "Condition: Compelled",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is compelled.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910236853
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

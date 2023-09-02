@@ -1,0 +1,33 @@
+{
+	"_id": "cY8rmYgJZJzMYg4x",
+	"_key": "!actors.items!CpHttsoemSoZRiDe.cY8rmYgJZJzMYg4x",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Deathtouch (Spell)",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"damage": {
+				"numDice": 2
+			},
+			"num": 1
+		},
+		"attackType": "special",
+		"damage": {
+			"bonus": 0,
+			"numDice": 2,
+			"special": "DC12",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

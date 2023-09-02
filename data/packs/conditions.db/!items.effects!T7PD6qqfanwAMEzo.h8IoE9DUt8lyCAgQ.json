@@ -1,0 +1,21 @@
+{
+	"_id": "h8IoE9DUt8lyCAgQ",
+	"_key": "!items.effects!T7PD6qqfanwAMEzo.h8IoE9DUt8lyCAgQ",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+	"label": "Cursed",
+	"origin": "Item.T7PD6qqfanwAMEzo",
+	"tint": null,
+	"transfer": true
+}

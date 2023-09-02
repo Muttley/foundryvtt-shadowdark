@@ -1,0 +1,37 @@
+{
+	"_id": "eAWhmC9ZXzjhIa1H",
+	"_key": "!items!eAWhmC9ZXzjhIa1H",
+	"effects": [
+		"PAkmxzlF6cIsPNkt"
+	],
+	"img": "icons/magic/unholy/hand-light-pink.webp",
+	"name": "Condition: Life Drain (1)",
+	"system": {
+		"abilities": {
+			"con": {
+				"bonus": "-1"
+			}
+		},
+		"category": "condition",
+		"description": "",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910242819
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

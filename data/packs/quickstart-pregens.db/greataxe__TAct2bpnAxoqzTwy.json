@@ -1,0 +1,52 @@
+{
+	"_id": "TAct2bpnAxoqzTwy",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.TAct2bpnAxoqzTwy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/weapons/axes/axe-broad-engraved-chipped-blue.webp",
+	"name": "Greataxe",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"versatile"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

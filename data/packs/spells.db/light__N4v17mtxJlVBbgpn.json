@@ -1,0 +1,27 @@
+{
+	"_id": "N4v17mtxJlVBbgpn",
+	"_key": "!items!N4v17mtxJlVBbgpn",
+	"effects": [
+	],
+	"img": "icons/magic/light/explosion-star-glow-yellow.webp",
+	"name": "Light",
+	"system": {
+		"class": [
+			"priest",
+			"wizard"
+		],
+		"description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p><p>@UUID[Compendium.shadowdark.basic-gear.PkQXG3AaHNMVwGTc]{Light Spell}</p><p>@UUID[Compendium.shadowdark.basic-gear.rjNBToTJCYLLdVcT]{Light Spell (Critical)}</p>",
+		"duration": {
+			"type": "realTime",
+			"value": "1h"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"range": "close",
+		"tier": 1
+	},
+	"type": "Spell"
+}

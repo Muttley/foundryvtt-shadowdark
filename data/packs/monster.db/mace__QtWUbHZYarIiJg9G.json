@@ -1,0 +1,33 @@
+{
+	"_id": "QtWUbHZYarIiJg9G",
+	"_key": "!actors.items!k2YdCMGiq3USE8oE.QtWUbHZYarIiJg9G",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Mace",
+	"system": {
+		"attack": {
+			"bonus": 1,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

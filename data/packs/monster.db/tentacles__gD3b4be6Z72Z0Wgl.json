@@ -1,0 +1,33 @@
+{
+	"_id": "gD3b4be6Z72Z0Wgl",
+	"_key": "!actors.items!j7sQ6Km2jSx5twCC.gD3b4be6Z72Z0Wgl",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Tentacles",
+	"system": {
+		"attack": {
+			"bonus": 3,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "Toxin",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

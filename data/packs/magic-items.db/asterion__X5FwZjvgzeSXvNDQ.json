@@ -1,0 +1,54 @@
+{
+	"_id": "X5FwZjvgzeSXvNDQ",
+	"_key": "!items!X5FwZjvgzeSXvNDQ",
+	"effects": [
+		"qrgFpY2mTci173wM",
+		"E7DKiIaxjDrxq64c"
+	],
+	"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
+	"name": "Asterion",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "greatsword",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1"
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d12"
+		},
+		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

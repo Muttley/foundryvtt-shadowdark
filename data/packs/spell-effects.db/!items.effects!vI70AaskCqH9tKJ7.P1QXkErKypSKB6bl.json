@@ -1,0 +1,21 @@
+{
+	"_id": "P1QXkErKypSKB6bl",
+	"_key": "!items.effects!vI70AaskCqH9tKJ7.P1QXkErKypSKB6bl",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+	"label": "Mirror Image",
+	"origin": "Item.vI70AaskCqH9tKJ7",
+	"tint": null,
+	"transfer": true
+}

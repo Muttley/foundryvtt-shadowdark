@@ -1,0 +1,39 @@
+{
+	"_id": "ov1K3L3kuKj8hCUG",
+	"_key": "!items!ov1K3L3kuKj8hCUG",
+	"effects": [
+		"O8bVaWHv6gSA7mPq"
+	],
+	"img": "icons/magic/unholy/strike-hand-glow-pink.webp",
+	"name": "Condition: Enfeebled (Str)",
+	"system": {
+		"abilities": {
+			"str": {
+				"base": "3",
+				"value": "3"
+			}
+		},
+		"category": "condition",
+		"description": "<p>The character is enfeebled.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

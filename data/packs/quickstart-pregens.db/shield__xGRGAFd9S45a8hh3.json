@@ -1,0 +1,38 @@
+{
+	"_id": "xGRGAFd9S45a8hh3",
+	"_key": "!actors.items!4gxXdPgUd0ofz89A.xGRGAFd9S45a8hh3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/shield/shield-round-boss-wood-brown.webp",
+	"name": "Shield",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 2
+		},
+		"baseArmor": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"oneHanded",
+			"shield"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		}
+	},
+	"type": "Armor"
+}

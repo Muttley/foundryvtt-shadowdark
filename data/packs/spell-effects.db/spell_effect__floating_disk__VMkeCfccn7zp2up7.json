@@ -1,0 +1,32 @@
+{
+	"_id": "VMkeCfccn7zp2up7",
+	"_key": "!items!VMkeCfccn7zp2up7",
+	"effects": [
+		"yp7OciSIM5iKgRlU"
+	],
+	"img": "icons/commodities/metal/plate-steel-pink.webp",
+	"name": "Spell Effect: Floating Disk",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

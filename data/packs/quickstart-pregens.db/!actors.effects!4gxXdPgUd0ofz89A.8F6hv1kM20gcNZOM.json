@@ -1,0 +1,27 @@
+{
+	"_id": "8F6hv1kM20gcNZOM",
+	"_key": "!actors.effects!4gxXdPgUd0ofz89A.8F6hv1kM20gcNZOM",
+	"changes": [
+		{
+			"key": "system.bonuses.weaponMastery",
+			"mode": 2,
+			"priority": null,
+			"value": "bastard-sword"
+		}
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 788,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+	"label": "Weapon Mastery",
+	"origin": "Actor.nqP2KUDyB4UnpoFi.Item.q4XASzehX7TfLgjb",
+	"tint": null,
+	"transfer": false
+}

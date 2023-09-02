@@ -1,0 +1,30 @@
+{
+	"_id": "qvTLXopfPX4SvMTr",
+	"_key": "!actors.items!zLDg6vIYEj4wB0lQ.qvTLXopfPX4SvMTr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Slow",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"far"
+		]
+	},
+	"type": "NPC Attack"
+}

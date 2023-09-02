@@ -1,0 +1,30 @@
+{
+	"_id": "Y9E6Qzz05KPTdroV",
+	"_key": "!actors.items!zLDg6vIYEj4wB0lQ.Y9E6Qzz05KPTdroV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Slam",
+	"system": {
+		"attack": {
+			"bonus": 6,
+			"num": 3
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d10"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

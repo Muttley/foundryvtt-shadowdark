@@ -1,0 +1,33 @@
+{
+	"_id": "pcBuNszkAjGRJ0XX",
+	"_key": "!items!pcBuNszkAjGRJ0XX",
+	"effects": [
+		"XGGzrINaGvRwwXPC"
+	],
+	"img": "icons/commodities/bones/bone-broken-grey.webp",
+	"name": "Condition: Fragile",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is fragile and takes double damage.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

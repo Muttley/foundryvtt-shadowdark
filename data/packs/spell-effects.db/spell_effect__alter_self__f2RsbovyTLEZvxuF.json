@@ -1,0 +1,32 @@
+{
+	"_id": "f2RsbovyTLEZvxuF",
+	"_key": "!items!f2RsbovyTLEZvxuF",
+	"effects": [
+		"W3lcwErj4xWLokVF"
+	],
+	"img": "icons/magic/control/energy-stream-link-spiral-orange.webp",
+	"name": "Spell Effect: Alter Self",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

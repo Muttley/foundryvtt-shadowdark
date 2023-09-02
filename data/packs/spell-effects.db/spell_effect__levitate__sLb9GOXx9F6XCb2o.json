@@ -1,0 +1,32 @@
+{
+	"_id": "sLb9GOXx9F6XCb2o",
+	"_key": "!items!sLb9GOXx9F6XCb2o",
+	"effects": [
+		"3Pnp7zzDGQb638LU"
+	],
+	"img": "icons/magic/air/air-smoke-casting.webp",
+	"name": "Spell Effect: Levitate",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,30 @@
+{
+	"_id": "hhkN0EkQbBFGgJfr",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.hhkN0EkQbBFGgJfr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Bite",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

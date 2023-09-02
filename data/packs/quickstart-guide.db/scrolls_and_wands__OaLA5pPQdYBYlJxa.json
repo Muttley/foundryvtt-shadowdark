@@ -1,0 +1,24 @@
+{
+	"_id": "OaLA5pPQdYBYlJxa",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.OaLA5pPQdYBYlJxa",
+	"image": {
+	},
+	"name": "Scrolls and Wands",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p><strong>USING SCROLLS AND WANDS</strong></p><p><span class=\"fontstyle0\">Scrolls and wands contain magic spells. Spellcasters can use them to cast these spells if the spell is on their spell list (even if they don't know the spell).</span> </p><p></p><p>To do so, they must succeed on a spellcasting check with a DC of 10 + the tier of the spell contained in the wand or scroll.</p><p></p><p><span class=\"fontstyle0\"><strong>Failing</strong> </span><span class=\"fontstyle2\">to cast a spell from a wand or scroll does not impact the ability to cast known spells.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /></p><p><strong>SCROLLS</strong></p><p><span class=\"fontstyle0\">After a spellcasting attempt with a scroll, the magical writing disappears from the scroll and it ceases to work. On a </span><span class=\"fontstyle2\"><strong>critical failure</strong>, </span><span class=\"fontstyle0\">casters with mishap tables must roll a mishap.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /></p><p><strong>WANDS</strong></p><p><span class=\"fontstyle0\">On a failed casting attempt, the wand stops working until you complete a rest. On a </span><span class=\"fontstyle2\"><strong>critical failure</strong></span><span class=\"fontstyle0\">, the wand permanently breaks, and casters with mishap tables must roll a mishap.</span> <br style=\"font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;orphans:2;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px\" /></p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

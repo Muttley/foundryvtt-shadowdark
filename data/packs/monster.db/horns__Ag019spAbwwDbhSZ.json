@@ -1,0 +1,30 @@
+{
+	"_id": "Ag019spAbwwDbhSZ",
+	"_key": "!actors.items!c3Nvj86e0Layz3NG.Ag019spAbwwDbhSZ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Horns",
+	"system": {
+		"attack": {
+			"bonus": 6,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d12"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,30 @@
+{
+	"_id": "MmnZChnHM9r3k6Qx",
+	"_key": "!actors.items!Rh2bzqDRC1JF1FiG.MmnZChnHM9r3k6Qx",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Hooves",
+	"system": {
+		"attack": {
+			"bonus": 3,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

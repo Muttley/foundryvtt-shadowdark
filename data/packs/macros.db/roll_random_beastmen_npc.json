@@ -1,9 +1,0 @@
-{
-	"_id": "zNYDtS7XcT3IaQ4t",
-	"author": "EKVggA45fx6fzkCK",
-	"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst namesTableID = pack.index.find(o => o.name === \"The Lost Citadel: Beastmen Names\")._id;\nconst namesTable = await pack.getDocument(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = pack.index.find(o => o.name === \"The Lost Citadel: Beastmen Appearances\")._id;\nconst appearanceTable = await pack.getDocument(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = pack.index.find(o => o.name === \"The Lost Citadel: Beastmen Behaviors\")._id;\nconst behaviorTable = await pack.getDocument(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> Beastman named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
-	"img": "icons/environment/creatures/gargoyle-grey-blue.webp",
-	"name": "Roll Random Beastmen NPC",
-	"scope": "global",
-	"type": "script"
-}

@@ -1,0 +1,30 @@
+{
+	"_id": "D2ICcZFerw1x6D7y",
+	"_key": "!actors.items!cWzG0yEVgIk8ijk6.D2ICcZFerw1x6D7y",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Shortsword",
+	"system": {
+		"attack": {
+			"bonus": 1,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

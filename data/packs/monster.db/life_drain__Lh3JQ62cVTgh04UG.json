@@ -1,0 +1,30 @@
+{
+	"_id": "Lh3JQ62cVTgh04UG",
+	"_key": "!actors.items!Fo9DMEiLgAJzsrJM.Lh3JQ62cVTgh04UG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Life Drain",
+	"system": {
+		"attack": {
+			"bonus": 3,
+			"num": 1
+		},
+		"attackType": "special",
+		"damage": {
+			"bonus": 0,
+			"numDice": 0,
+			"special": "",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,33 @@
+{
+	"_id": "q9Q0JqmkiOQsTesv",
+	"_key": "!actors.items!nhKDBbnOnXXTzfBr.q9Q0JqmkiOQsTesv",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Claw",
+	"system": {
+		"attack": {
+			"bonus": 5,
+			"damage": {
+				"numDice": null
+			},
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

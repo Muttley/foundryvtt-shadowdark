@@ -1,0 +1,21 @@
+{
+	"_id": "7mCWjMOGoEUpJlGc",
+	"_key": "!items.effects!iU2qaminUz77BQ0L.7mCWjMOGoEUpJlGc",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/abilities/mouth-teeth-human.webp",
+	"label": "Condition: Gibbering",
+	"origin": "Item.iU2qaminUz77BQ0L",
+	"tint": null,
+	"transfer": true
+}

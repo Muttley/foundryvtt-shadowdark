@@ -1,0 +1,27 @@
+{
+	"_id": "MPH9ArAfW7y6wJ0I",
+	"_key": "!actors.effects!CVFznZtBMmHG2w4a.MPH9ArAfW7y6wJ0I",
+	"changes": [
+		{
+			"key": "system.bonuses.meleeDamageBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 605,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"label": "Melee Damage Bonus",
+	"origin": "Actor.G5ZB0gdNCtiSAxQc.Item.BYfvFLr6JblzNXU0",
+	"tint": null,
+	"transfer": false
+}

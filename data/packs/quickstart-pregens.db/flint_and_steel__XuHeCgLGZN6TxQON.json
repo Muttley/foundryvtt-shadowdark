@@ -1,0 +1,40 @@
+{
+	"_id": "XuHeCgLGZN6TxQON",
+	"_key": "!actors.items!4gxXdPgUd0ofz89A.XuHeCgLGZN6TxQON",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/commodities/stone/paver-grey.webp",
+	"name": "Flint and Steel",
+	"system": {
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"description": "<p>A small fire starter. With it, routine attempts to light a fire always succeed.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

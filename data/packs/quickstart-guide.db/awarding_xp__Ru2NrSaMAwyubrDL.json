@@ -1,0 +1,24 @@
+{
+	"_id": "Ru2NrSaMAwyubrDL",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.Ru2NrSaMAwyubrDL",
+	"image": {
+	},
+	"name": "Awarding XP",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>Characters gain XP from the valuable treasures and boons they earn during an adventure.</p><p>XP awards don't need to reflect monetary value; boons or fabled items have intangible worth.</p><p></p><p>Treasure has four categories:</p><ul><li><p><strong>Poor</strong> (0 XP): Mundane, low value, ordinary, unexciting.</p></li><li><p><strong>Normal</strong> (1 XP): Good value, worth protecting, useful.</p></li><li><p><strong>Fabulous</strong> (3 XP): Incredible, prized, well-guarded.</p></li><li><p><strong>Legendary</strong> (10 XP): Mythic, unique, quest-worthy.</p></li></ul><p></p><p>Each PC gets the full XP value of each treasure. When PCs gain a new level, their XP resets to zero.</p><p></p><ul><li><p>@UUID[.ymlj4Tnj6NTLDqho]{Sources of XP}</p></li><li><p>@UUID[.Yh34faiv7AHfsKjv]{How Much Gold}</p></li></ul>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 1,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

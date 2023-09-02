@@ -1,0 +1,32 @@
+{
+	"_id": "aAdqy5QwVJrT8JWE",
+	"_key": "!items!aAdqy5QwVJrT8JWE",
+	"effects": [
+		"xJe5blefAwRNfYJk"
+	],
+	"img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+	"name": "Spell Effect: Deaf",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

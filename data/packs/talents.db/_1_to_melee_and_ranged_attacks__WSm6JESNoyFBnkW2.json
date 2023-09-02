@@ -1,0 +1,32 @@
+{
+	"_id": "WSm6JESNoyFBnkW2",
+	"_key": "!items!WSm6JESNoyFBnkW2",
+	"effects": [
+		"ZTDD2HwlrjLbEIQp",
+		"njtjaSNJ4WQCV7n5"
+	],
+	"img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+	"name": "+1 to Melee and Ranged Attacks",
+	"system": {
+		"bonuses": {
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"meleeAttackBonus",
+			"rangedAttackBonus"
+		],
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

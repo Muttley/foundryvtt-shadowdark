@@ -1,0 +1,33 @@
+{
+	"_id": "f8wKgMP0XbD2Wejw",
+	"_key": "!actors.items!WMw4J1wECaLGf3Am.f8wKgMP0XbD2Wejw",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Dart",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"damage": {
+				"numDice": 2
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"near"
+		]
+	},
+	"type": "NPC Attack"
+}

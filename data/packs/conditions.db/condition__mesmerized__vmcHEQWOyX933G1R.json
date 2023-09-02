@@ -1,0 +1,32 @@
+{
+	"_id": "vmcHEQWOyX933G1R",
+	"_key": "!items!vmcHEQWOyX933G1R",
+	"effects": [
+		"3XkiakzqwT78EG4j"
+	],
+	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+	"name": "Condition: Mesmerized",
+	"system": {
+		"category": "condition",
+		"description": "",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910258779
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

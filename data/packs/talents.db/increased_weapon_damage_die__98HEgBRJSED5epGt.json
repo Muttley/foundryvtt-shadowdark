@@ -1,0 +1,22 @@
+{
+	"_id": "98HEgBRJSED5epGt",
+	"_key": "!items!98HEgBRJSED5epGt",
+	"effects": [
+		"UGQKMdNcgb1O8qwy"
+	],
+	"img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+	"name": "Increased Weapon Damage Die",
+	"system": {
+		"bonuses": {
+			"weaponDamageDieD12": "REPLACEME"
+		},
+		"description": "",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

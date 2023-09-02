@@ -1,9 +1,0 @@
-{
-	"_id": "FNPtH7pEbjesVQlL",
-	"author": "EKVggA45fx6fzkCK",
-	"command": "// Macro to draw a ruin encounter and only show it to the GM.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst tableID = pack.index.find(o => o.name === \"Ruin Encounters\")._id;\nconst table = await pack.getDocument(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
-	"img": "icons/environment/wilderness/wall-ruins.webp",
-	"name": "Draw Ruin Encounter",
-	"scope": "global",
-	"type": "script"
-}

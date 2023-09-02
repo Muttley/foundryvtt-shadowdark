@@ -1,0 +1,30 @@
+{
+	"_id": "bPRulQQyhApmzZNE",
+	"_key": "!actors.items!R8d73XhdCOokYFUF.bPRulQQyhApmzZNE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Drink Pain",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"num": 1
+		},
+		"attackType": "special",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"near"
+		]
+	},
+	"type": "NPC Attack"
+}

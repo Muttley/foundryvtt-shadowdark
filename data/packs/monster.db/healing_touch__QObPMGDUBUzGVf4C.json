@@ -1,0 +1,33 @@
+{
+	"_id": "QObPMGDUBUzGVf4C",
+	"_key": "!actors.items!k2YdCMGiq3USE8oE.QObPMGDUBUzGVf4C",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Healing Touch",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

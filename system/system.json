@@ -70,7 +70,7 @@
 			"name": "armor",
 			"label": "Armor",
 			"system": "shadowdark",
-			"path": "packs/armor.db",
+			"path": "packs/armor",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -79,7 +79,7 @@
 			"name": "basic-gear",
 			"label": "Basic Gear",
 			"system": "shadowdark",
-			"path": "packs/basic-gear.db",
+			"path": "packs/basic-gear",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -88,7 +88,7 @@
 			"name": "conditions",
 			"label": "Conditions",
 			"system": "shadowdark",
-			"path": "packs/conditions.db",
+			"path": "packs/conditions",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -97,7 +97,7 @@
 			"name": "macros",
 			"label": "Macros",
 			"system": "shadowdark",
-			"path": "packs/macros.db",
+			"path": "packs/macros",
 			"type": "Macro",
 			"private": false,
 			"flags": {}
@@ -106,7 +106,7 @@
 			"name": "magic-items",
 			"label": "Magic Items",
 			"system": "shadowdark",
-			"path": "packs/magic-items.db",
+			"path": "packs/magic-items",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -115,7 +115,7 @@
 			"name": "monster",
 			"label": "Monster",
 			"system": "shadowdark",
-			"path": "packs/monster.db",
+			"path": "packs/monster",
 			"type": "Actor",
 			"private": false,
 			"flags": {}
@@ -124,7 +124,7 @@
 			"name": "quickstart-guide",
 			"label": "Quickstart Guide",
 			"system": "shadowdark",
-			"path": "packs/quickstart-guide.db",
+			"path": "packs/quickstart-guide",
 			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
@@ -133,7 +133,7 @@
 			"name": "quickstart-pregens",
 			"label": "Quickstart Pregens",
 			"system": "shadowdark",
-			"path": "packs/quickstart-pregens.db",
+			"path": "packs/quickstart-pregens",
 			"type": "Actor",
 			"private": false,
 			"flags": {}
@@ -142,7 +142,7 @@
 			"name": "spells",
 			"label": "Spells",
 			"system": "shadowdark",
-			"path": "packs/spells.db",
+			"path": "packs/spells",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -151,7 +151,7 @@
 			"name": "spell-effects",
 			"label": "Spell Effects",
 			"system": "shadowdark",
-			"path": "packs/spell-effects.db",
+			"path": "packs/spell-effects",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -160,7 +160,7 @@
 			"name": "rollable-tables",
 			"label": "Rollable Tables",
 			"system": "shadowdark",
-			"path": "packs/rollable-tables.db",
+			"path": "packs/rollable-tables",
 			"type": "RollTable",
 			"private": false,
 			"flags": {}
@@ -169,17 +169,8 @@
 			"name": "talents",
 			"label": "Talents",
 			"system": "shadowdark",
-			"path": "packs/talents.db",
+			"path": "packs/talents",
 			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "the-lost-citadel",
-			"label": "The Lost Citadel",
-			"system": "shadowdark",
-			"path": "packs/the-lost-citadel.db",
-			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
 		},
@@ -187,7 +178,7 @@
 			"name": "the-lost-citadel-adventure",
 			"label": "The Lost Citadel: Adventure",
 			"system": "shadowdark",
-			"path": "packs/the-lost-citadel-adventure.db",
+			"path": "packs/the-lost-citadel-adventure",
 			"type": "Adventure",
 			"private": false,
 			"flags": {}
@@ -196,19 +187,34 @@
 			"name": "weapons",
 			"label": "Weapons",
 			"system": "shadowdark",
-			"path": "packs/weapons.db",
+			"path": "packs/weapons",
 			"type": "Item",
 			"private": false,
 			"flags": {}
-		},
+		}
+	],
+	"packFolders": [
 		{
-			"name": "wizard-mishap",
-			"label": "Wizard Mishap",
-			"system": "shadowdark",
-			"path": "packs/wizard-mishap.db",
-			"type": "RollTable",
-			"private": false,
-			"flags": {}
+			"name": "Shadowdark System Data",
+			"sorting": "m",
+			"color": "#22252b",
+			"packs": [
+				"armor",
+				"basic-gear",
+				"conditions",
+				"macros",
+				"magic-items",
+				"monster",
+				"quickstart-guide",
+				"quickstart-pregens",
+				"rollable-tables",
+				"spell-effects",
+				"spells",
+				"talents",
+				"the-lost-citadel-adventure",
+				"weapons",
+			],
+			"folders": []
 		}
 	],
 	"socket": true,

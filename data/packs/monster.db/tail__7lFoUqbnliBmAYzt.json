@@ -1,0 +1,33 @@
+{
+	"_id": "7lFoUqbnliBmAYzt",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.7lFoUqbnliBmAYzt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Tail",
+	"system": {
+		"attack": {
+			"bonus": 5,
+			"damage": {
+				"numDice": 3
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 3,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

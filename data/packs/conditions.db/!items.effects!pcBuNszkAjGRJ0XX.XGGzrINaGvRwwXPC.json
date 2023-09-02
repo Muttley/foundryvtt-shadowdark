@@ -1,0 +1,21 @@
+{
+	"_id": "XGGzrINaGvRwwXPC",
+	"_key": "!items.effects!pcBuNszkAjGRJ0XX.XGGzrINaGvRwwXPC",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/commodities/bones/bone-broken-grey.webp",
+	"label": "Fragile",
+	"origin": "Item.pcBuNszkAjGRJ0XX",
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,36 @@
+{
+	"_id": "DdpVSB1lae5GxHPL",
+	"_key": "!actors.items!uXk56wpEwdiTfAQN.DdpVSB1lae5GxHPL",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-layered-leather-brown-silver.webp",
+	"name": "Leather Armor",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 11,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		}
+	},
+	"type": "Armor"
+}

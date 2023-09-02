@@ -1,0 +1,24 @@
+{
+	"_id": "Y0tTxKFufDZK99Id",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.Y0tTxKFufDZK99Id",
+	"image": {
+	},
+	"name": "Magic Item Attributes",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p><strong>QUALITIES</strong></p><p>A magic item can have some or all of the following qualities.</p><p></p><p><strong>Bonus</strong>. Magic armor and weapons can have a bonus from +0 to +3. Armor with a bonus adds that amount to the AC it grants. A weapon with a bonus adds that amount to its attack and damage rolls.</p><p></p><p>+0 items are the most frequent, and +3 items are very rare.</p><p></p><p><strong>Benefit</strong>. A supernatural benefit gifted to the item's wielder. Most magic items have at least one benefit.</p><p></p><p><strong>Curse</strong>. A negative effect bestowed on the item's wielder. Some magic items have a curse.</p><p></p><p><strong>Personality</strong>. A few magic items are conscious and have personalities that include virtues, flaws, a trait, and an alignment. Magic items with personalities can communicate telepathically with their wielders.</p><p></p><p>@UUID[Compendium.shadowdark.macros.4j286mEmWbt6maGk]{Generate Random Magic Item Name}</p><p></p><p><strong>CONSUMABLES</strong></p><p>A creature must drink an entire potion or use an entire consumable item to gain its effects.</p><p></p><p>The user decides the order in which the effects take place on a consumable item.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 1,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

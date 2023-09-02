@@ -1,0 +1,53 @@
+{
+	"_id": "kJbjoRI9rKem1LGC",
+	"_key": "!actors.items!x3L0onniGSB97CU7.kJbjoRI9rKem1LGC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/weapons/crossbows/crossbow-purple.webp",
+	"name": "Crossbow",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 8,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d6"
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"loading",
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"type": "ranged",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

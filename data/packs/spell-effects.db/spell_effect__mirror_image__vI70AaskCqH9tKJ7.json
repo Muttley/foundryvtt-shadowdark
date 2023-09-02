@@ -1,0 +1,32 @@
+{
+	"_id": "vI70AaskCqH9tKJ7",
+	"_key": "!items!vI70AaskCqH9tKJ7",
+	"effects": [
+		"P1QXkErKypSKB6bl"
+	],
+	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+	"name": "Spell Effect: Mirror Image",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

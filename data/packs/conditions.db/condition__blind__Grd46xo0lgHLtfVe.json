@@ -1,0 +1,33 @@
+{
+	"_id": "Grd46xo0lgHLtfVe",
+	"_key": "!items!Grd46xo0lgHLtfVe",
+	"effects": [
+		"xE08WjX14HjHwSJC"
+	],
+	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
+	"name": "Condition: Blind",
+	"system": {
+		"category": "condition",
+		"description": "<p>The blinded character has disadvantage on tasks requiring sight.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

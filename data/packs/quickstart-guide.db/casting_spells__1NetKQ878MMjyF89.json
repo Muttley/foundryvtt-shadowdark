@@ -1,0 +1,24 @@
+{
+	"_id": "1NetKQ878MMjyF89",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.1NetKQ878MMjyF89",
+	"image": {
+	},
+	"name": "Casting Spells",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>Spellcasters use the raw power of creation and destruction to bend reality, shaping it to the will of their gods or ambitions.</p><p></p><p><strong>Wizard</strong> magic is fickle, complicated, and volatile. Even the most learned mages tread carefully when reaching beyond the veil to grasp arcane energies.</p><p></p><p><strong>Priest</strong> magic is miraculous, sacred, and instinctive. Priests who offend their gods might lose the ability to cast spells until they can undertake penance.</p><p></p><p><strong>CASTING</strong></p><p>When you <strong>cast</strong> a spell, you invoke magic to cause an effect. Casting a spell takes your action.</p><p></p><p>Characters with the spellcasting talent can cast spells.</p><p></p><p>To cast a <strong>wizard</strong> spell you know, make a spellcasting check by rolling 1d20 + your Intelligence modifier.</p><p></p><p>To cast a <strong>priest</strong> spell you know, make a spellcasting check by rolling 1d20 + your Wisdom modifier.</p><p></p><p>The <strong>DC</strong> to successfully cast a spell is 10 + the spell’s tier.</p><p></p><p><strong>RESULTS</strong></p><p>If you <strong>succeed</strong> on your spellcasting check, the spell takes effect.</p><p></p><p>If you <strong>fail</strong> your spellcasting check, the spell does not take effect. You can’t cast that spell again until you complete a rest.</p><p></p><p><strong>CRITICAL SUCCESS</strong></p><p>If you roll a natural 20 on your spellcasting check, you may double one of the spell’s numerical effects. This remains in effect on a <strong>focus</strong> spell (see pg. 56) until your next focus check.</p><p></p><p><strong>CRITICAL FAILURE</strong></p><p>If you roll a natural 1 on your spellcasting check, the spell does not take effect. If it was a focus spell, the spell immediately ends (see pg. 56 for more details on focus spells).</p><p></p><p><strong>Wizard Spell.</strong> If the spell was a wizard spell, you can’t cast that spell again until you successfully complete a rest. You must also roll on the Wizard Mishap table corresponding to the spell’s tier (see pg. 54).</p><p></p><p>@UUID[Compendium.shadowdark.rollable-tables.NiiJKAiBjpPAj5U1]{Wizard Mishap}</p><p></p><p><strong>Priest Spell</strong>. If the spell was a priest spell, your deity is greatly displeased and revokes its power. You can’t cast that spell again until you complete ritualistic penance to your deity and successfully complete a rest.</p><p></p><p><strong>PENANCE</strong></p><p>The GM determines the exact nature of the penance you must undertake based on your deity and alignment.</p><p></p><p>Penance requires a holy quest, ritualistic atonement, or a material sacrifice that you donate or destroy.</p><p></p><p>Inadequate or subversive penance (such as donating your sacrifice to a party member) only displeases your deity further and makes the spell loss permanent.</p><p></p><p><strong>SACRIFICE VALUE</strong></p><p>Tier 1: 5 gp</p><p>Tier 2: 20 gp</p><p>Tier 3: 40 gp</p><p>Tier 4: 90 gp</p><p>Tier 5: 150 gp</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

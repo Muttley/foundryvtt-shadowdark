@@ -1,0 +1,32 @@
+{
+	"_id": "28PPFz1MYTsfPwzh",
+	"_key": "!items!28PPFz1MYTsfPwzh",
+	"effects": [
+		"pTKFUJ3czAqssXCu"
+	],
+	"img": "icons/commodities/materials/material-webbing.webp",
+	"name": "Spell Effect: Web",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</span></p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

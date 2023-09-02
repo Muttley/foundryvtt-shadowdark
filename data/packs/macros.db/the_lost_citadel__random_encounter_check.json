@@ -1,9 +1,0 @@
-{
-	"_id": "C0TN1X2LOAPYWJmD",
-	"author": "EKVggA45fx6fzkCK",
-	"command": "// Macro to draw for encounter in The Lost Citadel and only show it to the GM.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst tableID = pack.index.find(o => o.name === \"The Lost Citadel: Random Encounter Check\")._id;\nconst table = await pack.getDocument(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
-	"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
-	"name": "The Lost Citadel: Random Encounter Check",
-	"scope": "global",
-	"type": "script"
-}

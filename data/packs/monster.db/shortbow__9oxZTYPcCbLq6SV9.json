@@ -1,0 +1,30 @@
+{
+	"_id": "9oxZTYPcCbLq6SV9",
+	"_key": "!actors.items!cWzG0yEVgIk8ijk6.9oxZTYPcCbLq6SV9",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Shortbow",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"far"
+		]
+	},
+	"type": "NPC Attack"
+}

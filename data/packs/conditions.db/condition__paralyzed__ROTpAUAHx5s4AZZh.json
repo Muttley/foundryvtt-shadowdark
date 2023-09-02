@@ -1,0 +1,33 @@
+{
+	"_id": "ROTpAUAHx5s4AZZh",
+	"_key": "!items!ROTpAUAHx5s4AZZh",
+	"effects": [
+		"5Q6foTiBhvvLG7y3"
+	],
+	"img": "icons/magic/water/barrier-ice-crystal-wall-faceted-blue.webp",
+	"name": "Condition: Paralyzed",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is paralyzed.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

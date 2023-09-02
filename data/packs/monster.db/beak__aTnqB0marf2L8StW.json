@@ -1,0 +1,30 @@
+{
+	"_id": "aTnqB0marf2L8StW",
+	"_key": "!actors.items!bILTV7P0d55nACrQ.aTnqB0marf2L8StW",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Beak",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "Blood Drain",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

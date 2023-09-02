@@ -1,0 +1,33 @@
+{
+	"_id": "fguDB67YXgcCXVk6",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.fguDB67YXgcCXVk6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Tentacle",
+	"system": {
+		"attack": {
+			"bonus": 5,
+			"damage": {
+				"numDice": null
+			},
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "Curse",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"near"
+		]
+	},
+	"type": "NPC Attack"
+}

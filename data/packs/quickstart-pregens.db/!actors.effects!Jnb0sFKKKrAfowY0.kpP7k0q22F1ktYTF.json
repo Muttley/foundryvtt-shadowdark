@@ -1,0 +1,27 @@
+{
+	"_id": "kpP7k0q22F1ktYTF",
+	"_key": "!actors.effects!Jnb0sFKKKrAfowY0.kpP7k0q22F1ktYTF",
+	"changes": [
+		{
+			"key": "system.bonuses.advantage",
+			"mode": 2,
+			"priority": null,
+			"value": "magic-missile"
+		}
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 842,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/air/air-smoke-casting.webp",
+	"label": "Spellcasting Advantage on Spell",
+	"origin": "Actor.Jehl9lcqSbCa2zJg.Item.BiArR79VxCvWJduT",
+	"tint": null,
+	"transfer": false
+}

@@ -1,0 +1,182 @@
+{
+	"_id": "x3L0onniGSB97CU7",
+	"_key": "!actors!x3L0onniGSB97CU7",
+	"effects": [
+		"1g9lxw8bhW2NVR0D"
+	],
+	"img": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_portrait.webp",
+	"items": [
+		"iW34N2oI9HFtVH7H",
+		"9Vye8t1cVC0DsXwC",
+		"VcucOtwS5c5RLK4Y",
+		"GeGJd2KX1K5znhFO",
+		"7PV3EnXdLwsYnEKn",
+		"vBLkpFZRLX18CAKF",
+		"oUmSAHtdK7AORBd8",
+		"CxsgtxPTvKncLCss",
+		"n1MVBH6jyMdWE328",
+		"lQI9KwjnfIND3nma",
+		"LRXImQ7OWk4vOjrl",
+		"kJbjoRI9rKem1LGC",
+		"2XLFXhGu9IZRx5zp",
+		"44W0OltnIZLxwMXD",
+		"pCkZzce1B4WcDqKY",
+		"kB2LygBinZXTN337"
+	],
+	"name": "Ralina Biggins",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Ralina Biggins",
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": null,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 15,
+				"bonus": 0
+			},
+			"con": {
+				"base": 9,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 17,
+				"bonus": 0
+			},
+			"int": {
+				"base": 12,
+				"bonus": 0
+			},
+			"str": {
+				"base": 11,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 8,
+				"bonus": 0
+			}
+		},
+		"alignment": "neutral",
+		"ancestry": "Halfling",
+		"attributes": {
+			"ac": {
+				"value": 14
+			},
+			"hp": {
+				"base": 3,
+				"bonus": 0,
+				"max": 3,
+				"value": 3
+			}
+		},
+		"background": "Scout",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponMastery": [
+			]
+		},
+		"class": "thief",
+		"coins": {
+			"cp": 0,
+			"gp": 12,
+			"sp": 0
+		},
+		"deity": "Gede",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"common"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10,
+		"spellcastingAbility": "",
+		"title": "Robber"
+	},
+	"type": "Player"
+}

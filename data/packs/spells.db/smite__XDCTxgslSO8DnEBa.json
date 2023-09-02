@@ -1,0 +1,23 @@
+{
+	"_id": "XDCTxgslSO8DnEBa",
+	"_key": "!items!XDCTxgslSO8DnEBa",
+	"effects": [
+	],
+	"img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+	"name": "Smite",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"properties": [
+		],
+		"range": "near",
+		"tier": 2
+	},
+	"type": "Spell"
+}

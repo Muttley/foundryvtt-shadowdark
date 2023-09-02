@@ -1,0 +1,21 @@
+{
+	"_id": "8N8VrjrYr7pGris5",
+	"_key": "!items.effects!7yyr32LQtbwxDTAF.8N8VrjrYr7pGris5",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/sonic/scream-wail-shout-teal.webp",
+	"label": "Laughing",
+	"origin": "Item.7yyr32LQtbwxDTAF",
+	"tint": null,
+	"transfer": true
+}

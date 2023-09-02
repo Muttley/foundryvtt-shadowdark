@@ -1,0 +1,24 @@
+{
+	"_id": "j8TmwYxWYw1bK8UZ",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.j8TmwYxWYw1bK8UZ",
+	"image": {
+	},
+	"name": "How Often?",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>The GM checks for random encounters during crawling rounds (not combat) based on the environment's danger level.</p><p></p><p><strong>Unsafe</strong>. Check every 3 rounds.</p><p></p><p><strong>Risky</strong>. Check every 2 rounds.</p><p></p><p><strong>Deadly</strong>. Check every round.</p><p></p><p>To check for a random encounter, the GM rolls 1d6. An encounter occurs on a result of 1.</p><p>The GM might also check for an encounter if the characters create a loud disturbance.</p><p>For overland travel, check for random encounters based on hours in place of rounds. </p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

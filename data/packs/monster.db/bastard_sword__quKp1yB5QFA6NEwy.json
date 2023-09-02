@@ -1,0 +1,30 @@
+{
+	"_id": "quKp1yB5QFA6NEwy",
+	"_key": "!actors.items!HO9aYtRdsjHHAYHj.quKp1yB5QFA6NEwy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Bastard Sword",
+	"system": {
+		"attack": {
+			"bonus": 4,
+			"num": 3
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 2,
+			"numDice": 1,
+			"special": "",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

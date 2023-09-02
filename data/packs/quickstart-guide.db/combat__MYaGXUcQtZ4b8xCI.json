@@ -1,0 +1,24 @@
+{
+	"_id": "MYaGXUcQtZ4b8xCI",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.MYaGXUcQtZ4b8xCI",
+	"image": {
+	},
+	"name": "Combat",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>When a fight breaks out, <strong>combat rounds</strong> begin!</p><p></p><p><strong>DETERMINE SUPRISE</strong></p><p>The GM determines if any creatures are unaware of each other. A creature who surprises another takes one turn before a new initiative order is rolled.</p><p></p><p><strong>COMBAT INITIATIVE</strong></p><p>After surprise turns, the GM calls for new initiative. Everyone makes a Dexterity check (the GM uses the highest Dexterity modifier of any monsters).</p><p></p><p>The person with the highest result takes the first turn. Turns go clockwise from that person.</p><p></p><p><strong>COMBAT TURNS</strong></p><p>Characters can take one action and move near on their turn, splitting up the movement however they want. Characters can move near again if they don't take an action.</p><p></p><p><strong>ACTIONS</strong></p><p><strong>Melee Attack</strong>. Melee attacks use melee weapons. Roll 1d20 + your Strength modifier + talent bonuses. You hit the target if your total is equal to or greater than its AC.</p><p></p><p><strong>Ranged Attack</strong>. Ranged attacks use ranged weapons. Roll 1d20 + your Dexterity modifier + talent bonuses. You hit the target if your total is equal to or greater than its AC.</p><p></p><p><strong>Cast A Spell</strong>. Casting a spell takes one action (see Spellcasting on pg. 52).</p><p></p><p><strong>Improvise</strong>. Do an improvised action, such as swinging across a ravine on a vine. The GM might determine it requires a check or attack roll.</p><p></p><p><strong>Multitask</strong>. Characters can do small, parallel tasks on their turns, such as standing up, speaking, activating a magic item, or quaffing a potion. This doesn't typically use their action.</p><p></p><p><strong>DAMAGE</strong></p><p>When you hit a target with an attack or spell, you damage it. Roll your weapon or spell's damage dice + talent bonuses. The GM subtracts that amount from the target's hit points.</p><p></p><p><strong>Knockout</strong>. You can choose to knock a creature unconscious instead of killing it if you reduce it to 0 hit points.</p><p></p><p><strong>Critical Hit</strong>. You deal a critical hit if you roll a natural 20 on an attack roll or spellcasting check.</p><p></p><p>For a <strong>weapon</strong>, double its damage dice on the attack. For a <strong>spell</strong>, you may double one of its numerical effects (see pg. 53).</p><p></p><p><strong>TERRAIN</strong></p><p>Attacking or casting a spell on a creature that is hiding at least half its body behind interposing terrain has disadvantage. If you can't see a creature at all due to terrain, you can't target it. </p><p></p><p>Creatures can only move half the normal distance through terrain that hampers free movement, such as ice or deep mud.</p><p></p><p><strong>MORALE</strong></p><p>Enemies who are reduced to half their ranks (or half their HP for a solo enemy) flee if they fail a DC 15 Wisdom check. For large groups, the GM makes one check with the leader's modifier.</p><p></p><p><strong>DEATH</strong></p><p>A character who goes to 0 HP falls unconscious and is <strong>dying</strong>. A character who goes above 0 HP wakes up and is no longer dying.</p><p></p><p><strong>Death Timer</strong>. A dying character rolls 1d4 + their CON modifier (minimum 1 total) on their turn. They die in that many rounds unless healed or stabilized.</p><p></p><p>On each of the character's subsequent turns, that player rolls a d20. On a natural 20, the character rises with 1 hit point.</p><p></p><p><strong>Stabilize</strong>. An intelligent being can give first aid to a dying creature at close range. On a successful DC 15 Intelligence check, the target stops dying (but is still unconscious).</p><p></p><p><strong>Death</strong>. A character who perishes is retired from the game.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"_id": "2caEkrL6y4JRarjI",
+	"_key": "!actors.items!uqHIz56KiBwTnbTJ.2caEkrL6y4JRarjI",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Longbow",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"far"
+		]
+	},
+	"type": "NPC Attack"
+}

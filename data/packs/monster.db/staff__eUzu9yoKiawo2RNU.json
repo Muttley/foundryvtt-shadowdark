@@ -1,0 +1,33 @@
+{
+	"_id": "eUzu9yoKiawo2RNU",
+	"_key": "!actors.items!vXaqgfDykZPdXnIm.eUzu9yoKiawo2RNU",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Staff",
+	"system": {
+		"attack": {
+			"bonus": -1,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

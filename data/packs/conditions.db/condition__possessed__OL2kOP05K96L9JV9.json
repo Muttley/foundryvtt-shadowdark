@@ -1,0 +1,32 @@
+{
+	"_id": "OL2kOP05K96L9JV9",
+	"_key": "!items!OL2kOP05K96L9JV9",
+	"effects": [
+		"rEjr6iPhgVuFTCWl"
+	],
+	"img": "icons/magic/perception/hand-eye-pink.webp",
+	"name": "Condition: Possessed",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is possessed.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"value": 123910236845
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

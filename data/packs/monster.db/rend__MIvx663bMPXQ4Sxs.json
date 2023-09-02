@@ -1,0 +1,30 @@
+{
+	"_id": "MIvx663bMPXQ4Sxs",
+	"_key": "!actors.items!1Z2r4GggLt8aNrP8.MIvx663bMPXQ4Sxs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Rend",
+	"system": {
+		"attack": {
+			"bonus": 3,
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "TuNrjjaAUwsBmRWV",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.TuNrjjaAUwsBmRWV",
+	"image": {
+	},
+	"name": "Priest Class",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.</p><p></p><p><strong>Weapons</strong>: Club, crossbow, dagger, mace, longsword, staff, warhammer</p><p></p><p><strong>Armor</strong>: All armor and shields</p><p></p><p><strong>Hit Points</strong>: 1d6 per level</p><p></p><p><strong>Languages</strong>. You know either Celestial, Diabolic, or Primordial.</p><p></p><p><strong>@UUID[Compendium.shadowdark.spells.mByUvcHIVEPWscfH]{Turn Undead}.</strong> You know the turn undead spell. It doesn’t count toward your number of known spells.</p><p></p><p><strong>Deity</strong>. Choose a god to serve who matches your alignment (see Deities, pg. 30). You have a holy symbol for your god (it takes up no gear slots).</p><p></p><p><strong>Spellcasting</strong>. You can cast priest spells you know.</p><p></p><p>You know two tier 1 spells of your choice from the priest spell list on pg. 57.</p><p></p><p>Each time you gain a level, you choose new priest spells to learn according to the Priest Spells Known table.</p><p></p><p>For casting priest spells, see Spellcasting on pg. 52.</p><p></p><p>@UUID[Compendium.shadowdark.rollable-tables.CtkKBhsOpV1v5YjX]{Priest Talent}</p><p></p><p>Spells Known by Tier (Amount x Tier)</p><p>Level 1, 2 x 1</p><p>Level 2, 3 x 1</p><p>Level 3, 3 x 1, 1 x 2</p><p>Level 4, 3 x 1, 2 x 2</p><p>Level 5, 3 x 1, 2 x 2, 1 x 3</p><p>Level 6, 3 x 1, 2 x 2, 2 x 3</p><p>Level 7, 3 x 1, 3 x 2, 2 x 3, 1 x 4</p><p>Level 8, 3 x 1, 3 x 2, 2 x 3, 2 x 4</p><p>Level 9, 3 x 1, 3 x 2, 2 x 3, 2 x 4, 1 x 5</p><p>Level 10, 3 x 1, 3 x 2, 3 x 3, 2 x 4, 2 x 5</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

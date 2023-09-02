@@ -1,0 +1,33 @@
+{
+	"_id": "eZhGDmr1vDinPcPs",
+	"_key": "!actors.items!nhKDBbnOnXXTzfBr.eZhGDmr1vDinPcPs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Mandible",
+	"system": {
+		"attack": {
+			"bonus": 5,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d10"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

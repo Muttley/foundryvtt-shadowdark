@@ -1,0 +1,23 @@
+{
+	"_id": "mByUvcHIVEPWscfH",
+	"_key": "!items!mByUvcHIVEPWscfH",
+	"effects": [
+	],
+	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"name": "Turn Undead",
+	"system": {
+		"class": [
+			"priest"
+		],
+		"description": "<p>You rebuke undead creatures, forcing them to flee. You must present a holy symbol to cast this spell.</p><p>Undead creatures within near of you must make a CHA check opposed by your spellcasting check. If a creature fails by 10+ points and is equal to or less than your level, it is destroyed. Otherwise, on a fail, it flees from you for 5 rounds.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"properties": [
+		],
+		"range": "near",
+		"tier": 1
+	},
+	"type": "Spell"
+}

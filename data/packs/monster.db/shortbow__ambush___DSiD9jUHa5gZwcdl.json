@@ -1,0 +1,33 @@
+{
+	"_id": "DSiD9jUHa5gZwcdl",
+	"_key": "!actors.items!AMSI3MCLvpcZpJPO.DSiD9jUHa5gZwcdl",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Shortbow (Ambush)",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"damage": {
+				"numDice": 2
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 2,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"far"
+		]
+	},
+	"type": "NPC Attack"
+}

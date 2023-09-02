@@ -1,0 +1,33 @@
+{
+	"_id": "7yyr32LQtbwxDTAF",
+	"_key": "!items!7yyr32LQtbwxDTAF",
+	"effects": [
+		"8N8VrjrYr7pGris5"
+	],
+	"img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+	"name": "Condition: Laughing",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is laughing.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

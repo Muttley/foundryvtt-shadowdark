@@ -1,0 +1,33 @@
+{
+	"_id": "lTleH1nUTffr49UN",
+	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.lTleH1nUTffr49UN",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Death Touch",
+	"system": {
+		"attack": {
+			"bonus": 5,
+			"damage": {
+				"numDice": null
+			},
+			"num": 2
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "Life Drain",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

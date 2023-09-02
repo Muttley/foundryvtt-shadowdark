@@ -1,0 +1,30 @@
+{
+	"_id": "QholRms19L85E1sf",
+	"_key": "!actors.items!Kw5KEyZVy5ugaTTy.QholRms19L85E1sf",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Longsword",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "BjKQ3nrBCRyrgpbI",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.BjKQ3nrBCRyrgpbI",
+	"image": {
+	},
+	"name": "Fighter Class",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>Blood-soaked gladiators in dented armor, acrobatic duelists with darting swords, or far-eyed elven archers who carve their legends with steel and grit.</p><p></p><p><strong>Weapons</strong>: All weapons</p><p></p><p><strong>Armor</strong>: All armor and shields</p><p></p><p><strong>Hit Points:</strong> 1d8 per level</p><p></p><p><strong>@UUID[Compendium.shadowdark.talents.7JTDRLtHc6FOrIEc]{Hauler}</strong>. Add your Constitution modifier, if positive, to your gear slots.</p><p></p><p><strong>@UUID[Compendium.shadowdark.talents.5bpWuaT0KTNzuzCu]{Weapon Mastery}</strong>. Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p><p></p><p><strong>@UUID[Compendium.shadowdark.talents.F0NXUJcnBOYKzhMi]{Grit (Strength)} / @UUID[Compendium.shadowdark.talents.DGZqkVUtcmxejdm1]{Grit (Dexterity)}</strong>. Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</p><p></p><p>@UUID[Compendium.shadowdark.rollable-tables.dExHo4P85MgpwHd9]{Fighter Talent}</p><p></p><blockquote><p><em>“Nothing sings sweeter than a whistling axe!\"</em></p><p>-Jorbin, dwarf fighter</p></blockquote>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

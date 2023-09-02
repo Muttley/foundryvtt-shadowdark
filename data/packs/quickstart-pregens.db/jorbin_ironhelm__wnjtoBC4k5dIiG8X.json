@@ -1,0 +1,190 @@
+{
+	"_id": "wnjtoBC4k5dIiG8X",
+	"_key": "!actors!wnjtoBC4k5dIiG8X",
+	"effects": [
+		"wszLqj6e6jmOnXY5",
+		"7ROLtptWn3n0wyYD",
+		"IhW2vT4AJmAcpAEZ",
+		"tFkvVttNhz9cBOVQ",
+		"2rr100ySVxZn510u"
+	],
+	"img": "systems/shadowdark/assets/quickstart/pregens/Jorbin_Ironhelm_portrait.webp",
+	"items": [
+		"nLo8dmIQPbQUk3Dz",
+		"V5sHlwgAFiLTc8jy",
+		"eHjjMhwUh3ARPpmL",
+		"6f2SlF0mXnQ51TED",
+		"Cr7qzqzaDWhilQkk",
+		"afq1X2Gkjm0jcH2f",
+		"Thp4uasF5BQqWebW",
+		"yweKz9055Wr2X6KT",
+		"nIlTwpCCTFzsBYGR",
+		"BQhCxvXqYDTbtakk",
+		"lkntck7at9tHx5Qh",
+		"TAct2bpnAxoqzTwy",
+		"veYd8eMEg9lTCHrj",
+		"Q656geesxoWkZ84o",
+		"84S8aIQnu84q0i9h",
+		"MbLMCGcbcfYg4G97",
+		"g21kFm6j6U70zbhc",
+		"eHzYmU6Sg5ZLr4GG",
+		"ys29FVZBITfUFwra"
+	],
+	"name": "Jorbin Ironhelm",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Jorbin Ironhelm",
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": null,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Jorbin_Ironhelm_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 11,
+				"bonus": 0
+			},
+			"con": {
+				"base": 16,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 10,
+				"bonus": 0
+			},
+			"int": {
+				"base": 9,
+				"bonus": 0
+			},
+			"str": {
+				"base": 15,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 12,
+				"bonus": 0
+			}
+		},
+		"alignment": "lawful",
+		"ancestry": "Dwarf",
+		"attributes": {
+			"ac": {
+				"value": 15
+			},
+			"hp": {
+				"base": 8,
+				"bonus": 0,
+				"max": 10,
+				"value": 10
+			}
+		},
+		"background": "Soldier",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponMastery": [
+			]
+		},
+		"class": "fighter",
+		"coins": {
+			"cp": 0,
+			"gp": 4,
+			"sp": 0
+		},
+		"deity": "Madeera",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"common",
+			"dwarvish"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10,
+		"spellcastingAbility": "",
+		"title": "Squire"
+	},
+	"type": "Player"
+}

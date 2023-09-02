@@ -1,0 +1,34 @@
+{
+	"_id": "4vlFF9RY0RInh7uU",
+	"_key": "!actors.items!k8tAgECWIzPIStGU.4vlFF9RY0RInh7uU",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Spear",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 1,
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "<p>Close/Near</p>",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close",
+			"near"
+		]
+	},
+	"type": "NPC Attack"
+}

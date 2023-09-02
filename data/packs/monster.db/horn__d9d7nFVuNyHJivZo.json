@@ -1,0 +1,33 @@
+{
+	"_id": "d9d7nFVuNyHJivZo",
+	"_key": "!actors.items!99s2guSyYKPWp1oy.d9d7nFVuNyHJivZo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Horn",
+	"system": {
+		"attack": {
+			"bonus": 1,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "Knock",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

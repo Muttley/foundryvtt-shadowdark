@@ -1,0 +1,23 @@
+{
+	"_id": "3wYzASfDHA4FKGH3",
+	"_key": "!items!3wYzASfDHA4FKGH3",
+	"effects": [
+	],
+	"img": "icons/magic/fire/explosion-fireball-small-blue.webp",
+	"name": "Misty Step",
+	"system": {
+		"class": [
+			"wizard"
+		],
+		"description": "<p>In a puff of smoke, you teleport a near distance to an area you can see.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"properties": [
+		],
+		"range": "self",
+		"tier": 2
+	},
+	"type": "Spell"
+}

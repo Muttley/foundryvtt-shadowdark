@@ -1,0 +1,24 @@
+{
+	"_id": "zMiJSeTtaxBPfZJc",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.zMiJSeTtaxBPfZJc",
+	"image": {
+	},
+	"name": "Monster",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>See Compendium sidebar and Monster.</p><p></p><p><strong>ARMOR CLASS</strong></p><p>Just like characters, monsters have an AC that denotes how difficult it is to harm them.</p><p></p><p><strong>HIT POINTS</strong></p><p>Calculate a monster's hit points (HP) by rolling a number of d8s per monster level (LV) and adding its CON modifier (minimum 1). You can also use the average total listed.</p><p></p><p><strong>ATTACKS</strong></p><p>Most monsters can make one or two attacks per turn (ATK), but some can make more. Attack bonuses and damage are listed for each.</p><p></p><p><strong>MOVEMENT</strong></p><p>Monsters can typically move (MV) near each turn, but some can move other distances. If a monster has a special mode of movement, such as flying or swimming, it is noted after the distance.</p><p></p><p><strong>STAT MODIFIERS</strong></p><p>Monsters have modifiers listed for Strength (S), Dexterity (D), Constitution (C), Intelligence (I), Wisdom (W), and Charisma (Ch).</p><p></p><p><strong>ALIGNMENT</strong></p><p>All monsters have a typical alignment (AL) for their species. Individual monsters might have a different alignment.</p><p></p><p><strong>SPELLCASTING</strong></p><p>Treat monster spellcasting the same as character spellcasting. For a natural 1 on an INT or CHA spell, roll on the Wizard Mishap tables (pg. 46). A natural 1 on a WIS spell incurs penance. The tier is the spellcasting DC - 10.</p><p></p><p>DARK-ADAPTED</p><p>All non-humanoid monsters are dark-adapted. Their powerful senses allow them to ignore the penalties of total darkness (see pg. 84). Blinding or deafening a monster still hinders it.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 1,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

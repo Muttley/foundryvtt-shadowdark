@@ -1,0 +1,30 @@
+{
+	"_id": "bUU2vCGDg8bUw9d2",
+	"_key": "!actors.items!Rq4WF5z0ZBFHNLub.bUU2vCGDg8bUw9d2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Greataxe",
+	"system": {
+		"attack": {
+			"bonus": 2,
+			"num": 1
+		},
+		"attackType": "physical",
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"special": "",
+			"value": "d8"
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}

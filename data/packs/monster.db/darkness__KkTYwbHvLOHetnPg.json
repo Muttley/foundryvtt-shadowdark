@@ -1,0 +1,33 @@
+{
+	"_id": "KkTYwbHvLOHetnPg",
+	"_key": "!actors.items!0JAEN5FsKjaXXZaA.KkTYwbHvLOHetnPg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Darkness",
+	"system": {
+		"attack": {
+			"bonus": 0,
+			"damage": {
+				"numDice": null
+			},
+			"num": 1
+		},
+		"attackType": "special",
+		"damage": {
+			"bonus": 0,
+			"numDice": 0,
+			"special": "Darkness",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"properties": [
+		],
+		"ranges": [
+			"close"
+		]
+	},
+	"type": "NPC Attack"
+}
