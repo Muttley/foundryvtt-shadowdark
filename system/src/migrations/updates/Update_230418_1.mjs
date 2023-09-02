@@ -2,7 +2,7 @@ import { UpdateBaseSD } from "../UpdateBaseSD.mjs";
 
 export default class Updated_230418_1 extends UpdateBaseSD {
 
-	static version = 240418.1;
+	static version = 230418.1;
 
 	async updateActor(actorData) {
 		if (actorData.type === "NPC") return;

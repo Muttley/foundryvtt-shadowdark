@@ -31,6 +31,43 @@ export default class MigrationRunnerSD {
 		return game.settings.get("shadowdark", "schemaVersion");
 	}
 
+	async fixFuckups() {
+		// Unless you actually set the value, the default is not stored in the db
+		// which causes issues with old schema updates being run unecessarily on
+		// brand new worlds.  So here we set the schemaVersion to the current
+		// system value if it has not already been set by a previous data migration
+		// running.
+		//
+		// We have to special case the 230417.2 schema version as this is where
+		// the migration fix was applied, and we need to make sure this particular
+		// schema update is run.
+		//
+		const systemSchemaVersion = game.system.flags.schemaVersion;
+
+		if (this.currentVersion === 0 && systemSchemaVersion > 230417.2) {
+			await game.settings.set(
+				"shadowdark", "schemaVersion",
+				Number(systemSchemaVersion)
+			);
+		}
+
+		// Some typos in update scripts mean the schema version may be set in
+		// the future.  Luckily only two updates were affected, so we'll resolve
+		// the issue manually if required.
+		if (`${this.currentVersion}` === "240418.1") {
+			await game.settings.set(
+				"shadowdark", "schemaVersion",
+				230418.1
+			);
+		}
+		if (`${this.currentVersion}` === "240419.1") {
+			await game.settings.set(
+				"shadowdark", "schemaVersion",
+				230419.1
+			);
+		}
+	}
+
 	async migrateCompendium(pack) {
 		const documentName = pack.documentName;
 
@@ -231,24 +268,7 @@ export default class MigrationRunnerSD {
 	async run() {
 		shadowdark.log(`Current schema version ${this.currentVersion}`);
 
-		// Unless you actually set the value, the default is not stored in the db
-		// which causes issues with old schema updates being run unecessarily on
-		// brand new worlds.  So here we set the schemaVersion to the current
-		// system value if it has not already been set by a previous data migration
-		// running.
-		//
-		// We have to special case the 230417.2 schema version as this is where
-		// the migration fix was applied, and we need to make sure this particular
-		// schema update is run.
-		//
-		const systemSchemaVersion = game.system.flags.schemaVersion;
-
-		if (this.currentVersion === 0 && systemSchemaVersion > 230417.2) {
-			await game.settings.set(
-				"shadowdark", "schemaVersion",
-				Number(game.system.flags.schemaVersion)
-			);
-		}
+		await this.fixFuckups(); // Doh!
 
 		await this.buildMigrations();
 
