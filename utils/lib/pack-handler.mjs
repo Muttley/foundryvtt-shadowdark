@@ -110,7 +110,7 @@ export default class PackHandler {
 		}
 
 		for (const inputDbDirectory of dbDirectories) {
-			const packFileName = path.basename(inputDbDirectory);
+			const packFileName = path.basename(inputDbDirectory).replace(".db", "");
 
 			if (!await fs.existsSync(this.destination)) {
 				fs.mkdirSync(this.destination, {recursive: true});
@@ -128,17 +128,43 @@ export default class PackHandler {
 				fs.unlinkSync(outputDbFile);
 			}
 
-			const db = ClassicLevel(outputDbFile, {keyEncoding: "utf8", valueEncoding: "json"});
+			const db = new ClassicLevel(outputDbFile, {keyEncoding: "utf8", valueEncoding: "json"});
+			const batch = db.batch();
 
 			const files = fs.readdirSync(inputDbDirectory);
+			const seenKeys = new Set();
 			let inserted = 0;
 			for (const file of files) {
 				const rawData = fs.readFileSync(path.join(inputDbDirectory, file));
 				const dbEntry = file.endsWith(".yml") ? yaml.load(rawData) : JSON.parse(rawData);
 
-				await db.insert(dbEntry);
+				let key = null;
+				if (dbEntry._key) {
+					key = dbEntry._key;
+
+					delete dbEntry._key;
+
+					seenKeys.add(key);
+				}
+
+				if (key !== null) {
+					batch.put(key, dbEntry);
+				}
+				else {
+					batch.put(dbEntry);
+				}
 				inserted++;
 			}
+
+			for (const key of await db.keys().all()) {
+				if (!seenKeys.has(key)) {
+					batch.del(key);
+					Logger.info(`Removed ${key}`);
+				}
+			}
+			await batch.write();
+			await db.close();
+
 			Logger.info(`Inserted ${inserted}/${files.length} records into ${outputDbFile}`);
 		}
 	}
@@ -195,11 +221,16 @@ export default class PackHandler {
 
 		const isLevelDbDirectory = isDirectory && fs.existsSync(lockPath);
 
+		console.log(`isDirectory: ${isDirectory}`);
+		console.log(`isLevelDbDirectory: ${isLevelDbDirectory}`);
+
 		let compendiumDirs = [this.source];
 		if (!isLevelDbDirectory) {
 			compendiumDirs = readdirSync(this.source, {withFileTypes: true})
 				.filter(entry => entry.isDirectory())
 				.map(entry => path.join(this.source, entry.name));
+
+			console.log(`compendiumDirs: ${compendiumDirs}`);
 
 			compendiumDirs = compendiumDirs.filter(entry => {
 				return fs.existsSync(path.join(entry, "LOCK"));
@@ -216,7 +247,7 @@ export default class PackHandler {
 			);
 			const basename = path.basename(compendiumDir);
 
-			const outputDir = path.join(this.destination, basename);
+			const outputDir = path.join(this.destination, `${basename}.db`);
 
 			if (!fs.existsSync(outputDir)) {
 				fs.mkdirSync(outputDir, {recursive: true});
@@ -224,10 +255,16 @@ export default class PackHandler {
 
 			for await (const [key, value] of db.iterator()) {
 				const name = value.name
-					? `${value.name.replace(/[^a-z0-9]/gi, "_").toLowerCase()}`
+					? `${value.name.replace(/[^a-z0-9]/gi, "_").toLowerCase()}__${value._id}`
 					: key;
 
 				value._key = key;
+
+				// Tidy up some junky top-level fields we don't want to store
+				delete value._stats;
+				delete value.ownership;
+				delete value.flags;
+				delete value.sort;
 
 				const basefileName = `${outputDir}/${name}`;
 				switch (this.outputFormat) {
@@ -236,7 +273,11 @@ export default class PackHandler {
 						fs.writeFileSync(`${basefileName}.yml`, yaml.dump(value));
 					case "json":
 						Logger.log(`Writing ${basefileName}.json`);
-						fs.writeFileSync(`${basefileName}.json`, JSON.stringify(value, null, 2));
+
+						let jsonData = stringify(value, {space: "\t", undef: true});
+						jsonData += "\n";
+
+						fs.writeFileSync(`${basefileName}.json`, jsonData);
 				}
 			}
 
@@ -268,14 +309,13 @@ export default class PackHandler {
 
 			for (const doc of docs) {
 				const name = doc.name
-					? `${doc.name.replace(/[^a-z0-9]/gi, "_").toLowerCase()}`
+					? `${doc.name.replace(/[^a-z0-9]/gi, "_").toLowerCase()}__${doc._id}`
 					: doc._id;
 
 				// Tidy up some junky top-level fields we don't want to store
 				delete doc._stats;
 				delete doc.ownership;
 				delete doc.flags;
-				delete doc.folder;
 				delete doc.sort;
 
 				const basefileName = `${outputDir}/${name}`;
