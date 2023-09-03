@@ -74,6 +74,10 @@ SHADOWDARK.chat_card.button.learn_spell: 주문 배우기
 SHADOWDARK.chat_card.button.use_potion: 물약 사용
 SHADOWDARK.chat_card.button.use_scroll: 두루마리 사용
 SHADOWDARK.chat_card.button.use_wand: 마법봉 사용
+SHADOWDARK.chat_card.context.apply_damage_secondary: 2차 피해 적용
+SHADOWDARK.chat_card.context.apply_damage: 피해 적용
+SHADOWDARK.chat_card.context.apply_healing_secondary: 2차 치유 적용
+SHADOWDARK.chat_card.context.apply_healing: 치유 적용
 SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
@@ -174,6 +178,7 @@ SHADOWDARK.effect.tooltip.transfer.header: 아이템이 추가됐을 때 액터�
 SHADOWDARK.effect.unavailable: 비활성화된 효과
 SHADOWDARK.error.general.gm_required: 게임 마스터만 할 수 있습니다.
 SHADOWDARK.error.general.no_character_class: 캐릭터 클래스가 지정되지 않았습니다
+SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 능력이 설정되지 않았습니다
 SHADOWDARK.inventory.coins: 동전
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
@@ -363,8 +368,12 @@ SHADOWDARK.module_art_config.portraits: 포트레이트
 SHADOWDARK.module_art_config.tokens: 토큰
 SHADOWDARK.npc_attack.type.physical: 물리
 SHADOWDARK.npc_attack.type.special: 특수
+SHADOWDARK.npc_move.close: 인접
 SHADOWDARK.npc_move.double_near: 단거리 2배
+SHADOWDARK.npc_move.far: 장거리
 SHADOWDARK.npc_move.near: 단거리
+SHADOWDARK.npc_move.none: 없음
+SHADOWDARK.npc_move.special: 특수
 SHADOWDARK.npc_move.triple_near: 단거리 3배
 SHADOWDARK.range.close_short: 인접
 SHADOWDARK.range.close: 인접
@@ -452,6 +461,7 @@ SHADOWDARK.sheet.player.luck: 운
 SHADOWDARK.sheet.player.melee_attacks: 근접 공격
 SHADOWDARK.sheet.player.notes: 캐릭터 메모
 SHADOWDARK.sheet.player.ranged_attacks: 원거리 공격
+SHADOWDARK.sheet.player.roll_initiative: 우선권 굴림
 SHADOWDARK.sheet.player.spells_tier: 등급
 SHADOWDARK.sheet.player.spells: 주문
 SHADOWDARK.sheet.player.tab.abilities: 능력

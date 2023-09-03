@@ -74,6 +74,10 @@ SHADOWDARK.chat_card.button.learn_spell: Opettele loitsu
 SHADOWDARK.chat_card.button.use_potion: Käytä rohto
 SHADOWDARK.chat_card.button.use_scroll: Käytä loitsukäärö
 SHADOWDARK.chat_card.button.use_wand: Käytä taikasauvaa
+SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
+SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
+SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
@@ -174,6 +178,7 @@ SHADOWDARK.effect.tooltip.transfer.header: Siirrä efekti hahmolle kun esine lis
 SHADOWDARK.effect.unavailable: Poissaolevat efektit
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
 SHADOWDARK.error.general.no_character_class: Hahmoluokka ei ole valittu
+SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.inventory.coins: Kolikot
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
 SHADOWDARK.inventory.item.light_seconds_remaining: Alle minuutti jäljellä
@@ -363,8 +368,12 @@ SHADOWDARK.module_art_config.portraits: Muotokuvat
 SHADOWDARK.module_art_config.tokens: Tokenit
 SHADOWDARK.npc_attack.type.physical: Fyysinen
 SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
+SHADOWDARK.npc_move.close: Close
 SHADOWDARK.npc_move.double_near: '"Lähellä" etäisyys tuplana'
+SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Lähellä
+SHADOWDARK.npc_move.none: None
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: '"Lähellä" etäisyys triplana'
 SHADOWDARK.range.close_short: V
 SHADOWDARK.range.close: Vieressä
@@ -452,6 +461,7 @@ SHADOWDARK.sheet.player.luck: Tuuripiste
 SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäys
 SHADOWDARK.sheet.player.notes: Muistiinpanot
 SHADOWDARK.sheet.player.ranged_attacks: Kantamahyökkäykset
+SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Loitsutaso
 SHADOWDARK.sheet.player.spells: Loitsut
 SHADOWDARK.sheet.player.tab.abilities: Kyvyt

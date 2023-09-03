@@ -74,6 +74,10 @@ SHADOWDARK.chat_card.button.learn_spell: Lär dig besvärjelse
 SHADOWDARK.chat_card.button.use_potion: Använd brygd
 SHADOWDARK.chat_card.button.use_scroll: Använd scroll
 SHADOWDARK.chat_card.button.use_wand: Använd trollspö
+SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
+SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
+SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
@@ -174,6 +178,7 @@ SHADOWDARK.effect.tooltip.transfer.header: Överför effekten till aktören när
 SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.error.general.no_character_class: Inget yrke har valts
+SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.inventory.coins: Mynt
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
@@ -363,8 +368,12 @@ SHADOWDARK.module_art_config.portraits: Porträtt
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Fysisk
 SHADOWDARK.npc_attack.type.special: Special
+SHADOWDARK.npc_move.close: Close
 SHADOWDARK.npc_move.double_near: Dubbelnära
+SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Nära
+SHADOWDARK.npc_move.none: None
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Trippelnära
 SHADOWDARK.range.close_short: K
 SHADOWDARK.range.close: Kroppsnära
@@ -452,6 +461,7 @@ SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
 SHADOWDARK.sheet.player.notes: Karaktärsanteckningar
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
+SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Grad
 SHADOWDARK.sheet.player.spells: Besvärjelser
 SHADOWDARK.sheet.player.tab.abilities: Förmågor
