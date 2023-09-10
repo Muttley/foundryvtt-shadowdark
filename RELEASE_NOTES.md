@@ -1,5 +1,9 @@
 ## v.1.x.x
 
+### Bugfixes
+* [#476] Attack bonuses missing from monsters
+* [#486] Fixed typo in Magic Item Table 1, Result 20
+
 ## v.1.3.7
 
 ### Bugfixes
