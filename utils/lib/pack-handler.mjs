@@ -221,16 +221,11 @@ export default class PackHandler {
 
 		const isLevelDbDirectory = isDirectory && fs.existsSync(lockPath);
 
-		console.log(`isDirectory: ${isDirectory}`);
-		console.log(`isLevelDbDirectory: ${isLevelDbDirectory}`);
-
 		let compendiumDirs = [this.source];
 		if (!isLevelDbDirectory) {
 			compendiumDirs = readdirSync(this.source, {withFileTypes: true})
 				.filter(entry => entry.isDirectory())
 				.map(entry => path.join(this.source, entry.name));
-
-			console.log(`compendiumDirs: ${compendiumDirs}`);
 
 			compendiumDirs = compendiumDirs.filter(entry => {
 				return fs.existsSync(path.join(entry, "LOCK"));
