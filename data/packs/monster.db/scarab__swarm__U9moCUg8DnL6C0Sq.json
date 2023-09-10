@@ -3,6 +3,7 @@
 	"_key": "!actors!U9moCUg8DnL6C0Sq",
 	"effects": [
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
 		"85Q2R6Yq41pn5iqr"
@@ -11,6 +12,7 @@
 	"prototypeToken": {
 		"actorLink": false,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -50,6 +52,7 @@
 		},
 		"lockRotation": false,
 		"name": "Scarab, Swarm",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -59,7 +62,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},

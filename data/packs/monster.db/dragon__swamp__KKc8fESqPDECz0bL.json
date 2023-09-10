@@ -3,6 +3,7 @@
 	"_key": "!actors!KKc8fESqPDECz0bL",
 	"effects": [
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
 		"tBn7SazFzkQlsWve",
@@ -13,6 +14,7 @@
 	"prototypeToken": {
 		"actorLink": false,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -52,6 +54,7 @@
 		},
 		"lockRotation": false,
 		"name": "Dragon, Swamp",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -61,7 +64,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},

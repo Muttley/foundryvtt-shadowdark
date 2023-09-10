@@ -8,12 +8,19 @@
 	"name": "Beak",
 	"system": {
 		"attack": {
-			"bonus": 2,
 			"num": 1
 		},
 		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 2,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
 		"damage": {
-			"bonus": 0,
 			"numDice": 1,
 			"special": "Blood Drain",
 			"value": "d4"

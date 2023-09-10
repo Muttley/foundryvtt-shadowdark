@@ -3,6 +3,7 @@
 	"_key": "!actors!OYtg4Ta4PIpvIZxq",
 	"effects": [
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
 		"ripTEs1d39eR75u3",
@@ -12,6 +13,7 @@
 	"prototypeToken": {
 		"actorLink": false,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -51,6 +53,7 @@
 		},
 		"lockRotation": false,
 		"name": "Rat, Giant",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -60,7 +63,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},

@@ -8,15 +8,19 @@
 	"name": "Spear",
 	"system": {
 		"attack": {
-			"bonus": 2,
-			"damage": {
-				"numDice": null
-			},
 			"num": 1
 		},
 		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 2,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 1
+		},
 		"damage": {
-			"bonus": 1,
 			"numDice": 1,
 			"special": "",
 			"value": "d6"

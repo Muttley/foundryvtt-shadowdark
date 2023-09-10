@@ -8,12 +8,19 @@
 	"name": "Bite",
 	"system": {
 		"attack": {
-			"bonus": 3,
 			"num": 2
 		},
 		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 3,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
 		"damage": {
-			"bonus": 0,
 			"numDice": 1,
 			"special": "",
 			"value": "d8"
