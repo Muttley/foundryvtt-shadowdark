@@ -118,13 +118,17 @@ export default class MigrationRunnerSD {
 				// if the token is linked or has no actor, we don"t need to do anything
 				if (token.actorLink || !game.actors.has(token.actorId)) continue;
 
-				const baseActor = duplicate(game.actors.get(token.actorId));
+				const actorData = duplicate(game.actors.get(token.actorId));
 
-				const actorData = mergeObject(
-					baseActor,
-					token.actorData,
-					{inplace: false}
-				);
+				const delta = token.delta;
+
+				if (delta?.system) {
+					actorData.system = mergeObject(
+						actorData.system,
+						delta.system,
+						{inplace: false}
+					);
+				}
 
 				const updateData = await this.currentMigrationTask.updateActor(actorData);
 
