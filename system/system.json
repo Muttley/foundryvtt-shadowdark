@@ -175,10 +175,10 @@
 			"flags": {}
 		},
 		{
-			"name": "the-lost-citadel-adventure",
-			"label": "The Lost Citadel: Adventure",
+			"name": "adventures",
+			"label": "Adventures",
 			"system": "shadowdark",
-			"path": "packs/the-lost-citadel-adventure",
+			"path": "packs/adventures",
 			"type": "Adventure",
 			"private": false,
 			"flags": {}
@@ -196,25 +196,54 @@
 	"packFolders": [
 		{
 			"name": "Shadowdark System Data",
-			"sorting": "m",
+			"sorting": "a",
 			"color": "#22252b",
 			"packs": [
-				"armor",
-				"basic-gear",
 				"conditions",
 				"macros",
-				"magic-items",
-				"monster",
 				"quickstart-guide",
-				"quickstart-pregens",
 				"rollable-tables",
-				"spell-effects",
-				"spells",
-				"talents",
-				"the-lost-citadel-adventure",
-				"weapons"
+				"adventures"
 			],
-			"folders": []
+			"folders": [
+				{
+					"name": "Characters and Monsters",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"quickstart-pregens",
+						"monster"
+					]
+				},
+				{
+					"name": "Items and Equipment",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"armor",
+						"basic-gear",
+						"magic-items",
+						"weapons"
+					]
+				},
+				{
+					"name": "Spells & Magic",
+					"sorting": "m",
+					"color": "#262626",
+					"packs": [
+						"spells",
+						"spell-effects"
+					]
+				},
+				{
+					"name": "Character Features",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"talents"
+					]
+				}
+			]
 		}
 	],
 	"socket": true,
