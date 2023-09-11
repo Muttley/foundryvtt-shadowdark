@@ -1,0 +1,39 @@
+{
+	"_id": "DeqtKQQzI6HTYvV0",
+	"_key": "!items!DeqtKQQzI6HTYvV0",
+	"effects": [
+	],
+	"folder": "np4FRJ73NRBEQKnS",
+	"img": "icons/equipment/chest/breastplate-scale-grey.webp",
+	"name": "Chainmail",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 13,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 60,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"disadvStealth",
+			"disadvSwim"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		}
+	},
+	"type": "Armor"
+}

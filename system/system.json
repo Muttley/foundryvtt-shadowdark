@@ -67,28 +67,19 @@
 	"styles": ["css/shadowdark.css"],
 	"packs": [
 		{
-			"name": "armor",
-			"label": "Armor",
-			"system": "shadowdark",
-			"path": "packs/armor",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "basic-gear",
-			"label": "Basic Gear",
-			"system": "shadowdark",
-			"path": "packs/basic-gear",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
 			"name": "conditions",
 			"label": "Conditions",
 			"system": "shadowdark",
 			"path": "packs/conditions",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "gear",
+			"label": "Gear",
+			"system": "shadowdark",
+			"path": "packs/gear",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -112,19 +103,28 @@
 			"flags": {}
 		},
 		{
-			"name": "monster",
-			"label": "Monster",
+			"name": "monsters",
+			"label": "Monsters",
 			"system": "shadowdark",
-			"path": "packs/monster",
+			"path": "packs/monsters",
 			"type": "Actor",
 			"private": false,
 			"flags": {}
 		},
 		{
-			"name": "quickstart-guide",
-			"label": "Quickstart Guide",
+			"name": "quickstart-adventures",
+			"label": "Quickstart Adventures",
 			"system": "shadowdark",
-			"path": "packs/quickstart-guide",
+			"path": "packs/quickstart-adventures",
+			"type": "Adventure",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-guides",
+			"label": "Quickstart Guides",
+			"system": "shadowdark",
+			"path": "packs/quickstart-guides",
 			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
@@ -139,11 +139,11 @@
 			"flags": {}
 		},
 		{
-			"name": "spells",
-			"label": "Spells",
+			"name": "rollable-tables",
+			"label": "Rollable Tables",
 			"system": "shadowdark",
-			"path": "packs/spells",
-			"type": "Item",
+			"path": "packs/rollable-tables",
+			"type": "RollTable",
 			"private": false,
 			"flags": {}
 		},
@@ -157,11 +157,11 @@
 			"flags": {}
 		},
 		{
-			"name": "rollable-tables",
-			"label": "Rollable Tables",
+			"name": "spells",
+			"label": "Spells",
 			"system": "shadowdark",
-			"path": "packs/rollable-tables",
-			"type": "RollTable",
+			"path": "packs/spells",
+			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
@@ -173,74 +173,40 @@
 			"type": "Item",
 			"private": false,
 			"flags": {}
-		},
-		{
-			"name": "adventures",
-			"label": "Adventures",
-			"system": "shadowdark",
-			"path": "packs/adventures",
-			"type": "Adventure",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "weapons",
-			"label": "Weapons",
-			"system": "shadowdark",
-			"path": "packs/weapons",
-			"type": "Item",
-			"private": false,
-			"flags": {}
 		}
 	],
 	"packFolders": [
 		{
-			"name": "Shadowdark System Data",
+			"name": "Shadowdark System",
 			"sorting": "a",
 			"color": "#22252b",
 			"packs": [
 				"conditions",
+				"gear",
 				"macros",
-				"quickstart-guide",
+				"magic-items",
+				"monsters",
 				"rollable-tables",
-				"adventures"
+				"spell-effects",
+				"spells"
 			],
 			"folders": [
 				{
-					"name": "Characters and Monsters",
-					"sorting": "a",
-					"color": "#262626",
-					"packs": [
-						"quickstart-pregens",
-						"monster"
-					]
-				},
-				{
-					"name": "Items and Equipment",
-					"sorting": "a",
-					"color": "#262626",
-					"packs": [
-						"armor",
-						"basic-gear",
-						"magic-items",
-						"weapons"
-					]
-				},
-				{
-					"name": "Spells & Magic",
-					"sorting": "m",
-					"color": "#262626",
-					"packs": [
-						"spells",
-						"spell-effects"
-					]
-				},
-				{
-					"name": "Character Features",
+					"name": "Character Options",
 					"sorting": "a",
 					"color": "#262626",
 					"packs": [
 						"talents"
+					]
+				},
+				{
+					"name": "Quickstart",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"quickstart-adventures",
+						"quickstart-guides",
+						"quickstart-pregens"
 					]
 				}
 			]

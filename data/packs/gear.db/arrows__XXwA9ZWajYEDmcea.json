@@ -1,0 +1,41 @@
+{
+	"_id": "XXwA9ZWajYEDmcea",
+	"_key": "!items!XXwA9ZWajYEDmcea",
+	"effects": [
+	],
+	"folder": "0ws7y8D3IktigkiB",
+	"img": "icons/weapons/ammunition/arrows-barbed-white.webp",
+	"name": "Arrows",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 1,
+			"sp": 0
+		},
+		"description": "<p>Ammunition for shortbows or longbows.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 20,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 20,
+			"slots_used": 1
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}
