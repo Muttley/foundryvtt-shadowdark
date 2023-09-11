@@ -1,6 +1,7 @@
 ## v.1.x.x
 
 ### Bugfixes
+* [#431] Mage Armor Active Effect does not change AC
 * [#476] Attack bonuses missing from monsters
 * [#486] Fixed typo in Magic Item Table 1, Result 20
 * [#488] Fixes for locked doors and missing monsters in The Lost Citadel of the Scarlet Minotaur adventure

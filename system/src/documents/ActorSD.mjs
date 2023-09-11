@@ -862,12 +862,12 @@ export default class ActorSD extends Actor {
 		// Add AC from effects
 		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 
-		Actor.updateDocuments([{
+		await Actor.updateDocuments([{
 			_id: this._id,
 			"system.attributes.ac.value": newArmorClass,
 		}]);
 
-		return newArmorClass;
+		return this.system.attributes.ac.value;
 	}
 
 	async usePotion(itemId) {
