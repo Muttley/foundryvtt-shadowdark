@@ -1,12 +1,13 @@
-import SHADOWDARK from "./src/config.mjs";
+import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
+import log from "./src/utils/logging.mjs";
 import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
-import log from "./src/utils/logging.mjs";
+import SHADOWDARK from "./src/config.mjs";
 
-import * as chat from "./src/chat/_module.mjs";
 import * as apps from "./src/apps/_module.mjs";
+import * as chat from "./src/chat/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
@@ -29,6 +30,7 @@ import "./src/testing/index.mjs";
 globalThis.shadowdark = {
 	apps,
 	config: SHADOWDARK,
+	compendiums: CompendiumsSD,
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
