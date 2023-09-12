@@ -158,7 +158,9 @@ export default class ItemSheetSD extends ItemSheet {
 		context.descriptionHTML = await TextEditor.enrichHTML(
 			context.system.description,
 			{
+				secrets: context.item.isOwner,
 				async: true,
+				relativeTo: this.item,
 			}
 		);
 

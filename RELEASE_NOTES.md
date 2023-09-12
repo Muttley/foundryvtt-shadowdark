@@ -3,8 +3,13 @@
 ### Bugfixes
 * [#431] Mage Armor Active Effect does not change AC
 * [#476] Attack bonuses missing from monsters
+* [#482] Can't create or import active effects when not in combat
+* [#483] Secret text doesn't behave correctly
 * [#486] Fixed typo in Magic Item Table 1, Result 20
 * [#488] Fixes for locked doors and missing monsters in The Lost Citadel of the Scarlet Minotaur adventure
+
+### Enhancement
+* [#447] Added ability to easily access filtered compendium items
 
 ## v.1.3.7
 
