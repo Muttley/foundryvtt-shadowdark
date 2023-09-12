@@ -213,7 +213,7 @@ export default class ItemSD extends Item {
 	}
 
 	isMagicItem() {
-		return this.system.magicItem;
+		return this.system.isPhysical && this.system.magicItem;
 	}
 
 	isVersatile() {

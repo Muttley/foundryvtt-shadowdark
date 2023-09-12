@@ -149,8 +149,7 @@
 		"templates": {
 			"common": {
 				"description": "",
-				"properties": [],
-				"magicItem": false
+				"properties": []
 			},
 			"magic": {
 				"class": [],
@@ -171,6 +170,7 @@
 				"canBeEquipped": false,
 				"equipped": false,
 				"isPhysical": true,
+				"magicItem": false,
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
