@@ -17,13 +17,6 @@ export default class ItemSD extends Item {
 
 		// Store the creation time & initiative on the effect
 		if (data.type === "Effect") {
-			if (this.system.duration.type === "rounds" && !game.combat) {
-				ui.notifications.warn(
-					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
-				);
-				return false;
-			}
-
 			const combatTime = (game.combat)
 				? `${game.combat.round}.${game.combat.turn}`
 				: null;

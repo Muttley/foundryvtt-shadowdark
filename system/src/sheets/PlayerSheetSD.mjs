@@ -147,8 +147,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
+		if (await this._effectDropNotAllowed(data)) return false;
+
 		// Talents & Effects may need some user input
-		if (["Talent", "Effect"].includes(item.type)) return this._createItemWithEffect(item);
+		if (["Talent", "Effect"].includes(item.type)) {
+			return this._createItemWithEffect(item);
+		}
 
 		// Activate light spell if dropped onto the sheet
 		if (CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item.id)) {

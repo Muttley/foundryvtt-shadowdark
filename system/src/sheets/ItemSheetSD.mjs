@@ -245,16 +245,23 @@ export default class ItemSheetSD extends ItemSheet {
 		switch (data.type) {
 			case "Item":
 				return this._onDropItemSD(event, data);
+			default:
+				return super._onDrop();
 		}
 	}
 
 	async _onDropItemSD(event, data) {
 		const myType = this.item.type;
 
-		if (!["Potion", "Scroll", "Wand"].includes(myType)) return;
+		// Allow the dropping of spells onto the followin Item types to make
+		// creating them easier
+		//
+		const allowedType = ["Potion", "Scroll", "Wand"].includes(myType);
 
 		const droppedItem = await fromUuid(data.uuid);
-		if (droppedItem.type !== "Spell") return;
+		const isSpellDrop = droppedItem.type === "Spell";
+
+		if (!(allowedType && isSpellDrop)) return super._onDrop();
 
 		const name = game.i18n.format(
 			`SHADOWDARK.item.name_from_spell.${myType}`,

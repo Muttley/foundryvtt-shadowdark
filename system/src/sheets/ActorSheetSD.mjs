@@ -95,6 +95,11 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 	}
 
+	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
+	async emulateItemDrop(data) {
+		return this._onDropItem({}, data);
+	}
+
 	/** @override */
 	async getData(options) {
 		const source = this.actor.toObject();
@@ -172,6 +177,27 @@ export default class ActorSheetSD extends ActorSheet {
 
 	_itemContextMenu(html) {
 		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
+	}
+
+	async _effectDropNotAllowed(data) {
+		const item = await fromUuid(data.uuid);
+
+		if (item.type === "Effect") {
+			if (item.system.duration.type === "rounds" && !game.combat) {
+				ui.notifications.warn(
+					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+				);
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	async _onDropItem(event, data) {
+		if (await this._effectDropNotAllowed(data)) return false;
+
+		return super._onDropItem(event, data);
 	}
 
 	_onItemDelete(itemId) {
@@ -295,11 +321,6 @@ export default class ActorSheetSD extends ActorSheet {
 		const itemId = $(event.currentTarget).data("item-id");
 
 		this.actor.castSpell(itemId);
-	}
-
-	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
-	async emulateItemDrop(data) {
-		return this._onDropItem({}, data);
 	}
 
 	async _onItemCreate(event) {
