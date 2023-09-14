@@ -7,8 +7,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679438600654,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734044,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -27,8 +27,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679438637872,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734044,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117300,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -64,7 +64,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -79,6 +78,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -198,8 +198,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679430516046,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734361,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -216,12 +216,12 @@
 				{
 					"_id": "bHue9K4fSJkmUWNm",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679430570581,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679430585149,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117728,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -237,7 +237,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">In place of attacks, move up to double near in a straight line and make 1 horn attack. If hit, x2 damage.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -248,8 +247,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679430591589,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734354,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117733,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -285,7 +284,6 @@
 							"value": "d10"
 						},
 						"description": "<p>Wielder deals x4 damage on a critical hit.</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -299,8 +297,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679430663175,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734361,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117739,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -336,7 +334,6 @@
 							"value": "d12"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -351,6 +348,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -470,8 +468,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733934,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -488,12 +486,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117084,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -509,7 +507,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -520,8 +517,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733929,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117090,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -557,7 +554,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -571,8 +567,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733934,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117098,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -608,7 +604,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -623,6 +618,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -742,8 +738,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734004,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -760,12 +756,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117285,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -781,7 +777,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -792,8 +787,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734000,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117290,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -829,7 +824,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -843,8 +837,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734004,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117295,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -880,7 +874,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -895,6 +888,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -1014,8 +1008,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734107,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1032,12 +1026,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117328,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -1053,7 +1047,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -1064,8 +1057,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734101,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117333,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1101,7 +1094,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1115,8 +1107,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734107,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117337,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1152,7 +1144,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1167,6 +1158,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -1286,8 +1278,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734311,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1304,12 +1296,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117713,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -1325,7 +1317,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -1336,8 +1327,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734303,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117717,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1373,7 +1364,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1387,8 +1377,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734311,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117722,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1424,7 +1414,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1439,6 +1428,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -1558,8 +1548,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734379,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1576,12 +1566,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117744,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -1597,7 +1587,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -1608,8 +1597,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734375,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117749,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1645,7 +1634,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1659,8 +1647,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734379,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117753,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1696,7 +1684,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1711,6 +1698,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -1830,8 +1818,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734436,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1848,12 +1836,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451962678,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117761,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -1869,7 +1857,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -1880,8 +1867,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734432,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117766,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1917,7 +1904,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1931,8 +1917,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734436,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117770,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1968,7 +1954,6 @@
 							"value": ""
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -1983,6 +1968,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -2102,8 +2088,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734118,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2122,8 +2108,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734118,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117353,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2159,7 +2145,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -2172,12 +2157,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117360,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -2193,7 +2178,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -2205,6 +2189,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -2324,8 +2309,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734078,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2344,8 +2329,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734078,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117305,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2381,7 +2366,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -2394,12 +2378,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117311,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -2415,7 +2399,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -2427,6 +2410,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -2546,8 +2530,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733939,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2566,8 +2550,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733939,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117104,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2603,7 +2587,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -2616,12 +2599,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117113,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -2637,7 +2620,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -2649,6 +2631,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -2768,8 +2751,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733900,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2788,8 +2771,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733900,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117074,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2825,7 +2808,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -2838,12 +2820,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117079,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -2859,7 +2841,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -2871,6 +2852,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -2990,8 +2972,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734203,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3010,8 +2992,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734203,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117602,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3047,7 +3029,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -3060,12 +3041,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117610,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -3081,7 +3062,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -3093,6 +3073,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -3212,8 +3193,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734082,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3232,8 +3213,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734082,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117316,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3269,7 +3250,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -3282,12 +3262,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117321,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -3303,7 +3283,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -3315,6 +3294,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -3434,8 +3414,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734112,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3454,8 +3434,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734112,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117344,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3491,7 +3471,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -3504,12 +3483,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117349,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -3525,7 +3504,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -3537,6 +3515,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -3656,8 +3635,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733884,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3676,8 +3655,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733884,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117048,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3713,7 +3692,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -3726,12 +3704,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117054,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -3747,7 +3725,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -3759,6 +3736,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -3878,8 +3856,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734133,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3898,8 +3876,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734133,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117431,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3935,7 +3913,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -3948,12 +3925,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117435,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -3969,7 +3946,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -3981,6 +3957,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -4100,8 +4077,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733889,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4120,8 +4097,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733889,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117062,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4157,7 +4134,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4170,12 +4146,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117067,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -4191,7 +4167,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -4203,6 +4178,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -4322,8 +4298,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679440338081,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734216,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4342,8 +4318,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440389949,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734216,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117615,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4379,7 +4355,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4394,6 +4369,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -4513,8 +4489,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734297,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4531,12 +4507,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679440791542,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117690,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -4552,7 +4528,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -4563,8 +4538,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734288,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117698,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4600,7 +4575,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4614,8 +4588,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734297,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117704,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4651,7 +4625,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4666,6 +4639,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -4785,8 +4759,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734237,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4803,12 +4777,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679440791542,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117623,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -4824,7 +4798,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -4835,8 +4808,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734229,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117631,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4872,7 +4845,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4886,8 +4858,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734237,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117638,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4923,7 +4895,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -4938,6 +4909,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -5057,8 +5029,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734265,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5075,12 +5047,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679440791542,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117648,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -5096,7 +5068,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -5107,8 +5078,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734256,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117655,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5144,7 +5115,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5158,8 +5128,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734265,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117663,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5195,7 +5165,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5210,6 +5179,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -5329,8 +5299,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386734281,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5347,12 +5317,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679440791542,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117669,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -5368,7 +5338,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -5379,8 +5348,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734272,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117676,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5416,7 +5385,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5430,8 +5398,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734281,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117682,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5467,7 +5435,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5482,6 +5449,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -5601,8 +5569,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733810,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5621,8 +5589,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733810,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116884,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5658,7 +5626,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5671,12 +5638,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116893,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -5692,7 +5659,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -5704,6 +5670,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -5823,8 +5790,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733836,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5843,8 +5810,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733836,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116964,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5880,7 +5847,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -5893,12 +5859,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116972,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -5914,7 +5880,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -5926,6 +5891,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -6045,8 +6011,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733801,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6065,8 +6031,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733801,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116857,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6102,7 +6068,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -6115,12 +6080,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116869,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -6136,7 +6101,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -6148,6 +6112,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -6267,8 +6232,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733844,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6287,8 +6252,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733844,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116985,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6324,7 +6289,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -6337,12 +6301,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116998,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -6358,7 +6322,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -6370,6 +6333,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -6489,8 +6453,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733826,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6509,8 +6473,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733826,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116944,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6546,7 +6510,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -6559,12 +6522,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116952,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -6580,7 +6543,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -6592,6 +6554,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -6711,8 +6674,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733862,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6731,8 +6694,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733862,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117004,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6768,7 +6731,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -6781,12 +6743,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117010,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -6802,7 +6764,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -6814,6 +6775,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -6933,8 +6895,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733868,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6953,8 +6915,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733868,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117017,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6990,7 +6952,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -7003,12 +6964,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117024,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -7024,7 +6985,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -7036,6 +6996,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -7155,8 +7116,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733818,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7175,8 +7136,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733818,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116902,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7212,7 +7173,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -7225,12 +7185,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116928,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -7246,7 +7206,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -7258,6 +7217,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -7377,8 +7337,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694386733876,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7397,8 +7357,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733876,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117033,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7434,7 +7394,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -7447,12 +7406,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "10.291",
+						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "aUdswNccq2u0SxEP",
-						"modifiedTime": 1679451339469,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117041,
 						"systemId": "shadowdark",
-						"systemVersion": "0.1.0"
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -7468,7 +7427,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -7480,6 +7438,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -7599,8 +7558,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694390101480,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7619,8 +7578,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": null,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386733747,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116406,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7655,7 +7614,6 @@
 							"value": "d8"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -7667,12 +7625,12 @@
 				{
 					"_id": "ViAocDndtudFnp38",
 					"_stats": {
-						"coreVersion": null,
+						"coreVersion": "11.308",
 						"createdTime": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
-						"systemId": null,
-						"systemVersion": null
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710116827,
+						"systemId": "shadowdark",
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -7687,7 +7645,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p>When standing still, looks exactly like a suit of armor.</p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -7697,6 +7654,7 @@
 			"name": "Animated Armor",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -7816,8 +7774,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694390464701,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464392,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7834,12 +7792,12 @@
 				{
 					"_id": "RdRiN1ZsfjQf8leu",
 					"_stats": {
-						"coreVersion": null,
+						"coreVersion": "11.308",
 						"createdTime": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
-						"systemId": null,
-						"systemVersion": null
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117553,
+						"systemId": "shadowdark",
+						"systemVersion": "1.3.7"
 					},
 					"effects": [
 					],
@@ -7854,7 +7812,6 @@
 					"sort": 0,
 					"system": {
 						"description": "<p><span class=\"fontstyle0\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span></p>",
-						"magicItem": false,
 						"properties": [
 						]
 					},
@@ -7865,8 +7822,8 @@
 					"_stats": {
 						"coreVersion": "11.308",
 						"createdTime": null,
-						"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-						"modifiedTime": 1694386734172,
+						"lastModifiedBy": "mu8H7NbWc0seFWcA",
+						"modifiedTime": 1694710117561,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7901,7 +7858,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"magicItem": false,
 						"properties": [
 						],
 						"ranges": [
@@ -7914,6 +7870,7 @@
 			"name": "Ochre Jelly",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"prototypeToken": {
@@ -8042,8 +7999,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385630331,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8065,8 +8022,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385630331,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8151,8 +8108,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385630331,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8494,8 +8451,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385630331,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8557,8 +8514,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391681709,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391681709,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8579,8 +8536,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679272614405,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694710165146,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8688,6 +8645,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -8723,7 +8681,7 @@
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
-					"versatile"
+					"Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"
 				],
 				"quantity": 1,
 				"range": "close",
@@ -8742,8 +8700,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679586455677,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8758,6 +8716,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -8799,8 +8758,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8815,6 +8774,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -8846,8 +8806,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8862,6 +8822,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -8903,8 +8864,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8919,6 +8880,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -8960,8 +8922,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8976,6 +8938,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9017,8 +8980,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9033,6 +8996,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9074,8 +9038,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9093,6 +9057,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9124,8 +9089,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9140,6 +9105,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9181,8 +9147,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9197,6 +9163,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9228,8 +9195,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9244,6 +9211,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9275,8 +9243,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679272510579,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694710165141,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9353,6 +9321,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9388,7 +9357,7 @@
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
-					"twoHanded"
+					"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
 				],
 				"quantity": 1,
 				"range": "close",
@@ -9407,8 +9376,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9423,6 +9392,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9454,8 +9424,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9470,6 +9440,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 200000,
@@ -9501,8 +9472,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679271886436,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9520,6 +9491,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9561,8 +9533,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679664658053,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9577,6 +9549,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9618,8 +9591,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9634,6 +9607,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9665,8 +9639,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679666340876,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9681,6 +9655,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9722,8 +9697,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9741,6 +9716,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -9782,8 +9758,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1678531929118,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9801,6 +9777,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 200000,
@@ -9854,8 +9831,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1678531204277,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694710165163,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9873,6 +9850,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 150000,
@@ -9895,8 +9873,8 @@
 				"isPhysical": true,
 				"magicItem": false,
 				"properties": [
-					"oneHanded",
-					"shield"
+					"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
+					"Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"
 				],
 				"quantity": 1,
 				"slots": {
@@ -9912,8 +9890,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679672838613,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9928,6 +9906,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -9969,8 +9948,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679273406052,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694710165170,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10047,6 +10026,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -10082,7 +10062,7 @@
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
-					"thrown"
+					"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
 				],
 				"quantity": 1,
 				"range": "near",
@@ -10101,8 +10081,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679680311866,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10117,6 +10097,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -10158,8 +10139,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679270752650,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10177,6 +10158,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 100000,
@@ -10214,8 +10196,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679272766601,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10230,6 +10212,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 200000,
@@ -10283,8 +10266,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679680732589,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10299,6 +10282,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -10340,8 +10324,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679680844732,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629841,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464544,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10356,6 +10340,7 @@
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"sort": 0,
@@ -10399,8 +10384,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679223943622,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694385629885,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464582,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10415,6 +10400,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"pages": [
@@ -11660,8 +11646,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1679223110131,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694390460469,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709464772,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -12829,6 +12815,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"padding": 0.25,
@@ -35935,8 +35922,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391733560,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -35953,6 +35940,7 @@
 			"name": "The Lost Citadel: Ettercap Behaviors",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36125,8 +36113,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391907357,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36143,6 +36131,7 @@
 			"name": "The Lost Citadel: Random Encounters",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36283,8 +36272,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391731549,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36301,6 +36290,7 @@
 			"name": "The Lost Citadel: Ettercap Appearances",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36473,8 +36463,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391712064,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36491,6 +36481,7 @@
 			"name": "The Lost Citadel: Beastmen Behaviors",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36663,8 +36654,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391721997,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36681,6 +36672,7 @@
 			"name": "The Lost Citadel: Beastmen Names",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36853,8 +36845,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391742889,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36871,6 +36863,7 @@
 			"name": "The Lost Citadel: Rumors",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -36979,8 +36972,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391704964,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -36997,6 +36990,7 @@
 			"name": "The Lost Citadel: Beastmen Appearances",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -37169,8 +37163,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391872020,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -37187,6 +37181,7 @@
 			"name": "The Lost Citadel: Random Encounter Check",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
@@ -37231,8 +37226,8 @@
 			"_stats": {
 				"coreVersion": "11.308",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "s0MPj2qFjeG6MP1N",
-				"modifiedTime": 1694391736118,
+				"lastModifiedBy": "mu8H7NbWc0seFWcA",
+				"modifiedTime": 1694709465020,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -37249,6 +37244,7 @@
 			"name": "The Lost Citadel: Ettercap Names",
 			"ownership": {
 				"default": 0,
+				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
 			},
 			"replacement": true,
