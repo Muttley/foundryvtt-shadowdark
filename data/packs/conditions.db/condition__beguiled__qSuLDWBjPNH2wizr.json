@@ -1,0 +1,21 @@
+{
+	"_id": "qSuLDWBjPNH2wizr",
+	"_key": "!items.effects!4OcLCPW1pxzTua7d.qSuLDWBjPNH2wizr",
+	"changes": [
+	],
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+	"name": "Condition: Beguiled",
+	"origin": "Item.4OcLCPW1pxzTua7d",
+	"tint": null,
+	"transfer": true
+}

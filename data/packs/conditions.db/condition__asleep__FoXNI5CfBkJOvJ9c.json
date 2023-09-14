@@ -4,6 +4,7 @@
 	"effects": [
 		"9LKEdqM5gksbj8xV"
 	],
+	"folder": null,
 	"img": "icons/magic/control/sleep-bubble-purple.webp",
 	"name": "Condition: Asleep",
 	"system": {
@@ -15,6 +16,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

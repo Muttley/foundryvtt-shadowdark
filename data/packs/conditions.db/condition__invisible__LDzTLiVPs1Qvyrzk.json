@@ -4,6 +4,7 @@
 	"effects": [
 		"LmXXpHviIuB684gX"
 	],
+	"folder": null,
 	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
 	"name": "Condition: Invisible",
 	"system": {
@@ -15,6 +16,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

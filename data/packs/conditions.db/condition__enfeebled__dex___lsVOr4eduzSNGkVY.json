@@ -4,6 +4,7 @@
 	"effects": [
 		"O8bVaWHv6gSA7mPq"
 	],
+	"folder": null,
 	"img": "icons/magic/unholy/strike-hand-glow-pink.webp",
 	"name": "Condition: Enfeebled (Dex)",
 	"system": {
@@ -24,6 +25,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

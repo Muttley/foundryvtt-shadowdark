@@ -4,6 +4,7 @@
 	"effects": [
 		"gbK3h5sv3mNm3v3R"
 	],
+	"folder": null,
 	"img": "icons/magic/water/barrier-ice-water-cube.webp",
 	"name": "Condition: Stupified",
 	"system": {
@@ -15,6 +16,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

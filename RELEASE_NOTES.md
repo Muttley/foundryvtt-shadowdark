@@ -10,6 +10,7 @@
 
 ### Enhancement
 * [#447] Added ability to easily access filtered compendium items
+* [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
 
 ## v.1.3.7
 

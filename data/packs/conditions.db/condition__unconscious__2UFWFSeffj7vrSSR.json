@@ -4,6 +4,7 @@
 	"effects": [
 		"iTrME6gdEDXnxloZ"
 	],
+	"folder": null,
 	"img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
 	"name": "Condition: Unconscious",
 	"system": {
@@ -15,6 +16,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

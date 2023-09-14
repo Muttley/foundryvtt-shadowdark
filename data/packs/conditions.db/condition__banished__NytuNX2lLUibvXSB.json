@@ -3,6 +3,7 @@
 	"_key": "!items!NytuNX2lLUibvXSB",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
 	"name": "Condition: Banished",
 	"system": {
@@ -14,6 +15,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",

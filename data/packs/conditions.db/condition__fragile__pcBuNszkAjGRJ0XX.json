@@ -4,6 +4,7 @@
 	"effects": [
 		"XGGzrINaGvRwwXPC"
 	],
+	"folder": null,
 	"img": "icons/commodities/bones/bone-broken-grey.webp",
 	"name": "Condition: Fragile",
 	"system": {
@@ -15,6 +16,14 @@
 		},
 		"effectPanel": {
 			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
 		},
 		"magicItem": false,
 		"predefinedEffects": "",
