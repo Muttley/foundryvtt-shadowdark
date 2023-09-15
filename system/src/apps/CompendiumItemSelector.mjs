@@ -37,7 +37,7 @@ export default class CompendiumItemSelector extends FormApplication {
 	async decorateName(item) {
 		// By default we just use the name, but this can be overriden by each
 		// selector class if needed
-		item.decoratedName = item.name;
+		return item.name;
 	}
 
 	async getAllItemData() {
@@ -46,7 +46,7 @@ export default class CompendiumItemSelector extends FormApplication {
 		this.currentItems = await this.getCurrentItems() ?? [];
 
 		for (const item of this.availableItems) {
-			await this.decorateName(item);
+			item.decoratedName = await this.decorateName(item);
 		}
 	}
 

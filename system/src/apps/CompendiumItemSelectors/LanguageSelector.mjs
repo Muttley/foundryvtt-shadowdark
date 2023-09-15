@@ -12,12 +12,7 @@ export default class LanguageSelector extends CompendiumItemSelector {
 
 	async decorateName(item) {
 		// Decorate rare languages so they're easy to spot in the selector
-		if (item.system.rarity === "rare") {
-			item.decoratedName = `*${item.name}`;
-		}
-		else {
-			item.decoratedName = item.name;
-		}
+		return item.system.rarity === "rare" ? `*${item.name}` : item.name;
 	}
 
 	async getAvailableItems() {
