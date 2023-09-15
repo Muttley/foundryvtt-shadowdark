@@ -34,10 +34,20 @@ export default class CompendiumItemSelector extends FormApplication {
 		super.activateListeners(html);
 	}
 
+	async decorateName(item) {
+		// By default we just use the name, but this can be overriden by each
+		// selector class if needed
+		item.decoratedName = item.name;
+	}
+
 	async getAllItemData() {
 		this.availableItems = await this.getAvailableItems() ?? [];
 		this.currentItemUuids = await this.getUuids() ?? [];
 		this.currentItems = await this.getCurrentItems() ?? [];
+
+		for (const item of this.availableItems) {
+			await this.decorateName(item);
+		}
 	}
 
 	async getCurrentItems() {

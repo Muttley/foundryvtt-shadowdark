@@ -16,7 +16,7 @@
 							title="Remove Item"
 							data-item-index="{{index}}"
 						></i>
-						{{item.name}}
+						{{item.decoratedName}}
 					</a>
 				</div>
 			{{/each}}
@@ -35,7 +35,7 @@
 			{{#each itemChoices}}
 				<option
 					data-uuid="{{this.uuid}}"
-					value="{{this.name}}"
+					value="{{this.decoratedName}}"
 				></option>
 			{{/each}}
 		</datalist>

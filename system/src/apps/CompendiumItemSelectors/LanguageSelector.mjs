@@ -10,6 +10,16 @@ export default class LanguageSelector extends CompendiumItemSelector {
 		return game.i18n.localize("SHADOWDARK.dialog.select_languages.title");
 	}
 
+	async decorateName(item) {
+		// Decorate rare languages so they're easy to spot in the selector
+		if (item.system.rarity === "rare") {
+			item.decoratedName = `*${item.name}`;
+		}
+		else {
+			item.decoratedName = item.name;
+		}
+	}
+
 	async getAvailableItems() {
 		return await shadowdark.compendiums.languages();
 	}

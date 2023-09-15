@@ -1,6 +1,5 @@
 // Property selector applications
 export {default as NpcAttackRangesSD} from "./NpcAttackRangesSD.mjs";
-export {default as PlayerLanguagesSD} from "./PlayerLanguagesSD.mjs";
 export {default as SpellCasterClassSD} from "./SpellCasterClassSD.mjs";
 
 export {default as EffectPanelSD} from "./EffectPanelSD.mjs";
