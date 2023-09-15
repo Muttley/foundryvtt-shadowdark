@@ -3,6 +3,7 @@
 	"_key": "!items!SHQa9bCk8v8wQweV",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
 	"name": "Knock",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "near",
 		"tier": 2
 	},

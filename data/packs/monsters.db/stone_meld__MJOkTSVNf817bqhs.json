@@ -8,9 +8,7 @@
 	"name": "Stone Meld",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">2/day, underground only. Turn invisible for 3 rounds.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

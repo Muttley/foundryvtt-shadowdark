@@ -4,6 +4,7 @@
 	"effects": [
 		"OU9XGvWpbh2ADVNy"
 	],
+	"folder": null,
 	"img": "icons/magic/control/sihouette-hold-beam-green.webp",
 	"name": "Knack (Spellcasting)",
 	"system": {
@@ -14,8 +15,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

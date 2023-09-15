@@ -3,6 +3,7 @@
 	"_key": "!items!FeoRamUTz5jakMJ8",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/creatures/invertebrates/tick-cross-glowing-purple.webp",
 	"name": "Foebane",
 	"system": {
@@ -24,8 +25,6 @@
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"range": "",
 		"slots": {

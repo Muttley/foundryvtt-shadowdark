@@ -3,6 +3,7 @@
 	"_key": "!items!QV93CYmgcgJ3UCPf",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
 	"name": "Restorative",
 	"system": {
@@ -24,8 +25,6 @@
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"range": "",
 		"slots": {

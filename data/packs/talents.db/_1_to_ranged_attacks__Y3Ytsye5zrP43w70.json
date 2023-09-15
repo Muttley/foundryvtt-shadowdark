@@ -4,6 +4,7 @@
 	"effects": [
 		"ODBe0yE8vkVOD2qZ"
 	],
+	"folder": null,
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "+1 to Ranged Attacks",
 	"system": {
@@ -15,9 +16,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"rangedAttackBonus"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

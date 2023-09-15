@@ -3,6 +3,7 @@
 	"_key": "!items!dBBfp7KpHXBcSEjg",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/sonic/bell-alarm-red-purple.webp",
 	"name": "Alarm",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "close",
 		"tier": 1
 	},

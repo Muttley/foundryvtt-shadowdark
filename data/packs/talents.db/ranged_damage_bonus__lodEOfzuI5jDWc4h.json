@@ -1,0 +1,30 @@
+{
+	"_id": "lodEOfzuI5jDWc4h",
+	"_key": "!items.effects!2IfYKGhWxyd3Ldr5.lodEOfzuI5jDWc4h",
+	"changes": [
+		{
+			"key": "system.bonuses.rangedDamageBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Ranged Damage Bonus",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

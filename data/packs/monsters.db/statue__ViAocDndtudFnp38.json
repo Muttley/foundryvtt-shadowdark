@@ -8,9 +8,7 @@
 	"name": "Statue",
 	"system": {
 		"description": "<p>When standing still, looks exactly like a suit of armor.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

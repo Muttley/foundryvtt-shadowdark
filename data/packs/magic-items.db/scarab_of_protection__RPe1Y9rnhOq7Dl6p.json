@@ -3,9 +3,11 @@
 	"_key": "!items!RPe1Y9rnhOq7Dl6p",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/treasure/broach-gold-ruby.webp",
 	"name": "Scarab of Protection",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

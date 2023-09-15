@@ -8,9 +8,7 @@
 	"name": "Blood Drain",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">A</span><span class=\"fontstyle2\">ttach to bitten target; auto-hit the next round. DC 9 STR on turn to remove.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

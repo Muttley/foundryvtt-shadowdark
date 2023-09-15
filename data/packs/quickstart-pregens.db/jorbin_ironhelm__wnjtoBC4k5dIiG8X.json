@@ -8,6 +8,7 @@
 		"tFkvVttNhz9cBOVQ",
 		"2rr100ySVxZn510u"
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Jorbin_Ironhelm_portrait.webp",
 	"items": [
 		"nLo8dmIQPbQUk3Dz",
@@ -34,6 +35,7 @@
 	"prototypeToken": {
 		"actorLink": true,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -73,6 +75,7 @@
 		},
 		"lockRotation": false,
 		"name": "Jorbin Ironhelm",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -82,7 +85,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": true,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -150,6 +153,7 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
+			"damageMultiplier": 1,
 			"gearSlots": 0,
 			"hauler": false,
 			"lightSource": "",
@@ -158,6 +162,8 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
 			"weaponMastery": [
 			]
 		},

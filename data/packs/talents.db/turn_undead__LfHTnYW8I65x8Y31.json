@@ -3,6 +3,7 @@
 	"_key": "!items!LfHTnYW8I65x8Y31",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
 	"name": "Turn Undead",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "class"
 	},
 	"type": "Talent"

@@ -3,6 +3,7 @@
 	"_key": "!items!ItoZZ0nli29N5d7G",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/sonic/scream-wail-shout-teal.webp",
 	"name": "Blind/Deafen",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "near",
 		"tier": 2
 	},

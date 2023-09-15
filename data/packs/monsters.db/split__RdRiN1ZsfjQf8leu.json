@@ -8,9 +8,7 @@
 	"name": "Split",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

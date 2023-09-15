@@ -3,6 +3,7 @@
 	"_key": "!items!9gjMszk1mGwEcSo6",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Hold Person",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "near",
 		"tier": 2
 	},

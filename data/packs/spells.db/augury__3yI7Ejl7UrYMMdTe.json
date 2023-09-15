@@ -3,6 +3,7 @@
 	"_key": "!items!3yI7Ejl7UrYMMdTe",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
 	"name": "Augury",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "self",
 		"tier": 2
 	},

@@ -1,0 +1,30 @@
+{
+	"_id": "1g9lxw8bhW2NVR0D",
+	"_key": "!actors.effects!x3L0onniGSB97CU7.1g9lxw8bhW2NVR0D",
+	"changes": [
+		{
+			"key": "system.bonuses.advantage",
+			"mode": 2,
+			"priority": null,
+			"value": "initiative"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 737,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"name": "Initiative Advantage",
+	"origin": "Actor.x3L0onniGSB97CU7.Item.kB2LygBinZXTN337",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

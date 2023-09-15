@@ -3,6 +3,7 @@
 	"_key": "!items!DGZqkVUtcmxejdm1",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/environment/people/infantry.webp",
 	"name": "Grit (Dexterity)",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "class"
 	},
 	"type": "Talent"

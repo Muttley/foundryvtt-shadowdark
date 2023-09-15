@@ -13,11 +13,7 @@
 		},
 		"description": "<p>Gain advantage on initiative rolls (reroll if duplicate)</p>",
 		"level": null,
-		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"initAdvantage"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

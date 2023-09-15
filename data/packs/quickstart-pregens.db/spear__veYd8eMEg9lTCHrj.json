@@ -16,8 +16,10 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
-			"damageBonus": 0
+			"damageBonus": 0,
+			"damageMultiplier": 1
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
@@ -36,7 +38,7 @@
 		"isPhysical": true,
 		"magicItem": false,
 		"properties": [
-			"thrown"
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
 		],
 		"quantity": 1,
 		"range": "near",

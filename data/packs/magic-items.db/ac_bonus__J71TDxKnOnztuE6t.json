@@ -1,0 +1,30 @@
+{
+	"_id": "J71TDxKnOnztuE6t",
+	"_key": "!items.effects!2Ht3xGj1QvHt3znG.J71TDxKnOnztuE6t",
+	"changes": [
+		{
+			"key": "system.bonuses.acBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/shield-block-gray-orange.webp",
+	"name": "AC Bonus",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

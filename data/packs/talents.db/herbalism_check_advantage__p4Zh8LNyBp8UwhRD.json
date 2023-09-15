@@ -3,6 +3,7 @@
 	"_key": "!items!p4Zh8LNyBp8UwhRD",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/fruit/eggplant-ripe-purple.webp",
 	"name": "Herbalism Check Advantage",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

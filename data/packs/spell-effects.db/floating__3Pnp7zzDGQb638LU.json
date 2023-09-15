@@ -1,0 +1,24 @@
+{
+	"_id": "3Pnp7zzDGQb638LU",
+	"_key": "!items.effects!sLb9GOXx9F6XCb2o.3Pnp7zzDGQb638LU",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/air/air-smoke-casting.webp",
+	"name": "Floating",
+	"origin": "Item.sLb9GOXx9F6XCb2o",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -3,6 +3,7 @@
 	"_key": "!items!T17hSoJlvZ9kfvNY",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/light/projectiles-trio-pink.webp",
 	"name": "Magic Missile",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "far",
 		"tier": 1
 	},

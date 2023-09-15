@@ -3,6 +3,7 @@
 	"_key": "!items.effects!7DNtQwX31lpChHZH.jtCuGSncFiHgfNgZ",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/magic/control/energy-stream-link-spiral-white.webp",
 	"name": "Condition: Compelled",
 	"origin": "Item.7DNtQwX31lpChHZH",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

@@ -3,6 +3,7 @@
 	"_key": "!items!MyHXrPewu36OmWB6",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
 	"name": "Ophidian Armor",
 	"system": {
@@ -12,6 +13,7 @@
 			"modifier": 1
 		},
 		"baseArmor": "",
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

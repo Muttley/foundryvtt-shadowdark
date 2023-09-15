@@ -8,9 +8,7 @@
 	"name": "Enslave",
 	"system": {
 		"description": "<p> In place of attacks, one creature within far DC 15 WIS or aboleth controls for 1d4 rounds.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

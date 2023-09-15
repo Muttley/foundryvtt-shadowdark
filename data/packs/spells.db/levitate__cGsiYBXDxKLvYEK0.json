@@ -3,6 +3,7 @@
 	"_key": "!items!cGsiYBXDxKLvYEK0",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Levitate",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "self",
 		"tier": 2
 	},

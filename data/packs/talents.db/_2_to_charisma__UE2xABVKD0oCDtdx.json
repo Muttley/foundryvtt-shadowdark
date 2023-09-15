@@ -4,6 +4,7 @@
 	"effects": [
 		"hkfq4SGF4mkDjQmt"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "+2 to Charisma",
 	"system": {
@@ -31,9 +32,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"abilityImprovement"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

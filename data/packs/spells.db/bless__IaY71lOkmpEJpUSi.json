@@ -3,6 +3,7 @@
 	"_key": "!items!IaY71lOkmpEJpUSi",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
 	"name": "Bless",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "close",
 		"tier": 2
 	},

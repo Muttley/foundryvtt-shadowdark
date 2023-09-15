@@ -9,6 +9,7 @@
 			"value": "3"
 		}
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -22,6 +23,8 @@
 	"icon": "icons/magic/unholy/strike-hand-glow-pink.webp",
 	"name": "Permanent Ability (Cha)",
 	"origin": null,
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

@@ -14,11 +14,7 @@
 		},
 		"description": "<p>Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p>",
 		"level": 1,
-		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"weaponMastery"
-		],
 		"talent": {
 			"weaponMastery": null,
 			"weaponMasteryTypes": null

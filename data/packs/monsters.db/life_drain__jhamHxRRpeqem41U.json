@@ -8,9 +8,7 @@
 	"name": "Life Drain",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">1d4 CON damage. Death if reduced to 0 CON.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

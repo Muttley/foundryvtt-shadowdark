@@ -3,6 +3,7 @@
 	"_key": "!items!n1I5OLR6M2e0jLbi",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/control/sleep-bubble-purple.webp",
 	"name": "Sleep",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "near",
 		"tier": 1
 	},

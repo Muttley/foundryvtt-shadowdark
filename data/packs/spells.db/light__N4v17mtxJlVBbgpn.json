@@ -3,6 +3,7 @@
 	"_key": "!items!N4v17mtxJlVBbgpn",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/light/explosion-star-glow-yellow.webp",
 	"name": "Light",
 	"system": {
@@ -18,8 +19,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "close",
 		"tier": 1
 	},

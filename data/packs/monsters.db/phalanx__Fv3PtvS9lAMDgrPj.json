@@ -8,9 +8,7 @@
 	"name": "Phalanx",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">+1 to attacks and AC when in close range of an allied hobgoblin.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

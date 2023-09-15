@@ -5,6 +5,7 @@
 		"qIFVq4PAB70lPkf9",
 		"0rcSjPSjHdvGwtOu"
 	],
+	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Stout",
 	"system": {
@@ -21,9 +22,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"hpAdvantage"
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

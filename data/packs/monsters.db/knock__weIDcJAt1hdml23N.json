@@ -8,9 +8,7 @@
 	"name": "Knock",
 	"system": {
 		"description": "<p>DC 9 STR or pushed a close distance and fall down.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

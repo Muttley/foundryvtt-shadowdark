@@ -3,6 +3,7 @@
 	"_key": "!items!fWuTV4r9FIUDe1EX",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-blue.webp",
 	"name": "Shield of Faith",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "self",
 		"tier": 1
 	},

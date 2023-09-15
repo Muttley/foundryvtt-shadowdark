@@ -3,6 +3,7 @@
 	"_key": "!items.effects!2UFWFSeffj7vrSSR.iTrME6gdEDXnxloZ",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/magic/unholy/strike-body-life-soul-purple.webp",
 	"name": "Condition: Unconscious",
 	"origin": "Item.2UFWFSeffj7vrSSR",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

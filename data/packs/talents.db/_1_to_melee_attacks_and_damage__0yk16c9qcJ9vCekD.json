@@ -5,6 +5,7 @@
 		"y00ihJhSPjoGVmKZ",
 		"JOP97BP4aJ0kjcgL"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
 	"name": "+1 to Melee Attacks and Damage",
 	"system": {
@@ -21,9 +22,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

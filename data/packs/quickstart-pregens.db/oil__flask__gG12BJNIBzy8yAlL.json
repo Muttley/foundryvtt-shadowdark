@@ -7,6 +7,7 @@
 	"img": "icons/consumables/potions/potion-bottle-corked-blue.webp",
 	"name": "Oil, Flask",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +26,6 @@
 			"template": "lantern"
 		},
 		"magicItem": false,
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

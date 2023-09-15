@@ -3,6 +3,7 @@
 	"_key": "!items!oeJmT9gfvZ5Ha19w",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Fixed Object",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "rounds",
 			"value": "5"
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "close",
 		"tier": 2
 	},

@@ -4,6 +4,7 @@
 	"effects": [
 		"4OcH6wsgdH5jqY0k"
 	],
+	"folder": null,
 	"img": "icons/magic/movement/portal-vortex-orange.webp",
 	"name": "Spell Effect: Hold Portal",
 	"system": {
@@ -16,13 +17,19 @@
 		"effectPanel": {
 			"show": true
 		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"start": {
 			"combatTime": null,
-			"value": 0
+			"value": 9009
 		},
 		"tokenIcon": {
 			"show": true

@@ -1,0 +1,24 @@
+{
+	"_id": "4v6DbfBT6c4qzSEc",
+	"_key": "!items.effects!74WjFjHmUmLAiNGC.4v6DbfBT6c4qzSEc",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/perception/eye-slit-pink.webp",
+	"name": "Detecting Magic",
+	"origin": "Item.74WjFjHmUmLAiNGC",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

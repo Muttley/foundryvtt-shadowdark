@@ -3,6 +3,7 @@
 	"_key": "!items!VjFsjhM6CZjZ04RT",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/flowers/lily-white.webp",
 	"name": "Curative",
 	"system": {
@@ -24,8 +25,6 @@
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"range": "",
 		"slots": {

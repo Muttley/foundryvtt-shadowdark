@@ -3,6 +3,7 @@
 	"_key": "!items!ItN82uLU3PhJFLNm",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/fire/flame-burning-hand-white.webp",
 	"name": "Burning Hands",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "close",
 		"tier": 1
 	},

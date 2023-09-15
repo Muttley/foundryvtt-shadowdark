@@ -1,0 +1,30 @@
+{
+	"_id": "2rr100ySVxZn510u",
+	"_key": "!actors.effects!wnjtoBC4k5dIiG8X.2rr100ySVxZn510u",
+	"changes": [
+		{
+			"key": "system.bonuses.weaponMastery",
+			"mode": 2,
+			"priority": null,
+			"value": "greataxe"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 645,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+	"name": "Weapon Mastery",
+	"origin": "Actor.wnjtoBC4k5dIiG8X.Item.ys29FVZBITfUFwra",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

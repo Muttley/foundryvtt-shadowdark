@@ -3,6 +3,7 @@
 	"_key": "!items.effects!rW7oltlWDmteEpV7.xyhx2skwDPYWZ20G",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
 	"name": "Condition: Polymorphed",
 	"origin": "Item.rW7oltlWDmteEpV7",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

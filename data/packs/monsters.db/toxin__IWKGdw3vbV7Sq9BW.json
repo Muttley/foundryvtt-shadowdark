@@ -8,9 +8,7 @@
 	"name": "Toxin",
 	"system": {
 		"description": "<p>DC 12 CON or paralyzed 1d4 rounds.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

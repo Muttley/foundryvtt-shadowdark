@@ -3,6 +3,7 @@
 	"_key": "!items!ojJm3ByDjjHefy2u",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/control/energy-stream-link-spiral-orange.webp",
 	"name": "Alter Self",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "self",
 		"tier": 2
 	},

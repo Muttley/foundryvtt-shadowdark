@@ -4,6 +4,7 @@
 	"effects": [
 		"etJKhGLqpcKvyloB"
 	],
+	"folder": null,
 	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
 	"name": "Farsight (Spell)",
 	"system": {
@@ -15,10 +16,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"rangedAttackBonus",
-			"spellBonus"
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

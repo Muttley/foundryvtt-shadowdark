@@ -1,0 +1,30 @@
+{
+	"_id": "KBbKi9YYaC8xqVsI",
+	"_key": "!actors.effects!uXk56wpEwdiTfAQN.KBbKi9YYaC8xqVsI",
+	"changes": [
+		{
+			"key": "system.bonuses.backstabDie",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 689,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-dagger-white-orange.webp",
+	"name": "Additional Backstab Die",
+	"origin": "Actor.uXk56wpEwdiTfAQN.Item.gSPtr4NJUnpEBDW0",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

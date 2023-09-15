@@ -13,6 +13,7 @@
 			"modifier": 2
 		},
 		"baseArmor": "",
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
@@ -24,8 +25,8 @@
 		"isPhysical": true,
 		"magicItem": false,
 		"properties": [
-			"oneHanded",
-			"shield"
+			"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
+			"Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"
 		],
 		"quantity": 1,
 		"slots": {

@@ -3,6 +3,7 @@
 	"_key": "!items!0ejsM2UIZDHs5u2f",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/materials/feather-white.webp",
 	"name": "Feather Fall",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "self",
 		"tier": 1
 	},

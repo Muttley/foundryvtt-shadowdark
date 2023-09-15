@@ -4,6 +4,7 @@
 	"effects": [
 		"y00ihJhSPjoGVmKZ"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
 	"name": "+1 to Melee Attacks",
 	"system": {
@@ -19,9 +20,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

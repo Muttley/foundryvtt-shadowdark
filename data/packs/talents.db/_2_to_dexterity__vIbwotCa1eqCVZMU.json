@@ -4,6 +4,7 @@
 	"effects": [
 		"sx2uVw9MzQNA7mnd"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "+2 to Dexterity",
 	"system": {
@@ -31,10 +32,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"abilityImprovement",
-			"damageBonus"
-		],
 		"talent": {
 			"damageBonus": 1
 		},

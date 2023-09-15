@@ -8,9 +8,7 @@
 	"name": "Golem",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Immune to damage from fire, cold, electricity, or non-magical sources.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

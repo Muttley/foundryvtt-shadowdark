@@ -3,9 +3,11 @@
 	"_key": "!items!KAx02m6uAzOSBGXX",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/potions/vial-cork-empty.webp",
 	"name": "Potion of Invisibility",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

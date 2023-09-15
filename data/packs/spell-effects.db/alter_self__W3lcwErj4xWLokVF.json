@@ -1,0 +1,24 @@
+{
+	"_id": "W3lcwErj4xWLokVF",
+	"_key": "!items.effects!f2RsbovyTLEZvxuF.W3lcwErj4xWLokVF",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/energy-stream-link-spiral-orange.webp",
+	"name": "Alter Self",
+	"origin": "Item.f2RsbovyTLEZvxuF",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

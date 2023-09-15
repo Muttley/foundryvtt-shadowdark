@@ -3,6 +3,7 @@
 	"_key": "!items!m857P6MI00wAONTp",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/materials/bowl-liquid-white.webp",
 	"name": "Salve",
 	"system": {
@@ -24,8 +25,6 @@
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"range": "",
 		"slots": {

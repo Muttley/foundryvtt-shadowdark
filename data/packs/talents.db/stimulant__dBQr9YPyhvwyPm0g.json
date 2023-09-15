@@ -3,6 +3,7 @@
 	"_key": "!items!dBQr9YPyhvwyPm0g",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/materials/powder-grey.webp",
 	"name": "Stimulant",
 	"system": {
@@ -24,8 +25,6 @@
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"range": "",
 		"slots": {

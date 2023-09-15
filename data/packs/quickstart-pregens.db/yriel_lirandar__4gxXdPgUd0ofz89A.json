@@ -7,6 +7,7 @@
 		"tg3HvhIhbywpa7jI",
 		"8F6hv1kM20gcNZOM"
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Yriel_Lirandar_portrait.webp",
 	"items": [
 		"CQZJTP6wf96cvTyG",
@@ -33,6 +34,7 @@
 	"prototypeToken": {
 		"actorLink": true,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -72,6 +74,7 @@
 		},
 		"lockRotation": false,
 		"name": "Yriel Lirandar",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -81,7 +84,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": true,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -149,6 +152,7 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
+			"damageMultiplier": 1,
 			"gearSlots": 0,
 			"hauler": false,
 			"lightSource": "",
@@ -157,6 +161,8 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
 			"weaponMastery": [
 			]
 		},

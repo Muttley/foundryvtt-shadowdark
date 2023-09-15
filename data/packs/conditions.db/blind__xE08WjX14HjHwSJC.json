@@ -3,6 +3,7 @@
 	"_key": "!items.effects!Grd46xo0lgHLtfVe.xE08WjX14HjHwSJC",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/creatures/eyes/humanoid-single-blind.webp",
 	"name": "Blind",
 	"origin": "Item.Grd46xo0lgHLtfVe",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

@@ -1,0 +1,30 @@
+{
+	"_id": "0g9MUhj9Tr3AWRXl",
+	"_key": "!items.effects!BsRPGhKXYwJBI9ex.0g9MUhj9Tr3AWRXl",
+	"changes": [
+		{
+			"key": "system.bonuses.armorMastery",
+			"mode": 2,
+			"priority": null,
+			"value": "REPLACEME"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"name": "Armor Mastery",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -4,6 +4,7 @@
 	"effects": [
 		"QBX0EGnKmDfPJ8gQ"
 	],
+	"folder": null,
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "+1 on Spellcasting Checks",
 	"system": {
@@ -14,8 +15,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

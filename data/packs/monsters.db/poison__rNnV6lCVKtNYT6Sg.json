@@ -8,9 +8,7 @@
 	"name": "Poison",
 	"system": {
 		"description": "<p>DC 12 CON or fall into deep sleep for 1d4 hours.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

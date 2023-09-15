@@ -6,6 +6,7 @@
 		"MZj9RAguzHFoypD4",
 		"MPH9ArAfW7y6wJ0I"
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Iraga_Draguul_portrait.webp",
 	"items": [
 		"g7Wl2Ad0bsJuSmVo",
@@ -32,6 +33,7 @@
 	"prototypeToken": {
 		"actorLink": true,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -71,6 +73,7 @@
 		},
 		"lockRotation": false,
 		"name": "Iraga Draguul",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -80,7 +83,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": true,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -148,6 +151,7 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
+			"damageMultiplier": 1,
 			"gearSlots": 0,
 			"hauler": false,
 			"lightSource": "",
@@ -156,6 +160,8 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
 			"weaponMastery": [
 			]
 		},

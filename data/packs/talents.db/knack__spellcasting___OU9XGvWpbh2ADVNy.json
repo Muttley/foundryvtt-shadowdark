@@ -1,0 +1,30 @@
+{
+	"_id": "OU9XGvWpbh2ADVNy",
+	"_key": "!items.effects!GVAi0l6mfRillxwZ.OU9XGvWpbh2ADVNy",
+	"changes": [
+		{
+			"key": "system.bonuses.spellcastingCheckBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/sihouette-hold-beam-green.webp",
+	"name": "Knack (Spellcasting)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -4,6 +4,7 @@
 	"effects": [
 		"k9wVrL0gDKPn2rNt"
 	],
+	"folder": null,
 	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
 	"name": "Initiative Advantage",
 	"system": {
@@ -14,9 +15,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"initAdvantage"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

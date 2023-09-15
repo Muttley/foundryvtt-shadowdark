@@ -3,6 +3,7 @@
 	"_key": "!items!N9NvonT0RL6PyiiV",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/life/cross-explosion-burst-green.webp",
 	"name": "Cure Wounds",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "close",
 		"tier": 1
 	},

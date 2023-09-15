@@ -9,6 +9,7 @@
 			"value": "-4"
 		}
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -22,6 +23,8 @@
 	"icon": "icons/magic/unholy/strike-body-life-soul-green.webp",
 	"name": "Condition: Drained (4)",
 	"origin": null,
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

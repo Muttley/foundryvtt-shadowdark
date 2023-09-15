@@ -3,9 +3,11 @@
 	"_key": "!items!z4eAFex0bk8qiQWl",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/equipment/back/cloak-collared-feathers-green.webp",
 	"name": "Cloak of Elvenkind",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

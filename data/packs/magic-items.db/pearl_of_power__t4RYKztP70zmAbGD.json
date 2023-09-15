@@ -3,9 +3,11 @@
 	"_key": "!items!t4RYKztP70zmAbGD",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/gems/pearl-natural.webp",
 	"name": "Pearl of Power",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

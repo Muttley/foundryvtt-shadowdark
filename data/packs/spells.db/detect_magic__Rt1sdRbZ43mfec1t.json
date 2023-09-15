@@ -3,6 +3,7 @@
 	"_key": "!items!Rt1sdRbZ43mfec1t",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/perception/eye-slit-pink.webp",
 	"name": "Detect Magic",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "near",
 		"tier": 1
 	},

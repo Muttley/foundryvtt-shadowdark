@@ -3,6 +3,7 @@
 	"_key": "!items.effects!vmcHEQWOyX933G1R.3XkiakzqwT78EG4j",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
 	"name": "Condition: Mesmerized",
 	"origin": "Item.vmcHEQWOyX933G1R",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

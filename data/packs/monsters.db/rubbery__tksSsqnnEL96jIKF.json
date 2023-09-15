@@ -8,9 +8,7 @@
 	"name": "Rubbery",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Half damage from stabbing weapons.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

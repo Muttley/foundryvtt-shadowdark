@@ -4,6 +4,7 @@
 	"effects": [
 		"cUIGFlc2YR57pzXl"
 	],
+	"folder": null,
 	"img": "icons/sundries/gaming/dice-runed-brown.webp",
 	"name": "Brak's Cube of Perfection (Wis)",
 	"system": {
@@ -25,6 +26,7 @@
 				"value": "18"
 			}
 		},
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -44,8 +46,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

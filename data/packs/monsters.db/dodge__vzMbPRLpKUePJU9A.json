@@ -8,9 +8,7 @@
 	"name": "Dodge",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">1/day, an attack that would hit misses instead.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

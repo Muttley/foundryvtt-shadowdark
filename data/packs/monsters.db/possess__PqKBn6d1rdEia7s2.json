@@ -8,9 +8,7 @@
 	"name": "Possess",
 	"system": {
 		"description": "<p>One target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

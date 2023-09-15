@@ -3,6 +3,7 @@
 	"_key": "!items!3wYzASfDHA4FKGH3",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/fire/explosion-fireball-small-blue.webp",
 	"name": "Misty Step",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "self",
 		"tier": 2
 	},

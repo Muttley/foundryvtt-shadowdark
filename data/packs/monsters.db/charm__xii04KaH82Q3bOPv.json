@@ -8,9 +8,7 @@
 	"name": "Charm",
 	"system": {
 		"description": "<p>Near, one creature, DC 14 CHA or friendship for 1d8 days.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

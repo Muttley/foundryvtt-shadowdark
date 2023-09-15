@@ -4,6 +4,7 @@
 	"effects": [
 		"J71TDxKnOnztuE6t"
 	],
+	"folder": null,
 	"img": "icons/equipment/wrist/bracer-armored-steel-purple.webp",
 	"name": "Bracers of Defense",
 	"system": {
@@ -16,6 +17,7 @@
 		"bonuses": {
 			"acBonus": "1"
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

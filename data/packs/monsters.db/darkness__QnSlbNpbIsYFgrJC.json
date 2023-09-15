@@ -8,9 +8,7 @@
 	"name": "Darkness",
 	"system": {
 		"description": "<p>Extinguish all light sources in near (magic 3:6).</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

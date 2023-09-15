@@ -8,9 +8,7 @@
 	"name": "Lycanthropy",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">If 12 or more damage from the same werewolf, contract lycanthropy.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

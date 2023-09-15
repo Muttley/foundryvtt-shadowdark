@@ -5,6 +5,7 @@
 		"ZTDD2HwlrjLbEIQp",
 		"njtjaSNJ4WQCV7n5"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
 	"name": "+1 to Melee and Ranged Attacks",
 	"system": {
@@ -22,10 +23,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus",
-			"rangedAttackBonus"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

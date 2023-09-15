@@ -1,0 +1,24 @@
+{
+	"_id": "qohPOvbaVcxpRumR",
+	"_key": "!items.effects!FrFilluk4S5VaWut.qohPOvbaVcxpRumR",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/sleep-bubble-purple.webp",
+	"name": "Asleep",
+	"origin": "Item.FrFilluk4S5VaWut",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

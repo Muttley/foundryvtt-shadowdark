@@ -8,9 +8,7 @@
 	"name": "Rage",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">1/day, immune to morale checks, +1d4 damage (3 rounds).</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

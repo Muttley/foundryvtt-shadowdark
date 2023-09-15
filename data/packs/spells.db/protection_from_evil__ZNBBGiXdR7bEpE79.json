@@ -3,6 +3,7 @@
 	"_key": "!items!ZNBBGiXdR7bEpE79",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 	"name": "Protection From Evil",
 	"system": {
@@ -18,8 +19,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "close",
 		"tier": 1
 	},

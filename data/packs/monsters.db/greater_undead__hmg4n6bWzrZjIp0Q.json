@@ -8,9 +8,7 @@
 	"name": "Greater Undead",
 	"system": {
 		"description": "<p>Immune to morale checks. Only damaged by silver or magical sources.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

@@ -8,9 +8,7 @@
 	"name": "Disease",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">DC 12 CON or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

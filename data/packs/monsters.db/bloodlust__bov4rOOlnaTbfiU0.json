@@ -8,9 +8,7 @@
 	"name": "Bloodlust",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">+2 damage with melee weapons (included).</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

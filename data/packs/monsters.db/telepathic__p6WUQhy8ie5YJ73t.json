@@ -8,9 +8,7 @@
 	"name": "Telepathic",
 	"system": {
 		"description": "<p>Read the thoughts of all creatures within far.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

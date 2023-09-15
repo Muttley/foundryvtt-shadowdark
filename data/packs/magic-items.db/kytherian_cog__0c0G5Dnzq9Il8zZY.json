@@ -3,9 +3,11 @@
 	"_key": "!items!0c0G5Dnzq9Il8zZY",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/commodities/tech/cog-large-steel-white.webp",
 	"name": "Kytherian Cog",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

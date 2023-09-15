@@ -8,9 +8,7 @@
 	"name": "Attach",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Attach to target; bite auto-hits next round. DC 12 STR on turn to tear off.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

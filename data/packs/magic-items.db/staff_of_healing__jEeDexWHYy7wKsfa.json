@@ -5,6 +5,7 @@
 		"HhILvM8lD0Nby5gq",
 		"FqtIDxjhOFDvkQFn"
 	],
+	"folder": null,
 	"img": "icons/weapons/staves/staff-engraved-red.webp",
 	"name": "Staff of Healing",
 	"system": {
@@ -17,8 +18,10 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
-			"damageBonus": "1"
+			"damageBonus": "1",
+			"damageMultiplier": 1
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

@@ -3,6 +3,7 @@
 	"_key": "!items!KLDZKFY6SrqQKSva",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"name": "Backstab",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "class"
 	},
 	"type": "Talent"

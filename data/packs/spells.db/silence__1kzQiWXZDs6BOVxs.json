@@ -3,6 +3,7 @@
 	"_key": "!items!1kzQiWXZDs6BOVxs",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
 	"name": "Silence",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "far",
 		"tier": 2
 	},

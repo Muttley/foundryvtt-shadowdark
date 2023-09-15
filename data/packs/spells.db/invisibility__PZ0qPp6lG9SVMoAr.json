@@ -3,6 +3,7 @@
 	"_key": "!items!PZ0qPp6lG9SVMoAr",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
 	"name": "Invisibility",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "close",
 		"tier": 2
 	},

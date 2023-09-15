@@ -13,11 +13,7 @@
 		},
 		"description": "<p>Add your Constitution modifier, if positive, to your gear slots.</p>",
 		"level": 1,
-		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"custom"
-		],
 		"talentClass": "class"
 	},
 	"type": "Talent"

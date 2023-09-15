@@ -8,9 +8,7 @@
 	"name": "Slow",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Far range, one target. DC 15 CON or speed halved 1d4 rounds.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

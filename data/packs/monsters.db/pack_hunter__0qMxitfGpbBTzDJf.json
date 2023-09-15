@@ -8,9 +8,7 @@
 	"name": "Pack Hunter",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Deals +1 damage while an ally is close.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

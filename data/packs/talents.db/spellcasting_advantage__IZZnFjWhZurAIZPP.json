@@ -4,6 +4,7 @@
 	"effects": [
 		"oEZ9BldTmIl6AS31"
 	],
+	"folder": null,
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage",
 	"system": {
@@ -14,9 +15,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"spellAdvantage"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

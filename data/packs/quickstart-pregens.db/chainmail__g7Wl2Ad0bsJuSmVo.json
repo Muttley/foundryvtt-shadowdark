@@ -13,6 +13,7 @@
 			"modifier": 0
 		},
 		"baseArmor": "",
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
@@ -24,8 +25,8 @@
 		"isPhysical": true,
 		"magicItem": false,
 		"properties": [
-			"disadvStealth",
-			"disadvSwim"
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
+			"Compendium.shadowdark.properties.Item.F4wv0ycualMPaoco"
 		],
 		"quantity": 1,
 		"slots": {

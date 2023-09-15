@@ -4,6 +4,7 @@
 	"effects": [
 		"AmcPerJgnykmMwVA"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"name": "Backstab +1 Damage Dice",
 	"system": {
@@ -14,9 +15,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"backstabDie"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

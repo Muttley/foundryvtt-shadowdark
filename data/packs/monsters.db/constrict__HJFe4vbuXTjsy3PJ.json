@@ -8,9 +8,7 @@
 	"name": "Constrict",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Contested STR to hold target immobile for one round.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

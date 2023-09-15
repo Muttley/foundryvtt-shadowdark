@@ -3,6 +3,7 @@
 	"_key": "!items!XBt4wA37ypUiXkp6",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/perception/third-eye-blue-red.webp",
 	"name": "Detect Thoughts",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "focus",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "near",
 		"tier": 2
 	},

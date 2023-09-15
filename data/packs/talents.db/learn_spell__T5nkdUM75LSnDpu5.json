@@ -3,6 +3,7 @@
 	"_key": "!items!T5nkdUM75LSnDpu5",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
 	"name": "Learn Spell",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

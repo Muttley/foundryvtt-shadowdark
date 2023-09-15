@@ -1,0 +1,24 @@
+{
+	"_id": "tx8UjK6umZHVyLJ6",
+	"_key": "!items.effects!cL5aPfXcad9FtHoK.tx8UjK6umZHVyLJ6",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/social/trading-justice-scale-gold.webp",
+	"name": "Truthful",
+	"origin": "Item.cL5aPfXcad9FtHoK",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

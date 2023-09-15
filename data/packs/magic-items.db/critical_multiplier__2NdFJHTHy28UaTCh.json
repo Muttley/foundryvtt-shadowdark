@@ -1,0 +1,30 @@
+{
+	"_id": "2NdFJHTHy28UaTCh",
+	"_key": "!items.effects!Mb7OBENXa5XnClS9.2NdFJHTHy28UaTCh",
+	"changes": [
+		{
+			"key": "system.bonuses.critical.multiplier",
+			"mode": 5,
+			"priority": null,
+			"value": "4"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "Critical Multiplier",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

@@ -3,9 +3,11 @@
 	"_key": "!items!RQyOkC3sGAe5gsn2",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/weapons/staves/staff-metal-mask.webp",
 	"name": "Immovable Rod",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

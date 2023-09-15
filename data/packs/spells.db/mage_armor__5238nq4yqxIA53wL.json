@@ -3,6 +3,7 @@
 	"_key": "!items!5238nq4yqxIA53wL",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
 	"name": "Mage Armor",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "self",
 		"tier": 1
 	},

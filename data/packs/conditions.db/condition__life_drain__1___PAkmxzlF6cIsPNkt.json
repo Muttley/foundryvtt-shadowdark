@@ -9,6 +9,7 @@
 			"value": "-1"
 		}
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -22,6 +23,8 @@
 	"icon": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Condition: Life Drain (1)",
 	"origin": null,
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

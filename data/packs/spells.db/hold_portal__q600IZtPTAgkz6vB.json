@@ -3,6 +3,7 @@
 	"_key": "!items!q600IZtPTAgkz6vB",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/movement/portal-vortex-orange.webp",
 	"name": "Hold Portal",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "near",
 		"tier": 1
 	},

@@ -5,6 +5,7 @@
 		"qrgFpY2mTci173wM",
 		"E7DKiIaxjDrxq64c"
 	],
+	"folder": null,
 	"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
 	"name": "Asterion",
 	"system": {
@@ -17,8 +18,10 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
-			"damageBonus": "1"
+			"damageBonus": "1",
+			"damageMultiplier": 1
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

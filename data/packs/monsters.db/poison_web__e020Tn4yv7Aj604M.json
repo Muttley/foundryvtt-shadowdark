@@ -8,9 +8,7 @@
 	"name": "Poison Web",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

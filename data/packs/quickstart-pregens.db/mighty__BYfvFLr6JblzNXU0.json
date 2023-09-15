@@ -15,12 +15,7 @@
 		},
 		"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
 		"level": 1,
-		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus",
-			"meleeDamageBonus"
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

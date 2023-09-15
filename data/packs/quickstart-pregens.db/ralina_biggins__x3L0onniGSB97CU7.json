@@ -4,6 +4,7 @@
 	"effects": [
 		"1g9lxw8bhW2NVR0D"
 	],
+	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_portrait.webp",
 	"items": [
 		"iW34N2oI9HFtVH7H",
@@ -27,6 +28,7 @@
 	"prototypeToken": {
 		"actorLink": true,
 		"alpha": 1,
+		"appendNumber": false,
 		"bar1": {
 			"attribute": null
 		},
@@ -66,6 +68,7 @@
 		},
 		"lockRotation": false,
 		"name": "Ralina Biggins",
+		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
 		"sight": {
@@ -75,7 +78,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": true,
-			"range": null,
+			"range": 0,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -143,6 +146,7 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
+			"damageMultiplier": 1,
 			"gearSlots": 0,
 			"hauler": false,
 			"lightSource": "",
@@ -151,6 +155,8 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
 			"weaponMastery": [
 			]
 		},

@@ -3,9 +3,11 @@
 	"_key": "!items!jucTGEjsqJ1znHdf",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
 	"name": "Potion of Healing",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

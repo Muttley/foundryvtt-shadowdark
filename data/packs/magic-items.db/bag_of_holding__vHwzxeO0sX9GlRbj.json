@@ -3,9 +3,11 @@
 	"_key": "!items!vHwzxeO0sX9GlRbj",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/containers/bags/sack-leather-purple.webp",
 	"name": "Bag of Holding",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

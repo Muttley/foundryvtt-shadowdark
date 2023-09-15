@@ -3,6 +3,7 @@
 	"_key": "!items!ZjCvQZ7k4hBa9y2I",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/fruit/black-currant-leaf-purple.webp",
 	"name": "Herbalism",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "class"
 	},
 	"type": "Talent"

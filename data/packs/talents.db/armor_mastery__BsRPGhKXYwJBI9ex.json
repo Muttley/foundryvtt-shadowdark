@@ -4,6 +4,7 @@
 	"effects": [
 		"0g9MUhj9Tr3AWRXl"
 	],
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 	"name": "Armor Mastery",
 	"system": {
@@ -16,10 +17,6 @@
 		"level": null,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus",
-			"rangedAttackBonus"
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

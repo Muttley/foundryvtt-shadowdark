@@ -3,6 +3,7 @@
 	"_key": "!items!XDCTxgslSO8DnEBa",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
 	"name": "Smite",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "near",
 		"tier": 2
 	},

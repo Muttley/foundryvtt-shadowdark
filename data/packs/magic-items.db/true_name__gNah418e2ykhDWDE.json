@@ -3,9 +3,11 @@
 	"_key": "!items!gNah418e2ykhDWDE",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
 	"name": "True Name",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

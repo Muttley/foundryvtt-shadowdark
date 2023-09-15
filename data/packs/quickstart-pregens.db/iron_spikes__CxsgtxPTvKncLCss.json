@@ -7,6 +7,7 @@
 	"img": "icons/tools/fasteners/pin-spiked.webp",
 	"name": "Iron Spikes",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +26,6 @@
 			"template": "torch"
 		},
 		"magicItem": false,
-		"properties": [
-		],
 		"quantity": 10,
 		"scroll": false,
 		"slots": {

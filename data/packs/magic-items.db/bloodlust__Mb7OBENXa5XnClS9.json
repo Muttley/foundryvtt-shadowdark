@@ -6,6 +6,7 @@
 		"A3cEweAbyqxNxdzl",
 		"Qj2rqAj7XeIsjzzs"
 	],
+	"folder": null,
 	"img": "icons/weapons/axes/axe-battle-eyes-red.webp",
 	"name": "Bloodlust",
 	"system": {
@@ -18,8 +19,10 @@
 				"multiplier": "4",
 				"successThreshold": 20
 			},
-			"damageBonus": "1"
+			"damageBonus": "1",
+			"damageMultiplier": 1
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

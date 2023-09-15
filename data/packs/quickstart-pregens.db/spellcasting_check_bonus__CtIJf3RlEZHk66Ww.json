@@ -1,0 +1,30 @@
+{
+	"_id": "CtIJf3RlEZHk66Ww",
+	"_key": "!actors.effects!RfFy5Nq3izy5oVD6.CtIJf3RlEZHk66Ww",
+	"changes": [
+		{
+			"key": "system.bonuses.spellcastingCheckBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 575,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"name": "Spellcasting Check Bonus",
+	"origin": "Actor.RfFy5Nq3izy5oVD6.Item.ufk3xI6cL6wueXj4",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

@@ -3,6 +3,7 @@
 	"_key": "!items!Gf5dApLfOorbQn4R",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Keen Senses",
 	"system": {
@@ -10,8 +11,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

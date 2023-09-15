@@ -3,9 +3,11 @@
 	"_key": "!items!oS1VcB7hqcsjkUZv",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
 	"name": "Potion of Extirpation",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

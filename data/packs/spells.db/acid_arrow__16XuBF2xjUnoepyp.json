@@ -3,6 +3,7 @@
 	"_key": "!items!16XuBF2xjUnoepyp",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/magic/acid/projectile-bolts-salvo-green.webp",
 	"name": "Acid Arrow",
 	"system": {
@@ -17,8 +18,6 @@
 		"lost": false,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"range": "far",
 		"tier": 2
 	},

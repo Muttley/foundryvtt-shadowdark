@@ -5,6 +5,7 @@
 		"iR3hHoX6W9VOCfy0",
 		"9LnTbRJXNUH9wLTy"
 	],
+	"folder": null,
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Mighty",
 	"system": {
@@ -16,10 +17,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-			"meleeAttackBonus",
-			"meleeDamageBonus"
-		],
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

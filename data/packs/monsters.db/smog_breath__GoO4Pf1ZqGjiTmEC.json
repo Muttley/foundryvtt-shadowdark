@@ -8,9 +8,7 @@
 	"name": "Smog Breath",
 	"system": {
 		"description": "<p>Fills a near-sized cube extending from dragon. DC 15 CON or 2d10 damage and blinded for 1 round.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

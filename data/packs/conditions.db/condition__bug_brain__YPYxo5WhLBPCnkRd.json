@@ -9,6 +9,7 @@
 			"value": "1"
 		}
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -22,6 +23,8 @@
 	"icon": "icons/creatures/invertebrates/centipede-brown.webp",
 	"name": "Condition: Bug Brain",
 	"origin": null,
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

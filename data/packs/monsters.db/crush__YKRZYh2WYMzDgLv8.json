@@ -8,9 +8,7 @@
 	"name": "Crush",
 	"system": {
 		"description": "<p>Deals an extra die of damage if it hits the same target with both claws.</p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

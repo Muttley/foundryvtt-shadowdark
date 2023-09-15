@@ -3,6 +3,7 @@
 	"_key": "!items!mByUvcHIVEPWscfH",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
 	"name": "Turn Undead",
 	"system": {
@@ -14,8 +15,7 @@
 			"type": "instant",
 			"value": ""
 		},
-		"properties": [
-		],
+		"lost": false,
 		"range": "near",
 		"tier": 1
 	},

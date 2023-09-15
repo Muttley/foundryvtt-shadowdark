@@ -8,9 +8,7 @@
 	"name": "Deathtouch (WIS Spell)",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">DC 12. 2d4 damage to one creature within close.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

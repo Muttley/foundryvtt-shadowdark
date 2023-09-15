@@ -3,6 +3,7 @@
 	"_key": "!items.effects!FoXNI5CfBkJOvJ9c.9LKEdqM5gksbj8xV",
 	"changes": [
 	],
+	"description": "",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -16,6 +17,8 @@
 	"icon": "icons/magic/control/sleep-bubble-purple.webp",
 	"name": "Condition: Asleep",
 	"origin": "Item.FoXNI5CfBkJOvJ9c",
+	"statuses": [
+	],
 	"tint": null,
 	"transfer": true
 }

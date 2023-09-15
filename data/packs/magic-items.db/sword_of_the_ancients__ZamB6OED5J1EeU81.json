@@ -5,6 +5,7 @@
 		"9qMTrleWtCMKO3Xl",
 		"78SoFRRmEjEMdPIT"
 	],
+	"folder": null,
 	"img": "icons/weapons/swords/sword-guard-worn-brown.webp",
 	"name": "Sword of the Ancients",
 	"system": {
@@ -17,8 +18,10 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
-			"damageBonus": "2"
+			"damageBonus": "2",
+			"damageMultiplier": 1
 		},
+		"broken": false,
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,

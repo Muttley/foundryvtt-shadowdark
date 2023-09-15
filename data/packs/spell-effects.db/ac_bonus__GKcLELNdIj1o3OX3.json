@@ -1,0 +1,30 @@
+{
+	"_id": "GKcLELNdIj1o3OX3",
+	"_key": "!items.effects!4dCcpPeyRKWt9XkC.GKcLELNdIj1o3OX3",
+	"changes": [
+		{
+			"key": "system.bonuses.acBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/defensive/shield-barrier-blue.webp",
+	"name": "AC Bonus",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

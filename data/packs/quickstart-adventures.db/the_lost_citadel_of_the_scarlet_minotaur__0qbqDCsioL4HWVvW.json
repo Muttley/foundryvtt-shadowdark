@@ -8,7 +8,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679438600654,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705125,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -28,7 +28,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679438637872,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117300,
+						"modifiedTime": 1694779200436,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -64,8 +64,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -199,7 +197,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679430516046,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705969,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -219,7 +217,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679430570581,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117728,
+						"modifiedTime": 1694779201401,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -236,9 +234,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">In place of attacks, move up to double near in a straight line and make 1 horn attack. If hit, x2 damage.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">In place of attacks, move up to double near in a straight line and make 1 horn attack. If hit, x2 damage.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -248,7 +244,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679430591589,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117733,
+						"modifiedTime": 1694779201405,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -284,8 +280,6 @@
 							"value": "d10"
 						},
 						"description": "<p>Wielder deals x4 damage on a critical hit.</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -298,7 +292,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679430663175,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117739,
+						"modifiedTime": 1694779201410,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -334,8 +328,6 @@
 							"value": "d12"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -469,7 +461,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704702,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -489,7 +481,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117084,
+						"modifiedTime": 1694779199874,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -506,9 +498,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -518,7 +508,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117090,
+						"modifiedTime": 1694779199881,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -554,8 +544,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -568,7 +556,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117098,
+						"modifiedTime": 1694779199887,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -604,8 +592,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -739,7 +725,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705121,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -759,7 +745,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117285,
+						"modifiedTime": 1694779200356,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -776,9 +762,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -788,7 +772,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117290,
+						"modifiedTime": 1694779200361,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -824,8 +808,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -838,7 +820,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117295,
+						"modifiedTime": 1694779200366,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -874,8 +856,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -1009,7 +989,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705156,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1029,7 +1009,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117328,
+						"modifiedTime": 1694779200531,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1046,9 +1026,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -1058,7 +1036,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117333,
+						"modifiedTime": 1694779200536,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1094,8 +1072,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -1108,7 +1084,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117337,
+						"modifiedTime": 1694779200540,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1144,8 +1120,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -1279,7 +1253,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705955,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1299,7 +1273,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117713,
+						"modifiedTime": 1694779201339,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1316,9 +1290,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -1328,7 +1300,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117717,
+						"modifiedTime": 1694779201343,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1364,8 +1336,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -1378,7 +1348,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117722,
+						"modifiedTime": 1694779201348,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1414,8 +1384,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -1549,7 +1517,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705983,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1569,7 +1537,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117744,
+						"modifiedTime": 1694779201427,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1586,9 +1554,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -1598,7 +1564,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117749,
+						"modifiedTime": 1694779201431,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1634,8 +1600,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -1648,7 +1612,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117753,
+						"modifiedTime": 1694779201435,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1684,8 +1648,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -1819,7 +1781,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705997,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -1839,7 +1801,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451949785,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117761,
+						"modifiedTime": 1694779201523,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1856,9 +1818,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -1868,7 +1828,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117766,
+						"modifiedTime": 1694779201530,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1904,8 +1864,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -1918,7 +1876,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117770,
+						"modifiedTime": 1694779201534,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -1954,8 +1912,6 @@
 							"value": ""
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"near"
 						]
@@ -2089,7 +2045,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705175,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2109,7 +2065,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117353,
+						"modifiedTime": 1694779200552,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2145,8 +2101,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -2160,7 +2114,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117360,
+						"modifiedTime": 1694779200556,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2177,9 +2131,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -2310,7 +2262,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705134,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2330,7 +2282,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117305,
+						"modifiedTime": 1694779200490,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2366,8 +2318,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -2381,7 +2331,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117311,
+						"modifiedTime": 1694779200497,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2398,9 +2348,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -2531,7 +2479,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704711,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2551,7 +2499,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117104,
+						"modifiedTime": 1694779199891,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2587,8 +2535,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -2602,7 +2548,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117113,
+						"modifiedTime": 1694779199898,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2619,9 +2565,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -2752,7 +2696,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704685,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2772,7 +2716,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117074,
+						"modifiedTime": 1694779199836,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2808,8 +2752,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -2823,7 +2765,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117079,
+						"modifiedTime": 1694779199840,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -2840,9 +2782,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -2973,7 +2913,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705854,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -2993,7 +2933,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117602,
+						"modifiedTime": 1694779201222,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3029,8 +2969,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -3044,7 +2982,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117610,
+						"modifiedTime": 1694779201226,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3061,9 +2999,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -3194,7 +3130,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705142,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3214,7 +3150,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117316,
+						"modifiedTime": 1694779200501,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3250,8 +3186,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -3265,7 +3199,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117321,
+						"modifiedTime": 1694779200505,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3282,9 +3216,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -3415,7 +3347,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705166,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3435,7 +3367,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117344,
+						"modifiedTime": 1694779200544,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3471,8 +3403,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -3486,7 +3416,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117349,
+						"modifiedTime": 1694779200548,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3503,9 +3433,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -3636,7 +3564,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704664,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3656,7 +3584,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117048,
+						"modifiedTime": 1694779199805,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3692,8 +3620,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -3707,7 +3633,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117054,
+						"modifiedTime": 1694779199810,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3724,9 +3650,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -3857,7 +3781,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705358,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -3877,7 +3801,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117431,
+						"modifiedTime": 1694779200729,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3913,8 +3837,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -3928,7 +3850,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117435,
+						"modifiedTime": 1694779200736,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -3945,9 +3867,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -4078,7 +3998,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704673,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4098,7 +4018,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117062,
+						"modifiedTime": 1694779199815,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4134,8 +4054,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -4149,7 +4067,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117067,
+						"modifiedTime": 1694779199820,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4166,9 +4084,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -4299,7 +4215,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679440338081,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705858,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4319,7 +4235,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440389949,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117615,
+						"modifiedTime": 1694779201240,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4355,8 +4271,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -4490,7 +4404,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705936,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4510,7 +4424,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117690,
+						"modifiedTime": 1694779201319,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4527,9 +4441,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -4539,7 +4451,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117698,
+						"modifiedTime": 1694779201325,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4575,8 +4487,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -4589,7 +4499,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117704,
+						"modifiedTime": 1694779201332,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4625,8 +4535,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"far"
 						]
@@ -4760,7 +4668,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705876,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -4780,7 +4688,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117623,
+						"modifiedTime": 1694779201252,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4797,9 +4705,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -4809,7 +4715,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117631,
+						"modifiedTime": 1694779201257,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4845,8 +4751,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -4859,7 +4763,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117638,
+						"modifiedTime": 1694779201264,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -4895,8 +4799,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"far"
 						]
@@ -5030,7 +4932,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705898,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5050,7 +4952,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117648,
+						"modifiedTime": 1694779201281,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5067,9 +4969,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -5079,7 +4979,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117655,
+						"modifiedTime": 1694779201287,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5115,8 +5015,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -5129,7 +5027,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117663,
+						"modifiedTime": 1694779201294,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5165,8 +5063,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"far"
 						]
@@ -5300,7 +5196,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705918,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5320,7 +5216,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440779996,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117669,
+						"modifiedTime": 1694779201300,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5337,9 +5233,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -5349,7 +5243,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117676,
+						"modifiedTime": 1694779201305,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5385,8 +5279,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -5399,7 +5291,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117682,
+						"modifiedTime": 1694779201312,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5435,8 +5327,6 @@
 							"value": "d4"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"far"
 						]
@@ -5570,7 +5460,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704545,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5590,7 +5480,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116884,
+						"modifiedTime": 1694779199676,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5626,8 +5516,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -5641,7 +5529,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116893,
+						"modifiedTime": 1694779199683,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5658,9 +5546,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -5791,7 +5677,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704594,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -5811,7 +5697,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116964,
+						"modifiedTime": 1694779199724,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5847,8 +5733,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -5862,7 +5746,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116972,
+						"modifiedTime": 1694779199734,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -5879,9 +5763,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -6012,7 +5894,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704527,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6032,7 +5914,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116857,
+						"modifiedTime": 1694779199662,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6068,8 +5950,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -6083,7 +5963,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116869,
+						"modifiedTime": 1694779199670,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6100,9 +5980,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -6233,7 +6111,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704609,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6253,7 +6131,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116985,
+						"modifiedTime": 1694779199740,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6289,8 +6167,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -6304,7 +6180,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116998,
+						"modifiedTime": 1694779199749,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6321,9 +6197,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -6454,7 +6328,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704578,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6474,7 +6348,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116944,
+						"modifiedTime": 1694779199707,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6510,8 +6384,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -6525,7 +6397,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116952,
+						"modifiedTime": 1694779199717,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6542,9 +6414,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -6675,7 +6545,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704622,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6695,7 +6565,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117004,
+						"modifiedTime": 1694779199766,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6731,8 +6601,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -6746,7 +6614,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117010,
+						"modifiedTime": 1694779199772,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6763,9 +6631,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -6896,7 +6762,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704636,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -6916,7 +6782,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117017,
+						"modifiedTime": 1694779199778,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6952,8 +6818,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -6967,7 +6831,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117024,
+						"modifiedTime": 1694779199784,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -6984,9 +6848,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -7117,7 +6979,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704560,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7137,7 +6999,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116902,
+						"modifiedTime": 1694779199690,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7173,8 +7035,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -7188,7 +7048,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116928,
+						"modifiedTime": 1694779199700,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7205,9 +7065,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -7338,7 +7196,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704653,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7358,7 +7216,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117033,
+						"modifiedTime": 1694779199790,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7394,8 +7252,6 @@
 							"value": "d6"
 						},
 						"description": "<p>Close/Near</p>",
-						"properties": [
-						],
 						"ranges": [
 							"close",
 							"near"
@@ -7409,7 +7265,7 @@
 						"coreVersion": "11.308",
 						"createdTime": 1679451329301,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117041,
+						"modifiedTime": 1694779199799,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7426,9 +7282,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -7559,7 +7413,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1694384512172,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778704508,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7579,7 +7433,7 @@
 						"coreVersion": "11.308",
 						"createdTime": null,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116406,
+						"modifiedTime": 1694779199588,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7614,8 +7468,6 @@
 							"value": "d8"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -7628,7 +7480,7 @@
 						"coreVersion": "11.308",
 						"createdTime": null,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710116827,
+						"modifiedTime": 1694779199601,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7644,9 +7496,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p>When standing still, looks exactly like a suit of armor.</p>",
-						"properties": [
-						]
+						"description": "<p>When standing still, looks exactly like a suit of armor.</p>"
 					},
 					"type": "NPC Feature"
 				}
@@ -7775,7 +7625,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1694384512172,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464392,
+				"modifiedTime": 1694778705719,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -7795,7 +7645,7 @@
 						"coreVersion": "11.308",
 						"createdTime": null,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117553,
+						"modifiedTime": 1694779201068,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7811,9 +7661,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle0\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span></p>",
-						"properties": [
-						]
+						"description": "<p><span class=\"fontstyle0\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span></p>"
 					},
 					"type": "NPC Feature"
 				},
@@ -7823,7 +7671,7 @@
 						"coreVersion": "11.308",
 						"createdTime": null,
 						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1694710117561,
+						"modifiedTime": 1694779201074,
 						"systemId": "shadowdark",
 						"systemVersion": "1.3.7"
 					},
@@ -7858,8 +7706,6 @@
 							"value": "d6"
 						},
 						"description": "",
-						"properties": [
-						],
 						"ranges": [
 							"close"
 						]
@@ -8537,7 +8383,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679272614405,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694710165146,
+				"modifiedTime": 1694778706535,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8701,7 +8547,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679586455677,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202080,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8740,8 +8586,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -8759,7 +8603,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679586142856,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202056,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8790,8 +8634,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -8807,7 +8649,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679272460086,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202072,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8846,8 +8688,6 @@
 					"template": "torch"
 				},
 				"magicItem": true,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -8865,7 +8705,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201857,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8904,8 +8744,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -8923,7 +8761,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202023,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -8962,8 +8800,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -8981,7 +8817,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202049,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9020,8 +8856,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9039,7 +8873,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679586142856,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202057,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9073,8 +8907,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9090,7 +8922,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679589244673,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202078,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9129,8 +8961,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9148,7 +8978,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201986,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9179,8 +9009,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9196,7 +9024,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201990,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9227,8 +9055,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9244,7 +9070,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679272510579,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694710165141,
+				"modifiedTime": 1694778706529,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9377,7 +9203,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201984,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9408,8 +9234,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9425,7 +9249,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201989,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9456,8 +9280,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9473,7 +9295,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679271886436,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202069,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9515,8 +9337,6 @@
 					"template": "torch"
 				},
 				"magicItem": true,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9534,7 +9354,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679664658053,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202022,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9573,8 +9393,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9592,7 +9410,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679590101123,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201991,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9623,8 +9441,6 @@
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"slots": {
 					"free_carry": 0,
@@ -9640,7 +9456,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679666340876,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202079,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9679,8 +9495,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9698,7 +9512,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679272460086,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202071,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9740,8 +9554,6 @@
 					"template": "torch"
 				},
 				"magicItem": true,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9832,7 +9644,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1678531204277,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694710165163,
+				"modifiedTime": 1694778706604,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9891,7 +9703,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679672838613,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202081,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -9930,8 +9742,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -9949,7 +9759,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679273406052,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694710165170,
+				"modifiedTime": 1694778706617,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10082,7 +9892,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679680311866,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779201979,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10121,8 +9931,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -10267,7 +10075,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679680732589,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202054,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10306,8 +10114,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {
@@ -10325,7 +10131,7 @@
 				"coreVersion": "11.308",
 				"createdTime": 1679680844732,
 				"lastModifiedBy": "mu8H7NbWc0seFWcA",
-				"modifiedTime": 1694709464544,
+				"modifiedTime": 1694779202115,
 				"systemId": "shadowdark",
 				"systemVersion": "1.3.7"
 			},
@@ -10364,8 +10170,6 @@
 					"template": "torch"
 				},
 				"magicItem": false,
-				"properties": [
-				],
 				"quantity": 1,
 				"scroll": false,
 				"slots": {

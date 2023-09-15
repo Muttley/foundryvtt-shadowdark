@@ -8,9 +8,7 @@
 	"name": "Undead",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
-		"magicItem": false,
-		"properties": [
-		]
+		"magicItem": false
 	},
 	"type": "NPC Feature"
 }

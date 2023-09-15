@@ -4,6 +4,7 @@
 	"effects": [
 		"UGQKMdNcgb1O8qwy"
 	],
+	"folder": null,
 	"img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 	"name": "Increased Weapon Damage Die",
 	"system": {
@@ -14,8 +15,6 @@
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"talentClass": "level"
 	},
 	"type": "Talent"

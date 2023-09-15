@@ -3,9 +3,11 @@
 	"_key": "!items!N27A6nb0epkHZ3lR",
 	"effects": [
 	],
+	"folder": null,
 	"img": "icons/sundries/scrolls/scroll-writing-orange-black.webp",
 	"name": "Scroll of Burning Hands",
 	"system": {
+		"broken": false,
 		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
@@ -25,8 +27,6 @@
 		},
 		"magicItem": true,
 		"predefinedEffects": "",
-		"properties": [
-		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
