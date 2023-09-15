@@ -55,10 +55,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleLightSource(event)
 		);
 
-		html.find(".language-list.languages").click(
-			event => this._onKnownLanguages(event)
-		);
-
 		html.find(".open-gem-bag").click(
 			event => this._onOpenGemBag(event)
 		);
@@ -397,14 +393,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				},
 			]);
 		}
-	}
-
-	_onKnownLanguages(event) {
-		event.preventDefault();
-
-		new shadowdark.apps.PlayerLanguagesSD(
-			this.actor, {event: event}
-		).render(true);
 	}
 
 	async _onLearnSpell(event) {
