@@ -42,6 +42,7 @@ export default class ItemSD extends Item {
 			isSpellcaster,
 			description,
 			item: this.toObject(),
+			itemProperties: await this.propertyItems(),
 		};
 
 		return data;
@@ -177,11 +178,14 @@ export default class ItemSD extends Item {
 	/*  Methods                                     */
 	/* -------------------------------------------- */
 
-	hasProperty(property) {
-		for (const key of this.system.properties) {
-			if (key === property) return true;
-		}
-		return false;
+	async hasProperty(property) {
+		property = property.slugify();
+
+		const propertyItem = (await this.propertyItems()).find(
+			p => p.name.slugify() === property
+		);
+
+		return propertyItem ? true : false;
 	}
 
 	isActiveLight() {
@@ -221,40 +225,31 @@ export default class ItemSD extends Item {
 	}
 
 	isOneHanded() {
-		return this.hasProperty("oneHanded");
+		return this.hasProperty("one-handed");
 	}
 
 	isTwoHanded() {
 		const damage = this.system.damage;
-		return this.hasProperty("twoHanded")
+		return this.hasProperty("two-handed")
 			|| (damage.oneHanded === "" && damage.twoHanded !== "");
 	}
 
-	isAShield() {
-		return this.hasProperty("shield");
+	async isAShield() {
+		return await this.hasProperty("shield");
 	}
 
-	isNotAShield() {
-		return !this.isAShield();
+	async isNotAShield() {
+		const isAShield = await this.isAShield();
+		return !isAShield;
 	}
 
-	propertiesDisplay() {
+	async propertiesDisplay() {
 		let properties = [];
 
 		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const key of this.system.properties) {
-				if (this.type === "Armor") {
-					properties.push(
-						CONFIG.SHADOWDARK.ARMOR_PROPERTIES[key]
-					);
-				}
-				else if (this.type === "Weapon") {
-					properties.push(
-						CONFIG.SHADOWDARK.WEAPON_PROPERTIES[key]
-					);
-				}
+			for (const property of await this.propertyItems()) {
+				properties.push(property.name);
 			}
-
 		}
 
 		return properties.join(", ");
@@ -350,6 +345,16 @@ export default class ItemSD extends Item {
 			return this._askEffectInput("lightSource", lightSources);
 		}
 		return value;
+	}
+
+	async propertyItems() {
+		const propertyItems = [];
+
+		for (const uuid of this.system.properties ?? []) {
+			propertyItems.push(await fromUuid(uuid));
+		}
+
+		return propertyItems;
 	}
 
 	// Duration getters

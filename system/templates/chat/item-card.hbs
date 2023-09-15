@@ -124,8 +124,8 @@
 				{{localize "SHADOWDARK.item.weapon_range"}}:
 				{{fromConfig "RANGES"  data.item.system.range }}
 			</span>
-			{{#each data.item.system.properties as |prop|}}
-				<span>{{fromConfig "WEAPON_PROPERTIES" prop }}</span>
+			{{#each propertyNames}}
+				<span>{{this}}</span>
 			{{/each}}
     {{/if}}
     {{#if isSpell}}

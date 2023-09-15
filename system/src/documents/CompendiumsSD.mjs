@@ -59,6 +59,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD.documents("Armor", sources);
 	}
 
+	static async armorProperties(sources=[]) {
+		return CompendiumsSD.properties("armor", sources);
+	}
+
 	static async baseWeapons(sources=[]) {
 		const documents = await CompendiumsSD.documents("Weapon", sources);
 
@@ -87,6 +91,29 @@ export default class CompendiumsSD {
 		return CompendiumsSD.documents("Effect", sources);
 	}
 
+	static async properties(subtypes=[], sources=[]) {
+		const noSubtypes = subtypes.length === 0;
+
+		const documents = await CompendiumsSD.documents("Property", sources);
+
+		if (noSubtypes) {
+			return documents;
+		}
+		else {
+			const filteredDocuments = documents.filter(
+				document => subtypes.includes(document.system.itemType)
+			);
+
+			// re-create the collection from the filtered Items
+			const filteredCollection = new Collection();
+			for (let d of filteredDocuments) {
+				filteredCollection.set(d.id, d);
+			}
+
+			return filteredCollection;
+		}
+	}
+
 	static async npcAttacks(sources=[]) {
 		return CompendiumsSD.talents(["NPC Attack"], sources);
 	}
@@ -113,6 +140,10 @@ export default class CompendiumsSD {
 
 	static async wands(sources=[]) {
 		return CompendiumsSD.documents("Wand", sources);
+	}
+
+	static async weaponProperties(sources=[]) {
+		return CompendiumsSD.properties("weapon", sources);
 	}
 
 	static async weapons(sources=[]) {

@@ -43,11 +43,23 @@
 <div class="item-properties">
 	<div class="item-property">
 		<label>{{localize 'SHADOWDARK.item.properties'}}</label>
-		<p
-			class="item-property-list armor"
-			{{#unless editable}}disabled{{/unless}}
+		<a
+			class="item-selector"
+			data-select-type="itemProperty"
+			data-item-type="armor"
+			for="system.properties"
 		>
-			{{propertiesDisplay}}
-		</p>
+			<i class="fa-solid fa-pen-to-square fa-sm"></i>
+		</a>
+		<ul class="tags">
+			{{#each propertyItems}}
+				<li
+					class="tag tag_primary"
+					data-tooltip="{{this.system.description}}"
+				>
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
 	</div>
 </div>

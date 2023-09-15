@@ -141,6 +141,9 @@ SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
 SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
 SHADOWDARK.dialog.item_roll.title: Roll Attack with
+SHADOWDARK.dialog.item_selector.default_title: Choose Items
+SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
+SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
 SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
 SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
 SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
@@ -151,6 +154,10 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
+SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
+SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
+SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Cast Spell with
 SHADOWDARK.dialog.submit: Submit
 SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
@@ -377,6 +384,9 @@ SHADOWDARK.npc_move.near: Near
 SHADOWDARK.npc_move.none: None
 SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple Near
+SHADOWDARK.property.type.option.armor: Armor
+SHADOWDARK.property.type.option.weapon: Weapon
+SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Close
 SHADOWDARK.range.far_short: F

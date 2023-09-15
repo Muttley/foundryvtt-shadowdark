@@ -9,6 +9,10 @@
 			{{> items/partials/effect }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Property"}}
+			{{> items/partials/property }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Spell"}}
 			{{> items/partials/spell }}
 		{{/ifEq}}

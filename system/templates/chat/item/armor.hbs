@@ -26,8 +26,8 @@
   </div>
 
   <footer class="card-footer">
-		{{#each item.system.properties as |prop|}}
-			<span>{{fromConfig "ARMOR_PROPERTIES" prop}}</span>
+		{{#each itemProperties}}
+			<span>{{this.name}}</span>
 		{{/each}}
   </footer>
 </div>

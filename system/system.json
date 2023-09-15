@@ -8,7 +8,7 @@
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "230910.2"
+		"schemaVersion": "230915.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
@@ -112,6 +112,15 @@
 			"flags": {}
 		},
 		{
+			"name": "properties",
+			"label": "Properties",
+			"system": "shadowdark",
+			"path": "packs/properties",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "quickstart-adventures",
 			"label": "Quickstart Adventures",
 			"system": "shadowdark",
@@ -186,6 +195,7 @@
 				"macros",
 				"magic-items",
 				"monsters",
+				"properties",
 				"rollable-tables",
 				"spell-effects",
 				"spells"

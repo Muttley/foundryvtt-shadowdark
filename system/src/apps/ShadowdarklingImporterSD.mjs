@@ -133,16 +133,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		await Promise.all(json.gear.map(async item => {
 			for (let i = 1; i <= item.quantity; i++) {
-				const armor = await this._findInCompendium(item.name, "shadowdark.armor");
-				if (armor) items.push(armor);
-				const weapon = await this._findInCompendium(item.name, "shadowdark.weapons");
-				if (weapon) items.push(weapon);
-				const basic = (item.name.includes("Caltrops"))
-					? await this._findInCompendium("Caltrops", "shadowdark.basic-gear")
-					: (item.name.includes("Flask"))
-						? await this._findInCompendium("Flask", "shadowdark.basic-gear")
-						: await this._findInCompendium(item.name, "shadowdark.basic-gear");
-				if (basic) items.push(basic);
+				let itemName = item.name;
+
+				if (itemName.match(/flask or bottle/i)) itemName = "Flask";
+				if (itemName.match(/caltrops/i)) itemName = "Caltrops";
+
+				const foundItem = await this._findInCompendium(itemName, "shadowdark.gear");
+
+				if (foundItem) items.push(foundItem);
 			}
 		}));
 

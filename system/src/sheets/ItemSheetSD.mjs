@@ -1,3 +1,4 @@
+import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
 export default class ItemSheetSD extends ItemSheet {
 
@@ -30,9 +31,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find(".item-property-list.armor").click(
-			event => this._onArmorProperties(event)
-		);
 
 		html.find(".item-property-list.npc-attack-ranges").click(
 			event => this._onNpcAttackRanges(event)
@@ -42,16 +40,16 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onSpellCasterClasses(event)
 		);
 
-		html.find(".item-property-list.weapon").click(
-			event => this._onWeaponProperties(event)
-		);
-
 		html.find(".item-property-list.talent-type").click(
 			event => this._onTalentTypeProperties(event)
 		);
 
 		html.find(".item-property-list.magic-type").click(
 			event => this._onMagicItemTypeProperties(event)
+		);
+
+		html.find(".item-selector").click(
+			event => this._onItemSelection(event)
 		);
 
 		// Effect listeners
@@ -90,6 +88,13 @@ export default class ItemSheetSD extends ItemSheet {
 		const item = context.item;
 		const source = item.toObject();
 
+		const showTab = {
+			details: !["NPC Feature"].includes(item.type),
+			effects: (["Effect", "Talent"].includes(item.type) || item.system.magicItem),
+			light: item.system.light?.isSource ?? false,
+			description: true,
+		};
+
 		foundry.utils.mergeObject(context, {
 			config: CONFIG.SHADOWDARK,
 			effectsEditable: (
@@ -98,13 +103,16 @@ export default class ItemSheetSD extends ItemSheet {
 			),
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			properties: [],
-			propertiesDisplay: "",
 			showMagicItemCheckbox: item.system.isPhysical && !["Potion", "Scroll", "Wand"].includes(item.type),
 			source: source.system,
 			system: item.system,
+			showTab,
 			usesSlots: item.system.slots !== undefined,
 		});
+
+		if (["Armor", "Weapon"].includes(item.type)) {
+			context.propertyItems = await item.propertyItems();
+		}
 
 		if (item.type === "Basic" && item.system.light.isSource) {
 			if (!item.system.light.hasBeenUsed) {
@@ -129,8 +137,6 @@ export default class ItemSheetSD extends ItemSheet {
 		if (item.type === "NPC Attack") {
 			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
 		}
-
-		context.propertiesDisplay = item.propertiesDisplay();
 
 		if (["Effect", "Potion", "Scroll", "Spell", "Wand"].includes(item.type)) {
 			context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
@@ -227,19 +233,6 @@ export default class ItemSheetSD extends ItemSheet {
 		}
 	}
 
-	/* ---------- Item Property Apps ---------- */
-
-
-	_onArmorProperties(event) {
-		event.preventDefault();
-
-		if (!this.isEditable) return;
-
-		new shadowdark.apps.ArmorPropertiesSD(
-			this.item, {event: event}
-		).render(true);
-	}
-
 	/** @inheritdoc */
 	async _onDrop(event) {
 		const data = TextEditor.getDragEventData(event);
@@ -283,6 +276,26 @@ export default class ItemSheetSD extends ItemSheet {
 		this.item.update(updateData);
 	}
 
+	_onItemSelection(event) {
+		event.preventDefault();
+
+		const itemType = event.currentTarget.dataset.itemType;
+		const selectType = event.currentTarget.dataset.selectType;
+
+		switch (selectType) {
+			case "itemProperty":
+				if (itemType === "armor") {
+					new select.ArmorPropertySelector(this.item).render(true);
+				}
+				else if (itemType === "weapon") {
+					new select.WeaponPropertySelector(this.item).render(true);
+				}
+
+
+				break;
+		}
+	}
+
 	_onMagicItemTypeProperties(event) {
 		event.preventDefault();
 
@@ -319,16 +332,6 @@ export default class ItemSheetSD extends ItemSheet {
 		if (!this.isEditable) return;
 
 		new shadowdark.apps.TalentTypesSD(
-			this.item, {event: event}
-		).render(true);
-	}
-
-	_onWeaponProperties(event) {
-		event.preventDefault();
-
-		if (!this.isEditable) return;
-
-		new shadowdark.apps.WeaponPropertiesSD(
 			this.item, {event: event}
 		).render(true);
 	}

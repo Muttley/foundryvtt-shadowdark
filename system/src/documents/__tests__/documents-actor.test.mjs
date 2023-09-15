@@ -414,7 +414,7 @@ export default ({ describe, it, after, before, expect }) => {
 		it("#466 Autorolled NPC HP is applied to actor", async () => {
 			await trashChat();
 			// Set the settings
-			game.settings.set("shadowdark", "rollNpcHpWhenAddedToScene", true);
+			await game.settings.set("shadowdark", "rollNpcHpWhenAddedToScene", true);
 
 			// Trigger the hook as a token was dropped
 			Hooks.call("createToken", {actor}, {}, {});
@@ -449,13 +449,13 @@ export default ({ describe, it, after, before, expect }) => {
 				{
 					type: "Armor",
 					name: "Test Shield 1",
-					"system.properties": ["shield"],
+					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 					"system.equipped": true,
 				},
 				{
 					type: "Armor",
 					name: "Test Shield 2",
-					"system.properties": ["shield"],
+					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 				},
 			]);
 		});
@@ -518,7 +518,7 @@ export default ({ describe, it, after, before, expect }) => {
 				{
 					type: "Armor",
 					name: "Test Shield 1",
-					"system.properties": ["shield"],
+					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 					"system.ac.modifier": 3,
 					"system.equipped": true,
 				},

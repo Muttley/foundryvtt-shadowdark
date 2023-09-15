@@ -300,11 +300,11 @@ export default class RollSD extends Roll {
 	static async _rollWeapon(data) {
 		// Get dice information from the weapon
 		let numDice = data.item.system.damage.numDice;
-		let damageDie = data.item.isTwoHanded()
+		let damageDie = await data.item.isTwoHanded()
 			?	data.item.system.damage.twoHanded
 			: data.item.system.damage.oneHanded;
 
-		let versatileDamageDie = data.item.isVersatile()
+		let versatileDamageDie = await data.item.isVersatile()
 			? data.item.system.damage.twoHanded
 			: false;
 
@@ -518,7 +518,7 @@ export default class RollSD extends Roll {
 	 * e.g. `flavor`, `title`
 	 * @returns {object}				- Data to populate the Chat Card template
 	 */
-	static _getChatCardTemplateData(data, options={}) {
+	static async _getChatCardTemplateData(data, options={}) {
 		const templateData = {
 			data,
 			title: (options.title) ? options.title : game.i18n.localize("SHADOWDARK.chatcard.default"),
@@ -537,7 +537,15 @@ export default class RollSD extends Roll {
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
 			templateData.isWeapon = data.item.isWeapon();
-			templateData.isVersatile = data.item.isVersatile();
+			templateData.isVersatile = await data.item.isVersatile();
+
+			const propertyNames = [];
+
+			for (const property of await data.item.propertyItems()) {
+				propertyNames.push(property.name);
+			}
+
+			templateData.propertyNames = propertyNames;
 		}
 		return templateData;
 	}
@@ -557,7 +565,7 @@ export default class RollSD extends Roll {
 			? options.chatCardTemplate
 			: "systems/shadowdark/templates/chat/roll-card.hbs";
 
-		const chatCardData = this._getChatCardTemplateData(data, options);
+		const chatCardData = await this._getChatCardTemplateData(data, options);
 
 		return renderTemplate(chatCardTemplate, chatCardData);
 	}

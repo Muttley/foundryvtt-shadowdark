@@ -82,6 +82,7 @@ SHADOWDARK.DEFAULTS = {
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		Potion: "icons/consumables/potions/bottle-corked-red.webp",
+		Property: "icons/sundries/documents/document-torn-diagram-tan.webp",
 		Scroll: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
 		Spell: "icons/magic/symbols/runes-star-blue.webp",
 		Talent: "icons/sundries/books/book-worn-brown-grey.webp",
@@ -137,6 +138,11 @@ SHADOWDARK.NPC_MOVES = {
 	tripleNear: "SHADOWDARK.npc_move.triple_near",
 	far: "SHADOWDARK.npc_move.far",
 	special: "SHADOWDARK.npc_move.special",
+};
+
+SHADOWDARK.PROPERTY_TYPES = {
+	armor: "SHADOWDARK.property.type.option.armor",
+	weapon: "SHADOWDARK.property.type.option.weapon",
 };
 
 SHADOWDARK.RANGES = {

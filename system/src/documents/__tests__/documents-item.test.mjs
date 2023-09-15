@@ -49,10 +49,10 @@ export default ({ describe, it, after, expect }) => {
 			const item = await ItemSD.create({
 				name: `Test Item ${key}: Armor`,
 				type: "Armor",
-				"system.properties": ["Test"],
+				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
 
-			expect(item.hasProperty("Test")).equal(true);
+			expect(await item.hasProperty("shield")).equal(true);
 			await item.delete();
 		});
 	});
@@ -62,9 +62,9 @@ export default ({ describe, it, after, expect }) => {
 			const item = await ItemSD.create({
 				name: `Test Item ${key}: Armor`,
 				type: "Armor",
-				"system.properties": ["shield"],
+				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
-			expect(item.isAShield()).equal(true);
+			expect(await item.isAShield()).equal(true);
 			await item.delete();
 		});
 
@@ -74,7 +74,7 @@ export default ({ describe, it, after, expect }) => {
 				type: "Armor",
 				"system.properties": [],
 			});
-			expect(item.isAShield()).equal(false);
+			expect(await item.isAShield()).equal(false);
 			await item.delete();
 		});
 	});
@@ -84,9 +84,9 @@ export default ({ describe, it, after, expect }) => {
 			const item = await ItemSD.create({
 				name: `Test Item ${key}: Armor`,
 				type: "Armor",
-				"system.properties": ["shield"],
+				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
-			expect(item.isNotAShield()).equal(false);
+			expect(await item.isNotAShield()).equal(false);
 			await item.delete();
 		});
 
@@ -96,7 +96,7 @@ export default ({ describe, it, after, expect }) => {
 				type: "Armor",
 				"system.properties": [],
 			});
-			expect(item.isNotAShield()).equal(true);
+			expect(await item.isNotAShield()).equal(true);
 			await item.delete();
 		});
 	});

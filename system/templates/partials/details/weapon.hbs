@@ -31,7 +31,7 @@
 	{{localize 'SHADOWDARK.chat_card.button.attack'}}
 </button>
 <footer class="details-footer">
-	{{#each item.system.properties as |prop|}}
-		<span>{{fromConfig "WEAPON_PROPERTIES" prop}}</span>
+	{{#each itemProperties}}
+		<span>{{this.name}}</span>
 	{{/each}}
 </footer>

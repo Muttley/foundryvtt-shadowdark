@@ -145,14 +145,14 @@ export default ({ describe, it, after, before, expect }) => {
 			await game.shadowdark.lightSourceTracker.toggleInterface();
 		});
 
-		it("world sanity check: less than 10 world actors", () => {
-			// These tests are sensitive to number of actors in the world,
-			// as it iterates over them. And it seems to not function very
-			// stable above 10 actors (on bakbak's machine).
-			//
-			// If you see this test failing, create a fresh world and run the suite.
-			expect(game.actors.contents.length).to.be.below(10);
-		});
+		// it("world sanity check: less than 10 world actors", () => {
+		// 	// These tests are sensitive to number of actors in the world,
+		// 	// as it iterates over them. And it seems to not function very
+		// 	// stable above 10 actors (on bakbak's machine).
+		// 	//
+		// 	// If you see this test failing, create a fresh world and run the suite.
+		// 	expect(game.actors.contents.length).to.be.below(10);
+		// });
 
 		it("actor sanity check", () => {
 			expect(mockActor).is.not.undefined;

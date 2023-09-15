@@ -137,9 +137,11 @@
 			"Basic",
 			"Gem",
 			"Effect",
+			"Item Property",
 			"NPC Attack",
 			"NPC Feature",
 			"Potion",
+			"Property",
 			"Scroll",
 			"Spell",
 			"Talent",
@@ -148,8 +150,17 @@
 		],
 		"templates": {
 			"common": {
-				"description": "",
-				"properties": []
+				"description": ""
+			},
+			"lightSource": {
+				"light": {
+					"active": false,
+					"hasBeenUsed": false,
+					"isSource": false,
+					"longevityMins": 60,
+					"remainingSecs": 3600,
+					"template": "torch"
+				}
 			},
 			"magic": {
 				"class": [],
@@ -162,12 +173,12 @@
 			},
 			"physical": {
 				"broken": false,
-				"cost": {
-					"gp": 0,
-					"sp": 0,
-					"cp": 0
-				},
 				"canBeEquipped": false,
+				"cost": {
+					"cp": 0,
+					"gp": 0,
+					"sp": 0
+				},
 				"equipped": false,
 				"isPhysical": true,
 				"magicItem": false,
@@ -177,16 +188,6 @@
 					"per_slot": 1,
 					"slots_used": 1
 				}
-			},
-			"lightSource": {
-				"light": {
-					"active": false,
-					"hasBeenUsed": false,
-					"isSource": false,
-					"longevityMins": 60,
-					"remainingSecs": 3600,
-					"template": "torch"
-				}
 			}
 		},
 		"Armor": {
@@ -195,21 +196,22 @@
 				"physical"
 			],
 			"ac": {
+				"attribute": "",
 				"base": 0,
-				"modifier": 0,
-				"attribute": ""
+				"modifier": 0
 			},
+			"baseArmor": "",
 			"canBeEquipped": true,
-			"baseArmor": ""
+			"properties": []
 		},
 		"Basic": {
 			"templates": [
 				"common",
-				"physical",
-				"lightSource"
+				"lightSource",
+				"physical"
 			],
-			"treasure": false,
-			"scroll": false
+			"scroll": false,
+			"treasure": false
 		},
 		"Gem": {
 			"templates": [
@@ -227,21 +229,27 @@
 				"common",
 				"lightSource"
 			],
+			"category": "effect",
 			"duration": {
-				"value": -1,
-				"type": "unlimited"
-			},
-			"start": {
-				"value": 0,
-				"combatTime": null
-			},
-			"tokenIcon": {
-				"show": true
+				"type": "unlimited",
+				"value": -1
 			},
 			"effectPanel": {
 				"show": true
 			},
-			"category": "effect"
+			"start": {
+				"combatTime": null,
+				"value": 0
+			},
+			"tokenIcon": {
+				"show": true
+			}
+		},
+		"Property": {
+			"templates": [
+				"common"
+			],
+			"itemType": null
 		},
 		"NPC Attack": {
 			"templates": [
@@ -250,22 +258,24 @@
 			"attack": {
 				"num": 1
 			},
-			"damage": {
-				"numDice": 1,
-				"value": "",
-				"special": ""
-			},
+			"attackType": "physical",
 			"bonuses": {
-				"damageBonus": 0,
 				"attackBonus": 0,
 				"critical": {
 					"failureThreshold": 1,
-					"successThreshold": 20,
-					"multiplier": 2
-				}
+					"multiplier": 2,
+					"successThreshold": 20
+				},
+				"damageBonus": 0
 			},
-			"attackType": "physical",
-			"ranges": ["close"]
+			"damage": {
+				"numDice": 1,
+				"special": "",
+				"value": ""
+			},
+			"ranges": [
+				"close"
+			]
 		},
 		"NPC Feature": {
 			"templates": [
@@ -299,29 +309,30 @@
 		},
 		"Weapon": {
 			"templates": [
-				"physical",
-				"common"
+				"common",
+				"physical"
 			],
-			"canBeEquipped": true,
-			"damage": {
-				"oneHanded": "",
-				"twoHanded": "",
-				"numDice": 1
-			},
+			"baseWeapon": "",
 			"bonuses": {
-				"damageBonus": 0,
 				"attackBonus": 0,
 				"critical": {
 					"failureThreshold": 1,
-					"successThreshold": 20,
-					"multiplier": 2
+					"multiplier": 2,
+					"successThreshold": 20
 				},
+				"damageBonus": 0,
 				"damageMultiplier": 1
 			},
+			"canBeEquipped": true,
+			"damage": {
+				"numDice": 1,
+				"oneHanded": "",
+				"twoHanded": ""
+			},
+			"properties": [],
 			"range": "close",
 			"type": "melee",
-			"weaponMastery": false,
-			"baseWeapon": ""
+			"weaponMastery": false
 		}
 	}
 }

@@ -1,0 +1,41 @@
+
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.compendium-item-selector {
+	font-family: "Montserrat-Medium";
+
+	form {
+		.form-group {
+			@include p-reset;
+
+			input:focus {
+				border-bottom: 1px solid #644f33;
+			}
+
+			select {
+				flex: 2;
+				margin-right: 5px;
+			}
+
+			input[type="text"] {
+				background: rgba(255, 255, 255, 0.5);
+				border: 1px solid #aaa;
+			}
+
+			input::placeholder {
+				color: var(--primary);
+			}
+
+		}
+	}
+
+	.remove-item {
+		color: darkred;
+	}
+
+	.uuid-link {
+		margin: 4px;
+	}
+
+}

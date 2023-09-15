@@ -15,7 +15,7 @@
 	{{{description}}}
 </div>
 <footer class="details-footer">
-	{{#each item.system.properties as |prop|}}
-		<span>{{fromConfig "ARMOR_PROPERTIES" prop}}</span>
+	{{#each itemProperties}}
+		<span>{{this.name}}</span>
 	{{/each}}
 </footer>

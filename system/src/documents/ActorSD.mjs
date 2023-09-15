@@ -112,7 +112,7 @@ export default class ActorSD extends Actor {
 		const meleeAttack = this.attackBonus("melee");
 		const rangedAttack = this.attackBonus("ranged");
 
-		const baseAttackBonus = item.isFinesseWeapon()
+		const baseAttackBonus = await item.isFinesseWeapon()
 			? Math.max(meleeAttack, rangedAttack)
 			: this.attackBonus(item.system.type);
 
@@ -123,7 +123,7 @@ export default class ActorSD extends Actor {
 			attackRange: "",
 			baseDamage: "",
 			bonusDamage: 0,
-			properties: item.propertiesDisplay(),
+			properties: await item.propertiesDisplay(),
 			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
@@ -386,7 +386,6 @@ export default class ActorSD extends Actor {
 					class: item.system.class,
 					description: item.system.description,
 					duration: item.system.duration,
-					properties: item.system.properties,
 					range: item.system.range,
 					tier: item.system.tier,
 				},
@@ -575,7 +574,7 @@ export default class ActorSD extends Actor {
 		if (this.type === "Player") {
 
 			if (item.system.type === "melee") {
-				if (item.isFinesseWeapon()) {
+				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
 						this.abilityModifier("str"),
 						this.abilityModifier("dex")
@@ -783,7 +782,7 @@ export default class ActorSD extends Actor {
 		// on/off.
 		if (updatedItem.system.equipped) {
 			// First we need to disable any already equipped armor
-			const isAShield = updatedItem.isAShield();
+			const isAShield = await updatedItem.isAShield();
 
 			const armorToUnequip = [];
 
@@ -794,13 +793,13 @@ export default class ActorSD extends Actor {
 
 				// Only unequip a shield if the newly equipped item is a shield
 				// as well.
-				if (isAShield && item.isAShield()) {
+				if (isAShield && await item.isAShield()) {
 					armorToUnequip.push({
 						_id: item._id,
 						"system.equipped": false,
 					});
 				}
-				else if (item.isNotAShield() && !isAShield) {
+				else if (await item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
 						_id: item._id,
 						"system.equipped": false,
@@ -834,7 +833,7 @@ export default class ActorSD extends Actor {
 			for (let i = 0; i < equippedArmor.length; i++) {
 				const armor = equippedArmor[i];
 
-				if (armor.isNotAShield()) {
+				if (await armor.isNotAShield()) {
 					nonShieldEquipped = true;
 				}
 
