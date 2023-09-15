@@ -3,6 +3,7 @@
 ### Bugfixes
 * [#431] Mage Armor Active Effect does not change AC
 * [#476] Attack bonuses missing from monsters
+* [#480] Added ability to create custom weapon and armor properties
 * [#482] Can't create or import active effects when not in combat
 * [#483] Secret text doesn't behave correctly
 * [#486] Fixed typo in Magic Item Table 1, Result 20
