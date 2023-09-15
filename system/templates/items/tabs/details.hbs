@@ -9,16 +9,28 @@
 			{{> items/partials/effect }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Language"}}
+			{{> items/partials/language }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "NPC Attack"}}
+			{{> items/partials/npc-attack }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Property"}}
 			{{> items/partials/property }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Scroll"}}
+			{{> items/partials/spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Spell"}}
 			{{> items/partials/spell }}
 		{{/ifEq}}
 
-		{{#ifEq item.type "Scroll"}}
-			{{> items/partials/spell }}
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/talent }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Wand"}}
@@ -27,14 +39,6 @@
 
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "NPC Attack"}}
-			{{> items/partials/npc-attack }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent }}
 		{{/ifEq}}
 
 		{{#if usesSlots}}

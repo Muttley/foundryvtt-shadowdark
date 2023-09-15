@@ -79,6 +79,7 @@ SHADOWDARK.DEFAULTS = {
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
 		Effect: "icons/commodities/tech/cog-brass.webp",
 		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
+		Language: "icons/tools/scribal/ink-quill-pink.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		Potion: "icons/consumables/potions/bottle-corked-red.webp",
@@ -110,6 +111,11 @@ SHADOWDARK.LANGUAGES = {
 	reptilian: "SHADOWDARK.language.reptilian",
 	sylvan: "SHADOWDARK.language.sylvan",
 	thanian: "SHADOWDARK.language.thanian",
+};
+
+SHADOWDARK.LANGUAGE_RARITY = {
+	common: "SHADOWDARK.language.rarity.common",
+	rare: "SHADOWDARK.language.rarity.rare",
 };
 
 SHADOWDARK.LIGHT_SETTING_NAMES = {

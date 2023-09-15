@@ -1,5 +1,9 @@
 export default class CompendiumsSD {
 
+	static async commonLanguages(sources=[]) {
+		return CompendiumsSD.languages("common", sources);
+	}
+
 	static async compendiumDocuments(type, subtype) {
 		let docs = [];
 
@@ -91,6 +95,41 @@ export default class CompendiumsSD {
 		return CompendiumsSD.documents("Effect", sources);
 	}
 
+	static async languages(subtypes=[], sources=[]) {
+		const noSubtypes = subtypes.length === 0;
+
+		const documents = await CompendiumsSD.documents("Language", sources);
+
+		if (noSubtypes) {
+			return documents;
+		}
+		else {
+			const filteredDocuments = documents.filter(
+				document => subtypes.includes(document.system.rarity)
+			);
+
+			// re-create the collection from the filtered Items
+			const filteredCollection = new Collection();
+			for (let d of filteredDocuments) {
+				filteredCollection.set(d.id, d);
+			}
+
+			return filteredCollection;
+		}
+	}
+
+	static async npcAttacks(sources=[]) {
+		return CompendiumsSD.talents(["NPC Attack"], sources);
+	}
+
+	static async npcFeatures(sources=[]) {
+		return CompendiumsSD.documents("NPC Features", sources);
+	}
+
+	static async potions(sources=[]) {
+		return CompendiumsSD.documents("Potion", sources);
+	}
+
 	static async properties(subtypes=[], sources=[]) {
 		const noSubtypes = subtypes.length === 0;
 
@@ -114,16 +153,8 @@ export default class CompendiumsSD {
 		}
 	}
 
-	static async npcAttacks(sources=[]) {
-		return CompendiumsSD.talents(["NPC Attack"], sources);
-	}
-
-	static async npcFeatures(sources=[]) {
-		return CompendiumsSD.documents("NPC Features", sources);
-	}
-
-	static async potions(sources=[]) {
-		return CompendiumsSD.documents("Potion", sources);
+	static async rareLanguages(sources=[]) {
+		return CompendiumsSD.languages("rare", sources);
 	}
 
 	static async scrolls(sources=[]) {

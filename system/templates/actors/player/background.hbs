@@ -77,9 +77,29 @@
 				</div>
 			</div>
 			<div class="grid-1-columns">
-				<div class="detail-box">
+				<div class="language-box">
 					<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
-					<p class="language-list languages">{{knownLanguagesDisplay}}</p>
+					<a
+						class="item-selector"
+						data-select-type="language"
+						for="system.languages"
+					>
+						<i class="fa-solid fa-pen-to-square fa-sm"></i>
+					</a>
+					<ul class="tags">
+						{{#each knownLanguages}}
+							<li
+								{{#ifEq this.system.rarity "common"}}
+									class="tag tag_primary"
+								{{else}}
+									class="tag tag_secondary"
+								{{/ifEq}}
+								data-tooltip="{{this.system.description}}"
+							>
+								{{this.name}}
+							</li>
+						{{/each}}
+					</ul>
 				</div>
 			</div>
 		</div>

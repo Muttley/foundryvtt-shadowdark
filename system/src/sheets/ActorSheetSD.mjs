@@ -1,3 +1,5 @@
+import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
+
 export default class ActorSheetSD extends ActorSheet {
 
 	/** @inheritdoc */
@@ -8,6 +10,10 @@ export default class ActorSheetSD extends ActorSheet {
 
 		html.find(".hp.rollable").click(
 			event => this._onRollHP(event)
+		);
+
+		html.find(".item-selector").click(
+			event => this._onItemSelection(event)
 		);
 
 		html.find(".pc-roll-initiative .rollable").click(
@@ -232,6 +238,18 @@ export default class ActorSheetSD extends ActorSheet {
 				default: "Yes",
 			}).render(true);
 		});
+	}
+
+	_onItemSelection(event) {
+		event.preventDefault();
+
+		const selectType = event.currentTarget.dataset.selectType;
+
+		switch (selectType) {
+			case "language":
+				new select.LanguageSelector(this.actor).render(true);
+				break;
+		}
 	}
 
 	async _onOpenItem(event) {

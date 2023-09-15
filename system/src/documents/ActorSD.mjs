@@ -606,6 +606,16 @@ export default class ActorSD extends Actor {
 		return item.rollItem(parts, data);
 	}
 
+	async languageItems() {
+		const languageItems = [];
+
+		for (const uuid of this.system.languages ?? []) {
+			languageItems.push(await fromUuid(uuid));
+		}
+
+		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
 	async rollHP(options={}) {
 		if (this.type === "Player") {
 			this._playerRollHP(options);

@@ -138,6 +138,7 @@
 			"Gem",
 			"Effect",
 			"Item Property",
+			"Language",
 			"NPC Attack",
 			"NPC Feature",
 			"Potion",
@@ -245,11 +246,11 @@
 				"show": true
 			}
 		},
-		"Property": {
+		"Language": {
 			"templates": [
 				"common"
 			],
-			"itemType": null
+			"rarity": "common"
 		},
 		"NPC Attack": {
 			"templates": [
@@ -286,6 +287,12 @@
 			"templates": ["common", "magic", "physical"],
 			"magicItem": true,
 			"spellName": ""
+		},
+		"Property": {
+			"templates": [
+				"common"
+			],
+			"itemType": null
 		},
 		"Scroll": {
 			"templates": ["common", "magic", "physical"],

@@ -156,6 +156,8 @@ SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
+SHADOWDARK.dialog.select_languages.prompt: Select Language...
+SHADOWDARK.dialog.select_languages.title: Choose Languages
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
 SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Cast Spell with
@@ -354,9 +356,13 @@ SHADOWDARK.language.goblin: Goblin
 SHADOWDARK.language.merran: Merran
 SHADOWDARK.language.orcish: Orcish
 SHADOWDARK.language.primordial: Primordial
+SHADOWDARK.language.rarity.common: Common
+SHADOWDARK.language.rarity.label: Rarity
+SHADOWDARK.language.rarity.rare: Rare
 SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
+SHADOWDARK.language.who_speaks_it: Who Speaks It
 SHADOWDARK.light_source.lantern: Lantern
 SHADOWDARK.light_source.light_spell.double_near: Light Spell (Double Near)
 SHADOWDARK.light_source.light_spell.near: Light Spell (Near)

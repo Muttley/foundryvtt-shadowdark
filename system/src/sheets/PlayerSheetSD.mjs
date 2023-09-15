@@ -103,12 +103,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.abilities = this.actor.getCalculatedAbilities();
 
-		// Languages
-		context.knownLanguages = [];
-		for (const key of this.actor.system.languages) {
-			context.knownLanguages.push(CONFIG.SHADOWDARK.LANGUAGES[key]);
-		}
-		context.knownLanguagesDisplay = context.knownLanguages.join(", ");
+		context.knownLanguages = await this.actor.languageItems();
 
 		// Get the inventory ready
 		await this._prepareItems(context);

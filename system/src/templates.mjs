@@ -27,6 +27,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/effect-toggle-items.hbs",
 		"systems/shadowdark/templates/items/partials/effect.hbs",
 		"systems/shadowdark/templates/items/partials/item-category.hbs",
+		"systems/shadowdark/templates/items/partials/language.hbs",
 		"systems/shadowdark/templates/items/partials/light-source.hbs",
 		"systems/shadowdark/templates/items/partials/npc-attack.hbs",
 		"systems/shadowdark/templates/items/partials/property.hbs",
