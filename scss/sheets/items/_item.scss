@@ -51,6 +51,48 @@
 		row-gap: 4px;
 	}
 
+	.choice-selector {
+		display: grid;
+		grid-column: span 2;
+
+		font-family: "Montserrat-Medium";
+		font-size: 1.0rem;
+		font-weight: bold;
+
+		form {
+			.form-group {
+				@include p-reset;
+
+				input:focus {
+					border-bottom: 1px solid #644f33;
+				}
+
+				select {
+					flex: 2;
+					margin-right: 5px;
+				}
+
+				input[type="text"] {
+					background: rgba(255, 255, 255, 0.5);
+					border: 1px solid #aaa;
+				}
+
+				input::placeholder {
+					color: var(--primary);
+				}
+
+			}
+		}
+
+		.delete-choice {
+			color: darkred;
+		}
+
+		.uuid-link {
+			margin: 4px;
+		}
+	}
+
 	.coins {
 		display: grid;
 		row-gap: 4px;

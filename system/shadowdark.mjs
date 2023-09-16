@@ -5,6 +5,7 @@ import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import SHADOWDARK from "./src/config.mjs";
+import UtilitySD from "./src/utils/UtilitySD.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
@@ -29,13 +30,14 @@ import "./src/testing/index.mjs";
 
 globalThis.shadowdark = {
 	apps,
-	config: SHADOWDARK,
 	compendiums: CompendiumsSD,
+	config: SHADOWDARK,
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
 	log,
 	sheets,
+	utils: UtilitySD,
 };
 
 /* -------------------------------------------- */

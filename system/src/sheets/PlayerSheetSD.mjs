@@ -79,6 +79,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		super.activateListeners(html);
 	}
 
+	async getBackgroundSelectors() {
+		const system = this.actor.system;
+
+		const data = {
+			ancestry: {
+				name: "ancestry",
+				label: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.label"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
+				item: await fromUuid(system.ancestry) ?? null,
+			},
+		};
+
+		return data;
+	}
+
 	/** @override */
 	async getData(options) {
 		// Update the Gem Bag, but don't render it unless it's already showing
@@ -101,6 +116,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.knownLanguages = await this.actor.languageItems();
 
+		context.backgroundSelectors = await this.getBackgroundSelectors();
 		// Get the inventory ready
 		await this._prepareItems(context);
 
@@ -116,6 +132,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 
 		return context;
+	}
+
+	async _onDropBackgroundItem(item) {
+		switch (item.type) {
+			case "Ancestry":
+				return this.actor.addAncestry(item);
+			case "Language":
+				return this.actor.addLanguage(item);
+		}
 	}
 
 	/** @inheritdoc */
@@ -143,6 +168,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Talents & Effects may need some user input
 		if (["Talent", "Effect"].includes(item.type)) {
 			return this._createItemWithEffect(item);
+		}
+
+		const backgroundItems = [
+			"Ancestry",
+			"Language",
+		];
+
+		if (backgroundItems.includes(item.type)) {
+			return this._onDropBackgroundItem(item);
 		}
 
 		// Activate light spell if dropped onto the sheet

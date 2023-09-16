@@ -75,6 +75,7 @@ SHADOWDARK.DEFAULTS = {
 	LEARN_SPELL_DC: 15,
 	LIGHT_TRACKER_UPDATE_INTERVAL_SECS: 30,
 	ITEM_IMAGES: {
+		Ancestry: "icons/environment/people/group.webp",
 		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
 		Effect: "icons/commodities/tech/cog-brass.webp",

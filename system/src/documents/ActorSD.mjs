@@ -23,6 +23,26 @@ export default class ActorSD extends Actor {
 	/*  Methods                                     */
 	/* -------------------------------------------- */
 
+	async addAncestry(item) {
+		this.update({"system.ancestry": item.uuid});
+	}
+
+	async addLanguage(item) {
+		let languageFound = false;
+		for (const language of await this.languageItems()) {
+			if (language.uuid === item.uuid) {
+				languageFound = true;
+				break;
+			}
+		}
+
+		if (!languageFound) {
+			const currentLanguages = this.system.languages;
+			currentLanguages.push(item.uuid);
+			this.update({"system.languages": currentLanguages});
+		}
+	}
+
 	abilityModifier(ability) {
 		if (this.type === "Player") {
 

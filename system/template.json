@@ -133,11 +133,11 @@
 	},
 	"Item": {
 		"types": [
+			"Ancestry",
 			"Armor",
 			"Basic",
 			"Gem",
 			"Effect",
-			"Item Property",
 			"Language",
 			"NPC Attack",
 			"NPC Feature",
@@ -190,6 +190,15 @@
 					"slots_used": 1
 				}
 			}
+		},
+		"Ancestry": {
+			"templates": [
+				"common"
+			],
+			"languageChoiceCount": 0,
+			"languageChoiceRarity": "common",
+			"languages": [],
+			"talents": []
 		},
 		"Armor": {
 			"templates": [

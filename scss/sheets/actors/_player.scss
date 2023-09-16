@@ -19,12 +19,27 @@
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
-		font-size: 16px;
+		font-size: 1.1rem;
 
 		text-overflow: ellipsis;
 		text-align: center;
 
 		background: rgba(0, 0, 0, 0.05);
+		border: none;
+	}
+
+	label {
+		@include p-reset;
+		display: block;
+
+		font-family: "Old Newspaper Font";
+		font-size: 1.3rem;
+		font-weight: bold;
+
+		line-height: 1.1;
+
+		align-self: center;
+
 		border: none;
 	}
 
@@ -129,19 +144,19 @@
 			background-color: var(--form-background);
 		}
 
-		label {
-			display: block;
-			@include p-reset;
+		// label {
+		// 	display: block;
+		// 	@include p-reset;
 
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-			text-decoration: underline;
+		// 	font-family: "Old Newspaper Font";
+		// 	font-size: 20px;
+		// 	font-weight: bold;
+		// 	text-decoration: underline;
 
-			line-height: 1.1;
+		// 	line-height: 1.1;
 
-			border: none;
-		}
+		// 	border: none;
+		// }
 
 	}
 
@@ -203,24 +218,17 @@
 	}
 
 	.detail-box,
-	.language-box {
+	.pc {
 		@include p-reset;
 		display: grid;
 		grid-template-columns: minmax(min-content, max-content) 1fr;
 		background-color: var(--form-background);
 		column-gap: 8px;
 
-		label {
-			@include p-reset;
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
+		a {
+			font-family: "Montserrat-Medium";
+			font-size: 1.0rem;
 			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
 		}
 	}
 
@@ -229,8 +237,10 @@
 		font-size: 16px;
 	}
 
-	.language-box {
+	.pc_ancestry,
+	.pc_languages {
 		grid-template-columns: min-content min-content 1fr;
+		align-items: center;
 	}
 
 	.detail-value {
@@ -268,7 +278,8 @@
 		align-items: center;
 
 		p {
-			font-size: 18px;
+			font-size: 1.3rem;
+			font-weight: bold;
 		}
 	}
 
@@ -424,19 +435,6 @@
 		column-gap: 8px;
 		align-items: center;
 		text-align: center;
-
-		label {
-			@include p-reset;
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-		}
 	}
 
 	.luck {
@@ -447,7 +445,7 @@
 		column-gap: 4px;
 
 		p {
-			font-size: 20px;
+			font-size: 1.3rem;
 			font-weight: bold;
 		}
 	}
@@ -705,6 +703,10 @@
 			color: $primary-color;
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
+	}
+
+	.uuid-link {
+		margin: 4px;
 	}
 
 	.xp-score {

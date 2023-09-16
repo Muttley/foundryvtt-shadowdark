@@ -32,6 +32,10 @@ export default class ItemSheetSD extends ItemSheet {
 	/** @inheritdoc */
 	activateListeners(html) {
 
+		html.find(".delete-choice").click(
+			event => this._deleteChoiceItem(event)
+		);
+
 		html.find(".item-property-list.npc-attack-ranges").click(
 			event => this._onNpcAttackRanges(event)
 		);
@@ -77,9 +81,40 @@ export default class ItemSheetSD extends ItemSheet {
 		super.activateListeners(html);
 	}
 
-	/* -------------------------------------------- */
-	/*  Overrides                                   */
-	/* -------------------------------------------- */
+	async getAncestrySelectorConfigs(context) {
+		const [selectedLanguages, availableLanguages] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.languages(),
+				this.item.system.languages ?? []
+			);
+
+		context.languagesConfig = {
+			availableItems: availableLanguages,
+			choicesKey: "languages",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.ancestry.languages.label"),
+			name: "system.languages",
+			prompt: game.i18n.localize("SHADOWDARK.ancestry.languages.prompt"),
+			selectedItems: selectedLanguages,
+		};
+
+
+		const [selectedTalents, availableTalents] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.ancestryTalents(),
+				this.item.system.talents ?? []
+			);
+
+		context.talentsConfig = {
+			availableItems: availableTalents,
+			choicesKey: "talents",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.ancestry.talents.label"),
+			name: "system.talents",
+			prompt: game.i18n.localize("SHADOWDARK.ancestry.talents.prompt"),
+			selectedItems: selectedTalents,
+		};
+	}
 
 	/** @override */
 	async getData(options) {
@@ -89,8 +124,27 @@ export default class ItemSheetSD extends ItemSheet {
 		const source = item.toObject();
 
 		const showTab = {
-			details: !["NPC Feature"].includes(item.type),
-			effects: (["Effect", "Talent"].includes(item.type) || item.system.magicItem),
+			details: [
+				"Ancestry",
+				"Armor",
+				"Basic",
+				"Gem",
+				"Effect",
+				"Language",
+				"NPC Attack",
+				"Potion",
+				"Property",
+				"Scroll",
+				"Spell",
+				"Talent",
+				"Wand",
+				"Weapon",
+			].includes(item.type),
+
+			effects: (
+				["Effect", "Talent"].includes(item.type)
+					|| item.system.magicItem
+			),
 			light: item.system.light?.isSource ?? false,
 			description: true,
 		};
@@ -109,6 +163,11 @@ export default class ItemSheetSD extends ItemSheet {
 			showTab,
 			usesSlots: item.system.slots !== undefined,
 		});
+
+
+		if (["Ancestry"].includes(item.type)) {
+			await this.getAncestrySelectorConfigs(context);
+		}
 
 		if (["Armor", "Weapon"].includes(item.type)) {
 			context.propertyItems = await item.propertyItems();
@@ -182,33 +241,38 @@ export default class ItemSheetSD extends ItemSheet {
 		return this.isEditable;
 	}
 
+	/**
+	 * Deletes an Item/Skill choice from this item, using the data stored
+	 * on the target element
+	 *
+	 * @param {event} Event The triggered event
+	 */
+	_deleteChoiceItem(event) {
+		if (!this.isEditable) return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		const deleteUuid = $(event.currentTarget).data("uuid");
+		const choicesKey = $(event.currentTarget).data("choices-key");
+
+		const currentChoices = this.item.system[choicesKey] ?? [];
+
+		const newChoices = [];
+		for (const itemUuid of currentChoices) {
+			if (itemUuid === deleteUuid) continue;
+			newChoices.push(itemUuid);
+		}
+
+		const dataKey = `system.${choicesKey}`;
+		this.item.update({[dataKey]: newChoices});
+	}
+
 	/** @inheritdoc */
 	async _onChangeInput(event) {
 		// Modify the effect when field is modified
 		if (event.target?.className === "effect-change-value") {
-			const li = event.target.closest("li");
-			const effectId = li.dataset.effectId;
-			const effect = this.item.effects.get(effectId);
-
-			console.log(`Modifying talent ${event.target.name} (${effectId}) with value ${event.target.value}`);
-			const updates = {};
-
-			const value = (isNaN(parseInt(event.target.value, 10)))
-				? event.target.value
-				: parseInt(event.target.value, 10);
-
-			// Check the changes
-			updates.changes = effect.changes.map(ae => {
-				if (ae.key === event.target.name) {
-					ae.value = value;
-				}
-				return ae;
-			});
-
-			// Set the duration
-			updates.duration = this._getDuration();
-
-			await effect.update(updates);
+			return await this._onEffectChangeValue(event);
 		}
 
 		// Create effects when added through the predefined effects input
@@ -222,15 +286,102 @@ export default class ItemSheetSD extends ItemSheet {
 			await this._createPredefinedEffect(key, effectData);
 		}
 
-		await super._onChangeInput(event);
-
 		// If the change value is the duration field(s)
-		if (
-			["system.duration.type", "system.duration.value"].includes(event.target?.name)
-			&& event.target?.parentElement.className === "effect-duration"
-		) {
+		const durationTarget = [
+			"system.duration.type",
+			"system.duration.value",
+		].includes(event.target?.name);
+
+		const durationClassName =
+			event.target?.parentElement.className === "effect-duration";
+
+		if (durationTarget && durationClassName) {
 			await this._onUpdateDurationEffect();
 		}
+
+		const choicesKey = $(event.currentTarget).data("choices-key");
+		const isItem = $(event.currentTarget).data("is-item") === "true";
+
+		// We only have to do something special if we're handling a multi-choice
+		// datalist
+		//
+		if (event.target.list && choicesKey) {
+			return await this._onChangeChoiceList(event, choicesKey, isItem);
+		}
+
+		await super._onChangeInput(event);
+	}
+
+	async _onChangeChoiceList(event, choicesKey, isItem) {
+		const options = event.target.list.options;
+		const value = event.target.value;
+
+		let uuid = null;
+		for (const option of options) {
+			if (option.value === value) {
+				uuid = option.getAttribute("data-uuid");
+				break;
+			}
+		}
+
+		if (uuid === null) return;
+
+		const currentChoices = this.item.system[choicesKey] ?? [];
+
+		if (currentChoices.includes(uuid)) return; // No duplicates
+
+		currentChoices.push(uuid);
+
+		const choiceItems = [];
+		for (const itemUuid of currentChoices) {
+			if (isItem) {
+				choiceItems.push(await fromUuid(itemUuid));
+			}
+			else {
+				choiceItems.push(itemUuid);
+			}
+		}
+
+		if (isItem) {
+			choiceItems.sort((a, b) => a.name.localeCompare(b.name));
+		}
+		else {
+			choiceItems.sort((a, b) => a.localeCompare(b));
+		}
+
+		const sortedChoiceUuids = isItem
+			? choiceItems.map(item => item.uuid)
+			: choiceItems;
+
+		return this.item.update({[event.target.name]: sortedChoiceUuids});
+	}
+
+	async _onEffectChangeValue(event) {
+		const li = event.target.closest("li");
+		const effectId = li.dataset.effectId;
+		const effect = this.item.effects.get(effectId);
+
+		console.log(`Modifying talent ${event.target.name} (${effectId}) with value ${event.target.value}`);
+		const updates = {};
+
+		const value = (isNaN(parseInt(event.target.value, 10)))
+			? event.target.value
+			: parseInt(event.target.value, 10);
+
+		// Check the changes
+		updates.changes = effect.changes.map(ae => {
+			if (ae.key === event.target.name) {
+				ae.value = value;
+			}
+			return ae;
+		});
+
+		// Set the duration
+		updates.duration = this._getDuration();
+
+		await effect.update(updates);
+
+		return await super._onChangeInput(event);
 	}
 
 	/** @inheritdoc */
@@ -324,6 +475,22 @@ export default class ItemSheetSD extends ItemSheet {
 		new shadowdark.apps.SpellCasterClassSD(
 			this.item, {event: event}
 		).render(true);
+	}
+
+	/** @inheritdoc */
+	_onSubmit(event) {
+		switch (this.item.type) {
+			case "Ancestry":
+				const updateData = this._getSubmitData();
+
+				delete updateData["system.languages"];
+				delete updateData["system.talents"];
+
+				this.item.update(updateData);
+				break;
+			default:
+				super._onSubmit(event);
+		}
 	}
 
 	_onTalentTypeProperties(event) {

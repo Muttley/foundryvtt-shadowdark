@@ -243,9 +243,12 @@ export default class ActorSheetSD extends ActorSheet {
 	_onItemSelection(event) {
 		event.preventDefault();
 
-		const selectType = event.currentTarget.dataset.selectType;
+		const itemType = event.currentTarget.dataset.options;
 
-		switch (selectType) {
+		switch (itemType) {
+			case "ancestry":
+				new select.AncestrySelector(this.actor).render(true);
+				break;
 			case "language":
 				new select.LanguageSelector(this.actor).render(true);
 				break;

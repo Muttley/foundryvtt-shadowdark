@@ -10,6 +10,7 @@
 
 ### Enhancement
 * [#342] Identify "rare" languages in the language selector to aid in selection
+* [#375] Added support for custom ancestries
 * [#447] Added ability to easily access filtered compendium items
 * [#480] Added ability to create custom weapon and armor properties
 * [#490] Added Condition for Halfling's "Stealthy" Invisibility ability

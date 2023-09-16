@@ -2,15 +2,26 @@
 	<div class="background-grid">
 		<div class="background-details">
 			<div class="grid-3-columns">
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.ancestry'}}</label>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.ancestry
+				}}
+				{{!-- <div class="detail-box">
+					<label>{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
+					<a
+						class="item-selector"
+						data-select-type="ancestry"
+						for="system.ancestry"
+					>
+						<i class="fa-solid fa-pen-to-square fa-sm"></i>
+					</a>
 					<input
 						name="system.ancestry"
 						type="text"
 						class="detail-value"
 						value="{{ system.ancestry }}"
 					/>
-				</div>
+				</div> --}}
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
 					<select name="system.class">
@@ -77,11 +88,11 @@
 				</div>
 			</div>
 			<div class="grid-1-columns">
-				<div class="language-box">
+				<div class="pc pc_languages">
 					<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
 					<a
 						class="item-selector"
-						data-select-type="language"
+						data-options="language"
 						for="system.languages"
 					>
 						<i class="fa-solid fa-pen-to-square fa-sm"></i>

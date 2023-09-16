@@ -59,6 +59,14 @@ export default class CompendiumsSD {
 		}
 	}
 
+	static async ancestries(sources=[]) {
+		return CompendiumsSD.documents("Ancestry", sources);
+	}
+
+	static async ancestryTalents(sources=[]) {
+		return CompendiumsSD.talents("ancestry", sources);
+	}
+
 	static async armor(sources=[]) {
 		return CompendiumsSD.documents("Armor", sources);
 	}
@@ -85,6 +93,10 @@ export default class CompendiumsSD {
 
 	static async basicItems(sources=[]) {
 		return CompendiumsSD.documents("Basic", sources);
+	}
+
+	static async classTalents(sources=[]) {
+		return CompendiumsSD.talents("class", sources);
 	}
 
 	static async gems(sources=[]) {
@@ -116,6 +128,10 @@ export default class CompendiumsSD {
 
 			return filteredCollection;
 		}
+	}
+
+	static async levelTalents(sources=[]) {
+		return CompendiumsSD.talents("level", sources);
 	}
 
 	static async npcAttacks(sources=[]) {
@@ -165,8 +181,27 @@ export default class CompendiumsSD {
 		return CompendiumsSD.talents(["Spell"], sources);
 	}
 
-	static async talents(sources=[]) {
-		return CompendiumsSD.documents("Talent", sources);
+	static async talents(subtypes=[], sources=[]) {
+		const noSubtypes = subtypes.length === 0;
+
+		const documents = await CompendiumsSD.documents("Talent", sources);
+
+		if (noSubtypes) {
+			return documents;
+		}
+		else {
+			const filteredDocuments = documents.filter(
+				document => subtypes.includes(document.system.talentClass)
+			);
+
+			// re-create the collection from the filtered Items
+			const filteredCollection = new Collection();
+			for (let d of filteredDocuments) {
+				filteredCollection.set(d.id, d);
+			}
+
+			return filteredCollection;
+		}
 	}
 
 	static async wands(sources=[]) {

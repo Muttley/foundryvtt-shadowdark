@@ -1,6 +1,10 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="item-details">
 
+		{{#ifEq item.type "Ancestry"}}
+			{{> items/partials/ancestry }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Armor"}}
 			{{> items/partials/armor }}
 		{{/ifEq}}

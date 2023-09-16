@@ -1,5 +1,7 @@
 export default class CompendiumItemSelector extends FormApplication {
 
+	closeOnSelection = false;
+
 	maxChoices = 0;
 
 	static get defaultOptions() {
@@ -113,17 +115,17 @@ export default class CompendiumItemSelector extends FormApplication {
 				}
 			}
 
-			return await this._saveUuids(newUuids);
+			await this._saveUuids(newUuids);
 		}
 		else if (this.maxChoices === 0 || this.maxChoices > currentItemCount) {
 			for (const item of this.availableItems) {
-				if (item.name === formData["item-selected"]) {
+				if (item.decoratedName === formData["item-selected"]) {
 					newUuids.push(item.uuid);
 					break;
 				}
 			}
 
-			return await this._saveUuids(newUuids);
+			await this._saveUuids(newUuids);
 		}
 		else {
 			ui.notifications.warn(
@@ -132,7 +134,9 @@ export default class CompendiumItemSelector extends FormApplication {
 				)
 			);
 
-			this.render(true);
+			return this.render(true);
 		}
+
+		if (this.closeOnSelection) this.close({force: true});
 	}
 }

@@ -17,6 +17,11 @@ SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Lawful
 SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.ancestry.language_choices.label: Additional Languages
+SHADOWDARK.ancestry.languages.label: Ancestry Languages
+SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.talents.label: Ancestry Talents
+SHADOWDARK.ancestry.talents.prompt: Select Talent...
 SHADOWDARK.app.active_effects.title: Active Effects
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
@@ -154,6 +159,8 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
+SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
@@ -469,7 +476,8 @@ SHADOWDARK.sheet.npc.movement: Movement
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
-SHADOWDARK.sheet.player.ancestry: Ancestry
+SHADOWDARK.sheet.player.ancestry.label: Ancestry
+SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background: Background
 SHADOWDARK.sheet.player.class: Class

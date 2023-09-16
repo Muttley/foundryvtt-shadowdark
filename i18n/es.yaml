@@ -134,7 +134,7 @@ SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de tirar: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Obtienes {hp} PV por nivel 1 (incluido modificador)
 SHADOWDARK.dialog.hp_roll.roll_per_level: Obtienes {hp} PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.sum_total: Nuevos PV máximos {total}
-SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV 
+SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV
 SHADOWDARK.dialog.hp_roll.title: Tirada de PV
 SHADOWDARK.dialog.item_roll.ability_bonus: Bonus de habilidad
 SHADOWDARK.dialog.item_roll.item_bonus: Bonus de ítem
@@ -451,7 +451,7 @@ SHADOWDARK.sheet.npc.movement: Movimiento
 SHADOWDARK.sheet.npc.tab.abilities: Habilidades
 SHADOWDARK.sheet.npc.tab.description: Descripción
 SHADOWDARK.sheet.player.active_effect_override: Este valor está siendo modificado por un efecto activo y no puede ser editado. Deshabilita el efecto para editarlo.
-SHADOWDARK.sheet.player.ancestry: Ancestría
+SHADOWDARK.sheet.player.ancestry.label: Ancestría
 SHADOWDARK.sheet.player.available_spells: Hechizos disponibles
 SHADOWDARK.sheet.player.background: Trasfondo
 SHADOWDARK.sheet.player.class: Clase
