@@ -193,7 +193,7 @@ export default ({ describe, it, after, before, expect }) => {
 		before(async () => {
 			data.item = await createMockItemByKey(key, "Weapon");
 			data.actor = await createMockActorByKey(key, "Player");
-			// @todo: Have the function generate this instead
+			// TODO: Have the function generate this instead
 			data.rolls = {
 				main: mockRollResult(20, 15),
 				primaryDamage: mockRollResult(8, 4),

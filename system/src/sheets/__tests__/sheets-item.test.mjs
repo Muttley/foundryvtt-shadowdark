@@ -137,7 +137,7 @@ export default ({ describe, it, after, before, expect }) => {
 			await openDialogs.pop().close();
 		});
 
-		// @todo: verify all properties are present in dialog
+		// TODO: verify all properties are present in dialog
 
 		after(async () => {
 			await item.delete();
@@ -161,7 +161,7 @@ export default ({ describe, it, after, before, expect }) => {
 			await openDialogs.pop().close();
 		});
 
-		// @todo: verify all properties are present in dialog
+		// TODO: verify all properties are present in dialog
 
 		after(async () => {
 			await item.delete();

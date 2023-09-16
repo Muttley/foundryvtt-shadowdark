@@ -326,7 +326,7 @@ export default class ActorSD extends Actor {
 
 		const parts = ["@abilityBonus", "@talentBonus"];
 
-		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
+		// TODO: push to parts & for set talentBonus as sum of talents affecting spell rolls
 
 		return item.rollSpell(parts, data);
 	}

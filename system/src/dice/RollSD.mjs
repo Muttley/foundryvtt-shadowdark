@@ -585,7 +585,7 @@ export default class RollSD extends Roll {
 			options.target
 		);
 
-		// @todo: Write tests for this.
+		// TODO: Write tests for this.
 		// Add whether the roll succeeded or not to the roll data
 		data.rolls.main.success = (chatData.flags.success)
 			? chatData.flags.success

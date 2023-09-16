@@ -259,7 +259,7 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actor.system.move).is.not.undefined;
 		});
 		// Expecting attacks to be items rather than system data
-		// @todo: Write tests for attacks
+		// TODO: Write tests for attacks
 
 		after(async () => {
 			await actor.delete();

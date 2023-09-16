@@ -2,7 +2,7 @@ import ActorSheetSD from "./ActorSheetSD.mjs";
 
 export default class LightSheetSD extends ActorSheetSD {
 
-	// @todo: How to add a button to the token HUD for picking up torch?
+	// TODO: How to add a button to the token HUD for picking up torch?
 
 	/** @inheritdoc */
 	static get defaultOptions() {

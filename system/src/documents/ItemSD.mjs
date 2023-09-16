@@ -322,7 +322,7 @@ export default class ItemSD extends Item {
 	 * @returns {Object}
 	 */
 	async _handlePredefinedEffect(key, value) {
-		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
+		// TODO: CUSTOMIZATION How to generalize this with custom expansion of base items?
 		if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
 			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
 		}
@@ -330,7 +330,7 @@ export default class ItemSD extends Item {
 			return this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
 		}
 		else if (key === "spellAdvantage") {
-			// @todo: CUSTOMIZATION Allow custom spell compendiums
+			// TODO: CUSTOMIZATION Allow custom spell compendiums
 			const spellNames = await this.getSpellListSlugified();
 			return this._askEffectInput("spell", spellNames);
 		}
@@ -447,7 +447,7 @@ export default class ItemSD extends Item {
 	 * @returns {Array<string>}
 	 */
 	async getSpellListSlugified() {
-		// @todo: CUSTOMIZATION Allow custom spell compendiums
+		// TODO: CUSTOMIZATION Allow custom spell compendiums
 		const spellPack = game.packs.get("shadowdark.spells");
 		const spellDocuments = await spellPack.getDocuments();
 		const spellNames = {};

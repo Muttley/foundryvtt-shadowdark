@@ -680,7 +680,7 @@ export default class ItemSheetSD extends ItemSheet {
 		return effects;
 	}
 
-	// @todo: CUSTOMIZATION Extend this with custom paths as for the art mapping
+	// TODO: CUSTOMIZATION Extend this with custom paths as for the art mapping
 	/**
 	 * Reads the predefined effects mapping json file and returns it as a JSON object.
 	 * @returns {Object}

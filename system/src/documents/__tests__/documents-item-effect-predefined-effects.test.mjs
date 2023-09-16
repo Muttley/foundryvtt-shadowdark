@@ -191,7 +191,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				await cleanUpItemsByKey(key);
 			});
 
-			// @todo: This only checks that the effects are carried over to the
+			// TODO: This only checks that the effects are carried over to the
 			//        item. This seems to be the way Foundry works, and will probably
 			//        change with V11.
 			it("weaponAttackBonus", async () => {
@@ -304,7 +304,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				await cleanUpItemsByKey(key);
 			});
 
-			// @todo: This only checks that the effects are carried over to the
+			// TODO: This only checks that the effects are carried over to the
 			//        item. This seems to be the way Foundry works, and will probably
 			//        change with V11.
 			it("critMultiplier", async () => {
@@ -347,7 +347,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				await cleanUpItemsByKey(key);
 			});
 
-			// @todo: This only checks that the effects are carried over to the
+			// TODO: This only checks that the effects are carried over to the
 			//        item. This seems to be the way Foundry works, and will probably
 			//        change with V11.
 			it("weaponDamageBonus", async () => {
@@ -385,7 +385,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				await cleanUpItemsByKey(key);
 			});
 
-			// @todo: This only checks that the effects are carried over to the
+			// TODO: This only checks that the effects are carried over to the
 			//        item. This seems to be the way Foundry works, and will probably
 			//        change with V11.
 			it("damageMultiplier", async () => {

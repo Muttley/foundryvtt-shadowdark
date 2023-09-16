@@ -508,7 +508,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				});
 
 				it("weapon mastery", async () => {
-					// @todo: Weapon mastery for all types of weapons
+					// TODO: Weapon mastery for all types of weapons
 					json.bonuses = [
 						{
 							sourceType: "Class",

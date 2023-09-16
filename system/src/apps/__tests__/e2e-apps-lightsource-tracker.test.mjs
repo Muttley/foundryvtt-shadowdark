@@ -47,7 +47,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("render(force, options)", () => {
-		// @todo: Write tests if you figure out how to mock another user
+		// TODO: Write tests if you figure out how to mock another user
 	});
 
 	describe("toggleInterface()", () => {
@@ -73,7 +73,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("toggleLightSource()", () => {
-		// @todo: Figure out how to test sockets
+		// TODO: Figure out how to test sockets
 		// Mock an actor and test if there is a socket message in console
 		// Mock actor and activate a lightsource
 	});
@@ -202,6 +202,6 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("onUpdateWorldTime", () => {
-		// @todo: figure out how to test
+		// TODO: figure out how to test
 	});
 };

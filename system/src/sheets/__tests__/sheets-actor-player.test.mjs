@@ -118,7 +118,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	/* Event-based methods */
-	// @todo: Write tests
+	// TODO: Write tests
 	describe("_onItemQuantityDecrement(event)", () => {
 		let actor = {};
 
@@ -128,10 +128,10 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
 			await waitForInput();
-			// @todo: create item with quantity
+			// TODO: create item with quantity
 		});
 
-		// @todo: write tests when sheet functions are implemented
+		// TODO: write tests when sheet functions are implemented
 		it("decreases quantity when clicked in Player sheet", async () => {});
 		it("deletes item when quantity becomes 0", async () => {});
 
@@ -141,7 +141,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	// @todo: Write tests
+	// TODO: Write tests
 	describe("_onItemQuantityIncrement(event)", () => {
 		let actor = {};
 
@@ -151,10 +151,10 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 			await document.querySelector("a[data-tab=\"tab-inventory\"]").click();
 			await waitForInput();
-			// @todo: create item with quantity
+			// TODO: create item with quantity
 		});
 
-		// @todo: write tests when sheet functions are implemented
+		// TODO: write tests when sheet functions are implemented
 		it("increases quantity when clicked in Player sheet", async () => {});
 		it("increases slots used when exceeding per slot value", async () => {});
 
@@ -231,7 +231,7 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 		});
 
-		// @todo: If implementing quick-keys for rolling with adv/disadv
+		// TODO: If implementing quick-keys for rolling with adv/disadv
 		//        store & restore settings here!
 
 		abilities.forEach(ability => {
@@ -262,7 +262,7 @@ export default ({ describe, it, after, before, expect }) => {
 				expect(game.messages.size).equal(1);
 				const message = game.messages.contents.pop();
 
-				// @todo: Test the resulting roll chat card
+				// TODO: Test the resulting roll chat card
 
 				await message.delete();
 				await waitForInput();
@@ -361,12 +361,12 @@ export default ({ describe, it, after, before, expect }) => {
 
 	/* Non-event tests */
 
-	// @todo: determine what tests are needed here, has a lot of branches
-	// @todo: Write tests
+	// TODO: determine what tests are needed here, has a lot of branches
+	// TODO: Write tests
 	describe("_prepareItems(context)", () => {});
 
-	// @todo: is there any circumstance where this needs to be tested more than
+	// TODO: is there any circumstance where this needs to be tested more than
 	//        already done in _prepareItems(context)?
-	// @todo: Write tests
+	// TODO: Write tests
 	describe("_sortAllItems(context)", () => {});
 };
