@@ -1,0 +1,23 @@
+{
+	"_id": "80h0XXptGDZvGAIZ",
+	"_key": "!items!80h0XXptGDZvGAIZ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Dwarf",
+	"system": {
+		"description": "<p>Brave, stalwart folk as sturdy as the stone kingdoms they carve inside mountains.</p>",
+		"languageChoiceCount": 0,
+		"languageChoiceRarity": "common",
+		"languages": [
+			"Compendium.shadowdark.languages.Item.DBK9gi6d0SGVlRwv",
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+		],
+		"predefinedEffects": "",
+		"talents": [
+			"Compendium.shadowdark.talents.Item.MW43tnJr6lqE1Ty8"
+		]
+	},
+	"type": "Ancestry"
+}
