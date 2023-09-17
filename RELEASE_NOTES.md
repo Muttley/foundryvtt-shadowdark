@@ -7,6 +7,7 @@
 * [#483] Secret text doesn't behave correctly
 * [#486] Fixed typo in Magic Item Table 1, Result 20
 * [#488] Fixes for locked doors and missing monsters in The Lost Citadel of the Scarlet Minotaur adventure
+* [#493] Compendium item "Sword of the Ancients" missing base weapon type
 
 ### Enhancement
 * [#342] Identify "rare" languages in the language selector to aid in selection
