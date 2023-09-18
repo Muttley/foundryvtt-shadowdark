@@ -29,7 +29,11 @@
 		"magicItem": false,
 		"ranges": [
 			"far"
-		]
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Attack"
 }

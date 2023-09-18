@@ -8,7 +8,11 @@
 	"name": "Healing Touch (WIS Spell)",
 	"system": {
 		"description": "<p>DC 11. Heal one creature within close for 1d4 HP.</p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

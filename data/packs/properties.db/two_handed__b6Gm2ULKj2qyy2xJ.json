@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>You must use this weapon with two hands</p>",
 		"itemType": "weapon",
-		"predefinedEffects": ""
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Property"
 }

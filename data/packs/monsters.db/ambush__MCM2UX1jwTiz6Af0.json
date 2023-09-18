@@ -8,7 +8,11 @@
 	"name": "Ambush",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Deal an extra die of damage when undetected.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

@@ -21,6 +21,10 @@
 		"description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
 		"level": 1,
 		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
 		"talentClass": "ancestry"
 	},
 	"type": "Talent"

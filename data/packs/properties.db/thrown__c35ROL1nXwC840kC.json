@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>You can throw this weapon to make a ranged attack with it using Strength</p>",
 		"itemType": "weapon",
-		"predefinedEffects": ""
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Property"
 }

@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>You have disadvantage on stealth rolls when wearing this armor</p>",
 		"itemType": "armor",
-		"predefinedEffects": ""
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Property"
 }

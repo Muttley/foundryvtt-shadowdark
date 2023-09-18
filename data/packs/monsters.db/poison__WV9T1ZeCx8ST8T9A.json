@@ -8,7 +8,11 @@
 	"name": "Poison",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">DC 12 CON or paralyzed 1d4 hours.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

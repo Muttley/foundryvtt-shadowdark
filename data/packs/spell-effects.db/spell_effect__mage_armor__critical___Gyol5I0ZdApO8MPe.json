@@ -2,7 +2,6 @@
 	"_id": "Gyol5I0ZdApO8MPe",
 	"_key": "!items!Gyol5I0ZdApO8MPe",
 	"effects": [
-		"441BBv90QacBfojj"
 	],
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
@@ -32,6 +31,10 @@
 		},
 		"magicItem": false,
 		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
 		"start": {
 			"combatTime": null,
 			"value": 9009

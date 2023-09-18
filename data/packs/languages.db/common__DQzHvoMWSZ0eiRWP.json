@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>Most humanoids</p>",
 		"predefinedEffects": "",
-		"rarity": "common"
+		"rarity": "common",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Language"
 }

@@ -8,7 +8,11 @@
 	"name": "Impervious",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Only damaged by silver or magic sources.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

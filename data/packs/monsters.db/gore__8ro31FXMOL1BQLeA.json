@@ -8,7 +8,11 @@
 	"name": "Gore",
 	"system": {
 		"description": "<p>Deals an extra die of damage if it hits the same target with both tusks.</p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

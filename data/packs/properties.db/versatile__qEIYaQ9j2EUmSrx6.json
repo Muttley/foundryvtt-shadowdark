@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>You can use this weapon with one or two hands. Use the higher damage die if you’re wielding it with two</p>",
 		"itemType": "weapon",
-		"predefinedEffects": ""
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Property"
 }

@@ -8,7 +8,11 @@
 	"name": "Keen Senses",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Can't be surprised.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

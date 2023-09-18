@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>You are unable to swim when wearing this armor</p>",
 		"itemType": "armor",
-		"predefinedEffects": ""
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Property"
 }

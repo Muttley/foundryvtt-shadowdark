@@ -9,7 +9,11 @@
 	"system": {
 		"description": "<p>Dragons</p>",
 		"predefinedEffects": "",
-		"rarity": "rare"
+		"rarity": "rare",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "Language"
 }

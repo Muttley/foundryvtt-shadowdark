@@ -8,7 +8,11 @@
 	"name": "Corrosive",
 	"system": {
 		"description": "<p><span class=\"fontstyle2\">Metal that touches the rust monster is destroyed on a d6 roll of 1-3.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

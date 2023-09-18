@@ -8,7 +8,11 @@
 	"name": "Camouflage",
 	"system": {
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Hard to see in cave terrain or rocks.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }

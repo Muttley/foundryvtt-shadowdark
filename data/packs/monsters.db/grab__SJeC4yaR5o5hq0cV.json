@@ -8,7 +8,11 @@
 	"name": "Grab",
 	"system": {
 		"description": "<p><span class=\"fontstyle0\">Target is immobilized. Contested Strength check on turn to break free.</span></p>",
-		"magicItem": false
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
 	},
 	"type": "NPC Feature"
 }
