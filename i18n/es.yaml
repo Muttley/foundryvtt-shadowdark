@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: Fue
 SHADOWDARK.ability_strength: Fuerza
 SHADOWDARK.ability_wis: Sab
 SHADOWDARK.ability_wisdom: Sabiduría
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Caótico
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Legal
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Efectos activos
 SHADOWDARK.app.gem_bag.sell_all: Vender todas las gemas
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Bolsa de gemas
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vender Gema
 SHADOWDARK.app.gem_bag.total_value: Valor total
 SHADOWDARK.app.item_properties.armor.title: Propiedades de armadura
-SHADOWDARK.app.item_properties.caster_classes.title: Clases de hechicero
 SHADOWDARK.app.item_properties.languages.title: Idiomas
 SHADOWDARK.app.item_properties.magic_item.effects.title: Efectos de objetos mágicos
 SHADOWDARK.app.item_properties.save: Salvación
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: Tirada
 SHADOWDARK.class.fighter: Luchador
 SHADOWDARK.class.priest: Clérigo
 SHADOWDARK.class.ranger: Explorador
+SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
 SHADOWDARK.class.thief: Ladrón
 SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Seguimiento de luz en tiempo real
 SHADOWDARK.sheet.actor.ac: CA
-SHADOWDARK.sheet.actor.alignment_short: Alin
 SHADOWDARK.sheet.actor.alignment: Alineamiento
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: Rondas
 SHADOWDARK.spell_range.close: Cerca
 SHADOWDARK.spell_range.far: Lejos
 SHADOWDARK.spell_range.near: Próximo
-SHADOWDARK.spellcasting_ability: Aptitud Mágica
+SHADOWDARK.spell.classes.label: Clases de hechicero
 SHADOWDARK.talent.backstab: Puñalada
 SHADOWDARK.talent.class.ancestry: Ancestro
 SHADOWDARK.talent.class.class: Clase

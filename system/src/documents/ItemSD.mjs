@@ -45,6 +45,10 @@ export default class ItemSD extends Item {
 			itemProperties: await this.propertyItems(),
 		};
 
+		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+			data.spellClasses = await this.getSpellClassesDisplay();
+		}
+
 		return data;
 	}
 
@@ -453,5 +457,18 @@ export default class ItemSD extends Item {
 		const spellNames = {};
 		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
 		return spellNames;
+	}
+
+	async getSpellClassesDisplay() {
+		const classes = [];
+
+		for (const uuid of this.system.class ?? []) {
+			const item = await fromUuid(uuid);
+			classes.push(item.name);
+		}
+
+		classes.sort((a, b) => a.localeCompare(b));
+
+		return classes.join(", ");
 	}
 }

@@ -70,20 +70,5 @@
 				{{/each}}
 			</table>
 		</div>
-		<div class="spellcasting-ability">
-			<label class="spellcasting-ability-label">
-				{{localize "SHADOWDARK.spellcasting_ability"}}
-			</label>
-			<select
-				name="system.spellcastingAbility"
-			>
-			<option value="">&mdash;</option>
-			{{selectOptions
-				config.ABILITIES_LONG
-				selected=system.spellcastingAbility
-				localize=false
-			}}
-			</select>
-		</div>
 	</section>
 </section>

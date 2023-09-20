@@ -1,29 +1,33 @@
+<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</h4>
 <div class="choice-selector">
 	{{>
 		items/partials/choice-selector
-		config=languagesConfig
+		config=fixedLanguagesConfig
+		editable=editable
 	}}
-	<div class="form-group stacked">
-		<div class="language-detail">
-			<label>{{localize 'SHADOWDARK.ancestry.language_choices.label'}}</label>
-			<div class="grid-2-columns">
-				{{numberInput
-					item.system.languageChoiceCount
-					name="system.languageChoiceCount"
-					placeholder="0"
-				}}
-				<select name="system.languageChoiceRarity">
-					{{selectOptions
-						config.LANGUAGE_RARITY
-						selected=system.languageChoiceRarity
-						localize=false
-					}}
-				</select>
-			</div>
-		</div>
-	</div>
+</div>
+<div class="language-detail">
+	<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
+	{{numberInput
+		item.system.languages.common
+		name="system.languages.common"
+		placeholder="0"
+	}}
+</div>
+<div class="language-detail">
+	<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
+	{{numberInput
+		item.system.languages.rare
+		name="system.languages.rare"
+		placeholder="0"
+	}}
+</div>
+<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.talents.label'}}</h4>
+<div class="choice-selector item-detail">
 	{{>
 		items/partials/choice-selector
 		config=talentsConfig
+		editable=editable
 	}}
 </div>
+

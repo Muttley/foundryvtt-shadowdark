@@ -25,6 +25,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/ancestry.hbs",
 		"systems/shadowdark/templates/items/partials/armor.hbs",
 		"systems/shadowdark/templates/items/partials/choice-selector.hbs",
+		"systems/shadowdark/templates/items/partials/class.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
 		"systems/shadowdark/templates/items/partials/duration.hbs",
 		"systems/shadowdark/templates/items/partials/effect-toggle-items.hbs",

@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: Voi
 SHADOWDARK.ability_strength: Voimakkuus
 SHADOWDARK.ability_wis: Vii
 SHADOWDARK.ability_wisdom: Viisaus
-SHADOWDARK.alignment.chaotic_short: K
 SHADOWDARK.alignment.chaotic: Kaoottinen
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Lainkuuliainen
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutraali
 SHADOWDARK.app.active_effects.title: Aktiiviset Efektit
 SHADOWDARK.app.gem_bag.sell_all: Myy kaikki jalokivet
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Jalokivipussi
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Myy jalokivi
 SHADOWDARK.app.gem_bag.total_value: Yhteisarvo
 SHADOWDARK.app.item_properties.armor.title: Panssarin ominaisuudet
-SHADOWDARK.app.item_properties.caster_classes.title: Loihtimisluokat
 SHADOWDARK.app.item_properties.languages.title: Kielet
 SHADOWDARK.app.item_properties.magic_item.effects.title: Taikaesineiden efektit
 SHADOWDARK.app.item_properties.save: Tallenna
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class.fighter: Taistelija
 SHADOWDARK.class.priest: Pappi
 SHADOWDARK.class.ranger: Samooja
+SHADOWDARK.class.spellcasting_ability.label: Loihtimiskyky
 SHADOWDARK.class.thief: Varas
 SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonläht
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet
-SHADOWDARK.sheet.actor.alignment_short: Vakaus
 SHADOWDARK.sheet.actor.alignment: Vakaumus
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: Osumapisteet
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: Kierrosta
 SHADOWDARK.spell_range.close: Vieressä
 SHADOWDARK.spell_range.far: Kaukana
 SHADOWDARK.spell_range.near: Lähellä
-SHADOWDARK.spellcasting_ability: Loihtimiskyky
+SHADOWDARK.spell.classes.label: Loihtimisluokat
 SHADOWDARK.talent.backstab: Yllätyshyökkäys
 SHADOWDARK.talent.class.ancestry: Laji
 SHADOWDARK.talent.class.class: Hahmoluokka

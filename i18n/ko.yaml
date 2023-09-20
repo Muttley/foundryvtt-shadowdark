@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: 근력
 SHADOWDARK.ability_strength: 근력
 SHADOWDARK.ability_wis: 지혜
 SHADOWDARK.ability_wisdom: 지혜
-SHADOWDARK.alignment.chaotic_short: 혼돈
 SHADOWDARK.alignment.chaotic: 혼돈
-SHADOWDARK.alignment.lawful_short: 질서
 SHADOWDARK.alignment.lawful: 질서
-SHADOWDARK.alignment.neutral_short: "중립"
 SHADOWDARK.alignment.neutral: 중립
 SHADOWDARK.app.active_effects.title: 활성화된 효과
 SHADOWDARK.app.gem_bag.sell_all: 보석 전체 보기
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: 보석 가방
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: 보석 팔기
 SHADOWDARK.app.gem_bag.total_value: 총 가치
 SHADOWDARK.app.item_properties.armor.title: 방어구 속성
-SHADOWDARK.app.item_properties.caster_classes.title: 주문시전 클래스
 SHADOWDARK.app.item_properties.languages.title: 언어
 SHADOWDARK.app.item_properties.magic_item.effects.title: 마법 아이템 효과
 SHADOWDARK.app.item_properties.save: 저장
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: 굴림
 SHADOWDARK.class.fighter: 전사
 SHADOWDARK.class.priest: 성직자
 SHADOWDARK.class.ranger: 레인저
+SHADOWDARK.class.spellcasting_ability.label: 주문시전 능력
 SHADOWDARK.class.thief: 도둑
 SHADOWDARK.class.wizard: 마법사
 SHADOWDARK.coins.cp: CP
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈�
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
 SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.alignment_short: 성향
 SHADOWDARK.sheet.actor.alignment: 성향
 SHADOWDARK.sheet.actor.hp_max: 최대
 SHADOWDARK.sheet.actor.hp: HP
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: 라운드
 SHADOWDARK.spell_range.close: 인접
 SHADOWDARK.spell_range.far: 장거리
 SHADOWDARK.spell_range.near: 단거리
-SHADOWDARK.spellcasting_ability: 주문시전 능력
+SHADOWDARK.spell.classes.label: 주문시전 클래스
 SHADOWDARK.talent.backstab: 배후공격
 SHADOWDARK.talent.class.ancestry: 선조
 SHADOWDARK.talent.class.class: 클래스

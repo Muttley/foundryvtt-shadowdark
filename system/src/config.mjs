@@ -25,12 +25,6 @@ SHADOWDARK.ALIGNMENTS = {
 	chaotic: "SHADOWDARK.alignment.chaotic",
 };
 
-SHADOWDARK.ALIGNMENTS_SHORT = {
-	lawful: "SHADOWDARK.alignment.lawful_short",
-	neutral: "SHADOWDARK.alignment.neutral_short",
-	chaotic: "SHADOWDARK.alignment.chaotic_short",
-};
-
 SHADOWDARK.ARMOR_BASE_ARMOR = {
 	chainmail: "SHADOWDARK.item.armor.base_armor.chainmail",
 	"leather-armor": "SHADOWDARK.item.armor.base_armor.leather_armor",
@@ -40,14 +34,6 @@ SHADOWDARK.ARMOR_BASE_ARMOR = {
 
 SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
-};
-
-SHADOWDARK.ARMOR_PROPERTIES = {
-	shield: "SHADOWDARK.armor.properties.shield",
-	disadvStealth: "SHADOWDARK.armor.properties.disadvantage_stealth",
-	oneHanded: "SHADOWDARK.armor.properties.one_handed",
-	disadvSwim: "SHADOWDARK.armor.properties.disadvantage_swimming",
-	noSwim: "SHADOWDARK.armor.properties.no_swimming",
 };
 
 SHADOWDARK.BACKSTAB_CLASSES = ["thief"];
@@ -68,6 +54,15 @@ SHADOWDARK.CLASSES = {
 	wizard: "SHADOWDARK.class.wizard",
 };
 
+SHADOWDARK.DICE = {
+	d4: "d4",
+	d6: "d6",
+	d8: "d8",
+	d10: "d10",
+	d12: "d12",
+	d20: "d20",
+};
+
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
@@ -78,6 +73,7 @@ SHADOWDARK.DEFAULTS = {
 		Ancestry: "icons/environment/people/group.webp",
 		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
+		Class: "icons/sundries/documents/document-sealed-brown-red.webp",
 		Effect: "icons/commodities/tech/cog-brass.webp",
 		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
 		Language: "icons/tools/scribal/ink-quill-pink.webp",
@@ -95,23 +91,6 @@ SHADOWDARK.DEFAULTS = {
 
 SHADOWDARK.INVENTORY = {
 	GEMS_PER_SLOT: 10,
-};
-
-SHADOWDARK.LANGUAGES = {
-	celestial: "SHADOWDARK.language.celestial",
-	common: "SHADOWDARK.language.common",
-	diabolic: "SHADOWDARK.language.diabolic",
-	draconic: "SHADOWDARK.language.draconic",
-	dwarvish: "SHADOWDARK.language.dwarvish",
-	elvish: "SHADOWDARK.language.elvish",
-	giant: "SHADOWDARK.language.giant",
-	goblin: "SHADOWDARK.language.goblin",
-	merran: "SHADOWDARK.language.merran",
-	orcish: "SHADOWDARK.language.orcish",
-	primordial: "SHADOWDARK.language.primordial",
-	reptilian: "SHADOWDARK.language.reptilian",
-	sylvan: "SHADOWDARK.language.sylvan",
-	thanian: "SHADOWDARK.language.thanian",
 };
 
 SHADOWDARK.LANGUAGE_RARITY = {
@@ -305,14 +284,6 @@ SHADOWDARK.WEAPON_BASE_WEAPON = {
 	staff: "SHADOWDARK.item.weapon.base_weapon.staff",
 	wand: "SHADOWDARK.item.weapon.base_weapon.wand",
 	warhammer: "SHADOWDARK.item.weapon.base_weapon.warhammer",
-};
-
-SHADOWDARK.WEAPON_PROPERTIES = {
-	finesse: "SHADOWDARK.weapon.properties.finesse",
-	loading: "SHADOWDARK.weapon.properties.loading",
-	thrown: "SHADOWDARK.weapon.properties.thrown",
-	twoHanded: "SHADOWDARK.weapon.properties.two_handed",
-	versatile: "SHADOWDARK.weapon.properties.versatile",
 };
 
 SHADOWDARK.WEAPON_TYPES = {

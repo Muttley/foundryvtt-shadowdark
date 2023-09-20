@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Stärke
 SHADOWDARK.ability_wis: Wei
 SHADOWDARK.ability_wisdom: Weisheit
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Chaotisch
-SHADOWDARK.alignment.lawful_short: R
 SHADOWDARK.alignment.lawful: Rechtschaffen
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Aktive Effekte
 SHADOWDARK.app.gem_bag.sell_all: Alle Edelsteine verkaufen
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Edelsteintasche
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Edelstein verkaufen
 SHADOWDARK.app.gem_bag.total_value: Gesamtwert
 SHADOWDARK.app.item_properties.armor.title: Rüstungseigenschaften
-SHADOWDARK.app.item_properties.caster_classes.title: Zauberwirkerklassen
 SHADOWDARK.app.item_properties.languages.title: Sprachen
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magische Gegenstandseffekte
 SHADOWDARK.app.item_properties.save: Speichern
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class.fighter: Kämpfer
 SHADOWDARK.class.priest: Priester
 SHADOWDARK.class.ranger: Waldläufer
+SHADOWDARK.class.spellcasting_ability.label: Zauber-Fähigkeit
 SHADOWDARK.class.thief: Dieb
 SHADOWDARK.class.wizard: Zauberer
 SHADOWDARK.coins.cp: KM
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Licht-Tracking pau
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.actor.ac: RK
-SHADOWDARK.sheet.actor.alignment_short: Gesinn
 SHADOWDARK.sheet.actor.alignment: Gesinnung
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: TP
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: Runden
 SHADOWDARK.spell_range.close: Direkt
 SHADOWDARK.spell_range.far: Weit
 SHADOWDARK.spell_range.near: Nah
-SHADOWDARK.spellcasting_ability: Zauber-Fähigkeit
+SHADOWDARK.spell.classes.label: Zauberwirkerklassen
 SHADOWDARK.talent.backstab: Rückenschlag
 SHADOWDARK.talent.class.ancestry: Abstammung
 SHADOWDARK.talent.class.class: Klasse

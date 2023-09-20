@@ -40,10 +40,6 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onNpcAttackRanges(event)
 		);
 
-		html.find(".item-property-list.spell").click(
-			event => this._onSpellCasterClasses(event)
-		);
-
 		html.find(".item-property-list.talent-type").click(
 			event => this._onTalentTypeProperties(event)
 		);
@@ -85,19 +81,18 @@ export default class ItemSheetSD extends ItemSheet {
 		const [selectedLanguages, availableLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
 				await shadowdark.compendiums.languages(),
-				this.item.system.languages ?? []
+				this.item.system.languages.fixed ?? []
 			);
 
-		context.languagesConfig = {
+		context.fixedLanguagesConfig = {
 			availableItems: availableLanguages,
-			choicesKey: "languages",
+			choicesKey: "languages.fixed",
 			isItem: true,
 			label: game.i18n.localize("SHADOWDARK.ancestry.languages.label"),
-			name: "system.languages",
+			name: "system.languages.fixed",
 			prompt: game.i18n.localize("SHADOWDARK.ancestry.languages.prompt"),
 			selectedItems: selectedLanguages,
 		};
-
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(
@@ -116,6 +111,128 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+	async getClassSelectorConfigs(context) {
+		const [selectedArmor, availableArmor] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.armor(),
+				this.item.system.armor ?? []
+			);
+
+		context.armorConfig = {
+			availableItems: availableArmor,
+			choicesKey: "armor",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.armor.label"),
+			name: "system.armor",
+			prompt: game.i18n.localize("SHADOWDARK.class.armor.prompt"),
+			selectedItems: selectedArmor,
+		};
+
+		context.classTalentTables = await shadowdark.compendiums.classTalentTables();
+
+		const classTalentTables =
+			await shadowdark.compendiums.classTalentTables();
+
+		context.classTalentTables = {};
+		for (const classTalentTable of classTalentTables) {
+			context.classTalentTables[classTalentTable.uuid] =
+				classTalentTable.name;
+		}
+
+		const [selectedLanguages, availableLanguages] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.languages(),
+				this.item.system.languages.selectOptions ?? []
+			);
+
+		context.languageChoicesConfig = {
+			availableItems: availableLanguages,
+			choicesKey: "languages.selectOptions",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.language_choices.label"),
+			name: "system.languages.selectOptions",
+			prompt: game.i18n.localize("SHADOWDARK.class.language_choices.prompt"),
+			selectedItems: selectedLanguages,
+		};
+
+		const classTalents = await shadowdark.compendiums.talents();
+
+		const [selectedTalents, availableTalents] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				classTalents,
+				this.item.system.talents ?? []
+			);
+
+		context.talentsConfig = {
+			availableItems: availableTalents,
+			choicesKey: "talents",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.talents.label"),
+			name: "system.talents",
+			prompt: game.i18n.localize("SHADOWDARK.class.talents.prompt"),
+			selectedItems: selectedTalents,
+		};
+
+		const [selectedTalentChoices, availableTalentChoices] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				classTalents,
+				this.item.system.talentChoices ?? []
+			);
+
+		context.talentChoicesConfig = {
+			availableItems: availableTalentChoices,
+			choicesKey: "talentChoices",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.talent_choices.label"),
+			name: "system.talentChoices",
+			prompt: game.i18n.localize("SHADOWDARK.class.talent_choices.prompt"),
+			selectedItems: selectedTalentChoices,
+		};
+
+		const spellcastingClasses =
+			await shadowdark.compendiums.spellcastingClasses();
+
+		context.spellcastingClasses = {};
+		for (const spellcastingClass of spellcastingClasses) {
+			context.spellcastingClasses[spellcastingClass.uuid] =
+				spellcastingClass.name;
+		}
+
+		const [selectedWeapons, availableWeapons] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.baseWeapons(),
+				this.item.system.weapons ?? []
+			);
+
+		context.weaponsConfig = {
+			availableItems: availableWeapons,
+			choicesKey: "weapons",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.weapons.label"),
+			name: "system.weapons",
+			prompt: game.i18n.localize("SHADOWDARK.class.weapons.prompt"),
+			selectedItems: selectedWeapons,
+		};
+	}
+
+	async getSpellSelectorConfigs(context) {
+		const [selectedClasses, availableClasses] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				await shadowdark.compendiums.spellcastingClasses(),
+				this.item.system.class ?? []
+			);
+
+		context.spellcasterClassesConfig = {
+			availableItems: availableClasses,
+			choicesKey: "class",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.spell.classes.label"),
+			name: "system.class",
+			prompt: game.i18n.localize("SHADOWDARK.spell.classes.prompt"),
+			selectedItems: selectedClasses,
+		};
+	}
+
 	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
@@ -128,6 +245,7 @@ export default class ItemSheetSD extends ItemSheet {
 				"Ancestry",
 				"Armor",
 				"Basic",
+				"Class",
 				"Gem",
 				"Effect",
 				"Language",
@@ -167,6 +285,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (["Ancestry"].includes(item.type)) {
 			await this.getAncestrySelectorConfigs(context);
+		}
+
+		if (["Class"].includes(item.type)) {
+			await this.getClassSelectorConfigs(context);
+		}
+
+		if (["Spell"].includes(item.type)) {
+			await this.getSpellSelectorConfigs(context);
 		}
 
 		if (["Armor", "Weapon"].includes(item.type)) {
@@ -326,7 +452,19 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (uuid === null) return;
 
-		const currentChoices = this.item.system[choicesKey] ?? [];
+		const splitKey = choicesKey.split(".");
+
+		let currentChoices;
+		if (splitKey.length === 1) {
+			currentChoices = this.item.system[choicesKey] ?? [];
+		}
+		else if (splitKey.length === 2) {
+			const choiceObject = this.item.system[splitKey[0]] ?? {};
+			currentChoices = choiceObject[splitKey[1]] ?? [];
+		}
+		else {
+			// TODO throw error
+		}
 
 		if (currentChoices.includes(uuid)) return; // No duplicates
 
@@ -467,27 +605,39 @@ export default class ItemSheetSD extends ItemSheet {
 		).render(true);
 	}
 
-	_onSpellCasterClasses(event) {
-		event.preventDefault();
-
-		if (!this.isEditable) return;
-
-		new shadowdark.apps.SpellCasterClassSD(
-			this.item, {event: event}
-		).render(true);
-	}
-
 	/** @inheritdoc */
 	_onSubmit(event) {
 		switch (this.item.type) {
-			case "Ancestry":
+			case "Ancestry": {
 				const updateData = this._getSubmitData();
 
-				delete updateData["system.languages"];
+				delete updateData["system.languages.fixed"];
 				delete updateData["system.talents"];
 
 				this.item.update(updateData);
 				break;
+			}
+			case "Class": {
+				const updateData = this._getSubmitData();
+
+				delete updateData["system.armor"];
+				delete updateData["system.languages.fixed"];
+				delete updateData["system.languages.selectOptions"];
+				delete updateData["system.talentChoices"];
+				delete updateData["system.talents"];
+				delete updateData["system.weapons"];
+
+				this.item.update(updateData);
+				break;
+			}
+			case "Spell": {
+				const updateData = this._getSubmitData();
+
+				delete updateData["system.class"];
+
+				this.item.update(updateData);
+				break;
+			}
 			default:
 				super._onSubmit(event);
 		}

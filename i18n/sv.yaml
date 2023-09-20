@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: STY
 SHADOWDARK.ability_strength: Styrka
 SHADOWDARK.ability_wis: VIS
 SHADOWDARK.ability_wisdom: Vishet
-SHADOWDARK.alignment.chaotic_short: K
 SHADOWDARK.alignment.chaotic: Kaotisk
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Laglydig
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Aktiva effekter
 SHADOWDARK.app.gem_bag.sell_all: Sälj alla ädelstenar
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Ädelstenspåse
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sälj ädelsten
 SHADOWDARK.app.gem_bag.total_value: Totalt Värde
 SHADOWDARK.app.item_properties.armor.title: Rustningegenskaper
-SHADOWDARK.app.item_properties.caster_classes.title: Besvärjelseklasser
 SHADOWDARK.app.item_properties.languages.title: Språk
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magiska Föremålseffekter
 SHADOWDARK.app.item_properties.save: Spara
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class.fighter: Krigare
 SHADOWDARK.class.priest: Präst
 SHADOWDARK.class.ranger: Jägare
+SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.thief: Tjuv
 SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårnin
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Spåra ljuskällor realtid
 SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.alignment_short: Moral
 SHADOWDARK.sheet.actor.alignment: Moralisk Lutning
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: KP
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: Rundor
 SHADOWDARK.spell_range.close: Kroppsnära
 SHADOWDARK.spell_range.far: Avstånd
 SHADOWDARK.spell_range.near: Nära
-SHADOWDARK.spellcasting_ability: Besvärjelseförmåga
+SHADOWDARK.spell.classes.label: Besvärjelseklasser
 SHADOWDARK.talent.backstab: Rygghugg
 SHADOWDARK.talent.class.ancestry: Ursprung
 SHADOWDARK.talent.class.class: Klass

@@ -14,12 +14,14 @@
 					data-uuid="{{this.uuid}}"
 					title="Item"
 				>
-					<i
-						class="delete-choice fas fa-delete-right"
-						data-action="delete"
-						data-choices-key="{{../config.choicesKey}}"
-						data-uuid="{{this.uuid}}"
-					></i>
+					{{#if ../editable}}
+						<i
+							class="delete-choice fas fa-delete-right"
+							data-action="delete"
+							data-choices-key="{{../config.choicesKey}}"
+							data-uuid="{{this.uuid}}"
+						></i>
+					{{/if}}
 					{{this.name}}
 				</a>
 			</div>

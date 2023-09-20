@@ -41,9 +41,10 @@
 		</select>
 	</div>
 </div>
-<div class="item-properties">
-	<div class="item-property">
-		<label>{{localize 'SHADOWDARK.item.spell_caster_classes'}}</label>
-		<p class="item-property-list spell">{{casterClassesDisplay}}</p>
-	</div>
+<div class="choice-selector">
+	{{>
+		items/partials/choice-selector
+		config=spellcasterClassesConfig
+		editable=editable
+	}}
 </div>

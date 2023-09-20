@@ -476,7 +476,9 @@ export default class ActorSD extends Actor {
 	}
 
 	getSpellcastingAbility() {
-		return this.system.spellcastingAbility;
+		const characterClass = this.backgroundItems.class;
+
+		return characterClass?.system?.spellcasting?.ability ?? "";
 	}
 
 	hasAdvantage(data) {
@@ -487,18 +489,21 @@ export default class ActorSD extends Actor {
 	}
 
 	async isSpellcaster() {
-		return CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[this.system.class] ? true : false;
+		const characterClass = this.backgroundItems.class;
+		const spellcastingAbility = characterClass?.system?.spellcasting?.ability ?? "";
+
+		return characterClass && spellcastingAbility !== "" ? true : false;
 	}
 
 	/** @inheritDoc */
-	prepareBaseData() {
-		switch (this.type) {
-			case "Player":
-				return this._preparePlayerData();
-			case "NPC":
-				return this._prepareNPCData();
-		}
-	}
+	// prepareBaseData() {
+	// 	switch (this.type) {
+	// 		case "Player":
+	// 			return this._preparePlayerData();
+	// 		case "NPC":
+	// 			return this._prepareNPCData();
+	// 	}
+	// }
 
 	/** @inheritDoc */
 	prepareData() {
@@ -954,11 +959,27 @@ export default class ActorSD extends Actor {
 		});
 	}
 
-	/* -------------------------------------------- */
-	/*  Base Data Preparation Helpers               */
-	/* -------------------------------------------- */
+	/* --------------------------------------- */
+	/*  Data Preparation Helpers               */
+	/* --------------------------------------- */
+
+	async _populateBackgroundItems() {
+		this.backgroundItems = {};
+
+		const backgroundItems = ["ancestry", "class"];
+
+		for (const itemName of backgroundItems) {
+			const uuid = this.system[itemName] ?? "";
+			if (uuid !== "") {
+				this.backgroundItems[itemName] = await fromUuid(uuid);
+			}
+		}
+
+		console.log("done");
+	}
 
 	_preparePlayerData() {
+		this._populateBackgroundItems();
 		this._populatePlayerModifiers();
 	}
 

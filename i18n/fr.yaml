@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: For
 SHADOWDARK.ability_strength: Force
 SHADOWDARK.ability_wis: Sag
 SHADOWDARK.ability_wisdom: Sagesse
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Chaotique
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Loyal
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutre
 SHADOWDARK.app.active_effects.title: Effets actifs
 SHADOWDARK.app.gem_bag.sell_all: Vendre toutes les gemmes
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Sac de gemmes
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vendre des Gemmes
 SHADOWDARK.app.gem_bag.total_value: Valeur Totale
 SHADOWDARK.app.item_properties.armor.title: Propriétés de l'armure
-SHADOWDARK.app.item_properties.caster_classes.title: Classes de lanceur de sort
 SHADOWDARK.app.item_properties.languages.title: Langues
 SHADOWDARK.app.item_properties.magic_item.effects.title: Effets d'objet magique
 SHADOWDARK.app.item_properties.save: Sauvegarde
@@ -106,6 +102,7 @@ SHADOWDARK.chatcard.default: Lancer
 SHADOWDARK.class.fighter: Guerrier
 SHADOWDARK.class.priest: Prêtre
 SHADOWDARK.class.ranger: Éclaireur
+SHADOWDARK.class.spellcasting_ability.label: Spellcasting Ability
 SHADOWDARK.class.thief: Voleur
 SHADOWDARK.class.wizard: Magicien
 SHADOWDARK.coins.cp: PC
@@ -424,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracki
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.actor.ac: CA
-SHADOWDARK.sheet.actor.alignment_short: Aligner
 SHADOWDARK.sheet.actor.alignment: Alignement
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: PV
@@ -491,7 +487,7 @@ SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Proche
 SHADOWDARK.spell_range.far: Loin
 SHADOWDARK.spell_range.near: Près
-SHADOWDARK.spellcasting_ability: Spellcasting Ability
+SHADOWDARK.spell.classes.label: Classes de lanceur de sort
 SHADOWDARK.talent.backstab: Attaque Sournoise
 SHADOWDARK.talent.class.ancestry: Ascendance
 SHADOWDARK.talent.class.class: Classe

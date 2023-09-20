@@ -9,6 +9,10 @@
 			{{> items/partials/armor }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Class"}}
+			{{> items/partials/class }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Effect"}}
 			{{> items/partials/effect }}
 		{{/ifEq}}

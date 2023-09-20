@@ -6,29 +6,10 @@
 					actors/partials/background-selector
 					config=backgroundSelectors.ancestry
 				}}
-				{{!-- <div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
-					<a
-						class="item-selector"
-						data-select-type="ancestry"
-						for="system.ancestry"
-					>
-						<i class="fa-solid fa-pen-to-square fa-sm"></i>
-					</a>
-					<input
-						name="system.ancestry"
-						type="text"
-						class="detail-value"
-						value="{{ system.ancestry }}"
-					/>
-				</div> --}}
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
-					<select name="system.class">
-						<option value="">&mdash;</option>
-						{{selectOptions config.CLASSES selected=system.class localize=false}}
-					</select>
-				</div>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.class
+				}}
 				<div class="level-xp">
 					<label>{{localize 'SHADOWDARK.sheet.actor.level'}}</label>
 					{{numberInput

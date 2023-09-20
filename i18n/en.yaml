@@ -11,13 +11,9 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Strength
 SHADOWDARK.ability_wis: Wis
 SHADOWDARK.ability_wisdom: Wisdom
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Chaotic
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Lawful
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
-SHADOWDARK.ancestry.language_choices.label: Additional Languages
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Select Language...
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
@@ -28,7 +24,6 @@ SHADOWDARK.app.gem_bag.title: Gem Bag
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
 SHADOWDARK.app.gem_bag.total_value: Total Value
 SHADOWDARK.app.item_properties.armor.title: Armor Properties
-SHADOWDARK.app.item_properties.caster_classes.title: Caster Classes
 SHADOWDARK.app.item_properties.languages.title: Languages
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.app.item_properties.save: Save
@@ -109,10 +104,29 @@ SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas fo
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Roll
+SHADOWDARK.class.armor.all.label: All Armor
+SHADOWDARK.class.armor.label: Armor
+SHADOWDARK.class.armor.prompt: Select Armor...
 SHADOWDARK.class.fighter: Fighter
+SHADOWDARK.class.hit_points.label: Hit Points
+SHADOWDARK.class.language_choices.count.label: Choice Count
+SHADOWDARK.class.language_choices.label: Language Choices
+SHADOWDARK.class.language_choices.prompt: Select Language...
+SHADOWDARK.class.languages.label: Class Languages
 SHADOWDARK.class.priest: Priest
 SHADOWDARK.class.ranger: Ranger
+SHADOWDARK.class.spellcasting_ability.label: Spellcasting Ability
+SHADOWDARK.class.spellcasting_class.label: Spell Class
+SHADOWDARK.class.talent_choices.count.label: Choice Count
+SHADOWDARK.class.talent_choices.label: Talent Choices
+SHADOWDARK.class.talent_choices.prompt: Select Talent...
+SHADOWDARK.class.talents_table.label: Class Talents Table
+SHADOWDARK.class.talents.label: Talents
+SHADOWDARK.class.talents.prompt: Select Talent...
 SHADOWDARK.class.thief: Thief
+SHADOWDARK.class.weapons.all.label: All Weapons
+SHADOWDARK.class.weapons.label: Weapons
+SHADOWDARK.class.weapons.prompt: Select Weapon...
 SHADOWDARK.class.wizard: Wizard
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
@@ -163,6 +177,8 @@ SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
+SHADOWDARK.dialog.select_class.prompt: Select Class...
+SHADOWDARK.dialog.select_class.title: Choose Class
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
 SHADOWDARK.dialog.select_languages.title: Choose Languages
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
@@ -196,6 +212,10 @@ SHADOWDARK.effect.unavailable: Disabled Effects
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
+SHADOWDARK.form.section_header.equipment.label: Equipment
+SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
+SHADOWDARK.form.section_header.talents.label: Talents
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
@@ -352,6 +372,8 @@ SHADOWDARK.item.weapon.base_weapon.staff: Staff
 SHADOWDARK.item.weapon.base_weapon.title: Base Weapon
 SHADOWDARK.item.weapon.base_weapon.wand: Wand
 SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer
+SHADOWDARK.language_choices.common.label: Additional Common
+SHADOWDARK.language_choices.rare.label: Additional Rare
 SHADOWDARK.language.celestial: Celestial
 SHADOWDARK.language.common: Common
 SHADOWDARK.language.diabolic: Diabolic
@@ -449,7 +471,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracki
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.alignment_short: Align
 SHADOWDARK.sheet.actor.alignment: Alignment
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: HP
@@ -477,10 +498,11 @@ SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ancestry
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
+SHADOWDARK.sheet.player.ancestry.tooltip: Your character's job
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background: Background
-SHADOWDARK.sheet.player.class: Class
+SHADOWDARK.sheet.player.class.label: Class
+SHADOWDARK.sheet.player.class.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.deity: Deity
 SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.luck: Luck
@@ -517,7 +539,8 @@ SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_range.close: Close
 SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
-SHADOWDARK.spellcasting_ability: Spellcasting Ability
+SHADOWDARK.spell.classes.label: Caster Classes
+SHADOWDARK.spell.classes.prompt: Select Class...
 SHADOWDARK.talent.backstab: Backstab
 SHADOWDARK.talent.class.ancestry: Ancestry
 SHADOWDARK.talent.class.class: Class

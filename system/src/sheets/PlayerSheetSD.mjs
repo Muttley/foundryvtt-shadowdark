@@ -89,6 +89,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
 				item: await fromUuid(system.ancestry) ?? null,
 			},
+			class: {
+				name: "class",
+				label: game.i18n.localize("SHADOWDARK.sheet.player.class.label"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
+				item: await fromUuid(system.class) ?? null,
+			},
 		};
 
 		return data;

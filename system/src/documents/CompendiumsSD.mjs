@@ -1,17 +1,20 @@
 export default class CompendiumsSD {
 
-	static async commonLanguages(sources=[]) {
-		return CompendiumsSD.languages("common", sources);
-	}
-
-	static async compendiumDocuments(type, subtype) {
+	static async _compendiumDocuments(type, subtype=null) {
 		let docs = [];
 
 		// Iterate through the Packs, adding them to the list
 		for (let pack of game.packs) {
 			if (pack.metadata.type !== type) continue;
 
-			const ids = pack.index.filter(d => d.type === subtype).map(d => d._id);
+			let ids;
+
+			if (subtype !== null) {
+				ids = pack.index.filter(d => d.type === subtype).map(d => d._id);
+			}
+			else {
+				ids = pack.index.map(d => d._id);
+			}
 
 			for (const id of ids) {
 				const doc = await pack.getDocument(id);
@@ -32,10 +35,10 @@ export default class CompendiumsSD {
 		return collection;
 	}
 
-	static async documents(type, sources=[]) {
+	static async _documents(type, subtype, sources=[]) {
 		const noSources = sources.length === 0;
 
-		const documents = await CompendiumsSD.compendiumDocuments("Item", type);
+		const documents = await CompendiumsSD._compendiumDocuments(type, subtype);
 
 		if (noSources) {
 			return documents;
@@ -43,7 +46,7 @@ export default class CompendiumsSD {
 		else {
 			const filteredDocuments = documents.filter(
 				document => {
-					const source = document.system.description.source.book;
+					const source = document.system.source.title;
 
 					return source === "" || sources.includes(source);
 				}
@@ -60,7 +63,7 @@ export default class CompendiumsSD {
 	}
 
 	static async ancestries(sources=[]) {
-		return CompendiumsSD.documents("Ancestry", sources);
+		return CompendiumsSD._documents("Item", "Ancestry", sources);
 	}
 
 	static async ancestryTalents(sources=[]) {
@@ -68,15 +71,31 @@ export default class CompendiumsSD {
 	}
 
 	static async armor(sources=[]) {
-		return CompendiumsSD.documents("Armor", sources);
+		return CompendiumsSD._documents("Item", "Armor", sources);
 	}
 
 	static async armorProperties(sources=[]) {
 		return CompendiumsSD.properties("armor", sources);
 	}
 
+	static async baseArmor(sources=[]) {
+		const documents = await CompendiumsSD._documents("Item", "Armor", sources);
+
+		const filteredDocuments = documents.filter(
+			document => document.system.baseArmor === ""
+		);
+
+		// re-create the collection from the filtered Items
+		const filteredCollection = new Collection();
+		for (let d of filteredDocuments) {
+			filteredCollection.set(d.id, d);
+		}
+
+		return filteredCollection;
+	}
+
 	static async baseWeapons(sources=[]) {
-		const documents = await CompendiumsSD.documents("Weapon", sources);
+		const documents = await CompendiumsSD._documents("Item", "Weapon", sources);
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseWeapon === ""
@@ -92,25 +111,50 @@ export default class CompendiumsSD {
 	}
 
 	static async basicItems(sources=[]) {
-		return CompendiumsSD.documents("Basic", sources);
+		return CompendiumsSD._documents("Item", "Basic", sources);
+	}
+
+	static async classes(sources=[]) {
+		return CompendiumsSD._documents("Item", "Class", sources);
 	}
 
 	static async classTalents(sources=[]) {
 		return CompendiumsSD.talents("class", sources);
 	}
 
+	static async classTalentTables(sources=[]) {
+		const documents =
+			await CompendiumsSD._documents("RollTable", null, sources);
+
+		const filteredDocuments = documents.filter(
+			document => document.name.match(/class\s+talents/i)
+		);
+
+		// re-create the collection from the filtered Items
+		const filteredCollection = new Collection();
+		for (let d of filteredDocuments) {
+			filteredCollection.set(d.id, d);
+		}
+
+		return filteredCollection;
+	}
+
+	static async commonLanguages(sources=[]) {
+		return CompendiumsSD.languages("common", sources);
+	}
+
 	static async gems(sources=[]) {
-		return CompendiumsSD.talents(["Gem"], sources);
+		return CompendiumsSD._documents("Item", "Gem", sources);
 	}
 
 	static async effects(sources=[]) {
-		return CompendiumsSD.documents("Effect", sources);
+		return CompendiumsSD._documents("Item", "Effect", sources);
 	}
 
 	static async languages(subtypes=[], sources=[]) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD.documents("Language", sources);
+		const documents = await CompendiumsSD._documents("Item", "Language", sources);
 
 		if (noSubtypes) {
 			return documents;
@@ -139,17 +183,17 @@ export default class CompendiumsSD {
 	}
 
 	static async npcFeatures(sources=[]) {
-		return CompendiumsSD.documents("NPC Features", sources);
+		return CompendiumsSD._documents("Item", "NPC Features", sources);
 	}
 
 	static async potions(sources=[]) {
-		return CompendiumsSD.documents("Potion", sources);
+		return CompendiumsSD._documents("Item", "Potion", sources);
 	}
 
 	static async properties(subtypes=[], sources=[]) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD.documents("Property", sources);
+		const documents = await CompendiumsSD._documents("Item", "Property", sources);
 
 		if (noSubtypes) {
 			return documents;
@@ -173,8 +217,28 @@ export default class CompendiumsSD {
 		return CompendiumsSD.languages("rare", sources);
 	}
 
+	static async rollTables(sources=[]) {
+		return CompendiumsSD._documents("RollTable", null, sources);
+	}
+
 	static async scrolls(sources=[]) {
 		return CompendiumsSD.talents(["Scroll"], sources);
+	}
+
+	static async spellcastingClasses(sources=[]) {
+		const documents = await CompendiumsSD._documents("Item", "Class", sources);
+
+		const filteredDocuments = documents.filter(
+			document => document.system.spellcasting.ability !== ""
+		);
+
+		// re-create the collection from the filtered Items
+		const filteredCollection = new Collection();
+		for (let d of filteredDocuments) {
+			filteredCollection.set(d.id, d);
+		}
+
+		return filteredCollection;
 	}
 
 	static async spells(sources=[]) {
@@ -184,7 +248,7 @@ export default class CompendiumsSD {
 	static async talents(subtypes=[], sources=[]) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD.documents("Talent", sources);
+		const documents = await CompendiumsSD._documents("Item", "Talent", sources);
 
 		if (noSubtypes) {
 			return documents;
@@ -205,7 +269,7 @@ export default class CompendiumsSD {
 	}
 
 	static async wands(sources=[]) {
-		return CompendiumsSD.documents("Wand", sources);
+		return CompendiumsSD._documents("Item", "Wand", sources);
 	}
 
 	static async weaponProperties(sources=[]) {
@@ -213,6 +277,6 @@ export default class CompendiumsSD {
 	}
 
 	static async weapons(sources=[]) {
-		return CompendiumsSD.documents("Weapon", sources);
+		return CompendiumsSD._documents("Item", "Weapon", sources);
 	}
 }

@@ -17,8 +17,7 @@
 				"level": {
 					"value": 1
 				},
-				"notes": "",
-				"spellcastingAbility": ""
+				"notes": ""
 			}
 		},
 		"NPC": {
@@ -53,7 +52,8 @@
 			},
 			"darkAdapted": true,
 			"move": "near",
-			"moveNote": ""
+			"moveNote": "",
+			"spellcastingAbility": ""
 		},
 		"Player": {
 			"templates": ["shared_details"],
@@ -136,6 +136,7 @@
 			"Ancestry",
 			"Armor",
 			"Basic",
+			"Class",
 			"Gem",
 			"Effect",
 			"Language",
@@ -151,7 +152,20 @@
 		],
 		"templates": {
 			"common": {
-				"description": ""
+				"description": "",
+				"source": {
+					"page": 0,
+					"title": ""
+				}
+			},
+			"languageChoices": {
+				"languages": {
+					"common": 0,
+					"rare": 0,
+					"select": 0,
+					"selectOptions": [],
+					"fixed": []
+				}
 			},
 			"lightSource": {
 				"light": {
@@ -193,11 +207,9 @@
 		},
 		"Ancestry": {
 			"templates": [
-				"common"
+				"common",
+				"languageChoices"
 			],
-			"languageChoiceCount": 0,
-			"languageChoiceRarity": "common",
-			"languages": [],
 			"talents": []
 		},
 		"Armor": {
@@ -222,6 +234,25 @@
 			],
 			"scroll": false,
 			"treasure": false
+		},
+		"Class": {
+			"templates": [
+				"common",
+				"languageChoices"
+			],
+			"allArmor": false,
+			"allWeapons": false,
+			"armor": [],
+			"classTalentTable": "",
+			"hitPoints": "",
+			"spellcasting": {
+				"ability": "",
+				"class": ""
+			},
+			"talents": [],
+			"talentChoices": [],
+			"talentChoiceCount": 0,
+			"weapons": []
 		},
 		"Gem": {
 			"templates": [
