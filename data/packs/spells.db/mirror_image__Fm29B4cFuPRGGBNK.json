@@ -8,7 +8,7 @@
 	"name": "Mirror Image",
 	"system": {
 		"class": [
-			"wizard"
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
 		"description": "<p>You create a number of illusory duplicates of yourself equal to half your level rounded down (minimum 1). The duplicates surround you and mimic you.</p><p>Each time a creature attacks you, the attack misses and causes one of the duplicates to evaporate.</p><p>If all of the illusions have disappeared, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.vI70AaskCqH9tKJ7]{Spell Effect: Mirror Image}</p>",
 		"duration": {

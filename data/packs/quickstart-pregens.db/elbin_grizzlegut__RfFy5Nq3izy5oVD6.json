@@ -98,6 +98,7 @@
 		"width": 1
 	},
 	"system": {
+		"=-spellcastingAbility": null,
 		"abilities": {
 			"cha": {
 				"base": 8,
@@ -164,7 +165,7 @@
 			"weaponMastery": [
 			]
 		},
-		"class": "priest",
+		"class": "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
 		"coins": {
 			"cp": 0,
 			"gp": 10,

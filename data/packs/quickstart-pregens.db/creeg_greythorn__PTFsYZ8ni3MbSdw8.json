@@ -98,6 +98,7 @@
 		"width": 1
 	},
 	"system": {
+		"=-spellcastingAbility": null,
 		"abilities": {
 			"cha": {
 				"base": 11,
@@ -164,7 +165,7 @@
 			"weaponMastery": [
 			]
 		},
-		"class": "wizard",
+		"class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs",
 		"coins": {
 			"cp": 0,
 			"gp": 6,

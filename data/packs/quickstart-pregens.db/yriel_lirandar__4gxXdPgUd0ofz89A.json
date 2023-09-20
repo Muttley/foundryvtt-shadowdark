@@ -100,6 +100,7 @@
 		"width": 1
 	},
 	"system": {
+		"=-spellcastingAbility": null,
 		"abilities": {
 			"cha": {
 				"base": 9,
@@ -166,7 +167,7 @@
 			"weaponMastery": [
 			]
 		},
-		"class": "fighter",
+		"class": "Compendium.shadowdark.classes.Item.hO7KrvqDRH6kvftJ",
 		"coins": {
 			"cp": 0,
 			"gp": 7,
