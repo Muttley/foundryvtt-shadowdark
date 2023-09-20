@@ -8,12 +8,17 @@
 	"name": "Half-Orc",
 	"system": {
 		"description": "<p>Towering, tusked warriors who are as daring as humans and as relentless as orcs.</p>",
-		"languageChoiceCount": 0,
-		"languageChoiceRarity": "common",
-		"languages": [
-			"Compendium.shadowdark.languages.Item.1iECxGKqGpV3k6VZ",
-			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
-		],
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.1iECxGKqGpV3k6VZ",
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,

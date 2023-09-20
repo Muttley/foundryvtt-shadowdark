@@ -1,0 +1,20 @@
+{
+	"_id": "j7nfbsMivwfCVkN0",
+	"_key": "!items!j7nfbsMivwfCVkN0",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/social/diplomacy-peace-alliance.webp",
+	"name": "Bardic Arts",
+	"system": {
+		"description": "<p>You're trained in oration, performing arts, lore, and diplomacy. You have advantage on related checks.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

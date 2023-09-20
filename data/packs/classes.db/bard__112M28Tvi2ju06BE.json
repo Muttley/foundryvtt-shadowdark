@@ -1,0 +1,61 @@
+{
+	"_id": "112M28Tvi2ju06BE",
+	"_key": "!items!112M28Tvi2ju06BE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Bard",
+	"system": {
+		"allArmor": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.DeqtKQQzI6HTYvV0",
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.ZzffJkaIfmdPzdE7",
+		"description": "",
+		"hitPoints": "d6",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 4,
+			"fixed": [
+			],
+			"rare": 1,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "cha",
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.3gJPMZ8M4paFtm1n",
+			"Compendium.shadowdark.talents.Item.J4KYu5M32T81yE1f",
+			"Compendium.shadowdark.talents.Item.j7nfbsMivwfCVkN0",
+			"Compendium.shadowdark.talents.Item.Om7QWre7U4Tbh84B"
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu",
+			"Compendium.shadowdark.gear.Item.jGZyVuFJnW7QcBFX",
+			"Compendium.shadowdark.gear.Item.KQTWQwznjK80gVEU",
+			"Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"
+		]
+	},
+	"type": "Class"
+}

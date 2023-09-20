@@ -8,13 +8,18 @@
 	"name": "Elf",
 	"system": {
 		"description": "<p>Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.</p>",
-		"languageChoiceCount": null,
-		"languageChoiceRarity": "common",
-		"languages": [
-			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
-			"Compendium.shadowdark.languages.Item.Lf6kATbC1uNPLnPi",
-			"Compendium.shadowdark.languages.Item.wABiw5UhzG2G8Kpa"
-		],
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.Lf6kATbC1uNPLnPi",
+				"Compendium.shadowdark.languages.Item.wABiw5UhzG2G8Kpa"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,

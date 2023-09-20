@@ -1,0 +1,51 @@
+{
+	"_id": "035nuVkU9q2wtMPs",
+	"_key": "!items!035nuVkU9q2wtMPs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Wizard",
+	"system": {
+		"allArmor": false,
+		"allWeapons": false,
+		"armor": [
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.RQ0vogfVtJGuT9oT",
+		"description": "<p>Rune-tattooed adepts, bespectacled magi, and flameconjuring witches who dare to manipulate the fell forces of magic.</p>",
+		"hitPoints": "d4",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 2,
+			"fixed": [
+			],
+			"rare": 2,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "int",
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.LFMT8qZ6ZL3LvYFM",
+			"Compendium.shadowdark.talents.Item.Td6iQW4hVJLZLVLi"
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"
+		]
+	},
+	"type": "Class"
+}

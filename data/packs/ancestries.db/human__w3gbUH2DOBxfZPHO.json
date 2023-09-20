@@ -8,11 +8,16 @@
 	"name": "Human",
 	"system": {
 		"description": "<p>Bold, adaptable, and diverse people who learn quickly and accomplish mighty deeds.</p>",
-		"languageChoiceCount": 1,
-		"languageChoiceRarity": "common",
-		"languages": [
-			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
-		],
+		"languages": {
+			"common": 1,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
