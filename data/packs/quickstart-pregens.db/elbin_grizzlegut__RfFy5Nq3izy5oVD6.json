@@ -98,7 +98,6 @@
 		"width": 1
 	},
 	"system": {
-		"=-spellcastingAbility": null,
 		"abilities": {
 			"cha": {
 				"base": 8,
@@ -187,9 +186,7 @@
 		},
 		"luck": false,
 		"notes": "",
-		"slots": 10,
-		"spellcastingAbility": "wis",
-		"title": "Acolyte"
+		"slots": 10
 	},
 	"type": "Player"
 }

@@ -94,7 +94,6 @@
 		"width": 1
 	},
 	"system": {
-		"=-spellcastingAbility": null,
 		"abilities": {
 			"cha": {
 				"base": 15,
@@ -181,9 +180,7 @@
 		},
 		"luck": false,
 		"notes": "",
-		"slots": 10,
-		"spellcastingAbility": "",
-		"title": "Robber"
+		"slots": 10
 	},
 	"type": "Player"
 }
