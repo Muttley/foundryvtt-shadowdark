@@ -3,7 +3,7 @@
 	"_key": "!items!N9NvonT0RL6PyiiV",
 	"effects": [
 	],
-	"folder": null,
+	"folder": "Gi0Kjg7bAAVEqjvM",
 	"img": "icons/magic/life/cross-explosion-burst-green.webp",
 	"name": "Cure Wounds",
 	"system": {
@@ -13,9 +13,10 @@
 		"description": "<p>Your touch restores ebbing life.</p><p>Roll a number of d6s equal to 1 + half your level (rounded down).</p><p>One target you touch regains that many hit points.</p>",
 		"duration": {
 			"type": "instant",
-			"value": ""
+			"value": -1
 		},
 		"lost": false,
+		"predefinedEffects": "",
 		"range": "close",
 		"source": {
 			"page": 0,

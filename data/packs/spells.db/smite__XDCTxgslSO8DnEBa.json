@@ -3,7 +3,7 @@
 	"_key": "!items!XDCTxgslSO8DnEBa",
 	"effects": [
 	],
-	"folder": null,
+	"folder": "IqNdoEHw03QSMA55",
 	"img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
 	"name": "Smite",
 	"system": {
@@ -13,9 +13,10 @@
 		"description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": ""
+			"value": -1
 		},
 		"lost": false,
+		"predefinedEffects": "",
 		"range": "near",
 		"source": {
 			"page": 0,

@@ -3,7 +3,7 @@
 	"_key": "!items!XBt4wA37ypUiXkp6",
 	"effects": [
 	],
-	"folder": null,
+	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/magic/perception/third-eye-blue-red.webp",
 	"name": "Detect Thoughts",
 	"system": {
@@ -13,9 +13,10 @@
 		"description": "<p>You peer into the mind of one creature you can see within the spell’s range.</p><p>Each round, you learn the target’s immediate thoughts.</p><p>On its turn, the target makes a Wisdom check opposed by your last spellcasting check. If the target succeeds, it notices your presence in its mind and the spell ends.</p>",
 		"duration": {
 			"type": "focus",
-			"value": ""
+			"value": -1
 		},
 		"lost": false,
+		"predefinedEffects": "",
 		"range": "near",
 		"source": {
 			"page": 0,
