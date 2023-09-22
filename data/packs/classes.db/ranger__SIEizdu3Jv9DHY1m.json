@@ -44,6 +44,43 @@
 			"Compendium.shadowdark.talents.Item.cUz7U8n0amQd5QQM",
 			"Compendium.shadowdark.talents.Item.ZjCvQZ7k4hBa9y2I"
 		],
+		"titles": [
+			{
+				"chaotic": "Hood",
+				"from": 1,
+				"lawful": "Wanderer",
+				"neutral": "Stranger",
+				"to": 2
+			},
+			{
+				"chaotic": "Outlaw",
+				"from": 3,
+				"lawful": "Strider",
+				"neutral": "Wayfarer",
+				"to": 4
+			},
+			{
+				"chaotic": "Fugitive",
+				"from": 5,
+				"lawful": "Warden",
+				"neutral": "Outlander",
+				"to": 6
+			},
+			{
+				"chaotic": "Exile",
+				"from": 7,
+				"lawful": "Guardian",
+				"neutral": "Recluse",
+				"to": 8
+			},
+			{
+				"chaotic": "Pariah",
+				"from": 9,
+				"lawful": "Sentinel",
+				"neutral": "Hermit",
+				"to": 10
+			}
+		],
 		"weapons": [
 			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
 			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",

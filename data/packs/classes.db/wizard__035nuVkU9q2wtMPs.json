@@ -42,6 +42,43 @@
 			"Compendium.shadowdark.talents.Item.LFMT8qZ6ZL3LvYFM",
 			"Compendium.shadowdark.talents.Item.Td6iQW4hVJLZLVLi"
 		],
+		"titles": [
+			{
+				"chaotic": "Adept",
+				"from": 1,
+				"lawful": "Apprentice",
+				"neutral": "Shaman",
+				"to": 2
+			},
+			{
+				"chaotic": "Channeler",
+				"from": 3,
+				"lawful": "Conjurer",
+				"neutral": "Seer",
+				"to": 4
+			},
+			{
+				"chaotic": "Witch/Warlock",
+				"from": 5,
+				"lawful": "Arcanist",
+				"neutral": "Warden",
+				"to": 6
+			},
+			{
+				"chaotic": "Diabolist",
+				"from": 7,
+				"lawful": "Mage",
+				"neutral": "Sage",
+				"to": 8
+			},
+			{
+				"chaotic": "Sorcerer",
+				"from": 9,
+				"lawful": "Archmage",
+				"neutral": "Druid",
+				"to": 10
+			}
+		],
 		"weapons": [
 			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
 			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"

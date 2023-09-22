@@ -124,6 +124,9 @@ SHADOWDARK.class.talents_table.label: Class Talents Table
 SHADOWDARK.class.talents.label: Talents
 SHADOWDARK.class.talents.prompt: Select Talent...
 SHADOWDARK.class.thief: Thief
+SHADOWDARK.class.titles.levels.from.label: From
+SHADOWDARK.class.titles.levels.label: Levels
+SHADOWDARK.class.titles.levels.to.label: To
 SHADOWDARK.class.weapons.all.label: All Weapons
 SHADOWDARK.class.weapons.label: Weapons
 SHADOWDARK.class.weapons.prompt: Select Weapon...
@@ -488,6 +491,7 @@ SHADOWDARK.sheet.item.tab.details: Details
 SHADOWDARK.sheet.item.tab.effects: Effects
 SHADOWDARK.sheet.item.tab.light: Light
 SHADOWDARK.sheet.item.tab.magic: Magic
+SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: Attacks
 SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
 SHADOWDARK.sheet.npc.description_label: Description

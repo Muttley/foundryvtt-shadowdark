@@ -36,6 +36,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._deleteChoiceItem(event)
 		);
 
+		html.find(".class-title-controls").click(
+			event => this._onClassTitleControl(event)
+		);
+
 		html.find(".item-property-list.npc-attack-ranges").click(
 			event => this._onNpcAttackRanges(event)
 		);
@@ -279,6 +283,7 @@ export default class ItemSheetSD extends ItemSheet {
 			source: source.system,
 			system: item.system,
 			showTab,
+			editable: this.isEditable,
 			usesSlots: item.system.slots !== undefined,
 		});
 
@@ -494,6 +499,48 @@ export default class ItemSheetSD extends ItemSheet {
 		return this.item.update({[event.target.name]: sortedChoiceUuids});
 	}
 
+	async _onClassTitleControl(event) {
+		if (!this.isEditable) return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		const action = event.currentTarget.dataset.action;
+
+		if (action === "add") {
+			const titles = this.item.system.titles ?? [];
+
+			const toValues = [0];
+			titles.forEach(t => {
+				toValues.push(t.to);
+			});
+
+			const max = Math.max(...toValues) + 1;
+
+			titles.push({
+				from: max,
+				to: max + 1,
+				lawful: "",
+				neutral: "",
+				chaotic: "",
+			});
+
+			this.item.update({"system.titles": titles});
+		}
+		else if (action === "delete") {
+			const index = Number.parseInt(event.currentTarget.dataset.index);
+
+			const titles = this.item.system.titles ?? [];
+			const newTitles = [];
+			for (let i = 0; i < titles.length; i++) {
+				if (index === i) continue;
+				newTitles.push(titles[i]);
+			}
+
+			this.item.update({"system.titles": newTitles});
+		}
+	}
+
 	async _onEffectChangeValue(event) {
 		const li = event.target.closest("li");
 		const effectId = li.dataset.effectId;
@@ -626,6 +673,36 @@ export default class ItemSheetSD extends ItemSheet {
 				delete updateData["system.talentChoices"];
 				delete updateData["system.talents"];
 				delete updateData["system.weapons"];
+
+				const titles = [];
+				if (Array.isArray(updateData["title.from"])) {
+					for (let i = 0; i < updateData["title.from"].length; i++) {
+						titles.push({
+							to: updateData["title.to"][i],
+							from: updateData["title.from"][i],
+							chaotic: updateData["title.chaotic"][i],
+							lawful: updateData["title.lawful"][i],
+							neutral: updateData["title.neutral"][i],
+						});
+					}
+
+					titles.sort((a, b) => a.from - b.from);
+				}
+				else {
+					titles.push({
+						to: updateData["title.to"],
+						from: updateData["title.from"],
+						chaotic: updateData["title.chaotic"],
+						lawful: updateData["title.lawful"],
+						neutral: updateData["title.neutral"],
+					});
+				}
+
+				updateData["system.titles"] = titles;
+
+				["to", "from", "chaotic", "lawful", "neutral"].forEach(key => {
+					delete updateData[`title.${key}`];
+				});
 
 				this.item.update(updateData);
 				break;

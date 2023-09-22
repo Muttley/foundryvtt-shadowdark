@@ -1,5 +1,5 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
-	<div class="item-details">
+	{{!-- <div class="item-details"> --}}
 
 		{{#ifEq item.type "Ancestry"}}
 			{{> items/partials/ancestry }}
@@ -48,6 +48,8 @@
 		{{#ifEq item.type "Weapon"}}
 			{{> items/partials/weapon }}
 		{{/ifEq}}
+
+<div class="item-details">
 
 		{{#if usesSlots}}
 			{{!-- Gems have non-configurable slot settings --}}

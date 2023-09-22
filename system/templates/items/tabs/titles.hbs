@@ -1,0 +1,87 @@
+<section class="tab tab-titles" data-group="primary" data-tab="tab-titles">
+	<section class="titles-body">
+		<div class="titles-list">
+			<table>
+				<tr>
+					<th colspan="2">{{localize 'SHADOWDARK.class.titles.levels.label'}}</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr>
+					<th style="width: 60px;">{{localize 'SHADOWDARK.class.titles.levels.from.label'}}</th>
+					<th style="width: 60px;">{{localize 'SHADOWDARK.class.titles.levels.to.label'}}</th>
+					<th>{{localize 'SHADOWDARK.alignment.lawful'}}</th>
+					<th>{{localize 'SHADOWDARK.alignment.chaotic'}}</th>
+					<th>{{localize 'SHADOWDARK.alignment.neutral'}}</th>
+					<th>&nbsp;</th>
+				</tr>
+				{{#each item.system.titles}}
+					<tr>
+						<td>
+							{{numberInput
+								this.from
+								name="title.from"
+								placeholder="0"
+							}}
+						</td>
+						<td>
+							{{numberInput
+								this.to
+								name="title.to"
+								placeholder="0"
+							}}
+						</td>
+						<td>
+							<input
+								name="title.lawful"
+								type="text"
+								value="{{ this.lawful }}"
+							/>
+						</td>
+						<td>
+							<input
+								name="title.chaotic"
+								type="text"
+								value="{{ this.chaotic }}"
+							/>
+						</td>
+						<td>
+							<input
+								name="title.neutral"
+								type="text"
+								value="{{ this.neutral }}"
+							/>
+						</td>
+						<td>
+							<a>
+								{{#if ../editable}}
+									<i
+										class="class-title-controls fa-solid fa-trash"
+										data-action="delete"
+										data-index="{{@index}}"
+									></i>
+								{{/if}}
+							</a>
+						</td>
+					</tr>
+				{{/each}}
+				<tr>
+					<td colspan="5">&nbsp;</td>
+					<td>
+						<a>
+							{{#if editable}}
+								<i
+									class="class-title-controls fa-solid fa-plus"
+									data-action="add"
+								>
+								</i>
+							{{/if}}
+						</a>
+					</td>
+				</tr>
+			<table>
+		</div>
+	</section>
+</section>

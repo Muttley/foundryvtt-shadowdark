@@ -438,4 +438,51 @@
 			box-shadow: 0 0 5px var(--color-shadow-primary);
 		}
 	}
+
+	.titles-list {
+		input {
+			font-size: 13px;
+		}
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 16px;
+			text-align: center;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+				text-align: left;
+			}
+
+			& tr {
+				vertical-align: top;
+			}
+
+			& tr:first-child,
+			& tr:nth-child(2) {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(:first-child,
+				:nth-child(2),
+				:nth-last-child(1)
+			) {
+				font-size: 13px;
+
+				&:hover {
+					background-color: var(--background-highlight)
+				}
+			}
+
+		}
+	}
 }

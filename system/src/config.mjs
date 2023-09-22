@@ -145,6 +145,16 @@ SHADOWDARK.RANGES_SHORT = {
 	self: "SHADOWDARK.range.self_short",
 };
 
+SHADOWDARK.OFFICIAL_SOURCES = {
+	"cursed-scroll-1": "Cursed Scroll Vol.1, Diablerie!",
+	"cursed-scroll-2": "Cursed Scroll Vol.2, Red Sands",
+	"cursed-scroll-3": "Cursed Scroll Vol.3, Midnight Sun",
+	"quickstart-game-master-guide": "Quickstart: Game Master Guide",
+	"quickstart-player-guide": "Quickstart: Player Guide",
+	"bard-and-ranger": "Shadowdark RPG: Bard and Ranger",
+	"core-rules": "Shadowdark RPG: Core Rules",
+};
+
 SHADOWDARK.SPELLCASTING_ABILITY = {
 	priest: "wis",
 	wizard: "int",

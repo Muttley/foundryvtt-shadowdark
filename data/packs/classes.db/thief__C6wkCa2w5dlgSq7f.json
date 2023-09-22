@@ -44,6 +44,43 @@
 			"Compendium.shadowdark.talents.Item.KLDZKFY6SrqQKSva",
 			"Compendium.shadowdark.talents.Item.TiaXUSTLoJpjfyxD"
 		],
+		"titles": [
+			{
+				"chaotic": "Thug",
+				"from": 1,
+				"lawful": "Footpad",
+				"neutral": "Robber",
+				"to": 2
+			},
+			{
+				"chaotic": "Cutthroat",
+				"from": 3,
+				"lawful": "Burglar",
+				"neutral": "Outlaw",
+				"to": 4
+			},
+			{
+				"chaotic": "Shadow",
+				"from": 5,
+				"lawful": "Rook",
+				"neutral": "Rogue",
+				"to": 6
+			},
+			{
+				"chaotic": "Assassin",
+				"from": 7,
+				"lawful": "Underboss",
+				"neutral": "Renegade",
+				"to": 8
+			},
+			{
+				"chaotic": "Wraith",
+				"from": 9,
+				"lawful": "Boss",
+				"neutral": "Bandit King/Queen",
+				"to": 10
+			}
+		],
 		"weapons": [
 			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
 			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu",

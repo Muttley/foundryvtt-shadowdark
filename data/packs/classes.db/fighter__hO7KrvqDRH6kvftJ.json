@@ -43,6 +43,43 @@
 			"Compendium.shadowdark.talents.Item.5bpWuaT0KTNzuzCu",
 			"Compendium.shadowdark.talents.Item.7JTDRLtHc6FOrIEc"
 		],
+		"titles": [
+			{
+				"chaotic": "Knave",
+				"from": 1,
+				"lawful": "Squire",
+				"neutral": "Warrior",
+				"to": 2
+			},
+			{
+				"chaotic": "Bandit",
+				"from": 3,
+				"lawful": "Cavalier",
+				"neutral": "Barbarian",
+				"to": 4
+			},
+			{
+				"chaotic": "Slayer",
+				"from": 5,
+				"lawful": "Knight",
+				"neutral": "Battlerager",
+				"to": 6
+			},
+			{
+				"chaotic": "Reaver",
+				"from": 7,
+				"lawful": "Thane",
+				"neutral": "Warchief",
+				"to": 8
+			},
+			{
+				"chaotic": "Warlord",
+				"from": 9,
+				"lawful": "Lord/Lady",
+				"neutral": "Chieftain",
+				"to": 10
+			}
+		],
 		"weapons": [
 		]
 	},

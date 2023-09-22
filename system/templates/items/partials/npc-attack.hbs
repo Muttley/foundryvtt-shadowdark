@@ -1,101 +1,102 @@
-<div class="npc-attack-details">
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack_type'}}</label>
-		<select name="system.attackType">
-			{{selectOptions
-				config.NPC_ATTACK_TYPES
-				selected=system.attackType
-				localize=false
-			}}
-		</select>
-	</div>
-	<div
-		class="npc-attack-detail"
-		style="grid-column: span 2;"
-	>
+<div class="item-details">
+	<div class="npc-attack-details">
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_type'}}</label>
+			<select name="system.attackType">
+				{{selectOptions
+					config.NPC_ATTACK_TYPES
+					selected=system.attackType
+					localize=false
+				}}
+			</select>
+		</div>
 		<div
-			class="item-properties"
-			style="grid-column: unset;"
+			class="npc-attack-detail"
+			style="grid-column: span 2;"
 		>
 			<div
-				class="item-property"
-				style="grid-template-columns: 1fr;"
+				class="item-properties"
+				style="grid-column: unset;"
 			>
-				<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
-				<p class="item-property-list npc-attack-ranges">
-					{{npcAttackRangesDisplay}}
-				</p>
+				<div
+					class="item-property"
+					style="grid-template-columns: 1fr;"
+				>
+					<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
+					<p class="item-property-list npc-attack-ranges">
+						{{npcAttackRangesDisplay}}
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="npc-attack-details">
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
-		{{numberInput
-			system.attack.num
-			name="system.attack.num"
-			placeholder="1"
-		}}
-	</div>
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</label>
-		{{numberInput
-			system.bonuses.attackBonus
-			name="system.bonuses.attackBonus"
-			placeholder="1"
-		}}
-	</div>
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.effect.predefined_effect.critMultiplier'}}</label>
-		{{numberInput
-			system.bonuses.critical.multiplier
-			name="system.bonuses.critical.multiplier"
-			placeholder="2"
-		}}
-	</div>
-</div>
-<div class="npc-attack-details">
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack.num_damage_dice'}}</label>
-		{{numberInput
-			system.damage.numDice
-			name="system.damage.numDice"
-			placeholder="1"
-		}}
-	</div>
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack_damage'}}</label>
-		<select name="system.damage.value">
-			<option value="">&mdash;</option>
-			{{selectOptions
-				config.WEAPON_BASE_DAMAGE_DIE_ONLY
-				selected=system.damage.value
-				localize=false
+	<div class="npc-attack-details">
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
+			{{numberInput
+				system.attack.num
+				name="system.attack.num"
+				placeholder="1"
 			}}
-		</select>
+		</div>
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</label>
+			{{numberInput
+				system.bonuses.attackBonus
+				name="system.bonuses.attackBonus"
+				placeholder="1"
+			}}
+		</div>
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.effect.predefined_effect.critMultiplier'}}</label>
+			{{numberInput
+				system.bonuses.critical.multiplier
+				name="system.bonuses.critical.multiplier"
+				placeholder="2"
+			}}
+		</div>
 	</div>
-	<div class="npc-attack-detail">
-		<label>{{localize 'SHADOWDARK.item.npc_attack_damage_bonus'}}</label>
-		{{numberInput
-			system.bonuses.damageBonus
-			name="system.bonuses.damageBonus"
-			placeholder="0"
-		}}
+	<div class="npc-attack-details">
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack.num_damage_dice'}}</label>
+			{{numberInput
+				system.damage.numDice
+				name="system.damage.numDice"
+				placeholder="1"
+			}}
+		</div>
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_damage'}}</label>
+			<select name="system.damage.value">
+				<option value="">&mdash;</option>
+				{{selectOptions
+					config.WEAPON_BASE_DAMAGE_DIE_ONLY
+					selected=system.damage.value
+					localize=false
+				}}
+			</select>
+		</div>
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_damage_bonus'}}</label>
+			{{numberInput
+				system.bonuses.damageBonus
+				name="system.bonuses.damageBonus"
+				placeholder="0"
+			}}
+		</div>
+	</div>
+	<div class="npc-attack-details">
+		<div
+			class="npc-attack-detail"
+			style="grid-column: span 3;"
+		>
+			<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
+			<input
+				style="text-align: left;"
+				name="system.damage.special"
+				type="text"
+				value="{{item.system.damage.special}}"
+			/>
+		</div>
 	</div>
 </div>
-<div class="npc-attack-details">
-	<div
-		class="npc-attack-detail"
-		style="grid-column: span 3;"
-	>
-		<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
-		<input
-			style="text-align: left;"
-			name="system.damage.special"
-			type="text"
-			value="{{item.system.damage.special}}"
-		/>
-	</div>
-</div>
-

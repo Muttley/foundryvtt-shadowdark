@@ -47,6 +47,43 @@
 			"Compendium.shadowdark.talents.Item.j7nfbsMivwfCVkN0",
 			"Compendium.shadowdark.talents.Item.Om7QWre7U4Tbh84B"
 		],
+		"titles": [
+			{
+				"chaotic": "Guttersnipe",
+				"from": 1,
+				"lawful": "Storyteller",
+				"neutral": "Seeker",
+				"to": 2
+			},
+			{
+				"chaotic": "Charlatan",
+				"from": 3,
+				"lawful": "Balladeer",
+				"neutral": "Witness",
+				"to": 4
+			},
+			{
+				"chaotic": "Satirist",
+				"from": 5,
+				"lawful": "Philosopher",
+				"neutral": "Speaker",
+				"to": 6
+			},
+			{
+				"chaotic": "Silvertongue",
+				"from": 7,
+				"lawful": "Poet",
+				"neutral": "Voice",
+				"to": 8
+			},
+			{
+				"chaotic": "Doomspeaker",
+				"from": 9,
+				"lawful": "Master Poet",
+				"neutral": "Trushbearer",
+				"to": 10
+			}
+		],
 		"weapons": [
 			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
 			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",

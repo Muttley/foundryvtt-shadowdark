@@ -1,28 +1,30 @@
-<div class="effect-details">
-  <!-- Duration fields -->
-  <div class="effect-detail effect-detail-duration">
-    <label for="{{#ifEq system.duration.type "unlimited"}}effect-duration-type{{else}}effect-duration-value{{/ifEq}}">
-      {{localize "SHADOWDARK.item.spell_duration"}}
-    </label>
-      {{> items/partials/duration
-        base="system.duration"
-        duration=system.duration
-        type="effect"
-        choices=config.EFFECT_DURATIONS
-        variableDuration=variableDuration
-    }}
-  </div>
-
-	<!-- Effect Category Fields -->
-	<div class="effect-detail effect-detail-category">
-		<label for="effect-category">
-			{{localize "SHADOWDARK.item.effect.category.title"}}
-		</label>
-			{{> items/partials/item-category
-				base="system.category"
-				category=system.category
-				type="effect"
-				choices=config.EFFECT_CATEGORIES
+<div class="item-details">
+	<div class="effect-details">
+		<!-- Duration fields -->
+		<div class="effect-detail effect-detail-duration">
+			<label for="{{#ifEq system.duration.type "unlimited"}}effect-duration-type{{else}}effect-duration-value{{/ifEq}}">
+				{{localize "SHADOWDARK.item.spell_duration"}}
+			</label>
+				{{> items/partials/duration
+					base="system.duration"
+					duration=system.duration
+					type="effect"
+					choices=config.EFFECT_DURATIONS
+					variableDuration=variableDuration
 			}}
+		</div>
+
+		<!-- Effect Category Fields -->
+		<div class="effect-detail effect-detail-category">
+			<label for="effect-category">
+				{{localize "SHADOWDARK.item.effect.category.title"}}
+			</label>
+				{{> items/partials/item-category
+					base="system.category"
+					category=system.category
+					type="effect"
+					choices=config.EFFECT_CATEGORIES
+				}}
+		</div>
 	</div>
 </div>

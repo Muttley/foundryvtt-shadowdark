@@ -27,6 +27,12 @@
 					</a>
 				{{/if}}
 
+				{{#ifEq item.type "Class"}}
+					<a class="item active" data-tab="tab-titles">
+						{{localize "SHADOWDARK.sheet.item.tab.titles"}}
+					</a>
+				{{/ifEq}}
+
 				{{#if showTab.effects}}
 					<a class="item active" data-tab="tab-effects">
 						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
@@ -57,6 +63,7 @@
 	<section class="item-body">
 
 		{{> items/tabs/details }}
+		{{> items/tabs/titles }}
 		{{> items/tabs/light }}
 		{{> items/tabs/effects }}
 		{{> items/tabs/description }}
