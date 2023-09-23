@@ -152,6 +152,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		switch (item.type) {
 			case "Ancestry":
 				return this.actor.addAncestry(item);
+			case "Background":
+				return this.actor.addBackground(item);
 			case "Class":
 				return this.actor.addClass(item);
 			case "Language":
@@ -188,6 +190,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const backgroundItems = [
 			"Ancestry",
+			"Background",
 			"Class",
 			"Language",
 		];

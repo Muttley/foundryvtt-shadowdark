@@ -27,6 +27,10 @@ export default class ActorSD extends Actor {
 		this.update({"system.ancestry": item.uuid});
 	}
 
+	async addBackground(item) {
+		this.update({"system.background": item.uuid});
+	}
+
 	async addClass(item) {
 		this.update({"system.class": item.uuid});
 	}
