@@ -35,6 +35,10 @@ export default class ActorSD extends Actor {
 		this.update({"system.class": item.uuid});
 	}
 
+	async addDeity(item) {
+		this.update({"system.deity": item.uuid});
+	}
+
 	async addLanguage(item) {
 		let languageFound = false;
 		for (const language of await this.languageItems()) {
@@ -965,7 +969,7 @@ export default class ActorSD extends Actor {
 	async _populateBackgroundItems() {
 		this.backgroundItems = {};
 
-		const backgroundItems = ["ancestry", "class"];
+		const backgroundItems = ["ancestry", "class", "deity"];
 
 		for (const itemName of backgroundItems) {
 			const uuid = this.system[itemName] ?? "";

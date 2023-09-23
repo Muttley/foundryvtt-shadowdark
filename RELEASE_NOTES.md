@@ -17,6 +17,7 @@
 * [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
 * [#491] Added support for custom languages
 * [#494] Added support for custom background items
+* [#495] Added support for Deity items
 
 ## v.1.3.7
 

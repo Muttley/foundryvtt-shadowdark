@@ -184,6 +184,8 @@ SHADOWDARK.dialog.select_background.prompt: Select Background...
 SHADOWDARK.dialog.select_background.title: Choose Background
 SHADOWDARK.dialog.select_class.prompt: Select Class...
 SHADOWDARK.dialog.select_class.title: Choose Class
+SHADOWDARK.dialog.select_deity.prompt: Select Deity...
+SHADOWDARK.dialog.select_deity.title: Choose Deity
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
 SHADOWDARK.dialog.select_languages.title: Choose Languages
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
@@ -504,13 +506,14 @@ SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ancestry
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's job
+SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background.label: Background
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
 SHADOWDARK.sheet.player.class.label: Class
-SHADOWDARK.sheet.player.class.tooltip: Your character's cultural and ancestral heritage
-SHADOWDARK.sheet.player.deity: Deity
+SHADOWDARK.sheet.player.class.tooltip: Your character's job
+SHADOWDARK.sheet.player.deity.label: Deity
+SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.melee_attacks: Melee Attacks

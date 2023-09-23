@@ -13,6 +13,10 @@
 			{{> items/partials/class }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Deity"}}
+			{{> items/partials/deity }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Effect"}}
 			{{> items/partials/effect }}
 		{{/ifEq}}

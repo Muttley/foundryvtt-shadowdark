@@ -75,6 +75,7 @@ SHADOWDARK.DEFAULTS = {
 		Background: "icons/environment/people/commoner.webp",
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
 		Class: "icons/sundries/documents/document-sealed-brown-red.webp",
+		Deity: "icons/magic/holy/yin-yang-balance-symbol.webp",
 		Effect: "icons/commodities/tech/cog-brass.webp",
 		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
 		Language: "icons/tools/scribal/ink-quill-pink.webp",

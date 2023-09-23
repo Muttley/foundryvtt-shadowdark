@@ -255,6 +255,9 @@ export default class ActorSheetSD extends ActorSheet {
 			case "class":
 				new select.ClassSelector(this.actor).render(true);
 				break;
+			case "deity":
+				new select.DeitySelector(this.actor).render(true);
+				break;
 			case "language":
 				new select.LanguageSelector(this.actor).render(true);
 				break;

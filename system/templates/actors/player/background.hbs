@@ -65,15 +65,10 @@
 					actors/partials/background-selector
 					config=backgroundSelectors.background
 				}}
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
-					<input
-						name="system.deity"
-						type="text"
-						class="detail-value"
-						value="{{ system.deity }}"
-					/>
-				</div>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.deity
+				}}
 			</div>
 			<div class="grid-1-columns">
 				<div class="pc pc_languages">

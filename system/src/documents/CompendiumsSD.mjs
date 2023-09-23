@@ -147,6 +147,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD.languages("common", sources);
 	}
 
+	static async deities(sources=[]) {
+		return CompendiumsSD._documents("Item", "Deity", sources);
+	}
+
 	static async gems(sources=[]) {
 		return CompendiumsSD._documents("Item", "Gem", sources);
 	}

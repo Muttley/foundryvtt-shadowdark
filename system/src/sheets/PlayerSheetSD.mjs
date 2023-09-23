@@ -98,8 +98,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			class: {
 				name: "class",
 				label: game.i18n.localize("SHADOWDARK.sheet.player.class.label"),
-				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.class.tooltip"),
 				item: await fromUuid(system.class) ?? null,
+			},
+			deity: {
+				name: "deity",
+				label: game.i18n.localize("SHADOWDARK.sheet.player.deity.label"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.deity.tooltip"),
+				item: await fromUuid(system.deity) ?? null,
 			},
 		};
 
@@ -156,6 +162,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				return this.actor.addBackground(item);
 			case "Class":
 				return this.actor.addClass(item);
+			case "Deity":
+				return this.actor.addDeity(item);
 			case "Language":
 				return this.actor.addLanguage(item);
 		}
@@ -192,6 +200,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			"Ancestry",
 			"Background",
 			"Class",
+			"Deity",
 			"Language",
 		];
 

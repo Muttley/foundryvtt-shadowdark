@@ -27,6 +27,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/choice-selector.hbs",
 		"systems/shadowdark/templates/items/partials/class.hbs",
 		"systems/shadowdark/templates/items/partials/cost.hbs",
+		"systems/shadowdark/templates/items/partials/deity.hbs",
 		"systems/shadowdark/templates/items/partials/duration.hbs",
 		"systems/shadowdark/templates/items/partials/effect-toggle-items.hbs",
 		"systems/shadowdark/templates/items/partials/effect.hbs",

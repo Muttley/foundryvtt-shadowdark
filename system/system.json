@@ -8,7 +8,7 @@
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "230923.1"
+		"schemaVersion": "230923.2"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
@@ -98,6 +98,15 @@
 			"label": "Conditions",
 			"system": "shadowdark",
 			"path": "packs/conditions",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "deities",
+			"label": "Deities",
+			"system": "shadowdark",
+			"path": "packs/deities",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -245,6 +254,7 @@
 						"ancestries",
 						"backgrounds",
 						"classes",
+						"deities",
 						"languages",
 						"talents"
 					]

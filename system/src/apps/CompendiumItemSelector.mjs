@@ -109,7 +109,7 @@ export default class CompendiumItemSelector extends FormApplication {
 		const currentItemCount = this.currentItemUuids.length;
 		if (this.maxChoices === 1 && currentItemCount === 1 && formData["item-selected"] !== "") {
 			for (const item of this.availableItems) {
-				if (item.name === formData["item-selected"]) {
+				if (item.decoratedName === formData["item-selected"]) {
 					newUuids = [item.uuid];
 					break;
 				}

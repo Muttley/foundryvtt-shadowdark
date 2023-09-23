@@ -137,6 +137,7 @@
 			"Background",
 			"Basic",
 			"Class",
+			"Deity",
 			"Gem",
 			"Effect",
 			"Language",
@@ -259,6 +260,12 @@
 			"talentChoiceCount": 0,
 			"titles": [],
 			"weapons": []
+		},
+		"Deity": {
+			"templates": [
+				"common"
+			],
+			"alignment": ""
 		},
 		"Gem": {
 			"templates": [
