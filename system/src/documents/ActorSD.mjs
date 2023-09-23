@@ -355,7 +355,8 @@ export default class ActorSD extends Actor {
 	}
 
 	async getArmorClass() {
-		return await this.updateArmorClass();
+		const ac = await this.updateArmorClass();
+		return ac;
 	}
 
 	async isClaimedByUser() {
@@ -896,15 +897,11 @@ export default class ActorSD extends Actor {
 		}
 
 		// Add AC from effects
-		this.system.attributes.ac.value =
-			newArmorClass + parseInt(this.system.bonuses.acBonus, 10);
+		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 
-		// await Actor.updateDocuments([{
-		// 	_id: this._id,
-		// 	"system.attributes.ac.value": newArmorClass,
-		// }]);
+		this.updateSource({"system.attributes.ac.value": newArmorClass});
 
-		return this.system.attributes.ac.value;
+		return newArmorClass;
 	}
 
 	async usePotion(itemId) {
@@ -1044,7 +1041,7 @@ export default class ActorSD extends Actor {
 	}
 
 	async _playerRollHP(options={}) {
-		if (this.system.class === "") {
+		if (!this.backgroundItems.class) {
 			ui.notifications.error(
 				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
 				{permanent: false}
@@ -1063,7 +1060,8 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 
-		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+		const parts = [this.backgroundItems.class.system.hitPoints];
+
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
