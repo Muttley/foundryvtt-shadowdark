@@ -89,6 +89,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
 				item: await fromUuid(system.ancestry) ?? null,
 			},
+			background: {
+				name: "background",
+				label: game.i18n.localize("SHADOWDARK.sheet.player.background.label"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.background.tooltip"),
+				item: await fromUuid(system.background) ?? null,
+			},
 			class: {
 				name: "class",
 				label: game.i18n.localize("SHADOWDARK.sheet.player.class.label"),
@@ -137,6 +143,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			)
 		);
 
+		context.classTitle = this.actor.backgroundItems.title;
+
 		return context;
 	}
 
@@ -144,6 +152,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		switch (item.type) {
 			case "Ancestry":
 				return this.actor.addAncestry(item);
+			case "Class":
+				return this.actor.addClass(item);
 			case "Language":
 				return this.actor.addLanguage(item);
 		}
@@ -178,6 +188,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const backgroundItems = [
 			"Ancestry",
+			"Class",
 			"Language",
 		];
 

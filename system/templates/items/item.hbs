@@ -22,36 +22,36 @@
 			<div class="item-navigation__flex">
 
 				{{#if showTab.details}}
-					<a class="item active" data-tab="tab-details">
+					<a class="item {{#unless showTab.descriptionOnly}}active{{/unless}}" data-tab="tab-details">
 						{{localize "SHADOWDARK.sheet.item.tab.details"}}
 					</a>
 				{{/if}}
 
-				{{#ifEq item.type "Class"}}
-					<a class="item active" data-tab="tab-titles">
+				{{#if showTab.titles}}
+					<a class="item" data-tab="tab-titles">
 						{{localize "SHADOWDARK.sheet.item.tab.titles"}}
 					</a>
-				{{/ifEq}}
+				{{/if}}
 
 				{{#if showTab.effects}}
-					<a class="item active" data-tab="tab-effects">
+					<a class="item" data-tab="tab-effects">
 						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
 					</a>
 				{{/if}}
 
 				{{#if showTab.light}}
-					<a class="item active" data-tab="tab-light">
+					<a class="item" data-tab="tab-light">
 						{{localize "SHADOWDARK.sheet.item.tab.light"}}
 					</a>
 				{{/if}}
 
 				{{#if showTab.description}}
 					<a
-						class="item {{#ifEq item.type 'NPC Feature'}}active{{/ifEq}}"
+						class="item {{#if showTab.descriptionOnly}}active{{/if}}"
 						data-tab="tab-description"
-						{{#ifEq item.type 'NPC Feature'}}
+						{{#if showTab.descriptionOnly}}
 							style="display: none;"
-						{{/ifEq}}
+						{{/if}}
 					>
 						{{localize "SHADOWDARK.sheet.item.tab.description"}}
 					</a>
@@ -62,11 +62,25 @@
 	<hr />
 	<section class="item-body">
 
-		{{> items/tabs/details }}
-		{{> items/tabs/titles }}
-		{{> items/tabs/light }}
-		{{> items/tabs/effects }}
-		{{> items/tabs/description }}
+		{{#if showTab.details}}
+			{{> items/tabs/details }}
+		{{/if}}
+
+		{{#if showTab.titles}}
+			{{> items/tabs/titles }}
+		{{/if}}
+
+		{{#if showTab.light}}
+			{{> items/tabs/light }}
+		{{/if}}
+
+		{{#if showTab.effects}}
+			{{> items/tabs/effects }}
+		{{/if}}
+
+		{{#if showTab.description}}
+			{{> items/tabs/description }}
+		{{/if}}
 
 	</section>
 </form>

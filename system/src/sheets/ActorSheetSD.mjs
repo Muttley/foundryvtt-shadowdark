@@ -249,6 +249,9 @@ export default class ActorSheetSD extends ActorSheet {
 			case "ancestry":
 				new select.AncestrySelector(this.actor).render(true);
 				break;
+			case "background":
+				new select.BackgroundSelector(this.actor).render(true);
+				break;
 			case "class":
 				new select.ClassSelector(this.actor).render(true);
 				break;

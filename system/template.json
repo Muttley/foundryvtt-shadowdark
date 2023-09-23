@@ -127,14 +127,14 @@
 				"xp": 0
 			},
 			"luck": false,
-			"slots": 10,
-			"title": ""
+			"slots": 10
 		}
 	},
 	"Item": {
 		"types": [
 			"Ancestry",
 			"Armor",
+			"Background",
 			"Basic",
 			"Class",
 			"Gem",
@@ -225,6 +225,11 @@
 			"baseArmor": "",
 			"canBeEquipped": true,
 			"properties": []
+		},
+		"Background": {
+			"templates": [
+				"common"
+			]
 		},
 		"Basic": {
 			"templates": [

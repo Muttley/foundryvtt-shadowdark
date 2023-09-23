@@ -238,9 +238,15 @@
 	}
 
 	.pc_ancestry,
+	.pc_background,
 	.pc_class,
-	.pc_languages {
+	.pc_languages{
 		grid-template-columns: min-content min-content 1fr;
+		align-items: center;
+	}
+
+	.pc_title {
+		grid-template-columns: min-content 1fr;
 		align-items: center;
 	}
 
@@ -708,7 +714,7 @@
 
 	.uuid-link {
 		margin: 4px;
-		text-align: center;
+		// text-align: center;
 	}
 
 	.xp-score {

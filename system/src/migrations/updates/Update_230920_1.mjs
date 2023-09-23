@@ -14,7 +14,7 @@ export default class Update_230920_1 extends UpdateBaseSD {
 
 		const updateData = {
 			"system.class": "",
-			"system.=-spellcastingAbility": null,
+			"system.-=spellcastingAbility": null,
 		};
 
 		const currentValue = actorData.system?.class ?? "";

@@ -8,7 +8,7 @@
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "230920.1"
+		"schemaVersion": "230923.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
@@ -71,6 +71,15 @@
 			"label": "Ancestries",
 			"system": "shadowdark",
 			"path": "packs/ancestries",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "backgrounds",
+			"label": "Backgrounds",
+			"system": "shadowdark",
+			"path": "packs/backgrounds",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -234,6 +243,7 @@
 					"color": "#262626",
 					"packs": [
 						"ancestries",
+						"backgrounds",
 						"classes",
 						"languages",
 						"talents"

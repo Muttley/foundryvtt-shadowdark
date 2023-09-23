@@ -27,6 +27,10 @@ export default class ActorSD extends Actor {
 		this.update({"system.ancestry": item.uuid});
 	}
 
+	async addClass(item) {
+		this.update({"system.class": item.uuid});
+	}
+
 	async addLanguage(item) {
 		let languageFound = false;
 		for (const language of await this.languageItems()) {
@@ -494,16 +498,6 @@ export default class ActorSD extends Actor {
 
 		return characterClass && spellcastingAbility !== "" ? true : false;
 	}
-
-	/** @inheritDoc */
-	// prepareBaseData() {
-	// 	switch (this.type) {
-	// 		case "Player":
-	// 			return this._preparePlayerData();
-	// 		case "NPC":
-	// 			return this._prepareNPCData();
-	// 	}
-	// }
 
 	/** @inheritDoc */
 	prepareData() {
@@ -976,7 +970,18 @@ export default class ActorSD extends Actor {
 			}
 		}
 
-		console.log("done");
+		this.backgroundItems.title = "";
+		if (this.backgroundItems.class && this.system.alignment !== "") {
+			const titles = this.backgroundItems.class.system.titles ?? [];
+			const level = this.system.level?.value ?? 0;
+
+			for (const title of titles) {
+				if (level >= title.from && level <= title.to) {
+					this.backgroundItems.title = title[this.system.alignment];
+					break;
+				}
+			}
+		}
 	}
 
 	_preparePlayerData() {

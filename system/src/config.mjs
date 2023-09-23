@@ -72,6 +72,7 @@ SHADOWDARK.DEFAULTS = {
 	ITEM_IMAGES: {
 		Ancestry: "icons/environment/people/group.webp",
 		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+		Background: "icons/environment/people/commoner.webp",
 		Basic: "icons/containers/bags/pouch-simple-brown.webp",
 		Class: "icons/sundries/documents/document-sealed-brown-red.webp",
 		Effect: "icons/commodities/tech/cog-brass.webp",

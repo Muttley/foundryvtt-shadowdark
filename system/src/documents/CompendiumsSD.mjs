@@ -78,6 +78,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD.properties("armor", sources);
 	}
 
+	static async backgrounds(sources=[]) {
+		return CompendiumsSD._documents("Item", "Background", sources);
+	}
+
 	static async baseArmor(sources=[]) {
 		const documents = await CompendiumsSD._documents("Item", "Armor", sources);
 

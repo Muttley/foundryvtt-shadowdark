@@ -266,9 +266,14 @@ export default class ItemSheetSD extends ItemSheet {
 			effects: (
 				["Effect", "Talent"].includes(item.type)
 					|| item.system.magicItem
-			),
+			) ? true : false,
 			light: item.system.light?.isSource ?? false,
 			description: true,
+			descriptionOnly: [
+				"Background",
+				"NPC Feature",
+			].includes(item.type),
+			titles: item.type === "Class",
 		};
 
 		foundry.utils.mergeObject(context, {
@@ -468,7 +473,7 @@ export default class ItemSheetSD extends ItemSheet {
 			currentChoices = choiceObject[splitKey[1]] ?? [];
 		}
 		else {
-			// TODO throw error
+			// TODO throw error?
 		}
 
 		if (currentChoices.includes(uuid)) return; // No duplicates
@@ -654,6 +659,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	_onSubmit(event) {
+		if (!this.isEditable) return;
+
 		switch (this.item.type) {
 			case "Ancestry": {
 				const updateData = this._getSubmitData();

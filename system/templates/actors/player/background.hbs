@@ -31,33 +31,40 @@
 				</div>
 			</div>
 			<div class="grid-2-columns">
-				<div class="detail-box">
+				<div class="pc pc_title">
 					<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
-					<input
-						name="system.title"
-						type="text"
-						class="detail-value"
-						value="{{ system.title }}"
-					/>
+					{{#if classTitle}}
+						<div class="compendium-items flexrow">
+							<div class="compendium-item flexrow">
+								<a
+									class="fake-uuid-link"
+								>
+									{{classTitle}}
+								</a>
+							</div>
+						</div>
+					{{else}}
+						<input
+							id="pc"
+							type="text"
+							value=""
+							data-dtype="String"
+							disabled="disabled"
+						/>
+					{{/if}}
 				</div>
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
 					<select name="system.alignment">
-						<option value="">&mdash;</option>
 						{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
 					</select>
 				</div>
 			</div>
 			<div class="grid-2-columns">
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.background'}}</label>
-					<input
-						name="system.background"
-						type="text"
-						class="detail-value"
-						value="{{ system.background }}"
-					/>
-				</div>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.background
+				}}
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
 					<input

@@ -180,6 +180,8 @@ SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
+SHADOWDARK.dialog.select_background.prompt: Select Background...
+SHADOWDARK.dialog.select_background.title: Choose Background
 SHADOWDARK.dialog.select_class.prompt: Select Class...
 SHADOWDARK.dialog.select_class.title: Choose Class
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
@@ -504,7 +506,8 @@ SHADOWDARK.sheet.player.active_effect_override: This value is being modified by 
 SHADOWDARK.sheet.player.ancestry.label: Ancestry
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's job
 SHADOWDARK.sheet.player.available_spells: Available Spells
-SHADOWDARK.sheet.player.background: Background
+SHADOWDARK.sheet.player.background.label: Background
+SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
 SHADOWDARK.sheet.player.class.label: Class
 SHADOWDARK.sheet.player.class.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.deity: Deity
