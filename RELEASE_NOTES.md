@@ -16,6 +16,7 @@
 * [#480] Added ability to create custom weapon and armor properties
 * [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
 * [#491] Added support for custom languages
+* [#494] Added support for custom background items
 
 ## v.1.3.7
 
