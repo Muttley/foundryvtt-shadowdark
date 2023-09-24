@@ -1,11 +1,11 @@
 {
-	"_id": "QV93CYmgcgJ3UCPf",
-	"_key": "!items!QV93CYmgcgJ3UCPf",
+	"_id": "m857P6MI00wAONTp",
+	"_key": "!items!m857P6MI00wAONTp",
 	"effects": [
 	],
-	"folder": null,
-	"img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
-	"name": "Restorative",
+	"folder": "iHOSxtXRWKd2vx1U",
+	"img": "icons/commodities/materials/bowl-liquid-white.webp",
+	"name": "Salve",
 	"system": {
 		"broken": false,
 		"canBeEquipped": false,
@@ -16,7 +16,7 @@
 			"gp": 0,
 			"sp": 0
 		},
-		"description": "<p>Ends one poison or disease</p>",
+		"description": "<p>Heals 1 HP</p>",
 		"duration": {
 			"type": "",
 			"value": ""
