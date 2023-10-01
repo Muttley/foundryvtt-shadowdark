@@ -2,6 +2,10 @@
 @use "../../mixins" as *;
 
 .shadowdark.sheet.player {
+	.window-content {
+		padding: 0px;
+	}
+
 	@include p-reset;
 	color: white;
 	font-size: 18px;
@@ -137,27 +141,11 @@
 	.background-notes {
 		@include p-reset;
 		display: grid;
-		grid-template-rows: min-content minmax(200px, max-content);
-		row-gap: 4px;
+		grid-template-rows: minmax(300px, max-content);
 
 		.editor {
 			background-color: var(--form-background);
 		}
-
-		// label {
-		// 	display: block;
-		// 	@include p-reset;
-
-		// 	font-family: "Old Newspaper Font";
-		// 	font-size: 20px;
-		// 	font-weight: bold;
-		// 	text-decoration: underline;
-
-		// 	line-height: 1.1;
-
-		// 	border: none;
-		// }
-
 	}
 
 	.cast-spell {
@@ -274,6 +262,14 @@
 
 	.open-gem-bag {
 		color: sienna;
+	}
+
+	.fixed-header {
+		position: sticky;
+		top: 0;
+		background: url("/ui/parchment.jpg") repeat;
+		z-index: 10;
+		padding: 8px;
 	}
 
 	.hit-points {
@@ -460,7 +456,7 @@
 
 	.player-body {
 		@include p-reset;
-		margin: 4px;
+		padding: 8px;
 	}
 
 	.player-header {

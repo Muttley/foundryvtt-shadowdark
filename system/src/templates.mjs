@@ -20,6 +20,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/inventory/coins.hbs",
 		"systems/shadowdark/templates/actors/player/inventory/slots.hbs",
 		"systems/shadowdark/templates/actors/player/spells.hbs",
+		"systems/shadowdark/templates/actors/player/notes.hbs",
 		"systems/shadowdark/templates/actors/player/talents.hbs",
 		"systems/shadowdark/templates/items/partials/active-effects.hbs",
 		"systems/shadowdark/templates/items/partials/ancestry.hbs",

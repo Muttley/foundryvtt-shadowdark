@@ -18,6 +18,8 @@
 * [#491] Added support for custom languages
 * [#494] Added support for custom background items
 * [#495] Added support for Deity items
+* [#497] Split character sheet notes out into their own tab
+* [#498] Fix character sheet header and tab controls at top of character sheet window
 
 ## v.1.3.7
 
