@@ -13,6 +13,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/attacks.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/hp.hbs",
+		"systems/shadowdark/templates/actors/player/abilities/class.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/initiative.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/luck.hbs",
 		"systems/shadowdark/templates/actors/player/background.hbs",

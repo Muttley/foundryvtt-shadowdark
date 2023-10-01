@@ -38,6 +38,10 @@ $sans-serif: 'Roboto', system, -apple-system, sans-serif !default;
 			&_secondary {
 				background-color: var(--primary);
 			}
+
+			&_small {
+				font-size: 10px;
+			}
 		}
 	}
 

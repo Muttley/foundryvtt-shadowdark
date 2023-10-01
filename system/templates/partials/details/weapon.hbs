@@ -31,7 +31,11 @@
 	{{localize 'SHADOWDARK.chat_card.button.attack'}}
 </button>
 <footer class="details-footer">
-	{{#each itemProperties}}
-		<span>{{this.name}}</span>
-	{{/each}}
+	<ul class="tags">
+		{{#each itemProperties}}
+			<li class="tag tag_primary tag_small">
+				{{this.name}}
+			</li>
+		{{/each}}
+	</ul>
 </footer>

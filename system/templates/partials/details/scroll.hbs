@@ -25,19 +25,21 @@
 	{{/if}}
 </div>
 <footer class="details-footer">
-	<span>
-		{{localize "SHADOWDARK.item.spell_tier"}}:
-		{{ item.system.tier }}
-	</span>
-	<span>
-		{{localize "SHADOWDARK.item.spell_duration"}}:
-		{{getSpellDuration
-			item.system.duration.type
-			item.system.duration.value
-		}}
-	</span>
-	<span>
-		{{localize "SHADOWDARK.item.spell_range"}}:
-		{{fromConfig "SPELL_RANGES" item.system.range }}
-	</span>
+	<ul class="tags">
+		<li class="tag tag_primary tag_small">
+			{{localize "SHADOWDARK.item.spell_tier"}}
+			{{ item.system.tier }}
+		</li>
+		<li class="tag tag_secondary tag_small">
+			{{localize "SHADOWDARK.item.spell_duration"}}:
+			{{getSpellDuration
+				item.system.duration.type
+				item.system.duration.value
+			}}
+		</li>
+		<li class="tag tag_secondary tag_small">
+			{{localize "SHADOWDARK.item.spell_range"}}:
+			{{fromConfig "SPELL_RANGES" item.system.range }}
+		</li>
+	</ul>
 </footer>

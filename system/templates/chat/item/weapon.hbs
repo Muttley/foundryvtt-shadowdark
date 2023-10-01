@@ -3,12 +3,12 @@
 	data-actor-id="{{actor._id}}"
 	data-item-id="{{item._id}}"
 >
-  <header class="card-header flexrow">
-    <img src="{{item.img}}" data-tooltip="{{item.name}}"/>
-    <h3 class="item-name">{{item.name}}</h3>
-  </header>
+	<header class="card-header flexrow">
+		<img src="{{item.img}}" data-tooltip="{{item.name}}"/>
+		<h3 class="item-name">{{item.name}}</h3>
+	</header>
 
-  <div class="card-content">
+	<div class="card-content">
 		<p>
 			<b>{{localize 'SHADOWDARK.item.weapon_type'}}</b> <em>{{fromConfig "WEAPON_TYPES" item.system.type}}</em>,
 			<b>{{localize 'SHADOWDARK.item.weapon_range'}}</b> <em>{{fromConfig "RANGES" item.system.range}}</em>
@@ -29,7 +29,7 @@
 			</p>
 		{{/if}}
 		{{{description}}}
-  </div>
+	</div>
 
 	<div class="chat-card-buttons">
 		<button
@@ -42,9 +42,13 @@
 		</button>
 	</div>
 
-  <footer class="card-footer">
-		{{#each itemProperties}}
-			<span>{{this.name}}</span>
-		{{/each}}
-  </footer>
+	<footer class="card-footer">
+		<ul class="tags">
+			{{#each itemProperties}}
+				<li class="tag tag_primary tag_small">
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</footer>
 </div>

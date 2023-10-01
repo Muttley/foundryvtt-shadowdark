@@ -25,9 +25,13 @@
     {{{description}}}
   </div>
 
-  <footer class="card-footer">
-		{{#each itemProperties}}
-			<span>{{this.name}}</span>
-		{{/each}}
-  </footer>
+	<footer class="card-footer">
+		<ul class="tags">
+			{{#each itemProperties}}
+				<li class="tag tag_primary tag_small">
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</footer>
 </div>

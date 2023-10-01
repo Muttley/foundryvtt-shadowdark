@@ -111,7 +111,7 @@
 		margin-bottom: 2px;
 	}
 
-	.attacks-label {
+	.actions-label {
 		@include p-reset;
 		display: block;
 		padding: 4px;
@@ -265,11 +265,17 @@
 	}
 
 	.fixed-header {
+		@include p-reset;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-top: 8px;
+
 		position: sticky;
 		top: 0;
+
 		background: url("/ui/parchment.jpg") repeat;
+
 		z-index: 10;
-		padding: 8px;
 	}
 
 	.hit-points {

@@ -22,7 +22,7 @@
 			<div class="item-navigation__flex">
 
 				{{#if showTab.details}}
-					<a class="item {{#unless showTab.descriptionOnly}}active{{/unless}}" data-tab="tab-details">
+					<a class="item" data-tab="tab-details">
 						{{localize "SHADOWDARK.sheet.item.tab.details"}}
 					</a>
 				{{/if}}
@@ -47,7 +47,7 @@
 
 				{{#if showTab.description}}
 					<a
-						class="item {{#if showTab.descriptionOnly}}active{{/if}}"
+						class="item"
 						data-tab="tab-description"
 						{{#if showTab.descriptionOnly}}
 							style="display: none;"
@@ -61,26 +61,10 @@
 	</div>
 	<hr />
 	<section class="item-body">
-
-		{{#if showTab.details}}
-			{{> items/tabs/details }}
-		{{/if}}
-
-		{{#if showTab.titles}}
-			{{> items/tabs/titles }}
-		{{/if}}
-
-		{{#if showTab.light}}
-			{{> items/tabs/light }}
-		{{/if}}
-
-		{{#if showTab.effects}}
-			{{> items/tabs/effects }}
-		{{/if}}
-
-		{{#if showTab.description}}
-			{{> items/tabs/description }}
-		{{/if}}
-
+		{{> items/tabs/description }}
+		{{> items/tabs/details }}
+		{{> items/tabs/effects }}
+		{{> items/tabs/light }}
+		{{> items/tabs/titles }}
 	</section>
 </form>

@@ -1,6 +1,12 @@
-<div class="shadowdark chat-card light-source-card" data-actor-id="{{data.actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
-  <header class="card-header flexrow">
-    <img src="{{img}}" data-tooltip="{{message}}"/>
-    <h3 class="light-source-name">{{message}}</h3>
-  </header>
+<div
+	class="shadowdark chat-card light-source-card"
+	data-actor-id="{{data.actor.id}}"
+	{{#if tokenId}}
+		data-token-id="{{tokenId}}"
+	{{/if}}
+>
+	<header class="card-header flexrow">
+		<img src="{{img}}" data-tooltip="{{message}}"/>
+		<h3 class="light-source-name">{{message}}</h3>
+	</header>
 </div>

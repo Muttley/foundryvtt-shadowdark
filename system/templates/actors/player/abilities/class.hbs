@@ -1,0 +1,12 @@
+<label class="actions-label">{{characterClass}} {{localize 'SHADOWDARK.sheet.abilities.label'}}</label>
+<ol>
+	{{#each classAbilities as |ability|}}
+		<li
+			class="rollable item-rollable ability-item"
+			data-action="ability-use"
+			data-item-id="{{ability._id}}"
+		>
+			{{{ability.name}}}
+		</li>
+	{{/each}}
+</ol>
