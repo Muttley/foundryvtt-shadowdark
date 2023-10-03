@@ -1,0 +1,23 @@
+{
+	"_id": "i8PZF77jaVDkCE6n",
+	"_key": "!items!i8PZF77jaVDkCE6n",
+	"effects": [
+	],
+	"folder": "Agdcg0ystOpP8kcL",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Foebane",
+	"system": {
+		"ability": "int",
+		"dc": 13,
+		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.FeoRamUTz5jakMJ8]{Foebane} ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p><p></p>",
+		"group": "Herbal Remedy",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}

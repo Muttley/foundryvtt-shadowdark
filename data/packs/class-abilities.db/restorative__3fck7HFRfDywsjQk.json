@@ -1,0 +1,23 @@
+{
+	"_id": "3fck7HFRfDywsjQk",
+	"_key": "!items!3fck7HFRfDywsjQk",
+	"effects": [
+	],
+	"folder": "Agdcg0ystOpP8kcL",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Restorative",
+	"system": {
+		"ability": "int",
+		"dc": 14,
+		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.QV93CYmgcgJ3UCPf]{Restorative} Ends one poison or disease</p><p></p>",
+		"group": "Herbal Remedy",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}

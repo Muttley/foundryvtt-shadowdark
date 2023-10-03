@@ -1,0 +1,23 @@
+{
+	"_id": "EhaA5tBROfrws1Kx",
+	"_key": "!items!EhaA5tBROfrws1Kx",
+	"effects": [
+	],
+	"folder": "Agdcg0ystOpP8kcL",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Stimulant",
+	"system": {
+		"ability": "int",
+		"dc": 12,
+		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.dBQr9YPyhvwyPm0g]{Stimulant} You can't be surprised for 10 rounds</p><p></p>",
+		"group": "Herbal Remedy",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "UzSmg3aLstFcNsUa",
+	"_key": "!items!UzSmg3aLstFcNsUa",
+	"effects": [
+	],
+	"folder": "Agdcg0ystOpP8kcL",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Salve",
+	"system": {
+		"ability": "int",
+		"dc": 11,
+		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.m857P6MI00wAONTp]{Salve} Heals 1 HP</p>",
+		"group": "Herbal Remedy",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}
