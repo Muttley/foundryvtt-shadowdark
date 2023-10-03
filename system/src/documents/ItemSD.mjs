@@ -185,7 +185,8 @@ export default class ItemSD extends Item {
 	async hasProperty(property) {
 		property = property.slugify();
 
-		const propertyItem = (await this.propertyItems()).find(
+		const propertyItems = await this.propertyItems();
+		const propertyItem = propertyItems.find(
 			p => p.name.slugify() === property
 		);
 

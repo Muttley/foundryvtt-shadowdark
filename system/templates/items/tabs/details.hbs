@@ -9,6 +9,10 @@
 			{{> items/partials/armor }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Class Ability"}}
+			{{> items/partials/class-ability }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Class"}}
 			{{> items/partials/class }}
 		{{/ifEq}}

@@ -63,6 +63,7 @@ SHADOWDARK.DICE = {
 	d20: "d20",
 };
 
+/* eslint-disable quote-props */
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
@@ -70,26 +71,28 @@ SHADOWDARK.DEFAULTS = {
 	LEARN_SPELL_DC: 15,
 	LIGHT_TRACKER_UPDATE_INTERVAL_SECS: 30,
 	ITEM_IMAGES: {
-		Ancestry: "icons/environment/people/group.webp",
-		Armor: "icons/equipment/chest/breastplate-banded-steel-gold.webp",
-		Background: "icons/environment/people/commoner.webp",
-		Basic: "icons/containers/bags/pouch-simple-brown.webp",
-		Class: "icons/sundries/documents/document-sealed-brown-red.webp",
-		Deity: "icons/magic/holy/yin-yang-balance-symbol.webp",
-		Effect: "icons/commodities/tech/cog-brass.webp",
-		Gem: "icons/commodities/gems/gem-faceted-navette-red.webp",
-		Language: "icons/tools/scribal/ink-quill-pink.webp",
+		"Ancestry": "icons/environment/people/group.webp",
+		"Armor": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+		"Background": "icons/environment/people/commoner.webp",
+		"Basic": "icons/containers/bags/pouch-simple-brown.webp",
+		"Class Ability": "icons/tools/navigation/map-chart-tan.webp",
+		"Class": "icons/sundries/documents/document-sealed-brown-red.webp",
+		"Deity": "icons/magic/holy/yin-yang-balance-symbol.webp",
+		"Effect": "icons/commodities/tech/cog-brass.webp",
+		"Gem": "icons/commodities/gems/gem-faceted-navette-red.webp",
+		"Language": "icons/tools/scribal/ink-quill-pink.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
-		Potion: "icons/consumables/potions/bottle-corked-red.webp",
-		Property: "icons/sundries/documents/document-torn-diagram-tan.webp",
-		Scroll: "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
-		Spell: "icons/magic/symbols/runes-star-blue.webp",
-		Talent: "icons/sundries/books/book-worn-brown-grey.webp",
-		Wand: "icons/weapons/wands/wand-gem-violet.webp",
-		Weapon: "icons/weapons/swords/swords-short.webp",
+		"Potion": "icons/consumables/potions/bottle-corked-red.webp",
+		"Property": "icons/sundries/documents/document-torn-diagram-tan.webp",
+		"Scroll": "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+		"Spell": "icons/magic/symbols/runes-star-blue.webp",
+		"Talent": "icons/sundries/books/book-worn-brown-grey.webp",
+		"Wand": "icons/weapons/wands/wand-gem-violet.webp",
+		"Weapon": "icons/weapons/swords/swords-short.webp",
 	},
 };
+/* eslint-enable quote-props */
 
 SHADOWDARK.INVENTORY = {
 	GEMS_PER_SLOT: 10,

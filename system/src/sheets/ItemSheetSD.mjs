@@ -30,6 +30,11 @@ export default class ItemSheetSD extends ItemSheet {
 	}
 
 	/** @inheritdoc */
+	get title() {
+		return `[${this.item.type}] ${this.item.name}`;
+	}
+
+	/** @inheritdoc */
 	activateListeners(html) {
 
 		html.find(".delete-choice").click(
@@ -198,6 +203,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		context.spellcastingClasses = {};
 		for (const spellcastingClass of spellcastingClasses) {
+			if (spellcastingClass.name === this.item.name) continue;
 			context.spellcastingClasses[spellcastingClass.uuid] =
 				spellcastingClass.name;
 		}
@@ -249,10 +255,11 @@ export default class ItemSheetSD extends ItemSheet {
 				"Ancestry",
 				"Armor",
 				"Basic",
+				"Class Ability",
 				"Class",
 				"Deity",
-				"Gem",
 				"Effect",
+				"Gem",
 				"Language",
 				"NPC Attack",
 				"Potion",

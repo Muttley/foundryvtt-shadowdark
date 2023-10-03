@@ -530,6 +530,7 @@ export default class RollSD extends Roll {
 			isVersatile: false,
 			isRoll: true,
 			isNPC: data.actor?.type === "NPC",
+			targetDC: options.target ?? false,
 		};
 		if (data.rolls.main) {
 			templateData._formula = data.rolls.main.roll._formula;

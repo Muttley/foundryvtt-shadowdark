@@ -99,12 +99,20 @@ SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the s
 SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
 SHADOWDARK.chat.spell_learn.title: Learning Spell
 SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
+SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
+SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
+SHADOWDARK.chat.use_ability.title: "Using Ability"
 SHADOWDARK.chat.welcome_message.intro: "To quickly get familiar with the system, check out the provided guided tours by clicking on the following button:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
 SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Roll
+SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.dc.label: DC
+SHADOWDARK.class-ability.group.label: Ability Group
+SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
+SHADOWDARK.class-ability.lost.label: Lost
 SHADOWDARK.class.armor.all.label: All Armor
 SHADOWDARK.class.armor.label: Armor
 SHADOWDARK.class.armor.prompt: Select Armor...
@@ -478,6 +486,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Rea
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.sheet.abilities.label: Abilities
+SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: Alignment
 SHADOWDARK.sheet.actor.hp_max: Max
@@ -518,24 +528,25 @@ SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opp
 SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.luck: Luck
 SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
-SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
 SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Tier
 SHADOWDARK.sheet.player.spells: Spells
-SHADOWDARK.sheet.abilities.label: Abilities
 SHADOWDARK.sheet.player.tab.abilities: Abilities
 SHADOWDARK.sheet.player.tab.background: Background
 SHADOWDARK.sheet.player.tab.inventory: Inventory
+SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.tab.spells: Spells
 SHADOWDARK.sheet.player.tab.talents: Talents
 SHADOWDARK.sheet.player.talents_level: Level
 SHADOWDARK.sheet.player.talents_name: Name
 SHADOWDARK.sheet.player.talents: Talents
 SHADOWDARK.sheet.player.title: Title
+SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
 SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
 SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Learn Spell
+SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
 SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
 SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand

@@ -238,6 +238,7 @@ export default class CompendiumsSD {
 
 		const filteredDocuments = documents.filter(
 			document => document.system.spellcasting.ability !== ""
+				&& document.system.spellcasting.class !== "NONE"
 		);
 
 		// re-create the collection from the filtered Items

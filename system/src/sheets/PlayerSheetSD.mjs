@@ -12,8 +12,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "player"],
-			width: 560,
-			height: 560,
+			width: 600,
+			height: 580,
 			resizable: true,
 			tabs: [
 				{
@@ -63,8 +63,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onSellTreasure(event)
 		);
 
-		html.find(".toggle-spell-lost").click(
-			event => this._onToggleSpellLost(event)
+		html.find(".toggle-lost").click(
+			event => this._onToggleLost(event)
+		);
+
+		html.find("[data-action='use-ability']").click(
+			event => this._onUseAbility(event)
 		);
 
 		html.find("[data-action='use-potion']").click(
@@ -114,8 +118,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @override */
 	async getData(options) {
-		// Update the Gem Bag, but don't render it unless it's already showing
-		this.gemBag.render(false);
+		await this.actor._populateBackgroundItems();
 
 		const context = await super.getData(options);
 
@@ -135,6 +138,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.knownLanguages = await this.actor.languageItems();
 
 		context.backgroundSelectors = await this.getBackgroundSelectors();
+
 		// Get the inventory ready
 		await this._prepareItems(context);
 
@@ -143,13 +147,18 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				this.actor.overrides?.system?.abilities || {}
 			)
 		);
+
 		context.attributeOverrides = Object.keys(
 			foundry.utils.flattenObject(
 				this.actor.overrides?.system?.attributes || {}
 			)
 		);
 
+		context.characterClass = this.actor.backgroundItems.class?.name;
 		context.classTitle = this.actor.backgroundItems.title;
+
+		// Update the Gem Bag, but don't render it unless it's already showing
+		this.gemBag.render(false);
 
 		return context;
 	}
@@ -159,7 +168,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			case "Ancestry":
 				return this.actor.addAncestry(item);
 			case "Background":
-				return this.actor.addBackground(item);
+				return this.actor.addBackground(item);1
 			case "Class":
 				return this.actor.addClass(item);
 			case "Deity":
@@ -519,6 +528,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
+	async _onUseAbility(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.useAbility(itemId);
+	}
+
 	async _onUsePotion(event) {
 		event.preventDefault();
 
@@ -558,7 +575,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this._toggleLightSource(item);
 	}
 
-	async _onToggleSpellLost(event) {
+	async _onToggleLost(event) {
 		event.preventDefault();
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
@@ -684,6 +701,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const attacks = {melee: [], ranged: []};
 
+		const allClassAbilities = {};
+
 		let slotCount = 0;
 
 		for (const i of this._sortAllItems(context)) {
@@ -755,6 +774,18 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const category = i.system.category;
 				effects[category].items.push(i);
 			}
+			else if (i.type === "Class Ability") {
+				const group = i.system.group !== ""
+					? i.system.group
+					: game.i18n.localize("SHADOWDARK.sheet.abilities.ungrouped.label");
+
+				if (Array.isArray(allClassAbilities[group])) {
+					allClassAbilities[group].push(i);
+				}
+				else {
+					allClassAbilities[group] = [i];
+				}
+			}
 		}
 
 		// Work out how many slots all these coins are taking up...
@@ -774,6 +805,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (totalGems > 0) {
 			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
 		}
+
+		const classAbilities = [];
+
+		const sortedGroups = Object.keys(allClassAbilities).sort((a, b) => a.localeCompare(b));
+		for (const group of sortedGroups) {
+			classAbilities.push({
+				name: group,
+				abilities: allClassAbilities[group],
+			});
+		}
+
+		context.classAbilities = classAbilities;
+		context.hasClassAbilities = classAbilities.length > 0;
 
 		context.attacks = attacks;
 		context.coins = {totalCoins, coinSlots};

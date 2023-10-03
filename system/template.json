@@ -136,10 +136,11 @@
 			"Armor",
 			"Background",
 			"Basic",
+			"Class Ability",
 			"Class",
 			"Deity",
-			"Gem",
 			"Effect",
+			"Gem",
 			"Language",
 			"NPC Attack",
 			"NPC Feature",
@@ -254,13 +255,23 @@
 			"hitPoints": "",
 			"spellcasting": {
 				"ability": "",
-				"class": ""
+				"class": "NONE"
 			},
 			"talents": [],
 			"talentChoices": [],
 			"talentChoiceCount": 0,
 			"titles": [],
 			"weapons": []
+		},
+		"Class Ability": {
+			"templates": [
+				"common"
+			],
+			"ability": "",
+			"group": "",
+			"dc": 10,
+			"loseOnFailure": true,
+			"lost": false
 		},
 		"Deity": {
 			"templates": [

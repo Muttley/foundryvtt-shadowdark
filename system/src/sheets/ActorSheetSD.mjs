@@ -386,19 +386,6 @@ export default class ActorSheetSD extends ActorSheet {
 	_sortAllItems(context) {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
-		const allItems = [];
-		(context.items ?? []).forEach(item => allItems.push(item));
-
-		allItems.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		});
-
-		return allItems;
+		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
 	}
 }

@@ -24,7 +24,7 @@
 					</tr>
 					{{#each tier as |spell|}}
 						<tr
-							class="item {{#if spell.system.lost}}spell-lost{{/if}}"
+							class="item"
 							data-item-id="{{spell._id}}"
 						>
 							<td>
@@ -36,7 +36,7 @@
 									<i class="fas fa-comment fa-lg"></i>
 								</div>
 								<a
-									class="item-control show-details"
+									class="item-control show-details {{#if spell.system.lost}}strike-through{{/if}}"
 									data-item-id="{{spell._id}}"
 								>
 									{{spell.name}}
@@ -54,7 +54,7 @@
 									</a>
 								{{/unless}}
 								<a
-									class="item-control toggle-spell-lost"
+									class="item-control toggle-lost"
 									data-item-id="{{spell._id}}"
 									data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 								>

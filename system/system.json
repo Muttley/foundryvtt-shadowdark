@@ -85,6 +85,15 @@
 			"flags": {}
 		},
 		{
+			"name": "class-abilities",
+			"label": "Class Abilities",
+			"system": "shadowdark",
+			"path": "packs/class-abilities",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "classes",
 			"label": "Classes",
 			"system": "shadowdark",
@@ -253,6 +262,7 @@
 					"packs": [
 						"ancestries",
 						"backgrounds",
+						"class-abilities",
 						"classes",
 						"deities",
 						"languages",

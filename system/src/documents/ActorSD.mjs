@@ -207,7 +207,7 @@ export default class ActorSD extends Actor {
 					itemId,
 				});
 			}
-			if (item.hasProperty("thrown")) {
+			if (await item.hasProperty("thrown")) {
 				weaponOptions.attackBonus = baseAttackBonus
 					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
 					+ parseInt(item.system.bonuses.attackBonus, 10)
@@ -503,9 +503,12 @@ export default class ActorSD extends Actor {
 
 	async isSpellcaster() {
 		const characterClass = this.backgroundItems.class;
-		const spellcastingAbility = characterClass?.system?.spellcasting?.ability ?? "";
+		const spellcastingAbility =
+			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingAbility !== "" ? true : false;
+		return characterClass && spellcastingAbility !== "__not_spellcaster__"
+			? true
+			: false;
 	}
 
 	/** @inheritDoc */
@@ -904,6 +907,68 @@ export default class ActorSD extends Actor {
 		return newArmorClass;
 	}
 
+	async useAbility(itemId) {
+		const item = this.items.get(itemId);
+
+		const result = await this.rollAbility(
+			item.system.ability,
+			{target: item.system.dc}
+		);
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.use_ability.success"
+			: "SHADOWDARK.chat.use_ability.failure";
+
+		let message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				ability: item.name,
+			}
+		);
+
+		const abilityDescription = await TextEditor.enrichHTML(
+			item.system.description,
+			{
+				secrets: this.isOwner,
+				async: true,
+				relativeTo: this,
+			}
+		);
+
+		if (success) {
+			message = `<p>${message}</p>${abilityDescription}`;
+		}
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/use-ability.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (!success && item.system.loseOnFailure) {
+			item.update({"system.lost": true});
+		}
+	}
+
 	async usePotion(itemId) {
 		const item = this.items.get(itemId);
 
@@ -990,7 +1055,6 @@ export default class ActorSD extends Actor {
 	}
 
 	_preparePlayerData() {
-		this._populateBackgroundItems();
 		this._populatePlayerModifiers();
 	}
 

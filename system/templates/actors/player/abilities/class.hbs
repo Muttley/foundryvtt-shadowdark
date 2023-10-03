@@ -1,12 +1,65 @@
 <label class="actions-label">{{characterClass}} {{localize 'SHADOWDARK.sheet.abilities.label'}}</label>
-<ol>
-	{{#each classAbilities as |ability|}}
-		<li
-			class="rollable item-rollable ability-item"
-			data-action="ability-use"
-			data-item-id="{{ability._id}}"
-		>
-			{{{ability.name}}}
-		</li>
-	{{/each}}
-</ol>
+<section class="class-abilities-body">
+	<div class="class-abilities-list">
+		{{#each classAbilities as |group|}}
+			<table>
+				<tr class="ability-group-header">
+					<th class="ability-group-header-padding">
+						{{group.name}}
+					</th>
+					<th>&nbsp;</th>
+				</tr>
+				{{#each group.abilities}}
+					{{> ability ability=this}}
+				{{/each}}
+			</table>
+		{{/each}}
+	</div>
+</section>
+
+{{#*inline "ability"}}
+	<tr
+		class="item"
+		data-item-id="{{ability._id}}"
+	>
+		<td>
+			<div
+				class="item-image"
+				style="background-image: url({{ability.img}})"
+				data-item-id="{{ability._id}}"
+			>
+				<i class="fas fa-comment fa-lg"></i>
+			</div>
+			<a
+				class="item-control show-details {{#if ability.system.lost}}strike-through{{/if}}"
+				data-item-id="{{ability._id}}"
+			>
+				{{ability.name}}
+			</a>
+		</td>
+		<td style="text-align: right; padding-right: 4px;">
+			{{#unless ability.system.lost}}
+				<a
+					class="item-control use-ability"
+					data-action="use-ability"
+					data-item-id="{{ability._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
+				>
+					<i class="fa-solid fa-dice-d20"></i>
+				</a>
+				&nbsp;
+			{{/unless}}
+			<a
+				class="item-control toggle-lost"
+				data-item-id="{{ability._id}}"
+				data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_ability_lost"}}"
+			>
+				{{#if ability.system.lost}}
+					<i style="color:red;" class="fa-solid fa-xmark"></i>
+				{{else}}
+					<i style="color:green;" class="fa-solid fa-check"></i>
+				{{/if}}
+			</a>
+		</td>
+	</tr>
+{{/inline}}

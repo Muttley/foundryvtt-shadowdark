@@ -36,7 +36,22 @@
 		<div class="item-detail">
 			<label>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</label>
 			<select name="system.spellcasting.class">
-				<option value="">&mdash;</option>
+				<option
+					value="__not_spellcaster__"
+					{{#ifEq system.spellcasting.class "__not_spellcaster__"}}
+						selected
+					{{/ifEq}}
+				>
+					&mdash;
+				</option>
+				<option
+					value=""
+					{{#ifEq system.spellcasting.class ""}}
+						selected
+					{{/ifEq}}
+				>
+					(Class Name)
+				</option>
 				{{selectOptions
 					spellcastingClasses
 					selected=system.spellcasting.class

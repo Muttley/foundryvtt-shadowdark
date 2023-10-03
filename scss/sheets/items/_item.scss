@@ -93,14 +93,14 @@
 		}
 	}
 
-	.class-details{
+	.class-details {
 		grid-column: span 3;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 4px;
 	}
 
-	.class-equipment-details{
+	.class-equipment-details {
 		grid-column: span 3;
 		display: grid;
 		grid-template-columns: 1.5fr 1.5fr 1fr;
