@@ -13,8 +13,10 @@
 * [#71] Add the ability to extend various character options
 * [#374] Added ability to create custom Classes
 * [#375] Added support for custom ancestries
+* [#376] Added support for rollable Class Abilities
 * [#342] Identify "rare" languages in the language selector to aid in selection
 * [#447] Added ability to easily access filtered compendium items
+* [#444] Added Bard class
 * [#480] Added ability to create custom weapon and armor properties
 * [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
 * [#491] Added support for custom languages
