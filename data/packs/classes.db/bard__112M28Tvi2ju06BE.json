@@ -15,7 +15,7 @@
 			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
 		],
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.ZzffJkaIfmdPzdE7",
-		"description": "",
+		"description": "<p>Bards are welcome wanderers and wise advisors; it is their task to protect and share knowledge handed down through the ages.</p>",
 		"hitPoints": "d6",
 		"language": {
 			"select": null
@@ -36,7 +36,7 @@
 		},
 		"spellcasting": {
 			"ability": "cha",
-			"class": ""
+			"class": "__not_spellcaster__"
 		},
 		"talentChoiceCount": 0,
 		"talentChoices": [
