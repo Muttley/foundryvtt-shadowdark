@@ -865,42 +865,49 @@ export default class ActorSD extends Actor {
 		let newArmorClass = baseArmorClass;
 		let armorMasteryBonus = 0;
 
-		const equippedArmor = this.items.filter(
-			item => item.type === "Armor" && item.system.equipped
-		);
-		let nonShieldEquipped = false;
-		if (equippedArmor.length > 0) {
-			newArmorClass = 0;
-			for (let i = 0; i < equippedArmor.length; i++) {
-				const armor = equippedArmor[i];
+		if (Number.isInteger(this.system.attributes.ac.override)) {
+			// AC is being overridden by an effect so we just use that value
+			// and ignore everything else
+			newArmorClass = this.system.attributes.ac.override;
+		}
+		else {
+			const equippedArmor = this.items.filter(
+				item => item.type === "Armor" && item.system.equipped
+			);
+			let nonShieldEquipped = false;
+			if (equippedArmor.length > 0) {
+				newArmorClass = 0;
+				for (let i = 0; i < equippedArmor.length; i++) {
+					const armor = equippedArmor[i];
 
-				if (await armor.isNotAShield()) {
-					nonShieldEquipped = true;
+					if (await armor.isNotAShield()) {
+						nonShieldEquipped = true;
+					}
+
+					// Check if armor mastery should apply to the AC
+					if (
+						this.system.bonuses.armorMastery.includes(armor.name.slugify())
+						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+					) armorMasteryBonus += 1;
+
+					newArmorClass += armor.system.ac.modifier;
+					newArmorClass += armor.system.ac.base;
+
+					const attribute = armor.system.ac.attribute;
+					if (attribute) {
+						newArmorClass += this.abilityModifier(attribute);
+					}
 				}
 
-				// Check if armor mastery should apply to the AC
-				if (
-					this.system.bonuses.armorMastery.includes(armor.name.slugify())
-					|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-				) armorMasteryBonus += 1;
+				// Someone with no armor but a shield equipped
+				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
 
-				newArmorClass += armor.system.ac.modifier;
-				newArmorClass += armor.system.ac.base;
-
-				const attribute = armor.system.ac.attribute;
-				if (attribute) {
-					newArmorClass += this.abilityModifier(attribute);
-				}
+				newArmorClass += armorMasteryBonus;
 			}
 
-			// Someone with no armor but a shield equipped
-			if (!nonShieldEquipped) newArmorClass += baseArmorClass;
-
-			newArmorClass += armorMasteryBonus;
+			// Add AC from bonus effects
+			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
-
-		// Add AC from effects
-		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 
 		this.updateSource({"system.attributes.ac.value": newArmorClass});
 

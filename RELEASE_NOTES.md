@@ -8,6 +8,7 @@
 * [#486] Fixed typo in Magic Item Table 1, Result 20
 * [#488] Fixes for locked doors and missing monsters in The Lost Citadel of the Scarlet Minotaur adventure
 * [#493] Compendium item "Sword of the Ancients" missing base weapon type
+* [#496] Mage Armor spell effect not being applied
 
 ### Enhancement
 * [#71] Add the ability to extend various character options
