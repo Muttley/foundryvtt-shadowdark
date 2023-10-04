@@ -168,7 +168,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			case "Ancestry":
 				return this.actor.addAncestry(item);
 			case "Background":
-				return this.actor.addBackground(item);1
+				return this.actor.addBackground(item);
 			case "Class":
 				return this.actor.addClass(item);
 			case "Deity":
