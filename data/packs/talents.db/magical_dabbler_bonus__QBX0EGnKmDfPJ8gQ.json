@@ -1,0 +1,30 @@
+{
+	"_id": "QBX0EGnKmDfPJ8gQ",
+	"_key": "!items.effects!x4xTNUsimUpO3JBt.QBX0EGnKmDfPJ8gQ",
+	"changes": [
+		{
+			"key": "system.bonuses.spellcastingCheckBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/symbols/runes-triangle-magenta.webp",
+	"name": "Magical Dabbler Bonus",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

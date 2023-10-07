@@ -1,0 +1,25 @@
+{
+	"_id": "x4xTNUsimUpO3JBt",
+	"_key": "!items!x4xTNUsimUpO3JBt",
+	"effects": [
+		"QBX0EGnKmDfPJ8gQ"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/symbols/runes-triangle-magenta.webp",
+	"name": "+1 to Magical Dabbler Rolls",
+	"system": {
+		"bonuses": {
+			"spellcastingCheckBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
