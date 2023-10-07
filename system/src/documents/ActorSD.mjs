@@ -865,10 +865,11 @@ export default class ActorSD extends Actor {
 		let newArmorClass = baseArmorClass;
 		let armorMasteryBonus = 0;
 
-		if (Number.isInteger(this.system.attributes.ac.override)) {
+		const acOverride = this.system.attributes.ac?.override ?? null;
+		if (Number.isInteger(acOverride)) {
 			// AC is being overridden by an effect so we just use that value
 			// and ignore everything else
-			newArmorClass = this.system.attributes.ac.override;
+			newArmorClass = acOverride;
 		}
 		else {
 			const equippedArmor = this.items.filter(
