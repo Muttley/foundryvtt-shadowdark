@@ -1,6 +1,7 @@
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
-import log from "./src/utils/logging.mjs";
+// import log from "./src/utils/logging.mjs";
+import Logger from "./src/utils/Logger.mjs";
 import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
@@ -32,12 +33,16 @@ globalThis.shadowdark = {
 	apps,
 	compendiums: CompendiumsSD,
 	config: SHADOWDARK,
+	debug: Logger.debug,
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
-	log,
+	error: Logger.error,
+	log: Logger.log,
+	logger: Logger,
 	sheets,
 	utils: UtilitySD,
+	warn: Logger.warn,
 };
 
 /* -------------------------------------------- */
