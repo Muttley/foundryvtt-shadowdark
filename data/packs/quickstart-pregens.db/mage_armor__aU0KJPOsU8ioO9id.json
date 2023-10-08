@@ -1,0 +1,28 @@
+{
+	"_id": "aU0KJPOsU8ioO9id",
+	"_key": "!actors.items!PTFsYZ8ni3MbSdw8.aU0KJPOsU8ioO9id",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+	"name": "Mage Armor",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>An invisible layer of magical force protects your vitals. Your armor class becomes 14 (18 on a critical spellcasting check) for the spell’s duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.h9MTxzrrPmyhEmRL]{Spell Effect: Mage Armor}</p><p>@UUID[Compendium.shadowdark.spell-effects.Gyol5I0ZdApO8MPe]{Spell Effect: Mage Armor (Critical)}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

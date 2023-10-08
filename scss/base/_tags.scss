@@ -1,0 +1,48 @@
+@use "../mixins" as *;
+
+$sans-serif: 'Roboto', system, -apple-system, sans-serif !default;
+
+.shadowdark {
+
+	.tags {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		padding: 0;
+		margin: 4px;
+		row-gap: 2px;
+
+		.tag {
+			display: inline-flex;
+			flex-wrap: nowrap;
+			color: white;
+			background-color: var(--secondary);
+			font-size: 12px;
+			line-height: 1;
+			letter-spacing: 0.25px;
+
+			padding: 4px 4px;
+			box-shadow: inset 0 0 0 1px rgba(black, 0.5);
+
+			& + .tag,
+			&:first-child {
+				margin-right: 4px;
+			}
+
+			&_primary {
+				background-color: var(--secondary);
+			}
+
+			&_secondary {
+				background-color: var(--primary);
+			}
+
+			&_small {
+				font-size: 10px;
+			}
+		}
+	}
+
+}

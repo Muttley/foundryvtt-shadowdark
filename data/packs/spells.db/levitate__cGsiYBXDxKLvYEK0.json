@@ -1,0 +1,29 @@
+{
+	"_id": "cGsiYBXDxKLvYEK0",
+	"_key": "!items!cGsiYBXDxKLvYEK0",
+	"effects": [
+	],
+	"folder": "riXhNqeauiWpVKAz",
+	"img": "icons/magic/air/air-smoke-casting.webp",
+	"name": "Levitate",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You can float a near distance vertically per round on your turn.</p><p>You can also push against solid objects to move horizontally.</p><p>@UUID[Compendium.shadowdark.spell-effects.sLb9GOXx9F6XCb2o]{Spell Effect: Levitate}</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

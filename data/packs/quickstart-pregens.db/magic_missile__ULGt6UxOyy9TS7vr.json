@@ -1,0 +1,28 @@
+{
+	"_id": "ULGt6UxOyy9TS7vr",
+	"_key": "!actors.items!Jnb0sFKKKrAfowY0.ULGt6UxOyy9TS7vr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/light/projectiles-trio-pink.webp",
+	"name": "Magic Missile",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You have advantage on your check to cast this spell.</p><p>A glowing bolt of force streaks from your open hand, dealing [[/r 1d4]] damage to one target.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

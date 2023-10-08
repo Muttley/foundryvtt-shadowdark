@@ -1,0 +1,39 @@
+{
+	"_id": "5xj31nwOvZ6V362V",
+	"_key": "!actors.items!p9PayU4K9nBZ8JRl.5xj31nwOvZ6V362V",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Bite",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 3,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "Poison",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

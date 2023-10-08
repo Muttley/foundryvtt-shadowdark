@@ -1,0 +1,18 @@
+{
+	"_id": "UT3L392BZFTvlyIX",
+	"_key": "!actors.items!1Z2r4GggLt8aNrP8.UT3L392BZFTvlyIX",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Lycanthropy",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">If 12 or more damage from the same werewolf, contract lycanthropy.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

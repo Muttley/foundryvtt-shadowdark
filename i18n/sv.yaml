@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: STY
 SHADOWDARK.ability_strength: Styrka
 SHADOWDARK.ability_wis: VIS
 SHADOWDARK.ability_wisdom: Vishet
-SHADOWDARK.alignment.chaotic_short: K
 SHADOWDARK.alignment.chaotic: Kaotisk
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Laglydig
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Aktiva effekter
 SHADOWDARK.app.gem_bag.sell_all: Sälj alla ädelstenar
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Ädelstenspåse
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sälj ädelsten
 SHADOWDARK.app.gem_bag.total_value: Totalt Värde
 SHADOWDARK.app.item_properties.armor.title: Rustningegenskaper
-SHADOWDARK.app.item_properties.caster_classes.title: Besvärjelseklasser
 SHADOWDARK.app.item_properties.languages.title: Språk
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magiska Föremålseffekter
 SHADOWDARK.app.item_properties.save: Spara
@@ -74,6 +70,10 @@ SHADOWDARK.chat_card.button.learn_spell: Lär dig besvärjelse
 SHADOWDARK.chat_card.button.use_potion: Använd brygd
 SHADOWDARK.chat_card.button.use_scroll: Använd scroll
 SHADOWDARK.chat_card.button.use_wand: Använd trollspö
+SHADOWDARK.chat_card.context.apply_damage_secondary: Applicera sekundärskada
+SHADOWDARK.chat_card.context.apply_damage: Applicera Skada
+SHADOWDARK.chat_card.context.apply_healing_secondary: Applicera sekundärläkning
+SHADOWDARK.chat_card.context.apply_healing: Applicera läkning
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
@@ -102,6 +102,7 @@ SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class.fighter: Krigare
 SHADOWDARK.class.priest: Präst
 SHADOWDARK.class.ranger: Jägare
+SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.thief: Tjuv
 SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
@@ -174,6 +175,7 @@ SHADOWDARK.effect.tooltip.transfer.header: Överför effekten till aktören när
 SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.error.general.no_character_class: Inget yrke har valts
+SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
 SHADOWDARK.inventory.coins: Mynt
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
@@ -363,8 +365,12 @@ SHADOWDARK.module_art_config.portraits: Porträtt
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Fysisk
 SHADOWDARK.npc_attack.type.special: Special
+SHADOWDARK.npc_move.close: Nära
 SHADOWDARK.npc_move.double_near: Dubbelnära
+SHADOWDARK.npc_move.far: Långt
 SHADOWDARK.npc_move.near: Nära
+SHADOWDARK.npc_move.none: Ingen
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Trippelnära
 SHADOWDARK.range.close_short: K
 SHADOWDARK.range.close: Kroppsnära
@@ -415,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårnin
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Spåra ljuskällor realtid
 SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.alignment_short: Moral
 SHADOWDARK.sheet.actor.alignment: Moralisk Lutning
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: KP
@@ -442,16 +447,16 @@ SHADOWDARK.sheet.npc.movement: Förflyttning
 SHADOWDARK.sheet.npc.tab.abilities: Förmågor
 SHADOWDARK.sheet.npc.tab.description: Beskrivning
 SHADOWDARK.sheet.player.active_effect_override: Detta värde ändras av en aktiv effekt och kan inte redigeras. Inaktivera effekten för att redigera den.
-SHADOWDARK.sheet.player.ancestry: Ursprung
+SHADOWDARK.sheet.player.ancestry.label: Ursprung
 SHADOWDARK.sheet.player.available_spells: Tillgängliga besvärjelser
-SHADOWDARK.sheet.player.background: Bakgrund
+SHADOWDARK.sheet.player.background.label: Bakgrund
 SHADOWDARK.sheet.player.class: Klass
 SHADOWDARK.sheet.player.deity: Gud
 SHADOWDARK.sheet.player.languages: Språk
 SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
-SHADOWDARK.sheet.player.notes: Karaktärsanteckningar
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
+SHADOWDARK.sheet.player.roll_initiative: Rulla initiativ
 SHADOWDARK.sheet.player.spells_tier: Grad
 SHADOWDARK.sheet.player.spells: Besvärjelser
 SHADOWDARK.sheet.player.tab.abilities: Förmågor
@@ -481,7 +486,7 @@ SHADOWDARK.spell_duration.rounds: Rundor
 SHADOWDARK.spell_range.close: Kroppsnära
 SHADOWDARK.spell_range.far: Avstånd
 SHADOWDARK.spell_range.near: Nära
-SHADOWDARK.spellcasting_ability: Besvärjelseförmåga
+SHADOWDARK.spell.classes.label: Besvärjelseklasser
 SHADOWDARK.talent.backstab: Rygghugg
 SHADOWDARK.talent.class.ancestry: Ursprung
 SHADOWDARK.talent.class.class: Klass

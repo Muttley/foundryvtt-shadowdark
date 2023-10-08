@@ -1,0 +1,20 @@
+{
+	"_id": "J4KYu5M32T81yE1f",
+	"_key": "!items!J4KYu5M32T81yE1f",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/tools/instruments/lute-gold-brown.webp",
+	"name": "Perform",
+	"system": {
+		"description": "<p>Make a Charisma check to enact one of the following effects. If you fail, you can't use that effect again until you successfully rest.</p><ul><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.jg2sUC3nIAI8sT18]{Inspire} DC 12. One target in near gains a luck token.</p></li><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.oCNpE6bnZjPIdOO1]{Fascinate} DC 15. You transfix all targets of level 4 or less within near for 1d4 rounds.</p></li></ul><p></p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

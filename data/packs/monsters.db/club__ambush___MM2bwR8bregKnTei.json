@@ -1,0 +1,39 @@
+{
+	"_id": "MM2bwR8bregKnTei",
+	"_key": "!actors.items!AMSI3MCLvpcZpJPO.MM2bwR8bregKnTei",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Club (Ambush)",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 1,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 2,
+			"special": "",
+			"value": "d4"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

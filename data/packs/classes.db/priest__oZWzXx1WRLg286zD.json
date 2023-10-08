@@ -1,0 +1,97 @@
+{
+	"_id": "oZWzXx1WRLg286zD",
+	"_key": "!items!oZWzXx1WRLg286zD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Priest",
+	"system": {
+		"allArmor": true,
+		"allWeapons": false,
+		"armor": [
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.CtkKBhsOpV1v5YjX",
+		"description": "<p>Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.</p>",
+		"hitPoints": "d6",
+		"language": {
+			"select": 1
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
+				"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
+				"Compendium.shadowdark.languages.Item.ufwua5RXnJXlA0St"
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "wis",
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.EYRxfb5BUEzH1w3b",
+			"Compendium.shadowdark.talents.Item.LfHTnYW8I65x8Y31",
+			"Compendium.shadowdark.talents.Item.QxhyKNW4aDQqolMi"
+		],
+		"titles": [
+			{
+				"chaotic": "Initiate",
+				"from": 1,
+				"lawful": "Acolyte",
+				"neutral": "Seeker",
+				"to": 2
+			},
+			{
+				"chaotic": "Zealot",
+				"from": 3,
+				"lawful": "Crusader",
+				"neutral": "Invoker",
+				"to": 4
+			},
+			{
+				"chaotic": "Cultist",
+				"from": 5,
+				"lawful": "Templar",
+				"neutral": "Haruspex",
+				"to": 6
+			},
+			{
+				"chaotic": "Scourge",
+				"from": 7,
+				"lawful": "Champion",
+				"neutral": "Mystic",
+				"to": 8
+			},
+			{
+				"chaotic": "Chaos Knight",
+				"from": 9,
+				"lawful": "Paladin",
+				"neutral": "Oracle",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu",
+			"Compendium.shadowdark.gear.Item.jGZyVuFJnW7QcBFX",
+			"Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre",
+			"Compendium.shadowdark.gear.Item.z98LNu4yOIe1B1eg",
+			"Compendium.shadowdark.gear.Item.ZPUhNMmwXXrtbCXi"
+		]
+	},
+	"type": "Class"
+}

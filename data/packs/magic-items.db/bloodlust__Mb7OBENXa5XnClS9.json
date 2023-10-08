@@ -1,0 +1,62 @@
+{
+	"_id": "Mb7OBENXa5XnClS9",
+	"_key": "!items!Mb7OBENXa5XnClS9",
+	"effects": [
+		"2NdFJHTHy28UaTCh",
+		"A3cEweAbyqxNxdzl",
+		"Qj2rqAj7XeIsjzzs"
+	],
+	"folder": null,
+	"img": "icons/weapons/axes/axe-battle-eyes-red.webp",
+	"name": "Bloodlust",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "greataxe",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": "4",
+				"successThreshold": 20
+			},
+			"damageBonus": "1",
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": "4",
+			"numDice": 1,
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"versatile"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

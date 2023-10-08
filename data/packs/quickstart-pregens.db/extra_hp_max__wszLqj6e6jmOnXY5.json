@@ -1,0 +1,30 @@
+{
+	"_id": "wszLqj6e6jmOnXY5",
+	"_key": "!actors.effects!wnjtoBC4k5dIiG8X.wszLqj6e6jmOnXY5",
+	"changes": [
+		{
+			"key": "system.attributes.hp.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 631,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/life/heart-shadow-red.webp",
+	"name": "Extra HP Max",
+	"origin": "Actor.wnjtoBC4k5dIiG8X.Item.84S8aIQnu84q0i9h",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

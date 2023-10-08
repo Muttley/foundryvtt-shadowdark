@@ -1,0 +1,18 @@
+{
+	"_id": "RnlzBMWYWCNLB80N",
+	"_key": "!actors.items!udRspLiTyURGmLav.RnlzBMWYWCNLB80N",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Engulf",
+	"system": {
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">Absorbs paralyzed creatures in close range into its body, automatically hitting with touch attack on its turn.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

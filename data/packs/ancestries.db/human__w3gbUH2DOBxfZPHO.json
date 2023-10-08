@@ -1,0 +1,32 @@
+{
+	"_id": "w3gbUH2DOBxfZPHO",
+	"_key": "!items!w3gbUH2DOBxfZPHO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Human",
+	"system": {
+		"description": "<p>Bold, adaptable, and diverse people who learn quickly and accomplish mighty deeds.</p>",
+		"languages": {
+			"common": 1,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.DYWFJu5XeazJYc0P"
+		]
+	},
+	"type": "Ancestry"
+}

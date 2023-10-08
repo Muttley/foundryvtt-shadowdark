@@ -1,0 +1,24 @@
+{
+	"_id": "GdnBjlftjxsd2bZQ",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.GdnBjlftjxsd2bZQ",
+	"image": {
+	},
+	"name": "Treasure Overview",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p><strong>TREASURE</strong></p><p>Treasure is the driving force behind character advancement. Claiming treasure grants the characters XP and gives them valuable resources.</p><p></p><p><strong>Wandering Monsters</strong> have only a 50% chance of carrying treasure. They are poor sources of XP and valuables!</p><p></p><p><strong>FLEETING</strong></p><p>Carousing (<strong>Shadowdark RPG Core</strong>) allows PCs to gain XP fast, but they'll soon need to go adventuring again to replenish their empty pockets.</p><p></p><p><strong>TREASURE TABLES</strong></p><p>You can use treasure tables to randomly determine what loot a monster is carrying. The table the monster uses corresponds to its level. For example, a level 2 monster uses the Treasure 0-3 table. Shadowdark RPG Core has tables for higher level monsters.</p><p>@UUID[Compendium.shadowdark.rollable-tables.Pi9nnnLeXpTKCSMY]{Treasure 0-3}</p><p></p><p><strong>UNGUARDED</strong></p><p>The GM can randomly generate unguarded treasure by rolling on the treasure table that matches the discovering character's level. For example, a 6th-level wizard finds a treasure chest. The wizard rolls on the Treasure 4-6 table to determine what's inside.</p><p></p><p><strong>DEALING WITH LOOT</strong></p><p>Treasure typically occupies one gear slot (coins occupy 1 slot per 100), but the GM might determine otherwise. Characters can sell most treasure based on its material value, but they may need to find a curio collector to offload strange or obscure items.</p><p></p><p><strong>MAGIC ITEM VALUE</strong></p><p>Characters can sell magic items for their listed values. However, magic items are rarely for sale for characters to buy and cost 2d6 times their listed values.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

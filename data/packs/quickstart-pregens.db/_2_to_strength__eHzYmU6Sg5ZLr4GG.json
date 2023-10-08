@@ -1,0 +1,41 @@
+{
+	"_id": "eHzYmU6Sg5ZLr4GG",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.eHzYmU6Sg5ZLr4GG",
+	"effects": [
+		"peAz8xVvIeZ6SLHd"
+	],
+	"folder": null,
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "+2 to Strength",
+	"system": {
+		"abilities": {
+			"cha": {
+				"bonus": "0"
+			},
+			"con": {
+				"bonus": "0"
+			},
+			"dex": {
+				"bonus": "0"
+			},
+			"int": {
+				"bonus": "0"
+			},
+			"str": {
+				"bonus": "2"
+			},
+			"wis": {
+				"bonus": "0"
+			}
+		},
+		"description": "",
+		"level": null,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

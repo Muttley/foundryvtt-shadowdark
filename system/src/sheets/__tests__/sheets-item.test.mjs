@@ -30,7 +30,7 @@ const mockClick = async element => {
 };
 
 const mockClickProperties = async () => {
-	const element = document.querySelector("p.item-property-list");
+	const element = document.querySelector("a.item-selector");
 	await mockClick(element);
 };
 
@@ -105,12 +105,12 @@ export default ({ describe, it, after, before, expect }) => {
 				it("contains the usesSlots data", () => {
 					expect(itemData.usesSlots).is.not.undefined;
 				});
-				it("contains the properties data", () => {
-					expect(itemData.properties).is.not.undefined;
-				});
-				it("contains the propertiesDisplay data", () => {
-					expect(itemData.propertiesDisplay).is.not.undefined;
-				});
+
+				if (["Armor", "Weapon"].includes(type)) {
+					it("contains the properties data", () => {
+						expect(itemData.propertyItems).is.not.undefined;
+					});
+				}
 
 				after(async () => {
 					await item.delete();
@@ -131,13 +131,13 @@ export default ({ describe, it, after, before, expect }) => {
 		it("clicking properties field opens dialog", async () => {
 			await mockClickProperties();
 
-			const openDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("item-properties"));
+			const openDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("compendium-item-selector"));
 			expect(openDialogs.length).equal(1);
 
 			await openDialogs.pop().close();
 		});
 
-		// @todo: verify all properties are present in dialog
+		// TODO: verify all properties are present in dialog
 
 		after(async () => {
 			await item.delete();
@@ -155,13 +155,13 @@ export default ({ describe, it, after, before, expect }) => {
 		it("clicking properties field opens dialog", async () => {
 			await mockClickProperties();
 
-			const openDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("item-properties"));
+			const openDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("compendium-item-selector"));
 			expect(openDialogs.length).equal(1);
 
 			await openDialogs.pop().close();
 		});
 
-		// @todo: verify all properties are present in dialog
+		// TODO: verify all properties are present in dialog
 
 		after(async () => {
 			await item.delete();

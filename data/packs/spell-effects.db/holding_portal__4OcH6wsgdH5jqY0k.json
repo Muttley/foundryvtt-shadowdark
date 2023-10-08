@@ -1,0 +1,24 @@
+{
+	"_id": "4OcH6wsgdH5jqY0k",
+	"_key": "!items.effects!q109XEqMceJBEX7m.4OcH6wsgdH5jqY0k",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/movement/portal-vortex-orange.webp",
+	"name": "Holding Portal",
+	"origin": "Item.q109XEqMceJBEX7m",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

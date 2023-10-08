@@ -1,0 +1,193 @@
+{
+	"_id": "CVFznZtBMmHG2w4a",
+	"_key": "!actors!CVFznZtBMmHG2w4a",
+	"effects": [
+		"4xLBrTrNNCnEQNJg",
+		"MZj9RAguzHFoypD4",
+		"MPH9ArAfW7y6wJ0I"
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/quickstart/pregens/Iraga_Draguul_portrait.webp",
+	"items": [
+		"g7Wl2Ad0bsJuSmVo",
+		"Y45CLxN8XbfaUuNo",
+		"jKlLzwcXrOndiaiw",
+		"q4JHCDu0psd87ur1",
+		"c2NFgYJeOE8jrnKd",
+		"p9QyPSnhyYOLRsCU",
+		"poJXwr7Ub9hjc7wL",
+		"gQyQO1Hr0IYH5YRy",
+		"8rVULJROdeWjmT9T",
+		"F3qpt5jMsuQeCbGR",
+		"Drkn5HCuzmZ4lXeQ",
+		"3e3p3NVTK7Jj6HyU",
+		"om5LnF1w7JPQbibP",
+		"GPPAEpqDaMw72IFz",
+		"dnuYDVd7SgqrfKY9",
+		"e04loDnEXhVPS9uK",
+		"C2561r7hYuCVmXEZ",
+		"jyHJL1jwu5240ngl",
+		"BYfvFLr6JblzNXU0"
+	],
+	"name": "Iraga Draguul",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Iraga Draguul",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Iraga_Draguul_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 12,
+				"bonus": 0
+			},
+			"con": {
+				"base": 13,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 9,
+				"bonus": 0
+			},
+			"int": {
+				"base": 10,
+				"bonus": 0
+			},
+			"str": {
+				"base": 16,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 15,
+				"bonus": 0
+			}
+		},
+		"alignment": "lawful",
+		"ancestry": "Compendium.shadowdark.ancestries.Item.0lJ8Pj0UPsbSSUTm",
+		"attributes": {
+			"ac": {
+				"value": 14
+			},
+			"hp": {
+				"base": 5,
+				"bonus": 0,
+				"max": 5,
+				"value": 5
+			}
+		},
+		"background": "Compendium.shadowdark.backgrounds.Item.jkZbwzeer9YNCf29",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageMultiplier": 1,
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
+			"weaponMastery": [
+			]
+		},
+		"class": "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
+		"coins": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"deity": "Compendium.shadowdark.deities.Item.hNbUUJnD6HIda5tl",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+			"Compendium.shadowdark.languages.Item.1iECxGKqGpV3k6VZ"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10
+	},
+	"type": "Player"
+}

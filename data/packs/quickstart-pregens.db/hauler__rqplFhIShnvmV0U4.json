@@ -1,0 +1,30 @@
+{
+	"_id": "rqplFhIShnvmV0U4",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.g21kFm6j6U70zbhc.rqplFhIShnvmV0U4",
+	"changes": [
+		{
+			"key": "system.bonuses.hauler",
+			"mode": 5,
+			"priority": null,
+			"value": "true"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/containers/bags/sack-leather-tan.webp",
+	"name": "Hauler",
+	"origin": "Compendium.shadowdark.talents.7JTDRLtHc6FOrIEc",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

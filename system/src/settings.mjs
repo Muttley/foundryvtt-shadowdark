@@ -136,4 +136,14 @@ export default function registerSystemSettings() {
 		default: false,
 		type: Boolean,
 	});
+
+	game.settings.register("shadowdark", "debugEnabled", {
+		name: "SHADOWDARK.settings.debugEnabled.name",
+		hint: "SHADOWDARK.settings.debugEnabled.hint",
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
 }

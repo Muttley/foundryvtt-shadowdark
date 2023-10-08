@@ -1,0 +1,58 @@
+{
+	"_id": "GzA5T0aewhouRsa3",
+	"_key": "!items!GzA5T0aewhouRsa3",
+	"effects": [
+	],
+	"folder": "LVzvIhYHieRT4O6q",
+	"img": "icons/weapons/bows/longbow-leather-green.webp",
+	"name": "Longbow",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 8,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": "d8"
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "ranged",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

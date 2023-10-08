@@ -1,0 +1,32 @@
+{
+	"_id": "rglUPGtBSAAG3dhK",
+	"_key": "!items!rglUPGtBSAAG3dhK",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Halfling",
+	"system": {
+		"description": "<p>Small, cheerful country folk with mischievous streaks. They enjoy life’s simple pleasures.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.zkOiprnKS5uttiO6"
+		]
+	},
+	"type": "Ancestry"
+}

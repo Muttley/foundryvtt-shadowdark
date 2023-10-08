@@ -1,0 +1,44 @@
+{
+	"_id": "vHwzxeO0sX9GlRbj",
+	"_key": "!items!vHwzxeO0sX9GlRbj",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/containers/bags/sack-leather-purple.webp",
+	"name": "Bag of Holding",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 150,
+			"sp": 0
+		},
+		"description": "<p><em>A worn, leather pouch with tight drawstrings.</em></p><p></p><p><strong>Benefit</strong>. This bag has an interdimensional space inside that can hold up to 10 gear slots.</p><p></p><p><strong>Curse</strong>. Placing this item inside another <em>Bag of Holding</em> or a <em>Portable Hole</em> destroys both items and all held inside them.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 1,
+			"per_slot": 1,
+			"slots_used": -10
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

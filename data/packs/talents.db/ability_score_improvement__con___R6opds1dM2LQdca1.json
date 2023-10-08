@@ -1,0 +1,30 @@
+{
+	"_id": "R6opds1dM2LQdca1",
+	"_key": "!items.effects!ZfaFn8TDum3NXYZN.R6opds1dM2LQdca1",
+	"changes": [
+		{
+			"key": "system.abilities.con.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "Ability Score Improvement (Con)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

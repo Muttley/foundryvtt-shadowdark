@@ -1,0 +1,46 @@
+{
+	"_id": "7hKYL9hdnsvCUM9c",
+	"_key": "!items!7hKYL9hdnsvCUM9c",
+	"effects": [
+		"MA4nY85bYnfw0Kah"
+	],
+	"folder": null,
+	"img": "icons/weapons/swords/sword-winged-pink.webp",
+	"name": "Spell Effect: Cleansing Weapon",
+	"system": {
+		"bonuses": {
+			"meleeDamageBonus": "1d4"
+		},
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</span></p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

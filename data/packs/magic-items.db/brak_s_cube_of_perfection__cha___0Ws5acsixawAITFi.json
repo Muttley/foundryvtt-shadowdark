@@ -1,0 +1,64 @@
+{
+	"_id": "0Ws5acsixawAITFi",
+	"_key": "!items!0Ws5acsixawAITFi",
+	"effects": [
+		"1sKZFEAOhR1t3W5D"
+	],
+	"folder": null,
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Brak's Cube of Perfection (Cha)",
+	"system": {
+		"abilities": {
+			"cha": {
+				"value": "18"
+			},
+			"con": {
+				"value": "18"
+			},
+			"dex": {
+				"value": "18"
+			},
+			"int": {
+				"value": "18"
+			},
+			"str": {
+				"value": "18"
+			},
+			"wis": {
+				"value": "18"
+			}
+		},
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A tiny cube with paintings of goblins on each face, each one depicting transcendence in a physical or mental trait.</em></p><p></p><p><strong>Benefit</strong>. Roll the cube by rolling a [[/r d6]]. Your corresponding stat permanently increases to 18 (+4). 1. Strength. 2. Dexterity. 3. Constitution. 4. Intelligence. 5. Wisdom. 6. Charisma.</p><p></p><p>After being rolled, <em>Brak's Cube of Perfection</em> teleports to a random location in the multiverse.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

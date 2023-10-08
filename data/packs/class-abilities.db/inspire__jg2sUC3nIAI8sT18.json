@@ -1,0 +1,23 @@
+{
+	"_id": "jg2sUC3nIAI8sT18",
+	"_key": "!items!jg2sUC3nIAI8sT18",
+	"effects": [
+	],
+	"folder": "ouQFWSadiw9Jxy42",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Inspire",
+	"system": {
+		"ability": "cha",
+		"dc": 12,
+		"description": "<p>One target in near gains a luck token.</p>",
+		"group": "Perform",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}

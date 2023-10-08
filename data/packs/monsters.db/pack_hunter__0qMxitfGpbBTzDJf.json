@@ -1,0 +1,18 @@
+{
+	"_id": "0qMxitfGpbBTzDJf",
+	"_key": "!actors.items!FzBj2e0DzIjvQ0JE.0qMxitfGpbBTzDJf",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Pack Hunter",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">Deals +1 damage while an ally is close.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

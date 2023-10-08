@@ -1,0 +1,30 @@
+{
+	"_id": "cDGzOUOtVhzSVsJn",
+	"_key": "!actors.effects!RfFy5Nq3izy5oVD6.cDGzOUOtVhzSVsJn",
+	"changes": [
+		{
+			"key": "system.bonuses.advantage",
+			"mode": 2,
+			"priority": null,
+			"value": "hp"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 568,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/life/cross-area-circle-green-white.webp",
+	"name": "HP Roll Advantage",
+	"origin": "Actor.RfFy5Nq3izy5oVD6.Item.DP89QQbqMjvF1hB1",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

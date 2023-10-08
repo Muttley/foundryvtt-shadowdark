@@ -21,43 +21,50 @@
 		<nav class="item-navigation" data-group="primary">
 			<div class="item-navigation__flex">
 
-				{{#ifNeq item.type 'NPC Feature'}}
-					<a class="item active" data-tab="tab-details">
+				{{#if showTab.details}}
+					<a class="item" data-tab="tab-details">
 						{{localize "SHADOWDARK.sheet.item.tab.details"}}
 					</a>
-				{{/ifNeq}}
+				{{/if}}
 
-				{{#if (or (eq item.type "Effect") (eq item.type "Talent") (eq item.system.magicItem true) ) }}
-					<a class="item active" data-tab="tab-effects">
+				{{#if showTab.titles}}
+					<a class="item" data-tab="tab-titles">
+						{{localize "SHADOWDARK.sheet.item.tab.titles"}}
+					</a>
+				{{/if}}
+
+				{{#if showTab.effects}}
+					<a class="item" data-tab="tab-effects">
 						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
 					</a>
 				{{/if}}
 
-				{{#if item.system.light.isSource}}
-					<a class="item active" data-tab="tab-light">
+				{{#if showTab.light}}
+					<a class="item" data-tab="tab-light">
 						{{localize "SHADOWDARK.sheet.item.tab.light"}}
 					</a>
 				{{/if}}
 
-				<a
-					class="item {{#ifEq item.type 'NPC Feature'}}active{{/ifEq}}"
-					data-tab="tab-description"
-					{{#ifEq item.type 'NPC Feature'}}
-						style="display: none;"
-					{{/ifEq}}
-				>
-					{{localize "SHADOWDARK.sheet.item.tab.description"}}
-				</a>
+				{{#if showTab.description}}
+					<a
+						class="item"
+						data-tab="tab-description"
+						{{#if showTab.descriptionOnly}}
+							style="display: none;"
+						{{/if}}
+					>
+						{{localize "SHADOWDARK.sheet.item.tab.description"}}
+					</a>
+				{{/if}}
 			</div>
 		</nav>
 	</div>
 	<hr />
 	<section class="item-body">
-
-		{{> items/tabs/details }}
-		{{> items/tabs/light }}
-		{{> items/tabs/effects }}
 		{{> items/tabs/description }}
-
+		{{> items/tabs/details }}
+		{{> items/tabs/effects }}
+		{{> items/tabs/light }}
+		{{> items/tabs/titles }}
 	</section>
 </form>

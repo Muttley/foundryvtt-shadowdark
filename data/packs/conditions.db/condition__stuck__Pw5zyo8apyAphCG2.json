@@ -1,0 +1,24 @@
+{
+	"_id": "Pw5zyo8apyAphCG2",
+	"_key": "!items.effects!0McK66FvDi42pjiu.Pw5zyo8apyAphCG2",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/environment/traps/trap-jaw-steel.webp",
+	"name": "Condition: Stuck",
+	"origin": "Item.0McK66FvDi42pjiu",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

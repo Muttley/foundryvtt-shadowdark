@@ -1,0 +1,60 @@
+{
+	"_id": "98cxnRdtTLv0Onka",
+	"_key": "!items!98cxnRdtTLv0Onka",
+	"effects": [
+		"4QneUXW9pG2CMpKS",
+		"JAfTcoh8jcncSGJM"
+	],
+	"folder": null,
+	"img": "icons/weapons/swords/sword-guard-worn-purple.webp",
+	"name": "Shoftsword of the Thief",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "shortsword",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1",
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A stubby, grey blade riddled with notches and scars.</em></p><p></p><p><strong>Bonus</strong>. +1 shortsword. +2 if wielded by a halfling or thief.</p><p></p><p><strong>Benefit</strong>. Once per day, regain a luck token you just spent.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

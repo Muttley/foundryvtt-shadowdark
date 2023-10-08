@@ -1,20 +1,52 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
-	<div class="item-details">
+	{{!-- <div class="item-details"> --}}
+
+		{{#ifEq item.type "Ancestry"}}
+			{{> items/partials/ancestry }}
+		{{/ifEq}}
 
 		{{#ifEq item.type "Armor"}}
 			{{> items/partials/armor }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Class Ability"}}
+			{{> items/partials/class-ability }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Class"}}
+			{{> items/partials/class }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Deity"}}
+			{{> items/partials/deity }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Effect"}}
 			{{> items/partials/effect }}
 		{{/ifEq}}
 
-		{{#ifEq item.type "Spell"}}
-			{{> items/partials/spell }}
+		{{#ifEq item.type "Language"}}
+			{{> items/partials/language }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "NPC Attack"}}
+			{{> items/partials/npc-attack }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Property"}}
+			{{> items/partials/property }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Scroll"}}
 			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Spell"}}
+			{{> items/partials/spell }}
+		{{/ifEq}}
+
+		{{#ifEq item.type "Talent"}}
+			{{> items/partials/talent }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Wand"}}
@@ -25,13 +57,7 @@
 			{{> items/partials/weapon }}
 		{{/ifEq}}
 
-		{{#ifEq item.type "NPC Attack"}}
-			{{> items/partials/npc-attack }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent }}
-		{{/ifEq}}
+	<div class="item-details">
 
 		{{#if usesSlots}}
 			{{!-- Gems have non-configurable slot settings --}}

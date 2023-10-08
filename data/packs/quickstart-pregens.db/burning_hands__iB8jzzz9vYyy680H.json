@@ -1,0 +1,27 @@
+{
+	"_id": "iB8jzzz9vYyy680H",
+	"_key": "!actors.items!Jnb0sFKKKrAfowY0.iB8jzzz9vYyy680H",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/fire/flame-burning-hand-white.webp",
+	"name": "Burning Hands",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You spread your fingers with thumbs touching, unleashing a circle of flame that fills a close area around where you stand.</p><p>Creatures within the area of effect take [[/r 1d6]] damage.</p><p>Unattended flammable objects ignite.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

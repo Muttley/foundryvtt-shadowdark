@@ -1,0 +1,39 @@
+{
+	"_id": "Kw7E6UCWwWVAbEeu",
+	"_key": "!actors.items!YHdOAuMUdCigLIHR.Kw7E6UCWwWVAbEeu",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Constrict",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "special",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

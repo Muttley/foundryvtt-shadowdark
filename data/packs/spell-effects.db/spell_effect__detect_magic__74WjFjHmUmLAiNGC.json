@@ -1,0 +1,43 @@
+{
+	"_id": "74WjFjHmUmLAiNGC",
+	"_key": "!items!74WjFjHmUmLAiNGC",
+	"effects": [
+		"4v6DbfBT6c4qzSEc"
+	],
+	"folder": null,
+	"img": "icons/magic/perception/eye-slit-pink.webp",
+	"name": "Spell Effect: Detect Magic",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</span></p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

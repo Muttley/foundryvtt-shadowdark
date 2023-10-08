@@ -1,0 +1,43 @@
+{
+	"_id": "cL5aPfXcad9FtHoK",
+	"_key": "!items!cL5aPfXcad9FtHoK",
+	"effects": [
+		"tx8UjK6umZHVyLJ6"
+	],
+	"folder": null,
+	"img": "icons/skills/social/trading-justice-scale-gold.webp",
+	"name": "Spell Effect: Zone of Truth",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">Can’t utter a deliberate lie when within range from source.</span></p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

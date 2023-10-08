@@ -1,0 +1,24 @@
+{
+	"_id": "CyZNMVHNjIMTM0g7",
+	"_key": "!items.effects!6Hd5Dzf2TnXL9Gxs.CyZNMVHNjIMTM0g7",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/fear-fright-white.webp",
+	"name": "Condition: Afraid",
+	"origin": "Item.6Hd5Dzf2TnXL9Gxs",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

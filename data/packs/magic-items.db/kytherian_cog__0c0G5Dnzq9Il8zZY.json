@@ -1,0 +1,44 @@
+{
+	"_id": "0c0G5Dnzq9Il8zZY",
+	"_key": "!items!0c0G5Dnzq9Il8zZY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/commodities/tech/cog-large-steel-white.webp",
+	"name": "Kytherian Cog",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>A coin-sized, toothed wheel buffed to a silvery shine.</p><p></p><p><strong>Benefit</strong>. You start every session with a luck token.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

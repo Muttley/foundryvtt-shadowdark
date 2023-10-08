@@ -1,0 +1,20 @@
+{
+	"_id": "F0NXUJcnBOYKzhMi",
+	"_key": "!items!F0NXUJcnBOYKzhMi",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/environment/people/infantry.webp",
+	"name": "Grit (Strength)",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

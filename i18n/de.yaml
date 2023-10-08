@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: Str
 SHADOWDARK.ability_strength: Stärke
 SHADOWDARK.ability_wis: Wei
 SHADOWDARK.ability_wisdom: Weisheit
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Chaotisch
-SHADOWDARK.alignment.lawful_short: R
 SHADOWDARK.alignment.lawful: Rechtschaffen
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Aktive Effekte
 SHADOWDARK.app.gem_bag.sell_all: Alle Edelsteine verkaufen
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Edelsteintasche
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Edelstein verkaufen
 SHADOWDARK.app.gem_bag.total_value: Gesamtwert
 SHADOWDARK.app.item_properties.armor.title: Rüstungseigenschaften
-SHADOWDARK.app.item_properties.caster_classes.title: Zauberwirkerklassen
 SHADOWDARK.app.item_properties.languages.title: Sprachen
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magische Gegenstandseffekte
 SHADOWDARK.app.item_properties.save: Speichern
@@ -74,6 +70,10 @@ SHADOWDARK.chat_card.button.learn_spell: Zauber erlernen
 SHADOWDARK.chat_card.button.use_potion: Trank verwenden
 SHADOWDARK.chat_card.button.use_scroll: Schriftrolle verwenden
 SHADOWDARK.chat_card.button.use_wand: Zauberstab benutzen
+SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
+SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
+SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Zu Max HP hinzufügen
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
@@ -102,6 +102,7 @@ SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class.fighter: Kämpfer
 SHADOWDARK.class.priest: Priester
 SHADOWDARK.class.ranger: Waldläufer
+SHADOWDARK.class.spellcasting_ability.label: Zauber-Fähigkeit
 SHADOWDARK.class.thief: Dieb
 SHADOWDARK.class.wizard: Zauberer
 SHADOWDARK.coins.cp: KM
@@ -174,6 +175,7 @@ SHADOWDARK.effect.tooltip.transfer.header: Transfer effect to actor when item is
 SHADOWDARK.effect.unavailable: Deaktivierter Effekt
 SHADOWDARK.error.general.gm_required: Dazu musst du die Rolle des Game Master haben.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
+SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.inventory.coins: Münzen
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minuten verbleibend"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
@@ -363,8 +365,12 @@ SHADOWDARK.module_art_config.portraits: Portraits
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Physisch
 SHADOWDARK.npc_attack.type.special: Spezial
+SHADOWDARK.npc_move.close: Close
 SHADOWDARK.npc_move.double_near: Doppelt Nah
+SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Nah
+SHADOWDARK.npc_move.none: None
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.range.close_short: D
 SHADOWDARK.range.close: Direkt
@@ -415,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Licht-Tracking pau
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.actor.ac: RK
-SHADOWDARK.sheet.actor.alignment_short: Gesinn
 SHADOWDARK.sheet.actor.alignment: Gesinnung
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: TP
@@ -442,16 +447,16 @@ SHADOWDARK.sheet.npc.movement: Bewegung
 SHADOWDARK.sheet.npc.tab.abilities: Fähigkeiten
 SHADOWDARK.sheet.npc.tab.description: Beschreibung
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
-SHADOWDARK.sheet.player.ancestry: Abstammung
+SHADOWDARK.sheet.player.ancestry.label: Abstammung
 SHADOWDARK.sheet.player.available_spells: Verfügbare Zauber
-SHADOWDARK.sheet.player.background: Hintergrund
+SHADOWDARK.sheet.player.background.label: Hintergrund
 SHADOWDARK.sheet.player.class: Klasse
 SHADOWDARK.sheet.player.deity: Gottheit
 SHADOWDARK.sheet.player.languages: Sprachen
 SHADOWDARK.sheet.player.luck: Glück
 SHADOWDARK.sheet.player.melee_attacks: Nahkampfattacken
-SHADOWDARK.sheet.player.notes: Charakternotizen
 SHADOWDARK.sheet.player.ranged_attacks: Fernkampfattacken
+SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Stufe
 SHADOWDARK.sheet.player.spells: zauber
 SHADOWDARK.sheet.player.tab.abilities: Fähigkeiten
@@ -481,7 +486,7 @@ SHADOWDARK.spell_duration.rounds: Runden
 SHADOWDARK.spell_range.close: Direkt
 SHADOWDARK.spell_range.far: Weit
 SHADOWDARK.spell_range.near: Nah
-SHADOWDARK.spellcasting_ability: Zauber-Fähigkeit
+SHADOWDARK.spell.classes.label: Zauberwirkerklassen
 SHADOWDARK.talent.backstab: Rückenschlag
 SHADOWDARK.talent.class.ancestry: Abstammung
 SHADOWDARK.talent.class.class: Klasse

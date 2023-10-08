@@ -1,0 +1,126 @@
+{
+	"_id": "AMSI3MCLvpcZpJPO",
+	"_key": "!actors!AMSI3MCLvpcZpJPO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"MCM2UX1jwTiz6Af0",
+		"TGyIidAaaKzSKy4T",
+		"MM2bwR8bregKnTei",
+		"s8uppYkv726VSKN6",
+		"DSiD9jUHa5gZwcdl"
+	],
+	"name": "Bandit",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Bandit",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -1
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 0
+			},
+			"int": {
+				"mod": -1
+			},
+			"str": {
+				"mod": 1
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 4,
+				"value": 4
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 1
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "<p><em>Hard-bitten rogue in tattered leathers and a hooded cloak.</em></p><p></p><p><strong>AC</strong> 13 (leather + shield), <strong>HP</strong> 4, <strong>ATK </strong>1 club +1 (1d4) or 1 shortbow (far) +0 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> C, <strong>LV</strong> 1</p><p></p><p><strong>Ambush</strong>. Deal an extra die of damage when undetected.</p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

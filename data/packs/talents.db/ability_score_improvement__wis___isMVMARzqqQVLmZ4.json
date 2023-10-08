@@ -1,0 +1,30 @@
+{
+	"_id": "isMVMARzqqQVLmZ4",
+	"_key": "!items.effects!vRW8GSIKWXyOAKbw.isMVMARzqqQVLmZ4",
+	"changes": [
+		{
+			"key": "system.abilities.wis.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "Ability Score Improvement (Wis)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,21 @@
+{
+	"_id": "T5nkdUM75LSnDpu5",
+	"_key": "!items!T5nkdUM75LSnDpu5",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+	"name": "Learn Spell",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Learn one additional wizard spell of any tier you know</span>.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

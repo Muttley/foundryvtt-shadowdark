@@ -1,0 +1,30 @@
+{
+	"_id": "niI5k5QCYV7npdse",
+	"_key": "!items.effects!dmEiJzqy55xVYfD2.niI5k5QCYV7npdse",
+	"changes": [
+		{
+			"key": "system.abilities.int.base",
+			"mode": 5,
+			"priority": null,
+			"value": "3"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/unholy/strike-hand-glow-pink.webp",
+	"name": "Permanent Ability (Int)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

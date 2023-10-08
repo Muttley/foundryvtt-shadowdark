@@ -1,0 +1,124 @@
+{
+	"_id": "WMw4J1wECaLGf3Am",
+	"_key": "!actors!WMw4J1wECaLGf3Am",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"bzjdODudUbBAg2ue",
+		"f8wKgMP0XbD2Wejw",
+		"MJOkTSVNf817bqhs"
+	],
+	"name": "Gnome, Deep",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Gnome, Deep",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 1
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 1
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 14
+			},
+			"hp": {
+				"hd": 0,
+				"max": 14,
+				"value": 14
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "<p><em>Gray-skinned, white-haired fey the size of halflings. They hunt for gems and rare cave flora.</em></p><p></p><p><strong>AC</strong> 14 (leather + shield), <strong>HP</strong> 14, <strong>ATK</strong> 1 pick +3 (1d6) or 1 dart (near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 3</p><p></p><p><strong>Stone Meld</strong>. 2/day, underground only. Turn invisible for 3 rounds.</p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

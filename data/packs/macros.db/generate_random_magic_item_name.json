@@ -1,9 +1,0 @@
-{
-	"_id": "4j286mEmWbt6maGk",
-	"author": "EKVggA45fx6fzkCK",
-	"command": "// Macro to draw and construct a named Magic Item, being sent in a whisper to GMs on the server.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst firstTableID = pack.index.find(o => o.name === \"Magic Item: Name 1\")._id;\nconst firstTable = await pack.getDocument(firstTableID);\nconst firstResult = await firstTable.draw({displayChat: false});\nconst first = firstResult.results.pop().getChatText();\n\nconst secondTableID = pack.index.find(o => o.name === \"Magic Item: Name 2\")._id;\nconst secondTable = await pack.getDocument(secondTableID);\nconst secondResult = await secondTable.draw({displayChat: false});\nconst second = secondResult.results.pop().getChatText();\n\nconst thirdTableID = pack.index.find(o => o.name === \"Magic Item: Name 3\")._id;\nconst thirdTable = await pack.getDocument(thirdTableID);\nconst thirdResult = await thirdTable.draw({displayChat: false});\nconst third = thirdResult.results.pop().getChatText();\n\nconst message = `<p><b>${first} ${second} ${third}</b></p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
-	"img": "icons/equipment/neck/pendant-faceted-silver-green.webp",
-	"name": "Generate Random Magic Item Name",
-	"scope": "global",
-	"type": "script"
-}

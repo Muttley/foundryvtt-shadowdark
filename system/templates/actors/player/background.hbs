@@ -2,22 +2,14 @@
 	<div class="background-grid">
 		<div class="background-details">
 			<div class="grid-3-columns">
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.ancestry'}}</label>
-					<input
-						name="system.ancestry"
-						type="text"
-						class="detail-value"
-						value="{{ system.ancestry }}"
-					/>
-				</div>
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.class'}}</label>
-					<select name="system.class">
-						<option value="">&mdash;</option>
-						{{selectOptions config.CLASSES selected=system.class localize=false}}
-					</select>
-				</div>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.ancestry
+				}}
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.class
+				}}
 				<div class="level-xp">
 					<label>{{localize 'SHADOWDARK.sheet.actor.level'}}</label>
 					{{numberInput
@@ -39,60 +31,71 @@
 				</div>
 			</div>
 			<div class="grid-2-columns">
-				<div class="detail-box">
+				<div class="pc pc_title">
 					<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
-					<input
-						name="system.title"
-						type="text"
-						class="detail-value"
-						value="{{ system.title }}"
-					/>
+					{{#if classTitle}}
+						<div class="compendium-items flexrow">
+							<div class="compendium-item flexrow">
+								<a
+									class="fake-uuid-link"
+								>
+									{{classTitle}}
+								</a>
+							</div>
+						</div>
+					{{else}}
+						<input
+							id="pc"
+							type="text"
+							value=""
+							data-dtype="String"
+							disabled="disabled"
+						/>
+					{{/if}}
 				</div>
 				<div class="detail-box">
 					<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
 					<select name="system.alignment">
-						<option value="">&mdash;</option>
 						{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
 					</select>
 				</div>
 			</div>
 			<div class="grid-2-columns">
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.background'}}</label>
-					<input
-						name="system.background"
-						type="text"
-						class="detail-value"
-						value="{{ system.background }}"
-					/>
-				</div>
-				<div class="detail-box">
-					<label>{{localize 'SHADOWDARK.sheet.player.deity'}}</label>
-					<input
-						name="system.deity"
-						type="text"
-						class="detail-value"
-						value="{{ system.deity }}"
-					/>
-				</div>
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.background
+				}}
+				{{>
+					actors/partials/background-selector
+					config=backgroundSelectors.deity
+				}}
 			</div>
 			<div class="grid-1-columns">
-				<div class="detail-box">
+				<div class="pc pc_languages">
 					<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
-					<p class="language-list languages">{{knownLanguagesDisplay}}</p>
+					<a
+						class="item-selector"
+						data-options="language"
+						for="system.languages"
+					>
+						<i class="fa-solid fa-pen-to-square fa-sm"></i>
+					</a>
+					<ul class="tags">
+						{{#each knownLanguages}}
+							<li
+								{{#ifEq this.system.rarity "common"}}
+									class="tag tag_primary"
+								{{else}}
+									class="tag tag_secondary"
+								{{/ifEq}}
+								data-tooltip="{{this.system.description}}"
+							>
+								{{this.name}}
+							</li>
+						{{/each}}
+					</ul>
 				</div>
 			</div>
-		</div>
-		<div class="background-notes">
-			<label>{{localize 'SHADOWDARK.sheet.player.notes'}}</label>
-			{{editor
-				notesHTML
-				target="system.notes"
-				button=true
-				editable=editable
-				engine="prosemirror"
-				collaborate=false
-			}}
 		</div>
 	</div>
 </section>

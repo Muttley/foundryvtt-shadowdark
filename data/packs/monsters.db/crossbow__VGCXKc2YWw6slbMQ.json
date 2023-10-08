@@ -1,0 +1,39 @@
+{
+	"_id": "VGCXKc2YWw6slbMQ",
+	"_key": "!actors.items!Kw5KEyZVy5ugaTTy.VGCXKc2YWw6slbMQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Crossbow",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 1,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"far"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

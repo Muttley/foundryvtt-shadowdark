@@ -1,0 +1,43 @@
+{
+	"_id": "FoXNI5CfBkJOvJ9c",
+	"_key": "!items!FoXNI5CfBkJOvJ9c",
+	"effects": [
+		"9LKEdqM5gksbj8xV"
+	],
+	"folder": null,
+	"img": "icons/magic/control/sleep-bubble-purple.webp",
+	"name": "Condition: Asleep",
+	"system": {
+		"category": "condition",
+		"description": "",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": null,
+			"value": 9009
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

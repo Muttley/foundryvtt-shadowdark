@@ -10,8 +10,7 @@ export default gulp.series(
 		css.compile,
 		lang.compile,
 		javascript.lint,
-		javascript.compile,
-		packs.compile
+		javascript.compile
 	),
 
 	gulp.parallel(

@@ -1,0 +1,39 @@
+{
+	"_id": "kREXO5dl92rMkpjv",
+	"_key": "!actors.items!K9M3BA8PlvYWFADe.kREXO5dl92rMkpjv",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Sting",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 3,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "Venom",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

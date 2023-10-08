@@ -1,0 +1,29 @@
+{
+	"_id": "1kzQiWXZDs6BOVxs",
+	"_key": "!items!1kzQiWXZDs6BOVxs",
+	"effects": [
+	],
+	"folder": "riXhNqeauiWpVKAz",
+	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"name": "Silence",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You magically mute sound in a near cube within the spell’s range. Creatures inside the area are deafened, and any sounds they create cannot be heard.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.aAdqy5QwVJrT8JWE]{Spell Effect: Deaf}</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

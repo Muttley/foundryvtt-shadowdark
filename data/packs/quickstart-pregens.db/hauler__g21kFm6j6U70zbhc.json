@@ -1,0 +1,24 @@
+{
+	"_id": "g21kFm6j6U70zbhc",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.g21kFm6j6U70zbhc",
+	"effects": [
+		"rqplFhIShnvmV0U4"
+	],
+	"folder": null,
+	"img": "icons/containers/bags/sack-leather-tan.webp",
+	"name": "Hauler",
+	"system": {
+		"bonuses": {
+			"hauler": "true"
+		},
+		"description": "<p>Add your Constitution modifier, if positive, to your gear slots.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

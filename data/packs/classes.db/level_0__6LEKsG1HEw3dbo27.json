@@ -1,0 +1,56 @@
+{
+	"_id": "6LEKsG1HEw3dbo27",
+	"_key": "!items!6LEKsG1HEw3dbo27",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Level 0",
+	"system": {
+		"allArmor": true,
+		"allWeapons": true,
+		"armor": [
+		],
+		"classTalentTable": "",
+		"description": "<p>Some games begin with 0-level characters — weak peasants who have not yet attained the skill required to be adventurers. 0-level characters are fragile.</p><p></p><p>GMs should see The Gauntlet on pg. 116 for more insight.</p><p></p><p>Because 0-level characters have beginner's luck, they can wield all gear until 1st level.</p><p></p><p>0-level characters start with:</p><ul><li><p>Stats, pg. 15</p></li><li><p>Choice of ancestry, pg. 16</p></li><li><p>Hit points equal to their Constitution modifier (minimum 1)</p></li><li><p>Background, pg. 26</p></li><li><p>Choice of alignment, pg. 27</p></li><li><p>Starting gear, pg. 33</p></li></ul><p></p><p>0-level characters reach 1st level after surviving their first adventure (see pg. 39).</p>",
+		"hitPoints": "",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "",
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+		],
+		"titles": [
+			{
+				"chaotic": "",
+				"from": null,
+				"lawful": "",
+				"neutral": "",
+				"to": null
+			}
+		],
+		"weapons": [
+		]
+	},
+	"type": "Class"
+}

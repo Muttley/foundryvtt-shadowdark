@@ -1,0 +1,95 @@
+{
+	"_id": "SIEizdu3Jv9DHY1m",
+	"_key": "!items!SIEizdu3Jv9DHY1m",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Ranger",
+	"system": {
+		"allArmor": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.DeqtKQQzI6HTYvV0",
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.PPsLlxyDTbhy1aRI",
+		"description": "<p>Skilled trackers, stealthy wanderers, and peerless warriors who call the wilds their home.</p>",
+		"hitPoints": "d8",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "",
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.cUz7U8n0amQd5QQM",
+			"Compendium.shadowdark.talents.Item.ZjCvQZ7k4hBa9y2I"
+		],
+		"titles": [
+			{
+				"chaotic": "Hood",
+				"from": 1,
+				"lawful": "Wanderer",
+				"neutral": "Stranger",
+				"to": 2
+			},
+			{
+				"chaotic": "Outlaw",
+				"from": 3,
+				"lawful": "Strider",
+				"neutral": "Wayfarer",
+				"to": 4
+			},
+			{
+				"chaotic": "Fugitive",
+				"from": 5,
+				"lawful": "Warden",
+				"neutral": "Outlander",
+				"to": 6
+			},
+			{
+				"chaotic": "Exile",
+				"from": 7,
+				"lawful": "Guardian",
+				"neutral": "Recluse",
+				"to": 8
+			},
+			{
+				"chaotic": "Pariah",
+				"from": 9,
+				"lawful": "Sentinel",
+				"neutral": "Hermit",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.GzA5T0aewhouRsa3",
+			"Compendium.shadowdark.gear.Item.KQTWQwznjK80gVEU",
+			"Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea",
+			"Compendium.shadowdark.gear.Item.ZPUhNMmwXXrtbCXi"
+		]
+	},
+	"type": "Class"
+}

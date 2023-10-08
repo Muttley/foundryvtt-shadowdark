@@ -1,0 +1,20 @@
+{
+	"_id": "Td6iQW4hVJLZLVLi",
+	"_key": "!items!Td6iQW4hVJLZLVLi",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/symbols/runes-star-pentagon-orange.webp",
+	"name": "Spellcasting (Wizard)",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\"><strong>Spellcasting.</strong> </span><span class=\"fontstyle2\">You can cast wizard spells you know.</span></p><p></p><p><span class=\"fontstyle2\">You know three tier 1 spells of your choice from the wizard spell list (see pg. 57).</span></p><p></p><p><span class=\"fontstyle2\">Each time you gain a level, you choose new wizard spells to learn according to the Wizard Spells Known table.</span></p><p></p><p><span class=\"fontstyle2\">For casting wizard spells, see Spellcasting on pg. 52.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

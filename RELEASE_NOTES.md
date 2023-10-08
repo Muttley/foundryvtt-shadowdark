@@ -1,8 +1,38 @@
+## v.1.4.0
+
+### Bugfixes
+* [#431] Mage Armor Active Effect does not change AC
+* [#476] Attack bonuses missing from monsters
+* [#482] Can't create or import active effects when not in combat
+* [#483] Secret text doesn't behave correctly
+* [#486] Fixed typo in Magic Item Table 1, Result 20
+* [#488] Fixes for locked doors and missing monsters in The Lost Citadel of the Scarlet Minotaur adventure
+* [#493] Compendium item "Sword of the Ancients" missing base weapon type
+* [#496] Mage Armor spell effect not being applied
+
+### Enhancement
+* [#71] Add the ability to extend various character options
+* [#374] Added ability to create custom Classes
+* [#375] Added support for custom ancestries
+* [#376] Added support for rollable Class Abilities
+* [#342] Identify "rare" languages in the language selector to aid in selection
+* [#447] Added ability to easily access filtered compendium items
+* [#444] Added Bard class
+* [#449] Support Bard Bonuses exported by ShadowDarklings
+* [#480] Added ability to create custom weapon and armor properties
+* [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
+* [#491] Added support for custom languages
+* [#494] Added support for custom background items
+* [#495] Added support for Deity items
+* [#497] Split character sheet notes out into their own tab
+* [#498] Fix character sheet header and tab controls at top of character sheet window
+* [#501] Update ShadowDarklings importer to use new character background items
+
 ## v.1.3.7
 
 ### Bugfixes
 * [#472] Handle situations where Spellcasting Ability is not set better
-* [*473] Incorrect damage rolls when only 2H damage set
+* [#473] Incorrect damage rolls when only 2H damage set
 
 ### Enhancements
 * [#460] Added additional Move options for NPCs (None, Far & Special)

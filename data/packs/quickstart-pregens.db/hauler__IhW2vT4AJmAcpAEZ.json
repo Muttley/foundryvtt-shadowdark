@@ -1,0 +1,30 @@
+{
+	"_id": "IhW2vT4AJmAcpAEZ",
+	"_key": "!actors.effects!wnjtoBC4k5dIiG8X.IhW2vT4AJmAcpAEZ",
+	"changes": [
+		{
+			"key": "system.bonuses.hauler",
+			"mode": 5,
+			"priority": null,
+			"value": "true"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 637,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/containers/bags/sack-leather-tan.webp",
+	"name": "Hauler",
+	"origin": "Actor.wnjtoBC4k5dIiG8X.Item.g21kFm6j6U70zbhc",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

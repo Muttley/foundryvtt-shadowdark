@@ -1,0 +1,11 @@
+{
+	"_id": "UOyL6BA8rrpVGhgL",
+	"_key": "!macros!UOyL6BA8rrpVGhgL",
+	"author": "mu8H7NbWc0seFWcA",
+	"command": "// Macro to draw on the Somethings Happens! table and only show it to the GM.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst tableID = pack.index.find(o => o.name === \"Something Happens!\")._id;\nconst table = await pack.getDocument(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
+	"folder": null,
+	"img": "icons/environment/wilderness/cave-entrance-dwarven-hill.webp",
+	"name": "Draw Something Happens!",
+	"scope": "global",
+	"type": "script"
+}

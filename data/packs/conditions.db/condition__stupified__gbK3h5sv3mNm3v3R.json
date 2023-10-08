@@ -1,0 +1,24 @@
+{
+	"_id": "gbK3h5sv3mNm3v3R",
+	"_key": "!items.effects!SQzniFDNODQRLoNi.gbK3h5sv3mNm3v3R",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/water/barrier-ice-water-cube.webp",
+	"name": "Condition: Stupified",
+	"origin": "Item.SQzniFDNODQRLoNi",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

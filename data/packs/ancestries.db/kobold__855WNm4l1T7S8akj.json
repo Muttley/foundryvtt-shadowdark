@@ -1,0 +1,33 @@
+{
+	"_id": "855WNm4l1T7S8akj",
+	"_key": "!items!855WNm4l1T7S8akj",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Kobold",
+	"system": {
+		"description": "<p>Tiny, humanoid dog-lizards with a penchant for tinkering, trap building, and a hint of magic.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.GVAi0l6mfRillxwZ",
+			"Compendium.shadowdark.talents.Item.VjrDCzm64JmpoqjL"
+		]
+	},
+	"type": "Ancestry"
+}

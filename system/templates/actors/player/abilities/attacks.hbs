@@ -1,26 +1,26 @@
-<div class="attacks-grid">
-	<label class="attacks-label">{{localize 'SHADOWDARK.sheet.player.melee_attacks'}}</label>
-	<ol>
-		{{#each attacks.melee as |attack|}}
-			<li
-				class="rollable item-rollable attack-item"
-				data-action="item-attack"
-				data-item-id="{{attack.itemId}}"
-			>
-				{{{attack.display}}}
-			</li>
-		{{/each}}
-	</ol>
-	<label class="attacks-label">{{localize 'SHADOWDARK.sheet.player.ranged_attacks'}}</label>
-	<ol>
-		{{#each attacks.ranged as |attack|}}
-			<li
-				class="rollable item-rollable attack-item"
-				data-action="item-attack"
-				data-item-id="{{attack.itemId}}"
-			>
-				{{{attack.display}}}
-			</li>
-		{{/each}}
-	</ol>
-</div>
+<label class="actions-label">{{localize 'SHADOWDARK.sheet.player.melee_attacks'}}</label>
+<ol>
+	{{#each attacks.melee as |attack|}}
+		<li
+			class="rollable item-rollable attack-item"
+			data-action="item-attack"
+			data-item-id="{{attack.itemId}}"
+			data-tooltip="Roll Attack"
+		>
+			{{{attack.display}}}
+		</li>
+	{{/each}}
+</ol>
+<label class="actions-label">{{localize 'SHADOWDARK.sheet.player.ranged_attacks'}}</label>
+<ol>
+	{{#each attacks.ranged as |attack|}}
+		<li
+			class="rollable item-rollable attack-item"
+			data-action="item-attack"
+			data-item-id="{{attack.itemId}}"
+			data-tooltip="Roll Attack"
+		>
+			{{{attack.display}}}
+		</li>
+	{{/each}}
+</ol>

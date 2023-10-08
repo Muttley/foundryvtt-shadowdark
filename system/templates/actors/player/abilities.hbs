@@ -24,6 +24,11 @@
 			{{> actors/player/abilities/ac }}
 			{{> actors/player/abilities/initiative }}
 		</div>
-		{{> actors/player/abilities/attacks }}
+		<div class="actions-grid">
+			{{> actors/player/abilities/attacks }}
+			{{#if hasClassAbilities}}
+				{{> actors/player/abilities/class }}
+			{{/if}}
+		</div>
 	</div>
 </section>

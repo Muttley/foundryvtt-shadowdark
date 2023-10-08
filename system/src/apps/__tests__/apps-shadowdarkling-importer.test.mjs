@@ -23,7 +23,7 @@ const _jsonTestActor = () => {
 			CHA: 8,
 		},
 		alignment: "Chaotic",
-		class: "Level-0",
+		class: "Level 0",
 		maxHitPoints: 9,
 		background: "Sailor",
 		gold: 10,
@@ -33,7 +33,6 @@ const _jsonTestActor = () => {
 		languages: "Common, Celestial",
 		level: 1,
 		gearSlotsTotal: 13,
-		title: "King",
 		gear: [],
 		bonuses: [],
 	};
@@ -90,12 +89,14 @@ export default ({ describe, it, after, afterEach, expect }) => {
 
 		it("actor has the correct background", async () => {
 			const actor = await _getActor();
-			expect(actor.system.background).equal(json.background);
+			const background = await fromUuid(actor.system.background) ?? {};
+			expect(background.name).equal(json.background);
 		});
 
 		it("actor has the correct class", async () => {
 			const actor = await _getActor();
-			expect(actor.system.class).equal(json.class.toLowerCase());
+			const actorClass = await fromUuid(actor.system.class) ?? {};
+			expect(actorClass.name).equal(json.class);
 		});
 
 		it("actor has the correct coins", async () => {
@@ -107,7 +108,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 
 		it("actor has the correct deity", async () => {
 			const actor = await _getActor();
-			expect(actor.system.deity).equal(json.deity);
+			const deity = await fromUuid(actor.system.deity) ?? {};
+			expect(deity.name).equal(json.deity);
 		});
 
 		it("actor has the correct hp", async () => {
@@ -126,16 +128,6 @@ export default ({ describe, it, after, afterEach, expect }) => {
 		it("actor has the correct gearslots", async () => {
 			const actor = await _getActor();
 			expect(actor.system.slots).equal(json.gearSlotsTotal);
-		});
-
-		it("actor has the correct titkle", async () => {
-			const actor = await _getActor();
-			expect(actor.system.title).equal(json.title);
-		});
-
-		it("actor has the correct spellcasting ability", async () => {
-			const actor = await _getActor();
-			expect(actor.system.spellcastingAbility).equal("");
 		});
 	});
 
@@ -173,7 +165,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Farsight"));
 
-				expect(actor.system.ancestry).equal("Elf");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Elf");
+
 				expect(talent).is.not.undefined;
 				expect(talent.name).equal("Farsight (Ranged)");
 			});
@@ -185,7 +179,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Farsight"));
 
-				expect(actor.system.ancestry).equal("Elf");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Elf");
+
 				expect(talent).is.not.undefined;
 				expect(talent.name).equal("Farsight (Spell)");
 			});
@@ -198,7 +194,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Mighty"));
 
-				expect(actor.system.ancestry).equal("Half-Orc");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Half-Orc");
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -210,7 +207,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Stealthy"));
 
-				expect(actor.system.ancestry).equal("Halfling");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Halfling");
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -222,7 +220,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Stout"));
 
-				expect(actor.system.ancestry).equal("Dwarf");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Dwarf");
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -234,7 +233,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Ambitious"));
 
-				expect(actor.system.ancestry).equal("Human");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Human");
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -246,7 +246,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Keen Senses"));
 
-				expect(actor.system.ancestry).equal("Goblin");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Goblin");
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -282,7 +283,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Knack (Luck)"));
 
-				expect(actor.system.ancestry).equal("Kobold");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Kobold");
+
 				expect(talent).is.not.undefined;
 			});
 
@@ -293,7 +296,9 @@ export default ({ describe, it, after, afterEach, expect }) => {
 				const actor = await app._importActor(json);
 				const talent = actor.items.find(o => o.name.includes("Knack (Spellcasting)"));
 
-				expect(actor.system.ancestry).equal("Kobold");
+				const ancestry = await fromUuid(actor.system.ancestry);
+				expect(ancestry.name).equal("Kobold");
+
 				expect(talent).is.not.undefined;
 			});
 		});
@@ -464,6 +469,32 @@ export default ({ describe, it, after, afterEach, expect }) => {
 			});
 		});
 
+		describe("bard", () => {
+			const json = _jsonTestActor();
+			json.class = "Bard";
+
+			describe("built-in talents", async () => {
+				const builtins = [
+					"Bardic Arts",
+					"Magical Dabbler",
+					"Perform",
+					"Prolific",
+				];
+
+				builtins.forEach(builtin => {
+					it(builtin, async () => {
+						const actor = await app._importActor(json);
+
+						const actorClass = await fromUuid(actor.system.class);
+						expect(actorClass.name).equal(json.class);
+
+						const talent = actor.items.find(o => o.name.includes(builtin));
+						expect(talent).is.not.undefined;
+					});
+				});
+			});
+		});
+
 		describe("fighter", () => {
 			const json = _jsonTestActor();
 			json.class = "Fighter";
@@ -482,7 +513,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 						},
 					];
 					const actor = await app._importActor(json);
-					expect(actor.system.class).equal("fighter");
+					const actorClass = await fromUuid(actor.system.class);
+					expect(actorClass.name).equal(json.class);
 
 					const talent = actor.items.find(o => o.name.includes("Grit (Strength)"));
 					expect(talent).is.not.undefined;
@@ -501,14 +533,15 @@ export default ({ describe, it, after, afterEach, expect }) => {
 						},
 					];
 					const actor = await app._importActor(json);
-					expect(actor.system.class).equal("fighter");
+					const actorClass = await fromUuid(actor.system.class);
+					expect(actorClass.name).equal(json.class);
 
 					const talent = actor.items.find(o => o.name.includes("Grit (Dexterity)"));
 					expect(talent).is.not.undefined;
 				});
 
 				it("weapon mastery", async () => {
-					// @todo: Weapon mastery for all types of weapons
+					// TODO: Weapon mastery for all types of weapons
 					json.bonuses = [
 						{
 							sourceType: "Class",
@@ -521,7 +554,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 						},
 					];
 					const actor = await app._importActor(json);
-					expect(actor.system.class).equal("fighter");
+					const actorClass = await fromUuid(actor.system.class);
+					expect(actorClass.name).equal(json.class);
 
 					const talent = actor.items.find(o => o.name.includes("Weapon Mastery (Bastard Sword)"));
 					expect(talent).is.not.undefined;
@@ -543,7 +577,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 						},
 					];
 					const actor = await app._importActor(json);
-					expect(actor.system.class).equal("fighter");
+					const actorClass = await fromUuid(actor.system.class);
+					expect(actorClass.name).equal(json.class);
 
 					const talent = actor.items.find(o => o.name.includes("Armor Mastery (Leather Armor)"));
 					expect(talent).is.not.undefined;
@@ -562,7 +597,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 						},
 					];
 					const actor = await app._importActor(json);
-					expect(actor.system.class).equal("fighter");
+					const actorClass = await fromUuid(actor.system.class);
+					expect(actorClass.name).equal(json.class);
 
 					const talent = actor.items.find(o => o.name.includes("+1 to Melee and Ranged Attacks"));
 					expect(talent).is.not.undefined;
@@ -577,7 +613,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 			it("backstab", async () => {
 				json.bonuses = [];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("thief");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Backstab"));
 				expect(talent).is.not.undefined;
@@ -596,7 +633,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("thief");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Initiative Advantage"));
 				expect(talent).is.not.undefined;
@@ -615,7 +653,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("thief");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 to Melee and Ranged Attacks"));
 				expect(talent).is.not.undefined;
@@ -634,7 +673,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("thief");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Backstab +1 Damage Dice"));
 				expect(talent).is.not.undefined;
@@ -658,7 +698,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("priest");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 on Spellcasting Checks"));
 				expect(talent).is.not.undefined;
@@ -677,7 +718,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("priest");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Spellcasting Advantage"));
 				expect(talent).is.not.undefined;
@@ -697,7 +739,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("priest");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 to Melee Attacks"));
 				expect(talent).is.not.undefined;
@@ -716,7 +759,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("priest");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 to Ranged Attacks"));
 				expect(talent).is.not.undefined;
@@ -741,7 +785,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("wizard");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 on Spellcasting Checks"));
 				expect(talent).is.not.undefined;
@@ -760,7 +805,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("wizard");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const spell = actor.items.find(o => o.name.includes("Detect Magic"));
 				expect(spell).is.not.undefined;
@@ -779,7 +825,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("wizard");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name === "Spellcasting Advantage (Alarm)");
 				expect(talent).is.not.undefined;
@@ -799,7 +846,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("wizard");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name === "Make a Random Magic Item");
 				expect(talent).is.not.undefined;
@@ -811,7 +859,7 @@ export default ({ describe, it, after, afterEach, expect }) => {
 		const json = _jsonTestActor();
 		json.class = "Ranger";
 
-		describe("build-in talents", () => {
+		describe("built-in talents", () => {
 			it("Wayfinder", async () => {
 				json.bonuses = [
 					{
@@ -825,7 +873,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Wayfinder"));
 				expect(talent).is.not.undefined;
@@ -844,7 +893,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Herbalism"));
 				expect(talent).is.not.undefined;
@@ -865,7 +915,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("Increased Weapon Damage Die (Longbow)"));
 				expect(talent).is.not.undefined;
@@ -884,7 +935,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 to Melee Attacks and Damage"));
 				expect(talent).is.not.undefined;
@@ -903,7 +955,8 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
 
 				const talent = actor.items.find(o => o.name.includes("+1 to Ranged Attacks and Damage"));
 				expect(talent).is.not.undefined;
@@ -922,9 +975,11 @@ export default ({ describe, it, after, afterEach, expect }) => {
 					},
 				];
 				const actor = await app._importActor(json);
-				expect(actor.system.class).equal("ranger");
 
-				const talent = actor.items.find(o => o.name.includes("Reduced Herbalism DC"));
+				const actorClass = await fromUuid(actor.system.class);
+				expect(actorClass.name).equal(json.class);
+
+				const talent = actor.items.find(o => o.name.includes("Herbalism Check Advantage"));
 				expect(talent).is.not.undefined;
 			});
 		});

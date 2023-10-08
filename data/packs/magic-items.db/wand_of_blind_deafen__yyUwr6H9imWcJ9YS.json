@@ -1,0 +1,58 @@
+{
+	"_id": "yyUwr6H9imWcJ9YS",
+	"_key": "!items!yyUwr6H9imWcJ9YS",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/weapons/wands/wand-gem-purple.webp",
+	"name": "Wand of Blind/Deafen",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "wand",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "",
+			"twoHanded": ""
+		},
+		"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.ItoZZ0nli29N5d7G]{Blind/Deafen}</p><p>DC 12</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

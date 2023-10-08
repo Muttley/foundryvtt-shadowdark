@@ -1,29 +1,35 @@
-<div class="shadowdark chat-card light-source-card" data-actor-id="{{data.actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
-  <header class="card-header flexrow">
-    <img
+<div
+	class="shadowdark chat-card light-source-card"
+	data-actor-id="{{data.actor.id}}"
+	{{#if tokenId}}
+		data-token-id="{{tokenId}}"
+	{{/if}}
+>
+	<header class="card-header flexrow">
+		<img
 			src="{{item.img}}"
-      {{#if active}}
+			{{#if active}}
 				data-tooltip="{{name}} {{localize 'SHADOWDARK.chat.light_source.source.toggle.on'}}"
-      {{else}}
+			{{else}}
 				data-tooltip="{{name}} {{localize 'SHADOWDARK.chat.light_source.source.toggle.off'}}"
-      {{/if}}
+			{{/if}}
 		/>
-    <h3 class="light-source-name">
-      {{name}}
-      {{#if active}}
-      {{localize "SHADOWDARK.chat.light_source.source.toggle.on"}}
-      {{else}}
-      {{localize "SHADOWDARK.chat.light_source.source.toggle.off"}}
-      {{/if}}
-    </h3>
-  </header>
-  <div class="light-source {{#if active}}on{{else}}off{{/if}}">
-    <h4>
+		<h3 class="light-source-name">
+			{{name}}
+			{{#if active}}
+				{{localize "SHADOWDARK.chat.light_source.source.toggle.on"}}
+			{{else}}
+				{{localize "SHADOWDARK.chat.light_source.source.toggle.off"}}
+			{{/if}}
+		</h3>
+	</header>
+	<div class="light-source {{#if active}}on{{else}}off{{/if}}">
+		<h4>
 		{{#ifCond timeRemaining '<' 1}}
-    	{{localize "SHADOWDARK.chat.light_source.seconds_remaining"}}
+			{{localize "SHADOWDARK.chat.light_source.seconds_remaining"}}
 		{{else}}
-    	{{timeRemaining}} {{localize "SHADOWDARK.chat.light_source.remaining"}}
+			{{timeRemaining}} {{localize "SHADOWDARK.chat.light_source.remaining"}}
 		{{/ifCond}}
-    </h4>
-  </div>
+		</h4>
+	</div>
 </div>

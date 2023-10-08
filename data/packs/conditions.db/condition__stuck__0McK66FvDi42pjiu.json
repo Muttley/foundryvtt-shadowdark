@@ -1,0 +1,44 @@
+{
+	"_id": "0McK66FvDi42pjiu",
+	"_key": "!items!0McK66FvDi42pjiu",
+	"effects": [
+		"Pw5zyo8apyAphCG2"
+	],
+	"folder": null,
+	"img": "icons/environment/traps/trap-jaw-steel.webp",
+	"name": "Condition: Stuck",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character can't move until freed.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 9009
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

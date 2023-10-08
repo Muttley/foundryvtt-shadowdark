@@ -1,0 +1,59 @@
+{
+	"_id": "HsowE8JPDwcXugdG",
+	"_key": "!actors.items!uXk56wpEwdiTfAQN.HsowE8JPDwcXugdG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/weapons/daggers/dagger-jeweled-purple.webp",
+	"name": "Dagger",
+	"system": {
+		"attackBonus": 0,
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 1,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": 0,
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "",
+		"equipped": true,
+		"isPhysical": true,
+		"magicItem": false,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

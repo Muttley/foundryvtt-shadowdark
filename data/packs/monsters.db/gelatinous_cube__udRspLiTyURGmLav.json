@@ -1,0 +1,125 @@
+{
+	"_id": "udRspLiTyURGmLav",
+	"_key": "!actors!udRspLiTyURGmLav",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"NvaLdTF8DSe66MwF",
+		"RnlzBMWYWCNLB80N",
+		"tksSsqnnEL96jIKF",
+		"jjIo6W6eWnU2jog0"
+	],
+	"name": "Gelatinous Cube",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Gelatinous Cube",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -4
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": -4
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": 11
+			},
+			"hp": {
+				"hd": 0,
+				"max": 24,
+				"value": 24
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 5
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "<p><em>A translucent cube of slime that silently mows through cramped tunnels, slurping up debris.</em></p><p></p><p><strong>AC</strong> 11, <strong>HP</strong> 24, <strong>ATK</strong> 1 touch +4 (1d8 + toxin), <strong>MV</strong> near <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I </strong>-4, <strong>W</strong> +1, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p><p><strong>Engulf</strong>. Absorbs paralyzed creatures in close range into its body, automatically hitting with touch attack on its turn.</p><p></p><p><strong>Rubbery</strong>. Half damage from stabbing weapons.</p><p></p><p><strong>Toxin</strong>. DC 15 CON or paralyzed 1d4 rounds.</p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

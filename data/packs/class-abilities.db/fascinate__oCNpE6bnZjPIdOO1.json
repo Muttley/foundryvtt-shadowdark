@@ -1,0 +1,23 @@
+{
+	"_id": "oCNpE6bnZjPIdOO1",
+	"_key": "!items!oCNpE6bnZjPIdOO1",
+	"effects": [
+	],
+	"folder": "ouQFWSadiw9Jxy42",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Fascinate",
+	"system": {
+		"ability": "cha",
+		"dc": 15,
+		"description": "<p>You transfix all targets of level 4 or less within near for 1d4 rounds.</p>",
+		"group": "Perform",
+		"loseOnFailure": true,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Class Ability"
+}

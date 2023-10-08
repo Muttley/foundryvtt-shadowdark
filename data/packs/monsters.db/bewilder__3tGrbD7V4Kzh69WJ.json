@@ -1,0 +1,18 @@
+{
+	"_id": "3tGrbD7V4Kzh69WJ",
+	"_key": "!actors.items!nhKDBbnOnXXTzfBr.3tGrbD7V4Kzh69WJ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Bewilder",
+	"system": {
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">Creatures within near that see the cave brute's eyes, DC 12 CHA at start of their turn or dazed and no action.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

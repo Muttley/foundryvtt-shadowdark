@@ -1,0 +1,21 @@
+{
+	"_id": "LfHTnYW8I65x8Y31",
+	"_key": "!items!LfHTnYW8I65x8Y31",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"name": "Turn Undead",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You know the </span><span class=\"fontstyle2\">turn undead </span><span class=\"fontstyle0\">spell. It doesn’t count toward your number of known spells.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

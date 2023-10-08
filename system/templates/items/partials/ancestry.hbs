@@ -1,0 +1,40 @@
+<div class="item-details">
+	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</h4>
+	<div class="choice-selector">
+		{{>
+			items/partials/choice-selector
+			config=fixedLanguagesConfig
+			editable=editable
+		}}
+	</div>
+	<div class="language-detail">
+		<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
+		{{numberInput
+			item.system.languages.common
+			name="system.languages.common"
+			placeholder="0"
+		}}
+	</div>
+	<div class="language-detail">
+		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
+		{{numberInput
+			item.system.languages.rare
+			name="system.languages.rare"
+			placeholder="0"
+		}}
+	</div>
+	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.talents.label'}}</h4>
+	<div class="choice-selector item-detail">
+		{{>
+			items/partials/choice-selector
+			config=talentsConfig
+			editable=editable
+		}}
+		<label>{{localize 'SHADOWDARK.ancestry.talents.count.label'}}</label>
+		{{numberInput
+			item.system.talentChoiceCount
+			name="system.talentChoiceCount"
+			placeholder="0"
+		}}
+	</div>
+</div>

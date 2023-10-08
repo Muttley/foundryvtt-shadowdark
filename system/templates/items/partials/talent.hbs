@@ -1,22 +1,24 @@
-<div class="talent-properties">
-	<div class="talent-property">
-		<label>{{localize 'SHADOWDARK.item.talent_class'}}</label>
-		<select name="system.talentClass">
-			{{selectOptions
-				config.TALENT_CLASSES
-				selected=system.talentClass
-				localize=false
-			}}
-		</select>
-	</div>
-	{{#ifEq system.talentClass "level"}}
+<div class="item-details">
+	<div class="talent-properties">
 		<div class="talent-property">
-			<label>{{localize 'SHADOWDARK.item.level'}}</label>
-			{{numberInput
-				item.system.level
-				name="system.level"
-				placeholder="0"
-			}}
+			<label>{{localize 'SHADOWDARK.item.talent_class'}}</label>
+			<select name="system.talentClass">
+				{{selectOptions
+					config.TALENT_CLASSES
+					selected=system.talentClass
+					localize=false
+				}}
+			</select>
 		</div>
-	{{/ifEq}}
+		{{#ifEq system.talentClass "level"}}
+			<div class="talent-property">
+				<label>{{localize 'SHADOWDARK.item.level'}}</label>
+				{{numberInput
+					item.system.level
+					name="system.level"
+					placeholder="0"
+				}}
+			</div>
+		{{/ifEq}}
+	</div>
 </div>

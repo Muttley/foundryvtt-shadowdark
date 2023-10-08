@@ -1,0 +1,42 @@
+{
+	"_id": "aRY0hjpvzYpdRbfR",
+	"_key": "!items!aRY0hjpvzYpdRbfR",
+	"effects": [
+		"lSaJHBE00pEuwfOx"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "+2 to Intelligence",
+	"system": {
+		"abilities": {
+			"cha": {
+				"bonus": "0"
+			},
+			"con": {
+				"bonus": "0"
+			},
+			"dex": {
+				"bonus": "0"
+			},
+			"int": {
+				"bonus": "2"
+			},
+			"str": {
+				"bonus": "0"
+			},
+			"wis": {
+				"bonus": "0"
+			}
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

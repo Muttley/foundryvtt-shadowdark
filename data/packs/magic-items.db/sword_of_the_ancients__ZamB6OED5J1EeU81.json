@@ -1,0 +1,60 @@
+{
+	"_id": "ZamB6OED5J1EeU81",
+	"_key": "!items!ZamB6OED5J1EeU81",
+	"effects": [
+		"9qMTrleWtCMKO3Xl",
+		"78SoFRRmEjEMdPIT"
+	],
+	"folder": null,
+	"img": "icons/weapons/swords/sword-guard-worn-brown.webp",
+	"name": "Sword of the Ancients",
+	"system": {
+		"attackBonus": "2",
+		"baseWeapon": "longsword",
+		"bonuses": {
+			"attackBonus": "2",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "2",
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "2",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d8",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A chipped and rusting blade with an oiled leather grip.</em></p><p></p><p><strong>Bonus</strong>. +2 longsword.</p><p></p><p><strong>Benefit</strong>. The sword is unbreakable and can carve through any material.</p><p></p><p>The owner can summon the sword to their hand if it's on the same plane.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

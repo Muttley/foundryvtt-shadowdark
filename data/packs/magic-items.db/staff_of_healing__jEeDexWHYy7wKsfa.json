@@ -1,0 +1,61 @@
+{
+	"_id": "jEeDexWHYy7wKsfa",
+	"_key": "!items!jEeDexWHYy7wKsfa",
+	"effects": [
+		"HhILvM8lD0Nby5gq",
+		"FqtIDxjhOFDvkQFn"
+	],
+	"folder": null,
+	"img": "icons/weapons/staves/staff-engraved-red.webp",
+	"name": "Staff of Healing",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "staff",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1",
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A knotted, oak stave with a heavy knurl on one end.</em></p><p></p><p><strong>Bonus</strong>. +1 staff.</p><p></p><p><strong>Benefit</strong>. Once per day, you can touch a creature with the staff to heal it for [[/r 1d6]] hit points.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"twoHanded"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

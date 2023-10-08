@@ -1,0 +1,43 @@
+<form class="window flexcol" autocomplete="off" onsubmit="event.preventDefault();">
+	<div class="form-group stacked">
+		{{!-- Render each existing Item as a document link, with a button to remove --}}
+		<div class="compendium-items flexrow">
+			{{#each currentItems as |item index|}}
+				<div class="compendium-item flexrow">
+					<a
+						class="content-link uuid-link"
+						data-id="{{item._id}}"
+						data-type="Item"
+						data-uuid="{{item.uuid}}"
+					>
+						<i
+							class="remove-item fas fa-delete-right"
+							data-action="delete"
+							title="Remove Item"
+							data-item-index="{{index}}"
+						></i>
+						{{item.decoratedName}}
+					</a>
+				</div>
+			{{/each}}
+		</div>
+
+		{{!-- Render a text input with search ahead to add a new Talent --}}
+		<input
+			list="items-list"
+			placeholder="{{prompt}}"
+			type="text"
+			name="item-selected"
+			value=""
+			autofocus
+		/>
+		<datalist id="items-list">
+			{{#each itemChoices}}
+				<option
+					data-uuid="{{this.uuid}}"
+					value="{{this.decoratedName}}"
+				></option>
+			{{/each}}
+		</datalist>
+	</div>
+</form>

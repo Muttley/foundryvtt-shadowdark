@@ -1,0 +1,88 @@
+{
+	"_id": "035nuVkU9q2wtMPs",
+	"_key": "!items!035nuVkU9q2wtMPs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Wizard",
+	"system": {
+		"allArmor": false,
+		"allWeapons": false,
+		"armor": [
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.RQ0vogfVtJGuT9oT",
+		"description": "<p>Rune-tattooed adepts, bespectacled magi, and flameconjuring witches who dare to manipulate the fell forces of magic.</p>",
+		"hitPoints": "d4",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 2,
+			"fixed": [
+			],
+			"rare": 2,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "int",
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.LFMT8qZ6ZL3LvYFM",
+			"Compendium.shadowdark.talents.Item.Td6iQW4hVJLZLVLi"
+		],
+		"titles": [
+			{
+				"chaotic": "Adept",
+				"from": 1,
+				"lawful": "Apprentice",
+				"neutral": "Shaman",
+				"to": 2
+			},
+			{
+				"chaotic": "Channeler",
+				"from": 3,
+				"lawful": "Conjurer",
+				"neutral": "Seer",
+				"to": 4
+			},
+			{
+				"chaotic": "Witch/Warlock",
+				"from": 5,
+				"lawful": "Arcanist",
+				"neutral": "Warden",
+				"to": 6
+			},
+			{
+				"chaotic": "Diabolist",
+				"from": 7,
+				"lawful": "Mage",
+				"neutral": "Sage",
+				"to": 8
+			},
+			{
+				"chaotic": "Sorcerer",
+				"from": 9,
+				"lawful": "Archmage",
+				"neutral": "Druid",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"
+		]
+	},
+	"type": "Class"
+}

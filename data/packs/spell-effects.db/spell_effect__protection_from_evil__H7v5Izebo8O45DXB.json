@@ -1,0 +1,43 @@
+{
+	"_id": "H7v5Izebo8O45DXB",
+	"_key": "!items!H7v5Izebo8O45DXB",
+	"effects": [
+		"1OnR6BmpQBNIxZYK"
+	],
+	"folder": null,
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"name": "Spell Effect: Protection From Evil",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">Chaotic beings have disadvantage on attack rolls and hostile spellcasting checks against the target. These beings also can’t possess, compel, or beguile it.</span></p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

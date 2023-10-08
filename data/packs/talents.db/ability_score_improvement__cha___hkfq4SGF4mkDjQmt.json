@@ -1,0 +1,30 @@
+{
+	"_id": "hkfq4SGF4mkDjQmt",
+	"_key": "!items.effects!UE2xABVKD0oCDtdx.hkfq4SGF4mkDjQmt",
+	"changes": [
+		{
+			"key": "system.abilities.cha.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "Ability Score Improvement (Cha)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

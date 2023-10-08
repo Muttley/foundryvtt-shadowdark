@@ -1,0 +1,28 @@
+{
+	"_id": "ys29FVZBITfUFwra",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.ys29FVZBITfUFwra",
+	"effects": [
+		"E7SwrOhzSAyMZ1Ec"
+	],
+	"folder": null,
+	"img": "icons/skills/melee/strike-axe-energy-pink.webp",
+	"name": "Weapon Mastery (Greataxe)",
+	"system": {
+		"bonuses": {
+			"weaponMastery": "greataxe"
+		},
+		"description": "<p>Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talent": {
+			"weaponMastery": null,
+			"weaponMasteryTypes": null
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

@@ -1,0 +1,39 @@
+{
+	"_id": "ZOlhmdkqfQyyT6R3",
+	"_key": "!actors.items!c3Nvj86e0Layz3NG.ZOlhmdkqfQyyT6R3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Greataxe",
+	"system": {
+		"attack": {
+			"num": 2
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 6,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "",
+			"value": "d10"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

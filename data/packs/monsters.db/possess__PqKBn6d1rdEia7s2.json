@@ -1,0 +1,18 @@
+{
+	"_id": "PqKBn6d1rdEia7s2",
+	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.PqKBn6d1rdEia7s2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Possess",
+	"system": {
+		"description": "<p>One target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

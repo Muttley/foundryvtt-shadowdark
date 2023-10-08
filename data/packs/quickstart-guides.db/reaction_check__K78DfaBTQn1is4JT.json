@@ -1,0 +1,24 @@
+{
+	"_id": "K78DfaBTQn1is4JT",
+	"_key": "!journal.pages!sxBiNC5Ee4iMIP23.K78DfaBTQn1is4JT",
+	"image": {
+	},
+	"name": "Reaction Check",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>When the characters encounter random creatures, the GM rolls for the creatures' attitude (if it would not already be clear).</p><p></p><p>If the characters immediately interact with the creatures to influence their attitude, one of the interacting characters may add their Charisma modifier to the reaction check.</p><p></p><p>The interacting characters reveal their presence and position to the creatures.</p><p></p><p>Some vicious creatures, such as undead, are always hostile.</p><p></p><p>Roll 2D6 + CHA mod</p><p></p><p>Result | Attitude</p><p>0-6  ….. Hostile</p><p>7-8 ….. Suspicious</p><p>9 …….. Neutral</p><p>10-11 .. Curious</p><p>12+ ….. Friendly</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

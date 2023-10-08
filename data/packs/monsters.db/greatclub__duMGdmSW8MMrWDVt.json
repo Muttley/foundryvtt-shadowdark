@@ -1,0 +1,39 @@
+{
+	"_id": "duMGdmSW8MMrWDVt",
+	"_key": "!actors.items!VrYTiPjDOH1LIEBr.duMGdmSW8MMrWDVt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Greatclub",
+	"system": {
+		"attack": {
+			"num": 2
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 6,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 2,
+			"special": "",
+			"value": "d6"
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

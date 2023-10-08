@@ -10,11 +10,8 @@ SHADOWDARK.ability_str: Fue
 SHADOWDARK.ability_strength: Fuerza
 SHADOWDARK.ability_wis: Sab
 SHADOWDARK.ability_wisdom: Sabiduría
-SHADOWDARK.alignment.chaotic_short: C
 SHADOWDARK.alignment.chaotic: Caótico
-SHADOWDARK.alignment.lawful_short: L
 SHADOWDARK.alignment.lawful: Legal
-SHADOWDARK.alignment.neutral_short: "N"
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.app.active_effects.title: Efectos activos
 SHADOWDARK.app.gem_bag.sell_all: Vender todas las gemas
@@ -22,7 +19,6 @@ SHADOWDARK.app.gem_bag.title: Bolsa de gemas
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vender Gema
 SHADOWDARK.app.gem_bag.total_value: Valor total
 SHADOWDARK.app.item_properties.armor.title: Propiedades de armadura
-SHADOWDARK.app.item_properties.caster_classes.title: Clases de hechicero
 SHADOWDARK.app.item_properties.languages.title: Idiomas
 SHADOWDARK.app.item_properties.magic_item.effects.title: Efectos de objetos mágicos
 SHADOWDARK.app.item_properties.save: Salvación
@@ -74,6 +70,10 @@ SHADOWDARK.chat_card.button.learn_spell: Aprender hechizo
 SHADOWDARK.chat_card.button.use_potion: Usar poción
 SHADOWDARK.chat_card.button.use_scroll: Usar pergamino
 SHADOWDARK.chat_card.button.use_wand: Usar varita
+SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
+SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
+SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: '¡Duplica cualquier valor numérico!'
 SHADOWDARK.chat.item_roll.mishap: '¡Tira en la tabla de pifias apropiada!'
@@ -102,6 +102,7 @@ SHADOWDARK.chatcard.default: Tirada
 SHADOWDARK.class.fighter: Luchador
 SHADOWDARK.class.priest: Clérigo
 SHADOWDARK.class.ranger: Explorador
+SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
 SHADOWDARK.class.thief: Ladrón
 SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
@@ -130,7 +131,7 @@ SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de tirar: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Obtienes {hp} PV por nivel 1 (incluido modificador)
 SHADOWDARK.dialog.hp_roll.roll_per_level: Obtienes {hp} PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.sum_total: Nuevos PV máximos {total}
-SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV 
+SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV
 SHADOWDARK.dialog.hp_roll.title: Tirada de PV
 SHADOWDARK.dialog.item_roll.ability_bonus: Bonus de habilidad
 SHADOWDARK.dialog.item_roll.item_bonus: Bonus de ítem
@@ -174,6 +175,7 @@ SHADOWDARK.effect.tooltip.transfer.header: Transferir efecto al actor cuando se 
 SHADOWDARK.effect.unavailable: Efectos desactivados
 SHADOWDARK.error.general.gm_required: Debes tener el rol de Maestro de Juego para hacer eso.
 SHADOWDARK.error.general.no_character_class: Ninguna clase de personaje ha sido seleccionada
+SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.inventory.coins: Monedas
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutos restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Menos de 1 minuto restante
@@ -363,8 +365,12 @@ SHADOWDARK.module_art_config.portraits: Retratos
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
+SHADOWDARK.npc_move.close: Close
 SHADOWDARK.npc_move.double_near: Doble próximo
+SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Próximo
+SHADOWDARK.npc_move.none: None
+SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple próximo
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Cerca
@@ -415,7 +421,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Seguimiento de luz en tiempo real
 SHADOWDARK.sheet.actor.ac: CA
-SHADOWDARK.sheet.actor.alignment_short: Alin
 SHADOWDARK.sheet.actor.alignment: Alineamiento
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
@@ -442,16 +447,16 @@ SHADOWDARK.sheet.npc.movement: Movimiento
 SHADOWDARK.sheet.npc.tab.abilities: Habilidades
 SHADOWDARK.sheet.npc.tab.description: Descripción
 SHADOWDARK.sheet.player.active_effect_override: Este valor está siendo modificado por un efecto activo y no puede ser editado. Deshabilita el efecto para editarlo.
-SHADOWDARK.sheet.player.ancestry: Ancestría
+SHADOWDARK.sheet.player.ancestry.label: Ancestría
 SHADOWDARK.sheet.player.available_spells: Hechizos disponibles
-SHADOWDARK.sheet.player.background: Trasfondo
+SHADOWDARK.sheet.player.background.label: Trasfondo
 SHADOWDARK.sheet.player.class: Clase
 SHADOWDARK.sheet.player.deity: Deidad
 SHADOWDARK.sheet.player.languages: Idiomas
 SHADOWDARK.sheet.player.luck: Suerte
 SHADOWDARK.sheet.player.melee_attacks: Ataque cuerpo a cuerpo
-SHADOWDARK.sheet.player.notes: Notas del personaje
 SHADOWDARK.sheet.player.ranged_attacks: Ataques a distancia.
+SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Nivel
 SHADOWDARK.sheet.player.spells: Hechizos
 SHADOWDARK.sheet.player.tab.abilities: Habilidades
@@ -481,7 +486,7 @@ SHADOWDARK.spell_duration.rounds: Rondas
 SHADOWDARK.spell_range.close: Cerca
 SHADOWDARK.spell_range.far: Lejos
 SHADOWDARK.spell_range.near: Próximo
-SHADOWDARK.spellcasting_ability: Aptitud Mágica
+SHADOWDARK.spell.classes.label: Clases de hechicero
 SHADOWDARK.talent.backstab: Puñalada
 SHADOWDARK.talent.class.ancestry: Ancestro
 SHADOWDARK.talent.class.class: Clase

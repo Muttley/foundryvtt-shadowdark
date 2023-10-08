@@ -1,3 +1,5 @@
+import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
+
 export default class ActorSheetSD extends ActorSheet {
 
 	/** @inheritdoc */
@@ -8,6 +10,10 @@ export default class ActorSheetSD extends ActorSheet {
 
 		html.find(".hp.rollable").click(
 			event => this._onRollHP(event)
+		);
+
+		html.find(".item-selector").click(
+			event => this._onItemSelection(event)
 		);
 
 		html.find(".pc-roll-initiative .rollable").click(
@@ -95,6 +101,11 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 	}
 
+	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
+	async emulateItemDrop(data) {
+		return this._onDropItem({}, data);
+	}
+
 	/** @override */
 	async getData(options) {
 		const source = this.actor.toObject();
@@ -174,6 +185,27 @@ export default class ActorSheetSD extends ActorSheet {
 		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
 	}
 
+	async _effectDropNotAllowed(data) {
+		const item = await fromUuid(data.uuid);
+
+		if (item.type === "Effect") {
+			if (item.system.duration.type === "rounds" && !game.combat) {
+				ui.notifications.warn(
+					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+				);
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	async _onDropItem(event, data) {
+		if (await this._effectDropNotAllowed(data)) return false;
+
+		return super._onDropItem(event, data);
+	}
+
 	_onItemDelete(itemId) {
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
@@ -206,6 +238,30 @@ export default class ActorSheetSD extends ActorSheet {
 				default: "Yes",
 			}).render(true);
 		});
+	}
+
+	_onItemSelection(event) {
+		event.preventDefault();
+
+		const itemType = event.currentTarget.dataset.options;
+
+		switch (itemType) {
+			case "ancestry":
+				new select.AncestrySelector(this.actor).render(true);
+				break;
+			case "background":
+				new select.BackgroundSelector(this.actor).render(true);
+				break;
+			case "class":
+				new select.ClassSelector(this.actor).render(true);
+				break;
+			case "deity":
+				new select.DeitySelector(this.actor).render(true);
+				break;
+			case "language":
+				new select.LanguageSelector(this.actor).render(true);
+				break;
+		}
 	}
 
 	async _onOpenItem(event) {
@@ -297,11 +353,6 @@ export default class ActorSheetSD extends ActorSheet {
 		this.actor.castSpell(itemId);
 	}
 
-	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
-	async emulateItemDrop(data) {
-		return this._onDropItem({}, data);
-	}
-
 	async _onItemCreate(event) {
 		event.preventDefault();
 		const itemType = $(event.currentTarget).data("item-type");
@@ -335,19 +386,6 @@ export default class ActorSheetSD extends ActorSheet {
 	_sortAllItems(context) {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
-		const allItems = [];
-		(context.items ?? []).forEach(item => allItems.push(item));
-
-		allItems.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		});
-
-		return allItems;
+		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
 	}
 }

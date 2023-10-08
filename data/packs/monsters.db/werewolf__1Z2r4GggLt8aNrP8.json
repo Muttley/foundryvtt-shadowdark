@@ -1,0 +1,124 @@
+{
+	"_id": "1Z2r4GggLt8aNrP8",
+	"_key": "!actors!1Z2r4GggLt8aNrP8",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"MIvx663bMPXQ4Sxs",
+		"TZaYzPtFhnfpdn3S",
+		"UT3L392BZFTvlyIX"
+	],
+	"name": "Werewolf",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Werewolf",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 0
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 20,
+				"value": 20
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 4
+		},
+		"move": "doubleNear",
+		"moveNote": "",
+		"notes": "<p><span class=\"fontstyle0\"><em>A bipedal, wolf-faced humanoid covered in brown fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">20, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 rend +3 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">double near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">4</span></p><p></p><p><span class=\"fontstyle2\"><strong>Impervious.</strong> </span><span class=\"fontstyle3\">Only damaged by silver or magic sources.</span></p><p></p><p><span class=\"fontstyle2\"><strong>Lycanthropy.</strong> </span><span class=\"fontstyle3\">If 12 or more damage from the same werewolf, contract lycanthropy.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

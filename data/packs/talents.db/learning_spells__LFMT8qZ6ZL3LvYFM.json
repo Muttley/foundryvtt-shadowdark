@@ -1,0 +1,20 @@
+{
+	"_id": "LFMT8qZ6ZL3LvYFM",
+	"_key": "!items!LFMT8qZ6ZL3LvYFM",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+	"name": "Learning Spells",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\"><strong>Learning Spells.</strong> </span><span class=\"fontstyle2\">You can permanently learn a wizard spell from a spell scroll by studying it for a day and succeeding on a DC 15 Intelligence check.</span></p><p></p><p><span class=\"fontstyle2\">Whether you succeed or fail, you expend the spell scroll.</span></p><p></p><p><span class=\"fontstyle2\">Spells you learn in this way don't count toward your known spells.</span></p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

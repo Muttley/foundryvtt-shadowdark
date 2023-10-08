@@ -1,0 +1,18 @@
+{
+	"_id": "rNnV6lCVKtNYT6Sg",
+	"_key": "!actors.items!RAEbIzHkREYWKvLh.rNnV6lCVKtNYT6Sg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 12 CON or fall into deep sleep for 1d4 hours.</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

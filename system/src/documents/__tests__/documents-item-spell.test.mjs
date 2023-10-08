@@ -87,7 +87,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				// @todo: This should probably dig inside chatcard instead
+				// TODO: This should probably dig inside chatcard instead
 				const formula = $(".dice-formula")[0].innerText;
 				expect(formula).equal("1d20");
 			});
@@ -109,7 +109,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				// @todo: This should probably dig inside chatcard instead
+				// TODO: This should probably dig inside chatcard instead
 				const formula = $(".dice-formula")[0].innerText;
 				expect(formula).equal("1d20 + 1");
 			});
@@ -134,7 +134,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				await waitForInput();
 				expect(game.messages.size).equal(1);
 
-				// @todo: This should probably dig inside chatcard instead
+				// TODO: This should probably dig inside chatcard instead
 				const formula = $(".dice-formula")[0].innerText;
 				expect(formula).equal("1d20 + 3");
 			});

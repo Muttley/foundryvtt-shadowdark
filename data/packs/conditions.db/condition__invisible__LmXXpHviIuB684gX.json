@@ -1,0 +1,24 @@
+{
+	"_id": "LmXXpHviIuB684gX",
+	"_key": "!items.effects!piycdXLudXTFLG0k.LmXXpHviIuB684gX",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 3,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/light/explosion-star-glow-silhouette.webp",
+	"name": "Condition: Invisible",
+	"origin": "Item.SMXbMbXcj5hLvTjY",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

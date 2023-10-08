@@ -1,0 +1,87 @@
+{
+	"_id": "hO7KrvqDRH6kvftJ",
+	"_key": "!items!hO7KrvqDRH6kvftJ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Fighter",
+	"system": {
+		"allArmor": true,
+		"allWeapons": true,
+		"armor": [
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.dExHo4P85MgpwHd9",
+		"description": "<p>Blood-soaked gladiators in dented armor, acrobatic duelists with darting swords, or far-eyed elven archers who carve their legends with steel and grit.</p>",
+		"hitPoints": "d8",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": ""
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "",
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+			"Compendium.shadowdark.talents.Item.DGZqkVUtcmxejdm1",
+			"Compendium.shadowdark.talents.Item.F0NXUJcnBOYKzhMi"
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.5bpWuaT0KTNzuzCu",
+			"Compendium.shadowdark.talents.Item.7JTDRLtHc6FOrIEc"
+		],
+		"titles": [
+			{
+				"chaotic": "Knave",
+				"from": 1,
+				"lawful": "Squire",
+				"neutral": "Warrior",
+				"to": 2
+			},
+			{
+				"chaotic": "Bandit",
+				"from": 3,
+				"lawful": "Cavalier",
+				"neutral": "Barbarian",
+				"to": 4
+			},
+			{
+				"chaotic": "Slayer",
+				"from": 5,
+				"lawful": "Knight",
+				"neutral": "Battlerager",
+				"to": 6
+			},
+			{
+				"chaotic": "Reaver",
+				"from": 7,
+				"lawful": "Thane",
+				"neutral": "Warchief",
+				"to": 8
+			},
+			{
+				"chaotic": "Warlord",
+				"from": 9,
+				"lawful": "Lord/Lady",
+				"neutral": "Chieftain",
+				"to": 10
+			}
+		],
+		"weapons": [
+		]
+	},
+	"type": "Class"
+}

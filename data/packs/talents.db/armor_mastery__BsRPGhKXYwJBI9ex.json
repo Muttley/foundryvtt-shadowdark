@@ -1,0 +1,27 @@
+{
+	"_id": "BsRPGhKXYwJBI9ex",
+	"_key": "!items!BsRPGhKXYwJBI9ex",
+	"effects": [
+		"0g9MUhj9Tr3AWRXl"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"name": "Armor Mastery",
+	"system": {
+		"bonuses": {
+			"armorMastery": "REPLACEME",
+			"meleeAttackBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

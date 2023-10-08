@@ -1,0 +1,20 @@
+{
+	"_id": "QxhyKNW4aDQqolMi",
+	"_key": "!items!QxhyKNW4aDQqolMi",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+	"name": "Deity",
+	"system": {
+		"description": "<p>Choose a god to serve who matches your alignment (see Deities, pg. 30). You have a holy symbol for your god (it takes up no gear slots).</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

@@ -1,11 +1,16 @@
 <div class="shadowdark chat-card item-card" data-actor-id="{{data.actor.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
-  <header class="card-header flexrow">
-    <img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
-    <h3 class="ability-name">{{title}}</h3>
-  </header>
-  <div class="d20-roll card-ability-roll blindable" data-blind="{{data.rolls.main.roll.blind}}">
-    {{#if data.rolls.main}}
-      <div>{{{data.rolls.main.renderedHTML}}}</div>
-    {{/if}}
-  </div>
+	<header class="card-header flexrow">
+		<img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
+		<h3 class="ability-name">
+			{{title}}
+			{{#if targetDC}}
+				(DC {{targetDC}})
+			{{/if}}
+		</h3>
+	</header>
+	<div class="d20-roll card-ability-roll blindable" data-blind="{{data.rolls.main.roll.blind}}">
+		{{#if data.rolls.main}}
+			<div>{{{data.rolls.main.renderedHTML}}}</div>
+		{{/if}}
+	</div>
 </div>

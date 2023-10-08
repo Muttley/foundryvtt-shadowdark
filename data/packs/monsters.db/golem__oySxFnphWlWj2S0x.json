@@ -1,0 +1,18 @@
+{
+	"_id": "oySxFnphWlWj2S0x",
+	"_key": "!actors.items!zLDg6vIYEj4wB0lQ.oySxFnphWlWj2S0x",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Golem",
+	"system": {
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">Immune to damage from fire, cold, electricity, or non-magical sources.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,193 @@
+{
+	"_id": "Jnb0sFKKKrAfowY0",
+	"_key": "!actors!Jnb0sFKKKrAfowY0",
+	"effects": [
+		"kpP7k0q22F1ktYTF",
+		"KKuguluCP3repDNL"
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_portrait.webp",
+	"items": [
+		"NviSbJMXs6ybogWA",
+		"BDHZe8ldaFBgWHyX",
+		"zXEWYqUZdmA7DgkF",
+		"n56KlB5bbj6MeA2N",
+		"2Nlz8gpgw8GQBIQo",
+		"gG12BJNIBzy8yAlL",
+		"2Gzbipgoj6Z7tV0d",
+		"pYzxdDoL9B71fwXi",
+		"PjXR94ictUmCN2G4",
+		"QeITEulJNBuNFS7X",
+		"AwSIYqqvkOthL8y6",
+		"iB8jzzz9vYyy680H",
+		"jNUs34pMyNSjQdP4",
+		"ULGt6UxOyy9TS7vr",
+		"ArsAS1ABBasOHhSq",
+		"BiArR79VxCvWJduT",
+		"XVUaR231fv7CO42u"
+	],
+	"name": "Zaldini the Red",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Zaldini the Red",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 12,
+				"bonus": 0
+			},
+			"con": {
+				"base": 11,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 15,
+				"bonus": 0
+			},
+			"int": {
+				"base": 17,
+				"bonus": 0
+			},
+			"str": {
+				"base": 8,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 9,
+				"bonus": 0
+			}
+		},
+		"alignment": "chaotic",
+		"ancestry": "Compendium.shadowdark.ancestries.Item.QG1lAZeLfBtXR6zh",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"base": 3,
+				"bonus": 0,
+				"max": 3,
+				"value": 3
+			}
+		},
+		"background": "Compendium.shadowdark.backgrounds.Item.eRi9oX0cqwQwV7tk",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageMultiplier": 1,
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
+			"weaponMastery": [
+			]
+		},
+		"class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs",
+		"coins": {
+			"cp": 0,
+			"gp": 8,
+			"sp": 0
+		},
+		"deity": "Compendium.shadowdark.deities.Item.6qeBzYJUTgrMhUcW",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+			"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
+			"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz",
+			"Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN",
+			"Compendium.shadowdark.languages.Item.1iECxGKqGpV3k6VZ",
+			"Compendium.shadowdark.languages.Item.FQcnF3JQRw9wL7PN"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10
+	},
+	"type": "Player"
+}

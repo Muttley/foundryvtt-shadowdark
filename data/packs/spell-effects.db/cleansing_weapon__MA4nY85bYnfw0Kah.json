@@ -1,0 +1,24 @@
+{
+	"_id": "MA4nY85bYnfw0Kah",
+	"_key": "!items.effects!7hKYL9hdnsvCUM9c.MA4nY85bYnfw0Kah",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/weapons/swords/sword-winged-pink.webp",
+	"name": "Cleansing Weapon",
+	"origin": "Item.7hKYL9hdnsvCUM9c",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

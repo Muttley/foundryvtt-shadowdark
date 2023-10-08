@@ -1,0 +1,28 @@
+{
+	"_id": "0ejsM2UIZDHs5u2f",
+	"_key": "!items!0ejsM2UIZDHs5u2f",
+	"effects": [
+	],
+	"folder": "7DWu9AynRV2zb9Rw",
+	"img": "icons/commodities/materials/feather-white.webp",
+	"name": "Feather Fall",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You may make an attempt to cast this spell when you fall.</p><p>Your rate of descent slows so that you land safely on your feet.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

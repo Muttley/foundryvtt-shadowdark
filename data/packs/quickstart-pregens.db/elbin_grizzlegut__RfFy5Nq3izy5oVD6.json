@@ -1,0 +1,192 @@
+{
+	"_id": "RfFy5Nq3izy5oVD6",
+	"_key": "!actors!RfFy5Nq3izy5oVD6",
+	"effects": [
+		"H83UQWfWESNMQUo8",
+		"cDGzOUOtVhzSVsJn",
+		"CtIJf3RlEZHk66Ww"
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/quickstart/pregens/Elbin_Grizzlegut_portrait.webp",
+	"items": [
+		"WisBTz98q7sjJRkd",
+		"ladhlMWemkIksXHk",
+		"xHdgeKNZwX1CZGQE",
+		"5wPOo8V5whIcnh53",
+		"YRADimUOmLtgLGrM",
+		"M4jvL3R1rk8IOdbm",
+		"sJM0Y7earrkzzpKo",
+		"T077p9NE16dhlFTS",
+		"DCoYkIeAIqHhwPSf",
+		"RE57glfjQDWmUPvb",
+		"cHZjYo5oMf0HxWTy",
+		"mtW8WkUwBnpqlZ4h",
+		"EaKWCUnoGhszdJCm",
+		"uGylTowCiu0J2nW1",
+		"pdCL2elKH5ufXMAA",
+		"DP89QQbqMjvF1hB1",
+		"X7udqCneh75JRAtv",
+		"ufk3xI6cL6wueXj4"
+	],
+	"name": "Elbin Grizzlegut",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Elbin Grizzlegut",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Elbin_Grizzlegut_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 8,
+				"bonus": 0
+			},
+			"con": {
+				"base": 11,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 9,
+				"bonus": 0
+			},
+			"int": {
+				"base": 12,
+				"bonus": 0
+			},
+			"str": {
+				"base": 15,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 17,
+				"bonus": 0
+			}
+		},
+		"alignment": "lawful",
+		"ancestry": "Compendium.shadowdark.ancestries.Item.80h0XXptGDZvGAIZ",
+		"attributes": {
+			"ac": {
+				"value": 14
+			},
+			"hp": {
+				"base": 5,
+				"bonus": 0,
+				"max": 7,
+				"value": 7
+			}
+		},
+		"background": "Compendium.shadowdark.backgrounds.Item.2bf6cUSTzdI7CMHE",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageMultiplier": 1,
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
+			"weaponMastery": [
+			]
+		},
+		"class": "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
+		"coins": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"deity": "Compendium.shadowdark.deities.Item.p91vJhT8FXvb2mLj",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+			"Compendium.shadowdark.languages.Item.DBK9gi6d0SGVlRwv"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10
+	},
+	"type": "Player"
+}

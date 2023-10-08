@@ -1,0 +1,18 @@
+{
+	"_id": "e020Tn4yv7Aj604M",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.e020Tn4yv7Aj604M",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Poison Web",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

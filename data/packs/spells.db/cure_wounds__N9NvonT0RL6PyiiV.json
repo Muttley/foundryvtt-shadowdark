@@ -1,0 +1,28 @@
+{
+	"_id": "N9NvonT0RL6PyiiV",
+	"_key": "!items!N9NvonT0RL6PyiiV",
+	"effects": [
+	],
+	"folder": "Gi0Kjg7bAAVEqjvM",
+	"img": "icons/magic/life/cross-explosion-burst-green.webp",
+	"name": "Cure Wounds",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>Your touch restores ebbing life.</p><p>Roll a number of d6s equal to 1 + half your level (rounded down).</p><p>One target you touch regains that many hit points.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

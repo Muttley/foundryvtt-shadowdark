@@ -17,13 +17,6 @@ export default class ItemSD extends Item {
 
 		// Store the creation time & initiative on the effect
 		if (data.type === "Effect") {
-			if (this.system.duration.type === "rounds" && !game.combat) {
-				ui.notifications.warn(
-					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
-				);
-				return false;
-			}
-
 			const combatTime = (game.combat)
 				? `${game.combat.round}.${game.combat.turn}`
 				: null;
@@ -49,7 +42,12 @@ export default class ItemSD extends Item {
 			isSpellcaster,
 			description,
 			item: this.toObject(),
+			itemProperties: await this.propertyItems(),
 		};
+
+		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+			data.spellClasses = await this.getSpellClassesDisplay();
+		}
 
 		return data;
 	}
@@ -184,11 +182,15 @@ export default class ItemSD extends Item {
 	/*  Methods                                     */
 	/* -------------------------------------------- */
 
-	hasProperty(property) {
-		for (const key of this.system.properties) {
-			if (key === property) return true;
-		}
-		return false;
+	async hasProperty(property) {
+		property = property.slugify();
+
+		const propertyItems = await this.propertyItems();
+		const propertyItem = propertyItems.find(
+			p => p.name.slugify() === property
+		);
+
+		return propertyItem ? true : false;
 	}
 
 	isActiveLight() {
@@ -220,7 +222,7 @@ export default class ItemSD extends Item {
 	}
 
 	isMagicItem() {
-		return this.system.magicItem;
+		return this.system.isPhysical && this.system.magicItem;
 	}
 
 	isVersatile() {
@@ -228,40 +230,31 @@ export default class ItemSD extends Item {
 	}
 
 	isOneHanded() {
-		return this.hasProperty("oneHanded");
+		return this.hasProperty("one-handed");
 	}
 
 	isTwoHanded() {
 		const damage = this.system.damage;
-		return this.hasProperty("twoHanded")
+		return this.hasProperty("two-handed")
 			|| (damage.oneHanded === "" && damage.twoHanded !== "");
 	}
 
-	isAShield() {
-		return this.hasProperty("shield");
+	async isAShield() {
+		return await this.hasProperty("shield");
 	}
 
-	isNotAShield() {
-		return !this.isAShield();
+	async isNotAShield() {
+		const isAShield = await this.isAShield();
+		return !isAShield;
 	}
 
-	propertiesDisplay() {
+	async propertiesDisplay() {
 		let properties = [];
 
 		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const key of this.system.properties) {
-				if (this.type === "Armor") {
-					properties.push(
-						CONFIG.SHADOWDARK.ARMOR_PROPERTIES[key]
-					);
-				}
-				else if (this.type === "Weapon") {
-					properties.push(
-						CONFIG.SHADOWDARK.WEAPON_PROPERTIES[key]
-					);
-				}
+			for (const property of await this.propertyItems()) {
+				properties.push(property.name);
 			}
-
 		}
 
 		return properties.join(", ");
@@ -334,7 +327,7 @@ export default class ItemSD extends Item {
 	 * @returns {Object}
 	 */
 	async _handlePredefinedEffect(key, value) {
-		// @todo: CUSTOMIZATION How to generalize this with custom expansion of base items?
+		// TODO: CUSTOMIZATION How to generalize this with custom expansion of base items?
 		if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
 			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
 		}
@@ -342,7 +335,7 @@ export default class ItemSD extends Item {
 			return this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
 		}
 		else if (key === "spellAdvantage") {
-			// @todo: CUSTOMIZATION Allow custom spell compendiums
+			// TODO: CUSTOMIZATION Allow custom spell compendiums
 			const spellNames = await this.getSpellListSlugified();
 			return this._askEffectInput("spell", spellNames);
 		}
@@ -357,6 +350,16 @@ export default class ItemSD extends Item {
 			return this._askEffectInput("lightSource", lightSources);
 		}
 		return value;
+	}
+
+	async propertyItems() {
+		const propertyItems = [];
+
+		for (const uuid of this.system.properties ?? []) {
+			propertyItems.push(await fromUuid(uuid));
+		}
+
+		return propertyItems;
 	}
 
 	// Duration getters
@@ -449,11 +452,24 @@ export default class ItemSD extends Item {
 	 * @returns {Array<string>}
 	 */
 	async getSpellListSlugified() {
-		// @todo: CUSTOMIZATION Allow custom spell compendiums
+		// TODO: CUSTOMIZATION Allow custom spell compendiums
 		const spellPack = game.packs.get("shadowdark.spells");
 		const spellDocuments = await spellPack.getDocuments();
 		const spellNames = {};
 		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
 		return spellNames;
+	}
+
+	async getSpellClassesDisplay() {
+		const classes = [];
+
+		for (const uuid of this.system.class ?? []) {
+			const item = await fromUuid(uuid);
+			classes.push(item.name);
+		}
+
+		classes.sort((a, b) => a.localeCompare(b));
+
+		return classes.join(", ");
 	}
 }

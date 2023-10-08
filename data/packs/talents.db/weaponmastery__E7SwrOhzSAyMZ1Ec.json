@@ -1,0 +1,30 @@
+{
+	"_id": "E7SwrOhzSAyMZ1Ec",
+	"_key": "!items.effects!5bpWuaT0KTNzuzCu.E7SwrOhzSAyMZ1Ec",
+	"changes": [
+		{
+			"key": "system.bonuses.weaponMastery",
+			"mode": 2,
+			"priority": null,
+			"value": "REPLACEME"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+	"name": "weaponMastery",
+	"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

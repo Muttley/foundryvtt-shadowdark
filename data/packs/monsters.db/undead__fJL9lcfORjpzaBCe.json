@@ -1,0 +1,18 @@
+{
+	"_id": "fJL9lcfORjpzaBCe",
+	"_key": "!actors.items!cWzG0yEVgIk8ijk6.fJL9lcfORjpzaBCe",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Undead",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

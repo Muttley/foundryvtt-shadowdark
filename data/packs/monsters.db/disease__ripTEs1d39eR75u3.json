@@ -1,0 +1,18 @@
+{
+	"_id": "ripTEs1d39eR75u3",
+	"_key": "!actors.items!OYtg4Ta4PIpvIZxq.ripTEs1d39eR75u3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Disease",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">DC 12 CON or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,49 @@
+{
+	"_id": "FWQK9qFGagcEXCq5",
+	"_key": "!items!FWQK9qFGagcEXCq5",
+	"effects": [
+		"mEwSq29I1Sr8gG2t"
+	],
+	"folder": null,
+	"img": "icons/equipment/hand/gauntlet-clawed-steel-blue.webp",
+	"name": "Gauntlets of Might",
+	"system": {
+		"abilities": {
+			"str": {
+				"base": "18",
+				"value": "18"
+			}
+		},
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Heavy, bronze gauntlets with engravings of Herculean giants.</em></p><p></p><p><strong>Benefit</strong>. Your Strength stat becomes 18 (+4) while wearing these gauntlets.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Armor"
+}

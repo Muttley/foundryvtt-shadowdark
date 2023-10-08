@@ -1,0 +1,18 @@
+{
+	"_id": "EmPgirFQm4Hz79rt",
+	"_key": "!actors.items!bILTV7P0d55nACrQ.EmPgirFQm4Hz79rt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Blood Drain",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">A</span><span class=\"fontstyle2\">ttach to bitten target; auto-hit the next round. DC 9 STR on turn to remove.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

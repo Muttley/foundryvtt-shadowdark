@@ -1,0 +1,21 @@
+{
+	"_id": "VjrDCzm64JmpoqjL",
+	"_key": "!items!VjrDCzm64JmpoqjL",
+	"effects": [
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/magic/control/buff-luck-fortune-green.webp",
+	"name": "Knack (Luck)",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You begin each session with a luck token.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

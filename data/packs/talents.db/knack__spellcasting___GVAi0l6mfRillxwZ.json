@@ -1,0 +1,25 @@
+{
+	"_id": "GVAi0l6mfRillxwZ",
+	"_key": "!items!GVAi0l6mfRillxwZ",
+	"effects": [
+		"OU9XGvWpbh2ADVNy"
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/magic/control/sihouette-hold-beam-green.webp",
+	"name": "Knack (Spellcasting)",
+	"system": {
+		"bonuses": {
+			"spellcastingCheckBonus": "1"
+		},
+		"description": "<p><span class=\"fontstyle0\">You get +1 to spellcasting checks.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

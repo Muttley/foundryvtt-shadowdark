@@ -1,0 +1,30 @@
+{
+	"_id": "N3a7CEwOlseizR4z",
+	"_key": "!items.effects!ZhykyK0shgnyC4Fh.N3a7CEwOlseizR4z",
+	"changes": [
+		{
+			"key": "system.abilities.str.base",
+			"mode": 5,
+			"priority": null,
+			"value": "18"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Str)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

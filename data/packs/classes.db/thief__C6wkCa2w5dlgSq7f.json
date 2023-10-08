@@ -1,0 +1,93 @@
+{
+	"_id": "C6wkCa2w5dlgSq7f",
+	"_key": "!items!C6wkCa2w5dlgSq7f",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Thief",
+	"system": {
+		"allArmor": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UDyHeJCreIFZ9y2I"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.sLMGErVzVfKaLW7r",
+		"description": "<p>Rooftop assassins, grinning con artists, or cloaked cat burglars who can pluck a gem from the claws of a sleeping demon and sell it for twice its worth.</p>",
+		"hitPoints": "d4",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellcasting": {
+			"ability": "",
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.KLDZKFY6SrqQKSva",
+			"Compendium.shadowdark.talents.Item.TiaXUSTLoJpjfyxD"
+		],
+		"titles": [
+			{
+				"chaotic": "Thug",
+				"from": 1,
+				"lawful": "Footpad",
+				"neutral": "Robber",
+				"to": 2
+			},
+			{
+				"chaotic": "Cutthroat",
+				"from": 3,
+				"lawful": "Burglar",
+				"neutral": "Outlaw",
+				"to": 4
+			},
+			{
+				"chaotic": "Shadow",
+				"from": 5,
+				"lawful": "Rook",
+				"neutral": "Rogue",
+				"to": 6
+			},
+			{
+				"chaotic": "Assassin",
+				"from": 7,
+				"lawful": "Underboss",
+				"neutral": "Renegade",
+				"to": 8
+			},
+			{
+				"chaotic": "Wraith",
+				"from": 9,
+				"lawful": "Boss",
+				"neutral": "Bandit King/Queen",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu",
+			"Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre",
+			"Compendium.shadowdark.gear.Item.KQTWQwznjK80gVEU",
+			"Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"
+		]
+	},
+	"type": "Class"
+}

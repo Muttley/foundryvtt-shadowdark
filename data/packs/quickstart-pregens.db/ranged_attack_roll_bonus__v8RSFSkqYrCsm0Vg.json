@@ -1,0 +1,30 @@
+{
+	"_id": "v8RSFSkqYrCsm0Vg",
+	"_key": "!actors.effects!4gxXdPgUd0ofz89A.v8RSFSkqYrCsm0Vg",
+	"changes": [
+		{
+			"key": "system.bonuses.rangedAttackBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 772,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"name": "Ranged Attack Roll Bonus",
+	"origin": "Actor.4gxXdPgUd0ofz89A.Item.AucNaHsyfCX3idxF",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

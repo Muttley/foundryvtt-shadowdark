@@ -1,0 +1,18 @@
+{
+	"_id": "8ro31FXMOL1BQLeA",
+	"_key": "!actors.items!bXYsB2bHIdtOsZgV.8ro31FXMOL1BQLeA",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Gore",
+	"system": {
+		"description": "<p>Deals an extra die of damage if it hits the same target with both tusks.</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,56 @@
+
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.compendium-item-selector {
+	font-family: "Montserrat-Medium";
+
+	form {
+		.form-group {
+			@include p-reset;
+
+			input:focus {
+				border-bottom: 1px solid #644f33;
+			}
+
+			select {
+				flex: 2;
+				margin-right: 5px;
+			}
+
+			input[type="text"] {
+				background: rgba(255, 255, 255, 0.5);
+				border: 1px solid #aaa;
+			}
+
+			input::placeholder {
+				color: var(--primary);
+			}
+
+		}
+	}
+
+	.remove-item {
+		color: darkred;
+	}
+
+	.uuid-link {
+		margin: 4px;
+	}
+
+}
+
+.fake-uuid-link {
+	background: #DDD;
+	padding: 1px 4px;
+	border: 1px solid var(--color-border-dark-tertiary);
+	margin: 4px;
+	border-radius: 2px;
+	white-space: nowrap;
+	word-break: break-all;
+
+	&:hover {
+		cursor: auto;
+		text-shadow: none;
+	}
+}

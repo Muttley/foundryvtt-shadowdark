@@ -1,0 +1,30 @@
+{
+	"_id": "UGQKMdNcgb1O8qwy",
+	"_key": "!items.effects!98HEgBRJSED5epGt.UGQKMdNcgb1O8qwy",
+	"changes": [
+		{
+			"key": "system.bonuses.weaponDamageDieD12",
+			"mode": 2,
+			"priority": null,
+			"value": "REPLACEME"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+	"name": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

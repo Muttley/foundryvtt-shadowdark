@@ -2,6 +2,10 @@
 @use "../../mixins" as *;
 
 .shadowdark.sheet.player {
+	.window-content {
+		padding: 0px;
+	}
+
 	@include p-reset;
 	color: white;
 	font-size: 18px;
@@ -19,12 +23,27 @@
 	input {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
-		font-size: 16px;
+		font-size: 1.1rem;
 
 		text-overflow: ellipsis;
 		text-align: center;
 
 		background: rgba(0, 0, 0, 0.05);
+		border: none;
+	}
+
+	label {
+		@include p-reset;
+		display: block;
+
+		font-family: "Old Newspaper Font";
+		font-size: 1.3rem;
+		font-weight: bold;
+
+		line-height: 1.1;
+
+		align-self: center;
+
 		border: none;
 	}
 
@@ -92,7 +111,7 @@
 		margin-bottom: 2px;
 	}
 
-	.attacks-label {
+	.actions-label {
 		@include p-reset;
 		display: block;
 		padding: 4px;
@@ -122,27 +141,11 @@
 	.background-notes {
 		@include p-reset;
 		display: grid;
-		grid-template-rows: min-content minmax(200px, max-content);
-		row-gap: 4px;
+		grid-template-rows: minmax(300px, max-content);
 
 		.editor {
 			background-color: var(--form-background);
 		}
-
-		label {
-			display: block;
-			@include p-reset;
-
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-			text-decoration: underline;
-
-			line-height: 1.1;
-
-			border: none;
-		}
-
 	}
 
 	.cast-spell {
@@ -202,27 +205,38 @@
 		}
 	}
 
-	.detail-box {
+	.detail-box,
+	.pc {
 		@include p-reset;
 		display: grid;
 		grid-template-columns: minmax(min-content, max-content) 1fr;
 		background-color: var(--form-background);
 		column-gap: 8px;
+
+		a {
+			font-family: "Montserrat-Medium";
+			font-size: 1.0rem;
+			font-weight: bold;
+		}
+	}
+
+	.detail-box {
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
+	}
 
-		label {
-			@include p-reset;
-			display: block;
+	.pc_ancestry,
+	.pc_background,
+	.pc_class,
+	.pc_deity,
+	.pc_languages{
+		grid-template-columns: min-content min-content 1fr;
+		align-items: center;
+	}
 
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-		}
+	.pc_title {
+		grid-template-columns: min-content 1fr;
+		align-items: center;
 	}
 
 	.detail-value {
@@ -250,6 +264,20 @@
 		color: sienna;
 	}
 
+	.fixed-header {
+		@include p-reset;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-top: 8px;
+
+		position: sticky;
+		top: 0;
+
+		background: url("/ui/parchment.jpg") repeat;
+
+		z-index: 10;
+	}
+
 	.hit-points {
 		text-align: center;
 	}
@@ -260,7 +288,8 @@
 		align-items: center;
 
 		p {
-			font-size: 18px;
+			font-size: 1.3rem;
+			font-weight: bold;
 		}
 	}
 
@@ -416,19 +445,6 @@
 		column-gap: 8px;
 		align-items: center;
 		text-align: center;
-
-		label {
-			@include p-reset;
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-		}
 	}
 
 	.luck {
@@ -439,14 +455,14 @@
 		column-gap: 4px;
 
 		p {
-			font-size: 20px;
+			font-size: 1.3rem;
 			font-weight: bold;
 		}
 	}
 
 	.player-body {
 		@include p-reset;
-		margin: 4px;
+		padding: 8px;
 	}
 
 	.player-header {
@@ -545,10 +561,11 @@
 		}
 	}
 
-	.spell-lost {
+	.strike-through {
 		text-decoration: line-through;
 	}
 
+	.class-abilities-body,
 	.spells-body {
 		@include p-reset;
 		margin: 4px;
@@ -607,6 +624,60 @@
 					@include p-reset;
 				}
 			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				.spell-tier-header,
+				.item-details
+			) {
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+		}
+	}
+
+	.class-abilities-list {
+		margin-bottom: 8px;
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 14px;
+			text-align: left;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+			}
+
+			& th:first-child {
+				text-align: left;
+				padding-left: 4px;
+			}
+
+			& th:last-child {
+				text-align: right;
+				padding-right: 4px;
+			}
+
+			& td:last-child {
+				text-align: center;
+				padding-right: 4px;
+			}
+
+			// & tr:first-child {
+			// 	// background-color: #00000020;
+
+			// 	& td {
+			// 		@include p-reset;
+			// 	}
+			// }
 
 			// Only highlight on hover rows that have actual items in them,
 			// not the section headers or header/footer rows
@@ -697,6 +768,11 @@
 			color: $primary-color;
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
+	}
+
+	.uuid-link {
+		margin: 4px;
+		// text-align: center;
 	}
 
 	.xp-score {

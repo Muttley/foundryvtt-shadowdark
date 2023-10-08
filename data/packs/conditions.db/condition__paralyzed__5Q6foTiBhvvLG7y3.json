@@ -1,0 +1,24 @@
+{
+	"_id": "5Q6foTiBhvvLG7y3",
+	"_key": "!items.effects!ROTpAUAHx5s4AZZh.5Q6foTiBhvvLG7y3",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/water/barrier-ice-crystal-wall-faceted-blue.webp",
+	"name": "Condition: Paralyzed",
+	"origin": "Item.ROTpAUAHx5s4AZZh",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,43 @@
+{
+	"_id": "iM40sRNKUdden6Ec",
+	"_key": "!actors.items!uXk56wpEwdiTfAQN.iM40sRNKUdden6Ec",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/tools/fasteners/nails-steel-brown.webp",
+	"name": "Thieves' Tools",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>ADV on checks to climb, sneak, hide, apply disguises, find and disable traps, and perform delicate tasks.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 1,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

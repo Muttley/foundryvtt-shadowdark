@@ -1,0 +1,21 @@
+{
+	"_id": "ZjCvQZ7k4hBa9y2I",
+	"_key": "!items!ZjCvQZ7k4hBa9y2I",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/consumables/fruit/black-currant-leaf-purple.webp",
+	"name": "Herbalism",
+	"system": {
+		"description": "<p>Make an INT check to find an herb you choose. If you fail, you can't try to find that herb again until you successfully complete a rest. Unused herbs lose their effect in 3 rounds.</p><p></p><p><strong>DC | Effect</strong></p><p>11 | @UUID[Compendium.shadowdark.class-abilities.Item.UzSmg3aLstFcNsUa]{Salve}. Heals 1 HP</p><p>12 | @UUID[Compendium.shadowdark.class-abilities.Item.EhaA5tBROfrws1Kx]{Stimulant}. You can't be surprised for 10 rounds</p><p>13 | @UUID[Compendium.shadowdark.class-abilities.Item.i8PZF77jaVDkCE6n]{Foebane}. ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p><p>14 | @UUID[Compendium.shadowdark.class-abilities.Item.3fck7HFRfDywsjQk]{Restorative}. Ends one poison or disease</p><p>15 | @UUID[Compendium.shadowdark.class-abilities.Item.Ussun0GbRMiJZ8vP]{Curative}. Equivalent to a @UUID[Compendium.shadowdark.magic-items.jucTGEjsqJ1znHdf]{Potion of Healing}</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

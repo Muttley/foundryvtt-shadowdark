@@ -1,0 +1,24 @@
+{
+	"_id": "X7DI8GyTNmNj9c9J",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.X7DI8GyTNmNj9c9J",
+	"image": {
+	},
+	"name": "Time",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p><strong>REAL TIME</strong></p><p>Time passes in the game world at the same pace it's passing in the real world. One minute or hour of game time is equal to one minute or hour in real time.</p><p></p><p>This matters for tracking light sources, because most light sources only last for one hour of real time.</p><p></p><p>If you can't track real time in your game, assume one hour is equal to 10 rounds.</p><p></p><p><strong>TURNS AND ROUNDS</strong></p><p>A <strong>turn</strong> is a player's moment to describe what their character does to the GM. Players act one by one on each of their turns.</p><p></p><p>Some turns need a bit of room to breathe. A character who is speaking with someone can make a few reasonable exchanges back and forth.</p><p></p><p><strong>A round completes when each person has taken one turn.</strong></p><p></p><p><strong>TIME PASSES</strong></p><p>Every moment in the game doesn't have to be accounted for in real time.</p><p></p><p>For example, if the characters want to spend 10 minutes examining a room from top to bottom, the GM and players can agree that time passes.</p><p></p><p>When time passes, the GM and players move any timers down by that amount.</p><p></p><p><strong>Minutes Pass</strong>. Effects with a duration of rounds expire. The GM rolls one random encounter check that occurs on a 1-3 on a d6 while this time is passing.</p><p></p><p><strong>Hours/Days Pass</strong>. Effects with a duration shorter than the time passed expire. The GM uses overland travel rules to check for encounters (see@UUID[Compendium.world.quickstart-guide.sxBiNC5Ee4iMIP23]{ Game Master Quickstart Guide}, pg. 14).</p><p></p><p>After resolving encounters, the game world fast-forwards to the new point in time.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

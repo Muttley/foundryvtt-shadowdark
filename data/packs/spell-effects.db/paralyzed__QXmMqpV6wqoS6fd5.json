@@ -1,0 +1,24 @@
+{
+	"_id": "QXmMqpV6wqoS6fd5",
+	"_key": "!items.effects!SN9lU9LUViWo1Plm.QXmMqpV6wqoS6fd5",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+	"name": "Paralyzed",
+	"origin": "Item.SN9lU9LUViWo1Plm",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

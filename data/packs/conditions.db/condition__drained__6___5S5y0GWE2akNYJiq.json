@@ -1,0 +1,48 @@
+{
+	"_id": "5S5y0GWE2akNYJiq",
+	"_key": "!items!5S5y0GWE2akNYJiq",
+	"effects": [
+		"iatMWq8uzO8KPaxd"
+	],
+	"folder": null,
+	"img": "icons/magic/unholy/strike-body-life-soul-green.webp",
+	"name": "Condition: Drained (6)",
+	"system": {
+		"abilities": {
+			"wis": {
+				"bonus": "-6"
+			}
+		},
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": null,
+			"value": 9009
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -6,8 +6,8 @@ import PackHandler from "../pack-handler.mjs";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 export function getCommand() {
-	const systemPacksDir =  path.resolve(`${__dirname}/../../../system/packs`);
-	const dataDir =  path.resolve(`${__dirname}/../../../data/packs`);
+	const systemPacksDir = path.resolve(`${__dirname}/../../../system/packs`);
+	const dataDir = path.resolve(`${__dirname}/../../../data/packs`);
 
 	return {
 		command: "unpack [options]",

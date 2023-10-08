@@ -1,0 +1,42 @@
+{
+	"_id": "BAJQqFdkN9lGFAyZ",
+	"_key": "!items!BAJQqFdkN9lGFAyZ",
+	"effects": [
+	],
+	"folder": "np4FRJ73NRBEQKnS",
+	"img": "icons/equipment/chest/breastplate-layered-steel-blue-gold.webp",
+	"name": "Mithral Plate Mail",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 15,
+			"modifier": 0
+		},
+		"baseArmor": "plate-mail",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 520,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Armor"
+}

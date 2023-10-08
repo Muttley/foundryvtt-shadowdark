@@ -1,0 +1,123 @@
+{
+	"_id": "bXYsB2bHIdtOsZgV",
+	"_key": "!actors!bXYsB2bHIdtOsZgV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"co6SY1QXOuwt4isd",
+		"8ro31FXMOL1BQLeA"
+	],
+	"name": "Boar",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Boar",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 0
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 14,
+				"value": 14
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "<p><em>Ornery wild pig with bristly, russet hair and yellowed tusks.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 14, <strong>ATK</strong> 2 tusk +3 (1d6), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W </strong>+1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 3</p><p></p><p><strong>Gore</strong>. Deals an extra die of damage if it hits the same target with both tusks.</p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

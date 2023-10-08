@@ -1,0 +1,44 @@
+{
+	"_id": "jucTGEjsqJ1znHdf",
+	"_key": "!items!jucTGEjsqJ1znHdf",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+	"name": "Potion of Healing",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A glass bottle with a fizzy, lemon-vanilla liquid inside.</em></p><p></p><p><strong>Benefit</strong>. The imbiber of this potion regains hit points based on its level.</p><p></p><p><strong>LV 1-3</strong>: [[/r 1d6]] hit points.</p><p><strong>LV 4-6</strong>: [[/r 2d8]] hit points.</p><p><strong>LV 7-9</strong>: [[/r 3d10]] hit points.</p><p><strong>LV 10+</strong>: [[/r 4d12]] hit points.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

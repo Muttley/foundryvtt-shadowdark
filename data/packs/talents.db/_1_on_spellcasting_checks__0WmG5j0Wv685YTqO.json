@@ -1,0 +1,25 @@
+{
+	"_id": "0WmG5j0Wv685YTqO",
+	"_key": "!items!0WmG5j0Wv685YTqO",
+	"effects": [
+		"QBX0EGnKmDfPJ8gQ"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"name": "+1 on Spellcasting Checks",
+	"system": {
+		"bonuses": {
+			"spellcastingCheckBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

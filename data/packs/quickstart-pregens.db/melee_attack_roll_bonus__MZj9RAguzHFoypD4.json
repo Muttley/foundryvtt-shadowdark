@@ -1,0 +1,30 @@
+{
+	"_id": "MZj9RAguzHFoypD4",
+	"_key": "!actors.effects!CVFznZtBMmHG2w4a.MZj9RAguzHFoypD4",
+	"changes": [
+		{
+			"key": "system.bonuses.meleeAttackBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 605,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"name": "Melee Attack Roll Bonus",
+	"origin": "Actor.CVFznZtBMmHG2w4a.Item.BYfvFLr6JblzNXU0",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": false
+}

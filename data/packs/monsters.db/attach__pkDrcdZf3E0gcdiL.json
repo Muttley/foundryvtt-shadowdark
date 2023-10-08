@@ -1,0 +1,18 @@
+{
+	"_id": "pkDrcdZf3E0gcdiL",
+	"_key": "!actors.items!UGsq7I9Gyahgd0dG.pkDrcdZf3E0gcdiL",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Attach",
+	"system": {
+		"description": "<p><span class=\"fontstyle2\">Attach to target; bite auto-hits next round. DC 12 STR on turn to tear off.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

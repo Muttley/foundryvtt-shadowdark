@@ -1,0 +1,44 @@
+{
+	"_id": "N27A6nb0epkHZ3lR",
+	"_key": "!items!N27A6nb0epkHZ3lR",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/scrolls/scroll-writing-orange-black.webp",
+	"name": "Scroll of Burning Hands",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.ItN82uLU3PhJFLNm]{Burning Hands}</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"predefinedEffects": "",
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"treasure": false
+	},
+	"type": "Basic"
+}

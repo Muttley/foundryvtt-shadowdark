@@ -1,0 +1,18 @@
+{
+	"_id": "pp4pDGeGwU6yS1GD",
+	"_key": "!actors.items!k2YdCMGiq3USE8oE.pp4pDGeGwU6yS1GD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Healing Touch (WIS Spell)",
+	"system": {
+		"description": "<p>DC 11. Heal one creature within close for 1d4 HP.</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,195 @@
+{
+	"_id": "PTFsYZ8ni3MbSdw8",
+	"_key": "!actors!PTFsYZ8ni3MbSdw8",
+	"effects": [
+		"gkKBIvn9MFzJVHRo",
+		"hLAUcwBamgdBx4fj"
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/quickstart/pregens/Creeg_Greythorn-portrait.webp",
+	"items": [
+		"nNrwojodUMPDNzcv",
+		"SNXENbquwIjutUJb",
+		"sz1Gs3iY5MUWxYpi",
+		"zKAsEsIkGqHapmLH",
+		"HfM0MiY94jVNSgvc",
+		"GtncgMsIBndkotOc",
+		"8ZpTsEeOlSwVXych",
+		"oGqS5PguQp3WZZQy",
+		"8e9zdenZBp76oo5p",
+		"5xUXFKSnVONHeZ4N",
+		"x3r2C2HW9zycqkJf",
+		"aU0KJPOsU8ioO9id",
+		"B9L3dgwKFfsfHWYL",
+		"qVtTmQObYWWaInEl",
+		"oyJqz7mu7vZ9bfTH",
+		"MYxdVR3i1TOckdK0",
+		"9IM4SDWD0HsdFNav",
+		"ziR7s77XEKZFpap3",
+		"WTy4zczgHGERH7zP"
+	],
+	"name": "Creeg Greythorn",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Creeg Greythorn",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Creeg_Greythorn_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 11,
+				"bonus": 0
+			},
+			"con": {
+				"base": 10,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 13,
+				"bonus": 0
+			},
+			"int": {
+				"base": 16,
+				"bonus": 0
+			},
+			"str": {
+				"base": 7,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 14,
+				"bonus": 0
+			}
+		},
+		"alignment": "lawful",
+		"ancestry": "Compendium.shadowdark.ancestries.Item.w3gbUH2DOBxfZPHO",
+		"attributes": {
+			"ac": {
+				"value": 11
+			},
+			"hp": {
+				"base": 3,
+				"bonus": 0,
+				"max": 3,
+				"value": 3
+			}
+		},
+		"background": "Compendium.shadowdark.backgrounds.Item.4QQNmFHKVIY6aOpW",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageMultiplier": 1,
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
+			"weaponMastery": [
+			]
+		},
+		"class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs",
+		"coins": {
+			"cp": 0,
+			"gp": 6,
+			"sp": 0
+		},
+		"deity": "Compendium.shadowdark.deities.Item.w9GdZSr5XYNjIeeR",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+			"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz",
+			"Compendium.shadowdark.languages.Item.wABiw5UhzG2G8Kpa",
+			"Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN",
+			"Compendium.shadowdark.languages.Item.MtNt0wGJ3OaDVl7x",
+			"Compendium.shadowdark.languages.Item.ufwua5RXnJXlA0St"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10
+	},
+	"type": "Player"
+}

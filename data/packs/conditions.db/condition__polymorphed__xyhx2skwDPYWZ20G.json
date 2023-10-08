@@ -1,0 +1,24 @@
+{
+	"_id": "xyhx2skwDPYWZ20G",
+	"_key": "!items.effects!rW7oltlWDmteEpV7.xyhx2skwDPYWZ20G",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
+	"name": "Condition: Polymorphed",
+	"origin": "Item.rW7oltlWDmteEpV7",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

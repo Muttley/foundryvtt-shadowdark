@@ -1,70 +1,74 @@
 <section class="effect-panel" style="{{topStyle}}">
 	<div id="effect-panel-drag-handler" />
-  {{#each conditionEffects as |effect|}}
-    {{> effect effect=effect }}
-  {{/each}}
+	{{#each conditionEffects as |effect|}}
+		{{> effect effect=effect }}
+	{{/each}}
 
 	{{#if (and conditionEffects.length (or temporaryEffects.length passiveEffects.length))}}
-	<hr />
+		<hr />
 	{{/if}}
 
-  {{#each temporaryEffects as |effect|}}
-    {{> effect effect=effect }}
-  {{/each}}
+	{{#each temporaryEffects as |effect|}}
+		{{> effect effect=effect }}
+	{{/each}}
 
 	{{#if (and temporaryEffects.length passiveEffects.length)}}
-	<hr />
+		<hr />
 	{{/if}}
 
 	{{#each passiveEffects as |effect|}}
-    {{> effect effect=effect }}
-  {{/each}}
+		{{> effect effect=effect }}
+	{{/each}}
 </section>
 
 {{#*inline "effect"}}
-<div class="effect-item">
-  <div class="effect-info">
-    <h1>
-      {{effect.effectName}} ({{effect.originName}})
-    </h1>
+	<div class="effect-item">
+		<div class="effect-info">
+			<h1>
+				{{effect.effectName}} ({{effect.originName}})
+			</h1>
 
-		<div class="tags">
-			{{#if effect.temporary}}
-			<h2 class="duration">{{remainingTimeLabel effect}}</h2>
-			{{else if effect.talentType}}
-			<h2 class="talent">
-				{{#ifEq effect.talentType "level"}}
-					{{localize "SHADOWDARK.talent.class.level"}}
-				{{/ifEq}}
-				{{#ifEq effect.talentType "ancestry"}}
-					{{localize "SHADOWDARK.talent.class.ancestry"}}
-				{{/ifEq}}
-				{{#ifEq effect.talentType "class"}}
-					{{localize "SHADOWDARK.talent.class.class"}}
-				{{/ifEq}}
-			</h2>
-			{{/if}}
+			<div class="tags">
+				{{#if effect.temporary}}
+					<h2 class="duration">{{remainingTimeLabel effect}}</h2>
+				{{else if effect.talentType}}
+					<h2 class="talent">
+						{{#ifEq effect.talentType "level"}}
+							{{localize "SHADOWDARK.talent.class.level"}}
+						{{/ifEq}}
+						{{#ifEq effect.talentType "ancestry"}}
+							{{localize "SHADOWDARK.talent.class.ancestry"}}
+						{{/ifEq}}
+						{{#ifEq effect.talentType "class"}}
+							{{localize "SHADOWDARK.talent.class.class"}}
+						{{/ifEq}}
+					</h2>
+				{{/if}}
+			</div>
+
+			<h2>
+				<em>
+					{{localize "SHADOWDARK.apps.effect_panel.right_click_to_remove"}}
+				</em>
+			</h3>
 		</div>
 
-		<h2><em>{{localize "SHADOWDARK.apps.effect_panel.right_click_to_remove"}}</em></h3>
+		<div
+			class="icon"
+			data-effect-id="{{effect.id}}"
+			style="background-image: url({{effect.icon}});"
+		>
+			{{#if effect.temporary}}
+				<i class="badge fas fa-xs fa-clock"></i>
+				<div
+					class="progress"
+					style="--progress: {{effect.remainingDuration.progress}}%;
+						{{getProgressColor effect.remainingDuration.progress}}"
+				>
+				</div>
+			{{else}}
+				<i class="badge unlimited fas fa-xs fa-infinity"></i>
+			{{/if}}
+		</div>
 	</div>
-
-	<div
-		class="icon"
-		data-effect-id="{{effect.id}}"
-		style="background-image: url({{effect.icon}});"
-	>
-		{{#if effect.temporary}}
-			<i class="badge fas fa-xs fa-clock"></i>
-			<div
-				class="progress"
-				style="--progress: {{effect.remainingDuration.progress}}%;
-					{{getProgressColor effect.remainingDuration.progress}}"
-			>
-			</div>
-		{{else}}
-			<i class="badge unlimited fas fa-xs fa-infinity"></i>
-		{{/if}}
-	</div>
-</div>
 {{/inline}}

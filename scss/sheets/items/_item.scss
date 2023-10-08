@@ -29,7 +29,7 @@
 		display: block;
 
 		font-family: "Old Newspaper Font";
-		font-size: 22px;
+		font-size: 18px;
 		font-weight: bold;
 
 		line-height: 1.1;
@@ -49,6 +49,63 @@
 		background-color: var(--form-background);
 		display: grid;
 		row-gap: 4px;
+	}
+
+	.choice-selector {
+		display: grid;
+		// grid-column: span 2;
+
+		font-family: "Montserrat-Medium";
+		font-size: 1.0rem;
+		font-weight: bold;
+
+		form {
+			.form-group {
+				@include p-reset;
+
+				input:focus {
+					border-bottom: 1px solid #644f33;
+				}
+
+				select {
+					flex: 2;
+					margin-right: 5px;
+				}
+
+				input[type="text"] {
+					background: rgba(255, 255, 255, 0.5);
+					border: 1px solid #aaa;
+				}
+
+				input::placeholder {
+					color: var(--primary);
+				}
+
+			}
+		}
+
+		.delete-choice {
+			color: darkred;
+		}
+
+		.uuid-link {
+			margin: 4px;
+		}
+	}
+
+	.class-details {
+		grid-column: span 3;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 4px;
+	}
+
+	.class-equipment-details {
+		grid-column: span 3;
+		display: grid;
+		grid-template-columns: 1.5fr 1.5fr 1fr;
+		align-items: baseline;
+		grid-column-gap: 4px;
 	}
 
 	.coins {
@@ -163,6 +220,7 @@
 	}
 
 	.equipped,
+	.checkbox,
 	.light-source,
 	.magic-item,
 	.treasure {
@@ -268,6 +326,14 @@
 		row-gap: 4px;
 	}
 
+	.section-header {
+		grid-column: span 3;
+		background: rgba(0, 0, 0, 0.05);
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: left;
+	}
+
 	.slots {
 		display: grid;
 		row-gap: 4px;
@@ -309,6 +375,12 @@
 		row-gap: 4px;
 	}
 
+	.item-detail {
+		background-color: var(--form-background);
+		display: grid;
+		row-gap: 4px;
+	}
+
 	.item-navigation {
 		&__flex {
 			display: flex;
@@ -344,10 +416,11 @@
 	.item-property {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: max-content 1fr;
+		grid-template-columns: min-content min-content 1fr;
 		column-gap: 8px;
 		font-family: "Montserrat-Medium";
 		font-size: 16px;
+		align-items: center;
 
 		p {
 			background-color: var(--form-background);
@@ -363,6 +436,53 @@
 		&:not([disabled]):hover {
 			cursor: pointer;
 			box-shadow: 0 0 5px var(--color-shadow-primary);
+		}
+	}
+
+	.titles-list {
+		input {
+			font-size: 13px;
+		}
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 16px;
+			text-align: center;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+				text-align: left;
+			}
+
+			& tr {
+				vertical-align: top;
+			}
+
+			& tr:first-child,
+			& tr:nth-child(2) {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(:first-child,
+				:nth-child(2),
+				:nth-last-child(1)
+			) {
+				font-size: 13px;
+
+				&:hover {
+					background-color: var(--background-highlight)
+				}
+			}
+
 		}
 	}
 }

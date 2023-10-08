@@ -39,8 +39,8 @@ export default ({ describe, it, after, before, expect }) => {
 		await closeDialogs();
 	});
 
-	// @todo: Generalize tests and run for Player & NPC
-	// @todo: Split out special cases for Players & NPCs
+	// TODO: Generalize tests and run for Player & NPC
+	// TODO: Split out special cases for Players & NPCs
 	describe("getData(options)", () => {
 		let actor = {};
 		let actorSheetData = {};
@@ -65,7 +65,7 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actorSheetData.cssClass).equal("editable");
 		});
 
-		// @todo: how should we mock non-owner?
+		// TODO: how should we mock non-owner?
 		it("sets locked css class for non-owner", async () => {});
 
 		it("isNpc is false for Player actor", async () => {
@@ -89,7 +89,7 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actorSheetData.owner).is.true;
 		});
 
-		// @todo: how to test the `rollData`?
+		// TODO: how to test the `rollData`?
 		it("rollData bound from actors getRollData", async () => {});
 
 		it("contains the source system data", async () => {
@@ -102,12 +102,12 @@ export default ({ describe, it, after, before, expect }) => {
 			// expect(actorSheetData.system).equal(actor.system);
 		});
 
-		// @todo: write tests for this when it is part of the context
+		// TODO: write tests for this when it is part of the context
 		describe("abiltiy scores for are", () => {
 			abilities.forEach(ability => {
 				it(`translated label for ${ability}`, async () => {});
 				// Deeply tested in documents-actor.test.mjs
-				// @todo: write simple tests with non-0 modifier
+				// TODO: write simple tests with non-0 modifier
 				it("has modifiers calculated for player", async () => {});
 			});
 		});
@@ -145,7 +145,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 		before(async () => {
 			actor = await createMockActor("Player");
-			// @todo: Does not work for Gem right now, test for all items.
+			// TODO: Does not work for Gem right now, test for all items.
 			item = await createMockItem("Armor");
 			await actor.createEmbeddedDocuments("Item", [item]);
 			actorItem = await actor.items.contents[0];
@@ -237,7 +237,7 @@ export default ({ describe, it, after, before, expect }) => {
 			await waitForInput();
 			const deleteDialogs = Object.values(ui.windows).filter(o => o.options.classes.includes("dialog"));
 			expect(deleteDialogs.length).equal(1);
-			// @todo: i18n
+			// TODO: i18n
 			expect(deleteDialogs[0].data.title).equal("Confirm Deletion");
 		});
 

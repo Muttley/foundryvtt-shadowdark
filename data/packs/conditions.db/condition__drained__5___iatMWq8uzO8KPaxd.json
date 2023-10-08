@@ -1,0 +1,30 @@
+{
+	"_id": "iatMWq8uzO8KPaxd",
+	"_key": "!items.effects!BcWf0hoWC2DZyaFH.iatMWq8uzO8KPaxd",
+	"changes": [
+		{
+			"key": "system.abilities.wis.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "-5"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/unholy/strike-body-life-soul-green.webp",
+	"name": "Condition: Drained (5)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

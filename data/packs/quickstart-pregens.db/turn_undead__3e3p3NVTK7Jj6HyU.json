@@ -1,0 +1,27 @@
+{
+	"_id": "3e3p3NVTK7Jj6HyU",
+	"_key": "!actors.items!CVFznZtBMmHG2w4a.3e3p3NVTK7Jj6HyU",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"name": "Turn Undead",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You rebuke undead creatures, forcing them to flee. You must present a holy symbol to cast this spell.</p><p>Undead creatures within near of you must make a CHA check opposed by your spellcasting check. If a creature fails by 10+ points and is equal to or less than your level, it is destroyed. Otherwise, on a fail, it flees from you for 5 rounds.</p>",
+		"duration": {
+			"type": "instant",
+			"value": ""
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

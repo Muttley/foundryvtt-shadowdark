@@ -1,0 +1,30 @@
+{
+	"_id": "WCWsRH7oi6ARjE6F",
+	"_key": "!items!WCWsRH7oi6ARjE6F",
+	"effects": [
+	],
+	"folder": "7DWu9AynRV2zb9Rw",
+	"img": "icons/magic/light/explosion-star-glow-yellow.webp",
+	"name": "Light",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p><p>@UUID[Compendium.shadowdark.gear.Item.PkQXG3AaHNMVwGTc]{Light Spell}</p><p>@UUID[Compendium.shadowdark.gear.Item.BBDG7QpHOFXG6sKe]{Light Spell (Double Range)}</p><p>@UUID[Compendium.shadowdark.gear.Item.rjNBToTJCYLLdVcT]{Light Spell (Double Time)}</p>",
+		"duration": {
+			"type": "realTime",
+			"value": "1h"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

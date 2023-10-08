@@ -73,7 +73,7 @@ import chatChatcardTests, {
 } from "../chat/__tests__/chat-chatcard.test.mjs";
 
 /* Dice Imports */
-// @todo: Refactor the Dice mechanics to be more intiutive to find
+// TODO: Refactor the Dice mechanics to be more intiutive to find
 import diceTests, {
 	key as diceKey,
 	options as diceOptions,

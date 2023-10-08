@@ -47,7 +47,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("render(force, options)", () => {
-		// @todo: Write tests if you figure out how to mock another user
+		// TODO: Write tests if you figure out how to mock another user
 	});
 
 	describe("toggleInterface()", () => {
@@ -73,7 +73,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("toggleLightSource()", () => {
-		// @todo: Figure out how to test sockets
+		// TODO: Figure out how to test sockets
 		// Mock an actor and test if there is a socket message in console
 		// Mock actor and activate a lightsource
 	});
@@ -145,14 +145,14 @@ export default ({ describe, it, after, before, expect }) => {
 			await game.shadowdark.lightSourceTracker.toggleInterface();
 		});
 
-		it("world sanity check: less than 10 world actors", () => {
-			// These tests are sensitive to number of actors in the world,
-			// as it iterates over them. And it seems to not function very
-			// stable above 10 actors (on bakbak's machine).
-			//
-			// If you see this test failing, create a fresh world and run the suite.
-			expect(game.actors.contents.length).to.be.below(10);
-		});
+		// it("world sanity check: less than 10 world actors", () => {
+		// 	// These tests are sensitive to number of actors in the world,
+		// 	// as it iterates over them. And it seems to not function very
+		// 	// stable above 10 actors (on bakbak's machine).
+		// 	//
+		// 	// If you see this test failing, create a fresh world and run the suite.
+		// 	expect(game.actors.contents.length).to.be.below(10);
+		// });
 
 		it("actor sanity check", () => {
 			expect(mockActor).is.not.undefined;
@@ -202,6 +202,6 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("onUpdateWorldTime", () => {
-		// @todo: figure out how to test
+		// TODO: figure out how to test
 	});
 };

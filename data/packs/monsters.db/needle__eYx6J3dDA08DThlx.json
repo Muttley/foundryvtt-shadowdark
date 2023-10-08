@@ -1,0 +1,39 @@
+{
+	"_id": "eYx6J3dDA08DThlx",
+	"_key": "!actors.items!RAEbIzHkREYWKvLh.eYx6J3dDA08DThlx",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Needle",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 3,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 1
+		},
+		"damage": {
+			"numDice": 0,
+			"special": "Poison",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

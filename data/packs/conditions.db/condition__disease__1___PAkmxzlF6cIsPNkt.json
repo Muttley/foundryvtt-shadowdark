@@ -1,0 +1,30 @@
+{
+	"_id": "PAkmxzlF6cIsPNkt",
+	"_key": "!items.effects!WRFmdFxvPhVKXQB2.PAkmxzlF6cIsPNkt",
+	"changes": [
+		{
+			"key": "system.abilities.con.bonus",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/death/skull-poison-green.webp",
+	"name": "Condition: Disease (1)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

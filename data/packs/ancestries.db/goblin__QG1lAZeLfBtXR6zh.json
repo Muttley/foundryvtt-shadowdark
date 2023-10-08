@@ -1,0 +1,33 @@
+{
+	"_id": "QG1lAZeLfBtXR6zh",
+	"_key": "!items!QG1lAZeLfBtXR6zh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Goblin",
+	"system": {
+		"description": "<p>Green, clever beings who thrive in dark, cramped places. As fierce as they are tiny.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.Gf5dApLfOorbQn4R"
+		]
+	},
+	"type": "Ancestry"
+}

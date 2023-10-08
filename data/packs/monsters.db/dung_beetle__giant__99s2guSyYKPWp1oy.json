@@ -1,0 +1,123 @@
+{
+	"_id": "99s2guSyYKPWp1oy",
+	"_key": "!actors!99s2guSyYKPWp1oy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"d9d7nFVuNyHJivZo",
+		"weIDcJAt1hdml23N"
+	],
+	"name": "Dung Beetle, Giant",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Dung Beetle, Giant",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -3
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": -1
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 1
+			},
+			"wis": {
+				"mod": -1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 10,
+				"value": 10
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 2
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "<p><em>A trundling, barrel-sized beetle with a T-shaped horn.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 10, <strong>ATK</strong> 1 horn +1 (1d4 + knock), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I </strong>-3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p><p><strong>Knock.</strong> DC 9 STR or pushed a close distance and fall down.</p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

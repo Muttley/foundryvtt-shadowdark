@@ -1,0 +1,42 @@
+{
+	"_id": "LDzTLiVPs1Qvyrzk",
+	"_key": "!items!LDzTLiVPs1Qvyrzk",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+	"name": "Condition: Invisible",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is invisible.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": null,
+			"value": 9009
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

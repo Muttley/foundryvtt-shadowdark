@@ -42,10 +42,10 @@ export default ({ describe, it, after, before, expect }) => {
 	/*  Data Generation for Displaying              */
 	/* -------------------------------------------- */
 	describe("_getChatCardData(rollResult, speaker, target=false)", () => {
-		it("normal roll", () => {
+		it("normal roll", async () => {
 			const roll = mockRollResult(20, 12);
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "");
+			const chatData = await RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -62,10 +62,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.undefined;
 		});
 
-		it("critical success roll", () => {
+		it("critical success roll", async () => {
 			const roll = mockRollResult(20, 20, "success");
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "");
+			const chatData = await RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -82,10 +82,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.undefined;
 		});
 
-		it("critical failure roll", () => {
+		it("critical failure roll", async () => {
 			const roll = mockRollResult(20, 1, "failure");
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "");
+			const chatData = await RollSD._getChatCardData(rolls, "");
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -102,10 +102,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.undefined;
 		});
 
-		it("provided a target, determination of success is return", () => {
+		it("provided a target, determination of success is return", async () => {
 			const roll = mockRollResult(20, 12);
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "", 12);
+			const chatData = await RollSD._getChatCardData(rolls, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -122,10 +122,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.not.undefined;
 		});
 
-		it("rolling under target leads to failure", () => {
+		it("rolling under target leads to failure", async () => {
 			const roll = mockRollResult(20, 12);
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "", 13);
+			const chatData = await RollSD._getChatCardData(rolls, "", 13);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -143,10 +143,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.false;
 		});
 
-		it("rolling equal to target leads to success", () => {
+		it("rolling equal to target leads to success", async () => {
 			const roll = mockRollResult(20, 12);
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "", 12);
+			const chatData = await RollSD._getChatCardData(rolls, "", 12);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -164,10 +164,10 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(chatData.flags.success).is.true;
 		});
 
-		it("rolling over target leads to success", () => {
+		it("rolling over target leads to success", async () => {
 			const roll = mockRollResult(20, 12);
 			const rolls = { main: roll };
-			const chatData = RollSD._getChatCardData(rolls, "", 11);
+			const chatData = await RollSD._getChatCardData(rolls, "", 11);
 
 			expect(chatData).is.not.undefined;
 			expect(chatData.user).is.not.undefined;
@@ -193,13 +193,13 @@ export default ({ describe, it, after, before, expect }) => {
 		before(async () => {
 			data.item = await createMockItemByKey(key, "Weapon");
 			data.actor = await createMockActorByKey(key, "Player");
-			// @todo: Have the function generate this instead
+			// TODO: Have the function generate this instead
 			data.rolls = {
 				main: mockRollResult(20, 15),
 				primaryDamage: mockRollResult(8, 4),
 				secondaryDamage: mockRollResult(10, 7),
 			};
-			templateData = RollSD._getChatCardTemplateData(data);
+			templateData = await RollSD._getChatCardTemplateData(data);
 		});
 
 		after(() => {
@@ -247,9 +247,9 @@ export default ({ describe, it, after, before, expect }) => {
 			});
 
 			it("versatile weapon", async () => {
-				await data.item.update({"system.properties": ["versatile"], "system.damage": { oneHanded: "d8", twoHanded: "d10"}});
+				await data.item.update({"system.properties": ["Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"], "system.damage": { oneHanded: "d8", twoHanded: "d10"}});
 				await waitForInput();
-				templateData = RollSD._getChatCardTemplateData(data);
+				templateData = await RollSD._getChatCardTemplateData(data);
 				expect(templateData.isSpell).is.false;
 				expect(templateData.isWeapon).is.true;
 				expect(templateData.isVersatile).is.true;
@@ -257,7 +257,7 @@ export default ({ describe, it, after, before, expect }) => {
 
 			it("critical", async () => {
 				data.rolls.main.critical = "success";
-				templateData = RollSD._getChatCardTemplateData(data);
+				templateData = await RollSD._getChatCardTemplateData(data);
 				expect(templateData.data.rolls).is.not.undefined;
 				expect(templateData.data.rolls.main).is.not.undefined;
 				expect(templateData.data.rolls.main.renderedHTML).is.not.undefined;
@@ -268,7 +268,7 @@ export default ({ describe, it, after, before, expect }) => {
 			it("spells", async () => {
 				data.item = await createMockItemByKey(key, "Spell");
 				data.rolls.main.critical = null;
-				templateData = RollSD._getChatCardTemplateData(data);
+				templateData = await RollSD._getChatCardTemplateData(data);
 				expect(templateData.isSpell).is.true;
 				expect(templateData.isWeapon).is.false;
 				expect(templateData.isVersatile).is.false;

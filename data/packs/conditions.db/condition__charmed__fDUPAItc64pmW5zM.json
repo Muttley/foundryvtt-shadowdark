@@ -1,0 +1,44 @@
+{
+	"_id": "fDUPAItc64pmW5zM",
+	"_key": "!items!fDUPAItc64pmW5zM",
+	"effects": [
+		"g02s1plvTDRI6Ido"
+	],
+	"folder": null,
+	"img": "icons/magic/life/heart-shadow-red.webp",
+	"name": "Condition: Charmed",
+	"system": {
+		"category": "condition",
+		"description": "<p>The character is charmed and regards the source as a friend.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": null,
+			"initiative": null,
+			"value": 9009
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,42 @@
+{
+	"_id": "MyHXrPewu36OmWB6",
+	"_key": "!items!MyHXrPewu36OmWB6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
+	"name": "Ophidian Armor",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 11,
+			"modifier": 1
+		},
+		"baseArmor": "",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Glistening, smooth leather of dappled emerald scales.</em></p><p></p><p><strong>Bonus</strong>. +1 leather armor.</p><p></p><p><strong>Benefit</strong>. You have advantage on checks to avoid the effects of poison.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Armor"
+}

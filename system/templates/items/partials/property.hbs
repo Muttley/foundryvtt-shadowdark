@@ -1,0 +1,13 @@
+<div class="item-details">
+	<div class="property-detail">
+		<label>{{localize 'SHADOWDARK.property.type.title'}}</label>
+		<select name="system.itemType">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.PROPERTY_TYPES
+				selected=system.itemType
+				localize=false
+			}}
+		</select>
+	</div>
+</div>

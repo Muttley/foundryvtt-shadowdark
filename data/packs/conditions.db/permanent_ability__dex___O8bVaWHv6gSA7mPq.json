@@ -1,0 +1,30 @@
+{
+	"_id": "O8bVaWHv6gSA7mPq",
+	"_key": "!items.effects!lsVOr4eduzSNGkVY.O8bVaWHv6gSA7mPq",
+	"changes": [
+		{
+			"key": "system.abilities.dex.base",
+			"mode": 5,
+			"priority": null,
+			"value": "3"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/unholy/strike-hand-glow-pink.webp",
+	"name": "Permanent Ability (Dex)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

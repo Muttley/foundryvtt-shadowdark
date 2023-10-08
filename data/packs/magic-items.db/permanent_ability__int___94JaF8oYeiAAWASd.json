@@ -1,0 +1,30 @@
+{
+	"_id": "94JaF8oYeiAAWASd",
+	"_key": "!items.effects!K7PJLC0GUhtQ7aX2.94JaF8oYeiAAWASd",
+	"changes": [
+		{
+			"key": "system.abilities.int.base",
+			"mode": 5,
+			"priority": null,
+			"value": "18"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Int)",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,30 @@
+{
+	"_id": "YPYxo5WhLBPCnkRd",
+	"_key": "!items.effects!rbOmeG3R2mmiiIMT.YPYxo5WhLBPCnkRd",
+	"changes": [
+		{
+			"key": "system.abilities.int.base",
+			"mode": 5,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/invertebrates/centipede-brown.webp",
+	"name": "Condition: Bug Brain",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

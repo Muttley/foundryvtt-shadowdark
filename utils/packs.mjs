@@ -10,7 +10,7 @@ const PACK_WATCH_PATH = "./data/packs/**/*.json";
 const packHandler = new PackHandler({
 	destination: PACK_DST_PATH,
 	inputFormat: "json",
-	outputFormat: "nedb",
+	outputFormat: "leveldb",
 	source: PACK_SRC_PATH,
 });
 

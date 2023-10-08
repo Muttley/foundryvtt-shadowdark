@@ -1,0 +1,44 @@
+{
+	"_id": "1aradLNjYF4F3EAU",
+	"_key": "!actors.items!uXk56wpEwdiTfAQN.1aradLNjYF4F3EAU",
+	"effects": [
+		"sx2uVw9MzQNA7mnd"
+	],
+	"folder": null,
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "+2 to Dexterity",
+	"system": {
+		"abilities": {
+			"cha": {
+				"bonus": "0"
+			},
+			"con": {
+				"bonus": "0"
+			},
+			"dex": {
+				"bonus": "2"
+			},
+			"int": {
+				"bonus": "0"
+			},
+			"str": {
+				"bonus": "0"
+			},
+			"wis": {
+				"bonus": "0"
+			}
+		},
+		"description": "",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talent": {
+			"damageBonus": 1
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

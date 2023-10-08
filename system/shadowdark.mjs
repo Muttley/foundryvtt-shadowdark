@@ -1,17 +1,18 @@
-import SHADOWDARK from "./src/config.mjs";
+import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
+import Logger from "./src/utils/Logger.mjs";
 import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
-import log from "./src/utils/logging.mjs";
+import SHADOWDARK from "./src/config.mjs";
+import UtilitySD from "./src/utils/UtilitySD.mjs";
 
-import * as chat from "./src/chat/_module.mjs";
 import * as apps from "./src/apps/_module.mjs";
+import * as chat from "./src/chat/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { cacheForeignDocuments } from "./src/documents/cacheForeignDocuments.mjs";
 import { ModuleArt } from "./src/utils/module-art.mjs";
 import { ToursSD } from "./src/tours.mjs";
 
@@ -29,12 +30,17 @@ import "./src/testing/index.mjs";
 
 globalThis.shadowdark = {
 	apps,
+	compendiums: CompendiumsSD,
 	config: SHADOWDARK,
+	debug: Logger.debug,
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
-	log,
+	error: Logger.error,
+	log: Logger.log,
 	sheets,
+	utils: UtilitySD,
+	warn: Logger.warn,
 };
 
 /* -------------------------------------------- */
@@ -63,7 +69,7 @@ Hooks.once("init", () => {
 	CONFIG.Item.documentClass = documents.ItemSD;
 	CONFIG.DiceSD = dice.DiceSD;
 
-	// @todo: V11 Compatability legacyTransferral
+	// TODO: V11 Compatability legacyTransferral
 	//   Update to use the designed interface as specified here, once implemented into core
 	//   https://github.com/foundryvtt/foundryvtt/issues/9185
 	if (game.version.split(".")[0] >= 11) CONFIG.ActiveEffect.legacyTransferral = true;
@@ -112,9 +118,6 @@ Hooks.once("init", () => {
 // A hook event that fires when the game is fully ready.
 //
 Hooks.on("ready", async () => {
-	// Build the initial foreign document cache
-	await cacheForeignDocuments();
-
 	// Check to see if any data migrations need to be run, and then run them
 	await performDataMigration();
 

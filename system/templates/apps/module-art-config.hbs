@@ -1,22 +1,22 @@
 <form>
 	{{#each config}}
 		<div class="form-group-stacked" data-id="{{id}}">
-				<label>{{label}}</label>
-				<div class="form-fields">
-						<label>
-								{{localize "SHADOWDARK.module_art_config.portraits"}}
-								<input type="checkbox" name="{{id}}.portraits" {{checked portraits}}>
-						</label>
-						<label>
-								{{localize "SHADOWDARK.module_art_config.tokens"}}
-								<input type="checkbox" name="{{id}}.tokens" {{checked tokens}}>
-						</label>
-				</div>
+			<label>{{label}}</label>
+			<div class="form-fields">
+				<label>
+					{{localize "SHADOWDARK.module_art_config.portraits"}}
+					<input type="checkbox" name="{{id}}.portraits" {{checked portraits}}>
+				</label>
+				<label>
+					{{localize "SHADOWDARK.module_art_config.tokens"}}
+					<input type="checkbox" name="{{id}}.tokens" {{checked tokens}}>
+				</label>
+			</div>
 		</div>
 	{{/each}}
 	<footer class="sheet-footer flexrow">
-			<button type="submit">
-					<i class="far fa-save"></i> {{localize "SHADOWDARK.settings.module_art.save"}}
-			</button>
+		<button type="submit">
+			<i class="far fa-save"></i> {{localize "SHADOWDARK.settings.module_art.save"}}
+		</button>
 	</footer>
 </form>

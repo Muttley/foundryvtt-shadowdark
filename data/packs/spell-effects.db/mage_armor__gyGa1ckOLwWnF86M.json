@@ -1,0 +1,30 @@
+{
+	"_id": "gyGa1ckOLwWnF86M",
+	"_key": "!items.effects!Gyol5I0ZdApO8MPe.gyGa1ckOLwWnF86M",
+	"changes": [
+		{
+			"key": "system.attributes.ac.override",
+			"mode": 5,
+			"priority": null,
+			"value": "18"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+	"name": "Mage Armor",
+	"origin": "Compendium.shadowdark.spell-effects.Item.Gyol5I0ZdApO8MPe",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

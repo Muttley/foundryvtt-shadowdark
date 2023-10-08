@@ -1,0 +1,61 @@
+{
+	"_id": "iEbHLvRPWNXo32qm",
+	"_key": "!items!iEbHLvRPWNXo32qm",
+	"effects": [
+		"Rzbo47LZEvpyHfqg",
+		"pwG7d70XZD8JJL5p"
+	],
+	"folder": null,
+	"img": "icons/weapons/polearms/pike-flared-brown.webp",
+	"name": "Vigilant",
+	"system": {
+		"attackBonus": "1",
+		"baseWeapon": "spear",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1",
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"bonus": "1",
+			"critMultiplier": 2,
+			"numDice": 1,
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><strong>Benefit</strong>. The wielder cannot be surprised.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"thrown"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

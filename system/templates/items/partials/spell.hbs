@@ -1,49 +1,52 @@
-<div class="spell-details">
-	{{#ifNeq item.type "Spell"}}
+<div class="item-details">
+	<div class="spell-details">
+		{{#ifNeq item.type "Spell"}}
+			<div class="spell-detail">
+				<label>{{localize 'SHADOWDARK.item.spell_name'}}</label>
+				<input
+					name="sytem.spellName"
+					type="text"
+					value="{{item.system.spellName}}"
+					placeholder="{{localize 'SHADOWDARK.item.spell_name'}}"
+				/>
+			</div>
+		{{/ifNeq}}
 		<div class="spell-detail">
-			<label>{{localize 'SHADOWDARK.item.spell_name'}}</label>
-			<input
-				name="sytem.spellName"
-				type="text"
-				value="{{item.system.spellName}}"
-				placeholder="{{localize 'SHADOWDARK.item.spell_name'}}"
-			/>
-		</div>
-	{{/ifNeq}}
-	<div class="spell-detail">
-		<label>{{localize 'SHADOWDARK.item.spell_tier'}}</label>
-		{{numberInput
-			system.tier
-			name="system.tier"
-			class="spell-tier-value"
-			placeholder="0"
-		}}
-	</div>
-	<div class="spell-detail">
-		<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
-		{{> items/partials/duration
-			base="system.duration"
-			duration=system.duration
-			type="spell"
-			choices=config.SPELL_DURATIONS
-			variableDuration=variableDuration
-		}}
-	</div>
-	<div class="spell-detail">
-		<label>{{localize 'SHADOWDARK.item.spell_range'}}</label>
-		<select name="system.range">
-			<option value="">&mdash;</option>
-			{{selectOptions
-				config.SPELL_RANGES
-				selected=system.range
-				localize=false
+			<label>{{localize 'SHADOWDARK.item.spell_tier'}}</label>
+			{{numberInput
+				system.tier
+				name="system.tier"
+				class="spell-tier-value"
+				placeholder="0"
 			}}
-		</select>
+		</div>
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
+			{{> items/partials/duration
+				base="system.duration"
+				duration=system.duration
+				type="spell"
+				choices=config.SPELL_DURATIONS
+				variableDuration=variableDuration
+			}}
+		</div>
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_range'}}</label>
+			<select name="system.range">
+				<option value="">&mdash;</option>
+				{{selectOptions
+					config.SPELL_RANGES
+					selected=system.range
+					localize=false
+				}}
+			</select>
+		</div>
 	</div>
-</div>
-<div class="item-properties">
-	<div class="item-property">
-		<label>{{localize 'SHADOWDARK.item.spell_caster_classes'}}</label>
-		<p class="item-property-list spell">{{casterClassesDisplay}}</p>
+	<div class="choice-selector">
+		{{>
+			items/partials/choice-selector
+			config=spellcasterClassesConfig
+			editable=editable
+		}}
 	</div>
 </div>

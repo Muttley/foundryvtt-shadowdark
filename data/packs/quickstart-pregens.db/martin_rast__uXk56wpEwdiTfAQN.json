@@ -1,0 +1,188 @@
+{
+	"_id": "uXk56wpEwdiTfAQN",
+	"_key": "!actors!uXk56wpEwdiTfAQN",
+	"effects": [
+		"KBbKi9YYaC8xqVsI",
+		"0jy4lHT3X9ryT7p9"
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/quickstart/pregens/Martin_Rast_portrait.webp",
+	"items": [
+		"DdpVSB1lae5GxHPL",
+		"yGk32Oj2kUDw6hVj",
+		"iM40sRNKUdden6Ec",
+		"hTVvmfiM8ieOdh7G",
+		"P6Oxhve94ZplRNWo",
+		"VDwq1t7Rc307JOYN",
+		"aLySFO7PG7ShIhCL",
+		"e2IRtPXtNiowfjLA",
+		"CGJ4zxmqFilgRBIZ",
+		"HsowE8JPDwcXugdG",
+		"15j8vdCGXCjRSxFw",
+		"sY8GphUjJgRWSDnZ",
+		"TZL7hE00xuS1Sln3",
+		"gSPtr4NJUnpEBDW0",
+		"o8o0rx4FZL3XFJ6o",
+		"1aradLNjYF4F3EAU"
+	],
+	"name": "Martin Rast",
+	"prototypeToken": {
+		"actorLink": true,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 40,
+		"disposition": 1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Martin Rast",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/quickstart/pregens/Martin_Rast_token.webp",
+			"tint": null
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"base": 14,
+				"bonus": 0
+			},
+			"con": {
+				"base": 10,
+				"bonus": 0
+			},
+			"dex": {
+				"base": 16,
+				"bonus": 0
+			},
+			"int": {
+				"base": 12,
+				"bonus": 0
+			},
+			"str": {
+				"base": 9,
+				"bonus": 0
+			},
+			"wis": {
+				"base": 12,
+				"bonus": 0
+			}
+		},
+		"alignment": "neutral",
+		"ancestry": "Compendium.shadowdark.ancestries.Item.w3gbUH2DOBxfZPHO",
+		"attributes": {
+			"ac": {
+				"value": 15
+			},
+			"hp": {
+				"base": 3,
+				"bonus": 0,
+				"max": 3,
+				"value": 3
+			}
+		},
+		"background": "Compendium.shadowdark.backgrounds.Item.sBbHjpCaF0iIoDNM",
+		"bonuses": {
+			"acBonus": 0,
+			"advantage": [
+			],
+			"armorMastery": [
+			],
+			"backstabDie": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageMultiplier": 1,
+			"gearSlots": 0,
+			"hauler": false,
+			"lightSource": "",
+			"meleeAttackBonus": 0,
+			"meleeDamageBonus": 0,
+			"rangedAttackBonus": 0,
+			"rangedDamageBonus": 0,
+			"spellcastingCheckBonus": 0,
+			"weaponDamageDieD12": [
+			],
+			"weaponMastery": [
+			]
+		},
+		"class": "Compendium.shadowdark.classes.Item.C6wkCa2w5dlgSq7f",
+		"coins": {
+			"cp": 0,
+			"gp": 9,
+			"sp": 0
+		},
+		"deity": "Compendium.shadowdark.deities.Item.r1j3fFsxwgxvIqxl",
+		"flags": {
+			"hpRollLevels": [
+			]
+		},
+		"languages": [
+			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+			"Compendium.shadowdark.languages.Item.FQcnF3JQRw9wL7PN"
+		],
+		"level": {
+			"value": 1,
+			"xp": 0
+		},
+		"luck": false,
+		"notes": "",
+		"slots": 10
+	},
+	"type": "Player"
+}

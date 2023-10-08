@@ -1,0 +1,44 @@
+{
+	"_id": "o0261gnDqGC5hQB1",
+	"_key": "!items!o0261gnDqGC5hQB1",
+	"effects": [
+	],
+	"folder": "np4FRJ73NRBEQKnS",
+	"img": "icons/equipment/chest/breastplate-layered-steel.webp",
+	"name": "Plate Mail",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 15,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 130,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
+			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 3
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "Armor"
+}

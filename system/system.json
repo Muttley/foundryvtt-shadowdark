@@ -2,17 +2,17 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "1.3.7",
+	"version": "1.4.0",
 	"compatibility": {
-		"minimum": "10",
+		"minimum": "11",
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "230419.1"
+		"schemaVersion": "230923.2"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
-	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/download/release-1.3.7/shadowdark-release-1.3.7.zip",
+	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/download/release-1.4.0/shadowdark-release-1.4.0.zip",
 	"authors": [
 		{
 			"name": "Paul Maskelyne",
@@ -45,7 +45,7 @@
 		},
 		{
 			"lang": "fi",
-			"name": "Suomen Kieli",
+			"name": "suomi",
 			"path": "i18n/fi.json"
 		},
 		{
@@ -67,19 +67,37 @@
 	"styles": ["css/shadowdark.css"],
 	"packs": [
 		{
-			"name": "armor",
-			"label": "Armor",
+			"name": "ancestries",
+			"label": "Ancestries",
 			"system": "shadowdark",
-			"path": "packs/armor.db",
+			"path": "packs/ancestries",
 			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
 		{
-			"name": "basic-gear",
-			"label": "Basic Gear",
+			"name": "backgrounds",
+			"label": "Backgrounds",
 			"system": "shadowdark",
-			"path": "packs/basic-gear.db",
+			"path": "packs/backgrounds",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "class-abilities",
+			"label": "Class Abilities",
+			"system": "shadowdark",
+			"path": "packs/class-abilities",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "classes",
+			"label": "Classes",
+			"system": "shadowdark",
+			"path": "packs/classes",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -88,7 +106,34 @@
 			"name": "conditions",
 			"label": "Conditions",
 			"system": "shadowdark",
-			"path": "packs/conditions.db",
+			"path": "packs/conditions",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "deities",
+			"label": "Deities",
+			"system": "shadowdark",
+			"path": "packs/deities",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "gear",
+			"label": "Gear",
+			"system": "shadowdark",
+			"path": "packs/gear",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "languages",
+			"label": "Languages",
+			"system": "shadowdark",
+			"path": "packs/languages",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -97,7 +142,7 @@
 			"name": "macros",
 			"label": "Macros",
 			"system": "shadowdark",
-			"path": "packs/macros.db",
+			"path": "packs/macros",
 			"type": "Macro",
 			"private": false,
 			"flags": {}
@@ -106,25 +151,43 @@
 			"name": "magic-items",
 			"label": "Magic Items",
 			"system": "shadowdark",
-			"path": "packs/magic-items.db",
+			"path": "packs/magic-items",
 			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
 		{
-			"name": "monster",
-			"label": "Monster",
+			"name": "monsters",
+			"label": "Monsters",
 			"system": "shadowdark",
-			"path": "packs/monster.db",
+			"path": "packs/monsters",
 			"type": "Actor",
 			"private": false,
 			"flags": {}
 		},
 		{
-			"name": "quickstart-guide",
-			"label": "Quickstart Guide",
+			"name": "properties",
+			"label": "Properties",
 			"system": "shadowdark",
-			"path": "packs/quickstart-guide.db",
+			"path": "packs/properties",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-adventures",
+			"label": "Quickstart Adventures",
+			"system": "shadowdark",
+			"path": "packs/quickstart-adventures",
+			"type": "Adventure",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "quickstart-guides",
+			"label": "Quickstart Guides",
+			"system": "shadowdark",
+			"path": "packs/quickstart-guides",
 			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
@@ -133,26 +196,8 @@
 			"name": "quickstart-pregens",
 			"label": "Quickstart Pregens",
 			"system": "shadowdark",
-			"path": "packs/quickstart-pregens.db",
+			"path": "packs/quickstart-pregens",
 			"type": "Actor",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "spells",
-			"label": "Spells",
-			"system": "shadowdark",
-			"path": "packs/spells.db",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "spell-effects",
-			"label": "Spell Effects",
-			"system": "shadowdark",
-			"path": "packs/spell-effects.db",
-			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
@@ -160,8 +205,26 @@
 			"name": "rollable-tables",
 			"label": "Rollable Tables",
 			"system": "shadowdark",
-			"path": "packs/rollable-tables.db",
+			"path": "packs/rollable-tables",
 			"type": "RollTable",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "spell-effects",
+			"label": "Spell Effects",
+			"system": "shadowdark",
+			"path": "packs/spell-effects",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "spells",
+			"label": "Spells",
+			"system": "shadowdark",
+			"path": "packs/spells",
+			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
@@ -169,46 +232,54 @@
 			"name": "talents",
 			"label": "Talents",
 			"system": "shadowdark",
-			"path": "packs/talents.db",
+			"path": "packs/talents",
 			"type": "Item",
 			"private": false,
 			"flags": {}
-		},
+		}
+	],
+	"packFolders": [
 		{
-			"name": "the-lost-citadel",
-			"label": "The Lost Citadel",
-			"system": "shadowdark",
-			"path": "packs/the-lost-citadel.db",
-			"type": "JournalEntry",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "the-lost-citadel-adventure",
-			"label": "The Lost Citadel: Adventure",
-			"system": "shadowdark",
-			"path": "packs/the-lost-citadel-adventure.db",
-			"type": "Adventure",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "weapons",
-			"label": "Weapons",
-			"system": "shadowdark",
-			"path": "packs/weapons.db",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "wizard-mishap",
-			"label": "Wizard Mishap",
-			"system": "shadowdark",
-			"path": "packs/wizard-mishap.db",
-			"type": "RollTable",
-			"private": false,
-			"flags": {}
+			"name": "Shadowdark System",
+			"sorting": "a",
+			"color": "#22252b",
+			"packs": [
+				"conditions",
+				"gear",
+				"macros",
+				"magic-items",
+				"monsters",
+				"properties",
+				"rollable-tables",
+				"spell-effects",
+				"spells"
+			],
+			"folders": [
+				{
+					"name": "Character Options",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"ancestries",
+						"backgrounds",
+						"class-abilities",
+						"classes",
+						"deities",
+						"languages",
+						"talents"
+					]
+				},
+				{
+					"name": "Quickstart",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"quickstart-adventures",
+						"quickstart-guides",
+						"quickstart-pregens"
+					]
+				}
+			]
 		}
 	],
 	"socket": true,

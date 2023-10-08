@@ -1,0 +1,39 @@
+{
+	"_id": "xURhvz16GozH0j8f",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.xURhvz16GozH0j8f",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Poison Web",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "special",
+		"bonuses": {
+			"attackBonus": 2,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 0,
+			"special": "",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

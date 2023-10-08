@@ -1,0 +1,43 @@
+{
+	"_id": "FeoRamUTz5jakMJ8",
+	"_key": "!items!FeoRamUTz5jakMJ8",
+	"effects": [
+	],
+	"folder": "iHOSxtXRWKd2vx1U",
+	"img": "icons/creatures/invertebrates/tick-cross-glowing-purple.webp",
+	"name": "Foebane",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"class": [
+		],
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p>",
+		"duration": {
+			"type": "",
+			"value": ""
+		},
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"quantity": 1,
+		"range": "",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"spellName": "",
+		"tier": 1
+	},
+	"type": "Potion"
+}

@@ -1,0 +1,39 @@
+{
+	"_id": "HmtuqmlqB6gnF0fM",
+	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.HmtuqmlqB6gnF0fM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Possess",
+	"system": {
+		"attack": {
+			"num": 1
+		},
+		"attackType": "special",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"special": "Possess",
+			"value": ""
+		},
+		"description": "",
+		"magicItem": false,
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

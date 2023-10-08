@@ -1,0 +1,24 @@
+{
+	"_id": "5vdLAe7ld4ALPNwy",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.5vdLAe7ld4ALPNwy",
+	"image": {
+	},
+	"name": "Thief Class",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p>Rooftop assassins, grinning con artists, or cloaked cat burglars who can pluck a gem from the claws of a sleeping demon and sell it for twice its worth.</p><p></p><p><strong>Weapons</strong>: Club, crossbow, dagger, shortbow, shortsword</p><p></p><p><strong>Armor</strong>: Leather armor, mithral chainmail</p><p></p><p><strong>Hit Points</strong>: 1d4 per level</p><p></p><p><strong>Backstab</strong>. If you hit a creature who is unaware of your attack, you deal an extra weapon die of damage. Add additional weapon dice of damage equal to half your level (round down). (<em>This is checked with every attack where selection will result in a backstab roll).</em></p><p></p><p><strong>Thievery</strong>. You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</p><p></p><p>You are trained in the following tasks and have advantage on any associated checks:</p><ul><li><p>Climbing</p></li><li><p>Sneaking and hiding</p></li><li><p>Applying disguises</p></li><li><p>Finding and disabling traps</p></li><li><p>Delicate tasks such as picking pockets and opening locks</p></li></ul><p>@UUID[Compendium.shadowdark.rollable-tables.sLMGErVzVfKaLW7r]{Thief Talent}</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

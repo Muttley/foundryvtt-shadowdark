@@ -1,0 +1,24 @@
+{
+	"_id": "aNAmZL6KAGd1jNDu",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.aNAmZL6KAGd1jNDu",
+	"image": {
+	},
+	"name": "Turn Order",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<p><strong>INITIATIVE</strong></p><p><em><strong>Shadowdark RPG</strong></em> is played in turn order right from the start.</p><p></p><p>At the beginning of the game, the GM establishes <strong>initiative</strong>, or the order in which the players act. Everyone rolls a d20 and adds their DEX modifier. The GM adds the highest DEX modifier of any monsters, if relevant.</p><p></p><p>The person who rolled the highest takes the first turn, and the turn order moves clockwise from that individual.</p><p></p><p><strong>PLAYER TURN</strong></p><ol><li><p>The player counts down any personal timers for spells and other effects.</p></li><li><p>The player takes an action and may move up to near (split up in any way). The player can move near again if skipping an action.</p></li><li><p>The GM describes what happens as a result of the player's turn.</p></li></ol><p><strong>GM TURN</strong></p><ol><li><p>The GM counts down any timers not tracked by players.</p></li><li><p>The GM checks for a random encounter, if needed.</p></li><li><p>The GM takes actions and makes movements for any relevant creatures or environmental effects.</p></li><li><p>The GM describes what the characters notice as a result of steps 1-3.</p></li></ol><p><strong>ENCOUNTER</strong></p><p>An encounter occurs when a challenge presents itself that stops the characters' progress. An encounter could include a monster charging out of the darkness, a sinkhole breaking open in the ground, or a town guard halting the characters.</p><p></p><p>The GM rolls for the chance of an encounter every few rounds depending on how dangerous the characters' environment is.</p>",
+		"format": 1,
+		"markdown": ""
+	},
+	"title": {
+		"level": 2,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

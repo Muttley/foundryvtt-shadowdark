@@ -1,0 +1,24 @@
+{
+	"_id": "6ILACQIHM3Gp8EVG",
+	"_key": "!items.effects!Z0YwWUGs3WYC6OGn.6ILACQIHM3Gp8EVG",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 86400,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/life/heart-shadow-red.webp",
+	"name": "Charmed",
+	"origin": "Item.Z0YwWUGs3WYC6OGn",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

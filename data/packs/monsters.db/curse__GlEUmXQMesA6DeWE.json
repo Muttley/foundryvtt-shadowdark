@@ -1,0 +1,18 @@
+{
+	"_id": "GlEUmXQMesA6DeWE",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.GlEUmXQMesA6DeWE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Curse",
+	"system": {
+		"description": "<p>DC 15 CON or target gains a magical curse, turning into a deep one over 2d10 days</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

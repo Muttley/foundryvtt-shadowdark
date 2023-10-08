@@ -1,0 +1,28 @@
+{
+	"_id": "SHQa9bCk8v8wQweV",
+	"_key": "!items!SHQa9bCk8v8wQweV",
+	"effects": [
+	],
+	"folder": "riXhNqeauiWpVKAz",
+	"img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+	"name": "Knock",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>A door, window, gate, chest, or portal you can see within range instantly opens, defeating all mundane locks and barriers.</p><p>This spell creates a loud knock audible to all within earshot.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

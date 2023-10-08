@@ -1,0 +1,18 @@
+{
+	"_id": "hmg4n6bWzrZjIp0Q",
+	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.hmg4n6bWzrZjIp0Q",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Greater Undead",
+	"system": {
+		"description": "<p>Immune to morale checks. Only damaged by silver or magical sources.</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

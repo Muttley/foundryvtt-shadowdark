@@ -158,7 +158,7 @@ export class EffectPanelControllerSD {
 		const actor = this._actor;
 		if (!actor) return [];
 
-		// @todo: V11 Compatability legacyTransferral
+		// TODO: V11 Compatability legacyTransferral
 		//   Update to use the designed interface as specified here, once implemented into core
 		//   https://github.com/foundryvtt/foundryvtt/issues/9185
 		const sortedEffects = actor.effects
@@ -299,7 +299,7 @@ export class EffectPanelControllerSD {
 	async onIconRightClick(event) {
 		const $target = $(event.currentTarget);
 		const actor = this._actor;
-		// @todo: V11 Compatability legacyTransferral
+		// TODO: V11 Compatability legacyTransferral
 		//   Update to use the designed interface as specified here, once implemented into core
 		//   https://github.com/foundryvtt/foundryvtt/issues/9185
 		const effect = actor?.effects.get($target[0].dataset.effectId ?? "");
@@ -308,7 +308,7 @@ export class EffectPanelControllerSD {
 
 		const sourceItem = this._getSource(effect);
 
-		// @todo: Consider allowing default behavior to just delete effect item in settings.
+		// TODO: Consider allowing default behavior to just delete effect item in settings.
 		return Dialog.confirm({
 			title: game.i18n.localize("SHADOWDARK.apps.effect_panel.dialog.delete_effect.title"),
 			content: `<h4>${game.i18n.format(
@@ -334,7 +334,7 @@ export class EffectPanelControllerSD {
 	async onIconClick(event) {
 		const $target = $(event.currentTarget);
 		const actor = this._actor;
-		// @todo: V11 Compatability legacyTransferral
+		// TODO: V11 Compatability legacyTransferral
 		//   Update to use the designed interface as specified here, once implemented into core
 		//   https://github.com/foundryvtt/foundryvtt/issues/9185
 		const effect = actor?.effects.get($target[0].dataset.effectId ?? "");

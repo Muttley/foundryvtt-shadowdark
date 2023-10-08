@@ -1,0 +1,24 @@
+{
+	"_id": "M044441XNDJq00mV",
+	"_key": "!items.effects!MUNwczWej0Bo8x4S.M044441XNDJq00mV",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/perception/eye-tendrils-web-purple.webp",
+	"name": "Perceiving Advantage",
+	"origin": "Item.E9GhofNgwIJ7N2A4",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,18 @@
+{
+	"_id": "QnSlbNpbIsYFgrJC",
+	"_key": "!actors.items!0JAEN5FsKjaXXZaA.QnSlbNpbIsYFgrJC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Darkness",
+	"system": {
+		"description": "<p>Extinguish all light sources in near (magic 3:6).</p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

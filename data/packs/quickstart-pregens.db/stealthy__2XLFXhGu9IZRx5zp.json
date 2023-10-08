@@ -1,0 +1,20 @@
+{
+	"_id": "2XLFXhGu9IZRx5zp",
+	"_key": "!actors.items!x3L0onniGSB97CU7.2XLFXhGu9IZRx5zp",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Stealthy",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Once per day, you can become invisible for 3 rounds.</span></p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

@@ -1,0 +1,18 @@
+{
+	"_id": "SJeC4yaR5o5hq0cV",
+	"_key": "!actors.items!Jn5JjEPCUT86txAg.SJeC4yaR5o5hq0cV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/svg/item-bag.svg",
+	"name": "Grab",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Target is immobilized. Contested Strength check on turn to break free.</span></p>",
+		"magicItem": false,
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

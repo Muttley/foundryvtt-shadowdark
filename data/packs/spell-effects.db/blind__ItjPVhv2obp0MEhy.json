@@ -1,0 +1,24 @@
+{
+	"_id": "ItjPVhv2obp0MEhy",
+	"_key": "!items.effects!SOkcvkzrGMGQKhmk.ItjPVhv2obp0MEhy",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/eyes/humanoid-single-blind.webp",
+	"name": "Blind",
+	"origin": "Item.SOkcvkzrGMGQKhmk",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

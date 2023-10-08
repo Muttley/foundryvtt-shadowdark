@@ -1,0 +1,123 @@
+{
+	"_id": "Fo9DMEiLgAJzsrJM",
+	"_key": "!actors!Fo9DMEiLgAJzsrJM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"z3ofcYYVq8RC6qC4",
+		"Lh3JQ62cVTgh04UG"
+	],
+	"name": "Will-o'-Wisp",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 20,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 0.5,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "WIll-o'-Wisp",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": null
+		},
+		"width": 0.5
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": -1
+			},
+			"str": {
+				"mod": -3
+			},
+			"wis": {
+				"mod": -1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 10,
+				"value": 10
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 2
+		},
+		"move": "near",
+		"moveNote": "Fly",
+		"notes": "<p><span class=\"fontstyle0\"><em>A bobbing marsh light animated by an evil spirit. It tries to lead the living into danger.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">10, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 life drain +3, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (fly), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Life Drain.</strong> </span><span class=\"fontstyle3\">1d4 CON damage. Death if reduced to 0 CON.</span></p>",
+		"spellcastingAbility": ""
+	},
+	"type": "NPC"
+}

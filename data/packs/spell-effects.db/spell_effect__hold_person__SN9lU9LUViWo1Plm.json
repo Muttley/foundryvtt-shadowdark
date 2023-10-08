@@ -1,0 +1,43 @@
+{
+	"_id": "SN9lU9LUViWo1Plm",
+	"_key": "!items!SN9lU9LUViWo1Plm",
+	"effects": [
+		"QXmMqpV6wqoS6fd5"
+	],
+	"folder": null,
+	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+	"name": "Spell Effect: Hold Person",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 0
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

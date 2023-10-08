@@ -1,0 +1,33 @@
+{
+	"_id": "0lJ8Pj0UPsbSSUTm",
+	"_key": "!items!0lJ8Pj0UPsbSSUTm",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Half-Orc",
+	"system": {
+		"description": "<p>Towering, tusked warriors who are as daring as humans and as relentless as orcs.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.1iECxGKqGpV3k6VZ",
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.LR6h4lXVXwx7AFQ6"
+		]
+	},
+	"type": "Ancestry"
+}

@@ -1,0 +1,29 @@
+{
+	"_id": "5bpWuaT0KTNzuzCu",
+	"_key": "!items!5bpWuaT0KTNzuzCu",
+	"effects": [
+		"E7SwrOhzSAyMZ1Ec"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/strike-axe-energy-pink.webp",
+	"name": "Weapon Mastery",
+	"system": {
+		"bonuses": {
+			"weaponMastery": "REPLACEME"
+		},
+		"description": "<p>Choose one type of weapon, such as longswords. You gain +1 to attack and damage with that weapon type. In addition, add half your level to these rolls (round down).</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talent": {
+			"weaponMastery": null,
+			"weaponMasteryTypes": null
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

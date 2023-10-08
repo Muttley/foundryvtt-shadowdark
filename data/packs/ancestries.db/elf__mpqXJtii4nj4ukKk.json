@@ -1,0 +1,35 @@
+{
+	"_id": "mpqXJtii4nj4ukKk",
+	"_key": "!items!mpqXJtii4nj4ukKk",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Elf",
+	"system": {
+		"description": "<p>Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.Lf6kATbC1uNPLnPi",
+				"Compendium.shadowdark.languages.Item.wABiw5UhzG2G8Kpa"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": ""
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.dTEZW21LUNoYL3JU",
+			"Compendium.shadowdark.talents.Item.E3EcGGdGYuEWWj47"
+		]
+	},
+	"type": "Ancestry"
+}

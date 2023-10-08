@@ -23,6 +23,38 @@ export default class ActorSD extends Actor {
 	/*  Methods                                     */
 	/* -------------------------------------------- */
 
+	async addAncestry(item) {
+		this.update({"system.ancestry": item.uuid});
+	}
+
+	async addBackground(item) {
+		this.update({"system.background": item.uuid});
+	}
+
+	async addClass(item) {
+		this.update({"system.class": item.uuid});
+	}
+
+	async addDeity(item) {
+		this.update({"system.deity": item.uuid});
+	}
+
+	async addLanguage(item) {
+		let languageFound = false;
+		for (const language of await this.languageItems()) {
+			if (language.uuid === item.uuid) {
+				languageFound = true;
+				break;
+			}
+		}
+
+		if (!languageFound) {
+			const currentLanguages = this.system.languages;
+			currentLanguages.push(item.uuid);
+			this.update({"system.languages": currentLanguages});
+		}
+	}
+
 	abilityModifier(ability) {
 		if (this.type === "Player") {
 
@@ -112,7 +144,7 @@ export default class ActorSD extends Actor {
 		const meleeAttack = this.attackBonus("melee");
 		const rangedAttack = this.attackBonus("ranged");
 
-		const baseAttackBonus = item.isFinesseWeapon()
+		const baseAttackBonus = await item.isFinesseWeapon()
 			? Math.max(meleeAttack, rangedAttack)
 			: this.attackBonus(item.system.type);
 
@@ -123,7 +155,7 @@ export default class ActorSD extends Actor {
 			attackRange: "",
 			baseDamage: "",
 			bonusDamage: 0,
-			properties: item.propertiesDisplay(),
+			properties: await item.propertiesDisplay(),
 			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
@@ -175,7 +207,7 @@ export default class ActorSD extends Actor {
 					itemId,
 				});
 			}
-			if (item.hasProperty("thrown")) {
+			if (await item.hasProperty("thrown")) {
 				weaponOptions.attackBonus = baseAttackBonus
 					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
 					+ parseInt(item.system.bonuses.attackBonus, 10)
@@ -306,7 +338,7 @@ export default class ActorSD extends Actor {
 
 		const parts = ["@abilityBonus", "@talentBonus"];
 
-		// @todo: push to parts & for set talentBonus as sum of talents affecting spell rolls
+		// TODO: push to parts & for set talentBonus as sum of talents affecting spell rolls
 
 		return item.rollSpell(parts, data);
 	}
@@ -323,7 +355,8 @@ export default class ActorSD extends Actor {
 	}
 
 	async getArmorClass() {
-		return await this.updateArmorClass();
+		const ac = await this.updateArmorClass();
+		return ac;
 	}
 
 	async isClaimedByUser() {
@@ -386,7 +419,6 @@ export default class ActorSD extends Actor {
 					class: item.system.class,
 					description: item.system.description,
 					duration: item.system.duration,
-					properties: item.system.properties,
 					range: item.system.range,
 					tier: item.system.tier,
 				},
@@ -457,7 +489,9 @@ export default class ActorSD extends Actor {
 	}
 
 	getSpellcastingAbility() {
-		return this.system.spellcastingAbility;
+		const characterClass = this.backgroundItems.class;
+
+		return characterClass?.system?.spellcasting?.ability ?? "";
 	}
 
 	hasAdvantage(data) {
@@ -468,17 +502,13 @@ export default class ActorSD extends Actor {
 	}
 
 	async isSpellcaster() {
-		return CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[this.system.class] ? true : false;
-	}
+		const characterClass = this.backgroundItems.class;
+		const spellcastingAbility =
+			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-	/** @inheritDoc */
-	prepareBaseData() {
-		switch (this.type) {
-			case "Player":
-				return this._preparePlayerData();
-			case "NPC":
-				return this._prepareNPCData();
-		}
+		return characterClass && spellcastingAbility !== "__not_spellcaster__"
+			? true
+			: false;
 	}
 
 	/** @inheritDoc */
@@ -575,7 +605,7 @@ export default class ActorSD extends Actor {
 		if (this.type === "Player") {
 
 			if (item.system.type === "melee") {
-				if (item.isFinesseWeapon()) {
+				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
 						this.abilityModifier("str"),
 						this.abilityModifier("dex")
@@ -605,6 +635,16 @@ export default class ActorSD extends Actor {
 		}
 
 		return item.rollItem(parts, data);
+	}
+
+	async languageItems() {
+		const languageItems = [];
+
+		for (const uuid of this.system.languages ?? []) {
+			languageItems.push(await fromUuid(uuid));
+		}
+
+		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 	async rollHP(options={}) {
@@ -783,7 +823,7 @@ export default class ActorSD extends Actor {
 		// on/off.
 		if (updatedItem.system.equipped) {
 			// First we need to disable any already equipped armor
-			const isAShield = updatedItem.isAShield();
+			const isAShield = await updatedItem.isAShield();
 
 			const armorToUnequip = [];
 
@@ -794,13 +834,13 @@ export default class ActorSD extends Actor {
 
 				// Only unequip a shield if the newly equipped item is a shield
 				// as well.
-				if (isAShield && item.isAShield()) {
+				if (isAShield && await item.isAShield()) {
 					armorToUnequip.push({
 						_id: item._id,
 						"system.equipped": false,
 					});
 				}
-				else if (item.isNotAShield() && !isAShield) {
+				else if (await item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
 						_id: item._id,
 						"system.equipped": false,
@@ -825,49 +865,116 @@ export default class ActorSD extends Actor {
 		let newArmorClass = baseArmorClass;
 		let armorMasteryBonus = 0;
 
-		const equippedArmor = this.items.filter(
-			item => item.type === "Armor" && item.system.equipped
-		);
-		let nonShieldEquipped = false;
-		if (equippedArmor.length > 0) {
-			newArmorClass = 0;
-			for (let i = 0; i < equippedArmor.length; i++) {
-				const armor = equippedArmor[i];
+		const acOverride = this.system.attributes.ac?.override ?? null;
+		if (Number.isInteger(acOverride)) {
+			// AC is being overridden by an effect so we just use that value
+			// and ignore everything else
+			newArmorClass = acOverride;
+		}
+		else {
+			const equippedArmor = this.items.filter(
+				item => item.type === "Armor" && item.system.equipped
+			);
+			let nonShieldEquipped = false;
+			if (equippedArmor.length > 0) {
+				newArmorClass = 0;
+				for (let i = 0; i < equippedArmor.length; i++) {
+					const armor = equippedArmor[i];
 
-				if (armor.isNotAShield()) {
-					nonShieldEquipped = true;
+					if (await armor.isNotAShield()) {
+						nonShieldEquipped = true;
+					}
+
+					// Check if armor mastery should apply to the AC
+					if (
+						this.system.bonuses.armorMastery.includes(armor.name.slugify())
+						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+					) armorMasteryBonus += 1;
+
+					newArmorClass += armor.system.ac.modifier;
+					newArmorClass += armor.system.ac.base;
+
+					const attribute = armor.system.ac.attribute;
+					if (attribute) {
+						newArmorClass += this.abilityModifier(attribute);
+					}
 				}
 
-				// Check if armor mastery should apply to the AC
-				if (
-					this.system.bonuses.armorMastery.includes(armor.name.slugify())
-					|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-				) armorMasteryBonus += 1;
+				// Someone with no armor but a shield equipped
+				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
 
-				newArmorClass += armor.system.ac.modifier;
-				newArmorClass += armor.system.ac.base;
-
-				const attribute = armor.system.ac.attribute;
-				if (attribute) {
-					newArmorClass += this.abilityModifier(attribute);
-				}
+				newArmorClass += armorMasteryBonus;
 			}
 
-			// Someone with no armor but a shield equipped
-			if (!nonShieldEquipped) newArmorClass += baseArmorClass;
-
-			newArmorClass += armorMasteryBonus;
+			// Add AC from bonus effects
+			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
 
-		// Add AC from effects
-		newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
-
-		Actor.updateDocuments([{
-			_id: this._id,
-			"system.attributes.ac.value": newArmorClass,
-		}]);
+		this.updateSource({"system.attributes.ac.value": newArmorClass});
 
 		return newArmorClass;
+	}
+
+	async useAbility(itemId) {
+		const item = this.items.get(itemId);
+
+		const result = await this.rollAbility(
+			item.system.ability,
+			{target: item.system.dc}
+		);
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.use_ability.success"
+			: "SHADOWDARK.chat.use_ability.failure";
+
+		let message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				ability: item.name,
+			}
+		);
+
+		const abilityDescription = await TextEditor.enrichHTML(
+			item.system.description,
+			{
+				secrets: this.isOwner,
+				async: true,
+				relativeTo: this,
+			}
+		);
+
+		if (success) {
+			message = `<p>${message}</p>${abilityDescription}`;
+		}
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/use-ability.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (!success && item.system.loseOnFailure) {
+			item.update({"system.lost": true});
+		}
 	}
 
 	async usePotion(itemId) {
@@ -925,9 +1032,35 @@ export default class ActorSD extends Actor {
 		});
 	}
 
-	/* -------------------------------------------- */
-	/*  Base Data Preparation Helpers               */
-	/* -------------------------------------------- */
+	/* --------------------------------------- */
+	/*  Data Preparation Helpers               */
+	/* --------------------------------------- */
+
+	async _populateBackgroundItems() {
+		this.backgroundItems = {};
+
+		const backgroundItems = ["ancestry", "class", "deity"];
+
+		for (const itemName of backgroundItems) {
+			const uuid = this.system[itemName] ?? "";
+			if (uuid !== "") {
+				this.backgroundItems[itemName] = await fromUuid(uuid);
+			}
+		}
+
+		this.backgroundItems.title = "";
+		if (this.backgroundItems.class && this.system.alignment !== "") {
+			const titles = this.backgroundItems.class.system.titles ?? [];
+			const level = this.system.level?.value ?? 0;
+
+			for (const title of titles) {
+				if (level >= title.from && level <= title.to) {
+					this.backgroundItems.title = title[this.system.alignment];
+					break;
+				}
+			}
+		}
+	}
 
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
@@ -980,7 +1113,7 @@ export default class ActorSD extends Actor {
 	}
 
 	async _playerRollHP(options={}) {
-		if (this.system.class === "") {
+		if (!this.backgroundItems.class) {
 			ui.notifications.error(
 				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
 				{permanent: false}
@@ -999,7 +1132,8 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 
-		const parts = [CONFIG.SHADOWDARK.CLASS_HD[this.system.class]];
+		const parts = [this.backgroundItems.class.system.hitPoints];
+
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
