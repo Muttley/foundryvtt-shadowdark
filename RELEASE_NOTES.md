@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.4.0
 
 ### Bugfixes
 * [#431] Mage Armor Active Effect does not change AC
