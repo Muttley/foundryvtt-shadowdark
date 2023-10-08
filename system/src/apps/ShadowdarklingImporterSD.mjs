@@ -206,17 +206,17 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 					xp: 0,
 				},
 				slots: json.gearSlotsTotal,
-				title: json.title,
-				spellcastingAbility: this._getSpellCastingAbility(json.class.toLowerCase()),
 			},
 		};
 
 		// Ancestry
-		const ancestries = await shadowdark.compendiums.ancestries();
-		const ancestry = ancestries.find(
-			i => i.name.toLowerCase() === json.ancestry.toLowerCase()
-		);
-		importedActor.system.ancestry = ancestry?.uuid ?? "";
+		if (json.ancestry) {
+			const ancestries = await shadowdark.compendiums.ancestries();
+			const ancestry = ancestries.find(
+				i => i.name.toLowerCase() === json.ancestry.toLowerCase()
+			);
+			importedActor.system.ancestry = ancestry?.uuid ?? "";
+		}
 
 		// Background
 		const backgrounds = await shadowdark.compendiums.backgrounds();
@@ -355,7 +355,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 					return this._damageDieD12Talent(bonus.bonusTo);
 				}
 				if (bonus.name === "ReduceHerbalismDC") {
-					return this._findInCompendium("Reduced Herbalism DC", "shadowdark.talents");
+					return this._findInCompendium("Herbalism Check Advantage", "shadowdark.talents");
 				}
 				if (bonus.name === "Plus1ToHitAndDamage") {
 					if (bonus.bonusTo === "Melee attacks") {
