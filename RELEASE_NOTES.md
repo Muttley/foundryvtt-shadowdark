@@ -18,6 +18,7 @@
 * [#342] Identify "rare" languages in the language selector to aid in selection
 * [#447] Added ability to easily access filtered compendium items
 * [#444] Added Bard class
+* [#449] Support Bard Bonuses exported by ShadowDarklings
 * [#480] Added ability to create custom weapon and armor properties
 * [#490] Added Condition for Halfling's "Stealthy" Invisibility ability
 * [#491] Added support for custom languages
@@ -25,6 +26,7 @@
 * [#495] Added support for Deity items
 * [#497] Split character sheet notes out into their own tab
 * [#498] Fix character sheet header and tab controls at top of character sheet window
+* [#501] Update ShadowDarklings importer to use new character background items
 
 ## v.1.3.7
 
