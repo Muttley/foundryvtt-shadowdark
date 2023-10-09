@@ -4,6 +4,8 @@ export default class CompendiumItemSelector extends FormApplication {
 
 	maxChoices = 0;
 
+	uuid = randomID();
+
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 
@@ -69,6 +71,7 @@ export default class CompendiumItemSelector extends FormApplication {
 			currentItems: this.currentItems,
 			itemChoices: [],
 			prompt: this.prompt,
+			uuid: this.uuid,
 		};
 
 		// Don"t include already selected items
