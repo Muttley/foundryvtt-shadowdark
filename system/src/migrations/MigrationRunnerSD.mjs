@@ -79,7 +79,7 @@ export default class MigrationRunnerSD {
 
 		// Begin by requesting service-side migration
 		await pack.migrate();
-		const documents = pack.getDocuments();
+		const documents = await pack.getDocuments();
 
 		// Iterate over compendium entries - apply migration functions
 		for (let doc of documents) {
