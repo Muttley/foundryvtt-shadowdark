@@ -1,3 +1,10 @@
+## v.1.4.3
+
+**NOTE:** If you have compendiums in your worlds you will need to re-migrate a pre-1.4.0 backup of your world once this version is installed to ensure it is migrated correctly.
+
+### Bugfixes
+* [#508] Migrating compendiums for 1.3.7 to 1.4.0 fails
+
 ## v.1.4.2
 
 ** Purely a version bump **
