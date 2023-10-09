@@ -1,3 +1,11 @@
+## v.1.4.2
+
+** Purely a version bump **
+
+## v.1.4.1
+
+** Release withdrawn due to packaging errors **
+
 ## v.1.4.0
 
 ### Bugfixes
