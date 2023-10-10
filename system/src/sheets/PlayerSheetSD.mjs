@@ -39,6 +39,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onItemChatClick(event)
 		);
 
+		html.find(".ability-uses-decrement").click(
+			event => this._onAbilityUsesDecrement(event)
+		);
+
+		html.find(".ability-uses-increment").click(
+			event => this._onAbilityUsesIncrement(event)
+		);
+
 		html.find(".item-quantity-decrement").click(
 			event => this._onItemQuantityDecrement(event)
 		);
@@ -425,6 +433,38 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		super._onDropItemCreate(itemData);
+	}
+
+	async _onAbilityUsesDecrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.uses.available > 0) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					_id: itemId,
+					"system.uses.available": item.system.uses.available - 1,
+				},
+			]);
+		}
+	}
+
+	async _onAbilityUsesIncrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.uses.available < item.system.uses.max) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					_id: itemId,
+					"system.uses.available": item.system.uses.available + 1,
+				},
+			]);
+		}
 	}
 
 	async _onItemChatClick(event) {

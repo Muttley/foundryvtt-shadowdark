@@ -4,6 +4,9 @@
 * [#515] Backstab option not available on attack rolls
 * [#516] Wand and Scroll item sheets not showing spell caster classes correctly
 
+### Enhancements
+* [#517] Add support for limited use Class Abilities, and Class Abilities with no associated rolls
+
 ## v.1.4.4
 
 ### Bugfixes
@@ -36,7 +39,7 @@
 * [#493] Compendium item "Sword of the Ancients" missing base weapon type
 * [#496] Mage Armor spell effect not being applied
 
-### Enhancement
+### Enhancements
 * [#71] Add the ability to extend various character options
 * [#374] Added ability to create custom Classes
 * [#375] Added support for custom ancestries

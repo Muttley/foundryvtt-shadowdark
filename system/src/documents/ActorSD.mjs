@@ -930,12 +930,29 @@ export default class ActorSD extends Actor {
 	async useAbility(itemId) {
 		const item = this.items.get(itemId);
 
-		const result = await this.rollAbility(
-			item.system.ability,
-			{target: item.system.dc}
-		);
+		let success = true;
+		if (item.system.ability !== "") {
+			const result = await this.rollAbility(
+				item.system.ability,
+				{target: item.system.dc}
+			);
 
-		const success = result?.rolls?.main?.success ?? false;
+			success = result?.rolls?.main?.success ?? false;
+		}
+		else if (item.system.limitedUses) {
+			if (item.system.uses.available > 0) {
+				item.update({
+					"system.uses.available": item.system.uses.available - 1,
+				});
+			}
+			else {
+				success = false;
+				ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+					{permanent: false}
+				);
+			}
+		}
 
 		const messageType = success
 			? "SHADOWDARK.chat.use_ability.success"
