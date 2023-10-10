@@ -5,6 +5,7 @@
 * [#516] Wand and Scroll item sheets not showing spell caster classes correctly
 
 ### Enhancements
+* [#499] Add support for Boons and their various subtypes
 * [#517] Add support for limited use Class Abilities, and Class Abilities with no associated rolls
 
 ## v.1.4.4

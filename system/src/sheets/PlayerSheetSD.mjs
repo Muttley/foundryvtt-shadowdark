@@ -13,7 +13,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "player"],
 			width: 600,
-			height: 580,
+			height: 700,
 			resizable: true,
 			tabs: [
 				{
@@ -674,6 +674,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _prepareItems(context) {
 		const gems = [];
 
+		const boons = {
+			blessing: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.blessings.label"),
+				items: [],
+			},
+			oath: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.oaths.label"),
+				items: [],
+			},
+			secret: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.secrets.label"),
+				items: [],
+			},
+		};
+
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
@@ -798,6 +813,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					attacks.ranged.push(...weaponAttacks.ranged);
 				}
 			}
+			else if (i.type === "Boon") {
+				if (boons[i.system.boonType]) {
+					boons[i.system.boonType].items.push(i);
+				}
+			}
 			else if (i.type === "Gem") {
 				gems.push(i);
 			}
@@ -860,6 +880,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.hasClassAbilities = classAbilities.length > 0;
 
 		context.attacks = attacks;
+		context.boons = boons;
 		context.coins = {totalCoins, coinSlots};
 		context.gems = {items: gems, totalGems, gemSlots};
 		context.inventory = inventory;

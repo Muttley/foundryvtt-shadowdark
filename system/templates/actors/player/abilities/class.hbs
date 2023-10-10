@@ -8,9 +8,10 @@
 						{{group.name}}
 					</th>
 					<th>&nbsp;</th>
+					<th>&nbsp;</th>
 				</tr>
 				{{#each group.abilities}}
-					{{> ability ability=this}}
+					{{> ability ability=this owner=../../owner}}
 				{{/each}}
 			</table>
 		{{/each}}
@@ -36,6 +37,31 @@
 			>
 				{{ability.name}}
 			</a>
+		</td>
+		<td style="text-align: center;">
+			{{#if ability.system.limitedUses}}
+				{{#if owner}}
+					<a
+						class="item-control ability-uses-decrement"
+						data-item-id="{{ability._id}}"
+						data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.decrement.tooltip'}}"
+					>
+						<i class="fa-regular fa-minus fa-xs"></i>
+					</a>
+				{{/if}}
+					{{ability.system.uses.available}}/{{ability.system.uses.max}}
+				{{#if owner}}
+					<a
+						class="item-control ability-uses-increment"
+						data-item-id="{{ability._id}}"
+						data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.increment.tooltip'}}"
+					>
+						<i class="fa-regular fa-plus fa-xs"></i>
+					</a>
+				{{/if}}
+			{{else}}
+				&nbsp;
+			{{/if}}
 		</td>
 		<td style="text-align: right; padding-right: 4px;">
 			{{#unless ability.system.lost}}

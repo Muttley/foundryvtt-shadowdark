@@ -45,6 +45,12 @@ SHADOWDARK.DICE = {
 	d20: "d20",
 };
 
+SHADOWDARK.BOON_TYPES = {
+	oath: "SHADOWDARK.boons.oath",
+	secret: "SHADOWDARK.boons.secret",
+	blessing: "SHADOWDARK.boons.blessing",
+};
+
 /* eslint-disable quote-props */
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
@@ -57,6 +63,7 @@ SHADOWDARK.DEFAULTS = {
 		"Armor": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 		"Background": "icons/environment/people/commoner.webp",
 		"Basic": "icons/containers/bags/pouch-simple-brown.webp",
+		"Boon": "icons/skills/social/diplomacy-writing-letter.webp",
 		"Class Ability": "icons/tools/navigation/map-chart-tan.webp",
 		"Class": "icons/sundries/documents/document-sealed-brown-red.webp",
 		"Deity": "icons/magic/holy/yin-yang-balance-symbol.webp",

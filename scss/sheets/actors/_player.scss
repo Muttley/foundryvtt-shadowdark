@@ -92,6 +92,50 @@
 		}
 	}
 
+	.boons-list {
+		margin-bottom: 8px;
+
+		table {
+			@include p-reset;
+			font-family: "Montserrat-Medium";
+			font-size: 14px;
+			text-align: left;
+			border: none;
+
+			& td:first-child {
+				padding-left: 8px;
+			}
+
+			& th:first-child {
+				text-align: left;
+				padding-left: 4px;
+			}
+
+			& tr:first-child {
+				background-color: #00000020;
+
+				& td {
+					@include p-reset;
+				}
+			}
+
+			// Only highlight on hover rows that have actual items in them,
+			// not the section headers or header/footer rows
+			//
+			& tr:not(
+				:first-child,
+				.spell-tier-header,
+				.item-details
+			) {
+				&:hover {
+					cursor: pointer;
+					background-color: var(--secondary);
+					color: white;
+				}
+			}
+		}
+	}
+
 	.pc-roll-initiative {
 		@include p-reset;
 		display: grid;
@@ -141,7 +185,7 @@
 	.background-notes {
 		@include p-reset;
 		display: grid;
-		grid-template-rows: minmax(300px, max-content);
+		grid-template-rows: minmax(485px, max-content);
 
 		.editor {
 			background-color: var(--form-background);
@@ -565,6 +609,7 @@
 		text-decoration: line-through;
 	}
 
+	.boons-body,
 	.class-abilities-body,
 	.spells-body {
 		@include p-reset;
@@ -694,6 +739,13 @@
 				}
 			}
 		}
+	}
+
+	.section-header {
+		background: rgba(0, 0, 0, 0.05);
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: left;
 	}
 
 	.talents-body {

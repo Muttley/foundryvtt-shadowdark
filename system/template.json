@@ -136,6 +136,7 @@
 			"Armor",
 			"Background",
 			"Basic",
+			"Boon",
 			"Class Ability",
 			"Class",
 			"Deity",
@@ -242,6 +243,12 @@
 			],
 			"scroll": false,
 			"treasure": false
+		},
+		"Boon": {
+			"templates": [
+				"common"
+			],
+			"boonType": "oath"
 		},
 		"Class": {
 			"templates": [
