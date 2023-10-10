@@ -316,6 +316,23 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (["Armor", "Weapon"].includes(item.type)) {
 			context.propertyItems = await item.propertyItems();
+
+			const mySlug = item.name.slugify();
+
+			if (item.type === "Armor") {
+				context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.baseArmor()
+				);
+
+				delete context.baseArmor[mySlug];
+			}
+			if (item.type === "Weapon") {
+				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.baseWeapons()
+				);
+
+				delete context.baseWeapons[mySlug];
+			}
 		}
 
 		if (item.type === "Basic" && item.system.light.isSource) {
@@ -931,11 +948,15 @@ export default class ItemSheetSD extends ItemSheet {
 	 */
 	async _createPredefinedEffect(key, data) {
 		const handledData = data;
-		handledData.defaultValue = await this.item._handlePredefinedEffect(key, data.defaultValue);
 
-		if (handledData.defaultValue === "REPLACEME") {
+		let defaultValue = "REPLACEME";
+		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue);
+
+		if (defaultValue === "REPLACEME") {
 			return shadowdark.log("Can't create effect without selecting a value.");
 		}
+
+		handledData.defaultValue = defaultValue;
 
 		const effectMode = foundry.utils.getProperty(
 			CONST.ACTIVE_EFFECT_MODES,

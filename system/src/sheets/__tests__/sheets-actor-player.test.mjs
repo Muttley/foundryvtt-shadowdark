@@ -72,12 +72,12 @@ export default ({ describe, it, after, before, expect }) => {
 
 		it("has the expected window width", async () => {
 			expect(actor.sheet.options.width).is.not.undefined;
-			expect(actor.sheet.options.width).equal(560);
+			expect(actor.sheet.options.width).equal(600);
 		});
 
 		it("has the expected window height", async () => {
 			expect(actor.sheet.options.height).is.not.undefined;
-			expect(actor.sheet.options.height).equal(560);
+			expect(actor.sheet.options.height).equal(700);
 		});
 
 		it("has the expected tabs", async () => {

@@ -87,6 +87,7 @@ export default class CompendiumsSD {
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseArmor === ""
+				&& !document.system.magicItem
 		);
 
 		// re-create the collection from the filtered Items
@@ -103,6 +104,7 @@ export default class CompendiumsSD {
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseWeapon === ""
+				&& !document.system.magicItem
 		);
 
 		// re-create the collection from the filtered Items

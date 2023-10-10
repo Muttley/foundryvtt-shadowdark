@@ -36,10 +36,12 @@ export default class ItemSD extends Item {
 		const description = await this.getEnrichedDescription();
 
 		const isSpellcaster = await this.actor.isSpellcaster();
+		const canUseMagicItems = await this.actor.canUseMagicItems();
 
 		const data = {
 			actor: this.actor,
 			isSpellcaster,
+			canUseMagicItems,
 			description,
 			item: this.toObject(),
 			itemProperties: await this.propertyItems(),
@@ -47,6 +49,10 @@ export default class ItemSD extends Item {
 
 		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
 			data.spellClasses = await this.getSpellClassesDisplay();
+		}
+
+		if (["Armor", "Weapon"].includes(this.type)) {
+			data.baseItemName = await this.getBaseItemName();
 		}
 
 		return data;
@@ -77,6 +83,27 @@ export default class ItemSD extends Item {
 			? await ChatMessage.create(chatData) : chatData;
 
 		return card;
+	}
+
+	async getBaseItemName() {
+		if (this.type === "Armor") {
+			if (this.system.baseArmor === "") return "";
+
+			for (const armor of await shadowdark.compendiums.baseArmor()) {
+				if (armor.name.slugify() === this.system.baseArmor) {
+					return armor.name;
+				}
+			}
+		}
+		else if (this.type === "Weapon") {
+			if (this.system.baseWeapon === "") return "";
+
+			for (const armor of await shadowdark.compendiums.baseWeapons()) {
+				if (armor.name.slugify() === this.system.baseWeapon) {
+					return armor.name;
+				}
+			}
+		}
 	}
 
 	async getDetailsContent() {
@@ -286,7 +313,7 @@ export default class ItemSD extends Item {
 	async _askEffectInput(choiceType, choices) {
 		let options = "";
 		for (const [key, value] of Object.entries(choices)) {
-			options += `<option value="${key}">${value}</option>`;
+			options += `<option data-slug="${key}" value="${value}"></option>`;
 		}
 
 		const title = game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
@@ -307,9 +334,19 @@ export default class ItemSD extends Item {
  			buttons: {
 				submit: {
 					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
-					callback: html => (html[0].querySelector("input").value)
-						? html[0].querySelector("input").value
-						: false,
+					callback: html => {
+						const formValue = html[0].querySelector("input")?.value ?? "";
+
+						let slug = false;
+						for (const [key, value] of Object.entries(choices)) {
+							if (formValue === value) {
+								slug = key;
+								break;
+							}
+						}
+
+						return [slug, formValue];
+					},
 				},
 			},
 			close: () => false,
@@ -320,26 +357,39 @@ export default class ItemSD extends Item {
 	}
 
 	/**
-	 * Handles special cases for predefined effect mappings that use the
-	 * 'askInput' fields.
+	 * Handles special cases for predefined effect mappings
+	 *
 	 * @param {string} key - effectKey from mapping
 	 * @param {Object} value - data value from mapping
 	 * @returns {Object}
 	 */
 	async _handlePredefinedEffect(key, value) {
-		// TODO: CUSTOMIZATION How to generalize this with custom expansion of base items?
 		if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
-			return this._askEffectInput("weapon", CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+			return this._askEffectInput(
+				"weapon",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.baseWeapons()
+				)
+			);
 		}
 		else if (key === "armorMastery") {
-			return this._askEffectInput("armor", CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
+			return this._askEffectInput(
+				"armor",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.baseArmor()
+				)
+			);
 		}
 		else if (key === "spellAdvantage") {
-			// TODO: CUSTOMIZATION Allow custom spell compendiums
-			const spellNames = await this.getSpellListSlugified();
-			return this._askEffectInput("spell", spellNames);
+			return this._askEffectInput(
+				"spell",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.spells()
+				)
+			);
 		}
 		else if (key === "lightSource") {
+			// TODO Need to move to light source objects to allow customisation
 			const lightSourceList = await foundry.utils.fetchJsonWithTimeout(
 				"systems/shadowdark/assets/mappings/map-light-sources.json"
 			);
@@ -349,7 +399,7 @@ export default class ItemSD extends Item {
 			});
 			return this._askEffectInput("lightSource", lightSources);
 		}
-		return value;
+		return [value];
 	}
 
 	async propertyItems() {
@@ -444,20 +494,6 @@ export default class ItemSD extends Item {
 			const result = { expired: remaining <= 0, remaining, progress };
 			return result;
 		}
-	}
-
-	/**
-	 * Makes an array with all available spell names, slugified. This
-	 * is used for the predefined effects for Spell Advantage.
-	 * @returns {Array<string>}
-	 */
-	async getSpellListSlugified() {
-		// TODO: CUSTOMIZATION Allow custom spell compendiums
-		const spellPack = game.packs.get("shadowdark.spells");
-		const spellDocuments = await spellPack.getDocuments();
-		const spellNames = {};
-		spellDocuments.map(i => spellNames[i.name.slugify()] = i.name );
-		return spellNames;
 	}
 
 	async getSpellClassesDisplay() {

@@ -16,8 +16,8 @@
 		{{{description}}}
 	</div>
 
-	<div class="chat-card-buttons grid-2-columns">
-		{{#if isSpellcaster}}
+	<div class="chat-card-buttons {{#if isSpellcaster}}grid-2-columns{{/if}}">
+		{{#if canUseMagicItems}}
 			<button
 				class="item-control"
 				data-actor-id="{{actor.id}}"
@@ -26,6 +26,8 @@
 			>
 				{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
 			</button>
+		{{/if}}
+		{{#if isSpellcaster}}
 			<button
 				class="item-control"
 				data-actor-id="{{actor.id}}"

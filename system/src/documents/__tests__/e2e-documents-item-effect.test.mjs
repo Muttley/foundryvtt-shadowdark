@@ -1,5 +1,3 @@
-
-
 /* eslint-disable no-unused-expressions */
 /**
  * @file Contains tests for interactivity with effect items
@@ -50,6 +48,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 	before(async () => {
 		_p = await createMockPlayer();
 		await _p.updateArmorClass();
+
 		await waitForInput();
 	});
 
@@ -88,13 +87,13 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			const dataList = dataLists[0];
 			const options = Array.from(dataList.options);
 			expect(options.length).equal(choices.length);
-			expect(options.map(o => o.innerText)).contains(translatedName);
+			expect(options.map(o => o.value)).contains(translatedName);
 
 			// Select item
 			const inputFields = dialog.element.find("input");
 			expect(inputFields.length).equal(1);
 			const input = inputFields[0];
-			input.value = itemName;
+			input.value = translatedName;
 
 			// Click Submit
 			await $(".submit").click();
@@ -135,13 +134,13 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			const dataList = dataLists[0];
 			const options = Array.from(dataList.options);
 			expect(options.length).equal(choices.length);
-			expect(options.map(o => o.innerText)).contains(translatedName);
+			expect(options.map(o => o.value)).contains(translatedName);
 
 			// Select item
 			const inputFields = dialog.element.find("input");
 			expect(inputFields.length).equal(1);
 			const input = inputFields[0];
-			input.value = itemName;
+			input.value = translatedName;
 
 			// Click Submit
 			await $(".submit").click();
@@ -167,7 +166,28 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 		};
 
 		describe("Weapon Damage Die D12", () => {
-			const weapons = Object.keys(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+			/* eslint-disable quote-props */
+			const baseWeapons = {
+				"bastard-sword": "Bastard Sword",
+				"club": "Club",
+				"crossbow": "Crossbow",
+				"dagger": "Dagger",
+				"greataxe": "Greataxe",
+				"greatsword": "Greatsword",
+				"javelin": "Javelin",
+				"longbow": "Longbow",
+				"longsword": "Longsword",
+				"mace": "Mace",
+				"shortbow": "Shortbow",
+				"shortsword": "Shortsword",
+				"spear": "Spear",
+				"staff": "Staff",
+				"super-new-base-weapon": "Super New Base Weapon",
+				"warhammer": "Warhammer"
+			};
+			/* eslint-enable quote-props */
+
+			const weapons = Object.keys(baseWeapons);
 
 			it("Sanity checks", () => {
 				expect(weapons.length).not.equal(0);
@@ -187,14 +207,23 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 					await damageDieTest(
 						weapons,
 						w,
-						game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[w])
+						baseWeapons[w]
 					);
 				});
 			});
 		});
 
 		describe("Armor mastery", () => {
-			const armor = Object.keys(CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR);
+			/* eslint-disable quote-props */
+			const baseArmor = {
+				"chainmail": "Chainmail",
+				"leather-armor": "Leather Armor",
+				"plate-mail": "Plate Mail",
+				"shield": "Shield",
+			};
+			/* eslint-enable quote-props */
+
+			const armor = Object.keys(baseArmor);
 
 			it("Sanity checks", () => {
 				expect(armor.length).not.equal(0);
@@ -215,14 +244,35 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 						"armorMastery",
 						armor,
 						a,
-						game.i18n.localize(CONFIG.SHADOWDARK.ARMOR_BASE_ARMOR[a])
+						baseArmor[a]
 					);
 				});
 			});
 		});
 
 		describe("Weapon mastery", () => {
-			const weapons = Object.keys(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON);
+			/* eslint-disable quote-props */
+			const baseWeapons = {
+				"bastard-sword": "Bastard Sword",
+				"club": "Club",
+				"crossbow": "Crossbow",
+				"dagger": "Dagger",
+				"greataxe": "Greataxe",
+				"greatsword": "Greatsword",
+				"javelin": "Javelin",
+				"longbow": "Longbow",
+				"longsword": "Longsword",
+				"mace": "Mace",
+				"shortbow": "Shortbow",
+				"shortsword": "Shortsword",
+				"spear": "Spear",
+				"staff": "Staff",
+				"super-new-base-weapon": "Super New Base Weapon",
+				"warhammer": "Warhammer"
+			};
+			/* eslint-enable quote-props */
+
+			const weapons = Object.keys(baseWeapons);
 
 			it("Sanity checks", () => {
 				expect(weapons.length).not.equal(0);
@@ -243,50 +293,51 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 						"weaponMastery",
 						weapons,
 						w,
-						game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[w])
+						baseWeapons[w]
 					);
 				});
 			});
 		});
 
 		describe("Advantage: Spell Casting with specific spells", () => {
-			// Extracted from using the implemented code to create this list.
+			/* eslint-disable quote-props */
 			const spellNames = {
-				"charm-person": "Charm Person",
-				"feather-fall": "Feather Fall",
 				"acid-arrow": "Acid Arrow",
-				silence: "Silence",
-				"cleansing-weapon": "Cleansing Weapon",
-				"floating-disk": "Floating Disk",
-				"misty-step": "Misty Step",
-				augury: "Augury",
-				"mage-armor": "Mage Armor",
-				"holy-weapon": "Holy Weapon",
-				"hold-person": "Hold Person",
-				"mirror-image": "Mirror Image",
-				bless: "Bless",
-				"burning-hands": "Burning Hands",
-				"blind/deafen": "Blind/Deafen",
-				web: "Web",
-				light: "Light",
-				"cure-wounds": "Cure Wounds",
-				invisibility: "Invisibility",
-				"detect-magic": "Detect Magic",
-				knock: "Knock",
-				"magic-missile": "Magic Missile",
-				"detect-thoughts": "Detect Thoughts",
-				smite: "Smite",
-				"protection-from-evil": "Protection From Evil",
-				levitate: "Levitate",
-				alarm: "Alarm",
-				"shield-of-faith": "Shield of Faith",
-				"turn-undead": "Turn Undead",
-				sleep: "Sleep",
-				"fixed-object": "Fixed Object",
+				"alarm": "Alarm",
 				"alter-self": "Alter Self",
+				"augury": "Augury",
+				"bless": "Bless",
+				"blind/deafen": "Blind/Deafen",
+				"burning-hands": "Burning Hands",
+				"charm-person": "Charm Person",
+				"cleansing-weapon": "Cleansing Weapon",
+				"cure-wounds": "Cure Wounds",
+				"detect-magic": "Detect Magic",
+				"detect-thoughts": "Detect Thoughts",
+				"feather-fall": "Feather Fall",
+				"fixed-object": "Fixed Object",
+				"floating-disk": "Floating Disk",
+				"hold-person": "Hold Person",
 				"hold-portal": "Hold Portal",
-				"zone-of-truth": "Zone of Truth",
+				"holy-weapon": "Holy Weapon",
+				"invisibility": "Invisibility",
+				"knock": "Knock",
+				"levitate": "Levitate",
+				"light": "Light",
+				"mage-armor": "Mage Armor",
+				"magic-missile": "Magic Missile",
+				"mirror-image": "Mirror Image",
+				"misty-step": "Misty Step",
+				"protection-from-evil": "Protection From Evil",
+				"shield-of-faith": "Shield of Faith",
+				"silence": "Silence",
+				"sleep": "Sleep",
+				"smite": "Smite",
+				"turn-undead": "Turn Undead",
+				"web": "Web",
+				"zone-of-truth": "Zone of Truth"
 			};
+			/* eslint-enable quote-props */
 
 			const spells = Object.keys(spellNames);
 

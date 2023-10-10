@@ -136,6 +136,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.armorClass = await this.actor.getArmorClass();
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
+		context.canUseMagicItems = await this.actor.canUseMagicItems();
 		context.showSpellsTab = context.isSpellcaster || this.actor.system.class === "";
 
 		context.maxHp = this.actor.system.attributes.hp.base
@@ -292,10 +293,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					const effectKey = (key) ? key : c.key.split(".")[2];
 
 					// Ask for user input
-					c.value = await item._handlePredefinedEffect(effectKey);
+					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
 
 					if (c.value) {
-						name += ` (${game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[c.value])})`;
+						name += ` (${linkedName})`;
 					}
 				}
 				return c;

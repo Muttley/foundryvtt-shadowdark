@@ -27,4 +27,9 @@ export default class UtilitySD {
 		return [selectedItems, unselectedItems];
 	}
 
+	static async getSlugifiedItemList(items) {
+		const itemList = {};
+		items.map(i => itemList[i.name.slugify()] = i.name );
+		return itemList;
+	}
 }

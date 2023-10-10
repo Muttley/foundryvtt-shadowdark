@@ -308,6 +308,16 @@ export default class ActorSD extends Actor {
 		return backstab ? true : false;
 	}
 
+	async canUseMagicItems() {
+		const characterClass = this.backgroundItems.class;
+		const spellcastingClass =
+			characterClass?.system?.spellcasting?.ability ?? "";
+
+		return characterClass && spellcastingClass !== ""
+			? true
+			: false;
+	}
+
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
 
@@ -513,10 +523,10 @@ export default class ActorSD extends Actor {
 
 	async isSpellcaster() {
 		const characterClass = this.backgroundItems.class;
-		const spellcastingAbility =
+		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingAbility !== "__not_spellcaster__"
+		return characterClass && spellcastingClass !== "__not_spellcaster__"
 			? true
 			: false;
 	}

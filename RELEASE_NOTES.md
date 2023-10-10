@@ -7,6 +7,7 @@
 ### Enhancements
 * [#499] Add support for Boons and their various subtypes
 * [#517] Add support for limited use Class Abilities, and Class Abilities with no associated rolls
+* [#518] Weapon and Armor mastery using fixed base weapons rather than dynamically building a list from items available in compendiums
 
 ## v.1.4.4
 
