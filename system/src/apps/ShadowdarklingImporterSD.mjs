@@ -56,18 +56,6 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	}
 
 	/**
-	 * Parse the spellcasting modifier through the config
-	 * @param {string} actorClass - Class from the exported JSON
-	 * @returns {string}
-	 */
-	_getSpellCastingAbility(actorClass) {
-		if (Object.keys(CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES).includes(actorClass)) {
-			return CONFIG.SHADOWDARK.SPELLCASTING_ABILITY[actorClass];
-		}
-		return "";
-	}
-
-	/**
 	 * Manipulates the Spell Advantage talent so it may be used on the actor
 	 * @param {string} spell - Spell name to be used for advantage
 	 * @returns {ItemSD}

@@ -309,7 +309,7 @@ export default class ItemSheetSD extends ItemSheet {
 			await this.getClassSelectorConfigs(context);
 		}
 
-		if (["Spell"].includes(item.type)) {
+		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
 			await this.getSpellSelectorConfigs(context);
 		}
 
@@ -350,18 +350,6 @@ export default class ItemSheetSD extends ItemSheet {
 		if (item.type === "Talent" || item.type === "Effect" || item.system.magicItem ) {
 			context.predefinedEffects = await this._getPredefinedEffectsList();
 			context.effects = item.effects;
-		}
-
-		if (["Potion", "Scroll", "Spell", "Wand"].includes(item.type)) {
-			context.casterClasses = [];
-
-			for (const key of this.item.system.class) {
-				context.casterClasses.push(
-					CONFIG.SHADOWDARK.SPELL_CASTER_CLASSES[key]
-				);
-			}
-
-			context.casterClassesDisplay = context.casterClasses.join(", ");
 		}
 
 		context.descriptionHTML = await TextEditor.enrichHTML(

@@ -142,16 +142,6 @@ SHADOWDARK.OFFICIAL_SOURCES = {
 	"core-rules": "Shadowdark RPG: Core Rules",
 };
 
-SHADOWDARK.SPELLCASTING_ABILITY = {
-	priest: "wis",
-	wizard: "int",
-};
-
-SHADOWDARK.SPELL_CASTER_CLASSES = {
-	priest: "SHADOWDARK.spell_caster.priest",
-	wizard: "SHADOWDARK.spell_caster.wizard",
-};
-
 SHADOWDARK.SPELL_DURATIONS = {
 	focus: "SHADOWDARK.spell_duration.focus",
 	instant: "SHADOWDARK.spell_duration.instant",

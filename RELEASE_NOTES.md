@@ -2,6 +2,7 @@
 
 ### Bugfixes
 * [#515] Backstab option not available on attack rolls
+* [#516] Wand and Scroll item sheets not showing spell caster classes correctly
 
 ## v.1.4.4
 
