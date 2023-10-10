@@ -1,3 +1,8 @@
+## v.1.4.5
+
+### Bugfixes
+* [#515] Backstab option not available on attack rolls
+
 ## v.1.4.4
 
 ### Bugfixes

@@ -36,24 +36,6 @@ SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
 };
 
-SHADOWDARK.BACKSTAB_CLASSES = ["thief"];
-
-SHADOWDARK.CLASS_HD = {
-	fighter: "1d8",
-	ranger: "1d8",
-	priest: "1d6",
-	thief: "1d4",
-	wizard: "1d4",
-};
-
-SHADOWDARK.CLASSES = {
-	fighter: "SHADOWDARK.class.fighter",
-	priest: "SHADOWDARK.class.priest",
-	ranger: "SHADOWDARK.class.ranger",
-	thief: "SHADOWDARK.class.thief",
-	wizard: "SHADOWDARK.class.wizard",
-};
-
 SHADOWDARK.DICE = {
 	d4: "d4",
 	d6: "d6",

@@ -299,6 +299,15 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async canBackstab() {
+		const backstab = this.items.find(i => {
+			return i.type === "Talent"
+				&& i.name === "Backstab";
+		});
+
+		return backstab ? true : false;
+	}
+
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
 
@@ -338,7 +347,8 @@ export default class ActorSD extends Actor {
 
 		const parts = ["@abilityBonus", "@talentBonus"];
 
-		// TODO: push to parts & for set talentBonus as sum of talents affecting spell rolls
+		// TODO: push to parts & for set talentBonus as sum of talents affecting
+		// spell rolls
 
 		return item.rollSpell(parts, data);
 	}
@@ -618,6 +628,8 @@ export default class ActorSD extends Actor {
 				data.talentBonus = bonuses.meleeAttackBonus;
 				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
 				data.damageParts.push("@meleeDamageBonus");
+
+				data.canBackstab = await this.canBackstab();
 			}
 			else {
 				data.abilityBonus = this.abilityModifier("dex");

@@ -60,11 +60,6 @@ export default function registerHandlebarsHelpers() {
 			: CONFIG.SHADOWDARK.SPELL_DURATIONS[type];
 	});
 
-	Handlebars.registerHelper("ifBackstabClass", (value, options) => {
-		return CONFIG.SHADOWDARK.BACKSTAB_CLASSES
-			.includes(value) ? options.fn(this) : options.inverse(this);
-	});
-
 	Handlebars.registerHelper("joinStrings", value => {
 		value = value ? value : [];
 		return value.join(", ");

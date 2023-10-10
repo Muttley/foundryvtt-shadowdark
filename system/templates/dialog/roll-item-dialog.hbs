@@ -23,7 +23,7 @@
     </div>
     <hr />
 
-    {{#ifBackstabClass data.actor.system.class}}
+    {{#if data.canBackstab}}
     <div class="dialog-item pc-backstab-class">
       <label>{{localize "SHADOWDARK.talent.backstab"}}</label>
       <div>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <hr />
-    {{/ifBackstabClass}}
+    {{/if}}
 
     <div class="form-group">
       <label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
