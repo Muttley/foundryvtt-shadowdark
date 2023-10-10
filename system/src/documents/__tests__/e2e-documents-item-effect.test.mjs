@@ -183,7 +183,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				"spear": "Spear",
 				"staff": "Staff",
 				"super-new-base-weapon": "Super New Base Weapon",
-				"warhammer": "Warhammer"
+				"warhammer": "Warhammer",
 			};
 			/* eslint-enable quote-props */
 
@@ -268,7 +268,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				"spear": "Spear",
 				"staff": "Staff",
 				"super-new-base-weapon": "Super New Base Weapon",
-				"warhammer": "Warhammer"
+				"warhammer": "Warhammer",
 			};
 			/* eslint-enable quote-props */
 
@@ -335,7 +335,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				"smite": "Smite",
 				"turn-undead": "Turn Undead",
 				"web": "Web",
-				"zone-of-truth": "Zone of Truth"
+				"zone-of-truth": "Zone of Truth",
 			};
 			/* eslint-enable quote-props */
 
