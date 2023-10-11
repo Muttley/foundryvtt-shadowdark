@@ -864,7 +864,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let totalGems = gems.length;
 
 		if (totalGems > 0) {
-			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
+			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
 		}
 
 		const classAbilities = [];

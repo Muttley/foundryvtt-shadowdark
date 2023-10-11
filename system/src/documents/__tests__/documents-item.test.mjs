@@ -37,8 +37,8 @@ export default ({ describe, it, after, expect }) => {
 		it("Gem type item has slots correctly configured", async () => {
 			const item = await createMockItem("Gem");
 			expect(item.system.slots.free_carry).equal(0);
-			expect(CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT).is.not.null;
-			expect(item.system.slots.per_slot).equal(CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
+			expect(CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT).is.not.null;
+			expect(item.system.slots.per_slot).equal(CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
 			expect(item.system.slots.slots_used).equal(1);
 			await item.delete();
 		});
