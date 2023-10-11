@@ -25,33 +25,8 @@ SHADOWDARK.ALIGNMENTS = {
 	chaotic: "SHADOWDARK.alignment.chaotic",
 };
 
-SHADOWDARK.ARMOR_BASE_ARMOR = {
-	chainmail: "SHADOWDARK.item.armor.base_armor.chainmail",
-	"leather-armor": "SHADOWDARK.item.armor.base_armor.leather_armor",
-	"plate-mail": "SHADOWDARK.item.armor.base_armor.plate_mail",
-	shield: "SHADOWDARK.item.armor.base_armor.shield",
-};
-
 SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
-};
-
-SHADOWDARK.BACKSTAB_CLASSES = ["thief"];
-
-SHADOWDARK.CLASS_HD = {
-	fighter: "1d8",
-	ranger: "1d8",
-	priest: "1d6",
-	thief: "1d4",
-	wizard: "1d4",
-};
-
-SHADOWDARK.CLASSES = {
-	fighter: "SHADOWDARK.class.fighter",
-	priest: "SHADOWDARK.class.priest",
-	ranger: "SHADOWDARK.class.ranger",
-	thief: "SHADOWDARK.class.thief",
-	wizard: "SHADOWDARK.class.wizard",
 };
 
 SHADOWDARK.DICE = {
@@ -63,10 +38,17 @@ SHADOWDARK.DICE = {
 	d20: "d20",
 };
 
+SHADOWDARK.BOON_TYPES = {
+	oath: "SHADOWDARK.boons.oath",
+	secret: "SHADOWDARK.boons.secret",
+	blessing: "SHADOWDARK.boons.blessing",
+};
+
 /* eslint-disable quote-props */
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
+	GEMS_PER_SLOT: 10,
 	FREE_COIN_CARRY: 100,
 	LEARN_SPELL_DC: 15,
 	LIGHT_TRACKER_UPDATE_INTERVAL_SECS: 30,
@@ -75,6 +57,7 @@ SHADOWDARK.DEFAULTS = {
 		"Armor": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 		"Background": "icons/environment/people/commoner.webp",
 		"Basic": "icons/containers/bags/pouch-simple-brown.webp",
+		"Boon": "icons/skills/social/diplomacy-writing-letter.webp",
 		"Class Ability": "icons/tools/navigation/map-chart-tan.webp",
 		"Class": "icons/sundries/documents/document-sealed-brown-red.webp",
 		"Deity": "icons/magic/holy/yin-yang-balance-symbol.webp",
@@ -93,10 +76,6 @@ SHADOWDARK.DEFAULTS = {
 	},
 };
 /* eslint-enable quote-props */
-
-SHADOWDARK.INVENTORY = {
-	GEMS_PER_SLOT: 10,
-};
 
 SHADOWDARK.LANGUAGE_RARITY = {
 	common: "SHADOWDARK.language.rarity.common",
@@ -158,16 +137,6 @@ SHADOWDARK.OFFICIAL_SOURCES = {
 	"quickstart-player-guide": "Quickstart: Player Guide",
 	"bard-and-ranger": "Shadowdark RPG: Bard and Ranger",
 	"core-rules": "Shadowdark RPG: Core Rules",
-};
-
-SHADOWDARK.SPELLCASTING_ABILITY = {
-	priest: "wis",
-	wizard: "int",
-};
-
-SHADOWDARK.SPELL_CASTER_CLASSES = {
-	priest: "SHADOWDARK.spell_caster.priest",
-	wizard: "SHADOWDARK.spell_caster.wizard",
 };
 
 SHADOWDARK.SPELL_DURATIONS = {
@@ -280,25 +249,6 @@ SHADOWDARK.WEAPON_BASE_DAMAGE_DIE_ONLY = {
 	d8: "d8",
 	d10: "d10",
 	d12: "d12",
-};
-
-SHADOWDARK.WEAPON_BASE_WEAPON = {
-	"bastard-sword": "SHADOWDARK.item.weapon.base_weapon.bastard_sword",
-	club: "SHADOWDARK.item.weapon.base_weapon.club",
-	crossbow: "SHADOWDARK.item.weapon.base_weapon.crossbow",
-	dagger: "SHADOWDARK.item.weapon.base_weapon.dagger",
-	greataxe: "SHADOWDARK.item.weapon.base_weapon.greataxe",
-	greatsword: "SHADOWDARK.item.weapon.base_weapon.greatsword",
-	javelin: "SHADOWDARK.item.weapon.base_weapon.javelin",
-	longbow: "SHADOWDARK.item.weapon.base_weapon.longbow",
-	longsword: "SHADOWDARK.item.weapon.base_weapon.longsword",
-	mace: "SHADOWDARK.item.weapon.base_weapon.mace",
-	shortbow: "SHADOWDARK.item.weapon.base_weapon.shortbow",
-	shortsword: "SHADOWDARK.item.weapon.base_weapon.shortsword",
-	spear: "SHADOWDARK.item.weapon.base_weapon.spear",
-	staff: "SHADOWDARK.item.weapon.base_weapon.staff",
-	wand: "SHADOWDARK.item.weapon.base_weapon.wand",
-	warhammer: "SHADOWDARK.item.weapon.base_weapon.warhammer",
 };
 
 SHADOWDARK.WEAPON_TYPES = {

@@ -136,6 +136,7 @@
 			"Armor",
 			"Background",
 			"Basic",
+			"Boon",
 			"Class Ability",
 			"Class",
 			"Deity",
@@ -243,6 +244,12 @@
 			"scroll": false,
 			"treasure": false
 		},
+		"Boon": {
+			"templates": [
+				"common"
+			],
+			"boonType": "oath"
+		},
 		"Class": {
 			"templates": [
 				"common",
@@ -270,8 +277,13 @@
 			"ability": "",
 			"group": "",
 			"dc": 10,
+			"limitedUses": false,
 			"loseOnFailure": true,
-			"lost": false
+			"lost": false,
+			"uses": {
+				"available": 0,
+				"max": 0
+			}
 		},
 		"Deity": {
 			"templates": [

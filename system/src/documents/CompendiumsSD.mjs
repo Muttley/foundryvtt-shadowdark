@@ -87,6 +87,7 @@ export default class CompendiumsSD {
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseArmor === ""
+				&& !document.system.magicItem
 		);
 
 		// re-create the collection from the filtered Items
@@ -103,6 +104,7 @@ export default class CompendiumsSD {
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseWeapon === ""
+				&& !document.system.magicItem
 		);
 
 		// re-create the collection from the filtered Items
@@ -187,7 +189,7 @@ export default class CompendiumsSD {
 	}
 
 	static async npcAttacks(sources=[]) {
-		return CompendiumsSD.talents(["NPC Attack"], sources);
+		return CompendiumsSD._documents("Item", "NPC Attack", sources);
 	}
 
 	static async npcFeatures(sources=[]) {
@@ -230,7 +232,7 @@ export default class CompendiumsSD {
 	}
 
 	static async scrolls(sources=[]) {
-		return CompendiumsSD.talents(["Scroll"], sources);
+		return CompendiumsSD._documents("Item", "Scroll", sources);
 	}
 
 	static async spellcastingClasses(sources=[]) {
@@ -251,7 +253,7 @@ export default class CompendiumsSD {
 	}
 
 	static async spells(sources=[]) {
-		return CompendiumsSD.talents(["Spell"], sources);
+		return CompendiumsSD._documents("Item", "Spell", sources);
 	}
 
 	static async talents(subtypes=[], sources=[]) {

@@ -13,7 +13,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "player"],
 			width: 600,
-			height: 580,
+			height: 700,
 			resizable: true,
 			tabs: [
 				{
@@ -37,6 +37,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	activateListeners(html) {
 		html.find(".item-image").click(
 			event => this._onItemChatClick(event)
+		);
+
+		html.find(".ability-uses-decrement").click(
+			event => this._onAbilityUsesDecrement(event)
+		);
+
+		html.find(".ability-uses-increment").click(
+			event => this._onAbilityUsesIncrement(event)
 		);
 
 		html.find(".item-quantity-decrement").click(
@@ -128,6 +136,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.armorClass = await this.actor.getArmorClass();
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
+		context.canUseMagicItems = await this.actor.canUseMagicItems();
 		context.showSpellsTab = context.isSpellcaster || this.actor.system.class === "";
 
 		context.maxHp = this.actor.system.attributes.hp.base
@@ -284,10 +293,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					const effectKey = (key) ? key : c.key.split(".")[2];
 
 					// Ask for user input
-					c.value = await item._handlePredefinedEffect(effectKey);
+					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
 
 					if (c.value) {
-						name += ` (${game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_BASE_WEAPON[c.value])})`;
+						name += ` (${linkedName})`;
 					}
 				}
 				return c;
@@ -425,6 +434,38 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		super._onDropItemCreate(itemData);
+	}
+
+	async _onAbilityUsesDecrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.uses.available > 0) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					_id: itemId,
+					"system.uses.available": item.system.uses.available - 1,
+				},
+			]);
+		}
+	}
+
+	async _onAbilityUsesIncrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.uses.available < item.system.uses.max) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					_id: itemId,
+					"system.uses.available": item.system.uses.available + 1,
+				},
+			]);
+		}
 	}
 
 	async _onItemChatClick(event) {
@@ -634,6 +675,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _prepareItems(context) {
 		const gems = [];
 
+		const boons = {
+			blessing: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.blessings.label"),
+				items: [],
+			},
+			oath: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.oaths.label"),
+				items: [],
+			},
+			secret: {
+				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.secrets.label"),
+				items: [],
+			},
+		};
+
 		const inventory = {
 			armor: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
@@ -758,6 +814,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					attacks.ranged.push(...weaponAttacks.ranged);
 				}
 			}
+			else if (i.type === "Boon") {
+				if (boons[i.system.boonType]) {
+					boons[i.system.boonType].items.push(i);
+				}
+			}
 			else if (i.type === "Gem") {
 				gems.push(i);
 			}
@@ -803,7 +864,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let totalGems = gems.length;
 
 		if (totalGems > 0) {
-			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.INVENTORY.GEMS_PER_SLOT);
+			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
 		}
 
 		const classAbilities = [];
@@ -820,6 +881,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.hasClassAbilities = classAbilities.length > 0;
 
 		context.attacks = attacks;
+		context.boons = boons;
 		context.coins = {totalCoins, coinSlots};
 		context.gems = {items: gems, totalGems, gemSlots};
 		context.inventory = inventory;

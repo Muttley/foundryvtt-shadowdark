@@ -109,10 +109,13 @@ SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.available.label: Available
 SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: Ability Group
+SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
 SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
 SHADOWDARK.class-ability.lost.label: Lost
+SHADOWDARK.class-ability.maximum.label: Maximum
 SHADOWDARK.class.armor.all.label: All Armor
 SHADOWDARK.class.armor.label: Armor
 SHADOWDARK.class.armor.prompt: Select Armor...
@@ -225,6 +228,7 @@ SHADOWDARK.effect.tooltip.transfer.do_not: Does not transfer
 SHADOWDARK.effect.tooltip.transfer.do: Does transfer
 SHADOWDARK.effect.tooltip.transfer.header: Transfer effect to actor when item is added
 SHADOWDARK.effect.unavailable: Disabled Effects
+SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
@@ -490,6 +494,8 @@ SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the L
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
 SHADOWDARK.sheet.abilities.label: Abilities
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
+SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
+SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: Alignment
 SHADOWDARK.sheet.actor.hp_max: Max
@@ -594,3 +600,11 @@ SHADOWDARK.weapon.properties.two_handed: Two-Handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.sheet.player.boons.label: Boons
+SHADOWDARK.sheet.player.boons.oaths.label: Oaths
+SHADOWDARK.sheet.player.boons.secrets.label: Secrets
+SHADOWDARK.sheet.player.boons.blessings.label: Blessings
+SHADOWDARK.boons.oath: Oath
+SHADOWDARK.boons.secret: Secret
+SHADOWDARK.boons.blessing: Blessing
+SHADOWDARK.boon.type.label: Boon Type

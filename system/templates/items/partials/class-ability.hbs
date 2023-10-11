@@ -28,13 +28,39 @@
 	</div>
 	<div class="item-detail">
 		<div class="checkbox">
+			<label>{{localize "SHADOWDARK.class-ability.limited-uses.label"}}</label>
+			<input type="checkbox" name="system.limitedUses" {{checked item.system.limitedUses}}>
+		</div>
+		{{#if system.limitedUses}}
+			<div class="grid-2-columns">
+				<div class="item-detail">
+					<label>{{localize 'SHADOWDARK.class-ability.available.label'}}</label>
+					{{numberInput
+						item.system.uses.available
+						name="system.uses.available"
+						placeholder="0"
+					}}
+				</div>
+				<div class="item-detail">
+					<label>{{localize 'SHADOWDARK.class-ability.maximum.label'}}</label>
+					{{numberInput
+						item.system.uses.max
+						name="system.uses.max"
+						placeholder="0"
+					}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+	<div class="item-detail">
+		<div class="checkbox">
 			<label>{{localize "SHADOWDARK.class-ability.lose_on_failure.label"}}</label>
-			<input type="checkbox" name="system.loseOnFailure" {{checked system.loseOnFailure}}>
+			<input type="checkbox" name="system.loseOnFailure" {{checked item.system.loseOnFailure}}>
 		</div>
 		{{#if system.loseOnFailure}}
 			<div class="checkbox">
 				<label>{{localize "SHADOWDARK.class-ability.lost.label"}}</label>
-				<input type="checkbox" name="system.lost" {{checked system.lost}}>
+				<input type="checkbox" name="system.lost" {{checked item.system.lost}}>
 			</div>
 		{{/if}}
 	</div>

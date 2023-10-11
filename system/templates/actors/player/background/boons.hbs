@@ -1,0 +1,49 @@
+<section class="boons-body">
+	<div class="boons-list">
+		<table>
+			<tr>
+				<th>
+					<a
+						class="item-control item-create"
+						data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='Boon'}}"
+						data-item-type="Boon"
+					>
+						<i class="fa-duotone fa-file-plus"></i>
+					</a>
+					{{localize "SHADOWDARK.sheet.player.boons.label"}}
+				</th>
+			</tr>
+			{{#each boons as |boonType|}}
+				{{#if boonType.items}}
+					<tr class="spell-tier-header">
+						<th class="spell-tier-header-padding">
+							{{boonType.label}}
+						</th>
+					</tr>
+					{{#each boonType.items as |boon|}}
+						<tr
+							class="item"
+							data-item-id="{{boon._id}}"
+						>
+							<td>
+								<div
+									class="item-image"
+									style="background-image: url({{boon.img}})"
+									data-item-id="{{boon._id}}"
+								>
+									<i class="fas fa-comment fa-lg"></i>
+								</div>
+								<a
+									class="item-control show-details"
+									data-item-id="{{boon._id}}"
+								>
+									{{boon.name}}
+								</a>
+							</td>
+						</tr>
+					{{/each}}
+				{{/if}}
+			{{/each}}
+		</table>
+	</div>
+</section>

@@ -17,15 +17,15 @@ const weakenTable = await pack.getDocument(weakenTableID);
 const weakenResult = await weakenTable.draw({displayChat: false});
 const weaken = weakenResult.results.pop().getChatText();
 
-const message = `<p>A location with <b>${movement}</b> 
-that will weaken the characters with <b>${weaken}</b> 
+const message = `<p>A location with <b>${movement}</b>
+that will weaken the characters with <b>${weaken}</b>
 and causes damage through <b>${damage}</b></p>`;
 
 const chatData = {
-  user: game.user._id,
-  speaker: ChatMessage.getSpeaker(),
-  content: message,
-  whisper: game.users.filter(u => u.isGM).map(u => u._id),
+	user: game.user._id,
+	speaker: ChatMessage.getSpeaker(),
+	content: message,
+	whisper: game.users.filter(u => u.isGM).map(u => u._id),
 };
 
 ChatMessage.create(chatData, {});

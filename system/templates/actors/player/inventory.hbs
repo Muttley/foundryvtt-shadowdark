@@ -113,25 +113,26 @@
 									</a>
 								{{/if}}
 								{{#ifEq item.type "Potion"}}
-										<a
-											class="item-control use-potion"
-											data-action="use-potion"
-											data-item-id="{{item._id}}"
-											data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_potion'}}"
-										>
-											<i class="fas fa-prescription-bottle"></i>
-										</a>
+									<a
+										class="item-control use-potion"
+										data-action="use-potion"
+										data-item-id="{{item._id}}"
+										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_potion'}}"
+									>
+										<i class="fas fa-prescription-bottle"></i>
+									</a>
 								{{/ifEq}}
-								{{#if ../../isSpellcaster}}
+								{{#if ../../canUseMagicItems}}
 									{{#ifEq item.type "Scroll"}}
-											<a
-												class="item-control use-scroll"
-												data-action="cast-spell"
-												data-item-id="{{item._id}}"
-												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
-											>
-												<i class="fa-solid fa-scroll"></i>
-											</a>
+										<a
+											class="item-control use-scroll"
+											data-action="cast-spell"
+											data-item-id="{{item._id}}"
+											data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
+										>
+											<i class="fa-solid fa-scroll"></i>
+										</a>
+										{{#if ../../isSpellcaster}}
 											&nbsp;
 											<a
 												class="item-control use-scroll"
@@ -141,6 +142,7 @@
 											>
 												<i class="fa-solid fa-graduation-cap"></i>
 											</a>
+										{{/if}}
 									{{/ifEq}}
 									{{#ifEq item.type "Wand"}}
 										{{#unless item.system.lost}}
@@ -155,7 +157,7 @@
 											&nbsp;
 										{{/unless}}
 										<a
-											class="item-control toggle-spell-lost"
+											class="item-control toggle-lost"
 											data-item-id="{{item._id}}"
 											data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 										>

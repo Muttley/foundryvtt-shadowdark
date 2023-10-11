@@ -299,6 +299,25 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+	async canBackstab() {
+		const backstab = this.items.find(i => {
+			return i.type === "Talent"
+				&& i.name === "Backstab";
+		});
+
+		return backstab ? true : false;
+	}
+
+	async canUseMagicItems() {
+		const characterClass = this.backgroundItems.class;
+		const spellcastingClass =
+			characterClass?.system?.spellcasting?.ability ?? "";
+
+		return characterClass && spellcastingClass !== ""
+			? true
+			: false;
+	}
+
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
 
@@ -338,7 +357,8 @@ export default class ActorSD extends Actor {
 
 		const parts = ["@abilityBonus", "@talentBonus"];
 
-		// TODO: push to parts & for set talentBonus as sum of talents affecting spell rolls
+		// TODO: push to parts & for set talentBonus as sum of talents affecting
+		// spell rolls
 
 		return item.rollSpell(parts, data);
 	}
@@ -503,10 +523,10 @@ export default class ActorSD extends Actor {
 
 	async isSpellcaster() {
 		const characterClass = this.backgroundItems.class;
-		const spellcastingAbility =
+		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingAbility !== "__not_spellcaster__"
+		return characterClass && spellcastingClass !== "__not_spellcaster__"
 			? true
 			: false;
 	}
@@ -618,6 +638,8 @@ export default class ActorSD extends Actor {
 				data.talentBonus = bonuses.meleeAttackBonus;
 				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
 				data.damageParts.push("@meleeDamageBonus");
+
+				data.canBackstab = await this.canBackstab();
 			}
 			else {
 				data.abilityBonus = this.abilityModifier("dex");
@@ -918,12 +940,29 @@ export default class ActorSD extends Actor {
 	async useAbility(itemId) {
 		const item = this.items.get(itemId);
 
-		const result = await this.rollAbility(
-			item.system.ability,
-			{target: item.system.dc}
-		);
+		let success = true;
+		if (item.system.ability !== "") {
+			const result = await this.rollAbility(
+				item.system.ability,
+				{target: item.system.dc}
+			);
 
-		const success = result?.rolls?.main?.success ?? false;
+			success = result?.rolls?.main?.success ?? false;
+		}
+		else if (item.system.limitedUses) {
+			if (item.system.uses.available > 0) {
+				item.update({
+					"system.uses.available": item.system.uses.available - 1,
+				});
+			}
+			else {
+				success = false;
+				ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+					{permanent: false}
+				);
+			}
+		}
 
 		const messageType = success
 			? "SHADOWDARK.chat.use_ability.success"
