@@ -1,5 +1,8 @@
 ## v.1.4.6
 
+### Bugfixes
+* [#521] Unable to add Weapon and Armor Mastery talents to character sheet
+
 ### Enhancements
 * [#520] Switch Class HP roll setting to be a free text field so custom dice roll formulas can be used
 

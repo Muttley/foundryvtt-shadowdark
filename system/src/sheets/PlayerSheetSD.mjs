@@ -293,6 +293,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					const effectKey = (key) ? key : c.key.split(".")[2];
 
 					// Ask for user input
+					let linkedName;
 					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
 
 					if (c.value) {
