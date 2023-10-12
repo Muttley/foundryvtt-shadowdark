@@ -120,7 +120,7 @@ SHADOWDARK.class.armor.all.label: All Armor
 SHADOWDARK.class.armor.label: Armor
 SHADOWDARK.class.armor.prompt: Select Armor...
 SHADOWDARK.class.fighter: Fighter
-SHADOWDARK.class.hit_points.label: Hit Points
+SHADOWDARK.class.hit_points.label: HP Die Roll
 SHADOWDARK.class.language_choices.count.label: Choice Count
 SHADOWDARK.class.language_choices.label: Language Choices
 SHADOWDARK.class.language_choices.prompt: Select Language...
@@ -140,6 +140,8 @@ SHADOWDARK.class.titles.levels.from.label: From
 SHADOWDARK.class.titles.levels.label: Levels
 SHADOWDARK.class.titles.levels.to.label: To
 SHADOWDARK.class.weapons.all.label: All Weapons
+SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
+SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
 SHADOWDARK.class.weapons.label: Weapons
 SHADOWDARK.class.weapons.prompt: Select Weapon...
 SHADOWDARK.class.wizard: Wizard

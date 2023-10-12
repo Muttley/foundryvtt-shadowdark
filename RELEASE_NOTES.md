@@ -1,3 +1,13 @@
+## v.1.4.6
+
+### Bugfixes
+* [#485] Spell Advantage talent not functioning
+* [#521] Unable to add Weapon and Armor Mastery talents to character sheet
+
+### Enhancements
+* [#520] Switch Class HP roll setting to be a free text field so custom dice roll formulas can be used
+* [#522] Added "All Ranged Weapons" and "All Melee Weapons" checkbox to class equipment settings for more granular options
+
 ## v.1.4.5
 
 ### Bugfixes

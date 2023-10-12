@@ -2,14 +2,11 @@
 	<div class="class-details">
 		<div class="item-detail">
 			<label>{{localize 'SHADOWDARK.class.hit_points.label'}}</label>
-			<select name="system.hitPoints">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					config.DICE
-					selected=system.hitPoints
-					localize=false
-				}}
-			</select>
+			<input
+				name="system.hitPoints"
+				type="text"
+				value="{{item.system.hitPoints}}"
+			/>
 		</div>
 		<div class="item-detail">
 			<label>{{localize "SHADOWDARK.class.talents_table.label"}}</label>
@@ -78,10 +75,18 @@
 				editable=editable
 			}}
 		</div>
-		<div>
+		<div class="item-detail">
 			<div class="checkbox">
 				<label>{{localize "SHADOWDARK.class.weapons.all.label"}}</label>
 				<input type="checkbox" name="system.allWeapons" {{checked system.allWeapons}}>
+			</div>
+			<div class="checkbox">
+				<label>{{localize "SHADOWDARK.class.weapons.all_melee.label"}}</label>
+				<input type="checkbox" name="system.allMeleeWeapons" {{checked system.allMeleeWeapons}}>
+			</div>
+			<div class="checkbox">
+				<label>{{localize "SHADOWDARK.class.weapons.all_ranged.label"}}</label>
+				<input type="checkbox" name="system.allRangedWeapons" {{checked system.allRangedWeapons}}>
 			</div>
 			<div class="checkbox">
 				<label>{{localize "SHADOWDARK.class.armor.all.label"}}</label>
