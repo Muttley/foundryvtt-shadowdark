@@ -182,7 +182,6 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				"shortsword": "Shortsword",
 				"spear": "Spear",
 				"staff": "Staff",
-				"super-new-base-weapon": "Super New Base Weapon",
 				"warhammer": "Warhammer",
 			};
 			/* eslint-enable quote-props */
@@ -267,7 +266,6 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				"shortsword": "Shortsword",
 				"spear": "Spear",
 				"staff": "Staff",
-				"super-new-base-weapon": "Super New Base Weapon",
 				"warhammer": "Warhammer",
 			};
 			/* eslint-enable quote-props */
