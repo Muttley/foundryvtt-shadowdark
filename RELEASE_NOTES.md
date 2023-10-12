@@ -1,3 +1,8 @@
+## v.1.4.6
+
+### Enhancements
+* [#520] Switch Class HP roll setting to be a free text field so custom dice roll formulas can be used
+
 ## v.1.4.5
 
 ### Bugfixes
