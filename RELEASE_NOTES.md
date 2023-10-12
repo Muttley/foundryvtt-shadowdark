@@ -1,6 +1,7 @@
 ## v.1.4.6
 
 ### Bugfixes
+* [#485] Spell Advantage talent not functioning
 * [#521] Unable to add Weapon and Armor Mastery talents to character sheet
 
 ### Enhancements
