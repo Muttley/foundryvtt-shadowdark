@@ -103,9 +103,10 @@
 	.class-equipment-details {
 		grid-column: span 3;
 		display: grid;
-		grid-template-columns: 1.5fr 1.5fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		align-items: baseline;
-		grid-column-gap: 4px;
+		grid-column-gap: 8px;
+		grid-row-gap: 8px;
 	}
 
 	.coins {
@@ -225,10 +226,12 @@
 	.magic-item,
 	.treasure {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
-		align-items: center;
-		column-gap: 8px;
+		grid-template-columns: 2fr min-content;
 		background-color: var(--form-background);
+
+		&:hover {
+			background-color: var(--background-highlight)
+		}
 	}
 
 	.item-light {
@@ -243,7 +246,7 @@
 		margin: 4px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 4px;
+		column-gap: 8px;
 		row-gap: 8px;
 		align-items: start;
 	}

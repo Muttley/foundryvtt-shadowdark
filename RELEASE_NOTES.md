@@ -6,6 +6,7 @@
 
 ### Enhancements
 * [#520] Switch Class HP roll setting to be a free text field so custom dice roll formulas can be used
+* [#522] Added "All Ranged Weapons" and "All Melee Weapons" checkbox to class equipment settings for more granular options
 
 ## v.1.4.5
 

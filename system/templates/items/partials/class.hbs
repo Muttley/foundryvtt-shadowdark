@@ -75,10 +75,18 @@
 				editable=editable
 			}}
 		</div>
-		<div>
+		<div class="item-detail">
 			<div class="checkbox">
 				<label>{{localize "SHADOWDARK.class.weapons.all.label"}}</label>
 				<input type="checkbox" name="system.allWeapons" {{checked system.allWeapons}}>
+			</div>
+			<div class="checkbox">
+				<label>{{localize "SHADOWDARK.class.weapons.all_melee.label"}}</label>
+				<input type="checkbox" name="system.allMeleeWeapons" {{checked system.allMeleeWeapons}}>
+			</div>
+			<div class="checkbox">
+				<label>{{localize "SHADOWDARK.class.weapons.all_ranged.label"}}</label>
+				<input type="checkbox" name="system.allRangedWeapons" {{checked system.allRangedWeapons}}>
 			</div>
 			<div class="checkbox">
 				<label>{{localize "SHADOWDARK.class.armor.all.label"}}</label>
