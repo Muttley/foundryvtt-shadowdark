@@ -364,12 +364,10 @@ export default class ItemSD extends Item {
 	 * @returns {Object}
 	 */
 	async _handlePredefinedEffect(key, value) {
-		if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
+		if (key === "acBonusFromAttribute") {
 			return this._askEffectInput(
-				"weapon",
-				await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseWeapons()
-				)
+				"attribute",
+				shadowdark.config.ABILITIES_LONG
 			);
 		}
 		else if (key === "armorMastery") {
@@ -377,14 +375,6 @@ export default class ItemSD extends Item {
 				"armor",
 				await shadowdark.utils.getSlugifiedItemList(
 					await shadowdark.compendiums.baseArmor()
-				)
-			);
-		}
-		else if (key === "spellAdvantage") {
-			return this._askEffectInput(
-				"spell",
-				await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.spells()
 				)
 			);
 		}
@@ -399,6 +389,23 @@ export default class ItemSD extends Item {
 			});
 			return this._askEffectInput("lightSource", lightSources);
 		}
+		else if (key === "spellAdvantage") {
+			return this._askEffectInput(
+				"spell",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.spells()
+				)
+			);
+		}
+		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
+			return this._askEffectInput(
+				"weapon",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.baseWeapons()
+				)
+			);
+		}
+
 		return [value];
 	}
 

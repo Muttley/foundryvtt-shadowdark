@@ -48,6 +48,13 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.acBonus",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
+	"acBonusFromAttribute": {
+		"defaultValue": "REPLACEME",
+		"effectKey": "system.bonuses.acBonusFromAttribute",
+		"icon": "icons/skills/melee/shield-block-gray-orange.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
 	"additionalGearSlots": {
 		"defaultValue": 1,
 		"effectKey": "system.bonuses.gearSlots",

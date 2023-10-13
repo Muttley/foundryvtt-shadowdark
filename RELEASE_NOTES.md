@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Enhancements
+* [#527] New predefined effect that will add selected attribute bonuses to AC if positive
+
 ## v.1.4.6
 
 ### Bugfixes

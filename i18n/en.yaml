@@ -158,6 +158,7 @@ SHADOWDARK.dialog.ability_check.str: Strength Check
 SHADOWDARK.dialog.ability_check.title: Ability Check
 SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
+SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
 SHADOWDARK.dialog.effect.choice.lightSource: Choose Light Source
 SHADOWDARK.dialog.effect.choice.spell: Choose Spell
 SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
@@ -297,6 +298,7 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Ability Score Im
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Ability Score Improvement (Str)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Ability Score Improvement (Wis)
 SHADOWDARK.item.effect.predefined_effect.acBonus: AC Bonus
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: AC Bonus from Attribute
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Additional Gear Slots
 SHADOWDARK.item.effect.predefined_effect.armorMastery: Armor Mastery
 SHADOWDARK.item.effect.predefined_effect.backstabDie: Additional Backstab Die

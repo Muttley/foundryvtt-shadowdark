@@ -884,6 +884,11 @@ export default class ActorSD extends Actor {
 		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
 
+		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
+			const attributeBonus = this.abilityModifier(attribute);
+			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
+		}
+
 		let newArmorClass = baseArmorClass;
 		let armorMasteryBonus = 0;
 
