@@ -948,6 +948,9 @@ export default class ActorSD extends Actor {
 
 				newArmorClass += armorMasteryBonus;
 			}
+			else {
+				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
+			}
 
 			// Add AC from bonus effects
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);

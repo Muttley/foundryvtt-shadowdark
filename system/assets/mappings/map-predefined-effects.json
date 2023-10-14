@@ -48,6 +48,13 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.acBonus",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
+	"unarmoredAcBonus": {
+		"defaultValue": 1,
+		"effectKey": "system.bonuses.unarmoredAcBonus",
+		"icon": "icons/skills/melee/shield-block-gray-orange.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
 	"acBonusFromAttribute": {
 		"defaultValue": "REPLACEME",
 		"effectKey": "system.bonuses.acBonusFromAttribute",
