@@ -70,6 +70,10 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.boon.type.label: Boon Type
+SHADOWDARK.boons.blessing: Blessing
+SHADOWDARK.boons.oath: Oath
+SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: Roll Attack
 SHADOWDARK.chat_card.button.cast_spell: Cast Spell
 SHADOWDARK.chat_card.button.learn_spell: Learn Spell
@@ -139,9 +143,9 @@ SHADOWDARK.class.thief: Thief
 SHADOWDARK.class.titles.levels.from.label: From
 SHADOWDARK.class.titles.levels.label: Levels
 SHADOWDARK.class.titles.levels.to.label: To
-SHADOWDARK.class.weapons.all.label: All Weapons
 SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
 SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
+SHADOWDARK.class.weapons.all.label: All Weapons
 SHADOWDARK.class.weapons.label: Weapons
 SHADOWDARK.class.weapons.prompt: Select Weapon...
 SHADOWDARK.class.wizard: Wizard
@@ -161,6 +165,7 @@ SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
 SHADOWDARK.dialog.effect.choice.lightSource: Choose Light Source
 SHADOWDARK.dialog.effect.choice.spell: Choose Spell
+SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
@@ -324,6 +329,7 @@ SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Spellcasting Check B
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel
@@ -533,6 +539,10 @@ SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestra
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background.label: Background
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
+SHADOWDARK.sheet.player.boons.blessings.label: Blessings
+SHADOWDARK.sheet.player.boons.label: Boons
+SHADOWDARK.sheet.player.boons.oaths.label: Oaths
+SHADOWDARK.sheet.player.boons.secrets.label: Secrets
 SHADOWDARK.sheet.player.class.label: Class
 SHADOWDARK.sheet.player.class.tooltip: Your character's job
 SHADOWDARK.sheet.player.deity.label: Deity
@@ -604,11 +614,3 @@ SHADOWDARK.weapon.properties.two_handed: Two-Handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
-SHADOWDARK.sheet.player.boons.label: Boons
-SHADOWDARK.sheet.player.boons.oaths.label: Oaths
-SHADOWDARK.sheet.player.boons.secrets.label: Secrets
-SHADOWDARK.sheet.player.boons.blessings.label: Blessings
-SHADOWDARK.boons.oath: Oath
-SHADOWDARK.boons.secret: Secret
-SHADOWDARK.boons.blessing: Blessing
-SHADOWDARK.boon.type.label: Boon Type

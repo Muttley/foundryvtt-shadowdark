@@ -27,6 +27,18 @@ export default class UtilitySD {
 		return [selectedItems, unselectedItems];
 	}
 
+	static getNextDieInList(die, allDice) {
+		if (die === false) return die;
+
+		for (let i = 0; i < allDice.length; i++) {
+			if (allDice[i] === die && allDice.length > i + 1) {
+				return allDice[i + 1];
+			}
+		}
+
+		return die;
+	}
+
 	static async getSlugifiedItemList(items) {
 		const itemList = {};
 		items.map(i => itemList[i.name.slugify()] = i.name );

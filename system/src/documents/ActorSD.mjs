@@ -168,6 +168,22 @@ export default class ActorSD extends Actor {
 		// Find out if the user has a modified damage die
 		let oneHanded = item.system.damage.oneHanded ?? false;
 		let twoHanded = item.system.damage.twoHanded ?? false;
+
+		// Improve the base damage die if this weapon has the relevant property
+		for (const property of this.system.bonuses.weaponDamageDieImprovementByProperty) {
+			if (await item.hasProperty(property)) {
+				oneHanded = shadowdark.utils.getNextDieInList(
+					oneHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+
+				twoHanded = shadowdark.utils.getNextDieInList(
+					twoHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+			}
+		}
+
 		if (this.system.bonuses.weaponDamageDieD12.some(t =>
 			[item.name.slugify(), item.system.baseWeapon.slugify()].includes(t)
 		)) {

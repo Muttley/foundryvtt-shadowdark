@@ -1,7 +1,8 @@
 ## v.1.x.x
 
 ### Enhancements
-* [#527] New predefined effect that will add selected attribute bonuses to AC if positive
+* [#527] New predefined effect that will add selected attribute bonuses to AC (if positive)
+* [#528] Add built-in effect to support weapon damage dice improvent via matching weapon properties
 
 ## v.1.4.6
 

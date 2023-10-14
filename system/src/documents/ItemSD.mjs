@@ -405,6 +405,14 @@ export default class ItemSD extends Item {
 				)
 			);
 		}
+		else if (key === "weaponDamageDieImprovementByProperty") {
+			return this._askEffectInput(
+				"property",
+				await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.weaponProperties()
+				)
+			);
+		}
 
 		return [value];
 	}

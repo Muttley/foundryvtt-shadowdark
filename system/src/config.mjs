@@ -38,6 +38,14 @@ SHADOWDARK.DICE = {
 	d20: "d20",
 };
 
+SHADOWDARK.DAMAGE_DICE = [
+	"d4",
+	"d6",
+	"d8",
+	"d10",
+	"d12",
+];
+
 SHADOWDARK.BOON_TYPES = {
 	oath: "SHADOWDARK.boons.oath",
 	secret: "SHADOWDARK.boons.secret",
