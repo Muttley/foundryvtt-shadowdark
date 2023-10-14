@@ -144,8 +144,9 @@ export default class ItemSheetSD extends ItemSheet {
 
 		context.classTalentTables = {};
 		for (const classTalentTable of classTalentTables) {
+
 			context.classTalentTables[classTalentTable.uuid] =
-				classTalentTable.name;
+				classTalentTable.name.replace(/^Class\s+Talents:\s/, "");
 		}
 
 		const [selectedLanguages, availableLanguages] =
