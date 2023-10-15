@@ -1,5 +1,10 @@
 ## v.1.x.x
 
+### Bugfixes
+* [#531] Missing attack bonuses on the following Talents
+	- +1 to Melee Attacks and Damage
+	- +1 to Ranged Attacks and Damage
+
 ### Enhancements
 * [#527] New predefined effect that will add selected attribute bonuses to AC (if positive)
 * [#528] Add built-in effect to support weapon damage dice improvent via matching weapon properties
