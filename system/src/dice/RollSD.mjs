@@ -308,6 +308,24 @@ export default class RollSD extends Roll {
 			? data.item.system.damage.twoHanded
 			: false;
 
+		// Improve the base damage die if this weapon has the relevant property
+		const weaponDamageDieImprovementByProperty =
+			data.actor.system.bonuses.weaponDamageDieImprovementByProperty;
+
+		for (const property of weaponDamageDieImprovementByProperty) {
+			if (await data.item.hasProperty(property)) {
+				damageDie = shadowdark.utils.getNextDieInList(
+					damageDie,
+					shadowdark.config.DAMAGE_DICE
+				);
+
+				versatileDamageDie = shadowdark.utils.getNextDieInList(
+					versatileDamageDie,
+					shadowdark.config.DAMAGE_DICE
+				);
+			}
+		}
+
 		// Check if damage die is modified by talent
 		if (data.actor.system.bonuses.weaponDamageDieD12.some(
 			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)

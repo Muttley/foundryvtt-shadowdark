@@ -1,3 +1,16 @@
+## v.1.4.7
+
+### Bugfixes
+* [#530] Token art mapping from Pathfinder Token Pack: Bestiaries module not working
+* [#531] Missing attack bonuses on the following Talents
+	- +1 to Melee Attacks and Damage
+	- +1 to Ranged Attacks and Damage
+
+### Enhancements
+* [#527] New predefined effect that will add selected attribute bonuses to AC (if positive)
+* [#528] Add built-in effect to support weapon damage dice improvent via matching weapon properties
+* [#529] Add predefined affect that adds to AC if no armor is worn
+
 ## v.1.4.6
 
 ### Bugfixes

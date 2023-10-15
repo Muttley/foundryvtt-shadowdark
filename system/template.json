@@ -95,6 +95,7 @@
 			"background": "",
 			"bonuses": {
 				"acBonus": 0,
+				"acBonusFromAttribute": [],
 				"advantage": [],
 				"armorMastery": [],
 				"backstabDie": 0,
@@ -112,7 +113,9 @@
 				"rangedAttackBonus": 0,
 				"rangedDamageBonus": 0,
 				"spellcastingCheckBonus": 0,
+				"unarmoredAcBonus": 0,
 				"weaponDamageDieD12": [],
+				"weaponDamageDieImprovementByProperty": [],
 				"weaponMastery": []
 			},
 			"class": "",

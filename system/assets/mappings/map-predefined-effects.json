@@ -48,6 +48,13 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.acBonus",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
+	"acBonusFromAttribute": {
+		"defaultValue": "REPLACEME",
+		"effectKey": "system.bonuses.acBonusFromAttribute",
+		"icon": "icons/skills/melee/shield-block-gray-orange.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
 	"additionalGearSlots": {
 		"defaultValue": 1,
 		"effectKey": "system.bonuses.gearSlots",
@@ -203,6 +210,13 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.spellCastingBonus",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
+	"unarmoredAcBonus": {
+		"defaultValue": 1,
+		"effectKey": "system.bonuses.unarmoredAcBonus",
+		"icon": "icons/skills/melee/shield-block-gray-orange.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
 	"weaponAttackBonus": {
 		"defaultValue": 1,
 		"effectKey": "system.bonuses.attackBonus",
@@ -226,6 +240,13 @@
 		"effectKey": "system.bonuses.weaponDamageDieD12",
 		"icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 		"lang": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
+	"weaponDamageDieImprovementByProperty": {
+		"defaultValue": "REPLACEME",
+		"effectKey": "system.bonuses.weaponDamageDieImprovementByProperty",
+		"icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
 	"weaponDamageMultiplier": {
