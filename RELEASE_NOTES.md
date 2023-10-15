@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.4.7
 
 ### Bugfixes
 * [#530] Token art mapping from Pathfinder Token Pack: Bestiaries module not working
