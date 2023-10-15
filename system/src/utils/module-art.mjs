@@ -51,7 +51,11 @@ export class ModuleArt {
 
 		settings ??= {portraits: true, tokens: true};
 
-		for (const [packName, actors] of Object.entries(mapping)) {
+		for (let [packName, actors] of Object.entries(mapping)) {
+			packName = packName === "shadowdark.monster"
+				? "shadowdark.monsters"
+				: packName;
+
 			const pack = game.packs.get(packName);
 
 			if (!pack) continue;

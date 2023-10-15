@@ -1,6 +1,7 @@
 ## v.1.x.x
 
 ### Bugfixes
+* [#530] Token art mapping from Pathfinder Token Pack: Bestiaries module not working
 * [#531] Missing attack bonuses on the following Talents
 	- +1 to Melee Attacks and Damage
 	- +1 to Ranged Attacks and Damage
