@@ -266,6 +266,7 @@ export default class PackHandler {
 					case "yaml":
 						Logger.log(`Writing ${basefileName}.yml`);
 						fs.writeFileSync(`${basefileName}.yml`, yaml.dump(value));
+						break;
 					case "json":
 						Logger.log(`Writing ${basefileName}.json`);
 
@@ -273,6 +274,7 @@ export default class PackHandler {
 						jsonData += "\n";
 
 						fs.writeFileSync(`${basefileName}.json`, jsonData);
+						break;
 				}
 			}
 
@@ -321,6 +323,7 @@ export default class PackHandler {
 						yamlData += "\n";
 
 						fs.writeFileSync(`${basefileName}.yml`, yamlData);
+						break;
 					case "json":
 						Logger.log(`Writing ${basefileName}.json`);
 
@@ -328,6 +331,7 @@ export default class PackHandler {
 						jsonData += "\n";
 
 						fs.writeFileSync(`${basefileName}.json`, jsonData);
+						break;
 				}
 			}
 		}
