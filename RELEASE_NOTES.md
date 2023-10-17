@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.4.8
 
 ### Bugfixes
 * [#526] Quickstart macros using incorrect compendium paths
