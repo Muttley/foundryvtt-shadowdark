@@ -1,3 +1,12 @@
+## v.1.4.8
+
+### Bugfixes
+* [#526] Quickstart macros using incorrect compendium paths
+* [#535] Un-migrated weapon properties in compendiums causing problems opening character sheets when added to them
+* [#540] Move quickstart adventure related macros into the adventure pack, as they don't work without that imported anyway
+
+*Many thanks to Prototype for contributing fixes included in this build*
+
 ## v.1.4.7
 
 ### Bugfixes
