@@ -7713,7 +7713,7 @@
 			],
 			"flags": {
 				"core": {
-					"sourceId": "Compendium.shadowdark.monster.Actor.qSeHWgP59WltutCz"
+					"sourceId": "Compendium.shadowdark.monsters.Actor.qSeHWgP59WltutCz"
 				}
 			},
 			"folder": "IybXZJ2wVuOa5OAx",
@@ -7933,7 +7933,7 @@
 			],
 			"flags": {
 				"core": {
-					"sourceId": "Compendium.shadowdark.monster.Actor.QErMaMVIbddgk9MX"
+					"sourceId": "Compendium.shadowdark.monsters.Actor.QErMaMVIbddgk9MX"
 				}
 			},
 			"folder": "IybXZJ2wVuOa5OAx",
@@ -10876,7 +10876,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p></p><p><strong>Walls</strong>: Flecked with countless, smooth shards of quartz. <strong>White Bundles</strong>: Man-sized, several stuffed into cave corners.</p><ul><li><p><strong>Ettercap Ambush.</strong> If Eska in Area 1 raised alarm, three hostile @UUID[Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx]{ettercaps} from Area 4 cling to 20' ceiling.</p></li><li><p><strong>Walls</strong>. Dazzlingly reflective. DC 12 DEX when entering with bright light or blinded for [[/r 1d4]] rounds (ettercaps are unaffected).</p><ul><li><p><strong>Prying</strong>. Carefully extracted piece of cave wall serves as a mirror.</p></li></ul></li><li><p><strong>White Bundles</strong>. Five <strong>@UUID[Compendium.shadowdark.monster.k8tAgECWIzPIStGU]{beastmen}</strong> wrapped in ettercap silk. 1:6 chance one still lives. @UUID[Item.7unKOF9uy9ECqkEy]{Pearl} (40 gp) hidden inside one's mouth.</p></li></ul>",
+						"content": "<p></p><p><strong>Walls</strong>: Flecked with countless, smooth shards of quartz. <strong>White Bundles</strong>: Man-sized, several stuffed into cave corners.</p><ul><li><p><strong>Ettercap Ambush.</strong> If Eska in Area 1 raised alarm, three hostile @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{ettercaps} from Area 4 cling to 20' ceiling.</p></li><li><p><strong>Walls</strong>. Dazzlingly reflective. DC 12 DEX when entering with bright light or blinded for [[/r 1d4]] rounds (ettercaps are unaffected).</p><ul><li><p><strong>Prying</strong>. Carefully extracted piece of cave wall serves as a mirror.</p></li></ul></li><li><p><strong>White Bundles</strong>. Five <strong>@UUID[Compendium.shadowdark.monster.k8tAgECWIzPIStGU]{beastmen}</strong> wrapped in ettercap silk. 1:6 chance one still lives. @UUID[Item.7unKOF9uy9ECqkEy]{Pearl} (40 gp) hidden inside one's mouth.</p></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -36372,7 +36372,7 @@
 						1,
 						1
 					],
-					"text": "<b>@UUID[Actor.W0YU4JM62fHhq4KJ]{The Scarlet Minotaur}</b> (Area 18) stalks into sight, bellowing challenges and pawing the stone",
+					"text": "<b>@UUID[Actor.XPNU79kJyse04pL3]{The Scarlet Minotaur}</b> (Area 18) stalks into sight, bellowing challenges and pawing the stone",
 					"type": 0,
 					"weight": 1
 				},
@@ -36388,7 +36388,7 @@
 						2,
 						2
 					],
-					"text": "[[/r 1d4]] @UUID[Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx]{Ettercaps} and [[/r 1d8]] @UUID[Compendium.shadowdark.monster.k8tAgECWIzPIStGU]{Beastmen} clash in a bloody melee",
+					"text": "[[/r 1d4]] @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{Ettercaps} and [[/r 1d8]] @UUID[Compendium.shadowdark.monsters.Actor.k8tAgECWIzPIStGU]{Beastmen} clash in a bloody melee",
 					"type": 0,
 					"weight": 1
 				},
@@ -36420,7 +36420,7 @@
 						4,
 						4
 					],
-					"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx]{Ettercaps} creep along, searching for gold and gems",
+					"text": "[[/r 1d6]] @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{Ettercaps} creep along, searching for gold and gems",
 					"type": 0,
 					"weight": 1
 				},
@@ -36436,7 +36436,7 @@
 						5,
 						5
 					],
-					"text": "The @UUID[Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6]{Skeletons} of [[/r 1d6]] dead adventurers or warrior-mages stagger into sight",
+					"text": "The @UUID[Compendium.shadowdark.monsters.Actor.cWzG0yEVgIk8ijk6]{Skeletons} of [[/r 1d6]] dead adventurers or warrior-mages stagger into sight",
 					"type": 0,
 					"weight": 1
 				},
@@ -36452,7 +36452,7 @@
 						6,
 						6
 					],
-					"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monster.k8tAgECWIzPIStGU]{Beastmen} argue in hushed whispers over who gets to eat the centipedes they just trapped in a bag",
+					"text": "[[/r 2d4]] @UUID[Compendium.shadowdark.monsters.Actor.k8tAgECWIzPIStGU]{Beastmen} argue in hushed whispers over who gets to eat the centipedes they just trapped in a bag",
 					"type": 0,
 					"weight": 1
 				},
@@ -36468,7 +36468,7 @@
 						7,
 						7
 					],
-					"text": "[[/r 1d4]] @UUID[Compendium.shadowdark.monster.0JAEN5FsKjaXXZaA]{Darkmantles} swoop out, bobbing and spinning in a territorial warning dance",
+					"text": "[[/r 1d4]] @UUID[Compendium.shadowdark.monsters.Actor.0JAEN5FsKjaXXZaA]{Darkmantles} swoop out, bobbing and spinning in a territorial warning dance",
 					"type": 0,
 					"weight": 1
 				},
@@ -36484,7 +36484,7 @@
 						8,
 						8
 					],
-					"text": "A @UUID[Compendium.shadowdark.monster.j7sQ6Km2jSx5twCC]{Cave Creeper} rushes along the ceiling toward light",
+					"text": "A @UUID[Compendium.shadowdark.monsters.Actor.j7sQ6Km2jSx5twCC]{Cave Creeper} rushes along the ceiling toward light",
 					"type": 0,
 					"weight": 1
 				}
