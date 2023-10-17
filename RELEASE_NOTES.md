@@ -1,3 +1,9 @@
+## v.1.x.x
+
+### Bugfixes
+* [#526] Quickstart macros using incorrect compendium paths
+* [#535] Un-migrated weapon properties in compendiums causing problems opening character sheets when added to them
+
 ## v.1.4.7
 
 ### Bugfixes
