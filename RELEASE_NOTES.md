@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Bugfixes
+* [#537] Ranger D12 damage seeming to roll twice
+
 ## v.1.4.8
 
 ### Bugfixes

@@ -331,7 +331,7 @@ export default class RollSD extends Roll {
 			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
 		)) {
 			damageDie = "d12";
-			versatileDamageDie = "d12";
+			if (versatileDamageDie) versatileDamageDie = "d12";
 		}
 
 		// Check and handle critical failure/success
