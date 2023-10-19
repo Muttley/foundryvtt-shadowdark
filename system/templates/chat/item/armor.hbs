@@ -32,6 +32,11 @@
 					{{this.name}}
 				</li>
 			{{/each}}
+			{{#if item.system.stashed}}
+				<li class="tag tag_secondary tag_small">
+					{{localize 'SHADOWDARK.item.stashed.label'}}
+				</li>
+			{{/if}}
 		</ul>
 	</footer>
 </div>

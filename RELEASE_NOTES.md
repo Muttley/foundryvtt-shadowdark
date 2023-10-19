@@ -3,6 +3,9 @@
 ### Bugfixes
 * [#537] Ranger D12 damage seeming to roll twice
 
+### Enhancements
+* [#372] Add ability to indicate physical items are stashed and no longer taking up inventory slots
+
 ## v.1.4.8
 
 ### Bugfixes

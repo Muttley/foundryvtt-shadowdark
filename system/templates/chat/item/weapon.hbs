@@ -32,14 +32,16 @@
 	</div>
 
 	<div class="chat-card-buttons">
-		<button
-			class="item-control"
-			data-actor-id="{{actor.id}}"
-			data-item-id="{{item._id}}"
-			data-action="roll-attack"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.attack'}}
-		</button>
+		{{#unless item.system.stashed}}
+			<button
+				class="item-control"
+				data-actor-id="{{actor.id}}"
+				data-item-id="{{item._id}}"
+				data-action="roll-attack"
+			>
+				{{localize 'SHADOWDARK.chat_card.button.attack'}}
+			</button>
+		{{/unless}}
 	</div>
 
 	<footer class="card-footer">
@@ -49,6 +51,11 @@
 					{{this.name}}
 				</li>
 			{{/each}}
+			{{#if item.system.stashed}}
+				<li class="tag tag_secondary tag_small">
+					{{localize 'SHADOWDARK.item.stashed.label'}}
+				</li>
+			{{/if}}
 		</ul>
 	</footer>
 </div>
