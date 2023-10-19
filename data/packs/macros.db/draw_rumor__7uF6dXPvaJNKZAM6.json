@@ -2,7 +2,7 @@
 	"_id": "7uF6dXPvaJNKZAM6",
 	"_key": "!macros!7uF6dXPvaJNKZAM6",
 	"author": "mu8H7NbWc0seFWcA",
-	"command": "// Macro to draw a rumors and only show it to the GM.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst tableID = pack.index.find(o => o.name === \"Rumors\")._id;\nconst table = await pack.getDocument(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
+	"command": "// Macro to draw a rumors and only show it to the GM.\n\nconst pack = game.packs.get(\"shadowdark.rollable-tables\");\n\nconst tableID = pack.index.find(o => o.name === \"Rumors\")._id;\nconst table = await pack.getDocument(tableID);\n\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
 	"folder": null,
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Draw Rumor",
