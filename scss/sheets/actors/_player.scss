@@ -443,10 +443,11 @@
 		}
 	}
 
-	.item-toggle-equipped {
+	.item-toggle-equipped,
+	.item-toggle-stashed {
 		color: var(--inactive-control);
 
-		&.equipped {
+		&.enabled {
 			color: black;
 		}
 	}

@@ -59,6 +59,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find(".item-toggle-stashed").click(
+			event => this._onToggleStashed(event)
+		);
+
 		html.find(".item-toggle-light").click(
 			event => this._onToggleLightSource(event)
 		);
@@ -165,6 +169,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.characterClass = this.actor.backgroundItems.class?.name;
 		context.classTitle = this.actor.backgroundItems.title;
+
+		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
@@ -564,6 +570,24 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			{
 				_id: itemId,
 				"system.equipped": !item.system.equipped,
+				"system.stashed": false,
+			},
+		]);
+
+		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
+	}
+
+	async _onToggleStashed(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+			{
+				_id: itemId,
+				"system.stashed": !item.system.stashed,
+				"system.equipped": false,
 			},
 		]);
 
@@ -779,7 +803,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 				i.slotsUsed = totalSlotsUsed;
 
-				slotCount += i.slotsUsed;
+				if (!i.system.stashed) {
+					slotCount += i.slotsUsed;
+				}
 
 				const section = i.system.treasure
 					? "treasure"

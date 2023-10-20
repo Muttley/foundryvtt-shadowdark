@@ -1,4 +1,17 @@
 <div class="luck">
 	<p>{{localize 'SHADOWDARK.sheet.player.luck'}}</p>
-	<input type="checkbox" name="system.luck" {{checked system.luck}}>
+	{{#if usePulpMode}}
+		{{numberInput
+			actor.system.luck.remaining
+			name="system.luck.remaining"
+			placeholder="0"
+			min=0
+		}}
+	{{else}}
+		<input
+			type="checkbox"
+			name="system.luck.available"
+			{{checked actor.system.luck.available}}
+		>
+	{{/if}}
 </div>

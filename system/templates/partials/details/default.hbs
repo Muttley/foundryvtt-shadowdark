@@ -1,3 +1,10 @@
 <div class="details-description">
 	{{{description}}}
 </div>
+<ul class="tags">
+	{{#if item.system.stashed}}
+		<li class="tag tag_secondary tag_small">
+			{{localize 'SHADOWDARK.item.stashed.label'}}
+		</li>
+	{{/if}}
+</ul>

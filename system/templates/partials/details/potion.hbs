@@ -1,11 +1,20 @@
 <div class="details-description">
 	{{{description}}}
 </div>
-<button
-	class="item-control"
-	data-actor-id="{{actor._id}}"
-	data-item-id="{{item._id}}"
-	data-action="use-potion"
->
-	{{localize 'SHADOWDARK.chat_card.button.use_potion'}}
-</button>
+{{#unless item.system.stashed}}
+	<button
+		class="item-control"
+		data-actor-id="{{actor._id}}"
+		data-item-id="{{item._id}}"
+		data-action="use-potion"
+	>
+		{{localize 'SHADOWDARK.chat_card.button.use_potion'}}
+	</button>
+{{/unless}}
+<ul class="tags">
+	{{#if item.system.stashed}}
+		<li class="tag tag_secondary tag_small">
+			{{localize 'SHADOWDARK.item.stashed.label'}}
+		</li>
+	{{/if}}
+</ul>

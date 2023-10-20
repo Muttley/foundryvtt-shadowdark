@@ -266,6 +266,7 @@ SHADOWDARK.inventory.tooltip.item_increment: Increase Quantity
 SHADOWDARK.inventory.tooltip.sell_treasure: Sell Treasure
 SHADOWDARK.inventory.tooltip.toggle_equipped: Toggle Equipped
 SHADOWDARK.inventory.tooltip.toggle_light_source: Toggle Light Source
+SHADOWDARK.inventory.tooltip.toggle_stashed: Toggle Stashed
 SHADOWDARK.inventory.total_coins: Total Coins
 SHADOWDARK.inventory.total_gems: Total Gems
 SHADOWDARK.item_type.armor: Armor
@@ -331,6 +332,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll B
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel
@@ -377,6 +379,7 @@ SHADOWDARK.item.spell_name: Spell Name
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
 SHADOWDARK.item.spell.label: Spell
+SHADOWDARK.item.stashed.label: Stashed
 SHADOWDARK.item.talent_class: Talent Class
 SHADOWDARK.item.treasure: Treasure
 SHADOWDARK.item.wand.label: Wand
@@ -435,6 +438,9 @@ SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title.prefix: Light
 SHADOWDARK.light-tracker.title.suffix: Tracker
 SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
+SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
+SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
+SHADOWDARK.macro.success: The '{macro}' macro completed successfully
 SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
@@ -503,6 +509,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Rea
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
+SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses

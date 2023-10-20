@@ -17,16 +17,18 @@
 	</div>
 
 	<div class="chat-card-buttons">
-		{{#if canUseMagicItems}}
-			<button
-				class="item-control"
-				data-actor-id="{{actor.id}}"
-				data-item-id="{{item._id}}"
-				data-action="cast-spell"
-			>
-				{{localize 'SHADOWDARK.chat_card.button.use_wand'}}
-			</button>
-		{{/if}}
+		{{#unless item.system.stashed}}
+			{{#if canUseMagicItems}}
+				<button
+					class="item-control"
+					data-actor-id="{{actor.id}}"
+					data-item-id="{{item._id}}"
+					data-action="cast-spell"
+				>
+					{{localize 'SHADOWDARK.chat_card.button.use_wand'}}
+				</button>
+			{{/if}}
+		{{/unless}}
 	</div>
 
 	<footer class="card-footer">
@@ -46,6 +48,11 @@
 				{{localize "SHADOWDARK.item.spell_range"}}:
 				{{fromConfig "SPELL_RANGES" item.system.range }}
 			</li>
+			{{#if item.system.stashed}}
+				<li class="tag tag_secondary tag_small">
+					{{localize 'SHADOWDARK.item.stashed.label'}}
+				</li>
+			{{/if}}
 		</ul>
 	</footer>
 </div>

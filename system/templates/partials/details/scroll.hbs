@@ -5,26 +5,28 @@
 	{{{description}}}
 </div>
 <div {{#if isSpellcaster}}class="grid-2-columns"{{/if}}>
-	{{#if canUseMagicItems}}
-		<button
-			class="item-control"
-			data-actor-id="{{actor.id}}"
-			data-item-id="{{item._id}}"
-			data-action="cast-spell"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
-		</button>
-	{{/if}}
-	{{#if isSpellcaster}}
-		<button
-			class="item-control"
-			data-actor-id="{{actor._id}}"
-			data-item-id="{{item._id}}"
-			data-action="learn-spell"
-		>
-			{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
-		</button>
-	{{/if}}
+	{{#unless item.system.stashed}}
+		{{#if canUseMagicItems}}
+			<button
+				class="item-control"
+				data-actor-id="{{actor.id}}"
+				data-item-id="{{item._id}}"
+				data-action="cast-spell"
+			>
+				{{localize 'SHADOWDARK.chat_card.button.use_scroll'}}
+			</button>
+		{{/if}}
+		{{#if isSpellcaster}}
+			<button
+				class="item-control"
+				data-actor-id="{{actor._id}}"
+				data-item-id="{{item._id}}"
+				data-action="learn-spell"
+			>
+				{{localize 'SHADOWDARK.chat_card.button.learn_spell'}}
+			</button>
+		{{/if}}
+	{{/unless}}
 </div>
 <footer class="details-footer">
 	<ul class="tags">
@@ -43,5 +45,10 @@
 			{{localize "SHADOWDARK.item.spell_range"}}:
 			{{fromConfig "SPELL_RANGES" item.system.range }}
 		</li>
+		{{#if item.system.stashed}}
+			<li class="tag tag_secondary tag_small">
+				{{localize 'SHADOWDARK.item.stashed.label'}}
+			</li>
+		{{/if}}
 	</ul>
 </footer>

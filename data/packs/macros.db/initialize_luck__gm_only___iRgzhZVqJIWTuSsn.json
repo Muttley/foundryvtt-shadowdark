@@ -1,0 +1,11 @@
+{
+	"_id": "iRgzhZVqJIWTuSsn",
+	"_key": "!macros!iRgzhZVqJIWTuSsn",
+	"author": "OkK4h58aE2bS4yS7",
+	"command": "/**\n ****************************************************************\n * This macro can be used to initialize every player character's\n * starting luck values in the following way:\n *\n *    - Ensure every player character has a luck token.\n *\n *    - Roll the starting luck value for a character which will\n *      be used in Pulp mode.\n *\n * @param {string} [rollFormula] The formula to use for starting\n *                               luck in Pulp mode.\n *                               default: \"1d4\"\n *\n * @example\n * shadowdark.macro.initializeLuck();\n *\n * @example\n * shadowdark.macro.initializeLuck(\"2d4\");\n *\n * NOTE: Only users with the Game Master user role can run this\n * macro, and only characters actively selected by a player are\n * affected (regardless of whether they are currently logged in\n * or not).\n ***************************************************************/\n\nshadowdark.macro.initializeLuck();",
+	"folder": null,
+	"img": "icons/magic/control/buff-luck-fortune-green.webp",
+	"name": "Initialize Luck (GM Only)",
+	"scope": "global",
+	"type": "script"
+}
