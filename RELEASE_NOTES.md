@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.4.9
 
 ### Bugfixes
 * [#537] Ranger with D12 damage talent always rolls two damage dice even if weapon does not have the Versatile property (cosmetic issue only)
