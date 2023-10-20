@@ -1,5 +1,10 @@
-// This toggles the Light Source Tracker interface on/off.
-//
-// Only available to users with the Game Master role.
-//
+/**
+ ****************************************************************
+ * This macro can be used to toggle the Light Tracker interface
+ * on and off.
+ *
+ * NOTE: Only users with the Game Master user role can run this
+ * macro.
+ ***************************************************************/
+
 game.shadowdark.lightSourceTracker.toggleInterface();
