@@ -129,7 +129,10 @@
 			"level": {
 				"xp": 0
 			},
-			"luck": false,
+			"luck": {
+				"remaining": 0,
+				"available": false
+			},
 			"slots": 10
 		}
 	},

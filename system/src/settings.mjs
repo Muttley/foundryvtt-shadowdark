@@ -56,6 +56,26 @@ export default function registerSystemSettings() {
 		type: Boolean,
 	});
 
+	// -----------
+	//  PULP MODE
+	// -----------
+	//
+	game.settings.register("shadowdark", "usePulpMode", {
+		name: "SHADOWDARK.settings.use_pulp_mode.name",
+		hint: "SHADOWDARK.settings.use_pulp_mode.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+		onChange: async () => {
+			for (const actor of game.actors) {
+				if (actor.sheet.rendered) {
+					actor.sheet.render(true);
+				}
+			}
+		},
+	});
+
 	// ------------------------
 	//  LIGHT TRACKER SETTINGS
 	// ------------------------

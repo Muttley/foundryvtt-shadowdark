@@ -5,6 +5,7 @@ import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import SHADOWDARK from "./src/config.mjs";
+import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
@@ -38,6 +39,7 @@ globalThis.shadowdark = {
 	documents,
 	error: Logger.error,
 	log: Logger.log,
+	macro: ShadowdarkMacro,
 	sheets,
 	utils: UtilitySD,
 	warn: Logger.warn,
