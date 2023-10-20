@@ -142,6 +142,8 @@
 		"background": "Compendium.shadowdark.backgrounds.Item.lFoVSBNURSvYTb4U",
 		"bonuses": {
 			"acBonus": 0,
+			"acBonusFromAttribute": [
+			],
 			"advantage": [
 			],
 			"armorMastery": [
@@ -161,7 +163,10 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"unarmoredAcBonus": 0,
 			"weaponDamageDieD12": [
+			],
+			"weaponDamageDieImprovementByProperty": [
 			],
 			"weaponMastery": [
 			]
@@ -186,7 +191,10 @@
 			"value": 1,
 			"xp": 0
 		},
-		"luck": false,
+		"luck": {
+			"available": false,
+			"remaining": 0
+		},
 		"notes": "",
 		"slots": 10
 	},
