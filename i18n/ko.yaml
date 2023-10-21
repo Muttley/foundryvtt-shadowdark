@@ -13,6 +13,11 @@ SHADOWDARK.ability_wisdom: 지혜
 SHADOWDARK.alignment.chaotic: 혼돈
 SHADOWDARK.alignment.lawful: 질서
 SHADOWDARK.alignment.neutral: 중립
+SHADOWDARK.ancestry.languages.label: Ancestry Languages
+SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.talents.count.label: Choice Count
+SHADOWDARK.ancestry.talents.label: Ancestry Talents
+SHADOWDARK.ancestry.talents.prompt: Select Talent...
 SHADOWDARK.app.active_effects.title: 활성화된 효과
 SHADOWDARK.app.gem_bag.sell_all: 보석 전체 보기
 SHADOWDARK.app.gem_bag.title: 보석 가방
@@ -64,6 +69,10 @@ SHADOWDARK.armor.properties.disadvantage_swimming: 불리함/수영
 SHADOWDARK.armor.properties.no_swimming: 수영 못함
 SHADOWDARK.armor.properties.one_handed: 한 손 사용
 SHADOWDARK.armor.properties.shield: 방패
+SHADOWDARK.boon.type.label: Boon Type
+SHADOWDARK.boons.blessing: Blessing
+SHADOWDARK.boons.oath: Oath
+SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: 명중 굴림
 SHADOWDARK.chat_card.button.cast_spell: 주문 시전
 SHADOWDARK.chat_card.button.learn_spell: 주문 배우기
@@ -93,17 +102,51 @@ SHADOWDARK.chat.spell_learn.failure: "{name} 두루마리로 주문 배우기를
 SHADOWDARK.chat.spell_learn.success: "{name} 성공적으로 {spellName} 주문을 배웠습니다"
 SHADOWDARK.chat.spell_learn.title: 주문 배우기
 SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
+SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
+SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
+SHADOWDARK.chat.use_ability.title: "Using Ability"
 SHADOWDARK.chat.welcome_message.intro: "본 시스템에서 제공하는 길잡이 투어를 따라 버튼을 누르다 보면, 빠르게 적응할 수 있습니다:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: 문제 트래커
 SHADOWDARK.chat.welcome_message.issues: "시스템에 문제가 발생하거나 제안하고 싶은 새 기능이 있다면, 문제 트래커를 활용해주세요:"
 SHADOWDARK.chat.welcome_message.title: 섀도다크 RPG 파운드리 시스템
 SHADOWDARK.chat.welcome_message.tour_button: 섀도다크 RPG 투어
 SHADOWDARK.chatcard.default: 굴림
+SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.available.label: Available
+SHADOWDARK.class-ability.dc.label: DC
+SHADOWDARK.class-ability.group.label: Ability Group
+SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
+SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
+SHADOWDARK.class-ability.lost.label: Lost
+SHADOWDARK.class-ability.maximum.label: Maximum
+SHADOWDARK.class.armor.all.label: All Armor
+SHADOWDARK.class.armor.label: Armor
+SHADOWDARK.class.armor.prompt: Select Armor...
 SHADOWDARK.class.fighter: 전사
+SHADOWDARK.class.hit_points.label: HP Die Roll
+SHADOWDARK.class.language_choices.count.label: Choice Count
+SHADOWDARK.class.language_choices.label: Language Choices
+SHADOWDARK.class.language_choices.prompt: Select Language...
+SHADOWDARK.class.languages.label: Class Languages
 SHADOWDARK.class.priest: 성직자
 SHADOWDARK.class.ranger: 레인저
 SHADOWDARK.class.spellcasting_ability.label: 주문시전 능력
+SHADOWDARK.class.spellcasting_class.label: Spell Class
+SHADOWDARK.class.talent_choices.count.label: Choice Count
+SHADOWDARK.class.talent_choices.label: Talent Choices
+SHADOWDARK.class.talent_choices.prompt: Select Talent...
+SHADOWDARK.class.talents_table.label: Class Talents Table
+SHADOWDARK.class.talents.label: Talents
+SHADOWDARK.class.talents.prompt: Select Talent...
 SHADOWDARK.class.thief: 도둑
+SHADOWDARK.class.titles.levels.from.label: From
+SHADOWDARK.class.titles.levels.label: Levels
+SHADOWDARK.class.titles.levels.to.label: To
+SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
+SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
+SHADOWDARK.class.weapons.all.label: All Weapons
+SHADOWDARK.class.weapons.label: Weapons
+SHADOWDARK.class.weapons.prompt: Select Weapon...
 SHADOWDARK.class.wizard: 마법사
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
@@ -118,8 +161,10 @@ SHADOWDARK.dialog.ability_check.str: 근력 판정
 SHADOWDARK.dialog.ability_check.title: 능력 판정
 SHADOWDARK.dialog.ability_check.wis: 지혜 판정
 SHADOWDARK.dialog.effect.choice.armor: 방어구 유형 선택
+SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
 SHADOWDARK.dialog.effect.choice.lightSource: 광원 선택
 SHADOWDARK.dialog.effect.choice.spell: 주문 선택
+SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: 무기 유형 선택
 SHADOWDARK.dialog.general.are_you_sure: 정말 진행하실 건가요?
 SHADOWDARK.dialog.general.cancel: 취소
@@ -137,6 +182,9 @@ SHADOWDARK.dialog.item_roll.ability_bonus: 능력 보너스
 SHADOWDARK.dialog.item_roll.item_bonus: 아이템 보너스
 SHADOWDARK.dialog.item_roll.talent_bonus: 재능 보너스
 SHADOWDARK.dialog.item_roll.title: 명중 굴림
+SHADOWDARK.dialog.item_selector.default_title: Choose Items
+SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
+SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
 SHADOWDARK.dialog.item.confirm_delete: 삭제 요청 확인
 SHADOWDARK.dialog.item.confirm_sale: 판매 요청 확인
 SHADOWDARK.dialog.item.create_from_spell: '{spellName} 로 아이템을 만듭니다'
@@ -147,6 +195,20 @@ SHADOWDARK.dialog.item.use: 사용
 SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
 SHADOWDARK.dialog.roll_mode_label: 굴림 모드
 SHADOWDARK.dialog.roll: 굴림
+SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
+SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
+SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
+SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
+SHADOWDARK.dialog.select_background.prompt: Select Background...
+SHADOWDARK.dialog.select_background.title: Choose Background
+SHADOWDARK.dialog.select_class.prompt: Select Class...
+SHADOWDARK.dialog.select_class.title: Choose Class
+SHADOWDARK.dialog.select_deity.prompt: Select Deity...
+SHADOWDARK.dialog.select_deity.title: Choose Deity
+SHADOWDARK.dialog.select_languages.prompt: Select Language...
+SHADOWDARK.dialog.select_languages.title: Choose Languages
+SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
+SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: 주문시전 굴림
 SHADOWDARK.dialog.submit: 제출
 SHADOWDARK.dialog.tooltip.talent_advantage: 이 굴림에 유리함을 주는 재능이 있습니다
@@ -173,9 +235,14 @@ SHADOWDARK.effect.tooltip.transfer.do_not: 부여 안 함
 SHADOWDARK.effect.tooltip.transfer.do: 부여함
 SHADOWDARK.effect.tooltip.transfer.header: 아이템이 추가됐을 때 액터에게 효과를 부여합니다
 SHADOWDARK.effect.unavailable: 비활성화된 효과
+SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: 게임 마스터만 할 수 있습니다.
 SHADOWDARK.error.general.no_character_class: 캐릭터 클래스가 지정되지 않았습니다
 SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 능력이 설정되지 않았습니다
+SHADOWDARK.form.section_header.equipment.label: Equipment
+SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
+SHADOWDARK.form.section_header.talents.label: Talents
 SHADOWDARK.inventory.coins: 동전
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
@@ -198,6 +265,7 @@ SHADOWDARK.inventory.tooltip.item_increment: 수량 증가
 SHADOWDARK.inventory.tooltip.sell_treasure: 보물 팔기
 SHADOWDARK.inventory.tooltip.toggle_equipped: 장착 중으로 표시
 SHADOWDARK.inventory.tooltip.toggle_light_source: 광원 표시
+SHADOWDARK.inventory.tooltip.toggle_stashed: Toggle Stashed
 SHADOWDARK.inventory.total_coins: 동전 총량
 SHADOWDARK.inventory.total_gems: 보석 총량
 SHADOWDARK.item_type.armor: 방어구
@@ -235,6 +303,7 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: 능력 점수 �
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: 능력 점수 향상 (근력)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: 능력 점수 향상 (지혜)
 SHADOWDARK.item.effect.predefined_effect.acBonus: AC 보너스
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: AC Bonus from Attribute
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: 추가 장비 슬롯
 SHADOWDARK.item.effect.predefined_effect.armorMastery: 방어구 숙달
 SHADOWDARK.item.effect.predefined_effect.backstabDie: 추가 배후공격 주사위
@@ -257,8 +326,12 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: 원거리 명중 굴
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: 원거리 피해 보너스
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 주문시전에 유리함
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 주문시전 판정 보너스
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 무기 명중 굴림 보너스
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 무기 명중 피해 보너스
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: 무기 피해 배수
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: 무기 숙달
 SHADOWDARK.item.effect.show-on-panel: 패널에서 보기
@@ -305,6 +378,7 @@ SHADOWDARK.item.spell_name: 주문 이름
 SHADOWDARK.item.spell_range: 범위
 SHADOWDARK.item.spell_tier: 등급
 SHADOWDARK.item.spell.label: 주문
+SHADOWDARK.item.stashed.label: Stashed
 SHADOWDARK.item.talent_class: 재능 클래스
 SHADOWDARK.item.treasure: 보물
 SHADOWDARK.item.wand.label: 마법봉
@@ -331,6 +405,8 @@ SHADOWDARK.item.weapon.base_weapon.staff: 지팡이
 SHADOWDARK.item.weapon.base_weapon.title: 기본 무기
 SHADOWDARK.item.weapon.base_weapon.wand: 마법봉
 SHADOWDARK.item.weapon.base_weapon.warhammer: 전쟁망치
+SHADOWDARK.language_choices.common.label: Additional Common
+SHADOWDARK.language_choices.rare.label: Additional Rare
 SHADOWDARK.language.celestial: 천계어 Celestial
 SHADOWDARK.language.common: 공용어 Common
 SHADOWDARK.language.diabolic: 악마어 Diabolic
@@ -342,9 +418,13 @@ SHADOWDARK.language.goblin: 고블린어 Goblin
 SHADOWDARK.language.merran: 해양어 Merran
 SHADOWDARK.language.orcish: 오크어 Orcish
 SHADOWDARK.language.primordial: 원시어 Primordial
+SHADOWDARK.language.rarity.common: Common
+SHADOWDARK.language.rarity.label: Rarity
+SHADOWDARK.language.rarity.rare: Rare
 SHADOWDARK.language.reptilian: 렙틸리언어 Reptilian
 SHADOWDARK.language.sylvan: 삼림어 Sylvan
 SHADOWDARK.language.thanian: 타니언어 Thanian
+SHADOWDARK.language.who_speaks_it: Who Speaks It
 SHADOWDARK.light_source.lantern: 등불
 SHADOWDARK.light_source.light_spell.double_near: 빛 주문 (단거리 2배)
 SHADOWDARK.light_source.light_spell.near: 빛 주문 (단거리)
@@ -357,6 +437,9 @@ SHADOWDARK.light-tracker.status.label: 상태
 SHADOWDARK.light-tracker.title.prefix: 빛
 SHADOWDARK.light-tracker.title.suffix: 트래커
 SHADOWDARK.light-tracker.user_warning: 한 명 이상의 유저가 캐릭터를 선택하지 않았습니다
+SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
+SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
+SHADOWDARK.macro.success: The '{macro}' macro completed successfully
 SHADOWDARK.migration.begin_migration: 섀도다크 RPG 데이터를 업그레이드하고 있습니다.
 SHADOWDARK.migration.begin_schema: 섀도다크 RPG v{version} 를 업데이트하고 있습니다.
 SHADOWDARK.migration.completed_migration: 섀도다크 RPG 데이터 업그레이드가 완료되었습니다.
@@ -372,6 +455,9 @@ SHADOWDARK.npc_move.near: 단거리
 SHADOWDARK.npc_move.none: 없음
 SHADOWDARK.npc_move.special: 특수
 SHADOWDARK.npc_move.triple_near: 단거리 3배
+SHADOWDARK.property.type.option.armor: Armor
+SHADOWDARK.property.type.option.weapon: Weapon
+SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: 인접
 SHADOWDARK.range.close: 인접
 SHADOWDARK.range.far_short: 장거리
@@ -400,6 +486,8 @@ SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
+SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: 체크하면 재능과 그 외 패시브 효과를 효과 패널에 표시합니다
 SHADOWDARK.settings.effect_panel.show_passive.name: 패시브 효과 패널에 표시
 SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다
@@ -420,6 +508,12 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 체크하면 파�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈추기
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
+SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
+SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
+SHADOWDARK.sheet.abilities.label: Abilities
+SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
+SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
+SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: 성향
 SHADOWDARK.sheet.actor.hp_max: 최대
@@ -438,6 +532,7 @@ SHADOWDARK.sheet.item.tab.details: 세부 사항
 SHADOWDARK.sheet.item.tab.effects: 효과
 SHADOWDARK.sheet.item.tab.light: 빛
 SHADOWDARK.sheet.item.tab.magic: 마법
+SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: 공격
 SHADOWDARK.sheet.npc.dark_adapted: 어둠 적응
 SHADOWDARK.sheet.npc.description_label: 설명
@@ -448,10 +543,18 @@ SHADOWDARK.sheet.npc.tab.abilities: 능력
 SHADOWDARK.sheet.npc.tab.description: 설명
 SHADOWDARK.sheet.player.active_effect_override: 이것은 현재 활성화된 효과에 의해 변경된 것이며 수정할 수 없습니다. 수정하려면 해당 효과를 비활성화하세요.
 SHADOWDARK.sheet.player.ancestry.label: 선조
+SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.available_spells: 시전 가능한 주문
 SHADOWDARK.sheet.player.background.label: 배경
-SHADOWDARK.sheet.player.class: 클래스
-SHADOWDARK.sheet.player.deity: 신
+SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
+SHADOWDARK.sheet.player.boons.blessings.label: Blessings
+SHADOWDARK.sheet.player.boons.label: Boons
+SHADOWDARK.sheet.player.boons.oaths.label: Oaths
+SHADOWDARK.sheet.player.boons.secrets.label: Secrets
+SHADOWDARK.sheet.player.class.label: Class
+SHADOWDARK.sheet.player.class.tooltip: Your character's job
+SHADOWDARK.sheet.player.deity.label: Deity
+SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: 언어
 SHADOWDARK.sheet.player.luck: 운
 SHADOWDARK.sheet.player.melee_attacks: 근접 공격
@@ -462,15 +565,18 @@ SHADOWDARK.sheet.player.spells: 주문
 SHADOWDARK.sheet.player.tab.abilities: 능력
 SHADOWDARK.sheet.player.tab.background: 배경
 SHADOWDARK.sheet.player.tab.inventory: 인벤토리
+SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.tab.spells: 주문
 SHADOWDARK.sheet.player.tab.talents: 재능
 SHADOWDARK.sheet.player.talents_level: 레벨
 SHADOWDARK.sheet.player.talents_name: 이름
 SHADOWDARK.sheet.player.talents: 재능
 SHADOWDARK.sheet.player.title: 칭호
+SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
 SHADOWDARK.sheet.player.toggle_spell_lost: 주문 불능 표시
 SHADOWDARK.sheet.player.tooltip.cast_spell: 주문 시전
 SHADOWDARK.sheet.player.tooltip.learn_spell: 주문 배우기
+SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
 SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용
 SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
 SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
@@ -487,6 +593,7 @@ SHADOWDARK.spell_range.close: 인접
 SHADOWDARK.spell_range.far: 장거리
 SHADOWDARK.spell_range.near: 단거리
 SHADOWDARK.spell.classes.label: 주문시전 클래스
+SHADOWDARK.spell.classes.prompt: Select Class...
 SHADOWDARK.talent.backstab: 배후공격
 SHADOWDARK.talent.class.ancestry: 선조
 SHADOWDARK.talent.class.class: 클래스
