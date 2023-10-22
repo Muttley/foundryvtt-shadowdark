@@ -2,7 +2,7 @@
 	"_id": "VgfWt2xWzYJyVMbA",
 	"_key": "!macros!VgfWt2xWzYJyVMbA",
 	"author": "mu8H7NbWc0seFWcA",
-	"command": "// This toggles the Light Source Tracker interface on/off.\n//\n// Only available to users with the Game Master role.\n//\ngame.shadowdark.lightSourceTracker.toggleInterface();",
+	"command": "/**\n ****************************************************************\n * This macro can be used to toggle the Light Tracker interface\n * on and off.\n *\n * NOTE: Only users with the Game Master user role can run this\n * macro.\n ***************************************************************/\n\ngame.shadowdark.lightSourceTracker.toggleInterface();",
 	"folder": null,
 	"img": "icons/tools/navigation/hourglass-grey.webp",
 	"name": "Light Tracker UI Toggle (GM Only)",

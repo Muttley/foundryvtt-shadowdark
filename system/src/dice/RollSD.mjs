@@ -310,7 +310,7 @@ export default class RollSD extends Roll {
 
 		// Improve the base damage die if this weapon has the relevant property
 		const weaponDamageDieImprovementByProperty =
-			data.actor.system.bonuses.weaponDamageDieImprovementByProperty;
+			data.actor.system.bonuses.weaponDamageDieImprovementByProperty ?? [];
 
 		for (const property of weaponDamageDieImprovementByProperty) {
 			if (await data.item.hasProperty(property)) {
@@ -319,10 +319,12 @@ export default class RollSD extends Roll {
 					shadowdark.config.DAMAGE_DICE
 				);
 
-				versatileDamageDie = shadowdark.utils.getNextDieInList(
-					versatileDamageDie,
-					shadowdark.config.DAMAGE_DICE
-				);
+				if (versatileDamageDie) {
+					versatileDamageDie = shadowdark.utils.getNextDieInList(
+						versatileDamageDie,
+						shadowdark.config.DAMAGE_DICE
+					);
+				}
 			}
 		}
 

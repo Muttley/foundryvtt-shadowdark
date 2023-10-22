@@ -2,17 +2,17 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "1.4.8",
+	"version": "1.4.9",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "230923.2"
+		"schemaVersion": "231020.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
-	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/download/release-1.4.8/shadowdark-release-1.4.8.zip",
+	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/download/release-1.4.9/shadowdark-release-1.4.9.zip",
 	"authors": [
 		{
 			"name": "Paul Maskelyne",

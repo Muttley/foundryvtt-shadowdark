@@ -1,10 +1,12 @@
-## v.1.x.x
+## v.1.4.9
 
 ### Bugfixes
-* [#537] Ranger D12 damage seeming to roll twice
+* [#537] Ranger with D12 damage talent always rolls two damage dice even if weapon does not have the Versatile property (cosmetic issue only)
 
 ### Enhancements
+* [#343] Added World setting to enable Pulp Mode. This switches the luck tracker on the character sheet to numeric input rather than boolean toggle
 * [#372] Add ability to indicate physical items are stashed and no longer taking up inventory slots
+* [#543] Add macro to initialize player luck.  This gives player characters a normal luck token, and rolls a number of tokens for Pulp Mode
 
 ## v.1.4.8
 

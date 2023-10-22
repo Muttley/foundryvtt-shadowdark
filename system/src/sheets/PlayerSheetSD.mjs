@@ -170,6 +170,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.characterClass = this.actor.backgroundItems.class?.name;
 		context.classTitle = this.actor.backgroundItems.title;
 
+		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
+
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
 
