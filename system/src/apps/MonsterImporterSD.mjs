@@ -61,48 +61,73 @@ export default class MonsterImporterSD extends FormApplication {
 		const parsedText = monsterText.match(/(.*)\n([\S\s]*)\n(AC \d*[\S\s]*LV \d*)\n([\S\s]*)/);
 		const titleName = this._toTitleCase(parsedText[1]);
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
-		const stats = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
+		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
 		const abilities = parsedText[4].split(/\n\s*\n/).map(x => x.replace(/(\r\n|\n|\r)/gm, " "));
 
+		const stats = statBlock.match([
+			/.*AC (\d*)/,		// stats[1] matches AC
+			/.*HP (\d*)/,		// stats[2] matches HP
+			/.*ATK (.*),/,		// stats[3] matches unparsed ATK
+			/.*MV (.*),/,		// stats[4] matches unparsed MV
+			/.*S ([-+]\d*),/,	// stats[5] matches STR
+			/.*D ([-+]\d*),/,	// stats[6] matches DEX
+			/.*C ([-+]\d*),/,	// stats[7] matches CON
+			/.*I ([-+]\d*),/,	// stats[8] matches INT
+			/.*W ([-+]\d*),/,	// stats[9] matches WIS
+			/.*Ch ([-+]\d*),/,	// stats[10] matches CHA
+			/.*AL (\w),/,		// stats[11] matches AL (single letter)
+			/.*LV (\d*)/,		// stats[12] matches LV
+		].map(function(r) {
+			return r.source;
+		}).join(""));
+
+		const alignments = {L: "Lawful", N: "Neutral", C: "Chaotic"};
+
+		// TODO: implement movement distances and type
+		// const movement = stats[4].split("(");
+
+		// TODO: Implement attacks
+
+		// TODO: Implement features
 
 		// create a blank monster template
 		const importedActor = {
 			name: titleName,
 			type: "NPC",
 			system: {
-				alignment: "neutral",
+				alignment: alignments[stats[11].toUpperCase()],
 				attributes: {
 					ac: {
-						value: 10,
+						value: stats[1],
 					},
 					hp: {
-						max: 0,
-						value: 0,
+						max: stats[2],
+						value: stats[2],
 						hd: 0,
 					},
 				},
 				level: {
-					value: 1,
+					value: stats[12],
 				},
-				notes: `<p><i>${flavorText}</i></p><p>${stats}</p><p>${abilities}</p>`,
+				notes: `<p><i>${flavorText}</i></p><p>${statBlock}</p><p>${abilities}</p>`,
 				abilities: {
 					str: {
-						mod: 0,
+						mod: parseInt(stats[5]),
 					},
 					int: {
-						mod: 0,
+						mod: parseInt(stats[8]),
 					},
 					dex: {
-						mod: 0,
+						mod: parseInt(stats[6]),
 					},
 					wis: {
-						mod: 0,
+						mod: parseInt(stats[9]),
 					},
 					con: {
-						mod: 0,
+						mod: parseInt(stats[7]),
 					},
 					cha: {
-						mod: 0,
+						mod: parseInt(stats[10]),
 					},
 				},
 				darkAdapted: true,
@@ -111,16 +136,6 @@ export default class MonsterImporterSD extends FormApplication {
 				spellcastingAbility: "",
 			},
 		};
-
-
-		// Add ability mod values
-		importedActor.system.abilities.str.mod = 0;
-		importedActor.system.abilities.dex.mod = 0;
-		importedActor.system.abilities.con.mod = 0;
-		importedActor.system.abilities.int.mod = 0;
-		importedActor.system.abilities.wis.mod = 0;
-		importedActor.system.abilities.cha.mod = 0;
-
 
 		// Create the actor
 		const newActor = await Actor.create(importedActor);
