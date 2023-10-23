@@ -42,13 +42,32 @@ export default class MonsterImporterSD extends FormApplication {
 	}
 
 	_toTitleCase(str) {
-		return str.replace(
-		  /\w\S*/g,
-		  function(txt) {
-				return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-		  }
-		);
-	  }
+		return str.replace(/\w\S*/g, m =>  m.charAt(0).toUpperCase() + m.substr(1).toLowerCase());
+	}
+
+	_toCamelCase(str) {
+		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	}
+
+	_parseMovement(str) {
+		let move ={
+			type: "",
+			notes: "",
+		};
+		let parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
+		move.type = this._toCamelCase(parsedMove[1].trim());
+
+		// if there are () in the move string copy to notes
+		if (typeof parsedMove[2] !== "undefined") {
+			move.notes = parsedMove[2];
+		}
+
+		// makes sure the string is a valid move type
+		if (!(move.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
+			move.type = "";
+		}
+		return move;
+	}
 
 	/**
 	 * Parses pasted text representing a monster's stat block and creates an NPC actor from it.
@@ -82,16 +101,10 @@ export default class MonsterImporterSD extends FormApplication {
 		}).join(""));
 
 		const alignments = {L: "Lawful", N: "Neutral", C: "Chaotic"};
+		const movement = this._parseMovement(stats[4]);
 
-		// TODO: implement movement distances and type
-		// const movement = stats[4].split("(");
-
-		// TODO: Implement attacks
-
-		// TODO: Implement features
-
-		// create a blank monster template
-		const importedActor = {
+		// create the monster template
+		let importedActor = {
 			name: titleName,
 			type: "NPC",
 			system: {
@@ -109,7 +122,7 @@ export default class MonsterImporterSD extends FormApplication {
 				level: {
 					value: stats[12],
 				},
-				notes: `<p><i>${flavorText}</i></p><p>${statBlock}</p><p>${abilities}</p>`,
+				notes: `<p><i>${flavorText}</i></p><p>${statBlock}</p><p>${abilities}</p>`, // to be replace if future
 				abilities: {
 					str: {
 						mod: parseInt(stats[5]),
@@ -131,14 +144,19 @@ export default class MonsterImporterSD extends FormApplication {
 					},
 				},
 				darkAdapted: true,
-				move: "near",
-				moveNote: "",
+				move: movement.type,
+				moveNote: movement.notes,
 				spellcastingAbility: "",
 			},
 		};
 
-		// Create the actor
 		const newActor = await Actor.create(importedActor);
+		// TODO: Implement attacks
+
+		// TODO: Implement features
+
+		// Create the actor
+
 		return newActor;
 	}
 }
