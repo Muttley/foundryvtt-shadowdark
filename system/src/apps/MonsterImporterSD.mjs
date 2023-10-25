@@ -57,18 +57,24 @@ export default class MonsterImporterSD extends FormApplication {
 		let parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
 		move.type = this._toCamelCase(parsedMove[1].trim());
 
-		// if there are () in the move string copy to notes
-		if (typeof parsedMove[2] !== "undefined") {
-			move.notes = parsedMove[2];
-		}
-
 		// makes sure the string is a valid move type
 		if (!(move.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
 			move.type = "";
 		}
+
+		// if there are () in the move string copy to move notes
+		if (typeof parsedMove[2] !== "undefined") {
+			move.notes = parsedMove[2];
+		}
+
 		return move;
 	}
 
+	/**
+	 * Parses an NPC attack string and returns an item obj representing that attack
+	 * @param {string} str
+	 * @returns {ItemSD}
+	 */
 	_parseAttack(str) {
 		const atk = str.match([
 			/(\d*)\s*/,				// atk[1] matches # of attacks
@@ -79,9 +85,9 @@ export default class MonsterImporterSD extends FormApplication {
 		].map(function(r) {
 			return r.source;
 		}).join(""));
-		console.log(atk);
+
 		let attackObj = {
-			name: atk[2],
+			name: atk[2].trim(),
 			type: "NPC Attack",
 			system: {
 				attack: {
@@ -90,14 +96,49 @@ export default class MonsterImporterSD extends FormApplication {
 				attackType: "special",
 				bonuses: {
 					attackBonus: 0,
+					damageBonus: 0,
+				},
+				damage: {
+					numDice: 0,
+					value: "",
+					special: "",
 				},
 			},
 		};
-		console.log(attackObj);
 
-		// Attack is a phyical attack
+		// Add Attack ranges
+		if (typeof atk[3] !== "undefined") {
+			attackObj.system.ranges = atk[3].split(/\/|,/);
+		}
+		// Attack is a phyical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
+
+			// split up damage string and parse # of dice, dice type, bonuses, features
+			const dmgStrs = atk[5].split("+").map( x => {
+				return x.trim();
+			});
+			// parse first object as # dice and dice type
+			const diceStr = dmgStrs[0].match(/(\d*)(d\d*)?/);
+			if (typeof diceStr[2] !== "undefined") {
+				attackObj.system.damage.numDice = diceStr[1];
+				attackObj.system.damage.value = diceStr[2];
+			}
+			else {
+				// TODO no way to set static damage: attackObj.system.damage.value = diceStr[1]
+			}
+
+			// parse remaining string parts for +dmg or feature
+			for (let i = 1; i < dmgStrs.length; i++) {
+				if (parseInt(dmgStrs[i])) {
+					attackObj.system.bonuses.damageBonus = parseInt(dmgStrs[i]);
+				}
+				else {
+					attackObj.system.damage.special = this._toTitleCase(dmgStrs[i]);
+				}
+			}
+
+			// Add Hit bonus if any
 			if (typeof atk[4] !== "undefined") {
 				attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
 			}
@@ -107,7 +148,7 @@ export default class MonsterImporterSD extends FormApplication {
 	}
 
 	/**
-	 * Parses pasted text representing a monster's stat block and creates an NPC actor from it.
+	 * Parses pasted text representing a monster and creates an NPC actor from it.
 	 * @param {string} string - String data posted by user
 	 * @returns {ActorSD}
 	 */
@@ -157,6 +198,7 @@ export default class MonsterImporterSD extends FormApplication {
 		// create the monster template
 		let actorObj = {
 			name: titleName,
+			img: "systems/shadowdark/assets/tokens/cowled_token.webp",
 			type: "NPC",
 			system: {
 				alignment: alignments[stats[11].toUpperCase()],
@@ -173,7 +215,7 @@ export default class MonsterImporterSD extends FormApplication {
 				level: {
 					value: stats[12],
 				},
-				notes: `<p><i>${flavorText}</i></p><br><p>${statBlock}</p><br><p>${features}</p>`, // TODO clean this up with a full template
+				notes: `<p><i>${flavorText}</i></p><br><p>${statBlock}</p><br><p>${features}</p>`, // TODO clean this up
 				abilities: {
 					str: {
 						mod: parseInt(stats[5]),
@@ -205,16 +247,28 @@ export default class MonsterImporterSD extends FormApplication {
 		const newActor = await Actor.create(actorObj);
 
 		// Parse attacks
-		let attackArray = [];
+		let itemArray = [];
 		stats[3].split(/ and | or /).forEach( line => {
-			console.log(line);
-			attackArray.push(this._parseAttack(line));
+			itemArray.push(this._parseAttack(line));
 		});
-		console.log(attackArray);
-		// TODO: Implement features
+
+		// Parse features
+		features.forEach( text => {
+			let featureStr = text.match(/([\w\d\s]*)\.(?:\s*)?(.*)/);
+			let featureObj = {
+				name: this._toTitleCase(featureStr[1]),
+				type: "NPC Feature",
+				system: {
+					description: `<p>${featureStr[2]}</p>`,
+					predefinedEffects: "",
+				},
+			};
+			itemArray.push(featureObj);
+		});
+		console.log(itemArray);
 
 		// Add attacks and features
-		await newActor.createEmbeddedDocuments("Item", attackArray);
+		await newActor.createEmbeddedDocuments("Item", itemArray);
 		return newActor;
 	}
 }
