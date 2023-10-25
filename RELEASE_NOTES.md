@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Bugfixes
+* [#549] Newly created Scrolls and Wands won't open after initial creation
+
 ## v.1.4.9
 
 ### Bugfixes

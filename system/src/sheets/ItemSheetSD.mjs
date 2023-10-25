@@ -729,7 +729,9 @@ export default class ItemSheetSD extends ItemSheet {
 				this.item.update(updateData);
 				break;
 			}
-			case "Spell": {
+			case "Scroll":
+			case "Spell":
+			case "Wand": {
 				const updateData = this._getSubmitData();
 
 				delete updateData["system.class"];
