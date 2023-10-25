@@ -31,7 +31,7 @@ export default class MonsterImporterSD extends FormApplication {
 			return this._importMonster(formData.monsterText);
 		}
 		catch(error) {
-			ui.notifications.error(`Couldn't parse the monster stat block. ${error}, ${formData}`);
+			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
 		}
 	}
 
@@ -49,38 +49,43 @@ export default class MonsterImporterSD extends FormApplication {
 		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 	}
 
+	/**
+	 * Parses an NPC movement string and returns an obj listing the movement type and range
+	 * @param {string} str
+	 * @returns {moveObj}
+	 */
 	_parseMovement(str) {
-		let move ={
+		let moveObj ={
 			type: "",
 			notes: "",
 		};
 		let parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
-		move.type = this._toCamelCase(parsedMove[1].trim());
+		moveObj.type = this._toCamelCase(parsedMove[1].trim());
 
 		// makes sure the string is a valid move type
-		if (!(move.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
-			move.type = "";
+		if (!(moveObj.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
+			moveObj.type = "";
 		}
 
 		// if there are () in the move string copy to move notes
 		if (typeof parsedMove[2] !== "undefined") {
-			move.notes = parsedMove[2];
+			moveObj.notes = parsedMove[2];
 		}
 
-		return move;
+		return moveObj;
 	}
 
 	/**
 	 * Parses an NPC attack string and returns an item obj representing that attack
 	 * @param {string} str
-	 * @returns {ItemSD}
+	 * @returns {attackObj}
 	 */
 	_parseAttack(str) {
 		const atk = str.match([
 			/(\d*)\s*/,				// atk[1] matches # of attacks
 			/([\w\s\d]*)/,			// atk[2] matches attack name
 			/(?:\(([^)]*)\))?\s*/,	// atk[3] matches attack range
-			/([+-]\d* )?\s*/,		// atk[4] matches attack bonus
+			/([+-]\d*)?\s*/,		// atk[4] matches attack bonus
 			/(?:\((.*)\))?/,		// atk[5] matches damage string
 		].map(function(r) {
 			return r.source;
@@ -106,10 +111,23 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 
-		// Add Attack ranges
+		// Validate Attack ranges and add
 		if (typeof atk[3] !== "undefined") {
-			attackObj.system.ranges = atk[3].split(/\/|,/);
+			let rangeArray = [];
+			atk[3].split(/\/|,/).forEach( x => {
+				let range = this._toCamelCase(x);
+				if (range in CONFIG.SHADOWDARK.RANGES) {
+					rangeArray.push(range);
+				}
+			});
+			attackObj.system.ranges = rangeArray;
 		}
+
+		// Add Hit bonus if any
+		if (typeof atk[4] !== "undefined") {
+			attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
+		}
+
 		// Attack is a phyical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
@@ -137,14 +155,27 @@ export default class MonsterImporterSD extends FormApplication {
 					attackObj.system.damage.special = this._toTitleCase(dmgStrs[i]);
 				}
 			}
-
-			// Add Hit bonus if any
-			if (typeof atk[4] !== "undefined") {
-				attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
-			}
 		}
-		console.log(attackObj);
+
 		return attackObj;
+	}
+
+	/**
+	 * Parses an NPC feature string and returns an obj
+	 * @param {string} str
+	 * @returns {featureObj}
+	 */
+	_parseFeature(str) {
+		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
+		const featureObj = {
+			name: this._toTitleCase(featureStr[1]),
+			type: "NPC Feature",
+			system: {
+				description: `<p>${featureStr[2]}</p>`,
+				predefinedEffects: "",
+			},
+		};
+		return featureObj;
 	}
 
 	/**
@@ -168,11 +199,10 @@ export default class MonsterImporterSD extends FormApplication {
 		const titleName = this._toTitleCase(parsedText[1]);
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		let features = "";
+		let features = [];
 		if (typeof parsedText[4] !== "undefined") {
 			features = parsedText[4].split(/\n\s*\n/).map( x => x.replace(/(\r\n|\n|\r)/gm, " "));
 		}
-
 		// parse out main stat block
 		const stats = statBlock.match([
 			/.*AC (\d*)/,		// stats[1] matches AC
@@ -194,6 +224,10 @@ export default class MonsterImporterSD extends FormApplication {
 		// build parse complex outputs
 		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
 		const movement = this._parseMovement(stats[4]);
+		const notesText = `
+			<p><i>${flavorText}</i></p><br>
+			<p>${statBlock}</p><br>
+			<p>${features.join("<br><br>")}</p>`;
 
 		// create the monster template
 		let actorObj = {
@@ -215,7 +249,7 @@ export default class MonsterImporterSD extends FormApplication {
 				level: {
 					value: stats[12],
 				},
-				notes: `<p><i>${flavorText}</i></p><br><p>${statBlock}</p><br><p>${features}</p>`, // TODO clean this up
+				notes: notesText,
 				abilities: {
 					str: {
 						mod: parseInt(stats[5]),
@@ -246,29 +280,20 @@ export default class MonsterImporterSD extends FormApplication {
 		// Create the NPC actor
 		const newActor = await Actor.create(actorObj);
 
-		// Parse attacks
-		let itemArray = [];
+		// Parse attacks and add to actor
+		let attackArray = [];
 		stats[3].split(/ and | or /).forEach( line => {
-			itemArray.push(this._parseAttack(line));
+			attackArray.push(this._parseAttack(line));
 		});
+		await newActor.createEmbeddedDocuments("Item", attackArray);
 
-		// Parse features
+		// Parse features and add to actor
+		let featureArray = [];
 		features.forEach( text => {
-			let featureStr = text.match(/([\w\d\s]*)\.(?:\s*)?(.*)/);
-			let featureObj = {
-				name: this._toTitleCase(featureStr[1]),
-				type: "NPC Feature",
-				system: {
-					description: `<p>${featureStr[2]}</p>`,
-					predefinedEffects: "",
-				},
-			};
-			itemArray.push(featureObj);
+			featureArray.push(this._parseFeature(text));
 		});
-		console.log(itemArray);
+		await newActor.createEmbeddedDocuments("Item", featureArray);
 
-		// Add attacks and features
-		await newActor.createEmbeddedDocuments("Item", itemArray);
 		return newActor;
 	}
 }
