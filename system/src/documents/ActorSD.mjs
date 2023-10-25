@@ -963,43 +963,6 @@ export default class ActorSD extends Actor {
 
 	async useAbility(itemId) {
 		const item = this.items.get(itemId);
-
-		let success = true;
-		if (item.system.ability !== "") {
-			const result = await this.rollAbility(
-				item.system.ability,
-				{target: item.system.dc}
-			);
-
-			success = result?.rolls?.main?.success ?? false;
-		}
-		else if (item.system.limitedUses) {
-			if (item.system.uses.available > 0) {
-				item.update({
-					"system.uses.available": item.system.uses.available - 1,
-				});
-			}
-			else {
-				success = false;
-				ui.notifications.error(
-					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
-					{permanent: false}
-				);
-			}
-		}
-
-		const messageType = success
-			? "SHADOWDARK.chat.use_ability.success"
-			: "SHADOWDARK.chat.use_ability.failure";
-
-		let message = game.i18n.format(
-			messageType,
-			{
-				name: this.name,
-				ability: item.name,
-			}
-		);
-
 		const abilityDescription = await TextEditor.enrichHTML(
 			item.system.description,
 			{
@@ -1008,9 +971,57 @@ export default class ActorSD extends Actor {
 				relativeTo: this,
 			}
 		);
+		// Default message values
+		let title = "";
+		let message = "";
+		let success = true;
 
-		if (success) {
-			message = `<p>${message}</p>${abilityDescription}`;
+		// NPC features currently don't have checks
+		if (item.type !== "NPC Feature") {
+			// does player ability use on a roll check?
+			if (item.system.ability !== "") {
+				const result = await this.rollAbility(
+					item.system.ability,
+					{target: item.system.dc}
+				);
+
+				success = result?.rolls?.main?.success ?? false;
+			}
+			// does player ability have limited uses?
+			if (item.system.limitedUses) {
+				if (item.system.uses.available > 0) {
+					item.update({
+						"system.uses.available": item.system.uses.available - 1,
+					});
+				}
+				else {
+					success = false;
+					ui.notifications.error(
+						game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+						{permanent: false}
+					);
+				}
+			}
+
+			const messageType = success
+				? "SHADOWDARK.chat.use_ability.success"
+				: "SHADOWDARK.chat.use_ability.failure";
+
+			message = game.i18n.format(
+				messageType,
+				{
+					name: this.name,
+					ability: item.name,
+				}
+			);
+
+			if (success) {
+				message = `<p>${message}</p>${abilityDescription}`;
+			}
+			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+		}
+		else {
+			message = `${abilityDescription}`;
 		}
 
 		const cardData = {
@@ -1022,8 +1033,6 @@ export default class ActorSD extends Actor {
 		let template = "systems/shadowdark/templates/chat/use-ability.hbs";
 
 		const content = await renderTemplate(template, cardData);
-
-		const title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
 
 		await ChatMessage.create({
 			title,
