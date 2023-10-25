@@ -39,8 +39,8 @@ export const HooksImmediate = {
 export const HooksInitSD = {
 	attach: () => {
 		const listeners = [
-			ShadowdarklingImport,
 			MonsterImport,
+			ShadowdarklingImport,
 			EffectPanelHooks,
 		];
 

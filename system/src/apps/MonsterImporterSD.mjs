@@ -69,6 +69,43 @@ export default class MonsterImporterSD extends FormApplication {
 		return move;
 	}
 
+	_parseAttack(str) {
+		const atk = str.match([
+			/(\d*)\s*/,				// atk[1] matches # of attacks
+			/([\w\s\d]*)/,			// atk[2] matches attack name
+			/(?:\(([^)]*)\))?\s*/,	// atk[3] matches attack range
+			/([+-]\d* )?\s*/,		// atk[4] matches attack bonus
+			/(?:\((.*)\))?/,		// atk[5] matches damage string
+		].map(function(r) {
+			return r.source;
+		}).join(""));
+		console.log(atk);
+		let attackObj = {
+			name: atk[2],
+			type: "NPC Attack",
+			system: {
+				attack: {
+					num: atk[1],
+				},
+				attackType: "special",
+				bonuses: {
+					attackBonus: 0,
+				},
+			},
+		};
+		console.log(attackObj);
+
+		// Attack is a phyical attack
+		if (typeof atk[5] !== "undefined") {
+			attackObj.system.attackType = "physical";
+			if (typeof atk[4] !== "undefined") {
+				attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
+			}
+		}
+		console.log(attackObj);
+		return attackObj;
+	}
+
 	/**
 	 * Parses pasted text representing a monster's stat block and creates an NPC actor from it.
 	 * @param {string} string - String data posted by user
@@ -76,13 +113,26 @@ export default class MonsterImporterSD extends FormApplication {
 	 */
 	async _importMonster(monsterText) {
 
-		// parse monster text into 4 main parts, Title
-		const parsedText = monsterText.match(/(.*)\n([\S\s]*)\n(AC \d*[\S\s]*LV \d*)\n([\S\s]*)/);
+		// parse monster text into 4 main parts:
+		const parsedText = monsterText.match([
+			/(.*)\n/,							// parsedText[1] matches Title
+			/([\S\s]*)\n/,						// parsedText[2] matches flavor Text
+			/(AC \d*[\S\s]*LV \d*)(?:\n|$)/,	// parsedText[3] matches Stat Block
+			/([\S\s]*)?/,						// parsedText[4] matches features
+		].map(function(r) {
+			return r.source;
+		}).join(""));
+
+		// set 4 main variables, removing newlines
 		const titleName = this._toTitleCase(parsedText[1]);
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		const abilities = parsedText[4].split(/\n\s*\n/).map(x => x.replace(/(\r\n|\n|\r)/gm, " "));
+		let features = "";
+		if (typeof parsedText[4] !== "undefined") {
+			features = parsedText[4].split(/\n\s*\n/).map( x => x.replace(/(\r\n|\n|\r)/gm, " "));
+		}
 
+		// parse out main stat block
 		const stats = statBlock.match([
 			/.*AC (\d*)/,		// stats[1] matches AC
 			/.*HP (\d*)/,		// stats[2] matches HP
@@ -100,11 +150,12 @@ export default class MonsterImporterSD extends FormApplication {
 			return r.source;
 		}).join(""));
 
-		const alignments = {L: "Lawful", N: "Neutral", C: "Chaotic"};
+		// build parse complex outputs
+		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
 		const movement = this._parseMovement(stats[4]);
 
 		// create the monster template
-		let importedActor = {
+		let actorObj = {
 			name: titleName,
 			type: "NPC",
 			system: {
@@ -122,7 +173,7 @@ export default class MonsterImporterSD extends FormApplication {
 				level: {
 					value: stats[12],
 				},
-				notes: `<p><i>${flavorText}</i></p><p>${statBlock}</p><p>${abilities}</p>`, // to be replace if future
+				notes: `<p><i>${flavorText}</i></p><br><p>${statBlock}</p><br><p>${features}</p>`, // TODO clean this up with a full template
 				abilities: {
 					str: {
 						mod: parseInt(stats[5]),
@@ -150,13 +201,20 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 
-		const newActor = await Actor.create(importedActor);
-		// TODO: Implement attacks
+		// Create the NPC actor
+		const newActor = await Actor.create(actorObj);
 
+		// Parse attacks
+		let attackArray = [];
+		stats[3].split(/ and | or /).forEach( line => {
+			console.log(line);
+			attackArray.push(this._parseAttack(line));
+		});
+		console.log(attackArray);
 		// TODO: Implement features
 
-		// Create the actor
-
+		// Add attacks and features
+		await newActor.createEmbeddedDocuments("Item", attackArray);
 		return newActor;
 	}
 }
