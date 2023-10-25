@@ -123,7 +123,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.armor(),
+				await shadowdark.compendiums.baseArmor(),
 				this.item.system.armor ?? []
 			);
 

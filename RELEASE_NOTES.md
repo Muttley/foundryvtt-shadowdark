@@ -1,6 +1,7 @@
 ## v.1.x.x
 
 ### Bugfixes
+* [#548] Class armor selector showing non-base armor items in selector
 * [#549] Newly created Scrolls and Wands won't open after initial creation
 
 ## v.1.4.9
