@@ -4,6 +4,11 @@
 * [#548] Class armor selector showing non-base armor items in selector
 * [#549] Newly created Scrolls and Wands won't open after initial creation
 
+### Enhancements
+* [#184] NPC Special attacks can now be posted to chat by clicking on them
+
+*Many thanks to Prototype for contributing code included in this build*
+
 ## v.1.4.9
 
 ### Bugfixes
