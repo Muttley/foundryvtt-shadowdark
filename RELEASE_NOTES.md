@@ -1,4 +1,4 @@
-## v.1.x.x
+## v.1.4.10
 
 ### Bugfixes
 * [#548] Class armor selector showing non-base armor items in selector
