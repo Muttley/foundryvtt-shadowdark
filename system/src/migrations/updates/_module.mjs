@@ -17,3 +17,4 @@ export {default as Update_230922_1} from "./Update_230922_1.mjs";
 export {default as Update_230923_1} from "./Update_230923_1.mjs";
 export {default as Update_230923_2} from "./Update_230923_2.mjs";
 export {default as Update_231020_1} from "./Update_231020_1.mjs";
+export {default as Update_231025_1} from "./Update_231025_1.mjs";

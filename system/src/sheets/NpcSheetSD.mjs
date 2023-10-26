@@ -54,6 +54,9 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find("[data-action='show-feature']").click(
+			event => this._onShowFeature(event)
+		);
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -122,5 +125,11 @@ export default class NpcSheetSD extends ActorSheetSD {
 		context.attacks = attacks;
 		context.features = features;
 		context.effects = effects;
+	}
+
+	async _onShowFeature(event) {
+		event.preventDefault();
+		const itemId = $(event.currentTarget).data("item-id");
+		this.actor.useAbility(itemId);
 	}
 }
