@@ -123,7 +123,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.armor(),
+				await shadowdark.compendiums.baseArmor(),
 				this.item.system.armor ?? []
 			);
 
@@ -729,7 +729,9 @@ export default class ItemSheetSD extends ItemSheet {
 				this.item.update(updateData);
 				break;
 			}
-			case "Spell": {
+			case "Scroll":
+			case "Spell":
+			case "Wand": {
 				const updateData = this._getSubmitData();
 
 				delete updateData["system.class"];

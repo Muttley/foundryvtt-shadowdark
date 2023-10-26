@@ -15,7 +15,8 @@
 		{{#each features as |feature|}}
 			<li>
 				<a
-					class="item open-item"
+					class="item"
+					data-action="show-feature"
 					data-item-id="{{feature.itemId}}"
 				>
 					{{{feature.display}}}
