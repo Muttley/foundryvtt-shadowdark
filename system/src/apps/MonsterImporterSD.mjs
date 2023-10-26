@@ -24,11 +24,13 @@ export default class MonsterImporterSD extends FormApplication {
 	}
 
 	/** @inheritdoc */
-	_updateObject(event, formData) {
+	async _updateObject(event, formData) {
 		event.preventDefault();
-
 		try {
-			return this._importMonster(formData.monsterText);
+			let newNPC = await this._importMonster(formData.monsterText);
+			ui.notifications.info(`Successfully Created: ${newNPC.name} [${newNPC._id}]`);
+			ui.sidebar.activateTab("actors");
+			return;
 		}
 		catch(error) {
 			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
