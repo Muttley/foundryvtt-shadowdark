@@ -134,7 +134,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-items-rollable",
-					selector: ".item-image",
+					selector: ".item-image[style='background-image: url(icons/weapons/axes/axe-broad-engraved-chipped-blue.webp)']",
 					title: "Rolling Weapon",
 					content: "<p>Clicking the icon will create a chat message with information about the item.</p>",
 					action: "click",
@@ -246,14 +246,14 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-spells-spell-available",
-					selector: "a.toggle-spell-lost",
+					selector: "a.item-control.toggle-lost",
 					title: "Spell Available?",
 					content: "<p>This check-mark means the spell is available.</p>\n<p>A miscast will automatically lose the spell for the day, turning the check-mark to a cross</p>",
 					action: "scrollTo",
 				},
 				{
 					id: "sd-playerroll-spells-spell-roll",
-					selector: "a.cast-spell",
+					selector: "a.item-control.cast-spell",
 					title: "Cast Spell",
 					content: "<p>Clicking the <b>wand</b> icon will give you a cast dialog and cast the spell.</p>",
 					action: "click",
@@ -296,7 +296,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 
 				{
 					id: "sd-playerroll-spells-miscast",
-					selector: ".player a.toggle-spell-lost",
+					selector: ".player a.item-control.toggle-lost",
 					title: "Lost Spell",
 					content: "<p>If a spell is lost due to failed spell cast, clicking the cross will restore it.</p>",
 					action: "scrollTo",
@@ -336,14 +336,18 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			const tourActor = await Actor.create({
 				name: MOCK_ACTOR_NAME,
 				type: "Player",
-				system: { class: "thief" },
+				system: { class: "Compendium.shadowdark.classes.Item.C6wkCa2w5dlgSq7f" }, // thief class
 				ownership: { default: 3 },
 				img: "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_portrait.webp",
 			});
 
 			// Add items to character
 			const items = [];
-			const weaponsPack = game.packs.get("shadowdark.weapons");
+			const talentPack = game.packs.get("shadowdark.talents");
+			const talentId = talentPack.index.find(i => i.name === "Backstab")._id;
+			items.push(await talentPack.getDocument(talentId));
+
+			const weaponsPack = game.packs.get("shadowdark.gear");
 			const weaponId = weaponsPack.index.find(i => i.name === "Greataxe")._id;
 			items.push(await weaponsPack.getDocument(weaponId));
 
@@ -358,7 +362,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 			let tourActor = await game.actors.find(actor => actor.name === MOCK_ACTOR_NAME);
 
 			tourActor = await tourActor.update({
-				"system.class": "wizard",
+				"system.class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs", // wizard class
 				"system.spellcastingAbility": "int",
 			});
 
