@@ -21,25 +21,11 @@ export class ShadowdarkTheLostCitadelTour extends ShadowdarkTour {
 					action: "scrollTo",
 				},
 				{
-					id: "sd-tlc-compendium-folder-1",
-					selector: "li[data-folder-id='xz3RYT3OvgUDGXad'] header",
-					title: "Shadowdark System folder",
-					content: "<p>Open the Shadowdark System folder.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-tlc-compendium-folder-2",
-					selector: "li[data-folder-id='zzJ6dRCPvUhG0A1V'] header",
+					id: "sd-tlc-compendium-open",
+					selector: "div[id='compendium-shadowdark.quickstart-adventures'] .directory-header",
 					title: "Quickstart folder",
-					content: "<p>Open the Quickstart folder.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-tlc-compendium-item",
-					selector: "li[data-pack='shadowdark.quickstart-adventures']",
-					title: "Adventure Compendium",
-					content: "<p>Today we're interested in the Quickstart Adventure Compendium.</p>",
-					action: "click",
+					content: "<p>Open the Quick Start Adventures compendium.</p>",
+					action: "scrollTo",
 				},
 				{
 					id: "sd-tlc-compendium-adventure",
@@ -82,7 +68,10 @@ export class ShadowdarkTheLostCitadelTour extends ShadowdarkTour {
 			// Go to compendium
 			document.querySelector('a[data-tab="compendium"]').click();
 		}
-
+		if (this.currentStep.id === "sd-tlc-compendium-open") {
+			await game.packs.get("shadowdark.quickstart-adventures").render(true);
+			await delay(300);
+		}
 		if (this.currentStep.id === "sd-tlc-compendium-importer") {
 			await delay(300);
 		}
@@ -93,6 +82,8 @@ export class ShadowdarkTheLostCitadelTour extends ShadowdarkTour {
 				await delay(300);
 			});
 			await $("#settings button[data-action=tours]").click();
+			await delay(200);
+			await document.querySelector("a.category-tab[data-tab=system]").click();
 		}
 
 		await super._preStep();
