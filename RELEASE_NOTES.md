@@ -1,3 +1,13 @@
+## v.1.5.0
+
+### Bugfixes
+* [#556] Tours not working
+
+### Enhancements
+* [#557] Added tool to help with importing monsters which can be launched by a new macro (see Macro compedium and new tour)
+
+*Many thanks to Prototype for contributing code included in this build*
+
 ## v.1.4.10
 
 ### Bugfixes
