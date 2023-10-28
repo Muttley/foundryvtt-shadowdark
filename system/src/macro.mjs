@@ -44,4 +44,8 @@ export default class ShadowdarkMacro {
 			}
 		}
 	}
+
+	static async openMonsterImporter() {
+		new shadowdark.apps.MonsterImporterSD().render(true);
+	}
 }
