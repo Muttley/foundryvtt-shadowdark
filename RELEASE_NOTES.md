@@ -1,3 +1,8 @@
+## v.1.5.0
+
+### Enhancements
+* [#557] Added tool to help with importing monsters which can be launched by a new macro (see Macro compedium)
+
 ## v.1.4.10
 
 ### Bugfixes
