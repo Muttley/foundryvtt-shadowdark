@@ -223,7 +223,7 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 			// character: tourActor._id
 
 			// Add torch to character
-			const basicGearPack = game.packs.get("shadowdark.basic-gear");
+			const basicGearPack = game.packs.get("shadowdark.gear");
 			const torchId = basicGearPack.index.find(i => i.name === "Torch")._id;
 			const torch = await basicGearPack.getDocument(torchId);
 			await tourActor.createEmbeddedDocuments("Item", [torch]);
