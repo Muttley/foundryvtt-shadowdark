@@ -17,7 +17,7 @@ export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
 					id: "sd-monster-importer-start",
 					selector: ".compendium-sidebar",
 					title: "Compendium Tab",
-					content: "<p>The compendium tab contains collections that are included in the system. Let's open the marcos compendium.</p>",
+					content: "<p>The compendium tab contains collections that are included in the system. Let's open the macros compendium.</p>",
 					action: "scrollTo",
 				},
 				{
