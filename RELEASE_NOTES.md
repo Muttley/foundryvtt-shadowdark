@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Bugfixes
+* [#560] More fixes to Lightsource Tracking, The Lost Citadel and Importing Monsters tours (Prototype)
+
 ## v.1.5.0
 
 ### Bugfixes
