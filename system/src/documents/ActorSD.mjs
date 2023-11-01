@@ -1118,6 +1118,9 @@ export default class ActorSD extends Actor {
 			if (uuid !== "") {
 				this.backgroundItems[itemName] = await fromUuid(uuid);
 			}
+			else {
+				this.backgroundItems[itemName] = null;
+			}
 		}
 
 		this.backgroundItems.title = "";
@@ -1136,6 +1139,7 @@ export default class ActorSD extends Actor {
 
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
+		this._populateBackgroundItems();
 	}
 
 	_prepareNPCData() {}
