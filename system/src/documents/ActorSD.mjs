@@ -1,5 +1,147 @@
 export default class ActorSD extends Actor {
 
+	backgroundItems = {};
+
+
+	_abilityModifier(abilityScore) {
+		if (abilityScore >= 1 && abilityScore <= 3) return -4;
+		if (abilityScore >= 4 && abilityScore <= 5) return -3;
+		if (abilityScore >= 6 && abilityScore <= 7) return -2;
+		if (abilityScore >= 8 && abilityScore <= 9) return -1;
+		if (abilityScore >= 10 && abilityScore <= 11) return 0;
+		if (abilityScore >= 12 && abilityScore <= 13) return 1;
+		if (abilityScore >= 14 && abilityScore <= 15) return 2;
+		if (abilityScore >= 16 && abilityScore <= 17) return 3;
+		if (abilityScore >= 18) return 4;
+	}
+
+
+	async _applyHpRollToMax(value) {
+		const currentHpBase = this.system.attributes.hp.base;
+		await this.update({
+			"system.attributes.hp.base": currentHpBase + value,
+		});
+	}
+
+
+	async _getItemFromUuid(uuid) {
+		if (uuid !== "") {
+			return await fromUuid(uuid);
+		}
+		else {
+			return null;
+		}
+	}
+
+
+	/** @inheritdoc */
+	_initializeSource(source, options={}) {
+		source = super._initializeSource(source, options);
+
+		if (!source._id || !options.pack || game.shadowdark.moduleArt.suppressArt) {
+			return source;
+		}
+
+		const uuid = `Compendium.${options.pack}.${source._id}`;
+
+		const art = game.shadowdark.moduleArt.map.get(uuid);
+
+		if (art?.actor || art?.token) {
+			if (art.actor) source.img = art.actor;
+
+			if (typeof art.token === "string") {
+				source.prototypeToken.texture.src = art.token;
+			}
+			else if (art.token) {
+				foundry.utils.mergeObject(source.prototypeToken, art.token);
+			}
+		}
+		return source;
+	}
+
+
+	async _npcRollHP(options={}) {
+		const data = {
+			rollType: "hp",
+			actor: this,
+			conBonus: Math.max(1, this.system.abilities.con.mod),
+		};
+
+		const parts = [`${this.system.level.value}d8`, "@conBonus"];
+
+		options.fastForward = true;
+		options.chatMessage = true;
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
+
+		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+
+		const newHp = Number(result.rolls.main.roll._total);
+		await this.update({
+			"system.attributes.hp.max": newHp,
+			"system.attributes.hp.value": newHp,
+		});
+	}
+
+
+	async _playerRollHP(options={}) {
+		if (!this.backgroundItems.class) {
+			ui.notifications.error(
+				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
+				{permanent: false}
+			);
+			return;
+		}
+
+		const data = {
+			rollType: "hp",
+			actor: this,
+		};
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
+
+		const parts = [this.backgroundItems.class.system.hitPoints];
+
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
+
+	async _populateBackgroundItems() {
+		this.backgroundItems.ancestry = await this.getAncestry();
+		this.backgroundItems.class = await this.getClass();
+		this.backgroundItems.deity = await this.getDeity();
+
+		this.backgroundItems.title = "";
+		if (this.backgroundItems.class && this.system.alignment !== "") {
+			const titles = this.backgroundItems.class.system.titles ?? [];
+			const level = this.system.level?.value ?? 0;
+
+			for (const title of titles) {
+				if (level >= title.from && level <= title.to) {
+					this.backgroundItems.title = title[this.system.alignment];
+					break;
+				}
+			}
+		}
+	}
+
+
+	_populatePlayerModifiers() {
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			this.system.abilities[ability].mod = this.abilityModifier(ability);
+		}
+	}
+
+
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
@@ -19,13 +161,33 @@ export default class ActorSD extends Actor {
 		this.updateSource({prototypeToken});
 	}
 
-	/* -------------------------------------------- */
-	/*  Methods                                     */
-	/* -------------------------------------------- */
+	_prepareNPCData() {}
+
+
+	_preparePlayerData() {
+		this._populatePlayerModifiers();
+		this._populateBackgroundItems();
+	}
+
+
+	abilityModifier(ability) {
+		if (this.type === "Player") {
+
+			return this._abilityModifier(
+				this.system.abilities[ability].base
+					+ this.system.abilities[ability].bonus
+			);
+		}
+		else {
+			return this.system.abilities[ability].mod;
+		}
+	}
+
 
 	async addAncestry(item) {
 		this.update({"system.ancestry": item.uuid});
 	}
+
 
 	async addBackground(item) {
 		this.update({"system.background": item.uuid});
@@ -35,9 +197,11 @@ export default class ActorSD extends Actor {
 		this.update({"system.class": item.uuid});
 	}
 
+
 	async addDeity(item) {
 		this.update({"system.deity": item.uuid});
 	}
+
 
 	async addLanguage(item) {
 		let languageFound = false;
@@ -55,18 +219,14 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-	abilityModifier(ability) {
-		if (this.type === "Player") {
 
-			return this._abilityModifier(
-				this.system.abilities[ability].base
-					+ this.system.abilities[ability].bonus
-			);
-		}
-		else {
-			return this.system.abilities[ability].mod;
-		}
+	async addToHpBase(hp) {
+		const currentHpBase = this.system.attributes.hp.base;
+		this.update({
+			"system.attributes.hp.base": currentHpBase + hp,
+		});
 	}
+
 
 	/**
 	 * Applies the given number to the Actor or Token's HP value.
@@ -92,6 +252,7 @@ export default class ActorSD extends Actor {
 		});
 	}
 
+
 	attackBonus(attackType) {
 		switch (attackType) {
 			case "melee":
@@ -103,12 +264,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-	async addToHpBase(hp) {
-		const currentHpBase = this.system.attributes.hp.base;
-		this.update({
-			"system.attributes.hp.base": currentHpBase + hp,
-		});
-	}
 
 	async buildNpcAttackDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
@@ -131,12 +286,14 @@ export default class ActorSD extends Actor {
 		);
 	}
 
+
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/weapon-attack.hbs",
 			options
 		);
 	}
+
 
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
@@ -279,6 +436,7 @@ export default class ActorSD extends Actor {
 		return weaponDisplays;
 	}
 
+
 	calcAbilityValues(ability) {
 		const value = this.system.abilities[ability].base
 			+ this.system.abilities[ability].bonus;
@@ -293,6 +451,7 @@ export default class ActorSD extends Actor {
 			label: `${game.i18n.localize(labelKey)}`,
 		};
 	}
+
 
 	/**
 	 * Checks if the item (weapon) has any combination of settings
@@ -315,6 +474,7 @@ export default class ActorSD extends Actor {
 		return bonus;
 	}
 
+
 	async canBackstab() {
 		const backstab = this.items.find(i => {
 			return i.type === "Talent"
@@ -323,6 +483,7 @@ export default class ActorSD extends Actor {
 
 		return backstab ? true : false;
 	}
+
 
 	async canUseMagicItems() {
 		const characterClass = this.backgroundItems.class;
@@ -333,6 +494,7 @@ export default class ActorSD extends Actor {
 			? true
 			: false;
 	}
+
 
 	async castSpell(itemId) {
 		const item = this.items.get(itemId);
@@ -379,6 +541,7 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data);
 	}
 
+
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
 		if (token) await token.document.update({light: lightData});
@@ -390,10 +553,109 @@ export default class ActorSD extends Actor {
 		}]);
 	}
 
+
+	async getActiveLightSources() {
+		const items = this.items.filter(
+			item => item.isActiveLight()
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return items;
+	}
+
+
+	async getAncestry() {
+		const uuid = this.system.ancestry ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
 	async getArmorClass() {
 		const ac = await this.updateArmorClass();
 		return ac;
 	}
+
+
+	getCalculatedAbilities() {
+		const abilities = {};
+
+		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			abilities[ability] = this.calcAbilityValues(ability);
+		}
+
+		return abilities;
+	}
+
+
+	getCanvasToken() {
+		const ownedTokens = canvas.tokens.ownedTokens;
+		return ownedTokens.find(
+			token => token.document.actorId === this._id
+		);
+	}
+
+
+	async getClass() {
+		const uuid = this.system.class ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
+	async getDeity() {
+		const uuid = this.system.deity ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
+	getRollData() {
+		if (this.type === "Light") return;
+
+		const rollData = super.getRollData();
+
+		rollData.initiativeBonus = this.abilityModifier("dex");
+
+		rollData.initiativeFormula = "1d20";
+		if (this.system.bonuses?.advantage?.includes("initiative")) {
+			rollData.initiativeFormula = "2d20kh1";
+		}
+
+		return rollData;
+	}
+
+
+	getSpellcastingAbility() {
+		const characterClass = this.backgroundItems.class;
+
+		return characterClass?.system?.spellcasting?.ability ?? "";
+	}
+
+
+	async hasActiveLightSources() {
+		return this.getActiveLightSources.length > 0;
+	}
+
+
+	hasAdvantage(data) {
+		if (this.type === "Player") {
+			return this.system.bonuses.advantage.includes(data.rollType);
+		}
+		return false;
+	}
+
+
+	async hasNoActiveLightSources() {
+		return this.getActiveLightSources.length <= 0;
+	}
+
 
 	async isClaimedByUser() {
 		// Check that the Actor is claimed by a User
@@ -401,6 +663,29 @@ export default class ActorSD extends Actor {
 			? true
 			: false;
 	}
+
+
+	async isSpellcaster() {
+		const characterClass = this.backgroundItems.class;
+		const spellcastingClass =
+			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
+
+		return characterClass && spellcastingClass !== "__not_spellcaster__"
+			? true
+			: false;
+	}
+
+
+	async languageItems() {
+		const languageItems = [];
+
+		for (const uuid of this.system.languages ?? []) {
+			languageItems.push(await fromUuid(uuid));
+		}
+
+		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
 
 	async learnSpell(itemId) {
 		const item = this.items.get(itemId);
@@ -470,6 +755,7 @@ export default class ActorSD extends Actor {
 		);
 	}
 
+
 	numGearSlots() {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
@@ -492,60 +778,6 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
-	getCalculatedAbilities() {
-		const abilities = {};
-
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			abilities[ability] = this.calcAbilityValues(ability);
-		}
-
-		return abilities;
-	}
-
-	getCanvasToken() {
-		const ownedTokens = canvas.tokens.ownedTokens;
-		return ownedTokens.find(
-			token => token.document.actorId === this._id
-		);
-	}
-
-	getRollData() {
-		if (this.type === "Light") return;
-
-		const rollData = super.getRollData();
-
-		rollData.initiativeBonus = this.abilityModifier("dex");
-
-		rollData.initiativeFormula = "1d20";
-		if (this.system.bonuses?.advantage?.includes("initiative")) {
-			rollData.initiativeFormula = "2d20kh1";
-		}
-
-		return rollData;
-	}
-
-	getSpellcastingAbility() {
-		const characterClass = this.backgroundItems.class;
-
-		return characterClass?.system?.spellcasting?.ability ?? "";
-	}
-
-	hasAdvantage(data) {
-		if (this.type === "Player") {
-			return this.system.bonuses.advantage.includes(data.rollType);
-		}
-		return false;
-	}
-
-	async isSpellcaster() {
-		const characterClass = this.backgroundItems.class;
-		const spellcastingClass =
-			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
-
-		return characterClass && spellcastingClass !== "__not_spellcaster__"
-			? true
-			: false;
-	}
 
 	/** @inheritDoc */
 	prepareData() {
@@ -563,12 +795,10 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	/** @inheritDoc */
 	prepareDerivedData() {}
 
-	/* -------------------------------------------- */
-	/*  Roll Methods                                */
-	/* -------------------------------------------- */
 
 	async rollAbility(abilityId, options={}) {
 		const parts = ["@abilityBonus"];
@@ -590,6 +820,7 @@ export default class ActorSD extends Actor {
 
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
+
 
 	async rollAttack(itemId) {
 		const item = this.items.get(itemId);
@@ -675,15 +906,6 @@ export default class ActorSD extends Actor {
 		return item.rollItem(parts, data);
 	}
 
-	async languageItems() {
-		const languageItems = [];
-
-		for (const uuid of this.system.languages ?? []) {
-			languageItems.push(await fromUuid(uuid));
-		}
-
-		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
-	}
 
 	async rollHP(options={}) {
 		if (this.type === "Player") {
@@ -694,90 +916,12 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-	async getActiveLightSources() {
-		const items = this.items.filter(
-			item => item.isActiveLight()
-		).sort((a, b) => {
-			const a_name = a.name.toLowerCase();
-			const b_name = b.name.toLowerCase();
-			if (a_name < b_name) {
-				return -1;
-			}
-			if (a_name > b_name) {
-				return 1;
-			}
-			return 0;
-		});
-
-		return items;
-	}
-
-	async hasActiveLightSources() {
-		return this.getActiveLightSources.length > 0;
-	}
-
-	async hasNoActiveLightSources() {
-		return this.getActiveLightSources.length <= 0;
-	}
-
-	async yourLightExpired(itemId) {
-		this.turnLightOff(itemId);
-
-		const item = this.items.get(itemId);
-
-		const cardData = {
-			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
-			actor: this,
-			message: game.i18n.format(
-				"SHADOWDARK.chat.light_source.expired",
-				{
-					name: this.name,
-					lightSource: item.name,
-				}
-			),
-		};
-
-		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		await ChatMessage.create({
-			content,
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
-		});
-	}
-
-	async yourLightWentOut(itemId) {
-		this.toggleLight(false, itemId);
-
-		const item = this.items.get(itemId);
-
-		const cardData = {
-			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
-			actor: this,
-			message: game.i18n.format(
-				"SHADOWDARK.chat.light_source.went_out",
-				{
-					name: this.name,
-					lightSource: item.name,
-				}
-			),
-		};
-
-		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		await ChatMessage.create({
-			content,
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
-		});
-	}
 
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");
 		return this.sellAllItems(items);
 	}
+
 
 	async sellAllItems(items) {
 		const coins = this.system.coins;
@@ -804,6 +948,7 @@ export default class ActorSD extends Actor {
 		}]);
 	}
 
+
 	async sellItemById(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 		const coins = this.system.coins;
@@ -823,6 +968,7 @@ export default class ActorSD extends Actor {
 		}]);
 	}
 
+
 	async toggleLight(active, itemId) {
 		if (active) {
 			await this.turnLightOn(itemId);
@@ -832,6 +978,7 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	async turnLightOff() {
 		const noLight = {
 			dim: 0,
@@ -840,6 +987,7 @@ export default class ActorSD extends Actor {
 
 		await this.changeLightSettings(noLight);
 	}
+
 
 	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
@@ -855,6 +1003,7 @@ export default class ActorSD extends Actor {
 
 		await this.changeLightSettings(lightData);
 	}
+
 
 	async updateArmor(updatedItem) {
 		// updatedItem is the item that has had its "equipped" field toggled
@@ -893,6 +1042,7 @@ export default class ActorSD extends Actor {
 
 		this.updateArmorClass();
 	}
+
 
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
@@ -960,6 +1110,7 @@ export default class ActorSD extends Actor {
 
 		return newArmorClass;
 	}
+
 
 	async useAbility(itemId) {
 		const item = this.items.get(itemId);
@@ -1049,6 +1200,7 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	async usePotion(itemId) {
 		const item = this.items.get(itemId);
 
@@ -1104,146 +1256,60 @@ export default class ActorSD extends Actor {
 		});
 	}
 
-	/* --------------------------------------- */
-	/*  Data Preparation Helpers               */
-	/* --------------------------------------- */
 
-	async _populateBackgroundItems() {
-		this.backgroundItems = {};
+	async yourLightExpired(itemId) {
+		this.turnLightOff(itemId);
 
-		const backgroundItems = ["ancestry", "class", "deity"];
+		const item = this.items.get(itemId);
 
-		for (const itemName of backgroundItems) {
-			const uuid = this.system[itemName] ?? "";
-			if (uuid !== "") {
-				this.backgroundItems[itemName] = await fromUuid(uuid);
-			}
-		}
-
-		this.backgroundItems.title = "";
-		if (this.backgroundItems.class && this.system.alignment !== "") {
-			const titles = this.backgroundItems.class.system.titles ?? [];
-			const level = this.system.level?.value ?? 0;
-
-			for (const title of titles) {
-				if (level >= title.from && level <= title.to) {
-					this.backgroundItems.title = title[this.system.alignment];
-					break;
+		const cardData = {
+			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+			actor: this,
+			message: game.i18n.format(
+				"SHADOWDARK.chat.light_source.expired",
+				{
+					name: this.name,
+					lightSource: item.name,
 				}
-			}
-		}
-	}
-
-	_preparePlayerData() {
-		this._populatePlayerModifiers();
-	}
-
-	_prepareNPCData() {}
-
-	/* -------------------------------------------- */
-	/*  Internal Helpers                            */
-	/* -------------------------------------------- */
-
-	_abilityModifier(abilityScore) {
-		if (abilityScore >= 1 && abilityScore <= 3) return -4;
-		if (abilityScore >= 4 && abilityScore <= 5) return -3;
-		if (abilityScore >= 6 && abilityScore <= 7) return -2;
-		if (abilityScore >= 8 && abilityScore <= 9) return -1;
-		if (abilityScore >= 10 && abilityScore <= 11) return 0;
-		if (abilityScore >= 12 && abilityScore <= 13) return 1;
-		if (abilityScore >= 14 && abilityScore <= 15) return 2;
-		if (abilityScore >= 16 && abilityScore <= 17) return 3;
-		if (abilityScore >= 18) return 4;
-	}
-
-	async _npcRollHP(options={}) {
-		const data = {
-			rollType: "hp",
-			actor: this,
-			conBonus: Math.max(1, this.system.abilities.con.mod),
+			),
 		};
 
-		const parts = [`${this.system.level.value}d8`, "@conBonus"];
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
-		options.fastForward = true;
-		options.chatMessage = true;
+		const content = await renderTemplate(template, cardData);
 
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
-		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
-
-		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
-
-		const newHp = Number(result.rolls.main.roll._total);
-		await this.update({
-			"system.attributes.hp.max": newHp,
-			"system.attributes.hp.value": newHp,
+		await ChatMessage.create({
+			content,
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
 
-	async _playerRollHP(options={}) {
-		if (!this.backgroundItems.class) {
-			ui.notifications.error(
-				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
-				{permanent: false}
-			);
-			return;
-		}
 
-		const data = {
-			rollType: "hp",
+	async yourLightWentOut(itemId) {
+		this.toggleLight(false, itemId);
+
+		const item = this.items.get(itemId);
+
+		const cardData = {
+			img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
 			actor: this,
+			message: game.i18n.format(
+				"SHADOWDARK.chat.light_source.went_out",
+				{
+					name: this.name,
+					lightSource: item.name,
+				}
+			),
 		};
 
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
+		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
-		const parts = [this.backgroundItems.class.system.hitPoints];
+		const content = await renderTemplate(template, cardData);
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
-
-	async _applyHpRollToMax(value) {
-		const currentHpBase = this.system.attributes.hp.base;
-		await this.update({
-			"system.attributes.hp.base": currentHpBase + value,
+		await ChatMessage.create({
+			content,
+			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 		});
 	}
 
-	/** @inheritdoc */
-	_initializeSource(source, options={}) {
-		source = super._initializeSource(source, options);
-
-		if (!source._id || !options.pack || game.shadowdark.moduleArt.suppressArt) {
-			return source;
-		}
-
-		const uuid = `Compendium.${options.pack}.${source._id}`;
-
-		const art = game.shadowdark.moduleArt.map.get(uuid);
-
-		if (art?.actor || art?.token) {
-			if (art.actor) source.img = art.actor;
-
-			if (typeof art.token === "string") {
-				source.prototypeToken.texture.src = art.token;
-			}
-			else if (art.token) {
-				foundry.utils.mergeObject(source.prototypeToken, art.token);
-			}
-		}
-		return source;
-	}
-
-	_populatePlayerModifiers() {
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			this.system.abilities[ability].mod = this.abilityModifier(ability);
-		}
-	}
 }

@@ -130,8 +130,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @override */
 	async getData(options) {
-		await this.actor._populateBackgroundItems();
-
 		const context = await super.getData(options);
 
 		context.gearSlots = this.actor.numGearSlots();
