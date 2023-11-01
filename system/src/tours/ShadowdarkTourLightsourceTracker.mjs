@@ -98,11 +98,11 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 					action: "click",
 				},
 				{
-					id: "sd-lightsourcetracker-macro-compendium-click",
-					selector: "li.directory-item[data-pack='shadowdark.macros']",
-					title: "Macro Compendium",
+					id: "sd-lightsourcetracker-compendium-open",
+					selector: "div[id='compendium-shadowdark.macros'] .directory-header",
+					title: "Macros Compendium",
 					content: "<p>By opening the Macro Compendium, you can find various macros for Shadowdark RPG.</p>",
-					action: "click",
+					action: "ScrollTo",
 				},
 				{
 					id: "sd-lightsourcetracker-macro",
@@ -121,7 +121,7 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 				{
 					id: "sd-lightsourcetracker-goto-settings-system",
 					selector: "a.category-tab[data-tab=system]",
-					title: "Go to System Settings",
+					title: "Go to Shadowdark Settings",
 					content: "<p>Go to system settings.</p>",
 					action: "click",
 				},
@@ -265,6 +265,15 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 			}
 		}
 
+		if (this.currentStep.id === "sd-lightsourcetracker-compendium-open") {
+			await game.packs.get("shadowdark.macros").render(true);
+			await delay(300);
+		}
+
+		if (this.currentStep.id === "sd-lightsourcetracker-goto-settings") {
+			document.querySelector('a[data-tab="settings"]').click();
+		}
+
 		if (this.currentStep.id === "sd-lightsourcetracker-assigned-actor") {
 			const user = await game.users.find(u => u.name === MOCK_USER);
 			const actor = game.actors.find(a => a.name === MOCK_ACTOR_NAME);
@@ -296,14 +305,19 @@ export class ShadowdarkLightsourceTrackerTour extends ShadowdarkTour {
 		}
 
 		if (this.currentStep.id === "sd-lightsourcetracker-end-tour") {
-			await $("#client-settings a.close").click();
-			await $("#settings button[data-action=tours]").click();
-			await delay(200);
-			game.actors.filter(a => a.name === MOCK_ACTOR_NAME).forEach(a => a.delete());
-			game.users.find(u => u.name === MOCK_USER).delete();
-
+			Object.values(ui.windows).forEach(async w => {
+				await w.close();
+				await delay(300);
+			});
 			// Restore the settings
 			await this._setSettings(game.world.flags.tours.lightsourceTracker.originalSettings);
+
+			await $("#settings button[data-action=tours]").click();
+			await delay(200);
+			await document.querySelector("a.category-tab[data-tab=system]").click();
+
+			game.actors.filter(a => a.name === MOCK_ACTOR_NAME).forEach(a => a.delete());
+			game.users.find(u => u.name === MOCK_USER).delete();
 		}
 
 		await super._preStep();
