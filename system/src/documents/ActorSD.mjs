@@ -371,7 +371,7 @@ export default class ActorSD extends Actor {
 			talentBonus: this.system.bonuses.spellcastingCheckBonus,
 		};
 
-		const parts = ["@abilityBonus", "@talentBonus"];
+		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
 
 		// TODO: push to parts & for set talentBonus as sum of talents affecting
 		// spell rolls
@@ -571,7 +571,7 @@ export default class ActorSD extends Actor {
 	/* -------------------------------------------- */
 
 	async rollAbility(abilityId, options={}) {
-		const parts = ["@abilityBonus"];
+		const parts = ["1d20", "@abilityBonus"];
 
 		const abilityBonus = this.abilityModifier(abilityId);
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
@@ -603,7 +603,7 @@ export default class ActorSD extends Actor {
 		const bonuses = this.system.bonuses;
 
 		// Summarize the bonuses for the attack roll
-		const parts = ["@abilityBonus", "@talentBonus"];
+		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
 		data.damageParts = [];
 
 		// Check damage multiplier
@@ -1160,10 +1160,10 @@ export default class ActorSD extends Actor {
 		const data = {
 			rollType: "hp",
 			actor: this,
-			conBonus: Math.max(1, this.system.abilities.con.mod),
+			conBonus: this.system.abilities.con.mod,
 		};
 
-		const parts = [`${this.system.level.value}d8`, "@conBonus"];
+		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
 
 		options.fastForward = true;
 		options.chatMessage = true;
@@ -1178,6 +1178,7 @@ export default class ActorSD extends Actor {
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		const newHp = Number(result.rolls.main.roll._total);
+
 		await this.update({
 			"system.attributes.hp.max": newHp,
 			"system.attributes.hp.value": newHp,
