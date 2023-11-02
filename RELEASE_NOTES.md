@@ -3,6 +3,9 @@
 ### Bugfixes
 * [#560] More fixes to Lightsource Tracking, The Lost Citadel and Importing Monsters tours (Prototype)
 
+### Enhancements
+* [#565] Prepare actor data automatically rather than waiting for character sheet to open
+
 ## v.1.5.0
 
 ### Bugfixes
