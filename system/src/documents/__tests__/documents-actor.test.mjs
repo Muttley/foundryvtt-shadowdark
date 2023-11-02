@@ -385,22 +385,21 @@ export default ({ describe, it, after, before, expect }) => {
 			await trashChat();
 		});
 
-		describe("#450 NPC HP Roll has at least 1 con mod added to roll", async () => {
-			Array.from(Array(9), (_, i) => (i - 4)).forEach(async mod => {
-				const conMod = Math.max(mod, 1);
-				it(`Mod ${mod} should have ${conMod} added to HP roll`, async () => {
+		describe("#568 Level 0 NPC HP Roll should be at least 1", async () => {
+			Array.from(Array(5), (_, i) => (i - 4)).forEach(async mod => {
+				it(`NPC with CON Mod ${mod} should have 1 HP`, async () => {
 					await trashChat();
-					await actor.update({"system.abilities.con.mod": mod});
+					await actor.update({
+						"system.abilities.con.mod": mod,
+						"system.level.value": 0,
+					});
 					// Roll HP
 					await actor._npcRollHP();
 					await waitForInput();
 
-					// Catch the chat card
-					expect(game.messages?.size).equal(1);
-					const content = game.messages.contents[0].content;
-
 					// Check the formula
-					expect($(content).find(".dice-formula")[0].innerHTML).equal(`${actor.system.level.value}d8 + ${conMod}`);
+					expect(actor.system.attributes.hp.max).equal(1);
+					expect(actor.system.attributes.hp.value).equal(1);
 
 					// Remove chat card
 					await trashChat();

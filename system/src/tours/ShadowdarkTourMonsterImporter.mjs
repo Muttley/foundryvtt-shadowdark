@@ -1,8 +1,8 @@
 /**
  * @file defines the tour for importing the lost citadel adventure
  */
-import { delay } from "../testing/testUtils.mjs";
 import ShadowdarkTour from "./ShadowdarkTour.mjs";
+import { delay } from "../testing/testUtils.mjs";
 
 export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
 	constructor() {
@@ -14,28 +14,21 @@ export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
 			display: true,
 			steps: [
 				{
-					id: "sd-tlc-start",
+					id: "sd-monster-importer-start",
 					selector: ".compendium-sidebar",
-					title: "Compendium",
-					content: "<p>The compendium tab contains collections that are included in the system. Including many useful pre-built macros, such as the monster importer.</p>",
+					title: "Compendium Tab",
+					content: "<p>The compendium tab contains collections that are included in the system. Let's open the macros compendium.</p>",
 					action: "scrollTo",
 				},
 				{
-					id: "sd-tlc-compendium-folder-1",
-					selector: "li[data-folder-id='xz3RYT3OvgUDGXad'] header",
-					title: "Shadowdark System folder",
-					content: "<p>Open the Shadowdark System folder.</p>",
-					action: "click",
-				},
-				{
-					id: "sd-tlc-compendium-item",
-					selector: "li[data-pack='shadowdark.macros']",
+					id: "sd-monster-importer-compendium-open",
+					selector: "div[id='compendium-shadowdark.macros'] .directory-header",
 					title: "Macros Compendium",
-					content: "<p>The Monster Importer is located in the Macros Compendium.</p>",
-					action: "click",
+					content: "<p>This compendium includes many useful pre-built macros, such as the monster importer.</p>",
+					action: "scrollTo",
 				},
 				{
-					id: "sd-monster-importer-macro",
+					id: "sd-monster-importer-compendium-marco",
 					selector: "li[data-document-id=sJTtbWtWigzBHf6N] h4 a",
 					title: "Open Monster Importer Macro",
 					content: "<p>You can drag this Macro to the hotbar if you want a convenient way of accessing it.</p>",
@@ -45,7 +38,7 @@ export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
 					id: "sd-monster-importer-Execute",
 					selector: ".execute",
 					title: "Run Monster Importer",
-					content: "<p>...</p>",
+					content: "<p>Click execute</p>",
 					action: "click",
 				},
 				{
@@ -66,11 +59,11 @@ export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
 					id: "sd-monster-importer-import",
 					selector: "button.import",
 					title: "Monster Importer Step 3",
-					content: "<p>Click Import to create monters as an NPC actor.</p>",
+					content: "<p>Click Import to create monters as an NPC actor under the actors tab.</p>",
 					action: "scrollTo",
 				},
 				{
-					id: "sd-tlc-end-tour",
+					id: "sd-monster-importer-end-tour",
 					selector: "#tours-management .window-title",
 					title: "Thank you!",
 					content:
@@ -85,21 +78,23 @@ export class ShadowdarkMonsterImporterTour extends ShadowdarkTour {
    * Override _preStep to wait for elements to exist in the DOM
    */
 	async _preStep() {
-		if (this.currentStep.id === "sd-tlc-start") {
+		if (this.currentStep.id === "sd-monster-importer-start") {
 			// Go to compendium
 			document.querySelector('a[data-tab="compendium"]').click();
 		}
 
-		if (this.currentStep.id === "sd-tlc-compendium-importer") {
+		if (this.currentStep.id === "sd-monster-importer-compendium-open") {
+			await game.packs.get("shadowdark.macros").render(true);
 			await delay(300);
 		}
-
-		if (this.currentStep.id === "sd-tlc-end-tour") {
+		if (this.currentStep.id === "sd-monster-importer-end-tour") {
 			Object.values(ui.windows).forEach(async w => {
 				await w.close();
 				await delay(300);
 			});
 			await $("#settings button[data-action=tours]").click();
+			await delay(200);
+			await document.querySelector("a.category-tab[data-tab=system]").click();
 		}
 
 		await super._preStep();

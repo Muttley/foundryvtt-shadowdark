@@ -383,9 +383,13 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 		}
 
 		if (this.currentStep.id === "sd-playerroll-end-tour") {
-			await $("#client-settings a.close").click();
+			Object.values(ui.windows).forEach(async w => {
+				await w.close();
+				await delay(300);
+			});
 			await $("#settings button[data-action=tours]").click();
 			await delay(200);
+			await document.querySelector("a.category-tab[data-tab=system]").click();
 			game.actors.filter(a => a.name === MOCK_ACTOR_NAME).forEach(a => a.delete());
 		}
 

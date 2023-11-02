@@ -1,3 +1,12 @@
+## v.1.5.1
+
+### Bugfixes
+* [#560] More fixes to Tours (Lightsource Tracking, The Lost Citadel and Importing Monsters) (Prototype)
+* [#568] NPC HP calculation is using +1 min CON bonus instead of 1 being the minimum HP
+
+### Enhancements
+* [#565] Prepare actor data automatically rather than waiting for character sheet to open
+
 ## v.1.5.0
 
 ### Bugfixes
