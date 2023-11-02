@@ -1,7 +1,7 @@
-## v.1.x.x
+## v.1.5.1
 
 ### Bugfixes
-* [#560] More fixes to Lightsource Tracking, The Lost Citadel and Importing Monsters tours (Prototype)
+* [#560] More fixes to Tours (Lightsource Tracking, The Lost Citadel and Importing Monsters) (Prototype)
 * [#568] NPC HP calculation is using +1 min CON bonus instead of 1 being the minimum HP
 
 ### Enhancements
