@@ -834,7 +834,7 @@ export default class ActorSD extends Actor {
 		const bonuses = this.system.bonuses;
 
 		// Summarize the bonuses for the attack roll
-		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
+		const parts = ["1d20", "@itemBonus", "@abilityBonus", "@talentBonus"];
 		data.damageParts = [];
 
 		// Check damage multiplier
@@ -846,7 +846,6 @@ export default class ActorSD extends Actor {
 
 		// Magic Item bonuses
 		if (item.system.bonuses.attackBonus) {
-			parts.push("@itemBonus");
 			data.itemBonus = item.system.bonuses.attackBonus;
 		}
 		if (item.system.bonuses.damageBonus) {
