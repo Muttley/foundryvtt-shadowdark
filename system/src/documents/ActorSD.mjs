@@ -67,7 +67,7 @@ export default class ActorSD extends Actor {
 			conBonus: Math.max(1, this.system.abilities.con.mod),
 		};
 
-		const parts = [`${this.system.level.value}d8`, "@conBonus"];
+		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
 
 		options.fastForward = true;
 		options.chatMessage = true;
