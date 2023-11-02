@@ -448,10 +448,6 @@ export default class RollSD extends Roll {
 	 * @returns {Promise(Roll)}			- Returns the promise of evaluated roll(s)
 	 */
 	static async RollDialog(parts, data, options={}) {
-		// 0'th position should have a dice roll string, if not it's a shorthand
-		// call and we need to add one.
-		if (!/^\d*d\d+$/.test(parts[0])) parts.unshift("1d20");
-
 		if ( options.fastForward ) {
 			return await this.Roll(parts, data, false, 0, options);
 		}

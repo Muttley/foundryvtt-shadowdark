@@ -45,7 +45,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		it("renders dialog by default", async () => {
 			await closeDialogs();
 			expect(openDialogs().length).equal(0);
-			spell.rollSpell([], {item: spell});
+			spell.rollSpell(["1d20"], {item: spell});
 			await waitForInput();
 			expect(openDialogs().length).equal(1);
 			await openDialogs().pop().close();
@@ -55,7 +55,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		it("rolls and displays chat message", async () => {
 			expect(openDialogs().length).equal(0);
 			expect(game.messages.size).equal(0);
-			spell.rollSpell([], {item: spell});
+			spell.rollSpell(["1d20"], {item: spell});
 			await waitForInput();
 			expect(openDialogs().length).equal(1);
 			await clickNormal();
@@ -66,7 +66,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 
 		it("just rolls when given fastForward options", async () => {
 			expect(openDialogs().length).equal(0);
-			spell.rollSpell([], {item: spell}, { fastForward: true });
+			spell.rollSpell(["1d20"], {item: spell}, { fastForward: true });
 			await waitForInput();
 			expect(openDialogs().length).equal(0);
 			expect(game.messages.size).equal(1);
@@ -75,7 +75,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 		describe("ability bonus", () => {
 			it("ignores ability bonus without appropriate parts", async () => {
 				await spell.rollSpell(
-					[],
+					["1d20"],
 					{
 						item: spell,
 						abilityBonus: 2,
@@ -95,6 +95,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 			it("adds ability bonus with appropriate parts", async () => {
 				await spell.rollSpell(
 					[
+						"1d20",
 						"@abilityBonus",
 					],
 					{
@@ -119,6 +120,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 			it("adds talent bonus with appropriate parts", async () => {
 				await spell.rollSpell(
 					[
+						"1d20",
 						"@talentBonus",
 					],
 					{
@@ -145,6 +147,7 @@ export default ({ describe, it, after, beforeEach, before, expect }) => {
 				await spell.update({ system: { tier: 3 } } );
 				await spell.rollSpell(
 					[
+						"1d20",
 						"@talentBonus",
 					],
 					{

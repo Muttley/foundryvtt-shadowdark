@@ -43,7 +43,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		};
 
 		// Summarize the bonuses for the attack roll
-		const parts = ["@attackBonus"];
+		const parts = ["1d20", "@attackBonus"];
 		data.attackBonus = item.system.bonuses.attackBonus;
 
 		data.damageParts = ["@damageBonus"];
