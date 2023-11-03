@@ -70,7 +70,7 @@ export default class ShadowdarkMacro {
 		}
 
 		// special case for light sources
-		if (items[0].system.light.isSource) {
+		if (items[0]?.system?.light?.isSource === true) {
 
 			// turn off any active lights
 			let lightActive = false;
@@ -104,13 +104,8 @@ export default class ShadowdarkMacro {
 			);
 		}
 
-		// Roll weapon attack
-		if (items[0].type === "Weapon") {
-			actor.rollAttack(items[0]._id);
-		}
-
-		// Cast spell
-		else if (items[0].type === "Spell") {
+		// Cast spell or wand or scroll
+		if (items[0].type === "Spell" || items[0].type === "Wand" || items[0].type === "Scroll") {
 			if (items[0].system.lost === true) {
 				ui.notifications.warn(
 					game.i18n.format("SHADOWDARK.hotbar.spellLost", {
@@ -133,6 +128,15 @@ export default class ShadowdarkMacro {
 				);
 			}
 			actor.useAbility(items[0]._id);
+		}
+
+		// Roll weapon attack
+		else if (items[0].type === "Weapon") {
+			actor.rollAttack(items[0]._id);
+		}
+
+		else if (items[0].type === "Potion") {
+			actor.usePotion(items[0]._id);
 		}
 
 		// Show basic item
