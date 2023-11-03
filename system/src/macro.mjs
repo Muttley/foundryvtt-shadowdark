@@ -44,4 +44,8 @@ export default class ShadowdarkMacro {
 			}
 		}
 	}
+
+	static async rollItemMacro(itemName) {
+		return ui.notifications.info(itemName);
+	}
 }
