@@ -1,3 +1,8 @@
+## v.1.x.x
+
+### Bugfixes
+* [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
+
 ## v.1.5.1
 
 ### Bugfixes
