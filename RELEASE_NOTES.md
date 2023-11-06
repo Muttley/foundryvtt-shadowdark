@@ -2,9 +2,12 @@
 
 ### Bugfixes
 * [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
+* [#580] Learning a spell from a scroll doesn't detect that the player cancelled the roll
+* [#581] Spellcasting ability used for learning spells hardcoded, this should be dynamic to support custom/homebrew classes
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
+* [#566] Warn players when they're attempting to learn a spell that is from a different class
 
 ### Chores
 * Improvements to GitHub Workflows around building a release

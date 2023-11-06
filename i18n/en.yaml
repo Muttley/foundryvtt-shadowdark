@@ -58,15 +58,8 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remain
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
-SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
-SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
-SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
-SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material. 
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
 SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
 SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
@@ -74,6 +67,13 @@ SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
 SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
+SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
+SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
+SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
@@ -205,6 +205,8 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
@@ -253,10 +255,10 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.hotbar.noItemWithName: No such item found on character
-SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
-SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
