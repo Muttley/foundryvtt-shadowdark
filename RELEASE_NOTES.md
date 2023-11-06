@@ -6,6 +6,9 @@
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
 
+### Chores
+* Improvements to GitHub Workflows around building a release
+
 ## v.1.5.1
 
 ### Bugfixes

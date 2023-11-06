@@ -1,9 +1,11 @@
-name: NodeJS with Gulp
+name: Build CI
 
 on:
   push:
     branches: [ "develop" ]
   pull_request:
+    branches: [ "develop" ]
+  workflow_dispatch:
     branches: [ "develop" ]
 
 jobs:
