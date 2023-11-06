@@ -395,12 +395,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				callback: () => this._createItemFromSpell(item, "Scroll"),
 			},
 			spell: {
-				icon: '<i class="fas fa-hand-sparkles"></i>',
+				icon: '<i class="fa-solid fa-sparkles"></i>',
 				label: game.i18n.localize("SHADOWDARK.item.spell.label"),
 				callback: () => this._createItemFromSpell(item, "Spell"),
 			},
 			wand: {
-				icon: '<i class="fas fa-magic"></i>',
+				icon: '<i class="fa-solid fa-wand-magic-sparkles"></i>',
 				label: game.i18n.localize("SHADOWDARK.item.wand.label"),
 				callback: () => this._createItemFromSpell(item, "Wand"),
 			},
