@@ -4,12 +4,15 @@
 * [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
 * [#580] Learning a spell from a scroll doesn't detect that the player cancelled the roll
 * [#581] Spellcasting ability used for learning spells hardcoded, this should be dynamic to support custom/homebrew classes
-* [#582] (chrpow) Grick token is named "Monster"
+* [#582] Grick token is named "Monster"
+* [#583] Regex parser in MonsterImporterSD.mjs can't handle attacks that have '+' in the name
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
 * [#566] Warn players when they're attempting to learn a spell that is from a different class
-* [#578] (chrpow) Standardize spellcasting iconography
+* [#578] Standardize spellcasting iconography
+
+*Many thanks to chrpow for contributing code included in this build*
 
 ### Chores
 * Improvements to GitHub Workflows around building a release
