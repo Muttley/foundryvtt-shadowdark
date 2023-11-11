@@ -311,25 +311,20 @@ export default class ItemSD extends Item {
 	 * @returns {string}
 	 */
 	async _askEffectInput(choiceType, choices) {
-		let options = "";
-		for (const [key, value] of Object.entries(choices)) {
-			options += `<option data-slug="${key}" value="${value}"></option>`;
-		}
+		const title = await game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
 
-		const title = game.i18n.localize(`SHADOWDARK.dialog.effect.choice.${choiceType}`);
+		const content = await renderTemplate(
+			"systems/shadowdark/templates/dialog/effect-list-choice.hbs",
+			{
+				choices,
+				title,
+				uuid: randomID(),
+			}
+		);
+
 		const data = {
 			title: title,
-			content: `
-				<form>
-					<h3>${title}</h3>
-					<div class="form-group">
-						<div class="form-fields">
-							<input list="selections" type="text" value="" placeholder="" />
-							<datalist id="selections">${options}</select>
-						</div>
-					</div>
-				</form>
-			`,
+			content,
 			classes: ["shadowdark-dialog"],
  			buttons: {
 				submit: {

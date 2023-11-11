@@ -1,0 +1,16 @@
+<form>
+	<h3>{{title}}</h3>
+	<div class="form-group">
+		<div class="form-fields">
+			<input list="selections-{{uuid}}" type="text" value="" placeholder="" />
+			<datalist id="selections-{{uuid}}">
+				{{#each choices as |key value|}}
+					<option
+						data-slug="{{value}}"
+						value="{{key}}"
+					></option>
+				{{/each}}
+			</datalist>
+		</div>
+	</div>
+</form>
