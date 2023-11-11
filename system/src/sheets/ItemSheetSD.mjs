@@ -953,7 +953,7 @@ export default class ItemSheetSD extends ItemSheet {
 		const handledData = data;
 
 		let defaultValue = "REPLACEME";
-		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue);
+		defaultValue = await this.item._handlePredefinedEffect(key, data.defaultValue);
 
 		if (defaultValue === "REPLACEME") {
 			return shadowdark.log("Can't create effect without selecting a value.");
