@@ -353,7 +353,7 @@ export default class ItemSD extends Item {
 								}
 							}
 
-							selected[parameter.type] = slug ?? null;
+							selected[parameter.type] = [slug, formValue] ?? null;
 						}
 
 						return selected;
@@ -381,7 +381,7 @@ export default class ItemSD extends Item {
 			const options = shadowdark.config.ABILITIES_LONG;
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 		else if (key === "armorMastery") {
 			const type = "armor";
@@ -391,7 +391,7 @@ export default class ItemSD extends Item {
 			);
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 		else if (key === "lightSource") {
 			const type = "lightsource";
@@ -408,7 +408,7 @@ export default class ItemSD extends Item {
 			});
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 		else if (key === "spellAdvantage") {
 			const type = "spell";
@@ -418,7 +418,7 @@ export default class ItemSD extends Item {
 			);
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
 			const type = "weapon";
@@ -428,7 +428,7 @@ export default class ItemSD extends Item {
 			);
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 		else if (key === "weaponDamageDieImprovementByProperty") {
 			const type = "property";
@@ -438,10 +438,10 @@ export default class ItemSD extends Item {
 			);
 
 			const chosen = await this._askEffectInput({type, options});
-			return chosen[type] ?? value;
+			return chosen[type] ?? [value];
 		}
 
-		return value;
+		return [value];
 	}
 
 	async propertyItems() {
