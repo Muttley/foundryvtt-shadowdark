@@ -85,7 +85,7 @@ export default class MonsterImporterSD extends FormApplication {
 	_parseAttack(str) {
 		const atk = str.match([
 			/(\d*)\s*/,				// atk[1] matches # of attacks
-			/([\w\s\d]*)/,			// atk[2] matches attack name
+			/([+\w\s\d]?[\w\s\d]*)/,			// atk[2] matches attack name
 			/(?:\(([^)]*)\))?\s*/,	// atk[3] matches attack range
 			/([+-]\d*)?\s*/,		// atk[4] matches attack bonus
 			/(?:\((.*)\))?/,		// atk[5] matches damage string
