@@ -78,6 +78,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	async _prepareItems(context) {
 		const attacks = [];
+		const specials = [];
 		const features = [];
 
 		const effects = {
@@ -95,6 +96,26 @@ export default class NpcSheetSD extends ActorSheetSD {
 			if (i.type === "NPC Attack") {
 				const display = await this.actor.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
+			}
+			if (i.type === "NPC Special Attack") {
+				const description = await TextEditor.enrichHTML(
+					jQuery(i.system.description).text(),
+					{
+						async: true,
+					}
+				);
+
+				const display = await renderTemplate(
+					"systems/shadowdark/templates/partials/npc-feature.hbs",
+					{
+						name: i.name,
+						description,
+					}
+				);
+				specials.push({
+					itemId: i._id,
+					display,
+				});
 			}
 			if (i.type === "NPC Feature") {
 				const description = await TextEditor.enrichHTML(
@@ -123,6 +144,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		}
 
 		context.attacks = attacks;
+		context.specials = specials;
 		context.features = features;
 		context.effects = effects;
 	}

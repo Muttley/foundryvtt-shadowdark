@@ -152,6 +152,7 @@
 			"Gem",
 			"Language",
 			"NPC Attack",
+			"NPC Special Attack",
 			"NPC Feature",
 			"Potion",
 			"Property",
@@ -361,6 +362,17 @@
 				"numDice": 1,
 				"special": "",
 				"value": ""
+			},
+			"ranges": [
+				"close"
+			]
+		},
+		"NPC Special Attack": {
+			"templates": [
+				"common"
+			],
+			"attack": {
+				"num": 1
 			},
 			"ranges": [
 				"close"

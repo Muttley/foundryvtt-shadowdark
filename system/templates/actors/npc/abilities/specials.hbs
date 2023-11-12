@@ -1,0 +1,27 @@
+<div class="npc-specials">
+	<label class="npc-label">
+		{{localize 'SHADOWDARK.sheet.npc.specials_label'}}
+		<span class="item-controls">
+			<a
+				class="item-control item-create"
+				data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='NPC Special Attack'}}"
+				data-item-type="NPC Special Attack"
+			>
+				<i class="fa-duotone fa-square-plus"></i>
+			</a>
+		</span>
+	</label>
+	<ol>
+		{{#each specials as |special|}}
+			<li>
+				<a
+					class="item"
+					data-action="item-special-attack"
+					data-item-id="{{special.itemId}}"
+				>
+					{{{special.display}}}
+				</a>
+			</li>
+		{{/each}}
+	</ol>
+</div>
