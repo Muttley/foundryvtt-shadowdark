@@ -420,21 +420,50 @@ export default class ItemSD extends Item {
 			const chosen = await this._askEffectInput({type, options});
 			return chosen[type] ?? [value];
 		}
-		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
-			const type = "weapon";
+		else if (
+			[
+				"weaponDamageDieImprovementByProperty",
+				"weaponDamageExtraDieImprovementByProperty",
+			].includes(key)
+		) {
+			const type = "weapon_property";
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.baseWeapons()
+				await shadowdark.compendiums.weaponProperties()
 			);
 
 			const chosen = await this._askEffectInput({type, options});
 			return chosen[type] ?? [value];
 		}
-		else if (key === "weaponDamageDieImprovementByProperty") {
-			const type = "property";
+		else if (key === "weaponDamageExtraDieByProperty") {
+			const parameters = [
+				{
+					type: "damage_die",
+					options: shadowdark.config.DICE,
+				},
+				{
+					type: "weapon_property",
+					options: await shadowdark.utils.getSlugifiedItemList(
+						await shadowdark.compendiums.weaponProperties()
+					),
+				},
+			];
+
+			const chosen = await this._askEffectInput(parameters);
+
+
+			if (chosen.damage_die && chosen.weapon_property) {
+				return [`${chosen.damage_die[0]}|${chosen.weapon_property[0]}`];
+			}
+			else {
+				return [value];
+			}
+		}
+		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
+			const type = "weapon";
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.weaponProperties()
+				await shadowdark.compendiums.baseWeapons()
 			);
 
 			const chosen = await this._askEffectInput({type, options});

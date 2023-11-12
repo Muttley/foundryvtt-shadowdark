@@ -384,10 +384,13 @@ export default class ActorSD extends Actor {
 			attackRange: "",
 			baseDamage: "",
 			bonusDamage: 0,
+			extraDamageDice: "",
 			properties: await item.propertiesDisplay(),
 			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
+
+		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
 
 		const weaponDisplays = {melee: [], ranged: []};
 
@@ -914,6 +917,11 @@ export default class ActorSD extends Actor {
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
 
+			// Check to see if we have any extra dice that need to be added to
+			// the damage rolls due to effects
+			//
+			await this.getExtraDamageDiceForWeapon(item, data);
+
 			if (item.system.type === "melee") {
 				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
@@ -949,6 +957,41 @@ export default class ActorSD extends Actor {
 		return item.rollItem(parts, data);
 	}
 
+
+	async getExtraDamageDiceForWeapon(item, data) {
+		const extraDamageDiceBonuses = this.system.bonuses.weaponDamageExtraDieByProperty ?? [];
+
+		for (const extraBonusDice of extraDamageDiceBonuses) {
+			const [die, property] = extraBonusDice.split("|");
+
+			if (await item.hasProperty(property)) {
+				data.extraDamageDice = die;
+
+				if (data.damageParts) {
+					data.damageParts.push("@extraDamageDice");
+				}
+				break;
+			}
+		}
+
+		// If the attack has extra damage die due to an effect, then also
+		// check to see if that damage die should be improved from its
+		// base type
+		//
+		if (data.extraDamageDice) {
+			const extraDiceImprovements =
+				this.system.bonuses.weaponDamageExtraDieImprovementByProperty ?? [];
+
+			for (const property of extraDiceImprovements) {
+				if (await item.hasProperty(property)) {
+					data.extraDamageDice = shadowdark.utils.getNextDieInList(
+						data.extraDamageDice,
+						shadowdark.config.DAMAGE_DICE
+					);
+				}
+			}
+		}
+	}
 
 	async rollHP(options={}) {
 		if (this.type === "Player") {

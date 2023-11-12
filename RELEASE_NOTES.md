@@ -11,6 +11,9 @@
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
 * [#566] Warn players when they're attempting to learn a spell that is from a different class
 * [#578] Standardize spellcasting iconography
+* [#585] Add predefined Talent effect that allows the addition of an extra damage die to weapons with specified tags (`weaponDamageExtraDieByProperty`)
+* [#586] Add predefined Talent effect that allows extra damage die for weapons with specified tags to be increased by category (`weaponDamageExtraDieImprovementByProperty`)
+* [#587] Add predefined Talent effect that allows damage die for weapons with specified tags to be increased by category (`weaponDamageDieImprovementByProperty`)
 
 *Many thanks to chrpow for contributing code included in this build*
 

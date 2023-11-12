@@ -172,6 +172,7 @@ SHADOWDARK.dialog.ability_check.title: Ability Check
 SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
 SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
 SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Choose Spell
@@ -350,6 +351,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die by Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel

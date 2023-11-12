@@ -256,6 +256,13 @@
 		"lang": "SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty",
 		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
 	},
+	"weaponDamageExtraDieImprovementByProperty": {
+		"defaultValue": "REPLACEME",
+		"effectKey": "system.bonuses.weaponDamageExtraDieImprovementByProperty",
+		"icon": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+		"lang": "SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty",
+		"mode": "CONST.ACTIVE_EFFECT_MODES.ADD"
+	},
 	"weaponDamageMultiplier": {
 		"defaultValue": 2,
 		"effectKey": "system.bonuses.damageMultiplier",
