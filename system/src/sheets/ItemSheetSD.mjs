@@ -264,6 +264,7 @@ export default class ItemSheetSD extends ItemSheet {
 				"Gem",
 				"Language",
 				"NPC Attack",
+				"NPC Special Attack",
 				"Potion",
 				"Property",
 				"Scroll",
@@ -356,7 +357,7 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 		}
 
-		if (item.type === "NPC Attack") {
+		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
 			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
 		}
 

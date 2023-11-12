@@ -93,30 +93,19 @@ export default class NpcSheetSD extends ActorSheetSD {
 		};
 
 		for (const i of this._sortAllItems(context)) {
+			// Push Attacks
 			if (i.type === "NPC Attack") {
 				const display = await this.actor.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
 			}
-			if (i.type === "NPC Special Attack") {
-				const description = await TextEditor.enrichHTML(
-					jQuery(i.system.description).text(),
-					{
-						async: true,
-					}
-				);
 
-				const display = await renderTemplate(
-					"systems/shadowdark/templates/partials/npc-feature.hbs",
-					{
-						name: i.name,
-						description,
-					}
-				);
-				specials.push({
-					itemId: i._id,
-					display,
-				});
+			// Push Specials
+			if (i.type === "NPC Special Attack") {
+				const display = await this.actor.buildNpcSpecialDisplays(i._id);
+				specials.push({itemId: i._id, display});
 			}
+
+			// Push Features
 			if (i.type === "NPC Feature") {
 				const description = await TextEditor.enrichHTML(
 					jQuery(i.system.description).text(),
@@ -137,6 +126,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 					display,
 				});
 			}
+			// Push Effects
 			else if (i.type === "Effect") {
 				const category = i.system.category;
 				effects[category].items.push(i);

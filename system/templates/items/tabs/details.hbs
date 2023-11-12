@@ -37,6 +37,10 @@
 			{{> items/partials/npc-attack }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "NPC Special Attack"}}
+			{{> items/partials/npc-special-attack }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Property"}}
 			{{> items/partials/property }}
 		{{/ifEq}}

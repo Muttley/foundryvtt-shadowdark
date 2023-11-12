@@ -41,6 +41,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/language.hbs",
 		"systems/shadowdark/templates/items/partials/light-source.hbs",
 		"systems/shadowdark/templates/items/partials/npc-attack.hbs",
+		"systems/shadowdark/templates/items/partials/npc-special-attack.hbs",
 		"systems/shadowdark/templates/items/partials/property.hbs",
 		"systems/shadowdark/templates/items/partials/slots.hbs",
 		"systems/shadowdark/templates/items/partials/spell.hbs",

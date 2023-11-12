@@ -1,0 +1,31 @@
+<div class="item-details">
+	<div class="npc-attack-details">
+		<div class="npc-attack-detail">
+			<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
+			{{numberInput
+				system.attack.num
+				name="system.attack.num"
+				placeholder="1"
+			}}
+		</div>
+		<div
+			class="npc-attack-detail"
+			style="grid-column: span 2;"
+		>
+			<div
+				class="item-properties"
+				style="grid-column: unset;"
+			>
+				<div
+					class="item-property"
+					style="grid-template-columns: 1fr;"
+				>
+					<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
+					<p class="item-property-list npc-attack-ranges">
+						{{npcAttackRangesDisplay}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

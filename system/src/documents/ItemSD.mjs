@@ -290,7 +290,7 @@ export default class ItemSD extends Item {
 	npcAttackRangesDisplay() {
 		let ranges = [];
 
-		if (this.type === "NPC Attack") {
+		if (this.type === "NPC Attack" || this.type === "NPC Special Attack") {
 			for (const key of this.system.ranges) {
 				ranges.push(
 					CONFIG.SHADOWDARK.RANGES[key]

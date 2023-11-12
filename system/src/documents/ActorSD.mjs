@@ -358,6 +358,30 @@ export default class ActorSD extends Actor {
 		);
 	}
 
+	async buildNpcSpecialDisplays(itemId) {
+		const item = this.getEmbeddedDocument("Item", itemId);
+
+		const description = await TextEditor.enrichHTML(
+			jQuery(item.system.description).text(),
+			{
+				async: true,
+			}
+		);
+
+		const attackOptions = {
+			attackName: item.name,
+			numAttacks: item.system.attack.num,
+			ranges: item.system.ranges.map(s => game.i18n.localize(
+				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
+			description,
+		};
+
+		return await renderTemplate(
+			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
+			attackOptions
+		);
+	}
+
 
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
