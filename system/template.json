@@ -153,6 +153,7 @@
 			"Language",
 			"NPC Attack",
 			"NPC Special Attack",
+			"NPC Spell",
 			"NPC Feature",
 			"Potion",
 			"Property",
@@ -368,20 +369,21 @@
 			]
 		},
 		"NPC Special Attack": {
-			"templates": [
-				"common"
-			],
+			"templates": ["common"],
 			"attack": {
 				"num": 1
 			},
-			"ranges": [
-				"close"
-			]
+			"bonuses": {
+				"attackBonus":0
+			},
+			"ranges": []
 		},
 		"NPC Feature": {
-			"templates": [
-				"common"
-			]
+			"templates": ["common"]
+		},
+		"NPC Spell": {
+			"templates": ["common", "magic"],
+			"lost": false
 		},
 		"Potion": {
 			"templates": ["common", "magic", "physical"],

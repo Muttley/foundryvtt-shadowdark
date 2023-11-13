@@ -95,20 +95,14 @@ export default class MonsterImporterSD extends FormApplication {
 
 		let attackObj = {
 			name: atk[2].trim(),
-			type: "NPC Attack",
+			type: "NPC Special Attack",
 			system: {
 				attack: {
 					num: atk[1],
 				},
-				attackType: "special",
+				// attackType: "special",
 				bonuses: {
 					attackBonus: 0,
-					damageBonus: 0,
-				},
-				damage: {
-					numDice: 0,
-					value: "",
-					special: "",
 				},
 			},
 		};
@@ -133,6 +127,7 @@ export default class MonsterImporterSD extends FormApplication {
 		// Attack is a phyical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
+			attackObj.type = "NPC Attack";
 
 			// split up damage string and parse # of dice, dice type, bonuses, features
 			const dmgStrs = atk[5].split("+").map( x => {
@@ -141,6 +136,7 @@ export default class MonsterImporterSD extends FormApplication {
 			// parse first object as # dice and dice type
 			const diceStr = dmgStrs[0].match(/(\d*)(d\d*)?/);
 			if (typeof diceStr[2] !== "undefined") {
+				attackObj.system.damage = {};
 				attackObj.system.damage.numDice = diceStr[1];
 				attackObj.system.damage.value = diceStr[2];
 			}
@@ -292,10 +288,28 @@ export default class MonsterImporterSD extends FormApplication {
 		// Parse features and add to actor
 		let featureArray = [];
 		features.forEach( text => {
-			featureArray.push(this._parseFeature(text));
-		});
-		await newActor.createEmbeddedDocuments("Item", featureArray);
+			// Is the feature a spell?
+			// TODO add spell support
 
+			// Parse Feature into obj
+			const parsedFeatureObj = this._parseFeature(text);
+
+			// Is the feature a description of a special attack?
+			let isSpecialAttack = false;
+			newActor.items.forEach(x => {
+				if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
+					x.update({"system.description": parsedFeatureObj.system.description});
+					isSpecialAttack = true;
+				}
+			});
+
+			// push feature to actor
+			if (!isSpecialAttack) {
+				featureArray.push(parsedFeatureObj);
+			}
+		});
+
+		await newActor.createEmbeddedDocuments("Item", featureArray);
 		return newActor;
 	}
 }

@@ -371,6 +371,7 @@ export default class ActorSD extends Actor {
 		const attackOptions = {
 			attackName: item.name,
 			numAttacks: item.system.attack.num,
+			attackBonus: item.system.bonuses.attackBonus,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 			description,
@@ -1238,10 +1239,15 @@ export default class ActorSD extends Actor {
 		let message = "";
 		let success = true;
 
-		// NPC features currently don't have checks
-		if (item.type !== "NPC Feature") {
-			// does player ability use on a roll check?
-			if (item.system.ability !== "") {
+		// NPC features - no title or checks required
+		if (item.type === "NPC Feature") {
+			message = `${abilityDescription}`;
+		}
+		else {
+			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+
+			// does ability use on a roll check?
+			if (typeof item.system.ability !== "undefined") {
 				const result = await this.rollAbility(
 					item.system.ability,
 					{target: item.system.dc}
@@ -1249,7 +1255,8 @@ export default class ActorSD extends Actor {
 
 				success = result?.rolls?.main?.success ?? false;
 			}
-			// does player ability have limited uses?
+
+			// does ability have limited uses?
 			if (item.system.limitedUses) {
 				if (item.system.uses.available > 0) {
 					item.update({
@@ -1280,12 +1287,9 @@ export default class ActorSD extends Actor {
 			if (success) {
 				message = `<p>${message}</p>${abilityDescription}`;
 			}
-			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
-		}
-		else {
-			message = `${abilityDescription}`;
 		}
 
+		// construct and create chat message
 		const cardData = {
 			actor: this,
 			item: item,
