@@ -345,7 +345,7 @@ export default class ActorSD extends Actor {
 			attackName: item.name,
 			numAttacks: item.system.attack.num,
 			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
-			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
+			baseDamage: item.system.damage.value,
 			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
 			special: item.system.damage.special,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
@@ -907,6 +907,7 @@ export default class ActorSD extends Actor {
 		if (item.system.damage.special) {
 			const itemSpecial = data.actor.items.find(
 				e => e.name === item.system.damage.special
+					&& e.type === "NPC Feature"
 			);
 
 			if (itemSpecial) {
