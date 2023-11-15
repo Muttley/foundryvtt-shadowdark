@@ -641,6 +641,29 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data);
 	}
 
+	async castNPCSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		// TODO look up spell bonus
+		const abilityBonus = this.system.spellcastingBonus;
+
+		const rollType = item.name.slugify();
+
+		const data = {
+			rollType,
+			item: item,
+			actor: this,
+			abilityBonus: abilityBonus,
+		};
+
+		const parts = ["1d20", "@abilityBonus"];
+
+		const options = {
+			isNPC: true,
+		};
+
+		return item.rollSpell(parts, data, options);
+	}
 
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();

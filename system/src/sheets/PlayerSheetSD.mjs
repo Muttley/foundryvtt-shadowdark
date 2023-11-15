@@ -75,16 +75,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onSellTreasure(event)
 		);
 
-		html.find(".toggle-lost").click(
-			event => this._onToggleLost(event)
-		);
-
 		html.find("[data-action='use-ability']").click(
 			event => this._onUseAbility(event)
 		);
 
 		html.find("[data-action='use-potion']").click(
 			event => this._onUsePotion(event)
+		);
+
+		html.find("[data-action='cast-spell']").click(
+			event => this._onCastSpell(event)
 		);
 
 		html.find("[data-action='learn-spell']").click(
@@ -513,6 +513,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
+	async _onCastSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.castSpell(itemId);
+	}
+
 	async _onLearnSpell(event) {
 		event.preventDefault();
 
@@ -637,19 +645,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		this._toggleLightSource(item);
-	}
-
-	async _onToggleLost(event) {
-		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.getEmbeddedDocument("Item", itemId);
-
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				_id: itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
 	}
 
 	async _toggleLightSource(item, options = {}) {

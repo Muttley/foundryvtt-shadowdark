@@ -53,7 +53,9 @@
 			"darkAdapted": true,
 			"move": "near",
 			"moveNote": "",
-			"spellcastingAbility": ""
+			"spellcastingAbility": "",
+			"spellcastingBonus": 0,
+			"spellcastingAttackNum": 0
 		},
 		"Player": {
 			"templates": ["shared_details"],
@@ -382,7 +384,13 @@
 			"templates": ["common"]
 		},
 		"NPC Spell": {
-			"templates": ["common", "magic"],
+			"templates": ["common"],
+			"duration": {
+				"type": "",
+				"value": ""
+			},
+			"range": "",
+			"dc": 10,
 			"lost": false
 		},
 		"Potion": {

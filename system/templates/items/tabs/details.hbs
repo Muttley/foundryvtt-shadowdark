@@ -41,6 +41,10 @@
 			{{> items/partials/npc-special-attack }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "NPC Spell"}}
+			{{> items/partials/npc-spell }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Property"}}
 			{{> items/partials/property }}
 		{{/ifEq}}

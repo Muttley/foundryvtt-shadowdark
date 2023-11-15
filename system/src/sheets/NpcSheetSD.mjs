@@ -57,6 +57,15 @@ export default class NpcSheetSD extends ActorSheetSD {
 		html.find("[data-action='item-use-ability']").click(
 			event => this._onUseAbility(event)
 		);
+
+		html.find("[data-action='cast-npc-spell']").click(
+			event => this._onCastSpell(event)
+		);
+
+		html.find(".toggle-lost").click(
+			event => this._onToggleLost(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -79,6 +88,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 	async _prepareItems(context) {
 		const attacks = [];
 		const specials = [];
+		const spells = [];
 		const features = [];
 
 		const effects = {
@@ -100,13 +110,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 			}
 
 			// Push Specials
-			if (i.type === "NPC Special Attack") {
+			else if (i.type === "NPC Special Attack") {
 				const display = await this.actor.buildNpcSpecialDisplays(i._id);
 				specials.push({itemId: i._id, display});
 			}
 
 			// Push Features
-			if (i.type === "NPC Feature") {
+			else if (i.type === "NPC Feature") {
 				const description = await TextEditor.enrichHTML(
 					jQuery(i.system.description).text(),
 					{
@@ -127,6 +137,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 				});
 			}
 
+			// Push Spells
+			else if (i.type === "NPC Spell") {
+				const spellDC = i.system.dc;
+				spells[spellDC] ||= [];
+				spells[spellDC].push(i);
+			}
+
 			// Push Effects
 			else if (i.type === "Effect") {
 				const category = i.system.category;
@@ -136,6 +153,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		context.attacks = attacks;
 		context.specials = specials;
+		context.spells = spells;
 		context.features = features;
 		context.effects = effects;
 	}
@@ -144,5 +162,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 		event.preventDefault();
 		const itemId = $(event.currentTarget).data("item-id");
 		this.actor.useAbility(itemId);
+	}
+
+	async _onCastSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.castNPCSpell(itemId);
 	}
 }

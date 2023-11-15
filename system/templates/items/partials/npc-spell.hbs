@@ -1,0 +1,34 @@
+<div class="item-details">
+	<div class="spell-details">
+		<div class="spell-detail">
+			<label>DC</label>
+			{{numberInput
+				system.dc
+				name="system.dc"
+				class="spell-dc-value"
+				placeholder="10"
+			}}
+		</div>
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_duration'}}</label>
+			{{> items/partials/duration
+				base="system.duration"
+				duration=system.duration
+				type="spell"
+				choices=config.SPELL_DURATIONS
+				variableDuration=variableDuration
+			}}
+		</div>
+		<div class="spell-detail">
+			<label>{{localize 'SHADOWDARK.item.spell_range'}}</label>
+			<select name="system.range">
+				<option value="">&mdash;</option>
+				{{selectOptions
+					config.SPELL_RANGES
+					selected=system.range
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+</div>

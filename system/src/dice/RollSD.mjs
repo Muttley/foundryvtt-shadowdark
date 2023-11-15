@@ -58,7 +58,7 @@ export default class RollSD extends Roll {
 		}
 
 		// Roll damage for NPCs
-		if (data.actor?.type === "NPC") {
+		if (data.actor?.type === "NPC" && data.item.type === "NPC Attack") {
 			data = await this._rollNpcAttack(data);
 			if (!options.flavor) {
 				options.flavor = game.i18n.format(
@@ -86,16 +86,24 @@ export default class RollSD extends Roll {
 				}
 			}
 
-			// TODO This should really be set in the ItemSD rollSpell method...
 			// Spell? -> Set a target
 			if (data.item?.isSpell()) {
-				options.target = data.item.system.tier + 10;
+				// NPC spell
+				if (typeof data.item.system.dc !== "undefined") {
+					options.target = data.item.system.dc;
+					options.tier = data.item.system.dc - 10;
+				}
+				// player spell
+				else {
+					options.target = data.item.system.tier + 10;
+					options.tier = data.item.system.tier;
+				}
 				if (!options.flavor) {
 					options.flavor = game.i18n.format(
 						"SHADOWDARK.chat.spell_roll.title",
 						{
 							name: data.item.name,
-							tier: data.item.system.tier,
+							tier: options.tier,
 							spellDC: options.target,
 						}
 					);
