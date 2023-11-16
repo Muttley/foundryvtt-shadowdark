@@ -5,7 +5,7 @@
 		</label>
 	</div>
 
-	<div class="item-details grid-3-columns">
+	<div class="item-details grid-3-columns" style="margin-bottom:0.5em;">
 				<div class="item-detail">
 					<label>Num. Attacks</label>
 					{{numberInput
@@ -36,7 +36,6 @@
 					</select>
 				</div>
 	</div>
-<br>
 	<div class="npc-spells">
 	<label class="npc-label">
 		Spells
@@ -53,55 +52,70 @@
 	</div>
 	
 
-	<div class="spells-list">
-		<table>
-			{{#each spells as |dc tid|}}
-				<tr class="spell-tier-header">
-					<th class="spell-tier-header-padding">
-						DC {{tid}}
-					</th>
-					<th>&nbsp;</th>
+
+		<table style="border-top:0px;margin:0px;">
+			{{#each spells as |spell|}}
+				<tr
+					class="item"
+					data-item-id="{{spell._id}}"
+				>
+					<td>
+						<ol>
+						<a
+							class="item context"
+							data-item-id="{{spell._id}}"
+							{{#if spell.system.lost}}style="text-decoration: line-through;"{{/if}}
+						>
+							<b>{{spell.name}}</b>. {{spell.description}}<br>
+						</a>
+						
+
+						<footer class="details-footer">
+							<ul class="tags">
+								<li class="tag tag_primary tag_small">
+									DC {{ spell.system.dc }}
+								</li>
+								<li class="tag tag_secondary tag_small">
+									{{localize "SHADOWDARK.item.spell_duration"}}:
+									{{getSpellDuration
+										spell.system.duration.type
+										spell.system.duration.value
+									}}
+								</li>
+								<li class="tag tag_secondary tag_small">
+									{{localize "SHADOWDARK.item.spell_range"}}:
+									{{fromConfig "SPELL_RANGES" spell.system.range }}
+								</li>
+							</ul>
+						</footer>
+						</ol>
+					</td>
+					<td style="text-align: right; padding-right: 4px;">
+						{{#unless spell.system.lost}}
+						<a
+							class="item-control cast-spell"
+							data-action="cast-npc-spell"
+							data-item-id="{{spell._id}}"
+							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+						>
+							<i class="fa-solid fa-hand-sparkles"></i>
+						</a>
+						{{/unless}}
+						<a
+							class="item-control toggle-lost"
+							data-item-id="{{spell._id}}"
+							data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
+						>
+							{{#if spell.system.lost}}
+								<i style="color:red;" class="fa-solid fa-xmark"></i>
+							{{else}}
+								<i style="color:green;" class="fa-solid fa-check"></i>
+							{{/if}}
+						</a>
+					</td>
 				</tr>
-				{{#each dc as |spell|}}
-					<tr
-						class="item"
-						data-item-id="{{spell._id}}"
-					>
-						<td>
-							<a
-								class="item-control show-details {{#if spell.system.lost}}strike-through{{/if}}"
-								data-item-id="{{spell._id}}"
-							>
-								{{spell.name}}
-							</a>
-						</td>
-						<td style="text-align: right; padding-right: 4px;">
-							{{#unless spell.system.lost}}
-								<a
-									class="item-control cast-spell"
-									data-action="cast-npc-spell"
-									data-item-id="{{spell._id}}"
-									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
-								>
-									<i class="fa-solid fa-hand-sparkles"></i>
-								</a>
-							{{/unless}}
-							<a
-								class="item-control toggle-lost"
-								data-item-id="{{spell._id}}"
-								data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
-							>
-								{{#if spell.system.lost}}
-									<i style="color:red;" class="fa-solid fa-xmark"></i>
-								{{else}}
-									<i style="color:green;" class="fa-solid fa-check"></i>
-								{{/if}}
-							</a>
-						</td>
-					</tr>
-				{{/each}}
 			{{/each}}
 		</table>
-	</div>
+
 
 </section>

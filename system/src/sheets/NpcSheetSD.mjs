@@ -139,9 +139,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 			// Push Spells
 			else if (i.type === "NPC Spell") {
-				const spellDC = i.system.dc;
-				spells[spellDC] ||= [];
-				spells[spellDC].push(i);
+				i.description = await TextEditor.enrichHTML(
+					jQuery(i.system.description).text(),
+					{
+						async: true,
+					}
+				);
+				spells.push(i);
 			}
 
 			// Push Effects

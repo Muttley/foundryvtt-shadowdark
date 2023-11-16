@@ -177,6 +177,55 @@ export default class MonsterImporterSD extends FormApplication {
 	}
 
 	/**
+	 * Parses an NPC spell string and returns an obj
+	 * @param {string} str
+	 * @returns {featureObj}
+	 */
+	_parseSpell(str) {
+		const parsedSpell = str.match([
+			/(.*)/,								// stats[1] matches Spell Name
+			/\([\w\s]*Spell\)\.\s*([^.]*)?/,	// stats[2] matches potential range
+			/.*DC (\d*)/,						// stats[3] matches DC
+			/\. (.*)/,							// stats[4] matches Description
+		].map(function(r) {
+			return r.source;
+		}).join(""));
+
+		let rangeStr = "";
+
+		// Did the parse find a range of self?
+		if (typeof parsedSpell[2] !== "undefined" && parsedSpell[2].toLowerCase() in CONFIG.SHADOWDARK.SPELL_RANGES) {
+			rangeStr = parsedSpell[2];
+		}
+		// Take a chance at finding range in the description
+		else {
+			Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES).forEach(key => {
+				console.log(parsedSpell[4], key);
+				if (parsedSpell[4].includes(key)) {
+					rangeStr = key;
+				}
+			});
+
+			if (parsedSpell[4].includes("near-sized")) {
+				rangeStr = "near";
+			}
+		}
+		// find duration
+
+		const spellObj = {
+			name: parsedSpell[1],
+			type: "NPC Spell",
+			system: {
+				dc: parsedSpell[3],
+				description: `<p>${parsedSpell[4]}</p>`,
+				range: rangeStr,
+			},
+		};
+		console.log(spellObj);
+		return (spellObj);
+	}
+
+	/**
 	 * Parses pasted text representing a monster and creates an NPC actor from it.
 	 * @param {string} string - String data posted by user
 	 * @returns {ActorSD}
@@ -278,7 +327,9 @@ export default class MonsterImporterSD extends FormApplication {
 		// Create the NPC actor
 		const newActor = await Actor.create(actorObj);
 
-		// Parse attacks and add to actor
+		// ***************************************************
+		// Parse attacks features, and spells and add to actor
+		// ***************************************************
 		let attackArray = [];
 		stats[3].split(/ and | or /).forEach( line => {
 			attackArray.push(this._parseAttack(line));
@@ -287,27 +338,42 @@ export default class MonsterImporterSD extends FormApplication {
 
 		// Parse features and add to actor
 		let featureArray = [];
+		let castingAbility ="";
+
 		features.forEach( text => {
+
 			// Is the feature a spell?
-			// TODO add spell support
+			const spellTestStr = text.match(/\(([\w]*)?\s*Spell\)/);
+			if (spellTestStr) {
+				featureArray.push(this._parseSpell(text));
 
-			// Parse Feature into obj
-			const parsedFeatureObj = this._parseFeature(text);
-
-			// Is the feature a description of a special attack?
-			let isSpecialAttack = false;
-			newActor.items.forEach(x => {
-				if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
-					x.update({"system.description": parsedFeatureObj.system.description});
-					isSpecialAttack = true;
+				// does the spell list a casting ability?
+				if (typeof spellTestStr[1] !== "undefined" && CONFIG.SHADOWDARK.ABILITY_KEYS.includes(spellTestStr[1].toLowerCase())) {
+					castingAbility = spellTestStr[1].toLowerCase();
+					console.log(castingAbility);
 				}
-			});
+			}
+			// Parse Feature
+			else {
+				const parsedFeatureObj = this._parseFeature(text);
 
-			// push feature to actor
-			if (!isSpecialAttack) {
-				featureArray.push(parsedFeatureObj);
+				// Is the feature a description of a special attack?
+				let isSpecialAttack = false;
+				newActor.items.forEach(x => {
+					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
+						x.update({"system.description": parsedFeatureObj.system.description});
+						isSpecialAttack = true;
+					}
+				});
+
+				// push feature to actor
+				if (!isSpecialAttack) {
+					featureArray.push(parsedFeatureObj);
+				}
 			}
 		});
+		console.log(castingAbility);
+		await newActor.update({"system.spellcastingAbility": castingAbility});
 
 		await newActor.createEmbeddedDocuments("Item", featureArray);
 		return newActor;
