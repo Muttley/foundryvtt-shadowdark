@@ -52,7 +52,6 @@ SHADOWDARK.BOON_TYPES = {
 	blessing: "SHADOWDARK.boons.blessing",
 };
 
-/* eslint-disable quote-props */
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
@@ -83,7 +82,6 @@ SHADOWDARK.DEFAULTS = {
 		"Weapon": "icons/weapons/swords/swords-short.webp",
 	},
 };
-/* eslint-enable quote-props */
 
 SHADOWDARK.LANGUAGE_RARITY = {
 	common: "SHADOWDARK.language.rarity.common",
@@ -138,12 +136,12 @@ SHADOWDARK.RANGES_SHORT = {
 };
 
 SHADOWDARK.OFFICIAL_SOURCES = {
-	"cursed-scroll-1": "SHADOWDARK.source.cursed-scroll-1",
-	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
-	"cursed-scroll-3": "SHADOWDARK.source.cursed-scroll-3",
-	"quickstart": "SHADOWDARK.source.quickstart",
-	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
-	"core-rules": "SHADOWDARK.source.core-rules",
+	"cursed-scroll-1": "Cursed Scroll Vol.1, Diablerie!",
+	"cursed-scroll-2": "Cursed Scroll Vol.2, Red Sands",
+	"cursed-scroll-3": "Cursed Scroll Vol.3, Midnight Sun",
+	"quickstart": "Shadowdark RPG: Quickstart Set",
+	"bard-and-ranger": "Shadowdark RPG: Bard and Ranger",
+	"core-rules": "Shadowdark RPG: Core Rules",
 };
 
 SHADOWDARK.SPELL_DURATIONS = {
