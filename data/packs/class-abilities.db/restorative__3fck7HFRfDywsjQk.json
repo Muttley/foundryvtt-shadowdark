@@ -11,12 +11,17 @@
 		"dc": 14,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.QV93CYmgcgJ3UCPf]{Restorative} Ends one poison or disease</p><p></p>",
 		"group": "Herbal Remedy",
+		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
 			"title": ""
+		},
+		"uses": {
+			"available": 0,
+			"max": 0
 		}
 	},
 	"type": "Class Ability"

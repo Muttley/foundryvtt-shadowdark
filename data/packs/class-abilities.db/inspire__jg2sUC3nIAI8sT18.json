@@ -11,12 +11,17 @@
 		"dc": 12,
 		"description": "<p>One target in near gains a luck token.</p>",
 		"group": "Perform",
+		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
 			"title": ""
+		},
+		"uses": {
+			"available": 0,
+			"max": 0
 		}
 	},
 	"type": "Class Ability"

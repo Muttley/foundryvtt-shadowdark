@@ -11,12 +11,17 @@
 		"dc": 15,
 		"description": "<p>You transfix all targets of level 4 or less within near for 1d4 rounds.</p>",
 		"group": "Perform",
+		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
 			"title": ""
+		},
+		"uses": {
+			"available": 0,
+			"max": 0
 		}
 	},
 	"type": "Class Ability"

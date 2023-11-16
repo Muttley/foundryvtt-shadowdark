@@ -21,9 +21,8 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 1,
 			"special": "Grab",
-			"value": "d6"
+			"value": "1d6"
 		},
 		"description": "",
 		"magicItem": false,

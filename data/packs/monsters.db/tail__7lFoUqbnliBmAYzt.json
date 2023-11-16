@@ -21,9 +21,8 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 3,
 			"special": "",
-			"value": "d6"
+			"value": "3d6"
 		},
 		"description": "",
 		"magicItem": false,

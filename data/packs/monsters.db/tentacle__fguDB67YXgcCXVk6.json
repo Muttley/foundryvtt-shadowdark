@@ -21,12 +21,12 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 1,
 			"special": "Curse",
-			"value": "d8"
+			"value": "1d8"
 		},
 		"description": "",
 		"magicItem": false,
+		"predefinedEffects": "",
 		"ranges": [
 			"near"
 		],

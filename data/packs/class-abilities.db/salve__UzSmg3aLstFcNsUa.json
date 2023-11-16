@@ -11,12 +11,17 @@
 		"dc": 11,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.m857P6MI00wAONTp]{Salve} Heals 1 HP</p>",
 		"group": "Herbal Remedy",
+		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
 			"title": ""
+		},
+		"uses": {
+			"available": 0,
+			"max": 0
 		}
 	},
 	"type": "Class Ability"

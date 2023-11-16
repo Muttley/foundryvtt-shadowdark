@@ -11,12 +11,17 @@
 		"dc": 15,
 		"description": "<p><strong>Curative.</strong> Equivalent to a @UUID[Compendium.shadowdark.magic-items.Item.jucTGEjsqJ1znHdf]{Potion of Healing}</p><p></p>",
 		"group": "Herbal Remedy",
+		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,
 			"title": ""
+		},
+		"uses": {
+			"available": 0,
+			"max": 0
 		}
 	},
 	"type": "Class Ability"

@@ -8,6 +8,8 @@
 	"name": "Bard",
 	"system": {
 		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
 		"allWeapons": false,
 		"armor": [
 			"Compendium.shadowdark.gear.Item.DeqtKQQzI6HTYvV0",

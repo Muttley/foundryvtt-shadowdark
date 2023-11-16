@@ -8,6 +8,8 @@
 	"name": "Level 0",
 	"system": {
 		"allArmor": true,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
 		"allWeapons": true,
 		"armor": [
 		],

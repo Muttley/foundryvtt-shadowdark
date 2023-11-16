@@ -5,12 +5,12 @@
 		{
 			"_id": "asJ04sNrjrONdPYc",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679438600654,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817385653,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -25,12 +25,12 @@
 				{
 					"_id": "3DtlC7L1PrMFyn7n",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679438637872,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134985,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077258,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -61,9 +61,10 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d4"
+							"value": "1d4"
 						},
 						"description": "",
+						"predefinedEffects": "",
 						"ranges": [
 							"close"
 						],
@@ -77,6 +78,7 @@
 			],
 			"name": "Giuseppe Baldini",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -199,12 +201,12 @@
 		{
 			"_id": "XPNU79kJyse04pL3",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679430516046,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -250,12 +252,12 @@
 				{
 					"_id": "ZOlhmdkqfQyyT6R3",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679430591589,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136039,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077548,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -281,12 +283,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d10"
+							"value": "1d10+1"
 						},
 						"description": "<p>Wielder deals x4 damage on a critical hit.</p>",
 						"ranges": [
@@ -302,12 +304,12 @@
 				{
 					"_id": "Ag019spAbwwDbhSZ",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679430663175,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136043,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077552,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -338,7 +340,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d12"
+							"value": "1d12"
 						},
 						"description": "",
 						"ranges": [
@@ -354,6 +356,7 @@
 			],
 			"name": "The Scarlet Minotaur",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -476,12 +479,12 @@
 		{
 			"_id": "rh1ZgUTuHcwhlt4F",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -527,12 +530,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134460,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077170,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -563,7 +566,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -579,12 +582,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134470,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077175,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -613,9 +616,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -631,6 +634,7 @@
 			],
 			"name": "Chee",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -753,12 +757,12 @@
 		{
 			"_id": "QvVJAySJZMTMnEZp",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -804,12 +808,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134974,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077226,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -840,7 +844,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -856,12 +860,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134979,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077229,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -890,9 +894,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -908,6 +912,7 @@
 			],
 			"name": "Eska",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -1030,12 +1035,12 @@
 		{
 			"_id": "82lFpkXeVpKnPWCQ",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -1081,12 +1086,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135029,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077303,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1117,7 +1122,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -1133,12 +1138,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135036,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077307,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1167,9 +1172,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -1185,6 +1190,7 @@
 			],
 			"name": "Grisk",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -1307,12 +1313,12 @@
 		{
 			"_id": "1WXEDbF6gSa4fQUQ",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -1358,12 +1364,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135986,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077502,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1394,7 +1400,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -1410,12 +1416,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135990,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077507,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1444,9 +1450,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -1462,6 +1468,7 @@
 			],
 			"name": "Skir",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -1584,12 +1591,12 @@
 		{
 			"_id": "eVuNGaceV93M5whd",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -1635,12 +1642,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136052,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077565,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1671,7 +1678,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -1687,12 +1694,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136057,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077569,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1721,9 +1728,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -1739,6 +1746,7 @@
 			],
 			"name": "Uliss",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -1861,12 +1869,12 @@
 		{
 			"_id": "rok3i6Gy0RjoBgrq",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -1912,12 +1920,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136069,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077616,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1948,7 +1956,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -1964,12 +1972,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136073,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077621,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -1998,9 +2006,9 @@
 							"damageBonus": 0
 						},
 						"damage": {
-							"numDice": 0,
+							"numDice": 1,
 							"special": "",
-							"value": ""
+							"value": "0"
 						},
 						"description": "",
 						"ranges": [
@@ -2016,6 +2024,7 @@
 			],
 			"name": "Yisha",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -2138,12 +2147,12 @@
 		{
 			"_id": "mdRstp355OUOyY7r",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -2158,12 +2167,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135053,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077315,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -2189,12 +2198,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -2242,6 +2251,7 @@
 			],
 			"name": "Haruut",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -2364,12 +2374,12 @@
 		{
 			"_id": "VIiW9qercPbgheGh",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -2384,12 +2394,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134990,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077287,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -2415,12 +2425,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -2468,6 +2478,7 @@
 			],
 			"name": "Grall",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -2590,12 +2601,12 @@
 		{
 			"_id": "PZ6Pt3fz7LRaEWqU",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -2610,12 +2621,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134474,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077179,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -2641,12 +2652,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -2694,6 +2705,7 @@
 			],
 			"name": "Chops",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -2816,12 +2828,12 @@
 		{
 			"_id": "XbO8sDu1ToDVVoh9",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -2836,12 +2848,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134446,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077148,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -2867,12 +2879,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -2920,6 +2932,7 @@
 			],
 			"name": "Brell",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -3042,12 +3055,12 @@
 		{
 			"_id": "bERcM50HvKw0ZY6o",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -3062,12 +3075,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135835,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077412,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -3093,12 +3106,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -3146,6 +3159,7 @@
 			],
 			"name": "Rogath",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -3268,12 +3282,12 @@
 		{
 			"_id": "CDxRc2pIwG7SK73E",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -3288,12 +3302,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135003,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077292,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -3319,12 +3333,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -3372,6 +3386,7 @@
 			],
 			"name": "Grenton",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -3494,12 +3509,12 @@
 		{
 			"_id": "L91uEF4duAo8T5Eq",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -3514,12 +3529,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135040,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077311,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -3545,12 +3560,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -3598,6 +3613,7 @@
 			],
 			"name": "Hargol",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -3720,12 +3736,12 @@
 		{
 			"_id": "4Ou1RViS2GnqvRh9",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -3740,12 +3756,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134424,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077133,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -3771,12 +3787,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -3824,6 +3840,7 @@
 			],
 			"name": "Beetle",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -3946,12 +3963,12 @@
 		{
 			"_id": "hoL50RSbMvRNrrcY",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -3966,12 +3983,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135218,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077328,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -3997,12 +4014,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -4050,6 +4067,7 @@
 			],
 			"name": "Irvog",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -4172,12 +4190,12 @@
 		{
 			"_id": "Fg9DEqSk8eACtwOw",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -4192,12 +4210,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134435,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077138,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -4223,12 +4241,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -4276,6 +4294,7 @@
 			],
 			"name": "Blort",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -4398,12 +4417,12 @@
 		{
 			"_id": "9u8T17Lwd08OZ4j3",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679440338081,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -4418,12 +4437,12 @@
 				{
 					"_id": "85Q2R6Yq41pn5iqr",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440389949,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135844,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077421,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -4454,7 +4473,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -4470,6 +4489,7 @@
 			],
 			"name": "Scarab, Swarm",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -4592,12 +4612,12 @@
 		{
 			"_id": "voyxtVdHyDIJZl3p",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -4643,12 +4663,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135969,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077486,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -4679,7 +4699,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -4695,12 +4715,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135975,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077495,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -4731,7 +4751,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d4"
+							"value": "1d4"
 						},
 						"description": "",
 						"ranges": [
@@ -4747,6 +4767,7 @@
 			],
 			"name": "Skeleton",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -4869,12 +4890,12 @@
 		{
 			"_id": "IjMq3PQ3heab2hRw",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -4920,12 +4941,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135861,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077432,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -4956,7 +4977,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -4972,12 +4993,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135870,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077438,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5008,7 +5029,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d4"
+							"value": "1d4"
 						},
 						"description": "",
 						"ranges": [
@@ -5024,6 +5045,7 @@
 			],
 			"name": "Skeleton",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -5146,12 +5168,12 @@
 		{
 			"_id": "eDYjwoluLnyG54lb",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -5197,12 +5219,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135883,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077459,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5233,7 +5255,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -5249,12 +5271,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135929,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077466,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5285,7 +5307,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d4"
+							"value": "1d4"
 						},
 						"description": "",
 						"ranges": [
@@ -5301,6 +5323,7 @@
 			],
 			"name": "Skeleton",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -5423,12 +5446,12 @@
 		{
 			"_id": "hKMfJWF0yyMNRmJI",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -5474,12 +5497,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135946,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077472,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5510,7 +5533,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -5526,12 +5549,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135954,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077480,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5562,7 +5585,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d4"
+							"value": "1d4"
 						},
 						"description": "",
 						"ranges": [
@@ -5578,6 +5601,7 @@
 			],
 			"name": "Skeleton",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -5700,12 +5724,12 @@
 		{
 			"_id": "OJmaz8DNQExPoRc8",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -5720,12 +5744,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134237,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077059,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5751,12 +5775,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -5804,6 +5828,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -5926,12 +5951,12 @@
 		{
 			"_id": "gxJTvT1DUjeYXx55",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -5946,12 +5971,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134314,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077081,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -5977,12 +6002,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -6030,6 +6055,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -6152,12 +6178,12 @@
 		{
 			"_id": "Dn8DLwdUX6tBdmer",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -6172,12 +6198,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134223,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077053,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -6203,12 +6229,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -6256,6 +6282,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -6378,12 +6405,12 @@
 		{
 			"_id": "h3jqEBdI4pkzMvvH",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -6398,12 +6425,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134326,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077090,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -6429,12 +6456,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -6482,6 +6509,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -6604,12 +6632,12 @@
 		{
 			"_id": "WDbEb6cR5KhCYXRj",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -6624,12 +6652,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134303,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077073,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -6655,12 +6683,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -6708,6 +6736,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -6830,12 +6859,12 @@
 		{
 			"_id": "kvFoZywS76i6ZRt9",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -6850,12 +6879,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134341,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077106,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -6881,12 +6910,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -6934,6 +6963,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -7056,12 +7086,12 @@
 		{
 			"_id": "nx8Kopnnw1XcEEEA",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -7076,12 +7106,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134353,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077114,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -7107,12 +7137,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -7160,6 +7190,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -7282,12 +7313,12 @@
 		{
 			"_id": "TxpDZnybxjkNIWAo",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -7302,12 +7333,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134289,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077066,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -7333,12 +7364,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -7386,6 +7417,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -7508,12 +7540,12 @@
 		{
 			"_id": "uSNyukMWUS52MqNM",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -7528,12 +7560,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134366,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077122,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -7559,12 +7591,12 @@
 								"multiplier": 2,
 								"successThreshold": 20
 							},
-							"damageBonus": 1
+							"damageBonus": 0
 						},
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6+1"
 						},
 						"description": "<p>Close/Near</p>",
 						"ranges": [
@@ -7612,6 +7644,7 @@
 			],
 			"name": "Beastman",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -7734,12 +7767,12 @@
 		{
 			"_id": "wYDtLvGDkSJ4QRtW",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -7754,12 +7787,12 @@
 				{
 					"_id": "KiuWCB6C6OcmOl0g",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": null,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134203,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077010,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -7789,7 +7822,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d8"
+							"value": "1d8"
 						},
 						"description": "",
 						"ranges": [
@@ -7835,6 +7868,7 @@
 			],
 			"name": "Animated Armor",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -7955,12 +7989,12 @@
 		{
 			"_id": "S5x2m9KQEN2HoPMp",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961643,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361878,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -8005,12 +8039,12 @@
 				{
 					"_id": "evZXcoBxPaeka6UA",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.314",
 						"createdTime": null,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135629,
+						"lastModifiedBy": "6zjemStY2KktUVjE",
+						"modifiedTime": 1700150077366,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.5.1"
 					},
 					"effects": [
 					],
@@ -8040,7 +8074,7 @@
 						"damage": {
 							"numDice": 1,
 							"special": "",
-							"value": "d6"
+							"value": "1d6"
 						},
 						"description": "",
 						"ranges": [
@@ -8056,6 +8090,7 @@
 			],
 			"name": "Ochre Jelly",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -8185,12 +8220,12 @@
 		{
 			"_id": "bPrm5lY7z87YrtFK",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962305,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8208,12 +8243,12 @@
 		{
 			"_id": "Mv4mtkqbmowIBW0i",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962305,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8294,12 +8329,12 @@
 		{
 			"_id": "G1kHYFAVnBCBQlS2",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962305,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8637,12 +8672,12 @@
 		{
 			"_id": "jaPLgbwC8oVu8EmT",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962305,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8700,12 +8735,12 @@
 		{
 			"_id": "63oECpAgouGrjOvX",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391681709,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962305,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"flags": {
@@ -8719,12 +8754,12 @@
 		{
 			"_id": "GXwxJUMvopn2XeX3",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1697571052672,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697571052672,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362361,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"color": "#453249",
 			"flags": {
@@ -8744,12 +8779,12 @@
 		{
 			"_id": "gtfx2i7YimBMi2bo",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679272614405,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697571096842,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 				{
@@ -8852,6 +8887,7 @@
 			"img": "icons/weapons/axes/axe-battle-eyes-red.webp",
 			"name": "Bloodlust",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -8906,6 +8942,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"type": "melee",
 				"weaponMastery": false
 			},
@@ -8914,12 +8951,12 @@
 		{
 			"_id": "r893z0hIf4LSdPs3",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679586455677,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -8929,6 +8966,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Silver-Inlaid Bull Horn",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -8968,6 +9006,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -8975,12 +9014,12 @@
 		{
 			"_id": "7unKOF9uy9ECqkEy",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -8990,6 +9029,7 @@
 			"img": "icons/commodities/gems/pearl-natural.webp",
 			"name": "Pearl",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9019,19 +9059,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "Jo88wNZQdCtvuuuS",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9041,6 +9082,7 @@
 			"img": "icons/sundries/scrolls/scroll-bound-green.webp",
 			"name": "Scroll of Hold Portal",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -9080,6 +9122,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": false
 			},
 			"type": "Basic"
@@ -9087,12 +9130,12 @@
 		{
 			"_id": "TggK5foyVW9RXoHw",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9102,6 +9145,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Alabaster Statuette of a Bull",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9141,6 +9185,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9148,12 +9193,12 @@
 		{
 			"_id": "U3dML6TSDUKJXBUh",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9163,6 +9208,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Jade Snake Bracelet",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9202,6 +9248,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9209,12 +9256,12 @@
 		{
 			"_id": "iW6GTpg33QYMca8k",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9224,6 +9271,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Necklace of Thick Gold Links",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9263,6 +9311,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9270,12 +9319,12 @@
 		{
 			"_id": "WKk0GVD1KHrI6fav",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9288,6 +9337,7 @@
 			"img": "icons/commodities/gems/pearl-natural.webp",
 			"name": "Pearl",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9317,19 +9367,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "BjWjRaMBbsv50AjU",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9339,6 +9390,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Silver Incense Bowl",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9378,6 +9430,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9385,12 +9438,12 @@
 		{
 			"_id": "ToSK7skdC9OPzmwZ",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9400,6 +9453,7 @@
 			"img": "icons/commodities/gems/gem-cut-table-green.webp",
 			"name": "Emerald",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9429,19 +9483,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "hiVLFYBR666Zm29e",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9451,6 +9506,7 @@
 			"img": "icons/commodities/gems/gem-fragments-green.webp",
 			"name": "Emerald (Shattered)",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9480,19 +9536,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "JpRmSUeNd7qwnXZa",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679272510579,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 				{
@@ -9564,6 +9621,7 @@
 			"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
 			"name": "Asterion",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -9617,6 +9675,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"type": "melee",
 				"weaponMastery": false
 			},
@@ -9625,12 +9684,12 @@
 		{
 			"_id": "6NfZTinsbZBY5FVN",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9640,6 +9699,7 @@
 			"img": "icons/commodities/gems/gem-cut-table-green.webp",
 			"name": "Emerald",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9669,19 +9729,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "Xc1NkStj6yilbnSa",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9691,6 +9752,7 @@
 			"img": "icons/commodities/gems/gem-fragments-green.webp",
 			"name": "Emerald (Shattered)",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9720,19 +9782,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "O98T6HjIZ9nrajO4",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679271886436,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9745,6 +9808,7 @@
 			"img": "icons/commodities/treasure/broach-gold-ruby.webp",
 			"name": "Scarab of Protection",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -9784,6 +9848,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": false
 			},
 			"type": "Basic"
@@ -9791,12 +9856,12 @@
 		{
 			"_id": "R9rWEWg4biAMlj0U",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679664658053,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9806,6 +9871,7 @@
 			"img": "icons/consumables/eggs/egg-cracked-white.webp",
 			"name": "Ivory Egg",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9845,6 +9911,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9852,12 +9919,12 @@
 		{
 			"_id": "vykb09m5y4gCdVIS",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9867,6 +9934,7 @@
 			"img": "icons/commodities/gems/gem-fragments-green.webp",
 			"name": "Emerald (Shattered)",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9896,19 +9964,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Gem"
 		},
 		{
 			"_id": "VO8hdwr2ulhRwwW0",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679666340876,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9918,6 +9987,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Silver Locket",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -9957,6 +10027,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -9964,12 +10035,12 @@
 		{
 			"_id": "qQfrScSGMEBGHCFZ",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -9982,6 +10053,7 @@
 			"img": "icons/sundries/scrolls/scroll-writing-orange-black.webp",
 			"name": "Scroll of Burning Hands",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -10021,6 +10093,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -10028,12 +10101,12 @@
 		{
 			"_id": "0HvhZP8EOXqyT3p2",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1678531929118,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10046,6 +10119,7 @@
 			"img": "icons/weapons/swords/sword-guard-bronze.webp",
 			"name": "Silvered Longsword",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10098,6 +10172,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"type": "melee",
 				"weaponMastery": false
 			},
@@ -10106,12 +10181,12 @@
 		{
 			"_id": "yv6v0HqiSsnAGOHC",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1678531204277,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10124,6 +10199,7 @@
 			"img": "icons/equipment/shield/heater-steel-gray.webp",
 			"name": "Scarred Mithral Shield",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10163,19 +10239,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Armor"
 		},
 		{
 			"_id": "a69T3oP2oVH2yqMn",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679672838613,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10185,6 +10262,7 @@
 			"img": "icons/equipment/head/helm-sallet-horned.webp",
 			"name": "Silver, Horned Helm",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10224,6 +10302,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -10231,12 +10310,12 @@
 		{
 			"_id": "cY0UIbpokdT448Pw",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679273406052,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 				{
@@ -10308,6 +10387,7 @@
 			"img": "icons/weapons/polearms/pike-flared-brown.webp",
 			"name": "Vigilant",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -10361,6 +10441,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"type": "melee",
 				"weaponMastery": false
 			},
@@ -10369,12 +10450,12 @@
 		{
 			"_id": "xTOy6PVB5iu1asFa",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679680311866,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10384,6 +10465,7 @@
 			"img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
 			"name": "Diadem",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10423,6 +10505,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -10430,12 +10513,12 @@
 		{
 			"_id": "ip1i9MpeJeyf7ayu",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679270752650,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10448,6 +10531,7 @@
 			"img": "icons/equipment/feet/boots-leather-black.webp",
 			"name": "Boots of the Cat",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -10485,19 +10569,20 @@
 				"source": {
 					"page": 0,
 					"title": ""
-				}
+				},
+				"stashed": false
 			},
 			"type": "Armor"
 		},
 		{
 			"_id": "i3gSIEVGxXhlUkdn",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679272766601,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10507,6 +10592,7 @@
 			"img": "icons/weapons/wands/wand-gem-purple.webp",
 			"name": "Wand of Blind/Deafen",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -10559,6 +10645,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"type": "melee",
 				"weaponMastery": false
 			},
@@ -10567,12 +10654,12 @@
 		{
 			"_id": "cFi2Wtbwz3qkiJMx",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679680732589,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10582,6 +10669,7 @@
 			"img": "icons/commodities/currency/coins-plain-pouch-gold.webp",
 			"name": "Onyx Bull Statuette",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10621,6 +10709,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -10628,12 +10717,12 @@
 		{
 			"_id": "C4Nwo8zX0SgvD0CN",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679680844732,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961816,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817361971,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"effects": [
 			],
@@ -10643,6 +10732,7 @@
 			"img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
 			"name": "Tiny Bottle",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
@@ -10682,6 +10772,7 @@
 					"page": 0,
 					"title": ""
 				},
+				"stashed": false,
 				"treasure": true
 			},
 			"type": "Basic"
@@ -10691,12 +10782,12 @@
 		{
 			"_id": "Jd3mOMTNeoHyJ0o9",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679223943622,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961854,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362014,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"flags": {
 				"core": {
@@ -10706,6 +10797,7 @@
 			"folder": "jaPLgbwC8oVu8EmT",
 			"name": "The Lost Citadel",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -11949,14 +12041,14 @@
 		{
 			"_id": "b4peWtS82m3su5q1",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1697571066566,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697571066566,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362351,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
-			"author": "OkK4h58aE2bS4yS7",
+			"author": "6zjemStY2KktUVjE",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> Beastman named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -11967,6 +12059,7 @@
 			"img": "icons/environment/creatures/gargoyle-grey-blue.webp",
 			"name": "Roll Random Beastmen NPC",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0
 			},
@@ -11977,14 +12070,14 @@
 		{
 			"_id": "oYUJG4g7naduZNeb",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1697571068616,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697571068616,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362351,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
-			"author": "OkK4h58aE2bS4yS7",
+			"author": "6zjemStY2KktUVjE",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> Ettercap named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -11995,6 +12088,7 @@
 			"img": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp",
 			"name": "Roll Random Ettercap NPC",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0
 			},
@@ -12005,14 +12099,14 @@
 		{
 			"_id": "uQOjVmE0co1U8yws",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1697571070504,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697571070504,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362351,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
-			"author": "OkK4h58aE2bS4yS7",
+			"author": "6zjemStY2KktUVjE",
 			"command": "// Macro to draw for encounter in The Lost Citadel and only show it to the GM.;\n\nconst tableID = game.tables.find(o => o.name === \"The Lost Citadel: Random Encounter Check\")._id;\nconst table = await game.tables.get(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
 			"flags": {
 				"core": {
@@ -12023,6 +12117,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Random Encounter Check",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0
 			},
@@ -12038,12 +12133,12 @@
 		{
 			"_id": "meMau7PRNLPMhWtA",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1679223110131,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570961997,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362152,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"active": false,
 			"background": {
@@ -13206,6 +13301,7 @@
 				}
 			],
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
@@ -36315,12 +36411,12 @@
 		{
 			"_id": "8ZWuW34EAMWVBpz5",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36334,6 +36430,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Ettercap Behaviors",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -36507,12 +36604,12 @@
 		{
 			"_id": "9PJHNS0mKp3wQ0h8",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36526,6 +36623,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Random Encounters",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -36667,12 +36765,12 @@
 		{
 			"_id": "IkysQwv0TS6SripN",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36686,6 +36784,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Ettercap Appearances",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -36859,12 +36958,12 @@
 		{
 			"_id": "K3VLbRUdyBC65MOL",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36878,6 +36977,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Beastmen Behaviors",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -37051,12 +37151,12 @@
 		{
 			"_id": "VKT5qBn60tiWZWXL",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37070,6 +37170,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Beastmen Names",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -37243,12 +37344,12 @@
 		{
 			"_id": "iFdrtN3kJk5yth9S",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37262,6 +37363,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Rumors",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -37371,12 +37473,12 @@
 		{
 			"_id": "jDOXbODgNkT69ii5",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37390,6 +37492,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Beastmen Appearances",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -37563,12 +37666,12 @@
 		{
 			"_id": "l251PEOpGq6Ss7Z9",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37582,6 +37685,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Random Encounter Check",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -37627,12 +37731,12 @@
 		{
 			"_id": "m7Xv2zw1KGYxsuJG",
 			"_stats": {
-				"coreVersion": "11.313",
+				"coreVersion": "11.314",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "OkK4h58aE2bS4yS7",
-				"modifiedTime": 1697570962268,
+				"lastModifiedBy": "6zjemStY2KktUVjE",
+				"modifiedTime": 1699817362328,
 				"systemId": "shadowdark",
-				"systemVersion": "1.4.7"
+				"systemVersion": "1.5.1"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37646,6 +37750,7 @@
 			"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 			"name": "The Lost Citadel: Ettercap Names",
 			"ownership": {
+				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,

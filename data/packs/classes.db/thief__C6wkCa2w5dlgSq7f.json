@@ -8,6 +8,8 @@
 	"name": "Thief",
 	"system": {
 		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
 		"allWeapons": false,
 		"armor": [
 			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
