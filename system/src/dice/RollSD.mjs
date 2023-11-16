@@ -270,21 +270,42 @@ export default class RollSD extends Roll {
 	 * @returns {object}		- Returns the data object, with additional roll evaluations
 	 */
 	static async _rollNpcAttack(data) {
-		// Get the damage Die
-		let numDice = (data.item.system.damage.numDice)
-			? data.item.system.damage.numDice
-			: 1;
-		const damageDie = data.item.system.damage.value;
+		let baseDamageFormula = data.item.system.damage.value ?? "";
+		baseDamageFormula = baseDamageFormula.trim();
+
+		// Default to 1 damage if no damage formula has been set
+		baseDamageFormula = baseDamageFormula === "" ? "1" : baseDamageFormula;
 
 		// Get bonus damage
 		data.damageBonus = data.item.system.bonuses.damageBonus;
 		if (data.damageBonus) data.damageParts.push("@damageBonus");
 
-		if ( data.rolls.main.critical !== "failure" ) {
-			if ( data.rolls.main.critical === "success" ) numDice
-				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
+		if (data.rolls.main.critical !== "failure") {
+			// if (data.rolls.main.critical === "success") {
+			// We only support multiplication of the first damage dice,
+			// which is probably enough. None of the core game NPC attacks
+			// involve multiple dice parts
+			//
+			if (baseDamageFormula !== "0") {
+				const parts = /^(\d*)d(.*)/.exec(baseDamageFormula);
 
-			const primaryParts = [`${numDice}${damageDie}`, ...data.damageParts];
+				let numDice = "1";
+				let formulaSuffix = "";
+				if (parts) {
+					numDice = parts[1] !== "" ? parts[1] : "1";
+					formulaSuffix = parts[2] ? parts[2] : "";
+				}
+
+				numDice = parseInt(numDice, 10);
+				numDice *= parseInt(data.item.system.bonuses.critical.multiplier, 10);
+
+				baseDamageFormula = formulaSuffix !== ""
+					? `${numDice}d${formulaSuffix}`
+					: `${numDice}`;
+			}
+			// }
+
+			const primaryParts = [baseDamageFormula, ...data.damageParts];
 
 			data.rolls.primaryDamage = await this._roll(primaryParts, data);
 		}
