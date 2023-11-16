@@ -136,12 +136,12 @@ SHADOWDARK.RANGES_SHORT = {
 };
 
 SHADOWDARK.OFFICIAL_SOURCES = {
-	"cursed-scroll-1": "Cursed Scroll Vol.1, Diablerie!",
-	"cursed-scroll-2": "Cursed Scroll Vol.2, Red Sands",
-	"cursed-scroll-3": "Cursed Scroll Vol.3, Midnight Sun",
-	"quickstart": "Shadowdark RPG: Quickstart Set",
-	"bard-and-ranger": "Shadowdark RPG: Bard and Ranger",
-	"core-rules": "Shadowdark RPG: Core Rules",
+	"cursed-scroll-1": "SHADOWDARK.source.cursed-scroll-1",
+	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
+	"cursed-scroll-3": "SHADOWDARK.source.cursed-scroll-3",
+	"quickstart": "SHADOWDARK.source.quickstart",
+	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
+	"core-rules": "SHADOWDARK.source.core-rules",
 };
 
 SHADOWDARK.SPELL_DURATIONS = {
