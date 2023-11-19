@@ -53,14 +53,13 @@
 	
 
 
-		<table style="border-top:0px;margin:0px;">
+		<table class="spell-table">
 			{{#each spells as |spell|}}
 				<tr
 					class="item"
 					data-item-id="{{spell._id}}"
 				>
 					<td>
-						<ol>
 						<a
 							class="item context"
 							data-item-id="{{spell._id}}"
@@ -88,9 +87,8 @@
 								</li>
 							</ul>
 						</footer>
-						</ol>
 					</td>
-					<td style="text-align: right; padding-right: 4px;">
+					<td style="text-align: right;">
 						{{#unless spell.system.lost}}
 						<a
 							class="item-control cast-spell"

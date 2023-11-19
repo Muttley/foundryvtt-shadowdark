@@ -644,7 +644,6 @@ export default class ActorSD extends Actor {
 	async castNPCSpell(itemId) {
 		const item = this.items.get(itemId);
 
-		// TODO look up spell bonus
 		const abilityBonus = this.system.spellcastingBonus;
 
 		const rollType = item.name.slugify();

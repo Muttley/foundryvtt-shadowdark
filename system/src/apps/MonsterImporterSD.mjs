@@ -94,7 +94,7 @@ export default class MonsterImporterSD extends FormApplication {
 		}).join(""));
 
 		let attackObj = {
-			name: atk[2].trim(),
+			name: this._toTitleCase(atk[2].trim()),
 			type: "NPC Special Attack",
 			system: {
 				attack: {
@@ -184,33 +184,12 @@ export default class MonsterImporterSD extends FormApplication {
 	_parseSpell(str) {
 		const parsedSpell = str.match([
 			/(.*)/,								// stats[1] matches Spell Name
-			/\([\w\s]*Spell\)\.\s*([^.]*)?/,	// stats[2] matches potential range
+			/\([\w\s]*Spell\)\.([^.]*)?/,	// stats[2] matches potential range
 			/.*DC (\d*)/,						// stats[3] matches DC
 			/\. (.*)/,							// stats[4] matches Description
 		].map(function(r) {
 			return r.source;
 		}).join(""));
-
-		let rangeStr = "";
-
-		// Did the parse find a range of self?
-		if (typeof parsedSpell[2] !== "undefined" && parsedSpell[2].toLowerCase() in CONFIG.SHADOWDARK.SPELL_RANGES) {
-			rangeStr = parsedSpell[2];
-		}
-		// Take a chance at finding range in the description
-		else {
-			Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES).forEach(key => {
-				console.log(parsedSpell[4], key);
-				if (parsedSpell[4].includes(key)) {
-					rangeStr = key;
-				}
-			});
-
-			if (parsedSpell[4].includes("near-sized")) {
-				rangeStr = "near";
-			}
-		}
-		// find duration
 
 		const spellObj = {
 			name: parsedSpell[1],
@@ -218,10 +197,47 @@ export default class MonsterImporterSD extends FormApplication {
 			system: {
 				dc: parsedSpell[3],
 				description: `<p>${parsedSpell[4]}</p>`,
-				range: rangeStr,
+				range: "",
+				duration: {
+					type: "",
+					value: -1,
+				},
 			},
 		};
-		console.log(spellObj);
+
+		const descStr = (parsedSpell[2] + parsedSpell[4]).toLowerCase();
+
+		// Take a chance at finding the range in the description
+		if (descStr.includes(" self.")) {
+			spellObj.system.range = "self";
+		}
+		else if (descStr.includes(" close.")) {
+			spellObj.system.range = "close";
+		}
+		else if (descStr.includes(" near ") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
+			spellObj.system.range = "near";
+		}
+		else if (descStr.includes(" far ") || descStr.includes(" far.")) {
+			spellObj.system.range = "far";
+		}
+
+
+		// Take a chance at finding a round duration in the description
+		const roundsDuration = parsedSpell[4].match(/(\d|\dd\d) rounds?/);
+		const daysDuration = parsedSpell[4].match(/(\d|\dd\d) days?/);
+
+		if (roundsDuration !== null && typeof roundsDuration[1] !== "undefined") {
+			spellObj.system.duration.type = "rounds";
+			spellObj.system.duration.value = roundsDuration[1];
+		}
+		else if (daysDuration !== null && typeof daysDuration[1] !== "undefined") {
+			spellObj.system.duration.type = "days";
+			spellObj.system.duration.value = daysDuration[1];
+		}
+		else if (descStr.includes(" focus.")) {
+			spellObj.system.duration.type = "focus";
+		}
+
 		return (spellObj);
 	}
 
@@ -327,12 +343,18 @@ export default class MonsterImporterSD extends FormApplication {
 		// Create the NPC actor
 		const newActor = await Actor.create(actorObj);
 
-		// ***************************************************
 		// Parse attacks features, and spells and add to actor
-		// ***************************************************
 		let attackArray = [];
 		stats[3].split(/ and | or /).forEach( line => {
-			attackArray.push(this._parseAttack(line));
+			const attackObj = this._parseAttack(line);
+			// if attack is a spell, update actors details for spellcasting
+			if (attackObj.name.toLowerCase() === "spell") {
+				newActor.update({"system.spellcastingAttackNum": attackObj.system.attack.num});
+				newActor.update({"system.spellcastingBonus": attackObj.system.bonuses.attackBonus});
+			}
+			else {
+				attackArray.push(attackObj);
+			}
 		});
 		await newActor.createEmbeddedDocuments("Item", attackArray);
 
@@ -350,7 +372,6 @@ export default class MonsterImporterSD extends FormApplication {
 				// does the spell list a casting ability?
 				if (typeof spellTestStr[1] !== "undefined" && CONFIG.SHADOWDARK.ABILITY_KEYS.includes(spellTestStr[1].toLowerCase())) {
 					castingAbility = spellTestStr[1].toLowerCase();
-					console.log(castingAbility);
 				}
 			}
 			// Parse Feature
@@ -372,7 +393,7 @@ export default class MonsterImporterSD extends FormApplication {
 				}
 			}
 		});
-		console.log(castingAbility);
+
 		await newActor.update({"system.spellcastingAbility": castingAbility});
 
 		await newActor.createEmbeddedDocuments("Item", featureArray);
