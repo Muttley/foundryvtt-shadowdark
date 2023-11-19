@@ -184,7 +184,7 @@ export default class MonsterImporterSD extends FormApplication {
 	_parseSpell(str) {
 		const parsedSpell = str.match([
 			/(.*)/,								// stats[1] matches Spell Name
-			/\([\w\s]*Spell\)\.([^.]*)?/,	// stats[2] matches potential range
+			/\([\w\s]*Spell\)\.([^.]*)?/,		// stats[2] matches potential range
 			/.*DC (\d*)/,						// stats[3] matches DC
 			/\. (.*)/,							// stats[4] matches Description
 		].map(function(r) {
@@ -205,8 +205,8 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 
-		const descStr = (parsedSpell[2] + parsedSpell[4]).toLowerCase();
-
+		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
+		console.warn(descStr);
 		// Take a chance at finding the range in the description
 		if (descStr.includes(" self.")) {
 			spellObj.system.range = "self";
