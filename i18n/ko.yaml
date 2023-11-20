@@ -83,6 +83,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: 2차 피해 적용
 SHADOWDARK.chat_card.context.apply_damage: 피해 적용
 SHADOWDARK.chat_card.context.apply_healing_secondary: 2차 치유 적용
 SHADOWDARK.chat_card.context.apply_healing: 치유 적용
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first.
 SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
