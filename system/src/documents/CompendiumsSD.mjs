@@ -235,6 +235,32 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Scroll", sources);
 	}
 
+	static async sources() {
+		const sources = [];
+
+		for (const source of Object.keys(shadowdark.config.OFFICIAL_SOURCES)) {
+			sources.push({
+				id: source,
+				title: shadowdark.config.OFFICIAL_SOURCES[source],
+			});
+		}
+
+		for (const module of game.modules) {
+			const moduleSources = module.flags?.shadowdark?.sources ?? {};
+
+			for (const moduleSource of Object.keys(moduleSources)) {
+				sources.push({
+					id: moduleSource,
+					title: game.i18n.localize(
+						moduleSources[moduleSource]
+					),
+				});
+			}
+		}
+
+		return sources.sort((a, b) => a.title.localeCompare(b.title));
+	}
+
 	static async spellcastingClasses(sources=[]) {
 		const documents = await CompendiumsSD._documents("Item", "Class", sources);
 
