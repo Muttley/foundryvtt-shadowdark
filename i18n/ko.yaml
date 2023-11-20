@@ -508,7 +508,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 체크하면 파�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈추기
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
-SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by user configuration. All NPCs will act on the same initiative.",
+SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by User Management. All NPCs will act on the same initiative.",
 SHADOWDARK.settings.use_clockwise_initiative.name: "Use Clockwise Initiative",
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode

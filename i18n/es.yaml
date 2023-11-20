@@ -508,7 +508,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Si está marcado, 
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento de luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Seguimiento de luz en tiempo real
-SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by user configuration. All NPCs will act on the same initiative.",
+SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by User Management. All NPCs will act on the same initiative.",
 SHADOWDARK.settings.use_clockwise_initiative.name: "Use Clockwise Initiative",
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
