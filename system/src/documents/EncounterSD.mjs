@@ -1,72 +1,76 @@
 export default class EncounterSD extends Combat {
 	async rollInitiative(ids, options = {}) {
-		console.log(ids)
-		const combatants = ids.flatMap((id) => this.combatants.get(id) ?? []);
-		console.log(combatants)
-		const npcs = []
-		const pcs = []
-		for (const combatant of combatants) {
-			console.log(combatant.actor.name)
-			if (combatant.actor.type === 'Player') pcs.push(combatant)
-			else if (combatant.actor.type === 'NPC') npcs.push(combatant)
-		}
-	console.log(npcs)
-	console.log(pcs)
+		if (game.settings.get("shadowdark", "useClockwiseInitiative")) {
+			//Structure input data
+			ids = typeof  ids === 'string' ? [ids] : ids
+			const chatRollMode = game.settings.get("core", "rollMode");
 
-		npcs.sort((a, b) => b.getRollData().initiativeBonus - a.getRollData().initiativeBonus)
-		console.log(npcs)
+			const combatants = ids.flatMap((id) => this.combatants.get(id) ?? []) // replace with this.combatants?
+			for (const combatant of combatants) {
+				super.setInitiative(combatant.id, null)
+			}
+			const rollers = []
+			const npcs = []
+			for (const combatant of combatants) {
+				if (combatant.actor.type === 'Player') rollers.push(combatant)
+				else if (combatant.actor.type === 'NPC') npcs.push(combatant)
+			}
 
-		const rollResults = await Promise.all(
-			pcs.map(async (combatant) => {
-				const data = combatant.actor
-				const rollData = combatant.actor.getRollData()
-				const parts = [`${rollData.initiativeFormula}+${rollData.initiativeBonus}`]
-				const result = (await CONFIG.DiceSD._roll(parts, data)).roll.total
-				return {actor: data, initiative: result, formula: parts[0]}
-			})
-		)
-		let npcLeader
 
-		if (npcs.length > 0) {
-			npcLeader = npcs[0].actor
-			console.log('npc leader')
-			console.log(npcLeader)
-			const npcRollData = npcLeader.getRollData()
-			const npcParts = [`${npcRollData.initiativeFormula}+${npcRollData.initiativeBonus}`]
-			const npcRollResult = (await CONFIG.DiceSD._roll(npcParts, npcLeader)).roll.total
-			rollResults.push({actor: npcLeader, initiative: npcRollResult, formula: npcParts[0]})
-		}
+			// npcs.sort((a, b) => b.actor.getRollData().initiativeBonus - a.actor.getRollData().initiativeBonus)
 
-		rollResults.sort((a,b) => b.initiative - a.initiative)
-		console.log('roll results')
-		console.log(rollResults)
+			// const rollResults = await Promise.all(
+			// 	pcs.map(async (combatant) => {
+			// 		const pcActor = combatant.actor
+			// 		const rollData = combatant.actor.getRollData()
+			// 		const parts = [`${rollData.initiativeFormula}+${rollData.initiativeBonus}`]
+			// 		const result = (await CONFIG.DiceSD._roll(parts, pcActor)).roll.total
+			// 		return {id: combatant.id, prelimInitiative: result}
+			// 	})
+			// )
 
-		const firstActor = rollResults[0].actor
-		const firstInitiative = rollResults[0].initiative
-		const players = [game.users.activeGM, ...game.users.players]
-		console.log(players)
-		const firstIndex = (firstActor.type === 'NPC') ?
-			players.findIndex((p) => p === game.users.activeGM) :
-			players.findIndex((p) => p?.character === firstActor)
-		console.log(firstIndex)
-		for (let i = 0; i < firstIndex; i++) {
-			players.push(players.shift())
-		}
-		console.log(players)
-		console.log(players[0])
-		for (let i = 0; i < players.length; i++) {
-			console.log(i)
-			if (players[i].active){
-				if (players[i] === game.users.activeGM && npcLeader) {
-					console.log(npcLeader)
-					super.setInitiative(combatants.find((c) => c.actor.id === npcLeader.id).id, firstInitiative - i)
-				}
+
+			if (npcs.length > 0) {
+				const npcRoller = npcs.reduce(function(prev, current) {
+					return (prev && prev.getRollData().initiativeBonusy > current.getRollData().initiativeBonus)
+					? prev : current
+				})
+				rollers.push(npcRoller)
+				// const npcRollData = npcRoller.getRollData()
+				// const npcParts = [`${npcRollData.initiativeFormula}+${npcRollData.initiativeBonus}`]
+				// const npcRollResult = (await CONFIG.DiceSD._roll(npcParts, npcLeader)).roll.total
+				// rollResults.push({id: npcs[0].id, prelimInitiative: npcRollResult})
+			}
+
+
+
+			rollResults.sort((a,b) => b.prelimInitiative - a.prelimInitiative)
+
+			const firstCombatant = combatants.get(rollResults[0].id)
+			const firstInitiative = rollResults[0].prelimInitiative
+			const activeUsers = [game.users.activeGM, ...(game.users.players.filter((p) => p.active))]
+
+			const firstIndex = (firstCombatant.actor.type === 'NPC') ?
+				activeUsers.findIndex((p) => p === game.users.activeGM) :
+				activeUsers.findIndex((p) => p?.character === firstCombatant.actor)
+			for (let i = 0; i < firstIndex; i++) {
+				activeUsers.push(activeUsers.shift())
+			}
+
+			const initiativeOrder = []
+
+			for (const user of activeUsers) {
+				if (user === game.users.activeGM) initiativeOrder.push(...npcs)
 				else {
-					if (players[i].character)
-						{console.log(players[i]?.character)
-						super.setInitiative(combatants.find((c) => c.actor.id === players[i]?.character?.id).id, firstInitiative - i)}
+					const c = combatants.get(user.character?.id)
+					if (c) initiativeOrder.push(c)
 				}
 			}
+
+			for (let i = 0; i < initiativeOrder.length; i++) {
+				super.setInitiative(initiativeOrder[i].id, initiativeOrder.size - i)
+			}
 		}
+		else super.rollInitiative(ids, options)
 	}
 }
