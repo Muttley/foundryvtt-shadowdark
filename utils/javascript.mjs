@@ -37,7 +37,7 @@ function lintJavascript() {
 
 		return gulp
 			.src(src)
-			.pipe(eslint({ fix: false }))
+			.pipe(eslint({ fix: true }))
 			.pipe(eslint.format())
 			.pipe(
 				gulpIf(

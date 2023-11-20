@@ -86,7 +86,7 @@ export default class LightSourceTrackerSD extends Application {
 						}
 						else {
 							await actor.updateEmbeddedDocuments("Item", [{
-								_id: itemData._id,
+								"_id": itemData._id,
 								"system.light.active": false,
 							}]);
 						}
@@ -133,7 +133,7 @@ export default class LightSourceTrackerSD extends Application {
 					const active = !item.system.light.active;
 
 					const dataUpdate = {
-						_id: itemId,
+						"_id": itemId,
 						"system.light.active": active,
 					};
 

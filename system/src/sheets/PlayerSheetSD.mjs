@@ -450,7 +450,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.uses.available > 0) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.uses.available": item.system.uses.available - 1,
 				},
 			]);
@@ -466,7 +466,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.uses.available < item.system.uses.max) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.uses.available": item.system.uses.available + 1,
 				},
 			]);
@@ -490,7 +490,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.quantity > 0) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.quantity": item.system.quantity - 1,
 				},
 			]);
@@ -506,7 +506,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.quantity < item.system.slots.per_slot) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.quantity": item.system.quantity + 1,
 				},
 			]);
@@ -574,7 +574,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
 			{
-				_id: itemId,
+				"_id": itemId,
 				"system.equipped": !item.system.equipped,
 				"system.stashed": false,
 			},
@@ -591,7 +591,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
 			{
-				_id: itemId,
+				"_id": itemId,
 				"system.stashed": !item.system.stashed,
 				"system.equipped": false,
 			},
@@ -656,7 +656,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			for (const lightSource of activeLightSources) {
 				this.actor.updateEmbeddedDocuments(
 					"Item", [{
-						_id: lightSource.id,
+						"_id": lightSource.id,
 						"system.light.active": false,
 					}]
 				);
@@ -664,7 +664,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		const dataUpdate = {
-			_id: item.id,
+			"_id": item.id,
 			"system.light.active": active,
 		};
 
