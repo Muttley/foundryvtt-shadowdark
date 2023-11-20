@@ -166,4 +166,18 @@ export default function registerSystemSettings() {
 		default: false,
 		requiresReload: true,
 	});
+
+	// ----------------------
+	//  INITIATIVE SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "debugEnabled", {
+		name: "SHADOWDARK.settings.use_clockwise_initiative.name",
+		hint: "SHADOWDARK.settings.use_clockwise_initiative.hint",
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
 }
