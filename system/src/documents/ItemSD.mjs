@@ -192,7 +192,6 @@ export default class ItemSD extends Item {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
 		options.isSpell = true;
-		data.item.system.tier = data.item.system.dc -10;
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (roll) {

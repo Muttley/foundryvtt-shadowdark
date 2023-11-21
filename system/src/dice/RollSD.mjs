@@ -92,6 +92,8 @@ export default class RollSD extends Roll {
 				if (typeof data.item.system.dc !== "undefined") {
 					options.target = data.item.system.dc;
 					options.tier = data.item.system.dc - 10;
+					// system.tier needed for spell chat template
+					data.item.system.tier = options.tier;
 				}
 				// player spell
 				else {
