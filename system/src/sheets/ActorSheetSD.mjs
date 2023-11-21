@@ -352,7 +352,7 @@ export default class ActorSheetSD extends ActorSheet {
 
 		this.actor.updateEmbeddedDocuments("Item", [
 			{
-				_id: itemId,
+				"_id": itemId,
 				"system.lost": !item.system.lost,
 			},
 		]);

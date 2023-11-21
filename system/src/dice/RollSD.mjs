@@ -545,11 +545,11 @@ export default class RollSD extends Roll {
 			user: game.user.id,
 			speaker: speaker,
 			flags: {
-				isRoll: true,
-				rolls: rolls,
+				"isRoll": true,
+				"rolls": rolls,
 				"core.canPopout": true,
-				hasTarget: target !== false,
-				critical: rolls.main.critical,
+				"hasTarget": target !== false,
+				"critical": rolls.main.critical,
 			},
 		};
 		if (target) chatData.flags.success = rolls.main.roll.total >= target;

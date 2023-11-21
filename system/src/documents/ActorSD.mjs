@@ -670,7 +670,7 @@ export default class ActorSD extends Actor {
 
 		// Update the prototype as well
 		await Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"prototypeToken.light": lightData,
 		}]);
 	}
@@ -1077,7 +1077,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -1097,7 +1097,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -1157,13 +1157,13 @@ export default class ActorSD extends Actor {
 				// as well.
 				if (isAShield && await item.isAShield()) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
 				else if (await item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
