@@ -100,7 +100,6 @@ export default class MonsterImporterSD extends FormApplication {
 				attack: {
 					num: atk[1],
 				},
-				// attackType: "special",
 				bonuses: {
 					attackBonus: 0,
 				},
@@ -206,7 +205,7 @@ export default class MonsterImporterSD extends FormApplication {
 		};
 
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
-		console.warn(descStr);
+
 		// Take a chance at finding the range in the description
 		if (descStr.includes(" self.")) {
 			spellObj.system.range = "self";
