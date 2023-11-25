@@ -137,7 +137,7 @@ export default class MonsterImporterSD extends FormApplication {
 			if (typeof diceStr[2] !== "undefined") {
 				attackObj.system.damage = {};
 				attackObj.system.damage.numDice = diceStr[1];
-				attackObj.system.damage.value = diceStr[2];
+				attackObj.system.damage.value = diceStr[1] + diceStr[2];
 			}
 			else {
 				// TODO no way to set static damage: attackObj.system.damage.value = diceStr[1]
