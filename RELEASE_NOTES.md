@@ -9,13 +9,16 @@
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
-* [#184] Added special attack type to NPCs. The monster importer now adds special attacks. 
+* [#184] Added special attack type to NPCs. The monster importer now adds special attacks.
 * [#328] Added spellcasting abilities and spells to NPCs. The monster importer now adds spells.
 * [#566] Warn players when they're attempting to learn a spell that is from a different class
 * [#578] Standardize spellcasting iconography
 * [#585] Add predefined Talent effect that allows the addition of an extra damage die to weapons with specified tags (`weaponDamageExtraDieByProperty`)
 * [#586] Add predefined Talent effect that allows extra damage die for weapons with specified tags to be increased by category (`weaponDamageExtraDieImprovementByProperty`)
 * [#587] Add predefined Talent effect that allows damage die for weapons with specified tags to be increased by category (`weaponDamageDieImprovementByProperty`)
+* [#596] Switch NPC number of attacks to text in order to support roll macros within attack strings
+
+*Please welcome Prototype to the Shadowdark system development team*
 
 *Many thanks to chrpow for contributing code included in this build*
 
