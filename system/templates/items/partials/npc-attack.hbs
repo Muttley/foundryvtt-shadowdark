@@ -32,11 +32,11 @@
 	<div class="npc-attack-details">
 		<div class="npc-attack-detail">
 			<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
-			{{numberInput
-				system.attack.num
+			<input
 				name="system.attack.num"
-				placeholder="1"
-			}}
+				type="text"
+				value="{{item.system.attack.num}}"
+			/>
 		</div>
 		<div class="npc-attack-detail">
 			<label>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</label>

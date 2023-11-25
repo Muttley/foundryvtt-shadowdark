@@ -13,14 +13,12 @@
 	</label>
 	<ol>
 		{{#each specials as |special|}}
-			<li>
-				<a
-					class="item"
-					data-action="item-use-ability"
-					data-item-id="{{special.itemId}}"
-				>
-					{{{special.display}}}
-				</a>
+			<li
+				class="item rollable item-rollable"
+				{{!-- data-action="item-use-ability" --}}
+				data-item-id="{{special.itemId}}"
+			>
+				{{{special.display}}}
 			</li>
 		{{/each}}
 	</ol>

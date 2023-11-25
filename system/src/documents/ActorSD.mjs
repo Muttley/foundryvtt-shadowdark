@@ -343,14 +343,22 @@ export default class ActorSD extends Actor {
 		const attackOptions = {
 			attackType: item.system.attackType,
 			attackName: item.name,
-			numAttacks: item.system.attack.num,
+			// numAttacks: item.system.attack.num,
 			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
 			baseDamage: item.system.damage.value,
 			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
+			itemId,
 			special: item.system.damage.special,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
+
+		attackOptions.numAttacks = await TextEditor.enrichHTML(
+			item.system.attack.num,
+			{
+				async: true,
+			}
+		);
 
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/npc-attack.hbs",
@@ -370,12 +378,20 @@ export default class ActorSD extends Actor {
 
 		const attackOptions = {
 			attackName: item.name,
-			numAttacks: item.system.attack.num,
+			// numAttacks: item.system.attack.num,
 			attackBonus: item.system.bonuses.attackBonus,
+			itemId,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 			description,
 		};
+
+		attackOptions.numAttacks = await TextEditor.enrichHTML(
+			item.system.attack.num,
+			{
+				async: true,
+			}
+		);
 
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
@@ -951,7 +967,7 @@ export default class ActorSD extends Actor {
 			Created in `data.itemSpecial` field.
 			Can be used in the rendering template or further automation.
 		*/
-		if (item.system.damage.special) {
+		if (item.system.damage?.special) {
 			const itemSpecial = data.actor.items.find(
 				e => e.name === item.system.damage.special
 					&& e.type === "NPC Feature"

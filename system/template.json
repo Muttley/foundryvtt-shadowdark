@@ -349,7 +349,7 @@
 				"common"
 			],
 			"attack": {
-				"num": 1
+				"num": "1"
 			},
 			"attackType": "physical",
 			"bonuses": {
@@ -373,7 +373,7 @@
 		"NPC Special Attack": {
 			"templates": ["common"],
 			"attack": {
-				"num": 1
+				"num": "1"
 			},
 			"bonuses": {
 				"attackBonus":0

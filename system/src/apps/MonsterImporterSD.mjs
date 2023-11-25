@@ -348,7 +348,7 @@ export default class MonsterImporterSD extends FormApplication {
 			const attackObj = this._parseAttack(line);
 			// if attack is a spell, update actors details for spellcasting
 			if (attackObj.name.toLowerCase() === "spell") {
-				newActor.update({"system.spellcastingAttackNum": attackObj.system.attack.num});
+				newActor.update({"system.spellcastingAttackNum": `${attackObj.system.attack.num}`});
 				newActor.update({"system.spellcastingBonus": attackObj.system.bonuses.attackBonus});
 			}
 			else {
