@@ -9,6 +9,8 @@
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
+* [#184] Added special attack type to NPCs. The monster importer now adds special attacks. 
+* [#328] Added spellcasting abilities and spells to NPCs. The monster importer now adds spells.
 * [#566] Warn players when they're attempting to learn a spell that is from a different class
 * [#578] Standardize spellcasting iconography
 * [#585] Add predefined Talent effect that allows the addition of an extra damage die to weapons with specified tags (`weaponDamageExtraDieByProperty`)

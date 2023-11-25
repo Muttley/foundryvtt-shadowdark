@@ -434,8 +434,8 @@ export default ({ describe, it, after, before, expect }) => {
 			actor = await createMockActor("Player");
 			await actor.createEmbeddedDocuments("Item", [
 				{
-					type: "Armor",
-					name: "Test Armor 1",
+					"type": "Armor",
+					"name": "Test Armor 1",
 					"system.equipped": true,
 				},
 				{
@@ -443,14 +443,14 @@ export default ({ describe, it, after, before, expect }) => {
 					name: "Test Armor 2",
 				},
 				{
-					type: "Armor",
-					name: "Test Shield 1",
+					"type": "Armor",
+					"name": "Test Shield 1",
 					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 					"system.equipped": true,
 				},
 				{
-					type: "Armor",
-					name: "Test Shield 2",
+					"type": "Armor",
+					"name": "Test Shield 2",
 					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 				},
 			]);
@@ -496,8 +496,8 @@ export default ({ describe, it, after, before, expect }) => {
 		it("calculates the correct AC with armor equipped", async () => {
 			await actor.createEmbeddedDocuments("Item", [
 				{
-					type: "Armor",
-					name: "Test Armor 1",
+					"type": "Armor",
+					"name": "Test Armor 1",
 					"system.ac.base": 11,
 					"system.ac.modifier": 2,
 					"system.ac.attribute": "dex",
@@ -512,8 +512,8 @@ export default ({ describe, it, after, before, expect }) => {
 		it("calculates the correct AC with armor and shield equipped", async () => {
 			await actor.createEmbeddedDocuments("Item", [
 				{
-					type: "Armor",
-					name: "Test Shield 1",
+					"type": "Armor",
+					"name": "Test Shield 1",
 					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 					"system.ac.modifier": 3,
 					"system.equipped": true,

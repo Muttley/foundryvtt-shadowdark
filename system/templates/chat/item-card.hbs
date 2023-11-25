@@ -92,17 +92,19 @@
 	{{/if}}
 
 	{{#if isNPC}}
-		{{#ifNeq data.rolls.main.critical "failure"}}
-			<div class="card-damage-rolls">
-				<div
-					class="card-damage-roll-single blindable"
-					data-blind="{{data.rolls.main.blind}}"
-				>
-					<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
-					{{{data.rolls.primaryDamage.renderedHTML}}}
+		{{#unless isSpell}}
+			{{#ifNeq data.rolls.main.critical "failure"}}
+				<div class="card-damage-rolls">
+					<div
+						class="card-damage-roll-single blindable"
+						data-blind="{{data.rolls.main.blind}}"
+					>
+						<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
+						{{{data.rolls.primaryDamage.renderedHTML}}}
+					</div>
 				</div>
-			</div>
-		{{/ifNeq}}
+			{{/ifNeq}}
+		{{/unless}}
 	{{/if}}
 
 	{{#if data.item.system.damage.special}}

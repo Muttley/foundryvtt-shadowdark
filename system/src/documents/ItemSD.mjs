@@ -35,17 +35,17 @@ export default class ItemSD extends Item {
 	async getChatData(htmlOptions={}) {
 		const description = await this.getEnrichedDescription();
 
-		const isSpellcaster = await this.actor.isSpellcaster();
-		const canUseMagicItems = await this.actor.canUseMagicItems();
-
 		const data = {
 			actor: this.actor,
-			isSpellcaster,
-			canUseMagicItems,
 			description,
 			item: this.toObject(),
 			itemProperties: await this.propertyItems(),
 		};
+
+		if (this.actor.type === "Player") {
+			data.isSpellcaster = await this.actor.isSpellcaster();
+			data.canUseMagicItems = await this.actor.canUseMagicItems();
+		}
 
 		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
 			data.spellClasses = await this.getSpellClassesDisplay();
@@ -131,6 +131,8 @@ export default class ItemSD extends Item {
 		switch (this.type) {
 			case "Armor":
 				return `${basePath}/armor.hbs`;
+			case "NPC Spell":
+				return `${basePath}/npc-spell.hbs`;
 			case "Potion":
 				return `${basePath}/potion.hbs`;
 			case "Scroll":
@@ -189,6 +191,7 @@ export default class ItemSD extends Item {
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+		options.isSpell = true;
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (roll) {
@@ -229,7 +232,7 @@ export default class ItemSD extends Item {
 	}
 
 	isSpell() {
-		return ["Scroll", "Spell", "Wand"].includes(this.type);
+		return ["Scroll", "Spell", "Wand", "NPC Spell"].includes(this.type);
 	}
 
 	isEffect() {
@@ -290,7 +293,7 @@ export default class ItemSD extends Item {
 	npcAttackRangesDisplay() {
 		let ranges = [];
 
-		if (this.type === "NPC Attack") {
+		if (this.type === "NPC Attack" || this.type === "NPC Special Attack") {
 			for (const key of this.system.ranges) {
 				ranges.push(
 					CONFIG.SHADOWDARK.RANGES[key]

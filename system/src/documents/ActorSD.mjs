@@ -358,6 +358,31 @@ export default class ActorSD extends Actor {
 		);
 	}
 
+	async buildNpcSpecialDisplays(itemId) {
+		const item = this.getEmbeddedDocument("Item", itemId);
+
+		const description = await TextEditor.enrichHTML(
+			jQuery(item.system.description).text(),
+			{
+				async: true,
+			}
+		);
+
+		const attackOptions = {
+			attackName: item.name,
+			numAttacks: item.system.attack.num,
+			attackBonus: item.system.bonuses.attackBonus,
+			ranges: item.system.ranges.map(s => game.i18n.localize(
+				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
+			description,
+		};
+
+		return await renderTemplate(
+			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
+			attackOptions
+		);
+	}
+
 
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
@@ -616,6 +641,28 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data);
 	}
 
+	async castNPCSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const abilityBonus = this.system.spellcastingBonus;
+
+		const rollType = item.name.slugify();
+
+		const data = {
+			rollType,
+			item: item,
+			actor: this,
+			abilityBonus: abilityBonus,
+		};
+
+		const parts = ["1d20", "@abilityBonus"];
+
+		const options = {
+			isNPC: true,
+		};
+
+		return item.rollSpell(parts, data, options);
+	}
 
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
@@ -623,7 +670,7 @@ export default class ActorSD extends Actor {
 
 		// Update the prototype as well
 		await Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"prototypeToken.light": lightData,
 		}]);
 	}
@@ -1030,7 +1077,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -1050,7 +1097,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -1110,13 +1157,13 @@ export default class ActorSD extends Actor {
 				// as well.
 				if (isAShield && await item.isAShield()) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
 				else if (await item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
@@ -1214,10 +1261,15 @@ export default class ActorSD extends Actor {
 		let message = "";
 		let success = true;
 
-		// NPC features currently don't have checks
-		if (item.type !== "NPC Feature") {
-			// does player ability use on a roll check?
-			if (item.system.ability !== "") {
+		// NPC features - no title or checks required
+		if (item.type === "NPC Feature") {
+			message = `${abilityDescription}`;
+		}
+		else {
+			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+
+			// does ability use on a roll check?
+			if (typeof item.system.ability !== "undefined") {
 				const result = await this.rollAbility(
 					item.system.ability,
 					{target: item.system.dc}
@@ -1225,7 +1277,8 @@ export default class ActorSD extends Actor {
 
 				success = result?.rolls?.main?.success ?? false;
 			}
-			// does player ability have limited uses?
+
+			// does ability have limited uses?
 			if (item.system.limitedUses) {
 				if (item.system.uses.available > 0) {
 					item.update({
@@ -1256,12 +1309,9 @@ export default class ActorSD extends Actor {
 			if (success) {
 				message = `<p>${message}</p>${abilityDescription}`;
 			}
-			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
-		}
-		else {
-			message = `${abilityDescription}`;
 		}
 
+		// construct and create chat message
 		const cardData = {
 			actor: this,
 			item: item,

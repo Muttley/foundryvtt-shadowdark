@@ -264,6 +264,8 @@ export default class ItemSheetSD extends ItemSheet {
 				"Gem",
 				"Language",
 				"NPC Attack",
+				"NPC Special Attack",
+				"NPC Spell",
 				"Potion",
 				"Property",
 				"Scroll",
@@ -356,11 +358,11 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 		}
 
-		if (item.type === "NPC Attack") {
+		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
 			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
 		}
 
-		if (["Effect", "Potion", "Scroll", "Spell", "Wand"].includes(item.type)) {
+		if (["Effect", "Potion", "Scroll", "Spell", "NPC Spell", "Wand"].includes(item.type)) {
 			context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 				.includes(item.system.duration.type);
 

@@ -94,21 +94,14 @@ export default class MonsterImporterSD extends FormApplication {
 		}).join(""));
 
 		let attackObj = {
-			name: atk[2].trim(),
-			type: "NPC Attack",
+			name: this._toTitleCase(atk[2].trim()),
+			type: "NPC Special Attack",
 			system: {
 				attack: {
 					num: atk[1],
 				},
-				attackType: "special",
 				bonuses: {
 					attackBonus: 0,
-					damageBonus: 0,
-				},
-				damage: {
-					numDice: 0,
-					value: "",
-					special: "",
 				},
 			},
 		};
@@ -133,6 +126,7 @@ export default class MonsterImporterSD extends FormApplication {
 		// Attack is a phyical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
+			attackObj.type = "NPC Attack";
 
 			// split up damage string and parse # of dice, dice type, bonuses, features
 			const dmgStrs = atk[5].split("+").map( x => {
@@ -141,6 +135,7 @@ export default class MonsterImporterSD extends FormApplication {
 			// parse first object as # dice and dice type
 			const diceStr = dmgStrs[0].match(/(\d*)(d\d*)?/);
 			if (typeof diceStr[2] !== "undefined") {
+				attackObj.system.damage = {};
 				attackObj.system.damage.numDice = diceStr[1];
 				attackObj.system.damage.value = diceStr[2];
 			}
@@ -178,6 +173,71 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 		return featureObj;
+	}
+
+	/**
+	 * Parses an NPC spell string and returns an obj
+	 * @param {string} str
+	 * @returns {featureObj}
+	 */
+	_parseSpell(str) {
+		const parsedSpell = str.match([
+			/(.*)/,								// stats[1] matches Spell Name
+			/\([\w\s]*Spell\)\.([^.]*)?/,		// stats[2] matches potential range
+			/.*DC (\d*)/,						// stats[3] matches DC
+			/\. (.*)/,							// stats[4] matches Description
+		].map(function(r) {
+			return r.source;
+		}).join(""));
+
+		const spellObj = {
+			name: parsedSpell[1],
+			type: "NPC Spell",
+			system: {
+				dc: parsedSpell[3],
+				description: `<p>${parsedSpell[4]}</p>`,
+				range: "",
+				duration: {
+					type: "",
+					value: -1,
+				},
+			},
+		};
+
+		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
+
+		// Take a chance at finding the range in the description
+		if (descStr.includes(" self.")) {
+			spellObj.system.range = "self";
+		}
+		else if (descStr.includes(" close.")) {
+			spellObj.system.range = "close";
+		}
+		else if (descStr.includes(" near ") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
+			spellObj.system.range = "near";
+		}
+		else if (descStr.includes(" far ") || descStr.includes(" far.")) {
+			spellObj.system.range = "far";
+		}
+
+
+		// Take a chance at finding a round duration in the description
+		const roundsDuration = parsedSpell[4].match(/(\d|\dd\d) rounds?/);
+		const daysDuration = parsedSpell[4].match(/(\d|\dd\d) days?/);
+
+		if (roundsDuration !== null && typeof roundsDuration[1] !== "undefined") {
+			spellObj.system.duration.type = "rounds";
+			spellObj.system.duration.value = roundsDuration[1];
+		}
+		else if (daysDuration !== null && typeof daysDuration[1] !== "undefined") {
+			spellObj.system.duration.type = "days";
+			spellObj.system.duration.value = daysDuration[1];
+		}
+		else if (descStr.includes(" focus.")) {
+			spellObj.system.duration.type = "focus";
+		}
+
+		return (spellObj);
 	}
 
 	/**
@@ -282,20 +342,60 @@ export default class MonsterImporterSD extends FormApplication {
 		// Create the NPC actor
 		const newActor = await Actor.create(actorObj);
 
-		// Parse attacks and add to actor
+		// Parse attacks features, and spells and add to actor
 		let attackArray = [];
 		stats[3].split(/ and | or /).forEach( line => {
-			attackArray.push(this._parseAttack(line));
+			const attackObj = this._parseAttack(line);
+			// if attack is a spell, update actors details for spellcasting
+			if (attackObj.name.toLowerCase() === "spell") {
+				newActor.update({"system.spellcastingAttackNum": attackObj.system.attack.num});
+				newActor.update({"system.spellcastingBonus": attackObj.system.bonuses.attackBonus});
+			}
+			else {
+				attackArray.push(attackObj);
+			}
 		});
 		await newActor.createEmbeddedDocuments("Item", attackArray);
 
 		// Parse features and add to actor
 		let featureArray = [];
-		features.forEach( text => {
-			featureArray.push(this._parseFeature(text));
-		});
-		await newActor.createEmbeddedDocuments("Item", featureArray);
+		let castingAbility ="";
 
+		features.forEach( text => {
+
+			// Is the feature a spell?
+			const spellTestStr = text.match(/\(([\w]*)?\s*Spell\)/);
+			if (spellTestStr) {
+				featureArray.push(this._parseSpell(text));
+
+				// does the spell list a casting ability?
+				if (typeof spellTestStr[1] !== "undefined" && CONFIG.SHADOWDARK.ABILITY_KEYS.includes(spellTestStr[1].toLowerCase())) {
+					castingAbility = spellTestStr[1].toLowerCase();
+				}
+			}
+			// Parse Feature
+			else {
+				const parsedFeatureObj = this._parseFeature(text);
+
+				// Is the feature a description of a special attack?
+				let isSpecialAttack = false;
+				newActor.items.forEach(x => {
+					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
+						x.update({"system.description": parsedFeatureObj.system.description});
+						isSpecialAttack = true;
+					}
+				});
+
+				// push feature to actor
+				if (!isSpecialAttack) {
+					featureArray.push(parsedFeatureObj);
+				}
+			}
+		});
+
+		await newActor.update({"system.spellcastingAbility": castingAbility});
+
+		await newActor.createEmbeddedDocuments("Item", featureArray);
 		return newActor;
 	}
 }

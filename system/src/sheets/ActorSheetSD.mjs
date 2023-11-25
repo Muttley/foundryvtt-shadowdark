@@ -32,8 +32,8 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollAttack(event)
 		);
 
-		html.find("[data-action='cast-spell']").click(
-			event => this._onCastSpell(event)
+		html.find(".toggle-lost").click(
+			event => this._onToggleLost(event)
 		);
 
 		html.find(".item-create").click(
@@ -345,12 +345,17 @@ export default class ActorSheetSD extends ActorSheet {
 		parentTableRow.toggleClass("expanded");
 	}
 
-	async _onCastSpell(event) {
+	async _onToggleLost(event) {
 		event.preventDefault();
-
 		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		this.actor.castSpell(itemId);
+		this.actor.updateEmbeddedDocuments("Item", [
+			{
+				"_id": itemId,
+				"system.lost": !item.system.lost,
+			},
+		]);
 	}
 
 	async _onItemCreate(event) {
