@@ -172,7 +172,9 @@ SHADOWDARK.dialog.ability_check.title: Ability Check
 SHADOWDARK.dialog.ability_check.wis: Wisdom Check
 SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.lightSource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
+SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Choose Spell
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
@@ -206,6 +208,8 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
@@ -254,6 +258,10 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
@@ -341,8 +349,9 @@ SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
-SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
-SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement by Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die by Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
 SHADOWDARK.item.effect.show-on-panel: Show on panel
@@ -450,6 +459,7 @@ SHADOWDARK.light-tracker.user_warning: One or more users have not selected a cha
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
