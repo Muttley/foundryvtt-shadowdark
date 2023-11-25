@@ -118,7 +118,9 @@
 		"move": "doubleNear",
 		"moveNote": "Burrow, Swim",
 		"notes": "<p><em>This black, wingless beast slithers through dank swamps.</em></p><p></p><p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d10) or 1 smog breath, <strong>MV </strong>double near (burrow, swim), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL </strong>C, <strong>LV</strong> 12</p><p></p><p><strong>Smog Breath</strong>. Fills a near-sized cube extending from dragon. DC 15 CON or 2d10 damage and blinded for 1 round.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

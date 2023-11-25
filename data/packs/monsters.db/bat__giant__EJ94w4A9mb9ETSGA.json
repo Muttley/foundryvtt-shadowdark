@@ -116,7 +116,9 @@
 		"move": "near",
 		"moveNote": "Fly",
 		"notes": "<p><em>Leathery, eagle-sized mammal with a taste for flesh.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 9, <strong>ATK</strong> 1 bite +2 (1d6), <strong>MV</strong> near (fly), <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

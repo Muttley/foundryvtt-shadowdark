@@ -117,7 +117,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>A trundling, barrel-sized beetle with a T-shaped horn.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 10, <strong>ATK</strong> 1 horn +1 (1d4 + knock), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I </strong>-3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p><p><strong>Knock.</strong> DC 9 STR or pushed a close distance and fall down.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

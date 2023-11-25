@@ -117,7 +117,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

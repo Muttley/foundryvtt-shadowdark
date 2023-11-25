@@ -119,7 +119,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>A coy, emerald-skinned fey covered in leaves. It bonds with and protects a tree.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 staff -1 (1d4) or 1 charm, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p><p><strong>Charm</strong>. Near, one creature, DC 14 CHA or friendship for 1d8 days.</p><p></p><p><strong>Meld</strong>. Step inside bonded tree.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

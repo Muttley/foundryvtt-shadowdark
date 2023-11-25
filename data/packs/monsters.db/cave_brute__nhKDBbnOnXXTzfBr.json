@@ -118,7 +118,9 @@
 		"move": "near",
 		"moveNote": "Burrow",
 		"notes": "<p><em>A hulking, insectoid beast with long mandibles, four eyes, and thick arms covered in bristles.</em></p><p></p><p><strong>AC</strong> 14, <strong>HP</strong> 28, <strong>ATK</strong> 2 claw +5 (1d8) and 1 mandible +5 (1d10), <strong>MV </strong>near (burrow), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +1, I -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV </strong>6</p><p></p><p><strong>Bewilder</strong>. Creatures within near that see the cave brute's eyes, DC 12 CHA at start of their turn or dazed and no action.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }
