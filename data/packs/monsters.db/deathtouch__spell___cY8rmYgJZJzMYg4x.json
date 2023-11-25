@@ -8,7 +8,7 @@
 	"name": "Deathtouch (Spell)",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "special",
 		"bonuses": {
@@ -21,9 +21,9 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 2,
+			"numDice": 1,
 			"special": "DC12",
-			"value": "d4"
+			"value": "2d4"
 		},
 		"description": "",
 		"magicItem": false,

@@ -14,9 +14,9 @@ SHADOWDARK.alignment.chaotic: Caótico
 SHADOWDARK.alignment.lawful: Legal
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.languages.prompt: Seleccionar idioma...
 SHADOWDARK.ancestry.talents.count.label: Choice Count
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
+SHADOWDARK.ancestry.talents.label: Talentos de ancestro
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
 SHADOWDARK.app.active_effects.title: Efectos activos
 SHADOWDARK.app.gem_bag.sell_all: Vender todas las gemas
@@ -57,6 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Segundos resta
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Semanas restantes"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Años restantes"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Click derecho] Quitar efecto"
+SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
+SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
+SHADOWDARK.apps.monster-importer.instruction2e: Feature
+SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importar Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visita Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Genera tu personaje y guárdalo como JSON.
@@ -69,10 +78,10 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Desventaja/Nadar
 SHADOWDARK.armor.properties.no_swimming: Sin nadar
 SHADOWDARK.armor.properties.one_handed: Ocupa una mano
 SHADOWDARK.armor.properties.shield: Escudo
-SHADOWDARK.boon.type.label: Boon Type
-SHADOWDARK.boons.blessing: Blessing
-SHADOWDARK.boons.oath: Oath
-SHADOWDARK.boons.secret: Secret
+SHADOWDARK.boon.type.label: Tipo de regalo
+SHADOWDARK.boons.blessing: Bendición
+SHADOWDARK.boons.oath: Juramento
+SHADOWDARK.boons.secret: Secreto
 SHADOWDARK.chat_card.button.attack: Tirada de ataque
 SHADOWDARK.chat_card.button.cast_spell: Lanzar hechizo
 SHADOWDARK.chat_card.button.learn_spell: Aprender hechizo
@@ -80,7 +89,7 @@ SHADOWDARK.chat_card.button.use_potion: Usar poción
 SHADOWDARK.chat_card.button.use_scroll: Usar pergamino
 SHADOWDARK.chat_card.button.use_wand: Usar varita
 SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
-SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.context.apply_damage: Aplicar daño
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
@@ -117,11 +126,11 @@ SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: Ability Group
 SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
 SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
-SHADOWDARK.class-ability.lost.label: Lost
-SHADOWDARK.class-ability.maximum.label: Maximum
+SHADOWDARK.class-ability.lost.label: Perdido
+SHADOWDARK.class-ability.maximum.label: Máximo
 SHADOWDARK.class.armor.all.label: All Armor
-SHADOWDARK.class.armor.label: Armor
-SHADOWDARK.class.armor.prompt: Select Armor...
+SHADOWDARK.class.armor.label: Armadura
+SHADOWDARK.class.armor.prompt: Seleccionar armadura...
 SHADOWDARK.class.fighter: Luchador
 SHADOWDARK.class.hit_points.label: HP Die Roll
 SHADOWDARK.class.language_choices.count.label: Choice Count
@@ -133,20 +142,20 @@ SHADOWDARK.class.ranger: Explorador
 SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
 SHADOWDARK.class.spellcasting_class.label: Spell Class
 SHADOWDARK.class.talent_choices.count.label: Choice Count
-SHADOWDARK.class.talent_choices.label: Talent Choices
-SHADOWDARK.class.talent_choices.prompt: Select Talent...
+SHADOWDARK.class.talent_choices.label: Elecciones de talento
+SHADOWDARK.class.talent_choices.prompt: Seleccionar talento...
 SHADOWDARK.class.talents_table.label: Class Talents Table
-SHADOWDARK.class.talents.label: Talents
-SHADOWDARK.class.talents.prompt: Select Talent...
+SHADOWDARK.class.talents.label: Talentos
+SHADOWDARK.class.talents.prompt: Seleccionar talento...
 SHADOWDARK.class.thief: Ladrón
 SHADOWDARK.class.titles.levels.from.label: From
-SHADOWDARK.class.titles.levels.label: Levels
-SHADOWDARK.class.titles.levels.to.label: To
-SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
-SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
-SHADOWDARK.class.weapons.all.label: All Weapons
-SHADOWDARK.class.weapons.label: Weapons
-SHADOWDARK.class.weapons.prompt: Select Weapon...
+SHADOWDARK.class.titles.levels.label: Niveles
+SHADOWDARK.class.titles.levels.to.label: A
+SHADOWDARK.class.weapons.all_melee.label: Todas las armas cuerpo a cuerpo
+SHADOWDARK.class.weapons.all_ranged.label: Todas las armas a distancia
+SHADOWDARK.class.weapons.all.label: Todas las armas
+SHADOWDARK.class.weapons.label: Armas
+SHADOWDARK.class.weapons.prompt: Seleccionar arma...
 SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
@@ -162,10 +171,13 @@ SHADOWDARK.dialog.ability_check.title: Prueba de habilidad
 SHADOWDARK.dialog.ability_check.wis: Prueba de sabiduría
 SHADOWDARK.dialog.effect.choice.armor: Elige el tipo de armadura
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.lightSource: Elige la fuente de luz
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
+SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Elige hechizo
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Elige el tipo de arma
+SHADOWDARK.dialog.effect.choices.title: Effect Parameters
 SHADOWDARK.dialog.general.are_you_sure: '¿Estás seguro?'
 SHADOWDARK.dialog.general.cancel: Cancelar
 SHADOWDARK.dialog.general.no: "No"
@@ -195,16 +207,18 @@ SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Seleccionar actor para dar fuente de luz
 SHADOWDARK.dialog.roll_mode_label: Modo de tirada
 SHADOWDARK.dialog.roll: Tirada
-SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
-SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
+SHADOWDARK.dialog.select_ancestry.prompt: Seleccionar ancestro...
+SHADOWDARK.dialog.select_ancestry.title: Elige ancestro
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
 SHADOWDARK.dialog.select_background.prompt: Select Background...
 SHADOWDARK.dialog.select_background.title: Choose Background
 SHADOWDARK.dialog.select_class.prompt: Select Class...
-SHADOWDARK.dialog.select_class.title: Choose Class
-SHADOWDARK.dialog.select_deity.prompt: Select Deity...
-SHADOWDARK.dialog.select_deity.title: Choose Deity
+SHADOWDARK.dialog.select_class.title: Elige clase
+SHADOWDARK.dialog.select_deity.prompt: Seleccionar deidad...
+SHADOWDARK.dialog.select_deity.title: Elegir deidad
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
 SHADOWDARK.dialog.select_languages.title: Choose Languages
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
@@ -240,9 +254,13 @@ SHADOWDARK.error.general.gm_required: Debes tener el rol de Maestro de Juego par
 SHADOWDARK.error.general.no_character_class: Ninguna clase de personaje ha sido seleccionada
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.form.section_header.equipment.label: Equipment
-SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Monedas
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutos restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Menos de 1 minuto restante
@@ -332,6 +350,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus de daño de ar
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Multiplicador de daño de arma
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Maestría de armas
 SHADOWDARK.item.effect.show-on-panel: Mostrar en el panel
@@ -363,8 +382,7 @@ SHADOWDARK.item.name_from_spell.Scroll: Pergamino de {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Varita de {spellName}
 SHADOWDARK.item.npc_attack_bonus: Bonus de Ataque
 SHADOWDARK.item.npc_attack_count: Número de ataques
-SHADOWDARK.item.npc_attack_damage_bonus: Bonus de daño
-SHADOWDARK.item.npc_attack_damage: Dados de daño
+SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Especial
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Número de dados de daño
@@ -378,7 +396,7 @@ SHADOWDARK.item.spell_name: Nombre de hechizo
 SHADOWDARK.item.spell_range: Rango
 SHADOWDARK.item.spell_tier: Nivel
 SHADOWDARK.item.spell.label: Hechizo
-SHADOWDARK.item.stashed.label: Stashed
+SHADOWDARK.item.stashed.label: Guardado
 SHADOWDARK.item.talent_class: Clase de talento
 SHADOWDARK.item.treasure: Tesoro
 SHADOWDARK.item.wand.label: Varita
@@ -405,8 +423,8 @@ SHADOWDARK.item.weapon.base_weapon.staff: Bastón
 SHADOWDARK.item.weapon.base_weapon.title: Arma base
 SHADOWDARK.item.weapon.base_weapon.wand: Vara
 SHADOWDARK.item.weapon.base_weapon.warhammer: Martillo de guerra
-SHADOWDARK.language_choices.common.label: Additional Common
-SHADOWDARK.language_choices.rare.label: Additional Rare
+SHADOWDARK.language_choices.common.label: Común adicional
+SHADOWDARK.language_choices.rare.label: Rara adicional
 SHADOWDARK.language.celestial: Celestial
 SHADOWDARK.language.common: Común
 SHADOWDARK.language.diabolic: Diabólico
@@ -418,9 +436,9 @@ SHADOWDARK.language.goblin: Goblin
 SHADOWDARK.language.merran: Merran
 SHADOWDARK.language.orcish: Orco
 SHADOWDARK.language.primordial: Primordial
-SHADOWDARK.language.rarity.common: Common
-SHADOWDARK.language.rarity.label: Rarity
-SHADOWDARK.language.rarity.rare: Rare
+SHADOWDARK.language.rarity.common: Común
+SHADOWDARK.language.rarity.label: Rareza
+SHADOWDARK.language.rarity.rare: Rara
 SHADOWDARK.language.reptilian: Reptiliano
 SHADOWDARK.language.sylvan: Silvano
 SHADOWDARK.language.thanian: Thanio
@@ -440,6 +458,7 @@ SHADOWDARK.light-tracker.user_warning: Uno o más usuarios no han seleccionado u
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: Realizando actualizaciones para Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Aplicando actualizaciones para Shadowdark RPG esquema v-{version}
 SHADOWDARK.migration.completed_migration: Actualización completada para Shadowdark RPG
@@ -448,15 +467,15 @@ SHADOWDARK.module_art_config.portraits: Retratos
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
-SHADOWDARK.npc_move.close: Close
+SHADOWDARK.npc_move.close: Cerca
 SHADOWDARK.npc_move.double_near: Doble próximo
-SHADOWDARK.npc_move.far: Far
+SHADOWDARK.npc_move.far: Lejos
 SHADOWDARK.npc_move.near: Próximo
-SHADOWDARK.npc_move.none: None
-SHADOWDARK.npc_move.special: Special
+SHADOWDARK.npc_move.none: Nada
+SHADOWDARK.npc_move.special: Especial
 SHADOWDARK.npc_move.triple_near: Triple próximo
-SHADOWDARK.property.type.option.armor: Armor
-SHADOWDARK.property.type.option.weapon: Weapon
+SHADOWDARK.property.type.option.armor: Armadura
+SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Cerca
@@ -539,21 +558,23 @@ SHADOWDARK.sheet.npc.description_label: Descripción
 SHADOWDARK.sheet.npc.features_label: Características
 SHADOWDARK.sheet.npc.movement_short: Mov
 SHADOWDARK.sheet.npc.movement: Movimiento
+SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: Habilidades
 SHADOWDARK.sheet.npc.tab.description: Descripción
+SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: Este valor está siendo modificado por un efecto activo y no puede ser editado. Deshabilita el efecto para editarlo.
 SHADOWDARK.sheet.player.ancestry.label: Ancestría
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.available_spells: Hechizos disponibles
 SHADOWDARK.sheet.player.background.label: Trasfondo
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
-SHADOWDARK.sheet.player.boons.blessings.label: Blessings
-SHADOWDARK.sheet.player.boons.label: Boons
-SHADOWDARK.sheet.player.boons.oaths.label: Oaths
-SHADOWDARK.sheet.player.boons.secrets.label: Secrets
-SHADOWDARK.sheet.player.class.label: Class
-SHADOWDARK.sheet.player.class.tooltip: Your character's job
-SHADOWDARK.sheet.player.deity.label: Deity
+SHADOWDARK.sheet.player.boons.blessings.label: Bendiciones
+SHADOWDARK.sheet.player.boons.label: Regalos
+SHADOWDARK.sheet.player.boons.oaths.label: Juramentos
+SHADOWDARK.sheet.player.boons.secrets.label: Secretos
+SHADOWDARK.sheet.player.class.label: Clase
+SHADOWDARK.sheet.player.class.tooltip: El trabajo de tu personaje
+SHADOWDARK.sheet.player.deity.label: Deidad
 SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: Idiomas
 SHADOWDARK.sheet.player.luck: Suerte
@@ -565,7 +586,7 @@ SHADOWDARK.sheet.player.spells: Hechizos
 SHADOWDARK.sheet.player.tab.abilities: Habilidades
 SHADOWDARK.sheet.player.tab.background: Trasfondo
 SHADOWDARK.sheet.player.tab.inventory: Inventario
-SHADOWDARK.sheet.player.tab.notes: Notes
+SHADOWDARK.sheet.player.tab.notes: Notas
 SHADOWDARK.sheet.player.tab.spells: Hechizos
 SHADOWDARK.sheet.player.tab.talents: Talentos
 SHADOWDARK.sheet.player.talents_level: Nivel
@@ -581,6 +602,12 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Usar poción
 SHADOWDARK.sheet.player.tooltip.use_scroll: Usar pergamino
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar varita
 SHADOWDARK.sheet.player.xp: EXP
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
+SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
+SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
+SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Clérigo
 SHADOWDARK.spell_caster.wizard: Mago
 SHADOWDARK.spell_duration.days: Días
@@ -593,7 +620,7 @@ SHADOWDARK.spell_range.close: Cerca
 SHADOWDARK.spell_range.far: Lejos
 SHADOWDARK.spell_range.near: Próximo
 SHADOWDARK.spell.classes.label: Clases de hechicero
-SHADOWDARK.spell.classes.prompt: Select Class...
+SHADOWDARK.spell.classes.prompt: Seleccionar clase...
 SHADOWDARK.talent.backstab: Puñalada
 SHADOWDARK.talent.class.ancestry: Ancestro
 SHADOWDARK.talent.class.class: Clase

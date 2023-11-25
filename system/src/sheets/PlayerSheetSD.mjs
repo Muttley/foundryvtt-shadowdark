@@ -75,16 +75,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onSellTreasure(event)
 		);
 
-		html.find(".toggle-lost").click(
-			event => this._onToggleLost(event)
-		);
-
 		html.find("[data-action='use-ability']").click(
 			event => this._onUseAbility(event)
 		);
 
 		html.find("[data-action='use-potion']").click(
 			event => this._onUsePotion(event)
+		);
+
+		html.find("[data-action='cast-spell']").click(
+			event => this._onCastSpell(event)
 		);
 
 		html.find("[data-action='learn-spell']").click(
@@ -395,12 +395,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				callback: () => this._createItemFromSpell(item, "Scroll"),
 			},
 			spell: {
-				icon: '<i class="fas fa-hand-sparkles"></i>',
+				icon: '<i class="fa-solid fa-hand-sparkles"></i>',
 				label: game.i18n.localize("SHADOWDARK.item.spell.label"),
 				callback: () => this._createItemFromSpell(item, "Spell"),
 			},
 			wand: {
-				icon: '<i class="fas fa-magic"></i>',
+				icon: '<i class="fa-solid fa-wand-magic-sparkles"></i>',
 				label: game.i18n.localize("SHADOWDARK.item.wand.label"),
 				callback: () => this._createItemFromSpell(item, "Wand"),
 			},
@@ -450,7 +450,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.uses.available > 0) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.uses.available": item.system.uses.available - 1,
 				},
 			]);
@@ -466,7 +466,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.uses.available < item.system.uses.max) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.uses.available": item.system.uses.available + 1,
 				},
 			]);
@@ -490,7 +490,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.quantity > 0) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.quantity": item.system.quantity - 1,
 				},
 			]);
@@ -506,11 +506,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.system.quantity < item.system.slots.per_slot) {
 			this.actor.updateEmbeddedDocuments("Item", [
 				{
-					_id: itemId,
+					"_id": itemId,
 					"system.quantity": item.system.quantity + 1,
 				},
 			]);
 		}
+	}
+
+	async _onCastSpell(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+
+		this.actor.castSpell(itemId);
 	}
 
 	async _onLearnSpell(event) {
@@ -566,7 +574,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
 			{
-				_id: itemId,
+				"_id": itemId,
 				"system.equipped": !item.system.equipped,
 				"system.stashed": false,
 			},
@@ -583,7 +591,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
 			{
-				_id: itemId,
+				"_id": itemId,
 				"system.stashed": !item.system.stashed,
 				"system.equipped": false,
 			},
@@ -639,19 +647,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this._toggleLightSource(item);
 	}
 
-	async _onToggleLost(event) {
-		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.getEmbeddedDocument("Item", itemId);
-
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				_id: itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
-	}
-
 	async _toggleLightSource(item, options = {}) {
 		const active = !item.system.light.active;
 
@@ -661,7 +656,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			for (const lightSource of activeLightSources) {
 				this.actor.updateEmbeddedDocuments(
 					"Item", [{
-						_id: lightSource.id,
+						"_id": lightSource.id,
 						"system.light.active": false,
 					}]
 				);
@@ -669,7 +664,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		const dataUpdate = {
-			_id: item.id,
+			"_id": item.id,
 			"system.light.active": active,
 		};
 

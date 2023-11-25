@@ -1,8 +1,5 @@
 export default class ActorSD extends Actor {
 
-	backgroundItems = {};
-
-
 	_abilityModifier(abilityScore) {
 		if (abilityScore >= 1 && abilityScore <= 3) return -4;
 		if (abilityScore >= 4 && abilityScore <= 5) return -3;
@@ -57,6 +54,79 @@ export default class ActorSD extends Actor {
 			}
 		}
 		return source;
+	}
+
+
+	async _learnSpell(item) {
+		const spellcastingAttribute =
+			this.backgroundItems?.class?.system?.spellcasting?.ability ?? "int";
+
+		const result = await this.rollAbility(
+			spellcastingAttribute,
+			{ target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC }
+		);
+
+		// Player cancelled the roll
+		if (result === null) return;
+
+		const success = result?.rolls?.main?.success ?? false;
+
+		const messageType = success
+			? "SHADOWDARK.chat.spell_learn.success"
+			: "SHADOWDARK.chat.spell_learn.failure";
+
+		const message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				spellName: item.system.spellName,
+			}
+		);
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
+			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			user: game.user.id,
+		});
+
+		if (success) {
+			const spell = {
+				type: "Spell",
+				img: item.img,
+				name: item.system.spellName,
+				system: {
+					class: item.system.class,
+					description: item.system.description,
+					duration: item.system.duration,
+					range: item.system.range,
+					tier: item.system.tier,
+				},
+			};
+
+			this.createEmbeddedDocuments("Item", [spell]);
+		}
+
+		// original scroll always lost regardless of outcome
+		await this.deleteEmbeddedDocuments(
+			"Item",
+			[item._id]
+		);
 	}
 
 
@@ -116,6 +186,8 @@ export default class ActorSD extends Actor {
 
 
 	async _populateBackgroundItems() {
+		if (!this.backgroundItems) this.backgroundItems = {};
+
 		this.backgroundItems.ancestry = await this.getAncestry();
 		this.backgroundItems.class = await this.getClass();
 		this.backgroundItems.deity = await this.getDeity();
@@ -271,17 +343,58 @@ export default class ActorSD extends Actor {
 		const attackOptions = {
 			attackType: item.system.attackType,
 			attackName: item.name,
-			numAttacks: item.system.attack.num,
+			// numAttacks: item.system.attack.num,
 			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
-			baseDamage: `${item.system.damage.numDice}${item.system.damage.value}`,
+			baseDamage: item.system.damage.value,
 			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
+			itemId,
 			special: item.system.damage.special,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
 
+		attackOptions.numAttacks = await TextEditor.enrichHTML(
+			item.system.attack.num,
+			{
+				async: true,
+			}
+		);
+
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/npc-attack.hbs",
+			attackOptions
+		);
+	}
+
+	async buildNpcSpecialDisplays(itemId) {
+		const item = this.getEmbeddedDocument("Item", itemId);
+
+		const description = await TextEditor.enrichHTML(
+			jQuery(item.system.description).text(),
+			{
+				async: true,
+			}
+		);
+
+		const attackOptions = {
+			attackName: item.name,
+			// numAttacks: item.system.attack.num,
+			attackBonus: item.system.bonuses.attackBonus,
+			itemId,
+			ranges: item.system.ranges.map(s => game.i18n.localize(
+				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
+			description,
+		};
+
+		attackOptions.numAttacks = await TextEditor.enrichHTML(
+			item.system.attack.num,
+			{
+				async: true,
+			}
+		);
+
+		return await renderTemplate(
+			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
 			attackOptions
 		);
 	}
@@ -312,10 +425,13 @@ export default class ActorSD extends Actor {
 			attackRange: "",
 			baseDamage: "",
 			bonusDamage: 0,
+			extraDamageDice: "",
 			properties: await item.propertiesDisplay(),
 			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
 			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
 		};
+
+		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
 
 		const weaponDisplays = {melee: [], ranged: []};
 
@@ -541,6 +657,28 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data);
 	}
 
+	async castNPCSpell(itemId) {
+		const item = this.items.get(itemId);
+
+		const abilityBonus = this.system.spellcastingBonus;
+
+		const rollType = item.name.slugify();
+
+		const data = {
+			rollType,
+			item: item,
+			actor: this,
+			abilityBonus: abilityBonus,
+		};
+
+		const parts = ["1d20", "@abilityBonus"];
+
+		const options = {
+			isNPC: true,
+		};
+
+		return item.rollSpell(parts, data, options);
+	}
 
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
@@ -548,7 +686,7 @@ export default class ActorSD extends Actor {
 
 		// Update the prototype as well
 		await Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"prototypeToken.light": lightData,
 		}]);
 	}
@@ -690,69 +828,41 @@ export default class ActorSD extends Actor {
 	async learnSpell(itemId) {
 		const item = this.items.get(itemId);
 
-		const result = await this.rollAbility(
-			"int",
-			{target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC}
+		const correctSpellClass = item.system.class.includes(
+			this.system.class
 		);
 
-		const success = result?.rolls?.main?.success ?? false;
-
-		const messageType = success
-			? "SHADOWDARK.chat.spell_learn.success"
-			: "SHADOWDARK.chat.spell_learn.failure";
-
-		const message = game.i18n.format(
-			messageType,
-			{
-				name: this.name,
-				spellName: item.system.spellName,
-			}
-		);
-
-		const cardData = {
-			actor: this,
-			item: item,
-			message,
-		};
-
-		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
-
-		await ChatMessage.create({
-			title,
-			content,
-			flags: { "core.canPopout": true },
-			flavor: title,
-			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
-			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
-			user: game.user.id,
-		});
-
-		if (success) {
-			const spell = {
-				type: "Spell",
-				img: item.img,
-				name: item.system.spellName,
-				system: {
-					class: item.system.class,
-					description: item.system.description,
-					duration: item.system.duration,
-					range: item.system.range,
-					tier: item.system.tier,
-				},
-			};
-
-			this.createEmbeddedDocuments("Item", [spell]);
+		if (!correctSpellClass) {
+			renderTemplate(
+				"systems/shadowdark/templates/dialog/confirm-learn-spell.hbs",
+				{
+					name: item.name,
+					correctSpellClass,
+				}
+			).then(html => {
+				new Dialog({
+					title: `${game.i18n.localize("SHADOWDARK.dialog.scroll.wrong_class_confirm")}`,
+					content: html,
+					buttons: {
+						Yes: {
+							icon: "<i class=\"fa fa-check\"></i>",
+							label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+							callback: async () => {
+								this._learnSpell(item);
+							},
+						},
+						Cancel: {
+							icon: "<i class=\"fa fa-times\"></i>",
+							label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+						},
+					},
+					default: "Yes",
+				}).render(true);
+			});
 		}
-
-		// original scroll always lost regardless of outcome
-		await this.deleteEmbeddedDocuments(
-			"Item",
-			[itemId]
-		);
+		else {
+			await this._learnSpell(item);
+		}
 	}
 
 
@@ -834,7 +944,7 @@ export default class ActorSD extends Actor {
 		const bonuses = this.system.bonuses;
 
 		// Summarize the bonuses for the attack roll
-		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
+		const parts = ["1d20", "@itemBonus", "@abilityBonus", "@talentBonus"];
 		data.damageParts = [];
 
 		// Check damage multiplier
@@ -846,7 +956,6 @@ export default class ActorSD extends Actor {
 
 		// Magic Item bonuses
 		if (item.system.bonuses.attackBonus) {
-			parts.push("@itemBonus");
 			data.itemBonus = item.system.bonuses.attackBonus;
 		}
 		if (item.system.bonuses.damageBonus) {
@@ -858,9 +967,10 @@ export default class ActorSD extends Actor {
 			Created in `data.itemSpecial` field.
 			Can be used in the rendering template or further automation.
 		*/
-		if (item.system.damage.special) {
+		if (item.system.damage?.special) {
 			const itemSpecial = data.actor.items.find(
 				e => e.name === item.system.damage.special
+					&& e.type === "NPC Feature"
 			);
 
 			if (itemSpecial) {
@@ -870,6 +980,11 @@ export default class ActorSD extends Actor {
 
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
+
+			// Check to see if we have any extra dice that need to be added to
+			// the damage rolls due to effects
+			//
+			await this.getExtraDamageDiceForWeapon(item, data);
 
 			if (item.system.type === "melee") {
 				if (await item.isFinesseWeapon()) {
@@ -907,6 +1022,41 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async getExtraDamageDiceForWeapon(item, data) {
+		const extraDamageDiceBonuses = this.system.bonuses.weaponDamageExtraDieByProperty ?? [];
+
+		for (const extraBonusDice of extraDamageDiceBonuses) {
+			const [die, property] = extraBonusDice.split("|");
+
+			if (await item.hasProperty(property)) {
+				data.extraDamageDice = die;
+
+				if (data.damageParts) {
+					data.damageParts.push("@extraDamageDice");
+				}
+				break;
+			}
+		}
+
+		// If the attack has extra damage die due to an effect, then also
+		// check to see if that damage die should be improved from its
+		// base type
+		//
+		if (data.extraDamageDice) {
+			const extraDiceImprovements =
+				this.system.bonuses.weaponDamageExtraDieImprovementByProperty ?? [];
+
+			for (const property of extraDiceImprovements) {
+				if (await item.hasProperty(property)) {
+					data.extraDamageDice = shadowdark.utils.getNextDieInList(
+						data.extraDamageDice,
+						shadowdark.config.DAMAGE_DICE
+					);
+				}
+			}
+		}
+	}
+
 	async rollHP(options={}) {
 		if (this.type === "Player") {
 			this._playerRollHP(options);
@@ -943,7 +1093,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -963,7 +1113,7 @@ export default class ActorSD extends Actor {
 		);
 
 		Actor.updateDocuments([{
-			_id: this._id,
+			"_id": this._id,
 			"system.coins": coins,
 		}]);
 	}
@@ -1023,13 +1173,13 @@ export default class ActorSD extends Actor {
 				// as well.
 				if (isAShield && await item.isAShield()) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
 				else if (await item.isNotAShield() && !isAShield) {
 					armorToUnequip.push({
-						_id: item._id,
+						"_id": item._id,
 						"system.equipped": false,
 					});
 				}
@@ -1127,10 +1277,15 @@ export default class ActorSD extends Actor {
 		let message = "";
 		let success = true;
 
-		// NPC features currently don't have checks
-		if (item.type !== "NPC Feature") {
-			// does player ability use on a roll check?
-			if (item.system.ability !== "") {
+		// NPC features - no title or checks required
+		if (item.type === "NPC Feature") {
+			message = `${abilityDescription}`;
+		}
+		else {
+			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
+
+			// does ability use on a roll check?
+			if (typeof item.system.ability !== "undefined") {
 				const result = await this.rollAbility(
 					item.system.ability,
 					{target: item.system.dc}
@@ -1138,7 +1293,8 @@ export default class ActorSD extends Actor {
 
 				success = result?.rolls?.main?.success ?? false;
 			}
-			// does player ability have limited uses?
+
+			// does ability have limited uses?
 			if (item.system.limitedUses) {
 				if (item.system.uses.available > 0) {
 					item.update({
@@ -1169,12 +1325,9 @@ export default class ActorSD extends Actor {
 			if (success) {
 				message = `<p>${message}</p>${abilityDescription}`;
 			}
-			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
-		}
-		else {
-			message = `${abilityDescription}`;
 		}
 
+		// construct and create chat message
 		const cardData = {
 			actor: this,
 			item: item,

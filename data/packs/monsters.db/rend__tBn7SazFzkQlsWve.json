@@ -8,7 +8,7 @@
 	"name": "Rend",
 	"system": {
 		"attack": {
-			"num": 3
+			"num": "3"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -21,9 +21,9 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 2,
+			"numDice": 1,
 			"special": "",
-			"value": "d10"
+			"value": "2d10"
 		},
 		"description": "",
 		"magicItem": false,

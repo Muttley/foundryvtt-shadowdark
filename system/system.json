@@ -2,28 +2,32 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "1.5.1",
+	"version": "1.6.0",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "231025.1"
+		"schemaVersion": "231125.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
-	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/download/release-1.5.1/shadowdark-release-1.5.1.zip",
+	"download": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/shadowdark.zip",
 	"authors": [
 		{
 			"name": "Paul Maskelyne",
-			"discord": "Muttley#3296",
+			"discord": "muttley",
 			"email": "mu77ley@gmail.com",
 			"mastodon": "@muttley@dice.camp"
 		},
 		{
 			"name": "Bakbakbakbakbak",
 			"github": "https://github.com/bakbakbakbakbak",
-			"discord": "bakbak#2827"
+			"discord": "bakbakbakbak"
+		},
+		{
+			"name": "Prototype",
+			"discord": "prototypesbu"
 		}
 	],
 	"esmodules": ["shadowdark-compiled.mjs"],

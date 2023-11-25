@@ -52,7 +52,6 @@ SHADOWDARK.BOON_TYPES = {
 	blessing: "SHADOWDARK.boons.blessing",
 };
 
-/* eslint-disable quote-props */
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
@@ -73,6 +72,8 @@ SHADOWDARK.DEFAULTS = {
 		"Gem": "icons/commodities/gems/gem-faceted-navette-red.webp",
 		"Language": "icons/tools/scribal/ink-quill-pink.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+		"NPC Special Attack": "icons/magic/death/weapon-sword-skull-purple.webp",
+		"NPC Spell": "icons/magic/symbols/runes-star-magenta.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		"Potion": "icons/consumables/potions/bottle-corked-red.webp",
 		"Property": "icons/sundries/documents/document-torn-diagram-tan.webp",
@@ -83,7 +84,6 @@ SHADOWDARK.DEFAULTS = {
 		"Weapon": "icons/weapons/swords/swords-short.webp",
 	},
 };
-/* eslint-enable quote-props */
 
 SHADOWDARK.LANGUAGE_RARITY = {
 	common: "SHADOWDARK.language.rarity.common",
@@ -138,13 +138,12 @@ SHADOWDARK.RANGES_SHORT = {
 };
 
 SHADOWDARK.OFFICIAL_SOURCES = {
-	"cursed-scroll-1": "Cursed Scroll Vol.1, Diablerie!",
-	"cursed-scroll-2": "Cursed Scroll Vol.2, Red Sands",
-	"cursed-scroll-3": "Cursed Scroll Vol.3, Midnight Sun",
-	"quickstart-game-master-guide": "Quickstart: Game Master Guide",
-	"quickstart-player-guide": "Quickstart: Player Guide",
-	"bard-and-ranger": "Shadowdark RPG: Bard and Ranger",
-	"core-rules": "Shadowdark RPG: Core Rules",
+	"cursed-scroll-1": "SHADOWDARK.source.cursed-scroll-1",
+	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
+	"cursed-scroll-3": "SHADOWDARK.source.cursed-scroll-3",
+	"quickstart": "SHADOWDARK.source.quickstart",
+	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
+	"core-rules": "SHADOWDARK.source.core-rules",
 };
 
 SHADOWDARK.SPELL_DURATIONS = {

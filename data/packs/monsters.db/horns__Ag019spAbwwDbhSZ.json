@@ -8,7 +8,7 @@
 	"name": "Horns",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -23,7 +23,7 @@
 		"damage": {
 			"numDice": 1,
 			"special": "",
-			"value": "d12"
+			"value": "1d12"
 		},
 		"description": "",
 		"magicItem": false,

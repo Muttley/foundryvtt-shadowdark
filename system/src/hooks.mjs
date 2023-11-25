@@ -6,6 +6,7 @@ import { EffectPanelHooks } from "./hooks/effect-panel.mjs";
 import { LightSourceTrackerHooks } from "./hooks/light-source-tracker.mjs";
 import { NPCHooks } from "./hooks/npc.mjs";
 import { ShadowdarklingImport } from "./hooks/shadowdarkling-import.mjs";
+import { hotbarHooks } from "./hooks/hotbar.mjs";
 
 export const HooksSD = {
 	attach: () => {
@@ -15,6 +16,7 @@ export const HooksSD = {
 			EffectHooks,
 			LightSourceTrackerHooks,
 			NPCHooks,
+			hotbarHooks,
 		];
 
 		for (const listener of listeners) {

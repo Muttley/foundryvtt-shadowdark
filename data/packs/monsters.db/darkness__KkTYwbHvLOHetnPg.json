@@ -8,7 +8,7 @@
 	"name": "Darkness",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "special",
 		"bonuses": {
@@ -21,9 +21,9 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 0,
+			"numDice": 1,
 			"special": "Darkness",
-			"value": ""
+			"value": "0"
 		},
 		"description": "",
 		"magicItem": false,

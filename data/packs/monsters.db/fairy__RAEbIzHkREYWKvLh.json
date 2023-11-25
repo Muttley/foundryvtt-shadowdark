@@ -117,7 +117,9 @@
 		"move": "near",
 		"moveNote": "Fly",
 		"notes": "<p><em>Miniature fey folk with fluttering moth or butterfly wings.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 4, <strong>ATK</strong> 1 needle +3 (1 + poison), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +0, <strong>Ch</strong> +1, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p><p><strong>Poison</strong>. DC 12 CON or fall into deep sleep for 1d4 hours.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

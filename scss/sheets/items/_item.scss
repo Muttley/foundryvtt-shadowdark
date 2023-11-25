@@ -318,7 +318,7 @@
 	.npc-attack-details {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-column: span 3;
 		column-gap: 4px;
 	}

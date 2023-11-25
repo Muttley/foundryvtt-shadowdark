@@ -8,6 +8,8 @@
 	"name": "Priest",
 	"system": {
 		"allArmor": true,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
 		"allWeapons": false,
 		"armor": [
 		],

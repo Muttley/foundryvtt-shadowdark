@@ -8,7 +8,7 @@
 	"name": "Needle",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -18,12 +18,12 @@
 				"multiplier": 2,
 				"successThreshold": 20
 			},
-			"damageBonus": 1
+			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 0,
+			"numDice": 1,
 			"special": "Poison",
-			"value": ""
+			"value": "1"
 		},
 		"description": "",
 		"magicItem": false,

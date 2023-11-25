@@ -8,7 +8,7 @@
 	"name": "Greatclub",
 	"system": {
 		"attack": {
-			"num": 2
+			"num": "2"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -21,9 +21,9 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 2,
+			"numDice": 1,
 			"special": "",
-			"value": "d6"
+			"value": "2d6"
 		},
 		"description": "",
 		"magicItem": false,

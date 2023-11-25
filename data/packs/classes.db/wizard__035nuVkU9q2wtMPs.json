@@ -8,6 +8,8 @@
 	"name": "Wizard",
 	"system": {
 		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
 		"allWeapons": false,
 		"armor": [
 		],

@@ -8,7 +8,7 @@
 	"name": "Tail",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -21,9 +21,9 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": 3,
+			"numDice": 1,
 			"special": "",
-			"value": "d6"
+			"value": "3d6"
 		},
 		"description": "",
 		"magicItem": false,

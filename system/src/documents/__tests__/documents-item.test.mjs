@@ -47,8 +47,8 @@ export default ({ describe, it, after, expect }) => {
 	describe("hasProperty(property)", () => {
 		it("read a system property correctly", async () => {
 			const item = await ItemSD.create({
-				name: `Test Item ${key}: Armor`,
-				type: "Armor",
+				"name": `Test Item ${key}: Armor`,
+				"type": "Armor",
 				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
 
@@ -60,8 +60,8 @@ export default ({ describe, it, after, expect }) => {
 	describe("isAShield()", () => {
 		it("returns true for a shield", async () => {
 			const item = await ItemSD.create({
-				name: `Test Item ${key}: Armor`,
-				type: "Armor",
+				"name": `Test Item ${key}: Armor`,
+				"type": "Armor",
 				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
 			expect(await item.isAShield()).equal(true);
@@ -70,8 +70,8 @@ export default ({ describe, it, after, expect }) => {
 
 		it("returns false for an armor", async () => {
 			const item = await ItemSD.create({
-				name: `Test Item ${key}: Armor`,
-				type: "Armor",
+				"name": `Test Item ${key}: Armor`,
+				"type": "Armor",
 				"system.properties": [],
 			});
 			expect(await item.isAShield()).equal(false);
@@ -82,8 +82,8 @@ export default ({ describe, it, after, expect }) => {
 	describe("isNotAShield()", () => {
 		it("returns true for a shield", async () => {
 			const item = await ItemSD.create({
-				name: `Test Item ${key}: Armor`,
-				type: "Armor",
+				"name": `Test Item ${key}: Armor`,
+				"type": "Armor",
 				"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
 			});
 			expect(await item.isNotAShield()).equal(false);
@@ -92,8 +92,8 @@ export default ({ describe, it, after, expect }) => {
 
 		it("returns false for an armor", async () => {
 			const item = await ItemSD.create({
-				name: `Test Item ${key}: Armor`,
-				type: "Armor",
+				"name": `Test Item ${key}: Armor`,
+				"type": "Armor",
 				"system.properties": [],
 			});
 			expect(await item.isNotAShield()).equal(true);
