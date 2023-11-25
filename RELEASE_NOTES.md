@@ -6,6 +6,7 @@
 * [#581] Spellcasting ability used for learning spells hardcoded, this should be dynamic to support custom/homebrew classes
 * [#582] Grick token is named "Monster"
 * [#583] Regex parser in MonsterImporterSD.mjs can't handle attacks that have '+' in the name
+* [#597] Unable to drag Actor to hotbar and have it open character sheet
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
