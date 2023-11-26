@@ -1,4 +1,12 @@
-## v.1.x.x
+## v1.6.1
+
+### Bugfixes
+* [#601] Fixed a bug that resulted in NPC damage always rolling as a critical hit. Updated monster importer to correctly add NPC roll formula.
+
+### Chores
+* Merged contributed Swedish translations from Crowdin
+
+## v.1.6.0
 
 ### Bugfixes
 * [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
@@ -19,12 +27,10 @@
 * [#587] Add predefined Talent effect that allows damage die for weapons with specified tags to be increased by category (`weaponDamageDieImprovementByProperty`)
 * [#596] Switch NPC number of attacks to text in order to support roll macros within attack strings
 
-*Please welcome Prototype to the Shadowdark system development team*
-
-*Many thanks to chrpow for contributing code included in this build*
-
 ### Chores
 * Improvements to GitHub Workflows around building a release
+
+*Please welcome Prototype to the Shadowdark system development team*
 
 *Many thanks to chrpow for contributing code included in this build*
 
