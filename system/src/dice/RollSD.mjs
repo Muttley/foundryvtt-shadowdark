@@ -291,29 +291,29 @@ export default class RollSD extends Roll {
 		if (data.damageBonus) data.damageParts.push("@damageBonus");
 
 		if (data.rolls.main.critical !== "failure") {
-			// if (data.rolls.main.critical === "success") {
-			// We only support multiplication of the first damage dice,
-			// which is probably enough. None of the core game NPC attacks
-			// involve multiple dice parts
-			//
-			if (baseDamageFormula !== "0") {
-				const parts = /^(\d*)d(.*)/.exec(baseDamageFormula);
+			if (data.rolls.main.critical === "success") {
+				// We only support multiplication of the first damage dice,
+				// which is probably enough. None of the core game NPC attacks
+				// involve multiple dice parts
+				//
+				if (baseDamageFormula !== "0") {
+					const parts = /^(\d*)d(.*)/.exec(baseDamageFormula);
 
-				let numDice = "1";
-				let formulaSuffix = "";
-				if (parts) {
-					numDice = parts[1] !== "" ? parts[1] : "1";
-					formulaSuffix = parts[2] ? parts[2] : "";
+					let numDice = "1";
+					let formulaSuffix = "";
+					if (parts) {
+						numDice = parts[1] !== "" ? parts[1] : "1";
+						formulaSuffix = parts[2] ? parts[2] : "";
+					}
+
+					numDice = parseInt(numDice, 10);
+					numDice *= parseInt(data.item.system.bonuses.critical.multiplier, 10);
+
+					baseDamageFormula = formulaSuffix !== ""
+						? `${numDice}d${formulaSuffix}`
+						: `${numDice}`;
 				}
-
-				numDice = parseInt(numDice, 10);
-				numDice *= parseInt(data.item.system.bonuses.critical.multiplier, 10);
-
-				baseDamageFormula = formulaSuffix !== ""
-					? `${numDice}d${formulaSuffix}`
-					: `${numDice}`;
 			}
-			// }
 
 			const primaryParts = [baseDamageFormula, ...data.damageParts];
 
