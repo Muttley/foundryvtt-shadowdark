@@ -13,11 +13,12 @@ export default class EncounterSD extends Combat {
 			const rollers = []
 			const npcs = []
 			for (const combatant of this.combatants) {
-				if (combatant.actor.type === 'Player') rollers.push(combatant)
-				else if (combatant.actor.type === 'NPC') npcs.push(combatant)
+				if (combatant.actor.type === "Player") rollers.push(combatant)
+				else if (combatant.actor.type === "NPC") npcs.push(combatant)
 			}
 			if (npcs.length > 0) {
-				npcs.sort((a, b) => b.actor.getRollData().initiativeBonus - a.actor.getRollData().initiativeBonus)
+				npcs.sort((a, b) =>
+					b.actor.getRollData().initiativeBonus - a.actor.getRollData().initiativeBonus)
 				rollers.push(npcs[0])
 			}
 
@@ -30,21 +31,21 @@ export default class EncounterSD extends Combat {
 
 					// Construct chat message data
 					let messageData = foundry.utils.mergeObject({
-					speaker: ((combatant.actor.type === 'NPC') ?
-					null :
-					ChatMessage.getSpeaker({
-						actor: combatant.actor,
-						token: combatant.token,
-						alias: combatant.name
-					})),
-					flavor: game.i18n.format("COMBAT.RollsInitiative", {name: ((combatant.actor.type === 'NPC') ? `${game.i18n.localize("SHADOWDARK.dialog.gm")}` : combatant.name)}),
-					flags: {"core.initiativeRoll": true}
+						speaker: ((combatant.actor.type === "NPC") ?
+							null :
+							ChatMessage.getSpeaker({
+								actor: combatant.actor,
+								token: combatant.token,
+								alias: combatant.name
+							})),
+						flavor: game.i18n.format("COMBAT.RollsInitiative", {name: ((combatant.actor.type === "NPC") ? `${game.i18n.localize("SHADOWDARK.dialog.gm")}` : combatant.name)}),
+						flags: {"core.initiativeRoll": true}
 					}, messageOptions);
 					const rollChatData = await roll.toMessage(messageData, {create: false});
 
 					// If the combatant is hidden, use a private roll unless an alternative rollMode was explicitly requested
 					rollChatData.rollMode = "rollMode" in messageOptions ? messageOptions.rollMode
-					: (combatant.hidden ? CONST.DICE_ROLL_MODES.PRIVATE : chatRollMode );
+						: (combatant.hidden ? CONST.DICE_ROLL_MODES.PRIVATE : chatRollMode );
 
 					// Play 1 sound for the whole rolled set
 					if ( index > 0 ) rollChatData.sound = null;
@@ -57,7 +58,7 @@ export default class EncounterSD extends Combat {
 			// Identify the combatant with the highest initiative
 			const firstCombatant = rollResults.reduce(function(prev, current) {
 				return (prev && prev.prelimInitiative > current.prelimInitiative)
-				? prev : current
+					? prev : current
 			}).combatant
 
 			// Only consider users who have a character fighting in the current combat
@@ -67,7 +68,7 @@ export default class EncounterSD extends Combat {
 			]
 
 			// Rearrange user list so that the first combatant's owner goes first, and the rest follow in a predetermined order
-			const firstIndex = (firstCombatant.actor.type === 'NPC') ?
+			const firstIndex = (firstCombatant.actor.type === "NPC") ?
 				activeUsers.findIndex((p) => p === game.users.activeGM) :
 				activeUsers.findIndex((p) => p?.character === firstCombatant.actor)
 			for (let i = 0; i < firstIndex; i++) {
@@ -101,9 +102,9 @@ export default class EncounterSD extends Combat {
 			// Post a reminder to the chat that clockwise initiative is active
 			let messageData = foundry.utils.mergeObject({
 				flavor: game.i18n.format("SHADOWDARK.chat.clockwise_initiative", {
-					name: ((firstCombatant.actor.type === 'NPC') ?
-					`${game.i18n.localize("USER.RoleGamemaster")}` :
-					firstCombatant.name)
+					name: ((firstCombatant.actor.type === "NPC") ?
+						`${game.i18n.localize("USER.RoleGamemaster")}` :
+						firstCombatant.name)
 				})
 			}, messageOptions);
 			await ChatMessage.implementation.create(messageData);
