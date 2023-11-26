@@ -58,14 +58,14 @@ SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} veckor kvar"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} år kvar"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Högerklick] Ta bort effekt"
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
-SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
-SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
-SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
-SHADOWDARK.apps.monster-importer.instruction2e: Feature
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
-SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.monster-importer.instruction1: 1. Kopiera monstertext från boken.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Klistra in text i den här rutan efter det monsterformat som visas i kärnreglerna. Lägg till en tom rad mellan varje förmåga.
+SHADOWDARK.apps.monster-importer.instruction2b: Monsternamn
+SHADOWDARK.apps.monster-importer.instruction2c: Beskrivande text
+SHADOWDARK.apps.monster-importer.instruction2d: Primärt statistikblock
+SHADOWDARK.apps.monster-importer.instruction2e: Egenskap
+SHADOWDARK.apps.monster-importer.instruction3: 3. Klicka på Importera Monster.
+SHADOWDARK.apps.monster-importer.title: Importera monster
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importera Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Besök Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generera din karaktär och spara som JSON.
@@ -171,13 +171,13 @@ SHADOWDARK.dialog.ability_check.title: Förmåge Check
 SHADOWDARK.dialog.ability_check.wis: Vishet Check
 SHADOWDARK.dialog.effect.choice.armor: Välj rustningstyp
 SHADOWDARK.dialog.effect.choice.attribute: Välj attribut
-SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
-SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
-SHADOWDARK.dialog.effect.choice.property: Choose Property
+SHADOWDARK.dialog.effect.choice.damage_die: Välj skadetärning
+SHADOWDARK.dialog.effect.choice.lightsource: Välj ljuskälla
+SHADOWDARK.dialog.effect.choice.property: Välj egenskap
 SHADOWDARK.dialog.effect.choice.spell: Välj besvärjelse
 SHADOWDARK.dialog.effect.choice.weapon_property: Välj vapenegenskap
 SHADOWDARK.dialog.effect.choice.weapon: Välj vapentyp
-SHADOWDARK.dialog.effect.choices.title: Effect Parameters
+SHADOWDARK.dialog.effect.choices.title: Effektparametrar
 SHADOWDARK.dialog.general.are_you_sure: Är du säker?
 SHADOWDARK.dialog.general.cancel: Avbryt
 SHADOWDARK.dialog.general.no: "Nej"
@@ -207,8 +207,8 @@ SHADOWDARK.dialog.item.use: Användning
 SHADOWDARK.dialog.light_source.pick_up.title: Välj aktör för att ge ljuskällan
 SHADOWDARK.dialog.roll_mode_label: Rull-läge
 SHADOWDARK.dialog.roll: Rulla
-SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
-SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VARNING: Denna besvärjelse är inte tillgänglig för klassen för karaktären, är du säker på att du vill lära dig den?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Bekräfta lärande av inkompatibel besvärjelse
 SHADOWDARK.dialog.select_ancestry.prompt: Välj Ursprung...
 SHADOWDARK.dialog.select_ancestry.title: Välj Ursprung
 SHADOWDARK.dialog.select_armor_property.prompt: Välj rustningsegenskap...
@@ -257,10 +257,10 @@ SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
 SHADOWDARK.form.section_header.spellcasting.label: Besvärjelser
 SHADOWDARK.form.section_header.talents.label: Talanger
-SHADOWDARK.hotbar.abilityLost: Ability currently lost
-SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
-SHADOWDARK.hotbar.noItemWithName: No such item found on character
-SHADOWDARK.hotbar.spellLost: Spell currently lost
+SHADOWDARK.hotbar.abilityLost: Förmåga inte tillgänglig
+SHADOWDARK.hotbar.moreThanOneItemWithName: Mer än ett objekt som hittats med det namnet
+SHADOWDARK.hotbar.noItemWithName: Inget sådant objekt hittades på karaktären
+SHADOWDARK.hotbar.spellLost: Besvärjelse inte tillgänglig
 SHADOWDARK.inventory.coins: Mynt
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
@@ -270,7 +270,7 @@ SHADOWDARK.inventory.label.slots: Platser
 SHADOWDARK.inventory.section.armor: Rustning
 SHADOWDARK.inventory.section.basic: Grundläggande Utrustning
 SHADOWDARK.inventory.section.potions: Brygder
-SHADOWDARK.inventory.section.scrolls: Scrolls
+SHADOWDARK.inventory.section.scrolls: Pergamentrullar
 SHADOWDARK.inventory.section.treasure: Skatter
 SHADOWDARK.inventory.section.wands: Trollspön
 SHADOWDARK.inventory.section.weapon: Vapen
@@ -295,7 +295,7 @@ SHADOWDARK.item_type.weapon: Vapen
 SHADOWDARK.item.armor_ac_modifier: AC Bonus
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Egenskap
-SHADOWDARK.item.armor_class: Armor Class
+SHADOWDARK.item.armor_class: Rustningsklass
 SHADOWDARK.item.armor.base_armor.chainmail: Ringbrynja
 SHADOWDARK.item.armor.base_armor.leather_armor: Läderrustning
 SHADOWDARK.item.armor.base_armor.plate_mail: Pansarrustning
@@ -350,7 +350,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus för vapenskad
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Vapenskadetärning D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Vapenskadetärningsförbättring från egenskap
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra skadetärning från egenskap
-SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Vapenskadetärningsförbättring från egenskap
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Vapenskadedubblare
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Vapenmästeri
 SHADOWDARK.item.effect.show-on-panel: Visa på sidopanelen
@@ -382,13 +382,13 @@ SHADOWDARK.item.name_from_spell.Scroll: Scroll av {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Trollstav från {spellName}
 SHADOWDARK.item.npc_attack_bonus: Attackbonus
 SHADOWDARK.item.npc_attack_count: Antal Attacker
-SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
+SHADOWDARK.item.npc_attack_damage_formula: Skadeformel
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties: Egenskaper
-SHADOWDARK.item.scroll.label: Scroll
+SHADOWDARK.item.scroll.label: Pergamentrulle
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_class: Besvärjelseklass
 SHADOWDARK.item.spell_duration: Varaktighet
@@ -458,7 +458,7 @@ SHADOWDARK.light-tracker.user_warning: En eller flera användare har inte valt e
 SHADOWDARK.macro.error.caught_error: "Makro '{macro}' misslyckades med följande fel: {error}"
 SHADOWDARK.macro.error.gm_role_required: Makro '{macro}' kräver att du har användarrollen 'Game Master'
 SHADOWDARK.macro.success: Makro '{macro}' slutfört framgångsrikt
-SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
+SHADOWDARK.macro.warn.create_item_requires_ownership: Du kan bara skapa makro knappar för ägda objekt
 SHADOWDARK.migration.begin_migration: Utför uppgraderingar för Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Applicerar uppdateringar för Shadowdark RPG v{version} schemat
 SHADOWDARK.migration.completed_migration: Uppgraderingar till Shadowdark RPG utförda
@@ -558,10 +558,10 @@ SHADOWDARK.sheet.npc.description_label: Beskrivning
 SHADOWDARK.sheet.npc.features_label: Funktioner
 SHADOWDARK.sheet.npc.movement_short: Flytta
 SHADOWDARK.sheet.npc.movement: Förflyttning
-SHADOWDARK.sheet.npc.specials_label: Special Attacks
+SHADOWDARK.sheet.npc.specials_label: Speciella Attacker
 SHADOWDARK.sheet.npc.tab.abilities: Förmågor
 SHADOWDARK.sheet.npc.tab.description: Beskrivning
-SHADOWDARK.sheet.npc.tab.spells: Spells
+SHADOWDARK.sheet.npc.tab.spells: Besvärjelser
 SHADOWDARK.sheet.player.active_effect_override: Detta värde ändras av en aktiv effekt och kan inte redigeras. Inaktivera effekten för att redigera den.
 SHADOWDARK.sheet.player.ancestry.label: Ursprung
 SHADOWDARK.sheet.player.ancestry.tooltip: Din karaktärs kulturella och ursprungs arv
@@ -602,8 +602,8 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Använd brygd
 SHADOWDARK.sheet.player.tooltip.use_scroll: Använd scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Använd trollspö
 SHADOWDARK.sheet.player.xp: XP
-SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
-SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard och Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Kärnregler"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
