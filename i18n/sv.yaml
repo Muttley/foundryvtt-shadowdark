@@ -92,7 +92,6 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Applicera sekundärskada
 SHADOWDARK.chat_card.context.apply_damage: Applicera Skada
 SHADOWDARK.chat_card.context.apply_healing_secondary: Applicera sekundärläkning
 SHADOWDARK.chat_card.context.apply_healing: Applicera läkning
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
@@ -528,8 +527,6 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Om markerad kommer
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårning
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Spåra ljuskällor realtid
-SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by User Management. All NPCs will act on the same initiative.",
-SHADOWDARK.settings.use_clockwise_initiative.name: "Use Clockwise Initiative",
 SHADOWDARK.settings.use_pulp_mode.hint: Visar tur-tokens som ett numeriskt värde istället för en kryssruta
 SHADOWDARK.settings.use_pulp_mode.name: Aktivera pulp-läge
 SHADOWDARK.sheet.abilities.label: Förmågor
