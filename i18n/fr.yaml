@@ -92,6 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Appliquer les dégâts seco
 SHADOWDARK.chat_card.context.apply_damage: Appliquer les dégâts
 SHADOWDARK.chat_card.context.apply_healing_secondary: Appliquer la guérison secondaire
 SHADOWDARK.chat_card.context.apply_healing: Appliquer les soins
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first.
 SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
 SHADOWDARK.chat.item_roll.double_numerical: Double une valeur numérique !
 SHADOWDARK.chat.item_roll.mishap: Jetez sur la table des mésaventures appropriée !
@@ -527,6 +528,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Rea
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by User Management. All NPCs will act on the same initiative.",
+SHADOWDARK.settings.use_clockwise_initiative.name: "Use Clockwise Initiative",
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities

@@ -92,6 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: 2차 피해 적용
 SHADOWDARK.chat_card.context.apply_damage: 피해 적용
 SHADOWDARK.chat_card.context.apply_healing_secondary: 2차 치유 적용
 SHADOWDARK.chat_card.context.apply_healing: 치유 적용
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first.
 SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
@@ -527,6 +528,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 체크하면 파�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈추기
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
+SHADOWDARK.settings.use_clockwise_initiative.hint: "If checked the combatant with the highest iniative will go first, and all other combatants will follow in a fixed order determined by User Management. All NPCs will act on the same initiative.",
+SHADOWDARK.settings.use_clockwise_initiative.name: "Use Clockwise Initiative",
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
