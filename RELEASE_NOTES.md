@@ -1,3 +1,8 @@
+## v1.x.x
+
+### Bugfixes
+* [#610] Thief backstab option now shows on the dialog box when using ranged weapons.
+
 ## v1.6.1
 
 ### Bugfixes
