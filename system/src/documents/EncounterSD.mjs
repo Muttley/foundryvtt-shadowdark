@@ -65,7 +65,7 @@ export default class EncounterSD extends Combat {
 			);
 
 			// Identify the combatant with the highest initiative
-			const firstCombatant = rollResults.reduce(function (prev, current) {
+			const firstCombatant = rollResults.reduce(function(prev, current) {
 				return (prev && prev.prelimInitiative > current.prelimInitiative)
 					? prev : current;
 			}).combatant;
