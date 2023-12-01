@@ -986,6 +986,8 @@ export default class ActorSD extends Actor {
 			//
 			await this.getExtraDamageDiceForWeapon(item, data);
 
+			data.canBackstab = await this.canBackstab();
+
 			if (item.system.type === "melee") {
 				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
@@ -1000,8 +1002,6 @@ export default class ActorSD extends Actor {
 				data.talentBonus = bonuses.meleeAttackBonus;
 				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
 				data.damageParts.push("@meleeDamageBonus");
-
-				data.canBackstab = await this.canBackstab();
 			}
 			else {
 				data.abilityBonus = this.abilityModifier("dex");
