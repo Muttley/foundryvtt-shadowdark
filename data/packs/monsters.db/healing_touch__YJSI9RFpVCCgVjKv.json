@@ -1,0 +1,25 @@
+{
+	"_id": "YJSI9RFpVCCgVjKv",
+	"_key": "!actors.items!k2YdCMGiq3USE8oE.YJSI9RFpVCCgVjKv",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Healing Touch",
+	"system": {
+		"dc": 11,
+		"description": "<p>Heal one creature within close for [[/r 1d4]] HP.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

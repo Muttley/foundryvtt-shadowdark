@@ -57,6 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} 초 남았습�
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} 주 남았습니다"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} 년 남았습니다"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[오른쪽 클릭] 효과 삭제"
+SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
+SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
+SHADOWDARK.apps.monster-importer.instruction2e: Feature
+SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Shadowdarkling에서 가져오기
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. shadowdarklings.net에 방문하세요.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 캐릭터를 만들고 JSON 파일로 저장하세요.
@@ -163,10 +172,13 @@ SHADOWDARK.dialog.ability_check.title: 능력 판정
 SHADOWDARK.dialog.ability_check.wis: 지혜 판정
 SHADOWDARK.dialog.effect.choice.armor: 방어구 유형 선택
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.lightSource: 광원 선택
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
+SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: 주문 선택
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: 무기 유형 선택
+SHADOWDARK.dialog.effect.choices.title: Effect Parameters
 SHADOWDARK.dialog.general.are_you_sure: 정말 진행하실 건가요?
 SHADOWDARK.dialog.general.cancel: 취소
 SHADOWDARK.dialog.general.no: "아니오"
@@ -196,6 +208,8 @@ SHADOWDARK.dialog.item.use: 사용
 SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
 SHADOWDARK.dialog.roll_mode_label: 굴림 모드
 SHADOWDARK.dialog.roll: 굴림
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
@@ -244,6 +258,10 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: 동전
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
@@ -333,6 +351,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 무기 명중 피해
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: 무기 피해 배수
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: 무기 숙달
 SHADOWDARK.item.effect.show-on-panel: 패널에서 보기
@@ -364,8 +383,7 @@ SHADOWDARK.item.name_from_spell.Scroll: '{spellName} 두루마리'
 SHADOWDARK.item.name_from_spell.Wand: '{spellName} 마법봉'
 SHADOWDARK.item.npc_attack_bonus: 명중 보너스
 SHADOWDARK.item.npc_attack_count: 공격 숫자
-SHADOWDARK.item.npc_attack_damage_bonus: 피해 보너스
-SHADOWDARK.item.npc_attack_damage: 피해 주사위
+SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: 특수
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
@@ -441,6 +459,7 @@ SHADOWDARK.light-tracker.user_warning: 한 명 이상의 유저가 캐릭터를 
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: 섀도다크 RPG 데이터를 업그레이드하고 있습니다.
 SHADOWDARK.migration.begin_schema: 섀도다크 RPG v{version} 를 업데이트하고 있습니다.
 SHADOWDARK.migration.completed_migration: 섀도다크 RPG 데이터 업그레이드가 완료되었습니다.
@@ -542,8 +561,10 @@ SHADOWDARK.sheet.npc.description_label: 설명
 SHADOWDARK.sheet.npc.features_label: 기능
 SHADOWDARK.sheet.npc.movement_short: 이동
 SHADOWDARK.sheet.npc.movement: 이동
+SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: 능력
 SHADOWDARK.sheet.npc.tab.description: 설명
+SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: 이것은 현재 활성화된 효과에 의해 변경된 것이며 수정할 수 없습니다. 수정하려면 해당 효과를 비활성화하세요.
 SHADOWDARK.sheet.player.ancestry.label: 선조
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
@@ -584,6 +605,12 @@ SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용
 SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
 SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
 SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
+SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
+SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
+SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: 성직자
 SHADOWDARK.spell_caster.wizard: 마법사
 SHADOWDARK.spell_duration.days: 일

@@ -1,14 +1,10 @@
 <div class="item-details">
 	<div class="npc-attack-details">
 		<div class="npc-attack-detail">
-			<label>{{localize 'SHADOWDARK.item.npc_attack_type'}}</label>
-			<select name="system.attackType">
-				{{selectOptions
-					config.NPC_ATTACK_TYPES
-					selected=system.attackType
-					localize=false
-				}}
-			</select>
+				<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
+				<p class="item-property-list npc-attack-ranges">
+					{{npcAttackRangesDisplay}}
+				</p>
 		</div>
 		<div
 			class="npc-attack-detail"
@@ -22,10 +18,13 @@
 					class="item-property"
 					style="grid-template-columns: 1fr;"
 				>
-					<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
-					<p class="item-property-list npc-attack-ranges">
-						{{npcAttackRangesDisplay}}
-					</p>
+					<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
+					<input
+						style="text-align: left;"
+						name="system.damage.special"
+						type="text"
+						value="{{item.system.damage.special}}"
+					/>
 				</div>
 			</div>
 		</div>
@@ -33,11 +32,11 @@
 	<div class="npc-attack-details">
 		<div class="npc-attack-detail">
 			<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
-			{{numberInput
-				system.attack.num
+			<input
 				name="system.attack.num"
-				placeholder="1"
-			}}
+				type="text"
+				value="{{item.system.attack.num}}"
+			/>
 		</div>
 		<div class="npc-attack-detail">
 			<label>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</label>
@@ -62,20 +61,6 @@
 				name="system.bonuses.critical.multiplier"
 				placeholder="2"
 			}}
-		</div>
-	</div>
-	<div class="npc-attack-details">
-		<div
-			class="npc-attack-detail"
-			style="grid-column: span 4;"
-		>
-			<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
-			<input
-				style="text-align: left;"
-				name="system.damage.special"
-				type="text"
-				value="{{item.system.damage.special}}"
-			/>
 		</div>
 	</div>
 </div>

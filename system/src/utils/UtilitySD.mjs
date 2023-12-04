@@ -53,29 +53,30 @@ export default class UtilitySD {
 	* @returns {Promise} - Promise of assigned macro or a notification
 	*/
 	static async createHotbarMacro(data, slot) {
-		// Preserve Default macro behaviour
-		if (data.type === "Macro") {
-			return game.user.assignHotbarMacro(await fromUuid(data.uuid), slot);
+		const itemData = await Item.implementation.fromDropData(data);
+
+		if (!itemData) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.macro.warn.create_item_requires_ownership")
+			);
 		}
 
-		// sanity checks
-		if (data.type !== "Item") return;
-		// if (data.uuid.indexOf("Item.") <= 0) return;
-		const item = await fromUuid(data.uuid);
-		console.log(item);
+		const macroData = {
+			command: `shadowdark.macro.rollItemMacro("${itemData.name}")`,
+			flags: {"shadowdark.itemMacro": true},
+			img: itemData.img,
+			name: itemData.name,
+			scope: "actor",
+			type: "script",
+		};
 
-		// Create the macro command
-		const command = `shadowdark.macro.rollItemMacro("${item.name}");`;
-		let macro = game.macros.contents.find( m => m.name === item.name && m.command === command );
-		if (!macro || macro.ownership[game.userId] === undefined) {
-			macro = await Macro.create({
-				name: item.name,
-				type: "script",
-				img: item.img,
-				command,
-				flags: { "shadowdark.itemMacro": true },
-			});
-		}
-		return game.user.assignHotbarMacro(macro, slot);
+		// Assign the macro to the hotbar
+		const macro =
+			game.macros.find(m => m.name === macroData.name
+				&& m.command === macroData.command
+				&& m.author.isSelf
+			) || (await Macro.create(macroData));
+
+		game.user.assignHotbarMacro(macro, slot);
 	}
 }

@@ -117,7 +117,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>An old suit of armor magically animated by a vengeful spirit.</em></p><p></p><p><strong>AC</strong> 15, <strong>HP</strong> 11, <strong>ATK</strong> 1 longsword +3 (1d8), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -1, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> C, <strong>LV</strong> 2</p><p></p><p><strong>Statue</strong>. When standing still, looks exactly like a suit of armor.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

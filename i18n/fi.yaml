@@ -57,6 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} sekuntia jälj
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} viikkoa jäljellä"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} vuotta jäljellä"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Oikea klikkaus] Poista efekti"
+SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
+SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
+SHADOWDARK.apps.monster-importer.instruction2e: Feature
+SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Tuo Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Navigoi shadowdarklings.net sivustolle.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generoi hahmosi ja tallenna jsonina.
@@ -163,10 +172,13 @@ SHADOWDARK.dialog.ability_check.title: Kyvykkyysheitto
 SHADOWDARK.dialog.ability_check.wis: Viisausheitto
 SHADOWDARK.dialog.effect.choice.armor: Valitse panssarin tyyppi
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.lightSource: Valitse valonlähde
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
+SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Valitse loitsu
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Valitse aseen tyyppi
+SHADOWDARK.dialog.effect.choices.title: Effect Parameters
 SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
@@ -196,6 +208,8 @@ SHADOWDARK.dialog.item.use: Käytä
 SHADOWDARK.dialog.light_source.pick_up.title: Valitse kenelle annetaan valonlähde
 SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
@@ -244,6 +258,10 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Kolikot
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
 SHADOWDARK.inventory.item.light_seconds_remaining: Alle minuutti jäljellä
@@ -333,6 +351,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Aseellisen vahinkohe
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Aseen vahinkokerroin
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Asetaituruus
 SHADOWDARK.item.effect.show-on-panel: Näytä paneelissa
@@ -364,8 +383,7 @@ SHADOWDARK.item.name_from_spell.Scroll: '{spellName} loitsukäärö'
 SHADOWDARK.item.name_from_spell.Wand: '{spellName} taikasauva'
 SHADOWDARK.item.npc_attack_bonus: Hyökkäysbonus
 SHADOWDARK.item.npc_attack_count: Hyökkäyksien lukumäärä
-SHADOWDARK.item.npc_attack_damage_bonus: Vahinkobonus
-SHADOWDARK.item.npc_attack_damage: Vahinkonoppa
+SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_type: Tyyppi
 SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
@@ -441,6 +459,7 @@ SHADOWDARK.light-tracker.user_warning: Yksi tai useampi käyttäjä ei ole valin
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: Suoritetaan datan päivityksiä Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Haetaan päivityksiä Shadowdark RPG skeemaan v{version}
 SHADOWDARK.migration.completed_migration: Suoritettu datan päivitys Shadowdark RPG
@@ -542,8 +561,10 @@ SHADOWDARK.sheet.npc.description_label: Kuvaus
 SHADOWDARK.sheet.npc.features_label: Ominaisuudet
 SHADOWDARK.sheet.npc.movement_short: Liike
 SHADOWDARK.sheet.npc.movement: Liikkumisnopeus
+SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus
+SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: Tähän arvoon vaikuttaa aktiivinen efekti, eikä sitä pystytä juuri nyt muokkamaan. Disabloi kyseinen efekti muokataksesi arvoa.
 SHADOWDARK.sheet.player.ancestry.label: Laji
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
@@ -584,6 +605,12 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Käytä rohto
 SHADOWDARK.sheet.player.tooltip.use_scroll: Käytä loitsukäärö
 SHADOWDARK.sheet.player.tooltip.use_wand: Käytä taikasauvaa
 SHADOWDARK.sheet.player.xp: Kokemuspisteet
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
+SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
+SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
+SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Pappi
 SHADOWDARK.spell_caster.wizard: Velho
 SHADOWDARK.spell_duration.days: Päivää

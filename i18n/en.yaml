@@ -385,7 +385,7 @@ SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
 SHADOWDARK.item.npc_attack_bonus: Attack Bonus
 SHADOWDARK.item.npc_attack_count: Num. Attacks
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
-SHADOWDARK.item.npc_attack_special: Special
+SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.potion.label: Potion
@@ -460,6 +460,7 @@ SHADOWDARK.light-tracker.user_warning: One or more users have not selected a cha
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
@@ -561,8 +562,10 @@ SHADOWDARK.sheet.npc.description_label: Description
 SHADOWDARK.sheet.npc.features_label: Features
 SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
+SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
+SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ancestry
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage

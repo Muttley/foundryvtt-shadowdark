@@ -118,7 +118,9 @@
 		"move": "near",
 		"moveNote": "Climb",
 		"notes": "<p><em>Chittering centipedes the size of horses with grasping tentacles.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 1 bite +3 (1d6) and 1 tentacles +3 (1d8 + toxin), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV </strong>4</p><p></p><p><strong>Toxin</strong>. DC 12 CON or paralyzed 1d4 rounds.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

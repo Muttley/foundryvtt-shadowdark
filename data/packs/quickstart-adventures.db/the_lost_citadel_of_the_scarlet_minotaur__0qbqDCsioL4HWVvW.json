@@ -8,7 +8,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679438600654,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817385653,
+				"modifiedTime": 1700150077258,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -28,7 +28,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679438637872,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077258,
+						"modifiedTime": 1700911477905,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -46,7 +46,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -194,7 +194,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>A commoner in worn clothes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">10, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">4, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 club +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">L, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">1</span></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -204,7 +206,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679430516046,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077552,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -255,7 +257,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679430591589,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077548,
+						"modifiedTime": 1700911478139,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -273,7 +275,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -307,7 +309,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679430663175,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077552,
+						"modifiedTime": 1700911478143,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -325,7 +327,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -472,7 +474,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>Ferocious bull-men with hooves and curved horns. They live in mazelike tunnels.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">14 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">34, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 greataxe +6 (1d10) and 1 horns +6 (1d12), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+4, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">7</span></p><p></p><p><span class=\"fontstyle2\"><strong>Charge.</strong> </span><span class=\"fontstyle3\">In place of attacks, move up to double near in a straight line and make 1 horn attack. If hit, x2 damage.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -482,7 +486,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077175,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -533,7 +537,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077170,
+						"modifiedTime": 1700911477822,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -551,7 +555,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -585,7 +589,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077175,
+						"modifiedTime": 1700911477826,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -603,7 +607,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -750,7 +754,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -760,7 +766,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077229,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -811,7 +817,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077226,
+						"modifiedTime": 1700911477875,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -829,7 +835,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -863,7 +869,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077229,
+						"modifiedTime": 1700911477879,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -881,7 +887,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -1028,7 +1034,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -1038,7 +1046,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077307,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -1089,7 +1097,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077303,
+						"modifiedTime": 1700911477949,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1107,7 +1115,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -1141,7 +1149,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077307,
+						"modifiedTime": 1700911477952,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1159,7 +1167,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -1306,7 +1314,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -1316,7 +1326,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077507,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -1367,7 +1377,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077502,
+						"modifiedTime": 1700911478102,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1385,7 +1395,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -1419,7 +1429,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077507,
+						"modifiedTime": 1700911478107,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1437,7 +1447,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -1584,7 +1594,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -1594,7 +1606,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077569,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -1645,7 +1657,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077565,
+						"modifiedTime": 1700911478156,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1663,7 +1675,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -1697,7 +1709,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077569,
+						"modifiedTime": 1700911478160,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1715,7 +1727,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -1862,7 +1874,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -1872,7 +1886,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679451902332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077621,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -1923,7 +1937,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679451967631,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077616,
+						"modifiedTime": 1700911478197,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1941,7 +1955,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -1975,7 +1989,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679452009254,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077621,
+						"modifiedTime": 1700911478200,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -1993,7 +2007,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "special",
 						"bonuses": {
@@ -2140,7 +2154,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -2150,7 +2166,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077315,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -2170,7 +2186,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077315,
+						"modifiedTime": 1700911477960,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -2188,7 +2204,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -2367,7 +2383,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -2377,7 +2395,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077287,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -2397,7 +2415,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077287,
+						"modifiedTime": 1700911477932,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -2415,7 +2433,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -2594,7 +2612,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -2604,7 +2624,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077179,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -2624,7 +2644,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077179,
+						"modifiedTime": 1700911477830,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -2642,7 +2662,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -2821,7 +2841,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -2831,7 +2853,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077148,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -2851,7 +2873,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077148,
+						"modifiedTime": 1700911477800,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -2869,7 +2891,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -3048,7 +3070,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -3058,7 +3082,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077412,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -3078,7 +3102,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077412,
+						"modifiedTime": 1700911478027,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -3096,7 +3120,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -3275,7 +3299,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -3285,7 +3311,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077292,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -3305,7 +3331,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077292,
+						"modifiedTime": 1700911477937,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -3323,7 +3349,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -3502,7 +3528,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -3512,7 +3540,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077311,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -3532,7 +3560,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077311,
+						"modifiedTime": 1700911477956,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -3550,7 +3578,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -3729,7 +3757,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -3739,7 +3769,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077133,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -3759,7 +3789,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077133,
+						"modifiedTime": 1700911477786,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -3777,7 +3807,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -3956,7 +3986,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -3966,7 +3998,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077328,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -3986,7 +4018,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077328,
+						"modifiedTime": 1700911477972,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4004,7 +4036,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4183,7 +4215,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -4193,7 +4227,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077138,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -4213,7 +4247,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077138,
+						"modifiedTime": 1700911477792,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4231,7 +4265,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4410,7 +4444,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -4420,7 +4456,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679440338081,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077421,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -4440,7 +4476,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440389949,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077421,
+						"modifiedTime": 1700911478035,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4458,7 +4494,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4605,7 +4641,9 @@
 				"move": "near",
 				"moveNote": "Fly",
 				"notes": "<p><span class=\"fontstyle0\"><em>A chittering cloud of iridescent, oval-shaped beetles.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +3 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (fly), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -4615,7 +4653,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077495,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -4666,7 +4704,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077486,
+						"modifiedTime": 1700911478090,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4684,7 +4722,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4718,7 +4756,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077495,
+						"modifiedTime": 1700911478096,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4736,7 +4774,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4883,7 +4921,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>A bleach-boned skeleton with red pinpoints of light in its eyes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">11, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Undead.</strong> </span><span class=\"fontstyle3\">Immune to morale checks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -4893,7 +4933,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077438,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -4944,7 +4984,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077432,
+						"modifiedTime": 1700911478047,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -4962,7 +5002,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -4996,7 +5036,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077438,
+						"modifiedTime": 1700911478052,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5014,7 +5054,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5161,7 +5201,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>A bleach-boned skeleton with red pinpoints of light in its eyes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">11, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Undead.</strong> </span><span class=\"fontstyle3\">Immune to morale checks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -5171,7 +5213,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077466,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -5222,7 +5264,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077459,
+						"modifiedTime": 1700911478065,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5240,7 +5282,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5274,7 +5316,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077466,
+						"modifiedTime": 1700911478071,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5292,7 +5334,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5439,7 +5481,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>A bleach-boned skeleton with red pinpoints of light in its eyes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">11, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Undead.</strong> </span><span class=\"fontstyle3\">Immune to morale checks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -5449,7 +5493,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679440605332,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077480,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -5500,7 +5544,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440802170,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077472,
+						"modifiedTime": 1700911478076,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5518,7 +5562,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5552,7 +5596,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679440823914,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077480,
+						"modifiedTime": 1700911478084,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5570,7 +5614,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5717,7 +5761,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><span class=\"fontstyle0\"><em>A bleach-boned skeleton with red pinpoints of light in its eyes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">11, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Undead.</strong> </span><span class=\"fontstyle3\">Immune to morale checks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -5727,7 +5773,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077059,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -5747,7 +5793,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077059,
+						"modifiedTime": 1700911477708,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5765,7 +5811,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -5944,7 +5990,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -5954,7 +6002,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077081,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -5974,7 +6022,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077081,
+						"modifiedTime": 1700911477737,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -5992,7 +6040,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -6171,7 +6219,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -6181,7 +6231,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077053,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -6201,7 +6251,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077053,
+						"modifiedTime": 1700911477700,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -6219,7 +6269,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -6398,7 +6448,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -6408,7 +6460,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077090,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -6428,7 +6480,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077090,
+						"modifiedTime": 1700911477746,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -6446,7 +6498,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -6625,7 +6677,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -6635,7 +6689,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077073,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -6655,7 +6709,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077073,
+						"modifiedTime": 1700911477727,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -6673,7 +6727,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -6852,7 +6906,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -6862,7 +6918,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077106,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -6882,7 +6938,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077106,
+						"modifiedTime": 1700911477762,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -6900,7 +6956,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -7079,7 +7135,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -7089,7 +7147,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077114,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -7109,7 +7167,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077114,
+						"modifiedTime": 1700911477770,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -7127,7 +7185,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -7306,7 +7364,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -7316,7 +7376,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077066,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -7336,7 +7396,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077066,
+						"modifiedTime": 1700911477718,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -7354,7 +7414,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -7533,7 +7593,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -7543,7 +7605,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1679420834561,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077122,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -7563,7 +7625,7 @@
 						"coreVersion": "11.314",
 						"createdTime": 1679420897312,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077122,
+						"modifiedTime": 1700911477778,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -7581,7 +7643,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -7760,7 +7822,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -7770,7 +7834,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1694384512172,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077010,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -7790,7 +7854,7 @@
 						"coreVersion": "11.314",
 						"createdTime": null,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077010,
+						"modifiedTime": 1700911477646,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -7807,7 +7871,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 1
+							"num": "1"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -7982,7 +8046,9 @@
 				"move": "near",
 				"moveNote": "",
 				"notes": "<p><em>An old suit of armor magically animated by a vengeful spirit.</em></p><p></p><p><strong>AC</strong> 15, <strong>HP</strong> 11, <strong>ATK</strong> 1 longsword +3 (1d8), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -1, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> C, <strong>LV</strong> 2</p><p></p><p><strong>Statue</strong>. When standing still, looks exactly like a suit of armor.</p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		},
@@ -7992,7 +8058,7 @@
 				"coreVersion": "11.314",
 				"createdTime": 1694384512172,
 				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361878,
+				"modifiedTime": 1700150077366,
 				"systemId": "shadowdark",
 				"systemVersion": "1.5.1"
 			},
@@ -8042,7 +8108,7 @@
 						"coreVersion": "11.314",
 						"createdTime": null,
 						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700150077366,
+						"modifiedTime": 1700911478002,
 						"systemId": "shadowdark",
 						"systemVersion": "1.5.1"
 					},
@@ -8059,7 +8125,7 @@
 					"sort": 0,
 					"system": {
 						"attack": {
-							"num": 2
+							"num": "2"
 						},
 						"attackType": "physical",
 						"bonuses": {
@@ -8204,7 +8270,9 @@
 				"move": "near",
 				"moveNote": "Climb",
 				"notes": "<p><span class=\"fontstyle0\"><em>An orange puddle of quivering slime.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">9, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">20, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 tentacle +3 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-4, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-4, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">4</span></p><p></p><p><span class=\"fontstyle2\"><strong>Split.</strong> </span><span class=\"fontstyle3\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
-				"spellcastingAbility": ""
+				"spellcastingAbility": "",
+				"spellcastingAttackNum": 0,
+				"spellcastingBonus": 0
 			},
 			"type": "NPC"
 		}

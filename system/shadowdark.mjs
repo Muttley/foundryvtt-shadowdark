@@ -70,7 +70,6 @@ Hooks.once("init", () => {
 	CONFIG.Actor.documentClass = documents.ActorSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
 	CONFIG.DiceSD = dice.DiceSD;
-	CONFIG.Combat.documentClass = documents.EncounterSD;
 
 	// TODO: V11 Compatability legacyTransferral
 	//   Update to use the designed interface as specified here, once implemented into core

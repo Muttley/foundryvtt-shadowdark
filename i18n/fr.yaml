@@ -57,6 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} secondes resta
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} semaines restantes"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} années restantes"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Clic droit] Supprimer l'effet"
+SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
+SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
+SHADOWDARK.apps.monster-importer.instruction2e: Feature
+SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importer Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Allez sur Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Générez votre personnage et enregistrez en JSON.
@@ -163,10 +172,13 @@ SHADOWDARK.dialog.ability_check.title: Test de Caractéristique
 SHADOWDARK.dialog.ability_check.wis: Test de Sagesse
 SHADOWDARK.dialog.effect.choice.armor: Choisir un type d'armure
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.lightSource: Choisissez la source de lumière
+SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
+SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Choisissez un sort
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Choisissez un type d'arme
+SHADOWDARK.dialog.effect.choices.title: Effect Parameters
 SHADOWDARK.dialog.general.are_you_sure: Êtes-vous sûr ?
 SHADOWDARK.dialog.general.cancel: Annuler
 SHADOWDARK.dialog.general.no: "Non"
@@ -196,6 +208,8 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Jet de dés
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
@@ -244,6 +258,10 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.hotbar.abilityLost: Ability currently lost
+SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noItemWithName: No such item found on character
+SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Pièces
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Moins de 1 Minute Restante
@@ -333,6 +351,7 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus aux Dégâts d
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Multiplicateur de Dégâts d'Arme
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Maîtrise des Armes
 SHADOWDARK.item.effect.show-on-panel: Show on panel
@@ -364,8 +383,7 @@ SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
 SHADOWDARK.item.npc_attack_bonus: Bonus d'Attaque
 SHADOWDARK.item.npc_attack_count: Nombre d'Attaques
-SHADOWDARK.item.npc_attack_damage_bonus: Bonus aux Dégâts
-SHADOWDARK.item.npc_attack_damage: Dé de Dégâts
+SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Spécial
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Nombre de Dés de Dégâts
@@ -441,6 +459,7 @@ SHADOWDARK.light-tracker.user_warning: One or more users have not selected a cha
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
+SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
 SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
 SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
@@ -542,8 +561,10 @@ SHADOWDARK.sheet.npc.description_label: Description
 SHADOWDARK.sheet.npc.features_label: Features
 SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
+SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
+SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ascendance
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
@@ -584,6 +605,12 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
 SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
 SHADOWDARK.sheet.player.xp: EXP
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
+SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
+SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
+SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Prêtre
 SHADOWDARK.spell_caster.wizard: Magicien
 SHADOWDARK.spell_duration.days: Jours

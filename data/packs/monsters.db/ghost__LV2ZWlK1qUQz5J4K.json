@@ -120,7 +120,9 @@
 		"move": "near",
 		"moveNote": "Fly",
 		"notes": "<p><em>A wavering spirit with a face contorted in rage or sadness.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 27, <strong>ATK</strong> 2 death touch +5 (1d8 + life drain) or 1 possess, <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +4, <strong>AL</strong> C, <strong>LV</strong> 6</p><p></p><p><strong>Greater Undead.</strong> Immune to morale checks. Only damaged by silver or magical sources.</p><p></p><p><strong>Life Drain.</strong> 1d4 CON damage. Death if reduced to 0 CON.</p><p></p><p><strong>Possess</strong>. One target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

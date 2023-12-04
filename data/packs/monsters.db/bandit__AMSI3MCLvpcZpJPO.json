@@ -120,7 +120,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>Hard-bitten rogue in tattered leathers and a hooded cloak.</em></p><p></p><p><strong>AC</strong> 13 (leather + shield), <strong>HP</strong> 4, <strong>ATK </strong>1 club +1 (1d4) or 1 shortbow (far) +0 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> C, <strong>LV</strong> 1</p><p></p><p><strong>Ambush</strong>. Deal an extra die of damage when undetected.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

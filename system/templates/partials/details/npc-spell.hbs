@@ -1,0 +1,22 @@
+<div class="details-description">
+	{{{description}}}
+</div>
+<footer class="details-footer">
+	<ul class="tags">
+		<li class="tag tag_primary tag_small">
+			DC
+			{{ item.system.dc }}
+		</li>
+		<li class="tag tag_secondary tag_small">
+			{{localize "SHADOWDARK.item.spell_duration"}}:
+			{{getSpellDuration
+				item.system.duration.type
+				item.system.duration.value
+			}}
+		</li>
+		<li class="tag tag_secondary tag_small">
+			{{localize "SHADOWDARK.item.spell_range"}}:
+			{{fromConfig "SPELL_RANGES" item.system.range }}
+		</li>
+	</ul>
+</footer>

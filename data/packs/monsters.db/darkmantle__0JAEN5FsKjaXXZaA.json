@@ -118,7 +118,9 @@
 		"move": "near",
 		"moveNote": "Fly",
 		"notes": "<p><em>A floating, black octopus with rows of red eyes and a webbed skirt of tentacles.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 4 <strong>ATK</strong> 1 bite +3 (1d4) or 1 darkness, <strong>MV </strong>near (fly), <strong>S</strong> -2, <strong>D </strong>+3, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p><p><strong>Darkness</strong>. Extinguish all light sources in near (magic 3:6).</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

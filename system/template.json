@@ -53,7 +53,9 @@
 			"darkAdapted": true,
 			"move": "near",
 			"moveNote": "",
-			"spellcastingAbility": ""
+			"spellcastingAbility": "",
+			"spellcastingBonus": 0,
+			"spellcastingAttackNum": 0
 		},
 		"Player": {
 			"templates": ["shared_details"],
@@ -152,6 +154,8 @@
 			"Gem",
 			"Language",
 			"NPC Attack",
+			"NPC Special Attack",
+			"NPC Spell",
 			"NPC Feature",
 			"Potion",
 			"Property",
@@ -345,7 +349,7 @@
 				"common"
 			],
 			"attack": {
-				"num": 1
+				"num": "1"
 			},
 			"attackType": "physical",
 			"bonuses": {
@@ -366,10 +370,28 @@
 				"close"
 			]
 		},
+		"NPC Special Attack": {
+			"templates": ["common"],
+			"attack": {
+				"num": "1"
+			},
+			"bonuses": {
+				"attackBonus":0
+			},
+			"ranges": []
+		},
 		"NPC Feature": {
-			"templates": [
-				"common"
-			]
+			"templates": ["common"]
+		},
+		"NPC Spell": {
+			"templates": ["common"],
+			"duration": {
+				"type": "",
+				"value": ""
+			},
+			"range": "",
+			"dc": 10,
+			"lost": false
 		},
 		"Potion": {
 			"templates": ["common", "magic", "physical"],

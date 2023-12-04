@@ -282,4 +282,13 @@
 			text-shadow: -0.2rem -0.2rem $secondary-color;
 		}
 	}
+	.spell-table {
+		border:0px;
+		margin:0px;
+	}
+	.spell-table td {
+		padding: 5px;
+		min-width: 50px;
+		font-size: 14px;
+	}
 }

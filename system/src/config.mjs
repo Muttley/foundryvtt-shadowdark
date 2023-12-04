@@ -72,6 +72,8 @@ SHADOWDARK.DEFAULTS = {
 		"Gem": "icons/commodities/gems/gem-faceted-navette-red.webp",
 		"Language": "icons/tools/scribal/ink-quill-pink.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+		"NPC Special Attack": "icons/magic/death/weapon-sword-skull-purple.webp",
+		"NPC Spell": "icons/magic/symbols/runes-star-magenta.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		"Potion": "icons/consumables/potions/bottle-corked-red.webp",
 		"Property": "icons/sundries/documents/document-torn-diagram-tan.webp",

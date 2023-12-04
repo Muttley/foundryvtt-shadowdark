@@ -118,7 +118,9 @@
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p><em>Gray-skinned, white-haired fey the size of halflings. They hunt for gems and rare cave flora.</em></p><p></p><p><strong>AC</strong> 14 (leather + shield), <strong>HP</strong> 14, <strong>ATK</strong> 1 pick +3 (1d6) or 1 dart (near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 3</p><p></p><p><strong>Stone Meld</strong>. 2/day, underground only. Turn invisible for 3 rounds.</p>",
-		"spellcastingAbility": ""
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
 	},
 	"type": "NPC"
 }

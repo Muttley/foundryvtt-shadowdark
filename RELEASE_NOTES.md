@@ -1,4 +1,17 @@
-## v.1.x.x
+## v1.6.2
+
+### Bugfixes
+* [#610] Thief backstab option now shows on the dialog box when using ranged weapons.
+
+## v1.6.1
+
+### Bugfixes
+* [#601] Fixed a bug that resulted in NPC damage always rolling as a critical hit. Updated monster importer to correctly add NPC roll formula.
+
+### Chores
+* Merged contributed Swedish translations from Crowdin
+
+## v.1.6.0
 
 ### Bugfixes
 * [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
@@ -6,19 +19,23 @@
 * [#581] Spellcasting ability used for learning spells hardcoded, this should be dynamic to support custom/homebrew classes
 * [#582] Grick token is named "Monster"
 * [#583] Regex parser in MonsterImporterSD.mjs can't handle attacks that have '+' in the name
+* [#597] Unable to drag Actor to hotbar and have it open character sheet
 
 ### Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
+* [#184] Added special attack type to NPCs. The monster importer now adds special attacks.
+* [#328] Added spellcasting abilities and spells to NPCs. The monster importer now adds spells.
 * [#566] Warn players when they're attempting to learn a spell that is from a different class
 * [#578] Standardize spellcasting iconography
 * [#585] Add predefined Talent effect that allows the addition of an extra damage die to weapons with specified tags (`weaponDamageExtraDieByProperty`)
 * [#586] Add predefined Talent effect that allows extra damage die for weapons with specified tags to be increased by category (`weaponDamageExtraDieImprovementByProperty`)
 * [#587] Add predefined Talent effect that allows damage die for weapons with specified tags to be increased by category (`weaponDamageDieImprovementByProperty`)
-
-*Many thanks to chrpow for contributing code included in this build*
+* [#596] Switch NPC number of attacks to text in order to support roll macros within attack strings
 
 ### Chores
 * Improvements to GitHub Workflows around building a release
+
+*Please welcome Prototype to the Shadowdark system development team*
 
 *Many thanks to chrpow for contributing code included in this build*
 

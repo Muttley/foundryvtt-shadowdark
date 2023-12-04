@@ -8,7 +8,7 @@
 	"name": "Club",
 	"system": {
 		"attack": {
-			"num": 1
+			"num": "1"
 		},
 		"attackType": "physical",
 		"bonuses": {
@@ -21,6 +21,7 @@
 			"damageBonus": 0
 		},
 		"damage": {
+			"numDice": 1,
 			"special": "",
 			"value": "1d4"
 		},

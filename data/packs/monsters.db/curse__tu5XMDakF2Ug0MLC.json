@@ -1,0 +1,27 @@
+{
+	"_id": "tu5XMDakF2Ug0MLC",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.tu5XMDakF2Ug0MLC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Curse",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": null
+		},
+		"description": "<p>DC 15 CON or target gains a magical curse, turning into a deep one over 2d10 days</p>",
+		"predefinedEffects": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"page": 0,
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}
