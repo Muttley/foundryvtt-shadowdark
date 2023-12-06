@@ -1,3 +1,10 @@
+
+## v1.X.X
+
+### Bugfixes
+
+ * [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions. 
+
 ## v1.6.2
 
 ### Bugfixes

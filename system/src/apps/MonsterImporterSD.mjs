@@ -380,7 +380,7 @@ export default class MonsterImporterSD extends FormApplication {
 				// Is the feature a description of a special attack?
 				let isSpecialAttack = false;
 				newActor.items.forEach(x => {
-					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
+					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name) {
 						x.update({"system.description": parsedFeatureObj.system.description});
 						isSpecialAttack = true;
 					}
