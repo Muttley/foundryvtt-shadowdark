@@ -92,6 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
 SHADOWDARK.chat_card.context.apply_damage: Apply Damage
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
@@ -527,6 +528,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset täm�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
