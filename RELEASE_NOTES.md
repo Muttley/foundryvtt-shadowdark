@@ -3,7 +3,16 @@
 
 ### Bugfixes
 
- * [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions. 
+* [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions.
+
+### Enhancements
+
+* [#590] Support optional "clockwise" initiative
+
+### Chores
+* Merged contributed new Spanish and French translations from Crowdin
+
+*Many thanks to chrpow for contributing code included in this build*
 
 ## v1.6.2
 
