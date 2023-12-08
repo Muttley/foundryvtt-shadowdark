@@ -204,22 +204,35 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 
+		// Take a chance at finding the range in the description
+		const potentialRange = parsedSpell[2].toLowerCase();
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
 
-		// Take a chance at finding the range in the description
-		if (descStr.includes(" self.")) {
-			spellObj.system.range = "self";
+		for (const range of ["self", "far", "near", "close"]) {
+			if (potentialRange.includes(range)) {
+				spellObj.system.range = range;
+				break;
+			}
 		}
-		else if (descStr.includes(" close.")) {
-			spellObj.system.range = "close";
+		if (!spellObj.system.range) {
+			for (const range of ["far", "near", "close"]) {
+				if (descStr.includes(`in ${range}`) || descStr.includes(`${range} range`)) {
+					spellObj.system.range = range;
+					break;
+				}
+			}
 		}
-		else if (descStr.includes(" near ") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
-			spellObj.system.range = "near";
+		if (!spellObj.system.range) {
+			for (const word of parsedSpell[4].toLowerCase().split(" ")) {
+				for (const range of ["self", "far", "near", "close"]) {
+					if (word.includes(`${range}.`) || word.includes(`${range},`) || word.includes(`${range}-`)) {
+						spellObj.system.range = range;
+						break;
+					}
+				}
+				if (spellObj.system.range) break;
+			}
 		}
-		else if (descStr.includes(" far ") || descStr.includes(" far.")) {
-			spellObj.system.range = "far";
-		}
-
 
 		// Take a chance at finding a round duration in the description
 		const roundsDuration = parsedSpell[4].match(/(\d|\dd\d) rounds?/);
