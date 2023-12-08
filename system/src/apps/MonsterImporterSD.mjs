@@ -168,7 +168,7 @@ export default class MonsterImporterSD extends FormApplication {
 			name: this._toTitleCase(featureStr[1]),
 			type: "NPC Feature",
 			system: {
-				description: `<p>${featureStr[2]}</p>`,
+				description: `<p>${featureStr[2].replace(/(\d+d\d+)/, "[[/r $&]]")}</p>`,
 				predefinedEffects: "",
 			},
 		};
@@ -195,7 +195,7 @@ export default class MonsterImporterSD extends FormApplication {
 			type: "NPC Spell",
 			system: {
 				dc: parsedSpell[3],
-				description: `<p>${parsedSpell[4]}</p>`,
+				description: `<p>${parsedSpell[4].replace(/(\d+d\d+)/, "[[/r $&]]")}</p>`,
 				range: "",
 				duration: {
 					type: "",
