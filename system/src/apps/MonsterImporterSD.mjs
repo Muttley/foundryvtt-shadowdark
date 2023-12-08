@@ -140,7 +140,7 @@ export default class MonsterImporterSD extends FormApplication {
 				attackObj.system.damage.value = diceStr[1] + diceStr[2];
 			}
 			else {
-				// TODO no way to set static damage: attackObj.system.damage.value = diceStr[1]
+				attackObj.system.damage = { value: diceStr[1] };
 			}
 
 			// parse remaining string parts for +dmg or feature
@@ -207,16 +207,16 @@ export default class MonsterImporterSD extends FormApplication {
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
 
 		// Take a chance at finding the range in the description
-		if (descStr.includes(" self.")) {
+		if (descStr.includes(" self.") || descStr.includes(" self,")) {
 			spellObj.system.range = "self";
 		}
-		else if (descStr.includes(" close.")) {
+		else if (descStr.includes(" close.") || descStr.includes(" close,")) {
 			spellObj.system.range = "close";
 		}
-		else if (descStr.includes(" near ") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
+		else if (descStr.includes(" near ") || descStr.includes(" near,") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
 			spellObj.system.range = "near";
 		}
-		else if (descStr.includes(" far ") || descStr.includes(" far.")) {
+		else if (descStr.includes(" far ") || descStr.includes(" far,") || descStr.includes(" far.")) {
 			spellObj.system.range = "far";
 		}
 
