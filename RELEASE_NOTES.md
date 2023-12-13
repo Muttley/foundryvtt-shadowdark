@@ -4,10 +4,13 @@
 ### Bugfixes
 
 * [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions.
+* [#622] Fixed issue when importing monsters with static damage values via monster importer.
 
 ### Enhancements
 
 * [#590] Support optional "clockwise" initiative
+* [#616] Improved detection of NPC spell range when importing via monster importer.
+* [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer.
 
 ### Chores
 * Merged contributed new Spanish and French translations from Crowdin
