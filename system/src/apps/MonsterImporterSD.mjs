@@ -140,7 +140,7 @@ export default class MonsterImporterSD extends FormApplication {
 				attackObj.system.damage.value = diceStr[1] + diceStr[2];
 			}
 			else {
-				// TODO no way to set static damage: attackObj.system.damage.value = diceStr[1]
+				attackObj.system.damage = { value: diceStr[1] };
 			}
 
 			// parse remaining string parts for +dmg or feature
