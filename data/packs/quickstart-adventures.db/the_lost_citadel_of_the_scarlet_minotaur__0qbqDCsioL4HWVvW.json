@@ -5,12 +5,12 @@
 		{
 			"_id": "asJ04sNrjrONdPYc",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679438600654,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077258,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448334,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -25,12 +25,12 @@
 				{
 					"_id": "3DtlC7L1PrMFyn7n",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679438637872,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477905,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448334,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -69,8 +69,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -80,6 +79,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -203,12 +203,12 @@
 		{
 			"_id": "XPNU79kJyse04pL3",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679430516046,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077552,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448580,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -223,12 +223,12 @@
 				{
 					"_id": "bHue9K4fSJkmUWNm",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679430570581,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135994,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448567,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -245,8 +245,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">In place of attacks, move up to double near in a straight line and make 1 horn attack. If hit, x2 damage.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -254,12 +253,12 @@
 				{
 					"_id": "ZOlhmdkqfQyyT6R3",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679430591589,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478139,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448574,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -297,8 +296,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -306,12 +304,12 @@
 				{
 					"_id": "Ag019spAbwwDbhSZ",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679430663175,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478143,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448580,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -349,8 +347,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -360,6 +357,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -483,12 +481,12 @@
 		{
 			"_id": "rh1ZgUTuHcwhlt4F",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077175,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448310,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -503,12 +501,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134456,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448300,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -525,8 +523,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -534,12 +531,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477822,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448305,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -577,8 +574,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -586,12 +582,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477826,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448310,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -629,8 +625,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -640,6 +635,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -763,12 +759,12 @@
 		{
 			"_id": "QvVJAySJZMTMnEZp",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077229,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448329,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -783,12 +779,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134969,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448322,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -805,8 +801,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -814,12 +809,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477875,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448325,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -857,8 +852,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -866,12 +860,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477879,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448329,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -909,8 +903,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -920,6 +913,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1043,12 +1037,12 @@
 		{
 			"_id": "82lFpkXeVpKnPWCQ",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077307,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448363,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -1063,12 +1057,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135022,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448356,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1085,8 +1079,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -1094,12 +1087,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477949,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448360,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1137,8 +1130,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1146,12 +1138,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477952,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448363,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1189,8 +1181,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1200,6 +1191,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1323,12 +1315,12 @@
 		{
 			"_id": "1WXEDbF6gSa4fQUQ",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077507,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448559,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -1343,12 +1335,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135981,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448542,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1365,8 +1357,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -1374,12 +1365,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478102,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448549,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1417,8 +1408,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1426,12 +1416,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478107,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448559,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1469,8 +1459,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1480,6 +1469,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1603,12 +1593,12 @@
 		{
 			"_id": "eVuNGaceV93M5whd",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077569,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448594,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -1623,12 +1613,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136048,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448585,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1645,8 +1635,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -1654,12 +1643,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478156,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448590,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1697,8 +1686,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1706,12 +1694,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478160,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448594,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1749,8 +1737,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1760,6 +1747,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1883,12 +1871,12 @@
 		{
 			"_id": "rok3i6Gy0RjoBgrq",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679451902332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077621,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448606,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -1903,12 +1891,12 @@
 				{
 					"_id": "e020Tn4yv7Aj604M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451949785,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062136064,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448598,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1925,8 +1913,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -1934,12 +1921,12 @@
 				{
 					"_id": "hhkN0EkQbBFGgJfr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679451967631,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478197,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448602,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -1977,8 +1964,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -1986,12 +1972,12 @@
 				{
 					"_id": "xURhvz16GozH0j8f",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679452009254,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478200,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448606,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2029,8 +2015,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -2040,6 +2025,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2163,12 +2149,12 @@
 		{
 			"_id": "mdRstp355OUOyY7r",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077315,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448384,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -2183,12 +2169,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477960,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448379,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2227,8 +2213,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -2236,12 +2221,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135059,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448384,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2258,8 +2243,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -2269,6 +2253,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2392,12 +2377,12 @@
 		{
 			"_id": "VIiW9qercPbgheGh",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077287,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448343,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -2412,12 +2397,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477932,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448339,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2456,8 +2441,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -2465,12 +2449,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134995,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448343,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2487,8 +2471,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -2498,6 +2481,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2621,12 +2605,12 @@
 		{
 			"_id": "PZ6Pt3fz7LRaEWqU",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077179,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448318,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -2641,12 +2625,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477830,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448314,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2685,8 +2669,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -2694,12 +2677,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134479,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448318,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2716,8 +2699,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -2727,6 +2709,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2850,12 +2833,12 @@
 		{
 			"_id": "XbO8sDu1ToDVVoh9",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077148,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448296,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -2870,12 +2853,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477800,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448293,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2914,8 +2897,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -2923,12 +2905,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134451,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448296,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -2945,8 +2927,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -2956,6 +2937,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3079,12 +3061,12 @@
 		{
 			"_id": "bERcM50HvKw0ZY6o",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077412,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448423,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -3099,12 +3081,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478027,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448418,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3143,8 +3125,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -3152,12 +3133,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135840,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448423,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3174,8 +3155,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -3185,6 +3165,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3308,12 +3289,12 @@
 		{
 			"_id": "CDxRc2pIwG7SK73E",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077292,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448351,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -3328,12 +3309,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477937,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448347,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3372,8 +3353,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -3381,12 +3361,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135010,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448351,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3403,8 +3383,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -3414,6 +3393,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3537,12 +3517,12 @@
 		{
 			"_id": "L91uEF4duAo8T5Eq",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077311,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448372,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -3557,12 +3537,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477956,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448367,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3601,8 +3581,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -3610,12 +3589,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135044,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448372,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3632,8 +3611,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -3643,6 +3621,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3766,12 +3745,12 @@
 		{
 			"_id": "4Ou1RViS2GnqvRh9",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077133,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448279,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -3786,12 +3765,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477786,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448271,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3830,8 +3809,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -3839,12 +3817,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134429,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448279,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -3861,8 +3839,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -3872,6 +3849,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3995,12 +3973,12 @@
 		{
 			"_id": "hoL50RSbMvRNrrcY",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448397,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -4015,12 +3993,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477972,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448390,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4059,8 +4037,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -4068,12 +4045,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135222,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448397,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4090,8 +4067,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -4101,6 +4077,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4224,12 +4201,12 @@
 		{
 			"_id": "Fg9DEqSk8eACtwOw",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077138,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448289,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -4244,12 +4221,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477792,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448284,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4288,8 +4265,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -4297,12 +4273,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134441,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448289,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4319,8 +4295,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -4330,6 +4305,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4453,12 +4429,12 @@
 		{
 			"_id": "9u8T17Lwd08OZ4j3",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679440338081,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077421,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448428,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -4473,12 +4449,12 @@
 				{
 					"_id": "85Q2R6Yq41pn5iqr",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440389949,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478035,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448428,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4516,8 +4492,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -4527,6 +4502,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4650,12 +4626,12 @@
 		{
 			"_id": "voyxtVdHyDIJZl3p",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077495,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448534,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -4670,12 +4646,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135960,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448517,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4692,8 +4668,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -4701,12 +4676,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478090,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448526,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4744,8 +4719,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -4753,12 +4727,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478096,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448534,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4796,8 +4770,7 @@
 							"far"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -4807,6 +4780,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4930,12 +4904,12 @@
 		{
 			"_id": "IjMq3PQ3heab2hRw",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077438,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448450,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -4950,12 +4924,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135853,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448435,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -4972,8 +4946,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -4981,12 +4954,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478047,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448443,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5024,8 +4997,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5033,12 +5005,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478052,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448450,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5076,8 +5048,7 @@
 							"far"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5087,6 +5058,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5210,12 +5182,12 @@
 		{
 			"_id": "eDYjwoluLnyG54lb",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077466,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448487,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -5230,12 +5202,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135876,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448459,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5252,8 +5224,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -5261,12 +5232,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478065,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448481,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5304,8 +5275,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5313,12 +5283,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478071,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448487,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5356,8 +5326,7 @@
 							"far"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5367,6 +5336,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5490,12 +5460,12 @@
 		{
 			"_id": "hKMfJWF0yyMNRmJI",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679440605332,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077480,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448510,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -5510,12 +5480,12 @@
 				{
 					"_id": "fJL9lcfORjpzaBCe",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679440779996,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135938,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448494,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5532,8 +5502,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">Immune to morale checks.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -5541,12 +5510,12 @@
 				{
 					"_id": "D2ICcZFerw1x6D7y",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440802170,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478076,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448502,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5584,8 +5553,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5593,12 +5561,12 @@
 				{
 					"_id": "9oxZTYPcCbLq6SV9",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679440823914,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478084,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448510,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5636,8 +5604,7 @@
 							"far"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5647,6 +5614,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5770,12 +5738,12 @@
 		{
 			"_id": "OJmaz8DNQExPoRc8",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077059,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448147,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -5790,12 +5758,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477708,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448134,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5834,8 +5802,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -5843,12 +5810,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134243,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448147,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -5865,8 +5832,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -5876,6 +5842,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5999,12 +5966,12 @@
 		{
 			"_id": "gxJTvT1DUjeYXx55",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077081,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448200,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -6019,12 +5986,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477737,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448192,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6063,8 +6030,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -6072,12 +6038,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134320,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448200,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6094,8 +6060,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -6105,6 +6070,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6228,12 +6194,12 @@
 		{
 			"_id": "Dn8DLwdUX6tBdmer",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077053,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448122,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -6248,12 +6214,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477700,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448028,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6292,8 +6258,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -6301,12 +6266,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134229,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448122,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6323,8 +6288,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -6334,6 +6298,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6457,12 +6422,12 @@
 		{
 			"_id": "h3jqEBdI4pkzMvvH",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077090,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448220,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -6477,12 +6442,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477746,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448210,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6521,8 +6486,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -6530,12 +6494,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134333,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448220,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6552,8 +6516,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -6563,6 +6526,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6686,12 +6650,12 @@
 		{
 			"_id": "WDbEb6cR5KhCYXRj",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077073,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448183,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -6706,12 +6670,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477727,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448174,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6750,8 +6714,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -6759,12 +6722,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134308,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448183,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6781,8 +6744,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -6792,6 +6754,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6915,12 +6878,12 @@
 		{
 			"_id": "kvFoZywS76i6ZRt9",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077106,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448236,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -6935,12 +6898,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477762,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448228,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -6979,8 +6942,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -6988,12 +6950,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134347,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448236,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7010,8 +6972,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -7021,6 +6982,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7144,12 +7106,12 @@
 		{
 			"_id": "nx8Kopnnw1XcEEEA",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077114,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448250,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -7164,12 +7126,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477770,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448243,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7208,8 +7170,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -7217,12 +7178,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134359,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448250,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7239,8 +7200,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -7250,6 +7210,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7373,12 +7334,12 @@
 		{
 			"_id": "TxpDZnybxjkNIWAo",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077066,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448165,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -7393,12 +7354,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477718,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448156,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7437,8 +7398,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -7446,12 +7406,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134294,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448165,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7468,8 +7428,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -7479,6 +7438,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7602,12 +7562,12 @@
 		{
 			"_id": "uSNyukMWUS52MqNM",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679420834561,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077122,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448265,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -7622,12 +7582,12 @@
 				{
 					"_id": "4vlFF9RY0RInh7uU",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": 1679420897312,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477778,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448257,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7666,8 +7626,7 @@
 							"near"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -7675,12 +7634,12 @@
 				{
 					"_id": "S9otkKlpEjmVLs8M",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": 1679451329301,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134419,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448265,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7697,8 +7656,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle2\">+1 damage with melee weapons (included).</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -7708,6 +7666,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7831,12 +7790,12 @@
 		{
 			"_id": "wYDtLvGDkSJ4QRtW",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077010,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768447953,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -7851,12 +7810,12 @@
 				{
 					"_id": "KiuWCB6C6OcmOl0g",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": null,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911477646,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768447890,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7893,8 +7852,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -7902,12 +7860,12 @@
 				{
 					"_id": "ViAocDndtudFnp38",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": null,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062134212,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768447953,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -7923,8 +7881,7 @@
 					"system": {
 						"description": "<p>When standing still, looks exactly like a suit of armor.</p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -7934,6 +7891,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -8055,12 +8013,12 @@
 		{
 			"_id": "S5x2m9KQEN2HoPMp",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694384512172,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1700150077366,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448411,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -8075,12 +8033,12 @@
 				{
 					"_id": "RdRiN1ZsfjQf8leu",
 					"_stats": {
-						"coreVersion": "11.308",
+						"coreVersion": "11.315",
 						"createdTime": null,
-						"lastModifiedBy": "mu8H7NbWc0seFWcA",
-						"modifiedTime": 1695062135623,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448402,
 						"systemId": "shadowdark",
-						"systemVersion": "1.3.7"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -8096,8 +8054,7 @@
 					"system": {
 						"description": "<p><span class=\"fontstyle0\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span></p>",
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Feature"
@@ -8105,12 +8062,12 @@
 				{
 					"_id": "evZXcoBxPaeka6UA",
 					"_stats": {
-						"coreVersion": "11.314",
+						"coreVersion": "11.315",
 						"createdTime": null,
-						"lastModifiedBy": "6zjemStY2KktUVjE",
-						"modifiedTime": 1700911478002,
+						"lastModifiedBy": "PlRkeViQNpI8qZhv",
+						"modifiedTime": 1702768448411,
 						"systemId": "shadowdark",
-						"systemVersion": "1.5.1"
+						"systemVersion": "1.6.2"
 					},
 					"effects": [
 					],
@@ -8147,8 +8104,7 @@
 							"close"
 						],
 						"source": {
-							"page": 0,
-							"title": ""
+							"title": "quickstart"
 						}
 					},
 					"type": "NPC Attack"
@@ -8158,6 +8114,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -8288,12 +8245,12 @@
 		{
 			"_id": "bPrm5lY7z87YrtFK",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8311,12 +8268,12 @@
 		{
 			"_id": "Mv4mtkqbmowIBW0i",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8397,12 +8354,12 @@
 		{
 			"_id": "G1kHYFAVnBCBQlS2",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8740,12 +8697,12 @@
 		{
 			"_id": "jaPLgbwC8oVu8EmT",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694385630331,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"description": "",
@@ -8803,12 +8760,12 @@
 		{
 			"_id": "63oECpAgouGrjOvX",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391681709,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"flags": {
@@ -8822,12 +8779,12 @@
 		{
 			"_id": "GXwxJUMvopn2XeX3",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1697571052672,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362361,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338436,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"color": "#453249",
 			"flags": {
@@ -8847,12 +8804,12 @@
 		{
 			"_id": "gtfx2i7YimBMi2bo",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679272614405,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448612,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 				{
@@ -8958,6 +8915,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -9007,8 +8965,7 @@
 					"slots_used": 2
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"type": "melee",
@@ -9019,12 +8976,12 @@
 		{
 			"_id": "r893z0hIf4LSdPs3",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679586455677,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448622,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9036,6 +8993,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9071,8 +9029,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9082,12 +9039,12 @@
 		{
 			"_id": "7unKOF9uy9ECqkEy",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448618,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9099,6 +9056,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9125,8 +9083,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9135,12 +9092,12 @@
 		{
 			"_id": "Jo88wNZQdCtvuuuS",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448620,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9153,6 +9110,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -9187,8 +9145,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": false
@@ -9198,12 +9155,12 @@
 		{
 			"_id": "TggK5foyVW9RXoHw",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448610,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9215,6 +9172,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9250,8 +9208,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9261,12 +9218,12 @@
 		{
 			"_id": "U3dML6TSDUKJXBUh",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448617,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9278,6 +9235,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9313,8 +9271,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9324,12 +9281,12 @@
 		{
 			"_id": "iW6GTpg33QYMca8k",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448617,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9341,6 +9298,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9376,8 +9334,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9387,12 +9344,12 @@
 		{
 			"_id": "WKk0GVD1KHrI6fav",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679586142856,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448619,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9407,6 +9364,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9433,8 +9391,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9443,12 +9400,12 @@
 		{
 			"_id": "BjWjRaMBbsv50AjU",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679589244673,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448621,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9460,6 +9417,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9495,8 +9453,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9506,12 +9463,12 @@
 		{
 			"_id": "ToSK7skdC9OPzmwZ",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448615,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9523,6 +9480,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9549,8 +9507,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9559,12 +9516,12 @@
 		{
 			"_id": "hiVLFYBR666Zm29e",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448616,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9576,6 +9533,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9602,8 +9560,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9612,12 +9569,12 @@
 		{
 			"_id": "JpRmSUeNd7qwnXZa",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679272510579,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448611,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 				{
@@ -9692,6 +9649,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -9740,8 +9698,7 @@
 					"slots_used": 2
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"type": "melee",
@@ -9752,12 +9709,12 @@
 		{
 			"_id": "6NfZTinsbZBY5FVN",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448614,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9769,6 +9726,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9795,8 +9753,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9805,12 +9762,12 @@
 		{
 			"_id": "Xc1NkStj6yilbnSa",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448615,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9822,6 +9779,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9848,8 +9806,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -9858,12 +9815,12 @@
 		{
 			"_id": "O98T6HjIZ9nrajO4",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679271886436,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448619,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9879,6 +9836,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -9913,8 +9871,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": false
@@ -9924,12 +9881,12 @@
 		{
 			"_id": "R9rWEWg4biAMlj0U",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679664658053,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448616,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -9941,6 +9898,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -9976,8 +9934,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -9987,12 +9944,12 @@
 		{
 			"_id": "vykb09m5y4gCdVIS",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679590101123,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448616,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10004,6 +9961,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10030,8 +9988,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -10040,12 +9997,12 @@
 		{
 			"_id": "VO8hdwr2ulhRwwW0",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679666340876,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448621,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10057,6 +10014,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10092,8 +10050,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10103,12 +10060,12 @@
 		{
 			"_id": "qQfrScSGMEBGHCFZ",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679272460086,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448620,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10124,6 +10081,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -10158,8 +10116,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10169,12 +10126,12 @@
 		{
 			"_id": "0HvhZP8EOXqyT3p2",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1678531929118,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448622,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10189,6 +10146,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10237,8 +10195,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"type": "melee",
@@ -10249,12 +10206,12 @@
 		{
 			"_id": "yv6v0HqiSsnAGOHC",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1678531204277,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448620,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10269,6 +10226,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10305,8 +10263,7 @@
 					"slots_used": 0
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -10315,12 +10272,12 @@
 		{
 			"_id": "a69T3oP2oVH2yqMn",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679672838613,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448622,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10332,6 +10289,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10367,8 +10325,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10378,12 +10335,12 @@
 		{
 			"_id": "cY0UIbpokdT448Pw",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679273406052,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448623,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 				{
@@ -10458,6 +10415,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -10506,8 +10464,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"type": "melee",
@@ -10518,12 +10475,12 @@
 		{
 			"_id": "xTOy6PVB5iu1asFa",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679680311866,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448614,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10535,6 +10492,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10570,8 +10528,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10581,12 +10538,12 @@
 		{
 			"_id": "ip1i9MpeJeyf7ayu",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679270752650,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448614,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10602,6 +10559,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -10635,8 +10593,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false
 			},
@@ -10645,12 +10602,12 @@
 		{
 			"_id": "i3gSIEVGxXhlUkdn",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679272766601,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448624,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10663,6 +10620,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -10710,8 +10668,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"type": "melee",
@@ -10722,12 +10679,12 @@
 		{
 			"_id": "cFi2Wtbwz3qkiJMx",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679680732589,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448618,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10739,6 +10696,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10774,8 +10732,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10785,12 +10742,12 @@
 		{
 			"_id": "C4Nwo8zX0SgvD0CN",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679680844732,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817361971,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702768448623,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"effects": [
 			],
@@ -10802,6 +10759,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10837,8 +10795,7 @@
 					"slots_used": 1
 				},
 				"source": {
-					"page": 0,
-					"title": ""
+					"title": "quickstart"
 				},
 				"stashed": false,
 				"treasure": true
@@ -10850,12 +10807,12 @@
 		{
 			"_id": "Jd3mOMTNeoHyJ0o9",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679223943622,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362014,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338084,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"flags": {
 				"core": {
@@ -10868,6 +10825,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -12109,14 +12067,14 @@
 		{
 			"_id": "b4peWtS82m3su5q1",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1697571066566,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362351,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338426,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
-			"author": "6zjemStY2KktUVjE",
+			"author": "PlRkeViQNpI8qZhv",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> Beastman named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -12129,6 +12087,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0
 			},
 			"scope": "global",
@@ -12138,14 +12097,14 @@
 		{
 			"_id": "oYUJG4g7naduZNeb",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1697571068616,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362351,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338426,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
-			"author": "6zjemStY2KktUVjE",
+			"author": "PlRkeViQNpI8qZhv",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> Ettercap named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -12158,6 +12117,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0
 			},
 			"scope": "global",
@@ -12167,14 +12127,14 @@
 		{
 			"_id": "uQOjVmE0co1U8yws",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1697571070504,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362351,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338426,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
-			"author": "6zjemStY2KktUVjE",
+			"author": "PlRkeViQNpI8qZhv",
 			"command": "// Macro to draw for encounter in The Lost Citadel and only show it to the GM.;\n\nconst tableID = game.tables.find(o => o.name === \"The Lost Citadel: Random Encounter Check\")._id;\nconst table = await game.tables.get(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
 			"flags": {
 				"core": {
@@ -12187,6 +12147,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0
 			},
 			"scope": "global",
@@ -12201,12 +12162,12 @@
 		{
 			"_id": "meMau7PRNLPMhWtA",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1679223110131,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362152,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338219,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"active": false,
 			"background": {
@@ -13372,6 +13333,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
@@ -36479,12 +36441,12 @@
 		{
 			"_id": "8ZWuW34EAMWVBpz5",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36500,6 +36462,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -36672,12 +36635,12 @@
 		{
 			"_id": "9PJHNS0mKp3wQ0h8",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36693,6 +36656,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -36833,12 +36797,12 @@
 		{
 			"_id": "IkysQwv0TS6SripN",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -36854,6 +36818,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37026,12 +36991,12 @@
 		{
 			"_id": "K3VLbRUdyBC65MOL",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37047,6 +37012,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37219,12 +37185,12 @@
 		{
 			"_id": "VKT5qBn60tiWZWXL",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37240,6 +37206,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37412,12 +37379,12 @@
 		{
 			"_id": "iFdrtN3kJk5yth9S",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37433,6 +37400,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37541,12 +37509,12 @@
 		{
 			"_id": "jDOXbODgNkT69ii5",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37562,6 +37530,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37734,12 +37703,12 @@
 		{
 			"_id": "l251PEOpGq6Ss7Z9",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37755,6 +37724,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
@@ -37799,12 +37769,12 @@
 		{
 			"_id": "m7Xv2zw1KGYxsuJG",
 			"_stats": {
-				"coreVersion": "11.314",
+				"coreVersion": "11.315",
 				"createdTime": 1694391666663,
-				"lastModifiedBy": "6zjemStY2KktUVjE",
-				"modifiedTime": 1699817362328,
+				"lastModifiedBy": "PlRkeViQNpI8qZhv",
+				"modifiedTime": 1702767338394,
 				"systemId": "shadowdark",
-				"systemVersion": "1.5.1"
+				"systemVersion": "1.6.2"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -37820,6 +37790,7 @@
 			"ownership": {
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
+				"PlRkeViQNpI8qZhv": 3,
 				"default": 0,
 				"mu8H7NbWc0seFWcA": 3,
 				"s0MPj2qFjeG6MP1N": 3
