@@ -8,7 +8,6 @@ export default class Update_231216_1 extends UpdateBaseSD {
 
 		const updateData = {
 			"system.source.-=page": null,
-			"system.source.title": "quickstart",
 		};
 
 		return updateData;
