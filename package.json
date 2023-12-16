@@ -5,6 +5,7 @@
 		"build": "gulp build",
 		"clean": "gulp clean",
 		"css": "gulp compileCss",
+		"export": "./utils/smelter.mjs unpack -i leveldb -s system/packs -d ./data/packs",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
 		"packs": "gulp compilePacks",
