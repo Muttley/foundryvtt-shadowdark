@@ -1,5 +1,5 @@
 
-# v1.X.X
+# v1.7.0
 
 ## Bugfixes
 
@@ -36,7 +36,9 @@ Module creators can add their own custom source names which will become availabl
 
 Where `<source_uuid>` is a unique identifier for your custom source, and `<source_name>` is the human readable/display name of your source.
 
-*Many thanks to chrpow for contributing code included in this build*
+## Acknowledgements
+
+Many thanks to *chrpow* for contributing code included in this build
 
 # v1.6.2
 
