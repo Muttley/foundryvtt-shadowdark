@@ -254,6 +254,7 @@ SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.class_ability.no-uses-remaining: Inga användningar kvar
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.error.general.no_character_class: Inget yrke har valts
+SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
@@ -391,6 +392,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties: Egenskaper
 SHADOWDARK.item.scroll.label: Pergamentrulle
+SHADOWDARK.item.source: Source
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_class: Besvärjelseklass
 SHADOWDARK.item.spell_duration: Varaktighet
@@ -511,12 +513,24 @@ SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare fel
 SHADOWDARK.settings.debugEnabled.name: Aktivera/inaktivera felsökning
 SHADOWDARK.settings.effect_panel.show_passive.hint: Om markerad kommer effektpanelen att visa talanger och andra passiva effekter
 SHADOWDARK.settings.effect_panel.show_passive.name: Visa passiva effekter i panelen
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Konfigurera vilken moduls konst ska användas
 SHADOWDARK.settings.module_art.label: Konfigurera konst
 SHADOWDARK.settings.module_art.name: Modulkonst
 SHADOWDARK.settings.module_art.save: Spara Ändringar
 SHADOWDARK.settings.roll_npc_hp.hint: Rulla kroppspoäng automatiskt för SLP när de läggs till i en scen
 SHADOWDARK.settings.roll_npc_hp.name: Auto-rulla kroppspoäng för SLP
+SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.name: Schema Version
+SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+SHADOWDARK.settings.source_filter.name: Source Filter
+SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.save_button: Save Configuration
+SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.title: Book Source Filters
 SHADOWDARK.settings.track_light_sources.hint: Om markerad kommer systemet att spåra och uppdatera den tid som återstår på alla aktiva ljuskällor.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Om markerade ljuskällor som tillhör inaktiva (inte inloggade) användare, kommer tiden fortfarande att spåras
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Spåra inaktiva användares ljuskällor
@@ -555,6 +569,7 @@ SHADOWDARK.sheet.item.tab.details: Detaljer
 SHADOWDARK.sheet.item.tab.effects: Effekt
 SHADOWDARK.sheet.item.tab.light: Ljus
 SHADOWDARK.sheet.item.tab.magic: Magi
+SHADOWDARK.sheet.item.tab.source: Source
 SHADOWDARK.sheet.item.tab.titles: Titlar
 SHADOWDARK.sheet.npc.attacks_label: Attacker
 SHADOWDARK.sheet.npc.dark_adapted: Mörkanpassad
