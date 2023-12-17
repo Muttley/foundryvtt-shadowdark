@@ -2,13 +2,13 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "1.6.2",
+	"version": "1.7.0",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11"
 	},
 	"flags": {
-		"schemaVersion": "231125.1"
+		"schemaVersion": "231216.1"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-shadowdark/master/system/system.json",
@@ -121,6 +121,15 @@
 			"system": "shadowdark",
 			"path": "packs/deities",
 			"type": "Item",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "documentation",
+			"label": "Documentation",
+			"system": "shadowdark",
+			"path": "packs/documentation",
+			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
 		},
@@ -249,6 +258,7 @@
 			"color": "#22252b",
 			"packs": [
 				"conditions",
+				"documentation",
 				"gear",
 				"macros",
 				"magic-items",

@@ -1,4 +1,40 @@
 export default class UtilitySD {
+
+	/* Create a roll Macro from an Item dropped on the hotbar.
+	 * Get an existing item macro if one exists, otherwise create a new one.
+	 *
+	 * @param {object} data - The dropped data
+	 * @param {number} slot - The hotbar slot to use
+	 * @returns {Promise} - Promise of assigned macro or a notification
+	 */
+	static async createHotbarMacro(data, slot) {
+		const itemData = await Item.implementation.fromDropData(data);
+
+		if (!itemData) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.macro.warn.create_item_requires_ownership")
+			);
+		}
+
+		const macroData = {
+			command: `shadowdark.macro.rollItemMacro("${itemData.name}")`,
+			flags: {"shadowdark.itemMacro": true},
+			img: itemData.img,
+			name: itemData.name,
+			scope: "actor",
+			type: "script",
+		};
+
+		// Assign the macro to the hotbar
+		const macro =
+			game.macros.find(m => m.name === macroData.name
+				&& m.command === macroData.command
+				&& m.author.isSelf
+			) || (await Macro.create(macroData));
+
+		game.user.assignHotbarMacro(macro, slot);
+	}
+
 	/**
 	 * Creates de-duplicated lists of Selected and Unselected Items.
 	 *
@@ -45,38 +81,23 @@ export default class UtilitySD {
 		return itemList;
 	}
 
-	/* Create a roll Macro from an Item dropped on the hotbar.
-	* Get an existing item macro if one exists, otherwise create a new one.
-	*
-	* @param {object} data - The dropped data
-	* @param {number} slot - The hotbar slot to use
-	* @returns {Promise} - Promise of assigned macro or a notification
-	*/
-	static async createHotbarMacro(data, slot) {
-		const itemData = await Item.implementation.fromDropData(data);
+	// If this is a new release, show the release notes to the GM the first time
+	// they login
+	static async showNewReleaseNotes() {
+		if (game.user.isGM) {
+			const savedVersion = game.settings.get("shadowdark", "systemVersion");
+			const systemVersion = game.system.version;
 
-		if (!itemData) {
-			return ui.notifications.warn(
-				game.i18n.localize("SHADOWDARK.macro.warn.create_item_requires_ownership")
-			);
+			if (systemVersion !== savedVersion) {
+				Hotbar.toggleDocumentSheet(
+					CONFIG.SHADOWDARK.JOURNAL_UUIDS.RELEASE_NOTES
+				);
+
+				game.settings.set(
+					"shadowdark", "systemVersion",
+					systemVersion
+				);
+			}
 		}
-
-		const macroData = {
-			command: `shadowdark.macro.rollItemMacro("${itemData.name}")`,
-			flags: {"shadowdark.itemMacro": true},
-			img: itemData.img,
-			name: itemData.name,
-			scope: "actor",
-			type: "script",
-		};
-
-		// Assign the macro to the hotbar
-		const macro =
-			game.macros.find(m => m.name === macroData.name
-				&& m.command === macroData.command
-				&& m.author.isSelf
-			) || (await Macro.create(macroData));
-
-		game.user.assignHotbarMacro(macro, slot);
 	}
 }

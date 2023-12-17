@@ -70,6 +70,7 @@ Hooks.once("init", () => {
 	CONFIG.Actor.documentClass = documents.ActorSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
 	CONFIG.DiceSD = dice.DiceSD;
+	CONFIG.Combat.documentClass = documents.EncounterSD;
 
 	// TODO: V11 Compatability legacyTransferral
 	//   Update to use the designed interface as specified here, once implemented into core
@@ -127,6 +128,8 @@ Hooks.on("ready", async () => {
 	ToursSD.register();
 
 	chat.messages.welcomeMessage();
+
+	UtilitySD.showNewReleaseNotes();
 
 	shadowdark.log("Game Ready");
 });

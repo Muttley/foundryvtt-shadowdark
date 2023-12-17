@@ -92,6 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
 SHADOWDARK.chat_card.context.apply_damage: Apply Damage
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
@@ -183,6 +184,7 @@ SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.select: Valitse
 SHADOWDARK.dialog.general.yes: "Kyllä"
+SHADOWDARK.dialog.gm: Gamemaster
 SHADOWDARK.dialog.hp_roll.per_level: Heitä osumapisteet tasolle {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "Osumapisteet ennen heittoa: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Heitetty {hp} osumapistettä tasolle 1 (sis. sitkeysbonuksen)
@@ -252,6 +254,7 @@ SHADOWDARK.effect.unavailable: Poissaolevat efektit
 SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
 SHADOWDARK.error.general.no_character_class: Hahmoluokka ei ole valittu
+SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
@@ -259,6 +262,7 @@ SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
 SHADOWDARK.hotbar.noItemWithName: No such item found on character
 SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Kolikot
@@ -389,6 +393,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
 SHADOWDARK.item.potion.label: Rohto/Taikajuoma
 SHADOWDARK.item.properties: Asetukset
 SHADOWDARK.item.scroll.label: Loitsukäärö
+SHADOWDARK.item.source: Source
 SHADOWDARK.item.spell_caster_classes: Loihtimisluokat
 SHADOWDARK.item.spell_class: Loitsun luokitus
 SHADOWDARK.item.spell_duration: Kestoaika
@@ -509,12 +514,26 @@ SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug loggin
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittuna, efektipaneeli näyttää kykyjä ja muita passiivisia efektejä
 SHADOWDARK.settings.effect_panel.show_passive.name: Näytä passiiviset efektit paneelissa
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Määritä minkä moduulin tuottamaa taidetta käytetään
 SHADOWDARK.settings.module_art.label: Määritä taide
 SHADOWDARK.settings.module_art.name: Moduulin tuottama taide
 SHADOWDARK.settings.module_art.save: Tallenna muutokset
 SHADOWDARK.settings.roll_npc_hp.hint: Automaattisesti heitä NPC osumapisteet kun sellainen lisätään kohtaukseen
 SHADOWDARK.settings.roll_npc_hp.name: Automaattinen NPC osumapisteheitto
+SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.name: Schema Version
+SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+SHADOWDARK.settings.source_filter.name: Source Filter
+SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.save_button: Save Configuration
+SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.title: Book Source Filters
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.name: System Version
 SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelmä seuraa ja päivittää aktiivisten valonlähteiden jäljellä olevaa aikaa.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
@@ -527,6 +546,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset täm�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
@@ -551,6 +572,7 @@ SHADOWDARK.sheet.item.tab.details: Yksityiskohdat
 SHADOWDARK.sheet.item.tab.effects: Efektit
 SHADOWDARK.sheet.item.tab.light: Valonlähde
 SHADOWDARK.sheet.item.tab.magic: Taikuus
+SHADOWDARK.sheet.item.tab.source: Source
 SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: Hyökkäykset
 SHADOWDARK.sheet.npc.dark_adapted: Sopeutunut pimeään

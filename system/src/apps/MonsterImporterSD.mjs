@@ -30,7 +30,7 @@ export default class MonsterImporterSD extends FormApplication {
 			let newNPC = await this._importMonster(formData.monsterText);
 			ui.notifications.info(`Successfully Created: ${newNPC.name} [${newNPC._id}]`);
 			ui.sidebar.activateTab("actors");
-			return;
+
 		}
 		catch(error) {
 			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
@@ -140,7 +140,7 @@ export default class MonsterImporterSD extends FormApplication {
 				attackObj.system.damage.value = diceStr[1] + diceStr[2];
 			}
 			else {
-				// TODO no way to set static damage: attackObj.system.damage.value = diceStr[1]
+				attackObj.system.damage = { value: diceStr[1] };
 			}
 
 			// parse remaining string parts for +dmg or feature
@@ -168,7 +168,7 @@ export default class MonsterImporterSD extends FormApplication {
 			name: this._toTitleCase(featureStr[1]),
 			type: "NPC Feature",
 			system: {
-				description: `<p>${featureStr[2]}</p>`,
+				description: `<p>${featureStr[2].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
 				predefinedEffects: "",
 			},
 		};
@@ -195,7 +195,7 @@ export default class MonsterImporterSD extends FormApplication {
 			type: "NPC Spell",
 			system: {
 				dc: parsedSpell[3],
-				description: `<p>${parsedSpell[4]}</p>`,
+				description: `<p>${parsedSpell[4].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
 				range: "",
 				duration: {
 					type: "",
@@ -204,22 +204,35 @@ export default class MonsterImporterSD extends FormApplication {
 			},
 		};
 
+		// Take a chance at finding the range in the description
+		const potentialRange = parsedSpell[2].toLowerCase();
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
 
-		// Take a chance at finding the range in the description
-		if (descStr.includes(" self.")) {
-			spellObj.system.range = "self";
+		for (const range of ["self", "far", "near", "close"]) {
+			if (potentialRange.includes(range)) {
+				spellObj.system.range = range;
+				break;
+			}
 		}
-		else if (descStr.includes(" close.")) {
-			spellObj.system.range = "close";
+		if (!spellObj.system.range) {
+			for (const range of ["far", "near", "close"]) {
+				if (descStr.includes(`in ${range}`) || descStr.includes(`${range} range`)) {
+					spellObj.system.range = range;
+					break;
+				}
+			}
 		}
-		else if (descStr.includes(" near ") || descStr.includes(" near.") || descStr.includes(" near-sized ")) {
-			spellObj.system.range = "near";
+		if (!spellObj.system.range) {
+			for (const word of parsedSpell[4].toLowerCase().split(" ")) {
+				for (const range of ["self", "far", "near", "close"]) {
+					if (word.includes(`${range}.`) || word.includes(`${range},`) || word.includes(`${range}-`)) {
+						spellObj.system.range = range;
+						break;
+					}
+				}
+				if (spellObj.system.range) break;
+			}
 		}
-		else if (descStr.includes(" far ") || descStr.includes(" far.")) {
-			spellObj.system.range = "far";
-		}
-
 
 		// Take a chance at finding a round duration in the description
 		const roundsDuration = parsedSpell[4].match(/(\d|\dd\d) rounds?/);
@@ -380,7 +393,7 @@ export default class MonsterImporterSD extends FormApplication {
 				// Is the feature a description of a special attack?
 				let isSpecialAttack = false;
 				newActor.items.forEach(x => {
-					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name.toLowerCase() ) {
+					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name) {
 						x.update({"system.description": parsedFeatureObj.system.description});
 						isSpecialAttack = true;
 					}

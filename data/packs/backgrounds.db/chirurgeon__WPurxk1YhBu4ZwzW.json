@@ -8,9 +8,9 @@
 	"name": "Chirurgeon",
 	"system": {
 		"description": "<p>You know anatomy, surgery, and first aid</p>",
+		"predefinedEffects": "",
 		"source": {
-			"page": 0,
-			"title": ""
+			"title": "quickstart"
 		}
 	},
 	"type": "Background"

@@ -1,4 +1,3 @@
-
 SHADOWDARK.ability_cha: Cha
 SHADOWDARK.ability_charisma: Charisma
 SHADOWDARK.ability_con: Con
@@ -93,6 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
 SHADOWDARK.chat_card.context.apply_damage: Apply Damage
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
@@ -184,6 +184,7 @@ SHADOWDARK.dialog.general.cancel: Cancel
 SHADOWDARK.dialog.general.no: "No"
 SHADOWDARK.dialog.general.select: Select
 SHADOWDARK.dialog.general.yes: "Yes"
+SHADOWDARK.dialog.gm: Gamemaster
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
@@ -253,6 +254,7 @@ SHADOWDARK.effect.unavailable: Disabled Effects
 SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
+SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
@@ -260,6 +262,7 @@ SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
 SHADOWDARK.hotbar.noItemWithName: No such item found on character
 SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Coins
@@ -390,6 +393,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.potion.label: Potion
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.scroll.label: Scroll
+SHADOWDARK.item.source: Source
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
@@ -510,12 +514,26 @@ SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug loggin
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked the Effect Panel will show talents and other passive effects
 SHADOWDARK.settings.effect_panel.show_passive.name: Show passive effects in panel
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
 SHADOWDARK.settings.module_art.label: Configure Art
 SHADOWDARK.settings.module_art.name: Module-provided Art
 SHADOWDARK.settings.module_art.save: Save Changes
 SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
 SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
+SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.name: Schema Version
+SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+SHADOWDARK.settings.source_filter.name: Source Filter
+SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.save_button: Save Configuration
+SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.title: Book Source Filters
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.name: System Version
 SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
@@ -528,6 +546,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Rea
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
@@ -552,6 +572,7 @@ SHADOWDARK.sheet.item.tab.details: Details
 SHADOWDARK.sheet.item.tab.effects: Effects
 SHADOWDARK.sheet.item.tab.light: Light
 SHADOWDARK.sheet.item.tab.magic: Magic
+SHADOWDARK.sheet.item.tab.source: Source
 SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: Attacks
 SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
