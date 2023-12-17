@@ -11,6 +11,21 @@
 * [#590] Support optional "clockwise" initiative
 * [#616] Improved detection of NPC spell range when importing via monster importer.
 * [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer.
+* [#631] Add ability to filter out item sources at the game settings level
+
+	Module creators can add their own custom source names which will become available in the system by creating a custom config section to the `flags` section of their `module.json` configuration file.  For example:
+
+	```json
+	"flags": {
+		"shadowdark": {
+			"sources": {
+				"<source_uuid>": "<source_name>"
+			}
+		}
+	}
+	```
+
+	Where `<source_uuid>` is a unique identifier for your custom source, and `<source_name>` is the human readable/display name of your source.
 
 ### Chores
 * Merged contributed new Spanish and French translations from Crowdin

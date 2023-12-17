@@ -89,7 +89,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getAncestrySelectorConfigs(context) {
 		const [selectedLanguages, availableLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.languages(),
+				await shadowdark.compendiums.languages([], false),
 				this.item.system.languages.fixed ?? []
 			);
 
@@ -105,7 +105,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.ancestryTalents(),
+				await shadowdark.compendiums.ancestryTalents(false),
 				this.item.system.talents ?? []
 			);
 
@@ -123,7 +123,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.baseArmor(),
+				await shadowdark.compendiums.baseArmor(false),
 				this.item.system.armor ?? []
 			);
 
@@ -137,10 +137,11 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedArmor,
 		};
 
-		context.classTalentTables = await shadowdark.compendiums.classTalentTables();
+		context.classTalentTables =
+			await shadowdark.compendiums.classTalentTables(false);
 
 		const classTalentTables =
-			await shadowdark.compendiums.classTalentTables();
+			await shadowdark.compendiums.classTalentTables(false);
 
 		context.classTalentTables = {};
 		for (const classTalentTable of classTalentTables) {
@@ -151,7 +152,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedLanguages, availableLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.languages(),
+				await shadowdark.compendiums.languages([], false),
 				this.item.system.languages.selectOptions ?? []
 			);
 
@@ -165,7 +166,7 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedLanguages,
 		};
 
-		const classTalents = await shadowdark.compendiums.talents();
+		const classTalents = await shadowdark.compendiums.talents([], false);
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(
@@ -200,7 +201,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 
 		const spellcastingClasses =
-			await shadowdark.compendiums.spellcastingClasses();
+			await shadowdark.compendiums.spellcastingClasses(false);
 
 		context.spellcastingClasses = {};
 		for (const spellcastingClass of spellcastingClasses) {
@@ -211,7 +212,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedWeapons, availableWeapons] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.baseWeapons(),
+				await shadowdark.compendiums.baseWeapons(false),
 				this.item.system.weapons ?? []
 			);
 
@@ -229,7 +230,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.spellcastingClasses(),
+				await shadowdark.compendiums.spellcastingClasses(false),
 				this.item.system.class ?? []
 			);
 
@@ -252,7 +253,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		context.sources = await shadowdark.compendiums.sources();
 		const itemSource = context.sources.find(
-			s => s.id === item.system.source.title
+			s => s.uuid === item.system.source.title
 		);
 		context.sourceLoaded = itemSource || item.system.source.title === ""
 			? true
@@ -330,14 +331,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 			if (item.type === "Armor") {
 				context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseArmor()
+					await shadowdark.compendiums.baseArmor(false)
 				);
 
 				delete context.baseArmor[mySlug];
 			}
 			if (item.type === "Weapon") {
 				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseWeapons()
+					await shadowdark.compendiums.baseWeapons(false)
 				);
 
 				delete context.baseWeapons[mySlug];

@@ -523,6 +523,14 @@ SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when the
 SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
 SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.schemaVersion.name: Schema Version
+SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+SHADOWDARK.settings.source_filter.name: Source Filter
+SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.save_button: Save Configuration
+SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.title: Book Source Filters
 SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources

@@ -1,4 +1,5 @@
 import { ModuleArtConfig } from "./utils/module-art.mjs";
+import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
 
 /**
  * Register all of the system"s settings.
@@ -30,6 +31,16 @@ export default function registerSystemSettings() {
 			},
 		},
 	});
+
+	game.settings.registerMenu("shadowdark", "sources", {
+		name: "SHADOWDARK.settings.source_filter.name",
+		hint: "SHADOWDARK.settings.source_filter.hint",
+		label: "SHADOWDARK.settings.source_filter.button_label",
+		icon: "fa-solid fa-book",
+		type: SourceFilterSettings,
+		restricted: true,
+	});
+	SourceFilterSettings.registerSetting();
 
 	// ----------------
 	//  NPC HIT POINTS

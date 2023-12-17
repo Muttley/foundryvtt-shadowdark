@@ -6,8 +6,8 @@
 				{{#select item.system.source.title}}
 					<option value="">&nbsp;</option>
 					{{#each sources}}
-						<option value="{{this.id}}">
-							{{this.title}}
+						<option value="{{this.uuid}}">
+							{{this.name}}
 						</option>
 					{{/each}}
 				{{/select}}

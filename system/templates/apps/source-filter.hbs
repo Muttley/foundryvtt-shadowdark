@@ -1,0 +1,65 @@
+<form autocomplete="off" onsubmit="event.preventDefault();">
+	<div class="form-group-stacked">
+		<p>{{localize "SHADOWDARK.settings.source_filter.hint"}}</p>
+	{{!-- </div> --}}
+	{{!-- <div class="form-group" style="width: 100%; text-align: center;"> --}}
+		{{#if hasSelectedSources}}
+			<p>
+				<em>{{localize "SHADOWDARK.settings.source_filter.these_used"}}</em>
+			</p>
+		{{else}}
+			<p>
+				<em>{{localize "SHADOWDARK.settings.source_filter.all_used"}}</em>
+			</p>
+		{{/if}}
+	</div>
+	<div class="form-group-stacked" style="width: 100%;">
+		<div class="talents flexrow">
+			{{#each selectedSources}}
+				<div class="talent flexrow">
+					<a
+						class="fake-uuid-link"
+						data-type="Item"
+						data-uuid="{{this.uuid}}"
+						title="Item"
+					>
+						<i
+							style="color: darkred;"
+							class="delete-choice fas fa-delete-right"
+							data-uuid="{{this.uuid}}"
+						></i>
+						{{this.name}}
+					</a>
+				</div>
+			{{/each}}
+		</div>
+
+		<input
+			{{!--
+				list name needs to be unique and match the one used in the
+				datalist below.  Using the item id plus the system data key field
+				here should be unique enough
+			--}}
+			data-choices-key="{{config.choicesKey}}"
+			data-is-item="{{config.isItem}}"
+			list="source_filter_list"
+			name="sourceName"
+			placeholder="{{localize "SHADOWDARK.settings.source_filter.prompt"}}"
+			type="text"
+			value=""
+		/>
+		<datalist id="source_filter_list">
+			{{#each unselectedSources}}
+				<option
+					data-uuid="{{this.uuid}}"
+					value="{{this.name}}"
+				></option>
+			{{/each}}
+		</datalist>
+	</div>
+	<div class="form-group" style="width: 100%;">
+        <button type="submit">
+            <i class="fas fa-save"></i> {{localize "SHADOWDARK.settings.source_filter.save_button"}}
+        </button>
+	</div>
+</form>
