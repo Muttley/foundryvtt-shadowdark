@@ -48,9 +48,12 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
+
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
-			return ui.notifications.warn();
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.hotbar.noActorSelected")
+			);
 		}
 
 		// get actor using macro

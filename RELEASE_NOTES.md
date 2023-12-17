@@ -4,6 +4,7 @@
 ## Bugfixes
 
 * [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions
+* [#620] Show a notification error if no token selected when using hotbar items
 * [#622] Fixed issue when importing monsters with static damage values via monster importer
 
 ## Enhancements
