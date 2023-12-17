@@ -92,7 +92,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Applicera sekundärskada
 SHADOWDARK.chat_card.context.apply_damage: Applicera Skada
 SHADOWDARK.chat_card.context.apply_healing_secondary: Applicera sekundärläkning
 SHADOWDARK.chat_card.context.apply_healing: Applicera läkning
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Eftersom {name} rullade högst, kommer de att gå först, och alla andra stridande kommer att följa i en fixerad ordning.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
@@ -184,7 +184,7 @@ SHADOWDARK.dialog.general.cancel: Avbryt
 SHADOWDARK.dialog.general.no: "Nej"
 SHADOWDARK.dialog.general.select: Välj
 SHADOWDARK.dialog.general.yes: "Ja"
-SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.gm: Spelmästare
 SHADOWDARK.dialog.hp_roll.per_level: Rulla KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "KP innan rullning: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rullade {hp} KP för nivå 1 (inkl. fys mod)
@@ -254,7 +254,7 @@ SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.class_ability.no-uses-remaining: Inga användningar kvar
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.error.general.no_character_class: Inget yrke har valts
-SHADOWDARK.error.source.source_missing: Source missing or unknown...
+SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
@@ -392,7 +392,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties: Egenskaper
 SHADOWDARK.item.scroll.label: Pergamentrulle
-SHADOWDARK.item.source: Source
+SHADOWDARK.item.source: Källa
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_class: Besvärjelseklass
 SHADOWDARK.item.spell_duration: Varaktighet
@@ -513,24 +513,24 @@ SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare fel
 SHADOWDARK.settings.debugEnabled.name: Aktivera/inaktivera felsökning
 SHADOWDARK.settings.effect_panel.show_passive.hint: Om markerad kommer effektpanelen att visa talanger och andra passiva effekter
 SHADOWDARK.settings.effect_panel.show_passive.name: Visa passiva effekter i panelen
-SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Utför datamigrering på inbyggda Shadowdark RPG system kompendier (ändra inte detta om du inte vet vad du gör)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Migrera systemkompendier
 SHADOWDARK.settings.module_art.hint: Konfigurera vilken moduls konst ska användas
 SHADOWDARK.settings.module_art.label: Konfigurera konst
 SHADOWDARK.settings.module_art.name: Modulkonst
 SHADOWDARK.settings.module_art.save: Spara Ändringar
 SHADOWDARK.settings.roll_npc_hp.hint: Rulla kroppspoäng automatiskt för SLP när de läggs till i en scen
 SHADOWDARK.settings.roll_npc_hp.name: Auto-rulla kroppspoäng för SLP
-SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.schemaVersion.name: Schema Version
-SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
-SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
-SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
-SHADOWDARK.settings.source_filter.name: Source Filter
-SHADOWDARK.settings.source_filter.prompt: Select Source...
-SHADOWDARK.settings.source_filter.save_button: Save Configuration
-SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
-SHADOWDARK.settings.source_filter.title: Book Source Filters
+SHADOWDARK.settings.schemaVersion.hint: Sparar den aktuella schemaversionen för Shadowdark RPG systemdata. (ändra inte detta om du inte vet vad du gör)
+SHADOWDARK.settings.schemaVersion.name: Schemaversion
+SHADOWDARK.settings.source_filter.all_used: Alla källor är tillåtna för närvarande
+SHADOWDARK.settings.source_filter.button_label: Konfigurera källfilter
+SHADOWDARK.settings.source_filter.hint: Om den är definierad, kommer endast bokkällor som finns i denna lista att finnas tillgängliga för urval på relevanta platser. Objekt utan bokkälla kommer alltid att finnas tillgängliga.
+SHADOWDARK.settings.source_filter.name: Källfilter
+SHADOWDARK.settings.source_filter.prompt: Välj källa...
+SHADOWDARK.settings.source_filter.save_button: Spara inställningarna
+SHADOWDARK.settings.source_filter.these_used: Endast följande källor kommer att tillåtas
+SHADOWDARK.settings.source_filter.title: Filter för bokkällor
 SHADOWDARK.settings.track_light_sources.hint: Om markerad kommer systemet att spåra och uppdatera den tid som återstår på alla aktiva ljuskällor.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Om markerade ljuskällor som tillhör inaktiva (inte inloggade) användare, kommer tiden fortfarande att spåras
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Spåra inaktiva användares ljuskällor
@@ -543,8 +543,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Om markerad kommer
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårning
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Spåra ljuskällor realtid
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
-SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
+SHADOWDARK.settings.use_clockwise_initiative.hint: Om vald kommer stridande med den högsta initiativ att gå först, och alla andra stridande kommer att följa i en fast ordning. Alla SLPer kommer att grupperas tillsammans i initiativordningen.
+SHADOWDARK.settings.use_clockwise_initiative.name: Använd medsols initiativ
 SHADOWDARK.settings.use_pulp_mode.hint: Visar tur-tokens som ett numeriskt värde istället för en kryssruta
 SHADOWDARK.settings.use_pulp_mode.name: Aktivera pulp-läge
 SHADOWDARK.sheet.abilities.label: Förmågor
@@ -569,7 +569,7 @@ SHADOWDARK.sheet.item.tab.details: Detaljer
 SHADOWDARK.sheet.item.tab.effects: Effekt
 SHADOWDARK.sheet.item.tab.light: Ljus
 SHADOWDARK.sheet.item.tab.magic: Magi
-SHADOWDARK.sheet.item.tab.source: Source
+SHADOWDARK.sheet.item.tab.source: Källa
 SHADOWDARK.sheet.item.tab.titles: Titlar
 SHADOWDARK.sheet.npc.attacks_label: Attacker
 SHADOWDARK.sheet.npc.dark_adapted: Mörkanpassad
