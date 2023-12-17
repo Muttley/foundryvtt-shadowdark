@@ -184,6 +184,15 @@ export default function registerSystemSettings() {
 		requiresReload: true,
 	});
 
+	game.settings.register("shadowdark", "systemVersion", {
+		name: "SHADOWDARK.settings.systemVersion.name",
+		hint: "SHADOWDARK.settings.systemVersion.hint",
+		scope: "world",
+		config: game.settings.get("shadowdark", "debugEnabled"),
+		default: "",
+		type: String,
+	});
+
 	game.settings.register("shadowdark", "schemaVersion", {
 		name: "SHADOWDARK.settings.schemaVersion.name",
 		hint: "SHADOWDARK.settings.schemaVersion.hint",

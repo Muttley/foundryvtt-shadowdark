@@ -129,6 +129,8 @@ Hooks.on("ready", async () => {
 
 	chat.messages.welcomeMessage();
 
+	UtilitySD.showNewReleaseNotes();
+
 	shadowdark.log("Game Ready");
 });
 

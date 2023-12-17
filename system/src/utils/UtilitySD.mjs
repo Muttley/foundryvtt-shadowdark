@@ -79,4 +79,24 @@ export default class UtilitySD {
 
 		game.user.assignHotbarMacro(macro, slot);
 	}
+
+	// If this is a new release, show the release notes to the GM the first time
+	// they login
+	static async showNewReleaseNotes() {
+		if (game.user.isGM) {
+			const savedVersion = game.settings.get("shadowdark", "systemVersion");
+			const systemVersion = game.system.version;
+
+			if (systemVersion !== savedVersion) {
+				Hotbar.toggleDocumentSheet(
+					CONFIG.SHADOWDARK.JOURNAL_UUIDS.RELEASE_NOTES
+				);
+
+				game.settings.set(
+					"shadowdark", "systemVersion",
+					systemVersion
+				);
+			}
+		}
+	}
 }

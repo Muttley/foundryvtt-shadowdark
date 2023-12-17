@@ -125,6 +125,15 @@
 			"flags": {}
 		},
 		{
+			"name": "documentation",
+			"label": "Documentation",
+			"system": "shadowdark",
+			"path": "packs/documentation",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "gear",
 			"label": "Gear",
 			"system": "shadowdark",
@@ -249,6 +258,7 @@
 			"color": "#22252b",
 			"packs": [
 				"conditions",
+				"documentation",
 				"gear",
 				"macros",
 				"magic-items",

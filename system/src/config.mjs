@@ -209,6 +209,10 @@ SHADOWDARK.EFFECT_TRANSLATIONS = {
 	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
 };
 
+SHADOWDARK.JOURNAL_UUIDS = {
+	RELEASE_NOTES: "Compendium.shadowdark.documentation.JournalEntry.UJ60Lf9ecijEOO6I",
+};
+
 SHADOWDARK.VARIABLE_DURATIONS = [
 	"days",
 	"rounds",
