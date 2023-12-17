@@ -531,6 +531,8 @@ SHADOWDARK.settings.source_filter.prompt: Select Source...
 SHADOWDARK.settings.source_filter.save_button: Save Configuration
 SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
 SHADOWDARK.settings.source_filter.title: Book Source Filters
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.name: System Version
 SHADOWDARK.settings.track_light_sources.hint: 체크하면 시스템이 모든 활성 상태의 광원을 트래킹하고 남은 시간을 업데이트합니다.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: 체크하면 활동하지 않는 (로그아웃 상태의) 유저가 소유하고 있는 광원까지 트래킹합니다.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: 활동하지 않는 유저의 광원 트래킹하기
