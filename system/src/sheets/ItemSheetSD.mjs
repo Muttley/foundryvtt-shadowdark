@@ -249,7 +249,14 @@ export default class ItemSheetSD extends ItemSheet {
 		const context = await super.getData(options);
 
 		const item = context.item;
-		const source = item.toObject();
+
+		context.sources = await shadowdark.compendiums.sources();
+		const itemSource = context.sources.find(
+			s => s.id === item.system.source.title
+		);
+		context.sourceLoaded = itemSource || item.system.source.title === ""
+			? true
+			: false;
 
 		const showTab = {
 			details: [
@@ -297,7 +304,6 @@ export default class ItemSheetSD extends ItemSheet {
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
 			showMagicItemCheckbox: item.system.isPhysical && !["Potion", "Scroll", "Wand"].includes(item.type),
-			source: source.system,
 			system: item.system,
 			showTab,
 			editable: this.isEditable,

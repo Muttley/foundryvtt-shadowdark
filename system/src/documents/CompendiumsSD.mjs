@@ -246,9 +246,12 @@ export default class CompendiumsSD {
 		}
 
 		for (const module of game.modules) {
+			if (!module.active) continue;
+
 			const moduleSources = module.flags?.shadowdark?.sources ?? {};
 
 			for (const moduleSource of Object.keys(moduleSources)) {
+
 				sources.push({
 					id: moduleSource,
 					title: game.i18n.localize(
