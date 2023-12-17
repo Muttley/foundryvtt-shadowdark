@@ -8,6 +8,7 @@
 		"export": "./utils/smelter.mjs unpack -i leveldb -s system/packs -d ./data/packs",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
+		"notes": "gulp compileNotes",
 		"packs": "gulp compilePacks",
 		"test": "jest"
 	},
@@ -24,6 +25,7 @@
 		"gulp-yaml": "^2.0.4",
 		"jest": "^29.5.0",
 		"json-stable-stringify-pretty": "^1.2.0",
+		"marked": "^11.1.0",
 		"merge-stream": "^2.0.0",
 		"nedb-promises": "^6.2.1",
 		"rollup": "^3.25.1",
