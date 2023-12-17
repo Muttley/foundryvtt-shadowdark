@@ -1,53 +1,58 @@
 
-## v1.X.X
+# v1.X.X
 
-### Bugfixes
+## Bugfixes
 
-* [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions.
-* [#622] Fixed issue when importing monsters with static damage values via monster importer.
+* [#618] Fixed a bug in the Monster Importer where special attacks were importing without descriptions
+* [#622] Fixed issue when importing monsters with static damage values via monster importer
 
-### Enhancements
+## Enhancements
 
 * [#590] Support optional "clockwise" initiative
-* [#616] Improved detection of NPC spell range when importing via monster importer.
-* [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer.
+* [#616] Improved detection of NPC spell range when importing via monster importer
+* [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer
 * [#631] Add ability to filter out item sources at the game settings level
+* [#634] Display system release notes the first time you open a world in a new version
 
-	Module creators can add their own custom source names which will become available in the system by creating a custom config section to the `flags` section of their `module.json` configuration file.  For example:
-
-	```json
-	"flags": {
-		"shadowdark": {
-			"sources": {
-				"<source_uuid>": "<source_name>"
-			}
-		}
-	}
-	```
-
-	Where `<source_uuid>` is a unique identifier for your custom source, and `<source_name>` is the human readable/display name of your source.
-
-### Chores
-* Merged contributed new Spanish and French translations from Crowdin
+## Chores
+* Merged contributed new French, Spanish and Swedish translations from Crowdin
 
 *Many thanks to chrpow for contributing code included in this build*
 
-## v1.6.2
+## Feature Notes
 
-### Bugfixes
+### Support for Module Defined Sources
+
+Module creators can add their own custom source names which will become available in the system by creating a custom config section to the `flags` section of their `module.json` configuration file.  For example:
+
+```json
+"flags": {
+	"shadowdark": {
+		"sources": {
+			"<source_uuid>": "<source_name>"
+		}
+	}
+}
+```
+
+Where `<source_uuid>` is a unique identifier for your custom source, and `<source_name>` is the human readable/display name of your source.
+
+# v1.6.2
+
+## Bugfixes
 * [#610] Thief backstab option now shows on the dialog box when using ranged weapons.
 
-## v1.6.1
+# v1.6.1
 
-### Bugfixes
+## Bugfixes
 * [#601] Fixed a bug that resulted in NPC damage always rolling as a critical hit. Updated monster importer to correctly add NPC roll formula.
 
-### Chores
+## Chores
 * Merged contributed Swedish translations from Crowdin
 
-## v.1.6.0
+# v.1.6.0
 
-### Bugfixes
+## Bugfixes
 * [#573] Fixed an issue with item attack bonuses not being calculated if added manually via the roll dialog.
 * [#580] Learning a spell from a scroll doesn't detect that the player cancelled the roll
 * [#581] Spellcasting ability used for learning spells hardcoded, this should be dynamic to support custom/homebrew classes
@@ -55,7 +60,7 @@
 * [#583] Regex parser in MonsterImporterSD.mjs can't handle attacks that have '+' in the name
 * [#597] Unable to drag Actor to hotbar and have it open character sheet
 
-### Enhancements
+## Enhancements
 * [#220] Added ability to drag attacks, spells, abilities, potions, and light sources to the Hotbar.
 * [#184] Added special attack type to NPCs. The monster importer now adds special attacks.
 * [#328] Added spellcasting abilities and spells to NPCs. The monster importer now adds spells.
@@ -66,119 +71,119 @@
 * [#587] Add predefined Talent effect that allows damage die for weapons with specified tags to be increased by category (`weaponDamageDieImprovementByProperty`)
 * [#596] Switch NPC number of attacks to text in order to support roll macros within attack strings
 
-### Chores
+## Chores
 * Improvements to GitHub Workflows around building a release
 
 *Please welcome Prototype to the Shadowdark system development team*
 
 *Many thanks to chrpow for contributing code included in this build*
 
-## v.1.5.1
+# v.1.5.1
 
-### Bugfixes
+## Bugfixes
 * [#560] More fixes to Tours (Lightsource Tracking, The Lost Citadel and Importing Monsters) (Prototype)
 * [#568] NPC HP calculation is using +1 min CON bonus instead of 1 being the minimum HP
 
-### Enhancements
+## Enhancements
 * [#565] Prepare actor data automatically rather than waiting for character sheet to open
 
-## v.1.5.0
+# v.1.5.0
 
-### Bugfixes
+## Bugfixes
 * [#556] Tours not working
 
-### Enhancements
+## Enhancements
 * [#557] Added tool to help with importing monsters which can be launched by a new macro (see Macro compedium and new tour)
 
 *Many thanks to Prototype for contributing code included in this build*
 
-## v.1.4.10
+# v.1.4.10
 
-### Bugfixes
+## Bugfixes
 * [#548] Class armor selector showing non-base armor items in selector
 * [#549] Newly created Scrolls and Wands won't open after initial creation
 
-### Enhancements
+## Enhancements
 * [#184] NPC Special attacks can now be posted to chat by clicking on them
 
 *Many thanks to Prototype for contributing code included in this build*
 
-## v.1.4.9
+# v.1.4.9
 
-### Bugfixes
+## Bugfixes
 * [#537] Ranger with D12 damage talent always rolls two damage dice even if weapon does not have the Versatile property (cosmetic issue only)
 
-### Enhancements
+## Enhancements
 * [#343] Added World setting to enable Pulp Mode. This switches the luck tracker on the character sheet to numeric input rather than boolean toggle
 * [#372] Add ability to indicate physical items are stashed and no longer taking up inventory slots
 * [#543] Add macro to initialize player luck.  This gives player characters a normal luck token, and rolls a number of tokens for Pulp Mode
 
-## v.1.4.8
+# v.1.4.8
 
-### Bugfixes
+## Bugfixes
 * [#526] Quickstart macros using incorrect compendium paths
 * [#535] Un-migrated weapon properties in compendiums causing problems opening character sheets when added to them
 * [#540] Move quickstart adventure related macros into the adventure pack, as they don't work without that imported anyway
 
 *Many thanks to Prototype for contributing fixes included in this build*
 
-## v.1.4.7
+# v.1.4.7
 
-### Bugfixes
+## Bugfixes
 * [#530] Token art mapping from Pathfinder Token Pack: Bestiaries module not working
 * [#531] Missing attack bonuses on the following Talents
 	- +1 to Melee Attacks and Damage
 	- +1 to Ranged Attacks and Damage
 
-### Enhancements
+## Enhancements
 * [#527] New predefined effect that will add selected attribute bonuses to AC (if positive)
 * [#528] Add built-in effect to support weapon damage dice improvent via matching weapon properties
 * [#529] Add predefined affect that adds to AC if no armor is worn
 
-## v.1.4.6
+# v.1.4.6
 
-### Bugfixes
+## Bugfixes
 * [#485] Spell Advantage talent not functioning
 * [#521] Unable to add Weapon and Armor Mastery talents to character sheet
 
-### Enhancements
+## Enhancements
 * [#520] Switch Class HP roll setting to be a free text field so custom dice roll formulas can be used
 * [#522] Added "All Ranged Weapons" and "All Melee Weapons" checkbox to class equipment settings for more granular options
 
-## v.1.4.5
+# v.1.4.5
 
-### Bugfixes
+## Bugfixes
 * [#515] Backstab option not available on attack rolls
 * [#516] Wand and Scroll item sheets not showing spell caster classes correctly
 
-### Enhancements
+## Enhancements
 * [#499] Add support for Boons and their various subtypes
 * [#517] Add support for limited use Class Abilities, and Class Abilities with no associated rolls
 * [#518] Weapon and Armor mastery using fixed base weapons rather than dynamically building a list from items available in compendiums
 
-## v.1.4.4
+# v.1.4.4
 
-### Bugfixes
+## Bugfixes
 * [#513] Compendium item selectors need unique IDs to ensure they show the correct selection
 
-## v.1.4.3
+# v.1.4.3
 
 **NOTE:** If you have compendiums in your worlds you will need to re-migrate a pre-1.4.0 backup of your world once this version is installed to ensure it is migrated correctly.
 
-### Bugfixes
+## Bugfixes
 * [#508] Migrating compendiums for 1.3.7 to 1.4.0 fails
 
-## v.1.4.2
+# v.1.4.2
 
 ** Purely a version bump **
 
-## v.1.4.1
+# v.1.4.1
 
 ** Release withdrawn due to packaging errors **
 
-## v.1.4.0
+# v.1.4.0
 
-### Bugfixes
+## Bugfixes
 * [#431] Mage Armor Active Effect does not change AC
 * [#476] Attack bonuses missing from monsters
 * [#482] Can't create or import active effects when not in combat
@@ -188,7 +193,7 @@
 * [#493] Compendium item "Sword of the Ancients" missing base weapon type
 * [#496] Mage Armor spell effect not being applied
 
-### Enhancements
+## Enhancements
 * [#71] Add the ability to extend various character options
 * [#374] Added ability to create custom Classes
 * [#375] Added support for custom ancestries
@@ -206,75 +211,75 @@
 * [#498] Fix character sheet header and tab controls at top of character sheet window
 * [#501] Update ShadowDarklings importer to use new character background items
 
-## v.1.3.7
+# v.1.3.7
 
-### Bugfixes
+## Bugfixes
 * [#472] Handle situations where Spellcasting Ability is not set better
 * [#473] Incorrect damage rolls when only 2H damage set
 
-### Enhancements
+## Enhancements
 * [#460] Added additional Move options for NPCs (None, Far & Special)
 
-### Bugfixes
+## Bugfixes
 * [#470] Chat message Success/Fail messages only render once
 
-## v.1.3.6
+# v.1.3.6
 
-### Bugfixes
+## Bugfixes
 * [#466] Autorolling NPC HP now correctly applies HP to NPC
 
-## v.1.3.5
+# v.1.3.5
 
 We welcome @gatesvp as a contributor to the system!
 
-### Bugfixes
+## Bugfixes
 * [#452] Refers the issue tracker to the actual issue tracker instead of repo
 * [#450] Rolling NPC HP now correctly adds CON mod bonus (minimum 1) to HP
 * [#461] Allows players with edit permission to get context menu on items on a character to edit and delete
 * [#462] Properly awaiting Active Effects to be created for V11 compatability
 
-### Enhancements
+## Enhancements
 * [#452] Added special attack to chat card when applicable
 * [#277] Partial implementation provides quick way to apply damage and healing directly from the chat card
 * [#311] Initiative field on PC sheets
 
-## v.1.3.4
+# v.1.3.4
 
-### Enhancements
+## Enhancements
 * [#443] Kobold ancestry bonuses added, supports Shadowdarkling import
 
-## v.1.3.3
+# v.1.3.3
 
-### Bugfixes
+## Bugfixes
 * [#427] Tour for the lightsource tracker now works again
 * [#432] Tour for the Dice rolling mechanics now works again
 
-### Enhancements
+## Enhancements
 * [#435] Korean & Finnish fully translated system
 
-## v.1.3.2
+# v.1.3.2
 
-### Bugfixes
+## Bugfixes
 * [#419] Shadowdarklings.net uses https instead of http
 * [#420] NPC attacks now rolls with the damage bonus as well
 * [#422] Characters with ability stat bonuses now import correctly
 * [#428] Verified with Foundry v11
 
-## v.1.3.1
+# v.1.3.1
 
-### Bugfixes
+## Bugfixes
 * [#407] New languages are now activated and available in game
 * [#411] Duration value not showing up on Potion, Scroll and Wand item sheet
 * [#413] Effects durations are now updated when changing the duration values on the sheet, and temporary conditions are removed on expiry
 * [#417] Now catches effects providing light source using either name or if any change is manipulating the light template field
 
-### Errata
+## Errata
 * [#412] Updated Ranger items to latest version
 * [#415] Apply latest Shadowdark V2 errate where needed
 
-## v1.3.0
+# v1.3.0
 
-### Bugfixes
+## Bugfixes
 * [#319] Right-Click context menu binding to tab links on character sheets
 * [#321] We can now add AC Bonus effects to items
 * [#325] Bonuses from Weapon Mastery now functions as intended
@@ -287,7 +292,7 @@ We welcome @gatesvp as a contributor to the system!
 * [#396] Dropped light sources retain their active status
 
 
-### Enhancements
+## Enhancements
 * [#23] In conjunction with [#329] add support for wand items with associated Spell data and ability to use from inventory/item chat cards
 * [#192] Use world time for Light Tracker in order to facilitate the usage of Calendar/Time adjustment tools. Allows time stepping through the use of third-party world time manipulation modules like [Simple Calendar](https://foundryvtt.com/packages/foundryvtt-simple-calendar), etc.
 * [#302] Improvements to Shadowdarklings importer, with in-game frame for ease of access
@@ -325,32 +330,32 @@ We welcome @gatesvp as a contributor to the system!
 * [#399] Show all Actors that have one or more Users with Owner permissions on the Light Tracker
 	- Also adds a toggle to the Light Tracker to show/hide actors with no active light source
 
-## v1.2.4
+# v1.2.4
 
-### Bugfixes
+## Bugfixes
 * [#313] Fixed a typo in the books where flasks & bottles cost 3 GP instead of SP
 
-## v1.2.3
+# v1.2.3
 
-### Bugfixes
+## Bugfixes
 * [#292] Clicking a rollable item on the inventory screen triggers two dialog boxes
 * [#294] Player rolls tour stalls due to us hiding the spell casting tab for non-casters
 * [#296] Placing a Monster with Auto Roll NPC HP causes multiple HP rolls
 * [#297] Quickstart pregens have all have zero current hit points
 
-## v1.2.2
+# v1.2.2
 
-### Bugfixes
+## Bugfixes
 * [#288] Unable to make attack using Attack/Actions shortcuts
 
-## v1.2.1
+# v1.2.1
 
-### Bugfixes
+## Bugfixes
 * [#283] Attribute labels missing from NPC sheet
 
-## v1.2.0
+# v1.2.0
 
-### Bugfixes
+## Bugfixes
 * [#75] Implements Armor Mastery talents properly
 * [#110] Ensure manual edits to attribute values after ActiveEffects have been applied to a character do not result in incorrect values
 * [#244] "Track Inactive User Light Sources" option does not immediately update the Light Tracker interface
@@ -362,7 +367,7 @@ We welcome @gatesvp as a contributor to the system!
 * [#269] Fix incorrect ability scores on a couple of pregens
 * [#274] Changes to how we store Ability scores broke the character importer
 
-### Enhancements
+## Enhancements
 * [#147] Hide Spells tab on character sheet for classes that cannot cast.
 * [#170] Dynamically use tokens from the PF2e Bestiary module if users have it installed/enabled (also provides support for additional token packs in the future).  Requires v1.0.5 or higher of the [Pathfinder Token Pack: Bestiaries](https://foundryvtt.com/packages/pf2e-tokens-bestiaries) module.
 * [#187] Disable Fog Exploration on The Lost Citadel map
@@ -380,26 +385,26 @@ We welcome @gatesvp as a contributor to the system!
 * [#270] Adds contributions to Swedish, Finnish, German, and French from [Crowdin](https://crowdin.com/project/shadowdark-rpg-for-foundry-vtt)
 * [#271] Adjustments for Shadowdarkling importer & sheet tests for v11 compatability
 
-## v1.1.2
+# v1.1.2
 
-### Bugfixes
+## Bugfixes
 * [#227] Reverted HP Rolling automation. Instead provides a "Apply HP Roll to max HP" button on the HP roll card. All HP modifications are now manual (except talent bonuses).
 * [#232] Martin Rast got incorrect dex in the Pregen characters.
 * [#236] Don't offer to add HP to max for NPCs, just auto change max HP to rolled result.
 
-### Enhancements
+## Enhancements
 * [#234] Added finding the Macro for the lightsource tracker tour.
 
-## v1.1.1
+# v1.1.1
 
-### Bugfixes
+## Bugfixes
 * [#209] Items in locked system compediums partially editable
 * [#221] Lightsource tracker tour now require the tracker to be on, otherwise warns. Also stores and restores original settings (assuming the user doesn't restart the world or the tour within a 10 minute interval).
 * [#222] Rolling HP for a newly created 1st level character fails, if the class entry is left at the default
 
-## v1.1.0
+# v1.1.0
 
-### Bugfixes
+## Bugfixes
 * [#185] Refactored HP and updated schema to account fix HP issues on PCs
 * [#199] toggling a light source throws an error without a token on scene
 * [#201] Chat messages missed from light tracker events due to errors thrown
@@ -409,7 +414,7 @@ We welcome @gatesvp as a contributor to the system!
 * [#210] Possible race condition in Light Tracker
 * [#214] Dice roller not honouring requested rollMode
 
-### Enhancements
+## Enhancements
 * [#139] Added Guided Tour for explaining the Lightsource Tracker
 * [#190] Added HP rolling for players by level, including data migration
 * [#195] Added gulp livereloading for developers
@@ -418,22 +423,22 @@ We welcome @gatesvp as a contributor to the system!
 * [#211] Increase granularity of Light Tracker intervals as allowed by performance enhancements
 * Various small tweaks to character sheet CSS and layout
 
-## v1.0.2
+# v1.0.2
 
-### Bugfixes
+## Bugfixes
 
 * [#189] When a custom effect was renamed, it caused an error that prevented the selector app opening
 
-### Enhancements
+## Enhancements
 
 * [#188] Added contributed i18n updates for Finnish, German and Swedish languages
 
-## v1.0.1
+# v1.0.1
 
-### Bugfixes
+## Bugfixes
 
 * [#178] Fixed NaN display issue with ranged attacks
 
-## v1.0.0
+# v1.0.0
 
 Initial release.
