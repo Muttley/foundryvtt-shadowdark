@@ -254,6 +254,7 @@ SHADOWDARK.effect.unavailable: 비활성화된 효과
 SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: 게임 마스터만 할 수 있습니다.
 SHADOWDARK.error.general.no_character_class: 캐릭터 클래스가 지정되지 않았습니다
+SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 능력이 설정되지 않았습니다
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
@@ -391,6 +392,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
 SHADOWDARK.item.potion.label: 물약
 SHADOWDARK.item.properties: 속성
 SHADOWDARK.item.scroll.label: 두루마리
+SHADOWDARK.item.source: Source
 SHADOWDARK.item.spell_caster_classes: 주문시전 클래스
 SHADOWDARK.item.spell_class: 주문 클래스
 SHADOWDARK.item.spell_duration: 지속시간
@@ -511,12 +513,24 @@ SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug loggin
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: 체크하면 재능과 그 외 패시브 효과를 효과 패널에 표시합니다
 SHADOWDARK.settings.effect_panel.show_passive.name: 패시브 효과 패널에 표시
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다
 SHADOWDARK.settings.module_art.label: 아트워크 설정
 SHADOWDARK.settings.module_art.name: 모듈에서 제공하는 아트워크
 SHADOWDARK.settings.module_art.save: 변경사항 저장
 SHADOWDARK.settings.roll_npc_hp.hint: NPC가 장면에 추가될 때 자동으로 히트 포인트 굴리기
 SHADOWDARK.settings.roll_npc_hp.name: 자동 NPC 히트 포인트 굴림
+SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.name: Schema Version
+SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+SHADOWDARK.settings.source_filter.name: Source Filter
+SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.save_button: Save Configuration
+SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.title: Book Source Filters
 SHADOWDARK.settings.track_light_sources.hint: 체크하면 시스템이 모든 활성 상태의 광원을 트래킹하고 남은 시간을 업데이트합니다.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: 체크하면 활동하지 않는 (로그아웃 상태의) 유저가 소유하고 있는 광원까지 트래킹합니다.
 SHADOWDARK.settings.track_light_sources.inactive_user.name: 활동하지 않는 유저의 광원 트래킹하기
@@ -555,6 +569,7 @@ SHADOWDARK.sheet.item.tab.details: 세부 사항
 SHADOWDARK.sheet.item.tab.effects: 효과
 SHADOWDARK.sheet.item.tab.light: 빛
 SHADOWDARK.sheet.item.tab.magic: 마법
+SHADOWDARK.sheet.item.tab.source: Source
 SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: 공격
 SHADOWDARK.sheet.npc.dark_adapted: 어둠 적응
