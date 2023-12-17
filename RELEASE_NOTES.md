@@ -17,8 +17,6 @@
 ## Chores
 * Merged contributed new French, Spanish and Swedish translations from Crowdin
 
-*Many thanks to chrpow for contributing code included in this build*
-
 ## Feature Notes
 
 ### Support for Module Defined Sources
@@ -36,6 +34,8 @@ Module creators can add their own custom source names which will become availabl
 ```
 
 Where `<source_uuid>` is a unique identifier for your custom source, and `<source_name>` is the human readable/display name of your source.
+
+*Many thanks to chrpow for contributing code included in this build*
 
 # v1.6.2
 
