@@ -53,4 +53,9 @@
 		cursor: auto;
 		text-shadow: none;
 	}
+
+	i:hover {
+		cursor: pointer;
+		text-shadow: 0 0 8px var(--color-shadow-primary);
+	}
 }

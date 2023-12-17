@@ -1,21 +1,10 @@
 import { ModuleArtConfig } from "./utils/module-art.mjs";
+import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
 
 /**
  * Register all of the system"s settings.
  */
 export default function registerSystemSettings() {
-
-	// -------------------
-	//  INTERNAL SETTINGS
-	// -------------------
-	//
-	game.settings.register("shadowdark", "schemaVersion", {
-		name: "Schema Version",
-		scope: "world",
-		config: false,
-		type: Number,
-		default: 0,
-	});
 
 	// -----------------
 	//  DYNAMIC ARTWORK
@@ -42,6 +31,16 @@ export default function registerSystemSettings() {
 			},
 		},
 	});
+
+	game.settings.registerMenu("shadowdark", "sources", {
+		name: "SHADOWDARK.settings.source_filter.name",
+		hint: "SHADOWDARK.settings.source_filter.hint",
+		label: "SHADOWDARK.settings.source_filter.button_label",
+		icon: "fa-solid fa-book",
+		type: SourceFilterSettings,
+		restricted: true,
+	});
+	SourceFilterSettings.registerSetting();
 
 	// ----------------
 	//  NPC HIT POINTS
@@ -157,16 +156,6 @@ export default function registerSystemSettings() {
 		type: Boolean,
 	});
 
-	game.settings.register("shadowdark", "debugEnabled", {
-		name: "SHADOWDARK.settings.debugEnabled.name",
-		hint: "SHADOWDARK.settings.debugEnabled.hint",
-		scope: "world",
-		type: Boolean,
-		config: true,
-		default: false,
-		requiresReload: true,
-	});
-
 	// ----------------------
 	//  INITIATIVE SETTINGS
 	// ----------------------
@@ -180,4 +169,38 @@ export default function registerSystemSettings() {
 		default: false,
 		requiresReload: true,
 	});
+
+	// ----------------
+	//  DEBUG SETTINGS
+	// ----------------
+	//
+	game.settings.register("shadowdark", "debugEnabled", {
+		name: "SHADOWDARK.settings.debugEnabled.name",
+		hint: "SHADOWDARK.settings.debugEnabled.hint",
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
+
+	game.settings.register("shadowdark", "schemaVersion", {
+		name: "SHADOWDARK.settings.schemaVersion.name",
+		hint: "SHADOWDARK.settings.schemaVersion.hint",
+		scope: "world",
+		config: game.settings.get("shadowdark", "debugEnabled"),
+		default: 0,
+		type: Number,
+	});
+
+	game.settings.register("shadowdark", "migrateSystemCompendiums", {
+		name: "SHADOWDARK.settings.migrateSystemCompendiums.name",
+		hint: "SHADOWDARK.settings.migrateSystemCompendiums.hint",
+		scope: "world",
+		type: Boolean,
+		config: game.settings.get("shadowdark", "debugEnabled"),
+		default: false,
+		requiresReload: true,
+	});
+
 }

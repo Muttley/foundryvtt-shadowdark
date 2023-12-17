@@ -32,15 +32,15 @@ export default class MigrationRunnerSD {
 	}
 
 	async fixFuckups() {
-		// Unless you actually set the value, the default is not stored in the db
-		// which causes issues with old schema updates being run unecessarily on
-		// brand new worlds.  So here we set the schemaVersion to the current
-		// system value if it has not already been set by a previous data migration
-		// running.
+		// Unless you actually set the value, the default is not stored in the
+		// db which causes issues with old schema updates being run unecessarily
+		// on brand new worlds.  So here we set the schemaVersion to the current
+		// system value if it has not already been set by a previous data
+		// migration running.
 		//
 		// We have to special case the 230417.2 schema version as this is where
-		// the migration fix was applied, and we need to make sure this particular
-		// schema update is run.
+		// the migration fix was applied, and we need to make sure this
+		// particular schema update is run.
 		//
 		const systemSchemaVersion = game.system.flags.schemaVersion;
 
@@ -115,7 +115,8 @@ export default class MigrationRunnerSD {
 	async migrateSceneTokens(scene) {
 		for (const token of scene.tokens) {
 			try {
-				// if the token is linked or has no actor, we don"t need to do anything
+				// If the token is linked or has no actor, we don"t need to do
+				// anything
 				if (token.actorLink || !game.actors.has(token.actorId)) continue;
 
 				const actorData = duplicate(game.actors.get(token.actorId));
@@ -155,10 +156,19 @@ export default class MigrationRunnerSD {
 		await this.currentMigrationTask.updateSettings();
 	}
 
+	get migrateSystemCompendiumsEnbabled() {
+		return game.settings.get("shadowdark", "migrateSystemCompendiums");
+	}
+
 	async migrateWorldCompendiums() {
 		for (let pack of game.packs) {
-			// don't migrate system packs
-			if (pack.metadata.packageType !== "world") continue;
+
+			// Don't migrate system packs unless the proper debug setting is
+			// enabled
+			//
+			if (!this.migrateSystemCompendiumsEnbabled) {
+				if (pack.metadata.packageType !== "world") continue;
+			}
 
 			await this.migrateCompendium(pack);
 		}

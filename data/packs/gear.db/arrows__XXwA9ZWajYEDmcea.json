@@ -26,6 +26,7 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"predefinedEffects": "",
 		"quantity": 20,
 		"scroll": false,
 		"slots": {
@@ -34,7 +35,6 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false,

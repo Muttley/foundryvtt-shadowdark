@@ -35,7 +35,13 @@ export default class CompendiumsSD {
 		return collection;
 	}
 
-	static async _documents(type, subtype, sources=[]) {
+	static async _documents(type, subtype, filterSources=true) {
+		let sources = [];
+
+		if (filterSources === true) {
+			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
+		}
+
 		const noSources = sources.length === 0;
 
 		const documents = await CompendiumsSD._compendiumDocuments(type, subtype);
@@ -46,7 +52,7 @@ export default class CompendiumsSD {
 		else {
 			const filteredDocuments = documents.filter(
 				document => {
-					const source = document.system.source.title;
+					const source = document.system?.source?.title ?? "";
 
 					return source === "" || sources.includes(source);
 				}
@@ -62,28 +68,28 @@ export default class CompendiumsSD {
 		}
 	}
 
-	static async ancestries(sources=[]) {
-		return CompendiumsSD._documents("Item", "Ancestry", sources);
+	static async ancestries(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}
 
-	static async ancestryTalents(sources=[]) {
-		return CompendiumsSD.talents("ancestry", sources);
+	static async ancestryTalents(filterSources=true) {
+		return CompendiumsSD.talents("ancestry", filterSources);
 	}
 
-	static async armor(sources=[]) {
-		return CompendiumsSD._documents("Item", "Armor", sources);
+	static async armor(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Armor", filterSources);
 	}
 
-	static async armorProperties(sources=[]) {
-		return CompendiumsSD.properties("armor", sources);
+	static async armorProperties(filterSources=true) {
+		return CompendiumsSD.properties("armor", filterSources);
 	}
 
-	static async backgrounds(sources=[]) {
-		return CompendiumsSD._documents("Item", "Background", sources);
+	static async backgrounds(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Background", filterSources);
 	}
 
-	static async baseArmor(sources=[]) {
-		const documents = await CompendiumsSD._documents("Item", "Armor", sources);
+	static async baseArmor(filterSources=true) {
+		const documents = await CompendiumsSD._documents("Item", "Armor", filterSources);
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseArmor === ""
@@ -99,8 +105,8 @@ export default class CompendiumsSD {
 		return filteredCollection;
 	}
 
-	static async baseWeapons(sources=[]) {
-		const documents = await CompendiumsSD._documents("Item", "Weapon", sources);
+	static async baseWeapons(filterSources=true) {
+		const documents = await CompendiumsSD._documents("Item", "Weapon", filterSources);
 
 		const filteredDocuments = documents.filter(
 			document => document.system.baseWeapon === ""
@@ -116,21 +122,21 @@ export default class CompendiumsSD {
 		return filteredCollection;
 	}
 
-	static async basicItems(sources=[]) {
-		return CompendiumsSD._documents("Item", "Basic", sources);
+	static async basicItems(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Basic", filterSources);
 	}
 
-	static async classes(sources=[]) {
-		return CompendiumsSD._documents("Item", "Class", sources);
+	static async classes(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Class", filterSources);
 	}
 
-	static async classTalents(sources=[]) {
-		return CompendiumsSD.talents("class", sources);
+	static async classTalents(filterSources=true) {
+		return CompendiumsSD.talents("class", filterSources);
 	}
 
-	static async classTalentTables(sources=[]) {
+	static async classTalentTables(filterSources=true) {
 		const documents =
-			await CompendiumsSD._documents("RollTable", null, sources);
+			await CompendiumsSD._documents("RollTable", null, filterSources);
 
 		const filteredDocuments = documents.filter(
 			document => document.name.match(/class\s+talents/i)
@@ -145,26 +151,26 @@ export default class CompendiumsSD {
 		return filteredCollection;
 	}
 
-	static async commonLanguages(sources=[]) {
-		return CompendiumsSD.languages("common", sources);
+	static async commonLanguages(filterSources=true) {
+		return CompendiumsSD.languages("common", filterSources);
 	}
 
-	static async deities(sources=[]) {
-		return CompendiumsSD._documents("Item", "Deity", sources);
+	static async deities(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Deity", filterSources);
 	}
 
-	static async gems(sources=[]) {
-		return CompendiumsSD._documents("Item", "Gem", sources);
+	static async gems(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Gem", filterSources);
 	}
 
-	static async effects(sources=[]) {
-		return CompendiumsSD._documents("Item", "Effect", sources);
+	static async effects(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Effect", filterSources);
 	}
 
-	static async languages(subtypes=[], sources=[]) {
+	static async languages(subtypes=[], filterSources=true) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD._documents("Item", "Language", sources);
+		const documents = await CompendiumsSD._documents("Item", "Language", filterSources);
 
 		if (noSubtypes) {
 			return documents;
@@ -184,26 +190,26 @@ export default class CompendiumsSD {
 		}
 	}
 
-	static async levelTalents(sources=[]) {
-		return CompendiumsSD.talents("level", sources);
+	static async levelTalents(filterSources=true) {
+		return CompendiumsSD.talents("level", filterSources);
 	}
 
-	static async npcAttacks(sources=[]) {
-		return CompendiumsSD._documents("Item", "NPC Attack", sources);
+	static async npcAttacks(filterSources=true) {
+		return CompendiumsSD._documents("Item", "NPC Attack", filterSources);
 	}
 
-	static async npcFeatures(sources=[]) {
-		return CompendiumsSD._documents("Item", "NPC Features", sources);
+	static async npcFeatures(filterSources=true) {
+		return CompendiumsSD._documents("Item", "NPC Features", filterSources);
 	}
 
-	static async potions(sources=[]) {
-		return CompendiumsSD._documents("Item", "Potion", sources);
+	static async potions(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Potion", filterSources);
 	}
 
-	static async properties(subtypes=[], sources=[]) {
+	static async properties(subtypes=[], filterSources=true) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD._documents("Item", "Property", sources);
+		const documents = await CompendiumsSD._documents("Item", "Property", filterSources);
 
 		if (noSubtypes) {
 			return documents;
@@ -223,16 +229,16 @@ export default class CompendiumsSD {
 		}
 	}
 
-	static async rareLanguages(sources=[]) {
-		return CompendiumsSD.languages("rare", sources);
+	static async rareLanguages(filterSources=true) {
+		return CompendiumsSD.languages("rare", filterSources);
 	}
 
-	static async rollTables(sources=[]) {
-		return CompendiumsSD._documents("RollTable", null, sources);
+	static async rollTables(filterSources=true) {
+		return CompendiumsSD._documents("RollTable", null, filterSources);
 	}
 
-	static async scrolls(sources=[]) {
-		return CompendiumsSD._documents("Item", "Scroll", sources);
+	static async scrolls(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Scroll", filterSources);
 	}
 
 	static async sources() {
@@ -240,29 +246,32 @@ export default class CompendiumsSD {
 
 		for (const source of Object.keys(shadowdark.config.OFFICIAL_SOURCES)) {
 			sources.push({
-				id: source,
-				title: shadowdark.config.OFFICIAL_SOURCES[source],
+				uuid: source,
+				name: shadowdark.config.OFFICIAL_SOURCES[source],
 			});
 		}
 
 		for (const module of game.modules) {
+			if (!module.active) continue;
+
 			const moduleSources = module.flags?.shadowdark?.sources ?? {};
 
 			for (const moduleSource of Object.keys(moduleSources)) {
+
 				sources.push({
-					id: moduleSource,
-					title: game.i18n.localize(
+					uuid: moduleSource,
+					name: game.i18n.localize(
 						moduleSources[moduleSource]
 					),
 				});
 			}
 		}
 
-		return sources.sort((a, b) => a.title.localeCompare(b.title));
+		return sources.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
-	static async spellcastingClasses(sources=[]) {
-		const documents = await CompendiumsSD._documents("Item", "Class", sources);
+	static async spellcastingClasses(filterSources=true) {
+		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
 
 		const filteredDocuments = documents.filter(
 			document => document.system.spellcasting.ability !== ""
@@ -278,14 +287,14 @@ export default class CompendiumsSD {
 		return filteredCollection;
 	}
 
-	static async spells(sources=[]) {
-		return CompendiumsSD._documents("Item", "Spell", sources);
+	static async spells(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Spell", filterSources);
 	}
 
-	static async talents(subtypes=[], sources=[]) {
+	static async talents(subtypes=[], filterSources=true) {
 		const noSubtypes = subtypes.length === 0;
 
-		const documents = await CompendiumsSD._documents("Item", "Talent", sources);
+		const documents = await CompendiumsSD._documents("Item", "Talent", filterSources);
 
 		if (noSubtypes) {
 			return documents;
@@ -305,15 +314,15 @@ export default class CompendiumsSD {
 		}
 	}
 
-	static async wands(sources=[]) {
-		return CompendiumsSD._documents("Item", "Wand", sources);
+	static async wands(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Wand", filterSources);
 	}
 
-	static async weaponProperties(sources=[]) {
-		return CompendiumsSD.properties("weapon", sources);
+	static async weaponProperties(filterSources=true) {
+		return CompendiumsSD.properties("weapon", filterSources);
 	}
 
-	static async weapons(sources=[]) {
-		return CompendiumsSD._documents("Item", "Weapon", sources);
+	static async weapons(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Weapon", filterSources);
 	}
 }
