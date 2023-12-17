@@ -531,6 +531,8 @@ SHADOWDARK.settings.source_filter.prompt: Välj källa...
 SHADOWDARK.settings.source_filter.save_button: Spara inställningarna
 SHADOWDARK.settings.source_filter.these_used: Endast följande källor kommer att tillåtas
 SHADOWDARK.settings.source_filter.title: Filter för bokkällor
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.name: System Version
 SHADOWDARK.settings.track_light_sources.hint: Om markerad kommer systemet att spåra och uppdatera den tid som återstår på alla aktiva ljuskällor.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Om markerade ljuskällor som tillhör inaktiva (inte inloggade) användare, kommer tiden fortfarande att spåras
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Spåra inaktiva användares ljuskällor
