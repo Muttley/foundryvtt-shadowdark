@@ -531,6 +531,8 @@ SHADOWDARK.settings.source_filter.prompt: Select Source...
 SHADOWDARK.settings.source_filter.save_button: Save Configuration
 SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
 SHADOWDARK.settings.source_filter.title: Book Source Filters
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.name: System Version
 SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelmä seuraa ja päivittää aktiivisten valonlähteiden jäljellä olevaa aikaa.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
