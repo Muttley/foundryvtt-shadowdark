@@ -25,7 +25,7 @@
 * [#590] Support optional "clockwise" initiative
 * [#616] Improved detection of NPC spell range when importing via monster importer
 * [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer
-* [#631] Add ability to filter out item sources at the game settings level
+* [#631] Add ability to filter out item sources at the game settings level so they are not available for selection on character sheets
 * [#634] Display system release notes the first time you open a world in a new version
 
 ## Chores
