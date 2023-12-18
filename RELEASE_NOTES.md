@@ -1,3 +1,13 @@
+# v1.7.1
+
+## Bugfixes
+
+* [#640] Unable to override or add bonus to armor class via active effects
+* [#642] "Round" duration configuration set to 6 minutes instead of 6 seconds
+
+## Enhancements
+
+* [#641] Add support for "Turn" durations in Spells/Effect (using 10 minutes as the duration)
 
 # v1.7.0
 
@@ -16,6 +26,7 @@
 * [#634] Display system release notes the first time you open a world in a new version
 
 ## Chores
+
 * Merged contributed new French, Spanish and Swedish translations from Crowdin
 
 ## Feature Notes

@@ -150,6 +150,7 @@ SHADOWDARK.SPELL_DURATIONS = {
 	focus: "SHADOWDARK.spell_duration.focus",
 	instant: "SHADOWDARK.spell_duration.instant",
 	rounds: "SHADOWDARK.spell_duration.rounds",
+	turns: "SHADOWDARK.spell_duration.turns",
 	days: "SHADOWDARK.spell_duration.days",
 	realTime: "SHADOWDARK.spell_duration.real_time",
 	permanent: "SHADOWDARK.spell_duration.permanent",
@@ -169,6 +170,7 @@ SHADOWDARK.EFFECT_CATEGORIES = {
 SHADOWDARK.EFFECT_DURATIONS = {
 	instant: "SHADOWDARK.spell_duration.instant",
 	rounds: "SHADOWDARK.spell_duration.rounds",
+	turns: "SHADOWDARK.effect_duration.turns",
 	seconds: "SHADOWDARK.effect_duration.seconds",
 	minutes: "SHADOWDARK.effect_duration.minutes",
 	hours: "SHADOWDARK.effect_duration.hours",
@@ -215,17 +217,19 @@ SHADOWDARK.JOURNAL_UUIDS = {
 
 SHADOWDARK.VARIABLE_DURATIONS = [
 	"days",
-	"rounds",
-	"realTime",
-	"seconds",
-	"minutes",
 	"hours",
+	"minutes",
+	"realTime",
+	"rounds",
+	"seconds",
+	"turns",
 ];
 
 SHADOWDARK.DURATION_UNITS = {
 	seconds: 1,
+	rounds: 6,
 	minutes: 60,
-	rounds: 360,
+	turns: 600,
 	hours: 3600,
 	days: 86400,
 };
