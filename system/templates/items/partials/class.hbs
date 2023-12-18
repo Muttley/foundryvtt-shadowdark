@@ -19,6 +19,7 @@
 				}}
 			</select>
 		</div>
+		<div></div>
 		<div class="item-detail">
 			<label>{{localize "SHADOWDARK.class.spellcasting_ability.label"}}</label>
 			<select name="system.spellcasting.ability">
@@ -55,6 +56,14 @@
 					localize=false
 				}}
 			</select>
+		</div>
+		<div class="item-detail">
+			<label>{{localize 'SHADOWDARK.class.spellcasting.base_difficulty.label'}}</label>
+			{{numberInput
+				item.system.spellcasting.baseDifficulty
+				name="system.spellcasting.baseDifficulty"
+				placeholder="10"
+			}}
 		</div>
 	</div>
 

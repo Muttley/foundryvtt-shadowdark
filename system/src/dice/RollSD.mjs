@@ -97,7 +97,7 @@ export default class RollSD extends Roll {
 				}
 				// player spell
 				else {
-					options.target = data.item.system.tier + 10;
+					options.target = data.item.system.tier + data.baseDifficulty;
 					options.tier = data.item.system.tier;
 				}
 				if (!options.flavor) {

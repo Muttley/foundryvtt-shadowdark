@@ -1,13 +1,16 @@
-# v1.7.1
+# v1.x.x
 
 ## Bugfixes
 
 * [#640] Unable to override or add bonus to armor class via active effects
 * [#642] "Round" duration configuration set to 6 minutes instead of 6 seconds
+* [#645] Occassionally the Pre-defined effects don't seem to load/be available
+* [#647] Spells tab doesn't get rendered for Wizard class the first time you open the character sheet
 
 ## Enhancements
 
 * [#641] Add support for "Turn" durations in Spells/Effect (using 10 minutes as the duration)
+* [#646] Make spellcasting base DC customisable on a class basis
 
 # v1.7.0
 
