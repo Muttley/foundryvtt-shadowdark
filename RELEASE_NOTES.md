@@ -1,3 +1,16 @@
+# v1.7.1
+
+## Bugfixes
+
+* [#640] Unable to override or add bonus to armor class via active effects
+* [#642] "Round" duration configuration set to 6 minutes instead of 6 seconds
+* [#645] Occassionally the Pre-defined effects don't seem to load/be available
+* [#647] Spells tab doesn't get rendered for Wizard class the first time you open the character sheet
+
+## Enhancements
+
+* [#641] Add support for "Turn" durations in Spells/Effect (using 10 minutes as the duration)
+* [#646] Make spellcasting base DC customisable on a class basis
 
 # v1.7.0
 
@@ -12,10 +25,11 @@
 * [#590] Support optional "clockwise" initiative
 * [#616] Improved detection of NPC spell range when importing via monster importer
 * [#625] Added dice rolls syntax to monster ability descriptions when importing via monster importer
-* [#631] Add ability to filter out item sources at the game settings level
+* [#631] Add ability to filter out item sources at the game settings level so they are not available for selection on character sheets
 * [#634] Display system release notes the first time you open a world in a new version
 
 ## Chores
+
 * Merged contributed new French, Spanish and Swedish translations from Crowdin
 
 ## Feature Notes

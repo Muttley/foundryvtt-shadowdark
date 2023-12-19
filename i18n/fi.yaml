@@ -142,6 +142,7 @@ SHADOWDARK.class.priest: Pappi
 SHADOWDARK.class.ranger: Samooja
 SHADOWDARK.class.spellcasting_ability.label: Loihtimiskyky
 SHADOWDARK.class.spellcasting_class.label: Spell Class
+SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.talent_choices.count.label: Choice Count
 SHADOWDARK.class.talent_choices.label: Talent Choices
 SHADOWDARK.class.talent_choices.prompt: Select Talent...
@@ -231,6 +232,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: Jokin lahjakkuuksistasi antaa sinull
 SHADOWDARK.effect_duration.hours: Tuntia
 SHADOWDARK.effect_duration.minutes: Minuuttia
 SHADOWDARK.effect_duration.seconds: Sekuntia
+SHADOWDARK.effect_duration.turns: Turns
 SHADOWDARK.effect_duration.unlimited: Rajoittamaton
 SHADOWDARK.effect.custom: Mukautetut efektit
 SHADOWDARK.effect.footer.add_custom: Lisää mukautettu efekti
@@ -638,6 +640,7 @@ SHADOWDARK.spell_duration.instant: Välitön
 SHADOWDARK.spell_duration.permanent: Pysyvä
 SHADOWDARK.spell_duration.real_time: Oikea aika
 SHADOWDARK.spell_duration.rounds: Kierrosta
+SHADOWDARK.spell_duration.turns: Turns
 SHADOWDARK.spell_range.close: Vieressä
 SHADOWDARK.spell_range.far: Kaukana
 SHADOWDARK.spell_range.near: Lähellä

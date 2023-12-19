@@ -142,6 +142,7 @@ SHADOWDARK.class.priest: Präst
 SHADOWDARK.class.ranger: Jägare
 SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.spellcasting_class.label: Besvärjelseklass
+SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.talent_choices.count.label: Antal val
 SHADOWDARK.class.talent_choices.label: Talangval
 SHADOWDARK.class.talent_choices.prompt: Välj talang...
@@ -231,6 +232,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
 SHADOWDARK.effect_duration.hours: Timmar
 SHADOWDARK.effect_duration.minutes: Minuter
 SHADOWDARK.effect_duration.seconds: Sekunder
+SHADOWDARK.effect_duration.turns: Turns
 SHADOWDARK.effect_duration.unlimited: Obegränsad
 SHADOWDARK.effect.custom: Anpassade effekter
 SHADOWDARK.effect.footer.add_custom: Lägg till egen effekt
@@ -638,6 +640,7 @@ SHADOWDARK.spell_duration.instant: Ögonblicklig
 SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_duration.real_time: Realtid
 SHADOWDARK.spell_duration.rounds: Rundor
+SHADOWDARK.spell_duration.turns: Turns
 SHADOWDARK.spell_range.close: Kroppsnära
 SHADOWDARK.spell_range.far: Avstånd
 SHADOWDARK.spell_range.near: Nära

@@ -58,8 +58,10 @@ export default class ActorSD extends Actor {
 
 
 	async _learnSpell(item) {
+		const characterClass = await this.getClass();
+
 		const spellcastingAttribute =
-			this.backgroundItems?.class?.system?.spellcasting?.ability ?? "int";
+			characterClass?.system?.spellcasting?.ability ?? "int";
 
 		const result = await this.rollAbility(
 			spellcastingAttribute,
@@ -160,7 +162,9 @@ export default class ActorSD extends Actor {
 
 
 	async _playerRollHP(options={}) {
-		if (!this.backgroundItems.class) {
+		const characterClass = await this.getClass();
+
+		if (!characterClass) {
 			ui.notifications.error(
 				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
 				{permanent: false}
@@ -179,31 +183,9 @@ export default class ActorSD extends Actor {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 
-		const parts = [this.backgroundItems.class.system.hitPoints];
+		const parts = [characterClass.system.hitPoints];
 
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
-
-
-	async _populateBackgroundItems() {
-		if (!this.backgroundItems) this.backgroundItems = {};
-
-		this.backgroundItems.ancestry = await this.getAncestry();
-		this.backgroundItems.class = await this.getClass();
-		this.backgroundItems.deity = await this.getDeity();
-
-		this.backgroundItems.title = "";
-		if (this.backgroundItems.class && this.system.alignment !== "") {
-			const titles = this.backgroundItems.class.system.titles ?? [];
-			const level = this.system.level?.value ?? 0;
-
-			for (const title of titles) {
-				if (level >= title.from && level <= title.to) {
-					this.backgroundItems.title = title[this.system.alignment];
-					break;
-				}
-			}
-		}
 	}
 
 
@@ -238,7 +220,6 @@ export default class ActorSD extends Actor {
 
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
-		this._populateBackgroundItems();
 	}
 
 
@@ -602,7 +583,8 @@ export default class ActorSD extends Actor {
 
 
 	async canUseMagicItems() {
-		const characterClass = this.backgroundItems.class;
+		const characterClass = await this.getClass();
+
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.ability ?? "";
 
@@ -623,7 +605,7 @@ export default class ActorSD extends Actor {
 			return;
 		}
 
-		const abilityId = this.getSpellcastingAbility();
+		const abilityId = await this.getSpellcastingAbility();
 
 		if (abilityId === "") {
 			ui.notifications.error(
@@ -641,11 +623,14 @@ export default class ActorSD extends Actor {
 			rollType = item.system.spellName.slugify();
 		}
 
+		const characterClass = await this.getClass();
+
 		const data = {
 			rollType,
 			item: item,
 			actor: this,
 			abilityBonus: this.abilityModifier(abilityId),
+			baseDifficulty: characterClass?.system?.spellcasting?.baseDifficulty ?? 10,
 			talentBonus: this.system.bonuses.spellcastingCheckBonus,
 		};
 
@@ -770,12 +755,29 @@ export default class ActorSD extends Actor {
 	}
 
 
-	getSpellcastingAbility() {
-		const characterClass = this.backgroundItems.class;
+	async getSpellcastingAbility() {
+		const characterClass = await this.getClass();
 
 		return characterClass?.system?.spellcasting?.ability ?? "";
 	}
 
+	async getTitle() {
+		const characterClass = await this.getClass();
+
+		if (characterClass && this.system.alignment !== "") {
+			const titles = characterClass.system.titles ?? [];
+			const level = this.system.level?.value ?? 0;
+
+			for (const title of titles) {
+				if (level >= title.from && level <= title.to) {
+					return title[this.system.alignment];
+				}
+			}
+		}
+		else {
+			return "";
+		}
+	}
 
 	async hasActiveLightSources() {
 		return this.getActiveLightSources.length > 0;
@@ -804,7 +806,8 @@ export default class ActorSD extends Actor {
 
 
 	async isSpellcaster() {
-		const characterClass = this.backgroundItems.class;
+		const characterClass = await this.getClass();
+
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
@@ -1256,9 +1259,9 @@ export default class ActorSD extends Actor {
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
 
-		this.updateSource({"system.attributes.ac.value": newArmorClass});
+		await this.updateSource({"system.attributes.ac.value": newArmorClass});
 
-		return newArmorClass;
+		return this.system.attributes.ac.value;
 	}
 
 

@@ -438,8 +438,7 @@ export default class ItemSheetSD extends ItemSheet {
 		// Create effects when added through the predefined effects input
 		if (event.target?.name === "system.predefinedEffects") {
 			const key = event.target.value;
-			const jsonData = await this._getPredefinedEffectsData();
-			let effectData = jsonData[key];
+			let effectData = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
 
 			if (!effectData) return console.error(`No effect found (${key})`);
 
@@ -928,28 +927,19 @@ export default class ItemSheetSD extends ItemSheet {
 	 */
 	async _getPredefinedEffectsList() {
 		const effects = {};
-		const jsonData = await this._getPredefinedEffectsData();
 
-		for (const [key] of Object.entries(jsonData)) {
+		for (const key in CONFIG.SHADOWDARK.PREDEFINED_EFFECTS) {
+			const effect = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
+
 			effects[key] = {
-				key: key,
-				name: game.i18n.localize(jsonData[key].lang),
+				key,
+				name: effect.name,
 			};
 		}
 
 		return effects;
 	}
 
-	// TODO: CUSTOMIZATION Extend this with custom paths as for the art mapping
-	/**
-	 * Reads the predefined effects mapping json file and returns it as a JSON object.
-	 * @returns {Object}
-	 */
-	async _getPredefinedEffectsData() {
-		return await foundry.utils.fetchJsonWithTimeout(
-			"systems/shadowdark/assets/mappings/map-predefined-effects.json"
-		);
-	}
 
 	/**
 	 * Creates effects based on predefined effect choices and the supplied

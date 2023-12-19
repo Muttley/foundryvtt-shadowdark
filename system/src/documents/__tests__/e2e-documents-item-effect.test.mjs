@@ -19,10 +19,6 @@ export const options = {
 	preSelected: true,
 };
 
-const predefinedEffects = await foundry.utils.fetchJsonWithTimeout(
-	"systems/shadowdark/assets/mappings/map-predefined-effects.json"
-);
-
 const createMockItem = async type => createMockItemByKey(key, "Effect");
 const createMockPlayer = async () => createMockActorByKey(key, "Player");
 
@@ -52,6 +48,8 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 		await waitForInput();
 	});
 
+	const predefinedEffects = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS;
+
 	describe("sanity checks", () => {
 		it("Mock actor is defined", () => {
 			expect(_p).is.not.undefined;
@@ -59,12 +57,6 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 			expect(_p.system.bonuses.weaponMastery.length).equal(0);
 			expect(_p.system.bonuses.advantage.length).equal(0);
 			expect(_p.system.bonuses.lightSource).equal("");
-		});
-
-		it("Predefined effects could be read", () => {
-			expect(predefinedEffects).is.not.undefined;
-			expect(typeof predefinedEffects).equal("object");
-			expect(Object.entries(predefinedEffects).length > 0).is.true;
 		});
 	});
 

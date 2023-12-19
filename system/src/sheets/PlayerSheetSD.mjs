@@ -165,8 +165,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			)
 		);
 
-		context.characterClass = this.actor.backgroundItems.class?.name;
-		context.classTitle = this.actor.backgroundItems.title;
+		context.characterClass = await (this.actor.getClass())?.name;
+		context.classTitle = await this.actor.getTitle();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 

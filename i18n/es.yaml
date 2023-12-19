@@ -142,6 +142,7 @@ SHADOWDARK.class.priest: Clérigo
 SHADOWDARK.class.ranger: Explorador
 SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
 SHADOWDARK.class.spellcasting_class.label: Clase de hechizo
+SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.talent_choices.count.label: Número de opciones
 SHADOWDARK.class.talent_choices.label: Elecciones de talento
 SHADOWDARK.class.talent_choices.prompt: Seleccionar talento...
@@ -231,6 +232,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: Un talento te está dando ventaja en
 SHADOWDARK.effect_duration.hours: Horas
 SHADOWDARK.effect_duration.minutes: Minutos
 SHADOWDARK.effect_duration.seconds: Segundos
+SHADOWDARK.effect_duration.turns: Turns
 SHADOWDARK.effect_duration.unlimited: Ilimitado
 SHADOWDARK.effect.custom: Efectos personalizados
 SHADOWDARK.effect.footer.add_custom: Añadir efecto personalizado
@@ -638,6 +640,7 @@ SHADOWDARK.spell_duration.instant: Instantáneo
 SHADOWDARK.spell_duration.permanent: Permanente
 SHADOWDARK.spell_duration.real_time: Tiempo real
 SHADOWDARK.spell_duration.rounds: Rondas
+SHADOWDARK.spell_duration.turns: Turns
 SHADOWDARK.spell_range.close: Cerca
 SHADOWDARK.spell_range.far: Lejos
 SHADOWDARK.spell_range.near: Próximo

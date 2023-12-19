@@ -162,6 +162,13 @@ Hooks.once("setup", () => {
 			}
 		}
 	}
+
+	for (const predefinedEffect in CONFIG.SHADOWDARK.PREDEFINED_EFFECTS) {
+		CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[predefinedEffect].name =
+			game.i18n.localize(
+				CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[predefinedEffect].name
+			);
+	}
 });
 
 HooksImmediate.attach();
