@@ -1,4 +1,4 @@
-# v1.x.x
+# v1.7.1
 
 ## Bugfixes
 
