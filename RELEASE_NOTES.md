@@ -1,3 +1,14 @@
+# v1.7.2
+
+## Bugfixes
+
+* [#650] New hotbar support breaks standard document drag to hotbar support
+
+## Enhancements
+
+* [#649] Apply compendium source filtering to selectors on Item sheets as well as player Sheets
+* [#653] Allow spell items to be dragged from character sheet to hotbar
+
 # v1.7.1
 
 ## Bugfixes
