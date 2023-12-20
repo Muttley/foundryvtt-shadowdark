@@ -14,7 +14,7 @@ export default class Update_231025_1 extends UpdateBaseSD {
 			const spellcasterClass = itemData.system.class;
 			if (typeof spellcasterClass === "string") {
 				const itemLut = {};
-				(await shadowdark.compendiums.spellcastingClasses()).forEach(
+				(await shadowdark.compendiums.spellcastingClasses(false)).forEach(
 					item => itemLut[item.name.slugify()] = item.uuid
 				);
 

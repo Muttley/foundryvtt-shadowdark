@@ -20,7 +20,7 @@ export default class Update_230916_1 extends UpdateBaseSD {
 
 		if (currentValue !== "") {
 			const itemLut = {};
-			(await shadowdark.compendiums.ancestries()).forEach(
+			(await shadowdark.compendiums.ancestries(false)).forEach(
 				item => itemLut[item.name.slugify()] = item.uuid
 			);
 

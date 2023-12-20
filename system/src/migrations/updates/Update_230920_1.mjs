@@ -21,7 +21,7 @@ export default class Update_230920_1 extends UpdateBaseSD {
 
 		if (currentValue !== "") {
 			const itemLut = {};
-			(await shadowdark.compendiums.classes()).forEach(
+			(await shadowdark.compendiums.classes(false)).forEach(
 				item => itemLut[item.name.slugify()] = item.uuid
 			);
 
@@ -58,7 +58,7 @@ export default class Update_230920_1 extends UpdateBaseSD {
 
 		if (currentValues.length > 0) {
 			const itemLut = {};
-			(await shadowdark.compendiums.spellcastingClasses()).forEach(
+			(await shadowdark.compendiums.spellcastingClasses(false)).forEach(
 				item => itemLut[item.name.slugify()] = item.uuid
 			);
 

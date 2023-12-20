@@ -1,5 +1,15 @@
 export default class ItemSD extends Item {
 
+	get isRollable() {
+		return [
+			"Potion",
+			"Scroll",
+			"Spell",
+			"Wand",
+			"Weapon",
+		].includes(this.type);
+	}
+
 	/* Set the start time and initiative roll of newly created effect */
 	/** @override */
 	async _preCreate(data, options, user) {
