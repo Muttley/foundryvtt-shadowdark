@@ -89,7 +89,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getAncestrySelectorConfigs(context) {
 		const [selectedLanguages, availableLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.languages([], false),
+				await shadowdark.compendiums.languages(),
 				this.item.system.languages.fixed ?? []
 			);
 
@@ -105,7 +105,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.ancestryTalents(false),
+				await shadowdark.compendiums.ancestryTalents(),
 				this.item.system.talents ?? []
 			);
 
@@ -123,7 +123,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.baseArmor(false),
+				await shadowdark.compendiums.baseArmor(),
 				this.item.system.armor ?? []
 			);
 
@@ -138,10 +138,10 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 
 		context.classTalentTables =
-			await shadowdark.compendiums.classTalentTables(false);
+			await shadowdark.compendiums.classTalentTables();
 
 		const classTalentTables =
-			await shadowdark.compendiums.classTalentTables(false);
+			await shadowdark.compendiums.classTalentTables();
 
 		context.classTalentTables = {};
 		for (const classTalentTable of classTalentTables) {
@@ -152,7 +152,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedLanguages, availableLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.languages([], false),
+				await shadowdark.compendiums.languages(),
 				this.item.system.languages.selectOptions ?? []
 			);
 
@@ -166,7 +166,7 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedLanguages,
 		};
 
-		const classTalents = await shadowdark.compendiums.talents([], false);
+		const classTalents = await shadowdark.compendiums.talents();
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(
@@ -201,7 +201,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 
 		const spellcastingClasses =
-			await shadowdark.compendiums.spellcastingClasses(false);
+			await shadowdark.compendiums.spellcastingClasses();
 
 		context.spellcastingClasses = {};
 		for (const spellcastingClass of spellcastingClasses) {
@@ -212,7 +212,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const [selectedWeapons, availableWeapons] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.baseWeapons(false),
+				await shadowdark.compendiums.baseWeapons(),
 				this.item.system.weapons ?? []
 			);
 
@@ -230,7 +230,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.spellcastingClasses(false),
+				await shadowdark.compendiums.spellcastingClasses(),
 				this.item.system.class ?? []
 			);
 
@@ -331,14 +331,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 			if (item.type === "Armor") {
 				context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseArmor(false)
+					await shadowdark.compendiums.baseArmor()
 				);
 
 				delete context.baseArmor[mySlug];
 			}
 			if (item.type === "Weapon") {
 				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseWeapons(false)
+					await shadowdark.compendiums.baseWeapons()
 				);
 
 				delete context.baseWeapons[mySlug];

@@ -199,7 +199,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		// Ancestry
 		if (json.ancestry) {
-			const ancestries = await shadowdark.compendiums.ancestries();
+			const ancestries = await shadowdark.compendiums.ancestries(false);
 			const ancestry = ancestries.find(
 				i => i.name.toLowerCase() === json.ancestry.toLowerCase()
 			);
@@ -207,21 +207,21 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		}
 
 		// Background
-		const backgrounds = await shadowdark.compendiums.backgrounds();
+		const backgrounds = await shadowdark.compendiums.backgrounds(false);
 		const background = backgrounds.find(
 			i => i.name.toLowerCase() === json.background.toLowerCase()
 		);
 		importedActor.system.background = background?.uuid ?? "";
 
 		// Class
-		const classes = await shadowdark.compendiums.classes();
+		const classes = await shadowdark.compendiums.classes(false);
 		const characterClass = classes.find(
 			i => i.name.toLowerCase() === json.class.toLowerCase()
 		);
 		importedActor.system.class = characterClass?.uuid ?? "";
 
 		// Deity
-		const deities = await shadowdark.compendiums.deities();
+		const deities = await shadowdark.compendiums.deities(false);
 		const deity = deities.find(
 			i => i.name.toLowerCase() === json.deity.toLowerCase()
 		);
@@ -229,7 +229,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		// Languages
 		const jsonLanguages = json.languages.toLowerCase().split(", ");
-		const allLanguages = await shadowdark.compendiums.languages();
+		const allLanguages = await shadowdark.compendiums.languages([], false);
 		for (const jsonLanguage of jsonLanguages) {
 			const language = allLanguages.find(l => l.name.toLowerCase() === jsonLanguage);
 			if (language) importedActor.system.languages.push(language.uuid);

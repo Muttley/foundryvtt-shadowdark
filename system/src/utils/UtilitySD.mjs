@@ -16,13 +16,26 @@ export default class UtilitySD {
 			);
 		}
 
+		let command = `await Hotbar.toggleDocumentSheet("${itemData.uuid}");`;
+		let flags = {};
+		let name = itemData.name;
+
+		if (itemData.isRollable) {
+			command = `shadowdark.macro.rollItemMacro("${itemData.name}")`;
+			flags = {"shadowdark.itemMacro": true};
+			name = `${game.i18n.localize("Roll")} ${name}`;
+		}
+		else {
+			name = `${game.i18n.localize("Display")} ${name}`;
+		}
+
 		const macroData = {
-			command: `shadowdark.macro.rollItemMacro("${itemData.name}")`,
-			flags: {"shadowdark.itemMacro": true},
+			command,
+			flags,
 			img: itemData.img,
-			name: itemData.name,
+			name,
 			scope: "actor",
-			type: "script",
+			type: CONST.MACRO_TYPES.SCRIPT,
 		};
 
 		// Assign the macro to the hotbar
