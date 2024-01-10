@@ -13,11 +13,11 @@ SHADOWDARK.ability_wisdom: Sagesse
 SHADOWDARK.alignment.chaotic: Chaotique
 SHADOWDARK.alignment.lawful: Loyal
 SHADOWDARK.alignment.neutral: Neutre
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.languages.label: Langue d'Ascendance
+SHADOWDARK.ancestry.languages.prompt: Sélectionner une Langue...
 SHADOWDARK.ancestry.talents.count.label: Choice Count
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
+SHADOWDARK.ancestry.talents.label: Talents d'Ascendance
+SHADOWDARK.ancestry.talents.prompt: Sélectionner un Talent...
 SHADOWDARK.app.active_effects.title: Effets actifs
 SHADOWDARK.app.gem_bag.sell_all: Vendre toutes les gemmes
 SHADOWDARK.app.gem_bag.title: Sac de gemmes
@@ -33,7 +33,7 @@ SHADOWDARK.app.item_properties.weapon.title: Propriétés de l'arme
 SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light_tracker.title: Traqueur de lumière
-SHADOWDARK.app.light-tracker.douse-light: Atténuer la lumière
+SHADOWDARK.app.light-tracker.douse-light: Éteindre la lumière
 SHADOWDARK.app.light-tracker.hide-inactive: Cacher les acteurs sans lumières
 SHADOWDARK.app.light-tracker.show-all-actors: Montrer tous les acteurs
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Éteindre les lumières
@@ -57,15 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} secondes resta
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} semaines restantes"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} années restantes"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Clic droit] Supprimer l'effet"
-SHADOWDARK.apps.monster-importer.import_button: Import Monster
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
-SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
-SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
-SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
-SHADOWDARK.apps.monster-importer.instruction2e: Feature
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
-SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.monster-importer.import_button: Importer Monstre
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copiez le texte du monstre à partir de sa source.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Collez le texte dans cette case en suivant les règles de mise en forme du Livre de base. Ajoutez une ligne vide entre chaque capacité.
+SHADOWDARK.apps.monster-importer.instruction2b: Nom du monstre
+SHADOWDARK.apps.monster-importer.instruction2c: Texte d'ambiance
+SHADOWDARK.apps.monster-importer.instruction2d: Bloc de statistiques principal
+SHADOWDARK.apps.monster-importer.instruction2e: Caractéristique
+SHADOWDARK.apps.monster-importer.instruction3: 3. Cliquez sur "Importer Monstre".
+SHADOWDARK.apps.monster-importer.title: Importer un monstre
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importer Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Allez sur Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Générez votre personnage et enregistrez en JSON.
@@ -92,13 +92,13 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Appliquer les dégâts seco
 SHADOWDARK.chat_card.context.apply_damage: Appliquer les dégâts
 SHADOWDARK.chat_card.context.apply_healing_secondary: Appliquer la guérison secondaire
 SHADOWDARK.chat_card.context.apply_healing: Appliquer les soins
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Puisque {name} a fait le plus grand score, iel agira en premier, et tous les autres combattants suivront dans un ordre fixe.
 SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
-SHADOWDARK.chat.item_roll.double_numerical: Double une valeur numérique !
+SHADOWDARK.chat.item_roll.double_numerical: Double n'importe quelle valeur numérique !
 SHADOWDARK.chat.item_roll.mishap: Jetez sur la table des mésaventures appropriée !
 SHADOWDARK.chat.item_roll.title: Jet d'Attaque avec {name}
 SHADOWDARK.chat.item_roll.wand_mishap: La baguette se casse et cesse définitivement de fonctionner
-SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
+SHADOWDARK.chat.light_source.expired: "Le/la {lightSource} de {name} s'est éteint(e)"
 SHADOWDARK.chat.light_source.remaining: minutes restantes
 SHADOWDARK.chat.light_source.seconds_remaining: Moins de 1 minute restante
 SHADOWDARK.chat.light_source.source.all: Toutes les sources de lumière se sont éteintes
@@ -112,40 +112,40 @@ SHADOWDARK.chat.spell_learn.failure: "{name} n'a pas réussi à apprendre quoi q
 SHADOWDARK.chat.spell_learn.success: "{name} a bien appris le sort {spellName}"
 SHADOWDARK.chat.spell_learn.title: Apprentissage de Sort
 SHADOWDARK.chat.spell_roll.title: "Lancement de {name} au rang {tier} avec DD de sort {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
-SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
-SHADOWDARK.chat.use_ability.title: "Using Ability"
+SHADOWDARK.chat.use_ability.failure: "{name} a échoué à utiliser la capacité {ability}"
+SHADOWDARK.chat.use_ability.success: "{name} a utilisé la capacité {ability} avec succès"
+SHADOWDARK.chat.use_ability.title: "Utiliser une capacité"
 SHADOWDARK.chat.welcome_message.intro: "Pour vous familiariser rapidement avec le système, consultez les visites guidées fournies en cliquant sur le bouton suivant :"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Suivie des problèmes
 SHADOWDARK.chat.welcome_message.issues: "Si vous trouvez des problèmes ou avez des idées pour de nouvelles fonctionnalités pour le système. Consultez notre outil de suivi des problèmes :"
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG pour Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Visites de Shadowdark RPG
 SHADOWDARK.chatcard.default: Lancer
-SHADOWDARK.class-ability.ability.label: Ability
-SHADOWDARK.class-ability.available.label: Available
-SHADOWDARK.class-ability.dc.label: DC
-SHADOWDARK.class-ability.group.label: Ability Group
-SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
-SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
-SHADOWDARK.class-ability.lost.label: Lost
+SHADOWDARK.class-ability.ability.label: Capacité
+SHADOWDARK.class-ability.available.label: Disponible
+SHADOWDARK.class-ability.dc.label: DD
+SHADOWDARK.class-ability.group.label: Groupe de Capacités
+SHADOWDARK.class-ability.limited-uses.label: Nombre d'utilisations limité ?
+SHADOWDARK.class-ability.lose_on_failure.label: Perte sur Échec ?
+SHADOWDARK.class-ability.lost.label: Perdu
 SHADOWDARK.class-ability.maximum.label: Maximum
-SHADOWDARK.class.armor.all.label: All Armor
+SHADOWDARK.class.armor.all.label: Toutes les armures
 SHADOWDARK.class.armor.label: Armure
-SHADOWDARK.class.armor.prompt: Select Armor...
+SHADOWDARK.class.armor.prompt: Sélectionner une armure...
 SHADOWDARK.class.fighter: Guerrier
-SHADOWDARK.class.hit_points.label: HP Die Roll
+SHADOWDARK.class.hit_points.label: Lancer de Dé de vie
 SHADOWDARK.class.language_choices.count.label: Choice Count
-SHADOWDARK.class.language_choices.label: Language Choices
-SHADOWDARK.class.language_choices.prompt: Select Language...
-SHADOWDARK.class.languages.label: Class Languages
+SHADOWDARK.class.language_choices.label: Choix de langues
+SHADOWDARK.class.language_choices.prompt: Sélectionner une Langue...
+SHADOWDARK.class.languages.label: Langues de classe
 SHADOWDARK.class.priest: Prêtre
 SHADOWDARK.class.ranger: Éclaireur
-SHADOWDARK.class.spellcasting_ability.label: Spellcasting Ability
-SHADOWDARK.class.spellcasting_class.label: Spell Class
-SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
+SHADOWDARK.class.spellcasting_ability.label: Caractéristique d'incantation
+SHADOWDARK.class.spellcasting_class.label: Lanceur de sort
+SHADOWDARK.class.spellcasting.base_difficulty.label: DD de base pour lancer de sort
 SHADOWDARK.class.talent_choices.count.label: Choice Count
 SHADOWDARK.class.talent_choices.label: Talent Choices
-SHADOWDARK.class.talent_choices.prompt: Select Talent...
+SHADOWDARK.class.talent_choices.prompt: Sélectionnez un Talent...
 SHADOWDARK.class.talents_table.label: Class Talents Table
 SHADOWDARK.class.talents.label: Talents
 SHADOWDARK.class.talents.prompt: Select Talent...
@@ -162,8 +162,8 @@ SHADOWDARK.class.wizard: Magicien
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PA
-SHADOWDARK.damage.one_handed: "Dégâts à une Main:"
-SHADOWDARK.damage.two_handed: "Dégâts à 2 Mains:"
+SHADOWDARK.damage.one_handed: "Dégâts à une Main :"
+SHADOWDARK.damage.two_handed: "Dégâts à 2 Mains :"
 SHADOWDARK.dialog.ability_check.cha: Test de Charisme
 SHADOWDARK.dialog.ability_check.con: Test de Constitution
 SHADOWDARK.dialog.ability_check.dex: Test de Dextérité
@@ -180,12 +180,12 @@ SHADOWDARK.dialog.effect.choice.spell: Choisissez un sort
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
 SHADOWDARK.dialog.effect.choice.weapon: Choisissez un type d'arme
 SHADOWDARK.dialog.effect.choices.title: Effect Parameters
-SHADOWDARK.dialog.general.are_you_sure: Êtes-vous sûr ?
+SHADOWDARK.dialog.general.are_you_sure: Êtes-vous sûr⸱e ?
 SHADOWDARK.dialog.general.cancel: Annuler
 SHADOWDARK.dialog.general.no: "Non"
 SHADOWDARK.dialog.general.select: Sélectionner
 SHADOWDARK.dialog.general.yes: "Oui"
-SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.gm: Maître de jeu
 SHADOWDARK.dialog.hp_roll.per_level: Lancer les PV pour le niveau {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PV avant de lancer : {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Lancement de {hp} PV pour le niveau 1 (incluant le modificateur de constitution)
@@ -206,14 +206,14 @@ SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
 SHADOWDARK.dialog.item.delete: Supprimer
 SHADOWDARK.dialog.item.sell_all: Tout Vendre
 SHADOWDARK.dialog.item.sell: Vendre
-SHADOWDARK.dialog.item.use: Use
-SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
-SHADOWDARK.dialog.roll_mode_label: Rolling mode
+SHADOWDARK.dialog.item.use: Utiliser
+SHADOWDARK.dialog.light_source.pick_up.title: Sélectionnez l'Acteur à qui donner la source lumineuse
+SHADOWDARK.dialog.roll_mode_label: Mode de lancer
 SHADOWDARK.dialog.roll: Jet de dés
-SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVERTISSEMENT : Ce sort n'est pas pour la même classe que le personnage, êtes-vous sûr de vouloir l'apprendre ?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
-SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
-SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
+SHADOWDARK.dialog.select_ancestry.prompt: Sélectionnez une ascendance...
+SHADOWDARK.dialog.select_ancestry.title: Choisir une Ascendance
 SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
 SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
 SHADOWDARK.dialog.select_background.prompt: Select Background...
@@ -232,7 +232,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: Un talent vous donne l'avantage de c
 SHADOWDARK.effect_duration.hours: Heures
 SHADOWDARK.effect_duration.minutes: Minutes
 SHADOWDARK.effect_duration.seconds: Secondes
-SHADOWDARK.effect_duration.turns: Turns
+SHADOWDARK.effect_duration.turns: Tours
 SHADOWDARK.effect_duration.unlimited: Illimité
 SHADOWDARK.effect.custom: Effets Personnalisés
 SHADOWDARK.effect.footer.add_custom: Ajoutez un Effet Personnalisé
@@ -588,7 +588,7 @@ SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ascendance
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
+SHADOWDARK.sheet.player.ancestry.tooltip: L'héritage culturel et ancestral de votre personnage
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background.label: Historique
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
