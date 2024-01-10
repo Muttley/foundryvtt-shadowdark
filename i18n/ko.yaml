@@ -13,11 +13,11 @@ SHADOWDARK.ability_wisdom: 지혜
 SHADOWDARK.alignment.chaotic: 혼돈
 SHADOWDARK.alignment.lawful: 질서
 SHADOWDARK.alignment.neutral: 중립
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
-SHADOWDARK.ancestry.talents.count.label: Choice Count
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
+SHADOWDARK.ancestry.languages.label: 선조 언어
+SHADOWDARK.ancestry.languages.prompt: 언어를 선택하세요...
+SHADOWDARK.ancestry.talents.count.label: 재능 카운트
+SHADOWDARK.ancestry.talents.label: 선조 재능
+SHADOWDARK.ancestry.talents.prompt: 재능을 선택하세요...
 SHADOWDARK.app.active_effects.title: 활성화된 효과
 SHADOWDARK.app.gem_bag.sell_all: 보석 전체 보기
 SHADOWDARK.app.gem_bag.title: 보석 가방
@@ -57,15 +57,15 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} 초 남았습�
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} 주 남았습니다"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} 년 남았습니다"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[오른쪽 클릭] 효과 삭제"
-SHADOWDARK.apps.monster-importer.import_button: Import Monster
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into this box following the monster format shown in the core rules. Add a blank line between each ability.
-SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
-SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
-SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
-SHADOWDARK.apps.monster-importer.instruction2e: Feature
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
-SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.monster-importer.import_button: 몬스터 불러오기
+SHADOWDARK.apps.monster-importer.instruction1: 1. 출처의 몬스터 텍스트를 복사합니다.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. 코어 룰북의 몬스터 포맷에 맞게 칸 안에 텍스트를 붙여넣습니다. 각 능력 사이를 한 줄씩 띄어주세요.
+SHADOWDARK.apps.monster-importer.instruction2b: 몬스터 이름
+SHADOWDARK.apps.monster-importer.instruction2c: 추가 설명
+SHADOWDARK.apps.monster-importer.instruction2d: 주요 능력 블록
+SHADOWDARK.apps.monster-importer.instruction2e: 재주
+SHADOWDARK.apps.monster-importer.instruction3: 3. '몬스터 불러오기'를 누릅니다.
+SHADOWDARK.apps.monster-importer.title: 몬스터 불러오기
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Shadowdarkling에서 가져오기
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. shadowdarklings.net에 방문하세요.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 캐릭터를 만들고 JSON 파일로 저장하세요.
@@ -143,12 +143,12 @@ SHADOWDARK.class.ranger: 레인저
 SHADOWDARK.class.spellcasting_ability.label: 주문시전 능력
 SHADOWDARK.class.spellcasting_class.label: Spell Class
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
-SHADOWDARK.class.talent_choices.count.label: Choice Count
-SHADOWDARK.class.talent_choices.label: Talent Choices
-SHADOWDARK.class.talent_choices.prompt: Select Talent...
-SHADOWDARK.class.talents_table.label: Class Talents Table
-SHADOWDARK.class.talents.label: Talents
-SHADOWDARK.class.talents.prompt: Select Talent...
+SHADOWDARK.class.talent_choices.count.label: 재능 카운트
+SHADOWDARK.class.talent_choices.label: 재능 선택
+SHADOWDARK.class.talent_choices.prompt: 재능을 선택하세요...
+SHADOWDARK.class.talents_table.label: 클래스 재능 표
+SHADOWDARK.class.talents.label: 재능
+SHADOWDARK.class.talents.prompt: 재능을 선택하세요...
 SHADOWDARK.class.thief: 도둑
 SHADOWDARK.class.titles.levels.from.label: From
 SHADOWDARK.class.titles.levels.label: Levels
@@ -232,7 +232,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: 이 굴림에 유리함을 주는 �
 SHADOWDARK.effect_duration.hours: 시간
 SHADOWDARK.effect_duration.minutes: 분
 SHADOWDARK.effect_duration.seconds: 초
-SHADOWDARK.effect_duration.turns: Turns
+SHADOWDARK.effect_duration.turns: 턴
 SHADOWDARK.effect_duration.unlimited: 무제한
 SHADOWDARK.effect.custom: 사용자지정 효과
 SHADOWDARK.effect.footer.add_custom: 사용자지정 효과 추가
@@ -261,7 +261,7 @@ SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 �
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
-SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.form.section_header.talents.label: 재능
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
 SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
@@ -389,7 +389,7 @@ SHADOWDARK.item.name_from_spell.Wand: '{spellName} 마법봉'
 SHADOWDARK.item.npc_attack_bonus: 명중 보너스
 SHADOWDARK.item.npc_attack_count: 공격 숫자
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
-SHADOWDARK.item.npc_attack_special: 특수
+SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
 SHADOWDARK.item.potion.label: 물약
@@ -526,11 +526,11 @@ SHADOWDARK.settings.roll_npc_hp.hint: NPC가 장면에 추가될 때 자동으�
 SHADOWDARK.settings.roll_npc_hp.name: 자동 NPC 히트 포인트 굴림
 SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.schemaVersion.name: Schema Version
-SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
-SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
+SHADOWDARK.settings.source_filter.all_used: 모든 출처 허용
+SHADOWDARK.settings.source_filter.button_label: 출처 필터 설정
 SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
 SHADOWDARK.settings.source_filter.name: Source Filter
-SHADOWDARK.settings.source_filter.prompt: Select Source...
+SHADOWDARK.settings.source_filter.prompt: 출처 선택하기...
 SHADOWDARK.settings.source_filter.save_button: Save Configuration
 SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
 SHADOWDARK.settings.source_filter.title: Book Source Filters
@@ -579,7 +579,7 @@ SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: 공격
 SHADOWDARK.sheet.npc.dark_adapted: 어둠 적응
 SHADOWDARK.sheet.npc.description_label: 설명
-SHADOWDARK.sheet.npc.features_label: 기능
+SHADOWDARK.sheet.npc.features_label: 재주
 SHADOWDARK.sheet.npc.movement_short: 이동
 SHADOWDARK.sheet.npc.movement: 이동
 SHADOWDARK.sheet.npc.specials_label: Special Attacks
@@ -621,17 +621,17 @@ SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
 SHADOWDARK.sheet.player.toggle_spell_lost: 주문 불능 표시
 SHADOWDARK.sheet.player.tooltip.cast_spell: 주문 시전
 SHADOWDARK.sheet.player.tooltip.learn_spell: 주문 배우기
-SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
+SHADOWDARK.sheet.player.tooltip.use_class_ability: 클래스 능력 사용
 SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용
 SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
 SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
 SHADOWDARK.sheet.player.xp: XP
-SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
-SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
-SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
-SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
-SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
-SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
+SHADOWDARK.source.bard-and-ranger: "섀도다크 RPG: 바드와 레인저"
+SHADOWDARK.source.core-rules: "섀도다크 RPG: 코어 룰북"
+SHADOWDARK.source.cursed-scroll-1: 커스드 스크롤 Vol.1, 다이어블러리!
+SHADOWDARK.source.cursed-scroll-2: 커스드 스크롤 Vol.2, 레드 샌드
+SHADOWDARK.source.cursed-scroll-3: 커스드 스크롤 Vol.3, 미드나이트 선
+SHADOWDARK.source.quickstart: "섀도다크 RPG: 퀵스타트 세트"
 SHADOWDARK.spell_caster.priest: 성직자
 SHADOWDARK.spell_caster.wizard: 마법사
 SHADOWDARK.spell_duration.days: 일
@@ -640,12 +640,12 @@ SHADOWDARK.spell_duration.instant: 즉시
 SHADOWDARK.spell_duration.permanent: 영구
 SHADOWDARK.spell_duration.real_time: 실시간
 SHADOWDARK.spell_duration.rounds: 라운드
-SHADOWDARK.spell_duration.turns: Turns
+SHADOWDARK.spell_duration.turns: 턴
 SHADOWDARK.spell_range.close: 인접
 SHADOWDARK.spell_range.far: 장거리
 SHADOWDARK.spell_range.near: 단거리
 SHADOWDARK.spell.classes.label: 주문시전 클래스
-SHADOWDARK.spell.classes.prompt: Select Class...
+SHADOWDARK.spell.classes.prompt: 클래스를 선택하세요...
 SHADOWDARK.talent.backstab: 배후공격
 SHADOWDARK.talent.class.ancestry: 선조
 SHADOWDARK.talent.class.class: 클래스
