@@ -15,7 +15,7 @@ SHADOWDARK.alignment.lawful: Loyal
 SHADOWDARK.alignment.neutral: Neutre
 SHADOWDARK.ancestry.languages.label: Langue d'Ascendance
 SHADOWDARK.ancestry.languages.prompt: Sélectionner une Langue...
-SHADOWDARK.ancestry.talents.count.label: Choice Count
+SHADOWDARK.ancestry.talents.count.label: Nombre de choix
 SHADOWDARK.ancestry.talents.label: Talents d'Ascendance
 SHADOWDARK.ancestry.talents.prompt: Sélectionner un Talent...
 SHADOWDARK.app.active_effects.title: Effets actifs
@@ -78,9 +78,9 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Désavantage/Natation
 SHADOWDARK.armor.properties.no_swimming: Natation Impossible
 SHADOWDARK.armor.properties.one_handed: Occupe une main
 SHADOWDARK.armor.properties.shield: Bouclier
-SHADOWDARK.boon.type.label: Boon Type
-SHADOWDARK.boons.blessing: Blessing
-SHADOWDARK.boons.oath: Oath
+SHADOWDARK.boon.type.label: Type d'avantage
+SHADOWDARK.boons.blessing: Bénédiction
+SHADOWDARK.boons.oath: Serment
 SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: Jet d'Attaque
 SHADOWDARK.chat_card.button.cast_spell: Lancement de sort
@@ -134,7 +134,7 @@ SHADOWDARK.class.armor.label: Armure
 SHADOWDARK.class.armor.prompt: Sélectionner une armure...
 SHADOWDARK.class.fighter: Guerrier
 SHADOWDARK.class.hit_points.label: Lancer de Dé de vie
-SHADOWDARK.class.language_choices.count.label: Choice Count
+SHADOWDARK.class.language_choices.count.label: Nombre de choix
 SHADOWDARK.class.language_choices.label: Choix de langues
 SHADOWDARK.class.language_choices.prompt: Sélectionner une Langue...
 SHADOWDARK.class.languages.label: Langues de classe
@@ -143,21 +143,21 @@ SHADOWDARK.class.ranger: Éclaireur
 SHADOWDARK.class.spellcasting_ability.label: Caractéristique d'incantation
 SHADOWDARK.class.spellcasting_class.label: Lanceur de sort
 SHADOWDARK.class.spellcasting.base_difficulty.label: DD de base pour lancer de sort
-SHADOWDARK.class.talent_choices.count.label: Choice Count
-SHADOWDARK.class.talent_choices.label: Talent Choices
+SHADOWDARK.class.talent_choices.count.label: Nombre de choix
+SHADOWDARK.class.talent_choices.label: Choix des talents
 SHADOWDARK.class.talent_choices.prompt: Sélectionnez un Talent...
-SHADOWDARK.class.talents_table.label: Class Talents Table
+SHADOWDARK.class.talents_table.label: Table des talents de classe
 SHADOWDARK.class.talents.label: Talents
-SHADOWDARK.class.talents.prompt: Select Talent...
+SHADOWDARK.class.talents.prompt: Sélectionnez un Talent...
 SHADOWDARK.class.thief: Voleur
-SHADOWDARK.class.titles.levels.from.label: From
-SHADOWDARK.class.titles.levels.label: Levels
-SHADOWDARK.class.titles.levels.to.label: To
-SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
-SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
-SHADOWDARK.class.weapons.all.label: All Weapons
-SHADOWDARK.class.weapons.label: Weapons
-SHADOWDARK.class.weapons.prompt: Select Weapon...
+SHADOWDARK.class.titles.levels.from.label: De
+SHADOWDARK.class.titles.levels.label: Niveaux
+SHADOWDARK.class.titles.levels.to.label: À
+SHADOWDARK.class.weapons.all_melee.label: Toutes armes de mêlée
+SHADOWDARK.class.weapons.all_ranged.label: Toutes armes à distance
+SHADOWDARK.class.weapons.all.label: Toutes armes
+SHADOWDARK.class.weapons.label: Armes
+SHADOWDARK.class.weapons.prompt: Choisissez une arme...
 SHADOWDARK.class.wizard: Magicien
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
@@ -171,10 +171,10 @@ SHADOWDARK.dialog.ability_check.int: Test d'Intelligence
 SHADOWDARK.dialog.ability_check.str: Test de Force
 SHADOWDARK.dialog.ability_check.title: Test de Caractéristique
 SHADOWDARK.dialog.ability_check.wis: Test de Sagesse
-SHADOWDARK.dialog.effect.choice.armor: Choisir un type d'armure
-SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
-SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
+SHADOWDARK.dialog.effect.choice.armor: Choisissez un type d'armure
+SHADOWDARK.dialog.effect.choice.attribute: Choisissez un attribut
+SHADOWDARK.dialog.effect.choice.damage_die: Choisissez un dé de dégâts
+SHADOWDARK.dialog.effect.choice.lightsource: Choisir la source de lumière
 SHADOWDARK.dialog.effect.choice.property: Choose Property
 SHADOWDARK.dialog.effect.choice.spell: Choisissez un sort
 SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
@@ -201,7 +201,7 @@ SHADOWDARK.dialog.item_selector.default_title: Choose Items
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
 SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
 SHADOWDARK.dialog.item.confirm_delete: Confirmer la suppression
-SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
+SHADOWDARK.dialog.item.confirm_sale: Confirmer la vente
 SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
 SHADOWDARK.dialog.item.delete: Supprimer
 SHADOWDARK.dialog.item.sell_all: Tout Vendre
