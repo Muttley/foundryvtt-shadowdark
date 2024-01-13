@@ -29,7 +29,7 @@ jobs:
         cp --force LICENSE.txt system/.
         cp --force README.md system/.
         SYSTEM_VERSION=$(grep -oP '(?<="version": ")[^"]+' system/system.json | tr -d '\n')
-        perl -pi -E "s|latest/download/shadowdark\\.zip|download/release-$SYSTEM_VERSION/shadowdark.zip|" system/system.json
+        perl -pi -E "s|/latest/download/|/download/release-$SYSTEM_VERSION/|" system/system.json
         echo "systemVersion=$SYSTEM_VERSION" >> $GITHUB_ENV
 
     - run: cd system && zip -r ../shadowdark.zip ./*
