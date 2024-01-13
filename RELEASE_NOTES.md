@@ -1,3 +1,15 @@
+# v1.7.3
+
+## Bugfixes
+
+* [#660] Fix broken Compendium links
+
+## Chores
+
+* [#661] Merged latest Korean and French translations from Crowdin
+
+Many thanks to *pyrige* for contributing code included in this build
+
 # v1.7.2
 
 ## Bugfixes
@@ -63,7 +75,7 @@ Where `<source_uuid>` is a unique identifier for your custom source, and `<sourc
 
 ## Acknowledgements
 
-Many thanks to *chrpow* for contributing code included in this build
+v
 
 # v1.6.2
 
