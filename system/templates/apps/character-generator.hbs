@@ -1,0 +1,18 @@
+<form class="character-generator" autocomplete="off">
+	<section>
+			<title>Character Generator</title>
+		Type: 
+		<input type="radio" id="level1" name="leveltype" value="level1" checked>
+		<label for="level1">Level 1</label>
+		<input type="radio" id="level0" name="leveltype" value="level0">
+		<label for="Level 0">Level 0</label>
+	</section>
+{{#each diaties as |value key|}}
+	{{value.name}} [{{value.uuid}}]<br>
+{{/each}}
+
+{{#each classes as |value key|}}
+	{{value.name}} [{{value.uuid}}]<br>
+{{/each}}
+
+</form>
