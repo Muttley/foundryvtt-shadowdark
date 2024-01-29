@@ -8,7 +8,7 @@ export default class MonsterImporterSD extends FormApplication {
 		return mergeObject(super.defaultOptions, {
 			classes: ["monster-importer"],
 			width: 300,
-			resizable: false,
+			resizable: true,
 		});
 	}
 
