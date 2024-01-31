@@ -1,18 +1,46 @@
 <form class="character-generator" autocomplete="off">
 	<section>
 			<title>Character Generator</title>
-		Type: 
-		<input type="radio" id="level1" name="leveltype" value="level1" checked>
-		<label for="level1">Level 1</label>
-		<input type="radio" id="level0" name="leveltype" value="level0">
-		<label for="Level 0">Level 0</label>
 	</section>
-{{#each diaties as |value key|}}
-	{{value.name}} [{{value.uuid}}]<br>
+
+<label for="actor.name">Name:</label><input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
+<section>
+<a class="fas fa-dice" data-action='randomize-abilities'></a>
+Stats
+{{#each actor.system.abilities as |value key|}}
+	<br>
+	<label for="actor.system.abilities.{{key}}.base">{{key}}</label>
+	<select name="actor.system.abilities.{{key}}.base" id="stat">
+	{{#select value.base}}
+		{{#each ../statRange}}
+		<option value="{{this}}">{{this}}</option>
+		{{/each}}
+	{{/select}}
+	</select>
 {{/each}}
 
+</section>
+
+<label for="actor.system.class">Class:</label>
+<select name="actor.system.class" id="class">
+{{#select actor.system.class}}
+ <option value=""></option>	
 {{#each classes as |value key|}}
-	{{value.name}} [{{value.uuid}}]<br>
+  <option value="{{value.uuid}}">{{value.name}}</option>
 {{/each}}
+{{/select}}
+</select>
 
+<section>
+	Talents<br>
+
+
+	{{#each talents as |value key|}}
+	{{value.name}}<br>
+	{{/each}}
+
+
+</section>
+
+<button type="button" data-action="create-character"><i class="fas fa-plus"></i>Create Character</button>
 </form>
