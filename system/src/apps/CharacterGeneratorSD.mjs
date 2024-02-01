@@ -6,6 +6,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		super();
 		this.firstrun = true;
 		this.formData = {};
+		this.formData.items = {};
+		this.formData.level0class = {};
 
 		// Setup a default actor template
 		this.formData.actor = {
@@ -78,7 +80,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character-generator"],
-			width: 600,
+			width: 700,
+			height: 500,
 			resizable: true,
 			closeOnSubmit: false,
 			submitOnChange: true,
@@ -103,36 +106,50 @@ export default class CharacterGeneratorSD extends FormApplication {
 			event => this._randomizeAbilities(event)
 		);
 
+		html.find("[data-action='randomize-name']").click(
+			event => this._randomizeName(event)
+		);
+
 		html.find("[data-action='create-character']").click(
 			event => this._createCharacter(event)
 		);
 
-		html.on("click", "[random_stats]", this._randomizeAbilities.bind(this));
 	}
 
 	/** @inheritdoc */
 	async _updateObject(event, data) {
+		// expand incoming data for compatibility with formData
 	    let expandedData = foundry.utils.expandObject(data);
-		console.log(expandedData);
-		this._loadClassTalents(expandedData.actor.system.class);
+		console.log("update", event.target);
 
-		// covert incoming stat data to int
+		if (event.target.name === "actor.system.class") {
+			await this._handleClassEvent(event.target.value);
+		}
+
+		// covert incoming stat data from string to int
 		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
 			let baseInt = parseInt(expandedData.actor.system.abilities[x].base);
 			expandedData.actor.system.abilities[x].base = baseInt;
 		});
 
+		// merge incoming data into the main formData object
 		this.formData = mergeObject(this.formData, expandedData);
-		 console.log(this.formData);
+
+		this._calculateModifiers();
+		this.render();
 	}
 
 	/** @override */
 	async getData(options) {
 
 		if (this.firstrun) {
-			console.log("getdata (first run)");
-			this.loadingDialog.render(true);
 			this.firstrun = false;
+
+			// Put up a loading screen as compendium searching can take a while
+			this.loadingDialog.render(true);
+
+			// initilize object to hold potential character items / talents / class abilities
+
 
 			// setup ability range as 3-18
 			this.formData.statRange = [];
@@ -143,45 +160,53 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// set all player ability scores to 10
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
 				this.formData.actor.system.abilities[x] = { base: "10", mod: "0"};
-				console.log(x);
-				console.log(this.formData);
 			});
 
+			// load all relevent data from compendiums
 			this.formData.ancestry = await shadowdark.compendiums.ancestries();
-			this.formData.diaties = await shadowdark.compendiums.deities();
+			this.formData.deities = await shadowdark.compendiums.deities();
 			this.formData.backgrounds = await shadowdark.compendiums.backgrounds();
 			this.formData.languages = await shadowdark.compendiums.languages();
 			this.formData.classes = await shadowdark.compendiums.classes();
-			this.formData.items = {};
-			this.formData.talents = {};
+
+			// find the level 0 class
+			this.formData.classes.forEach( classObj => {
+				if (classObj.name.toLocaleLowerCase().includes("level 0")) {
+					this.formData.level0class = classObj;
+					this.formData.actor.system.class = classObj.uuid;
+					this.formData.classes.delete(classObj._id);
+				}
+			});
+
+			// loading is finished, pull down the loading screen
 			this.loadingDialog.close();
-			console.log(this.formData);
 		}
-		console.log(this.formData);
 		return this.formData;
 	}
 
-	_loadClassTalents(classID) {
-		let classTalents =  fromUuidSync(classID).system.talents;
-		let talentData = {};
-
-		classTalents.forEach( talent => {
-			let talentObj = fromUuidSync(talent);
-			// talentObj.html = `@UUID[${talent}]{${talentObj.name}}`;
-			console.log(talentObj);
-			talentData[talent] = talentObj;
-		});
-		this.formData.talents = talentData;
+	async _handleClassEvent(classUuID) {
+		// grab static talents from class item
+		let classTalents =  await fromUuid(classUuID);
+		let talentData = [];
+		if (classTalents.system.talents) {
+			for (const talent of classTalents.system.talents) {
+				let talentObj = await fromUuid(talent);
+				talentData.push(talentObj);
+			}
+		}
+		this.formData.items.classtalents = talentData;
 	}
 
-	_getRandomName() {
-		return "Hilda Fadhili";
+	_randomizeName() {
+		this.formData.actor.name = "Hilda Fadhili";
+		this.render();
 	}
 
 	_randomizeAbilities() {
 		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
 			this.formData.actor.system.abilities[x].base = this._roll3d6();
 		});
+		this._calculateModifiers();
 		this.render();
 	}
 
@@ -190,15 +215,29 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return roll._total;
 	}
 
+	_calculateModifiers() {
+		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
+			let baseInt = this.formData.actor.system.abilities[x].base;
+			this.formData.actor.system.abilities[x].mod = Math.floor((baseInt - 10)/2);
+		});
+	}
 
 	async _createCharacter() {
 
-		// Create the New Player Character
-		console.log(this.formData.actor);
-		await Actor.create(this.formData.actor);
+		// adjust level for level 0 characters
+		if (this.formData.actor.system.class === this.formData.level0class.uuid) {
+			this.formData.actor.system.level.value = 0;
+		}
 
-		// push talents to new character
-		// await newActor.createEmbeddedDocuments("Item", talentArray);
+		// Create the new player character
+		console.log(this.formData);
+		const newActor = await Actor.create(this.formData.actor);
+
+		// gather all items that need to be added.
+		console.log(this.formData.items.classtalents);
+
+		// push talents to new character and abilities to character
+		await newActor.createEmbeddedDocuments("Item", this.formData.items.classtalents);
 
 	}
 }

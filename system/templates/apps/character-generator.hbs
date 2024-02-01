@@ -3,12 +3,37 @@
 			<title>Character Generator</title>
 	</section>
 
-<label for="actor.name">Name:</label><input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
+<div class="flexrow">
+<a class="fas fa-dice" data-action='randomize-name'></a>
+<label for="actor.name">Name</label>
+<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
+</div>
+<label for="actor.system.background">Background</label>
+<select name="actor.system.background" id="background">
+{{#select actor.system.background}}
+	<option value=""></option>
+	{{#each backgrounds as |value key|}}
+	<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
+	{{/each}}
+{{/select}}
+</select>
+
+<label for="actor.system.deity">Deity</label>
+<select name="actor.system.deity" id="deity">
+{{#select actor.system.deity}}
+	<option value=""></option>
+	{{#each deities as |value key|}}
+	<option value="{{value.uuid}}">{{value.name}}</option>
+	{{/each}}
+{{/select}}
+</select>
+
 <section>
 <a class="fas fa-dice" data-action='randomize-abilities'></a>
 Stats
+<div class="flexrow">
 {{#each actor.system.abilities as |value key|}}
-	<br>
+<div class="flex1">
 	<label for="actor.system.abilities.{{key}}.base">{{key}}</label>
 	<select name="actor.system.abilities.{{key}}.base" id="stat">
 	{{#select value.base}}
@@ -17,29 +42,27 @@ Stats
 		{{/each}}
 	{{/select}}
 	</select>
+	{{value.mod}}
+</div>
 {{/each}}
-
+</div>
 </section>
 
-<label for="actor.system.class">Class:</label>
-<select name="actor.system.class" id="class">
+<label for="actor.system.class">Class</label>
+<select name="actor.system.class" data-action='load-class-talents' id="class">
 {{#select actor.system.class}}
- <option value=""></option>	
-{{#each classes as |value key|}}
-  <option value="{{value.uuid}}">{{value.name}}</option>
-{{/each}}
+	<option value="{{level0class.uuid}}">{{level0class.name}}</option>
+	{{#each classes as |value key|}}
+	<option value="{{value.uuid}}">{{value.name}}</option>
+	{{/each}}
 {{/select}}
 </select>
 
 <section>
-	Talents<br>
-
-
-	{{#each talents as |value key|}}
+	Class Talents<br>
+	{{#each items.classtalents as |value key|}}
 	{{value.name}}<br>
 	{{/each}}
-
-
 </section>
 
 <button type="button" data-action="create-character"><i class="fas fa-plus"></i>Create Character</button>
