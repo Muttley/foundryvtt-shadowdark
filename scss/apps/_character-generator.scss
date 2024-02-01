@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.character-generator {
+
+	label {
+		margin: 0;
+		padding: 0;
+		font-family: "Old Newspaper Font";
+		font-size: 1.3rem;
+		font-weight: bold;
+		line-height: 1.1;
+		align-self: center;
+		border: none;
+	}
+}
