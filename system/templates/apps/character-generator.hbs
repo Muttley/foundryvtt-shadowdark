@@ -5,10 +5,12 @@
 
 <div class="flexrow">
 <a class="fas fa-dice" data-action='randomize-name'></a>
-<label for="actor.name">Name</label>
+<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
 <input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
 </div>
-<label for="actor.system.background">Background</label>
+
+
+<label for="actor.system.background" title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.background.label'}}</label>
 <select name="actor.system.background" id="background">
 {{#select actor.system.background}}
 	<option value=""></option>
@@ -18,14 +20,20 @@
 {{/select}}
 </select>
 
-<label for="actor.system.deity">Deity</label>
+
+<label for="actor.system.deity" title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.deity.label'}}</label>
 <select name="actor.system.deity" id="deity">
 {{#select actor.system.deity}}
 	<option value=""></option>
 	{{#each deities as |value key|}}
-	<option value="{{value.uuid}}">{{value.name}}</option>
+	<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
 	{{/each}}
 {{/select}}
+</select>
+
+<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+<select name="actor.system.alignment">
+	{{selectOptions alignments selected=actor.system.alignment localize=false}}
 </select>
 
 <section>
@@ -34,7 +42,7 @@ Stats
 <div class="flexrow">
 {{#each actor.system.abilities as |value key|}}
 <div class="flex1">
-	<label for="actor.system.abilities.{{key}}.base">{{key}}</label>
+	<label for="actor.system.abilities.{{key}}.base" class="stats">{{key}}</label>
 	<select name="actor.system.abilities.{{key}}.base" id="stat">
 	{{#select value.base}}
 		{{#each ../statRange}}
@@ -48,6 +56,7 @@ Stats
 </div>
 </section>
 
+{{!-- Class --}}
 <label for="actor.system.class">Class</label>
 <select name="actor.system.class" data-action='load-class-talents' id="class">
 {{#select actor.system.class}}
@@ -61,9 +70,22 @@ Stats
 <section>
 	Class Talents<br>
 	{{#each items.classtalents as |value key|}}
-	{{value.name}}<br>
+	<a class="content-link" data-uuid="{{value.uuid}}">{{value.name}}</a><br>
 	{{/each}}
 </section>
+
+{{!-- Ancestry --}}
+<label for="actor.system.ancestry">Ancestry</label>
+<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry">
+{{#select actor.system.ancestry}}
+	<option value=""></option>
+	{{#each ancestry as |value key|}}
+	<option value="{{value.uuid}}">{{value.name}}</option>
+	{{/each}}
+{{/select}}
+</select>
+
+
 
 <button type="button" data-action="create-character"><i class="fas fa-plus"></i>Create Character</button>
 </form>

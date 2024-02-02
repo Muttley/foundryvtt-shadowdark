@@ -53,14 +53,15 @@ export default class CharacterGeneratorSD extends FormApplication {
 				},
 				ancestry: "",
 				background: "",
+				alignment: "neutral",
+				deity: "",
 				class: "",
+				languages: [],
 				coins: {
 					gp: 0,
 					sp: 0,
 					cp: 0,
 				},
-				deity: "",
-				languages: [],
 			},
 		};
 
@@ -148,7 +149,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// Put up a loading screen as compendium searching can take a while
 			this.loadingDialog.render(true);
 
-			// initilize object to hold potential character items / talents / class abilities
+			// Initialize Alignment
+			this.formData.alignments = CONFIG.SHADOWDARK.ALIGNMENTS;
 
 
 			// setup ability range as 3-18
@@ -231,13 +233,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// Create the new player character
 		console.log(this.formData);
-		const newActor = await Actor.create(this.formData.actor);
+		try {
+			const newActor = await Actor.create(this.formData.actor);
 
-		// gather all items that need to be added.
-		console.log(this.formData.items.classtalents);
+			// gather all items that need to be added.
+			console.log(this.formData.items.classtalents);
 
-		// push talents to new character and abilities to character
-		await newActor.createEmbeddedDocuments("Item", this.formData.items.classtalents);
+			// push talents to new character and abilities to character
+			await newActor.createEmbeddedDocuments("Item", this.formData.items.classtalents);
+		}
+		catch(error) {
+			ui.notifications.error(`Failed to create player character ${error}`);
+		}
+
 
 	}
 }
