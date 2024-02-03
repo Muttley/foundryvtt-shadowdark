@@ -2,22 +2,60 @@
 @use "../mixins" as *;
 
 .character-generator {
-
-	label {
-		margin: 0;
-		padding: 0;
-		font-family: "Old Newspaper Font";
-		font-size: 1.3rem;
-		font-weight: bold;
-		line-height: 1.1;
-		align-self: center;
-		border: none;
+	.threecol {
+		float:left;
+		width: 33.33%;
 	}
+
+	button {
+		font-size: 1.1rem;
+		font-family: "Old Newspaper Font";
+	}
+
 	.stats {
 		text-transform: capitalize;
+		font-family: "Old Newspaper Font";
 	}
 
 	.content-link {
 		line-height: 1.7;
 	}
+
+	.box-style {
+		border: 1px solid #111;
+		width: 200px;
+		margin: 10px;
+
+	  
+		.header {
+			display:flex;
+
+			label {
+				font-size: 1.1rem;
+				font-family: "Old Newspaper Font";
+				background:#111;
+				float:left;
+				color:white;
+				padding:2px;
+				padding-left: 10px;
+			}
+			a, span {
+				background: linear-gradient(90deg, #111 , transparent);
+				float:right;
+				flex-grow: 1;
+				text-align:right;
+				vertical-align: middle;
+				padding:6px;
+			}
+		}
+		.content {
+			display:block;
+			padding:5px;
+			
+			select {
+				max-width: 188px;
+			}
+
+		}
+	  }
 }
