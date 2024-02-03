@@ -1,91 +1,144 @@
 <form class="character-generator" autocomplete="off">
-	<section>
-			<title>Character Generator</title>
-	</section>
+<h1>Character Generator</h1> <button>Randomize All</button>
 
-<div class="flexrow">
-<a class="fas fa-dice" data-action='randomize-name'></a>
-<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
-<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
+<div class="threecol">
+
+	{{!-- Name --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
+			<a class="fas fa-dice" data-action='randomize-name'></a>
+		</div>
+		<div class="content">
+			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
+		</div>
+	</div>
+
+	{{!-- Stats --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.stats" >Stats</label>
+			<a class="fas fa-dice" data-action='randomize-stats'></a>
+		</div>
+		<div class="content">
+			<div class="flexrow">
+			{{#each actor.system.abilities as |value key|}}
+			<div class="flex1">
+				<label for="actor.system.abilities.{{key}}.base" class="stats">{{key}}</label>
+				<select name="actor.system.abilities.{{key}}.base" id="stat">
+				{{#select value.base}}
+					{{#each ../statRange}}
+					<option value="{{this}}">{{this}}</option>
+					{{/each}}
+				{{/select}}
+				</select>
+				{{value.mod}}
+			</div>
+			{{/each}}
+			</div>
+		</div>
+	</div>
 </div>
 
+<div class="threecol">
 
-<label for="actor.system.background" title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.background.label'}}</label>
-<select name="actor.system.background" id="background">
-{{#select actor.system.background}}
-	<option value=""></option>
-	{{#each backgrounds as |value key|}}
-	<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
-	{{/each}}
-{{/select}}
-</select>
+	{{!-- Background --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.background" title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.background.label'}}</label>
+			<a class="fas fa-dice" data-action='randomize-background'></a>
+		</div>
+		<div class="content">
+			<select name="actor.system.background" id="background">
+			{{#select actor.system.background}}
+				<option value=""></option>
+				{{#each backgrounds as |value key|}}
+				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
+				{{/each}}
+			{{/select}}
+			</select>
+		</div>
+	</div>
+
+	{{!-- Deity --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.deity" title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.deity.label'}}</label>
+			<a class="fas fa-dice" data-action='randomize-deity'></a>
+		</div>
+		<div class="content">
+			<select name="actor.system.deity" id="deity">
+			{{#select actor.system.deity}}
+				<option value=""></option>
+				{{#each deities as |value key|}}
+				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}} [{{value.system.alignment}}]</option>
+				{{/each}}
+			{{/select}}
+			</select>
+		</div>
+	</div>
+
+	{{!-- Alignment --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+			<span></span>
+		</div>
+		<div class="content">
+			<select name="actor.system.alignment">
+				{{selectOptions alignments selected=actor.system.alignment localize=false}}
+			</select>
+		</div>
+	</div>
 
 
-<label for="actor.system.deity" title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.deity.label'}}</label>
-<select name="actor.system.deity" id="deity">
-{{#select actor.system.deity}}
-	<option value=""></option>
-	{{#each deities as |value key|}}
-	<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
-	{{/each}}
-{{/select}}
-</select>
 
-<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-<select name="actor.system.alignment">
-	{{selectOptions alignments selected=actor.system.alignment localize=false}}
-</select>
+	{{!-- Ancestry --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.ancestry">Ancestry</label>
+			<a class="fas fa-dice"></a>
+		</div>
+		<div class="content">
+			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry">
+			{{#select actor.system.ancestry}}
+				<option value=""></option>
+				{{#each ancestry as |value key|}}
+				<option value="{{value.uuid}}" data-tooltip="{{value.system.description}}">{{value.name}}</option>
+				{{/each}}
+			{{/select}}
+			</select>
+		</div>
+	</div>
 
-<section>
-<a class="fas fa-dice" data-action='randomize-abilities'></a>
-Stats
-<div class="flexrow">
-{{#each actor.system.abilities as |value key|}}
-<div class="flex1">
-	<label for="actor.system.abilities.{{key}}.base" class="stats">{{key}}</label>
-	<select name="actor.system.abilities.{{key}}.base" id="stat">
-	{{#select value.base}}
-		{{#each ../statRange}}
-		<option value="{{this}}">{{this}}</option>
-		{{/each}}
-	{{/select}}
-	</select>
-	{{value.mod}}
 </div>
-{{/each}}
+
+<div class="threecol">
+
+	{{!-- Class --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.class">Class</label>
+			<a class="fas fa-dice" data-action='randomize-class'></a>
+		</div>
+		<div class="content">
+			<select name="actor.system.class" data-action='load-class-talents' id="class">
+			{{#select actor.system.class}}
+				<option value="{{level0class.uuid}}">{{level0class.name}}</option>
+				{{#each classes as |value key|}}
+				<option value="{{value.uuid}}">{{value.name}}</option>
+				{{/each}}
+			{{/select}}
+			</select>
+			<br>
+			{{#each items.classtalents as |value key|}}
+				<input type="checkbox" name="class.talent.options" {{checked myCheckbox}}>
+				<a class="content-link" data-uuid="{{value.uuid}}">{{value.name}}</a><br>
+			{{/each}}
+		</div>
+	</div>
+
 </div>
-</section>
 
-{{!-- Class --}}
-<label for="actor.system.class">Class</label>
-<select name="actor.system.class" data-action='load-class-talents' id="class">
-{{#select actor.system.class}}
-	<option value="{{level0class.uuid}}">{{level0class.name}}</option>
-	{{#each classes as |value key|}}
-	<option value="{{value.uuid}}">{{value.name}}</option>
-	{{/each}}
-{{/select}}
-</select>
-
-<section>
-	Class Talents<br>
-	{{#each items.classtalents as |value key|}}
-	<a class="content-link" data-uuid="{{value.uuid}}">{{value.name}}</a><br>
-	{{/each}}
-</section>
-
-{{!-- Ancestry --}}
-<label for="actor.system.ancestry">Ancestry</label>
-<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry">
-{{#select actor.system.ancestry}}
-	<option value=""></option>
-	{{#each ancestry as |value key|}}
-	<option value="{{value.uuid}}">{{value.name}}</option>
-	{{/each}}
-{{/select}}
-</select>
-
-
-
-<button type="button" data-action="create-character"><i class="fas fa-plus"></i>Create Character</button>
+<button type="button" data-action="create-character">Create Character</button>
 </form>

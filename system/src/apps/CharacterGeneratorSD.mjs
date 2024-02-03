@@ -82,7 +82,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character-generator"],
 			width: 700,
-			height: 500,
 			resizable: true,
 			closeOnSubmit: false,
 			submitOnChange: true,
@@ -103,8 +102,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find("[data-action='randomize-abilities']").click(
-			event => this._randomizeAbilities(event)
+		html.find("[data-action='randomize-stats']").click(
+			event => this._randomizeStats(event)
 		);
 
 		html.find("[data-action='randomize-name']").click(
@@ -122,7 +121,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// expand incoming data for compatibility with formData
 	    let expandedData = foundry.utils.expandObject(data);
 		console.log("update", event.target);
-
+		console.log(data);
 		if (event.target.name === "actor.system.class") {
 			await this._handleClassEvent(event.target.value);
 		}
@@ -204,7 +203,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	_randomizeAbilities() {
+	_randomizeStats() {
 		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
 			this.formData.actor.system.abilities[x].base = this._roll3d6();
 		});
@@ -241,6 +240,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			// push talents to new character and abilities to character
 			await newActor.createEmbeddedDocuments("Item", this.formData.items.classtalents);
+			ui.notifications.info(`Created Character: ${newActor.name}`);
 		}
 		catch(error) {
 			ui.notifications.error(`Failed to create player character ${error}`);
