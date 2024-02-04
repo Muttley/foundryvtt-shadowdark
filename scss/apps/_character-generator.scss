@@ -2,9 +2,25 @@
 @use "../mixins" as *;
 
 .character-generator {
-	.threecol {
+	h1 {
+		font-family: "Old Newspaper Font";
+		// font-size: 1.4rem;
+	}
+
+	.col1 {
 		float:left;
-		width: 33.33%;
+		height: 410px;
+		width: 200px;
+	}
+	.col2 {
+		float:left;
+		height: 410px;
+		width: 220px;
+	}
+	.col3 {
+		float:left;
+		height: 410px;
+		width: 400px;
 	}
 
 	button {
@@ -12,18 +28,35 @@
 		font-family: "Old Newspaper Font";
 	}
 
+	.statcontainer {
+		display: grid;
+		grid: auto / auto auto;
+	}
+
 	.stats {
-		text-transform: capitalize;
-		font-family: "Old Newspaper Font";
+		label {
+			display:block;
+			text-transform: uppercase;
+			font-family: "Old Newspaper Font";
+			font-weight: bold;
+		}
+		span {
+			flex-grow: 1;
+		}
 	}
 
 	.content-link {
 		line-height: 1.7;
 	}
 
+	.large-style {
+		width: 378px;
+		height: 354px;
+		overflow: auto;
+	}
+
 	.box-style {
 		border: 1px solid #111;
-		width: 200px;
 		margin: 10px;
 
 	  
@@ -55,7 +88,13 @@
 			select {
 				max-width: 188px;
 			}
-
+			p {
+				font-size: 0.8em;
+				b {
+					font-size: 1.3em;
+				}
+				
+			}
 		}
 	  }
 }

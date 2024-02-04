@@ -6,7 +6,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		super();
 		this.firstrun = true;
 		this.formData = {};
-		this.formData.items = {};
+		this.formData.classTalents = [];
 		this.formData.level0class = {};
 
 		// Setup a default actor template
@@ -81,8 +81,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character-generator"],
-			width: 700,
-			resizable: true,
+			width: 836,
+			resizable: false,
 			closeOnSubmit: false,
 			submitOnChange: true,
 		});
@@ -102,12 +102,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find("[data-action='randomize-stats']").click(
-			event => this._randomizeStats(event)
-		);
-
-		html.find("[data-action='randomize-name']").click(
-			event => this._randomizeName(event)
+		html.find("[data-action='cg-click']").click(
+			event => this._randomizeHandler(event)
 		);
 
 		html.find("[data-action='create-character']").click(
@@ -120,10 +116,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 	async _updateObject(event, data) {
 		// expand incoming data for compatibility with formData
 	    let expandedData = foundry.utils.expandObject(data);
-		console.log("update", event.target);
-		console.log(data);
+		console.log(expandedData);
+
 		if (event.target.name === "actor.system.class") {
-			await this._handleClassEvent(event.target.value);
+			await this._loadClassTalents(event.target.value);
 		}
 
 		// covert incoming stat data from string to int
@@ -164,7 +160,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			});
 
 			// load all relevent data from compendiums
-			this.formData.ancestry = await shadowdark.compendiums.ancestries();
+			this.formData.ancestries = await shadowdark.compendiums.ancestries();
 			this.formData.deities = await shadowdark.compendiums.deities();
 			this.formData.backgrounds = await shadowdark.compendiums.backgrounds();
 			this.formData.languages = await shadowdark.compendiums.languages();
@@ -182,10 +178,66 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// loading is finished, pull down the loading screen
 			this.loadingDialog.close();
 		}
+
 		return this.formData;
 	}
 
-	async _handleClassEvent(classUuID) {
+	async _randomizeHandler(event) {
+		console.log(event.target.name);
+		const eventStr = event.target.name;
+		let tempInt = 0;
+
+		// randomize ancestry
+		if (eventStr === "randomize-ancestry" || eventStr === "randomize-all") {
+			tempInt = this._getRandom(this.formData.ancestries.size);
+			this.formData.actor.system.ancestry = [...this.formData.ancestries][tempInt].uuid;
+		}
+
+		// randomize background
+		if (eventStr === "randomize-background" || eventStr === "randomize-all") {
+			tempInt = this._getRandom(this.formData.backgrounds.size);
+			this.formData.actor.system.background = [...this.formData.backgrounds][tempInt].uuid;
+		}
+
+		// randomize deities
+		if (eventStr === "randomize-deity" || eventStr === "randomize-all") {
+			tempInt = this._getRandom(this.formData.deities.size);
+			this.formData.actor.system.deity = [...this.formData.deities][tempInt].uuid;
+		}
+
+		// randomize class
+		if (eventStr === "randomize-class" || eventStr === "randomize-all") {
+			tempInt = this._getRandom(this.formData.classes.size);
+			let classID = [...this.formData.classes][tempInt].uuid;
+			this.formData.actor.system.class = classID;
+			await this._loadClassTalents(classID);
+		}
+
+		// randomize language
+		if (eventStr === "randomize-language" || eventStr === "randomize-all") {
+			console.log(this.formData.languages.size);
+		}
+
+
+		// randomize stats
+		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
+			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
+				this.formData.actor.system.abilities[x].base = this._roll3d6();
+			});
+			this._calculateModifiers();
+		}
+
+		// randomize name
+		if (eventStr === "randomize-name" || eventStr === "randomize-all") {
+			const testNames = ["Hilda Fadhili", "Koumvisk", "Trurcon", "Seldrin", "Aldwin"];
+			this.formData.actor.name = testNames[this._getRandom(5)];
+		}
+
+		// update all changes
+		this.render();
+	}
+
+	async _loadClassTalents(classUuID) {
 		// grab static talents from class item
 		let classTalents =  await fromUuid(classUuID);
 		let talentData = [];
@@ -195,12 +247,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				talentData.push(talentObj);
 			}
 		}
-		this.formData.items.classtalents = talentData;
-	}
-
-	_randomizeName() {
-		this.formData.actor.name = "Hilda Fadhili";
-		this.render();
+		this.formData.classTalents = talentData;
 	}
 
 	_randomizeStats() {
@@ -209,6 +256,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 		});
 		this._calculateModifiers();
 		this.render();
+	}
+
+	_getRandom(max) {
+		return Math.floor(Math.random() * max);
 	}
 
 	_roll3d6() {
@@ -223,6 +274,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 		});
 	}
 
+	_removeParagraphs(value) {
+		return value.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
+	}
+
+
 	async _createCharacter() {
 
 		// adjust level for level 0 characters
@@ -236,10 +292,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			const newActor = await Actor.create(this.formData.actor);
 
 			// gather all items that need to be added.
-			console.log(this.formData.items.classtalents);
+			console.log(this.formData.classTalents);
 
 			// push talents to new character and abilities to character
-			await newActor.createEmbeddedDocuments("Item", this.formData.items.classtalents);
+			await newActor.createEmbeddedDocuments("Item", this.formData.classTalents);
 			ui.notifications.info(`Created Character: ${newActor.name}`);
 		}
 		catch(error) {
