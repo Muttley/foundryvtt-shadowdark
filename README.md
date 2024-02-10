@@ -6,7 +6,7 @@
 
 # Shadowdark RPG for Foundry VTT
 
-**foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][1] with the [Foundry VTT][2] virtual tabletop software.
+**foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][2] with the [Foundry VTT][3] virtual tabletop software.
 
 ## Features
 - **Sheets**
