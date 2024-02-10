@@ -1,19 +1,13 @@
 <form class="character-generator" autocomplete="off">
-<h1>Character Generator <a class="fas fa-dice" name="randomize-all" data-action="cg-click" style="font-size:1.3em"></a></h1>
 
-{{!-- Column 1 --}}
 <div class="col1">
 
-	{{!-- Name --}}
-	<div class="box-style">
-		<div class="header">
-			<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
-			<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>
-		</div>
-		<div class="content">
-			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" />
-		</div>
-	</div>
+<h1>Character Generator <a class="fas fa-dice" name="randomize-all" data-action="cg-click" style="font-size:1.3em"></a></h1>
+
+{{!-- Column 1a --}}
+<div class="col1a">
+
+
 
 	{{!-- Stats --}}
 	<div class="box-style">
@@ -40,21 +34,46 @@
 		</div>
 	</div>
 
-
 	{{!-- HP --}}
 	<div class="box-style">
 		<div class="header">
-			<label for="actor.system.hp">{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
+			<label for="actor.system.attributes.hp.base">{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
 			<a class="fas fa-dice" name="randomize-hp" data-action="cg-click"></a>
 		</div>
 		<div class="content">
-			<input type="text" value="{{actor.system.attributes.hp.max}}" name="actor.system.attributes.hp.max" data-dtype="String" />
+			
+			<input type="number" value="{{actor.system.attributes.hp.base}}" name="actor.system.attributes.hp.base" style="width:2em;"/>
+			+{{actor.system.attributes.hp.bonus}}
+			<span style="float:right;vertical-align: middle;">[{{classHP}}]</span>
+		</div>
+	</div>
+
+		{{!-- Gold --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.coins.gp">Starting Gold</label>
+			<a class="fas fa-dice" name="randomize-gold" data-action="cg-click"></a>
+		</div>
+		<div class="content">
+			<input type="number" value="{{actor.system.coins.gp}}" name="actor.system.coins.gp" style="width:2em;"/>
+			gp
 		</div>
 	</div>
 
 </div>
-{{!-- Column 2 --}}
-<div class="col2">
+{{!-- Column 1b --}}
+<div class="col1b">
+
+	{{!-- Name --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
+			<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>
+		</div>
+		<div class="content">
+			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String"/>
+		</div>
+	</div>
 
 	{{!-- Ancestry --}}
 	<div class="box-style">
@@ -110,6 +129,19 @@
 		</div>
 	</div>
 
+	{{!-- Alignment --}}
+	<div class="box-style">
+		<div class="header">
+			<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+			<a class="fas fa-dice" name="randomize-alignment" data-action='cg-click'></a>
+		</div>
+		<div class="content">
+			<select name="actor.system.alignment">
+				{{selectOptions alignments selected=actor.system.alignment localize=false}}
+			</select>
+		</div>
+	</div>
+
 	{{!-- Deity --}}
 	<div class="box-style">
 		<div class="header">
@@ -121,29 +153,18 @@
 			{{#select actor.system.deity}}
 				<option value=""></option>
 				{{#each deities as |value key|}}
-				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}} [{{value.system.alignment}}]</option>
+				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}} ({{value.system.alignment}})</option>
 				{{/each}}
 			{{/select}}
 			</select>
 		</div>
 	</div>
 
-	{{!-- Alignment --}}
-	<div class="box-style">
-		<div class="header">
-			<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-			<span></span>
-		</div>
-		<div class="content">
-			<select name="actor.system.alignment">
-				{{selectOptions alignments selected=actor.system.alignment localize=false}}
-			</select>
-		</div>
-	</div>
+</div>
 
 </div>
-{{!-- Column 3 --}}
-<div class="col3">
+{{!-- Column 2 --}}
+<div class="col2">
 
 
 	{{!-- Talents --}}
@@ -155,8 +176,7 @@
 		<div class="content large-style">
 			{{#each classTalents as |value key|}}
 				<p>
-				<input type="checkbox" name="class.talent.options" {{checked myCheckbox}}>
-				<b>{{value.name}}</b>
+				<b>{{value.name}}.</b>
 				{{{value.system.description}}}
 				</p>
 			{{/each}}

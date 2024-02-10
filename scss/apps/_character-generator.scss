@@ -2,25 +2,28 @@
 @use "../mixins" as *;
 
 .character-generator {
+
 	h1 {
 		font-family: "Old Newspaper Font";
+		margin-left: 15px;
+		width:350px;
 		// font-size: 1.4rem;
 	}
-
 	.col1 {
+		width:400px;
 		float:left;
-		height: 410px;
-		width: 200px;
+	}
+	.col1a {
+		float:left;
+		width: 180px;
+	}
+	.col1b {
+		float:left;
+		width: 220px;
 	}
 	.col2 {
 		float:left;
-		height: 410px;
-		width: 220px;
-	}
-	.col3 {
-		float:left;
-		height: 410px;
-		width: 400px;
+		width: 420px;
 	}
 
 	button {
@@ -29,19 +32,25 @@
 	}
 
 	.statcontainer {
+		padding-bottom: 5px;
 		display: grid;
 		grid: auto / auto auto;
 	}
 
 	.stats {
+		margin-top: 5px;
+		margin-bottom: 5px;
 		label {
 			display:block;
 			text-transform: uppercase;
 			font-family: "Old Newspaper Font";
 			font-weight: bold;
+			font-size: 1.1em;
+			margin-left: 5px;
 		}
 		span {
 			flex-grow: 1;
+			margin-left: 5px;
 		}
 	}
 
@@ -50,8 +59,14 @@
 	}
 
 	.large-style {
-		width: 378px;
-		height: 354px;
+		width: 398px;
+		height: 475px;
+		font-size: 0.85em;
+		overflow: auto;
+	}
+
+	.small-style {
+		width: 70px;
 		overflow: auto;
 	}
 
@@ -87,13 +102,6 @@
 			
 			select {
 				max-width: 188px;
-			}
-			p {
-				font-size: 0.8em;
-				b {
-					font-size: 1.3em;
-				}
-				
 			}
 		}
 	  }

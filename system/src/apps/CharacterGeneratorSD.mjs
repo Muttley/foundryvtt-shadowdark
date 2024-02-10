@@ -8,6 +8,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData = {};
 		this.formData.classTalents = [];
 		this.formData.level0class = {};
+		this.formData.classHP = 1;
 
 		// Setup a default actor template
 		this.formData.actor = {
@@ -16,9 +17,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 			system: {
 				attributes: {
 					hp: {
-						max: 0,
-						value: 0,
-						base: 0,
+						base: 1,
+						value: 1,
+						bonus: 0,
 					},
 				},
 				level: {
@@ -118,10 +119,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 	    let expandedData = foundry.utils.expandObject(data);
 		console.log(expandedData);
 
-		if (event.target.name === "actor.system.class") {
-			await this._loadClassTalents(event.target.value);
-		}
-
 		// covert incoming stat data from string to int
 		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
 			let baseInt = parseInt(expandedData.actor.system.abilities[x].base);
@@ -130,6 +127,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// merge incoming data into the main formData object
 		this.formData = mergeObject(this.formData, expandedData);
+
+		if (event.target.name === "actor.system.class") {
+			await this._loadClass(event.target.value);
+			this._randomizeHP();
+		}
 
 		this._calculateModifiers();
 		this.render();
@@ -210,7 +212,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			tempInt = this._getRandom(this.formData.classes.size);
 			let classID = [...this.formData.classes][tempInt].uuid;
 			this.formData.actor.system.class = classID;
-			await this._loadClassTalents(classID);
+			await this._loadClass(classID);
 		}
 
 		// randomize language
@@ -222,7 +224,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				this.formData.actor.system.abilities[x].base = this._roll3d6();
+				this.formData.actor.system.abilities[x].base = this._roll("3d6");
 			});
 			this._calculateModifiers();
 		}
@@ -233,37 +235,67 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.actor.name = testNames[this._getRandom(5)];
 		}
 
+		// Roll HP
+		if (eventStr === "randomize-hp" || eventStr === "randomize-all") {
+			this._randomizeHP();
+		}
+
+		// Roll starting gold
+		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
+			let startingGold = this._roll("2d6")*5;
+			this.formData.actor.system.coins.gp = startingGold;
+		}
+
 		// update all changes
 		this.render();
 	}
 
-	async _loadClassTalents(classUuID) {
+	// loads linked class items when class is selected
+	async _loadClass(classUuID) {
 		// grab static talents from class item
-		let classTalents =  await fromUuid(classUuID);
+		let classObj =  await fromUuid(classUuID);
 		let talentData = [];
-		if (classTalents.system.talents) {
-			for (const talent of classTalents.system.talents) {
+		if (classObj.system.talents) {
+			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
 				talentData.push(talentObj);
 			}
 		}
 		this.formData.classTalents = talentData;
+
+		// load hit dice information for randomizing HP
+		if (classObj.system.hitPoints) {
+			this.formData.classHP = classObj.system.hitPoints;
+		}
+		else {
+			this.formData.classHP = 1;
+		}
 	}
 
-	_randomizeStats() {
-		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-			this.formData.actor.system.abilities[x].base = this._roll3d6();
-		});
-		this._calculateModifiers();
-		this.render();
+	_randomizeHP() {
+		const classID = this.formData.actor.system.class;
+		let classObj = {};
+		if (classID === this.formData.level0class.uuid) {
+			classObj = this.formData.level0class;
+		}
+		else {
+			classObj = this.formData.classes.find(x => x.uuid === classID);
+		}
+		if (classObj.system.hitPoints !== "") {
+			const rollValue = this._roll(classObj.system.hitPoints);
+			this.formData.actor.system.attributes.hp.base = rollValue;
+		}
+		else {
+			this.formData.actor.system.attributes.hp.base = 1;
+		}
 	}
 
 	_getRandom(max) {
 		return Math.floor(Math.random() * max);
 	}
 
-	_roll3d6() {
-		let roll = new Roll("3d6").evaluate({async: false});
+	_roll(formula) {
+		let roll = new Roll(formula).evaluate({async: false});
 		return roll._total;
 	}
 
@@ -272,6 +304,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 			let baseInt = this.formData.actor.system.abilities[x].base;
 			this.formData.actor.system.abilities[x].mod = Math.floor((baseInt - 10)/2);
 		});
+		let conMod = this.formData.actor.system.abilities.con.mod;
+		if (conMod > 0) {
+			this.formData.actor.system.attributes.hp.bonus = conMod;
+		}
+		else {
+			this.formData.actor.system.attributes.hp.bonus = 0;
+		}
 	}
 
 	_removeParagraphs(value) {
@@ -281,25 +320,36 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _createCharacter() {
 
+		// Check for Name
+		if (this.formData.actor.name === "" ) {
+			ui.notifications.info( game.i18n.localize("SHADOWDARK.apps.character-generator.error.name"));
+		}
+
 		// adjust level for level 0 characters
 		if (this.formData.actor.system.class === this.formData.level0class.uuid) {
 			this.formData.actor.system.level.value = 0;
 		}
 
+		// set HP
+		let hpBonus = this.formData.actor.system.attributes.hp.bonus;
+		let hpMax = this.formData.actor.system.attributes.hp.max;
+		this.formData.actor.system.attributes.hp.value = hpBonus + hpMax;
+
 		// Create the new player character
 		console.log(this.formData);
 		try {
 			const newActor = await Actor.create(this.formData.actor);
+			ui.notifications.info(`Created Character: ${newActor.name}`);
 
 			// gather all items that need to be added.
-			console.log(this.formData.classTalents);
 
 			// push talents to new character and abilities to character
 			await newActor.createEmbeddedDocuments("Item", this.formData.classTalents);
-			ui.notifications.info(`Created Character: ${newActor.name}`);
 		}
 		catch(error) {
-			ui.notifications.error(`Failed to create player character ${error}`);
+			ui.notifications.error(
+				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
+			);
 		}
 
 
