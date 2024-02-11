@@ -1,14 +1,21 @@
+# v1.8.0
+
+## Bugfixes
+* [#671] Rolled NPC HP formula incorrect
+
+---
+
 # v1.7.3
 
 ## Bugfixes
-
 * [#660] Fix broken Compendium links
 
 ## Chores
-
 * [#661] Merged latest Korean and French translations from Crowdin
 
 Many thanks to *pyrige* for contributing code included in this build
+
+---
 
 # v1.7.2
 
@@ -20,6 +27,8 @@ Many thanks to *pyrige* for contributing code included in this build
 
 * [#649] Apply compendium source filtering to selectors on Item sheets as well as player Sheets
 * [#653] Allow spell items to be dragged from character sheet to hotbar
+
+---
 
 # v1.7.1
 
@@ -34,6 +43,8 @@ Many thanks to *pyrige* for contributing code included in this build
 
 * [#641] Add support for "Turn" durations in Spells/Effect (using 10 minutes as the duration)
 * [#646] Make spellcasting base DC customisable on a class basis
+
+---
 
 # v1.7.0
 
@@ -75,12 +86,16 @@ Where `<source_uuid>` is a unique identifier for your custom source, and `<sourc
 
 ## Acknowledgements
 
-v
+Many thanks to *chrpow* for contributing code included in this build.
+
+---
 
 # v1.6.2
 
 ## Bugfixes
 * [#610] Thief backstab option now shows on the dialog box when using ranged weapons.
+
+---
 
 # v1.6.1
 
@@ -317,6 +332,8 @@ We welcome @gatesvp as a contributor to the system!
 * [#412] Updated Ranger items to latest version
 * [#415] Apply latest Shadowdark V2 errate where needed
 
+---
+
 # v1.3.0
 
 ## Bugfixes
@@ -370,10 +387,14 @@ We welcome @gatesvp as a contributor to the system!
 * [#399] Show all Actors that have one or more Users with Owner permissions on the Light Tracker
 	- Also adds a toggle to the Light Tracker to show/hide actors with no active light source
 
+---
+
 # v1.2.4
 
 ## Bugfixes
 * [#313] Fixed a typo in the books where flasks & bottles cost 3 GP instead of SP
+
+---
 
 # v1.2.3
 
@@ -383,15 +404,21 @@ We welcome @gatesvp as a contributor to the system!
 * [#296] Placing a Monster with Auto Roll NPC HP causes multiple HP rolls
 * [#297] Quickstart pregens have all have zero current hit points
 
+---
+
 # v1.2.2
 
 ## Bugfixes
 * [#288] Unable to make attack using Attack/Actions shortcuts
 
+---
+
 # v1.2.1
 
 ## Bugfixes
 * [#283] Attribute labels missing from NPC sheet
+
+---
 
 # v1.2.0
 
@@ -425,6 +452,8 @@ We welcome @gatesvp as a contributor to the system!
 * [#270] Adds contributions to Swedish, Finnish, German, and French from [Crowdin](https://crowdin.com/project/shadowdark-rpg-for-foundry-vtt)
 * [#271] Adjustments for Shadowdarkling importer & sheet tests for v11 compatability
 
+---
+
 # v1.1.2
 
 ## Bugfixes
@@ -435,12 +464,16 @@ We welcome @gatesvp as a contributor to the system!
 ## Enhancements
 * [#234] Added finding the Macro for the lightsource tracker tour.
 
+---
+
 # v1.1.1
 
 ## Bugfixes
 * [#209] Items in locked system compediums partially editable
 * [#221] Lightsource tracker tour now require the tracker to be on, otherwise warns. Also stores and restores original settings (assuming the user doesn't restart the world or the tour within a 10 minute interval).
 * [#222] Rolling HP for a newly created 1st level character fails, if the class entry is left at the default
+
+---
 
 # v1.1.0
 
@@ -463,6 +496,8 @@ We welcome @gatesvp as a contributor to the system!
 * [#211] Increase granularity of Light Tracker intervals as allowed by performance enhancements
 * Various small tweaks to character sheet CSS and layout
 
+---
+
 # v1.0.2
 
 ## Bugfixes
@@ -473,11 +508,15 @@ We welcome @gatesvp as a contributor to the system!
 
 * [#188] Added contributed i18n updates for Finnish, German and Swedish languages
 
+---
+
 # v1.0.1
 
 ## Bugfixes
 
 * [#178] Fixed NaN display issue with ranged attacks
+
+---
 
 # v1.0.0
 

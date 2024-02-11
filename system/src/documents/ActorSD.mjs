@@ -136,7 +136,7 @@ export default class ActorSD extends Actor {
 		const data = {
 			rollType: "hp",
 			actor: this,
-			conBonus: Math.max(1, this.system.abilities.con.mod),
+			conBonus: this.system.abilities.con.mod,
 		};
 
 		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
