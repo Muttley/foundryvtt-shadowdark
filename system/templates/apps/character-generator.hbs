@@ -2,7 +2,7 @@
 
 <div class="col1">
 
-<h1>Character Generator <a class="fas fa-dice" name="randomize-all" data-action="cg-click" style="font-size:1.3em"></a></h1>
+<h1>Character Generator <a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a></h1>
 
 {{!-- Column 1a --}}
 <div class="col1a">
@@ -43,7 +43,7 @@
 		<div class="content">
 			
 			<input type="number" value="{{actor.system.attributes.hp.base}}" name="actor.system.attributes.hp.base" style="width:2em;"/>
-			+{{actor.system.attributes.hp.bonus}}
+			{{numberFormat actor.system.abilities.con.mod decimals=0 sign=true}}
 			<span style="float:right;vertical-align: middle;">[{{classHP}}]</span>
 		</div>
 	</div>

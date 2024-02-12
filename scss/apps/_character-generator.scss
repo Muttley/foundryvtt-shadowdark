@@ -6,8 +6,10 @@
 	h1 {
 		font-family: "Old Newspaper Font";
 		margin-left: 15px;
-		width:350px;
-		// font-size: 1.4rem;
+		font-size: 2.5em;
+		a {
+			font-size: 1em;
+		}
 	}
 	.col1 {
 		width:400px;
@@ -60,7 +62,7 @@
 
 	.large-style {
 		width: 398px;
-		height: 475px;
+		height: 485px;
 		font-size: 0.85em;
 		overflow: auto;
 	}
