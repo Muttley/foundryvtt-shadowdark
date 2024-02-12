@@ -19,7 +19,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 					hp: {
 						base: 1,
 						value: 1,
-						bonus: 0,
 					},
 				},
 				level: {
@@ -181,6 +180,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.loadingDialog.close();
 		}
 
+		// format talents
+
 		return this.formData;
 	}
 
@@ -207,6 +208,23 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.actor.system.deity = [...this.formData.deities][tempInt].uuid;
 		}
 
+		// randomize alignment
+		if (eventStr === "randomize-alignment" || eventStr === "randomize-all") {
+			switch (this._roll("d6")) {
+				case 1:
+				case 2:
+				case 3:
+					this.formData.actor.system.alignment = "lawful";
+				  break;
+				case 4:
+				case 5:
+					this.formData.actor.system.alignment = "neutral";
+				  break;
+				default:
+					this.formData.actor.system.alignment = "chaotic";
+			  }
+		}
+
 		// randomize class
 		if (eventStr === "randomize-class" || eventStr === "randomize-all") {
 			tempInt = this._getRandom(this.formData.classes.size);
@@ -217,7 +235,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize language
 		if (eventStr === "randomize-language" || eventStr === "randomize-all") {
-			console.log(this.formData.languages.size);
+			console.log(this.formData.languages);
 		}
 
 
@@ -304,13 +322,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			let baseInt = this.formData.actor.system.abilities[x].base;
 			this.formData.actor.system.abilities[x].mod = Math.floor((baseInt - 10)/2);
 		});
-		let conMod = this.formData.actor.system.abilities.con.mod;
-		if (conMod > 0) {
-			this.formData.actor.system.attributes.hp.bonus = conMod;
-		}
-		else {
-			this.formData.actor.system.attributes.hp.bonus = 0;
-		}
 	}
 
 	_removeParagraphs(value) {
@@ -330,10 +341,18 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.actor.system.level.value = 0;
 		}
 
-		// set HP
-		let hpBonus = this.formData.actor.system.attributes.hp.bonus;
-		let hpMax = this.formData.actor.system.attributes.hp.max;
-		this.formData.actor.system.attributes.hp.value = hpBonus + hpMax;
+		// Calculate HP
+		let hpConMod = this.formData.actor.system.abilities.con.mod;
+		let hpBase = this.formData.actor.system.attributes.hp.base;
+		// set minimum 1 HP
+		if ((hpBase + hpConMod) >= 1) {
+			this.formData.actor.system.attributes.hp.base = hpBase + hpConMod;
+			this.formData.actor.system.attributes.hp.value = hpBase + hpConMod;
+		}
+		else {
+			this.formData.actor.system.attributes.hp.base = 1;
+			this.formData.actor.system.attributes.hp.value = 1;
+		}
 
 		// Create the new player character
 		console.log(this.formData);
@@ -351,7 +370,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
 			);
 		}
-
+		this.close();
 
 	}
 }
