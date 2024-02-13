@@ -6,9 +6,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 		super();
 		this.firstrun = true;
 		this.formData = {};
+		this.formData.ancestryTalents = [];
 		this.formData.classTalents = [];
 		this.formData.level0class = {};
 		this.formData.classHP = 1;
+		this.formData.armor = ["All armor"];
+		this.formData.weapons =["All weapons"];
+		this.formData.selectedLangs = [];
 
 		// Setup a default actor template
 		this.formData.actor = {
@@ -109,11 +113,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 		html.find("[data-action='create-character']").click(
 			event => this._createCharacter(event)
 		);
-
 	}
 
 	/** @inheritdoc */
 	async _updateObject(event, data) {
+		console.log(event.target.id);
 		// expand incoming data for compatibility with formData
 	    let expandedData = foundry.utils.expandObject(data);
 		console.log(expandedData);
@@ -127,18 +131,27 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// merge incoming data into the main formData object
 		this.formData = mergeObject(this.formData, expandedData);
 
+		// if stats were changed, calculate new modifiers
+		if (event.target.id === "stat") {
+			this._calculateModifiers();
+		}
+
+		// if class data was changed, load new data and roll hp
 		if (event.target.name === "actor.system.class") {
 			await this._loadClass(event.target.value);
 			this._randomizeHP();
 		}
 
-		this._calculateModifiers();
+		// if ancestry data was changed, load new data
+		if (event.target.name === "actor.system.ancestry") {
+			await this._loadAncestry(event.target.value);
+		}
+
 		this.render();
 	}
 
 	/** @override */
 	async getData(options) {
-
 		if (this.firstrun) {
 			this.firstrun = false;
 
@@ -157,7 +170,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			// set all player ability scores to 10
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				this.formData.actor.system.abilities[x] = { base: "10", mod: "0"};
+				this.formData.actor.system.abilities[x] = { base: 10, mod: 0};
 			});
 
 			// load all relevent data from compendiums
@@ -178,6 +191,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			// loading is finished, pull down the loading screen
 			this.loadingDialog.close();
+			console.log(this.formData.languages);
 		}
 
 		// format talents
@@ -186,14 +200,15 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	async _randomizeHandler(event) {
-		console.log(event.target.name);
 		const eventStr = event.target.name;
 		let tempInt = 0;
 
 		// randomize ancestry
 		if (eventStr === "randomize-ancestry" || eventStr === "randomize-all") {
 			tempInt = this._getRandom(this.formData.ancestries.size);
-			this.formData.actor.system.ancestry = [...this.formData.ancestries][tempInt].uuid;
+			let ancestryID = [...this.formData.ancestries][tempInt].uuid;
+			this.formData.actor.system.ancestry = ancestryID;
+			await this._loadAncestry(ancestryID);
 		}
 
 		// randomize background
@@ -233,12 +248,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			await this._loadClass(classID);
 		}
 
-		// randomize language
-		if (eventStr === "randomize-language" || eventStr === "randomize-all") {
-			console.log(this.formData.languages);
-		}
-
-
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
@@ -268,14 +277,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	// loads linked class items when class is selected
-	async _loadClass(classUuID) {
+	/**
+	 * loads linked class items when class is selected
+	 * @param {string} Uuid
+	 */
+	async _loadClass(UuID) {
 		// grab static talents from class item
-		let classObj =  await fromUuid(classUuID);
+		let classObj =  await fromUuid(UuID);
 		let talentData = [];
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
+				let fDesc = await this._formatTalents(talentObj.system.description);
+				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
 		}
@@ -288,7 +302,58 @@ export default class CharacterGeneratorSD extends FormApplication {
 		else {
 			this.formData.classHP = 1;
 		}
+
+		// get armor details
+		let armorData = [];
+		if (classObj.system.allArmor === true) {
+			armorData = ["All armor"];
+		}
+		for (const armor of classObj.system.armor) {
+			armorData.push(fromUuidSync(armor).name);
+		}
+		this.formData.armor = armorData;
+		console.log(armorData);
+
+		// get weapon details
+		let weaponData = [];
+		switch (true) {
+			case classObj.system.allWeapons:
+			case (classObj.system.allMeleeWeapons && classObj.system.allRangedWeapons):
+				weaponData = ["All weapons"];
+				break;
+			case classObj.system.allMeleeWeapons:
+				weaponData = ["All Melee Weapons"];
+				break;
+			case classObj.system.allRangedWeapons:
+				weaponData = ["All Ranged Weapons"];
+				break;
+		}
+		for (const weapon of classObj.system.weapons) {
+			weaponData.push(fromUuidSync(weapon).name);
+		}
+		this.formData.weapons = weaponData;
+		console.log(weaponData);
 	}
+
+	async _loadAncestry(UuID) {
+		// grab static talents from ancestry item
+		let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
+		let talentData = [];
+		if (ancestryObj.system.talents) {
+			for (const talent of ancestryObj.system.talents) {
+				let talentObj = await fromUuid(talent);
+				let fDesc = await this._formatTalents(talentObj.system.description);
+				talentObj.formattedDescription = fDesc;
+				talentData.push(talentObj);
+			}
+		}
+		this.formData.ancestryTalents = talentData;
+	}
+	/*
+	_loadLanguages() {
+		if (this.formData.actor.system.class) {
+		}
+	}*/
 
 	_randomizeHP() {
 		const classID = this.formData.actor.system.class;
@@ -328,12 +393,24 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return value.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 	}
 
+	async _formatTalents(text) {
+
+		const description = await TextEditor.enrichHTML(
+			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
+			{
+				async: true,
+			}
+		);
+
+		return description;
+	}
 
 	async _createCharacter() {
 
 		// Check for Name
 		if (this.formData.actor.name === "" ) {
-			ui.notifications.info( game.i18n.localize("SHADOWDARK.apps.character-generator.error.name"));
+			ui.notifications.error( game.i18n.localize("SHADOWDARK.apps.character-generator.error.name"));
+			return;
 		}
 
 		// adjust level for level 0 characters
