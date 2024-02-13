@@ -1,3 +1,22 @@
+Handlebars.registerHelper("remove-p-tag", str1 => {
+	return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
+});
+
+class loadingDialog extends Dialog {
+	constructor() {
+		let data = {
+			title: "Character Generator",
+			content: "<center>Searching Distant Lands...<br><img src='systems/shadowdark/assets/logo/arcane-library-logo.webp' class='fa-spin' style='border-width:0px;width:50px;height:50px;'></img></center>",
+			buttons: {},
+		};
+		let options = {
+			height: 125,
+			width: 250,
+		};
+		super(data, options);
+	}
+}
+
 export default class CharacterGeneratorSD extends FormApplication {
 	/**
 	 * Contains functions for building Shadowdark characters
@@ -69,16 +88,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			},
 		};
 
-		// TODO move this somewhere proper
-		this.loadingDialog = new Dialog({
-			title: "Character Generator",
-			content: "<center>Searching Distant Lands...<br><img src='systems/shadowdark/assets/logo/arcane-library-logo.webp' class='fa-spin' style='border-width:0px;width:50px;height:50px;'></img></center>",
-			buttons: {},
-		},
-		{
-			height: 125,
-			width: 250,
-		});
+		this.loadingDialog = new loadingDialog();
 	}
 
 	/** @inheritdoc */
@@ -283,12 +293,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 	 */
 	async _loadClass(UuID) {
 		// grab static talents from class item
-		let classObj =  await fromUuid(UuID);
+		let classObj =  this.formData.classes.find(x => x.uuid === UuID);
 		let talentData = [];
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = await this._formatTalents(talentObj.system.description);
+				let fDesc = this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
@@ -342,12 +352,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (ancestryObj.system.talents) {
 			for (const talent of ancestryObj.system.talents) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = await this._formatTalents(talentObj.system.description);
+				let fDesc = this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
 		}
 		this.formData.ancestryTalents = talentData;
+		this.formData.ancestry = ancestryObj;
 	}
 	/*
 	_loadLanguages() {
@@ -393,15 +404,15 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return value.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 	}
 
-	async _formatTalents(text) {
+	_formatDescription(text) {
 
-		const description = await TextEditor.enrichHTML(
+		const description = TextEditor.enrichHTML(
 			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
 			{
-				async: true,
+				async: false,
+				cache: false,
 			}
 		);
-
 		return description;
 	}
 
@@ -447,7 +458,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
 			);
 		}
-		this.close();
 
+		this.close();
 	}
 }

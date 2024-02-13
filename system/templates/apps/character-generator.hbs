@@ -86,7 +86,7 @@
 			{{#select actor.system.ancestry}}
 				<option value=""></option>
 				{{#each ancestries as |value key|}}
-				<option value="{{value.uuid}}" data-tooltip="{{value.system.description}}">{{value.name}}</option>
+				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
 				{{/each}}
 			{{/select}}
 			</select>
@@ -104,7 +104,7 @@
 			{{#select actor.system.class}}
 				<option value="{{level0class.uuid}}">{{level0class.name}}</option>
 				{{#each classes as |value key|}}
-				<option value="{{value.uuid}}">{{value.name}}</option>
+				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
 				{{/each}}
 			{{/select}}
 			</select>
@@ -122,7 +122,7 @@
 			{{#select actor.system.background}}
 				<option value=""></option>
 				{{#each backgrounds as |value key|}}
-				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}}</option>
+				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
 				{{/each}}
 			{{/select}}
 			</select>
@@ -153,7 +153,7 @@
 			{{#select actor.system.deity}}
 				<option value=""></option>
 				{{#each deities as |value key|}}
-				<option value="{{value.uuid}}" title="{{{value.system.description}}}">{{value.name}} ({{value.system.alignment}})</option>
+				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}} ({{value.system.alignment}})</option>
 				{{/each}}
 			{{/select}}
 			</select>
@@ -181,16 +181,20 @@
 				</p>
 			{{/each}}
 
-			{{#if weapons}}<p><b>Weapons: </b>{{/if}}
+			{{#if weapons}}<p><b>Weapons: </b>
 				{{#each weapons as |name index|}}
 					{{name}}{{#unless @last}}, {{/unless}}
 				{{/each}}
-			</p>
-			<p><b>Armour: </b>
+				</p>
+			{{/if}}
+
+			{{#if armor}}<p><b>Armour: </b>
 				{{#each armor as |name index|}}
 					{{name}}{{#unless @last}}, {{/unless}}
 				{{/each}}
-			</p>
+				</p>
+			{{/if}}
+
 			<p><b>Languages. </b>
 				{{#each selectedLangs as |value key|}}
 					{{value.name}}{{#unless @last}}, {{/unless}}
