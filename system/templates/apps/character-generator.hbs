@@ -167,18 +167,41 @@
 <div class="col2">
 
 
-	{{!-- Talents --}}
+	{{!-- Character Details --}}
 	<div class="box-style ">
 		<div class="header">
-			<label>Talents</label>
+			<label>Details</label>
 			<span></span>
 		</div>
 		<div class="content large-style">
-			{{#each classTalents as |value key|}}
+			{{#each ancestryTalents as |value key|}}
 				<p>
 				<b>{{value.name}}.</b>
-				{{{value.system.description}}}
+				{{{value.formattedDescription}}}
 				</p>
+			{{/each}}
+
+			{{#if weapons}}<p><b>Weapons: </b>{{/if}}
+				{{#each weapons as |name index|}}
+					{{name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+			<p><b>Armour: </b>
+				{{#each armor as |name index|}}
+					{{name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+			<p><b>Languages. </b>
+				{{#each selectedLangs as |value key|}}
+					{{value.name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+
+			{{#each classTalents as |value key|}}
+			<p>
+				<b>{{value.name}}. </b>
+				{{{value.formattedDescription}}}
+			</p>
 			{{/each}}
 		</div>
 	</div>
