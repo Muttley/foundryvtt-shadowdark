@@ -32,6 +32,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.armor = ["All armor"];
 		this.formData.weapons =["All weapons"];
 		this.formData.selectedLangs = [];
+		this.langData = {};
 
 		// Setup a default actor template
 		this.formData.actor = {
@@ -190,6 +191,25 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.languages = await shadowdark.compendiums.languages();
 			this.formData.classes = await shadowdark.compendiums.classes();
 
+			// setup lanaguage data
+			this.langData = {
+				selected: [],
+				choiceList: [],
+				choiceCount: 0,
+				commonList: [],
+				commonCount: 0,
+				rareList: [],
+				rareCount: 0,
+			};
+			let commonLangs = this.formData.languages.filter(x => x.system.rarity === "common");
+			commonLangs.forEach(x => {
+				this.langData.commonList.push(x.uuid);
+			});
+			let rareLanges = this.formData.languages.filter(x => x.system.rarity === "rare");
+			rareLanges.forEach(x => {
+				this.langData.rareList.push(x.uuid);
+			});
+
 			// find the level 0 class
 			this.formData.classes.forEach( classObj => {
 				if (classObj.name.toLocaleLowerCase().includes("level 0")) {
@@ -201,11 +221,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			// loading is finished, pull down the loading screen
 			this.loadingDialog.close();
-			console.log(this.formData.languages);
 		}
 
 		// format talents
-
 		return this.formData;
 	}
 
@@ -322,7 +340,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			armorData.push(fromUuidSync(armor).name);
 		}
 		this.formData.armor = armorData;
-		console.log(armorData);
 
 		// get weapon details
 		let weaponData = [];
@@ -342,7 +359,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 			weaponData.push(fromUuidSync(weapon).name);
 		}
 		this.formData.weapons = weaponData;
-		console.log(weaponData);
+
+		// get language details
+		// this.langData.commonCount = classObj.system.lanaguages.common;
+		// this.langData.rareCount = classObj.system.lanaguages.rare;
+		// this.langData.choiceCount = classObj.system.lanaguage.select;
+		// this.langData.choiceList = classObj.system.lanaguages.SelectOptions;
+
 	}
 
 	async _loadAncestry(UuID) {
@@ -360,11 +383,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.ancestryTalents = talentData;
 		this.formData.ancestry = ancestryObj;
 	}
-	/*
-	_loadLanguages() {
+
+	async _loadLanguages() {
+		let langData = {
+			selected: {},
+			choiceList: {},
+			choiceCount: 0,
+			commonList: this.formData.languages.find(x => x.type === "common").Uuid,
+			commonCount: 0,
+			rareList: this.formData.languages.find(x => x.type === "rare").Uuid,
+			rareCount: 0,
+		};
+
+		// get languages on actor
 		if (this.formData.actor.system.class) {
+			langData.choiceCount = this.formData.actor.system.class.lanaguage.select;
+			langData.choiceList = this.formData.actor.system.class.lanaguages.SelectOptions;
+			langData.commonCount = this.formData.actor.system.class.lanaguages.common;
+			langData.rareCount = this.formData.actor.system.class.lanaguages.rare;
 		}
-	}*/
+	}
 
 	_randomizeHP() {
 		const classID = this.formData.actor.system.class;
