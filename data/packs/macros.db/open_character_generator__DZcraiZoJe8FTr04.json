@@ -1,0 +1,11 @@
+{
+	"_id": "DZcraiZoJe8FTr04",
+	"_key": "!macros!DZcraiZoJe8FTr04",
+	"author": "mu8H7NbWc0seFWcA",
+	"command": "/**\n ****************************************************************\n * This macro can be used to open the character generator\n ***************************************************************/\n\nnew shadowdark.apps.CharacterGeneratorSD().render(true);",
+	"folder": null,
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Open Character Generator (Preview)",
+	"scope": "global",
+	"type": "script"
+}

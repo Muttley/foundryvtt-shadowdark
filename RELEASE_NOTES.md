@@ -1,7 +1,13 @@
-# v1.8.0
+# v1.7.4
 
 ## Bugfixes
 * [#671] Rolled NPC HP formula incorrect
+* [#673] Fixed an issue with importing priests from shadowdarklings.net
+* [#672] Fixed the Bag of Holding magical item in the shadowdark compendium
+* [#666] Fixed a bug in the monster importer where trailing spaces could cause parsing to fail
+
+## Preview Feature
+	A preview verison of the Character Generator can be launched via marcro. Langauges, ancestry talents, class choice talents, and starting gear are currently not implemented.
 
 ---
 
