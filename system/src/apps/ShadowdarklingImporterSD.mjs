@@ -362,8 +362,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				}
 				// Priest
 				if (bonus.name === "Plus1ToHit") {
-					if (bonus.bonusTo === "Melee and ranged attacks") bonus.bonusTo = `+1 to ${bonus.bonusTo}`;
-					return this._findInCompendium(bonus.bonusTo, "shadowdark.talents");
+					return this._findInCompendium(`+1 to ${bonus.bonusTo}`, "shadowdark.talents");
 				}
 				// Wizard & Priest
 				if (bonus.bonusName === "Plus1ToCastingSpells") {
@@ -429,7 +428,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				);
 			}
 		}
-		if (json.priest === "Priest") {
+		if (json.class === "Priest") {
 			const classTalentNames = [
 				"Deity",
 				"Spellcasting (Priest)",
