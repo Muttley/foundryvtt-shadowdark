@@ -1,0 +1,30 @@
+{
+	"_id": "MquW5uUJ7QQO7eFk",
+	"_key": "!items.effects!vHwzxeO0sX9GlRbj.MquW5uUJ7QQO7eFk",
+	"changes": [
+		{
+			"key": "system.bonuses.gearSlots",
+			"value": "10",
+			"mode": 2,
+			"priority": null
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"name": "Additional Gear Slots",
+	"origin": null,
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}
