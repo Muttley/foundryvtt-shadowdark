@@ -1,10 +1,12 @@
 # v1.7.4
 
 ## Bugfixes
-* [#671] Rolled NPC HP formula incorrect
-* [#673] Fixed an issue with importing priests from shadowdarklings.net
-* [#672] Fixed the Bag of Holding magical item in the shadowdark compendium
+* [#656] Typo in Player Quickstart Guide
 * [#666] Fixed a bug in the monster importer where trailing spaces could cause parsing to fail
+* [#668] Typo in Sleep spell description
+* [#671] Rolled NPC HP formula incorrect
+* [#672] Fixed the Bag of Holding magical item in the shadowdark compendium
+* [#673] Fixed an issue with importing priests from shadowdarklings.net
 
 ---
 

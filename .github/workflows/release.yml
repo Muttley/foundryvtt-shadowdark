@@ -39,9 +39,9 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: false
-        name: release-${{ env.systemVersion }}
-        draft: false
-        prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './system/system.json, ./shadowdark.zip'
+        draft: false
+        name: release-${{ env.systemVersion }}
+        prerelease: true
         tag: release-${{ env.systemVersion }}
+        token: ${{ secrets.GITHUB_TOKEN }}
