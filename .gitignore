@@ -7,3 +7,7 @@ system/packs/
 
 *.code-workspace
 shadowdark-compiled*
+
+#IntelliJ
+.idea/
+*.iml
