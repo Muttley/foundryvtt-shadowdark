@@ -2,6 +2,7 @@
 	"_id": "vHwzxeO0sX9GlRbj",
 	"_key": "!items!vHwzxeO0sX9GlRbj",
 	"effects": [
+		"MquW5uUJ7QQO7eFk"
 	],
 	"folder": null,
 	"img": "icons/containers/bags/sack-leather-purple.webp",
@@ -30,9 +31,9 @@
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
-			"free_carry": 1,
+			"free_carry": 0,
 			"per_slot": 1,
-			"slots_used": -10
+			"slots_used": 1
 		},
 		"source": {
 			"title": "quickstart"

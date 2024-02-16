@@ -269,6 +269,8 @@ export default class MonsterImporterSD extends FormApplication {
 	 * @returns {ActorSD}
 	 */
 	async _importMonster(monsterText) {
+		// trim spaces from the end of each line:
+		monsterText = monsterText.replace(/[^\S\r\n]+$/gm, "");
 
 		// parse monster text into 4 main parts:
 		const parsedText = monsterText.match([
