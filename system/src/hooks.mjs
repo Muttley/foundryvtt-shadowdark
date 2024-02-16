@@ -7,6 +7,7 @@ import { LightSourceTrackerHooks } from "./hooks/light-source-tracker.mjs";
 import { NPCHooks } from "./hooks/npc.mjs";
 import { ShadowdarklingImport } from "./hooks/shadowdarkling-import.mjs";
 import { hotbarHooks } from "./hooks/hotbar.mjs";
+import { DragRulerHooks } from "./hooks/drag-ruler-support.mjs";
 
 export const HooksSD = {
 	attach: () => {
@@ -42,6 +43,7 @@ export const HooksInitSD = {
 		const listeners = [
 			ShadowdarklingImport,
 			EffectPanelHooks,
+			DragRulerHooks,
 		];
 
 		for (const listener of listeners) {
