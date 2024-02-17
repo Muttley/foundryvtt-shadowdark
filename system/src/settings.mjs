@@ -198,7 +198,7 @@ export default function registerSystemSettings() {
 		hint: "SHADOWDARK.settings.schemaVersion.hint",
 		scope: "world",
 		config: game.settings.get("shadowdark", "debugEnabled"),
-		default: 0,
+		default: -1,
 		type: Number,
 	});
 

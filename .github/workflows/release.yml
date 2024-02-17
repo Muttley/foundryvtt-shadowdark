@@ -12,10 +12,10 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -29,7 +29,7 @@ jobs:
         cp --force LICENSE.txt system/.
         cp --force README.md system/.
         SYSTEM_VERSION=$(grep -oP '(?<="version": ")[^"]+' system/system.json | tr -d '\n')
-        perl -pi -E "s|/latest/download/|/download/release-$SYSTEM_VERSION/|" system/system.json
+        perl -pi -E "s|latest/download/shadowdark\\.zip|download/release-$SYSTEM_VERSION/shadowdark.zip|" system/system.json
         echo "systemVersion=$SYSTEM_VERSION" >> $GITHUB_ENV
 
     - run: cd system && zip -r ../shadowdark.zip ./*
@@ -39,9 +39,9 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: false
-        name: release-${{ env.systemVersion }}
-        draft: false
-        prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './system/system.json, ./shadowdark.zip'
+        draft: false
+        name: release-${{ env.systemVersion }}
+        prerelease: true
         tag: release-${{ env.systemVersion }}
+        token: ${{ secrets.GITHUB_TOKEN }}
