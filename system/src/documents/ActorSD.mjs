@@ -1180,7 +1180,7 @@ export default class ActorSD extends Actor {
 						"system.equipped": false,
 					});
 				}
-				else if (await item.isNotAShield() && !isAShield) {
+				else if (item.system.bodyLocation === updatedItem.system.bodyLocation) {
 					armorToUnequip.push({
 						"_id": item._id,
 						"system.equipped": false,
@@ -1221,15 +1221,13 @@ export default class ActorSD extends Actor {
 			const equippedArmor = this.items.filter(
 				item => item.type === "Armor" && item.system.equipped
 			);
-			let nonShieldEquipped = false;
+
 			if (equippedArmor.length > 0) {
-				newArmorClass = 0;
+				let newArmorClassBase = shadowdark.defaults.BASE_ARMOR_CLASS;
+				let newArmorClassModifier = 0;
+
 				for (let i = 0; i < equippedArmor.length; i++) {
 					const armor = equippedArmor[i];
-
-					if (await armor.isNotAShield()) {
-						nonShieldEquipped = true;
-					}
 
 					// Check if armor mastery should apply to the AC
 					if (
@@ -1237,19 +1235,15 @@ export default class ActorSD extends Actor {
 						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
 					) armorMasteryBonus += 1;
 
-					newArmorClass += armor.system.ac.modifier;
-					newArmorClass += armor.system.ac.base;
+					newArmorClassBase = Math.max(newArmorClassBase, armor.system.ac.base);
+					newArmorClassModifier += armor.system.ac.modifier;
 
 					const attribute = armor.system.ac.attribute;
 					if (attribute) {
-						newArmorClass += this.abilityModifier(attribute);
+						newArmorClassModifier += this.abilityModifier(attribute);
 					}
 				}
-
-				// Someone with no armor but a shield equipped
-				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
-
-				newArmorClass += armorMasteryBonus;
+				newArmorClass = newArmorClassBase + newArmorClassModifier + armorMasteryBonus;
 			}
 			else {
 				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
