@@ -10267,8 +10267,7 @@
 				},
 				"stashed": false
 			},
-			"type": "Armor",
-			"bodyLocation": "Shield"
+			"type": "Armor"
 		},
 		{
 			"_id": "a69T3oP2oVH2yqMn",
@@ -10596,10 +10595,10 @@
 				"source": {
 					"title": "quickstart"
 				},
-				"stashed": false
+				"stashed": false,
+				"bodyLocation": "feet"
 			},
-			"type": "Armor",
-			"bodyLocation": "Feet"
+			"type": "Armor"
 		},
 		{
 			"_id": "i3gSIEVGxXhlUkdn",
