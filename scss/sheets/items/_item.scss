@@ -51,6 +51,12 @@
 		row-gap: 4px;
 	}
 
+	.body-location {
+        background-color: var(--form-background);
+        display: grid;
+        row-gap: 4px;
+    }
+
 	.choice-selector {
 		display: grid;
 		// grid-column: span 2;

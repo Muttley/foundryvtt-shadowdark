@@ -78,6 +78,12 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
 SHADOWDARK.armor.properties.no_swimming: No Swim
 SHADOWDARK.armor.properties.one_handed: Occupies One Hand
 SHADOWDARK.armor.properties.shield: Shield
+SHADOWDARK.body_location.head: Head
+SHADOWDARK.body_location.arms: Arms
+SHADOWDARK.body_location.hands: Hands
+SHADOWDARK.body_location.torso: Torso
+SHADOWDARK.body_location.legs: Legs
+SHADOWDARK.body_location.feet: Feet
 SHADOWDARK.boon.type.label: Boon Type
 SHADOWDARK.boons.blessing: Blessing
 SHADOWDARK.boons.oath: Oath
@@ -307,6 +313,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
 SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
 SHADOWDARK.item.armor.base_armor.shield: Shield
 SHADOWDARK.item.armor.base_armor.title: Base Armor
+SHADOWDARK.item.body_location: Body Location
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.effect.category.condition: Condition

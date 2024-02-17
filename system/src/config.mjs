@@ -29,6 +29,15 @@ SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 	dex: "SHADOWDARK.ability_dex",
 };
 
+SHADOWDARK.BODY_LOCATIONS = {
+	head: "SHADOWDARK.body_location.head",
+	arms: "SHADOWDARK.body_location.arms",
+	hands: "SHADOWDARK.body_location.hands",
+	torso: "SHADOWDARK.body_location.torso",
+	legs: "SHADOWDARK.body_location.legs",
+	feet: "SHADOWDARK.body_location.feet",
+};
+
 SHADOWDARK.DICE = {
 	d4: "d4",
 	d6: "d6",

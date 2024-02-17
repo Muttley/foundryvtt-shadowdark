@@ -83,6 +83,20 @@
 
 		<div class="item-toggles">
 
+			{{#ifEq item.type "Armor"}}
+				<div class="body-location">
+					<label>{{localize "SHADOWDARK.item.body_location"}}</label>
+					<select name="system.bodyLocation">
+						<option value="">&mdash;</option>
+						{{selectOptions
+							config.BODY_LOCATIONS
+							selected=system.bodyLocation
+							localize=false
+						}}
+					</select>
+				</div>
+			{{/ifEq}}
+
 			{{#if item.system.canBeEquipped}}
 				<div class="equipped">
 					{{#if item.isOwned}}
