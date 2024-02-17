@@ -580,7 +580,25 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
-		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
+		if (updatedItem.system.equipped) {
+			const itemsToUnequip = [];
+			for (const item of this.actor.items) {
+				if (item._id === updatedItem._id) continue;
+
+				if (item.system.bodyLocation === updatedItem.system.bodyLocation) {
+					itemsToUnequip.push({
+						"_id": item._id,
+						"system.equipped": false,
+					});
+				}
+			}
+
+			if (itemsToUnequip.length > 0) {
+				await this.actor.updateEmbeddedDocuments("Item", itemsToUnequip);
+			}
+		}
+
+		if (item.type === "Armor") this.actor.updateArmorClass();
 	}
 
 	async _onToggleStashed(event) {
@@ -589,7 +607,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+		await this.actor.updateEmbeddedDocuments("Item", [
 			{
 				"_id": itemId,
 				"system.stashed": !item.system.stashed,
@@ -597,7 +615,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
-		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
+		if (item.type === "Armor") this.actor.updateArmorClass();
 	}
 
 	async _onUseAbility(event) {

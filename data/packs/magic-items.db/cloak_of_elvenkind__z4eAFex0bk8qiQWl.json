@@ -8,7 +8,7 @@
 	"name": "Cloak of Elvenkind",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
+		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -38,7 +38,8 @@
 			"title": "quickstart"
 		},
 		"stashed": false,
-		"treasure": false
+		"treasure": false,
+		"bodyLocation": "cloak"
 	},
 	"type": "Basic"
 }
