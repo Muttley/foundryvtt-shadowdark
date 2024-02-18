@@ -259,7 +259,7 @@ export default class MonsterImporterSD extends FormApplication {
 	<p></p>
 	<p>${statBlock.replace(/AC|HP|ATK|MV|S|D|Ch|C|I|W|AL|LV/g, "<strong>$&</strong>")}</p><p></p>
 	${features
-		.map(feat => feat.replace(/([\w|()| )])+\./, "<strong>$&</strong>"))
+		.map(feat => feat.replace(/([\w|()| |/)])+\./, "<strong>$&</strong>"))
 		.map(feat => `<p>${feat}</p><p></p>`)
 		.join("")}`;
 
