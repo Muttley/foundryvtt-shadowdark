@@ -86,7 +86,21 @@
 			{{#ifEq item.type "Armor"}}
 				<div class="body-location">
 					<label>{{localize "SHADOWDARK.item.body_location"}}</label>
-					<select name="system.bodyLocation">
+					<select name="system.bodyLocation" class="body-location-select">
+						<option value="">&mdash;</option>
+						{{selectOptions
+							config.BODY_LOCATIONS
+							selected=system.bodyLocation
+							localize=false
+						}}
+					</select>
+				</div>
+			{{/ifEq}}
+
+			{{#ifEq item.type "Basic"}}
+				<div class="body-location">
+					<label>{{localize "SHADOWDARK.item.body_location"}}</label>
+					<select name="system.bodyLocation" class="body-location-select">
 						<option value="">&mdash;</option>
 						{{selectOptions
 							config.BODY_LOCATIONS

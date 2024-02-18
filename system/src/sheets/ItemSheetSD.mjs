@@ -61,6 +61,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onItemSelection(event)
 		);
 
+		html.find(".body-location-select").change(
+			event => this._onBodyLocation(event)
+		);
+
 		// Effect listeners
 		html.find(".effect-control[data-action=create]").click(
 			event => this._onEffectCreate(event)
@@ -658,6 +662,26 @@ export default class ItemSheetSD extends ItemSheet {
 
 				break;
 		}
+	}
+
+	async _onBodyLocation(event) {
+		event.preventDefault();
+		const bodyLocation = event.currentTarget.value;
+		console.log("bodyLocation", bodyLocation);
+
+		console.log("BEFORE", this.item.system);
+
+		const bodyLocationKeys = [];
+		for (const key in CONFIG.SHADOWDARK.BODY_LOCATIONS) {
+			bodyLocationKeys.push(key);
+		}
+
+		const updatedItem = await this.item.update({
+			"system.bodyLocation": bodyLocation,
+			"system.canBeEquipped": bodyLocationKeys.includes(bodyLocation),
+		});
+
+		console.log("AFTER", updatedItem.system);
 	}
 
 	_onMagicItemTypeProperties(event) {
