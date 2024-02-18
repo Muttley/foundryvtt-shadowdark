@@ -580,6 +580,40 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
+		// filter to find the ActiveEffects that originated from this item
+		const filter = {
+	        field: "origin",
+	        operator: SearchFilter.OPERATORS.ENDS_WITH,
+	        negate: false,
+	        value: `Item\.${itemId}`,
+	    };
+	    console.log(filter);
+
+		// find the ActiveEffects on the Actor that are from this item
+		const effectCollection = this.actor.getEmbeddedCollection("ActiveEffect");
+		let effects = effectCollection.search({
+			query: "",
+			filters: [filter],
+			exclude: [],
+		});
+		console.log("BEFORE", effects);
+
+		// toggle the ActiveEffect
+		const updatedEffects = [];
+		for (const e of effects) {
+			console.log(e.name, e.origin);
+			updatedEffects.push({
+				_id: e._id,
+				disabled: !updatedItem.system.equipped,
+			});
+		}
+		effects = await this.actor.updateEmbeddedDocuments("ActiveEffect", updatedEffects);
+		console.log("AFTER", effects);
+
+		// update the Actor state
+		this.actor.applyActiveEffects();
+		console.log("effects applied");
+
 		if (updatedItem.system.equipped) {
 			const itemsToUnequip = [];
 			for (const item of this.actor.items) {
