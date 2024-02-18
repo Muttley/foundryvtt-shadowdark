@@ -666,11 +666,8 @@ export default class ItemSheetSD extends ItemSheet {
 
 	async _onBodyLocation(event) {
 		event.preventDefault();
+
 		const bodyLocation = event.currentTarget.value;
-		console.log("bodyLocation", bodyLocation);
-
-		console.log("BEFORE", this.item.system);
-
 		const bodyLocationKeys = [];
 		for (const key in CONFIG.SHADOWDARK.BODY_LOCATIONS) {
 			bodyLocationKeys.push(key);
@@ -680,8 +677,6 @@ export default class ItemSheetSD extends ItemSheet {
 			"system.bodyLocation": bodyLocation,
 			"system.canBeEquipped": bodyLocationKeys.includes(bodyLocation),
 		});
-
-		console.log("AFTER", updatedItem.system);
 	}
 
 	_onMagicItemTypeProperties(event) {

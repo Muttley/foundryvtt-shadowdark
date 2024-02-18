@@ -622,11 +622,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		for (const item of items) {
 			// filter to find the ActiveEffects that originated from this item
 			filter.value = `Item\.${item._id}`;
-	        console.log(filter);
 
 	        // find the ActiveEffects on the Actor that are from this item
 	        const effects = effectCollection.search(searchParams);
-	        console.log("BEFORE", effects);
 
 	        // toggle the ActiveEffect
 	        for (const e of effects) {
@@ -638,11 +636,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	    }
 
 	    const updatedEffects = await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
-		console.log("AFTER", updatedEffects);
 
 		// update the Actor state
 		this.actor.applyActiveEffects();
-		console.log("effects applied");
 	}
 
 	async _onToggleStashed(event) {
