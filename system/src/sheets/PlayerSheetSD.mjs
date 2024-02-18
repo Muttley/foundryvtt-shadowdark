@@ -572,7 +572,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+		const updatedItems = await this.actor.updateEmbeddedDocuments("Item", [
 			{
 				"_id": itemId,
 				"system.equipped": !item.system.equipped,
@@ -580,46 +580,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
-		// filter to find the ActiveEffects that originated from this item
-		const filter = {
-	        field: "origin",
-	        operator: SearchFilter.OPERATORS.ENDS_WITH,
-	        negate: false,
-	        value: `Item\.${itemId}`,
-	    };
-	    console.log(filter);
-
-		// find the ActiveEffects on the Actor that are from this item
-		const effectCollection = this.actor.getEmbeddedCollection("ActiveEffect");
-		let effects = effectCollection.search({
-			query: "",
-			filters: [filter],
-			exclude: [],
-		});
-		console.log("BEFORE", effects);
-
-		// toggle the ActiveEffect
-		const updatedEffects = [];
-		for (const e of effects) {
-			console.log(e.name, e.origin);
-			updatedEffects.push({
-				_id: e._id,
-				disabled: !updatedItem.system.equipped,
-			});
-		}
-		effects = await this.actor.updateEmbeddedDocuments("ActiveEffect", updatedEffects);
-		console.log("AFTER", effects);
-
-		// update the Actor state
-		this.actor.applyActiveEffects();
-		console.log("effects applied");
-
-		if (updatedItem.system.equipped) {
+		if (updatedItems[0].system.equipped) {
 			const itemsToUnequip = [];
 			for (const item of this.actor.items) {
-				if (item._id === updatedItem._id) continue;
+				if (item._id === updatedItems[0]._id) continue;
 
-				if (item.system.bodyLocation === updatedItem.system.bodyLocation) {
+				if (item.system.bodyLocation === updatedItems[0].system.bodyLocation) {
 					itemsToUnequip.push({
 						"_id": item._id,
 						"system.equipped": false,
@@ -628,11 +594,55 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 
 			if (itemsToUnequip.length > 0) {
-				await this.actor.updateEmbeddedDocuments("Item", itemsToUnequip);
+				const updatedItemsToUnequip = await this.actor.updateEmbeddedDocuments("Item", itemsToUnequip);
+				updatedItems.push(...updatedItemsToUnequip);
 			}
 		}
 
+		this._toggleActiveEffects(updatedItems);
+
 		if (item.type === "Armor") this.actor.updateArmorClass();
+	}
+
+	async _toggleActiveEffects(items) {
+		const effectCollection = this.actor.getEmbeddedCollection("ActiveEffect");
+		const filter = {
+			field: "origin",
+			operator: SearchFilter.OPERATORS.ENDS_WITH,
+			negate: false,
+			value: "",
+		};
+		const searchParams = {
+			query: "",
+			filters: [filter],
+			exclude: [],
+		};
+		const effectsToUpdate = [];
+
+		for (const item of items) {
+			// filter to find the ActiveEffects that originated from this item
+			filter.value = `Item\.${item._id}`;
+	        console.log(filter);
+
+	        // find the ActiveEffects on the Actor that are from this item
+	        const effects = effectCollection.search(searchParams);
+	        console.log("BEFORE", effects);
+
+	        // toggle the ActiveEffect
+	        for (const e of effects) {
+	            effectsToUpdate.push({
+	                _id: e._id,
+	                disabled: !item.system.equipped,
+	            });
+	        }
+	    }
+
+	    const updatedEffects = await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
+		console.log("AFTER", updatedEffects);
+
+		// update the Actor state
+		this.actor.applyActiveEffects();
+		console.log("effects applied");
 	}
 
 	async _onToggleStashed(event) {
