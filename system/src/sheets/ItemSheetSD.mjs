@@ -673,7 +673,7 @@ export default class ItemSheetSD extends ItemSheet {
 			bodyLocationKeys.push(key);
 		}
 
-		const updatedItem = await this.item.update({
+		await this.item.update({
 			"system.bodyLocation": bodyLocation,
 			"system.canBeEquipped": bodyLocationKeys.includes(bodyLocation),
 		});

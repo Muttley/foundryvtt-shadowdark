@@ -621,6 +621,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		for (const item of items) {
 			// filter to find the ActiveEffects that originated from this item
+			// this prompts a no-useless-escape warning by the linter
+			// but it is necessary for the search filter to work correctly
 			filter.value = `Item\.${item._id}`;
 
 	        // find the ActiveEffects on the Actor that are from this item
@@ -635,7 +637,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	        }
 	    }
 
-	    const updatedEffects = await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
+	    await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
 
 		// update the Actor state
 		this.actor.applyActiveEffects();
