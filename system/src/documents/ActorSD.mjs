@@ -1157,46 +1157,6 @@ export default class ActorSD extends Actor {
 		await this.changeLightSettings(lightData);
 	}
 
-
-	async updateArmor(updatedItem) {
-		// updatedItem is the item that has had its "equipped" field toggled
-		// on/off.
-		if (updatedItem.system.equipped) {
-			// First we need to disable any already equipped armor
-			const isAShield = await updatedItem.isAShield();
-
-			const armorToUnequip = [];
-
-			for (const item of this.items) {
-				if (!item.system.equipped) continue;
-				if (item.type !== "Armor") continue;
-				if (item._id === updatedItem._id) continue;
-
-				// Only unequip a shield if the newly equipped item is a shield
-				// as well.
-				if (isAShield && await item.isAShield()) {
-					armorToUnequip.push({
-						"_id": item._id,
-						"system.equipped": false,
-					});
-				}
-				else if (item.system.bodyLocation === updatedItem.system.bodyLocation) {
-					armorToUnequip.push({
-						"_id": item._id,
-						"system.equipped": false,
-					});
-				}
-			}
-
-			if (armorToUnequip.length > 0) {
-				await this.updateEmbeddedDocuments("Item", armorToUnequip);
-			}
-		}
-
-		this.updateArmorClass();
-	}
-
-
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
 

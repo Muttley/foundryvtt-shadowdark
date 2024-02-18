@@ -427,57 +427,6 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	describe("updateArmor(updatedItem)", () => {
-		let actor = {};
-
-		before(async () => {
-			actor = await createMockActor("Player");
-			await actor.createEmbeddedDocuments("Item", [
-				{
-					"type": "Armor",
-					"name": "Test Armor 1",
-					"system.equipped": true,
-				},
-				{
-					type: "Armor",
-					name: "Test Armor 2",
-				},
-				{
-					"type": "Armor",
-					"name": "Test Shield 1",
-					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
-					"system.equipped": true,
-				},
-				{
-					"type": "Armor",
-					"name": "Test Shield 2",
-					"system.properties": ["Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"],
-				},
-			]);
-		});
-
-		it("switches equipped status if another shield is equiiped", async () => {
-			const oldShield = actor.items.getName("Test Shield 1");
-			expect(oldShield.system.equipped).is.true;
-			const newShield = actor.items.getName("Test Shield 2");
-			expect(newShield.system.equipped).is.false;
-
-			await newShield.update({"system.equipped": true});
-			expect(oldShield.system.equipped).is.true;
-			expect(newShield.system.equipped).is.true;
-
-			await actor.updateArmor(newShield);
-			expect(oldShield.system.equipped).is.false;
-			expect(newShield.system.equipped).is.true;
-		});
-
-		it("switches equipped status if another armor (non-shield) is equipped", async () => {});
-
-		after(async () => {
-			await actor.delete();
-		});
-	});
-
 	describe("updateArmorClass()", () => {
 		let actor = {};
 
