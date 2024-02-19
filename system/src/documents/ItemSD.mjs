@@ -280,7 +280,8 @@ export default class ItemSD extends Item {
 	}
 
 	async isAShield() {
-		return await this.hasProperty("shield");
+		const isAShield = await this.hasProperty("shield");
+		return isAShield;
 	}
 
 	async isNotAShield() {

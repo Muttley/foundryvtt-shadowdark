@@ -1,3 +1,12 @@
+# v1.7.5
+
+## Bugfixes
+* [#670] Equipping Bracers of Defense unequips other armor
+
+	- Removed the restriction on the number of pieces of armor that can be equipped and altered the Bracers of Defence item to only provide an AC bonus (not using effects so it will toggle off when unequipped).  If only armor pieces that don't provide a base AC level are equipped, then the baseline 10+DEX AC will be used, so unarmored characters could equip the bracers of defence for the bonus is desired.
+
+---
+
 # v1.7.4
 
 ## Bugfixes

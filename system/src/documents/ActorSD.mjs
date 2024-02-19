@@ -1222,8 +1222,13 @@ export default class ActorSD extends Actor {
 				item => item.type === "Armor" && item.system.equipped
 			);
 			let nonShieldEquipped = false;
+
 			if (equippedArmor.length > 0) {
 				newArmorClass = 0;
+
+				let bestAttributeBonus = 0;
+				let baseArmorClassApplied = false;
+
 				for (let i = 0; i < equippedArmor.length; i++) {
 					const armor = equippedArmor[i];
 
@@ -1238,13 +1243,31 @@ export default class ActorSD extends Actor {
 					) armorMasteryBonus += 1;
 
 					newArmorClass += armor.system.ac.modifier;
+
+					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
+
 					newArmorClass += armor.system.ac.base;
 
 					const attribute = armor.system.ac.attribute;
 					if (attribute) {
-						newArmorClass += this.abilityModifier(attribute);
+						const attributeBonus = this.abilityModifier(attribute);
+						bestAttributeBonus =
+							attributeBonus > bestAttributeBonus
+								? attributeBonus
+								: bestAttributeBonus;
 					}
 				}
+
+				if (!baseArmorClassApplied) {
+					// None of the armor we're wearing has a base value, only
+					// bonuses so we will use the default base class of
+					// 10+DEX to allow for unarmored characters wearing Bracers
+					// of defense (as an example)
+					//
+					newArmorClass += baseArmorClass;
+				}
+
+				newArmorClass += bestAttributeBonus;
 
 				// Someone with no armor but a shield equipped
 				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
