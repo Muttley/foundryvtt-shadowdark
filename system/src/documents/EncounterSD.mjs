@@ -6,6 +6,12 @@ export default class EncounterSD extends Combat {
 			return super.rollInitiative(ids, { formula, updateTurn, messageOptions });
 		}
 
+		if (!game.user.isGM) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.notify.combat.clockwise_initiative_only_gm")
+			);
+		}
+
 		// Clear existing initiatives
 		super.resetAll();
 
