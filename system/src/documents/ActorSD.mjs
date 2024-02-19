@@ -1209,7 +1209,6 @@ export default class ActorSD extends Actor {
 		}
 
 		let newArmorClass = baseArmorClass;
-		let armorMasteryBonus = 0;
 
 		const acOverride = this.system.attributes.ac?.override ?? null;
 		if (Number.isInteger(acOverride)) {
@@ -1226,6 +1225,7 @@ export default class ActorSD extends Actor {
 			if (equippedArmor.length > 0) {
 				newArmorClass = 0;
 
+				let armorMasteryBonus = 0;
 				let bestAttributeBonus = 0;
 				let baseArmorClassApplied = false;
 
@@ -1236,11 +1236,19 @@ export default class ActorSD extends Actor {
 						nonShieldEquipped = true;
 					}
 
-					// Check if armor mastery should apply to the AC
-					if (
-						this.system.bonuses.armorMastery.includes(armor.name.slugify())
-						|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-					) armorMasteryBonus += 1;
+					// Check if armor mastery should apply to the AC.  Multiple
+					// mastery levels should stack
+					//
+					const masteryLevels = this.system.bonuses.armorMastery.filter(
+						a => a === armor.name.slugify()
+							|| a === armor.system.baseArmor
+					);
+					armorMasteryBonus += masteryLevels.length;
+
+					// if (
+					// 	this.system.bonuses.armorMastery.includes(armor.name.slugify())
+					// 	|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
+					// ) armorMasteryBonus += 1;
 
 					newArmorClass += armor.system.ac.modifier;
 
@@ -1268,11 +1276,10 @@ export default class ActorSD extends Actor {
 				}
 
 				newArmorClass += bestAttributeBonus;
+				newArmorClass += armorMasteryBonus;
 
 				// Someone with no armor but a shield equipped
 				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
-
-				newArmorClass += armorMasteryBonus;
 			}
 			else {
 				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
