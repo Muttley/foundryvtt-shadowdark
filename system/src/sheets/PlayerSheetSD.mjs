@@ -625,19 +625,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			// but it is necessary for the search filter to work correctly
 			filter.value = `Item\.${item._id}`;
 
-	        // find the ActiveEffects on the Actor that are from this item
-	        const effects = effectCollection.search(searchParams);
+			// find the ActiveEffects on the Actor that are from this item
+			const effects = effectCollection.search(searchParams);
 
-	        // toggle the ActiveEffect
-	        for (const e of effects) {
-	            effectsToUpdate.push({
-	                _id: e._id,
-	                disabled: !item.system.equipped,
-	            });
-	        }
-	    }
+			// toggle the ActiveEffect
+			for (const e of effects) {
+					effectsToUpdate.push({
+					_id: e._id,
+					disabled: !item.system.equipped,
+				});
+			}
+		}
 
-	    await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
+		await this.actor.updateEmbeddedDocuments("ActiveEffect", effectsToUpdate);
 
 		// update the Actor state
 		this.actor.applyActiveEffects();
