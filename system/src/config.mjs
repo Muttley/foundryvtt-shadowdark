@@ -36,6 +36,8 @@ SHADOWDARK.BODY_LOCATIONS = {
 	torso: "SHADOWDARK.body_location.torso",
 	legs: "SHADOWDARK.body_location.legs",
 	feet: "SHADOWDARK.body_location.feet",
+	shield: "SHADOWDARK.body_location.shield",
+	cloak: "SHADOWDARK.body_location.cloak",
 };
 
 SHADOWDARK.DICE = {
