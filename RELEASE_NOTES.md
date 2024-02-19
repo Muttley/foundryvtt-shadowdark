@@ -1,3 +1,10 @@
+# v1.7.6
+
+## Bugfixes
+* [#685] Calculated AC incorrect when only a shield is equipped
+
+---
+
 # v1.7.5
 
 ## Bugfixes

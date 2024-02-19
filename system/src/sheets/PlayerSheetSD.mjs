@@ -135,7 +135,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
-		context.armorClass = await this.actor.getArmorClass();
+
+		await this.actor.updateArmorClass();
+		context.armorClass = this.actor.armorClass;
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
@@ -572,7 +574,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		this.actor.updateEmbeddedDocuments("Item", [
+		await this.actor.updateEmbeddedDocuments("Item", [
 			{
 				"_id": itemId,
 				"system.equipped": !item.system.equipped,
@@ -594,8 +596,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				"system.equipped": false,
 			},
 		]);
-
-		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
 	async _onUseAbility(event) {
