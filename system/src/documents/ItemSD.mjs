@@ -280,6 +280,8 @@ export default class ItemSD extends Item {
 	}
 
 	async isAShield() {
+		if (!this.type === "Armor") return false;
+
 		const isAShield = await this.hasProperty("shield");
 		return isAShield;
 	}

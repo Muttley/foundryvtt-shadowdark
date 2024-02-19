@@ -703,8 +703,7 @@ export default class ActorSD extends Actor {
 
 
 	async getArmorClass() {
-		const ac = await this.updateArmorClass();
-		return ac;
+		return this.armorClass;
 	}
 
 
@@ -910,7 +909,11 @@ export default class ActorSD extends Actor {
 
 
 	/** @inheritDoc */
-	prepareDerivedData() {}
+	prepareDerivedData() {
+		if (this.type === "Player") {
+			this.updateArmorClass();
+		}
+	}
 
 
 	async rollAbility(abilityId, options={}) {
@@ -1158,45 +1161,6 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async updateArmor(updatedItem) {
-		// updatedItem is the item that has had its "equipped" field toggled
-		// on/off.
-		if (updatedItem.system.equipped) {
-			// First we need to disable any already equipped armor
-			const isAShield = await updatedItem.isAShield();
-
-			const armorToUnequip = [];
-
-			for (const item of this.items) {
-				if (!item.system.equipped) continue;
-				if (item.type !== "Armor") continue;
-				if (item._id === updatedItem._id) continue;
-
-				// Only unequip a shield if the newly equipped item is a shield
-				// as well.
-				if (isAShield && await item.isAShield()) {
-					armorToUnequip.push({
-						"_id": item._id,
-						"system.equipped": false,
-					});
-				}
-				else if (await item.isNotAShield() && !isAShield) {
-					armorToUnequip.push({
-						"_id": item._id,
-						"system.equipped": false,
-					});
-				}
-			}
-
-			if (armorToUnequip.length > 0) {
-				await this.updateEmbeddedDocuments("Item", armorToUnequip);
-			}
-		}
-
-		this.updateArmorClass();
-	}
-
-
 	async updateArmorClass() {
 		const dexModifier = this.abilityModifier("dex");
 
@@ -1209,6 +1173,7 @@ export default class ActorSD extends Actor {
 		}
 
 		let newArmorClass = baseArmorClass;
+		let shieldBonus = 0;
 
 		const acOverride = this.system.attributes.ac?.override ?? null;
 		if (Number.isInteger(acOverride)) {
@@ -1217,24 +1182,40 @@ export default class ActorSD extends Actor {
 			newArmorClass = acOverride;
 		}
 		else {
-			const equippedArmor = this.items.filter(
+			let armorMasteryBonus = 0;
+
+			const equippedArmorItems = this.items.filter(
 				item => item.type === "Armor" && item.system.equipped
 			);
-			let nonShieldEquipped = false;
+			const equippedArmor = [];
+			const equippedShields = [];
+
+			for (const item of equippedArmorItems) {
+				if (await item.isAShield()) {
+					equippedShields.push(item);
+				}
+				else {
+					equippedArmor.push(item);
+				}
+			}
+
+			if (equippedShields.length > 0) {
+				const firstShield = equippedShields[0];
+				shieldBonus = firstShield.system.ac.modifier;
+
+				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
+					a => a === firstShield.name.slugify()
+							|| a === firstShield.system.baseArmor
+				).length;
+			}
 
 			if (equippedArmor.length > 0) {
 				newArmorClass = 0;
 
-				let armorMasteryBonus = 0;
 				let bestAttributeBonus = 0;
 				let baseArmorClassApplied = false;
 
-				for (let i = 0; i < equippedArmor.length; i++) {
-					const armor = equippedArmor[i];
-
-					if (await armor.isNotAShield()) {
-						nonShieldEquipped = true;
-					}
+				for (const armor of equippedArmor) {
 
 					// Check if armor mastery should apply to the AC.  Multiple
 					// mastery levels should stack
@@ -1245,16 +1226,10 @@ export default class ActorSD extends Actor {
 					);
 					armorMasteryBonus += masteryLevels.length;
 
-					// if (
-					// 	this.system.bonuses.armorMastery.includes(armor.name.slugify())
-					// 	|| this.system.bonuses.armorMastery.includes(armor.system.baseArmor)
-					// ) armorMasteryBonus += 1;
-
-					newArmorClass += armor.system.ac.modifier;
-
 					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
 
 					newArmorClass += armor.system.ac.base;
+					newArmorClass += armor.system.ac.modifier;
 
 					const attribute = armor.system.ac.attribute;
 					if (attribute) {
@@ -1277,21 +1252,20 @@ export default class ActorSD extends Actor {
 
 				newArmorClass += bestAttributeBonus;
 				newArmorClass += armorMasteryBonus;
-
-				// Someone with no armor but a shield equipped
-				if (!nonShieldEquipped) newArmorClass += baseArmorClass;
+				newArmorClass += shieldBonus;
+			}
+			else if (shieldBonus <= 0) {
+				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
 			}
 			else {
-				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
+				newArmorClass += shieldBonus;
 			}
 
 			// Add AC from bonus effects
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
 
-		await this.updateSource({"system.attributes.ac.value": newArmorClass});
-
-		return this.system.attributes.ac.value;
+		this.armorClass = newArmorClass;
 	}
 
 
