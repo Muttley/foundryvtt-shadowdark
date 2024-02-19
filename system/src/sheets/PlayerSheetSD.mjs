@@ -572,15 +572,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
-		const [updatedItem] = await this.actor.updateEmbeddedDocuments("Item", [
+		this.actor.updateEmbeddedDocuments("Item", [
 			{
 				"_id": itemId,
 				"system.equipped": !item.system.equipped,
 				"system.stashed": false,
 			},
 		]);
-
-		if (item.type === "Armor") this.actor.updateArmor(updatedItem);
 	}
 
 	async _onToggleStashed(event) {
