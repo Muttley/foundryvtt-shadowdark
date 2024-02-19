@@ -472,6 +472,7 @@ SHADOWDARK.migration.completed_migration: Suoritettu datan päivitys Shadowdark 
 SHADOWDARK.migration.completed_schema: Suoritettu päivitysten hakeminen Shadowdark RPG skeemaan v{version}
 SHADOWDARK.module_art_config.portraits: Muotokuvat
 SHADOWDARK.module_art_config.tokens: Tokenit
+SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
 SHADOWDARK.npc_attack.type.physical: Fyysinen
 SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
 SHADOWDARK.npc_move.close: Close
