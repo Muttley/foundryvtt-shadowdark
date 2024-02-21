@@ -26,7 +26,6 @@ export const build = gulp.parallel(
 	lang.compile,
 	javascript.lint,
 	javascript.compile,
-	notes.compile,
 	packs.compile
 );
 
