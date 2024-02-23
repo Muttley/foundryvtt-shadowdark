@@ -174,21 +174,51 @@
 			<span></span>
 		</div>
 		<div class="content large-style">
-			{{#each ancestryTalents as |value key|}}
-				<p>
-				<b>{{value.name}}.</b>
-				{{{value.formattedDescription}}}
-				</p>
-			{{/each}}
 
-			{{#if weapons}}<p><b>Weapons: </b>
+			{{!-- Choice Ancestory Talents --}}
+			{{#if ancestryTalents.choice}}
+				{{#if ancestryTalents.selection}}
+					<p><a class="fas fa-pen-to-square" data-action='clear-ancestry-talents'></a>
+					{{#each ancestryTalents.selection as |value key|}}
+						<b>{{value.name}}.</b>
+						{{{value.formattedDescription}}}
+					{{/each}}
+					</p>
+				{{/if}}
+				{{#unless ancestryTalents.selection}}
+					<fieldset>
+					<legend>Choose:</legend>
+					{{#each ancestryTalents.choice as |value key|}}
+						<input type="radio" name="ancestryTalents.selected" value="{{value.uuid}}">
+						<b>{{value.name}}.</b>
+						{{{value.formattedDescription}}}
+						{{#unless @last}}<br>{{/unless}}
+					{{/each}}
+					</fieldset>
+				{{/unless}}
+			{{/if}}
+
+			{{!-- Fixed Ancestory Talents --}}
+			{{#if ancestryTalents.fixed}}
+				<p>
+				{{#each ancestryTalents.fixed as |value key|}}
+					<b>{{value.name}}.</b>
+					{{{value.formattedDescription}}}
+				{{/each}}
+				</p>
+			{{/if}}
+
+			{{!-- Weapons --}}
+			{{#if weapons}}
+				<p><b>Weapons: </b>
 				{{#each weapons as |name index|}}
 					{{name}}{{#unless @last}}, {{/unless}}
 				{{/each}}
 				</p>
 			{{/if}}
 
-			{{#if armor}}<p><b>Armour: </b>
+			{{!-- Armor --}}
+			{{#if armor}}<p><b>Armor: </b>
 				{{#each armor as |name index|}}
 					{{name}}{{#unless @last}}, {{/unless}}
 				{{/each}}
@@ -196,12 +226,36 @@
 			{{/if}}
 
 			<p><b>Languages. </b>
-				{{#each selectedLangs as |value key|}}
+				{{#each langData.selected as |value key|}}
 					{{value.name}}{{#unless @last}}, {{/unless}}
 				{{/each}}
 			</p>
 
-			{{#each classTalents as |value key|}}
+			{{!-- Choice Class Talents --}}
+			{{#if classTalents.choice}}
+				{{#if classTalents.selection}}
+					<p><a class="fas fa-pen-to-square" data-action='clear-class-talents'></a>
+					{{#each classTalents.selection as |value key|}}
+						<b>{{value.name}}.</b>
+						{{{value.formattedDescription}}}
+					{{/each}}
+					</p>
+				{{/if}}
+				{{#unless classTalents.selection}}
+					<fieldset>
+					<legend>Choose:</legend>
+					{{#each classTalents.choice as |value key|}}
+						<input type="radio" name="classTalents.selected" value="{{value.uuid}}">
+						<b>{{value.name}}.</b>
+						{{{value.formattedDescription}}}
+						{{#unless @last}}<br>{{/unless}}
+					{{/each}}
+					</fieldset>
+				{{/unless}}
+			{{/if}}
+
+			{{!-- Fixed Class Talents --}}
+			{{#each classTalents.fixed as |value key|}}
 			<p>
 				<b>{{value.name}}. </b>
 				{{{value.formattedDescription}}}
