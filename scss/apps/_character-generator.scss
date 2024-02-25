@@ -62,7 +62,7 @@
 
 	.large-style {
 		width: 398px;
-		height: 485px;
+		height: 488px;
 		font-size: 0.85em;
 		overflow: auto;
 
@@ -71,9 +71,12 @@
 		}
 	}
 
+	.medium-style {
+		height: 197px;
+	}
+
 	.small-style {
-		width: 70px;
-		overflow: auto;
+		height: 37px;
 	}
 
 	.box-style {
@@ -83,6 +86,7 @@
 	  
 		.header {
 			display:flex;
+			height: 31px;
 
 			label {
 				font-size: 1.1rem;
@@ -93,7 +97,7 @@
 				padding:2px;
 				padding-left: 10px;
 			}
-			a, span {
+			span {
 				background: linear-gradient(90deg, #111 , transparent);
 				float:right;
 				flex-grow: 1;

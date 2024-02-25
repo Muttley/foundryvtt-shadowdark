@@ -27,8 +27,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.firstrun = true;
 
 		this.formData = {};
-		this.formData.level0class = {};
-		this.formData.classHP = 1;
+		this.formData.level0Class = {};
+		this.formData.level0 = true;
+		this.formData.classHP = "1";
 		this.formData.armor = ["All armor"];
 		this.formData.weapons =["All weapons"];
 		this.formData.ancestryTalents = {
@@ -40,18 +41,33 @@ export default class CharacterGeneratorSD extends FormApplication {
 			fixed: [],
 			choice: [],
 			selection: [],
-			selected: false,
 		};
 		this.formData.langData = {
+			fixed: [],
 			selection: [],
-			selected: false,
+			selected: true,
 			choiceList: [],
-			choiceCount: 0,
-			commonList: [],
-			commonCount: 0,
-			rareList: [],
-			rareCount: 0,
+			choice: 0,
+			common: 0,
+			rare: 0,
 		};
+
+		this.gearTable = [
+			{name: "Torch", uuid: "Compendium.shadowdark.gear.Item.z3xc7HGysC4ZCU8e"},
+			{name: "Dagger", uuid: "Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"},
+			{name: "Pole", uuid: "Compendium.shadowdark.gear.Item.15X5GTX96y339EKY"},
+			{name: "Short Bow", uuid: "Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"},
+			{name: "Rope, 60'", uuid: "Compendium.shadowdark.gear.Item.6ZRwVHFlh5QiyZWC"},
+			{name: "Oil, Flask", uuid: "Compendium.shadowdark.gear.Item.80bCpXdZcj0Cz1fE"},
+			{name: "Crowbar", uuid: "Compendium.shadowdark.gear.Item.GbO6CggW71qMkgrG"},
+			{name: "Iron Spikes (10)", uuid: "Compendium.shadowdark.gear.Item.EPndk3DPOEOSvbga"},
+			{name: "Flint and Steel", uuid: "Compendium.shadowdark.gear.Item.ERprfuTIFRFEix9G"},
+			{name: "Grappling Hook", uuid: "Compendium.shadowdark.gear.Item.fqsLWV46NWH0L53l"},
+			{name: "Club", uuid: "Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre"},
+			{name: "Caltrops (one bag)", uuid: "Compendium.shadowdark.gear.Item.SzpjMuJrhF5nMJ7H"},
+			{name: "Arrows", uuid: "Compendium.shadowdark.gear.Item.XXwA9ZWajYEDmcea"},
+		];
+		this.formData.gearSelected = [];
 
 		// Setup a default actor template
 		this.formData.actor = {
@@ -165,6 +181,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			expandedData.actor.system.abilities[x].base = baseInt;
 		});
 
+		expandedData.level0 = (data.level0 === "true");
+
 		// merge incoming data into the main formData object
 		this.formData = mergeObject(this.formData, expandedData);
 
@@ -193,6 +211,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// if class talents where choosen, load new data
 			case "classTalents.selected":
 				this._addClassTalent(event.target.value);
+				break;
+
+			case "level0":
+				if (this.formData.level0) {
+					this._loadClass(this.formData.level0Class.uuid);
+				}
 				break;
 		}
 
@@ -226,23 +250,21 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.ancestries = await shadowdark.compendiums.ancestries();
 			this.formData.deities = await shadowdark.compendiums.deities();
 			this.formData.backgrounds = await shadowdark.compendiums.backgrounds();
-			this.formData.languages = await shadowdark.compendiums.languages();
+			this.formData.commonLanguages = await shadowdark.compendiums.commonLanguages();
+			this.formData.rareLanguages = await shadowdark.compendiums.rareLanguages();
 			this.formData.classes = await shadowdark.compendiums.classes();
 
-			// setup lanaguages by commonality
-			let commonLangs = this.formData.languages.filter(x => x.system.rarity === "common");
-			commonLangs.forEach(x => {
-				this.formData.langData.commonList.push(x.uuid);
-			});
-			let rareLanges = this.formData.languages.filter(x => x.system.rarity === "rare");
-			rareLanges.forEach(x => {
-				this.formData.langData.rareList.push(x.uuid);
+			// load all languages in lookup table
+			let languages = await shadowdark.compendiums.languages();
+			this.formData.languages = {};
+			languages.forEach(x => {
+				this.formData.languages[x.uuid] = x.name;
 			});
 
 			// find the level 0 class
 			this.formData.classes.forEach( classObj => {
 				if (classObj.name.toLocaleLowerCase().includes("level 0")) {
-					this.formData.level0class = classObj;
+					this.formData.level0Class = classObj;
 					this.formData.actor.system.class = classObj.uuid;
 					this.formData.classes.delete(classObj._id);
 				}
@@ -298,11 +320,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 
 		// randomize class
-		if (eventStr === "randomize-class" || eventStr === "randomize-all") {
+		if (!this.formData.level0 && (eventStr === "randomize-class" || eventStr === "randomize-all")) {
 			tempInt = this._getRandom(this.formData.classes.size);
 			let classID = [...this.formData.classes][tempInt].uuid;
 			this.formData.actor.system.class = classID;
-			await this._loadClass(classID);
+			await this._loadClass(classID, true);
 		}
 
 		// randomize stats
@@ -315,12 +337,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize name
 		if (eventStr === "randomize-name" || eventStr === "randomize-all") {
-			const testNames = ["Hilda Fadhili", "Koumvisk", "Trurcon", "Seldrin", "Aldwin"];
-			this.formData.actor.name = testNames[this._getRandom(5)];
+			await this._randomizeName();
 		}
 
 		// Roll HP
-		if (eventStr === "randomize-hp" || eventStr === "randomize-all") {
+		if (!this.formData.level0 && (eventStr === "randomize-hp")) {
 			this._randomizeHP();
 		}
 
@@ -328,6 +349,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
 			let startingGold = this._roll("2d6")*5;
 			this.formData.actor.system.coins.gp = startingGold;
+		}
+
+		// Roll starting gear
+		if (eventStr === "randomize-gear" || eventStr === "randomize-all") {
+			this._randomizeGear();
 		}
 
 		// update all changes
@@ -339,9 +365,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 	 * @param {string} Uuid
 	 */
 	async _loadClass(UuID, randomize) {
-		// grab fixed talents from class item
-		let classObj =  this.formData.classes.find(x => x.uuid === UuID);
+		// find the class object
+		let classObj = this._getClassObject(UuID);
 		let talentData = [];
+		// grab fixed talents from class item
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
@@ -364,14 +391,21 @@ export default class CharacterGeneratorSD extends FormApplication {
 			}
 		}
 		this.formData.classTalents.choice = talentData;
+		this.formData.classTalents.selection = [];
 
-		// load hit dice information for randomizing HP
+		if (randomize && (talentData.length > 0)) {
+			let tempInt = this._getRandom(talentData.length);
+			this.formData.classTalents.selection.push(talentData[tempInt]);
+		}
+
+		// load hit dice information and randomize HP
 		if (classObj.system.hitPoints) {
 			this.formData.classHP = classObj.system.hitPoints;
 		}
 		else {
-			this.formData.classHP = 1;
+			this.formData.classHP = "1";
 		}
+		this._randomizeHP();
 
 		// get armor details
 		let armorData = [];
@@ -402,6 +436,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 		this.formData.weapons = weaponData;
 
+		await this._loadLanguages(randomize);
+
 	}
 
 	async _loadAncestry(UuID, randomize) {
@@ -420,8 +456,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 				talentData.push(talentObj);
 			}
 		}
-		// Stored selected ancestryObj
-		this.formData.ancestry = ancestryObj;
 
 		// fixed talent choice
 		if (talentData.length <= ancestryObj.system.talentChoiceCount) {
@@ -439,24 +473,71 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	async _loadLanguages(randomize) {
-		console.log(randomize);
+		this.formData.langData = {
+			fixed: [],
+			selection: [],
+			selected: true,
+			choiceList: [],
+			choice: 0,
+			common: 0,
+			rare: 0,
+		};
+
+		if (this.formData.actor.system.ancestry) {
+			let UuID = this.formData.actor.system.ancestry;
+			let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
+			if (ancestryObj.system.languages.fixed) {
+				this.formData.langData.fixed = [...ancestryObj.system.languages.fixed];
+			}
+			this.formData.langData.commonCount += ancestryObj.system.languages.common;
+			this.formData.langData.rareCount += ancestryObj.system.languages.rare;
+
+		}
+
+		if (this.formData.actor.system.class) {
+			let classObj =  this._getClassObject(this.formData.actor.system.class);
+			if (classObj.system.languages.fixed) {
+				this.formData.langData.fixed.concat(classObj.system.languages.fixed);
+			}
+			this.formData.langData.commonCount += classObj.system.languages.common;
+			this.formData.langData.commonCount += classObj.system.languages.rare;
+
+		}
+	}
+
+	_getClassObject(UuID) {
+		// find the class object
+		let classObj = {};
+		if (UuID === this.formData.level0Class.uuid) {
+			classObj = this.formData.level0Class;
+		}
+		else {
+			classObj =  this.formData.classes.find(x => x.uuid === UuID);
+		}
+		return classObj;
+	}
+
+	async _randomizeName() {
+		const table = await fromUuid("Compendium.shadowdark.rollable-tables.RollTable.ZbrMK1WDNtz1ajJn");
+		const result = await table.draw({displayChat: false});
+		this.formData.actor.name = result.results[0].text;
 	}
 
 	_randomizeHP() {
-		const classID = this.formData.actor.system.class;
-		let classObj = {};
-		if (classID === this.formData.level0class.uuid) {
-			classObj = this.formData.level0class;
-		}
-		else {
-			classObj = this.formData.classes.find(x => x.uuid === classID);
-		}
-		if (classObj.system.hitPoints !== "") {
-			const rollValue = this._roll(classObj.system.hitPoints);
-			this.formData.actor.system.attributes.hp.base = rollValue;
-		}
-		else {
-			this.formData.actor.system.attributes.hp.base = 1;
+		const rollValue = this._roll(this.formData.classHP);
+		this.formData.actor.system.attributes.hp.base = rollValue;
+	}
+
+	_randomizeGear() {
+		this.formData.gearSelected = [];
+		let tempGearTable = [...this.gearTable];
+		let gearCount = this._roll("d4");
+		// get an item from the temp table, then remove that item
+		for (let i = 0; i < gearCount; i++) {
+			let randomIndex = this._getRandom(12-i);
+			let gearItem = tempGearTable[randomIndex];
+			this.formData.gearSelected.push(gearItem);
+			tempGearTable.splice(randomIndex, 1);
 		}
 	}
 
@@ -514,6 +595,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _createCharacter() {
 
+		const allItems = [
+			...this.formData.ancestryTalents.fixed,
+			...this.formData.ancestryTalents.selection,
+			...this.formData.classTalents.fixed,
+			...this.formData.classTalents.selection,
+		];
+
 		// Check for Name
 		if (this.formData.actor.name === "" ) {
 			ui.notifications.error( game.i18n.localize("SHADOWDARK.apps.character-generator.error.name"));
@@ -521,8 +609,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 
 		// adjust level for level 0 characters
-		if (this.formData.actor.system.class === this.formData.level0class.uuid) {
+		if (this.formData.level0) {
 			this.formData.actor.system.level.value = 0;
+			this.formData.actor.system.coins.gp = 0;
+			// add gear
+			this.formData.gearSelected.forEach(x => {
+				allItems.push(fromUuidSync(x.uuid));
+			});
 		}
 
 		// Calculate HP
@@ -544,10 +637,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			const newActor = await Actor.create(this.formData.actor);
 			ui.notifications.info(`Created Character: ${newActor.name}`);
 
-			// gather all items that need to be added.
-
-			// push talents to new character and abilities to character
-			await newActor.createEmbeddedDocuments("Item", this.formData.classTalents.fixed);
+			await newActor.createEmbeddedDocuments("Item", allItems);
 		}
 		catch(error) {
 			ui.notifications.error(
