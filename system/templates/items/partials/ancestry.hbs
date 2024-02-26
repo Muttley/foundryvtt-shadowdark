@@ -7,6 +7,21 @@
 			editable=editable
 		}}
 	</div>
+	<div class="choice-selector item-detail">
+		{{>
+			items/partials/choice-selector
+			config=languageChoicesConfig
+			editable=editable
+		}}
+		<div class="item-detail">
+			<label>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</label>
+			{{numberInput
+				item.system.languages.select
+				name="system.languages.select"
+				placeholder="0"
+			}}
+		</div>
+	</div>
 	<div class="language-detail">
 		<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
 		{{numberInput
@@ -14,8 +29,7 @@
 			name="system.languages.common"
 			placeholder="0"
 		}}
-	</div>
-	<div class="language-detail">
+		<br>
 		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
 		{{numberInput
 			item.system.languages.rare

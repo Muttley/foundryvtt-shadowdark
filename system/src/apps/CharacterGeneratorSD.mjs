@@ -27,6 +27,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.firstrun = true;
 
 		this.formData = {};
+
+		this.formData.Class = {
+			languages: {
+				fixed: [],
+				selectOptions: [],
+				select: 0,
+				common: 0,
+				rare: 0,
+			},
+		};
+		this.formData.Ancestry = {
+			languages: {
+				fixed: [],
+				selectOptions: [],
+				select: 0,
+				common: 0,
+				rare: 0,
+			},
+		};
+
 		this.formData.level0Class = {};
 		this.formData.level0 = true;
 		this.formData.classHP = "1";
@@ -42,16 +62,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			choice: [],
 			selection: [],
 		};
-		this.formData.langData = {
-			fixed: [],
-			selection: [],
-			selected: true,
-			choiceList: [],
-			choice: 0,
-			common: 0,
-			rare: 0,
-		};
 
+		// TODO replace with the rolltable for this. Rolltable data needs fixing first.
 		this.gearTable = [
 			{name: "Torch", uuid: "Compendium.shadowdark.gear.Item.z3xc7HGysC4ZCU8e"},
 			{name: "Dagger", uuid: "Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"},
@@ -168,6 +180,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 		html.find("[data-action='clear-class-talents']").click(
 			event => this._clearClassTalents(event)
 		);
+
+		html.find("[data-action='edit-languages']").click(
+			event => this._editLanguage()
+		);
 	}
 
 	/** @inheritdoc */
@@ -250,8 +266,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.ancestries = await shadowdark.compendiums.ancestries();
 			this.formData.deities = await shadowdark.compendiums.deities();
 			this.formData.backgrounds = await shadowdark.compendiums.backgrounds();
-			this.formData.commonLanguages = await shadowdark.compendiums.commonLanguages();
-			this.formData.rareLanguages = await shadowdark.compendiums.rareLanguages();
 			this.formData.classes = await shadowdark.compendiums.classes();
 
 			// load all languages in lookup table
@@ -259,6 +273,18 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.languages = {};
 			languages.forEach(x => {
 				this.formData.languages[x.uuid] = x.name;
+			});
+
+			this.formData.commonLanguages = [];
+			let common = await shadowdark.compendiums.commonLanguages();
+			common.forEach(x => {
+				this.formData.commonLanguages.push(x.uuid);
+			});
+
+			this.formData.rareLanguages = [];
+			let rare = await shadowdark.compendiums.rareLanguages();
+			rare.forEach(x => {
+				this.formData.rareLanguages.push(x.uuid);
 			});
 
 			// find the level 0 class
@@ -436,7 +462,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 		this.formData.weapons = weaponData;
 
-		await this._loadLanguages(randomize);
+		await this._loadLanguages(classObj, randomize);
 
 	}
 
@@ -469,40 +495,56 @@ export default class CharacterGeneratorSD extends FormApplication {
 				this.formData.ancestryTalents.selection.push(talentData[tempInt]);
 			}
 		}
-		await this._loadLanguages(randomize);
+		await this._loadLanguages(ancestryObj, randomize);
 	}
 
-	async _loadLanguages(randomize) {
-		this.formData.langData = {
+	async _loadLanguages(obj, randomize) {
+		let langData = {
 			fixed: [],
-			selection: [],
-			selected: true,
-			choiceList: [],
-			choice: 0,
+			selected: [],
+			selectable: false,
+			edit: false,
+			commonSelected: [],
+			commonUnselected: [],
 			common: 0,
+			rareSelected: [],
+			rareUnselected: [],
 			rare: 0,
 		};
 
-		if (this.formData.actor.system.ancestry) {
-			let UuID = this.formData.actor.system.ancestry;
-			let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
-			if (ancestryObj.system.languages.fixed) {
-				this.formData.langData.fixed = [...ancestryObj.system.languages.fixed];
-			}
-			this.formData.langData.commonCount += ancestryObj.system.languages.common;
-			this.formData.langData.rareCount += ancestryObj.system.languages.rare;
-
+		// set formdata form the class or ancestry object
+		if (obj.type) {
+			this.formData[obj.type].languages = obj.system.languages;
 		}
 
-		if (this.formData.actor.system.class) {
-			let classObj =  this._getClassObject(this.formData.actor.system.class);
-			if (classObj.system.languages.fixed) {
-				this.formData.langData.fixed.concat(classObj.system.languages.fixed);
-			}
-			this.formData.langData.commonCount += classObj.system.languages.common;
-			this.formData.langData.commonCount += classObj.system.languages.rare;
+		// create new top level
+		langData.fixed = mergeObject(
+			this.formData.Ancestry.languages.fixed,
+			this.formData.Class.languages.fixed
+		);
+		langData.selected = langData.fixed;
 
-		}
+		// calculate combined counts for common and rare
+		langData.common += this.formData.Ancestry.languages.common;
+		langData.common += this.formData.Class.languages.common;
+		langData.rare+= this.formData.Ancestry.languages.rare;
+		langData.rare += this.formData.Class.languages.rare;
+
+		// get arrays that are the difference of the language list and selected
+		langData.commonUnselected = this.formData.commonLanguages.filter(
+			x => !langData.selected.includes(x)
+		);
+		langData.rareUnselected = this.formData.rareLanguages.filter(
+			x => !langData.selected.includes(x)
+		);
+
+		// Are there selectable options?
+		if (langData.common > 0) langData.selectable = true;
+		if (langData.rare > 0) langData.selectable = true;
+		if (this.formData.Class.languages.select > 0) langData.selectable = true;
+		if (this.formData.Ancestry.languages.select > 0) langData.selectable = true;
+
+		this.formData.langData = langData;
 	}
 
 	_getClassObject(UuID) {
@@ -532,7 +574,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.gearSelected = [];
 		let tempGearTable = [...this.gearTable];
 		let gearCount = this._roll("d4");
-		// get an item from the temp table, then remove that item
+		// get an item from the temp table, then remove that item to prevent duplicates
 		for (let i = 0; i < gearCount; i++) {
 			let randomIndex = this._getRandom(12-i);
 			let gearItem = tempGearTable[randomIndex];
@@ -593,6 +635,21 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
+	_editLanguage() {
+		console.log(this.formData.langData);
+		if (this.formData.langData.edit === false) {
+			this.formData.langData.edit = true;
+		}
+		else {
+			this.formData.langData.edit = false;
+		}
+		this.render();
+	}
+
+	_selectLanguage(uuid, action) {
+		console.log(uuid, action);
+	}
+
 	async _createCharacter() {
 
 		const allItems = [
@@ -608,11 +665,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 			return;
 		}
 
-		// adjust level for level 0 characters
+		// make changes only for level 0 characters
 		if (this.formData.level0) {
 			this.formData.actor.system.level.value = 0;
 			this.formData.actor.system.coins.gp = 0;
-			// add gear
+			// add gear to the items list
 			this.formData.gearSelected.forEach(x => {
 				allItems.push(fromUuidSync(x.uuid));
 			});
@@ -637,6 +694,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			const newActor = await Actor.create(this.formData.actor);
 			ui.notifications.info(`Created Character: ${newActor.name}`);
 
+			// Add all required items to the new character
 			await newActor.createEmbeddedDocuments("Item", allItems);
 		}
 		catch(error) {
