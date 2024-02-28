@@ -24,29 +24,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 	 */
 	constructor() {
 		super();
+
+		loadTemplates({
+			"cg-details": "systems/shadowdark/templates/apps/partials/cg-details.hbs",
+			"cg-language-choice": "systems/shadowdark/templates/apps/partials/cg-language-choice.hbs",
+		});
+
 		this.firstrun = true;
-
+		this.ancestry = {};
+		this.class = {};
 		this.formData = {};
-
-		this.formData.Class = {
-			languages: {
-				fixed: [],
-				selectOptions: [],
-				select: 0,
-				common: 0,
-				rare: 0,
-			},
-		};
-		this.formData.Ancestry = {
-			languages: {
-				fixed: [],
-				selectOptions: [],
-				select: 0,
-				common: 0,
-				rare: 0,
-			},
-		};
-
 		this.formData.level0Class = {};
 		this.formData.level0 = true;
 		this.formData.classHP = "1";
@@ -68,7 +55,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			{name: "Torch", uuid: "Compendium.shadowdark.gear.Item.z3xc7HGysC4ZCU8e"},
 			{name: "Dagger", uuid: "Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"},
 			{name: "Pole", uuid: "Compendium.shadowdark.gear.Item.15X5GTX96y339EKY"},
-			{name: "Short Bow", uuid: "Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"},
+			{name: "Shortbow and 5 arrows", uuid: "Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"},
 			{name: "Rope, 60'", uuid: "Compendium.shadowdark.gear.Item.6ZRwVHFlh5QiyZWC"},
 			{name: "Oil, Flask", uuid: "Compendium.shadowdark.gear.Item.80bCpXdZcj0Cz1fE"},
 			{name: "Crowbar", uuid: "Compendium.shadowdark.gear.Item.GbO6CggW71qMkgrG"},
@@ -77,7 +64,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			{name: "Grappling Hook", uuid: "Compendium.shadowdark.gear.Item.fqsLWV46NWH0L53l"},
 			{name: "Club", uuid: "Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre"},
 			{name: "Caltrops (one bag)", uuid: "Compendium.shadowdark.gear.Item.SzpjMuJrhF5nMJ7H"},
-			{name: "Arrows", uuid: "Compendium.shadowdark.gear.Item.XXwA9ZWajYEDmcea"},
 		];
 		this.formData.gearSelected = [];
 
@@ -184,6 +170,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 		html.find("[data-action='edit-languages']").click(
 			event => this._editLanguage()
 		);
+
+		html.find("[data-action='select-language']").click(
+			event => this._selectLanguage($(event.currentTarget).data("uuid"), $(event.currentTarget).data("key"))
+		);
+
 	}
 
 	/** @inheritdoc */
@@ -462,7 +453,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 		this.formData.weapons = weaponData;
 
-		await this._loadLanguages(classObj, randomize);
+		this.class = classObj;
+		await this._loadLanguages(randomize);
 
 	}
 
@@ -495,60 +487,142 @@ export default class CharacterGeneratorSD extends FormApplication {
 				this.formData.ancestryTalents.selection.push(talentData[tempInt]);
 			}
 		}
-		await this._loadLanguages(ancestryObj, randomize);
+		this.ancestry = ancestryObj;
+		await this._loadLanguages(randomize);
 	}
 
-	async _loadLanguages(obj, randomize) {
+	async _loadLanguages(randomize) {
 		let langData = {
 			fixed: [],
-			selected: [],
-			selectable: false,
+			togglable: false,
 			edit: false,
-			commonSelected: [],
-			commonUnselected: [],
-			common: 0,
-			rareSelected: [],
-			rareUnselected: [],
-			rare: 0,
+			ancestry: {
+				selected: [],
+				Unselected: [],
+				select: 0,
+				full: false,
+			},
+			class: {
+				selected: [],
+				Unselected: [],
+				select: 0,
+				full: false,
+			},
+			common: {
+				selected: [],
+				Unselected: [],
+				select: 0,
+				full: false,
+			},
+			rare: {
+				selected: [],
+				Unselected: [],
+				select: 0,
+				full: false,
+			},
 		};
 
-		// set formdata form the class or ancestry object
-		if (obj.type) {
-			this.formData[obj.type].languages = obj.system.languages;
+		// set formData form the ancestry object if it exists
+		if (this.ancestry?.system?.languages) {
+			langData.fixed = mergeObject(
+				langData.fixed,
+				this.ancestry.system.languages.fixed
+			);
+			langData.ancestry.select = this.ancestry.system.languages.select;
+			langData.common.select += this.ancestry.system.languages.common;
+			langData.rare.select += this.ancestry.system.languages.rare;
 		}
 
-		// create new top level
-		langData.fixed = mergeObject(
-			this.formData.Ancestry.languages.fixed,
-			this.formData.Class.languages.fixed
-		);
-		langData.selected = langData.fixed;
-
-		// calculate combined counts for common and rare
-		langData.common += this.formData.Ancestry.languages.common;
-		langData.common += this.formData.Class.languages.common;
-		langData.rare+= this.formData.Ancestry.languages.rare;
-		langData.rare += this.formData.Class.languages.rare;
-
-		// get arrays that are the difference of the language list and selected
-		langData.commonUnselected = this.formData.commonLanguages.filter(
-			x => !langData.selected.includes(x)
-		);
-		langData.rareUnselected = this.formData.rareLanguages.filter(
-			x => !langData.selected.includes(x)
-		);
-
-		// Are there selectable options?
-		if (langData.common > 0) langData.selectable = true;
-		if (langData.rare > 0) langData.selectable = true;
-		if (this.formData.Class.languages.select > 0) langData.selectable = true;
-		if (this.formData.Ancestry.languages.select > 0) langData.selectable = true;
+		// set formData form the class object if it exists
+		if (this.class?.system?.languages) {
+			langData.fixed = mergeObject(
+				langData.fixed,
+				this.class.system.languages.fixed
+			);
+			langData.class.select = this.class.system.languages.select;
+			langData.common.select += this.class.system.languages.common;
+			langData.rare.select += this.class.system.languages.rare;
+		}
 
 		this.formData.langData = langData;
+		this._updateLangData();
+
+		// randomly select languages and if there are options to edit
+		if (this.formData.langData.class.select > 0) {
+			this.formData.langData.togglable = true;
+			this._setRandomLanguage("class", this.formData.langData.class.select);
+		}
+		if (this.formData.langData.ancestry.select > 0) {
+			this.formData.langData.togglable = true;
+			this._setRandomLanguage("ancestry", this.formData.langData.ancestry.select);
+		}
+		if (this.formData.langData.common.select > 0) {
+			this.formData.langData.togglable = true;
+			this._setRandomLanguage("common", this.formData.langData.common.select);
+		}
+		if (this.formData.langData.rare.select > 0) {
+			this.formData.langData.togglable = true;
+			this._setRandomLanguage("rare", this.formData.langData.rare.select);
+		}
+
+	}
+
+	_updateLangData() {
+		// adjust selected languages
+		// TODO figure out how to sort this
+		this.formData.actor.system.languages = [
+			...this.formData.langData.fixed,
+			...this.formData.langData.ancestry.selected,
+			...this.formData.langData.class.selected,
+			...this.formData.langData.common.selected,
+			...this.formData.langData.rare.selected,
+		];
+
+		// adjust ancestry choices
+		if (this.ancestry?.system?.languages) {
+			this.formData.langData.ancestry.unselected =
+			this.ancestry.system.languages.selectOptions.filter(
+				x => !this.formData.actor.system.languages.includes(x));
+		}
+
+		// adjust class choices
+		if (this.class?.system?.languages) {
+			this.formData.langData.class.unselected =
+			this.class.system.languages.selectOptions.filter(
+				x => !this.formData.actor.system.languages.includes(x));
+		}
+
+		// adjust Common choices
+		this.formData.langData.common.unselected = this.formData.commonLanguages.filter(
+			x => !this.formData.actor.system.languages.includes(x));
+
+		// adjust Rares choices
+		this.formData.langData.rare.unselected = this.formData.rareLanguages.filter(
+			x => !this.formData.actor.system.languages.includes(x));
+
+	}
+
+	_selectLanguage(uuid, key) {
+		// remove selected uuid if already in array
+		if (this.formData.langData[key].selected.includes(uuid)) {
+			this.formData.langData[key].selected = this.formData.langData[key].selected.filter(
+				i => i !== uuid);
+			this.formData.langData[key].full = false;
+		}
+		// add uuid to array
+		else {
+			this.formData.langData[key].selected.push(uuid);
+			if (this.formData.langData[key].selected.length >= this.formData.langData[key].select) {
+				this.formData.langData[key].full = true;
+			}
+		}
+
+		this._updateLangData();
+		this.render();
 	}
 
 	_getClassObject(UuID) {
-		// find the class object
+		// find the class object from uuid including looking at level0
 		let classObj = {};
 		if (UuID === this.formData.level0Class.uuid) {
 			classObj = this.formData.level0Class;
@@ -559,7 +633,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return classObj;
 	}
 
+	_setRandomLanguage(key, count) {
+		for (let i = 0; i < count; i++) {
+			let randomInt = this._getRandom(this.formData.langData[key].unselected.length);
+			this.formData.langData[key].selected.push(
+				this.formData.langData[key].unselected[randomInt]
+			);
+			this._updateLangData();
+		}
+		this.formData.langData[key].full = true;
+	}
+
 	async _randomizeName() {
+		// TODO add table lookup for ancestry
 		const table = await fromUuid("Compendium.shadowdark.rollable-tables.RollTable.ZbrMK1WDNtz1ajJn");
 		const result = await table.draw({displayChat: false});
 		this.formData.actor.name = result.results[0].text;
@@ -636,7 +722,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	_editLanguage() {
-		console.log(this.formData.langData);
 		if (this.formData.langData.edit === false) {
 			this.formData.langData.edit = true;
 		}
@@ -646,9 +731,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	_selectLanguage(uuid, action) {
-		console.log(uuid, action);
-	}
 
 	async _createCharacter() {
 
@@ -669,10 +751,18 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (this.formData.level0) {
 			this.formData.actor.system.level.value = 0;
 			this.formData.actor.system.coins.gp = 0;
+
 			// add gear to the items list
-			this.formData.gearSelected.forEach(x => {
-				allItems.push(fromUuidSync(x.uuid));
-			});
+			for (const item of this.formData.gearSelected) {
+				allItems.push(await fromUuid(item.uuid));
+				// add arrows for the shortbow option
+				if (item.name === "Shortbow") {
+					let arrows = await fromUuid("Compendium.shadowdark.gear.Item.XXwA9ZWajYEDmcea");
+					let fiveArrows = {...arrows};
+					fiveArrows.system.quantity = 5;
+					allItems.push(fiveArrows);
+				}
+			}
 		}
 
 		// Calculate HP
@@ -689,9 +779,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 
 		// Create the new player character
-		console.log(this.formData);
 		try {
 			const newActor = await Actor.create(this.formData.actor);
+			console.log(this.formData.actor);
 			ui.notifications.info(`Created Character: ${newActor.name}`);
 
 			// Add all required items to the new character
