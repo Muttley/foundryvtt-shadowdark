@@ -17,14 +17,14 @@
 		"description": "<p>Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.</p>",
 		"hitPoints": "d6",
 		"language": {
-			"select": 1
+			"select": null
 		},
 		"languages": {
 			"common": 0,
 			"fixed": [
 			],
 			"rare": 0,
-			"select": 0,
+			"select": 1,
 			"selectOptions": [
 				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
 				"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
