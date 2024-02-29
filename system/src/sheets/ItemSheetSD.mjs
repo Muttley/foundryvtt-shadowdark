@@ -629,6 +629,8 @@ export default class ItemSheetSD extends ItemSheet {
 		switch (data.type) {
 			case "Item":
 				return this._onDropItemSD(event, data);
+			case "RollTable":
+				return this._onDropTable(event, data);
 			default:
 				return super._onDrop();
 		}
@@ -663,6 +665,12 @@ export default class ItemSheetSD extends ItemSheet {
 		updateData.system.spellName = droppedItem.name;
 
 		this.item.update(updateData);
+	}
+
+	async _onDropTable(event, data) {
+		if (this.item.type === "Ancestry") {
+			this.item.update({"system.nameTable": data.uuid});
+		}
 	}
 
 	_onItemSelection(event) {

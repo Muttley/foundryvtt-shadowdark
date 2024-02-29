@@ -18,6 +18,8 @@ SHADOWDARK.ancestry.languages.prompt: Select Language...
 SHADOWDARK.ancestry.talents.count.label: Choice Count
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
+SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.app.active_effects.title: Active Effects
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
@@ -266,6 +268,7 @@ SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
+SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
 SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro

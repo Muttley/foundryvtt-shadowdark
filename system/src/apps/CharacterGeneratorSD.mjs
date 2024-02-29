@@ -645,10 +645,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	async _randomizeName() {
-		// TODO add table lookup for ancestry
-		const table = await fromUuid("Compendium.shadowdark.rollable-tables.RollTable.ZbrMK1WDNtz1ajJn");
-		const result = await table.draw({displayChat: false});
-		this.formData.actor.name = result.results[0].text;
+		// Looks up the name table from the ancestry and rolls a random name
+		if (this.ancestry.system?.nameTable) {
+			const table = await fromUuid(this.ancestry.system.nameTable);
+			if (table) {
+				const result = await table.draw({displayChat: false});
+				this.formData.actor.name = result.results[0].text;
+				return;
+			}
+		}
+		this.formData.actor.name = `Unnamed ${this.ancestry.name}`;
 	}
 
 	_randomizeHP() {
