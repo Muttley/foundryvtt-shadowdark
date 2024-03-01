@@ -1,3 +1,12 @@
+# v1.8.0
+
+## Enhancements
+* [#697] Updated the formating of monster descriptions created with the monster importer.
+
+Many thanks to *arcos* for contributing code included in this build
+
+---
+
 # v1.7.6
 
 ## Bugfixes
