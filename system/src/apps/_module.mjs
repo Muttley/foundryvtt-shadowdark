@@ -5,3 +5,4 @@ export {default as LightSourceTrackerSD} from "./LightSourceTrackerSD.mjs";
 export {default as MonsterImporterSD} from "./MonsterImporterSD.mjs";
 export {default as NpcAttackRangesSD} from "./NpcAttackRangesSD.mjs";
 export {default as ShadowdarklingImporterSD} from "./ShadowdarklingImporterSD.mjs";
+export {default as SpellImporterSD} from "./SpellImporterSD.mjs";

@@ -1,0 +1,11 @@
+{
+	"_id": "15E8F4iZ24jq5uE9",
+	"_key": "!macros!15E8F4iZ24jq5uE9",
+	"author": "lg44Bemke8RwfhDh",
+	"command": "/**\n ****************************************************************\n * This macro can be used to open the monster importer\n ***************************************************************/\n\nnew shadowdark.apps.SpellImporterSD().render(true);",
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+	"name": "Open Spell Importer",
+	"scope": "global",
+	"type": "script"
+}
