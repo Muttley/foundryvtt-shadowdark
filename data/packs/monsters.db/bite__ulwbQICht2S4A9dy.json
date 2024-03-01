@@ -1,0 +1,37 @@
+{
+	"_id": "ulwbQICht2S4A9dy",
+	"_key": "!actors.items!O5XBIGGgaZynfGwh.ulwbQICht2S4A9dy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Bite",
+	"system": {
+		"attack": {
+			"num": "3"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 7,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "Blood Drain",
+			"value": "1d8"
+		},
+		"description": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

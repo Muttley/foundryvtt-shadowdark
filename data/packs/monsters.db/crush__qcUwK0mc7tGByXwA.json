@@ -1,0 +1,17 @@
+{
+	"_id": "qcUwK0mc7tGByXwA",
+	"_key": "!actors.items!S3vCoRk5s63Mhv42.qcUwK0mc7tGByXwA",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Crush",
+	"system": {
+		"description": "<p>DC 15 STR or target takes [[/r 2d8]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

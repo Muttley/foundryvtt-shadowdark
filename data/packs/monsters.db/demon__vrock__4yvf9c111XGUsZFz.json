@@ -1,0 +1,123 @@
+{
+	"_id": "4yvf9c111XGUsZFz",
+	"_key": "!actors!4yvf9c111XGUsZFz",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"2MQM0vW6ihaiSqKu",
+		"sT5Jl22WzYR5tENt",
+		"bUU59iDCM9MBaI0H"
+	],
+	"name": "Demon, Vrock",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Vrock",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -1
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "24",
+				"value": "24"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "5"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> Wagon-sized, filthy vultures with four limbs, midnight-blue skin, and a rash of mangy feathers. </i></p><br>\n\t\t\t<p>AC 14, HP 24, ATK 2 talons +4 (1d8) or 1 screech, MV near (fly), S +2, D +2, C +2, I -1, W +1, Ch +0, AL C, LV 5</p><br>\n\t\t\t<p> Carrion Mist. Each time vrock is hit, 3:6 chance of carrion mist in near-sized cube centered on vrock. All enemies DC 15 CON or violent vomiting 1d4 rounds.<br><br>Screech. All enemies in double near DC 12 WIS or DISADV on checks and attacks for 1d4 rounds.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

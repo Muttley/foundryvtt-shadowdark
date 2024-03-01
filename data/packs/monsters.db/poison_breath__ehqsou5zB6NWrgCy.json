@@ -1,0 +1,24 @@
+{
+	"_id": "ehqsou5zB6NWrgCy",
+	"_key": "!actors.items!nLN2igybbaVV81ef.ehqsou5zB6NWrgCy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Poison Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a near-sized cube extending from dragon. DC 15 CON or [[/r 3d8]] damage.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "iildw1cvH0lgDYbl",
+	"_key": "!actors.items!QhRbV738DXZq737r.iildw1cvH0lgDYbl",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Song",
+	"system": {
+		"description": "<p>Enemies who can hear within double near DC 15 CHA or paralyzed [[/r 1d4]] rounds. Immune for 1 day if passed check.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

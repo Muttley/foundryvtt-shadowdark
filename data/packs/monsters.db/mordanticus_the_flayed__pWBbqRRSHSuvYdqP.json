@@ -1,0 +1,131 @@
+{
+	"_id": "pWBbqRRSHSuvYdqP",
+	"_key": "!actors!pWBbqRRSHSuvYdqP",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"7TUGAp28gG5wSDaB",
+		"7qBfy8bOo9O3MYj8",
+		"bZfSkjJXGH3vQlWQ",
+		"b1VOgjDccfDdjgFC",
+		"Ok3VFlgt3g3nT08Y",
+		"lWPY8Bqwbrjufy5U",
+		"ocx5xNA3ECEKg31W",
+		"wfygnZ2jC4bC7Flh",
+		"ovqv2Vu1DfdxM7Sf",
+		"nX2GodHVVxUQZbWe",
+		"XThifTtitH5uElTj"
+	],
+	"name": "Mordanticus The Flayed",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Mordanticus The Flayed",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 5
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "17"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "89",
+				"value": "89"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "19"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> A skinless mummy-lich wearing a crown set with nine bright gems. Once the head of the ancient, wizardly order of Gehemna, Mordanticus now lives in secret within the sanctum of Gehemna's reigning archmage. He has served as an advisor and historian for centuries, but an enduring enchantment prevents him from speaking of two topics: his origins, and The Ten-Eyed Oracle. </i></p><br>\n\t\t\t<p>AC 17, HP 89, ATK 1 rot touch +8 (1d10 + necrosis) and 3 spell +8, MV near, S +4, D +4, C +4, I +5, W +4, Ch +5, AL N, LV 19</p><br>\n\t\t\t<p> Legendary Undead. Immune to morale checks. Only damaged by magical sources. Hostile spells targeting Mordanticus are DC 18 to cast.<br><br>Crown of Gehemna. 3/day, cause a spell being cast within far to fail.<br><br>Necrosis. DC 15 CON or go to 0 HP. Healing spells are DC 15 to cast on target while at 0 HP due to this effect.<br><br>Phylactery. Cannot be killed while spirit vessel (a diamond) is intact.<br><br>Absorb (INT Spell). DC 13. Near, one target. Target loses the ability to cast one random spell until completing a rest, and Mordanticus regains a lost spell of the same tier or less.<br><br>Banish (INT Spell). DC 14. All extradimensional creatures within near DC 15 CHA or sent back to their home planes.<br><br>Bind (INT Spell). DC 12. One humanoid in far paralyzed 1d4 rounds.<br><br>Blast (INT Spell). DC 14. One creature in near takes 5d8 damage.<br><br>Phase (INT Spell). DC 13. Self. Teleport up to one mile.<br><br>True Name (INT Spell). DC 15. Near. Learn the True Name of target.</p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": "3",
+		"spellcastingBonus": 8
+	},
+	"type": "NPC"
+}

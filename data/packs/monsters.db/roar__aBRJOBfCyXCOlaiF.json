@@ -1,0 +1,17 @@
+{
+	"_id": "aBRJOBfCyXCOlaiF",
+	"_key": "!actors.items!1M8hSBxig3UdkxXx.aBRJOBfCyXCOlaiF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Roar",
+	"system": {
+		"description": "<p>In place of attacks, all creatures who can hear within far DC 18 CHA or be rendered blind and speechless for [[/r 1d4]] days.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

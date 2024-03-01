@@ -1,0 +1,124 @@
+{
+	"_id": "WBpG4JxtCZrbwP9n",
+	"_key": "!actors!WBpG4JxtCZrbwP9n",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"aSUuvtTngg6bEB73",
+		"VcdDxI0itBNQdsVA",
+		"csEk1tKteKM1eIhh",
+		"GXYeUjUZYjLrQ5hu"
+	],
+	"name": "Archdevil",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Archdevil",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 7
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 5
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "19"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "76",
+				"value": "76"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "16"
+		},
+		"move": "far",
+		"moveNote": "teleport",
+		"notes": "\n\t\t\t<p><i> A stunningly beautiful, horned human with burning, red eyes and a halo of seven black stars. Two stitched-up gashes weep blood from its shoulder blades. </i></p><br>\n\t\t\t<p>AC 19, HP 76, ATK 4 iron scepter +10 (3d10) or 1 soulbind, MV far (teleport), S +5, D +4, C +4, I +5, W +4, Ch +7, AL C, LV 16</p><br>\n\t\t\t<p> Impervious. Fire immune. Only damaged by magical sources.<br><br>Crown of Darkness. All hostile spells are reflected at caster with a spellcasting check less than 20.<br><br>Soulbind. All targets within near DC 20 CHA or fall under control of archdevil for 1d4 rounds. DC 20 CHA on turn to end the effect.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

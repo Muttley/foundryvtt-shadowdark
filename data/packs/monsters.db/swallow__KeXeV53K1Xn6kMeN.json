@@ -1,0 +1,17 @@
+{
+	"_id": "KeXeV53K1Xn6kMeN",
+	"_key": "!actors.items!ZtdvyZU9rAkdf7xp.KeXeV53K1Xn6kMeN",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Swallow",
+	"system": {
+		"description": "<p>On a natural attack roll of 18-20, target is swallowed. Total darkness inside and [[/r 2d10]] damage per round. Worm regurgitates all swallowed if dealt at least 20 damage in one round to the inside of its gullet.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

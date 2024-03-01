@@ -6,11 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"MCM2UX1jwTiz6Af0",
-		"TGyIidAaaKzSKy4T",
-		"MM2bwR8bregKnTei",
-		"s8uppYkv726VSKN6",
-		"DSiD9jUHa5gZwcdl"
+		"kvt3Q0JYzpVsYA7D",
+		"onrI28URAqJPmo26",
+		"Tjks8hXySOdNLjSa"
 	],
 	"name": "Bandit",
 	"prototypeToken": {
@@ -26,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -105,21 +103,21 @@
 		"alignment": "chaotic",
 		"attributes": {
 			"ac": {
-				"value": 13
+				"value": "13"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 4,
-				"value": 4
+				"max": "4",
+				"value": "4"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 1
+			"value": "1"
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>Hard-bitten rogue in tattered leathers and a hooded cloak.</em></p><p></p><p><strong>AC</strong> 13 (leather + shield), <strong>HP</strong> 4, <strong>ATK </strong>1 club +1 (1d4) or 1 shortbow (far) +0 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> C, <strong>LV</strong> 1</p><p></p><p><strong>Ambush</strong>. Deal an extra die of damage when undetected.</p>",
+		"notes": "\n\t\t\t<p><i> Hard-bitten rogue in tattered leathers and a hooded cloak. </i></p><br>\n\t\t\t<p>AC 13 (leather + shield), HP 4, ATK 1 club +1 (1d4) or 1 shortbow (far) +0 (1d4), MV near, S +1, D +0, C +0, I -1, W +0, Ch -1, AL C, LV 1</p><br>\n\t\t\t<p> Ambush. Deal an extra die of damage when undetected.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

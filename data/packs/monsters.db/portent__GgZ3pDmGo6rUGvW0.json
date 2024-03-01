@@ -1,0 +1,23 @@
+{
+	"_id": "GgZ3pDmGo6rUGvW0",
+	"_key": "!actors.items!1M8hSBxig3UdkxXx.GgZ3pDmGo6rUGvW0",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Portent",
+	"system": {
+		"dc": "14",
+		"description": "<p>Lasts [[/r 2d4]] rounds. One target in near has advantage or disadvantage on all attack rolls and checks.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "2d4"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

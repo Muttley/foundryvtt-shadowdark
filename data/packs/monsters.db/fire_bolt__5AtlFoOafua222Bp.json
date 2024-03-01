@@ -1,0 +1,37 @@
+{
+	"_id": "5AtlFoOafua222Bp",
+	"_key": "!actors.items!qhGc0sqh7IF61QYY.5AtlFoOafua222Bp",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Fire Bolt",
+	"system": {
+		"attack": {
+			"num": "2"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 5,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "2",
+			"special": "",
+			"value": "2d6"
+		},
+		"description": "",
+		"ranges": [
+			"far"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "IKWhgFEA7wMhbiBD",
+	"_key": "!actors.items!bILTV7P0d55nACrQ.IKWhgFEA7wMhbiBD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Blood Drain",
+	"system": {
+		"description": "<p>Attach to bitten target; auto-hit the next round. DC 9 STR on turn to remove.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "1ZxF1g8eX719Sh86",
+	"_key": "!actors.items!nXJfMttq3bPfnMoG.1ZxF1g8eX719Sh86",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Paralysis",
+	"system": {
+		"description": "<p>DC 15 CON or paralyzed [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

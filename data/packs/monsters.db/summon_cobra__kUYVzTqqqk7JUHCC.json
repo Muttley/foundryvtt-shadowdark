@@ -1,0 +1,23 @@
+{
+	"_id": "kUYVzTqqqk7JUHCC",
+	"_key": "!actors.items!PR9ptZ0DdyFlLpv6.kUYVzTqqqk7JUHCC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Summon Cobra",
+	"system": {
+		"dc": "13",
+		"description": "<p>Summon [[/r 1d4]] loyal cobras that appear within near. They leave in [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

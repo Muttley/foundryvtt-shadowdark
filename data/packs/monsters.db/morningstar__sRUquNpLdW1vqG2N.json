@@ -1,0 +1,37 @@
+{
+	"_id": "sRUquNpLdW1vqG2N",
+	"_key": "!actors.items!SGXnW2CymmOUmdFW.sRUquNpLdW1vqG2N",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Morningstar",
+	"system": {
+		"attack": {
+			"num": "3"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 9,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "2",
+			"special": "",
+			"value": "2d10"
+		},
+		"description": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

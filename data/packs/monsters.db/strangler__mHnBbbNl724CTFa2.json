@@ -1,0 +1,123 @@
+{
+	"_id": "mHnBbbNl724CTFa2",
+	"_key": "!actors!mHnBbbNl724CTFa2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"EIB61HWZyI13KFap",
+		"BOHXTHVjjaVwYXIy",
+		"EKF83wxIiWFtY9te"
+	],
+	"name": "Strangler",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Strangler",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": -2
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "12"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "14",
+				"value": "14"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "3"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> A gray-skinned, gaunt creature with four ropy limbs tipped in sucker-lined claws. </i></p><br>\n\t\t\t<p>AC 12, HP 14, ATK 2 claws +2 (1d6), MV near (climb), S -2, D +2, C +1, I -2, W +0, Ch -2, AL C, LV 3</p><br>\n\t\t\t<p> Stealthy. ADV on DEX checks to sneak and hide.<br><br>Strangle. Deals x2 damage against surprised creatures.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

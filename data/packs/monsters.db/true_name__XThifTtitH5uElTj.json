@@ -1,0 +1,23 @@
+{
+	"_id": "XThifTtitH5uElTj",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.XThifTtitH5uElTj",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "True Name",
+	"system": {
+		"dc": "15",
+		"description": "<p>Near. Learn the True Name of target.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

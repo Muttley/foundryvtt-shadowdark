@@ -1,0 +1,24 @@
+{
+	"_id": "1CqAWfHGpHufOLWh",
+	"_key": "!actors.items!4jdGrRnDMGSY39es.1CqAWfHGpHufOLWh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Whirlpool",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All within close DC 15 STR or immobilized inside water elemental (treat as underwater). DC 15 STR on turn to escape.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "kvFw1o1dlNAKSwtg",
+	"_key": "!actors.items!Ubq4UxPd2jz9CbWM.kvFw1o1dlNAKSwtg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Barkskin",
+	"system": {
+		"dc": "13",
+		"description": "<p>AC becomes 15 for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "SvcayPM0H6z0ULBh",
+	"_key": "!actors.items!LaFK4auYnZ5K7Rpq.SvcayPM0H6z0ULBh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Disease",
+	"system": {
+		"description": "<p>DC 15 CON or infected. DC 15 CON each day or lose [[/r 1d6]] HP (can't heal). Ends on success.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

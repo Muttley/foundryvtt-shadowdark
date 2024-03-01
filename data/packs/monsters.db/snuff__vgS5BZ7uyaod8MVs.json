@@ -1,0 +1,23 @@
+{
+	"_id": "vgS5BZ7uyaod8MVs",
+	"_key": "!actors.items!MLByxdcYgm2Y3LfU.vgS5BZ7uyaod8MVs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Snuff",
+	"system": {
+		"dc": "12",
+		"description": "<p>Extinguish all light sources (even magical) within near.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

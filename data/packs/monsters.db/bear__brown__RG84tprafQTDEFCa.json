@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"wtSjDlj7CTUQ73rR",
-		"YKRZYh2WYMzDgLv8"
+		"mcHaNqDjnM4nWXBz",
+		"LPHxTtlJ5ZT0QxCb"
 	],
 	"name": "Bear, Brown",
 	"prototypeToken": {
@@ -23,11 +23,11 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
-		"height": 1,
+		"height": 2,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -52,7 +52,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
-		"name": "Bear, Brown",
+		"name": "Brown Bear",
 		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
@@ -76,7 +76,7 @@
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
 			"tint": null
 		},
-		"width": 1
+		"width": 2
 	},
 	"system": {
 		"abilities": {
@@ -102,21 +102,21 @@
 		"alignment": "neutral",
 		"attributes": {
 			"ac": {
-				"value": 13
+				"value": "13"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 25,
-				"value": 25
+				"max": "25",
+				"value": "25"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 5
+			"value": "5"
 		},
 		"move": "near",
-		"moveNote": "Climb",
-		"notes": "<p><em>A hulking, swaying brute with claws as long as a finger.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 25, <strong>ATK</strong> 2 claw +4 (1d8), <strong>MV</strong> near (climb) <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I </strong>-2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV </strong>5</p><p></p><p><strong>Crush</strong>. Deals an extra die of damage if it hits the same target with both claws.</p>",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> A hulking, swaying brute with claws as long as a finger. </i></p><br>\n\t\t\t<p>AC 13, HP 25, ATK 2 claw +4 (1d8), MV near (climb), S +4, D +1, C +3, I -2, W +1, Ch -2, AL N, LV 5</p><br>\n\t\t\t<p> Crush. Deals an extra die of damage if it hits the same target with both claws.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

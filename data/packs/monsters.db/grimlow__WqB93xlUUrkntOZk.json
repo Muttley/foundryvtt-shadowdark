@@ -1,0 +1,123 @@
+{
+	"_id": "WqB93xlUUrkntOZk",
+	"_key": "!actors!WqB93xlUUrkntOZk",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"4phbUUlP54ujFMUN",
+		"YNYv5BxsjqLvgMpd",
+		"MTcc11MZatpkhUxo"
+	],
+	"name": "Grimlow",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Grimlow",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "12"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "43",
+				"value": "43"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "9"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> A tall, oval-shaped mammal. A giant, half-moon maw hides on its belly beneath its gray fur. </i></p><br>\n\t\t\t<p>AC 12, HP 43, ATK 1 grab and 3 bite +6 (2d8), MV near, S +4, D +2, C +3, I -3, W +1, Ch -2, AL N, LV 9</p><br>\n\t\t\t<p> Grab. One target in near DC 15 STR or wrapped in grimlow's tongue and pulled into its mouth. Bite attacks automatically hit the target. Can only grab 1 target at a time. DC 15 STR on turn to break free.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

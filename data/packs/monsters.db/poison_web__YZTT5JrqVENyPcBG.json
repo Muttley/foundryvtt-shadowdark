@@ -1,0 +1,25 @@
+{
+	"_id": "YZTT5JrqVENyPcBG",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.YZTT5JrqVENyPcBG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Poison Web",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 2
+		},
+		"description": "",
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

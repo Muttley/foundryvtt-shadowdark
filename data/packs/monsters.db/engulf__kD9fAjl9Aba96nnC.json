@@ -1,0 +1,17 @@
+{
+	"_id": "kD9fAjl9Aba96nnC",
+	"_key": "!actors.items!udRspLiTyURGmLav.kD9fAjl9Aba96nnC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Engulf",
+	"system": {
+		"description": "<p>DC 12 STR or trapped inside cube. Touch attack auto-hits engulfed targets each round. DC 12 STR on turn to escape. Fail checks if paralyzed.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

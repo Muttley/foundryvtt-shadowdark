@@ -1,0 +1,24 @@
+{
+	"_id": "yrgEf66NlExL7tGS",
+	"_key": "!actors.items!qknS9EK1v7ejjTYJ.yrgEf66NlExL7tGS",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Life Drain",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 3
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

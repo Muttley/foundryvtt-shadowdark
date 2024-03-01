@@ -1,0 +1,17 @@
+{
+	"_id": "6BcpsjiqylEHR4po",
+	"_key": "!actors.items!xfr9AqIjMeNO71xs.6BcpsjiqylEHR4po",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Grab",
+	"system": {
+		"description": "<p>DC 18 STR or target bound in whip. [[/r 2d6]] damage per round held, DC 18 STR on turn to break free. In place of fire whip attack, balor can fling a grabbed target double near on its turn.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

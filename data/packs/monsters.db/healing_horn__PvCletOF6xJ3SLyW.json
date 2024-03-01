@@ -1,0 +1,17 @@
+{
+	"_id": "PvCletOF6xJ3SLyW",
+	"_key": "!actors.items!Rh2bzqDRC1JF1FiG.PvCletOF6xJ3SLyW",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Healing Horn",
+	"system": {
+		"description": "<p>A touch heals [[/r 2d6]] HP or ends one curse or disease.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

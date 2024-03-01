@@ -1,0 +1,23 @@
+{
+	"_id": "ovr4fkQXsp5jXYKS",
+	"_key": "!actors.items!u0Gfe3hAAhlL3vNQ.ovr4fkQXsp5jXYKS",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Cancel",
+	"system": {
+		"dc": "13",
+		"description": "<p>End one spell affecting a target within near.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

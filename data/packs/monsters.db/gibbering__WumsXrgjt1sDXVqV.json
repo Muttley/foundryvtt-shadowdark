@@ -1,0 +1,17 @@
+{
+	"_id": "WumsXrgjt1sDXVqV",
+	"_key": "!actors.items!azs8tPdAoheCAVsA.WumsXrgjt1sDXVqV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Gibbering",
+	"system": {
+		"description": "<p>Creatures within near DC 12 WIS on turn or take a random action (d8): 1-3. do nothing, 4-5. move in random direction, 6-7. attack nearest creature, 8. flee.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

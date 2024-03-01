@@ -1,0 +1,124 @@
+{
+	"_id": "VMPDWL4TgIBQim5O",
+	"_key": "!actors!VMPDWL4TgIBQim5O",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"90yxrJxIvPyvM1dY",
+		"lfqfhpjKwGUM4r2e",
+		"2gsFscO4oYAPkjzo",
+		"sh2y9OKdQ59h80uq"
+	],
+	"name": "Mummy",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Mummy",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 0
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "13"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "47",
+				"value": "47"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "10"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> A desiccated, linen-wrapped zombie. It was created with an intricate embalming ritual used only upon the most worthy warriors or rulers. </i></p><br>\n\t\t\t<p>AC 13, HP 47, ATK 3 rot touch +8 (1d10 + necrosis), MV near, S +3, D +0, C +2, I +3, W +2, Ch +3, AL C, LV 10</p><br>\n\t\t\t<p> Supreme Undead. Immune to morale checks. Only damaged by magical sources.<br><br>Desiccated. Can be damaged by fire. Takes x2 damage from it.<br><br>Necrosis. DC 15 CON or drop to 0 HP. Healing spells are DC 15 to cast on target while at 0 HP due to this effect.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

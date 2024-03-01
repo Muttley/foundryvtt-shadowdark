@@ -6,12 +6,11 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"fguDB67YXgcCXVk6",
-		"7lFoUqbnliBmAYzt",
-		"GlEUmXQMesA6DeWE",
-		"pgLNyD8buvs48X6G",
-		"p6WUQhy8ie5YJ73t",
-		"tu5XMDakF2Ug0MLC"
+		"QVfIx3Mk9QiOPrBg",
+		"Phh1wvgKTFUrwT96",
+		"veERTUKWIsweeVyq",
+		"iJCNaIR74GhxONU1",
+		"hyqcsNRVM7lL9trO"
 	],
 	"name": "Aboleth",
 	"prototypeToken": {
@@ -27,7 +26,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -106,21 +105,21 @@
 		"alignment": "chaotic",
 		"attributes": {
 			"ac": {
-				"value": 16
+				"value": "16"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 39,
-				"value": 39
+				"max": "39",
+				"value": "39"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 8
+			"value": "8"
 		},
 		"move": "near",
-		"moveNote": "Swim",
-		"notes": "<p><em>Enormous, antediluvian catfish covered in slime and tentacles. They hate all intelligent beings.</em></p><p></p><p><strong>AC</strong> 16, <strong>HP</strong> 39, <strong>ATK</strong> 2 tentacle (near) +5 (1d8 + curse) or 1 tail +5 (3d6), <strong>MV</strong> near (swim), <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +3, <strong>I</strong> +4, <strong>W</strong> +2, <strong>Ch</strong> +2, <strong>AL</strong> C, <strong>LV</strong> 8</p><p></p><p><strong>Curse</strong>. DC 15 CON or target gains a magical curse, turning into a deep one over 2d10 days.</p><p></p><p><strong>Enslave</strong>. In place of attacks, one creature within far DC 15 WIS or aboleth controls for 1d4 rounds.</p><p></p><p><strong>Telepathic</strong>. Read the thoughts of all creatures within far.</p>",
+		"moveNote": "swim",
+		"notes": "\n\t\t\t<p><i> Enormous, antediluvian catfish covered in slime and tentacles. They hate all intelligent beings. </i></p><br>\n\t\t\t<p>AC 16, HP 39, ATK 2 tentacle (near) +5 (1d8 + curse) or 1 tail +5 (3d6), MV near (swim), S +4, D -1, C +3, I +4, W +2, Ch +2, AL C, LV 8</p><br>\n\t\t\t<p> Curse. DC 15 CON or target gains a magical curse, turning into a deep one over 2d10 days.<br><br>Enslave. In place of attacks, one creature within far DC 15 WIS or aboleth controls for 1d4 rounds.<br><br>Telepathic. Read the thoughts of all creatures within far.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

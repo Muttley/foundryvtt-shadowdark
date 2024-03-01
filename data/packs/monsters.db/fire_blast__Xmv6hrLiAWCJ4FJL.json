@@ -1,0 +1,37 @@
+{
+	"_id": "Xmv6hrLiAWCJ4FJL",
+	"_key": "!actors.items!oO3cHkCa0qF4G4zJ.Xmv6hrLiAWCJ4FJL",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Fire Blast",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 4,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "2",
+			"special": "",
+			"value": "2d8"
+		},
+		"description": "",
+		"ranges": [
+			"far"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

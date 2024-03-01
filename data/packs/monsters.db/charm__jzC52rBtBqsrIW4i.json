@@ -1,0 +1,24 @@
+{
+	"_id": "jzC52rBtBqsrIW4i",
+	"_key": "!actors.items!vXaqgfDykZPdXnIm.jzC52rBtBqsrIW4i",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charm",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

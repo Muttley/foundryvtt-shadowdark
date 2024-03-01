@@ -1,0 +1,23 @@
+{
+	"_id": "snmxwYt4jveCa9PD",
+	"_key": "!actors.items!nXJfMttq3bPfnMoG.snmxwYt4jveCa9PD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Null",
+	"system": {
+		"dc": "14",
+		"description": "<p>Hostile spells targeting lich are DC 18 to cast. Lasts [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

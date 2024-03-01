@@ -1,0 +1,24 @@
+{
+	"_id": "M39CSyU5AkR2tCWF",
+	"_key": "!actors.items!iLmF6xBdOmykN2Ce.M39CSyU5AkR2tCWF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Drink Pain",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "6dfCPGqHl6XpTgkT",
+	"_key": "!actors.items!qixLaBKeeJUjZuxa.6dfCPGqHl6XpTgkT",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Barb",
+	"system": {
+		"description": "<p>Each spine sticks, dealing [[/r 1d4]] damage each round. DC 12 STR check on turn to remove.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

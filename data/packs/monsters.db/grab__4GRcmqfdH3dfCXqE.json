@@ -1,0 +1,17 @@
+{
+	"_id": "4GRcmqfdH3dfCXqE",
+	"_key": "!actors.items!5u4FUsVcF0UgI4j2.4GRcmqfdH3dfCXqE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Grab",
+	"system": {
+		"description": "<p>DC 12 STR or target held. DC 12 STR on turn to break free.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

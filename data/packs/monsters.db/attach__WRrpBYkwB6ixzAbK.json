@@ -1,0 +1,17 @@
+{
+	"_id": "WRrpBYkwB6ixzAbK",
+	"_key": "!actors.items!UGsq7I9Gyahgd0dG.WRrpBYkwB6ixzAbK",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Attach",
+	"system": {
+		"description": "<p>Attach to target; bite auto-hits next round. DC 12 STR on turn to tear off.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

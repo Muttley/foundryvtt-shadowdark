@@ -1,0 +1,17 @@
+{
+	"_id": "Wa759Bog6BOQpgTR",
+	"_key": "!actors.items!zI4Cexz2tW8cmwAp.Wa759Bog6BOQpgTR",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Blind",
+	"system": {
+		"description": "<p>One target within near DC 15 CHA or blinded for [[/r 1d4]] days.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

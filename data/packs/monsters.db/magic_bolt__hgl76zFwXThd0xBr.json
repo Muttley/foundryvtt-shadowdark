@@ -1,0 +1,23 @@
+{
+	"_id": "hgl76zFwXThd0xBr",
+	"_key": "!actors.items!loTYq5ziLn0zhhD1.hgl76zFwXThd0xBr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Magic Bolt",
+	"system": {
+		"dc": "11",
+		"description": "<p>[[/r 1d4]] damage to one target within far.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

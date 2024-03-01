@@ -1,0 +1,23 @@
+{
+	"_id": "wDiZb9sh67n8qwZx",
+	"_key": "!actors.items!Ubq4UxPd2jz9CbWM.wDiZb9sh67n8qwZx",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Summon Bear",
+	"system": {
+		"dc": "14",
+		"description": "<p>Summon a loyal brown bear that appears within near. It stays for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

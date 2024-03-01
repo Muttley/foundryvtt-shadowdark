@@ -1,0 +1,17 @@
+{
+	"_id": "JzcD5wJa37C0yQ5n",
+	"_key": "!actors.items!MOwwUSGuvvmKd5df.JzcD5wJa37C0yQ5n",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Vampire Heals 2d6 Hp And Target Permanently Loses 1d4 Con",
+	"system": {
+		"description": "<p>At 0 CON, target dies and rises as a vampire spawn. Vampire. Must sleep in a coffin daily or loses [[/r 2d6]] HP each day that can't be healed until resting in coffin. Takes [[/r 3d8]] damage each round while in direct sunlight. Cannot be killed unless pierced through heart with a wooden stake while at 0 HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

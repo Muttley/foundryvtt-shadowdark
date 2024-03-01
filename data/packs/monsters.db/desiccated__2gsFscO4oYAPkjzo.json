@@ -1,0 +1,17 @@
+{
+	"_id": "2gsFscO4oYAPkjzo",
+	"_key": "!actors.items!VMPDWL4TgIBQim5O.2gsFscO4oYAPkjzo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Desiccated",
+	"system": {
+		"description": "<p>Can be damaged by fire. Takes x2 damage from it.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "itTWEd9vFPWf3Xo4",
+	"_key": "!actors.items!9N1nOElWeNl1T7Bw.itTWEd9vFPWf3Xo4",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "D4 Lightning Bolt",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

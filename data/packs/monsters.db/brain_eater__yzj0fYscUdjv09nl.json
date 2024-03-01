@@ -1,0 +1,125 @@
+{
+	"_id": "yzj0fYscUdjv09nl",
+	"_key": "!actors!yzj0fYscUdjv09nl",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"M7o9hB2xWVHtkbSC",
+		"2tSbypFFW8RxRQlR",
+		"VabohwEnOxhL2grg",
+		"FgI7hj0unGXIFTZ8",
+		"PqrR4FCivZReQdl5"
+	],
+	"name": "Brain Eater",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Brain Eater",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "36",
+				"value": "36"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> Purple, gaunt humanoids with squidlike heads and four face tentacles. They live in complex, alien societies underground and eat humanoid brains. </i></p><br>\n\t\t\t<p>AC 14 (leather), HP 36, ATK 4 tentacle +5 (1d8 + latch) or 1 mind blast or 1 mind control, MV near, S +2, D +3, C +0, I +4, W +2, Ch +4, AL C, LV 8</p><br>\n\t\t\t<p> Hear Thoughts. Can hear the surface thoughts of all intelligent creatures within near.<br><br>Latch. Tentacles attach to hit targets, automatically hitting the next round (DC 12 STR on turn to remove 1d4 tentacles). If all four remain latched onto the same humanoid target for 1 round, the target's brain is ripped out and devoured.<br><br>Mind Blast. Fills a near-sized cube extending from brain eater. DC 15 INT or 3d6 damage and paralyzed 1d4 rounds.<br><br>Mind Control. One target in near DC 15 CHA or brain eater controls for 1d4 rounds.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

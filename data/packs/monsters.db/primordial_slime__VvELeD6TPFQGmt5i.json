@@ -1,0 +1,123 @@
+{
+	"_id": "VvELeD6TPFQGmt5i",
+	"_key": "!actors!VvELeD6TPFQGmt5i",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"aPeDwwmdpfLVJoaP",
+		"6xFvqX774V273mzr",
+		"yoPII6OZi38k7L5U"
+	],
+	"name": "Primordial Slime",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Primordial Slime",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -4
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -4
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": -3
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "9"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "30",
+				"value": "30"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "6"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> A mass of clear ooze strobing with sick pulses of violet light. </i></p><br>\n\t\t\t<p>AC 9, HP 30, ATK 2 tentacle +4 (1d10 + dissolve), MV near (climb), S +3, D +2, C +3, I -4, W -3, Ch -4, AL C, LV 6</p><br>\n\t\t\t<p> Impervious. Only harmed by fire.<br><br>Dissolve. One random piece of non-magical gear the target carries is destroyed.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

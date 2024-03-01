@@ -1,0 +1,23 @@
+{
+	"_id": "3uiVW8T05tsvJ4Vj",
+	"_key": "!actors.items!mcj9mZrU3h7ZVvaZ.3uiVW8T05tsvJ4Vj",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Riddle",
+	"system": {
+		"dc": "12",
+		"description": "<p>One target in far DC 15 INT or stupefied [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

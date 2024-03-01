@@ -1,0 +1,23 @@
+{
+	"_id": "9Cxwej02YX4UbysQ",
+	"_key": "!actors.items!ozAepaQNj4C9OfXY.9Cxwej02YX4UbysQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Death Bolt",
+	"system": {
+		"dc": "15",
+		"description": "<p>One target of LV 9 or less within near DC 15 CON or go to 0 HP.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "OEKDciW58C5ldKZt",
+	"_key": "!actors.items!NmPc4fOG2SlWqxiw.OEKDciW58C5ldKZt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Rage",
+	"system": {
+		"description": "<p>1/day, immune to morale checks, +[[/r 1d4]] damage (3 rounds).</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

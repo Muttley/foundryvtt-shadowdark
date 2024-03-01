@@ -1,0 +1,24 @@
+{
+	"_id": "5E9YQllKR2D0008Q",
+	"_key": "!actors.items!QhRbV738DXZq737r.5E9YQllKR2D0008Q",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Song",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

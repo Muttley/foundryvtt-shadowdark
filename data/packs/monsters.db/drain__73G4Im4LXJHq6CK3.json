@@ -1,0 +1,17 @@
+{
+	"_id": "73G4Im4LXJHq6CK3",
+	"_key": "!actors.items!ujGKTn1eoqlnItZa.73G4Im4LXJHq6CK3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Drain",
+	"system": {
+		"description": "<p>The target takes [[/r 1d6]] WIS damage. A target reduced to 0 WIS this way swears its soul to an archdevil.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

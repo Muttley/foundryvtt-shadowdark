@@ -1,0 +1,24 @@
+{
+	"_id": "wubwsNu6FyKNl72y",
+	"_key": "!actors.items!758Uqya3v9bY4A4J.wubwsNu6FyKNl72y",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Gas",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

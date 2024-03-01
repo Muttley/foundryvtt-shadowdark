@@ -1,0 +1,24 @@
+{
+	"_id": "7YykyTBPAf9ey7oD",
+	"_key": "!actors.items!zI4Cexz2tW8cmwAp.7YykyTBPAf9ey7oD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Blind",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

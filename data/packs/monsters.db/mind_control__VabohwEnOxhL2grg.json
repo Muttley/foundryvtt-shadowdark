@@ -1,0 +1,24 @@
+{
+	"_id": "VabohwEnOxhL2grg",
+	"_key": "!actors.items!yzj0fYscUdjv09nl.VabohwEnOxhL2grg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Mind Control",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>One target in near DC 15 CHA or brain eater controls for [[/r 1d4]] rounds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

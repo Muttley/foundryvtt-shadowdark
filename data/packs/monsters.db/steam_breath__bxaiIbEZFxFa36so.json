@@ -1,0 +1,24 @@
+{
+	"_id": "bxaiIbEZFxFa36so",
+	"_key": "!actors.items!QSdzoPL8d8JFgIpu.bxaiIbEZFxFa36so",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Steam Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

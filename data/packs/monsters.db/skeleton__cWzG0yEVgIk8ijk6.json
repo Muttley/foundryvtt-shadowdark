@@ -6,9 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"fJL9lcfORjpzaBCe",
-		"D2ICcZFerw1x6D7y",
-		"9oxZTYPcCbLq6SV9"
+		"8v3Yh9bGkCqYK1I8",
+		"ovqiyWLQ73vUAXhD",
+		"4Gvh016sX5sORMB5"
 	],
 	"name": "Skeleton",
 	"prototypeToken": {
@@ -24,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -103,21 +103,21 @@
 		"alignment": "chaotic",
 		"attributes": {
 			"ac": {
-				"value": 13
+				"value": "13"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 11,
-				"value": 11
+				"max": "11",
+				"value": "11"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": "2"
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><span class=\"fontstyle0\"><em>A bleach-boned skeleton with red pinpoints of light in its eyes.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (chainmail), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">11, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">2</span></p><p></p><p><span class=\"fontstyle2\"><strong>Undead.</strong> </span><span class=\"fontstyle3\">Immune to morale checks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"notes": "\n\t\t\t<p><i> A bleach-boned skeleton with red pinpoints of light in its eyes. </i></p><br>\n\t\t\t<p>AC 13 (chainmail), HP 11, ATK 1 shortsword +1 (1d6) or 1 shortbow (far) +0 (1d4), MV near, S +1, D +0, C +2, I -2, W +0, Ch -1, AL C, LV 2</p><br>\n\t\t\t<p> Undead. Immune to morale checks.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -1,0 +1,17 @@
+{
+	"_id": "QfXKSYRvYurnXiPh",
+	"_key": "!actors.items!iLmF6xBdOmykN2Ce.QfXKSYRvYurnXiPh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Drink Pain",
+	"system": {
+		"description": "<p>Near range. DC 12 CHA to deal [[/r 2d4]] damage to a creature; regain that many HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "wfygnZ2jC4bC7Flh",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.wfygnZ2jC4bC7Flh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Bind",
+	"system": {
+		"dc": "12",
+		"description": "<p>One humanoid in far paralyzed [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

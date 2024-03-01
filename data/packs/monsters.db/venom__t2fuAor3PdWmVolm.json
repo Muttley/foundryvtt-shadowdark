@@ -1,0 +1,17 @@
+{
+	"_id": "t2fuAor3PdWmVolm",
+	"_key": "!actors.items!K9M3BA8PlvYWFADe.t2fuAor3PdWmVolm",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Venom",
+	"system": {
+		"description": "<p>DC 9 CON or go to 0 HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

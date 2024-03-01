@@ -1,0 +1,122 @@
+{
+	"_id": "tc5iVQmj0B43Np4X",
+	"_key": "!actors!tc5iVQmj0B43Np4X",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"lmEIFGOCGdfwDqAC",
+		"4Na8fhk9qfo61MbN"
+	],
+	"name": "Giant, Hill",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Hill Giant",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 0
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": -2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "11"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "34",
+				"value": "34"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "7"
+		},
+		"move": "doubleNear",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> Fleshy hulks with leathery skin and broad, sloping foreheads. Cruel, boorish, and dim-witted. </i></p><br>\n\t\t\t<p>AC 11 (leather), HP 34, ATK 2 greatclub +6 (2d8) or 1 boulder (far) +6 (2d10), MV double near, S +4, D +0, C +3, I -2, W -2, Ch -2, AL C, LV 7</p><br>\n\t\t\t<p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

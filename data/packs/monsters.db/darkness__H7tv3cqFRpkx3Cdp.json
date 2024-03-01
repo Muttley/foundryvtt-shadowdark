@@ -1,0 +1,24 @@
+{
+	"_id": "H7tv3cqFRpkx3Cdp",
+	"_key": "!actors.items!0JAEN5FsKjaXXZaA.H7tv3cqFRpkx3Cdp",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Darkness",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

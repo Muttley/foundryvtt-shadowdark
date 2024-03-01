@@ -1,0 +1,17 @@
+{
+	"_id": "npIi1FlVpr1HGJXr",
+	"_key": "!actors.items!QSdzoPL8d8JFgIpu.npIi1FlVpr1HGJXr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Steam Breath",
+	"system": {
+		"description": "<p>Fills a double near-sized cube extending from dragon. DC 15 DEX or [[/r 4d12]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

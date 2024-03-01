@@ -1,0 +1,17 @@
+{
+	"_id": "itrLdNBOw9xbTlNb",
+	"_key": "!actors.items!dCwHuBOEUs7OSZPq.itrLdNBOw9xbTlNb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Lop",
+	"system": {
+		"description": "<p>On a natural attack roll of 18-20, behead the target.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

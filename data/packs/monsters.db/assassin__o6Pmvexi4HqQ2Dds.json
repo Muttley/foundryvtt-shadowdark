@@ -1,0 +1,122 @@
+{
+	"_id": "o6Pmvexi4HqQ2Dds",
+	"_key": "!actors!o6Pmvexi4HqQ2Dds",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"Gv31U34SOUldzMJO",
+		"BI3axGhssrCfJVmQ"
+	],
+	"name": "Assassin",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Assassin",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "15"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "38",
+				"value": "38"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> A black-cloaked, skulking killer. </i></p><br>\n\t\t\t<p>AC 15 (leather), HP 38, ATK 2 poisoned dagger (close/near) +6 (2d4), MV near (climb), S +2, D +4, C +2, I +2, W +3, Ch +3, AL C, LV 8</p><br>\n\t\t\t<p> Execute. Deals x3 damage against surprised targets.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "iRq5YFn5GZfYqai3",
+	"_key": "!actors.items!ozAepaQNj4C9OfXY.iRq5YFn5GZfYqai3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Mithralskin",
+	"system": {
+		"dc": "14",
+		"description": "<p>AC becomes 18 for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

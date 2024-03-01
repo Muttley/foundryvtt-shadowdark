@@ -6,11 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"SXN0Zg4LwHgyNECi",
-		"cY8rmYgJZJzMYg4x",
-		"decpoSp0qogWhTIt",
-		"4ARCaXHh77Ub4sgq",
-		"jsODF6naHDkWY3BM"
+		"t5K3FqUksN3ugdAQ",
+		"rHofKOnUZkxPHAkx",
+		"HCO5nOMPKbUkKb7R"
 	],
 	"name": "Cultist",
 	"prototypeToken": {
@@ -26,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -105,24 +103,24 @@
 		"alignment": "chaotic",
 		"attributes": {
 			"ac": {
-				"value": 14
+				"value": "14"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 9,
-				"value": 9
+				"max": "9",
+				"value": "9"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": "2"
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god.</em></p><p></p><p><strong>AC</strong> 14 (chainmail + shield), <strong>HP </strong>9, <strong>ATK</strong> 1 longsword +1 (1d8) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +0, <strong>I </strong>-1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> C, <strong>LV</strong> 2</p><p></p><p><strong>Fearless</strong>. Immune to morale checks.</p><p></p><p><strong>Deathtouch (WIS Spell)</strong>. DC 12. 2d4 damage to one creature within close.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "\n\t\t\t<p><i> A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god. </i></p><br>\n\t\t\t<p>AC 14 (chainmail + shield), HP 9, ATK 1 longsword +1 (1d8) or 1 spell +2, MV near, S +1, D -1, C +0, I -1, W +2, Ch +0, AL C, LV 2</p><br>\n\t\t\t<p> Fearless. Immune to morale checks.<br><br>Deathtouch (WIS Spell). DC 12. 2d4 damage to one creature within close.</p>",
+		"spellcastingAbility": "wis",
+		"spellcastingAttackNum": "1",
+		"spellcastingBonus": 2
 	},
 	"type": "NPC"
 }

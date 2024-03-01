@@ -1,0 +1,17 @@
+{
+	"_id": "sh2y9OKdQ59h80uq",
+	"_key": "!actors.items!VMPDWL4TgIBQim5O.sh2y9OKdQ59h80uq",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Necrosis",
+	"system": {
+		"description": "<p>DC 15 CON or drop to 0 HP. Healing spells are DC 15 to cast on target while at 0 HP due to this effect.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

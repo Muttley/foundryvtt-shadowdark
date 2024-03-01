@@ -1,0 +1,17 @@
+{
+	"_id": "MektRiZk7yRJxUti",
+	"_key": "!actors.items!zIXIdghXgOBz1UcD.MektRiZk7yRJxUti",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Heat Aura",
+	"system": {
+		"description": "<p>Creatures within near of phoenix at start of turn DC 15 CON or [[/r 2d6]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

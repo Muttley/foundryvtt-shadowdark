@@ -1,0 +1,23 @@
+{
+	"_id": "bbL6RYNCe6hWgTfi",
+	"_key": "!actors.items!1M8hSBxig3UdkxXx.bbL6RYNCe6hWgTfi",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Abolish",
+	"system": {
+		"dc": "13",
+		"description": "<p>One target in far takes [[/r 5d8]] damage.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

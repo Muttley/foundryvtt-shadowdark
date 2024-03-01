@@ -1,0 +1,24 @@
+{
+	"_id": "MVqZLlQVhwMl6SYc",
+	"_key": "!actors.items!oU3fjTy6E0D5MEmP.MVqZLlQVhwMl6SYc",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Tongue",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

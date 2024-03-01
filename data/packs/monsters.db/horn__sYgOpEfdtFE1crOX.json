@@ -1,0 +1,24 @@
+{
+	"_id": "sYgOpEfdtFE1crOX",
+	"_key": "!actors.items!zjt1LTq8vx17c8SU.sYgOpEfdtFE1crOX",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Horn",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

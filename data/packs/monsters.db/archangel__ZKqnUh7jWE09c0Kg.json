@@ -1,0 +1,123 @@
+{
+	"_id": "ZKqnUh7jWE09c0Kg",
+	"_key": "!actors!ZKqnUh7jWE09c0Kg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"l8PHq2BmLzcWOVDv",
+		"pgJUqbnHAO9UUpmq",
+		"Ogs3w5vfoxikG6cM"
+	],
+	"name": "Archangel",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Archangel",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 5
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": "18"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "76",
+				"value": "76"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "16"
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> A radiant being with a crown of fire, snowy wings, golden armor, and a blazing greatsword. </i></p><br>\n\t\t\t<p>AC 18 ( +3 plate mail ), HP 76, ATK 3 flaming greatsword +10 (2d12), MV double near (fly), S +5, D +2, C +4, I +4, W +5, Ch +5, AL L, LV 16</p><br>\n\t\t\t<p> Command. DC 18 CHA to resist an archangel's command.<br><br>Crown of Fire. Hostile spells targeting the archangel are extreme (DC 18) to cast.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

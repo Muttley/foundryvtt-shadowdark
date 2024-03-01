@@ -1,0 +1,23 @@
+{
+	"_id": "ovqv2Vu1DfdxM7Sf",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.ovqv2Vu1DfdxM7Sf",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Blast",
+	"system": {
+		"dc": "14",
+		"description": "<p>One creature in near takes [[/r 5d8]] damage.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

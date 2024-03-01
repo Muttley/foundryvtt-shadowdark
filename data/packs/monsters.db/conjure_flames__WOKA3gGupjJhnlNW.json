@@ -1,0 +1,23 @@
+{
+	"_id": "WOKA3gGupjJhnlNW",
+	"_key": "!actors.items!Ubq4UxPd2jz9CbWM.WOKA3gGupjJhnlNW",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Conjure Flames",
+	"system": {
+		"dc": "12",
+		"description": "<p>One target in far takes [[/r 2d6]] damage.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

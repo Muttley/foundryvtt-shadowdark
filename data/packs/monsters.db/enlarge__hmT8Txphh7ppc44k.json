@@ -1,0 +1,17 @@
+{
+	"_id": "hmT8Txphh7ppc44k",
+	"_key": "!actors.items!fG6DvfYS7QrXst2T.hmT8Txphh7ppc44k",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Enlarge",
+	"system": {
+		"description": "<p>1/day, +[[/r 1d6]] damage on melee attacks and ADV on STR checks for 3 rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

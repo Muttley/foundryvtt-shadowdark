@@ -1,0 +1,124 @@
+{
+	"_id": "2DS3bjKOf9DezfAW",
+	"_key": "!actors!2DS3bjKOf9DezfAW",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"K07C3fF7d5f3Tkug",
+		"Gsv3C87zjD9AT2Ya",
+		"CzdCAIdd3GOlK1cx",
+		"sObeVYQTUJ0hbuz5"
+	],
+	"name": "Drow, Drider",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Drider",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "16"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "29",
+				"value": "29"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "6"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> A monstrosity with the body of a giant spider and torso of a drow. </i></p><br>\n\t\t\t<p>AC 16 (mithral chainmail), HP 29, ATK 3 longsword +3 (1d8) or 2 longbow (far) +3 (1d8 + poison), MV near (climb), S +3, D +3, C +2, I +2, W +2, Ch +0, AL C, LV 6</p><br>\n\t\t\t<p> Poison. DC 15 CON or paralyzed 1d4 rounds.<br><br>Sunblind. Blinded in bright light.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

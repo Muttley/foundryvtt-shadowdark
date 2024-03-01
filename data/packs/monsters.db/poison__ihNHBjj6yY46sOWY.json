@@ -1,0 +1,17 @@
+{
+	"_id": "ihNHBjj6yY46sOWY",
+	"_key": "!actors.items!htIqv4tP9IdZXytD.ihNHBjj6yY46sOWY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 15 CON or fall into natural, deep sleep for [[/r 1d8]] hours.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

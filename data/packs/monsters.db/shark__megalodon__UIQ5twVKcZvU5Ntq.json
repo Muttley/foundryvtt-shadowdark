@@ -1,0 +1,122 @@
+{
+	"_id": "UIQ5twVKcZvU5Ntq",
+	"_key": "!actors!UIQ5twVKcZvU5Ntq",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"SIXyxQAHw4V6pTFy",
+		"uMJdEBXg0XS4VjDx"
+	],
+	"name": "Shark, Megalodon",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Megalodon",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "13"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "38",
+				"value": "38"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "doubleNear",
+		"moveNote": "swim",
+		"notes": "\n\t\t\t<p><i> Primordial sharks the size of whales. Savage hunters. </i></p><br>\n\t\t\t<p>AC 13, HP 38, ATK 3 bite +7 (2d8), MV double near (swim), S +5, D +1, C +2, I -3, W +1, Ch -3, AL N, LV 8</p><br>\n\t\t\t<p> Fearless. Immune to morale checks.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

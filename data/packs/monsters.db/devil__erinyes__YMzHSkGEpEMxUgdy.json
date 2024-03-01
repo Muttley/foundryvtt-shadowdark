@@ -1,0 +1,123 @@
+{
+	"_id": "YMzHSkGEpEMxUgdy",
+	"_key": "!actors!YMzHSkGEpEMxUgdy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"Fqh66rUwtvOgtzug",
+		"V2IFIHqJ9AwiAdSK",
+		"zy05UNsqEu4JT99n"
+	],
+	"name": "Devil, Erinyes",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Erinyes",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "17"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "43",
+				"value": "43"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "9"
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> Raven-winged, resplendent beings in polished, black armor and helms with curved horns. </i></p><br>\n\t\t\t<p>AC 17 ( +1 plate mail ), HP 43, ATK 3 greatsword +8 (1d12) or 2 longbow (far) +8 (1d8 + poison), MV double near (fly), S +4, D +4, C +3, I +4, W +4, Ch +5, AL C, LV 9</p><br>\n\t\t\t<p> Poison. DC 15 CON or target's eyes go jet black and it turns on its allies for 1d4 rounds. DC 15 WIS on turn to end effect.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

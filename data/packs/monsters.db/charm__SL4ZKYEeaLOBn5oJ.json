@@ -1,0 +1,24 @@
+{
+	"_id": "SL4ZKYEeaLOBn5oJ",
+	"_key": "!actors.items!ujGKTn1eoqlnItZa.SL4ZKYEeaLOBn5oJ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charm",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>One humanoid in near DC 15 CHA or bewitched by cubi for [[/r 1d6]] hours.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "hgEofOCz1SjkFXdz",
+	"_key": "!actors.items!x1BKTIcz2QZoW8ZV.hgEofOCz1SjkFXdz",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "W +1, Ch -2, Al N, Lv 6 Impervious",
+	"system": {
+		"description": "<p>Only damaged by magical sources. Fire immune. Inferno. All within near DC 15 DEX or [[/r 3d8]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "ca1DCepKYZqeRL9P",
+	"_key": "!actors.items!n6BtkQTacWfZeHUM.ca1DCepKYZqeRL9P",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "8",
+	"system": {
+		"description": "<p>Disintegrate. DC 15 DEX or [[/r 5d8]] damage (object destroyed).</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,122 @@
+{
+	"_id": "ZTL2haxZ2T9LmoQL",
+	"_key": "!actors!ZTL2haxZ2T9LmoQL",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"V83lPUQ6huL3YUes",
+		"32pw5UGIwLp8QuiC"
+	],
+	"name": "Ankheg",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Ankheg",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "14",
+				"value": "14"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "3"
+		},
+		"move": "near",
+		"moveNote": "burrow",
+		"notes": "\n\t\t\t<p><i> Horse-sized, rust-brown insects. They burrow vast, underground warrens into the bedrock. </i></p><br>\n\t\t\t<p>AC 14, HP 14, ATK 1 bite +4 (1d6) or 1 acid spray (near) +4 (2d6), MV near (burrow), S +2, D +2, C +1, I -2, W +1, Ch -2, AL N, LV 3</p><br>\n\t\t\t<p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

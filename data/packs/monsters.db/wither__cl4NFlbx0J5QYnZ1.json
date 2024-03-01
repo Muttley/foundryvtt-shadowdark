@@ -1,0 +1,23 @@
+{
+	"_id": "cl4NFlbx0J5QYnZ1",
+	"_key": "!actors.items!nXJfMttq3bPfnMoG.cl4NFlbx0J5QYnZ1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Wither",
+	"system": {
+		"dc": "14",
+		"description": "<p>[[/r 4d8]] damage to enemies within a near-sized cube centered on lich.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

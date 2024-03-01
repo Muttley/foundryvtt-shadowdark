@@ -1,0 +1,17 @@
+{
+	"_id": "Q6hBrdCpcd99rSpb",
+	"_key": "!actors.items!PhuYuipgvHPrSwuy.Q6hBrdCpcd99rSpb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Fire Breath",
+	"system": {
+		"description": "<p>Fills a near-sized cube extending from chimera. DC 15 DEX or [[/r 4d6]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

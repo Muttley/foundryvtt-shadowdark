@@ -1,0 +1,17 @@
+{
+	"_id": "roc80JTpCWlZ9Xi5",
+	"_key": "!actors.items!x1BKTIcz2QZoW8ZV.roc80JTpCWlZ9Xi5",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Impervious",
+	"system": {
+		"description": "<p>Only damaged by magical sources. Avalanche. All within close DC 15 STR or entombed for [[/r 1d4]] rounds under mounds of earth. ELEMENTAL, FIRE A roaring column of flames. AC 15, HP 30/43, ATK 3 slam +6 ([[/r 2d10]]/[[/r 3d10]]) or 1 inferno, MV near (fly), S +4, D +3, C +3, I -2,</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

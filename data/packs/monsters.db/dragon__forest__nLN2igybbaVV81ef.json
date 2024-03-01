@@ -1,0 +1,123 @@
+{
+	"_id": "nLN2igybbaVV81ef",
+	"_key": "!actors!nLN2igybbaVV81ef",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"crdpjaGVXuFRoivq",
+		"ehqsou5zB6NWrgCy",
+		"hLRJZZREo010ZRgT"
+	],
+	"name": "Dragon, Forest",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Forest Dragon",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "16"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "58",
+				"value": "58"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "12"
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> The smell of wet loam follows this dragon. Its jade scales bristle with barbed thorns. </i></p><br>\n\t\t\t<p>AC 16, HP 58, ATK 3 rend +8 (2d8) or 1 poison breath, MV double near (fly), S +4, D +3, C +4, I +3, W +3, Ch +4, AL N, LV 12</p><br>\n\t\t\t<p> Animate Plants. 1/day, in place of attacks. Vines grab at all enemies within double near of dragon. DC 15 DEX or unable to move 1d4 rounds.<br><br>Poison Breath. Fills a near-sized cube extending from dragon. DC 15 CON or 3d8 damage.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

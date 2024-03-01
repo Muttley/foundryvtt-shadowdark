@@ -1,0 +1,17 @@
+{
+	"_id": "hLRJZZREo010ZRgT",
+	"_key": "!actors.items!nLN2igybbaVV81ef.hLRJZZREo010ZRgT",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Animate Plants",
+	"system": {
+		"description": "<p>1/day, in place of attacks. Vines grab at all enemies within double near of dragon. DC 15 DEX or unable to move [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

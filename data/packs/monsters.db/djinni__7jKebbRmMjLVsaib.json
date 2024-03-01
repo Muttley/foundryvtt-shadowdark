@@ -1,0 +1,124 @@
+{
+	"_id": "7jKebbRmMjLVsaib",
+	"_key": "!actors!7jKebbRmMjLVsaib",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"pLTs54ZV0R9rih7Q",
+		"7lsHGHA0PYuLmwcc",
+		"0HT1YfLmb2EbZNL4",
+		"jBwR2yundXJmpt08"
+	],
+	"name": "Djinni",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Djinni",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "48",
+				"value": "48"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "10"
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> Azure-blue, jovial humanoids made of air and roiling wind. Infused with potent magic. </i></p><br>\n\t\t\t<p>AC 14, HP 48, ATK 3 scimitar +7 (1d12) or 1 whirlwind, MV double near (fly), S +4, D +4, C +3, I +4, W +3, Ch +3, AL N, LV 10</p><br>\n\t\t\t<p> Impervious. Only damaged by magical sources.<br><br>Whirlwind. Transform into a lashing tornado. All enemies within near DC 18 DEX or thrown 2d100 feet in a random direction.<br><br>Wish. Cast wish once a week for a mortal, no spellcasting check.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

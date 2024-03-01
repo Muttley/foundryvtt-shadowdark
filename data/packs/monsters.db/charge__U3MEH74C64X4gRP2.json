@@ -1,0 +1,24 @@
+{
+	"_id": "U3MEH74C64X4gRP2",
+	"_key": "!actors.items!IbqVWVTK1c9e81YD.U3MEH74C64X4gRP2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charge",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

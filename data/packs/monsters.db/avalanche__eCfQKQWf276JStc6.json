@@ -1,0 +1,24 @@
+{
+	"_id": "eCfQKQWf276JStc6",
+	"_key": "!actors.items!x1BKTIcz2QZoW8ZV.eCfQKQWf276JStc6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Avalanche",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

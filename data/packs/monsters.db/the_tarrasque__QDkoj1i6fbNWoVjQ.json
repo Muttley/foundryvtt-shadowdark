@@ -1,0 +1,130 @@
+{
+	"_id": "QDkoj1i6fbNWoVjQ",
+	"_key": "!actors!QDkoj1i6fbNWoVjQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"5378MKl2FkFyEgQQ",
+		"5FjO7ERDDKsmRA2d",
+		"TkA5yaquuypqHidG",
+		"3x1TpEz8eIAlNJmE",
+		"tBUZn12EPPM4ox3p",
+		"RZUec9iEQlEYNZG6",
+		"wemBzCHEtwDwpFea",
+		"BNXyI5MsjYnemm3L",
+		"ymbf5Lbd1WAjXCwa",
+		"Fa89lTAUn41rMown"
+	],
+	"name": "The Tarrasque",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 4,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "The Tarrasque",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 4
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -3
+			},
+			"con": {
+				"mod": 5
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 7
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "22"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "140",
+				"value": "140"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "30"
+		},
+		"move": "tripleNear",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> A colossal, four-legged reptile with crocodilian jaws, amber scales, and a diamond-hard, spiked carapace. It towers overhead like a mountain, able to swallow entire villages in one gulp. The tarrasque hibernates deep in the earth or at the bottom of the sea for centuries, only awakening long enough to fill its vast belly in an indiscriminate rampage of terror and destruction. There is only one tarrasque, and it is the most dreaded creature to walk the earth. </i></p><br>\n\t\t\t<p>AC 22, HP 140, ATK 4 thrash (near) +13 (3d10 + sever) and 1 bite (near) +13 (5d10 + sever + swallow), MV triple near (burrow, swim), S +7, D +2, C +5, I -3, W +1, Ch -3, AL N, LV 30</p><br>\n\t\t\t<p> Legendary. Only damaged by magical sources. Hostile spells targeting the tarrasque are DC 18 to cast.<br><br>Deep Dweller. Immune to harm from fire and cold. Amphibious.<br><br>Permanent Death. Cannot be permanently killed unless a wish spell is cast on it while it is at 0 HP.<br><br>Rampage. In place of attacks, move far in a straight line and make one bite attack. On a hit, triple damage.<br><br>Reflective Carapace. Immune to rays, blasts, or bolts of energy. 1:6 chance these are reflected back at their originator.<br><br>Regeneration. Regains 4d10 lost HP at the beginning of its turn.<br><br>Sever. On a natural attack roll of 18+, the attack also severs a random limb. 1d6: 1. Head, 2-4. Arm, 5-6. Leg.<br><br>Swallow. DC 18 STR or swallowed whole. Total darkness inside and 4d10 damage per round. Tarrasque regurgitates all swallowed if dealt at least 30 damage in one round to the inside of its gullet.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

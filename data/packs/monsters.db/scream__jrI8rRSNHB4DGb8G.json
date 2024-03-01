@@ -1,0 +1,17 @@
+{
+	"_id": "jrI8rRSNHB4DGb8G",
+	"_key": "!actors.items!zFklgrobEQJT6RPT.jrI8rRSNHB4DGb8G",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Scream",
+	"system": {
+		"description": "<p>Creatures who hear in double near DC 12 CHA or paralyzed for [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

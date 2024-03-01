@@ -1,0 +1,23 @@
+{
+	"_id": "LvXqq0KezsmreIjP",
+	"_key": "!actors.items!u0Gfe3hAAhlL3vNQ.LvXqq0KezsmreIjP",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Arcane Armor",
+	"system": {
+		"dc": "12",
+		"description": "<p>AC 16 for [[/r 2d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "2d4"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "xrRpC1XvhYcYHoJ1",
+	"_key": "!actors.items!gQeOoS2e98xCfyRg.xrRpC1XvhYcYHoJ1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Skitter",
+	"system": {
+		"dc": "12",
+		"description": "<p>Self. Climb like a spider for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

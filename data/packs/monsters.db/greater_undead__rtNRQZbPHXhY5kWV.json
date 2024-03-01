@@ -1,0 +1,17 @@
+{
+	"_id": "rtNRQZbPHXhY5kWV",
+	"_key": "!actors.items!FFFOCpOzoMSAAtBM.rtNRQZbPHXhY5kWV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Greater Undead",
+	"system": {
+		"description": "<p>Immune to morale checks. Only damaged by silver or magical sources.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

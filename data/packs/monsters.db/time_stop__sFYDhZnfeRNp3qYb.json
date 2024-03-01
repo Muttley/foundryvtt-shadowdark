@@ -1,0 +1,23 @@
+{
+	"_id": "sFYDhZnfeRNp3qYb",
+	"_key": "!actors.items!1M8hSBxig3UdkxXx.sFYDhZnfeRNp3qYb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Time Stop",
+	"system": {
+		"dc": "15",
+		"description": "<p>Self. Time freezes for everyone except Rathgamnon for [[/r 1d4]] rounds. Everything that occurs during the time freeze happens simultaneously when the spell ends.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

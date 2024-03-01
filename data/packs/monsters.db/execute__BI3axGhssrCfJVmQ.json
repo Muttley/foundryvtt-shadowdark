@@ -1,0 +1,17 @@
+{
+	"_id": "BI3axGhssrCfJVmQ",
+	"_key": "!actors.items!o6Pmvexi4HqQ2Dds.BI3axGhssrCfJVmQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Execute",
+	"system": {
+		"description": "<p>Deals x3 damage against surprised targets.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "iA9dELHqY1asMOv6",
+	"_key": "!actors.items!loTYq5ziLn0zhhD1.iA9dELHqY1asMOv6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Beguile",
+	"system": {
+		"dc": "11",
+		"description": "<p>Focus. One target in near of LV 2 or less is stupefied for the duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

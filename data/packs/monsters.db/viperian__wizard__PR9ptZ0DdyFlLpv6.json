@@ -1,0 +1,125 @@
+{
+	"_id": "PR9ptZ0DdyFlLpv6",
+	"_key": "!actors!PR9ptZ0DdyFlLpv6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"xt5YkFCGU6JR7DYu",
+		"mOY71xDqA9sICBd9",
+		"kUYVzTqqqk7JUHCC",
+		"qXaKBFrQ1VxZdtLg",
+		"H4ZqOd2o9wzXeyDe"
+	],
+	"name": "Viperian, Wizard",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Viperian Wizard",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 1
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "13"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "37",
+				"value": "37"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> Thin viperians with scales tinged in black. They wear silk robes and silver, serpentine jewelry. </i></p><br>\n\t\t\t<p>AC 13, HP 37, ATK 1 dagger (close/ near) +2 (1d4) or 2 spell +5, MV near, S +0, D +1, C +0, I +3, W +1, Ch +1, AL C, LV 8</p><br>\n\t\t\t<p> Hiss (INT Spell). DC 12. End one spell within far.<br><br>Summon Cobra (INT Spell). DC 13. Summon 1d4 loyal cobras that appear within near. They leave in 1d4 rounds.<br><br>Venom (INT Spell). DC 12. One target in far takes 2d8 damage.<br><br>Whispers (INT Spell). DC 14. Focus. All enemies within near of viperian wizard have DISADV on spellcasting checks for the duration.</p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": "2",
+		"spellcastingBonus": 5
+	},
+	"type": "NPC"
+}

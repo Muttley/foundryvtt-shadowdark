@@ -1,0 +1,23 @@
+{
+	"_id": "qie284tGPVwJB898",
+	"_key": "!actors.items!u0Gfe3hAAhlL3vNQ.qie284tGPVwJB898",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Levitate",
+	"system": {
+		"dc": "12",
+		"description": "<p>Close. Focus. Hover near for duration, vertical movement only.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

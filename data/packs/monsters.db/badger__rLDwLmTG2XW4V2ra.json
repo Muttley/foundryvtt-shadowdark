@@ -1,0 +1,122 @@
+{
+	"_id": "rLDwLmTG2XW4V2ra",
+	"_key": "!actors!rLDwLmTG2XW4V2ra",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"W1TjYClgi5YNzr4M",
+		"eeFpHIr0mJd9g9Xd"
+	],
+	"name": "Badger",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Badger",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 0
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "11"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "5",
+				"value": "5"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "1"
+		},
+		"move": "near",
+		"moveNote": "burrow",
+		"notes": "\n\t\t\t<p><i> Fierce, clawed burrowers with black-and-white face stripes. </i></p><br>\n\t\t\t<p>AC 11, HP 5, ATK 2 claw +2 (1d4), MV near (burrow), S +2, D +0, C +1, I -3, W +1, Ch -2, AL N, LV 1</p><br>\n\t\t\t<p> Rage. 1/day, immune to morale checks, +1d4 damage (3 rounds).</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

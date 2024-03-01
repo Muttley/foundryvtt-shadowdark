@@ -1,0 +1,124 @@
+{
+	"_id": "1Mkr9xdThud7My1f",
+	"_key": "!actors!1Mkr9xdThud7My1f",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"TzJvgBFzP1o2jGoW",
+		"rPfsZntmsVQJ4HJM",
+		"WuCil5wWtfUQmQ7c",
+		"4CZucmFkNh90WszK"
+	],
+	"name": "Medusa",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Medusa",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "38",
+				"value": "38"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> Immortal women with coiling snakes for hair and scaled skin. </i></p><br>\n\t\t\t<p>AC 14, HP 38, ATK 1 snake bite +6 (1d6 + poison), MV near, S +2, D +1, C +2, I +2, W +3, Ch +4, AL C, LV 8</p><br>\n\t\t\t<p> Godborn. Hostile spells targeting the medusa are DC 15 to cast.<br><br>Petrify. Any creature (including medusa) who looks directly at medusa, DC 15 CON or petrified.<br><br>Poison. DC 15 CON or go to 0 HP.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

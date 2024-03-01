@@ -1,0 +1,24 @@
+{
+	"_id": "feSKDifUEh05K4nr",
+	"_key": "!actors.items!zFklgrobEQJT6RPT.feSKDifUEh05K4nr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Scream",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

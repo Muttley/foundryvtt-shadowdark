@@ -1,0 +1,24 @@
+{
+	"_id": "g1gcos1CsJ4U3th3",
+	"_key": "!actors.items!sYsnu9Rbewu7AaRt.g1gcos1CsJ4U3th3",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Poison Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All within near, DC 15 CON or [[/r 8d6]] damage.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

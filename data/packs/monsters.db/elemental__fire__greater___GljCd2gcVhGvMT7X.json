@@ -1,0 +1,123 @@
+{
+	"_id": "GljCd2gcVhGvMT7X",
+	"_key": "!actors!GljCd2gcVhGvMT7X",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"csLVNMCwF4GuOtIJ",
+		"aU8c3z7zury24qXn",
+		"4Tl7m7HJfzs7uJyU"
+	],
+	"name": "Elemental, Fire (Greater)",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Greater Fire Elemental",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "15"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "43",
+				"value": "43"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "9"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> A roaring column of flames. </i></p><br>\n\t\t\t<p>AC 15, HP 43, ATK 3 slam +6 (2d10/3d10) or 1 inferno, MV near (fly), S +4, D +3, C +3, I -2, W +1, Ch -2, AL N, LV 9</p><br>\n\t\t\t<p> Impervious. Only damaged by magical sources. Fire immune.<br><br>Inferno. All within near DC 15 DEX or 3d8 damage.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

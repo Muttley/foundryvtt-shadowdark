@@ -6,10 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"QtWUbHZYarIiJg9G",
-		"QObPMGDUBUzGVf4C",
-		"pp4pDGeGwU6yS1GD",
-		"YJSI9RFpVCCgVjKv"
+		"vkh0SPBmcn7BJDV6",
+		"VPHkPwQxG5QUjtVV"
 	],
 	"name": "Acolyte",
 	"prototypeToken": {
@@ -25,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -104,24 +102,24 @@
 		"alignment": "lawful",
 		"attributes": {
 			"ac": {
-				"value": 12
+				"value": "12"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 4,
-				"value": 4
+				"max": "4",
+				"value": "4"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 1
+			"value": "1"
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A religious trainee who knows basic rites and rituals.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 4, <strong>ATK</strong> 1 mace +1 (1d6) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C </strong>+0, <strong>I</strong> -1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> L, <strong>LV</strong> 1</p><p></p><p><strong>Healing Touch (WIS Spell).</strong> DC 11. Heal one creature within close for 1d4 HP.</p>",
+		"notes": "\n\t\t\t<p><i> A religious trainee who knows basic rites and rituals. </i></p><br>\n\t\t\t<p>AC 12, HP 4, ATK 1 mace +1 (1d6) or 1 spell +2, MV near, S +1, D -1, C +0, I -1, W +2, Ch +0, AL L, LV 1</p><br>\n\t\t\t<p> Healing Touch (WIS Spell). DC 11. Heal one creature within close for 1d4 HP.</p>",
 		"spellcastingAbility": "wis",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"spellcastingAttackNum": "1",
+		"spellcastingBonus": 2
 	},
 	"type": "NPC"
 }

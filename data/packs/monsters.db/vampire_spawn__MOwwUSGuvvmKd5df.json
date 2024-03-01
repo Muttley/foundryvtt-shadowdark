@@ -1,0 +1,124 @@
+{
+	"_id": "MOwwUSGuvvmKd5df",
+	"_key": "!actors!MOwwUSGuvvmKd5df",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"LKTlvZijnNSSwlAX",
+		"RpwvbE5luUp8QGnA",
+		"w6in9gtAeUXoCCcn",
+		"JzcD5wJa37C0yQ5n"
+	],
+	"name": "Vampire Spawn",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Vampire Spawn",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 2
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -1
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "13"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "25",
+				"value": "25"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "5"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> Lesser, feral vampires born from the bite of their vampiric sires. Bloodthirsty and savage. They rarely leave a victim alive. </i></p><br>\n\t\t\t<p>AC 13 (leather), HP 25, ATK 2 bite +4 (1d8 + blood drain), MV near (climb), S +3, D +2, C +3, I -1, W +1, Ch +2, AL C, LV 5</p><br>\n\t\t\t<p> Greater Undead. Immune to morale checks. Only damaged by silver or magical sources.<br><br>Blood Drain.<br><br>Vampire heals 2d6 HP and target permanently loses 1d4 CON. At 0 CON, target dies and rises as a vampire spawn. Vampire. Must sleep in a coffin daily or loses 2d6 HP each day that can't be healed until resting in coffin. Takes 3d8 damage each round while in direct sunlight. Cannot be killed unless pierced through heart with a wooden stake while at 0 HP.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

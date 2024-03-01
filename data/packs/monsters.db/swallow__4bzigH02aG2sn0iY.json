@@ -1,0 +1,17 @@
+{
+	"_id": "4bzigH02aG2sn0iY",
+	"_key": "!actors.items!Bw6vYpycdr7ZM516.4bzigH02aG2sn0iY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Swallow",
+	"system": {
+		"description": "<p>On a natural attack roll of 18-20, target is swallowed. Total darkness inside and [[/r 2d10]] damage per round. Remorhaz regurgitates all swallowed if dealt at least 20 damage in one round to the inside of its gullet.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

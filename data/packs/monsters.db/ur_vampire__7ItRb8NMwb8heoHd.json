@@ -1,0 +1,17 @@
+{
+	"_id": "7ItRb8NMwb8heoHd",
+	"_key": "!actors.items!dDzkNIpe4GTKT68X.7ItRb8NMwb8heoHd",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Ur-vampire",
+	"system": {
+		"description": "<p>Must sleep in sarcophagus at least once per moon cycle or loses [[/r 2d8]] HP per day that cannot heal until sleeping in sarcophagus. Takes [[/r 3d8]] damage each round while in direct sunlight. Cannot be killed unless pierced through heart while at 0 HP with a wooden stake carved from a tree from the Tal-Yool jungle.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

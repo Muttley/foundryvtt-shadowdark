@@ -1,0 +1,124 @@
+{
+	"_id": "MkgKhJgIGiXwefYc",
+	"_key": "!actors!MkgKhJgIGiXwefYc",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"4cFUJZ7sXaA2SZqP",
+		"UOTV7kXadGJ0yeBS",
+		"YKfzE6KhCzFk8R9P",
+		"3O8xqa7WLfWU1wXR"
+	],
+	"name": "Devil, Imp",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 0.5,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Imp",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 0.5
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 2
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 1
+			},
+			"str": {
+				"mod": -2
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "13"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "9",
+				"value": "9"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "2"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> Cat-sized, red devils with oversized wings and tail, tiny horns, and cowardly demeanors. </i></p><br>\n\t\t\t<p>AC 13, HP 9, ATK 1 stinger +3 (1d4 + poison), MV near (fly), S -2, D +3, C +0, I +1, W +0, Ch +2, AL C, LV 2</p><br>\n\t\t\t<p> Impervious. Fire immune.<br><br>Contract. Can grant mighty boons and patronage on behalf of an archdevil in exchange for a sworn soul. ADV on related Charisma checks.<br><br>Poison. DC 12 CON or fitful sleep for 1d4 hours.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

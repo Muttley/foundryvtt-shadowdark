@@ -1,0 +1,17 @@
+{
+	"_id": "qcnVu9ZGiVYor7G8",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.qcnVu9ZGiVYor7G8",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison Web",
+	"system": {
+		"description": "<p>One target stuck in place and [[/r 1d4]] damage/round. DC 12 DEX on turn to escape.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

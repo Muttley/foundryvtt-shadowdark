@@ -1,0 +1,24 @@
+{
+	"_id": "GdkSj5sl5k5amA1H",
+	"_key": "!actors.items!zLDg6vIYEj4wB0lQ.GdkSj5sl5k5amA1H",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Slow",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Far range, one target. DC 15 CON or speed halved [[/r 1d4]] rds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

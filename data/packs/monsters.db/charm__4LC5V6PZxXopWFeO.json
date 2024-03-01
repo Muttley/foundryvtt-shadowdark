@@ -1,0 +1,24 @@
+{
+	"_id": "4LC5V6PZxXopWFeO",
+	"_key": "!actors.items!O5XBIGGgaZynfGwh.4LC5V6PZxXopWFeO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charm",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>One humanoid target who can see vampire within near, DC 15 CHA or under vampire's control for [[/r 1d4]] days.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

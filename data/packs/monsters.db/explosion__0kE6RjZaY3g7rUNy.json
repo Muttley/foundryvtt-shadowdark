@@ -1,0 +1,17 @@
+{
+	"_id": "0kE6RjZaY3g7rUNy",
+	"_key": "!actors.items!zIXIdghXgOBz1UcD.0kE6RjZaY3g7rUNy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Explosion",
+	"system": {
+		"description": "<p>Upon death, creatures within double near of phoenix DC 18 DEX or [[/r 10d6]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "nX2GodHVVxUQZbWe",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.nX2GodHVVxUQZbWe",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Phase",
+	"system": {
+		"dc": "13",
+		"description": "<p>Self. Teleport up to one mile.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

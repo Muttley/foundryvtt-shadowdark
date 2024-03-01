@@ -1,0 +1,124 @@
+{
+	"_id": "htIqv4tP9IdZXytD",
+	"_key": "!actors!htIqv4tP9IdZXytD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"wYUB0pTQsG5qflbR",
+		"JaSXPIGnHadWT4PK",
+		"ihNHBjj6yY46sOWY",
+		"V7ZuG1IKYk712kf1"
+	],
+	"name": "Couatl",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Couatl",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": "16"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "42",
+				"value": "42"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "9"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> A human-sized snake with scales made of jewels and a corona of iridescent feathers. </i></p><br>\n\t\t\t<p>AC 16, HP 42, ATK 3 bite +6 (2d6 + poison), MV near (fly), S +2, D +3, C +2, I +4, W +4, Ch +5, AL L, LV 9</p><br>\n\t\t\t<p> Change Shape. In place of attacks, transform into any similarly-sized creature.<br><br>Poison. DC 15 CON or fall into natural, deep sleep for 1d8 hours.<br><br>Restore. In place of attacks, touch one creature to remove a curse, affliction, or heal 3d8 HP.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

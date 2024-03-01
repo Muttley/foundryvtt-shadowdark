@@ -1,0 +1,17 @@
+{
+	"_id": "GXYeUjUZYjLrQ5hu",
+	"_key": "!actors.items!WBpG4JxtCZrbwP9n.GXYeUjUZYjLrQ5hu",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Crown Of Darkness",
+	"system": {
+		"description": "<p>All hostile spells are reflected at caster with a spellcasting check less than 20.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

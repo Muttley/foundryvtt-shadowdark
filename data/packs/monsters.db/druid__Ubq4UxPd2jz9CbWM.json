@@ -1,0 +1,126 @@
+{
+	"_id": "Ubq4UxPd2jz9CbWM",
+	"_key": "!actors!Ubq4UxPd2jz9CbWM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"wMTJI1CFM1Jbxbbn",
+		"kvFw1o1dlNAKSwtg",
+		"WOKA3gGupjJhnlNW",
+		"MiRnhG4Mc08TJjMD",
+		"wDiZb9sh67n8qwZx",
+		"WVDf9VgyfO5ow4kV"
+	],
+	"name": "Druid",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Druid",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "11"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "31",
+				"value": "31"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "7"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> A wizard of the wilds holding a knotted staff and wearing a mossy cloak of deep viridian. </i></p><br>\n\t\t\t<p>AC 11, HP 31, ATK 1 staff +0 (1d4) or 2 spell +5, MV near, S +0, D +1, C +0, I +4, W +3, Ch +0, AL N, LV 7</p><br>\n\t\t\t<p> Barkskin (INT Spell). Self. DC 13. AC becomes 15 for 5 rounds.<br><br>Conjure Flames (INT Spell). DC 12. One target in far takes 2d6 damage.<br><br>Imbue (INT Spell). Self. DC 13. Staff becomes a +3 magic weapon for 10 rounds.<br><br>Summon Bear (INT Spell). DC 14. Summon a loyal brown bear that appears within near. It stays for 5 rounds.<br><br>Thunderclap (INT Spell). DC 13. Fills a near-sized cube extending from druid. Creatures within are thrown 2d20 feet in a random direction.</p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": "2",
+		"spellcastingBonus": 5
+	},
+	"type": "NPC"
+}

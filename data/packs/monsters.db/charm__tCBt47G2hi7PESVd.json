@@ -1,0 +1,17 @@
+{
+	"_id": "tCBt47G2hi7PESVd",
+	"_key": "!actors.items!vXaqgfDykZPdXnIm.tCBt47G2hi7PESVd",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Charm",
+	"system": {
+		"description": "<p>Near, one creature, DC 14 CHA or friendship for [[/r 1d8]] days.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

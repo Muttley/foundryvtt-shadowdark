@@ -1,0 +1,17 @@
+{
+	"_id": "QoPzLlH27fXwXJC1",
+	"_key": "!actors.items!NGgYDsiv8gFgqHYk.QoPzLlH27fXwXJC1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Toxin",
+	"system": {
+		"description": "<p>DC 12 CON or paralyzed for [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

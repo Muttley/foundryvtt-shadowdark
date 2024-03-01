@@ -1,0 +1,23 @@
+{
+	"_id": "hOjmgnpTxZl3BEbY",
+	"_key": "!actors.items!NULOWjC0pgqzuRsT.hOjmgnpTxZl3BEbY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Whispers",
+	"system": {
+		"dc": "12",
+		"description": "<p>Hostile spells cast on one target in near are DC 9 for [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

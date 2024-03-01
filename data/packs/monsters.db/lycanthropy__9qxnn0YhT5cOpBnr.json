@@ -1,0 +1,17 @@
+{
+	"_id": "9qxnn0YhT5cOpBnr",
+	"_key": "!actors.items!1Z2r4GggLt8aNrP8.9qxnn0YhT5cOpBnr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Lycanthropy",
+	"system": {
+		"description": "<p>If 12 or more damage from the same werewolf, contract lycanthropy.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

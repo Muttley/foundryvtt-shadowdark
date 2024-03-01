@@ -1,0 +1,133 @@
+{
+	"_id": "n6BtkQTacWfZeHUM",
+	"_key": "!actors!n6BtkQTacWfZeHUM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"3LzfRsh6EZc1gkqt",
+		"vxQ4gFzNFsnIwqY7",
+		"dReHiKg7s1DUX2HH",
+		"N46Dm3DyVkS1JoQh",
+		"XToLStDutxQGg9dz",
+		"fGljGM8mFI0phmni",
+		"csz2t0U1ADBJji3V",
+		"j80J7SCpJrZMPxAI",
+		"Cj6986kHr1oOYOkj",
+		"nCFHDWfluuoEyBZg",
+		"ca1DCepKYZqeRL9P",
+		"eqxOChbUt16CRhq3",
+		"vd4MtsdUoib9od1V"
+	],
+	"name": "The Ten-eyed Oracle",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "The Ten-eyed Oracle",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 5
+			},
+			"int": {
+				"mod": 5
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "17"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "85",
+				"value": "85"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "18"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> A floating mass of rubbery skin crusted with barnacles. Its ten eyestalks writhe like snakes, and a deep, circular scar mars its central body, blinding what was once a large eye above a lipless maw. The Ten-Eyed Oracle stalks the Shadowdark, burbling mad prophesies and somehow moving freely between the lightless fathoms of the earth. The keepers of the deep lore suspect The Ten-Eyed Oracle was once a benevolent ally of mankind, but an unknown calamity drove it to insanity and reckless hatred. </i></p><br>\n\t\t\t<p>AC 17, HP 85, ATK 2d4 eyestalk ray, MV near (fly), S +4, D +5, C +4, I +5, W +4, Ch +4, AL C, LV 18</p><br>\n\t\t\t<p> Legendary. Only damaged by magical sources. Hostile spells targeting The Ten-Eyed Oracle are DC 18 to cast.<br><br>Eyestalk Ray. Each ray can shoot once per round and target one creature or an object up to 1,000 pounds (up to four on same target).<br><br>1. Charm. DC 15 CHA or become ally for 1d4 rounds.<br><br>2. Hold. DC 15 STR or paralyzed 1d4 rounds.<br><br>3. Sleep. DC 15 WIS or asleep 1d4 rounds.<br><br>4. Polymorph. DC 15 INT or turned into vermin for 1d4 rounds.<br><br>5. Cancel. DC 15 DEX or all magical effects on target end.<br><br>6. Confusion. DC 15 WIS or attack a random ally within near.<br><br>7. Telekinesis. DC 15 STR or hover target up to double near.<br><br>8. Disintegrate. DC 15 DEX or 5d8 damage (object destroyed).<br><br>9. Petrify. DC 15 CON or petrified.<br><br>10. Death. DC 15 CON or drop to 0 HP with a death timer of 1.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

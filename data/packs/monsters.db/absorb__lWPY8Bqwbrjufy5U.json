@@ -1,0 +1,23 @@
+{
+	"_id": "lWPY8Bqwbrjufy5U",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.lWPY8Bqwbrjufy5U",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Absorb",
+	"system": {
+		"dc": "13",
+		"description": "<p>Near, one target. Target loses the ability to cast one random spell until completing a rest, and Mordanticus regains a lost spell of the same tier or less.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

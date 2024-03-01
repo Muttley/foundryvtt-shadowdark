@@ -1,0 +1,124 @@
+{
+	"_id": "FFFOCpOzoMSAAtBM",
+	"_key": "!actors!FFFOCpOzoMSAAtBM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"gcAlvpWTwfqixPVy",
+		"rtNRQZbPHXhY5kWV",
+		"eljpXWiKJWWhn4vC",
+		"atTJagQpeK7iCciK"
+	],
+	"name": "Wraith",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Wraith",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 0
+			},
+			"str": {
+				"mod": -4
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "14"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "36",
+				"value": "36"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "8"
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> A shadowy spirit seething with anger and malice. Its presence is unsettling to animals. </i></p><br>\n\t\t\t<p>AC 14, HP 36, ATK 3 death touch +6 (1d10 + life drain), MV near (fly), S -4, D +4, C +0, I +0, W +0, Ch +3, AL C, LV 8</p><br>\n\t\t\t<p> Greater Undead. Immune to morale checks. Only damaged by silver or magical sources.<br><br>Incorporeal. In place of attacks, become corporeal or incorporeal.<br><br>Life Drain. 1d4 CON damage. Death if reduced to 0 CON.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

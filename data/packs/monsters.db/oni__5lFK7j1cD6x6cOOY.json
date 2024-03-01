@@ -1,0 +1,125 @@
+{
+	"_id": "5lFK7j1cD6x6cOOY",
+	"_key": "!actors!5lFK7j1cD6x6cOOY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"6oZxr5zhGBK07pbx",
+		"Y4TxUWhpCsDVIdx2",
+		"UOvSIDyLcBYc9BLi",
+		"5EBIFUlb78NbibN7",
+		"0aXeiauu5k4CR0kJ"
+	],
+	"name": "Oni",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Oni",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "11"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "33",
+				"value": "33"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "7"
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t\t\t<p><i> Cunning and sorcerous ogre-demons with shaggy white hair, blue skin, and yellow eyes. </i></p><br>\n\t\t\t<p>AC 11, HP 33, ATK 1 glaive (near) +6 (1d10) or 1 spell +5, MV near, S +5, D +1, C +2, I +2, W +1, Ch +3, AL C, LV 7</p><br>\n\t\t\t<p> Shapeshift. In place of attacks, turn into any humanoid or back into original form.<br><br>Fade (CHA Spell). DC 13. Self. Become invisible for 1d4 rounds.<br><br>Hellfrost (CHA Spell). DC 13. All within near-sized cube extending from oni 3d6 damage.<br><br>Mist (CHA Spell). DC 13. Self. Turn into mist that can fly double near. Lasts 2d4 rounds.</p>",
+		"spellcastingAbility": "cha",
+		"spellcastingAttackNum": "1",
+		"spellcastingBonus": 5
+	},
+	"type": "NPC"
+}

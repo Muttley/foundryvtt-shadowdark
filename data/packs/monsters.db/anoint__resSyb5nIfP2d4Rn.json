@@ -1,0 +1,23 @@
+{
+	"_id": "resSyb5nIfP2d4Rn",
+	"_key": "!actors.items!JC90MArULRVbuEtG.resSyb5nIfP2d4Rn",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Anoint",
+	"system": {
+		"dc": "12",
+		"description": "<p>Close. One weapon or armor becomes a magic +2 version for 10 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "0"
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

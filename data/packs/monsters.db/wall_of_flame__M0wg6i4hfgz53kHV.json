@@ -1,0 +1,17 @@
+{
+	"_id": "M0wg6i4hfgz53kHV",
+	"_key": "!actors.items!qhGc0sqh7IF61QYY.M0wg6i4hfgz53kHV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Wall Of Flame",
+	"system": {
+		"description": "<p>1/day, 20' high curtain of fire, double near length. Touching it deals [[/r 4d8]] damage. Lasts [[/r 2d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

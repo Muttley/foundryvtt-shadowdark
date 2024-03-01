@@ -1,0 +1,125 @@
+{
+	"_id": "NULOWjC0pgqzuRsT",
+	"_key": "!actors!NULOWjC0pgqzuRsT",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"arz7cRfnADh316pT",
+		"oBeuKZvij0g2zgQp",
+		"8kvT3OEQ3cgyiLJd",
+		"altvDmFC7K8k0nnc",
+		"hOjmgnpTxZl3BEbY"
+	],
+	"name": "Naga",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Naga",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": "16"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "43",
+				"value": "43"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "9"
+		},
+		"move": "near",
+		"moveNote": "climb",
+		"notes": "\n\t\t\t<p><i> Magic-wielding cobras towering ten feet high. Once a dominant species, they are now rare and reclusive, bitter to the last. </i></p><br>\n\t\t\t<p>AC 16, HP 43, ATK 2 bite +7 (2d6 + poison) and 1 spell +7, MV near (climb), S +4, D +1, C +3, I +2, W +2, Ch +4, AL C, LV 9</p><br>\n\t\t\t<p> Poison. DC 15 CON or paralyzed 1d4 rounds.<br><br>Agony (CHA Spell). DC 14. One target in near takes 3d8 damage.<br><br>Hypnotize (CHA Spell). DC 13. Focus. One target in near range who can see naga is helplessly stupefied for duration.<br><br>Whispers (CHA Spell). DC 12. Hostile spells cast on one target in near are DC 9 for 1d4 rounds.</p>",
+		"spellcastingAbility": "cha",
+		"spellcastingAttackNum": "1",
+		"spellcastingBonus": 7
+	},
+	"type": "NPC"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "zy05UNsqEu4JT99n",
+	"_key": "!actors.items!YMzHSkGEpEMxUgdy.zy05UNsqEu4JT99n",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 15 CON or target's eyes go jet black and it turns on its allies for [[/r 1d4]] rounds. DC 15 WIS on turn to end effect.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

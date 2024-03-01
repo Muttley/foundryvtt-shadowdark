@@ -1,0 +1,17 @@
+{
+	"_id": "GKlSt3dDM3LpPBna",
+	"_key": "!actors.items!9yP6RIuqDamZBg7d.GKlSt3dDM3LpPBna",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Mirage",
+	"system": {
+		"description": "<p>1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits dragon or illusions.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,122 @@
+{
+	"_id": "OlLJQUr70SrSBXnx",
+	"_key": "!actors!OlLJQUr70SrSBXnx",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"RTjaVhfwdLp9qDku",
+		"EYauSE5RyxFhjfJU"
+	],
+	"name": "Roc",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Roc",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "15"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "69",
+				"value": "69"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "15"
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t\t\t<p><i> Dragon-sized hawks that nest in remote mountains. </i></p><br>\n\t\t\t<p>AC 15, HP 69, ATK 4 rend +9 (2d10 + grab), MV double near (fly), S +5, D +3, C +2, I -2, W +2, Ch -2, AL N, LV 15</p><br>\n\t\t\t<p> Grab. DC 18 STR or target held. DC 18 STR on turn to break free.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

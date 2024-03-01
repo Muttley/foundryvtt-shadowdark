@@ -1,0 +1,23 @@
+{
+	"_id": "Qz8p4XNZdfhdQLh8",
+	"_key": "!actors.items!mcj9mZrU3h7ZVvaZ.Qz8p4XNZdfhdQLh8",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Unmake",
+	"system": {
+		"dc": "13",
+		"description": "<p>One target in far takes [[/r 3d8]] damage.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

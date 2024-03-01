@@ -1,0 +1,17 @@
+{
+	"_id": "sW59hWrB3P9Z37DG",
+	"_key": "!actors.items!9N1nOElWeNl1T7Bw.sW59hWrB3P9Z37DG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Lightning Bolt",
+	"system": {
+		"description": "<p>Straight line (5' wide) extending far from kraken. DC 15 DEX or [[/r 6d6]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

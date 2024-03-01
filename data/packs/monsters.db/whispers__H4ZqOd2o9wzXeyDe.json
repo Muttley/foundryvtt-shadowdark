@@ -1,0 +1,23 @@
+{
+	"_id": "H4ZqOd2o9wzXeyDe",
+	"_key": "!actors.items!PR9ptZ0DdyFlLpv6.H4ZqOd2o9wzXeyDe",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Whispers",
+	"system": {
+		"dc": "14",
+		"description": "<p>Focus. All enemies within near of viperian wizard have DISADV on spellcasting checks for the duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

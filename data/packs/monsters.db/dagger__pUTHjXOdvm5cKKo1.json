@@ -1,0 +1,38 @@
+{
+	"_id": "pUTHjXOdvm5cKKo1",
+	"_key": "!actors.items!BMPbRKuQ4OtLlagj.pUTHjXOdvm5cKKo1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Dagger",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 2,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "",
+			"value": "1d4"
+		},
+		"description": "",
+		"ranges": [
+			"close",
+			"near"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "TFBWsbvVh4uMSrGq",
+	"_key": "!actors.items!wDEo7yHtr1YsbQpe.TFBWsbvVh4uMSrGq",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Ice Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a double near-sized cube extending from dragon. DC 15 DEX or [[/r 4d8]] damage and frozen for 1 round.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

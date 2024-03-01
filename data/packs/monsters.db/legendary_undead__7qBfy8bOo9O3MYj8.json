@@ -1,0 +1,17 @@
+{
+	"_id": "7qBfy8bOo9O3MYj8",
+	"_key": "!actors.items!pWBbqRRSHSuvYdqP.7qBfy8bOo9O3MYj8",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Legendary Undead",
+	"system": {
+		"description": "<p>Immune to morale checks. Only damaged by magical sources. Hostile spells targeting Mordanticus are DC 18 to cast.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

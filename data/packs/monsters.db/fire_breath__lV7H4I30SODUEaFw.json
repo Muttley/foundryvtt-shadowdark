@@ -1,0 +1,24 @@
+{
+	"_id": "lV7H4I30SODUEaFw",
+	"_key": "!actors.items!rVp1RCsjrwc4Wleo.lV7H4I30SODUEaFw",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Fire Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a double near- sized cube extending from dragon. DC 15 DEX or [[/r 6d10]] damage.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

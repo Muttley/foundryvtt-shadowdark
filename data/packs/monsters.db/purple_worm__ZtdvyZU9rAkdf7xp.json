@@ -1,0 +1,124 @@
+{
+	"_id": "ZtdvyZU9rAkdf7xp",
+	"_key": "!actors!ZtdvyZU9rAkdf7xp",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"UKn1a5BfjSYPucXB",
+		"Knh998ANaTL8OsZn",
+		"90LymSvRmaCnnM8m",
+		"KeXeV53K1Xn6kMeN"
+	],
+	"name": "Purple Worm",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 4,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Purple Worm",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 4
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -3
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": -3
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "18"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "57",
+				"value": "57"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "12"
+		},
+		"move": "doubleNear",
+		"moveNote": "burrow",
+		"notes": "\n\t\t\t<p><i> A massive worm as tall as a castle keep. Has a rotating maw and is covered in purple chitin. </i></p><br>\n\t\t\t<p>AC 18, HP 57, ATK 2 bite +9 (2d12 + swallow) and 1 sting +9 (1d10 + poison), MV double near (burrow), S +5, D +1, C +3, I -3, W +1, Ch -3, AL N, LV 12</p><br>\n\t\t\t<p> Poison. DC 15 CON or go to 0 HP.<br><br>Swallow. On a natural attack roll of 18-20, target is swallowed. Total darkness inside and 2d10 damage per round. Worm regurgitates all swallowed if dealt at least 20 damage in one round to the inside of its gullet.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

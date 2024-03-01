@@ -1,0 +1,24 @@
+{
+	"_id": "oPv5hHOPDjxGpd2q",
+	"_key": "!actors.items!4chIukZvJuxXGScm.oPv5hHOPDjxGpd2q",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Whirlwind",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All within close DC 15 DEX or flung [[/r 2d20]] feet in random direction.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

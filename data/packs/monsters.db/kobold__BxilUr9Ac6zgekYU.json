@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"vzMbPRLpKUePJU9A",
-		"mrufe2QvglHyLVNN"
+		"ev9FAlNOfjgCHSvk",
+		"TeJ30CNmQzeF8cA8"
 	],
 	"name": "Kobold",
 	"prototypeToken": {
@@ -23,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -102,21 +102,21 @@
 		"alignment": "chaotic",
 		"attributes": {
 			"ac": {
-				"value": 13
+				"value": "13"
 			},
 			"hp": {
 				"hd": 0,
-				"max": 1,
-				"value": 1
+				"max": "1",
+				"value": "1"
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 0
+			"value": "0"
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><span class=\"fontstyle0\"><em>Puny, scaled coyote-lizards that dwell underground.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13 (leather), </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">1, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 spear (close/near) +0 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">0</span></p><p></p><p><span class=\"fontstyle2\"><strong>Dodge.</strong> </span><span class=\"fontstyle3\">1/day, an attack that would hit misses instead.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"notes": "\n\t\t\t<p><i> Puny, scaled coyote-lizards that dwell underground. </i></p><br>\n\t\t\t<p>AC 13 (leather), HP 1, ATK 1 spear (close/near) +0 (1d6), MV near, S -2, D +2, C +0, I -1, W +0, Ch -1, AL C, LV 0</p><br>\n\t\t\t<p> Dodge. 1/day, an attack that would hit misses instead.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

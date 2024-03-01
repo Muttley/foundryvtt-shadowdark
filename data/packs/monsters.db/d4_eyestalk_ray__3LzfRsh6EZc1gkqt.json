@@ -1,0 +1,24 @@
+{
+	"_id": "3LzfRsh6EZc1gkqt",
+	"_key": "!actors.items!n6BtkQTacWfZeHUM.3LzfRsh6EZc1gkqt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "D4 Eyestalk Ray",
+	"system": {
+		"attack": {
+			"num": "2"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

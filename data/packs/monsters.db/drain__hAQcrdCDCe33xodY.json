@@ -1,0 +1,17 @@
+{
+	"_id": "hAQcrdCDCe33xodY",
+	"_key": "!actors.items!vJLG1yR5fEceR1Gg.hAQcrdCDCe33xodY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Drain",
+	"system": {
+		"description": "<p>Target takes 1 STR damage. At 0 STR, target dies and becomes a shadow.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

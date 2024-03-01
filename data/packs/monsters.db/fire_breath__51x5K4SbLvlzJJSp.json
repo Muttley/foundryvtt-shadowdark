@@ -1,0 +1,24 @@
+{
+	"_id": "51x5K4SbLvlzJJSp",
+	"_key": "!actors.items!bpi6OHekvu54PJ4h.51x5K4SbLvlzJJSp",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Fire Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a near-sized cube extending from hell hound. DC 15 DEX or [[/r 3d8]] damage. Cannot use again for [[/r 1d4]] rounds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

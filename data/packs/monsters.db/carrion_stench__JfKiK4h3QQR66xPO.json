@@ -1,0 +1,17 @@
+{
+	"_id": "JfKiK4h3QQR66xPO",
+	"_key": "!actors.items!cY2dEb22Z28dhmaM.JfKiK4h3QQR66xPO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Carrion Stench",
+	"system": {
+		"description": "<p>Living creatures DC 12 CON the first time within near or DISADV on attacks and spellcasting for 5 rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

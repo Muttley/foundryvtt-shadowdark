@@ -1,0 +1,17 @@
+{
+	"_id": "jJEBzqforzOrKRPE",
+	"_key": "!actors.items!ai5RKPQh2SVPBNkI.jJEBzqforzOrKRPE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Charge",
+	"system": {
+		"description": "<p>Move up to double near in straight line and make 1 tusks attack. If hit, x3 damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

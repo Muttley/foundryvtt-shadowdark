@@ -1,0 +1,23 @@
+{
+	"_id": "FbPpeJ2A1BeY6bMo",
+	"_key": "!actors.items!MLByxdcYgm2Y3LfU.FbPpeJ2A1BeY6bMo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Web",
+	"system": {
+		"dc": "13",
+		"description": "<p>A near-sized cube of webs within far immobilizes all inside it for 5 rounds. DC 15 STR on turn to break free.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

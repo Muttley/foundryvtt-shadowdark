@@ -1,0 +1,123 @@
+{
+	"_id": "F55DKdXXBzI31wOv",
+	"_key": "!actors!F55DKdXXBzI31wOv",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"MoKCAvJmE4RsvprK",
+		"2hIwO26awPSyyhne",
+		"qyIJNeKK4NAKSGM0"
+	],
+	"name": "Elemental, Air (Lesser)",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Lesser Air Elemental",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": "15"
+			},
+			"hp": {
+				"hd": 0,
+				"max": "29",
+				"value": "29"
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": "6"
+		},
+		"move": "doubleNear",
+		"moveNote": "swim",
+		"notes": "\n\t\t\t<p><i> A crashing vortex of water. </i></p><br>\n\t\t\t<p>AC 15, HP 29, ATK 3 slam +6 (2d6) or 1 whirlpool, MV double near (swim), S +4, D +2, C +2, I -2, W +1, Ch -2, AL N, LV 6</p><br>\n\t\t\t<p> Impervious. Only damaged by magical sources.<br><br>Whirlpool. All within close DC 15 STR or immobilized inside water elemental (treat as underwater). DC 15 STR on turn to escape.</p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

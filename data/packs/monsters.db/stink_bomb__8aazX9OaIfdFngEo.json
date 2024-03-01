@@ -1,0 +1,23 @@
+{
+	"_id": "8aazX9OaIfdFngEo",
+	"_key": "!actors.items!gQeOoS2e98xCfyRg.8aazX9OaIfdFngEo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Stink Bomb",
+	"system": {
+		"dc": "12",
+		"description": "<p>One target within far [[/r 2d4]] damage and DC 12 CON or DISADV on next check/attack.</p>",
+		"duration": {
+			"type": "",
+			"value": -1
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

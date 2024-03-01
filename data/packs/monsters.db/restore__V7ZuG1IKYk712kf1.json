@@ -1,0 +1,17 @@
+{
+	"_id": "V7ZuG1IKYk712kf1",
+	"_key": "!actors.items!htIqv4tP9IdZXytD.V7ZuG1IKYk712kf1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Restore",
+	"system": {
+		"description": "<p>In place of attacks, touch one creature to remove a curse, affliction, or heal [[/r 3d8]] HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}
