@@ -7,7 +7,8 @@ export default class MonsterImporterSD extends FormApplication {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["monster-importer"],
-			width: 300,
+			width: 600,
+			height: 600,
 			resizable: true,
 		});
 	}
@@ -253,6 +254,16 @@ export default class MonsterImporterSD extends FormApplication {
 		return (spellObj);
 	}
 
+	 // Formats statblocks with standard look and feel
+	_generateNotesText = (statBlock, flavorText, features) => `
+	<p><i>${flavorText}</i></p>
+	<p></p>
+	<p>${statBlock.replace(/AC|HP|ATK|MV|S|D|Ch|C|I|W|AL|LV/g, "<strong>$&</strong>")}</p><p></p>
+	${features
+		.map(feat => feat.replace(/([^.]*)/, "<strong>$1</strong>"))
+		.map(feat => `<p>${feat}</p><p></p>`)
+		.join("")}`;
+
 	/**
 	 * Parses pasted text representing a monster and creates an NPC actor from it.
 	 * @param {string} string - String data posted by user
@@ -301,10 +312,7 @@ export default class MonsterImporterSD extends FormApplication {
 		// build parse complex outputs
 		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
 		const movement = this._parseMovement(stats[4]);
-		const notesText = `
-			<p><i>${flavorText}</i></p><br>
-			<p>${statBlock}</p><br>
-			<p>${features.join("<br><br>")}</p>`;
+		const notesText = this._generateNotesText(statBlock, flavorText, features);
 
 		// create the monster template
 		let actorObj = {
