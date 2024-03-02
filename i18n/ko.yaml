@@ -42,7 +42,9 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: 모든 불 끄기
 SHADOWDARK.app.npc_attack_ranges.title: 공격 범위
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
 SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.success: Character created successfully
 SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '{effectName} 효과를 삭제할까요?'
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: 효과를 삭제할까요?
