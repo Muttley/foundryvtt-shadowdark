@@ -1,6 +1,7 @@
 # v1.8.0
 
 ## Bugfixes
+* [#689] Can't return to the description page on a Background Item sheet
 * [#703] Error in character creator when blank Ancestry choice selected
 
 ## Enhancements
