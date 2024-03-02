@@ -289,10 +289,7 @@ export default class ItemSheetSD extends ItemSheet {
 			) ? true : false,
 			light: item.system.light?.isSource ?? false,
 			description: true,
-			descriptionOnly: [
-				"Background",
-				"NPC Feature",
-			].includes(item.type),
+			descriptionOnly: false,
 			titles: item.type === "Class",
 		};
 
