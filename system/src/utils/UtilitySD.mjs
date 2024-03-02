@@ -74,12 +74,22 @@ export default class UtilitySD {
 		});
 
 		for (const itemUuid of items) {
-			selectedItems.push(await fromUuid(itemUuid));
+			selectedItems.push(await this.getFromUuid(itemUuid));
 		}
 
 		selectedItems.sort((a, b) => a.name.localeCompare(b.name));
 
 		return [selectedItems, unselectedItems];
+	}
+
+	static async getFromUuid(uuid) {
+		const itemObj = await fromUuid(uuid);
+		if (itemObj) {
+			return itemObj;
+		}
+		else {
+			return {name: "[Invalid ID]", uuid: uuid};
+		}
 	}
 
 	static getNextDieInList(die, allDice) {
