@@ -7,6 +7,21 @@
 			editable=editable
 		}}
 	</div>
+	<div class="choice-selector item-detail">
+		{{>
+			items/partials/choice-selector
+			config=languageChoicesConfig
+			editable=editable
+		}}
+		<div class="item-detail">
+			<label>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</label>
+			{{numberInput
+				item.system.languages.select
+				name="system.languages.select"
+				placeholder="0"
+			}}
+		</div>
+	</div>
 	<div class="language-detail">
 		<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
 		{{numberInput
@@ -14,8 +29,7 @@
 			name="system.languages.common"
 			placeholder="0"
 		}}
-	</div>
-	<div class="language-detail">
+		<br>
 		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
 		{{numberInput
 			item.system.languages.rare
@@ -36,5 +50,10 @@
 			name="system.talentChoiceCount"
 			placeholder="0"
 		}}
+	</div>
+	<h4 class="section-header">{{localize "SHADOWDARK.form.section_header.names.label"}}</h4>
+	<label>{{localize "SHADOWDARK.ancestry.nametable.label"}}</label>
+	<div class="name-table" style="grid-column: 2 / span 2;">
+		<input type="text" name="system.nameTable" placeholder="{{localize "SHADOWDARK.ancestry.nametable.placeholder"}}" value="{{system.nameTable}}">
 	</div>
 </div>

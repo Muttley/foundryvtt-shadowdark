@@ -14,33 +14,5 @@ export const LightSourceTrackerHooks = {
 			Hooks.on("updateWorldTime", lst.onUpdateWorldTime.bind(lst));
 			Hooks.on("userConnected", lst._makeDirty.bind(lst));
 		}
-
-		game.socket.on("system.shadowdark", event => {
-			if (event.type === "toggleLightSource" && game.user.isGM) {
-				game.shadowdark.lightSourceTracker.toggleLightSource(
-					event.data.actor,
-					event.data.item
-				);
-			}
-
-			if (event.type === "dropLightSourceOnScene" && game.user.isGM) {
-				game.shadowdark.lightSourceTracker.dropLightSourceOnScene(
-					event.data.item,
-					event.data.itemOwner,
-					event.data.actorData,
-					event.data.dropData,
-					event.data.speaker
-				);
-			}
-
-			if (event.type === "pickupLightSourceFromScene" && game.user.isGM) {
-				game.shadowdark.lightSourceTracker.pickupLightSourceFromScene(
-					event.data.character,
-					event.data.lightActor,
-					event.data.lightToken,
-					event.data.speaker
-				);
-			}
-		});
 	},
 };

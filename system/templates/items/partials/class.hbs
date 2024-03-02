@@ -107,6 +107,13 @@
 	</div>
 
 	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</h4>
+	<div class="choice-selector">
+		{{>
+			items/partials/choice-selector
+			config=fixedLanguagesConfig
+			editable=editable
+		}}
+	</div>
 	<div class="choice-selector item-detail">
 		{{>
 			items/partials/choice-selector
@@ -116,8 +123,8 @@
 		<div class="item-detail">
 			<label>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</label>
 			{{numberInput
-				item.system.language.select
-				name="system.language.select"
+				item.system.languages.select
+				name="system.languages.select"
 				placeholder="0"
 			}}
 		</div>
@@ -129,8 +136,7 @@
 			name="system.languages.common"
 			placeholder="0"
 		}}
-	</div>
-	<div class="language-detail">
+		<br>
 		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
 		{{numberInput
 			item.system.languages.rare

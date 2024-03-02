@@ -5,7 +5,7 @@ import { EffectHooks } from "./hooks/effects.mjs";
 import { EffectPanelHooks } from "./hooks/effect-panel.mjs";
 import { LightSourceTrackerHooks } from "./hooks/light-source-tracker.mjs";
 import { NPCHooks } from "./hooks/npc.mjs";
-import { ShadowdarklingImport } from "./hooks/shadowdarkling-import.mjs";
+import { SDAppsButtons } from "./hooks/sd-apps-buttons.mjs";
 import { hotbarHooks } from "./hooks/hotbar.mjs";
 
 export const HooksSD = {
@@ -40,7 +40,7 @@ export const HooksImmediate = {
 export const HooksInitSD = {
 	attach: () => {
 		const listeners = [
-			ShadowdarklingImport,
+			SDAppsButtons,
 			EffectPanelHooks,
 		];
 

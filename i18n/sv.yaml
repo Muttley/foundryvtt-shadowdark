@@ -15,6 +15,8 @@ SHADOWDARK.alignment.lawful: Laglydig
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.ancestry.languages.label: Ursprungsspråk
 SHADOWDARK.ancestry.languages.prompt: Välj språk...
+SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.talents.count.label: Antal val
 SHADOWDARK.ancestry.talents.label: Ursprungstalanger
 SHADOWDARK.ancestry.talents.prompt: Välj talang...
@@ -38,6 +40,12 @@ SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
 SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
+SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
+SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
+SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.success: Character created successfully
+SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Vill du ta bort {effectName} effekten?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Radera effekt?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Löpt ut
@@ -57,6 +65,14 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} sekunder kvar"
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} veckor kvar"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} år kvar"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Högerklick] Ta bort effekt"
+SHADOWDARK.apps.item-importer.import_button: Import Item
+SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
+SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
+SHADOWDARK.apps.item-importer.instruction2b: Item Name
+SHADOWDARK.apps.item-importer.instruction2c: Flavor text
+SHADOWDARK.apps.item-importer.instruction2d: Features
+SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
+SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
 SHADOWDARK.apps.monster-importer.instruction1: 1. Kopiera monstertext från boken.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
@@ -73,6 +89,16 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopiera innehållet i f
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Klicka på importera.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Öppen generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Importera Shadowdarkling
+SHADOWDARK.apps.spell-importer.import_button: Import Spell
+SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
+SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
+SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
+SHADOWDARK.apps.spell-importer.instruction2d: Duration
+SHADOWDARK.apps.spell-importer.instruction2e: Range
+SHADOWDARK.apps.spell-importer.instruction2f: Description
+SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
+SHADOWDARK.apps.spell-importer.title: Import Spell
 SHADOWDARK.armor.properties.disadvantage_stealth: Nackdel/Smyga
 SHADOWDARK.armor.properties.disadvantage_swimming: Nackdel/Simma
 SHADOWDARK.armor.properties.no_swimming: Ingen Simma
@@ -260,6 +286,7 @@ SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
+SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.form.section_header.spellcasting.label: Besvärjelser
 SHADOWDARK.form.section_header.talents.label: Talanger
 SHADOWDARK.hotbar.abilityLost: Förmåga inte tillgänglig
@@ -604,6 +631,7 @@ SHADOWDARK.sheet.player.deity.tooltip: Er karaktärs kosmiska länk till de mots
 SHADOWDARK.sheet.player.languages: Språk
 SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
+SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
 SHADOWDARK.sheet.player.roll_initiative: Rulla initiativ
 SHADOWDARK.sheet.player.spells_tier: Grad

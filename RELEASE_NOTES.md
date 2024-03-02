@@ -1,9 +1,25 @@
 # v1.8.0
 
-## Enhancements
-* [#697] Updated the formating of monster descriptions created with the monster importer.
+## Bugfixes
+* [#689] Can't return to the description page on a Background Item sheet
+* [#703] Error in character creator when blank Ancestry choice selected
+* [#702] Show warning in character creator when rolling a name with no Ancestry selected
 
-Many thanks to *arcos* for contributing code included in this build
+## Enhancements
+* [#437] Added Character Builder
+* [#692] Added Spell Importer macro
+* [#695] Add ability to have Effects on Boon items
+* [#697] Updated the formating of monster descriptions created with the monster importer.
+* [#704] Open character sheet after it has been created by the character creator
+* [#705] Character creator should be usable by players without giving them full permission to create actors
+
+## Feature Notes
+A new Character Generator is now available via the actors tab. The generator can be used to create new characters randomly or via selection. Features include:
+* All character options respect the source filters in the Shadowdark RPG settings
+* Character names are randomized via a linked roll table based on the selected ancesty
+* level 1 characters still require manually rolling and adding first level talents and spells
+
+Many thanks to *arcos* and *chrpow* for contributing code included in this build
 
 ---
 

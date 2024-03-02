@@ -24,6 +24,7 @@ import {
 } from "./src/hooks.mjs";
 
 import "./src/testing/index.mjs";
+import listenOnSocket from "./src/socket.mjs";
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
@@ -125,6 +126,8 @@ Hooks.on("ready", async () => {
 	await performDataMigration();
 
 	HooksSD.attach();
+	listenOnSocket();
+
 	ToursSD.register();
 
 	chat.messages.welcomeMessage();

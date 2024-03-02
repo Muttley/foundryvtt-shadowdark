@@ -15,6 +15,8 @@ SHADOWDARK.alignment.lawful: Lainkuuliainen
 SHADOWDARK.alignment.neutral: Neutraali
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.talents.count.label: Choice Count
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
@@ -38,6 +40,12 @@ SHADOWDARK.app.light-tracker.hide-inactive: Piilota hahmot/esineet joita ei ole 
 SHADOWDARK.app.light-tracker.show-all-actors: Näytä kaikki hahmot/esineet
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
+SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
+SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
+SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.success: Character created successfully
+SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Haluatko poistaa {effectName} efektin?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Poista efekti?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Vanhentunut
@@ -57,6 +65,14 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} sekuntia jälj
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} viikkoa jäljellä"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} vuotta jäljellä"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Oikea klikkaus] Poista efekti"
+SHADOWDARK.apps.item-importer.import_button: Import Item
+SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
+SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
+SHADOWDARK.apps.item-importer.instruction2b: Item Name
+SHADOWDARK.apps.item-importer.instruction2c: Flavor text
+SHADOWDARK.apps.item-importer.instruction2d: Features
+SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
+SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
@@ -73,6 +89,16 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopioi json-tiedoston s
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Paina "tuo"-nappia.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Avaa generaattori
 SHADOWDARK.apps.shadowdarkling-importer.title: Tuo Shadowdarkling
+SHADOWDARK.apps.spell-importer.import_button: Import Spell
+SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
+SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
+SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
+SHADOWDARK.apps.spell-importer.instruction2d: Duration
+SHADOWDARK.apps.spell-importer.instruction2e: Range
+SHADOWDARK.apps.spell-importer.instruction2f: Description
+SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
+SHADOWDARK.apps.spell-importer.title: Import Spell
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
@@ -260,6 +286,7 @@ SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
@@ -604,6 +631,7 @@ SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opp
 SHADOWDARK.sheet.player.languages: Kielet
 SHADOWDARK.sheet.player.luck: Tuuripiste
 SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäys
+SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: Kantamahyökkäykset
 SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
 SHADOWDARK.sheet.player.spells_tier: Loitsutaso

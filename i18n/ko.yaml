@@ -15,6 +15,8 @@ SHADOWDARK.alignment.lawful: 질서
 SHADOWDARK.alignment.neutral: 중립
 SHADOWDARK.ancestry.languages.label: 선조 언어
 SHADOWDARK.ancestry.languages.prompt: 언어를 지정하세요...
+SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.talents.count.label: 재능 카운트
 SHADOWDARK.ancestry.talents.label: 선조 재능
 SHADOWDARK.ancestry.talents.prompt: 재능을 지정하세요...
@@ -38,6 +40,12 @@ SHADOWDARK.app.light-tracker.hide-inactive: 광원이 없는 액터 숨기기
 SHADOWDARK.app.light-tracker.show-all-actors: 모든 액터 보기
 SHADOWDARK.app.light-tracker.turn-out-the-lights: 모든 불 끄기
 SHADOWDARK.app.npc_attack_ranges.title: 공격 범위
+SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
+SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
+SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.success: Character created successfully
+SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '{effectName} 효과를 삭제할까요?'
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: 효과를 삭제할까요?
 SHADOWDARK.apps.effect_panel.duration_label.expired: 만료됨
@@ -57,6 +65,14 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} 초 남았습�
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} 주 남았습니다"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} 년 남았습니다"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[오른쪽 클릭] 효과 삭제"
+SHADOWDARK.apps.item-importer.import_button: Import Item
+SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
+SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
+SHADOWDARK.apps.item-importer.instruction2b: Item Name
+SHADOWDARK.apps.item-importer.instruction2c: Flavor text
+SHADOWDARK.apps.item-importer.instruction2d: Features
+SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
+SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.monster-importer.import_button: 몬스터 불러오기
 SHADOWDARK.apps.monster-importer.instruction1: 1. 출처의 몬스터 텍스트를 복사합니다.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
@@ -73,6 +89,16 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. 파일의 내용을 이
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. 가져오기 버튼을 클릭하세요.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: 캐릭터 생성 창 열기
 SHADOWDARK.apps.shadowdarkling-importer.title: Shadowdarkling에서 가져오기
+SHADOWDARK.apps.spell-importer.import_button: Import Spell
+SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
+SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
+SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
+SHADOWDARK.apps.spell-importer.instruction2d: Duration
+SHADOWDARK.apps.spell-importer.instruction2e: Range
+SHADOWDARK.apps.spell-importer.instruction2f: Description
+SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
+SHADOWDARK.apps.spell-importer.title: Import Spell
 SHADOWDARK.armor.properties.disadvantage_stealth: 불리함/은신
 SHADOWDARK.armor.properties.disadvantage_swimming: 불리함/수영
 SHADOWDARK.armor.properties.no_swimming: 수영 못함
@@ -260,6 +286,7 @@ SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 능력이 설정되지 않았습니다
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: 재능
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
@@ -604,6 +631,7 @@ SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opp
 SHADOWDARK.sheet.player.languages: 언어
 SHADOWDARK.sheet.player.luck: 운
 SHADOWDARK.sheet.player.melee_attacks: 근접 공격
+SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: 원거리 공격
 SHADOWDARK.sheet.player.roll_initiative: 우선권 굴림
 SHADOWDARK.sheet.player.spells_tier: 등급
