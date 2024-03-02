@@ -758,6 +758,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			);
 		}
 
+		await newActor.createEmbeddedDocuments("Item", characterItems);
+
 		if (userId !== game.userId) {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
