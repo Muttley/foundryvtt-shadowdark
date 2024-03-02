@@ -88,19 +88,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 						base: 10,
 						mod: 0,
 					},
-					dex: {
-						base: 10,
-						mod: 0,
-					},
-					con: {
-						base: 10,
-						mod: 0,
-					},
 					int: {
 						base: 10,
 						mod: 0,
 					},
+					dex: {
+						base: 10,
+						mod: 0,
+					},
 					wis: {
+						base: 10,
+						mod: 0,
+					},
+					con: {
 						base: 10,
 						mod: 0,
 					},
@@ -813,7 +813,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			for (const item of this.formData.gearSelected) {
 				allItems.push(await fromUuid(item.uuid));
 				// add arrows for the shortbow option
-				if (item.name === "Shortbow") {
+				if (item.name === "Shortbow and 5 arrows") {
 					let arrows = await fromUuid("Compendium.shadowdark.gear.Item.XXwA9ZWajYEDmcea");
 					let fiveArrows = {...arrows};
 					fiveArrows.system.quantity = 5;
