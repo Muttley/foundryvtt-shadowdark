@@ -747,6 +747,45 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
+	static async createActorFromData(characterData, characterItems, userId) {
+		if (!game.user.isGM) return;
+
+		const newActor = await Actor.create(characterData);
+
+		if (!newActor) {
+			return ui.notifications.error(
+				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
+			);
+		}
+
+		if (userId !== game.userId) {
+			const ownership = newActor.ownership;
+			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+
+			await newActor.update({ownership});
+
+			const user = game.users.get(userId);
+
+			if (user && !user.character) {
+				// User doesn't have a character assigned, so assign this new
+				// one they just created
+				user.update({character: newActor.id});
+			}
+
+			game.socket.emit("system.shadowdark", {
+				type: "openNewCharacter",
+				payload: {actorId: newActor.id, userId},
+			});
+		}
+		else {
+			newActor.sheet.render(true);
+
+			return ui.notifications.info(
+				game.i18n.localize("SHADOWDARK.apps.character-generator.success"),
+				{permanent: false}
+			);
+		}
+	}
 
 	async _createCharacter() {
 
@@ -795,19 +834,24 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 
 		// Create the new player character
-		try {
-			const newActor = await Actor.create(this.formData.actor);
-			console.log(this.formData.actor);
-			ui.notifications.info(`Created Character: ${newActor.name}`);
-
-			// Add all required items to the new character
-			await newActor.createEmbeddedDocuments("Item", allItems);
-		}
-		catch(error) {
-			ui.notifications.error(
-				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
+		if (game.user.isGM) {
+			CharacterGeneratorSD.createActorFromData(
+				this.formData.actor,
+				allItems,
+				game.userId
 			);
 		}
+		else {
+			game.socket.emit("system.shadowdark", {
+				type: "createCharacter",
+				payload: {
+					characterData: this.formData.actor,
+					characterItems: allItems,
+					userId: game.userId,
+				},
+			});
+		}
+
 
 		this.close();
 	}
