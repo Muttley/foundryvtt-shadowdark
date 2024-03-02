@@ -1,5 +1,11 @@
 # v1.8.0
 
+## Feature Notes
+A new Character Generator is now available via the actors tab. The generator can be used to create new characters randomly or via selection. Features include:
+* All character options respect the source filters in the Shadowdark RPG settings
+* Character names are randomized via a linked roll table based on the selected ancesty
+* level 1 characters still require manually rolling and adding first level talents and spells
+
 ## Enhancements
 * [#697] Updated the formating of monster descriptions created with the monster importer.
 
