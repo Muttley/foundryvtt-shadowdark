@@ -461,32 +461,37 @@ export default class CharacterGeneratorSD extends FormApplication {
 	async _loadAncestry(UuID, randomize) {
 		// grab static talents from ancestry item
 		let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
+
 		this.formData.ancestryTalents.selection = [];
 		this.formData.ancestryTalents.fixed = [];
 		this.formData.ancestryTalents.choice = [];
-		let talentData = [];
 
-		if (ancestryObj.system.talents) {
-			for (const talent of ancestryObj.system.talents) {
-				let talentObj = await fromUuid(talent);
-				let fDesc = this._formatDescription(talentObj.system.description);
-				talentObj.formattedDescription = fDesc;
-				talentData.push(talentObj);
+		if (ancestryObj) {
+			let talentData = [];
+
+			if (ancestryObj.system.talents) {
+				for (const talent of ancestryObj.system.talents) {
+					let talentObj = await fromUuid(talent);
+					let fDesc = this._formatDescription(talentObj.system.description);
+					talentObj.formattedDescription = fDesc;
+					talentData.push(talentObj);
+				}
+			}
+
+			// fixed talent choice
+			if (talentData.length <= ancestryObj.system.talentChoiceCount) {
+				this.formData.ancestryTalents.fixed = talentData;
+			}
+			// multiple talent options.
+			else {
+				this.formData.ancestryTalents.choice = talentData;
+				if (randomize) {
+					let tempInt = this._getRandom(talentData.length);
+					this.formData.ancestryTalents.selection.push(talentData[tempInt]);
+				}
 			}
 		}
 
-		// fixed talent choice
-		if (talentData.length <= ancestryObj.system.talentChoiceCount) {
-			this.formData.ancestryTalents.fixed = talentData;
-		}
-		// multiple talent options.
-		else {
-			this.formData.ancestryTalents.choice = talentData;
-			if (randomize) {
-				let tempInt = this._getRandom(talentData.length);
-				this.formData.ancestryTalents.selection.push(talentData[tempInt]);
-			}
-		}
 		this.ancestry = ancestryObj;
 		await this._loadLanguages(randomize);
 	}

@@ -9,6 +9,9 @@ A new Character Generator is now available via the actors tab. The generator can
 ## Enhancements
 * [#697] Updated the formating of monster descriptions created with the monster importer.
 
+## Bugfixes
+* [#703] Error in character creator when blank Ancestry choice selected
+
 Many thanks to *arcos* for contributing code included in this build
 
 ---
