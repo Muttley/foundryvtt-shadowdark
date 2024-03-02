@@ -31,8 +31,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		});
 
 		this.firstrun = true;
-		this.ancestry = {};
-		this.class = {};
+		this.ancestry = null;
+		this.class = null;
+
 		this.formData = {};
 		this.formData.level0Class = {};
 		this.formData.level0 = true;
@@ -651,15 +652,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _randomizeName() {
 		// Looks up the name table from the ancestry and rolls a random name
-		if (this.ancestry.system?.nameTable) {
-			const table = await fromUuid(this.ancestry.system.nameTable);
-			if (table) {
-				const result = await table.draw({displayChat: false});
-				this.formData.actor.name = result.results[0].text;
-				return;
-			}
+		if (!this.ancestry) return ui.notifications.warn(
+			game.i18n.localize("SHADOWDARK.apps.character-generator.error.no_ancestry_for_name"),
+			{permanent: false}
+		);
+
+		const table = await fromUuid(this.ancestry.system.nameTable);
+		if (table) {
+			const result = await table.draw({displayChat: false});
+			this.formData.actor.name = result.results[0].text;
 		}
-		this.formData.actor.name = `Unnamed ${this.ancestry.name}`;
+		else {
+			this.formData.actor.name = `Unnamed ${this.ancestry.name}`;
+		}
 	}
 
 	_randomizeHP() {

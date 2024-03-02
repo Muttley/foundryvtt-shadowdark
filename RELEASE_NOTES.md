@@ -3,9 +3,11 @@
 ## Bugfixes
 * [#689] Can't return to the description page on a Background Item sheet
 * [#703] Error in character creator when blank Ancestry choice selected
+* [#702] Show warning in character creator when rolling a name with no Ancestry selected
 
 ## Enhancements
 * [#437] Added Character Builder
+* [#692] Added Spell Importer macro
 * [#697] Updated the formating of monster descriptions created with the monster importer.
 
 ## Feature Notes
@@ -14,7 +16,7 @@ A new Character Generator is now available via the actors tab. The generator can
 * Character names are randomized via a linked roll table based on the selected ancesty
 * level 1 characters still require manually rolling and adding first level talents and spells
 
-Many thanks to *arcos* for contributing code included in this build
+Many thanks to *arcos* and *chrpow* for contributing code included in this build
 
 ---
 
