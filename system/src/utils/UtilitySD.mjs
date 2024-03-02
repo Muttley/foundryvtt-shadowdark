@@ -1,5 +1,11 @@
 export default class UtilitySD {
 
+	// Checks that the current user has permissions to create Actors
+	//
+	static canCreateCharacter() {
+		return game.permissions.ACTOR_CREATE.includes(game.user.role);
+	}
+
 	/* Create a roll Macro from an Item dropped on the hotbar.
 	 * Get an existing item macro if one exists, otherwise create a new one.
 	 *

@@ -748,7 +748,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	static async createActorFromData(characterData, characterItems, userId) {
-		if (!game.user.isGM) return;
+		if (!shadowdark.utils.canCreateCharacter()) return;
 
 		const newActor = await Actor.create(characterData);
 
@@ -834,7 +834,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 
 		// Create the new player character
-		if (game.user.isGM) {
+		//
+		if (shadowdark.utils.canCreateCharacter()) {
 			CharacterGeneratorSD.createActorFromData(
 				this.formData.actor,
 				allItems,

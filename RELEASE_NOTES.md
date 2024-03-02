@@ -12,6 +12,7 @@
 * [#697] Updated the formating of monster descriptions created with the monster importer.
 * [#704] Open character sheet after it has been created by the character creator
 * [#705] Character creator should be usable by players without giving them full permission to create actors
+* [#708] If user has ACTOR_CREATE permissions already, don't use socket to make GM create character
 
 ## Feature Notes
 A new Character Generator is now available via the actors tab. The generator can be used to create new characters randomly or via selection. Features include:
