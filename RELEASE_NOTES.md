@@ -8,6 +8,7 @@
 ## Enhancements
 * [#437] Added Character Builder
 * [#692] Added Spell Importer macro
+* [#695] Add ability to have Effects on Boon items
 * [#697] Updated the formating of monster descriptions created with the monster importer.
 
 ## Feature Notes

@@ -315,7 +315,7 @@ export default class ItemSheetSD extends ItemSheet {
 			].includes(item.type),
 
 			effects: (
-				["Effect", "Talent"].includes(item.type)
+				["Boon", "Effect", "Talent"].includes(item.type)
 					|| item.system.magicItem
 			) ? true : false,
 			light: item.system.light?.isSource ?? false,
@@ -402,7 +402,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		}
 
-		if (item.type === "Talent" || item.type === "Effect" || item.system.magicItem ) {
+		if (context.showTab.effects) {
 			context.predefinedEffects = await this._getPredefinedEffectsList();
 			context.effects = item.effects;
 		}
