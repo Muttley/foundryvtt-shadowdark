@@ -15,11 +15,11 @@ SHADOWDARK.alignment.lawful: Lawful
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.talents.count.label: Choice Count
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
-SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.app.active_effects.title: Active Effects
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
@@ -40,6 +40,10 @@ SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
 SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
 SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
+SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
+SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Delete Effect?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Expired
@@ -83,10 +87,6 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of fil
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
@@ -284,9 +284,9 @@ SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
+SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
 SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
