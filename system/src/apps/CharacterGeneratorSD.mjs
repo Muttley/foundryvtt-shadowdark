@@ -88,19 +88,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 						base: 10,
 						mod: 0,
 					},
-					dex: {
-						base: 10,
-						mod: 0,
-					},
-					con: {
-						base: 10,
-						mod: 0,
-					},
 					int: {
 						base: 10,
 						mod: 0,
 					},
+					dex: {
+						base: 10,
+						mod: 0,
+					},
 					wis: {
+						base: 10,
+						mod: 0,
+					},
+					con: {
 						base: 10,
 						mod: 0,
 					},
