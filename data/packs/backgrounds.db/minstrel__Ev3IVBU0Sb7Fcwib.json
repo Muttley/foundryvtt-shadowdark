@@ -3,13 +3,14 @@
 	"_key": "!items!Ev3IVBU0Sb7Fcwib",
 	"effects": [
 	],
-	"folder": null,
+	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Minstrel",
 	"system": {
 		"description": "<p>You've traveled far with your charm and talent</p>",
+		"predefinedEffects": "",
 		"source": {
-			"title": "quickstart"
+			"title": "core-rules"
 		}
 	},
 	"type": "Background"
