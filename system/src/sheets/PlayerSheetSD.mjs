@@ -437,6 +437,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		else {
 			delete itemData.system.lost;
 			itemData.system.magicItem = true;
+			itemData.system.spellImg = spell.img;
 			itemData.system.spellName = spell.name;
 		}
 
