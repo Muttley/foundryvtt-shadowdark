@@ -99,6 +99,8 @@ Details for how to get started hacking on the system can be found in the [Wiki](
 
 **foundryvtt-shadowdark** is an independent product published under the Shadowdark RPG Third-Party License and is not affiliated with The Arcane Library, LLC. Shadowdark RPG © 2023 The Arcane Library, LLC.
 
+The software code that makes up the core of this system is published under the MIT license (see LICENSE.txt).
+
 The [Arcane Library][1] logo, and additional [Shadowdark RPG][1] images included within **foundryvtt-shadowdark** are used with the kind permission of Kelsey Dionne and [Arcane Library][1].
 
 [1]: https://www.thearcanelibrary.com
