@@ -1,0 +1,19 @@
+{
+	"_id": "tfM77lqANyzu0kMy",
+	"_key": "!items!tfM77lqANyzu0kMy",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/unholy/projectiles-binary-pink.webp",
+	"name": "Duality",
+	"system": {
+		"description": "<p>Choose two different @UUID[Compendium.shadowdark.talents.Item.A8Siwy6S27LwEkx5]{Old Gods} effects each day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
