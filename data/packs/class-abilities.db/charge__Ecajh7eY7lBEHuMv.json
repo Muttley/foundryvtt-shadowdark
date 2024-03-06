@@ -1,0 +1,28 @@
+{
+	"_id": "Ecajh7eY7lBEHuMv",
+	"_key": "!items!Ecajh7eY7lBEHuMv",
+	"effects": [
+	],
+	"folder": "T3unZZ7ZOWn5snHV",
+	"img": "icons/skills/melee/strike-polearm-light-orange.webp",
+	"name": "Charge",
+	"system": {
+		"ability": "",
+		"dc": null,
+		"description": "<p>3/day, you can charge into combat by moving at least near before attacking. Each time you do this, your melee attacks deal double damage that round.</p>",
+		"group": "Charge",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

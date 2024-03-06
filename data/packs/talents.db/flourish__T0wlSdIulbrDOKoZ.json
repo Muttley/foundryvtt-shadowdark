@@ -1,0 +1,20 @@
+{
+	"_id": "T0wlSdIulbrDOKoZ",
+	"_key": "!items!T0wlSdIulbrDOKoZ",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/sword-twirl-orange.webp",
+	"name": "Flourish",
+	"system": {
+		"description": "<p><span>3/day, regain 1d6 hit points when you hit an enemy with a melee attack. </span></p><p>@UUID[Compendium.shadowdark.class-abilities.Item.6snDwCm38HjvO1uv]{Flourish}</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

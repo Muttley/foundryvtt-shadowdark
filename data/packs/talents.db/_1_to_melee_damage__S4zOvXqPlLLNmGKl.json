@@ -1,0 +1,23 @@
+{
+	"_id": "S4zOvXqPlLLNmGKl",
+	"_key": "!items!S4zOvXqPlLLNmGKl",
+	"effects": [
+		"wryUreqZgIx22crJ"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+	"name": "+1 to Melee Damage",
+	"system": {
+		"bonuses": {
+			"meleeDamageBonus": "1"
+		},
+		"description": "",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
