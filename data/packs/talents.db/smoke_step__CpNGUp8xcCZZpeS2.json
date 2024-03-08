@@ -1,0 +1,19 @@
+{
+	"_id": "CpNGUp8xcCZZpeS2",
+	"_key": "!items!CpNGUp8xcCZZpeS2",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+	"name": "Smoke Step",
+	"system": {
+		"description": "<p>3/day, teleport to a location you can see within near. This does not use your action.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

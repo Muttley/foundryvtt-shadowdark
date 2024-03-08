@@ -1,0 +1,19 @@
+{
+	"_id": "dWqqxABbZKmJLnff",
+	"_key": "!items!dWqqxABbZKmJLnff",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/consumables/potions/potion-tube-corked-tied-green.webp",
+	"name": "Poisons Training",
+	"system": {
+		"description": "<p>You are trained in the use of poisons (see pg. 27)</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
