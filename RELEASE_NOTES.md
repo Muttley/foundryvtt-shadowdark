@@ -1,3 +1,10 @@
+# vx.x.x
+
+## Bugfixes
+* [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
+
+---
+
 # v1.8.0
 
 ## Bugfixes
