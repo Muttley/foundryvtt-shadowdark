@@ -1,0 +1,28 @@
+{
+	"_id": "y1nnbCGFwg31zZHk",
+	"_key": "!items!y1nnbCGFwg31zZHk",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"name": "Cacklerot",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>One target you touch of LV 4 or less collapses helplessly with disturbing, pained laughter for the spell's duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}
