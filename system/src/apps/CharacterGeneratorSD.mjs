@@ -538,10 +538,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// set formData form the ancestry object if it exists
 		if (this.ancestry?.system?.languages) {
-			langData.fixed = mergeObject(
-				langData.fixed,
-				this.ancestry.system.languages.fixed
-			);
+			langData.fixed = this.ancestry.system.languages.fixed;
 			langData.ancestry.select = this.ancestry.system.languages.select;
 			langData.common.select += this.ancestry.system.languages.common;
 			langData.rare.select += this.ancestry.system.languages.rare;
@@ -549,10 +546,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// set formData form the class object if it exists
 		if (this.class?.system?.languages) {
-			langData.fixed = mergeObject(
-				langData.fixed,
-				this.class.system.languages.fixed
-			);
+			// combine both fixed arrays into a set to de-dupe
+			langData.fixed = [...new Set([
+				...langData.fixed,
+				...this.class.system.languages.fixed,
+			])];
 			langData.class.select = this.class.system.languages.select;
 			langData.common.select += this.class.system.languages.common;
 			langData.rare.select += this.class.system.languages.rare;
