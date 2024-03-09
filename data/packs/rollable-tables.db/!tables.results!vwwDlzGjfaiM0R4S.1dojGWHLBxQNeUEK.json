@@ -2,14 +2,14 @@
 	"_id": "1dojGWHLBxQNeUEK",
 	"_key": "!tables.results!vwwDlzGjfaiM0R4S.1dojGWHLBxQNeUEK",
 	"documentCollection": "shadowdark.talents",
-	"documentId": "Mg57SzfhUKFMO9vH",
+	"documentId": null,
 	"drawn": false,
-	"img": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp",
+	"img": "icons/svg/d20-black.svg",
 	"range": [
 		12,
 		12
 	],
-	"text": "Ride any Creature",
-	"type": 2,
+	"text": "Choose 1",
+	"type": 0,
 	"weight": 1
 }
