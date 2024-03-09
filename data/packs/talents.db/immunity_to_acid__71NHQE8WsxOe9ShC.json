@@ -1,0 +1,20 @@
+{
+	"_id": "71NHQE8WsxOe9ShC",
+	"_key": "!items!71NHQE8WsxOe9ShC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/acid/pouring-gas-smoke-liquid.webp",
+	"name": "Immunity to Acid",
+	"system": {
+		"description": "",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

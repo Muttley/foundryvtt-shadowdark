@@ -1,0 +1,20 @@
+{
+	"_id": "rtCyEISzbgf6ZuJb",
+	"_key": "!items!rtCyEISzbgf6ZuJb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+	"name": "Hypnotize",
+	"system": {
+		"description": "<p>1/day, hypnotize a LV 5 or less creature for 3 rounds</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

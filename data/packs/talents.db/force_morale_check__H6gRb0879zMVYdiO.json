@@ -1,0 +1,20 @@
+{
+	"_id": "H6gRb0879zMVYdiO",
+	"_key": "!items!H6gRb0879zMVYdiO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/magical/spirit-fear-energy-pink.webp",
+	"name": "Force Morale Check",
+	"system": {
+		"description": "<p>1/day, force a close being to check morale, even if immune</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

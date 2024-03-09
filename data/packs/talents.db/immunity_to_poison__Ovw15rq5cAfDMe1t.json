@@ -1,0 +1,20 @@
+{
+	"_id": "Ovw15rq5cAfDMe1t",
+	"_key": "!items!Ovw15rq5cAfDMe1t",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/toxins/bottle-open-vapors-pink.webp",
+	"name": "Immunity to Poison",
+	"system": {
+		"description": "",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

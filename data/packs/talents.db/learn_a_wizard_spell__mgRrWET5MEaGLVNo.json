@@ -1,0 +1,20 @@
+{
+	"_id": "mgRrWET5MEaGLVNo",
+	"_key": "!items!mgRrWET5MEaGLVNo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/books/book-eye-purple.webp",
+	"name": "Learn a Wizard Spell",
+	"system": {
+		"description": "<p>Learn a wizard spell, tier = half your level. Cast it with INT</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

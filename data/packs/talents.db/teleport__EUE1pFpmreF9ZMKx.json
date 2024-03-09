@@ -1,0 +1,20 @@
+{
+	"_id": "EUE1pFpmreF9ZMKx",
+	"_key": "!items!EUE1pFpmreF9ZMKx",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/movement/ball-spinning-blue.webp",
+	"name": "Teleport",
+	"system": {
+		"description": "<p>1/day, teleport to a far location you see as your move.</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
