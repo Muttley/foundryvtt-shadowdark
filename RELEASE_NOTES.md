@@ -1,3 +1,10 @@
+# v2.0.0
+
+## Enhancements
+* [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
+
+---
+
 # v1.8.0
 
 ## Bugfixes
