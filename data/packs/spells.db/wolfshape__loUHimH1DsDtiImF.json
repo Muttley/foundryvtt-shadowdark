@@ -1,0 +1,27 @@
+{
+	"_id": "loUHimH1DsDtiImF",
+	"_key": "!items!loUHimH1DsDtiImF",
+	"effects": [
+	],
+	"folder": "lvvfGVYh4oLZsbpP",
+	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+	"name": "Wolfshape",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You and your gear transform into a wolf for the spell's duration. You assume the wolf's STR, DEX, CON, HP, AC, speed, attacks, and physical characteristics, but retain your INT, WIS, and CHA. </p><p></p><p>You can cast spells in this form. If you go to 0 HP, you revert to your true shape at 0 HP. </p><p></p><p>If you are level 5+, you can transform into a dire wolf or a winter wolf, instead.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}
