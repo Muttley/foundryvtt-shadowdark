@@ -1,0 +1,27 @@
+{
+	"_id": "DnPIdKsSRUj623pi",
+	"_key": "!items!DnPIdKsSRUj623pi",
+	"effects": [
+	],
+	"folder": "EDfN0tPLXXsmyaEn",
+	"img": "icons/magic/fire/beam-jet-stream-yellow.webp",
+	"name": "Flame Strike",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You call down a holy pillar of fire, immolating one creature you can see within range. The target takes 2d6 damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

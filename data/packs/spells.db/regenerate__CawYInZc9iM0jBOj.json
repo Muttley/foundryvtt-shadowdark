@@ -1,0 +1,27 @@
+{
+	"_id": "CawYInZc9iM0jBOj",
+	"_key": "!items!CawYInZc9iM0jBOj",
+	"effects": [
+	],
+	"folder": "EDfN0tPLXXsmyaEn",
+	"img": "icons/magic/life/cross-explosion-burst-green.webp",
+	"name": "Regenerate",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>A creature you touch regains 1d4 hit points on your turn for the duration. This spell also regrows lost body parts.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

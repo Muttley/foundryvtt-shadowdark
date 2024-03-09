@@ -1,0 +1,27 @@
+{
+	"_id": "ECq0V2V5QnsHfBWG",
+	"_key": "!items!ECq0V2V5QnsHfBWG",
+	"effects": [
+	],
+	"folder": "DzARPzBmfc6ssBqS",
+	"img": "icons/magic/life/cross-beam-green.webp",
+	"name": "Mass Cure",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>All allies within near range of you regain 2d6 hit points.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "AZo6rYWOo0SHvpxZ",
+	"_key": "!items!AZo6rYWOo0SHvpxZ",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/skills/ranged/projectile-spiral-gray.webp",
+	"name": "Telekinesis",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You lift a creature or object with your mind. Choose a target that weights 450kg or less. You can move it a near distance in any direction and hold it in place.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

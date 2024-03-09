@@ -1,0 +1,27 @@
+{
+	"_id": "Bu0YbZfePyD4dCBr",
+	"_key": "!items!Bu0YbZfePyD4dCBr",
+	"effects": [
+	],
+	"folder": "EDfN0tPLXXsmyaEn",
+	"img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+	"name": "Wrath",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>Your weapons become magical +2 and deal an additional d8 damage for the spell's duration.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

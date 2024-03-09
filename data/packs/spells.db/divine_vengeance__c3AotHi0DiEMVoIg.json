@@ -1,0 +1,27 @@
+{
+	"_id": "c3AotHi0DiEMVoIg",
+	"_key": "!items!c3AotHi0DiEMVoIg",
+	"effects": [
+	],
+	"folder": "S2MLlGpmsIRnqf6Z",
+	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+	"name": "Divine Vengeance",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You become the divine avatar of your god's wrath, wreathed in holy flames or a black aura of smoldering corruption. </p><p></p><p>For the spell's duration, you can fly a near distance, your weapons are magical, and you have a +4 bonus to your weapon attacks and damage.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

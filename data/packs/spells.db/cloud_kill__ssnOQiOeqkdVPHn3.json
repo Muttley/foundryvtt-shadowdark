@@ -1,0 +1,27 @@
+{
+	"_id": "ssnOQiOeqkdVPHn3",
+	"_key": "!items!ssnOQiOeqkdVPHn3",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/death/skull-poison-green.webp",
+	"name": "Cloud Kill",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>A putrid cloud of yellow poison fills a near-sized cube within range. It spreads around corners. </p><p></p><p>Creatures inside the cloud are blinded and take 2d6 damage at the beginning of their turns. </p><p></p><p>A creature of LV 9 or less that ends its turn fully inside the cloud dies.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}
