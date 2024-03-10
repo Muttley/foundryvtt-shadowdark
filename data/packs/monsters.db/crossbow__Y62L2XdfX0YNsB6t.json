@@ -1,0 +1,37 @@
+{
+	"_id": "Y62L2XdfX0YNsB6t",
+	"_key": "!actors.items!rEhCGVPPzY0R18oJ.Y62L2XdfX0YNsB6t",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Crossbow",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "",
+			"value": "1d6"
+		},
+		"description": "",
+		"ranges": [
+			"far"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

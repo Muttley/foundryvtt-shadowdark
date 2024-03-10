@@ -1,0 +1,37 @@
+{
+	"_id": "9IWXVCF23d5Lti4C",
+	"_key": "!actors.items!K2FMeD45kPEr8RNS.9IWXVCF23d5Lti4C",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Slam",
+	"system": {
+		"attack": {
+			"num": "2"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 2,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "",
+			"value": "1d6"
+		},
+		"description": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

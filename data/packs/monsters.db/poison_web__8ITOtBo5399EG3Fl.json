@@ -1,0 +1,26 @@
+{
+	"_id": "8ITOtBo5399EG3Fl",
+	"_key": "!actors.items!fcgq7uwsJEMMdRNx.8ITOtBo5399EG3Fl",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Poison Web",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": null
+		},
+		"description": "<p>One target stuck in place and [[/r 1d4]] damage/round. DC 12 DEX on turn to escape.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

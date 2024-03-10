@@ -1,0 +1,17 @@
+{
+	"_id": "TJBmGc35yI8J1mmm",
+	"_key": "!actors.items!NTRHmnsw7poR4rZ9.TJBmGc35yI8J1mmm",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Swallow",
+	"system": {
+		"description": "<p>DC 18 STR or swallowed whole. Total darkness inside and [[/r 4d10]] damage per round. Tarrasque regurgitates all swallowed if dealt at least 30 damage in one round to the inside of its gullet.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

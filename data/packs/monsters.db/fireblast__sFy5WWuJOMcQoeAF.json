@@ -1,0 +1,24 @@
+{
+	"_id": "sFy5WWuJOMcQoeAF",
+	"_key": "!actors.items!5NUw5FTgSVwAi0nL.sFy5WWuJOMcQoeAF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Fireblast",
+	"system": {
+		"dc": 14,
+		"description": "<p>[[/r 4d6]] damage to all within a near-sized cube within far.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

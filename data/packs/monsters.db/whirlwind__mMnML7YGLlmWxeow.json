@@ -1,0 +1,24 @@
+{
+	"_id": "mMnML7YGLlmWxeow",
+	"_key": "!actors.items!ytftI0motwEnF29v.mMnML7YGLlmWxeow",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Whirlwind",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Transform into a lashing tornado. All enemies within near DC 18 DEX or thrown [[/r 2d100]] feet in a random direction.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

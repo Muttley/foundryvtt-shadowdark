@@ -1,0 +1,37 @@
+{
+	"_id": "0L1ozHc5BPwaEL6h",
+	"_key": "!actors.items!GzjB5DsORxRuX2MV.0L1ozHc5BPwaEL6h",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Flaming Greatsword",
+	"system": {
+		"attack": {
+			"num": "3"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 10,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "2",
+			"special": "",
+			"value": "2d12"
+		},
+		"description": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

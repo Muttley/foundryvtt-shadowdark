@@ -1,0 +1,24 @@
+{
+	"_id": "PPXVvb1maJzU52wR",
+	"_key": "!actors.items!vylW8UYkC5i9wAS7.PPXVvb1maJzU52wR",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Inferno",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All within near DC 15 DEX or [[/r 3d8]] damage.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

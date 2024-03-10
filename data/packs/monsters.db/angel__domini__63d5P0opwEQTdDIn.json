@@ -1,0 +1,122 @@
+{
+	"_id": "63d5P0opwEQTdDIn",
+	"_key": "!actors!63d5P0opwEQTdDIn",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"MAun2e5060oYtZ5Z",
+		"li5WO5TO9K1JNurG"
+	],
+	"name": "Angel, Domini",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Angel, Domini",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "icons/svg/mystery-man.svg"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 17
+			},
+			"hp": {
+				"hd": 0,
+				"max": 42,
+				"value": 42
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 9
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i>Winged, flawless humans glowing with bronze sunlight.</i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 17 (plate mail + shield), <strong>HP</strong> 42, <strong>ATK</strong> 3 bastard sword +7 (1d8) or 1 horn, <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +4, <strong>Ch</strong> +4, <strong>AL</strong> L, <strong>LV</strong> 9</p><p></p>\n\t<p><strong>Horn</strong>. All enemies in near DC 15 CHA or paralyzed 1d4 rounds.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

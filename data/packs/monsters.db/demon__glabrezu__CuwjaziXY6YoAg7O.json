@@ -1,0 +1,122 @@
+{
+	"_id": "CuwjaziXY6YoAg7O",
+	"_key": "!actors!CuwjaziXY6YoAg7O",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"zO4tqdAx4e5J9t48",
+		"XJljWfi71QkE1a00"
+	],
+	"name": "Demon, Glabrezu",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Glabrezu",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 2
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 15
+			},
+			"hp": {
+				"hd": 0,
+				"max": 40,
+				"value": 40
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 8
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Horse-headed, fanged creatures who walk upright and have four arms; two shriveled, and two ending in hulking pincers. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 40, <strong>ATK</strong> 2 pincer +7 (2d8 + crush), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 8</p><p></p>\n\t<p><strong> Crush</strong>. DC 15 STR or target takes 2d8 damage.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

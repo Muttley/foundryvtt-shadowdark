@@ -6,9 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"tBn7SazFzkQlsWve",
-		"u5WnGVbKcdLMShg2",
-		"GoO4Pf1ZqGjiTmEC"
+		"t6ZdJ0Z112Elpa2k",
+		"com7VSCQjyd2H2dH"
 	],
 	"name": "Dragon, Swamp",
 	"prototypeToken": {
@@ -24,11 +23,11 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
-		"height": 2,
+		"height": 3,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -53,7 +52,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
-		"name": "Dragon, Swamp",
+		"name": "Swamp Dragon",
 		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
@@ -77,7 +76,7 @@
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
 			"tint": null
 		},
-		"width": 2
+		"width": 3
 	},
 	"system": {
 		"abilities": {
@@ -116,8 +115,8 @@
 			"value": 12
 		},
 		"move": "doubleNear",
-		"moveNote": "Burrow, Swim",
-		"notes": "<p><em>This black, wingless beast slithers through dank swamps.</em></p><p></p><p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d10) or 1 smog breath, <strong>MV </strong>double near (burrow, swim), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL </strong>C, <strong>LV</strong> 12</p><p></p><p><strong>Smog Breath</strong>. Fills a near-sized cube extending from dragon. DC 15 CON or 2d10 damage and blinded for 1 round.</p>",
+		"moveNote": "burrow, swim",
+		"notes": "\n\t<p><i> This black, wingless beast slithers through dank swamps. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d10) or 1 smog breath, <strong>MV</strong> double near (burrow, swim), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 12</p><p></p>\n\t<p><strong> Smog Breath</strong>. Fills a near-sized cube extending from dragon. DC 15 CON or 2d10 damage and blinded for 1 round.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

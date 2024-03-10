@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"eYx6J3dDA08DThlx",
-		"rNnV6lCVKtNYT6Sg"
+		"9Q0RtuGxslini2Bt",
+		"r6qkMau5LhjCN1gF"
 	],
 	"name": "Fairy",
 	"prototypeToken": {
@@ -23,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -99,7 +99,7 @@
 				"mod": 0
 			}
 		},
-		"alignment": "lawful",
+		"alignment": "neutral",
 		"attributes": {
 			"ac": {
 				"value": 13
@@ -115,8 +115,8 @@
 			"value": 1
 		},
 		"move": "near",
-		"moveNote": "Fly",
-		"notes": "<p><em>Miniature fey folk with fluttering moth or butterfly wings.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 4, <strong>ATK</strong> 1 needle +3 (1 + poison), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +0, <strong>Ch</strong> +1, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p><p><strong>Poison</strong>. DC 12 CON or fall into deep sleep for 1d4 hours.</p>",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Miniature fey folk with fluttering moth or butterfly wings. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 4, <strong>ATK</strong> 1 needle +3 (1 + poison), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +0, <strong>Ch</strong> +1, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p>\n\t<p><strong> Poison</strong>. DC 12 CON or fall into deep sleep for 1d4 hours.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

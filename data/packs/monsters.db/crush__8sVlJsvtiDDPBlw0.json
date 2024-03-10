@@ -1,0 +1,17 @@
+{
+	"_id": "8sVlJsvtiDDPBlw0",
+	"_key": "!actors.items!RG84tprafQTDEFCa.8sVlJsvtiDDPBlw0",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Crush",
+	"system": {
+		"description": "<p>Deals an extra die of damage if it hits the same target with both claws.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

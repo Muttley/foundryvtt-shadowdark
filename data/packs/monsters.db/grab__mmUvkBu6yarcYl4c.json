@@ -1,0 +1,17 @@
+{
+	"_id": "mmUvkBu6yarcYl4c",
+	"_key": "!actors.items!Jn5JjEPCUT86txAg.mmUvkBu6yarcYl4c",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Grab",
+	"system": {
+		"description": "<p>Target is immobilized. DC 15 Strength check on turn to break free.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

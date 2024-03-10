@@ -6,9 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"q9Q0JqmkiOQsTesv",
-		"eZhGDmr1vDinPcPs",
-		"3tGrbD7V4Kzh69WJ"
+		"ayVtdSkCj8Vu00ph",
+		"PlorIParS9pUT14p",
+		"RAfF2wCNn0ey6xAT"
 	],
 	"name": "Cave Brute",
 	"prototypeToken": {
@@ -24,11 +24,11 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
-		"height": 1,
+		"height": 2,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -77,7 +77,7 @@
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
 			"tint": null
 		},
-		"width": 1
+		"width": 2
 	},
 	"system": {
 		"abilities": {
@@ -116,8 +116,8 @@
 			"value": 6
 		},
 		"move": "near",
-		"moveNote": "Burrow",
-		"notes": "<p><em>A hulking, insectoid beast with long mandibles, four eyes, and thick arms covered in bristles.</em></p><p></p><p><strong>AC</strong> 14, <strong>HP</strong> 28, <strong>ATK</strong> 2 claw +5 (1d8) and 1 mandible +5 (1d10), <strong>MV </strong>near (burrow), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +1, I -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV </strong>6</p><p></p><p><strong>Bewilder</strong>. Creatures within near that see the cave brute's eyes, DC 12 CHA at start of their turn or dazed and no action.</p>",
+		"moveNote": "burrow",
+		"notes": "\n\t<p><i> A hulking, insectoid beast with long mandibles, four eyes, and thick arms covered in bristles. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 28, <strong>ATK</strong> 2 claw +5 (1d8) and 1 mandible +5 (1d10), <strong>MV</strong> near (burrow), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Bewilder</strong>. Creatures within near that see the cave brute's eyes, DC 12 CHA at start of their turn or dazed and no action.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

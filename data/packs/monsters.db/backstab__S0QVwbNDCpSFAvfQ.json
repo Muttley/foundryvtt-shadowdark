@@ -1,0 +1,17 @@
+{
+	"_id": "S0QVwbNDCpSFAvfQ",
+	"_key": "!actors.items!Ap1b6HrZLpeRMvGp.S0QVwbNDCpSFAvfQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Backstab",
+	"system": {
+		"description": "<p>Deal x2 damage against surprised creatures.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

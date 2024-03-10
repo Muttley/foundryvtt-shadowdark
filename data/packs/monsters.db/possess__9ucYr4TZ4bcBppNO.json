@@ -1,0 +1,24 @@
+{
+	"_id": "9ucYr4TZ4bcBppNO",
+	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.9ucYr4TZ4bcBppNO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Possess",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Must be corporeal. One target, close range. Contested CHA check. If ghost wins, it inhabits target's body and controls it for [[/r 2d4]] rounds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

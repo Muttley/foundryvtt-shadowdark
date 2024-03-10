@@ -1,0 +1,25 @@
+{
+	"_id": "aPKz68sYHFsgD6Br",
+	"_key": "!actors.items!YHdOAuMUdCigLIHR.aPKz68sYHFsgD6Br",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Constrict",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "",
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

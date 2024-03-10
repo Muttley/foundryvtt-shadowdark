@@ -1,0 +1,123 @@
+{
+	"_id": "Q89EgThYcungYTke",
+	"_key": "!actors!Q89EgThYcungYTke",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"hIKix8Xgyo3ueGWA",
+		"iqFQAHx7jgMiLIWO",
+		"8rwGx2FJL0elVlM2"
+	],
+	"name": "Zombie",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Zombie",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": -2
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": -2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 8
+			},
+			"hp": {
+				"hd": 0,
+				"max": 11,
+				"value": 11
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 2
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Lurching and decomposed undead that hunt in mobs. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 8, <strong>HP</strong> 11, <strong>ATK</strong> 1 slam +2 (1d6), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> -2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> -2, <strong>Ch</strong> -3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Undead</strong>. Immune to morale checks.</p><p></p><p><strong>Relentless</strong>. If zombie reduced to 0 HP by a non-magical source, DC 15 CON to go to 1 HP instead.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

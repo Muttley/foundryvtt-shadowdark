@@ -1,0 +1,24 @@
+{
+	"_id": "OtniudEZgARkDoTE",
+	"_key": "!actors.items!wgHzqAqBNsutUALU.OtniudEZgARkDoTE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Venom",
+	"system": {
+		"dc": 12,
+		"description": "<p>One target in far takes [[/r 2d8]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

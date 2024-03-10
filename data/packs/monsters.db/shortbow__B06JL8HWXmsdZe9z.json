@@ -1,0 +1,37 @@
+{
+	"_id": "B06JL8HWXmsdZe9z",
+	"_key": "!actors.items!I7CMFbyFmFHVwE5U.B06JL8HWXmsdZe9z",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Shortbow",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 1,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "",
+			"value": "1d4"
+		},
+		"description": "",
+		"ranges": [
+			"far"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

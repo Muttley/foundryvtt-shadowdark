@@ -1,0 +1,17 @@
+{
+	"_id": "pL0pj5NHWX85KO00",
+	"_key": "!actors.items!C0CuPZJOFDmuplw8.pL0pj5NHWX85KO00",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Grab",
+	"system": {
+		"description": "<p>DC 15 STR or target trapped in tendril. Tendril auto-hits target next round. DC 15 STR on turn to break free.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

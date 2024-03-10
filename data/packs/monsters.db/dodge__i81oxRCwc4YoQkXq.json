@@ -1,0 +1,17 @@
+{
+	"_id": "i81oxRCwc4YoQkXq",
+	"_key": "!actors.items!BxilUr9Ac6zgekYU.i81oxRCwc4YoQkXq",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Dodge",
+	"system": {
+		"description": "<p>1/day, an attack that would hit misses instead.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

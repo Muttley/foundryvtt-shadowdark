@@ -1,0 +1,122 @@
+{
+	"_id": "Fd7VgUIaCK6xQkS2",
+	"_key": "!actors!Fd7VgUIaCK6xQkS2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"q4mU95m9HrePCYML",
+		"CmOIbqyF6fMvO1Dh"
+	],
+	"name": "Shadow",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Shadow",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -1
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": -4
+			},
+			"wis": {
+				"mod": 0
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 15,
+				"value": 15
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Flitting, sentient shadows in the vague shape of a human. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 15, <strong>ATK</strong> 2 touch +2 (1d4 + drain), <strong>MV</strong> near (fly), <strong>S</strong> -4, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Drain</strong>. Target takes 1 STR damage. At 0 STR, target dies and becomes a shadow.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}
