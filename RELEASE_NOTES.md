@@ -1,3 +1,10 @@
+# v2.0.0
+
+## Enhancements
+* [#690] All monsters from the core rules are now available in the monsters compendium.
+
+---
+
 # v1.8.0
 
 ## Bugfixes
