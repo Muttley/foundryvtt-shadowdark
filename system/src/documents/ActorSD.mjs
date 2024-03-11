@@ -110,7 +110,7 @@ export default class ActorSD extends Actor {
 		if (success) {
 			const spell = {
 				type: "Spell",
-				img: item.img,
+				img: item.system.spellImg,
 				name: item.system.spellName,
 				system: {
 					class: item.system.class,
