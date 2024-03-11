@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.level-up {
+
+	h1 {
+		font-family: "Old Newspaper Font";
+		margin-left: 15px;
+		font-size: 2.5em;
+		a {
+			font-size: 1em;
+		}
+	}
+
+	button {
+		font-size: 1.1rem;
+		font-family: "Old Newspaper Font";
+	}
+
+	.content-link {
+		line-height: 1.7;
+	}
+
+	.box-style {
+		border: 1px solid #111;
+
+		.header {
+			display:flex;
+			height: 31px;
+
+			label {
+				font-size: 1.1rem;
+				font-family: "Old Newspaper Font";
+				background:#111;
+				float:left;
+				color:white;
+				padding:2px;
+				padding-left: 10px;
+			}
+			span {
+				background: linear-gradient(90deg, #111 , transparent);
+				float:right;
+				flex-grow: 1;
+				text-align:right;
+				vertical-align: middle;
+				padding:6px;
+			}
+		}
+		.content {
+			display:block;
+			padding:5px;
+		}
+	}
+
+}
