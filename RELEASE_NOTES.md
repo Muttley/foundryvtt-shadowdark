@@ -3,6 +3,9 @@
 ## Bugfixes
 * [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
 
+## Enhancements
+* [#725] Update token mapping for 2.0.0 core monsters
+
 ---
 
 # v1.8.0
