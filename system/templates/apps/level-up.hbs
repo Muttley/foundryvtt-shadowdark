@@ -1,5 +1,6 @@
 <form class="level-up" autocomplete="off">
-	{{actor.system.title}} {{actor.name}}
+	<h1>{{actor.name}}</h1>
+	Leveling up to level {{targetLevel}}
 	{{!-- Hit Points --}}
 	<div class="box-style">
 		<div class="header">
@@ -12,18 +13,29 @@
 	</div>
 
 	{{!-- Talents --}}
-	<div class="header">
-		<label>Talents</label>
-		<span></span>
+	<div class="box-style">
+		<div class="header">
+			<label>Talents</label>
+			<span></span>
+		</div>
+		<div class="content ">
+			No talents at this level
+			<button type="button" data-action="roll-talent">Roll talent</button>
+		</div>
 	</div>
-	No talents at this level
-	<button type="button" data-action="roll-talent">Roll talent</button>
 
 	{{!-- Spells --}}
-	<div class="header">
-		<label>Spells</label>
-		<span></span>
+	{{#if isSpellCaster}}
+	<div class="box-style">
+		<div class="header">
+			<label>Spells</label>
+			<span></span>
+		</div>
+		<div class="content ">
+			Tier 1: Choose 1
+
+		</div>
 	</div>
-	Tier 1: Choose 1
-	<button type="button" data-action="create-character">Level Up!</button>
+	{{/if}}
+	<button class="level-up-button" type="button" data-action="create-character">Level Up!</button>
 </form>

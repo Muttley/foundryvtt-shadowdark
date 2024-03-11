@@ -5,6 +5,7 @@
 
 	h1 {
 		font-family: "Old Newspaper Font";
+		text-align: center;
 		margin-left: 15px;
 		font-size: 2.5em;
 		a {
@@ -23,6 +24,7 @@
 
 	.box-style {
 		border: 1px solid #111;
+		margin-bottom: 10px;
 
 		.header {
 			display:flex;
@@ -50,6 +52,11 @@
 			display:block;
 			padding:5px;
 		}
+	}
+
+	.level-up-button {
+		align-self: center;
+		width: 75%;
 	}
 
 }

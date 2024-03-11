@@ -12,9 +12,10 @@ export default class LevelUpSD extends FormApplication {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			width: 300,
-			resizable: false,
-			closeOnSubmit: false,
+			resizable: true,
+			closeOnSubmit: true,
 			submitOnChange: false,
+			dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}],
 		});
 	}
 
@@ -52,11 +53,30 @@ export default class LevelUpSD extends FormApplication {
 			this.firstrun = false;
 			this.data.class = await fromUuid(this.data.actor.system.class);
 			this.data.talentTable = await fromUuid(this.data.class.system.classTalentTable);
+			this.data.targetLevel = this.data.actor.system.level.value +1;
+			this.data.talentNeeded = (this.data.targetLevel % 2 !== 0);
+			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			console.log(this.data);
 		}
 		return this.data;
 	}
 
+	/** @inheritdoc */
+	async _onDrop(event) {
+		const eventData = TextEditor.getDragEventData(event);
+		const itemObj = fromUuid(eventData.uuid);
+		if (itemObj && eventData.type === "Item") {
+			switch (itemObj) {
+				case "Talent":
+					return this._onDropTalent(itemObj);
+				case "Spell":
+					return this._onDropSpell(itemObj);
+				default:
+					break;
+			}
+		}
+		return super._onDrop();
+	}
 
 	async _onRollHP(event) {
 		event.preventDefault();
