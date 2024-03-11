@@ -1,0 +1,27 @@
+{
+	"_id": "uHAZVTt5bXwQvhFy",
+	"_key": "!items!uHAZVTt5bXwQvhFy",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+	"name": "Wall of Force",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You lift your hands, conjuring a transparent wall of force. </p><p></p><p>The thin wall must be contiguous and can cover a near-sized area in width and length. You choose its shape. </p><p></p><p>Nothing on the same plane can physically pass through the wall.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

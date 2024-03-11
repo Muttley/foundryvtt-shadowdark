@@ -1,0 +1,27 @@
+{
+	"_id": "Z8NfrRd9udGR3ClT",
+	"_key": "!items!Z8NfrRd9udGR3ClT",
+	"effects": [
+	],
+	"folder": "a6WcvmZpOASURb60",
+	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+	"name": "Hold Monster",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You paralyze one creature you can see within range. If the target is LV 9+, it may make a STR check vs. your last spellcasting check at the start of its turn to end the spell.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}
