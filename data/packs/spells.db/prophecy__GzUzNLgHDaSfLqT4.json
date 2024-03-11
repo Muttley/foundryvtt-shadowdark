@@ -1,0 +1,27 @@
+{
+	"_id": "GzUzNLgHDaSfLqT4",
+	"_key": "!items!GzUzNLgHDaSfLqT4",
+	"effects": [
+	],
+	"folder": "S2MLlGpmsIRnqf6Z",
+	"img": "icons/magic/light/orb-hands-humanoid-yellow.webp",
+	"name": "Prophecy",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You commune directly with your god for guidance. </p><p></p><p>Ask the GM one question. The GM answers the question truthfully using the knowledge your god possesses. Deities are mighty, but not omniscient. </p><p></p><p>You cannot cast this spell again until you complete penance.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

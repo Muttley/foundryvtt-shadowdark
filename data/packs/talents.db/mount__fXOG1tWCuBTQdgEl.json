@@ -1,0 +1,20 @@
+{
+	"_id": "fXOG1tWCuBTQdgEl",
+	"_key": "!items!fXOG1tWCuBTQdgEl",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/environment/creatures/horse-tan.webp",
+	"name": "Mount",
+	"system": {
+		"description": "<p>You have a common camel or horse with a reliable or lovely demeanor (see pg. 29). It comes when you call and never spooks. You can only have one such mount at a time. </p><p></p><p>While riding your mount, you both get a bonus to AC equal to half your level (round down). Your mount has additional levels equal to half your level (round down). You can freely leap on or off your mount once per round. </p><p></p><p>If you lose your mount, you can use your downtime to acquire and train another. Pass a DC 15 CHA check for the new creature to become your mount. Lower the DC one step each attempt.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

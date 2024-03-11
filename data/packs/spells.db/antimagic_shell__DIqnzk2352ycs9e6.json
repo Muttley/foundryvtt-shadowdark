@@ -1,0 +1,27 @@
+{
+	"_id": "DIqnzk2352ycs9e6",
+	"_key": "!items!DIqnzk2352ycs9e6",
+	"effects": [
+	],
+	"folder": "a6WcvmZpOASURb60",
+	"img": "icons/commodities/materials/glass-cube.webp",
+	"name": "Antimagic Shell",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>An invisible, near-sized cube of null-magic appears centered on you. </p><p></p><p>Within the cube, no spells can be cast. Magic items and spells have no effect in the zone, and no magic can enter. </p><p></p><p>The cube moves with you. Spells such as dispel magic have no effect on it. </p><p></p><p>Another antimagic shell does not affect this one.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

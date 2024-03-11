@@ -1,0 +1,27 @@
+{
+	"_id": "471T74oeeDcmvzOM",
+	"_key": "!items!471T74oeeDcmvzOM",
+	"effects": [
+	],
+	"folder": "G4Rg3SiJ4c0vIpqq",
+	"img": "icons/consumables/potions/vial-cork-blue.webp",
+	"name": "Potion",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>As a part of casting this spell, you must bless a single drink of any liquid. </p><p></p><p>The liquid gains healing properties for 1 day. A creature who imbibes it may end the effects of one poison or may immediately stop dying (the creature remains at 0 HP).</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

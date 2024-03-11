@@ -1,0 +1,19 @@
+{
+	"_id": "KMMpRWDsIybiDW7u",
+	"_key": "!items!KMMpRWDsIybiDW7u",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/equipment/shield/kite-wooden-axe-blue-black.webp",
+	"name": "Shield Wall",
+	"system": {
+		"description": "<p>If you wield a shield, you can use your action to take a defensive stance. Your AC becomes 20 during this time.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

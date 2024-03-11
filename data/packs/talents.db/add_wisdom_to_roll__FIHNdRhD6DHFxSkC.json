@@ -1,0 +1,20 @@
+{
+	"_id": "FIHNdRhD6DHFxSkC",
+	"_key": "!items!FIHNdRhD6DHFxSkC",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+	"name": "Add Wisdom to Roll",
+	"system": {
+		"description": "<p>3/day, add your Wis bonus to any roll (reroll duplicates)</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "Op1yKvM7uq5pdopr",
+	"_key": "!items!Op1yKvM7uq5pdopr",
+	"effects": [
+	],
+	"folder": "vFaoMFPGDGlKn4gF",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Sundering",
+	"system": {
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">When you are hit with a melee attack, you may choose to destroy this weapon or armor to negate all damage from the attack.</span></p>",
+		"itemType": "weapon",
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		}
+	},
+	"type": "Property"
+}

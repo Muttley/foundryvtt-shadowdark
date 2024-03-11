@@ -1,0 +1,27 @@
+{
+	"_id": "RA0fvMGZEepFAV2L",
+	"_key": "!items!RA0fvMGZEepFAV2L",
+	"effects": [
+	],
+	"folder": "DzARPzBmfc6ssBqS",
+	"img": "icons/magic/light/hand-sparks-smoke-teal.webp",
+	"name": "Restoration",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>With the touch of your hands, you expunge curses and illnesses. One curse, illness, or affliction of your choice affecting the target creature ends</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

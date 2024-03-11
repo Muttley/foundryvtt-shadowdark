@@ -1,0 +1,28 @@
+{
+	"_id": "eKnWZ0LDw93oEqFt",
+	"_key": "!items!eKnWZ0LDw93oEqFt",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+	"name": "Invisibility",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>A creature you touch becomes invisible for the spell’s duration.</p><p>The spell ends if the target attacks or casts a spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

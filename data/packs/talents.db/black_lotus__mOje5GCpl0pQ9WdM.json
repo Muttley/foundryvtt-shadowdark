@@ -1,0 +1,19 @@
+{
+	"_id": "mOje5GCpl0pQ9WdM",
+	"_key": "!items!mOje5GCpl0pQ9WdM",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/commodities/flowers/lotus-purple.webp",
+	"name": "Black Lotus",
+	"system": {
+		"description": "<p>You earned the right to eat a petal of the fabled black lotus flower, and you survived its sorcerous effects.</p><p></p><p>Roll one talent on the @UUID[Compendium.shadowdark.rollable-tables.RollTable.pQAyZAcfrs9JrG0Q]{Black Lotus Talents} table. You may reroll duplicates or keep them.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

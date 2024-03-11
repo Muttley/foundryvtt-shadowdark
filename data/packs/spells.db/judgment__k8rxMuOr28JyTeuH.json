@@ -1,0 +1,27 @@
+{
+	"_id": "k8rxMuOr28JyTeuH",
+	"_key": "!items!k8rxMuOr28JyTeuH",
+	"effects": [
+	],
+	"folder": "S2MLlGpmsIRnqf6Z",
+	"img": "icons/skills/social/trading-justice-scale-gold.webp",
+	"name": "Judgment",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You instantly banish a creature you touch, sending it and all possessions it carries to face the judgment of your god. </p><p></p><p>You can banish an intelligent creature of LV 10 or less. </p><p></p><p>When the creature returns in 5 rounds, it has been healed to full hit points if its deeds pleased your god. It has been reduced to 1 hit point if its deeds angered your god. If your god can't judge its actions, it is unchanged.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,20 @@
+{
+	"_id": "A8Siwy6S27LwEkx5",
+	"_key": "!items!A8Siwy6S27LwEkx5",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/commodities/treasure/statue-bust-stone-grey.webp",
+	"name": "Old Gods",
+	"system": {
+		"description": "<p>Each day, your purpose aligns with one of the Old Gods. Choose one of the below options after you complete a rest; you gain its benefits until you complete your next rest.</p><ul><li><p><strong>Odin. </strong>You regain 1d4 HP every time you kill an enemy.</p></li><li><p><strong>Freya.</strong> You gain a luck token if you don't have one. Each time you use a luck token, add 1d6 to your roll.</p></li><li><p><strong>Loki. </strong>You have advantage on checks to lie, sneak, and hide.</p></li></ul>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

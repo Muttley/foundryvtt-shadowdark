@@ -1,0 +1,92 @@
+{
+	"_id": "0uVUOXKuX9xfJ600",
+	"_key": "!items!0uVUOXKuX9xfJ600",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Knight of St. Ydris",
+	"system": {
+		"allArmor": true,
+		"allMeleeWeapons": true,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.vPME2uXw5RuoKEP8",
+		"description": "<p>Cursed knights who walk the path of St. Ydris the Unholy, the Possessed. They embrace the darkness in order to fight it, cleansing evil with a flurry of steel and forbidden sorcery.</p>",
+		"hitPoints": "d6",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"spellcasting": {
+			"ability": "cha",
+			"baseDifficulty": 10,
+			"class": "Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.59TWYCe5pl1P6Znj",
+			"Compendium.shadowdark.talents.Item.XRW3jhpTni15hwFc"
+		],
+		"titles": [
+			{
+				"chaotic": "Traitor",
+				"from": 1,
+				"lawful": "Arbiter",
+				"neutral": "Brother/Sister",
+				"to": 2
+			},
+			{
+				"chaotic": "Fallen",
+				"from": 3,
+				"lawful": "Enforcer",
+				"neutral": "Exorcist",
+				"to": 4
+			},
+			{
+				"chaotic": "Oathbreaker",
+				"from": 5,
+				"lawful": "Knight Marshall",
+				"neutral": "Reverend Knight",
+				"to": 6
+			},
+			{
+				"chaotic": "Blackguard",
+				"from": 7,
+				"lawful": "Judge",
+				"neutral": "Inquisitor",
+				"to": 8
+			},
+			{
+				"chaotic": "Demonlord",
+				"from": 9,
+				"lawful": "Justiciar",
+				"neutral": "Grand Inquisitor",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu"
+		]
+	},
+	"type": "Class"
+}

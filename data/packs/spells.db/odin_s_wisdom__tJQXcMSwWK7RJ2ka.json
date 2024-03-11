@@ -1,0 +1,27 @@
+{
+	"_id": "tJQXcMSwWK7RJ2ka",
+	"_key": "!items!tJQXcMSwWK7RJ2ka",
+	"effects": [
+	],
+	"folder": "czS3CsyEqdZdRBcr",
+	"img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
+	"name": "Odin's Wisdom",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>For the spell's duration, add your level as an additional bonus to your Wisdom checks and spellcasting checks.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d6"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

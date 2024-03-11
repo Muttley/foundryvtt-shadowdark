@@ -1,0 +1,27 @@
+{
+	"_id": "TEPKpwnZcxSQt0tj",
+	"_key": "!items!TEPKpwnZcxSQt0tj",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/skills/toxins/cauldron-pot-bubbles-green.webp",
+	"name": "Cauldron",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You conjure a bubbling cauldron next to you. It can produce one of the following effects: </p><p></p><p>• Any broken mundane item placed inside the cauldron is repaired. </p><p>• A fat, croaking toad leaps out and follows your instructions for the next 3 rounds. </p><p>• You can place up to 3 item slots of items inside the cauldron. The cauldron expels these items the next time you cast this spell (expelling items counts as the cauldron's single effect).</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

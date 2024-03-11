@@ -1,0 +1,27 @@
+{
+	"_id": "7uTblEDfklCO1et7",
+	"_key": "!items!7uTblEDfklCO1et7",
+	"effects": [
+	],
+	"folder": "JWPZqQ3Dk9n1iW1g",
+	"img": "icons/magic/lightning/bolt-strike-forked-sparks-blue.webp",
+	"name": "Lightning Bolt",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You shoot a blue-white ray of lightning from your hands, hitting all creatures in a straight line out to a far distance. </p><p></p><p>Creatures struck by the lightning take 3d6 damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}
