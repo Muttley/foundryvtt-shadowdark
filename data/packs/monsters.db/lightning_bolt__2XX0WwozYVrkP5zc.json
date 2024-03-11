@@ -1,0 +1,25 @@
+{
+	"_id": "2XX0WwozYVrkP5zc",
+	"_key": "!actors.items!4A7ELy7Oj4YKRqTf.2XX0WwozYVrkP5zc",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Lightning Bolt",
+	"system": {
+		"attack": {
+			"num": "1d4"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Straight line (5' wide) extending far from kraken. DC 15 DEX or [[/r 6d6]] damage.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

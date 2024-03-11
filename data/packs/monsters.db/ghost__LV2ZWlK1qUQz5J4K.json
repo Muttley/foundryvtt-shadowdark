@@ -6,11 +6,11 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"lTleH1nUTffr49UN",
-		"HmtuqmlqB6gnF0fM",
-		"hmg4n6bWzrZjIp0Q",
-		"jhamHxRRpeqem41U",
-		"PqKBn6d1rdEia7s2"
+		"5N3xXhfRMpAtJMf5",
+		"9ucYr4TZ4bcBppNO",
+		"mMdG21yWMI1XJqPc",
+		"4lmNe8oSGhq6zC5W",
+		"wqdT7KpNRXUZzJwr"
 	],
 	"name": "Ghost",
 	"prototypeToken": {
@@ -26,7 +26,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -118,8 +118,8 @@
 			"value": 6
 		},
 		"move": "near",
-		"moveNote": "Fly",
-		"notes": "<p><em>A wavering spirit with a face contorted in rage or sadness.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 27, <strong>ATK</strong> 2 death touch +5 (1d8 + life drain) or 1 possess, <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +4, <strong>AL</strong> C, <strong>LV</strong> 6</p><p></p><p><strong>Greater Undead.</strong> Immune to morale checks. Only damaged by silver or magical sources.</p><p></p><p><strong>Life Drain.</strong> 1d4 CON damage. Death if reduced to 0 CON.</p><p></p><p><strong>Possess</strong>. One target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.</p>",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> A wavering spirit with a face contorted in rage or sadness. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 27, <strong>ATK</strong> 2 death touch +5 (1d8 + life drain) or 1 possess, <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Greater Undead</strong>. Immune to morale checks. Only damaged by silver or magical sources.</p><p></p><p><strong>Incorporeal</strong>. In place of attacks, become corporeal or incorporeal.</p><p></p><p><strong>Life Drain</strong>. 1d4 CON damage. Death if reduced to 0 CON.</p><p></p><p><strong>Possess</strong>. Must be corporeal. One target, close range. Contested CHA check. If ghost wins, it inhabits target's body and controls it for 2d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

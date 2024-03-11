@@ -1,0 +1,24 @@
+{
+	"_id": "O9alWxnUwP76u3cA",
+	"_key": "!actors.items!6ce2xr1QmjJFMe5P.O9alWxnUwP76u3cA",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charm",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>One humanoid target who can see Obe-Ixx within near, DC 15 CHA or under Obe-Ixx's control for [[/r 1d4]] days.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

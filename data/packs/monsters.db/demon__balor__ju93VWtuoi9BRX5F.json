@@ -1,0 +1,125 @@
+{
+	"_id": "ju93VWtuoi9BRX5F",
+	"_key": "!actors!ju93VWtuoi9BRX5F",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"1F4Uh0Odo0ZQRywf",
+		"VtKZ8tWdZuHKkEww",
+		"ucpMHXglKWhRznpc",
+		"bxIItkpH2Cix9D0q",
+		"NbUw02jTaenW8Vp6"
+	],
+	"name": "Demon, Balor",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Balor",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 4
+			},
+			"con": {
+				"mod": 5
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 6
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 19
+			},
+			"hp": {
+				"hd": 0,
+				"max": 77,
+				"value": 77
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 16
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Colossal, horned bat-beasts wreathed in the flames of hell itself. Their mighty swords and cracking whips of fire can slice through stone. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 19, <strong>HP</strong> 77, <strong>ATK</strong> 3 greatsword +10 (2d12 + hellfire) and 1 fire whip (near) +10 (2d6 + grab), <strong>MV</strong> double near (fly), <strong>S</strong> +6, <strong>D</strong> +2, <strong>C</strong> +5, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 16</p><p></p>\n\t<p><strong> Impervious</strong>. Fire immune. Only damaged by magical sources.</p><p></p><p><strong>Grab</strong>. DC 18 STR or target bound in whip. 2d6 damage per round held, DC 18 STR on turn to break free. In place of fire whip attack, balor can fling a grabbed target double near on its turn.</p><p></p><p><strong>Hellfire</strong>. DC 18 DEX or 2d8 damage per round until flames extinguished.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

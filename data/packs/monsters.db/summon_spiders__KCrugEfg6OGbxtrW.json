@@ -1,0 +1,23 @@
+{
+	"_id": "KCrugEfg6OGbxtrW",
+	"_key": "!actors.items!mLujryShxJUk5Jys.KCrugEfg6OGbxtrW",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Summon Spiders",
+	"system": {
+		"dc": "14",
+		"description": "<p>Summon [[/r 2d4]] loyal giant spiders that appear within near. They stay for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

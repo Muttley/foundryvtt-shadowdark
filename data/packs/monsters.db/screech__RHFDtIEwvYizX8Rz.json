@@ -1,0 +1,24 @@
+{
+	"_id": "RHFDtIEwvYizX8Rz",
+	"_key": "!actors.items!0Q9d1621wpUEsuFC.RHFDtIEwvYizX8Rz",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Screech",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All enemies in double near DC 12 WIS or DISADV on checks and attacks for [[/r 1d4]] rounds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

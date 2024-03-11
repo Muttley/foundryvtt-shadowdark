@@ -1,0 +1,17 @@
+{
+	"_id": "qEKwcHI7lPoZvp7R",
+	"_key": "!actors.items!o1aBfxHFxYVHLTRn.qEKwcHI7lPoZvp7R",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Wish",
+	"system": {
+		"description": "<p>Cast wish once a week for a mortal, no spellcasting check.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

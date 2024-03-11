@@ -1,0 +1,17 @@
+{
+	"_id": "tQU54YsykoIk2bV6",
+	"_key": "!actors.items!EDaGLKYYCT5rCMhY.tQU54YsykoIk2bV6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Blood Drain",
+	"system": {
+		"description": "<p>Vampire heals [[/r 2d6]] HP and target permanently loses [[/r 1d4]] CON. At 0 CON, target dies and rises as a vampire spawn.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

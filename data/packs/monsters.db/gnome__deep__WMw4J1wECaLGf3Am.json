@@ -6,9 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"bzjdODudUbBAg2ue",
-		"f8wKgMP0XbD2Wejw",
-		"MJOkTSVNf817bqhs"
+		"5jGvTfWAI7idu1Rg",
+		"IUrnLndeWpiJJQ0j",
+		"jRGtXnGao8A3HWJF"
 	],
 	"name": "Gnome, Deep",
 	"prototypeToken": {
@@ -24,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -53,7 +53,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
-		"name": "Gnome, Deep",
+		"name": "Deep Gnome",
 		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
@@ -117,7 +117,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>Gray-skinned, white-haired fey the size of halflings. They hunt for gems and rare cave flora.</em></p><p></p><p><strong>AC</strong> 14 (leather + shield), <strong>HP</strong> 14, <strong>ATK</strong> 1 pick +3 (1d6) or 1 dart (near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 3</p><p></p><p><strong>Stone Meld</strong>. 2/day, underground only. Turn invisible for 3 rounds.</p>",
+		"notes": "\n\t<p><i> Gray-skinned, white-haired fey the size of halflings. They hunt for gems and rare cave flora. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14 (leather + shield), <strong>HP</strong> 14, <strong>ATK</strong> 1 pick +3 (1d6) or 1 dart (near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Stone Meld</strong>. 2/day, underground only. Turn invisible for 3 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

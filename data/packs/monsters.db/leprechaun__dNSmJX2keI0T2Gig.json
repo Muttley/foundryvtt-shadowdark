@@ -1,0 +1,125 @@
+{
+	"_id": "dNSmJX2keI0T2Gig",
+	"_key": "!actors!dNSmJX2keI0T2Gig",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"yIIm0z82gLEEix7n",
+		"XcSD47zc5HQNJSL6",
+		"1x4iaa1v3l2umZCY",
+		"zoqqeU3OnSCpP6Ec",
+		"i1UPR5s1LPnsGRTd"
+	],
+	"name": "Leprechaun",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Leprechaun",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 2
+			},
+			"str": {
+				"mod": 1
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 19,
+				"value": 19
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 4
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i>Impish fey who favor green garb and love fooling \"tall folk\" with promises of gold.</i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 spell +4, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +2, <strong>W</strong> +1, <strong>Ch</strong> +3, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong>Alert</strong>. Cannot be surprised.</p><p></p><p><strong>Slippery</strong>. Hostile spells targeting the leprechaun are DC 15 to cast.</p><p></p><p><strong>Fool's Gold (CHA Spell)</strong>. DC 12. Close. One small object or small group of similar objects. Turn objects into silver or gold pieces. Lasts 1 day.</p><p></p><p><strong>Illusion (CHA Spell)</strong>. DC 11. Create a convincing visual and/ or auditory illusion within near. Lasts until dismissed.</p><p></p><p><strong>Invisibility (CHA Spell)</strong>. DC 12. Self. Become invisible for 2d4 rounds.</p><p></p>",
+		"spellcastingAbility": "cha",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 4
+	},
+	"type": "NPC"
+}

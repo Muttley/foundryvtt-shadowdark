@@ -1,0 +1,17 @@
+{
+	"_id": "mddDFLdkX8qzSfWS",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.mddDFLdkX8qzSfWS",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Curse",
+	"system": {
+		"description": "<p>DC 15 CON or target gains a magical curse, turning into a deep one over [[/r 2d10]] days.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

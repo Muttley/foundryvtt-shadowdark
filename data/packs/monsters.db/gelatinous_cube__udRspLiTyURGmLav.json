@@ -6,10 +6,10 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"NvaLdTF8DSe66MwF",
-		"RnlzBMWYWCNLB80N",
-		"tksSsqnnEL96jIKF",
-		"jjIo6W6eWnU2jog0"
+		"fKQoLPkp3lPIlrz5",
+		"YT0lNfn2LRODcVHp",
+		"ogLFic8ZlqnHmw6c",
+		"wqSMhIHhQtIDwgpg"
 	],
 	"name": "Gelatinous Cube",
 	"prototypeToken": {
@@ -25,7 +25,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -118,7 +118,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A translucent cube of slime that silently mows through cramped tunnels, slurping up debris.</em></p><p></p><p><strong>AC</strong> 11, <strong>HP</strong> 24, <strong>ATK</strong> 1 touch +4 (1d8 + toxin), <strong>MV</strong> near <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I </strong>-4, <strong>W</strong> +1, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p><p><strong>Engulf</strong>. Absorbs paralyzed creatures in close range into its body, automatically hitting with touch attack on its turn.</p><p></p><p><strong>Rubbery</strong>. Half damage from stabbing weapons.</p><p></p><p><strong>Toxin</strong>. DC 15 CON or paralyzed 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> A translucent cube of slime that silently mows through tunnels. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 24, <strong>ATK</strong> 1 touch +4 (1d8 + toxin + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> -4, <strong>W</strong> +1, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Engulf</strong>. DC 12 STR or trapped inside cube. Touch attack auto-hits engulfed targets each round. DC 12 STR on turn to escape. Fail checks if paralyzed.</p><p></p><p><strong>Rubbery</strong>. Half damage from stabbing weapons.</p><p></p><p><strong>Toxin</strong>. DC 15 CON or paralyzed 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

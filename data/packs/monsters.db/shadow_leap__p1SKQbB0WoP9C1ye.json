@@ -1,0 +1,24 @@
+{
+	"_id": "p1SKQbB0WoP9C1ye",
+	"_key": "!actors.items!sncxcSi6ziTStjAh.p1SKQbB0WoP9C1ye",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Shadow Leap",
+	"system": {
+		"dc": 14,
+		"description": "<p>Teleport up to 100 miles.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "6nmQ7COORatK6M7w",
+	"_key": "!actors.items!j1Uy1uGIUxbtB0iD.6nmQ7COORatK6M7w",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Scorpion Sting",
+	"system": {
+		"dc": 11,
+		"description": "<p>Near range, one target. [[/r 1d6]] damage and target has DISADV on next attack roll or check.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

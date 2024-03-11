@@ -1,0 +1,25 @@
+{
+	"_id": "duWZ4M8ncHp14V3w",
+	"_key": "!actors.items!wGmyKKVD5P4oE4RD.duWZ4M8ncHp14V3w",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Steam Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a double near-sized cube extending from dragon. DC 15 DEX or [[/r 4d12]] damage.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

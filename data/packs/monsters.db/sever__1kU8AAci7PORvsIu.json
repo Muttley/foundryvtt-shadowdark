@@ -1,0 +1,17 @@
+{
+	"_id": "1kU8AAci7PORvsIu",
+	"_key": "!actors.items!NTRHmnsw7poR4rZ9.1kU8AAci7PORvsIu",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Sever",
+	"system": {
+		"description": "<p>On a natural attack roll of 18+, the attack also severs a random limb. [[/r 1d6]]: 1. Head, 2-4. Arm, 5-6. Leg.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

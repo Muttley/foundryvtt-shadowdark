@@ -1,0 +1,24 @@
+{
+	"_id": "wauGopnTnoT0JIbU",
+	"_key": "!actors.items!3ao87kQaYih26b9q.wauGopnTnoT0JIbU",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Lightning Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>A straight line (5' wide) extending double near from dragon. DC 15 DEX or [[/r 4d8]] damage (DISADV on check if wearing metal armor).</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

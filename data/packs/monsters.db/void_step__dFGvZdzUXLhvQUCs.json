@@ -1,0 +1,24 @@
+{
+	"_id": "dFGvZdzUXLhvQUCs",
+	"_key": "!actors.items!5NUw5FTgSVwAi0nL.dFGvZdzUXLhvQUCs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Void Step",
+	"system": {
+		"dc": 15,
+		"description": "<p>Teleport up to 100 miles.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

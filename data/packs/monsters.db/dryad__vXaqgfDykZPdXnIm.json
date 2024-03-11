@@ -6,10 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"eUzu9yoKiawo2RNU",
-		"0aLFEGglOehZZfnT",
-		"xii04KaH82Q3bOPv",
-		"uDqKreLkC9dEb47t"
+		"wS9IFxJXD7TaVlDM",
+		"kOFFYAB50N6vLH8G",
+		"iRC6Jk66uxbIWOlP"
 	],
 	"name": "Dryad",
 	"prototypeToken": {
@@ -25,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -118,7 +117,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A coy, emerald-skinned fey covered in leaves. It bonds with and protects a tree.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 staff -1 (1d4) or 1 charm, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p><p><strong>Charm</strong>. Near, one creature, DC 14 CHA or friendship for 1d8 days.</p><p></p><p><strong>Meld</strong>. Step inside bonded tree.</p>",
+		"notes": "\n\t<p><i> A coy, emerald-skinned fey covered in leaves. It bonds with and protects a tree. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 staff -1 (1d4) or 1 charm, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Charm</strong>. Near, one creature, DC 14 CHA or friendship for 1d8 days.</p><p></p><p><strong>Meld</strong>. Step inside bonded tree.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -1,0 +1,25 @@
+{
+	"_id": "dZwEa52FIWfTHOQH",
+	"_key": "!actors.items!hi47xC8rfvviBoOO.dZwEa52FIWfTHOQH",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Blind",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>One target within near DC 15 CHA or blinded for [[/r 1d4]] days.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

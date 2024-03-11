@@ -1,0 +1,24 @@
+{
+	"_id": "sGH7InjtyO0HFXSk",
+	"_key": "!actors.items!UDGXIj9pB0TdWPA6.sGH7InjtyO0HFXSk",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Agony",
+	"system": {
+		"dc": 14,
+		"description": "<p>One target in near takes [[/r 3d8]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

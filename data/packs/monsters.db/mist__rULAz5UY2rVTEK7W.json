@@ -1,0 +1,23 @@
+{
+	"_id": "rULAz5UY2rVTEK7W",
+	"_key": "!actors.items!yMyZ18conSZhwlpg.rULAz5UY2rVTEK7W",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Mist",
+	"system": {
+		"dc": "13",
+		"description": "<p>Self. Turn into mist that can fly double near. Lasts [[/r 2d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "2d4"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

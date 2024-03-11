@@ -1,0 +1,23 @@
+{
+	"_id": "XEYzsx5hdL3flYIX",
+	"_key": "!actors.items!vRn6zM7a0nrqSiY5.XEYzsx5hdL3flYIX",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Holy Flame",
+	"system": {
+		"dc": "13",
+		"description": "<p>Self. Weapons ignite in magic flames and deal an additional [[/r 1d6]] damage for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}
