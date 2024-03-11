@@ -1,3 +1,16 @@
+# v2.0.0
+
+## Bugfixes
+* [#715] Learned scrolls don't show usual spell icon
+
+## Enhancements
+* [#716] Added dice sounds to Character Builder
+
+## Feature Notes
+
+
+---
+
 # v1.8.0
 
 ## Bugfixes
@@ -7,6 +20,7 @@
 
 ## Enhancements
 * [#437] Added Character Builder
+* [#681] Added Item Importer Macro
 * [#692] Added Spell Importer macro
 * [#695] Add ability to have Effects on Boon items
 * [#697] Updated the formating of monster descriptions created with the monster importer.
