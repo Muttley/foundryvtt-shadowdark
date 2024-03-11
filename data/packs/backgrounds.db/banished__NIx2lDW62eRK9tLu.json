@@ -3,11 +3,12 @@
 	"_key": "!items!NIx2lDW62eRK9tLu",
 	"effects": [
 	],
-	"folder": null,
+	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Banished",
 	"system": {
 		"description": "<p>Your people cast you out for supposed crimes</p>",
+		"predefinedEffects": "",
 		"source": {
 			"title": "core-rules"
 		}

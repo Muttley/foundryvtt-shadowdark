@@ -2,14 +2,14 @@
 	"_id": "8JDYgzOtBzFBi7rE",
 	"_key": "!tables.results!sLMGErVzVfKaLW7r.8JDYgzOtBzFBi7rE",
 	"documentCollection": "shadowdark.talents",
-	"documentId": "HzzgAIdhoAyfeItJ",
+	"documentId": null,
 	"drawn": false,
-	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
+	"img": "icons/svg/d20-black.svg",
 	"range": [
 		12,
 		12
 	],
-	"text": "Backstab +1 Damage Dice",
-	"type": 2,
+	"text": "Choose 1",
+	"type": 0,
 	"weight": 1
 }

@@ -1,0 +1,27 @@
+{
+	"_id": "UM8jX1AsGm1FQVs2",
+	"_key": "!items!UM8jX1AsGm1FQVs2",
+	"effects": [
+	],
+	"folder": "8JSBHA3M9HLBIWmB",
+	"img": "icons/magic/control/debuff-energy-snare-purple-blue.webp",
+	"name": "Dreamwalk",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You and any willing creatures you choose within close range step into the dream of a sleeping creature you name that is on your same plane. </p><p></p><p>You and anyone traveling with you can step out of the creature, appearing next to it as if having teleported there.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

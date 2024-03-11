@@ -1,0 +1,23 @@
+{
+	"_id": "59TWYCe5pl1P6Znj",
+	"_key": "!items!59TWYCe5pl1P6Znj",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
+	"name": "Demonic Possession",
+	"system": {
+		"bonuses": {
+			"meleeDamageBonus": "1",
+			"rangedDamageBonus": "1"
+		},
+		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.dsFmHTTuERiQePky]{Demonic Possession}</p><p>3/day, gain a +1 bonus to your damage rolls that lasts 3 rounds. In addition, add half your level to the damage bonus (round down).</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

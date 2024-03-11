@@ -1,0 +1,24 @@
+{
+	"_id": "iLyOJbUwWHObtBQG",
+	"_key": "!items!iLyOJbUwWHObtBQG",
+	"effects": [
+		"k9wVrL0gDKPn2rNt"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/movement/trail-streak-zigzag-teal.webp",
+	"name": "Teleport to Familiar",
+	"system": {
+		"bonuses": {
+			"advantage": "initiative"
+		},
+		"description": "<p>1/day, teleport to your familiar's location as a move</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

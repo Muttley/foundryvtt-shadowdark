@@ -1,0 +1,20 @@
+{
+	"_id": "6tUOlXmD8WspE6UI",
+	"_key": "!items!6tUOlXmD8WspE6UI",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/strike-polearm-light-orange.webp",
+	"name": "Charge",
+	"system": {
+		"description": "<p>3/day, you can @UUID[Compendium.shadowdark.class-abilities.Item.Ecajh7eY7lBEHuMv] into combat by moving at least near before attacking. Each time you do this, your melee attacks deal double damage that round.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

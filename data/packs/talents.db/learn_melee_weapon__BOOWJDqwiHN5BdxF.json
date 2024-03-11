@@ -1,0 +1,20 @@
+{
+	"_id": "BOOWJDqwiHN5BdxF",
+	"_key": "!items!BOOWJDqwiHN5BdxF",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/skills/melee/hand-grip-hammer-spiked-blue.webp",
+	"name": "Learn Melee Weapon",
+	"system": {
+		"description": "<p>Learn to wield 1 melee weapon</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

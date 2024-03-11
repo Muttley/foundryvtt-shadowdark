@@ -1,0 +1,100 @@
+{
+	"_id": "nFz0c666A4wUcBNS",
+	"_key": "!items!nFz0c666A4wUcBNS",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Desert Rider",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.vwwDlzGjfaiM0R4S",
+		"description": "<p>Howling barbarians thundering across the sand on wild horses, elven spies wielding curved blades atop silvery camels, or bandits wrapped in colorful silks racing on sleek, desert stallions.</p>",
+		"hitPoints": "d8",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"spellcasting": {
+			"ability": "",
+			"baseDifficulty": 10,
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.6tUOlXmD8WspE6UI",
+			"Compendium.shadowdark.talents.Item.fXOG1tWCuBTQdgEl"
+		],
+		"titles": [
+			{
+				"chaotic": "Bandit",
+				"from": 1,
+				"lawful": "Outrider",
+				"neutral": "Rat",
+				"to": 2
+			},
+			{
+				"chaotic": "Robber",
+				"from": 3,
+				"lawful": "Sandrunner",
+				"neutral": "Fox",
+				"to": 4
+			},
+			{
+				"chaotic": "Raider",
+				"from": 5,
+				"lawful": "Trailblazer",
+				"neutral": "Wolf",
+				"to": 6
+			},
+			{
+				"chaotic": "Scourge",
+				"from": 7,
+				"lawful": "Swift Wind",
+				"neutral": "Tiger",
+				"to": 8
+			},
+			{
+				"chaotic": "Bandit King/Queen",
+				"from": 9,
+				"lawful": "Stormrunner",
+				"neutral": "Dragon",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.4nmzFv43ua8nZDS7",
+			"Compendium.shadowdark.gear.Item.B3ZPeUtbChN8lrDm",
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.DKBDkJ3LcRv8scLv",
+			"Compendium.shadowdark.gear.Item.GgSheZNm2cOQYpZP",
+			"Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre",
+			"Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea",
+			"Compendium.shadowdark.gear.Item.ZPUhNMmwXXrtbCXi"
+		]
+	},
+	"type": "Class"
+}

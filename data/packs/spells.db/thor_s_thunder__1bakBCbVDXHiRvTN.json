@@ -1,0 +1,27 @@
+{
+	"_id": "1bakBCbVDXHiRvTN",
+	"_key": "!items!1bakBCbVDXHiRvTN",
+	"effects": [
+	],
+	"folder": "czS3CsyEqdZdRBcr",
+	"img": "icons/weapons/hammers/hammer-double-stone.webp",
+	"name": "Thor's Thunder",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>Thor casts down a bolt of lightning to strike one target. The target takes [[/r 3d6]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

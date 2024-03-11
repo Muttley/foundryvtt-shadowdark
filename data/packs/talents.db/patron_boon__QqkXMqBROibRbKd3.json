@@ -1,0 +1,20 @@
+{
+	"_id": "QqkXMqBROibRbKd3",
+	"_key": "!items!QqkXMqBROibRbKd3",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/unholy/hand-marked-pink.webp",
+	"name": "Patron Boon",
+	"system": {
+		"description": "<p>At 1st level, you gain a random Patron Boon talent (see pg. 18) based on your chosen patron. </p><p></p><p>Whenever you gain a new talent roll, you may choose to roll on your Patron Boon table rather than the Warlock Talents table.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

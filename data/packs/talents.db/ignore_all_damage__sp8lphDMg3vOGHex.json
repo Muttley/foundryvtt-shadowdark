@@ -1,0 +1,27 @@
+{
+	"_id": "sp8lphDMg3vOGHex",
+	"_key": "!items!sp8lphDMg3vOGHex",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/maneuver-daggers-paired-orange.webp",
+	"name": "Ignore all Damage",
+	"system": {
+		"bonuses": {
+			"weaponMastery": "REPLACEME"
+		},
+		"description": "<p>1/day, ignore all damage and effects from one attack.</p><p></p><p>duplicate = additional use per day</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talent": {
+			"weaponMastery": null,
+			"weaponMasteryTypes": null
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

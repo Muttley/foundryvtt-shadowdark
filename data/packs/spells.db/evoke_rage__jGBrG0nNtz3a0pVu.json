@@ -1,0 +1,27 @@
+{
+	"_id": "jGBrG0nNtz3a0pVu",
+	"_key": "!items!jGBrG0nNtz3a0pVu",
+	"effects": [
+	],
+	"folder": "G4Rg3SiJ4c0vIpqq",
+	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
+	"name": "Evoke Rage",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You call out the berserk rage locked inside someone. </p><p></p><p>One willing humanoid you touch enters a berserk state. The target is immune to morale checks, has ADV on STR checks and melee attacks, and deals +1d4 damage for the spell's duration. </p><p></p><p>If the target does not attack another creature on its turn, the spell ends.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "kIhOl6LmoqN8OkkG",
+	"_key": "!items!kIhOl6LmoqN8OkkG",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/commodities/wood/kindling-sticks-yellow.webp",
+	"name": "Oak, Ash, Thorn",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>For the spell’s duration, faeries, demons, and devils can't attack you. These beings also can’t possess, compel, or beguile you.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

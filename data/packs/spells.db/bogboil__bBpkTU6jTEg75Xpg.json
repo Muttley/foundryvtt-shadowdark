@@ -1,0 +1,28 @@
+{
+	"_id": "bBpkTU6jTEg75Xpg",
+	"_key": "!items!bBpkTU6jTEg75Xpg",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/creatures/slimes/bubbling-purple.webp",
+	"name": "Bogboil",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You turn a near-sized cube of ground within range into a muddy, boiling bog of quicksand. </p><p></p><p>A creature stuck in the bog can’t move and must succeed on a Dexterity check vs. your spellcasting check to free itself.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

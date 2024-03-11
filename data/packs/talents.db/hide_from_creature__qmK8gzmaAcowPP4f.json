@@ -1,0 +1,30 @@
+{
+	"_id": "qmK8gzmaAcowPP4f",
+	"_key": "!items!qmK8gzmaAcowPP4f",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+	"name": "Hide from Creature",
+	"system": {
+		"bonuses": {
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "<p>1/day, choose a creature of LV 9 or less you can see; it must pass a DC 15 WIS check or it can't see or hear you for 1d4 rounds</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
