@@ -1,0 +1,29 @@
+<form class="level-up" autocomplete="off">
+	{{actor.system.title}} {{actor.name}}
+	{{!-- Hit Points --}}
+	<div class="box-style">
+		<div class="header">
+			<label>Hit Points</label>
+			<span></span>
+		</div>
+		<div class="content ">
+			<button type="button" data-action="roll-hp">Roll HP</button>
+		</div>
+	</div>
+
+	{{!-- Talents --}}
+	<div class="header">
+		<label>Talents</label>
+		<span></span>
+	</div>
+	No talents at this level
+	<button type="button" data-action="roll-talent">Roll talent</button>
+
+	{{!-- Spells --}}
+	<div class="header">
+		<label>Spells</label>
+		<span></span>
+	</div>
+	Tier 1: Choose 1
+	<button type="button" data-action="create-character">Level Up!</button>
+</form>
