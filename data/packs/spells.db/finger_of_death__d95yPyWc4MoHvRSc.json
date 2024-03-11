@@ -1,0 +1,27 @@
+{
+	"_id": "d95yPyWc4MoHvRSc",
+	"_key": "!items!d95yPyWc4MoHvRSc",
+	"effects": [
+	],
+	"folder": "8JSBHA3M9HLBIWmB",
+	"img": "icons/magic/death/hand-withered-gray.webp",
+	"name": "Finger of Death",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>One creature you touch of LV 9 or less dies. </p><p></p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,20 @@
+{
+	"_id": "bjZGm9FtinFh2ltV",
+	"_key": "!items!bjZGm9FtinFh2ltV",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
+	"name": "Relentless",
+	"system": {
+		"description": "<p><span>3/day, when you are reduced to 0 HP, make a DC 18 Constitution check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP. </span></p><p>@UUID[Compendium.shadowdark.class-abilities.Item.z5uKTDf4wtkipQ4s]{Relentless}</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

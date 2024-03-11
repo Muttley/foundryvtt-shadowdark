@@ -4,10 +4,8 @@
 * [#715] Learned scrolls don't show usual spell icon
 
 ## Enhancements
-* [#716] Added dice sounds to Character Builder
-
-## Feature Notes
-
+* [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
+* [#713] Added dice sounds to Character Builder
 
 ---
 

@@ -1,0 +1,27 @@
+{
+	"_id": "dsFmHTTuERiQePky",
+	"_key": "!items!dsFmHTTuERiQePky",
+	"effects": [
+	],
+	"folder": "JecnLEQ8FwHnDCny",
+	"img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
+	"name": "Demonic Possession",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">3/day, gain a +1 bonus to your damage rolls that lasts 3 rounds.</span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0px; border-bottom: unset; min-height: 1rem; color: rgb(25, 24, 19); font-family: Signika, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(0, 0, 0, 0.04); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"></p><p style=\"box-sizing: border-box; user-select: text; margin: 0px; border-bottom: unset; color: rgb(25, 24, 19); font-family: Signika, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(0, 0, 0, 0.04); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Signika, sans-serif\">In addition, add half your level to the damage bonus (round down).</span></p>",
+		"group": "",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

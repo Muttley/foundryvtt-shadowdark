@@ -1,0 +1,94 @@
+{
+	"_id": "xdjod5gPhNPIkLth",
+	"_key": "!items!xdjod5gPhNPIkLth",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Seer",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.XU4gJD2AK8FCeEZh",
+		"description": "<p>Baleful diviners who reek of smoke and blood. They untangle the whispers of the gods by reading the runes, the bones, and the stars. Their knowledge of fate allows them to bend it.</p>",
+		"hitPoints": "d6",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"spellcasting": {
+			"ability": "wis",
+			"baseDifficulty": 10,
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.Az2fXCwgo5C3x2X7",
+			"Compendium.shadowdark.talents.Item.Qu0KqU3KzzRS1oer",
+			"Compendium.shadowdark.talents.Item.SsgeL6OKpvpltElv"
+		],
+		"titles": [
+			{
+				"chaotic": "Hedge Witch",
+				"from": 1,
+				"lawful": "Guide",
+				"neutral": "Fortune Teller",
+				"to": 2
+			},
+			{
+				"chaotic": "Whisperer",
+				"from": 3,
+				"lawful": "Chanter",
+				"neutral": "Singer",
+				"to": 4
+			},
+			{
+				"chaotic": "Bone Reader",
+				"from": 5,
+				"lawful": "Rune Reader",
+				"neutral": "Star Reader",
+				"to": 6
+			},
+			{
+				"chaotic": "Dreaded One",
+				"from": 7,
+				"lawful": "Wise One",
+				"neutral": "Blessed One",
+				"to": 8
+			},
+			{
+				"chaotic": "Seer of Loki",
+				"from": 9,
+				"lawful": "Seer of Odin",
+				"neutral": "Seer of Freya",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.P4aAkDkgwR9zcATw"
+		]
+	},
+	"type": "Class"
+}

@@ -1,0 +1,20 @@
+{
+	"_id": "vWtHRiL8lNiisrXy",
+	"_key": "!items!vWtHRiL8lNiisrXy",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/sundries/gaming/dice-pair-white-green.webp",
+	"name": "Force GM Reroll",
+	"system": {
+		"description": "<p>1/day, force the GM to reroll a single roll</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

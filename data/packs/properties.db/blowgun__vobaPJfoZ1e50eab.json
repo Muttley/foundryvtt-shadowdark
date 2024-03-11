@@ -1,0 +1,19 @@
+{
+	"_id": "vobaPJfoZ1e50eab",
+	"_key": "!items!vobaPJfoZ1e50eab",
+	"effects": [
+	],
+	"folder": "vFaoMFPGDGlKn4gF",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Blowgun",
+	"system": {
+		"description": "<p>Firing this weapon from hiding doesn't reveal your position.</p>",
+		"itemType": "weapon",
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		}
+	},
+	"type": "Property"
+}

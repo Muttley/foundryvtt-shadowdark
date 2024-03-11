@@ -1,0 +1,27 @@
+{
+	"_id": "07syJLlt7uUSQgct",
+	"_key": "!items!07syJLlt7uUSQgct",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/magic/air/fog-gas-smoke-blue-gray.webp",
+	"name": "Fog",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>A thick cloud of fog blooms in a close area around you, making you hard to see. The cloud moves with you. Attacks against creatures in the cloud have disadvantage.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}
