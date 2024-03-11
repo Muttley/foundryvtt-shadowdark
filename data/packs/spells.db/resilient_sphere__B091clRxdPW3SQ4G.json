@@ -1,0 +1,27 @@
+{
+	"_id": "B091clRxdPW3SQ4G",
+	"_key": "!items!B091clRxdPW3SQ4G",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+	"name": "Resilient Sphere",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You conjure a weightless, glassy sphere around you that extends out to close range. </p><p></p><p>For the spell's duration, nothing can pass through or crush the sphere. </p><p></p><p>You can roll the sphere a near distance on your turn.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

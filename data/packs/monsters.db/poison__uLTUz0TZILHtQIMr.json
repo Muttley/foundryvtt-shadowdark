@@ -1,0 +1,17 @@
+{
+	"_id": "uLTUz0TZILHtQIMr",
+	"_key": "!actors.items!piZE4vxM1QjLxEt0.uLTUz0TZILHtQIMr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 9 CON or take [[/r 1d4]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

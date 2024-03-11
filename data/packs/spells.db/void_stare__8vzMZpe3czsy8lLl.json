@@ -1,0 +1,27 @@
+{
+	"_id": "8vzMZpe3czsy8lLl",
+	"_key": "!items!8vzMZpe3czsy8lLl",
+	"effects": [
+	],
+	"folder": "sE2Ooa1HgAMXmCra",
+	"img": "icons/creatures/eyes/void-single-black-purple.webp",
+	"name": "Void Stare",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>Your eyes turn black as you look into the dark between the stars. </p><p></p><p>One creature of LV 6 or less you can see falls under your control. You decide its actions during its turn.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

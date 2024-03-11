@@ -1,0 +1,20 @@
+{
+	"_id": "Az2fXCwgo5C3x2X7",
+	"_key": "!items!Az2fXCwgo5C3x2X7",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/sundries/books/book-tooled-silver-blue.webp",
+	"name": "Destined",
+	"system": {
+		"description": "<p>Whenever you use a luck token, add [[/roll 1d6]] to the roll.</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "c5CC4wJGGXAYM1kf",
+	"_key": "!actors.items!JjJbKB1yomE7Ma8T.c5CC4wJGGXAYM1kf",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Time Bend",
+	"system": {
+		"dc": "14",
+		"description": "<p>One target in near frozen in time for [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

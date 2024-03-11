@@ -1,0 +1,95 @@
+{
+	"_id": "KGnBAFiTiLHZJUND",
+	"_key": "!items!KGnBAFiTiLHZJUND",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Witch",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.fifOKQmilp9Y45lf",
+		"description": "<p>Cackling crones stooped over cauldrons, chanting shamans smeared in blood and clay, and outcast maidens with milky eyes that see portents and secrets.</p>",
+		"hitPoints": "d4",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
+				"Compendium.shadowdark.languages.Item.Lf6kATbC1uNPLnPi",
+				"Compendium.shadowdark.languages.Item.ufwua5RXnJXlA0St"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"spellcasting": {
+			"ability": "cha",
+			"baseDifficulty": 10,
+			"class": ""
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.7XtnCM9VdxVmh6D3",
+			"Compendium.shadowdark.talents.Item.uO91xIibpFDLiPSF"
+		],
+		"titles": [
+			{
+				"chaotic": "Whisperer",
+				"from": 1,
+				"lawful": "Fortune Teller",
+				"neutral": "Shaman",
+				"to": 2
+			},
+			{
+				"chaotic": "Hexer",
+				"from": 3,
+				"lawful": "Far Seer",
+				"neutral": "Conjurer",
+				"to": 4
+			},
+			{
+				"chaotic": "Hag/Elder",
+				"from": 5,
+				"lawful": "Prophet",
+				"neutral": "Soothsayer",
+				"to": 6
+			},
+			{
+				"chaotic": "Crone/Uncle",
+				"from": 7,
+				"lawful": "Wise One",
+				"neutral": "Conduit",
+				"to": 8
+			},
+			{
+				"chaotic": "Baba",
+				"from": 9,
+				"lawful": "Baba",
+				"neutral": "Baba",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.9eTpsuEuzL3Vaxge",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng"
+		]
+	},
+	"type": "Class"
+}

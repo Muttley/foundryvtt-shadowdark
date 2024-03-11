@@ -1,0 +1,26 @@
+{
+	"_id": "EdnnBpuL6gXhGn4z",
+	"_key": "!actors.items!hiZvVJPOJWtOXV4m.EdnnBpuL6gXhGn4z",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Eyestalk Ray",
+	"system": {
+		"attack": {
+			"num": "2d4"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Each ray can shoot once per round and target one creature or an object up to 1,000 pounds (up to four on same target).</p>",
+		"predefinedEffects": "",
+		"ranges": [
+			"nearLine"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

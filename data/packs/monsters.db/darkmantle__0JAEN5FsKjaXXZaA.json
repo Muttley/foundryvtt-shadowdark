@@ -6,9 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"cxEeogA0M8MfO01H",
-		"QnSlbNpbIsYFgrJC",
-		"KkTYwbHvLOHetnPg"
+		"bpUlB6vl6FOXXGmV",
+		"Qq6M9oo8OTKXzQPK"
 	],
 	"name": "Darkmantle",
 	"prototypeToken": {
@@ -24,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -116,8 +115,8 @@
 			"value": 1
 		},
 		"move": "near",
-		"moveNote": "Fly",
-		"notes": "<p><em>A floating, black octopus with rows of red eyes and a webbed skirt of tentacles.</em></p><p></p><p><strong>AC</strong> 13, <strong>HP</strong> 4 <strong>ATK</strong> 1 bite +3 (1d4) or 1 darkness, <strong>MV </strong>near (fly), <strong>S</strong> -2, <strong>D </strong>+3, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p><p><strong>Darkness</strong>. Extinguish all light sources in near (magic 3:6).</p>",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> A floating, black octopus with rows of red eyes and a webbed skirt of tentacles. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 4 <strong>ATK</strong> 1 bite +3 (1d4) or 1 darkness, <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p>\n\t<p><strong> Darkness</strong>. Extinguish all light sources in near.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -1,0 +1,17 @@
+{
+	"_id": "5wuTo8S0MrSTs8ZC",
+	"_key": "!actors.items!JjJbKB1yomE7Ma8T.5wuTo8S0MrSTs8ZC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Roar",
+	"system": {
+		"description": "<p>In place of attacks, all creatures who can hear within far DC 18 CHA or paralyzed [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

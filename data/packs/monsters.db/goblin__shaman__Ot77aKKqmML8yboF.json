@@ -1,0 +1,125 @@
+{
+	"_id": "Ot77aKKqmML8yboF",
+	"_key": "!actors!Ot77aKKqmML8yboF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"vvy0cnx9Rh4tr2m4",
+		"qz5bltkcGeEDjfng",
+		"qGfXwmH4JKbaxw60",
+		"hwKHDz7LF9OrCu8a",
+		"xBAlOQL2Aw6BtJat"
+	],
+	"name": "Goblin, Shaman",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Goblin Shaman",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 1
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 0
+			},
+			"str": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 19,
+				"value": 19
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 4
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> A swaying, chanting goblin wearing necklaces of teeth and a robe of musty rat pelts. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12 (leather), <strong>HP</strong> 19, <strong>ATK</strong> 1 staff +0 (1d4) or 1 spell +3, <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Keen Senses</strong>. Can't be surprised.</p><p></p><p><strong>Bug Brain (WIS Spell)</strong>. DC 13. Near range, one target. Target's INT drops to 1 for 1d4 rounds.</p><p></p><p><strong>Skitter (WIS Spell)</strong>. DC 12. Self. Climb like a spider for 5 rounds.</p><p></p><p><strong>Stink Bomb (WIS Spell)</strong>. DC 12. One target within far 2d4 damage and DC 12 CON or DISADV on next check/attack.</p><p></p>",
+		"spellcastingAbility": "wis",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 3
+	},
+	"type": "NPC"
+}

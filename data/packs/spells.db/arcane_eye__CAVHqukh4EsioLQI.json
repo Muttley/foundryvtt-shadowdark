@@ -1,0 +1,27 @@
+{
+	"_id": "CAVHqukh4EsioLQI",
+	"_key": "!items!CAVHqukh4EsioLQI",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/perception/eye-tendrils-web-purple.webp",
+	"name": "Arcane Eye",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You conjure an invisible, grapesized eye within range. </p><p></p><p>You can see through the eye. It can see in the dark out to near range, fly near on your turn, and squeeze through openings as narrow as a keyhole.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

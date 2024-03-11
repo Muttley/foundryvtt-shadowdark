@@ -1,0 +1,17 @@
+{
+	"_id": "53ww0O4jPKaiyGcQ",
+	"_key": "!actors.items!qISCrzLvHr4uQ9Q8.53ww0O4jPKaiyGcQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Corrosive",
+	"system": {
+		"description": "<p>Metal that touches the rust monster is destroyed on a d6 roll of 1-3.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

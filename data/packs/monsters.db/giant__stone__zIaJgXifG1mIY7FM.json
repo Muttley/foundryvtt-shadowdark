@@ -1,0 +1,123 @@
+{
+	"_id": "zIaJgXifG1mIY7FM",
+	"_key": "!actors!zIaJgXifG1mIY7FM",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"p5H6ZyyFNvw9nl1A",
+		"GSqmJ46T9LtJGmBZ",
+		"eFfcnOuwnguTxgP8"
+	],
+	"name": "Giant, Stone",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Stone Giant",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -1
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 1
+			},
+			"str": {
+				"mod": 4
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "neutral",
+		"attributes": {
+			"ac": {
+				"value": 17
+			},
+			"hp": {
+				"hd": 0,
+				"max": 40,
+				"value": 40
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 8
+		},
+		"move": "doubleNear",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Lean, sinewy giants with stony skin and deep-set eyes. They are quiet and poised, often sitting motionless for days at a time. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 40, <strong>ATK</strong> 2 greatclub +7 (2d8) or 1 boulder (far) +7 (2d10), <strong>MV</strong> double near, <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +4, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> N, <strong>LV</strong> 8</p><p></p>\n\t<p><strong> Stone Hide</strong>. Half damage from stabbing and cutting weapons.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

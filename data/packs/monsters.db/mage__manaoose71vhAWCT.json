@@ -1,0 +1,125 @@
+{
+	"_id": "manaoose71vhAWCT",
+	"_key": "!actors!manaoose71vhAWCT",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"jCg0jxuNHihSmpOr",
+		"8r1TNTc5kE1agSyg",
+		"nLPMJw2qAtZxUXKJ",
+		"b2eCmaKI2t9jFo1x",
+		"bGfubpAAJE3ccLnY"
+	],
+	"name": "Mage",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Mage",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 0
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": -1
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 11
+			},
+			"hp": {
+				"hd": 0,
+				"max": 27,
+				"value": 27
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 6
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Trained wizards who are often members of a sorcerous order. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 27, <strong>ATK</strong> 1 spell +5, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +1, <strong>C</strong> +0, <strong>I</strong> +3, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> L, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Arcane Armor (INT Spell)</strong>. Self. DC 12. AC 16 for 2d4 rounds.</p><p></p><p><strong>Blast (INT Spell)</strong>. DC 12. Far, one target. 2d6 damage.</p><p></p><p><strong>Cancel (INT Spell)</strong>. DC 13. End one spell affecting a target within near.</p><p></p><p><strong>Levitate (INT Spell)</strong>. DC 12. Close. Focus. Hover near for duration, vertical movement only.</p><p></p><p><strong>Snare (INT Spell)</strong>. DC 13. Focus. One humanoid target within near paralyzed for duration.</p><p></p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 5
+	},
+	"type": "NPC"
+}

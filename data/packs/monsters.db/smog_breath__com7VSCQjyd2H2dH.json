@@ -1,0 +1,25 @@
+{
+	"_id": "com7VSCQjyd2H2dH",
+	"_key": "!actors.items!KKc8fESqPDECz0bL.com7VSCQjyd2H2dH",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Smog Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a near-sized cube extending from dragon. DC 15 CON or [[/r 2d10]] damage and blinded for 1 round.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

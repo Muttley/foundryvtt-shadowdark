@@ -1,0 +1,25 @@
+{
+	"_id": "g5tUfZrRzPhiKHqB",
+	"_key": "!actors.items!UzRHO1MCMmYDSVzo.g5tUfZrRzPhiKHqB",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Gas",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All in near DC 12 CON or blinded for [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

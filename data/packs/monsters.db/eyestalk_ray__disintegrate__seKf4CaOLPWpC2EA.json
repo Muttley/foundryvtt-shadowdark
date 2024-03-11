@@ -1,0 +1,17 @@
+{
+	"_id": "seKf4CaOLPWpC2EA",
+	"_key": "!actors.items!hiZvVJPOJWtOXV4m.seKf4CaOLPWpC2EA",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Eyestalk Ray: Disintegrate",
+	"system": {
+		"description": "<p>DC 15 DEX or [[/r 5d8]] damage (object destroyed).</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

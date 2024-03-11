@@ -1,0 +1,17 @@
+{
+	"_id": "YPK9WrDIMTqGMXSZ",
+	"_key": "!actors.items!hr2wYwBcd0WuJWK8.YPK9WrDIMTqGMXSZ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Heads",
+	"system": {
+		"description": "<p>Choose how many heads the hydra has. Each is LV 2, AC 15, HP 11, and can make 1 bite attack. A killed head sprouts into two new heads at the start of the hydra's turn unless cauterized beforehand. The hydra's LV is all the heads combined.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

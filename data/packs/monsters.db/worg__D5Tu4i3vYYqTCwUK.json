@@ -1,0 +1,121 @@
+{
+	"_id": "D5Tu4i3vYYqTCwUK",
+	"_key": "!actors!D5Tu4i3vYYqTCwUK",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"C7AUGwfLQ2rsySd3"
+	],
+	"name": "Worg",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Worg",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": -2
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": -2
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 11
+			},
+			"hp": {
+				"hd": 0,
+				"max": 14,
+				"value": 14
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "doubleNear",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Bat-faced wolves that speak Goblin and often serve as war mounts for goblinkind. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 14, <strong>ATK</strong> 1 bite +3 (1d6), <strong>MV</strong> double near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p><p></p>\n\t",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

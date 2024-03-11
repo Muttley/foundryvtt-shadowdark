@@ -1,0 +1,27 @@
+{
+	"_id": "tUUeGZQvWQMRmOVE",
+	"_key": "!items!tUUeGZQvWQMRmOVE",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+	"name": "Confusion",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You mesmerize one creature you can see in range. The target can't take actions, and it moves in a random direction on its turn. If the target is LV 9+, it may make a WIS check vs. your last spellcasting check at the start of its turn to end the spell.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"RdRiN1ZsfjQf8leu",
-		"evZXcoBxPaeka6UA"
+		"UDnsikLLiwqdn52x",
+		"tQALSbY1bERwiD2a"
 	],
 	"name": "Ochre Jelly",
 	"prototypeToken": {
@@ -23,11 +23,11 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
-		"height": 1,
+		"height": 2,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -76,7 +76,7 @@
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
 			"tint": null
 		},
-		"width": 1
+		"width": 2
 	},
 	"system": {
 		"abilities": {
@@ -115,8 +115,8 @@
 			"value": 4
 		},
 		"move": "near",
-		"moveNote": "Climb",
-		"notes": "<p><span class=\"fontstyle0\"><em>An orange puddle of quivering slime.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">9, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">20, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 tentacle +3 (1d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-4, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">-3, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-4, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">4</span></p><p></p><p><span class=\"fontstyle2\"><strong>Split.</strong> </span><span class=\"fontstyle3\">If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"moveNote": "climb",
+		"notes": "\n\t<p><i> An orange puddle of quivering slime. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 20, <strong>ATK</strong> 2 tentacle +3 (1d6), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> -1, <strong>C</strong> +2, <strong>I</strong> -4, <strong>W</strong> -3, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Split</strong>. If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

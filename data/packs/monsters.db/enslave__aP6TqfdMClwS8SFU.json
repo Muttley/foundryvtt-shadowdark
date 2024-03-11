@@ -1,0 +1,17 @@
+{
+	"_id": "aP6TqfdMClwS8SFU",
+	"_key": "!actors.items!sgVqRuCaadRK1P7R.aP6TqfdMClwS8SFU",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Enslave",
+	"system": {
+		"description": "<p>In place of attacks, one creature within far DC 15 WIS or aboleth controls for [[/r 1d4]] rounds.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

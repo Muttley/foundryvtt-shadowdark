@@ -1,0 +1,27 @@
+{
+	"_id": "0Gp5pSzPcelJVp3T",
+	"_key": "!items!0Gp5pSzPcelJVp3T",
+	"effects": [
+	],
+	"folder": "EDfN0tPLXXsmyaEn",
+	"img": "icons/magic/water/pseudopod-swirl-blue.webp",
+	"name": "Control Water",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You move and shape water. You can cause a section of water up to 100 feet in width and depth to change shape, defy gravity, or flow in a different direction.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

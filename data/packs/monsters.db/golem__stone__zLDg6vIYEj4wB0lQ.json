@@ -6,10 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"oySxFnphWlWj2S0x",
-		"WCgeRKkVzpcLQ4h9",
-		"qvTLXopfPX4SvMTr",
-		"Y9E6Qzz05KPTdroV"
+		"LPGRx54MnY2JNuKs",
+		"Xdqp9RpogEYCs7eT",
+		"W2WBFwGRwZdLoczY"
 	],
 	"name": "Golem, Stone",
 	"prototypeToken": {
@@ -25,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -54,7 +53,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
-		"name": "Golem, Stone",
+		"name": "Stone Golem",
 		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
@@ -118,7 +117,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A wide-limbed, lumbering statue that shakes the ground.</em></p><p></p><p><strong>AC</strong> 18, <strong>HP</strong> 40, <strong>ATK</strong> 1 slow and 3 slam +6 (1d10), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 8</p><p></p><p><strong>Golem</strong>. Immune to damage from fire, cold, electricity, or non-magical sources.</p><p></p><p><strong>Slow</strong>. Far range, one target. DC 15 CON or speed halved 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> A wide-limbed, lumbering statue that shakes the ground. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 18, <strong>HP</strong> 40, <strong>ATK</strong> 3 slam +6 (1d10) and 1 slow, <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 8</p><p></p>\n\t<p><strong> Golem</strong>. Immune to damage from fire, cold, electricity, or non-magical sources.</p><p></p><p><strong>Slow</strong>. Far range, one target. DC 15 CON or speed halved 1d4 rds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

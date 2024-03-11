@@ -1,0 +1,24 @@
+{
+	"_id": "U8waMQHk76FJcLyF",
+	"_key": "!actors.items!ktpbMeq6xDzNbOu3.U8waMQHk76FJcLyF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Leap",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Jump up to near in height and double near in distance, then make 2 bite attacks.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

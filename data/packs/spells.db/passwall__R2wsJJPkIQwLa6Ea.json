@@ -1,0 +1,27 @@
+{
+	"_id": "R2wsJJPkIQwLa6Ea",
+	"_key": "!items!R2wsJJPkIQwLa6Ea",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/control/debuff-energy-snare-purple-pink.webp",
+	"name": "Passwall",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>A tunnel of your height opens in a barrier you touch and lasts for the duration.</p><p></p><p>The passage can be up to near distance in length and must be in a straight line.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,123 @@
+{
+	"_id": "GvxrOdZ1MejJL8DV",
+	"_key": "!actors!GvxrOdZ1MejJL8DV",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"odw4CFAaIeXN4kgk",
+		"kv81ZtYqFe4j0RaZ",
+		"XJXRA2v0kyhxK6JH"
+	],
+	"name": "Elf",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Elf",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 1
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 1
+			},
+			"str": {
+				"mod": 0
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 9,
+				"value": 9
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 2
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> Ethereal, ageless fey-people infused with ancient magic. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 9, <strong>ATK</strong> 1 longbow (far) +3 (1d8) or 1 longsword +1 (1d8), <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Feyblood</strong>. ADV on DEX checks while in the natural wilds.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

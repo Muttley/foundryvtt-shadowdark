@@ -1,0 +1,28 @@
+{
+	"_id": "USZdyAHWo75zcgIX",
+	"_key": "!items!USZdyAHWo75zcgIX",
+	"effects": [
+	],
+	"folder": "sE2Ooa1HgAMXmCra",
+	"img": "icons/magic/control/voodoo-doll-pain-damage-pink.webp",
+	"name": "Pin Doll",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You pin a piece of hair or flesh taken from one creature to a small, burlap doll the spell conjures. </p><p></p><p>On your turn while focusing on this spell, you can push a pin into the doll. Each time you do this, the creature who the hair or flesh belonged to takes 2d6 damage. After this spell ends, the piece of hair or flesh burns to ash.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "samePlane",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

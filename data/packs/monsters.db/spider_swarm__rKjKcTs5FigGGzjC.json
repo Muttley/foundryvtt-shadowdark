@@ -1,0 +1,23 @@
+{
+	"_id": "rKjKcTs5FigGGzjC",
+	"_key": "!actors.items!j1Uy1uGIUxbtB0iD.rKjKcTs5FigGGzjC",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Spider Swarm",
+	"system": {
+		"dc": "12",
+		"description": "<p>A spider swarm appears within near. Stays [[/r 1d4]] rounds. Follows sorcerer's commands.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

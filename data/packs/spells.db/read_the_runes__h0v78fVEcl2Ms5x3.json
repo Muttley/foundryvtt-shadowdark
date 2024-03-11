@@ -1,0 +1,27 @@
+{
+	"_id": "h0v78fVEcl2Ms5x3",
+	"_key": "!items!h0v78fVEcl2Ms5x3",
+	"effects": [
+	],
+	"folder": "CA2RNQkxe3h4GdI1",
+	"img": "icons/commodities/treasure/token-runed-sigel-brown.webp",
+	"name": "Read the Runes",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You ask the gods a question and cast the runestones, interpreting the meaning of the results. </p><p></p><p>Ask the Game Master one yes or no question. The Game Master truthfully answers \"yes\" or \"no.\"</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

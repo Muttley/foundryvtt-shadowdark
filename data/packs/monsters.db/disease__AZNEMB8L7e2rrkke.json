@@ -1,0 +1,17 @@
+{
+	"_id": "AZNEMB8L7e2rrkke",
+	"_key": "!actors.items!kRjM8lPIVu1b5b3g.AZNEMB8L7e2rrkke",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Disease",
+	"system": {
+		"description": "<p>DC 9 CON or [[/r 1d4]] CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

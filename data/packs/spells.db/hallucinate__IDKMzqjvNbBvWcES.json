@@ -1,0 +1,27 @@
+{
+	"_id": "IDKMzqjvNbBvWcES",
+	"_key": "!items!IDKMzqjvNbBvWcES",
+	"effects": [
+	],
+	"folder": "lvvfGVYh4oLZsbpP",
+	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+	"name": "Hallucinate",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>One creature you target in near whose level is less than or equal to your own is overcome by visions of what might yet come to pass. </p><p></p><p>For the spell's duration, the target cannot act on its turn unless it passes a Wisdom check equal to your last spellcasting check.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

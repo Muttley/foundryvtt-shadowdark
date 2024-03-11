@@ -1,0 +1,24 @@
+{
+	"_id": "zsKCU3we8eiou4Ou",
+	"_key": "!actors.items!OkhcwZ7JqJxTgkJo.zsKCU3we8eiou4Ou",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Soulbind",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All targets within near DC 20 CHA or fall under control of archdevil for [[/r 1d4]] rounds. DC 20 CHA on turn to end the effect.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

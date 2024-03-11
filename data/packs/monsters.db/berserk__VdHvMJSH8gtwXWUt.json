@@ -1,0 +1,17 @@
+{
+	"_id": "VdHvMJSH8gtwXWUt",
+	"_key": "!actors.items!IDgaXGnSleQcfAwm.VdHvMJSH8gtwXWUt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Berserk",
+	"system": {
+		"description": "<p>When at or below 20 HP, +1 slam attack and slams deal double damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

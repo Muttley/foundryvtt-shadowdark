@@ -1,0 +1,11 @@
+{
+	"_id": "q4lqJ88GbDk9HTlq",
+	"_key": "!macros!q4lqJ88GbDk9HTlq",
+	"author": "8izGgsXsUnRdsQpK",
+	"command": "/**\n ****************************************************************\n * This macro can be used to open the item importer\n ***************************************************************/\n\nnew shadowdark.apps.ItemImporterSD().render(true);",
+	"folder": null,
+	"img": "icons/containers/chest/chest-reinforced-steel-pink.webp",
+	"name": "Open Item Importer",
+	"scope": "global",
+	"type": "script"
+}

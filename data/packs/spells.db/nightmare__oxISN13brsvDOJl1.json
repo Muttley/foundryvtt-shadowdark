@@ -1,0 +1,27 @@
+{
+	"_id": "oxISN13brsvDOJl1",
+	"_key": "!items!oxISN13brsvDOJl1",
+	"effects": [
+	],
+	"folder": "GjEoxJ1IlFDjGKIa",
+	"img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+	"name": "Nightmare",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You visit the dreams of one sleeping creature, sending it heart-stopping nightmares. </p><p></p><p>You can target a creature whose level is less than or equal to half your level rounded down (minimum 1). The target must be sleeping, and you must have seen it before in person. </p><p></p><p>If you successfully focus on this spell for 3 rounds in a row, the creature dies of fright.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "samePlane",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

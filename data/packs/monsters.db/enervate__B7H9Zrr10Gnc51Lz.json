@@ -1,0 +1,23 @@
+{
+	"_id": "B7H9Zrr10Gnc51Lz",
+	"_key": "!actors.items!5NUw5FTgSVwAi0nL.B7H9Zrr10Gnc51Lz",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Enervate",
+	"system": {
+		"dc": "14",
+		"description": "<p>Focus. One target within near is stupefied for the duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

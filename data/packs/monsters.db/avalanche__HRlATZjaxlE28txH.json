@@ -1,0 +1,24 @@
+{
+	"_id": "HRlATZjaxlE28txH",
+	"_key": "!actors.items!w14e0EzbGfvjkbes.HRlATZjaxlE28txH",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Avalanche",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>All within close DC 15 STR or entombed for [[/r 1d4]] rounds under mounds of earth.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

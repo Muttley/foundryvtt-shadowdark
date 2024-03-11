@@ -1,0 +1,23 @@
+{
+	"_id": "1x4iaa1v3l2umZCY",
+	"_key": "!actors.items!dNSmJX2keI0T2Gig.1x4iaa1v3l2umZCY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Fool's Gold",
+	"system": {
+		"dc": "12",
+		"description": "<p>Close. One small object or small group of similar objects. Turn objects into silver or gold pieces. Lasts 1 day.</p>",
+		"duration": {
+			"type": "days",
+			"value": "1"
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

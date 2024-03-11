@@ -1,0 +1,37 @@
+{
+	"_id": "rlU2agifQd6yqh2f",
+	"_key": "!actors.items!j7sQ6Km2jSx5twCC.rlU2agifQd6yqh2f",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Bite",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 3,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "1",
+			"special": "",
+			"value": "1d6"
+		},
+		"description": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}
