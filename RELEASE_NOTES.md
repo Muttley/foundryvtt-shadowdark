@@ -8,6 +8,7 @@
 * [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
 * [#696] Core rules content was expanded to include Tier 3-5 Wizard and Priest spells. All content from the core rules is now labeld as "Core Rules" in the source selection settings.
 * [#713] Added dice sounds to Character Builder
+* [#725] Update token mapping for new core monsters.
 
 ---
 
