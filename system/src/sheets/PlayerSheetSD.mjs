@@ -91,6 +91,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onLearnSpell(event)
 		);
 
+		html.find("[data-action='level-up']").click(
+			event => this._onlevelUp(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -135,6 +139,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
+		context.levelUp = (context.system.level.xp > context.xpNextLevel)
+			&& context.system.level.xp > 0;
 
 		await this.actor.updateArmorClass();
 		context.armorClass = this.actor.armorClass;
@@ -530,6 +536,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 
 		this.actor.learnSpell(itemId);
+	}
+
+	async _onlevelUp(event) {
+		event.preventDefault();
+		let lvlup = new shadowdark.apps.LevelUpSD(this.actor._id);
+		lvlup.render(true);
+		this.close();
 	}
 
 	async _onOpenGemBag(event) {

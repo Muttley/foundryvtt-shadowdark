@@ -6,6 +6,8 @@ export default class LevelUpSD extends FormApplication {
 		this.firstrun = true;
 		this.data = {};
 		this.data.actor = game.actors.get(uid);
+		this.data.talents = [];
+		this.data.spells = [];
 	}
 
 	/** @inheritdoc */
@@ -15,7 +17,7 @@ export default class LevelUpSD extends FormApplication {
 			resizable: true,
 			closeOnSubmit: true,
 			submitOnChange: false,
-			dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}],
+			dragDrop: [{dragSelector: ".item[draggable=true]"}],
 		});
 	}
 
@@ -45,6 +47,10 @@ export default class LevelUpSD extends FormApplication {
 		html.find("[data-action='roll-talent']").click(
 			event => this._onRollTalent(event)
 		);
+
+		html.find("[data-action='finalize-level-up']").click(
+			event => this._onFinalizeLevelUp(event)
+		);
 	}
 
 	/** @override */
@@ -54,23 +60,26 @@ export default class LevelUpSD extends FormApplication {
 			this.data.class = await fromUuid(this.data.actor.system.class);
 			this.data.talentTable = await fromUuid(this.data.class.system.classTalentTable);
 			this.data.targetLevel = this.data.actor.system.level.value +1;
-			this.data.talentNeeded = (this.data.targetLevel % 2 !== 0);
+			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			console.log(this.data);
 		}
 		return this.data;
 	}
 
-	/** @inheritdoc */
+	/** @override */
 	async _onDrop(event) {
 		const eventData = TextEditor.getDragEventData(event);
-		const itemObj = fromUuid(eventData.uuid);
+		const itemObj = await fromUuid(eventData.uuid);
+		console.log(itemObj);
 		if (itemObj && eventData.type === "Item") {
-			switch (itemObj) {
+			switch (itemObj.type) {
 				case "Talent":
-					return this._onDropTalent(itemObj);
+					this._onDropTalent(itemObj);
+					break;
 				case "Spell":
-					return this._onDropSpell(itemObj);
+					this._onDropSpell(itemObj);
+					break;
 				default:
 					break;
 			}
@@ -80,8 +89,8 @@ export default class LevelUpSD extends FormApplication {
 
 	async _onRollHP(event) {
 		event.preventDefault();
-
 		this.data.actor.rollHP();
+		ui.sidebar.activateTab("chat");
 	}
 
 	async _onViewTalentTable(event) {
@@ -91,6 +100,24 @@ export default class LevelUpSD extends FormApplication {
 	async _onRollTalent(event) {
 		event.preventDefault();
 		const results = await this.data.talentTable.draw();
+		ui.sidebar.activateTab("chat");
 		console.log(results.results[0]);
+	}
+
+	_onDropTalent(talentObj) {
+		this.data.talents.push(talentObj);
+		this.render();
+	}
+
+	_onDropSpell(spellObj) {
+		this.data.spells.push(spellObj);
+		this.render();
+	}
+
+	async _onFinalizeLevelUp() {
+		// do stuff here
+		this.data.actor.sheet.render(true);
+		this.close();
+
 	}
 }
