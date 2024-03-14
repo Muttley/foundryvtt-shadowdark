@@ -6,11 +6,12 @@
 	h1 {
 		font-family: "Old Newspaper Font";
 		text-align: center;
-		margin-left: 15px;
-		font-size: 2.5em;
-		a {
-			font-size: 1em;
-		}
+		font-size: 2.0em;
+	}
+
+	h3 {
+		text-align: center;
+
 	}
 
 	button {
@@ -55,11 +56,6 @@
 		.large {
 			height: 100px;
 		}
-	}
-
-	.level-up-button {
-		align-self: center;
-		width: 75%;
 	}
 
 }

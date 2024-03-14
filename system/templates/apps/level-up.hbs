@@ -1,6 +1,7 @@
 <form class="level-up" autocomplete="off">
 	<h1>{{actor.name}}</h1>
-	Leveling up to level {{targetLevel}}
+	<h3>Leveling up to level {{targetLevel}}</h3>
+	<p></p>
 	{{!-- Hit Points --}}
 	<div class="box-style">
 		<div class="header">
@@ -26,7 +27,8 @@
 				<button type="button" data-action="roll-talent">Roll talent</button>
 			{{/if}}
 			{{#each talents}}
-				{{this.name}}
+				<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-item="@index"></a>
+				<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
 			{{/each}}
 		</div>
 	</div>
@@ -36,7 +38,7 @@
 	<div class="box-style">
 		<div class="header">
 			<label>Spells</label>
-			<span></span>
+			<span><a class="fas fa-book" data-action="open-spellbook"></a></span>
 		</div>
 		<div class="content ">
 			Tier 1: Choose 1

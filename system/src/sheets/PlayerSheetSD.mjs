@@ -139,7 +139,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
-		context.levelUp = (context.system.level.xp > context.xpNextLevel)
+		context.levelUp = (context.system.level.xp >= context.xpNextLevel)
 			&& context.system.level.xp > 0;
 
 		await this.actor.updateArmorClass();

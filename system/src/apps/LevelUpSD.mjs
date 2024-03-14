@@ -13,8 +13,8 @@ export default class LevelUpSD extends FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
-			width: 300,
-			resizable: true,
+			width: 350,
+			resizable: false,
 			closeOnSubmit: true,
 			submitOnChange: false,
 			dragDrop: [{dragSelector: ".item[draggable=true]"}],
@@ -42,6 +42,10 @@ export default class LevelUpSD extends FormApplication {
 
 		html.find("[data-action='view-talent-table']").click(
 			event => this._onViewTalentTable(event)
+		);
+
+		html.find("[data-action='delete-talent']").click(
+			event => this._onDeleteTalent($(event.currentTarget).data("item"))
 		);
 
 		html.find("[data-action='roll-talent']").click(
@@ -87,18 +91,16 @@ export default class LevelUpSD extends FormApplication {
 		return super._onDrop();
 	}
 
-	async _onRollHP(event) {
-		event.preventDefault();
+	async _onRollHP() {
 		this.data.actor.rollHP();
 		ui.sidebar.activateTab("chat");
 	}
 
-	async _onViewTalentTable(event) {
+	async _onViewTalentTable() {
 		this.data.talentTable.sheet.render(true);
 	}
 
-	async _onRollTalent(event) {
-		event.preventDefault();
+	async _onRollTalent() {
 		const results = await this.data.talentTable.draw();
 		ui.sidebar.activateTab("chat");
 		console.log(results.results[0]);
@@ -109,13 +111,28 @@ export default class LevelUpSD extends FormApplication {
 		this.render();
 	}
 
+	_onDeleteTalent(index) {
+		this.data.talents.splice(index, 1);
+		this.render();
+	}
+
 	_onDropSpell(spellObj) {
 		this.data.spells.push(spellObj);
 		this.render();
 	}
 
+	_onDeleteSpell(index) {
+		this.data.spells.splice(index, 1);
+		this.render();
+	}
+
 	async _onFinalizeLevelUp() {
 		// do stuff here
+		const newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
+		this.data.actor.update({
+			"system.level.value": this.data.targetLevel,
+			"system.level.xp": newXP,
+		});
 		this.data.actor.sheet.render(true);
 		this.close();
 
