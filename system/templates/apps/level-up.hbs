@@ -19,17 +19,26 @@
 			<label>Talents</label>
 			<span><a class="fas fa-table-list" data-action="view-talent-table"></a></span>
 		</div>
-		<div class="content ">
+		<div class="content talents">
 			{{#unless talentGained}}
 				No talents gained at this level
 			{{/unless}}
 			{{#if talentGained}}
-				<button type="button" data-action="roll-talent">Roll talent</button>
+				{{#unless rolls.talent}}
+					<button type="button" data-action="roll-talent">Roll talent</button>
+				{{/unless}}
+				{{#if rolls.talent}}
+					<fieldset>
+					{{#unless talents}}Drag and Drop Talents Here{{/unless}}
+					{{#each talents}}
+					<div>
+						<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-index="{{@index}}"></a>
+						<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+					</div>
+					{{/each}}
+					</fieldset>
+				{{/if}}
 			{{/if}}
-			{{#each talents}}
-				<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-item="@index"></a>
-				<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
-			{{/each}}
 		</div>
 	</div>
 
@@ -40,11 +49,20 @@
 			<label>Spells</label>
 			<span><a class="fas fa-book" data-action="open-spellbook"></a></span>
 		</div>
-		<div class="content ">
-			Tier 1: Choose 1
+		<div class="content spells">
+
 			{{#each spells}}
-				{{this.name}}
+			<div class="flexrow">
+			<span>{{this.name}}</span>
+			<fieldset class="flex3">
+				{{#each this.objects}}
+					<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../index}}" data-index="{{@index}}"></a>
+					<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+				{{/each}}
+			</fieldset>
+			</div>
 			{{/each}}
+
 		</div>
 	</div>
 	{{/if}}

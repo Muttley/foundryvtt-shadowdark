@@ -1,0 +1,6 @@
+<form class="spell-book" autocomplete="off">
+	<h1>{{this.class.name}} Spell Book</h1>
+{{#each spellList}}
+	<a class="content-link" draggable="true" data-uuid="{{this.uuid}}">{{this.name}}</a>
+{{/each}}
+</form>

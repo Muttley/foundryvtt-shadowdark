@@ -52,9 +52,26 @@
 		.content {
 			display:block;
 			padding:5px;
+			fieldset {
+				border-style: dashed;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				margin-bottom: 5px;
+			}
+
 		}
-		.large {
-			height: 100px;
+		.talents {
+			height: 80px;
+			fieldset {
+				height: 100%;
+				overflow: auto;
+			}
+
+		}
+		.spells {
+			fieldset {
+				height:35px;
+			}
 		}
 	}
 
