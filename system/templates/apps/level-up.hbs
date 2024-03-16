@@ -52,15 +52,22 @@
 		<div class="content spells">
 
 			{{#each spells}}
-			<div class="flexrow">
-			<span>{{this.name}}</span>
-			<fieldset class="flex3">
-				{{#each this.objects}}
-					<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../index}}" data-index="{{@index}}"></a>
-					<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
-				{{/each}}
-			</fieldset>
-			</div>
+			{{#if this.max}}
+				<div class="flexrow">
+				<span>{{this.name}}</span>
+				<fieldset class="flex3">
+					{{#unless this.objects}}
+						Choose {{this.max}}
+					{{/unless}}
+					{{#each this.objects}}
+					<div>
+						<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
+						<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+					</div>
+					{{/each}}
+				</fieldset>
+				</div>
+			{{/if}}
 			{{/each}}
 
 		</div>

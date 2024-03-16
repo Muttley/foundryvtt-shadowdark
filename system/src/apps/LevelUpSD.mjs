@@ -88,22 +88,28 @@ export default class LevelUpSD extends FormApplication {
 			if (this.data.isSpellCaster) {
 				this.spellbook = new shadowdark.apps.SpellBookSD(this.data.class.uuid);
 
-				// setup known spells for this level
-				let currentSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
-				let targetSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+				// calculate the spells gained for the target level from the spells known table
+				if (this.data.class.system.spellcasting.spellsknown) {
+					// setup known spells for this level
+					let currentSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+					let targetSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
 
-				if (this.data.currentLevel >= 1) {
-					currentSpells =
-					this.data.class.system.spellcasting.spellsknown[this.data.currentLevel];
-				}
-				if (this.data.targetLevel <= 10) {
-					targetSpells =
-					this.data.class.system.spellcasting.spellsknown[this.data.targetLevel];
-				}
+					if (this.data.currentLevel >= 1) {
+						currentSpells =
+						this.data.class.system.spellcasting.spellsknown[this.data.currentLevel];
+					}
+					if (this.data.targetLevel <= 10) {
+						targetSpells =
+						this.data.class.system.spellcasting.spellsknown[this.data.targetLevel];
+					}
 
-				Object.keys(targetSpells).forEach(k => {
-					this.data.spells[k].max = targetSpells[k] - currentSpells[k];
-				});
+					Object.keys(targetSpells).forEach(k => {
+						this.data.spells[k].max = targetSpells[k] - currentSpells[k];
+					});
+				}
+				else {
+					ui.notifications.warn("Class missing Spells Known Table");
+				}
 
 			}
 			console.log(this.data);
@@ -113,9 +119,10 @@ export default class LevelUpSD extends FormApplication {
 
 	/** @override */
 	async _onDrop(event) {
+		// get item that was dropped based on event
 		const eventData = TextEditor.getDragEventData(event);
 		const itemObj = await fromUuid(eventData.uuid);
-		console.log(itemObj);
+
 		if (itemObj && eventData.type === "Item") {
 			switch (itemObj.type) {
 				case "Talent":
@@ -148,7 +155,7 @@ export default class LevelUpSD extends FormApplication {
 		await this.data.talentTable.draw();
 		ui.sidebar.activateTab("chat");
 
-		// Humans get extra talent at level 1
+		// Humans get extra talent at level 1 with the ambitious talent
 		if (this.data.targetLevel === 1) {
 			let ambitious = this.data.actor.items.find(x => x.name === "Ambitious");
 			if (ambitious) {
@@ -165,6 +172,7 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	_onDropTalent(talentObj) {
+		talentObj.update({"system.level": this.data.targetLevel});
 		this.data.talents.push(talentObj);
 		this.render();
 	}
@@ -176,29 +184,51 @@ export default class LevelUpSD extends FormApplication {
 
 	_onDropSpell(spellObj) {
 		let spellTier = spellObj.system.tier;
+		// Check to see if the spell is out of bounds
 		if (1 > spellTier > 5) {
-			ui.notifictions.erro("Spell tier out of range");
+			ui.notifictions.error("Spell tier out of range");
 			return;
 		}
-		this.data.spells[spellTier-1].objects.push(spellObj);
+		// add spell if there is room in that tier
+		if (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max) {
+			this.data.spells[spellTier].objects.push(spellObj);
+		}
 		this.render();
 	}
 
 	_onDeleteSpell(event) {
+		// get tier and index from passed event and remove that spell from array
 		let tier = $(event.currentTarget).data("tier");
 		let index = $(event.currentTarget).data("index");
-		console.log(tier, index);
 		this.data.spells[tier].objects.splice(index, 1);
 		this.render();
 	}
 
 	async _onFinalizeLevelUp() {
-		// do stuff here
-		const newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
+		// update actor XP and level
+		let newXP = 0;
+
+		// carry over XP for all levels except level 0
+		if (this.data.currentLevel > 0) {
+			newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
+		}
+
 		this.data.actor.update({
 			"system.level.value": this.data.targetLevel,
 			"system.level.xp": newXP,
 		});
+
+		const allItems = [
+			...this.data.talents,
+			...this.data.spells[1].objects, // avert your eyes to this
+			...this.data.spells[2].objects,
+			...this.data.spells[3].objects,
+			...this.data.spells[4].objects,
+			...this.data.spells[5].objects,
+		];
+
+		this.data.actor.createEmbeddedDocuments("Item", allItems);
+
 		this.data.actor.sheet.render(true);
 		this.close();
 

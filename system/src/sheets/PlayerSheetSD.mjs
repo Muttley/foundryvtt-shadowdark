@@ -540,9 +540,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _onlevelUp(event) {
 		event.preventDefault();
-		let lvlup = new shadowdark.apps.LevelUpSD(this.actor._id);
-		lvlup.render(true);
-		this.close();
+		let actorClass = await this.actor.getClass();
+		if (this.actor.system.class && !actorClass.name.includes("Level 0")) {
+			let lvlup = new shadowdark.apps.LevelUpSD(this.actor._id);
+			lvlup.render(true);
+			this.close();
+		}
+		else {
+			ui.notifications.warn("Must select a class first");
+		}
 	}
 
 	async _onOpenGemBag(event) {
