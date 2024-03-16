@@ -10,14 +10,14 @@ export default class LevelUpSD extends FormApplication {
 		};
 		this.data.actor = game.actors.get(uid);
 		this.data.talents = [];
-		this.data.spells = [];
+		this.data.spells = {};
 
 		for (let i = 1; i <= 5; i++) {
-			this.data.spells.push({
+			this.data.spells[i] = {
 				name: "Tier ".concat(i),
 				max: 0,
 				objects: [],
-			});
+			};
 		}
 	}
 
@@ -81,11 +81,30 @@ export default class LevelUpSD extends FormApplication {
 			this.firstrun = false;
 			this.data.class = await fromUuid(this.data.actor.system.class);
 			this.data.talentTable = await fromUuid(this.data.class.system.classTalentTable);
-			this.data.targetLevel = this.data.actor.system.level.value +1;
+			this.data.currentLevel = this.data.actor.system.level.value;
+			this.data.targetLevel =  this.data.currentLevel +1;
 			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			if (this.data.isSpellCaster) {
 				this.spellbook = new shadowdark.apps.SpellBookSD(this.data.class.uuid);
+
+				// setup known spells for this level
+				let currentSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+				let targetSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+
+				if (this.data.currentLevel >= 1) {
+					currentSpells =
+					this.data.class.system.spellcasting.spellsknown[this.data.currentLevel];
+				}
+				if (this.data.targetLevel <= 10) {
+					targetSpells =
+					this.data.class.system.spellcasting.spellsknown[this.data.targetLevel];
+				}
+
+				Object.keys(targetSpells).forEach(k => {
+					this.data.spells[k].max = targetSpells[k] - currentSpells[k];
+				});
+
 			}
 			console.log(this.data);
 		}
