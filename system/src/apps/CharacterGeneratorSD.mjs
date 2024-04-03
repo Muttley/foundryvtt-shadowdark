@@ -2,6 +2,10 @@ Handlebars.registerHelper("remove-p-tag", str1 => {
 	return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 });
 
+Handlebars.registerHelper("disabled", x => {
+	return x ? "" : "disabled";
+});
+
 class loadingDialog extends Dialog {
 	constructor() {
 		let data = {
@@ -22,7 +26,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	/**
 	 * Contains functions for building Shadowdark characters
 	 */
-	constructor() {
+	constructor(actorUid=null) {
 		super();
 
 		loadTemplates({
@@ -35,8 +39,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.class = null;
 
 		this.formData = {};
-		this.formData.level0Class = {};
+		this.formData.new = true;
 		this.formData.level0 = true;
+		this.formData.level0Class = {};
 		this.formData.classHP = "1";
 		this.formData.armor = ["All armor"];
 		this.formData.weapons =["All weapons"];
@@ -80,7 +85,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 					},
 				},
 				level: {
-					value: 1,
+					value: 0,
 					xp: 0,
 				},
 				abilities: {
@@ -125,6 +130,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		this.loadingDialog = new loadingDialog();
 
+		if (actorUid) {
+			this.formData.new = false;
+			this.actorUid = actorUid;
+		}
+
 	}
 
 	/** @inheritdoc */
@@ -160,6 +170,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			event => this._createCharacter(event)
 		);
 
+		html.find("[data-action='update-character']").click(
+			event => this._updateCharacter(event)
+		);
+
 		html.find("[data-action='clear-ancestry-talents']").click(
 			event => this._clearAncestryTalents(event)
 		);
@@ -184,10 +198,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 	    let expandedData = foundry.utils.expandObject(data);
 
 		// covert incoming stat data from string to int
-		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-			let baseInt = parseInt(expandedData.actor.system.abilities[x].base);
-			expandedData.actor.system.abilities[x].base = baseInt;
-		});
+		if (expandedData.actor.system.abilities) {
+			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
+				let baseInt = parseInt(expandedData.actor.system.abilities[x].base);
+				expandedData.actor.system.abilities[x].base = baseInt;
+			});
+		}
 
 		expandedData.level0 = (data.level0 === "true");
 
@@ -287,6 +303,15 @@ export default class CharacterGeneratorSD extends FormApplication {
 					this.formData.classes.delete(classObj._id);
 				}
 			});
+
+			if (!this.formData.new) {
+
+				this.formData.actor = await game.actors.get(this.actorUid).toObject();
+				this.formData.new = false;
+				this.formData.level0 = false;
+				this.formData.actor.system.class = "";
+				await this._loadAncestry(this.formData.actor.system.ancestry, true);
+			}
 
 			// loading is finished, pull down the loading screen
 			this.loadingDialog.close();
@@ -758,7 +783,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	static async createActorFromData(characterData, characterItems, userId) {
+	static async createActorFromData(characterData, characterItems, userId, level0) {
 		if (!shadowdark.utils.canCreateCharacter()) return;
 
 		const newActor = await Actor.create(characterData);
@@ -787,11 +812,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			game.socket.emit("system.shadowdark", {
 				type: "openNewCharacter",
-				payload: {actorId: newActor.id, userId},
+				payload: {actorId: newActor.id, userId, level0},
 			});
 		}
 		else {
-			newActor.sheet.render(true);
+			if (level0) {
+				newActor.sheet.render(true);
+			}
+			else {
+				new shadowdark.apps.LevelUpSD(newActor.id).render(true);
+			}
 
 			return ui.notifications.info(
 				game.i18n.localize("SHADOWDARK.apps.character-generator.success"),
@@ -817,7 +847,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// make changes only for level 0 characters
 		if (this.formData.level0) {
-			this.formData.actor.system.level.value = 0;
 			this.formData.actor.system.coins.gp = 0;
 
 			// add gear to the items list
@@ -833,18 +862,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 			}
 		}
 
-		// Calculate HP
+		// Calculate initial HP
 		let hpConMod = this.formData.actor.system.abilities.con.mod;
-		let hpBase = this.formData.actor.system.attributes.hp.base;
-		// set minimum 1 HP
-		if ((hpBase + hpConMod) >= 1) {
-			this.formData.actor.system.attributes.hp.base = hpBase + hpConMod;
-			this.formData.actor.system.attributes.hp.value = hpBase + hpConMod;
-		}
-		else {
-			this.formData.actor.system.attributes.hp.base = 1;
-			this.formData.actor.system.attributes.hp.value = 1;
-		}
+		if (hpConMod < 1) hpConMod = 1;
+		this.formData.actor.system.attributes.hp.base = hpConMod;
+		this.formData.actor.system.attributes.hp.value = hpConMod;
 
 		// Create the new player character
 		//
@@ -852,7 +874,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			CharacterGeneratorSD.createActorFromData(
 				this.formData.actor,
 				allItems,
-				game.userId
+				game.userId,
+				this.level0
 			);
 		}
 		else {
@@ -862,11 +885,36 @@ export default class CharacterGeneratorSD extends FormApplication {
 					characterData: this.formData.actor,
 					characterItems: allItems,
 					userId: game.userId,
+					level0: this.level0,
 				},
 			});
 		}
 
 
+		this.close();
+	}
+
+	async _updateCharacter() {
+
+		let actorRef = game.actors.get(this.actorUid);
+
+		// set class, languages and starting gold
+		await actorRef.update({
+			system: {
+				class: this.formData.actor.system.class,
+				languages: this.formData.actor.system.languages,
+				coins: {gp: this.formData.actor.system.coins.gp},
+			} });
+
+		// add class talents
+		const allItems = [
+			...this.formData.classTalents.fixed,
+			...this.formData.classTalents.selection,
+		];
+		await actorRef.createEmbeddedDocuments("Item", allItems);
+
+		// go to level up screen
+		new shadowdark.apps.LevelUpSD(this.actorUid).render(true);
 		this.close();
 	}
 }

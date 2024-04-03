@@ -288,7 +288,18 @@ export default class LevelUpSD extends FormApplication {
 		}
 
 		// calculate new HP base
-		const newHP =  this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+
+		if (this.targetLevel === 1) {
+			let hpConMod = this.data.actor.system.abilities.con.mod;
+			// apply conmod to a set minimum 1 HP
+			if ((this.data.rolls.hp + hpConMod) > 1) {
+				newHP = this.data.rolls.hp + hpConMod;
+			}
+			else {
+				newHP = 1;
+			}
+		}
 
 		this.data.actor.update({
 			"system.level.value": this.data.targetLevel,
@@ -296,15 +307,16 @@ export default class LevelUpSD extends FormApplication {
 			"system.attributes.hp.base": newHP,
 		});
 
-		const allItems = [
+		let allItems = [
 			...this.data.talents,
-			...this.data.spells[1].objects, // avert your eyes to this
-			...this.data.spells[2].objects,
-			...this.data.spells[3].objects,
-			...this.data.spells[4].objects,
-			...this.data.spells[5].objects,
 		];
 
+		for (let i = 1; i <= 5; i++) {
+			allItems = [
+				...allItems,
+				...this.data.spells[i].objects,
+			];
+		}
 
 		this.data.actor.createEmbeddedDocuments("Item", allItems);
 
