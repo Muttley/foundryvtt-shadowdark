@@ -1,9 +1,20 @@
+let hasSpells = [];
+
+Handlebars.registerHelper("hasspell", spell => {
+	return (hasSpells.includes(spell));
+});
+
 export default class SpellBookSD extends FormApplication {
 
-	constructor(classUuid) {
+	constructor(classUuid, characterUid = "") {
 	    super();
 		this.classID = classUuid;
-		console.log(this.classID);
+
+		if (characterUid !== "") {
+			let actorObj = game.actors.get(characterUid);
+			hasSpells = actorObj.items.filter(d => (d.type === "Spell")).map(x => x.name);
+			// hasSpells = Object.fromEntries(this.hasSpells.map(x => [x.name, true]));
+		}
 	}
 
 	/** @inheritdoc */
@@ -43,10 +54,15 @@ export default class SpellBookSD extends FormApplication {
 		let data = {
 			class: await fromUuid(this.classID),
 			spellList: [],
+			hasSpells: this.hasSpells,
 		};
 
-		// data.class = await fromUuid(this.classID);
+		// get source filter settings
+		const sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
+		const sourcesSet = (sources.length > 0);
 
+		// load all spells for class based on source filter
+		let unsortedSpells = [];
 		for (let pack of game.packs) {
 			if (pack.metadata.type !== "Item") continue;
 
@@ -54,23 +70,23 @@ export default class SpellBookSD extends FormApplication {
 
 			for (const id of ids) {
 				const spell = await pack.getDocument(id);
+				const source = spell.system?.source?.title ?? "";
 				if (spell.system.class.includes(this.classID)) {
-					data.spellList.push(spell);
+					if (source !== "" && sourcesSet && !sources.includes(source)) {
+						continue;
+					}
+					unsortedSpells.push(spell);
 				}
 			}
 
 		}
 
-		/* Dedupe and sort the list alphabetically
-		docs = Array.from(new Set(docs)).sort((a, b) => a.name.localeCompare(b.name));
+		// sort spells
+		let sortedSpells = unsortedSpells.sort(
+			(a, b) => a.name < b.name ? -1 : 1);
 
-		const collection = new Collection();
-
-		for (let d of docs) {
-			collection.set(d.id, d);
-		}
-		*/
-		console.log(data);
+		// group spells by tier
+		data.spellList = Object.groupBy(sortedSpells, ({system}) => system.tier);
 		return data;
 	}
 

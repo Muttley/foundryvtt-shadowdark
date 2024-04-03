@@ -1,3 +1,11 @@
+Handlebars.registerHelper("addEmptySlots", (objects, max) => {
+	const newOjects = objects.map(a => ({...a}));
+	for (let j = 0; j < max - objects.length; j++) {
+		newOjects.push(null);
+	}
+	return newOjects;
+});
+
 export default class LevelUpSD extends FormApplication {
 
 	constructor(uid) {
@@ -6,6 +14,7 @@ export default class LevelUpSD extends FormApplication {
 		this.data = {};
 		this.data.rolls = {
 			hp: 0,
+			hpEdit: false,
 			talent: false,
 		};
 		this.data.actor = game.actors.get(uid);
@@ -51,6 +60,10 @@ export default class LevelUpSD extends FormApplication {
 			event => this._onRollHP(event)
 		);
 
+		html.find("[data-action='re-roll-hp']").click(
+			event => this._onReRollHP(event)
+		);
+
 		html.find("[data-action='view-talent-table']").click(
 			event => this._viewTalentTable(event)
 		);
@@ -71,7 +84,7 @@ export default class LevelUpSD extends FormApplication {
 		);
 
 		html.find("[data-action='finalize-level-up']").click(
-			event => this._onFinalizeLevelUp(event)
+			event => this._onLevelUp(event)
 		);
 	}
 
@@ -86,7 +99,10 @@ export default class LevelUpSD extends FormApplication {
 			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			if (this.data.isSpellCaster) {
-				this.spellbook = new shadowdark.apps.SpellBookSD(this.data.class.uuid);
+				this.spellbook = new shadowdark.apps.SpellBookSD(
+					this.data.class.uuid,
+					this.data.actor.id
+				);
 
 				// calculate the spells gained for the target level from the spells known table
 				if (this.data.class.system.spellcasting.spellsknown) {
@@ -112,7 +128,6 @@ export default class LevelUpSD extends FormApplication {
 				}
 
 			}
-			console.log(this.data);
 		}
 		return this.data;
 	}
@@ -126,7 +141,7 @@ export default class LevelUpSD extends FormApplication {
 		if (itemObj && eventData.type === "Item") {
 			switch (itemObj.type) {
 				case "Talent":
-					this._onDropTalent(itemObj);
+				 	this._onDropTalent(itemObj);
 					break;
 				case "Spell":
 					this._onDropSpell(itemObj);
@@ -135,7 +150,6 @@ export default class LevelUpSD extends FormApplication {
 					break;
 			}
 		}
-		return super._onDrop();
 	}
 
 	async _viewTalentTable() {
@@ -147,8 +161,34 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _onRollHP() {
-		this.data.actor.rollHP();
+
+		// roll HP
+		const data = {
+			rollType: "hp",
+			actor: this.data.actor,
+		};
+		let options = {};
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+		options.flavor = options.title;
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
+		options.fastForward = true;
+
+		const parts = [this.data.class.system.hitPoints];
+		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+
+		this.data.rolls.hp = result.rolls.main.roll.total;
 		ui.sidebar.activateTab("chat");
+		this.render();
+	}
+
+	async _onReRollHP() {
+		Dialog.confirm({
+			title: "Re-Roll HP",
+			content: "Are you sure you want to re-roll hit points?",
+			yes: () => this._onRollHP(),
+			no: () => null,
+			defaultYes: false,
+		  });
 	}
 
 	async _onRollTalent() {
@@ -171,10 +211,16 @@ export default class LevelUpSD extends FormApplication {
 		this.render();
 	}
 
-	_onDropTalent(talentObj) {
-		talentObj.update({"system.level": this.data.targetLevel});
-		this.data.talents.push(talentObj);
-		this.render();
+	async _onDropTalent(talentItem) {
+		if (this.data.talentGained) {
+
+			let talentObj = talentItem.toObject();
+			// checks for effects on talent and prompts if needed
+			talentObj = await shadowdark.utils.createItemWithEffect(talentObj);
+			talentObj.system.level = this.data.targetLevel;
+			this.data.talents.push(talentObj);
+			this.render();
+		}
 	}
 
 	_onDeleteTalent(event) {
@@ -204,7 +250,35 @@ export default class LevelUpSD extends FormApplication {
 		this.render();
 	}
 
-	async _onFinalizeLevelUp() {
+	_onLevelUp() {
+
+		let spellsSelected = true;
+		for (let i = 1; i <= 5; i++) {
+			if (this.data.spells[i].max > this.data.spells[i].objects.length) {
+				spellsSelected = false;
+			}
+		}
+
+		// Are all selections complete?
+		switch (false) {
+			case (this.data.rolls.hp > 0):
+			case !(this.data.talentGained && this.data.talents.length < 1):
+			case spellsSelected:
+				Dialog.confirm({
+					title: "Missing Selections",
+					content: "Not all required selections have been made. Continue with level up?",
+					yes: () => this._finalizeLevelUp(),
+					no: () => null,
+					defaultYes: false,
+				});
+				break;
+			default:
+				this._finalizeLevelUp();
+		}
+	}
+
+	async _finalizeLevelUp() {
+
 		// update actor XP and level
 		let newXP = 0;
 
@@ -213,9 +287,13 @@ export default class LevelUpSD extends FormApplication {
 			newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
 		}
 
+		// calculate new HP base
+		const newHP =  this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+
 		this.data.actor.update({
 			"system.level.value": this.data.targetLevel,
 			"system.level.xp": newXP,
+			"system.attributes.hp.base": newHP,
 		});
 
 		const allItems = [
@@ -227,10 +305,10 @@ export default class LevelUpSD extends FormApplication {
 			...this.data.spells[5].objects,
 		];
 
+
 		this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		this.data.actor.sheet.render(true);
 		this.close();
-
 	}
 }

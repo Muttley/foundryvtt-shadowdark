@@ -403,7 +403,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 				talentData.push(talentObj);
 			}
 		}
-		this.formData.classTalents.fixed = talentData;
+
+		// sort and save fixed talents
+		this.formData.classTalents.fixed = talentData.sort(
+			(a, b) => a.name < b.name ? -1 : 1);
 
 		talentData = [];
 

@@ -1,6 +1,30 @@
 <form class="spell-book" autocomplete="off">
 	<h1>{{this.class.name}} Spell Book</h1>
+	<div class="item-list">
+<table>
+<tbody>
 {{#each spellList}}
-	<a class="content-link" draggable="true" data-uuid="{{this.uuid}}">{{this.name}}</a>
+	<tr>
+	<td>
+		Tier {{@key}} Spells
+	</td>
+	</tr>
+	<tr class="item" data-item-id="{{this._id}}">
+	<td>
+	{{#each .}}
+
+		{{#if (hasspell this.name)}}
+			<a class="content-link" data-uuid="{{this.uuid}}" draggable="false">{{this.name}}</a>
+		{{/if}}
+		{{#unless (hasspell this.name)}}
+			<a class="content-link" data-uuid="{{this.uuid}}" draggable="true">{{this.name}}</a>
+		{{/unless}}
+
+	{{/each}}
+	</td>
+	</tr>
 {{/each}}
+</tbody>
+</table>
+</div>
 </form>

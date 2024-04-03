@@ -6,10 +6,19 @@
 	<div class="box-style">
 		<div class="header">
 			<label>Hit Points</label>
-			<span>{{class.system.hitPoints}}</span>
+			<span>{{class.system.hitPoints}}
+				{{#if rolls.hp}}
+					<a class="fas fa-dice" data-action="re-roll-hp"></a>
+				{{/if}}
+			</span>
 		</div>
 		<div class="content ">
-			<button type="button" data-action="roll-hp">Roll HP</button>
+			{{#if rolls.hp}}
+				<h2>{{rolls.hp}}</h2>
+			{{/if}}
+			{{#unless rolls.hp}}
+				<button type="button" data-action="roll-hp">Roll HP</button>
+			{{/unless}}
 		</div>
 	</div>
 
@@ -50,26 +59,26 @@
 			<span><a class="fas fa-book" data-action="open-spellbook"></a></span>
 		</div>
 		<div class="content spells">
-
 			{{#each spells}}
-			{{#if this.max}}
-				<div class="flexrow">
-				<span>{{this.name}}</span>
-				<fieldset class="flex3">
-					{{#unless this.objects}}
-						Choose {{this.max}}
-					{{/unless}}
-					{{#each this.objects}}
-					<div>
-						<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
-						<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+				{{#if this.max}}
+					<div class="flexrow">
+						<span>{{this.name}}</span>
+						<div class="flex3">
+							{{#each (addEmptySlots this.objects this.max)}}
+							<fieldset >
+								{{#if this}}
+								<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
+								<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+								{{/if}}
+								{{#unless this}}
+									Drag and Drog Here
+								{{/unless}}
+							</fieldset>
+							{{/each}}
+						</div>
 					</div>
-					{{/each}}
-				</fieldset>
-				</div>
-			{{/if}}
+				{{/if}}
 			{{/each}}
-
 		</div>
 	</div>
 	{{/if}}

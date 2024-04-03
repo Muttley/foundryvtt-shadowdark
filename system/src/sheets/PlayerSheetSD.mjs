@@ -223,7 +223,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		// Talents & Effects may need some user input
 		if (["Talent", "Effect"].includes(item.type)) {
-			return this._createItemWithEffect(item);
+			let itemObj = await shadowdark.utils.createItemWithEffect(item);
+
+			// add item to actor
+			const actorItem = await super._onDropItemCreate(itemObj);
+			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+				this._toggleLightSource(actorItem[0]);
+			}
+			return;
 		}
 
 		const backgroundItems = [
@@ -273,109 +280,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 		else {
 			super._onDropItem(event, data);
-		}
-	}
-
-	/**
-	 * Actives a lightsource if dropped onto the Player sheet. Used for
-	 * activating Light spell et.c.
-	 *
-	 * @param {Item} item - Item that is a lightsource
-	 */
-	async _dropActivateLightSource(item) {
-		const actorItem = await super._onDropItemCreate(item);
-		this._toggleLightSource(actorItem[0]);
-	}
-
-	/**
-	 * Asks the user for input if necessary for an effect that requires said input.
-	 * @param {Item} item - Item that has the effects
-	 * @param {*} effect - The effect being analyzed
-	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
-	 * @returns {Object} - Object updated with the changes
-	 */
-	async _modifyEffectChangesWithInput(item, effect, key = false) {
-		// Create an object out of the item to modify before creating
-		const itemObject = item.toObject();
-		let name = itemObject.name;
-
-		const changes = await Promise.all(
-			effect.changes.map(async c => {
-				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
-					const effectKey = (key) ? key : c.key.split(".")[2];
-
-					// Ask for user input
-					let linkedName;
-					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
-
-					if (c.value) {
-						name += ` (${linkedName})`;
-					}
-				}
-				return c;
-			})
-		);
-
-		// Modify the Effect object
-		itemObject.effects.map(e => {
-			if (e._id === effect._id) {
-				e.changes = changes;
-				itemObject.name = name;
-			}
-			return e;
-		});
-
-		return itemObject;
-	}
-
-	/**
-	 * Contains logic that handles any complex effects, where the user
-	 * needs to provide input to determine the effect.
-	 * @param {Item} item - The item being created
-	 */
-	async _createItemWithEffect(item) {
-		await Promise.all(item.effects?.map(async e => {
-
-			// If the item contains effects that require user input,
-			// ask and modify talent before creating
-			if (
-				e.changes?.some(c =>
-					CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)
-				)
-			) {
-				// Spell Advantage requires special handling as it uses the `advantage` bons
-				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
-					// If there is no value with REPLACME, it is another type of advantage talent
-					if (e.changes.some(c => c.value === "REPLACEME")) {
-						const key = "spellAdvantage";
-						item = await this._modifyEffectChangesWithInput(item, e, key);
-					}
-				}
-				else {
-					item = await this._modifyEffectChangesWithInput(item, e);
-				}
-			}
-		}));
-
-		// If any effects was created without a value, we don't create the item
-		if (item.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
-			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
-		);
-
-		// Activate lightsource tracking
-		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-			const duration = item.totalDuration;
-			item = item.toObject();
-			item.system.light.isSource = true;
-			item.system.light.longevitySecs = duration;
-			item.system.light.remainingSecs = duration;
-			item.system.light.longevityMins = duration / 60;
-		}
-
-		// Create the item
-		const actorItem = await super._onDropItemCreate(item);
-		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-			this._toggleLightSource(actorItem[0]);
 		}
 	}
 
