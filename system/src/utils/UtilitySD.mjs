@@ -176,7 +176,8 @@ export default class UtilitySD {
 	 * @param {Item} item - The item being created
 	 */
 	static async createItemWithEffect(item) {
-		await Promise.all(item.effects?.map(async e => {
+		let itemObj = item.toObject();
+		await Promise.all(itemObj.effects?.map(async e => {
 
 			// If the item contains effects that require user input,
 			// ask and modify talent before creating
@@ -190,29 +191,28 @@ export default class UtilitySD {
 					// If there is no value with REPLACME, it is another type of advantage talent
 					if (e.changes.some(c => c.value === "REPLACEME")) {
 						const key = "spellAdvantage";
-						item = await this.modifyEffectChangesWithInput(item, e, key);
+						itemObj = await this.modifyEffectChangesWithInput(item, e, key);
 					}
 				}
 				else {
-					item = await this.modifyEffectChangesWithInput(item, e);
+					itemObj = await this.modifyEffectChangesWithInput(item, e);
 				}
 			}
 		}));
 
 		// If any effects was created without a value, we don't create the item
-		if (item.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
+		if (itemObj.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
 			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
 		);
 
 		// Activate lightsource tracking
-		if (item.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-			const duration = item.totalDuration;
-			item = item.toObject();
-			item.system.light.isSource = true;
-			item.system.light.longevitySecs = duration;
-			item.system.light.remainingSecs = duration;
-			item.system.light.longevityMins = duration / 60;
+		if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			const duration = itemObj.totalDuration;
+			itemObj.system.light.isSource = true;
+			itemObj.system.light.longevitySecs = duration;
+			itemObj.system.light.remainingSecs = duration;
+			itemObj.system.light.longevityMins = duration / 60;
 		}
-		return item;
+		return itemObj;
 	}
 }

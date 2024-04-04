@@ -173,8 +173,11 @@ export default class LevelUpSD extends FormApplication {
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 		options.fastForward = true;
 
-		const parts = [this.data.class.system.hitPoints];
-		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+		let parts = [this.data.class.system.hitPoints];
+		let advantage = 0;
+		if (data.actor?.hasAdvantage(data)) advantage = 1;
+
+		const result = await CONFIG.DiceSD.Roll(parts, data, false, advantage, options);
 
 		this.data.rolls.hp = result.rolls.main.roll.total;
 		ui.sidebar.activateTab("chat");
@@ -214,9 +217,8 @@ export default class LevelUpSD extends FormApplication {
 	async _onDropTalent(talentItem) {
 		if (this.data.talentGained) {
 
-			let talentObj = talentItem.toObject();
 			// checks for effects on talent and prompts if needed
-			talentObj = await shadowdark.utils.createItemWithEffect(talentObj);
+			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
 			talentObj.system.level = this.data.targetLevel;
 			this.data.talents.push(talentObj);
 			this.render();
@@ -290,7 +292,7 @@ export default class LevelUpSD extends FormApplication {
 		// calculate new HP base
 		let newHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
 
-		if (this.targetLevel === 1) {
+		if (this.data.targetLevel === 1) {
 			let hpConMod = this.data.actor.system.abilities.con.mod;
 			// apply conmod to a set minimum 1 HP
 			if ((this.data.rolls.hp + hpConMod) > 1) {

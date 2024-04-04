@@ -40,7 +40,7 @@
 					<fieldset>
 					{{#unless talents}}Drag and Drop Talents Here{{/unless}}
 					{{#each talents}}
-					<div>
+					<div style="white-space: nowrap;">
 						<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-index="{{@index}}"></a>
 						<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
 					</div>

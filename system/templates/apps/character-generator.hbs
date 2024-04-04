@@ -2,7 +2,7 @@
 
 <div class="col1">
 
-<h1>Character Generator {{#if new}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/if}}</h1>
+<h1>Character Generator {{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}</h1>
 
 {{!-- Column 1a --}}
 <div class="col1a">
@@ -14,8 +14,8 @@
 			<span></span>
 		</div>
 		<div class="content small-style">
-			<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled new}}> Level 0
-			<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled new}}> Level 1
+			<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled editing}}> Level 0
+			<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled editing}}> Level 1
 		</div>
 	</div>
 
@@ -23,14 +23,14 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.system.stats" >Stats</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-stats" data-action="cg-click"></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-stats" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
 		<div class="content medium-style">
 			<div class="statcontainer">
 			{{#each actor.system.abilities as |value key|}}
 			<div class="stats">
 				<label for="actor.system.abilities.{{key}}.base">{{key}}</label>
-				<select name="actor.system.abilities.{{key}}.base" id="stat" {{disabled ../new}}>
+				<select name="actor.system.abilities.{{key}}.base" id="stat" {{disabled ../editing}}>
 				{{#select value.base}}
 					{{#each ../statRange}}
 					<option value="{{this}}">{{this}}</option>
@@ -91,10 +91,10 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
 		<div class="content small-style">
-			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" {{disabled new}}/>
+			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" {{disabled editing}}/>
 		</div>
 	</div>
 
@@ -102,10 +102,10 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.system.ancestry" title="{{localize 'SHADOWDARK.sheet.player.ancestry.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
 		<div class="content small-style">
-			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry" {{disabled new}}>
+			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry" {{disabled editing}}>
 			{{#select actor.system.ancestry}}
 				<option value=""></option>
 				{{#each ancestries as |value key|}}
@@ -144,10 +144,10 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.system.background" title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.background.label'}}</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-background" data-action='cg-click'></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-background" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
 		<div class="content small-style">
-			<select name="actor.system.background" id="background" {{disabled new}}>
+			<select name="actor.system.background" id="background" {{disabled editing}}>
 			{{#select actor.system.background}}
 				<option value=""></option>
 				{{#each backgrounds as |value key|}}
@@ -162,10 +162,10 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-alignment" data-action='cg-click'></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-alignment" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
 		<div class="content small-style">
-			<select name="actor.system.alignment" {{disabled new}}>
+			<select name="actor.system.alignment" {{disabled editing}}>
 				{{selectOptions alignments selected=actor.system.alignment localize=false}}
 			</select>
 		</div>
@@ -175,10 +175,10 @@
 	<div class="box-style">
 		<div class="header">
 			<label for="actor.system.deity" title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.deity.label'}}</label>
-			<span>{{#if new}}<a class="fas fa-dice" name="randomize-deity" data-action='cg-click'></a>{{/if}}</span>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-deity" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
 		<div class="content small-style">
-			<select name="actor.system.deity" id="deity" {{disabled new}}>
+			<select name="actor.system.deity" id="deity" {{disabled editing}}>
 			{{#select actor.system.deity}}
 				<option value=""></option>
 				{{#each deities as |value key|}}
@@ -196,10 +196,10 @@
 <div class="col2">
 {{> cg-details}}
 </div>
-{{#if new}}
+{{#unless editing}}
 	<button type="button" data-action="create-character">Create Character</button>
-{{/if}}
-{{#unless new}}
-	<button type="button" data-action="update-character">Update Character</button>
 {{/unless}}
+{{#if editing}}
+	<button type="button" data-action="update-character">Update Character</button>
+{{/if}}
 </form>

@@ -2,10 +2,6 @@ Handlebars.registerHelper("remove-p-tag", str1 => {
 	return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 });
 
-Handlebars.registerHelper("disabled", x => {
-	return x ? "" : "disabled";
-});
-
 class loadingDialog extends Dialog {
 	constructor() {
 		let data = {
@@ -39,7 +35,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.class = null;
 
 		this.formData = {};
-		this.formData.new = true;
+		this.formData.editing = false;
 		this.formData.level0 = true;
 		this.formData.level0Class = {};
 		this.formData.classHP = "1";
@@ -131,7 +127,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.loadingDialog = new loadingDialog();
 
 		if (actorUid) {
-			this.formData.new = false;
+			this.formData.editing = true;
 			this.actorUid = actorUid;
 		}
 
@@ -219,7 +215,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// if class data was changed, load new data and roll hp
 			case "actor.system.class":
 				await this._loadClass(event.target.value);
-				this._randomizeHP();
 				break;
 
 			// if ancestry data was changed, load new data
@@ -239,6 +234,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 			case "level0":
 				if (this.formData.level0) {
+					this.formData.actor.system.class = this.formData.level0Class.uuid;
 					this._loadClass(this.formData.level0Class.uuid);
 				}
 				break;
@@ -304,10 +300,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 				}
 			});
 
-			if (!this.formData.new) {
+			// load info for an exiting actor
+			if (this.formData.editing) {
 
 				this.formData.actor = await game.actors.get(this.actorUid).toObject();
-				this.formData.new = false;
+				this.formData.editing = true;
 				this.formData.level0 = false;
 				this.formData.actor.system.class = "";
 				await this._loadAncestry(this.formData.actor.system.ancestry, true);
@@ -389,11 +386,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			await this._randomizeName();
 		}
 
-		// Roll HP
-		if (!this.formData.level0 && (eventStr === "randomize-hp")) {
-			this._randomizeHP();
-		}
-
 		// Roll starting gold
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
 			let startingGold = this._roll("2d6")*5;
@@ -459,7 +451,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		else {
 			this.formData.classHP = "1";
 		}
-		this._randomizeHP();
 
 		// get armor details
 		let armorData = [];
@@ -703,11 +694,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 	}
 
-	_randomizeHP() {
-		const rollValue = this._roll(this.formData.classHP);
-		this.formData.actor.system.attributes.hp.base = rollValue;
-	}
-
 	_randomizeGear() {
 		this.formData.gearSelected = [];
 		let tempGearTable = [...this.gearTable];
@@ -875,7 +861,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				this.formData.actor,
 				allItems,
 				game.userId,
-				this.level0
+				this.formData.level0
 			);
 		}
 		else {
@@ -885,11 +871,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 					characterData: this.formData.actor,
 					characterItems: allItems,
 					userId: game.userId,
-					level0: this.level0,
+					level0: this.formData.level0,
 				},
 			});
 		}
-
 
 		this.close();
 	}
