@@ -88,6 +88,11 @@ export default class LevelUpSD extends FormApplication {
 		);
 	}
 
+	/** @inheritdoc */
+	_canDragDrop() {
+		return true;
+	}
+
 	/** @override */
 	async getData(options) {
 		if (this.firstrun) {
