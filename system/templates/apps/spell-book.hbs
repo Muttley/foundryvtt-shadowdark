@@ -1,30 +1,35 @@
 <form class="spell-book" autocomplete="off">
-	<h1>{{this.class.name}} Spell Book</h1>
-	<div class="item-list">
+	<h2>{{class.name}} {{localize "SHADOWDARK.sheet.player.tab.spells"}}</h2>
 <table>
 <tbody>
 {{#each spellList}}
 	<tr>
-	<td>
-		Tier {{@key}} Spells
-	</td>
+	<th colspan="3">
+		{{localize "SHADOWDARK.item.spell_tier"}}
+		{{@key}}
+		{{localize "SHADOWDARK.sheet.player.tab.spells"}}
+	</th>
 	</tr>
-	<tr class="item" data-item-id="{{this._id}}">
-	<td>
+	<tr>
+		<td><b>{{localize "SHADOWDARK.item.spell.label"}}</b></td>
+		<td><b>{{localize 'SHADOWDARK.item.spell_duration'}}</b></td>
+		<td><b>{{localize 'SHADOWDARK.item.spell_range'}}</b></td>
+	</tr>
 	{{#each .}}
-
-		{{#if (hasspell this.name)}}
-			<a class="content-link" data-uuid="{{this.uuid}}" draggable="false">{{this.name}}</a>
-		{{/if}}
-		{{#unless (hasspell this.name)}}
-			<a class="content-link" data-uuid="{{this.uuid}}" draggable="true">{{this.name}}</a>
-		{{/unless}}
-
-	{{/each}}
-	</td>
+	<tr class="item nameRow" data-key1="{{@../key}}" data-key2="{{@key}}" data-uuid="{{this.uuid}}" data-action="show-description" draggable="true">
+		<td class="flex3">
+			<div class="item-image" style="background-image: url({{this.img}})"></div>
+			<a>{{this.name}}</a>
+			{{#if (hasspell this.name)}}<span style="font-size:0.75em">[{{localize "SHADOWDARK.apps.spell-book.known"}}]</span>{{/if}}
+		</td>
+		<td class="flex0">{{getSpellDuration
+					this.system.duration.type
+					this.system.duration.value
+		}}</td>
+		<td class="flex0">{{fromConfig "SPELL_RANGES" this.system.range}}</td>
 	</tr>
+	{{/each}}
 {{/each}}
 </tbody>
 </table>
-</div>
 </form>

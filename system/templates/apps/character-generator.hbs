@@ -2,7 +2,7 @@
 
 <div class="col1">
 
-<h1>Character Generator {{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}</h1>
+<h1>{{localize "SHADOWDARK.apps.character-generator.title"}} {{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}</h1>
 
 {{!-- Column 1a --}}
 <div class="col1a">
@@ -10,19 +10,19 @@
 	{{!-- level type select --}}
 	<div class="box-style">
 		<div class="header">
-			<label for="level0" >Type</label>
+			<label for="level0" >{{localize "SHADOWDARK.apps.character-generator.type"}}</label>
 			<span></span>
 		</div>
 		<div class="content small-style">
-			<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled editing}}> Level 0
-			<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled editing}}> Level 1
+			<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled editing}}> {{localize "SHADOWDARK.talent.class.level"}} 0
+			<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled editing}}> {{localize "SHADOWDARK.talent.class.level"}} 1
 		</div>
 	</div>
 
 	{{!-- Stats --}}
 	<div class="box-style">
 		<div class="header">
-			<label for="actor.system.stats" >Stats</label>
+			<label for="actor.system.stats" >{{localize "SHADOWDARK.apps.character-generator.stats"}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-stats" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
 		<div class="content medium-style">
@@ -60,12 +60,12 @@
 	{{#unless level0}}
 	<div class="box-style">
 		<div class="header">
-			<label for="actor.system.coins.gp">Starting Gold</label>
+			<label for="actor.system.coins.gp">{{localize "SHADOWDARK.apps.character-generator.starting_gold"}}</label>
 			<span><a class="fas fa-dice" name="randomize-gold" data-action="cg-click"></a></span>
 		</div>
 		<div class="content small-style">
 			<input type="number" value="{{actor.system.coins.gp}}" name="actor.system.coins.gp" style="width:2em;"/>
-			gp
+			{{localize "SHADOWDARK.coins.gp"}}
 		</div>
 	</div>
 	{{/unless}}
@@ -74,7 +74,7 @@
 	{{#if level0}}
 	<div class="box-style">
 		<div class="header">
-			<label>Starting Gear</label>
+			<label>{{localize "SHADOWDARK.apps.character-generator.starting_gear"}}</label>
 			<span><a class="fas fa-dice" name="randomize-gear" data-action="cg-click"></a></span>
 		</div>
 		<div class="content small-style">
@@ -197,9 +197,9 @@
 {{> cg-details}}
 </div>
 {{#unless editing}}
-	<button type="button" data-action="create-character">Create Character</button>
+	<button type="button" data-action="create-character">{{localize "SHADOWDARK.apps.character-generator.create_character"}}</button>
 {{/unless}}
 {{#if editing}}
-	<button type="button" data-action="update-character">Update Character</button>
+	<button type="button" data-action="update-character">{{localize "SHADOWDARK.apps.character-generator.update_character"}}</button>
 {{/if}}
 </form>

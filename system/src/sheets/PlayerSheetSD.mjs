@@ -95,6 +95,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onlevelUp(event)
 		);
 
+		html.find("[data-action='open-spellbook']").click(
+			event => this._onOpenSpellBook(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -139,8 +143,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
-		context.levelUp = (context.system.level.xp >= context.xpNextLevel)
-			&& context.system.level.xp > 0;
+		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
 
 		await this.actor.updateArmorClass();
 		context.armorClass = this.actor.armorClass;
@@ -440,6 +443,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 
 		this.actor.learnSpell(itemId);
+	}
+
+	async _onOpenSpellBook(event) {
+		let spellbook = new shadowdark.apps.SpellBookSD(
+			this.actor.system.class,
+			this.actor.id
+		);
+		spellbook.render(true);
 	}
 
 	async _onlevelUp(event) {

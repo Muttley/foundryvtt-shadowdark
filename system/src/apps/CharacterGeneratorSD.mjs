@@ -818,12 +818,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _createCharacter() {
 
-		const allItems = [
+		const allItems = [];
+
+		// load all talents and promp player to choose effects
+		const allTalents = [
 			...this.formData.ancestryTalents.fixed,
 			...this.formData.ancestryTalents.selection,
 			...this.formData.classTalents.fixed,
 			...this.formData.classTalents.selection,
 		];
+
+		for (const talentItem of allTalents) {
+			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
+		}
 
 		// Check for Name
 		if (this.formData.actor.name === "" ) {
@@ -853,6 +860,17 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (hpConMod < 1) hpConMod = 1;
 		this.formData.actor.system.attributes.hp.base = hpConMod;
 		this.formData.actor.system.attributes.hp.value = hpConMod;
+
+		// add auditlog data
+		const itemNames = [];
+		allItems.forEach(x => itemNames.push(x.name));
+		let auditLog = {};
+		auditLog[0] = {
+			startingStats: this.formData.actor.system.abilities,
+			baseHP: this.formData.actor.system.attributes.hp.base,
+			itemsGained: itemNames,
+		};
+		this.formData.actor.auditLog = auditLog;
 
 		// Create the new player character
 		//

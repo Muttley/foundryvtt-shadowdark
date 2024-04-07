@@ -37,7 +37,7 @@ export default class LevelUpSD extends FormApplication {
 			resizable: false,
 			closeOnSubmit: true,
 			submitOnChange: false,
-			dragDrop: [{dragSelector: ".item[draggable=true]"}],
+			dragDrop: [{dropSelector: ".items"}],
 		});
 	}
 
@@ -308,16 +308,11 @@ export default class LevelUpSD extends FormApplication {
 			}
 		}
 
-		this.data.actor.update({
-			"system.level.value": this.data.targetLevel,
-			"system.level.xp": newXP,
-			"system.attributes.hp.base": newHP,
-		});
-
 		let allItems = [
 			...this.data.talents,
 		];
 
+		// load all spells into allItems
 		for (let i = 1; i <= 5; i++) {
 			allItems = [
 				...allItems,
@@ -325,8 +320,29 @@ export default class LevelUpSD extends FormApplication {
 			];
 		}
 
+		// load audit log, check for valid data, add new entry
+		let auditLog = this.data.actor?.auditlog ?? {};
+		if (auditLog.constructor !== Object) auditLog = {};
+
+		const itemNames = [];
+		allItems.forEach(x => itemNames.push(x.name));
+		auditLog[this.data.targetLevel] = {
+			baseHP: newHP,
+			itemsGained: itemNames,
+		};
+
+		// update values on actor
+		this.data.actor.update({
+			"system.level.value": this.data.targetLevel,
+			"system.level.xp": newXP,
+			"system.attributes.hp.base": newHP,
+			"auditLog": auditLog,
+		});
+
+		// add talents and spells to actor
 		this.data.actor.createEmbeddedDocuments("Item", allItems);
 
+		// show actor sheet
 		this.data.actor.sheet.render(true);
 		this.close();
 	}

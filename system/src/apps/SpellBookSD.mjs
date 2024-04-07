@@ -13,17 +13,18 @@ export default class SpellBookSD extends FormApplication {
 		if (characterUid !== "") {
 			let actorObj = game.actors.get(characterUid);
 			hasSpells = actorObj.items.filter(d => (d.type === "Spell")).map(x => x.name);
-			// hasSpells = Object.fromEntries(this.hasSpells.map(x => [x.name, true]));
 		}
 	}
 
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
-			width: 350,
+			width: 450,
+			left: 100,
 			resizable: true,
 			closeOnSubmit: true,
 			submitOnChange: false,
+			dragDrop: [{dragSelector: ".item[draggable=true]"}],
 		});
 	}
 
@@ -42,7 +43,7 @@ export default class SpellBookSD extends FormApplication {
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find("[data-action='toggle']").click(
+		html.find("[data-action='show-description']").click(
 			event => this._onToggle(event)
 		);
 
@@ -51,10 +52,8 @@ export default class SpellBookSD extends FormApplication {
 	/** @override */
 	async getData() {
 
-		let data = {
+		this.data = {
 			class: await fromUuid(this.classID),
-			spellList: [],
-			hasSpells: this.hasSpells,
 		};
 
 		// get source filter settings
@@ -86,13 +85,76 @@ export default class SpellBookSD extends FormApplication {
 			(a, b) => a.name < b.name ? -1 : 1);
 
 		// group spells by tier
-		data.spellList = Object.groupBy(sortedSpells, ({system}) => system.tier);
-		return data;
+		this.data.spellList = Object.groupBy(sortedSpells, ({system}) => system.tier);
+
+		return this.data;
 	}
 
 	async _onToggle(event) {
-		const spellObj = this.spells.find(x => x ===$(event.currentTarget).data("spell-id"));
-		console.log(spellObj);
+		event.preventDefault();
+
+		const tableRow = $(event.currentTarget);
+		const key1 = event.currentTarget.dataset.key1;
+		const key2 = event.currentTarget.dataset.key2;
+
+		const spellObj = this.data.spellList[key1][key2];
+
+		if (tableRow.hasClass("expanded")) {
+			const detailsRow = tableRow.next(".item-details");
+			const detailsDiv = detailsRow.find("td > .item-details__slidedown");
+			detailsDiv.slideUp(200, () => detailsRow.remove());
+		}
+		else {
+			const description = this._formatDescription(spellObj.system.description);
+
+			const detailsRow = document.createElement("tr");
+			detailsRow.classList.add("item-details");
+
+			const detailsData = document.createElement("td");
+			detailsData.setAttribute("colspan", 3);
+
+			const detailsDiv = document.createElement("div");
+			detailsDiv.setAttribute("style", "display: none");
+
+			detailsDiv.insertAdjacentHTML("afterbegin", description);
+			detailsDiv.classList.add("item-details__slidedown");
+
+			detailsData.appendChild(detailsDiv);
+			detailsRow.appendChild(detailsData);
+
+			tableRow.after(detailsRow);
+
+			$(detailsDiv).slideDown(200);
+		}
+
+		tableRow.toggleClass("expanded");
+
+	}
+
+	async _onDragStart(event) {
+		// Add item type and uuid of the spell to the drag event data
+		// Needed as formApps don't seem to have the same default event handlers as sheets
+		if (event.currentTarget.dataset.uuid) {
+			event.dataTransfer.setData("text/plain", JSON.stringify(
+				{
+					type: "Item",
+					uuid: event.currentTarget.dataset.uuid,
+				})
+			);
+		}
+		super._onDragStart(event);
+	}
+
+	_formatDescription(text) {
+
+		const description = TextEditor.enrichHTML(
+			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
+			{
+				async: false,
+				cache: false,
+			}
+		);
+		return description;
 	}
 
 }

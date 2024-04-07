@@ -1,11 +1,11 @@
 <form class="level-up" autocomplete="off">
 	<h1>{{actor.name}}</h1>
-	<h3>Leveling up to level {{targetLevel}}</h3>
+	<h3>{{localize "SHADOWDARK.apps.level-up.leveling_to"}} {{targetLevel}}</h3>
 	<p></p>
 	{{!-- Hit Points --}}
 	<div class="box-style">
 		<div class="header">
-			<label>Hit Points</label>
+			<label>{{localize "SHADOWDARK.apps.level-up.hit_points"}}</label>
 			<span>{{class.system.hitPoints}}
 				{{#if rolls.hp}}
 					<a class="fas fa-dice" data-action="re-roll-hp"></a>
@@ -17,7 +17,7 @@
 				<h2>{{rolls.hp}}</h2>
 			{{/if}}
 			{{#unless rolls.hp}}
-				<button type="button" data-action="roll-hp">Roll HP</button>
+				<button type="button" data-action="roll-hp">{{localize "SHADOWDARK.sheet.general.roll_hp"}}</button>
 			{{/unless}}
 		</div>
 	</div>
@@ -25,20 +25,20 @@
 	{{!-- Talents --}}
 	<div class="box-style">
 		<div class="header">
-			<label>Talents</label>
+			<label>{{localize "SHADOWDARK.class.talents.label"}}</label>
 			<span><a class="fas fa-table-list" data-action="view-talent-table"></a></span>
 		</div>
 		<div class="content talents">
 			{{#unless talentGained}}
-				No talents gained at this level
+				{{localize "SHADOWDARK.apps.level-up.notalent"}}
 			{{/unless}}
 			{{#if talentGained}}
 				{{#unless rolls.talent}}
-					<button type="button" data-action="roll-talent">Roll talent</button>
+					<button type="button" data-action="roll-talent">{{localize "SHADOWDARK.apps.level-up.roll_talent"}}</button>
 				{{/unless}}
 				{{#if rolls.talent}}
-					<fieldset>
-					{{#unless talents}}Drag and Drop Talents Here{{/unless}}
+					<fieldset class="items">
+					{{#unless talents}}{{localize "SHADOWDARK.apps.level-up.dragdrop"}}{{/unless}}
 					{{#each talents}}
 					<div style="white-space: nowrap;">
 						<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-index="{{@index}}"></a>
@@ -55,7 +55,7 @@
 	{{#if isSpellCaster}}
 	<div class="box-style">
 		<div class="header">
-			<label>Spells</label>
+			<label>{{localize "SHADOWDARK.sheet.player.spells"}}</label>
 			<span><a class="fas fa-book" data-action="open-spellbook"></a></span>
 		</div>
 		<div class="content spells">
@@ -65,13 +65,13 @@
 						<span>{{this.name}}</span>
 						<div class="flex3">
 							{{#each (addEmptySlots this.objects this.max)}}
-							<fieldset >
+							<fieldset class="items">
 								{{#if this}}
 								<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
 								<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
 								{{/if}}
 								{{#unless this}}
-									Drag and Drog Here
+									{{localize "SHADOWDARK.apps.level-up.dragdrop"}}
 								{{/unless}}
 							</fieldset>
 							{{/each}}
@@ -82,5 +82,5 @@
 		</div>
 	</div>
 	{{/if}}
-	<button class="level-up-button" type="button" data-action="finalize-level-up">Level Up!</button>
+	<button class="level-up-button" type="button" data-action="finalize-level-up">{{localize "SHADOWDARK.apps.level-up.level_up"}}</button>
 </form>
