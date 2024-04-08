@@ -15,12 +15,17 @@
 		{{#each features as |feature|}}
 			<li>
 				<a
-					class="item"
+					class="item npc-feature"
 					data-action="item-use-ability"
 					data-item-id="{{feature.itemId}}"
 				>
-					{{{feature.display}}}
+				<b>{{feature.name}}
+				<i class="fas fa-comment fa-lg"></i>
+				.
+				</b>
+
 				</a>
+				{{{feature.description}}}
 			</li>
 		{{/each}}
 	</ol>
