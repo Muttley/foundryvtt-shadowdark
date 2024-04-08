@@ -1246,7 +1246,6 @@ export default class ActorSD extends Actor {
 					newArmorClass += baseArmorClass;
 				}
 
-				// newArmorClass += bestAttributeBonus;
 				newArmorClass += armorMasteryBonus;
 				newArmorClass += shieldBonus;
 			}
