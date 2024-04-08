@@ -1,0 +1,93 @@
+{
+	"_id": "Ox27sOstCqZfKIBI",
+	"_key": "!items!Ox27sOstCqZfKIBI",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Pit Fighter",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": true,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.owING8sYmiI43Od0",
+		"description": "<p>Blood-soaked warriors circling each other in a roaring arena, scarred desert bandits dueling for the right to lead their gang, or brash tavern brawlers who never turn down a challenge.</p>",
+		"hitPoints": "d8",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"spellcasting": {
+			"ability": "",
+			"baseDifficulty": 10,
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.bjZGm9FtinFh2ltV",
+			"Compendium.shadowdark.talents.Item.bOzxndFquBDYnQRz",
+			"Compendium.shadowdark.talents.Item.oB9wBu7jggoRpHcK",
+			"Compendium.shadowdark.talents.Item.T0wlSdIulbrDOKoZ"
+		],
+		"titles": [
+			{
+				"chaotic": "Ruffian",
+				"from": 1,
+				"lawful": "Rookie",
+				"neutral": "Underdog",
+				"to": 2
+			},
+			{
+				"chaotic": "Brawler",
+				"from": 3,
+				"lawful": "Gladiator",
+				"neutral": "Dark Horse",
+				"to": 4
+			},
+			{
+				"chaotic": "Heel",
+				"from": 5,
+				"lawful": "Hero",
+				"neutral": "Wild Card",
+				"to": 6
+			},
+			{
+				"chaotic": "Villain",
+				"from": 7,
+				"lawful": "Champion",
+				"neutral": "Victor",
+				"to": 8
+			},
+			{
+				"chaotic": "Legend",
+				"from": 9,
+				"lawful": "Legend",
+				"neutral": "Legend",
+				"to": 10
+			}
+		],
+		"weapons": [
+		]
+	},
+	"type": "Class"
+}

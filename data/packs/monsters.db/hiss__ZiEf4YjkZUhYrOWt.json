@@ -1,0 +1,24 @@
+{
+	"_id": "ZiEf4YjkZUhYrOWt",
+	"_key": "!actors.items!wgHzqAqBNsutUALU.ZiEf4YjkZUhYrOWt",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Hiss",
+	"system": {
+		"dc": 12,
+		"description": "<p>End one spell within far.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

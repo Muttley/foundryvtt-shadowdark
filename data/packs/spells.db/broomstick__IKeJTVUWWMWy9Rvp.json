@@ -1,0 +1,28 @@
+{
+	"_id": "IKeJTVUWWMWy9Rvp",
+	"_key": "!items!IKeJTVUWWMWy9Rvp",
+	"effects": [
+	],
+	"folder": "sE2Ooa1HgAMXmCra",
+	"img": "icons/tools/hand/broom-straw-brown.webp",
+	"name": "Broomstick",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You conjure a flying broomstick in your hand. </p><p></p><p>The broomstick's rider can fly a near distance each round and can hover in place.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

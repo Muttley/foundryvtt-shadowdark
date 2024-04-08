@@ -1,0 +1,17 @@
+{
+	"_id": "1zlqcqxOlKhVoMe2",
+	"_key": "!actors.items!SeY0lvD3U4pr6mXD.1zlqcqxOlKhVoMe2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Phantoms",
+	"system": {
+		"description": "<p>1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits cloaker or illusions.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

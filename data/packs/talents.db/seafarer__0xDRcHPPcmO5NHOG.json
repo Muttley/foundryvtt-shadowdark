@@ -1,0 +1,19 @@
+{
+	"_id": "0xDRcHPPcmO5NHOG",
+	"_key": "!items!0xDRcHPPcmO5NHOG",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/environment/settlement/ship.webp",
+	"name": "Seafarer",
+	"system": {
+		"description": "<p>You have advantage on checks related to navigating and crewing boats.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

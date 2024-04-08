@@ -6,11 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"SXN0Zg4LwHgyNECi",
-		"cY8rmYgJZJzMYg4x",
-		"decpoSp0qogWhTIt",
-		"4ARCaXHh77Ub4sgq",
-		"jsODF6naHDkWY3BM"
+		"uvW1FyfhzdqLrLE3",
+		"TWdOYbma3cEXie6K",
+		"u9qn1teg8jFigpvm"
 	],
 	"name": "Cultist",
 	"prototypeToken": {
@@ -26,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -119,10 +117,10 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god.</em></p><p></p><p><strong>AC</strong> 14 (chainmail + shield), <strong>HP </strong>9, <strong>ATK</strong> 1 longsword +1 (1d8) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +0, <strong>I </strong>-1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> C, <strong>LV</strong> 2</p><p></p><p><strong>Fearless</strong>. Immune to morale checks.</p><p></p><p><strong>Deathtouch (WIS Spell)</strong>. DC 12. 2d4 damage to one creature within close.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "\n\t<p><i> A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14 (chainmail + shield), <strong>HP</strong> 9, <strong>ATK</strong> 1 longsword +1 (1d8) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Fearless</strong>. Immune to morale checks.</p><p></p><p><strong>Deathtouch (WIS Spell)</strong>. DC 12. 2d4 damage to one creature within close.</p><p></p>",
+		"spellcastingAbility": "wis",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 2
 	},
 	"type": "NPC"
 }

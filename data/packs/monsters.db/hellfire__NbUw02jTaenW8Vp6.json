@@ -1,0 +1,17 @@
+{
+	"_id": "NbUw02jTaenW8Vp6",
+	"_key": "!actors.items!ju93VWtuoi9BRX5F.NbUw02jTaenW8Vp6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Hellfire",
+	"system": {
+		"description": "<p>DC 18 DEX or [[/r 2d8]] damage per round until flames extinguished.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

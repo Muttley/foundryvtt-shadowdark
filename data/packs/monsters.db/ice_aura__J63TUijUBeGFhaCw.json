@@ -1,0 +1,17 @@
+{
+	"_id": "J63TUijUBeGFhaCw",
+	"_key": "!actors.items!pWIrU2mRsvTe17Nh.J63TUijUBeGFhaCw",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Ice Aura",
+	"system": {
+		"description": "<p>Enemies within near of rime walker DC 12 CON at start of turn or lose action.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

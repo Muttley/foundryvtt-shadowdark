@@ -1,0 +1,24 @@
+{
+	"_id": "tPJIWcQ8v5VtGOwO",
+	"_key": "!actors.items!SeY0lvD3U4pr6mXD.tPJIWcQ8v5VtGOwO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Screech",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Enemies within double near DC 15 WIS or DISADV on attacks and checks [[/r 1d4]] rounds.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

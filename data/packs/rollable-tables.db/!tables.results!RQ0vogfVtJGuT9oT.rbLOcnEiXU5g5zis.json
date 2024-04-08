@@ -1,15 +1,15 @@
 {
 	"_id": "rbLOcnEiXU5g5zis",
 	"_key": "!tables.results!RQ0vogfVtJGuT9oT.rbLOcnEiXU5g5zis",
-	"documentCollection": "shadowdark.talents",
-	"documentId": "aRY0hjpvzYpdRbfR",
+	"documentCollection": "Actor",
+	"documentId": null,
 	"drawn": false,
-	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"img": "icons/svg/d20-black.svg",
 	"range": [
 		3,
 		7
 	],
-	"text": "+2 to Intelligence",
-	"type": 2,
+	"text": "Choose 1",
+	"type": 0,
 	"weight": 1
 }

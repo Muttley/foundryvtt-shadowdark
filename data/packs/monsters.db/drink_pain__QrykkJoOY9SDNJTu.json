@@ -1,0 +1,25 @@
+{
+	"_id": "QrykkJoOY9SDNJTu",
+	"_key": "!actors.items!9q5O77FFFJ7pTjhL.QrykkJoOY9SDNJTu",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Drink Pain",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Near range. DC 12 CHA to deal [[/r 2d4]] damage to a creature; regain that many HP.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

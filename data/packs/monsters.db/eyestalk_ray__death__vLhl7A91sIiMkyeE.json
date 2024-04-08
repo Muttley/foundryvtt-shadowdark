@@ -1,0 +1,17 @@
+{
+	"_id": "vLhl7A91sIiMkyeE",
+	"_key": "!actors.items!hiZvVJPOJWtOXV4m.vLhl7A91sIiMkyeE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Eyestalk Ray: Death",
+	"system": {
+		"description": "<p>DC 15 CON or drop to 0 HP with a death timer of 1.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

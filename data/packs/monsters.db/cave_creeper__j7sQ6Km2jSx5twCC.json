@@ -6,9 +6,9 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"gnUvnCN25iosuxZh",
-		"gD3b4be6Z72Z0Wgl",
-		"IWKGdw3vbV7Sq9BW"
+		"rlU2agifQd6yqh2f",
+		"4etEMilNg4qMYN72",
+		"Ui40uFcfnFFkJ0fu"
 	],
 	"name": "Cave Creeper",
 	"prototypeToken": {
@@ -24,7 +24,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -116,8 +116,8 @@
 			"value": 4
 		},
 		"move": "near",
-		"moveNote": "Climb",
-		"notes": "<p><em>Chittering centipedes the size of horses with grasping tentacles.</em></p><p></p><p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 1 bite +3 (1d6) and 1 tentacles +3 (1d8 + toxin), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV </strong>4</p><p></p><p><strong>Toxin</strong>. DC 12 CON or paralyzed 1d4 rounds.</p>",
+		"moveNote": "climb",
+		"notes": "\n\t<p><i> Chittering, green centipedes the size of horses. Their grasping tentacles are coated in a paralytic venom. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 1 bite +3 (1d6) and 1 tentacles +3 (1d8 + toxin), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Toxin</strong>. DC 12 CON or paralyzed 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

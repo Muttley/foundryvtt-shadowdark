@@ -1,0 +1,27 @@
+{
+	"_id": "3U4gQZLbhYtkEcej",
+	"_key": "!items!3U4gQZLbhYtkEcej",
+	"effects": [
+	],
+	"folder": "JWPZqQ3Dk9n1iW1g",
+	"img": "icons/magic/death/skull-humanoid-worn-teal.webp",
+	"name": "Speak with Dead",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>A dead body you touch answers your questions in a distant, wheezing voice. </p><p></p><p>You can ask the dead body up to three yes or no questions (one at a time). The GM truthfully answers \"yes\" or \"no\" to each. </p><p></p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure, instead.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "6iJ6ETUAKC7DR0aT",
+	"_key": "!items!6iJ6ETUAKC7DR0aT",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/skills/melee/strike-sword-steel-yellow.webp",
+	"name": "Advantage on Melee Attacks",
+	"system": {
+		"description": "<p>1/day, gain advantage on melee attacks for 3 rounds. </p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

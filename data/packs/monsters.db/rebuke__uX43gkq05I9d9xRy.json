@@ -1,0 +1,23 @@
+{
+	"_id": "uX43gkq05I9d9xRy",
+	"_key": "!actors.items!vRn6zM7a0nrqSiY5.uX43gkq05I9d9xRy",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Rebuke",
+	"system": {
+		"dc": "13",
+		"description": "<p>Focus. Chaotic creatures cannot attack priest or come within near range for duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

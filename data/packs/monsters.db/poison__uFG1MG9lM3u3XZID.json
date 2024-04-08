@@ -1,0 +1,17 @@
+{
+	"_id": "uFG1MG9lM3u3XZID",
+	"_key": "!actors.items!qhy4sxYqEkl171L5.uFG1MG9lM3u3XZID",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 12 CON or fitful sleep for [[/r 1d4]] hours.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

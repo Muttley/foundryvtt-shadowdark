@@ -1,0 +1,125 @@
+{
+	"_id": "o1aBfxHFxYVHLTRn",
+	"_key": "!actors!o1aBfxHFxYVHLTRn",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"d7PVQFTZSWvLSkVL",
+		"LTgsv7LTEek2RVMT",
+		"WwLMNr3U6elmneIY",
+		"L3AAVpJ9yqTj1NG2",
+		"qEKwcHI7lPoZvp7R"
+	],
+	"name": "Efreeti",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 2,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Efreeti",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 2
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 3
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 15
+			},
+			"hp": {
+				"hd": 0,
+				"max": 43,
+				"value": 43
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 9
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Blood-red, towering humanoids formed of lava and ash. Short, black horns and snarling grins. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 43, <strong>ATK</strong> 3 scimitar +8 (2d10) or 2 fire bolt (far) +5 (2d6), <strong>MV</strong> near (fly), <strong>S</strong> +5, <strong>D</strong> +2, <strong>C</strong> +3, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 9</p><p></p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources. Fire immune.</p><p></p><p><strong>Wall of Flame</strong>. 1/day, 20' high curtain of fire, double near length. Touching it deals 4d8 damage. Lasts 2d4 rounds.</p><p></p><p><strong>Wish</strong>. Cast wish once a week for a mortal, no spellcasting check.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

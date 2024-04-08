@@ -1,0 +1,20 @@
+{
+	"_id": "4pcEgD8oLA5euovK",
+	"_key": "!items!4pcEgD8oLA5euovK",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+	"name": "Patron",
+	"system": {
+		"description": "<p>Choose a patron to serve (see pg. 17). Your patron is the source of your supernatural gifts. If your patron is displeased with you, it can withhold its gifts. You lose any talents granted by your Patron Boons during this time.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

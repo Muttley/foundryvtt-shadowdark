@@ -1,0 +1,24 @@
+{
+	"_id": "2nN90QQSsajBr2XK",
+	"_key": "!actors.items!o5xhxniboMbTCMLk.2nN90QQSsajBr2XK",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Abjure",
+	"system": {
+		"dc": 13,
+		"description": "<p>Self. End any hostile magical effects affecting Rathgamnon.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

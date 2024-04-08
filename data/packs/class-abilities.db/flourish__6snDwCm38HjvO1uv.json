@@ -1,0 +1,28 @@
+{
+	"_id": "6snDwCm38HjvO1uv",
+	"_key": "!items!6snDwCm38HjvO1uv",
+	"effects": [
+	],
+	"folder": "ntYpdY6HvWuXyrsm",
+	"img": "icons/skills/melee/sword-twirl-orange.webp",
+	"name": "Flourish",
+	"system": {
+		"ability": "",
+		"dc": null,
+		"description": "<p><span>3/day, regain [[/roll 1d6]] hit points when you hit an enemy with a melee attack.</span></p>",
+		"group": "Flourish",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

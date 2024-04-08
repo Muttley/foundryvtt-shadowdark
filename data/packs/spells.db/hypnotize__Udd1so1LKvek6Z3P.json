@@ -1,0 +1,27 @@
+{
+	"_id": "Udd1so1LKvek6Z3P",
+	"_key": "!items!Udd1so1LKvek6Z3P",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+	"name": "Hypnotize",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>One creature of LV 3 or less that can see you is rendered stupefied. </p><p></p><p>Breaking the creature's line of sight to you allows it to make a DC 15 Charisma check. On a success, the spell ends.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

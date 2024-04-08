@@ -1,0 +1,24 @@
+{
+	"_id": "W3X61rTRLqMcyQvA",
+	"_key": "!actors.items!yMyZ18conSZhwlpg.W3X61rTRLqMcyQvA",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Hellfrost",
+	"system": {
+		"dc": 13,
+		"description": "<p>All within near-sized cube extending from oni [[/r 3d6]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

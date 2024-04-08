@@ -1,0 +1,27 @@
+{
+	"_id": "z3IMRW7fOvhdBCKH",
+	"_key": "!items!z3IMRW7fOvhdBCKH",
+	"effects": [
+	],
+	"folder": "GjEoxJ1IlFDjGKIa",
+	"img": "icons/equipment/back/cloak-layered-tattered-purple.webp",
+	"name": "Cloak of Night",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>Your wrap yourself in a swirling cloak of shadows. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check). </p><p></p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "8"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

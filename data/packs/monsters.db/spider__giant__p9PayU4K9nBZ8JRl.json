@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"WV9T1ZeCx8ST8T9A",
-		"5xj31nwOvZ6V362V"
+		"TyT2VPgFIM9WCdIV",
+		"qfIjIAkMmlWRYU0P"
 	],
 	"name": "Spider, Giant",
 	"prototypeToken": {
@@ -23,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -52,7 +52,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
-		"name": "Spider, Giant",
+		"name": "Giant Spider",
 		"prependAdjective": false,
 		"randomImg": false,
 		"rotation": 0,
@@ -115,8 +115,8 @@
 			"value": 3
 		},
 		"move": "near",
-		"moveNote": "Climb",
-		"notes": "<p><span class=\"fontstyle0\"><em>Bulbous abdomen and eight, spindly legs. Ambush hunter.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">13, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">13, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 bite +3 (1d4 + poison), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison.</strong> </span><span class=\"fontstyle3\">DC 12 CON or paralyzed 1d4 hours.</span> </p>",
+		"moveNote": "climb",
+		"notes": "\n\t<p><i> Bulbous abdomen and eight, spindly legs. Dwells high in trees or caves and ambushes prey, capturing them to eat later. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 13, <strong>ATK</strong> 1 bite +3 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Poison</strong>. DC 12 CON or paralyzed 1d4 hours.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -1,0 +1,25 @@
+{
+	"_id": "rjJAPnSe6xmTRfin",
+	"_key": "!actors.items!ZGILlry1pBhE4iDh.rjJAPnSe6xmTRfin",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charge",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Move up to double near in straight line and make 1 horn attack. If hit, x3 damage.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "gJDAfJhKIXyvlI6B",
+	"_key": "!items!gJDAfJhKIXyvlI6B",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/life/heart-area-circle-red-green.webp",
+	"name": "Increased Flourish Heal",
+	"system": {
+		"bonuses": {
+			"weaponMastery": "REPLACEME"
+		},
+		"description": "<p>Increase the HP you gain from Flourish by [[/r 1d6]]</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talent": {
+			"weaponMastery": null,
+			"weaponMasteryTypes": null
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

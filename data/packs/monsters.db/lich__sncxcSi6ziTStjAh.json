@@ -1,0 +1,129 @@
+{
+	"_id": "sncxcSi6ziTStjAh",
+	"_key": "!actors!sncxcSi6ziTStjAh",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"w5Ili1AOm8hEmX5A",
+		"Ol903IdgH0o1nxT4",
+		"SdIBjE0pc22xouBV",
+		"8UNij07oLyQBRvyL",
+		"cB3IYcu5Ga7GNNps",
+		"J3Bw7kmCE9ugjIDJ",
+		"p1SKQbB0WoP9C1ye",
+		"CG8OMH79DZarSIUG",
+		"Nf18s6QPQRsWfcXa"
+	],
+	"name": "Lich",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Lich",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 1
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 16
+			},
+			"hp": {
+				"hd": 0,
+				"max": 62,
+				"value": 62
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 13
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> A wizard who has completed a necromantic ritual to become a mighty, undead sorcerer. Its withered body is draped in moldering, silk robes, and red marshlights burn in its eyes. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 62, <strong>ATK</strong> 2 touch +6 (2d8 + paralysis) and 2 spell +7, <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 13</p><p></p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p></p><p><strong>Phylactery</strong>. Can't be killed while spirit vessel (an object) is intact.</p><p></p><p><strong>Paralysis</strong>. DC 15 CON or paralyzed 1d4 rounds.</p><p></p><p><strong>Flight (INT Spell)</strong>. Self. DC 13. Fly double near for 5 rounds.</p><p></p><p><strong>Null (INT Spell)</strong>. Self. DC 14. Hostile spells targeting lich are DC 18 to cast. Lasts 1d4 rounds.</p><p></p><p><strong>Shadow Leap (INT Spell)</strong>. Self. DC 14. Teleport up to 100 miles.</p><p></p><p><strong>Sigil of Doom (INT Spell)</strong>. DC 15. One target of LV 9 or less within near DC 15 CON or go to 0 HP.</p><p></p><p><strong>Wither (INT Spell)</strong>. DC 14. 4d8 damage to enemies within a near-sized cube centered on lich.</p><p></p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": 2,
+		"spellcastingBonus": 7
+	},
+	"type": "NPC"
+}

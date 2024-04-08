@@ -1,0 +1,17 @@
+{
+	"_id": "bB2aJKRAbznn87ZN",
+	"_key": "!actors.items!NTRHmnsw7poR4rZ9.bB2aJKRAbznn87ZN",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Reflective Carapace",
+	"system": {
+		"description": "<p>Immune to rays, blasts, or bolts of energy. 1:6 chance these are reflected back at their originator.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "8r1TNTc5kE1agSyg",
+	"_key": "!actors.items!manaoose71vhAWCT.8r1TNTc5kE1agSyg",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Blast",
+	"system": {
+		"dc": 12,
+		"description": "<p>Far, one target. [[/r 2d6]] damage.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

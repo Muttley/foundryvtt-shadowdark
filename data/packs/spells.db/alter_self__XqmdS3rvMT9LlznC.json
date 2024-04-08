@@ -1,0 +1,28 @@
+{
+	"_id": "XqmdS3rvMT9LlznC",
+	"_key": "!items!XqmdS3rvMT9LlznC",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/magic/unholy/hand-fire-skeleton-pink.webp",
+	"name": "Alter Self",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You magically change your physical form, gaining one feature that modifies your existing anatomy.</p><p></p><p>For example, you can grow functional gills on your neck or bear claws on your fingers. This spell can’t grow wings or limbs.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.f2RsbovyTLEZvxuF]{Spell Effect: Alter Self}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

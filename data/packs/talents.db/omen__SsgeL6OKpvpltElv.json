@@ -1,0 +1,19 @@
+{
+	"_id": "SsgeL6OKpvpltElv",
+	"_key": "!items!SsgeL6OKpvpltElv",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/magic/perception/orb-eye-scrying.webp",
+	"name": "Omen",
+	"system": {
+		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.pRO1kFMnFkkcYOgC]</p><p></p><p>3/day, you can make a DC 9 WIS check. On a success, gain a luck token (you can't have more than one luck token at a time).</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "OcB5595AAIzchHfl",
+	"_key": "!items!OcB5595AAIzchHfl",
+	"effects": [
+	],
+	"folder": "lvvfGVYh4oLZsbpP",
+	"img": "icons/magic/control/energy-stream-link-large-white.webp",
+	"name": "Cast Out",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You turn a creature aside, throwing it out of your presence. </p><p></p><p>Choose a creature you can see. For the spell's duration, that creature can't come within near range of you. It can still attack you from outside of near range.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

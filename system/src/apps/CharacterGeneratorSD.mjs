@@ -296,6 +296,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return this.formData;
 	}
 
+	diceSound() {
+		const sounds = [CONFIG.sounds.dice];
+		const src = sounds[0];
+		AudioHelper.play({src});
+	}
+
 	async _randomizeHandler(event) {
 		const eventStr = event.target.name;
 		let tempInt = 0;
@@ -373,6 +379,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (eventStr === "randomize-gear" || eventStr === "randomize-all") {
 			this._randomizeGear();
 		}
+
+		this.diceSound();
 
 		// update all changes
 		this.render();
