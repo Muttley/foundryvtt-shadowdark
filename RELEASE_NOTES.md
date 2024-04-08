@@ -10,6 +10,7 @@
 * [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
 * [#713] Added dice sounds to Character Builder
 * [#725] Update token mapping for new core monsters.
+* [#728] Spell items can now be dragged onto NPC sheets to add that spell to the NPC's spell list.
 
 ---
 
