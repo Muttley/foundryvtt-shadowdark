@@ -1212,7 +1212,6 @@ export default class ActorSD extends Actor {
 			if (equippedArmor.length > 0) {
 				newArmorClass = 0;
 
-				let bestAttributeBonus = 0;
 				let baseArmorClassApplied = false;
 
 				for (const armor of equippedArmor) {
@@ -1234,10 +1233,7 @@ export default class ActorSD extends Actor {
 					const attribute = armor.system.ac.attribute;
 					if (attribute) {
 						const attributeBonus = this.abilityModifier(attribute);
-						bestAttributeBonus =
-							attributeBonus > bestAttributeBonus
-								? attributeBonus
-								: bestAttributeBonus;
+						newArmorClass += attributeBonus;
 					}
 				}
 
@@ -1250,7 +1246,7 @@ export default class ActorSD extends Actor {
 					newArmorClass += baseArmorClass;
 				}
 
-				newArmorClass += bestAttributeBonus;
+				// newArmorClass += bestAttributeBonus;
 				newArmorClass += armorMasteryBonus;
 				newArmorClass += shieldBonus;
 			}
