@@ -13,6 +13,7 @@
 * [#725] Update token mapping for new core monsters.
 * [#728] Spell items can now be dragged onto NPC sheets to add that spell to the NPC's spell list.
 * [#731] Added 1d2 as an option for weapon damage.
+* [#733] Negative Dex modifier not correctly applied to characters with armor
 * [#736] Added random names table for Kobold ancestry
 * [#738] Ancestries can now be given a weight to effect roll chance in the Character Generator. Ancestries from the core rules have been updated to match the randomization table on page 40.
 
