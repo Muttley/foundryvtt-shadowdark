@@ -52,16 +52,26 @@
 		}}
 	</div>
 	<h4 class="section-header">{{localize "SHADOWDARK.apps.character-generator.title"}}</h4>
-	<div class="item-detail">
-		<label>Random Weight</label>
+	<div>
+		<label title="{{localize "SHADOWDARK.ancestry.tooltip.weight"}}">Random Weight</label>
 		{{numberInput
 			item.system.randomWeight
 			name="system.randomWeight"
 			placeholder="1"
 		}}
 	</div>
+	<div style="grid-column: 2 / span 2;">
 	<label>{{localize "SHADOWDARK.ancestry.nametable.label"}}</label>
-	<div class="name-table" style="grid-column: 2 / span 2;">
-		<input type="text" name="system.nameTable" placeholder="{{localize "SHADOWDARK.ancestry.nametable.placeholder"}}" value="{{system.nameTable}}">
+	<div style="background-color: rgba(0, 0, 0, 0.05);">
+		{{#unless system.nameTable}}
+			{{localize "SHADOWDARK.dragdrop"}}
+		{{/unless}}
+		{{#if item.system.nameTable}}
+			<div style="white-space: nowrap;">
+			<a class="fas fa-delete-right" data-action="remove-name-table"></a>
+			<a class="content-link" data-uuid="{{item.system.nameTable}}">{{uuidToName item.system.nameTable}}</a>
+			</div>
+		{{/if}}
+	</div>
 	</div>
 </div>

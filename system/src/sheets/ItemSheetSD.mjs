@@ -82,6 +82,10 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onEffectTransfer(event)
 		);
 
+		html.find("[data-action=remove-name-table]").click(
+			event => this._onRemoveTable(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -667,6 +671,10 @@ export default class ItemSheetSD extends ItemSheet {
 		if (this.item.type === "Ancestry") {
 			this.item.update({"system.nameTable": data.uuid});
 		}
+	}
+
+	async _onRemoveTable(event, data) {
+		this.item.update({"system.nameTable": ""});
 	}
 
 	_onItemSelection(event) {
