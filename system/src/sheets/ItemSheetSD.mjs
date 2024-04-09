@@ -294,6 +294,13 @@ export default class ItemSheetSD extends ItemSheet {
 			? true
 			: false;
 
+		if ((item.type === "Class") && (item.system.spellcasting.class !== "__not_spellcaster__")) {
+			this.spellsKnown = true;
+		}
+		else {
+			this.spellsKnown = false;
+		}
+
 		const showTab = {
 			details: [
 				"Ancestry",
@@ -325,6 +332,7 @@ export default class ItemSheetSD extends ItemSheet {
 			light: item.system.light?.isSource ?? false,
 			description: true,
 			titles: item.type === "Class",
+			spellsknown: this.spellsKnown,
 		};
 
 		foundry.utils.mergeObject(context, {
@@ -393,6 +401,17 @@ export default class ItemSheetSD extends ItemSheet {
 				context.lightRemainingMins = Math.floor(
 					item.system.light.remainingSecs / 60
 				);
+			}
+		}
+
+		// initialize spellsknown table if not already set on a spellcaster class item
+		if (this.spellsKnown && !item.system.spellcasting.spellsknown) {
+			item.system.spellcasting.spellsknown = {};
+			for (let i = 1; i <= 10; i++) {
+				item.system.spellcasting.spellsknown[i] = {};
+				for (let j = 1; j <= 5; j++) {
+					item.system.spellcasting.spellsknown[i][j] = null;
+				}
 			}
 		}
 
