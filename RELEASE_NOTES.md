@@ -4,13 +4,24 @@
 * [#715] Learned scrolls don't show usual spell icon
 
 ## Enhancements
+* [#500] Support added for leveling up characters. A class spells list can be opened from the character sheet spell tab or leveling window.
 * [#690] All monsters from the core rules are now available in the monsters compendium.
 * [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
 * [#696] Core rules content was expanded to include Tier 3-5 Wizard and Priest spells. All content from the core rules is now labeld as "Core Rules" in the source selection settings.
-* [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
 * [#713] Added dice sounds to Character Builder
+* [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
 * [#725] Update token mapping for new core monsters.
 * [#728] Spell items can now be dragged onto NPC sheets to add that spell to the NPC's spell list.
+* [#731] Added 1d2 as an option for weapon damage.
+* [#736] Added random names table for Kobold ancestry
+* [#738] Ancestries can now be given a weight to effect roll chance in the Character Generator. Ancestries from the core rules have been updated to match the randomization table on page 40.
+
+## Feature Notes
+Character leveling now occurs via a structed leveling up systems that is triggered when xp gained meets or exceeds the next level requirement.
+* All HP rolls, talent, and spell selections are now done in the leveling up window.
+* Selecting class while leveling up from 0 to 1
+* Class items now support adding a known spell table.
+* An audit log of character leveling changes is accessible via script under the property actor.auditLog
 
 ---
 
