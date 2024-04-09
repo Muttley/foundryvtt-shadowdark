@@ -30,6 +30,7 @@ SHADOWDARK.ARMOR_BONUS_ATTRIBUTES = {
 };
 
 SHADOWDARK.DICE = {
+	d2: "d2",
 	d4: "d4",
 	d6: "d6",
 	d8: "d8",
@@ -533,6 +534,7 @@ SHADOWDARK.TALENT_CLASSES = {
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
+	d2: "1d2",
 	d4: "1d4",
 	d6: "1d6",
 	d8: "1d8",
@@ -541,6 +543,7 @@ SHADOWDARK.WEAPON_BASE_DAMAGE = {
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE_DIE_ONLY = {
+	d2: "d2",
 	d4: "d4",
 	d6: "d6",
 	d8: "d8",

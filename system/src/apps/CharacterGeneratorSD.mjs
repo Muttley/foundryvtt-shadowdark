@@ -308,8 +308,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize ancestry
 		if (eventStr === "randomize-ancestry" || eventStr === "randomize-all") {
-			tempInt = this._getRandom(this.formData.ancestries.size);
-			let ancestryID = [...this.formData.ancestries][tempInt].uuid;
+			// generate an array of ancestries values adding duplicates based on weights
+			const ancestryArray = [];
+			this.formData.ancestries.forEach(a => {
+				for (let i = 0; i < (a?.system.randomWeight || 1); i++) {
+					ancestryArray.push(a.uuid);
+				}
+			});
+			// select random array value and load the ancestry
+			tempInt = this._getRandom(ancestryArray.length);
+			let ancestryID = ancestryArray[tempInt];
 			this.formData.actor.system.ancestry = ancestryID;
 			await this._loadAncestry(ancestryID, true);
 		}
