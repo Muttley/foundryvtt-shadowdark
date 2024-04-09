@@ -20,6 +20,7 @@ SHADOWDARK.ancestry.nametable.placeholder: Dra rulltabell hit
 SHADOWDARK.ancestry.talents.count.label: Antal val
 SHADOWDARK.ancestry.talents.label: Ursprungstalanger
 SHADOWDARK.ancestry.talents.prompt: Välj talang...
+SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.app.active_effects.title: Aktiva effekter
 SHADOWDARK.app.gem_bag.sell_all: Sälj alla ädelstenar
 SHADOWDARK.app.gem_bag.title: Ädelstenspåse
@@ -40,12 +41,18 @@ SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
 SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
+SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Det gick inte att skapa spelarkaraktär {error}
 SHADOWDARK.apps.character-generator.error.name: Karaktärens namn får inte vara tomt
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Det går inte att rulla ett slumpmässigt namn utan ett valt ursprung
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
-SHADOWDARK.apps.character-generator.success: Karaktären skapades
+SHADOWDARK.apps.character-generator.success: Character created
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
+SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
+SHADOWDARK.apps.character-generator.stats: Stats
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
+SHADOWDARK.apps.character-generator.type: Type
+SHADOWDARK.apps.character-generator.update_character: Update Character
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Vill du ta bort {effectName} effekten?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Radera effekt?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Löpt ut
@@ -73,6 +80,13 @@ SHADOWDARK.apps.item-importer.instruction2c: Beskrivande text
 SHADOWDARK.apps.item-importer.instruction2d: Funktioner
 SHADOWDARK.apps.item-importer.instruction3: 3. Klicka på importera.
 SHADOWDARK.apps.item-importer.title: Importera föremål
+SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
+SHADOWDARK.apps.level-up.hit_points: Hit Points
+SHADOWDARK.apps.level-up.level_up: Level Up!
+SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
+SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.roll_talent: Roll Talent
+SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
 SHADOWDARK.apps.monster-importer.instruction1: 1. Kopiera monstertext från boken.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Klistra in text i den här rutan efter det monsterformat som visas i kärnreglerna. Lägg till en tom rad mellan varje förmåga.
@@ -89,6 +103,8 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopiera innehållet i f
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Klicka på importera.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Öppen generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Importera Shadowdarkling
+SHADOWDARK.apps.spell-book.known: Known
+SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.import_button: Importera besvärjelse
 SHADOWDARK.apps.spell-importer.instruction1: 1. Kopiera besvärjelsetext från boken.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Klistra in text i denna ruta som har samma format som visas i kärnreglerna.
@@ -255,6 +271,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Välj rustningsegenskaper
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
 SHADOWDARK.dialog.submit: Skicka
 SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
+SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Timmar
 SHADOWDARK.effect_duration.minutes: Minuter
 SHADOWDARK.effect_duration.seconds: Sekunder
@@ -602,6 +619,7 @@ SHADOWDARK.sheet.item.tab.details: Detaljer
 SHADOWDARK.sheet.item.tab.effects: Effekt
 SHADOWDARK.sheet.item.tab.light: Ljus
 SHADOWDARK.sheet.item.tab.magic: Magi
+SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.source: Källa
 SHADOWDARK.sheet.item.tab.titles: Titlar
 SHADOWDARK.sheet.npc.attacks_label: Attacker
@@ -626,6 +644,7 @@ SHADOWDARK.sheet.player.boons.oaths.label: Eder
 SHADOWDARK.sheet.player.boons.secrets.label: Hemligheter
 SHADOWDARK.sheet.player.class.label: Klass
 SHADOWDARK.sheet.player.class.tooltip: Din karaktärs jobb
+SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.deity.label: Gud
 SHADOWDARK.sheet.player.deity.tooltip: Er karaktärs kosmiska länk till de motsatta krafterna av lag och kaos, eller balanserad neutralitet.
 SHADOWDARK.sheet.player.languages: Språk
