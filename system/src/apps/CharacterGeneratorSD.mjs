@@ -876,7 +876,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			baseHP: this.formData.actor.system.attributes.hp.base,
 			itemsGained: itemNames,
 		};
-		this.formData.actor.auditLog = auditLog;
+		this.formData.actor.system.auditLog = auditLog;
 
 		// Create the new player character
 		//
