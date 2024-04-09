@@ -14,7 +14,11 @@
 		</div>
 		<div class="content ">
 			{{#if rolls.hp}}
-				<h2>{{rolls.hp}}</h2>
+				<h2>{{rolls.hp}}
+				{{#ifEq targetLevel 1}}
+					<span style="font-size:0.7em">({{numberFormat actor.system.abilities.con.mod decimals=0 sign=true}})</span>
+				{{/ifEq}}
+			</h2>
 			{{/if}}
 			{{#unless rolls.hp}}
 				<button type="button" data-action="roll-hp">{{localize "SHADOWDARK.sheet.general.roll_hp"}}</button>
