@@ -1,0 +1,17 @@
+{
+	"_id": "MLJYdnU1x4ExRF6W",
+	"_key": "!actors.items!h0NMkJj2DCJiQ9Zw.MLJYdnU1x4ExRF6W",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Grab",
+	"system": {
+		"description": "<p>DC 15 STR or immobilized. Tentacle auto-hits each round. DC 15 STR on turn to break free.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

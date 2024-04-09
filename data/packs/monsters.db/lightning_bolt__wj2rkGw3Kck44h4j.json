@@ -1,0 +1,24 @@
+{
+	"_id": "wj2rkGw3Kck44h4j",
+	"_key": "!actors.items!owL9cUM2LTVpMarQ.wj2rkGw3Kck44h4j",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Lightning Bolt",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>3/day, 5' wide line extending far from giant. All creatures in line DC 15 DEX or [[/r 5d10]] damage. DISADV on check if in water.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

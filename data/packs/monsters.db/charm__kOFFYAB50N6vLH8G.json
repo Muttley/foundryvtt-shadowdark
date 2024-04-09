@@ -1,0 +1,25 @@
+{
+	"_id": "kOFFYAB50N6vLH8G",
+	"_key": "!actors.items!vXaqgfDykZPdXnIm.kOFFYAB50N6vLH8G",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Charm",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Near, one creature, DC 14 CHA or friendship for [[/r 1d8]] days.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

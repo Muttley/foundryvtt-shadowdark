@@ -1,0 +1,19 @@
+{
+	"_id": "M5iKSTKd3UgtZT8K",
+	"_key": "!items!M5iKSTKd3UgtZT8K",
+	"effects": [
+	],
+	"folder": "vFaoMFPGDGlKn4gF",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Shuriken",
+	"system": {
+		"description": "<p>Can be thrown into the ground. Living creatures who step on it take 1 damage and can only move at half speed for 10 rounds.</p>",
+		"itemType": "weapon",
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		}
+	},
+	"type": "Property"
+}

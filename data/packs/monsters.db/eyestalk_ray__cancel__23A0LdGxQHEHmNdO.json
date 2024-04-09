@@ -1,0 +1,17 @@
+{
+	"_id": "23A0LdGxQHEHmNdO",
+	"_key": "!actors.items!hiZvVJPOJWtOXV4m.23A0LdGxQHEHmNdO",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Eyestalk Ray: Cancel",
+	"system": {
+		"description": "<p>DC 15 DEX or all magical effects on target end.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

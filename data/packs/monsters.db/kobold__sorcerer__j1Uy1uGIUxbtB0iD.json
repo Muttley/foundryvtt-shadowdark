@@ -1,0 +1,124 @@
+{
+	"_id": "j1Uy1uGIUxbtB0iD",
+	"_key": "!actors!j1Uy1uGIUxbtB0iD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"yTqc9nnvxwlQs2PF",
+		"CnFo8rDkhXsljGee",
+		"6nmQ7COORatK6M7w",
+		"rKjKcTs5FigGGzjC"
+	],
+	"name": "Kobold, Sorcerer",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Kobold Sorcerer",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 2
+			},
+			"con": {
+				"mod": 0
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": -1
+			},
+			"str": {
+				"mod": -2
+			},
+			"wis": {
+				"mod": 1
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 13
+			},
+			"hp": {
+				"hd": 0,
+				"max": 13,
+				"value": 13
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 3
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> A scaly dog-lizard painted with colorful stripes and rattling a hefty leg bone strung with beads and feathers. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13 (leather), <strong>HP</strong> 13, <strong>ATK</strong> 1 club +1 (1d4) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> -2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Dodge</strong>. 1/day, an attack that would hit misses instead.</p><p></p><p><strong>Scorpion Sting (CHA Spell)</strong>. DC 11. Near range, one target. 1d6 damage and target has DISADV on next attack roll or check.</p><p></p><p><strong>Spider Swarm (CHA Spell)</strong>. DC 12. A spider swarm appears within near. Stays 1d4 rounds. Follows sorcerer's commands.</p><p></p>",
+		"spellcastingAbility": "cha",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 2
+	},
+	"type": "NPC"
+}

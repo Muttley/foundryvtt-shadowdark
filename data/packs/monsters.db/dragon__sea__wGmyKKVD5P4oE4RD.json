@@ -1,0 +1,123 @@
+{
+	"_id": "wGmyKKVD5P4oE4RD",
+	"_key": "!actors!wGmyKKVD5P4oE4RD",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"XMSpqvo4rvTXoYTs",
+		"duWZ4M8ncHp14V3w",
+		"jdgbSe8wKcxF4AKX"
+	],
+	"name": "Dragon, Sea",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Sea Dragon",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 4
+			},
+			"dex": {
+				"mod": 6
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": 5
+			},
+			"wis": {
+				"mod": 5
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 17
+			},
+			"hp": {
+				"hd": 0,
+				"max": 76,
+				"value": 76
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 16
+		},
+		"move": "doubleNear",
+		"moveNote": "fly, swim",
+		"notes": "\n\t<p><i> A warm sea breeze blows around this amphibious, gold- scaled wyrm. A beard of tendrils covers its snout, and a blue mane billows along its neck. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 76, <strong>ATK</strong> 4 rend +10 (2d10) or 1 steam breath or 1 water spout, <strong>MV</strong> double near (fly, swim), <strong>S</strong> +5, <strong>D</strong> +6, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +5, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 16</p><p></p>\n\t<p><strong> Steam Breath </strong>. Fills a double near-sized cube extending from dragon. DC 15 DEX or 4d12 damage.</p><p></p><p><strong>Water Spout</strong>. Fills a near-sized cube within far. DC 15 STR or creatures inside flung 2d100 feet in a random direction.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

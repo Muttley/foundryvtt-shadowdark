@@ -1,0 +1,27 @@
+{
+	"_id": "YPS5BHJdHe3rDIWE",
+	"_key": "!items!YPS5BHJdHe3rDIWE",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+	"name": "Eyebite",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>One creature you target takes 1d4 damage, and it can't see you until the end of its next turn.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

@@ -6,9 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"e020Tn4yv7Aj604M",
-		"hhkN0EkQbBFGgJfr",
-		"xURhvz16GozH0j8f"
+		"IxTXcPu1GvN6TkzS",
+		"8ITOtBo5399EG3Fl"
 	],
 	"name": "Ettercap",
 	"prototypeToken": {
@@ -24,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -116,8 +115,8 @@
 			"value": 3
 		},
 		"move": "near",
-		"moveNote": "Climb",
-		"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+		"moveNote": "climb",
+		"notes": "\n\t<p><i> Bipedal, eight-eyed spiderfolk with spindly legs and purple fur. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 14, <strong>ATK</strong> 2 bite +2 (1d6) or 1 poison web (near) +2, <strong>MV</strong> near (climb), <strong>S</strong> +0, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Poison Web</strong>. One target stuck in place and 1d4 damage/round. DC 12 DEX on turn to escape.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -1,0 +1,28 @@
+{
+	"_id": "z5uKTDf4wtkipQ4s",
+	"_key": "!items!z5uKTDf4wtkipQ4s",
+	"effects": [
+	],
+	"folder": "ntYpdY6HvWuXyrsm",
+	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
+	"name": "Relentless",
+	"system": {
+		"ability": "con",
+		"dc": 18,
+		"description": "<p><span>3/day, when you are reduced to 0 HP, make a DC 18 Constitution check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</span></p>",
+		"group": "Relentless",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

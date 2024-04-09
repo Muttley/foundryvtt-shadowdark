@@ -1,0 +1,102 @@
+{
+	"_id": "waXnHdAHSHSo0dQI",
+	"_key": "!items!waXnHdAHSHSo0dQI",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Warlock",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.DeqtKQQzI6HTYvV0",
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.xM3hghlK5nvo46Vo",
+		"description": "<p>Howling warriors with sharpened teeth, wild-eyed doomspeakers preaching of The Dissolution, and cloaked lore-hunters bearing the hidden Mark of Shune.</p>",
+		"hitPoints": "d6",
+		"language": {
+			"select": 1
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 1,
+			"selectOptions": [
+				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
+				"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
+				"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz",
+				"Compendium.shadowdark.languages.Item.Lf6kATbC1uNPLnPi",
+				"Compendium.shadowdark.languages.Item.ufwua5RXnJXlA0St"
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"spellcasting": {
+			"ability": "",
+			"baseDifficulty": 10,
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.4pcEgD8oLA5euovK",
+			"Compendium.shadowdark.talents.Item.QqkXMqBROibRbKd3"
+		],
+		"titles": [
+			{
+				"chaotic": "Marked",
+				"from": 1,
+				"lawful": "Favored",
+				"neutral": "Chosen",
+				"to": 2
+			},
+			{
+				"chaotic": "Zealot",
+				"from": 3,
+				"lawful": "Herald",
+				"neutral": "Channeler",
+				"to": 4
+			},
+			{
+				"chaotic": "Occultist",
+				"from": 5,
+				"lawful": "Eminent",
+				"neutral": "Prophesied",
+				"to": 6
+			},
+			{
+				"chaotic": "Champion",
+				"from": 7,
+				"lawful": "Exalted",
+				"neutral": "Transcendent",
+				"to": 8
+			},
+			{
+				"chaotic": "Harbinger",
+				"from": 9,
+				"lawful": "Incarnation",
+				"neutral": "Avatar",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.eeVEJexfirwWzOVu",
+			"Compendium.shadowdark.gear.Item.jGZyVuFJnW7QcBFX",
+			"Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre",
+			"Compendium.shadowdark.gear.Item.ZPUhNMmwXXrtbCXi"
+		]
+	},
+	"type": "Class"
+}

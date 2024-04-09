@@ -1,0 +1,27 @@
+{
+	"_id": "1kZcu5aIUsIUbJzM",
+	"_key": "!items!1kZcu5aIUsIUbJzM",
+	"effects": [
+	],
+	"folder": "JWPZqQ3Dk9n1iW1g",
+	"img": "icons/magic/control/debuff-chains-ropes-net-white.webp",
+	"name": "Fabricate",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>This spell can't target creatures. </p><p></p><p>You turn a tree-sized collection of raw materials into a finished work. For example, you convert a pile of bricks or rocks into a bridge. The finished work converts back to raw materials when the spell ends.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,23 @@
+{
+	"_id": "cB3IYcu5Ga7GNNps",
+	"_key": "!actors.items!sncxcSi6ziTStjAh.cB3IYcu5Ga7GNNps",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Flight",
+	"system": {
+		"dc": "13",
+		"description": "<p>Fly double near for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

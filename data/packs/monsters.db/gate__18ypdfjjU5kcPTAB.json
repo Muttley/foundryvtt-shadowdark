@@ -1,0 +1,23 @@
+{
+	"_id": "18ypdfjjU5kcPTAB",
+	"_key": "!actors.items!o5xhxniboMbTCMLk.18ypdfjjU5kcPTAB",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Gate",
+	"system": {
+		"dc": "14",
+		"description": "<p>Open a portal at a point within near to another location on any plane. Lasts [[/r 1d6]] rounds or until dismissed.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d6"
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

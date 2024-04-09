@@ -16,6 +16,9 @@ export default class NpcSheetSD extends ActorSheetSD {
 					initial: "tab-details",
 				},
 			],
+			dragDrop: [{
+				dragSelector: ".item[draggable=true]",
+			}],
 		});
 	}
 
@@ -124,16 +127,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 					}
 				);
 
-				const display = await renderTemplate(
-					"systems/shadowdark/templates/partials/npc-feature.hbs",
-					{
-						name: i.name,
-						description,
-					}
-				);
 				features.push({
 					itemId: i._id,
-					display,
+					name: i.name,
+					description,
 				});
 			}
 
@@ -174,5 +171,33 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 
 		this.actor.castNPCSpell(itemId);
+	}
+
+	async _onDropItem(event, data) {
+		// get uuid of dropped item
+		const droppedItem = await fromUuid(data.uuid);
+
+		// if it's an PC spell, convert to NPC spell, else return as normal
+		if (droppedItem.type === "Spell") {
+			console.log("spell");
+			const newNpcSpell = {
+				name: droppedItem.name,
+				type: "NPC Spell",
+				system: {
+					description: droppedItem.system.description,
+					duration: {
+						type: droppedItem.system.duration.type,
+						value: droppedItem.system.duration.value,
+					},
+					range: droppedItem.system.range,
+					dc: droppedItem.system.duration.tier + 10,
+				},
+			};
+			// add new spell to NPC
+			this.actor.createEmbeddedDocuments("Item", [newNpcSpell]);
+		}
+		else {
+			super._onDropItem(event, data);
+		}
 	}
 }

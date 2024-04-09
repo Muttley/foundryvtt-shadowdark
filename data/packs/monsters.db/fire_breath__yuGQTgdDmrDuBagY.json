@@ -1,0 +1,24 @@
+{
+	"_id": "yuGQTgdDmrDuBagY",
+	"_key": "!actors.items!5SaVYhtOSTOUcHCV.yuGQTgdDmrDuBagY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Fire Breath",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Fills a near-sized cube extending from chimera. DC 15 DEX or [[/r 4d6]] damage.</p>",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

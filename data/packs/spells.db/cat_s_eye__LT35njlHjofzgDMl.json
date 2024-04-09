@@ -1,0 +1,28 @@
+{
+	"_id": "LT35njlHjofzgDMl",
+	"_key": "!items!LT35njlHjofzgDMl",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
+	"name": "Cat's Eye",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>Your irises grow to fill your eyes and your pupils turn into black, vertical slits. You can see invisible creatures and secret doors for the spell's duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

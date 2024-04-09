@@ -1,0 +1,352 @@
+Handlebars.registerHelper("addEmptySlots", (objects, max) => {
+	const newOjects = objects.map(a => ({...a}));
+	for (let j = 0; j < max - objects.length; j++) {
+		newOjects.push(null);
+	}
+	return newOjects;
+});
+
+export default class LevelUpSD extends FormApplication {
+
+	constructor(uid) {
+	    super();
+		this.firstrun = true;
+		this.data = {};
+		this.data.rolls = {
+			hp: 0,
+			hpEdit: false,
+			talent: false,
+		};
+		this.data.actor = game.actors.get(uid);
+		this.data.talents = [];
+		this.data.spells = {};
+
+		for (let i = 1; i <= 5; i++) {
+			this.data.spells[i] = {
+				name: "Tier ".concat(i),
+				max: 0,
+				objects: [],
+			};
+		}
+	}
+
+	/** @inheritdoc */
+	static get defaultOptions() {
+		return mergeObject(super.defaultOptions, {
+			width: 275,
+			resizable: false,
+			closeOnSubmit: true,
+			submitOnChange: false,
+			dragDrop: [{dropSelector: ".items"}],
+		});
+	}
+
+	/** @inheritdoc */
+	get template() {
+		return "systems/shadowdark/templates/apps/level-up.hbs";
+	}
+
+	/** @inheritdoc */
+	get title() {
+	    const title = game.i18n.localize("SHADOWDARK.apps.level-up.title");
+		return `${title}`;
+	}
+
+	/** @inheritdoc */
+	activateListeners(html) {
+		super.activateListeners(html);
+
+		html.find("[data-action='roll-hp']").click(
+			event => this._onRollHP(event)
+		);
+
+		html.find("[data-action='re-roll-hp']").click(
+			event => this._onReRollHP(event)
+		);
+
+		html.find("[data-action='view-talent-table']").click(
+			event => this._viewTalentTable(event)
+		);
+		html.find("[data-action='open-spellbook']").click(
+			event => this._openSpellBook(event)
+		);
+
+		html.find("[data-action='delete-talent']").click(
+			event => this._onDeleteTalent(event)
+		);
+
+		html.find("[data-action='delete-spell']").click(
+			event => this._onDeleteSpell(event)
+		);
+
+		html.find("[data-action='roll-talent']").click(
+			event => this._onRollTalent(event)
+		);
+
+		html.find("[data-action='finalize-level-up']").click(
+			event => this._onLevelUp(event)
+		);
+	}
+
+	/** @inheritdoc */
+	_canDragDrop() {
+		return true;
+	}
+
+	/** @override */
+	async getData(options) {
+		if (this.firstrun) {
+			this.firstrun = false;
+			this.data.class = await fromUuid(this.data.actor.system.class);
+			this.data.talentTable = await fromUuid(this.data.class.system.classTalentTable);
+			this.data.currentLevel = this.data.actor.system.level.value;
+			this.data.targetLevel =  this.data.currentLevel +1;
+			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
+			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
+			if (this.data.isSpellCaster) {
+				this.spellbook = new shadowdark.apps.SpellBookSD(
+					this.data.class.uuid,
+					this.data.actor.id
+				);
+
+				// calculate the spells gained for the target level from the spells known table
+				if (this.data.class.system.spellcasting.spellsknown) {
+					// setup known spells for this level
+					let currentSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+					let targetSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
+
+					if (this.data.currentLevel >= 1) {
+						currentSpells =
+						this.data.class.system.spellcasting.spellsknown[this.data.currentLevel];
+					}
+					if (this.data.targetLevel <= 10) {
+						targetSpells =
+						this.data.class.system.spellcasting.spellsknown[this.data.targetLevel];
+					}
+
+					Object.keys(targetSpells).forEach(k => {
+						this.data.spells[k].max = targetSpells[k] - currentSpells[k];
+					});
+				}
+				else {
+					ui.notifications.warn("Class missing Spells Known Table");
+				}
+
+			}
+		}
+		return this.data;
+	}
+
+	/** @override */
+	async _onDrop(event) {
+		// get item that was dropped based on event
+		const eventData = TextEditor.getDragEventData(event);
+		const itemObj = await fromUuid(eventData.uuid);
+
+		if (itemObj && eventData.type === "Item") {
+			switch (itemObj.type) {
+				case "Talent":
+				 	this._onDropTalent(itemObj);
+					break;
+				case "Spell":
+					this._onDropSpell(itemObj);
+					break;
+				default:
+					break;
+			}
+		}
+	}
+
+	async _viewTalentTable() {
+		this.data.talentTable.sheet.render(true);
+	}
+
+	async _openSpellBook() {
+		this.spellbook.render(true);
+	}
+
+	async _onRollHP() {
+
+		// roll HP
+		const data = {
+			rollType: "hp",
+			actor: this.data.actor,
+		};
+		let options = {};
+		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+		options.flavor = options.title;
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
+		options.fastForward = true;
+
+		let parts = [this.data.class.system.hitPoints];
+		let advantage = 0;
+		if (data.actor?.hasAdvantage(data)) advantage = 1;
+
+		const result = await CONFIG.DiceSD.Roll(parts, data, false, advantage, options);
+
+		this.data.rolls.hp = result.rolls.main.roll.total;
+		ui.sidebar.activateTab("chat");
+		this.render();
+	}
+
+	async _onReRollHP() {
+		Dialog.confirm({
+			title: "Re-Roll HP",
+			content: "Are you sure you want to re-roll hit points?",
+			yes: () => this._onRollHP(),
+			no: () => null,
+			defaultYes: false,
+		  });
+	}
+
+	async _onRollTalent() {
+		await this.data.talentTable.draw();
+		ui.sidebar.activateTab("chat");
+
+		// Humans get extra talent at level 1 with the ambitious talent
+		if (this.data.targetLevel === 1) {
+			let ambitious = this.data.actor.items.find(x => x.name === "Ambitious");
+			if (ambitious) {
+				ChatMessage.create({
+					flavor: "Ambitious",
+					content: `${ambitious.system.description}`,
+				});
+				await this.data.talentTable.draw();
+			}
+		}
+
+		this.data.rolls.talent = true;
+		this.render();
+	}
+
+	async _onDropTalent(talentItem) {
+		if (this.data.talentGained) {
+
+			// checks for effects on talent and prompts if needed
+			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
+			talentObj.system.level = this.data.targetLevel;
+			this.data.talents.push(talentObj);
+			this.render();
+		}
+	}
+
+	_onDeleteTalent(event) {
+		this.data.talents.splice($(event.currentTarget).data("index"), 1);
+		this.render();
+	}
+
+	_onDropSpell(spellObj) {
+		let spellTier = spellObj.system.tier;
+		// Check to see if the spell is out of bounds
+		if (1 > spellTier > 5) {
+			ui.notifictions.error("Spell tier out of range");
+			return;
+		}
+		// add spell if there is room in that tier
+		if (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max) {
+			this.data.spells[spellTier].objects.push(spellObj);
+		}
+		this.render();
+	}
+
+	_onDeleteSpell(event) {
+		// get tier and index from passed event and remove that spell from array
+		let tier = $(event.currentTarget).data("tier");
+		let index = $(event.currentTarget).data("index");
+		this.data.spells[tier].objects.splice(index, 1);
+		this.render();
+	}
+
+	_onLevelUp() {
+
+		let spellsSelected = true;
+		for (let i = 1; i <= 5; i++) {
+			if (this.data.spells[i].max > this.data.spells[i].objects.length) {
+				spellsSelected = false;
+			}
+		}
+
+		// Are all selections complete?
+		switch (false) {
+			case (this.data.rolls.hp > 0):
+			case !(this.data.talentGained && this.data.talents.length < 1):
+			case spellsSelected:
+				Dialog.confirm({
+					title: "Missing Selections",
+					content: "Not all required selections have been made. Continue with level up?",
+					yes: () => this._finalizeLevelUp(),
+					no: () => null,
+					defaultYes: false,
+				});
+				break;
+			default:
+				this._finalizeLevelUp();
+		}
+	}
+
+	async _finalizeLevelUp() {
+
+		// update actor XP and level
+		let newXP = 0;
+
+		// carry over XP for all levels except level 0
+		if (this.data.currentLevel > 0) {
+			newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
+		}
+
+		// calculate new HP base
+		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
+
+		if (this.data.targetLevel === 1) {
+			let hpConMod = this.data.actor.system.abilities.con.mod;
+			// apply conmod to a set minimum 1 HP
+			if ((this.data.rolls.hp + hpConMod) > 1) {
+				newBaseHP = this.data.rolls.hp + hpConMod;
+			}
+			else {
+				newBaseHP = 1;
+			}
+			newValueHP = newBaseHP;
+		}
+
+		let allItems = [
+			...this.data.talents,
+		];
+
+		// load all spells into allItems
+		for (let i = 1; i <= 5; i++) {
+			allItems = [
+				...allItems,
+				...this.data.spells[i].objects,
+			];
+		}
+
+		// load audit log, check for valid data, add new entry
+		let auditLog = this.data.actor.system?.auditlog ?? {};
+		if (auditLog.constructor !== Object) auditLog = {};
+
+		const itemNames = [];
+		allItems.forEach(x => itemNames.push(x.name));
+		auditLog[this.data.targetLevel] = {
+			baseHP: newBaseHP,
+			itemsGained: itemNames,
+		};
+
+		// update values on actor
+		this.data.actor.update({
+			"system.level.value": this.data.targetLevel,
+			"system.level.xp": newXP,
+			"system.attributes.hp.base": newBaseHP,
+			"system.attributes.hp.value": newValueHP,
+			"system.auditLog": auditLog,
+		});
+
+		// add talents and spells to actor
+		this.data.actor.createEmbeddedDocuments("Item", allItems);
+
+		// show actor sheet
+		this.data.actor.sheet.render(true);
+		this.close();
+	}
+}

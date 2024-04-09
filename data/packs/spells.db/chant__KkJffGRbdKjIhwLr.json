@@ -1,0 +1,27 @@
+{
+	"_id": "KkJffGRbdKjIhwLr",
+	"_key": "!items!KkJffGRbdKjIhwLr",
+	"effects": [
+	],
+	"folder": "G4Rg3SiJ4c0vIpqq",
+	"img": "icons/magic/perception/eye-slit-pink.webp",
+	"name": "Chant",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You begin an unearthly chant that lifts your vision beyond its ordinary limitations. </p><p></p><p>For the spell's duration, you can see all invisible and hidden things as though they were plainly visible. This spell does not allow you to see in a way that you could not normally, such as in darkness or through walls.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

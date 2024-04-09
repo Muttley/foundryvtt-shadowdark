@@ -1,0 +1,99 @@
+{
+	"_id": "7tlVtlk1zbMQz8qF",
+	"_key": "!items!7tlVtlk1zbMQz8qF",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Ras Godai",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.0vRwhfQgvAkzToHN",
+		"description": "<p>Black-clad assassins who train from childhood inside a hidden desert monastery. They gain their sorcerous powers from a legendary black lotus flower that was given to them by a demon.</p>",
+		"hitPoints": "d6",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"spellcasting": {
+			"ability": "",
+			"baseDifficulty": 10,
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.CpNGUp8xcCZZpeS2",
+			"Compendium.shadowdark.talents.Item.mOje5GCpl0pQ9WdM",
+			"Compendium.shadowdark.talents.Item.pOuKrF2CMkxt7EQG"
+		],
+		"titles": [
+			{
+				"chaotic": "Acolyte",
+				"from": 1,
+				"lawful": "Acolyte",
+				"neutral": "Acolyte",
+				"to": 2
+			},
+			{
+				"chaotic": "Shadow Path",
+				"from": 3,
+				"lawful": "Mirror Path",
+				"neutral": "Fire Path",
+				"to": 4
+			},
+			{
+				"chaotic": "Monk",
+				"from": 5,
+				"lawful": "Monk",
+				"neutral": "Monk",
+				"to": 6
+			},
+			{
+				"chaotic": "Assasin",
+				"from": 7,
+				"lawful": "Master",
+				"neutral": "Demon Blade",
+				"to": 8
+			},
+			{
+				"chaotic": "Black Lotus",
+				"from": 9,
+				"lawful": "White Lotus",
+				"neutral": "Red Lotus",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.DKBDkJ3LcRv8scLv",
+			"Compendium.shadowdark.gear.Item.FkcwP4cmpdM5pcOm",
+			"Compendium.shadowdark.gear.Item.iMu2tHuqGfJ7XjsS",
+			"Compendium.shadowdark.gear.Item.LW3MgxeOaEPPaiY2",
+			"Compendium.shadowdark.gear.Item.sDHZZx1xaCRPmhXY"
+		]
+	},
+	"type": "Class"
+}

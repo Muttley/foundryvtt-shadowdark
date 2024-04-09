@@ -1,0 +1,28 @@
+{
+	"_id": "r8c7cKBH7C2ZeKCF",
+	"_key": "!items!r8c7cKBH7C2ZeKCF",
+	"effects": [
+	],
+	"folder": "sE2Ooa1HgAMXmCra",
+	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+	"name": "Howl",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>All enemies within near range of you must immediately make a morale check. This spell does not affect creatures that are immune to morale checks.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

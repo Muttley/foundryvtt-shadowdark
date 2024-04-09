@@ -1,0 +1,27 @@
+{
+	"_id": "QTJ2o32K9NE0GCVF",
+	"_key": "!items!QTJ2o32K9NE0GCVF",
+	"effects": [
+	],
+	"folder": "bstYVdHWm575lPri",
+	"img": "icons/magic/control/silhouette-hold-change-blue.webp",
+	"name": "Willowman",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You call upon the Willowman to appear in one creature's mind, filling it with supernatural terror.</p><p></p><p>Choose one creature of LV 2 or less within range. That creature must immediately make a morale check.</p><p></p><p>Even creatures that are not normally subject to morale checks (such as undead) must do so.</p><p></p><p><strong>Willowman.</strong> </p><p>A pale, faceless man with elongated limbs and curved talons that rake the ground. Moves in quick stutters during each eyeblink.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

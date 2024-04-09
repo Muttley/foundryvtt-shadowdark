@@ -1,0 +1,27 @@
+{
+	"_id": "eaQU9WEyceXc5WVS",
+	"_key": "!items!eaQU9WEyceXc5WVS",
+	"effects": [
+	],
+	"folder": "GjEoxJ1IlFDjGKIa",
+	"img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+	"name": "Glassbones",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>A creature you touch becomes fragile. It takes double damage for the spell's duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

@@ -252,6 +252,18 @@
 		}
 	}
 
+	.npc-feature {
+		i {
+			display:none;
+			color: white;
+			font-size: 0.9em;
+		}
+	}
+
+	.npc-feature:hover i {
+		  display:inline;
+	}
+
 	.portrait {
 		grid-row: span 2;
 	}

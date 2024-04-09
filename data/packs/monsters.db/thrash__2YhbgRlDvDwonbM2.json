@@ -1,0 +1,37 @@
+{
+	"_id": "2YhbgRlDvDwonbM2",
+	"_key": "!actors.items!NTRHmnsw7poR4rZ9.2YhbgRlDvDwonbM2",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+	"name": "Thrash",
+	"system": {
+		"attack": {
+			"num": "4"
+		},
+		"attackType": "physical",
+		"bonuses": {
+			"attackBonus": 13,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0
+		},
+		"damage": {
+			"numDice": "3",
+			"special": "Sever",
+			"value": "3d10"
+		},
+		"description": "",
+		"ranges": [
+			"near"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Attack"
+}

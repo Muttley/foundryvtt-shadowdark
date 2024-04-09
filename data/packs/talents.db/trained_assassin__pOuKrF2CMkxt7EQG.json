@@ -1,0 +1,19 @@
+{
+	"_id": "pOuKrF2CMkxt7EQG",
+	"_key": "!items!pOuKrF2CMkxt7EQG",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/strike-dagger-skull-white.webp",
+	"name": "Trained Assassin",
+	"system": {
+		"description": "<p>You have advantage on checks to sneak and hide. Your attacks deal double damage against targets that are unaware of your presence.</p>",
+		"level": 1,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

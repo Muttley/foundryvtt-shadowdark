@@ -1,0 +1,28 @@
+{
+	"_id": "aAtNTK2HLJ77HB3z",
+	"_key": "!items!aAtNTK2HLJ77HB3z",
+	"effects": [
+	],
+	"folder": "0CqAJEHgk6zHXr8Y",
+	"img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+	"name": "Augury",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

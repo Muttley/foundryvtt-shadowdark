@@ -1,0 +1,23 @@
+{
+	"_id": "MhCm5cEUvGTvhwfE",
+	"_key": "!actors.items!UDGXIj9pB0TdWPA6.MhCm5cEUvGTvhwfE",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Hypnotize",
+	"system": {
+		"dc": "13",
+		"description": "<p>Focus. One target in near range who can see naga is helplessly stupefied for duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "near",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

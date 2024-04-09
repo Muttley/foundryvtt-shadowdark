@@ -45,6 +45,12 @@
 					</a>
 				{{/if}}
 
+				{{#if showTab.spellsknown}}
+					<a class="item" data-tab="tab-spellsknown">
+						{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
+					</a>
+				{{/if}}
+
 				{{#if showTab.description}}
 					<a
 						class="item"
@@ -67,6 +73,7 @@
 		{{> items/tabs/effects }}
 		{{> items/tabs/light }}
 		{{> items/tabs/titles }}
+		{{> items/tabs/spellsknown }}
 		{{> items/tabs/source }}
 	</section>
 </form>

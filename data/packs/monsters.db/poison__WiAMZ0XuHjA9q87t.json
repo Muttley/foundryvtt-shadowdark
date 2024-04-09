@@ -1,0 +1,17 @@
+{
+	"_id": "WiAMZ0XuHjA9q87t",
+	"_key": "!actors.items!IUN6KcvNGGJWTQCE.WiAMZ0XuHjA9q87t",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 15 CON or take [[/r 2d10]] damage.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

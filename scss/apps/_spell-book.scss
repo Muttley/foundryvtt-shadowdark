@@ -1,0 +1,42 @@
+.spell-book {
+	h2 {
+		font-family: "Old Newspaper Font";
+		font-size: 2em;
+		text-align: center;
+	}
+
+	table {
+		background-color: rgba(255, 255, 255, 0);
+
+		th {
+			background-color: #0e0e0e;
+			color:white;
+		}
+		tr {
+			background-color: rgba(255, 255, 255, 0);
+		}
+
+		.nameRow {
+			border-top: 2px solid #0e0e0e;
+			a {
+				font-size: 1.15em;
+			}
+		}
+
+	}
+
+	.item-image {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+	}
+
+	.item-details__slidedown{
+		margin-bottom: 10px;
+	}
+
+}

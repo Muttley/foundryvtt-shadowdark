@@ -1,0 +1,20 @@
+{
+	"_id": "aFltU1eRz4bmIlbj",
+	"_key": "!items!aFltU1eRz4bmIlbj",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+	"name": "+1 to AC",
+	"system": {
+		"description": "<p>Gain +1 to your AC through supernatural foresight</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

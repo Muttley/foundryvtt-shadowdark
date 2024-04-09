@@ -1,0 +1,27 @@
+{
+	"_id": "pRO1kFMnFkkcYOgC",
+	"_key": "!items!pRO1kFMnFkkcYOgC",
+	"effects": [
+	],
+	"folder": "m4dDLdsMVfNF9LdP",
+	"img": "icons/magic/perception/orb-eye-scrying.webp",
+	"name": "Omen",
+	"system": {
+		"ability": "wis",
+		"dc": 9,
+		"description": "<p>3/day, you can make a DC 9 WIS check. On a success, gain a luck token (you can't have more than one luck token at a time).</p>",
+		"group": "",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

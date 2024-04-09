@@ -1,0 +1,17 @@
+{
+	"_id": "btT3x5mGuqnnglqG",
+	"_key": "!actors.items!NTRHmnsw7poR4rZ9.btT3x5mGuqnnglqG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Permanent Death",
+	"system": {
+		"description": "<p>Cannot be permanently killed unless a wish spell is cast on it while it is at 0 HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

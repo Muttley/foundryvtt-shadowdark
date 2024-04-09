@@ -1,0 +1,17 @@
+{
+	"_id": "5NPad9pZnmvvfoLv",
+	"_key": "!actors.items!6ce2xr1QmjJFMe5P.5NPad9pZnmvvfoLv",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Blood Drain",
+	"system": {
+		"description": "<p>Obe-Ixx heals [[/r 2d8]] HP, target permanently loses [[/r 1d6]] CON. At 0 CON, target dies and rises as a loyal vampire or vampire spawn (Obe-Ixx chooses).</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

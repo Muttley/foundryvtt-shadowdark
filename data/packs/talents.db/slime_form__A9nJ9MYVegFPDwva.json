@@ -1,0 +1,20 @@
+{
+	"_id": "A9nJ9MYVegFPDwva",
+	"_key": "!items!A9nJ9MYVegFPDwva",
+	"effects": [
+	],
+	"folder": "TcpWrnecaN2k2gYr",
+	"img": "icons/creatures/slimes/slime-movement-dripping-pseudopods-green.webp",
+	"name": "Slime Form",
+	"system": {
+		"description": "<p>1/dary, turn into a crawling puddle of slime for 3 rounds</p><p></p><p>duplicate = +1 use per day</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-1"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

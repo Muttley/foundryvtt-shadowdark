@@ -1,0 +1,27 @@
+{
+	"_id": "B6aferQ27yPEF4C7",
+	"_key": "!items!B6aferQ27yPEF4C7",
+	"effects": [
+	],
+	"folder": "24bp7luJolmj7e9e",
+	"img": "icons/magic/defensive/armor-stone-skin.webp",
+	"name": "Stoneskin",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>Your skin becomes like granite. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "self",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}
