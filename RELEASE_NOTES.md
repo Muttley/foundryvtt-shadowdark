@@ -11,6 +11,7 @@
 * [#713] Added dice sounds to Character Builder
 * [#725] Update token mapping for new core monsters.
 * [#731] Added 1d2 as an option for weapon damage.
+* [#738] Ancestries can now be given a weight to effect roll chance in the Character Generator. Ancestries from the core rules have been updated to match the randomization table on page 40.
 
 ---
 

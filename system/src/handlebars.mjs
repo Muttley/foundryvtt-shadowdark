@@ -65,6 +65,9 @@ export default function registerHandlebarsHelpers() {
 		return value.join(", ");
 	});
 
+	Handlebars.registerHelper("uuidToName", uuid => {
+		return fromUuidSync(uuid).name;
+	});
 
 	/* -------------------------------------------- */
 	/*  Effect Panel Handlebars                     */
