@@ -1,0 +1,126 @@
+{
+	"_id": "5NUw5FTgSVwAi0nL",
+	"_key": "!actors!5NUw5FTgSVwAi0nL",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"53KWLSWRCJO2LXWj",
+		"B7H9Zrr10Gnc51Lz",
+		"sFy5WWuJOMcQoeAF",
+		"wxmHnTbYkDu0Iyqt",
+		"CcbImBg5n23sNbZo",
+		"dFGvZdzUXLhvQUCs"
+	],
+	"name": "Archmage",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Archmage",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 1
+			},
+			"con": {
+				"mod": -1
+			},
+			"dex": {
+				"mod": 2
+			},
+			"int": {
+				"mod": 4
+			},
+			"str": {
+				"mod": -1
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 12
+			},
+			"hp": {
+				"hd": 0,
+				"max": 44,
+				"value": 44
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 10
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> A wizened magic-user crackling with arcane power. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 44, <strong>ATK</strong> 2 spell +7, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> -1, <strong>I</strong> +4, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 10</p><p></p>\n\t<p><strong> Death Bolt (INT Spell)</strong>. DC 15. One target of LV 9 or less within near DC 15 CON or go to 0 HP.</p><p></p><p><strong>Enervate (INT Spell)</strong>. DC 14. Focus. One target within near is stupefied for the duration.</p><p></p><p><strong>Fireblast (INT Spell)</strong>. DC 14. 4d6 damage to all within a near-sized cube within far.</p><p></p><p><strong>Float (INT Spell)</strong>. Self. DC 14. Fly double near for 5 rounds.</p><p></p><p><strong>Mithralskin (INT Spell)</strong>. Self. DC 14. AC becomes 18 for 5 rounds.</p><p></p><p><strong>Void Step (INT Spell)</strong>. Self and up to 4 willing targets. DC 15. Teleport up to 100 miles.</p><p></p>",
+		"spellcastingAbility": "int",
+		"spellcastingAttackNum": 2,
+		"spellcastingBonus": 7
+	},
+	"type": "NPC"
+}

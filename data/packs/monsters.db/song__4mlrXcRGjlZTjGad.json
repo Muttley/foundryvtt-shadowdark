@@ -1,0 +1,25 @@
+{
+	"_id": "4mlrXcRGjlZTjGad",
+	"_key": "!actors.items!CsQXDNmBDfao8hij.4mlrXcRGjlZTjGad",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Song",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>Enemies who can hear within double near DC 12 CHA or dazed and drawn to harpy for [[/r 1d4]] rounds. Immune for 1 day if passed check.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

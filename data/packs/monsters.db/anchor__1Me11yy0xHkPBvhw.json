@@ -1,0 +1,23 @@
+{
+	"_id": "1Me11yy0xHkPBvhw",
+	"_key": "!actors.items!o5xhxniboMbTCMLk.1Me11yy0xHkPBvhw",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/symbols/runes-star-magenta.webp",
+	"name": "Anchor",
+	"system": {
+		"dc": "14",
+		"description": "<p>One target in far DC 18 STR or bound and anchored by chains of golden runes for [[/r 1d4]] rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1d4"
+		},
+		"lost": false,
+		"range": "far",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Spell"
+}

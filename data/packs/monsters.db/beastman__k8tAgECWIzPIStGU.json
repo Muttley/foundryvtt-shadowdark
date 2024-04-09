@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"4vlFF9RY0RInh7uU",
-		"S9otkKlpEjmVLs8M"
+		"N2evUM7u3KBVIfpP",
+		"Kf0yKXcmO5FTRyDf"
 	],
 	"name": "Beastman",
 	"prototypeToken": {
@@ -23,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -116,7 +116,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><em>A cave hominid with scraggly fur and a stone-tipped spear.</em></p><p></p><p><strong>AC</strong> 12 (leather), <strong>HP </strong>5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL </strong>C,<strong> LV </strong>1</p><p></p><p><strong>Brutal</strong>. +1 damage with melee weapons (included).</p>",
+		"notes": "\n\t<p><i> A cave hominid with scraggly fur and a stone-tipped spear. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12 (leather), <strong>HP</strong> 5, <strong>ATK</strong> 1 spear (close/near) +2 (1d6 + 1), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 1</p><p></p>\n\t<p><strong> Brutal</strong>. +1 damage with melee weapons (included).</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -25,6 +25,9 @@ jobs:
 
     - name: Install Dependencies
       run: npm ci
+
+    - name: Create Release Notes Document
+      run: npm run notes
 
     - name: Build
       run: npm run build

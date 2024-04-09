@@ -1,0 +1,99 @@
+{
+	"_id": "fEWU4eBsIyUygRJG",
+	"_key": "!items!fEWU4eBsIyUygRJG",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Sea Wolf",
+	"system": {
+		"allArmor": false,
+		"allMeleeWeapons": false,
+		"allRangedWeapons": false,
+		"allWeapons": false,
+		"armor": [
+			"Compendium.shadowdark.gear.Item.DeqtKQQzI6HTYvV0",
+			"Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw",
+			"Compendium.shadowdark.gear.Item.UWp4WkkiaBMSXYPE"
+		],
+		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.r87J1r4hXVNnPDUK",
+		"description": "<p>Seafaring raiders who prowl the isles for plunder in dragonheaded longboats. When the warhorn sounds, they become fierce berserkers and shield maidens who hope to please their gods with a brave death.</p>",
+		"hitPoints": "d8",
+		"language": {
+			"select": null
+		},
+		"languages": {
+			"common": 0,
+			"fixed": [
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"spellcasting": {
+			"ability": "",
+			"baseDifficulty": 10,
+			"class": "__not_spellcaster__"
+		},
+		"talentChoiceCount": 0,
+		"talentChoices": [
+		],
+		"talents": [
+			"Compendium.shadowdark.talents.Item.0xDRcHPPcmO5NHOG",
+			"Compendium.shadowdark.talents.Item.A8Siwy6S27LwEkx5",
+			"Compendium.shadowdark.talents.Item.KMMpRWDsIybiDW7u"
+		],
+		"titles": [
+			{
+				"chaotic": "Rabble",
+				"from": 1,
+				"lawful": "Freefolk",
+				"neutral": "Wanderer",
+				"to": 2
+			},
+			{
+				"chaotic": "Raider",
+				"from": 3,
+				"lawful": "Shieldman/maiden",
+				"neutral": "Explorer",
+				"to": 4
+			},
+			{
+				"chaotic": "Reaver",
+				"from": 5,
+				"lawful": "Thane",
+				"neutral": "Adventurer",
+				"to": 6
+			},
+			{
+				"chaotic": "Conqueror",
+				"from": 7,
+				"lawful": "Jarl",
+				"neutral": "Renowned",
+				"to": 8
+			},
+			{
+				"chaotic": "Usurper",
+				"from": 9,
+				"lawful": "King/Queen",
+				"neutral": "Legendary",
+				"to": 10
+			}
+		],
+		"weapons": [
+			"Compendium.shadowdark.gear.Item.3DxwBvjceq0FxcsC",
+			"Compendium.shadowdark.gear.Item.9Pnhl6SOsbf6qDmt",
+			"Compendium.shadowdark.gear.Item.brIFMH0sOVmqX02N",
+			"Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+			"Compendium.shadowdark.gear.Item.GzA5T0aewhouRsa3",
+			"Compendium.shadowdark.gear.Item.ZPUhNMmwXXrtbCXi"
+		]
+	},
+	"type": "Class"
+}

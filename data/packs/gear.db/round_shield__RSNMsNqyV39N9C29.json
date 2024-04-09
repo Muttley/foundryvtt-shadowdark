@@ -1,0 +1,44 @@
+{
+	"_id": "RSNMsNqyV39N9C29",
+	"_key": "!items!RSNMsNqyV39N9C29",
+	"effects": [
+	],
+	"folder": "np4FRJ73NRBEQKnS",
+	"img": "icons/equipment/shield/round-wooden-boss-steel-yellow-blue.webp",
+	"name": "Round Shield",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 2
+		},
+		"baseArmor": "",
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 15,
+			"sp": 0
+		},
+		"description": "",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.bAzl6RH1PW95ZkFE"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

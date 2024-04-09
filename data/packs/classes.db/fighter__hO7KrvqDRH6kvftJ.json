@@ -25,11 +25,12 @@
 			],
 			"rare": 0,
 			"select": 0,
-			"selectOptions": ""
+			"selectOptions": [
+			]
 		},
 		"predefinedEffects": "",
 		"source": {
-			"title": "quickstart"
+			"title": "core-rules"
 		},
 		"spellcasting": {
 			"ability": "",

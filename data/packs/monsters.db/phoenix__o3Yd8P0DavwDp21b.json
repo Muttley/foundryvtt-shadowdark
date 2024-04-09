@@ -1,0 +1,125 @@
+{
+	"_id": "o3Yd8P0DavwDp21b",
+	"_key": "!actors!o3Yd8P0DavwDp21b",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"1LntjL3QKBeBbh6O",
+		"5FSRdhxv3O0xkJhU",
+		"uWVe3NFqqbRKVAg1",
+		"5YsUPEHykPlLmQJf",
+		"90k7upRgwRCAe0JT"
+	],
+	"name": "Phoenix",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 3,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Phoenix",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 3
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 3
+			},
+			"wis": {
+				"mod": 3
+			}
+		},
+		"alignment": "lawful",
+		"attributes": {
+			"ac": {
+				"value": 16
+			},
+			"hp": {
+				"hd": 0,
+				"max": 60,
+				"value": 60
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 13
+		},
+		"move": "doubleNear",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Huge, soaring eagles made of searing flames. Intelligent and imbued with immortal magic. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 60, <strong>ATK</strong> 4 rend +8 (2d12), <strong>MV</strong> double near (fly), <strong>S</strong> +3, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> L, <strong>LV</strong> 13</p><p></p>\n\t<p><strong> Impervious</strong>. Immune to fire. Only damaged by magical sources.</p><p></p><p><strong>Explosion</strong>. Upon death, creatures within double near of phoenix DC 18 DEX or 10d6 damage.</p><p></p><p><strong>Heat Aura</strong>. Creatures within near of phoenix at start of turn DC 15 CON or 2d6 damage.</p><p></p><p><strong>Rebirth</strong>. A red-hot egg remains after death. Phoenix hatches from it in 1d4 days.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

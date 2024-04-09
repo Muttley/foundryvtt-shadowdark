@@ -1,0 +1,17 @@
+{
+	"_id": "dD6eK5TthQO2lWq1",
+	"_key": "!actors.items!AMSI3MCLvpcZpJPO.dD6eK5TthQO2lWq1",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Ambush",
+	"system": {
+		"description": "<p>Deal an extra die of damage when undetected.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

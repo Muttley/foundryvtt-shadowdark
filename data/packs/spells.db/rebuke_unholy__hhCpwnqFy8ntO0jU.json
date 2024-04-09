@@ -1,0 +1,27 @@
+{
+	"_id": "hhCpwnqFy8ntO0jU",
+	"_key": "!items!hhCpwnqFy8ntO0jU",
+	"effects": [
+	],
+	"folder": "DzARPzBmfc6ssBqS",
+	"img": "icons/magic/death/skeleton-skull-soul-blue.webp",
+	"name": "Rebuke Unholy",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
+		],
+		"description": "<p>You rebuke creatures who oppose your alignment, forcing them to flee. You must present a holy symbol to cast this spell. </p><p></p><p>If you are lawful or neutral, this spell affects demons, devils, and outsiders. If you are chaotic, this spell affects angels and natural creatures of the wild.</p><p></p><p>Affected creatures within near of you must make a CHA check vs. your spellcasting check. If a creature fails by 10+ points and is equal to or less than your level, it is destroyed. Otherwise, on a fail, it flees from you for 5 rounds.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,25 @@
+{
+	"_id": "mEStu9pqn6uZL0XQ",
+	"_key": "!actors.items!mpdnvoVyYfvu8yLP.mEStu9pqn6uZL0XQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Tongue",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p>1 creature in near DC 12 DEX or pulled to close range.</p>",
+		"predefinedEffects": "",
+		"ranges": [
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

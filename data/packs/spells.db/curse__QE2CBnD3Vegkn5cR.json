@@ -1,0 +1,27 @@
+{
+	"_id": "QE2CBnD3Vegkn5cR",
+	"_key": "!items!QE2CBnD3Vegkn5cR",
+	"effects": [
+	],
+	"folder": "GjEoxJ1IlFDjGKIa",
+	"img": "icons/magic/control/energy-stream-link-large-blue.webp",
+	"name": "Curse",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>A creature you touch is afflicted by one of the following curses: </p><p></p><p>• Hideous boils and warts </p><p>• All food tastes of ash </p><p>• Voice becomes shrill </p><p>• Disturbing nightmares </p><p>• Always lose at gambling </p><p>• An ally turns into an enemy </p><p>• Fear of something ordinary</p>",
+		"duration": {
+			"type": "permanent",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 4
+	},
+	"type": "Spell"
+}

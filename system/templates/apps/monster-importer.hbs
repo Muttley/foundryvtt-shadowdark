@@ -1,12 +1,13 @@
 <form class="monster-importer" autocomplete="off">
-	<section>
-		<div>
+	<div class="flexrow" style="height:100%;">
+		<div style="width:250px;margin:5px;margin-right:10px;flex:none;">
+			<h1 style="font-family: 'Old Newspaper Font';font-size: 2.5em;text-align:center;">Monster Importer</h1>
+			<hr>
 			<p>{{localize "SHADOWDARK.apps.monster-importer.instruction1"}}</p>
 			<hr />
-			<p>
-				
-				{{localize "SHADOWDARK.apps.monster-importer.instruction2a"}}<br>
-				<div style="border:1px solid black;background-color: lightgrey; font-size:0.65em;margin-left:50px;margin-right:50px;">
+			<p>{{localize "SHADOWDARK.apps.monster-importer.instruction2a"}}</p>
+
+				<div style="border:1px solid black;background-color: lightgrey; font-size:0.65em;margin-left:70px;margin-right:70px;">
 					{{localize "SHADOWDARK.apps.monster-importer.instruction2b"}}<br>
 					<i>{{localize "SHADOWDARK.apps.monster-importer.instruction2c"}}</i><br>
 					{{localize "SHADOWDARK.apps.monster-importer.instruction2d"}}<br>
@@ -16,15 +17,13 @@
 					<br>
 					{{localize "SHADOWDARK.apps.monster-importer.instruction2e"}} N
 				</div>
-			</p>
-			<textarea name="monsterText" style="height:300px;"></textarea>
+
 			<hr />
-			<p>{{localize "SHADOWDARK.apps.monster-importer.instruction3"}}</p>
+			3.
+			<button class="import">{{localize "SHADOWDARK.apps.monster-importer.import_button"}}</button>
 		</div>
-	</section>
-	<footer class="sheet-footer flexrow">
-		<button class="import">
-			{{localize "SHADOWDARK.apps.monster-importer.import_button"}}
-		</button>
-	</footer>
+		<div class="flex1">
+			<textarea name="monsterText" style="height:100%;"></textarea>
+		</div>
+	</div>
 </form>

@@ -1,0 +1,20 @@
+{
+	"_id": "bOzxndFquBDYnQRz",
+	"_key": "!items!bOzxndFquBDYnQRz",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+	"name": "Last stand",
+	"system": {
+		"description": "<p><span>You get up from dying with 1 hit point on a natural d20 roll of 18-20.</span></p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

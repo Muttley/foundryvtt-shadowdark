@@ -1,0 +1,25 @@
+{
+	"_id": "38PGv4JtkfDumLDu",
+	"_key": "!items!38PGv4JtkfDumLDu",
+	"effects": [
+		"cefeWMKoAqHxuuU1",
+		"V7hLOyXMBijj06wB"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/spear-tips-triple-orange.webp",
+	"name": "+1 to Damage",
+	"system": {
+		"bonuses": {
+			"meleeDamageBonus": "1",
+			"rangedDamageBonus": "1"
+		},
+		"description": "",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

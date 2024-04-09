@@ -1,0 +1,19 @@
+{
+	"_id": "yPHtmJsHRFQs3sID",
+	"_key": "!items!yPHtmJsHRFQs3sID",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/commodities/flowers/lotus-purple.webp",
+	"name": "Additional Black Lotus Talent",
+	"system": {
+		"description": "<p>Roll an additional talent on the @UUID[Compendium.shadowdark.rollable-tables.RollTable.pQAyZAcfrs9JrG0Q]{Black Lotus Talents} table.</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

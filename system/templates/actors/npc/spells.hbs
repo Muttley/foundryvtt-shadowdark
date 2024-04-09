@@ -56,16 +56,21 @@
 			<tr
 				class="item"
 				data-item-id="{{spell._id}}"
+				draggable="true"
 			>
 				<td>
 					<a
 						class="item context"
 						data-item-id="{{spell._id}}"
+						{{#unless spell.system.lost}}
+							data-action="cast-npc-spell"
+							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+						{{/unless}}
 						{{#if spell.system.lost}}style="text-decoration: line-through;"{{/if}}
 					>
-						<b>{{spell.name}}</b>. {{{spell.description}}}<br>
+						<b>{{spell.name}}</b>.
 					</a>
-
+					{{{spell.description}}}<br>
 
 					<footer class="details-footer">
 						<ul class="tags">

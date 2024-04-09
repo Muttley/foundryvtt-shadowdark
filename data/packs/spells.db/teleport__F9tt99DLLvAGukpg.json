@@ -1,0 +1,27 @@
+{
+	"_id": "F9tt99DLLvAGukpg",
+	"_key": "!items!F9tt99DLLvAGukpg",
+	"effects": [
+	],
+	"folder": "a6WcvmZpOASURb60",
+	"img": "icons/magic/light/projectile-flare-blue.webp",
+	"name": "Teleport",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You and any willing creatures you choose within close range teleport to a location you specify on your same plane. </p><p></p><p>You can travel to a known teleportation sigil or to a location you've been before. Otherwise, you have a 50% chance of arriving off-target.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

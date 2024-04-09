@@ -1,0 +1,30 @@
+{
+	"_id": "otS81dwxCjBjxPLa",
+	"_key": "!items!otS81dwxCjBjxPLa",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/blade-tip-energy-green.webp",
+	"name": "Paralyze a Target",
+	"system": {
+		"bonuses": {
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "<p>1/day, paralyze a target of LV 9 or less you damage with a weapon for 1d4 rounds.</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

@@ -7,6 +7,21 @@
 			editable=editable
 		}}
 	</div>
+	<div class="choice-selector item-detail">
+		{{>
+			items/partials/choice-selector
+			config=languageChoicesConfig
+			editable=editable
+		}}
+		<div class="item-detail">
+			<label>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</label>
+			{{numberInput
+				item.system.languages.select
+				name="system.languages.select"
+				placeholder="0"
+			}}
+		</div>
+	</div>
 	<div class="language-detail">
 		<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
 		{{numberInput
@@ -14,8 +29,7 @@
 			name="system.languages.common"
 			placeholder="0"
 		}}
-	</div>
-	<div class="language-detail">
+		<br>
 		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
 		{{numberInput
 			item.system.languages.rare
@@ -36,5 +50,28 @@
 			name="system.talentChoiceCount"
 			placeholder="0"
 		}}
+	</div>
+	<h4 class="section-header">{{localize "SHADOWDARK.apps.character-generator.title"}}</h4>
+	<div>
+		<label title="{{localize "SHADOWDARK.ancestry.tooltip.weight"}}">Random Weight</label>
+		{{numberInput
+			item.system.randomWeight
+			name="system.randomWeight"
+			placeholder="1"
+		}}
+	</div>
+	<div style="grid-column: 2 / span 2;">
+	<label>{{localize "SHADOWDARK.ancestry.nametable.label"}}</label>
+	<div style="background-color: rgba(0, 0, 0, 0.05);">
+		{{#unless system.nameTable}}
+			{{localize "SHADOWDARK.dragdrop"}}
+		{{/unless}}
+		{{#if item.system.nameTable}}
+			<div style="white-space: nowrap;">
+			<a class="fas fa-delete-right" data-action="remove-name-table"></a>
+			<a class="content-link" data-uuid="{{item.system.nameTable}}">{{uuidToName item.system.nameTable}}</a>
+			</div>
+		{{/if}}
+	</div>
 	</div>
 </div>

@@ -1,0 +1,30 @@
+{
+	"_id": "oLk969u726Pfpx1W",
+	"_key": "!items!oLk969u726Pfpx1W",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+	"name": "Walk on Sheer Surfaces",
+	"system": {
+		"bonuses": {
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1",
+			"rangedAttackBonus": "1"
+		},
+		"description": "<p>1/day, you can walk on sheer surfaces like walls for 1d4 rds</p>",
+		"level": 0,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

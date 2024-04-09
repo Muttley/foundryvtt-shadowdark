@@ -1,0 +1,27 @@
+{
+	"_id": "UnuvZF7OhxP4W1WW",
+	"_key": "!items!UnuvZF7OhxP4W1WW",
+	"effects": [
+	],
+	"folder": "ggJPmGKdO4BGhp6U",
+	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"name": "World Tree",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>The roots of the life-giving World Tree wrap around the soul of a creature you touch. </p><p></p><p>For the spell's duration, the target can't be brought below 1 HP.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "touch",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

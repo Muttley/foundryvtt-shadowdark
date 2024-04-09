@@ -6,7 +6,7 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"duMGdmSW8MMrWDVt"
+		"UndMhFruioKe37n4"
 	],
 	"name": "Ogre",
 	"prototypeToken": {
@@ -22,7 +22,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -115,7 +115,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "<p><span class=\"fontstyle0\"><em>A massive, dim-witted brute with tusks and a heavy frame. Often lords over goblins or orcs.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">9, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">30, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 greatclub +6 (2d6), </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near, </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+4, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+3, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">6</span></p>",
+		"notes": "\n\t<p><i> A massive, dim-witted brute with tusks and a heavy frame. Often lords over goblins or orcs. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 30, <strong>ATK</strong> 2 greatclub +6 (2d6), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +3, <strong>I</strong> -2, <strong>W</strong> -2, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

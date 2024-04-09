@@ -6,8 +6,8 @@
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
-		"EmPgirFQm4Hz79rt",
-		"aTnqB0marf2L8StW"
+		"ER3cAHcECScSdQKw",
+		"9ZDuyMeBgfqKzP1X"
 	],
 	"name": "Stingbat",
 	"prototypeToken": {
@@ -23,7 +23,7 @@
 		"detectionModes": [
 		],
 		"displayBars": 0,
-		"displayName": 20,
+		"displayName": 0,
 		"disposition": -1,
 		"flags": {
 		},
@@ -115,8 +115,8 @@
 			"value": 1
 		},
 		"move": "near",
-		"moveNote": "Fly",
-		"notes": "<p><span class=\"fontstyle0\"><em>Darting, orange insect-bat with four wings and needlelike beak.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">4, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">1 beak +2 (1d4 + blood drain), </span><span class=\"fontstyle2\">MV </span><span class=\"fontstyle3\">near (fly), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-2, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">N, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">1</span></p><p></p><p><span class=\"fontstyle2\"><strong>Blood Drain.</strong> </span><span class=\"fontstyle3\">Attach to bitten target; auto-hit the next round. DC 9 STR on turn to remove.</span></p>",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Darting, orange insect-bat with four wings and needlelike beak. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 4, <strong>ATK</strong> 1 beak +2 (1d4 + blood drain), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p>\n\t<p><strong> Blood Drain</strong>. Attach to bitten target; auto-hit the next round. DC 9 STR on turn to remove.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

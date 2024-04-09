@@ -1,0 +1,17 @@
+{
+	"_id": "OtNVubibwRxLDwX6",
+	"_key": "!actors.items!YHdOAuMUdCigLIHR.OtNVubibwRxLDwX6",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Constrict",
+	"system": {
+		"description": "<p>Contested STR to hold target immobile for one round.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

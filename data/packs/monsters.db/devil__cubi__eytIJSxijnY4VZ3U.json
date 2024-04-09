@@ -1,0 +1,124 @@
+{
+	"_id": "eytIJSxijnY4VZ3U",
+	"_key": "!actors!eytIJSxijnY4VZ3U",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"hZk7pEWkhv6XA3GA",
+		"6YCyLoLyW57jRgrB",
+		"LKGE812rSSd11c8Q",
+		"QuKuNS7TzQQaDjsO"
+	],
+	"name": "Devil, Cubi",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Cubi",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 5
+			},
+			"con": {
+				"mod": 2
+			},
+			"dex": {
+				"mod": 4
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 2
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 14
+			},
+			"hp": {
+				"hd": 0,
+				"max": 29,
+				"value": 29
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 6
+		},
+		"move": "near",
+		"moveNote": "fly",
+		"notes": "\n\t<p><i> Entrancing humanoids with bat wings and devilish charm. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 29, <strong>ATK</strong> 1 kiss +4 (1d6 + drain) or 1 charm, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +5, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized humanoid.</p><p></p><p><strong>Charm</strong>. One humanoid in near DC 15 CHA or bewitched by cubi for 1d6 hours.</p><p></p><p><strong>Drain</strong>. The target takes 1d6 WIS damage. A target reduced to 0 WIS this way swears its soul to an archdevil.</p><p></p>",
+		"spellcastingAbility": "",
+		"spellcastingAttackNum": 0,
+		"spellcastingBonus": 0
+	},
+	"type": "NPC"
+}

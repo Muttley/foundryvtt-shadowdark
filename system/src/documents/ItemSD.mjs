@@ -141,6 +141,8 @@ export default class ItemSD extends Item {
 		switch (this.type) {
 			case "Armor":
 				return `${basePath}/armor.hbs`;
+			case "Effect":
+				return `${basePath}/effect.hbs`;
 			case "NPC Spell":
 				return `${basePath}/npc-spell.hbs`;
 			case "Potion":

@@ -1,0 +1,27 @@
+{
+	"_id": "M702ErO4KOtMJzsK",
+	"_key": "!items!M702ErO4KOtMJzsK",
+	"effects": [
+	],
+	"folder": "JWPZqQ3Dk9n1iW1g",
+	"img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+	"name": "Animate Dead",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You touch one humanoid’s remains, and it rises as a zombie or skeleton under your control. </p><p></p><p>The remains must have at least three limbs and its head intact. The undead creature acts on your turn. After 1 day, the creature collapses into grave dust.</p>",
+		"duration": {
+			"type": "days",
+			"value": "1"
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "close",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

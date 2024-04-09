@@ -1,0 +1,26 @@
+{
+	"_id": "FmrC0mHGUBAGpc5P",
+	"_key": "!actors.items!Fo9DMEiLgAJzsrJM.FmrC0mHGUBAGpc5P",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
+	"name": "Life Drain",
+	"system": {
+		"attack": {
+			"num": "1"
+		},
+		"bonuses": {
+			"attackBonus": 0
+		},
+		"description": "<p><span class=\"fontstyle2\">1d4 CON damage. Death if reduced to 0 CON.</span></p>",
+		"predefinedEffects": "",
+		"ranges": [
+			"close"
+		],
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Special Attack"
+}

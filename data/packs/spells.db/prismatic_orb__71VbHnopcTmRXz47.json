@@ -1,0 +1,27 @@
+{
+	"_id": "71VbHnopcTmRXz47",
+	"_key": "!items!71VbHnopcTmRXz47",
+	"effects": [
+	],
+	"folder": "a6WcvmZpOASURb60",
+	"img": "icons/magic/water/orb-water-transparent.webp",
+	"name": "Prismatic Orb",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
+		],
+		"description": "<p>You send a strobing orb of energy streaking toward a target within range. </p><p></p><p>Choose an energy type from fire, cold, or electricity. The orb deals 3d8 damage and delivers a concussive blast of the chosen energy type. </p><p></p><p>If the energy type is anathema to the target's existence (for example, cold energy against a fire elemental), the orb deals double damage to it, instead.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "far",
+		"source": {
+			"title": "core-rules"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

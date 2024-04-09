@@ -1,5 +1,11 @@
 export default class UtilitySD {
 
+	// Checks that the current user has permissions to create Actors
+	//
+	static canCreateCharacter() {
+		return game.permissions.ACTOR_CREATE.includes(game.user.role);
+	}
+
 	/* Create a roll Macro from an Item dropped on the hotbar.
 	 * Get an existing item macro if one exists, otherwise create a new one.
 	 *
@@ -68,12 +74,22 @@ export default class UtilitySD {
 		});
 
 		for (const itemUuid of items) {
-			selectedItems.push(await fromUuid(itemUuid));
+			selectedItems.push(await this.getFromUuid(itemUuid));
 		}
 
 		selectedItems.sort((a, b) => a.name.localeCompare(b.name));
 
 		return [selectedItems, unselectedItems];
+	}
+
+	static async getFromUuid(uuid) {
+		const itemObj = await fromUuid(uuid);
+		if (itemObj) {
+			return itemObj;
+		}
+		else {
+			return {name: "[Invalid ID]", uuid: uuid};
+		}
 	}
 
 	static getNextDieInList(die, allDice) {
@@ -112,5 +128,91 @@ export default class UtilitySD {
 				);
 			}
 		}
+	}
+
+	/**
+	 * Asks the user for input if necessary for an effect that requires said input.
+	 * @param {Item} item - Item that has the effects
+	 * @param {*} effect - The effect being analyzed
+	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
+	 * @returns {Object} - Object updated with the changes
+	 */
+	static async modifyEffectChangesWithInput(item, effect, key = false) {
+		// Create an object out of the item to modify before creating
+		const itemObject = item.toObject();
+		let name = itemObject.name;
+
+		const changes = await Promise.all(
+			effect.changes.map(async c => {
+				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
+					const effectKey = (key) ? key : c.key.split(".")[2];
+
+					// Ask for user input
+					let linkedName;
+					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
+
+					if (c.value) {
+						name += ` (${linkedName})`;
+					}
+				}
+				return c;
+			})
+		);
+
+		// Modify the Effect object
+		itemObject.effects.map(e => {
+			if (e._id === effect._id) {
+				e.changes = changes;
+				itemObject.name = name;
+			}
+			return e;
+		});
+		return itemObject;
+	}
+
+	/**
+	 * Contains logic that handles any complex effects, where the user
+	 * needs to provide input to determine the effect.
+	 * @param {Item} item - The item being created
+	 */
+	static async createItemWithEffect(item) {
+		let itemObj = item.toObject();
+		await Promise.all(itemObj.effects?.map(async e => {
+
+			// If the item contains effects that require user input,
+			// ask and modify talent before creating
+			if (
+				e.changes?.some(c =>
+					CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)
+				)
+			) {
+				// Spell Advantage requires special handling as it uses the `advantage` bons
+				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
+					// If there is no value with REPLACME, it is another type of advantage talent
+					if (e.changes.some(c => c.value === "REPLACEME")) {
+						const key = "spellAdvantage";
+						itemObj = await this.modifyEffectChangesWithInput(item, e, key);
+					}
+				}
+				else {
+					itemObj = await this.modifyEffectChangesWithInput(item, e);
+				}
+			}
+		}));
+
+		// If any effects was created without a value, we don't create the item
+		if (itemObj.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
+			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
+		);
+
+		// Activate lightsource tracking
+		if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+			const duration = itemObj.totalDuration;
+			itemObj.system.light.isSource = true;
+			itemObj.system.light.longevitySecs = duration;
+			itemObj.system.light.remainingSecs = duration;
+			itemObj.system.light.longevityMins = duration / 60;
+		}
+		return itemObj;
 	}
 }

@@ -82,24 +82,44 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onEffectTransfer(event)
 		);
 
+		html.find("[data-action=remove-name-table]").click(
+			event => this._onRemoveTable(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
 
 	async getAncestrySelectorConfigs(context) {
-		const [selectedLanguages, availableLanguages] =
+
+		const [fixedLanguages, availableFixedLanguages] =
 			await shadowdark.utils.getDedupedSelectedItems(
 				await shadowdark.compendiums.languages(),
 				this.item.system.languages.fixed ?? []
 			);
+		const [selectedLanguages, availableSelectLanguages] =
+		await shadowdark.utils.getDedupedSelectedItems(
+			await shadowdark.compendiums.languages(),
+			this.item.system.languages.selectOptions ?? []
+		);
 
 		context.fixedLanguagesConfig = {
-			availableItems: availableLanguages,
+			availableItems: availableFixedLanguages,
 			choicesKey: "languages.fixed",
 			isItem: true,
 			label: game.i18n.localize("SHADOWDARK.ancestry.languages.label"),
 			name: "system.languages.fixed",
 			prompt: game.i18n.localize("SHADOWDARK.ancestry.languages.prompt"),
+			selectedItems: fixedLanguages,
+		};
+
+		context.languageChoicesConfig = {
+			availableItems: availableSelectLanguages,
+			choicesKey: "languages.selectOptions",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.language_choices.label"),
+			name: "system.languages.selectOptions",
+			prompt: game.i18n.localize("SHADOWDARK.class.language_choices.prompt"),
 			selectedItems: selectedLanguages,
 		};
 
@@ -150,14 +170,29 @@ export default class ItemSheetSD extends ItemSheet {
 				classTalentTable.name.replace(/^Class\s+Talents:\s/, "");
 		}
 
-		const [selectedLanguages, availableLanguages] =
-			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.languages(),
-				this.item.system.languages.selectOptions ?? []
-			);
+		const [fixedLanguages, availableFixedLanguages] =
+		await shadowdark.utils.getDedupedSelectedItems(
+			await shadowdark.compendiums.languages(),
+			this.item.system.languages.fixed ?? []
+		);
+		const [selectedLanguages, availableSelectLanguages] =
+		await shadowdark.utils.getDedupedSelectedItems(
+			await shadowdark.compendiums.languages(),
+			this.item.system.languages.selectOptions ?? []
+		);
+
+		context.fixedLanguagesConfig = {
+			availableItems: availableFixedLanguages,
+			choicesKey: "languages.fixed",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.languages.label"),
+			name: "system.languages.fixed",
+			prompt: game.i18n.localize("SHADOWDARK.class.language_choices.prompt"),
+			selectedItems: fixedLanguages,
+		};
 
 		context.languageChoicesConfig = {
-			availableItems: availableLanguages,
+			availableItems: availableSelectLanguages,
 			choicesKey: "languages.selectOptions",
 			isItem: true,
 			label: game.i18n.localize("SHADOWDARK.class.language_choices.label"),
@@ -259,6 +294,13 @@ export default class ItemSheetSD extends ItemSheet {
 			? true
 			: false;
 
+		if ((item.type === "Class") && (item.system.spellcasting.class !== "__not_spellcaster__")) {
+			this.spellsKnown = true;
+		}
+		else {
+			this.spellsKnown = false;
+		}
+
 		const showTab = {
 			details: [
 				"Ancestry",
@@ -284,16 +326,13 @@ export default class ItemSheetSD extends ItemSheet {
 			].includes(item.type),
 
 			effects: (
-				["Effect", "Talent"].includes(item.type)
+				["Boon", "Effect", "Talent"].includes(item.type)
 					|| item.system.magicItem
 			) ? true : false,
 			light: item.system.light?.isSource ?? false,
 			description: true,
-			descriptionOnly: [
-				"Background",
-				"NPC Feature",
-			].includes(item.type),
 			titles: item.type === "Class",
+			spellsknown: this.spellsKnown,
 		};
 
 		foundry.utils.mergeObject(context, {
@@ -365,6 +404,17 @@ export default class ItemSheetSD extends ItemSheet {
 			}
 		}
 
+		// initialize spellsknown table if not already set on a spellcaster class item
+		if (this.spellsKnown && !item.system.spellcasting.spellsknown) {
+			item.system.spellcasting.spellsknown = {};
+			for (let i = 1; i <= 10; i++) {
+				item.system.spellcasting.spellsknown[i] = {};
+				for (let j = 1; j <= 5; j++) {
+					item.system.spellcasting.spellsknown[i][j] = null;
+				}
+			}
+		}
+
 		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
 			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
 		}
@@ -375,7 +425,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		}
 
-		if (item.type === "Talent" || item.type === "Effect" || item.system.magicItem ) {
+		if (context.showTab.effects) {
 			context.predefinedEffects = await this._getPredefinedEffectsList();
 			context.effects = item.effects;
 		}
@@ -416,7 +466,10 @@ export default class ItemSheetSD extends ItemSheet {
 		const deleteUuid = $(event.currentTarget).data("uuid");
 		const choicesKey = $(event.currentTarget).data("choices-key");
 
-		const currentChoices = this.item.system[choicesKey] ?? [];
+		// handles cases where choicesKey is nested property.
+		const currentChoices = choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
 
 		const newChoices = [];
 		for (const itemUuid of currentChoices) {
@@ -485,19 +538,10 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (uuid === null) return;
 
-		const splitKey = choicesKey.split(".");
-
-		let currentChoices;
-		if (splitKey.length === 1) {
-			currentChoices = this.item.system[choicesKey] ?? [];
-		}
-		else if (splitKey.length === 2) {
-			const choiceObject = this.item.system[splitKey[0]] ?? {};
-			currentChoices = choiceObject[splitKey[1]] ?? [];
-		}
-		else {
-			// TODO throw error?
-		}
+		// handles cases where choicesKey is nested property.
+		let currentChoices = choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
 
 		if (currentChoices.includes(uuid)) return; // No duplicates
 
@@ -604,6 +648,8 @@ export default class ItemSheetSD extends ItemSheet {
 		switch (data.type) {
 			case "Item":
 				return this._onDropItemSD(event, data);
+			case "RollTable":
+				return this._onDropTable(event, data);
 			default:
 				return super._onDrop();
 		}
@@ -638,6 +684,16 @@ export default class ItemSheetSD extends ItemSheet {
 		updateData.system.spellName = droppedItem.name;
 
 		this.item.update(updateData);
+	}
+
+	async _onDropTable(event, data) {
+		if (this.item.type === "Ancestry") {
+			this.item.update({"system.nameTable": data.uuid});
+		}
+	}
+
+	async _onRemoveTable(event, data) {
+		this.item.update({"system.nameTable": ""});
 	}
 
 	_onItemSelection(event) {
@@ -689,6 +745,7 @@ export default class ItemSheetSD extends ItemSheet {
 				const updateData = this._getSubmitData();
 
 				delete updateData["system.languages.fixed"];
+				delete updateData["system.languages.selectOptions"];
 				delete updateData["system.talents"];
 
 				this.item.update(updateData);

@@ -1,0 +1,17 @@
+{
+	"_id": "C1QYDiRg2fhkZMzb",
+	"_key": "!actors.items!dSiRSDzrV4AJNnMk.C1QYDiRg2fhkZMzb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Lycanthropy",
+	"system": {
+		"description": "<p>If 12 or more damage from the same wererat, contract lycanthropy.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

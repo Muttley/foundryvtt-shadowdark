@@ -1,0 +1,28 @@
+{
+	"_id": "T8NL6GglkMi1FmVr",
+	"_key": "!items!T8NL6GglkMi1FmVr",
+	"effects": [
+	],
+	"folder": "sE2Ooa1HgAMXmCra",
+	"img": "icons/consumables/fruit/huckleberry.webp",
+	"name": "Mistletoe",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
+		],
+		"description": "<p>Two creatures you can see within near of you become enchanted with each other for 1d8 days. </p><p></p><p>Each time one of the affected creatures takes damage, it may make a DC 15 Charisma check. On a success, the spell ends.</p>",
+		"duration": {
+			"type": "days",
+			"value": "1d8"
+		},
+		"lost": false,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"range": "near",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

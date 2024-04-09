@@ -1,0 +1,27 @@
+{
+	"_id": "MkpBTRyylYi3oQr6",
+	"_key": "!items!MkpBTRyylYi3oQr6",
+	"effects": [
+	],
+	"folder": "lvvfGVYh4oLZsbpP",
+	"img": "icons/creatures/birds/corvid-flying-wings-purple.webp",
+	"name": "Raven",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
+		],
+		"description": "<p>You whisper a message to Odin's own ravens, and they carry it across all worlds to its recipient. </p><p></p><p>Speak a short sentence, and the name of its recipient, dead or alive. That creature hears your utterance whispered in its mind.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"predefinedEffects": "",
+		"range": "unlimited",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

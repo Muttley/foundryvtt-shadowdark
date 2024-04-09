@@ -193,6 +193,8 @@ export default class RollSD extends Roll {
 	 */
 	static _partsAdvantage(rollParts,	adv=0) {
 		const splitDice = rollParts[0].split("d");
+		if (splitDice[0] === "") splitDice[0] = 1;
+
 		if (parseInt(splitDice[0], 10) !== 1) return rollParts;
 
 		if (adv === 1) {

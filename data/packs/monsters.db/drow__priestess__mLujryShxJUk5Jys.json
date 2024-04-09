@@ -1,0 +1,126 @@
+{
+	"_id": "mLujryShxJUk5Jys",
+	"_key": "!actors!mLujryShxJUk5Jys",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
+	"items": [
+		"NnZ3IsiDRHj9gcRv",
+		"c4CJ0wn1uBMe1tzu",
+		"yAG5Vh0Tlii8gEok",
+		"DFEKtzDMACzvHFPY",
+		"KCrugEfg6OGbxtrW",
+		"mohcAqC1At1TVnFw"
+	],
+	"name": "Drow, Priestess",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"name": "Drow Priestess",
+		"prependAdjective": false,
+		"randomImg": false,
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"contrast": 0,
+			"enabled": false,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+		},
+		"width": 1
+	},
+	"system": {
+		"abilities": {
+			"cha": {
+				"mod": 3
+			},
+			"con": {
+				"mod": 1
+			},
+			"dex": {
+				"mod": 3
+			},
+			"int": {
+				"mod": 3
+			},
+			"str": {
+				"mod": 2
+			},
+			"wis": {
+				"mod": 4
+			}
+		},
+		"alignment": "chaotic",
+		"attributes": {
+			"ac": {
+				"value": 16
+			},
+			"hp": {
+				"hd": 0,
+				"max": 28,
+				"value": 28
+			}
+		},
+		"darkAdapted": true,
+		"level": {
+			"value": 6
+		},
+		"move": "near",
+		"moveNote": "",
+		"notes": "\n\t<p><i> A statuesque female drow with a crown of metal spider webs and an imperious gaze. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16 (mithral chainmail), <strong>HP</strong> 28, <strong>ATK</strong> 3 snake whip (near) +4 (1d8 + poison) or 1 spell +4, <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +3, <strong>W</strong> +4, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Poison</strong>. DC 15 CON or paralyzed 1d4 rounds.</p><p></p><p><strong>Sunblind</strong>. Blinded in bright light.</p><p></p><p><strong>Snuff (WIS Spell)</strong>. DC 12. Extinguish all light sources (even magical) within near.</p><p></p><p><strong>Summon Spiders (WIS Spell)</strong>. DC 14. Summon 2d4 loyal giant spiders that appear within near. They stay for 5 rounds.</p><p></p><p><strong>Web (WIS Spell)</strong>. DC 13. A near-sized cube of webs within far immobilizes all inside it for 5 rounds. DC 15 STR on turn to break free.</p><p></p>",
+		"spellcastingAbility": "wis",
+		"spellcastingAttackNum": 1,
+		"spellcastingBonus": 4
+	},
+	"type": "NPC"
+}

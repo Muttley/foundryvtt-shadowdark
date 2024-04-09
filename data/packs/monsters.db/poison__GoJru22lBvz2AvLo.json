@@ -1,0 +1,17 @@
+{
+	"_id": "GoJru22lBvz2AvLo",
+	"_key": "!actors.items!VxV56gRyhUJfXu83.GoJru22lBvz2AvLo",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Poison",
+	"system": {
+		"description": "<p>DC 15 CON or go to 0 HP.</p>",
+		"predefinedEffects": "",
+		"source": {
+			"title": ""
+		}
+	},
+	"type": "NPC Feature"
+}

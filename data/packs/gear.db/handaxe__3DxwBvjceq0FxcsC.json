@@ -1,0 +1,58 @@
+{
+	"_id": "3DxwBvjceq0FxcsC",
+	"_key": "!items!3DxwBvjceq0FxcsC",
+	"effects": [
+	],
+	"folder": "LVzvIhYHieRT4O6q",
+	"img": "icons/weapons/axes/axe-broad-purple.webp",
+	"name": "Handaxe",
+	"system": {
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 5,
+			"sp": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><strong>Finesse (F).</strong> You can use your Strength or Dexterity when attacking with this weapon.</p><p></p><p><strong>Thrown (Th).</strong> You can throw this weapon to make a ranged attack with it using Strength.</p>",
+		"equipped": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-3"
+		},
+		"stashed": false,
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

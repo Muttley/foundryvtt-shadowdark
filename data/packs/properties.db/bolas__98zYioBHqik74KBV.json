@@ -1,0 +1,19 @@
+{
+	"_id": "98zYioBHqik74KBV",
+	"_key": "!items!98zYioBHqik74KBV",
+	"effects": [
+	],
+	"folder": "vFaoMFPGDGlKn4gF",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Bolas",
+	"system": {
+		"description": "<p>When you hit a legged creature the size of a horse or smaller, the target's speed is reduced to close until it frees itself (DC 15 STR or DEX check).</p>",
+		"itemType": "weapon",
+		"predefinedEffects": "",
+		"source": {
+			"page": 0,
+			"title": "cursed-scroll-2"
+		}
+	},
+	"type": "Property"
+}

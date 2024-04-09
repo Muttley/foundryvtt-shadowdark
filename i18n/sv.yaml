@@ -15,6 +15,8 @@ SHADOWDARK.alignment.lawful: Laglydig
 SHADOWDARK.alignment.neutral: Neutral
 SHADOWDARK.ancestry.languages.label: Ursprungsspråk
 SHADOWDARK.ancestry.languages.prompt: Välj språk...
+SHADOWDARK.ancestry.nametable.label: Slumpmässig namntabell
+SHADOWDARK.ancestry.nametable.placeholder: Dra rulltabell hit
 SHADOWDARK.ancestry.talents.count.label: Antal val
 SHADOWDARK.ancestry.talents.label: Ursprungstalanger
 SHADOWDARK.ancestry.talents.prompt: Välj talang...
@@ -38,6 +40,12 @@ SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
 SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
+SHADOWDARK.apps.character-generator.error.create: Det gick inte att skapa spelarkaraktär {error}
+SHADOWDARK.apps.character-generator.error.name: Karaktärens namn får inte vara tomt
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Det går inte att rulla ett slumpmässigt namn utan ett valt ursprung
+SHADOWDARK.apps.character-generator.name: Karaktärsnamn
+SHADOWDARK.apps.character-generator.success: Karaktären skapades
+SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Vill du ta bort {effectName} effekten?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Radera effekt?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Löpt ut
@@ -57,6 +65,14 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} sekunder kvar"
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} veckor kvar"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} år kvar"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Högerklick] Ta bort effekt"
+SHADOWDARK.apps.item-importer.import_button: Importera föremål
+SHADOWDARK.apps.item-importer.instruction1: 1. Kopiera monstertext från boken.
+SHADOWDARK.apps.item-importer.instruction2a: 2. Klistra in text i denna ruta som har samma format som visas i kärnreglerna.
+SHADOWDARK.apps.item-importer.instruction2b: Föremålets namn
+SHADOWDARK.apps.item-importer.instruction2c: Beskrivande text
+SHADOWDARK.apps.item-importer.instruction2d: Funktioner
+SHADOWDARK.apps.item-importer.instruction3: 3. Klicka på importera.
+SHADOWDARK.apps.item-importer.title: Importera föremål
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
 SHADOWDARK.apps.monster-importer.instruction1: 1. Kopiera monstertext från boken.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Klistra in text i den här rutan efter det monsterformat som visas i kärnreglerna. Lägg till en tom rad mellan varje förmåga.
@@ -73,6 +89,16 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopiera innehållet i f
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Klicka på importera.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Öppen generator
 SHADOWDARK.apps.shadowdarkling-importer.title: Importera Shadowdarkling
+SHADOWDARK.apps.spell-importer.import_button: Importera besvärjelse
+SHADOWDARK.apps.spell-importer.instruction1: 1. Kopiera besvärjelsetext från boken.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Klistra in text i denna ruta som har samma format som visas i kärnreglerna.
+SHADOWDARK.apps.spell-importer.instruction2b: Besvärjelsenamn
+SHADOWDARK.apps.spell-importer.instruction2c: Nivå och klass
+SHADOWDARK.apps.spell-importer.instruction2d: Varaktighet
+SHADOWDARK.apps.spell-importer.instruction2e: Räckvidd
+SHADOWDARK.apps.spell-importer.instruction2f: Beskrivning
+SHADOWDARK.apps.spell-importer.instruction3: 3. Klicka på importera.
+SHADOWDARK.apps.spell-importer.title: Importera besvärjelse
 SHADOWDARK.armor.properties.disadvantage_stealth: Nackdel/Smyga
 SHADOWDARK.armor.properties.disadvantage_swimming: Nackdel/Simma
 SHADOWDARK.armor.properties.no_swimming: Ingen Simma
@@ -142,7 +168,7 @@ SHADOWDARK.class.priest: Präst
 SHADOWDARK.class.ranger: Jägare
 SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.spellcasting_class.label: Besvärjelseklass
-SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
+SHADOWDARK.class.spellcasting.base_difficulty.label: Grundsvårighet för besvärjelse
 SHADOWDARK.class.talent_choices.count.label: Antal val
 SHADOWDARK.class.talent_choices.label: Talangval
 SHADOWDARK.class.talent_choices.prompt: Välj talang...
@@ -232,7 +258,7 @@ SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
 SHADOWDARK.effect_duration.hours: Timmar
 SHADOWDARK.effect_duration.minutes: Minuter
 SHADOWDARK.effect_duration.seconds: Sekunder
-SHADOWDARK.effect_duration.turns: Turns
+SHADOWDARK.effect_duration.turns: Omgångar
 SHADOWDARK.effect_duration.unlimited: Obegränsad
 SHADOWDARK.effect.custom: Anpassade effekter
 SHADOWDARK.effect.footer.add_custom: Lägg till egen effekt
@@ -260,11 +286,12 @@ SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
+SHADOWDARK.form.section_header.names.label: Namn
 SHADOWDARK.form.section_header.spellcasting.label: Besvärjelser
 SHADOWDARK.form.section_header.talents.label: Talanger
 SHADOWDARK.hotbar.abilityLost: Förmåga inte tillgänglig
 SHADOWDARK.hotbar.moreThanOneItemWithName: Mer än ett objekt som hittats med det namnet
-SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
+SHADOWDARK.hotbar.noActorSelected: Du måste välja en aktör för att använda detta makro
 SHADOWDARK.hotbar.noItemWithName: Inget sådant objekt hittades på karaktären
 SHADOWDARK.hotbar.spellLost: Besvärjelse inte tillgänglig
 SHADOWDARK.inventory.coins: Mynt
@@ -472,7 +499,7 @@ SHADOWDARK.migration.completed_migration: Uppgraderingar till Shadowdark RPG utf
 SHADOWDARK.migration.completed_schema: Uppgraderingar till Shadowdark RPG v{version} schemat utförda
 SHADOWDARK.module_art_config.portraits: Porträtt
 SHADOWDARK.module_art_config.tokens: Tokens
-SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
+SHADOWDARK.notify.combat.clockwise_initiative_only_gm: När medsols initiativ är aktiverat, kan endast GM rulla initiativ.
 SHADOWDARK.npc_attack.type.physical: Fysisk
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Nära
@@ -535,8 +562,8 @@ SHADOWDARK.settings.source_filter.prompt: Välj källa...
 SHADOWDARK.settings.source_filter.save_button: Spara inställningarna
 SHADOWDARK.settings.source_filter.these_used: Endast följande källor kommer att tillåtas
 SHADOWDARK.settings.source_filter.title: Filter för bokkällor
-SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.systemVersion.name: System Version
+SHADOWDARK.settings.systemVersion.hint: Sparar den aktuella schemaversionen för Shadowdark RPG systemdata. (ändra inte detta om du inte vet vad du gör)
+SHADOWDARK.settings.systemVersion.name: Systemversion
 SHADOWDARK.settings.track_light_sources.hint: Om markerad kommer systemet att spåra och uppdatera den tid som återstår på alla aktiva ljuskällor.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Om markerade ljuskällor som tillhör inaktiva (inte inloggade) användare, kommer tiden fortfarande att spåras
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Spåra inaktiva användares ljuskällor
@@ -604,6 +631,7 @@ SHADOWDARK.sheet.player.deity.tooltip: Er karaktärs kosmiska länk till de mots
 SHADOWDARK.sheet.player.languages: Språk
 SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
+SHADOWDARK.sheet.player.name.label: Namn
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
 SHADOWDARK.sheet.player.roll_initiative: Rulla initiativ
 SHADOWDARK.sheet.player.spells_tier: Grad
@@ -641,7 +669,7 @@ SHADOWDARK.spell_duration.instant: Ögonblicklig
 SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_duration.real_time: Realtid
 SHADOWDARK.spell_duration.rounds: Rundor
-SHADOWDARK.spell_duration.turns: Turns
+SHADOWDARK.spell_duration.turns: Omgångar
 SHADOWDARK.spell_range.close: Kroppsnära
 SHADOWDARK.spell_range.far: Avstånd
 SHADOWDARK.spell_range.near: Nära

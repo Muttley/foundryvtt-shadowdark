@@ -1,0 +1,19 @@
+{
+	"_id": "t7aT7LapP8xm9LX4",
+	"_key": "!items!t7aT7LapP8xm9LX4",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+	"name": "Additional Use of Smoke Step",
+	"system": {
+		"description": "<p>Gain an additional use of your Smoke Step talent.</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

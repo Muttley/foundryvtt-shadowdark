@@ -1,3 +1,59 @@
+# v2.0.0
+
+## Bugfixes
+* [#715] Learned scrolls don't show usual spell icon
+
+## Enhancements
+* [#500] Support added for leveling up characters. A class spells list can be opened from the character sheet spell tab or leveling window.
+* [#644] Improve chat card for Effects
+* [#690] All monsters from the core rules are now available in the monsters compendium.
+* [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
+* [#696] Core rules content was expanded to include Tier 3-5 Wizard and Priest spells. All content from the core rules is now labeld as "Core Rules" in the source selection settings.
+* [#713] Added dice sounds to Character Builder
+* [#718] Fixed an issue where the "common" language was not correctly loading in the Character Generator when selecting classes with fixed languages
+* [#725] Update token mapping for new core monsters.
+* [#728] Spell items can now be dragged onto NPC sheets to add that spell to the NPC's spell list.
+* [#731] Added 1d2 as an option for weapon damage.
+* [#733] Negative Dex modifier not correctly applied to characters with armor
+* [#736] Added random names table for Kobold ancestry
+* [#738] Ancestries can now be given a weight to effect roll chance in the Character Generator. Ancestries from the core rules have been updated to match the randomization table on page 40.
+
+## Feature Notes
+Character leveling now occurs via a structed leveling up systems that is triggered when xp gained meets or exceeds the next level requirement.
+* All HP rolls, talent, and spell selections are now done in the leveling up window.
+* Selecting class while leveling up from 0 to 1
+* Class items now support adding a known spell table.
+* An audit log of character leveling changes is accessible via script under the property actor.auditLog
+
+---
+
+# v1.8.0
+
+## Bugfixes
+* [#689] Can't return to the description page on a Background Item sheet
+* [#703] Error in character creator when blank Ancestry choice selected
+* [#702] Show warning in character creator when rolling a name with no Ancestry selected
+
+## Enhancements
+* [#437] Added Character Builder
+* [#681] Added Item Importer Macro
+* [#692] Added Spell Importer macro
+* [#695] Add ability to have Effects on Boon items
+* [#697] Updated the formating of monster descriptions created with the monster importer.
+* [#704] Open character sheet after it has been created by the character creator
+* [#705] Character creator should be usable by players without giving them full permission to create actors
+* [#708] If user has ACTOR_CREATE permissions already, don't use socket to make GM create character
+
+## Feature Notes
+A new Character Generator is now available via the actors tab. The generator can be used to create new characters randomly or via selection. Features include:
+* All character options respect the source filters in the Shadowdark RPG settings
+* Character names are randomized via a linked roll table based on the selected ancesty
+* level 1 characters still require manually rolling and adding first level talents and spells
+
+Many thanks to *arcos* and *chrpow* for contributing code included in this build
+
+---
+
 # v1.7.6
 
 ## Bugfixes
