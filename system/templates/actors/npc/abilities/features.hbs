@@ -19,13 +19,11 @@
 					data-action="item-use-ability"
 					data-item-id="{{feature.itemId}}"
 				>
-				<b>{{feature.name}}
-				<i class="fas fa-comment fa-lg"></i>
-				.
-				</b>
-
+					<b>{{feature.name}}.
+						<i class="fas fa-comment fa-lg"></i>
+					</b>
+					{{{feature.description}}}
 				</a>
-				{{{feature.description}}}
 			</li>
 		{{/each}}
 	</ol>
