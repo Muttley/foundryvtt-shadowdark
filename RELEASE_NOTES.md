@@ -5,6 +5,7 @@
 
 ## Enhancements
 * [#500] Support added for leveling up characters. A class spells list can be opened from the character sheet spell tab or leveling window.
+* [#644] Improve chat card for Effects
 * [#690] All monsters from the core rules are now available in the monsters compendium.
 * [#694] Content from the Cursed Scroll Zines 1-3 is now available. This includes new Classes, Backgrounds, Deities, Telents, Weapons, Armor, and Spells.
 * [#696] Core rules content was expanded to include Tier 3-5 Wizard and Priest spells. All content from the core rules is now labeld as "Core Rules" in the source selection settings.
