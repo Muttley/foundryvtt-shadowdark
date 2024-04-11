@@ -1,3 +1,10 @@
+# v2.0.1
+
+## Bugfixes
+* [751] Fixes an issue where players are unable to drag spells from the class spell list app.
+
+---
+
 # v2.0.0
 
 ## Bugfixes
