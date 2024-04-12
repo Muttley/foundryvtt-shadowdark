@@ -1,0 +1,42 @@
+{
+	"_id": "PLPiCgwZaEetlx5O",
+	"_key": "!items!PLPiCgwZaEetlx5O",
+	"effects": [
+		"rRaOIGFZ6RzYlvUI"
+	],
+	"folder": null,
+	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+	"name": "Spell Effect: Hallucinate",
+	"system": {
+		"category": "effect",
+		"description": "<p>For the spell's duration, the target cannot act on its turn unless it passes a Wisdom check equal to your last spellcasting check.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

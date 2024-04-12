@@ -1,0 +1,30 @@
+{
+	"_id": "441BBv90QacBfojj",
+	"_key": "!items.effects!0DDkeYKSrNj6JG1l.441BBv90QacBfojj",
+	"changes": [
+		{
+			"key": "system.abilities.int.base",
+			"mode": 3,
+			"priority": null,
+			"value": "3"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 864000,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/fear-fright-white.webp",
+	"name": "Feeble (INT)",
+	"origin": "Item.h9MTxzrrPmyhEmRL",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

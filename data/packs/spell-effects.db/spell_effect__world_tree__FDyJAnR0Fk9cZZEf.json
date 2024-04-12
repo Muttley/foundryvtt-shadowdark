@@ -1,0 +1,65 @@
+{
+	"_id": "FDyJAnR0Fk9cZZEf",
+	"_key": "!items!FDyJAnR0Fk9cZZEf",
+	"effects": [
+		"IVfimqsISUjg71IF"
+	],
+	"folder": null,
+	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"name": "Spell Effect: World Tree",
+	"system": {
+		"abilities": {
+			"int": {
+				"base": "3"
+			},
+			"str": {
+				"base": "3"
+			},
+			"wis": {
+				"base": "3"
+			}
+		},
+		"attributes": {
+			"ac": {
+				"override": "17",
+				"value": "14"
+			}
+		},
+		"bonuses": {
+			"critical": {
+				"multiplier": "4"
+			},
+			"damageMultiplier": "2"
+		},
+		"category": "effect",
+		"description": "<p>For the spell's duration, the target can't be brought below 1 HP.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>You turn a near-sized cube of ground within range into a muddy, boiling bog of quicksand. </p><p></p><p>A creature stuck in the bog can’t move and must succeed on a Dexterity check vs. your spellcasting check to free itself.</p>",
+		"description": "<p>You turn a near-sized cube of ground within range into a muddy, boiling bog of quicksand.</p><p></p><p>A creature stuck in the bog can’t move and must succeed on a Dexterity check vs. your spellcasting check to free itself.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.VOx6yLlQ23XwVvuG]{Spell Effect: Bogboil}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"

@@ -1,0 +1,42 @@
+{
+	"_id": "F89CJeindj8k8oiC",
+	"_key": "!items!F89CJeindj8k8oiC",
+	"effects": [
+		"vMxGVAApQXuIeBXk"
+	],
+	"folder": null,
+	"img": "icons/magic/nature/wolf-paw-glow-orange.webp",
+	"name": "Spell Effect: Shapechanger",
+	"system": {
+		"category": "effect",
+		"description": "<p>You transform yourself and any gear you carry into another natural creature you've seen of level 10 or less. You assume the creature's physical statistics, but you retain your non-physical statistics (such as INT, WIS, and CHA).</p><p></p><p>If you go to 0 HP while under the effects of this spell, you revert to your true form at 1 HP.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

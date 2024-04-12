@@ -1,0 +1,42 @@
+{
+	"_id": "8mFFTIDKLulz3Yp6",
+	"_key": "!items!8mFFTIDKLulz3Yp6",
+	"effects": [
+		"tRdfqDgHVkm9KicF"
+	],
+	"folder": null,
+	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-blue.webp",
+	"name": "Spell Effect: Protection from Energy (Cold)",
+	"system": {
+		"category": "effect",
+		"description": "<p>For the spell's duration, the target is immune to harm from cold.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

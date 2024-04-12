@@ -1,0 +1,42 @@
+{
+	"_id": "VOx6yLlQ23XwVvuG",
+	"_key": "!items!VOx6yLlQ23XwVvuG",
+	"effects": [
+		"pTKFUJ3czAqssXCu"
+	],
+	"folder": null,
+	"img": "icons/creatures/slimes/bubbling-purple.webp",
+	"name": "Spell Effect: Bogboil",
+	"system": {
+		"category": "effect",
+		"description": "<p><span style=\"font-family: Signika, sans-serif\">A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</span></p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

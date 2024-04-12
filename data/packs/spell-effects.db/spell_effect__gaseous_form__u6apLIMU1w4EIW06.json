@@ -1,0 +1,42 @@
+{
+	"_id": "u6apLIMU1w4EIW06",
+	"_key": "!items!u6apLIMU1w4EIW06",
+	"effects": [
+		"zwulssk0c4SQwWbC"
+	],
+	"folder": null,
+	"img": "icons/magic/air/wind-tornado-wall-blue.webp",
+	"name": "Spell Effect: Gaseous Form",
+	"system": {
+		"category": "effect",
+		"description": "<p>You and your gear turn into a cloud of smoke for the spell's duration.</p><p></p><p>You can fly and pass through any gap that smoke could. You can sense the terrain and any movement around you out to a near distance.</p><p></p><p>You can't cast spells while in this form.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

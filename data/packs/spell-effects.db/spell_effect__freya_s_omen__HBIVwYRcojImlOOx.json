@@ -1,0 +1,42 @@
+{
+	"_id": "HBIVwYRcojImlOOx",
+	"_key": "!items!HBIVwYRcojImlOOx",
+	"effects": [
+		"71bMZvK0yxmAAcUL"
+	],
+	"folder": null,
+	"img": "icons/magic/holy/angel-wings-gray.webp",
+	"name": "Spell Effect: Freya's Omen",
+	"system": {
+		"category": "effect",
+		"description": "<p>For the spell's duration, you do not lose the ability to cast a spell if you fail its spellcasting check.</p><p></p><p>If you critically fail a spellcasting check, you may reroll your check once. You must use the new result.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

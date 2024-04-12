@@ -1,0 +1,42 @@
+{
+	"_id": "y7UlIRecQ47S8qCy",
+	"_key": "!items!y7UlIRecQ47S8qCy",
+	"effects": [
+		"xJe5blefAwRNfYJk"
+	],
+	"folder": null,
+	"img": "icons/skills/social/wave-halt-stop.webp",
+	"name": "Spell Effect: Command",
+	"system": {
+		"category": "effect",
+		"description": "<p>The target obeys the command for as long as you focus.</p><p></p><p>If your command is ever directly harmful to the creature, it may make a Charisma check vs. your last spellcasting check. On a success, the spell ends.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,42 @@
+{
+	"_id": "6yYj2FkmYppGAl9N",
+	"_key": "!items!6yYj2FkmYppGAl9N",
+	"effects": [
+		"rRaOIGFZ6RzYlvUI"
+	],
+	"folder": null,
+	"img": "icons/magic/earth/strike-fist-stone-light.webp",
+	"name": "Spell Effect: Pillar of Salt",
+	"system": {
+		"category": "effect",
+		"description": "<p>If you successfully focus on this spell for 3 rounds in a row, the transformation becomes permanent.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

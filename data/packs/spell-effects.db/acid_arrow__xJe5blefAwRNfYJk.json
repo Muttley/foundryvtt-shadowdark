@@ -1,0 +1,24 @@
+{
+	"_id": "xJe5blefAwRNfYJk",
+	"_key": "!items.effects!NXZlCiZI9X3AJc4m.xJe5blefAwRNfYJk",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/acid/projectile-bolts-salvo-green.webp",
+	"name": "Acid Arrow",
+	"origin": "Item.aAdqy5QwVJrT8JWE",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,42 @@
+{
+	"_id": "1zAGVkhuWYmSaxgy",
+	"_key": "!items!1zAGVkhuWYmSaxgy",
+	"effects": [
+		"71bMZvK0yxmAAcUL"
+	],
+	"folder": null,
+	"img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
+	"name": "Spell Effect: Odin's Wisdom",
+	"system": {
+		"category": "effect",
+		"description": "<p>For the spell's duration, add your level as an additional bonus to your Wisdom checks and spellcasting checks.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "1"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,42 @@
+{
+	"_id": "z7X1jRQHFTnSXpds",
+	"_key": "!items!z7X1jRQHFTnSXpds",
+	"effects": [
+		"rRaOIGFZ6RzYlvUI"
+	],
+	"folder": null,
+	"img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+	"name": "Spell Effect: Soulbind",
+	"system": {
+		"category": "effect",
+		"description": "<p>For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p></p><p>This spell ends as soon as the target is affected by another spell.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}
