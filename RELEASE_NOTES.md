@@ -25,9 +25,6 @@ Character leveling now occurs via a structed leveling up systems that is trigger
 * Class items now support adding a known spell table.
 * An audit log of character leveling changes is accessible via script under the property actor.auditLog
 
-## Enhancements
-* [#725] Update token mapping for 2.0.0 core monsters
-
 ---
 
 # v1.8.0
