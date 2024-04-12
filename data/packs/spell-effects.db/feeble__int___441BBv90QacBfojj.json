@@ -5,8 +5,12 @@
 		{
 			"key": "system.abilities.int.base",
 			"mode": 3,
-			"priority": null,
 			"value": "3"
+		},
+		{
+			"key": "system.abilities.int.mod",
+			"mode": 3,
+			"value": "-4"
 		}
 	],
 	"description": "",

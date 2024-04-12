@@ -5,8 +5,12 @@
 		{
 			"key": "system.abilities.cha.base",
 			"mode": 3,
-			"priority": null,
 			"value": "3"
+		},
+		{
+			"key": "system.abilities.cha.mod",
+			"mode": 3,
+			"value": "-4"
 		}
 	],
 	"description": "",

@@ -9,20 +9,9 @@
 	"name": "Spell Effect: Enfeeble (WIS)",
 	"system": {
 		"abilities": {
-			"int": {
-				"base": "3"
-			},
-			"str": {
-				"base": "3"
-			},
 			"wis": {
-				"base": "3"
-			}
-		},
-		"attributes": {
-			"ac": {
-				"override": "17",
-				"value": "14"
+				"base": "3",
+				"mod": "-4"
 			}
 		},
 		"category": "effect",

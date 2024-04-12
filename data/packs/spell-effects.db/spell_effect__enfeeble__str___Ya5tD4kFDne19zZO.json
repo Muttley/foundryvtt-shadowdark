@@ -10,13 +10,8 @@
 	"system": {
 		"abilities": {
 			"str": {
-				"base": "3"
-			}
-		},
-		"attributes": {
-			"ac": {
-				"override": "17",
-				"value": "14"
+				"base": "3",
+				"mod": "-4"
 			}
 		},
 		"category": "effect",

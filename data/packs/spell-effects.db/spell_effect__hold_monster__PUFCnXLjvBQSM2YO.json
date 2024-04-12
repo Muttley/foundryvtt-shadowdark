@@ -2,13 +2,14 @@
 	"_id": "PUFCnXLjvBQSM2YO",
 	"_key": "!items!PUFCnXLjvBQSM2YO",
 	"effects": [
+		"6sDtwzG4ddaew8SZ"
 	],
 	"folder": null,
 	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Spell Effect: Hold Monster",
 	"system": {
 		"category": "effect",
-		"description": "",
+		"description": "<p>If the target is LV 9+, it may make a STR check vs. your last spellcasting check at the start of its turn to end the spell.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

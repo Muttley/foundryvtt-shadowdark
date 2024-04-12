@@ -5,8 +5,12 @@
 		{
 			"key": "system.abilities.dex.base",
 			"mode": 3,
-			"priority": null,
 			"value": "3"
+		},
+		{
+			"key": "system.abilities.dex.mod",
+			"mode": 3,
+			"value": "-4"
 		}
 	],
 	"description": "",
