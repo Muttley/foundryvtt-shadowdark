@@ -2,6 +2,9 @@
 
 ## Bugfixes
 * [751] Fixes an issue where players are unable to drag spells from the class spell list app.
+* [753] Added roll links to the spell text for Fireball, Lightning bolt, and Cloud Kill.
+
+Many thanks to *cmleinz* for contributing code included in this build
 
 ---
 
