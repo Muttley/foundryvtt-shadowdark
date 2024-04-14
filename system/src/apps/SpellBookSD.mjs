@@ -49,6 +49,11 @@ export default class SpellBookSD extends FormApplication {
 
 	}
 
+	/** @inheritdoc */
+	_canDragStart() {
+		return true;
+	}
+
 	/** @override */
 	async getData() {
 
