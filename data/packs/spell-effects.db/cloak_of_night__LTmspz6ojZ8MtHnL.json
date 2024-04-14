@@ -1,0 +1,30 @@
+{
+	"_id": "LTmspz6ojZ8MtHnL",
+	"_key": "!items.effects!3viSgI4JpKsXdaFd.LTmspz6ojZ8MtHnL",
+	"changes": [
+		{
+			"key": "system.attributes.ac.override",
+			"mode": 5,
+			"priority": null,
+			"value": "17"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 8,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/equipment/back/cloak-layered-tattered-purple.webp",
+	"name": "Cloak of Night",
+	"origin": "Compendium.shadowdark.spell-effects.Item.3viSgI4JpKsXdaFd",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -1,0 +1,30 @@
+{
+	"_id": "441BBv90QacBfojj",
+	"_key": "!items.effects!sZ6msFePi3R6DUju.441BBv90QacBfojj",
+	"changes": [
+		{
+			"key": "system.bonuses.damageMultiplier",
+			"mode": 4,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/reptiles/serpent-horned-green.webp",
+	"name": "Envenomed",
+	"origin": "Item.h9MTxzrrPmyhEmRL",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -71,8 +71,10 @@
 							{{#each (addEmptySlots this.objects this.max)}}
 							<fieldset class="items">
 								{{#if this}}
-								<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
-								<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+								<div style="white-space: nowrap;">
+									<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
+									<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+								</div>
 								{{/if}}
 								{{#unless this}}
 									{{localize "SHADOWDARK.apps.level-up.dragdrop"}}

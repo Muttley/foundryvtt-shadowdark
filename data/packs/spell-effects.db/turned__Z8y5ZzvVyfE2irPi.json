@@ -1,0 +1,24 @@
+{
+	"_id": "Z8y5ZzvVyfE2irPi",
+	"_key": "!items.effects!T4LUCIffieQPMGsN.Z8y5ZzvVyfE2irPi",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/death/skeleton-skull-soul-blue.webp",
+	"name": "Turned",
+	"origin": "Compendium.shadowdark.spell-effects.Item.T4LUCIffieQPMGsN",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

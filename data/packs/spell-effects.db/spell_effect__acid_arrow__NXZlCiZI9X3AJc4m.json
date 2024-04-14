@@ -1,0 +1,42 @@
+{
+	"_id": "NXZlCiZI9X3AJc4m",
+	"_key": "!items!NXZlCiZI9X3AJc4m",
+	"effects": [
+		"xJe5blefAwRNfYJk"
+	],
+	"folder": null,
+	"img": "icons/magic/acid/projectile-bolts-salvo-green.webp",
+	"name": "Spell Effect: Acid Arrow",
+	"system": {
+		"category": "effect",
+		"description": "<p>Deals [[/r 1d6]] damage a round. The bolt remains in the target for as long as you focus.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

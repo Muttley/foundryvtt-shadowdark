@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>A creature you touch has a random stat reduced to 3 (-4) for one week. Roll a d6 to determine which stat: </p><p></p><p>1. Strength, 2. Dexterity, 3. Constitution, 4. Intelligence, 5. Wisdom, 6. Charisma. </p><p></p><p>If you fail the spellcasting check, you have a random stat reduced to 3 for a week, instead.</p>",
+		"description": "<p>A creature you touch has a random stat reduced to 3 (-4) for one week. Roll a [[/r d6]] to determine which stat:</p><p></p><p>1. Strength, 2. Dexterity, 3. Constitution, 4. Intelligence, 5. Wisdom, 6. Charisma.</p><p></p><p>If you fail the spellcasting check, you have a random stat reduced to 3 for a week, instead.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Ya5tD4kFDne19zZO]{Spell Effect: Enfeeble (STR)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.1PzBYve4rd4MH6K2]{Spell Effect: Enfeeble (DEX)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Eojo6v3WsiHEDcKm]{Spell Effect: Enfeeble (CON)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.0DDkeYKSrNj6JG1l]{Spell Effect: Enfeeble (INT)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Jlv9MzbDrXu92djm]{Spell Effect: Enfeeble (WIS)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.OTHSzCFY9zLlwzFF]{Spell Effect: Enfeeble (CHA)}</p>",
 		"duration": {
 			"type": "instant",
 			"value": -1

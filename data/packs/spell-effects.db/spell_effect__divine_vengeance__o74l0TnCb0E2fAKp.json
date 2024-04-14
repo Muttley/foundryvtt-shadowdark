@@ -1,0 +1,48 @@
+{
+	"_id": "o74l0TnCb0E2fAKp",
+	"_key": "!items!o74l0TnCb0E2fAKp",
+	"effects": [
+		"RftwcR3tZiYQwCZy"
+	],
+	"folder": null,
+	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+	"name": "Spell Effect: Divine Vengeance",
+	"system": {
+		"bonuses": {
+			"meleeAttackBonus": "4",
+			"meleeDamageBonus": "4",
+			"rangedAttackBonus": "4",
+			"rangedDamageBonus": "4"
+		},
+		"category": "effect",
+		"description": "<p>For the spell's duration, you can fly a near distance, your weapons are magical, and you have a +4 bonus to your weapon attacks and damage.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

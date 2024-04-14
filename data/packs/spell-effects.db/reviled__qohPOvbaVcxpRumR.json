@@ -1,0 +1,24 @@
+{
+	"_id": "qohPOvbaVcxpRumR",
+	"_key": "!items.effects!vApjjHkL9nghvbQT.qohPOvbaVcxpRumR",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 86400,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/social/wave-halt-stop.webp",
+	"name": "Reviled",
+	"origin": "Item.FrFilluk4S5VaWut",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

@@ -20,6 +20,7 @@ SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.talents.count.label: Número de opciones
 SHADOWDARK.ancestry.talents.label: Talentos de ancestro
 SHADOWDARK.ancestry.talents.prompt: Seleccionar talento...
+SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.app.active_effects.title: Efectos activos
 SHADOWDARK.app.gem_bag.sell_all: Vender todas las gemas
 SHADOWDARK.app.gem_bag.title: Bolsa de gemas
@@ -40,12 +41,18 @@ SHADOWDARK.app.light-tracker.hide-inactive: Ocultar actores sin luz
 SHADOWDARK.app.light-tracker.show-all-actors: Mostrar todos los actores
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar las luces
 SHADOWDARK.app.npc_attack_ranges.title: Rangos de ataque
+SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
 SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.success: Character created successfully
+SHADOWDARK.apps.character-generator.success: Character created
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
+SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
+SHADOWDARK.apps.character-generator.stats: Stats
 SHADOWDARK.apps.character-generator.title: Character Generator
+SHADOWDARK.apps.character-generator.type: Type
+SHADOWDARK.apps.character-generator.update_character: Update Character
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '¿Quieres eliminar el efecto {effectName}?'
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: '¿Eliminar efecto?'
 SHADOWDARK.apps.effect_panel.duration_label.expired: Expirado
@@ -73,6 +80,13 @@ SHADOWDARK.apps.item-importer.instruction2c: Flavor text
 SHADOWDARK.apps.item-importer.instruction2d: Features
 SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
 SHADOWDARK.apps.item-importer.title: Import Item
+SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
+SHADOWDARK.apps.level-up.hit_points: Hit Points
+SHADOWDARK.apps.level-up.level_up: Level Up!
+SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
+SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.roll_talent: Roll Talent
+SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Importar monstruo
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
@@ -89,6 +103,8 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copia el contenido del 
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Haz clic en importar.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Abrir generador
 SHADOWDARK.apps.shadowdarkling-importer.title: Importar Shadowdarkling
+SHADOWDARK.apps.spell-book.known: Known
+SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
@@ -255,6 +271,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Lanzar hechizo con
 SHADOWDARK.dialog.submit: Enviar
 SHADOWDARK.dialog.tooltip.talent_advantage: Un talento te está dando ventaja en esta tirada
+SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Horas
 SHADOWDARK.effect_duration.minutes: Minutos
 SHADOWDARK.effect_duration.seconds: Segundos
@@ -602,6 +619,7 @@ SHADOWDARK.sheet.item.tab.details: Detalles
 SHADOWDARK.sheet.item.tab.effects: Efectos
 SHADOWDARK.sheet.item.tab.light: Luz
 SHADOWDARK.sheet.item.tab.magic: Magia
+SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.source: Source
 SHADOWDARK.sheet.item.tab.titles: Titulos
 SHADOWDARK.sheet.npc.attacks_label: Ataques
@@ -626,6 +644,7 @@ SHADOWDARK.sheet.player.boons.oaths.label: Juramentos
 SHADOWDARK.sheet.player.boons.secrets.label: Secretos
 SHADOWDARK.sheet.player.class.label: Clase
 SHADOWDARK.sheet.player.class.tooltip: El trabajo de tu personaje
+SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.deity.label: Deidad
 SHADOWDARK.sheet.player.deity.tooltip: El vínculo cósmico de tu personaje con las fuerzas contrarias de la Ley y el Caos, o con la Neutralidad equilibrada.
 SHADOWDARK.sheet.player.languages: Idiomas

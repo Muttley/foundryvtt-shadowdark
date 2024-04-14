@@ -1,0 +1,24 @@
+{
+	"_id": "pTKFUJ3czAqssXCu",
+	"_key": "!items.effects!aQfBagCGogkjgCS8.pTKFUJ3czAqssXCu",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/death/skeleton-skull-soul-blue.webp",
+	"name": "Turned",
+	"origin": "Item.28PPFz1MYTsfPwzh",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

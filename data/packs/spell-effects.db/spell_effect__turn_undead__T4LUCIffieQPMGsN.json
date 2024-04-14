@@ -1,0 +1,42 @@
+{
+	"_id": "T4LUCIffieQPMGsN",
+	"_key": "!items!T4LUCIffieQPMGsN",
+	"effects": [
+		"Z8y5ZzvVyfE2irPi"
+	],
+	"folder": null,
+	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"name": "Spell Effect: Turn Undead",
+	"system": {
+		"category": "effect",
+		"description": "<p>Creature flees from you for 5 rounds.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

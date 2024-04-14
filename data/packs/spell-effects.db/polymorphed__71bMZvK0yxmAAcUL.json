@@ -1,0 +1,24 @@
+{
+	"_id": "71bMZvK0yxmAAcUL",
+	"_key": "!items.effects!Hc3xUBBlZLxWNKYV.71bMZvK0yxmAAcUL",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/amphibians/frog-confused-green-blue.webp",
+	"name": "Polymorphed",
+	"origin": "Item.iiLI7kRr7y0PLSXK",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}
