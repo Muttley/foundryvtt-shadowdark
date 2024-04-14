@@ -1,0 +1,34 @@
+{
+	"_id": "441BBv90QacBfojj",
+	"_key": "!items.effects!OTHSzCFY9zLlwzFF.441BBv90QacBfojj",
+	"changes": [
+		{
+			"key": "system.abilities.cha.base",
+			"mode": 3,
+			"value": "3"
+		},
+		{
+			"key": "system.abilities.cha.mod",
+			"mode": 3,
+			"value": "-4"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": 864000,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/fear-fright-white.webp",
+	"name": "Feeble (CHA)",
+	"origin": "Item.h9MTxzrrPmyhEmRL",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

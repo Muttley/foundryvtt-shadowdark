@@ -1,0 +1,65 @@
+{
+	"_id": "sZ6msFePi3R6DUju",
+	"_key": "!items!sZ6msFePi3R6DUju",
+	"effects": [
+		"441BBv90QacBfojj"
+	],
+	"folder": null,
+	"img": "icons/creatures/reptiles/serpent-horned-green.webp",
+	"name": "Spell Effect: World Serpent",
+	"system": {
+		"abilities": {
+			"int": {
+				"base": "3"
+			},
+			"str": {
+				"base": "3"
+			},
+			"wis": {
+				"base": "3"
+			}
+		},
+		"attributes": {
+			"ac": {
+				"override": "17",
+				"value": "14"
+			}
+		},
+		"bonuses": {
+			"critical": {
+				"multiplier": "4"
+			},
+			"damageMultiplier": "2"
+		},
+		"category": "effect",
+		"description": "<p></p><p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

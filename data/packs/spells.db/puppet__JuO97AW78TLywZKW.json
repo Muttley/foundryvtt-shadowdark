@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>One humanoid creature of LV 2 or less you touch becomes ensnared by your movements. On your turn, the creature mimics all your movements. </p><p></p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a DC 15 Charisma check. On a success, it resists mimicking you.</p>",
+		"description": "<p>One humanoid creature of LV 2 or less you touch becomes ensnared by your movements. On your turn, the creature mimics all your movements.</p><p></p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a DC 15 Charisma check. On a success, it resists mimicking you.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Cu3dona3PiHxO1lK]{Spell Effect: Puppet}</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

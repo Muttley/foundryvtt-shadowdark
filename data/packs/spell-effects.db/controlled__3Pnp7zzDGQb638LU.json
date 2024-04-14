@@ -1,0 +1,24 @@
+{
+	"_id": "3Pnp7zzDGQb638LU",
+	"_key": "!items.effects!nctlTXcIkACzb0yd.3Pnp7zzDGQb638LU",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/creatures/eyes/void-single-black-purple.webp",
+	"name": "Controlled",
+	"origin": "Item.sLb9GOXx9F6XCb2o",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

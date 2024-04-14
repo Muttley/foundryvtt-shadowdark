@@ -1,0 +1,24 @@
+{
+	"_id": "zwulssk0c4SQwWbC",
+	"_key": "!items.effects!u6apLIMU1w4EIW06.zwulssk0c4SQwWbC",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/air/wind-tornado-wall-blue.webp",
+	"name": "Gaseous",
+	"origin": "Item.u2mS6xCKAG1oiEWX",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

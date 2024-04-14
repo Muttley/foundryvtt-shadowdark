@@ -1,0 +1,79 @@
+{
+	"_id": "3vCyl2kqfz31N1yP",
+	"_key": "!items!3vCyl2kqfz31N1yP",
+	"effects": [
+		"vMxGVAApQXuIeBXk"
+	],
+	"folder": null,
+	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+	"name": "Spell Effect: Wolfshape (Dire Wolf)",
+	"system": {
+		"abilities": {
+			"con": {
+				"base": [
+					"12",
+					"12"
+				],
+				"override": "12"
+			},
+			"dex": {
+				"base": [
+					"14",
+					"14"
+				],
+				"override": "14"
+			},
+			"str": {
+				"base": [
+					"16",
+					"16"
+				],
+				"override": "16"
+			}
+		},
+		"attributes": {
+			"ac": {
+				"override": "12",
+				"value": "12"
+			},
+			"hp": {
+				"base": [
+					"19",
+					"19"
+				],
+				"max": "10",
+				"value": "10"
+			}
+		},
+		"category": "effect",
+		"description": "<p><strong>Dire Wolf</strong></p><p><strong>AC</strong> 12, <strong>HP</strong> 19, <strong>ATK</strong> 2 bite [[/r 1d20+4]] ([[/r 1d8]]), <strong>MV</strong> double near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1</p><p><strong>Pack Hunter.</strong> Deals +1 damage while an ally is close.</p><p></p><p>You assume the wolf's STR, DEX, CON, HP, AC, speed, attacks, and physical characteristics, but retain your INT, WIS, and CHA.</p><p></p><p>You can cast spells in this form. If you go to 0 HP, you revert to your true shape at 0 HP.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

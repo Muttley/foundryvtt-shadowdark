@@ -1,0 +1,42 @@
+{
+	"_id": "jKkFbA7VzDfOKvN5",
+	"_key": "!items!jKkFbA7VzDfOKvN5",
+	"effects": [
+		"4v6DbfBT6c4qzSEc"
+	],
+	"folder": null,
+	"img": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
+	"name": "Spell Effect: Cat's Eye",
+	"system": {
+		"category": "effect",
+		"description": "<p>You can see invisible creatures and secret doors for the spell's duration.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

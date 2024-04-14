@@ -1,0 +1,36 @@
+{
+	"_id": "RftwcR3tZiYQwCZy",
+	"_key": "!items.effects!pKu2XsypNq65vkbV.RftwcR3tZiYQwCZy",
+	"changes": [
+		{
+			"key": "system.bonuses.meleeAttackBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		},
+		{
+			"key": "system.bonuses.rangedAttackBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+	"name": "Wrath",
+	"origin": "Item.xOHpjBx4PhrNXQ4U",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

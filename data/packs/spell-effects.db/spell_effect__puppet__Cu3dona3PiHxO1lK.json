@@ -1,0 +1,42 @@
+{
+	"_id": "Cu3dona3PiHxO1lK",
+	"_key": "!items!Cu3dona3PiHxO1lK",
+	"effects": [
+		"ItjPVhv2obp0MEhy"
+	],
+	"folder": null,
+	"img": "icons/magic/control/control-influence-puppet.webp",
+	"name": "Spell Effect: Puppet",
+	"system": {
+		"category": "effect",
+		"description": "<p>On your turn, the creature mimics all your movements.</p><p></p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a DC 15 Charisma check. On a success, it resists mimicking you.</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

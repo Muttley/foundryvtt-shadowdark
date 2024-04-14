@@ -1,0 +1,48 @@
+{
+	"_id": "deNtIVyGoXaDPrmJ",
+	"_key": "!items!deNtIVyGoXaDPrmJ",
+	"effects": [
+		"441BBv90QacBfojj"
+	],
+	"folder": null,
+	"img": "icons/magic/defensive/armor-stone-skin.webp",
+	"name": "Spell Effect: Stoneskin",
+	"system": {
+		"attributes": {
+			"ac": {
+				"override": "17",
+				"value": "14"
+			}
+		},
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>You call out the berserk rage locked inside someone. </p><p></p><p>One willing humanoid you touch enters a berserk state. The target is immune to morale checks, has ADV on STR checks and melee attacks, and deals +1d4 damage for the spell's duration. </p><p></p><p>If the target does not attack another creature on its turn, the spell ends.</p>",
+		"description": "<p>You call out the berserk rage locked inside someone.</p><p></p><p>One willing humanoid you touch enters a berserk state. The target is immune to morale checks, has ADV on STR checks and melee attacks, and deals +1d4 damage for the spell's duration.</p><p></p><p>If the target does not attack another creature on its turn, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.79D3CwKRi78k9BM7]{Spell Effect: Evoke Rage}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"

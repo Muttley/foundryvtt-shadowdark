@@ -1,0 +1,24 @@
+{
+	"_id": "vMxGVAApQXuIeBXk",
+	"_key": "!items.effects!F89CJeindj8k8oiC.vMxGVAApQXuIeBXk",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/nature/wolf-paw-glow-orange.webp",
+	"name": "Shapechanged",
+	"origin": "Item.hVsjl5GZqSajuFU6",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

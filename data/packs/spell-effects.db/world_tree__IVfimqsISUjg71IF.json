@@ -1,0 +1,24 @@
+{
+	"_id": "IVfimqsISUjg71IF",
+	"_key": "!items.effects!FDyJAnR0Fk9cZZEf.IVfimqsISUjg71IF",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"name": "World Tree",
+	"origin": "Item.3t26sCGhwGJjEasN",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

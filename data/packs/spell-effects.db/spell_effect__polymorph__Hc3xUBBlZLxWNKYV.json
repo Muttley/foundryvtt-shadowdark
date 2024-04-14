@@ -1,0 +1,42 @@
+{
+	"_id": "Hc3xUBBlZLxWNKYV",
+	"_key": "!items!Hc3xUBBlZLxWNKYV",
+	"effects": [
+		"71bMZvK0yxmAAcUL"
+	],
+	"folder": null,
+	"img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
+	"name": "Spell Effect: Polymorph",
+	"system": {
+		"category": "effect",
+		"description": "<p>Target is transformed into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form.</p><p></p><p>The target gains the creature's physical statistics, but it retains its non-physical statistics.</p><p></p><p>If the target goes to 0 hit points, it reverts to its true form at half its prior hit points.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

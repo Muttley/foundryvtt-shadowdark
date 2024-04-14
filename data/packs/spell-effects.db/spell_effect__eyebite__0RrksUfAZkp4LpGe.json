@@ -1,0 +1,41 @@
+{
+	"_id": "0RrksUfAZkp4LpGe",
+	"_key": "!items!0RrksUfAZkp4LpGe",
+	"effects": [
+		"ayif1AZ50Ji9yhIi"
+	],
+	"folder": null,
+	"img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+	"name": "Spell Effect: Eyebite",
+	"system": {
+		"category": "effect",
+		"description": "<p>Target can't see you until the end of its next turn.</p>",
+		"duration": {
+			"type": "unlimited",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"start": {
+			"combatTime": "0.null",
+			"value": 10286
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "pTKFUJ3czAqssXCu",
+	"_key": "!items.effects!9E4RVp3xfAK1uxrl.pTKFUJ3czAqssXCu",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": 5,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"name": "Laughing",
+	"origin": "Item.28PPFz1MYTsfPwzh",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}
