@@ -40,16 +40,18 @@ SHADOWDARK.app.light-tracker.douse-light: Släck ljus
 SHADOWDARK.app.light-tracker.hide-inactive: Göm aktörer som saknar ljuskällor
 SHADOWDARK.app.light-tracker.show-all-actors: Visa alla aktörer
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
+SHADOWDARK.app.loading.body: Searching Distant Lands...
+SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Det gick inte att skapa spelarkaraktär {error}
 SHADOWDARK.apps.character-generator.error.name: Karaktärens namn får inte vara tomt
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Det går inte att rulla ett slumpmässigt namn utan ett valt ursprung
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
-SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
 SHADOWDARK.apps.character-generator.stats: Stats
+SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
@@ -241,6 +243,7 @@ SHADOWDARK.dialog.item_roll.talent_bonus: Talangbonus
 SHADOWDARK.dialog.item_roll.title: Attackera med
 SHADOWDARK.dialog.item_selector.default_title: Välj föremål
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: Du kan välja maximalt {maxChoices} av denna typ av föremål.
+SHADOWDARK.dialog.item_selector.error.no_items_found: Unable to find items of the correct type in the available compendiums.
 SHADOWDARK.dialog.item_selector.select_item.prompt: Välj föremål...
 SHADOWDARK.dialog.item.confirm_delete: Bekräfta borttagning
 SHADOWDARK.dialog.item.confirm_sale: Bekräfta försäljning
@@ -619,8 +622,8 @@ SHADOWDARK.sheet.item.tab.details: Detaljer
 SHADOWDARK.sheet.item.tab.effects: Effekt
 SHADOWDARK.sheet.item.tab.light: Ljus
 SHADOWDARK.sheet.item.tab.magic: Magi
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.source: Källa
+SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.titles: Titlar
 SHADOWDARK.sheet.npc.attacks_label: Attacker
 SHADOWDARK.sheet.npc.dark_adapted: Mörkanpassad
@@ -642,9 +645,9 @@ SHADOWDARK.sheet.player.boons.blessings.label: Välsignelser
 SHADOWDARK.sheet.player.boons.label: Favörer
 SHADOWDARK.sheet.player.boons.oaths.label: Eder
 SHADOWDARK.sheet.player.boons.secrets.label: Hemligheter
+SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.class.label: Klass
 SHADOWDARK.sheet.player.class.tooltip: Din karaktärs jobb
-SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.deity.label: Gud
 SHADOWDARK.sheet.player.deity.tooltip: Er karaktärs kosmiska länk till de motsatta krafterna av lag och kaos, eller balanserad neutralitet.
 SHADOWDARK.sheet.player.languages: Språk
