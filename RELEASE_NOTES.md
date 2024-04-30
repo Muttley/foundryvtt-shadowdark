@@ -1,3 +1,10 @@
+# v2.2.0
+
+## Enhancements
+* [#765] Implement generic loading dialog that can be used whenever potentially slow compendium searching occurs
+
+---
+
 # v2.1.0
 
 ## Bugfixes

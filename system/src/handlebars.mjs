@@ -2,10 +2,6 @@ import EffectPanelSD from "./apps/EffectPanelSD.mjs";
 
 export default function registerHandlebarsHelpers() {
 
-	Handlebars.registerHelper("secondsToMins", seconds => {
-		return Math.ceil(seconds / 60);
-	});
-
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
 			case "==":
@@ -170,5 +166,13 @@ export default function registerHandlebarsHelpers() {
 		else {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.expired");
 		}
+	});
+
+	Handlebars.registerHelper("remove-p-tag", str1 => {
+		return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
+	});
+
+	Handlebars.registerHelper("secondsToMins", seconds => {
+		return Math.ceil(seconds / 60);
 	});
 }

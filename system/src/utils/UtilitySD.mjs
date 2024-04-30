@@ -130,6 +130,12 @@ export default class UtilitySD {
 		}
 	}
 
+	static async sleep(millisecs=1000) {
+		return new Promise((resolve, reject) => {
+  			setTimeout(resolve, millisecs);
+		});
+	}
+
 	/**
 	 * Asks the user for input if necessary for an effect that requires said input.
 	 * @param {Item} item - Item that has the effects
