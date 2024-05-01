@@ -201,7 +201,7 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedLanguages,
 		};
 
-		const classTalents = await shadowdark.compendiums.talents();
+		const classTalents = await shadowdark.compendiums.classTalents();
 
 		const [selectedTalents, availableTalents] =
 			await shadowdark.utils.getDedupedSelectedItems(

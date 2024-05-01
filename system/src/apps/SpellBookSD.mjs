@@ -61,28 +61,14 @@ export default class SpellBookSD extends FormApplication {
 			class: await fromUuid(this.classID),
 		};
 
-		// get source filter settings
-		const sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
-		const sourcesSet = (sources.length > 0);
-
 		// load all spells for class based on source filter
 		let unsortedSpells = [];
-		for (let pack of game.packs) {
-			if (pack.metadata.type !== "Item") continue;
+		let spells = await shadowdark.compendiums.spells();
 
-			let ids = pack.index.filter(d => (d.type === "Spell")).map(d => d._id);
-
-			for (const id of ids) {
-				const spell = await pack.getDocument(id);
-				const source = spell.system?.source?.title ?? "";
-				if (spell.system.class.includes(this.classID)) {
-					if (source !== "" && sourcesSet && !sources.includes(source)) {
-						continue;
-					}
-					unsortedSpells.push(spell);
-				}
+		for (const spell of spells) {
+			if (spell.system.class.includes(this.classID)) {
+				unsortedSpells.push(spell);
 			}
-
 		}
 
 		// sort spells
