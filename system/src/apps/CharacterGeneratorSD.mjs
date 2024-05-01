@@ -394,7 +394,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	 */
 	async _loadClass(UuID, randomize) {
 		// find the class object
-		let classObj = this._getClassObject(UuID);
+		let classObj = await this._getClassObject(UuID);
 		let talentData = [];
 		// grab fixed talents from class item
 		if (classObj.system.talents) {
@@ -471,9 +471,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	}
 
-	async _loadAncestry(UuID, randomize) {
+	async _loadAncestry(uuid, randomize) {
 		// grab static talents from ancestry item
-		let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
+		let ancestryObj = await fromUuid(uuid);
 
 		this.formData.ancestryTalents.selection = [];
 		this.formData.ancestryTalents.fixed = [];
@@ -637,16 +637,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	_getClassObject(UuID) {
+	async _getClassObject(uuid) {
 		// find the class object from uuid including looking at level0
 		let classObj = {};
-		if (UuID === this.formData.level0Class.uuid) {
+		if (uuid === this.formData.level0Class.uuid) {
 			classObj = this.formData.level0Class;
 		}
 		else {
-			classObj =  this.formData.classes.find(x => x.uuid === UuID);
+			classObj = await fromUuid(uuid);
 		}
-		return classObj;
+		return classObj ?? {};
 	}
 
 	_setRandomLanguage(key, count) {
