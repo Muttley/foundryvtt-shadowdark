@@ -8,13 +8,13 @@ export default class CompendiumsSD {
 		return collection;
 	 }
 
-	static async _documents(type, subtype=null, filterSources=true, fields=[]) {
-		let sources = [];
+	static async _documents(type, subtype=null, filterSources=true) {
 
+		// get sources filters
+		let sources = [];
 		if (filterSources === true) {
 			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
 		}
-
 		const sourcesSet = sources.length !== 0;
 
 		let docs = [];
@@ -23,8 +23,9 @@ export default class CompendiumsSD {
 		for (let pack of game.packs) {
 			if (pack.metadata.type !== type) continue;
 
-			let documents = await pack.getIndex({fields});
+			let documents = await pack.getIndex({fields: ["system"]});
 
+			// filter by subtype
 			if (subtype !== null) {
 				documents = documents.filter(d => d.type === subtype);
 			}
@@ -49,14 +50,12 @@ export default class CompendiumsSD {
 			(a, b) => a.name.localeCompare(b.name)
 		);
 
+		// return new collection
 		return this._collectionFromArray(docs);
 	}
 
 	static async ancestries(filterSources=true) {
-		return CompendiumsSD._documents(
-			"Item", "Ancestry", filterSources,
-			["system.description"]
-		);
+		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}
 
 	static async ancestryTalents(filterSources=true) {
@@ -72,20 +71,12 @@ export default class CompendiumsSD {
 	}
 
 	static async backgrounds(filterSources=true) {
-		return CompendiumsSD._documents(
-			"Item", "Background", filterSources,
-			["system.description"]
-		);
+		return CompendiumsSD._documents("Item", "Background", filterSources);
 	}
 
 	static async baseArmor(filterSources=true) {
-		const documents = await CompendiumsSD._documents(
-			"Item", "Armor", filterSources,
-			[
-				"system.baseArmor",
-				"system.magicItem",
-			]
-		);
+		const documents =
+			await CompendiumsSD._documents("Item", "Armor", filterSources);
 
 		return this._collectionFromArray(
 			documents.filter(
@@ -96,13 +87,8 @@ export default class CompendiumsSD {
 	}
 
 	static async baseWeapons(filterSources=true) {
-		const documents = await CompendiumsSD._documents(
-			"Item", "Weapon", filterSources,
-			[
-				"system.baseWeapon",
-				"system.magicItem",
-			]
-		);
+		const documents =
+			await CompendiumsSD._documents("Item", "Weapon", filterSources);
 
 		return this._collectionFromArray(
 			documents.filter(
@@ -117,10 +103,7 @@ export default class CompendiumsSD {
 	}
 
 	static async classes(filterSources=true) {
-		return CompendiumsSD._documents(
-			"Item", "Class", filterSources,
-			["system.description"]
-		);
+		return CompendiumsSD._documents("Item", "Class", filterSources);
 	}
 
 	static async classSpellBook(casterClass, filterSources=true) {
@@ -129,14 +112,7 @@ export default class CompendiumsSD {
 		}
 		else {
 			const documents = await CompendiumsSD._documents(
-				"Item", "Spell", filterSources,
-				[
-					"system.class",
-					"system.description",
-					"system.duration",
-					"system.range",
-					"system.tier",
-				]
+				"Item", "Spell", filterSources
 			);
 
 			return this._collectionFromArray(
@@ -168,13 +144,7 @@ export default class CompendiumsSD {
 	}
 
 	static async deities(filterSources=true) {
-		return CompendiumsSD._documents(
-			"Item", "Deity", filterSources,
-			[
-				"system.alignment",
-				"system.description",
-			]
-		);
+		return CompendiumsSD._documents("Item", "Deity", filterSources);
 	}
 
 	static async gems(filterSources=true) {
@@ -187,16 +157,10 @@ export default class CompendiumsSD {
 
 	static async languages(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
-			return CompendiumsSD._documents(
-				"Item", "Language", filterSources,
-				["system.rarity"]
-			);
+			return CompendiumsSD._documents("Item", "Language", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents(
-				"Item", "Language", filterSources,
-				["system.rarity"]
-			);
+			const documents = await CompendiumsSD._documents("Item", "Language", filterSources);
 
 			return this._collectionFromArray(
 				documents.filter(
@@ -227,10 +191,7 @@ export default class CompendiumsSD {
 			return CompendiumsSD._documents("Item", "Property", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents(
-				"Item", "Property", filterSources,
-				["system.itemType"]
-			);
+			const documents = await CompendiumsSD._documents("Item", "Property", filterSources);
 
 			return this._collectionFromArray(
 				documents.filter(
@@ -282,43 +243,15 @@ export default class CompendiumsSD {
 	}
 
 	static async spellcastingClasses(filterSources=true) {
-		const documents = await CompendiumsSD._documents(
-			"Item", "Class", filterSources,
-			[
-				"system.spellcasting.ability",
-				"system.spellcasting.class",
-			]
-		);
-
-		return this._collectionFromArray(
-			documents.filter(
-				document => document.system.spellcasting.ability !== ""
-					&& document.system.spellcasting.class !== "NONE"
-			)
-		);
+		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
+		return this._collectionFromArray(documents.filter(document =>
+			document.system.spellcasting.ability !== ""
+			&& document.system.spellcasting.class !== "NONE"
+		));
 	}
 
-	static async spells(subtypes=[], filterSources=true) {
-		if (subtypes.length === 0) {
-			return CompendiumsSD._documents("Item", "Spell", filterSources);
-		}
-		else {
-			const documents = await CompendiumsSD._documents(
-				"Item", "Spell", filterSources,
-				["system.class"]
-			);
-
-			return this._collectionFromArray(
-				documents.filter(
-					document => {
-						for (const spellClass of document.system.class) {
-							if (subtypes.includes(spellClass)) return true;
-						}
-						return false;
-					}
-				)
-			);
-		}
+	static async spells(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Spell", filterSources);
 	}
 
 	static async talents(subtypes=[], filterSources=true) {
@@ -326,10 +259,7 @@ export default class CompendiumsSD {
 			return CompendiumsSD._documents("Item", "Talent", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents(
-				"Item", "Talent", filterSources,
-				["system.talentClass"]
-			);
+			const documents = await CompendiumsSD._documents("Item", "Talent", filterSources);
 
 			return this._collectionFromArray(
 				documents.filter(
