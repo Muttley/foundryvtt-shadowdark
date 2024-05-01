@@ -2,6 +2,7 @@
 
 ## Enhancements
 * [#765] Implement generic loading dialog that can be used whenever potentially slow compendium searching occurs
+* [#767] Load times when accessing certain items and menus significantly improved when hosting on Forge VTTs
 
 ---
 
