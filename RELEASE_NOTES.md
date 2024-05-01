@@ -3,6 +3,9 @@
 ## Enhancements
 * [#765] Implement generic loading dialog that can be used whenever potentially slow compendium searching occurs
 
+## Bugfixes
+* [#761] Advantage on Magic Missile talent missing from Wizard Class item
+
 ---
 
 # v2.1.0
