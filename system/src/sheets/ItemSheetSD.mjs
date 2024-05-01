@@ -285,9 +285,12 @@ export default class ItemSheetSD extends ItemSheet {
 	/** @override */
 	async getData(options) {
 		let loadingDialog;
+
 		if (this.firstLoad) {
+			this.firstLoad = false;
 			loadingDialog = new shadowdark.apps.LoadingSD().render(true);
 		}
+
 		const context = await super.getData(options);
 
 		const item = context.item;
