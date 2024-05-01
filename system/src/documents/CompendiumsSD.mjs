@@ -1,71 +1,62 @@
 export default class CompendiumsSD {
 
-	static async _compendiumDocuments(type, subtype=null) {
+
+	static _collectionFromArray(array) {
+		const collection = new Collection();
+		for (let d of array) {
+			collection.set(d._id, d);
+		}
+		return collection;
+	 }
+
+	static async _documents(type, subtype=null, filterSources=true) {
+
+		// get sources filters
+		let sources = [];
+		if (filterSources === true) {
+			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
+		}
+		const sourcesSet = sources.length !== 0;
+		// set subtype filter
+		let options = {};
+		if (subtype !== null) options.type = subtype;
+
 		let docs = [];
 
 		// Iterate through the Packs, adding them to the list
 		for (let pack of game.packs) {
 			if (pack.metadata.type !== type) continue;
 
-			let ids;
+			let documents;
 
+			// load documents from pack and generate custom index
+			documents = await pack.getIndex({fields: ["system"]});
+
+			// filter by subtype
 			if (subtype !== null) {
-				ids = pack.index.filter(d => d.type === subtype).map(d => d._id);
-			}
-			else {
-				ids = pack.index.map(d => d._id);
+				documents = documents.filter(d => d.type === subtype);
 			}
 
-			for (const id of ids) {
-				const doc = await pack.getDocument(id);
-
-				if (doc) docs.push(doc);
+			for (const doc of documents) {
+				docs.push(doc);
 			}
+		}
+
+		// filter out non selected sources
+		if (sourcesSet) {
+			docs = docs.filter(
+				d => {
+					const source = d.system?.source?.title ?? "";
+					return source === "" || sources.includes(source);
+				}
+			);
 		}
 
 		// Dedupe and sort the list alphabetically
 		docs = Array.from(new Set(docs)).sort((a, b) => a.name.localeCompare(b.name));
 
-		const collection = new Collection();
-
-		for (let d of docs) {
-			collection.set(d.id, d);
-		}
-
-		return collection;
-	}
-
-	static async _documents(type, subtype, filterSources=true) {
-		let sources = [];
-
-		if (filterSources === true) {
-			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
-		}
-
-		const noSources = sources.length === 0;
-
-		const documents = await CompendiumsSD._compendiumDocuments(type, subtype);
-
-		if (noSources) {
-			return documents;
-		}
-		else {
-			const filteredDocuments = documents.filter(
-				document => {
-					const source = document.system?.source?.title ?? "";
-
-					return source === "" || sources.includes(source);
-				}
-			);
-
-			// re-create the collection from the filtered Items
-			const filteredCollection = new Collection();
-			for (let d of filteredDocuments) {
-				filteredCollection.set(d.id, d);
-			}
-
-			return filteredCollection;
-		}
+		// return new collection
+		return this._collectionFromArray(docs);
 	}
 
 	static async ancestries(filterSources=true) {
@@ -89,37 +80,19 @@ export default class CompendiumsSD {
 	}
 
 	static async baseArmor(filterSources=true) {
-		const documents = await CompendiumsSD._documents("Item", "Armor", filterSources);
-
-		const filteredDocuments = documents.filter(
-			document => document.system.baseArmor === ""
-				&& !document.system.magicItem
-		);
-
-		// re-create the collection from the filtered Items
-		const filteredCollection = new Collection();
-		for (let d of filteredDocuments) {
-			filteredCollection.set(d.id, d);
-		}
-
-		return filteredCollection;
+		const documents =
+			await CompendiumsSD._documents("Item", "Armor", filterSources);
+		return this._collectionFromArray(documents.filter(document =>
+			document.system.baseArmor === "" && !document.system.magicItem
+		));
 	}
 
 	static async baseWeapons(filterSources=true) {
-		const documents = await CompendiumsSD._documents("Item", "Weapon", filterSources);
-
-		const filteredDocuments = documents.filter(
-			document => document.system.baseWeapon === ""
-				&& !document.system.magicItem
-		);
-
-		// re-create the collection from the filtered Items
-		const filteredCollection = new Collection();
-		for (let d of filteredDocuments) {
-			filteredCollection.set(d.id, d);
-		}
-
-		return filteredCollection;
+		const documents =
+			await CompendiumsSD._documents("Item", "Weapon", filterSources);
+		return this._collectionFromArray(documents.filter(document =>
+			document.system.baseWeapon === "" && !document.system.magicItem
+		));
 	}
 
 	static async basicItems(filterSources=true) {
@@ -135,20 +108,10 @@ export default class CompendiumsSD {
 	}
 
 	static async classTalentTables(filterSources=true) {
-		const documents =
-			await CompendiumsSD._documents("RollTable", null, filterSources);
-
-		const filteredDocuments = documents.filter(
-			document => document.name.match(/class\s+talents/i)
-		);
-
-		// re-create the collection from the filtered Items
-		const filteredCollection = new Collection();
-		for (let d of filteredDocuments) {
-			filteredCollection.set(d.id, d);
-		}
-
-		return filteredCollection;
+		const documents = await CompendiumsSD._documents("RollTable", null, filterSources);
+		return this._collectionFromArray(documents.filter(document =>
+			document.name.match(/class\s+talents/i)
+		));
 	}
 
 	static async commonLanguages(filterSources=true) {
@@ -168,25 +131,14 @@ export default class CompendiumsSD {
 	}
 
 	static async languages(subtypes=[], filterSources=true) {
-		const noSubtypes = subtypes.length === 0;
-
-		const documents = await CompendiumsSD._documents("Item", "Language", filterSources);
-
-		if (noSubtypes) {
-			return documents;
+		if (subtypes.length === 0) {
+			return CompendiumsSD._documents("Item", "Language", filterSources);
 		}
 		else {
-			const filteredDocuments = documents.filter(
-				document => subtypes.includes(document.system.rarity)
-			);
-
-			// re-create the collection from the filtered Items
-			const filteredCollection = new Collection();
-			for (let d of filteredDocuments) {
-				filteredCollection.set(d.id, d);
-			}
-
-			return filteredCollection;
+			const documents = await CompendiumsSD._documents("Item", "Language", filterSources);
+			return this._collectionFromArray(documents.filter(document =>
+				subtypes.includes(document.system.rarity)
+			));
 		}
 	}
 
@@ -207,25 +159,14 @@ export default class CompendiumsSD {
 	}
 
 	static async properties(subtypes=[], filterSources=true) {
-		const noSubtypes = subtypes.length === 0;
-
-		const documents = await CompendiumsSD._documents("Item", "Property", filterSources);
-
-		if (noSubtypes) {
-			return documents;
+		if (subtypes.length === 0) {
+			return CompendiumsSD._documents("Item", "Property", filterSources);
 		}
 		else {
-			const filteredDocuments = documents.filter(
-				document => subtypes.includes(document.system.itemType)
-			);
-
-			// re-create the collection from the filtered Items
-			const filteredCollection = new Collection();
-			for (let d of filteredDocuments) {
-				filteredCollection.set(d.id, d);
-			}
-
-			return filteredCollection;
+			const documents = await CompendiumsSD._documents("Item", "Property", filterSources);
+			return this._collectionFromArray(documents.filter(document =>
+				subtypes.includes(document.system.itemType)
+			));
 		}
 	}
 
@@ -272,19 +213,10 @@ export default class CompendiumsSD {
 
 	static async spellcastingClasses(filterSources=true) {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
-
-		const filteredDocuments = documents.filter(
-			document => document.system.spellcasting.ability !== ""
-				&& document.system.spellcasting.class !== "NONE"
-		);
-
-		// re-create the collection from the filtered Items
-		const filteredCollection = new Collection();
-		for (let d of filteredDocuments) {
-			filteredCollection.set(d.id, d);
-		}
-
-		return filteredCollection;
+		return this._collectionFromArray(documents.filter(document =>
+			document.system.spellcasting.ability !== ""
+			&& document.system.spellcasting.class !== "NONE"
+		));
 	}
 
 	static async spells(filterSources=true) {
@@ -292,25 +224,14 @@ export default class CompendiumsSD {
 	}
 
 	static async talents(subtypes=[], filterSources=true) {
-		const noSubtypes = subtypes.length === 0;
-
-		const documents = await CompendiumsSD._documents("Item", "Talent", filterSources);
-
-		if (noSubtypes) {
-			return documents;
+		if (subtypes.length === 0) {
+			return CompendiumsSD._documents("Item", "Talent", filterSources);
 		}
 		else {
-			const filteredDocuments = documents.filter(
-				document => subtypes.includes(document.system.talentClass)
-			);
-
-			// re-create the collection from the filtered Items
-			const filteredCollection = new Collection();
-			for (let d of filteredDocuments) {
-				filteredCollection.set(d.id, d);
-			}
-
-			return filteredCollection;
+			const documents = await CompendiumsSD._documents("Item", "Talent", filterSources);
+			return this._collectionFromArray(documents.filter(document =>
+				subtypes.includes(document.system.talentClass)
+			));
 		}
 	}
 
