@@ -9,7 +9,7 @@ export default class CompendiumsSD {
 		return collection;
 	 }
 
-	static async _documents(type, subtype=null, filterSources=true, fullLoad=false) {
+	static async _documents(type, subtype=null, filterSources=true) {
 
 		// get sources filters
 		let sources = [];
@@ -29,26 +29,12 @@ export default class CompendiumsSD {
 
 			let documents;
 
-			// load full contents of each document in the pack
-			// Turns out, this isn't really needed for anything
-			if (fullLoad) {
-				if (subtype !== null) {
-					documents = await pack.getDocuments(options);
-				}
-				else {
-					documents = await pack.getDocuments();
-				}
-			}
+			// load documents from pack and generate custom index
+			documents = await pack.getIndex({fields: ["system"]});
 
-			// load documents from pack index
-			else {
-				// generate custom index
-				documents = await pack.getIndex({fields: ["system"]});
-
-				// filter by subtype
-				if (subtype !== null) {
-					documents = documents.filter(d => d.type === subtype);
-				}
+			// filter by subtype
+			if (subtype !== null) {
+				documents = documents.filter(d => d.type === subtype);
 			}
 
 			for (const doc of documents) {
@@ -73,127 +59,127 @@ export default class CompendiumsSD {
 		return this._collectionFromArray(docs);
 	}
 
-	static async ancestries(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Ancestry", filterSources, fullLoad);
+	static async ancestries(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}
 
-	static async ancestryTalents(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.talents("ancestry", filterSources, fullLoad);
+	static async ancestryTalents(filterSources=true) {
+		return CompendiumsSD.talents("ancestry", filterSources);
 	}
 
-	static async armor(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Armor", filterSources, fullLoad);
+	static async armor(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Armor", filterSources);
 	}
 
-	static async armorProperties(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.properties("armor", filterSources, fullLoad);
+	static async armorProperties(filterSources=true) {
+		return CompendiumsSD.properties("armor", filterSources);
 	}
 
-	static async backgrounds(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Background", filterSources, fullLoad);
+	static async backgrounds(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Background", filterSources);
 	}
 
-	static async baseArmor(filterSources=true, fullLoad=false) {
+	static async baseArmor(filterSources=true) {
 		const documents =
-			await CompendiumsSD._documents("Item", "Armor", filterSources, fullLoad);
+			await CompendiumsSD._documents("Item", "Armor", filterSources);
 		return this._collectionFromArray(documents.filter(document =>
 			document.system.baseArmor === "" && !document.system.magicItem
 		));
 	}
 
-	static async baseWeapons(filterSources=true, fullLoad=false) {
+	static async baseWeapons(filterSources=true) {
 		const documents =
-			await CompendiumsSD._documents("Item", "Weapon", filterSources, fullLoad);
+			await CompendiumsSD._documents("Item", "Weapon", filterSources);
 		return this._collectionFromArray(documents.filter(document =>
 			document.system.baseWeapon === "" && !document.system.magicItem
 		));
 	}
 
-	static async basicItems(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Basic", filterSources, fullLoad);
+	static async basicItems(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Basic", filterSources);
 	}
 
-	static async classes(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Class", filterSources, fullLoad);
+	static async classes(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Class", filterSources);
 	}
 
-	static async classTalents(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.talents("class", filterSources, fullLoad);
+	static async classTalents(filterSources=true) {
+		return CompendiumsSD.talents("class", filterSources);
 	}
 
-	static async classTalentTables(filterSources=true, fullLoad=false) {
-		const documents = await CompendiumsSD._documents("RollTable", null, filterSources, fullLoad);
+	static async classTalentTables(filterSources=true) {
+		const documents = await CompendiumsSD._documents("RollTable", null, filterSources);
 		return this._collectionFromArray(documents.filter(document =>
 			document.name.match(/class\s+talents/i)
 		));
 	}
 
-	static async commonLanguages(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.languages("common", filterSources, fullLoad);
+	static async commonLanguages(filterSources=true) {
+		return CompendiumsSD.languages("common", filterSources);
 	}
 
-	static async deities(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Deity", filterSources, fullLoad);
+	static async deities(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Deity", filterSources);
 	}
 
-	static async gems(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Gem", filterSources, fullLoad);
+	static async gems(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Gem", filterSources);
 	}
 
-	static async effects(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Effect", filterSources, fullLoad);
+	static async effects(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Effect", filterSources);
 	}
 
-	static async languages(subtypes=[], filterSources=true, fullLoad=false) {
+	static async languages(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
-			return CompendiumsSD._documents("Item", "Language", filterSources, fullLoad);
+			return CompendiumsSD._documents("Item", "Language", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents("Item", "Language", filterSources, fullLoad);
+			const documents = await CompendiumsSD._documents("Item", "Language", filterSources);
 			return this._collectionFromArray(documents.filter(document =>
 				subtypes.includes(document.system.rarity)
 			));
 		}
 	}
 
-	static async levelTalents(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.talents("level", filterSources, fullLoad);
+	static async levelTalents(filterSources=true) {
+		return CompendiumsSD.talents("level", filterSources);
 	}
 
-	static async npcAttacks(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "NPC Attack", filterSources, fullLoad);
+	static async npcAttacks(filterSources=true) {
+		return CompendiumsSD._documents("Item", "NPC Attack", filterSources);
 	}
 
-	static async npcFeatures(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "NPC Features", filterSources, fullLoad);
+	static async npcFeatures(filterSources=true) {
+		return CompendiumsSD._documents("Item", "NPC Features", filterSources);
 	}
 
-	static async potions(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Potion", filterSources, fullLoad);
+	static async potions(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Potion", filterSources);
 	}
 
-	static async properties(subtypes=[], filterSources=true, fullLoad=false) {
+	static async properties(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
-			return CompendiumsSD._documents("Item", "Property", filterSources, fullLoad);
+			return CompendiumsSD._documents("Item", "Property", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents("Item", "Property", filterSources, fullLoad);
+			const documents = await CompendiumsSD._documents("Item", "Property", filterSources);
 			return this._collectionFromArray(documents.filter(document =>
 				subtypes.includes(document.system.itemType)
 			));
 		}
 	}
 
-	static async rareLanguages(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.languages("rare", filterSources, fullLoad);
+	static async rareLanguages(filterSources=true) {
+		return CompendiumsSD.languages("rare", filterSources);
 	}
 
-	static async rollTables(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("RollTable", null, filterSources, fullLoad);
+	static async rollTables(filterSources=true) {
+		return CompendiumsSD._documents("RollTable", null, filterSources);
 	}
 
-	static async scrolls(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Scroll", filterSources, fullLoad);
+	static async scrolls(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Scroll", filterSources);
 	}
 
 	static async sources() {
@@ -225,39 +211,39 @@ export default class CompendiumsSD {
 		return sources.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
-	static async spellcastingClasses(filterSources=true, fullLoad=false) {
-		const documents = await CompendiumsSD._documents("Item", "Class", filterSources, fullLoad);
+	static async spellcastingClasses(filterSources=true) {
+		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
 		return this._collectionFromArray(documents.filter(document =>
 			document.system.spellcasting.ability !== ""
 			&& document.system.spellcasting.class !== "NONE"
 		));
 	}
 
-	static async spells(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Spell", filterSources, fullLoad);
+	static async spells(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Spell", filterSources);
 	}
 
-	static async talents(subtypes=[], filterSources=true, fullLoad=false) {
+	static async talents(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
-			return CompendiumsSD._documents("Item", "Talent", filterSources, fullLoad);
+			return CompendiumsSD._documents("Item", "Talent", filterSources);
 		}
 		else {
-			const documents = await CompendiumsSD._documents("Item", "Talent", filterSources, fullLoad);
+			const documents = await CompendiumsSD._documents("Item", "Talent", filterSources);
 			return this._collectionFromArray(documents.filter(document =>
 				subtypes.includes(document.system.talentClass)
 			));
 		}
 	}
 
-	static async wands(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Wand", filterSources, fullLoad);
+	static async wands(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Wand", filterSources);
 	}
 
-	static async weaponProperties(filterSources=true, fullLoad=false) {
-		return CompendiumsSD.properties("weapon", filterSources, fullLoad);
+	static async weaponProperties(filterSources=true) {
+		return CompendiumsSD.properties("weapon", filterSources);
 	}
 
-	static async weapons(filterSources=true, fullLoad=false) {
-		return CompendiumsSD._documents("Item", "Weapon", filterSources, fullLoad);
+	static async weapons(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Weapon", filterSources);
 	}
 }
