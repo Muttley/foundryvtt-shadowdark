@@ -8,8 +8,8 @@ export default class CompendiumsSD {
 		return collection;
 	 }
 
-		let sources = [];
 	static async _documents(type, subtype=null, filterSources=true, fields=[]) {
+		let sources = [];
 
 		if (filterSources === true) {
 			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
@@ -187,7 +187,10 @@ export default class CompendiumsSD {
 
 	static async languages(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
-			return CompendiumsSD._documents("Item", "Language", filterSources);
+			return CompendiumsSD._documents(
+				"Item", "Language", filterSources,
+				["system.rarity"]
+			);
 		}
 		else {
 			const documents = await CompendiumsSD._documents(

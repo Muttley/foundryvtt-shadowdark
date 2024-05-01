@@ -15,7 +15,7 @@ export default class AncestrySelector extends CompendiumItemSelector {
 	}
 
 	async getAvailableItems() {
-		return await shadowdark.compendiums.ancestries();
+		return shadowdark.compendiums.ancestries();
 	}
 
 	async getUuids() {

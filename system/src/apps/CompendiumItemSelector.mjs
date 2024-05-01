@@ -85,16 +85,13 @@ export default class CompendiumItemSelector extends FormApplication {
 	async getCurrentItemData() {
 		this.currentItemUuids = await this.getUuids() ?? [];
 		this.currentItems = await this.getCurrentItems() ?? [];
-
-		for (const item of this.availableItems) {
-			item.decoratedName = await this.decorateName(item);
-		}
 	}
 
 	async getCurrentItems() {
 		const items = [];
 		for (const uuid of this.currentItemUuids) {
 			const item = await fromUuid(uuid);
+			item.decoratedName = await this.decorateName(item);
 			items.push(item);
 		}
 
