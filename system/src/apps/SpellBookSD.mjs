@@ -62,21 +62,10 @@ export default class SpellBookSD extends FormApplication {
 		};
 
 		// load all spells for class based on source filter
-		let unsortedSpells = [];
-		let spells = await shadowdark.compendiums.spells();
-
-		for (const spell of spells) {
-			if (spell.system.class.includes(this.classID)) {
-				unsortedSpells.push(spell);
-			}
-		}
-
-		// sort spells
-		let sortedSpells = unsortedSpells.sort(
-			(a, b) => a.name < b.name ? -1 : 1);
+		const spells = await shadowdark.compendiums.classSpellBook(this.classID);
 
 		// group spells by tier
-		this.data.spellList = Object.groupBy(sortedSpells, ({system}) => system.tier);
+		this.data.spellList = Object.groupBy(spells, ({system}) => system.tier);
 
 		return this.data;
 	}
