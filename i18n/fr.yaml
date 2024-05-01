@@ -40,16 +40,18 @@ SHADOWDARK.app.light-tracker.douse-light: Éteindre la lumière
 SHADOWDARK.app.light-tracker.hide-inactive: Cacher les acteurs sans lumières
 SHADOWDARK.app.light-tracker.show-all-actors: Montrer tous les acteurs
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Éteindre les lumières
+SHADOWDARK.app.loading.body: Searching Distant Lands...
+SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: Portées d'Attaque
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
 SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
 SHADOWDARK.apps.character-generator.stats: Stats
+SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
@@ -241,6 +243,7 @@ SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
 SHADOWDARK.dialog.item_roll.title: Roll Attack with
 SHADOWDARK.dialog.item_selector.default_title: Choose Items
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
+SHADOWDARK.dialog.item_selector.error.no_items_found: Unable to find items of the correct type in the available compendiums.
 SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
 SHADOWDARK.dialog.item.confirm_delete: Confirmer la suppression
 SHADOWDARK.dialog.item.confirm_sale: Confirmer la vente
@@ -619,8 +622,8 @@ SHADOWDARK.sheet.item.tab.details: Détails
 SHADOWDARK.sheet.item.tab.effects: Effets
 SHADOWDARK.sheet.item.tab.light: Léger
 SHADOWDARK.sheet.item.tab.magic: Magic
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.source: Source
+SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.titles: Titles
 SHADOWDARK.sheet.npc.attacks_label: Attaques
 SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
@@ -642,9 +645,9 @@ SHADOWDARK.sheet.player.boons.blessings.label: Bénédictions
 SHADOWDARK.sheet.player.boons.label: Avantages
 SHADOWDARK.sheet.player.boons.oaths.label: Serments
 SHADOWDARK.sheet.player.boons.secrets.label: Secrets
+SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.class.label: Classe
 SHADOWDARK.sheet.player.class.tooltip: Le métier de votre personnage
-SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.deity.label: Divinité
 SHADOWDARK.sheet.player.deity.tooltip: Le lien cosmique de votre personnage avec les forces opposées de la Loi et du Chaos, ou la Neutralité équilibrée.
 SHADOWDARK.sheet.player.languages: Langues

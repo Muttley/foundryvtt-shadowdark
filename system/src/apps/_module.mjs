@@ -5,6 +5,7 @@ export {default as GemBagSD} from "./GemBagSD.mjs";
 export {default as ItemImporterSD} from "./ItemImporterSD.mjs";
 export {default as LevelUpSD} from "./LevelUpSD.mjs";
 export {default as LightSourceTrackerSD} from "./LightSourceTrackerSD.mjs";
+export {default as LoadingSD} from "./LoadingSD.mjs";
 export {default as MonsterImporterSD} from "./MonsterImporterSD.mjs";
 export {default as NpcAttackRangesSD} from "./NpcAttackRangesSD.mjs";
 export {default as ShadowdarklingImporterSD} from "./ShadowdarklingImporterSD.mjs";

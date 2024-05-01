@@ -1,23 +1,3 @@
-Handlebars.registerHelper("remove-p-tag", str1 => {
-	return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
-});
-
-class loadingDialog extends Dialog {
-	constructor() {
-		let data = {
-			title: "Character Generator",
-			content: "<center>Searching Distant Lands...<br><img src='systems/shadowdark/assets/logo/arcane-library-logo.webp' class='fa-spin' style='border-width:0px;width:50px;height:50px;'></img></center>",
-			buttons: {},
-		};
-		let options = {
-			height: 125,
-			width: 250,
-		};
-		super(data, options);
-	}
-}
-
-
 export default class CharacterGeneratorSD extends FormApplication {
 	/**
 	 * Contains functions for building Shadowdark characters
@@ -123,8 +103,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 				},
 			},
 		};
-
-		this.loadingDialog = new loadingDialog();
 
 		if (actorUid) {
 			this.formData.editing = true;
@@ -249,11 +227,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.firstrun = false;
 
 			// Put up a loading screen as compendium searching can take a while
-			this.loadingDialog.render(true);
+			const loadingDialog = new shadowdark.apps.LoadingSD().render(true);
 
 			// Initialize Alignment
 			this.formData.alignments = CONFIG.SHADOWDARK.ALIGNMENTS;
-
 
 			// setup ability range as 3-18
 			this.formData.statRange = [];
@@ -311,7 +288,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			}
 
 			// loading is finished, pull down the loading screen
-			this.loadingDialog.close();
+			loadingDialog.close({force: true});
 		}
 
 		// format talents

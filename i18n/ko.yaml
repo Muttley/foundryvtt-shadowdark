@@ -40,16 +40,18 @@ SHADOWDARK.app.light-tracker.douse-light: 불 끄기
 SHADOWDARK.app.light-tracker.hide-inactive: 광원이 없는 액터 숨기기
 SHADOWDARK.app.light-tracker.show-all-actors: 모든 액터 보기
 SHADOWDARK.app.light-tracker.turn-out-the-lights: 모든 불 끄기
+SHADOWDARK.app.loading.body: Searching Distant Lands...
+SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: 공격 범위
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
 SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
 SHADOWDARK.apps.character-generator.stats: Stats
+SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
@@ -241,6 +243,7 @@ SHADOWDARK.dialog.item_roll.talent_bonus: 재능 보너스
 SHADOWDARK.dialog.item_roll.title: 명중 굴림
 SHADOWDARK.dialog.item_selector.default_title: 아이템 지정
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
+SHADOWDARK.dialog.item_selector.error.no_items_found: Unable to find items of the correct type in the available compendiums.
 SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
 SHADOWDARK.dialog.item.confirm_delete: 삭제 요청 확인
 SHADOWDARK.dialog.item.confirm_sale: 판매 요청 확인
@@ -619,8 +622,8 @@ SHADOWDARK.sheet.item.tab.details: 세부 사항
 SHADOWDARK.sheet.item.tab.effects: 효과
 SHADOWDARK.sheet.item.tab.light: 빛
 SHADOWDARK.sheet.item.tab.magic: 마법
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.source: 출처
+SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
 SHADOWDARK.sheet.item.tab.titles: 칭호
 SHADOWDARK.sheet.npc.attacks_label: 공격
 SHADOWDARK.sheet.npc.dark_adapted: 어둠 적응
@@ -642,9 +645,9 @@ SHADOWDARK.sheet.player.boons.blessings.label: 축복
 SHADOWDARK.sheet.player.boons.label: Boons
 SHADOWDARK.sheet.player.boons.oaths.label: 서약
 SHADOWDARK.sheet.player.boons.secrets.label: Secrets
+SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.class.label: 클래스
 SHADOWDARK.sheet.player.class.tooltip: Your character's job
-SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.deity.label: 신격
 SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: 언어
