@@ -1,11 +1,17 @@
 # v2.2.0
 
 ## Enhancements
+* [#763] Make attributes.hp primaryTokenAttribute in system.json
 * [#765] Implement generic loading dialog that can be used whenever potentially slow compendium searching occurs
 * [#767] Load times when accessing certain items and menus significantly improved when hosting on Forge VTTs
 
 ## Bugfixes
 * [#761] Advantage on Magic Missile talent missing from Wizard Class item
+* [#768] Level 1 characters generating with 1 hp, despite HP roll
+* [#776] NPC spell DC not calculating when converting from PC spell
+
+## Chores
+* [#774] Merged Finnish language updates from Crowdin
 
 ---
 
