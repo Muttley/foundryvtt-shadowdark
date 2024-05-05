@@ -9,12 +9,12 @@ export default class CompendiumsSD {
 	 }
 
 	static async _documents(type, subtype=null, filterSources=true) {
-
-		// get sources filters
 		let sources = [];
+
 		if (filterSources === true) {
 			sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
 		}
+
 		const sourcesSet = sources.length !== 0;
 
 		let docs = [];
