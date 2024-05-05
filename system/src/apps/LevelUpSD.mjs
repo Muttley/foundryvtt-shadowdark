@@ -334,7 +334,7 @@ export default class LevelUpSD extends FormApplication {
 		};
 
 		// update values on actor
-		this.data.actor.update({
+		await this.data.actor.update({
 			"system.level.value": this.data.targetLevel,
 			"system.level.xp": newXP,
 			"system.attributes.hp.base": newBaseHP,
@@ -343,7 +343,7 @@ export default class LevelUpSD extends FormApplication {
 		});
 
 		// add talents and spells to actor
-		this.data.actor.createEmbeddedDocuments("Item", allItems);
+		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		// show actor sheet
 		this.data.actor.sheet.render(true);
