@@ -1,46 +1,45 @@
 <section class="tab tab-talents" data-group="primary" data-tab="tab-talents">
 	<section class="talents-body">
-		<div class="talents-list">
-			<table>
-				<tr>
-					<th>&nbsp;</th>
-					<th>{{localize 'SHADOWDARK.sheet.player.talents_level'}}</th>
+
+		{{#each talents as |section sid|}}
+			<table class="SD-table">
+				<tr class="talent-section-header">
+					<th colspan="2">
+						{{section.label}}
+					</th>
 				</tr>
-				{{#each talents as |section sid|}}
-					<tr class="talent-section-header">
-						<th>
-							{{section.label}}
-						</th>
-						<th>&nbsp;</th>
+				{{#ifEq section.label "Level"}}
+					<tr>
+						<td><b>Talent</b></td>
+						<td><b>Level Gained</b></td>
 					</tr>
-					{{#each section.items as |talent|}}
-						<tr class="item" data-item-id="{{talent._id}}">
-							<td>
-								<div
-									class="item-image"
-									style="background-image: url({{talent.img}})"
-									data-item-id="{{talent._id}}"
-								>
-									<i class="fas fa-comment fa-lg"></i>
-								</div>
-								<a
-									class="item-control show-details"
-									data-item-id="{{talent._id}}"
-								>
-									{{talent.name}}
-								</a>
-							</td>
-							<td>
-								{{#ifEq sid "level"}}
-									{{talent.system.level}}
-								{{else}}
-									&mdash;
-								{{/ifEq}}
-							</td>
-						</tr>
-					{{/each}}
+				{{/ifEq}}
+				{{#each section.items as |talent|}}
+					<tr class="item" data-item-id="{{talent._id}}">
+						<td>
+							<div
+								class="item-image"
+								style="background-image: url({{talent.img}})"
+								data-item-id="{{talent._id}}"
+							>
+								<i class="fas fa-comment fa-lg"></i>
+							</div>
+							<a
+								class="item-control show-details"
+								data-item-id="{{talent._id}}"
+							>
+								{{talent.name}}
+							</a>
+						</td>
+						<td>
+							{{#ifEq sid "level"}}
+								{{talent.system.level}}
+							{{/ifEq}}
+						</td>
+					</tr>
 				{{/each}}
 			</table>
-		</div>
+		{{/each}}
+
 	</section>
 </section>

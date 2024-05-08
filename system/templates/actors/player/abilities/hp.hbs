@@ -1,24 +1,21 @@
-<div class="value-box__bold">
-	<label
-		class="hp"
-	>
-		{{localize 'SHADOWDARK.sheet.actor.hp'}}
-	</label>
-	<div class="hit-points">
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
+		<span></span>
+	</div>
+	<div class="context">
 		<div class="hp-value">
 			{{numberInput
 				actor.system.attributes.hp.value
 				name="system.attributes.hp.value"
-				class="hp-value"
 				placeholder="0"
 			}}
 		</div>
 		<div class="hp-max">
-			<p>{{localize 'SHADOWDARK.sheet.actor.hp_max'}}</p>
+			{{localize 'SHADOWDARK.sheet.actor.hp_max'}}
 			{{numberInput
 				maxHp
 				name="system.attributes.hp.max"
-				class="hp-max"
 				placeholder="0"
 				step="1"
 			}}

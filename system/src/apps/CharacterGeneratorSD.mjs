@@ -114,7 +114,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["character-generator"],
+			classes: ["shadowdark", "character-generator"],
 			width: 836,
 			resizable: false,
 			closeOnSubmit: false,

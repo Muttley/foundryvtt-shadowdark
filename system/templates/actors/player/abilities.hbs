@@ -1,30 +1,39 @@
 <section class="tab tab-abilities" data-group="primary" data-tab="tab-abilities">
 	<div class="abilities-grid">
-		<div class="ability-scores">
-			{{#each abilities as |ability id|}}
-				<div class="value-box ability" data-ability="{{id}}">
-					<label
-						for="{{concat "system.abilities." id ".base"}}"
-						class="ability-name rollable"
-						data-ability="{{id}}"
-					>
-						{{ability.label}}
-					</label>
-					<div class="ability-score">
-						{{numberInput
-							ability.value
-							name=(concat "system.abilities." id ".base")
-							class="ability-score" placeholder="10"
-						}}
-						<p>({{numberFormat ability.modifier decimals=0 sign=true}})</p>
-					</div>
+		<div class="grid-2-columns">
+			<div class="SD-box grid-colspan-2">
+				<div class="header">
+					<label>Stats</label>
+					<span></span>
 				</div>
-			{{/each}}
+				<div class="content grid-2-columns">
+					{{#each abilities as |ability id|}}
+						<div class="value-box ability" data-ability="{{id}}">
+							<label
+								for="{{concat "system.abilities." id ".base"}}"
+								class="ability-name rollable"
+								data-ability="{{id}}"
+							>
+								{{ability.label}}
+							</label>
+							<div class="ability-score">
+								{{numberInput
+									ability.value
+									name=(concat "system.abilities." id ".base")
+									class="ability-score" placeholder="10"
+								}}
+								<p>({{numberFormat ability.modifier decimals=0 sign=true}})</p>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
 			{{> actors/player/abilities/hp }}
 			{{> actors/player/abilities/ac }}
+			{{> actors/player/abilities/luck }}
 			{{> actors/player/abilities/initiative }}
 		</div>
-		<div class="actions-grid">
+		<div class="grid-1-columns">
 			{{> actors/player/abilities/attacks }}
 			{{#if hasClassAbilities}}
 				{{> actors/player/abilities/class }}

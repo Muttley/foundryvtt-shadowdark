@@ -28,7 +28,8 @@
 		@include p-reset;
 		display: block;
 
-		font-family: "Old Newspaper Font";
+		font-family: "Montserrat-Medium";
+		text-transform: uppercase;
 		font-size: 18px;
 		font-weight: bold;
 
@@ -85,7 +86,7 @@
 		}
 
 		.delete-choice {
-			color: darkred;
+			color: black;
 		}
 
 		.uuid-link {
@@ -281,24 +282,16 @@
 
 		display: grid;
 		grid-template-columns: 68px 1fr;
-
 		column-gap: 4px;
-
 		align-items: center;
+		background-color: black;
 	}
 
 	.item-name {
 		font-family: "Old Newspaper Font";
 		font-size: 2.5rem;
-
 		height: 100%;
-	}
-
-	.item-sidebar {
-		display: grid;
-		grid-column: 2;
-		align-items: start;
-		row-gap: 8px;
+		color:white;
 	}
 
 	.light-timer {
@@ -330,11 +323,10 @@
 	}
 
 	.section-header {
-		grid-column: span 3;
-		background: rgba(0, 0, 0, 0.05);
 		text-transform: uppercase;
 		font-weight: bold;
 		text-align: left;
+		border-bottom: solid 2px black;
 	}
 
 	.slots {
@@ -352,7 +344,6 @@
 	}
 
 	.spell-detail {
-		background-color: var(--form-background);
 		display: grid;
 		row-gap: 4px;
 	}
@@ -373,13 +364,11 @@
 	}
 
 	.weapon-detail {
-		background-color: var(--form-background);
 		display: grid;
 		row-gap: 4px;
 	}
 
 	.item-detail {
-		background-color: var(--form-background);
 		display: grid;
 		row-gap: 4px;
 	}

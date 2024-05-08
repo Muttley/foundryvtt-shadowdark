@@ -32,21 +32,6 @@
 		border: none;
 	}
 
-	label {
-		@include p-reset;
-		display: block;
-
-		font-family: "Old Newspaper Font";
-		font-size: 1.3rem;
-		font-weight: bold;
-
-		line-height: 1.1;
-
-		align-self: center;
-
-		border: none;
-	}
-
 	ol {
 		padding: 4px;
 		margin: 4px;
@@ -60,7 +45,7 @@
 	.abilities-grid {
 		@include p-reset;
 		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: 164px 1fr;
 		column-gap: 8px;
 		align-items: start;
 	}
@@ -148,9 +133,14 @@
 		text-align: center;
 	}
 
-	.ac-value,
+	.ac-value {
+		font-size: 30px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
 	.hp-value {
-		font-size: 38px;
+		font-size: 30px;
 		height: auto;
 		line-height: 1;
 		margin-bottom: 2px;
@@ -509,6 +499,7 @@
 	.player-body {
 		@include p-reset;
 		padding: 8px;
+		overflow: auto;
 	}
 
 	.player-header {
@@ -520,12 +511,13 @@
 		column-gap: 4px;
 
 		align-items: center;
+		background-color: black;
 	}
 
 	.player-name {
 		font-family: "Old Newspaper Font";
 		font-size: 2.5rem;
-
+		color: white;
 		height: 100%;
 	}
 
@@ -744,7 +736,6 @@
 	}
 
 	.section-header {
-		background: rgba(0, 0, 0, 0.05);
 		text-transform: uppercase;
 		font-weight: bold;
 		text-align: left;
@@ -808,19 +799,15 @@
 		@include p-reset;
 
 		font-family: "JSL Blackletter";
-		font-size: 3.5rem;
-
-		text-align: right;
+		font-size: 1.75rem;
+		color: white;
+		text-align: center;
 		line-height: 1;
 
-		&__prefix {
-			color: $secondary-color;
-			text-shadow: -0.2rem -0.2rem $primary-color;
-		}
 
-		&__suffix {
-			color: $primary-color;
-			text-shadow: -0.2rem -0.2rem $secondary-color;
+		span {
+			border-bottom: solid 1px white;
+			padding: 0px 10px 0px 10px;
 		}
 	}
 
