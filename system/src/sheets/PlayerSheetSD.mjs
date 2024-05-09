@@ -287,6 +287,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/**
+	 * Actives a lightsource if dropped onto the Player sheet. Used for
+	 * activating Light spell et.c.
+	 *
+	 * @param {Item} item - Item that is a lightsource
+	 */
+	async _dropActivateLightSource(item) {
+		const actorItem = await super._onDropItemCreate(item);
+		this._toggleLightSource(actorItem[0]);
+	}
+
+	/**
 	 * Creates a scroll from a spell item
 	 */
 	async _createItemFromSpellDialog(item) {
