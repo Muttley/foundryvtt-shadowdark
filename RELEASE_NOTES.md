@@ -6,9 +6,11 @@
 * [#767] Load times when accessing certain items and menus significantly improved when hosting on Forge VTTs
 
 ## Bugfixes
+* [#780] A level up screen being shown directly after creating level 0 characters.
 * [#761] Advantage on Magic Missile talent missing from Wizard Class item
 * [#768] Level 1 characters generating with 1 hp, despite HP roll
 * [#776] NPC spell DC not calculating when converting from PC spell
+* [#758] Unable to drag light spell items onto player sheets.
 
 ## Chores
 * [#774] Merged Finnish language updates from Crowdin
