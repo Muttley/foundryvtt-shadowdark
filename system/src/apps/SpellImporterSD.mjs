@@ -5,7 +5,7 @@ export default class SpellImporter extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["spell-importer"],
 			width: 300,
 			resizable: false,

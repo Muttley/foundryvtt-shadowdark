@@ -105,7 +105,7 @@ export default class MigrationRunnerSD {
 				const delta = token.delta;
 
 				if (delta?.system) {
-					actorData.system = mergeObject(
+					actorData.system = foundry.utils.mergeObject(
 						actorData.system,
 						delta.system,
 						{inplace: false}

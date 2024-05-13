@@ -190,7 +190,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 						value: droppedItem.system.duration.value,
 					},
 					range: droppedItem.system.range,
-					dc: droppedItem.system.duration.tier + 10,
+					dc: droppedItem.system.tier + 10,
 				},
 			};
 			// add new spell to NPC

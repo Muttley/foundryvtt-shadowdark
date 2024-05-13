@@ -8,7 +8,8 @@ export default function listenOnSocket() {
 			shadowdark.apps.CharacterGeneratorSD.createActorFromData(
 				event.payload.characterData,
 				event.payload.characterItems,
-				event.payload.userId
+				event.payload.userId,
+				event.payload.level0
 			);
 		}
 

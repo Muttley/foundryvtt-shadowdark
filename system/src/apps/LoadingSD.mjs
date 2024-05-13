@@ -1,7 +1,7 @@
 export default class LoadingSD extends Application {
 
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "loading-spinner"],
 			resizable: false,
 			width: "auto",

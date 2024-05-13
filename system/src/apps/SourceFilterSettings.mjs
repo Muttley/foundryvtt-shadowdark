@@ -46,9 +46,6 @@ export default class SourceFilterSettings extends FormApplication {
 				data.selectedSources.push(source);
 			}
 		}
-		// data.selectedSources = this.filtered.map(
-		// 	choice => ({uuid: choice, name: CONFIG.CONAN.sources[choice]})
-		// );
 
 		data.hasSelectedSources = data.selectedSources.length > 0;
 

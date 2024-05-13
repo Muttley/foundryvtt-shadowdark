@@ -54,6 +54,11 @@ export default class UtilitySD {
 		game.user.assignHotbarMacro(macro, slot);
 	}
 
+	static foundryMinVersion(version) {
+		const majorVersion = parseInt(game.version.split(".")[0]);
+		return majorVersion >= version;
+	}
+
 	/**
 	 * Creates de-duplicated lists of Selected and Unselected Items.
 	 *
@@ -90,6 +95,14 @@ export default class UtilitySD {
 		else {
 			return {name: "[Invalid ID]", uuid: uuid};
 		}
+	}
+
+	static getMessageStyles() {
+		const messageStyles = this.foundryMinVersion(12)
+			? CONST.CHAT_MESSAGE_STYLES
+			: CONST.CHAT_MESSAGE_TYPES;
+
+		return messageStyles;
 	}
 
 	static getNextDieInList(die, allDice) {

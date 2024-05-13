@@ -53,7 +53,7 @@ export default class EncounterSD extends Combat {
 					return { combatant: combatant, prelimInitiative: 0 };
 				}
 				const roll = combatant.getInitiativeRoll(formula);
-				await roll.evaluate({ async: true });
+				await roll.evaluate();
 
 				// Construct chat message data
 				const name = combatant.actor.type === "NPC"

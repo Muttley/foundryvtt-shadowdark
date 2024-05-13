@@ -6,12 +6,12 @@ export default class CompendiumItemSelector extends FormApplication {
 
 	itemsLoaded = false;
 
-	uuid = randomID();
+	uuid = foundry.utils.randomID();
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 
-		mergeObject(options, {
+		foundry.utils.mergeObject(options, {
 			classes: ["shadowdark", "compendium-item-selector"],
 			height: "auto",
 			width: 320,
@@ -85,16 +85,13 @@ export default class CompendiumItemSelector extends FormApplication {
 	async getCurrentItemData() {
 		this.currentItemUuids = await this.getUuids() ?? [];
 		this.currentItems = await this.getCurrentItems() ?? [];
-
-		for (const item of this.availableItems) {
-			item.decoratedName = await this.decorateName(item);
-		}
 	}
 
 	async getCurrentItems() {
 		const items = [];
 		for (const uuid of this.currentItemUuids) {
 			const item = await fromUuid(uuid);
+			item.decoratedName = await this.decorateName(item);
 			items.push(item);
 		}
 
