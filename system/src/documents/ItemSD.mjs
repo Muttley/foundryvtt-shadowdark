@@ -78,9 +78,11 @@ export default class ItemSD extends Item {
 
 		const html = await renderTemplate(template, templateData);
 
+		const messageStyles = shadowdark.utils.getMessageStyles();
+
 		const chatData = {
 			user: game.user.id,
-			type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+			type: messageStyles.OTHER,
 			content: html,
 			flavor: this.system.chatFlavor || this.name,
 			speaker: ChatMessage.getSpeaker({actor: this.actor, token}),
@@ -338,7 +340,7 @@ export default class ItemSD extends Item {
 			parameter.label = await game.i18n.localize(
 				`SHADOWDARK.dialog.effect.choice.${parameter.type}`
 			);
-			parameter.uuid = randomID();
+			parameter.uuid = foundry.utils.randomID();
 		}
 
 		const content = await renderTemplate(

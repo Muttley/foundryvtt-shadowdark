@@ -5,7 +5,7 @@ export default class MonsterImporterSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["monster-importer"],
 			width: 600,
 			height: 600,

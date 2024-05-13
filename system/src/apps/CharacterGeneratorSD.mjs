@@ -113,7 +113,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["character-generator"],
 			width: 836,
 			resizable: false,
@@ -182,7 +182,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		expandedData.level0 = (data.level0 === "true");
 
 		// merge incoming data into the main formData object
-		this.formData = mergeObject(this.formData, expandedData);
+		this.formData = foundry.utils.mergeObject(this.formData, expandedData);
 
 		// if stats were changed, calculate new modifiers
 		if (event.target.id === "stat") {
@@ -298,7 +298,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	diceSound() {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		AudioHelper.play({src});
+		game.audio.play(src);
 	}
 
 	async _randomizeHandler(event) {
@@ -335,7 +335,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize alignment
 		if (eventStr === "randomize-alignment" || eventStr === "randomize-all") {
-			switch (this._roll("d6")) {
+			switch (await this._roll("d6")) {
 				case 1:
 				case 2:
 				case 3:
@@ -360,8 +360,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
-			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				this.formData.actor.system.abilities[x].base = this._roll("3d6");
+			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(async x => {
+				this.formData.actor.system.abilities[x].base = await this._roll("3d6");
 			});
 			this._calculateModifiers();
 		}
@@ -373,13 +373,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// Roll starting gold
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
-			let startingGold = this._roll("2d6")*5;
+			let startingGold = await this._roll("2d6")*5;
 			this.formData.actor.system.coins.gp = startingGold;
 		}
 
 		// Roll starting gear
 		if (eventStr === "randomize-gear" || eventStr === "randomize-all") {
-			this._randomizeGear();
+			await this._randomizeGear();
 		}
 
 		this.diceSound();
@@ -677,10 +677,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 	}
 
-	_randomizeGear() {
+	async _randomizeGear() {
 		this.formData.gearSelected = [];
 		let tempGearTable = [...this.gearTable];
-		let gearCount = this._roll("d4");
+		let gearCount = await this._roll("d4");
 		// get an item from the temp table, then remove that item to prevent duplicates
 		for (let i = 0; i < gearCount; i++) {
 			let randomIndex = this._getRandom(12-i);
@@ -694,8 +694,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return Math.floor(Math.random() * max);
 	}
 
-	_roll(formula) {
-		let roll = new Roll(formula).evaluate({async: false});
+	async _roll(formula) {
+		let roll = await new Roll(formula).evaluate();
 		return roll._total;
 	}
 

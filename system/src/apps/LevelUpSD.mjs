@@ -32,7 +32,7 @@ export default class LevelUpSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			width: 275,
 			resizable: false,
 			closeOnSubmit: true,

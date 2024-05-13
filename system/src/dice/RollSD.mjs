@@ -230,7 +230,7 @@ export default class RollSD extends Roll {
 		// Put back the main dice
 		parts.unshift(mainDice);
 
-		const roll = await new Roll(parts.join(" + "), data).evaluate({async: true});
+		const roll = await new Roll(parts.join(" + "), data).evaluate();
 		const renderedHTML = await roll.render();
 
 		// Also send the actors critical bonuses in case it has modified thresholds

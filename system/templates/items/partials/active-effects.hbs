@@ -1,5 +1,5 @@
 <div class="effects">
-	
+
   <!-- Effect Selector -->
   <div class="effect-properties">
     <div class="effect-property">
@@ -39,7 +39,7 @@
     {{#each effects as |effect|}}
     <li class="item effect-list-row" data-effect-id="{{effect.id}}">
       <article class="effect-icon">
-        <img src="{{effect.icon}}" />
+        <img src="{{activeEffectIcon effect}}" />
       </article>
       <article class="effect-list-name">
         {{#if (not effect.name)}}{{effect.label}}{{else}}{{effect.name}}{{/if}}

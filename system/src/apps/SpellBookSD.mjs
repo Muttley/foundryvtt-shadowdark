@@ -18,7 +18,7 @@ export default class SpellBookSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			width: 450,
 			left: 100,
 			resizable: true,

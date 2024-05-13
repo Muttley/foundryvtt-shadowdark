@@ -2,6 +2,12 @@ import EffectPanelSD from "./apps/EffectPanelSD.mjs";
 
 export default function registerHandlebarsHelpers() {
 
+	Handlebars.registerHelper("activeEffectIcon", effect => {
+		return shadowdark.utils.foundryMinVersion(12)
+			? effect.img
+			: effect.icon;
+	});
+
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
 			case "==":
@@ -174,5 +180,12 @@ export default function registerHandlebarsHelpers() {
 
 	Handlebars.registerHelper("secondsToMins", seconds => {
 		return Math.ceil(seconds / 60);
+	});
+
+	Handlebars.registerHelper("select", function(selected, options) {
+		const escapedValue = RegExp.escape(Handlebars.escapeExpression(selected));
+		const rgx = new RegExp(` value=["']${escapedValue}["']`);
+		const html = options.fn(this);
+		return html.replace(rgx, "$& selected");
 	});
 }

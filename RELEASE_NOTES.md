@@ -14,6 +14,13 @@
 
 ## Chores
 * [#774] Merged Finnish language updates from Crowdin
+* [#762] Ensure the Shadowdark system works without issues in Foundry V12 Development Releases
+* [#784] The {{select}} handlebars helper is deprecated *(Foundry V12 compatibility)*
+* [#785] The async option for Roll#evaluate has been removed *(Foundry V12 compatibility)*
+* [#786] globalThis.mergeObject which must now be accessed via foundry.utils.mergeObject *(Foundry V12 compatibility)*
+* [#787] Global AudioHelper instance is deprecated *(Foundry V12 compatibility)*
+* [#788] CONST.CHAT_MESSAGE_TYPES is deprecated in favor of CONST.CHAT_MESSAGE_STYLES *(Foundry V12 compatibility)*
+* [#789] ActiveEffect#icon has been migrated to ActiveEffect#img *(Foundry V12 compatibility)*
 
 ---
 

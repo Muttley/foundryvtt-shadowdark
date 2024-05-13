@@ -5,7 +5,7 @@ export default class ItemImporterSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["item-importer"],
 			width: 300,
 			resizable: false,

@@ -6,12 +6,12 @@ export default class CompendiumItemSelector extends FormApplication {
 
 	itemsLoaded = false;
 
-	uuid = randomID();
+	uuid = foundry.utils.randomID();
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 
-		mergeObject(options, {
+		foundry.utils.mergeObject(options, {
 			classes: ["shadowdark", "compendium-item-selector"],
 			height: "auto",
 			width: 320,
