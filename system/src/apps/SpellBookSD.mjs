@@ -64,10 +64,17 @@ export default class SpellBookSD extends FormApplication {
 		// load all spells for class based on source filter
 		const spells = await shadowdark.compendiums.classSpellBook(this.classID);
 
-		// group spells by tier
-		this.data.spellList = Object.groupBy(
-			Array.from(spells.values()), ({system}) => system.tier
-		);
+		const spellList = {};
+		for (const spell of spells) {
+			const tier = spell.system.tier;
+			if (!spellList[tier]) {
+				spellList[tier] = [];
+			}
+
+			spellList[tier].push(spell);
+		}
+
+		this.data.spellList = spellList;
 
 		return this.data;
 	}
