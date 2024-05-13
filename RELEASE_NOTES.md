@@ -1,3 +1,29 @@
+# v2.2.0
+
+## Enhancements
+* [#763] Make attributes.hp primaryTokenAttribute in system.json
+* [#765] Implement generic loading dialog that can be used whenever potentially slow compendium searching occurs
+* [#767] Load times when accessing certain items and menus significantly improved when hosting on Forge VTTs
+
+## Bugfixes
+* [#780] A level up screen being shown directly after creating level 0 characters.
+* [#761] Advantage on Magic Missile talent missing from Wizard Class item
+* [#768] Level 1 characters generating with 1 hp, despite HP roll
+* [#776] NPC spell DC not calculating when converting from PC spell
+* [#758] Unable to drag light spell items onto player sheets.
+
+## Chores
+* [#774] Merged Finnish language updates from Crowdin
+* [#762] Ensure the Shadowdark system works without issues in Foundry V12 Development Releases
+* [#784] The {{select}} handlebars helper is deprecated *(Foundry V12 compatibility)*
+* [#785] The async option for Roll#evaluate has been removed *(Foundry V12 compatibility)*
+* [#786] globalThis.mergeObject which must now be accessed via foundry.utils.mergeObject *(Foundry V12 compatibility)*
+* [#787] Global AudioHelper instance is deprecated *(Foundry V12 compatibility)*
+* [#788] CONST.CHAT_MESSAGE_TYPES is deprecated in favor of CONST.CHAT_MESSAGE_STYLES *(Foundry V12 compatibility)*
+* [#789] ActiveEffect#icon has been migrated to ActiveEffect#img *(Foundry V12 compatibility)*
+
+---
+
 # v2.1.0
 
 ## Bugfixes

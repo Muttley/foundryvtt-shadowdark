@@ -1,23 +1,3 @@
-Handlebars.registerHelper("remove-p-tag", str1 => {
-	return str1.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
-});
-
-class loadingDialog extends Dialog {
-	constructor() {
-		let data = {
-			title: "Character Generator",
-			content: "<center>Searching Distant Lands...<br><img src='systems/shadowdark/assets/logo/arcane-library-logo.webp' class='fa-spin' style='border-width:0px;width:50px;height:50px;'></img></center>",
-			buttons: {},
-		};
-		let options = {
-			height: 125,
-			width: 250,
-		};
-		super(data, options);
-	}
-}
-
-
 export default class CharacterGeneratorSD extends FormApplication {
 	/**
 	 * Contains functions for building Shadowdark characters
@@ -124,8 +104,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 			},
 		};
 
-		this.loadingDialog = new loadingDialog();
-
 		if (actorUid) {
 			this.formData.editing = true;
 			this.actorUid = actorUid;
@@ -135,7 +113,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["character-generator"],
 			width: 836,
 			resizable: false,
@@ -204,7 +182,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		expandedData.level0 = (data.level0 === "true");
 
 		// merge incoming data into the main formData object
-		this.formData = mergeObject(this.formData, expandedData);
+		this.formData = foundry.utils.mergeObject(this.formData, expandedData);
 
 		// if stats were changed, calculate new modifiers
 		if (event.target.id === "stat") {
@@ -249,11 +227,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.firstrun = false;
 
 			// Put up a loading screen as compendium searching can take a while
-			this.loadingDialog.render(true);
+			const loadingDialog = new shadowdark.apps.LoadingSD().render(true);
 
 			// Initialize Alignment
 			this.formData.alignments = CONFIG.SHADOWDARK.ALIGNMENTS;
-
 
 			// setup ability range as 3-18
 			this.formData.statRange = [];
@@ -311,7 +288,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			}
 
 			// loading is finished, pull down the loading screen
-			this.loadingDialog.close();
+			loadingDialog.close({force: true});
 		}
 
 		// format talents
@@ -321,7 +298,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	diceSound() {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		AudioHelper.play({src});
+		game.audio.play(src);
 	}
 
 	async _randomizeHandler(event) {
@@ -358,7 +335,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize alignment
 		if (eventStr === "randomize-alignment" || eventStr === "randomize-all") {
-			switch (this._roll("d6")) {
+			switch (await this._roll("d6")) {
 				case 1:
 				case 2:
 				case 3:
@@ -383,8 +360,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
-			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				this.formData.actor.system.abilities[x].base = this._roll("3d6");
+			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(async x => {
+				this.formData.actor.system.abilities[x].base = await this._roll("3d6");
 			});
 			this._calculateModifiers();
 		}
@@ -396,13 +373,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// Roll starting gold
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
-			let startingGold = this._roll("2d6")*5;
+			let startingGold = await this._roll("2d6")*5;
 			this.formData.actor.system.coins.gp = startingGold;
 		}
 
 		// Roll starting gear
 		if (eventStr === "randomize-gear" || eventStr === "randomize-all") {
-			this._randomizeGear();
+			await this._randomizeGear();
 		}
 
 		this.diceSound();
@@ -417,7 +394,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	 */
 	async _loadClass(UuID, randomize) {
 		// find the class object
-		let classObj = this._getClassObject(UuID);
+		let classObj = await this._getClassObject(UuID);
 		let talentData = [];
 		// grab fixed talents from class item
 		if (classObj.system.talents) {
@@ -494,9 +471,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	}
 
-	async _loadAncestry(UuID, randomize) {
+	async _loadAncestry(uuid, randomize) {
 		// grab static talents from ancestry item
-		let ancestryObj =  this.formData.ancestries.find(x => x.uuid === UuID);
+		let ancestryObj = await fromUuid(uuid);
 
 		this.formData.ancestryTalents.selection = [];
 		this.formData.ancestryTalents.fixed = [];
@@ -660,16 +637,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.render();
 	}
 
-	_getClassObject(UuID) {
+	async _getClassObject(uuid) {
 		// find the class object from uuid including looking at level0
 		let classObj = {};
-		if (UuID === this.formData.level0Class.uuid) {
+		if (uuid === this.formData.level0Class.uuid) {
 			classObj = this.formData.level0Class;
 		}
 		else {
-			classObj =  this.formData.classes.find(x => x.uuid === UuID);
+			classObj = await fromUuid(uuid);
 		}
-		return classObj;
+		return classObj ?? {};
 	}
 
 	_setRandomLanguage(key, count) {
@@ -700,10 +677,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 	}
 
-	_randomizeGear() {
+	async _randomizeGear() {
 		this.formData.gearSelected = [];
 		let tempGearTable = [...this.gearTable];
-		let gearCount = this._roll("d4");
+		let gearCount = await this._roll("d4");
 		// get an item from the temp table, then remove that item to prevent duplicates
 		for (let i = 0; i < gearCount; i++) {
 			let randomIndex = this._getRandom(12-i);
@@ -717,8 +694,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return Math.floor(Math.random() * max);
 	}
 
-	_roll(formula) {
-		let roll = new Roll(formula).evaluate({async: false});
+	async _roll(formula) {
+		let roll = await new Roll(formula).evaluate();
 		return roll._total;
 	}
 

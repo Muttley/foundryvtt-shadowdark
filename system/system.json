@@ -2,13 +2,10 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"compatibility": {
 		"minimum": "11",
-		"verified": "11"
-	},
-	"flags": {
-		"schemaVersion": "231216.1"
+		"verified": "12"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json",
@@ -304,6 +301,7 @@
 	"socket": true,
 	"gridDistance": 5,
 	"initiative": "@initiativeFormula + @initiativeBonus",
+	"primaryTokenAttribute": "attributes.hp",
 	"gridUnits": "ft",
 	"background": "systems/shadowdark/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
 }

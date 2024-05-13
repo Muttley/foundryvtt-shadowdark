@@ -18,7 +18,7 @@ export default class SpellBookSD extends FormApplication {
 
 	/** @inheritdoc */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			width: 450,
 			left: 100,
 			resizable: true,
@@ -61,36 +61,13 @@ export default class SpellBookSD extends FormApplication {
 			class: await fromUuid(this.classID),
 		};
 
-		// get source filter settings
-		const sources = game.settings.get("shadowdark", "sourceFilters") ?? [];
-		const sourcesSet = (sources.length > 0);
-
 		// load all spells for class based on source filter
-		let unsortedSpells = [];
-		for (let pack of game.packs) {
-			if (pack.metadata.type !== "Item") continue;
-
-			let ids = pack.index.filter(d => (d.type === "Spell")).map(d => d._id);
-
-			for (const id of ids) {
-				const spell = await pack.getDocument(id);
-				const source = spell.system?.source?.title ?? "";
-				if (spell.system.class.includes(this.classID)) {
-					if (source !== "" && sourcesSet && !sources.includes(source)) {
-						continue;
-					}
-					unsortedSpells.push(spell);
-				}
-			}
-
-		}
-
-		// sort spells
-		let sortedSpells = unsortedSpells.sort(
-			(a, b) => a.name < b.name ? -1 : 1);
+		const spells = await shadowdark.compendiums.classSpellBook(this.classID);
 
 		// group spells by tier
-		this.data.spellList = Object.groupBy(sortedSpells, ({system}) => system.tier);
+		this.data.spellList = Object.groupBy(
+			Array.from(spells.values()), ({system}) => system.tier
+		);
 
 		return this.data;
 	}

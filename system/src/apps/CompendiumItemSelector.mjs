@@ -4,12 +4,14 @@ export default class CompendiumItemSelector extends FormApplication {
 
 	maxChoices = 0;
 
-	uuid = randomID();
+	itemsLoaded = false;
+
+	uuid = foundry.utils.randomID();
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 
-		mergeObject(options, {
+		foundry.utils.mergeObject(options, {
 			classes: ["shadowdark", "compendium-item-selector"],
 			height: "auto",
 			width: 320,
@@ -32,6 +34,42 @@ export default class CompendiumItemSelector extends FormApplication {
 		return game.i18n.localize("SHADOWDARK.dialog.item_selector.default_title");
 	}
 
+	async _autoCloseWhenRendered() {
+		while (!this.rendered) {
+			await shadowdark.utils.sleep(100); // millisecs
+		}
+
+		this.close({force: true});
+	}
+
+	async _getAvailableItems() {
+		const loadingDialog = new shadowdark.apps.LoadingSD().render(true);
+
+		const availableItems = await this.getAvailableItems() ?? [];
+		this.itemsLoaded = true;
+
+		const itemsAvailable = availableItems?.size > 0 ?? false;
+
+		if (itemsAvailable) {
+			for (const item of availableItems) {
+				item.decoratedName = await this.decorateName(item);
+			}
+
+			this.availableItems = Array.from(availableItems).sort(
+				(a, b) => a.name.localeCompare(b.name)
+			);
+		}
+		else {
+			ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.dialog.item_selector.error.no_items_found")
+			);
+
+			this._autoCloseWhenRendered();
+		}
+
+		loadingDialog.close({force: true});
+	}
+
 	activateListeners(html) {
 		html.find(".remove-item").click(event => this._onRemoveItem(event));
 
@@ -44,20 +82,16 @@ export default class CompendiumItemSelector extends FormApplication {
 		return item.name;
 	}
 
-	async getAllItemData() {
-		this.availableItems = await this.getAvailableItems() ?? [];
+	async getCurrentItemData() {
 		this.currentItemUuids = await this.getUuids() ?? [];
 		this.currentItems = await this.getCurrentItems() ?? [];
-
-		for (const item of this.availableItems) {
-			item.decoratedName = await this.decorateName(item);
-		}
 	}
 
 	async getCurrentItems() {
 		const items = [];
 		for (const uuid of this.currentItemUuids) {
 			const item = await fromUuid(uuid);
+			item.decoratedName = await this.decorateName(item);
 			items.push(item);
 		}
 
@@ -65,7 +99,11 @@ export default class CompendiumItemSelector extends FormApplication {
 	}
 
 	async getData() {
-		await this.getAllItemData();
+		if (!this.itemsLoaded) {
+			await this._getAvailableItems();
+		}
+
+		await this.getCurrentItemData();
 
 		const data = {
 			currentItems: this.currentItems,
