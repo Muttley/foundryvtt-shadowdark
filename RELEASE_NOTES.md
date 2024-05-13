@@ -1,3 +1,10 @@
+# v2.2.1
+
+## Bugfixes
+* [#793] Spell Book won't open on Foundry thick client: Object.groupBy is not a function
+
+---
+
 # v2.2.0
 
 ## Enhancements
