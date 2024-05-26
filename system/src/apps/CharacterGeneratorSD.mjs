@@ -360,9 +360,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
-			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(async x => {
-				this.formData.actor.system.abilities[x].base = await this._roll("3d6");
-			});
+			for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+				this.formData.actor.system.abilities[key].base = await this._roll("3d6");
+			}
 			this._calculateModifiers();
 		}
 
@@ -696,6 +696,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _roll(formula) {
 		let roll = await new Roll(formula).evaluate();
+		console.log(roll._total);
 		return roll._total;
 	}
 
