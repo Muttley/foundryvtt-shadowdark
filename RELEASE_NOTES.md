@@ -1,3 +1,10 @@
+# v2.2.2
+
+## Bugfixes
+* [#799] Character Generator incorrectly generating character stats
+
+---
+
 # v2.2.1
 
 ## Bugfixes
