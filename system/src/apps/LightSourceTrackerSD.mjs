@@ -484,7 +484,7 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async onUpdateWorldTime(worldTime, worldDelta) {
-		if (!(this._isEnabled() && game.user.isGM)) return;
+		if (!(this._isEnabled() && shadowdark.utils.isPrimaryGM())) return;
 		if (this.updatingLightSources) return;
 
 		const updateSecs = game.settings.get(
