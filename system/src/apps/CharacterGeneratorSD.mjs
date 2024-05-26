@@ -696,7 +696,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	async _roll(formula) {
 		let roll = await new Roll(formula).evaluate();
-		console.log(roll._total);
 		return roll._total;
 	}
 
