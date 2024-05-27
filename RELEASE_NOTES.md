@@ -2,6 +2,7 @@
 
 ## Bugfixes
 * [#799] Character Generator incorrectly generating character stats
+* [#802] Light sources counting down to quickly with multiple GMs logged in
 
 ---
 
