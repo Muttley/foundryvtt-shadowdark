@@ -13,14 +13,14 @@ SHADOWDARK.ability_wisdom: Viisaus
 SHADOWDARK.alignment.chaotic: Kaoottinen
 SHADOWDARK.alignment.lawful: Lainkuuliainen
 SHADOWDARK.alignment.neutral: Neutraali
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
+SHADOWDARK.ancestry.languages.label: Lajin osaamat kielet
+SHADOWDARK.ancestry.languages.prompt: Valitse kieli...
 SHADOWDARK.ancestry.nametable.label: Satunnainen nimilista
-SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.talents.count.label: Choice Count
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
-SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
+SHADOWDARK.ancestry.nametable.placeholder: Vedä kielitaulu tähän
+SHADOWDARK.ancestry.talents.count.label: Valintojen määrä
+SHADOWDARK.ancestry.talents.label: Lajin lahjakkuudet
+SHADOWDARK.ancestry.talents.prompt: Valitse lahjakkuus...
+SHADOWDARK.ancestry.tooltip.weight: Vaikuttaa noppaheittoihin kun käytetään hahmogeneraattoria. Korkeammat arvot lisäävät todennäköisyyttä. Oletusarvo on 1.
 SHADOWDARK.app.active_effects.title: Aktiiviset Efektit
 SHADOWDARK.app.gem_bag.sell_all: Myy kaikki jalokivet
 SHADOWDARK.app.gem_bag.title: Jalokivipussi
@@ -40,21 +40,21 @@ SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
 SHADOWDARK.app.light-tracker.hide-inactive: Piilota hahmot/esineet joita ei ole valaistu
 SHADOWDARK.app.light-tracker.show-all-actors: Näytä kaikki hahmot/esineet
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
-SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
+SHADOWDARK.app.loading.body: Etsitään kaukaisia maita...
+SHADOWDARK.app.loading.title: Ladataan
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
-SHADOWDARK.apps.character-generator.create_character: Create Character
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
-SHADOWDARK.apps.character-generator.stats: Stats
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
+SHADOWDARK.apps.character-generator.create_character: Luo uusi hahmo
+SHADOWDARK.apps.character-generator.error.create: Pelaajahahmon luonti epäonnistui {error}
+SHADOWDARK.apps.character-generator.error.name: Hahmon nimi ei voi olla tyhjä
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Ei pystytä arpomaan nimeä ilman valittua lajia
+SHADOWDARK.apps.character-generator.name: Hahmon nimi
+SHADOWDARK.apps.character-generator.starting_gear: Aloitustarvikkeet
+SHADOWDARK.apps.character-generator.starting_gold: Aloitusraha
+SHADOWDARK.apps.character-generator.stats: Kyvyt
+SHADOWDARK.apps.character-generator.success: Hahmo luotu
+SHADOWDARK.apps.character-generator.title: Hahmogeneraattori
+SHADOWDARK.apps.character-generator.type: Tyyppi
+SHADOWDARK.apps.character-generator.update_character: Päivitä hahmoa
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Haluatko poistaa {effectName} efektin?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Poista efekti?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Vanhentunut
@@ -74,26 +74,26 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} sekuntia jälj
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} viikkoa jäljellä"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} vuotta jäljellä"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Oikea klikkaus] Poista efekti"
-SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
-SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
-SHADOWDARK.apps.item-importer.instruction2b: Item Name
-SHADOWDARK.apps.item-importer.instruction2c: Flavor text
-SHADOWDARK.apps.item-importer.instruction2d: Features
-SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
-SHADOWDARK.apps.item-importer.title: Import Item
-SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
-SHADOWDARK.apps.level-up.hit_points: Hit Points
-SHADOWDARK.apps.level-up.level_up: Level Up!
-SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
-SHADOWDARK.apps.level-up.notalent: No talents gained at this level
-SHADOWDARK.apps.level-up.roll_talent: Roll Talent
-SHADOWDARK.apps.level-up.title: Leveling Up
-SHADOWDARK.apps.monster-importer.import_button: Import Monster
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
-SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
-SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.item-importer.import_button: Tuo esine
+SHADOWDARK.apps.item-importer.instruction1: 1. Kopioi esineen teksti lähdemateriaalista.
+SHADOWDARK.apps.item-importer.instruction2a: 2. Liitä teksti tähän.
+SHADOWDARK.apps.item-importer.instruction2b: Esineen nimi
+SHADOWDARK.apps.item-importer.instruction2c: Kuvausteksti
+SHADOWDARK.apps.item-importer.instruction2d: Ominaisuudet
+SHADOWDARK.apps.item-importer.instruction3: 3. Paina "Tuo esine"-nappia.
+SHADOWDARK.apps.item-importer.title: Tuo esine
+SHADOWDARK.apps.level-up.dragdrop: Vedä ja tiputa tähän
+SHADOWDARK.apps.level-up.hit_points: Osumapisteet
+SHADOWDARK.apps.level-up.level_up: Hahmosi kehittyi seuraavalle tasolle!
+SHADOWDARK.apps.level-up.leveling_to: Kehitetään hahmoa tasolle
+SHADOWDARK.apps.level-up.notalent: Ei uusia lahjakkuuksia tällä tasolla
+SHADOWDARK.apps.level-up.roll_talent: Arvo uusi lahjakkuus
+SHADOWDARK.apps.level-up.title: Hahmon kehitys
+SHADOWDARK.apps.monster-importer.import_button: Tuo hirviö
+SHADOWDARK.apps.monster-importer.instruction1: 1. Kopioi hirviön teksti lähdemateriaalista.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Liitä hirviön teksti tähän. Lisää jokaisen kyvyn väliin tyhjä rivi.
+SHADOWDARK.apps.monster-importer.instruction2b: Hirviön nimi
+SHADOWDARK.apps.monster-importer.instruction2c: Kuvausteksti
 SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
@@ -505,7 +505,7 @@ SHADOWDARK.light-source.dropped: Pudotettiin {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Poimi valonlähde
 SHADOWDARK.light-tracker.active: Aktiivinen
 SHADOWDARK.light-tracker.paused: Pausetettu
-SHADOWDARK.light-tracker.status.label: Statut
+SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title.prefix: Valonlähteiden
 SHADOWDARK.light-tracker.title.suffix: seuranta
 SHADOWDARK.light-tracker.user_warning: Yksi tai useampi käyttäjä ei ole valinnut hahmoa
