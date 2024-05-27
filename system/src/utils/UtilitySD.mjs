@@ -234,4 +234,28 @@ export default class UtilitySD {
 		}
 		return itemObj;
 	}
+
+	static isPrimaryGM() {
+		if (!game.user.isGM) return false;
+
+		// if primaryGM flag is true, return
+		if (game.user.getFlag("shadowdark", "primaryGM")) {
+			return true;
+		}
+		else {
+			// locate the primary GM
+			const primaryGMs = game.users.filter(x =>
+				x.active === true && x.flags.shadowdark.primaryGM === true
+			);
+			if (primaryGMs.length === 0) {
+				// if no primary GM, set current user as primary GM
+				game.user.setFlag("shadowdark", "primaryGM", true);
+				shadowdark.log("Promoted to Primary GM");
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
 }
