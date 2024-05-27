@@ -2,7 +2,7 @@
 
 ## Bugfixes
 * [#799] Character Generator incorrectly generating character stats
-* [#802] Light sources counting down to quickly with multiple GMs logged in
+* [#802] Light sources counting down too quickly with multiple GMs logged in
 
 ## Chores
 * [#797] Merged Finnish language updates from Crowdin
