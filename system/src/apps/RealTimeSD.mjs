@@ -42,6 +42,9 @@ export default class RealTimeSD {
 			return;
 		}
 		if (this.isPaused()) return;
-		game.time.advance(this.updateIntervalMs / 1000);
+		console.log(shadowdark.utils.isPrimaryGM());
+		if (shadowdark.utils.isPrimaryGM()) {
+			game.time.advance(this.updateIntervalMs / 1000);
+		}
 	}
 }

@@ -4,7 +4,6 @@ export const LightSourceTrackerHooks = {
 		const lst = game.shadowdark.lightSourceTracker;
 
 		if (game.user.isGM) {
-			game.user.setFlag("shadowdark", "primaryGM", false);
 			game.shadowdark.lightSourceTracker.start();
 			Hooks.on("deleteActor", lst._deleteActorHook.bind(lst));
 			Hooks.on("deleteItem", lst._deleteItemHook.bind(lst));

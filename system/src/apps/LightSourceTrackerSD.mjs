@@ -293,6 +293,9 @@ export default class LightSourceTrackerSD extends Application {
 		// we only run the timer on the GM instance
 		if (!game.user.isGM) return;
 
+		// set default state for flag
+		await game.user.setFlag("shadowdark", "primaryGM", false);
+
 		// Now we can actually start properly
 		shadowdark.log("Light Tracker starting");
 
@@ -484,7 +487,7 @@ export default class LightSourceTrackerSD extends Application {
 	}
 
 	async onUpdateWorldTime(worldTime, worldDelta) {
-		if (!(this._isEnabled() && shadowdark.utils.isPrimaryGM())) return;
+		if (!(this._isEnabled() && game.user.isGM)) return;
 		if (this.updatingLightSources) return;
 
 		const updateSecs = game.settings.get(
@@ -505,6 +508,10 @@ export default class LightSourceTrackerSD extends Application {
 
 		this.lastUpdate = worldTime;
 
+		if (!shadowdark.utils.isPrimaryGM()) {
+			this.render(false);
+			return;
+		}
 		shadowdark.log("Updating light sources");
 
 		try {
