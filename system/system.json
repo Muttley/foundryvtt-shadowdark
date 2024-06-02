@@ -298,10 +298,12 @@
 			]
 		}
 	],
+	"grid": {
+		"distance": 5,
+		"units": "ft"
+	},
 	"socket": true,
-	"gridDistance": 5,
 	"initiative": "@initiativeFormula + @initiativeBonus",
 	"primaryTokenAttribute": "attributes.hp",
-	"gridUnits": "ft",
 	"background": "systems/shadowdark/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
 }
