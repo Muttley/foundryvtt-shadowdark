@@ -1,3 +1,12 @@
+# v2.3.0
+
+## Bugfixes
+* [#811] `description` typo in `system.json`
+
+Many thanks to *andrewbeard* for contributing fixes in this build
+
+---
+
 # v2.2.2
 
 ## Bugfixes
