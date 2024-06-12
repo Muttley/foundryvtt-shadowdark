@@ -94,10 +94,10 @@ SHADOWDARK.apps.monster-importer.instruction1: 1. Kopioi hirviön teksti lähdem
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Liitä hirviön teksti tähän. Lisää jokaisen kyvyn väliin tyhjä rivi.
 SHADOWDARK.apps.monster-importer.instruction2b: Hirviön nimi
 SHADOWDARK.apps.monster-importer.instruction2c: Kuvausteksti
-SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
-SHADOWDARK.apps.monster-importer.instruction2e: Feature
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
-SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.monster-importer.instruction2d: Hirviön ominaisuudet
+SHADOWDARK.apps.monster-importer.instruction2e: Ominaisuus
+SHADOWDARK.apps.monster-importer.instruction3: 3. Paina "Tuo hirviö"-nappia.
+SHADOWDARK.apps.monster-importer.title: Tuo hirviö
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Tuo Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Navigoi shadowdarklings.net sivustolle.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generoi hahmosi ja tallenna jsonina.
@@ -105,38 +105,38 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopioi json-tiedoston s
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Paina "tuo"-nappia.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Avaa generaattori
 SHADOWDARK.apps.shadowdarkling-importer.title: Tuo Shadowdarkling
-SHADOWDARK.apps.spell-book.known: Known
-SHADOWDARK.apps.spell-book.title: Class Spell List
-SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
-SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
-SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
-SHADOWDARK.apps.spell-importer.instruction2d: Duration
-SHADOWDARK.apps.spell-importer.instruction2e: Range
-SHADOWDARK.apps.spell-importer.instruction2f: Description
-SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
-SHADOWDARK.apps.spell-importer.title: Import Spell
+SHADOWDARK.apps.spell-book.known: Opittu
+SHADOWDARK.apps.spell-book.title: Hahmoluokan loitsulista
+SHADOWDARK.apps.spell-importer.import_button: Tuo loitsu
+SHADOWDARK.apps.spell-importer.instruction1: 1. Kopioi loitsun teksti lähdemateriaalista.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Liitä teksti tähän noudattaen loitsujen kirjoitustyyliä sääntökirjoissa.
+SHADOWDARK.apps.spell-importer.instruction2b: Loitsun nimi
+SHADOWDARK.apps.spell-importer.instruction2c: Loitsutaso ja hahmoluokka
+SHADOWDARK.apps.spell-importer.instruction2d: Kestoaika
+SHADOWDARK.apps.spell-importer.instruction2e: Kantama
+SHADOWDARK.apps.spell-importer.instruction2f: Kuvaus
+SHADOWDARK.apps.spell-importer.instruction3: 3. Paina "Tuo loitsu"-nappia.
+SHADOWDARK.apps.spell-importer.title: Tuo loitsu
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
 SHADOWDARK.armor.properties.one_handed: Varaa yhden käden
 SHADOWDARK.armor.properties.shield: Kilpi
-SHADOWDARK.boon.type.label: Boon Type
-SHADOWDARK.boons.blessing: Blessing
-SHADOWDARK.boons.oath: Oath
-SHADOWDARK.boons.secret: Secret
+SHADOWDARK.boon.type.label: Siunauksen tyyppi
+SHADOWDARK.boons.blessing: Siunaus
+SHADOWDARK.boons.oath: Vala
+SHADOWDARK.boons.secret: Salaisuus
 SHADOWDARK.chat_card.button.attack: Heitä hyökkäysheitto
 SHADOWDARK.chat_card.button.cast_spell: Loihdi loitsu
 SHADOWDARK.chat_card.button.learn_spell: Opettele loitsu
 SHADOWDARK.chat_card.button.use_potion: Käytä rohto
 SHADOWDARK.chat_card.button.use_scroll: Käytä loitsukäärö
 SHADOWDARK.chat_card.button.use_wand: Käytä taikasauvaa
-SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
-SHADOWDARK.chat_card.context.apply_damage: Apply Damage
-SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
-SHADOWDARK.chat_card.context.apply_healing: Apply Healing
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat_card.context.apply_damage_secondary: Käytä vaihtoehtoista vahinkoa
+SHADOWDARK.chat_card.context.apply_damage: Käytä normaalia vahinkoa
+SHADOWDARK.chat_card.context.apply_healing_secondary: Käytä vaihtoehtoista parannusta
+SHADOWDARK.chat_card.context.apply_healing: Käytä normaalia parannusta
+SHADOWDARK.chat.clockwise_initiative: Koska {name} heitti parhaiten hän menee ensin ja muut seuraavat kiinteässä järjestyksessä.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
@@ -156,17 +156,17 @@ SHADOWDARK.chat.spell_learn.failure: "{name} ei oppinut taikakääröstä mitä�
 SHADOWDARK.chat.spell_learn.success: "{name} onnistuneesti oppi {spellName} loitsun"
 SHADOWDARK.chat.spell_learn.title: Opettelee loitsua
 SHADOWDARK.chat.spell_roll.title: "Loihditaan {name} tasolla {tier} jolloin vaikeusaste on {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
-SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
-SHADOWDARK.chat.use_ability.title: "Using Ability"
+SHADOWDARK.chat.use_ability.failure: "{name} epäonnistui käyttämään {ability} kykyä"
+SHADOWDARK.chat.use_ability.success: "{name} onnistui {ability} kyvyssään"
+SHADOWDARK.chat.use_ability.title: "Kyvyn käyttö"
 SHADOWDARK.chat.welcome_message.intro: "Järjestelmän nopeaa oppimista varten, voit ottaa opastuskierrosen painamalla tätä nappia:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Tikettijärjestelmä
 SHADOWDARK.chat.welcome_message.issues: "Jos löydät ongelmia tai sinulla on ideoita uusiin ominaisuuksiin järjestelmässä. Tutustu virheiden seurantaamme:"
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG opastukset
 SHADOWDARK.chatcard.default: Heitä noppaa
-SHADOWDARK.class-ability.ability.label: Ability
-SHADOWDARK.class-ability.available.label: Available
+SHADOWDARK.class-ability.ability.label: Kyky
+SHADOWDARK.class-ability.available.label: Käytettävissä
 SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: Ability Group
 SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
