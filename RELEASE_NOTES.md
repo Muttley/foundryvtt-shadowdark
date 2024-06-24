@@ -2,6 +2,7 @@
 
 ## Bugfixes
 * [#811] `description` typo in `system.json`
+* [#816] Updated Ranger Herbalism talent description to the latest version
 
 Many thanks to *andrewbeard* for contributing fixes in this build
 
