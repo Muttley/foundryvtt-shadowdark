@@ -1,91 +1,76 @@
-<label class="actions-label">{{characterClass}} {{localize 'SHADOWDARK.sheet.abilities.label'}}</label>
-<section class="class-abilities-body">
-	<div class="class-abilities-list">
-		{{#each classAbilities as |group|}}
-			<table>
-				<tr class="ability-group-header">
-					<th class="ability-group-header-padding">
-						{{group.name}}
-					</th>
-					<th>&nbsp;</th>
-					<th>&nbsp;</th>
-				</tr>
-				{{#each group.abilities}}
-					{{> ability ability=this owner=../../owner}}
-				{{/each}}
-			</table>
-		{{/each}}
+<div class="SD-box">
+	<div class="header">
+		<label>{{characterClass.name}} {{localize 'SHADOWDARK.sheet.abilities.label'}}</label>
+		<span></span>
 	</div>
-</section>
+	<div class="content">
 
-{{#*inline "ability"}}
-	<tr
-		class="item"
-		data-item-id="{{ability._id}}"
-	>
-		<td>
-			<div
-				class="item-image"
-				style="background-image: url({{ability.img}})"
-				data-item-id="{{ability._id}}"
-			>
-				<i class="fas fa-comment fa-lg"></i>
-			</div>
-			<a
-				class="item-control show-details {{#if ability.system.lost}}strike-through{{/if}}"
-				data-item-id="{{ability._id}}"
-			>
-				{{ability.name}}
-			</a>
-		</td>
-		<td style="text-align: center;">
-			{{#if ability.system.limitedUses}}
-				{{#if owner}}
-					<a
-						class="item-control ability-uses-decrement"
-						data-item-id="{{ability._id}}"
-						data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.decrement.tooltip'}}"
-					>
-						<i class="fa-regular fa-minus fa-xs"></i>
+		<ol class="SD-list">
+			{{#each classAbilities as |group|}}
+				<li class="header">
+					<div class="item-name">{{group.name}}</div>
+					<div class="standard centered">Uses</div>
+					<div class="actions"></div>
+				</li>
+
+				{{#each group.abilities}}
+				<li class="item" data-item-id="{{this._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{this._id}}">
+					<div class="item-image" style="background-image: url({{this.img}})"></div>
+					<a class="item-name {{#if this.system.lost}}strike-through{{/if}}" data-action="show-details">
+						{{this.name}}
 					</a>
-				{{/if}}
-					{{ability.system.uses.available}}/{{ability.system.uses.max}}
-				{{#if owner}}
-					<a
-						class="item-control ability-uses-increment"
-						data-item-id="{{ability._id}}"
-						data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.increment.tooltip'}}"
-					>
-						<i class="fa-regular fa-plus fa-xs"></i>
-					</a>
-				{{/if}}
-			{{else}}
-				&nbsp;
-			{{/if}}
-		</td>
-		<td style="text-align: right; padding-right: 4px;">
-			{{#unless ability.system.lost}}
-				<a
-					class="item-control use-ability"
-					data-action="use-ability"
-					data-item-id="{{ability._id}}"
-					data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
-				>
-					<i class="fa-solid fa-dice-d20"></i>
-				</a>
-				&nbsp;
-			{{/unless}}
-			<a
-				class="item-control toggle-lost"
-				data-item-id="{{ability._id}}"
-				data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_ability_lost"}}"
-			>
-				{{#if ability.system.lost}}
-					<i style="color:red;" class="fa-solid fa-xmark"></i>
-				{{else}}
-					<i style="color:green;" class="fa-solid fa-check"></i>
-				{{/if}}
-			</a>
-		</td>
-	</tr>
-{{/inline}}
+					<div class="standard centered">
+						{{#if this.system.limitedUses}}
+							{{#if ../../owner}}
+								<a
+									class="item-control ability-uses-decrement"
+									data-item-id="{{this._id}}"
+									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.decrement.tooltip'}}"
+								>
+									<i class="fa-regular fa-minus fa-xs"></i>
+								</a>
+							{{/if}}
+							{{this.system.uses.available}}/{{this.system.uses.max}}
+							{{#if ../../owner}}
+								<a
+									class="item-control ability-uses-increment"
+									data-item-id="{{this._id}}"
+									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.increment.tooltip'}}"
+								>
+									<i class="fa-regular fa-plus fa-xs"></i>
+								</a>
+							{{/if}}
+						{{else}}
+							&nbsp;
+						{{/if}}
+					</div>
+					<div class="actions">
+						{{#unless this.system.lost}}
+						<a
+							data-action="use-ability"
+							data-item-id="{{this._id}}"
+							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
+						>
+							<i class="fa-solid fa-dice-d20"></i>
+						</a>
+						&nbsp;
+						{{/unless}}
+						<a
+							data-action="toggle-lost"
+							data-item-id="{{this._id}}"
+							data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_ability_lost"}}"
+						>
+							{{#if this.system.lost}}
+								<i style="color:red;" class="fa-solid fa-xmark"></i>
+							{{else}}
+								<i class="fa-solid fa-check"></i>
+							{{/if}}
+						</a>
+					</div>
+				</li>
+				{{/each}}
+			{{/each}}
+		</ol>
+		<br>
+	</div>
+</div>

@@ -2,10 +2,6 @@ import CompendiumItemSelector from "../CompendiumItemSelector";
 
 export default class WeaponPropertySelector extends CompendiumItemSelector {
 
-	get prompt() {
-		return game.i18n.localize("SHADOWDARK.dialog.select_weapon_property.prompt");
-	}
-
 	get title() {
 		return game.i18n.localize("SHADOWDARK.dialog.select_weapon_property.title");
 	}

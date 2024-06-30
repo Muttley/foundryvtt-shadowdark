@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.shadowdark.sheet {
+	.window-content {
+		padding: 0px;
+		overflow-y: hidden;
+	}
+}
+
+.shadowdark {
+
+	.SD-header {
+		margin: 2px;
+		padding: 2px;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: 4px;
+		align-items: center;
+		background-color: #{$primary-color};
+		color:white;
+	}
+
+	.SD-title {
+		font-family: "Old Newspaper Font";
+		font-size: 40px;
+		text-align: center;
+		color:white;
+		input {
+			height: 100%;
+			color:white;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.SD-nav {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: baseline;
+		border-bottom: 2px solid #{$primary-color};
+		margin: 5px 8px 8px 8px;
+		padding: 0px 0px 5px 0px;
+
+		a {
+			@include p-reset;
+			margin: 4px;
+
+			font-family: "Old Newspaper Font";
+			font-size: 1.5rem;
+			line-height: 1;
+
+			color: #222;
+
+			&.active {
+				text-decoration: underline;
+				font-weight: bold;
+				color: $primary-color;
+			}
+		}
+	}
+
+	.SD-content-body {
+		padding: 0px 8px 8px 8px;
+		overflow: auto;
+	}
+}

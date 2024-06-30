@@ -1,35 +1,57 @@
-<form class="spell-book" autocomplete="off">
-	<h2>{{class.name}} {{localize "SHADOWDARK.sheet.player.tab.spells"}}</h2>
-<table>
-<tbody>
+<form class=" flexcol" autocomplete="off">
+
+<header class="SD-header flex0">
+	<img
+		src="icons/sundries/books/book-open-brown.webp"
+		height="64"
+		width="64"
+		style="filter:grayscale(1);"
+	/>
+	<div class="SD-title">{{class.name}} {{localize "SHADOWDARK.sheet.player.tab.spells"}}</div>
+</header>
+
+<nav class="SD-nav flex0" data-group="primary">
 {{#each spellList}}
-	<tr>
-	<th colspan="3">
-		{{localize "SHADOWDARK.item.spell_tier"}}
-		{{@key}}
-		{{localize "SHADOWDARK.sheet.player.tab.spells"}}
-	</th>
-	</tr>
-	<tr>
-		<td><b>{{localize "SHADOWDARK.item.spell.label"}}</b></td>
-		<td><b>{{localize 'SHADOWDARK.item.spell_duration'}}</b></td>
-		<td><b>{{localize 'SHADOWDARK.item.spell_range'}}</b></td>
-	</tr>
-	{{#each .}}
-	<tr class="item nameRow" data-key1="{{@../key}}" data-key2="{{@key}}" data-uuid="{{this.uuid}}" data-action="show-description" draggable="true">
-		<td class="flex3">
-			<div class="item-image" style="background-image: url({{this.img}})"></div>
-			<a>{{this.name}}</a>
-			{{#if (hasspell this.name)}}<span style="font-size:0.75em">[{{localize "SHADOWDARK.apps.spell-book.known"}}]</span>{{/if}}
-		</td>
-		<td class="flex0">{{getSpellDuration
-					this.system.duration.type
-					this.system.duration.value
-		}}</td>
-		<td class="flex0">{{fromConfig "SPELL_RANGES" this.system.range}}</td>
-	</tr>
-	{{/each}}
+	<a class="navigation-tab" data-tab="tab-tier-{{@key}}">
+		{{localize "SHADOWDARK.item.spell_tier"}} {{@key}}
+	</a>
 {{/each}}
-</tbody>
-</table>
+</nav>
+
+<section class="SD-content-body flex1">
+{{#each spellList}}
+	<section class="tab" data-group="primary" data-tab="tab-tier-{{@key}}">
+		<div class="SD-banner">
+				{{localize "SHADOWDARK.item.spell_tier"}}
+				{{@key}}
+				{{localize "SHADOWDARK.sheet.player.tab.spells"}}
+		</div>
+
+		<ol class="SD-list">
+			<li class="header">
+				<div class="item-name">{{localize "SHADOWDARK.item.spell.label"}}</div>
+				<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
+				<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
+			</li>
+
+			{{#each .}}
+			<li class="item" data-uuid="{{this.uuid}}" draggable="true">
+
+				<div class="item-image" style="background-image: url({{this.img}})"></div>
+				<a class="item-name" data-uuid="{{this.uuid}}" data-action="show-details">{{this.name}}</a>
+				{{#if (hasspell this.name)}}<span style="font-size:0.75em">[{{localize "SHADOWDARK.apps.spell-book.known"}}]</span>{{/if}}
+
+				<div class="duration">{{getSpellDuration
+							this.system.duration.type
+							this.system.duration.value
+				}}</div>
+				<div class="range">{{fromConfig "SPELL_RANGES" this.system.range}}</div>
+			</li>
+			{{/each}}
+
+		</ol>
+	</section>
+{{/each}}
+</section>
+
 </form>

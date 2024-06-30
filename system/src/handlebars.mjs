@@ -68,7 +68,8 @@ export default function registerHandlebarsHelpers() {
 	});
 
 	Handlebars.registerHelper("uuidToName", uuid => {
-		return fromUuidSync(uuid).name;
+		if (!uuid) return "";
+		return shadowdark.utils.getFromUuidSync(uuid).name;
 	});
 
 	/* -------------------------------------------- */

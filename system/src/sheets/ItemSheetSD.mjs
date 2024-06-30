@@ -17,8 +17,8 @@ export default class ItemSheetSD extends ItemSheet {
 			resizable: true,
 			tabs: [
 				{
-					navSelector: ".item-navigation",
-					contentSelector: ".item-body",
+					navSelector: ".SD-nav",
+					contentSelector: ".SD-content-body",
 					initial: "tab-details",
 				},
 			],
@@ -352,7 +352,7 @@ export default class ItemSheetSD extends ItemSheet {
 			),
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			showMagicItemCheckbox: item.system.isPhysical && !["Potion", "Scroll", "Wand"].includes(item.type),
+			showMagicItemCheckbox: item.system.isPhysical && !["Gem", "Potion", "Scroll", "Wand"].includes(item.type),
 			system: item.system,
 			showTab,
 			editable: this.isEditable,
@@ -411,6 +411,11 @@ export default class ItemSheetSD extends ItemSheet {
 					item.system.light.remainingSecs / 60
 				);
 			}
+		}
+
+		if (context.showMagicItemCheckbox || item.system.canBeEquipped
+			|| item.type === "Basic" || item.type === "Effect") {
+			context.showItemProperties=true;
 		}
 
 		// initialize spellsknown table if not already set on a spellcaster class item
@@ -1020,7 +1025,7 @@ export default class ItemSheetSD extends ItemSheet {
 		const handledData = data;
 
 		let defaultValue = "REPLACEME";
-		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue);
+		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue, data.name);
 
 		if (defaultValue === "REPLACEME") {
 			return shadowdark.log("Can't create effect without selecting a value.");

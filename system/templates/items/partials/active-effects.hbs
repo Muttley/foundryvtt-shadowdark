@@ -1,17 +1,25 @@
-<div class="effects">
+<div class="grid-1-columns">
 
-  <!-- Effect Selector -->
-  <div class="effect-properties">
-    <div class="effect-property">
-      <label>{{localize "SHADOWDARK.item.effect.pre-defined.title"}}</label>
-      <input name="system.predefinedEffects" list="predefined-effects-list" type="text" value="" placeholder="" {{#if (not @root.effectsEditable)}}disabled{{/if}}/>
-      <datalist id="predefined-effects-list">
-        {{#each predefinedEffects}}
-        <option value="{{this.key}}" label="{{this.name}}"></option>
-        {{/each}}
-      </datalist>
-    </div>
-  </div>
+	<!-- Effect Selector -->
+	<div style="margin:4px;">
+		<h3>{{localize "SHADOWDARK.item.effect.pre-defined.title"}}</h3>
+		<input
+		style="width:auto"
+		name="system.predefinedEffects"
+		list="predefined-effects-list"
+		type="text"
+		value=""
+		placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
+		{{#if (not @root.effectsEditable)}}disabled{{/if}}
+	/>
+		<datalist id="predefined-effects-list">
+		{{#each predefinedEffects}}
+		<option value="{{this.key}}" label="{{this.name}}"></option>
+		{{/each}}
+		</datalist>
+	</div>
+
+	<div class="SD-banner">Effects</div>
 
   <div class="effect-list-table">
     <!-- Effect List Header -->
@@ -103,5 +111,6 @@
 
     <!-- / Effect List -->
   </div>
+
 </div>
 

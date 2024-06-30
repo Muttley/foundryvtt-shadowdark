@@ -12,7 +12,7 @@ export default class CompendiumItemSelector extends FormApplication {
 		const options = super.defaultOptions;
 
 		foundry.utils.mergeObject(options, {
-			classes: ["shadowdark", "compendium-item-selector"],
+			classes: ["shadowdark"],
 			height: "auto",
 			width: 320,
 			closeOnSubmit: false,
@@ -23,7 +23,7 @@ export default class CompendiumItemSelector extends FormApplication {
 	}
 
 	get prompt() {
-		return game.i18n.localize("SHADOWDARK.dialog.item_selector.select_item.prompt");
+		return game.i18n.localize("SHADOWDARK.dialog.type_here");
 	}
 
 	get template() {

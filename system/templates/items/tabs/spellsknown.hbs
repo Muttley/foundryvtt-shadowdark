@@ -1,20 +1,27 @@
 <section class="tab tab-spellsknown" data-group="primary" data-tab="tab-spellsknown">
-	<div>Spells Known by Spell Tier</div>
-	<table>
+	<div class="SD-banner">Spells Known by Spell Tier</div>
+	<table class="SD-table" style="text-align:center">
 		<tr>
-			<th>Level</th>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-			<th>4</th>
-			<th>5</th>
+			<th style="text-align:center">Level</th>
+			<th style="text-align:center">Tier 1</th>
+			<th style="text-align:center">Tier 2</th>
+			<th style="text-align:center">Tier 3</th>
+			<th style="text-align:center">Tier 4</th>
+			<th style="text-align:center">Tier 5</th>
 		</tr>
 
 		{{#each item.system.spellcasting.spellsknown}}
 		<tr>
 		<td>{{@key}}</td>
 			{{#each this}}
-				<td><input type="number" value="{{this}}" name="system.spellcasting.spellsknown.{{@../key}}.{{@key}}"></td>
+				<td>
+					<input
+						type="number"
+						value="{{this}}"
+						name="system.spellcasting.spellsknown.{{@../key}}.{{@key}}"
+						placeholder="-"
+					>
+				</td>
 			{{/each}}
 		</tr>
 		{{/each}}

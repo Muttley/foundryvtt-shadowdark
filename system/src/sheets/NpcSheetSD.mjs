@@ -179,7 +179,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		// if it's an PC spell, convert to NPC spell, else return as normal
 		if (droppedItem.type === "Spell") {
-			console.log("spell");
 			const newNpcSpell = {
 				name: droppedItem.name,
 				type: "NPC Spell",

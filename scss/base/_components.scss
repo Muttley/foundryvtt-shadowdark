@@ -2,35 +2,165 @@
 @use "../mixins" as *;
 
 .shadowdark {
+
 	.SD-box {
+		display:grid;
+		grid-template-rows: 28px 1fr;
 		border: 2px solid #{$primary-color};
 
 		.header {
 			display:flex;
-			height: 30px;
+			height: 28px;
+			overflow: hidden;
 
 			label {
-				font-size: 20px;
-				font-family: "Old Newspaper Font";
 				background:#{$primary-color};
-				float:left;
 				color:white;
-				padding:0px 10px 0px 10px;
+				font-size: 18px;
+				font-family: "Old Newspaper Font";
+				text-transform: uppercase;
+				float:left;
+				padding:0px 8px;
 			}
 			span {
-				background: linear-gradient(90deg, #{$primary-color} , transparent 90%);
+				background-image: url("../assets/artwork/title_right.png");
+				background-repeat: no-repeat;
+				background-size: auto;
 				float:right;
 				flex-grow: 1;
 				text-align:right;
-				padding: 3px 5px 3px 0px;
+				padding: 3px 5px;
 				font-size: 16px;
 			}
+
+			&.light {
+				label{
+					background: none;
+					color:black;
+					font-weight: bold;
+				}
+				span {
+					background: none;
+				}
+			}
 		}
+
 		.content {
-			display:grid;
 			padding:5px;
+		}
+	}
+
+	.SD-banner {
+		font-family: "Montserrat-SemiBold";
+		font-size: 16px;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.8;
+		color:white;
+		height: 28px;
+		background: linear-gradient(90deg, transparent 40px, black 40px, black calc(100% - 40px), transparent calc(100% - 40px)),
+		url("../assets/artwork/title_right.png") no-repeat right,
+		url("../assets/artwork/title_left.png") no-repeat left;
+		background-size: auto;
+	}
+
+	.SD-bold {
+		font-size: 20px;
+		font-family: "Old Newspaper Font";
+		font-weight: bold;
+	}
+
+	.SD-list {
+		margin:0px;
+		padding: 0px;
+		list-style: none;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			padding: 2px 4px;
+			border-bottom: 1px solid #{$primary-color};
+
+			&.header {
+				font-family: "Montserrat-Bold";
+				color: #{$primary-color};
+			}
+
+			a, div {
+				margin: 0px 4px;
+			}
+
+			.header {
+				font-family: "Montserrat-Bold";
+				color: #{$primary-color};
+			}
+
+			.item-image {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+
+				background-size: contain;
+				background-repeat: no-repeat;
+				vertical-align: middle;
+
+				&:hover {
+					background: none !important;
+					color: white;
+				}
+			}
+
+			.item-name {
+				flex:2;
+				overflow: hidden;
+				margin: 0px 4px;
+			}
+
+			.item-details {
+				flex: 0 0 100%;
+				margin:5px;
+				font-size: 12px;
+			}
+
+			.slots {
+				flex: 0 0 40px;
+				text-align: center;
+			}
+
+			.source,
+			.range {
+				flex: 0 0 60px;
+			}
+
+			.quantity {
+				flex: 0 0 80px;
+				text-align: center;
+			}
+
+			.standard,
+			.duration {
+				flex: 0 0 100px;
+			}
+
+			.actions {
+				flex: 0 0 60px;
+				display:flex;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				a{
+					color: var(--inactive-control);
+					&:hover {
+						color: var(--primary);
+					}
+				}
+
+			}
 
 		}
+
 	}
 
 	.SD-table {
@@ -39,16 +169,13 @@
 		background-color: rgba(255, 255, 255, 0);
 		border:none;
 		font-size: 14px;
-		margin-bottom: 14px;
-
-		.bold {
-			font-family: "Montserrat-Bold";
-		}
+		margin: 0px 6px 14px 6px;
+		width:auto;
 
 		th {
-			background-color: #{$primary-color};
-			text-transform: uppercase;
-			color:white;
+			font-family: "Montserrat-Bold";
+			color: #{$primary-color};
+			text-align: left;
 		}
 		tr {
 			background-color: rgba(255, 255, 255, 0);
@@ -57,11 +184,12 @@
 		td {
 			border-top: 2px solid #{$primary-color};
 			padding: 2px 2px 2px 5px;
+
+			& .item-details {
+				border: none;
+			}
 		}
 
 	}
 
-	hr {
-		border: solid 1px #{$primary-color};
-	}
 }

@@ -1,100 +1,68 @@
 <form class="character-generator" autocomplete="off">
+<div class="cg-grid">
 
-<div class="col1">
+	{{!-- title --}}
+	<h1 class="grid-colspan-2" style="margin:10px 5px;">
+		{{localize "SHADOWDARK.apps.character-generator.title"}}
+		{{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}
+	</h1>
 
-<h1>{{localize "SHADOWDARK.apps.character-generator.title"}} {{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}</h1>
-
-{{!-- Column 1a --}}
-<div class="col1a">
+	{{!-- details --}}
+	{{> cg-details}}
 
 	{{!-- level type select --}}
-	<div class="box-style">
+	<div class="SD-box">
 		<div class="header">
-			<label for="level0" >{{localize "SHADOWDARK.apps.character-generator.type"}}</label>
+			<label>{{localize 'SHADOWDARK.apps.character-generator.type'}}</label>
 			<span></span>
 		</div>
-		<div class="content small-style">
-			<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled editing}}> {{localize "SHADOWDARK.talent.class.level"}} 0
-			<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled editing}}> {{localize "SHADOWDARK.talent.class.level"}} 1
+		<div class="content grid-2-columns">
+			<div>
+				<input type="radio" name="level0" value="true" {{#if level0}}checked{{/if}} {{disabled editing}}>
+				{{localize "SHADOWDARK.talent.class.level"}} 0</label>
+			</div>
+			<div>
+				<input type="radio" name="level0" value="false" {{#unless level0}}checked{{/unless}} {{disabled editing}}>
+				{{localize "SHADOWDARK.talent.class.level"}} 1
+			</div>
+		</div>
+	</div>
+
+	{{!-- Name --}}
+	<div class="SD-box">
+		<div class="header">
+			<label>{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>{{/unless}}</span>
+		</div>
+		<div class="content">
+			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" {{disabled editing}}/>
 		</div>
 	</div>
 
 	{{!-- Stats --}}
-	<div class="box-style">
+	<div class="SD-box" style="grid-row: span 3">
 		<div class="header">
-			<label for="actor.system.stats" >{{localize "SHADOWDARK.apps.character-generator.stats"}}</label>
+			<label for="actor.system.stats" >{{localize "SHADOWDARK.sheet.abilities.stats"}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-stats" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
-		<div class="content medium-style">
-			<div class="statcontainer">
+		<div class="content">
+			<div class="grid-2-columns">
 			{{#each actor.system.abilities as |value key|}}
 			<div class="stats">
 				<label for="actor.system.abilities.{{key}}.base">{{key}}</label>
-				<select name="actor.system.abilities.{{key}}.base" id="stat" {{disabled ../editing}}>
-				{{#select value.base}}
-					{{#each ../statRange}}
-					<option value="{{this}}">{{this}}</option>
-					{{/each}}
-				{{/select}}
-				</select>
-				<span>{{numberFormat value.mod decimals=0 sign=true}}</span>
+				<div>
+					<select name="actor.system.abilities.{{key}}.base" id="stat" {{disabled ../editing}}>
+					{{#select value.base}}
+						{{#each ../statRange}}
+						<option value="{{this}}">{{this}}</option>
+						{{/each}}
+					{{/select}}
+					</select>
+					<span>{{numberFormat value.mod decimals=0 sign=true}}</span>
+				</div>
 			</div>
 			{{/each}}
 			</div>
-		</div>
-	</div>
-
-	{{!-- HP --}}
-	<div class="box-style">
-		<div class="header">
-			<label>{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
-			<span></span>
-		</div>
-		<div class="content small-style">
-			[{{classHP}}]
-			{{numberFormat actor.system.abilities.con.mod decimals=0 sign=true}}
-		</div>
-	</div>
-
-		{{!-- Gold --}}
-	{{#unless level0}}
-	<div class="box-style">
-		<div class="header">
-			<label for="actor.system.coins.gp">{{localize "SHADOWDARK.apps.character-generator.starting_gold"}}</label>
-			<span><a class="fas fa-dice" name="randomize-gold" data-action="cg-click"></a></span>
-		</div>
-		<div class="content small-style">
-			<input type="number" value="{{actor.system.coins.gp}}" name="actor.system.coins.gp" style="width:2em;"/>
-			{{localize "SHADOWDARK.coins.gp"}}
-		</div>
-	</div>
-	{{/unless}}
-
-	{{!-- Gear --}}
-	{{#if level0}}
-	<div class="box-style">
-		<div class="header">
-			<label>{{localize "SHADOWDARK.apps.character-generator.starting_gear"}}</label>
-			<span><a class="fas fa-dice" name="randomize-gear" data-action="cg-click"></a></span>
-		</div>
-		<div class="content small-style">
-
-		</div>
-	</div>
-	{{/if}}
-
-</div>
-{{!-- Column 1b --}}
-<div class="col1b">
-
-	{{!-- Name --}}
-	<div class="box-style">
-		<div class="header">
-			<label for="actor.name">{{localize 'SHADOWDARK.sheet.player.name.label'}}</label>
-			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-name" data-action="cg-click"></a>{{/unless}}</span>
-		</div>
-		<div class="content small-style">
-			<input type="text" value="{{actor.name}}" name="actor.name" data-dtype="String" {{disabled editing}}/>
 		</div>
 	</div>
 
@@ -104,7 +72,7 @@
 			<label for="actor.system.ancestry" title="{{localize 'SHADOWDARK.sheet.player.ancestry.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/unless}}</span>
 		</div>
-		<div class="content small-style">
+		<div class="content">
 			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry" {{disabled editing}}>
 			{{#select actor.system.ancestry}}
 				<option value=""></option>
@@ -123,7 +91,7 @@
 			<span>{{#unless level0}}<a class="fas fa-dice" name="randomize-class" data-action='cg-click'></a>{{/unless}}</span>
 
 		</div>
-		<div class="content small-style">
+		<div class="content">
 			<select name="actor.system.class" data-action='load-class-talents' id="class">
 			{{#select actor.system.class}}
 				{{#if level0}}
@@ -141,12 +109,12 @@
 	</div>
 
 	{{!-- Background --}}
-	<div class="box-style">
+	<div class="SD-box">
 		<div class="header">
 			<label for="actor.system.background" title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.background.label'}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-background" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
-		<div class="content small-style">
+		<div class="content">
 			<select name="actor.system.background" id="background" {{disabled editing}}>
 			{{#select actor.system.background}}
 				<option value=""></option>
@@ -158,26 +126,65 @@
 		</div>
 	</div>
 
+	{{!-- HP --}}
+	<div class="SD-box">
+		<div class="header">
+			<label>{{localize "SHADOWDARK.apps.level-up.hit_points"}}</label>
+			<span></span>
+		</div>
+		<div class="content centered">
+			[{{classHP}}]
+			{{numberFormat actor.system.abilities.con.mod decimals=0 sign=true}}
+		</div>
+	</div>
+
 	{{!-- Alignment --}}
-	<div class="box-style">
+	<div class="SD-box">
 		<div class="header">
 			<label for="actor.system.alignment" >{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-alignment" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
-		<div class="content small-style">
+		<div class="content">
 			<select name="actor.system.alignment" {{disabled editing}}>
 				{{selectOptions alignments selected=actor.system.alignment localize=false}}
 			</select>
 		</div>
 	</div>
 
+	{{!-- Gold --}}
+	{{#unless level0}}
+	<div class="SD-box">
+		<div class="header">
+			<label for="actor.system.coins.gp">{{localize "SHADOWDARK.apps.character-generator.gold"}}</label>
+			<span><a class="fas fa-dice" name="randomize-gold" data-action="cg-click"></a></span>
+		</div>
+		<div class="content centered">
+			<input type="number" value="{{actor.system.coins.gp}}" name="actor.system.coins.gp" style="width:2em;"/>
+			{{localize "SHADOWDARK.coins.gp"}}
+		</div>
+	</div>
+	{{/unless}}
+
+	{{!-- Gear --}}
+	{{#if level0}}
+	<div class="SD-box">
+		<div class="header">
+			<label>{{localize "SHADOWDARK.apps.character-generator.gear"}}</label>
+			<span><a class="fas fa-dice" name="randomize-gear" data-action="cg-click"></a></span>
+		</div>
+		<div class="content centered">
+			See details
+		</div>
+	</div>
+	{{/if}}
+
 	{{!-- Deity --}}
-	<div class="box-style">
+	<div class="SD-box">
 		<div class="header">
 			<label for="actor.system.deity" title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.deity.label'}}</label>
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-deity" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
-		<div class="content small-style">
+		<div class="content">
 			<select name="actor.system.deity" id="deity" {{disabled editing}}>
 			{{#select actor.system.deity}}
 				<option value=""></option>
@@ -190,16 +197,12 @@
 	</div>
 
 </div>
-
+<div id="create-bar">
+	{{#unless editing}}
+		<button type="button" data-action="create-character">{{localize "SHADOWDARK.apps.character-generator.create_character"}}</button>
+	{{/unless}}
+	{{#if editing}}
+		<button type="button" data-action="update-character">{{localize "SHADOWDARK.apps.character-generator.update_character"}}</button>
+	{{/if}}
 </div>
-{{!-- Column 2 --}}
-<div class="col2">
-{{> cg-details}}
-</div>
-{{#unless editing}}
-	<button type="button" data-action="create-character">{{localize "SHADOWDARK.apps.character-generator.create_character"}}</button>
-{{/unless}}
-{{#if editing}}
-	<button type="button" data-action="update-character">{{localize "SHADOWDARK.apps.character-generator.update_character"}}</button>
-{{/if}}
 </form>

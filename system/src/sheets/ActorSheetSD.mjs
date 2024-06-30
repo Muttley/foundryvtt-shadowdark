@@ -4,7 +4,7 @@ export default class ActorSheetSD extends ActorSheet {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find(".ability-name.rollable").click(
+		html.find("[data-action='roll-ability-check']").click(
 			event => this._onRollAbilityCheck(event)
 		);
 
@@ -16,7 +16,7 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onItemSelection(event)
 		);
 
-		html.find(".pc-roll-initiative .rollable").click(
+		html.find("[data-action='roll-initiative']").click(
 			event => this._onRollInitiative(event)
 		);
 
@@ -28,11 +28,15 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onShowDetails(event)
 		);
 
+		html.find("[data-action='show-details']").click(
+			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
+		);
+
 		html.find("[data-action='item-attack']").click(
 			event => this._onRollAttack(event)
 		);
 
-		html.find(".toggle-lost").click(
+		html.find("[data-action='toggle-lost']").click(
 			event => this._onToggleLost(event)
 		);
 
@@ -283,21 +287,35 @@ export default class ActorSheetSD extends ActorSheet {
 		event.preventDefault();
 
 		// User the default roll available to each Actor / Token
-		await this.actor.rollInitiative({ createCombatants: true, rerollInitiative: true});
+		await this.actor.rollInitiative({ createCombatants: false, rerollInitiative: false});
 	}
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
 
 		let ability = $(event.currentTarget).data("ability");
-		this.actor.rollAbility(ability, {event: event});
+
+		// skip roll prompt if shift clicked
+		if (event.shiftKey) {
+			this.actor.rollAbility(ability, {event: event, fastForward: true});
+		}
+		else {
+			this.actor.rollAbility(ability, {event: event});
+		}
 	}
 
 	async _onRollAttack(event) {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		this.actor.rollAttack(itemId);
+
+		// skip roll prompt if shift clicked
+		if (event.shiftKey) {
+			this.actor.rollAttack(itemId, {fastForward: true});
+		}
+		else {
+			this.actor.rollAttack(itemId);
+		}
 	}
 
 	async _onShowDetails(event) {

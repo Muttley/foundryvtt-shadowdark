@@ -331,11 +331,10 @@ export default class ItemSD extends Item {
 	 * @returns {string}
 	 */
 	async _askEffectInput(effectParameters) {
-		// const effectParameters = [{type, options}, {type, options}];
+		// const effectParameters = [{key, type, options}, {key, type, options}];
 		const parameters = Array.isArray(effectParameters)
 			? effectParameters
 			: [effectParameters];
-
 		for (const parameter of parameters) {
 			parameter.label = await game.i18n.localize(
 				`SHADOWDARK.dialog.effect.choice.${parameter.type}`
@@ -392,15 +391,16 @@ export default class ItemSD extends Item {
 	 *
 	 * @param {string} key - effectKey from mapping
 	 * @param {Object} value - data value from mapping
+	 * @param {Object} name - name value from mapping
 	 * @returns {Object}
 	 */
-	async _handlePredefinedEffect(key, value) {
+	async _handlePredefinedEffect(key, value, name=null) {
 		if (key === "acBonusFromAttribute") {
 			const type = "attribute";
 
 			const options = shadowdark.config.ABILITIES_LONG;
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 		else if (key === "armorMastery") {
@@ -410,7 +410,7 @@ export default class ItemSD extends Item {
 				await shadowdark.compendiums.baseArmor()
 			);
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 		else if (key === "lightSource") {
@@ -427,7 +427,7 @@ export default class ItemSD extends Item {
 				return options[i] = game.i18n.localize(lightSourceList[i].lang);
 			});
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 		else if (key === "spellAdvantage") {
@@ -437,7 +437,7 @@ export default class ItemSD extends Item {
 				await shadowdark.compendiums.spells()
 			);
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 		else if (
@@ -452,16 +452,18 @@ export default class ItemSD extends Item {
 				await shadowdark.compendiums.weaponProperties()
 			);
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 		else if (key === "weaponDamageExtraDieByProperty") {
 			const parameters = [
 				{
+					key: key,
 					type: "damage_die",
 					options: shadowdark.config.DICE,
 				},
 				{
+					key: key,
 					type: "weapon_property",
 					options: await shadowdark.utils.getSlugifiedItemList(
 						await shadowdark.compendiums.weaponProperties()
@@ -486,7 +488,7 @@ export default class ItemSD extends Item {
 				await shadowdark.compendiums.baseWeapons()
 			);
 
-			const chosen = await this._askEffectInput({type, options});
+			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
 

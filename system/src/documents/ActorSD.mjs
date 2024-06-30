@@ -402,6 +402,7 @@ export default class ActorSD extends Actor {
 			: this.attackBonus(item.system.type);
 
 		const weaponOptions = {
+			weaponId: itemId,
 			weaponName: item.name,
 			handedness: "",
 			attackBonus: 0,
@@ -935,12 +936,11 @@ export default class ActorSD extends Actor {
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
-
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 
-	async rollAttack(itemId) {
+	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		const data = {
@@ -1026,7 +1026,7 @@ export default class ActorSD extends Actor {
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
 		}
 
-		return item.rollItem(parts, data);
+		return item.rollItem(parts, data, options);
 	}
 
 

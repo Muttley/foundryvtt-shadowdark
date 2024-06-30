@@ -6,10 +6,6 @@ export default class AncestrySelector extends CompendiumItemSelector {
 
 	maxChoices = 1;
 
-	get prompt() {
-		return game.i18n.localize("SHADOWDARK.dialog.select_ancestry.prompt");
-	}
-
 	get title() {
 		return game.i18n.localize("SHADOWDARK.dialog.select_ancestry.title");
 	}

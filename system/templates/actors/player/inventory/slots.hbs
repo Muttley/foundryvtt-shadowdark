@@ -1,24 +1,26 @@
-<div class="slots">
-	<label>{{localize 'SHADOWDARK.inventory.slots'}}</label>
-	<div class="slots-box">
-		<input
-			type="number"
-			value="{{slotsUsed}}"
-			class="slots-value"
-			{{#ifCond slotsUsed '>' gearSlots}}
-				style="color: red;"
-			{{/ifCond}}
-			disabled
-		>
-		<label>{{localize 'SHADOWDARK.inventory.slots_used'}}</label>
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.inventory.slots'}}</label>
+		<span></span>
 	</div>
-	<div class="slots-box">
-		<input
-			type="number"
-			value="{{gearSlots}}"
-			class="slots-value"
-			disabled
-		>
-		<label>{{localize 'SHADOWDARK.inventory.slots_max'}}</label>
+	<div class="content">
+		<div class="value-grid larger">
+			<div {{#ifCond slots.total '>' gearSlots}}style="color: red;"{{/ifCond}}>
+				{{slots.total}}
+			</div>
+			<div>/</div>
+			<div>{{gearSlots}}</div>
+		</div>
+		<hr>
+		<div class="grid-2-columns" style="row-gap: 0;">
+			<div style="text-align: right">{{slots.gear}}</div>
+			Gear
+			<div style="text-align: right">{{slots.treasure}}</div>
+			Treasure
+			<div style="text-align: right">{{slots.coins}}</div>
+			Coins
+			<div style="text-align: right">{{slots.gems}}</div>
+			Gems
+		</div>
 	</div>
 </div>

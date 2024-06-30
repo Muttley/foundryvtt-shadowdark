@@ -5,6 +5,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	constructor(object, options) {
 		super(object, options);
 
+		this.editingHp = false;
+		this.editingStats = false;
 		this.gemBag = new shadowdark.apps.GemBagSD(this.actor);
 	}
 
@@ -12,19 +14,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "player"],
+			scrollY: ["section.SD-content-body"],
 			width: 600,
 			height: 700,
 			resizable: true,
 			tabs: [
 				{
-					navSelector: ".player-navigation",
-					contentSelector: ".player-body",
+					navSelector: ".SD-nav",
+					contentSelector: ".SD-content-body",
 					initial: "tab-abilities",
 				},
 			],
-			dragDrop: [{
-				dragSelector: ".item[draggable=true]",
-			}],
 		});
 	}
 
@@ -55,14 +55,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onItemQuantityIncrement(event)
 		);
 
-		html.find(".item-toggle-equipped").click(
-			event => this._onToggleEquipped(event)
-		);
-
-		html.find(".item-toggle-stashed").click(
-			event => this._onToggleStashed(event)
-		);
-
 		html.find(".item-toggle-light").click(
 			event => this._onToggleLightSource(event)
 		);
@@ -73,6 +65,22 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find(".sell-treasure").click(
 			event => this._onSellTreasure(event)
+		);
+
+		html.find("[data-action='toggle-edit-hp']").click(
+			event => this._onToggleEditHp(event)
+		);
+
+		html.find("[data-action='toggle-edit-stats']").click(
+			event => this._onToggleEditStats(event)
+		);
+
+		html.find("[data-action='toggle-equipped']").click(
+			event => this._onToggleEquipped(event)
+		);
+
+		html.find("[data-action='toggle-stashed']").click(
+			event => this._onToggleStashed(event)
 		);
 
 		html.find("[data-action='use-ability']").click(
@@ -97,6 +105,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find("[data-action='open-spellbook']").click(
 			event => this._onOpenSpellBook(event)
+		);
+
+		html.find("[data-action='create-item']").click(
+			event => this._onCreateItem(event)
+		);
+
+		html.find("[data-action='create-treasure']").click(
+			event => this._onCreateTreasure(event)
 		);
 
 		// Handle default listeners last so system listeners are triggered first
@@ -139,7 +155,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
-
 		context.gearSlots = this.actor.numGearSlots();
 
 		context.xpNextLevel = context.system.level.value * 10;
@@ -150,7 +165,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
-		context.showSpellsTab = context.isSpellcaster || this.actor.system.class === "";
+		context.showSpellsTab = context.isSpellcaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
@@ -176,14 +191,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			)
 		);
 
-		context.characterClass = await (this.actor.getClass())?.name;
+		context.characterClass = await this.actor.getClass();
 		context.classTitle = await this.actor.getTitle();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
+		context.editingHp = this.editingHp;
+		context.editingStats = this.editingStats;
+
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
-
 		return context;
 	}
 
@@ -202,7 +219,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
-	/** @inheritdoc */
+	/** @override */
 	async _onDropItem(event, data) {
 		switch ( data.type ) {
 			case "Item":
@@ -253,7 +270,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			return this._dropActivateLightSource(item);
 		}
 
-		if (item.actor && item.isLight()) {
+		// is a light base item being dropped from a different actor?
+		if (item.isLight() && item.actor && (item.actor._id !== this.actor._id)) {
 			const isActiveLight = item.isActiveLight();
 
 			if (isActiveLight) {
@@ -274,7 +292,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				item.actor.turnLightOff();
 				newItem.actor.turnLightOn(newItem._id);
 			}
-
 			// Now we can delete the original item
 			await item.actor.deleteEmbeddedDocuments(
 				"Item",
@@ -400,9 +417,53 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
+	async _onCreateItem(event) {
+		new Dialog( {
+			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
+			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-item.hbs"),
+			buttons: {
+				button1: {
+					label: game.i18n.localize("SHADOWDARK.dialog.create"),
+					callback: async html => {
+						// create item from dialog data
+						const itemData = {
+							name: html.find("#item-name").val(),
+							type: html.find("#item-type").val(),
+							system: {},
+						};
+						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+						newItem.sheet.render(true);
+					},
+				},
+			},
+		}).render(true);
+	}
+
+	async _onCreateTreasure(event) {
+		new Dialog( {
+			title: game.i18n.localize("SHADOWDARK.dialog.create_treasure"),
+			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-treasure.hbs"),
+			buttons: {
+				button1: {
+					label: game.i18n.localize("SHADOWDARK.dialog.create"),
+					callback: async html => {
+						// create item from dialog data
+						const itemData = {
+							name: html.find("#item-name").val(),
+							type: "Basic",
+							system: {},
+						};
+						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+						newItem.sheet.render(true);
+					},
+				},
+			},
+		}).render(true);
+	}
+
 	async _onItemChatClick(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = $(event.currentTarget.parentElement).data("item-id");
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		item.displayCard();
@@ -438,6 +499,36 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				},
 			]);
 		}
+	}
+
+	async _onToggleEditHp(event) {
+		if (this.editingHp) {
+			this.editingHp = false;
+		}
+		else {
+			let result = await Dialog.confirm( {
+				title: "title",
+				content: "HTML GOES HERE",
+				defaultYes: false,
+			});
+			if (result) this.editingHp = true;
+		}
+		this.render();
+	}
+
+	async _onToggleEditStats(event) {
+		if (this.editingStats) {
+			this.editingStats = false;
+		}
+		else {
+			let result = await Dialog.confirm( {
+				title: "title",
+				content: "HTML GOES HERE",
+				defaultYes: false,
+			});
+			if (result) this.editingStats = true;
+		}
+		this.render();
 	}
 
 	async _onCastSpell(event) {
@@ -653,43 +744,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		};
 
 		const inventory = {
-			armor: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.armor"),
-				type: "Armor",
-				items: [],
-			},
-			weapon: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.weapon"),
-				type: "Weapon",
-				items: [],
-			},
-			basic: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.basic"),
-				type: "Basic",
-				items: [],
-			},
-			potion: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.potions"),
-				type: "Potion",
-				items: [],
-			},
-			scroll: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.scrolls"),
-				type: "Scroll",
-				items: [],
-			},
-			wand: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.wands"),
-				type: "Wand",
-				items: [],
-			},
-			treasure: {
-				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
-				items: [],
-			},
+			equipped: [],
+			stashed: [],
+			treasure: [],
+			carried: [],
+		};
+
+		const spellitems = {
+			wands: [],
+			scrolls: [],
 		};
 
 		const spells = {};
+
 
 		const talents = {
 			ancestry: {
@@ -721,7 +788,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const allClassAbilities = {};
 
-		let slotCount = 0;
+		const slots = {
+			total: 0,
+			gear: 0,
+			treasure: 0,
+			coins: 0,
+			gems: 0,
+		};
 
 		for (const i of this._sortAllItems(context)) {
 			if (i.system.isPhysical && i.type !== "Gem") {
@@ -740,15 +813,29 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 				i.slotsUsed = totalSlotsUsed;
 
+				// calculate slot usage
 				if (!i.system.stashed) {
-					slotCount += i.slotsUsed;
+					if (i.system.treasure) {
+						slots.treasure += i.slotsUsed;
+					}
+					else {
+						slots.gear += i.slotsUsed;
+					}
 				}
 
-				const section = i.system.treasure
-					? "treasure"
-					: i.type.toLowerCase();
-
-				inventory[section].items.push(i);
+				// sort into groups
+				if (i.system.equipped) {
+					inventory.equipped.push(i);
+				}
+				else if (i.system.stashed) {
+					inventory.stashed.push(i);
+				}
+				else if (i.system.treasure) {
+					inventory.treasure.push(i);
+				}
+				else {
+					inventory.carried.push(i);
+				}
 
 				if (i.type === "Basic" && i.system.light.isSource) {
 					i.isLightSource = true;
@@ -776,6 +863,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					const weaponAttacks = await this.actor.buildWeaponDisplays(i._id);
 					attacks.melee.push(...weaponAttacks.melee);
 					attacks.ranged.push(...weaponAttacks.ranged);
+				}
+
+				if (i.type === "Wand" && !i.system.stashed) {
+					spellitems.wands.push(i);
+				}
+
+				if (i.type === "Scroll" && !i.system.stashed) {
+					spellitems.scrolls.push(i);
 				}
 			}
 			else if (i.type === "Boon") {
@@ -817,19 +912,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const coins = this.actor.system.coins;
 		const totalCoins = coins.gp + coins.sp + coins.cp;
 
-		let coinSlots = 0;
 		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
 		if (totalCoins > freeCoins) {
-			coinSlots = Math.ceil((totalCoins - freeCoins) / freeCoins);
+			slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
 		}
 
 		// Now do the same for gems...
-		let gemSlots = 0;
 		let totalGems = gems.length;
-
 		if (totalGems > 0) {
-			gemSlots = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
+			slots.gems = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
 		}
+
+		// calculate total slots
+		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
 
 		const classAbilities = [];
 
@@ -841,37 +936,53 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			});
 		}
 
+		// Sort talents by level for display...
+		talents.level.items = talents.level.items.sort(
+			(a, b) => a.system.level - b.system.level
+		);
+
+		// Sorts inventory items by user defined order
+		Object.keys(inventory).forEach(key => {
+			inventory[key] = inventory[key].sort((a, b) => (a.sort || 0) - (b.sort || 0));
+		  });
+
 		context.classAbilities = classAbilities;
 		context.hasClassAbilities = classAbilities.length > 0;
 
 		context.attacks = attacks;
 		context.boons = boons;
-		context.coins = {totalCoins, coinSlots};
-		context.gems = {items: gems, totalGems, gemSlots};
+		context.totalCoins = totalCoins;
+		context.gems = {items: gems, totalGems};
 		context.inventory = inventory;
-		context.slotsUsed = slotCount + coinSlots + gemSlots;
+		context.spellitems = spellitems;
+		context.slots = slots;
 		context.spells = spells;
-
-		// Sort these by level for display...
-		talents.level.items = talents.level.items.sort(
-			(a, b) => a.system.level - b.system.level
-		);
 		context.talents = talents;
 		context.effects = effects;
 	}
 
  	async _updateObject(event, formData) {
-		const hpValues = this.object.system.attributes.hp;
 
-		// Modify the underlying base hp value if the max is changed manually
-		if (formData["system.attributes.hp.max"] !== hpValues.max) {
+		// if HP MAX was change, turn off editing and set base hp value
+		if (event.target.name === "system.attributes.hp.max") {
+			this.editingHp = false;
+
+			// Calculate new base hp value to pass to super
+			const hpValues = this.object.system.attributes.hp;
 			formData["system.attributes.hp.base"] =
-				formData["system.attributes.hp.max"] - hpValues.bonus;
+					formData["system.attributes.hp.max"] - hpValues.bonus;
 		}
 
-		const abilities = this.object.system.abilities;
+		// if a stat was changed, turn off editing of stats
+		if (event.target.name.match(/system\.abilities\.\w*\.base/)) {
+			this.editingStats = false;
+		}
 
-		// Modify the underlying base ability value if it is changed manually
+		/* Modify the underlying base ability value to correct any manual changes to stats.
+		This step is required on each update as values must be correctly set before
+		being passed to super for updating the actor*/
+		// TODO: Implement system.abilities.[stat].max values and use that for the form instead
+		const abilities = this.object.system.abilities;
 		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
 			const key = `system.abilities.${ability}.base`;
 

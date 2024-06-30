@@ -15,16 +15,16 @@ $font-size: 1.1rem;
 }
 
 @font-face {
-	font-family: "Montserrat-Bold";
-	src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
-	font-weight: 700;
+	font-family: "Montserrat-SemiBold";
+	src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Montserrat-Extra-Bold";
-	src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
-	font-weight: 800;
+	font-family: "Montserrat-Bold";
+	src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 }
 

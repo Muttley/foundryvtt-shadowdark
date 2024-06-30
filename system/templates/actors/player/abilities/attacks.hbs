@@ -4,18 +4,9 @@
 		<span></span>
 	</div>
 	<div class="content">
-		<ol>
-			{{#each attacks.melee as |attack|}}
-				<li
-					class="rollable item-rollable attack-item"
-					data-action="item-attack"
-					data-item-id="{{attack.itemId}}"
-					data-tooltip="Roll Attack"
-				>
-					{{{attack.display}}}
-				</li>
-			{{/each}}
-		</ol>
+		{{#each attacks.melee as |attack|}}
+			<div>{{{attack.display}}}</div>
+		{{/each}}
 	</div>
 </div>
 
@@ -25,18 +16,9 @@
 		<span></span>
 	</div>
 	<div class="content">
-		<ol>
-			{{#each attacks.ranged as |attack|}}
-				<li
-					class="rollable item-rollable attack-item"
-					data-action="item-attack"
-					data-item-id="{{attack.itemId}}"
-					data-tooltip="Roll Attack"
-				>
-					{{{attack.display}}}
-				</li>
-			{{/each}}
-		</ol>
+		{{#each attacks.ranged as |attack|}}
+			<div>{{{attack.display}}}</div>
+		{{/each}}
 	</div>
 </div>
 

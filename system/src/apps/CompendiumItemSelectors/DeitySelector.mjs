@@ -6,10 +6,6 @@ export default class DeitySelector extends CompendiumItemSelector {
 
 	maxChoices = 1;
 
-	get prompt() {
-		return game.i18n.localize("SHADOWDARK.dialog.select_deity.prompt");
-	}
-
 	get title() {
 		return game.i18n.localize("SHADOWDARK.dialog.select_deity.title");
 	}
