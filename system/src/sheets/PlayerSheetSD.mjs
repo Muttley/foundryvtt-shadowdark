@@ -22,7 +22,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				{
 					navSelector: ".SD-nav",
 					contentSelector: ".SD-content-body",
-					initial: "tab-abilities",
+					initial: "tab-details",
 				},
 			],
 		});
@@ -39,31 +39,55 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onItemChatClick(event)
 		);
 
-		html.find(".ability-uses-decrement").click(
+		html.find("[data-action='ability-decrement']").click(
 			event => this._onAbilityUsesDecrement(event)
 		);
 
-		html.find(".ability-uses-increment").click(
+		html.find("[data-action='ability-increment']").click(
 			event => this._onAbilityUsesIncrement(event)
 		);
 
-		html.find(".item-quantity-decrement").click(
+		html.find("[data-action='cast-spell']").click(
+			event => this._onCastSpell(event)
+		);
+
+		html.find("[data-action='create-boon']").click(
+			event => this._onCreateBoon(event)
+		);
+
+		html.find("[data-action='create-item']").click(
+			event => this._onCreateItem(event)
+		);
+
+		html.find("[data-action='create-treasure']").click(
+			event => this._onCreateTreasure(event)
+		);
+
+		html.find("[data-action='item-decrement']").click(
 			event => this._onItemQuantityDecrement(event)
 		);
 
-		html.find(".item-quantity-increment").click(
+		html.find("[data-action='item-increment']").click(
 			event => this._onItemQuantityIncrement(event)
 		);
 
-		html.find(".item-toggle-light").click(
-			event => this._onToggleLightSource(event)
+		html.find("[data-action='learn-spell']").click(
+			event => this._onLearnSpell(event)
 		);
 
-		html.find(".open-gem-bag").click(
+		html.find("[data-action='level-up']").click(
+			event => this._onlevelUp(event)
+		);
+
+		html.find("[data-action='open-spellbook']").click(
+			event => this._onOpenSpellBook(event)
+		);
+
+		html.find("[data-action='open-gem-bag']").click(
 			event => this._onOpenGemBag(event)
 		);
 
-		html.find(".sell-treasure").click(
+		html.find("[data-action='sell-treasure']").click(
 			event => this._onSellTreasure(event)
 		);
 
@@ -79,6 +103,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find("[data-action='toggle-light']").click(
+			event => this._onToggleLightSource(event)
+		);
+
 		html.find("[data-action='toggle-stashed']").click(
 			event => this._onToggleStashed(event)
 		);
@@ -89,30 +117,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find("[data-action='use-potion']").click(
 			event => this._onUsePotion(event)
-		);
-
-		html.find("[data-action='cast-spell']").click(
-			event => this._onCastSpell(event)
-		);
-
-		html.find("[data-action='learn-spell']").click(
-			event => this._onLearnSpell(event)
-		);
-
-		html.find("[data-action='level-up']").click(
-			event => this._onlevelUp(event)
-		);
-
-		html.find("[data-action='open-spellbook']").click(
-			event => this._onOpenSpellBook(event)
-		);
-
-		html.find("[data-action='create-item']").click(
-			event => this._onCreateItem(event)
-		);
-
-		html.find("[data-action='create-treasure']").click(
-			event => this._onCreateTreasure(event)
 		);
 
 		// Handle default listeners last so system listeners are triggered first
@@ -417,12 +421,37 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
+	async _onCreateBoon(event) {
+		new Dialog( {
+			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
+			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-boon.hbs"),
+			buttons: {
+				create: {
+					label: game.i18n.localize("SHADOWDARK.dialog.create"),
+					callback: async html => {
+						// create boon from dialog data
+						const itemData = {
+							name: html.find("#item-name").val(),
+							type: "Boon",
+							system: {
+								boonType: html.find("#item-boonType").val(),
+							},
+						};
+						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+						newItem.sheet.render(true);
+					},
+				},
+			},
+			default: "create",
+		}).render(true);
+	}
+
 	async _onCreateItem(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
 			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-item.hbs"),
 			buttons: {
-				button1: {
+				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
 					callback: async html => {
 						// create item from dialog data
@@ -436,6 +465,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					},
 				},
 			},
+			default: "create",
 		}).render(true);
 	}
 
@@ -444,20 +474,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_treasure"),
 			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-treasure.hbs"),
 			buttons: {
-				button1: {
+				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
 					callback: async html => {
-						// create item from dialog data
+						// create treasure from dialog data
 						const itemData = {
 							name: html.find("#item-name").val(),
 							type: "Basic",
-							system: {},
+							system: {
+								treasure: true,
+								cost: {
+									gp: parseInt(html.find("#item-gp").val()),
+									sp: parseInt(html.find("#item-sp").val()),
+									cp: parseInt(html.find("#item-cp").val()),
+								},
+							},
 						};
-						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
-						newItem.sheet.render(true);
+						await this.actor.createEmbeddedDocuments("Item", [itemData]);
 					},
 				},
 			},
+			default: "create",
 		}).render(true);
 	}
 
@@ -535,8 +572,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-
-		this.actor.castSpell(itemId);
+		if (event.shiftKey) {
+			this.actor.castSpell(itemId, {fastForward: true});
+		}
+		else {
+			this.actor.castSpell(itemId);
+		}
 	}
 
 	async _onLearnSpell(event) {
@@ -548,8 +589,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	async _onOpenSpellBook(event) {
+		const actorClass = await this.actor.getClass();
+		let spellClass = actorClass.system.spellcasting.class;
+		if (spellClass === "") {
+			spellClass = this.actor.system.class;
+		}
+
 		let spellbook = new shadowdark.apps.SpellBookSD(
-			this.actor.system.class,
+			spellClass,
 			this.actor.id
 		);
 		spellbook.render(true);
@@ -639,8 +686,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-
-		this.actor.useAbility(itemId);
+		if (event.shiftKey) {
+			this.actor.useAbility(itemId, {fastForward: true});
+		}
+		else {
+			this.actor.useAbility(itemId);
+		}
 	}
 
 	async _onUsePotion(event) {
@@ -730,15 +781,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const boons = {
 			blessing: {
-				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.blessings.label"),
+				label: game.i18n.localize("SHADOWDARK.boons.blessing"),
 				items: [],
 			},
 			oath: {
-				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.oaths.label"),
+				label: game.i18n.localize("SHADOWDARK.boons.oath"),
 				items: [],
 			},
 			secret: {
-				label: game.i18n.localize("SHADOWDARK.sheet.player.boons.secrets.label"),
+				label: game.i18n.localize("SHADOWDARK.boons.secret"),
 				items: [],
 			},
 		};
@@ -962,35 +1013,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
  	async _updateObject(event, formData) {
+		if (event.target) {
+			// if HP MAX was change, turn off editing and set base hp value
+			if (event.target.name === "system.attributes.hp.max") {
+				this.editingHp = false;
 
-		// if HP MAX was change, turn off editing and set base hp value
-		if (event.target.name === "system.attributes.hp.max") {
-			this.editingHp = false;
+				// Calculate new base hp value to pass to super
+				const hpValues = this.object.system.attributes.hp;
+				formData["system.attributes.hp.base"] =
+						formData["system.attributes.hp.max"] - hpValues.bonus;
+			}
 
-			// Calculate new base hp value to pass to super
-			const hpValues = this.object.system.attributes.hp;
-			formData["system.attributes.hp.base"] =
-					formData["system.attributes.hp.max"] - hpValues.bonus;
-		}
-
-		// if a stat was changed, turn off editing of stats
-		if (event.target.name.match(/system\.abilities\.\w*\.base/)) {
-			this.editingStats = false;
-		}
-
-		/* Modify the underlying base ability value to correct any manual changes to stats.
-		This step is required on each update as values must be correctly set before
-		being passed to super for updating the actor*/
-		// TODO: Implement system.abilities.[stat].max values and use that for the form instead
-		const abilities = this.object.system.abilities;
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			const key = `system.abilities.${ability}.base`;
-
-			if (formData[key] !== abilities[ability].base) {
-				formData[key] = formData[key] - abilities[ability].bonus;
+			// if a stat was manually changed, also change base values, turn off editing
+			if (event.target.name.match(/system\.abilities\.(\w*)\.total/)) {
+				const abilityKey = event.target.name.match(/system\.abilities\.(\w*)\.total/);
+				const base = `system.abilities.${abilityKey[1]}.base`;
+				const total = `system.abilities.${abilityKey[1]}.total`;
+				formData[base] = formData[total]
+					- this.object.system.abilities[abilityKey[1]].bonus;
+				this.editingStats = false;
 			}
 		}
-
 		super._updateObject(event, formData);
 	}
 }

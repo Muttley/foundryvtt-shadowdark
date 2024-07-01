@@ -320,8 +320,9 @@ SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
 SHADOWDARK.hotbar.noItemWithName: No such item found on character
 SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Coins
-SHADOWDARK.inventory.equipped_gear: Equipped Gear
 SHADOWDARK.inventory.carried_gear: Carried Gear
+SHADOWDARK.inventory.equipped_gear: Equipped Gear
+SHADOWDARK.inventory.gear: Gear
 SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
@@ -440,6 +441,7 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
 SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
@@ -464,6 +466,9 @@ SHADOWDARK.item.spell.label: Spell
 SHADOWDARK.item.stashed.label: Stashed
 SHADOWDARK.item.talent_class: Talent Class
 SHADOWDARK.item.treasure: Treasure
+SHADOWDARK.item.treasure_name: Treasure Name
+SHADOWDARK.item.treasure_value: Treasure Value
+SHADOWDARK.item.type: Item Type
 SHADOWDARK.item.wand.label: Wand
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
@@ -653,8 +658,10 @@ SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestra
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background.label: Background
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
+SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Blessings
 SHADOWDARK.sheet.player.boons.label: Boons
+SHADOWDARK.sheet.player.boons.name: Boon Name
 SHADOWDARK.sheet.player.boons.oaths.label: Oaths
 SHADOWDARK.sheet.player.boons.secrets.label: Secrets
 SHADOWDARK.sheet.player.class_spells: Class Spells
@@ -672,7 +679,7 @@ SHADOWDARK.sheet.player.spells: Spells
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: Tier
 SHADOWDARK.sheet.player.tab.abilities: Abilities
-SHADOWDARK.sheet.player.tab.background: Background
+SHADOWDARK.sheet.player.tab.details: Details
 SHADOWDARK.sheet.player.tab.inventory: Inventory
 SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.tab.spells: Spells

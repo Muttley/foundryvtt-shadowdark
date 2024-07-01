@@ -88,10 +88,6 @@
 				color: #{$primary-color};
 			}
 
-			a, div {
-				margin: 0px 4px;
-			}
-
 			.header {
 				font-family: "Montserrat-Bold";
 				color: #{$primary-color};
@@ -105,6 +101,7 @@
 				background-size: contain;
 				background-repeat: no-repeat;
 				vertical-align: middle;
+				margin-right: 8px;
 
 				&:hover {
 					background: none !important;
@@ -115,7 +112,6 @@
 			.item-name {
 				flex:2;
 				overflow: hidden;
-				margin: 0px 4px;
 			}
 
 			.item-details {
@@ -137,6 +133,7 @@
 			.quantity {
 				flex: 0 0 80px;
 				text-align: center;
+				font-size: 13px;
 			}
 
 			.standard,
@@ -151,6 +148,7 @@
 				justify-content: flex-end;
 
 				a{
+					margin: 0px 4px;
 					color: var(--inactive-control);
 					&:hover {
 						color: var(--primary);

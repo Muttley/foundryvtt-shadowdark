@@ -1,7 +1,7 @@
-<section class="tab tab-background" data-group="primary" data-tab="tab-background">
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
 <div class="grid-1-columns">
 
-	<div class="background-grid-A">
+	<div class="background-grid-a">
 
 		<!-- Level -->
 		<div class="SD-box">
@@ -35,7 +35,7 @@
 		<!-- Class -->
 		<div class="SD-box">
 			<div class="header">
-				<label>Class</label>
+				<label>{{localize "SHADOWDARK.sheet.player.class.label"}}</label>
 				<span>
 					{{#if owner}}
 						<a
@@ -47,35 +47,10 @@
 				</span>
 			</div>
 			<div class="content">
+				{{#if isSpellcaster}}<a class="fas fa-book" data-action="open-spellbook" style="margin-right:4px"></a>{{/if}}
 				<a class="content-link" data-uuid="{{system.class}}">{{uuidToName system.class}}</a>
 			</div>
 		</div>
-
-		<!-- Ancestry -->
-		<div class="SD-box">
-			<div class="header">
-				<label>Ancestry</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="ancestry"
-							for="system.ancestry">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<a class="content-link" data-uuid="{{system.ancestry}}">{{uuidToName system.ancestry}}</a>
-			</div>
-		</div>
-
-
-
-
-	</div>
-
-	<div class="background-grid-B">
 
 		<!-- XP -->
 		<div class="SD-box">
@@ -98,10 +73,29 @@
 			</div>
 		</div>
 
+		<!-- Ancestry -->
+		<div class="SD-box">
+			<div class="header">
+				<label>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}</label>
+				<span>
+					{{#if owner}}
+						<a
+							class="item-selector fas fa-pen-to-square edit-button"
+							data-options="ancestry"
+							for="system.ancestry">
+						</a>
+					{{/if}}
+				</span>
+			</div>
+			<div class="content">
+				<a class="content-link" data-uuid="{{system.ancestry}}">{{uuidToName system.ancestry}}</a>
+			</div>
+		</div>
+
 		<!-- Background -->
 		<div class="SD-box">
 			<div class="header">
-				<label>Background</label>
+				<label>{{localize "SHADOWDARK.sheet.player.background.label"}}</label>
 				<span>
 					{{#if owner}}
 						<a
@@ -114,6 +108,24 @@
 			</div>
 			<div class="content">
 				<a class="content-link" data-uuid="{{system.background}}">{{uuidToName system.background}}</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="background-grid-b">
+
+		<!-- Alignment -->
+		<div class="SD-box">
+			<div class="header">
+				<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
+				<span>
+				</span>
+			</div>
+			<div class="content">
+				<select name="system.alignment">
+					{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
+				</select>
 			</div>
 		</div>
 
@@ -135,26 +147,9 @@
 				<a class="content-link" data-uuid="{{system.deity}}">{{uuidToName system.deity}}</a>
 			</div>
 		</div>
-
-    </div>
-
-	<div class="background-grid-C">
-		<!-- Alignment -->
-			<div class="SD-box">
-				<div class="header">
-					<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-					<span>
-					</span>
-				</div>
-				<div class="content">
-					<select name="system.alignment">
-						{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
-					</select>
-				</div>
-			</div>
-
+	</div>
 		<!-- Languages -->
-		<div class="SD-box">
+		<div class="SD-box grid-rowspan-2">
 			<div class="header">
 				<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
 				<span>
@@ -184,9 +179,16 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+
+		<!-- boons -->
+		<div>
+			<div class="SD-banner">{{localize "SHADOWDARK.sheet.player.boons.label"}}</div>
+			{{> actors/player/details/boons}}
+		</div>
+
+
+
 </div>
 	<br>
-	<div class="SD-banner">Boons</div>
-	{{> actors/player/background/boons}}
+
 </section>

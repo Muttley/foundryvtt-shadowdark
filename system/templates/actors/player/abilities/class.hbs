@@ -23,7 +23,7 @@
 						{{#if this.system.limitedUses}}
 							{{#if ../../owner}}
 								<a
-									class="item-control ability-uses-decrement"
+									data-action="ability-decrement"
 									data-item-id="{{this._id}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.decrement.tooltip'}}"
 								>
@@ -33,7 +33,7 @@
 							{{this.system.uses.available}}/{{this.system.uses.max}}
 							{{#if ../../owner}}
 								<a
-									class="item-control ability-uses-increment"
+									data-action="ability-increment"
 									data-item-id="{{this._id}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.increment.tooltip'}}"
 								>

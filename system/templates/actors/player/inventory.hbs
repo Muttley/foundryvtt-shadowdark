@@ -44,6 +44,7 @@
 						<div class="item-name">
 							<a
 								class="fa-solid fa-square-plus"
+								style="margin:0px 8px 0px 4px"
 								data-action="create-item"
 							></a>
 							Items
@@ -60,9 +61,38 @@
 						</div>
 						<a class="item-name" data-action="show-details">
 							{{item.name}}
+							{{#if item.lightSourceUsed}}
+								<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
+							{{/if}}
 						</a>
-						<div class="quantity"></div>
-						<div class="slots">{{item.slotsUsed}}</div>
+						<div class="quantity">
+							{{#if item.showQuantity}}
+									{{#if ../owner}}
+										<a
+											data-action="item-decrement"
+											data-item-id="{{item._id}}"
+											data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
+										>
+											<i class="fa-regular fa-minus fa-xs"></i>
+										</a>
+									{{/if}}
+										{{item.system.quantity}}/{{item.system.slots.per_slot}}
+									{{#if ../owner}}
+										<a
+											data-action="item-increment"
+											data-item-id="{{item._id}}"
+											data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
+										>
+											<i class="fa-regular fa-plus fa-xs"></i>
+										</a>
+									{{/if}}
+								{{else}}
+									&nbsp;
+							{{/if}}
+						</div>
+						<div class="slots">
+							{{item.slotsUsed}}
+						</div>
 						<div class="actions">
 							{{#if item.system.canBeEquipped}}
 								<a
@@ -75,7 +105,8 @@
 							{{/if}}
 							{{#if item.system.light.isSource}}
 								<a
-									class="item-control item-toggle-light {{#if item.system.light.active}}lit{{/if}}"
+									style="{{#if item.system.light.active}}color: darkorange;{{/if}}"
+									data-action="toggle-light"
 									data-item-id="{{item._id}}"
 									data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_light_source'}}"
 								>
@@ -103,11 +134,14 @@
 					</li>
 				{{/each}}
 				</ol>
-				<ol class="SD-list item-list">
+
+				<!-- Treasure list -->
+				<ol class="SD-list item-list" style="margin-top:8px">
 					<li class="header">
 						<div class="item-name">
 							<a
 								class="fa-solid fa-square-plus"
+								style="margin:0px 8px 0px 4px"
 								data-action="create-treasure"
 							></a>
 							Treasure
@@ -125,9 +159,24 @@
 						<a class="item-name" data-action="show-details">
 							{{item.name}}
 						</a>
-						<div class="quantity"></div>
+						<div class="quantity">{{displayCost item}}</div>
 						<div class="slots">{{item.slotsUsed}}</div>
-						<div class="actions"></div>
+						<div class="actions">
+							<a
+								data-action="sell-treasure"
+								data-item-id="{{item._id}}"
+								data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.sell_treasure'}}"
+							>
+								<i class="fa-solid fa-coins"></i>
+							</a>
+							<a
+								data-action="toggle-stashed"
+								data-item-id="{{item._id}}"
+								data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_stashed'}}"
+							>
+								<i class="fa-solid fa-box"></i>
+							</a>
+						</div>
 					</li>
 				{{/each}}
 				</ol>
@@ -139,7 +188,7 @@
 				<ol class="SD-list item-list">
 					<li class="header">
 						<div class="item-name">Stashed Item</div>
-						<div class="quantity">Qty</div>
+						<div class="flex-80-px">Type</div>
 						<div class="slots">Slots</div>
 						<div class="actions" style="flex: 0 0 30px">
 						</div>
@@ -152,8 +201,11 @@
 						</div>
 						<a class="item-name" data-action="show-details">
 							{{item.name}}
+							{{#if item.lightSourceUsed}}
+								<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
+							{{/if}}
 						</a>
-						<div class="quantity"></div>
+						<div class="flex-80-px">{{item.type}}</div>
 						<div class="slots">{{item.slotsUsed}}</div>
 						<div class="actions" style="flex: 0 0 30px">
 														<a

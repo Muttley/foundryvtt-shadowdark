@@ -1,59 +1,58 @@
 <section class="tab tab-talents" data-group="primary" data-tab="tab-talents">
-	<div class="grid-1-columns">
 
-		<!-- Ancestry and class -->
-		<div class="SD-banner">{{localize "SHADOWDARK.talent.class.ancestry"}} & {{localize "SHADOWDARK.talent.class.class"}}</div>
-		<ol class="SD-list">
-			<li class="header">
-				<div class="item-name">{{localize "SHADOWDARK.item_type.talent"}}</div>
-				<div class="flex-100-px">Type</div>
+	<!-- Ancestry and class -->
+	<div class="SD-banner">{{localize "SHADOWDARK.talent.class.ancestry"}} & {{localize "SHADOWDARK.talent.class.class"}}</div>
+	<ol class="SD-list">
+		<li class="header">
+			<div class="item-name">{{localize "SHADOWDARK.item_type.talent"}}</div>
+			<div class="flex-100-px">Type</div>
+		</li>
+
+		{{#each talents.ancestry.items}}
+			<li class="item"
+				data-item-id="{{this._id}}"
+				data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
+				>
+				<div class="item-image" style="background-image: url({{this.img}})"></div>
+				<a class="item-name" data-action="show-details">{{this.name}}</a>
+				<div class="flex-100-px">Ancestry</div>
 			</li>
+		{{/each}}
 
-			{{#each talents.ancestry.items}}
-				<li class="item"
-					data-item-id="{{this._id}}"
-					data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
-					>
-					<div class="item-image" style="background-image: url({{this.img}})"></div>
-					<a class="item-name" data-action="show-details">{{this.name}}</a>
-					<div class="flex-100-px">Ancestry</div>
-				</li>
-			{{/each}}
-
-			{{#each talents.class.items}}
-				<li class="item"
-					data-item-id="{{this._id}}"
-					data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
-					>
-					<div class="item-image" data-item-id="{{this._id}}" style="background-image: url({{this.img}})">
-						<i class="fas fa-comment fa-lg"></i>
-					</div>
-					<a class="item-name" data-action="show-details">{{this.name}}</a>
-					<div class="flex-100-px">Class</div>
-				</li>
-			{{/each}}
-		</ol>
-
-		<br>
-
-		<!-- Level Talents -->
-		<div class="SD-banner">{{localize "SHADOWDARK.item.level"}}</div>
-		<ol class="SD-list">
-			<li class="header">
-				<div class="item-name">{{localize "SHADOWDARK.item_type.talent"}}</div>
-				<div class="flex-100-px">Level Gained</div>
+		{{#each talents.class.items}}
+			<li class="item"
+				data-item-id="{{this._id}}"
+				data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
+				>
+				<div class="item-image" data-item-id="{{this._id}}" style="background-image: url({{this.img}})">
+					<i class="fas fa-comment fa-lg"></i>
+				</div>
+				<a class="item-name" data-action="show-details">{{this.name}}</a>
+				<div class="flex-100-px">Class</div>
 			</li>
-			{{#each talents.level.items}}
-				<li class="item"
-					data-item-id="{{this._id}}"
-					data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
-					>
-					<div class="item-image" style="background-image: url({{this.img}})"></div>
-					<a class="item-name" data-action="show-details">{{this.name}}</a>
-					<div class="flex-100-px">{{this.system.level}}</div>
-				</li>
-			{{/each}}
-		</ol>
+		{{/each}}
+	</ol>
 
-	</div>
+	<br>
+
+	<!-- Level Talents -->
+	<div class="SD-banner">{{localize "SHADOWDARK.item.level"}}</div>
+	<ol class="SD-list">
+		<li class="header">
+			<div class="item-name">{{localize "SHADOWDARK.item_type.talent"}}</div>
+			<div class="flex-100-px">Level Gained</div>
+		</li>
+		{{#each talents.level.items}}
+			<li class="item"
+				data-item-id="{{this._id}}"
+				data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
+				>
+				<div class="item-image" style="background-image: url({{this.img}})"></div>
+				<a class="item-name" data-action="show-details">{{this.name}}</a>
+				<div class="flex-100-px">{{this.system.level}}</div>
+			</li>
+		{{/each}}
+	</ol>
+
+
 </section>

@@ -538,13 +538,13 @@ export default class ActorSD extends Actor {
 
 
 	calcAbilityValues(ability) {
-		const value = this.system.abilities[ability].base
+		const total = this.system.abilities[ability].base
 			+ this.system.abilities[ability].bonus;
 
 		const labelKey = `SHADOWDARK.ability_${ability}`;
 
 		return {
-			value,
+			total,
 			bonus: this.system.abilities[ability].bonus,
 			base: this.system.abilities[ability].base,
 			modifier: this.system.abilities[ability].mod,
@@ -597,7 +597,7 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async castSpell(itemId) {
+	async castSpell(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		if (!item) {
@@ -642,7 +642,7 @@ export default class ActorSD extends Actor {
 		// TODO: push to parts & for set talentBonus as sum of talents affecting
 		// spell rolls
 
-		return item.rollSpell(parts, data);
+		return item.rollSpell(parts, data, options);
 	}
 
 	async castNPCSpell(itemId) {
@@ -1276,7 +1276,7 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async useAbility(itemId) {
+	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
 		const abilityDescription = await TextEditor.enrichHTML(
 			item.system.description,
@@ -1300,9 +1300,10 @@ export default class ActorSD extends Actor {
 
 			// does ability use on a roll check?
 			if (typeof item.system.ability !== "undefined") {
+				options = foundry.utils.mergeObject({target: item.system.dc}, options);
 				const result = await this.rollAbility(
 					item.system.ability,
-					{target: item.system.dc}
+					options
 				);
 
 				success = result?.rolls?.main?.success ?? false;

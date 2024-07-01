@@ -72,6 +72,14 @@ export default function registerHandlebarsHelpers() {
 		return shadowdark.utils.getFromUuidSync(uuid).name;
 	});
 
+	Handlebars.registerHelper("displayCost", item => {
+		let costInGp = item.system.cost.gp
+		+ (item.system.cost.sp /10 )
+		+ (item.system.cost.cp /100 );
+		costInGp = costInGp * item.system.quantity;
+		return costInGp.toString().concat(" gp");
+	});
+
 	/* -------------------------------------------- */
 	/*  Effect Panel Handlebars                     */
 	/* -------------------------------------------- */

@@ -1,7 +1,7 @@
 {{!-- Character Details --}}
 <div class="SD-box" style="grid-row: span 7">
     <div class="header">
-        <label>Details</label>
+        <label>{{localize "SHADOWDARK.sheet.item.tab.details"}}</label>
         <span></span>
     </div>
     <div class="content details">
@@ -72,7 +72,7 @@
             <fieldset>
             <legend>
                 <a class="fas fa-square-xmark" data-action='edit-languages'></a>
-                <b> Languages</b>
+                <b> {{localize "SHADOWDARK.sheet.player.languages"}}</b>
             </legend>
             {{#each langData.fixed as |value key|}}
                 {{lookup ../languages .}}{{#unless @last}}, {{/unless}}

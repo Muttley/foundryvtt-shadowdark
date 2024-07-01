@@ -35,9 +35,8 @@
 		}
 	}
 
-	.background-grid-A,
-	.background-grid-B,
-	.background-grid-C {
+	.background-grid-a,
+	.background-grid-b {
 		display: grid;
 		grid-template-rows: 1fr;
 		gap: 8px;
@@ -49,14 +48,11 @@
 		}
 	 }
 
-	.background-grid-A {
-		grid-template-columns: 1fr 1.5fr repeat(2, 1.75fr);
+	.background-grid-a {
+		grid-template-columns: 1fr 2fr 2.5fr;
 	}
-	.background-grid-B {
-		grid-template-columns: 1fr repeat(2, 2.25fr);
-	}
-	.background-grid-C {
-		grid-template-columns: 1fr 2.5fr;
+	.background-grid-b {
+		grid-template-columns: 1fr 1.5fr;
 	}
 
 	.editor-content {
@@ -103,14 +99,6 @@
 		}
 	}
 
-	.item-toggle-light {
-		color: var(--inactive-control);
-
-		&.lit {
-			color: darkorange;
-		}
-	}
-
 	.portrait {
 		grid-row: span 2;
 	}
@@ -148,8 +136,6 @@
 	}
 
 	.rollable {
-		font-size: 16px;
-		font-family: "Montserrat-SemiBold";
 		i {
 			font-size: 14px;
 			visibility: hidden;
@@ -160,5 +146,12 @@
 				visibility: visible;
 			}
 		}
+	}
+
+	.slot-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 0px 8px;
+		font-size: 12px;
 	}
 }

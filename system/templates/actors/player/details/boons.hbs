@@ -1,0 +1,28 @@
+<ol class="SD-list">
+	<li class="header">
+		<div class="item-name">
+			<a
+				class="fa-solid fa-square-plus"
+				style="margin:0px 8px 0px 4px"
+				data-action="create-boon"
+			></a>
+			{{localize "SHADOWDARK.sheet.player.boon.label"}}</div>
+		<div class="duration">{{localize "SHADOWDARK.boon.type.label"}}</div>
+	</li>
+
+	{{#each boons as |boonType|}}
+		{{#each boonType.items as |boon|}}
+			<li class="item" data-item-id="{{boon._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{boon._id}}">
+				<div class="item-image" style="background-image: url({{boon.img}})">
+					<i class="fas fa-comment fa-lg"></i>
+				</div>
+				<a class="item-name" data-action="show-details">
+					{{boon.name}}
+				</a>
+				<div class="duration">
+					{{boonType.label}}
+				</div>
+			</li>
+		{{/each}}
+	{{/each}}
+</ol>

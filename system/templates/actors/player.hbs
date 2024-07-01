@@ -23,6 +23,10 @@
 
 	<nav class="SD-nav flex0" data-group="primary">
 
+		<a class="navigation-tab" data-tab="tab-details">
+			{{localize "SHADOWDARK.sheet.player.tab.details"}}
+		</a>
+
 		<a class="navigation-tab active" data-tab="tab-abilities">
 			{{localize "SHADOWDARK.sheet.player.tab.abilities"}}
 		</a>
@@ -41,9 +45,7 @@
 			{{localize "SHADOWDARK.sheet.player.tab.talents"}}
 		</a>
 
-		<a class="navigation-tab" data-tab="tab-background">
-			{{localize "SHADOWDARK.sheet.player.tab.background"}}
-		</a>
+
 
 		<a class="navigation-tab" data-tab="tab-notes">
 			{{localize "SHADOWDARK.sheet.player.tab.notes"}}
@@ -56,12 +58,12 @@
 	</nav>
 
 	<section class="SD-content-body flex1">
+		{{> actors/player/details }}
 		{{> actors/player/abilities }}
 		{{> actors/player/spells }}
 		{{> actors/player/talents }}
 		{{> actors/player/inventory }}
 		{{> actors/partials/effects }}
-		{{> actors/player/background }}
 		{{> actors/player/notes }}
 	</section>
 </form>

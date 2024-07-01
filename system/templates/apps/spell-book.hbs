@@ -38,9 +38,12 @@
 			<li class="item" data-uuid="{{this.uuid}}" draggable="true">
 
 				<div class="item-image" style="background-image: url({{this.img}})"></div>
-				<a class="item-name" data-uuid="{{this.uuid}}" data-action="show-details">{{this.name}}</a>
-				{{#if (hasspell this.name)}}<span style="font-size:0.75em">[{{localize "SHADOWDARK.apps.spell-book.known"}}]</span>{{/if}}
-
+				<a class="item-name" data-uuid="{{this.uuid}}" data-action="show-details">
+					{{this.name}}
+					{{#if (hasspell this.name)}}
+						<span style="font-size:0.75em">[{{localize "SHADOWDARK.apps.spell-book.known"}}]</span>
+					{{/if}}
+				</a>
 				<div class="duration">{{getSpellDuration
 							this.system.duration.type
 							this.system.duration.value
