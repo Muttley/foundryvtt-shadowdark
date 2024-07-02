@@ -7,18 +7,15 @@ export default class NpcSheetSD extends ActorSheetSD {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "npc"],
 			width: 600,
-			height: 700,
+			height: 730,
 			resizable: true,
 			tabs: [
 				{
-					navSelector: ".npc-navigation",
-					contentSelector: ".npc-body-content",
+					navSelector: ".SD-nav",
+					contentSelector: ".SD-content-body",
 					initial: "tab-details",
 				},
 			],
-			dragDrop: [{
-				dragSelector: ".item[draggable=true]",
-			}],
 		});
 	}
 

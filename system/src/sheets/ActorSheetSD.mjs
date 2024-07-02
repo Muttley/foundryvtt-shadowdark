@@ -8,7 +8,7 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onRollAbilityCheck(event)
 		);
 
-		html.find(".hp.rollable").click(
+		html.find("[data-action='roll-hp']").click(
 			event => this._onRollHP(event)
 		);
 
@@ -18,14 +18,6 @@ export default class ActorSheetSD extends ActorSheet {
 
 		html.find("[data-action='roll-initiative']").click(
 			event => this._onRollInitiative(event)
-		);
-
-		html.find(".open-item").click(
-			event => this._onOpenItem(event)
-		);
-
-		html.find(".show-details").click(
-			event => this._onShowDetails(event)
 		);
 
 		html.find("[data-action='show-details']").click(
@@ -40,7 +32,7 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onToggleLost(event)
 		);
 
-		html.find(".item-create").click(
+		html.find("[data-action='item-create']").click(
 			event => this._onItemCreate(event)
 		);
 
@@ -49,60 +41,6 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
-	}
-
-	async attachDetailsButtonEvents(item, detailsDiv) {
-		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
-			const castSpellButton = $(detailsDiv).find("button[data-action=cast-spell]");
-
-			castSpellButton.on("click", ev => {
-				ev.preventDefault();
-				const itemId = $(ev.currentTarget).data("item-id");
-				const actorId = $(ev.currentTarget).data("actor-id");
-				const actor = game.actors.get(actorId);
-
-				actor.castSpell(itemId);
-			});
-		}
-
-		if (item.type === "Scroll") {
-			const learnSpellButton = $(detailsDiv).find("button[data-action=learn-spell]");
-
-			learnSpellButton.on("click", ev => {
-				ev.preventDefault();
-				const itemId = $(ev.currentTarget).data("item-id");
-				const actorId = $(ev.currentTarget).data("actor-id");
-				const actor = game.actors.get(actorId);
-
-				actor.learnSpell(itemId);
-			});
-		}
-
-		if (item.type === "Potion") {
-			const usePotionButton = $(detailsDiv).find("button[data-action=use-potion]");
-
-			usePotionButton.on("click", ev => {
-				ev.preventDefault();
-				const itemId = $(ev.currentTarget).data("item-id");
-				const actorId = $(ev.currentTarget).data("actor-id");
-				const actor = game.actors.get(actorId);
-
-				actor.usePotion(itemId);
-			});
-		}
-
-		if (item.type === "Weapon") {
-			const useWeaponButton = $(detailsDiv).find("button[data-action=roll-attack]");
-
-			useWeaponButton.on("click", ev => {
-				ev.preventDefault();
-				const itemId = $(ev.currentTarget).data("item-id");
-				const actorId = $(ev.currentTarget).data("actor-id");
-				const actor = game.actors.get(actorId);
-
-				actor.rollAttack(itemId);
-			});
-		}
 	}
 
 	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
@@ -268,15 +206,6 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 	}
 
-	async _onOpenItem(event) {
-		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		return item.sheet.render(true);
-	}
-
 	async _onRollHP(event) {
 		event.preventDefault();
 
@@ -316,51 +245,6 @@ export default class ActorSheetSD extends ActorSheet {
 		else {
 			this.actor.rollAttack(itemId);
 		}
-	}
-
-	async _onShowDetails(event) {
-		event.preventDefault();
-
-		const parentTableRow = $(event.currentTarget).parent().parent();
-		const numColumns = parentTableRow.find("td").length;
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		if (parentTableRow.hasClass("expanded")) {
-			const detailsRow = parentTableRow.next(".item-details");
-			const detailsDiv = detailsRow.find("td > .item-details__slidedown");
-			detailsDiv.slideUp(200, () => detailsRow.remove());
-		}
-		else {
-			const content = await item.getDetailsContent();
-
-			// don't do anything if there are no details to show
-			if (content.trim() === "") return;
-
-			const detailsRow = document.createElement("tr");
-			detailsRow.classList.add("item-details");
-
-			const detailsData = document.createElement("td");
-			detailsData.setAttribute("colspan", numColumns);
-
-			const detailsDiv = document.createElement("div");
-			detailsDiv.setAttribute("style", "display: none");
-
-			detailsDiv.insertAdjacentHTML("afterbegin", content);
-			detailsDiv.classList.add("item-details__slidedown");
-
-			this.attachDetailsButtonEvents(item, detailsDiv);
-
-			detailsData.appendChild(detailsDiv);
-			detailsRow.appendChild(detailsData);
-
-			parentTableRow.after(detailsRow);
-
-			$(detailsDiv).slideDown(200);
-		}
-
-		parentTableRow.toggleClass("expanded");
 	}
 
 	async _onToggleLost(event) {

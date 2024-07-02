@@ -1,69 +1,52 @@
 <form class="{{cssClass}}" autocomplete="off">
-	<section class="gem-bag-body">
-		<div class="gem-list">
-			<table>
-				<tr>
-					<th>&nbsp;</th>
-					<th>{{localize 'SHADOWDARK.coins.gp'}}</th>
-					<th>{{localize 'SHADOWDARK.coins.sp'}}</th>
-					<th>{{localize 'SHADOWDARK.coins.cp'}}</th>
-					<th>&nbsp;</th>
-				</tr>
-				{{#each items as |item|}}
-					<tr class="item" data-item-id="{{item._id}}">
-						<td>
-							<a
-								class="item-control show-details"
-								data-item-id="{{item._id}}"
-							>
-								{{item.name}}
-							</a>
-						</td>
-						<td class="item-list-centered">
-							{{item.system.cost.gp}}
-						</td>
-						<td class="item-list-centered">
-							{{item.system.cost.sp}}
-						</td>
-						<td class="item-list-centered">
-							{{item.system.cost.cp}}
-						</td>
-						<td class="item-list-centered">
-							<a
-								class="item-control sell-gem"
-								data-item-id="{{item._id}}"
-								data-tooltip="{{localize 'SHADOWDARK.app.gem_bag.tooltip.sell_gem'}}"
-							>
-								<i class="fa-solid fa-coins"></i>
-							</a>
-						</td>
-					</tr>
-				{{/each}}
-				<tr>
-					<td>
-						<a
-							class="item-control item-create"
-							data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='Gem'}}"
-							data-item-type="Gem"
-						>
-							<i class="fa-duotone fa-file-plus"></i>
-						</a>
-						<b>{{localize 'SHADOWDARK.app.gem_bag.total_value'}}</b>
-					</td>
-					<td class="item-list-centered"><b>{{totals.gp}}</b></td>
-					<td class="item-list-centered"><b>{{totals.sp}}</b></td>
-					<td class="item-list-centered"><b>{{totals.cp}}</b></td>
-					<td>&nbsp;</td>
-				</tr>
-			</table>
-		</div>
-	</section>
-	<footer>
-		<button
-			class="gem-bag-footer sell-all-button"
-			{{#ifEq items.length 0}}disabled{{/ifEq}}
-		>
-			<i class="fa-regular fa-coins"></i> {{localize "SHADOWDARK.app.gem_bag.sell_all"}}
-		</button>
-	</footer>
+
+	<div class="SD-banner">{{localize "SHADOWDARK.app.gem_bag.title"}}</div>
+	<ol class="SD-list">
+		<li class="header">
+			<div class="item-name">
+				<a
+					class="fa-solid fa-square-plus"
+					style="margin:0px 8px 0px 4px"
+					data-action="item-create"
+				></a>
+				Gem
+			</div>
+			<div class="flex-60-px">Value</div>
+			<div class="actions"></div>
+		</li>
+
+		{{#each items as |item|}}
+		<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{actor._id}}.Item.{{item._id}}">
+			<div class="item-image" style="background-image: url({{item.img}})">
+				<i class="fas fa-comment fa-lg"></i>
+			</div>
+			<a class="item-name" data-action="show-details">
+				{{item.name}}
+			</a>
+			<div class="flex-60-px">{{displayCost item}}</div>
+			<div class="actions">
+				<a
+					data-action="sell-gem"
+					data-item-id="{{item._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.app.gem_bag.tooltip.sell_gem'}}"
+				>
+					<i class="fas fa-coins"></i>
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</ol>
+
+	<ol class="SD-list">
+		<li class="header" style="border-top:1px solid black; border-bottom:none;">
+			<div class="item-name">{{localize 'SHADOWDARK.app.gem_bag.total_value'}}</div>
+			<div class="flex-60-px">{{displayCost totals}}</div>
+			<div class="actions">
+				<a  data-action="sell-all-gems" data-tooltip="{{localize "SHADOWDARK.app.gem_bag.sell_all"}}">
+					<i style="color:var(--primary);" class="fa-solid fa-coins"></i>
+				</a>
+			</div>
+		</li>
+	</ol>
+	<br>
 </form>

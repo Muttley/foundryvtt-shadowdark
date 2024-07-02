@@ -2,9 +2,6 @@
 @use "../../mixins" as *;
 
 .shadowdark.sheet.player {
-	.window-content {
-		padding: 0px;
-	}
 
 	.abilities-grid {
 		display: grid;
@@ -55,65 +52,10 @@
 		grid-template-columns: 1fr 1.5fr;
 	}
 
-	.editor-content {
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
-
 	.inventory-grid {
 		display: grid;
 		grid-template-columns: 4fr 1fr;
 		gap: 8px;
-	}
-
-
-	.item-image {
-		display: inline-block;
-		width: 24px;
-		height: 24px;
-
-		background-size: contain;
-		background-repeat: no-repeat;
-
-		font-size: 14px;
-		vertical-align: middle;
-		text-align: center;
-
-		color: transparent;
-
-		&:hover {
-			background: none !important;
-			color: white;
-		}
-		i {
-			cursor: pointer;
-		}
-	}
-
-	.item-toggle-equipped,
-	.item-toggle-stashed {
-		color: var(--inactive-control);
-
-		&.enabled {
-			color: black;
-		}
-	}
-
-	.portrait {
-		grid-row: span 2;
-	}
-
-
-	.shadowdark-logo {
-		font-family: "JSL Blackletter";
-		font-size: 1.75rem;
-		color: white;
-		text-align: center;
-
-		span {
-			border-bottom: solid 1px white;
-			padding: 0px 10px 0px 10px;
-		}
 	}
 
 	.tab-notes.active{
@@ -122,35 +64,9 @@
 		grid-template-rows: 30px 1fr;
 	}
 
-	.uuid-link {
-		margin: 4px;
-		// text-align: center;
-	}
-
-	.value-grid {
-		display: grid;
-		grid-template-columns: 2fr 1fr 2fr;
-		column-gap: 2px;
-		align-items: center;
-		text-align: center;
-	}
-
-	.rollable {
-		i {
-			font-size: 14px;
-			visibility: hidden;
-		}
-
-		&:hover {
-			i {
-				visibility: visible;
-			}
-		}
-	}
-
 	.slot-grid {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 1fr 3fr;
 		gap: 0px 8px;
 		font-size: 12px;
 	}

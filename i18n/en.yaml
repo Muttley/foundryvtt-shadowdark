@@ -616,8 +616,9 @@ SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
-SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.label: Abilities
+SHADOWDARK.sheet.abilities.stats: Stats
+SHADOWDARK.sheet.abilities.modifiers: Modifiers
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
