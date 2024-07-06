@@ -59,12 +59,22 @@
 						<div class="item-image" style="background-image: url({{item.img}})">
 							<i class="fas fa-comment fa-lg"></i>
 						</div>
-						<a class="item-name" data-action="show-details">
+						<a
+							class="item-name"
+							data-action="show-details"
+						>
 							{{item.name}}
 							{{#if item.lightSourceUsed}}
-								<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
+								<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>
 							{{/if}}
 						</a>
+							{{#if item.lightSourceUsed}}
+								<div
+									data-tooltip="{{lightSourceTimeRemaining}}"
+								>
+									{{item.lightSourceProgress}}
+								</div>
+							{{/if}}
 						<div class="quantity">
 							{{#if item.showQuantity}}
 									{{#if ../owner}}
@@ -89,6 +99,8 @@
 								{{else}}
 									&nbsp;
 							{{/if}}
+
+
 						</div>
 						<div class="slots">
 							{{item.slotsUsed}}

@@ -21,6 +21,10 @@
 				text-transform: uppercase;
 				float:left;
 				padding:0px 8px;
+
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 			span {
 				background-image: url("../assets/artwork/title_right.png");
@@ -168,7 +172,7 @@
 		border:none;
 		font-size: 14px;
 		margin: 0px 6px 14px 6px;
-		width:auto;
+		width:100%;
 
 		th {
 			font-family: "Montserrat-Bold";

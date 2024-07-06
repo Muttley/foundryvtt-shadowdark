@@ -13,14 +13,17 @@ SHADOWDARK.ability_wisdom: Wisdom
 SHADOWDARK.alignment.chaotic: Chaotic
 SHADOWDARK.alignment.lawful: Lawful
 SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.ancestry.choice: Choice
+SHADOWDARK.ancestry.choice_count: Choice Count
+SHADOWDARK.ancestry.fixed: Fixed
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Select Language...
 SHADOWDARK.ancestry.nametable.label: Random Name Table
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.talents.count.label: Choice Count
+SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
+SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
-SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.app.active_effects.title: Active Effects
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
@@ -52,6 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
+SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
@@ -167,6 +171,7 @@ SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Tours
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.available.label: Available
 SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: Ability Group
@@ -174,10 +179,14 @@ SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
 SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
 SHADOWDARK.class-ability.lost.label: Lost
 SHADOWDARK.class-ability.maximum.label: Maximum
+SHADOWDARK.class-ability.options: Options
 SHADOWDARK.class.armor.all.label: All Armor
 SHADOWDARK.class.armor.label: Armor
 SHADOWDARK.class.armor.prompt: Select Armor...
+SHADOWDARK.class.choice: Choice
+SHADOWDARK.class.choice_count: Choice Count
 SHADOWDARK.class.fighter: Fighter
+SHADOWDARK.class.fixed: Fixed
 SHADOWDARK.class.hit_points.label: HP Die Roll
 SHADOWDARK.class.language_choices.count.label: Choice Count
 SHADOWDARK.class.language_choices.label: Language Choices
@@ -287,11 +296,10 @@ SHADOWDARK.effect_duration.turns: Turns
 SHADOWDARK.effect_duration.unlimited: Unlimited
 SHADOWDARK.effect.custom: Custom Effects
 SHADOWDARK.effect.footer.add_custom: Add Custom Effect
-SHADOWDARK.effect.header.active: Active
+SHADOWDARK.effect.header.toggle_active: Toggle Active
 SHADOWDARK.effect.header.changes: Changes
 SHADOWDARK.effect.header.delete: Delete
 SHADOWDARK.effect.header.edit: Edit
-SHADOWDARK.effect.header.inactive: Inactive
 SHADOWDARK.effect.header.name: Name
 SHADOWDARK.effect.header.options: Options
 SHADOWDARK.effect.header.transfer: Transfer
@@ -327,7 +335,7 @@ SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
-SHADOWDARK.inventory.item.light_used: (partially used)
+SHADOWDARK.inventory.item.light_used: (used)
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
 SHADOWDARK.inventory.section.armor: Armor

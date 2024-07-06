@@ -1,10 +1,7 @@
 <section class="tab tab-source" data-group="primary" data-tab="tab-source">
 	<div class="grid-3-columns">
-
-		{{#> ui/sd-box
-			header-label=(localize "SHADOWDARK.item.source_tag")
-			header-class="light"
-		}}
+		<h3>{{localize "SHADOWDARK.item.source_tag"}}</h3>
+		<div class="grid-colspan-2">
 
 			{{#if sourceLoaded}}
 				<select name="system.source.title" data-dtype="String">
@@ -25,7 +22,6 @@
 				</p>
 			{{/if}}
 
-		{{/ui/sd-box}}
-
+		</div>
 	</div>
 </section>

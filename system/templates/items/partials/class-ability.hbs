@@ -1,14 +1,9 @@
-<div class="item-details">
-	<div class="item-detail">
-		<label>{{localize "SHADOWDARK.class-ability.group.label"}}</label>
-		<input
-			name="system.group"
-			type="text"
-			value="{{ item.system.group }}"
-		/>
-	</div>
-	<div class="item-detail">
-		<label>{{localize "SHADOWDARK.class-ability.ability.label"}}</label>
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.ability.check")
+	header-class="light"
+}}
+	<div class="item-grid left">
+		<h3>{{localize "SHADOWDARK.class-ability.ability.label"}}</h3>
 		<select name="system.ability">
 			<option value="">&mdash;</option>
 			{{selectOptions
@@ -17,51 +12,51 @@
 				localize=false
 			}}
 		</select>
-	</div>
-	<div class="item-detail">
-		<label>{{localize 'SHADOWDARK.class-ability.dc.label'}}</label>
+
+		<h3>{{localize 'SHADOWDARK.class-ability.dc.label'}}</h3>
 		{{numberInput
 			item.system.dc
 			name="system.dc"
 			placeholder="0"
 		}}
 	</div>
-	<div class="item-detail">
-		<div class="checkbox">
-			<label>{{localize "SHADOWDARK.class-ability.limited-uses.label"}}</label>
-			<input type="checkbox" name="system.limitedUses" {{checked item.system.limitedUses}}>
-		</div>
-		{{#if system.limitedUses}}
-			<div class="grid-2-columns">
-				<div class="item-detail">
-					<label>{{localize 'SHADOWDARK.class-ability.available.label'}}</label>
-					{{numberInput
-						item.system.uses.available
-						name="system.uses.available"
-						placeholder="0"
-					}}
-				</div>
-				<div class="item-detail">
-					<label>{{localize 'SHADOWDARK.class-ability.maximum.label'}}</label>
-					{{numberInput
-						item.system.uses.max
-						name="system.uses.max"
-						placeholder="0"
-					}}
-				</div>
-			</div>
-		{{/if}}
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.group.label")
+	header-class="light"
+}}
+	<input name="system.group" type="text" value="{{ item.system.group }}"/>
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+}}
+	<div class="item-grid">
+		<h3>{{localize "SHADOWDARK.class-ability.lose_on_failure.label"}}</h3>
+		<input type="checkbox" name="system.loseOnFailure" {{checked item.system.loseOnFailure}}>
+		<h3>{{localize "SHADOWDARK.class-ability.limited-uses.label"}}</h3>
+		<input type="checkbox" name="system.limitedUses" {{checked item.system.limitedUses}}>
 	</div>
-	<div class="item-detail">
-		<div class="checkbox">
-			<label>{{localize "SHADOWDARK.class-ability.lose_on_failure.label"}}</label>
-			<input type="checkbox" name="system.loseOnFailure" {{checked item.system.loseOnFailure}}>
-		</div>
-		{{#if system.loseOnFailure}}
-			<div class="checkbox">
-				<label>{{localize "SHADOWDARK.class-ability.lost.label"}}</label>
-				<input type="checkbox" name="system.lost" {{checked item.system.lost}}>
+	{{#if system.limitedUses}}
+		<div class="grid-2-columns">
+			<div>
+				<h3>{{localize 'SHADOWDARK.class-ability.available.label'}}</h3>
+				{{numberInput
+					item.system.uses.available
+					name="system.uses.available"
+					placeholder="0"
+				}}
 			</div>
-		{{/if}}
-	</div>
-</div>
+			<div>
+				<h3>{{localize 'SHADOWDARK.class-ability.maximum.label'}}</h3>
+				{{numberInput
+					item.system.uses.max
+					name="system.uses.max"
+					placeholder="0"
+				}}
+			</div>
+		</div>
+	{{/if}}
+{{/ui/sd-box}}

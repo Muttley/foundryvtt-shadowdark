@@ -1,171 +1,228 @@
-<div class="item-details">
-	<div class="class-details">
-		<div class="item-detail">
-			<label>{{localize 'SHADOWDARK.class.hit_points.label'}}</label>
-			<input
-				name="system.hitPoints"
-				type="text"
-				value="{{item.system.hitPoints}}"
-			/>
-		</div>
-		<div class="item-detail">
-			<label>{{localize "SHADOWDARK.class.talents_table.label"}}</label>
-			<select name="system.classTalentTable">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					classTalentTables
-					selected=system.classTalentTable
-					localize=false
-				}}
-			</select>
-		</div>
-		<div></div>
-		<div class="item-detail">
-			<label>{{localize "SHADOWDARK.class.spellcasting_ability.label"}}</label>
-			<select name="system.spellcasting.ability">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					config.ABILITIES_LONG
-					selected=system.spellcasting.ability
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="item-detail">
-			<label>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</label>
-			<select name="system.spellcasting.class">
-				<option
-					value="__not_spellcaster__"
-					{{#ifEq system.spellcasting.class "__not_spellcaster__"}}
-						selected
-					{{/ifEq}}
-				>
-					&mdash;
-				</option>
-				<option
-					value=""
-					{{#ifEq system.spellcasting.class ""}}
-						selected
-					{{/ifEq}}
-				>
-					(Class Name)
-				</option>
-				{{selectOptions
-					spellcastingClasses
-					selected=system.spellcasting.class
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="item-detail">
-			<label>{{localize 'SHADOWDARK.class.spellcasting.base_difficulty.label'}}</label>
-			{{numberInput
-				item.system.spellcasting.baseDifficulty
-				name="system.spellcasting.baseDifficulty"
-				placeholder="10"
-			}}
-		</div>
-	</div>
 
-	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.equipment.label'}}</h4>
-	<div class="class-equipment-details">
-		<div class="choice-selector item-detail">
-			{{>
-				items/partials/choice-selector
-				config=weaponsConfig
-				editable=editable
-			}}
-
-		</div>
-		<div class="choice-selector item-detail">
-			{{>
-				items/partials/choice-selector
-				config=armorConfig
-				editable=editable
-			}}
-		</div>
-		<div class="item-detail">
-			<div class="checkbox">
-				<label>{{localize "SHADOWDARK.class.weapons.all.label"}}</label>
-				<input type="checkbox" name="system.allWeapons" {{checked system.allWeapons}}>
-			</div>
-			<div class="checkbox">
-				<label>{{localize "SHADOWDARK.class.weapons.all_melee.label"}}</label>
-				<input type="checkbox" name="system.allMeleeWeapons" {{checked system.allMeleeWeapons}}>
-			</div>
-			<div class="checkbox">
-				<label>{{localize "SHADOWDARK.class.weapons.all_ranged.label"}}</label>
-				<input type="checkbox" name="system.allRangedWeapons" {{checked system.allRangedWeapons}}>
-			</div>
-			<div class="checkbox">
-				<label>{{localize "SHADOWDARK.class.armor.all.label"}}</label>
-				<input type="checkbox" name="system.allArmor" {{checked system.allArmor}}>
-			</div>
-		</div>
-	</div>
-	<div class="class-equipment-details">
-	</div>
-
-	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</h4>
-	<div class="choice-selector">
-		{{>
-			items/partials/choice-selector
-			config=fixedLanguagesConfig
-			editable=editable
-		}}
-	</div>
-	<div class="choice-selector item-detail">
-		{{>
-			items/partials/choice-selector
-			config=languageChoicesConfig
-			editable=editable
-		}}
-		<div class="item-detail">
-			<label>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</label>
-			{{numberInput
-				item.system.languages.select
-				name="system.languages.select"
-				placeholder="0"
-			}}
-		</div>
-	</div>
-	<div class="language-detail">
-		<label>{{localize 'SHADOWDARK.language_choices.common.label'}}</label>
-		{{numberInput
-			item.system.languages.common
-			name="system.languages.common"
-			placeholder="0"
-		}}
-		<br>
-		<label>{{localize 'SHADOWDARK.language_choices.rare.label'}}</label>
-		{{numberInput
-			item.system.languages.rare
-			name="system.languages.rare"
-			placeholder="0"
-		}}
-	</div>
-
-	<h4 class="section-header">{{localize 'SHADOWDARK.form.section_header.talents.label'}}</h4>
-	<div class="choice-selector item-detail">
-		{{>
-			items/partials/choice-selector
-			config=talentsConfig
-			editable=editable
-		}}
-	</div>
-	<div class="choice-selector item-detail">
-		{{>
-			items/partials/choice-selector
-			config=talentChoicesConfig
-			editable=editable
-		}}
-		<div class="item-detail">
-			<label>{{localize 'SHADOWDARK.class.talent_choices.count.label'}}</label>
-			{{numberInput
-				item.system.talentChoiceCount
-				name="system.talentChoiceCount"
-				placeholder="0"
-			}}
-		</div>
-	</div>
+<div>
+	<h3>{{localize 'SHADOWDARK.class.hit_points.label'}}</h3>
+	<input
+		name="system.hitPoints"
+		type="text"
+		value="{{item.system.hitPoints}}"
+	/>
 </div>
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</h3>
+	<select name="system.spellcasting.class">
+		<option
+			value="__not_spellcaster__"
+			{{#ifEq system.spellcasting.class "__not_spellcaster__"}}
+				selected
+			{{/ifEq}}
+		>
+			&mdash;
+		</option>
+		<option
+			value=""
+			{{#ifEq system.spellcasting.class ""}}
+				selected
+			{{/ifEq}}
+		>
+			(Class Name)
+		</option>
+		{{selectOptions
+			spellcastingClasses
+			selected=system.spellcasting.class
+			localize=false
+		}}
+	</select>
+</div>
+
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.spellcasting_ability.label"}}</h3>
+	<select name="system.spellcasting.ability">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			config.ABILITIES_LONG
+			selected=system.spellcasting.ability
+			localize=false
+		}}
+	</select>
+</div>
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.talents_table.label"}}</h3>
+	<select name="system.classTalentTable">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			classTalentTables
+			selected=system.classTalentTable
+			localize=false
+		}}
+	</select>
+</div>
+
+<div><!-- placeholder --></div>
+
+<div>
+	<h3>{{localize 'SHADOWDARK.class.spellcasting.base_difficulty.label'}}</h3>
+	{{numberInput
+		item.system.spellcasting.baseDifficulty
+		name="system.spellcasting.baseDifficulty"
+		placeholder="10"
+	}}
+</div>
+
+<br>
+
+<div class="SD-banner grid-colspan-3">{{localize 'SHADOWDARK.form.section_header.equipment.label'}}</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.weapons.label")
+	header-class="light"
+}}
+	{{#if (checked system.allWeapons)}}
+		{{localize "SHADOWDARK.class.weapons.all.label"}}
+	{{else}}
+		{{>
+			items/partials/choice-selector
+			config=weaponsConfig
+			editable=editable
+		}}
+	{{/if}}
+
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.armor.label")
+	header-class="light"
+}}
+	{{#if (checked system.allArmor)}}
+		{{localize "SHADOWDARK.class.armor.all.label"}}
+	{{else}}
+		{{>
+			items/partials/choice-selector
+			config=armorConfig
+			editable=editable
+		}}
+	{{/if}}
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+
+	<h3>{{localize "SHADOWDARK.class.weapons.all.label"}}</h3>
+	<input type="checkbox" name="system.allWeapons" {{checked system.allWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.weapons.all_melee.label"}}</h3>
+	<input type="checkbox" name="system.allMeleeWeapons" {{checked system.allMeleeWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.weapons.all_ranged.label"}}</h3>
+	<input type="checkbox" name="system.allRangedWeapons" {{checked system.allRangedWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.armor.all.label"}}</h3>
+	<input type="checkbox" name="system.allArmor" {{checked system.allArmor}}>
+
+{{/ui/sd-box}}
+
+<br>
+
+<div class="SD-banner grid-colspan-3">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.fixed")
+	header-class="light"
+}}
+	{{>
+		items/partials/choice-selector
+		config=fixedLanguagesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.choice")
+	header-class="light"
+}}
+	{{>
+		items/partials/choice-selector
+		config=languageChoicesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+
+	<h3>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</h3>
+	{{numberInput
+		item.system.languages.select
+		name="system.languages.select"
+		placeholder="0"
+	}}
+
+	<h3>{{localize 'SHADOWDARK.language_choices.common.label'}}</h3>
+	{{numberInput
+		item.system.languages.common
+		name="system.languages.common"
+		placeholder="0"
+	}}
+
+	<h3>{{localize 'SHADOWDARK.language_choices.rare.label'}}</h3>
+	{{numberInput
+		item.system.languages.rare
+		name="system.languages.rare"
+		placeholder="0"
+	}}
+
+{{/ui/sd-box}}
+
+<br>
+
+<div class="SD-banner grid-colspan-3">{{localize 'SHADOWDARK.form.section_header.talents.label'}}</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.fixed")
+	header-class="light"
+}}
+	{{>
+		items/partials/choice-selector
+		config=talentsConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.choice")
+	header-class="light"
+}}
+	{{>
+		items/partials/choice-selector
+		config=talentChoicesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>{{localize 'SHADOWDARK.class.talent_choices.count.label'}}</h3>
+	<span>1</span>
+	<!-- TODO CG only support choice of 1 currently
+	{{numberInput
+		item.system.talentChoiceCount
+		name="system.talentChoiceCount"
+		value="1"
+		editable=false
+	}}
+	 -->
+{{/ui/sd-box}}
+
+<br>

@@ -4,7 +4,14 @@
 	{{!-- title --}}
 	<h1 class="grid-colspan-2" style="margin:10px 5px;">
 		{{localize "SHADOWDARK.apps.character-generator.title"}}
-		{{#unless editing}}<a class="fas fa-dice" name="randomize-all" data-action="cg-click"></a>{{/unless}}
+		{{#unless editing}}
+			<a
+				class="fas fa-dice"
+				name="randomize-all"
+				data-action="cg-click"
+				title="{{localize "SHADOWDARK.apps.character-generator.tooltip"}}"
+			></a>
+		{{/unless}}
 	</h1>
 
 	{{!-- details --}}

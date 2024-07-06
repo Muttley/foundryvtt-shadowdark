@@ -645,7 +645,7 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data, options);
 	}
 
-	async castNPCSpell(itemId) {
+	async castNPCSpell(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		const abilityBonus = this.system.spellcastingBonus;
@@ -661,9 +661,7 @@ export default class ActorSD extends Actor {
 
 		const parts = ["1d20", "@abilityBonus"];
 
-		const options = {
-			isNPC: true,
-		};
+		options.isNPC = true;
 
 		return item.rollSpell(parts, data, options);
 	}

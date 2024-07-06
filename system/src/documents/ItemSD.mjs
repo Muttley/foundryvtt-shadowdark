@@ -119,15 +119,27 @@ export default class ItemSD extends Item {
 	}
 
 	async getDetailsContent() {
-		const templateData = await this.getChatData();
+		const description = await this.getEnrichedDescription();
+
+		const data = {
+			description,
+			item: this.toObject(),
+			itemProperties: await this.propertyItems(),
+		};
+
+		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+			data.spellClasses = await this.getSpellClassesDisplay();
+		}
+
+		if (["Armor", "Weapon"].includes(this.type)) {
+			data.baseItemName = await this.getBaseItemName();
+		}
 
 		const templatePath = this.getItemTemplate(
 			"systems/shadowdark/templates/partials/details"
 		);
 
-		const html = await renderTemplate(templatePath,	templateData);
-
-		return html;
+		return await renderTemplate(templatePath, data);
 	}
 
 	async getEnrichedDescription() {
@@ -145,16 +157,10 @@ export default class ItemSD extends Item {
 				return `${basePath}/armor.hbs`;
 			case "Effect":
 				return `${basePath}/effect.hbs`;
-			case "NPC Spell":
-				return `${basePath}/npc-spell.hbs`;
-			case "Potion":
-				return `${basePath}/potion.hbs`;
 			case "Scroll":
-				return `${basePath}/scroll.hbs`;
+			case "Wand":
 			case "Spell":
 				return `${basePath}/spell.hbs`;
-			case "Wand":
-				return `${basePath}/wand.hbs`;
 			case "Weapon":
 				return `${basePath}/weapon.hbs`;
 			default:

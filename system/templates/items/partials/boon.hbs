@@ -1,7 +1,5 @@
-{{#> ui/sd-box
-	header-label=(localize 'SHADOWDARK.boon.type.label')
-	header-class="light"
-}}
+<div class="item-grid">
+	<h3>{{localize 'SHADOWDARK.boon.type.label'}}</h3>
 	<select name="system.boonType">
 		{{selectOptions
 			config.BOON_TYPES
@@ -9,5 +7,5 @@
 			localize=false
 		}}
 	</select>
-{{/ui/sd-box}}
+</div>
 

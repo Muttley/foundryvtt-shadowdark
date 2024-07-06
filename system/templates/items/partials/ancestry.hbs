@@ -1,7 +1,7 @@
 <div class="SD-banner grid-colspan-3">{{localize 'SHADOWDARK.form.section_header.languages.label'}}</div>
 
 {{#> ui/sd-box
-	header-label=(localize 'SHADOWDARK.ancestry.languages.label')
+	header-label=(localize 'SHADOWDARK.ancestry.fixed')
 	header-class="light"
 }}
 	{{>
@@ -11,22 +11,31 @@
 	}}
 {{/ui/sd-box}}
 
-<div>
+{{#> ui/sd-box
+	header-label=(localize 'SHADOWDARK.ancestry.choice')
+	header-class="light"
+}}
 	{{>
 		items/partials/choice-selector
 		config=languageChoicesConfig
 		editable=editable
 	}}
 
-	<h3>{{localize 'SHADOWDARK.class.language_choices.count.label'}}</h3>
+
+{{/ui/sd-box}}
+
+{{#> ui/sd-box
+	header-label=""
+	header-class="light"
+	content-class="item-grid right"
+}}
+	<h3>{{localize 'SHADOWDARK.ancestry.choice_count'}}</h3>
 	{{numberInput
 		item.system.languages.select
 		name="system.languages.select"
 		placeholder="0"
 	}}
-</div>
 
-<div class="item-grid">
 	<h3>{{localize 'SHADOWDARK.language_choices.common.label'}}</h3>
 	{{numberInput
 		item.system.languages.common
@@ -40,50 +49,70 @@
 		name="system.languages.rare"
 		placeholder="0"
 	}}
-</div>
-
+{{/ui/sd-box}}
 
 <div class="SD-banner grid-colspan-3">{{localize 'SHADOWDARK.form.section_header.talents.label'}}</div>
-<div class="grid-2-columns">
-	<div>
-		{{>
-			items/partials/choice-selector
-			config=talentsConfig
-			editable=editable
-		}}
-	</div>
-	<div>
-		<h3>{{localize 'SHADOWDARK.ancestry.talents.count.label'}}</h3>
-		{{numberInput
-			item.system.talentChoiceCount
-			name="system.talentChoiceCount"
-			placeholder="0"
-		}}
-	</div>
-</div>
+
+<!-- TODO properly implement fixed talents here.-->
+<div></div>
+
+<!-- choice talents-->
+{{#> ui/sd-box
+	header-label="Choice"
+	header-class="light"
+}}
+
+	{{>
+		items/partials/choice-selector
+		config=talentsConfig
+		editable=editable
+	}}
+
+{{/ui/sd-box}}
+
+<!-- talents options-->
+{{#> ui/sd-box
+	header-label=""
+	header-class="light"
+	content-class="item-grid right"
+}}
+	<h3>{{localize "SHADOWDARK.ancestry.choice_count"}}</h3>
+	{{numberInput
+		item.system.talentChoiceCount
+		name="system.talentChoiceCount"
+		placeholder="0"
+	}}
+{{/ui/sd-box}}
 
 <div class="SD-banner grid-colspan-3">{{localize "SHADOWDARK.apps.character-generator.title"}}</div>
 
-	<div>
-		<label title="{{localize "SHADOWDARK.ancestry.tooltip.weight"}}">Random Weight</label>
+<div class=" grid-colspan-3 grid-2-columns">
+	{{#> ui/sd-box
+		header-label=(localize "SHADOWDARK.ancestry.nametable.label")
+		header-class="light"
+	}}
+		<select name="system.nameTable">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				ancestryNameTables
+				selected=system.nameTable
+				localize=false
+			}}
+		</select>
+	{{/ui/sd-box}}
+
+	{{#> ui/sd-box
+		header-label=""
+		header-class="light"
+		content-class="item-grid right"
+	}}
+		<h3 title="{{localize "SHADOWDARK.ancestry.tooltip.weight"}}">
+			{{localize "SHADOWDARK.ancestry.nametable.random_weight"}}
+		</h3>
 		{{numberInput
 			item.system.randomWeight
 			name="system.randomWeight"
 			placeholder="1"
 		}}
-	</div>
-	<div style="grid-column: 2 / span 2;">
-		<label>{{localize "SHADOWDARK.ancestry.nametable.label"}}</label>
-		<div style="background-color: rgba(0, 0, 0, 0.05);">
-			{{#unless system.nameTable}}
-				{{localize "SHADOWDARK.dragdrop"}}
-			{{/unless}}
-			{{#if item.system.nameTable}}
-				<div style="white-space: nowrap;">
-				<a class="fas fa-delete-right" data-action="remove-name-table"></a>
-				<a class="content-link" data-uuid="{{item.system.nameTable}}">{{uuidToName item.system.nameTable}}</a>
-				</div>
-			{{/if}}
-		</div>
-	</div>
+	{{/ui/sd-box}}
 </div>

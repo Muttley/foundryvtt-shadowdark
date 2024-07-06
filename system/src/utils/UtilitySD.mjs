@@ -285,21 +285,16 @@ export default class UtilitySD {
 
 			const itemId = listObj.data("uuid");
 			const item = await fromUuid(itemId);
-			let description = "";
+
+			let details = "";
 			if (item) {
-				description = TextEditor.enrichHTML(
-					item.system.description,
-					{
-						async: false,
-						cache: false,
-					}
-				);
+				details = await item.getDetailsContent();
 			}
 
 			const detailsDiv = document.createElement("div");
 			detailsDiv.setAttribute("style", "display: none");
 			detailsDiv.classList.add("item-details");
-			detailsDiv.insertAdjacentHTML("afterbegin", description);
+			detailsDiv.insertAdjacentHTML("afterbegin", details);
 			listObj.append(detailsDiv);
 			$(detailsDiv).slideDown(200);
 		}

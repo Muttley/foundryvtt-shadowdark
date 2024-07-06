@@ -48,30 +48,24 @@
 					/>
 				</td>
 				<td>
-					<a>
-						{{#if ../editable}}
-							<i
-								class="class-title-controls fa-solid fa-trash"
-								data-action="delete"
-								data-index="{{@index}}"
-							></i>
-						{{/if}}
-					</a>
+					{{#if ../editable}}
+						<a
+							data-action="class-title-delete"
+							data-index="{{@index}}"
+						>
+							<i class="fa-solid fa-trash"></i>
+						</a>
+					{{/if}}
 				</td>
 			</tr>
 		{{/each}}
 		<tr>
-			<td colspan="5">&nbsp;</td>
-			<td>
-				<a>
-					{{#if editable}}
-						<i
-							class="class-title-controls fa-solid fa-plus"
-							data-action="add"
-						>
-						</i>
-					{{/if}}
-				</a>
+			<td colspan="7" style="text-align: center;">
+				{{#if editable}}
+					<a data-action="class-title-add">
+						<i class=" fa-solid fa-plus"></i>
+					</a>
+				{{/if}}
 			</td>
 		</tr>
 	</table>

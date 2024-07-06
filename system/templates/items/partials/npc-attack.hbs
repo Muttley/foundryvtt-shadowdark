@@ -1,66 +1,49 @@
-<div class="item-details">
-	<div class="npc-attack-details">
-		<div class="npc-attack-detail">
-				<label>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</label>
-				<p class="item-property-list npc-attack-ranges">
-					{{npcAttackRangesDisplay}}
-				</p>
-		</div>
-		<div
-			class="npc-attack-detail"
-			style="grid-column: span 3;"
-		>
-			<div
-				class="item-properties"
-				style="grid-column: unset;"
-			>
-				<div
-					class="item-property"
-					style="grid-template-columns: 1fr;"
-				>
-					<label>{{localize 'SHADOWDARK.item.npc_attack_special'}}</label>
-					<input
-						style="text-align: left;"
-						name="system.damage.special"
-						type="text"
-						value="{{item.system.damage.special}}"
-					/>
-				</div>
-			</div>
-		</div>
+<div>
+	<div class="item-grid right">
+
+		<h3>{{localize 'SHADOWDARK.item.npc_attack_count'}}</h3>
+		<input
+			name="system.attack.num"
+			type="text"
+			value="{{item.system.attack.num}}"
+		/>
+
+		<h3>{{localize 'SHADOWDARK.item.npc_attack_damage_formula'}}</h3>
+		<input
+			name="system.damage.value"
+			type="text"
+			value="{{item.system.damage.value}}"
+		/>
+
+		<h3>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</h3>
+		{{numberInput
+			system.bonuses.attackBonus
+			name="system.bonuses.attackBonus"
+			placeholder="1"
+		}}
+
+		<h3>{{localize 'SHADOWDARK.item.effect.predefined_effect.critMultiplier'}}</h3>
+		{{numberInput
+			system.bonuses.critical.multiplier
+			name="system.bonuses.critical.multiplier"
+			placeholder="2"
+		}}
 	</div>
-	<div class="npc-attack-details">
-		<div class="npc-attack-detail">
-			<label>{{localize 'SHADOWDARK.item.npc_attack_count'}}</label>
-			<input
-				name="system.attack.num"
-				type="text"
-				value="{{item.system.attack.num}}"
-			/>
-		</div>
-		<div class="npc-attack-detail">
-			<label>{{localize 'SHADOWDARK.item.npc_attack_bonus'}}</label>
-			{{numberInput
-				system.bonuses.attackBonus
-				name="system.bonuses.attackBonus"
-				placeholder="1"
-			}}
-		</div>
-		<div class="npc-attack-detail">
-			<label>{{localize 'SHADOWDARK.item.npc_attack_damage_formula'}}</label>
-			<input
-				name="system.damage.value"
-				type="text"
-				value="{{item.system.damage.value}}"
-			/>
-		</div>
-		<div class="npc-attack-detail">
-			<label>{{localize 'SHADOWDARK.item.effect.predefined_effect.critMultiplier'}}</label>
-			{{numberInput
-				system.bonuses.critical.multiplier
-				name="system.bonuses.critical.multiplier"
-				placeholder="2"
-			}}
-		</div>
-	</div>
+
+
+	<h3>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</h3>
+	<a
+		class="properties-list"
+		data-action="npc-attack-ranges"
+	>
+		{{npcAttackRangesDisplay}}
+	</a>
+
+	<h3>{{localize 'SHADOWDARK.item.npc_attack_special'}}</h3>
+	<input
+		style="text-align: left;"
+		name="system.damage.special"
+		type="text"
+		value="{{item.system.damage.special}}"
+	/>
 </div>
