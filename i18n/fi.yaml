@@ -16,7 +16,7 @@ SHADOWDARK.alignment.neutral: Neutraali
 SHADOWDARK.ancestry.languages.label: Lajin osaamat kielet
 SHADOWDARK.ancestry.languages.prompt: Valitse kieli...
 SHADOWDARK.ancestry.nametable.label: Satunnainen nimilista
-SHADOWDARK.ancestry.nametable.placeholder: Vedä kielitaulu tähän
+SHADOWDARK.ancestry.nametable.placeholder: Vedä kielilista tähän
 SHADOWDARK.ancestry.talents.count.label: Valintojen määrä
 SHADOWDARK.ancestry.talents.label: Lajin lahjakkuudet
 SHADOWDARK.ancestry.talents.prompt: Valitse lahjakkuus...
@@ -94,10 +94,10 @@ SHADOWDARK.apps.monster-importer.instruction1: 1. Kopioi hirviön teksti lähdem
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Liitä hirviön teksti tähän. Lisää jokaisen kyvyn väliin tyhjä rivi.
 SHADOWDARK.apps.monster-importer.instruction2b: Hirviön nimi
 SHADOWDARK.apps.monster-importer.instruction2c: Kuvausteksti
-SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
-SHADOWDARK.apps.monster-importer.instruction2e: Feature
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
-SHADOWDARK.apps.monster-importer.title: Import Monster
+SHADOWDARK.apps.monster-importer.instruction2d: Hirviön ominaisuudet
+SHADOWDARK.apps.monster-importer.instruction2e: Ominaisuus
+SHADOWDARK.apps.monster-importer.instruction3: 3. Paina "Tuo hirviö"-nappia.
+SHADOWDARK.apps.monster-importer.title: Tuo hirviö
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Tuo Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Navigoi shadowdarklings.net sivustolle.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generoi hahmosi ja tallenna jsonina.
@@ -105,38 +105,38 @@ SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopioi json-tiedoston s
 SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Paina "tuo"-nappia.
 SHADOWDARK.apps.shadowdarkling-importer.open-generator: Avaa generaattori
 SHADOWDARK.apps.shadowdarkling-importer.title: Tuo Shadowdarkling
-SHADOWDARK.apps.spell-book.known: Known
-SHADOWDARK.apps.spell-book.title: Class Spell List
-SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
-SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
-SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
-SHADOWDARK.apps.spell-importer.instruction2d: Duration
-SHADOWDARK.apps.spell-importer.instruction2e: Range
-SHADOWDARK.apps.spell-importer.instruction2f: Description
-SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
-SHADOWDARK.apps.spell-importer.title: Import Spell
+SHADOWDARK.apps.spell-book.known: Opittu
+SHADOWDARK.apps.spell-book.title: Hahmoluokan loitsulista
+SHADOWDARK.apps.spell-importer.import_button: Tuo loitsu
+SHADOWDARK.apps.spell-importer.instruction1: 1. Kopioi loitsun teksti lähdemateriaalista.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Liitä teksti tähän noudattaen loitsujen kirjoitustyyliä sääntökirjoissa.
+SHADOWDARK.apps.spell-importer.instruction2b: Loitsun nimi
+SHADOWDARK.apps.spell-importer.instruction2c: Loitsutaso ja hahmoluokka
+SHADOWDARK.apps.spell-importer.instruction2d: Kestoaika
+SHADOWDARK.apps.spell-importer.instruction2e: Kantama
+SHADOWDARK.apps.spell-importer.instruction2f: Kuvaus
+SHADOWDARK.apps.spell-importer.instruction3: 3. Paina "Tuo loitsu"-nappia.
+SHADOWDARK.apps.spell-importer.title: Tuo loitsu
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
 SHADOWDARK.armor.properties.one_handed: Varaa yhden käden
 SHADOWDARK.armor.properties.shield: Kilpi
-SHADOWDARK.boon.type.label: Boon Type
-SHADOWDARK.boons.blessing: Blessing
-SHADOWDARK.boons.oath: Oath
-SHADOWDARK.boons.secret: Secret
+SHADOWDARK.boon.type.label: Siunauksen tyyppi
+SHADOWDARK.boons.blessing: Siunaus
+SHADOWDARK.boons.oath: Vala
+SHADOWDARK.boons.secret: Salaisuus
 SHADOWDARK.chat_card.button.attack: Heitä hyökkäysheitto
 SHADOWDARK.chat_card.button.cast_spell: Loihdi loitsu
 SHADOWDARK.chat_card.button.learn_spell: Opettele loitsu
 SHADOWDARK.chat_card.button.use_potion: Käytä rohto
 SHADOWDARK.chat_card.button.use_scroll: Käytä loitsukäärö
 SHADOWDARK.chat_card.button.use_wand: Käytä taikasauvaa
-SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
-SHADOWDARK.chat_card.context.apply_damage: Apply Damage
-SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
-SHADOWDARK.chat_card.context.apply_healing: Apply Healing
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat_card.context.apply_damage_secondary: Käytä vaihtoehtoista vahinkoa
+SHADOWDARK.chat_card.context.apply_damage: Käytä normaalia vahinkoa
+SHADOWDARK.chat_card.context.apply_healing_secondary: Käytä vaihtoehtoista parannusta
+SHADOWDARK.chat_card.context.apply_healing: Käytä normaalia parannusta
+SHADOWDARK.chat.clockwise_initiative: Koska {name} heitti parhaiten hän menee ensin ja muut seuraavat kiinteässä järjestyksessä.
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
@@ -156,52 +156,52 @@ SHADOWDARK.chat.spell_learn.failure: "{name} ei oppinut taikakääröstä mitä�
 SHADOWDARK.chat.spell_learn.success: "{name} onnistuneesti oppi {spellName} loitsun"
 SHADOWDARK.chat.spell_learn.title: Opettelee loitsua
 SHADOWDARK.chat.spell_roll.title: "Loihditaan {name} tasolla {tier} jolloin vaikeusaste on {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
-SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
-SHADOWDARK.chat.use_ability.title: "Using Ability"
+SHADOWDARK.chat.use_ability.failure: "{name} epäonnistui käyttämään {ability} kykyä"
+SHADOWDARK.chat.use_ability.success: "{name} onnistui {ability} kyvyssään"
+SHADOWDARK.chat.use_ability.title: "Kyvyn käyttö"
 SHADOWDARK.chat.welcome_message.intro: "Järjestelmän nopeaa oppimista varten, voit ottaa opastuskierrosen painamalla tätä nappia:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Tikettijärjestelmä
 SHADOWDARK.chat.welcome_message.issues: "Jos löydät ongelmia tai sinulla on ideoita uusiin ominaisuuksiin järjestelmässä. Tutustu virheiden seurantaamme:"
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG opastukset
 SHADOWDARK.chatcard.default: Heitä noppaa
-SHADOWDARK.class-ability.ability.label: Ability
-SHADOWDARK.class-ability.available.label: Available
-SHADOWDARK.class-ability.dc.label: DC
-SHADOWDARK.class-ability.group.label: Ability Group
-SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
-SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
-SHADOWDARK.class-ability.lost.label: Lost
-SHADOWDARK.class-ability.maximum.label: Maximum
-SHADOWDARK.class.armor.all.label: All Armor
-SHADOWDARK.class.armor.label: Armor
-SHADOWDARK.class.armor.prompt: Select Armor...
+SHADOWDARK.class-ability.ability.label: Kyky
+SHADOWDARK.class-ability.available.label: Käytettävissä
+SHADOWDARK.class-ability.dc.label: VA
+SHADOWDARK.class-ability.group.label: Kykyjoukko
+SHADOWDARK.class-ability.limited-uses.label: Rajoitettuja käyttökertoja?
+SHADOWDARK.class-ability.lose_on_failure.label: Kyvyn menettää epäonnistuessa?
+SHADOWDARK.class-ability.lost.label: Menetetty
+SHADOWDARK.class-ability.maximum.label: Maksimi
+SHADOWDARK.class.armor.all.label: Kaikki panssarit
+SHADOWDARK.class.armor.label: Panssari
+SHADOWDARK.class.armor.prompt: Valitse panssari...
 SHADOWDARK.class.fighter: Taistelija
-SHADOWDARK.class.hit_points.label: HP Die Roll
-SHADOWDARK.class.language_choices.count.label: Choice Count
-SHADOWDARK.class.language_choices.label: Language Choices
-SHADOWDARK.class.language_choices.prompt: Select Language...
-SHADOWDARK.class.languages.label: Class Languages
+SHADOWDARK.class.hit_points.label: Osumapisteheitto
+SHADOWDARK.class.language_choices.count.label: Valintojen määrä
+SHADOWDARK.class.language_choices.label: Kielivalinnat
+SHADOWDARK.class.language_choices.prompt: Valitse kieli...
+SHADOWDARK.class.languages.label: Hahmoluokan kielet
 SHADOWDARK.class.priest: Pappi
 SHADOWDARK.class.ranger: Samooja
 SHADOWDARK.class.spellcasting_ability.label: Loihtimiskyky
-SHADOWDARK.class.spellcasting_class.label: Spell Class
-SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
-SHADOWDARK.class.talent_choices.count.label: Choice Count
-SHADOWDARK.class.talent_choices.label: Talent Choices
-SHADOWDARK.class.talent_choices.prompt: Select Talent...
-SHADOWDARK.class.talents_table.label: Class Talents Table
-SHADOWDARK.class.talents.label: Talents
-SHADOWDARK.class.talents.prompt: Select Talent...
+SHADOWDARK.class.spellcasting_class.label: Loitsun hahmoluokka
+SHADOWDARK.class.spellcasting.base_difficulty.label: Loihtimisen vakio vaikeusaste
+SHADOWDARK.class.talent_choices.count.label: Valintojen määrä
+SHADOWDARK.class.talent_choices.label: Lahjakkuusvalinnat
+SHADOWDARK.class.talent_choices.prompt: Valitse lahjakkuus...
+SHADOWDARK.class.talents_table.label: Hahmoluokan lahjakkuustaulukko
+SHADOWDARK.class.talents.label: Lahjakkuudet
+SHADOWDARK.class.talents.prompt: Valitse lahjakkuus...
 SHADOWDARK.class.thief: Varas
-SHADOWDARK.class.titles.levels.from.label: From
-SHADOWDARK.class.titles.levels.label: Levels
-SHADOWDARK.class.titles.levels.to.label: To
-SHADOWDARK.class.weapons.all_melee.label: All Melee Weapons
-SHADOWDARK.class.weapons.all_ranged.label: All Ranged Weapons
-SHADOWDARK.class.weapons.all.label: All Weapons
-SHADOWDARK.class.weapons.label: Weapons
-SHADOWDARK.class.weapons.prompt: Select Weapon...
+SHADOWDARK.class.titles.levels.from.label: Miltä
+SHADOWDARK.class.titles.levels.label: Tasolta
+SHADOWDARK.class.titles.levels.to.label: Mihin
+SHADOWDARK.class.weapons.all_melee.label: Kaikki lähitaisteluaseet
+SHADOWDARK.class.weapons.all_ranged.label: Kaikki kantama-aseet
+SHADOWDARK.class.weapons.all.label: Kaikki aseet
+SHADOWDARK.class.weapons.label: Aseet
+SHADOWDARK.class.weapons.prompt: Valitse ase...
 SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
 SHADOWDARK.coins.gp: Kulta
@@ -216,20 +216,20 @@ SHADOWDARK.dialog.ability_check.str: Voimakkuusheitto
 SHADOWDARK.dialog.ability_check.title: Kyvykkyysheitto
 SHADOWDARK.dialog.ability_check.wis: Viisausheitto
 SHADOWDARK.dialog.effect.choice.armor: Valitse panssarin tyyppi
-SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
-SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
-SHADOWDARK.dialog.effect.choice.property: Choose Property
+SHADOWDARK.dialog.effect.choice.attribute: Valitse ominaisuus
+SHADOWDARK.dialog.effect.choice.damage_die: Valitse vahinkonoppa
+SHADOWDARK.dialog.effect.choice.lightsource: Valitse valonlähde
+SHADOWDARK.dialog.effect.choice.property: Valitse tyyppi
 SHADOWDARK.dialog.effect.choice.spell: Valitse loitsu
-SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
+SHADOWDARK.dialog.effect.choice.weapon_property: Valitse aseen tyyppi
 SHADOWDARK.dialog.effect.choice.weapon: Valitse aseen tyyppi
-SHADOWDARK.dialog.effect.choices.title: Effect Parameters
+SHADOWDARK.dialog.effect.choices.title: Efektin parametrit
 SHADOWDARK.dialog.general.are_you_sure: Oletko varma?
 SHADOWDARK.dialog.general.cancel: Peruuta
 SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.select: Valitse
 SHADOWDARK.dialog.general.yes: "Kyllä"
-SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.gm: Pelinjohtaja
 SHADOWDARK.dialog.hp_roll.per_level: Heitä osumapisteet tasolle {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "Osumapisteet ennen heittoa: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Heitetty {hp} osumapistettä tasolle 1 (sis. sitkeysbonuksen)
@@ -241,10 +241,10 @@ SHADOWDARK.dialog.item_roll.ability_bonus: Kykybonus
 SHADOWDARK.dialog.item_roll.item_bonus: Esinebonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Lahjakkuusbonus
 SHADOWDARK.dialog.item_roll.title: Heitä hyökkäysheitto käyttäen
-SHADOWDARK.dialog.item_selector.default_title: Choose Items
-SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: You can only select a maximum of {maxChoices} of this Item type.
-SHADOWDARK.dialog.item_selector.error.no_items_found: Unable to find items of the correct type in the available compendiums.
-SHADOWDARK.dialog.item_selector.select_item.prompt: Select Item...
+SHADOWDARK.dialog.item_selector.default_title: Valitse esineet
+SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: Voit valita enintään {maxChoices} tätä esinettä.
+SHADOWDARK.dialog.item_selector.error.no_items_found: Saatavilla olevista compendiumista ei löydy oikean tyyppisiä esineitä.
+SHADOWDARK.dialog.item_selector.select_item.prompt: Valitse esine...
 SHADOWDARK.dialog.item.confirm_delete: Varmista poisto
 SHADOWDARK.dialog.item.confirm_sale: Varmista myyminen
 SHADOWDARK.dialog.item.create_from_spell: Luo uusi esine loitsulla {spellName}
@@ -255,30 +255,30 @@ SHADOWDARK.dialog.item.use: Käytä
 SHADOWDARK.dialog.light_source.pick_up.title: Valitse kenelle annetaan valonlähde
 SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
-SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
-SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
-SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
-SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
-SHADOWDARK.dialog.select_armor_property.prompt: Select Armor Property...
-SHADOWDARK.dialog.select_armor_property.title: Choose Armor Properties
-SHADOWDARK.dialog.select_background.prompt: Select Background...
-SHADOWDARK.dialog.select_background.title: Choose Background
-SHADOWDARK.dialog.select_class.prompt: Select Class...
-SHADOWDARK.dialog.select_class.title: Choose Class
-SHADOWDARK.dialog.select_deity.prompt: Select Deity...
-SHADOWDARK.dialog.select_deity.title: Choose Deity
-SHADOWDARK.dialog.select_languages.prompt: Select Language...
-SHADOWDARK.dialog.select_languages.title: Choose Languages
-SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
-SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VAROITUS: Tämä loitsu ei ole saman hahmoluokan loitsu! Oletko varma, että yrität oppia sitä?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Vahvista loitsun oppiminen
+SHADOWDARK.dialog.select_ancestry.prompt: Valitse laji...
+SHADOWDARK.dialog.select_ancestry.title: Lajin valinta
+SHADOWDARK.dialog.select_armor_property.prompt: Valitse panssarin ominaisuus...
+SHADOWDARK.dialog.select_armor_property.title: Panssarin ominaisuuksien valinta
+SHADOWDARK.dialog.select_background.prompt: Valitse tausta...
+SHADOWDARK.dialog.select_background.title: Taustan valinta
+SHADOWDARK.dialog.select_class.prompt: Valitse hahmoluokka...
+SHADOWDARK.dialog.select_class.title: Hahmoluokan valinta
+SHADOWDARK.dialog.select_deity.prompt: Valitse jumaluus...
+SHADOWDARK.dialog.select_deity.title: Jumaluuden valinta
+SHADOWDARK.dialog.select_languages.prompt: Valitse kieli...
+SHADOWDARK.dialog.select_languages.title: Kielien valinta
+SHADOWDARK.dialog.select_weapon_property.prompt: Valitse aseen ominaisuus...
+SHADOWDARK.dialog.select_weapon_property.title: Aseen ominaisuuksien valinta
 SHADOWDARK.dialog.spell_roll.title: Heitä loihtimisheitto käyttäen
 SHADOWDARK.dialog.submit: Tallenna
 SHADOWDARK.dialog.tooltip.talent_advantage: Jokin lahjakkuuksistasi antaa sinulle edun tähän heittoon
-SHADOWDARK.dragdrop: Drag and Drop Here
+SHADOWDARK.dragdrop: Vedä ja tiputa tähän
 SHADOWDARK.effect_duration.hours: Tuntia
 SHADOWDARK.effect_duration.minutes: Minuuttia
 SHADOWDARK.effect_duration.seconds: Sekuntia
-SHADOWDARK.effect_duration.turns: Turns
+SHADOWDARK.effect_duration.turns: Vuoroa
 SHADOWDARK.effect_duration.unlimited: Rajoittamaton
 SHADOWDARK.effect.custom: Mukautetut efektit
 SHADOWDARK.effect.footer.add_custom: Lisää mukautettu efekti
@@ -299,21 +299,21 @@ SHADOWDARK.effect.tooltip.transfer.do_not: Ei voi siirtää
 SHADOWDARK.effect.tooltip.transfer.do: Siirrettävissä
 SHADOWDARK.effect.tooltip.transfer.header: Siirrä efekti hahmolle kun esine lisätään
 SHADOWDARK.effect.unavailable: Poissaolevat efektit
-SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
+SHADOWDARK.error.class_ability.no-uses-remaining: Ei enempää käyttökertoja
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
 SHADOWDARK.error.general.no_character_class: Hahmoluokka ei ole valittu
-SHADOWDARK.error.source.source_missing: Source missing or unknown...
-SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
-SHADOWDARK.form.section_header.equipment.label: Equipment
-SHADOWDARK.form.section_header.languages.label: Languages
-SHADOWDARK.form.section_header.names.label: Names
-SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
-SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.hotbar.abilityLost: Ability currently lost
-SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
-SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
-SHADOWDARK.hotbar.noItemWithName: No such item found on character
-SHADOWDARK.hotbar.spellLost: Spell currently lost
+SHADOWDARK.error.source.source_missing: Lähdemateriaali puuttuu tai on tuntematon...
+SHADOWDARK.error.spells.no_spellcasting_ability_set: Hahmon loihtimiskyvykkyyttä ei ole asetettu
+SHADOWDARK.form.section_header.equipment.label: Varusteet
+SHADOWDARK.form.section_header.languages.label: Kielet
+SHADOWDARK.form.section_header.names.label: Nimet
+SHADOWDARK.form.section_header.spellcasting.label: Loihtiminen
+SHADOWDARK.form.section_header.talents.label: Lahjakkuudet
+SHADOWDARK.hotbar.abilityLost: Kyky on toistaiseksi menetetty
+SHADOWDARK.hotbar.moreThanOneItemWithName: Useampi kuin yksi kohde löytyi tuolla nimellä
+SHADOWDARK.hotbar.noActorSelected: Sinun tulee valita kohde käyttääksesi tätä makroa
+SHADOWDARK.hotbar.noItemWithName: Esinettä ei löytynyt hahmolta
+SHADOWDARK.hotbar.spellLost: Loitsu on toistaiseksi menetetty
 SHADOWDARK.inventory.coins: Kolikot
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
 SHADOWDARK.inventory.item.light_seconds_remaining: Alle minuutti jäljellä
@@ -336,7 +336,7 @@ SHADOWDARK.inventory.tooltip.item_increment: Lisää määrää
 SHADOWDARK.inventory.tooltip.sell_treasure: Myy aarre
 SHADOWDARK.inventory.tooltip.toggle_equipped: Ota käyttöön
 SHADOWDARK.inventory.tooltip.toggle_light_source: Sammuta/Sytytä valonlähde
-SHADOWDARK.inventory.tooltip.toggle_stashed: Toggle Stashed
+SHADOWDARK.inventory.tooltip.toggle_stashed: Aseta kätköön
 SHADOWDARK.inventory.total_coins: Kolikoita yhteensä
 SHADOWDARK.inventory.total_gems: Jalokiviä yhteensä
 SHADOWDARK.item_type.armor: Panssari
@@ -374,7 +374,7 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Kyvyn parantamin
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Kyvyn parantaminen (Voi)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Kyvyn parantaminen (Vii)
 SHADOWDARK.item.effect.predefined_effect.acBonus: Puolustusbonus
-SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: AC Bonus from Attribute
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: Puolustusbonus lisäominaisuudesta
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Ylimääräistä tarviketilaa
 SHADOWDARK.item.effect.predefined_effect.armorMastery: Taituruus panssarin kanssa
 SHADOWDARK.item.effect.predefined_effect.backstabDie: Ylimääräinen noppa yllätyshyökkäykseen
@@ -397,13 +397,13 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Kantama-aseiden hyö
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Kantama-aseiden vahinkoheittoihin bonus
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Tietyn loitsun loihtiminen edun kanssa
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Loihtimisbonus
-SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Puolustuspistebonus ilman panssaria
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Aseellisen hyökkäysheiton bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Aseellisen vahinkoheiton bonus
-SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Aseen vahinkonoppa D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement By Property
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die By Property
-SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra vahinkonoppa ominaisuuden perusteella
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Aseen vahinkokerroin
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Asetaituruus
 SHADOWDARK.item.effect.show-on-panel: Näytä paneelissa
@@ -435,14 +435,14 @@ SHADOWDARK.item.name_from_spell.Scroll: '{spellName} loitsukäärö'
 SHADOWDARK.item.name_from_spell.Wand: '{spellName} taikasauva'
 SHADOWDARK.item.npc_attack_bonus: Hyökkäysbonus
 SHADOWDARK.item.npc_attack_count: Hyökkäyksien lukumäärä
-SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
+SHADOWDARK.item.npc_attack_damage_formula: Vahingon laskukaava
 SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_type: Tyyppi
 SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
 SHADOWDARK.item.potion.label: Rohto/Taikajuoma
 SHADOWDARK.item.properties: Asetukset
 SHADOWDARK.item.scroll.label: Loitsukäärö
-SHADOWDARK.item.source: Source
+SHADOWDARK.item.source: Lähde
 SHADOWDARK.item.spell_caster_classes: Loihtimisluokat
 SHADOWDARK.item.spell_class: Loitsun luokitus
 SHADOWDARK.item.spell_duration: Kestoaika
@@ -450,7 +450,7 @@ SHADOWDARK.item.spell_name: Loitsun nimi
 SHADOWDARK.item.spell_range: Kantama
 SHADOWDARK.item.spell_tier: Loihtimistaso
 SHADOWDARK.item.spell.label: Loitsu
-SHADOWDARK.item.stashed.label: Stashed
+SHADOWDARK.item.stashed.label: Kätkössä
 SHADOWDARK.item.talent_class: Lahjakkuusluokka
 SHADOWDARK.item.treasure: Aarre
 SHADOWDARK.item.wand.label: Taikasauva
@@ -477,8 +477,8 @@ SHADOWDARK.item.weapon.base_weapon.staff: Sauva
 SHADOWDARK.item.weapon.base_weapon.title: Asetyyppi
 SHADOWDARK.item.weapon.base_weapon.wand: Taikasauva
 SHADOWDARK.item.weapon.base_weapon.warhammer: Sotavasara
-SHADOWDARK.language_choices.common.label: Additional Common
-SHADOWDARK.language_choices.rare.label: Additional Rare
+SHADOWDARK.language_choices.common.label: Lisää yleinen kieli
+SHADOWDARK.language_choices.rare.label: Lisää harvinainen kieli
 SHADOWDARK.language.celestial: Valonkieli
 SHADOWDARK.language.common: Yleiskieli
 SHADOWDARK.language.diabolic: Pimeydenpuhe
@@ -490,13 +490,13 @@ SHADOWDARK.language.goblin: Peikkolaiskieli
 SHADOWDARK.language.merran: Meripuhe
 SHADOWDARK.language.orcish: Örkki
 SHADOWDARK.language.primordial: Alkukieli
-SHADOWDARK.language.rarity.common: Common
-SHADOWDARK.language.rarity.label: Rarity
-SHADOWDARK.language.rarity.rare: Rare
+SHADOWDARK.language.rarity.common: Yleinen
+SHADOWDARK.language.rarity.label: Harvinaisuus
+SHADOWDARK.language.rarity.rare: Harvinainen
 SHADOWDARK.language.reptilian: Reptiliaani
 SHADOWDARK.language.sylvan: Salokieli
 SHADOWDARK.language.thanian: Petopuhe
-SHADOWDARK.language.who_speaks_it: Who Speaks It
+SHADOWDARK.language.who_speaks_it: Ketkä kieltä puhuvat
 SHADOWDARK.light_source.lantern: Lyhty
 SHADOWDARK.light_source.light_spell.double_near: Valotaika (Tuplakantama)
 SHADOWDARK.light_source.light_spell.near: Valotaika (Lähellä)
@@ -509,29 +509,29 @@ SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title.prefix: Valonlähteiden
 SHADOWDARK.light-tracker.title.suffix: seuranta
 SHADOWDARK.light-tracker.user_warning: Yksi tai useampi käyttäjä ei ole valinnut hahmoa
-SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
-SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
-SHADOWDARK.macro.success: The '{macro}' macro completed successfully
-SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
+SHADOWDARK.macro.error.caught_error: "'{macro}' makro aiheutti virheen: {error}"
+SHADOWDARK.macro.error.gm_role_required: '''{macro}'' makro edellyttää, että olet pelinjohtaja'
+SHADOWDARK.macro.success: '''{macro}'' makro onnistui'
+SHADOWDARK.macro.warn.create_item_requires_ownership: Voit luoda makronappeja vain omistetuille esineille
 SHADOWDARK.migration.begin_migration: Suoritetaan datan päivityksiä Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Haetaan päivityksiä Shadowdark RPG skeemaan v{version}
 SHADOWDARK.migration.completed_migration: Suoritettu datan päivitys Shadowdark RPG
 SHADOWDARK.migration.completed_schema: Suoritettu päivitysten hakeminen Shadowdark RPG skeemaan v{version}
 SHADOWDARK.module_art_config.portraits: Muotokuvat
 SHADOWDARK.module_art_config.tokens: Tokenit
-SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
+SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Kun myötäpäiväinen pelijärjestys on käytössä, voi pelkästään pelinjohtaja heittää aloiteheiton.
 SHADOWDARK.npc_attack.type.physical: Fyysinen
 SHADOWDARK.npc_attack.type.special: Erikoishyökkäys
-SHADOWDARK.npc_move.close: Close
+SHADOWDARK.npc_move.close: Viereen
 SHADOWDARK.npc_move.double_near: '"Lähellä" etäisyys tuplana'
-SHADOWDARK.npc_move.far: Far
+SHADOWDARK.npc_move.far: Kauas
 SHADOWDARK.npc_move.near: Lähellä
-SHADOWDARK.npc_move.none: None
-SHADOWDARK.npc_move.special: Special
+SHADOWDARK.npc_move.none: Ei yhtään
+SHADOWDARK.npc_move.special: Erikoisliikkuminen
 SHADOWDARK.npc_move.triple_near: '"Lähellä" etäisyys triplana'
-SHADOWDARK.property.type.option.armor: Armor
-SHADOWDARK.property.type.option.weapon: Weapon
-SHADOWDARK.property.type.title: Property Type
+SHADOWDARK.property.type.option.armor: Panssari
+SHADOWDARK.property.type.option.weapon: Ase
+SHADOWDARK.property.type.title: Ominaisuuden tyyppi
 SHADOWDARK.range.close_short: V
 SHADOWDARK.range.close: Vieressä
 SHADOWDARK.range.far_short: K
@@ -560,30 +560,30 @@ SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
-SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
-SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
+SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä ylimääräinen debuggauksen lokitus
+SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittuna, efektipaneeli näyttää kykyjä ja muita passiivisia efektejä
 SHADOWDARK.settings.effect_panel.show_passive.name: Näytä passiiviset efektit paneelissa
-SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Datamigraatio sisäänrakennettuihin Shadowdark RPG compendiumeihin (älä koske tähän jos et tiedä mitä teet)
+SHADOWDARK.settings.migrateSystemCompendiums.name: Datamigraatio compendiumeille
 SHADOWDARK.settings.module_art.hint: Määritä minkä moduulin tuottamaa taidetta käytetään
 SHADOWDARK.settings.module_art.label: Määritä taide
 SHADOWDARK.settings.module_art.name: Moduulin tuottama taide
 SHADOWDARK.settings.module_art.save: Tallenna muutokset
 SHADOWDARK.settings.roll_npc_hp.hint: Automaattisesti heitä NPC osumapisteet kun sellainen lisätään kohtaukseen
 SHADOWDARK.settings.roll_npc_hp.name: Automaattinen NPC osumapisteheitto
-SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.schemaVersion.name: Schema Version
-SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
-SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
-SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
-SHADOWDARK.settings.source_filter.name: Source Filter
-SHADOWDARK.settings.source_filter.prompt: Select Source...
-SHADOWDARK.settings.source_filter.save_button: Save Configuration
-SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
-SHADOWDARK.settings.source_filter.title: Book Source Filters
-SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.systemVersion.name: System Version
+SHADOWDARK.settings.schemaVersion.hint: Tallettaa nykyisen skeeman version Shadowdark RPG järjestelmädataa. (älä koske tähän jos et tiedä mitä teet)
+SHADOWDARK.settings.schemaVersion.name: Skeeman versio
+SHADOWDARK.settings.source_filter.all_used: Kaikki lähdemateriaali on sallittu
+SHADOWDARK.settings.source_filter.button_label: Konfiguroi lähdemateriaalin suodattimet
+SHADOWDARK.settings.source_filter.hint: Jos tämä täytetään vain listattujen lähdemateriaalien (kirjojen) sisältö on saatavilla. Sisältö jolle ei ole määritetty lähdemateriaalia ovat aina saatavilla.
+SHADOWDARK.settings.source_filter.name: Lähdemateriaalien suodatus
+SHADOWDARK.settings.source_filter.prompt: Valitse lähdemateriaali...
+SHADOWDARK.settings.source_filter.save_button: Tallenna asetukset
+SHADOWDARK.settings.source_filter.these_used: Vain seuraavat lähdemateriaalit ovat sallittuja
+SHADOWDARK.settings.source_filter.title: Kirjamateriaalin suodattimet
+SHADOWDARK.settings.systemVersion.hint: Tallettaa nykyisen Shadowdark RPG järjestelmän versionumeron. (älä koske jos et tiedä mitä teet)
+SHADOWDARK.settings.systemVersion.name: Järjestelmän versio
 SHADOWDARK.settings.track_light_sources.hint: Jos valitset tämän, järjestelmä seuraa ja päivittää aktiivisten valonlähteiden jäljellä olevaa aikaa.
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: Jos valitset tämän, järjestelmä seuraa epäaktiivisten (uloskirjautuneiden) käyttäjien valonlähteitä
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Seuraa epäaktiivisten käyttäjien valonlähteitä
@@ -596,14 +596,14 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset täm�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
-SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
-SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
-SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
-SHADOWDARK.sheet.abilities.label: Abilities
-SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
-SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
-SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
+SHADOWDARK.settings.use_clockwise_initiative.hint: Jos tämä on valittu niin korkeimman aloiteheiton heittänyt aloittaa ja muut seuraavat kiinteässä järjestyksessä. Kaikki muut paitsi pelaajahahmot toimivat samalla vuorolla.
+SHADOWDARK.settings.use_clockwise_initiative.name: Käytä myötäpäiväistä järjestystä
+SHADOWDARK.settings.use_pulp_mode.hint: Näytä tuuripisteet numeerisena arvona ruksin sijaan
+SHADOWDARK.settings.use_pulp_mode.name: Ota "Pulp"-tila käyttöön
+SHADOWDARK.sheet.abilities.label: Kyvyt
+SHADOWDARK.sheet.abilities.ungrouped.label: Muut
+SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Vähennä käyttökertoja
+SHADOWDARK.sheet.abilities.uses.increment.tooltip: Lisää käyttökertoja
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet
 SHADOWDARK.sheet.actor.alignment: Vakaumus
 SHADOWDARK.sheet.actor.hp_max: Max
@@ -622,64 +622,64 @@ SHADOWDARK.sheet.item.tab.details: Yksityiskohdat
 SHADOWDARK.sheet.item.tab.effects: Efektit
 SHADOWDARK.sheet.item.tab.light: Valonlähde
 SHADOWDARK.sheet.item.tab.magic: Taikuus
-SHADOWDARK.sheet.item.tab.source: Source
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
-SHADOWDARK.sheet.item.tab.titles: Titles
+SHADOWDARK.sheet.item.tab.source: Lähdemateriaali
+SHADOWDARK.sheet.item.tab.spellsknown: Opitut loitsut
+SHADOWDARK.sheet.item.tab.titles: Nimikkeet
 SHADOWDARK.sheet.npc.attacks_label: Hyökkäykset
 SHADOWDARK.sheet.npc.dark_adapted: Sopeutunut pimeään
 SHADOWDARK.sheet.npc.description_label: Kuvaus
 SHADOWDARK.sheet.npc.features_label: Ominaisuudet
 SHADOWDARK.sheet.npc.movement_short: Liike
 SHADOWDARK.sheet.npc.movement: Liikkumisnopeus
-SHADOWDARK.sheet.npc.specials_label: Special Attacks
+SHADOWDARK.sheet.npc.specials_label: Erikoishyökkäykset
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus
-SHADOWDARK.sheet.npc.tab.spells: Spells
+SHADOWDARK.sheet.npc.tab.spells: Loitsut
 SHADOWDARK.sheet.player.active_effect_override: Tähän arvoon vaikuttaa aktiivinen efekti, eikä sitä pystytä juuri nyt muokkamaan. Disabloi kyseinen efekti muokataksesi arvoa.
 SHADOWDARK.sheet.player.ancestry.label: Laji
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
+SHADOWDARK.sheet.player.ancestry.tooltip: Hahmosi kulttuurillinen ja/tai perinnöllinen alkuperä
 SHADOWDARK.sheet.player.available_spells: Saatavilla olevat loitsut
 SHADOWDARK.sheet.player.background.label: Tausta
-SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
-SHADOWDARK.sheet.player.boons.blessings.label: Blessings
-SHADOWDARK.sheet.player.boons.label: Boons
-SHADOWDARK.sheet.player.boons.oaths.label: Oaths
-SHADOWDARK.sheet.player.boons.secrets.label: Secrets
-SHADOWDARK.sheet.player.class_spells: Class Spells
-SHADOWDARK.sheet.player.class.label: Class
-SHADOWDARK.sheet.player.class.tooltip: Your character's job
-SHADOWDARK.sheet.player.deity.label: Deity
-SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
+SHADOWDARK.sheet.player.background.tooltip: Menneisyytesi. Saatat olla pätevä asioissa jotka liittyvät taustaasi.
+SHADOWDARK.sheet.player.boons.blessings.label: Siunaukset
+SHADOWDARK.sheet.player.boons.label: Siunaukset
+SHADOWDARK.sheet.player.boons.oaths.label: Valat
+SHADOWDARK.sheet.player.boons.secrets.label: Salaisuudet
+SHADOWDARK.sheet.player.class_spells: Hahmoluokan loitsut
+SHADOWDARK.sheet.player.class.label: Hahmoluokka
+SHADOWDARK.sheet.player.class.tooltip: Hahmosi työnkuva
+SHADOWDARK.sheet.player.deity.label: Jumaluus
+SHADOWDARK.sheet.player.deity.tooltip: Hahmosi kosminen yhteys kaaoksen ja järjestyksen vastakkaisiin voimiin tai neutraaliin tasapainoon.
 SHADOWDARK.sheet.player.languages: Kielet
 SHADOWDARK.sheet.player.luck: Tuuripiste
 SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäys
-SHADOWDARK.sheet.player.name.label: Name
+SHADOWDARK.sheet.player.name.label: Nimi
 SHADOWDARK.sheet.player.ranged_attacks: Kantamahyökkäykset
-SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
+SHADOWDARK.sheet.player.roll_initiative: Aloiteheitto
 SHADOWDARK.sheet.player.spells_tier: Loitsutaso
 SHADOWDARK.sheet.player.spells: Loitsut
 SHADOWDARK.sheet.player.tab.abilities: Kyvyt
 SHADOWDARK.sheet.player.tab.background: Tausta
 SHADOWDARK.sheet.player.tab.inventory: Kantamukset
-SHADOWDARK.sheet.player.tab.notes: Notes
+SHADOWDARK.sheet.player.tab.notes: Muistiinpanot
 SHADOWDARK.sheet.player.tab.spells: Loitsut
 SHADOWDARK.sheet.player.tab.talents: Lahjakkuudet
 SHADOWDARK.sheet.player.talents_level: Taso
 SHADOWDARK.sheet.player.talents_name: Nimi
 SHADOWDARK.sheet.player.talents: Lahjakkuudet
 SHADOWDARK.sheet.player.title: Arvonimi
-SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
+SHADOWDARK.sheet.player.toggle_ability_lost: Merkitse kyky menetetyksi
 SHADOWDARK.sheet.player.toggle_spell_lost: Merkkaa menetetty loitsu
 SHADOWDARK.sheet.player.tooltip.cast_spell: Loihdi loitsu
 SHADOWDARK.sheet.player.tooltip.learn_spell: Opettele loitsu
-SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
+SHADOWDARK.sheet.player.tooltip.use_class_ability: Käytä hahmoluokan kykyä
 SHADOWDARK.sheet.player.tooltip.use_potion: Käytä rohto
 SHADOWDARK.sheet.player.tooltip.use_scroll: Käytä loitsukäärö
 SHADOWDARK.sheet.player.tooltip.use_wand: Käytä taikasauvaa
 SHADOWDARK.sheet.player.xp: Kokemuspisteet
-SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
-SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
-SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Trubaduuri ja Samooja"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Ydinsäännöt"
+SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol. 1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
@@ -691,12 +691,12 @@ SHADOWDARK.spell_duration.instant: Välitön
 SHADOWDARK.spell_duration.permanent: Pysyvä
 SHADOWDARK.spell_duration.real_time: Oikea aika
 SHADOWDARK.spell_duration.rounds: Kierrosta
-SHADOWDARK.spell_duration.turns: Turns
+SHADOWDARK.spell_duration.turns: Vuoroa
 SHADOWDARK.spell_range.close: Vieressä
 SHADOWDARK.spell_range.far: Kaukana
 SHADOWDARK.spell_range.near: Lähellä
 SHADOWDARK.spell.classes.label: Loihtimisluokat
-SHADOWDARK.spell.classes.prompt: Select Class...
+SHADOWDARK.spell.classes.prompt: Valitse hahmoluokka...
 SHADOWDARK.talent.backstab: Yllätyshyökkäys
 SHADOWDARK.talent.class.ancestry: Laji
 SHADOWDARK.talent.class.class: Hahmoluokka
