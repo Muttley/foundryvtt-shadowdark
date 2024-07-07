@@ -15,7 +15,6 @@ import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
 import { ModuleArt } from "./src/utils/module-art.mjs";
-import { ToursSD } from "./src/tours.mjs";
 
 import {
 	HooksSD,
@@ -127,8 +126,6 @@ Hooks.on("ready", async () => {
 
 	HooksSD.attach();
 	listenOnSocket();
-
-	ToursSD.register();
 
 	chat.messages.welcomeMessage();
 
