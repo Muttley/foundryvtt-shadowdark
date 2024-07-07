@@ -13,14 +13,17 @@ SHADOWDARK.ability_wisdom: Weisheit
 SHADOWDARK.alignment.chaotic: Chaotisch
 SHADOWDARK.alignment.lawful: Rechtschaffen
 SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.ancestry.choice: Choice
+SHADOWDARK.ancestry.choice_count: Choice Count
+SHADOWDARK.ancestry.fixed: Fixed
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Sprache wählen...
 SHADOWDARK.ancestry.nametable.label: Random Name Table
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.talents.count.label: Choice Count
+SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
+SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Talent wählen...
-SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.app.active_effects.title: Aktive Effekte
 SHADOWDARK.app.gem_bag.sell_all: Alle Edelsteine verkaufen
 SHADOWDARK.app.gem_bag.title: Edelsteintasche
@@ -48,11 +51,11 @@ SHADOWDARK.apps.character-generator.error.create: Failed to create player charac
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
 SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
-SHADOWDARK.apps.character-generator.stats: Stats
+SHADOWDARK.apps.character-generator.gear: Gear
+SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
+SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Wollen Sie den Effekt {effectName} löschen?
@@ -86,7 +89,9 @@ SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
+SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Monster importieren
@@ -166,6 +171,7 @@ SHADOWDARK.chat.welcome_message.title: Shadowdark RPG für Foundry
 SHADOWDARK.chat.welcome_message.tour_button: Shadowdark RPG Touren
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.available.label: Available
 SHADOWDARK.class-ability.dc.label: SG
 SHADOWDARK.class-ability.group.label: Ability Group
@@ -173,10 +179,14 @@ SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
 SHADOWDARK.class-ability.lose_on_failure.label: Lose on Failure?
 SHADOWDARK.class-ability.lost.label: Lost
 SHADOWDARK.class-ability.maximum.label: Maximum
+SHADOWDARK.class-ability.options: Options
 SHADOWDARK.class.armor.all.label: Alle Rüstungen
 SHADOWDARK.class.armor.label: Rüstung
 SHADOWDARK.class.armor.prompt: Rüstung wählen...
+SHADOWDARK.class.choice: Choice
+SHADOWDARK.class.choice_count: Choice Count
 SHADOWDARK.class.fighter: Kämpfer
+SHADOWDARK.class.fixed: Fixed
 SHADOWDARK.class.hit_points.label: HP Die Roll
 SHADOWDARK.class.language_choices.count.label: Choice Count
 SHADOWDARK.class.language_choices.label: Language Choices
@@ -215,6 +225,9 @@ SHADOWDARK.dialog.ability_check.int: Intelligenzwurf
 SHADOWDARK.dialog.ability_check.str: Stärkewurf
 SHADOWDARK.dialog.ability_check.title: Fähigkeitswurf
 SHADOWDARK.dialog.ability_check.wis: Weisheitswurf
+SHADOWDARK.dialog.create_custom_item: Create Custom Item
+SHADOWDARK.dialog.create: Create
+SHADOWDARK.dialog.create_treasure: Create Treasure
 SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
 SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
@@ -274,6 +287,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Zauberwurf mit
 SHADOWDARK.dialog.submit: Submit
 SHADOWDARK.dialog.tooltip.talent_advantage: Ein Talent gibt dir Vorteil für diesen Wurf
+SHADOWDARK.dialog.type_here: Type Here
 SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Hours
 SHADOWDARK.effect_duration.minutes: Minutes
@@ -282,11 +296,10 @@ SHADOWDARK.effect_duration.turns: Turns
 SHADOWDARK.effect_duration.unlimited: Unlimited
 SHADOWDARK.effect.custom: Benutzerdefinierte Effekte
 SHADOWDARK.effect.footer.add_custom: Eigenen Effect hinzufügen
-SHADOWDARK.effect.header.active: Aktiv
+SHADOWDARK.effect.header.toggle_active: Toggle Active
 SHADOWDARK.effect.header.changes: Changes
 SHADOWDARK.effect.header.delete: Löschen
 SHADOWDARK.effect.header.edit: Bearbeiten
-SHADOWDARK.effect.header.inactive: Inactive
 SHADOWDARK.effect.header.name: Effekt
 SHADOWDARK.effect.header.options: Optionen
 SHADOWDARK.effect.header.transfer: Transfer
@@ -315,9 +328,14 @@ SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
 SHADOWDARK.hotbar.noItemWithName: No such item found on character
 SHADOWDARK.hotbar.spellLost: Spell currently lost
 SHADOWDARK.inventory.coins: Münzen
+SHADOWDARK.inventory.carried_gear: Carried Gear
+SHADOWDARK.inventory.equipped_gear: Equipped Gear
+SHADOWDARK.inventory.gear: Gear
+SHADOWDARK.inventory.stashed_gear: Stashed Gear
+SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minuten verbleibend"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
-SHADOWDARK.inventory.item.light_used: (teilweise benutzt)
+SHADOWDARK.inventory.item.light_used: (used)
 SHADOWDARK.inventory.label.quantity: Menge
 SHADOWDARK.inventory.label.slots: Plätze
 SHADOWDARK.inventory.section.armor: Rüstung
@@ -342,6 +360,7 @@ SHADOWDARK.inventory.total_gems: Edelsteine gesamt
 SHADOWDARK.item_type.armor: Rüstung
 SHADOWDARK.item_type.basic: Basis
 SHADOWDARK.item_type.gem: Edelstein
+SHADOWDARK.item_type.potion: Potion
 SHADOWDARK.item_type.spell: Zauber
 SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.weapon: Waffe
@@ -430,6 +449,7 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Krit-Multiplikator
 SHADOWDARK.item.magic_item.type.custom: Benutzerdefinierter Effekt
 SHADOWDARK.item.magic_item.type.damageBonus: Schadensbonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanente Fähigkeitsänderung
+SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
@@ -443,6 +463,7 @@ SHADOWDARK.item.potion.label: Potion
 SHADOWDARK.item.properties: Eigenschaften
 SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.source: Source
+SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.spell_caster_classes: Zauberwirkerklassen
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Dauer
@@ -453,6 +474,9 @@ SHADOWDARK.item.spell.label: Spell
 SHADOWDARK.item.stashed.label: Stashed
 SHADOWDARK.item.talent_class: Talentklasse
 SHADOWDARK.item.treasure: Schätze
+SHADOWDARK.item.treasure_name: Treasure Name
+SHADOWDARK.item.treasure_value: Treasure Value
+SHADOWDARK.item.type: Item Type
 SHADOWDARK.item.wand.label: Wand
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Schaden
@@ -506,8 +530,7 @@ SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
 SHADOWDARK.light-tracker.active: Aktiv
 SHADOWDARK.light-tracker.paused: Pausiert
 SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title.prefix: Licht
-SHADOWDARK.light-tracker.title.suffix: Tracker
+SHADOWDARK.light-tracker.title: Light Tracker
 SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
@@ -601,6 +624,8 @@ SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities
+SHADOWDARK.sheet.abilities.stats: Stats
+SHADOWDARK.sheet.abilities.modifiers: Modifiers
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
@@ -641,8 +666,10 @@ SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestra
 SHADOWDARK.sheet.player.available_spells: Verfügbare Zauber
 SHADOWDARK.sheet.player.background.label: Hintergrund
 SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
+SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Blessings
 SHADOWDARK.sheet.player.boons.label: Boons
+SHADOWDARK.sheet.player.boons.name: Boon Name
 SHADOWDARK.sheet.player.boons.oaths.label: Oaths
 SHADOWDARK.sheet.player.boons.secrets.label: Secrets
 SHADOWDARK.sheet.player.class_spells: Class Spells
@@ -656,10 +683,11 @@ SHADOWDARK.sheet.player.melee_attacks: Nahkampfattacken
 SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: Fernkampfattacken
 SHADOWDARK.sheet.player.roll_initiative: Roll Initiative
-SHADOWDARK.sheet.player.spells_tier: Stufe
 SHADOWDARK.sheet.player.spells: zauber
+SHADOWDARK.sheet.player.spells_from_items: Spells From Items
+SHADOWDARK.sheet.player.spells_tier: Stufe
 SHADOWDARK.sheet.player.tab.abilities: Fähigkeiten
-SHADOWDARK.sheet.player.tab.background: Hintergrund
+SHADOWDARK.sheet.player.tab.details: Details
 SHADOWDARK.sheet.player.tab.inventory: Inventar
 SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.tab.spells: Zauber
