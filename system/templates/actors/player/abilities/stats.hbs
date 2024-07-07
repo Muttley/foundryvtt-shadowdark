@@ -3,15 +3,15 @@
 		<label>{{localize "SHADOWDARK.sheet.abilities.stats"}}</label>
 		<span>
 			{{#if owner}}
-				{{#if editingStats}}
+				{{#if editingAbilities}}
 				<a
 					class="item-selector fas fa-square-xmark"
-					data-action="toggle-edit-stats"
+					data-action="toggle-edit-abilities"
 				></a>
 				{{else}}
 				<a
 					class="item-selector fas fa-pen-to-square edit-button"
-					data-action="toggle-edit-stats"
+					data-action="toggle-edit-abilities"
 				></a>
 				{{/if}}
 			{{/if}}
@@ -28,7 +28,7 @@
 					{{ability.label}}
 				</a>
 				<div>
-					{{#if ../editingStats}}
+					{{#if ../editingAbilities}}
 						<input
 							name="{{concat "system.abilities." id ".total"}}"
 							type="number"
