@@ -3,19 +3,15 @@
 		<label>{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
 		<span>
 			{{#if owner}}
-				{{#if editingHp}}
 				<a
-					class="item-selector fas fa-square-xmark"
+					{{#if editingHp}}
+						class="item-selector fas fa-floppy-disk edit-button"
+					{{else}}
+						class="item-selector fas fa-pen-to-square edit-button"
+					{{/if}}
 					data-action="toggle-edit-hp"
+					data-tooltip="{{localize 'SHADOWDARK.sheet.player.toggle_edit_hp'}}"
 				></a>
-				{{/if}}
-				{{#unless editingHp}}
-				<a
-					class="item-selector fas fa-pen-to-square edit-button"
-					data-action="toggle-edit-hp"
-					tooltips="Edit Stats"
-				></a>
-				{{/unless}}
 			{{/if}}
 		</span>
 	</div>

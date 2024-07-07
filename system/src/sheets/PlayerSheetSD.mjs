@@ -6,7 +6,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		super(object, options);
 
 		this.editingHp = false;
-		this.editingAbilities = false;
+		this.editingStats = false;
 		this.gemBag = new shadowdark.apps.GemBagSD(this.actor);
 	}
 
@@ -95,8 +95,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEditHp(event)
 		);
 
-		html.find("[data-action='toggle-edit-abilities']").click(
-			event => this._onToggleEditAbilities(event)
+		html.find("[data-action='toggle-edit-stats']").click(
+			event => this._onToggleEditStats(event)
 		);
 
 		html.find("[data-action='toggle-equipped']").click(
@@ -201,7 +201,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
 		context.editingHp = this.editingHp;
-		context.editingAbilities = this.editingAbilities;
+		context.editingStats = this.editingStats;
 
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
@@ -539,32 +539,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	async _onToggleEditHp(event) {
-		if (this.editingHp) {
-			this.editingHp = false;
-		}
-		else {
-			let result = await Dialog.confirm( {
-				title: "title",
-				content: "HTML GOES HERE",
-				defaultYes: false,
-			});
-			if (result) this.editingHp = true;
-		}
+		this.editingHp = !this.editingHp;
 		this.render();
 	}
 
-	async _onToggleEditAbilities(event) {
-		if (this.editingAbilities) {
-			this.editingAbilities = false;
-		}
-		else {
-			let result = await Dialog.confirm( {
-				title: "title",
-				content: "HTML GOES HERE",
-				defaultYes: false,
-			});
-			if (result) this.editingAbilities = true;
-		}
+	async _onToggleEditStats(event) {
+		this.editingStats = !this.editingStats;
 		this.render();
 	}
 
@@ -1049,7 +1029,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const total = `system.abilities.${abilityKey[1]}.total`;
 				formData[base] = formData[total]
 					- this.object.system.abilities[abilityKey[1]].bonus;
-				this.editingAbilities = false;
+				this.editingStats = false;
 			}
 		}
 		super._updateObject(event, formData);
