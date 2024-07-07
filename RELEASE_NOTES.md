@@ -1,7 +1,29 @@
-# v2.3.0
+# v3.0.0
+
+## Enhancements
+* [#438] Inventory header disappearing on large inventory
+* [#740] Holding shift now rolls some rolls without a prompt
+* [#769] UI has been updated
+
+	- User interface has been redesigned with a new look and feel.
+	- Character inventory supports drag and drop reordering.
+	- Holding shift while clicking on a rollable links will bypass the roll prompt, rolling with unmodified values.
+
+* [#798] Allow for tokens and combat tracker to display dynamic AC
+
+	- `system.attributes.ac.value` now always holds the current AC
+
+* [#820] All ability scores now store a total value of bast stats + modifiers e.g. system.abilities.str.total
 
 ## Bugfixes
+* [#809] Add new `grid.distance` and `grid.units` values to `system.json` *(Foundry V12 compatibility)*
 * [#811] `description` typo in `system.json`
+* [#814] The roll initiative button on the player sheet will no longer double roll when re-rolling initiative
+* [#816] Updated Ranger Herbalism talent description to the latest version
+* [#822] The spellbook now works for Knight of St. Ydris and other such classes using another class's spell lists.
+
+## Chores
+* [#813] Merged Finnish language updates from Crowdin
 
 Many thanks to *andrewbeard* for contributing fixes in this build
 

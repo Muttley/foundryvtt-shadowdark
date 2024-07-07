@@ -114,8 +114,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["character-generator"],
-			width: 836,
+			classes: ["shadowdark", "character-generator"],
+			width: 850,
 			resizable: false,
 			closeOnSubmit: false,
 			submitOnChange: true,
@@ -298,7 +298,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	diceSound() {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		game.audio.play(src);
+		game.audio.play(src, {volume: 1});
 	}
 
 	async _randomizeHandler(event) {

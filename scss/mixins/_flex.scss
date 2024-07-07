@@ -1,0 +1,11 @@
+$steps: 6;
+
+@mixin flex-x-px {
+	@for $i from 2 through $steps {
+		.flex-#{$i*20}-px {
+			flex: 0 0 #{$i*20}px;
+		}
+	}
+}
+
+@include flex-x-px;

@@ -1,28 +1,30 @@
-<div class="npc-features">
-	<label class="npc-label">
-		{{localize 'SHADOWDARK.sheet.npc.features_label'}}
-		<span class="item-controls">
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.npc.features_label'}}</label>
+		<span>
 			<a
-				class="item-control item-create"
+				class="fas fa-square-plus"
 				data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='NPC Feature'}}"
+				data-action="item-create"
 				data-item-type="NPC Feature"
-			>
-				<i class="fa-duotone fa-square-plus"></i>
-			</a>
+			></a>
 		</span>
-	</label>
-	<ol>
+	</div>
+	<div class="content">
+
 		{{#each features as |feature|}}
-			<li>
+			<div class="item" data-item-id="{{feature.itemId}}">
 				<a
-					class="item npc-feature"
+					class="rollable"
 					data-action="item-use-ability"
 					data-item-id="{{feature.itemId}}"
 				>
-				<b>{{feature.name}}. <i class="fas fa-comment fa-lg"></i></b>
+					<i class="fas fa-comment"></i>
+					<b style="font-size:16px;">{{feature.name}}.</b>
 				</a>
 				{{{feature.description}}}
-			</li>
+			</div>
 		{{/each}}
-	</ol>
+
+	</div>
 </div>

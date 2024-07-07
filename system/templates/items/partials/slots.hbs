@@ -1,26 +1,34 @@
-<div class="slots">
-	<label>{{localize 'SHADOWDARK.item.inventory_quantity'}}</label>
-	{{numberInput
-		item.system.quantity
-		name="system.quantity"
-		placeholder="0"
-	}}
-	<label>{{localize 'SHADOWDARK.item.inventory_slots'}}</label>
-	{{numberInput
-		item.system.slots.slots_used
-		name="system.slots.slots_used"
-		placeholder="0"
-	}}
-	<label>{{localize 'SHADOWDARK.item.inventory_per_slot'}}</label>
-	{{numberInput
-		item.system.slots.per_slot
-		name="system.slots.per_slot"
-		placeholder="0"
-	}}
-	<label>{{localize 'SHADOWDARK.item.inventory_free_carry'}}</label>
-	{{numberInput
-		item.system.slots.free_carry
-		name="system.slots.free_carry"
-		placeholder="0"
-	}}
+<div class="SD-box">
+	<div class="header light">
+		<label>{{localize 'SHADOWDARK.inventory.label.slots'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div class="item-grid right">
+			<h3>{{localize 'SHADOWDARK.item.inventory_quantity'}}</h3>
+			{{numberInput
+				item.system.quantity
+				name="system.quantity"
+				placeholder="0"
+			}}
+			<h3>{{localize 'SHADOWDARK.item.inventory_slots'}}</h3>
+			{{numberInput
+				item.system.slots.slots_used
+				name="system.slots.slots_used"
+				placeholder="0"
+			}}
+			<h3>{{localize 'SHADOWDARK.item.inventory_per_slot'}}</h3>
+			{{numberInput
+				item.system.slots.per_slot
+				name="system.slots.per_slot"
+				placeholder="0"
+			}}
+			<h3>{{localize 'SHADOWDARK.item.inventory_free_carry'}}</h3>
+			{{numberInput
+				item.system.slots.free_carry
+				name="system.slots.free_carry"
+				placeholder="0"
+			}}
+		</div>
+	</div>
 </div>

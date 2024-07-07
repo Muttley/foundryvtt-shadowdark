@@ -14,6 +14,11 @@
 
 	<footer class="card-footer">
 		<ul class="tags">
+			{{#each itemProperties}}
+				<li class="tag tag_primary tag_small">
+					{{this.name}}
+				</li>
+			{{/each}}
 			{{#if item.system.stashed}}
 				<li class="tag tag_secondary tag_small">
 					{{localize 'SHADOWDARK.item.stashed.label'}}

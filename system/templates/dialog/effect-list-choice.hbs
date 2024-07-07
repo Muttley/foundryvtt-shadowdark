@@ -1,6 +1,7 @@
 <form>
 	{{#each effectParameters}}
-		<h3>{{this.label}}</h3>
+	<h2 style="text-align:center">{{this.name}}</h2>
+		{{this.label}}
 		<div class="form-group">
 			<div class="form-fields">
 				<input
@@ -9,7 +10,7 @@
 					data-parameter-type="{{this.type}}"
 					type="text"
 					value=""
-					placeholder=""
+					placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
 				/>
 				<datalist id="{{this.type}}-selections-{{uuid}}">
 					{{#each this.options as |key value|}}

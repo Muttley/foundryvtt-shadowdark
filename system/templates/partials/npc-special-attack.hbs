@@ -1,1 +1,14 @@
-<b>{{{numAttacks}}} <a data-action="item-use-ability" data-item-id="{{itemId}}">{{attackName}}</b>{{#if ranges}} ({{ranges}}){{/if}}{{#if attackBonus}} +{{attackBonus}}{{/if}}. {{{description}}}</a>
+<a class="rollable" data-action="item-use-ability" data-item-id="{{itemId}}">
+	<i class="fas fa-comment"></i>
+	<b style="font-size:16px">
+		{{{numAttacks}}} {{attackName}}
+	</b>
+	{{#if ranges}}
+		({{ranges}})
+	{{/if}}
+	{{#if attackBonus}}
+		+{{attackBonus}}
+	{{/if}}.
+</a>
+{{{description}}}
+

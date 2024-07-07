@@ -3,120 +3,67 @@
 
 .character-generator {
 
-	h1 {
-		font-family: "Old Newspaper Font";
-		margin-left: 15px;
-		font-size: 2.5em;
-		a {
-			font-size: 1em;
-		}
-	}
-	.col1 {
-		width:400px;
-		float:left;
-	}
-	.col1a {
-		float:left;
-		width: 180px;
-	}
-	.col1b {
-		float:left;
-		width: 220px;
-	}
-	.col2 {
-		float:left;
-		width: 420px;
-	}
-
 	button {
 		font-size: 1.1rem;
 		font-family: "Old Newspaper Font";
 	}
 
-	.statcontainer {
-		padding-bottom: 5px;
-		display: grid;
-		grid: auto / auto auto;
+	input[type="radio"] {
+		width:auto;
 	}
 
-	.stats {
-		margin-top: 5px;
-		margin-bottom: 5px;
-		label {
-			display:block;
-			text-transform: uppercase;
-			font-family: "Old Newspaper Font";
-			font-weight: bold;
-			font-size: 1.1em;
-			margin-left: 5px;
+	.cg-grid {
+		display: grid;
+		gap: 8px;
+		grid-template-columns: 180px 220px 1fr;
+		grid-template-rows: repeat(7, 70px);
 		}
-		span {
-			flex-grow: 1;
-			margin-left: 5px;
-		}
-	}
 
 	.content-link {
 		line-height: 1.7;
 	}
 
-	.large-style {
-		width: 398px;
-		height: 488px;
+	#create-bar {
+		margin: 8px 8px 0px 8px;
+		text-align: center;
+		button {
+			width: 50%;
+		}
+	}
+
+	.details {
 		font-size: 0.85em;
 		overflow: auto;
 
 		p {
 			margin-bottom: 10px;
 		}
-	}
 
-	.medium-style {
-		height: 197px;
-	}
-
-	.small-style {
-		height: 37px;
-	}
-
-	.box-style {
-		border: 1px solid #111;
-		margin: 10px;
-
-	  
-		.header {
-			display:flex;
-			height: 31px;
-
-			label {
-				font-size: 1.1rem;
-				font-family: "Old Newspaper Font";
-				background:#111;
-				float:left;
-				color:white;
-				padding:2px;
-				padding-left: 10px;
-			}
-			span {
-				background: linear-gradient(90deg, #111 , transparent);
-				float:right;
-				flex-grow: 1;
-				text-align:right;
-				vertical-align: middle;
-				padding:6px;
-			}
+		fieldset {
+			margin-bottom: 10px;
 		}
-		.content {
-			display:block;
-			padding:5px;
-			
-			select {
-				max-width: 188px;
-			}
+	}
 
-			fieldset {
-				margin-bottom: 10px;
-			}
+	.stats {
+
+		div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			column-gap: 4px;
 		}
-	  }
+
+		label {
+			text-transform: uppercase;
+			font-family: "Old Newspaper Font";
+			font-weight: bold;
+			font-size: 18px;
+			margin-left: 5px;
+		}
+
+		select {
+			font-size: 16px;
+			width: 3em;
+		}
+	}
 }

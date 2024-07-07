@@ -1,6 +1,7 @@
-<div class="form-group stacked">
-	<label>{{config.label}}</label>
-	<div class="items flexrow">
+<div class="grid-1-columns">
+
+	{{#if config.selectedItems}}
+		<div class="items flexrow">
 		{{#each config.selectedItems}}
 			<div class="talent flexrow">
 				<a
@@ -16,8 +17,8 @@
 				>
 					{{#if ../editable}}
 						<i
-							class="delete-choice fas fa-delete-right"
-							data-action="delete"
+							class="fas fa-delete-right"
+							data-action="delete-choice"
 							data-choices-key="{{../config.choicesKey}}"
 							data-uuid="{{this.uuid}}"
 						></i>
@@ -26,19 +27,20 @@
 				</a>
 			</div>
 		{{/each}}
-	</div>
+		</div>
+	{{/if}}
 
 	<input
 		{{!--
 			list name needs to be unique and match the one used in the
-		    datalist below.  Using the item id plus the system data key field
+			datalist below.  Using the item id plus the system data key field
 			here should be unique enough
 		--}}
 		data-choices-key="{{config.choicesKey}}"
 		data-is-item="{{config.isItem}}"
 		list="{{item._id}}_{{config.choicesKey}}_list"
 		name="{{config.name}}"
-		placeholder="{{config.prompt}}"
+		placeholder="Type Here ..."
 		type="text"
 		value=""
 	/>
@@ -50,4 +52,5 @@
 			></option>
 		{{/each}}
 	</datalist>
+
 </div>
