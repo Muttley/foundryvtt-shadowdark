@@ -1,46 +1,30 @@
 <section class="tab tab-effects" data-group="primary" data-tab="tab-effects">
-	<section class="effects-body">
-		<div class="effects-list">
-			<table>
-				<tr>
-					<th>&nbsp;</th>
-					<th>{{localize 'SHADOWDARK.item.npc_attack_type'}}</th>
-				</tr>
-				{{#each effects as |section sid|}}
-					<tr class="effects-section-header">
-						<th>
-							{{section.label}}
-						</th>
-						<th>&nbsp;</th>
-					</tr>
-					{{#each section.items as |effect|}}
-						<tr class="item" data-item-id="{{effect._id}}">
-							<td>
-								<div
-									class="item-image"
-									style="background-image: url({{effect.img}})"
-									data-item-id="{{effect._id}}"
-								>
-									<i class="fas fa-comment fa-lg"></i>
-								</div>
-								<a
-									class="item-control show-details"
-									data-item-id="{{effect._id}}"
-								>
-									{{effect.name}}
-								</a>
-							</td>
-							<td>
-								{{#ifEq effect.system.duration.type "unlimited" }}
-									<i class="fas fa-infinity"></i>
-								{{else}}
-									<i class="fas fa-clock"></i>
-								{{/ifEq}}
-							</td>
-						</tr>
-					{{/each}}
-				{{/each}}
-			</table>
-		</div>
-	</section>
+	<div class="SD-banner">Effects and Conditions</div>
+
+	{{#each effects as |section sid|}}
+		<ol class="SD-list">
+			<li class="header">
+				<div class="item-name">{{section.label}}</div>
+				<div class="duration">{{localize 'SHADOWDARK.item.npc_attack_type'}}</div>
+			</li>
+			{{#each section.items as |effect|}}
+				<li class="item" data-item-id="{{effect._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{effect._id}}">
+					<div class="item-image" style="background-image: url({{effect.img}})">
+						<i class="fas fa-comment fa-lg"></i>
+					</div>
+					<a class="item-name" data-action="show-details">
+						{{effect.name}}
+					</a>
+					<div class="duration">
+						{{#ifEq effect.system.duration.type "unlimited" }}
+							<i class="fas fa-infinity"></i>
+						{{else}}
+							<i class="fas fa-clock"></i>
+						{{/ifEq}}
+					</div>
+				</li>
+			{{/each}}
+		</ol>
+	{{/each}}
+
 </section>

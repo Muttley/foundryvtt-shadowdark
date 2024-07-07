@@ -1,26 +1,24 @@
-<label class="actions-label">{{localize 'SHADOWDARK.sheet.player.melee_attacks'}}</label>
-<ol>
-	{{#each attacks.melee as |attack|}}
-		<li
-			class="rollable item-rollable attack-item"
-			data-action="item-attack"
-			data-item-id="{{attack.itemId}}"
-			data-tooltip="Roll Attack"
-		>
-			{{{attack.display}}}
-		</li>
-	{{/each}}
-</ol>
-<label class="actions-label">{{localize 'SHADOWDARK.sheet.player.ranged_attacks'}}</label>
-<ol>
-	{{#each attacks.ranged as |attack|}}
-		<li
-			class="rollable item-rollable attack-item"
-			data-action="item-attack"
-			data-item-id="{{attack.itemId}}"
-			data-tooltip="Roll Attack"
-		>
-			{{{attack.display}}}
-		</li>
-	{{/each}}
-</ol>
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.player.melee_attacks'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		{{#each attacks.melee as |attack|}}
+			<div>{{{attack.display}}}</div>
+		{{/each}}
+	</div>
+</div>
+
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.player.ranged_attacks'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		{{#each attacks.ranged as |attack|}}
+			<div>{{{attack.display}}}</div>
+		{{/each}}
+	</div>
+</div>
+

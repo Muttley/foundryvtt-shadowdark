@@ -1,107 +1,92 @@
-<div class="effects">
+<div class="grid-1-columns">
 
-  <!-- Effect Selector -->
-  <div class="effect-properties">
-    <div class="effect-property">
-      <label>{{localize "SHADOWDARK.item.effect.pre-defined.title"}}</label>
-      <input name="system.predefinedEffects" list="predefined-effects-list" type="text" value="" placeholder="" {{#if (not @root.effectsEditable)}}disabled{{/if}}/>
-      <datalist id="predefined-effects-list">
-        {{#each predefinedEffects}}
-        <option value="{{this.key}}" label="{{this.name}}"></option>
-        {{/each}}
-      </datalist>
-    </div>
-  </div>
+	<!-- Effect Selector -->
+	<div style="margin:4px;">
+		<h3>{{localize "SHADOWDARK.item.effect.pre-defined.title"}}</h3>
+		<input
+			style="width:auto"
+			name="system.predefinedEffects"
+			list="predefined-effects-list"
+			type="text"
+			value=""
+			placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
+			{{#if (not @root.effectsEditable)}}disabled{{/if}}
+		/>
+		<datalist id="predefined-effects-list">
+		{{#each predefinedEffects}}
+			<option value="{{this.key}}" label="{{this.name}}"></option>
+		{{/each}}
+		</datalist>
+	</div>
 
-  <div class="effect-list-table">
-    <!-- Effect List Header -->
-    <li class="effect-list-header">
-      <article class="effect-list-header-icon item-control">
-        {{#if @root.effectsEditable}}
-          <a class="effect-control" style="color: grey;" data-action="create" data-tooltip="SHADOWDARK.effect.create">
-        {{/if}}
-            <i class="fas fa-sm fa-circle-plus"></i>
-        {{#if @root.effectsEditable}}
-          </a>
-        {{/if}}
-      </article>
-      <article class="effect-list-header-name">{{localize "SHADOWDARK.effect.header.name"}}</article>
-      <article class="effect-list-header-active item-control">{{localize "SHADOWDARK.effect.header.active"}}</article>
-      <article class="effect-list-header-edit item-control">{{localize "SHADOWDARK.effect.header.edit"}}</article>
-      <article class="effect-list-header-delete item-control">{{localize "SHADOWDARK.effect.header.delete"}}</article>
-      <article class="effect-list-header-changes">{{localize "SHADOWDARK.effect.header.changes"}}</article>
-			<article class="effect-list-header-transfer item-control">
-				<i data-tooltip="SHADOWDARK.effect.tooltip.transfer.header" class="fas fa-sm fa-user-plus"></i>
-			</article>
-    </li>
+	<div class="SD-banner">{{localize "SHADOWDARK.sheet.item.tab.effects"}}</div>
 
-    <!-- Effect List -->
-    {{#each effects as |effect|}}
-    <li class="item effect-list-row" data-effect-id="{{effect.id}}">
-      <article class="effect-icon">
-        <img src="{{activeEffectIcon effect}}" />
-      </article>
-      <article class="effect-list-name">
-        {{#if (not effect.name)}}{{effect.label}}{{else}}{{effect.name}}{{/if}}
-      </article>
-      <article class="effect-list-active item-control">
-        {{#if @root.effectsEditable}}
-          <a class="effect-control" data-action="activate" data-tooltip="SHADOWDARK.effect.header.{{#if effect.disabled}}in{{/if}}active">
-        {{/if}}
-            <i class="fas fa-{{#if effect.disabled}}circle-xmark{{else}}circle-check{{/if}}"></i>
-        {{#if @root.effectsEditable}}
-          </a>
-        {{/if}}
-      </article>
-      <article class="effect-list-edit item-control">
-        {{#if @root.effectsEditable}}
-        <a class="effect-control" data-action="edit" data-tooltip="SHADOWDARK.effect.header.edit">
-        {{/if}}
-          <i class="fas fa-edit"></i>
-        {{#if @root.effectsEditable}}
-        </a>
-        {{/if}}
-      </article>
-      <article class="effect-list-delete item-control">
-        {{#if @root.effectsEditable}}
-        <a class="effect-control" data-action="delete" data-tooltip="SHADOWDARK.effect.header.delete">
-        {{/if}}
-          <i class="fas fa-trash"></i>
-        {{#if @root.effectsEditable}}
-        </a>
-        {{/if}}
-      </article>
-      <div class="effect-list-changes" style="grid-template-columns: repeat({{effect.changes.length}}, minmax(0, 1fr));">
-        {{#each effect.changes as |change|}}
-        <div class="effect-change">
-          <article class="effect-header-data-key">{{fromConfig "EFFECT_TRANSLATIONS" change.key}}</article>
-          <input
-            name="{{change.key}}"
-            type="text"
-            class="effect-change-value"
-            value="{{change.value}}"
-            placeholder="0"
+	<ol class="SD-list">
+		<li class="header">
+			{{#if @root.effectsEditable}}
+				<a
+					class="item-image fa-solid fa-square-plus"
+					style="padding:4px"
+					data-action="effect-create"
+				></a>
+			{{/if}}
+			<div class="item-name">
+				{{localize "SHADOWDARK.item.effect.category.effect"}}
+			</div>
+			<div class="item-name" style="flex:2;">
+				{{localize "SHADOWDARK.effect.header.changes"}}
+			</div>
+			<div class="actions"></div>
+		</li>
+
+		{{#each effects as |effect|}}
+		<li class="item" data-effect-id="{{effect.id}}">
+
+			<div class="item-image"><img src="{{activeEffectIcon effect}}"></div>
+
+			<div class="item-name">{{#if (not effect.name)}}{{effect.label}}{{else}}{{effect.name}}{{/if}}</div>
+
+			<div class="effect-list-changes">
+				{{#each effect.changes as |change|}}
+					<span title="{{fromConfig "EFFECT_TRANSLATIONS" change.key}}">
+						{{fromConfig "EFFECT_TRANSLATIONS" change.key}}
+					</span>
+					<input
+						name="{{change.key}}"
+						type="text"
+						id="effect-change-value"
+						value="{{change.value}}"
+						placeholder="0"
 						{{#if (not @root.effectsEditable)}}disabled{{/if}}
-          >
-        </div>
-        {{/each}}
-      </div>
-      <article class="effect-list-transfer item-control">
-        {{#if @root.effectsEditable}}
-        <a
-					class="effect-control"
-					data-action="transfer"
-					data-tooltip="SHADOWDARK.effect.tooltip.transfer.do{{#if (not effect.transfer)}}_not{{/if}}">
-				{{/if}}
-        	<i class="fas fa-{{#if effect.transfer}}circle-check{{else}}circle-xmark{{/if}}"></i>
-        {{#if @root.effectsEditable}}
-        </a>
-        {{/if}}
-      </article>
-    </li>
-    {{/each}}
+					>
+				{{/each}}
+			</div>
 
-    <!-- / Effect List -->
-  </div>
+			<div class="actions">
+				{{#if @root.effectsEditable}}
+					<a
+						class="fas fa-circle-{{#if effect.disabled}}xmark{{else}}check{{/if}}"
+						{{#unless effect.disabled}}style="color:var(--primary);"{{/unless}}
+						data-action="effect-activate"
+						data-tooltip="{{localize "SHADOWDARK.effect.header.toggle_active"}}">
+					</a>
+					<a
+						class="fas fa-edit"
+						data-action="effect-edit"
+						data-tooltip="{{localize "SHADOWDARK.effect.header.edit"}}">
+					</a>
+					<a
+						class="fas fa-trash"
+						data-action="effect-delete"
+						data-tooltip="{{localize "SHADOWDARK.effect.header.delete"}}">
+					</a>
+
+				{{/if}}
+			</div>
+
+		</li>
+		{{/each}}
+
+	</ol>
 </div>
 

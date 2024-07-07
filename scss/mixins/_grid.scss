@@ -4,15 +4,14 @@ $columns: 6;
 	margin: 0;
 	padding: 0;
 	display: grid;
-	column-gap: 4px;
-	margin-left: 4px;
-	margin-right: 4px;
+	column-gap: 8px;
+	row-gap: 8px;
 }
 
 @mixin grid-colspan {
 	@for $i from 1 through $columns {
 		.grid-colspan-#{$i} {
-			grid-row: span #{$i};
+			grid-column: span #{$i};
 		}
 	}
 }

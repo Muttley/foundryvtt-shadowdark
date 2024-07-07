@@ -3,82 +3,49 @@
 
 .level-up {
 
-	h1 {
-		font-family: "Old Newspaper Font";
-		text-align: center;
-		font-size: 2.0em;
-	}
-
-	h2 {
-		font-family: "Old Newspaper Font";
-		text-align: center;
-	}
-
-	h3 {
-		text-align: center;
-
-	}
-
 	button {
 		font-size: 1.1rem;
 		font-family: "Old Newspaper Font";
+	}
+
+	fieldset {
+		border-style: dashed;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		margin-bottom: 5px;
+
 	}
 
 	.content-link {
 		line-height: 1.7;
 	}
 
-	.box-style {
-		border: 1px solid #111;
-		margin-bottom: 10px;
+	.level-up-grid {
+		display: grid;
+		gap: 8px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 75px 105px auto;
+	}
 
-		.header {
-			display:flex;
-			height: 31px;
+	.hit-points {
+		text-align: center;
+		font-size: 24px;
+		font-family: 'Montserrat-semibold';
+	};
 
-			label {
-				font-size: 1.1rem;
-				font-family: "Old Newspaper Font";
-				background:#111;
-				float:left;
-				color:white;
-				padding:2px;
-				padding-left: 10px;
-			}
-			span {
-				background: linear-gradient(90deg, #111 , transparent);
-				float:right;
-				flex-grow: 1;
-				text-align:right;
-				vertical-align: middle;
-				padding:6px;
-			}
-		}
-		.content {
-			display:block;
-			overflow: hidden;
-			padding:5px;
-			fieldset {
-				border-style: dashed;
-				padding-top: 4px;
-				padding-bottom: 4px;
-				margin-bottom: 5px;
-			}
-
-		}
-		.talents {
-			height: 80px;
-			fieldset {
-				height: 100%;
-				overflow: auto;
-			}
-
-		}
-		.spells {
-			fieldset {
-				height:35px;
-			}
+	.spells {
+		fieldset {
+			height:35px;
 		}
 	}
+
+	.talents {
+		overflow: hidden;
+		fieldset {
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
 
 }

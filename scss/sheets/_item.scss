@@ -1,0 +1,52 @@
+.shadowdark.item {
+
+	.effect-list-changes {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 4px 8px;
+		text-align: center;
+		font-size: 12px;
+		flex: 2;
+
+		span {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			direction: rtl;
+		}
+
+		input {
+			height:auto;
+		}
+	}
+
+	.item-grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 4px 8px;
+		align-content: start;
+		align-items: center;
+
+		&.left {
+			grid-template-columns: 1fr 3fr;
+		}
+		&.center {
+			grid-template-columns: 1fr 1fr;
+		}
+		&.right {
+			grid-template-columns: 3fr 1fr;
+		}
+	}
+
+	.properties-list {
+		height: 26px;
+   		background-color: var(--form-background);
+		line-height: 1.75;
+	}
+
+	.tab-description.active{
+		height: 100%;
+		display: grid;
+		grid-template-rows: 30px 1fr;
+	}
+}

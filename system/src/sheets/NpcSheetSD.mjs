@@ -6,19 +6,17 @@ export default class NpcSheetSD extends ActorSheetSD {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "sheet", "npc"],
+			scrollY: ["section.SD-content-body"],
 			width: 600,
-			height: 700,
+			height: 730,
 			resizable: true,
 			tabs: [
 				{
-					navSelector: ".npc-navigation",
-					contentSelector: ".npc-body-content",
+					navSelector: ".SD-nav",
+					contentSelector: ".SD-content-body",
 					initial: "tab-details",
 				},
 			],
-			dragDrop: [{
-				dragSelector: ".item[draggable=true]",
-			}],
 		});
 	}
 
@@ -170,7 +168,12 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 
-		this.actor.castNPCSpell(itemId);
+		if (event.shiftKey) {
+			this.actor.castNPCSpell(itemId, {fastForward: true});
+		}
+		else {
+			this.actor.castNPCSpell(itemId);
+		}
 	}
 
 	async _onDropItem(event, data) {
@@ -179,7 +182,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		// if it's an PC spell, convert to NPC spell, else return as normal
 		if (droppedItem.type === "Spell") {
-			console.log("spell");
 			const newNpcSpell = {
 				name: droppedItem.name,
 				type: "NPC Spell",

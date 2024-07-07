@@ -1,14 +1,9 @@
-<div class="value-box__bold">
-	<label>{{localize 'SHADOWDARK.sheet.actor.ac'}}</label>
-	<div class="ac">
-		<div class="ac-value">
-			<input
-				type="number"
-				value="{{armorClass}}"
-				class="ac-value"
-				disabled
-			>
-		</div>
-		{{> actors/player/abilities/luck }}
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.actor.ac'}}</label>
+		<span></span>
+	</div>
+	<div class="content centered larger">
+			{{armorClass}}
 	</div>
 </div>

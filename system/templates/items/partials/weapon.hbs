@@ -1,70 +1,76 @@
-<div class="item-details">
-	<div class="weapon-details">
-		<div class="weapon-detail">
-			<label>{{localize 'SHADOWDARK.item.weapon_type'}}</label>
-			<select name="system.type">
-				{{selectOptions
-					config.WEAPON_TYPES
-					selected=system.type
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="weapon-detail">
-			<label>{{localize 'SHADOWDARK.item.weapon_range'}}</label>
-			<select name="system.range">
-				{{selectOptions
-					config.RANGES
-					selected=system.range
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="weapon-detail">
-			<label>{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}</label>
-			<select name="system.damage.oneHanded">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					config.WEAPON_BASE_DAMAGE
-					selected=system.damage.oneHanded
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="weapon-detail">
-			<label>{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}</label>
-			<select name="system.damage.twoHanded">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					config.WEAPON_BASE_DAMAGE
-					selected=system.damage.twoHanded
-					localize=false
-				}}
-			</select>
-		</div>
-		<div class="armor-detail">
-			<label>{{localize 'SHADOWDARK.item.weapon.base_weapon.title'}}</label>
-			<select name="system.baseWeapon">
-				<option value="">&mdash;</option>
-				{{selectOptions
-					baseWeapons
-					selected=system.baseWeapon
-					localize=false
-				}}
-			</select>
-		</div>
-	</div>
-	<div class="item-properties">
-		<div class="item-property">
+<div class="grid-colspan-3 grid-2-columns">
+	{{#> ui/sd-box
+		header-label=(localize 'SHADOWDARK.item_type.weapon')
+		header-class="light"
+		content-class="item-grid"
+	}}
+
+		<h3>{{localize 'SHADOWDARK.item.weapon.base_weapon.title'}}</h3>
+		<select name="system.baseWeapon">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				baseWeapons
+				selected=system.baseWeapon
+				localize=false
+			}}
+		</select>
+
+		<h3>{{localize 'SHADOWDARK.item.weapon_type'}}</h3>
+		<select name="system.type">
+			{{selectOptions
+				config.WEAPON_TYPES
+				selected=system.type
+				localize=false
+			}}
+		</select>
+
+		<h3>{{localize 'SHADOWDARK.item.weapon_range'}}</h3>
+		<select name="system.range">
+			{{selectOptions
+				config.RANGES
+				selected=system.range
+				localize=false
+			}}
+		</select>
+
+		<h3>{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}</h3>
+		<select name="system.damage.oneHanded">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_DAMAGE
+				selected=system.damage.oneHanded
+				localize=false
+			}}
+		</select>
+
+		<h3>{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}</h3>
+		<select name="system.damage.twoHanded">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.WEAPON_BASE_DAMAGE
+				selected=system.damage.twoHanded
+				localize=false
+			}}
+		</select>
+
+	{{/ui/sd-box}}
+
+
+	<div class="SD-box">
+		<div class="header light">
 			<label>{{localize 'SHADOWDARK.item.properties'}}</label>
-			<a
-				class="item-selector"
-				data-select-type="itemProperty"
-				data-item-type="weapon"
-				for="system.properties"
-			>
-				<i class="fa-solid fa-pen-to-square fa-sm"></i>
-			</a>
+			<span>
+				<a
+					class="item-selector"
+					data-select-type="itemProperty"
+					data-item-type="weapon"
+					for="system.properties"
+				>
+					<i class="fas fa-pen-to-square"></i>
+				</a>
+			</span>
+		</div>
+		<div class="content">
 			<ul class="tags">
 				{{#each propertyItems}}
 					<li
@@ -77,4 +83,5 @@
 			</ul>
 		</div>
 	</div>
+
 </div>

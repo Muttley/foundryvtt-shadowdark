@@ -1,5 +1,58 @@
 <section class="tab tab-abilities" data-group="primary" data-tab="tab-abilities">
-	{{> actors/npc/abilities/attacks }}
-	{{> actors/npc/abilities/specials }}
-	{{> actors/npc/abilities/features}}
+	<div class="abilities-grid">
+		<div class="grid-2-columns">
+			{{> actors/npc/partials/hp }}
+			{{> actors/npc/partials/ac }}
+			{{> actors/npc/partials/level }}
+			{{> actors/npc/partials/ability-scores }}
+
+			<!-- Movement -->
+			{{#> ui/sd-box
+				header-label=(localize 'SHADOWDARK.sheet.npc.movement')
+				class="grid-colspan-2"
+				content-class="grid-1-columns"
+			}}
+				<select name="system.move">
+					{{selectOptions
+						config.NPC_MOVES
+						selected=system.move
+						localize=false
+					}}
+				</select>
+				<input
+					name="system.moveNote"
+					type="text"
+					class="detail-value move-note"
+					value="{{ system.moveNote }}"
+				/>
+			{{/ui/sd-box}}
+
+			<!-- Alignment -->
+			{{#> ui/sd-box
+				header-label=(localize 'SHADOWDARK.sheet.actor.alignment')
+				class="grid-colspan-2"
+			}}
+				<select name="system.alignment">
+					{{selectOptions
+						config.ALIGNMENTS
+						selected=system.alignment
+						localize=false
+					}}
+				</select>
+			{{/ui/sd-box}}
+
+			<!-- Dark Adapted -->
+			<div class="grid-colspan-2 grid-dark-adapted">
+				<h3>{{localize 'SHADOWDARK.sheet.npc.dark_adapted'}}</h3>
+				<input type="checkbox" name="system.darkAdapted" {{checked system.darkAdapted}}>
+			</div>
+
+		</div>
+
+		<div class="grid-1-columns">
+			{{> actors/npc/abilities/attacks }}
+			{{> actors/npc/abilities/specials }}
+			{{> actors/npc/abilities/features}}
+		</div>
+	</div>
 </section>

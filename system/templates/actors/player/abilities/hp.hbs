@@ -1,27 +1,44 @@
-<div class="value-box__bold">
-	<label
-		class="hp"
-	>
-		{{localize 'SHADOWDARK.sheet.actor.hp'}}
-	</label>
-	<div class="hit-points">
-		<div class="hp-value">
+<div class="SD-box grid-colspan-2">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
+		<span>
+			{{#if owner}}
+				{{#if editingHp}}
+				<a
+					class="item-selector fas fa-square-xmark"
+					data-action="toggle-edit-hp"
+				></a>
+				{{/if}}
+				{{#unless editingHp}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-action="toggle-edit-hp"
+					tooltips="Edit Stats"
+				></a>
+				{{/unless}}
+			{{/if}}
+		</span>
+	</div>
+	<div class="content larger">
+		<div class="value-grid">
 			{{numberInput
 				actor.system.attributes.hp.value
 				name="system.attributes.hp.value"
-				class="hp-value"
 				placeholder="0"
 			}}
-		</div>
-		<div class="hp-max">
-			<p>{{localize 'SHADOWDARK.sheet.actor.hp_max'}}</p>
-			{{numberInput
-				maxHp
-				name="system.attributes.hp.max"
-				class="hp-max"
-				placeholder="0"
-				step="1"
-			}}
+			<div>/</div>
+			<div>
+				{{#if editingHp}}
+					{{numberInput
+						maxHp
+						name="system.attributes.hp.max"
+						placeholder="0"
+					}}
+				{{/if}}
+				{{#unless editingHp}}
+					{{maxHp}}
+				{{/unless}}
+			</div>
 		</div>
 	</div>
 </div>

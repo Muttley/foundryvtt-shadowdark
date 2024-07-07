@@ -10,7 +10,21 @@ $font-size: 1.1rem;
 @font-face {
 	font-family: "Montserrat-Medium";
 	src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
-	font-weight: normal;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat-SemiBold";
+	src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 }
 

@@ -1,7 +1,82 @@
 @use "apps";
 @use "base";
 @use "sheets";
-@use "ui";
 
 @use "abstracts" as *;
 @use "mixins" as *;
+
+.shadowdark {
+
+	form {
+		font-family: "Montserrat-Medium";
+		height: 100%;
+	}
+
+	input,
+	select {
+		text-overflow: ellipsis;
+		background: rgba(0, 0, 0, 0.05);
+		border: none;
+		width: 100%;
+	}
+
+	hr {
+		border: none;
+		border-top: solid 1px #{$primary-color};
+		margin: 4px 0px 4px 0px;
+	}
+
+	a:hover {
+		font-weight: bold;
+	}
+
+	b {
+		font-family: "Montserrat-SemiBold";
+	}
+
+	h1 {
+		font-family: "JSL Blackletter";
+		font-size: 40px;
+	}
+
+	h2 {
+		font-family: "Old Newspaper Font";
+		font-size: 26px;
+	}
+
+	h3 {
+		font-family: "Montserrat-Bold";
+		font-size: 14px;
+		display: inline;
+	}
+
+	.strike-through {
+		text-decoration: line-through;
+	}
+
+	.centered {
+		justify-content: center;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.large {
+		font-size: 16px;
+	}
+
+	.larger {
+		font-size: 20px;
+	}
+
+	.uuid-link {
+		margin: 2px;
+	}
+
+	.edit-button {
+		color: var(--inactive-control);
+		&:hover {
+			color: var(--primary);
+		}
+	}
+
+}

@@ -1,78 +1,50 @@
-<form class="{{cssClass}}" autocomplete="off">
-	<div>
-		<header class="npc-header">
-			<img
-				class="portrait"
-				src="{{ actor.img }}"
-				data-edit="img"
-				data-tooltip="{{ actor.name }}"
-				height="110"
-				width="110"
-			/>
-			<div class="title">
-				<span class="title__prefix">Shadow</span><span class="title__suffix">Dark</span>
-			</div>
-			<div class="npc-name-and-level">
-				<h1>
-					<input
-						class="npc-name"
-						name="name"
-						type="text"
-						value="{{ actor.name }}"
-						placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
-					/>
-				</h1>
-				<div class="value-box">
-					<label class="npc-level">Level</label>
-					<div>
-						<div class="level-value">
-							{{numberInput
-								actor.system.level.value
-								name="system.level.value"
-								class="level-value"
-								placeholder="0"
-								step="1"
-							}}
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-	</div>
-	<hr	/>
-	<section class="npc-body">
-		{{> actors/npc/partials/ability-scores }}
-
-		<div class="npc-body-grid">
-			<nav class="npc-navigation" data-group="primary">
-				<div class="npc-navigation__flex">
-
-					<a class="navigation-tab active" data-tab="tab-abilities">
-						{{localize "SHADOWDARK.sheet.npc.tab.abilities"}}
-					</a>
-
-					<a class="navigation-tab" data-tab="tab-spells">
-						{{localize "SHADOWDARK.sheet.npc.tab.spells"}}
-					</a>
-
-					<a class="navigation-tab" data-tab="tab-description">
-						{{localize "SHADOWDARK.sheet.npc.tab.description"}}
-					</a>
-
-					<a class="navigation-tab" data-tab="tab-effects">
-						{{localize "SHADOWDARK.sheet.item.tab.effects"}}
-					</a>
-
-				</div>
-			</nav>
-
-			<div class="npc-body-content">
-				{{> actors/npc/abilities }}
-				{{> actors/npc/spells }}
-				{{> actors/partials/effects }}
-				{{> actors/npc/description }}
-			</div>
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	<header class="SD-header flex0">
+		<img
+			class="portrait"
+			src="{{ actor.img }}"
+			data-edit="img"
+			data-tooltip="{{ actor.name }}"
+			height="110"
+			width="110"
+		/>
+		<div class="shadowdark-logo">
+			<span>ShadowDark</span>
 		</div>
+		<div class="SD-title">
+			<input
+				name="name"
+				type="text"
+				value="{{ actor.name }}"
+				placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
+			/>
+		</div>
+	</header>
+
+	<nav class="SD-nav flex0" data-group="primary">
+		<a class="navigation-tab active" data-tab="tab-abilities">
+			{{localize "SHADOWDARK.sheet.npc.tab.abilities"}}
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-spells">
+			{{localize "SHADOWDARK.sheet.npc.tab.spells"}}
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-description">
+			{{localize "SHADOWDARK.sheet.npc.tab.description"}}
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-effects">
+			{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+		</a>
+	</nav>
+
+	<section class="SD-content-body flex1">
+
+		{{> actors/npc/abilities }}
+		{{> actors/npc/spells }}
+		{{> actors/partials/effects }}
+		{{> actors/npc/description }}
 
 	</section>
 </form>

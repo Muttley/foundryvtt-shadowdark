@@ -239,7 +239,7 @@ export class ShadowdarkPlayerRollingTour extends ShadowdarkTour {
 				},
 				{
 					id: "sd-playerroll-spells-spell-list",
-					selector: ".spells-list",
+					selector: ".spells-body",
 					title: "Spells",
 					content: "<p>In this example, the Player has access to Magic Missile.</p>",
 					action: "scrollTo",

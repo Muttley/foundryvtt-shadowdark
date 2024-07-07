@@ -1,16 +1,21 @@
 $primary-color: black !default;
 $secondary-color: #78557e !default;
+$shadow-color: #a546b6 !default;
+$border-color: #a546b6 !default;
 $form-background-color: #0000000a !default;
 $inactive-control: #A0A09A !default;
 $background-highlight: rgb(255 255 255 / 25%) !default;
 
-$clickable: red !default;
-
 :root {
 	--background-highlight: #{$background-highlight};
-	--clickable: #{$clickable};
+	--clickable: #{$shadow-color};
 	--form-background: #{$form-background-color};
 	--inactive-control: #{$inactive-control};
 	--primary: #{$primary-color};
 	--secondary: #{$secondary-color};
+	--color-shadow-primary: #{$shadow-color};
+    --color-shadow-highlight: #{$shadow-color};
+	--color-border-highlight: #{$border-color};
+	--color-border-highlight-alt: #{$border-color};
+	scrollbar-color: #464646 #111;
 }

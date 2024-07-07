@@ -2,305 +2,42 @@
 @use "../../mixins" as *;
 
 .shadowdark.sheet.npc {
-	@include p-reset;
-	color: white;
-	font-size: 18px;
 
-	.editor {
-		min-height: 415px;
-	}
-
-	.editor-content {
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
-
-	input {
-		@include p-reset;
-		font-family: "Montserrat-Medium";
-		font-size: 16px;
-
-		text-overflow: ellipsis;
-		text-align: center;
-
-		background: rgba(0, 0, 0, 0.05);
-		border: none;
-	}
-
-	label {
-		@include p-reset;
-		display: block;
-
-		font-family: "Old Newspaper Font";
-		font-size: 20px;
-		font-weight: bold;
-
-		line-height: 1.1;
-
-		border: none;
-	}
-
-	ol {
-		padding: 4px;
-		margin: 4px;
-
-		list-style-type: none;
-
-		font-family: "Montserrat-Medium";
-		font-size: 16px;
-	}
-
-	select {
-		width: 100%;
-	}
-
-	.ability-scores {
+	.abilities-grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		row-gap: 8px;
-		column-gap: 4px;
-		background-color: var(--form-background);
-	}
-
-	.ability-score {
-		display: grid;
-		grid-template-columns: 1fr;
-		align-items: center;
-
-		text-align: center;
-
-		input {
-			@include p-reset;
-
-			text-overflow: ellipsis;
-			text-align: center;
-
-			background: rgba(0, 0, 0, 0.05);
-			border: none;
-		}
-	}
-
-	.ac {
-		text-align: center;
-	}
-
-	.ac-header,
-	.hp-header {
-		padding-left: 4px;
-	}
-
-	.ac-value,
-	.hp-value {
-		font-size: 38px;
-		height: auto;
-		line-height: 1;
-		margin-bottom: 2px;
-	}
-
-	.npc-label {
-		@include p-reset;
-		display: block;
-		padding: 4px;
-
-		font-family: "Old Newspaper Font";
-		font-size: 20px;
-		line-height: 1;
-		font-weight: normal;
-
-		border: none;
-		color: white;
-		background: linear-gradient(0.75turn, transparent, black);
-		text-shadow: 1px 1px black
-	}
-
-	.detail-box {
-		@include p-reset;
-		display: grid;
-
-		column-gap: 8px;
-		row-gap: 4px;
-
-		background-color: var(--form-background);
-
-		font-family: "Montserrat-Medium";
-		font-size: 16px;
-
-		label {
-			@include p-reset;
-			display: block;
-
-			font-family: "Old Newspaper Font";
-			font-size: 20px;
-			font-weight: bold;
-
-			line-height: 1.1;
-
-			border: none;
-		}
-	}
-
-	.item-controls {
-		float: right;
-	}
-
-	.item-control {
-		color: var(--secondary);
-	}
-
-	.level-value {
-		font-size: 20px;
-		height: auto;
-		line-height: 1;
-	}
-
-	.move-note {
-		text-align: left;
-		padding-left: 4px;
-	}
-
-	.npc-body {
-		@include p-reset;
-		margin: 4px;
-		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: minmax(150px, 1fr) 3fr;
 		column-gap: 8px;
 		align-items: start;
 	}
 
-	.npc-description {
-		background-color: var(--form-background);
-		min-height: 415px;
-	};
-
-	.npc-details {
-		@include p-reset;
+	.ability-score {
 		display: grid;
-		grid-column: span 2;
-		row-gap: 8px;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		text-align: center;
+
+		a {
+			text-transform: uppercase;
+			font-size: 16px;
+			font-family: "Old Newspaper Font";
+			font-weight: bold;
+		}
+
+		input {
+			font-size: 16px
+		}
+
 	}
 
-	.npc-body-grid {
-		@include p-reset;
+	.grid-dark-adapted {
 		display: grid;
-		grid-template-rows: min-content minmax(416px, max-content);
-		row-gap: 8px;
-	}
-
-	.npc-description-wrapper {
-		display: grid;
-		grid-template-rows: min-content min-max(100px, 1fr);
-	}
-
-	.npc-header {
-		@include p-reset;
-
-		display: grid;
-		grid-template-columns: 110px 1fr;
-
-		column-gap: 4px;
-
+		grid-template-columns: 3fr 1fr;
 		align-items: center;
 	}
 
-	.npc-dark-adapted {
-		display: grid;
-		grid-template-columns: 1fr min-content;
-		background-color: var(--form-background);
-	}
-
-	.npc-name {
-		font-family: "Old Newspaper Font";
-		font-size: 2.5rem;
-
+	.tab-description.active{
 		height: 100%;
-	}
-
-	.npc-name-and-level {
 		display: grid;
-		grid-template-columns: 1fr min-content;
-		column-gap: 4px;
-	}
-
-	.npc-navigation {
-		&__flex {
-			display: flex;
-			justify-content: space-evenly;
-			align-items: baseline;
-
-			a {
-				@include p-reset;
-				margin: 4px;
-
-				font-family: "Old Newspaper Font";
-				font-size: 1.5rem;
-				line-height: 1;
-
-				color: $primary-color;
-
-				&.active {
-					text-decoration: underline;
-					font-weight: bold;
-					font-size: 1.6rem;
-				}
-			}
-		}
-	}
-
-	.npc-special {
-		li {
-			margin-bottom: 8px;
-		}
-	}
-
-	.npc-feature {
-		i {
-			display:none;
-			color: white;
-			font-size: 0.9em;
-		}
-	}
-
-	.npc-feature:hover i {
-		  display:inline;
-	}
-
-	.portrait {
-		grid-row: span 2;
-	}
-
-	.rollable {
-		&:hover {
-			cursor: pointer;
-			text-shadow: 0 0 8px var(--clickable);
-		}
-	}
-
-	.title {
-		@include p-reset;
-
-		font-family: "JSL Blackletter";
-		font-size: 3.5rem;
-
-		text-align: right;
-		line-height: 1;
-
-		&__prefix {
-			color: $secondary-color;
-			text-shadow: -0.2rem -0.2rem $primary-color;
-		}
-
-		&__suffix {
-			color: $primary-color;
-			text-shadow: -0.2rem -0.2rem $secondary-color;
-		}
-	}
-	.spell-table {
-		border:0px;
-		margin:0px;
-	}
-	.spell-table td {
-		padding: 5px;
-		min-width: 50px;
-		font-size: 14px;
+		grid-template-rows: 30px 1fr;
 	}
 }

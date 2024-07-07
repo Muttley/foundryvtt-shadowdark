@@ -6,10 +6,6 @@ export default class BackgroundSelector extends CompendiumItemSelector {
 
 	maxChoices = 1;
 
-	get prompt() {
-		return game.i18n.localize("SHADOWDARK.dialog.select_background.prompt");
-	}
-
 	get title() {
 		return game.i18n.localize("SHADOWDARK.dialog.select_background.title");
 	}

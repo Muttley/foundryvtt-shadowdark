@@ -14,15 +14,15 @@ export default class ItemSheetSD extends ItemSheet {
 			width: 665,
 			height: 620,
 			classes: ["shadowdark", "sheet", "item"],
+			scrollY: ["section.SD-content-body"],
 			resizable: true,
 			tabs: [
 				{
-					navSelector: ".item-navigation",
-					contentSelector: ".item-body",
+					navSelector: ".SD-nav",
+					contentSelector: ".SD-content-body",
 					initial: "tab-details",
 				},
 			],
-			dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}],
 		});
 	}
 
@@ -39,15 +39,19 @@ export default class ItemSheetSD extends ItemSheet {
 	/** @inheritdoc */
 	activateListeners(html) {
 
-		html.find(".delete-choice").click(
+		html.find("[data-action=delete-choice]").click(
 			event => this._deleteChoiceItem(event)
 		);
 
-		html.find(".class-title-controls").click(
-			event => this._onClassTitleControl(event)
+		html.find("[data-action=class-title-add]").click(
+			event => this._onClassTitleAdd(event)
 		);
 
-		html.find(".item-property-list.npc-attack-ranges").click(
+		html.find("[data-action=class-title-delete]").click(
+			event => this._onClassTitleDelete(event)
+		);
+
+		html.find("[data-action=npc-attack-ranges]").click(
 			event => this._onNpcAttackRanges(event)
 		);
 
@@ -64,24 +68,20 @@ export default class ItemSheetSD extends ItemSheet {
 		);
 
 		// Effect listeners
-		html.find(".effect-control[data-action=create]").click(
+		html.find("[data-action=effect-create]").click(
 			event => this._onEffectCreate(event)
 		);
 
-		html.find(".effect-control[data-action=activate]").click(
+		html.find("[data-action=effect-activate]").click(
 			event => this._onEffectActivate(event)
 		);
 
-		html.find(".effect-control[data-action=edit]").click(
+		html.find("[data-action=effect-edit]").click(
 			event => this._onEffectEdit(event)
 		);
 
-		html.find(".effect-control[data-action=delete]").click(
+		html.find("[data-action=effect-delete]").click(
 			event => this._onEffectDelete(event)
-		);
-
-		html.find(".effect-control[data-action=transfer]").click(
-			event => this._onEffectTransfer(event)
 		);
 
 		html.find("[data-action=remove-name-table]").click(
@@ -104,6 +104,17 @@ export default class ItemSheetSD extends ItemSheet {
 			await shadowdark.compendiums.languages(),
 			this.item.system.languages.selectOptions ?? []
 		);
+
+
+		const ancestryNameTables =
+			await shadowdark.compendiums.ancestryNameTables();
+
+		context.ancestryNameTables = {};
+		for (const ancestryNameTable of ancestryNameTables) {
+
+			context.ancestryNameTables[ancestryNameTable.uuid] =
+			ancestryNameTable.name.replace(/^Character\s+Names:\s/, "");
+		}
 
 		context.fixedLanguagesConfig = {
 			availableItems: availableFixedLanguages,
@@ -158,9 +169,6 @@ export default class ItemSheetSD extends ItemSheet {
 			prompt: game.i18n.localize("SHADOWDARK.class.armor.prompt"),
 			selectedItems: selectedArmor,
 		};
-
-		context.classTalentTables =
-			await shadowdark.compendiums.classTalentTables();
 
 		const classTalentTables =
 			await shadowdark.compendiums.classTalentTables();
@@ -352,7 +360,7 @@ export default class ItemSheetSD extends ItemSheet {
 			),
 			hasCost: item.system.cost !== undefined,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			showMagicItemCheckbox: item.system.isPhysical && !["Potion", "Scroll", "Wand"].includes(item.type),
+			showMagicItemCheckbox: item.system.isPhysical && !["Gem", "Potion", "Scroll", "Wand"].includes(item.type),
 			system: item.system,
 			showTab,
 			editable: this.isEditable,
@@ -411,6 +419,11 @@ export default class ItemSheetSD extends ItemSheet {
 					item.system.light.remainingSecs / 60
 				);
 			}
+		}
+
+		if (context.showMagicItemCheckbox || item.system.canBeEquipped
+			|| item.type === "Basic" || item.type === "Effect") {
+			context.showItemProperties=true;
 		}
 
 		// initialize spellsknown table if not already set on a spellcaster class item
@@ -494,11 +507,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	async _onChangeInput(event) {
+
+		// Test Effects value change
 		// Modify the effect when field is modified
-		if (event.target?.className === "effect-change-value") {
+		if (event.target?.id === "effect-change-value") {
 			return await this._onEffectChangeValue(event);
 		}
 
+		// Test for Predefiend Effects
 		// Create effects when added through the predefined effects input
 		if (event.target?.name === "system.predefinedEffects") {
 			const key = event.target.value;
@@ -509,6 +525,7 @@ export default class ItemSheetSD extends ItemSheet {
 			await this._createPredefinedEffect(key, effectData);
 		}
 
+		// Test for Effect Duration Change
 		// If the change value is the duration field(s)
 		const durationTarget = [
 			"system.duration.type",
@@ -516,18 +533,18 @@ export default class ItemSheetSD extends ItemSheet {
 		].includes(event.target?.name);
 
 		const durationClassName =
-			event.target?.parentElement.className === "effect-duration";
+			event.target?.parentElement.id === "effect-duration";
 
 		if (durationTarget && durationClassName) {
 			await this._onUpdateDurationEffect();
 		}
 
-		const choicesKey = $(event.currentTarget).data("choices-key");
-		const isItem = $(event.currentTarget).data("is-item") === "true";
-
+		// Test for multi-choice selector
 		// We only have to do something special if we're handling a multi-choice
 		// datalist
-		//
+
+		const choicesKey = $(event.currentTarget).data("choices-key");
+		const isItem = $(event.currentTarget).data("is-item") === "true";
 		if (event.target.list && choicesKey) {
 			return await this._onChangeChoiceList(event, choicesKey, isItem);
 		}
@@ -582,46 +599,48 @@ export default class ItemSheetSD extends ItemSheet {
 		return this.item.update({[event.target.name]: sortedChoiceUuids});
 	}
 
-	async _onClassTitleControl(event) {
+	async _onClassTitleAdd(event) {
 		if (!this.isEditable) return;
 
 		event.preventDefault();
 		event.stopPropagation();
 
-		const action = event.currentTarget.dataset.action;
+		const titles = this.item.system.titles ?? [];
+		const toValues = [0];
 
-		if (action === "add") {
-			const titles = this.item.system.titles ?? [];
+		titles.forEach(t => {
+			toValues.push(t.to);
+		});
 
-			const toValues = [0];
-			titles.forEach(t => {
-				toValues.push(t.to);
-			});
+		const max = Math.max(...toValues) + 1;
 
-			const max = Math.max(...toValues) + 1;
+		titles.push({
+			from: max,
+			to: max + 1,
+			lawful: "",
+			neutral: "",
+			chaotic: "",
+		});
 
-			titles.push({
-				from: max,
-				to: max + 1,
-				lawful: "",
-				neutral: "",
-				chaotic: "",
-			});
+		this.item.update({"system.titles": titles});
 
-			this.item.update({"system.titles": titles});
+	}
+
+	async _onClassTitleDelete(event) {
+		if (!this.isEditable) return;
+		event.preventDefault();
+		event.stopPropagation();
+
+		const index = Number.parseInt(event.currentTarget.dataset.index);
+		const titles = this.item.system.titles ?? [];
+		const newTitles = [];
+
+		for (let i = 0; i < titles.length; i++) {
+			if (index === i) continue;
+			newTitles.push(titles[i]);
 		}
-		else if (action === "delete") {
-			const index = Number.parseInt(event.currentTarget.dataset.index);
 
-			const titles = this.item.system.titles ?? [];
-			const newTitles = [];
-			for (let i = 0; i < titles.length; i++) {
-				if (index === i) continue;
-				newTitles.push(titles[i]);
-			}
-
-			this.item.update({"system.titles": newTitles});
-		}
+		this.item.update({"system.titles": newTitles});
 	}
 
 	async _onEffectChangeValue(event) {
@@ -891,19 +910,6 @@ export default class ItemSheetSD extends ItemSheet {
 		return this._deleteEffect(effect);
 	}
 
-	/**
-	 * Toggles an ActiveEffect as being transferred ot nor.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectTransfer(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(`Toggling to transfer effect ${effect.name ?? effect.label}`);
-		return this._toggleTransferEffect(effect);
-	}
-
 	async _onUpdateDurationEffect() {
 		if (!this.isEditable) return;
 		this.item.effects.map(e => e.update({duration: this._getDuration()}));
@@ -933,10 +939,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 	_activateEffect(effect) {
 		return effect.update({disabled: !effect.disabled});
-	}
-
-	_toggleTransferEffect(effect) {
-		return effect.update({transfer: !effect.transfer});
 	}
 
 	_deleteEffect(effect) {
@@ -1020,7 +1022,7 @@ export default class ItemSheetSD extends ItemSheet {
 		const handledData = data;
 
 		let defaultValue = "REPLACEME";
-		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue);
+		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue, data.name);
 
 		if (defaultValue === "REPLACEME") {
 			return shadowdark.log("Can't create effect without selecting a value.");

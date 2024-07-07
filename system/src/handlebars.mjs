@@ -68,7 +68,16 @@ export default function registerHandlebarsHelpers() {
 	});
 
 	Handlebars.registerHelper("uuidToName", uuid => {
-		return fromUuidSync(uuid).name;
+		if (!uuid) return "";
+		return shadowdark.utils.getFromUuidSync(uuid).name;
+	});
+
+	Handlebars.registerHelper("displayCost", item => {
+		let costInGp = item.system.cost.gp
+		+ (item.system.cost.sp /10 )
+		+ (item.system.cost.cp /100 );
+		costInGp = costInGp * item.system.quantity;
+		return costInGp.toString().concat(" gp");
 	});
 
 	/* -------------------------------------------- */
