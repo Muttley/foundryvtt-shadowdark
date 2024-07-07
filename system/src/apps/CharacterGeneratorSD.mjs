@@ -298,7 +298,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 	diceSound() {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		game.audio.play(src);
+		game.audio.play(src, {volume: 1});
 	}
 
 	async _randomizeHandler(event) {

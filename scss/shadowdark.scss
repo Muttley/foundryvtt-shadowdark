@@ -1,7 +1,6 @@
 @use "apps";
 @use "base";
 @use "sheets";
-@use "ui";
 
 @use "abstracts" as *;
 @use "mixins" as *;
@@ -41,9 +40,8 @@
 	}
 
 	h2 {
-		font-family: "Montserrat-Bold";
-		font-size: 16px;
-		text-transform: uppercase;
+		font-family: "Old Newspaper Font";
+		font-size: 26px;
 	}
 
 	h3 {

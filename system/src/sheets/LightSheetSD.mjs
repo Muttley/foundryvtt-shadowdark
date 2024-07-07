@@ -7,17 +7,10 @@ export default class LightSheetSD extends ActorSheetSD {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark", "sheet", "light"],
-			width: 600,
-			height: 666, // Memnon says "Hi!"
+			classes: ["shadowdark", "sheet"],
+			width: 450,
+			height: 200, // Memnon said "Hi!" at one point
 			resizable: true,
-			tabs: [
-				{
-					navSelector: ".npc-navigation",
-					contentSelector: ".npc-body-content",
-					initial: "tab-details",
-				},
-			],
 		});
 	}
 
@@ -33,7 +26,7 @@ export default class LightSheetSD extends ActorSheetSD {
 
 		// Button that transfers the light source to the assigned character
 		// and deletes the Light actor.
-		html.find(".pick-up-light").click(
+		html.find("[data-action='pick-up-light']").click(
 			event => this._onPickupLight(event)
 		);
 	}

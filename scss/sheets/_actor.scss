@@ -1,5 +1,6 @@
-@use "../../abstracts" as *;
-@use "../../mixins" as *;
+@use "../abstracts" as *;
+@use "../mixins" as *;
+@forward "actors";
 
 .shadowdark.sheet.player,
 .shadowdark.sheet.npc {
