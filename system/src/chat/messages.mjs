@@ -25,11 +25,6 @@ export async function welcomeMessage() {
 
 function _initListeners() {
 	// Add listeners
-	$(document).on("click", "button.shadowdark-tours", event => {
-		event.preventDefault();
-		shadowdark.log("Importing a Shadowdarkling");
-		new ToursManagement().render(true);
-	});
 
 	$(document).on("click", "button.shadowdark-issue-tracker", event => {
 		event.preventDefault();
