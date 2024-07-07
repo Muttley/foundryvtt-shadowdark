@@ -24,6 +24,9 @@
 
 ## Chores
 * [#813] Merged Finnish language updates from Crowdin
+* [#829] Remove all Tours
+
+**NOTE:** We have found that the Tours are very fragile and onerous to maintain; needing to be tested/updated when even minor changes are made to the interface.  Therefore we are removing them and will rely on alternate methods of teaching the system.
 
 Many thanks to *andrewbeard* for contributing fixes in this build
 
