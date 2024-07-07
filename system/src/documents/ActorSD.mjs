@@ -222,6 +222,7 @@ export default class ActorSD extends Actor {
 
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
+		this.updateArmorClass();
 	}
 
 
@@ -703,8 +704,8 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async getArmorClass() {
-		return this.armorClass;
+	getArmorClass() {
+		return this.system.attributes.ac.value;
 	}
 
 
@@ -911,9 +912,9 @@ export default class ActorSD extends Actor {
 
 	/** @inheritDoc */
 	prepareDerivedData() {
-		if (this.type === "Player") {
-			this.updateArmorClass();
-		}
+		// if (this.type === "Player") {
+		// 	this.updateArmorClass();
+		// }
 	}
 
 
@@ -1270,7 +1271,7 @@ export default class ActorSD extends Actor {
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
 
-		this.armorClass = newArmorClass;
+		this.system.attributes.ac.value = newArmorClass;
 	}
 
 

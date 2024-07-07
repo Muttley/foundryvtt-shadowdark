@@ -1,4 +1,4 @@
-# v2.3.0
+# v3.0.0
 
 ## Enhancements
 * [#438] Inventory header disappearing on large inventory
@@ -8,6 +8,10 @@
 	- User interface has been redesigned with a new look and feel.
 	- Character inventory supports drag and drop reordering.
 	- Holding shift while clicking on a rollable links will bypass the roll prompt, rolling with unmodified values.
+
+* [#798] Allow for tokens and combat tracker to display dynamic AC
+
+	- `system.attributes.ac.value` now always holds the current AC
 
 * [#820] All ability scores now store a total value of bast stats + modifiers e.g. system.abilities.str.total
 

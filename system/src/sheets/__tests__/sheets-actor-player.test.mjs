@@ -109,7 +109,7 @@ export default ({ describe, it, after, before, expect }) => {
 			expect(actorData.xpNextLevel).is.not.undefined;
 		});
 		it("contains the armorClass data", () => {
-			expect(actorData.armorClass).is.not.undefined;
+			expect(actorData.system.attributes.ac.value).is.not.undefined;
 		});
 
 		after(async () => {

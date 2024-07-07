@@ -164,8 +164,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
 
-		await this.actor.updateArmorClass();
-		context.armorClass = this.actor.armorClass;
+		// await this.actor.updateArmorClass();
+		// context.armorClass = this.actor.getArmorClass();
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
@@ -632,19 +632,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			{name: itemData.name}
 		).then(html => {
 			new Dialog({
-				title: `${game.i18n.localize("SHADOWDARK.dialog.item.confirm_sale")}`,
+				title: game.i18n.localize("SHADOWDARK.dialog.item.confirm_sale"),
 				content: html,
 				buttons: {
 					Yes: {
 						icon: "<i class=\"fa fa-check\"></i>",
-						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						label: game.i18n.localize("SHADOWDARK.dialog.general.yes"),
 						callback: async () => {
 							this.actor.sellItemById(itemId);
 						},
 					},
 					Cancel: {
 						icon: "<i class=\"fa fa-times\"></i>",
-						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+						label: game.i18n.localize("SHADOWDARK.dialog.general.cancel"),
 					},
 				},
 				default: "Yes",
@@ -665,6 +665,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				"system.stashed": false,
 			},
 		]);
+
+		if (item.type === "Armor") await this.actor.updateArmorClass();
+
+		this.actor.update({
+			"system.attributes.ac.value": this.actor.getArmorClass(),
+		});
 	}
 
 	async _onToggleStashed(event) {
