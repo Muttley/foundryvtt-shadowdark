@@ -1,5 +1,8 @@
-<a class="rollable" data-action="item-use-ability" data-item-id="{{itemId}}">
-	<i class="fas fa-comment"></i>
+<a class="rollable"
+	data-action="{{#if attackBonus}}item-attack{{else}}item-use-ability{{/if}}"
+	data-item-id="{{itemId}}"
+>
+	<i class="fas {{#if attackBonus}}fa-dice-d20{{else}}fa-comment{{/if}}"></i>
 	<b style="font-size:16px">
 		{{{numAttacks}}} {{attackName}}
 	</b>
