@@ -237,14 +237,18 @@ export default class ActorSheetSD extends ActorSheet {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
+		const attackType =  $(event.currentTarget).data("attack-type");
+
+		const options = {
+			attackType,
+		};
 
 		// skip roll prompt if shift clicked
 		if (event.shiftKey) {
-			this.actor.rollAttack(itemId, {fastForward: true});
+			options.fastForward = true;
 		}
-		else {
-			this.actor.rollAttack(itemId);
-		}
+
+		this.actor.rollAttack(itemId, options);
 	}
 
 	async _onToggleLost(event) {

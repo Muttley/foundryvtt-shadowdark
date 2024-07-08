@@ -481,8 +481,12 @@ export default class ActorSD extends Actor {
 					itemId,
 				});
 			}
+			// if thrown build range attack option
 			if (await item.hasProperty("thrown")) {
-				weaponOptions.attackBonus = baseAttackBonus
+
+				const thrownBaseBonus = Math.max(meleeAttack, rangedAttack);
+
+				weaponOptions.attackBonus = thrownBaseBonus
 					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
 					+ parseInt(item.system.bonuses.attackBonus, 10)
 					+ weaponMasterBonus;
@@ -493,6 +497,10 @@ export default class ActorSD extends Actor {
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
 				];
+
+				weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.rangedDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
@@ -995,7 +1003,10 @@ export default class ActorSD extends Actor {
 
 			data.canBackstab = await this.canBackstab();
 
-			if (item.system.type === "melee") {
+			// Use set options for type of attack or assume item type
+			data.attackType = options.attackType ?? item.system.type;
+
+			if (data.attackType === "melee") {
 				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
 						this.abilityModifier("str"),
@@ -1011,7 +1022,16 @@ export default class ActorSD extends Actor {
 				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
-				data.abilityBonus = this.abilityModifier("dex");
+				// if thrown item used as range, use highest modifier.
+				if (await item.isThrownWeapon()) {
+					data.abilityBonus = Math.max(
+						this.abilityModifier("str"),
+						this.abilityModifier("dex")
+					);
+				}
+				else {
+					data.abilityBonus = this.abilityModifier("dex");
+				}
 
 				data.talentBonus = bonuses.rangedAttackBonus;
 				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;

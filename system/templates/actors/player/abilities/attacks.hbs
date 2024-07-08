@@ -5,7 +5,17 @@
 	</div>
 	<div class="content">
 		{{#each attacks.melee as |attack|}}
-			<div>{{{attack.display}}}</div>
+			<div>
+				<a
+					class="rollable"
+					data-action="item-attack"
+					data-item-id="{{attack.itemId}}"
+					data-attack-type="melee"
+				>
+					<i class="fa-solid fa-dice-d20"></i>
+					{{{attack.display}}}
+				</a>
+			</div>
 		{{/each}}
 	</div>
 </div>
@@ -17,7 +27,17 @@
 	</div>
 	<div class="content">
 		{{#each attacks.ranged as |attack|}}
-			<div>{{{attack.display}}}</div>
+			<div>
+				<a
+					class="rollable"
+					data-action="item-attack"
+					data-item-id="{{attack.itemId}}"
+					data-attack-type="ranged"
+				>
+					<i class="fa-solid fa-dice-d20"></i>
+					{{{attack.display}}}
+				</a>
+			</div>
 		{{/each}}
 	</div>
 </div>
