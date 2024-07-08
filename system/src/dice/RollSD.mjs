@@ -57,9 +57,11 @@ export default class RollSD extends Roll {
 			return this._renderRoll(data, adv, options);
 		}
 
-		// Roll damage for NPCs
-		if (data.actor?.type === "NPC" && data.item.type === "NPC Attack") {
-			data = await this._rollNpcAttack(data);
+		// Roll damage for NPCs attack types
+		if (data.item.type === "NPC Attack" || data.item.type === "NPC Special Attack") {
+			if (data.item.type === "NPC Attack") {
+				data = await this._rollNpcAttack(data);
+			}
 			if (!options.flavor) {
 				options.flavor = game.i18n.format(
 					"SHADOWDARK.chat.item_roll.title",
