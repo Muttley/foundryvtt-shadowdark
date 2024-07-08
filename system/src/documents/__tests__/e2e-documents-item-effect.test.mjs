@@ -43,7 +43,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 
 	before(async () => {
 		_p = await createMockPlayer();
-		await _p.updateArmorClass();
+		await _p.getArmorClass();
 
 		await waitForInput();
 	});

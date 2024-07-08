@@ -359,7 +359,7 @@ export default ({ describe, it, after, before, expect }) => {
 	});
 
 	describe("getArmorClass()", () => {
-		// Tested under updateArmorClass()
+		// Tested under getArmorClass()
 		it("returns the correct armor class", async () => {
 			const actor = await createMockActor("Player");
 			await actor.update({
@@ -427,7 +427,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 	});
 
-	describe("updateArmorClass()", () => {
+	describe("getArmorClass()", () => {
 		let actor = {};
 
 		before(async () => {
@@ -438,7 +438,7 @@ export default ({ describe, it, after, before, expect }) => {
 		});
 
 		it("calculates the correct AC with no armor equipped", async () => {
-			await actor.updateArmorClass();
+			await actor.getArmorClass();
 			await waitForInput();
 			expect(await actor.getArmorClass()).equal(10 + 4);
 		});
@@ -453,7 +453,7 @@ export default ({ describe, it, after, before, expect }) => {
 					"system.equipped": true,
 				},
 			]);
-			await actor.updateArmorClass();
+			await actor.getArmorClass();
 			await waitForInput();
 			expect(await actor.getArmorClass()).equal(11 + 4 + 2);
 		});
@@ -468,7 +468,7 @@ export default ({ describe, it, after, before, expect }) => {
 					"system.equipped": true,
 				},
 			]);
-			await actor.updateArmorClass();
+			await actor.getArmorClass();
 			await waitForInput();
 			expect(await actor.getArmorClass()).equal(11 + 4 + 2 + 3);
 		});
