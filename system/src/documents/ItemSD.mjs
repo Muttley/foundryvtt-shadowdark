@@ -271,6 +271,10 @@ export default class ItemSD extends Item {
 		return this.hasProperty("finesse");
 	}
 
+	isThrownWeapon() {
+		return this.hasProperty("thrown");
+	}
+
 	isMagicItem() {
 		return this.system.isPhysical && this.system.magicItem;
 	}
