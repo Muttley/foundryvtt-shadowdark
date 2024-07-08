@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"description": "<p>You weave a lulling spell that fills a near-sized cube extending from you. Living creatures in the area of effect fall into a deep sleep if they are LV 2 or less.</p><p>Injury or vigorous shaking wakes them.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Spell Effect: Sleep}</p>",
+		"description": "<p>You weave a lulling spell that fills a near-sized cube extending from you. Living creatures in the area of effect fall into a deep sleep if they are LV 2 or less.</p><p>Vigorous shaking or being injured wakes them.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.FrFilluk4S5VaWut]{Spell Effect: Sleep}</p>",
 		"duration": {
 			"type": "instant",
 			"value": -1
