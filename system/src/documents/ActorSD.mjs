@@ -1291,7 +1291,7 @@ export default class ActorSD extends Actor {
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
 		}
 
-		this.system.attributes.ac.value = newArmorClass;
+		this.update({"system.attributes.ac.value": newArmorClass});
 	}
 
 
