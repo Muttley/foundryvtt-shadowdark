@@ -22,6 +22,7 @@
 * [#816] Updated Ranger Herbalism talent description to the latest version
 * [#822] The spellbook now works for Knight of St. Ydris and other classes that use another class's spell list
 * [#832] Melee weapons with the "Thrown" property now rolling correctly when used as a ranged attack
+* [#835] Update Sleep spell description to the latest version
 
 ## Chores
 * [#813] Merged Finnish language updates from Crowdin
