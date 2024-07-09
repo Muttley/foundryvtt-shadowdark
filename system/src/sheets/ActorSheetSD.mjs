@@ -16,10 +16,6 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onItemSelection(event)
 		);
 
-		html.find("[data-action='roll-initiative']").click(
-			event => this._onRollInitiative(event)
-		);
-
 		html.find("[data-action='show-details']").click(
 			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
 		);
@@ -210,13 +206,6 @@ export default class ActorSheetSD extends ActorSheet {
 		event.preventDefault();
 
 		this.actor.rollHP();
-	}
-
-	async _onRollInitiative(event) {
-		event.preventDefault();
-
-		// User the default roll available to each Actor / Token
-		await this.actor.rollInitiative({ createCombatants: false, rerollInitiative: false});
 	}
 
 	async _onRollAbilityCheck(event) {

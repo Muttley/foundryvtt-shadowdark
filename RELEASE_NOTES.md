@@ -27,10 +27,12 @@
 * [#835] Update Sleep spell description to the latest version
 * [#837] AC not displaying consistently when adding effects
 * [#839] Free Carry item calculation wrong if you have duplicate items instead of just using item quantity
+* [#841] Compendium item links no longer working in Foundry v12
 
 ## Chores
 * [#813] Merged Finnish language updates from Crowdin
 * [#829] Remove all Tours
+* [#840] Remove Roll Initiative button from character sheet
 
 **NOTE:** We have found that the Tours are very fragile and onerous to maintain; needing to be tested/updated when even minor changes are made to the interface.  Therefore we are removing them and will rely on alternate methods of teaching the system.
 

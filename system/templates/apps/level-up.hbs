@@ -48,7 +48,14 @@
 					{{#each talents}}
 					<div style="white-space: nowrap;">
 						<a class="remove-item fas fa-delete-right" data-action="delete-talent" data-index="{{@index}}"></a>
-						<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+						<a
+							class="content-link"
+							data-link
+							data-tooltip="{{this.name}}"
+							data-uuid="{{this.uuid}}"
+						>
+							{{this.name}}
+						</a>
 					</div>
 					{{/each}}
 					</fieldset>
@@ -75,7 +82,14 @@
 								{{#if this}}
 								<div style="white-space: nowrap;">
 									<a class="remove-item fas fa-delete-right" data-action="delete-spell" data-tier="{{@../key}}" data-index="{{@index}}"></a>
-									<a class="content-link" data-uuid="{{this.uuid}}">{{this.name}}</a>
+									<a
+										class="content-link"
+										data-link
+										data-tooltip="{{this.name}}"
+										data-uuid="{{this.uuid}}"
+									>
+										{{this.name}}
+									</a>
 								</div>
 								{{/if}}
 								{{#unless this}}

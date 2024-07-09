@@ -226,6 +226,7 @@ export default class LevelUpSD extends FormApplication {
 			// checks for effects on talent and prompts if needed
 			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
 			talentObj.system.level = this.data.targetLevel;
+			talentObj.uuid = talentItem.uuid;
 			this.data.talents.push(talentObj);
 			this.render();
 		}
