@@ -1,17 +1,22 @@
-<div class="luck">
-	<p>{{localize 'SHADOWDARK.sheet.player.luck'}}</p>
-	{{#if usePulpMode}}
-		{{numberInput
-			actor.system.luck.remaining
-			name="system.luck.remaining"
-			placeholder="0"
-			min=0
-		}}
-	{{else}}
-		<input
-			type="checkbox"
-			name="system.luck.available"
-			{{checked actor.system.luck.available}}
-		>
-	{{/if}}
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.player.luck'}}</label>
+		<span></span>
+	</div>
+	<div class="content centered large" style="display:flex">
+		{{#if usePulpMode}}
+			{{numberInput
+				actor.system.luck.remaining
+				name="system.luck.remaining"
+				placeholder="0"
+				min=0
+			}}
+		{{else}}
+			<input
+				type="checkbox"
+				name="system.luck.available"
+				{{checked actor.system.luck.available}}
+			>
+		{{/if}}
+	</div>
 </div>

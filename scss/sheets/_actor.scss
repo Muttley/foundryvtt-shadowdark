@@ -1,0 +1,77 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+@forward "actors";
+
+.shadowdark.sheet.player,
+.shadowdark.sheet.npc {
+
+	.editor-content {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.item-image {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
+		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+		&:hover {
+			background: none !important;
+			color: white;
+		}
+		i {
+			cursor: pointer;
+		}
+	}
+
+	.portrait {
+		grid-row: span 2;
+	}
+
+	.rollable {
+		i {
+			font-size: 14px;
+			visibility: hidden;
+		}
+
+		&:hover {
+			i {
+				visibility: visible;
+			}
+		}
+	}
+
+	.shadowdark-logo {
+		font-family: "JSL Blackletter";
+		font-size: 1.75rem;
+		color: white;
+		text-align: center;
+
+		span {
+			border-bottom: solid 1px white;
+			padding: 0px 10px 0px 10px;
+		}
+	}
+
+	.uuid-link {
+		margin: 4px;
+		// text-align: center;
+	}
+
+	.value-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+		column-gap: 2px;
+		align-items: center;
+		text-align: center;
+	}
+}

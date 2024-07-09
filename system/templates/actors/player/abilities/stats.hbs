@@ -1,0 +1,45 @@
+<div class="SD-box grid-colspan-2">
+	<div class="header">
+		<label>{{localize "SHADOWDARK.sheet.abilities.stats"}}</label>
+		<span>
+			{{#if owner}}
+				<a
+					{{#if editingStats}}
+						class="item-selector fas fa-square-xmark edit-button"
+					{{else}}
+						class="item-selector fas fa-pen-to-square edit-button"
+					{{/if}}
+					data-action="toggle-edit-stats"
+					data-tooltip="{{localize 'SHADOWDARK.sheet.player.toggle_edit_stats'}}"
+				></a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content grid-2-columns">
+		{{#each abilities as |ability id|}}
+
+			<div class="ability-score">
+				<a
+					data-action="roll-ability-check"
+					data-ability="{{id}}"
+				>
+					{{ability.label}}
+				</a>
+				<div>
+					{{#if ../editingStats}}
+						<input
+							name="{{concat "system.abilities." id ".total"}}"
+							type="number"
+							value="{{ability.total}}"
+							placeholder="10"
+						>
+					{{else}}
+						<span>{{ability.total}}</span>
+					{{/if}}
+					({{numberFormat ability.modifier decimals=0 sign=true}})
+				</div>
+			</div>
+
+		{{/each}}
+	</div>
+</div>

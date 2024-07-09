@@ -402,6 +402,7 @@ export default class ActorSD extends Actor {
 			: this.attackBonus(item.system.type);
 
 		const weaponOptions = {
+			weaponId: itemId,
 			weaponName: item.name,
 			handedness: "",
 			attackBonus: 0,
@@ -479,8 +480,12 @@ export default class ActorSD extends Actor {
 					itemId,
 				});
 			}
+			// if thrown build range attack option
 			if (await item.hasProperty("thrown")) {
-				weaponOptions.attackBonus = baseAttackBonus
+
+				const thrownBaseBonus = Math.max(meleeAttack, rangedAttack);
+
+				weaponOptions.attackBonus = thrownBaseBonus
 					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
 					+ parseInt(item.system.bonuses.attackBonus, 10)
 					+ weaponMasterBonus;
@@ -491,6 +496,10 @@ export default class ActorSD extends Actor {
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
 				];
+
+				weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.rangedDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
@@ -537,13 +546,13 @@ export default class ActorSD extends Actor {
 
 
 	calcAbilityValues(ability) {
-		const value = this.system.abilities[ability].base
+		const total = this.system.abilities[ability].base
 			+ this.system.abilities[ability].bonus;
 
 		const labelKey = `SHADOWDARK.ability_${ability}`;
 
 		return {
-			value,
+			total,
 			bonus: this.system.abilities[ability].bonus,
 			base: this.system.abilities[ability].base,
 			modifier: this.system.abilities[ability].mod,
@@ -596,7 +605,7 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async castSpell(itemId) {
+	async castSpell(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		if (!item) {
@@ -641,10 +650,10 @@ export default class ActorSD extends Actor {
 		// TODO: push to parts & for set talentBonus as sum of talents affecting
 		// spell rolls
 
-		return item.rollSpell(parts, data);
+		return item.rollSpell(parts, data, options);
 	}
 
-	async castNPCSpell(itemId) {
+	async castNPCSpell(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		const abilityBonus = this.system.spellcastingBonus;
@@ -660,9 +669,7 @@ export default class ActorSD extends Actor {
 
 		const parts = ["1d20", "@abilityBonus"];
 
-		const options = {
-			isNPC: true,
-		};
+		options.isNPC = true;
 
 		return item.rollSpell(parts, data, options);
 	}
@@ -705,7 +712,117 @@ export default class ActorSD extends Actor {
 
 
 	async getArmorClass() {
-		return this.armorClass;
+		const dexModifier = this.abilityModifier("dex");
+
+		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
+		baseArmorClass += dexModifier;
+
+		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
+			const attributeBonus = this.abilityModifier(attribute);
+			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
+		}
+
+		let newArmorClass = baseArmorClass;
+		let shieldBonus = 0;
+
+		const acOverride = this.system.attributes.ac?.override ?? null;
+		if (Number.isInteger(acOverride)) {
+			// AC is being overridden by an effect so we just use that value
+			// and ignore everything else
+			newArmorClass = acOverride;
+		}
+		else {
+			let armorMasteryBonus = 0;
+
+			const equippedArmorItems = this.items.filter(
+				item => item.type === "Armor" && item.system.equipped
+			);
+			const equippedArmor = [];
+			const equippedShields = [];
+
+			for (const item of equippedArmorItems) {
+				if (await item.isAShield()) {
+					equippedShields.push(item);
+				}
+				else {
+					equippedArmor.push(item);
+				}
+			}
+
+			if (equippedShields.length > 0) {
+				const firstShield = equippedShields[0];
+				shieldBonus = firstShield.system.ac.modifier;
+
+				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
+					a => a === firstShield.name.slugify()
+							|| a === firstShield.system.baseArmor
+				).length;
+			}
+
+			if (equippedArmor.length > 0) {
+				newArmorClass = 0;
+
+				let bestAttributeBonus = null;
+				let baseArmorClassApplied = false;
+
+				for (const armor of equippedArmor) {
+
+					// Check if armor mastery should apply to the AC.  Multiple
+					// mastery levels should stack
+					//
+					const masteryLevels = this.system.bonuses.armorMastery.filter(
+						a => a === armor.name.slugify()
+							|| a === armor.system.baseArmor
+					);
+					armorMasteryBonus += masteryLevels.length;
+
+					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
+
+					newArmorClass += armor.system.ac.base;
+					newArmorClass += armor.system.ac.modifier;
+
+					const attribute = armor.system.ac.attribute;
+					if (attribute) {
+						const attributeBonus = this.abilityModifier(attribute);
+						if (bestAttributeBonus === null) {
+							bestAttributeBonus = attributeBonus;
+						}
+						else {
+							bestAttributeBonus =
+								attributeBonus > bestAttributeBonus
+									? attributeBonus
+									: bestAttributeBonus;
+						}
+					}
+				}
+
+				if (!baseArmorClassApplied) {
+					// None of the armor we're wearing has a base value, only
+					// bonuses so we will use the default base class of
+					// 10+DEX to allow for unarmored characters wearing Bracers
+					// of defense (as an example)
+					//
+					newArmorClass += baseArmorClass;
+				}
+
+				newArmorClass += bestAttributeBonus;
+				newArmorClass += armorMasteryBonus;
+				newArmorClass += shieldBonus;
+			}
+			else if (shieldBonus <= 0) {
+				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
+			}
+			else {
+				newArmorClass += shieldBonus;
+			}
+
+			// Add AC from bonus effects
+			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
+		}
+
+		this.update({"system.attributes.ac.value": newArmorClass});
+
+		return this.system.attributes.ac.value;
 	}
 
 
@@ -912,9 +1029,9 @@ export default class ActorSD extends Actor {
 
 	/** @inheritDoc */
 	prepareDerivedData() {
-		if (this.type === "Player") {
-			this.updateArmorClass();
-		}
+		// if (this.type === "Player") {
+		// 	this.updateArmorClass();
+		// }
 	}
 
 
@@ -935,12 +1052,11 @@ export default class ActorSD extends Actor {
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
-
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
 
-	async rollAttack(itemId) {
+	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
 
 		const data = {
@@ -996,7 +1112,10 @@ export default class ActorSD extends Actor {
 
 			data.canBackstab = await this.canBackstab();
 
-			if (item.system.type === "melee") {
+			// Use set options for type of attack or assume item type
+			data.attackType = options.attackType ?? item.system.type;
+
+			if (data.attackType === "melee") {
 				if (await item.isFinesseWeapon()) {
 					data.abilityBonus = Math.max(
 						this.abilityModifier("str"),
@@ -1012,7 +1131,16 @@ export default class ActorSD extends Actor {
 				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
-				data.abilityBonus = this.abilityModifier("dex");
+				// if thrown item used as range, use highest modifier.
+				if (await item.isThrownWeapon()) {
+					data.abilityBonus = Math.max(
+						this.abilityModifier("str"),
+						this.abilityModifier("dex")
+					);
+				}
+				else {
+					data.abilityBonus = this.abilityModifier("dex");
+				}
 
 				data.talentBonus = bonuses.rangedAttackBonus;
 				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
@@ -1026,7 +1154,7 @@ export default class ActorSD extends Actor {
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
 		}
 
-		return item.rollItem(parts, data);
+		return item.rollItem(parts, data, options);
 	}
 
 
@@ -1162,121 +1290,7 @@ export default class ActorSD extends Actor {
 		await this.changeLightSettings(lightData);
 	}
 
-
-	async updateArmorClass() {
-		const dexModifier = this.abilityModifier("dex");
-
-		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
-		baseArmorClass += dexModifier;
-
-		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
-			const attributeBonus = this.abilityModifier(attribute);
-			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
-		}
-
-		let newArmorClass = baseArmorClass;
-		let shieldBonus = 0;
-
-		const acOverride = this.system.attributes.ac?.override ?? null;
-		if (Number.isInteger(acOverride)) {
-			// AC is being overridden by an effect so we just use that value
-			// and ignore everything else
-			newArmorClass = acOverride;
-		}
-		else {
-			let armorMasteryBonus = 0;
-
-			const equippedArmorItems = this.items.filter(
-				item => item.type === "Armor" && item.system.equipped
-			);
-			const equippedArmor = [];
-			const equippedShields = [];
-
-			for (const item of equippedArmorItems) {
-				if (await item.isAShield()) {
-					equippedShields.push(item);
-				}
-				else {
-					equippedArmor.push(item);
-				}
-			}
-
-			if (equippedShields.length > 0) {
-				const firstShield = equippedShields[0];
-				shieldBonus = firstShield.system.ac.modifier;
-
-				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
-					a => a === firstShield.name.slugify()
-							|| a === firstShield.system.baseArmor
-				).length;
-			}
-
-			if (equippedArmor.length > 0) {
-				newArmorClass = 0;
-
-				let bestAttributeBonus = null;
-				let baseArmorClassApplied = false;
-
-				for (const armor of equippedArmor) {
-
-					// Check if armor mastery should apply to the AC.  Multiple
-					// mastery levels should stack
-					//
-					const masteryLevels = this.system.bonuses.armorMastery.filter(
-						a => a === armor.name.slugify()
-							|| a === armor.system.baseArmor
-					);
-					armorMasteryBonus += masteryLevels.length;
-
-					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
-
-					newArmorClass += armor.system.ac.base;
-					newArmorClass += armor.system.ac.modifier;
-
-					const attribute = armor.system.ac.attribute;
-					if (attribute) {
-						const attributeBonus = this.abilityModifier(attribute);
-						if (bestAttributeBonus === null) {
-							bestAttributeBonus = attributeBonus;
-						}
-						else {
-							bestAttributeBonus =
-								attributeBonus > bestAttributeBonus
-									? attributeBonus
-									: bestAttributeBonus;
-						}
-					}
-				}
-
-				if (!baseArmorClassApplied) {
-					// None of the armor we're wearing has a base value, only
-					// bonuses so we will use the default base class of
-					// 10+DEX to allow for unarmored characters wearing Bracers
-					// of defense (as an example)
-					//
-					newArmorClass += baseArmorClass;
-				}
-
-				newArmorClass += bestAttributeBonus;
-				newArmorClass += armorMasteryBonus;
-				newArmorClass += shieldBonus;
-			}
-			else if (shieldBonus <= 0) {
-				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
-			}
-			else {
-				newArmorClass += shieldBonus;
-			}
-
-			// Add AC from bonus effects
-			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
-		}
-
-		this.armorClass = newArmorClass;
-	}
-
-
-	async useAbility(itemId) {
+	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
 		const abilityDescription = await TextEditor.enrichHTML(
 			item.system.description,
@@ -1300,9 +1314,10 @@ export default class ActorSD extends Actor {
 
 			// does ability use on a roll check?
 			if (typeof item.system.ability !== "undefined") {
+				options = foundry.utils.mergeObject({target: item.system.dc}, options);
 				const result = await this.rollAbility(
 					item.system.ability,
-					{target: item.system.dc}
+					options
 				);
 
 				success = result?.rolls?.main?.success ?? false;

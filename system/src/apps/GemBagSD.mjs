@@ -8,7 +8,7 @@ export default class GemBagSD extends Application {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark", "gem-bag"],
+			classes: ["shadowdark"],
 			height: "auto",
 			resizable: true,
 			width: 400,
@@ -28,20 +28,21 @@ export default class GemBagSD extends Application {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find(".open-item").click(
-			event => this._onOpenItem(event)
-		);
 
-		html.find(".sell-all-button").click(
+		html.find("[data-action='sell-all-gems']").click(
 			event => this._onSellAllGems(event)
 		);
 
-		html.find(".sell-gem").click(
+		html.find("[data-action='sell-gem']").click(
 			event => this._onSellGem(event)
 		);
 
-		html.find(".item-create").click(
+		html.find("[data-action='item-create']").click(
 			event => this._onItemCreate(event)
+		);
+
+		html.find("[data-action='show-details']").click(
+			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
 		);
 
 		// Create context menu for items on both sheets
@@ -55,8 +56,9 @@ export default class GemBagSD extends Application {
 	async getData(options) {
 		const items = this.getGems();
 		const totals = this.getGemValueTotal(items);
+		const actor = this.actor;
 
-		return {items, totals};
+		return {items, totals, actor};
 	}
 
 	gemBagIsEmpty() {
@@ -68,14 +70,23 @@ export default class GemBagSD extends Application {
 	}
 
 	getGemValueTotal(items) {
-		const totals = {gp: 0, sp: 0, cp: 0};
+		const totals = {
+			system: {
+				cost: {
+					gp: 0,
+					sp: 0,
+					cp: 0,
+				},
+				quantity: 1,
+			},
+		};
 
 		for (let i = 0; i < items.length; i++) {
 			const item = items[i];
 
-			totals.gp += item.system.cost.gp;
-			totals.sp += item.system.cost.sp;
-			totals.cp += item.system.cost.cp;
+			totals.system.cost.gp += item.system.cost.gp;
+			totals.system.cost.sp += item.system.cost.sp;
+			totals.system.cost.cp += item.system.cost.cp;
 		}
 
 		return totals;
@@ -127,11 +138,10 @@ export default class GemBagSD extends Application {
 
 	async _onItemCreate(event) {
 		event.preventDefault();
-		const itemType = $(event.currentTarget).data("item-type");
 
 		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [{
 			name: "New Gem",
-			type: itemType,
+			type: "Gem",
 		}]);
 		newItem.sheet.render(true);
 	}
@@ -165,15 +175,6 @@ export default class GemBagSD extends Application {
 				default: "Yes",
 			}).render(true);
 		});
-	}
-
-	async _onOpenItem(event) {
-		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		return item.sheet.render(true);
 	}
 
 	_onSellGem(event) {

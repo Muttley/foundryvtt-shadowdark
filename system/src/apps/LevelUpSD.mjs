@@ -33,6 +33,7 @@ export default class LevelUpSD extends FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
+			classes: ["shadowdark", "level-up"],
 			width: 275,
 			resizable: false,
 			closeOnSubmit: true,
@@ -115,11 +116,11 @@ export default class LevelUpSD extends FormApplication {
 					let currentSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
 					let targetSpells = {1: null, 2: null, 3: null, 4: null, 5: null};
 
-					if (this.data.currentLevel >= 1) {
+					if (1 <= this.data.currentLevel && this.data.currentLevel <= 10) {
 						currentSpells =
 						this.data.class.system.spellcasting.spellsknown[this.data.currentLevel];
 					}
-					if (this.data.targetLevel <= 10) {
+					if (1 <= this.data.targetLevel && this.data.targetLevel <= 10) {
 						targetSpells =
 						this.data.class.system.spellcasting.spellsknown[this.data.targetLevel];
 					}
@@ -225,6 +226,7 @@ export default class LevelUpSD extends FormApplication {
 			// checks for effects on talent and prompts if needed
 			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
 			talentObj.system.level = this.data.targetLevel;
+			talentObj.uuid = talentItem.uuid;
 			this.data.talents.push(talentObj);
 			this.render();
 		}
@@ -272,8 +274,8 @@ export default class LevelUpSD extends FormApplication {
 			case !(this.data.talentGained && this.data.talents.length < 1):
 			case spellsSelected:
 				Dialog.confirm({
-					title: "Missing Selections",
-					content: "Not all required selections have been made. Continue with level up?",
+					title: game.i18n.localize("SHADOWDARK.apps.level-up.missing_selections"),
+					content: game.i18n.localize("SHADOWDARK.apps.level-up.prompt"),
 					yes: () => this._finalizeLevelUp(),
 					no: () => null,
 					defaultYes: false,
@@ -346,7 +348,17 @@ export default class LevelUpSD extends FormApplication {
 		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		// show actor sheet
-		this.data.actor.sheet.render(true);
 		this.close();
+	}
+
+	/** @override */
+	async close() {
+		try {
+			this.data.actor.sheet.render(true);
+		 }
+		catch(err) {
+			console.log("Counld't open Actor");
+		}
+		super.close();
 	}
 }

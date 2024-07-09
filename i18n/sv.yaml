@@ -13,14 +13,17 @@ SHADOWDARK.ability_wisdom: Vishet
 SHADOWDARK.alignment.chaotic: Kaotisk
 SHADOWDARK.alignment.lawful: Laglydig
 SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.ancestry.choice_count: Choice Count
+SHADOWDARK.ancestry.choice: Choice
+SHADOWDARK.ancestry.fixed: Fixed
 SHADOWDARK.ancestry.languages.label: Ursprungsspråk
 SHADOWDARK.ancestry.languages.prompt: Välj språk...
 SHADOWDARK.ancestry.nametable.label: Slumpmässig namntabell
 SHADOWDARK.ancestry.nametable.placeholder: Dra rulltabell hit
-SHADOWDARK.ancestry.talents.count.label: Antal val
+SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
+SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.ancestry.talents.label: Ursprungstalanger
 SHADOWDARK.ancestry.talents.prompt: Välj talang...
-SHADOWDARK.ancestry.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.app.active_effects.title: Aktiva effekter
 SHADOWDARK.app.gem_bag.sell_all: Sälj alla ädelstenar
 SHADOWDARK.app.gem_bag.title: Ädelstenspåse
@@ -47,12 +50,12 @@ SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Det gick inte att skapa spelarkaraktär {error}
 SHADOWDARK.apps.character-generator.error.name: Karaktärens namn får inte vara tomt
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Det går inte att rulla ett slumpmässigt namn utan ett valt ursprung
+SHADOWDARK.apps.character-generator.gear: Gear
+SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.starting_gold: Starting Gold
-SHADOWDARK.apps.character-generator.stats: Stats
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
+SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
 SHADOWDARK.apps.character-generator.type: Type
 SHADOWDARK.apps.character-generator.update_character: Update Character
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Vill du ta bort {effectName} effekten?
@@ -86,7 +89,9 @@ SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
+SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
@@ -159,12 +164,11 @@ SHADOWDARK.chat.spell_roll.title: "Kastar {name} som grad {tier} med svårighets
 SHADOWDARK.chat.use_ability.failure: "{name} misslyckades med att använda {ability} förmågan"
 SHADOWDARK.chat.use_ability.success: "{name} lyckades med {ability} förmågan"
 SHADOWDARK.chat.use_ability.title: "Använder förmåga"
-SHADOWDARK.chat.welcome_message.intro: "För att snabbt bekanta dig med systemet, kolla in de guidade turer genom att klicka på följande knapp:"
 SHADOWDARK.chat.welcome_message.issue_tracker_button: Ärendehanteringssystem
 SHADOWDARK.chat.welcome_message.issues: "Om du hittar några problem eller har idéer för nya funktioner för systemet. Kolla in vår ärendehanterare:"
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG för Foundry
-SHADOWDARK.chat.welcome_message.tour_button: Guidade turer för Shadowdark RPG
 SHADOWDARK.chatcard.default: Rulla
+SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Förmåga
 SHADOWDARK.class-ability.available.label: Tillgänglig
 SHADOWDARK.class-ability.dc.label: DC
@@ -173,10 +177,14 @@ SHADOWDARK.class-ability.limited-uses.label: Begränsade användningar?
 SHADOWDARK.class-ability.lose_on_failure.label: Förlora vid misslyckande?
 SHADOWDARK.class-ability.lost.label: Förlorad
 SHADOWDARK.class-ability.maximum.label: Maximum
+SHADOWDARK.class-ability.options: Options
 SHADOWDARK.class.armor.all.label: All rustning
 SHADOWDARK.class.armor.label: Rustning
 SHADOWDARK.class.armor.prompt: Välj rustning...
+SHADOWDARK.class.choice_count: Choice Count
+SHADOWDARK.class.choice: Choice
 SHADOWDARK.class.fighter: Krigare
+SHADOWDARK.class.fixed: Fixed
 SHADOWDARK.class.hit_points.label: Rulla HP Tärning
 SHADOWDARK.class.language_choices.count.label: Antal val
 SHADOWDARK.class.language_choices.label: Språkval
@@ -215,6 +223,11 @@ SHADOWDARK.dialog.ability_check.int: Intelligens Check
 SHADOWDARK.dialog.ability_check.str: Styrke Check
 SHADOWDARK.dialog.ability_check.title: Förmåge Check
 SHADOWDARK.dialog.ability_check.wis: Vishet Check
+SHADOWDARK.dialog.create_custom_item: Create Custom Item
+SHADOWDARK.dialog.create_treasure: Create Treasure
+SHADOWDARK.dialog.create: Create
+SHADOWDARK.dialog.edit_hp.title: Edit HP
+SHADOWDARK.dialog.edit_stats.title: Edit Stats
 SHADOWDARK.dialog.effect.choice.armor: Välj rustningstyp
 SHADOWDARK.dialog.effect.choice.attribute: Välj attribut
 SHADOWDARK.dialog.effect.choice.damage_die: Välj skadetärning
@@ -274,6 +287,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Välj rustningsegenskaper
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
 SHADOWDARK.dialog.submit: Skicka
 SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
+SHADOWDARK.dialog.type_here: Type Here
 SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Timmar
 SHADOWDARK.effect_duration.minutes: Minuter
@@ -282,13 +296,12 @@ SHADOWDARK.effect_duration.turns: Omgångar
 SHADOWDARK.effect_duration.unlimited: Obegränsad
 SHADOWDARK.effect.custom: Anpassade effekter
 SHADOWDARK.effect.footer.add_custom: Lägg till egen effekt
-SHADOWDARK.effect.header.active: Aktiv
 SHADOWDARK.effect.header.changes: Ändringar
 SHADOWDARK.effect.header.delete: Ta bort
 SHADOWDARK.effect.header.edit: Ändra
-SHADOWDARK.effect.header.inactive: Inaktiv
 SHADOWDARK.effect.header.name: Namn
 SHADOWDARK.effect.header.options: Alternativ
+SHADOWDARK.effect.header.toggle_active: Toggle Active
 SHADOWDARK.effect.header.transfer: Överför
 SHADOWDARK.effect.item: Föremålseffekter
 SHADOWDARK.effect.new: Ny effekt
@@ -314,10 +327,14 @@ SHADOWDARK.hotbar.moreThanOneItemWithName: Mer än ett objekt som hittats med de
 SHADOWDARK.hotbar.noActorSelected: Du måste välja en aktör för att använda detta makro
 SHADOWDARK.hotbar.noItemWithName: Inget sådant objekt hittades på karaktären
 SHADOWDARK.hotbar.spellLost: Besvärjelse inte tillgänglig
+SHADOWDARK.inventory.carried_gear: Carried Gear
 SHADOWDARK.inventory.coins: Mynt
+SHADOWDARK.inventory.equipped_gear: Equipped Gear
+SHADOWDARK.inventory.gear: Gear
+SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
-SHADOWDARK.inventory.item.light_used: (delvis använd)
+SHADOWDARK.inventory.item.light_used: (used)
 SHADOWDARK.inventory.label.quantity: Kvantitet
 SHADOWDARK.inventory.label.slots: Platser
 SHADOWDARK.inventory.section.armor: Rustning
@@ -330,6 +347,7 @@ SHADOWDARK.inventory.section.weapon: Vapen
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Använda
 SHADOWDARK.inventory.slots: Platser
+SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.tooltip.gem_bag: Öppna ädelstenspåse
 SHADOWDARK.inventory.tooltip.item_decrement: Minska kvantitet
 SHADOWDARK.inventory.tooltip.item_increment: Öka kvantitet
@@ -342,6 +360,7 @@ SHADOWDARK.inventory.total_gems: Totalt antal ädelstenar
 SHADOWDARK.item_type.armor: Rustning
 SHADOWDARK.item_type.basic: Grundläggande
 SHADOWDARK.item_type.gem: Ädelsten
+SHADOWDARK.item_type.potion: Potion
 SHADOWDARK.item_type.spell: Besvärjelse
 SHADOWDARK.item_type.talent: Talang
 SHADOWDARK.item_type.weapon: Vapen
@@ -433,6 +452,7 @@ SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Förmågeförändrin
 SHADOWDARK.item.name_from_spell.Potion: Brygd av {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll av {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Trollstav från {spellName}
+SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.npc_attack_bonus: Attackbonus
 SHADOWDARK.item.npc_attack_count: Antal Attacker
 SHADOWDARK.item.npc_attack_damage_formula: Skadeformel
@@ -442,6 +462,7 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties: Egenskaper
 SHADOWDARK.item.scroll.label: Pergamentrulle
+SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Källa
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_class: Besvärjelseklass
@@ -452,7 +473,10 @@ SHADOWDARK.item.spell_tier: Grad
 SHADOWDARK.item.spell.label: Besvärjelse
 SHADOWDARK.item.stashed.label: Undanlagd
 SHADOWDARK.item.talent_class: Talangklass
+SHADOWDARK.item.treasure_name: Treasure Name
+SHADOWDARK.item.treasure_value: Treasure Value
 SHADOWDARK.item.treasure: Skatt
+SHADOWDARK.item.type: Item Type
 SHADOWDARK.item.wand.label: Trollspö
 SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Skada
@@ -506,8 +530,7 @@ SHADOWDARK.light-source.pick-up-lightsource.tooltip: Plocka upp ljuskälla
 SHADOWDARK.light-tracker.active: Aktiv
 SHADOWDARK.light-tracker.paused: Pausad
 SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title.prefix: Ljus
-SHADOWDARK.light-tracker.title.suffix: Spårare
+SHADOWDARK.light-tracker.title: Light Tracker
 SHADOWDARK.light-tracker.user_warning: En eller flera användare har inte valt en karaktär
 SHADOWDARK.macro.error.caught_error: "Makro '{macro}' misslyckades med följande fel: {error}"
 SHADOWDARK.macro.error.gm_role_required: Makro '{macro}' kräver att du har användarrollen 'Game Master'
@@ -601,6 +624,8 @@ SHADOWDARK.settings.use_clockwise_initiative.name: Använd medsols initiativ
 SHADOWDARK.settings.use_pulp_mode.hint: Visar tur-tokens som ett numeriskt värde istället för en kryssruta
 SHADOWDARK.settings.use_pulp_mode.name: Aktivera pulp-läge
 SHADOWDARK.sheet.abilities.label: Förmågor
+SHADOWDARK.sheet.abilities.modifiers: Modifiers
+SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Diverse
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Minska tillgängliga användningar
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Öka tillgängliga användningar
@@ -641,8 +666,10 @@ SHADOWDARK.sheet.player.ancestry.tooltip: Din karaktärs kulturella och ursprung
 SHADOWDARK.sheet.player.available_spells: Tillgängliga besvärjelser
 SHADOWDARK.sheet.player.background.label: Bakgrund
 SHADOWDARK.sheet.player.background.tooltip: Din historia och tidigare erfarenhet. Du är skicklig på uppgifter med anknytning till din bakgrund.
+SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Välsignelser
 SHADOWDARK.sheet.player.boons.label: Favörer
+SHADOWDARK.sheet.player.boons.name: Boon Name
 SHADOWDARK.sheet.player.boons.oaths.label: Eder
 SHADOWDARK.sheet.player.boons.secrets.label: Hemligheter
 SHADOWDARK.sheet.player.class_spells: Class Spells
@@ -655,11 +682,11 @@ SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
 SHADOWDARK.sheet.player.name.label: Namn
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
-SHADOWDARK.sheet.player.roll_initiative: Rulla initiativ
+SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: Grad
 SHADOWDARK.sheet.player.spells: Besvärjelser
 SHADOWDARK.sheet.player.tab.abilities: Förmågor
-SHADOWDARK.sheet.player.tab.background: Bakgrund
+SHADOWDARK.sheet.player.tab.details: Details
 SHADOWDARK.sheet.player.tab.inventory: Inventarie
 SHADOWDARK.sheet.player.tab.notes: Anteckningar
 SHADOWDARK.sheet.player.tab.spells: Besvärjelser
@@ -669,6 +696,8 @@ SHADOWDARK.sheet.player.talents_name: Namn
 SHADOWDARK.sheet.player.talents: Talanger
 SHADOWDARK.sheet.player.title: Titel
 SHADOWDARK.sheet.player.toggle_ability_lost: Växla förlorad förmåga
+SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
+SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Ange Förlorad
 SHADOWDARK.sheet.player.tooltip.cast_spell: Kasta besvärjelse
 SHADOWDARK.sheet.player.tooltip.learn_spell: Lär dig besvärjelse

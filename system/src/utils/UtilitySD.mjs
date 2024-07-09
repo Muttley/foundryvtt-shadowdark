@@ -97,6 +97,16 @@ export default class UtilitySD {
 		}
 	}
 
+	static getFromUuidSync(uuid) {
+		const itemObj =  fromUuidSync(uuid);
+		if (itemObj) {
+			return itemObj;
+		}
+		else {
+			return {name: "[Invalid ID]", uuid: uuid};
+		}
+	}
+
 	static getMessageStyles() {
 		const messageStyles = this.foundryMinVersion(12)
 			? CONST.CHAT_MESSAGE_STYLES
@@ -168,7 +178,11 @@ export default class UtilitySD {
 
 					// Ask for user input
 					let linkedName;
-					[c.value, linkedName] = await item._handlePredefinedEffect(effectKey);
+					[c.value, linkedName] = await item._handlePredefinedEffect(
+						effectKey,
+						null,
+						name
+					);
 
 					if (c.value) {
 						name += ` (${linkedName})`;
@@ -257,5 +271,34 @@ export default class UtilitySD {
 				return false;
 			}
 		}
+	}
+
+	static async toggleItemDetails(target) {
+		const listObj = $(target).parent();
+
+		// if details are already shown, close details
+		if (listObj.hasClass("expanded")) {
+			const detailsDiv = listObj.find(".item-details");
+			detailsDiv.slideUp(200, () => detailsDiv.remove());
+		}
+		else {
+
+			const itemId = listObj.data("uuid");
+			const item = await fromUuid(itemId);
+
+			let details = "";
+			if (item) {
+				details = await item.getDetailsContent();
+			}
+
+			const detailsDiv = document.createElement("div");
+			detailsDiv.setAttribute("style", "display: none");
+			detailsDiv.classList.add("item-details");
+			detailsDiv.insertAdjacentHTML("afterbegin", details);
+			listObj.append(detailsDiv);
+			$(detailsDiv).slideDown(200);
+		}
+
+		listObj.toggleClass("expanded");
 	}
 }

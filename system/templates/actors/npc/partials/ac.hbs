@@ -1,13 +1,13 @@
-<div class="value-box__bold">
-	<label class="ac-header">{{localize 'SHADOWDARK.sheet.actor.ac'}}</label>
-	<div class="ac">
-		<div class="ac-value">
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.sheet.actor.ac'}}</label>
+		<span></span>
+	</div>
+	<div class="content centered larger">
 			{{numberInput
 				actor.system.attributes.ac.value
 				name="system.attributes.ac.value"
-				class="ac-value"
 				placeholder="0"
 			}}
-		</div>
 	</div>
 </div>

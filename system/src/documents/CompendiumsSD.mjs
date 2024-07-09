@@ -58,6 +58,18 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}
 
+	static async ancestryNameTables(filterSources=true) {
+		const documents = await CompendiumsSD._documents(
+			"RollTable", null, filterSources
+		);
+
+		return this._collectionFromArray(
+			documents.filter(
+				document => document.name.match(/Character\s+Names/i)
+			)
+		);
+	}
+
 	static async ancestryTalents(filterSources=true) {
 		return CompendiumsSD.talents("ancestry", filterSources);
 	}

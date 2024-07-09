@@ -1,12 +1,11 @@
-<div class="item-details">
-	<div class="boon-detail">
-		<label>{{localize 'SHADOWDARK.boon.type.label'}}</label>
-		<select name="system.boonType">
-			{{selectOptions
-				config.BOON_TYPES
-				selected=system.boonType
-				localize=false
-			}}
-		</select>
-	</div>
+<div class="item-grid">
+	<h3>{{localize 'SHADOWDARK.boon.type.label'}}</h3>
+	<select name="system.boonType">
+		{{selectOptions
+			config.BOON_TYPES
+			selected=system.boonType
+			localize=false
+		}}
+	</select>
 </div>
+

@@ -1,10 +1,10 @@
 {{!-- Character Details --}}
-<div class="box-style ">
+<div class="SD-box" style="grid-row: span 7">
     <div class="header">
-        <label>Details</label>
+        <label>{{localize "SHADOWDARK.sheet.item.tab.details"}}</label>
         <span></span>
     </div>
-    <div class="content large-style">
+    <div class="content details">
 
         {{!-- Choice Ancestry Talents --}}
         {{#if ancestryTalents.choice}}
@@ -72,7 +72,7 @@
             <fieldset>
             <legend>
                 <a class="fas fa-square-xmark" data-action='edit-languages'></a>
-                <b> Languages</b>
+                <b> {{localize "SHADOWDARK.sheet.player.languages"}}</b>
             </legend>
             {{#each langData.fixed as |value key|}}
                 {{lookup ../languages .}}{{#unless @last}}, {{/unless}}
@@ -80,7 +80,7 @@
 
             {{#if langData.ancestry.select}}
             <hr>
-                {{> cg-language-choice 
+                {{> cg-language-choice
                     value=langData.ancestry
                     label=""
                     key="ancestry"
@@ -89,7 +89,7 @@
 
             {{#if langData.class.select}}
             <hr>
-                {{> cg-language-choice 
+                {{> cg-language-choice
                     value=langData.class
                     label=""
                     key="class"
@@ -98,16 +98,16 @@
 
             {{#if langData.common.select}}
             <hr>
-                {{> cg-language-choice 
+                {{> cg-language-choice
                     value=langData.common
                     label="Common"
                     key="common"
                 }}
             {{/if}}
-            
+
             {{#if langData.rare.select}}
             <hr>
-                {{> cg-language-choice 
+                {{> cg-language-choice
                     value=langData.rare
                     label="Rare"
                     key="rare"

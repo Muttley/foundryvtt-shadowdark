@@ -1,7 +1,11 @@
-<b>{{{numAttacks}}} <a data-action="item-attack" data-item-id="{{itemId}}">{{attackName}}</b>
-({{ranges}})
-{{#ifCond attackBonus '!=' 0}}{{numberFormat attackBonus decimals=0 sign=true}}{{/ifCond}}
-{{#ifCond attackType '!==' "special"}}
-({{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond special '!==' ''}} + {{special}}{{/ifCond}})
-{{/ifCond}}
+<a class="rollable" data-action="item-attack" data-item-id="{{itemId}}">
+	<i class="fas fa-dice-d20"></i>
+	<b style="font-size:16px">{{{numAttacks}}} {{attackName}}</b>
+	({{ranges}})
+	{{#ifCond attackBonus '!=' 0}}
+		{{numberFormat attackBonus decimals=0 sign=true}}
+	{{/ifCond}}
+	{{#ifCond attackType '!==' "special"}}
+		({{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond special '!==' ''}} + {{special}}{{/ifCond}})
+	{{/ifCond}}
 </a>

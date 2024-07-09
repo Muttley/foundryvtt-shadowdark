@@ -1,4 +1,5 @@
-<b>{{weaponName}} ({{handedness}})</b>,
+<b style="font-size:16px">{{weaponName}}</b>
+({{handedness}}),
 {{numberFormat attackBonus decimals=0 sign=true}}
 ({{attackRange}}),
 {{baseDamage}}{{#ifCond bonusDamage '!=' 0}}{{numberFormat bonusDamage decimals=0 sign=true}}{{/ifCond}}{{#ifCond extraDamageDice '!==' ''}}+{{extraDamageDice}}{{/ifCond}}{{#ifCond properties '!==' ''}}, {{properties}}{{/ifCond}}

@@ -1,8 +1,8 @@
 {
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
-	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "2.2.2",
+	"description": "A system for playing the Shadowdark RPG from Arcane Library",
+	"version": "3.0.0",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "12"
@@ -298,10 +298,14 @@
 			]
 		}
 	],
-	"socket": true,
+	"grid": {
+		"distance": 5,
+		"units": "ft"
+	},
 	"gridDistance": 5,
+	"gridUnits": "ft",
+	"socket": true,
 	"initiative": "@initiativeFormula + @initiativeBonus",
 	"primaryTokenAttribute": "attributes.hp",
-	"gridUnits": "ft",
 	"background": "systems/shadowdark/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
 }

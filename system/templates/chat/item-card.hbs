@@ -92,7 +92,7 @@
 	{{/if}}
 
 	{{#if isNPC}}
-		{{#unless isSpell}}
+		{{#ifEq data.item.type "NPC Attack"}}
 			{{#ifNeq data.rolls.main.critical "failure"}}
 				<div class="card-damage-rolls">
 					<div
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 			{{/ifNeq}}
-		{{/unless}}
+		{{/ifEq}}
 	{{/if}}
 
 	{{#if data.item.system.damage.special}}
@@ -121,7 +121,7 @@
 			<ul class="tags">
 				<li class="tag tag_secondary tag_small">
 					{{localize "SHADOWDARK.item.weapon_type"}}:
-					{{fromConfig "WEAPON_TYPES" data.item.system.type}}
+					{{fromConfig "WEAPON_TYPES" data.attackType}}
 				</li>
 				<li class="tag tag_secondary tag_small">
 					{{localize "SHADOWDARK.item.weapon_range"}}:
