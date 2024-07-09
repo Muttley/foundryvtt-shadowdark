@@ -32,9 +32,14 @@
 ## Chores
 * [#813] Merged Finnish language updates from Crowdin
 * [#829] Remove all Tours
+
+	- **NOTE:** We have found that the Tours are very fragile and onerous to maintain; needing to be tested/updated when even minor changes are made to the interface.  Therefore we are removing them and will rely on alternate methods of teaching the system going forward.
+
 * [#840] Remove Roll Initiative button from character sheet
 
-**NOTE:** We have found that the Tours are very fragile and onerous to maintain; needing to be tested/updated when even minor changes are made to the interface.  Therefore we are removing them and will rely on alternate methods of teaching the system.
+	- **NOTE:** As part of the redesign of the character sheets we have decided that this feature doesn't really fit the design, and as rolling initiative is easily done via the combat tracker is unnecessary.
+
+* [#843] Remove quench tests
 
 Many thanks to *andrewbeard* for contributing fixes in this build
 

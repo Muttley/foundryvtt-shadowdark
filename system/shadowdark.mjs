@@ -22,7 +22,6 @@ import {
 	HooksInitSD,
 } from "./src/hooks.mjs";
 
-import "./src/testing/index.mjs";
 import listenOnSocket from "./src/socket.mjs";
 
 /* -------------------------------------------- */
