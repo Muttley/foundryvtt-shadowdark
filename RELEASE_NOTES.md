@@ -14,8 +14,10 @@
 	- `system.attributes.ac.value` now always holds the current AC
 
 * [#820] All ability scores now store a total value of base stats + modifiers. e.g. `system.abilities.str.total`
+* [#833] Implemented rolls for NPC special attacks
 
 ## Bugfixes
+* [#757] Special Attack Life Drain doesn't roll for attack
 * [#809] Add new `grid.distance` and `grid.units` values to `system.json` *(Foundry V12 compatibility)*
 * [#811] `description` typo in `system.json`
 * [#814] The roll initiative button on the player sheet will no longer double roll when re-rolling initiative
@@ -23,6 +25,8 @@
 * [#822] The spellbook now works for Knight of St. Ydris and other classes that use another class's spell list
 * [#832] Melee weapons with the "Thrown" property now rolling correctly when used as a ranged attack
 * [#835] Update Sleep spell description to the latest version
+* [#837] AC not displaying consistently when adding effects
+* [#839] Free Carry item calculation wrong if you have duplicate items instead of just using item quantity
 
 ## Chores
 * [#813] Merged Finnish language updates from Crowdin

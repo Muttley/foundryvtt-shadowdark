@@ -827,6 +827,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			gems: 0,
 		};
 
+		const freeCarrySeen = {};
+
 		for (const i of this._sortAllItems(context)) {
 			if (i.system.isPhysical && i.type !== "Gem") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
@@ -834,7 +836,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				// We calculate how many slots are used by this item, taking
 				// into account the quantity and any free items.
 				//
-				const freeCarry = i.system.slots.free_carry;
+				let freeCarry = i.system.slots.free_carry;
+
+				if (Object.hasOwn(freeCarrySeen, i.name)) {
+					freeCarry = Math.max(0, freeCarry - freeCarrySeen[i.name]);
+					freeCarrySeen[i.name] += freeCarry;
+				}
+				else {
+					freeCarrySeen[i.name] = freeCarry;
+				}
+
 				const perSlot = i.system.slots.per_slot;
 				const quantity = i.system.quantity;
 				const slotsUsed = i.system.slots.slots_used;
