@@ -51,7 +51,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 
 		before(async () => {
 			_p = await createMockPlayer();
-			await _p.updateArmorClass();
+			await _p.getArmorClass();
 			await waitForInput();
 		});
 
@@ -142,7 +142,7 @@ export default ({ describe, it, before, after, afterEach, expect }) => {
 				expect(_pe[0]).is.not.undefined;
 				expect(_p.items.size).equal(1);
 
-				await _p.updateArmorClass();
+				await _p.getArmorClass();
 				await waitForInput();
 
 				expect(_p.system.attributes.ac.value).equal(11);

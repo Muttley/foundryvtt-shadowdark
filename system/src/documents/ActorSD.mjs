@@ -222,7 +222,6 @@ export default class ActorSD extends Actor {
 
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
-		this.updateArmorClass();
 	}
 
 
@@ -712,7 +711,117 @@ export default class ActorSD extends Actor {
 	}
 
 
-	getArmorClass() {
+	async getArmorClass() {
+		const dexModifier = this.abilityModifier("dex");
+
+		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
+		baseArmorClass += dexModifier;
+
+		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
+			const attributeBonus = this.abilityModifier(attribute);
+			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
+		}
+
+		let newArmorClass = baseArmorClass;
+		let shieldBonus = 0;
+
+		const acOverride = this.system.attributes.ac?.override ?? null;
+		if (Number.isInteger(acOverride)) {
+			// AC is being overridden by an effect so we just use that value
+			// and ignore everything else
+			newArmorClass = acOverride;
+		}
+		else {
+			let armorMasteryBonus = 0;
+
+			const equippedArmorItems = this.items.filter(
+				item => item.type === "Armor" && item.system.equipped
+			);
+			const equippedArmor = [];
+			const equippedShields = [];
+
+			for (const item of equippedArmorItems) {
+				if (await item.isAShield()) {
+					equippedShields.push(item);
+				}
+				else {
+					equippedArmor.push(item);
+				}
+			}
+
+			if (equippedShields.length > 0) {
+				const firstShield = equippedShields[0];
+				shieldBonus = firstShield.system.ac.modifier;
+
+				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
+					a => a === firstShield.name.slugify()
+							|| a === firstShield.system.baseArmor
+				).length;
+			}
+
+			if (equippedArmor.length > 0) {
+				newArmorClass = 0;
+
+				let bestAttributeBonus = null;
+				let baseArmorClassApplied = false;
+
+				for (const armor of equippedArmor) {
+
+					// Check if armor mastery should apply to the AC.  Multiple
+					// mastery levels should stack
+					//
+					const masteryLevels = this.system.bonuses.armorMastery.filter(
+						a => a === armor.name.slugify()
+							|| a === armor.system.baseArmor
+					);
+					armorMasteryBonus += masteryLevels.length;
+
+					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
+
+					newArmorClass += armor.system.ac.base;
+					newArmorClass += armor.system.ac.modifier;
+
+					const attribute = armor.system.ac.attribute;
+					if (attribute) {
+						const attributeBonus = this.abilityModifier(attribute);
+						if (bestAttributeBonus === null) {
+							bestAttributeBonus = attributeBonus;
+						}
+						else {
+							bestAttributeBonus =
+								attributeBonus > bestAttributeBonus
+									? attributeBonus
+									: bestAttributeBonus;
+						}
+					}
+				}
+
+				if (!baseArmorClassApplied) {
+					// None of the armor we're wearing has a base value, only
+					// bonuses so we will use the default base class of
+					// 10+DEX to allow for unarmored characters wearing Bracers
+					// of defense (as an example)
+					//
+					newArmorClass += baseArmorClass;
+				}
+
+				newArmorClass += bestAttributeBonus;
+				newArmorClass += armorMasteryBonus;
+				newArmorClass += shieldBonus;
+			}
+			else if (shieldBonus <= 0) {
+				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
+			}
+			else {
+				newArmorClass += shieldBonus;
+			}
+
+			// Add AC from bonus effects
+			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
+		}
+
+		this.update({"system.attributes.ac.value": newArmorClass});
+
 		return this.system.attributes.ac.value;
 	}
 
@@ -1180,120 +1289,6 @@ export default class ActorSD extends Actor {
 
 		await this.changeLightSettings(lightData);
 	}
-
-
-	async updateArmorClass() {
-		const dexModifier = this.abilityModifier("dex");
-
-		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
-		baseArmorClass += dexModifier;
-
-		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
-			const attributeBonus = this.abilityModifier(attribute);
-			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
-		}
-
-		let newArmorClass = baseArmorClass;
-		let shieldBonus = 0;
-
-		const acOverride = this.system.attributes.ac?.override ?? null;
-		if (Number.isInteger(acOverride)) {
-			// AC is being overridden by an effect so we just use that value
-			// and ignore everything else
-			newArmorClass = acOverride;
-		}
-		else {
-			let armorMasteryBonus = 0;
-
-			const equippedArmorItems = this.items.filter(
-				item => item.type === "Armor" && item.system.equipped
-			);
-			const equippedArmor = [];
-			const equippedShields = [];
-
-			for (const item of equippedArmorItems) {
-				if (await item.isAShield()) {
-					equippedShields.push(item);
-				}
-				else {
-					equippedArmor.push(item);
-				}
-			}
-
-			if (equippedShields.length > 0) {
-				const firstShield = equippedShields[0];
-				shieldBonus = firstShield.system.ac.modifier;
-
-				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
-					a => a === firstShield.name.slugify()
-							|| a === firstShield.system.baseArmor
-				).length;
-			}
-
-			if (equippedArmor.length > 0) {
-				newArmorClass = 0;
-
-				let bestAttributeBonus = null;
-				let baseArmorClassApplied = false;
-
-				for (const armor of equippedArmor) {
-
-					// Check if armor mastery should apply to the AC.  Multiple
-					// mastery levels should stack
-					//
-					const masteryLevels = this.system.bonuses.armorMastery.filter(
-						a => a === armor.name.slugify()
-							|| a === armor.system.baseArmor
-					);
-					armorMasteryBonus += masteryLevels.length;
-
-					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
-
-					newArmorClass += armor.system.ac.base;
-					newArmorClass += armor.system.ac.modifier;
-
-					const attribute = armor.system.ac.attribute;
-					if (attribute) {
-						const attributeBonus = this.abilityModifier(attribute);
-						if (bestAttributeBonus === null) {
-							bestAttributeBonus = attributeBonus;
-						}
-						else {
-							bestAttributeBonus =
-								attributeBonus > bestAttributeBonus
-									? attributeBonus
-									: bestAttributeBonus;
-						}
-					}
-				}
-
-				if (!baseArmorClassApplied) {
-					// None of the armor we're wearing has a base value, only
-					// bonuses so we will use the default base class of
-					// 10+DEX to allow for unarmored characters wearing Bracers
-					// of defense (as an example)
-					//
-					newArmorClass += baseArmorClass;
-				}
-
-				newArmorClass += bestAttributeBonus;
-				newArmorClass += armorMasteryBonus;
-				newArmorClass += shieldBonus;
-			}
-			else if (shieldBonus <= 0) {
-				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
-			}
-			else {
-				newArmorClass += shieldBonus;
-			}
-
-			// Add AC from bonus effects
-			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
-		}
-
-		this.system.attributes.ac.value = newArmorClass;
-	}
-
 
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);

@@ -164,8 +164,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
 
-		// await this.actor.updateArmorClass();
-		// context.armorClass = this.actor.getArmorClass();
+		context.system.attributes.ac.value = await this.actor.getArmorClass();
 
 		context.isSpellcaster = await this.actor.isSpellcaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
@@ -646,11 +645,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
-		if (item.type === "Armor") await this.actor.updateArmorClass();
-
-		this.actor.update({
-			"system.attributes.ac.value": this.actor.getArmorClass(),
-		});
 	}
 
 	async _onToggleStashed(event) {
