@@ -71,10 +71,7 @@ Hooks.once("init", () => {
 	CONFIG.DiceSD = dice.DiceSD;
 	CONFIG.Combat.documentClass = documents.EncounterSD;
 
-	// TODO: V11 Compatability legacyTransferral
-	//   Update to use the designed interface as specified here, once implemented into core
-	//   https://github.com/foundryvtt/foundryvtt/issues/9185
-	if (game.version.split(".")[0] >= 11) CONFIG.ActiveEffect.legacyTransferral = true;
+	CONFIG.ActiveEffect.legacyTransferral = false;
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();
