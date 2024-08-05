@@ -5,12 +5,28 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	 */
 
 	/** @inheritdoc */
+	constructor() {
+		super();
+
+		this.importedActor ={};
+		this.gear =[];
+		this.spells =[];
+		this.talents =[];
+		this.errors = {
+			actor: [],
+			gear: [],
+			spells: [],
+			talents: [],
+		};
+	}
+
+	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark-importer"],
-			width: 300,
-			height: 310,
-			resizable: false,
+			classes: ["shadowdark"],
+			width: 450,
+			height: 375,
+			resizable: true,
 		});
 	}
 
@@ -26,33 +42,54 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	}
 
 	/** @inheritdoc */
-	_updateObject(event, formData) {
-		event.preventDefault();
+	activateListeners(html) {
+		super.activateListeners(html);
 
-		try {
-			const json = JSON.parse(formData.json);
-			return this._importActor(json);
-		}
-		catch(error) {
-			ui.notifications.error(`Couldn't parse the JSON. ${error}`);
-		}
+		window.addEventListener("paste", e => this._onPaste(e));
 	}
 
 	/** @inheritdoc */
 	_onSubmit(event) {
 		event.preventDefault();
-		if (event.submitter.className === "open-generator") {
-			return this._openImporter();
-		}
+
 		super._onSubmit(event);
 	}
 
-	/** Specific methods */
+	/** @override */
+	async _updateObject(event, data) {
+		this._createActor();
+	}
 
-	_openImporter() {
-		return new FrameViewer("https://shadowdarklings.net", {
-			title: "Shadowdarklings.net",
-		}).render(true);
+	/** @override */
+	async getData(options) {
+		const data = {
+			actor: this.importedActor,
+			errors: this.errors,
+			gear: this.gear,
+		};
+
+		return data;
+	}
+
+	/**
+	 * Handles pasting of json data
+	 */
+	async _onPaste(event) {
+		// check if values are already loaded
+		if (this.importedActor.name) return;
+
+		let postedJson = "";
+		try {
+			postedJson = JSON.parse(event.clipboardData.getData("text/plain"));
+		}
+		catch(error) {
+			ui.notifications.error("JSON not found in clipboard");
+		}
+
+		if (postedJson) {
+			// load all values from json
+			await this._importActor(postedJson);
+		}
 	}
 
 	/**
@@ -92,6 +129,12 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		return modifiedTalent;
 	}
 
+	async _addTalentEffect(talent, value) {
+		talent.effects[0].changes[0].value = value;
+		talent.name += ` (${value})`;
+		return talent;
+	}
+
 	/**
 	 * Searches a compendium pack and returns the stored data if a match is found
 	 * @param {string} contentName - Name of something that may exist in a compendium
@@ -112,12 +155,10 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	/**
 	 * Searches the compendiums for items and puts them in an array
 	 * @param {JSON} json - JSON data from the Shadowdarklings.net site
-	 * @returns {Array<ItemSD>}
 	 */
-	async _getGear(json) {
-		const items = [];
+	async _loadGear(json) {
 
-		if (json.gear.length === 0) return items;
+		if (json.gear.length === 0) return;
 
 		await Promise.all(json.gear.map(async item => {
 			for (let i = 1; i <= item.quantity; i++) {
@@ -127,12 +168,42 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				if (itemName.match(/caltrops/i)) itemName = "Caltrops";
 
 				const foundItem = await this._findInCompendium(itemName, "shadowdark.gear");
-
-				if (foundItem) items.push(foundItem);
+				if (foundItem) {
+					this.gear.push(foundItem);
+				}
+				else {
+					this.errors.gear.push(itemName);
+				}
 			}
 		}));
 
-		return items;
+	}
+
+	/**
+	 * Searches the compendiums for items and puts them in an array
+	 * @param {JSON} json - JSON data from the Shadowdarklings.net site
+	 */
+	async _loadSpells(json) {
+
+		for (const spell of json.spellsKnown.split(/\s*,\s*/)) {
+			console.log(spell);
+			const foundSpell = await this._findInCompendium(spell, "shadowdark.spells");
+			if (foundSpell) {
+				this.spells.push(foundSpell);
+			}
+			else {
+				this.errors.spells.push(spell);
+			}
+		}
+	}
+
+	async _setCharacterValue(valueStr, compendiumArray) {
+		// Deity
+		const deities = await shadowdark.compendiums.deities(false);
+		const deity = deities.find(
+			i => i.name.toLowerCase() === json.deity.toLowerCase()
+		);
+		importedActor.system.deity = deity?.uuid ?? "";
 	}
 
 	/**
@@ -141,7 +212,8 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	 * @returns {ActorSD}
 	 */
 	async _importActor(json) {
-		const importedActor = {
+		// set template for new actor
+		this.importedActor = {
 			name: json.name,
 			type: "Player",
 			system: {
@@ -180,7 +252,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 						base: (json.ancestry === "Dwarf") ? json.maxHitPoints - 2 : json.maxHitPoints,
 					},
 				},
-				background: json.background,
+				background: "",
 				class: "",
 				coins: {
 					gp: json.gold,
@@ -191,7 +263,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				languages: [],
 				level: {
 					value: json.level,
-					xp: 0,
+					xp: json.XP,
 				},
 				slots: json.gearSlotsTotal,
 			},
@@ -203,7 +275,8 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			const ancestry = ancestries.find(
 				i => i.name.toLowerCase() === json.ancestry.toLowerCase()
 			);
-			importedActor.system.ancestry = ancestry?.uuid ?? "";
+			this.importedActor.system.ancestry = ancestry?.uuid ?? "";
+			if (!ancestry) this.errors.actor.push("Ancestry:".concat(json.ancestry));
 		}
 
 		// Background
@@ -211,50 +284,43 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		const background = backgrounds.find(
 			i => i.name.toLowerCase() === json.background.toLowerCase()
 		);
-		importedActor.system.background = background?.uuid ?? "";
+		this.importedActor.system.background = background?.uuid ?? "";
+		if (!background) this.errors.actor.push("Background:".concat(json.background));
 
 		// Class
 		const classes = await shadowdark.compendiums.classes(false);
 		const characterClass = classes.find(
 			i => i.name.toLowerCase() === json.class.toLowerCase()
 		);
-		importedActor.system.class = characterClass?.uuid ?? "";
+		this.importedActor.system.class = characterClass?.uuid ?? "";
+		if (!characterClass) this.errors.actor.push("Class:".concat(json.class));
 
 		// Deity
 		const deities = await shadowdark.compendiums.deities(false);
 		const deity = deities.find(
 			i => i.name.toLowerCase() === json.deity.toLowerCase()
 		);
-		importedActor.system.deity = deity?.uuid ?? "";
+		this.importedActor.system.deity = deity?.uuid ?? "";
+		if (!deity) this.errors.actor.push("Deity:".concat(json.deity));
 
 		// Languages
 		const jsonLanguages = json.languages.toLowerCase().split(", ");
 		const allLanguages = await shadowdark.compendiums.languages([], false);
 		for (const jsonLanguage of jsonLanguages) {
 			const language = allLanguages.find(l => l.name.toLowerCase() === jsonLanguage);
-			if (language) importedActor.system.languages.push(language.uuid);
+			if (language) this.importedActor.system.languages.push(language.uuid);
 		}
 
-		// Gear
-		const items = await this._getGear(json);
+		// Load Gear
+		await this._loadGear(json);
+		console.log(this.gear);
+		console.log(this.errors.gear);
 
-		// Spells
-		const spells = await Promise.all(
-			json.bonuses.filter(b => b.name.includes("Spell:")).map(b => {
-				return this._findInCompendium(b.bonusName, "shadowdark.spells");
-			})
-		);
-
-		// Add spells granted from talents
-		const talentSpells = await Promise.all(json.bonuses
-			.filter(b => b.name === "LearnExtraSpell")
-			.map(b => {
-				return this._findInCompendium(
-					b.bonusName, "shadowdark.spells"
-				);
-			})
-		);
-		if (talentSpells.length > 0) talentSpells.forEach(s => spells.push(s));
+		// Load Spells
+		await this._loadSpells(json);
+		console.log(this.spells);
+		console.log(this.errors.spells);
+		/*
 
 		// Spells & Bonuses
 		const statBonus = {
@@ -522,26 +588,22 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			// need to be zero
 			importedActor.system.abilities[ability].bonus = 0;
 		}
+		*/
+		console.log(this.importedActor);
+		this.render(false);
+	}
 
+	async _createActor() {
 		// Create the actor
-		const newActor = await Actor.create(importedActor);
+		const newActor = await Actor.create(this.importedActor);
 
 		const allItems = [
-			...classAbilities,
-			...items,
-			...spells,
-			...talents,
+			...this.gear,
+			...this.spells,
+			...this.talents,
 		];
 
 		await newActor.createEmbeddedDocuments("Item", allItems);
-
-		await newActor.items.filter(
-			o => o.type === "Talent" && o.system.talentClass === "level"
-		).forEach(async talent => {
-			talent.update({
-				"system.level": 1,
-			});
-		});
 
 		return newActor;
 	}
