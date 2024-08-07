@@ -1,10 +1,52 @@
 {
-	"talents": {
-		"ArmorMastery": "Compendium.shadowdark.talents.Item.BsRPGhKXYwJBI9ex"
+	"Armor": {
+		"Leather Armor": "Compendium.shadowdark.gear.Item.EoTEHXApVDS7rHfw"
+	},
+	"Basic": {
+		"Arrows": "Compendium.shadowdark.gear.Item.XXwA9ZWajYEDmcea",
+		"Backpack": "Compendium.shadowdark.gear.Item.oSnfz4qcWlUL6cDZ",
+		"Caltrops (one bag)": "Compendium.shadowdark.gear.Item.SzpjMuJrhF5nMJ7H",
+		"Club": "Compendium.shadowdark.gear.Item.JM2XN855QYNhgtre",
+		"Crossbow bolts":"Compendium.shadowdark.gear.Item.iv8fMPiRYfsN8ICy",
+		"Crowbar": "Compendium.shadowdark.gear.Item.GbO6CggW71qMkgrG",
+		"Flask or bottle": "Compendium.shadowdark.gear.Item.W2fFimb0y85wmOMb",
+		"Flint and Steel": "Compendium.shadowdark.gear.Item.ERprfuTIFRFEix9G",
+		"Grappling Hook": "Compendium.shadowdark.gear.Item.fqsLWV46NWH0L53l",
+		"Iron Spikes": "Compendium.shadowdark.gear.Item.EPndk3DPOEOSvbga",
+		"Lantern": "Compendium.shadowdark.gear.Item.lCWOUkVp4N1geMRt",
+		"Mirror": "Compendium.shadowdark.gear.Item.GUqtnSXkcytZnNiO",
+		"Oil, flask": "Compendium.shadowdark.gear.Item.80bCpXdZcj0Cz1fE",
+		"Pole": "Compendium.shadowdark.gear.Item.15X5GTX96y339EKY",
+		"Rations": "Compendium.shadowdark.gear.Item.GX6OmWQiE7MzTmjX",
+		"Rope, 60'": "Compendium.shadowdark.gear.Item.6ZRwVHFlh5QiyZWC",
+		"Torch": "Compendium.shadowdark.gear.Item.z3xc7HGysC4ZCU8e"
+	},
+	"Talent": {
+		"armormastery": "Compendium.shadowdark.talents.Item.BsRPGhKXYwJBI9ex",
+		"Plus1ToHit_Melee attacks": "Compendium.shadowdark.talents.Item.93QoQQ6cI7xa4TCm",
+		"Plus1ToHit_Ranged attacks": "Compendium.shadowdark.talents.Item.Y3Ytsye5zrP43w70",
+		"Plus1ToCastingSpells": "Compendium.shadowdark.talents.Item.0WmG5j0Wv685YTqO",
+		"statBonus_STR:+1": "Compendium.shadowdark.talents.Item.IDGFaxKnYJWWuWQ7",
+		"statBonus_DEX:+1": "Compendium.shadowdark.talents.Item.eJHwfYQZ9LmLQeSn",
+		"statBonus_CON:+1": "Compendium.shadowdark.talents.Item.8SXPsiWvG2UcXGgW",
+		"statBonus_INT:+1": "Compendium.shadowdark.talents.Item.LDJCx5syOcenLMZf",
+		"statBonus_WIS:+1": "Compendium.shadowdark.talents.Item.vRW8GSIKWXyOAKbw",
+		"statBonus_CHA:+1": "Compendium.shadowdark.talents.Item.5INkcbMVFxK6cW5Z",
+		"statBonus_STR:+2": "Compendium.shadowdark.talents.Item.6t06nSjj1hd6o5SV",
+		"statBonus_DEX:+2": "Compendium.shadowdark.talents.Item.vIbwotCa1eqCVZMU",
+		"statBonus_CON:+2": "Compendium.shadowdark.talents.Item.ZfaFn8TDum3NXYZN",
+		"statBonus_INT:+2": "Compendium.shadowdark.talents.Item.aRY0hjpvzYpdRbfR",
+		"statBonus_WIS:+2": "Compendium.shadowdark.talents.Item.excvhYcpm1qd09IV",
+		"statBonus_CHA:+2": "Compendium.shadowdark.talents.Item.UE2xABVKD0oCDtdx"
+
+	},
+	"Weapon": {
+		"Dagger": "Compendium.shadowdark.gear.Item.C3mc5OlKPSJNMrng",
+		"Shortbow": "Compendium.shadowdark.gear.Item.UfHAWj5weH111Bea"
 	},
 	"Sources": {
-		"CS1": "cursed-scroll-1",
-		"CS2": "cursed-scroll-2",
-		"CS3": "cursed-scroll-3"
+		"cs1": "cursed-scroll-1",
+		"cs2": "cursed-scroll-2",
+		"cs3": "cursed-scroll-3"
 	}
 }
