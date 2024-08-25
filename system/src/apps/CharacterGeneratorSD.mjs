@@ -400,7 +400,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = this._formatDescription(talentObj.system.description);
+				let fDesc = await this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
@@ -416,7 +416,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (classObj.system.talentChoices) {
 			for (const talent of classObj.system.talentChoices) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = this._formatDescription(talentObj.system.description);
+				let fDesc = await this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
@@ -485,7 +485,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			if (ancestryObj.system.talents) {
 				for (const talent of ancestryObj.system.talents) {
 					let talentObj = await fromUuid(talent);
-					let fDesc = this._formatDescription(talentObj.system.description);
+					let fDesc = await this._formatDescription(talentObj.system.description);
 					talentObj.formattedDescription = fDesc;
 					talentData.push(talentObj);
 				}
@@ -710,9 +710,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return value.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 	}
 
-	_formatDescription(text) {
+	async _formatDescription(text) {
 
-		const description = TextEditor.enrichHTML(
+		const description = await TextEditor.enrichHTML(
 			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
 			{
 				async: false,
