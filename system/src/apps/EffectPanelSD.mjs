@@ -157,22 +157,25 @@ export class EffectPanelControllerSD {
 	get _actorEffects() {
 		const actor = this._actor;
 		if (!actor) return [];
-		const sortedEffects = actor.appliedEffects
-			.map(effect => {
+		const activeEffects = [];
 
+		actor.appliedEffects.forEach(effect => {
+			// only get effects that are applied to the actor
+			if (effect.transfer) {
+
+				const effectData = effect.clone({}, { keepId: true});
+
+				// get the parent object of the effect
+				effectData.parentName = effect.parent.name;
+				if (effectData.parentName !== effect.name) {
+					effectData.effectName = effect.name;
+				}
+
+				// get properties if parent is effect type
 				if (effect.parent.type === "Effect") {
-
-					const effectData = effect.clone({}, { keepId: true});
-					// Set the effect and origin name
-					effectData.parentName = effect.parent.name;
-					if (effectData.parentName !== effect.name) {
-						effectData.effectName = effect.name;
-					}
-
-					// Set the effect category
 					effectData.category = effect.parent.system.category;
+					effectData.hidden = !effect.parent.system.effectPanel.show ?? false;
 
-					// Duration
 					effectData.remainingDuration = effect.parent.remainingDuration;
 					effectData.rounds = (effect.parent.system.duration?.type === "rounds")
 						? effect.parent.system.duration.value
@@ -183,14 +186,18 @@ export class EffectPanelControllerSD {
 
 					// is item hidden
 					effectData.hidden = !effect.parent.system.effectPanel.show ?? false;
-					return effectData;
-				}
-				else {
-					return false;
-				}
-			});
 
-		return sortedEffects;
+				}
+
+				if (effect.parent.type === "Talent") {
+					effectData.talentType = effect.parent.system.talentClass;
+				}
+
+				activeEffects.push(effectData);
+			}
+		});
+
+		return activeEffects;
 	}
 
 	/**
@@ -215,6 +222,7 @@ export class EffectPanelControllerSD {
 
 		effects.forEach(effect => {
 			if (effect.hidden) return;
+			// show non effect type item according to settings
 			if (!effect.category && game.settings.get("shadowdark", "showPassiveEffects")) {
 				passiveEffects.push(effect);
 			}
@@ -269,7 +277,7 @@ export class EffectPanelControllerSD {
 		const $target = $(event.currentTarget);
 		const actor = this._actor;
 		const sourceItem = actor.items.get($target[0].dataset.effectId);
-		if (!sourceItem) return;
+		if (!sourceItem || sourceItem.type !== "Effect") return;
 
 		// TODO: Consider allowing default behavior to just delete effect item in settings.
 		return Dialog.confirm({
