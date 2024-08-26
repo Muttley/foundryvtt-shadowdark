@@ -119,7 +119,7 @@ export default class EffectPanelSD extends Application {
 			});
 
 		expiredEffects.forEach(e => {
-			const i = this._controller._getSource(e);
+			const i = fromUuidSync(e.parent.uuid);
 			i.delete();
 		});
 	}
@@ -157,53 +157,37 @@ export class EffectPanelControllerSD {
 	get _actorEffects() {
 		const actor = this._actor;
 		if (!actor) return [];
-
-		// TODO: V11 Compatability legacyTransferral
-		//   Update to use the designed interface as specified here, once implemented into core
-		//   https://github.com/foundryvtt/foundryvtt/issues/9185
-		const sortedEffects = actor.effects
+		const sortedEffects = actor.appliedEffects
 			.map(effect => {
-				const src = this._getSource(effect);
-				if (!src) return false;
-				const effectData = effect.clone({}, { keepId: true});
 
-				// Set the effect and origin name
-				effectData.effectName = effect.name ?? effect.label;
-				effectData.originName = src.name;
+				if (effect.parent.type === "Effect") {
 
-				// Set the effect category
-				effectData.category = src.system.category;
+					const effectData = effect.clone({}, { keepId: true});
+					// Set the effect and origin name
+					effectData.parentName = effect.parent.name;
+					if (effectData.parentName !== effect.name) {
+						effectData.effectName = effect.name;
+					}
 
-				// Duration
-				effectData.remainingDuration = src.remainingDuration;
-				effectData.rounds = (src.system.duration?.type === "rounds")
-				 ? src.system.duration.value
-				 : 0;
-				effectData.isExpired = effectData.remainingDuration.expired;
+					// Set the effect category
+					effectData.category = effect.parent.system.category;
 
-				effectData.infinite = effectData.remainingDuration.remaining === Infinity;
+					// Duration
+					effectData.remainingDuration = effect.parent.remainingDuration;
+					effectData.rounds = (effect.parent.system.duration?.type === "rounds")
+						? effect.parent.system.duration.value
+						: 0;
+					effectData.isExpired = effectData.remainingDuration.expired;
+					effectData.infinite = effectData.remainingDuration.remaining === Infinity;
+					effectData.temporary = !effectData.infinite;
 
-				// Set the talent type if available
-				effectData.talentType = (src.system.talentClass)
-					? src.system.talentClass
-					: false;
-
-				// Determine if the talent is temporary
-				if (effectData.talentType) {
-					effectData.temporary = false;
-					effectData.hidden = false;
+					// is item hidden
+					effectData.hidden = !effect.parent.system.effectPanel.show ?? false;
+					return effectData;
 				}
 				else {
-					effectData.temporary = true;
-					effectData.hidden = !src.system.effectPanel?.show ?? false;
+					return false;
 				}
-
-				return effectData;
-			})
-			.sort((a, b) => {
-				if (a.temporary) return -1;
-				if (b.temporary) return 1;
-				return 0;
 			});
 
 		return sortedEffects;
@@ -251,21 +235,6 @@ export class EffectPanelControllerSD {
 	}
 
 	/**
-	 * Tries to get the item the effect originates from.
-	 * @param {ActiveEffect} effect - Effect to get source from
-	 * @returns {ItemSD|false}
-	 */
-	_getSource(effect) {
-		if (!effect.origin) return false;
-		try {
-			return fromUuidSync(effect.origin);
-		}
-		catch(Error) {
-			return false;
-		}
-	}
-
-	/**
 	 * Gets the top level position as stored for the user
 	 * @returns {string}
 	 */
@@ -299,14 +268,8 @@ export class EffectPanelControllerSD {
 	async onIconRightClick(event) {
 		const $target = $(event.currentTarget);
 		const actor = this._actor;
-		// TODO: V11 Compatability legacyTransferral
-		//   Update to use the designed interface as specified here, once implemented into core
-		//   https://github.com/foundryvtt/foundryvtt/issues/9185
-		const effect = actor?.effects.get($target[0].dataset.effectId ?? "");
-
-		if (!effect) return;
-
-		const sourceItem = this._getSource(effect);
+		const sourceItem = actor.items.get($target[0].dataset.effectId);
+		if (!sourceItem) return;
 
 		// TODO: Consider allowing default behavior to just delete effect item in settings.
 		return Dialog.confirm({
@@ -334,14 +297,8 @@ export class EffectPanelControllerSD {
 	async onIconClick(event) {
 		const $target = $(event.currentTarget);
 		const actor = this._actor;
-		// TODO: V11 Compatability legacyTransferral
-		//   Update to use the designed interface as specified here, once implemented into core
-		//   https://github.com/foundryvtt/foundryvtt/issues/9185
-		const effect = actor?.effects.get($target[0].dataset.effectId ?? "");
-
-		if (!effect) return;
-
-		const sourceItem = this._getSource(effect);
+		const sourceItem = actor.items.get($target[0].dataset.effectId);
+		if (!sourceItem) return;
 
 		if (event.ctrlKey || event.metaKey) {
 			sourceItem?.sheet.render(true);
