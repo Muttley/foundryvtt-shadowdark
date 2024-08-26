@@ -1,0 +1,163 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.system-shadowdark .sheet.journal-entry .journal-entry-content {
+	background: none;
+	background-color: white;
+};
+
+.system-shadowdark .journal-sheet .journal-header input[type="text"] {
+	background: none;
+	color: black;
+	border: none;
+	border-radius: 0;
+}
+
+.system-shadowdark .journal-sheet .journal-header .title {
+	font-family: "Montserrat-Bold";
+	font-size: 2.2em;
+	font-variant-caps: small-caps;
+}
+
+.system-shadowdark .sheet.journal-entry .journal-entry-page {
+
+	blockquote {
+		border: none;
+		background-color: rgb(182, 219, 198);
+		padding: 8px;
+		margin: 16px;
+
+		p {
+			font-size: 1.15em;
+			font-style: italic;
+		}
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-family: "Montserrat-Bold";
+		font-weight: bold;
+		text-transform: uppercase;
+		color: black;
+		border: none;
+		margin: 0 0 0.5rem;
+		padding: 0;
+	}
+
+	h1 {
+		font-family: "Old Newspaper Font";
+		font-size: 3.5em;
+		font-weight: normal;
+		color: white;
+		background-color: black;
+		width: 100%;
+		text-align: center;
+		text-transform: none;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	h2.fancy {
+		font-family: "JSL Blackletter";
+		text-transform: none;
+		font-size: 2.5em;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	h3 {
+		font-size: 1.4em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	img {
+		border: none;
+	}
+
+	p {
+		font-family: "Montserrat-Medium";
+		font-style: normal;
+		font-size: 1.1em;
+		margin: 0 0 0.5rem;
+	}
+
+	table {
+		border: none;
+		margin-bottom: 1em;
+		margin-top: 1em;
+
+		width: fit-content;
+
+		caption {
+			font-family: "Montserrat-SemiBold";
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1.8;
+			color:white;
+			height: 28px;
+			background: linear-gradient(90deg, transparent 40px, black 40px, black calc(100% - 40px), transparent calc(100% - 40px)),
+			url("../assets/artwork/title_right.png") no-repeat right,
+			url("../assets/artwork/title_left.png") no-repeat left;
+			background-size: auto;
+		}
+
+		p {
+			font-size: 1.1em;
+			margin: 0;
+		}
+
+		tbody {
+			tr {
+				border-top: black;
+				border-top-style: solid;
+				border-top-width: 2px;
+				background-color: white;
+			}
+
+			tr:first-child {
+				font-weight: bold;
+				border: none;
+			}
+		}
+
+		td,
+		th {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	section {
+		.reveal {
+			float: right;
+		}
+
+		.secret {
+			background: rgba(125, 28, 28, 0.2);
+			border: 3px solid;
+			padding: 4px;
+			border-color: rgb(125, 28, 28);
+			border-radius: 8px;
+			padding: 8px;
+			margin: 16px;
+
+			p {
+				font-size: 1.2em;
+			}
+		}
+
+		.revealed {
+			border-color: rgb(28, 125, 34);
+			background: rgba(28, 125, 34, 0.2);
+		}
+	}
+}
