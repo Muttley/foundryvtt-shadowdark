@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/energy-stream-link-spiral-orange.webp",
+	"img": "icons/magic/control/energy-stream-link-spiral-orange.webp",
 	"name": "Alter Self",
 	"origin": "Item.f2RsbovyTLEZvxuF",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

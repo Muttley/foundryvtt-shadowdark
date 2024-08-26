@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Critical Success Threshold",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

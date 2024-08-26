@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/mouth-smile-deception-purple.webp",
+	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
 	"name": "Laughing",
 	"origin": "Item.28PPFz1MYTsfPwzh",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

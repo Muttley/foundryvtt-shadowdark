@@ -5,11 +5,13 @@
 		{
 			"key": "system.abilities.cha.base",
 			"mode": 3,
+			"priority": null,
 			"value": "3"
 		},
 		{
 			"key": "system.abilities.cha.mod",
 			"mode": 3,
+			"priority": null,
 			"value": "-4"
 		}
 	],
@@ -24,11 +26,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/fear-fright-white.webp",
+	"img": "icons/magic/control/fear-fright-white.webp",
 	"name": "Feeble (CHA)",
 	"origin": "Item.h9MTxzrrPmyhEmRL",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

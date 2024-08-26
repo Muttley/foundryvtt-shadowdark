@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Ability Score Improvement (Int)",
 	"origin": "Actor.PTFsYZ8ni3MbSdw8.Item.ziR7s77XEKZFpap3",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": false
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
 }

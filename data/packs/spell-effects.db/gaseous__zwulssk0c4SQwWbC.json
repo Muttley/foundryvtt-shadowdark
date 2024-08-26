@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/air/wind-tornado-wall-blue.webp",
+	"img": "icons/magic/air/wind-tornado-wall-blue.webp",
 	"name": "Gaseous",
 	"origin": "Item.u2mS6xCKAG1oiEWX",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Melee Damage Bonus",
 	"origin": "Actor.CVFznZtBMmHG2w4a.Item.BYfvFLr6JblzNXU0",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": false
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
 }

@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/invertebrates/centipede-brown.webp",
+	"img": "icons/creatures/invertebrates/centipede-brown.webp",
 	"name": "Condition: Bug Brain",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

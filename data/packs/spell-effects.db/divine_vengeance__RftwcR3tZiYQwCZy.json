@@ -38,11 +38,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
 	"name": "Divine Vengeance",
 	"origin": "Item.xOHpjBx4PhrNXQ4U",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

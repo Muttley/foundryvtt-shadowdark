@@ -5,6 +5,7 @@
 		{
 			"key": "system.attributes.ac.override",
 			"mode": 5,
+			"priority": null,
 			"value": "20"
 		}
 	],
@@ -19,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/armor-stone-skin.webp",
+	"img": "icons/magic/defensive/armor-stone-skin.webp",
 	"name": "Stoneskin",
 	"origin": "Compendium.shadowdark.spell-effects.Item.5rK6guXTllcryhLv",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

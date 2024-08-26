@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/commodities/wood/kindling-sticks-yellow.webp",
+	"img": "icons/commodities/wood/kindling-sticks-yellow.webp",
 	"name": "Oak, Ash, Thorn",
 	"origin": "Item.H7v5Izebo8O45DXB",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

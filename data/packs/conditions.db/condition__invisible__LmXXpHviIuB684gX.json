@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/light/explosion-star-glow-silhouette.webp",
+	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
 	"name": "Condition: Invisible",
 	"origin": "Item.SMXbMbXcj5hLvTjY",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

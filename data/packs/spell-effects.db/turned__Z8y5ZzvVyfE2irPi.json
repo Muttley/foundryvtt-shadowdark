@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/death/skeleton-skull-soul-blue.webp",
+	"img": "icons/magic/death/skeleton-skull-soul-blue.webp",
 	"name": "Turned",
 	"origin": "Compendium.shadowdark.spell-effects.Item.T4LUCIffieQPMGsN",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

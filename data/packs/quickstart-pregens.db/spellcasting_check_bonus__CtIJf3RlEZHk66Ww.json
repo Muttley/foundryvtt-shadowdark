@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Spellcasting Check Bonus",
 	"origin": "Actor.RfFy5Nq3izy5oVD6.Item.ufk3xI6cL6wueXj4",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": false
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
 }

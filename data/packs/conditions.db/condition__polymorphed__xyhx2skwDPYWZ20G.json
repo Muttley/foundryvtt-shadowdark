@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
+	"img": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
 	"name": "Condition: Polymorphed",
 	"origin": "Item.rW7oltlWDmteEpV7",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

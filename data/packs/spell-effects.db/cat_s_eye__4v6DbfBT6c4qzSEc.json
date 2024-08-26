@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
+	"img": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
 	"name": "Cat's Eye",
 	"origin": "Item.74WjFjHmUmLAiNGC",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

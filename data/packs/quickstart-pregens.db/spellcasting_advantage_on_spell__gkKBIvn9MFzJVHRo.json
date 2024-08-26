@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/air/air-smoke-casting.webp",
+	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",
 	"origin": "Actor.PTFsYZ8ni3MbSdw8.Item.9IM4SDWD0HsdFNav",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": false
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
 }

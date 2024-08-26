@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/symbols/runes-triangle-magenta.webp",
+	"img": "icons/magic/symbols/runes-triangle-magenta.webp",
 	"name": "Magical Dabbler Bonus",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/equipment/back/cloak-layered-tattered-purple.webp",
+	"img": "icons/equipment/back/cloak-layered-tattered-purple.webp",
 	"name": "Cloak of Night",
 	"origin": "Item.h9MTxzrrPmyhEmRL",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/commodities/metal/plate-steel-pink.webp",
+	"img": "icons/commodities/metal/plate-steel-pink.webp",
 	"name": "Floating disk",
 	"origin": "Item.VMkeCfccn7zp2up7",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

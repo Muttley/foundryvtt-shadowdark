@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/shield-barrier-flaming-pentagon-orange.webp",
+	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-orange.webp",
 	"name": "Protection from Fire",
 	"origin": "Item.rEfRjUeHNEs2Efo6",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }
