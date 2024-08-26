@@ -1,8 +1,16 @@
 # v3.1.0
 
 ## Enhancements
+* [#693] Changes made to active effects on actors will now take effects immediately
 * [#853] CSS Styling for Journals
 * [#856] Beauty pass over Quickstart journals
+
+## Bugfixes
+* [#855] Corrected minor UI bugs
+* [#858] Character Generator now properly displaying text in Foundry v12
+
+## Chores
+* [#332] implemented v11 method of working with Active Effects
 
 ---
 
