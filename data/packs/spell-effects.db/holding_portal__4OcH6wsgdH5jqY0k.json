@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/movement/portal-vortex-orange.webp",
+	"img": "icons/magic/movement/portal-vortex-orange.webp",
 	"name": "Holding Portal",
 	"origin": "Item.q109XEqMceJBEX7m",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

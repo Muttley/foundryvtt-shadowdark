@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/life/heart-shadow-red.webp",
+	"img": "icons/magic/life/heart-shadow-red.webp",
 	"name": "Extra HP Max",
 	"origin": "Item.SXuw8zzD6a8dwmJE",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

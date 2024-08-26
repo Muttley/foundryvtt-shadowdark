@@ -20,10 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
 	"name": "Melee Attack Roll Bonus",
 	"origin": null,
 	"statuses": [
 	],
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

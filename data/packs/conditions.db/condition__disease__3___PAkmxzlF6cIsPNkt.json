@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/death/skull-poison-green.webp",
+	"img": "icons/magic/death/skull-poison-green.webp",
 	"name": "Condition: Disease (3)",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

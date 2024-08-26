@@ -68,11 +68,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
 	"name": "Winter Wolf",
 	"origin": "Item.hVsjl5GZqSajuFU6",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

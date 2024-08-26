@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/sleep-bubble-purple.webp",
+	"img": "icons/magic/control/sleep-bubble-purple.webp",
 	"name": "Asleep",
 	"origin": "Item.FrFilluk4S5VaWut",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

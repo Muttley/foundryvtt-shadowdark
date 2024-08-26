@@ -20,10 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "Ranged Attack Roll Bonus",
 	"origin": null,
 	"statuses": [
 	],
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

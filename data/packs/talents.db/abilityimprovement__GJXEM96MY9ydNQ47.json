@@ -50,11 +50,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "abilityImprovement",
 	"origin": "Item.6iZplEBazA2f66A3",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

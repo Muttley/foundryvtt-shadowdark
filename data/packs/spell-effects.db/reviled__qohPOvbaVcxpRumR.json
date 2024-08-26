@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/social/wave-halt-stop.webp",
+	"img": "icons/skills/social/wave-halt-stop.webp",
 	"name": "Reviled",
 	"origin": "Item.FrFilluk4S5VaWut",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -30,6 +30,7 @@
 		"flags": {
 		},
 		"height": 1,
+		"hexagonalShape": 0,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -41,6 +42,7 @@
 			},
 			"attenuation": 0.5,
 			"bright": 0,
+			"color": null,
 			"coloration": 1,
 			"contrast": 0,
 			"darkness": {
@@ -49,18 +51,36 @@
 			},
 			"dim": 0,
 			"luminosity": 0.5,
+			"negative": false,
+			"priority": 0,
 			"saturation": 0,
 			"shadows": 0
 		},
 		"lockRotation": false,
 		"name": "Cubi",
+		"occludable": {
+			"radius": 0
+		},
 		"prependAdjective": false,
 		"randomImg": false,
+		"ring": {
+			"colors": {
+				"background": null,
+				"ring": null
+			},
+			"effects": 1,
+			"enabled": false,
+			"subject": {
+				"scale": 1,
+				"texture": null
+			}
+		},
 		"rotation": 0,
 		"sight": {
 			"angle": 360,
 			"attenuation": 0.1,
 			"brightness": 0,
+			"color": null,
 			"contrast": 0,
 			"enabled": false,
 			"range": 0,
@@ -68,12 +88,17 @@
 			"visionMode": "basic"
 		},
 		"texture": {
+			"alphaThreshold": 0.75,
+			"anchorX": 0.5,
+			"anchorY": 0.5,
+			"fit": "contain",
 			"offsetX": 0,
 			"offsetY": 0,
 			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
-			"src": "systems/shadowdark/assets/tokens/cowled_token.webp"
+			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
+			"tint": "#ffffff"
 		},
 		"width": 1
 	},

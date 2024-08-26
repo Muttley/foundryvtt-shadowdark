@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
 	"name": "Initiative Advantage",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

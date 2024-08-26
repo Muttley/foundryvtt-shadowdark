@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/nature/wolf-paw-glow-orange.webp",
+	"img": "icons/magic/nature/wolf-paw-glow-orange.webp",
 	"name": "Shapechanged",
 	"origin": "Item.hVsjl5GZqSajuFU6",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

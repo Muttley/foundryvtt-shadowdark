@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/perception/eye-tendrils-web-purple.webp",
+	"img": "icons/magic/perception/eye-tendrils-web-purple.webp",
 	"name": "Perceiving Advantage",
 	"origin": "Item.E9GhofNgwIJ7N2A4",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

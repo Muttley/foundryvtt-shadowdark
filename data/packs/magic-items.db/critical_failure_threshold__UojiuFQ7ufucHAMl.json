@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/life/cross-area-circle-green-white.webp",
+	"img": "icons/magic/life/cross-area-circle-green-white.webp",
 	"name": "Critical Failure Threshold",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }
