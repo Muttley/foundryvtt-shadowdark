@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/sihouette-hold-beam-green.webp",
+	"img": "icons/magic/control/sihouette-hold-beam-green.webp",
 	"name": "Knack (Spellcasting)",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

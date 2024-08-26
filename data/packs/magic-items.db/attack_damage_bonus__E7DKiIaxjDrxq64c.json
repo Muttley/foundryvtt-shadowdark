@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "Attack Damage Bonus",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": false
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
 }

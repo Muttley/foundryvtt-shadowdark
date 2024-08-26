@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/perception/eye-slit-pink.webp",
+	"img": "icons/magic/perception/eye-slit-pink.webp",
 	"name": "Detecting Magic",
 	"origin": "Item.74WjFjHmUmLAiNGC",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

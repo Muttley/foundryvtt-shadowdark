@@ -1,3 +1,11 @@
+# v3.1.0
+
+## Enhancements
+* [#853] CSS Styling for Journals
+* [#856] Beauty pass over Quickstart journals
+
+---
+
 # v3.0.0
 
 ## Enhancements

@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/consumables/fruit/huckleberry.webp",
+	"img": "icons/consumables/fruit/huckleberry.webp",
 	"name": "Enchanted",
 	"origin": "Item.FrFilluk4S5VaWut",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

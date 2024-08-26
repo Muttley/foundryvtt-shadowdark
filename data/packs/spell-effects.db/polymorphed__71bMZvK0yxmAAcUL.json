@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/amphibians/frog-confused-green-blue.webp",
+	"img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
 	"name": "Polymorphed",
 	"origin": "Item.iiLI7kRr7y0PLSXK",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

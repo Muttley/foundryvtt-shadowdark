@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/air/air-smoke-casting.webp",
+	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Floating",
 	"origin": "Item.sLb9GOXx9F6XCb2o",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

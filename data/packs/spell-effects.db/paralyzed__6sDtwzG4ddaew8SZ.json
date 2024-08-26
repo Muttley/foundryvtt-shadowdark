@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Paralyzed",
 	"origin": "Compendium.shadowdark.spell-effects.Item.PUFCnXLjvBQSM2YO",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

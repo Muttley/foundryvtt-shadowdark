@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+	"img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
 	"name": "Weapon Mastery",
 	"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

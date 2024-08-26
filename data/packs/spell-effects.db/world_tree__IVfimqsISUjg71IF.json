@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
 	"name": "World Tree",
 	"origin": "Item.3t26sCGhwGJjEasN",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/social/trading-justice-scale-gold.webp",
+	"img": "icons/skills/social/trading-justice-scale-gold.webp",
 	"name": "Truthful",
 	"origin": "Item.cL5aPfXcad9FtHoK",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

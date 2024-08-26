@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
 	"name": "Mage Armor",
 	"origin": "Compendium.shadowdark.spell-effects.Item.Gyol5I0ZdApO8MPe",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

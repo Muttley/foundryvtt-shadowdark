@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/wounds/injury-face-impact-orange.webp",
+	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
 	"name": "Raging",
 	"origin": "Item.NzzijebUPYIGcakX",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

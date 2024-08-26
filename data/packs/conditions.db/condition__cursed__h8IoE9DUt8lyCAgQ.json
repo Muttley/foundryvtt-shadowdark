@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+	"img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
 	"name": "Condition: Cursed",
 	"origin": "Item.T7PD6qqfanwAMEzo",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

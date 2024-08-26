@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/control-influence-puppet.webp",
+	"img": "icons/magic/control/control-influence-puppet.webp",
 	"name": "Puppeted",
 	"origin": "Item.SOkcvkzrGMGQKhmk",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

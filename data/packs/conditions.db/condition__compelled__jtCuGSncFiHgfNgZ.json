@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/energy-stream-link-spiral-white.webp",
+	"img": "icons/magic/control/energy-stream-link-spiral-white.webp",
 	"name": "Condition: Compelled",
 	"origin": "Item.7DNtQwX31lpChHZH",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

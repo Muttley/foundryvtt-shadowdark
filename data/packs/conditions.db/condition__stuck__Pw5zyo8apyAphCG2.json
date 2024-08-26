@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/environment/traps/trap-jaw-steel.webp",
+	"img": "icons/environment/traps/trap-jaw-steel.webp",
 	"name": "Condition: Stuck",
 	"origin": "Item.0McK66FvDi42pjiu",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }
