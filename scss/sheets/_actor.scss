@@ -74,4 +74,11 @@
 		align-items: center;
 		text-align: center;
 	}
+
+	.attack {
+		margin-left: 24px;
+		.rollable {
+			margin-left: -24px;
+		}
+	}
 }
