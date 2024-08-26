@@ -54,6 +54,10 @@
 		text-transform: none;
 	}
 
+	h2, h3, h4, h5 {
+		margin-top: 1rem;
+	}
+
 	h2 {
 		font-size: 1.6em;
 	}
@@ -89,6 +93,33 @@
 		margin: 0 0 0.5rem;
 	}
 
+	blockquote,
+	table > caption {
+		font-family: "Montserrat-SemiBold";
+		font-size: 16px;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.8;
+		color:white;
+		background: linear-gradient(90deg, transparent 40px, black 40px, black calc(100% - 40px), transparent calc(100% - 40px)),
+		url("../assets/artwork/title_right.png") no-repeat right,
+		url("../assets/artwork/title_left.png") no-repeat left;
+		background-size: auto;
+		background-repeat: repeat-y;
+	}
+
+	blockquote {
+		line-height: 1;
+		padding-top: 20px;
+		padding-bottom: 10px;
+
+		p {
+			font-family: "Old Newspaper Font";
+			text-transform: none;
+			font-size: 1.4rem;
+		}
+	}
+
 	table {
 		border: none;
 		margin-bottom: 1em;
@@ -96,19 +127,6 @@
 
 		width: fit-content;
 
-		caption {
-			font-family: "Montserrat-SemiBold";
-			font-size: 16px;
-			text-transform: uppercase;
-			text-align: center;
-			line-height: 1.8;
-			color:white;
-			height: 28px;
-			background: linear-gradient(90deg, transparent 40px, black 40px, black calc(100% - 40px), transparent calc(100% - 40px)),
-			url("../assets/artwork/title_right.png") no-repeat right,
-			url("../assets/artwork/title_left.png") no-repeat left;
-			background-size: auto;
-		}
 
 		p {
 			font-size: 1.1em;
