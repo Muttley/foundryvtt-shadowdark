@@ -8,12 +8,12 @@
 	"system": {
 	},
 	"text": {
-		"content": "<ul><li><p>@UUID[.5UIZQaxjj8wBv1Bv]{Dwarf}</p></li><li><p>@UUID[.VDVUd9LT8n73Ypgk]{Elf}</p></li><li><p>@UUID[.Q0yjKUVpS6VDiXSk]{Goblin}</p></li><li><p>@UUID[.UnKag3L3Cz3VzJ8v]{Halfling}</p></li><li><p>@UUID[.5Jne4e9Akp9wQ1fk]{Half-Orc}</p></li><li><p>@UUID[.jFydzt03NFfJbK0s]{Human}</p></li></ul>",
+		"content": "<h2>Dwarf</h2><p>Brave, stalwart folk as sturdy as the stone kingdoms they carve inside mountains.</p><p>You know the Common and Dwarvish languages.</p><p>@UUID[Compendium.shadowdark.talents.Item.MW43tnJr6lqE1Ty8]{Stout}. Start with +2 HP. Roll hit points per level with advantage.</p><h2>Elf</h2><p>Ethereal, graceful people who revere knowledge and beauty. Elves see far and live long.</p><p>You know the Common, Elvish, and Sylvan languages.</p><p>@UUID[Compendium.shadowdark.talents.Item.dTEZW21LUNoYL3JU]{Farsight (Ranged)} or @UUID[Compendium.shadowdark.talents.Item.E3EcGGdGYuEWWj47]{Farsight (Spell)}. You get a +1 bonus to attack rolls with ranged weapons or a +1 bonus to spellcasting checks.</p><h2>Goblin</h2><p>Green, clever beings who thrive in dark, cramped places. As fierce as they are tiny.</p><p>You know the Common and Goblin languages.</p><p>@UUID[Compendium.shadowdark.talents.Item.Gf5dApLfOorbQn4R]{Keen Senses}. You can't be surprised.</p><h2>Halfling</h2><p>Small, cheerful country folk with mischievous streaks. They enjoy life’s simple pleasures.</p><p>You know the Common language.</p><p>@UUID[Compendium.shadowdark.talents.Item.zkOiprnKS5uttiO6]{Stealthy}. Once per day, you can become invisible for 3 rounds.</p><h2>Half-orc</h2><p>Towering, tusked warriors who are as daring as humans and as relentless as orcs.</p><p>You know the Common and Orcish languages.</p><p>@UUID[Compendium.shadowdark.talents.Item.LR6h4lXVXwx7AFQ6]{Mighty}. You have a +1 bonus to attack and damage rolls with melee weapons.</p><h2>Human</h2><p>Bold, adaptable, and diverse people who learn quickly and accomplish mighty deeds.</p><p>You know the Common language and one additional common language (pg. 29).</p><p>@UUID[Compendium.shadowdark.talents.Item.DYWFJu5XeazJYc0P]{Ambitious}. You gain one additional talent roll at 1st level.</p><blockquote><p>And so the Primordial Age ended, and the gods fled.</p><p>In their place rose mortals, and they scattered the</p><p>earth with their shining kingdoms and lost ruins...</p></blockquote>",
 		"format": 1,
 		"markdown": ""
 	},
 	"title": {
-		"level": 2,
+		"level": 1,
 		"show": true
 	},
 	"type": "text",

@@ -8,12 +8,12 @@
 	"system": {
 	},
 	"text": {
-		"content": "<h2>Common Languages</h2><h3>Language - Who Speaks It</h3><p>Common - Most humanoids</p><p>Dwarvish - Dwarves</p><p>Elvish - Elves</p><p>Giant - Giants, ogres, trolls</p><p>Goblin - Bugbears, goblins, hobgoblings</p><p>Merran - Merfolk, sahuagin, sirens</p><p>Orcish - Orcs</p><p>Sylvan - Centaurs, dryads, faeries</p><p>Thanian - Minotaurs, beastmen, manticores</p><p></p><h2>Rare Languages</h2><h3>Language - Who Speaks It</h3><p>Celestial - Angels</p><p>Diabolic - Demons, devils</p><p>Draconic - Dragons</p><p>Primordial - Elder things, elementals</p><p></p><blockquote><p><em>“Language is the key to the most important doors.\"</em></p><p>-Creeg, human wizard</p></blockquote>",
+		"content": "<table style=\"width:100%\"><caption>Common Languages</caption><tbody><tr><td><p>Language</p></td><td><p>Who Speaks It</p></td></tr><tr><td><p>Common</p></td><td><p>Most humanoids</p></td></tr><tr><td><p>Dwarvish</p></td><td><p>Dwarves</p></td></tr><tr><td><p>Elvish</p></td><td><p>Elves</p></td></tr><tr><td><p>Giant</p></td><td><p>Giants, ogres, trolls</p></td></tr><tr><td><p>Goblin</p></td><td><p>Bugbears, goblins, hobgoblins</p></td></tr><tr><td><p>Merran</p></td><td><p>Merfolk, sahuagin, sirens</p></td></tr><tr><td><p>Orcish</p></td><td><p>Orcs</p></td></tr><tr><td><p>Reptilian</p></td><td><p>Lizardfolk, viperians</p></td></tr><tr><td><p>Sylvan</p></td><td><p>Centaurs, dryads, faeries</p></td></tr><tr><td><p>Thanian</p></td><td><p>Minotaurs, beastmen, manticores</p></td></tr></tbody></table><table style=\"width:100%\"><caption>Rare Languages</caption><tbody><tr><td><p>Language</p></td><td><p>Who Speaks It</p></td></tr><tr><td><p>Celestial</p></td><td><p>Angels</p></td></tr><tr><td><p>Diabolic</p></td><td><p>Demons, devils</p></td></tr><tr><td><p>Draconic</p></td><td><p>Dragons</p></td></tr><tr><td><p>Primordial</p></td><td><p>Elder things, elementals</p></td></tr></tbody></table><blockquote><p><em>“Language is the key to the most important doors.\"</em></p><p><em>-Creeg, human wizard</em></p></blockquote>",
 		"format": 1,
 		"markdown": ""
 	},
 	"title": {
-		"level": 2,
+		"level": 1,
 		"show": true
 	},
 	"type": "text",
