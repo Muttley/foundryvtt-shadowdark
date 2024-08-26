@@ -536,6 +536,9 @@ export default class ItemSheetSD extends ItemSheet {
 			event.target?.parentElement.id === "effect-duration";
 
 		if (durationTarget && durationClassName) {
+			if (event.target.name === "system.duration.value") {
+				this.item.system.duration.value = event.target.value;
+			}
 			await this._onUpdateDurationEffect();
 		}
 
