@@ -169,6 +169,10 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			if (bonus.sourceCategory === "Boon") {
 				foundTalent.name += ` [${bonus.boonPatron}]`;
 			}
+			// if talent is a blacklotus talent, lable is
+			if (bonus.sourceCategory.split("_")[0] === "BlackLotusTalent") {
+				foundTalent.name += " [BlackLotus]";
+			}
 
 			return foundTalent;
 		}
@@ -294,7 +298,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		}
 
 		// load fixed ancestry talents
-		if (ancestry.system.talents) {
+		if (ancestry) {
 			for (const talentUuid of ancestry.system.talents) {
 				let talentObj = await fromUuid(talentUuid);
 				talentObj = talentObj.toObject();
@@ -305,7 +309,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		}
 
 		// load fixed class talents
-		if (classObj.system.talents) {
+		if (classObj) {
 			for (const talentUuid of classObj.system.talents) {
 				let talentObj = await fromUuid(talentUuid);
 				talentObj = talentObj.toObject();
@@ -330,6 +334,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				"RollTwoBoonsAndKeepOne",
 				"ChooseWarlockTalentOrPatronBoon",
 				"PlusTwoWISCHAOrPlus1SpellCasting",
+				"GainTwoBlackLotusTalents",
 			];
 			if (skipTalents.includes(bonus.name)) continue;
 
