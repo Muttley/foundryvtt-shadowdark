@@ -1,0 +1,29 @@
+{
+	"_id": "P4y8Bovr14XbN0PO",
+	"_key": "!items.effects!4pcEgD8oLA5euovK.P4y8Bovr14XbN0PO",
+	"changes": [
+		{
+			"key": "",
+			"mode": 2,
+			"value": "REPLACEME"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+	"name": "Patron",
+	"origin": "Compendium.shadowdark.talents.Item.4pcEgD8oLA5euovK",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

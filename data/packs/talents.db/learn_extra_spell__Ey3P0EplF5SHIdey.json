@@ -1,0 +1,20 @@
+{
+	"_id": "Ey3P0EplF5SHIdey",
+	"_key": "!items!Ey3P0EplF5SHIdey",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/sundries/books/book-worn-red.webp",
+	"name": "Learn Extra Spell",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Learn one additional spell of any tier you know</span>.</p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}
