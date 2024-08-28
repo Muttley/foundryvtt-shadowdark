@@ -402,17 +402,11 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 			// skip lanuages and specials grants
 			if (/^ExtraLanguage:/.test(bonus.name)) continue;
+			if (/^ExtraLanguageManual:/.test(bonus.name)) continue;
 			if (/^GrantSpecialTalent:/.test(bonus.name)) continue;
 
-			// talents to skip
-			const skipTalents = [
-				"GainRandomBoon",
-				"RollTwoBoonsAndKeepOne",
-				"ChooseWarlockTalentOrPatronBoon",
-				"PlusTwoWISCHAOrPlus1SpellCasting",
-				"GainTwoBlackLotusTalents",
-			];
-			if (skipTalents.includes(bonus.name)) continue;
+			// skip talent if on the ignore list
+			if (this.itemMapping.ignoreTalents.includes(bonus.name)) continue;
 
 			// fix format on ranger damage die
 			if (bonus.name === "SetWeaponTypeDamage") {

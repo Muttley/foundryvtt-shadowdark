@@ -101,13 +101,31 @@
 		"TripleDamageAssassinate": "Compendium.shadowdark.talents.Item.JBRFuGnXShMO834j",
 		"TurnToSlime": "Compendium.shadowdark.talents.Item.A9nJ9MYVegFPDwva",
 		"XPForSecret": "Compendium.shadowdark.talents.Item.9K2XPwkAA7BYZQrW",
+		"ADVToElixir": "Compendium.unnatural-selection.talents.Item.D4AnxPnxITeYkcli",
+		"AnimalCompanion": "Compendium.unnatural-selection.talents.Item.dPgHIZ2NjWpS96zL",
 		"BeastAttackDamageIncreaseOneDie": "Compendium.unnatural-selection.talents.Item.LTLgTJIlRb7DixGF",
 		"BeastMasterPlus1AC": "Compendium.unnatural-selection.talents.Item.Zmds90o9zoXhKJ6G",
 		"ExtraBeastShapePerDay": "Compendium.unnatural-selection.talents.Item.9swR82k8sTnR8IoP",
-		"ImpNecroticReap": "Compendium.unnatural-selection.talents.Item.F8WKoChnpdyOozBD",
+		"ExtraInsect": "Compendium.unnatural-selection.talents.Item.26NEqareXrwxaPg6",
+		"ExtraLanguageManual": "Compendium.unnatural-selection.talents.Item.6CM0N7U5BRxdjS2O",
 		"ImpClaimUndead": "Compendium.unnatural-selection.talents.Item.3w0aOahluisjacUC",
-		"MakeAnimalMagicItem": "Compendium.unnatural-selection.talents.Item.eIoQkXLzGRdFKwy5"
+		"ImpHealingCircle": "Compendium.unnatural-selection.talents.Item.Z9UZkrD3ga1H0N9s",
+		"ImpNecroticReap": "Compendium.unnatural-selection.talents.Item.F8WKoChnpdyOozBD",
+		"KnowDesires": "Compendium.unnatural-selection.talents.Item.6Zm9I7f7yvIXjOtC",
+		"MakeAnimalMagicItem": "Compendium.unnatural-selection.talents.Item.eIoQkXLzGRdFKwy5",
+		"Plus1ToElixirChecks": "Compendium.unnatural-selection.talents.Item.EzXGk05M7Hff5TOL",
+		"Pyro_FirebondWeaponDieIncrease": "Compendium.unnatural-selection.talents.Item.RUveINvKYafMtGGm",
+		"StrongElixir": "Compendium.unnatural-selection.talents.Item.9hBD67dUrkDIbxeH"
 	},
+	"ignoreTalents" : [
+		"GainRandomBoon",
+		"RollTwoBoonsAndKeepOne",
+		"ChooseWarlockTalentOrPatronBoon",
+		"PlusTwoWISCHAOrPlus1SpellCasting",
+		"GainTwoBlackLotusTalents",
+		"Plus2INTDEXOrPlus1Elixir",
+		"BeastMasterAnimalType"
+	],
 	"weapon": {
 		"Bastard sword": "Compendium.shadowdark.gear.Item.1T8oUkfkBtYTLNF3",
 		"Blowgun": "Compendium.shadowdark.gear.Item.FkcwP4cmpdM5pcOm",
