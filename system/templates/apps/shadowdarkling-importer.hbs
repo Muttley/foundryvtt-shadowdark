@@ -1,62 +1,74 @@
-<form class="" autocomplete="off">
+<form autocomplete="off">
 	<h1 class="centered">{{localize "SHADOWDARK.apps.shadowdarkling-importer.header"}}</h1>
 	{{#if actor.name}}
-		<div class="SD-banner">{{actor.name}}</div>
-		<div class="grid-2-columns" style="margin:10px;grid-template-columns:1fr 2fr">
-			<div>
+		<div class="SD-box">
+			<div class="header">
+				<label>{{actor.name}}</label>
+				<span></span>
+			</div>
+			<div class="content grid-2-columns">
 				<div>
-					<h3>{{localize "SHADOWDARK.item.level"}}</h3>
-					{{actor.system.level.value}}
+					<h3>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}:</h3>
+					{{uuidToName actor.system.ancestry}}
 				</div>
 				<div>
-					<h3>{{uuidToName actor.system.ancestry}}</h3>
-				</div>
-				<div>
-					<h3>{{uuidToName actor.system.class}}</h3>
-				</div>
-				<div>
-					<h3>{{localize "SHADOWDARK.sheet.actor.hp"}}</h3>
+					<h3>{{localize "SHADOWDARK.sheet.actor.hp"}}:</h3>
 					{{actor.system.attributes.hp.value}} / {{actor.system.attributes.hp.max}}
 				</div>
 				<div>
-					<h3>{{localize "SHADOWDARK.sheet.player.xp"}}</h3>
-					{{actor.system.level.xp}}
+					<h3>{{localize "SHADOWDARK.sheet.player.class.label"}}:</h3>
+					{{uuidToName actor.system.class}}
 				</div>
 				<div>
-					<h3>{{localize "SHADOWDARK.coins.gp"}}</h3>
+					<h3>{{localize "SHADOWDARK.coins.gp"}}:</h3>
 					{{actor.system.coins.gp}}
 				</div>
+
+				<div>
+					<h3>{{localize "SHADOWDARK.item.level"}}:</h3>
+					{{actor.system.level.value}}
+				</div>
+				<div>
+					<h3>{{localize "SHADOWDARK.sheet.player.xp"}}:</h3>
+					{{actor.system.level.xp}}
+				</div>
 			</div>
-
-			<div>
-				{{#if errors}}
-					<ol class="SD-list item-list">
-						<li class="header">
-							<div style="flex:3">Error: Item Not Found</div>
-							<div style="flex:1">Type</div>
-						</li>
-						{{#each errors}}
-						<li>
-							<div style="flex:3">{{this.name}}</div>
-							<div style="flex:1">{{this.type}}</div>
-						</li>
-						{{/each}}
-					</ol>
-				{{/if}}
-			</div>
-
-			<button class="grid-colspan-2">
-				{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button"}} {{actor.name}}
-				{{#if errors}}
-					(with errors)
-				{{/if}}
-			</button>
-
 		</div>
 		<br>
 
+		{{#if errors}}
+			<div class="SD-banner">{{localize "SHADOWDARK.apps.shadowdarkling-importer.errors"}}</div>
+			<ol class="SD-list">
+				<li class="header">
+					<div style="flex:3">{{localize "SHADOWDARK.item.name"}}</div>
+					<div style="flex:1">{{localize "SHADOWDARK.item.type"}}</div>
+				</li>
+				{{#each errors}}
+				<li>
+					<div style="flex:3">{{this.name}}</div>
+					<div style="flex:1">{{this.type}}</div>
+				</li>
+				{{/each}}
+			</ol>
+			<br>
+		{{/if}}
+
+		<button>
+			{{#if errors}}
+				{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button2"}}
+			{{else}}
+				{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button"}}
+			{{/if}}
+			{{actor.name}}
+		</button>
+		<br>
+
 	{{else}}
+		<fieldset>
+			<h3>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction3"}}</h3>
+		</fieldset>
+		<br>
 		<div>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction1"}}</div>
-		<fieldset class="centered">Paste Character Here</fieldset>
+		<div>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction2"}}</div>
 	{{/if}}
 </form>

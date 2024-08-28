@@ -20,9 +20,9 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark"],
+			classes: ["shadowdark", "shadowdarkling-importer"],
 			width: 450,
-			height: 375,
+			height: 550,
 			resizable: true,
 		});
 	}
