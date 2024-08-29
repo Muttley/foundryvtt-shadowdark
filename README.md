@@ -10,55 +10,56 @@
 
 ## Features
 
-- **Core Rule Book Content**
-  - All Weapons, armor, gear
-  - All Ancestries, Background, Classes, Deities
-  - All Talents with Roll Tables
-  - Spells (Teir 1-5)
-  - all 238 monsters from the core rules book
+**Core Rule Book Content**
+- All Weapons, armor, gear
+- All Ancestries, Background, Classes, Deities
+- All Talents with Roll Tables
+- Spells (Teir 1-5)
+- all 238 monsters from the core rules book
 
-- **Cursed Scrolls zines (1-3) Content**
-  - All classes, background, weapons, armor
-  - Talents and tables
-  - New spells (Teir 1-5)
+**Cursed Scrolls zines (1-3) Content**
+- All classes, background, weapons, armor
+- Talents and tables
+- New spells (Teir 1-5)
 
-- **Quickstarter Set Content**
-  - Both the Player Guide and the Gamemaster Guide from the Quickstart are available as journals
-  - Included adventure: The Lost Citadel of the Scarlet Minotaur
-  - Compendium of Pre-generated characters
-  - Magical items
-  - Wizard Mishap tier 1-3 Table
+**Quickstart Set Content**
+- Both the Player Guide and the Gamemaster Guide from the Quickstart are available as journals
+- Included adventure: The Lost Citadel of the Scarlet Minotaur
+- Compendium of pre-generated characters
+- Magical items
+- Wizard Mishap tier 1-3 Table
+- Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
 
-- **Sheets**
-  - Automated checks with calulated modifiers:
-    - Attack checks (based on equipped weapons)
+**Sheets**
+- Automated checks with calculated modifiers:
+	- Attack checks (based on equipped weapons)
     - Spell checks, with spells lost on failure
 	- Stat checks
-	- Tracking of permanant or temporary conditions and effects
-  - Items
+	- Tracking of permanent or temporary conditions and effects
+- Items
 	- Automatic tracking of gear slots, including augmentations from talents
-    - Lightsource items tracking, automatically sets the light settings for your tokens
+    - Light source item tracking, automatically sets the light settings for your tokens
 	- Selling of treasure and gems
-	- Items can be equiped, carried or stashed
-  - Characters (Players)
+	- Items can be equipped, carried or stashed
+- Characters (Players)
     - Calculated HP (augmented by talents),
 	- Calculated AC (based on equipped armor)
     - Luck token tracking in normal or pulp mode
-  - Monsters (NPCs)
+- Monsters (NPCs)
 	- Fix HP or randomized by hit dice
 	- Basic attacks, spells, features,
 
-- **Character Management**
-  - A character generator for quickly rolling new characters
-  - Import existing characters from Shadowdarklings.net
-  - A guided level up process based on class details
-  - Automatic rolltables for randomizing talents
+**Character Management**
+- A character generator for quickly rolling new characters
+- Import existing characters from Shadowdarklings.net
+- A guided level up process based on class details
+- Automatic roll tables for randomizing talents
 
-- **Customization**
-  - Support for creating custom:
-    - ancestries, classes, languages, talents, monsters
+**Customization**
+- Support for creating custom:
+	- ancestries, classes, languages, talents, monsters
 	- weapons, armor, properties, spells, magic items
-  - Active effects on talents can modify the data of the actor:
+- Active effects on talents can modify the data of the actor:
     - Advantage on Initiative, HP rolls, Spell casting
     - Ability score modifications
 	- Pre-defined talents for core classes
@@ -66,26 +67,27 @@
     	- Additional damage dice during Backstab
 		- Spell advantage on named spells
 
-- **Lightsource Tracker for GMs**
-  - Track the remaining burn time of lightsources
-  - Douse individual lightsources, or douse them all at once
-  - Tracks associated actors per player. A character *must* be claimed by a player to enable tracking
+**Light source Tracker for GMs**
+- Track the remaining burn time of Light sources
+- Douse individual Light sources, or douse them all at once
+- Tracks associated actors per player. A character *must* be claimed by a player to enable tracking
 
-- **Macros**
-  - Useful macros compendium with tools for running the game
-  - Macros for drawing traps, hazards, random ruin encounters, rumors, what is happening, random magic item names
-  - Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
+**Macros**
+- Useful macros compendium with tools for running the game
+- Macros for drawing traps, hazards, random ruin encounters, rumors, what is happening, random magic item names
+- Import, items and spells from source material PDFs
 
-- **Monsters**
-  - Import monsters from source PDFs using the Monster Importer
-  - Support for monster token image remapping from a custom module or supported product. e.g. Pathfinder Token Pack: Bestiaries module
+**Monsters**
+- Import monsters from source PDFs using the Monster Importer
+- Support for monster token image remapping from a custom module or supported product. e.g. Pathfinder Token Pack: Bestiaries module
 
-- **Localization**
-  - We currently fully support English and Swedish translations
-  - We currenly have various levels of support for French, German & Finnish translations.  Please see the [Translation][5] information on our [Wiki][4] for details on how to help with existing translations, or with getting new languages added
+**Localization**
+- Full support for English and Swedish translations
+- Best effort support for French, German & Finnish translations.
+- Please see the [Translation][5] information on our [Wiki][4] for details on how to help with existing translations, or with getting new languages added
 
-# Tutorial
-[Shadowdark RPG on Foundry VTT Basics](https://www.youtube.com/watch?v=hoBxiK71DBQ&list=PLpf8dHUKN9f0of47XUk6V3dt3McRWYkcU)
+# Video Tutorial
+[![Shadowdark RPG on Foundry VTT Basics](https://img.youtube.com/vi/hoBxiK71DBQ/hqdefault.jpg)](https://www.youtube.com/watch?v=hoBxiK71DBQ&list=PLpf8dHUKN9f0of47XUk6V3dt3McRWYkcU)
 
 # Community Contributions
 
