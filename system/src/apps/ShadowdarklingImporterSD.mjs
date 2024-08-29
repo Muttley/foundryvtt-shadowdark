@@ -1,16 +1,29 @@
 export default class ShadowdarklingImporterSD extends FormApplication {
 	/**
 	 * Contains an importer function to generate player actors from
-	 * Shadowdarklings.net
+	 * Shadowdarklings.net. Primary matching is done with a mapping
+	 * file, or failing that, a full compendium scan and match attempt.
 	 */
+
+	/** @inheritdoc */
+	constructor() {
+		super();
+
+		this.importedActor ={};
+		this.itemMapping = {};
+		this.gear =[];
+		this.spells =[];
+		this.talents =[];
+		this.errors = [];
+	}
 
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark-importer"],
-			width: 300,
-			height: 310,
-			resizable: false,
+			classes: ["shadowdark", "shadowdarkling-importer"],
+			width: 450,
+			height: 550,
+			resizable: true,
 		});
 	}
 
@@ -26,113 +39,189 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	}
 
 	/** @inheritdoc */
-	_updateObject(event, formData) {
-		event.preventDefault();
-
-		try {
-			const json = JSON.parse(formData.json);
-			return this._importActor(json);
-		}
-		catch(error) {
-			ui.notifications.error(`Couldn't parse the JSON. ${error}`);
-		}
+	activateListeners(html) {
+		super.activateListeners(html);
+		window.addEventListener("paste", e => this._onPaste(e));
 	}
 
 	/** @inheritdoc */
 	_onSubmit(event) {
 		event.preventDefault();
-		if (event.submitter.className === "open-generator") {
-			return this._openImporter();
-		}
+
 		super._onSubmit(event);
 	}
 
-	/** Specific methods */
+	/** @override */
+	async _updateObject(event, data) {
+		this._createActor();
+	}
 
-	_openImporter() {
-		return new FrameViewer("https://shadowdarklings.net", {
-			title: "Shadowdarklings.net",
-		}).render(true);
+	/** @override */
+	async getData(options) {
+		const data = {
+			actor: this.importedActor,
+			errors: this.errors,
+			gear: this.gear,
+		};
+
+		return data;
 	}
 
 	/**
-	 * Manipulates the Spell Advantage talent so it may be used on the actor
-	 * @param {string} spell - Spell name to be used for advantage
-	 * @returns {ItemSD}
+	 * Handles pasting of json data
 	 */
-	async _spellCastingAdvantageTalent(spell) {
-		const talent = await this._findInCompendium("Spellcasting Advantage", "shadowdark.talents");
-		const modifiedTalent = talent.toObject();
-		modifiedTalent.effects[0].changes[0].value = spell.slugify();
-		modifiedTalent.name += ` (${spell})`;
-		return modifiedTalent;
-	}
+	async _onPaste(event) {
+		// check if values are already loaded
+		if (this.importedActor.name) return;
 
-	/**
-	 * Manipulates the Weapon/Armor Mastery talent so it may be used on the actor
-	 * @param {string} type - What type of item (armor/weapon)
-	 * @param {string} choice - The actual item to be affected
-	 * @returns {ItemSD}
-	 */
-	async _masteryTalent(type, choice) {
-		const itemName = choice.split(" ").map(s => s.capitalize()).join(" ");
-		const talent = await this._findInCompendium(`${type.capitalize()} Mastery`, "shadowdark.talents");
-		const modifiedTalent = talent.toObject();
-		modifiedTalent.effects[0].changes[0].value = choice.slugify();
-		modifiedTalent.name += ` (${itemName})`;
-		return modifiedTalent;
-	}
-
-	async _damageDieD12Talent(choice) {
-		const itemName = choice.split(":")[0];
-		const talent = await this._findInCompendium("Increased Weapon Damage Die", "shadowdark.talents");
-		const modifiedTalent = talent.toObject();
-		modifiedTalent.effects[0].changes[0].value = choice.split(":")[0].slugify();
-		modifiedTalent.name += ` (${itemName})`;
-		return modifiedTalent;
-	}
-
-	/**
-	 * Searches a compendium pack and returns the stored data if a match is found
-	 * @param {string} contentName - Name of something that may exist in a compendium
-	 * @param {string} packName - id of compendium pack to look inside
-	 * @returns {ItemSD|string}
-	 */
-	async _findInCompendium(contentName, packName) {
-		const pack = game.packs.get(packName);
-		const itemIndex = pack.index.find(
-			i => i.name.toLowerCase() === contentName.toLowerCase()
-		);
-		if (itemIndex) {
-			return pack.getDocument(itemIndex._id);
+		let postedJson = "";
+		try {
+			postedJson = JSON.parse(event.clipboardData.getData("text/plain"));
 		}
-		return "";
+		catch(error) {
+			ui.notifications.error("JSON not found in clipboard");
+		}
+
+		if (postedJson) {
+			// load all values from json
+			await this._importActor(postedJson);
+		}
 	}
 
 	/**
-	 * Searches the compendiums for items and puts them in an array
-	 * @param {JSON} json - JSON data from the Shadowdarklings.net site
-	 * @returns {Array<ItemSD>}
+	 * finds matching items by category
 	 */
-	async _getGear(json) {
-		const items = [];
+	async _findItem(itemName, type) {
+		// first check the mapping file for the item
+		const itemUuid = this.itemMapping?.[type.toLowerCase()]?.[itemName];
+		if (itemUuid) {
+			const item = await fromUuid(itemUuid);
+			if (item) return item;
+		}
 
-		if (json.gear.length === 0) return items;
+		// check all item compendiums for a match
+		for (let pack of game.packs) {
+			if (pack.metadata.type !== "Item") continue;
 
-		await Promise.all(json.gear.map(async item => {
-			for (let i = 1; i <= item.quantity; i++) {
-				let itemName = item.name;
-
-				if (itemName.match(/flask or bottle/i)) itemName = "Flask";
-				if (itemName.match(/caltrops/i)) itemName = "Caltrops";
-
-				const foundItem = await this._findInCompendium(itemName, "shadowdark.gear");
-
-				if (foundItem) items.push(foundItem);
+			const itemIndex = pack.index.find( i => (
+				(i.name.toLowerCase() === itemName.toLowerCase())
+				&& (i.type.toLowerCase() === type.toLowerCase())
+			));
+			if (itemIndex) {
+				return pack.getDocument(itemIndex._id);
 			}
-		}));
+		}
 
-		return items;
+		// report error if still not found
+		this.errors.push({
+			type: type,
+			name: itemName,
+		});
+	}
+
+	/**
+	 * finds matching spells by category and class
+	 */
+	async _findSpell(spell) {
+		// check all item compendiums for a match
+		for (let pack of game.packs) {
+			if (pack.metadata.type !== "Item") continue;
+
+			// get class id
+			const classObj = this.classList.find(c =>
+				c.name.toLowerCase() === spell.sourceName.toLowerCase()
+			);
+
+			const itemIndex = pack.index.find( s => (
+				(s.name.toLowerCase() === spell.bonusName.toLowerCase())
+				&& (s.type === "Spell")
+				&& (s.system.class.includes(classObj?.uuid))
+			));
+			if (itemIndex) {
+				return pack.getDocument(itemIndex._id);
+			}
+		}
+
+		// report error if still not found
+		this.errors.push({
+			type: "Spell",
+			name: spell.bonusName,
+		});
+	}
+
+	/**
+	 * finds corresponding talents from bonus data
+	 */
+	async _findTalent(bonus) {
+
+		// match bonus to talent in the mapping table trying different patterns as
+		// data from shadowdarklings is not consistant
+		let patternStr = "";
+		let valueAttribute = "";
+		let foundTalent = null;
+
+		// Pattern 1: bonusName_bonusTo
+		if (this.itemMapping.bonus?.[`${bonus.bonusName}_${bonus.bonusTo}`]) {
+			patternStr = `${bonus.bonusName}_${bonus.bonusTo}`;
+		}
+		// Pattern 2: bonusName
+		else if (this.itemMapping.bonus?.[`${bonus.bonusName}`]) {
+			patternStr = bonus.bonusName;
+			valueAttribute = "bonusTo";
+		}
+		// Pattern 3: bonusTo_bonusName
+		else if (this.itemMapping.bonus?.[`${bonus.bonusTo}_${bonus.bonusName}`]) {
+			patternStr = `${bonus.bonusTo}_${bonus.bonusName}`;
+		}
+		// Pattern 4: bonusTo
+		else if (this.itemMapping.bonus?.[`${bonus.bonusTo}`]) {
+			patternStr = bonus.bonusTo;
+			valueAttribute = "bonusName";
+		}
+		else {
+			// try a search
+		}
+
+		// if found, try to load talent from lookup table
+		if (patternStr) {
+			foundTalent = await fromUuid(this.itemMapping.bonus?.[patternStr]);
+		}
+
+		if (foundTalent) {
+			foundTalent = foundTalent.toObject();
+
+			// set level gained for level talents
+			if (foundTalent.system.talentClass === "level") foundTalent.system.level = bonus.gainedAtLevel;
+
+			// if talent requires a choice, copy selection from bonus
+			if (foundTalent.effects[0]?.changes[0].value === "REPLACEME") {
+				// covert to title case
+				let value = bonus[valueAttribute].replace(/\b\w/g, s => s.toUpperCase());
+				foundTalent.name += ` (${value})`;
+				// covert to lower case with dashes
+				foundTalent.effects[0].changes[0].value =
+					value.replace(/\s+/g, "-").toLowerCase();
+			}
+
+			// if talent is a boon, list patron
+			if (bonus.sourceCategory === "Boon") {
+				foundTalent.name += ` [${bonus.boonPatron}]`;
+			}
+
+			// if talent is a blacklotus talent, lable is
+			if (bonus.sourceCategory.split("_")[0] === "BlackLotusTalent") {
+				foundTalent.name += " [BlackLotus]";
+			}
+
+			return foundTalent;
+		}
+		// if nothing found, report error
+		else {
+			this.errors.push({
+				type: "Talent",
+				name: bonus.name,
+			});
+		}
 	}
 
 	/**
@@ -141,33 +230,34 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	 * @returns {ActorSD}
 	 */
 	async _importActor(json) {
-		const importedActor = {
+		// set template for new actor
+		this.importedActor = {
 			name: json.name,
 			type: "Player",
 			system: {
 				abilities: {
 					str: {
-						base: json.stats.STR,
+						base: json.rolledStats.STR,
 						bonus: 0,
 					},
 					dex: {
-						base: json.stats.DEX,
+						base: json.rolledStats.DEX,
 						bonus: 0,
 					},
 					con: {
-						base: json.stats.CON,
+						base: json.rolledStats.CON,
 						bonus: 0,
 					},
 					int: {
-						base: json.stats.INT,
+						base: json.rolledStats.INT,
 						bonus: 0,
 					},
 					wis: {
-						base: json.stats.WIS,
+						base: json.rolledStats.WIS,
 						bonus: 0,
 					},
 					cha: {
-						base: json.stats.CHA,
+						base: json.rolledStats.CHA,
 						bonus: 0,
 					},
 				},
@@ -180,7 +270,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 						base: (json.ancestry === "Dwarf") ? json.maxHitPoints - 2 : json.maxHitPoints,
 					},
 				},
-				background: json.background,
+				background: "",
 				class: "",
 				coins: {
 					gp: json.gold,
@@ -191,357 +281,165 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				languages: [],
 				level: {
 					value: json.level,
-					xp: 0,
+					xp: json.XP,
 				},
 				slots: json.gearSlotsTotal,
 			},
 		};
 
-		// Ancestry
-		if (json.ancestry) {
-			const ancestries = await shadowdark.compendiums.ancestries(false);
-			const ancestry = ancestries.find(
-				i => i.name.toLowerCase() === json.ancestry.toLowerCase()
-			);
-			importedActor.system.ancestry = ancestry?.uuid ?? "";
-		}
-
-		// Background
-		const backgrounds = await shadowdark.compendiums.backgrounds(false);
-		const background = backgrounds.find(
-			i => i.name.toLowerCase() === json.background.toLowerCase()
-		);
-		importedActor.system.background = background?.uuid ?? "";
-
-		// Class
-		const classes = await shadowdark.compendiums.classes(false);
-		const characterClass = classes.find(
-			i => i.name.toLowerCase() === json.class.toLowerCase()
-		);
-		importedActor.system.class = characterClass?.uuid ?? "";
-
-		// Deity
-		const deities = await shadowdark.compendiums.deities(false);
-		const deity = deities.find(
-			i => i.name.toLowerCase() === json.deity.toLowerCase()
-		);
-		importedActor.system.deity = deity?.uuid ?? "";
-
-		// Languages
-		const jsonLanguages = json.languages.toLowerCase().split(", ");
-		const allLanguages = await shadowdark.compendiums.languages([], false);
-		for (const jsonLanguage of jsonLanguages) {
-			const language = allLanguages.find(l => l.name.toLowerCase() === jsonLanguage);
-			if (language) importedActor.system.languages.push(language.uuid);
-		}
-
-		// Gear
-		const items = await this._getGear(json);
-
-		// Spells
-		const spells = await Promise.all(
-			json.bonuses.filter(b => b.name.includes("Spell:")).map(b => {
-				return this._findInCompendium(b.bonusName, "shadowdark.spells");
-			})
+		// Load the mapping file
+		this.itemMapping = await foundry.utils.fetchJsonWithTimeout(
+			"systems/shadowdark/assets/mappings/map-shadowdarkling.json"
 		);
 
-		// Add spells granted from talents
-		const talentSpells = await Promise.all(json.bonuses
-			.filter(b => b.name === "LearnExtraSpell")
-			.map(b => {
-				return this._findInCompendium(
-					b.bonusName, "shadowdark.spells"
-				);
-			})
+		// checks for missing sources
+		const gameSources = await shadowdark.compendiums.sources();
+		for (const [key, value] of Object.entries(this.itemMapping.requiredSources)) {
+			if (json.activeSources.includes(key)) {
+				if (gameSources.find(x => x.uuid === value)) {
+					console.log(value);
+				}
+				else {
+					this.errors.push({
+						type: "Source",
+						name: value,
+					});
+				}
+			}
+		}
+
+		// Load Ancestry
+		const ancestry = await this._findItem(json.ancestry, "Ancestry");
+		this.importedActor.system.ancestry = ancestry?.uuid ?? "";
+
+		// Load Background
+		const background = await this._findItem(json.background, "Background");
+		this.importedActor.system.background = background?.uuid ?? "";
+
+		// Load Deity
+		const deity = await this._findItem(json.deity, "Deity");
+		this.importedActor.system.deity = deity?.uuid ?? "";
+
+		// Load Languages
+		for (const language of json.languages.split(/\s*,\s*/)) {
+			const foundLanguage = await this._findItem(language, "Language");
+			if (foundLanguage) this.importedActor.system.languages.push(foundLanguage.uuid);
+		}
+
+		// Load Class
+		this.classList = await shadowdark.compendiums.classes(false);
+		const classObj = this.classList.find(c =>
+			c.name.toLowerCase() === json.class.toLowerCase()
 		);
-		if (talentSpells.length > 0) talentSpells.forEach(s => spells.push(s));
+		this.importedActor.system.class = classObj?.uuid ?? "";
 
-		// Spells & Bonuses
-		const statBonus = {
-			"STR:+1": "+1 to Strength",
-			"DEX:+1": "+1 to Dexterity",
-			"CON:+1": "+1 to Constitution",
-			"INT:+1": "+1 to Intelligence",
-			"WIS:+1": "+1 to Wisdom",
-			"CHA:+1": "+1 to Charisma",
-			"STR:+2": "+2 to Strength",
-			"DEX:+2": "+2 to Dexterity",
-			"CON:+2": "+2 to Constitution",
-			"INT:+2": "+2 to Intelligence",
-			"WIS:+2": "+2 to Wisdom",
-			"CHA:+2": "+2 to Charisma",
-		};
-
-		const supportedTalents = [
-			"AdvOnCastOneSpell",
-			"AdvOnInitiative",
-			"ArmorMastery",
-			"BackstabIncrease",
-			"Grit",
-			"LearnExtraSpell",
-			"MakeRandomMagicItem",
-			"Plus1ToCastingSpells",
-			"Plus1ToHit",
-			"Plus1ToHitAndDamage",
-			"ReduceHerbalismDC",
-			"ReducePerformDC",
-			"SetWeaponTypeDamage",
-			"StatBonus",
-			"WeaponMastery",
-			"FindRandomWand",
-			"Plus1ToAttacksOrPlus1ToMagicalDabbler",
-		];
-
-		const talents = await Promise.all(json.bonuses.filter(
-			b => supportedTalents.includes(b.name) || supportedTalents.includes(b.bonusName)
-		).map(async bonus => {
-			if (bonus.name === "LearnExtraSpell") {
-				return this._findInCompendium("Learn Spell", "shadowdark.talents");
-			}
-			if (bonus.bonusName === "StatBonus") {
-				// Keep running total of talent bonuses
-				const ability = bonus.bonusTo.split(":")[0].toLowerCase();
-				importedActor.system.abilities[ability].bonus +=
-					parseInt(bonus.bonusTo.split("+")[1], 10);
-				return this._findInCompendium(statBonus[bonus.bonusTo], "shadowdark.talents");
-			}
-			if (bonus.sourceCategory === "Talent" || bonus.sourceCategory === "Ability") {
-				// Bard
-				if (bonus.name === "FindRandomWand") {
-					return this._findInCompendium("Find a Random Priest or Wizard Wand", "shadowdark.talents");
-				}
-				if (bonus.name === "ReducePerformDC") {
-					return this._findInCompendium("-3 to Perform Effect DCs", "shadowdark.talents");
-				}
-				if (bonus.name === "Plus1ToAttacksOrPlus1ToMagicalDabbler") {
-					if (bonus.bonusName === "Plus1ToHit") {
-						return this._findInCompendium(
-							"+1 to Melee and Ranged Attacks",
-							"shadowdark.talents"
-						);
-					}
-					if (bonus.bonusName === "MagicalDabbler") {
-						return this._findInCompendium(
-							"+1 to Magical Dabbler Rolls",
-							"shadowdark.talents"
-						);
-					}
-				}
-
-				// Fighter
-				if (bonus.name === "WeaponMastery") {
-					return this._masteryTalent("weapon", bonus.bonusTo);
-				}
-				if (bonus.name === "Grit") {
-					return this._findInCompendium(`Grit (${bonus.bonusName})`, "shadowdark.talents");
-				}
-				if (bonus.name === "ArmorMastery") {
-					return this._masteryTalent("armor", bonus.bonusTo);
-				}
-				// Ranger
-				if (bonus.name === "SetWeaponTypeDamage") {
-					return this._damageDieD12Talent(bonus.bonusTo);
-				}
-				if (bonus.name === "ReduceHerbalismDC") {
-					return this._findInCompendium("Herbalism Check Advantage", "shadowdark.talents");
-				}
-				if (bonus.name === "Plus1ToHitAndDamage") {
-					if (bonus.bonusTo === "Melee attacks") {
-						return this._findInCompendium("+1 to Melee Attacks and Damage", "shadowdark.talents");
-					}
-					if (bonus.bonusTo === "Ranged attacks") {
-						return this._findInCompendium("+1 to Ranged Attacks and Damage", "shadowdark.talents");
-					}
-				}
-				// Thief
-				if (bonus.name === "BackstabIncrease") {
-					return this._findInCompendium("Backstab +1 Damage Dice", "shadowdark.talents");
-				}
-				if (bonus.name === "AdvOnInitiative") {
-					return this._findInCompendium("Initiative Advantage", "shadowdark.talents");
-				}
-				// Priest
-				if (bonus.name === "Plus1ToHit") {
-					return this._findInCompendium(`+1 to ${bonus.bonusTo}`, "shadowdark.talents");
-				}
-				// Wizard & Priest
-				if (bonus.bonusName === "Plus1ToCastingSpells") {
-					return this._findInCompendium("+1 on Spellcasting Checks", "shadowdark.talents");
-				}
-				if (bonus.name === "AdvOnCastOneSpell") {
-					return this._spellCastingAdvantageTalent(bonus.bonusName);
-				}
-				// Wizard
-				if (bonus.name === "MakeRandomMagicItem") {
-					return this._findInCompendium("Make a Random Magic Item", "shadowdark.talents");
+		// Load fixed ancestry talents
+		if (ancestry) {
+			for (const talentUuid of ancestry.system.talents) {
+				let talentObj = await fromUuid(talentUuid);
+				talentObj = talentObj.toObject();
+				if (talentObj && !(talentObj.effects[0]?.changes[0].value === "REPLACEME")) {
+					this.talents.push(talentObj);
 				}
 			}
-			return false;
-		}));
-
-		// Class talents
-		if (json.class === "Bard") {
-			const classTalentNames = [
-				"Bardic Arts",
-				"Magical Dabbler",
-				"Perform",
-				"Prolific",
-			];
-
-			for (const classTalent of classTalentNames) {
-				talents.push(
-					await this._findInCompendium(classTalent, "shadowdark.talents")
-				);
-			}
-		}
-		if (json.class === "Thief") {
-			talents.push(
-				await this._findInCompendium("Backstab", "shadowdark.talents")
-			);
-			talents.push(
-				await this._findInCompendium("Thievery", "shadowdark.talents")
-			);
-		}
-		if (json.class === "Fighter") {
-			talents.push(
-				await this._findInCompendium("Hauler", "shadowdark.talents")
-			);
-		}
-		if (json.class === "Ranger") {
-			talents.push(
-				await this._findInCompendium("Herbalism", "shadowdark.talents")
-			);
-			talents.push(
-				await this._findInCompendium("Wayfinder", "shadowdark.talents")
-			);
-		}
-		if (json.class === "Wizard") {
-			const classTalentNames = [
-				"Magic Missile Advantage",
-				"Learning Spells",
-				"Spellcasting (Wizard)",
-			];
-
-			for (const classTalent of classTalentNames) {
-				talents.push(
-					await this._findInCompendium(classTalent, "shadowdark.talents")
-				);
-			}
-		}
-		if (json.class === "Priest") {
-			const classTalentNames = [
-				"Deity",
-				"Spellcasting (Priest)",
-				"Turn Undead",
-			];
-
-			for (const classTalent of classTalentNames) {
-				talents.push(
-					await this._findInCompendium(classTalent, "shadowdark.talents")
-				);
-			}
-			spells.push(
-				await this._findInCompendium("Turn Undead", "shadowdark.spells")
-			);
 		}
 
-		// Ancestry talents
-		if (json.ancestry === "Elf") {
-			const farSight = json.bonuses.find(o => o.name === "FarSight");
-			const bonus = (farSight.bonusTo === "RangedWeapons") ? "Farsight (Ranged)" : "Farsight (Spell)";
-			talents.push(
-				await this._findInCompendium(bonus, "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Kobold") {
-			const knack = json.bonuses.find(o => o.name === "Knack");
-			const bonus = (knack.bonusTo === "LuckTokenAtStartOfSession") ? "Knack (Luck)" : "Knack (Spellcasting)";
-			talents.push(
-				await this._findInCompendium(bonus, "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Half-Orc") {
-			talents.push(
-				await this._findInCompendium("Mighty", "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Halfling") {
-			talents.push(
-				await this._findInCompendium("Stealthy", "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Dwarf") {
-			talents.push(
-				await this._findInCompendium("Stout", "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Human") {
-			talents.push(
-				await this._findInCompendium("Ambitious", "shadowdark.talents")
-			);
-		}
-		if (json.ancestry === "Goblin") {
-			talents.push(
-				await this._findInCompendium("Keen Senses", "shadowdark.talents")
-			);
-		}
-
-		const classAbilities = [];
-		if (json.class === "Bard") {
-			const classAbilitieNames = ["Fascinate", "Inspire"];
-
-			for (const classAbilityName of classAbilitieNames) {
-				classAbilities.push(
-					await this._findInCompendium(classAbilityName, "shadowdark.class-abilities")
-				);
-			}
-		}
-		if (json.class === "Ranger") {
-			const classAbilitieNames = [
-				"Curative",
-				"Foebane",
-				"Restorative",
-				"Salve",
-				"Stimulant",
-			];
-
-			for (const classAbilityName of classAbilitieNames) {
-				classAbilities.push(
-					await this._findInCompendium(classAbilityName, "shadowdark.class-abilities")
-				);
+		// Load fixed class talents
+		if (classObj) {
+			for (const talentUuid of classObj.system.talents) {
+				let talentObj = await fromUuid(talentUuid);
+				talentObj = talentObj.toObject();
+				if (talentObj && !(talentObj.effects[0]?.changes[0].value === "REPLACEME")) {
+					this.talents.push(talentObj);
+				}
 			}
 		}
 
-		// Adjust the base ability values to take into account any bonuses
-		// from talents
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			importedActor.system.abilities[ability].base -=
-				importedActor.system.abilities[ability].bonus;
+		// Load Gear
+		for (const item of json.gear) {
+			// type converstion for basic items
+			if (item.type === "sundry") item.type = "basic";
 
-			// These are dynamically set by the ActiveEffects, so actually
-			// need to be zero
-			importedActor.system.abilities[ability].bonus = 0;
+			// coin already included in total
+			if (item.name === "Coins") continue;
+
+			// find a load items
+			for (let i = 1; i <= item.quantity; i++) {
+				const foundItem = await this._findItem(item.name, item.type);
+				if (foundItem) this.gear.push(foundItem);
+			}
 		}
 
+		// Load Treasure
+		for (const treasure of json.treasures) {
+			const treasureObj = {
+				name: treasure.name,
+				type: "Basic",
+				system: {
+					description: `<p>${treasure.desc}</p>`,
+					cost: {
+						[treasure.currency]: treasure.cost,
+					},
+					slots: {
+						slots_used: treasure.slots,
+					},
+					treasure: true,
+				},
+			};
+			this.gear.push(treasureObj);
+		}
+
+		// magic items (not implemented)
+		for (const item of json.magicItems) {
+			this.errors.push({
+				type: "Magic Item",
+				name: item.name,
+			});
+		}
+
+		// Load Bonuses / talents & Spells
+		for (const bonus of json.bonuses) {
+
+			// skip lanuages and specials grants
+			if (/^ExtraLanguage:/.test(bonus.name)) continue;
+			if (/^ExtraLanguageManual:/.test(bonus.name)) continue;
+			if (/^GrantSpecialTalent:/.test(bonus.name)) continue;
+
+			// skip talent if on the ignore list
+			if (this.itemMapping.ignoreTalents.includes(bonus.name)) continue;
+
+			// fix format on ranger damage die
+			if (bonus.name === "SetWeaponTypeDamage") {
+				bonus.bonusTo = bonus.bonusTo.split(":")[0];
+			}
+
+			// find matching spell and load
+			if (/^Spell:/.test(bonus.name)) {
+				const spell = await this._findSpell(bonus);
+				if (spell) this.spells.push(spell);
+				continue;
+			}
+
+			// find matching talent and load
+			const talent = await this._findTalent(bonus);
+			if (talent) {
+				this.talents.push(talent);
+			}
+		}
+		this.render(false);
+	}
+
+	async _createActor() {
 		// Create the actor
-		const newActor = await Actor.create(importedActor);
+		const newActor = await Actor.create(this.importedActor);
 
 		const allItems = [
-			...classAbilities,
-			...items,
-			...spells,
-			...talents,
+			...this.gear,
+			...this.spells,
+			...this.talents,
 		];
 
 		await newActor.createEmbeddedDocuments("Item", allItems);
-
-		await newActor.items.filter(
-			o => o.type === "Talent" && o.system.talentClass === "level"
-		).forEach(async talent => {
-			talent.update({
-				"system.level": 1,
-			});
-		});
 
 		return newActor;
 	}

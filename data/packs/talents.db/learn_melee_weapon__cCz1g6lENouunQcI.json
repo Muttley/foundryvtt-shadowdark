@@ -1,0 +1,30 @@
+{
+	"_id": "cCz1g6lENouunQcI",
+	"_key": "!items.effects!BOOWJDqwiHN5BdxF.cCz1g6lENouunQcI",
+	"changes": [
+		{
+			"key": "",
+			"mode": 2,
+			"priority": null,
+			"value": "REPLACEME"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"icon": "icons/skills/melee/hand-grip-sword-orange.webp",
+	"name": "Learn Melee Weapon",
+	"origin": "Compendium.shadowdark.talents.Item.BOOWJDqwiHN5BdxF",
+	"statuses": [
+	],
+	"tint": null,
+	"transfer": true
+}

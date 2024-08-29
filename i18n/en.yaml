@@ -103,12 +103,13 @@ SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
 SHADOWDARK.apps.monster-importer.title: Import Monster
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Import Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generate your character and save as JSON.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Copy the content of file into this box.
-SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Click import.
-SHADOWDARK.apps.shadowdarkling-importer.open-generator: Open Generator
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
