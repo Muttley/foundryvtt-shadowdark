@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/hand-grip-sword-orange.webp",
+	"img": "icons/skills/melee/hand-grip-sword-orange.webp",
 	"name": "Learn Melee Weapon",
 	"origin": "Compendium.shadowdark.talents.Item.BOOWJDqwiHN5BdxF",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

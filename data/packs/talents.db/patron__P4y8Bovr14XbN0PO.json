@@ -5,6 +5,7 @@
 		{
 			"key": "",
 			"mode": 2,
+			"priority": null,
 			"value": "REPLACEME"
 		}
 	],
@@ -19,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+	"img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
 	"name": "Patron",
 	"origin": "Compendium.shadowdark.talents.Item.4pcEgD8oLA5euovK",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }
