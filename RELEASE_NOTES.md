@@ -10,6 +10,7 @@
 * [#852] Fixed a bug where ranged attacks were not showing correct damage
 * [#855] Corrected minor UI bugs
 * [#858] Character Generator now properly displaying text in Foundry v12
+* [#868] Thrown property text updated to match latest rules.
 
 ## Chores
 * [#332] implemented v11 method of working with Active Effects
