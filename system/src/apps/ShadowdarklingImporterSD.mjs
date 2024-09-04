@@ -287,6 +287,12 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			},
 		};
 
+		// calculate modifiers
+		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
+			let baseInt = this.importedActor.system.abilities[x].base;
+			this.importedActor.system.abilities[x].mod = Math.floor((baseInt - 10)/2);
+		});
+
 		// Load the mapping file
 		this.itemMapping = await foundry.utils.fetchJsonWithTimeout(
 			"systems/shadowdark/assets/mappings/map-shadowdarkling.json"
@@ -411,6 +417,25 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 			// fix format on ranger damage die
 			if (bonus.name === "SetWeaponTypeDamage") {
 				bonus.bonusTo = bonus.bonusTo.split(":")[0];
+			}
+
+			// select the correct FarSight
+			if (bonus.name === "FarSight") {
+				let talentToRemove = "";
+				if (bonus.bonusName === "Plus1ToCastingSpells") talentToRemove = "Farsight (Ranged)";
+				if (bonus.bonusName === "AttackBonus") talentToRemove = "Farsight (Spell)";
+				let index = this.talents.find(x => x.name === talentToRemove);
+				if (index) this.talents.splice(this.talents.indexOf(index), 1);
+				continue;
+			}
+			// select the correct Knack
+			if (bonus.name === "Knack") {
+				let talentToRemove = "";
+				if (bonus.bonusName === "LuckTokenAtStartOfSession") talentToRemove = "Knack (Spellcasting)";
+				if (bonus.bonusName === "Plus1ToCastingSpells") talentToRemove = "Knack (Luck)";
+				let index = this.talents.find(x => x.name === talentToRemove);
+				if (index) this.talents.splice(this.talents.indexOf(index), 1);
+				continue;
 			}
 
 			// find matching spell and load
