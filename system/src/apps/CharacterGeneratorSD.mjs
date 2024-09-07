@@ -26,6 +26,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			choice: [],
 			selection: [],
 		};
+		this.formData.classDesc = "";
 		this.formData.classTalents = {
 			fixed: [],
 			choice: [],
@@ -467,6 +468,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.weapons = weaponData;
 
 		this.class = classObj;
+		this.formData.classDesc = await this._formatDescription(classObj.system.description);
 		await this._loadLanguages(randomize);
 
 	}
