@@ -6,6 +6,11 @@
     </div>
     <div class="content details">
 
+		{{!-- Class --}}
+        {{#if classDesc}}
+			<p>{{classDesc}}</p>
+        {{/if}}
+
         {{!-- Choice Ancestry Talents --}}
         {{#if ancestryTalents.choice}}
             {{#if ancestryTalents.selection}}

@@ -73,25 +73,7 @@
 		</div>
 	</div>
 
-	{{!-- Ancestry --}}
-	<div class="SD-box">
-		<div class="header">
-			<label for="actor.system.ancestry" title="{{localize 'SHADOWDARK.sheet.player.ancestry.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
-			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/unless}}</span>
-		</div>
-		<div class="content">
-			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry" {{disabled editing}}>
-			{{#select actor.system.ancestry}}
-				<option value=""></option>
-				{{#each ancestries as |value key|}}
-				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
-				{{/each}}
-			{{/select}}
-			</select>
-		</div>
-	</div>
-
-		{{!-- Class --}}
+	{{!-- Class --}}
 	<div class="SD-box">
 		<div class="header">
 			<label for="actor.system.class" title="{{localize 'SHADOWDARK.sheet.player.class.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.class.label'}}</label>
@@ -110,6 +92,24 @@
 					<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
 					{{/each}}
 				{{/unless}}
+			{{/select}}
+			</select>
+		</div>
+	</div>
+
+	{{!-- Ancestry --}}
+	<div class="SD-box">
+		<div class="header">
+			<label for="actor.system.ancestry" title="{{localize 'SHADOWDARK.sheet.player.ancestry.tooltip'}}">{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}</label>
+			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/unless}}</span>
+		</div>
+		<div class="content">
+			<select name="actor.system.ancestry" data-action='load-ancestry' id="ancestry" {{disabled editing}}>
+			{{#select actor.system.ancestry}}
+				<option value=""></option>
+				{{#each ancestries as |value key|}}
+				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
+				{{/each}}
 			{{/select}}
 			</select>
 		</div>
