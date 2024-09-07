@@ -58,7 +58,7 @@ export default class SolodarkSD extends FormApplication {
 		}
 
 		if ((resultRoll._total % 2) === 1 && (resultRoll._total > 1)) {
-			result.concat(", but...");
+			result = result.concat(", but...");
 		}
 
 		// roll on tables
