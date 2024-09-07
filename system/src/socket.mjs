@@ -46,7 +46,6 @@ export default function listenOnSocket() {
 			game.shadowdark.lightSourceTracker.pickupLightSourceFromScene(
 				event.data.character,
 				event.data.lightActor,
-				event.data.lightToken,
 				event.data.speaker
 			);
 		}
