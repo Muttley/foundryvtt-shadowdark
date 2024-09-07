@@ -25,6 +25,8 @@ export default class SolodarkSD extends FormApplication {
 	async _onSubmit(event) {
 		event.preventDefault();
 
+		// get roll type from form
+		const chatTemplate = "systems/shadowdark/templates/chat/solodark-card.hbs";
 		let formula = "";
 		switch (event.submitter.name) {
 			case "adv":
@@ -37,10 +39,48 @@ export default class SolodarkSD extends FormApplication {
 				formula = "d20";
 		}
 
+		// calculate the result
 		let resultRoll = await new Roll(formula).roll();
+		let result = "Yes";
+		switch (true) {
+			case (resultRoll._total === 1):
+				result = "Extreme No";
+				break;
+			case (resultRoll._total < 10):
+				result = "No";
+				break;
+			case (resultRoll._total === 10):
+				result = "Twist";
+				break;
+			case (resultRoll._total === 20):
+				result = "Extreme Yes";
+				break;
+		}
 
-		// ChatMessage.applyRollMode(chatData, "gmroll");
-		// close
+		if ((resultRoll._total % 2) === 1 && (resultRoll._total > 1)) {
+			result.concat(", but...");
+		}
+
+		// roll on tables
+
+		// render chat template
+		const HTML = await renderTemplate(
+			chatTemplate,
+			{
+				question: event.target.question.value,
+				result,
+			}
+		);
+
+		// create chat message
+		const chatData = {
+			user: game.user._id,
+			flavor: "The Oracle",
+			content: HTML,
+			classes: ["shadowdark"],
+			whisper: game.users.filter(u => u.isGM).map(u => u._id),
+		};
+		ChatMessage.create(chatData, {});
 
 	}
 }
