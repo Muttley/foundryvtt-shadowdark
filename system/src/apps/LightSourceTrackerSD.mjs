@@ -225,16 +225,14 @@ export default class LightSourceTrackerSD extends Application {
 	 *
 	 * @param {ActorSD} character - Assigned actor
 	 * @param {ActorSD} lightActor - Actor associated with dropped lightsource
-	 * @param {Token} lightToken - Token associated with dropped lightsource
 	 * @param {object} speaker - Speaker data
 	 */
-	async pickupLightSourceFromScene(actorData, lightActor, lightToken, speaker = false) {
+	async pickupLightSourceFromScene(actorData, lightActor, speaker = false) {
 		if (!actorData) return false;
 
 		const actor = game.actors.get(actorData._id);
 
 		const lightActorId = lightActor._id;
-		const lightTokenId = lightToken._id;
 
 		// Create the items onto the assigned character
 		const [item] = await actor.createEmbeddedDocuments(
@@ -249,8 +247,10 @@ export default class LightSourceTrackerSD extends Application {
 		// Delete the actor
 		game.actors.get(lightActorId).delete();
 
-		// Delete the token
-		canvas.scene.tokens.get(lightTokenId).delete();
+		// Delete all tokens
+		await canvas.scene.tokens.filter(t =>
+			t.actor._id === lightActorId
+		).forEach(t => t.delete());
 
 		const cardData = {
 			active: item.isActiveLight(),

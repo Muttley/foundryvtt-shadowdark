@@ -8,9 +8,9 @@
 	"name": "Fascinate",
 	"system": {
 		"ability": "cha",
-		"dc": 15,
-		"description": "<p>You transfix all targets of level 4 or less within near for 1d4 rounds.</p>",
-		"group": "Perform",
+		"dc": 12,
+		"description": "<p>(Focus). You transfix all chosen targets of level 4 or less within near.</p>",
+		"group": "Presence",
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,

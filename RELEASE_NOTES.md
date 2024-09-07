@@ -1,7 +1,7 @@
 # v3.1.0
 
 ## Enhancements
-* [#693] Changes made to active effects on actors will now take effects immediately
+* [#693] Changes made to active effects on actors will now take effect immediately
 * [#849] The UI and functionality of the Shadowdarklings importer has been improved
 * [#853] CSS Styling for Journals
 * [#854] Added SoloDark journals
@@ -11,10 +11,16 @@
 * [#852] Fixed a bug where ranged attacks were not showing correct damage
 * [#855] Corrected minor UI bugs
 * [#858] Character Generator now properly displaying text in Foundry v12
+* [#868] Thrown property text updated to match latest rules.
 * [#875] Fixes to links in Quickstart Adventure and make use of new Journal styling
 
 ## Chores
-* [#332] implemented v11 method of working with Active Effects
+* [#332] Implemented v11 method of working with Active Effects
+* [#866] Updated README and Welcome message documentation.
+
+	- Welcome message now includes a link to the video tutorial: https://youtu.be/hoBxiK71DBQ
+
+* [#875] Fixes to links in Quickstart Adventure and make use of new Journal
 
 **NOTE:** This release marks the end of support for Foundry VTT v11.
 

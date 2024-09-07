@@ -165,9 +165,15 @@ SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Using Ability"
-SHADOWDARK.chat.welcome_message.issue_tracker_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues: "If you find any issues or have ideas for new features for the system. Check out our issue tracker:"
+SHADOWDARK.chat.welcome_message.issues: Report Issues
+SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
+SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
+SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
+SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Ability
