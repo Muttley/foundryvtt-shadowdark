@@ -226,6 +226,15 @@
 			"flags": {}
 		},
 		{
+			"name": "solodark-journals",
+			"label": "SoloDark",
+			"system": "shadowdark",
+			"path": "packs/solodark-journals",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
 			"name": "spell-effects",
 			"label": "Spell Effects",
 			"system": "shadowdark",
@@ -260,7 +269,6 @@
 			"color": "#22252b",
 			"packs": [
 				"conditions",
-				"documentation",
 				"gear",
 				"macros",
 				"magic-items",
@@ -283,6 +291,15 @@
 						"deities",
 						"languages",
 						"talents"
+					]
+				},
+				{
+					"name": "Journals",
+					"sorting": "a",
+					"color": "#262626",
+					"packs": [
+						"documentation",
+						"solodark-journals"
 					]
 				},
 				{
