@@ -12,6 +12,7 @@
 * [#855] Corrected minor UI bugs
 * [#858] Character Generator now properly displaying text in Foundry v12
 * [#868] Thrown property text updated to match latest rules.
+* [#870] Fixed a bug related to picking up dropped light sources
 * [#875] Fixes to links in Quickstart Adventure and make use of new Journal styling
 
 ## Chores
@@ -20,6 +21,7 @@
 
 	- Welcome message now includes a link to the video tutorial: https://youtu.be/hoBxiK71DBQ
 
+* [#872] Updated Bard abilities to the definitions in the Bard and Ranger v1.3 PDF
 * [#875] Fixes to links in Quickstart Adventure and make use of new Journal
 
 **NOTE:** This release marks the end of support for Foundry VTT v11.
