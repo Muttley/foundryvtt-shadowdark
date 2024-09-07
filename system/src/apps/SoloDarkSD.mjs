@@ -26,7 +26,7 @@ export default class SolodarkSD extends FormApplication {
 		event.preventDefault();
 
 		// get roll type from form
-		const chatTemplate = "systems/shadowdark/templates/chat/solodark-card.hbs";
+
 		let formula = "";
 		switch (event.submitter.name) {
 			case "adv":
@@ -61,26 +61,46 @@ export default class SolodarkSD extends FormApplication {
 			result = result.concat(", but...");
 		}
 
-		// roll on tables
-
-		// render chat template
+		// display results to chat
 		const HTML = await renderTemplate(
-			chatTemplate,
+			"systems/shadowdark/templates/chat/solodark-card.hbs",
 			{
 				question: event.target.question.value,
 				result,
 			}
 		);
 
-		// create chat message
 		const chatData = {
 			user: game.user._id,
-			flavor: "The Oracle",
 			content: HTML,
-			classes: ["shadowdark"],
 			whisper: game.users.filter(u => u.isGM).map(u => u._id),
 		};
 		ChatMessage.create(chatData, {});
 
+	}
+
+	static async rollPrompt() {
+
+		const verbTable = await fromUuid("Compendium.shadowdark-homebrew.roll-tables.RollTable.N9qL0SgcTHTKMfrO");
+		const nounTable = await fromUuid("Compendium.shadowdark-homebrew.roll-tables.RollTable.F5PKRF94mML8q2Hk");
+
+		let result = await verbTable.draw({displayChat: false});
+		const verb = result.results[0].text;
+
+		result = await nounTable.draw({displayChat: false});
+		const noun = result.results[0].text;
+
+		const HTML = await renderTemplate(
+			"systems/shadowdark/templates/chat/solodark-prompt-card.hbs",
+			{verb, noun}
+		);
+
+		// create chat message
+		const chatData = {
+			user: game.user._id,
+			content: HTML,
+			whisper: game.users.filter(u => u.isGM).map(u => u._id),
+		};
+		ChatMessage.create(chatData, {});
 	}
 }

@@ -1,16 +1,18 @@
 <form autocomplete="off">
 
-	<h1 class="centered">The Oracle</h1>
+	<h1 class="centered">{{localize "SHADOWDARK.apps.solodark.oracle"}}</h1>
 
-	<div class="grid-3-columns">
+	<div class="grid-3-columns centered">
+		<h3 class="grid-colspan-3 ">{{localize "SHADOWDARK.apps.solodark.question1"}}</h3>
 		<textarea
-			class="grid-colspan-3"
+		class="grid-colspan-3 "
 			name="question"
-			placeholder="What will you ask the Oracle?"
-			rows="3"
+			placeholder="{{localize "SHADOWDARK.apps.solodark.phrasing"}}"
+			rows="4"
 		></textarea>
-		<button name="dis">Unlikely or Impossible</button>
-		<button name="even">Even Chance</button>
-		<button name="adv">Likely or Certain</button>
+		<h3 class="grid-colspan-3 centered">{{localize "SHADOWDARK.apps.solodark.question2"}}</h3>
+		<button name="dis">{{localize "SHADOWDARK.apps.solodark.button1"}}</button>
+		<button name="even">{{localize "SHADOWDARK.apps.solodark.button2"}}</button>
+		<button name="adv">{{localize "SHADOWDARK.apps.solodark.button3"}}</button>
 	</div>
 </form>
