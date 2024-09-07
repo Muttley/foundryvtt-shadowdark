@@ -81,8 +81,8 @@ export default class SolodarkSD extends FormApplication {
 
 	static async rollPrompt() {
 
-		const verbTable = await fromUuid("Compendium.shadowdark-homebrew.roll-tables.RollTable.N9qL0SgcTHTKMfrO");
-		const nounTable = await fromUuid("Compendium.shadowdark-homebrew.roll-tables.RollTable.F5PKRF94mML8q2Hk");
+		const verbTable = await fromUuid("Compendium.shadowdark.rollable-tables.RollTable.1xuTMmp7d9BKkAgk");
+		const nounTable = await fromUuid("Compendium.shadowdark.rollable-tables.RollTable.7cYFj7NH2XbHVakm");
 
 		let result = await verbTable.draw({displayChat: false});
 		const verb = result.results[0].text;
