@@ -1,7 +1,7 @@
 # v3.1.0
 
 ## Enhancements
-* [#693] Changes made to active effects on actors will now take effects immediately
+* [#693] Changes made to active effects on actors will now take effect immediately
 * [#849] The UI and functionality of the Shadowdarklings importer has been improved
 * [#853] CSS Styling for Journals
 * [#856] Beauty pass over Quickstart journals
@@ -13,7 +13,10 @@
 * [#868] Thrown property text updated to match latest rules.
 
 ## Chores
-* [#332] implemented v11 method of working with Active Effects
+* [#332] Implemented v11 method of working with Active Effects
+* [#866] Updated README and Welcome message documentation.
+
+	- Welcome message now includes a link to the video tutorial: https://youtu.be/hoBxiK71DBQ
 
 Many thanks to *Cussa* for contributing fixes in this build
 

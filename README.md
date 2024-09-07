@@ -9,85 +9,85 @@
 **foundryvtt-shadowdark** is a community contributed and maintained system for playing the [Shadowdark RPG][2] with the [Foundry VTT][3] virtual tabletop software.
 
 ## Features
-- **Sheets**
-  - Fully featured sheets for:
-    - Players
-      - Automatic calculations for HP (augmented by talents), AC (based on equipped armor), ability modifiers
-      - Attacks summarized on the Abilities sheet based on equipped weapon
-      - Tracker for Luck token
-      - Tabs to easily access different aspects of the character
-    - NPCs
-    - Items
-      - Including Gem Bag
 
-- **Classes**
-  - All base classes from Quickstart guides are available
-  - Rolltables for rolling talents
-  - Automatic amount of damage dice for Thiefs backstab talent (may be augmented by supplied bonus die talent)
+**Core Rule Book Content**
+- All Weapons, armor, gear
+- All Ancestries, Background, Classes, Deities
+- All Talents with Roll Tables
+- Spells (Teir 1-5)
+- all 238 monsters from the core rules book
 
-- **Items**
-  - All items from the Quickstart guides are available in item compendiums
-  - Lightsource items automatically sets the light settings for your tokens so you don't have to
-  - Tracking of ammunition is available from the inventory screen of your character
-  - Selling of gems is easy with the gem bag interface, which also tracks your different gems and how many slots they take up
-  - Automatic tracking of gear slots, including augmentations from talents
+**Cursed Scrolls zines (1-3) Content**
+- All classes, background, weapons, armor
+- Talents and tables
+- New spells (Teir 1-5)
 
-- **Monsters**
-  - Compendium full of monsters from the Quickstart Guide, including the Lost Citadel of the Scarlet Minotaur
-  - (Note: Complex attack patterns are not implemented, such as the combinations of AND & OR and multiples of attacks)
-	- Support for optional Token image mapping from the Pathfinder Token Pack: Bestiaries module or other modules which provide a Shadowdark mapping file
+**Quickstart Set Content**
+- Both the Player Guide and the Gamemaster Guide from the Quickstart are available as journals
+- Included adventure: The Lost Citadel of the Scarlet Minotaur
+- Compendium of pre-generated characters
+- Magical items
+- Wizard Mishap tier 1-3 Table
+- Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
 
-- **Spells**
-  - Spells from the Quickstart guide are all available
-  - Automatically checks for failure and success during spell checks. Spells are lost on failure
-  - Indication of critical failure & success with indications of what to do
+**Sheets**
+- Automated checks with calculated modifiers:
+	- Attack checks (based on equipped weapons)
+    - Spell checks, with spells lost on failure
+	- Stat checks
+	- Tracking of permanent or temporary conditions and effects
+- Items
+	- Automatic tracking of gear slots, including augmentations from talents
+    - Light source item tracking, automatically sets the light settings for your tokens
+	- Selling of treasure and gems
+	- Items can be equipped, carried or stashed
+- Characters (Players)
+    - Calculated HP (augmented by talents),
+	- Calculated AC (based on equipped armor)
+    - Luck token tracking in normal or pulp mode
+- Monsters (NPCs)
+	- Fix HP or randomized by hit dice
+	- Basic attacks, spells, features,
 
-- **Weapons**
-  - All weapons from the Quickstart Guide implemented and available through the compendiums
-  - Automatic weapon mastery calculations based on either weapon name or selected base weapon (for named weapons)
+**Character Management**
+- A character generator for quickly rolling new characters
+- Import existing characters from Shadowdarklings.net
+- A guided level up process based on class details
+- Automatic roll tables for randomizing talents
 
-- **Talents**
-  - All ancestry & class talents, including talent rolltables, are available from the Quickstart guides
-  - Active effects on talents modify the data of the actor, automating the setup
-  - Talents pre-defined for:
-    - Advantage on Initiative, HP rolls, Spell casting with certain spells
-      - Advantage button colored green when advantage from talents, as suggestion on the roll dialog
+**Customization**
+- Support for creating custom:
+	- ancestries, classes, languages, talents, monsters
+	- weapons, armor, properties, spells, magic items
+- Active effects on talents can modify the data of the actor:
+    - Advantage on Initiative, HP rolls, Spell casting
     - Ability score modifications
-    - Weapon Mastery
-      - Uses either the weapon name, or the base weapon as selected per item basis
-    - Additional damage dice during Backstab
-  - Custom talents can be defined
-  - (Note: Foundry limitations doesn't allow changing talents on the actors, so they need to be imported and changed before being dragged to the actor in some cases)
+	- Pre-defined talents for core classes
+		- Weapon mastery calculations
+    	- Additional damage dice during Backstab
+		- Spell advantage on named spells
 
+**Light source Tracker for GMs**
+- Track the remaining burn time of Light sources
+- Douse individual Light sources, or douse them all at once
+- Tracks associated actors per player. A character *must* be claimed by a player to enable tracking
 
-- **Quickstarter Guides**
-  - Both the Player Guide and the Gamemaster Guide from the Quickstart are available as journals
-  - Compendium containing the content available for: Items, Talents, Spells, Monster, Rollable tables, Pregenerated Characters, and the Lost Citadel of the Scarlet Minotaur
+**Macros**
+- Useful macros compendium with tools for running the game
+- Macros for drawing traps, hazards, random ruin encounters, rumors, what is happening, random magic item names
+- Import, items and spells from source material PDFs
 
+**Monsters**
+- Import monsters from source PDFs using the Monster Importer
+- Support for monster token image remapping from a custom module or supported product. e.g. Pathfinder Token Pack: Bestiaries module
 
-- **The Lost Citadel of the Scarlet Minotaur Adventure**
-  - The intro adventure in the Quickstart guide is available as an Adventure Import using the built-in compendium
+**Localization**
+- Full support for English and Swedish translations
+- Best effort support for French, German & Finnish translations.
+- Please see the [Translation][5] information on our [Wiki][4] for details on how to help with existing translations, or with getting new languages added
 
-- **Pregen Player characters**
-  - The pregen characters from the Quickstart Guide are all available in the built-in compendium
-
-- **Lightsource Tracker**
-  - Interface only available for GMs
-    - GMs can track the remaining burn time of lightsources, see system options
-    - GMs have to ability to douse individual lightsources, or douse them all at once
-  - Individual tracking per player and item
-  - Tracks associated actors per player. A Player character *must* be claimed by a user to enable tracking
-
-- **Macros**
-  - Macros for drawing traps, hazards, random ruin encounters, rumors, what is happening, random magic item names, and adventure site names available from the Game Master guide
-  - Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
-
-- **Tours**
-	- A selection of tutorial Tours, explaining various parts of the system
-
-- **Localization**
-  - We currently fully support English and Swedish translations
-  - We currenly have various levels of support for French, German & Finnish translations.  Please see the [Translation][5] information on our [Wiki][4] for details on how to help with existing translations, or with getting new languages added
+# Video Tutorial
+[![Shadowdark RPG on Foundry VTT Basics](https://img.youtube.com/vi/hoBxiK71DBQ/hqdefault.jpg)](https://www.youtube.com/watch?v=hoBxiK71DBQ&list=PLpf8dHUKN9f0of47XUk6V3dt3McRWYkcU)
 
 # Community Contributions
 

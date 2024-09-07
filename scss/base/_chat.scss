@@ -84,16 +84,28 @@
   }
 }
 
-.shadowdark.welcome-message img {
-		background: var(--secondary);
-}
+
 
 .shadowdark.welcome-message {
-  &.message-content {
-    p {
-      padding: 3px 0 3px;
-    }
-  }
+	.message-content {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 18px;
+		p {
+		padding: 3px 0 3px;
+		}
+	}
+	.shadowdark-logo {
+		font-family: "JSL Blackletter";
+		font-size: 40px;
+		color: var(--primary);
+		text-align: center;
+
+		span {
+			border-bottom: solid 2px var(--primary);
+			padding: 0px 10px 0px 10px;
+		}
+	}
 }
 
 .shadowdark.light-source-card,
