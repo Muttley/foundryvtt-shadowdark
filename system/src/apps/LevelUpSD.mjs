@@ -106,7 +106,7 @@ export default class LevelUpSD extends FormApplication {
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			if (this.data.isSpellCaster) {
 				this.spellbook = new shadowdark.apps.SpellBookSD(
-					this.data.class.uuid,
+					this.data.class.system.spellcasting.class,
 					this.data.actor.id
 				);
 

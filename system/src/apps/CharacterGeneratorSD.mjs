@@ -102,7 +102,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 					sp: 0,
 					cp: 0,
 				},
-				showLevelUp: false,
+				showLevelUp: true,
 			},
 		};
 
@@ -766,12 +766,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
 
-			await newActor.update({
-				ownership,
-				system: {
-					showLevelUp: !level0,
-				},
-			});
+			await newActor.update({ownership});
 
 			const user = game.users.get(userId);
 
@@ -829,6 +824,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// make changes only for level 0 characters
 		if (this.formData.level0) {
 			this.formData.actor.system.coins.gp = 0;
+			this.formData.actor.system.showLevelUp = false;
 
 			// add gear to the items list
 			for (const item of this.formData.gearSelected) {

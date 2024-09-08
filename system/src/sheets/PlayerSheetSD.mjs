@@ -157,8 +157,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async render(options, _options) {
-		await super.render(options, _options);
+	async _render(options, _options) {
+		await super._render(options, _options);
 
 		if (this.actor.system.showLevelUp) {
 			this.actor.update({"system.showLevelUp": false});
