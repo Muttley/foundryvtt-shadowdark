@@ -2,7 +2,16 @@
 @use "../mixins" as *;
 
 .shadowdarkling-importer {
-  p {
-    padding: 0 0 4px;
-  }
+	fieldset {
+	height:120px;
+	border:2px solid #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+	button {
+		font-size: 18px;
+		font-family: "Old Newspaper Font";
+	}
 }

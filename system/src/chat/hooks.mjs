@@ -1,3 +1,5 @@
+import SolodarkSD from "../apps/SoloDarkSD.mjs";
+
 export function highlightSuccessFailure(app, html, data) {
 	if ( !app.flags.isRoll ) return;
 
@@ -133,6 +135,12 @@ async function chatCardButtonAction(app, html, data) {
 		const actor = game.actors.get(actorId);
 
 		actor.rollAttack(itemId);
+	});
+
+	const rollPromptButton = html.find("button[data-action=roll-prompt]");
+	rollPromptButton.on("click", ev => {
+		ev.preventDefault();
+		SolodarkSD.rollPrompt();
 	});
 }
 

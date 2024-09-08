@@ -34,7 +34,7 @@ export default class LevelUpSD extends FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "level-up"],
-			width: 275,
+			width: 300,
 			resizable: false,
 			closeOnSubmit: true,
 			submitOnChange: false,
@@ -106,7 +106,7 @@ export default class LevelUpSD extends FormApplication {
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
 			if (this.data.isSpellCaster) {
 				this.spellbook = new shadowdark.apps.SpellBookSD(
-					this.data.class.uuid,
+					this.data.class.system.spellcasting.class,
 					this.data.actor.id
 				);
 
@@ -347,18 +347,6 @@ export default class LevelUpSD extends FormApplication {
 		// add talents and spells to actor
 		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
-		// show actor sheet
 		this.close();
-	}
-
-	/** @override */
-	async close() {
-		try {
-			this.data.actor.sheet.render(true);
-		 }
-		catch(err) {
-			console.log("Counld't open Actor");
-		}
-		super.close();
 	}
 }

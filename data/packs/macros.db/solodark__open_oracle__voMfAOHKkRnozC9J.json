@@ -1,0 +1,11 @@
+{
+	"_id": "voMfAOHKkRnozC9J",
+	"_key": "!macros!voMfAOHKkRnozC9J",
+	"author": "XOge3YaW9qcUJnuq",
+	"command": "/************************************\n * This macro opens the SoloDark Oracle\n ************************************/\n\nnew shadowdark.apps.SoloDarkSD().render(true);",
+	"folder": null,
+	"img": "icons/environment/people/cleric-orange.webp",
+	"name": "SoloDark: Open Oracle",
+	"scope": "global",
+	"type": "script"
+}

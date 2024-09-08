@@ -30,4 +30,9 @@ function _initListeners() {
 		event.preventDefault();
 		window.open("https://github.com/Muttley/foundryvtt-shadowdark/issues");
 	});
+
+	$(document).on("click", "button.shadowdark-arcane-library", event => {
+		event.preventDefault();
+		window.open("https://www.thearcanelibrary.com/pages/shadowdark");
+	});
 }

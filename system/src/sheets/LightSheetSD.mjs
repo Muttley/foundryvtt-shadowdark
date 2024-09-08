@@ -96,7 +96,6 @@ export default class LightSheetSD extends ActorSheetSD {
 				game.shadowdark.lightSourceTracker.pickupLightSourceFromScene(
 					game.actors.get(targetActor),
 					options.actor ?? this.actor,
-					options.token ?? this.object.token,
 					ChatMessage.getSpeaker()
 				);
 			}

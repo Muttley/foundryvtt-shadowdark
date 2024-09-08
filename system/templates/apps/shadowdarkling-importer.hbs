@@ -1,22 +1,74 @@
-<form class="shadowdarkling-importer" autocomplete="off">
-	<section>
-		<div>
-			<p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction1"}}</p>
-			<button class="open-generator">
-				{{localize "SHADOWDARK.apps.shadowdarkling-importer.open-generator"}}
-			</button>
-			<hr />
-			<p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction2"}}</p>
-			<hr />
-			<p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction3"}}</p>
-			<textarea name="json"></textarea>
-			<hr />
-			<p>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction4"}}</p>
+<form autocomplete="off">
+	<h1 class="centered">{{localize "SHADOWDARK.apps.shadowdarkling-importer.header"}}</h1>
+	{{#if actor.name}}
+		<div class="SD-box">
+			<div class="header">
+				<label>{{actor.name}}</label>
+				<span></span>
+			</div>
+			<div class="content grid-2-columns">
+				<div>
+					<h3>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}:</h3>
+					{{uuidToName actor.system.ancestry}}
+				</div>
+				<div>
+					<h3>{{localize "SHADOWDARK.sheet.actor.hp"}}:</h3>
+					{{actor.system.attributes.hp.value}} / {{actor.system.attributes.hp.max}}
+				</div>
+				<div>
+					<h3>{{localize "SHADOWDARK.sheet.player.class.label"}}:</h3>
+					{{uuidToName actor.system.class}}
+				</div>
+				<div>
+					<h3>{{localize "SHADOWDARK.coins.gp"}}:</h3>
+					{{actor.system.coins.gp}}
+				</div>
+
+				<div>
+					<h3>{{localize "SHADOWDARK.item.level"}}:</h3>
+					{{actor.system.level.value}}
+				</div>
+				<div>
+					<h3>{{localize "SHADOWDARK.sheet.player.xp"}}:</h3>
+					{{actor.system.level.xp}}
+				</div>
+			</div>
 		</div>
-	</section>
-	<footer class="sheet-footer flexrow">
-		<button class="import">
-			{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button"}}
+		<br>
+
+		{{#if errors}}
+			<div class="SD-banner">{{localize "SHADOWDARK.apps.shadowdarkling-importer.errors"}}</div>
+			<ol class="SD-list">
+				<li class="header">
+					<div style="flex:3">{{localize "SHADOWDARK.item.name"}}</div>
+					<div style="flex:1">{{localize "SHADOWDARK.item.type"}}</div>
+				</li>
+				{{#each errors}}
+				<li>
+					<div style="flex:3">{{this.name}}</div>
+					<div style="flex:1">{{this.type}}</div>
+				</li>
+				{{/each}}
+			</ol>
+			<br>
+		{{/if}}
+
+		<button>
+			{{#if errors}}
+				{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button2"}}
+			{{else}}
+				{{localize "SHADOWDARK.apps.shadowdarkling-importer.import_button"}}
+			{{/if}}
+			{{actor.name}}
 		</button>
-	</footer>
+		<br>
+
+	{{else}}
+		<fieldset>
+			<h3>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction3"}}</h3>
+		</fieldset>
+		<br>
+		<div>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction1"}}</div>
+		<div>{{localize "SHADOWDARK.apps.shadowdarkling-importer.instruction2"}}</div>
+	{{/if}}
 </form>

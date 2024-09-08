@@ -11,3 +11,4 @@ export {default as NpcAttackRangesSD} from "./NpcAttackRangesSD.mjs";
 export {default as ShadowdarklingImporterSD} from "./ShadowdarklingImporterSD.mjs";
 export {default as SpellBookSD} from "./SpellBookSD.mjs";
 export {default as SpellImporterSD} from "./SpellImporterSD.mjs";
+export {default as SoloDarkSD} from "./SoloDarkSD.mjs";

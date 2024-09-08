@@ -1,8 +1,34 @@
 # v3.1.0
 
 ## Enhancements
+* [#693] Changes made to active effects on actors will now take effect immediately
+* [#849] The UI and functionality of the Shadowdarklings importer has been improved
 * [#853] CSS Styling for Journals
+* [#854] Added SoloDark journals, roll tables and a new oracle app
 * [#856] Beauty pass over Quickstart journals
+* [#874] Added class descriptions to the character generator and class sheet remain open during level up
+
+## Bugfixes
+* [#852] Fixed a bug where ranged attacks were not showing correct damage
+* [#855] Corrected minor UI bugs
+* [#858] Character Generator now properly displaying text in Foundry v12
+* [#868] Thrown property text updated to match latest rules.
+* [#869] Monster Importer not working in v12
+* [#870] Fixed a bug related to picking up dropped light sources
+* [#875] Fixes to links in Quickstart Adventure and make use of new Journal styling
+
+## Chores
+* [#332] Implemented v11 method of working with Active Effects
+* [#866] Updated README and Welcome message documentation.
+
+	- Welcome message now includes a link to the video tutorial: https://youtu.be/hoBxiK71DBQ
+
+* [#872] Updated Bard abilities to the definitions in the Bard and Ranger v1.3 PDF
+
+* Many thanks to *Kelsey* at *The Arcane Library* for allowing us to include SoloDark in the core FoundryVTT System.
+* Thanks to *Cussa* for contributing fixes in this build.
+
+**NOTE:** This release marks the end of support for FoundryVTT v11 and requires FoundryVTT v12
 
 ---
 

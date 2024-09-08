@@ -79,7 +79,7 @@
 		padding: 0px;
 		list-style: none;
 
-		li {
+		> li {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
