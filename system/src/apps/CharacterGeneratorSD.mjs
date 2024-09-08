@@ -297,12 +297,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return this.formData;
 	}
 
-	diceSound() {
-		const sounds = [CONFIG.sounds.dice];
-		const src = sounds[0];
-		game.audio.play(src, {volume: 1});
-	}
-
 	async _randomizeHandler(event) {
 		const eventStr = event.target.name;
 		let tempInt = 0;
@@ -384,7 +378,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			await this._randomizeGear();
 		}
 
-		this.diceSound();
+		shadowdark.utils.diceSound();
 
 		// update all changes
 		this.render();

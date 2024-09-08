@@ -61,6 +61,8 @@ export default class SolodarkSD extends FormApplication {
 			result = result.concat(", but...");
 		}
 
+		shadowdark.utils.diceSound();
+
 		// display results to chat
 		const HTML = await renderTemplate(
 			"systems/shadowdark/templates/chat/solodark-card.hbs",
@@ -90,6 +92,7 @@ export default class SolodarkSD extends FormApplication {
 		result = await nounTable.draw({displayChat: false});
 		const noun = result.results[0].text;
 
+		shadowdark.utils.diceSound();
 		const HTML = await renderTemplate(
 			"systems/shadowdark/templates/chat/solodark-prompt-card.hbs",
 			{verb, noun}
