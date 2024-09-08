@@ -1,3 +1,13 @@
+# v3.1.1
+
+## Bugfixes
+* [#885] Character Spell Book showing duplicate spells and spells from incorrect classes in Level Up app
+
+## Chores
+* [#886] Merged i18n updates for all languages from Crowdin
+
+---
+
 # v3.1.0
 
 ## Enhancements
