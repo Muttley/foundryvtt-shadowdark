@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+	"img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
 	"name": "Soulbound",
 	"origin": "Item.XIVFQdlFLE6VjDfs",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

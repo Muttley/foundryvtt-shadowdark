@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/tools/hand/broom-straw-brown.webp",
+	"img": "icons/tools/hand/broom-straw-brown.webp",
 	"name": "Broomstick",
 	"origin": "Item.NzzijebUPYIGcakX",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

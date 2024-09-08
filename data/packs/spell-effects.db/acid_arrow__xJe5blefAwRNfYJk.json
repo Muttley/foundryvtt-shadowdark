@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/acid/projectile-bolts-salvo-green.webp",
+	"img": "icons/magic/acid/projectile-bolts-salvo-green.webp",
 	"name": "Acid Arrow",
 	"origin": "Item.aAdqy5QwVJrT8JWE",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

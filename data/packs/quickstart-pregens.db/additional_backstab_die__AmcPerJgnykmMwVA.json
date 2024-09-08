@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/strike-dagger-white-orange.webp",
+	"img": "icons/skills/melee/strike-dagger-white-orange.webp",
 	"name": "Additional Backstab Die",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

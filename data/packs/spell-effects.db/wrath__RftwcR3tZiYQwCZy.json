@@ -26,11 +26,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+	"img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
 	"name": "Wrath",
 	"origin": "Item.xOHpjBx4PhrNXQ4U",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/shield-barrier-blades-teal.webp",
+	"img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
 	"name": "Odin's Wisdom",
 	"origin": "Item.iiLI7kRr7y0PLSXK",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

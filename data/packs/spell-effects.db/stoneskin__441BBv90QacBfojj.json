@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/armor-stone-skin.webp",
+	"img": "icons/magic/defensive/armor-stone-skin.webp",
 	"name": "Stoneskin",
 	"origin": "Item.h9MTxzrrPmyhEmRL",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

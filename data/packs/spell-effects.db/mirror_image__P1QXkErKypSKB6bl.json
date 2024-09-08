@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
 	"name": "Mirror Image",
 	"origin": "Item.vI70AaskCqH9tKJ7",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

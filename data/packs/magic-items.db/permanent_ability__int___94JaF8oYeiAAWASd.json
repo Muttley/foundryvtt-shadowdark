@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/skills/melee/strike-axe-blood-red.webp",
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Permanent Ability (Int)",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

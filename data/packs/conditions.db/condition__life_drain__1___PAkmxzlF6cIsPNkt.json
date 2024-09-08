@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/unholy/hand-light-pink.webp",
+	"img": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Condition: Life Drain (1)",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

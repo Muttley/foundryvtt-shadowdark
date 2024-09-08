@@ -25,7 +25,10 @@
 	<div class="effect-item">
 		<div class="effect-info">
 			<h1>
-				{{effect.effectName}} ({{effect.originName}})
+				{{effect.parentName}}
+				{{#if effect.effectName}}
+					({{effect.effectName}})
+				{{/if}}
 			</h1>
 
 			<div class="tags">
@@ -47,15 +50,17 @@
 			</div>
 
 			<h2>
+				{{#if effect.category}}
 				<em>
 					{{localize "SHADOWDARK.apps.effect_panel.right_click_to_remove"}}
 				</em>
-			</h3>
+				{{/if}}
+			</h2>
 		</div>
 
 		<div
 			class="icon"
-			data-effect-id="{{effect.id}}"
+			data-effect-id="{{effect.parent.id}}"
 			style="background-image: url({{activeEffectIcon effect}});"
 		>
 			{{#if effect.temporary}}

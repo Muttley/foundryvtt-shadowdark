@@ -157,6 +157,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
+	async _render(options, _options) {
+		await super._render(options, _options);
+
+		if (this.actor.system.showLevelUp) {
+			this.actor.update({"system.showLevelUp": false});
+			new shadowdark.apps.LevelUpSD(this.actor.id).render(true);
+		}
+	}
+
+	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
 		context.gearSlots = this.actor.numGearSlots();
@@ -587,11 +597,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		let actorClass = await this.actor.getClass();
 		if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
 			new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
+			this.close();
 		}
 		else {
 			new shadowdark.apps.LevelUpSD(this.actor._id).render(true);
 		}
-		this.close();
 	}
 
 	async _onOpenGemBag(event) {

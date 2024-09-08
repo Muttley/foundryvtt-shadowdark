@@ -20,11 +20,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+	"img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 	"name": "Additional Gear Slots",
 	"origin": null,
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

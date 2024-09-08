@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/creatures/magical/construct-stone-earth-gray.webp",
+	"img": "icons/creatures/magical/construct-stone-earth-gray.webp",
 	"name": "Condition: Petrified",
 	"origin": "Item.XbrayNCUis3pV0XU",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
 	"name": "Hypnotized",
 	"origin": "Item.XIVFQdlFLE6VjDfs",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

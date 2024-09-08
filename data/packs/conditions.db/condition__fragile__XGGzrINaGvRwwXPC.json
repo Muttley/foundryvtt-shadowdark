@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/commodities/bones/bone-broken-grey.webp",
+	"img": "icons/commodities/bones/bone-broken-grey.webp",
 	"name": "Condition: Fragile",
 	"origin": "Item.pcBuNszkAjGRJ0XX",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }

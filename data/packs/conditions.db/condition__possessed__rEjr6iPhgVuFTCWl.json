@@ -14,11 +14,14 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"icon": "icons/magic/perception/hand-eye-pink.webp",
+	"img": "icons/magic/perception/hand-eye-pink.webp",
 	"name": "Condition: Possessed",
 	"origin": "Item.OL2kOP05K96L9JV9",
 	"statuses": [
 	],
-	"tint": null,
-	"transfer": true
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
 }
