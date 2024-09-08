@@ -103,12 +103,13 @@ SHADOWDARK.apps.monster-importer.instruction2d: 주요 능력 블록
 SHADOWDARK.apps.monster-importer.instruction2e: 재주
 SHADOWDARK.apps.monster-importer.instruction3: 3. '몬스터 불러오기'를 누릅니다.
 SHADOWDARK.apps.monster-importer.title: 몬스터 불러오기
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Shadowdarkling에서 가져오기
+SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. shadowdarklings.net에 방문하세요.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 캐릭터를 만들고 JSON 파일로 저장하세요.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. 파일의 내용을 이곳에 붙여넣어주세요.
-SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. 가져오기 버튼을 클릭하세요.
-SHADOWDARK.apps.shadowdarkling-importer.open-generator: 캐릭터 생성 창 열기
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Shadowdarkling에서 가져오기
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
@@ -122,6 +123,15 @@ SHADOWDARK.apps.spell-importer.instruction2e: Range
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
 SHADOWDARK.apps.spell-importer.title: Import Spell
+SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
+SHADOWDARK.apps.solodark.button2: Even Chance
+SHADOWDARK.apps.solodark.button3: Likely or Certain
+SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.question1: What is the question?
+SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
+SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
+SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: 불리함/은신
 SHADOWDARK.armor.properties.disadvantage_swimming: 불리함/수영
 SHADOWDARK.armor.properties.no_swimming: 수영 못함
@@ -164,9 +174,15 @@ SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Using Ability"
-SHADOWDARK.chat.welcome_message.issue_tracker_button: 문제 트래커
-SHADOWDARK.chat.welcome_message.issues: "시스템에 문제가 발생하거나 제안하고 싶은 새 기능이 있다면, 문제 트래커를 활용해주세요:"
+SHADOWDARK.chat.welcome_message.issues: Report Issues
+SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
+SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
+SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.title: 섀도다크 RPG 파운드리 시스템
+SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: 굴림
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Ability
@@ -585,8 +601,8 @@ SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
-SHADOWDARK.settings.effect_panel.show_passive.hint: 체크하면 재능과 그 외 패시브 효과를 효과 패널에 표시합니다
-SHADOWDARK.settings.effect_panel.show_passive.name: 패시브 효과 패널에 표시
+SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
+SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다
