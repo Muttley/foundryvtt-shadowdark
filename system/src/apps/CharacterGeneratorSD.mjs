@@ -102,6 +102,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 					sp: 0,
 					cp: 0,
 				},
+				showLevelUp: false,
 			},
 		};
 
@@ -771,7 +772,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
 
-			await newActor.update({ownership});
+			await newActor.update({
+				ownership,
+				system: {
+					showLevelUp: !level0,
+				},
+			});
 
 			const user = game.users.get(userId);
 
@@ -787,12 +793,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			});
 		}
 		else {
-			if (level0) {
-				newActor.sheet.render(true);
-			}
-			else {
-				new shadowdark.apps.LevelUpSD(newActor.id).render(true);
-			}
+
+			newActor.sheet.render(true);
 
 			return ui.notifications.info(
 				game.i18n.localize("SHADOWDARK.apps.character-generator.success"),
@@ -802,6 +804,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	async _createCharacter() {
+
+		// sets initial totals on all stats
+		for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			this.formData.actor.system.abilities[key].total =
+				this.formData.actor.system.abilities[key].base;
+		}
 
 		const allItems = [];
 
@@ -813,6 +821,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
+		// load talents with selection of options
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
 		}
@@ -892,17 +901,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 				class: this.formData.actor.system.class,
 				languages: this.formData.actor.system.languages,
 				coins: {gp: this.formData.actor.system.coins.gp},
+				showLevelUp: true,
 			} });
 
-		// add class talents
-		const allItems = [
+
+		// Add class talents and promp player to choose effects
+		const allTalents = [
 			...this.formData.classTalents.fixed,
 			...this.formData.classTalents.selection,
 		];
+
+		// load talents with selection of options
+		const allItems = [];
+		for (const talentItem of allTalents) {
+			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
+		}
+
 		await actorRef.createEmbeddedDocuments("Item", allItems);
 
-		// go to level up screen
-		new shadowdark.apps.LevelUpSD(this.actorUid).render(true);
+		// open actor sheet
+		actorRef.sheet.render(true);
 		this.close();
 	}
 }

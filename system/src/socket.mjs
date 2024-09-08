@@ -26,15 +26,8 @@ export default function listenOnSocket() {
 		if (event.type === "openNewCharacter") {
 			if (event.payload.userId === game.userId) {
 				const actor = game.actors.get(event.payload.actorId);
+				actor.sheet.render(true);
 
-				if (actor) {
-					if (event.payload.level0) {
-						actor.sheet.render(true);
-					}
-					else {
-						new shadowdark.apps.LevelUpSD(event.payload.actorId).render(true);
-					}
-				}
 				return ui.notifications.info(
 					game.i18n.localize("SHADOWDARK.apps.character-generator.success"),
 					{permanent: false}
