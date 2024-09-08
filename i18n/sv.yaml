@@ -103,12 +103,13 @@ SHADOWDARK.apps.monster-importer.instruction2d: Primärt statistikblock
 SHADOWDARK.apps.monster-importer.instruction2e: Egenskap
 SHADOWDARK.apps.monster-importer.instruction3: 3. Klicka på Importera Monster.
 SHADOWDARK.apps.monster-importer.title: Importera monster
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Importera Shadowdarkling
+SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Besök Shadowdarklings.net.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Generera din karaktär och spara som JSON.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: 3. Kopiera innehållet i filen till den här rutan.
-SHADOWDARK.apps.shadowdarkling-importer.instruction4: 4. Klicka på importera.
-SHADOWDARK.apps.shadowdarkling-importer.open-generator: Öppen generator
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Importera Shadowdarkling
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
@@ -122,6 +123,15 @@ SHADOWDARK.apps.spell-importer.instruction2e: Räckvidd
 SHADOWDARK.apps.spell-importer.instruction2f: Beskrivning
 SHADOWDARK.apps.spell-importer.instruction3: 3. Klicka på importera.
 SHADOWDARK.apps.spell-importer.title: Importera besvärjelse
+SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
+SHADOWDARK.apps.solodark.button2: Even Chance
+SHADOWDARK.apps.solodark.button3: Likely or Certain
+SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.question1: What is the question?
+SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
+SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
+SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: Nackdel/Smyga
 SHADOWDARK.armor.properties.disadvantage_swimming: Nackdel/Simma
 SHADOWDARK.armor.properties.no_swimming: Ingen Simma
@@ -164,9 +174,15 @@ SHADOWDARK.chat.spell_roll.title: "Kastar {name} som grad {tier} med svårighets
 SHADOWDARK.chat.use_ability.failure: "{name} misslyckades med att använda {ability} förmågan"
 SHADOWDARK.chat.use_ability.success: "{name} lyckades med {ability} förmågan"
 SHADOWDARK.chat.use_ability.title: "Använder förmåga"
-SHADOWDARK.chat.welcome_message.issue_tracker_button: Ärendehanteringssystem
-SHADOWDARK.chat.welcome_message.issues: "Om du hittar några problem eller har idéer för nya funktioner för systemet. Kolla in vår ärendehanterare:"
+SHADOWDARK.chat.welcome_message.issues: Report Issues
+SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
+SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
+SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG för Foundry
+SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Förmåga
@@ -585,8 +601,8 @@ SHADOWDARK.roll.spell_casting_check: Besvärjelse Check
 SHADOWDARK.roll.success: Lyckades! ({value})
 SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare felsökningsloggning
 SHADOWDARK.settings.debugEnabled.name: Aktivera/inaktivera felsökning
-SHADOWDARK.settings.effect_panel.show_passive.hint: Om markerad kommer effektpanelen att visa talanger och andra passiva effekter
-SHADOWDARK.settings.effect_panel.show_passive.name: Visa passiva effekter i panelen
+SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
+SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Utför datamigrering på inbyggda Shadowdark RPG system kompendier (ändra inte detta om du inte vet vad du gör)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrera systemkompendier
 SHADOWDARK.settings.module_art.hint: Konfigurera vilken moduls konst ska användas
