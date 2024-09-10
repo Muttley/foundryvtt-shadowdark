@@ -1,7 +1,7 @@
 # v3.1.2
 
 ## Bugfixes
-* [#888] Max and Current HP not set correctly on character creation
+* [#888] Max and Current HP not set correctly during character creation
 
 ## Chores
 * [#891] Merged Finnish language updates from Crowdin
