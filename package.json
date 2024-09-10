@@ -18,17 +18,17 @@
 		"del": "^7.1.0",
 		"glob": "^11.0.0",
 		"gulp": "^5.0.0",
-		"gulp-eslint-new": "^2.2.0",
+		"gulp-eslint-new": "^2.3.0",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-yaml": "^2.0.4",
 		"json-stable-stringify-pretty": "^1.2.0",
-		"marked": "^13.0.2",
+		"marked": "^14.1.2",
 		"merge-stream": "^2.0.0",
 		"nedb-promises": "^6.2.3",
-		"rollup": "^4.18.1",
-		"sass": "^1.77.6",
-		"yaml": "^2.4.5",
+		"rollup": "^4.21.2",
+		"sass": "^1.78.0",
+		"yaml": "^2.5.1",
 		"yargs": "^17.7.2"
 	}
 }

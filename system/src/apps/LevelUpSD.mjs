@@ -173,8 +173,6 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _onRollHP() {
-
-		// roll HP
 		const data = {
 			rollType: "hp",
 			actor: this.data.actor,
@@ -293,7 +291,6 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _finalizeLevelUp() {
-
 		// update actor XP and level
 		let newXP = 0;
 
@@ -302,22 +299,7 @@ export default class LevelUpSD extends FormApplication {
 			newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
 		}
 
-		// calculate new HP base
-		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
-		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
-
-		if (this.data.targetLevel === 1) {
-			let hpConMod = this.data.actor.system.abilities.con.mod;
-			// apply conmod to a set minimum 1 HP
-			if ((this.data.rolls.hp + hpConMod) > 1) {
-				newBaseHP = this.data.rolls.hp + hpConMod;
-			}
-			else {
-				newBaseHP = 1;
-			}
-			newValueHP = newBaseHP;
-		}
-
+		// Add items first as they may include HP / Con bonuses
 		let allItems = [
 			...this.data.talents,
 		];
@@ -330,12 +312,36 @@ export default class LevelUpSD extends FormApplication {
 			];
 		}
 
+		// Names for audit log
+		const itemNames = [];
+		allItems.forEach(x => itemNames.push(x.name));
+
+		// add talents and spells to actor
+		await this.data.actor.createEmbeddedDocuments("Item", allItems);
+
+		// calculate new HP base
+		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
+		let newMaxHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
+
+		if (this.data.targetLevel === 1) {
+			let hpConMod = this.data.actor.system.abilities.con.mod;
+			// apply conmod to a set minimum 1 HP
+			if ((this.data.rolls.hp + hpConMod) > 1) {
+				newBaseHP = this.data.rolls.hp + hpConMod;
+
+			}
+			else {
+				newBaseHP = 1;
+			}
+			newValueHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
+			newMaxHP = newValueHP;
+		}
+
 		// load audit log, check for valid data, add new entry
 		let auditLog = this.data.actor.system?.auditlog ?? {};
 		if (auditLog.constructor !== Object) auditLog = {};
 
-		const itemNames = [];
-		allItems.forEach(x => itemNames.push(x.name));
 		auditLog[this.data.targetLevel] = {
 			baseHP: newBaseHP,
 			itemsGained: itemNames,
@@ -343,15 +349,13 @@ export default class LevelUpSD extends FormApplication {
 
 		// update values on actor
 		await this.data.actor.update({
-			"system.level.value": this.data.targetLevel,
-			"system.level.xp": newXP,
 			"system.attributes.hp.base": newBaseHP,
+			"system.attributes.hp.max": newMaxHP,
 			"system.attributes.hp.value": newValueHP,
 			"system.auditLog": auditLog,
+			"system.level.value": this.data.targetLevel,
+			"system.level.xp": newXP,
 		});
-
-		// add talents and spells to actor
-		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		this.close();
 	}
