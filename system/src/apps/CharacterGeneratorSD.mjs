@@ -762,6 +762,14 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		await newActor.createEmbeddedDocuments("Item", characterItems);
 
+		let maxHP = newActor.system.attributes.hp.base + newActor.system.attributes.hp.bonus;
+		let newHP = maxHP;
+
+		await newActor.update({
+			"system.attributes.hp.max": maxHP,
+			"system.attributes.hp.value": newHP,
+		});
+
 		if (userId !== game.userId) {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
