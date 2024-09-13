@@ -93,44 +93,44 @@ SHADOWDARK.apps.level-up.missing_selections: Faltan selecciones
 SHADOWDARK.apps.level-up.notalent: Sin talentos ganados en este nivel
 SHADOWDARK.apps.level-up.prompt: No se han realizado las selecciones requeridas. ¿Continuar con la subida de nivel?
 SHADOWDARK.apps.level-up.roll_talent: Lanzar talento
-SHADOWDARK.apps.level-up.title: Leveling Up
+SHADOWDARK.apps.level-up.title: Subiendo nivel
 SHADOWDARK.apps.monster-importer.import_button: Importar monstruo
-SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction1: 1. Copiar texto del monstruo de la fuente.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Pegar texto en la caja siguiendo el formato del monstruo como en la fuente. Añadir una línea en blanco entre cada habilidad.
 SHADOWDARK.apps.monster-importer.instruction2b: Nombre de Monstruo
-SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
+SHADOWDARK.apps.monster-importer.instruction2c: Texto de ambientación
 SHADOWDARK.apps.monster-importer.instruction2d: Perfil principal
 SHADOWDARK.apps.monster-importer.instruction2e: Característica
-SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.instruction3: 3. Clic en importar monstruo.
 SHADOWDARK.apps.monster-importer.title: Importar monstruo
-SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
-SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
-SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
+SHADOWDARK.apps.shadowdarkling-importer.errors: Elementos no encontrados
+SHADOWDARK.apps.shadowdarkling-importer.import_button: Importar
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: Importar parcialmente
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visita Shadowdarklings.net.
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
-SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Crear personaje > Exportar > copiar JSON a portapapeles.
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: Pegar personaje JSON aquí
+SHADOWDARK.apps.shadowdarkling-importer.header: Importador de Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.title: Importar Shadowdarkling
-SHADOWDARK.apps.spell-book.known: Known
-SHADOWDARK.apps.spell-book.title: Class Spell List
-SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
-SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
-SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
-SHADOWDARK.apps.spell-importer.instruction2d: Duration
-SHADOWDARK.apps.spell-importer.instruction2e: Range
-SHADOWDARK.apps.spell-importer.instruction2f: Description
-SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
-SHADOWDARK.apps.spell-importer.title: Import Spell
-SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
-SHADOWDARK.apps.solodark.button2: Even Chance
-SHADOWDARK.apps.solodark.button3: Likely or Certain
-SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.spell-book.known: Conocido
+SHADOWDARK.apps.spell-book.title: Lista de hechizos de clase
+SHADOWDARK.apps.spell-importer.import_button: Importar hechizo
+SHADOWDARK.apps.spell-importer.instruction1: 1. Copiar texto de hechizo de la fuente.
+SHADOWDARK.apps.spell-importer.instruction2a: Pegar texto en esta caja siguiendo el formato del hechizo como se muestra en la fuente.
+SHADOWDARK.apps.spell-importer.instruction2b: Nombre de hechizo
+SHADOWDARK.apps.spell-importer.instruction2c: Rango y clase
+SHADOWDARK.apps.spell-importer.instruction2d: Duración
+SHADOWDARK.apps.spell-importer.instruction2e: Alcance
+SHADOWDARK.apps.spell-importer.instruction2f: Descripción
+SHADOWDARK.apps.spell-importer.instruction3: Clic en importar hechizo.
+SHADOWDARK.apps.spell-importer.title: Importar hechizo
+SHADOWDARK.apps.solodark.button1: Improbable o imposible
+SHADOWDARK.apps.solodark.button2: Probabilidad pareja
+SHADOWDARK.apps.solodark.button3: Probable o cierto
+SHADOWDARK.apps.solodark.oracle: El Oráculo
 SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
-SHADOWDARK.apps.solodark.question1: What is the question?
-SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
-SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
+SHADOWDARK.apps.solodark.question1: '¿Cuál es la pregunta?'
+SHADOWDARK.apps.solodark.question2: '¿Cómo de probable es un resultado "sí"?'
+SHADOWDARK.apps.solodark.roll_prompt: Lanzar referencia
 SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: Desventaja/Sigilo
 SHADOWDARK.armor.properties.disadvantage_swimming: Desventaja/Nadar
@@ -151,7 +151,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Aplicar daño secundario
 SHADOWDARK.chat_card.context.apply_damage: Aplicar daño
 SHADOWDARK.chat_card.context.apply_healing_secondary: Aplicar curación secundaria
 SHADOWDARK.chat_card.context.apply_healing: Aplicar curación
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Ya que {name} lanzó el más alto, irá primero y los demás combatientes seguirán un orden fijo.
 SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: '¡Duplica cualquier valor numérico!'
 SHADOWDARK.chat.item_roll.mishap: '¡Tira en la tabla de pifias apropiada!'
