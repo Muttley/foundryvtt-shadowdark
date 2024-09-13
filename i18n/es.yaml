@@ -13,15 +13,15 @@ SHADOWDARK.ability_wisdom: Sabiduría
 SHADOWDARK.alignment.chaotic: Caótico
 SHADOWDARK.alignment.lawful: Legal
 SHADOWDARK.alignment.neutral: Neutral
-SHADOWDARK.ancestry.choice_count: Choice Count
-SHADOWDARK.ancestry.choice: Choice
-SHADOWDARK.ancestry.fixed: Fixed
+SHADOWDARK.ancestry.choice_count: Número de opciones
+SHADOWDARK.ancestry.choice: Opción
+SHADOWDARK.ancestry.fixed: Fijo
 SHADOWDARK.ancestry.languages.label: Idiomas de ancestro
 SHADOWDARK.ancestry.languages.prompt: Seleccionar idioma...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
-SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
-SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
+SHADOWDARK.ancestry.nametable.label: Tabla de nombres aleatorios
+SHADOWDARK.ancestry.nametable.placeholder: Arrastra tabla aquí
+SHADOWDARK.ancestry.nametable.random_weight: Peso aleatorio
+SHADOWDARK.ancestry.nametable.tooltip.weight: Afecta la probabilidad de lanzamiento usando el generador de personajes. Valores más altos incrementan la probabilidad. Valor por defecto a 1.
 SHADOWDARK.ancestry.talents.label: Talentos de ancestro
 SHADOWDARK.ancestry.talents.prompt: Seleccionar talento...
 SHADOWDARK.app.active_effects.title: Efectos activos
@@ -43,21 +43,21 @@ SHADOWDARK.app.light-tracker.douse-light: Apagar la luz
 SHADOWDARK.app.light-tracker.hide-inactive: Ocultar actores sin luz
 SHADOWDARK.app.light-tracker.show-all-actors: Mostrar todos los actores
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar las luces
-SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
+SHADOWDARK.app.loading.body: Burcando en tierras lejanas...
+SHADOWDARK.app.loading.title: Cargando
 SHADOWDARK.app.npc_attack_ranges.title: Rangos de ataque
-SHADOWDARK.apps.character-generator.create_character: Create Character
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
-SHADOWDARK.apps.character-generator.gold: Gold
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
+SHADOWDARK.apps.character-generator.create_character: Crear personaje
+SHADOWDARK.apps.character-generator.error.create: Error al crear el personaje jugador {error}
+SHADOWDARK.apps.character-generator.error.name: El nombre del personaje no puede estar en blanco
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: No se puede generar un nombre aleatorio sin seleccionar un ancestro
+SHADOWDARK.apps.character-generator.gear: Equipo
+SHADOWDARK.apps.character-generator.gold: Oro
+SHADOWDARK.apps.character-generator.name: Nombre del personaje
+SHADOWDARK.apps.character-generator.success: Personaje creado
+SHADOWDARK.apps.character-generator.title: Generador de personaje
+SHADOWDARK.apps.character-generator.tooltip: Personaje aleatorio
+SHADOWDARK.apps.character-generator.type: Tipo
+SHADOWDARK.apps.character-generator.update_character: Actualizar personaje
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: '¿Quieres eliminar el efecto {effectName}?'
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: '¿Eliminar efecto?'
 SHADOWDARK.apps.effect_panel.duration_label.expired: Expirado
@@ -77,22 +77,22 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Segundos resta
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Semanas restantes"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Años restantes"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Click derecho] Quitar efecto"
-SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
-SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
-SHADOWDARK.apps.item-importer.instruction2b: Item Name
-SHADOWDARK.apps.item-importer.instruction2c: Flavor text
-SHADOWDARK.apps.item-importer.instruction2d: Features
-SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
-SHADOWDARK.apps.item-importer.title: Import Item
-SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
-SHADOWDARK.apps.level-up.hit_points: Hit Points
-SHADOWDARK.apps.level-up.level_up: Level Up!
-SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
-SHADOWDARK.apps.level-up.missing_selections: Missing Selections
-SHADOWDARK.apps.level-up.notalent: No talents gained at this level
-SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
-SHADOWDARK.apps.level-up.roll_talent: Roll Talent
+SHADOWDARK.apps.item-importer.import_button: Importar elemento
+SHADOWDARK.apps.item-importer.instruction1: Copiar texto del elemento de la fuente.
+SHADOWDARK.apps.item-importer.instruction2a: Pegar texto en esta caja siguiendo el formato del elemento como se muestra en la fuente.
+SHADOWDARK.apps.item-importer.instruction2b: Nombre de elemento
+SHADOWDARK.apps.item-importer.instruction2c: Texto de ambientación
+SHADOWDARK.apps.item-importer.instruction2d: Características
+SHADOWDARK.apps.item-importer.instruction3: Clic en importar elemento.
+SHADOWDARK.apps.item-importer.title: Importar elemento
+SHADOWDARK.apps.level-up.dragdrop: Arrastrar y soltar aquí
+SHADOWDARK.apps.level-up.hit_points: Puntos de Vida
+SHADOWDARK.apps.level-up.level_up: '¡Subir nivel!'
+SHADOWDARK.apps.level-up.leveling_to: Subiendo nivel
+SHADOWDARK.apps.level-up.missing_selections: Faltan selecciones
+SHADOWDARK.apps.level-up.notalent: Sin talentos ganados en este nivel
+SHADOWDARK.apps.level-up.prompt: No se han realizado las selecciones requeridas. ¿Continuar con la subida de nivel?
+SHADOWDARK.apps.level-up.roll_talent: Lanzar talento
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Importar monstruo
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
