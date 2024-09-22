@@ -33,7 +33,7 @@ SHADOWDARK.app.item_properties.armor.title: Armor Properties
 SHADOWDARK.app.item_properties.languages.title: Languages
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.app.item_properties.save: Save
-SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
+SHADOWDARK.app.item_properties.talent.effects.title: Tipos de Efeitos de Talentos
 SHADOWDARK.app.item_properties.title: Properties
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
 SHADOWDARK.app.light_tracker.minute_short: min
@@ -49,8 +49,8 @@ SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem um nome selecionado Ancestralidade
+SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
 SHADOWDARK.apps.character-generator.success: Character created
