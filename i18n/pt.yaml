@@ -117,17 +117,17 @@ SHADOWDARK.apps.spell-importer.import_button: Import Spell
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Cole o texto nesta caixa seguindo o formato de magia presente nas regras básicas.
 SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
+SHADOWDARK.apps.spell-importer.instruction2c: Nível e Classe
 SHADOWDARK.apps.spell-importer.instruction2d: Duration
 SHADOWDARK.apps.spell-importer.instruction2e: Range
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
 SHADOWDARK.apps.spell-importer.title: Import Spell
-SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
+SHADOWDARK.apps.solodark.button1: Improvável ou Impossível
 SHADOWDARK.apps.solodark.button2: Even Chance
 SHADOWDARK.apps.solodark.button3: Likely or Certain
 SHADOWDARK.apps.solodark.oracle: The Oracle
-SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.phrasing: 'Faça sua pergunta com uma frase afirmativa. Em vez de perguntar, "Não há orcs nesta sala?" pergunte: "Há orcs nesta sala?"'
 SHADOWDARK.apps.solodark.question1: What is the question?
 SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
 SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
@@ -157,15 +157,15 @@ SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
-SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
-SHADOWDARK.chat.light_source.remaining: minutes remaining
-SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
-SHADOWDARK.chat.light_source.source.all: All light sources went out
-SHADOWDARK.chat.light_source.source.dropped: was dropped
-SHADOWDARK.chat.light_source.source.picked_up: was picked up
-SHADOWDARK.chat.light_source.source.toggle.off: was doused
-SHADOWDARK.chat.light_source.source.toggle.on: was lit
-SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
+SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
+SHADOWDARK.chat.light_source.remaining: minutos restantes
+SHADOWDARK.chat.light_source.seconds_remaining: Menos de 1 minuto restante
+SHADOWDARK.chat.light_source.source.all: Todas as fontes de luz se apagaram
+SHADOWDARK.chat.light_source.source.dropped: foi solta(o)
+SHADOWDARK.chat.light_source.source.picked_up: foi pega(o)
+SHADOWDARK.chat.light_source.source.toggle.off: foi apagada(o)
+SHADOWDARK.chat.light_source.source.toggle.on: foi acesa(o)
+SHADOWDARK.chat.light_source.went_out: "{lightSource} de {name} apagou"
 SHADOWDARK.chat.potion_used: "{name} used a Potion"
 SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
 SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
@@ -177,12 +177,12 @@ SHADOWDARK.chat.use_ability.title: "Using Ability"
 SHADOWDARK.chat.welcome_message.issues: Report Issues
 SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
 SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
-SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
-SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
-SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
-SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
-SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
-SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
+SHADOWDARK.chat.welcome_message.arcane_library: Apoie The Arcane Library
+SHADOWDARK.chat.welcome_message.arcane_library_button: Compre Shadowdark RPG
+SHADOWDARK.chat.welcome_message.arcane_library_text: Visite o site da The Arcane Library para PDFs, livros e produtos oficiais do Shadowdark.
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG para o Foundry
+SHADOWDARK.chat.welcome_message.title_text: Bem vindo ao Shadowdark RPG. Aqui estão alguns recursos para você começar.
+SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Ability
