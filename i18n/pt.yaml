@@ -161,10 +161,10 @@ SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
 SHADOWDARK.chat.light_source.remaining: minutos restantes
 SHADOWDARK.chat.light_source.seconds_remaining: Menos de 1 minuto restante
 SHADOWDARK.chat.light_source.source.all: Todas as fontes de luz se apagaram
-SHADOWDARK.chat.light_source.source.dropped: foi solta(o)
-SHADOWDARK.chat.light_source.source.picked_up: foi pega(o)
-SHADOWDARK.chat.light_source.source.toggle.off: foi apagada(o)
-SHADOWDARK.chat.light_source.source.toggle.on: foi acesa(o)
+SHADOWDARK.chat.light_source.source.dropped: foi solta
+SHADOWDARK.chat.light_source.source.picked_up: foi pega
+SHADOWDARK.chat.light_source.source.toggle.off: foi apagada
+SHADOWDARK.chat.light_source.source.toggle.on: foi acesa
 SHADOWDARK.chat.light_source.went_out: "{lightSource} de {name} apagou"
 SHADOWDARK.chat.potion_used: "{name} usou uma Poção"
 SHADOWDARK.chat.spell_learn.failure: "{name} não conseguiu aprender o pergaminho"
@@ -369,7 +369,7 @@ SHADOWDARK.inventory.tooltip.item_decrement: Diminuir Quantidade
 SHADOWDARK.inventory.tooltip.item_increment: Aumentar Quantidade
 SHADOWDARK.inventory.tooltip.sell_treasure: Vender Tesouro
 SHADOWDARK.inventory.tooltip.toggle_equipped: Alternar Equipado
-SHADOWDARK.inventory.tooltip.toggle_light_source: Alternar Fonte da Luz
+SHADOWDARK.inventory.tooltip.toggle_light_source: Alternar Fonte de Luz
 SHADOWDARK.inventory.tooltip.toggle_stashed: Alternar Armazenado
 SHADOWDARK.inventory.total_coins: Total de Moedas
 SHADOWDARK.inventory.total_gems: Total de Gemas
@@ -408,18 +408,18 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: Melhoria do Atri
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Melhoria do Atributo (Int)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Melhoria do Atributo (For)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Melhoria do Atributo (Sab)
-SHADOWDARK.item.effect.predefined_effect.acBonus: AC Bonus
+SHADOWDARK.item.effect.predefined_effect.acBonus: Bônus na CA
 SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: Bônus de Atributo na CA
-SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Additional Gear Slots
+SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Espaços de Equipamento Adicionais
 SHADOWDARK.item.effect.predefined_effect.armorMastery: Maestria de Armadura
-SHADOWDARK.item.effect.predefined_effect.backstabDie: Additional Backstab Die
-SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: Critical Failure Threshold
-SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: Critical Success Threshold
-SHADOWDARK.item.effect.predefined_effect.critMultiplier: Critical Multiplier
-SHADOWDARK.item.effect.predefined_effect.damageMultiplier: Damage Multiplier
-SHADOWDARK.item.effect.predefined_effect.hpAdvantage: HP Roll Advantage
-SHADOWDARK.item.effect.predefined_effect.initAdvantage: Initiative Advantage
-SHADOWDARK.item.effect.predefined_effect.lightSource: Light Source
+SHADOWDARK.item.effect.predefined_effect.backstabDie: Dado Adicional de Ataque Furtivo
+SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: Limiar de Falha Crítica
+SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: Limiar de Sucesso Crítico
+SHADOWDARK.item.effect.predefined_effect.critMultiplier: Multiplicador de Crítico
+SHADOWDARK.item.effect.predefined_effect.damageMultiplier: Multiplicador de Dano
+SHADOWDARK.item.effect.predefined_effect.hpAdvantage: Vantagem na Rolagem de PV
+SHADOWDARK.item.effect.predefined_effect.initAdvantage: Vantagem na Iniciativa
+SHADOWDARK.item.effect.predefined_effect.lightSource: Fonte de Luz
 SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Melee Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Melee Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Atributo Permanente (Car)
@@ -452,10 +452,10 @@ SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantity
 SHADOWDARK.item.inventory_slots: Slots per Item
 SHADOWDARK.item.level: Level
-SHADOWDARK.item.light.is_source: Light Source
-SHADOWDARK.item.light.longevity: Longevity (Mins)
-SHADOWDARK.item.light.remaining: Remaining (Mins)
-SHADOWDARK.item.light.template: Light Template
+SHADOWDARK.item.light.is_source: Fonte de Luz
+SHADOWDARK.item.light.longevity: Longevidade (Min)
+SHADOWDARK.item.light.remaining: Restante (Min)
+SHADOWDARK.item.light.template: Modelo de Luz
 SHADOWDARK.item.magic_item.is_magic: Magic Item
 SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
 SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus
@@ -470,7 +470,7 @@ SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
 SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.npc_attack_bonus: Attack Bonus
-SHADOWDARK.item.npc_attack_count: Num. Attacks
+SHADOWDARK.item.npc_attack_count: Núm. Ataques
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_type: Type
@@ -537,16 +537,16 @@ SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian
 SHADOWDARK.language.who_speaks_it: Who Speaks It
-SHADOWDARK.light_source.lantern: Lantern
-SHADOWDARK.light_source.light_spell.double_near: Light Spell (Double Near)
-SHADOWDARK.light_source.light_spell.near: Light Spell (Near)
-SHADOWDARK.light_source.torch: Torch
-SHADOWDARK.light-source.dropped: Dropped {name}
-SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
-SHADOWDARK.light-tracker.active: Active
-SHADOWDARK.light-tracker.paused: Paused
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Light Tracker
+SHADOWDARK.light_source.lantern: Lanterna
+SHADOWDARK.light_source.light_spell.double_near: Magia de Luz (Próximo Duplo)
+SHADOWDARK.light_source.light_spell.near: Magia de Luz (Próximo)
+SHADOWDARK.light_source.torch: Tocha
+SHADOWDARK.light-source.dropped: Soltou {name}
+SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pegar Fonte de Luz
+SHADOWDARK.light-tracker.active: Ativa
+SHADOWDARK.light-tracker.paused: Pausada
+SHADOWDARK.light-tracker.status.label: Estado
+SHADOWDARK.light-tracker.title: Rastreador de Luz
 SHADOWDARK.light-tracker.user_warning: Um ou mais usuários não selecionou um personagem
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
@@ -623,9 +623,9 @@ SHADOWDARK.settings.source_filter.these_used: Only the following sources will be
 SHADOWDARK.settings.source_filter.title: Book Source Filters
 SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.systemVersion.name: System Version
-SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
-SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
+SHADOWDARK.settings.track_light_sources.hint: Se marcado, o sistema rastreará e atualizará o tempo restante em quaisquer fontes de luz ativa.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: Se marcado fontes de luz pertencentes a usuários inativos (não conectados) ainda serão rastreados.
+SHADOWDARK.settings.track_light_sources.inactive_user.name: Rastrear Fontes de Luz de Usuários Inativos
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
@@ -742,7 +742,7 @@ SHADOWDARK.spell_range.far: Far
 SHADOWDARK.spell_range.near: Near
 SHADOWDARK.spell.classes.label: Classes Conjuradoras
 SHADOWDARK.spell.classes.prompt: Selecionar Classe...
-SHADOWDARK.talent.backstab: Backstab
+SHADOWDARK.talent.backstab: Ataque Furtivo
 SHADOWDARK.talent.class.ancestry: Ancestry
 SHADOWDARK.talent.class.class: Class
 SHADOWDARK.talent.class.level: Level
@@ -753,7 +753,7 @@ SHADOWDARK.talent.type.advantage.spell: Vantagem em Conjuração
 SHADOWDARK.talent.type.advantage.title: Advantage Bonus
 SHADOWDARK.talent.type.armor_bonus: Bônus de CA da Armadura
 SHADOWDARK.talent.type.armor_mastery: Maestria de Armadura
-SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
+SHADOWDARK.talent.type.backstab_die: Dado Extra de Ataque Furtivo
 SHADOWDARK.talent.type.custom: Custom Talent
 SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
 SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
