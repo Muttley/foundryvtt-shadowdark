@@ -1,74 +1,74 @@
-SHADOWDARK.ability_cha: Cha
-SHADOWDARK.ability_charisma: Charisma
+SHADOWDARK.ability_cha: Car
+SHADOWDARK.ability_charisma: Carisma
 SHADOWDARK.ability_con: Con
-SHADOWDARK.ability_constitution: Constitution
-SHADOWDARK.ability_dex: Dex
-SHADOWDARK.ability_dexterity: Dexterity
+SHADOWDARK.ability_constitution: Constituição
+SHADOWDARK.ability_dex: Des
+SHADOWDARK.ability_dexterity: Destreza
 SHADOWDARK.ability_int: Int
-SHADOWDARK.ability_intelligence: Intelligence
-SHADOWDARK.ability_str: Str
-SHADOWDARK.ability_strength: Strength
-SHADOWDARK.ability_wis: Wis
-SHADOWDARK.ability_wisdom: Wisdom
-SHADOWDARK.alignment.chaotic: Chaotic
-SHADOWDARK.alignment.lawful: Lawful
-SHADOWDARK.alignment.neutral: Neutral
+SHADOWDARK.ability_intelligence: Inteligência
+SHADOWDARK.ability_str: For
+SHADOWDARK.ability_strength: Força
+SHADOWDARK.ability_wis: Sab
+SHADOWDARK.ability_wisdom: Sabedoria
+SHADOWDARK.alignment.chaotic: Caótico
+SHADOWDARK.alignment.lawful: Leal
+SHADOWDARK.alignment.neutral: Neutro
 SHADOWDARK.ancestry.choice_count: Choice Count
 SHADOWDARK.ancestry.choice: Choice
 SHADOWDARK.ancestry.fixed: Fixed
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.languages.label: Línguas de Ancestralidade
+SHADOWDARK.ancestry.languages.prompt: Selecione uma Língua...
+SHADOWDARK.ancestry.nametable.label: Tabela de Nomes Aleatórios
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
 SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
+SHADOWDARK.ancestry.talents.label: Talentos de Ancestralidade
+SHADOWDARK.ancestry.talents.prompt: Selecione um Talento...
 SHADOWDARK.app.active_effects.title: Efeitos Ativos
-SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
-SHADOWDARK.app.gem_bag.title: Gem Bag
-SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
-SHADOWDARK.app.gem_bag.total_value: Total Value
-SHADOWDARK.app.item_properties.armor.title: Armor Properties
-SHADOWDARK.app.item_properties.languages.title: Languages
-SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
+SHADOWDARK.app.gem_bag.sell_all: Vender Todas as Gemas
+SHADOWDARK.app.gem_bag.title: Bolsa de Gemas
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vender Gema
+SHADOWDARK.app.gem_bag.total_value: Valor Total
+SHADOWDARK.app.item_properties.armor.title: Propriedades da Armadura
+SHADOWDARK.app.item_properties.languages.title: Línguas
+SHADOWDARK.app.item_properties.magic_item.effects.title: Efeitos de Itens Mágicos
 SHADOWDARK.app.item_properties.save: Save
 SHADOWDARK.app.item_properties.talent.effects.title: Tipos de Efeitos de Talentos
-SHADOWDARK.app.item_properties.title: Properties
-SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
+SHADOWDARK.app.item_properties.title: Propriedades
+SHADOWDARK.app.item_properties.weapon.title: Propriedades da Arma
 SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: mins
-SHADOWDARK.app.light_tracker.title: Light Tracker
-SHADOWDARK.app.light-tracker.douse-light: Douse Light
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
-SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
-SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
-SHADOWDARK.apps.character-generator.create_character: Create Character
+SHADOWDARK.app.light_tracker.title: Marcador de Luz
+SHADOWDARK.app.light-tracker.douse-light: Apagar a Luz
+SHADOWDARK.app.light-tracker.hide-inactive: Ocultar Atores Sem Luz
+SHADOWDARK.app.light-tracker.show-all-actors: Mostrar Todos os Atores
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar Todas as Luzes
+SHADOWDARK.app.loading.body: Buscando por Terras Distantes...
+SHADOWDARK.app.loading.title: Carregando
+SHADOWDARK.app.npc_attack_ranges.title: Alcance de Ataque
+SHADOWDARK.apps.character-generator.create_character: Criar Personagem
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
+SHADOWDARK.apps.character-generator.error.name: O nome do personagem não pode estar em branco
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem um nome selecionado Ancestralidade
 SHADOWDARK.apps.character-generator.gear: Equipamento
-SHADOWDARK.apps.character-generator.gold: Gold
+SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Delete Effect?
-SHADOWDARK.apps.effect_panel.duration_label.expired: Expired
-SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 Day Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 Hour Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 Minute Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 Round Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Second Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Week Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Year Remaining
-SHADOWDARK.apps.effect_panel.duration_label.unlimited: Unlimited Duration
+SHADOWDARK.apps.character-generator.success: Personagem criado
+SHADOWDARK.apps.character-generator.title: Gerador de Personagem
+SHADOWDARK.apps.character-generator.tooltip: Personagem Aleatório
+SHADOWDARK.apps.character-generator.type: Tipo
+SHADOWDARK.apps.character-generator.update_character: Atualizar Personagem
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Quer remover o efeito {effectName}?
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Remover Efeito?
+SHADOWDARK.apps.effect_panel.duration_label.expired: Expirado
+SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 Dia Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 Hora Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 Minuto Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 Rodada Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Segundo Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Semana Restante
+SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Ano Restante
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: Duração Ilimitada
 SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} Days Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Hours Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minutes Remaining"
