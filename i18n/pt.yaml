@@ -143,20 +143,20 @@ SHADOWDARK.boons.oath: Juramento
 SHADOWDARK.boons.secret: Segredo
 SHADOWDARK.chat_card.button.attack: Rolar Ataque
 SHADOWDARK.chat_card.button.cast_spell: Conjurar Magia
-SHADOWDARK.chat_card.button.learn_spell: Learn Spell
-SHADOWDARK.chat_card.button.use_potion: Use Potion
-SHADOWDARK.chat_card.button.use_scroll: Use Scroll
-SHADOWDARK.chat_card.button.use_wand: Use Wand
-SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
-SHADOWDARK.chat_card.context.apply_damage: Apply Damage
-SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
-SHADOWDARK.chat_card.context.apply_healing: Apply Healing
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
-SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
-SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
-SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
-SHADOWDARK.chat.item_roll.title: Attack roll with {name}
-SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
+SHADOWDARK.chat_card.button.learn_spell: Aprender Magia
+SHADOWDARK.chat_card.button.use_potion: Usar Poção
+SHADOWDARK.chat_card.button.use_scroll: Usar Pergaminho
+SHADOWDARK.chat_card.button.use_wand: Usar Varinha
+SHADOWDARK.chat_card.context.apply_damage_secondary: Aplicar Dano Secundário
+SHADOWDARK.chat_card.context.apply_damage: Aplicar Dano
+SHADOWDARK.chat_card.context.apply_healing_secondary: Aplicar Cura Secundária
+SHADOWDARK.chat_card.context.apply_healing: Aplicar Cura
+SHADOWDARK.chat.clockwise_initiative: Como {name} rolou o maior número, irá primeiro, e todos os outros combatentes seguirão em ordem fixa.
+SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
+SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
+SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
+SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
+SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
 SHADOWDARK.chat.light_source.remaining: minutos restantes
 SHADOWDARK.chat.light_source.seconds_remaining: Menos de 1 minuto restante
@@ -166,17 +166,17 @@ SHADOWDARK.chat.light_source.source.picked_up: foi pega(o)
 SHADOWDARK.chat.light_source.source.toggle.off: foi apagada(o)
 SHADOWDARK.chat.light_source.source.toggle.on: foi acesa(o)
 SHADOWDARK.chat.light_source.went_out: "{lightSource} de {name} apagou"
-SHADOWDARK.chat.potion_used: "{name} used a Potion"
-SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
-SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
-SHADOWDARK.chat.spell_learn.title: Learning Spell
-SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
-SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
-SHADOWDARK.chat.use_ability.title: "Using Ability"
-SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.potion_used: "{name} usou uma Poção"
+SHADOWDARK.chat.spell_learn.failure: "{name} não conseguiu aprender o pergaminho"
+SHADOWDARK.chat.spell_learn.success: "{name} aprendeu com sucesso a magia {spellName}"
+SHADOWDARK.chat.spell_learn.title: Aprendendo Magia
+SHADOWDARK.chat.spell_roll.title: "{name}, CD {spellDC}"
+SHADOWDARK.chat.use_ability.failure: "{name} falhou em usar a habilidade {ability}"
+SHADOWDARK.chat.use_ability.success: "{name} usou a habilidade {ability} com sucesso"
+SHADOWDARK.chat.use_ability.title: "Usando Habilidade"
+SHADOWDARK.chat.welcome_message.issues: Reportar Problemas
+SHADOWDARK.chat.welcome_message.issues_button: Rastreador de Problemas
+SHADOWDARK.chat.welcome_message.issues_text: "Se você encontrar quaisquer problemas ou tiver ideias para novas funcionalidades para o sistema, confira nosso rastreador de problemas."
 SHADOWDARK.chat.welcome_message.arcane_library: Apoie The Arcane Library
 SHADOWDARK.chat.welcome_message.arcane_library_button: Compre Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visite o site da The Arcane Library para PDFs, livros e produtos oficiais do Shadowdark.
@@ -238,54 +238,54 @@ SHADOWDARK.dialog.ability_check.dex: Verificação de Destreza
 SHADOWDARK.dialog.ability_check.int: Teste de Inteligência
 SHADOWDARK.dialog.ability_check.str: Teste de Força
 SHADOWDARK.dialog.ability_check.title: Teste de Atributo
-SHADOWDARK.dialog.ability_check.wis: Wisdom Check
-SHADOWDARK.dialog.create_custom_item: Create Custom Item
-SHADOWDARK.dialog.create_treasure: Create Treasure
-SHADOWDARK.dialog.create: Create
-SHADOWDARK.dialog.edit_hp.title: Edit HP
-SHADOWDARK.dialog.edit_stats.title: Edit Stats
-SHADOWDARK.dialog.effect.choice.armor: Choose Armor Type
-SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
-SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
-SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
-SHADOWDARK.dialog.effect.choice.property: Choose Property
-SHADOWDARK.dialog.effect.choice.spell: Choose Spell
-SHADOWDARK.dialog.effect.choice.weapon_property: Choose Weapon Property
-SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
-SHADOWDARK.dialog.effect.choices.title: Effect Parameters
-SHADOWDARK.dialog.general.are_you_sure: Are you sure?
-SHADOWDARK.dialog.general.cancel: Cancel
-SHADOWDARK.dialog.general.no: "No"
+SHADOWDARK.dialog.ability_check.wis: Teste de Sabedoria
+SHADOWDARK.dialog.create_custom_item: Criar Item Customizado
+SHADOWDARK.dialog.create_treasure: Criar Tesouro
+SHADOWDARK.dialog.create: Criar
+SHADOWDARK.dialog.edit_hp.title: Editar PV
+SHADOWDARK.dialog.edit_stats.title: Editar Atributos
+SHADOWDARK.dialog.effect.choice.armor: Escolher Tipo de Armadura
+SHADOWDARK.dialog.effect.choice.attribute: Escolher Atributo
+SHADOWDARK.dialog.effect.choice.damage_die: Escolher Dado de Dano
+SHADOWDARK.dialog.effect.choice.lightsource: Escolher Fonte de Luz
+SHADOWDARK.dialog.effect.choice.property: Escolher Propriedade
+SHADOWDARK.dialog.effect.choice.spell: Escolher Magia
+SHADOWDARK.dialog.effect.choice.weapon_property: Escolher Propriedade da Arma
+SHADOWDARK.dialog.effect.choice.weapon: Escolher Propriedade da Arma
+SHADOWDARK.dialog.effect.choices.title: Parâmetros do Efeito
+SHADOWDARK.dialog.general.are_you_sure: Tem certeza?
+SHADOWDARK.dialog.general.cancel: Cancelar
+SHADOWDARK.dialog.general.no: "Não"
 SHADOWDARK.dialog.general.select: Selecionar
-SHADOWDARK.dialog.general.yes: "Yes"
-SHADOWDARK.dialog.gm: Gamemaster
-SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
-SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
-SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
-SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
-SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
-SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
-SHADOWDARK.dialog.hp_roll.title: HP Roll
-SHADOWDARK.dialog.item_roll.ability_bonus: Ability Bonus
-SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
-SHADOWDARK.dialog.item_roll.talent_bonus: Talent Bonus
-SHADOWDARK.dialog.item_roll.title: Roll Attack with
+SHADOWDARK.dialog.general.yes: "Sim"
+SHADOWDARK.dialog.gm: Mestre do Jogo
+SHADOWDARK.dialog.hp_roll.per_level: Rolar PV para o nível {level}
+SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de rolar: {hp}"
+SHADOWDARK.dialog.hp_roll.roll_level_1: Rolou {hp} PV para o nível 1 (incluindo modificador)
+SHADOWDARK.dialog.hp_roll.roll_per_level: Rolou {hp} PV para o nível {level}
+SHADOWDARK.dialog.hp_roll.sum_total: Para um novo PV máximo de {total} PV
+SHADOWDARK.dialog.hp_roll.summary: Resumo da Rolagem de PV
+SHADOWDARK.dialog.hp_roll.title: Rolar PV
+SHADOWDARK.dialog.item_roll.ability_bonus: Bônus de Atributo
+SHADOWDARK.dialog.item_roll.item_bonus: Bônus de Item
+SHADOWDARK.dialog.item_roll.talent_bonus: Bônus de Talento
+SHADOWDARK.dialog.item_roll.title: Rolar Ataque com
 SHADOWDARK.dialog.item_selector.default_title: Escolher Itens
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: Você só pode selecionar um máximo de {maxChoices} desse tipo de Item.
 SHADOWDARK.dialog.item_selector.error.no_items_found: Não foi possível achar itens do tipo correto nos compêndios disponíveis.
 SHADOWDARK.dialog.item_selector.select_item.prompt: Selecionar Itens...
-SHADOWDARK.dialog.item.confirm_delete: Confirm Deletion
-SHADOWDARK.dialog.item.confirm_sale: Confirm Sale
-SHADOWDARK.dialog.item.create_from_spell: Create Item from {spellName}
-SHADOWDARK.dialog.item.delete: Delete
-SHADOWDARK.dialog.item.sell_all: Sell All
-SHADOWDARK.dialog.item.sell: Sell
-SHADOWDARK.dialog.item.use: Use
+SHADOWDARK.dialog.item.confirm_delete: Confirmar Exclusão
+SHADOWDARK.dialog.item.confirm_sale: Confirmar Venda
+SHADOWDARK.dialog.item.create_from_spell: Criar item de {spellName}
+SHADOWDARK.dialog.item.delete: Deletar
+SHADOWDARK.dialog.item.sell_all: Vender Tudo
+SHADOWDARK.dialog.item.sell: Vender
+SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Selecione o ator para dar a fonte de luz
-SHADOWDARK.dialog.roll_mode_label: Rolling mode
-SHADOWDARK.dialog.roll: Roll
-SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
-SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
+SHADOWDARK.dialog.roll_mode_label: Modo de Rolagem
+SHADOWDARK.dialog.roll: Rolar
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVISO: Esta magia não é da mesma classe que o personagem, você tem certeza de que deseja tentar aprender?"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmar Aprender Feitiço
 SHADOWDARK.dialog.select_ancestry.prompt: Selecionar Ancestralidade...
 SHADOWDARK.dialog.select_ancestry.title: Escolha Ancestralidade
 SHADOWDARK.dialog.select_armor_property.prompt: Selecionar Propriedade da Armadura...
@@ -301,13 +301,13 @@ SHADOWDARK.dialog.select_languages.title: Escolher idioma
 SHADOWDARK.dialog.select_weapon_property.prompt: Selecionar Propriedade da Arma...
 SHADOWDARK.dialog.select_weapon_property.title: Escolher Propriedade da Arma
 SHADOWDARK.dialog.spell_roll.title: Conjurar Magia com
-SHADOWDARK.dialog.submit: Submit
-SHADOWDARK.dialog.tooltip.talent_advantage: A talent is giving you advantage to this roll
-SHADOWDARK.dialog.type_here: Type Here
-SHADOWDARK.dragdrop: Drag and Drop Here
-SHADOWDARK.effect_duration.hours: Hours
-SHADOWDARK.effect_duration.minutes: Minutes
-SHADOWDARK.effect_duration.seconds: Seconds
+SHADOWDARK.dialog.submit: Enviar
+SHADOWDARK.dialog.tooltip.talent_advantage: Um talento está lhe dando vantagem nesta rolagem
+SHADOWDARK.dialog.type_here: Escreva Aqui
+SHADOWDARK.dragdrop: Arraste e Solte Aqui
+SHADOWDARK.effect_duration.hours: Horas
+SHADOWDARK.effect_duration.minutes: Minutos
+SHADOWDARK.effect_duration.seconds: Segundos
 SHADOWDARK.effect_duration.turns: Turnos
 SHADOWDARK.effect_duration.unlimited: Ilimitado
 SHADOWDARK.effect.custom: Efeitos Customizados
@@ -324,94 +324,94 @@ SHADOWDARK.effect.new: Novo Efeito
 SHADOWDARK.effect.spell: Efeitos da Magia
 SHADOWDARK.effect.talent: Efeitos do Talentos
 SHADOWDARK.effect.temporary: Efeitos Temporários
-SHADOWDARK.effect.tooltip.transfer.do_not: Does not transfer
-SHADOWDARK.effect.tooltip.transfer.do: Does transfer
-SHADOWDARK.effect.tooltip.transfer.header: Transfer effect to actor when item is added
-SHADOWDARK.effect.unavailable: Disabled Effects
-SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
-SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
+SHADOWDARK.effect.tooltip.transfer.do_not: Não transfere
+SHADOWDARK.effect.tooltip.transfer.do: Transfere
+SHADOWDARK.effect.tooltip.transfer.header: Transferir efeito para o ator quando o item é adicionado
+SHADOWDARK.effect.unavailable: Efeitos Desabilitados
+SHADOWDARK.error.class_ability.no-uses-remaining: Sem usos restantes
+SHADOWDARK.error.general.gm_required: Você precisa ter o cargo de Mestre do Jogo para fazer isso.
 SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi selecionada
-SHADOWDARK.error.source.source_missing: Source missing or unknown...
+SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Nenhum atributo de conjuração do personagem foi configurado
-SHADOWDARK.form.section_header.equipment.label: Equipment
-SHADOWDARK.form.section_header.languages.label: Languages
-SHADOWDARK.form.section_header.names.label: Names
+SHADOWDARK.form.section_header.equipment.label: Equipamento
+SHADOWDARK.form.section_header.languages.label: Idiomas
+SHADOWDARK.form.section_header.names.label: Nomes
 SHADOWDARK.form.section_header.spellcasting.label: Conjuração
-SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.hotbar.abilityLost: Ability currently lost
-SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
+SHADOWDARK.form.section_header.talents.label: Talentos
+SHADOWDARK.hotbar.abilityLost: Atributo perdido no momento
+SHADOWDARK.hotbar.moreThanOneItemWithName: Mais de um item encontrado com esse nome
 SHADOWDARK.hotbar.noActorSelected: Você deve selecionar um ator para usar esta macro
-SHADOWDARK.hotbar.noItemWithName: No such item found on character
-SHADOWDARK.hotbar.spellLost: Spell currently lost
-SHADOWDARK.inventory.carried_gear: Carried Gear
-SHADOWDARK.inventory.coins: Coins
-SHADOWDARK.inventory.equipped_gear: Equipped Gear
-SHADOWDARK.inventory.gear: Gear
-SHADOWDARK.inventory.gems: Gems
-SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
-SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
-SHADOWDARK.inventory.item.light_used: (used)
-SHADOWDARK.inventory.label.quantity: Qty
-SHADOWDARK.inventory.label.slots: Slots
-SHADOWDARK.inventory.section.armor: Armor
-SHADOWDARK.inventory.section.basic: Basic Equipment
-SHADOWDARK.inventory.section.potions: Potions
-SHADOWDARK.inventory.section.scrolls: Scrolls
-SHADOWDARK.inventory.section.treasure: Treasure
-SHADOWDARK.inventory.section.wands: Wands
+SHADOWDARK.hotbar.noItemWithName: Nenhum item encontrado no personagem
+SHADOWDARK.hotbar.spellLost: Magia perdida no momento
+SHADOWDARK.inventory.carried_gear: Equipamento Carregado
+SHADOWDARK.inventory.coins: Moedas
+SHADOWDARK.inventory.equipped_gear: Equipamento Usado
+SHADOWDARK.inventory.gear: Equipar
+SHADOWDARK.inventory.gems: Gemas
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutos Restantes"
+SHADOWDARK.inventory.item.light_seconds_remaining: Menos de 1 Minuto Restante
+SHADOWDARK.inventory.item.light_used: (usado)
+SHADOWDARK.inventory.label.quantity: Qnt
+SHADOWDARK.inventory.label.slots: Espaços
+SHADOWDARK.inventory.section.armor: Armadura
+SHADOWDARK.inventory.section.basic: Equipamento Básico
+SHADOWDARK.inventory.section.potions: Poções
+SHADOWDARK.inventory.section.scrolls: Pergaminhos
+SHADOWDARK.inventory.section.treasure: Tesouro
+SHADOWDARK.inventory.section.wands: Varinhas
 SHADOWDARK.inventory.section.weapon: Armas
-SHADOWDARK.inventory.slots_max: Max
-SHADOWDARK.inventory.slots_used: Used
-SHADOWDARK.inventory.slots: Slots
-SHADOWDARK.inventory.stashed_gear: Stashed Gear
-SHADOWDARK.inventory.tooltip.gem_bag: Open Gem Bag
-SHADOWDARK.inventory.tooltip.item_decrement: Decrease Quantity
-SHADOWDARK.inventory.tooltip.item_increment: Increase Quantity
-SHADOWDARK.inventory.tooltip.sell_treasure: Sell Treasure
-SHADOWDARK.inventory.tooltip.toggle_equipped: Toggle Equipped
-SHADOWDARK.inventory.tooltip.toggle_light_source: Toggle Light Source
-SHADOWDARK.inventory.tooltip.toggle_stashed: Toggle Stashed
-SHADOWDARK.inventory.total_coins: Total Coins
-SHADOWDARK.inventory.total_gems: Total Gems
-SHADOWDARK.item_type.armor: Armor
-SHADOWDARK.item_type.basic: Basic
-SHADOWDARK.item_type.gem: Gem
-SHADOWDARK.item_type.potion: Potion
-SHADOWDARK.item_type.spell: Spell
-SHADOWDARK.item_type.talent: Talent
-SHADOWDARK.item_type.weapon: Weapon
-SHADOWDARK.item.armor_ac_modifier: Modifier
-SHADOWDARK.item.armor_ac: AC
-SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
-SHADOWDARK.item.armor_class: Armor Class
-SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
-SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
-SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
-SHADOWDARK.item.armor.base_armor.shield: Shield
-SHADOWDARK.item.armor.base_armor.title: Base Armor
-SHADOWDARK.item.cost: Cost
-SHADOWDARK.item.description: Description
-SHADOWDARK.item.effect.category.condition: Condition
-SHADOWDARK.item.effect.category.effect: Effect
-SHADOWDARK.item.effect.category.title: Effect Category
-SHADOWDARK.item.effect.lightSource.lantern: Lantern
-SHADOWDARK.item.effect.lightSource.lightSpellDouble: Light (Double Range)
-SHADOWDARK.item.effect.lightSource.lightSpellNear: Light
-SHADOWDARK.item.effect.lightSource.lightSuppression: Light Suppression
-SHADOWDARK.item.effect.lightSource.purpleGlow: Purple Glow
-SHADOWDARK.item.effect.lightSource.torch: Torch
-SHADOWDARK.item.effect.pre-defined.title: Pre-defined effects
-SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Ability Score Improvement
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Ability Score Improvement (Cha)
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Ability Score Improvement (Con)
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: Ability Score Improvement (Dex)
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Ability Score Improvement (Int)
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Ability Score Improvement (Str)
-SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Ability Score Improvement (Wis)
+SHADOWDARK.inventory.slots_max: Máx.
+SHADOWDARK.inventory.slots_used: Usado
+SHADOWDARK.inventory.slots: Espaços
+SHADOWDARK.inventory.stashed_gear: Equipamento Armazenado
+SHADOWDARK.inventory.tooltip.gem_bag: Abrir Bolsa de Gemas
+SHADOWDARK.inventory.tooltip.item_decrement: Diminuir Quantidade
+SHADOWDARK.inventory.tooltip.item_increment: Aumentar Quantidade
+SHADOWDARK.inventory.tooltip.sell_treasure: Vender Tesouro
+SHADOWDARK.inventory.tooltip.toggle_equipped: Alternar Equipado
+SHADOWDARK.inventory.tooltip.toggle_light_source: Alternar Fonte da Luz
+SHADOWDARK.inventory.tooltip.toggle_stashed: Alternar Armazenado
+SHADOWDARK.inventory.total_coins: Total de Moedas
+SHADOWDARK.inventory.total_gems: Total de Gemas
+SHADOWDARK.item_type.armor: Armadura
+SHADOWDARK.item_type.basic: Básico
+SHADOWDARK.item_type.gem: Gema
+SHADOWDARK.item_type.potion: Poção
+SHADOWDARK.item_type.spell: Magia
+SHADOWDARK.item_type.talent: Talento
+SHADOWDARK.item_type.weapon: Arma
+SHADOWDARK.item.armor_ac_modifier: Modificador
+SHADOWDARK.item.armor_ac: CA
+SHADOWDARK.item.armor_bonus_attribute: Bônus de Atributo
+SHADOWDARK.item.armor_class: Classe de Armadura
+SHADOWDARK.item.armor.base_armor.chainmail: Cota de Malha
+SHADOWDARK.item.armor.base_armor.leather_armor: Armadura de Couro
+SHADOWDARK.item.armor.base_armor.plate_mail: Armadura de Placas
+SHADOWDARK.item.armor.base_armor.shield: Escudo
+SHADOWDARK.item.armor.base_armor.title: Armadura Base
+SHADOWDARK.item.cost: Custo
+SHADOWDARK.item.description: Descrição
+SHADOWDARK.item.effect.category.condition: Condição
+SHADOWDARK.item.effect.category.effect: Efeito
+SHADOWDARK.item.effect.category.title: Categoria de Efeito
+SHADOWDARK.item.effect.lightSource.lantern: Lanterna
+SHADOWDARK.item.effect.lightSource.lightSpellDouble: Luz (Alcance Duplo)
+SHADOWDARK.item.effect.lightSource.lightSpellNear: Luz
+SHADOWDARK.item.effect.lightSource.lightSuppression: Supressão leve
+SHADOWDARK.item.effect.lightSource.purpleGlow: Brilho Roxo
+SHADOWDARK.item.effect.lightSource.torch: Tocha
+SHADOWDARK.item.effect.pre-defined.title: Efeitos pré-definidos
+SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Melhoria de Atributo
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Melhoria do Atributo (Car)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Melhoria do Atributo (Con)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: Melhoria do Atributo (Des)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Melhoria do Atributo (Int)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Melhoria do Atributo (For)
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Melhoria do Atributo (Sab)
 SHADOWDARK.item.effect.predefined_effect.acBonus: AC Bonus
-SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: AC Bonus from Attribute
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: Bônus de Atributo na CA
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Additional Gear Slots
-SHADOWDARK.item.effect.predefined_effect.armorMastery: Armor Mastery
+SHADOWDARK.item.effect.predefined_effect.armorMastery: Maestria de Armadura
 SHADOWDARK.item.effect.predefined_effect.backstabDie: Additional Backstab Die
 SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: Critical Failure Threshold
 SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: Critical Success Threshold
@@ -422,17 +422,17 @@ SHADOWDARK.item.effect.predefined_effect.initAdvantage: Initiative Advantage
 SHADOWDARK.item.effect.predefined_effect.lightSource: Light Source
 SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Melee Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Melee Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Permanent Ability (Cha)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: Permanent Ability (Con)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: Permanent Ability (Dex)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: Permanent Ability (Int)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: Permanent Ability (Str)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: Permanent Ability (Wis)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Atributo Permanente (Car)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: Atributo Permanente (Con)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: Atributo Permanente (Des)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: Atributo Permanente (Int)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: Atributo Permanente (For)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: Atributo Permanente (Sab)
 SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Ranged Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Ranged Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Spellcasting Advantage on Spell
-SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Spellcasting Check Bonus
-SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
+SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Vantagem na Conjuração da Magia
+SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bônus no Teste de Conjuração
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bônus de CA Sem Armadura
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
@@ -464,7 +464,7 @@ SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: Lower Critical Success
 SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
 SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
-SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.magic_item.type.permanentAbility: Mudança de Atributo Permanente
 SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
@@ -480,7 +480,7 @@ SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
-SHADOWDARK.item.spell_caster_classes: Caster Classes
+SHADOWDARK.item.spell_caster_classes: Classes Conjuradoras
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_name: Spell Name
@@ -568,7 +568,7 @@ SHADOWDARK.npc_move.near: Near
 SHADOWDARK.npc_move.none: None
 SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple Near
-SHADOWDARK.property.type.option.armor: Armor
+SHADOWDARK.property.type.option.armor: Armadura
 SHADOWDARK.property.type.option.weapon: Weapon
 SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: C
@@ -597,7 +597,7 @@ SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
 SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
-SHADOWDARK.roll.spell_casting_check: Spellcasting Check
+SHADOWDARK.roll.spell_casting_check: Teste de Conjuração
 SHADOWDARK.roll.success: Success! ({value})
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
@@ -711,13 +711,13 @@ SHADOWDARK.sheet.player.talents_level: Level
 SHADOWDARK.sheet.player.talents_name: Name
 SHADOWDARK.sheet.player.talents: Talents
 SHADOWDARK.sheet.player.title: Title
-SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
+SHADOWDARK.sheet.player.toggle_ability_lost: Alternar Redução de Atributo
 SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
-SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
+SHADOWDARK.sheet.player.tooltip.cast_spell: Conjurar Magia
 SHADOWDARK.sheet.player.tooltip.learn_spell: Learn Spell
-SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
+SHADOWDARK.sheet.player.tooltip.use_class_ability: Usar Habilidade de Classe
 SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
 SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
@@ -746,20 +746,20 @@ SHADOWDARK.talent.backstab: Backstab
 SHADOWDARK.talent.class.ancestry: Ancestry
 SHADOWDARK.talent.class.class: Class
 SHADOWDARK.talent.class.level: Level
-SHADOWDARK.talent.type.ability_improvement: Ability Improvement
+SHADOWDARK.talent.type.ability_improvement: Melhoria de Atributo
 SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
 SHADOWDARK.talent.type.advantage.spell: Vantagem em Conjuração
 SHADOWDARK.talent.type.advantage.title: Advantage Bonus
-SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
-SHADOWDARK.talent.type.armor_mastery: Armor Mastery
+SHADOWDARK.talent.type.armor_bonus: Bônus de CA da Armadura
+SHADOWDARK.talent.type.armor_mastery: Maestria de Armadura
 SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
 SHADOWDARK.talent.type.custom: Custom Talent
 SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
 SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
 SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
 SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
-SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
+SHADOWDARK.talent.type.spell_bonus: Bônus de Conjuração
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
 SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
