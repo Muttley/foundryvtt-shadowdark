@@ -441,17 +441,17 @@ SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Dano Ex
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Melhoria de Dano Extra por Propriedade
 SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Multiplicador de Dano da Arma
 SHADOWDARK.item.effect.predefined_effect.weaponMastery: Maestria com Arma
-SHADOWDARK.item.effect.show-on-panel: Show on panel
-SHADOWDARK.item.effect.show-token-icon: Show token icon
-SHADOWDARK.item.effect.source.title: Item Source
+SHADOWDARK.item.effect.show-on-panel: Mostrar no painel
+SHADOWDARK.item.effect.show-token-icon: Mostrar ícone do token
+SHADOWDARK.item.effect.source.title: Fonte do Item
 SHADOWDARK.item.effect.warning.add_effect_without_value: Não é possível adicionar efeitos sem selecionar um valor quando pedido.
-SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects with Rounds type duration outside of combat.
-SHADOWDARK.item.equipped: Equipped
-SHADOWDARK.item.inventory_free_carry: Free Carry
-SHADOWDARK.item.inventory_per_slot: Max per Slot
-SHADOWDARK.item.inventory_quantity: Quantity
-SHADOWDARK.item.inventory_slots: Slots per Item
-SHADOWDARK.item.level: Level
+SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Não é possível adicionar efeitos com a duração de tipo Rodadas fora do combate.
+SHADOWDARK.item.equipped: Equipado
+SHADOWDARK.item.inventory_free_carry: Carga Livre
+SHADOWDARK.item.inventory_per_slot: Máx por Espaço
+SHADOWDARK.item.inventory_quantity: Quantidade
+SHADOWDARK.item.inventory_slots: Espaços por item
+SHADOWDARK.item.level: Nível
 SHADOWDARK.item.light.is_source: Fonte de Luz
 SHADOWDARK.item.light.longevity: Longevidade (Min)
 SHADOWDARK.item.light.remaining: Restante (Min)
@@ -478,8 +478,8 @@ SHADOWDARK.item.npc_attack.num_damage_dice: Núm. Dados de Dano
 SHADOWDARK.item.potion.label: Potion
 SHADOWDARK.item.properties: Properties
 SHADOWDARK.item.scroll.label: Scroll
-SHADOWDARK.item.source_tag: Source Tag
-SHADOWDARK.item.source: Source
+SHADOWDARK.item.source_tag: Tag da Fonte
+SHADOWDARK.item.source: Fonte
 SHADOWDARK.item.spell_caster_classes: Classes Conjuradoras
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
@@ -761,12 +761,12 @@ SHADOWDARK.talent.type.ranged_attack_bonus: Bônus de Ataque à Distância
 SHADOWDARK.talent.type.ranged_damage_bonus: Bônus de Dano à Distância
 SHADOWDARK.talent.type.spell_bonus: Bônus de Conjuração
 SHADOWDARK.talent.type.title: Talent Type(s)
-SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
+SHADOWDARK.talent.type.weapon_mastery: Maestria com Arma
 SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
-SHADOWDARK.weapon.properties.finesse: Finesse
-SHADOWDARK.weapon.properties.loading: Loading
-SHADOWDARK.weapon.properties.thrown: Thrown
-SHADOWDARK.weapon.properties.two_handed: Two-Handed
-SHADOWDARK.weapon.properties.versatile: Versatile
+SHADOWDARK.weapon.properties.finesse: Sutileza
+SHADOWDARK.weapon.properties.loading: Carregando
+SHADOWDARK.weapon.properties.thrown: Arremesso
+SHADOWDARK.weapon.properties.two_handed: Duas Mãos
+SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Corpo-a-Corpo
 SHADOWDARK.weapon.type.ranged: Alcance
