@@ -221,7 +221,7 @@ SHADOWDARK.class.thief: Ladrão
 SHADOWDARK.class.titles.levels.from.label: De
 SHADOWDARK.class.titles.levels.label: Níveis
 SHADOWDARK.class.titles.levels.to.label: Para
-SHADOWDARK.class.weapons.all_melee.label: Todas Armas Brancas
+SHADOWDARK.class.weapons.all_melee.label: Todas Armas Corpo-a-Corpo
 SHADOWDARK.class.weapons.all_ranged.label: Todas Armas de Alcance
 SHADOWDARK.class.weapons.all.label: Todas as Armas
 SHADOWDARK.class.weapons.label: Armas
@@ -420,16 +420,16 @@ SHADOWDARK.item.effect.predefined_effect.damageMultiplier: Multiplicador de Dano
 SHADOWDARK.item.effect.predefined_effect.hpAdvantage: Vantagem na Rolagem de PV
 SHADOWDARK.item.effect.predefined_effect.initAdvantage: Vantagem na Iniciativa
 SHADOWDARK.item.effect.predefined_effect.lightSource: Fonte de Luz
-SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Melee Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Melee Damage Bonus
+SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Bônus de Ataque Corpo-a-Corpo
+SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Bônus de Dano Corpo-a-Corpo
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Atributo Permanente (Car)
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: Atributo Permanente (Con)
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: Atributo Permanente (Des)
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: Atributo Permanente (Int)
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: Atributo Permanente (For)
 SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: Atributo Permanente (Sab)
-SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Ranged Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Ranged Damage Bonus
+SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Bônus de Ataque à Distância
+SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bônus de Dano à Distância
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Vantagem na Conjuração da Magia
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bônus no Teste de Conjuração
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bônus de CA Sem Armadura
@@ -484,7 +484,7 @@ SHADOWDARK.item.spell_caster_classes: Classes Conjuradoras
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_name: Spell Name
-SHADOWDARK.item.spell_range: Range
+SHADOWDARK.item.spell_range: Alcance
 SHADOWDARK.item.spell_tier: Tier
 SHADOWDARK.item.spell.label: Spell
 SHADOWDARK.item.stashed.label: Stashed
@@ -498,7 +498,7 @@ SHADOWDARK.item.weapon_damage.oneHanded_short: 1H
 SHADOWDARK.item.weapon_damage.oneHanded: 1H Damage
 SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
 SHADOWDARK.item.weapon_damage.twoHanded: 2H Damage
-SHADOWDARK.item.weapon_range: Range
+SHADOWDARK.item.weapon_range: Alcance
 SHADOWDARK.item.weapon_type: Type
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastard Sword
 SHADOWDARK.item.weapon.base_weapon.club: Club
@@ -695,7 +695,7 @@ SHADOWDARK.sheet.player.deity.label: Deity
 SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: Languages
 SHADOWDARK.sheet.player.luck: Luck
-SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
+SHADOWDARK.sheet.player.melee_attacks: Ataques Corpo-a-Corpo
 SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
@@ -737,9 +737,9 @@ SHADOWDARK.spell_duration.permanent: Permanent
 SHADOWDARK.spell_duration.real_time: Real Time
 SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_duration.turns: Turns
-SHADOWDARK.spell_range.close: Close
-SHADOWDARK.spell_range.far: Far
-SHADOWDARK.spell_range.near: Near
+SHADOWDARK.spell_range.close: Imediato
+SHADOWDARK.spell_range.far: Longe
+SHADOWDARK.spell_range.near: Próximo
 SHADOWDARK.spell.classes.label: Classes Conjuradoras
 SHADOWDARK.spell.classes.prompt: Selecionar Classe...
 SHADOWDARK.talent.backstab: Ataque Furtivo
@@ -755,10 +755,10 @@ SHADOWDARK.talent.type.armor_bonus: Bônus de CA da Armadura
 SHADOWDARK.talent.type.armor_mastery: Maestria de Armadura
 SHADOWDARK.talent.type.backstab_die: Dado Extra de Ataque Furtivo
 SHADOWDARK.talent.type.custom: Custom Talent
-SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
-SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
-SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
-SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
+SHADOWDARK.talent.type.melee_attack_bonus: Bônus de Ataque Corpo-a-Corpo
+SHADOWDARK.talent.type.melee_damage_bonus: Bônus de Dano Corpo-a-Corpo
+SHADOWDARK.talent.type.ranged_attack_bonus: Bônus de Ataque à Distância
+SHADOWDARK.talent.type.ranged_damage_bonus: Bônus de Dano à Distância
 SHADOWDARK.talent.type.spell_bonus: Bônus de Conjuração
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
@@ -768,5 +768,5 @@ SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
 SHADOWDARK.weapon.properties.two_handed: Two-Handed
 SHADOWDARK.weapon.properties.versatile: Versatile
-SHADOWDARK.weapon.type.melee: Melee
-SHADOWDARK.weapon.type.ranged: Ranged
+SHADOWDARK.weapon.type.melee: Corpo-a-Corpo
+SHADOWDARK.weapon.type.ranged: Alcance
