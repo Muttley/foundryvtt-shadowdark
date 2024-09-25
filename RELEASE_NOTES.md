@@ -1,3 +1,12 @@
+# v3.1.3
+
+## Enhancements
+* [#895] Added "Portuguese, Brazilian" as a fully translated system language.
+
+*Many thanks to **Felipe Pereira Pinto (Salazar)** for contributing **Portuguese, Brazilian** translation data.*
+
+---
+
 # v3.1.2
 
 ## Bugfixes
