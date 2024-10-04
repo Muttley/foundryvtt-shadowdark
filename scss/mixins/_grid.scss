@@ -25,5 +25,14 @@ $columns: 6;
 	}
 }
 
+@mixin grid-colstart {
+	@for $i from 1 through $columns {
+		.grid-colstart-#{$i} {
+			grid-column-start: #{$i};
+		}
+	}
+}
+
 @include grid-colspan;
+@include grid-colstart;
 @include grid-x-columns;

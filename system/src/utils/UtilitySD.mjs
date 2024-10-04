@@ -62,8 +62,8 @@ export default class UtilitySD {
 	/**
 	 * Creates de-duplicated lists of Selected and Unselected Items.
 	 *
-	 * @param {allItems} Array A list of all available skills
-	 * @param {items} Array A list of currently selected skills
+	 * @param {allItems} Array A list of all available items
+	 * @param {items} Array A list of currently selected items
 	 *
 	 * @returns {Promise} Promise which represents an array containing both the
 	 * selected and unselected skill arrays

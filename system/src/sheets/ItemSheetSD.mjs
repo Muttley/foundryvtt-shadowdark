@@ -99,6 +99,7 @@ export default class ItemSheetSD extends ItemSheet {
 				await shadowdark.compendiums.languages(),
 				this.item.system.languages.fixed ?? []
 			);
+
 		const [selectedLanguages, availableSelectLanguages] =
 		await shadowdark.utils.getDedupedSelectedItems(
 			await shadowdark.compendiums.languages(),
