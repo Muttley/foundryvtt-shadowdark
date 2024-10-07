@@ -30,33 +30,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-
-	/** @inheritdoc */
-	_initializeSource(source, options={}) {
-		source = super._initializeSource(source, options);
-
-		if (!source._id || !options.pack || game.shadowdark.moduleArt.suppressArt) {
-			return source;
-		}
-
-		const uuid = `Compendium.${options.pack}.${source._id}`;
-
-		const art = game.shadowdark.moduleArt.map.get(uuid);
-
-		if (art?.actor || art?.token) {
-			if (art.actor) source.img = art.actor;
-
-			if (typeof art.token === "string") {
-				source.prototypeToken.texture.src = art.token;
-			}
-			else if (art.token) {
-				foundry.utils.mergeObject(source.prototypeToken, art.token);
-			}
-		}
-		return source;
-	}
-
-
 	async _learnSpell(item) {
 		const characterClass = await this.getClass();
 

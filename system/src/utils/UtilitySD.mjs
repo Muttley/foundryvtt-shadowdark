@@ -307,4 +307,19 @@ export default class UtilitySD {
 		const src = sounds[0];
 		game.audio.play(src, {volume: 1});
 	}
+
+	static async loadLegacyArtMappings() {
+		// search modules for legacy art mappings and convert to new format
+		for (const module of game.modules) {
+			if (!module.active) continue;
+			const flags = module.flags?.[module.id];
+			if (flags?.["shadowdark-art"]) {
+				module.flags.compendiumArtMappings = {
+					shadowdark: {
+						mapping: flags["shadowdark-art"],
+					},
+				};
+			}
+		}
+	}
 }
