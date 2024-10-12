@@ -22,28 +22,28 @@ SHADOWDARK.ancestry.nametable.label: Random Name Table
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
 SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
-SHADOWDARK.app.active_effects.title: Active Effects
+SHADOWDARK.ancestry.talents.label: Таланты Предков
+SHADOWDARK.ancestry.talents.prompt: Выберите Талант...
+SHADOWDARK.app.active_effects.title: Активные эффекты
 SHADOWDARK.app.gem_bag.sell_all: Продать все Самоцветы
-SHADOWDARK.app.gem_bag.title: Gem Bag
+SHADOWDARK.app.gem_bag.title: Мешок Самоцветов
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать Самоцвет
-SHADOWDARK.app.gem_bag.total_value: Total Value
+SHADOWDARK.app.gem_bag.total_value: Общая стоимость
 SHADOWDARK.app.item_properties.armor.title: Armor Properties
 SHADOWDARK.app.item_properties.languages.title: Языки
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.app.item_properties.save: Сохранить
 SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
-SHADOWDARK.app.item_properties.title: Properties
+SHADOWDARK.app.item_properties.title: Свойства
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
 SHADOWDARK.app.light_tracker.minute_short: мин
 SHADOWDARK.app.light_tracker.minutes_short: минуты
-SHADOWDARK.app.light_tracker.title: Light Tracker
+SHADOWDARK.app.light_tracker.title: Трекер освещения
 SHADOWDARK.app.light-tracker.douse-light: Douse Light
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
-SHADOWDARK.app.loading.body: Searching Distant Lands...
+SHADOWDARK.app.light-tracker.hide-inactive: Скрыть актёров без света
+SHADOWDARK.app.light-tracker.show-all-actors: Показать всех актёров
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить свет
+SHADOWDARK.app.loading.body: Поиск отдаленных земель...
 SHADOWDARK.app.loading.title: Загрузка
 SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
 SHADOWDARK.apps.character-generator.create_character: Создать персонажа
@@ -267,7 +267,7 @@ SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
 SHADOWDARK.dialog.hp_roll.summary: HP Rolling Summary
 SHADOWDARK.dialog.hp_roll.title: HP Roll
 SHADOWDARK.dialog.item_roll.ability_bonus: Бонус умения
-SHADOWDARK.dialog.item_roll.item_bonus: Item Bonus
+SHADOWDARK.dialog.item_roll.item_bonus: Бонус предмета
 SHADOWDARK.dialog.item_roll.talent_bonus: Бонус таланта
 SHADOWDARK.dialog.item_roll.title: Roll Attack with
 SHADOWDARK.dialog.item_selector.default_title: Choose Items
@@ -282,7 +282,7 @@ SHADOWDARK.dialog.item.sell_all: Продать все
 SHADOWDARK.dialog.item.sell: Продать
 SHADOWDARK.dialog.item.use: Использовать
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
-SHADOWDARK.dialog.roll_mode_label: Rolling mode
+SHADOWDARK.dialog.roll_mode_label: Тип броска
 SHADOWDARK.dialog.roll: Roll
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Подтвердить обучение заклинанию
