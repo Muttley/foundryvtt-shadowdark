@@ -16,9 +16,9 @@ SHADOWDARK.alignment.neutral: Нейтральный
 SHADOWDARK.ancestry.choice_count: Choice Count
 SHADOWDARK.ancestry.choice: Выбор
 SHADOWDARK.ancestry.fixed: Fixed
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
+SHADOWDARK.ancestry.languages.label: Языки предков
+SHADOWDARK.ancestry.languages.prompt: Выберите язык...
+SHADOWDARK.ancestry.nametable.label: Случайная таблица имён
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
 SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
@@ -29,7 +29,7 @@ SHADOWDARK.app.gem_bag.sell_all: Продать все Самоцветы
 SHADOWDARK.app.gem_bag.title: Мешок Самоцветов
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать Самоцвет
 SHADOWDARK.app.gem_bag.total_value: Общая стоимость
-SHADOWDARK.app.item_properties.armor.title: Armor Properties
+SHADOWDARK.app.item_properties.armor.title: Свойства Брони
 SHADOWDARK.app.item_properties.languages.title: Языки
 SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
 SHADOWDARK.app.item_properties.save: Сохранить
@@ -94,7 +94,7 @@ SHADOWDARK.apps.level-up.notalent: No talents gained at this level
 SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Повышение уровня
-SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.import_button: Импорт монстра
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
 SHADOWDARK.apps.monster-importer.instruction2b: Название монстра
@@ -103,16 +103,16 @@ SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
 SHADOWDARK.apps.monster-importer.title: Import Monster
-SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.errors: Предметы не найдены
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Импорт
-SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: Частичный импорт
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Visit Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
-SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: Вставить JSON персонажа здесь
 SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Import Shadowdarkling
 SHADOWDARK.apps.spell-book.known: Известные
-SHADOWDARK.apps.spell-book.title: Class Spell List
+SHADOWDARK.apps.spell-book.title: Список заклинаний класса
 SHADOWDARK.apps.spell-importer.import_button: Импорт заклинания
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
@@ -126,7 +126,7 @@ SHADOWDARK.apps.spell-importer.title: Импорт заклинания
 SHADOWDARK.apps.solodark.button1: Маловероятно или невозможно
 SHADOWDARK.apps.solodark.button2: Even Chance
 SHADOWDARK.apps.solodark.button3: Likely or Certain
-SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.solodark.oracle: Оракул
 SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
 SHADOWDARK.apps.solodark.question1: Какой вопрос?
 SHADOWDARK.apps.solodark.question2: Насколько вероятно, что результат "да"?
@@ -157,7 +157,7 @@ SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
-SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
+SHADOWDARK.chat.light_source.expired: "{lightSource} персонажа {name} иссяк"
 SHADOWDARK.chat.light_source.remaining: осталось минут
 SHADOWDARK.chat.light_source.seconds_remaining: Осталось менее 1 минуты
 SHADOWDARK.chat.light_source.source.all: Все источники света закончились
@@ -165,7 +165,7 @@ SHADOWDARK.chat.light_source.source.dropped: был выброшен
 SHADOWDARK.chat.light_source.source.picked_up: был подобран
 SHADOWDARK.chat.light_source.source.toggle.off: был потушен
 SHADOWDARK.chat.light_source.source.toggle.on: зажжён
-SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
+SHADOWDARK.chat.light_source.went_out: "{lightSource} персонажа {name} потухло"
 SHADOWDARK.chat.potion_used: "{name} использовал зелье"
 SHADOWDARK.chat.spell_learn.failure: "{name} ничего не удалось выучить из свитка"
 SHADOWDARK.chat.spell_learn.success: "{name} успешно изучил заклинание {spellName}"
@@ -174,8 +174,8 @@ SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Использование способности"
-SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues: Сообщить о проблеме
+SHADOWDARK.chat.welcome_message.issues_button: Баг трекер
 SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
 SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
@@ -381,9 +381,9 @@ SHADOWDARK.item_type.spell: Spell
 SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.weapon: Weapon
 SHADOWDARK.item.armor_ac_modifier: Modifier
-SHADOWDARK.item.armor_ac: AC
+SHADOWDARK.item.armor_ac: КБ
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
-SHADOWDARK.item.armor_class: Armor Class
+SHADOWDARK.item.armor_class: Класс Брони
 SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
 SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
 SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
@@ -408,8 +408,8 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: Ability Score Im
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: Ability Score Improvement (Int)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: Ability Score Improvement (Str)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: Ability Score Improvement (Wis)
-SHADOWDARK.item.effect.predefined_effect.acBonus: AC Bonus
-SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: AC Bonus from Attribute
+SHADOWDARK.item.effect.predefined_effect.acBonus: Бонус КБ
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: Бонус КБ от атрибута
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: Additional Gear Slots
 SHADOWDARK.item.effect.predefined_effect.armorMastery: Armor Mastery
 SHADOWDARK.item.effect.predefined_effect.backstabDie: Additional Backstab Die
@@ -432,7 +432,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Ranged Attack Roll B
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Ranged Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Spellcasting Advantage on Spell
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Spellcasting Check Bonus
-SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Небронированный КБ бонус
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
@@ -639,9 +639,9 @@ SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
-SHADOWDARK.sheet.abilities.label: Abilities
+SHADOWDARK.sheet.abilities.label: Умения
 SHADOWDARK.sheet.abilities.modifiers: Modifiers
-SHADOWDARK.sheet.abilities.stats: Stats
+SHADOWDARK.sheet.abilities.stats: Статы
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
@@ -659,7 +659,7 @@ SHADOWDARK.sheet.general.item_delete.title: Delete Item
 SHADOWDARK.sheet.general.item_edit.title: Edit Item
 SHADOWDARK.sheet.general.roll_hp: Roll HP
 SHADOWDARK.sheet.item.tab.description: Description
-SHADOWDARK.sheet.item.tab.details: Details
+SHADOWDARK.sheet.item.tab.details: Подробности
 SHADOWDARK.sheet.item.tab.effects: Effects
 SHADOWDARK.sheet.item.tab.light: Light
 SHADOWDARK.sheet.item.tab.magic: Magic
@@ -673,7 +673,7 @@ SHADOWDARK.sheet.npc.features_label: Features
 SHADOWDARK.sheet.npc.movement_short: Move
 SHADOWDARK.sheet.npc.movement: Movement
 SHADOWDARK.sheet.npc.specials_label: Special Attacks
-SHADOWDARK.sheet.npc.tab.abilities: Abilities
+SHADOWDARK.sheet.npc.tab.abilities: Умения
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.npc.tab.spells: Spells
 SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
@@ -694,15 +694,15 @@ SHADOWDARK.sheet.player.class.tooltip: Your character's job
 SHADOWDARK.sheet.player.deity.label: Deity
 SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.languages: Languages
-SHADOWDARK.sheet.player.luck: Luck
+SHADOWDARK.sheet.player.luck: Удача
 SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
 SHADOWDARK.sheet.player.name.label: Name
 SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: Tier
 SHADOWDARK.sheet.player.spells: Spells
-SHADOWDARK.sheet.player.tab.abilities: Abilities
-SHADOWDARK.sheet.player.tab.details: Details
+SHADOWDARK.sheet.player.tab.abilities: Умения
+SHADOWDARK.sheet.player.tab.details: Подробности
 SHADOWDARK.sheet.player.tab.inventory: Inventory
 SHADOWDARK.sheet.player.tab.notes: Notes
 SHADOWDARK.sheet.player.tab.spells: Spells
@@ -751,7 +751,7 @@ SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
 SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
 SHADOWDARK.talent.type.advantage.title: Advantage Bonus
-SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
+SHADOWDARK.talent.type.armor_bonus: Броня КБ бонус
 SHADOWDARK.talent.type.armor_mastery: Armor Mastery
 SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
 SHADOWDARK.talent.type.custom: Custom Talent
