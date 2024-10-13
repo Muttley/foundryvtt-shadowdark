@@ -1,3 +1,12 @@
+# vX.X.X
+
+## Chores
+* [#911] Replaced compendium art mapping with default Foundry method.
+
+	- Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*
+
+---
+
 # v3.1.3
 
 ## Enhancements
