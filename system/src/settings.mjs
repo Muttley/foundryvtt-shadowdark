@@ -1,4 +1,3 @@
-import { ModuleArtConfig } from "./utils/module-art.mjs";
 import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
 
 /**
@@ -7,31 +6,9 @@ import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
 export default function registerSystemSettings() {
 
 	// -----------------
-	//  DYNAMIC ARTWORK
+	//  Content Sources
 	// -----------------
 	//
-	game.settings.registerMenu("shadowdark", "moduleArtConfiguration", {
-		name: "SHADOWDARK.settings.module_art.name",
-		label: "SHADOWDARK.settings.module_art.label",
-		hint: "SHADOWDARK.settings.module_art.hint",
-		icon: "fa-solid fa-palette",
-		type: ModuleArtConfig,
-		restricted: true,
-	});
-
-	game.settings.register("shadowdark", "moduleArtConfiguration", {
-		name: "Module Art Configuration",
-		scope: "world",
-		config: false,
-		type: Object,
-		default: {
-			shadowdark: {
-				portraits: true,
-				tokens: true,
-			},
-		},
-	});
-
 	game.settings.registerMenu("shadowdark", "sources", {
 		name: "SHADOWDARK.settings.source_filter.name",
 		hint: "SHADOWDARK.settings.source_filter.hint",

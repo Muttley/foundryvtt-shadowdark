@@ -14,8 +14,6 @@ import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
-import { ModuleArt } from "./src/utils/module-art.mjs";
-
 import {
 	HooksSD,
 	HooksImmediate,
@@ -77,7 +75,7 @@ Hooks.once("init", () => {
 	registerSystemSettings();
 	loadTemplates();
 
-	game.shadowdark.moduleArt = new ModuleArt();
+	UtilitySD.loadLegacyArtMappings();
 
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
@@ -140,8 +138,6 @@ Hooks.on("ready", async () => {
 //
 Hooks.once("setup", () => {
 	shadowdark.log("Setup Hook");
-
-	game.shadowdark.moduleArt.registerModuleArt();
 
 	// Localize all the strings in the game config in advance
 	//
