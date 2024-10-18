@@ -380,6 +380,7 @@ SHADOWDARK.item_type.potion: Poção
 SHADOWDARK.item_type.spell: Magia
 SHADOWDARK.item_type.talent: Talento
 SHADOWDARK.item_type.weapon: Arma
+SHADOWDARK.item.ammunition: Ammunition
 SHADOWDARK.item.armor_ac_modifier: Modificador
 SHADOWDARK.item.armor_ac: CA
 SHADOWDARK.item.armor_bonus_attribute: Bônus de Atributo
@@ -447,6 +448,7 @@ SHADOWDARK.item.effect.source.title: Fonte do Item
 SHADOWDARK.item.effect.warning.add_effect_without_value: Não é possível adicionar efeitos sem selecionar um valor quando pedido.
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Não é possível adicionar efeitos com a duração de tipo Rodadas fora do combate.
 SHADOWDARK.item.equipped: Equipado
+SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.inventory_free_carry: Carga Livre
 SHADOWDARK.item.inventory_per_slot: Máx por Espaço
 SHADOWDARK.item.inventory_quantity: Quantidade
@@ -599,6 +601,8 @@ SHADOWDARK.roll.failure: Falha! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Teste de Conjuração
 SHADOWDARK.roll.success: Sucesso! ({value})
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
+SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Ativar ou desativar o registro de depuração adicional
 SHADOWDARK.settings.debugEnabled.name: Ativar/Desativar Depuração
 SHADOWDARK.settings.effect_panel.show_passive.hint: Se marcado, o Painel de Efeitos também mostrará efeitos ativos de talentos e itens
@@ -657,7 +661,7 @@ SHADOWDARK.sheet.class.player: Ficha de Jogador Shadowdark
 SHADOWDARK.sheet.general.item_create.tooltip: Criar Item {type}
 SHADOWDARK.sheet.general.item_delete.title: Deletar Item
 SHADOWDARK.sheet.general.item_edit.title: Editar Item
-SHADOWDARK.sheet.general.roll_hp: Rolar HP
+SHADOWDARK.sheet.general.roll_hp: Rolar PV
 SHADOWDARK.sheet.item.tab.description: Descrição
 SHADOWDARK.sheet.item.tab.details: Detalhes
 SHADOWDARK.sheet.item.tab.effects: Efeitos
@@ -727,6 +731,9 @@ SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
+SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
+SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Clérigo
 SHADOWDARK.spell_caster.wizard: Mago

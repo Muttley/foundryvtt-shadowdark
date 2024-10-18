@@ -380,6 +380,7 @@ SHADOWDARK.item_type.potion: Potion
 SHADOWDARK.item_type.spell: 주문
 SHADOWDARK.item_type.talent: 재능
 SHADOWDARK.item_type.weapon: 무기
+SHADOWDARK.item.ammunition: Ammunition
 SHADOWDARK.item.armor_ac_modifier: 수정치
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: 추가 속성
@@ -447,6 +448,7 @@ SHADOWDARK.item.effect.source.title: 아이템 출처
 SHADOWDARK.item.effect.warning.add_effect_without_value: 값을 지정하지 않은 효과를 추가할 수 없습니다
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: 전투가 아닐 때 라운드 단위로 지속시간을 세는 효과를 추가할 수 없습니다
 SHADOWDARK.item.equipped: 장착 중
+SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.inventory_free_carry: 슬롯 소모 안 함
 SHADOWDARK.item.inventory_per_slot: 슬롯 당 최대값
 SHADOWDARK.item.inventory_quantity: 수량
@@ -599,6 +601,8 @@ SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
+SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
@@ -727,6 +731,9 @@ SHADOWDARK.source.core-rules: "섀도다크 RPG: 코어 룰북"
 SHADOWDARK.source.cursed-scroll-1: 커스드 스크롤 Vol.1, 다이어블러리!
 SHADOWDARK.source.cursed-scroll-2: 커스드 스크롤 Vol.2, 레드 샌드
 SHADOWDARK.source.cursed-scroll-3: 커스드 스크롤 Vol.3, 미드나이트 선
+SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
+SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
+SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "섀도다크 RPG: 퀵스타트 세트"
 SHADOWDARK.spell_caster.priest: 성직자
 SHADOWDARK.spell_caster.wizard: 마법사

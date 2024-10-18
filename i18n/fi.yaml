@@ -380,6 +380,7 @@ SHADOWDARK.item_type.potion: Rohto/Taikajuoma
 SHADOWDARK.item_type.spell: Loitsu
 SHADOWDARK.item_type.talent: Lahjakkuus
 SHADOWDARK.item_type.weapon: Ase
+SHADOWDARK.item.ammunition: Ammunition
 SHADOWDARK.item.armor_ac_modifier: Lisäpisteet
 SHADOWDARK.item.armor_ac: Puolustuspisteet
 SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
@@ -447,6 +448,7 @@ SHADOWDARK.item.effect.source.title: Lähde
 SHADOWDARK.item.effect.warning.add_effect_without_value: Ei voi lisätä efektejä valitsematta arvoa pyydettäessä.
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Ei voi lisätä efektejä "kierros"-kestolla taistelun ulkopuolella.
 SHADOWDARK.item.equipped: Käytössä
+SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
 SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
 SHADOWDARK.item.inventory_quantity: Lukumäärä
@@ -599,6 +601,8 @@ SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
+SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä ylimääräinen debuggauksen lokitus
 SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittu, efektipaneeli näyttää myös aktiivisia efektejä lahjakkuuksista ja esineistä
@@ -727,6 +731,9 @@ SHADOWDARK.source.core-rules: "Shadowdark RPG: Ydinsäännöt"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol. 1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
+SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
+SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Pappi
 SHADOWDARK.spell_caster.wizard: Velho
