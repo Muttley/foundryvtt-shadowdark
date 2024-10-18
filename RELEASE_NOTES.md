@@ -4,6 +4,9 @@
 * [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
 * [#901] Added Russian as a partially complete system language.
 
+## Bugfixes
+* [#896] Add additional padding to blockquote style so text doesn't blend into decorations
+
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
 
