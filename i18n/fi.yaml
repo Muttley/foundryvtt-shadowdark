@@ -104,13 +104,22 @@ SHADOWDARK.apps.monster-importer.instruction2e: Ominaisuus
 SHADOWDARK.apps.monster-importer.instruction3: 3. Paina "Tuo hirviö"-nappia.
 SHADOWDARK.apps.monster-importer.title: Tuo hirviö
 SHADOWDARK.apps.shadowdarkling-importer.errors: Kohteita ei löytynyt
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling tuontityökalu
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Tuo
 SHADOWDARK.apps.shadowdarkling-importer.import_button2: Tuo osittain
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Navigoi shadowdarklings.net sivustolle.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Luo hahmo > Vie > kopioi JSON leikepöydälle.
 SHADOWDARK.apps.shadowdarkling-importer.instruction3: Liitä hahmon JSON tähän
-SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling tuontityökalu
 SHADOWDARK.apps.shadowdarkling-importer.title: Tuo Shadowdarkling
+SHADOWDARK.apps.solodark.button1: Epätodennäköistä tai mahdotonta
+SHADOWDARK.apps.solodark.button2: Tasapuolinen mahdollisuus
+SHADOWDARK.apps.solodark.button3: Todennäköistä tai varmaa
+SHADOWDARK.apps.solodark.oracle: Oraakkeli
+SHADOWDARK.apps.solodark.phrasing: 'Kysy kysymyksesi myöntävällä lausahduksella. Sen sijaan, että kysyisitte: "Eikö tässä huoneessa ole örkkejä?" kysy "Onko tässä huoneessa örkkejä?"'
+SHADOWDARK.apps.solodark.question1: Mikä on kysymyksesi?
+SHADOWDARK.apps.solodark.question2: Kuinka todennäköistä on saada "kyllä" vastaus?
+SHADOWDARK.apps.solodark.roll_prompt: Heittokehote
+SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.apps.spell-book.known: Opittu
 SHADOWDARK.apps.spell-book.title: Hahmoluokan loitsulista
 SHADOWDARK.apps.spell-importer.import_button: Tuo loitsu
@@ -123,15 +132,6 @@ SHADOWDARK.apps.spell-importer.instruction2e: Kantama
 SHADOWDARK.apps.spell-importer.instruction2f: Kuvaus
 SHADOWDARK.apps.spell-importer.instruction3: 3. Paina "Tuo loitsu"-nappia.
 SHADOWDARK.apps.spell-importer.title: Tuo loitsu
-SHADOWDARK.apps.solodark.button1: Epätodennäköistä tai mahdotonta
-SHADOWDARK.apps.solodark.button2: Tasapuolinen mahdollisuus
-SHADOWDARK.apps.solodark.button3: Todennäköistä tai varmaa
-SHADOWDARK.apps.solodark.oracle: Oraakkeli
-SHADOWDARK.apps.solodark.phrasing: 'Kysy kysymyksesi myöntävällä lausahduksella. Sen sijaan, että kysyisitte: "Eikö tässä huoneessa ole örkkejä?" kysy "Onko tässä huoneessa örkkejä?"'
-SHADOWDARK.apps.solodark.question1: Mikä on kysymyksesi?
-SHADOWDARK.apps.solodark.question2: Kuinka todennäköistä on saada "kyllä" vastaus?
-SHADOWDARK.apps.solodark.roll_prompt: Heittokehote
-SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: Haitta/Hiipiminen
 SHADOWDARK.armor.properties.disadvantage_swimming: Haitta/Uiminen
 SHADOWDARK.armor.properties.no_swimming: Ei voi uida
@@ -174,14 +174,14 @@ SHADOWDARK.chat.spell_roll.title: "Loihditaan {name} tasolla {tier} jolloin vaik
 SHADOWDARK.chat.use_ability.failure: "{name} epäonnistui käyttämään {ability} kykyä"
 SHADOWDARK.chat.use_ability.success: "{name} onnistui {ability} kyvyssään"
 SHADOWDARK.chat.use_ability.title: "Kyvyn käyttö"
-SHADOWDARK.chat.welcome_message.issues: Raportoi ongelmasta
-SHADOWDARK.chat.welcome_message.issues_button: Virheiden seurantajärjestelmä
-SHADOWDARK.chat.welcome_message.issues_text: "Tutustu virheiden seurantajärjestelmäämme, jos löydät ongelmia järjestelmässä tai sinulla on ideoita uusille ominaisuuksille."
-SHADOWDARK.chat.welcome_message.arcane_library: 'Tue Shadowdarkin kehittäjää: The Arcane Library'
 SHADOWDARK.chat.welcome_message.arcane_library_button: Selaa Shadowdark RPG tuotteita
 SHADOWDARK.chat.welcome_message.arcane_library_text: Vieraile Arcane Libraryn sivuilla selataksesi virallisia Shadowdark RPG tuotteita, kuten kirjoja, pdf-tiedostoja ja muita oheistuotteita.
-SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
+SHADOWDARK.chat.welcome_message.arcane_library: 'Tue Shadowdarkin kehittäjää: The Arcane Library'
+SHADOWDARK.chat.welcome_message.issues_button: Virheiden seurantajärjestelmä
+SHADOWDARK.chat.welcome_message.issues_text: "Tutustu virheiden seurantajärjestelmäämme, jos löydät ongelmia järjestelmässä tai sinulla on ideoita uusille ominaisuuksille."
+SHADOWDARK.chat.welcome_message.issues: Raportoi ongelmasta
 SHADOWDARK.chat.welcome_message.title_text: Tervetuloa Shadowdark roolipeliin. Tässä on muutamia resursseja aloittelijoille.
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
 SHADOWDARK.chat.welcome_message.watch: Katso opastusvideo
 SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class-ability.ability.check: Kyvykkyysheitto
@@ -380,6 +380,7 @@ SHADOWDARK.item_type.potion: Rohto/Taikajuoma
 SHADOWDARK.item_type.spell: Loitsu
 SHADOWDARK.item_type.talent: Lahjakkuus
 SHADOWDARK.item_type.weapon: Ase
+SHADOWDARK.item.ammunition: Ammunition
 SHADOWDARK.item.armor_ac_modifier: Lisäpisteet
 SHADOWDARK.item.armor_ac: Puolustuspisteet
 SHADOWDARK.item.armor_bonus_attribute: Lisäominaisuus
@@ -447,6 +448,7 @@ SHADOWDARK.item.effect.source.title: Lähde
 SHADOWDARK.item.effect.warning.add_effect_without_value: Ei voi lisätä efektejä valitsematta arvoa pyydettäessä.
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Ei voi lisätä efektejä "kierros"-kestolla taistelun ulkopuolella.
 SHADOWDARK.item.equipped: Käytössä
+SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
 SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
 SHADOWDARK.item.inventory_quantity: Lukumäärä
@@ -599,6 +601,8 @@ SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
+SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä ylimääräinen debuggauksen lokitus
 SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittu, efektipaneeli näyttää myös aktiivisia efektejä lahjakkuuksista ja esineistä
@@ -727,6 +731,9 @@ SHADOWDARK.source.core-rules: "Shadowdark RPG: Ydinsäännöt"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol. 1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
+SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
+SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Pappi
 SHADOWDARK.spell_caster.wizard: Velho
