@@ -2,11 +2,15 @@
 
 ## Enhancements
 * [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
+* [#901] Added Russian as a partially complete system language.
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
 
 	- Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*
+
+
+*Many thanks to **AdamsGH** for contributing **Russian** translation data.*
 
 ---
 
