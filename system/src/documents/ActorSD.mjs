@@ -256,6 +256,19 @@ export default class ActorSD extends Actor {
 	}
 
 
+	ammunitionItems(key) {
+		return this.items.filter(i => {
+			if (key) {
+				return i.system.isAmmunition
+					&& i.system.quantity > 0
+					&& i.name.slugify() === key;
+			}
+			else {
+				return i.system.isAmmunition && i.system.quantity > 0;
+			}
+		});
+	}
+
 	/**
 	 * Applies the given number to the Actor or Token's HP value.
 	 * The multiplier is a convenience feature to apply healing
@@ -1030,10 +1043,19 @@ export default class ActorSD extends Actor {
 	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
 
+		const ammunition = item.availableAmmunition();
+
+		let ammunitionItem = undefined;
+		if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
+			ammunitionItem = ammunition[0];
+		}
+
 		const data = {
+			actor: this,
+			ammunitionItem,
 			item: item,
 			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
-			actor: this,
+			usesAmmunition: item.usesAmmunition,
 		};
 
 		const bonuses = this.system.bonuses;
@@ -1123,6 +1145,13 @@ export default class ActorSD extends Actor {
 			data.talentBonus += weaponMasterBonus;
 			data.weaponMasteryBonus = weaponMasterBonus * damageMultiplier;
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
+		}
+
+		if (data.usesAmmunition && !data.ammunitionItem) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"),
+				{ permanent: false }
+			);
 		}
 
 		return item.rollItem(parts, data, options);

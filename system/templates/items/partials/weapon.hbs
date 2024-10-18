@@ -33,6 +33,16 @@
 			}}
 		</select>
 
+		<h3>{{localize 'SHADOWDARK.item.ammunition'}}</h3>
+		<select name="system.ammoClass">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				ammunition
+				selected=system.ammoClass
+				localize=false
+			}}
+		</select>
+
 		<h3>{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}</h3>
 		<select name="system.damage.oneHanded">
 			<option value="">&mdash;</option>

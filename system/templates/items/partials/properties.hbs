@@ -15,6 +15,13 @@
 		{{/if}}
 
 		{{#ifEq item.type "Basic"}}
+			<h3>{{localize 'SHADOWDARK.item.ammunition'}}</h3>
+			<input
+				type="checkbox"
+				name="system.isAmmunition"
+				{{checked system.isAmmunition}}
+			>
+
 			<h3>{{localize 'SHADOWDARK.item.light.is_source'}}</h3>
 			<input
 				type="checkbox"

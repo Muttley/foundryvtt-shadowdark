@@ -122,6 +122,12 @@ export default class RollSD extends Roll {
 			&& result
 			&& !result?.rolls?.main?.success
 		) data.item.update({"system.lost": true});
+
+		// Reduce ammo if required
+		if (data.usesAmmunition && data.ammunitionItem) {
+			data.ammunitionItem.reduceAmmunition(1);
+		}
+
 		return result;
 	}
 

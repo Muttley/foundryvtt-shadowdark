@@ -133,6 +133,19 @@ export default function registerSystemSettings() {
 		type: Boolean,
 	});
 
+	// ------------------
+	//  AMMO CONSUMPTION
+	// ------------------
+	//
+	game.settings.register("shadowdark", "autoConsumeAmmunition", {
+		hint: "SHADOWDARK.settings.consume_ammunition.hint",
+		name: "SHADOWDARK.settings.consume_ammunition.name",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+	});
+
 	// ----------------------
 	//  INITIATIVE SETTINGS
 	// ----------------------
