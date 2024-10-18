@@ -104,13 +104,22 @@ SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
 SHADOWDARK.apps.monster-importer.title: Monster-Import
 SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
 SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Besuchen Sie Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
 SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
-SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Shadowdarkling importieren
+SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
+SHADOWDARK.apps.solodark.button2: Even Chance
+SHADOWDARK.apps.solodark.button3: Likely or Certain
+SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.question1: What is the question?
+SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
+SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
+SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
@@ -123,15 +132,6 @@ SHADOWDARK.apps.spell-importer.instruction2e: Range
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
 SHADOWDARK.apps.spell-importer.title: Import Spell
-SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
-SHADOWDARK.apps.solodark.button2: Even Chance
-SHADOWDARK.apps.solodark.button3: Likely or Certain
-SHADOWDARK.apps.solodark.oracle: The Oracle
-SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
-SHADOWDARK.apps.solodark.question1: What is the question?
-SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
-SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
-SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
@@ -174,14 +174,14 @@ SHADOWDARK.chat.spell_roll.title: "Zaubere {name} auf Stufe {tier} mit Zauber-SK
 SHADOWDARK.chat.use_ability.failure: "{name} failed to used the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Using Ability"
-SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
-SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
-SHADOWDARK.chat.welcome_message.title: Shadowdark RPG für Foundry
+SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
+SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.welcome_message.issues: Report Issues
 SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG für Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.class-ability.ability.check: Ability Check
@@ -380,6 +380,7 @@ SHADOWDARK.item_type.potion: Potion
 SHADOWDARK.item_type.spell: Zauber
 SHADOWDARK.item_type.talent: Talent
 SHADOWDARK.item_type.weapon: Waffe
+SHADOWDARK.item.ammunition: Ammunition
 SHADOWDARK.item.armor_ac_modifier: Modifikator
 SHADOWDARK.item.armor_ac: RK
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribut
@@ -447,6 +448,7 @@ SHADOWDARK.item.effect.source.title: Item Source
 SHADOWDARK.item.effect.warning.add_effect_without_value: Can't add effects without selecting a value when asked.
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects with Rounds type duration outside of combat.
 SHADOWDARK.item.equipped: Angelegt
+SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.inventory_free_carry: Freies Tragen
 SHADOWDARK.item.inventory_per_slot: Max pro Platz
 SHADOWDARK.item.inventory_quantity: Menge
@@ -599,6 +601,8 @@ SHADOWDARK.roll.failure: Fehlschlag! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Zauberwurf
 SHADOWDARK.roll.success: Erfolg! ({value})
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
+SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
@@ -727,6 +731,9 @@ SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
+SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
+SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
+SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Priester
 SHADOWDARK.spell_caster.wizard: Zauberer
