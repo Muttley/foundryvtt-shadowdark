@@ -6,6 +6,7 @@
 
 ## Bugfixes
 * [#896] Add additional padding to blockquote style so text doesn't blend into decorations
+* [#906] There's always an extra space between special attack name and effect
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.

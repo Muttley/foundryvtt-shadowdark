@@ -7,11 +7,17 @@
 		{{{numAttacks}}} {{attackName}}
 	</b>
 	{{#if ranges}}
-		({{ranges}})
+		{{#if attackBonus}}
+			({{ranges}})
+			+{{attackBonus}}.
+		{{else}}
+			({{ranges}}).
+		{{/if}}
+	{{else}}
+		{{#if attackBonus}}
+			+{{attackBonus}}.
+		{{/if}}
 	{{/if}}
-	{{#if attackBonus}}
-		+{{attackBonus}}
-	{{/if}}.
 </a>
 {{{description}}}
 
