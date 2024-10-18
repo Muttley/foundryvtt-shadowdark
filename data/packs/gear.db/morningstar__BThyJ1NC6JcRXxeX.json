@@ -7,6 +7,7 @@
 	"img": "icons/weapons/clubs/club-barbed-skull.webp",
 	"name": "Morningstar",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,

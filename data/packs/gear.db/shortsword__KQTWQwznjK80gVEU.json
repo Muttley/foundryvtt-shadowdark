@@ -7,6 +7,7 @@
 	"img": "icons/weapons/swords/shortsword-guard-worn.webp",
 	"name": "Shortsword",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {

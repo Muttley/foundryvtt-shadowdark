@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Grants advantage on checks to pry open stuck objects.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

@@ -254,6 +254,7 @@
 				"lightSource",
 				"physical"
 			],
+			"isAmmunition": false,
 			"scroll": false,
 			"treasure": false
 		},
@@ -430,6 +431,7 @@
 				"common",
 				"physical"
 			],
+			"ammoClass": "",
 			"baseWeapon": "",
 			"bonuses": {
 				"attackBonus": 0,

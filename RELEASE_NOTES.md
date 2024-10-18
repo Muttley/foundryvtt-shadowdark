@@ -1,5 +1,8 @@
 # vX.X.X
 
+## Enhancements
+* [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
+
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
 

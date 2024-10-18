@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Sheds light to a near distance (see Light Sources, pg. 46). Burns for one hour of real time.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

@@ -10,6 +10,15 @@ export default class ItemSD extends Item {
 		].includes(this.type);
 	}
 
+	get usesAmmunition() {
+		return (game.settings.get("shadowdark", "autoConsumeAmmunition")
+			&& this.isOwned
+			&& this.actor.type === "Player"
+			&& this.type === "Weapon"
+			&& this.system.ammoClass !== ""
+		);
+	}
+
 	/* Set the start time and initiative roll of newly created effect */
 	/** @override */
 	async _preCreate(data, options, user) {
@@ -39,6 +48,12 @@ export default class ItemSD extends Item {
 
 		if (!foundry.utils.isEmpty(updateData)) {
 			this.updateSource(updateData);
+		}
+	}
+
+	availableAmmunition() {
+		if (this.usesAmmunition) {
+			return this.actor.ammunitionItems(this.system.ammoClass);
 		}
 	}
 
@@ -186,6 +201,11 @@ export default class ItemSD extends Item {
 				{ timeRemaining }
 			);
 		}
+	}
+
+	async reduceAmmunition(amount) {
+		const newAmount = Math.max(0, this.system.quantity - amount);
+		this.update({"system.quantity": newAmount});
 	}
 
 	setLightRemaining(remainingSeconds) {

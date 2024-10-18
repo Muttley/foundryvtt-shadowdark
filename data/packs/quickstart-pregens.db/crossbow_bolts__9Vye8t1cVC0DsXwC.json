@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Ammunition for crossbows.</p>",
 		"equipped": false,
+		"isAmmunition": true,
 		"isPhysical": true,
 		"light": {
 			"active": false,
@@ -26,6 +27,7 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"predefinedEffects": "",
 		"quantity": 20,
 		"scroll": false,
 		"slots": {

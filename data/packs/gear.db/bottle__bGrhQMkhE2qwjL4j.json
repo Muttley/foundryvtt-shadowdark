@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Glass containers that hold one draught of liquid.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

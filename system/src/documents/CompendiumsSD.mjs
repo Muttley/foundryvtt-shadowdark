@@ -54,6 +54,15 @@ export default class CompendiumsSD {
 		return this._collectionFromArray(docs);
 	}
 
+	static async ammunition(filterSources=true) {
+		const documents =
+			await CompendiumsSD._documents("Item", "Basic", filterSources);
+
+		return this._collectionFromArray(
+			documents.filter(document => document.system.isAmmunition)
+		);
+	}
+
 	static async ancestries(filterSources=true) {
 		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}

@@ -7,6 +7,7 @@
 	"img": "icons/weapons/thrown/bolas-steel.webp",
 	"name": "Bolas",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,

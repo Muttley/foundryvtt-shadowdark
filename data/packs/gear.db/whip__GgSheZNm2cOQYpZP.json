@@ -7,6 +7,7 @@
 	"img": "icons/weapons/misc/whip-red-yellow.webp",
 	"name": "Whip",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,

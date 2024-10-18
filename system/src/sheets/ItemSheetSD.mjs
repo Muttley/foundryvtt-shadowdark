@@ -394,6 +394,10 @@ export default class ItemSheetSD extends ItemSheet {
 				delete context.baseArmor[mySlug];
 			}
 			if (item.type === "Weapon") {
+				context.ammunition = await shadowdark.utils.getSlugifiedItemList(
+					await shadowdark.compendiums.ammunition()
+				);
+
 				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
 					await shadowdark.compendiums.baseWeapons()
 				);
