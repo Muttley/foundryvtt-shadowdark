@@ -104,13 +104,22 @@ SHADOWDARK.apps.monster-importer.instruction2e: Caractéristique
 SHADOWDARK.apps.monster-importer.instruction3: 3. Cliquez sur "Importer Monstre".
 SHADOWDARK.apps.monster-importer.title: Importer un monstre
 SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
 SHADOWDARK.apps.shadowdarkling-importer.import_button2: Partially Import
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. Allez sur Shadowdarklings.net.
 SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. Create Character > Export > copy JSON to clipboard.
 SHADOWDARK.apps.shadowdarkling-importer.instruction3: Paste Character JSON Here
-SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.title: Importer Shadowdarkling
+SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
+SHADOWDARK.apps.solodark.button2: Even Chance
+SHADOWDARK.apps.solodark.button3: Likely or Certain
+SHADOWDARK.apps.solodark.oracle: The Oracle
+SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.question1: What is the question?
+SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
+SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
+SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
@@ -123,15 +132,6 @@ SHADOWDARK.apps.spell-importer.instruction2e: Range
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
 SHADOWDARK.apps.spell-importer.title: Import Spell
-SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
-SHADOWDARK.apps.solodark.button2: Even Chance
-SHADOWDARK.apps.solodark.button3: Likely or Certain
-SHADOWDARK.apps.solodark.oracle: The Oracle
-SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
-SHADOWDARK.apps.solodark.question1: What is the question?
-SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
-SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
-SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.armor.properties.disadvantage_stealth: Désavantage/Discrétion
 SHADOWDARK.armor.properties.disadvantage_swimming: Désavantage/Natation
 SHADOWDARK.armor.properties.no_swimming: Natation Impossible
@@ -174,14 +174,14 @@ SHADOWDARK.chat.spell_roll.title: "Lancement de {name} au rang {tier} avec DD de
 SHADOWDARK.chat.use_ability.failure: "{name} a échoué à utiliser la capacité {ability}"
 SHADOWDARK.chat.use_ability.success: "{name} a utilisé la capacité {ability} avec succès"
 SHADOWDARK.chat.use_ability.title: "Utiliser une capacité"
-SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
-SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
-SHADOWDARK.chat.welcome_message.title: Shadowdark RPG pour Foundry
+SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
+SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
+SHADOWDARK.chat.welcome_message.issues: Report Issues
 SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title: Shadowdark RPG pour Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Lancer
 SHADOWDARK.class-ability.ability.check: Ability Check
