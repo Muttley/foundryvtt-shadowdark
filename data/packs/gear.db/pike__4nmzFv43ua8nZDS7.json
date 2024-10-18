@@ -7,6 +7,7 @@
 	"img": "icons/weapons/polearms/pike-flared-brown.webp",
 	"name": "Pike",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,

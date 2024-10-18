@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Casts light up to a double near distance (see Light, pg. 46). Requires oil. Has a shutter to hide the light.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

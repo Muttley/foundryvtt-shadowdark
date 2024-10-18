@@ -7,6 +7,7 @@
 	"img": "icons/weapons/slings/slingshot-wood.webp",
 	"name": "Sling",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,

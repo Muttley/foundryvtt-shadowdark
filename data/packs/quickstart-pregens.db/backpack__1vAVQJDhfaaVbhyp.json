@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Holds all the gear you can carry. Don't lose it.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

@@ -16,6 +16,7 @@
 		},
 		"description": "<p>Ammunition for shortbows or longbows.</p>",
 		"equipped": false,
+		"isAmmunition": true,
 		"isPhysical": true,
 		"light": {
 			"active": false,

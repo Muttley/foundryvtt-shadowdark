@@ -7,6 +7,7 @@
 	"img": "icons/weapons/axes/axe-broad-purple.webp",
 	"name": "Handaxe",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,
