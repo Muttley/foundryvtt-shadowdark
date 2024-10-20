@@ -28,7 +28,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		if (["Ancestry", "Armor", "Background", "Basic"].includes(this.item.type)) {
+		if (
+			[
+				"Ancestry",
+				"Armor",
+				"Background",
+				"Basic",
+				"Boon",
+			].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
 		else {
