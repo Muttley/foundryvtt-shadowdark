@@ -433,7 +433,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCreateBoon(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
-			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-boon.hbs"),
+			content: await renderTemplate(
+				"systems/shadowdark/templates/dialog/create-new-boon.hbs",
+				{
+					boonTypes: CONFIG.SHADOWDARK.BOON_TYPES,
+					default: "blessing",
+					level: this.actor?.system?.level?.value ?? 0,
+				}
+			),
 			buttons: {
 				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
@@ -444,6 +451,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 							type: "Boon",
 							system: {
 								boonType: html.find("#item-boonType").val(),
+								level: Number(html.find("#item-boonLevel").val()),
 							},
 						};
 						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
@@ -769,20 +777,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _prepareItems(context) {
 		const gems = [];
 
-		const boons = {
-			blessing: {
-				label: game.i18n.localize("SHADOWDARK.boons.blessing"),
+		const boons = {};
+		for (const [key, label] of Object.entries(CONFIG.SHADOWDARK.BOON_TYPES)) {
+			boons[key] = {
+				label,
 				items: [],
-			},
-			oath: {
-				label: game.i18n.localize("SHADOWDARK.boons.oath"),
-				items: [],
-			},
-			secret: {
-				label: game.i18n.localize("SHADOWDARK.boons.secret"),
-				items: [],
-			},
-		};
+			};
+		}
 
 		const inventory = {
 			equipped: [],

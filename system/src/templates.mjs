@@ -58,6 +58,7 @@ export default function() {
 		"systems/shadowdark/templates/items/armor/_partials/armor.hbs",
 		"systems/shadowdark/templates/items/armor/_partials/properties.hbs",
 		"systems/shadowdark/templates/items/armor/details-tab.hbs",
+		"systems/shadowdark/templates/items/basic/details-tab.hbs",
 		"systems/shadowdark/templates/items/tabs/description.hbs",
 		"systems/shadowdark/templates/items/tabs/details.hbs",
 		"systems/shadowdark/templates/items/tabs/effects.hbs",
