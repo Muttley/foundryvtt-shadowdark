@@ -1,0 +1,17 @@
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
+	<div class="grid-3-columns">
+		<div class="item-grid">
+			<h3>
+				{{localize 'SHADOWDARK.sheet.actor.alignment'}}
+			</h3>
+			<select name="system.alignment">
+				<option value="">&mdash;</option>
+				{{selectOptions
+					config.ALIGNMENTS
+					selected=system.alignment
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+</section>

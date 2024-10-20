@@ -36,6 +36,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Boon",
 			"Class",
 			"Class Ability",
+			"Deity",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -332,8 +333,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const showTab = {
 			details: [
-				"Class Ability",
-				"Deity",
 				"Effect",
 				"Gem",
 				"Language",
@@ -356,7 +355,6 @@ export default class ItemSheetSD extends ItemSheet {
 			) ? true : false,
 			light: item.system.light?.isSource ?? false,
 			description: true,
-			titles: item.type === "Class",
 			spellsKnown,
 		};
 
