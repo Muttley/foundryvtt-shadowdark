@@ -1,5 +1,8 @@
 <section class="tab tab-spellsknown" data-group="primary" data-tab="tab-spellsknown">
-	<div class="SD-banner">Spells Known by Spell Tier</div>
+	<div class="SD-banner">
+		{{localize "SHADOWDARK.class.spells_Known.label"}}
+	</div>
+
 	<table class="SD-table" style="text-align:center">
 		<tr>
 			<th style="text-align:center">Level</th>
@@ -11,19 +14,19 @@
 		</tr>
 
 		{{#each item.system.spellcasting.spellsknown}}
-		<tr>
-		<td>{{@key}}</td>
-			{{#each this}}
-				<td>
-					<input
-						type="number"
-						value="{{this}}"
-						name="system.spellcasting.spellsknown.{{@../key}}.{{@key}}"
-						placeholder="-"
-					>
-				</td>
-			{{/each}}
-		</tr>
+			<tr>
+				<td>{{@key}}</td>
+				{{#each this}}
+					<td>
+						<input
+							name="system.spellcasting.spellsknown.{{@../key}}.{{@key}}"
+							placeholder="-"
+							type="number"
+							value="{{this}}"
+						>
+					</td>
+				{{/each}}
+			</tr>
 		{{/each}}
 	</table>
 </section>

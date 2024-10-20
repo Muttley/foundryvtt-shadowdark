@@ -1,16 +1,8 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
 
-		{{#ifEq item.type "Boon"}}
-			{{> items/_partials/boon }}
-		{{/ifEq}}
-
 		{{#ifEq item.type "Class Ability"}}
 			{{> items/_partials/class-ability }}
-		{{/ifEq}}
-
-		{{#ifEq item.type "Class"}}
-			{{> items/_partials/class }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Deity"}}

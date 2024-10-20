@@ -28,14 +28,14 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		if (
-			[
-				"Ancestry",
-				"Armor",
-				"Background",
-				"Basic",
-				"Boon",
-			].includes(this.item.type)) {
+		if ([
+			"Ancestry",
+			"Armor",
+			"Background",
+			"Basic",
+			"Boon",
+			"Class",
+		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
 		else {
@@ -324,21 +324,14 @@ export default class ItemSheetSD extends ItemSheet {
 			? true
 			: false;
 
+		let spellsKnown = false;
 		if ((item.type === "Class") && (item.system.spellcasting.class !== "__not_spellcaster__")) {
-			this.spellsKnown = true;
-		}
-		else {
-			this.spellsKnown = false;
+			spellsKnown = true;
 		}
 
 		const showTab = {
 			details: [
-				"Ancestry",
-				"Armor",
-				"Basic",
-				"Boon",
 				"Class Ability",
-				"Class",
 				"Deity",
 				"Effect",
 				"Gem",
@@ -363,7 +356,7 @@ export default class ItemSheetSD extends ItemSheet {
 			light: item.system.light?.isSource ?? false,
 			description: true,
 			titles: item.type === "Class",
-			spellsknown: this.spellsKnown,
+			spellsKnown,
 		};
 
 		foundry.utils.mergeObject(context, {

@@ -1,0 +1,53 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize "SHADOWDARK.form.section_header.equipment.label"}}
+</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.weapons.label")
+	header-class="light"
+}}
+	{{#if (checked system.allWeapons)}}
+		{{localize "SHADOWDARK.class.weapons.all.label"}}
+	{{else}}
+		{{> items/_partials/choice-selector
+			config=weaponsConfig
+			editable=editable
+		}}
+	{{/if}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.armor.label")
+	header-class="light"
+}}
+	{{#if (checked system.allArmor)}}
+		{{localize "SHADOWDARK.class.armor.all.label"}}
+	{{else}}
+		{{> items/_partials/choice-selector
+			config=armorConfig
+			editable=editable
+		}}
+	{{/if}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>{{localize "SHADOWDARK.class.weapons.all.label"}}</h3>
+	<input type="checkbox" name="system.allWeapons" {{checked system.allWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.weapons.all_melee.label"}}</h3>
+	<input type="checkbox" name="system.allMeleeWeapons" {{checked system.allMeleeWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.weapons.all_ranged.label"}}</h3>
+	<input type="checkbox" name="system.allRangedWeapons" {{checked system.allRangedWeapons}}>
+
+	<h3>{{localize "SHADOWDARK.class.armor.all.label"}}</h3>
+	<input type="checkbox" name="system.allArmor" {{checked system.allArmor}}>
+{{/ui/sd-box}}
+
+<br>

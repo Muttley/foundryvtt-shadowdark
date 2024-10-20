@@ -9,12 +9,6 @@
 				</a>
 			{{/if}}
 
-			{{#if showTab.titles}}
-				<a class="navigation-tab" data-tab="tab-titles">
-					{{localize "SHADOWDARK.sheet.item.tab.titles"}}
-				</a>
-			{{/if}}
-
 			{{#if showTab.effects}}
 				<a class="navigation-tab" data-tab="tab-effects">
 					{{localize "SHADOWDARK.sheet.item.tab.effects"}}
@@ -46,7 +40,6 @@
 
 	<section class="SD-content-body flex1">
 		{{> items/tabs/details }}
-		{{> items/tabs/titles }}
 		{{> items/_partials/effects-tab }}
 		{{> items/tabs/light }}
 		{{> items/tabs/spellsknown }}
