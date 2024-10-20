@@ -1,0 +1,52 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize 'SHADOWDARK.form.section_header.languages.label'}}
+</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.ancestry.fixed")
+	header-class="light"
+}}
+	{{> items/_partials/choice-selector
+		config=fixedLanguagesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.ancestry.choice")
+	header-class="light"
+}}
+	{{> items/_partials/choice-selector
+		config=languageChoicesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=""
+	header-class="light"
+	content-class="item-grid right"
+}}
+	<h3>{{localize "SHADOWDARK.ancestry.choice_count"}}</h3>
+	{{numberInput
+		item.system.languages.select
+		name="system.languages.select"
+		placeholder="0"
+	}}
+
+	<h3>{{localize "SHADOWDARK.language_choices.common.label"}}</h3>
+	{{numberInput
+		item.system.languages.common
+		name="system.languages.common"
+		placeholder="0"
+	}}
+
+	<h3>{{localize "SHADOWDARK.language_choices.rare.label"}}</h3>
+	{{numberInput
+		item.system.languages.rare
+		name="system.languages.rare"
+		placeholder="0"
+	}}
+{{/ui/sd-box}}

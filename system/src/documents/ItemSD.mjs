@@ -10,6 +10,10 @@ export default class ItemSD extends Item {
 		].includes(this.type);
 	}
 
+	get typeSlug() {
+		return this.type.slugify();
+	}
+
 	get usesAmmunition() {
 		return (game.settings.get("shadowdark", "autoConsumeAmmunition")
 			&& this.isOwned

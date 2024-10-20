@@ -1,0 +1,34 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize "SHADOWDARK.apps.character-generator.title"}}
+</div>
+
+<div class=" grid-colspan-3 grid-2-columns">
+	{{#> ui/sd-box
+		header-label=(localize "SHADOWDARK.ancestry.nametable.label")
+		header-class="light"
+	}}
+		<select name="system.nameTable">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				ancestryNameTables
+				selected=system.nameTable
+				localize=false
+			}}
+		</select>
+	{{/ui/sd-box}}
+
+	{{#> ui/sd-box
+		header-label=""
+		header-class="light"
+		content-class="item-grid right"
+	}}
+		<h3>
+			{{localize "SHADOWDARK.ancestry.nametable.random_weight"}}
+		</h3>
+		{{numberInput
+			item.system.randomWeight
+			name="system.randomWeight"
+			placeholder="1"
+		}}
+	{{/ui/sd-box}}
+</div>

@@ -1,0 +1,34 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize 'SHADOWDARK.form.section_header.talents.label'}}
+</div>
+
+
+<!-- TODO properly implement fixed talents here.-->
+<div></div>
+
+
+<!-- choice talents-->
+{{#> ui/sd-box
+	header-label="Choice"
+	header-class="light"
+}}
+	{{> items/_partials/choice-selector
+		config=talentsConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+<!-- talents options-->
+{{#> ui/sd-box
+	header-label=""
+	header-class="light"
+	content-class="item-grid right"
+}}
+	<h3>{{localize "SHADOWDARK.ancestry.choice_count"}}</h3>
+	{{numberInput
+		item.system.talentChoiceCount
+		name="system.talentChoiceCount"
+		placeholder="0"
+	}}
+{{/ui/sd-box}}
