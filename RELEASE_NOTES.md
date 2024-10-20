@@ -7,6 +7,7 @@
 ## Bugfixes
 * [#896] Add additional padding to blockquote style so text doesn't blend into decorations
 * [#906] There's always an extra space between special attack name and effect
+* [#918] Actor and Item type names missing from i18n data
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
