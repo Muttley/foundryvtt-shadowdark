@@ -212,6 +212,7 @@ SHADOWDARK.class.ranger: Ranger
 SHADOWDARK.class.spellcasting_ability.label: Spellcasting Ability
 SHADOWDARK.class.spellcasting_class.label: Spell Class
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
+SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.talent_choices.count.label: Choice Count
 SHADOWDARK.class.talent_choices.label: Talent Choices
 SHADOWDARK.class.talent_choices.prompt: Select Talent...
@@ -787,7 +788,7 @@ TYPES.Item.Armor: Armor
 TYPES.Item.Background: Background
 TYPES.Item.Basic: Basic
 TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class
+TYPES.Item.Class Ability: Class Ability
 TYPES.Item.Class: Class
 TYPES.Item.Deity: Deity
 TYPES.Item.Effect: Effect
