@@ -157,6 +157,7 @@
 			"NPC Special Attack",
 			"NPC Spell",
 			"NPC Feature",
+			"Patron",
 			"Potion",
 			"Property",
 			"Scroll",
@@ -262,7 +263,8 @@
 			"templates": [
 				"common"
 			],
-			"boonType": "oath"
+			"boonType": "oath",
+			"level": 0
 		},
 		"Class": {
 			"templates": [
@@ -394,6 +396,12 @@
 			"range": "",
 			"dc": 10,
 			"lost": false
+		},
+		"Patron": {
+			"templates": [
+				"common"
+			],
+			"boonTable": ""
 		},
 		"Potion": {
 			"templates": ["common", "magic", "physical"],

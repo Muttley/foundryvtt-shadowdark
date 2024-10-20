@@ -203,6 +203,18 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "NPC Features", filterSources);
 	}
 
+	static async patronBoonTables(filterSources=true) {
+		const documents = await CompendiumsSD._documents(
+			"RollTable", null, filterSources
+		);
+
+		return this._collectionFromArray(
+			documents.filter(
+				document => document.name.match(/patron\s+boons/i)
+			)
+		);
+	}
+
 	static async potions(filterSources=true) {
 		return CompendiumsSD._documents("Item", "Potion", filterSources);
 	}
