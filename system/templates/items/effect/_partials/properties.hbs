@@ -1,0 +1,21 @@
+{{#> ui/sd-box
+	header-label="Item Properties"
+	header-class="light"
+}}
+	<div class="item-grid">
+		<h3>{{localize "SHADOWDARK.item.effect.show-token-icon"}}</h3>
+		<input
+			type="checkbox"
+			name="system.tokenIcon.show"
+			{{checked system.tokenIcon.show}}
+		/>
+
+		<h3>{{localize "SHADOWDARK.item.effect.show-on-panel"}}</h3>
+		<input
+			type="checkbox"
+			name="system.effectPanel.show"
+			{{checked system.effectPanel.show}}
+		/>
+	</div>
+
+{{/ui/sd-box}}
