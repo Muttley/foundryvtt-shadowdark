@@ -1,0 +1,29 @@
+<div class="SD-box">
+	<div class="header light">
+		<label>
+			{{localize 'SHADOWDARK.item.properties'}}
+		</label>
+		<span>
+			<a
+				class="item-selector"
+				data-item-type="armor"
+				data-select-type="itemProperty"
+				for="system.properties"
+			>
+				<i class="fas fa-pen-to-square"></i>
+			</a>
+		</span>
+	</div>
+	<div class="content">
+		<ul class="tags">
+			{{#each propertyItems}}
+				<li
+					class="tag tag_primary"
+					data-tooltip="{{this.system.description}}"
+				>
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

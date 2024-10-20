@@ -1,10 +1,6 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
 
-		{{#ifEq item.type "Armor"}}
-			{{> items/_partials/armor }}
-		{{/ifEq}}
-
 		{{#ifEq item.type "Boon"}}
 			{{> items/_partials/boon }}
 		{{/ifEq}}
@@ -77,7 +73,7 @@
 		{{/if}}
 
 		{{#if showItemProperties}}
-			{{> items/_partials/properties }}
+			{{> items/_partials/item-properties }}
 		{{/if}}
 
 	</div>
