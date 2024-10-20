@@ -48,9 +48,10 @@ SHADOWDARK.DAMAGE_DICE = [
 ];
 
 SHADOWDARK.BOON_TYPES = {
-	oath: "SHADOWDARK.boons.oath",
-	secret: "SHADOWDARK.boons.secret",
 	blessing: "SHADOWDARK.boons.blessing",
+	oath: "SHADOWDARK.boons.oath",
+	patron: "SHADOWDARK.boons.patron",
+	secret: "SHADOWDARK.boons.secret",
 };
 
 SHADOWDARK.DEFAULTS = {
@@ -73,9 +74,10 @@ SHADOWDARK.DEFAULTS = {
 		"Gem": "icons/commodities/gems/gem-faceted-navette-red.webp",
 		"Language": "icons/tools/scribal/ink-quill-pink.webp",
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		"NPC Special Attack": "icons/magic/death/weapon-sword-skull-purple.webp",
 		"NPC Spell": "icons/magic/symbols/runes-star-magenta.webp",
-		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
+		"Patron": "icons/magic/unholy/silhouette-light-fire-blue.webp",
 		"Potion": "icons/consumables/potions/bottle-corked-red.webp",
 		"Property": "icons/sundries/documents/document-torn-diagram-tan.webp",
 		"Scroll": "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
