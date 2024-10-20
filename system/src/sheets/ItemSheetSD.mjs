@@ -28,7 +28,12 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		return "systems/shadowdark/templates/items/item.hbs";
+		if (["Ancestry", "Armor", "Background"].includes(this.item.type)) {
+			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
+		}
+		else {
+			return "systems/shadowdark/templates/items/item.hbs";
+		}
 	}
 
 	/** @inheritdoc */
@@ -334,6 +339,7 @@ export default class ItemSheetSD extends ItemSheet {
 				"NPC Attack",
 				"NPC Special Attack",
 				"NPC Spell",
+				"Patron",
 				"Potion",
 				"Property",
 				"Scroll",
@@ -375,6 +381,18 @@ export default class ItemSheetSD extends ItemSheet {
 
 		if (["Class"].includes(item.type)) {
 			await this.getClassSelectorConfigs(context);
+		}
+
+		if (item.type === "Patron") {
+			const patronBoonTables =
+				await shadowdark.compendiums.patronBoonTables();
+
+			context.patronBoonTables = {};
+			for (const patronBoonTable of patronBoonTables) {
+
+				context.patronBoonTables[patronBoonTable.uuid] =
+					patronBoonTable.name.replace(/^Patron\s+Boons:\s/, "");
+			}
 		}
 
 		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
