@@ -9,6 +9,7 @@
 	"img": "icons/weapons/swords/sword-guard-worn-purple.webp",
 	"name": "Shoftsword of the Thief",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "shortsword",
 		"bonuses": {

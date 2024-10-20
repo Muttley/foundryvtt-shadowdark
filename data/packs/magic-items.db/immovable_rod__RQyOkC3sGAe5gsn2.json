@@ -16,6 +16,7 @@
 		},
 		"description": "<p><em>A short, bejeweled iron rod with a button on one end.</em></p><p></p><p><strong>Benefit</strong>. When you click the button, the rod becomes fixed in space. Clicking the button again ends the effect.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

@@ -10028,6 +10028,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "greataxe",
 				"bonuses": {
@@ -10119,6 +10120,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10242,6 +10244,7 @@
 				},
 				"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.q600IZtPTAgkz6vB]{Hold Portal}</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10308,6 +10311,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10374,6 +10378,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10440,6 +10445,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10565,6 +10571,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10824,6 +10831,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "",
 				"bonuses": {
@@ -11031,6 +11039,7 @@
 				},
 				"description": "<p><em>A brooch made from a horned scarab beetle dipped in gold.</em></p><p></p><p><strong>Benefit</strong>. If you die, make a DC 18 Constitution check. If you succeed, you are unconscious instead of dead.</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11098,6 +11107,7 @@
 				},
 				"description": "<p><span style=\"font-family: Signika, sans-serif\">An ivory egg shot with grey veins inside.</span></p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11221,6 +11231,7 @@
 				},
 				"description": "<p>Silver locket with a painting of a smiling, red-haired woman</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11290,6 +11301,7 @@
 				},
 				"description": "<p><span style=\"font-family: Signika, sans-serif\">Contained in a bronze tube adorned with jade dragons.</span></p><p></p><p>@UUID[Compendium.shadowdark.spells.ItN82uLU3PhJFLNm]{Burning Hands}</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11350,6 +11362,7 @@
 			},
 			"sort": 200000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": 0,
 				"baseWeapon": "",
 				"bonuses": {
@@ -11508,6 +11521,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11655,6 +11669,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "",
 				"bonuses": {
@@ -11745,6 +11760,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11869,6 +11885,7 @@
 			},
 			"sort": 200000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": 0,
 				"baseWeapon": "",
 				"bonuses": {
@@ -11958,6 +11975,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -12024,6 +12042,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,

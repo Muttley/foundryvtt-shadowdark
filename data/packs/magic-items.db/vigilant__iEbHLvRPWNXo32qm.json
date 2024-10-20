@@ -9,6 +9,7 @@
 	"img": "icons/weapons/polearms/pike-flared-brown.webp",
 	"name": "Vigilant",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "spear",
 		"bonuses": {

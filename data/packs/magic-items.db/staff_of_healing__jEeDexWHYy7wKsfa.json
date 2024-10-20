@@ -9,6 +9,7 @@
 	"img": "icons/weapons/staves/staff-engraved-red.webp",
 	"name": "Staff of Healing",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "staff",
 		"bonuses": {

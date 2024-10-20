@@ -10,6 +10,7 @@
 	"img": "icons/weapons/axes/axe-battle-eyes-red.webp",
 	"name": "Bloodlust",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "greataxe",
 		"bonuses": {

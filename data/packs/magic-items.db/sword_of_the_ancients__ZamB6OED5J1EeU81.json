@@ -9,6 +9,7 @@
 	"img": "icons/weapons/swords/sword-guard-worn-brown.webp",
 	"name": "Sword of the Ancients",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "2",
 		"baseWeapon": "longsword",
 		"bonuses": {
