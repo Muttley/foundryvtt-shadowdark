@@ -5,10 +5,14 @@
 
 		<h3>{{localize "SHADOWDARK.boon.type.label"}}:</h3>
 		<select id="item-boonType">
-			<option value="blessing" selected="selected">{{localize "SHADOWDARK.boons.blessing"}}</option>
-			<option value="oath">{{localize "SHADOWDARK.boons.oath"}}</option>
-			<option value="secret">{{localize "SHADOWDARK.boons.secret"}}</option>
+			{{selectOptions
+				boonTypes
+				selected=default
+				localize=false
+			}}
 		</select>
 
+		<h3>{{localize 'SHADOWDARK.item.level'}}</h3>
+		<input id="item-boonLevel" type="number" value={{level}} placeholder="0">
 	</div>
 </form>

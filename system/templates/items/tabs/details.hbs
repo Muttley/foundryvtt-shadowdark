@@ -1,86 +1,86 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
 		{{#ifEq item.type "Ancestry"}}
-			{{> items/partials/ancestry }}
+			{{> items/_partials/ancestry }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Armor"}}
-			{{> items/partials/armor }}
+			{{> items/_partials/armor }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Boon"}}
-			{{> items/partials/boon }}
+			{{> items/_partials/boon }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Class Ability"}}
-			{{> items/partials/class-ability }}
+			{{> items/_partials/class-ability }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Class"}}
-			{{> items/partials/class }}
+			{{> items/_partials/class }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Deity"}}
-			{{> items/partials/deity }}
+			{{> items/_partials/deity }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Effect"}}
-			{{> items/partials/effect }}
+			{{> items/_partials/effect }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Language"}}
-			{{> items/partials/language }}
+			{{> items/_partials/language }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "NPC Attack"}}
-			{{> items/partials/npc-attack }}
+			{{> items/_partials/npc-attack }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "NPC Special Attack"}}
-			{{> items/partials/npc-special-attack }}
+			{{> items/_partials/npc-special-attack }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "NPC Spell"}}
-			{{> items/partials/npc-spell }}
+			{{> items/_partials/npc-spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Property"}}
-			{{> items/partials/property }}
+			{{> items/_partials/property }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Scroll"}}
-			{{> items/partials/spell }}
+			{{> items/_partials/spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Spell"}}
-			{{> items/partials/spell }}
+			{{> items/_partials/spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Talent"}}
-			{{> items/partials/talent }}
+			{{> items/_partials/talent }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Wand"}}
-			{{> items/partials/spell }}
+			{{> items/_partials/spell }}
 		{{/ifEq}}
 
 		{{#ifEq item.type "Weapon"}}
-			{{> items/partials/weapon }}
+			{{> items/_partials/weapon }}
 		{{/ifEq}}
 
 		{{#if hasCost}}
-			{{> items/partials/cost }}
+			{{> items/_partials/cost }}
 		{{/if}}
 
 		{{#if usesSlots}}
 			{{!-- Gems have non-configurable slot settings --}}
 			{{#ifNeq item.type "Gem"}}
-				{{> items/partials/slots }}
+				{{> items/_partials/slots }}
 			{{/ifNeq}}
 		{{/if}}
 
 		{{#if showItemProperties}}
-			{{> items/partials/properties }}
+			{{> items/_partials/properties }}
 		{{/if}}
 
 	</div>
