@@ -35,6 +35,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Basic",
 			"Boon",
 			"Class",
+			"Class Ability",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -325,7 +326,7 @@ export default class ItemSheetSD extends ItemSheet {
 			: false;
 
 		let spellsKnown = false;
-		if ((item.type === "Class") && (item.system.spellcasting.class !== "__not_spellcaster__")) {
+		if (item.type === "Class" && item.system.spellcasting.class !== "__not_spellcaster__") {
 			spellsKnown = true;
 		}
 

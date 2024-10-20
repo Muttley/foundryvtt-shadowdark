@@ -21,12 +21,6 @@
 				</a>
 			{{/if}}
 
-			{{#if showTab.spellsknown}}
-				<a class="navigation-tab" data-tab="tab-spellsknown">
-					{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
-				</a>
-			{{/if}}
-
 			{{#if showTab.description}}
 				<a class="navigation-tab" data-tab="tab-description">
 					{{localize "SHADOWDARK.sheet.item.tab.description"}}
@@ -42,7 +36,6 @@
 		{{> items/tabs/details }}
 		{{> items/_partials/effects-tab }}
 		{{> items/tabs/light }}
-		{{> items/tabs/spellsknown }}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}
 	</section>

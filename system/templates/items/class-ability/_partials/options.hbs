@@ -1,0 +1,47 @@
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+}}
+	<div class="item-grid">
+		<h3>
+			{{localize "SHADOWDARK.class-ability.lose_on_failure.label"}}
+		</h3>
+		<input
+			name="system.loseOnFailure"
+			type="checkbox"
+			{{checked item.system.loseOnFailure}}
+		/>
+		<h3>
+			{{localize "SHADOWDARK.class-ability.limited-uses.label"}}
+		</h3>
+		<input
+			name="system.limitedUses"
+			type="checkbox"
+			{{checked item.system.limitedUses}}
+		/>
+	</div>
+	{{#if system.limitedUses}}
+		<div class="grid-2-columns">
+			<div>
+				<h3>
+					{{localize 'SHADOWDARK.class-ability.available.label'}}
+				</h3>
+				{{numberInput
+					item.system.uses.available
+					name="system.uses.available"
+					placeholder="0"
+				}}
+			</div>
+			<div>
+				<h3>
+					{{localize 'SHADOWDARK.class-ability.maximum.label'}}
+				</h3>
+				{{numberInput
+					item.system.uses.max
+					name="system.uses.max"
+					placeholder="0"
+				}}
+			</div>
+		</div>
+	{{/if}}
+{{/ui/sd-box}}
