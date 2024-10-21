@@ -140,6 +140,7 @@ SHADOWDARK.armor.properties.shield: Щит
 SHADOWDARK.boon.type.label: Boon Type
 SHADOWDARK.boons.blessing: Благословение
 SHADOWDARK.boons.oath: Клятва
+SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Секрет
 SHADOWDARK.chat_card.button.attack: Атака Ролла
 SHADOWDARK.chat_card.button.cast_spell: Сотворить заклинание
@@ -211,6 +212,7 @@ SHADOWDARK.class.ranger: Рейнджер
 SHADOWDARK.class.spellcasting_ability.label: Spellcasting Ability
 SHADOWDARK.class.spellcasting_class.label: Класс заклинания
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
+SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.talent_choices.count.label: Choice Count
 SHADOWDARK.class.talent_choices.label: Talent Choices
 SHADOWDARK.class.talent_choices.prompt: Select Talent...
@@ -303,7 +305,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Выберите свойств�
 SHADOWDARK.dialog.spell_roll.title: Использовать заклинание с
 SHADOWDARK.dialog.submit: Продолжить
 SHADOWDARK.dialog.tooltip.talent_advantage: Талант дает вам преимущество для этого броска
-SHADOWDARK.dialog.type_here: Type Here
+SHADOWDARK.dialog.type_here: Type Here...
 SHADOWDARK.dragdrop: Перетащите сюда
 SHADOWDARK.effect_duration.hours: Часы
 SHADOWDARK.effect_duration.minutes: Минуты
@@ -385,6 +387,7 @@ SHADOWDARK.item.armor_ac_modifier: Модификатор
 SHADOWDARK.item.armor_ac: КБ
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
 SHADOWDARK.item.armor_class: Класс Брони
+SHADOWDARK.item.armor.armor_properties.label: Armor Properties
 SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
 SHADOWDARK.item.armor.base_armor.leather_armor: Кожаная броня
 SHADOWDARK.item.armor.base_armor.plate_mail: Латные доспехи
@@ -401,7 +404,7 @@ SHADOWDARK.item.effect.lightSource.lightSpellNear: Свет
 SHADOWDARK.item.effect.lightSource.lightSuppression: Light Suppression
 SHADOWDARK.item.effect.lightSource.purpleGlow: Фиолетовое свечение
 SHADOWDARK.item.effect.lightSource.torch: Факел
-SHADOWDARK.item.effect.pre-defined.title: Предустановленные эффекты
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined Effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Улучшение очков способности
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Ability Score Improvement (Cha)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Ability Score Improvement (Con)
@@ -478,7 +481,7 @@ SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_type: Тип
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.potion.label: Зелье
-SHADOWDARK.item.properties: Свойства
+SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Свиток
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Источник
@@ -519,6 +522,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: Посох
 SHADOWDARK.item.weapon.base_weapon.title: Базовое оружие
 SHADOWDARK.item.weapon.base_weapon.wand: Палочка
 SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer
+SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
 SHADOWDARK.language_choices.common.label: Additional Common
 SHADOWDARK.language_choices.rare.label: Additional Rare
 SHADOWDARK.language.celestial: Божественный
@@ -753,6 +757,7 @@ SHADOWDARK.talent.backstab: Backstab
 SHADOWDARK.talent.class.ancestry: Ancestry
 SHADOWDARK.talent.class.class: Class
 SHADOWDARK.talent.class.level: Level
+SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Ability Improvement
 SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
@@ -777,3 +782,29 @@ SHADOWDARK.weapon.properties.two_handed: Two-Handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+TYPES.Actor.Light: Light
+TYPES.Actor.NPC: NPC
+TYPES.Actor.Player: Player
+TYPES.Item.Ancestry: Ancestry
+TYPES.Item.Armor: Armor
+TYPES.Item.Background: Background
+TYPES.Item.Basic: Basic
+TYPES.Item.Boon: Boon
+TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Class: Class
+TYPES.Item.Deity: Deity
+TYPES.Item.Effect: Effect
+TYPES.Item.Gem: Gem
+TYPES.Item.Language: Language
+TYPES.Item.NPC Attack: NPC Attack
+TYPES.Item.NPC Feature: NPC Feature
+TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.NPC Spell: NPC Spell
+TYPES.Item.Patron: Patron
+TYPES.Item.Potion: Potion
+TYPES.Item.Property: Property
+TYPES.Item.Scroll: Scroll
+TYPES.Item.Spell: Spell
+TYPES.Item.Talent: Talent
+TYPES.Item.Wand: Wand
+TYPES.Item.Weapon: Weapon
