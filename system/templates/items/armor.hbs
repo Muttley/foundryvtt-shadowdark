@@ -6,6 +6,12 @@
 			{{localize "SHADOWDARK.sheet.item.tab.details"}}
 		</a>
 
+		{{#if system.magicItem}}
+			<a class="navigation-tab" data-tab="tab-effects">
+				{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+			</a>
+		{{/if}}
+
 		<a class="navigation-tab" data-tab="tab-description">
 			{{localize "SHADOWDARK.sheet.item.tab.description"}}
 		</a>
@@ -17,6 +23,9 @@
 
 	<section class="SD-content-body flex1">
 		{{> items/armor/details-tab }}
+		{{#if system.magicItem}}
+			{{> items/_partials/effects-tab }}
+		{{/if}}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}
 	</section>

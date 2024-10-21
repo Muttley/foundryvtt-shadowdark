@@ -50,6 +50,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Scroll",
 			"Spell",
 			"Talent",
+			"Wand",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}

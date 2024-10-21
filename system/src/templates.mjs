@@ -81,6 +81,7 @@ export default function() {
 		"systems/shadowdark/templates/items/tabs/details.hbs",
 		"systems/shadowdark/templates/items/tabs/light.hbs",
 		"systems/shadowdark/templates/items/talent/details-tab.hbs",
+		"systems/shadowdark/templates/items/wand/details-tab.hbs",
 		"systems/shadowdark/templates/partials/details/armor.hbs",
 		"systems/shadowdark/templates/partials/details/default.hbs",
 		"systems/shadowdark/templates/partials/details/spell.hbs",
