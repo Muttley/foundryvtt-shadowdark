@@ -39,6 +39,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Deity",
 			"Effect",
 			"Gem",
+			"Language",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -335,7 +336,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const showTab = {
 			details: [
-				"Language",
 				"NPC Attack",
 				"NPC Special Attack",
 				"NPC Spell",
@@ -350,7 +350,7 @@ export default class ItemSheetSD extends ItemSheet {
 			].includes(item.type),
 
 			effects: (
-				["Boon", "Talent"].includes(item.type)
+				["Talent"].includes(item.type)
 					|| item.system.magicItem
 			) ? true : false,
 			light: item.system.light?.isSource ?? false,
@@ -382,7 +382,7 @@ export default class ItemSheetSD extends ItemSheet {
 			await this.getClassSelectorConfigs(context);
 
 			// initialize spellsknown table if not already set on a spellcaster class item
-			if (!item.system.spellcasting.spellsknown) {
+			if (spellsKnown && !item.system.spellcasting.spellsknown) {
 				item.system.spellcasting.spellsknown = {};
 				for (let i = 1; i <= 10; i++) {
 					item.system.spellcasting.spellsknown[i] = {};
