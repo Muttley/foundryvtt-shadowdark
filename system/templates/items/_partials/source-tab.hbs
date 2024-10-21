@@ -1,27 +1,24 @@
 <section class="tab tab-source" data-group="primary" data-tab="tab-source">
-	<div class="grid-3-columns">
-		<h3>{{localize "SHADOWDARK.item.source_tag"}}</h3>
-		<div class="grid-colspan-2">
+	<h3>
+		{{localize "SHADOWDARK.item.source_tag"}}
+	</h3>
 
-			{{#if sourceLoaded}}
-				<select name="system.source.title" data-dtype="String">
-					{{#select item.system.source.title}}
-						<option value="">&nbsp;</option>
-						{{#each sources}}
-							<option value="{{this.uuid}}">
-								{{this.name}}
-							</option>
-						{{/each}}
-					{{/select}}
-				</select>
-			{{else}}
-				<p style="color: red;">
-					<em>
-						{{localize 'SHADOWDARK.error.source.source_missing'}}
-					</em>
-				</p>
-			{{/if}}
-
-		</div>
-	</div>
+	{{#if sourceLoaded}}
+		<select name="system.source.title" data-dtype="String">
+			{{#select item.system.source.title}}
+				<option value="">&nbsp;</option>
+				{{#each sources}}
+					<option value="{{this.uuid}}">
+						{{this.name}}
+					</option>
+				{{/each}}
+			{{/select}}
+		</select>
+	{{else}}
+		<p style="color: red;">
+			<em>
+				{{localize 'SHADOWDARK.error.source.source_missing'}}
+			</em>
+		</p>
+	{{/if}}
 </section>

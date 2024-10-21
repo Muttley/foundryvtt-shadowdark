@@ -374,6 +374,9 @@
 				"close"
 			]
 		},
+		"NPC Feature": {
+			"templates": ["common"]
+		},
 		"NPC Special Attack": {
 			"templates": ["common"],
 			"attack": {
@@ -383,9 +386,6 @@
 				"attackBonus":0
 			},
 			"ranges": []
-		},
-		"NPC Feature": {
-			"templates": ["common"]
 		},
 		"NPC Spell": {
 			"templates": ["common"],

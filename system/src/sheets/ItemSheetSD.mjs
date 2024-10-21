@@ -41,6 +41,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Gem",
 			"Language",
 			"NPC Attack",
+			"NPC Feature",
 			"NPC Special Attack",
 			"NPC Spell",
 		].includes(this.item.type)) {
