@@ -6,16 +6,6 @@
 			{{localize "SHADOWDARK.sheet.item.tab.details"}}
 		</a>
 
-		<a class="navigation-tab" data-tab="tab-titles">
-			{{localize "SHADOWDARK.sheet.item.tab.titles"}}
-		</a>
-
-		{{#ifCond system.spellcasting.class "!==" "__not_spellcaster__"}}
-			<a class="navigation-tab" data-tab="tab-spells-known">
-				{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
-			</a>
-		{{/ifCond}}
-
 		<a class="navigation-tab" data-tab="tab-description">
 			{{localize "SHADOWDARK.sheet.item.tab.description"}}
 		</a>
@@ -26,9 +16,7 @@
 	</nav>
 
 	<section class="SD-content-body flex1">
-		{{> items/class/details-tab }}
-		{{> items/class/titles-tab }}
-		{{> items/class/spells-known-tab }}
+		{{> items/gem/details-tab }}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}
 	</section>

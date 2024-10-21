@@ -72,6 +72,7 @@ export default function() {
 		"systems/shadowdark/templates/items/effect/_partials/duration.hbs",
 		"systems/shadowdark/templates/items/effect/_partials/properties.hbs",
 		"systems/shadowdark/templates/items/effect/details-tab.hbs",
+		"systems/shadowdark/templates/items/gem/details-tab.hbs",
 		"systems/shadowdark/templates/items/tabs/details.hbs",
 		"systems/shadowdark/templates/items/tabs/light.hbs",
 		"systems/shadowdark/templates/partials/details/armor.hbs",

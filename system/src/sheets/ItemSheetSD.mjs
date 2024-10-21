@@ -38,6 +38,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Class Ability",
 			"Deity",
 			"Effect",
+			"Gem",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -334,7 +335,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const showTab = {
 			details: [
-				"Gem",
 				"Language",
 				"NPC Attack",
 				"NPC Special Attack",
@@ -378,8 +378,19 @@ export default class ItemSheetSD extends ItemSheet {
 			await this.getAncestrySelectorConfigs(context);
 		}
 
-		if (["Class"].includes(item.type)) {
+		if (item.type === "Class") {
 			await this.getClassSelectorConfigs(context);
+
+			// initialize spellsknown table if not already set on a spellcaster class item
+			if (!item.system.spellcasting.spellsknown) {
+				item.system.spellcasting.spellsknown = {};
+				for (let i = 1; i <= 10; i++) {
+					item.system.spellcasting.spellsknown[i] = {};
+					for (let j = 1; j <= 5; j++) {
+						item.system.spellcasting.spellsknown[i][j] = null;
+					}
+				}
+			}
 		}
 
 		if (item.type === "Patron") {
@@ -448,16 +459,6 @@ export default class ItemSheetSD extends ItemSheet {
 			context.showItemProperties=true;
 		}
 
-		// initialize spellsknown table if not already set on a spellcaster class item
-		if (this.spellsKnown && !item.system.spellcasting.spellsknown) {
-			item.system.spellcasting.spellsknown = {};
-			for (let i = 1; i <= 10; i++) {
-				item.system.spellcasting.spellsknown[i] = {};
-				for (let j = 1; j <= 5; j++) {
-					item.system.spellcasting.spellsknown[i][j] = null;
-				}
-			}
-		}
 
 		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
 			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();

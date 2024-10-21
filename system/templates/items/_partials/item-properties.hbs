@@ -5,64 +5,57 @@
 	<div class="item-grid">
 		{{#if item.system.canBeEquipped}}
 			{{#if item.isOwned}}
-				<h3>{{localize 'SHADOWDARK.item.equipped'}}</h3>
+				<h3>
+					{{localize 'SHADOWDARK.item.equipped'}}
+				</h3>
 				<input
-					type="checkbox"
 					name="system.equipped"
+					type="checkbox"
 					{{checked system.equipped}}
 				>
 			{{/if}}
 		{{/if}}
 
 		{{#ifEq item.type "Basic"}}
-			<h3>{{localize 'SHADOWDARK.item.ammunition'}}</h3>
+			<h3>
+				{{localize 'SHADOWDARK.item.ammunition'}}
+			</h3>
 			<input
-				type="checkbox"
 				name="system.isAmmunition"
+				type="checkbox"
 				{{checked system.isAmmunition}}
 			>
 
-			<h3>{{localize 'SHADOWDARK.item.light.is_source'}}</h3>
+			<h3>
+				{{localize 'SHADOWDARK.item.light.is_source'}}
+			</h3>
 			<input
-				type="checkbox"
 				name="system.light.isSource"
+				type="checkbox"
 				{{checked system.light.isSource}}
 			>
 		{{/ifEq}}
 
 		{{#if showMagicItemCheckbox}}
-				<h3>{{localize "SHADOWDARK.item.magic_item.is_magic"}}</h3>
-				<input
-					type="checkbox"
-					name="system.magicItem"
-					{{checked system.magicItem}}
-				>
+			<h3>
+				{{localize "SHADOWDARK.item.magic_item.is_magic"}}
+			</h3>
+			<input
+				name="system.magicItem"
+				type="checkbox"
+				{{checked system.magicItem}}
+			>
 		{{/if}}
 
 		{{#ifEq item.type "Basic"}}
-			<h3>{{localize 'SHADOWDARK.item.treasure'}}</h3>
+			<h3>
+				{{localize 'SHADOWDARK.item.treasure'}}
+			</h3>
 			<input
-				type="checkbox"
 				name="system.treasure"
+				type="checkbox"
 				{{checked system.treasure}}
 			>
 		{{/ifEq}}
-
-		{{#ifEq item.type "Effect"}}
-			<h3>{{localize "SHADOWDARK.item.effect.show-token-icon"}}</h3>
-			<input
-				type="checkbox"
-				name="system.tokenIcon.show"
-				{{checked system.tokenIcon.show}}
-			/>
-
-			<h3>{{localize "SHADOWDARK.item.effect.show-on-panel"}}</h3>
-			<input
-				type="checkbox"
-				name="system.effectPanel.show"
-				{{checked system.effectPanel.show}}
-			/>
-		{{/ifEq}}
 	</div>
-
 {{/ui/sd-box}}
