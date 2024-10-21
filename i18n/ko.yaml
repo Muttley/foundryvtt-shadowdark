@@ -140,6 +140,7 @@ SHADOWDARK.armor.properties.shield: 방패
 SHADOWDARK.boon.type.label: Boon Type
 SHADOWDARK.boons.blessing: Blessing
 SHADOWDARK.boons.oath: Oath
+SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: 명중 굴림
 SHADOWDARK.chat_card.button.cast_spell: 주문 시전
@@ -211,6 +212,7 @@ SHADOWDARK.class.ranger: 레인저
 SHADOWDARK.class.spellcasting_ability.label: 주문시전 능력
 SHADOWDARK.class.spellcasting_class.label: Spell Class
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
+SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.talent_choices.count.label: 재능 카운트
 SHADOWDARK.class.talent_choices.label: 재능 선택
 SHADOWDARK.class.talent_choices.prompt: 재능을 지정하세요...
@@ -303,7 +305,7 @@ SHADOWDARK.dialog.select_weapon_property.title: 무기 속성 지정
 SHADOWDARK.dialog.spell_roll.title: 주문시전 굴림
 SHADOWDARK.dialog.submit: 제출
 SHADOWDARK.dialog.tooltip.talent_advantage: 이 굴림에 유리함을 주는 재능이 있습니다
-SHADOWDARK.dialog.type_here: Type Here
+SHADOWDARK.dialog.type_here: Type Here...
 SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: 시간
 SHADOWDARK.effect_duration.minutes: 분
@@ -385,6 +387,7 @@ SHADOWDARK.item.armor_ac_modifier: 수정치
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: 추가 속성
 SHADOWDARK.item.armor_class: 방어도 (AC)
+SHADOWDARK.item.armor.armor_properties.label: Armor Properties
 SHADOWDARK.item.armor.base_armor.chainmail: 체인메일
 SHADOWDARK.item.armor.base_armor.leather_armor: 가죽 갑옷
 SHADOWDARK.item.armor.base_armor.plate_mail: 판금 갑옷
@@ -401,7 +404,7 @@ SHADOWDARK.item.effect.lightSource.lightSpellNear: 빛
 SHADOWDARK.item.effect.lightSource.lightSuppression: 빛 제거
 SHADOWDARK.item.effect.lightSource.purpleGlow: 보라색 형광
 SHADOWDARK.item.effect.lightSource.torch: 횃불
-SHADOWDARK.item.effect.pre-defined.title: 사전 지정된 효과
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined Effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: 능력 점수 향상
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: 능력 점수 향상 (매력)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: 능력 점수 향상 (건강)
@@ -478,7 +481,7 @@ SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
 SHADOWDARK.item.potion.label: 물약
-SHADOWDARK.item.properties: 속성
+SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: 두루마리
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
@@ -519,6 +522,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: 지팡이
 SHADOWDARK.item.weapon.base_weapon.title: 기본 무기
 SHADOWDARK.item.weapon.base_weapon.wand: 마법봉
 SHADOWDARK.item.weapon.base_weapon.warhammer: 전쟁망치
+SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
 SHADOWDARK.language_choices.common.label: Additional Common
 SHADOWDARK.language_choices.rare.label: Additional Rare
 SHADOWDARK.language.celestial: 천계어 Celestial
@@ -753,6 +757,7 @@ SHADOWDARK.talent.backstab: 배후공격
 SHADOWDARK.talent.class.ancestry: 선조
 SHADOWDARK.talent.class.class: 클래스
 SHADOWDARK.talent.class.level: 레벨
+SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: 능력 향상
 SHADOWDARK.talent.type.advantage.hp: HP 굴림 유리함
 SHADOWDARK.talent.type.advantage.initiative: 우선권 유리함
@@ -777,3 +782,29 @@ SHADOWDARK.weapon.properties.two_handed: 양손
 SHADOWDARK.weapon.properties.versatile: 다용도
 SHADOWDARK.weapon.type.melee: 근접
 SHADOWDARK.weapon.type.ranged: 원거리
+TYPES.Actor.Light: Light
+TYPES.Actor.NPC: NPC
+TYPES.Actor.Player: Player
+TYPES.Item.Ancestry: Ancestry
+TYPES.Item.Armor: Armor
+TYPES.Item.Background: Background
+TYPES.Item.Basic: Basic
+TYPES.Item.Boon: Boon
+TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Class: Class
+TYPES.Item.Deity: Deity
+TYPES.Item.Effect: Effect
+TYPES.Item.Gem: Gem
+TYPES.Item.Language: Language
+TYPES.Item.NPC Attack: NPC Attack
+TYPES.Item.NPC Feature: NPC Feature
+TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.NPC Spell: NPC Spell
+TYPES.Item.Patron: Patron
+TYPES.Item.Potion: Potion
+TYPES.Item.Property: Property
+TYPES.Item.Scroll: Scroll
+TYPES.Item.Spell: Spell
+TYPES.Item.Talent: Talent
+TYPES.Item.Wand: Wand
+TYPES.Item.Weapon: Weapon
