@@ -140,6 +140,7 @@ SHADOWDARK.armor.properties.shield: Bouclier
 SHADOWDARK.boon.type.label: Type d'avantage
 SHADOWDARK.boons.blessing: Bénédiction
 SHADOWDARK.boons.oath: Serment
+SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: Jet d'Attaque
 SHADOWDARK.chat_card.button.cast_spell: Lancement de sort
@@ -211,6 +212,7 @@ SHADOWDARK.class.ranger: Éclaireur
 SHADOWDARK.class.spellcasting_ability.label: Caractéristique d'incantation
 SHADOWDARK.class.spellcasting_class.label: Lanceur de sort
 SHADOWDARK.class.spellcasting.base_difficulty.label: DD de base pour lancer de sort
+SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.talent_choices.count.label: Nombre de choix
 SHADOWDARK.class.talent_choices.label: Choix des talents
 SHADOWDARK.class.talent_choices.prompt: Sélectionnez un Talent...
@@ -303,7 +305,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Roll Spell with
 SHADOWDARK.dialog.submit: Valider
 SHADOWDARK.dialog.tooltip.talent_advantage: Un talent vous donne l'avantage de ce jet
-SHADOWDARK.dialog.type_here: Type Here
+SHADOWDARK.dialog.type_here: Type Here...
 SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Heures
 SHADOWDARK.effect_duration.minutes: Minutes
@@ -385,6 +387,7 @@ SHADOWDARK.item.armor_ac_modifier: Modificateur
 SHADOWDARK.item.armor_ac: CA
 SHADOWDARK.item.armor_bonus_attribute: Attribut Bonus
 SHADOWDARK.item.armor_class: Classe d'Armure
+SHADOWDARK.item.armor.armor_properties.label: Armor Properties
 SHADOWDARK.item.armor.base_armor.chainmail: Cotte de Maille
 SHADOWDARK.item.armor.base_armor.leather_armor: Armure de Cuir
 SHADOWDARK.item.armor.base_armor.plate_mail: Armure de Plate
@@ -401,7 +404,7 @@ SHADOWDARK.item.effect.lightSource.lightSpellNear: Light
 SHADOWDARK.item.effect.lightSource.lightSuppression: Light Suppression
 SHADOWDARK.item.effect.lightSource.purpleGlow: Purple Glow
 SHADOWDARK.item.effect.lightSource.torch: Torch
-SHADOWDARK.item.effect.pre-defined.title: Pre-defined effects
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined Effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Ability Score Improvement
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Ability Score Improvement (Cha)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Ability Score Improvement (Con)
@@ -478,7 +481,7 @@ SHADOWDARK.item.npc_attack_special: Spécial
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Nombre de Dés de Dégâts
 SHADOWDARK.item.potion.label: Potion
-SHADOWDARK.item.properties: Propriétés
+SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
@@ -519,6 +522,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: Bâton
 SHADOWDARK.item.weapon.base_weapon.title: Base Weapon
 SHADOWDARK.item.weapon.base_weapon.wand: Baguette
 SHADOWDARK.item.weapon.base_weapon.warhammer: Marteau de Guerre
+SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
 SHADOWDARK.language_choices.common.label: Langue commune additionnelle
 SHADOWDARK.language_choices.rare.label: Langue rare additionnelle
 SHADOWDARK.language.celestial: Céleste
@@ -753,6 +757,7 @@ SHADOWDARK.talent.backstab: Attaque Sournoise
 SHADOWDARK.talent.class.ancestry: Ascendance
 SHADOWDARK.talent.class.class: Classe
 SHADOWDARK.talent.class.level: Niveau
+SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Ability Improvement
 SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
 SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
@@ -777,3 +782,29 @@ SHADOWDARK.weapon.properties.two_handed: Two-handed
 SHADOWDARK.weapon.properties.versatile: Versatile
 SHADOWDARK.weapon.type.melee: Melee
 SHADOWDARK.weapon.type.ranged: Ranged
+TYPES.Actor.Light: Light
+TYPES.Actor.NPC: NPC
+TYPES.Actor.Player: Player
+TYPES.Item.Ancestry: Ancestry
+TYPES.Item.Armor: Armor
+TYPES.Item.Background: Background
+TYPES.Item.Basic: Basic
+TYPES.Item.Boon: Boon
+TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Class: Class
+TYPES.Item.Deity: Deity
+TYPES.Item.Effect: Effect
+TYPES.Item.Gem: Gem
+TYPES.Item.Language: Language
+TYPES.Item.NPC Attack: NPC Attack
+TYPES.Item.NPC Feature: NPC Feature
+TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.NPC Spell: NPC Spell
+TYPES.Item.Patron: Patron
+TYPES.Item.Potion: Potion
+TYPES.Item.Property: Property
+TYPES.Item.Scroll: Scroll
+TYPES.Item.Spell: Spell
+TYPES.Item.Talent: Talent
+TYPES.Item.Wand: Wand
+TYPES.Item.Weapon: Weapon

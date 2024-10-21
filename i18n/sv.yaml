@@ -140,6 +140,7 @@ SHADOWDARK.armor.properties.shield: Sköld
 SHADOWDARK.boon.type.label: Favörtyp
 SHADOWDARK.boons.blessing: Välsignelse
 SHADOWDARK.boons.oath: Eder
+SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Hemlighet
 SHADOWDARK.chat_card.button.attack: Rulla attack
 SHADOWDARK.chat_card.button.cast_spell: Kasta besvärjelse
@@ -211,6 +212,7 @@ SHADOWDARK.class.ranger: Jägare
 SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.spellcasting_class.label: Besvärjelseklass
 SHADOWDARK.class.spellcasting.base_difficulty.label: Grundsvårighet för besvärjelse
+SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.talent_choices.count.label: Antal val
 SHADOWDARK.class.talent_choices.label: Talangval
 SHADOWDARK.class.talent_choices.prompt: Välj talang...
@@ -303,7 +305,7 @@ SHADOWDARK.dialog.select_weapon_property.title: Välj rustningsegenskaper
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
 SHADOWDARK.dialog.submit: Skicka
 SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
-SHADOWDARK.dialog.type_here: Type Here
+SHADOWDARK.dialog.type_here: Type Here...
 SHADOWDARK.dragdrop: Drag and Drop Here
 SHADOWDARK.effect_duration.hours: Timmar
 SHADOWDARK.effect_duration.minutes: Minuter
@@ -385,6 +387,7 @@ SHADOWDARK.item.armor_ac_modifier: AC Bonus
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Egenskap
 SHADOWDARK.item.armor_class: Rustningsklass
+SHADOWDARK.item.armor.armor_properties.label: Armor Properties
 SHADOWDARK.item.armor.base_armor.chainmail: Ringbrynja
 SHADOWDARK.item.armor.base_armor.leather_armor: Läderrustning
 SHADOWDARK.item.armor.base_armor.plate_mail: Pansarrustning
@@ -401,7 +404,7 @@ SHADOWDARK.item.effect.lightSource.lightSpellNear: Ljus
 SHADOWDARK.item.effect.lightSource.lightSuppression: Ljusdämpning
 SHADOWDARK.item.effect.lightSource.purpleGlow: Lila glöd
 SHADOWDARK.item.effect.lightSource.torch: Fackla
-SHADOWDARK.item.effect.pre-defined.title: Fördefinerad effekter
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined Effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Förbättring av förmåga
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Förbättring av förmåga (Kar)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Förbättring av förmåga (Fys)
@@ -478,7 +481,7 @@ SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.potion.label: Brygd
-SHADOWDARK.item.properties: Egenskaper
+SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamentrulle
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Källa
@@ -519,6 +522,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: Stav
 SHADOWDARK.item.weapon.base_weapon.title: Grundvapen
 SHADOWDARK.item.weapon.base_weapon.wand: Trollstav
 SHADOWDARK.item.weapon.base_weapon.warhammer: Stridshammare
+SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
 SHADOWDARK.language_choices.common.label: Ytterligare vanliga
 SHADOWDARK.language_choices.rare.label: Ytterligare sällsynta
 SHADOWDARK.language.celestial: Himmelska
@@ -753,6 +757,7 @@ SHADOWDARK.talent.backstab: Rygghugg
 SHADOWDARK.talent.class.ancestry: Ursprung
 SHADOWDARK.talent.class.class: Klass
 SHADOWDARK.talent.class.level: Nivå
+SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Förbättring av förmåga
 SHADOWDARK.talent.type.advantage.hp: Fördel KP Rullning
 SHADOWDARK.talent.type.advantage.initiative: Fördel på Initiativ
@@ -777,3 +782,29 @@ SHADOWDARK.weapon.properties.two_handed: Två-handat
 SHADOWDARK.weapon.properties.versatile: Versatilt
 SHADOWDARK.weapon.type.melee: Närstrid
 SHADOWDARK.weapon.type.ranged: Avståndsstrid
+TYPES.Actor.Light: Light
+TYPES.Actor.NPC: NPC
+TYPES.Actor.Player: Player
+TYPES.Item.Ancestry: Ancestry
+TYPES.Item.Armor: Armor
+TYPES.Item.Background: Background
+TYPES.Item.Basic: Basic
+TYPES.Item.Boon: Boon
+TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Class: Class
+TYPES.Item.Deity: Deity
+TYPES.Item.Effect: Effect
+TYPES.Item.Gem: Gem
+TYPES.Item.Language: Language
+TYPES.Item.NPC Attack: NPC Attack
+TYPES.Item.NPC Feature: NPC Feature
+TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.NPC Spell: NPC Spell
+TYPES.Item.Patron: Patron
+TYPES.Item.Potion: Potion
+TYPES.Item.Property: Property
+TYPES.Item.Scroll: Scroll
+TYPES.Item.Spell: Spell
+TYPES.Item.Talent: Talent
+TYPES.Item.Wand: Wand
+TYPES.Item.Weapon: Weapon
