@@ -1,0 +1,12 @@
+{{#if item.system.canBeEquipped}}
+	{{#if item.isOwned}}
+		<h3>
+			{{localize 'SHADOWDARK.item.equipped'}}
+		</h3>
+		<input
+			name="system.equipped"
+			type="checkbox"
+			{{checked system.equipped}}
+		/>
+	{{/if}}
+{{/if}}

@@ -22,34 +22,29 @@
 				placeholder="0"
 				type="text"
 				value="{{change.value}}"
-				{{#unless @root.effectsEditable}}
-					disabled
-				{{/unless}}
 			>
 		{{/each}}
 	</div>
 
 	<div class="actions">
-		{{#if @root.effectsEditable}}
-			<a
-				class="fas fa-circle-{{#if effect.disabled}}xmark{{else}}check{{/if}}"
-				data-action="effect-activate"
-				data-tooltip="{{localize "SHADOWDARK.effect.header.toggle_active"}}"
-				{{#unless effect.disabled}}
-					style="color:var(--primary);"
-				{{/unless}}
-			></a>
-			<a
-				class="fas fa-edit"
-				data-action="effect-edit"
-				data-tooltip="{{localize "SHADOWDARK.effect.header.edit"}}"
-			></a>
-			<a
-				class="fas fa-trash"
-				data-action="effect-delete"
-				data-tooltip="{{localize "SHADOWDARK.effect.header.delete"}}"
-			></a>
-		{{/if}}
+		<a
+			class="fas fa-circle-{{#if effect.disabled}}xmark{{else}}check{{/if}}"
+			data-action="effect-activate"
+			data-tooltip="{{localize "SHADOWDARK.effect.header.toggle_active"}}"
+			{{#unless effect.disabled}}
+				style="color:var(--primary);"
+			{{/unless}}
+		></a>
+		<a
+			class="fas fa-edit"
+			data-action="effect-edit"
+			data-tooltip="{{localize "SHADOWDARK.effect.header.edit"}}"
+		></a>
+		<a
+			class="fas fa-trash"
+			data-action="effect-delete"
+			data-tooltip="{{localize "SHADOWDARK.effect.header.delete"}}"
+		></a>
 	</div>
 
 </li>

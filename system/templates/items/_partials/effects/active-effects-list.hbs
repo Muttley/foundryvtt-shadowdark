@@ -4,13 +4,11 @@
 
 <ol class="SD-list">
 	<li class="header">
-		{{#if @root.effectsEditable}}
-			<a
-				class="item-image fa-solid fa-square-plus"
-				data-action="effect-create"
-				style="padding:4px"
-			></a>
-		{{/if}}
+		<a
+			class="item-image fa-solid fa-square-plus"
+			data-action="effect-create"
+			style="padding:4px"
+		></a>
 		<div class="item-name">
 			{{localize "SHADOWDARK.item.effect.category.effect"}}
 		</div>
@@ -20,7 +18,7 @@
 		<div class="actions"></div>
 	</li>
 
-	{{#each effects as |effect|}}
+	{{#each item.effects as |effect|}}
 		{{> items/_partials/effects/active-effect
 			effect=effect
 		}}

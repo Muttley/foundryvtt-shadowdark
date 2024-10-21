@@ -28,35 +28,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		if ([
-			"Ancestry",
-			"Armor",
-			"Background",
-			"Basic",
-			"Boon",
-			"Class",
-			"Class Ability",
-			"Deity",
-			"Effect",
-			"Gem",
-			"Language",
-			"NPC Attack",
-			"NPC Feature",
-			"NPC Special Attack",
-			"NPC Spell",
-			"Patron",
-			"Potion",
-			"Property",
-			"Scroll",
-			"Spell",
-			"Talent",
-			"Wand",
-		].includes(this.item.type)) {
-			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
-		}
-		else {
-			return "systems/shadowdark/templates/items/item.hbs";
-		}
+		return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 	}
 
 	/** @inheritdoc */
@@ -301,6 +273,18 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+	async getSources(context) {
+		context.sources = await shadowdark.compendiums.sources();
+
+		const itemSource = context.sources.find(
+			s => s.uuid === context.item.system.source.title
+		);
+
+		context.sourceLoaded = itemSource || context.item.system.source.title === ""
+			? true
+			: false;
+	}
+
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
 			await shadowdark.utils.getDedupedSelectedItems(
@@ -319,6 +303,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+
 	/** @override */
 	async getData(options) {
 		let loadingDialog;
@@ -330,113 +315,72 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const context = await super.getData(options);
 
-		const item = context.item;
-
-		context.sources = await shadowdark.compendiums.sources();
-		const itemSource = context.sources.find(
-			s => s.uuid === item.system.source.title
-		);
-		context.sourceLoaded = itemSource || item.system.source.title === ""
-			? true
-			: false;
-
-		let spellsKnown = false;
-		if (item.type === "Class" && item.system.spellcasting.class !== "__not_spellcaster__") {
-			spellsKnown = true;
-		}
-
-		const showTab = {
-			details: [
-				"Wand",
-				"Weapon",
-			].includes(item.type),
-
-			effects: (
-				["Talent"].includes(item.type)
-					|| item.system.magicItem
-			) ? true : false,
-			light: item.system.light?.isSource ?? false,
-			description: true,
-			spellsKnown,
-		};
+		await this.getSources(context);
 
 		foundry.utils.mergeObject(context, {
 			config: CONFIG.SHADOWDARK,
-			effectsEditable: (
-				item.parent === null
-				|| game.version.split(".")[0] > 10
-			),
-			hasCost: item.system.cost !== undefined,
-			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			showMagicItemCheckbox: item.system.isPhysical && !["Gem", "Potion", "Scroll", "Wand"].includes(item.type),
-			system: item.system,
-			showTab,
 			editable: this.isEditable,
-			usesSlots: item.system.slots !== undefined,
+			itemType: game.i18n.localize(`SHADOWDARK.item.type.${context.item.type}`),
+			predefinedEffects: await this._getPredefinedEffectsList(),
+			system: context.item.system,
 		});
 
-
-		if (["Ancestry"].includes(item.type)) {
-			await this.getAncestrySelectorConfigs(context);
-		}
-
-		if (item.type === "Class") {
-			await this.getClassSelectorConfigs(context);
-
-			// initialize spellsknown table if not already set on a spellcaster class item
-			if (spellsKnown && !item.system.spellcasting.spellsknown) {
-				item.system.spellcasting.spellsknown = {};
-				for (let i = 1; i <= 10; i++) {
-					item.system.spellcasting.spellsknown[i] = {};
-					for (let j = 1; j <= 5; j++) {
-						item.system.spellcasting.spellsknown[i][j] = null;
-					}
-				}
+		context.descriptionHTML = await TextEditor.enrichHTML(
+			context.system.description,
+			{
+				secrets: context.item.isOwner,
+				async: true,
+				relativeTo: this.item,
 			}
+		);
+
+		// Call any type-specific methods for this item type to gather
+		// additional data for the sheet
+		//
+		const itemTypeSafeName = context.item.type.replace(/\s/g, "");
+		const itemTypeFunctionName = `getSheetDataFor${itemTypeSafeName}Item`;
+
+		if (typeof this[itemTypeFunctionName] === "function") {
+			shadowdark.debug(`Calling Item type-specific method ${itemTypeFunctionName}()`);
+			await this[itemTypeFunctionName](context);
 		}
 
-		if (item.type === "Patron") {
-			const patronBoonTables =
-				await shadowdark.compendiums.patronBoonTables();
+		if (loadingDialog) loadingDialog.close({force: true});
 
-			context.patronBoonTables = {};
-			for (const patronBoonTable of patronBoonTables) {
+		return context;
+	}
 
-				context.patronBoonTables[patronBoonTable.uuid] =
-					patronBoonTable.name.replace(/^Patron\s+Boons:\s/, "");
-			}
-		}
 
-		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
-			await this.getSpellSelectorConfigs(context);
-		}
+	// ------------------------------------------------------------------------
+	// Type-specific methods are used to gather any additional data necessary
+	// for rendering the item sheet.
+	//
+	// These methods are called using reflection from the main getData() method
+	// and should be named as follows:
+	//
+	//     getSheetDataFor{item_type_with_no_spaces}Item
+	// ------------------------------------------------------------------------
 
-		if (["Armor", "Weapon"].includes(item.type)) {
-			context.propertyItems = await item.propertyItems();
+	async getSheetDataForAncestryItem(context) {
+		await this.getAncestrySelectorConfigs(context);
+	}
 
-			const mySlug = item.name.slugify();
+	async getSheetDataForArmorItem(context) {
+		context.propertyItems = await context.item.propertyItems();
 
-			if (item.type === "Armor") {
-				context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseArmor()
-				);
+		const mySlug = context.item.name.slugify();
 
-				delete context.baseArmor[mySlug];
-			}
-			if (item.type === "Weapon") {
-				context.ammunition = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.ammunition()
-				);
+		context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.baseArmor()
+		);
 
-				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseWeapons()
-				);
+		delete context.baseArmor[mySlug];
+	}
 
-				delete context.baseWeapons[mySlug];
-			}
-		}
+	async getSheetDataForBasicItem(context) {
+		const item = context.item;
 
-		if (item.type === "Basic" && item.system.light.isSource) {
+		if (item.system.light.isSource) {
 			if (!item.system.light.hasBeenUsed) {
 				// Unused light sources should always have their remaining time
 				// at maximum
@@ -455,40 +399,80 @@ export default class ItemSheetSD extends ItemSheet {
 				);
 			}
 		}
+	}
 
-		if (context.showMagicItemCheckbox || item.system.canBeEquipped
-			|| item.type === "Basic" || item.type === "Effect") {
-			context.showItemProperties=true;
+	async getSheetDataForClassItem(context) {
+		await this.getClassSelectorConfigs(context);
+
+		context.spellsKnown =
+			context.item.system.spellcasting.class !== "__not_spellcaster__";
+	}
+
+	async getSheetDataForEffectItem(context) {
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+	async getSheetDataForNPCAttackItem(context) {
+		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
+	}
+
+	async getSheetDataForNPCSpecialAttackItem(context) {
+		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
+	}
+
+	async getSheetDataForNPCSpellItem(context) {
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+	async getSheetDataForPatronItem(context) {
+		const patronBoonTables =
+			await shadowdark.compendiums.patronBoonTables();
+
+		context.patronBoonTables = {};
+
+		for (const patronBoonTable of patronBoonTables) {
+			context.patronBoonTables[patronBoonTable.uuid] =
+				patronBoonTable.name.replace(/^Patron\s+Boons:\s/, "");
 		}
+	}
 
+	async getSheetDataForScrollItem(context) {
+		await this.getSpellSelectorConfigs(context);
 
-		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
-			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
-		}
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
 
-		if (["Effect", "Potion", "Scroll", "Spell", "NPC Spell", "Wand"].includes(item.type)) {
-			context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-				.includes(item.system.duration.type);
+	async getSheetDataForSpellItem(context) {
+		await this.getSpellSelectorConfigs(context);
 
-		}
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
 
-		if (context.showTab.effects) {
-			context.predefinedEffects = await this._getPredefinedEffectsList();
-			context.effects = item.effects;
-		}
+	async getSheetDataForWandItem(context) {
+		await this.getSpellSelectorConfigs(context);
 
-		context.descriptionHTML = await TextEditor.enrichHTML(
-			context.system.description,
-			{
-				secrets: context.item.isOwner,
-				async: true,
-				relativeTo: this.item,
-			}
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+	async getSheetDataForWeaponItem(context) {
+		context.propertyItems = await context.item.propertyItems();
+
+		const mySlug = context.item.name.slugify();
+
+		context.ammunition = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.ammunition()
 		);
 
-		if (loadingDialog) loadingDialog.close({force: true});
+		context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.baseWeapons()
+		);
 
-		return context;
+		delete context.baseWeapons[mySlug];
 	}
 
 	/* -------------------------------------------- */

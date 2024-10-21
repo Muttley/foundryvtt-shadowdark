@@ -387,6 +387,7 @@ SHADOWDARK.item.armor_ac_modifier: Modifier
 SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: Bonus Attribute
 SHADOWDARK.item.armor_class: Armor Class
+SHADOWDARK.item.armor.armor_properties.label: Armor Properties
 SHADOWDARK.item.armor.base_armor.chainmail: Chainmail
 SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
 SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
@@ -480,7 +481,7 @@ SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.potion.label: Potion
-SHADOWDARK.item.properties: Properties
+SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
@@ -521,6 +522,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: Staff
 SHADOWDARK.item.weapon.base_weapon.title: Base Weapon
 SHADOWDARK.item.weapon.base_weapon.wand: Wand
 SHADOWDARK.item.weapon.base_weapon.warhammer: Warhammer
+SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
 SHADOWDARK.language_choices.common.label: Additional Common
 SHADOWDARK.language_choices.rare.label: Additional Rare
 SHADOWDARK.language.celestial: Celestial

@@ -12,12 +12,6 @@
 			</a>
 		{{/if}}
 
-		{{#if system.light.isSource}}
-			<a class="navigation-tab" data-tab="tab-light">
-				{{localize "SHADOWDARK.sheet.item.tab.light"}}
-			</a>
-		{{/if}}
-
 		<a class="navigation-tab" data-tab="tab-description">
 			{{localize "SHADOWDARK.sheet.item.tab.description"}}
 		</a>
@@ -28,12 +22,9 @@
 	</nav>
 
 	<section class="SD-content-body flex1">
-		{{> items/basic/details-tab }}
+		{{> items/weapon/details-tab }}
 		{{#if system.magicItem}}
 			{{> items/_partials/effects-tab }}
-		{{/if}}
-		{{#if system.light.isSource}}
-			{{> items/basic/light-tab }}
 		{{/if}}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}

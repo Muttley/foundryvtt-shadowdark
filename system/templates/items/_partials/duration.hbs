@@ -1,30 +1,30 @@
 <div id="{{type}}-duration" class="item-grid left">
-  {{#if variableDuration}}
-    <input
-      name="{{base}}.value"
-      type="text"
-      class="{{type}}-duration-value"
-      value="{{duration.value}}"
-    />
-  {{else}}
-    <input
-      type="hidden"
-      name="{{base}}.value"
-      value="-1"
-      data-dtype="Number"
-    />
-  {{/if}}
-  <select
-    name="{{base}}.type"
-    {{#unless variableDuration}}
-    style="grid-column: span 2;"
-    {{/unless}}
-  >
-    <option value="">&mdash;</option>
-    {{selectOptions
-      choices
-      selected=duration.type
-      localize=false
-    }}
-  </select>
+	{{#if variableDuration}}
+		<input
+			class="{{type}}-duration-value"
+			name="{{base}}.value"
+			type="text"
+			value="{{duration.value}}"
+		/>
+	{{else}}
+		<input
+			data-dtype="Number"
+			name="{{base}}.value"
+			type="hidden"
+			value="-1"
+		/>
+	{{/if}}
+	<select
+		name="{{base}}.type"
+		{{#unless variableDuration}}
+			style="grid-column: span 2;"
+		{{/unless}}
+	>
+		<option value="">&mdash;</option>
+		{{selectOptions
+			choices
+			selected=duration.type
+			localize=false
+		}}
+	</select>
 </div>

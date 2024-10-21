@@ -10,11 +10,11 @@
 			{{localize "SHADOWDARK.sheet.item.tab.titles"}}
 		</a>
 
-		{{#ifCond system.spellcasting.class "!==" "__not_spellcaster__"}}
+		{{#if spellsKnown}}
 			<a class="navigation-tab" data-tab="tab-spells-known">
 				{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
 			</a>
-		{{/ifCond}}
+		{{/if}}
 
 		<a class="navigation-tab" data-tab="tab-description">
 			{{localize "SHADOWDARK.sheet.item.tab.description"}}
@@ -28,7 +28,9 @@
 	<section class="SD-content-body flex1">
 		{{> items/class/details-tab }}
 		{{> items/class/titles-tab }}
-		{{> items/class/spells-known-tab }}
+		{{#if spellsKnown}}
+			{{> items/class/spells-known-tab }}
+		{{/if}}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}
 	</section>
