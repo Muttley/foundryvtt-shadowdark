@@ -49,6 +49,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"Property",
 			"Scroll",
 			"Spell",
+			"Talent",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -345,10 +346,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const showTab = {
 			details: [
-				"Property",
-				"Scroll",
-				"Spell",
-				"Talent",
 				"Wand",
 				"Weapon",
 			].includes(item.type),
