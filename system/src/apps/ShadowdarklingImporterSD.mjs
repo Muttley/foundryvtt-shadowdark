@@ -41,19 +41,19 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	/** @inheritdoc */
 	activateListeners(html) {
 		super.activateListeners(html);
-		window.addEventListener("paste", e => this._onPaste(e));
+		html.on("paste", ".SDImporterJson", this._onPaste.bind(this));
 	}
 
 	/** @inheritdoc */
 	_onSubmit(event) {
 		event.preventDefault();
-
+		this._createActor();
 		super._onSubmit(event);
 	}
 
 	/** @override */
 	async _updateObject(event, data) {
-		this._createActor();
+		// required method
 	}
 
 	/** @override */
@@ -76,7 +76,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		let postedJson = "";
 		try {
-			postedJson = JSON.parse(event.clipboardData.getData("text/plain"));
+			postedJson = JSON.parse(event.originalEvent.clipboardData.getData("text/plain"));
 		}
 		catch(error) {
 			ui.notifications.error("JSON not found in clipboard");
