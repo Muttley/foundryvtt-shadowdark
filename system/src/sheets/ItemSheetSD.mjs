@@ -46,6 +46,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"NPC Spell",
 			"Patron",
 			"Potion",
+			"Property",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
