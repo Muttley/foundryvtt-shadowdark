@@ -3,6 +3,7 @@
 ## Enhancements
 * [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
 * [#901] Added Russian as a partially complete system language.
+* [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
 
 ## Bugfixes
 * [#896] Add additional padding to blockquote style so text doesn't blend into decorations
