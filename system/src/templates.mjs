@@ -75,6 +75,7 @@ export default function() {
 		"systems/shadowdark/templates/items/patron/details-tab.hbs",
 		"systems/shadowdark/templates/items/potion/details-tab.hbs",
 		"systems/shadowdark/templates/items/property/details-tab.hbs",
+		"systems/shadowdark/templates/items/scroll/details-tab.hbs",
 		"systems/shadowdark/templates/items/tabs/details.hbs",
 		"systems/shadowdark/templates/items/tabs/light.hbs",
 		"systems/shadowdark/templates/partials/details/armor.hbs",
