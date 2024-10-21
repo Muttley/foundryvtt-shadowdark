@@ -45,6 +45,7 @@ export default class ItemSheetSD extends ItemSheet {
 			"NPC Special Attack",
 			"NPC Spell",
 			"Patron",
+			"Potion",
 		].includes(this.item.type)) {
 			return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 		}
@@ -341,7 +342,6 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const showTab = {
 			details: [
-				"Potion",
 				"Property",
 				"Scroll",
 				"Spell",

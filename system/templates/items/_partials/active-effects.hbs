@@ -4,12 +4,12 @@
 	<div style="margin:4px;">
 		<h3>{{localize "SHADOWDARK.item.effect.pre-defined.title"}}</h3>
 		<input
-			style="width:auto"
-			name="system.predefinedEffects"
 			list="predefined-effects-list"
+			name="system.predefinedEffects"
+			placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
+			style="width:auto"
 			type="text"
 			value=""
-			placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
 			{{#if (not @root.effectsEditable)}}disabled{{/if}}
 		/>
 		<datalist id="predefined-effects-list">
