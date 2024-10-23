@@ -7,6 +7,7 @@ import registerSystemSettings from "./src/settings.mjs";
 import SHADOWDARK from "./src/config.mjs";
 import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
+import ChecksSD from "./src/utils/ChecksSD.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
@@ -75,6 +76,7 @@ Hooks.once("init", () => {
 	registerSystemSettings();
 	loadTemplates();
 
+	ChecksSD.registerEnrichers();
 	UtilitySD.loadLegacyArtMappings();
 
 	// Register sheet application classes
