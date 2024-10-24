@@ -214,6 +214,7 @@ SHADOWDARK.EFFECT_TRANSLATIONS = {
 	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
 	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
 	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
+	"system.bonuses.spellcastingClasses": "SHADOWDARK.talent.type.bonus_caster_classes",
 	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
 };
 
@@ -431,6 +432,13 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		effectKey: "system.bonuses.spellcastingCheckBonus",
 		icon: "icons/magic/fire/flame-burning-fist-strike.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellCastingBonus",
+		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+	},
+	spellcastingClasses: {
+		defaultValue: "REPLACEME",
+		effectKey: "system.bonuses.spellcastingClasses",
+		icon: "icons/sundries/documents/document-sealed-brown-red.webp",
+		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
 	unarmoredAcBonus: {

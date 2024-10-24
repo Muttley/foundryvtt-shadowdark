@@ -586,17 +586,46 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	async _onOpenSpellBook(event) {
-		const actorClass = await this.actor.getClass();
-		let spellClass = actorClass.system.spellcasting.class;
-		if (spellClass === "") {
-			spellClass = this.actor.system.class;
+		const playerSpellcasterClasses = await this.actor.getSpellcasterClasses();
+
+		const openChosenSpellbook = classUuid => {
+			new shadowdark.apps.SpellBookSD(
+				classUuid,
+				this.actor.id
+			).render(true);
+		};
+
+		if (playerSpellcasterClasses.length <= 0) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
+				{ permanent: false }
+			);
+		}
+		else if (playerSpellcasterClasses.length === 1) {
+			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		}
+		else {
+			return renderTemplate(
+				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
+				{classes: playerSpellcasterClasses}
+			).then(html => {
+				const dialog = new Dialog({
+					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
+					content: html,
+					buttons: {},
+					render: html => {
+						html.find("[data-action='open-class-spellbook']").click(
+							event => {
+								event.preventDefault();
+								openChosenSpellbook(event.currentTarget.dataset.uuid);
+								dialog.close();
+							}
+						);
+					},
+				}).render(true);
+			});
 		}
 
-		let spellbook = new shadowdark.apps.SpellBookSD(
-			spellClass,
-			this.actor.id
-		);
-		spellbook.render(true);
 	}
 
 	async _onlevelUp(event) {

@@ -1,7 +1,15 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
 
 	{{#if isSpellcaster}}
-		<div class="SD-banner">{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}</div>
+		<div class="SD-banner">
+			{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
+			&nbsp;
+			<a
+				class="fa-solid fa-book"
+				data-action="open-spellbook"
+				data-tooltip="{{localize 'SHADOWDARK.sheet.player.open_spellbook.tooltip'}}"
+			></a>
+		</div>
 		{{#each spells as |tier tid|}}
 		<ol class="SD-list">
 			<li class="header">

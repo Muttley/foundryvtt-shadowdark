@@ -474,6 +474,16 @@ export default class ItemSD extends Item {
 			const chosen = await this._askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
+		else if (key === "spellcastingClasses") {
+			const type = "class";
+
+			const options = await shadowdark.utils.getSlugifiedItemList(
+				await shadowdark.compendiums.spellcastingBaseClasses()
+			);
+
+			const chosen = await this._askEffectInput({name, type, options});
+			return chosen[type] ?? [value];
+		}
 		else if (
 			[
 				"weaponDamageDieImprovementByProperty",

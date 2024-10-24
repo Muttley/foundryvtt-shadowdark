@@ -857,6 +857,34 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async getSpellcasterClasses() {
+		const actorClass = await this.getClass();
+
+		const playerSpellClasses = [];
+
+		let spellClass = actorClass.system.spellcasting.class;
+		if (spellClass === "") {
+			playerSpellClasses.push(actorClass);
+		}
+		else if (spellClass !== "__not_spellcaster__") {
+			playerSpellClasses.push(
+				await this._getItemFromUuid(spellClass)
+			);
+		}
+
+		const spellcasterClasses =
+			await shadowdark.compendiums.spellcastingBaseClasses();
+
+		for (const bonusClass of this.system.bonuses.spellcastingClasses ?? []) {
+			playerSpellClasses.push(
+				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
+			);
+		}
+
+		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
 	async getSpellcastingAbility() {
 		const characterClass = await this.getClass();
 
@@ -913,7 +941,13 @@ export default class ActorSD extends Actor {
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingClass !== "__not_spellcaster__"
+		const isSpellcastingClass =
+			characterClass && spellcastingClass !== "__not_spellcaster__";
+
+		const hasBonusSpellcastingClasses =
+			(this.system.bonuses.spellcastingClasses ?? []).length > 0;
+
+		return isSpellcastingClass || hasBonusSpellcastingClasses
 			? true
 			: false;
 	}

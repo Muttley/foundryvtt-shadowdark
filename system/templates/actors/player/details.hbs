@@ -47,7 +47,14 @@
 				</span>
 			</div>
 			<div class="content">
-				{{#if isSpellcaster}}<a class="fas fa-book" data-action="open-spellbook" style="margin-right:4px"></a>{{/if}}
+				{{#if isSpellcaster}}
+					<a
+						class="fas fa-book"
+						data-action="open-spellbook"
+						data-tooltip="{{localize 'SHADOWDARK.sheet.player.open_spellbook.tooltip'}}"
+						style="margin-right:4px"
+					></a>
+				{{/if}}
 				<a class="content-link" data-link data-uuid="{{system.class}}">{{uuidToName system.class}}</a>
 			</div>
 		</div>
