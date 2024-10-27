@@ -61,7 +61,7 @@ export default class ChecksSD {
 		if (dc) {
 			options.target = dc;
 		}
-		actor.rollAbility(stat, options);
+		actor.rollAbility(stat.toLowerCase(), options);
 	}
 
 
