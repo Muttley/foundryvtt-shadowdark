@@ -39,6 +39,7 @@ globalThis.shadowdark = {
 	log: Logger.log,
 	macro: ShadowdarkMacro,
 	sheets,
+	checks: ChecksSD,
 	utils: UtilitySD,
 	warn: Logger.warn,
 };

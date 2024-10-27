@@ -1,24 +1,31 @@
 export default class ChecksSD {
 
 	static async registerEnrichers() {
-		console.warn("enricher");
 		// load custom text enrichers
-		// [[/check STAT DC]]
-		// [[/request STAT DC]]
+		// [[check DC STAT]]
+		// [[request DC STAT]]
 		CONFIG.TextEditor.enrichers.push({
-			pattern: /\[\[\/(?<command>check|request)\s(?<stat>\w{3})\s(?<dc>\d+)\]\]/g,
+			pattern: /\[\[(?<command>check|request)\s(?<dc>\d+)\s(?<stat>\w{3})\]\]/g,
 			enricher: async (match, options) => {
-				let { command, stat, dc } = match.groups;
+				let { command, dc, stat } = match.groups;
+
+				// Check for invalid data
+				if (!parseInt(dc)) return;
+				if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(stat.toLowerCase())) return;
+
+				// create replacement html
 				const link = document.createElement("a");
+				link.className = "content-link";
 				link.dataset.command = command;
-				link.dataset.stat = stat;
 				link.dataset.dc = dc;
+				link.dataset.stat = stat;
+				const linkText = `DC ${dc} ${stat.toUpperCase()}`;
 				switch (command) {
 					case "check":
-						link.innerHTML = `<i class="fa-solid fa-dice-d20"></i>DC ${dc} ${stat}`;
+						link.innerHTML = `<i class="fa-solid fa-dice-d20"></i>${linkText}`;
 						break;
 					case "request":
-						link.innerHTML = `<i class="fa-solid fa-comment"></i>DC ${dc} ${stat}`;
+						link.innerHTML = `<i class="fa-solid fa-comment"></i>${linkText}`;
 						break;
 				}
 				return link;
@@ -32,26 +39,40 @@ export default class ChecksSD {
 		let data = event.target?.dataset;
 		if ( !data.command ) return;
 
-		let options = {};
-		if (event.shiftKey) {
-			options.fastForward = true;
-		}
-
 		switch (data.command) {
 			case "check":
-				let actor = game.user.character;
-				if (actor) {
-					actor.rollAbility(data.stat, options);
+				let options = {};
+				if (event.shiftKey) {
+					options.fastForward = true;
 				}
-				else {
-					ui.notification.error("You do not have a character selected!");
-				}
-
+				shadowdark.checks.rollCheck(data.dc, data.stat, options);
 				break;
 			case "request":
-				console.log("Request Check");
+				shadowdark.checks.displayRequest(data.dc, data.stat);
 				break;
 		}
+	}
+
+	static async rollCheck(dc, stat, options={}) {
+		let actor = game.user.character;
+		if (!actor) {
+			ui.notification.error("You do not have a character selected!");
+		}
+		if (dc) {
+			options.target = dc;
+		}
+		actor.rollAbility(stat, options);
+	}
+
+
+	static async displayRequest(dc, stat) {
+		const HTML = `<div style="text-align:center">[[check ${dc} ${stat}]]</div>`;
+		const chatData = {
+			user: game.user._id,
+			flavor: "Requesting a check",
+			content: HTML,
+		};
+		ChatMessage.create(chatData, {});
 	}
 
 }
