@@ -138,6 +138,7 @@
 				"remaining": 0,
 				"available": false
 			},
+			"patron": "",
 			"slots": 10
 		}
 	},
@@ -279,6 +280,10 @@
 			"armor": [],
 			"classTalentTable": "",
 			"hitPoints": "",
+			"patron": {
+				"required": false,
+				"startingBoons": 0
+			},
 			"spellcasting": {
 				"ability": "",
 				"baseDifficulty": 10,
