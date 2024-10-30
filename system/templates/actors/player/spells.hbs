@@ -1,6 +1,6 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
 
-	{{#if isSpellcaster}}
+	{{#if isSpellCaster}}
 		<div class="SD-banner">
 			{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
 			&nbsp;
@@ -146,7 +146,7 @@
 							>
 								<i class="fa-solid fa-scroll"></i>
 							</a>
-							{{#if ../isSpellcaster}}
+							{{#if ../isSpellCaster}}
 								<a
 									data-action="learn-spell"
 									data-item-id="{{item._id}}"
