@@ -20,6 +20,7 @@
 	- Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*
 
 * [#917] Restructure Item sheet templates to make them a bit more manageable
+* [#929] Merged Russian language updates from Crowdin
 
 *Many thanks to **AdamsGH** for contributing **Russian** translation data.*
 
