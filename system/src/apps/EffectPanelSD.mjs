@@ -1,5 +1,5 @@
 export default class EffectPanelSD extends Application {
-	static DURATION_CONVERTION = {
+	static DURATION_CONVERSION = {
 		IN_ONE_ROUND: 10,
 		IN_ONE_MINUTE: 60,
 		IN_TWO_MINUTES: 120,
