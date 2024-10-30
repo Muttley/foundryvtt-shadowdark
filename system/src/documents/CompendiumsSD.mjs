@@ -203,6 +203,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "NPC Features", filterSources);
 	}
 
+	static async patrons(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Patron", filterSources);
+	}
+
 	static async patronBoonTables(filterSources=true) {
 		const documents = await CompendiumsSD._documents(
 			"RollTable", null, filterSources

@@ -129,27 +129,33 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const data = {
 			ancestry: {
 				name: "ancestry",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.label"),
+				label: game.i18n.localize("TYPES.Item.Ancestry"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
 				item: await fromUuid(system.ancestry) ?? null,
 			},
 			background: {
 				name: "background",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.background.label"),
+				label: game.i18n.localize("TYPES.Item.Background"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.background.tooltip"),
 				item: await fromUuid(system.background) ?? null,
 			},
 			class: {
 				name: "class",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.class.label"),
+				label: game.i18n.localize("TYPES.Item.Class"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.class.tooltip"),
 				item: await fromUuid(system.class) ?? null,
 			},
 			deity: {
 				name: "deity",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.deity.label"),
+				label: game.i18n.localize("TYPES.Item.Deity"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.deity.tooltip"),
 				item: await fromUuid(system.deity) ?? null,
+			},
+			patron: {
+				name: "patron",
+				label: game.i18n.localize("TYPES.Item.Patron"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.patron.tooltip"),
+				item: await fromUuid(system.patron) ?? null,
 			},
 		};
 
@@ -176,9 +182,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.system.attributes.ac.value = await this.actor.getArmorClass();
 
-		context.isSpellcaster = await this.actor.isSpellcaster();
+		context.isSpellCaster = await this.actor.isSpellCaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
-		context.showSpellsTab = context.isSpellcaster || context.canUseMagicItems;
+		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
@@ -205,7 +211,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 
 		context.characterClass = await this.actor.getClass();
+		context.classHasPatron = context.characterClass.system.patron.required;
 		context.classTitle = await this.actor.getTitle();
+
+		context.characterPatron = await this.actor.getPatron();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
@@ -586,46 +595,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	async _onOpenSpellBook(event) {
-		const playerSpellcasterClasses = await this.actor.getSpellcasterClasses();
-
-		const openChosenSpellbook = classUuid => {
-			new shadowdark.apps.SpellBookSD(
-				classUuid,
-				this.actor.id
-			).render(true);
-		};
-
-		if (playerSpellcasterClasses.length <= 0) {
-			return ui.notifications.error(
-				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
-				{ permanent: false }
-			);
-		}
-		else if (playerSpellcasterClasses.length === 1) {
-			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
-		}
-		else {
-			return renderTemplate(
-				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
-				{classes: playerSpellcasterClasses}
-			).then(html => {
-				const dialog = new Dialog({
-					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
-					content: html,
-					buttons: {},
-					render: html => {
-						html.find("[data-action='open-class-spellbook']").click(
-							event => {
-								event.preventDefault();
-								openChosenSpellbook(event.currentTarget.dataset.uuid);
-								dialog.close();
-							}
-						);
-					},
-				}).render(true);
-			});
-		}
-
+		event.preventDefault();
+		this.actor.openSpellBook();
 	}
 
 	async _onlevelUp(event) {

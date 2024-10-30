@@ -72,7 +72,7 @@ export default class ItemSD extends Item {
 		};
 
 		if (this.actor.type === "Player") {
-			data.isSpellcaster = await this.actor.isSpellcaster();
+			data.isSpellCaster = await this.actor.isSpellCaster();
 			data.canUseMagicItems = await this.actor.canUseMagicItems();
 		}
 

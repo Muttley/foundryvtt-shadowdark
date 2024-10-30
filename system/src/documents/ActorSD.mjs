@@ -835,6 +835,12 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async getPatron() {
+		const uuid = this.system.patron ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
 	async getDeity() {
 		const uuid = this.system.deity ?? "";
 		return await this._getItemFromUuid(uuid);
@@ -935,7 +941,7 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async isSpellcaster() {
+	async isSpellCaster() {
 		const characterClass = await this.getClass();
 
 		const spellcastingClass =
@@ -1027,6 +1033,48 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+
+	async openSpellBook() {
+		const playerSpellcasterClasses = await this.getSpellcasterClasses();
+
+		const openChosenSpellbook = classUuid => {
+			new shadowdark.apps.SpellBookSD(
+				classUuid,
+				this.id
+			).render(true);
+		};
+
+		if (playerSpellcasterClasses.length <= 0) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
+				{ permanent: false }
+			);
+		}
+		else if (playerSpellcasterClasses.length === 1) {
+			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		}
+		else {
+			return renderTemplate(
+				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
+				{classes: playerSpellcasterClasses}
+			).then(html => {
+				const dialog = new Dialog({
+					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
+					content: html,
+					buttons: {},
+					render: html => {
+						html.find("[data-action='open-class-spellbook']").click(
+							event => {
+								event.preventDefault();
+								openChosenSpellbook(event.currentTarget.dataset.uuid);
+								dialog.close();
+							}
+						);
+					},
+				}).render(true);
+			});
+		}
+	}
 
 	/** @inheritDoc */
 	prepareData() {
