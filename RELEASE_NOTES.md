@@ -22,6 +22,7 @@
 * [#917] Restructure Item sheet templates to make them a bit more manageable
 * [#927] Migration runner accessing globalThis.duplicate which must now be accessed via foundry.utils.duplicate
 * [#928] Migrate "Deities" to new "Patrons and Deities" compendium
+* [#929] Merged Russian language updates from Crowdin
 
 *Many thanks to **AdamsGH** for contributing **Russian** translation data.*
 
