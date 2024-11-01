@@ -11,7 +11,12 @@ export default class ChecksSD {
 
 				// Check for invalid data
 				if (!parseInt(dc)) return;
-				if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(stat.toLowerCase())) return;
+				if (CONFIG.SHADOWDARK.ABILITY_KEYS.includes(stat.toLowerCase())) {
+					stat = stat.toLowerCase();
+				}
+				else {
+					return;
+				}
 
 				// create replacement html
 				const link = document.createElement("a");
