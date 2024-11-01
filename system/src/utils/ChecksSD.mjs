@@ -19,7 +19,7 @@ export default class ChecksSD {
 				link.dataset.command = command;
 				link.dataset.dc = dc;
 				link.dataset.stat = stat;
-				const linkText = `DC ${dc} ${stat.toUpperCase()}`;
+				const linkText = `${game.i18n.localize("SHADOWDARK.class-ability.dc.label")} ${dc} ${game.i18n.localize(`SHADOWDARK.ability_${stat}`)}`.toUpperCase();
 				switch (command) {
 					case "check":
 						link.innerHTML = `<i class="fa-solid fa-dice-d20"></i>${linkText}`;
@@ -56,7 +56,9 @@ export default class ChecksSD {
 	static async rollCheck(dc, stat, options={}) {
 		let actor = game.user.character;
 		if (!actor) {
-			ui.notification.error("You do not have a character selected!");
+			ui.notification.error(
+				game.i18n.localize("SHADOWDARK.error.general.no_character_selected")
+			);
 		}
 		if (dc) {
 			options.target = dc;
@@ -69,7 +71,7 @@ export default class ChecksSD {
 		const HTML = `<div style="text-align:center">[[check ${dc} ${stat}]]</div>`;
 		const chatData = {
 			user: game.user._id,
-			flavor: "Requesting a check",
+			flavor: game.i18n.localize("SHADOWDARK.check.requesting"),
 			content: HTML,
 		};
 		ChatMessage.create(chatData, {});
