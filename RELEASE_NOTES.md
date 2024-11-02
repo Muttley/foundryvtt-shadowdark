@@ -16,6 +16,7 @@
 * [#906] There's always an extra space between special attack name and effect
 * [#918] Actor and Item type names missing from i18n data
 * [#919] Class item template has incorrect default spellcasting class value
+* [#930] Class Abilities can't be used if they have no associated skill roll
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
