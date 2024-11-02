@@ -2,6 +2,7 @@
 
 ## Enhancements
 * [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
+* [#847] Add support for Warlock class Boon which gives the ability to learn a Wizard spell
 * [#901] Added Russian as a partially complete system language.
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
 
