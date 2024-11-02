@@ -452,6 +452,15 @@ export default class ItemSheetSD extends ItemSheet {
 			.includes(context.item.system.duration.type);
 	}
 
+	async getSheetDataForTalentItem(context) {
+		context.showsLevelInput = {
+			ancestry: false,
+			class: false,
+			level: true,
+			patronBoon: true,
+		};
+	}
+
 	async getSheetDataForWandItem(context) {
 		await this.getSpellSelectorConfigs(context);
 

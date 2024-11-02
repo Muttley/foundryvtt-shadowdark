@@ -50,7 +50,6 @@ SHADOWDARK.DAMAGE_DICE = [
 SHADOWDARK.BOON_TYPES = {
 	blessing: "SHADOWDARK.boons.blessing",
 	oath: "SHADOWDARK.boons.oath",
-	patron: "SHADOWDARK.boons.patron",
 	secret: "SHADOWDARK.boons.secret",
 };
 
@@ -544,6 +543,7 @@ SHADOWDARK.TALENT_CLASSES = {
 	ancestry: "SHADOWDARK.talent.class.ancestry",
 	class: "SHADOWDARK.talent.class.class",
 	level: "SHADOWDARK.talent.class.level",
+	patronBoon: "SHADOWDARK.talent.class.patronBoon",
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
