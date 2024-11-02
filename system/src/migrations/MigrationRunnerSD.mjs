@@ -100,7 +100,9 @@ export default class MigrationRunnerSD {
 				// anything
 				if (token.actorLink || !game.actors.has(token.actorId)) continue;
 
-				const actorData = duplicate(game.actors.get(token.actorId));
+				const actorData = foundry.utils.duplicate(
+					game.actors.get(token.actorId)
+				);
 
 				const delta = token.delta;
 

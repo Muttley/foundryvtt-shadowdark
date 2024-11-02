@@ -1,0 +1,26 @@
+<!-- Background -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.player.background.label"}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="background"
+					for="system.background">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		<a
+			class="content-link"
+			data-link
+			data-uuid="{{system.background}}"
+		>
+			{{uuidToName system.background}}
+		</a>
+	</div>
+</div>

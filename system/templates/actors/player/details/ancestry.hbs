@@ -1,0 +1,26 @@
+<!-- Ancestry -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.player.ancestry.label"}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="ancestry"
+					for="system.ancestry">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		<a
+			class="content-link"
+			data-link
+			data-uuid="{{system.ancestry}}"
+		>
+			{{uuidToName system.ancestry}}
+		</a>
+	</div>
+</div>

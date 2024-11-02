@@ -181,6 +181,8 @@
 			"rangedAttackBonus": 0,
 			"rangedDamageBonus": 0,
 			"spellcastingCheckBonus": 0,
+			"spellcastingClasses": [
+			],
 			"unarmoredAcBonus": 0,
 			"weaponDamageDieD12": [
 			],
@@ -199,7 +201,7 @@
 			"gp": 8,
 			"sp": 0
 		},
-		"deity": "Compendium.shadowdark.deities.Item.6qeBzYJUTgrMhUcW",
+		"deity": "Compendium.shadowdark.patrons-and-deities.Item.6qeBzYJUTgrMhUcW",
 		"flags": {
 			"hpRollLevels": [
 			]
@@ -221,6 +223,7 @@
 			"remaining": 0
 		},
 		"notes": "",
+		"patron": "",
 		"slots": 10
 	},
 	"type": "Player"

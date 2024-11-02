@@ -199,6 +199,9 @@ export default class ActorSheetSD extends ActorSheet {
 			case "language":
 				new select.LanguageSelector(this.actor).render(true);
 				break;
+			case "patron":
+				new select.PatronSelector(this.actor).render(true);
+				break;
 		}
 	}
 

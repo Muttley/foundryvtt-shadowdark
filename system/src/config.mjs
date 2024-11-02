@@ -50,7 +50,6 @@ SHADOWDARK.DAMAGE_DICE = [
 SHADOWDARK.BOON_TYPES = {
 	blessing: "SHADOWDARK.boons.blessing",
 	oath: "SHADOWDARK.boons.oath",
-	patron: "SHADOWDARK.boons.patron",
 	secret: "SHADOWDARK.boons.secret",
 };
 
@@ -214,6 +213,7 @@ SHADOWDARK.EFFECT_TRANSLATIONS = {
 	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
 	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
 	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
+	"system.bonuses.spellcastingClasses": "SHADOWDARK.talent.type.bonus_caster_classes",
 	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
 };
 
@@ -433,6 +433,13 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		name: "SHADOWDARK.item.effect.predefined_effect.spellCastingBonus",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
+	spellcastingClasses: {
+		defaultValue: "REPLACEME",
+		effectKey: "system.bonuses.spellcastingClasses",
+		icon: "icons/sundries/documents/document-sealed-brown-red.webp",
+		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
+		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+	},
 	unarmoredAcBonus: {
 		defaultValue: 1,
 		effectKey: "system.bonuses.unarmoredAcBonus",
@@ -536,6 +543,7 @@ SHADOWDARK.TALENT_CLASSES = {
 	ancestry: "SHADOWDARK.talent.class.ancestry",
 	class: "SHADOWDARK.talent.class.class",
 	level: "SHADOWDARK.talent.class.level",
+	patronBoon: "SHADOWDARK.talent.class.patronBoon",
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {

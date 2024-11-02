@@ -1,18 +1,22 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
-		<div class="item-grid">
-			<h3>{{localize 'SHADOWDARK.boon.type.label'}}</h3>
+		<div>
+			<h3>
+				{{localize 'SHADOWDARK.boon.type.label'}}
+			</h3>
 			<select name="system.boonType">
-				{{selectOptions
-					config.BOON_TYPES
-					selected=system.boonType
+				{{selectOptions config.BOON_TYPES
 					localize=false
+					selected=system.boonType
 				}}
 			</select>
+		</div>
 
-			<h3>{{localize 'SHADOWDARK.item.level'}}</h3>
-			{{numberInput
-				item.system.level
+		<div>
+			<h3>
+				{{localize 'SHADOWDARK.item.level'}}
+			</h3>
+			{{numberInput item.system.level
 				name="system.level"
 				placeholder="0"
 			}}

@@ -32,6 +32,10 @@
 			"selectOptions": [
 			]
 		},
+		"patron": {
+			"required": false,
+			"startingBoons": 0
+		},
 		"predefinedEffects": "",
 		"source": {
 			"page": 0,

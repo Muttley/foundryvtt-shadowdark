@@ -247,7 +247,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 
 		const spellcastingClasses =
-			await shadowdark.compendiums.spellcastingClasses();
+			await shadowdark.compendiums.spellcastingBaseClasses();
 
 		context.spellcastingClasses = {};
 		for (const spellcastingClass of spellcastingClasses) {
@@ -288,7 +288,7 @@ export default class ItemSheetSD extends ItemSheet {
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.spellcastingClasses(),
+				await shadowdark.compendiums.spellcastingBaseClasses(),
 				this.item.system.class ?? []
 			);
 
@@ -450,6 +450,15 @@ export default class ItemSheetSD extends ItemSheet {
 
 		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(context.item.system.duration.type);
+	}
+
+	async getSheetDataForTalentItem(context) {
+		context.showsLevelInput = {
+			ancestry: false,
+			class: false,
+			level: true,
+			patronBoon: true,
+		};
 	}
 
 	async getSheetDataForWandItem(context) {

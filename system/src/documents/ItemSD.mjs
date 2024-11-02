@@ -72,7 +72,7 @@ export default class ItemSD extends Item {
 		};
 
 		if (this.actor.type === "Player") {
-			data.isSpellcaster = await this.actor.isSpellcaster();
+			data.isSpellCaster = await this.actor.isSpellCaster();
 			data.canUseMagicItems = await this.actor.canUseMagicItems();
 		}
 
@@ -469,6 +469,16 @@ export default class ItemSD extends Item {
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
 				await shadowdark.compendiums.spells()
+			);
+
+			const chosen = await this._askEffectInput({name, type, options});
+			return chosen[type] ?? [value];
+		}
+		else if (key === "spellcastingClasses") {
+			const type = "class";
+
+			const options = await shadowdark.utils.getSlugifiedItemList(
+				await shadowdark.compendiums.spellcastingBaseClasses()
 			);
 
 			const chosen = await this._askEffectInput({name, type, options});
