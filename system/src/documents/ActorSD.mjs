@@ -892,9 +892,28 @@ export default class ActorSD extends Actor {
 
 
 	async getSpellcastingAbility() {
-		const characterClass = await this.getClass();
+		const spellcasterClasses = await this.getSpellcasterClasses();
 
-		return characterClass?.system?.spellcasting?.ability ?? "";
+		let chosenAbility = "";
+		let chosenAbilityModifier = 0;
+
+		for (const casterClass of spellcasterClasses) {
+			const ability = casterClass?.system?.spellcasting?.ability ?? "";
+
+			if (chosenAbility === "") {
+				chosenAbility = ability;
+				chosenAbilityModifier = this.abilityModifier(ability);
+			}
+			else {
+				const modifier = this.abilityModifier(ability);
+				if (modifier > chosenAbilityModifier) {
+					chosenAbility = ability;
+					chosenAbilityModifier = modifier;
+				}
+			}
+		}
+
+		return chosenAbility;
 	}
 
 	async getTitle() {
