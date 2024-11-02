@@ -140,7 +140,6 @@ SHADOWDARK.armor.properties.shield: Sköld
 SHADOWDARK.boon.type.label: Favörtyp
 SHADOWDARK.boons.blessing: Välsignelse
 SHADOWDARK.boons.oath: Eder
-SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Hemlighet
 SHADOWDARK.chat_card.button.attack: Rulla attack
 SHADOWDARK.chat_card.button.cast_spell: Kasta besvärjelse
@@ -188,6 +187,7 @@ SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Förmåga
 SHADOWDARK.class-ability.available.label: Tillgänglig
+SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: Förmågegrupp
 SHADOWDARK.class-ability.limited-uses.label: Begränsade användningar?
@@ -202,6 +202,7 @@ SHADOWDARK.class.choice_count: Choice Count
 SHADOWDARK.class.choice: Choice
 SHADOWDARK.class.fighter: Krigare
 SHADOWDARK.class.fixed: Fixed
+SHADOWDARK.class.has_patron.count.label: Has Patron?
 SHADOWDARK.class.hit_points.label: Rulla HP Tärning
 SHADOWDARK.class.language_choices.count.label: Antal val
 SHADOWDARK.class.language_choices.label: Språkval
@@ -213,6 +214,7 @@ SHADOWDARK.class.spellcasting_ability.label: Besvärjelseförmåga
 SHADOWDARK.class.spellcasting_class.label: Besvärjelseklass
 SHADOWDARK.class.spellcasting.base_difficulty.label: Grundsvårighet för besvärjelse
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
+SHADOWDARK.class.starting_boons.count.label: Starting Boons
 SHADOWDARK.class.talent_choices.count.label: Antal val
 SHADOWDARK.class.talent_choices.label: Talangval
 SHADOWDARK.class.talent_choices.prompt: Välj talang...
@@ -248,6 +250,7 @@ SHADOWDARK.dialog.edit_hp.title: Edit HP
 SHADOWDARK.dialog.edit_stats.title: Edit Stats
 SHADOWDARK.dialog.effect.choice.armor: Välj rustningstyp
 SHADOWDARK.dialog.effect.choice.attribute: Välj attribut
+SHADOWDARK.dialog.effect.choice.class: Choose Class
 SHADOWDARK.dialog.effect.choice.damage_die: Välj skadetärning
 SHADOWDARK.dialog.effect.choice.lightsource: Välj ljuskälla
 SHADOWDARK.dialog.effect.choice.property: Välj egenskap
@@ -300,9 +303,11 @@ SHADOWDARK.dialog.select_deity.prompt: Välj gud...
 SHADOWDARK.dialog.select_deity.title: Välj gud
 SHADOWDARK.dialog.select_languages.prompt: Välj språk...
 SHADOWDARK.dialog.select_languages.title: Välj språk
+SHADOWDARK.dialog.select_patron.title: Select Patron
 SHADOWDARK.dialog.select_weapon_property.prompt: Välj vapenegenskap...
 SHADOWDARK.dialog.select_weapon_property.title: Välj rustningsegenskaper
 SHADOWDARK.dialog.spell_roll.title: Rulla besvärjelse med
+SHADOWDARK.dialog.spellbook.open_which_class.title: Choose Available Spellboook
 SHADOWDARK.dialog.submit: Skicka
 SHADOWDARK.dialog.tooltip.talent_advantage: En talang ger dig fördel
 SHADOWDARK.dialog.type_here: Type Here...
@@ -338,6 +343,7 @@ SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte stä
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
 SHADOWDARK.form.section_header.names.label: Namn
+SHADOWDARK.form.section_header.patron.label: Patron
 SHADOWDARK.form.section_header.spellcasting.label: Besvärjelser
 SHADOWDARK.form.section_header.talents.label: Talanger
 SHADOWDARK.hotbar.abilityLost: Förmåga inte tillgänglig
@@ -436,6 +442,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Bonus för Avstånds
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus för Avståndsskada
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Fördel vid Besvärjelsekast
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus för Besvärjelsekast
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: AC Bonus utan rustning
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus för Vapenattack
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus för vapenskada
@@ -452,6 +459,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: Kan inte lägga till ef
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Kan inte lägga till effekter med rundor som varaktighet utanför strid.
 SHADOWDARK.item.equipped: Buren
 SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
+SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
 SHADOWDARK.item.inventory_free_carry: Fri kapacitet
 SHADOWDARK.item.inventory_per_slot: Max antal per plats
 SHADOWDARK.item.inventory_quantity: Kvantitet
@@ -574,6 +582,7 @@ SHADOWDARK.npc_move.near: Nära
 SHADOWDARK.npc_move.none: Ingen
 SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Trippelnära
+SHADOWDARK.patron.boons_table.label: Patron Boons Table
 SHADOWDARK.property.type.option.armor: Rustning
 SHADOWDARK.property.type.option.weapon: Vapen
 SHADOWDARK.property.type.title: Typ av egenskap
@@ -705,6 +714,8 @@ SHADOWDARK.sheet.player.languages: Språk
 SHADOWDARK.sheet.player.luck: Tur
 SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
 SHADOWDARK.sheet.player.name.label: Namn
+SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
+SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: Grad
@@ -757,6 +768,7 @@ SHADOWDARK.talent.backstab: Rygghugg
 SHADOWDARK.talent.class.ancestry: Ursprung
 SHADOWDARK.talent.class.class: Klass
 SHADOWDARK.talent.class.level: Nivå
+SHADOWDARK.talent.class.patronBoon: Patron Boon
 SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Förbättring av förmåga
 SHADOWDARK.talent.type.advantage.hp: Fördel KP Rullning
@@ -766,6 +778,7 @@ SHADOWDARK.talent.type.advantage.title: Fördelsbonus
 SHADOWDARK.talent.type.armor_bonus: Bonus för Armor Class
 SHADOWDARK.talent.type.armor_mastery: Rustningsmästare
 SHADOWDARK.talent.type.backstab_die: Extra tärning bakhåll
+SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
 SHADOWDARK.talent.type.custom: Egen Talang
 SHADOWDARK.talent.type.melee_attack_bonus: Bonus för Närstridsattack
 SHADOWDARK.talent.type.melee_damage_bonus: Bonus för Närstridsskada

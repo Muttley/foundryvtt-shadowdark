@@ -140,7 +140,6 @@ SHADOWDARK.armor.properties.shield: 방패
 SHADOWDARK.boon.type.label: Boon Type
 SHADOWDARK.boons.blessing: Blessing
 SHADOWDARK.boons.oath: Oath
-SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Secret
 SHADOWDARK.chat_card.button.attack: 명중 굴림
 SHADOWDARK.chat_card.button.cast_spell: 주문 시전
@@ -188,6 +187,7 @@ SHADOWDARK.chatcard.default: 굴림
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Ability
 SHADOWDARK.class-ability.available.label: Available
+SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: 능력 그룹
 SHADOWDARK.class-ability.limited-uses.label: Limited Uses?
@@ -202,6 +202,7 @@ SHADOWDARK.class.choice_count: Choice Count
 SHADOWDARK.class.choice: Choice
 SHADOWDARK.class.fighter: 전사
 SHADOWDARK.class.fixed: Fixed
+SHADOWDARK.class.has_patron.count.label: Has Patron?
 SHADOWDARK.class.hit_points.label: HP Die Roll
 SHADOWDARK.class.language_choices.count.label: Choice Count
 SHADOWDARK.class.language_choices.label: Language Choices
@@ -213,6 +214,7 @@ SHADOWDARK.class.spellcasting_ability.label: 주문시전 능력
 SHADOWDARK.class.spellcasting_class.label: Spell Class
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
+SHADOWDARK.class.starting_boons.count.label: Starting Boons
 SHADOWDARK.class.talent_choices.count.label: 재능 카운트
 SHADOWDARK.class.talent_choices.label: 재능 선택
 SHADOWDARK.class.talent_choices.prompt: 재능을 지정하세요...
@@ -248,6 +250,7 @@ SHADOWDARK.dialog.edit_hp.title: Edit HP
 SHADOWDARK.dialog.edit_stats.title: Edit Stats
 SHADOWDARK.dialog.effect.choice.armor: 방어구 유형 선택
 SHADOWDARK.dialog.effect.choice.attribute: Choose Attribute
+SHADOWDARK.dialog.effect.choice.class: Choose Class
 SHADOWDARK.dialog.effect.choice.damage_die: Choose Damage Die
 SHADOWDARK.dialog.effect.choice.lightsource: Choose Light Source
 SHADOWDARK.dialog.effect.choice.property: Choose Property
@@ -300,9 +303,11 @@ SHADOWDARK.dialog.select_deity.prompt: Select Deity...
 SHADOWDARK.dialog.select_deity.title: 신격 지정
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
 SHADOWDARK.dialog.select_languages.title: 언어 지정
+SHADOWDARK.dialog.select_patron.title: Select Patron
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
 SHADOWDARK.dialog.select_weapon_property.title: 무기 속성 지정
 SHADOWDARK.dialog.spell_roll.title: 주문시전 굴림
+SHADOWDARK.dialog.spellbook.open_which_class.title: Choose Available Spellboook
 SHADOWDARK.dialog.submit: 제출
 SHADOWDARK.dialog.tooltip.talent_advantage: 이 굴림에 유리함을 주는 재능이 있습니다
 SHADOWDARK.dialog.type_here: Type Here...
@@ -338,6 +343,7 @@ SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 �
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.names.label: Names
+SHADOWDARK.form.section_header.patron.label: Patron
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: 재능
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
@@ -436,6 +442,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: 원거리 명중 굴
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: 원거리 피해 보너스
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 주문시전에 유리함
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 주문시전 판정 보너스
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 무기 명중 굴림 보너스
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 무기 명중 피해 보너스
@@ -452,6 +459,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: 값을 지정하지 않
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: 전투가 아닐 때 라운드 단위로 지속시간을 세는 효과를 추가할 수 없습니다
 SHADOWDARK.item.equipped: 장착 중
 SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
+SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
 SHADOWDARK.item.inventory_free_carry: 슬롯 소모 안 함
 SHADOWDARK.item.inventory_per_slot: 슬롯 당 최대값
 SHADOWDARK.item.inventory_quantity: 수량
@@ -574,6 +582,7 @@ SHADOWDARK.npc_move.near: 단거리
 SHADOWDARK.npc_move.none: 없음
 SHADOWDARK.npc_move.special: 특수
 SHADOWDARK.npc_move.triple_near: 단거리 3배
+SHADOWDARK.patron.boons_table.label: Patron Boons Table
 SHADOWDARK.property.type.option.armor: Armor
 SHADOWDARK.property.type.option.weapon: Weapon
 SHADOWDARK.property.type.title: Property Type
@@ -705,6 +714,8 @@ SHADOWDARK.sheet.player.languages: 언어
 SHADOWDARK.sheet.player.luck: 운
 SHADOWDARK.sheet.player.melee_attacks: 근접 공격
 SHADOWDARK.sheet.player.name.label: Name
+SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
+SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
 SHADOWDARK.sheet.player.ranged_attacks: 원거리 공격
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: 등급
@@ -757,6 +768,7 @@ SHADOWDARK.talent.backstab: 배후공격
 SHADOWDARK.talent.class.ancestry: 선조
 SHADOWDARK.talent.class.class: 클래스
 SHADOWDARK.talent.class.level: 레벨
+SHADOWDARK.talent.class.patronBoon: Patron Boon
 SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: 능력 향상
 SHADOWDARK.talent.type.advantage.hp: HP 굴림 유리함
@@ -766,6 +778,7 @@ SHADOWDARK.talent.type.advantage.title: 유리함 보너스
 SHADOWDARK.talent.type.armor_bonus: 방어구 AC 보너스
 SHADOWDARK.talent.type.armor_mastery: 방어구 숙달
 SHADOWDARK.talent.type.backstab_die: 추가 배후공격 주사위
+SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
 SHADOWDARK.talent.type.custom: 사용자지정 재능
 SHADOWDARK.talent.type.melee_attack_bonus: 근접 명중 굴림 보너스
 SHADOWDARK.talent.type.melee_damage_bonus: 근접 피해 굴림 보너스
