@@ -953,7 +953,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 			else if (i.type === "Talent") {
 				const talentClass = i.system.talentClass;
-				talents[talentClass].items.push(i);
+				const section = talentClass !== "patronBoon" ? talentClass : "level";
+				talents[section].items.push(i);
 			}
 			else if (i.type === "Effect") {
 				const category = i.system.category;

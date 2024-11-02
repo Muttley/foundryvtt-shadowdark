@@ -46,13 +46,20 @@
 			<li class="item"
 				data-item-id="{{this._id}}"
 				data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
-				>
+			>
 				<div class="item-image" style="background-image: url({{this.img}})"></div>
-				<a class="item-name" data-action="show-details">{{this.name}}</a>
+				<a class="item-name" data-action="show-details">
+					{{this.name}}
+					{{#ifEq this.system.talentClass "patronBoon"}}
+						<i
+							class="fa-solid fa-eye-evil"
+							data-tooltip="{{localize 'SHADOWDARK.talent.class.patronBoon'}}"
+						></i>
+					{{/ifEq}}
+				</a>
 				<div class="flex-100-px">{{this.system.level}}</div>
 			</li>
 		{{/each}}
 	</ol>
-
 
 </section>
