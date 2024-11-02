@@ -140,7 +140,6 @@ SHADOWDARK.armor.properties.shield: Escudo
 SHADOWDARK.boon.type.label: Tipo de regalo
 SHADOWDARK.boons.blessing: Bendición
 SHADOWDARK.boons.oath: Juramento
-SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Secreto
 SHADOWDARK.chat_card.button.attack: Tirada de ataque
 SHADOWDARK.chat_card.button.cast_spell: Lanzar hechizo
@@ -188,6 +187,7 @@ SHADOWDARK.chatcard.default: Tirada
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Habilidad
 SHADOWDARK.class-ability.available.label: Disponible
+SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: CD
 SHADOWDARK.class-ability.group.label: Grupo de habilidades
 SHADOWDARK.class-ability.limited-uses.label: '¿Usos limitados?'
@@ -202,6 +202,7 @@ SHADOWDARK.class.choice_count: Choice Count
 SHADOWDARK.class.choice: Choice
 SHADOWDARK.class.fighter: Luchador
 SHADOWDARK.class.fixed: Fixed
+SHADOWDARK.class.has_patron.count.label: Has Patron?
 SHADOWDARK.class.hit_points.label: Tirada de dado PV
 SHADOWDARK.class.language_choices.count.label: Número de opciones
 SHADOWDARK.class.language_choices.label: Language Choices
@@ -213,6 +214,7 @@ SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
 SHADOWDARK.class.spellcasting_class.label: Clase de hechizo
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
+SHADOWDARK.class.starting_boons.count.label: Starting Boons
 SHADOWDARK.class.talent_choices.count.label: Número de opciones
 SHADOWDARK.class.talent_choices.label: Elecciones de talento
 SHADOWDARK.class.talent_choices.prompt: Seleccionar talento...
@@ -248,6 +250,7 @@ SHADOWDARK.dialog.edit_hp.title: Edit HP
 SHADOWDARK.dialog.edit_stats.title: Edit Stats
 SHADOWDARK.dialog.effect.choice.armor: Elige el tipo de armadura
 SHADOWDARK.dialog.effect.choice.attribute: Elegir atributo
+SHADOWDARK.dialog.effect.choice.class: Choose Class
 SHADOWDARK.dialog.effect.choice.damage_die: Elegir dado de daño
 SHADOWDARK.dialog.effect.choice.lightsource: Elegir fuente de luz
 SHADOWDARK.dialog.effect.choice.property: Elegir propiedad
@@ -300,9 +303,11 @@ SHADOWDARK.dialog.select_deity.prompt: Seleccionar deidad...
 SHADOWDARK.dialog.select_deity.title: Elegir deidad
 SHADOWDARK.dialog.select_languages.prompt: Seleccionar idioma...
 SHADOWDARK.dialog.select_languages.title: Elegir idiomas
+SHADOWDARK.dialog.select_patron.title: Select Patron
 SHADOWDARK.dialog.select_weapon_property.prompt: Seleccionar propiedad de arma...
 SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Lanzar hechizo con
+SHADOWDARK.dialog.spellbook.open_which_class.title: Choose Available Spellboook
 SHADOWDARK.dialog.submit: Enviar
 SHADOWDARK.dialog.tooltip.talent_advantage: Un talento te está dando ventaja en esta tirada
 SHADOWDARK.dialog.type_here: Type Here...
@@ -338,6 +343,7 @@ SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting a
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.names.label: Names
+SHADOWDARK.form.section_header.patron.label: Patron
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talentos
 SHADOWDARK.hotbar.abilityLost: Ability currently lost
@@ -436,6 +442,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Bonus de ataque a di
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus de daño a distancia
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Ventaja de lanzamiento de hechizo
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus de lanzamiento de hechizo
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bonus de CA sin armaduras
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus de Ataque de Arma
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus de daño de arma
@@ -452,6 +459,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: No se pueden añadir ef
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: No se pueden añadir efectos con duración del tipo de rondas fuera del combate.
 SHADOWDARK.item.equipped: Equipado
 SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
+SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
 SHADOWDARK.item.inventory_free_carry: Llevar libremente
 SHADOWDARK.item.inventory_per_slot: Máximo por espacio
 SHADOWDARK.item.inventory_quantity: Cantidad
@@ -574,6 +582,7 @@ SHADOWDARK.npc_move.near: Próximo
 SHADOWDARK.npc_move.none: Nada
 SHADOWDARK.npc_move.special: Especial
 SHADOWDARK.npc_move.triple_near: Triple próximo
+SHADOWDARK.patron.boons_table.label: Patron Boons Table
 SHADOWDARK.property.type.option.armor: Armadura
 SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo de propiedad
@@ -705,6 +714,8 @@ SHADOWDARK.sheet.player.languages: Idiomas
 SHADOWDARK.sheet.player.luck: Suerte
 SHADOWDARK.sheet.player.melee_attacks: Ataque cuerpo a cuerpo
 SHADOWDARK.sheet.player.name.label: Name
+SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
+SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
 SHADOWDARK.sheet.player.ranged_attacks: Ataques a distancia.
 SHADOWDARK.sheet.player.spells_from_items: Spells From Items
 SHADOWDARK.sheet.player.spells_tier: Nivel
@@ -757,6 +768,7 @@ SHADOWDARK.talent.backstab: Puñalada
 SHADOWDARK.talent.class.ancestry: Ancestro
 SHADOWDARK.talent.class.class: Clase
 SHADOWDARK.talent.class.level: Nivel
+SHADOWDARK.talent.class.patronBoon: Patron Boon
 SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Mejora de Habilidad
 SHADOWDARK.talent.type.advantage.hp: Ventaja de tirada de PV
@@ -766,6 +778,7 @@ SHADOWDARK.talent.type.advantage.title: Bonus de ventaja
 SHADOWDARK.talent.type.armor_bonus: Bono de CA de armadura
 SHADOWDARK.talent.type.armor_mastery: Maestría de armaduras
 SHADOWDARK.talent.type.backstab_die: Dado extra de puñalada
+SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
 SHADOWDARK.talent.type.custom: Talento personalizado
 SHADOWDARK.talent.type.melee_attack_bonus: Bonus de Ataque Cuerpo a Cuerpo
 SHADOWDARK.talent.type.melee_damage_bonus: Bonus de daño cuerpo a cuerpo
