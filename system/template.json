@@ -212,6 +212,7 @@
 					"sp": 0
 				},
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -257,7 +258,6 @@
 				"lightSource",
 				"physical"
 			],
-			"isAmmunition": false,
 			"scroll": false,
 			"treasure": false
 		},
@@ -535,6 +535,7 @@
 				"oneHanded": "",
 				"twoHanded": ""
 			},
+
 			"properties": [],
 			"range": "close",
 			"type": "melee",

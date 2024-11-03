@@ -841,8 +841,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const freeCarrySeen = {};
 
 		for (const i of this._sortAllItems(context)) {
+			i.uuid = `Actor.${this.actor._id}.Item.${i._id}`;
+
 			if (i.system.isPhysical && i.type !== "Gem") {
-				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
+				i.showQuantity =
+					i.system.isAmmunition || i.system.slots.per_slot > 1
+						? true
+						: false;
 
 				// We calculate how many slots are used by this item, taking
 				// into account the quantity and any free items.

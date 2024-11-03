@@ -55,8 +55,10 @@ export default class CompendiumsSD {
 	}
 
 	static async ammunition(filterSources=true) {
-		const documents =
-			await CompendiumsSD._documents("Item", "Basic", filterSources);
+		const documents = shadowdark.utils.combineCollection(
+			await CompendiumsSD._documents("Item", "Basic", filterSources),
+			await CompendiumsSD._documents("Item", "Weapon", filterSources)
+		);
 
 		return this._collectionFromArray(
 			documents.filter(document => document.system.isAmmunition)

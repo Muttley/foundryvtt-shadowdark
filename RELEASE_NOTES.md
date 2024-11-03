@@ -24,6 +24,7 @@
 	- Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*
 
 * [#917] Restructure Item sheet templates to make them a bit more manageable
+* [#924] Perform an audit of existing templates to ensure we don't have any raw strings that should be i18n-ified
 * [#927] Migration runner accessing globalThis.duplicate which must now be accessed via foundry.utils.duplicate
 * [#928] Migrate "Deities" to new "Patrons and Deities" compendium
 * [#929] Merged Russian language updates from Crowdin

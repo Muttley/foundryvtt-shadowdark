@@ -1,0 +1,28 @@
+<!--Equipped Gear-->
+<div class="SD-banner">
+	{{localize "SHADOWDARK.inventory.equipped_gear"}}
+</div>
+
+<ol class="SD-list item-list">
+	<li class="header">
+		<div class="item-name">
+			{{localize "SHADOWDARK.sheet.player.inventory.gear.label"}}
+		</div>
+		<div class="quantity">
+			{{localize "SHADOWDARK.sheet.player.inventory.quantity_short.label"}}
+		</div>
+		<div class="slots">
+			{{localize "SHADOWDARK.sheet.player.inventory.slots.label"}}
+		</div>
+		<div class="actions"></div>
+	</li>
+
+	{{#each inventory.equipped as |item|}}
+		{{> actors/player/inventory/item
+			item=item
+			owner=../owner
+		}}
+	{{/each}}
+</ol>
+
+<br>

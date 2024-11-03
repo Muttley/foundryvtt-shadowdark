@@ -133,6 +133,19 @@ export default class UtilitySD {
 		return itemList;
 	}
 
+	static combineCollection(map1, map2) {
+		map2.forEach(value => {
+			if (map1.has(value._id)) {
+				shadowdark.warn(`Map already contains an item with key ${key}`);
+			}
+			else {
+				map1.set(value._id, value);
+			}
+		});
+
+		return map1;
+	}
+
 	// If this is a new release, show the release notes to the GM the first time
 	// they login
 	static async showNewReleaseNotes() {

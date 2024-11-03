@@ -1,0 +1,35 @@
+<!--Carried Gear-->
+<div class="SD-banner">
+	{{localize "SHADOWDARK.inventory.carried_gear"}}
+</div>
+
+<ol class="SD-list item-list">
+	<li class="header">
+		<div class="item-name">
+			<a
+				class="fa-solid fa-square-plus"
+				data-action="create-item"
+				style="margin:0px 8px 0px 4px"
+			></a>
+			{{localize "SHADOWDARK.sheet.player.inventory.items.label"}}
+		</div>
+		<div class="quantity">
+			{{localize "SHADOWDARK.sheet.player.inventory.quantity_short.label"}}
+		</div>
+		<div class="slots">
+			{{localize "SHADOWDARK.sheet.player.inventory.slots.label"}}
+		</div>
+		<div class="actions"></div>
+	</li>
+
+	{{#each inventory.carried as |item|}}
+		{{> actors/player/inventory/item
+			item=item
+			owner=../owner
+		}}
+	{{/each}}
+</ol>
+
+{{> actors/player/inventory/treasure }}
+
+<br>
