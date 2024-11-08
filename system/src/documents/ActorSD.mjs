@@ -802,9 +802,15 @@ export default class ActorSD extends Actor {
 
 			// Add AC from bonus effects
 			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
+
+			// Stone Skin Talent provides a bonus based on level
+			if (this.system.bonuses.stoneSkinTalent > 0) {
+				const currentLevel = this.system.level.value ?? 0;
+				newArmorClass += 2 + Math.floor(currentLevel / 2);
+			}
 		}
 
-		this.update({"system.attributes.ac.value": newArmorClass});
+		await this.update({"system.attributes.ac.value": newArmorClass});
 
 		return this.system.attributes.ac.value;
 	}

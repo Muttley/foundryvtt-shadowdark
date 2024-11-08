@@ -1,0 +1,19 @@
+{
+	"_id": "BarVISFqT8lpSQ0W",
+	"_key": "!items!BarVISFqT8lpSQ0W",
+	"effects": [
+	],
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/wounds/blood-drip-droplet-red.webp",
+	"name": "Basilisk Blood",
+	"system": {
+		"description": "<p>You have ADV on CON checks to avoid harmful maladies, poisons, or afflictions.</p>",
+		"level": 0,
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

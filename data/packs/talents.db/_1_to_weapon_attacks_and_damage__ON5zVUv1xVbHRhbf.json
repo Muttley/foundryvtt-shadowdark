@@ -1,0 +1,33 @@
+{
+	"_id": "ON5zVUv1xVbHRhbf",
+	"_key": "!items!ON5zVUv1xVbHRhbf",
+	"effects": [
+		"1YLz0hdFJKXemMz7",
+		"euq7Ta3QDNubqAf6"
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/skills/melee/spear-tips-triple-orange.webp",
+	"name": "+1 to Weapon Attacks and Damage",
+	"system": {
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": "1",
+			"meleeAttackBonus": "1",
+			"meleeDamageBonus": "1"
+		},
+		"description": "",
+		"level": null,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

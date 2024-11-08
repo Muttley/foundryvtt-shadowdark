@@ -1,0 +1,58 @@
+{
+	"_id": "eXCxxE0QNZz8a732",
+	"_key": "!items!eXCxxE0QNZz8a732",
+	"effects": [
+	],
+	"folder": "LVzvIhYHieRT4O6q",
+	"img": "icons/weapons/swords/swords-short.webp",
+	"name": "Spear-thrower (Spear)",
+	"system": {
+		"ammoClass": "spear",
+		"baseWeapon": "",
+		"bonuses": {
+			"attackBonus": 0,
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 2,
+			"sp": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p>When used to throw a spear, increase the spear's range to far.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"stashed": false,
+		"type": "ranged",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

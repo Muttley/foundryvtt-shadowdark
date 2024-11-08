@@ -1,0 +1,33 @@
+{
+	"_id": "4CAhqfyLJIkeEoPW",
+	"_key": "!items.effects!RyaDaPST58N9e7aJ.4CAhqfyLJIkeEoPW",
+	"changes": [
+		{
+			"key": "system.bonuses.stoneSkinTalent",
+			"mode": 5,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
+	"name": "Stone Skin Talent",
+	"origin": null,
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

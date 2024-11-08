@@ -1,0 +1,26 @@
+{
+	"_id": "Jkl9j4RZ2WYy0Gmd",
+	"_key": "!items!Jkl9j4RZ2WYy0Gmd",
+	"effects": [
+	],
+	"folder": "p6yXRQ2vgJxwQ8he",
+	"img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
+	"name": "Petrifying Gaze",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "",
+		"group": "",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": ""
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}
