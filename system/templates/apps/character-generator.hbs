@@ -196,7 +196,16 @@
 			{{#select actor.system.deity}}
 				<option value=""></option>
 				{{#each deities as |value key|}}
-				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}} ({{value.system.alignment}})</option>
+					<option
+						title="{{remove-p-tag value.system.description}}"
+						value="{{value.uuid}}"
+					>
+						{{#ifCond value.system.alignment "===" ""}}
+							{{value.name}} (?)
+						{{else}}
+							{{value.name}} ({{value.system.alignment}})
+						{{/ifCond}}
+					</option>
 				{{/each}}
 			{{/select}}
 			</select>

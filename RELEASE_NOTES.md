@@ -17,6 +17,7 @@
 * [#918] Actor and Item type names missing from i18n data
 * [#919] Class item template has incorrect default spellcasting class value
 * [#930] Class Abilities can't be used if they have no associated skill roll
+* [#936] Character Generator: Don't display empty alignment for Deities that don't have one
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.
