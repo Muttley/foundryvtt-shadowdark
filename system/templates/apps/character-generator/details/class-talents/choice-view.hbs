@@ -1,0 +1,9 @@
+<p>
+	<a class="fas fa-pen-to-square" data-action='clear-class-talents'></a>
+	{{#each classTalents.selection as |value key|}}
+		<b>
+			{{value.name}}.
+		</b>
+		{{{value.formattedDescription}}}
+	{{/each}}
+</p>

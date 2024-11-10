@@ -1,0 +1,51 @@
+{{!-- Stats --}}
+<div class="SD-box grid-rowspan-3">
+	<div class="header">
+		<label for="actor.system.stats">
+			{{localize "SHADOWDARK.sheet.abilities.stats"}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action="cg-click"
+					name="randomize-stats"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<div class="grid-2-columns">
+			{{#each actor.system.abilities as |value key|}}
+				<div class="stats">
+					<label for="actor.system.abilities.{{key}}.base">
+						{{key}}
+					</label>
+					<div>
+						<select
+							id="stat"
+							name="actor.system.abilities.{{key}}.base"
+							{{disabled ../editing}}
+						>
+							{{#select value.base}}
+								{{#each ../statRange}}
+									<option value="{{this}}">
+										{{this}}
+									</option>
+								{{/each}}
+							{{/select}}
+						</select>
+						<span>
+							{{numberFormat value.mod
+								decimals=0
+								sign=true
+							}}
+						</span>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+
+</div>

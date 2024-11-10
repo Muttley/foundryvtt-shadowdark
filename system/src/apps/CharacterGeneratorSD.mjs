@@ -2,8 +2,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	LEVEL_ZERO_GEAR_TABLE_UUID = "Compendium.shadowdark.rollable-tables.RollTable.WKVfMaGkoXe3DGub";
 
-	LEVEL_ONE_GEAR_TABLE_UUID = "Compendium.shadowdark.rollable-tables.RollTable.WKVfMaGkoXe3DGub";
-
 	/**
 	 * Contains functions for building Shadowdark characters
 	 */
@@ -34,7 +32,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 			gearSelected: [],
 			level0: true,
 			level0Class: {},
-			patronName: "",
+			patron: {
+				formattedDescription: "",
+				name: "",
+				choose: false,
+				required: false,
+			},
 			weapons: ["All weapons"],
 		};
 
@@ -151,6 +154,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			event => this._clearClassTalents(event)
 		);
 
+		html.find("[data-action='clear-patron']").click(
+			event => this._clearPatron(event)
+		);
+
 		html.find("[data-action='edit-languages']").click(
 			event => this._editLanguage()
 		);
@@ -248,6 +255,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 				deity.displayName = `${deity.name} (${alignment})`;
 			}
 
+			for (const patron of this.formData.patrons) {
+				let fDesc = await this._formatDescription(patron.system.description);
+				patron.formattedDescription = fDesc;
+			}
+
 			// load all languages in lookup table
 			let languages = await shadowdark.compendiums.languages();
 			this.formData.languages = {};
@@ -323,6 +335,24 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 	_clearClassTalents() {
 		this.formData.classTalents.selection = [];
+		this.render();
+	}
+
+
+	_clearPatron() {
+		this.patron = null;
+		this.formData.actor.system.patron = null;
+
+		this.formData.patron.choose = false;
+		this.formData.patron.required = false;
+		this.formData.patron.name = "";
+		this.formData.patron.formattedDescription = "";
+
+		if (this.class.system.patron.required) {
+			this.formData.patron.choose = true;
+			this.formData.patron.required = true;
+		}
+
 		this.render();
 	}
 
@@ -604,7 +634,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.classDesc = await this._formatDescription(classObj.system.description);
 		await this._loadLanguages();
 
-		await this._randomizePatron();
+		this.patron = null;
+		this.formData.patron.choose = false;
+		this.formData.patron.required = false;
+		this.formData.actor.system.patron = null;
+		this.formData.patron.name = "";
+
+		if (this.class.system.patron.required) {
+			this.formData.patron.choose = true;
+			this.formData.patron.required = true;
+
+			if (randomize) await this._randomizePatron();
+		}
+
 	}
 
 
@@ -679,6 +721,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 			this.formData.langData.togglable = true;
 			this._setRandomLanguage("rare", this.formData.langData.rare.select);
 		}
+	}
+
+
+	async _loadPatron(UuID) {
+		this.patron = await this._getClassObject(UuID);
+
+		this.formData.patron.choose = false;
+		this.formData.patron.name = this.patron.name;
+		this.formData.patron.required = true;
+
+		let fDesc = await this._formatDescription(this.patron.system.description);
+		this.formData.patron.formattedDescription = fDesc;
+
 	}
 
 
@@ -802,39 +857,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 
 	async _randomizePatron() {
-		if (this.class.system.patron.required) {
-			let tempInt = this._getRandom(this.formData.patrons.size);
-			this.patron = [...this.formData.patrons][tempInt];
-			this.formData.actor.system.patron = this.patron.uuid;
-			this.formData.patronName = this.patron.name;
-		}
-		else {
-			this.patron = null;
-			this.formData.actor.system.patron = null;
-			this.formData.patronName = "";
-		}
-	}
+		const tempInt = this._getRandom(this.formData.patrons.size);
+		const patronUuid = [...this.formData.patrons][tempInt].uuid;
 
-
-	async _randomizePatronBoons() {
-		if (!this.patron) return;
-
-		const tableUuid = this.patron?.system?.boonTable ?? "";
-		const table = await fromUuid(tableUuid);
-
-		const boons = [];
-		if (table) {
-			const boonCount = this.class?.system?.patron?.startingBoons ?? 0;
-
-			for (let i = 0; i < boonCount; i++) {
-				const draw = await table.draw({displayChat: false});
-				boons.push(await shadowdark.utils.getItemsFromRollResults(
-					draw.results
-				));
-			}
-		}
-
-		this.formData.patronBoons = boons;
+		this.formData.actor.system.patron = patronUuid;
+		await this._loadPatron(patronUuid, true);
 	}
 
 
@@ -984,6 +1011,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// if class data was changed, load new data and roll hp
 			case "actor.system.class":
 				await this._loadClass(event.target.value);
+				break;
+
+			case "actor.system.patron":
+				await this._loadPatron(event.target.value);
 				break;
 
 			// if ancestry data was changed, load new data

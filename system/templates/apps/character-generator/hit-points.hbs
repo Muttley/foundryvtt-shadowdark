@@ -1,0 +1,16 @@
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.apps.level-up.hit_points"}}
+		</label>
+		<span></span>
+	</div>
+
+	<div class="content centered">
+		[{{classHP}}]
+		{{numberFormat actor.system.abilities.con.mod
+			decimals=0
+			sign=true
+		}}
+	</div>
+</div>
