@@ -7,15 +7,15 @@
 		{{#unless editing}}
 			<a
 				class="fas fa-dice"
-				name="randomize-all"
 				data-action="cg-click"
+				name="randomize-all"
 				title="{{localize "SHADOWDARK.apps.character-generator.tooltip"}}"
 			></a>
 		{{/unless}}
 	</h1>
 
 	{{!-- details --}}
-	{{> cg-details}}
+	{{> apps/character-generator/details }}
 
 	{{!-- level type select --}}
 	<div class="SD-box">
@@ -84,14 +84,13 @@
 			<select name="actor.system.class" data-action='load-class-talents' id="class">
 			{{#select actor.system.class}}
 				{{#if level0}}
-				<option value="{{level0Class.uuid}}">{{level0Class.name}}</option>
-				{{/if}}
-				{{#unless level0}}
+					<option value="{{level0Class.uuid}}">{{level0Class.name}}</option>
+				{{else}}
 					<option value=""></option>
 					{{#each classes as |value key|}}
-					<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
+						<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}}</option>
 					{{/each}}
-				{{/unless}}
+				{{/if}}
 			{{/select}}
 			</select>
 		</div>
@@ -192,13 +191,19 @@
 			<span>{{#unless editing}}<a class="fas fa-dice" name="randomize-deity" data-action='cg-click'></a>{{/unless}}</span>
 		</div>
 		<div class="content">
-			<select name="actor.system.deity" id="deity" {{disabled editing}}>
-			{{#select actor.system.deity}}
+			<select name="actor.system.deity" {{disabled editing}}>
 				<option value=""></option>
 				{{#each deities as |value key|}}
-				<option value="{{value.uuid}}" title="{{remove-p-tag value.system.description}}">{{value.name}} ({{value.system.alignment}})</option>
+					<option
+						title="{{remove-p-tag value.system.description}}"
+						value="{{value.uuid}}"
+						{{#ifCond ../actor.system.deity "===" value.uuid}}
+							selected
+						{{/ifCond}}
+					>
+						{{value.displayName}}
+					</option>
 				{{/each}}
-			{{/select}}
 			</select>
 		</div>
 	</div>
