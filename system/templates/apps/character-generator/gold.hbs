@@ -1,0 +1,24 @@
+<div class="SD-box">
+	<div class="header">
+		<label for="actor.system.coins.gp">
+			{{localize "SHADOWDARK.apps.character-generator.gold"}}
+		</label>
+		<span>
+			<a
+				class="fas fa-dice"
+				data-action="cg-click"
+				name="randomize-gold"
+			></a>
+		</span>
+	</div>
+
+	<div class="content centered">
+		<input
+			type="number"
+			value="{{actor.system.coins.gp}}"
+			name="actor.system.coins.gp"
+			style="width:2em;"
+		/>
+		{{localize "SHADOWDARK.coins.gp"}}
+	</div>
+</div>

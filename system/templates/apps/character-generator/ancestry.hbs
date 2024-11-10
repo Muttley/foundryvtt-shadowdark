@@ -1,0 +1,35 @@
+<div class="SD-box">
+	<div class="header">
+		<label
+			for="actor.system.ancestry"
+			title="{{localize 'SHADOWDARK.sheet.player.ancestry.tooltip'}}"
+		>
+			{{localize 'SHADOWDARK.sheet.player.ancestry.label'}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a class="fas fa-dice" name="randomize-ancestry" data-action="cg-click"></a>{{/unless}}</span>
+	</div>
+
+	<div class="content">
+		<select
+			data-action='load-ancestry'
+			id="ancestry"
+			name="actor.system.ancestry"
+			{{disabled editing}}
+		>
+			<option value=""></option>
+			{{#each ancestries as |value key|}}
+				<option
+					title="{{remove-p-tag value.system.description}}"
+					value="{{value.uuid}}"
+					{{#ifEq ../actor.system.ancestry value.uuid}}
+						selected
+					{{/ifEq}}
+				>
+					{{value.name}}
+				</option>
+			{{/each}}
+		</select>
+	</div>
+</div>

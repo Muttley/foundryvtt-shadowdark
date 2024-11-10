@@ -1,0 +1,10 @@
+{{#if level0}}
+	<p>
+		<b>
+			{{localize "SHADOWDARK.apps.character-generator.starting_gear"}}:
+		</b>
+		{{#each gearSelected as |value key|}}
+			{{value.name}}{{#unless @last}}, {{/unless}}
+		{{/each}}
+	</p>
+{{/if}}

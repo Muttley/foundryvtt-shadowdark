@@ -1,0 +1,37 @@
+{{!-- Deity --}}
+<div class="SD-box">
+	<div class="header">
+		<label
+			for="actor.system.deity"
+			title="{{localize 'SHADOWDARK.sheet.player.deity.tooltip'}}"
+		>
+			{{localize "SHADOWDARK.sheet.player.deity.label"}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action='cg-click'
+					name="randomize-deity"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<select name="actor.system.deity" {{disabled editing}}>
+			<option value=""></option>
+			{{#each deities as |value key|}}
+				<option
+					title="{{remove-p-tag value.system.description}}"
+					value="{{value.uuid}}"
+					{{#ifCond ../actor.system.deity "===" value.uuid}}
+						selected
+					{{/ifCond}}
+				>
+					{{value.displayName}}
+				</option>
+			{{/each}}
+		</select>
+	</div>
+</div>

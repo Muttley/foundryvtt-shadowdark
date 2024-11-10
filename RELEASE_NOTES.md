@@ -7,6 +7,7 @@
 * [#880] Create a new Patron Boon type for Talents
 * [#901] Added Russian as a partially complete system language.
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
+* [#937] Support selecting or rolling Patron in character generator
 * [#939] Add macro for launching the character generator
 
 ## Bugfixes

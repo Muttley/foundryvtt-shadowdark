@@ -1,0 +1,25 @@
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize 'SHADOWDARK.sheet.player.name.label'}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action="cg-click"
+					name="randomize-name"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+	<div class="content">
+		<input
+			data-dtype="String"
+			name="actor.name"
+			type="text"
+			value="{{actor.name}}"
+			{{disabled editing}}
+		/>
+	</div>
+</div>
