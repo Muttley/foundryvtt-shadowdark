@@ -6,6 +6,7 @@
 * [#879] Add new Patron item class
 * [#880] Create a new Patron Boon type for Talents
 * [#901] Added Russian as a partially complete system language.
+* [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
 * [#937] Support selecting or rolling Patron in character generator
 * [#939] Add macro for launching the character generator
@@ -23,10 +24,7 @@
 * [#938] Unecessary line breaks in Farsight talent descriptions
 
 ## Chores
-* [#911] Replaced compendium art mapping with default Foundry method.
-
-	- Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*
-
+* [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*
 * [#917] Restructure Item sheet templates to make them a bit more manageable
 * [#924] Perform an audit of existing templates to ensure we don't have any raw strings that should be i18n-ified
 * [#927] Migration runner accessing globalThis.duplicate which must now be accessed via foundry.utils.duplicate
@@ -34,6 +32,7 @@
 * [#929] Merged Russian language updates from Crowdin
 
 *Many thanks to **AdamsGH** for contributing **Russian** translation data.*
+
 
 ---
 
