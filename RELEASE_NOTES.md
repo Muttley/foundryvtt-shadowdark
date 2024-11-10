@@ -7,6 +7,8 @@
 * [#880] Create a new Patron Boon type for Talents
 * [#901] Added Russian as a partially complete system language.
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
+* [#937] Support selecting or rolling Patron in character generator
+* [#939] Add macro for launching the character generator
 
 ## Bugfixes
 * [#894] Unnecessary "items not found" warning for "+2 Stats Points" from ShadowDarklings
@@ -18,6 +20,7 @@
 * [#919] Class item template has incorrect default spellcasting class value
 * [#930] Class Abilities can't be used if they have no associated skill roll
 * [#936] Character Generator: Don't display empty alignment for Deities that don't have one
+* [#938] Unecessary line breaks in Farsight talent descriptions
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method.

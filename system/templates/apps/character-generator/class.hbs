@@ -1,0 +1,46 @@
+<div class="SD-box">
+	<div class="header">
+		<label
+			for="actor.system.class"
+			title="{{localize 'SHADOWDARK.sheet.player.class.tooltip'}}"
+		>
+			{{localize 'SHADOWDARK.sheet.player.class.label'}}
+		</label>
+		<span>
+			{{#unless level0}}
+				<a
+					class="fas fa-dice"
+					data-action='cg-click'
+					name="randomize-class"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<select
+			data-action='load-class-talents'
+			id="class"
+			name="actor.system.class"
+		>
+			{{#if level0}}
+				<option value="{{level0Class.uuid}}" selected>
+					{{level0Class.name}}
+				</option>
+			{{else}}
+				<option value=""></option>
+				{{#each classes as |value key|}}
+					<option
+						title="{{remove-p-tag value.system.description}}"
+						value="{{value.uuid}}"
+						{{#ifEq ../actor.system.class value.uuid}}
+							selected
+						{{/ifEq}}
+					>
+						{{value.name}}
+					</option>
+				{{/each}}
+			{{/if}}
+		</select>
+	</div>
+</div>

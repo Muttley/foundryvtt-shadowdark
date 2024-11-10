@@ -1,0 +1,40 @@
+<div class="SD-box">
+	<div class="header">
+		<label
+			for="actor.system.background"
+			title="{{localize 'SHADOWDARK.sheet.player.background.tooltip'}}"
+		>
+			{{localize 'SHADOWDARK.sheet.player.background.label'}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action='cg-click'
+					name="randomize-background"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<select
+			id="background"
+			name="actor.system.background"
+			{{disabled editing}}
+		>
+			<option value=""></option>
+			{{#each backgrounds as |value key|}}
+				<option
+					title="{{remove-p-tag value.system.description}}"
+					value="{{value.uuid}}"
+					{{#ifEq ../actor.system.background value.uuid}}
+						selected
+					{{/ifEq}}
+				>
+					{{value.name}}
+				</option>
+			{{/each}}
+		</select>
+	</div>
+</div>
