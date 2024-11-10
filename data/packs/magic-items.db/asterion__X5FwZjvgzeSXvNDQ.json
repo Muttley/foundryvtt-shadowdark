@@ -38,6 +38,7 @@
 		},
 		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",

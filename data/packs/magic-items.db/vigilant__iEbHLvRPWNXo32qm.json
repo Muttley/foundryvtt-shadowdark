@@ -38,6 +38,7 @@
 		},
 		"description": "<p><strong>Benefit</strong>. The wielder cannot be surprised.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",
