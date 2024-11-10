@@ -1,0 +1,66 @@
+{{!-- Character Details --}}
+<div class="SD-box grid-rowspan-7">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.item.tab.details"}}
+		</label>
+		<span></span>
+	</div>
+
+	<div class="content details">
+		{{> apps/character-generator/_partials/class-description}}
+		{{> apps/character-generator/_partials/ancestry-talents}}
+		{{> apps/character-generator/_partials/weapons}}
+		{{> apps/character-generator/_partials/armor}}
+		{{> apps/character-generator/_partials/languages}}
+
+		{{!-- Choice Class Talents --}}
+		{{#if classTalents.choice}}
+			{{#if classTalents.selection}}
+				<p><a class="fas fa-pen-to-square" data-action='clear-class-talents'></a>
+				{{#each classTalents.selection as |value key|}}
+					<b>{{value.name}}.</b>
+					{{{value.formattedDescription}}}
+				{{/each}}
+				</p>
+			{{/if}}
+			{{#unless classTalents.selection}}
+				<fieldset>
+				<legend>{{localize "SHADOWDARK.apps.character-generator.choose"}}:</legend>
+				{{#each classTalents.choice as |value key|}}
+					<input type="radio" name="classTalents.selected" value="{{value.uuid}}">
+					<b>{{value.name}}.</b>
+					{{{value.formattedDescription}}}
+					{{#unless @last}}<br>{{/unless}}
+				{{/each}}
+				</fieldset>
+			{{/unless}}
+		{{/if}}
+
+		{{#if actor.system.patron}}
+			<p>
+				<a class="fas fa-pen-to-square" data-action='edit-patron'></a>
+				<b>{{localize "SHADOWDARK.form.section_header.patron.label"}}.</b>
+				{{patronName}}
+			</p>
+		{{/if}}
+
+		{{!-- Fixed Class Talents --}}
+		{{#each classTalents.fixed as |value key|}}
+			<p>
+				<b>{{value.name}}.</b>
+				{{{value.formattedDescription}}}
+			</p>
+		{{/each}}
+
+		{{!-- Level 0 Gear --}}
+		{{#if level0}}
+			<p>
+				<b>{{localize "SHADOWDARK.apps.character-generator.starting_gear"}}:</b>
+				{{#each gearSelected as |value key|}}
+					{{value.name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+		{{/if}}
+	</div>
+</div>

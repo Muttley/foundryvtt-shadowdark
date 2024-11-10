@@ -107,6 +107,23 @@ export default class UtilitySD {
 		}
 	}
 
+	static async getItemsFromRollResults(results) {
+		const items = [];
+
+		for (const result of results) {
+			const uuid = [
+				"Compendium",
+				result.documentCollection,
+				result.documentId,
+
+			].join(".");
+
+			items.push(await fromUuid(uuid));
+		}
+
+		return items;
+	}
+
 	static getMessageStyles() {
 		const messageStyles = this.foundryMinVersion(12)
 			? CONST.CHAT_MESSAGE_STYLES

@@ -1,0 +1,19 @@
+<fieldset>
+	<legend>
+		{{localize "SHADOWDARK.apps.character-generator.choose"}}:
+	</legend>
+	{{#each ancestryTalents.choice as |value key|}}
+		<input
+			name="ancestryTalents.selected"
+			type="radio"
+			value="{{value.uuid}}"
+		>
+		<b>
+			{{value.name}}.
+		</b>
+		{{{value.formattedDescription}}}
+		{{#unless @last}}
+			<br>
+		{{/unless}}
+	{{/each}}
+</fieldset>
