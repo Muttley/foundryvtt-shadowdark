@@ -46,6 +46,7 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: Licht ausschalten
 SHADOWDARK.app.loading.body: Searching Distant Lands...
 SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: Angriffsreichweite
+SHADOWDARK.apps.character-generator.choose: Choose
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
 SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
@@ -53,6 +54,8 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a
 SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
+SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
 SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
