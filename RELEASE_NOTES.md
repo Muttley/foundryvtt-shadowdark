@@ -5,6 +5,7 @@
 * [#847] Add support for Warlock class Boon which gives the ability to learn a Wizard spell
 * [#879] Add new Patron item class
 * [#880] Create a new Patron Boon type for Talents
+* [#881] Support rolling on a character's Patron's Boon table if necessary in the Level Up app
 * [#901] Added Russian as a partially complete system language.
 * [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory

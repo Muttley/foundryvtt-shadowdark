@@ -1,0 +1,53 @@
+{{#ifCond totalSpellsToChoose ">" 0}}
+	<div class="SD-box">
+		<div class="header">
+			<label>
+				{{localize "SHADOWDARK.sheet.player.spells"}}
+			</label>
+			<span>
+				<a class="fas fa-book" data-action="open-spellbook"></a>
+			</span>
+		</div>
+
+		<div class="content spells">
+			{{#each spells}}
+				{{#if this.max}}
+					<div class="flexrow">
+						<h3>
+							{{this.name}}
+						</h3>
+						<div class="flex3">
+							{{#each (addEmptySlots this.objects this.max)}}
+								<fieldset class="items">
+									{{#if this}}
+										<div style="white-space: nowrap;">
+											<a
+												class="remove-item fas fa-delete-right"
+												data-action="delete-spell"
+												data-index="{{@index}}"
+												data-tier="{{@../key}}"
+											></a>
+											<a
+												class="content-link"
+												data-link
+												data-tooltip="{{this.name}}"
+												data-uuid="{{this.uuid}}"
+											>
+												{{this.name}}
+											</a>
+										</div>
+									{{/if}}
+									{{#unless this}}
+										<div>
+											{{localize "SHADOWDARK.apps.level-up.dragdrop"}}
+										</div>
+									{{/unless}}
+								</fieldset>
+							{{/each}}
+						</div>
+					</div>
+				{{/if}}
+			{{/each}}
+		</div>
+	</div>
+{{/ifCond}}

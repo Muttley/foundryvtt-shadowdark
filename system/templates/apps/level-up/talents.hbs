@@ -1,0 +1,72 @@
+{{!-- Talents --}}
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.class.talents.label"}}
+			{{#if canRollBoons}}
+				{{localize "SHADOWDARK.apps.level-up.or_boons"}}
+			{{/if}}
+		</label>
+		<span>
+			<a
+				class="fas fa-table-list"
+				data-action="view-talent-table"
+				data-tooltip="{{localize 'SHADOWDARK.class.talents_table.label'}}"
+			></a>
+			{{#if canRollBoons}}
+				<a
+					class="fas fa-table-list"
+					data-action="view-boon-table"
+					data-tooltip="{{localize 'SHADOWDARK.patron.boons_table.label'}}"
+				></a>
+			{{/if}}
+		</span>
+	</div>
+
+	<div class="content talents">
+		{{#unless talentGained}}
+			{{localize "SHADOWDARK.apps.level-up.notalent"}}
+		{{/unless}}
+
+		{{#if talentGained}}
+			{{#unless rolls.talent}}
+				<button type="button" data-action="roll-talent">
+					{{localize "SHADOWDARK.apps.level-up.roll_talent"}}
+				</button>
+			{{/unless}}
+			{{#if canRollBoons}}
+				{{#unless rolls.boon}}
+					<button type="button" data-action="roll-boon">
+						{{localize "SHADOWDARK.apps.level-up.roll_boon"}}
+					</button>
+				{{/unless}}
+			{{/if}}
+
+			<fieldset class="items">
+				{{#unless talents}}
+					<div>
+						{{localize "SHADOWDARK.apps.level-up.dragdrop"}}
+					</div>
+				{{/unless}}
+
+				{{#each talents}}
+					<div style="white-space: nowrap;">
+						<a
+							class="remove-item fas fa-delete-right"
+							data-action="delete-talent"
+							data-index="{{@index}}"
+						></a>
+						<a
+							class="content-link"
+							data-link
+							data-tooltip="{{this.name}}"
+							data-uuid="{{this.uuid}}"
+						>
+							{{this.name}}
+						</a>
+					</div>
+				{{/each}}
+			</fieldset>
+		{{/if}}
+	</div>
+</div>

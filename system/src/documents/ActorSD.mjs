@@ -881,7 +881,14 @@ export default class ActorSD extends Actor {
 		const spellcasterClasses =
 			await shadowdark.compendiums.spellcastingBaseClasses();
 
-		for (const bonusClass of this.system.bonuses.spellcastingClasses ?? []) {
+		// De-duplicate any bonus classes the Actor has
+		const bonusClasses = [
+			...new Set(
+				this.system.bonuses.spellcastingClasses ?? []
+			),
+		];
+
+		for (const bonusClass of bonusClasses) {
 			playerSpellClasses.push(
 				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
 			);
