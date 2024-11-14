@@ -20,6 +20,10 @@
 		width: 100%;
 	}
 
+	input[type=radio] {
+		width: auto;
+	}
+
 	hr {
 		border: none;
 		border-top: solid 1px #{$primary-color};
@@ -78,5 +82,9 @@
 			color: var(--primary);
 		}
 	}
+
+	.checkbox {
+		font-size:14px;
+	};
 
 }
