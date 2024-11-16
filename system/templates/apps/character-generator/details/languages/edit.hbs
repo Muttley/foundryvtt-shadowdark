@@ -1,0 +1,52 @@
+<fieldset>
+	<legend>
+		<a class="fas fa-square-xmark" data-action='edit-languages'></a>
+		<b>
+			{{localize "SHADOWDARK.sheet.player.languages"}}
+		</b>
+	</legend>
+
+	{{#each langData.fixed as |value key|}}
+		{{lookup ../languages .}}{{#unless @last}}, {{/unless}}
+	{{/each}}
+
+	{{#if langData.ancestry.select}}
+		<hr>
+
+		{{> apps/character-generator/details/languages/language-choice
+			key="ancestry"
+			label=""
+			value=langData.ancestry
+		}}
+	{{/if}}
+
+	{{#if langData.class.select}}
+		<hr>
+
+		{{> apps/character-generator/details/languages/language-choice
+			key="class"
+			label=""
+			value=langData.class
+		}}
+	{{/if}}
+
+	{{#if langData.common.select}}
+		<hr>
+
+		{{> apps/character-generator/details/languages/language-choice
+			key="common"
+			label=(localize "SHADOWDARK.language.rarity.common")
+			value=langData.common
+		}}
+	{{/if}}
+
+	{{#if langData.rare.select}}
+		<hr>
+
+		{{> apps/character-generator/details/languages/language-choice
+			key="rare"
+			label=(localize "SHADOWDARK.language.rarity.rare")
+			value=langData.rare
+		}}
+	{{/if}}
+</fieldset>

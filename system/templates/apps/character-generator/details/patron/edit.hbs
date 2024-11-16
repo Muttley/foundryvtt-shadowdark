@@ -1,0 +1,23 @@
+<fieldset>
+	<legend>
+		{{localize "SHADOWDARK.apps.character-generator.choose"}}
+		{{localize "SHADOWDARK.form.section_header.patron.label"}}:
+	</legend>
+	{{#each patrons as |value key|}}
+		<input
+			type="radio"
+			name="actor.system.patron"
+			value="{{value.uuid}}"
+		>
+
+		<b>
+			{{value.name}}.
+		</b>
+
+		{{{value.formattedDescription}}}
+
+		{{#unless @last}}
+			<br>
+		{{/unless}}
+	{{/each}}
+</fieldset>

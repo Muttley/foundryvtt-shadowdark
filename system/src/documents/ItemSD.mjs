@@ -72,7 +72,7 @@ export default class ItemSD extends Item {
 		};
 
 		if (this.actor.type === "Player") {
-			data.isSpellcaster = await this.actor.isSpellcaster();
+			data.isSpellCaster = await this.actor.isSpellCaster();
 			data.canUseMagicItems = await this.actor.canUseMagicItems();
 		}
 
@@ -155,7 +155,7 @@ export default class ItemSD extends Item {
 		}
 
 		const templatePath = this.getItemTemplate(
-			"systems/shadowdark/templates/partials/details"
+			"systems/shadowdark/templates/_partials/details"
 		);
 
 		return await renderTemplate(templatePath, data);
@@ -355,179 +355,6 @@ export default class ItemSD extends Item {
 		return ranges.join(", ");
 	}
 
-	/* ---------- Effect Methods ---------- */
-
-	/**
-	 * Creates a dialog that allows the user to pick from a list. Returns
-	 * a slugified name to be used in effect values.
-	 * @param {string} type - Type of input to ask about
-	 * @param {Array<string>} options - The list of options to choose from
-	 * @returns {string}
-	 */
-	async _askEffectInput(effectParameters) {
-		// const effectParameters = [{key, type, options}, {key, type, options}];
-		const parameters = Array.isArray(effectParameters)
-			? effectParameters
-			: [effectParameters];
-		for (const parameter of parameters) {
-			parameter.label = await game.i18n.localize(
-				`SHADOWDARK.dialog.effect.choice.${parameter.type}`
-			);
-			parameter.uuid = foundry.utils.randomID();
-		}
-
-		const content = await renderTemplate(
-			"systems/shadowdark/templates/dialog/effect-list-choice.hbs",
-			{
-				effectParameters: parameters,
-			}
-		);
-
-		const data = {
-			title: await game.i18n.localize("SHADOWDARK.dialog.effect.choices.title"),
-			content,
-			classes: ["shadowdark-dialog"],
- 			buttons: {
-				submit: {
-					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
-					callback: html => {
-						const selected = {};
-
-						for (const parameter of parameters) {
-							// const formValue = html[0].querySelector("input")?.value ?? "";
-							const selector = `#${parameter.type}-selection-${parameter.uuid}`;
-							const formValue = html[0].querySelector(selector)?.value ?? "";
-
-							let slug = false;
-							for (const [key, value] of Object.entries(parameter.options)) {
-								if (formValue === value) {
-									slug = key;
-									break;
-								}
-							}
-
-							selected[parameter.type] = [slug, formValue] ?? null;
-						}
-
-						return selected;
-					},
-				},
-			},
-			close: () => false,
-		};
-
-		const result = await Dialog.wait(data);
-		return result;
-	}
-
-	/**
-	 * Handles special cases for predefined effect mappings
-	 *
-	 * @param {string} key - effectKey from mapping
-	 * @param {Object} value - data value from mapping
-	 * @param {Object} name - name value from mapping
-	 * @returns {Object}
-	 */
-	async _handlePredefinedEffect(key, value, name=null) {
-		if (key === "acBonusFromAttribute") {
-			const type = "attribute";
-
-			const options = shadowdark.config.ABILITIES_LONG;
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "armorMastery") {
-			const type = "armor";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.baseArmor()
-			);
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "lightSource") {
-			const type = "lightsource";
-
-			// TODO Need to move to light source objects to allow customisation
-			//
-			const lightSourceList = await foundry.utils.fetchJsonWithTimeout(
-				"systems/shadowdark/assets/mappings/map-light-sources.json"
-			);
-
-			const options = {};
-			Object.keys(lightSourceList).map(i => {
-				return options[i] = game.i18n.localize(lightSourceList[i].lang);
-			});
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "spellAdvantage") {
-			const type = "spell";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.spells()
-			);
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (
-			[
-				"weaponDamageDieImprovementByProperty",
-				"weaponDamageExtraDieImprovementByProperty",
-			].includes(key)
-		) {
-			const type = "weapon_property";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.weaponProperties()
-			);
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "weaponDamageExtraDieByProperty") {
-			const parameters = [
-				{
-					key: key,
-					type: "damage_die",
-					options: shadowdark.config.DICE,
-				},
-				{
-					key: key,
-					type: "weapon_property",
-					options: await shadowdark.utils.getSlugifiedItemList(
-						await shadowdark.compendiums.weaponProperties()
-					),
-				},
-			];
-
-			const chosen = await this._askEffectInput(parameters);
-
-
-			if (chosen.damage_die && chosen.weapon_property) {
-				return [`${chosen.damage_die[0]}|${chosen.weapon_property[0]}`];
-			}
-			else {
-				return [value];
-			}
-		}
-		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
-			const type = "weapon";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.baseWeapons()
-			);
-
-			const chosen = await this._askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-
-		return [value];
-	}
 
 	async propertyItems() {
 		const propertyItems = [];
@@ -559,6 +386,7 @@ export default class ItemSD extends Item {
 				* (CONFIG.SHADOWDARK.DURATION_UNITS[duration.type] ?? 0);
 		}
 	}
+
 
 	/**
 	 * Calculates the remaining duration, if the Effect is expired, and

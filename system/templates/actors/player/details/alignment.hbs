@@ -1,0 +1,17 @@
+<!-- Alignment -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize 'SHADOWDARK.sheet.actor.alignment'}}
+		</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<select name="system.alignment">
+			{{selectOptions config.ALIGNMENTS
+				selected=system.alignment
+				localize=false
+			}}
+		</select>
+	</div>
+</div>

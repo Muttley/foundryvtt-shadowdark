@@ -1,0 +1,26 @@
+<!-- Deity -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.player.deity.label"}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="deity"
+					for="system.deity">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		<a
+			class="content-link background-content-link"
+			data-link
+			data-uuid="{{system.deity}}"
+		>
+			{{uuidToName system.deity}}
+		</a>
+	</div>
+</div>

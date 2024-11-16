@@ -1,13 +1,13 @@
 {
 	"_id": "IHpIMJy4xdXZnPFy",
 	"_key": "!tables!IHpIMJy4xdXZnPFy",
-	"description": "- Pick one Weapon (See Weapons compendium)\n- Pick Leather Armor if you can wear it (See Armor compendium)",
+	"description": "<p>- Pick one Weapon (See Weapons compendium) - Pick Leather Armor if you can wear it (See Armor compendium)</p>",
 	"displayRoll": true,
 	"folder": "dbU918S4CVYyoW7S",
 	"formula": "1",
 	"img": "icons/environment/people/group.webp",
 	"name": "Roll Random Character",
-	"replacement": true,
+	"replacement": false,
 	"results": [
 		"9GrvqyPrqFuLM46C",
 		"EJSTyXp75GftHgdd",

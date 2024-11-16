@@ -1,0 +1,34 @@
+<!-- Class -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.player.class.label"}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="class"
+					for="system.class">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		{{#if isSpellCaster}}
+			<a
+				class="fas fa-book"
+				data-action="open-spellbook"
+				data-tooltip="{{localize 'SHADOWDARK.sheet.player.open_spellbook.tooltip'}}"
+				style="margin-right:4px"
+			></a>
+		{{/if}}
+		<a
+			class="content-link background-content-link"
+			data-link
+			data-uuid="{{system.class}}"
+		>
+			{{uuidToName system.class}}
+		</a>
+	</div>
+</div>

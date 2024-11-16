@@ -248,6 +248,20 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async addPatron(item) {
+		const myClass = await this.getClass();
+
+		if (myClass && myClass.system.patron.required) {
+			this.update({"system.patron": item.uuid});
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.patron.no_supported_class")
+			);
+		}
+	}
+
+
 	async addToHpBase(hp) {
 		const currentHpBase = this.system.attributes.hp.base;
 		this.update({
@@ -330,7 +344,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
 	}
@@ -363,7 +377,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
 	}
@@ -371,7 +385,7 @@ export default class ActorSD extends Actor {
 
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/weapon-attack.hbs",
+			"systems/shadowdark/templates/_partials/weapon-attack.hbs",
 			options
 		);
 	}
@@ -835,6 +849,12 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async getPatron() {
+		const uuid = this.system.patron ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
 	async getDeity() {
 		const uuid = this.system.deity ?? "";
 		return await this._getItemFromUuid(uuid);
@@ -857,10 +877,57 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async getSpellcastingAbility() {
-		const characterClass = await this.getClass();
+	async getSpellcasterClasses() {
+		const actorClass = await this.getClass();
 
-		return characterClass?.system?.spellcasting?.ability ?? "";
+		const playerSpellClasses = [];
+
+		let spellClass = actorClass.system.spellcasting.class;
+		if (spellClass === "") {
+			playerSpellClasses.push(actorClass);
+		}
+		else if (spellClass !== "__not_spellcaster__") {
+			playerSpellClasses.push(
+				await this._getItemFromUuid(spellClass)
+			);
+		}
+
+		const spellcasterClasses =
+			await shadowdark.compendiums.spellcastingBaseClasses();
+
+		for (const bonusClass of this.system.bonuses.spellcastingClasses ?? []) {
+			playerSpellClasses.push(
+				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
+			);
+		}
+
+		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
+	async getSpellcastingAbility() {
+		const spellcasterClasses = await this.getSpellcasterClasses();
+
+		let chosenAbility = "";
+		let chosenAbilityModifier = 0;
+
+		for (const casterClass of spellcasterClasses) {
+			const ability = casterClass?.system?.spellcasting?.ability ?? "";
+
+			if (chosenAbility === "") {
+				chosenAbility = ability;
+				chosenAbilityModifier = this.abilityModifier(ability);
+			}
+			else {
+				const modifier = this.abilityModifier(ability);
+				if (modifier > chosenAbilityModifier) {
+					chosenAbility = ability;
+					chosenAbilityModifier = modifier;
+				}
+			}
+		}
+
+		return chosenAbility;
 	}
 
 	async getTitle() {
@@ -907,13 +974,19 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async isSpellcaster() {
+	async isSpellCaster() {
 		const characterClass = await this.getClass();
 
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingClass !== "__not_spellcaster__"
+		const isSpellcastingClass =
+			characterClass && spellcastingClass !== "__not_spellcaster__";
+
+		const hasBonusSpellcastingClasses =
+			(this.system.bonuses.spellcastingClasses ?? []).length > 0;
+
+		return isSpellcastingClass || hasBonusSpellcastingClasses
 			? true
 			: false;
 	}
@@ -993,6 +1066,48 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
+
+	async openSpellBook() {
+		const playerSpellcasterClasses = await this.getSpellcasterClasses();
+
+		const openChosenSpellbook = classUuid => {
+			new shadowdark.apps.SpellBookSD(
+				classUuid,
+				this.id
+			).render(true);
+		};
+
+		if (playerSpellcasterClasses.length <= 0) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
+				{ permanent: false }
+			);
+		}
+		else if (playerSpellcasterClasses.length === 1) {
+			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		}
+		else {
+			return renderTemplate(
+				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
+				{classes: playerSpellcasterClasses}
+			).then(html => {
+				const dialog = new Dialog({
+					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
+					content: html,
+					buttons: {},
+					render: html => {
+						html.find("[data-action='open-class-spellbook']").click(
+							event => {
+								event.preventDefault();
+								openChosenSpellbook(event.currentTarget.dataset.uuid);
+								dialog.close();
+							}
+						);
+					},
+				}).render(true);
+			});
+		}
+	}
 
 	/** @inheritDoc */
 	prepareData() {
@@ -1313,7 +1428,7 @@ export default class ActorSD extends Actor {
 			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
 
 			// does ability use on a roll check?
-			if (typeof item.system.ability !== "undefined") {
+			if (item.system.ability !== "") {
 				options = foundry.utils.mergeObject({target: item.system.dc}, options);
 				const result = await this.rollAbility(
 					item.system.ability,

@@ -46,6 +46,7 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.loading.body: Etsitään kaukaisia maita...
 SHADOWDARK.app.loading.title: Ladataan
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
+SHADOWDARK.apps.character-generator.choose: Choose
 SHADOWDARK.apps.character-generator.create_character: Luo uusi hahmo
 SHADOWDARK.apps.character-generator.error.create: Pelaajahahmon luonti epäonnistui {error}
 SHADOWDARK.apps.character-generator.error.name: Hahmon nimi ei voi olla tyhjä
@@ -53,6 +54,8 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Ei pystytä arpo
 SHADOWDARK.apps.character-generator.gear: Varusteet
 SHADOWDARK.apps.character-generator.gold: Kulta
 SHADOWDARK.apps.character-generator.name: Hahmon nimi
+SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Hahmo luotu
 SHADOWDARK.apps.character-generator.title: Hahmogeneraattori
 SHADOWDARK.apps.character-generator.tooltip: Täysin satunnainen hahmo
@@ -140,7 +143,6 @@ SHADOWDARK.armor.properties.shield: Kilpi
 SHADOWDARK.boon.type.label: Siunauksen tyyppi
 SHADOWDARK.boons.blessing: Siunaus
 SHADOWDARK.boons.oath: Vala
-SHADOWDARK.boons.patron: Patron
 SHADOWDARK.boons.secret: Salaisuus
 SHADOWDARK.chat_card.button.attack: Heitä hyökkäysheitto
 SHADOWDARK.chat_card.button.cast_spell: Loihdi loitsu
@@ -188,6 +190,7 @@ SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.class-ability.ability.check: Kyvykkyysheitto
 SHADOWDARK.class-ability.ability.label: Kyky
 SHADOWDARK.class-ability.available.label: Käytettävissä
+SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: VA
 SHADOWDARK.class-ability.group.label: Kykyjoukko
 SHADOWDARK.class-ability.limited-uses.label: Rajoitettuja käyttökertoja?
@@ -202,6 +205,7 @@ SHADOWDARK.class.choice_count: Valintojen määrä
 SHADOWDARK.class.choice: Valinta
 SHADOWDARK.class.fighter: Taistelija
 SHADOWDARK.class.fixed: Kiinteä
+SHADOWDARK.class.has_patron.count.label: Has Patron?
 SHADOWDARK.class.hit_points.label: Osumapisteheitto
 SHADOWDARK.class.language_choices.count.label: Valintojen määrä
 SHADOWDARK.class.language_choices.label: Kielivalinnat
@@ -213,6 +217,7 @@ SHADOWDARK.class.spellcasting_ability.label: Loihtimiskyky
 SHADOWDARK.class.spellcasting_class.label: Loitsun hahmoluokka
 SHADOWDARK.class.spellcasting.base_difficulty.label: Loihtimisen vakio vaikeusaste
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
+SHADOWDARK.class.starting_boons.count.label: Starting Boons
 SHADOWDARK.class.talent_choices.count.label: Valintojen määrä
 SHADOWDARK.class.talent_choices.label: Lahjakkuusvalinnat
 SHADOWDARK.class.talent_choices.prompt: Valitse lahjakkuus...
@@ -248,6 +253,7 @@ SHADOWDARK.dialog.edit_hp.title: Muokkaa osumapisteitä
 SHADOWDARK.dialog.edit_stats.title: Muokkaa kyvykkyysarvoja
 SHADOWDARK.dialog.effect.choice.armor: Valitse panssarin tyyppi
 SHADOWDARK.dialog.effect.choice.attribute: Valitse ominaisuus
+SHADOWDARK.dialog.effect.choice.class: Choose Class
 SHADOWDARK.dialog.effect.choice.damage_die: Valitse vahinkonoppa
 SHADOWDARK.dialog.effect.choice.lightsource: Valitse valonlähde
 SHADOWDARK.dialog.effect.choice.property: Valitse tyyppi
@@ -300,9 +306,11 @@ SHADOWDARK.dialog.select_deity.prompt: Valitse jumaluus...
 SHADOWDARK.dialog.select_deity.title: Jumaluuden valinta
 SHADOWDARK.dialog.select_languages.prompt: Valitse kieli...
 SHADOWDARK.dialog.select_languages.title: Kielien valinta
+SHADOWDARK.dialog.select_patron.title: Select Patron
 SHADOWDARK.dialog.select_weapon_property.prompt: Valitse aseen ominaisuus...
 SHADOWDARK.dialog.select_weapon_property.title: Aseen ominaisuuksien valinta
 SHADOWDARK.dialog.spell_roll.title: Heitä loihtimisheitto käyttäen
+SHADOWDARK.dialog.spellbook.open_which_class.title: Choose Available Spellboook
 SHADOWDARK.dialog.submit: Tallenna
 SHADOWDARK.dialog.tooltip.talent_advantage: Jokin lahjakkuuksistasi antaa sinulle edun tähän heittoon
 SHADOWDARK.dialog.type_here: Type Here...
@@ -338,6 +346,7 @@ SHADOWDARK.error.spells.no_spellcasting_ability_set: Hahmon loihtimiskyvykkyytt�
 SHADOWDARK.form.section_header.equipment.label: Varusteet
 SHADOWDARK.form.section_header.languages.label: Kielet
 SHADOWDARK.form.section_header.names.label: Nimet
+SHADOWDARK.form.section_header.patron.label: Patron
 SHADOWDARK.form.section_header.spellcasting.label: Loihtiminen
 SHADOWDARK.form.section_header.talents.label: Lahjakkuudet
 SHADOWDARK.hotbar.abilityLost: Kyky on toistaiseksi menetetty
@@ -436,6 +445,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Kantama-aseiden hyö
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Kantama-aseiden vahinkoheittoihin bonus
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Tietyn loitsun loihtiminen edun kanssa
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Loihtimisbonus
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Puolustuspistebonus ilman panssaria
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Aseellisen hyökkäysheiton bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Aseellisen vahinkoheiton bonus
@@ -452,6 +462,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: Ei voi lisätä efektej
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Ei voi lisätä efektejä "kierros"-kestolla taistelun ulkopuolella.
 SHADOWDARK.item.equipped: Käytössä
 SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
+SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
 SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
 SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
 SHADOWDARK.item.inventory_quantity: Lukumäärä
@@ -574,6 +585,7 @@ SHADOWDARK.npc_move.near: Lähellä
 SHADOWDARK.npc_move.none: Ei yhtään
 SHADOWDARK.npc_move.special: Erikoisliikkuminen
 SHADOWDARK.npc_move.triple_near: '"Lähellä" etäisyys triplana'
+SHADOWDARK.patron.boons_table.label: Patron Boons Table
 SHADOWDARK.property.type.option.armor: Panssari
 SHADOWDARK.property.type.option.weapon: Ase
 SHADOWDARK.property.type.title: Ominaisuuden tyyppi
@@ -701,10 +713,20 @@ SHADOWDARK.sheet.player.class.label: Hahmoluokka
 SHADOWDARK.sheet.player.class.tooltip: Hahmosi työnkuva
 SHADOWDARK.sheet.player.deity.label: Jumaluus
 SHADOWDARK.sheet.player.deity.tooltip: Hahmosi kosminen yhteys kaaoksen ja järjestyksen vastakkaisiin voimiin tai neutraaliin tasapainoon.
+SHADOWDARK.sheet.player.inventory.gear.label: Gear
+SHADOWDARK.sheet.player.inventory.items.label: Items
+SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
+SHADOWDARK.sheet.player.inventory.slots.label: Slots
+SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
+SHADOWDARK.sheet.player.inventory.treasure.label: Treasure
+SHADOWDARK.sheet.player.inventory.type.label: Type
+SHADOWDARK.sheet.player.inventory.value.label: Value
 SHADOWDARK.sheet.player.languages: Kielet
 SHADOWDARK.sheet.player.luck: Tuuripiste
 SHADOWDARK.sheet.player.melee_attacks: Lähihyökkäys
 SHADOWDARK.sheet.player.name.label: Nimi
+SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
+SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
 SHADOWDARK.sheet.player.ranged_attacks: Kantamahyökkäykset
 SHADOWDARK.sheet.player.spells_from_items: Loitsut esineistä
 SHADOWDARK.sheet.player.spells_tier: Loitsutaso
@@ -757,6 +779,7 @@ SHADOWDARK.talent.backstab: Yllätyshyökkäys
 SHADOWDARK.talent.class.ancestry: Laji
 SHADOWDARK.talent.class.class: Hahmoluokka
 SHADOWDARK.talent.class.level: Taso
+SHADOWDARK.talent.class.patronBoon: Patron Boon
 SHADOWDARK.talent.level_gained: Level Gained
 SHADOWDARK.talent.type.ability_improvement: Kyvyn parannus
 SHADOWDARK.talent.type.advantage.hp: Osumapisteiden heitto edun kanssa
@@ -766,6 +789,7 @@ SHADOWDARK.talent.type.advantage.title: Etubonus
 SHADOWDARK.talent.type.armor_bonus: Puolustuspistebonus panssarista
 SHADOWDARK.talent.type.armor_mastery: Taituruus panssarin kanssa
 SHADOWDARK.talent.type.backstab_die: Lisänoppa yllätyshyökkäykseen
+SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
 SHADOWDARK.talent.type.custom: Mukautettu lahjakkuus
 SHADOWDARK.talent.type.melee_attack_bonus: Lähitaistelun hyökkäysheittoihin bonus
 SHADOWDARK.talent.type.melee_damage_bonus: Lähitaistelun vahinkoheittoihin bonus

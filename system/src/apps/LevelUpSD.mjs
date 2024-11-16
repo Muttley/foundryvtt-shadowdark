@@ -1,11 +1,3 @@
-Handlebars.registerHelper("addEmptySlots", (objects, max) => {
-	const newOjects = objects.map(a => ({...a}));
-	for (let j = 0; j < max - objects.length; j++) {
-		newOjects.push(null);
-	}
-	return newOjects;
-});
-
 export default class LevelUpSD extends FormApplication {
 
 	constructor(uid) {
@@ -103,18 +95,13 @@ export default class LevelUpSD extends FormApplication {
 			this.data.currentLevel = this.data.actor.system.level.value;
 			this.data.targetLevel =  this.data.currentLevel +1;
 			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
-			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
+			this.data.totalSpellsToChoose = 0;
 
-			if (this.data.isSpellCaster) {
+			if (await this.data.actor.isSpellCaster()) {
 				this.data.spellcastingClass =
 					this.data.class.system.spellcasting.class === ""
 						? this.data.actor.system.class
 						: this.data.class.system.spellcasting.class;
-
-				this.spellbook = new shadowdark.apps.SpellBookSD(
-					this.data.spellcastingClass,
-					this.data.actor.id
-				);
 
 				// calculate the spells gained for the target level from the spells known table
 				if (this.data.class.system.spellcasting.spellsknown) {
@@ -133,6 +120,7 @@ export default class LevelUpSD extends FormApplication {
 
 					Object.keys(targetSpells).forEach(k => {
 						this.data.spells[k].max = targetSpells[k] - currentSpells[k];
+						this.data.totalSpellsToChoose += this.data.spells[k].max;
 					});
 				}
 				else {
@@ -169,7 +157,7 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _openSpellBook() {
-		this.spellbook.render(true);
+		this.data.actor.openSpellBook();
 	}
 
 	async _onRollHP() {
@@ -228,7 +216,7 @@ export default class LevelUpSD extends FormApplication {
 		if (this.data.talentGained) {
 
 			// checks for effects on talent and prompts if needed
-			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
+			let talentObj = await shadowdark.effects.createItemWithEffect(talentItem);
 			talentObj.system.level = this.data.targetLevel;
 			talentObj.uuid = talentItem.uuid;
 			this.data.talents.push(talentObj);

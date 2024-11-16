@@ -1,0 +1,8 @@
+{{#if ancestryTalents.fixed}}
+	<p>
+		{{#each ancestryTalents.fixed as |value key|}}
+			<b>{{value.name}}.</b>
+			{{{value.formattedDescription}}}
+		{{/each}}
+	</p>
+{{/if}}

@@ -1,6 +1,6 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
-		<div class="item-grid">
+		<div>
 			<h3>{{localize 'SHADOWDARK.item.npc_attack_count'}}</h3>
 			<input
 				name="system.attack.num"
@@ -15,12 +15,13 @@
 				placeholder="0"
 			}}
 
-			<h3>{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}</h3>
-			<a
-				class="properties-list"
-				data-action="npc-attack-ranges"
-			>
-				{{npcAttackRangesDisplay}}
+			<h3>
+				{{localize 'SHADOWDARK.app.npc_attack_ranges.title'}}
+			</h3>
+			<a data-action="npc-attack-ranges">
+				<div class="properties-list">
+					{{npcAttackRangesDisplay}}
+				</div>
 			</a>
 		</div>
 	</div>

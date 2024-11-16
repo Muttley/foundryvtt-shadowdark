@@ -31,6 +31,10 @@
 			"selectOptions": [
 			]
 		},
+		"patron": {
+			"required": false,
+			"startingBoons": 0
+		},
 		"predefinedEffects": "",
 		"source": {
 			"title": "bard-and-ranger"
@@ -38,7 +42,79 @@
 		"spellcasting": {
 			"ability": "cha",
 			"baseDifficulty": 10,
-			"class": "__not_spellcaster__"
+			"class": "__not_spellcaster__",
+			"spellsknown": {
+				"1": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"10": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"2": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"3": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"4": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"5": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"6": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"7": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"8": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				},
+				"9": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": null,
+					"5": null
+				}
+			}
 		},
 		"talentChoiceCount": 0,
 		"talentChoices": [

@@ -1,0 +1,58 @@
+{{#> ui/sd-hideable-section
+	sectionId="stashedGear"
+	sectionTitle=(localize "SHADOWDARK.inventory.stashed_gear")
+}}
+	<ol class="SD-list item-list">
+		<li class="header">
+			<div class="item-name">
+				{{localize "SHADOWDARK.sheet.player.inventory.stashed_item.label"}}
+			</div>
+			<div class="flex-80-px">
+				{{localize "SHADOWDARK.sheet.player.inventory.type.label"}}
+			</div>
+			<div class="slots">
+				{{localize "SHADOWDARK.sheet.player.inventory.slots.label"}}
+			</div>
+			<div class="actions" style="flex: 0 0 30px">
+			</div>
+		</li>
+
+		{{#each inventory.stashed as |item|}}
+			<li
+				class="item"
+				data-item-id="{{item._id}}"
+				data-uuid="{{item.uuid}}"
+			>
+				<div class="item-image" style="background-image: url({{item.img}})">
+					<i class="fas fa-comment fa-lg"></i>
+				</div>
+				<a class="item-name" data-action="show-details">
+					{{item.name}}
+					{{#if item.lightSourceUsed}}
+						<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
+					{{/if}}
+				</a>
+
+				<div class="flex-80-px">
+					{{item.type}}
+				</div>
+
+				<div class="slots">
+					{{item.slotsUsed}}
+				</div>
+
+				<div class="actions" style="flex: 0 0 30px">
+					<a
+						data-action="toggle-stashed"
+						data-item-id="{{item._id}}"
+						data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_stashed'}}"
+					>
+						<i style="color:var(--primary)" class="fa-solid fa-box"></i>
+					</a>
+				</div>
+			</li>
+		{{/each}}
+	</ol>
+{{/ui/sd-hideable-section}}
+
+<br>
