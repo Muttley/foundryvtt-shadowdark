@@ -1435,7 +1435,7 @@ export default class ActorSD extends Actor {
 			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
 
 			// does ability use on a roll check?
-			if (item.system.ability !== "") {
+			if (item.system.ability) {
 				options = foundry.utils.mergeObject({target: item.system.dc}, options);
 				const result = await this.rollAbility(
 					item.system.ability,
