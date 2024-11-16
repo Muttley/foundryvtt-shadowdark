@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Enemies within double near DC 15 WIS or DISADV on attacks and checks [[/r 1d4]] rounds.</p>",
+		"description": "<p>Enemies within double near [[check 15 wis]] or DISADV on attacks and checks [[/r 1d4]] rounds.</p>",
 		"ranges": [
 		],
 		"source": {

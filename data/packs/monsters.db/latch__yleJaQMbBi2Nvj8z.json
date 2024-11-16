@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Latch",
 	"system": {
-		"description": "<p>Tentacles attach to hit targets, automatically hitting the next round (DC 12 STR on turn to remove [[/r 1d4]] tentacles). If all four remain latched onto the same humanoid target for 1 round, the target's brain is ripped out and devoured.</p>",
+		"description": "<p>Tentacles attach to hit targets, automatically hitting the next round ([[check 12 str]] on turn to remove [[/r 1d4]] tentacles). If all four remain latched onto the same humanoid target for 1 round, the target's brain is ripped out and devoured.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

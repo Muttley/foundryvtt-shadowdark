@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Near range. DC 12 CHA to deal [[/r 2d4]] damage to a creature; regain that many HP.</p>",
+		"description": "<p>Near range. [[check 12 cha]] to deal [[/r 2d4]] damage to a creature; regain that many HP.</p>",
 		"predefinedEffects": "",
 		"ranges": [
 		],

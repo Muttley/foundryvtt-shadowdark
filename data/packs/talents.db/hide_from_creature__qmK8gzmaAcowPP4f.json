@@ -17,7 +17,7 @@
 			"meleeDamageBonus": "1",
 			"rangedAttackBonus": "1"
 		},
-		"description": "<p>1/day, choose a creature of LV 9 or less you can see; it must pass a DC 15 WIS check or it can't see or hear you for 1d4 rounds</p>",
+		"description": "<p>1/day, choose a creature of LV 9 or less you can see; it must pass a [[check 15 wis]] check or it can't see or hear you for 1d4 rounds</p>",
 		"level": 0,
 		"magicItem": false,
 		"predefinedEffects": "",

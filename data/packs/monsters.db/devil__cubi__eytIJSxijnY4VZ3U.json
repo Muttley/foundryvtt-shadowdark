@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Entrancing humanoids with bat wings and devilish charm. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 29, <strong>ATK</strong> 1 kiss +4 (1d6 + drain) or 1 charm, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +5, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized humanoid.</p><p></p><p><strong>Charm</strong>. One humanoid in near DC 15 CHA or bewitched by cubi for 1d6 hours.</p><p></p><p><strong>Drain</strong>. The target takes 1d6 WIS damage. A target reduced to 0 WIS this way swears its soul to an archdevil.</p><p></p>",
+		"notes": "\n\t<p><i> Entrancing humanoids with bat wings and devilish charm. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 29, <strong>ATK</strong> 1 kiss +4 (1d6 + drain) or 1 charm, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +5, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized humanoid.</p><p></p><p><strong>Charm</strong>. One humanoid in near [[check 15 cha]] or bewitched by cubi for 1d6 hours.</p><p></p><p><strong>Drain</strong>. The target takes 1d6 WIS damage. A target reduced to 0 WIS this way swears its soul to an archdevil.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

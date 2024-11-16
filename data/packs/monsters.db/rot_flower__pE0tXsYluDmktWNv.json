@@ -138,7 +138,7 @@
 		},
 		"move": "none",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Carnivorous flowers as large as a human. They reek of carrion. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + toxin), <strong>MV</strong> none, <strong>S</strong> +1, <strong>D</strong> -3, <strong>C</strong> +1, <strong>I</strong> -4, <strong>W</strong> -3, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Toxin</strong>. DC 12 CON or unconscious for 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Carnivorous flowers as large as a human. They reek of carrion. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + toxin), <strong>MV</strong> none, <strong>S</strong> +1, <strong>D</strong> -3, <strong>C</strong> +1, <strong>I</strong> -4, <strong>W</strong> -3, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Toxin</strong>. [[check 12 con]] or unconscious for 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

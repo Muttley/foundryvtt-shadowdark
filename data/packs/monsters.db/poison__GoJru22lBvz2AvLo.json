@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
-		"description": "<p>DC 15 CON or go to 0 HP.</p>",
+		"description": "<p>[[check 15 con]] or go to 0 HP.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Stick",
 	"system": {
-		"description": "<p>DC 15 STR or adhere to target; auto-hit with bite. DC 15 STR on turn to remove.</p>",
+		"description": "<p>[[check 15 str]] or adhere to target; auto-hit with bite. [[check 15 str]] on turn to remove.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

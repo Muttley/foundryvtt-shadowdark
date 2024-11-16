@@ -9,7 +9,7 @@
 		6,
 		6
 	],
-	"text": "<b>Gate!</b> You open a magic portal to another location, whether on this plane or another. Something dreadful will come through in [[/r 1d4]] rounds unless you close it with a DC 18 Intelligence check on your turn",
+	"text": "<b>Gate!</b> You open a magic portal to another location, whether on this plane or another. Something dreadful will come through in [[/r 1d4]] rounds unless you close it with a [[check 18 int]] check on your turn",
 	"type": "text",
 	"weight": 1
 }

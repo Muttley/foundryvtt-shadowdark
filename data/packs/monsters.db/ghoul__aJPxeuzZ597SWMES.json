@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Gray-skinned, slavering undead with whipping tongues and flat, reptilian faces. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 11, <strong>ATK</strong> 1 claw +2 (1d6 + paralyze), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Undead</strong>. Immune to morale checks.</p><p></p><p><strong>Paralyze</strong>. DC 12 CON or paralyzed 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Gray-skinned, slavering undead with whipping tongues and flat, reptilian faces. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 11, <strong>ATK</strong> 1 claw +2 (1d6 + paralyze), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Undead</strong>. Immune to morale checks.</p><p></p><p><strong>Paralyze</strong>. [[check 12 con]] or paralyzed 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

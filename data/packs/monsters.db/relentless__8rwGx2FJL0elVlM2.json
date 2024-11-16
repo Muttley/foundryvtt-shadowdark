@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Relentless",
 	"system": {
-		"description": "<p>If zombie reduced to 0 HP by a non-magical source, DC 15 CON to go to 1 HP instead.</p>",
+		"description": "<p>If zombie reduced to 0 HP by a non-magical source, [[check 15 con]] to go to 1 HP instead.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""
