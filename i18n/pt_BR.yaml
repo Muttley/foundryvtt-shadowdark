@@ -106,6 +106,14 @@ SHADOWDARK.apps.monster-importer.instruction2d: Bloco principal de estatísticas
 SHADOWDARK.apps.monster-importer.instruction2e: Característica
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clique em Importar Monstro.
 SHADOWDARK.apps.monster-importer.title: Importar Monstro
+SHADOWDARK.apps.request-check.copied: Copied to Clipboard
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Itens Não Encontrado
 SHADOWDARK.apps.shadowdarkling-importer.header: Importador do Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importar
@@ -187,6 +195,7 @@ SHADOWDARK.chat.welcome_message.title_text: Bem vindo ao RPG Shadowdark. Aqui es
 SHADOWDARK.chat.welcome_message.title: RPG Shadowdark para o Foundry
 SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Rolar
+SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Teste de Atributo
 SHADOWDARK.class-ability.ability.label: Atributo
 SHADOWDARK.class-ability.available.label: Disponível
@@ -341,8 +350,10 @@ SHADOWDARK.effect.unavailable: Efeitos Desabilitados
 SHADOWDARK.error.class_ability.no-uses-remaining: Sem usos restantes
 SHADOWDARK.error.general.gm_required: Você precisa ter o cargo de Mestre do Jogo para fazer isso.
 SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi selecionada
+SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Nenhum atributo de conjuração do personagem foi configurado
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.names.label: Nomes
@@ -667,6 +678,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Diminuir Usos Disponíveis
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Aumentar Usos Disponíveis
 SHADOWDARK.sheet.actor.ac: CA
 SHADOWDARK.sheet.actor.alignment: Alinhamento
+SHADOWDARK.sheet.actor.character_notes: Character Notes
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
 SHADOWDARK.sheet.actor.level: Nível
@@ -674,10 +686,20 @@ SHADOWDARK.sheet.actor.placeholder.name: Nome do Novo Ator
 SHADOWDARK.sheet.class.item: Ficha de Item Shadowdark
 SHADOWDARK.sheet.class.npc: Ficha de PDM Shadowdark
 SHADOWDARK.sheet.class.player: Ficha de Jogador Shadowdark
+SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.duration.title: Duration
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.source.title: Source
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.add: Add
+SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
 SHADOWDARK.sheet.general.item_create.tooltip: Criar Item {type}
 SHADOWDARK.sheet.general.item_delete.title: Deletar Item
 SHADOWDARK.sheet.general.item_edit.title: Editar Item
 SHADOWDARK.sheet.general.roll_hp: Rolar PV
+SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
+SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
 SHADOWDARK.sheet.item.tab.description: Descrição
 SHADOWDARK.sheet.item.tab.details: Detalhes
 SHADOWDARK.sheet.item.tab.effects: Efeitos
