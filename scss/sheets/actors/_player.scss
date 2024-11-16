@@ -32,24 +32,22 @@
 		}
 	}
 
-	.background-grid-a,
-	.background-grid-b {
+	.background-grid-a {
 		display: grid;
 		grid-template-rows: 1fr;
 		gap: 8px;
 		font-size: 16px;
-		.content-link {
-			background: none;
-			border: none;
-			padding: 0px;
-		}
 	 }
+
+	.background-content-link {
+		background: none;
+		border: none;
+		padding: 0px;
+		font-size: 16px;
+	}
 
 	.background-grid-a {
 		grid-template-columns: 1fr 2fr 2.5fr;
-	}
-	.background-grid-b {
-		grid-template-columns: 1fr 1.5fr;
 	}
 
 	.inventory-grid {

@@ -1,0 +1,42 @@
+{{#> ui/sd-hideable-section
+	sectionId="activeEffects"
+	sectionTitle=(localize "SHADOWDARK.app.active_effects.title")
+}}
+	{{> _partials/predefined-effects-selector}}
+
+	<ol class="SD-list">
+		<li class="header">
+			<a
+				class="effect-control"
+				data-action="create"
+				style="padding:4px; width: 24px;"
+			>
+				<i class="fa-solid fa-square-plus"></i>
+			</a>
+
+			<h3 class="effect-name">
+				{{localize "SHADOWDARK.item.effect.category.effect"}}
+			</h3>
+
+			<h3 class="effect-name">
+				{{localize "SHADOWDARK.sheet.general.active_effects.source.title"}}
+			</h3>
+
+			<h3 class="effect-duration">
+				{{localize "SHADOWDARK.sheet.general.active_effects.duration.title"}}
+			</h3>
+
+			<div class="actions"></div>
+		</li>
+
+		{{#each activeEffects as |section sid|}}
+			{{#each section.effects as |effect|}}
+
+				{{> actors/_partials/effects/active-effect
+					effect=effect
+				}}
+
+			{{/each}}
+		{{/each}}
+	</ol>
+{{/ui/sd-hideable-section}}
