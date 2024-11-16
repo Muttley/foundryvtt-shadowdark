@@ -110,8 +110,8 @@ SHADOWDARK.apps.request-check.copied: Copied to Clipboard
 SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
 SHADOWDARK.apps.request-check.custom: Custom
 SHADOWDARK.apps.request-check.easy: Easy
-SHADOWDARK.apps.request-check.hard: Hard
 SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.hard: Hard
 SHADOWDARK.apps.request-check.normal: Normal
 SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
@@ -351,9 +351,10 @@ SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: Dazu musst du die Rolle des Game Master haben.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
-SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
+SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.names.label: Names
