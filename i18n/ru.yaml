@@ -106,6 +106,14 @@ SHADOWDARK.apps.monster-importer.instruction2d: Основной блок хар
 SHADOWDARK.apps.monster-importer.instruction2e: Особенность
 SHADOWDARK.apps.monster-importer.instruction3: 3. Нажмите "Импортировать монстра".
 SHADOWDARK.apps.monster-importer.title: Импорт монстра
+SHADOWDARK.apps.request-check.copied: Copied to Clipboard
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Предметы не найдены
 SHADOWDARK.apps.shadowdarkling-importer.header: Импортер Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Импортировать
@@ -187,6 +195,7 @@ SHADOWDARK.chat.welcome_message.title_text: Добро пожаловать в S
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG для Foundry
 SHADOWDARK.chat.welcome_message.watch: Посмотрите видео-руководство
 SHADOWDARK.chatcard.default: Бросок
+SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Проверка способности
 SHADOWDARK.class-ability.ability.label: Способность
 SHADOWDARK.class-ability.available.label: Доступно
@@ -341,8 +350,11 @@ SHADOWDARK.effect.unavailable: Отключенные эффекты
 SHADOWDARK.error.class_ability.no-uses-remaining: Не осталось использований
 SHADOWDARK.error.general.gm_required: Для этого действия требуются права Мастера игры.
 SHADOWDARK.error.general.no_character_class: Класс персонажа не выбран
+SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Источник отсутствует или неизвестен...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Способность к заклинаниям персонажа не настроена
+SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Снаряжение
 SHADOWDARK.form.section_header.languages.label: Языки
 SHADOWDARK.form.section_header.names.label: Имена
@@ -667,6 +679,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Уменьшить досту
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Увеличить доступные использования
 SHADOWDARK.sheet.actor.ac: КЗ
 SHADOWDARK.sheet.actor.alignment: Мировоззрение
+SHADOWDARK.sheet.actor.character_notes: Character Notes
 SHADOWDARK.sheet.actor.hp_max: Макс
 SHADOWDARK.sheet.actor.hp: ОЗ
 SHADOWDARK.sheet.actor.level: Уровень
@@ -674,10 +687,20 @@ SHADOWDARK.sheet.actor.placeholder.name: Имя нового актора
 SHADOWDARK.sheet.class.item: Лист предмета Shadowdark
 SHADOWDARK.sheet.class.npc: Лист NPC Shadowdark
 SHADOWDARK.sheet.class.player: Лист игрока Shadowdark
+SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.duration.title: Duration
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.source.title: Source
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.add: Add
+SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
 SHADOWDARK.sheet.general.item_create.tooltip: Создать предмет типа {type}
 SHADOWDARK.sheet.general.item_delete.title: Удалить предмет
 SHADOWDARK.sheet.general.item_edit.title: Редактировать предмет
 SHADOWDARK.sheet.general.roll_hp: Бросить ОЗ
+SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
+SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
 SHADOWDARK.sheet.item.tab.description: Описание
 SHADOWDARK.sheet.item.tab.details: Детали
 SHADOWDARK.sheet.item.tab.effects: Эффекты
