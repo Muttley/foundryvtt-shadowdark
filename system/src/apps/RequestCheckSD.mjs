@@ -93,7 +93,6 @@ export default class RequestCheckSD extends FormApplication {
 				break;
 			case "request-check":
 				RequestCheckSD.displayRequest(data.difficulty, data.stat);
-				this.close();
 				break;
 			default:
 				shadowdark.error("Request Check Error");

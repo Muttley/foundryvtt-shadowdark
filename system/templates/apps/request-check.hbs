@@ -1,9 +1,9 @@
 <form autocomplete="off">
-	<div class="grid-2-columns">
+	<div class="grid-2-columns" style="row-gap: 4px;">
 		{{#> ui/sd-box
 			header-label="Difficulty"
 		}}
-			<div class="grid-1-columns">
+			<div class="grid-1-columns" style="row-gap: unset;">
 				{{radioBoxes "difficulty" difficulty checked="12"}}
 				<hr>
 				<label class="checkbox">
@@ -17,15 +17,27 @@
 		{{#> ui/sd-box
 			header-label="Stat"
 		}}
-			<div class="grid-1-columns">
+			<div class="grid-1-columns" style="row-gap: unset;">
 				{{radioBoxes "stat" stats checked="str"}}
 			</div>
 		{{/ui/sd-box}}
 
 		<hr class="grid-colspan-2">
 
-		<button class="grid-colspan-2" type="submit" name="request-copy">{{localize "SHADOWDARK.apps.request-check.copy_to_clipboard"}}</button>
-		<button class="grid-colspan-2 larger" type="submit" name="request-check" style="font-family:'Old Newspaper Font';">
+		<button
+			class="grid-colspan-2"
+			name="request-copy"
+			type="submit"
+		>
+			<i class="fa-regular fa-clipboard"></i>
+			{{localize "SHADOWDARK.apps.request-check.copy_to_clipboard"}}
+		</button>
+		<button
+			class="grid-colspan-2 larger"
+			name="request-check"
+			style="font-family: 'Old Newspaper Font';"
+			type="submit"
+		>
 			{{localize "SHADOWDARK.apps.request-check.title"}}
 		</button>
 	</div>
