@@ -1,5 +1,10 @@
 export default function() {
 	const partials = [
+		"systems/shadowdark/templates/_partials/predefined-effects-selector.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects/active-effect.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects/active-effects.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects/effects-and-conditions.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/attacks.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/features.hbs",
@@ -10,7 +15,6 @@ export default function() {
 		"systems/shadowdark/templates/actors/npc/partials/hp.hbs",
 		"systems/shadowdark/templates/actors/npc/partials/level.hbs",
 		"systems/shadowdark/templates/actors/npc/spells.hbs",
-		"systems/shadowdark/templates/actors/partials/effects.hbs",
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/attacks.hbs",
@@ -85,7 +89,6 @@ export default function() {
 		"systems/shadowdark/templates/items/_partials/effects-tab.hbs",
 		"systems/shadowdark/templates/items/_partials/effects/active-effect.hbs",
 		"systems/shadowdark/templates/items/_partials/effects/active-effects-list.hbs",
-		"systems/shadowdark/templates/items/_partials/effects/predefined-selector.hbs",
 		"systems/shadowdark/templates/items/_partials/header.hbs",
 		"systems/shadowdark/templates/items/_partials/item-properties/ammunition.hbs",
 		"systems/shadowdark/templates/items/_partials/item-properties/equipped.hbs",
@@ -143,6 +146,8 @@ export default function() {
 		"systems/shadowdark/templates/items/weapon/_partials/weapon.hbs",
 		"systems/shadowdark/templates/items/weapon/details-tab.hbs",
 		"systems/shadowdark/templates/ui/sd-box.hbs",
+		"systems/shadowdark/templates/ui/sd-hideable-header.hbs",
+		"systems/shadowdark/templates/ui/sd-hideable-section.hbs",
 	];
 
 	const paths = {};

@@ -377,7 +377,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// load talents with selection of options
 		for (const talentItem of allTalents) {
-			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
+			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
 		}
 
 		// Check for Name
@@ -938,7 +938,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// load talents with selection of options
 		const allItems = [];
 		for (const talentItem of allTalents) {
-			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
+			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
 		}
 
 		await actorRef.createEmbeddedDocuments("Item", allItems);

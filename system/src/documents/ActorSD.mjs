@@ -248,6 +248,20 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async addPatron(item) {
+		const myClass = await this.getClass();
+
+		if (myClass && myClass.system.patron.required) {
+			this.update({"system.patron": item.uuid});
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.patron.no_supported_class")
+			);
+		}
+	}
+
+
 	async addToHpBase(hp) {
 		const currentHpBase = this.system.attributes.hp.base;
 		this.update({
@@ -330,7 +344,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
 	}
@@ -363,7 +377,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
 	}
@@ -371,7 +385,7 @@ export default class ActorSD extends Actor {
 
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/weapon-attack.hbs",
+			"systems/shadowdark/templates/_partials/weapon-attack.hbs",
 			options
 		);
 	}

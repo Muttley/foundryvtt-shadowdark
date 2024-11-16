@@ -2,8 +2,16 @@ import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
 export default class ActorSheetSD extends ActorSheet {
 
+	_hiddenSectionsLut = {
+		activeEffects: true,
+	};
+
 	/** @inheritdoc */
 	activateListeners(html) {
+		html.find("[data-action='hide-section']").click(
+			event => this._onHideSection(event)
+		);
+
 		html.find("[data-action='roll-ability-check']").click(
 			event => this._onRollAbilityCheck(event)
 		);
@@ -32,6 +40,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => this._onItemCreate(event)
 		);
 
+		html.find(".effect-control").click(ev => {
+			shadowdark.effects.onManageActiveEffect(ev, this.actor);
+		});
+
 		// Create context menu for items on both sheets
 		this._itemContextMenu(html);
 
@@ -54,14 +66,20 @@ export default class ActorSheetSD extends ActorSheet {
 			config: CONFIG.SHADOWDARK,
 			cssClass: this.actor.isOwner ? "editable" : "locked",
 			editable: this.isEditable,
+			hiddenSections: this._hiddenSectionsLut,
 			isNpc: this.actor.type === "NPC",
 			isPlayer: this.actor.type === "Player",
 			items: actorData.items,
 			owner: this.actor.isOwner,
+			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
 			rollData: this.actor.getRollData.bind(this.actor),
 			source: source.system,
 			system: actorData.system,
 		};
+
+		context.activeEffects = shadowdark.effects.prepareActiveEffectCategories(
+			this.actor.allApplicableEffects()
+		);
 
 		context.notesHTML = await TextEditor.enrichHTML(
 			context.system.notes,
@@ -138,10 +156,58 @@ export default class ActorSheetSD extends ActorSheet {
 		return false;
 	}
 
+	/** @inheritdoc */
+	async _onChangeInput(event) {
+		// Test for Predefiend Effects
+		// Create effects when added through the predefined effects input
+		if (event.target?.name === "predefinedEffects") {
+			const key = event.target.value;
+			return shadowdark.effects.createPredefinedEffect(this.actor, key);
+		}
+
+		await super._onChangeInput(event);
+	}
+
 	async _onDropItem(event, data) {
 		if (await this._effectDropNotAllowed(data)) return false;
 
 		return super._onDropItem(event, data);
+	}
+
+	async _onHideSection(event) {
+		event.preventDefault();
+
+		const data = event.currentTarget.dataset;
+		const sectionId = data.sectionToHide;
+
+		const hideableSection = $(this._element).find(
+			`[data-hideable-section-id="${sectionId}"]`
+		);
+
+		const iconElement = event.currentTarget.querySelector("i");
+
+		if (this._hiddenSectionsLut[sectionId]) {
+			this._hiddenSectionsLut[sectionId] = !this._hiddenSectionsLut[sectionId];
+		}
+		else {
+			this._hiddenSectionsLut[sectionId] = true;
+		}
+
+		if (this._hiddenSectionsLut[sectionId]) {
+			hideableSection.slideUp(200);
+			event.currentTarget.dataset.tooltip = game.i18n.localize(
+				"SHADOWDARK.sheet.general.section.toggle_show"
+			);
+		}
+		else {
+			hideableSection.slideDown(200);
+			event.currentTarget.dataset.tooltip = game.i18n.localize(
+				"SHADOWDARK.sheet.general.section.toggle_hide"
+			);
+		}
+
+		iconElement.classList.toggle("fa-caret-down");
+		iconElement.classList.toggle("fa-caret-right");
 	}
 
 	_onItemDelete(itemId) {

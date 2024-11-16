@@ -1,165 +1,165 @@
 <section class="tab tab-spells" data-group="primary" data-tab="tab-spells">
 
 	{{#if isSpellCaster}}
-		<div class="SD-banner">
-			{{localize "SHADOWDARK.sheet.item.tab.spellsknown"}}
-			&nbsp;
-			<a
-				class="fa-solid fa-book"
-				data-action="open-spellbook"
-				data-tooltip="{{localize 'SHADOWDARK.sheet.player.open_spellbook.tooltip'}}"
-			></a>
-		</div>
-		{{#each spells as |tier tid|}}
-		<ol class="SD-list">
-			<li class="header">
-				<div class="item-name">{{localize 'SHADOWDARK.sheet.player.spells_tier'}} {{tid}}</div>
-				<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
-				<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
-				<div class="actions"></div>
-			</li>
-			{{#each tier as |spell|}}
-				<li class="item" data-item-id="{{spell._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{this._id}}">
-					<div class="item-image" style="background-image: url({{spell.img}})">
-						<i class="fas fa-comment fa-lg"></i>
-					</div>
-					<a class="item-name {{#if spell.system.lost}}strike-through{{/if}}" data-action="show-details">
-						{{this.name}}
-					</a>
-					<div class="duration">
-						{{getSpellDuration spell.system.duration.type spell.system.duration.value}}
-					</div>
-					<div class="range">
-						{{fromConfig "SPELL_RANGES"spell.system.range}}
-					</div>
-					<div class="actions">
-						{{#unless spell.system.lost}}
+		{{#> ui/sd-hideable-section
+			sectionId=""
+			sectionTitle=(localize "SHADOWDARK.sheet.item.tab.spellsknown")
+		}}
+			{{#each spells as |tier tid|}}
+				<ol class="SD-list">
+					<li class="header">
+						<div class="item-name">{{localize 'SHADOWDARK.sheet.player.spells_tier'}} {{tid}}</div>
+						<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
+						<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
+						<div class="actions"></div>
+					</li>
+					{{#each tier as |spell|}}
+						<li class="item" data-item-id="{{spell._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{this._id}}">
+							<div class="item-image" style="background-image: url({{spell.img}})">
+								<i class="fas fa-comment fa-lg"></i>
+							</div>
+							<a class="item-name {{#if spell.system.lost}}strike-through{{/if}}" data-action="show-details">
+								{{this.name}}
+							</a>
+							<div class="duration">
+								{{getSpellDuration spell.system.duration.type spell.system.duration.value}}
+							</div>
+							<div class="range">
+								{{fromConfig "SPELL_RANGES"spell.system.range}}
+							</div>
+							<div class="actions">
+								{{#unless spell.system.lost}}
+										<a
+											data-action="cast-spell"
+											data-item-id="{{spell._id}}"
+											data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+										>
+											<i class="fa-solid fa-hand-sparkles"></i>
+										</a>
+									{{/unless}}
+									<a
+										data-action="toggle-lost"
+										data-item-id="{{spell._id}}"
+										data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
+									>
+										{{#if spell.system.lost}}
+											<i style="color:red;" class="fa-solid fa-xmark"></i>
+										{{else}}
+											<i class="fa-solid fa-check"></i>
+										{{/if}}
+									</a>
+							</div>
+						</li>
+					{{/each}}
+				</ol>
+			{{/each}}
+			<br>
+		{{/ui/sd-hideable-section}}
+	{{/if}}
+
+	{{#if canUseMagicItems}}
+		{{#> ui/sd-hideable-section
+			sectionId=""
+			sectionTitle=(localize "SHADOWDARK.sheet.player.spells_from_items")
+		}}
+			{{#if spellitems.wands}}
+				<ol class="SD-list">
+					<li class="header">
+						<div class="item-name">{{localize "SHADOWDARK.item.wand.label"}}</div>
+						<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
+						<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
+						<div class="actions"></div>
+					</li>
+
+				{{#each spellitems.wands as |item|}}
+
+					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
+						<div class="item-image" style="background-image: url({{item.img}})">
+							<i class="fas fa-comment fa-lg"></i>
+						</div>
+						<a class="item-name {{#if item.system.lost}}strike-through{{/if}}" data-action="show-details">
+							{{item.system.spellName}}
+						</a>
+						<div class="duration">
+							{{getSpellDuration item.system.duration.type item.system.duration.value}}
+						</div>
+						<div class="range">
+							{{fromConfig "SPELL_RANGES" item.system.range}}
+						</div>
+						<div class="actions">
+							{{#unless item.system.lost}}
 								<a
 									data-action="cast-spell"
-									data-item-id="{{spell._id}}"
-									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
+									data-item-id="{{item._id}}"
+									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_wand'}}"
 								>
-									<i class="fa-solid fa-hand-sparkles"></i>
+									<i class="fa-solid fa-wand-magic-sparkles"></i>
 								</a>
+								&nbsp;
 							{{/unless}}
 							<a
 								data-action="toggle-lost"
-								data-item-id="{{spell._id}}"
+								data-item-id="{{item._id}}"
 								data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 							>
-								{{#if spell.system.lost}}
+								{{#if item.system.lost}}
 									<i style="color:red;" class="fa-solid fa-xmark"></i>
 								{{else}}
 									<i class="fa-solid fa-check"></i>
 								{{/if}}
 							</a>
-					</div>
-				</li>
-			{{/each}}
-		</ol>
-		{{/each}}
-	<br>
-	{{/if}}
+						</div>
+					</li>
+				{{/each}}
+				</ol>
+			{{/if}}
 
-	{{#if canUseMagicItems}}
-		<div class="SD-banner">{{localize "SHADOWDARK.sheet.player.spells_from_items"}}</div>
-		{{#if spellitems.wands}}
-			<ol class="SD-list">
-				<li class="header">
-					<div class="item-name">{{localize "SHADOWDARK.item.wand.label"}}</div>
-					<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
-					<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
-					<div class="actions"></div>
-				</li>
+			{{#if spellitems.scrolls}}
+				<ol class="SD-list">
+					<li class="header">
+						<div class="item-name">{{localize "SHADOWDARK.item.scroll.label"}}</div>
+						<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
+						<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
+						<div class="actions"></div>
+					</li>
 
-			{{#each spellitems.wands as |item|}}
-
-				<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
-					<div class="item-image" style="background-image: url({{item.img}})">
-						<i class="fas fa-comment fa-lg"></i>
-					</div>
-					<a class="item-name {{#if item.system.lost}}strike-through{{/if}}" data-action="show-details">
-						{{item.system.spellName}}
-					</a>
-					<div class="duration">
-						{{getSpellDuration item.system.duration.type item.system.duration.value}}
-					</div>
-					<div class="range">
-						{{fromConfig "SPELL_RANGES" item.system.range}}
-					</div>
-					<div class="actions">
-						{{#unless item.system.lost}}
-							<a
-								data-action="cast-spell"
-								data-item-id="{{item._id}}"
-								data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_wand'}}"
-							>
-								<i class="fa-solid fa-wand-magic-sparkles"></i>
-							</a>
-							&nbsp;
-						{{/unless}}
-						<a
-							data-action="toggle-lost"
-							data-item-id="{{item._id}}"
-							data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
-						>
-							{{#if item.system.lost}}
-								<i style="color:red;" class="fa-solid fa-xmark"></i>
-							{{else}}
-								<i class="fa-solid fa-check"></i>
-							{{/if}}
+				{{#each spellitems.scrolls as |item|}}
+					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
+						<div class="item-image" style="background-image: url({{item.system.spellImg}})">
+							<i class="fas fa-comment fa-lg"></i>
+						</div>
+						<a class="item-name {{#if spell.system.lost}}strike-through{{/if}}" data-action="show-details">
+							{{item.system.spellName}}
 						</a>
-					</div>
-				</li>
-			{{/each}}
-			</ol>
-		{{/if}}
-
-		{{#if spellitems.scrolls}}
-			<ol class="SD-list">
-				<li class="header">
-					<div class="item-name">{{localize "SHADOWDARK.item.scroll.label"}}</div>
-					<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
-					<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
-					<div class="actions"></div>
-				</li>
-
-			{{#each spellitems.scrolls as |item|}}
-				<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
-					<div class="item-image" style="background-image: url({{item.system.spellImg}})">
-						<i class="fas fa-comment fa-lg"></i>
-					</div>
-					<a class="item-name {{#if spell.system.lost}}strike-through{{/if}}" data-action="show-details">
-						{{item.system.spellName}}
-					</a>
-					<div class="duration">
-						{{getSpellDuration item.system.duration.type item.system.duration.value}}
-					</div>
-					<div class="range">
-						{{fromConfig "SPELL_RANGES" item.system.range}}
-					</div>
-					<div class="actions">
-							<a
-								data-action="cast-spell"
-								data-item-id="{{item._id}}"
-								data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
-							>
-								<i class="fa-solid fa-scroll"></i>
-							</a>
-							{{#if ../isSpellCaster}}
+						<div class="duration">
+							{{getSpellDuration item.system.duration.type item.system.duration.value}}
+						</div>
+						<div class="range">
+							{{fromConfig "SPELL_RANGES" item.system.range}}
+						</div>
+						<div class="actions">
 								<a
-									data-action="learn-spell"
+									data-action="cast-spell"
 									data-item-id="{{item._id}}"
-									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.learn_spell'}}"
+									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
 								>
-									<i class="fa-solid fa-graduation-cap"></i>
+									<i class="fa-solid fa-scroll"></i>
 								</a>
-							{{/if}}
-					</div>
-				</li>
-			{{/each}}
-			</ol>
-		{{/if}}
+								{{#if ../isSpellCaster}}
+									<a
+										data-action="learn-spell"
+										data-item-id="{{item._id}}"
+										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.learn_spell'}}"
+									>
+										<i class="fa-solid fa-graduation-cap"></i>
+									</a>
+								{{/if}}
+						</div>
+					</li>
+				{{/each}}
+				</ol>
+			{{/if}}
+		{{/ui/sd-hideable-section}}
 	{{/if}}
 
 	<br>

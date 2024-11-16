@@ -1,9 +1,12 @@
+import ActiveEffectsSD from "./src/system/ActiveEffectsSD.mjs";
+import ChatSD from "./src/system/ChatSD.mjs";
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
 import Logger from "./src/utils/Logger.mjs";
 import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
+import registerTextEditorEnrichers from "./src/enrichers.mjs";
 import SHADOWDARK from "./src/config.mjs";
 import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
@@ -28,12 +31,14 @@ import listenOnSocket from "./src/socket.mjs";
 
 globalThis.shadowdark = {
 	apps,
+	chat: ChatSD,
 	compendiums: CompendiumsSD,
 	config: SHADOWDARK,
 	debug: Logger.debug,
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
+	effects: ActiveEffectsSD,
 	error: Logger.error,
 	log: Logger.log,
 	macro: ShadowdarkMacro,
@@ -73,6 +78,7 @@ Hooks.once("init", () => {
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();
+	registerTextEditorEnrichers();
 	loadTemplates();
 
 	UtilitySD.loadLegacyArtMappings();
