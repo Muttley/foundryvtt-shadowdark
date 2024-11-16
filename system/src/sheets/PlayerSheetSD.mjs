@@ -211,7 +211,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 
 		context.characterClass = await this.actor.getClass();
-		context.classHasPatron = context.characterClass?.system?.patron?.required;
+		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
 		context.classTitle = await this.actor.getTitle();
 
 		context.characterPatron = await this.actor.getPatron();
