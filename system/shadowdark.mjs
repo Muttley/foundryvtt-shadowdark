@@ -7,6 +7,7 @@ import registerSystemSettings from "./src/settings.mjs";
 import SHADOWDARK from "./src/config.mjs";
 import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
+import ActiveEffectsSD from "./src/effects.mjs";
 
 import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
@@ -34,6 +35,7 @@ globalThis.shadowdark = {
 	defaults: SHADOWDARK.DEFAULTS,
 	dice,
 	documents,
+	effects: ActiveEffectsSD,
 	error: Logger.error,
 	log: Logger.log,
 	macro: ShadowdarkMacro,

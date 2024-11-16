@@ -1,14 +1,10 @@
-<li class="item" data-effect-id="{{effect.id}}">
-	<div class="item-image">
-		<img src="{{activeEffectIcon effect}}">
+<li class="effect" data-effect-id="{{effect.id}}">
+	<div class="effect-image">
+		<img src="{{effect.img}}">
 	</div>
 
 	<div class="item-name">
-		{{#unless effect.name}}
-			{{effect.label}}
-		{{else}}
-			{{effect.name}}
-		{{/unless}}
+		{{effect.name}}
 	</div>
 
 	<div class="effect-list-changes">
@@ -28,23 +24,35 @@
 
 	<div class="actions">
 		<a
-			class="fas fa-circle-{{#if effect.disabled}}xmark{{else}}check{{/if}}"
-			data-action="effect-activate"
-			data-tooltip="{{localize "SHADOWDARK.effect.header.toggle_active"}}"
-			{{#unless effect.disabled}}
-				style="color:var(--primary);"
-			{{/unless}}
-		></a>
+			class="effect-control"
+			data-action="toggle"
+			data-tooltip="{{localize "SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip"}}"
+		>
+			{{#if effect.disabled}}
+				<i class="fas fa-circle-xmark"></i>
+			{{else}}
+				<i
+					class="fas fa-circle-check"
+					style="color:var(--primary);"
+				></i>
+			{{/if}}
+		</a>
+
 		<a
-			class="fas fa-edit"
-			data-action="effect-edit"
-			data-tooltip="{{localize "SHADOWDARK.effect.header.edit"}}"
-		></a>
+			class="effect-control"
+			data-action="edit"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip'}}"
+		>
+			<i class="fa-solid fa-pen-to-square"></i>
+		</a>
+
 		<a
-			class="fas fa-trash"
-			data-action="effect-delete"
-			data-tooltip="{{localize "SHADOWDARK.effect.header.delete"}}"
-		></a>
+			class="effect-control"
+			data-action="delete"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip'}}"
+		>
+			<i class="fas fa-trash"></i>
+		</a>
 	</div>
 
 </li>

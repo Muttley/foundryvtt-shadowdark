@@ -67,30 +67,18 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onItemSelection(event)
 		);
 
-		// Effect listeners
-		html.find("[data-action=effect-create]").click(
-			event => this._onEffectCreate(event)
-		);
-
-		html.find("[data-action=effect-activate]").click(
-			event => this._onEffectActivate(event)
-		);
-
-		html.find("[data-action=effect-edit]").click(
-			event => this._onEffectEdit(event)
-		);
-
-		html.find("[data-action=effect-delete]").click(
-			event => this._onEffectDelete(event)
-		);
-
 		html.find("[data-action=remove-name-table]").click(
 			event => this._onRemoveTable(event)
 		);
 
+		html.find(".effect-control").click(event => {
+			shadowdark.effects.onManageActiveEffect(event, this.item);
+		});
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
+
 
 	async getAncestrySelectorConfigs(context) {
 
@@ -153,6 +141,7 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedTalents,
 		};
 	}
+
 
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
@@ -273,6 +262,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+
 	async getSources(context) {
 		context.sources = await shadowdark.compendiums.sources();
 
@@ -284,6 +274,7 @@ export default class ItemSheetSD extends ItemSheet {
 			? true
 			: false;
 	}
+
 
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
@@ -321,7 +312,7 @@ export default class ItemSheetSD extends ItemSheet {
 			config: CONFIG.SHADOWDARK,
 			editable: this.isEditable,
 			itemType: game.i18n.localize(`SHADOWDARK.item.type.${context.item.type}`),
-			predefinedEffects: await this._getPredefinedEffectsList(),
+			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
 			system: context.item.system,
 		});
 
@@ -365,6 +356,7 @@ export default class ItemSheetSD extends ItemSheet {
 		await this.getAncestrySelectorConfigs(context);
 	}
 
+
 	async getSheetDataForArmorItem(context) {
 		context.propertyItems = await context.item.propertyItems();
 
@@ -376,6 +368,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 		delete context.baseArmor[mySlug];
 	}
+
 
 	async getSheetDataForBasicItem(context) {
 		const item = context.item;
@@ -401,6 +394,7 @@ export default class ItemSheetSD extends ItemSheet {
 		}
 	}
 
+
 	async getSheetDataForClassItem(context) {
 		await this.getClassSelectorConfigs(context);
 
@@ -408,23 +402,28 @@ export default class ItemSheetSD extends ItemSheet {
 			context.item.system.spellcasting.class !== "__not_spellcaster__";
 	}
 
+
 	async getSheetDataForEffectItem(context) {
 		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(context.item.system.duration.type);
 	}
 
+
 	async getSheetDataForNPCAttackItem(context) {
 		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
 	}
+
 
 	async getSheetDataForNPCSpecialAttackItem(context) {
 		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
 	}
 
+
 	async getSheetDataForNPCSpellItem(context) {
 		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(context.item.system.duration.type);
 	}
+
 
 	async getSheetDataForPatronItem(context) {
 		const patronBoonTables =
@@ -438,6 +437,7 @@ export default class ItemSheetSD extends ItemSheet {
 		}
 	}
 
+
 	async getSheetDataForScrollItem(context) {
 		await this.getSpellSelectorConfigs(context);
 
@@ -445,12 +445,14 @@ export default class ItemSheetSD extends ItemSheet {
 			.includes(context.item.system.duration.type);
 	}
 
+
 	async getSheetDataForSpellItem(context) {
 		await this.getSpellSelectorConfigs(context);
 
 		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(context.item.system.duration.type);
 	}
+
 
 	async getSheetDataForTalentItem(context) {
 		context.showsLevelInput = {
@@ -461,12 +463,14 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+
 	async getSheetDataForWandItem(context) {
 		await this.getSpellSelectorConfigs(context);
 
 		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(context.item.system.duration.type);
 	}
+
 
 	async getSheetDataForWeaponItem(context) {
 		context.propertyItems = await context.item.propertyItems();
@@ -484,9 +488,6 @@ export default class ItemSheetSD extends ItemSheet {
 		delete context.baseWeapons[mySlug];
 	}
 
-	/* -------------------------------------------- */
-	/*  Event Handling                              */
-	/* -------------------------------------------- */
 
 	/** @inheritdoc */
 	_canDragDrop(selector) {
@@ -534,13 +535,9 @@ export default class ItemSheetSD extends ItemSheet {
 
 		// Test for Predefiend Effects
 		// Create effects when added through the predefined effects input
-		if (event.target?.name === "system.predefinedEffects") {
+		if (event.target?.name === "predefinedEffects") {
 			const key = event.target.value;
-			let effectData = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
-
-			if (!effectData) return console.error(`No effect found (${key})`);
-
-			await this._createPredefinedEffect(key, effectData);
+			return shadowdark.effects.createPredefinedEffect(this.item, key);
 		}
 
 		// Test for Effect Duration Change
@@ -870,101 +867,11 @@ export default class ItemSheetSD extends ItemSheet {
 		).render(true);
 	}
 
-	/* ---------- Effect Event Handlers ---------- */
-	/**
-	 * Creates a new effect and renders the effect sheet. This is used
-	 * for adding custom effects to an item with effects enabled.
-	 * @param {Event} event - Event with information about the effect to create
-	 * @returns {void}
-	 */
-	async _onEffectCreate(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		shadowdark.log(`Creating a new effect on ${this.item.name}`);
-		const effectData = {
-			label: game.i18n.localize("SHADOWDARK.effect.new"),
-			icon: "icons/svg/aura.svg",
-			origin: this.item.uuid,
-		};
-		const effect = await this._createEffect(effectData);
-		return effect[0]?.sheet.render(true);
-	}
-
-	/**
-	 * Toggles an ActiveEffect as active/inactive.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectActivate(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(
-			`${effect.disabled ? "A" : "Dea"}ctivating effect ${effect.name ?? effect.label}`
-		);
-		return this._activateEffect(effect);
-	}
-
-	/**
-	 * Renders an ActiveEffect sheet for editing.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectEdit(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(`Editing effect ${effect.name ?? effect.label}`);
-		return effect.sheet.render(true);
-	}
-
-	/**
-	 * Deletes an ActiveEffect.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectDelete(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(`Deleting effect ${effect.name ?? effect.label}`);
-		return this._deleteEffect(effect);
-	}
-
 	async _onUpdateDurationEffect() {
 		if (!this.isEditable) return;
 		this.item.effects.map(e => e.update({duration: this._getDuration()}));
 	}
 
-
-	/* -------------------------------------------- */
-	/*  Methods                                     */
-	/* -------------------------------------------- */
-
-	/* ---------- Effect Methods ---------- */
-
-	_getEffectFromEvent(event) {
-		const a = event.currentTarget;
-		const li = a.closest("li");
-		const effect = li.dataset.effectId
-			? this.item.effects.get(li.dataset.effectId)
-			: null;
-		return effect;
-	}
-
-	_createEffect(data) {
-		// Add duration to the effect so it shows up as a token icon when applied
-		data.duration = this._getDuration();
-		return this.item.createEmbeddedDocuments("ActiveEffect", [data]);
-	}
-
-	_activateEffect(effect) {
-		return effect.update({disabled: !effect.disabled});
-	}
-
-	_deleteEffect(effect) {
-		return effect.delete();
-	}
 
 	/**
 	 * Returns duration data for an active effect. This is used
@@ -1008,78 +915,4 @@ export default class ItemSheetSD extends ItemSheet {
 		return duration;
 	}
 
-
-	/* ---------- Predefined Effect Methods ---------- */
-
-	/**
-	 * Returns an object containing the effect key, and the
-	 * translated name into the current language.
-	 * @returns {Object}
-	 */
-	async _getPredefinedEffectsList() {
-		const effects = {};
-
-		for (const key in CONFIG.SHADOWDARK.PREDEFINED_EFFECTS) {
-			const effect = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
-
-			effects[key] = {
-				key,
-				name: effect.name,
-			};
-		}
-
-		return effects;
-	}
-
-
-	/**
-	 * Creates effects based on predefined effect choices and the supplied
-	 * predefined effect mappings.
-	 * @param {string} key - Name of the predefined effect
-	 * @param {Object} data - The item data of the item to be created
-	 * @returns {ActiveEffect}
-	 */
-	async _createPredefinedEffect(key, data) {
-		const handledData = data;
-
-		let defaultValue = "REPLACEME";
-		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue, data.name);
-
-		if (defaultValue === "REPLACEME") {
-			return shadowdark.log("Can't create effect without selecting a value.");
-		}
-
-		handledData.defaultValue = defaultValue;
-
-		const effectMode = foundry.utils.getProperty(
-			CONST.ACTIVE_EFFECT_MODES,
-			data.mode.split(".")[2]);
-
-		const value = (isNaN(parseInt(handledData.defaultValue, 10)))
-			? handledData.defaultValue
-			: parseInt(handledData.defaultValue, 10);
-
-		const effectData = [
-			{
-				name: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
-				label: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
-				icon: handledData.icon,
-				changes: [{
-					key: handledData.effectKey,
-					value,
-					mode: effectMode,
-				}],
-				disabled: false,
-				transfer: (Object.keys(handledData).includes("transfer"))
-					? handledData.transfer
-					: true,
-			},
-		];
-
-		// Create the effect
-		await this.item.createEmbeddedDocuments(
-			"ActiveEffect",
-			effectData
-		);
-	}
 }
