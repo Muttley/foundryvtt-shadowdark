@@ -89,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Особенности
 SHADOWDARK.apps.item-importer.instruction3: 3. Нажмите "Импортировать предмет".
 SHADOWDARK.apps.item-importer.title: Импорт предмета
 SHADOWDARK.apps.level-up.dragdrop: Перетащите сюда
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Очки здоровья
 SHADOWDARK.apps.level-up.level_up: Повышение уровня!
 SHADOWDARK.apps.level-up.leveling_to: Повышение до уровня
 SHADOWDARK.apps.level-up.missing_selections: Отсутствуют выборы
 SHADOWDARK.apps.level-up.notalent: На этом уровне не получено талантов
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Не все обязательные выборы сделаны. Продолжить повышение уровня в любом случае?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Бросить талант
 SHADOWDARK.apps.level-up.title: Повышение уровня
 SHADOWDARK.apps.monster-importer.import_button: Импортировать монстра
@@ -276,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Нет"
 SHADOWDARK.dialog.general.select: Выбрать
 SHADOWDARK.dialog.general.yes: "Да"
 SHADOWDARK.dialog.gm: Мастер игры
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Бросок ОЗ для уровня {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "ОЗ до броска: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Выпало {hp} ОЗ для 1 уровня (включая мод. телосложения)

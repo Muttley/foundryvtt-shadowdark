@@ -89,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: Clic en importar elemento.
 SHADOWDARK.apps.item-importer.title: Importar elemento
 SHADOWDARK.apps.level-up.dragdrop: Arrastrar y soltar aquí
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Puntos de Vida
 SHADOWDARK.apps.level-up.level_up: '¡Subir nivel!'
 SHADOWDARK.apps.level-up.leveling_to: Subiendo nivel
 SHADOWDARK.apps.level-up.missing_selections: Faltan selecciones
 SHADOWDARK.apps.level-up.notalent: Sin talentos ganados en este nivel
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: No se han realizado las selecciones requeridas. ¿Continuar con la subida de nivel?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Lanzar talento
 SHADOWDARK.apps.level-up.title: Subiendo nivel
 SHADOWDARK.apps.monster-importer.import_button: Importar monstruo
@@ -276,6 +279,7 @@ SHADOWDARK.dialog.general.no: "No"
 SHADOWDARK.dialog.general.select: Seleccionar
 SHADOWDARK.dialog.general.yes: "Sí"
 SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Tirar PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de tirar: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Obtienes {hp} PV por nivel 1 (incluido modificador)
