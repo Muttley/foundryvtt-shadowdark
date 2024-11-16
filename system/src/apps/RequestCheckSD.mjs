@@ -10,6 +10,49 @@ export default class RequestCheckSD extends FormApplication {
 		});
 	}
 
+
+	static async checkHandler(event) {
+		const data = event.target?.dataset ?? {};
+
+		if (!data.command) return;
+
+		switch (data.command) {
+			case "check":
+				const actor = await shadowdark.utils.getCurrentActor();
+				if (!actor) {
+					return ui.notifications.error(
+						game.i18n.localize("SHADOWDARK.error.general.no_character_selected")
+					);
+				}
+
+				const options = {
+					target: data.dc,
+					stat: data.stat,
+				};
+
+				if (event.shiftKey) {
+					options.fastForward = true;
+				}
+
+				return actor.rollAbility(data.stat.toLowerCase(), options);
+			case "request":
+				return RequestCheckSD.displayRequest(data.dc, data.stat);
+		}
+	}
+
+
+	static async displayRequest(dc, stat) {
+		shadowdark.chat.renderRollRequestMessage(
+			await shadowdark.utils.getCurrentActor(),
+			{
+				title: game.i18n.localize("SHADOWDARK.check.requesting"),
+				body: `[[check ${dc} ${stat}]]`,
+			},
+			CONST.DICE_ROLL_MODES.PUBLIC
+		);
+	}
+
+
 	activateListeners(html) {
 		super.activateListeners(html);
 
@@ -19,6 +62,7 @@ export default class RequestCheckSD extends FormApplication {
 			}
 		);
 	}
+
 
 	/** @override */
 	async getData() {
@@ -33,9 +77,9 @@ export default class RequestCheckSD extends FormApplication {
 		};
 	}
 
+
 	/** @inheritdoc */
 	async _updateObject(event, data) {
-
 		if (data.custom) {
 			data.difficulty = data.custom;
 		}
@@ -48,11 +92,11 @@ export default class RequestCheckSD extends FormApplication {
 				ui.notifications.info(game.i18n.localize("SHADOWDARK.apps.request-check.copied"));
 				break;
 			case "request-check":
-				shadowdark.checks.displayRequest(data.difficulty, data.stat);
+				RequestCheckSD.displayRequest(data.difficulty, data.stat);
 				this.close();
 				break;
 			default:
-				shadowdark.log("Request Check Error");
+				shadowdark.error("Request Check Error");
 		}
 	}
 
