@@ -89,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Features
 SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
 SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
 SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Monster importieren
@@ -276,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Nein"
 SHADOWDARK.dialog.general.select: Select
 SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
