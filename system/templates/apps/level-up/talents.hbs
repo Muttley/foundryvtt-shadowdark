@@ -23,11 +23,7 @@
 		</span>
 	</div>
 
-	<div class="content talents">
-		{{#unless talentGained}}
-			{{localize "SHADOWDARK.apps.level-up.notalent"}}
-		{{/unless}}
-
+	<div class="content">
 		{{#if talentGained}}
 			{{#unless rolls.talent}}
 				<button type="button" data-action="roll-talent">
@@ -42,31 +38,36 @@
 				{{/unless}}
 			{{/if}}
 
-			<fieldset class="items">
-				{{#unless talents}}
-					<div>
-						{{localize "SHADOWDARK.apps.level-up.dragdrop"}}
-					</div>
-				{{/unless}}
-
-				{{#each talents}}
-					<div style="white-space: nowrap;">
-						<a
-							class="remove-item fas fa-delete-right"
-							data-action="delete-talent"
-							data-index="{{@index}}"
-						></a>
-						<a
-							class="content-link"
-							data-link
-							data-tooltip="{{this.name}}"
-							data-uuid="{{this.uuid}}"
-						>
-							{{this.name}}
-						</a>
-					</div>
-				{{/each}}
-			</fieldset>
+			{{#if talentsRolled}}
+				<div>
+					<fieldset class="items" style="height: 100%;">
+						{{#unless talentsChosen}}
+							<div style="color: rgba(0, 0, 0, 0.6); text-align: center;">
+								<em>{{localize "SHADOWDARK.apps.level-up.dragdrop"}}</em>
+							</div>
+						{{/unless}}
+						{{#each talents}}
+							<div style="white-space: nowrap;">
+								<a
+									class="remove-item fas fa-delete-right"
+									data-action="delete-talent"
+									data-index="{{@index}}"
+								></a>
+								<a
+									class="content-link"
+									data-link
+									data-tooltip="{{this.name}}"
+									data-uuid="{{this.uuid}}"
+								>
+									{{this.name}}
+								</a>
+							</div>
+						{{/each}}
+					</fieldset>
+				</div>
+			{{/if}}
+		{{else}}
+			{{localize "SHADOWDARK.apps.level-up.notalent"}}
 		{{/if}}
 	</div>
 </div>

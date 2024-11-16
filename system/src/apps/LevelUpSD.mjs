@@ -8,10 +8,13 @@ export default class LevelUpSD extends FormApplication {
 			hp: 0,
 			hpEdit: false,
 			talent: false,
+			boon: false,
 		};
 		this.data.actor = game.actors.get(uid);
 		this.data.talents = [];
 		this.data.spells = {};
+		this.data.talentsRolled = false;
+		this.data.talentsChosen = false;
 
 		for (let i = 1; i <= 5; i++) {
 			this.data.spells[i] = {
@@ -26,6 +29,7 @@ export default class LevelUpSD extends FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "level-up"],
+			height: "auto",
 			width: 300,
 			resizable: false,
 			closeOnSubmit: true,
@@ -155,6 +159,8 @@ export default class LevelUpSD extends FormApplication {
 
 			}
 		}
+		this.data.talentsRolled = this.data.rolls.talent || this.data.rolls.boon;
+		this.data.talentsChosen = this.data.talents.length > 0;
 
 		return this.data;
 	}

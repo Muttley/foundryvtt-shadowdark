@@ -20,13 +20,6 @@
 		line-height: 1.7;
 	}
 
-	.level-up-grid {
-		display: grid;
-		gap: 8px;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto 75px 105px auto;
-	}
-
 	.hit-points {
 		text-align: center;
 		font-size: 24px;
