@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> A huge worm with four suckered tentacles and a snapping beak. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 19, <strong>ATK</strong> 1 beak +3 (1d8) and 1 tentacle +3 (1d6 + grab), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Camouflage</strong>. Hard to see in cave terrain or rocks.</p><p></p><p><strong>Grab</strong>. Target is immobilized. DC 15 Strength check on turn to break free.</p><p></p>",
+		"notes": "\n\t<p><i> A huge worm with four suckered tentacles and a snapping beak. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 19, <strong>ATK</strong> 1 beak +3 (1d8) and 1 tentacle +3 (1d6 + grab), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Camouflage</strong>. Hard to see in cave terrain or rocks.</p><p></p><p><strong>Grab</strong>. Target is immobilized. [[check 15 str]] check on turn to break free.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

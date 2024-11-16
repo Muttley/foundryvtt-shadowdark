@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Grab",
 	"system": {
-		"description": "<p>DC 15 STR or held. DC 15 STR on turn to break free.</p>",
+		"description": "<p>[[check 15 str]] or held. [[check 15 str]] on turn to break free.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

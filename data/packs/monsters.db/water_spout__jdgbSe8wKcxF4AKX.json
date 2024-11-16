@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Fills a near-sized cube within far. DC 15 STR or creatures inside flung [[/r 2d100]] feet in a random direction.</p>",
+		"description": "<p>Fills a near-sized cube within far. [[check 15 str]] or creatures inside flung [[/r 2d100]] feet in a random direction.</p>",
 		"ranges": [
 		],
 		"source": {

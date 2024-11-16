@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Greater ghouls who retain the intelligence they had in life. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 20, <strong>ATK</strong> 2 claw +4 (1d8 + paralyze), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Undead</strong>. Immune to morale checks.</p><p></p><p><strong>Carrion Stench</strong>. Living creatures DC 12 CON the first time within near or DISADV on attacks and spellcasting for 5 rounds.</p><p></p><p><strong>Paralyze</strong>. DC 12 CON or paralyzed 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Greater ghouls who retain the intelligence they had in life. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 20, <strong>ATK</strong> 2 claw +4 (1d8 + paralyze), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Undead</strong>. Immune to morale checks.</p><p></p><p><strong>Carrion Stench</strong>. Living creatures [[check 12 con]] the first time within near or DISADV on attacks and spellcasting for 5 rounds.</p><p></p><p><strong>Paralyze</strong>. [[check 12 con]] or paralyzed 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

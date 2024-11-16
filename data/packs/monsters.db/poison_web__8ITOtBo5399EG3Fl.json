@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": null
 		},
-		"description": "<p>One target stuck in place and [[/r 1d4]] damage/round. DC 12 DEX on turn to escape.</p>",
+		"description": "<p>One target stuck in place and [[/r 1d4]] damage/round. [[check 12 dex]] on turn to escape.</p>",
 		"predefinedEffects": "",
 		"ranges": [
 			"near"

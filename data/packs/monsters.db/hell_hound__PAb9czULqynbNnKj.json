@@ -139,7 +139,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Black wolfhounds with red eyes and jaws dripping with flames. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 2 bite +4 (1d8) or 1 fire breath, <strong>MV</strong> double near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Impervious</strong>. Fire immune.</p><p></p><p><strong>Fire Breath</strong>. Fills a near-sized cube extending from hell hound. DC 15 DEX or 3d8 damage. Cannot use again for 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Black wolfhounds with red eyes and jaws dripping with flames. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 2 bite +4 (1d8) or 1 fire breath, <strong>MV</strong> double near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Impervious</strong>. Fire immune.</p><p></p><p><strong>Fire Breath</strong>. Fills a near-sized cube extending from hell hound. [[check 15 dex]] or 3d8 damage. Cannot use again for 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

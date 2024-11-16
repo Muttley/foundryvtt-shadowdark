@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Cancel",
 	"system": {
-		"description": "<p>DC 15 DEX or all magical effects on target end.</p>",
+		"description": "<p>[[check 15 dex]] or all magical effects on target end.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

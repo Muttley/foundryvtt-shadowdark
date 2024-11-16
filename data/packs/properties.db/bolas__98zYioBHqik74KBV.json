@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Bolas",
 	"system": {
-		"description": "<p>When you hit a legged creature the size of a horse or smaller, the target's speed is reduced to close until it frees itself (DC 15 STR or DEX check).</p>",
+		"description": "<p>When you hit a legged creature the size of a horse or smaller, the target's speed is reduced to close until it frees itself ([[check 15 str]] or DEX check).</p>",
 		"itemType": "weapon",
 		"predefinedEffects": "",
 		"source": {
