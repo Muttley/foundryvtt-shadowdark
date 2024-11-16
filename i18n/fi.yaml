@@ -89,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Ominaisuudet
 SHADOWDARK.apps.item-importer.instruction3: 3. Paina "Tuo esine"-nappia.
 SHADOWDARK.apps.item-importer.title: Tuo esine
 SHADOWDARK.apps.level-up.dragdrop: Vedä ja tiputa tähän
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Osumapisteet
 SHADOWDARK.apps.level-up.level_up: Hahmosi kehittyi seuraavalle tasolle!
 SHADOWDARK.apps.level-up.leveling_to: Kehitetään hahmoa tasolle
 SHADOWDARK.apps.level-up.missing_selections: Valintoja puuttuu
 SHADOWDARK.apps.level-up.notalent: Ei uusia lahjakkuuksia tällä tasolla
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Kaikkia vaadittuja valintoja ei ole tehty. Jatketaanko hahmotason kasvatusta kuitenkin?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Arvo uusi lahjakkuus
 SHADOWDARK.apps.level-up.title: Hahmon kehitys
 SHADOWDARK.apps.monster-importer.import_button: Tuo hirviö
@@ -276,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.select: Valitse
 SHADOWDARK.dialog.general.yes: "Kyllä"
 SHADOWDARK.dialog.gm: Pelinjohtaja
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Heitä osumapisteet tasolle {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "Osumapisteet ennen heittoa: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Heitetty {hp} osumapistettä tasolle 1 (sis. sitkeysbonuksen)
