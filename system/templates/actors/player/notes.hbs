@@ -1,13 +1,15 @@
 <section class="tab tab-notes" data-group="primary" data-tab="tab-notes">
-	<div class="SD-banner">
-		Character Notes
-	</div>
-	{{editor
-		notesHTML
-		target="system.notes"
-		button=true
-		editable=editable
-		engine="prosemirror"
-		collaborate=false
+	{{#> ui/sd-hideable-section
+		sectionId=""
+		sectionTitle=(localize "SHADOWDARK.sheet.actor.character_notes")
 	}}
+		{{editor
+			notesHTML
+			target="system.notes"
+			button=true
+			editable=editable
+			engine="prosemirror"
+			collaborate=false
+		}}
+	{{/ui/sd-hideable-section}}
 </section>

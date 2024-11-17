@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Venom",
 	"system": {
-		"description": "<p>DC 9 CON or go to 0 HP.</p>",
+		"description": "<p>[[check 9 con]] or go to 0 HP.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

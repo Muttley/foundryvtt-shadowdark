@@ -1,0 +1,44 @@
+<form autocomplete="off">
+	<div class="grid-2-columns" style="row-gap: 4px;">
+		{{#> ui/sd-box
+			header-label="Difficulty"
+		}}
+			<div class="grid-1-columns" style="row-gap: unset;">
+				{{radioBoxes "difficulty" difficulty checked="12"}}
+				<hr>
+				<label class="checkbox">
+					<input type="radio" name="difficulty" value="0">
+					<input type="number" class="custom-dc" name="custom" style="width:2em;" maxlength="2">
+					({{localize "SHADOWDARK.apps.request-check.custom"}})
+				</label>
+			</div>
+		{{/ui/sd-box}}
+
+		{{#> ui/sd-box
+			header-label="Stat"
+		}}
+			<div class="grid-1-columns" style="row-gap: unset;">
+				{{radioBoxes "stat" stats checked="str"}}
+			</div>
+		{{/ui/sd-box}}
+
+		<hr class="grid-colspan-2">
+
+		<button
+			class="grid-colspan-2"
+			name="request-copy"
+			type="submit"
+		>
+			<i class="fa-regular fa-clipboard"></i>
+			{{localize "SHADOWDARK.apps.request-check.copy_to_clipboard"}}
+		</button>
+		<button
+			class="grid-colspan-2 larger"
+			name="request-check"
+			style="font-family: 'Old Newspaper Font';"
+			type="submit"
+		>
+			{{localize "SHADOWDARK.apps.request-check.title"}}
+		</button>
+	</div>
+</form>

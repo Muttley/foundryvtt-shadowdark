@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Death",
 	"system": {
-		"description": "<p>DC 15 CON or drop to 0 HP with a death timer of 1.</p>",
+		"description": "<p>[[check 15 con]] or drop to 0 HP with a death timer of 1.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

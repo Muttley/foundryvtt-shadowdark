@@ -1,0 +1,59 @@
+<li
+	class="effect"
+	data-effect-id="{{effect.id}}"
+>
+	<div class="effect-image">
+		<img src="{{effect.img}}" />
+	</div>
+
+	<div class="effect-name">
+		{{effect.name}}
+	</div>
+
+	<div class="effect-name">
+		{{effect.sourceName}}
+	</div>
+
+	<div class="effect-duration">
+		{{#ifEq effect.durationLabel "None" }}
+			<i class="fas fa-infinity"></i>
+		{{else}}
+			{{effect.durationLabel}}
+		{{/ifEq}}
+	</div>
+
+	<div class="actions">
+		<a
+			class="effect-control"
+			data-action="toggle"
+			title="{{localize 'SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip'}}"
+		>
+			<i
+				{{#if effect.disabled}}
+					class="fas fa-circle-xmark"
+				{{else}}
+					class="fas fa-circle-check"
+					style="color:var(--primary);"
+				{{/if}}
+				class="fas fa-edit"
+			></i>
+
+		</a>
+
+		<a
+			class="effect-control"
+			data-action="edit"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip'}}"
+		>
+			<i class="fa-solid fa-pen-to-square"></i>
+		</a>
+
+		<a
+			class="effect-control"
+			data-action="delete"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip'}}"
+		>
+			<i class="fas fa-trash"></i>
+		</a>
+	</div>
+</li>

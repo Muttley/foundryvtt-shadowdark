@@ -46,6 +46,7 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: Släck ljusen
 SHADOWDARK.app.loading.body: Searching Distant Lands...
 SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: Attackavstånd
+SHADOWDARK.apps.character-generator.choose: Choose
 SHADOWDARK.apps.character-generator.create_character: Create Character
 SHADOWDARK.apps.character-generator.error.create: Det gick inte att skapa spelarkaraktär {error}
 SHADOWDARK.apps.character-generator.error.name: Karaktärens namn får inte vara tomt
@@ -53,6 +54,8 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Det går inte at
 SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
+SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
 SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
@@ -86,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Funktioner
 SHADOWDARK.apps.item-importer.instruction3: 3. Klicka på importera.
 SHADOWDARK.apps.item-importer.title: Importera föremål
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
 SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Importera monster
@@ -103,6 +109,14 @@ SHADOWDARK.apps.monster-importer.instruction2d: Primärt statistikblock
 SHADOWDARK.apps.monster-importer.instruction2e: Egenskap
 SHADOWDARK.apps.monster-importer.instruction3: 3. Klicka på Importera Monster.
 SHADOWDARK.apps.monster-importer.title: Importera monster
+SHADOWDARK.apps.request-check.copied: Copied to Clipboard
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Items Not Found
 SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling Importer
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Import
@@ -184,6 +198,7 @@ SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG för Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Rulla
+SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Förmåga
 SHADOWDARK.class-ability.available.label: Tillgänglig
@@ -264,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Nej"
 SHADOWDARK.dialog.general.select: Välj
 SHADOWDARK.dialog.general.yes: "Ja"
 SHADOWDARK.dialog.gm: Spelmästare
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Rulla KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "KP innan rullning: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rullade {hp} KP för nivå 1 (inkl. fys mod)
@@ -338,8 +354,11 @@ SHADOWDARK.effect.unavailable: Inaktiverade effekter
 SHADOWDARK.error.class_ability.no-uses-remaining: Inga användningar kvar
 SHADOWDARK.error.general.gm_required: Du måste vara spelledare för att göra det där.
 SHADOWDARK.error.general.no_character_class: Inget yrke har valts
+SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Magiförmåga har inte ställts in
+SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk
 SHADOWDARK.form.section_header.names.label: Namn
@@ -664,6 +683,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Minska tillgängliga användn
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Öka tillgängliga användningar
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: Moralisk Lutning
+SHADOWDARK.sheet.actor.character_notes: Character Notes
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: KP
 SHADOWDARK.sheet.actor.level: Nivå
@@ -671,10 +691,20 @@ SHADOWDARK.sheet.actor.placeholder.name: Nytt aktörsnamn
 SHADOWDARK.sheet.class.item: Shadowdark Föremålsblad
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Ark
 SHADOWDARK.sheet.class.player: Shadowdark Spelarblad
+SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.duration.title: Duration
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.source.title: Source
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.add: Add
+SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
 SHADOWDARK.sheet.general.item_create.tooltip: Skapa {type} objekt
 SHADOWDARK.sheet.general.item_delete.title: Ta bort föremål
 SHADOWDARK.sheet.general.item_edit.title: Förändra föremål
 SHADOWDARK.sheet.general.roll_hp: Rulla KP
+SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
+SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
 SHADOWDARK.sheet.item.tab.description: Beskrivning
 SHADOWDARK.sheet.item.tab.details: Detaljer
 SHADOWDARK.sheet.item.tab.effects: Effekt

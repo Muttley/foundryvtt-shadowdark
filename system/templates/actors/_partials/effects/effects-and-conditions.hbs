@@ -1,0 +1,42 @@
+{{#> ui/sd-hideable-section
+	sectionId=""
+	sectionTitle=(localize "SHADOWDARK.sheet.general.effects_and_conditions.title")
+}}
+	{{#each effects as |section sid|}}
+		<ol	class="SD-list">
+			<li class="header">
+				<div class="item-name">
+					{{section.label}}
+				</div>
+
+				<div class="effect-duration">
+					{{localize 'SHADOWDARK.item.npc_attack_type'}}
+				</div>
+			</li>
+
+			{{#each section.items as |effect|}}
+				<li
+					class="item effect flexrow"
+					data-item-id="{{effect._id}}"
+					data-uuid="{{effect.uuid}}"
+				>
+					<div class="item-image" style="background-image: url({{effect.img}})">
+						<i class="fas fa-comment fa-lg"></i>
+					</div>
+
+					<a class="item-name effect-name" data-action="show-details">
+						{{effect.name}}
+					</a>
+
+					<div class="effect-duration">
+						{{#ifEq effect.system.duration.type "unlimited" }}
+							<i class="fas fa-infinity"></i>
+						{{else}}
+							<i class="fas fa-clock"></i>
+						{{/ifEq}}
+					</div>
+				</li>
+			{{/each}}
+		</ol>
+	{{/each}}
+{{/ui/sd-hideable-section}}

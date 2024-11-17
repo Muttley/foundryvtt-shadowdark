@@ -211,7 +211,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 
 		context.characterClass = await this.actor.getClass();
-		context.classHasPatron = context.characterClass.system.patron.required;
+		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
 		context.classTitle = await this.actor.getTitle();
 
 		context.characterPatron = await this.actor.getPatron();
@@ -223,6 +223,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
+
 		return context;
 	}
 
@@ -238,6 +239,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				return this.actor.addDeity(item);
 			case "Language":
 				return this.actor.addLanguage(item);
+			case "Patron":
+				return this.actor.addPatron(item);
 		}
 	}
 
@@ -263,28 +266,32 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		if (await this._effectDropNotAllowed(data)) return false;
 
-		// Talents & Effects may need some user input
-		if (["Talent", "Effect"].includes(item.type)) {
-			let itemObj = await shadowdark.utils.createItemWithEffect(item);
-
-			// add item to actor
-			const actorItem = await super._onDropItemCreate(itemObj);
-			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-				this._toggleLightSource(actorItem[0]);
-			}
-			return;
-		}
-
+		// Background items are handled differently currently
 		const backgroundItems = [
 			"Ancestry",
 			"Background",
 			"Class",
 			"Deity",
 			"Language",
+			"Patron",
 		];
 
 		if (backgroundItems.includes(item.type)) {
 			return this._onDropBackgroundItem(item);
+		}
+
+		// Items with Effects may need some user input
+		if (item.effects.toObject().length > 0) {
+			let itemObj = await shadowdark.effects.createItemWithEffect(item);
+
+			// add item to actor
+			const [newItem] = await super._onDropItem(event, data);
+
+			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+				this._toggleLightSource(newItem);
+			}
+
+			return;
 		}
 
 		// Activate light spell if dropped onto the sheet

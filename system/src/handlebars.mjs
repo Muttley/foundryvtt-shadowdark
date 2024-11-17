@@ -16,6 +16,16 @@ export default function registerHandlebarsHelpers() {
 		return newOjects;
 	});
 
+	Handlebars.registerHelper("concat", function() {
+		let outStr = "";
+		for (let arg in arguments) {
+			if (typeof arguments[arg] != "object") {
+				outStr += arguments[arg];
+			}
+		}
+		return outStr;
+	});
+
 	Handlebars.registerHelper("displayCost", item => {
 		let costInGp = item.system.cost.gp
 		+ (item.system.cost.sp /10 )
@@ -205,4 +215,5 @@ export default function registerHandlebarsHelpers() {
 		const html = options.fn(this);
 		return html.replace(rgx, "$& selected");
 	});
+
 }

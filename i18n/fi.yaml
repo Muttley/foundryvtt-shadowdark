@@ -46,6 +46,7 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
 SHADOWDARK.app.loading.body: Etsitään kaukaisia maita...
 SHADOWDARK.app.loading.title: Ladataan
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat
+SHADOWDARK.apps.character-generator.choose: Choose
 SHADOWDARK.apps.character-generator.create_character: Luo uusi hahmo
 SHADOWDARK.apps.character-generator.error.create: Pelaajahahmon luonti epäonnistui {error}
 SHADOWDARK.apps.character-generator.error.name: Hahmon nimi ei voi olla tyhjä
@@ -53,6 +54,8 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Ei pystytä arpo
 SHADOWDARK.apps.character-generator.gear: Varusteet
 SHADOWDARK.apps.character-generator.gold: Kulta
 SHADOWDARK.apps.character-generator.name: Hahmon nimi
+SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Hahmo luotu
 SHADOWDARK.apps.character-generator.title: Hahmogeneraattori
 SHADOWDARK.apps.character-generator.tooltip: Täysin satunnainen hahmo
@@ -86,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Ominaisuudet
 SHADOWDARK.apps.item-importer.instruction3: 3. Paina "Tuo esine"-nappia.
 SHADOWDARK.apps.item-importer.title: Tuo esine
 SHADOWDARK.apps.level-up.dragdrop: Vedä ja tiputa tähän
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Osumapisteet
 SHADOWDARK.apps.level-up.level_up: Hahmosi kehittyi seuraavalle tasolle!
 SHADOWDARK.apps.level-up.leveling_to: Kehitetään hahmoa tasolle
 SHADOWDARK.apps.level-up.missing_selections: Valintoja puuttuu
 SHADOWDARK.apps.level-up.notalent: Ei uusia lahjakkuuksia tällä tasolla
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Kaikkia vaadittuja valintoja ei ole tehty. Jatketaanko hahmotason kasvatusta kuitenkin?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Arvo uusi lahjakkuus
 SHADOWDARK.apps.level-up.title: Hahmon kehitys
 SHADOWDARK.apps.monster-importer.import_button: Tuo hirviö
@@ -103,6 +109,14 @@ SHADOWDARK.apps.monster-importer.instruction2d: Hirviön ominaisuudet
 SHADOWDARK.apps.monster-importer.instruction2e: Ominaisuus
 SHADOWDARK.apps.monster-importer.instruction3: 3. Paina "Tuo hirviö"-nappia.
 SHADOWDARK.apps.monster-importer.title: Tuo hirviö
+SHADOWDARK.apps.request-check.copied: Copied to Clipboard
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Kohteita ei löytynyt
 SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling tuontityökalu
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Tuo
@@ -184,6 +198,7 @@ SHADOWDARK.chat.welcome_message.title_text: Tervetuloa Shadowdark roolipeliin. T
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
 SHADOWDARK.chat.welcome_message.watch: Katso opastusvideo
 SHADOWDARK.chatcard.default: Heitä noppaa
+SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Kyvykkyysheitto
 SHADOWDARK.class-ability.ability.label: Kyky
 SHADOWDARK.class-ability.available.label: Käytettävissä
@@ -264,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Ei"
 SHADOWDARK.dialog.general.select: Valitse
 SHADOWDARK.dialog.general.yes: "Kyllä"
 SHADOWDARK.dialog.gm: Pelinjohtaja
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Heitä osumapisteet tasolle {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "Osumapisteet ennen heittoa: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Heitetty {hp} osumapistettä tasolle 1 (sis. sitkeysbonuksen)
@@ -338,8 +354,11 @@ SHADOWDARK.effect.unavailable: Poissaolevat efektit
 SHADOWDARK.error.class_ability.no-uses-remaining: Ei enempää käyttökertoja
 SHADOWDARK.error.general.gm_required: Tarvitset pelinjohtajan roolin tehdäksesi noin.
 SHADOWDARK.error.general.no_character_class: Hahmoluokka ei ole valittu
+SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Lähdemateriaali puuttuu tai on tuntematon...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Hahmon loihtimiskyvykkyyttä ei ole asetettu
+SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Varusteet
 SHADOWDARK.form.section_header.languages.label: Kielet
 SHADOWDARK.form.section_header.names.label: Nimet
@@ -664,6 +683,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Vähennä käyttökertoja
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Lisää käyttökertoja
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet
 SHADOWDARK.sheet.actor.alignment: Vakaumus
+SHADOWDARK.sheet.actor.character_notes: Character Notes
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: Osumapisteet
 SHADOWDARK.sheet.actor.level: Taso
@@ -671,10 +691,20 @@ SHADOWDARK.sheet.actor.placeholder.name: Uusi nimi
 SHADOWDARK.sheet.class.item: Shadowdark esineikkuna
 SHADOWDARK.sheet.class.npc: Shadowdark NPC ikkuna
 SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
+SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.duration.title: Duration
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.source.title: Source
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.add: Add
+SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
 SHADOWDARK.sheet.general.item_create.tooltip: Luo {type} esine
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
 SHADOWDARK.sheet.general.roll_hp: Osumapisteheitto
+SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
+SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
 SHADOWDARK.sheet.item.tab.description: Kuvaus
 SHADOWDARK.sheet.item.tab.details: Yksityiskohdat
 SHADOWDARK.sheet.item.tab.effects: Efektit

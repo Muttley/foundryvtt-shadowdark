@@ -1,0 +1,21 @@
+<div
+	class="SD-banner"
+	{{#if sectionId}}
+		data-action="hide-section"
+		data-section-to-hide="{{sectionId}}"
+		{{#if (lookup hiddenSections sectionId)}}
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.section.toggle_show'}}"
+		{{else}}
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.section.toggle_hide'}}"
+		{{/if}}
+	{{/if}}
+>
+	{{#if sectionId}}
+		{{#if (lookup hiddenSections sectionId)}}
+			<i class="fa-thin fa-caret-right"></i>
+		{{else}}
+			<i class="fa-thin fa-caret-down"></i>
+		{{/if}}
+	{{/if}}
+	{{sectionTitle}}
+</div>

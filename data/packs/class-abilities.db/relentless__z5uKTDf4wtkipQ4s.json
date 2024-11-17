@@ -9,7 +9,7 @@
 	"system": {
 		"ability": "con",
 		"dc": 18,
-		"description": "<p><span>3/day, when you are reduced to 0 HP, make a DC 18 Constitution check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</span></p>",
+		"description": "<p><span>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</span></p>",
 		"group": "Relentless",
 		"limitedUses": true,
 		"loseOnFailure": false,

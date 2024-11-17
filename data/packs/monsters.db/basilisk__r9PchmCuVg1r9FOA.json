@@ -138,7 +138,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Massive, muscled lizards with six legs and gray, tough hide. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 25, <strong>ATK</strong> 2 bite +4 (2d6 + petrify), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Petrify</strong>. Any creature that touches the basilisk or meets its gaze, DC 15 CON or petrified.</p><p></p>",
+		"notes": "\n\t<p><i> Massive, muscled lizards with six legs and gray, tough hide. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 25, <strong>ATK</strong> 2 bite +4 (2d6 + petrify), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Petrify</strong>. Any creature that touches the basilisk or meets its gaze, [[check 15 con]] or petrified.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

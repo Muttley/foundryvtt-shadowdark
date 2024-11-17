@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Carrion Stench",
 	"system": {
-		"description": "<p>Living creatures DC 12 CON the first time within near or DISADV on attacks and spellcasting for 5 rounds.</p>",
+		"description": "<p>Living creatures [[check 12 con]] the first time within near or DISADV on attacks and spellcasting for 5 rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

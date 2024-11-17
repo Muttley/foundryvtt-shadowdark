@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Pale, horse-sized arachnids that become ghostly and intangible. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d8 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p></p><p><strong>Phase</strong>. Once per round, become corporeal or incorporeal.</p><p></p><p><strong>Poison</strong>. DC 12 CON or drop to 0 HP in 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Pale, horse-sized arachnids that become ghostly and intangible. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d8 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p></p><p><strong>Phase</strong>. Once per round, become corporeal or incorporeal.</p><p></p><p><strong>Poison</strong>. [[check 12 con]] or drop to 0 HP in 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

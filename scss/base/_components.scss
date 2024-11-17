@@ -97,7 +97,8 @@
 				color: #{$primary-color};
 			}
 
-			.item-image {
+			.item-image,
+			.effect-image {
 				display: inline-block;
 				width: 24px;
 				height: 24px;
@@ -113,9 +114,11 @@
 				}
 			}
 
-			.item-name {
+			.item-name,
+			.effect-name {
 				flex:2;
 				overflow: hidden;
+				align-items: center;
 			}
 
 			.item-details {

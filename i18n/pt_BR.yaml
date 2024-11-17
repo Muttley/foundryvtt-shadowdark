@@ -46,6 +46,7 @@ SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar Todas as Luzes
 SHADOWDARK.app.loading.body: Buscando por Terras Distantes...
 SHADOWDARK.app.loading.title: Carregando
 SHADOWDARK.app.npc_attack_ranges.title: Alcance de Ataque
+SHADOWDARK.apps.character-generator.choose: Choose
 SHADOWDARK.apps.character-generator.create_character: Criar Personagem
 SHADOWDARK.apps.character-generator.error.create: Falha ao criar personagem {error}
 SHADOWDARK.apps.character-generator.error.name: O nome do personagem não pode estar em branco
@@ -53,6 +54,8 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possíve
 SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
+SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Personagem criado
 SHADOWDARK.apps.character-generator.title: Gerador de Personagem
 SHADOWDARK.apps.character-generator.tooltip: Personagem Aleatório
@@ -86,12 +89,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: 3. Clique em Importar Item.
 SHADOWDARK.apps.item-importer.title: Importar Item
 SHADOWDARK.apps.level-up.dragdrop: Arraste e Solte Aqui
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
 SHADOWDARK.apps.level-up.hit_points: Pontos de Vida
 SHADOWDARK.apps.level-up.level_up: Subir de Nível!
 SHADOWDARK.apps.level-up.leveling_to: Subindo para o nível
 SHADOWDARK.apps.level-up.missing_selections: Faltando Seleções
 SHADOWDARK.apps.level-up.notalent: Nenhum talento ganho neste nível
+SHADOWDARK.apps.level-up.or_boons: or Boons
 SHADOWDARK.apps.level-up.prompt: Nem todas as seleções necessárias foram feitas. Continuar subindo de nível mesmo assim?
+SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Rolar Talento
 SHADOWDARK.apps.level-up.title: Subindo de nível
 SHADOWDARK.apps.monster-importer.import_button: Importar Monstro
@@ -103,6 +109,14 @@ SHADOWDARK.apps.monster-importer.instruction2d: Bloco principal de estatísticas
 SHADOWDARK.apps.monster-importer.instruction2e: Característica
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clique em Importar Monstro.
 SHADOWDARK.apps.monster-importer.title: Importar Monstro
+SHADOWDARK.apps.request-check.copied: Copied to Clipboard
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Itens Não Encontrado
 SHADOWDARK.apps.shadowdarkling-importer.header: Importador do Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importar
@@ -184,6 +198,7 @@ SHADOWDARK.chat.welcome_message.title_text: Bem vindo ao RPG Shadowdark. Aqui es
 SHADOWDARK.chat.welcome_message.title: RPG Shadowdark para o Foundry
 SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Rolar
+SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Teste de Atributo
 SHADOWDARK.class-ability.ability.label: Atributo
 SHADOWDARK.class-ability.available.label: Disponível
@@ -264,6 +279,7 @@ SHADOWDARK.dialog.general.no: "Não"
 SHADOWDARK.dialog.general.select: Selecionar
 SHADOWDARK.dialog.general.yes: "Sim"
 SHADOWDARK.dialog.gm: Mestre do Jogo
+SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Rolar PV para o nível {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PV antes de rolar: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolou {hp} PV para o nível 1 (incluindo modificador)
@@ -338,8 +354,11 @@ SHADOWDARK.effect.unavailable: Efeitos Desabilitados
 SHADOWDARK.error.class_ability.no-uses-remaining: Sem usos restantes
 SHADOWDARK.error.general.gm_required: Você precisa ter o cargo de Mestre do Jogo para fazer isso.
 SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi selecionada
+SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
 SHADOWDARK.error.spells.no_spellcasting_ability_set: Nenhum atributo de conjuração do personagem foi configurado
+SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.names.label: Nomes
@@ -664,6 +683,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Diminuir Usos Disponíveis
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Aumentar Usos Disponíveis
 SHADOWDARK.sheet.actor.ac: CA
 SHADOWDARK.sheet.actor.alignment: Alinhamento
+SHADOWDARK.sheet.actor.character_notes: Character Notes
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
 SHADOWDARK.sheet.actor.level: Nível
@@ -671,10 +691,20 @@ SHADOWDARK.sheet.actor.placeholder.name: Nome do Novo Ator
 SHADOWDARK.sheet.class.item: Ficha de Item Shadowdark
 SHADOWDARK.sheet.class.npc: Ficha de PDM Shadowdark
 SHADOWDARK.sheet.class.player: Ficha de Jogador Shadowdark
+SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.duration.title: Duration
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.source.title: Source
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.add: Add
+SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
 SHADOWDARK.sheet.general.item_create.tooltip: Criar Item {type}
 SHADOWDARK.sheet.general.item_delete.title: Deletar Item
 SHADOWDARK.sheet.general.item_edit.title: Editar Item
 SHADOWDARK.sheet.general.roll_hp: Rolar PV
+SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
+SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
 SHADOWDARK.sheet.item.tab.description: Descrição
 SHADOWDARK.sheet.item.tab.details: Detalhes
 SHADOWDARK.sheet.item.tab.effects: Efeitos

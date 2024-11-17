@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Petrify",
 	"system": {
-		"description": "<p>Any creature that touches the basilisk or meets its gaze, DC 15 CON or petrified.</p>",
+		"description": "<p>Any creature that touches the basilisk or meets its gaze, [[check 15 con]] or petrified.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

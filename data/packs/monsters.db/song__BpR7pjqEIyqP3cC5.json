@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Enemies who can hear within double near DC 15 CHA or paralyzed [[/r 1d4]] rounds. Immune for 1 day if passed check.</p>",
+		"description": "<p>Enemies who can hear within double near [[check 15 cha]] or paralyzed [[/r 1d4]] rounds. Immune for 1 day if passed check.</p>",
 		"predefinedEffects": "",
 		"ranges": [
 		],

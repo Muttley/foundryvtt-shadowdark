@@ -138,7 +138,7 @@
 		},
 		"move": "near",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> Human-sized frogs with warty skin and long, sticky tongues. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 10, <strong>ATK</strong> 1 tongue and 1 bite +2 (1d6), <strong>MV</strong> near (swim), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Tongue</strong>. 1 creature in near DC 12 DEX or pulled to close range.</p><p></p>",
+		"notes": "\n\t<p><i> Human-sized frogs with warty skin and long, sticky tongues. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 10, <strong>ATK</strong> 1 tongue and 1 bite +2 (1d6), <strong>MV</strong> near (swim), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Tongue</strong>. 1 creature in near [[check 12 dex]] or pulled to close range.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -8,10 +8,13 @@ export default class LevelUpSD extends FormApplication {
 			hp: 0,
 			hpEdit: false,
 			talent: false,
+			boon: false,
 		};
 		this.data.actor = game.actors.get(uid);
 		this.data.talents = [];
 		this.data.spells = {};
+		this.data.talentsRolled = false;
+		this.data.talentsChosen = false;
 
 		for (let i = 1; i <= 5; i++) {
 			this.data.spells[i] = {
@@ -26,6 +29,7 @@ export default class LevelUpSD extends FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "level-up"],
+			height: "auto",
 			width: 300,
 			resizable: false,
 			closeOnSubmit: true,
@@ -57,9 +61,14 @@ export default class LevelUpSD extends FormApplication {
 			event => this._onReRollHP(event)
 		);
 
+		html.find("[data-action='view-boon-table']").click(
+			event => this._viewBoonTable(event)
+		);
+
 		html.find("[data-action='view-talent-table']").click(
 			event => this._viewTalentTable(event)
 		);
+
 		html.find("[data-action='open-spellbook']").click(
 			event => this._openSpellBook(event)
 		);
@@ -70,6 +79,10 @@ export default class LevelUpSD extends FormApplication {
 
 		html.find("[data-action='delete-spell']").click(
 			event => this._onDeleteSpell(event)
+		);
+
+		html.find("[data-action='roll-boon']").click(
+			event => this._onRollBoon(event)
 		);
 
 		html.find("[data-action='roll-talent']").click(
@@ -93,9 +106,26 @@ export default class LevelUpSD extends FormApplication {
 			this.data.class = await fromUuid(this.data.actor.system.class);
 			this.data.talentTable = await fromUuid(this.data.class.system.classTalentTable);
 			this.data.currentLevel = this.data.actor.system.level.value;
-			this.data.targetLevel =  this.data.currentLevel +1;
+			this.data.targetLevel =  this.data.currentLevel + 1;
 			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
 			this.data.totalSpellsToChoose = 0;
+
+			this.data.patron = await fromUuid(this.data.actor.system.patron);
+
+			this.data.boonTable = this.data.patron
+				? await fromUuid(this.data.patron.system.boonTable)
+				: undefined;
+
+			this.data.startingBoons = 0;
+			const classData = this.data.class.system;
+			this.data.canRollBoons = classData.patron.required;
+
+			const needsStartingBoons = classData.patron.required
+				&& classData.patron.startingBoons > 0;
+
+			if (this.data.targetLevel === 1 && needsStartingBoons) {
+				this.data.startingBoons = classData.patron.startingBoons;
+			}
 
 			if (await this.data.actor.isSpellCaster()) {
 				this.data.spellcastingClass =
@@ -129,6 +159,9 @@ export default class LevelUpSD extends FormApplication {
 
 			}
 		}
+		this.data.talentsRolled = this.data.rolls.talent || this.data.rolls.boon;
+		this.data.talentsChosen = this.data.talents.length > 0;
+
 		return this.data;
 	}
 
@@ -152,6 +185,10 @@ export default class LevelUpSD extends FormApplication {
 		}
 	}
 
+	async _viewBoonTable() {
+		this.data.boonTable.sheet.render(true);
+	}
+
 	async _viewTalentTable() {
 		this.data.talentTable.sheet.render(true);
 	}
@@ -160,13 +197,17 @@ export default class LevelUpSD extends FormApplication {
 		this.data.actor.openSpellBook();
 	}
 
-	async _onRollHP() {
+	async _onRollHP({isReroll = false}) {
 		const data = {
 			rollType: "hp",
 			actor: this.data.actor,
 		};
 		let options = {};
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+
+		options.title = isReroll
+			? game.i18n.localize("SHADOWDARK.dialog.hp_re_roll.title")
+			: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
+
 		options.flavor = options.title;
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 		options.fastForward = true;
@@ -186,10 +227,28 @@ export default class LevelUpSD extends FormApplication {
 		Dialog.confirm({
 			title: "Re-Roll HP",
 			content: "Are you sure you want to re-roll hit points?",
-			yes: () => this._onRollHP(),
+			yes: () => this._onRollHP({isReroll: true}),
 			no: () => null,
 			defaultYes: false,
 		  });
+	}
+
+	async _onRollBoon() {
+		if (!this.data.boonTable) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.apps.level-up.errors.missing_boon_table")
+			);
+		}
+
+		await this.data.boonTable.draw();
+		ui.sidebar.activateTab("chat");
+
+		if (this.data.targetLevel > 1) {
+			this.data.rolls.talent = true;
+		}
+		this.data.rolls.boon = true;
+
+		this.render();
 	}
 
 	async _onRollTalent() {
@@ -208,7 +267,11 @@ export default class LevelUpSD extends FormApplication {
 			}
 		}
 
+		if (this.data.targetLevel > 1) {
+			this.data.rolls.boon = true;
+		}
 		this.data.rolls.talent = true;
+
 		this.render();
 	}
 
@@ -216,7 +279,7 @@ export default class LevelUpSD extends FormApplication {
 		if (this.data.talentGained) {
 
 			// checks for effects on talent and prompts if needed
-			let talentObj = await shadowdark.utils.createItemWithEffect(talentItem);
+			let talentObj = await shadowdark.effects.createItemWithEffect(talentItem);
 			talentObj.system.level = this.data.targetLevel;
 			talentObj.uuid = talentItem.uuid;
 			this.data.talents.push(talentObj);

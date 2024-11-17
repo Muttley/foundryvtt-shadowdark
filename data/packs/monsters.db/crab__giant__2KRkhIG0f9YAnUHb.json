@@ -138,7 +138,7 @@
 		},
 		"move": "near",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> A wagon-sized, armored crab with two crushing pincers. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 24, <strong>ATK</strong> 2 pincer +4 (1d8 + crush), <strong>MV</strong> near (swim), <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Crush</strong>. DC 15 STR or target takes 1d8 damage.</p><p></p>",
+		"notes": "\n\t<p><i> A wagon-sized, armored crab with two crushing pincers. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 24, <strong>ATK</strong> 2 pincer +4 (1d8 + crush), <strong>MV</strong> near (swim), <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Crush</strong>. [[check 15 str]] or target takes 1d8 damage.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -8,7 +8,7 @@
 	"name": "Stink Bomb",
 	"system": {
 		"dc": "12",
-		"description": "<p>One target within far [[/r 2d4]] damage and DC 12 CON or DISADV on next check/attack.</p>",
+		"description": "<p>One target within far [[/r 2d4]] damage and [[check 12 con]] or DISADV on next check/attack.</p>",
 		"duration": {
 			"type": "",
 			"value": -1

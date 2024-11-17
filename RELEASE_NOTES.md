@@ -5,11 +5,16 @@
 * [#847] Add support for Warlock class Boon which gives the ability to learn a Wizard spell
 * [#879] Add new Patron item class
 * [#880] Create a new Patron Boon type for Talents
+* [#881] Support rolling on a character's Patron's Boon table if necessary in the Level Up app
 * [#901] Added Russian as a partially complete system language.
 * [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
+* [#910] Implemented automatic check roll links and added new macro to launch the check request dialog.
+	* example syntax: `[[check 12 str]]` or `[[request 15 int]]`
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
+* [#921] Add way to view/manipulate current Active Effects to the player Effects tab
 * [#937] Support selecting or rolling Patron in character generator
 * [#939] Add macro for launching the character generator
+* [#947] Added new check syntax to text in monster abilities and the Lost Citadel dungeon guild.
 
 ## Bugfixes
 * [#894] Unnecessary "items not found" warning for "+2 Stats Points" from ShadowDarklings
