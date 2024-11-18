@@ -28,6 +28,7 @@
 * [#936] Character Generator: Don't display empty alignment for Deities that don't have one
 * [#938] Unecessary line breaks in Farsight talent descriptions
 * [#953] Dice So Nice not honouring roll modes in Shadowdark
+* [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*
