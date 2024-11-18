@@ -12,16 +12,15 @@ export default class ChatSD {
 			mode = game.settings.get("core", "rollMode");
 		}
 
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
 		const chatData = {
-			user: game.user.id,
+			content: html,
+			flags: { "core.canPopout": true },
+			rollMode: mode,
 			speaker: ChatMessage.getSpeaker({
 				actor: actor,
 			}),
-			rollMode: mode,
-			content: html,
-			type: messageStyles.OTHER,
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+			user: game.user.id,
 		};
 
 		ChatMessage.applyRollMode(chatData, mode);

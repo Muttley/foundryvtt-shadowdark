@@ -179,15 +179,6 @@ export default class UtilitySD {
 	}
 
 
-	static getMessageStyles() {
-		const messageStyles = this.foundryMinVersion(12)
-			? CONST.CHAT_MESSAGE_STYLES
-			: CONST.CHAT_MESSAGE_TYPES;
-
-		return messageStyles;
-	}
-
-
 	static getNextDieInList(die, allDice) {
 		if (die === false) return die;
 
