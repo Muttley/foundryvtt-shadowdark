@@ -27,6 +27,7 @@
 * [#930] Class Abilities can't be used if they have no associated skill roll
 * [#936] Character Generator: Don't display empty alignment for Deities that don't have one
 * [#938] Unecessary line breaks in Farsight talent descriptions
+* [#952] NPC Special Attacks always posted to chat in public
 * [#953] Dice So Nice not honouring roll modes in Shadowdark
 * [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
 
@@ -39,7 +40,6 @@
 * [#929] Merged Russian language updates from Crowdin
 
 *Many thanks to **AdamsGH** for contributing **Russian** translation data.*
-
 
 ---
 

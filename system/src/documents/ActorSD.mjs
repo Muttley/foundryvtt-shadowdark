@@ -1412,6 +1412,26 @@ export default class ActorSD extends Actor {
 
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
+
+		if (item.type === "NPC Feature") item.displayCard();
+
+		// If the ability has limited uses, handle that first
+		if (item.system.limitedUses) {
+			if (item.system.uses.available <= 0) {
+				return ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+					{permanent: false}
+				);
+			}
+			else {
+				const newUsesAvailable = item.system.uses.available - 1;
+
+				item.update({
+					"system.uses.available": Math.max(0, newUsesAvailable),
+				});
+			}
+		}
+
 		const abilityDescription = await TextEditor.enrichHTML(
 			item.system.description,
 			{
@@ -1420,86 +1440,32 @@ export default class ActorSD extends Actor {
 				relativeTo: this,
 			}
 		);
-		// Default message values
-		let title = "";
-		let message = "";
+
 		let success = true;
-
-		// NPC features - no title or checks required
-		if (item.type === "NPC Feature") {
-			message = `${abilityDescription}`;
-		}
-		else {
-			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
-
-			// does ability use on a roll check?
-			if (item.system.ability) {
-				options = foundry.utils.mergeObject({target: item.system.dc}, options);
-				const result = await this.rollAbility(
-					item.system.ability,
-					options
-				);
-
-				success = result?.rolls?.main?.success ?? false;
-			}
-
-			// does ability have limited uses?
-			if (item.system.limitedUses) {
-				if (item.system.uses.available > 0) {
-					item.update({
-						"system.uses.available": item.system.uses.available - 1,
-					});
-				}
-				else {
-					success = false;
-					ui.notifications.error(
-						game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
-						{permanent: false}
-					);
-				}
-			}
-
-			const messageType = success
-				? "SHADOWDARK.chat.use_ability.success"
-				: "SHADOWDARK.chat.use_ability.failure";
-
-			message = game.i18n.format(
-				messageType,
-				{
-					name: this.name,
-					ability: item.name,
-				}
+		// does ability use on a roll check?
+		if (item.system.ability) {
+			options = foundry.utils.mergeObject({target: item.system.dc}, options);
+			const result = await this.rollAbility(
+				item.system.ability,
+				options
 			);
 
-			if (success) {
-				message = `<p>${message}</p>${abilityDescription}`;
+			success = result?.rolls?.main?.success ?? false;
+
+			if (!success && item.system.loseOnFailure) {
+				item.update({"system.lost": true});
 			}
 		}
 
-		// construct and create chat message
-		const cardData = {
-			actor: this,
-			item: item,
-			message,
-		};
-
-		let template = "systems/shadowdark/templates/chat/use-ability.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		await ChatMessage.create({
-			title,
-			content,
-			flags: { "core.canPopout": true },
-			flavor: title,
-			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
-			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
-			user: game.user.id,
+		return shadowdark.chat.renderUseAbilityMessage(this.actor, {
+			flavor: game.i18n.localize("SHADOWDARK.chat.use_ability.title"),
+			templateData: {
+				abilityDescription,
+				actor: this,
+				item: item,
+				success,
+			},
 		});
-
-		if (!success && item.system.loseOnFailure) {
-			item.update({"system.lost": true});
-		}
 	}
 
 
