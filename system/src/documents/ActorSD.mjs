@@ -70,15 +70,13 @@ export default class ActorSD extends Actor {
 
 		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
 
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
 		await ChatMessage.create({
 			title,
 			content,
 			flags: { "core.canPopout": true },
 			flavor: title,
 			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
-			type: messageStyles.OTHER,
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
 			user: game.user.id,
 		});
 
@@ -1489,15 +1487,13 @@ export default class ActorSD extends Actor {
 
 		const content = await renderTemplate(template, cardData);
 
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
 		await ChatMessage.create({
 			title,
 			content,
 			flags: { "core.canPopout": true },
 			flavor: title,
 			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
-			type: messageStyles.OTHER,
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
 			user: game.user.id,
 		});
 

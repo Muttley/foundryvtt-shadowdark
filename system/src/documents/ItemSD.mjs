@@ -97,13 +97,11 @@ export default class ItemSD extends Item {
 
 		const html = await renderTemplate(template, templateData);
 
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
 		const chatData = {
 			user: game.user.id,
-			type: messageStyles.OTHER,
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
 			content: html,
-			flavor: this.system.chatFlavor || this.name,
+			flavor: this.name,
 			speaker: ChatMessage.getSpeaker({actor: this.actor, token}),
 			flags: { "core.canPopout": true },
 		};
