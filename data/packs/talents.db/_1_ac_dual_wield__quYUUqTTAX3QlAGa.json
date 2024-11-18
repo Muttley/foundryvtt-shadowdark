@@ -2,12 +2,14 @@
 	"_id": "quYUUqTTAX3QlAGa",
 	"_key": "!items!quYUUqTTAX3QlAGa",
 	"effects": [
+		"cGGttIknipaR4UIo"
 	],
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/skills/melee/swords-parry-block-blue.webp",
 	"name": "+1 AC Dual Wield",
 	"system": {
 		"bonuses": {
+			"acBonus": "1",
 			"critical": {
 				"failureThreshold": 1,
 				"multiplier": 2,
@@ -17,7 +19,7 @@
 			"meleeDamageBonus": "1",
 			"rangedAttackBonus": "1"
 		},
-		"description": "<p>You gain +1 to your AC when wielding a melee weapon in each hand</p>",
+		"description": "<p>You gain +1 to your AC when wielding a melee weapon in each hand.</p><p></p><p><em><strong>Note:</strong> Remember to toggle the <strong>+1 AC Dual Wield</strong> Active Effect on/off in the Effects tab of your character sheet when needed.</em></p>",
 		"level": 0,
 		"magicItem": false,
 		"predefinedEffects": "",

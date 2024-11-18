@@ -8,6 +8,7 @@
 * [#881] Support rolling on a character's Patron's Boon table if necessary in the Level Up app
 * [#901] Added Russian as a partially complete system language.
 * [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
+* [#909] Added +1 AC Dual Wield active effect to talent of same name which can be toggled on/off as needed on the character sheet now
 * [#910] Implemented automatic check roll links and added new macro to launch the check request dialog.
 	* example syntax: `[[check 12 str]]` or `[[request 15 int]]`
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
@@ -31,6 +32,8 @@
 * [#953] Dice So Nice not honouring roll modes in Shadowdark
 * [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
 * [#956] Can't import unnamed characters from Shadowdarklings
+* [#959] Stimulent effect description has a broken link to a Ranger talent that was converted to a Class Ability
+* [#960] Add missing Berzerk class ability for Sea Wolf class
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*
