@@ -1,0 +1,33 @@
+{
+	"_id": "cGGttIknipaR4UIo",
+	"_key": "!items.effects!quYUUqTTAX3QlAGa.cGGttIknipaR4UIo",
+	"changes": [
+		{
+			"key": "system.bonuses.acBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": true,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/skills/melee/swords-parry-block-blue.webp",
+	"name": "+1 AC Dual Wield",
+	"origin": "Compendium.shadowdark.talents.Item.quYUUqTTAX3QlAGa",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
