@@ -1413,7 +1413,7 @@ export default class ActorSD extends Actor {
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
 
-		if (item.type === "NPC Feature") item.displayCard();
+		if (item.type === "NPC Feature") return item.displayCard();
 
 		// If the ability has limited uses, handle that first
 		if (item.system.limitedUses) {
