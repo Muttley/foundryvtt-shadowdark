@@ -8,6 +8,7 @@
 * [#881] Support rolling on a character's Patron's Boon table if necessary in the Level Up app
 * [#901] Added Russian as a partially complete system language.
 * [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
+* [#909] Added +1 AC Dual Wield active effect to talent of same name which can be toggled on/off as needed on the character sheet now
 * [#910] Implemented automatic check roll links and added new macro to launch the check request dialog.
 	* example syntax: `[[check 12 str]]` or `[[request 15 int]]`
 * [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory

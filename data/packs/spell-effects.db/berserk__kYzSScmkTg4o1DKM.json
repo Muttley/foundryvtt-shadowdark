@@ -1,0 +1,27 @@
+{
+	"_id": "kYzSScmkTg4o1DKM",
+	"_key": "!items.effects!sfeg7jRt0oW5qXO4.kYzSScmkTg4o1DKM",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+	"name": "Berserk",
+	"origin": "Compendium.shadowdark.spell-effects.Item.sfeg7jRt0oW5qXO4",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
