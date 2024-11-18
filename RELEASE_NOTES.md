@@ -30,6 +30,7 @@
 * [#952] NPC Special Attacks always posted to chat in public
 * [#953] Dice So Nice not honouring roll modes in Shadowdark
 * [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
+* [#956] Can't import unnamed characters from Shadowdarklings
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*
