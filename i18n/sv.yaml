@@ -185,7 +185,7 @@ SHADOWDARK.chat.spell_learn.failure: "{name} misslyckades lära sig något från
 SHADOWDARK.chat.spell_learn.success: "{name} lärde sig besvärjelsen {spellName}"
 SHADOWDARK.chat.spell_learn.title: Lär sig besvärjelse
 SHADOWDARK.chat.spell_roll.title: "Kastar {name} som grad {tier} med svårighetsgrad {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} misslyckades med att använda {ability} förmågan"
+SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} lyckades med {ability} förmågan"
 SHADOWDARK.chat.use_ability.title: "Använder förmåga"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
