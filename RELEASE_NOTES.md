@@ -31,6 +31,7 @@
 * [#952] NPC Special Attacks always posted to chat in public
 * [#953] Dice So Nice not honouring roll modes in Shadowdark
 * [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
+* [#959] Stimulent effect description has a broken link to a Ranger talent that was converted to a Class Ability
 * [#960] Add missing Berzerk class ability for Sea Wolf class
 
 ## Chores
