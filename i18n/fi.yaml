@@ -185,7 +185,7 @@ SHADOWDARK.chat.spell_learn.failure: "{name} ei oppinut taikakääröstä mitä�
 SHADOWDARK.chat.spell_learn.success: "{name} onnistuneesti oppi {spellName} loitsun"
 SHADOWDARK.chat.spell_learn.title: Opettelee loitsua
 SHADOWDARK.chat.spell_roll.title: "Loihditaan {name} tasolla {tier} jolloin vaikeusaste on {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} epäonnistui käyttämään {ability} kykyä"
+SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} onnistui {ability} kyvyssään"
 SHADOWDARK.chat.use_ability.title: "Kyvyn käyttö"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Selaa Shadowdark RPG tuotteita
