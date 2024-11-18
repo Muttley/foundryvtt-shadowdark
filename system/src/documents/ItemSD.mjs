@@ -10,9 +10,11 @@ export default class ItemSD extends Item {
 		].includes(this.type);
 	}
 
+
 	get typeSlug() {
 		return this.type.slugify();
 	}
+
 
 	get usesAmmunition() {
 		return (game.settings.get("shadowdark", "autoConsumeAmmunition")
@@ -55,11 +57,13 @@ export default class ItemSD extends Item {
 		}
 	}
 
+
 	availableAmmunition() {
 		if (this.usesAmmunition) {
 			return this.actor.ammunitionItems(this.system.ammoClass);
 		}
 	}
+
 
 	async getChatData(htmlOptions={}) {
 		const description = await this.getEnrichedDescription();
@@ -87,34 +91,14 @@ export default class ItemSD extends Item {
 		return data;
 	}
 
+
 	async displayCard(options={}) {
-		// Render the chat card template
-		const token = this.actor.token;
-
-		const templateData = await this.getChatData();
-
-		const template = this.getItemTemplate("systems/shadowdark/templates/chat/item");
-
-		const html = await renderTemplate(template, templateData);
-
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
-		const chatData = {
-			user: game.user.id,
-			type: messageStyles.OTHER,
-			content: html,
-			flavor: this.system.chatFlavor || this.name,
-			speaker: ChatMessage.getSpeaker({actor: this.actor, token}),
-			flags: { "core.canPopout": true },
-		};
-
-		ChatMessage.applyRollMode(chatData, options.rollMode ?? game.settings.get("core", "rollMode"));
-
-		const card = (options.createMessage !== false)
-			? await ChatMessage.create(chatData) : chatData;
-
-		return card;
+		shadowdark.chat.renderItemCardMessage(this.actor, {
+			template: this.getItemTemplate("systems/shadowdark/templates/chat/item"),
+			templateData: await this.getChatData(),
+		});
 	}
+
 
 	async getBaseItemName() {
 		if (this.type === "Armor") {
@@ -161,6 +145,7 @@ export default class ItemSD extends Item {
 		return await renderTemplate(templatePath, data);
 	}
 
+
 	async getEnrichedDescription() {
 		return await TextEditor.enrichHTML(
 			this.system.description,
@@ -169,6 +154,7 @@ export default class ItemSD extends Item {
 			}
 		);
 	}
+
 
 	getItemTemplate(basePath) {
 		switch (this.type) {
@@ -187,12 +173,9 @@ export default class ItemSD extends Item {
 		}
 	}
 
+
 	lightRemainingString() {
 		if (this.type !== "Basic" && !this.system.light.isSource) return;
-
-		const timeRemaining = Math.ceil(
-			this.system.light.remainingSecs / 60
-		);
 
 		if (this.system.light.remainingSecs < 60) {
 			this.lightSourceTimeRemaining = game.i18n.localize(
@@ -200,6 +183,10 @@ export default class ItemSD extends Item {
 			);
 		}
 		else {
+			const timeRemaining = Math.ceil(
+				this.system.light.remainingSecs / 60
+			);
+
 			this.lightSourceTimeRemaining = game.i18n.format(
 				"SHADOWDARK.inventory.item.light_remaining",
 				{ timeRemaining }
@@ -207,18 +194,28 @@ export default class ItemSD extends Item {
 		}
 	}
 
+
 	async reduceAmmunition(amount) {
 		const newAmount = Math.max(0, this.system.quantity - amount);
 		this.update({"system.quantity": newAmount});
 	}
 
+
 	setLightRemaining(remainingSeconds) {
 		this.update({"system.light.remainingSecs": remainingSeconds});
 	}
 
+
 	/* -------------------------------------------- */
 	/*  Roll Methods                                */
 	/* -------------------------------------------- */
+
+	async rollItem(parts, data, options={}) {
+		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
+		await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
 
 	async rollNpcAttack(parts, data, options={}) {
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-npc-attack-dialog.hbs";
@@ -226,11 +223,6 @@ export default class ItemSD extends Item {
 		await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
-	async rollItem(parts, data, options={}) {
-		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
 
 	async rollSpell(parts, data, options={}) {
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
@@ -252,9 +244,6 @@ export default class ItemSD extends Item {
 		return roll;
 	}
 
-	/* -------------------------------------------- */
-	/*  Methods                                     */
-	/* -------------------------------------------- */
 
 	async hasProperty(property) {
 		property = property.slugify();
@@ -366,7 +355,6 @@ export default class ItemSD extends Item {
 		return propertyItems;
 	}
 
-	// Duration getters
 
 	/**
 	 * Returns the total duration depending on the type

@@ -45,8 +45,10 @@ export default class RequestCheckSD extends FormApplication {
 		shadowdark.chat.renderRollRequestMessage(
 			await shadowdark.utils.getCurrentActor(),
 			{
-				title: game.i18n.localize("SHADOWDARK.check.requesting"),
-				body: `[[check ${dc} ${stat}]]`,
+				templateData: {
+					title: game.i18n.localize("SHADOWDARK.check.requesting"),
+					body: `[[check ${dc} ${stat}]]`,
+				},
 			},
 			CONST.DICE_ROLL_MODES.PUBLIC
 		);
