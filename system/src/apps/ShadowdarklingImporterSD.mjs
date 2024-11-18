@@ -230,6 +230,9 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	 * @returns {ActorSD}
 	 */
 	async _importActor(json) {
+		// name is a required field
+		if (!json.name) json.name = "Unnamed";
+
 		// set template for new actor
 		this.importedActor = {
 			name: json.name,
