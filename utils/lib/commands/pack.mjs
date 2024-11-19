@@ -29,7 +29,7 @@ export function getCommand() {
 
 			yargs.option("outputFormat", {
 				alias: "o",
-				default: "nedb",
+				default: "leveldb",
 				describe: "Either 'nedb' or 'leveldb'",
 				type: "string",
 			});
