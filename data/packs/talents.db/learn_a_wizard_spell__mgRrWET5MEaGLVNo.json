@@ -2,11 +2,15 @@
 	"_id": "mgRrWET5MEaGLVNo",
 	"_key": "!items!mgRrWET5MEaGLVNo",
 	"effects": [
+		"XlKUkXYPhdOGlU9v"
 	],
 	"folder": "TcpWrnecaN2k2gYr",
 	"img": "icons/sundries/books/book-eye-purple.webp",
 	"name": "Learn a Wizard Spell",
 	"system": {
+		"bonuses": {
+			"spellcastingClasses": "wizard"
+		},
 		"description": "<p>Learn a wizard spell, tier = half your level. Cast it with INT</p>",
 		"level": 0,
 		"predefinedEffects": "",
@@ -14,7 +18,7 @@
 			"page": 0,
 			"title": "cursed-scroll-1"
 		},
-		"talentClass": "level"
+		"talentClass": "patronBoon"
 	},
 	"type": "Talent"
 }

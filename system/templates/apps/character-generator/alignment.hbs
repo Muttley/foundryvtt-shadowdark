@@ -1,0 +1,25 @@
+<div class="SD-box">
+	<div class="header">
+		<label for="actor.system.alignment">
+			{{localize "SHADOWDARK.sheet.actor.alignment"}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action='cg-click'
+					name="randomize-alignment"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<select name="actor.system.alignment" {{disabled editing}}>
+			{{selectOptions alignments
+				localize=false
+				selected=actor.system.alignment
+			}}
+		</select>
+	</div>
+</div>

@@ -1,0 +1,7 @@
+{{#if patron.required}}
+	{{#if patron.choose}}
+		{{> apps/character-generator/details/patron/edit}}
+	{{else}}
+		{{> apps/character-generator/details/patron/view}}
+	{{/if}}
+{{/if}}

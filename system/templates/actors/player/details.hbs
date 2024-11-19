@@ -1,194 +1,31 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
-<div class="grid-1-columns">
+	<div class="grid-1-columns">
+		<div class="background-grid-a">
+			{{!-- First Row --}}
+			{{> actors/player/details/level }}
+			{{> actors/player/details/title }}
+			{{> actors/player/details/class }}
 
-	<div class="background-grid-a">
-
-		<!-- Level -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.actor.level'}}</label>
-				<span>
-				</span>
-			</div>
-			<div class="content centered">
-				{{#unless levelUp}}
-					{{system.level.value}}
-				{{/unless}}
-				{{#if levelUp}}
-					<a class="fa-solid fa-arrow-up fa-beat" data-action="level-up"></a>
-				{{/if}}
-			</div>
+			{{!-- Second Row --}}
+			{{> actors/player/details/xp }}
+			{{> actors/player/details/ancestry }}
+			{{> actors/player/details/background }}
 		</div>
 
-		<!-- Title -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
-				<span>
-				</span>
+		{{#if classHasPatron}}
+			<div class="grid-3-columns">
+				{{> actors/player/details/alignment }}
+				{{> actors/player/details/deity }}
+				{{> actors/player/details/patron }}
 			</div>
-			<div class="content">
-				{{classTitle}}
+		{{else}}
+			<div class="grid-2-columns">
+				{{> actors/player/details/alignment }}
+				{{> actors/player/details/deity }}
 			</div>
-		</div>
+		{{/if}}
 
-		<!-- Class -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize "SHADOWDARK.sheet.player.class.label"}}</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="class"
-							for="system.class">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				{{#if isSpellcaster}}<a class="fas fa-book" data-action="open-spellbook" style="margin-right:4px"></a>{{/if}}
-				<a class="content-link" data-link data-uuid="{{system.class}}">{{uuidToName system.class}}</a>
-			</div>
-		</div>
-
-		<!-- XP -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.player.xp'}}</label>
-				<span>
-				</span>
-			</div>
-			<div class="content">
-				<div class="value-grid">
-					{{numberInput
-						system.level.xp
-						name="system.level.xp"
-						class="ability-score"
-						placeholder="0"
-					}}
-					<div>/</div>
-					<div>{{xpNextLevel}}</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ancestry -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="ancestry"
-							for="system.ancestry">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<a class="content-link" data-link data-uuid="{{system.ancestry}}">{{uuidToName system.ancestry}}</a>
-			</div>
-		</div>
-
-		<!-- Background -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize "SHADOWDARK.sheet.player.background.label"}}</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="background"
-							for="system.background">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<a class="content-link" data-link data-uuid="{{system.background}}">{{uuidToName system.background}}</a>
-			</div>
-		</div>
-
+		{{> actors/player/details/languages }}
+		{{> actors/player/details/boons }}
 	</div>
-
-	<div class="background-grid-b">
-
-		<!-- Alignment -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-				<span>
-				</span>
-			</div>
-			<div class="content">
-				<select name="system.alignment">
-					{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
-				</select>
-			</div>
-		</div>
-
-		<!-- Deity -->
-		<div class="SD-box">
-			<div class="header">
-				<label>Deity</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="deity"
-							for="system.deity">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<a class="content-link" data-link data-uuid="{{system.deity}}">{{uuidToName system.deity}}</a>
-			</div>
-		</div>
-	</div>
-		<!-- Languages -->
-		<div class="SD-box grid-rowspan-2">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.player.languages'}}</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="language"
-							for="system.languages">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<ul class="tags">
-					{{#each knownLanguages}}
-						<li
-							{{#ifEq this.system.rarity "common"}}
-								class="tag tag_primary"
-							{{else}}
-								class="tag tag_secondary"
-							{{/ifEq}}
-							data-tooltip="{{this.system.description}}"
-						>
-							{{this.name}}
-						</li>
-					{{/each}}
-				</ul>
-			</div>
-		</div>
-
-		<!-- boons -->
-		<div>
-			<div class="SD-banner">{{localize "SHADOWDARK.sheet.player.boons.label"}}</div>
-			{{> actors/player/details/boons}}
-		</div>
-
-
-
-</div>
-	<br>
-
 </section>

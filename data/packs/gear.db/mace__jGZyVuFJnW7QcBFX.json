@@ -7,6 +7,7 @@
 	"img": "icons/weapons/maces/mace-round-ornate-purple.webp",
 	"name": "Mace",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {
@@ -34,6 +35,7 @@
 		},
 		"description": "",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"predefinedEffects": "",

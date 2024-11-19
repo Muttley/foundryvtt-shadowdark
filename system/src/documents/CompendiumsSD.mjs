@@ -54,6 +54,17 @@ export default class CompendiumsSD {
 		return this._collectionFromArray(docs);
 	}
 
+	static async ammunition(filterSources=true) {
+		const documents = shadowdark.utils.combineCollection(
+			await CompendiumsSD._documents("Item", "Basic", filterSources),
+			await CompendiumsSD._documents("Item", "Weapon", filterSources)
+		);
+
+		return this._collectionFromArray(
+			documents.filter(document => document.system.isAmmunition)
+		);
+	}
+
 	static async ancestries(filterSources=true) {
 		return CompendiumsSD._documents("Item", "Ancestry", filterSources);
 	}
@@ -194,6 +205,22 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "NPC Features", filterSources);
 	}
 
+	static async patrons(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Patron", filterSources);
+	}
+
+	static async patronBoonTables(filterSources=true) {
+		const documents = await CompendiumsSD._documents(
+			"RollTable", null, filterSources
+		);
+
+		return this._collectionFromArray(
+			documents.filter(
+				document => document.name.match(/patron\s+boons/i)
+			)
+		);
+	}
+
 	static async potions(filterSources=true) {
 		return CompendiumsSD._documents("Item", "Potion", filterSources);
 	}
@@ -254,11 +281,20 @@ export default class CompendiumsSD {
 		return sources.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
+	static async spellcastingBaseClasses(filterSources=true) {
+		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
+
+		return this._collectionFromArray(documents.filter(document =>
+			document.system.spellcasting.class === ""
+		));
+	}
+
 	static async spellcastingClasses(filterSources=true) {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
+
 		return this._collectionFromArray(documents.filter(document =>
 			document.system.spellcasting.ability !== ""
-			&& document.system.spellcasting.class !== "NONE"
+			&& document.system.spellcasting.class !== "__not_spellcaster__"
 		));
 	}
 

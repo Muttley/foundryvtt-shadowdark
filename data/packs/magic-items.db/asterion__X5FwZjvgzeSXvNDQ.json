@@ -9,6 +9,7 @@
 	"img": "icons/weapons/swords/greatsword-guard-split-eyes.webp",
 	"name": "Asterion",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "greatsword",
 		"bonuses": {
@@ -37,6 +38,7 @@
 		},
 		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",

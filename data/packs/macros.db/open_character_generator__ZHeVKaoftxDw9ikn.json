@@ -1,0 +1,11 @@
+{
+	"_id": "ZHeVKaoftxDw9ikn",
+	"_key": "!macros!ZHeVKaoftxDw9ikn",
+	"author": "quIOb6ZrdKRqmDrf",
+	"command": "/**\n ****************************************************************\n * This macro can be used to open the Character Generator\n ***************************************************************/\n\nnew shadowdark.apps.CharacterGeneratorSD().render(true);",
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Open Character Generator",
+	"scope": "global",
+	"type": "script"
+}

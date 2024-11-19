@@ -1,0 +1,71 @@
+<div>
+	<h3>{{localize 'SHADOWDARK.class.hit_points.label'}}</h3>
+	<input
+		name="system.hitPoints"
+		type="text"
+		value="{{item.system.hitPoints}}"
+	/>
+</div>
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</h3>
+	<select name="system.spellcasting.class">
+		<option
+			value="__not_spellcaster__"
+			{{#ifEq system.spellcasting.class "__not_spellcaster__"}}
+				selected
+			{{/ifEq}}
+		>
+			&mdash;
+		</option>
+		<option
+			value=""
+			{{#ifEq system.spellcasting.class ""}}
+				selected
+			{{/ifEq}}
+		>
+			(Class Name)
+		</option>
+		{{selectOptions
+			spellcastingClasses
+			selected=system.spellcasting.class
+			localize=false
+		}}
+	</select>
+</div>
+
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.spellcasting_ability.label"}}</h3>
+	<select name="system.spellcasting.ability">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			config.ABILITIES_LONG
+			selected=system.spellcasting.ability
+			localize=false
+		}}
+	</select>
+</div>
+
+<div>
+	<h3>{{localize "SHADOWDARK.class.talents_table.label"}}</h3>
+	<select name="system.classTalentTable">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			classTalentTables
+			selected=system.classTalentTable
+			localize=false
+		}}
+	</select>
+</div>
+
+<div><!-- placeholder --></div>
+
+<div>
+	<h3>{{localize 'SHADOWDARK.class.spellcasting.base_difficulty.label'}}</h3>
+	{{numberInput
+		item.system.spellcasting.baseDifficulty
+		name="system.spellcasting.baseDifficulty"
+		placeholder="10"
+	}}
+</div>

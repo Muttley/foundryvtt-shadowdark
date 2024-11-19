@@ -1,0 +1,12 @@
+{{#> ui/sd-box
+	header-class="light"
+	header-label=(localize "SHADOWDARK.item.effect.category.title")
+}}
+	<select name="system.category">
+		{{selectOptions
+			config.EFFECT_CATEGORIES
+			selected=system.category
+			localize=false
+		}}
+	</select>
+{{/ui/sd-box}}

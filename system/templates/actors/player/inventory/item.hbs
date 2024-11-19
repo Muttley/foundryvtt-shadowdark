@@ -1,0 +1,101 @@
+<li
+	class="item"
+	data-item-id="{{item._id}}"
+	data-uuid="{{item.uuid}}"
+>
+
+	<div class="item-image" style="background-image: url({{item.img}})">
+		<i class="fas fa-comment fa-lg"></i>
+	</div>
+	<a class="item-name" data-action="show-details">
+		{{item.name}}
+		{{#if item.lightSourceUsed}}
+			<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>
+		{{/if}}
+	</a>
+	{{#if item.lightSourceUsed}}
+		<div data-tooltip="{{lightSourceTimeRemaining}}">
+			{{item.lightSourceProgress}}
+		</div>
+	{{/if}}
+
+	<div class="quantity">
+		{{#if item.showQuantity}}
+			{{#if owner}}
+				<a
+					data-action="item-decrement"
+					data-item-id="{{item._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
+				>
+					<i class="fa-regular fa-minus fa-xs"></i>
+				</a>
+			{{/if}}
+
+			{{item.system.quantity}}/{{item.system.slots.per_slot}}
+
+			{{#if owner}}
+				<a
+					data-action="item-increment"
+					data-item-id="{{item._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
+				>
+					<i class="fa-regular fa-plus fa-xs"></i>
+				</a>
+			{{/if}}
+		{{else}}
+			&nbsp;
+		{{/if}}
+	</div>
+
+	<div class="slots">
+		{{item.slotsUsed}}
+	</div>
+
+	<div class="actions">
+		{{#if item.system.canBeEquipped}}
+			<a
+				data-action="toggle-equipped"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_equipped'}}"
+			>
+				{{#if item.system.equipped}}
+					<i
+						class="fas fa-user-shield"
+						style="color:var(--primary);"
+					></i>
+				{{else}}
+					<i class="fas fa-user-shield"></i>
+				{{/if}}
+			</a>
+		{{/if}}
+		{{#if item.system.light.isSource}}
+			<a
+				data-action="toggle-light"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_light_source'}}"
+				style="{{#if item.system.light.active}}color: darkorange;{{/if}}"
+			>
+				<i class="fa-solid fa-fire-flame-curved"></i>
+			</a>
+		{{/if}}
+		{{#ifEq item.type "Potion"}}
+			<a
+				class="item-control use-potion"
+				data-action="use-potion"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_potion'}}"
+			>
+				<i class="fas fa-prescription-bottle"></i>
+			</a>
+		{{/ifEq}}
+		{{#unless item.system.equipped}}
+		<a
+			data-action="toggle-stashed"
+			data-item-id="{{item._id}}"
+			data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_stashed'}}"
+		>
+			<i class="fa-solid fa-box"></i>
+		</a>
+		{{/unless}}
+	</div>
+</li>

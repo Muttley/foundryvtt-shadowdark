@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Chitin-plated scorpions as big as camels. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 13, <strong>ATK</strong> 1 claw +2 (1d6 + grab) and 1 sting +2 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> +0, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Grab</strong>. DC 12 STR or target held. DC 12 STR on turn to break free.</p><p></p><p><strong>Poison</strong>. DC 12 CON or go to 0 HP.</p><p></p>",
+		"notes": "\n\t<p><i> Chitin-plated scorpions as big as camels. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 13, <strong>ATK</strong> 1 claw +2 (1d6 + grab) and 1 sting +2 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> +0, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Grab</strong>. [[check 12 str]] or target held. [[check 12 str]] on turn to break free.</p><p></p><p><strong>Poison</strong>. [[check 12 con]] or go to 0 HP.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

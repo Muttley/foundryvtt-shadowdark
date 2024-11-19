@@ -5,14 +5,38 @@
 .shadowdark.sheet.player,
 .shadowdark.sheet.npc {
 
+	min-width: 550px;
+
 	.editor-content {
 		padding-top: 8px;
 		padding-bottom: 8px;
 	}
 
-	.item-image {
+	.effect-controls {
+		flex: 0 0 60px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.effect-duration {
+		flex: 0 0 120px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.effect-source {
+		flex: 0 0 250px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.item-image,
+	.effect-image {
 		display: inline-block;
-		width: 24px;
+		max-width: 24px;
 		height: 24px;
 
 		background-size: contain;

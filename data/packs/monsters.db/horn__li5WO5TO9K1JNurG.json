@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>All enemies in near DC 15 CHA or paralyzed [[/r 1d4]] rounds.</p>",
+		"description": "<p>All enemies in near [[check 15 cha]] or paralyzed [[/r 1d4]] rounds.</p>",
 		"ranges": [
 		],
 		"source": {

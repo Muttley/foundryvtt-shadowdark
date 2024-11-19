@@ -16,6 +16,7 @@
 		},
 		"description": "<p>A small fire starter. With it, routine attempts to light a fire always succeed.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

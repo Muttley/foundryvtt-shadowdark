@@ -1,0 +1,26 @@
+{
+	"_id": "so8ytbZuqmNvppI7",
+	"_key": "!items!so8ytbZuqmNvppI7",
+	"effects": [
+	],
+	"folder": "q7zkgCiSTr8Xxshe",
+	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"name": "Berserk",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, go berserk: immune to damage for 3 rounds.</p>",
+		"group": "Sea Wolf",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": ""
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

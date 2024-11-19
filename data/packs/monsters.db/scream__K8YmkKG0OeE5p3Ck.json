@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Scream",
 	"system": {
-		"description": "<p>Creatures who hear in double near DC 12 CHA or paralyzed for [[/r 1d4]] rounds.</p>",
+		"description": "<p>Creatures who hear in double near [[check 12 cha]] or paralyzed for [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

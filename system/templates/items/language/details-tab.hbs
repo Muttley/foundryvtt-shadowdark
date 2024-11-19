@@ -1,0 +1,16 @@
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
+	<div class="grid-3-columns">
+		<div class="item-grid">
+			<h3>
+				{{localize 'SHADOWDARK.language.rarity.label'}}
+			</h3>
+			<select name="system.rarity">
+				{{selectOptions
+					config.LANGUAGE_RARITY
+					selected=system.rarity
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+</section>

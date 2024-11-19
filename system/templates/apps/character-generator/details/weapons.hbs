@@ -1,0 +1,10 @@
+{{#if weapons}}
+	<p>
+		<b>
+			{{localize "SHADOWDARK.class.weapons.label"}}:
+		</b>
+		{{#each weapons as |name index|}}
+			{{name}}{{#unless @last}}, {{/unless}}
+		{{/each}}
+	</p>
+{{/if}}

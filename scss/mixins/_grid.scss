@@ -1,4 +1,4 @@
-$columns: 6;
+$count: 10;
 
 %grid-styles {
 	margin: 0;
@@ -9,15 +9,31 @@ $columns: 6;
 }
 
 @mixin grid-colspan {
-	@for $i from 1 through $columns {
+	@for $i from 1 through $count {
 		.grid-colspan-#{$i} {
 			grid-column: span #{$i};
 		}
 	}
 }
 
+@mixin grid-colstart {
+	@for $i from 1 through $count {
+		.grid-colstart-#{$i} {
+			grid-column-start: #{$i};
+		}
+	}
+}
+
+@mixin grid-rowspan {
+	@for $i from 1 through $count {
+		.grid-rowspan-#{$i} {
+			grid-row: span #{$i};
+		}
+	}
+}
+
 @mixin grid-x-columns {
-	@for $i from 1 through $columns {
+	@for $i from 1 through $count {
 		.grid-#{$i}-columns {
 			@extend %grid-styles;
 			grid-template-columns: repeat(#{$i}, 1fr);
@@ -26,4 +42,6 @@ $columns: 6;
 }
 
 @include grid-colspan;
+@include grid-colstart;
+@include grid-rowspan;
 @include grid-x-columns;

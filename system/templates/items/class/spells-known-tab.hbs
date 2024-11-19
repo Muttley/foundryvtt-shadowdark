@@ -1,0 +1,32 @@
+<section class="tab tab-spells-known" data-group="primary" data-tab="tab-spells-known">
+	<div class="SD-banner">
+		{{localize "SHADOWDARK.class.spells_Known.label"}}
+	</div>
+
+	<table class="SD-table" style="text-align:center">
+		<tr>
+			<th style="text-align:center">Level</th>
+			<th style="text-align:center">Tier 1</th>
+			<th style="text-align:center">Tier 2</th>
+			<th style="text-align:center">Tier 3</th>
+			<th style="text-align:center">Tier 4</th>
+			<th style="text-align:center">Tier 5</th>
+		</tr>
+
+		{{#each item.system.spellcasting.spellsknown}}
+			<tr>
+				<td>{{@key}}</td>
+				{{#each this}}
+					<td>
+						<input
+							name="system.spellcasting.spellsknown.{{@../key}}.{{@key}}"
+							placeholder="-"
+							type="number"
+							value="{{this}}"
+						>
+					</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+	</table>
+</section>

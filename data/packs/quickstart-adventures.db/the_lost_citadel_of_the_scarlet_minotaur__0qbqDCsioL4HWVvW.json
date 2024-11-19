@@ -7,12 +7,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.V75YwrR126oziTKk",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -34,7 +34,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -84,6 +84,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -232,12 +233,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.c3Nvj86e0Layz3NG",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -259,7 +260,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -291,7 +292,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -344,7 +345,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -393,6 +394,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -541,12 +543,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -568,7 +570,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -583,7 +585,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -600,7 +602,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -653,7 +655,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -702,6 +704,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -838,7 +841,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -850,12 +853,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -877,7 +880,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -892,7 +895,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -909,7 +912,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -962,7 +965,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1011,6 +1014,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1147,7 +1151,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -1159,12 +1163,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -1186,7 +1190,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1201,7 +1205,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -1218,7 +1222,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1271,7 +1275,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1320,6 +1324,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1456,7 +1461,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -1468,12 +1473,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -1495,7 +1500,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1510,7 +1515,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -1527,7 +1532,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1580,7 +1585,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1629,6 +1634,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -1765,7 +1771,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -1777,12 +1783,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -1804,7 +1810,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1819,7 +1825,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -1836,7 +1842,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1889,7 +1895,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -1938,6 +1944,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2074,7 +2081,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -2086,12 +2093,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.fcgq7uwsJEMMdRNx",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -2113,7 +2120,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2128,7 +2135,7 @@
 					},
 					"sort": 0,
 					"system": {
-						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span></p>",
+						"description": "<p><span class=\"fontstyle2\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span></p>",
 						"source": {
 							"title": "quickstart"
 						}
@@ -2145,7 +2152,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2198,7 +2205,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2247,6 +2254,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2383,7 +2391,7 @@
 				},
 				"move": "near",
 				"moveNote": "Climb",
-				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. DC 12 DEX to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+				"notes": "<p><span class=\"fontstyle0\"><em>Bipedal, eight-eyed spiderfolk with spindly legs and purple fur.</em></span></p><p></p><p><span class=\"fontstyle2\"><strong>AC</strong> </span><span class=\"fontstyle3\">12, </span><span class=\"fontstyle2\"><strong>HP</strong> </span><span class=\"fontstyle3\">14, </span><span class=\"fontstyle2\"><strong>ATK</strong> </span><span class=\"fontstyle3\">2 bite +2 (1d6) or 1 poison web (near) +2, </span><span class=\"fontstyle2\"><strong>MV</strong> </span><span class=\"fontstyle3\">near (climb), </span><span class=\"fontstyle2\"><strong>S</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>D</strong> </span><span class=\"fontstyle3\">+2, </span><span class=\"fontstyle2\"><strong>C</strong> </span><span class=\"fontstyle3\">+1, </span><span class=\"fontstyle2\"><strong>I</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>W</strong> </span><span class=\"fontstyle3\">+0, </span><span class=\"fontstyle2\"><strong>Ch</strong> </span><span class=\"fontstyle3\">-1, </span><span class=\"fontstyle2\"><strong>AL</strong> </span><span class=\"fontstyle3\">C, </span><span class=\"fontstyle2\"><strong>LV</strong> </span><span class=\"fontstyle3\">3</span></p><p></p><p><span class=\"fontstyle2\"><strong>Poison Web.</strong> </span><span class=\"fontstyle3\">One target stuck in place and 1d4 damage/round. [[check 12 dex]] to escape on turn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
 				"spellcastingAbility": "",
 				"spellcastingAttackNum": 0,
 				"spellcastingBonus": 0
@@ -2395,12 +2403,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -2422,7 +2430,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2476,7 +2484,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2504,6 +2512,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2652,12 +2661,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -2679,7 +2688,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2733,7 +2742,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2761,6 +2770,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -2909,12 +2919,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -2936,7 +2946,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -2990,7 +3000,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3018,6 +3028,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3166,12 +3177,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -3193,7 +3204,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3247,7 +3258,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3275,6 +3286,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3423,12 +3435,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -3450,7 +3462,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3504,7 +3516,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3532,6 +3544,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3680,12 +3693,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -3707,7 +3720,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3761,7 +3774,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -3789,6 +3802,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -3937,12 +3951,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -3964,7 +3978,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4018,7 +4032,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4046,6 +4060,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4194,12 +4209,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -4221,7 +4236,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4275,7 +4290,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4303,6 +4318,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4451,12 +4467,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -4478,7 +4494,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4532,7 +4548,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4560,6 +4576,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4708,12 +4725,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -4735,7 +4752,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4789,7 +4806,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -4817,6 +4834,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -4965,12 +4983,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.U9moCUg8DnL6C0Sq",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -4992,7 +5010,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5041,6 +5059,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5189,12 +5208,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -5216,7 +5235,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5248,7 +5267,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5301,7 +5320,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5350,6 +5369,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5498,12 +5518,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -5525,7 +5545,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5557,7 +5577,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5610,7 +5630,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5659,6 +5679,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -5807,12 +5828,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -5834,7 +5855,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5866,7 +5887,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5919,7 +5940,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -5968,6 +5989,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6116,12 +6138,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.cWzG0yEVgIk8ijk6",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -6143,7 +6165,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6175,7 +6197,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6228,7 +6250,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6277,6 +6299,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6425,12 +6448,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -6452,7 +6475,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6506,7 +6529,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6534,6 +6557,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6682,12 +6706,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -6709,7 +6733,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6763,7 +6787,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -6791,6 +6815,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -6939,12 +6964,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -6966,7 +6991,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7020,7 +7045,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7048,6 +7073,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7196,12 +7222,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -7223,7 +7249,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7277,7 +7303,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7305,6 +7331,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7453,12 +7480,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -7480,7 +7507,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7534,7 +7561,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7562,6 +7589,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7710,12 +7738,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -7737,7 +7765,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7791,7 +7819,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -7819,6 +7847,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -7967,12 +7996,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -7994,7 +8023,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8048,7 +8077,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8076,6 +8105,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -8224,12 +8254,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -8251,7 +8281,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8305,7 +8335,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8333,6 +8363,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -8481,12 +8512,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monster.k8tAgECWIzPIStGU",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -8508,7 +8539,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8562,7 +8593,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8590,6 +8621,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -8738,12 +8770,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monsters.Actor.qSeHWgP59WltutCz",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -8765,7 +8797,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8817,7 +8849,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -8844,6 +8876,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -8990,12 +9023,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.monsters.Actor.QErMaMVIbddgk9MX",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580361,
+				"createdTime": 1731795284430,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580361,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284430,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -9017,7 +9050,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -9048,7 +9081,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"effects": [
 					],
@@ -9096,6 +9129,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -9251,12 +9285,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1725307283271,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725719358405,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9276,12 +9310,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580826,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580826,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9306,7 +9340,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9331,7 +9365,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9353,7 +9387,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9370,12 +9404,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580826,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580826,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9400,7 +9434,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9422,7 +9456,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9444,7 +9478,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9466,7 +9500,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9488,7 +9522,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9510,7 +9544,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9532,7 +9566,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9554,7 +9588,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9576,7 +9610,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9598,7 +9632,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9620,7 +9654,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9642,7 +9676,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9664,7 +9698,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9686,7 +9720,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9708,7 +9742,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9730,7 +9764,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9747,12 +9781,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580826,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580826,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9777,7 +9811,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9799,7 +9833,7 @@
 				"lastModifiedBy": null,
 				"modifiedTime": null,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": null,
 			"description": "",
@@ -9816,12 +9850,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580826,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580826,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9838,12 +9872,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720422243,
+				"createdTime": 1731795284947,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580951,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284947,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"color": "#453249",
 			"description": "",
@@ -9866,12 +9900,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 				{
@@ -9884,7 +9918,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -9929,7 +9963,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -9974,7 +10008,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -10020,6 +10054,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -10028,6 +10063,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "greataxe",
 				"bonuses": {
@@ -10056,6 +10092,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": true,
 				"predefinedEffects": "",
@@ -10083,12 +10120,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725058892170,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10101,6 +10138,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10119,6 +10157,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10150,12 +10189,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10168,6 +10207,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10186,6 +10226,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -10206,12 +10247,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10225,6 +10266,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -10242,6 +10284,7 @@
 				},
 				"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.q600IZtPTAgkz6vB]{Hold Portal}</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10272,12 +10315,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10290,6 +10333,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10308,6 +10352,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10338,12 +10383,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10356,6 +10401,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10374,6 +10420,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10404,12 +10451,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10422,6 +10469,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10440,6 +10488,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10470,12 +10519,12 @@
 			"_stats": {
 				"compendiumSource": "Item.7unKOF9uy9ECqkEy",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10491,6 +10540,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10509,6 +10559,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -10529,12 +10580,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10547,6 +10598,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10565,6 +10617,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -10595,12 +10648,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10613,6 +10666,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10631,6 +10685,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -10651,12 +10706,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10669,6 +10724,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10687,6 +10743,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -10707,12 +10764,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 				{
@@ -10725,7 +10782,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -10770,7 +10827,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -10816,6 +10873,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -10824,6 +10882,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "",
 				"bonuses": {
@@ -10852,6 +10911,7 @@
 				},
 				"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
@@ -10878,12 +10938,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725058896231,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10896,6 +10956,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10914,6 +10975,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"predefinedEffects": "",
@@ -10935,12 +10997,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725058895921,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -10953,6 +11015,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -10971,6 +11034,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"predefinedEffects": "",
@@ -10992,12 +11056,12 @@
 			"_stats": {
 				"compendiumSource": "Item.Tyv0gXYaTmYJjHP1",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725058901225,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11014,6 +11078,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -11029,8 +11094,9 @@
 					"gp": 0,
 					"sp": 0
 				},
-				"description": "<p><em>A brooch made from a horned scarab beetle dipped in gold.</em></p><p></p><p><strong>Benefit</strong>. If you die, make a DC 18 Constitution check. If you succeed, you are unconscious instead of dead.</p>",
+				"description": "<p><em>A brooch made from a horned scarab beetle dipped in gold.</em></p><p></p><p><strong>Benefit</strong>. If you die, make a [[check 18 con]] check. If you succeed, you are unconscious instead of dead.</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11062,12 +11128,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725058904066,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11080,6 +11146,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11098,6 +11165,7 @@
 				},
 				"description": "<p><span style=\"font-family: Signika, sans-serif\">An ivory egg shot with grey veins inside.</span></p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11129,12 +11197,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11147,6 +11215,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11165,6 +11234,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -11185,12 +11255,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11203,6 +11273,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11221,6 +11292,7 @@
 				},
 				"description": "<p>Silver locket with a painting of a smiling, red-haired woman</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11251,12 +11323,12 @@
 			"_stats": {
 				"compendiumSource": "Item.Jo88wNZQdCtvuuuS",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11273,6 +11345,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -11290,6 +11363,7 @@
 				},
 				"description": "<p><span style=\"font-family: Signika, sans-serif\">Contained in a bronze tube adorned with jade dragons.</span></p><p></p><p>@UUID[Compendium.shadowdark.spells.ItN82uLU3PhJFLNm]{Burning Hands}</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11320,12 +11394,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.weapons.ZPUhNMmwXXrtbCXi",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11341,6 +11415,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11350,6 +11425,7 @@
 			},
 			"sort": 200000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": 0,
 				"baseWeapon": "",
 				"bonuses": {
@@ -11378,6 +11454,7 @@
 				},
 				"description": "<p><span style=\"font-family: Signika, sans-serif\">Silvered longsword with half-moon pommel.</span></p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"properties": [
@@ -11403,12 +11480,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.armor.UWp4WkkiaBMSXYPE",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11424,6 +11501,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11448,6 +11526,7 @@
 				},
 				"description": "<p><span class=\"fontstyle0\">Scarred mithral shield carved with prowling tiger</span> .</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"properties": [
@@ -11472,12 +11551,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11490,6 +11569,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11508,6 +11588,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11538,12 +11619,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 				{
@@ -11556,7 +11637,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -11601,7 +11682,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"changes": [
 						{
@@ -11647,6 +11728,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -11655,6 +11737,7 @@
 			},
 			"sort": 100000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": "1",
 				"baseWeapon": "",
 				"bonuses": {
@@ -11683,6 +11766,7 @@
 				},
 				"description": "<p><strong>Benefit</strong>. The wielder cannot be surprised.</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
@@ -11709,12 +11793,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11727,6 +11811,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11745,6 +11830,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11775,12 +11861,12 @@
 			"_stats": {
 				"compendiumSource": "Item.ew2ZoOaQVO1uDB8I",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11797,6 +11883,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -11820,6 +11907,7 @@
 				},
 				"description": "<p><em>Grey, doeskin boots as thin and soft as slippers.</em></p><p></p><p><strong>Benefit</strong>. You can jump up to a near distance from a standstill. Your checks to move silently are always easy (DC 9).</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"properties": [
@@ -11842,12 +11930,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11861,6 +11949,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -11869,6 +11958,7 @@
 			},
 			"sort": 200000,
 			"system": {
+				"ammoClass": "",
 				"attackBonus": 0,
 				"baseWeapon": "",
 				"bonuses": {
@@ -11897,6 +11987,7 @@
 				},
 				"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.ItoZZ0nli29N5d7G]{Blind/Deafen}</p><p>DC 12</p>",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": true,
 				"properties": [
@@ -11922,12 +12013,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -11940,6 +12031,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -11958,6 +12050,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -11988,12 +12081,12 @@
 			"_stats": {
 				"compendiumSource": null,
 				"coreVersion": "12.331",
-				"createdTime": 1724720580437,
+				"createdTime": 1731795284537,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580437,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284537,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"effects": [
 			],
@@ -12006,6 +12099,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"aUdswNccq2u0SxEP": 3,
 				"default": 0,
@@ -12024,6 +12118,7 @@
 				},
 				"description": "",
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"light": {
 					"active": false,
@@ -12056,12 +12151,12 @@
 			"_stats": {
 				"compendiumSource": "JournalEntry.kC9OuLQOGZaI6gxk",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580477,
+				"createdTime": 1731795284565,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580477,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284565,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"flags": {
 				"core": {
@@ -12075,6 +12170,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -12089,10 +12185,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-						"modifiedTime": 1725720191626,
+						"lastModifiedBy": null,
+						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12131,7 +12227,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 						"core": {
@@ -12170,10 +12266,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795897434,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12188,7 +12284,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p></p><p><strong>Walls</strong>: Flecked with countless, smooth shards of quartz. <strong>White Bundles</strong>: Man-sized, several stuffed into cave corners.</p><ul><li><p><strong>Ettercap Ambush.</strong> If Eska in Area 1 raised alarm, three hostile @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{ettercaps} from Area 4 cling to 20' ceiling.</p></li><li><p><strong>Walls</strong>. Dazzlingly reflective. DC 12 DEX when entering with bright light or blinded for [[/r 1d4]] rounds (ettercaps are unaffected).</p><ul><li><p><strong>Prying</strong>. Carefully extracted piece of cave wall serves as a mirror.</p></li></ul></li><li><p><strong>White Bundles</strong>. Five <strong>@UUID[Compendium.shadowdark.monsters.k8tAgECWIzPIStGU]{beastmen}</strong> wrapped in ettercap silk. 1:6 chance one still lives. @UUID[Item.7unKOF9uy9ECqkEy]{Pearl} (40 gp) hidden inside one's mouth.</p></li></ul>",
+						"content": "<p></p><p><strong>Walls</strong>: Flecked with countless, smooth shards of quartz. <strong>White Bundles</strong>: Man-sized, several stuffed into cave corners.</p><ul><li><p><strong>Ettercap Ambush.</strong> If Eska in Area 1 raised alarm, three hostile @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{ettercaps} from Area 4 cling to 20' ceiling.</p></li><li><p><strong>Walls</strong>. Dazzlingly reflective. [[request 12 dex]] when entering with bright light or blinded for [[/r 1d4]] rounds (ettercaps are unaffected).</p><ul><li><p><strong>Prying</strong>. Carefully extracted piece of cave wall serves as a mirror.</p></li></ul></li><li><p><strong>White Bundles</strong>. Five <strong>@UUID[Compendium.shadowdark.monsters.k8tAgECWIzPIStGU]{beastmen}</strong> wrapped in ettercap silk. 1:6 chance one still lives. @UUID[Item.7unKOF9uy9ECqkEy]{Pearl} (40 gp) hidden inside one's mouth.</p></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12209,10 +12305,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795915458,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 						"core": {
@@ -12230,7 +12326,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Walls and Floor</strong>: Covered in thick, gauzy sheets of webbing.</p><ul><li><p><strong>Webs</strong>. Sticky. DC 12 STR to break free and move each turn. Highly flammable ([[/r 1d6]] damage to stuck creatures, burns [[/r 1d4]] rounds).</p><ul><li><p><strong>Rolled Parchment</strong>. Stuck in webs, 10' up.<em>@UUID[Item.Jo88wNZQdCtvuuuS]{Scroll of Hold Portal}</em> .</p></li></ul></li><li><p><strong>Secret Tunnel</strong>. Hidden by a wall of webs. Ettercaps reseal it each time they pass through.</p><ul><li><p><strong>Chittering</strong>. Listeners hear shrill, tittering whispers from Area 4.</p></li></ul></li></ul>",
+						"content": "<p><strong>Walls and Floor</strong>: Covered in thick, gauzy sheets of webbing.</p><ul><li><p><strong>Webs</strong>. Sticky. [[request 12 str]] to break free and move each turn. Highly flammable ([[/r 1d6]] damage to stuck creatures, burns [[/r 1d4]] rounds).</p><ul><li><p><strong>Rolled Parchment</strong>. Stuck in webs, 10' up.<em>@UUID[Item.Jo88wNZQdCtvuuuS]{Scroll of Hold Portal}</em> .</p></li></ul></li><li><p><strong>Secret Tunnel</strong>. Hidden by a wall of webs. Ettercaps reseal it each time they pass through.</p><ul><li><p><strong>Chittering</strong>. Listeners hear shrill, tittering whispers from Area 4.</p></li></ul></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12251,10 +12347,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-						"modifiedTime": 1725307470504,
+						"lastModifiedBy": null,
+						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12293,7 +12389,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12329,10 +12425,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795937549,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12347,7 +12443,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Statue</strong>: A life-sized, snake-haired woman with arms raised and mouth open in a scream. <strong>Stone Basins</strong>: Smooth, human-sized.</p><ul><li><p><strong>Statue</strong>. Turning the hinged arms down causes scalding water to spew from mouth (DC 12 DEX to leap aside or [[/r 1d4]] damage).</p></li><li><p><strong>Basins</strong>. Six. Coiling snake carvings. Stone plugs wedged in drains.</p><ul><li><p><strong>Removing Plugs.</strong> Cumulative 1:6 to unleash a <strong>@UUID[Compendium.shadowdark.monsters.U9moCUg8DnL6C0Sq]{scarab swarm}</strong>.</p></li></ul></li></ul>",
+						"content": "<p><strong>Statue</strong>: A life-sized, snake-haired woman with arms raised and mouth open in a scream. <strong>Stone Basins</strong>: Smooth, human-sized.</p><ul><li><p><strong>Statue</strong>. Turning the hinged arms down causes scalding water to spew from mouth ([[request 12 dex]] to leap aside or [[/r 1d4]] damage).</p></li><li><p><strong>Basins</strong>. Six. Coiling snake carvings. Stone plugs wedged in drains.</p><ul><li><p><strong>Removing Plugs.</strong> Cumulative 1:6 to unleash a <strong>@UUID[Compendium.shadowdark.monsters.U9moCUg8DnL6C0Sq]{scarab swarm}</strong>.</p></li></ul></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12368,10 +12464,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795950830,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12386,7 +12482,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Bull Statue</strong>: Towering (10'), bronze. Horns lowered for a charge. <strong>Hall</strong>: 15' high. Pairs of deep holes punched into wall opposite statue.</p><ul><li><p><strong>Statue</strong>. Motion-activated. 3:6 chance/round it animates and charges to end of hall (ignores Scarlet Minotaur). DC 15 DEX or [[/r 2d6]] damage and knocked flat. Trots back to position and resets.</p><ul><li><p><strong>@UUID[Item.ToSK7skdC9OPzmwZ]{Emerald.}</strong> (120 gp), embedded in statue's forehead. Shattering (AC 20, 1 HP) deactivates statue but reduces gem's value to 20 gp (@UUID[Item.hiVLFYBR666Zm29e]{Emerald (Shattered)}).</p></li></ul></li></ul>",
+						"content": "<p><strong>Bull Statue</strong>: Towering (10'), bronze. Horns lowered for a charge. <strong>Hall</strong>: 15' high. Pairs of deep holes punched into wall opposite statue.</p><ul><li><p><strong>Statue</strong>. Motion-activated. 3:6 chance/round it animates and charges to end of hall (ignores Scarlet Minotaur). [[request 15 dex]] or [[/r 2d6]] damage and knocked flat. Trots back to position and resets.</p><ul><li><p><strong>@UUID[Item.ToSK7skdC9OPzmwZ]{Emerald.}</strong> (120 gp), embedded in statue's forehead. Shattering (AC 20, 1 HP) deactivates statue but reduces gem's value to 20 gp (@UUID[Item.hiVLFYBR666Zm29e]{Emerald (Shattered)}).</p></li></ul></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12410,7 +12506,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12446,10 +12542,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795963085,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12464,7 +12560,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Pillars</strong>: Four pairs, painted rich jewel tones. Capped in black marble.</p><p><strong>Body</strong>: Purple, spindly humanoid lies facedown halfway across room.</p><p><strong>Greatsword</strong>: Bronze, brightly polished. Blade is sunken into a black marble altar beyond the pillars.</p><ul><li><p><strong>Pillars</strong>. Moving past each pair activates their effect. Returning past the pair ends it. In order, from north to south:</p><ul><li><p><strong>Red</strong>. Anything flammable on you ignites. [[/r 1d4]] damage/round.</p></li><li><p><strong>Blue</strong>. Sea water fills your lungs. You drown in [[/r 1d6]] rounds.</p></li><li><p><strong>Green</strong>. Poisoned. DC 12 CON on your turn or lose turn.</p></li><li><p><strong>Purple</strong>. You go blind and move at half speed.</p></li></ul></li><li><p><strong>Body</strong>. Ettercap. Scorched fur. Mouth and chest matted with salt rime. Claw marks around eyes.</p></li><li><p><strong>Greatsword</strong>. DC 12 STR to remove from altar. <em>+1 greatsword</em> called <em>@UUID[Item.JpRmSUeNd7qwnXZa]{Asterion}</em>. A creature cannot move the wielder against their will.</p></li></ul>",
+						"content": "<p><strong>Pillars</strong>: Four pairs, painted rich jewel tones. Capped in black marble.</p><p><strong>Body</strong>: Purple, spindly humanoid lies facedown halfway across room.</p><p><strong>Greatsword</strong>: Bronze, brightly polished. Blade is sunken into a black marble altar beyond the pillars.</p><ul><li><p><strong>Pillars</strong>. Moving past each pair activates their effect. Returning past the pair ends it. In order, from north to south:</p><ul><li><p><strong>Red</strong>. Anything flammable on you ignites. [[/r 1d4]] damage/round.</p></li><li><p><strong>Blue</strong>. Sea water fills your lungs. You drown in [[/r 1d6]] rounds.</p></li><li><p><strong>Green</strong>. Poisoned. [[request 12 con]] on your turn or lose turn.</p></li><li><p><strong>Purple</strong>. You go blind and move at half speed.</p></li></ul></li><li><p><strong>Body</strong>. Ettercap. Scorched fur. Mouth and chest matted with salt rime. Claw marks around eyes.</p></li><li><p><strong>Greatsword</strong>. [[request 12 str]] to remove from altar. <em>+1 greatsword</em> called <em>@UUID[Item.JpRmSUeNd7qwnXZa]{Asterion}</em>. A creature cannot move the wielder against their will.</p></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12488,7 +12584,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12524,10 +12620,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795973298,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12542,7 +12638,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Door</strong>: Hefty stone slab with keyhole. Cold and damp to the touch.</p><ul><li><p><strong>Door</strong>. Unlocked, barricaded from inside. DC 18 STR to force.</p><ul><li><p><strong>Listening</strong>. Faint metallic, clinking sound on other side.</p></li><li><p><strong>Keyhole</strong>. Darkness with a few points of bobbing, red light.</p></li></ul></li><li><p><strong>Inside</strong>. Four <strong>@UUID[Compendium.shadowdark.monsters.cWzG0yEVgIk8ijk6]{skeletons}</strong> in tattered, red leather armor shuffle around, knocking into manacles anchored to floor. Four bronze-shod <strong>spears</strong> braced through handle (broken if door opened).</p><ul><li><p><strong>Walls</strong>. Scratched in ancient Common: \"Days since the Beast appeared.\" About 40 tally lines below it, gradually fainter.</p></li></ul></li></ul>",
+						"content": "<p><strong>Door</strong>: Hefty stone slab with keyhole. Cold and damp to the touch.</p><ul><li><p><strong>Door</strong>. Unlocked, barricaded from inside. [[request 18 str]] to force.</p><ul><li><p><strong>Listening</strong>. Faint metallic, clinking sound on other side.</p></li><li><p><strong>Keyhole</strong>. Darkness with a few points of bobbing, red light.</p></li></ul></li><li><p><strong>Inside</strong>. Four <strong>@UUID[Compendium.shadowdark.monsters.cWzG0yEVgIk8ijk6]{skeletons}</strong> in tattered, red leather armor shuffle around, knocking into manacles anchored to floor. Four bronze-shod <strong>spears</strong> braced through handle (broken if door opened).</p><ul><li><p><strong>Walls</strong>. Scratched in ancient Common: \"Days since the Beast appeared.\" About 40 tally lines below it, gradually fainter.</p></li></ul></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12566,7 +12662,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12605,7 +12701,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12644,7 +12740,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12680,10 +12776,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731795987719,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12698,7 +12794,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Terracotta</strong> <strong>Jars</strong>: Clustered in corners. Fat and rounded, various heights. <strong>Air</strong>: Sulfuric scent. <strong>Sound</strong>: Occasional faint squeak and hiss. <strong>South Door</strong>: White, jagged lines gouged into the stone.</p><ul><li><p><strong>Jars</strong>. 20 jars sealed with cork and wax. Stamped with images of people carving wheat with scythes. Sticky, black mush inside.</p><ul><li><p><strong>Explosive</strong>. Shaking/striking jar causes it to shatter from sulfuric gas buildup. DC 12 DEX or 1d4 damage. Possible chain reaction.</p></li><li><p><strong>Treasure</strong>. Cumulative 1:20 chance of finding an <strong>@UUID[Item.R9rWEWg4biAMlj0U]{ivory egg}</strong> shot with grey veins inside one (40 gp). It's actually a cockatrice egg.</p></li></ul></li><li><p><strong>South Door</strong>. Carving in Common: \"R.I.P. Orwyn the Younger.\"</p></li></ul>",
+						"content": "<p><strong>Terracotta</strong> <strong>Jars</strong>: Clustered in corners. Fat and rounded, various heights. <strong>Air</strong>: Sulfuric scent. <strong>Sound</strong>: Occasional faint squeak and hiss. <strong>South Door</strong>: White, jagged lines gouged into the stone.</p><ul><li><p><strong>Jars</strong>. 20 jars sealed with cork and wax. Stamped with images of people carving wheat with scythes. Sticky, black mush inside.</p><ul><li><p><strong>Explosive</strong>. Shaking/striking jar causes it to shatter from sulfuric gas buildup. [[request 12 dex]] or 1d4 damage. Possible chain reaction.</p></li><li><p><strong>Treasure</strong>. Cumulative 1:20 chance of finding an <strong>@UUID[Item.R9rWEWg4biAMlj0U]{ivory egg}</strong> shot with grey veins inside one (40 gp). It's actually a cockatrice egg.</p></li></ul></li><li><p><strong>South Door</strong>. Carving in Common: \"R.I.P. Orwyn the Younger.\"</p></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -12722,7 +12818,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12761,7 +12857,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12800,7 +12896,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12839,7 +12935,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12878,7 +12974,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12917,7 +13013,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12956,7 +13052,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -12995,7 +13091,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13034,7 +13130,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13073,7 +13169,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13112,7 +13208,7 @@
 						"lastModifiedBy": null,
 						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13148,10 +13244,10 @@
 						"coreVersion": "12.331",
 						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": null,
-						"modifiedTime": null,
+						"lastModifiedBy": "XOge3YaW9qcUJnuq",
+						"modifiedTime": 1731796020290,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13166,7 +13262,7 @@
 					"system": {
 					},
 					"text": {
-						"content": "<p><strong>Cave</strong>: Chilly and damp, high ceiling (30'). Dripping stalactites. <strong>Pool</strong>: Crimson water, murky and still. <strong>Smell</strong>: Coppery, metallic tang.</p><ul><li><p><strong>Spirits</strong>. Dozens of smoky, humanlike shadows flicker at the edge of darkness. If the <strong>light</strong> ever goes out, they descend with ghostly shrieks, dealing [[/r 1d8]] damage/round to each character.</p></li><li><p><strong>Pool</strong>. 20' deep. Cursed water clouded with blood. DC 12 CON for each round of contact or temporarily lose 1 point of Wisdom (heals after rest). If 0 Wisdom, permanently become catatonic.</p><ul><li><p><strong>On Bottom</strong>. Graveyard of dozens of human and bull skeletons. Among them are 200 gp, a <em>@UUID[Item.i3gSIEVGxXhlUkdn]{Wand of Blind/Deafen}</em>, three @UUID[Item.cFi2Wtbwz3qkiJMx]{onyx bull statuettes} (15 gp each), <em>@UUID[Item.ip1i9MpeJeyf7ayu]{Boots of the Cat}</em>, and a tiny bottle that houses the soul of a mighty sorcerer named <strong>Malfune</strong>.</p></li></ul></li></ul>",
+						"content": "<p><strong>Cave</strong>: Chilly and damp, high ceiling (30'). Dripping stalactites. <strong>Pool</strong>: Crimson water, murky and still. <strong>Smell</strong>: Coppery, metallic tang.</p><ul><li><p><strong>Spirits</strong>. Dozens of smoky, humanlike shadows flicker at the edge of darkness. If the <strong>light</strong> ever goes out, they descend with ghostly shrieks, dealing [[/r 1d8]] damage/round to each character.</p></li><li><p><strong>Pool</strong>. 20' deep. Cursed water clouded with blood. [[request 12 con]] for each round of contact or temporarily lose 1 point of Wisdom (heals after rest). If 0 Wisdom, permanently become catatonic.</p><ul><li><p><strong>On Bottom</strong>. Graveyard of dozens of human and bull skeletons. Among them are 200 gp, a <em>@UUID[Item.i3gSIEVGxXhlUkdn]{Wand of Blind/Deafen}</em>, three @UUID[Item.cFi2Wtbwz3qkiJMx]{onyx bull statuettes} (15 gp each), <em>@UUID[Item.ip1i9MpeJeyf7ayu]{Boots of the Cat}</em>, and a tiny bottle that houses the soul of a mighty sorcerer named <strong>Malfune</strong>.</p></li></ul></li></ul>",
 						"format": 1,
 						"markdown": ""
 					},
@@ -13185,12 +13281,12 @@
 					"_stats": {
 						"compendiumSource": "JournalEntry.Jd3mOMTNeoHyJ0o9.JournalEntryPage.WoT0LXffwbnbMAKW",
 						"coreVersion": "12.331",
-						"createdTime": 1724720684058,
+						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-						"modifiedTime": 1725118250378,
+						"lastModifiedBy": null,
+						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13224,12 +13320,12 @@
 					"_stats": {
 						"compendiumSource": "JournalEntry.Jd3mOMTNeoHyJ0o9.JournalEntryPage.ji9paT4DbaYTmMPm",
 						"coreVersion": "12.331",
-						"createdTime": 1725719489682,
+						"createdTime": null,
 						"duplicateSource": null,
-						"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-						"modifiedTime": 1725720110571,
+						"lastModifiedBy": null,
+						"modifiedTime": null,
 						"systemId": "shadowdark",
-						"systemVersion": "3.0.0"
+						"systemVersion": "3.1.3"
 					},
 					"flags": {
 					},
@@ -13268,14 +13364,14 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.macros.Macro.zNYDtS7XcT3IaQ4t",
 				"coreVersion": "12.331",
-				"createdTime": 1724720422186,
+				"createdTime": 1731795284933,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725119453989,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284933,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
-			"author": "fN4EvXwUx7iTYSyk",
+			"author": "XOge3YaW9qcUJnuq",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Beastmen Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> @UUID[Compendium.shadowdark.monsters.Actor.k8tAgECWIzPIStGU]{Beastman} named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -13289,6 +13385,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3
 			},
@@ -13301,14 +13398,14 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.macros.Macro.EropDDFL0DKcW8I6",
 				"coreVersion": "12.331",
-				"createdTime": 1724720422186,
+				"createdTime": 1731795284933,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725119469879,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284933,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
-			"author": "fN4EvXwUx7iTYSyk",
+			"author": "XOge3YaW9qcUJnuq",
 			"command": "// Macro to create a random NPC, being sent in a whisper to GMs on the server.\n\nconst namesTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Names\")._id;\nconst namesTable = await game.tables.get(namesTableID);\nconst namesResult = await namesTable.draw({displayChat: false});\nconst names = namesResult.results.pop().getChatText();\n\nconst appearanceTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Appearances\")._id;\nconst appearanceTable = await game.tables.get(appearanceTableID);\nconst appearanceResult = await appearanceTable.draw({displayChat: false});\nconst appearance = appearanceResult.results.pop().getChatText();\n\nconst behaviorTableID = game.tables.find(o => o.name === \"The Lost Citadel: Ettercap Behaviors\")._id;\nconst behaviorTable = await game.tables.get(behaviorTableID);\nconst behaviorResult = await behaviorTable.draw({displayChat: false});\nconst behavior = behaviorResult.results.pop().getChatText();\n\nconst message = `<p>A <b>${appearance}</b> @UUID[Compendium.shadowdark.monsters.Actor.fcgq7uwsJEMMdRNx]{Ettercap} named <b>${names}</b> \nis <b>${behavior}</b>.</p>`;\n\nconst chatData = {\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker(),\n  content: message,\n  whisper: game.users.filter(u => u.isGM).map(u => u._id),\n};\n\nChatMessage.create(chatData, {});",
 			"flags": {
 				"core": {
@@ -13322,6 +13419,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3
 			},
@@ -13334,14 +13432,14 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.macros.Macro.C0TN1X2LOAPYWJmD",
 				"coreVersion": "12.331",
-				"createdTime": 1724720422186,
+				"createdTime": 1731795284933,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580895,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284933,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
-			"author": "fN4EvXwUx7iTYSyk",
+			"author": "XOge3YaW9qcUJnuq",
 			"command": "// Macro to draw for encounter in The Lost Citadel and only show it to the GM.;\n\nconst tableID = game.tables.find(o => o.name === \"The Lost Citadel: Random Encounter Check\")._id;\nconst table = await game.tables.get(tableID);\nawait table.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE});",
 			"flags": {
 				"core": {
@@ -13355,6 +13453,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3
 			},
@@ -13372,14 +13471,14 @@
 			"_stats": {
 				"compendiumSource": "Scene.meMau7PRNLPMhWtA",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580600,
+				"createdTime": 1731795284677,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725719365679,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284677,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
-			"active": true,
+			"active": false,
 			"background": {
 				"alphaThreshold": 0,
 				"anchorX": 0,
@@ -14788,6 +14887,7 @@
 				"EKVggA45fx6fzkCK": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"ZuCcSt1GzdVhRDwH": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
@@ -38709,12 +38809,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.8ZWuW34EAMWVBpz5",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -38731,6 +38831,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -38906,12 +39007,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.9PJHNS0mKp3wQ0h8",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1725118100710,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -38928,6 +39029,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39071,12 +39173,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.IkysQwv0TS6SripN",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -39093,6 +39195,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39268,12 +39371,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.K3VLbRUdyBC65MOL",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -39290,6 +39393,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39465,12 +39569,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.VKT5qBn60tiWZWXL",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -39487,6 +39591,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39662,12 +39767,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.iFdrtN3kJk5yth9S",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720625297,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -39684,6 +39789,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39795,12 +39901,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.jDOXbODgNkT69ii5",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -39817,6 +39923,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -39992,12 +40099,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.l251PEOpGq6Ss7Z9",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -40014,6 +40121,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,
@@ -40061,12 +40169,12 @@
 			"_stats": {
 				"compendiumSource": "Compendium.shadowdark.rollable-tables.RollTable.m7Xv2zw1KGYxsuJG",
 				"coreVersion": "12.331",
-				"createdTime": 1724720580756,
+				"createdTime": 1731795284860,
 				"duplicateSource": null,
-				"lastModifiedBy": "fN4EvXwUx7iTYSyk",
-				"modifiedTime": 1724720580756,
+				"lastModifiedBy": "XOge3YaW9qcUJnuq",
+				"modifiedTime": 1731795284860,
 				"systemId": "shadowdark",
-				"systemVersion": "3.0.0"
+				"systemVersion": "3.1.3"
 			},
 			"description": "",
 			"displayRoll": false,
@@ -40083,6 +40191,7 @@
 				"6zjemStY2KktUVjE": 3,
 				"OkK4h58aE2bS4yS7": 3,
 				"PlRkeViQNpI8qZhv": 3,
+				"XOge3YaW9qcUJnuq": 3,
 				"default": 0,
 				"fN4EvXwUx7iTYSyk": 3,
 				"mu8H7NbWc0seFWcA": 3,

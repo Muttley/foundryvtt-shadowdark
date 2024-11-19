@@ -1,0 +1,12 @@
+{{#> ui/sd-box
+	header-class="light"
+	header-label=(localize "SHADOWDARK.item.spell_duration")
+}}
+	{{> items/_partials/duration
+		base="system.duration"
+		choices=config.EFFECT_DURATIONS
+		duration=system.duration
+		type="effect"
+		variableDuration=variableDuration
+	}}
+{{/ui/sd-box}}

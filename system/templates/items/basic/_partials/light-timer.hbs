@@ -1,0 +1,21 @@
+<div class="light-timer">
+	<h3>
+		{{localize 'SHADOWDARK.item.light.longevity'}}
+	</h3>
+	<input
+		name="system.light.longevityMins"
+		type="number"
+		value={{item.system.light.longevityMins}}
+		{{#if item.system.light.hasBeenUsed}}
+			disabled
+		{{/if}}
+	>
+	<h3>
+		{{localize 'SHADOWDARK.item.light.remaining'}}
+	</h3>
+	<input
+		type="number"
+		value={{lightRemainingMins}}
+		disabled
+	>
+</div>

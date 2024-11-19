@@ -1,0 +1,33 @@
+<!-- Languages -->
+<div class="SD-box grid-rowspan-2">
+	<div class="header">
+		<label>
+			{{localize 'SHADOWDARK.sheet.player.languages'}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="language"
+					for="system.languages">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		<ul class="tags">
+			{{#each knownLanguages}}
+				<li
+					{{#ifEq this.system.rarity "common"}}
+						class="tag tag_primary"
+					{{else}}
+						class="tag tag_secondary"
+					{{/ifEq}}
+					data-tooltip="{{this.system.description}}"
+				>
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

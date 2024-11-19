@@ -1,0 +1,23 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	{{> items/_partials/header }}
+
+	<nav class="SD-nav flex0" data-group="primary">
+		<a class="navigation-tab" data-tab="tab-details">
+			{{localize "SHADOWDARK.sheet.item.tab.details"}}
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-description">
+			{{localize "SHADOWDARK.sheet.item.tab.description"}}
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-source">
+			{{localize "SHADOWDARK.sheet.item.tab.source"}}
+		</a>
+	</nav>
+
+	<section class="SD-content-body flex1">
+		{{> items/npc-special-attack/details-tab }}
+		{{> items/_partials/description-tab }}
+		{{> items/_partials/source-tab }}
+	</section>
+</form>

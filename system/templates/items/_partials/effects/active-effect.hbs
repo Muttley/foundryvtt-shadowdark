@@ -1,0 +1,58 @@
+<li class="effect" data-effect-id="{{effect.id}}">
+	<div class="effect-image">
+		<img src="{{effect.img}}">
+	</div>
+
+	<div class="item-name">
+		{{effect.name}}
+	</div>
+
+	<div class="effect-list-changes">
+		{{#each effect.changes as |change|}}
+			<span title="{{fromConfig "EFFECT_TRANSLATIONS" change.key}}">
+				{{fromConfig "EFFECT_TRANSLATIONS" change.key}}
+			</span>
+			<input
+				id="effect-change-value"
+				name="{{change.key}}"
+				placeholder="0"
+				type="text"
+				value="{{change.value}}"
+			>
+		{{/each}}
+	</div>
+
+	<div class="actions">
+		<a
+			class="effect-control"
+			data-action="toggle"
+			data-tooltip="{{localize "SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip"}}"
+		>
+			{{#if effect.disabled}}
+				<i class="fas fa-circle-xmark"></i>
+			{{else}}
+				<i
+					class="fas fa-circle-check"
+					style="color:var(--primary);"
+				></i>
+			{{/if}}
+		</a>
+
+		<a
+			class="effect-control"
+			data-action="edit"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip'}}"
+		>
+			<i class="fa-solid fa-pen-to-square"></i>
+		</a>
+
+		<a
+			class="effect-control"
+			data-action="delete"
+			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip'}}"
+		>
+			<i class="fas fa-trash"></i>
+		</a>
+	</div>
+
+</li>

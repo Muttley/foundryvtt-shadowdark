@@ -7,6 +7,7 @@
 	"img": "icons/weapons/polearms/spear-hooked-double.webp",
 	"name": "Spear",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {
@@ -34,6 +35,7 @@
 		},
 		"description": "",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"predefinedEffects": "",

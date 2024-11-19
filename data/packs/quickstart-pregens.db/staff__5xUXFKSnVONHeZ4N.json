@@ -7,6 +7,7 @@
 	"img": "icons/weapons/staves/staff-ornate-purple.webp",
 	"name": "Staff",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {
@@ -35,6 +36,7 @@
 		},
 		"description": "",
 		"equipped": true,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"properties": [

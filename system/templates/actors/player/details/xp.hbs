@@ -1,0 +1,25 @@
+<!-- XP -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize 'SHADOWDARK.sheet.player.xp'}}
+		</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div class="value-grid">
+			{{numberInput
+				system.level.xp
+				class="ability-score"
+				name="system.level.xp"
+				placeholder="0"
+			}}
+			<div>
+				&sol;
+			</div>
+			<div>
+				{{xpNextLevel}}
+			</div>
+		</div>
+	</div>
+</div>

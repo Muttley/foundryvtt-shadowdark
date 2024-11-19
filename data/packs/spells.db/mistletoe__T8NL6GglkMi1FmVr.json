@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>Two creatures you can see within near of you become enchanted with each other for 1d8 days.</p><p></p><p>Each time one of the affected creatures takes damage, it may make a DC 15 Charisma check. On a success, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.CFnP5fuBHsNZzrkY]{Spell Effect: Mistletoe}</p>",
+		"description": "<p>Two creatures you can see within near of you become enchanted with each other for 1d8 days.</p><p></p><p>Each time one of the affected creatures takes damage, it may make a [[check 15 cha]] check. On a success, the spell ends.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.CFnP5fuBHsNZzrkY]{Spell Effect: Mistletoe}</p>",
 		"duration": {
 			"type": "days",
 			"value": "1d8"

@@ -7,6 +7,7 @@
 	"img": "icons/weapons/crossbows/crossbow-purple.webp",
 	"name": "Crossbow",
 	"system": {
+		"ammoClass": "crossbow-bolts",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {
@@ -35,8 +36,10 @@
 		},
 		"description": "",
 		"equipped": true,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
+		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.HyqHR9AhIDkm4La9",
 			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"

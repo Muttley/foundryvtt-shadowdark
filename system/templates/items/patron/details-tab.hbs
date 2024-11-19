@@ -1,0 +1,15 @@
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
+	<div class="grid-3-columns">
+		<div>
+			<h3>{{localize "SHADOWDARK.patron.boons_table.label"}}</h3>
+			<select name="system.boonTable">
+				<option value="">&mdash;</option>
+				{{selectOptions
+					patronBoonTables
+					selected=system.boonTable
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+</section>

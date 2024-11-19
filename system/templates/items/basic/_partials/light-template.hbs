@@ -1,0 +1,12 @@
+<div class="light-settings">
+	<h3>
+		{{localize 'SHADOWDARK.item.light.template'}}
+	</h3>
+	<select name="system.light.template">
+		{{selectOptions
+			config.LIGHT_SETTING_NAMES
+			selected=system.light.template
+			localize=false
+		}}
+	</select>
+</div>

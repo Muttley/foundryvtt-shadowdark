@@ -1,0 +1,27 @@
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.ability.check")
+	header-class="light"
+}}
+	<div class="item-grid left">
+		<h3>
+			{{localize "SHADOWDARK.class-ability.ability.label"}}
+		</h3>
+		<select name="system.ability">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.ABILITIES_LONG
+				selected=system.ability
+				localize=false
+			}}
+		</select>
+
+		<h3>
+			{{localize 'SHADOWDARK.class-ability.dc.label'}}
+		</h3>
+		{{numberInput
+			item.system.dc
+			name="system.dc"
+			placeholder="0"
+		}}
+	</div>
+{{/ui/sd-box}}

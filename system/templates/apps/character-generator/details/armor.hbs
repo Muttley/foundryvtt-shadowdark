@@ -1,0 +1,10 @@
+{{#if armor}}
+	<p>
+		<b>
+			{{localize "SHADOWDARK.item_type.armor"}}:
+		</b>
+		{{#each armor as |name index|}}
+			{{name}}{{#unless @last}}, {{/unless}}
+		{{/each}}
+	</p>
+{{/if}}

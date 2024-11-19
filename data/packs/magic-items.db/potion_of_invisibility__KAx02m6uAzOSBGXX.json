@@ -16,6 +16,7 @@
 		},
 		"description": "<p><em>This glass vial appears to be empty, but a liquid audibly splashes around inside it.</em></p><p></p><p><strong>Benefit</strong>. When you drink this potion, you become invisible for 10 rounds or until you attack or cast a spell.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"light": {
 			"active": false,

@@ -1,0 +1,59 @@
+<div class="grid-colspan-3 grid-2-columns">
+
+	<!-- Spell Name and Casting Class-->
+	{{#> ui/sd-box
+		header-label=(localize "SHADOWDARK.item.spell.label")
+		header-class="light"
+		content-class="item-grid"
+	}}
+		{{#ifNeq item.type "Spell"}}
+			<h3>{{localize 'SHADOWDARK.item.spell_name'}}</h3>
+			<input
+				name="system.spellName"
+				type="text"
+				value="{{item.system.spellName}}"
+				placeholder="{{localize 'SHADOWDARK.item.spell_name'}}"
+			/>
+		{{/ifNeq}}
+
+
+		<h3>{{localize 'SHADOWDARK.item.spell_tier'}}</h3>
+		{{numberInput
+			system.tier
+			name="system.tier"
+			class="spell-tier-value"
+			placeholder="0"
+		}}
+
+		<h3>{{localize 'SHADOWDARK.item.spell_range'}}</h3>
+		<select name="system.range">
+			<option value="">&mdash;</option>
+			{{selectOptions
+				config.SPELL_RANGES
+				selected=system.range
+				localize=false
+			}}
+		</select>
+
+		<h3>{{localize "SHADOWDARK.item.spell_duration"}}</h3>
+		{{> items/_partials/duration
+			base="system.duration"
+			duration=system.duration
+			type="spell"
+			choices=config.SPELL_DURATIONS
+			variableDuration=variableDuration
+		}}
+	{{/ui/sd-box}}
+
+	{{#> ui/sd-box
+		header-label=(localize "SHADOWDARK.item.spell_caster_classes")
+		header-class="light"
+	}}
+		{{>
+		items/_partials/choice-selector
+		config=spellcasterClassesConfig
+		editable=editable
+		}}
+	{{/ui/sd-box}}
+
+</div>

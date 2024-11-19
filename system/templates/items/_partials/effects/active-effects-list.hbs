@@ -1,0 +1,29 @@
+<div class="SD-banner">
+	{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+</div>
+
+<ol class="SD-list">
+	<li class="header">
+		<a
+			class="effect-control"
+			data-action="create"
+			style="padding:4px"
+		>
+			<i class="fa-solid fa-square-plus"></i>
+		</a>
+		<div class="item-name">
+			{{localize "SHADOWDARK.item.effect.category.effect"}}
+		</div>
+		<div class="item-name" style="flex:2;">
+			{{localize "SHADOWDARK.effect.header.changes"}}
+		</div>
+		<div class="actions"></div>
+	</li>
+
+	{{#each item.effects as |effect|}}
+		{{> items/_partials/effects/active-effect
+			effect=effect
+		}}
+	{{/each}}
+</ol>
+

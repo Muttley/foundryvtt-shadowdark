@@ -7,6 +7,7 @@
 	"img": "icons/weapons/axes/axe-broad-engraved-chipped-blue.webp",
 	"name": "Greataxe",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": 0,
 		"baseWeapon": "",
 		"bonuses": {
@@ -35,6 +36,7 @@
 		},
 		"description": "",
 		"equipped": true,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"properties": [

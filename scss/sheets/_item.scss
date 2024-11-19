@@ -1,10 +1,11 @@
 .shadowdark.item {
 
+	min-width: 550px;
+
 	.effect-list-changes {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		gap: 4px 8px;
-		text-align: center;
 		font-size: 12px;
 		flex: 2;
 

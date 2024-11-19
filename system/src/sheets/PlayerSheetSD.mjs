@@ -129,27 +129,33 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const data = {
 			ancestry: {
 				name: "ancestry",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.label"),
+				label: game.i18n.localize("TYPES.Item.Ancestry"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.ancestry.tooltip"),
 				item: await fromUuid(system.ancestry) ?? null,
 			},
 			background: {
 				name: "background",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.background.label"),
+				label: game.i18n.localize("TYPES.Item.Background"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.background.tooltip"),
 				item: await fromUuid(system.background) ?? null,
 			},
 			class: {
 				name: "class",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.class.label"),
+				label: game.i18n.localize("TYPES.Item.Class"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.class.tooltip"),
 				item: await fromUuid(system.class) ?? null,
 			},
 			deity: {
 				name: "deity",
-				label: game.i18n.localize("SHADOWDARK.sheet.player.deity.label"),
+				label: game.i18n.localize("TYPES.Item.Deity"),
 				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.deity.tooltip"),
 				item: await fromUuid(system.deity) ?? null,
+			},
+			patron: {
+				name: "patron",
+				label: game.i18n.localize("TYPES.Item.Patron"),
+				tooltip: game.i18n.localize("SHADOWDARK.sheet.player.patron.tooltip"),
+				item: await fromUuid(system.patron) ?? null,
 			},
 		};
 
@@ -176,9 +182,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.system.attributes.ac.value = await this.actor.getArmorClass();
 
-		context.isSpellcaster = await this.actor.isSpellcaster();
+		context.isSpellCaster = await this.actor.isSpellCaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
-		context.showSpellsTab = context.isSpellcaster || context.canUseMagicItems;
+		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.base
 			+ this.actor.system.attributes.hp.bonus;
@@ -205,7 +211,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		);
 
 		context.characterClass = await this.actor.getClass();
+		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
 		context.classTitle = await this.actor.getTitle();
+
+		context.characterPatron = await this.actor.getPatron();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
@@ -214,6 +223,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		// Update the Gem Bag, but don't render it unless it's already showing
 		this.gemBag.render(false);
+
 		return context;
 	}
 
@@ -229,6 +239,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				return this.actor.addDeity(item);
 			case "Language":
 				return this.actor.addLanguage(item);
+			case "Patron":
+				return this.actor.addPatron(item);
 		}
 	}
 
@@ -254,28 +266,32 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		if (await this._effectDropNotAllowed(data)) return false;
 
-		// Talents & Effects may need some user input
-		if (["Talent", "Effect"].includes(item.type)) {
-			let itemObj = await shadowdark.utils.createItemWithEffect(item);
-
-			// add item to actor
-			const actorItem = await super._onDropItemCreate(itemObj);
-			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-				this._toggleLightSource(actorItem[0]);
-			}
-			return;
-		}
-
+		// Background items are handled differently currently
 		const backgroundItems = [
 			"Ancestry",
 			"Background",
 			"Class",
 			"Deity",
 			"Language",
+			"Patron",
 		];
 
 		if (backgroundItems.includes(item.type)) {
 			return this._onDropBackgroundItem(item);
+		}
+
+		// Items with Effects may need some user input
+		if (item.effects.toObject().length > 0) {
+			let itemObj = await shadowdark.effects.createItemWithEffect(item);
+
+			// add item to actor
+			const [newItem] = await super._onDropItem(event, data);
+
+			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+				this._toggleLightSource(newItem);
+			}
+
+			return;
 		}
 
 		// Activate light spell if dropped onto the sheet
@@ -433,7 +449,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCreateBoon(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
-			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-boon.hbs"),
+			content: await renderTemplate(
+				"systems/shadowdark/templates/dialog/create-new-boon.hbs",
+				{
+					boonTypes: CONFIG.SHADOWDARK.BOON_TYPES,
+					default: "blessing",
+					level: this.actor?.system?.level?.value ?? 0,
+				}
+			),
 			buttons: {
 				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
@@ -444,6 +467,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 							type: "Boon",
 							system: {
 								boonType: html.find("#item-boonType").val(),
+								level: Number(html.find("#item-boonLevel").val()),
 							},
 						};
 						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
@@ -578,17 +602,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	async _onOpenSpellBook(event) {
-		const actorClass = await this.actor.getClass();
-		let spellClass = actorClass.system.spellcasting.class;
-		if (spellClass === "") {
-			spellClass = this.actor.system.class;
-		}
-
-		let spellbook = new shadowdark.apps.SpellBookSD(
-			spellClass,
-			this.actor.id
-		);
-		spellbook.render(true);
+		event.preventDefault();
+		this.actor.openSpellBook();
 	}
 
 	async _onlevelUp(event) {
@@ -769,20 +784,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _prepareItems(context) {
 		const gems = [];
 
-		const boons = {
-			blessing: {
-				label: game.i18n.localize("SHADOWDARK.boons.blessing"),
+		const boons = {};
+		for (const [key, label] of Object.entries(CONFIG.SHADOWDARK.BOON_TYPES)) {
+			boons[key] = {
+				label,
 				items: [],
-			},
-			oath: {
-				label: game.i18n.localize("SHADOWDARK.boons.oath"),
-				items: [],
-			},
-			secret: {
-				label: game.i18n.localize("SHADOWDARK.boons.secret"),
-				items: [],
-			},
-		};
+			};
+		}
 
 		const inventory = {
 			equipped: [],
@@ -840,8 +848,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const freeCarrySeen = {};
 
 		for (const i of this._sortAllItems(context)) {
+			i.uuid = `Actor.${this.actor._id}.Item.${i._id}`;
+
 			if (i.system.isPhysical && i.type !== "Gem") {
-				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
+				i.showQuantity =
+					i.system.isAmmunition || i.system.slots.per_slot > 1
+						? true
+						: false;
 
 				// We calculate how many slots are used by this item, taking
 				// into account the quantity and any free items.
@@ -952,7 +965,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 			else if (i.type === "Talent") {
 				const talentClass = i.system.talentClass;
-				talents[talentClass].items.push(i);
+				const section = talentClass !== "patronBoon" ? talentClass : "level";
+				talents[section].items.push(i);
 			}
 			else if (i.type === "Effect") {
 				const category = i.system.category;

@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Terrify",
 	"system": {
-		"description": "<p>A creature who first sees her true form DC 15 CHA or DISADV on attacks [[/r 1d4]] rounds.</p>",
+		"description": "<p>A creature who first sees her true form [[check 15 cha]] or DISADV on attacks [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

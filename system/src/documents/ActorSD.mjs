@@ -30,33 +30,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-
-	/** @inheritdoc */
-	_initializeSource(source, options={}) {
-		source = super._initializeSource(source, options);
-
-		if (!source._id || !options.pack || game.shadowdark.moduleArt.suppressArt) {
-			return source;
-		}
-
-		const uuid = `Compendium.${options.pack}.${source._id}`;
-
-		const art = game.shadowdark.moduleArt.map.get(uuid);
-
-		if (art?.actor || art?.token) {
-			if (art.actor) source.img = art.actor;
-
-			if (typeof art.token === "string") {
-				source.prototypeToken.texture.src = art.token;
-			}
-			else if (art.token) {
-				foundry.utils.mergeObject(source.prototypeToken, art.token);
-			}
-		}
-		return source;
-	}
-
-
 	async _learnSpell(item) {
 		const characterClass = await this.getClass();
 
@@ -97,15 +70,13 @@ export default class ActorSD extends Actor {
 
 		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
 
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
 		await ChatMessage.create({
 			title,
 			content,
 			flags: { "core.canPopout": true },
 			flavor: title,
 			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
-			type: messageStyles.OTHER,
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
 			user: game.user.id,
 		});
 
@@ -275,6 +246,20 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async addPatron(item) {
+		const myClass = await this.getClass();
+
+		if (myClass && myClass.system.patron.required) {
+			this.update({"system.patron": item.uuid});
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.patron.no_supported_class")
+			);
+		}
+	}
+
+
 	async addToHpBase(hp) {
 		const currentHpBase = this.system.attributes.hp.base;
 		this.update({
@@ -282,6 +267,19 @@ export default class ActorSD extends Actor {
 		});
 	}
 
+
+	ammunitionItems(key) {
+		return this.items.filter(i => {
+			if (key) {
+				return i.system.isAmmunition
+					&& i.system.quantity > 0
+					&& i.name.slugify() === key;
+			}
+			else {
+				return i.system.isAmmunition && i.system.quantity > 0;
+			}
+		});
+	}
 
 	/**
 	 * Applies the given number to the Actor or Token's HP value.
@@ -344,7 +342,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
 	}
@@ -377,7 +375,7 @@ export default class ActorSD extends Actor {
 		);
 
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/npc-special-attack.hbs",
+			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
 	}
@@ -385,7 +383,7 @@ export default class ActorSD extends Actor {
 
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
-			"systems/shadowdark/templates/partials/weapon-attack.hbs",
+			"systems/shadowdark/templates/_partials/weapon-attack.hbs",
 			options
 		);
 	}
@@ -849,6 +847,12 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async getPatron() {
+		const uuid = this.system.patron ?? "";
+		return await this._getItemFromUuid(uuid);
+	}
+
+
 	async getDeity() {
 		const uuid = this.system.deity ?? "";
 		return await this._getItemFromUuid(uuid);
@@ -871,10 +875,64 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async getSpellcastingAbility() {
-		const characterClass = await this.getClass();
+	async getSpellcasterClasses() {
+		const actorClass = await this.getClass();
 
-		return characterClass?.system?.spellcasting?.ability ?? "";
+		const playerSpellClasses = [];
+
+		let spellClass = actorClass.system.spellcasting.class;
+		if (spellClass === "") {
+			playerSpellClasses.push(actorClass);
+		}
+		else if (spellClass !== "__not_spellcaster__") {
+			playerSpellClasses.push(
+				await this._getItemFromUuid(spellClass)
+			);
+		}
+
+		const spellcasterClasses =
+			await shadowdark.compendiums.spellcastingBaseClasses();
+
+		// De-duplicate any bonus classes the Actor has
+		const bonusClasses = [
+			...new Set(
+				this.system.bonuses.spellcastingClasses ?? []
+			),
+		];
+
+		for (const bonusClass of bonusClasses) {
+			playerSpellClasses.push(
+				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
+			);
+		}
+
+		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
+	async getSpellcastingAbility() {
+		const spellcasterClasses = await this.getSpellcasterClasses();
+
+		let chosenAbility = "";
+		let chosenAbilityModifier = 0;
+
+		for (const casterClass of spellcasterClasses) {
+			const ability = casterClass?.system?.spellcasting?.ability ?? "";
+
+			if (chosenAbility === "") {
+				chosenAbility = ability;
+				chosenAbilityModifier = this.abilityModifier(ability);
+			}
+			else {
+				const modifier = this.abilityModifier(ability);
+				if (modifier > chosenAbilityModifier) {
+					chosenAbility = ability;
+					chosenAbilityModifier = modifier;
+				}
+			}
+		}
+
+		return chosenAbility;
 	}
 
 	async getTitle() {
@@ -921,13 +979,19 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async isSpellcaster() {
+	async isSpellCaster() {
 		const characterClass = await this.getClass();
 
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
 
-		return characterClass && spellcastingClass !== "__not_spellcaster__"
+		const isSpellcastingClass =
+			characterClass && spellcastingClass !== "__not_spellcaster__";
+
+		const hasBonusSpellcastingClasses =
+			(this.system.bonuses.spellcastingClasses ?? []).length > 0;
+
+		return isSpellcastingClass || hasBonusSpellcastingClasses
 			? true
 			: false;
 	}
@@ -1008,6 +1072,48 @@ export default class ActorSD extends Actor {
 	}
 
 
+	async openSpellBook() {
+		const playerSpellcasterClasses = await this.getSpellcasterClasses();
+
+		const openChosenSpellbook = classUuid => {
+			new shadowdark.apps.SpellBookSD(
+				classUuid,
+				this.id
+			).render(true);
+		};
+
+		if (playerSpellcasterClasses.length <= 0) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
+				{ permanent: false }
+			);
+		}
+		else if (playerSpellcasterClasses.length === 1) {
+			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		}
+		else {
+			return renderTemplate(
+				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
+				{classes: playerSpellcasterClasses}
+			).then(html => {
+				const dialog = new Dialog({
+					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
+					content: html,
+					buttons: {},
+					render: html => {
+						html.find("[data-action='open-class-spellbook']").click(
+							event => {
+								event.preventDefault();
+								openChosenSpellbook(event.currentTarget.dataset.uuid);
+								dialog.close();
+							}
+						);
+					},
+				}).render(true);
+			});
+		}
+	}
+
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
@@ -1057,10 +1163,19 @@ export default class ActorSD extends Actor {
 	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
 
+		const ammunition = item.availableAmmunition();
+
+		let ammunitionItem = undefined;
+		if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
+			ammunitionItem = ammunition[0];
+		}
+
 		const data = {
+			actor: this,
+			ammunitionItem,
 			item: item,
 			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
-			actor: this,
+			usesAmmunition: item.usesAmmunition,
 		};
 
 		const bonuses = this.system.bonuses;
@@ -1150,6 +1265,13 @@ export default class ActorSD extends Actor {
 			data.talentBonus += weaponMasterBonus;
 			data.weaponMasteryBonus = weaponMasterBonus * damageMultiplier;
 			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
+		}
+
+		if (data.usesAmmunition && !data.ammunitionItem) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"),
+				{ permanent: false }
+			);
 		}
 
 		return item.rollItem(parts, data, options);
@@ -1290,6 +1412,26 @@ export default class ActorSD extends Actor {
 
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
+
+		if (item.type === "NPC Feature") return item.displayCard();
+
+		// If the ability has limited uses, handle that first
+		if (item.system.limitedUses) {
+			if (item.system.uses.available <= 0) {
+				return ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+					{permanent: false}
+				);
+			}
+			else {
+				const newUsesAvailable = item.system.uses.available - 1;
+
+				item.update({
+					"system.uses.available": Math.max(0, newUsesAvailable),
+				});
+			}
+		}
+
 		const abilityDescription = await TextEditor.enrichHTML(
 			item.system.description,
 			{
@@ -1298,88 +1440,32 @@ export default class ActorSD extends Actor {
 				relativeTo: this,
 			}
 		);
-		// Default message values
-		let title = "";
-		let message = "";
+
 		let success = true;
-
-		// NPC features - no title or checks required
-		if (item.type === "NPC Feature") {
-			message = `${abilityDescription}`;
-		}
-		else {
-			title = game.i18n.localize("SHADOWDARK.chat.use_ability.title");
-
-			// does ability use on a roll check?
-			if (typeof item.system.ability !== "undefined") {
-				options = foundry.utils.mergeObject({target: item.system.dc}, options);
-				const result = await this.rollAbility(
-					item.system.ability,
-					options
-				);
-
-				success = result?.rolls?.main?.success ?? false;
-			}
-
-			// does ability have limited uses?
-			if (item.system.limitedUses) {
-				if (item.system.uses.available > 0) {
-					item.update({
-						"system.uses.available": item.system.uses.available - 1,
-					});
-				}
-				else {
-					success = false;
-					ui.notifications.error(
-						game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
-						{permanent: false}
-					);
-				}
-			}
-
-			const messageType = success
-				? "SHADOWDARK.chat.use_ability.success"
-				: "SHADOWDARK.chat.use_ability.failure";
-
-			message = game.i18n.format(
-				messageType,
-				{
-					name: this.name,
-					ability: item.name,
-				}
+		// does ability use on a roll check?
+		if (item.system.ability) {
+			options = foundry.utils.mergeObject({target: item.system.dc}, options);
+			const result = await this.rollAbility(
+				item.system.ability,
+				options
 			);
 
-			if (success) {
-				message = `<p>${message}</p>${abilityDescription}`;
+			success = result?.rolls?.main?.success ?? false;
+
+			if (!success && item.system.loseOnFailure) {
+				item.update({"system.lost": true});
 			}
 		}
 
-		// construct and create chat message
-		const cardData = {
-			actor: this,
-			item: item,
-			message,
-		};
-
-		let template = "systems/shadowdark/templates/chat/use-ability.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		const messageStyles = shadowdark.utils.getMessageStyles();
-
-		await ChatMessage.create({
-			title,
-			content,
-			flags: { "core.canPopout": true },
-			flavor: title,
-			speaker: ChatMessage.getSpeaker({actor: this, token: this.token}),
-			type: messageStyles.OTHER,
-			user: game.user.id,
+		return shadowdark.chat.renderUseAbilityMessage(this.actor, {
+			flavor: game.i18n.localize("SHADOWDARK.chat.use_ability.title"),
+			templateData: {
+				abilityDescription,
+				actor: this,
+				item: item,
+				success,
+			},
 		});
-
-		if (!success && item.system.loseOnFailure) {
-			item.update({"system.lost": true});
-		}
 	}
 
 

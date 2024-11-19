@@ -1,0 +1,62 @@
+<p>
+	<b>
+		{{localize 'SHADOWDARK.item.weapon_type'}}
+	</b>
+	<em>
+		{{fromConfig "WEAPON_TYPES" item.system.type}}
+	</em>
+</p>
+<p>
+	<b>
+		{{localize 'SHADOWDARK.item.weapon_range'}}
+	</b>
+	<em>
+		{{fromConfig "RANGES" item.system.range}}
+	</em>
+</p>
+{{#if item.system.damage.oneHanded}}
+	<p>
+		<b>
+			{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}
+		</b>
+		<em>
+			{{fromConfig "WEAPON_BASE_DAMAGE" item.system.damage.oneHanded}}
+		</em>
+	</p>
+{{/if}}
+{{#if item.system.damage.twoHanded}}
+	<p>
+		<b>
+			{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}
+		</b>
+		<em>
+			{{fromConfig "WEAPON_BASE_DAMAGE" item.system.damage.twoHanded}}
+		</em>
+	</p>
+{{/if}}
+{{#if item.system.baseWeapon}}
+	<p>
+		<b>
+			{{localize 'SHADOWDARK.item.weapon.base_weapon.title'}}
+		</b>
+		<em>
+			{{baseItemName}}
+		</em>
+	</p>
+{{/if}}
+<div class="details-description">
+	{{{description}}}
+</div>
+
+<footer class="details-footer">
+	<div class="tags">
+		{{#each itemProperties}}
+			<span
+				class="tag tag_primary tag_small"
+				data-tooltip="{{this.system.description}}"
+			>
+				{{this.name}}
+			</span>
+		{{/each}}
+	</div>
+</footer>

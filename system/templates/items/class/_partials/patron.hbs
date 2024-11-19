@@ -1,0 +1,32 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize 'SHADOWDARK.form.section_header.patron.label'}}
+</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.boons")
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>{{localize 'SHADOWDARK.class.starting_boons.count.label'}}</h3>
+	{{numberInput
+		item.system.patron.startingBoons
+		name="system.patron.startingBoons"
+		value="1"
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>{{localize "SHADOWDARK.class.has_patron.count.label"}}</h3>
+	<input
+		name="system.patron.required"
+		type="checkbox"
+		{{checked system.patron.required}}
+	>
+
+{{/ui/sd-box}}
+

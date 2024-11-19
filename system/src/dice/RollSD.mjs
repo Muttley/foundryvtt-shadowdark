@@ -122,6 +122,12 @@ export default class RollSD extends Roll {
 			&& result
 			&& !result?.rolls?.main?.success
 		) data.item.update({"system.lost": true});
+
+		// Reduce ammo if required
+		if (data.usesAmmunition && data.ammunitionItem) {
+			data.ammunitionItem.reduceAmmunition(1);
+		}
+
 		return result;
 	}
 
@@ -709,20 +715,57 @@ export default class RollSD extends Roll {
 			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
-		// TODO Make sure we honor the whisper and/or blind settings of the roll
-		//
+		const { whisper, blind } = this.getRollModeSettings();
+
 		// Only await on the final dice roll of the sequence as it looks nicer
 		// if all the dice roll before the chat message appears
+		//
 		const numRolls = rollsToShow.length;
 		let currentRoll = 1;
 		for (const roll of rollsToShow) {
 			if (currentRoll === numRolls) {
-				await game.dice3d.showForRoll(roll, game.user, true);
+				await game.dice3d.showForRoll(roll, game.user, true, whisper, blind);
 			}
 			else {
-				game.dice3d.showForRoll(roll, game.user, true);
+				game.dice3d.showForRoll(roll, game.user, true, whisper, blind);
 			}
 			currentRoll++;
 		}
+	}
+
+
+	static getRollModeSettings() {
+		const rollMode = game.settings.get("core", "rollMode");
+
+		let blind = false;
+		let whisper = null;
+
+		switch (rollMode) {
+			case "blindroll": {
+				blind = true;
+			}
+			case "gmroll": {
+				const gmList = game.users.filter(user => user.isGM);
+				const gmIDList = [];
+				gmList.forEach(gm => gmIDList.push(gm.id));
+				whisper = gmIDList;
+				break;
+			}
+			case "roll": {
+				const userList = game.users.filter(user => user.active);
+				const userIDList = [];
+				userList.forEach(user => userIDList.push(user.id));
+				whisper = userIDList;
+				break;
+			}
+			case "selfroll": {
+				whisper = [game.user.id];
+				break;
+			}
+			default: {
+				break;
+			}
+		}
+		return { whisper, blind };
 	}
 }

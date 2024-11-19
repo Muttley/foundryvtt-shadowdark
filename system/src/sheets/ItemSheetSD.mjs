@@ -28,7 +28,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 	/** @inheritdoc */
 	get template() {
-		return "systems/shadowdark/templates/items/item.hbs";
+		return `systems/shadowdark/templates/items/${this.item.typeSlug}.hbs`;
 	}
 
 	/** @inheritdoc */
@@ -67,30 +67,18 @@ export default class ItemSheetSD extends ItemSheet {
 			event => this._onItemSelection(event)
 		);
 
-		// Effect listeners
-		html.find("[data-action=effect-create]").click(
-			event => this._onEffectCreate(event)
-		);
-
-		html.find("[data-action=effect-activate]").click(
-			event => this._onEffectActivate(event)
-		);
-
-		html.find("[data-action=effect-edit]").click(
-			event => this._onEffectEdit(event)
-		);
-
-		html.find("[data-action=effect-delete]").click(
-			event => this._onEffectDelete(event)
-		);
-
 		html.find("[data-action=remove-name-table]").click(
 			event => this._onRemoveTable(event)
 		);
 
+		html.find(".effect-control").click(event => {
+			shadowdark.effects.onManageActiveEffect(event, this.item);
+		});
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
+
 
 	async getAncestrySelectorConfigs(context) {
 
@@ -99,6 +87,7 @@ export default class ItemSheetSD extends ItemSheet {
 				await shadowdark.compendiums.languages(),
 				this.item.system.languages.fixed ?? []
 			);
+
 		const [selectedLanguages, availableSelectLanguages] =
 		await shadowdark.utils.getDedupedSelectedItems(
 			await shadowdark.compendiums.languages(),
@@ -152,6 +141,7 @@ export default class ItemSheetSD extends ItemSheet {
 			selectedItems: selectedTalents,
 		};
 	}
+
 
 	async getClassSelectorConfigs(context) {
 		const [selectedArmor, availableArmor] =
@@ -246,7 +236,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 
 		const spellcastingClasses =
-			await shadowdark.compendiums.spellcastingClasses();
+			await shadowdark.compendiums.spellcastingBaseClasses();
 
 		context.spellcastingClasses = {};
 		for (const spellcastingClass of spellcastingClasses) {
@@ -272,10 +262,24 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+
+	async getSources(context) {
+		context.sources = await shadowdark.compendiums.sources();
+
+		const itemSource = context.sources.find(
+			s => s.uuid === context.item.system.source.title
+		);
+
+		context.sourceLoaded = itemSource || context.item.system.source.title === ""
+			? true
+			: false;
+	}
+
+
 	async getSpellSelectorConfigs(context) {
 		const [selectedClasses, availableClasses] =
 			await shadowdark.utils.getDedupedSelectedItems(
-				await shadowdark.compendiums.spellcastingClasses(),
+				await shadowdark.compendiums.spellcastingBaseClasses(),
 				this.item.system.class ?? []
 			);
 
@@ -290,6 +294,7 @@ export default class ItemSheetSD extends ItemSheet {
 		};
 	}
 
+
 	/** @override */
 	async getData(options) {
 		let loadingDialog;
@@ -301,107 +306,74 @@ export default class ItemSheetSD extends ItemSheet {
 
 		const context = await super.getData(options);
 
-		const item = context.item;
-
-		context.sources = await shadowdark.compendiums.sources();
-		const itemSource = context.sources.find(
-			s => s.uuid === item.system.source.title
-		);
-		context.sourceLoaded = itemSource || item.system.source.title === ""
-			? true
-			: false;
-
-		if ((item.type === "Class") && (item.system.spellcasting.class !== "__not_spellcaster__")) {
-			this.spellsKnown = true;
-		}
-		else {
-			this.spellsKnown = false;
-		}
-
-		const showTab = {
-			details: [
-				"Ancestry",
-				"Armor",
-				"Basic",
-				"Boon",
-				"Class Ability",
-				"Class",
-				"Deity",
-				"Effect",
-				"Gem",
-				"Language",
-				"NPC Attack",
-				"NPC Special Attack",
-				"NPC Spell",
-				"Potion",
-				"Property",
-				"Scroll",
-				"Spell",
-				"Talent",
-				"Wand",
-				"Weapon",
-			].includes(item.type),
-
-			effects: (
-				["Boon", "Effect", "Talent"].includes(item.type)
-					|| item.system.magicItem
-			) ? true : false,
-			light: item.system.light?.isSource ?? false,
-			description: true,
-			titles: item.type === "Class",
-			spellsknown: this.spellsKnown,
-		};
+		await this.getSources(context);
 
 		foundry.utils.mergeObject(context, {
 			config: CONFIG.SHADOWDARK,
-			effectsEditable: (
-				item.parent === null
-				|| game.version.split(".")[0] > 10
-			),
-			hasCost: item.system.cost !== undefined,
-			itemType: game.i18n.localize(`SHADOWDARK.item.type.${item.type}`),
-			showMagicItemCheckbox: item.system.isPhysical && !["Gem", "Potion", "Scroll", "Wand"].includes(item.type),
-			system: item.system,
-			showTab,
 			editable: this.isEditable,
-			usesSlots: item.system.slots !== undefined,
+			itemType: game.i18n.localize(`SHADOWDARK.item.type.${context.item.type}`),
+			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
+			system: context.item.system,
 		});
 
-
-		if (["Ancestry"].includes(item.type)) {
-			await this.getAncestrySelectorConfigs(context);
-		}
-
-		if (["Class"].includes(item.type)) {
-			await this.getClassSelectorConfigs(context);
-		}
-
-		if (["Scroll", "Spell", "Wand"].includes(item.type)) {
-			await this.getSpellSelectorConfigs(context);
-		}
-
-		if (["Armor", "Weapon"].includes(item.type)) {
-			context.propertyItems = await item.propertyItems();
-
-			const mySlug = item.name.slugify();
-
-			if (item.type === "Armor") {
-				context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseArmor()
-				);
-
-				delete context.baseArmor[mySlug];
+		context.descriptionHTML = await TextEditor.enrichHTML(
+			context.system.description,
+			{
+				secrets: context.item.isOwner,
+				async: true,
+				relativeTo: this.item,
 			}
-			if (item.type === "Weapon") {
-				context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
-					await shadowdark.compendiums.baseWeapons()
-				);
+		);
 
-				delete context.baseWeapons[mySlug];
-			}
+		// Call any type-specific methods for this item type to gather
+		// additional data for the sheet
+		//
+		const itemTypeSafeName = context.item.type.replace(/\s/g, "");
+		const itemTypeFunctionName = `getSheetDataFor${itemTypeSafeName}Item`;
+
+		if (typeof this[itemTypeFunctionName] === "function") {
+			shadowdark.debug(`Calling Item type-specific method ${itemTypeFunctionName}()`);
+			await this[itemTypeFunctionName](context);
 		}
 
-		if (item.type === "Basic" && item.system.light.isSource) {
+		if (loadingDialog) loadingDialog.close({force: true});
+
+		return context;
+	}
+
+
+	// ------------------------------------------------------------------------
+	// Type-specific methods are used to gather any additional data necessary
+	// for rendering the item sheet.
+	//
+	// These methods are called using reflection from the main getData() method
+	// and should be named as follows:
+	//
+	//     getSheetDataFor{item_type_with_no_spaces}Item
+	// ------------------------------------------------------------------------
+
+	async getSheetDataForAncestryItem(context) {
+		await this.getAncestrySelectorConfigs(context);
+	}
+
+
+	async getSheetDataForArmorItem(context) {
+		context.propertyItems = await context.item.propertyItems();
+
+		const mySlug = context.item.name.slugify();
+
+		context.baseArmor = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.baseArmor()
+		);
+
+		delete context.baseArmor[mySlug];
+	}
+
+
+	async getSheetDataForBasicItem(context) {
+		const item = context.item;
+
+		if (item.system.light.isSource) {
 			if (!item.system.light.hasBeenUsed) {
 				// Unused light sources should always have their remaining time
 				// at maximum
@@ -420,55 +392,102 @@ export default class ItemSheetSD extends ItemSheet {
 				);
 			}
 		}
-
-		if (context.showMagicItemCheckbox || item.system.canBeEquipped
-			|| item.type === "Basic" || item.type === "Effect") {
-			context.showItemProperties=true;
-		}
-
-		// initialize spellsknown table if not already set on a spellcaster class item
-		if (this.spellsKnown && !item.system.spellcasting.spellsknown) {
-			item.system.spellcasting.spellsknown = {};
-			for (let i = 1; i <= 10; i++) {
-				item.system.spellcasting.spellsknown[i] = {};
-				for (let j = 1; j <= 5; j++) {
-					item.system.spellcasting.spellsknown[i][j] = null;
-				}
-			}
-		}
-
-		if (item.type === "NPC Attack" || item.type === "NPC Special Attack") {
-			context.npcAttackRangesDisplay = item.npcAttackRangesDisplay();
-		}
-
-		if (["Effect", "Potion", "Scroll", "Spell", "NPC Spell", "Wand"].includes(item.type)) {
-			context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-				.includes(item.system.duration.type);
-
-		}
-
-		if (context.showTab.effects) {
-			context.predefinedEffects = await this._getPredefinedEffectsList();
-			context.effects = item.effects;
-		}
-
-		context.descriptionHTML = await TextEditor.enrichHTML(
-			context.system.description,
-			{
-				secrets: context.item.isOwner,
-				async: true,
-				relativeTo: this.item,
-			}
-		);
-
-		if (loadingDialog) loadingDialog.close({force: true});
-
-		return context;
 	}
 
-	/* -------------------------------------------- */
-	/*  Event Handling                              */
-	/* -------------------------------------------- */
+
+	async getSheetDataForClassItem(context) {
+		await this.getClassSelectorConfigs(context);
+
+		context.spellsKnown =
+			context.item.system.spellcasting.class !== "__not_spellcaster__";
+	}
+
+
+	async getSheetDataForEffectItem(context) {
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+
+	async getSheetDataForNPCAttackItem(context) {
+		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
+	}
+
+
+	async getSheetDataForNPCSpecialAttackItem(context) {
+		context.npcAttackRangesDisplay = context.item.npcAttackRangesDisplay();
+	}
+
+
+	async getSheetDataForNPCSpellItem(context) {
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+
+	async getSheetDataForPatronItem(context) {
+		const patronBoonTables =
+			await shadowdark.compendiums.patronBoonTables();
+
+		context.patronBoonTables = {};
+
+		for (const patronBoonTable of patronBoonTables) {
+			context.patronBoonTables[patronBoonTable.uuid] =
+				patronBoonTable.name.replace(/^Patron\s+Boons:\s/, "");
+		}
+	}
+
+
+	async getSheetDataForScrollItem(context) {
+		await this.getSpellSelectorConfigs(context);
+
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+
+	async getSheetDataForSpellItem(context) {
+		await this.getSpellSelectorConfigs(context);
+
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+
+	async getSheetDataForTalentItem(context) {
+		context.showsLevelInput = {
+			ancestry: false,
+			class: false,
+			level: true,
+			patronBoon: true,
+		};
+	}
+
+
+	async getSheetDataForWandItem(context) {
+		await this.getSpellSelectorConfigs(context);
+
+		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
+			.includes(context.item.system.duration.type);
+	}
+
+
+	async getSheetDataForWeaponItem(context) {
+		context.propertyItems = await context.item.propertyItems();
+
+		const mySlug = context.item.name.slugify();
+
+		context.ammunition = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.ammunition()
+		);
+
+		context.baseWeapons = await shadowdark.utils.getSlugifiedItemList(
+			await shadowdark.compendiums.baseWeapons()
+		);
+
+		delete context.baseWeapons[mySlug];
+	}
+
 
 	/** @inheritdoc */
 	_canDragDrop(selector) {
@@ -516,13 +535,9 @@ export default class ItemSheetSD extends ItemSheet {
 
 		// Test for Predefiend Effects
 		// Create effects when added through the predefined effects input
-		if (event.target?.name === "system.predefinedEffects") {
+		if (event.target?.name === "predefinedEffects") {
 			const key = event.target.value;
-			let effectData = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
-
-			if (!effectData) return console.error(`No effect found (${key})`);
-
-			await this._createPredefinedEffect(key, effectData);
+			return shadowdark.effects.createPredefinedEffect(this.item, key);
 		}
 
 		// Test for Effect Duration Change
@@ -852,101 +867,11 @@ export default class ItemSheetSD extends ItemSheet {
 		).render(true);
 	}
 
-	/* ---------- Effect Event Handlers ---------- */
-	/**
-	 * Creates a new effect and renders the effect sheet. This is used
-	 * for adding custom effects to an item with effects enabled.
-	 * @param {Event} event - Event with information about the effect to create
-	 * @returns {void}
-	 */
-	async _onEffectCreate(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		shadowdark.log(`Creating a new effect on ${this.item.name}`);
-		const effectData = {
-			label: game.i18n.localize("SHADOWDARK.effect.new"),
-			icon: "icons/svg/aura.svg",
-			origin: this.item.uuid,
-		};
-		const effect = await this._createEffect(effectData);
-		return effect[0]?.sheet.render(true);
-	}
-
-	/**
-	 * Toggles an ActiveEffect as active/inactive.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectActivate(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(
-			`${effect.disabled ? "A" : "Dea"}ctivating effect ${effect.name ?? effect.label}`
-		);
-		return this._activateEffect(effect);
-	}
-
-	/**
-	 * Renders an ActiveEffect sheet for editing.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectEdit(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(`Editing effect ${effect.name ?? effect.label}`);
-		return effect.sheet.render(true);
-	}
-
-	/**
-	 * Deletes an ActiveEffect.
-	 * @param {Event} event - Clicking event
-	 * @returns {void}
-	 */
-	_onEffectDelete(event) {
-		event.preventDefault();
-		if (!this.isEditable) return;
-		const effect = this._getEffectFromEvent(event);
-		shadowdark.log(`Deleting effect ${effect.name ?? effect.label}`);
-		return this._deleteEffect(effect);
-	}
-
 	async _onUpdateDurationEffect() {
 		if (!this.isEditable) return;
 		this.item.effects.map(e => e.update({duration: this._getDuration()}));
 	}
 
-
-	/* -------------------------------------------- */
-	/*  Methods                                     */
-	/* -------------------------------------------- */
-
-	/* ---------- Effect Methods ---------- */
-
-	_getEffectFromEvent(event) {
-		const a = event.currentTarget;
-		const li = a.closest("li");
-		const effect = li.dataset.effectId
-			? this.item.effects.get(li.dataset.effectId)
-			: null;
-		return effect;
-	}
-
-	_createEffect(data) {
-		// Add duration to the effect so it shows up as a token icon when applied
-		data.duration = this._getDuration();
-		return this.item.createEmbeddedDocuments("ActiveEffect", [data]);
-	}
-
-	_activateEffect(effect) {
-		return effect.update({disabled: !effect.disabled});
-	}
-
-	_deleteEffect(effect) {
-		return effect.delete();
-	}
 
 	/**
 	 * Returns duration data for an active effect. This is used
@@ -990,78 +915,4 @@ export default class ItemSheetSD extends ItemSheet {
 		return duration;
 	}
 
-
-	/* ---------- Predefined Effect Methods ---------- */
-
-	/**
-	 * Returns an object containing the effect key, and the
-	 * translated name into the current language.
-	 * @returns {Object}
-	 */
-	async _getPredefinedEffectsList() {
-		const effects = {};
-
-		for (const key in CONFIG.SHADOWDARK.PREDEFINED_EFFECTS) {
-			const effect = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
-
-			effects[key] = {
-				key,
-				name: effect.name,
-			};
-		}
-
-		return effects;
-	}
-
-
-	/**
-	 * Creates effects based on predefined effect choices and the supplied
-	 * predefined effect mappings.
-	 * @param {string} key - Name of the predefined effect
-	 * @param {Object} data - The item data of the item to be created
-	 * @returns {ActiveEffect}
-	 */
-	async _createPredefinedEffect(key, data) {
-		const handledData = data;
-
-		let defaultValue = "REPLACEME";
-		[defaultValue] = await this.item._handlePredefinedEffect(key, data.defaultValue, data.name);
-
-		if (defaultValue === "REPLACEME") {
-			return shadowdark.log("Can't create effect without selecting a value.");
-		}
-
-		handledData.defaultValue = defaultValue;
-
-		const effectMode = foundry.utils.getProperty(
-			CONST.ACTIVE_EFFECT_MODES,
-			data.mode.split(".")[2]);
-
-		const value = (isNaN(parseInt(handledData.defaultValue, 10)))
-			? handledData.defaultValue
-			: parseInt(handledData.defaultValue, 10);
-
-		const effectData = [
-			{
-				name: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
-				label: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
-				icon: handledData.icon,
-				changes: [{
-					key: handledData.effectKey,
-					value,
-					mode: effectMode,
-				}],
-				disabled: false,
-				transfer: (Object.keys(handledData).includes("transfer"))
-					? handledData.transfer
-					: true,
-			},
-		];
-
-		// Create the effect
-		await this.item.createEmbeddedDocuments(
-			"ActiveEffect",
-			effectData
-		);
-	}
 }

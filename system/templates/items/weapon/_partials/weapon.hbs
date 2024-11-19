@@ -1,0 +1,76 @@
+{{#> ui/sd-box
+	header-label=(localize 'SHADOWDARK.item_type.weapon')
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>
+		{{localize 'SHADOWDARK.item.weapon.base_weapon.title'}}
+	</h3>
+	<select name="system.baseWeapon">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			baseWeapons
+			selected=system.baseWeapon
+			localize=false
+		}}
+	</select>
+
+	<h3>
+		{{localize 'SHADOWDARK.item.weapon_type'}}
+	</h3>
+	<select name="system.type">
+		{{selectOptions
+			config.WEAPON_TYPES
+			selected=system.type
+			localize=false
+		}}
+	</select>
+
+	<h3>
+		{{localize 'SHADOWDARK.item.weapon_range'}}
+	</h3>
+	<select name="system.range">
+		{{selectOptions
+			config.RANGES
+			selected=system.range
+			localize=false
+		}}
+	</select>
+
+	<h3>
+		{{localize 'SHADOWDARK.item.ammunition'}}
+	</h3>
+	<select name="system.ammoClass">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			ammunition
+			selected=system.ammoClass
+			localize=false
+		}}
+	</select>
+
+	<h3>
+		{{localize 'SHADOWDARK.item.weapon_damage.oneHanded'}}
+	</h3>
+	<select name="system.damage.oneHanded">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			config.WEAPON_BASE_DAMAGE
+			selected=system.damage.oneHanded
+			localize=false
+		}}
+	</select>
+
+	<h3>
+		{{localize 'SHADOWDARK.item.weapon_damage.twoHanded'}}
+	</h3>
+	<select name="system.damage.twoHanded">
+		<option value="">&mdash;</option>
+		{{selectOptions
+			config.WEAPON_BASE_DAMAGE
+			selected=system.damage.twoHanded
+			localize=false
+		}}
+	</select>
+{{/ui/sd-box}}
+

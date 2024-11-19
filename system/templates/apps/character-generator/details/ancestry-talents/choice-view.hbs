@@ -1,0 +1,12 @@
+<p>
+	<a
+		class="fas fa-pen-to-square"
+		data-action='clear-ancestry-talents'
+	></a>
+	{{#each ancestryTalents.selection as |value key|}}
+		<b>
+			{{value.name}}.
+		</b>
+		{{{value.formattedDescription}}}
+	{{/each}}
+</p>

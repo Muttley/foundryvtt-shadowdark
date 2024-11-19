@@ -1,3 +1,52 @@
+# v3.2.0
+
+## Enhancements
+* [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
+* [#847] Add support for Warlock class Boon which gives the ability to learn a Wizard spell
+* [#879] Add new Patron item class
+* [#880] Create a new Patron Boon type for Talents
+* [#881] Support rolling on a character's Patron's Boon table if necessary in the Level Up app
+* [#901] Added Russian as a partially complete system language.
+* [#908] Add rollable dice to Cure Wounds spell that includes the necessary calculations *(Many thanks to **nschoenwald** for contributing to this issue)*
+* [#909] Added +1 AC Dual Wield active effect to talent of same name which can be toggled on/off as needed on the character sheet now
+* [#910] Implemented automatic check roll links and added new macro to launch the check request dialog.
+	* example syntax: `[[check 12 str]]` or `[[request 15 int]]`
+* [#920] Show tooltips on weapon and armor properties when showing expanded inline view in inventory
+* [#921] Add way to view/manipulate current Active Effects to the player Effects tab
+* [#937] Support selecting or rolling Patron in character generator
+* [#939] Add macro for launching the character generator
+* [#947] Added new check syntax to text in monster abilities and the Lost Citadel dungeon guild.
+
+## Bugfixes
+* [#894] Unnecessary "items not found" warning for "+2 Stats Points" from ShadowDarklings
+* [#896] Add additional padding to blockquote style so text doesn't blend into decorations
+* [#902] Can't paste Shadowdarklings JSON if previously copied text object
+* [#903] Importing Wizards from Shadowdarklings returns "Plus2INTOrPlus1Casting" errors
+* [#906] There's always an extra space between special attack name and effect
+* [#918] Actor and Item type names missing from i18n data
+* [#919] Class item template has incorrect default spellcasting class value
+* [#930] Class Abilities can't be used if they have no associated skill roll
+* [#936] Character Generator: Don't display empty alignment for Deities that don't have one
+* [#938] Unecessary line breaks in Farsight talent descriptions
+* [#952] NPC Special Attacks always posted to chat in public
+* [#953] Dice So Nice not honouring roll modes in Shadowdark
+* [#955] Chat message icon missing on hovering over Ancestry and Level talents on character sheet
+* [#956] Can't import unnamed characters from Shadowdarklings
+* [#959] Stimulent effect description has a broken link to a Ranger talent that was converted to a Class Ability
+* [#960] Add missing Berzerk class ability for Sea Wolf class
+
+## Chores
+* [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*
+* [#917] Restructure Item sheet templates to make them a bit more manageable
+* [#924] Perform an audit of existing templates to ensure we don't have any raw strings that should be i18n-ified
+* [#927] Migration runner accessing globalThis.duplicate which must now be accessed via foundry.utils.duplicate
+* [#928] Migrate "Deities" to new "Patrons and Deities" compendium
+* [#929] Merged Russian language updates from Crowdin
+
+*Many thanks to **AdamsGH** for contributing **Russian** translation data.*
+
+---
+
 # v3.1.3
 
 ## Enhancements

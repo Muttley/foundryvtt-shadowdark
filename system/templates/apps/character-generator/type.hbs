@@ -1,0 +1,34 @@
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.apps.character-generator.type"}}
+		</label>
+		<span></span>
+	</div>
+	<div class="content grid-2-columns">
+		<div>
+			<input
+				type="radio"
+				name="level0"
+				value="true"
+				{{#if level0}}
+					checked
+				{{/if}}
+				{{disabled editing}}
+			>
+			{{localize "SHADOWDARK.talent.class.level"}} 0
+		</div>
+		<div>
+			<input
+				type="radio"
+				name="level0"
+				value="false"
+				{{#unless level0}}
+					checked
+				{{/unless}}
+				{{disabled editing}}
+			>
+			{{localize "SHADOWDARK.talent.class.level"}} 1
+		</div>
+	</div>
+</div>

@@ -31,6 +31,10 @@
 				"Compendium.shadowdark.languages.Item.ufwua5RXnJXlA0St"
 			]
 		},
+		"patron": {
+			"required": false,
+			"startingBoons": 0
+		},
 		"predefinedEffects": "",
 		"source": {
 			"title": "core-rules"

@@ -9,6 +9,7 @@
 	"img": "icons/weapons/staves/staff-engraved-red.webp",
 	"name": "Staff of Healing",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "staff",
 		"bonuses": {
@@ -37,6 +38,7 @@
 		},
 		"description": "<p><em>A knotted, oak stave with a heavy knurl on one end.</em></p><p></p><p><strong>Bonus</strong>. +1 staff.</p><p></p><p><strong>Benefit</strong>. Once per day, you can touch a creature with the staff to heal it for [[/r 1d6]] hit points.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",

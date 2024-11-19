@@ -2,7 +2,7 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"description": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "3.1.3",
+	"version": "3.2.0",
 	"compatibility": {
 		"minimum": "12",
 		"verified": "12"
@@ -70,6 +70,11 @@
 			"path": "i18n/pt_BR.json"
 		},
 		{
+			"lang": "ru",
+			"name": "Russian",
+			"path": "i18n/ru.json"
+		},
+		{
 			"lang": "sv",
 			"name": "Svenska",
 			"path": "i18n/sv.json"
@@ -118,15 +123,6 @@
 			"label": "Conditions",
 			"system": "shadowdark",
 			"path": "packs/conditions",
-			"type": "Item",
-			"private": false,
-			"flags": {}
-		},
-		{
-			"name": "deities",
-			"label": "Deities",
-			"system": "shadowdark",
-			"path": "packs/deities",
 			"type": "Item",
 			"private": false,
 			"flags": {}
@@ -182,6 +178,15 @@
 			"system": "shadowdark",
 			"path": "packs/monsters",
 			"type": "Actor",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "patrons-and-deities",
+			"label": "Patrons and Deities",
+			"system": "shadowdark",
+			"path": "packs/patrons-and-deities",
+			"type": "Item",
 			"private": false,
 			"flags": {}
 		},
@@ -293,8 +298,8 @@
 						"backgrounds",
 						"class-abilities",
 						"classes",
-						"deities",
 						"languages",
+						"patrons-and-deities",
 						"talents"
 					]
 				},

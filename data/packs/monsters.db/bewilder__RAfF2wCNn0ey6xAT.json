@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Bewilder",
 	"system": {
-		"description": "<p>Creatures within near that see the cave brute's eyes, DC 12 CHA at start of their turn or dazed and no action.</p>",
+		"description": "<p>Creatures within near that see the cave brute's eyes, [[check 12 cha]] at start of their turn or dazed and no action.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

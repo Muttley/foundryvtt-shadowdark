@@ -115,6 +115,7 @@
 				"rangedAttackBonus": 0,
 				"rangedDamageBonus": 0,
 				"spellcastingCheckBonus": 0,
+				"spellcastingClasses": [],
 				"unarmoredAcBonus": 0,
 				"weaponDamageDieD12": [],
 				"weaponDamageDieImprovementByProperty": [],
@@ -137,6 +138,7 @@
 				"remaining": 0,
 				"available": false
 			},
+			"patron": "",
 			"slots": 10
 		}
 	},
@@ -157,6 +159,7 @@
 			"NPC Special Attack",
 			"NPC Spell",
 			"NPC Feature",
+			"Patron",
 			"Potion",
 			"Property",
 			"Scroll",
@@ -209,6 +212,7 @@
 					"sp": 0
 				},
 				"equipped": false,
+				"isAmmunition": false,
 				"isPhysical": true,
 				"magicItem": false,
 				"quantity": 1,
@@ -261,7 +265,8 @@
 			"templates": [
 				"common"
 			],
-			"boonType": "oath"
+			"boonType": "oath",
+			"level": 0
 		},
 		"Class": {
 			"templates": [
@@ -275,10 +280,86 @@
 			"armor": [],
 			"classTalentTable": "",
 			"hitPoints": "",
+			"patron": {
+				"required": false,
+				"startingBoons": 0
+			},
 			"spellcasting": {
 				"ability": "",
 				"baseDifficulty": 10,
-				"class": "NONE"
+				"class": "__not_spellcaster__",
+				"spellsknown": {
+					"1": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"2": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"3": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"4": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"5": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"6": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"7": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"8": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"9": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					},
+					"10": {
+						"1": null,
+						"2": null,
+						"3": null,
+						"4": null,
+						"5": null
+					}
+				}
 			},
 			"talents": [],
 			"talentChoices": [],
@@ -371,6 +452,9 @@
 				"close"
 			]
 		},
+		"NPC Feature": {
+			"templates": ["common"]
+		},
 		"NPC Special Attack": {
 			"templates": ["common"],
 			"attack": {
@@ -381,9 +465,6 @@
 			},
 			"ranges": []
 		},
-		"NPC Feature": {
-			"templates": ["common"]
-		},
 		"NPC Spell": {
 			"templates": ["common"],
 			"duration": {
@@ -393,6 +474,12 @@
 			"range": "",
 			"dc": 10,
 			"lost": false
+		},
+		"Patron": {
+			"templates": [
+				"common"
+			],
+			"boonTable": ""
 		},
 		"Potion": {
 			"templates": ["common", "magic", "physical"],
@@ -430,6 +517,7 @@
 				"common",
 				"physical"
 			],
+			"ammoClass": "",
 			"baseWeapon": "",
 			"bonuses": {
 				"attackBonus": 0,
@@ -447,6 +535,7 @@
 				"oneHanded": "",
 				"twoHanded": ""
 			},
+
 			"properties": [],
 			"range": "close",
 			"type": "melee",

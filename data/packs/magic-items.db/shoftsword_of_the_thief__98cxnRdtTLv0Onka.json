@@ -9,6 +9,7 @@
 	"img": "icons/weapons/swords/sword-guard-worn-purple.webp",
 	"name": "Shoftsword of the Thief",
 	"system": {
+		"ammoClass": "",
 		"attackBonus": "1",
 		"baseWeapon": "shortsword",
 		"bonuses": {
@@ -37,6 +38,7 @@
 		},
 		"description": "<p><em>A stubby, grey blade riddled with notches and scars.</em></p><p></p><p><strong>Bonus</strong>. +1 shortsword. +2 if wielded by a halfling or thief.</p><p></p><p><strong>Benefit</strong>. Once per day, regain a luck token you just spent.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": true,
 		"predefinedEffects": "",

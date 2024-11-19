@@ -7,6 +7,7 @@
 	"img": "icons/weapons/axes/axe-broad-purple.webp",
 	"name": "Handaxe",
 	"system": {
+		"ammoClass": "",
 		"baseWeapon": "",
 		"bonuses": {
 			"attackBonus": 0,
@@ -32,6 +33,7 @@
 		},
 		"description": "<p><strong>Finesse (F).</strong> You can use your Strength or Dexterity when attacking with this weapon.</p><p></p><p><strong>Thrown (Th).</strong> You can throw this weapon to make a ranged attack with it using Strength.</p>",
 		"equipped": false,
+		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"predefinedEffects": "",

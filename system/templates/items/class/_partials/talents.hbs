@@ -1,0 +1,42 @@
+<div class="SD-banner grid-colspan-3">
+	{{localize 'SHADOWDARK.form.section_header.talents.label'}}
+</div>
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.fixed")
+	header-class="light"
+}}
+	{{> items/_partials/choice-selector
+		config=talentsConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class.choice")
+	header-class="light"
+}}
+	{{> items/_partials/choice-selector
+		config=talentChoicesConfig
+		editable=editable
+	}}
+{{/ui/sd-box}}
+
+
+{{#> ui/sd-box
+	header-label=(localize "SHADOWDARK.class-ability.options")
+	header-class="light"
+	content-class="item-grid"
+}}
+	<h3>{{localize 'SHADOWDARK.class.talent_choices.count.label'}}</h3>
+	<span>1</span>
+	<!-- TODO CG only support choice of 1 currently
+	{{numberInput
+		item.system.talentChoiceCount
+		name="system.talentChoiceCount"
+		value="1"
+		editable=false
+	}}
+	 -->
+{{/ui/sd-box}}

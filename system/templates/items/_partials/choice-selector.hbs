@@ -1,0 +1,57 @@
+<div class="grid-1-columns">
+
+	{{#if config.selectedItems}}
+		<div class="items flexrow">
+		{{#each config.selectedItems}}
+			<div class="talent flexrow">
+				<a
+					{{#if ../config.isItem}}
+						class="content-link uuid-link"
+						data-link
+						draggable="true"
+					{{else}}
+						class="fake-uuid-link"
+					{{/if}}
+					data-type="Item"
+					data-uuid="{{this.uuid}}"
+					title="Item"
+				>
+					{{#if ../editable}}
+						<i
+							class="fas fa-delete-right"
+							data-action="delete-choice"
+							data-choices-key="{{../config.choicesKey}}"
+							data-uuid="{{this.uuid}}"
+						></i>
+					{{/if}}
+					{{this.name}}
+				</a>
+			</div>
+		{{/each}}
+		</div>
+	{{/if}}
+
+	<input
+		{{!--
+			list name needs to be unique and match the one used in the
+			datalist below.  Using the item id plus the system data key field
+			here should be unique enough
+		--}}
+		data-choices-key="{{config.choicesKey}}"
+		data-is-item="{{config.isItem}}"
+		list="{{item._id}}_{{config.choicesKey}}_list"
+		name="{{config.name}}"
+		placeholder="{{localize "SHADOWDARK.dialog.type_here"}}"
+		type="text"
+		value=""
+	/>
+	<datalist id="{{item._id}}_{{config.choicesKey}}_list">
+		{{#each config.availableItems}}
+			<option
+				data-uuid="{{this.uuid}}"
+				value="{{this.name}}"
+			></option>
+		{{/each}}
+	</datalist>
+
+</div>

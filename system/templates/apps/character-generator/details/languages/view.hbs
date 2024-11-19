@@ -1,0 +1,11 @@
+<p>
+	{{#if langData.togglable}}
+		<a class="fas fa-pen-to-square" data-action='edit-languages'></a>
+	{{/if}}
+	<b>
+		{{localize "SHADOWDARK.form.section_header.languages.label"}}:
+	</b>
+	{{#each actor.system.languages}}
+		{{lookup ../languages .}}{{#unless @last}}, {{/unless}}
+	{{/each}}
+</p>

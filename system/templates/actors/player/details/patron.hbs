@@ -1,0 +1,26 @@
+<!-- Patron -->
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.form.section_header.patron.label"}}
+		</label>
+		<span>
+			{{#if owner}}
+				<a
+					class="item-selector fas fa-pen-to-square edit-button"
+					data-options="patron"
+					for="system.patron">
+				</a>
+			{{/if}}
+		</span>
+	</div>
+	<div class="content">
+		<a
+			class="content-link background-content-link"
+			data-link
+			data-uuid="{{system.patron}}"
+		>
+			{{uuidToName system.patron}}
+		</a>
+	</div>
+</div>

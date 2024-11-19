@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Petrify",
 	"system": {
-		"description": "<p>DC 12 CON or petrified.</p>",
+		"description": "<p>[[check 12 con]] or petrified.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

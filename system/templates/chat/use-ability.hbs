@@ -4,11 +4,27 @@
 	data-item-id="{{item._id}}"
 >
 	<header class="card-header flexrow">
-		<img src="{{item.img}}" data-tooltip="{{item.name}}" />
-		<h3>{{item.name}}</h3>
+		<img data-tooltip="{{item.name}}" src="{{item.img}}" />
+		<h3>
+			{{item.name}}
+		</h3>
 	</header>
 
 	<div class="card-content">
-		{{{message}}}
+		<b>
+			{{#if success}}
+				{{localize "SHADOWDARK.chat.use_ability.success"
+					ability=item.name
+					name=actor.name
+				}}
+			{{else}}
+				 {{localize "SHADOWDARK.chat.use_ability.failure"
+					ability=item.name
+					name=actor.name
+				 }}
+			{{/if}}
+		</b>
+
+		{{{abilityDescription}}}
 	</div>
 </div>

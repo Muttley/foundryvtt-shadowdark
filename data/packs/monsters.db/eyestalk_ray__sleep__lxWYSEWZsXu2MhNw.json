@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Sleep",
 	"system": {
-		"description": "<p>DC 15 WIS or asleep [[/r 1d4]] rounds.</p>",
+		"description": "<p>[[check 15 wis]] or asleep [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

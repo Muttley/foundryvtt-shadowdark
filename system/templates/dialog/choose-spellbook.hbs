@@ -1,0 +1,13 @@
+<div class="shadowdark-dialog">
+	<div class="grid-1-columns">
+		{{#each classes}}
+			<button
+				data-action="open-class-spellbook"
+				data-uuid="{{this.uuid}}"
+			>
+				<i class="fa-solid fa-book"></i>
+				{{this.name}}
+			</button>
+		{{/each}}
+	</div>
+</div>

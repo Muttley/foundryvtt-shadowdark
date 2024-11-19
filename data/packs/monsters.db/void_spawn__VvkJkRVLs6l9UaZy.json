@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Scythe-like limbs jut from a purple bulb as big as an ogre. Its lower half is a nest of tentacles. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 34, <strong>ATK</strong> 2 scythe +6 (1d10) and 1 tentacles +6 (1d12 + toxin), <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p><p></p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p></p><p><strong>Toxin</strong>. DC 12 CON or paralyzed for 1d4 rounds.</p><p></p>",
+		"notes": "\n\t<p><i> Scythe-like limbs jut from a purple bulb as big as an ogre. Its lower half is a nest of tentacles. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 34, <strong>ATK</strong> 2 scythe +6 (1d10) and 1 tentacles +6 (1d12 + toxin), <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p><p></p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p></p><p><strong>Toxin</strong>. [[check 12 con]] or paralyzed for 1d4 rounds.</p><p></p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

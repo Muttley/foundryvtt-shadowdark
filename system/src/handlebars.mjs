@@ -8,6 +8,42 @@ export default function registerHandlebarsHelpers() {
 			: effect.icon;
 	});
 
+	Handlebars.registerHelper("addEmptySlots", (objects, max) => {
+		const newOjects = objects.map(a => ({...a}));
+		for (let j = 0; j < max - objects.length; j++) {
+			newOjects.push(null);
+		}
+		return newOjects;
+	});
+
+	Handlebars.registerHelper("concat", function() {
+		let outStr = "";
+		for (let arg in arguments) {
+			if (typeof arguments[arg] != "object") {
+				outStr += arguments[arg];
+			}
+		}
+		return outStr;
+	});
+
+	Handlebars.registerHelper("displayCost", item => {
+		let costInGp = item.system.cost.gp
+		+ (item.system.cost.sp /10 )
+		+ (item.system.cost.cp /100 );
+		costInGp = costInGp * item.system.quantity;
+		return costInGp.toString().concat(" gp");
+	});
+
+	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
+		return CONFIG.SHADOWDARK[arg1][arg2] ? CONFIG.SHADOWDARK[arg1][arg2] : arg2;
+	});
+
+	Handlebars.registerHelper("getSpellDuration", (type, value) => {
+		return (CONFIG.SHADOWDARK.VARIABLE_DURATIONS.includes(type))
+			? `${value} ${CONFIG.SHADOWDARK.SPELL_DURATIONS[type]}`
+			: CONFIG.SHADOWDARK.SPELL_DURATIONS[type];
+	});
+
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
 			case "==":
@@ -47,19 +83,9 @@ export default function registerHandlebarsHelpers() {
 		return obj[index] ? options.fn(this) : options.inverse(this);
 	});
 
-	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
-		return CONFIG.SHADOWDARK[arg1][arg2] ? CONFIG.SHADOWDARK[arg1][arg2] : arg2;
-	});
-
 	Handlebars.registerHelper("ifVariableSpellDuration", (value, options) => {
 		return CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(value) ? options.fn(this) : options.inverse(this);
-	});
-
-	Handlebars.registerHelper("getSpellDuration", (type, value) => {
-		return (CONFIG.SHADOWDARK.VARIABLE_DURATIONS.includes(type))
-			? `${value} ${CONFIG.SHADOWDARK.SPELL_DURATIONS[type]}`
-			: CONFIG.SHADOWDARK.SPELL_DURATIONS[type];
 	});
 
 	Handlebars.registerHelper("joinStrings", value => {
@@ -70,14 +96,6 @@ export default function registerHandlebarsHelpers() {
 	Handlebars.registerHelper("uuidToName", uuid => {
 		if (!uuid) return "";
 		return shadowdark.utils.getFromUuidSync(uuid).name;
-	});
-
-	Handlebars.registerHelper("displayCost", item => {
-		let costInGp = item.system.cost.gp
-		+ (item.system.cost.sp /10 )
-		+ (item.system.cost.cp /100 );
-		costInGp = costInGp * item.system.quantity;
-		return costInGp.toString().concat(" gp");
 	});
 
 	/* -------------------------------------------- */
@@ -114,59 +132,59 @@ export default function registerHandlebarsHelpers() {
 		else if (remainingDuration === Infinity) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.unlimited");
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_TWO_YEARS) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_TWO_YEARS) {
 			return game.i18n.format(
 				"SHADOWDARK.apps.effect_panel.duration_label.x_years",
 				{ years:
-					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERTION.IN_ONE_YEAR),
+					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERSION.IN_ONE_YEAR),
 				}
 			);
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_ONE_YEAR) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_ONE_YEAR) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_year");
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_TWO_WEEKS) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_TWO_WEEKS) {
 			return game.i18n.format(
 				"SHADOWDARK.apps.effect_panel.duration_label.x_weeks",
 				{ weeks:
-					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERTION.IN_ONE_WEEK),
+					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERSION.IN_ONE_WEEK),
 				}
 			);
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_ONE_WEEK) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_ONE_WEEK) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_week");
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_TWO_DAYS) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_TWO_DAYS) {
 			return game.i18n.format(
 				"SHADOWDARK.apps.effect_panel.duration_label.x_days",
 				{ days:
-					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERTION.IN_ONE_DAY),
+					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERSION.IN_ONE_DAY),
 				}
 			);
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_ONE_DAY) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_ONE_DAY) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_day");
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_TWO_HOURS) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_TWO_HOURS) {
 			return game.i18n.format(
 				"SHADOWDARK.apps.effect_panel.duration_label.x_hours",
 				{ hours:
-					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERTION.IN_ONE_HOUR),
+					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERSION.IN_ONE_HOUR),
 				}
 			);
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_ONE_HOUR) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_ONE_HOUR) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_hour");
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_TWO_MINUTES) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_TWO_MINUTES) {
 			return game.i18n.format(
 				"SHADOWDARK.apps.effect_panel.duration_label.x_minutes",
 				{ minutes:
-					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERTION.IN_ONE_MINUTE),
+					Math.floor(remainingDuration / EffectPanelSD.DURATION_CONVERSION.IN_ONE_MINUTE),
 				}
 			);
 		}
-		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERTION.IN_ONE_MINUTE) {
+		else if (remainingDuration >= EffectPanelSD.DURATION_CONVERSION.IN_ONE_MINUTE) {
 			return game.i18n.localize("SHADOWDARK.apps.effect_panel.duration_label.one_minute");
 		}
 		else if (remainingDuration >= 2) {
@@ -197,4 +215,5 @@ export default function registerHandlebarsHelpers() {
 		const html = options.fn(this);
 		return html.replace(rgx, "$& selected");
 	});
+
 }
