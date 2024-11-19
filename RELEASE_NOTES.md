@@ -1,4 +1,4 @@
-# vX.X.X
+# v3.2.0
 
 ## Enhancements
 * [#657] Consume Ammunition When Attacking With Ranged Weapons if Required
