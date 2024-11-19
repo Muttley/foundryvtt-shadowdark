@@ -704,7 +704,7 @@ SHADOWDARK.sheet.general.item_delete.title: Deletar Item
 SHADOWDARK.sheet.general.item_edit.title: Editar Item
 SHADOWDARK.sheet.general.roll_hp: Rolar PV
 SHADOWDARK.sheet.general.section.toggle_hide: Clique para Ocultar a Seção
-SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
+SHADOWDARK.sheet.general.section.toggle_show: Clique para Mostrar Seção
 SHADOWDARK.sheet.item.tab.description: Descrição
 SHADOWDARK.sheet.item.tab.details: Detalhes
 SHADOWDARK.sheet.item.tab.effects: Efeitos
@@ -740,20 +740,20 @@ SHADOWDARK.sheet.player.class.label: Classe
 SHADOWDARK.sheet.player.class.tooltip: A ocupação do seu personagem
 SHADOWDARK.sheet.player.deity.label: Divindade
 SHADOWDARK.sheet.player.deity.tooltip: A ligação cósmica do seu personagem às forças opostas da ordem e do caos, ou neutralidade equilibrada.
-SHADOWDARK.sheet.player.inventory.gear.label: Gear
-SHADOWDARK.sheet.player.inventory.items.label: Items
-SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
-SHADOWDARK.sheet.player.inventory.slots.label: Slots
-SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
-SHADOWDARK.sheet.player.inventory.treasure.label: Treasure
-SHADOWDARK.sheet.player.inventory.type.label: Type
-SHADOWDARK.sheet.player.inventory.value.label: Value
+SHADOWDARK.sheet.player.inventory.gear.label: Equipamento
+SHADOWDARK.sheet.player.inventory.items.label: Itens
+SHADOWDARK.sheet.player.inventory.quantity_short.label: Qtd
+SHADOWDARK.sheet.player.inventory.slots.label: Espaços
+SHADOWDARK.sheet.player.inventory.stashed_item.label: Itens Armazenados
+SHADOWDARK.sheet.player.inventory.treasure.label: Tesouro
+SHADOWDARK.sheet.player.inventory.type.label: Tipo
+SHADOWDARK.sheet.player.inventory.value.label: Valor
 SHADOWDARK.sheet.player.languages: Idiomas
 SHADOWDARK.sheet.player.luck: Sorte
 SHADOWDARK.sheet.player.melee_attacks: Ataques Corpo-a-Corpo
 SHADOWDARK.sheet.player.name.label: Nome
-SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
-SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
+SHADOWDARK.sheet.player.open_spellbook.tooltip: Abrir Livro de Magias
+SHADOWDARK.sheet.player.patron.tooltip: Seu patrono é a fonte de seus dons sobrenaturais
 SHADOWDARK.sheet.player.ranged_attacks: Ataques à Distância
 SHADOWDARK.sheet.player.spells_from_items: Magias de Itens
 SHADOWDARK.sheet.player.spells_tier: Nível
@@ -806,8 +806,8 @@ SHADOWDARK.talent.backstab: Ataque Furtivo
 SHADOWDARK.talent.class.ancestry: Ancestralidade
 SHADOWDARK.talent.class.class: Classe
 SHADOWDARK.talent.class.level: Nível
-SHADOWDARK.talent.class.patronBoon: Patron Boon
-SHADOWDARK.talent.level_gained: Level Gained
+SHADOWDARK.talent.class.patronBoon: Benefício de Patrono
+SHADOWDARK.talent.level_gained: Nível Adquirido
 SHADOWDARK.talent.type.ability_improvement: Melhoria de Atributo
 SHADOWDARK.talent.type.advantage.hp: Vantagem na Rolagem de PV
 SHADOWDARK.talent.type.advantage.initiative: Vantagem na Iniciativa
@@ -816,7 +816,7 @@ SHADOWDARK.talent.type.advantage.title: Bônus da Vantagem
 SHADOWDARK.talent.type.armor_bonus: Bônus de CA da Armadura
 SHADOWDARK.talent.type.armor_mastery: Maestria de Armadura
 SHADOWDARK.talent.type.backstab_die: Dado Extra de Ataque Furtivo
-SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
+SHADOWDARK.talent.type.bonus_caster_classes: Bônus de Classe conjuradora
 SHADOWDARK.talent.type.custom: Talento Customizado
 SHADOWDARK.talent.type.melee_attack_bonus: Bônus de Ataque Corpo-a-Corpo
 SHADOWDARK.talent.type.melee_damage_bonus: Bônus de Dano Corpo-a-Corpo
@@ -833,29 +833,29 @@ SHADOWDARK.weapon.properties.two_handed: Duas Mãos
 SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Corpo-a-Corpo
 SHADOWDARK.weapon.type.ranged: Alcance
-TYPES.Actor.Light: Light
-TYPES.Actor.NPC: NPC
-TYPES.Actor.Player: Player
-TYPES.Item.Ancestry: Ancestry
-TYPES.Item.Armor: Armor
-TYPES.Item.Background: Background
-TYPES.Item.Basic: Basic
-TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class Ability
-TYPES.Item.Class: Class
-TYPES.Item.Deity: Deity
-TYPES.Item.Effect: Effect
-TYPES.Item.Gem: Gem
-TYPES.Item.Language: Language
-TYPES.Item.NPC Attack: NPC Attack
-TYPES.Item.NPC Feature: NPC Feature
-TYPES.Item.NPC Special Attack: NPC Special Attack
-TYPES.Item.NPC Spell: NPC Spell
-TYPES.Item.Patron: Patron
-TYPES.Item.Potion: Potion
-TYPES.Item.Property: Property
-TYPES.Item.Scroll: Scroll
-TYPES.Item.Spell: Spell
-TYPES.Item.Talent: Talent
-TYPES.Item.Wand: Wand
-TYPES.Item.Weapon: Weapon
+TYPES.Actor.Light: Luz
+TYPES.Actor.NPC: PNJ
+TYPES.Actor.Player: Jogador
+TYPES.Item.Ancestry: Ancestralidade
+TYPES.Item.Armor: Armadura
+TYPES.Item.Background: Antecedente
+TYPES.Item.Basic: Básico
+TYPES.Item.Boon: Benefício
+TYPES.Item.Class Ability: Habilidade de Classe
+TYPES.Item.Class: Classe
+TYPES.Item.Deity: Divindade
+TYPES.Item.Effect: Efeito
+TYPES.Item.Gem: Gema
+TYPES.Item.Language: Língua
+TYPES.Item.NPC Attack: Ataque PNJ
+TYPES.Item.NPC Feature: Funcionalidade PNJ
+TYPES.Item.NPC Special Attack: Ataque Especial PNJ
+TYPES.Item.NPC Spell: Magia PNJ
+TYPES.Item.Patron: Patrono
+TYPES.Item.Potion: Poção
+TYPES.Item.Property: Propriedade
+TYPES.Item.Scroll: Pergaminho
+TYPES.Item.Spell: Magia
+TYPES.Item.Talent: Talento
+TYPES.Item.Wand: Varinha
+TYPES.Item.Weapon: Arma
