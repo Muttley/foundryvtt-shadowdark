@@ -1,3 +1,14 @@
+# v3.2.1
+
+## Bugs
+* [#723] Cannot edit gems in a character's gem bag
+* [#964] Unable to edit/modify active effects on Items
+
+## Chores
+* [#962] Merged "Portuguese, Brazilian" translation updates from Crowdin
+
+---
+
 # v3.2.0
 
 ## Enhancements

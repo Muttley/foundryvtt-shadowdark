@@ -378,7 +378,7 @@ export default class ActiveEffectsSD {
 		}
 		else if (owner.documentName === "Item") {
 			effect = effectId
-				? owner.transferredEffects.find(effect => effect.id === effectId)
+				? owner.effects.find(effect => effect.id === effectId)
 				: null;
 		}
 
