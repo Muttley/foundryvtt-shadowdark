@@ -97,15 +97,17 @@ export default class GemBagSD extends Application {
 	}
 
 	_getItemContextOptions() {
-		const canEdit = function(tr) {
+		const me = this;
+
+		const canEdit = function(element) {
 			let result = false;
-			const itemId = tr.data("item-id");
+			const itemId = element.data("item-id");
 
 			if (game.user.isGM) {
 				result = true;
 			}
 			else {
-				result = this.actor.items.find(item => item._id === itemId)
+				result = me.actor.items.find(item => item._id === itemId)
 					? true
 					: false;
 			}
@@ -127,8 +129,8 @@ export default class GemBagSD extends Application {
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: tr => canEdit(tr),
-				callback: tr => {
+				condition: element => canEdit(element),
+				callback: element => {
 					const itemId = tr.data("item-id");
 					this._onItemDelete(itemId);
 				},
