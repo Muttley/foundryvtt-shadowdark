@@ -1,6 +1,7 @@
 # vX.X.X
 
 ## Bugs
+* [#723] Cannot edit gems in a character's gem bag
 * [#964] Unable to edit/modify active effects on Items
 
 ## Chores
