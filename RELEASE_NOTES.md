@@ -1,4 +1,4 @@
-# vX.X.X
+# v3.2.1
 
 ## Bugs
 * [#723] Cannot edit gems in a character's gem bag
