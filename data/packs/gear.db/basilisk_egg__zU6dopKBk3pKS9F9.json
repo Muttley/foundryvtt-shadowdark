@@ -4,7 +4,7 @@
 	"effects": [
 	],
 	"folder": "0ws7y8D3IktigkiB",
-	"img": "icons/consumables/eggs/egg-speckled-tan.webp",
+	"img": "icons/consumables/eggs/egg-spiked-brown.webp",
 	"name": "Basilisk Egg",
 	"system": {
 		"broken": false,
@@ -14,7 +14,7 @@
 			"gp": 0,
 			"sp": 0
 		},
-		"description": "<p>A local baby hatches in [[/r 1d4]] days.</p>",
+		"description": "<p>A loyal baby hatches in [[/r 1d4]] days.</p>",
 		"equipped": false,
 		"isAmmunition": false,
 		"isPhysical": true,
@@ -35,7 +35,7 @@
 			"slots_used": 1
 		},
 		"source": {
-			"title": ""
+			"title": "cursed-scroll-4"
 		},
 		"stashed": false,
 		"treasure": false

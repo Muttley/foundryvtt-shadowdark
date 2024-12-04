@@ -1,14 +1,14 @@
 {
-	"_id": "YFoaXoW5JCM4z768",
-	"_key": "!items!YFoaXoW5JCM4z768",
+	"_id": "TQ0x7zmYfTCykZOh",
+	"_key": "!items!TQ0x7zmYfTCykZOh",
 	"effects": [
 	],
 	"folder": "LVzvIhYHieRT4O6q",
-	"img": "icons/weapons/swords/swords-short.webp",
-	"name": "Spear-thrower (Spear, obsidian)",
+	"img": "icons/weapons/daggers/dagger-straight-stone.webp",
+	"name": "Dagger (Obsidian)",
 	"system": {
-		"ammoClass": "spear,-obsidian",
-		"baseWeapon": "",
+		"ammoClass": "",
+		"baseWeapon": "dagger",
 		"bonuses": {
 			"attackBonus": 0,
 			"critical": {
@@ -23,25 +23,27 @@
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
-			"gp": 2,
+			"gp": 3,
 			"sp": 0
 		},
 		"damage": {
 			"numDice": 1,
-			"oneHanded": "d8",
+			"oneHanded": "d6",
 			"twoHanded": ""
 		},
-		"description": "<p>When used to throw a spear, increase the spear's range to far.</p>",
-		"equipped": true,
+		"description": "",
+		"equipped": false,
 		"isAmmunition": false,
 		"isPhysical": true,
 		"magicItem": false,
 		"predefinedEffects": "",
 		"properties": [
+			"Compendium.shadowdark.properties.Item.e5RpI0crHweCVt8B",
+			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
 			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
 		],
 		"quantity": 1,
-		"range": "far",
+		"range": "near",
 		"slots": {
 			"free_carry": 0,
 			"per_slot": 1,
@@ -51,7 +53,7 @@
 			"title": "cursed-scroll-4"
 		},
 		"stashed": false,
-		"type": "ranged",
+		"type": "melee",
 		"weaponMastery": false
 	},
 	"type": "Weapon"

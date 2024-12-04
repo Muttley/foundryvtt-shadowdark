@@ -1,0 +1,18 @@
+{
+	"_id": "gJoFdBNHWVutU68y",
+	"_key": "!items!gJoFdBNHWVutU68y",
+	"effects": [
+	],
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/consumables/eggs/egg-spiked-brown.webp",
+	"name": "Basilisk Egg",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You find a @UUID[Compendium.shadowdark.gear.Item.zU6dopKBk3pKS9F9]{Basilisk Egg}; a loyal baby hatches in [[/r 1d4]] days</span></p>",
+		"level": 0,
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

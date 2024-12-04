@@ -1,14 +1,14 @@
 {
-	"_id": "TQ0x7zmYfTCykZOh",
-	"_key": "!items!TQ0x7zmYfTCykZOh",
+	"_id": "ZAWTt3ORcrZRXgfQ",
+	"_key": "!items!ZAWTt3ORcrZRXgfQ",
 	"effects": [
 	],
 	"folder": "LVzvIhYHieRT4O6q",
-	"img": "icons/weapons/daggers/dagger-straight-stone.webp",
-	"name": "Dagger, obsidian",
+	"img": "icons/weapons/clubs/club-simple-stone-black.webp",
+	"name": "Club (Obsidian)",
 	"system": {
 		"ammoClass": "",
-		"baseWeapon": "dagger",
+		"baseWeapon": "club",
 		"bonuses": {
 			"attackBonus": 0,
 			"critical": {
@@ -23,7 +23,7 @@
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
-			"gp": 3,
+			"gp": 5,
 			"sp": 0
 		},
 		"damage": {
@@ -38,12 +38,10 @@
 		"magicItem": false,
 		"predefinedEffects": "",
 		"properties": [
-			"Compendium.shadowdark.properties.Item.e5RpI0crHweCVt8B",
-			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
-			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+			"Compendium.shadowdark.properties.Item.e5RpI0crHweCVt8B"
 		],
 		"quantity": 1,
-		"range": "near",
+		"range": "close",
 		"slots": {
 			"free_carry": 0,
 			"per_slot": 1,
