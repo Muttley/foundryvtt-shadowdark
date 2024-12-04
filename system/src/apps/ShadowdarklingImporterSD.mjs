@@ -379,10 +379,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		// Load Class
 		this.classList = await shadowdark.compendiums.classes(false);
-		const classObj = this.classList.find(c =>
-			c.name.toLowerCase() === json.class.toLowerCase()
-		);
-		this.importedActor.system.class = classObj?.uuid ?? "";
+		const classObj = await this._findItem(json.class, "Class");
 
 		// Load fixed ancestry talents
 		if (ancestry) {
