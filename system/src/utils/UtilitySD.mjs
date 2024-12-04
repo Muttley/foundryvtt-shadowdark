@@ -70,6 +70,33 @@ export default class UtilitySD {
 	}
 
 
+	static async createItemFromSpell(type, spell) {
+		const name = (type !== "Spell")
+			? game.i18n.format(
+				`SHADOWDARK.item.name_from_spell.${type}`,
+				{ spellName: spell.name }
+			)
+			: spell.name;
+
+		const itemData = {
+			type,
+			name,
+			system: spell.system,
+		};
+
+		if (type === "Spell") {
+			itemData.img = spell.img;
+		}
+		else {
+			delete itemData.system.lost;
+			itemData.system.magicItem = true;
+			itemData.system.spellImg = spell.img;
+			itemData.system.spellName = spell.name;
+		}
+		return itemData;
+	}
+
+
 	static diceSound() {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];

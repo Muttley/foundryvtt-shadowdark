@@ -44,6 +44,17 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		html.on("paste", ".SDImporterJson", this._onPaste.bind(this));
 	}
 
+	/** @override */
+	async getData(options) {
+		const data = {
+			actor: this.importedActor,
+			errors: this.errors,
+			gear: this.gear,
+		};
+
+		return data;
+	}
+
 	/** @inheritdoc */
 	_onSubmit(event) {
 		event.preventDefault();
@@ -54,17 +65,6 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 	/** @override */
 	async _updateObject(event, data) {
 		// required method
-	}
-
-	/** @override */
-	async getData(options) {
-		const data = {
-			actor: this.importedActor,
-			errors: this.errors,
-			gear: this.gear,
-		};
-
-		return data;
 	}
 
 	/**
@@ -85,6 +85,22 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		if (postedJson) {
 			// load all values from json
 			await this._importActor(postedJson);
+		}
+	}
+
+	async _createSpellScroll(item) {
+		const spell = await this._getSpellFromItem(item);
+
+		if (spell) {
+			return await shadowdark.utils.createItemFromSpell("Scroll", spell);
+		}
+	}
+
+	async _createSpellWand(item) {
+		const spell = await this._getSpellFromItem(item);
+
+		if (spell) {
+			return await shadowdark.utils.createItemFromSpell("Wand", spell);
 		}
 	}
 
@@ -132,7 +148,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				c.name.toLowerCase() === spell.sourceName.toLowerCase()
 			);
 
-			const itemIndex = pack.index.find( s => (
+			const itemIndex = pack.index.find(s => (
 				(s.name.toLowerCase() === spell.bonusName.toLowerCase())
 				&& (s.type === "Spell")
 				&& (s.system.class.includes(classObj?.uuid))
@@ -222,6 +238,32 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 				name: bonus.name,
 			});
 		}
+	}
+
+	async _getSpellFromItem(item) {
+		const [spellName, spellClass] = this._getSpellNameAndClassFromItem(item);
+
+		if (!spellName || !spellClass) return;
+
+		const classUuid = (await shadowdark.compendiums.classes()).find(
+			i => i.name === spellClass
+		).uuid;
+
+		const spell = (await shadowdark.compendiums.spells()).find(spell => {
+			return spellName.slugify() === spell.name.slugify()
+				&& spell.system.class.includes(classUuid);
+		});
+
+		return spell;
+	}
+
+	_getSpellNameAndClassFromItem(item) {
+		const {spellName, spellClass} =
+			/^(?<spellName>[\w\s]+)\s+\(Tier\s+\d+,\s+(?<spellClass>\w+)\)/
+				.exec(item.spellDesc ?? "")
+				?.groups ?? [undefined, undefined];
+
+		return [spellName, spellClass];
 	}
 
 	/**
@@ -400,10 +442,23 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		// magic items (not implemented)
 		for (const item of json.magicItems) {
-			this.errors.push({
-				type: "Magic Item",
-				name: item.name,
-			});
+			let newItem = undefined;
+			if (item.magicItemType === "magicSpellScroll") {
+				newItem = await this._createSpellScroll(item);
+			}
+			else if (item.magicItemType === "magicSpellWand") {
+				newItem = await this._createSpellWand(item);
+			}
+
+			if (newItem) {
+				this.gear.push(newItem);
+			}
+			else {
+				this.errors.push({
+					type: "Magic Item",
+					name: item.name,
+				});
+			}
 		}
 
 		// Load Bonuses / talents & Spells
