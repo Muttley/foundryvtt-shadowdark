@@ -1,3 +1,10 @@
+# v3.2.2
+
+## Chores
+* [#968] Update Shadowdarklings import process to support Wands and Scrolls
+
+---
+
 # v3.2.1
 
 ## Bugs
