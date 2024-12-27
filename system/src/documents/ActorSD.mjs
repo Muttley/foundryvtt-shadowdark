@@ -188,6 +188,7 @@ export default class ActorSD extends Actor {
 		this.updateSource({prototypeToken});
 	}
 
+
 	_prepareNPCData() {}
 
 
