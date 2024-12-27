@@ -1,0 +1,16 @@
+{
+	"_id": "g1eJyXUmFJg3qXFQ",
+	"_key": "!actors.items!ubcYvhvDW1WywYcw.g1eJyXUmFJg3qXFQ",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
+	"name": "Petrify",
+	"system": {
+		"description": "<p>Any creature that touches the basilisk or meets its gaze, [[request 9 con]] or one of its limbs (determine randomly) is petrified for a day.</p>",
+		"source": {
+			"title": "cursed-scroll-4"
+		}
+	},
+	"type": "NPC Feature"
+}
