@@ -199,7 +199,7 @@
 				"class": [],
 				"duration": {
 					"type": "",
-					"value": ""
+					"value": 1
 				},
 				"range": "",
 				"tier": 1
@@ -408,7 +408,7 @@
 			"category": "effect",
 			"duration": {
 				"type": "unlimited",
-				"value": -1
+				"value": 1
 			},
 			"effectPanel": {
 				"show": true

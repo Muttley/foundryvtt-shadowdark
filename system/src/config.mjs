@@ -114,7 +114,7 @@ SHADOWDARK.NPC_MOVES = {
 	none: "SHADOWDARK.npc_move.none",
 	close: "SHADOWDARK.npc_move.close",
 	near: "SHADOWDARK.npc_move.near",
-	doubleNear: "SHADOWDARK.npc_move.double_near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	tripleNear: "SHADOWDARK.npc_move.triple_near",
 	far: "SHADOWDARK.npc_move.far",
 	special: "SHADOWDARK.npc_move.special",
@@ -539,10 +539,12 @@ SHADOWDARK.DURATION_UNITS = {
 
 SHADOWDARK.SPELL_RANGES = {
 	self: "SHADOWDARK.range.self",
+	touch: "SHADOWDARK.range.touch",
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	far: "SHADOWDARK.range.far",
-	touch: "SHADOWDARK.range.touch",
+	oneMile: "SHADOWDARK.range.oneMile",
 	samePlane: "SHADOWDARK.range.samePlane",
 	unlimited: "SHADOWDARK.range.unlimited",
 };
