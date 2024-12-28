@@ -13,7 +13,7 @@
 		"description": "<p>You call down a holy pillar of fire, immolating one creature you can see within range. The target takes 2d6 damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

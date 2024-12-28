@@ -13,7 +13,7 @@
 		"description": "<p>You are filled with Loki's hypnotic guile. Creatures who hear you speak will alter their own beliefs and memories to match your suggestion. </p><p></p><p>Target one creature who can hear and understand you within range. You make one plausible statement, true or not. </p><p></p><p>The target must make a Wisdom check vs. your spellcasting check. If it fails, it now believes what you stated as though it were fact, regardless of what it knows.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

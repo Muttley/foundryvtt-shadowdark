@@ -13,7 +13,7 @@
 		"description": "<p>You ask the gods a question and cast the runestones, interpreting the meaning of the results. </p><p></p><p>Ask the Game Master one yes or no question. The Game Master truthfully answers \"yes\" or \"no.\"</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -13,7 +13,7 @@
 		"description": "<p>You throw the divining bones or peer into the blackness between the stars, seeking a portent.</p><p></p><p>You can ask the GM one yes or no question. The GM truthfully answers \"yes\" or \"no.\" </p><p></p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure, instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

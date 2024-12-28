@@ -13,7 +13,7 @@
 		"description": "<p>You send a strobing orb of energy streaking toward a target within range. </p><p></p><p>Choose an energy type from fire, cold, or electricity. The orb deals 3d8 damage and delivers a concussive blast of the chosen energy type. </p><p></p><p>If the energy type is anathema to the target's existence (for example, cold energy against a fire elemental), the orb deals double damage to it, instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -13,7 +13,7 @@
 		"description": "<p>Thor casts down a bolt of lightning to strike one target. The target takes [[/r 3d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -13,7 +13,7 @@
 		"description": "<p>One inanimate object you touch the size of a door or less ages [[/r d100]] years.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"range": "close",

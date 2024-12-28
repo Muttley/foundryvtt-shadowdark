@@ -13,7 +13,7 @@
 		"description": "<p>The earth shakes violently and splits open, swallowing creatures down to their doom.</p><p>All creatures standing on the ground within double near of you take [[/r 4d6]] damage.</p><p>Each affected creature of LV 9 or less must pass a DEX check equal to the damage they took or else be swallowed by the earth, never to be seen again.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"range": "doubleNear",

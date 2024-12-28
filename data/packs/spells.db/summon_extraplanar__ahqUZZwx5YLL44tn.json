@@ -13,7 +13,7 @@
 		"description": "<p>You reach into the outer planes, summoning forth a creature. </p><p></p><p>You summon an elemental or outsider of LV 7 or less. The creature is under your control and acts on your turn. </p><p></p><p>If you lose focus on this spell, you lose control of the creature and it becomes hostile toward you and your allies. </p><p></p><p>You must pass a spellcasting check on your turn to return the creature to the outer planes.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

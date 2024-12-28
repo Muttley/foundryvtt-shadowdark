@@ -13,7 +13,7 @@
 		"description": "<p>You conjure an invisible, grapesized eye within range. </p><p></p><p>You can see through the eye. It can see in the dark out to near range, fly near on your turn, and squeeze through openings as narrow as a keyhole.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

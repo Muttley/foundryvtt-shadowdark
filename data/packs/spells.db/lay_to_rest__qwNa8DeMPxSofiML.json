@@ -13,7 +13,7 @@
 		"description": "<p>You instantly send an undead creature you touch to its final afterlife, destroying it utterly. </p><p></p><p>You can target an undead creature of LV 9 or less</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

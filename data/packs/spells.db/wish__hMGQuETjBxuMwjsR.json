@@ -13,7 +13,7 @@
 		"description": "<p>This mighty spell alters reality. </p><p></p><p>Make a single wish, stating it as exactly as possible. Your wish occurs, as interpreted by the GM. </p><p></p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

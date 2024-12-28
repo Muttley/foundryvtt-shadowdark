@@ -13,7 +13,7 @@
 		"description": "<p>You spread your fingers with thumbs touching, unleashing a circle of flame that fills a close area around where you stand.</p><p>Creatures within the area of effect take [[/r 1d6]] damage.</p><p>Unattended flammable objects ignite.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

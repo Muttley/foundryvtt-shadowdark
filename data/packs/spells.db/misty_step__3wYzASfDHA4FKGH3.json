@@ -13,7 +13,7 @@
 		"description": "<p>In a puff of smoke, you teleport a near distance to an area you can see.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -13,7 +13,7 @@
 		"description": "<p>You call upon the magic you share with your fellow witches. </p><p></p><p>You regain the use of one tier 3 spell or lower that you can no longer cast for the day. </p><p></p><p>After successfully casting this spell, you can't do so again until you complete a rest.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

@@ -13,7 +13,7 @@
 		"description": "<p>One target you touch of LV 4 or less collapses helplessly with disturbing, pained laughter for the spell's duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.9E4RVp3xfAK1uxrl]{Spell Effect: Cacklerot}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

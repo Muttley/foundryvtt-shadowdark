@@ -13,7 +13,7 @@
 		"description": "<p>You shoot a blue-white ray of lightning from your hands, hitting all creatures in a straight line out to a far distance. </p><p></p><p>Creatures struck by the lightning take [[/r 3d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

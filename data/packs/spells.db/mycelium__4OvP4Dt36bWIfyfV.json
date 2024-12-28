@@ -13,7 +13,7 @@
 		"description": "<p>You connect your mind with the earth's vast fungi network.</p><p>Ask the GM one question of up to 15 words. The GM answers truthfully using up to 15 words.</p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"range": "self",

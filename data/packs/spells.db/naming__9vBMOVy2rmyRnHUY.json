@@ -13,7 +13,7 @@
 		"description": "<p>You learn the True Name (Shadowdark RPG pg. 319) of one creature you touch.</p><p>If the creature is willing, you may give it a new True Name. A creature may only change its True Name once in its lifetime.</p><p>If it does so, its alignment changes to your alignment.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"range": "close",

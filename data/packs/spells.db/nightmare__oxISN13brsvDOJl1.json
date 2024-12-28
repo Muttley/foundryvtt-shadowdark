@@ -13,7 +13,7 @@
 		"description": "<p>You visit the dreams of one sleeping creature, sending it heart-stopping nightmares. </p><p></p><p>You can target a creature whose level is less than or equal to half your level rounded down (minimum 1). The target must be sleeping, and you must have seen it before in person. </p><p></p><p>If you successfully focus on this spell for 3 rounds in a row, the creature dies of fright.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

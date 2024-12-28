@@ -13,7 +13,7 @@
 		"description": "<p>An invisible, near-sized cube of null-magic appears centered on you. </p><p></p><p>Within the cube, no spells can be cast. Magic items and spells have no effect in the zone, and no magic can enter. </p><p></p><p>The cube moves with you. Spells such as dispel magic have no effect on it. </p><p></p><p>Another antimagic shell does not affect this one.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

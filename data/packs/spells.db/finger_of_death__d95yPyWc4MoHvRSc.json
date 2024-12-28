@@ -13,7 +13,7 @@
 		"description": "<p>One creature you touch of LV 9 or less dies. </p><p></p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

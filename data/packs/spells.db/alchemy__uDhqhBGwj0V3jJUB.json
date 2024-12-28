@@ -13,7 +13,7 @@
 		"description": "<p>One inanimate object of human size or less you touch turns into another material of equal or lesser value.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"range": "close",
