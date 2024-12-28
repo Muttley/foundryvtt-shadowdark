@@ -1,0 +1,26 @@
+{
+	"_id": "A3FSoxsDX0396apU",
+	"_key": "!items!A3FSoxsDX0396apU",
+	"effects": [
+	],
+	"folder": "nuxKsUVgpCWf7IDr",
+	"img": "icons/weapons/staves/staff-forest-jewel.webp",
+	"name": "Instill",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>One weapon you wield is imbued with life force. It becomes a +1 weapon for the spell's duration.</p><p>If the weapon is a staff, it deals d6 damage instead of d4.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.tplKQpO6Q94eMnGI]{Spell Effect: Instill}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "LPNXfI1s4dWE9gjl",
+	"_key": "!items.effects!dc6hmJeeFqTACiQO.LPNXfI1s4dWE9gjl",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+	"name": "Anima",
+	"origin": "Compendium.shadowdark.spell-effects.Item.dc6hmJeeFqTACiQO",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

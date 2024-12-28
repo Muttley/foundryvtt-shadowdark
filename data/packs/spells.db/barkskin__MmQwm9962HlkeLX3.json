@@ -1,0 +1,26 @@
+{
+	"_id": "MmQwm9962HlkeLX3",
+	"_key": "!items!MmQwm9962HlkeLX3",
+	"effects": [
+	],
+	"folder": "GQzGt69sWAwFKfnv",
+	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"name": "Barkskin",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>Your skin hardens into tough tree bark. Your AC becomes 14 (18 on a critical spellcasting check) for the spell's duration.</p><p>You take double damage from fire while you are under the spell's effects.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.7GAeLAX0xl65gxer]{Spell Effect: Barkskin}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.qbCPO5ftwWImjRIG]{Spell Effect: Barkskin (Critical)}</p>",
+		"duration": {
+			"type": "days",
+			"value": "1"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

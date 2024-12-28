@@ -1,0 +1,27 @@
+{
+	"_id": "cBbGoho9OMDVIR8n",
+	"_key": "!items.effects!9fGlLVuMyuJeOHRU.cBbGoho9OMDVIR8n",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/magic/air/air-pressure-shield-blue.webp",
+	"name": "Breath",
+	"origin": "Compendium.shadowdark.spell-effects.Item.9fGlLVuMyuJeOHRU",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

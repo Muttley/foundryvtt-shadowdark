@@ -1,0 +1,26 @@
+{
+	"_id": "SEZtWCHBieITNqdp",
+	"_key": "!items!SEZtWCHBieITNqdp",
+	"effects": [
+	],
+	"folder": "nuxKsUVgpCWf7IDr",
+	"img": "icons/magic/air/air-pressure-shield-blue.webp",
+	"name": "Breath",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>You can hold your breath for the spell's duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.9fGlLVuMyuJeOHRU]{Spell Effect: Breath}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"lost": false,
+		"range": "self",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

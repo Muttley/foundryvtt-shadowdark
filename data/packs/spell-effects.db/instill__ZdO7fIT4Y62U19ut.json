@@ -1,0 +1,27 @@
+{
+	"_id": "ZdO7fIT4Y62U19ut",
+	"_key": "!items.effects!tplKQpO6Q94eMnGI.ZdO7fIT4Y62U19ut",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/weapons/staves/staff-forest-jewel.webp",
+	"name": "Instill",
+	"origin": "Compendium.shadowdark.spell-effects.Item.tplKQpO6Q94eMnGI",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -1,0 +1,26 @@
+{
+	"_id": "mELyXbXvV1K5QOxR",
+	"_key": "!items!mELyXbXvV1K5QOxR",
+	"effects": [
+	],
+	"folder": "nuxKsUVgpCWf7IDr",
+	"img": "icons/magic/time/clock-spinning-gold-pink.webp",
+	"name": "Oxidize",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>One inanimate object you touch the size of a door or less ages [[/r d100]] years.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 1
+	},
+	"type": "Spell"
+}

@@ -1,0 +1,27 @@
+{
+	"_id": "uhBasLNp1gdVJtjj",
+	"_key": "!items.effects!wr0hnCfjAaNiTGkU.uhBasLNp1gdVJtjj",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/magic/lightning/bolt-strike-cloud-gray.webp",
+	"name": "Summon Storm",
+	"origin": "Compendium.shadowdark.spell-effects.Item.wr0hnCfjAaNiTGkU",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

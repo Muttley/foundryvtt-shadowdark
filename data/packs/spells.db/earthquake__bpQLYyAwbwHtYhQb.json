@@ -1,0 +1,26 @@
+{
+	"_id": "bpQLYyAwbwHtYhQb",
+	"_key": "!items!bpQLYyAwbwHtYhQb",
+	"effects": [
+	],
+	"folder": "EGzgHJF6jewvtHDZ",
+	"img": "icons/environment/wilderness/terrain-rocky-ground.webp",
+	"name": "Earthquake",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>The earth shakes violently and splits open, swallowing creatures down to their doom.</p><p>All creatures standing on the ground within double near of you take [[/r 4d6]] damage.</p><p>Each affected creature of LV 9 or less must pass a DEX check equal to the damage they took or else be swallowed by the earth, never to be seen again.</p>",
+		"duration": {
+			"type": "instant",
+			"value": -1
+		},
+		"lost": false,
+		"range": "doubleNear",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 5
+	},
+	"type": "Spell"
+}

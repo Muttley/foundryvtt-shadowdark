@@ -1,0 +1,27 @@
+{
+	"_id": "BE3TXDe8GjBaucS0",
+	"_key": "!items.effects!rgfyqmZvgYX1PWqw.BE3TXDe8GjBaucS0",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/magic/nature/tree-animated-smile.webp",
+	"name": "Treeshape",
+	"origin": "Compendium.shadowdark.spell-effects.Item.rgfyqmZvgYX1PWqw",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

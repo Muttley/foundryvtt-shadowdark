@@ -1,0 +1,40 @@
+{
+	"_id": "rgfyqmZvgYX1PWqw",
+	"_key": "!items!rgfyqmZvgYX1PWqw",
+	"effects": [
+		"BE3TXDe8GjBaucS0"
+	],
+	"folder": null,
+	"img": "icons/magic/nature/tree-animated-smile.webp",
+	"name": "Spell Effect: Treeshape",
+	"system": {
+		"category": "effect",
+		"description": "<p>You and your gear turn into a treant with the below stats for the spell's duration.</p><p>You do not have the treant's Animate Tree talent.</p><p>You cannot cast spells while under the effect of this spell.</p><p>You retain your INT, WIS, and CHA stats.</p><p><strong>AC</strong> 14, <strong>HP</strong> 38, <strong>ATK</strong> 2 slam +8 (1d12) or 1 rock (far) +8 (2d6), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +2, <strong>I</strong> *, <strong>W</strong> *, <strong>Ch</strong> *, <strong>AL</strong> N, <strong>LV</strong> 8</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "10"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"start": {
+			"combatTime": "18.1",
+			"value": 47548
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

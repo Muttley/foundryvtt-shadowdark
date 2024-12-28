@@ -1,0 +1,26 @@
+{
+	"_id": "ssC3t6wXFpTZ6zgC",
+	"_key": "!items!ssC3t6wXFpTZ6zgC",
+	"effects": [
+	],
+	"folder": "GQzGt69sWAwFKfnv",
+	"img": "icons/creatures/mammals/rodent-rat-green.webp",
+	"name": "Befriend",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>A tiny natural creature you touch (such as a mouse or moth) regards you as a friend for the spell's duration.</p><p>You may give the creature one command, which it tries to complete to the best of its ability and intelligence even after the spell ends.</p><p>If the command would directly harm the creature, it abandons the task.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.sfdfNQO4nk7oURSA]{Spell Effect: Befriend}</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 2
+	},
+	"type": "Spell"
+}

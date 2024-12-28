@@ -1,0 +1,26 @@
+{
+	"_id": "ahQS5nKU0P6Ch2tZ",
+	"_key": "!items!ahQS5nKU0P6Ch2tZ",
+	"effects": [
+	],
+	"folder": "ruhJc5t3xYcfHekb",
+	"img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+	"name": "Anima",
+	"system": {
+		"class": [
+			"Compendium.shadowdark.classes.Item.NGJJVaEujQVOg13j"
+		],
+		"description": "<p>You animate the life force of one natural object you touch the size of a horse or less.</p><p>The object becomes a loyal creature for the spell's duration using the below stats. Its level is equal to yours.</p><p>The creature acts on your turn. You may use your action to command it, which it obeys. Otherwise, it does not act.</p><p><strong>AC</strong> 10 + LV, <strong>HP</strong> 4.5 x LV, <strong>ATK</strong> 2 bash +7 (1d12), <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> +0, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> +0, <strong>Ch</strong> +0, <strong>AL</strong> N, <strong>LV</strong> *</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.dc6hmJeeFqTACiQO]{Spell Effect: Anima}</p>",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"lost": false,
+		"range": "close",
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"tier": 3
+	},
+	"type": "Spell"
+}

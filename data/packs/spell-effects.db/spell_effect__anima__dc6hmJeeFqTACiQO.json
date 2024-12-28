@@ -1,0 +1,40 @@
+{
+	"_id": "dc6hmJeeFqTACiQO",
+	"_key": "!items!dc6hmJeeFqTACiQO",
+	"effects": [
+		"LPNXfI1s4dWE9gjl"
+	],
+	"folder": null,
+	"img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+	"name": "Spell Effect: Anima",
+	"system": {
+		"category": "effect",
+		"description": "",
+		"duration": {
+			"type": "focus",
+			"value": -1
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"start": {
+			"combatTime": "18.1",
+			"value": 37189
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,40 @@
+{
+	"_id": "LyVUb5XbziOGsLXM",
+	"_key": "!items!LyVUb5XbziOGsLXM",
+	"effects": [
+		"ENBQPzsgEeuzEYvU"
+	],
+	"folder": null,
+	"img": "icons/tools/navigation/compass-brass-blue-red.webp",
+	"name": "Spell Effect: Magnetize",
+	"system": {
+		"category": "effect",
+		"description": "<p>One object you touch up to the size of a horse becomes powerfully magnetized.</p><p>It attracts all smaller magnetic objects within near.</p><p>If it can move, it is pulled toward larger magnetic objects within near. A metal creature must pass a STR check equal to your spellcasting check to resist.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"source": {
+			"title": ""
+		},
+		"start": {
+			"combatTime": "18.1",
+			"value": 39812
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

@@ -1,0 +1,33 @@
+{
+	"_id": "IyKbvtF7suThWk0s",
+	"_key": "!items.effects!MzyleAM94gSD2KLj.IyKbvtF7suThWk0s",
+	"changes": [
+		{
+			"key": "system.bonuses.spellcastingClasses",
+			"mode": 2,
+			"priority": null,
+			"value": "wizard"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
+	"name": "Bonus Spellcasting Class",
+	"origin": "Item.a13iFIJAJYAomBnx",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
