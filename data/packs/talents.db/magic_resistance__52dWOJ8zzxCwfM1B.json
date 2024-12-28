@@ -7,7 +7,7 @@
 	"img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue-yellow.webp",
 	"name": "Magic Resistance",
 	"system": {
-		"description": "<p>Hostile spells that target you are always hard to cast</p><p></p><p>duplicate = reroll</p>",
+		"description": "<p>Hostile spells that target you are always hard to cast</p><p>duplicate = reroll</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {

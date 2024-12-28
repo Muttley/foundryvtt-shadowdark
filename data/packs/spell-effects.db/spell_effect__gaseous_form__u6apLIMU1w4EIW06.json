@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Gaseous Form",
 	"system": {
 		"category": "effect",
-		"description": "<p>You and your gear turn into a cloud of smoke for the spell's duration.</p><p></p><p>You can fly and pass through any gap that smoke could. You can sense the terrain and any movement around you out to a near distance.</p><p></p><p>You can't cast spells while in this form.</p>",
+		"description": "<p>You and your gear turn into a cloud of smoke for the spell's duration.</p><p>You can fly and pass through any gap that smoke could. You can sense the terrain and any movement around you out to a near distance.</p><p>You can't cast spells while in this form.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"

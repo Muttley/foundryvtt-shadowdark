@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>You seal the soul of a living creature, preventing magic from leeching into it.</p><p></p><p>One creature you touch becomes nearly impervious to all magic. For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p></p><p>This spell ends as soon as the target is affected by another spell.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.z7X1jRQHFTnSXpds]{Spell Effect: Soulbind}</p>",
+		"description": "<p>You seal the soul of a living creature, preventing magic from leeching into it.</p><p>One creature you touch becomes nearly impervious to all magic. For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p>This spell ends as soon as the target is affected by another spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.z7X1jRQHFTnSXpds]{Spell Effect: Soulbind}</p>",
 		"duration": {
 			"type": "focus",
 			"value": 1

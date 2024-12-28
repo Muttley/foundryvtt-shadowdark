@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A cloaked magician with a thin, freshly bound spellbook. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 3, <strong>ATK</strong> 1 dagger (close/ near) +1 (1d4) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +1, <strong>C</strong> -1, <strong>I</strong> +2, <strong>W</strong> +0, <strong>Ch</strong> +0, <strong>AL</strong> N, <strong>LV</strong> 1</p><p></p>\n\t<p><strong> Beguile (INT Spell)</strong>. DC 11. Focus. One target in near of LV 2 or less is stupefied for the duration.</p><p></p><p><strong>Magic Bolt (INT Spell)</strong>. DC 11. 1d4 damage to one target within far.</p><p></p>",
+		"notes": "\n\t<p><i> A cloaked magician with a thin, freshly bound spellbook. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 3, <strong>ATK</strong> 1 dagger (close/ near) +1 (1d4) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +1, <strong>C</strong> -1, <strong>I</strong> +2, <strong>W</strong> +0, <strong>Ch</strong> +0, <strong>AL</strong> N, <strong>LV</strong> 1</p>\n\t<p><strong> Beguile (INT Spell)</strong>. DC 11. Focus. One target in near of LV 2 or less is stupefied for the duration.</p><p><strong>Magic Bolt (INT Spell)</strong>. DC 11. 1d4 damage to one target within far.</p>",
 		"spellcastingAbility": "int",
 		"spellcastingAttackNum": 1,
 		"spellcastingBonus": 2

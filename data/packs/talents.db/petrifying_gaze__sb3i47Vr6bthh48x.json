@@ -7,7 +7,7 @@
 	"img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
 	"name": "Petrifying Gaze",
 	"system": {
-		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.Jkl9j4RZ2WYy0Gmd]{Petrifying Gaze}</p><p>One creature of your level or less that meets your gaze must pass a DC 15 CON check or be petrified for 1d4 rounds. It still takes damage as normal while petrified.</p><p></p><p>You can use this talent a number of times per day equal to your CON modifier (minimum 1).</p>",
+		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.Jkl9j4RZ2WYy0Gmd]{Petrifying Gaze}</p><p>One creature of your level or less that meets your gaze must pass a DC 15 CON check or be petrified for 1d4 rounds. It still takes damage as normal while petrified.</p><p>You can use this talent a number of times per day equal to your CON modifier (minimum 1).</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {

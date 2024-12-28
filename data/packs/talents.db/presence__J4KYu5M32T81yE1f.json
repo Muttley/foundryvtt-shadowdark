@@ -7,7 +7,7 @@
 	"img": "icons/tools/instruments/lute-gold-brown.webp",
 	"name": "Presence",
 	"system": {
-		"description": "<p>Make a [[check 12 cha]] check to enact one of the following effects. If you fail (excluding focus), you can't use that effect again until you rest.</p><ul><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.jg2sUC3nIAI8sT18]{Inspire} DC 12. One target in near gains a luck token.</p></li><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.oCNpE6bnZjPIdOO1]{Fascinate} (Focus). You transfix all chosen targets of level 4 or less within near</p></li></ul><p></p>",
+		"description": "<p>Make a [[check 12 cha]] check to enact one of the following effects. If you fail (excluding focus), you can't use that effect again until you rest.</p><ul><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.jg2sUC3nIAI8sT18]{Inspire} DC 12. One target in near gains a luck token.</p></li><li><p>@UUID[Compendium.shadowdark.class-abilities.Item.oCNpE6bnZjPIdOO1]{Fascinate} (Focus). You transfix all chosen targets of level 4 or less within near</p></li></ul>",
 		"level": 1,
 		"predefinedEffects": "",
 		"source": {

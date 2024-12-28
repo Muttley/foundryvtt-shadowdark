@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>Your wrap yourself in a swirling cloak of shadows. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p></p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.3viSgI4JpKsXdaFd]{Spell Effect: Cloak of Night}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.vP9UrCnOXOe2ViZU]{Spell Effect: Cloak of Night (Critical)}</p>",
+		"description": "<p>Your wrap yourself in a swirling cloak of shadows. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.3viSgI4JpKsXdaFd]{Spell Effect: Cloak of Night}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.vP9UrCnOXOe2ViZU]{Spell Effect: Cloak of Night (Critical)}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "8"

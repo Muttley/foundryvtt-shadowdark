@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> A monstrosity with the body of a giant spider and torso of a drow. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16 (mithral chainmail), <strong>HP</strong> 29, <strong>ATK</strong> 3 longsword +3 (1d8) or 2 longbow (far) +3 (1d8 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or paralyzed 1d4 rounds.</p><p></p><p><strong>Sunblind</strong>. Blinded in bright light.</p><p></p>",
+		"notes": "\n\t<p><i> A monstrosity with the body of a giant spider and torso of a drow. </i></p>\n\t\n\t<p><strong>AC</strong> 16 (mithral chainmail), <strong>HP</strong> 29, <strong>ATK</strong> 3 longsword +3 (1d8) or 2 longbow (far) +3 (1d8 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or paralyzed 1d4 rounds.</p><p><strong>Sunblind</strong>. Blinded in bright light.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

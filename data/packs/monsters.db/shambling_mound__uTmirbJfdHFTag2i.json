@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Fetid piles of slimy vegetation animated to life by lightning. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 slam +3 (1d6 + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -2, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Impervious</strong>. Fire immune. Healed by electricity.</p><p></p><p><strong>Engulf</strong>. If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in 2d4 rounds. [[check 15 str]] on turn to escape.</p><p></p>",
+		"notes": "\n\t<p><i> Fetid piles of slimy vegetation animated to life by lightning. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 slam +3 (1d6 + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -2, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Impervious</strong>. Fire immune. Healed by electricity.</p><p><strong>Engulf</strong>. If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in 2d4 rounds. [[check 15 str]] on turn to escape.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

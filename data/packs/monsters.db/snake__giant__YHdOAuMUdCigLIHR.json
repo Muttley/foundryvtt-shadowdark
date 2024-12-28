@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> An enormous, mottled serpent that can swallow a cow whole. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d6) and 1 constrict (near), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 5</p><p></p>\n\t<p><strong> Constrict</strong>. Contested STR to hold target immobile for one round.</p><p></p>",
+		"notes": "\n\t<p><i> An enormous, mottled serpent that can swallow a cow whole. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d6) and 1 constrict (near), <strong>MV</strong> near (climb), <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 5</p>\n\t<p><strong> Constrict</strong>. Contested STR to hold target immobile for one round.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

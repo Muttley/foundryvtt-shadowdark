@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Polymorph",
 	"system": {
 		"category": "effect",
-		"description": "<p>Target is transformed into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form.</p><p></p><p>The target gains the creature's physical statistics, but it retains its non-physical statistics.</p><p></p><p>If the target goes to 0 hit points, it reverts to its true form at half its prior hit points.</p>",
+		"description": "<p>Target is transformed into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form.</p><p>The target gains the creature's physical statistics, but it retains its non-physical statistics.</p><p>If the target goes to 0 hit points, it reverts to its true form at half its prior hit points.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"

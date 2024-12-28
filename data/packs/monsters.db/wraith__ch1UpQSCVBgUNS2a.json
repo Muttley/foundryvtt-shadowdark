@@ -140,7 +140,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A shadowy spirit seething with anger and malice. Its presence is unsettling to animals. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 36, <strong>ATK</strong> 3 death touch +6 (1d10 + life drain), <strong>MV</strong> near (fly), <strong>S</strong> -4, <strong>D</strong> +4, <strong>C</strong> +0, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 8</p><p></p>\n\t<p><strong> Greater Undead</strong>. Immune to morale checks. Only damaged by silver or magical sources.</p><p></p><p><strong>Incorporeal</strong>. In place of attacks, become corporeal or incorporeal.</p><p></p><p><strong>Life Drain</strong>. 1d4 CON damage. Death if reduced to 0 CON.</p><p></p>",
+		"notes": "\n\t<p><i> A shadowy spirit seething with anger and malice. Its presence is unsettling to animals. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 36, <strong>ATK</strong> 3 death touch +6 (1d10 + life drain), <strong>MV</strong> near (fly), <strong>S</strong> -4, <strong>D</strong> +4, <strong>C</strong> +0, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 8</p>\n\t<p><strong> Greater Undead</strong>. Immune to morale checks. Only damaged by silver or magical sources.</p><p><strong>Incorporeal</strong>. In place of attacks, become corporeal or incorporeal.</p><p><strong>Life Drain</strong>. 1d4 CON damage. Death if reduced to 0 CON.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

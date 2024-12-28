@@ -15,7 +15,7 @@
 			}
 		},
 		"category": "effect",
-		"description": "<p>For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p></p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p>",
+		"description": "<p>For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "8"

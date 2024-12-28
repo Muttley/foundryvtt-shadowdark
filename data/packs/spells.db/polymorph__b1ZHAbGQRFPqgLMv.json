@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"description": "<p>You transform a creature you touch into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form.</p><p></p><p>The target gains the creature's physical statistics, but it retains its non-physical statistics.</p><p></p><p>If the target goes to 0 hit points, it reverts to its true form at half its prior hit points.</p><p></p><p>You can target any willing creature with this spell, or an unwilling creature whose level is less than or equal to half your level rounded down (minimum 1).</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Hc3xUBBlZLxWNKYV]{Spell Effect: Polymorph}</p>",
+		"description": "<p>You transform a creature you touch into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form.</p><p>The target gains the creature's physical statistics, but it retains its non-physical statistics.</p><p>If the target goes to 0 hit points, it reverts to its true form at half its prior hit points.</p><p>You can target any willing creature with this spell, or an unwilling creature whose level is less than or equal to half your level rounded down (minimum 1).</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Hc3xUBBlZLxWNKYV]{Spell Effect: Polymorph}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"

@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Freya's Omen",
 	"system": {
 		"category": "effect",
-		"description": "<p>For the spell's duration, you do not lose the ability to cast a spell if you fail its spellcasting check.</p><p></p><p>If you critically fail a spellcasting check, you may reroll your check once. You must use the new result.</p>",
+		"description": "<p>For the spell's duration, you do not lose the ability to cast a spell if you fail its spellcasting check.</p><p>If you critically fail a spellcasting check, you may reroll your check once. You must use the new result.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1"

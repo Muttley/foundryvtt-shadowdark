@@ -7,7 +7,7 @@
 	"img": "icons/skills/movement/ball-spinning-blue.webp",
 	"name": "Teleport",
 	"system": {
-		"description": "<p>1/day, teleport to a far location you see as your move.</p><p></p><p>duplicate = +1 use per day</p>",
+		"description": "<p>1/day, teleport to a far location you see as your move.</p><p>duplicate = +1 use per day</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {
