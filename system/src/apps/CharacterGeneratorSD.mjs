@@ -559,7 +559,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 	async _loadClass(UuID, randomize) {
 		// find the class object
 		let classObj = await this._getClassObject(UuID);
+
 		let talentData = [];
+
 		// grab fixed talents from class item
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
@@ -626,9 +628,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 				break;
 		}
 		for (const weapon of classObj.system.weapons) {
-			weaponData.push(fromUuidSync(weapon).name);
+			const weaponItem = await fromUuid(weapon);
+
+			if (weaponItem) {
+				weaponData.push(weaponItem.name);
+			}
 		}
-		this.formData.weapons = weaponData;
+		this.formData.weapons = weaponData.sort((a, b) => a.localeCompare(b));
 
 		this.class = classObj;
 		this.formData.classDesc = await this._formatDescription(classObj.system.description);
@@ -647,6 +653,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 			if (randomize) await this._randomizePatron();
 		}
 
+		if (this.class.system.alignment !== "") {
+			this.formData.actor.system.alignment = this.class.system.alignment;
+		}
 	}
 
 

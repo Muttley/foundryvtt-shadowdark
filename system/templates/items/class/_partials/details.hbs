@@ -59,7 +59,25 @@
 	</select>
 </div>
 
-<div><!-- placeholder --></div>
+<div>
+	<h3>
+		{{localize 'SHADOWDARK.sheet.actor.alignment'}}
+	</h3>
+	<select name="system.alignment">
+		<option
+			value=""
+			{{#ifEq system.alignment ""}}
+				selected
+			{{/ifEq}}
+		>
+			&mdash;
+		</option>
+		{{selectOptions config.ALIGNMENTS
+			selected=system.alignment
+			localize=false
+		}}
+	</select>
+</div>
 
 <div>
 	<h3>{{localize 'SHADOWDARK.class.spellcasting.base_difficulty.label'}}</h3>
