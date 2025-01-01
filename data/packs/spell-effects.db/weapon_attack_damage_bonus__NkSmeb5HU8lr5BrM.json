@@ -1,9 +1,9 @@
 {
-	"_id": "biHCltDD6IGKwBkB",
-	"_key": "!items.effects!r2JNgS2474vuq9oy.biHCltDD6IGKwBkB",
+	"_id": "NkSmeb5HU8lr5BrM",
+	"_key": "!items.effects!r2JNgS2474vuq9oy.NkSmeb5HU8lr5BrM",
 	"changes": [
 		{
-			"key": "system.bonuses.meleeAttackBonus",
+			"key": "system.bonuses.damageBonus",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -20,9 +20,9 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
-	"name": "Melee Attack Roll Bonus",
-	"origin": null,
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"name": "Weapon Attack Damage Bonus",
+	"origin": "Compendium.shadowdark.spell-effects.Item.r2JNgS2474vuq9oy",
 	"statuses": [
 	],
 	"system": {

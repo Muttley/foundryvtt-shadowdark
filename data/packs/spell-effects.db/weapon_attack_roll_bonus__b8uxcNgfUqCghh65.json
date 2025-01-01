@@ -1,12 +1,12 @@
 {
-	"_id": "IyKbvtF7suThWk0s",
-	"_key": "!items.effects!MzyleAM94gSD2KLj.IyKbvtF7suThWk0s",
+	"_id": "b8uxcNgfUqCghh65",
+	"_key": "!items.effects!r2JNgS2474vuq9oy.b8uxcNgfUqCghh65",
 	"changes": [
 		{
-			"key": "system.bonuses.spellcastingClasses",
+			"key": "system.bonuses.attackBonus",
 			"mode": 2,
 			"priority": null,
-			"value": "wizard"
+			"value": "1"
 		}
 	],
 	"description": "",
@@ -20,9 +20,9 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
-	"name": "Bonus Spellcasting Class",
-	"origin": "Item.a13iFIJAJYAomBnx",
+	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"name": "Weapon Attack Roll Bonus",
+	"origin": "Compendium.shadowdark.spell-effects.Item.r2JNgS2474vuq9oy",
 	"statuses": [
 	],
 	"system": {
