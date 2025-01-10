@@ -357,9 +357,9 @@ SHADOWDARK.error.general.no_character_class: No character class has been selecte
 SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Source missing or unknown...
+SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
-SHADOWDARK.error.spells.no_spellcasting_ability_set: No character spellcasting ability has been configured
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
@@ -486,6 +486,7 @@ SHADOWDARK.item.inventory_per_slot: Max pro Platz
 SHADOWDARK.item.inventory_quantity: Menge
 SHADOWDARK.item.inventory_slots: Plätze pro Gegenstand
 SHADOWDARK.item.level: Stufe
+SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
 SHADOWDARK.item.light.is_source: Lichtquelle
 SHADOWDARK.item.light.longevity: Leuchtdauer (Min)
 SHADOWDARK.item.light.remaining: Verbleibend (Min)
