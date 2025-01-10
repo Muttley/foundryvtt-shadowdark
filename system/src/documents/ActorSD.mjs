@@ -30,6 +30,7 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	async _learnSpell(item) {
 		const characterClass = await this.getClass();
 
@@ -613,14 +614,19 @@ export default class ActorSD extends Actor {
 			return;
 		}
 
-		const abilityId = await this.getSpellcastingAbility();
+		const abilityId = await this.getSpellcastingAbility(item);
 
 		if (abilityId === "") {
-			ui.notifications.error(
-				game.i18n.format("SHADOWDARK.error.spells.no_spellcasting_ability_set"),
+			if (item.type === "Spell") {
+				return ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell"),
+					{permanent: false}
+				);
+			}
+			return ui.notifications.error(
+				game.i18n.format("SHADOWDARK.error.spells.unable_to_use_item"),
 				{permanent: false}
 			);
-			return;
 		}
 
 		let rollType;
@@ -650,6 +656,7 @@ export default class ActorSD extends Actor {
 		return item.rollSpell(parts, data, options);
 	}
 
+
 	async castNPCSpell(itemId, options={}) {
 		const item = this.items.get(itemId);
 
@@ -670,6 +677,7 @@ export default class ActorSD extends Actor {
 
 		return item.rollSpell(parts, data, options);
 	}
+
 
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
@@ -917,30 +925,50 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async getSpellcastingAbility() {
-		const spellcasterClasses = await this.getSpellcasterClasses();
+	async getSpellcastingAbility(item) {
+		if (item.type !== "Spell") {
+			// Always use our class spellcasting ability if we have one for
+			// Wands and Scrolls, etc.  If you don't have a spellcasting
+			// ability then you can't use these items
+			const actorClass = await this.getClass();
+			return actorClass?.system?.spellcasting?.ability ?? "";
+		}
+
+		const usableSpellcasterClasses = [];
+		for (const classUuid of item?.system?.class ?? []) {
+			const spellClass = await fromUuid(classUuid);
+			const hasSpellcastingClass = await this.hasSpellcastingClass(spellClass.name);
+
+			if (hasSpellcastingClass) usableSpellcasterClasses.push(spellClass);
+		}
 
 		let chosenAbility = "";
-		let chosenAbilityModifier = 0;
+		let bestAbilityModifier = 0;
+		if (usableSpellcasterClasses.length > 0) {
+			// If the spell can be cast by this actor, choose the best ability
+			// to use that is supported by the specific spell
+			//
+			for (const casterClass of usableSpellcasterClasses) {
+				const ability = casterClass?.system?.spellcasting?.ability ?? "";
 
-		for (const casterClass of spellcasterClasses) {
-			const ability = casterClass?.system?.spellcasting?.ability ?? "";
-
-			if (chosenAbility === "") {
-				chosenAbility = ability;
-				chosenAbilityModifier = this.abilityModifier(ability);
-			}
-			else {
-				const modifier = this.abilityModifier(ability);
-				if (modifier > chosenAbilityModifier) {
+				if (chosenAbility === "") {
 					chosenAbility = ability;
-					chosenAbilityModifier = modifier;
+					bestAbilityModifier = this.abilityModifier(ability);
+				}
+				else {
+					const modifier = this.abilityModifier(ability);
+					if (modifier > bestAbilityModifier) {
+						chosenAbility = ability;
+						bestAbilityModifier = modifier;
+					}
 				}
 			}
+
 		}
 
 		return chosenAbility;
 	}
+
 
 	async getTitle() {
 		const characterClass = await this.getClass();
@@ -960,6 +988,7 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	async hasActiveLightSources() {
 		return this.getActiveLightSources.length > 0;
 	}
@@ -970,6 +999,17 @@ export default class ActorSD extends Actor {
 			return this.system.bonuses.advantage.includes(data.rollType);
 		}
 		return false;
+	}
+
+
+	async hasSpellcastingClass(className) {
+		const myClasses = await this.getSpellcasterClasses();
+
+		const foundClass = myClasses.find(
+			c => c.name.toLowerCase() === className.toLowerCase()
+		);
+
+		return foundClass ? foundClass : undefined;
 	}
 
 
@@ -1320,6 +1360,7 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+
 	async rollHP(options={}) {
 		if (this.type === "Player") {
 			this._playerRollHP(options);
@@ -1416,6 +1457,7 @@ export default class ActorSD extends Actor {
 
 		await this.changeLightSettings(lightData);
 	}
+
 
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
