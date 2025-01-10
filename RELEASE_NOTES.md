@@ -1,3 +1,15 @@
+# v3.3.0
+
+## Enhancements
+- [#973] Use *Special Abilities* Instead of using *{Class Name} Abilities* for the Class Abilities section title as non-class releated Special Abilities may also appear there
+- [#977] Add ability to set a required alignment on a class
+
+## Bugfixes
+- [#976] Unable to delete items from gem bag
+- [#979] Shune the Vile missing form Deity list
+
+---
+
 # v3.2.3
 
 ## Bugfixes
@@ -19,7 +31,7 @@
 
 # v3.2.1
 
-## Bugs
+## Bugfixes
 * [#723] Cannot edit gems in a character's gem bag
 * [#964] Unable to edit/modify active effects on Items
 
