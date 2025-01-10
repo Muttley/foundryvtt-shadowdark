@@ -6,7 +6,8 @@
 		name="system.light.longevityMins"
 		type="number"
 		value={{item.system.light.longevityMins}}
-		{{#if item.system.light.hasBeenUsed}}
+		{{#if item.system.light.active}}
+			data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
 			disabled
 		{{/if}}
 	>
@@ -16,6 +17,9 @@
 	<input
 		type="number"
 		value={{lightRemainingMins}}
-		disabled
+		{{#if item.system.light.active}}
+			data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
+			disabled
+		{{/if}}
 	>
 </div>
