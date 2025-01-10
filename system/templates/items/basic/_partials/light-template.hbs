@@ -2,7 +2,13 @@
 	<h3>
 		{{localize 'SHADOWDARK.item.light.template'}}
 	</h3>
-	<select name="system.light.template">
+	<select
+		name="system.light.template"
+		{{#if item.system.light.active}}
+			data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
+			disabled
+		{{/if}}
+	>
 		{{selectOptions
 			config.LIGHT_SETTING_NAMES
 			selected=system.light.template

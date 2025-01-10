@@ -1,3 +1,20 @@
+# v3.2.3
+
+## Enhancements
+* [#982] Allow editing the current remaining seconds on an light source
+
+	- Light source fields can now be edited as long as the light source is not currently active
+
+## Bugfixes
+* [#981] Fix a small typo in a rolltable table file *(many thanks to jkwatson for this fix contribution)*
+* [#983] Shadowdarklings import incorrectly assigns "+1 to melee and range attacks" talent
+* [#985] Bard can't cast spells from items
+
+## Chores
+* [#975] Merged French translation updates from Crowdin
+
+---
+
 # v3.2.2
 
 ## Chores
