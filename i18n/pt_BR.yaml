@@ -359,7 +359,6 @@ SHADOWDARK.error.patron.no_supported_class: Não foi possível adicionar Patrono
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
-SHADOWDARK.error.spells.no_spellcasting_ability_set: Nenhum atributo de conjuração do personagem foi configurado
 SHADOWDARK.error.too_many_tokens_selected: Muitos tokens selecionados
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
@@ -486,6 +485,7 @@ SHADOWDARK.item.inventory_per_slot: Máx por Espaço
 SHADOWDARK.item.inventory_quantity: Quantidade
 SHADOWDARK.item.inventory_slots: Espaços por item
 SHADOWDARK.item.level: Nível
+SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
 SHADOWDARK.item.light.is_source: Fonte de Luz
 SHADOWDARK.item.light.longevity: Longevidade (Min)
 SHADOWDARK.item.light.remaining: Restante (Min)

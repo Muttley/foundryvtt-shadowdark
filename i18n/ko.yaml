@@ -359,7 +359,6 @@ SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currentl
 SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
-SHADOWDARK.error.spells.no_spellcasting_ability_set: 캐릭터의 주문시전 능력이 설정되지 않았습니다
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
@@ -486,6 +485,7 @@ SHADOWDARK.item.inventory_per_slot: 슬롯 당 최대값
 SHADOWDARK.item.inventory_quantity: 수량
 SHADOWDARK.item.inventory_slots: 아이템별 슬롯
 SHADOWDARK.item.level: 레벨
+SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
 SHADOWDARK.item.light.is_source: 광원
 SHADOWDARK.item.light.longevity: 유지시간 (분)
 SHADOWDARK.item.light.remaining: 남은 시간 (분)
