@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus de daño a dis
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Ventaja de lanzamiento de hechizo
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus de lanzamiento de hechizo
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bonus de CA sin armaduras
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus de Ataque de Arma
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus de daño de arma
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo de propiedad
 SHADOWDARK.range.close_short: C
 SHADOWDARK.range.close: Cerca
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: L
 SHADOWDARK.range.far: Lejos
 SHADOWDARK.range.near_short: "P"
 SHADOWDARK.range.near: Próximo
 SHADOWDARK.range.nearLine_short: PL
 SHADOWDARK.range.nearLine: Línea próxima
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Mile
 SHADOWDARK.range.samePlane_short: MP
 SHADOWDARK.range.samePlane: En el mismo plano
 SHADOWDARK.range.self_short: M
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Usar poción
 SHADOWDARK.sheet.player.tooltip.use_scroll: Usar pergamino
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar varita
 SHADOWDARK.sheet.player.xp: EXP
+SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bardo y Explorador"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Reglas Basicas"
 SHADOWDARK.source.cursed-scroll-1: Pergamino Maldito Vol.1, Diablerie!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Bonus de daño cuerpo a cuerpo
 SHADOWDARK.talent.type.ranged_attack_bonus: Bonus de ataque a distancia
 SHADOWDARK.talent.type.ranged_damage_bonus: Bonus de daño a distancia
 SHADOWDARK.talent.type.spell_bonus: Bonus de lanzamiento de hechizo
+SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Tipo(s) de talento
 SHADOWDARK.talent.type.weapon_mastery: Maestría de armas
 SHADOWDARK.tours.lightsource.notification.not_enabled: Necesitas habilitar el Seguimiento de fuente de luz en la configuración para poder ejecutar el tour
