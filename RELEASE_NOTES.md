@@ -3,6 +3,7 @@
 ## Enhancements
 - [#973] Use *Special Abilities* Instead of using *{Class Name} Abilities* for the Class Abilities section title as non-class releated Special Abilities may also appear there
 - [#977] Add ability to set a required alignment on a class
+- [#990] Add new Basilisk Warrior class *(many thanks to **Kelsey** for allowing us to include this in the system)*
 
 ## Bugfixes
 - [#976] Unable to delete items from gem bag
