@@ -13,7 +13,7 @@
 		"description": "<p>Your touch restores ebbing life.</p><p>Roll a number of d6s equal to [[/roll (1 + (floor(@level.value/2)))d6]]{1 + half your level (rounded down)}.</p><p>One target you touch regains that many hit points.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -138,7 +138,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "burrow, swim",
-		"notes": "\n\t<p><i> This black, wingless beast slithers through dank swamps. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d10) or 1 smog breath, <strong>MV</strong> double near (burrow, swim), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 12</p><p></p>\n\t<p><strong> Smog Breath</strong>. Fills a near-sized cube extending from dragon. [[check 15 con]] or 2d10 damage and blinded for 1 round.</p><p></p>",
+		"notes": "\n\t<p><i> This black, wingless beast slithers through dank swamps. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d10) or 1 smog breath, <strong>MV</strong> double near (burrow, swim), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 12</p>\n\t<p><strong> Smog Breath</strong>. Fills a near-sized cube extending from dragon. [[check 15 con]] or 2d10 damage and blinded for 1 round.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

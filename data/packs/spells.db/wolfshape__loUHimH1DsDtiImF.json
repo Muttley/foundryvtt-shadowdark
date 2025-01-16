@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>You and your gear transform into a wolf for the spell's duration. You assume the wolf's STR, DEX, CON, HP, AC, speed, attacks, and physical characteristics, but retain your INT, WIS, and CHA.</p><p></p><p>You can cast spells in this form. If you go to 0 HP, you revert to your true shape at 0 HP.</p><p></p><p>If you are level 5+, you can transform into a dire wolf or a winter wolf, instead.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.B9ChlhtUjECrLlre]{Spell Effect: Wolfshape (Wolf)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.3vCyl2kqfz31N1yP]{Spell Effect: Wolfshape (Dire Wolf)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.cC4hF54uctVhvvCo]{Spell Effect: Wolfshape (Winter Wolf)}</p>",
+		"description": "<p>You and your gear transform into a wolf for the spell's duration. You assume the wolf's STR, DEX, CON, HP, AC, speed, attacks, and physical characteristics, but retain your INT, WIS, and CHA.</p><p>You can cast spells in this form. If you go to 0 HP, you revert to your true shape at 0 HP.</p><p>If you are level 5+, you can transform into a dire wolf or a winter wolf, instead.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.B9ChlhtUjECrLlre]{Spell Effect: Wolfshape (Wolf)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.3vCyl2kqfz31N1yP]{Spell Effect: Wolfshape (Dire Wolf)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.cC4hF54uctVhvvCo]{Spell Effect: Wolfshape (Winter Wolf)}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

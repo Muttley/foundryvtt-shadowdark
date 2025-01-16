@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>You whisper into another creature's ear, planting a false memory in its mind.</p><p></p><p>You describe one brief, false memory that the target believes is true going forward. </p><p></p><p>If you fail this spellcasting check, the GM chooses a short, false memory to plant in your mind, instead.</p>",
+		"description": "<p>You whisper into another creature's ear, planting a false memory in its mind.</p><p>You describe one brief, false memory that the target believes is true going forward. </p><p>If you fail this spellcasting check, the GM chooses a short, false memory to plant in your mind, instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

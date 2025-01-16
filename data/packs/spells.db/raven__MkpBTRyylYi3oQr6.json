@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>You whisper a message to Odin's own ravens, and they carry it across all worlds to its recipient. </p><p></p><p>Speak a short sentence, and the name of its recipient, dead or alive. That creature hears your utterance whispered in its mind.</p>",
+		"description": "<p>You whisper a message to Odin's own ravens, and they carry it across all worlds to its recipient. </p><p>Speak a short sentence, and the name of its recipient, dead or alive. That creature hears your utterance whispered in its mind.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

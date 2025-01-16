@@ -13,7 +13,7 @@
 		"description": "<p>You may make an attempt to cast this spell when you fall.</p><p>Your rate of descent slows so that you land safely on your feet.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

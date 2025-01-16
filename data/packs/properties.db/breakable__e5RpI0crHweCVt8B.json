@@ -1,0 +1,18 @@
+{
+	"_id": "e5RpI0crHweCVt8B",
+	"_key": "!items!e5RpI0crHweCVt8B",
+	"effects": [
+	],
+	"folder": "vFaoMFPGDGlKn4gF",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Breakable",
+	"system": {
+		"description": "<p>This weapon breaks on a natural 1 attack roll.</p>",
+		"itemType": "weapon",
+		"predefinedEffects": "",
+		"source": {
+			"title": "cursed-scroll-4"
+		}
+	},
+	"type": "Property"
+}

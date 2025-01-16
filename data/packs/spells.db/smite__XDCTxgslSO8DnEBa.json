@@ -13,7 +13,7 @@
 		"description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -1,13 +1,7 @@
 {
-	"_id": "wcR4lmjPbNZ5nr9N",
-	"_key": "!items.effects!r2JNgS2474vuq9oy.wcR4lmjPbNZ5nr9N",
+	"_id": "ZdO7fIT4Y62U19ut",
+	"_key": "!items.effects!tplKQpO6Q94eMnGI.ZdO7fIT4Y62U19ut",
 	"changes": [
-		{
-			"key": "system.bonuses.meleeDamageBonus",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
 	],
 	"description": "",
 	"disabled": false,
@@ -20,9 +14,9 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"img": "icons/skills/melee/strike-axe-blood-red.webp",
-	"name": "Melee Damage Bonus",
-	"origin": null,
+	"img": "icons/weapons/staves/staff-forest-jewel.webp",
+	"name": "Instill",
+	"origin": "Compendium.shadowdark.spell-effects.Item.tplKQpO6Q94eMnGI",
 	"statuses": [
 	],
 	"system": {

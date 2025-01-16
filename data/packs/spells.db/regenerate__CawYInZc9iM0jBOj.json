@@ -13,7 +13,7 @@
 		"description": "<p>A creature you touch regains 1d4 hit points on your turn for the duration. This spell also regrows lost body parts.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

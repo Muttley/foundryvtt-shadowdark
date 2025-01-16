@@ -1,0 +1,27 @@
+{
+	"_id": "SeGDXtfZW1ZclMlC",
+	"_key": "!items.effects!S56vv5Gz3Pcy4DxZ.SeGDXtfZW1ZclMlC",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/creatures/invertebrates/wasp-swarm-tan.webp",
+	"name": "Locusts",
+	"origin": "Compendium.shadowdark.spell-effects.Item.S56vv5Gz3Pcy4DxZ",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -13,7 +13,7 @@
 		"description": "<p>You lift a creature or object with your mind. Choose a target that weights 450kg or less. You can move it a near distance in any direction and hold it in place.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -138,7 +138,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A massive wolf with spines of black bone along its brow ridge and back. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 19, <strong>ATK</strong> 2 bite +4 (1d8), <strong>MV</strong> double near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> N, <strong>LV</strong> 4</p><p></p>\n\t<p><strong> Pack Hunter</strong>. Deals +1 damage while an ally is close.</p><p></p>",
+		"notes": "\n\t<p><i> A massive wolf with spines of black bone along its brow ridge and back. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 19, <strong>ATK</strong> 2 bite +4 (1d8), <strong>MV</strong> double near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Pack Hunter</strong>. Deals +1 damage while an ally is close.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

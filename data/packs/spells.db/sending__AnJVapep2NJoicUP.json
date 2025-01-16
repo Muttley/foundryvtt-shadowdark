@@ -13,7 +13,7 @@
 		"description": "<p>You send a brief, mental message to any creature with whom you are familiar who is on the same plane.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

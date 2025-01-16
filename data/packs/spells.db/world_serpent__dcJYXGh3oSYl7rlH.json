@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>The torturous venom of the World Serpent drips from the weapons of a creature you touch.</p><p></p><p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.sZ6msFePi3R6DUju]{Spell Effect: World Serpent}</p>",
+		"description": "<p>The torturous venom of the World Serpent drips from the weapons of a creature you touch.</p><p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.sZ6msFePi3R6DUju]{Spell Effect: World Serpent}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

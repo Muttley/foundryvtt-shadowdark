@@ -13,7 +13,7 @@
 		"description": "<p>You painfully twist the golden threads of a creature's fate. One creature you target in range takes [[/r 1d10]] damage and loses any luck tokens it has.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

@@ -138,7 +138,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Flitting, sentient shadows in the vague shape of a human. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 15, <strong>ATK</strong> 2 touch +2 (1d4 + drain), <strong>MV</strong> near (fly), <strong>S</strong> -4, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p><p></p>\n\t<p><strong> Drain</strong>. Target takes 1 STR damage. At 0 STR, target dies and becomes a shadow.</p><p></p>",
+		"notes": "\n\t<p><i> Flitting, sentient shadows in the vague shape of a human. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 15, <strong>ATK</strong> 2 touch +2 (1d4 + drain), <strong>MV</strong> near (fly), <strong>S</strong> -4, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p>\n\t<p><strong> Drain</strong>. Target takes 1 STR damage. At 0 STR, target dies and becomes a shadow.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

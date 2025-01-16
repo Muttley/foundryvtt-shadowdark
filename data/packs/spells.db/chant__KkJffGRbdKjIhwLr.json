@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>You begin an unearthly chant that lifts your vision beyond its ordinary limitations.</p><p></p><p>For the spell's duration, you can see all invisible and hidden things as though they were plainly visible. This spell does not allow you to see in a way that you could not normally, such as in darkness or through walls.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.ZLO5oq3gTJ762o3F]{Spell Effect: Chant}</p>",
+		"description": "<p>You begin an unearthly chant that lifts your vision beyond its ordinary limitations.</p><p>For the spell's duration, you can see all invisible and hidden things as though they were plainly visible. This spell does not allow you to see in a way that you could not normally, such as in darkness or through walls.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.ZLO5oq3gTJ762o3F]{Spell Effect: Chant}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

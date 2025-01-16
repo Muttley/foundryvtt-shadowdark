@@ -7,7 +7,7 @@
 	"img": "icons/consumables/potions/potion-tube-corked-tied-green.webp",
 	"name": "Poisons Training",
 	"system": {
-		"description": "<p>You are trained in the use of poisons (see pg. 27)</p><p></p><p>duplicate = reroll</p>",
+		"description": "<p>You are trained in the use of poisons (see pg. 27)</p><p>duplicate = reroll</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {

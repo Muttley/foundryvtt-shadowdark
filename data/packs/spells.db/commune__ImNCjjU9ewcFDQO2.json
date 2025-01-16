@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"description": "<p>You seek your god's counsel. Ask the GM up to three yes or no questions. The GM truthfully answers \"yes\" or \"no\" to each. </p><p></p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure, instead.</p>",
+		"description": "<p>You seek your god's counsel. Ask the GM up to three yes or no questions. The GM truthfully answers \"yes\" or \"no\" to each. </p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure, instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

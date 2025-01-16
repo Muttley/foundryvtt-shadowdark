@@ -7,7 +7,7 @@
 	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
 	"name": "Hypnotize",
 	"system": {
-		"description": "<p>1/day, hypnotize a LV 5 or less creature for 3 rounds</p><p></p><p>duplicate = +1 use per day</p>",
+		"description": "<p>1/day, hypnotize a LV 5 or less creature for 3 rounds</p><p>duplicate = +1 use per day</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {

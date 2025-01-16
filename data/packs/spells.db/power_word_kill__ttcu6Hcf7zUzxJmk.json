@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"description": "<p>You utter the Word of Doom. One creature you target of LV 9 or less dies if it hears you. </p><p></p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
+		"description": "<p>You utter the Word of Doom. One creature you target of LV 9 or less dies if it hears you. </p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

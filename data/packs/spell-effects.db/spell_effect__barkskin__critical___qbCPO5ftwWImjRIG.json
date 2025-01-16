@@ -1,0 +1,45 @@
+{
+	"_id": "qbCPO5ftwWImjRIG",
+	"_key": "!items!qbCPO5ftwWImjRIG",
+	"effects": [
+		"goCqveYikTO4tTA0"
+	],
+	"folder": null,
+	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+	"name": "Spell Effect: Barkskin (Critical)",
+	"system": {
+		"attributes": {
+			"ac": {
+				"override": "18"
+			}
+		},
+		"category": "effect",
+		"description": "<p>Your skin hardens into tough tree bark. Your AC becomes 14 (18 on a critical spellcasting check) for the spell's duration.</p><p>You take double damage from fire while you are under the spell's effects.</p>",
+		"duration": {
+			"type": "days",
+			"value": "1"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"start": {
+			"combatTime": "18.-1",
+			"value": 1
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

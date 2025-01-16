@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Puppet",
 	"system": {
 		"category": "effect",
-		"description": "<p>On your turn, the creature mimics all your movements.</p><p></p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a [[check 15 cha]] check. On a success, it resists mimicking you.</p>",
+		"description": "<p>On your turn, the creature mimics all your movements.</p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a [[check 15 cha]] check. On a success, it resists mimicking you.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

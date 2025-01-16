@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Evoke Rage",
 	"system": {
 		"category": "effect",
-		"description": "<p>The target is immune to morale checks, has ADV on STR checks and melee attacks, and deals +1d4 damage for the spell's duration.</p><p></p><p>If the target does not attack another creature on its turn, the spell ends.</p>",
+		"description": "<p>The target is immune to morale checks, has ADV on STR checks and melee attacks, and deals +1d4 damage for the spell's duration.</p><p>If the target does not attack another creature on its turn, the spell ends.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1"

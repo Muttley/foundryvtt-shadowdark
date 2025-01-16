@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Command",
 	"system": {
 		"category": "effect",
-		"description": "<p>The target obeys the command for as long as you focus.</p><p></p><p>If your command is ever directly harmful to the creature, it may make a Charisma check vs. your last spellcasting check. On a success, the spell ends.</p>",
+		"description": "<p>The target obeys the command for as long as you focus.</p><p>If your command is ever directly harmful to the creature, it may make a Charisma check vs. your last spellcasting check. On a success, the spell ends.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 14 (chainmail + shield), <strong>HP</strong> 9, <strong>ATK</strong> 1 longsword +1 (1d8) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p><p></p>\n\t<p><strong> Fearless</strong>. Immune to morale checks.</p><p></p><p><strong>Deathtouch (WIS Spell)</strong>. DC 12. 2d4 damage to one creature within close.</p><p></p>",
+		"notes": "\n\t<p><i> A cloaked, wild-eyed zealot chanting the guttural prayers of a dark god. </i></p>\n\t\n\t<p><strong>AC</strong> 14 (chainmail + shield), <strong>HP</strong> 9, <strong>ATK</strong> 1 longsword +1 (1d8) or 1 spell +2, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +0, <strong>I</strong> -1, <strong>W</strong> +2, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p>\n\t<p><strong> Fearless</strong>. Immune to morale checks.</p><p><strong>Deathtouch (WIS Spell)</strong>. DC 12. 2d4 damage to one creature within close.</p>",
 		"spellcastingAbility": "wis",
 		"spellcastingAttackNum": 1,
 		"spellcastingBonus": 2

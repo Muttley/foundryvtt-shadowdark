@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "burrow",
-		"notes": "\n\t<p><i> A thundering pillar of earth. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 31, <strong>ATK</strong> 3 slam +7 (2d8/3d8) or 1 avalanche, <strong>MV</strong> near (burrow), <strong>S</strong> +5, <strong>D</strong> +0, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p><p></p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p></p><p><strong>Avalanche</strong>. All within close [[check 15 str]] or entombed for 1d4 rounds under mounds of earth.</p><p></p>",
+		"notes": "\n\t<p><i> A thundering pillar of earth. </i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 31, <strong>ATK</strong> 3 slam +7 (2d8/3d8) or 1 avalanche, <strong>MV</strong> near (burrow), <strong>S</strong> +5, <strong>D</strong> +0, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p><strong>Avalanche</strong>. All within close [[check 15 str]] or entombed for 1d4 rounds under mounds of earth.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

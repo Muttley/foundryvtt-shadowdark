@@ -139,7 +139,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A howling tornado of wind. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 42, <strong>ATK</strong> 3 slam +7 (3d6) or 1 whirlwind, <strong>MV</strong> double near (fly), <strong>S</strong> +3, <strong>D</strong> +5, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 9</p><p></p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p></p><p><strong>Whirlwind</strong>. All within close [[check 15 dex]] or flung 2d20 feet in random direction.</p><p></p>",
+		"notes": "\n\t<p><i> A howling tornado of wind. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 42, <strong>ATK</strong> 3 slam +7 (3d6) or 1 whirlwind, <strong>MV</strong> double near (fly), <strong>S</strong> +3, <strong>D</strong> +5, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 9</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p><strong>Whirlwind</strong>. All within close [[check 15 dex]] or flung 2d20 feet in random direction.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

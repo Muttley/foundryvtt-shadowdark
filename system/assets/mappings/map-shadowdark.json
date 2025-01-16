@@ -198,6 +198,17 @@
 				}
 			}
 		},
+		"ubcYvhvDW1WywYcw": {
+			"__MONSTER_NAME__": "Basilisk Hatchling",
+			"actor": "modules/pf2e-tokens-bestiaries/portraits/bestial/mythological/basilisk.webp",
+			"token": {
+				"texture": {
+					"src": "modules/pf2e-tokens-bestiaries/tokens/bestial/mythological/basilisk.webp",
+					"scaleX": 0.6,
+					"scaleY": 0.6
+				}
+			}
+		},
 		"EJ94w4A9mb9ETSGA": {
 			"__MONSTER_NAME__": "Bat, Giant",
 			"actor": "modules/pf2e-tokens-bestiaries/portraits/bestial/mammalian/bat-giant.webp",

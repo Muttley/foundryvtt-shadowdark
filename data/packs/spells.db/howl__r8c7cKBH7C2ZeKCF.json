@@ -13,7 +13,7 @@
 		"description": "<p>All enemies within near range of you must immediately make a morale check. This spell does not affect creatures that are immune to morale checks.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

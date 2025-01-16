@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"description": "<p>You fold space and time, transporting yourself and all willing creatures within close range to a location on another plane of your choice. </p><p></p><p>Unless you have been to your intended location before, you appear in a random place on the destination plane.</p>",
+		"description": "<p>You fold space and time, transporting yourself and all willing creatures within close range to a location on another plane of your choice. </p><p>Unless you have been to your intended location before, you appear in a random place on the destination plane.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

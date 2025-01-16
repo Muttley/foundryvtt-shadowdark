@@ -1,9 +1,9 @@
 {
-	"_id": "biHCltDD6IGKwBkB",
-	"_key": "!items.effects!r2JNgS2474vuq9oy.biHCltDD6IGKwBkB",
+	"_id": "1YLz0hdFJKXemMz7",
+	"_key": "!items.effects!ON5zVUv1xVbHRhbf.1YLz0hdFJKXemMz7",
 	"changes": [
 		{
-			"key": "system.bonuses.meleeAttackBonus",
+			"key": "system.bonuses.attackBonus",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -21,13 +21,13 @@
 		"turns": null
 	},
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
-	"name": "Melee Attack Roll Bonus",
+	"name": "Weapon Attack Roll Bonus",
 	"origin": null,
 	"statuses": [
 	],
 	"system": {
 	},
 	"tint": "#ffffff",
-	"transfer": true,
+	"transfer": false,
 	"type": "base"
 }

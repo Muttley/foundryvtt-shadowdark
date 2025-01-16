@@ -139,7 +139,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A bulky iron suit that squeals and sparks with each step. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 19, <strong>HP</strong> 49, <strong>ATK</strong> 3 slam +8 (2d8) or 1 poison breath, <strong>MV</strong> near, <strong>S</strong> +5, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 10</p><p></p>\n\t<p><strong> Golem</strong>. Immune to damage from cold or non-magical sources. Healed by fire.</p><p></p><p><strong>Poison Breath</strong>. All within near, [[check 15 con]] or 8d6 damage.</p><p></p>",
+		"notes": "\n\t<p><i> A bulky iron suit that squeals and sparks with each step. </i></p>\n\t\n\t<p><strong>AC</strong> 19, <strong>HP</strong> 49, <strong>ATK</strong> 3 slam +8 (2d8) or 1 poison breath, <strong>MV</strong> near, <strong>S</strong> +5, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 10</p>\n\t<p><strong> Golem</strong>. Immune to damage from cold or non-magical sources. Healed by fire.</p><p><strong>Poison Breath</strong>. All within near, [[check 15 con]] or 8d6 damage.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

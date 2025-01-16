@@ -13,7 +13,7 @@
 		"description": "<p>You hurl a small flame that erupts into a fiery blast. All creatures in a near-sized cube around where the flame lands take [[/r 4d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

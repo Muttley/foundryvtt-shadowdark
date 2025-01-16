@@ -7,7 +7,7 @@
 	"img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
 	"name": "Spellcasting (Knight of St. Ydris)",
 	"system": {
-		"description": "<p>You can cast witch spells you know. </p><p></p><p>Each time you gain a level, you choose new witch spells to learn according to the Witch Spells Known table. </p><p></p><p>You use your Charisma stat to cast witch spells. The DC is 10 + the spell's tier. </p><p></p><p>If you fail a spellcasting check, you can't cast that spell again until you complete a rest. </p><p></p><p>If you roll a natural 1 on a spellcasting check, you must also roll on the corresponding Diabolical Mishap table (see pg. 22) for the spell's tier</p>",
+		"description": "<p>You can cast witch spells you know. </p><p>Each time you gain a level, you choose new witch spells to learn according to the Witch Spells Known table. </p><p>You use your Charisma stat to cast witch spells. The DC is 10 + the spell's tier. </p><p>If you fail a spellcasting check, you can't cast that spell again until you complete a rest. </p><p>If you roll a natural 1 on a spellcasting check, you must also roll on the corresponding Diabolical Mishap table (see pg. 22) for the spell's tier</p>",
 		"level": 1,
 		"predefinedEffects": "",
 		"source": {

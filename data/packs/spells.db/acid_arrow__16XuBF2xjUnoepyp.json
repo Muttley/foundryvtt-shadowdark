@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"description": "<p>You conjure a corrosive bolt that hits one foe, dealing [[/r 1d6]] damage a round. The bolt remains in the target for as long as you focus.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.NXZlCiZI9X3AJc4m]{Spell Effect: Acid Arrow}</p>",
+		"description": "<p>You conjure a corrosive bolt that hits one foe, dealing [[/r 1d6]] damage a round. The bolt remains in the target for as long as you focus.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.NXZlCiZI9X3AJc4m]{Spell Effect: Acid Arrow}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

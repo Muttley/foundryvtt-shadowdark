@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>You summon a floating marsh light that bobs in the air and casts light out to a close radius around it. </p><p></p><p>The light can change colors and take on vague shapes. It can float up to a near distance on your turn.</p>",
+		"description": "<p>You summon a floating marsh light that bobs in the air and casts light out to a close radius around it. </p><p>The light can change colors and take on vague shapes. It can float up to a near distance on your turn.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

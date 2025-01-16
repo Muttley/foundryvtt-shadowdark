@@ -139,7 +139,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Dragon-cousins with a large tail stinger, mottled lizard skin, and leathery wings. </i></p>\n\t<p></p>\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 37, <strong>ATK</strong> 2 rend +6 (1d8) and 1 stinger +6 (1d6 + poison), <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p><p></p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or take 2d10 damage.</p><p></p>",
+		"notes": "\n\t<p><i> Dragon-cousins with a large tail stinger, mottled lizard skin, and leathery wings. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 37, <strong>ATK</strong> 2 rend +6 (1d8) and 1 stinger +6 (1d6 + poison), <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or take 2d10 damage.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

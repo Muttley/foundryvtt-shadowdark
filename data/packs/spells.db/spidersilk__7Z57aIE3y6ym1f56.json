@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"description": "<p>Sticky spidersilk covers your hands and feet.</p><p></p><p>For the spell's duration, you can walk on vertical surfaces as easily as if it were flat ground.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.4UAVHmqFCt47sh7D]{Spell Effect: Spidersilk}</p>",
+		"description": "<p>Sticky spidersilk covers your hands and feet.</p><p>For the spell's duration, you can walk on vertical surfaces as easily as if it were flat ground.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.4UAVHmqFCt47sh7D]{Spell Effect: Spidersilk}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

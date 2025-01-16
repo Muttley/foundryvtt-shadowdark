@@ -1,0 +1,27 @@
+{
+	"_id": "ENBQPzsgEeuzEYvU",
+	"_key": "!items.effects!LyVUb5XbziOGsLXM.ENBQPzsgEeuzEYvU",
+	"changes": [
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/tools/navigation/compass-brass-blue-red.webp",
+	"name": "Magnetize",
+	"origin": "Compendium.shadowdark.spell-effects.Item.LyVUb5XbziOGsLXM",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

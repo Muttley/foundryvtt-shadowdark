@@ -13,7 +13,7 @@
 		"description": "<p>One creature you touch gains a luck token.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"magicItem": false,

@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"description": "<p>A green ray shoots from your finger and turns a creature or object into ash. </p><p></p><p>A target creature of LV 5 or less instantly dies. If it is LV 6+, it takes 3d8 damage, instead. </p><p></p><p>A non-magical object up to the size of a large tree is destroyed.</p>",
+		"description": "<p>A green ray shoots from your finger and turns a creature or object into ash. </p><p>A target creature of LV 5 or less instantly dies. If it is LV 6+, it takes 3d8 damage, instead. </p><p>A non-magical object up to the size of a large tree is destroyed.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

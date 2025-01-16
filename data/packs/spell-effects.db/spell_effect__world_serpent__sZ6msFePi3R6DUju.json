@@ -32,7 +32,7 @@
 			"damageMultiplier": "2"
 		},
 		"category": "effect",
-		"description": "<p></p><p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p>",
+		"description": "<p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Anathema",
 	"system": {
 		"category": "effect",
-		"description": "<p>Enchanted with another creature.</p><p></p><p>Each time one of the affected creatures takes damage, it may make a [[check 15 cha]] check. On a success, the spell ends.</p>",
+		"description": "<p>Enchanted with another creature.</p><p>Each time one of the affected creatures takes damage, it may make a [[check 15 cha]] check. On a success, the spell ends.</p>",
 		"duration": {
 			"type": "days",
 			"value": "1"

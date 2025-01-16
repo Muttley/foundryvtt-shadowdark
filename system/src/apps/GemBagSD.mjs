@@ -131,7 +131,7 @@ export default class GemBagSD extends Application {
 				icon: '<i class="fas fa-trash"></i>',
 				condition: element => canEdit(element),
 				callback: element => {
-					const itemId = tr.data("item-id");
+					const itemId = element.data("item-id");
 					this._onItemDelete(itemId);
 				},
 			},

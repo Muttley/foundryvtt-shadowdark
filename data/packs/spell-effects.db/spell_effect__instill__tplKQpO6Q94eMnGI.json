@@ -1,0 +1,40 @@
+{
+	"_id": "tplKQpO6Q94eMnGI",
+	"_key": "!items!tplKQpO6Q94eMnGI",
+	"effects": [
+		"ZdO7fIT4Y62U19ut"
+	],
+	"folder": null,
+	"img": "icons/weapons/staves/staff-forest-jewel.webp",
+	"name": "Spell Effect: Instill",
+	"system": {
+		"category": "effect",
+		"description": "<p>One weapon you wield is imbued with life force. It becomes a +1 weapon for the spell's duration.</p><p>If the weapon is a staff, it deals d6 damage instead of d4.</p>",
+		"duration": {
+			"type": "rounds",
+			"value": "5"
+		},
+		"effectPanel": {
+			"show": true
+		},
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"source": {
+			"title": "cursed-scroll-4"
+		},
+		"start": {
+			"combatTime": "18.-1",
+			"value": 1
+		},
+		"tokenIcon": {
+			"show": true
+		}
+	},
+	"type": "Effect"
+}

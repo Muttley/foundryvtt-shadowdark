@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Soulbind",
 	"system": {
 		"category": "effect",
-		"description": "<p>For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p></p><p>This spell ends as soon as the target is affected by another spell.</p>",
+		"description": "<p>For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p>This spell ends as soon as the target is affected by another spell.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1

@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>As a part of casting this spell, you must ritually sacrifice a living creature of LV 2 or higher. </p><p></p><p>The target you touch gains a bonus to their next check or attack roll equal to the sacrificed creature's level.</p>",
+		"description": "<p>As a part of casting this spell, you must ritually sacrifice a living creature of LV 2 or higher. </p><p>The target you touch gains a bonus to their next check or attack roll equal to the sacrificed creature's level.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

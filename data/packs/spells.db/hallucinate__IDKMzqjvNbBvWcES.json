@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>One creature you target in near whose level is less than or equal to your own is overcome by visions of what might yet come to pass.</p><p></p><p>For the spell's duration, the target cannot act on its turn unless it passes a Wisdom check equal to your last spellcasting check.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.PLPiCgwZaEetlx5O]{Spell Effect: Hallucinate}</p>",
+		"description": "<p>One creature you target in near whose level is less than or equal to your own is overcome by visions of what might yet come to pass.</p><p>For the spell's duration, the target cannot act on its turn unless it passes a Wisdom check equal to your last spellcasting check.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.PLPiCgwZaEetlx5O]{Spell Effect: Hallucinate}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",

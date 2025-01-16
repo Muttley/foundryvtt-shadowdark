@@ -2,14 +2,16 @@
 	"_id": "r2JNgS2474vuq9oy",
 	"_key": "!items!r2JNgS2474vuq9oy",
 	"effects": [
-		"biHCltDD6IGKwBkB",
-		"wcR4lmjPbNZ5nr9N"
+		"b8uxcNgfUqCghh65",
+		"NkSmeb5HU8lr5BrM"
 	],
 	"folder": null,
 	"img": "icons/weapons/swords/sword-gold-holy.webp",
 	"name": "Spell Effect: Holy Weapon",
 	"system": {
 		"bonuses": {
+			"attackBonus": "1",
+			"damageBonus": "1",
 			"meleeAttackBonus": "1",
 			"meleeDamageBonus": "1"
 		},

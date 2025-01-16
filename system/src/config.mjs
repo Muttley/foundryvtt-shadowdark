@@ -114,7 +114,7 @@ SHADOWDARK.NPC_MOVES = {
 	none: "SHADOWDARK.npc_move.none",
 	close: "SHADOWDARK.npc_move.close",
 	near: "SHADOWDARK.npc_move.near",
-	doubleNear: "SHADOWDARK.npc_move.double_near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	tripleNear: "SHADOWDARK.npc_move.triple_near",
 	far: "SHADOWDARK.npc_move.far",
 	special: "SHADOWDARK.npc_move.special",
@@ -212,6 +212,7 @@ SHADOWDARK.EFFECT_TRANSLATIONS = {
 	"system.bonuses.meleeDamageBonus": "SHADOWDARK.talent.type.melee_damage_bonus",
 	"system.bonuses.rangedAttackBonus": "SHADOWDARK.talent.type.ranged_attack_bonus",
 	"system.bonuses.rangedDamageBonus": "SHADOWDARK.talent.type.ranged_damage_bonus",
+	"system.bonuses.stoneSkinTalent": "SHADOWDARK.talent.type.stoneSkinTalent",
 	"system.bonuses.spellcastingCheckBonus": "SHADOWDARK.talent.type.spell_bonus",
 	"system.bonuses.spellcastingClasses": "SHADOWDARK.talent.type.bonus_caster_classes",
 	"system.bonuses.weaponMastery": "SHADOWDARK.talent.type.weapon_mastery",
@@ -440,6 +441,13 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
+	stoneSkinTalent: {
+		defaultValue: 1,
+		effectKey: "system.bonuses.stoneSkinTalent",
+		icon: "icons/magic/earth/strike-fist-stone-gray.webp",
+		name: "SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent",
+		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+	},
 	unarmoredAcBonus: {
 		defaultValue: 1,
 		effectKey: "system.bonuses.unarmoredAcBonus",
@@ -531,10 +539,12 @@ SHADOWDARK.DURATION_UNITS = {
 
 SHADOWDARK.SPELL_RANGES = {
 	self: "SHADOWDARK.range.self",
+	touch: "SHADOWDARK.range.touch",
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	far: "SHADOWDARK.range.far",
-	touch: "SHADOWDARK.range.touch",
+	oneMile: "SHADOWDARK.range.oneMile",
 	samePlane: "SHADOWDARK.range.samePlane",
 	unlimited: "SHADOWDARK.range.unlimited",
 };

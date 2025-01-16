@@ -10,10 +10,10 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
-		"description": "<p>The roots of the life-giving World Tree wrap around the soul of a creature you touch.</p><p></p><p>For the spell's duration, the target can't be brought below 1 HP.</p><p></p><p>@UUID[Compendium.shadowdark.spell-effects.Item.FDyJAnR0Fk9cZZEf]{Spell Effect: World Tree}</p>",
+		"description": "<p>The roots of the life-giving World Tree wrap around the soul of a creature you touch.</p><p>For the spell's duration, the target can't be brought below 1 HP.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.FDyJAnR0Fk9cZZEf]{Spell Effect: World Tree}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"lost": false,
 		"predefinedEffects": "",
