@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus för Avstånds
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Fördel vid Besvärjelsekast
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus för Besvärjelsekast
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: AC Bonus utan rustning
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus för Vapenattack
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus för vapenskada
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Vapen
 SHADOWDARK.property.type.title: Typ av egenskap
 SHADOWDARK.range.close_short: K
 SHADOWDARK.range.close: Kroppsnära
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: A
 SHADOWDARK.range.far: Avstånd
 SHADOWDARK.range.near_short: "N"
 SHADOWDARK.range.near: Nära
 SHADOWDARK.range.nearLine_short: NL
 SHADOWDARK.range.nearLine: Nära Linje
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Mile
 SHADOWDARK.range.samePlane_short: SM
 SHADOWDARK.range.samePlane: På samma plan
 SHADOWDARK.range.self_short: K
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Använd brygd
 SHADOWDARK.sheet.player.tooltip.use_scroll: Använd scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Använd trollspö
 SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard och Ranger"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Kärnregler"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Bonus för Närstridsskada
 SHADOWDARK.talent.type.ranged_attack_bonus: Bonus för Avståndsattack
 SHADOWDARK.talent.type.ranged_damage_bonus: Bonus för Avståndsskada
 SHADOWDARK.talent.type.spell_bonus: Bonus för Besvärjelsekast
+SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Talangtyp(er)
 SHADOWDARK.talent.type.weapon_mastery: Vapenmästeri
 SHADOWDARK.tours.lightsource.notification.not_enabled: Du måste aktivera Lightsource Tracker i inställningarna för att kunna köra den guidade turen
