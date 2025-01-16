@@ -8,6 +8,9 @@
 - [#976] Unable to delete items from gem bag
 - [#979] Shune the Vile missing form Deity list
 
+## Chores
+- [#989] Update node packages to latest for build process
+
 ---
 
 # v3.2.3
