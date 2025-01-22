@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: 원거리 피해 보
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 주문시전에 유리함
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 주문시전 판정 보너스
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 무기 명중 굴림 보너스
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 무기 명중 피해 보너스
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Weapon
 SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: 인접
 SHADOWDARK.range.close: 인접
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: 장거리
 SHADOWDARK.range.far: 장거리
 SHADOWDARK.range.near_short: "단거리"
 SHADOWDARK.range.near: 단거리
 SHADOWDARK.range.nearLine_short: 직선
 SHADOWDARK.range.nearLine: 단거리 직선
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Mile
 SHADOWDARK.range.samePlane_short: 차원
 SHADOWDARK.range.samePlane: 같은 차원 내
 SHADOWDARK.range.self_short: 자신
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용
 SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
 SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
 SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "섀도다크 RPG: 바드와 레인저"
 SHADOWDARK.source.core-rules: "섀도다크 RPG: 코어 룰북"
 SHADOWDARK.source.cursed-scroll-1: 커스드 스크롤 Vol.1, 다이어블러리!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: 근접 피해 굴림 보너스
 SHADOWDARK.talent.type.ranged_attack_bonus: 원거리 명중 굴림 보너스
 SHADOWDARK.talent.type.ranged_damage_bonus: 원거리 피해 굴림 보너스
 SHADOWDARK.talent.type.spell_bonus: 주문시전 보너스
+SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: 재능 유형
 SHADOWDARK.talent.type.weapon_mastery: 무기 숙달
 SHADOWDARK.tours.lightsource.notification.not_enabled: 길잡이 투어를 실행하려면 빛 트래커를 활성화해야 합니다

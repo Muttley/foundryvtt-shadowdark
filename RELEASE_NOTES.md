@@ -1,3 +1,14 @@
+# v3.3.1
+
+## Bugfixes
+- [#993] The add Treasure dialog prompt not rendering correctly
+- [#995] Shadowdarkling importer not importing character class
+
+## Chores
+- [#992] Merge i18n translation updates from Crowdin
+
+---
+
 # v3.3.0
 
 ## Enhancements
