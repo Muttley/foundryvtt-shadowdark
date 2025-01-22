@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Бонус к уро
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Преимущество при колдовстве заклинания
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Бонус к проверке колдовства
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Бонус к КЗ без доспехов
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Бонус к броску атаки оружием
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Бонус к урону атаки оружием
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Оружие
 SHADOWDARK.property.type.title: Тип свойства
 SHADOWDARK.range.close_short: В
 SHADOWDARK.range.close: Вплотную
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: Д
 SHADOWDARK.range.far: Дальняя
 SHADOWDARK.range.near_short: "Б"
 SHADOWDARK.range.near: Ближняя
 SHADOWDARK.range.nearLine_short: БЛ
 SHADOWDARK.range.nearLine: Ближняя линия
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Mile
 SHADOWDARK.range.samePlane_short: ОП
 SHADOWDARK.range.samePlane: На одном плане
 SHADOWDARK.range.self_short: С
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Использовать зелье
 SHADOWDARK.sheet.player.tooltip.use_scroll: Использовать свиток
 SHADOWDARK.sheet.player.tooltip.use_wand: Использовать жезл
 SHADOWDARK.sheet.player.xp: Опыт
+SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "Shadowdark НРИ: Бард и Следопыт"
 SHADOWDARK.source.core-rules: "Shadowdark НРИ: Основные правила"
 SHADOWDARK.source.cursed-scroll-1: Проклятый свиток том 1, Дьявольщина!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Бонус к броску рукоп
 SHADOWDARK.talent.type.ranged_attack_bonus: Бонус к броску дальней атаки
 SHADOWDARK.talent.type.ranged_damage_bonus: Бонус к броску дальнего урона
 SHADOWDARK.talent.type.spell_bonus: Бонус к накладыванию заклинаний
+SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Тип(ы) таланта
 SHADOWDARK.talent.type.weapon_mastery: Мастерство оружия
 SHADOWDARK.tours.lightsource.notification.not_enabled: Вам нужно включить отслеживание источников света в настройках, чтобы иметь возможность запустить тур

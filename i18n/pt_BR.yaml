@@ -89,7 +89,7 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: 3. Clique em Importar Item.
 SHADOWDARK.apps.item-importer.title: Importar Item
 SHADOWDARK.apps.level-up.dragdrop: Arraste e Solte Aqui
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Benefício de Patrono como a Tabela configurada não pôde ser carregada
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Benefício de Patrono, pois a Tabela configurada não pôde ser carregada
 SHADOWDARK.apps.level-up.hit_points: Pontos de Vida
 SHADOWDARK.apps.level-up.level_up: Subir de Nível!
 SHADOWDARK.apps.level-up.leveling_to: Subindo para o nível
@@ -357,8 +357,8 @@ SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi se
 SHADOWDARK.error.general.no_character_selected: Nenhum personagem selecionado
 SHADOWDARK.error.patron.no_supported_class: Não foi possível adicionar Patrono, pois a classe atualmente configurada não permite
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
-SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
-SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
+SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode lançar feitiços dessa classe
+SHADOWDARK.error.spells.unable_to_use_item: Você não pode usar itens mágicos
 SHADOWDARK.error.too_many_tokens_selected: Muitos tokens selecionados
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bônus de Dano à Di
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Vantagem na Conjuração da Magia
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bônus no Teste de Conjuração
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bônus de Classe conjuradora
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Talento Pele de Pedra
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bônus de CA Sem Armadura
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bônus de Ataque de Arma
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bônus de Dano de Arma
@@ -485,7 +486,7 @@ SHADOWDARK.item.inventory_per_slot: Máx por Espaço
 SHADOWDARK.item.inventory_quantity: Quantidade
 SHADOWDARK.item.inventory_slots: Espaços por item
 SHADOWDARK.item.level: Nível
-SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
+SHADOWDARK.item.light.in_use_tooltip: Este campo não pode ser editado enquanto a luz estiver ativa
 SHADOWDARK.item.light.is_source: Fonte de Luz
 SHADOWDARK.item.light.longevity: Longevidade (Min)
 SHADOWDARK.item.light.remaining: Restante (Min)
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo da Propriedade
 SHADOWDARK.range.close_short: A
 SHADOWDARK.range.close: Adjacente
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: L
 SHADOWDARK.range.far: Longe
 SHADOWDARK.range.near_short: "P"
 SHADOWDARK.range.near: Próximo
 SHADOWDARK.range.nearLine_short: PL
 SHADOWDARK.range.nearLine: Próximo em Linha
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Milha
 SHADOWDARK.range.samePlane_short: MP
 SHADOWDARK.range.samePlane: No mesmo plano
 SHADOWDARK.range.self_short: V
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Usar Poção
 SHADOWDARK.sheet.player.tooltip.use_scroll: Usar Pergaminho
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar Varinha
 SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.sheet.special_abilities.label: Habilidades Especiais
 SHADOWDARK.source.bard-and-ranger: "RPG Shadowdark: Bardo e Patrulheiro"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Bônus de Dano Corpo-a-Corpo
 SHADOWDARK.talent.type.ranged_attack_bonus: Bônus de Ataque à Distância
 SHADOWDARK.talent.type.ranged_damage_bonus: Bônus de Dano à Distância
 SHADOWDARK.talent.type.spell_bonus: Bônus de Conjuração
+SHADOWDARK.talent.type.stoneSkinTalent: Talento Pele de Pedra
 SHADOWDARK.talent.type.title: Tipo(s) de Talento
 SHADOWDARK.talent.type.weapon_mastery: Maestria com Arma
 SHADOWDARK.tours.lightsource.notification.not_enabled: Você precisa ativar o Monitor de Fonte de Luz nas configurações para poder executar o Tour

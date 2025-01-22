@@ -463,6 +463,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Kantama-aseiden vahi
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Tietyn loitsun loihtiminen edun kanssa
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Loihtimisbonus
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Puolustuspistebonus ilman panssaria
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Aseellisen hyökkäysheiton bonus
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Aseellisen vahinkoheiton bonus
@@ -609,12 +610,15 @@ SHADOWDARK.property.type.option.weapon: Ase
 SHADOWDARK.property.type.title: Ominaisuuden tyyppi
 SHADOWDARK.range.close_short: V
 SHADOWDARK.range.close: Vieressä
+SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: K
 SHADOWDARK.range.far: Kaukana
 SHADOWDARK.range.near_short: "L"
 SHADOWDARK.range.near: Lähellä
 SHADOWDARK.range.nearLine_short: LL
 SHADOWDARK.range.nearLine: '"Lähellä" linja'
+SHADOWDARK.range.oneMile_short: 1mi
+SHADOWDARK.range.oneMile: 1 Mile
 SHADOWDARK.range.samePlane_short: SU
 SHADOWDARK.range.samePlane: Samassa ulottuvuudessa
 SHADOWDARK.range.self_short: I
@@ -781,6 +785,7 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Käytä rohto
 SHADOWDARK.sheet.player.tooltip.use_scroll: Käytä loitsukäärö
 SHADOWDARK.sheet.player.tooltip.use_wand: Käytä taikasauvaa
 SHADOWDARK.sheet.player.xp: Kokemuspisteet
+SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Trubaduuri ja Samooja"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Ydinsäännöt"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol. 1, Diablerie!
@@ -825,6 +830,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Lähitaistelun vahinkoheittoihin bonu
 SHADOWDARK.talent.type.ranged_attack_bonus: Kantama-aseiden hyökkäysheittoihin bonus
 SHADOWDARK.talent.type.ranged_damage_bonus: Kantama-aseiden vahinkoheittoihin bonus
 SHADOWDARK.talent.type.spell_bonus: Loihtimisbonus
+SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Lahjakkuustyypit
 SHADOWDARK.talent.type.weapon_mastery: Asemestaruus
 SHADOWDARK.tours.lightsource.notification.not_enabled: Sinun täytyy ottaa valonlähteiden seuranta käyttöön asetuksissa, jotta voit suorittaa opastuskierroksen
