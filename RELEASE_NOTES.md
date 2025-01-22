@@ -2,6 +2,7 @@
 
 ## Bugfixes
 - [#993] The add Treasure dialog prompt not rendering correctly
+- [#995] Shadowdarkling importer not importing character class
 
 ---
 
