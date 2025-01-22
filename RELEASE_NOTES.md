@@ -1,3 +1,10 @@
+# v3.x.x
+
+## Bugfixes
+- [#993] The add Treasure dialog prompt not rendering correctly
+
+---
+
 # v3.3.0
 
 ## Enhancements
