@@ -194,7 +194,7 @@ SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
 SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
 SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG für Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Wurf
@@ -677,7 +677,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Wenn aktiviert, wi
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Licht-Tracking pausieren
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
