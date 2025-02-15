@@ -1,3 +1,10 @@
+# v3.4.0
+
+## Bugfixes
+- [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
+
+---
+
 # v3.3.1
 
 ## Bugfixes
