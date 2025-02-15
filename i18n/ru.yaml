@@ -194,7 +194,7 @@ SHADOWDARK.chat.welcome_message.arcane_library: Поддержите The Arcane 
 SHADOWDARK.chat.welcome_message.issues_button: Трекер проблем
 SHADOWDARK.chat.welcome_message.issues_text: "Если вы обнаружили какие-либо проблемы или у вас есть идеи для новых функций системы, посетите наш трекер проблем."
 SHADOWDARK.chat.welcome_message.issues: Сообщить о проблемах
-SHADOWDARK.chat.welcome_message.title_text: Добро пожаловать в Shadowdark RPG. Вот некоторые ресурсы, чтобы начать.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG для Foundry
 SHADOWDARK.chat.welcome_message.watch: Посмотрите видео-руководство
 SHADOWDARK.chatcard.default: Бросок
@@ -677,7 +677,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Если отме�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Приостанавливать отслеживание света
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Если отмечено, отслеживание света будет следовать реальному времени. Отключите, если используется внешний модуль времени/календаря
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Отслеживание света в реальном времени
-SHADOWDARK.settings.use_clockwise_initiative.hint: Если отмечено, участник с наивысшим броском инициативы будет ходить первым, а все остальные участники будут следовать в фиксированном порядке. Все NPC будут сгруппированы вместе в порядке инициативы
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Использовать инициативу по часовой стрелке
 SHADOWDARK.settings.use_pulp_mode.hint: Показывает жетоны Удачи как числовое значение, а не как флажок
 SHADOWDARK.settings.use_pulp_mode.name: Включить режим Pulp

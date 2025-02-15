@@ -194,7 +194,7 @@ SHADOWDARK.chat.welcome_message.arcane_library: 'Tue Shadowdarkin kehittäjää:
 SHADOWDARK.chat.welcome_message.issues_button: Virheiden seurantajärjestelmä
 SHADOWDARK.chat.welcome_message.issues_text: "Tutustu virheiden seurantajärjestelmäämme, jos löydät ongelmia järjestelmässä tai sinulla on ideoita uusille ominaisuuksille."
 SHADOWDARK.chat.welcome_message.issues: Raportoi ongelmasta
-SHADOWDARK.chat.welcome_message.title_text: Tervetuloa Shadowdark roolipeliin. Tässä on muutamia resursseja aloittelijoille.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG foundrylle
 SHADOWDARK.chat.welcome_message.watch: Katso opastusvideo
 SHADOWDARK.chatcard.default: Heitä noppaa
@@ -677,7 +677,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset täm�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
-SHADOWDARK.settings.use_clockwise_initiative.hint: Jos tämä on valittu niin korkeimman aloiteheiton heittänyt aloittaa ja muut seuraavat kiinteässä järjestyksessä. Kaikki muut paitsi pelaajahahmot toimivat samalla vuorolla.
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Käytä myötäpäiväistä järjestystä
 SHADOWDARK.settings.use_pulp_mode.hint: Näytä tuuripisteet numeerisena arvona ruksin sijaan
 SHADOWDARK.settings.use_pulp_mode.name: Ota "Pulp"-tila käyttöön

@@ -194,7 +194,7 @@ SHADOWDARK.chat.welcome_message.arcane_library: Apoie The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Monitor de Problemas
 SHADOWDARK.chat.welcome_message.issues_text: "Se você encontrar quaisquer problemas ou tiver ideias para novas funcionalidades para o sistema, confira nosso rastreador de problemas."
 SHADOWDARK.chat.welcome_message.issues: Reportar Problemas
-SHADOWDARK.chat.welcome_message.title_text: Bem vindo ao RPG Shadowdark. Aqui estão alguns recursos para você começar.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: RPG Shadowdark para o Foundry
 SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Rolar
@@ -677,7 +677,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Se marcado, o Moni
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar Monitoramento de Luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Se marcado, o Monitoramento de Luz seguirá em tempo real. Desative se um módulo de hora/calendário externo for usado.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Monitoramento de Luz em Tempo Real
-SHADOWDARK.settings.use_clockwise_initiative.hint: Se marcado, o combatente com o maior rolagem de iniciativa vai primeiro e todos os outros combatentes seguirão em ordem fixa. Todos os PDMs serão agrupados na ordem de iniciativa.
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Usar Iniciativa Horária
 SHADOWDARK.settings.use_pulp_mode.hint: Mostra tokens de Sorte como um valor numérico em vez de uma caixa de seleção
 SHADOWDARK.settings.use_pulp_mode.name: Habilitar modo Pulp
