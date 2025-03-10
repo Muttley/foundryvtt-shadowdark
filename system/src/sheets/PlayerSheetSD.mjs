@@ -890,19 +890,26 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						i.system.light.remainingSecs / 60
 					);
 
-					// construct time remaing progress bar
-					const maxSeconds = i.system.light.longevityMins * 60;
-					i.lightSourceProgress = "◆";
-					for (let x = 1; x < 4; x++) {
-						if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
-							i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
-						}
-						else {
-							i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
+					const lightRemainingSetting = (game.user.isGM)? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
+
+					if (lightRemainingSetting > 0) {
+						// construct time remaing progress bar
+						const maxSeconds = i.system.light.longevityMins * 60;
+						i.lightSourceProgress = "◆";
+						for (let x = 1; x < 4; x++) {
+							if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
+								i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
+							}
+							else {
+								i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
+							}
 						}
 					}
 
-					if (i.system.light.remainingSecs < 60) {
+					if (lightRemainingSetting < 2) {
+						i.lightSourceTimeRemaining = "";
+					}
+					else if (i.system.light.remainingSecs < 60) {
 						i.lightSourceTimeRemaining = game.i18n.localize(
 							"SHADOWDARK.inventory.item.light_seconds_remaining"
 						);
