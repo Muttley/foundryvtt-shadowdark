@@ -3,6 +3,7 @@
 ## Bugfixes
 - [#998] Character generator Stats not translatable
 - [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
+- [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
 
 ---
 
