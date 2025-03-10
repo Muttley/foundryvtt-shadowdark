@@ -677,6 +677,11 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Jos valitset täm�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pauseta valonlähteiden seuranta
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Jos valitset tämän, valonlähteet seuraa oikeaa aikaa. Poista tämä valinta jos käytät aika- tai kalenteri-moduuleja.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Reaaliaikainen valolähteiden aika
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
 SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Käytä myötäpäiväistä järjestystä
 SHADOWDARK.settings.use_pulp_mode.hint: Näytä tuuripisteet numeerisena arvona ruksin sijaan
