@@ -677,6 +677,11 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Если отме�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Приостанавливать отслеживание света
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Если отмечено, отслеживание света будет следовать реальному времени. Отключите, если используется внешний модуль времени/календаря
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Отслеживание света в реальном времени
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
 SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Использовать инициативу по часовой стрелке
 SHADOWDARK.settings.use_pulp_mode.hint: Показывает жетоны Удачи как числовое значение, а не как флажок
