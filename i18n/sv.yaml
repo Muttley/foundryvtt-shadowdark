@@ -677,7 +677,7 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Om markerad kommer
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårning
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Spåra ljuskällor realtid
-SHADOWDARK.settings.use_clockwise_initiative.hint: Om vald kommer stridande med den högsta initiativ att gå först, och alla andra stridande kommer att följa i en fast ordning. Alla SLPer kommer att grupperas tillsammans i initiativordningen.
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Använd medsols initiativ
 SHADOWDARK.settings.use_pulp_mode.hint: Visar tur-tokens som ett numeriskt värde istället för en kryssruta
 SHADOWDARK.settings.use_pulp_mode.name: Aktivera pulp-läge
