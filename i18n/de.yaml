@@ -80,18 +80,18 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Sekunden verbl
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Wochen verbleibend"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Jahre verbleibend"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Rechtsklick] Effekt entfernen"
-SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
+SHADOWDARK.apps.item-importer.import_button: Element importieren
+SHADOWDARK.apps.item-importer.instruction1: 1. Kopieren Sie den Text des Elementes aus dem Quellmaterial.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
 SHADOWDARK.apps.item-importer.instruction2b: Item Name
 SHADOWDARK.apps.item-importer.instruction2c: Flavor text
-SHADOWDARK.apps.item-importer.instruction2d: Features
-SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
-SHADOWDARK.apps.item-importer.title: Import Item
+SHADOWDARK.apps.item-importer.instruction2d: Merkmale
+SHADOWDARK.apps.item-importer.instruction3: 3. Klicken Sie auf Element importieren.
+SHADOWDARK.apps.item-importer.title: Element importieren
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
-SHADOWDARK.apps.level-up.hit_points: Hit Points
-SHADOWDARK.apps.level-up.level_up: Level Up!
+SHADOWDARK.apps.level-up.hit_points: Trefferpunkte
+SHADOWDARK.apps.level-up.level_up: Neue Stufe!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
 SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
@@ -134,18 +134,18 @@ SHADOWDARK.apps.solodark.question1: What is the question?
 SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
 SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
 SHADOWDARK.apps.solodark.title: SoloDark
-SHADOWDARK.apps.spell-book.known: Known
+SHADOWDARK.apps.spell-book.known: Bekannt
 SHADOWDARK.apps.spell-book.title: Class Spell List
-SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
+SHADOWDARK.apps.spell-importer.import_button: Zauber importieren
+SHADOWDARK.apps.spell-importer.instruction1: 1. Kopiere den Text des Zaubers aus dem Quellmaterial.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
-SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
-SHADOWDARK.apps.spell-importer.instruction2d: Duration
-SHADOWDARK.apps.spell-importer.instruction2e: Range
-SHADOWDARK.apps.spell-importer.instruction2f: Description
-SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
-SHADOWDARK.apps.spell-importer.title: Import Spell
+SHADOWDARK.apps.spell-importer.instruction2b: Name des Zaubers
+SHADOWDARK.apps.spell-importer.instruction2c: Stufe und Klasse
+SHADOWDARK.apps.spell-importer.instruction2d: Dauer
+SHADOWDARK.apps.spell-importer.instruction2e: Distanz
+SHADOWDARK.apps.spell-importer.instruction2f: Beschreibung
+SHADOWDARK.apps.spell-importer.instruction3: 3. Klicken sie "Zauber importieren."
+SHADOWDARK.apps.spell-importer.title: Zauber importieren
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
@@ -165,7 +165,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Sekundären Schaden anwende
 SHADOWDARK.chat_card.context.apply_damage: Schaden anwenden
 SHADOWDARK.chat_card.context.apply_healing_secondary: Sekundäre Heilung anwenden
 SHADOWDARK.chat_card.context.apply_healing: Heilung anwenden
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Da {name} am höchsten gewürfelt hat, wird er/sie zuerst an der Reihe sein. Alle anderen Kämpfer folgen in festgelegter Reihenfolge.
 SHADOWDARK.chat.hp_roll.apply_to_max: Zu Max HP hinzufügen
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
