@@ -623,8 +623,6 @@ export default class ItemSheetSD extends ItemSheet {
 			.split(".")
 			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
 
-		console.log(currentChoices);
-
 		if (currentChoices.includes(uuid)) return; // No duplicates
 
 		currentChoices.push(uuid);
