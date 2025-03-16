@@ -28,6 +28,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				fixed: [],
 				selection: [],
 			},
+			classAbilities: [],
 			editing: false,
 			gearSelected: [],
 			level0: true,
@@ -375,6 +376,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
+		// add class abilities
+		for (const classAbilityItem of this.formData.classAbilities) {
+			allItems.push(await fromUuid(classAbilityItem.uuid));
+		}
+
 		// load talents with selection of options
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
@@ -577,6 +583,19 @@ export default class CharacterGeneratorSD extends FormApplication {
 			(a, b) => a.name < b.name ? -1 : 1);
 
 		talentData = [];
+
+		// grab starting class abilities from class item
+		let abilityData = [];
+
+		if (classObj.system.classAbilities) {
+			for (const ability of classObj.system.classAbilities) {
+				let abilityObj = await fromUuid(ability);
+				let fDesc = await this._formatDescription(abilityObj.system.description);
+				abilityObj.formattedDescription = fDesc;
+				abilityData.push(abilityObj);
+			}
+		}
+		this.formData.classAbilities = abilityData;
 
 		// grab choice talents from class item
 		if (classObj.system.talentChoices) {
