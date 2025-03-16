@@ -21,9 +21,7 @@ SHADOWDARK.ancestry.languages.prompt: Select Language...
 SHADOWDARK.ancestry.nametable.label: Random Name Table
 SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
 SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
-SHADOWDARK.ancestry.nametable.tooltip.weight: >-
-  Affects the chance of rolling when using the Character Generator. Higher
-  values increase chance. Default value is 1.
+SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
 SHADOWDARK.app.active_effects.title: Active Effects
@@ -74,14 +72,14 @@ SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Second Remaining
 SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Week Remaining
 SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Year Remaining
 SHADOWDARK.apps.effect_panel.duration_label.unlimited: Unlimited Duration
-SHADOWDARK.apps.effect_panel.duration_label.x_days: '{days} Days Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_hours: '{hours} Hours Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_minutes: '{minutes} Minutes Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_rounds: '{rounds} Rounds Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_seconds: '{seconds} Seconds Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_weeks: '{weeks} Weeks Remaining'
-SHADOWDARK.apps.effect_panel.duration_label.x_years: '{years} Years Remaining'
-SHADOWDARK.apps.effect_panel.right_click_to_remove: '[Right click] Remove effect'
+SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} Days Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Hours Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minutes Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} Rounds Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
+SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
 SHADOWDARK.apps.item-importer.import_button: Import Item
 SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
@@ -104,9 +102,7 @@ SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
-SHADOWDARK.apps.monster-importer.instruction2a: >-
-  2. Paste text into the text box following the monster format shown in the core
-  rules. Add a blank line between each ability.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
 SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
 SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
 SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
@@ -133,9 +129,7 @@ SHADOWDARK.apps.solodark.button1: Unlikely or Impossible
 SHADOWDARK.apps.solodark.button2: Even Chance
 SHADOWDARK.apps.solodark.button3: Likely or Certain
 SHADOWDARK.apps.solodark.oracle: The Oracle
-SHADOWDARK.apps.solodark.phrasing: >-
-  Ask your question with affirmative phrasing. Instead of asking, "Are there no
-  orcs in this room?" ask, "Are there orcs in this room?"
+SHADOWDARK.apps.solodark.phrasing: Ask your question with affirmative phrasing. Instead of asking, "Are there no orcs in this room?" ask, "Are there orcs in this room?"
 SHADOWDARK.apps.solodark.question1: What is the question?
 SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
 SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
@@ -144,9 +138,7 @@ SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
-SHADOWDARK.apps.spell-importer.instruction2a: >-
-  2. Paste text into this box following the spell format shown in the core
-  rules.
+SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
 SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
 SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
 SHADOWDARK.apps.spell-importer.instruction2d: Duration
@@ -173,15 +165,13 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
 SHADOWDARK.chat_card.context.apply_damage: Apply Damage
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
-SHADOWDARK.chat.clockwise_initiative: >-
-  Since {name} rolled highest, they will go first, and all other combatants will
-  follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
-SHADOWDARK.chat.light_source.expired: '{name}''s {lightSource} expired'
+SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining
 SHADOWDARK.chat.light_source.seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.chat.light_source.source.all: All light sources went out
@@ -189,26 +179,22 @@ SHADOWDARK.chat.light_source.source.dropped: was dropped
 SHADOWDARK.chat.light_source.source.picked_up: was picked up
 SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
-SHADOWDARK.chat.light_source.went_out: '{name}''s {lightSource} went out'
-SHADOWDARK.chat.potion_used: '{name} used a Potion'
-SHADOWDARK.chat.spell_learn.failure: '{name} failed to learn anything from the scroll'
-SHADOWDARK.chat.spell_learn.success: '{name} successfully learnt the {spellName} spell'
+SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
+SHADOWDARK.chat.potion_used: "{name} used a Potion"
+SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
+SHADOWDARK.chat.spell_learn.success: "{name} successfully learnt the {spellName} spell"
 SHADOWDARK.chat.spell_learn.title: Learning Spell
-SHADOWDARK.chat.spell_roll.title: '{name}, DC {spellDC}'
-SHADOWDARK.chat.use_ability.failure: '{name} failed to use the {ability} ability'
-SHADOWDARK.chat.use_ability.success: '{name} successfully used the {ability} ability'
-SHADOWDARK.chat.use_ability.title: Using Ability
+SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
+SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability"
+SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
+SHADOWDARK.chat.use_ability.title: "Using Ability"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
-SHADOWDARK.chat.welcome_message.arcane_library_text: >-
-  Visit the Arcane Library website for official Shadowdark PDFs, books and
-  merch.
+SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues_text: >-
-  If you find any issues or have ideas for new features for the system, check
-  out our issue tracker.
+SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
 SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG for Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Roll
@@ -263,8 +249,8 @@ SHADOWDARK.class.wizard: Wizard
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.damage.one_handed: 'One-Handed Damage:'
-SHADOWDARK.damage.two_handed: 'Two-Handed Damage:'
+SHADOWDARK.damage.one_handed: "One-Handed Damage:"
+SHADOWDARK.damage.two_handed: "Two-Handed Damage:"
 SHADOWDARK.dialog.ability_check.cha: Charisma Check
 SHADOWDARK.dialog.ability_check.con: Constitution Check
 SHADOWDARK.dialog.ability_check.dex: Dexterity Check
@@ -289,13 +275,13 @@ SHADOWDARK.dialog.effect.choice.weapon: Choose Weapon Type
 SHADOWDARK.dialog.effect.choices.title: Effect Parameters
 SHADOWDARK.dialog.general.are_you_sure: Are you sure?
 SHADOWDARK.dialog.general.cancel: Cancel
-SHADOWDARK.dialog.general.no: 'No'
+SHADOWDARK.dialog.general.no: "No"
 SHADOWDARK.dialog.general.select: Select
-SHADOWDARK.dialog.general.yes: 'Yes'
+SHADOWDARK.dialog.general.yes: "Yes"
 SHADOWDARK.dialog.gm: Gamemaster
 SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
 SHADOWDARK.dialog.hp_roll.per_level: Roll HP for level {level}
-SHADOWDARK.dialog.hp_roll.previous_hp: 'HP before rolling: {hp}'
+SHADOWDARK.dialog.hp_roll.previous_hp: "HP before rolling: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Rolled {hp} hp for level 1 (incl. con mod)
 SHADOWDARK.dialog.hp_roll.roll_per_level: Rolled {hp} hp for level {level}
 SHADOWDARK.dialog.hp_roll.sum_total: For a new max HP of {total} hp
@@ -319,9 +305,7 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling mode
 SHADOWDARK.dialog.roll: Roll
-SHADOWDARK.dialog.scroll.learn_spell_class_warning: >-
-  WARNING: This spell is not of the same class as the character, are you sure
-  you wish to try and learn it?
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
 SHADOWDARK.dialog.select_ancestry.title: Choose Ancestry
@@ -392,7 +376,7 @@ SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.equipped_gear: Equipped Gear
 SHADOWDARK.inventory.gear: Gear
 SHADOWDARK.inventory.gems: Gems
-SHADOWDARK.inventory.item.light_remaining: '{timeRemaining} Minutes Remaining'
+SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (used)
 SHADOWDARK.inventory.label.quantity: Qty
@@ -600,7 +584,7 @@ SHADOWDARK.light-tracker.paused: Paused
 SHADOWDARK.light-tracker.status.label: Status
 SHADOWDARK.light-tracker.title: Light Tracker
 SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
-SHADOWDARK.macro.error.caught_error: 'The ''{macro}'' macro failed with the following error: {error}'
+SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
 SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
@@ -629,7 +613,7 @@ SHADOWDARK.range.close: Close
 SHADOWDARK.range.double_near: Double Near
 SHADOWDARK.range.far_short: F
 SHADOWDARK.range.far: Far
-SHADOWDARK.range.near_short: 'N'
+SHADOWDARK.range.near_short: "N"
 SHADOWDARK.range.near: Near
 SHADOWDARK.range.nearLine_short: NL
 SHADOWDARK.range.nearLine: Near Line
@@ -643,31 +627,25 @@ SHADOWDARK.range.touch_short: T
 SHADOWDARK.range.touch: Touch
 SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unlimited
-SHADOWDARK.roll.advantage_title: '{title} with Advantage'
+SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
 SHADOWDARK.roll.D20: Roll D20
-SHADOWDARK.roll.damage: 'Damage Roll:'
-SHADOWDARK.roll.disadvantage_title: '{title} with Disadvantage'
+SHADOWDARK.roll.damage: "Damage Roll:"
+SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
 SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.settings.consume_ammunition.hint: >-
-  Automatically adjust ammunition for weapons that use it when an attack roll is
-  made
+SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
-SHADOWDARK.settings.effect_panel.show_passive.hint: >-
-  If checked, the Effect Panel will also show active effects from talents and
-  items
+SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
-SHADOWDARK.settings.migrateSystemCompendiums.hint: >-
-  Perform data migration on the built in Shadowdark RPG system compendiums
-  (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
 SHADOWDARK.settings.module_art.label: Configure Art
@@ -675,31 +653,20 @@ SHADOWDARK.settings.module_art.name: Module-provided Art
 SHADOWDARK.settings.module_art.save: Save Changes
 SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
 SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
-SHADOWDARK.settings.schemaVersion.hint: >-
-  Records the current schema version for the Shadowdark RPG system data. (don't
-  modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.schemaVersion.name: Schema Version
 SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
 SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
-SHADOWDARK.settings.source_filter.hint: >-
-  If populated, only book sources included in this list will be available for
-  selection in relevant places. Items with no book source set will always be
-  available.
+SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
 SHADOWDARK.settings.source_filter.name: Source Filter
 SHADOWDARK.settings.source_filter.prompt: Select Source...
 SHADOWDARK.settings.source_filter.save_button: Save Configuration
 SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
 SHADOWDARK.settings.source_filter.title: Book Source Filters
-SHADOWDARK.settings.systemVersion.hint: >-
-  Records the current Shadowdark RPG system version number. (don't modify this
-  unless you know what you are doing)
+SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.systemVersion.name: System Version
-SHADOWDARK.settings.track_light_sources.hint: >-
-  If checked the system will track and update the time remaining on any active
-  light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: >-
-  If checked light sources belonging to inactive (not logged in) users will
-  still be tracked
+SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
 SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
@@ -708,14 +675,14 @@ SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
-SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: >-
-  If checked the Light Tracking will follow real time. Disable if an external
-  time/calendar module is used.
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
-SHADOWDARK.settings.use_clockwise_initiative.hint: >-
-  If checked the combatant with the highest iniative roll will go first, and all
-  other combatants will follow in a fixed order. All NPCs will be grouped
-  together in the initiative order.
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
@@ -767,16 +734,12 @@ SHADOWDARK.sheet.npc.specials_label: Special Attacks
 SHADOWDARK.sheet.npc.tab.abilities: Abilities
 SHADOWDARK.sheet.npc.tab.description: Description
 SHADOWDARK.sheet.npc.tab.spells: Spells
-SHADOWDARK.sheet.player.active_effect_override: >-
-  This value is being modified by an Active Effect and cannot be edited. Disable
-  the effect to edit it.
+SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
 SHADOWDARK.sheet.player.ancestry.label: Ancestry
 SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
 SHADOWDARK.sheet.player.available_spells: Available Spells
 SHADOWDARK.sheet.player.background.label: Background
-SHADOWDARK.sheet.player.background.tooltip: >-
-  Your history and past experience. You are adept at tasks related to your
-  background.
+SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
 SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Blessings
 SHADOWDARK.sheet.player.boons.label: Boons
@@ -787,9 +750,7 @@ SHADOWDARK.sheet.player.class_spells: Class Spells
 SHADOWDARK.sheet.player.class.label: Class
 SHADOWDARK.sheet.player.class.tooltip: Your character's job
 SHADOWDARK.sheet.player.deity.label: Deity
-SHADOWDARK.sheet.player.deity.tooltip: >-
-  Your character’s cosmic link to the opposing forces of Law and Chaos, or
-  balanced Neutrality.
+SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
 SHADOWDARK.sheet.player.inventory.gear.label: Gear
 SHADOWDARK.sheet.player.inventory.items.label: Items
 SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
@@ -830,15 +791,15 @@ SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.sheet.special_abilities.label: Special Abilities
-SHADOWDARK.source.bard-and-ranger: 'Shadowdark RPG: Bard and Ranger'
-SHADOWDARK.source.core-rules: 'Shadowdark RPG: Core Rules'
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard and Ranger"
+SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
 SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
 SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
 SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
-SHADOWDARK.source.quickstart: 'Shadowdark RPG: Quickstart Set'
+SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
 SHADOWDARK.spell_caster.priest: Priest
 SHADOWDARK.spell_caster.wizard: Wizard
 SHADOWDARK.spell_duration.days: Days
@@ -877,9 +838,7 @@ SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
 SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
-SHADOWDARK.tours.lightsource.notification.not_enabled: >-
-  You need to enable the Lightsource Tracker in settings to be able to run the
-  Tour
+SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
 SHADOWDARK.weapon.properties.finesse: Finesse
 SHADOWDARK.weapon.properties.loading: Loading
 SHADOWDARK.weapon.properties.thrown: Thrown
@@ -913,5 +872,3 @@ TYPES.Item.Spell: Spell
 TYPES.Item.Talent: Talent
 TYPES.Item.Wand: Wand
 TYPES.Item.Weapon: Weapon
-SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
-SHADOWDARK.class.class_ability_choices.count.label: Choice Count
