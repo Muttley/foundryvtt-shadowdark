@@ -1,0 +1,26 @@
+{
+	"_id": "KfaSyGxX13IBVmKO",
+	"_key": "!items!KfaSyGxX13IBVmKO",
+	"effects": [
+	],
+	"folder": "y6T37zGPt9EZBlPO",
+	"img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+	"name": "Hide from Creature",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, choose a creature of LV 9 or less you can see; it must pass a [[check 15 wis]] check or it can't see or hear you for 1d4 rounds.</p>",
+		"group": "Black Lotus",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

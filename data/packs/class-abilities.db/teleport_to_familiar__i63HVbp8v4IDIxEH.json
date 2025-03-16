@@ -1,0 +1,26 @@
+{
+	"_id": "i63HVbp8v4IDIxEH",
+	"_key": "!items!i63HVbp8v4IDIxEH",
+	"effects": [
+	],
+	"folder": "eHlaVwukAFsZV42p",
+	"img": "icons/magic/movement/trail-streak-zigzag-teal.webp",
+	"name": "Teleport to Familiar",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, teleport to your familiar's location as a move.</p>",
+		"group": "Witch",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}
