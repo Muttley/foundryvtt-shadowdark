@@ -140,7 +140,6 @@ SHADOWDARK.RANGES_SHORT = {
 };
 
 SHADOWDARK.OFFICIAL_SOURCES = {
-	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
 	"core-rules": "SHADOWDARK.source.core-rules",
 	"cursed-scroll-1": "SHADOWDARK.source.cursed-scroll-1",
 	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
@@ -148,6 +147,7 @@ SHADOWDARK.OFFICIAL_SOURCES = {
 	"cursed-scroll-4": "SHADOWDARK.source.cursed-scroll-4",
 	"cursed-scroll-5": "SHADOWDARK.source.cursed-scroll-5",
 	"cursed-scroll-6": "SHADOWDARK.source.cursed-scroll-6",
+	"kickstarter-stretch-goals": "SHADOWDARK.source.kickstarter-stretch-goals",
 	"quickstart": "SHADOWDARK.source.quickstart",
 };
 
