@@ -13,8 +13,8 @@ SHADOWDARK.ability_wisdom: Weisheit
 SHADOWDARK.alignment.chaotic: Chaotisch
 SHADOWDARK.alignment.lawful: Rechtschaffen
 SHADOWDARK.alignment.neutral: Neutral
-SHADOWDARK.ancestry.choice_count: Choice Count
-SHADOWDARK.ancestry.choice: Choice
+SHADOWDARK.ancestry.choice_count: Anzahl der Optionen
+SHADOWDARK.ancestry.choice: Auswahl
 SHADOWDARK.ancestry.fixed: Fixed
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Sprache wählen...
@@ -44,23 +44,23 @@ SHADOWDARK.app.light-tracker.hide-inactive: Verberge Akteure ohne Licht
 SHADOWDARK.app.light-tracker.show-all-actors: Zeige alle Akteure
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Licht ausschalten
 SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
+SHADOWDARK.app.loading.title: Wird geladen
 SHADOWDARK.app.npc_attack_ranges.title: Angriffsreichweite
-SHADOWDARK.apps.character-generator.choose: Choose
-SHADOWDARK.apps.character-generator.create_character: Create Character
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
+SHADOWDARK.apps.character-generator.choose: Wähle
+SHADOWDARK.apps.character-generator.create_character: Erstelle einen Charakter
+SHADOWDARK.apps.character-generator.error.create: Fehler beim Erstellen des Spielercharakters {error}
+SHADOWDARK.apps.character-generator.error.name: Der Charaktername darf nicht leer sein
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Es kann kein zufälliger Name ohne ausgewählte Abstammung erstellt werden
+SHADOWDARK.apps.character-generator.gear: Ausrüstung
 SHADOWDARK.apps.character-generator.gold: Gold
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
+SHADOWDARK.apps.character-generator.name: Name des Charakters
+SHADOWDARK.apps.character-generator.see_details: Details anzeigen
+SHADOWDARK.apps.character-generator.starting_gear: Startausrüstung
+SHADOWDARK.apps.character-generator.success: Charakter erstellt
+SHADOWDARK.apps.character-generator.title: Charaktergenerator
+SHADOWDARK.apps.character-generator.tooltip: Komplett zufälliger Charakter
+SHADOWDARK.apps.character-generator.type: Typ
+SHADOWDARK.apps.character-generator.update_character: Charakter aktualisieren
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Wollen Sie den Effekt {effectName} löschen?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Effekt löschen?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Abgelaufen
