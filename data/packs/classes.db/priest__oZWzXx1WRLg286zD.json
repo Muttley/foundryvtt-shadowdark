@@ -14,6 +14,11 @@
 		"allWeapons": false,
 		"armor": [
 		],
+		"classAbilities": [
+		],
+		"classAbilityChoiceCount": 0,
+		"classAbilityChoices": [
+		],
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.CtkKBhsOpV1v5YjX",
 		"description": "<p>Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.</p>",
 		"hitPoints": "d6",
@@ -117,7 +122,9 @@
 				}
 			}
 		},
-		"startingSpells": ["Compendium.shadowdark.spells.Item.mByUvcHIVEPWscfH"],
+		"startingSpells": [
+			"Compendium.shadowdark.spells.Item.mByUvcHIVEPWscfH"
+		],
 		"talentChoiceCount": 0,
 		"talentChoices": [
 		],
