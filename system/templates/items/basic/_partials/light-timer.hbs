@@ -11,15 +11,18 @@
 			disabled
 		{{/if}}
 	>
-	<h3>
-		{{localize 'SHADOWDARK.item.light.remaining'}}
-	</h3>
-	<input
-		type="number"
-		value={{lightRemainingMins}}
-		{{#if item.system.light.active}}
-			data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
-			disabled
-		{{/if}}
-	>
+	{{#if showRemainingMins}}
+		<h3>
+			{{localize 'SHADOWDARK.item.light.remaining'}}
+		</h3>
+		<input
+			name="system.light.remainingSecs"
+			type="number"
+			value={{lightRemainingMins}}
+			{{#if item.system.light.active}}
+				data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
+				disabled
+			{{/if}}
+		>
+	{{/if}}
 </div>

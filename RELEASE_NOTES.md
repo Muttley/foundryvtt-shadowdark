@@ -1,3 +1,17 @@
+# v3.4.0
+
+## Enhancements
+- [#1001] New setting to limit players view of time remaining on light sources
+- [#1013] Add "Teleport to Familiar" class ability for the Witch
+
+## Bugfixes
+- [#998] Character generator Stats not translatable
+- [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
+- [#1004] Bug preventing light source time remaining from being edited
+- [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
+
+---
+
 # v3.3.1
 
 ## Bugfixes

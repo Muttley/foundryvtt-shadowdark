@@ -425,6 +425,8 @@ export default class ItemSheetSD extends ItemSheet {
 					item.system.light.remainingSecs / 60
 				);
 			}
+			const lightRemainingSetting = (game.user.isGM)? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
+			context.showRemainingMins = lightRemainingSetting > 1;
 		}
 	}
 
@@ -951,4 +953,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return duration;
 	}
 
+	async _updateObject(event, formData) {
+		// convert light remain from minutes to secsonds for update
+		if (formData["system.light.remainingSecs"]) {
+			formData["system.light.remainingSecs"] = formData["system.light.remainingSecs"] * 60;
+		}
+		super._updateObject(event, formData);
+	}
 }
