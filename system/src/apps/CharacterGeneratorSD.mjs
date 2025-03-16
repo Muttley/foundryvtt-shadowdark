@@ -996,6 +996,11 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classAbilities,
 		];
 
+		// Add starting spells (priest)
+		const allStartingSpells = [
+			...this.formData.startingSpells,
+		];
+
 		// load talents and abilities with selection of options
 		const allItems = [];
 		for (const talentItem of allTalents) {
@@ -1003,6 +1008,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		}
 		for (const classAbilityItem of allClassAbilities) {
 			allItems.push(await fromUuid(classAbilityItem.uuid));
+		}
+		for (const spell of allStartingSpells) {
+			allItems.push(await fromUuid(spell.uuid));
 		}
 
 		await actorRef.createEmbeddedDocuments("Item", allItems);
