@@ -13,8 +13,8 @@ SHADOWDARK.ability_wisdom: Weisheit
 SHADOWDARK.alignment.chaotic: Chaotisch
 SHADOWDARK.alignment.lawful: Rechtschaffen
 SHADOWDARK.alignment.neutral: Neutral
-SHADOWDARK.ancestry.choice_count: Choice Count
-SHADOWDARK.ancestry.choice: Choice
+SHADOWDARK.ancestry.choice_count: Anzahl der Optionen
+SHADOWDARK.ancestry.choice: Auswahl
 SHADOWDARK.ancestry.fixed: Fixed
 SHADOWDARK.ancestry.languages.label: Ancestry Languages
 SHADOWDARK.ancestry.languages.prompt: Sprache wählen...
@@ -44,23 +44,23 @@ SHADOWDARK.app.light-tracker.hide-inactive: Verberge Akteure ohne Licht
 SHADOWDARK.app.light-tracker.show-all-actors: Zeige alle Akteure
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Licht ausschalten
 SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
+SHADOWDARK.app.loading.title: Wird geladen
 SHADOWDARK.app.npc_attack_ranges.title: Angriffsreichweite
-SHADOWDARK.apps.character-generator.choose: Choose
-SHADOWDARK.apps.character-generator.create_character: Create Character
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
+SHADOWDARK.apps.character-generator.choose: Wähle
+SHADOWDARK.apps.character-generator.create_character: Erstelle einen Charakter
+SHADOWDARK.apps.character-generator.error.create: Fehler beim Erstellen des Spielercharakters {error}
+SHADOWDARK.apps.character-generator.error.name: Der Charaktername darf nicht leer sein
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Es kann kein zufälliger Name ohne ausgewählte Abstammung erstellt werden
+SHADOWDARK.apps.character-generator.gear: Ausrüstung
 SHADOWDARK.apps.character-generator.gold: Gold
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
+SHADOWDARK.apps.character-generator.name: Name des Charakters
+SHADOWDARK.apps.character-generator.see_details: Details anzeigen
+SHADOWDARK.apps.character-generator.starting_gear: Startausrüstung
+SHADOWDARK.apps.character-generator.success: Charakter erstellt
+SHADOWDARK.apps.character-generator.title: Charaktergenerator
+SHADOWDARK.apps.character-generator.tooltip: Komplett zufälliger Charakter
+SHADOWDARK.apps.character-generator.type: Typ
+SHADOWDARK.apps.character-generator.update_character: Charakter aktualisieren
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Wollen Sie den Effekt {effectName} löschen?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Effekt löschen?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Abgelaufen
@@ -80,18 +80,18 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Sekunden verbl
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Wochen verbleibend"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Jahre verbleibend"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Rechtsklick] Effekt entfernen"
-SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
+SHADOWDARK.apps.item-importer.import_button: Element importieren
+SHADOWDARK.apps.item-importer.instruction1: 1. Kopieren Sie den Text des Elementes aus dem Quellmaterial.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
 SHADOWDARK.apps.item-importer.instruction2b: Item Name
 SHADOWDARK.apps.item-importer.instruction2c: Flavor text
-SHADOWDARK.apps.item-importer.instruction2d: Features
-SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
-SHADOWDARK.apps.item-importer.title: Import Item
+SHADOWDARK.apps.item-importer.instruction2d: Merkmale
+SHADOWDARK.apps.item-importer.instruction3: 3. Klicken Sie auf Element importieren.
+SHADOWDARK.apps.item-importer.title: Element importieren
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
-SHADOWDARK.apps.level-up.hit_points: Hit Points
-SHADOWDARK.apps.level-up.level_up: Level Up!
+SHADOWDARK.apps.level-up.hit_points: Trefferpunkte
+SHADOWDARK.apps.level-up.level_up: Neue Stufe!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
 SHADOWDARK.apps.level-up.missing_selections: Missing Selections
 SHADOWDARK.apps.level-up.notalent: No talents gained at this level
@@ -134,18 +134,18 @@ SHADOWDARK.apps.solodark.question1: What is the question?
 SHADOWDARK.apps.solodark.question2: How likely is a "yes" result?
 SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
 SHADOWDARK.apps.solodark.title: SoloDark
-SHADOWDARK.apps.spell-book.known: Known
+SHADOWDARK.apps.spell-book.known: Bekannt
 SHADOWDARK.apps.spell-book.title: Class Spell List
-SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
+SHADOWDARK.apps.spell-importer.import_button: Zauber importieren
+SHADOWDARK.apps.spell-importer.instruction1: 1. Kopiere den Text des Zaubers aus dem Quellmaterial.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
-SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
-SHADOWDARK.apps.spell-importer.instruction2c: Tier and class
-SHADOWDARK.apps.spell-importer.instruction2d: Duration
-SHADOWDARK.apps.spell-importer.instruction2e: Range
-SHADOWDARK.apps.spell-importer.instruction2f: Description
-SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
-SHADOWDARK.apps.spell-importer.title: Import Spell
+SHADOWDARK.apps.spell-importer.instruction2b: Name des Zaubers
+SHADOWDARK.apps.spell-importer.instruction2c: Stufe und Klasse
+SHADOWDARK.apps.spell-importer.instruction2d: Dauer
+SHADOWDARK.apps.spell-importer.instruction2e: Distanz
+SHADOWDARK.apps.spell-importer.instruction2f: Beschreibung
+SHADOWDARK.apps.spell-importer.instruction3: 3. Klicken sie "Zauber importieren."
+SHADOWDARK.apps.spell-importer.title: Zauber importieren
 SHADOWDARK.armor.properties.disadvantage_stealth: Nachteil/Heimlicheit
 SHADOWDARK.armor.properties.disadvantage_swimming: Nachteil/Schwimmen
 SHADOWDARK.armor.properties.no_swimming: Kein Schwimmen
@@ -165,7 +165,7 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Sekundären Schaden anwende
 SHADOWDARK.chat_card.context.apply_damage: Schaden anwenden
 SHADOWDARK.chat_card.context.apply_healing_secondary: Sekundäre Heilung anwenden
 SHADOWDARK.chat_card.context.apply_healing: Heilung anwenden
-SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
+SHADOWDARK.chat.clockwise_initiative: Da {name} am höchsten gewürfelt hat, wird er/sie zuerst an der Reihe sein. Alle anderen Kämpfer folgen in festgelegter Reihenfolge.
 SHADOWDARK.chat.hp_roll.apply_to_max: Zu Max HP hinzufügen
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
