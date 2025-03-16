@@ -12,6 +12,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		this.importedActor ={};
 		this.itemMapping = {};
 		this.gear =[];
+		this.classAbilities = [];
 		this.spells =[];
 		this.talents =[];
 		this.errors = [];
@@ -382,6 +383,20 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		const classObj = await this._findItem(json.class, "Class");
 		this.importedActor.system.class = classObj?.uuid ?? "";
 
+		// Add class abilities
+		if (classObj.system.classAbilities) {
+			for (const classAbilityUuid of classObj.system.classAbilities) {
+				this.classAbilities.push((await fromUuid(classAbilityUuid)).toObject());
+			}
+		}
+
+		// Add starting spells
+		if (classObj.system.startingSpells) {
+			for (const spellUuid of classObj.system.startingSpells) {
+				this.spells.push((await fromUuid(spellUuid)).toObject());
+			}
+		}
+
 		// Load fixed ancestry talents
 		if (ancestry) {
 			for (const talentUuid of ancestry.system.talents) {
@@ -516,6 +531,7 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 
 		const allItems = [
 			...this.gear,
+			...this.classAbilities,
 			...this.spells,
 			...this.talents,
 		];
