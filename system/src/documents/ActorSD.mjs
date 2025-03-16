@@ -1491,8 +1491,10 @@ export default class ActorSD extends Actor {
 		);
 
 		let success = true;
+		let rolled = false;
 		// does ability use on a roll check?
 		if (item.system.ability) {
+			rolled = true;
 			options = foundry.utils.mergeObject({target: item.system.dc}, options);
 			const result = await this.rollAbility(
 				item.system.ability,
@@ -1512,6 +1514,7 @@ export default class ActorSD extends Actor {
 				abilityDescription,
 				actor: this,
 				item: item,
+				rolled,
 				success,
 			},
 		});

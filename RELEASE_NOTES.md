@@ -3,6 +3,7 @@
 ## Enhancements
 - [#1001] New setting to limit players view of time remaining on light sources
 - [#1013] Add "Teleport to Familiar" class ability for the Witch
+- [#1018] Don't use "successful" working when using class abilities that don't require rolling
 
 ## Bugfixes
 - [#998] Character generator Stats not translatable

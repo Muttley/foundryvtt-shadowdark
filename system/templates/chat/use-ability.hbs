@@ -13,10 +13,17 @@
 	<div class="card-content">
 		<b>
 			{{#if success}}
-				{{localize "SHADOWDARK.chat.use_ability.success"
-					ability=item.name
-					name=actor.name
-				}}
+				{{#if rolled}}
+					{{localize "SHADOWDARK.chat.use_ability.success"
+						ability=item.name
+						name=actor.name
+					}}
+				{{else}}
+					{{localize "SHADOWDARK.chat.use_ability.used"
+						ability=item.name
+						name=actor.name
+					}}
+				{{/if}}
 			{{else}}
 				 {{localize "SHADOWDARK.chat.use_ability.failure"
 					ability=item.name
