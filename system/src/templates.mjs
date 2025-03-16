@@ -116,6 +116,7 @@ export default function() {
 		"systems/shadowdark/templates/items/class-ability/_partials/ability-group.hbs",
 		"systems/shadowdark/templates/items/class-ability/_partials/options.hbs",
 		"systems/shadowdark/templates/items/class-ability/details-tab.hbs",
+		"systems/shadowdark/templates/items/class/_partials/class-abilities.hbs",
 		"systems/shadowdark/templates/items/class/_partials/details.hbs",
 		"systems/shadowdark/templates/items/class/_partials/equipment.hbs",
 		"systems/shadowdark/templates/items/class/_partials/languages.hbs",

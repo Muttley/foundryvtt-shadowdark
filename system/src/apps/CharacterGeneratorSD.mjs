@@ -591,17 +591,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 		talentData = [];
 
 		// grab starting class abilities from class item
-		let abilityData = [];
+		let classAbilityData = [];
 
 		if (classObj.system.classAbilities) {
 			for (const ability of classObj.system.classAbilities) {
 				let abilityObj = await fromUuid(ability);
 				let fDesc = await this._formatDescription(abilityObj.system.description);
 				abilityObj.formattedDescription = fDesc;
-				abilityData.push(abilityObj);
+				classAbilityData.push(abilityObj);
 			}
 		}
-		this.formData.classAbilities = abilityData;
+
+		if (classObj.system.classAbilityChoices) {
+			for (const ability of classObj.system.classAbilityChoices) {
+				let classAbilityObj = await fromUuid(ability);
+				let fDesc = await this._formatDescription(classAbilityObj.system.description);
+				classAbilityObj.formattedDescription = fDesc;
+				classAbilityData.push(classAbilityObj);
+			}
+		}
+		this.formData.classAbilities = classAbilityData;
 
 		// grab starting spells (e.g. turn undead) from class item
 		let spellData = [];
@@ -617,7 +626,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.startingSpells = spellData;
 
 		// grab choice talents from class item
-		if (classObj.system.talenAtChoices) {
+		if (classObj.system.talentChoices) {
 			for (const talent of classObj.system.talentChoices) {
 				let talentObj = await fromUuid(talent);
 				let fDesc = await this._formatDescription(talentObj.system.description);
