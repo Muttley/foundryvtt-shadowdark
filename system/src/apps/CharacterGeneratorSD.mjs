@@ -991,10 +991,18 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
-		// load talents with selection of options
+		// Add class abilities
+		const allClassAbilities = [
+			...this.formData.classAbilities,
+		];
+
+		// load talents and abilities with selection of options
 		const allItems = [];
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
+		}
+		for (const classAbilityItem of allClassAbilities) {
+			allItems.push(await fromUuid(classAbilityItem.uuid));
 		}
 
 		await actorRef.createEmbeddedDocuments("Item", allItems);
