@@ -11,6 +11,9 @@
 - [#1004] Bug preventing light source time remaining from being edited
 - [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
 
+## Chores
+- [#1019] Merge German translation updates from Crowdin
+
 ---
 
 # v3.3.1
