@@ -3,6 +3,7 @@
 ## Enhancements
 - [#1001] New setting to limit players view of time remaining on light sources
 - [#1013] Add "Teleport to Familiar" class ability for the Witch
+- [#974] Base class abilities will now be added automatically to new characters on create and import
 
 ## Bugfixes
 - [#998] Character generator Stats not translatable
