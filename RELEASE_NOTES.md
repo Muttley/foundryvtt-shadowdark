@@ -6,6 +6,7 @@
 - [#1018] Don't use "successful" working when using class abilities that don't require rolling
 
 ## Bugfixes
+- [#970] Updated actives effects on Spell effects: Holy Weapon
 - [#998] Character generator Stats not translatable
 - [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
 - [#1004] Bug preventing light source time remaining from being edited
