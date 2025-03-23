@@ -10,6 +10,7 @@
 - [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
 - [#1004] Bug preventing light source time remaining from being edited
 - [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
+- [#1020] Incorrect effects on Asterion sword in starter adventure
 
 ## Chores
 - [#1019] Merge German translation updates from Crowdin
