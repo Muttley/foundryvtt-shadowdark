@@ -1,0 +1,33 @@
+{
+	"_id": "eoN2RYcXriSBtzDB",
+	"_key": "!items.effects!r2JNgS2474vuq9oy.eoN2RYcXriSBtzDB",
+	"changes": [
+		{
+			"key": "system.bonuses.rangedAttackBonus",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"name": "Ranged Attack Roll Bonus",
+	"origin": "Compendium.shadowdark.spell-effects.Item.r2JNgS2474vuq9oy",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
