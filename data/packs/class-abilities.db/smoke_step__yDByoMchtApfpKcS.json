@@ -1,0 +1,26 @@
+{
+	"_id": "yDByoMchtApfpKcS",
+	"_key": "!items!yDByoMchtApfpKcS",
+	"effects": [
+	],
+	"folder": "y6T37zGPt9EZBlPO",
+	"img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+	"name": "Smoke Step",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p><span>3/day, teleport to a location you can see within near. This does not use your action.</span></p>",
+		"group": "Ras-Godai",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 3,
+			"max": 3
+		}
+	},
+	"type": "Class Ability"
+}

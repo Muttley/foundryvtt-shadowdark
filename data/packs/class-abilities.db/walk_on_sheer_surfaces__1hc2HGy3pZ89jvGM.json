@@ -1,0 +1,26 @@
+{
+	"_id": "1hc2HGy3pZ89jvGM",
+	"_key": "!items!1hc2HGy3pZ89jvGM",
+	"effects": [
+	],
+	"folder": "y6T37zGPt9EZBlPO",
+	"img": "icons/skills/movement/feet-winged-sandals-tan.webp",
+	"name": "Walk on Sheer Surfaces",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, you can walk on sheer surfaces like walls for 1d4 rds.</p>",
+		"group": "Black Lotus",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

@@ -4,13 +4,13 @@
 	"effects": [
 	],
 	"folder": "Agdcg0ystOpP8kcL",
-	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
 	"name": "Curative",
 	"system": {
 		"ability": "int",
 		"dc": 15,
 		"description": "<p><strong>Curative.</strong> Equivalent to a @UUID[Compendium.shadowdark.magic-items.Item.jucTGEjsqJ1znHdf]{Potion of Healing}</p>",
-		"group": "Herbal Remedy",
+		"group": "Herbalism",
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,

@@ -1,6 +1,7 @@
 # v3.4.0
 
 ## Enhancements
+- [#974] Base class abilities will now be added automatically to new characters on create and import
 - [#1001] New setting to limit players view of time remaining on light sources
 - [#1013] Add "Teleport to Familiar" class ability for the Witch
 - [#1018] Don't use "successful" working when using class abilities that don't require rolling
