@@ -496,8 +496,10 @@ export default class ActorSD extends Actor {
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
 				];
-
-				weaponOptions.bonusDamage += parseInt(this.system.bonuses.rangedDamageBonus, 10);
+				weaponOptions.bonusDamage =
+					weaponMasterBonus
+					+ parseInt(this.system.bonuses.rangedDamageBonus, 10)
+					+ parseInt(item.system.bonuses.damageBonus, 10);
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),

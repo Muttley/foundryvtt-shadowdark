@@ -5,12 +5,12 @@
 	],
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/skills/melee/maneuver-daggers-paired-orange.webp",
-	"name": "Ignore all Damage",
+	"name": "Ignore All Damage",
 	"system": {
 		"bonuses": {
 			"weaponMastery": "REPLACEME"
 		},
-		"description": "<p>1/day, ignore all damage and effects from one attack.</p><p>duplicate = additional use per day</p>",
+		"description": "<p>1/day, ignore all damage and effects from one attack.</p><p>duplicate = additional use per day</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.MbC7YucyY4D9dYre]{Ignore All Damage}</p>",
 		"level": 0,
 		"magicItem": false,
 		"predefinedEffects": "",

@@ -10,7 +10,7 @@
 		"ability": "wis",
 		"dc": 9,
 		"description": "<p>3/day, you can make a [[check 9 wis]] check. On a success, gain a luck token (you can't have more than one luck token at a time).</p>",
-		"group": "",
+		"group": "Seer",
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,

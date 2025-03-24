@@ -7,7 +7,7 @@
 	"img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
 	"name": "Smoke Step",
 	"system": {
-		"description": "<p>3/day, teleport to a location you can see within near. This does not use your action.</p>",
+		"description": "<p>3/day, teleport to a location you can see within near. This does not use your action.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.yDByoMchtApfpKcS]{Smoke Step}</p>",
 		"level": 1,
 		"predefinedEffects": "",
 		"source": {
