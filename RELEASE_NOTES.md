@@ -11,6 +11,7 @@
 - [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
 - [#1004] Bug preventing light source time remaining from being edited
 - [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
+- [#1023] An issues where thrown weapons attacks are not displayed correctly
 
 ## Chores
 - [#1019] Merge German translation updates from Crowdin
