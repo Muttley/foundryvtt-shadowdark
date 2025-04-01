@@ -129,6 +129,7 @@ export default class PackHandler {
 			}
 
 			const db = new ClassicLevel(outputDbFile, {keyEncoding: "utf8", valueEncoding: "json"});
+			await db.open();
 			const batch = db.batch();
 
 			const files = fs.readdirSync(inputDbDirectory);
@@ -240,6 +241,7 @@ export default class PackHandler {
 					valueEncoding: "json",
 				}
 			);
+			await db.open();
 			const basename = path.basename(compendiumDir);
 
 			const outputDir = path.join(this.destination, `${basename}.db`);

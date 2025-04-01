@@ -20,6 +20,7 @@
 
 ## Chores
 - [#1019] Merge German translation updates from Crowdin
+- [#1032] Update node modules used in build process to latest versions
 
 ---
 
