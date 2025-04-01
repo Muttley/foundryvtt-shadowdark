@@ -12,7 +12,7 @@
 		"description": "<p>Deals [[/r 1d6]] damage a round. The bolt remains in the target for as long as you focus.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

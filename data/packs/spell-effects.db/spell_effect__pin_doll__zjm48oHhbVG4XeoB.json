@@ -12,7 +12,7 @@
 		"description": "<p>On your turn while focusing on this spell, you can push a pin into the doll. Each time you do this, the creature who the hair or flesh belonged to takes [[/r 2d6]] damage.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

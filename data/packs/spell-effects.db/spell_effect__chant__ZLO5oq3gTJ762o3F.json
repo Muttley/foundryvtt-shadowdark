@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, you can see all invisible and hidden things as though they were plainly visible. This spell does not allow you to see in a way that you could not normally, such as in darkness or through walls.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

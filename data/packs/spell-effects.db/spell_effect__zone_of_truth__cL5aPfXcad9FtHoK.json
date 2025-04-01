@@ -12,7 +12,7 @@
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Can’t utter a deliberate lie when within range from source.</span></p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

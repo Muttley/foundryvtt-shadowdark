@@ -12,7 +12,7 @@
 		"description": "<p>If the target is LV 9+, it may make a STR check vs. your last spellcasting check at the start of its turn to end the spell.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

@@ -35,7 +35,7 @@
 		"description": "<p>The target deals x2 damage with each attack (x4 on a critical hit) for the spell's duration.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

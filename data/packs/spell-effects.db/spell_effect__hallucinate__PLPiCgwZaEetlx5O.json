@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, the target cannot act on its turn unless it passes a Wisdom check equal to your last spellcasting check.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

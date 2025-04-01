@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, the target is immune to harm from fire.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

@@ -12,7 +12,7 @@
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">Chaotic beings have disadvantage on attack rolls and hostile spellcasting checks against the target. These beings also can’t possess, compel, or beguile it.</span></p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

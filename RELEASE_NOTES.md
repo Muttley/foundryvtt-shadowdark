@@ -121,6 +121,7 @@
 * [#956] Can't import unnamed characters from Shadowdarklings
 * [#959] Stimulent effect description has a broken link to a Ranger talent that was converted to a Class Ability
 * [#960] Add missing Berzerk class ability for Sea Wolf class
+* [#967] Default Round Count for Effects Prevents Real-time Adjustment
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*

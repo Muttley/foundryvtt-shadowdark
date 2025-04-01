@@ -12,7 +12,7 @@
 		"description": "<p>If you successfully focus on this spell for 3 rounds in a row, the transformation becomes permanent.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

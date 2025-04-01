@@ -46,7 +46,7 @@
 		"description": "<p><strong>Wolf</strong></p><p><strong>AC</strong> 12, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite [[/r 1d20+2]] ([[/r 1d6]]), <strong>MV</strong> double near, <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +1</p><p><strong>Pack Hunter.</strong> Deals +1 damage while an ally is close.</p><p>You assume the wolf's STR, DEX, CON, HP, AC, speed, attacks, and physical characteristics, but retain your INT, WIS, and CHA.</p><p>You can cast spells in this form. If you go to 0 HP, you revert to your true shape at 0 HP.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
