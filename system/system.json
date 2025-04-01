@@ -325,6 +325,18 @@
 			]
 		}
 	],
+	"flags": {
+		"hotReload": {
+			"extensions": [
+				"css", "hbs", "json"
+			],
+			"paths": [
+				"css",
+				"i18n",
+				"templates"
+			]
+		}
+	},
 	"grid": {
 		"distance": 5,
 		"units": "ft"
