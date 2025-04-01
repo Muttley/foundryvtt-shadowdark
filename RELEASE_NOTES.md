@@ -14,6 +14,7 @@
 - [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
 - [#1020] Incorrect effects on Asterion sword in starter adventure
 - [#1023] An issues where thrown weapons attacks are not displayed correctly
+- [#1029] Typo in ruins rolltable for 1d6 cultists entry
 - [#1031] Move Kobold ancestry plus talents from Core Rules to the "Shadowdark RPG: Bard and Ranger" source, and rename that to "Shadowdark RPG: Bard, Ranger and Kobold"
 
 ## Chores
