@@ -466,6 +466,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.melee.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -477,6 +478,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.melee.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
 					itemId,
 				});
 			}
@@ -503,6 +505,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -527,6 +530,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -536,6 +540,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
 					itemId,
 				});
 			}

@@ -296,9 +296,11 @@ export default class ActorSheetSD extends ActorSheet {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		const attackType =  $(event.currentTarget).data("attack-type");
+		const handedness = $(event.currentTarget).data("handedness");
 
 		const options = {
 			attackType,
+			handedness,
 		};
 
 		// skip roll prompt if shift clicked
