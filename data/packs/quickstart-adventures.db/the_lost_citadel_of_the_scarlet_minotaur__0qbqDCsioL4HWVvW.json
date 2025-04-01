@@ -10786,7 +10786,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.attackBonus",
+							"key": "system.bonuses.attackBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -10806,7 +10806,7 @@
 					"flags": {
 					},
 					"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
-					"name": "attackBonus",
+					"name": "Weapon Attack Roll Bonus",
 					"origin": "Item.JpRmSUeNd7qwnXZa",
 					"sort": 0,
 					"statuses": [
@@ -10831,7 +10831,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.damage.bonus",
+							"key": "system.bonuses.damageBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -10851,7 +10851,7 @@
 					"flags": {
 					},
 					"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-					"name": "damageBonus",
+					"name": "Weapon Attack Damage Bonus",
 					"origin": "Item.JpRmSUeNd7qwnXZa",
 					"sort": 0,
 					"statuses": [
@@ -10884,15 +10884,15 @@
 			"system": {
 				"ammoClass": "",
 				"attackBonus": "1",
-				"baseWeapon": "",
+				"baseWeapon": "greatsword",
 				"bonuses": {
-					"attackBonus": 0,
+					"attackBonus": "1",
 					"critical": {
 						"failureThreshold": 1,
 						"multiplier": 2,
 						"successThreshold": 20
 					},
-					"damageBonus": 0,
+					"damageBonus": "1",
 					"damageMultiplier": 1
 				},
 				"broken": false,

@@ -12,7 +12,7 @@
 		"description": "<p>You transform yourself and any gear you carry into another natural creature you've seen of level 10 or less. You assume the creature's physical statistics, but you retain your non-physical statistics (such as INT, WIS, and CHA).</p><p>If you go to 0 HP while under the effects of this spell, you revert to your true form at 1 HP.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

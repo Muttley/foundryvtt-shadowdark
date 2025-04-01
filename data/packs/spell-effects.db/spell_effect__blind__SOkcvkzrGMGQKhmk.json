@@ -12,7 +12,7 @@
 		"description": "<p><span style=\"font-family: Signika, sans-serif\">The creature is blind and has disadvantage on tasks requiring sight.</span></p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

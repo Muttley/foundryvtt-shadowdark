@@ -188,13 +188,14 @@ SHADOWDARK.chat.spell_roll.title: "{name}, CD {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} falhou em usar a habilidade {ability}"
 SHADOWDARK.chat.use_ability.success: "{name} usou a habilidade {ability} com sucesso"
 SHADOWDARK.chat.use_ability.title: "Usando Habilidade"
+SHADOWDARK.chat.use_ability.used: "{name} used the {ability} ability"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Compre o RPG Shadowdark
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visite o site da The Arcane Library para PDFs, livros e produtos oficiais do Shadowdark.
 SHADOWDARK.chat.welcome_message.arcane_library: Apoie The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Monitor de Problemas
 SHADOWDARK.chat.welcome_message.issues_text: "Se você encontrar quaisquer problemas ou tiver ideias para novas funcionalidades para o sistema, confira nosso rastreador de problemas."
 SHADOWDARK.chat.welcome_message.issues: Reportar Problemas
-SHADOWDARK.chat.welcome_message.title_text: Bem vindo ao RPG Shadowdark. Aqui estão alguns recursos para você começar.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: RPG Shadowdark para o Foundry
 SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Rolar
@@ -360,6 +361,7 @@ SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
 SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode lançar feitiços dessa classe
 SHADOWDARK.error.spells.unable_to_use_item: Você não pode usar itens mágicos
 SHADOWDARK.error.too_many_tokens_selected: Muitos tokens selecionados
+SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.names.label: Nomes
@@ -677,7 +679,12 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Se marcado, o Moni
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar Monitoramento de Luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Se marcado, o Monitoramento de Luz seguirá em tempo real. Desative se um módulo de hora/calendário externo for usado.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Monitoramento de Luz em Tempo Real
-SHADOWDARK.settings.use_clockwise_initiative.hint: Se marcado, o combatente com o maior rolagem de iniciativa vai primeiro e todos os outros combatentes seguirão em ordem fixa. Todos os PDMs serão agrupados na ordem de iniciativa.
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Usar Iniciativa Horária
 SHADOWDARK.settings.use_pulp_mode.hint: Mostra tokens de Sorte como um valor numérico em vez de uma caixa de seleção
 SHADOWDARK.settings.use_pulp_mode.name: Habilitar modo Pulp
@@ -786,7 +793,7 @@ SHADOWDARK.sheet.player.tooltip.use_scroll: Usar Pergaminho
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar Varinha
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.sheet.special_abilities.label: Habilidades Especiais
-SHADOWDARK.source.bard-and-ranger: "RPG Shadowdark: Bardo e Patrulheiro"
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands

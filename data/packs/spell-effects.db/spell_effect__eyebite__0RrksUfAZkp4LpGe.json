@@ -12,7 +12,7 @@
 		"description": "<p>Target can't see you until the end of its next turn.</p>",
 		"duration": {
 			"type": "unlimited",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

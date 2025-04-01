@@ -2,8 +2,10 @@
 	"_id": "r2JNgS2474vuq9oy",
 	"_key": "!items!r2JNgS2474vuq9oy",
 	"effects": [
-		"b8uxcNgfUqCghh65",
-		"NkSmeb5HU8lr5BrM"
+		"YWdkfrbwnxtT4nUY",
+		"o3dQi9gdFgWhDNJg",
+		"eoN2RYcXriSBtzDB",
+		"1gLcCayYRfDAAQYB"
 	],
 	"folder": null,
 	"img": "icons/weapons/swords/sword-gold-holy.webp",
@@ -13,7 +15,9 @@
 			"attackBonus": "1",
 			"damageBonus": "1",
 			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1"
+			"meleeDamageBonus": "1",
+			"rangedAttackBonus": "1",
+			"rangedDamageBonus": "1"
 		},
 		"category": "effect",
 		"description": "",

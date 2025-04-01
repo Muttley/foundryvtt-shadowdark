@@ -4,13 +4,13 @@
 	"effects": [
 	],
 	"folder": "Agdcg0ystOpP8kcL",
-	"img": "icons/tools/navigation/map-chart-tan.webp",
+	"img": "icons/consumables/potions/potion-tube-corked-orange.webp",
 	"name": "Salve",
 	"system": {
 		"ability": "int",
 		"dc": 11,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.m857P6MI00wAONTp]{Salve} Heals 1 HP</p>",
-		"group": "Herbal Remedy",
+		"group": "Herbalism",
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,

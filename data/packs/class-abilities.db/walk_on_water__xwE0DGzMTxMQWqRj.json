@@ -1,0 +1,26 @@
+{
+	"_id": "xwE0DGzMTxMQWqRj",
+	"_key": "!items!xwE0DGzMTxMQWqRj",
+	"effects": [
+	],
+	"folder": "y6T37zGPt9EZBlPO",
+	"img": "icons/magic/water/wave-water-teal.webp",
+	"name": "Walk on Water",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, you can walk on water as if it were solid for 1d4 rds.</p>",
+		"group": "Black Lotus",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

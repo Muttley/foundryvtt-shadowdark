@@ -466,6 +466,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.melee.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -477,6 +478,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.melee.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
 					itemId,
 				});
 			}
@@ -496,11 +498,14 @@ export default class ActorSD extends Actor {
 				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
 					item.system.range
 				];
-
-				weaponOptions.bonusDamage += parseInt(this.system.bonuses.rangedDamageBonus, 10);
+				weaponOptions.bonusDamage =
+					weaponMasterBonus
+					+ parseInt(this.system.bonuses.rangedDamageBonus, 10)
+					+ parseInt(item.system.bonuses.damageBonus, 10);
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -525,6 +530,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
 					itemId,
 				});
 			}
@@ -534,6 +540,7 @@ export default class ActorSD extends Actor {
 
 				weaponDisplays.ranged.push({
 					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
 					itemId,
 				});
 			}
@@ -1491,8 +1498,10 @@ export default class ActorSD extends Actor {
 		);
 
 		let success = true;
+		let rolled = false;
 		// does ability use on a roll check?
 		if (item.system.ability) {
+			rolled = true;
 			options = foundry.utils.mergeObject({target: item.system.dc}, options);
 			const result = await this.rollAbility(
 				item.system.ability,
@@ -1512,6 +1521,7 @@ export default class ActorSD extends Actor {
 				abilityDescription,
 				actor: this,
 				item: item,
+				rolled,
 				success,
 			},
 		});

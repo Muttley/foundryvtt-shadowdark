@@ -1,3 +1,29 @@
+# v3.4.0
+
+## Enhancements
+- [#974] Base class abilities will now be added automatically to new characters on create and import
+- [#978] Roll only the requested damage type for versatile weapons
+- [#1001] New setting to limit players view of time remaining on light sources
+- [#1013] Add "Teleport to Familiar" class ability for the Witch
+- [#1018] Don't use "successful" working when using class abilities that don't require rolling
+
+## Bugfixes
+- [#970] Updated active effects on Spell Effects: Holy Weapon
+- [#998] Character generator Stats not translatable
+- [#999] Fix i18n typos *(many thanks to **mcDevnagh** for contributing these fixes)*
+- [#1004] Bug preventing light source time remaining from being edited
+- [#1005] Remove incorrect effect on the Witch Teleport to Familiar talent
+- [#1020] Incorrect effects on Asterion sword in starter adventure
+- [#1023] An issues where thrown weapons attacks are not displayed correctly
+- [#1029] Typo in ruins rolltable for 1d6 cultists entry
+- [#1031] Move Kobold ancestry plus talents from Core Rules to the "Shadowdark RPG: Bard and Ranger" source, and rename that to "Shadowdark RPG: Bard, Ranger and Kobold"
+
+## Chores
+- [#1019] Merge German translation updates from Crowdin
+- [#1032] Update node modules used in build process to latest versions
+
+---
+
 # v3.3.1
 
 ## Bugfixes
@@ -96,6 +122,7 @@
 * [#956] Can't import unnamed characters from Shadowdarklings
 * [#959] Stimulent effect description has a broken link to a Ranger talent that was converted to a Class Ability
 * [#960] Add missing Berzerk class ability for Sea Wolf class
+* [#967] Default Round Count for Effects Prevents Real-time Adjustment
 
 ## Chores
 * [#911] Replaced compendium art mapping with default Foundry method. *(Settings for compendium art mapping are now found in *Settings > Core > Compendium Art*)*

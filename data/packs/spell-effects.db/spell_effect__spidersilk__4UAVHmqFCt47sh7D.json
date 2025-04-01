@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, you can walk on vertical surfaces as easily as if it were flat ground.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

@@ -12,7 +12,7 @@
 		"description": "<p>A disorienting cloud of angry, biting locusts fills an area around you out to near.</p><p>The cloud moves with you as you move. You are not affected by it.</p><p>Creatures in the area of affect take [[/r 1d10]] damage per round at the start of their turn. They must pass a CON check equal to your last spellcasting check or be unable to move on their turn.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

@@ -188,13 +188,14 @@ SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Using Ability"
+SHADOWDARK.chat.use_ability.used: "{name} used the {ability} ability"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
 SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
 SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.title_text: Welceome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
 SHADOWDARK.chat.welcome_message.title: 섀도다크 RPG 파운드리 시스템
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: 굴림
@@ -360,6 +361,7 @@ SHADOWDARK.error.source.source_missing: Source missing or unknown...
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
+SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
 SHADOWDARK.form.section_header.equipment.label: Equipment
 SHADOWDARK.form.section_header.languages.label: Languages
 SHADOWDARK.form.section_header.names.label: Names
@@ -677,7 +679,12 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 체크하면 파�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 빛 트래커 멈추기
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 체크하면 실시간으로 빛이 트래킹됩니다. 별도의 시계/달력 모듈을 사용하고 있다면 비활성화하세요.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 실시간 빛 트래킹
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest iniative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
+SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
@@ -786,7 +793,7 @@ SHADOWDARK.sheet.player.tooltip.use_scroll: 두루마리 사용
 SHADOWDARK.sheet.player.tooltip.use_wand: 마법봉 사용
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.sheet.special_abilities.label: Special Abilities
-SHADOWDARK.source.bard-and-ranger: "섀도다크 RPG: 바드와 레인저"
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
 SHADOWDARK.source.core-rules: "섀도다크 RPG: 코어 룰북"
 SHADOWDARK.source.cursed-scroll-1: 커스드 스크롤 Vol.1, 다이어블러리!
 SHADOWDARK.source.cursed-scroll-2: 커스드 스크롤 Vol.2, 레드 샌드

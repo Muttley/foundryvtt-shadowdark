@@ -20,7 +20,7 @@
 			{{#each actor.system.abilities as |value key|}}
 				<div class="stats">
 					<label for="actor.system.abilities.{{key}}.base">
-						{{key}}
+						{{localize (concat "SHADOWDARK.ability_" key)}}
 					</label>
 					<div>
 						<select

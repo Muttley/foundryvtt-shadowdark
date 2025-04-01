@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, that creature can't come within near range of you. It can still attack you from outside of near range.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

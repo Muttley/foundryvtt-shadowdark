@@ -1,0 +1,26 @@
+{
+	"_id": "MbC7YucyY4D9dYre",
+	"_key": "!items!MbC7YucyY4D9dYre",
+	"effects": [
+	],
+	"folder": "ntYpdY6HvWuXyrsm",
+	"img": "icons/skills/melee/maneuver-daggers-paired-orange.webp",
+	"name": "Ignore All Damage",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, ignore all damage and effects from one attack.</p>",
+		"group": "Pit Fighter",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

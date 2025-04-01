@@ -234,6 +234,40 @@ export default class ItemSheetSD extends ItemSheet {
 			prompt: game.i18n.localize("SHADOWDARK.class.talent_choices.prompt"),
 			selectedItems: selectedTalentChoices,
 		};
+		//
+		const classAbilities = await shadowdark.compendiums.classAbilities();
+
+		const [selectedClassAbilities, availableClassAbilities] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				classAbilities,
+				this.item.system.classAbilities ?? []
+			);
+
+		context.classAbilitiesConfig = {
+			availableItems: availableClassAbilities,
+			choicesKey: "classAbilities",
+			isItem: true,
+			label: "CLASS.ABILITIES.LABEL", // game.i18n.localize("SHADOWDARK.class.talents.label"),
+			name: "system.classAbilities",
+			prompt: "CLASS.ABILITIES.PROMPT", // game.i18n.localize("SHADOWDARK.class.talents.prompt"),
+			selectedItems: selectedClassAbilities,
+		};
+
+		const [selectedClassAbilityChoices, availableClassAbilityChoices] =
+			await shadowdark.utils.getDedupedSelectedItems(
+				classAbilities,
+				this.item.system.classAbilityChoices ?? []
+			);
+
+		context.classAbilityChoicesConfig = {
+			availableItems: availableClassAbilityChoices,
+			choicesKey: "classAbilityChoices",
+			isItem: true,
+			label: game.i18n.localize("SHADOWDARK.class.talent_choices.label"),
+			name: "system.classAbilityChoices",
+			prompt: game.i18n.localize("SHADOWDARK.class.talent_choices.prompt"),
+			selectedItems: selectedClassAbilityChoices,
+		};
 
 		const spellcastingClasses =
 			await shadowdark.compendiums.spellcastingBaseClasses();
@@ -391,6 +425,8 @@ export default class ItemSheetSD extends ItemSheet {
 					item.system.light.remainingSecs / 60
 				);
 			}
+			const lightRemainingSetting = (game.user.isGM)? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
+			context.showRemainingMins = lightRemainingSetting > 1;
 		}
 	}
 
@@ -807,6 +843,8 @@ export default class ItemSheetSD extends ItemSheet {
 				delete updateData["system.languages.selectOptions"];
 				delete updateData["system.talentChoices"];
 				delete updateData["system.talents"];
+				delete updateData["system.classAbilityChoices"];
+				delete updateData["system.classAbilities"];
 				delete updateData["system.weapons"];
 
 				const titles = [];
@@ -915,4 +953,11 @@ export default class ItemSheetSD extends ItemSheet {
 		return duration;
 	}
 
+	async _updateObject(event, formData) {
+		// convert light remain from minutes to secsonds for update
+		if (formData["system.light.remainingSecs"]) {
+			formData["system.light.remainingSecs"] = formData["system.light.remainingSecs"] * 60;
+		}
+		super._updateObject(event, formData);
+	}
 }

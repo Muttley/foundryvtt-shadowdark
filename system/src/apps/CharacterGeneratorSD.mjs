@@ -28,6 +28,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				fixed: [],
 				selection: [],
 			},
+			classAbilities: [],
 			editing: false,
 			gearSelected: [],
 			level0: true,
@@ -38,6 +39,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				choose: false,
 				required: false,
 			},
+			startingSpells: [],
 			weapons: ["All weapons"],
 		};
 
@@ -375,6 +377,16 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
+		// add class abilities
+		for (const classAbilityItem of this.formData.classAbilities) {
+			allItems.push(await fromUuid(classAbilityItem.uuid));
+		}
+
+		// add starting spells
+		for (const spellItem of this.formData.startingSpells) {
+			allItems.push(await fromUuid(spellItem.uuid));
+		}
+
 		// load talents with selection of options
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
@@ -577,6 +589,41 @@ export default class CharacterGeneratorSD extends FormApplication {
 			(a, b) => a.name < b.name ? -1 : 1);
 
 		talentData = [];
+
+		// grab starting class abilities from class item
+		let classAbilityData = [];
+
+		if (classObj.system.classAbilities) {
+			for (const ability of classObj.system.classAbilities) {
+				let abilityObj = await fromUuid(ability);
+				let fDesc = await this._formatDescription(abilityObj.system.description);
+				abilityObj.formattedDescription = fDesc;
+				classAbilityData.push(abilityObj);
+			}
+		}
+
+		if (classObj.system.classAbilityChoices) {
+			for (const ability of classObj.system.classAbilityChoices) {
+				let classAbilityObj = await fromUuid(ability);
+				let fDesc = await this._formatDescription(classAbilityObj.system.description);
+				classAbilityObj.formattedDescription = fDesc;
+				classAbilityData.push(classAbilityObj);
+			}
+		}
+		this.formData.classAbilities = classAbilityData;
+
+		// grab starting spells (e.g. turn undead) from class item
+		let spellData = [];
+
+		if (classObj.system.startingSpells) {
+			for (const spell of classObj.system.startingSpells) {
+				let spellObj = await fromUuid(spell);
+				let fDesc = await this._formatDescription(spellObj.system.description);
+				spellObj.formattedDescription = fDesc;
+				spellData.push(spellObj);
+			}
+		}
+		this.formData.startingSpells = spellData;
 
 		// grab choice talents from class item
 		if (classObj.system.talentChoices) {
@@ -944,10 +991,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
-		// load talents with selection of options
+		// Add class abilities
+		const allClassAbilities = [
+			...this.formData.classAbilities,
+		];
+
+		// Add starting spells (priest)
+		const allStartingSpells = [
+			...this.formData.startingSpells,
+		];
+
+		// load talents and abilities with selection of options
 		const allItems = [];
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.effects.createItemWithEffect(talentItem));
+		}
+		for (const classAbilityItem of allClassAbilities) {
+			allItems.push(await fromUuid(classAbilityItem.uuid));
+		}
+		for (const spell of allStartingSpells) {
+			allItems.push(await fromUuid(spell.uuid));
 		}
 
 		await actorRef.createEmbeddedDocuments("Item", allItems);

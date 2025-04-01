@@ -12,7 +12,7 @@
 		"description": "<p>Under your control. You decide its actions during its turn.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

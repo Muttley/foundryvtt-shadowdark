@@ -125,6 +125,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Basic", filterSources);
 	}
 
+	static async classAbilities(filterSources=true) {
+		return CompendiumsSD._documents("Item", "Class Ability", filterSources);
+	}
+
 	static async classes(filterSources=true) {
 		return CompendiumsSD._documents("Item", "Class", filterSources);
 	}

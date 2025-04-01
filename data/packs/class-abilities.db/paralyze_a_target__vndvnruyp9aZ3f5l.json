@@ -1,0 +1,26 @@
+{
+	"_id": "vndvnruyp9aZ3f5l",
+	"_key": "!items!vndvnruyp9aZ3f5l",
+	"effects": [
+	],
+	"folder": "y6T37zGPt9EZBlPO",
+	"img": "icons/skills/melee/blade-tip-energy-green.webp",
+	"name": "Paralyze a Target",
+	"system": {
+		"ability": "",
+		"dc": 10,
+		"description": "<p>1/day, paralyze a target of LV 9 or less you damage with a weapon for 1d4 rounds.</p>",
+		"group": "Black Lotus",
+		"limitedUses": true,
+		"loseOnFailure": false,
+		"lost": false,
+		"source": {
+			"title": "cursed-scroll-2"
+		},
+		"uses": {
+			"available": 1,
+			"max": 1
+		}
+	},
+	"type": "Class Ability"
+}

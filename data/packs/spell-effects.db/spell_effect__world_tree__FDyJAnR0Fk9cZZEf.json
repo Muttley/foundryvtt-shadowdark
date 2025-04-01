@@ -35,7 +35,7 @@
 		"description": "<p>For the spell's duration, the target can't be brought below 1 HP.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

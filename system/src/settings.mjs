@@ -120,6 +120,20 @@ export default function registerSystemSettings() {
 		requiresReload: true,
 	});
 
+	game.settings.register("shadowdark", "playerShowLightRemaining", {
+		name: "SHADOWDARK.settings.track_light_sources.show_remaining.name",
+		hint: "SHADOWDARK.settings.track_light_sources.show_remaining.hint",
+		scope: "world",
+		config: true,
+		default: 2,
+		type: Number,
+		choices: {
+			0: "SHADOWDARK.settings.track_light_sources.show_remaining.option0",
+			1: "SHADOWDARK.settings.track_light_sources.show_remaining.option1",
+			2: "SHADOWDARK.settings.track_light_sources.show_remaining.option2",
+		},
+	});
+
 	// ----------------------
 	//  EFFECT PANEL SETTINGS
 	// ----------------------

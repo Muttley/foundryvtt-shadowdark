@@ -12,7 +12,7 @@
 		"description": "<p>For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p>This spell ends as soon as the target is affected by another spell.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true

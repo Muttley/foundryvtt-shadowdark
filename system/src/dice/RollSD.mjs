@@ -77,6 +77,7 @@ export default class RollSD extends Roll {
 		if (this._isD20(parts)) {
 			// Weapon? -> Roll Damage dice
 			if (data.item?.isWeapon()) {
+				data.handedness = options.handedness;
 				data = await this._rollWeapon(data);
 				if (!options.flavor) {
 					options.flavor = game.i18n.format(
@@ -341,13 +342,9 @@ export default class RollSD extends Roll {
 	static async _rollWeapon(data) {
 		// Get dice information from the weapon
 		let numDice = data.item.system.damage.numDice;
-		let damageDie = await data.item.isTwoHanded()
-			?	data.item.system.damage.twoHanded
-			: data.item.system.damage.oneHanded;
 
-		let versatileDamageDie = await data.item.isVersatile()
-			? data.item.system.damage.twoHanded
-			: false;
+		let damageDie1H = data.item.system.damage.oneHanded ?? false;
+		let damageDie2H = data.item.system.damage.twoHanded ?? false;
 
 		// Improve the base damage die if this weapon has the relevant property
 		const weaponDamageDieImprovementByProperty =
@@ -355,14 +352,16 @@ export default class RollSD extends Roll {
 
 		for (const property of weaponDamageDieImprovementByProperty) {
 			if (await data.item.hasProperty(property)) {
-				damageDie = shadowdark.utils.getNextDieInList(
-					damageDie,
-					shadowdark.config.DAMAGE_DICE
-				);
+				if (damageDie1H) {
+					damageDie1H = shadowdark.utils.getNextDieInList(
+						damageDie1H,
+						shadowdark.config.DAMAGE_DICE
+					);
+				}
 
-				if (versatileDamageDie) {
-					versatileDamageDie = shadowdark.utils.getNextDieInList(
-						versatileDamageDie,
+				if (damageDie2H) {
+					damageDie2H = shadowdark.utils.getNextDieInList(
+						damageDie2H,
 						shadowdark.config.DAMAGE_DICE
 					);
 				}
@@ -373,48 +372,57 @@ export default class RollSD extends Roll {
 		if (data.actor.system.bonuses.weaponDamageDieD12.some(
 			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
 		)) {
-			damageDie = "d12";
-			if (versatileDamageDie) versatileDamageDie = "d12";
+			if (damageDie2H) damageDie2H = "d12";
+			if (damageDie1H) damageDie1H = "d12";
 		}
 
 		// Check and handle critical failure/success
 		if ( data.rolls.main.critical !== "failure" ) {
-			let primaryParts = [];
-
 			// Adds dice if backstabbing
 			if (data.backstab) {
 				// Additional dice
 				numDice += 1 + Math.floor(data.actor.system.level.value / 2);
-				if (data.actor.system.bonuses.backstabDie) numDice +=
-					parseInt(data.actor.system.bonuses.backstabDie, 10);
+
+				if (data.actor.system.bonuses.backstabDie) {
+					numDice +=
+						parseInt(data.actor.system.bonuses.backstabDie, 10);
+				}
 			}
 
 			// Multiply the dice with the items critical multiplier
-			if ( data.rolls.main.critical === "success") numDice
-				*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
+			if ( data.rolls.main.critical === "success") {
+				numDice
+					*= parseInt(data.item.system.bonuses.critical.multiplier, 10);
+			}
 
 			// Check if a damage multiplier is active for either Weapon or Actor
 			const damageMultiplier = Math.max(
 				parseInt(data.item.system.bonuses.damageMultiplier ?? 0, 10),
 				parseInt(data.actor.system.bonuses.damageMultiplier ?? 0, 10),
-				1);
+				1
+			);
 
-			const primaryDmgRoll = (damageMultiplier > 1)
-				? `${numDice}${damageDie} * ${damageMultiplier}`
-				: `${numDice}${damageDie}`;
+			if (damageDie1H && data.handedness === "1h") {
+				const damageRoll1H = (damageMultiplier > 1)
+					? `${numDice}${damageDie1H} * ${damageMultiplier}`
+					: `${numDice}${damageDie1H}`;
 
-			primaryParts = [primaryDmgRoll, ...data.damageParts];
+				const oneHandedParts = [damageRoll1H, ...data.damageParts];
 
-			data.rolls.primaryDamage = await this._roll(primaryParts, data);
+				data.rolls.damage = await this._roll(oneHandedParts, data);
+			}
 
-			if (versatileDamageDie) {
-				const secondaryDmgRoll = (damageMultiplier > 1)
-					? `${numDice}${versatileDamageDie} * ${damageMultiplier}`
-					: `${numDice}${versatileDamageDie}`;
-				const secondaryParts = [secondaryDmgRoll, ...data.damageParts];
-				data.rolls.secondaryDamage = await this._roll(secondaryParts, data);
+			if (damageDie2H && data.handedness === "2h") {
+				const damageRoll2H = (damageMultiplier > 1)
+					? `${numDice}${damageDie2H} * ${damageMultiplier}`
+					: `${numDice}${damageDie2H}`;
+
+				const twoHandedParts = [damageRoll2H, ...data.damageParts];
+
+				data.rolls.damage = await this._roll(twoHandedParts, data);
 			}
 		}
+
 		return data;
 	}
 
@@ -708,11 +716,8 @@ export default class RollSD extends Roll {
 	static async _rollDiceSoNice(rolls) {
 		const rollsToShow = [rolls.main.roll];
 
-		if ( rolls.primaryDamage ) {
-			rollsToShow.push(rolls.primaryDamage.roll);
-		}
-		if ( rolls.secondaryDamage ) {
-			rollsToShow.push(rolls.secondaryDamage.roll);
+		if ( rolls.damage ) {
+			rollsToShow.push(rolls.damage.roll);
 		}
 
 		const { whisper, blind } = this.getRollModeSettings();
