@@ -91,12 +91,23 @@ export default class RollSD extends Roll {
 				data.handedness = options.handedness;
 				data = await this._rollWeapon(data);
 				if (!options.flavor) {
-					options.flavor = game.i18n.format(
-						"SHADOWDARK.chat.item_roll.title",
-						{
-							name: data.item.name,
-						}
-					);
+					if (options.targetToken) {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.item_roll.title_vs",
+							{
+								name: data.item.name,
+								target: options.targetToken.actor.name,
+							}
+						);
+					}
+					else {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.item_roll.title",
+							{
+								name: data.item.name,
+							}
+						);
+					}
 				}
 			}
 
