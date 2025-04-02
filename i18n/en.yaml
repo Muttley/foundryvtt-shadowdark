@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
 SHADOWDARK.chat.item_roll.title: Attack roll with {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining

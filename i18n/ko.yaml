@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
 SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: 마법봉이 부서졌으며 영구적으로 효과를 잃었습니다
 SHADOWDARK.chat.light_source.expired: "{name} 의 {lightSource} 가 다 됐습니다"
 SHADOWDARK.chat.light_source.remaining: 분 남았습니다

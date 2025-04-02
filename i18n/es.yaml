@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: '¡Duplica cualquier valor numérico!'
 SHADOWDARK.chat.item_roll.mishap: '¡Tira en la tabla de pifias apropiada!'
 SHADOWDARK.chat.item_roll.title: Tirada de ataque con {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: La varita se rompe y deja de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{name} de {lightSource} se apagó"
 SHADOWDARK.chat.light_source.remaining: minutos restantes
