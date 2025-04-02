@@ -292,6 +292,7 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	async _onRollAttack(event) {
+		console.log("### _onRollAttack", event);
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
@@ -309,6 +310,7 @@ export default class ActorSheetSD extends ActorSheet {
 		}
 
 		this.actor.rollAttack(itemId, options);
+
 	}
 
 	async _onToggleLost(event) {

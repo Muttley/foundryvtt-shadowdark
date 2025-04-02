@@ -1213,9 +1213,21 @@ export default class ActorSD extends Actor {
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
-
 	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
+
+		if (game.settings.get("shadowdark", "enableTargeting")) {
+			if (!options.targetToken && game.user.targets.size > 0) {
+				const promises = [];
+				for (const target of game.user.targets.values()) {
+					promises.push(this.rollAttack(itemId, { ...options, targetToken: target }));
+				}
+				return await Promise.all(promises);
+			}
+			else if (options.targetToken) {
+				options.target = options.targetToken.actor.system.attributes.ac.value;
+			}
+		}
 
 		const ammunition = item.availableAmmunition();
 
