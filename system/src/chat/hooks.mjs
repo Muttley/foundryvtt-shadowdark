@@ -134,7 +134,7 @@ async function chatCardButtonAction(app, html, data) {
 		const actorId = $(ev.currentTarget).data("actor-id");
 		const actor = game.actors.get(actorId);
 
-		actor.rollAttack(itemId);
+		actor.rollAttack(items[0]._id);
 	});
 
 	const rollPromptButton = html.find("button[data-action=roll-prompt]");
