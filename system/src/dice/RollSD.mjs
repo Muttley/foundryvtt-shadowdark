@@ -122,6 +122,8 @@ export default class RollSD extends Roll {
 			data.item?.isSpell()
 			&& result
 			&& !result?.rolls?.main?.success
+			// Focus rolls shouldn't lose the spell, unless it is a critical
+			&& (!options.isFocusRoll || result?.rolls?.main?.critical === "failure")
 		) data.item.update({"system.lost": true});
 
 		// Reduce ammo if required
