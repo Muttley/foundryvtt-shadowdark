@@ -181,6 +181,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: släcktes
 SHADOWDARK.chat.light_source.source.toggle.on: tändes
 SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} slocknade"
 SHADOWDARK.chat.potion_used: "{name} använde en brygd"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} misslyckades lära sig något från scrollen"
 SHADOWDARK.chat.spell_learn.success: "{name} lärde sig besvärjelsen {spellName}"
 SHADOWDARK.chat.spell_learn.title: Lär sig besvärjelse
@@ -786,6 +787,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Ange Förlorad
 SHADOWDARK.sheet.player.tooltip.cast_spell: Kasta besvärjelse
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Lär dig besvärjelse
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Använd klassförmåga
 SHADOWDARK.sheet.player.tooltip.use_potion: Använd brygd

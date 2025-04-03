@@ -51,6 +51,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onCastSpell(event)
 		);
 
+		html.find("[data-action='focus-spell']").click(
+			event => {
+				this._onCastSpell(event, { isFocusRoll: true });
+			}
+		);
+
 		html.find("[data-action='create-boon']").click(
 			event => this._onCreateBoon(event)
 		);
@@ -560,15 +566,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.render();
 	}
 
-	async _onCastSpell(event) {
+	async _onCastSpell(event, options) {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
 		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {fastForward: true});
+			this.actor.castSpell(itemId, {...options, fastForward: true});
 		}
 		else {
-			this.actor.castSpell(itemId);
+			this.actor.castSpell(itemId, options);
 		}
 	}
 

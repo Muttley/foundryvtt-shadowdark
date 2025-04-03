@@ -19,9 +19,11 @@
 		{{/if}}
 	</header>
 
-	<div class="card-content">
-		{{{data.item.system.description}}}
-	</div>
+	{{#unless isFocusRoll}}
+		<div class="card-content">
+			{{{data.item.system.description}}}
+		</div>
+	{{/unless}}
 
 	<div class="d20-roll card-attack-rolls">
 		<div
@@ -46,9 +48,11 @@
 
 	{{#if isSpell}}
 		{{#ifEq data.rolls.main.critical "success"}}
-			<div class="card-spell-critical">
-				<p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
-			</div>
+			{{#unless isFocusRoll}}
+				<div class="card-spell-critical">
+					<p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
+				</div>
+			{{/unless}}
 		{{/ifEq}}
 		{{#ifEq data.rolls.main.critical "failure"}}
 			<div class="card-spell-critical">
