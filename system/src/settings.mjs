@@ -160,6 +160,18 @@ export default function registerSystemSettings() {
 		type: Boolean,
 	});
 
+	// ------------------
+	//  ATTACK TARGETING
+	// ------------------
+	game.settings.register("shadowdark", "enableTargeting", {
+		hint: "SHADOWDARK.settings.enable_targeting.hint",
+		name: "SHADOWDARK.settings.enable_targeting.name",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+	});
+
 	// ----------------------
 	//  INITIATIVE SETTINGS
 	// ----------------------
