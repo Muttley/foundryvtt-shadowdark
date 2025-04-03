@@ -648,6 +648,8 @@ SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare fel
 SHADOWDARK.settings.debugEnabled.name: Aktivera/inaktivera felsökning
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Utför datamigrering på inbyggda Shadowdark RPG system kompendier (ändra inte detta om du inte vet vad du gör)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrera systemkompendier
 SHADOWDARK.settings.module_art.hint: Konfigurera vilken moduls konst ska användas

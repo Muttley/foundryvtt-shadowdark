@@ -648,6 +648,8 @@ SHADOWDARK.settings.debugEnabled.hint: Включить или отключит�
 SHADOWDARK.settings.debugEnabled.name: Включить/Отключить отладку
 SHADOWDARK.settings.effect_panel.show_passive.hint: Если отмечено, Панель эффектов также будет показывать активные эффекты от талантов и предметов
 SHADOWDARK.settings.effect_panel.show_passive.name: Показывать все активные эффекты
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Выполнить миграцию данных для встроенных сборников системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Мигрировать системные сборники
 SHADOWDARK.settings.module_art.hint: Настройте, какие изображения, предоставленные модулями, следует использовать
