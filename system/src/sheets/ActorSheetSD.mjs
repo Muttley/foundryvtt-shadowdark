@@ -303,12 +303,14 @@ export default class ActorSheetSD extends ActorSheet {
 			handedness,
 		};
 
+
 		// skip roll prompt if shift clicked
 		if (event.shiftKey) {
 			options.fastForward = true;
 		}
 
 		this.actor.rollAttack(itemId, options);
+
 	}
 
 	async _onToggleLost(event) {
