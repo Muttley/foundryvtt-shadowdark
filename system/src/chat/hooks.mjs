@@ -130,7 +130,6 @@ async function chatCardButtonAction(app, html, data) {
 	const weaponAttackButton = html.find("button[data-action=roll-attack]");
 	weaponAttackButton.on("click", ev => {
 		ev.preventDefault();
-		const itemId = $(ev.currentTarget).data("item-id");
 		const actorId = $(ev.currentTarget).data("actor-id");
 		const actor = game.actors.get(actorId);
 
