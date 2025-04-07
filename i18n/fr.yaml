@@ -13,15 +13,15 @@ SHADOWDARK.ability_wisdom: Sagesse
 SHADOWDARK.alignment.chaotic: Chaotique
 SHADOWDARK.alignment.lawful: Loyal
 SHADOWDARK.alignment.neutral: Neutre
-SHADOWDARK.ancestry.choice_count: Choice Count
-SHADOWDARK.ancestry.choice: Choice
-SHADOWDARK.ancestry.fixed: Fixed
+SHADOWDARK.ancestry.choice_count: Nombre de Choix
+SHADOWDARK.ancestry.choice: Choix
+SHADOWDARK.ancestry.fixed: Fixe
 SHADOWDARK.ancestry.languages.label: Langue d'Ascendance
 SHADOWDARK.ancestry.languages.prompt: Sélectionner une Langue...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
-SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
-SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
+SHADOWDARK.ancestry.nametable.label: Table de nom aléatoire
+SHADOWDARK.ancestry.nametable.placeholder: Glisser une Table Aléatoire ici
+SHADOWDARK.ancestry.nametable.random_weight: Poids aléatoire
+SHADOWDARK.ancestry.nametable.tooltip.weight: Affecte les chances de lancer le dé lors de l'utilisation du générateur de personnages. Les valeurs élevées augmentent les chances. La valeur par défaut est 1.
 SHADOWDARK.ancestry.talents.label: Talents d'Ascendance
 SHADOWDARK.ancestry.talents.prompt: Sélectionner un Talent...
 SHADOWDARK.app.active_effects.title: Effets actifs
@@ -43,24 +43,24 @@ SHADOWDARK.app.light-tracker.douse-light: Éteindre la lumière
 SHADOWDARK.app.light-tracker.hide-inactive: Cacher les acteurs sans lumières
 SHADOWDARK.app.light-tracker.show-all-actors: Montrer tous les acteurs
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Éteindre les lumières
-SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
+SHADOWDARK.app.loading.body: Recherche des Terres Lointaines...
+SHADOWDARK.app.loading.title: Chargement
 SHADOWDARK.app.npc_attack_ranges.title: Portées d'Attaque
-SHADOWDARK.apps.character-generator.choose: Choose
-SHADOWDARK.apps.character-generator.create_character: Create Character
-SHADOWDARK.apps.character-generator.error.create: Failed to create player character {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
-SHADOWDARK.apps.character-generator.gold: Gold
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
+SHADOWDARK.apps.character-generator.choose: Choisir
+SHADOWDARK.apps.character-generator.create_character: Créer un personnage
+SHADOWDARK.apps.character-generator.error.create: Échec de la création du personnage joueur {error}
+SHADOWDARK.apps.character-generator.error.name: Le nom du personnage ne peut pas être vide
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Impossible de générer un nom aléatoire sans une Ascendance sélectionnée
+SHADOWDARK.apps.character-generator.gear: Équipement
+SHADOWDARK.apps.character-generator.gold: Or
+SHADOWDARK.apps.character-generator.name: Nom du Personnage
+SHADOWDARK.apps.character-generator.see_details: Voir les détails
+SHADOWDARK.apps.character-generator.starting_gear: Équipement de départ
+SHADOWDARK.apps.character-generator.success: Personnage créé
+SHADOWDARK.apps.character-generator.title: Générateur de personnage
+SHADOWDARK.apps.character-generator.tooltip: Personnage entièrement aléatoire
 SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
+SHADOWDARK.apps.character-generator.update_character: Mettre à jour le personnage
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Souhaitez-vous supprimer l'effet {effectName}?
 SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Supprimer l'effet ?
 SHADOWDARK.apps.effect_panel.duration_label.expired: Expiré
