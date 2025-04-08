@@ -247,7 +247,9 @@ function applyChatCardDamage(li, multiplier) {
 		roll = message.rolls[0];
 	}
 	else if (_chatMessageIsDamageCard(message)) {
-		roll = message?.flags.rolls.primaryDamage.roll;
+		const rolls = message?.flags.rolls;
+		const damage = rolls.primaryDamage || rolls.damage;
+		roll = damage.roll;
 	}
 	else {
 		return;
@@ -302,7 +304,7 @@ function _chatMessageIsBasicRoll(message) {
  */
 function _chatMessageIsDamageCard(message) {
 	return message?.flags.isRoll
-		&& (message?.flags.rolls?.primaryDamage);
+		&& (message?.flags.rolls?.primaryDamage || message?.flags.rolls?.damage);
 }
 
 /**
