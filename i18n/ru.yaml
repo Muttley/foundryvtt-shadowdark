@@ -182,6 +182,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: был погашен
 SHADOWDARK.chat.light_source.source.toggle.on: был зажжен
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} погас"
 SHADOWDARK.chat.potion_used: "{name} использовал зелье"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} не удалось ничему научиться из свитка"
 SHADOWDARK.chat.spell_learn.success: "{name} успешно выучил заклинание {spellName}"
 SHADOWDARK.chat.spell_learn.title: Изучение заклинания
@@ -789,6 +790,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Переключить редактир�
 SHADOWDARK.sheet.player.toggle_edit_stats: Переключить редактирование характеристик
 SHADOWDARK.sheet.player.toggle_spell_lost: Переключить потерю заклинания
 SHADOWDARK.sheet.player.tooltip.cast_spell: Сотворить заклинание
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Выучить заклинание
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Использовать классовую способность
 SHADOWDARK.sheet.player.tooltip.use_potion: Использовать зелье

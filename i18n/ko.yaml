@@ -182,6 +182,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: 꺼졌습니다.
 SHADOWDARK.chat.light_source.source.toggle.on: 켜졌습니다
 SHADOWDARK.chat.light_source.went_out: "{name} 의 {lightSource} 가 꺼졌습니다"
 SHADOWDARK.chat.potion_used: "{name} 포션을 사용했습니다"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} 두루마리로 주문 배우기를 실패했습니다"
 SHADOWDARK.chat.spell_learn.success: "{name} 성공적으로 {spellName} 주문을 배웠습니다"
 SHADOWDARK.chat.spell_learn.title: 주문 배우기
@@ -789,6 +790,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: 주문 불능 표시
 SHADOWDARK.sheet.player.tooltip.cast_spell: 주문 시전
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: 주문 배우기
 SHADOWDARK.sheet.player.tooltip.use_class_ability: 클래스 능력 사용
 SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용

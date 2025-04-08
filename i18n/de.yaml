@@ -182,6 +182,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: wurde gelöscht
 SHADOWDARK.chat.light_source.source.toggle.on: wurde entzündet
 SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} ging aus"
 SHADOWDARK.chat.potion_used: "{name} hat einen Trank benutzt"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} konnte nichts von der Schriftrolle lernen"
 SHADOWDARK.chat.spell_learn.success: "{name} hat den {spellName} Zauber erfolgreich gelernt"
 SHADOWDARK.chat.spell_learn.title: Lerne Zauber
@@ -789,6 +790,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: HP bearbeiten
 SHADOWDARK.sheet.player.toggle_edit_stats: Attribute bearbeiten
 SHADOWDARK.sheet.player.toggle_spell_lost: Zauber verloren
 SHADOWDARK.sheet.player.tooltip.cast_spell: Zauber wirken
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Zauber erlernen
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Klassenfähigkeit verwenden
 SHADOWDARK.sheet.player.tooltip.use_potion: Trank verwenden

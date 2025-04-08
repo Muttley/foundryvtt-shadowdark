@@ -182,6 +182,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: se apagó
 SHADOWDARK.chat.light_source.source.toggle.on: se encendió
 SHADOWDARK.chat.light_source.went_out: "{name} de {lightSource} se apagó"
 SHADOWDARK.chat.potion_used: "{name} ha usado una poción"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} no ha podido aprender nada del pergamino"
 SHADOWDARK.chat.spell_learn.success: "{name} aprendió correctamente el hechizo {spellName}"
 SHADOWDARK.chat.spell_learn.title: Aprender hechizo
@@ -789,6 +790,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Alternar hechizos perdidos
 SHADOWDARK.sheet.player.tooltip.cast_spell: Lanzar hechizo
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Aprender hechizo
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
 SHADOWDARK.sheet.player.tooltip.use_potion: Usar poción
