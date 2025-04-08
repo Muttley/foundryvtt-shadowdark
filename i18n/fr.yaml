@@ -601,7 +601,7 @@ SHADOWDARK.npc_attack.type.physical: Physique
 SHADOWDARK.npc_attack.type.special: Spécial
 SHADOWDARK.npc_move.close: Courte
 SHADOWDARK.npc_move.double_near: Intermédiaire x2
-SHADOWDARK.npc_move.far: Loin
+SHADOWDARK.npc_move.far: Longue
 SHADOWDARK.npc_move.near: Intermédiaire
 SHADOWDARK.npc_move.none: Aucun
 SHADOWDARK.npc_move.special: Spécial
@@ -614,7 +614,7 @@ SHADOWDARK.range.close_short: TP
 SHADOWDARK.range.close: Très proche
 SHADOWDARK.range.double_near: Intermédiaire x2
 SHADOWDARK.range.far_short: L
-SHADOWDARK.range.far: Loin
+SHADOWDARK.range.far: Longue
 SHADOWDARK.range.near_short: "P"
 SHADOWDARK.range.near: Proche
 SHADOWDARK.range.nearLine_short: LP
@@ -812,7 +812,7 @@ SHADOWDARK.spell_duration.real_time: Temps Réel
 SHADOWDARK.spell_duration.rounds: Rounds
 SHADOWDARK.spell_duration.turns: Tours
 SHADOWDARK.spell_range.close: Proche
-SHADOWDARK.spell_range.far: Loin
+SHADOWDARK.spell_range.far: Longue
 SHADOWDARK.spell_range.near: Près
 SHADOWDARK.spell.classes.label: Classes de lanceur de sort
 SHADOWDARK.spell.classes.prompt: Sélectionnez une Classe...
