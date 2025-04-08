@@ -5,6 +5,10 @@
 
 ## Bugfixes
 - [#1036] Missing Stats page (page 15) in the quickstart player guide
+- [#1039] "Apply Damage" and "Apply Healing" buttons no longer appearing *(many thanks to **ashleytowner** for contributing this bugfix)*
+
+## Chores
+- [#1043] Merge French translation updates from Crowdin
 
 ---
 
