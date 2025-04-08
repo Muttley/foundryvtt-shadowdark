@@ -1,3 +1,10 @@
+# v3.4.1
+
+## Bugfixes
+- [#1036] Missing Stats page (page 15) in the quickstart player guide
+
+---
+
 # v3.4.0
 
 ## Enhancements
