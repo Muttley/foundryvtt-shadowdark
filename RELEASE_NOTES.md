@@ -1,5 +1,8 @@
 # v3.4.1
 
+## Enhancements
+- [#1034] Add ability to easily roll spell focus checks *(many thanks to **ashleytowner** for contributing this enhancement)*
+
 ## Bugfixes
 - [#1036] Missing Stats page (page 15) in the quickstart player guide
 
