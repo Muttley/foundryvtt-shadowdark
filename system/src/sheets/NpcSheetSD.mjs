@@ -59,6 +59,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 			event => this._onUseAbility(event)
 		);
 
+		html.find("[data-action='focus-npc-spell']").click(
+			event => this._onCastSpell(event, { isFocusRoll: true })
+		);
+
 		html.find("[data-action='cast-npc-spell']").click(
 			event => this._onCastSpell(event)
 		);
@@ -163,16 +167,16 @@ export default class NpcSheetSD extends ActorSheetSD {
 		this.actor.useAbility(itemId);
 	}
 
-	async _onCastSpell(event) {
+	async _onCastSpell(event, options) {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
 
 		if (event.shiftKey) {
-			this.actor.castNPCSpell(itemId, {fastForward: true});
+			this.actor.castNPCSpell(itemId, {...options, fastForward: true});
 		}
 		else {
-			this.actor.castNPCSpell(itemId);
+			this.actor.castNPCSpell(itemId, options);
 		}
 	}
 

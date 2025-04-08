@@ -69,6 +69,15 @@
 			</div>
 			<div class="actions">
 				{{#unless spell.system.lost}}
+					{{#if (eq spell.system.duration.type 'focus')}}
+						<a
+							data-action="focus-npc-spell"
+							data-item-id="{{spell._id}}"
+							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
+						>
+							<i class="fa-solid fa-brain"></i>
+						</a>
+					{{/if}}
 					<a
 						data-action="cast-npc-spell"
 						data-item-id="{{spell._id}}"

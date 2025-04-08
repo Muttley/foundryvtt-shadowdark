@@ -107,7 +107,7 @@ export default class RollSD extends Roll {
 					options.flavor = game.i18n.format(
 						"SHADOWDARK.chat.spell_roll.title",
 						{
-							name: data.item.name,
+							name: options.isFocusRoll ? game.i18n.localize("SHADOWDARK.chat.spell_focus_check") : data.item.name,
 							tier: options.tier,
 							spellDC: options.target,
 						}
@@ -122,6 +122,8 @@ export default class RollSD extends Roll {
 			data.item?.isSpell()
 			&& result
 			&& !result?.rolls?.main?.success
+			// Focus rolls shouldn't lose the spell, unless it is a critical
+			&& (!options.isFocusRoll || result?.rolls?.main?.critical === "failure")
 		) data.item.update({"system.lost": true});
 
 		// Reduce ammo if required
@@ -592,6 +594,7 @@ export default class RollSD extends Roll {
 					? options.title : game.i18n.localize("SHADOWDARK.chatcard.default"),
 			isSpell: false,
 			isWeapon: false,
+			isFocusRoll: options.isFocusRoll,
 			isVersatile: false,
 			isRoll: true,
 			isNPC: data.actor?.type === "NPC",

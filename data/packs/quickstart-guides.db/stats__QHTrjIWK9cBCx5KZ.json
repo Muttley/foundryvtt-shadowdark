@@ -1,0 +1,23 @@
+{
+	"_id": "QHTrjIWK9cBCx5KZ",
+	"_key": "!journal.pages!I5d5ltGw4F3g15uG.QHTrjIWK9cBCx5KZ",
+	"image": {
+	},
+	"name": "Stats",
+	"src": null,
+	"system": {
+	},
+	"text": {
+		"content": "<div class=\"grid-2-columns\"><div><p>To determine your character’s stats, roll 3d6 in order for each one. Note each total and modifier on your character sheet.</p><p>Optionally, if none of your stats are 14 or higher, you may roll a new set of six numbers.</p><p><strong>Strength.</strong> Fight with a sword, bash open doors, swim. Important for fighters.</p><p><strong>Dexterity.</strong> Shoot a bow, balance on a ledge, sneak silently, hide. Important for thieves.</p><p><strong>Constitution.</strong> Hold your breath, resist poison, endure injury. Intelligence. Cast wizard spells, decipher runes, learn new skills. Important for wizards.</p><p><strong>Wisdom.</strong> Cast priest spells, detect the hidden, recognize omens. Important for priests.</p><p><strong>Charisma.</strong> Convince creatures to be friendly, resist mental control.</p></div><div><table style=\"width:95%\"><caption>Stats</caption><tbody><tr><td style=\"text-align:center\"><p>Stat</p></td><td style=\"text-align:center\"><p>Modifier</p></td></tr><tr><td style=\"text-align:center\"><p>1-3</p></td><td style=\"text-align:center\"><p>-4</p></td></tr><tr><td style=\"text-align:center\"><p>4-5</p></td><td style=\"text-align:center\"><p>-3</p></td></tr><tr><td style=\"text-align:center\"><p>6-7</p></td><td style=\"text-align:center\"><p>-2</p></td></tr><tr><td style=\"text-align:center\"><p>8-9</p></td><td style=\"text-align:center\"><p>-1</p></td></tr><tr><td style=\"text-align:center\"><p>10-11</p></td><td style=\"text-align:center\"><p>0</p></td></tr><tr><td style=\"text-align:center\"><p>12-13</p></td><td style=\"text-align:center\"><p>+1</p></td></tr><tr><td style=\"text-align:center\"><p>14-15</p></td><td style=\"text-align:center\"><p>+2</p></td></tr><tr><td style=\"text-align:center\"><p>16-17</p></td><td style=\"text-align:center\"><p>+3</p></td></tr><tr><td style=\"text-align:center\"><p>18+</p></td><td style=\"text-align:center\"><p>+4</p></td></tr></tbody></table></div></div>",
+		"format": 1
+	},
+	"title": {
+		"level": 1,
+		"show": true
+	},
+	"type": "text",
+	"video": {
+		"controls": true,
+		"volume": 0.5
+	}
+}

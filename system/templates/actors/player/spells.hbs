@@ -25,10 +25,19 @@
 								{{getSpellDuration spell.system.duration.type spell.system.duration.value}}
 							</div>
 							<div class="range">
-								{{fromConfig "SPELL_RANGES"spell.system.range}}
+								{{fromConfig "SPELL_RANGES" spell.system.range}}
 							</div>
 							<div class="actions">
 								{{#unless spell.system.lost}}
+										{{#if (eq spell.system.duration.type 'focus')}}
+											<a
+												data-action="focus-spell"
+												data-item-id="{{spell._id}}"
+												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
+											>
+												<i class="fa-solid fa-brain"></i>
+											</a>
+										{{/if}}
 										<a
 											data-action="cast-spell"
 											data-item-id="{{spell._id}}"
@@ -87,6 +96,15 @@
 							{{fromConfig "SPELL_RANGES" item.system.range}}
 						</div>
 						<div class="actions">
+							{{#if (eq item.system.duration.type 'focus')}}
+								<a
+									data-action="focus-spell"
+									data-item-id="{{item._id}}"
+									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
+								>
+									<i class="fa-solid fa-brain"></i>
+								</a>
+							{{/if}}
 							{{#unless item.system.lost}}
 								<a
 									data-action="cast-spell"
@@ -138,6 +156,15 @@
 							{{fromConfig "SPELL_RANGES" item.system.range}}
 						</div>
 						<div class="actions">
+								{{#if (eq item.system.duration.type 'focus')}}
+									<a
+										data-action="focus-spell"
+										data-item-id="{{item._id}}"
+										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
+									>
+										<i class="fa-solid fa-brain"></i>
+									</a>
+								{{/if}}
 								<a
 									data-action="cast-spell"
 									data-item-id="{{item._id}}"
