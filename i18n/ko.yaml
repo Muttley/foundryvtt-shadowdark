@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
 SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: 마법봉이 부서졌으며 영구적으로 효과를 잃었습니다
 SHADOWDARK.chat.light_source.expired: "{name} 의 {lightSource} 가 다 됐습니다"
 SHADOWDARK.chat.light_source.remaining: 분 남았습니다
@@ -648,6 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug loggin
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다

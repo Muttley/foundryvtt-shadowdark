@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
 SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
 SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
 SHADOWDARK.chat.light_source.remaining: minutos restantes
@@ -648,6 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Ativar ou desativar o registro de depura�
 SHADOWDARK.settings.debugEnabled.name: Ativar/Desativar Depuração
 SHADOWDARK.settings.effect_panel.show_passive.hint: Se marcado, o Painel de Efeitos também mostrará efeitos ativos de talentos e itens
 SHADOWDARK.settings.effect_panel.show_passive.name: Mostrar Todos os Efeitos Ativos
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Execute a migração de dados no compêndio do sistema de RPG Shadowdark (não modifique isso a menos que saiba o que está fazendo)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrar Compêndios do Sistema
 SHADOWDARK.settings.module_art.hint: Configurar qual arte fornecida por módulo deve ser usada

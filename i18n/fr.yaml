@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
 SHADOWDARK.chat.item_roll.double_numerical: Double n'importe quelle valeur numérique !
 SHADOWDARK.chat.item_roll.mishap: Jetez sur la table des mésaventures appropriée !
 SHADOWDARK.chat.item_roll.title: Jet d'Attaque avec {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: La baguette se casse et cesse définitivement de fonctionner
 SHADOWDARK.chat.light_source.expired: "Le/la {lightSource} de {name} s'est éteint(e)"
 SHADOWDARK.chat.light_source.remaining: minutes restantes

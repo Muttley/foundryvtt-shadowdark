@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Добавить к максимуму О�
 SHADOWDARK.chat.item_roll.double_numerical: Удвойте любое одно числовое значение!
 SHADOWDARK.chat.item_roll.mishap: Бросьте по соответствующей таблице неудач!
 SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: Жезл ломается и навсегда перестает работать
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} истёк"
 SHADOWDARK.chat.light_source.remaining: минут осталось
@@ -648,6 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Включить или отключит�
 SHADOWDARK.settings.debugEnabled.name: Включить/Отключить отладку
 SHADOWDARK.settings.effect_panel.show_passive.hint: Если отмечено, Панель эффектов также будет показывать активные эффекты от талантов и предметов
 SHADOWDARK.settings.effect_panel.show_passive.name: Показывать все активные эффекты
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Выполнить миграцию данных для встроенных сборников системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Мигрировать системные сборники
 SHADOWDARK.settings.module_art.hint: Настройте, какие изображения, предоставленные модулями, следует использовать

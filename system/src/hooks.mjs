@@ -5,6 +5,7 @@ import { EffectHooks } from "./hooks/effects.mjs";
 import { EffectPanelHooks } from "./hooks/effect-panel.mjs";
 import { LightSourceTrackerHooks } from "./hooks/light-source-tracker.mjs";
 import { NPCHooks } from "./hooks/npc.mjs";
+import { TargetingHooks } from "./hooks/targeting.mjs";
 import { SDAppsButtons } from "./hooks/sd-apps-buttons.mjs";
 import { hotbarHooks } from "./hooks/hotbar.mjs";
 
@@ -16,6 +17,7 @@ export const HooksSD = {
 			EffectHooks,
 			LightSourceTrackerHooks,
 			NPCHooks,
+			TargetingHooks,
 			hotbarHooks,
 		];
 

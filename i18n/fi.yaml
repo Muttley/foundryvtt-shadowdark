@@ -170,6 +170,7 @@ SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
 SHADOWDARK.chat.item_roll.title: Hyökkäysheitto käyttäen {name}
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: Taikasauva meni hajalle ja pysyvästi lakkasi toimimasta
 SHADOWDARK.chat.light_source.expired: "Hahmon {name} {lightSource} valonlähde paloi loppuun tai vanhentui"
 SHADOWDARK.chat.light_source.remaining: minuuttia jäljellä
@@ -648,6 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä yl
 SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittu, efektipaneeli näyttää myös aktiivisia efektejä lahjakkuuksista ja esineistä
 SHADOWDARK.settings.effect_panel.show_passive.name: Näytä kaikki aktiiviset efektit
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Datamigraatio sisäänrakennettuihin Shadowdark RPG compendiumeihin (älä koske tähän jos et tiedä mitä teet)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Datamigraatio compendiumeille
 SHADOWDARK.settings.module_art.hint: Määritä minkä moduulin tuottamaa taidetta käytetään
