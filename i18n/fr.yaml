@@ -649,6 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Activer ou désactiver les journaux de d�
 SHADOWDARK.settings.debugEnabled.name: Activer/Désactiver le débogage
 SHADOWDARK.settings.effect_panel.show_passive.hint: Si coché, le panneau d'effets affichera également les effets actifs des talents et objets
 SHADOWDARK.settings.effect_panel.show_passive.name: Afficher Tous les Effets Actifs
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Effectue une migration des données sur les compendiums du système Shadowdark RPG intégrés (ne modifiez pas ceci sauf si vous savez ce que vous faites)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrer les Compendiums du Système
 SHADOWDARK.settings.module_art.hint: Configurer quelles illustrations fournies par le module doivent être utilisées
