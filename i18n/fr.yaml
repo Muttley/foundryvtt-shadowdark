@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Magicien
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PA
-SHADOWDARK.damage.one_handed: "Dégâts à une Main :"
-SHADOWDARK.damage.two_handed: "Dégâts à 2 Mains :"
 SHADOWDARK.dialog.ability_check.cha: Test de Charisme
 SHADOWDARK.dialog.ability_check.con: Test de Constitution
 SHADOWDARK.dialog.ability_check.dex: Test de Dextérité
@@ -636,7 +634,9 @@ SHADOWDARK.roll.advantage: Avantage
 SHADOWDARK.roll.critical.failure: Échec Critique ! ({value})
 SHADOWDARK.roll.critical.success: Succès Critique ! ({value})
 SHADOWDARK.roll.D20: Lancez le D20
-SHADOWDARK.roll.damage: "Jet de Dégâts:"
+SHADOWDARK.roll.damage: "Jet de Dégâts :"
+SHADOWDARK.roll.damage1h: "Dégâts à 1M :"
+SHADOWDARK.roll.damage2h: "Dégâts à 2M :"
 SHADOWDARK.roll.disadvantage_title: "{title} avec Désavantage"
 SHADOWDARK.roll.disadvantage: Désavantage
 SHADOWDARK.roll.failure: Échec! ({value})

@@ -33,6 +33,37 @@
     <hr />
     {{/if}}
 
+    {{#if data.isVersatile}}
+    <div class="dialog-item pc-versatile">
+      <div>{{localize "SHADOWDARK.weapon.properties.versatile"}}</div>
+      <div class="hand">
+        {{localize "SHADOWDARK.item.weapon_damage.oneHanded_short"}}
+        <input
+		  type="radio"
+		  id="1h"
+		  name="weapon-handedness"
+		  value="1h"
+		  {{#ifEq data.item.system.currentHand "1h"}}
+		    checked
+		  {{/ifEq}}
+		>
+      </div>
+      <div class="hand">
+        {{localize "SHADOWDARK.item.weapon_damage.twoHanded_short"}}
+        <input
+		  type="radio"
+		  id="2h"
+		  name="weapon-handedness"
+		  value="2h"
+		  {{#ifEq data.item.system.currentHand "2h"}}
+		    checked
+		  {{/ifEq}}
+		>
+      </div>
+    </div>
+    <hr />
+    {{/if}}
+
     <div class="form-group">
       <label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
       <select name="rollMode">

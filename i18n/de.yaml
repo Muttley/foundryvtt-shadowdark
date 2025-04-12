@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Zauberer
 SHADOWDARK.coins.cp: KM
 SHADOWDARK.coins.gp: GM
 SHADOWDARK.coins.sp: SM
-SHADOWDARK.damage.one_handed: "Einhändiger Schaden:"
-SHADOWDARK.damage.two_handed: "Zweihändiger Schaden:"
 SHADOWDARK.dialog.ability_check.cha: Charismawurf
 SHADOWDARK.dialog.ability_check.con: Konstitutionswurf
 SHADOWDARK.dialog.ability_check.dex: Geschicklichkeitswurf
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Kritische Fehlschlag! ({value})
 SHADOWDARK.roll.critical.success: Kritischer Erfolg! ({value})
 SHADOWDARK.roll.D20: W20-Wurf
 SHADOWDARK.roll.damage: "Schadenswurf:"
+SHADOWDARK.roll.damage1h: "1H Schaden:"
+SHADOWDARK.roll.damage2h: "2H Schaden:"
 SHADOWDARK.roll.disadvantage_title: "{title} mit Nachteil"
 SHADOWDARK.roll.disadvantage: Nachteil
 SHADOWDARK.roll.failure: Fehlschlag! ({value})

@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
 SHADOWDARK.coins.gp: GM
 SHADOWDARK.coins.sp: SM
-SHADOWDARK.damage.one_handed: "Enhandsskada:"
-SHADOWDARK.damage.two_handed: "Tvåhandsskada:"
 SHADOWDARK.dialog.ability_check.cha: Karisma Check
 SHADOWDARK.dialog.ability_check.con: Kondition Check
 SHADOWDARK.dialog.ability_check.dex: Smidighet Check
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Kritiskt misslyckande! ({value})
 SHADOWDARK.roll.critical.success: Kritisk framgång! ({value})
 SHADOWDARK.roll.D20: Rulla D20
 SHADOWDARK.roll.damage: "Skaderull:"
+SHADOWDARK.roll.damage1h: "1H Skada:"
+SHADOWDARK.roll.damage2h: "1H Skada:"
 SHADOWDARK.roll.disadvantage_title: "{title} med nackdel"
 SHADOWDARK.roll.disadvantage: Nackdel
 SHADOWDARK.roll.failure: Misslyckades! ({value})

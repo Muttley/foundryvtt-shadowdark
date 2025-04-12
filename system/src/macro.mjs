@@ -48,6 +48,7 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
+		const options = {fastForward: event.shiftKey}
 
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
@@ -117,7 +118,7 @@ export default class ShadowdarkMacro {
 					})
 				);
 			}
-			actor.castSpell(items[0]._id);
+			actor.castSpell(items[0]._id, options);
 		}
 
 		// Use class ability
@@ -130,16 +131,16 @@ export default class ShadowdarkMacro {
 					})
 				);
 			}
-			actor.useAbility(items[0]._id);
+			actor.useAbility(items[0]._id, options);
 		}
 
 		// Roll weapon attack
 		else if (items[0].type === "Weapon") {
-			actor.rollAttack(items[0]._id);
+			actor.rollAttack(items[0]._id, options);
 		}
 
 		else if (items[0].type === "Potion") {
-			actor.usePotion(items[0]._id);
+			actor.usePotion(items[0]._id, options);
 		}
 
 		// Show basic item
