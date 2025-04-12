@@ -1,6 +1,18 @@
+# v3.4.2
+
+## Bugfixes
+- [#1056] Non-weapon rolls broken
+
+## Chores
+- [#1054] Merge French and Portuguese, Brazilian translation updates from Crowdin
+- [#1055] Merge French translation updates from Crowdin
+
+---
+
 # v3.4.1
 
 ## Enhancements
+- [#897] Check for successful attack when an actor is targeted *(many thanks to **ashleytowner** for contributing this bugfix)*
 - [#1034] Add ability to easily roll spell focus checks *(many thanks to **ashleytowner** for contributing this enhancement)*
 
 ## Bugfixes

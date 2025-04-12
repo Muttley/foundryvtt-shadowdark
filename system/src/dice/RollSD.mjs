@@ -44,7 +44,7 @@ export default class RollSD extends Roll {
 				: game.settings.get("core", "rollMode");
 		}
 
-		if (!options.handedness) {
+		if (data.item && data.item.type === "Weapon" && !options.handedness) {
 			// override with form input
 			options.handedness = $form
 				? this._getHandednessFromForm($form)
