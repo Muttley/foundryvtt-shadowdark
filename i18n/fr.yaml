@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Puisque {name} a fait le plus grand score,
 SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
 SHADOWDARK.chat.item_roll.double_numerical: Double n'importe quelle valeur numérique !
 SHADOWDARK.chat.item_roll.mishap: Jetez sur la table des mésaventures appropriée !
-SHADOWDARK.chat.item_roll.title: Jet d'Attaque avec {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Jet d'Attaque avec {name}
 SHADOWDARK.chat.item_roll.wand_mishap: La baguette se casse et cesse définitivement de fonctionner
 SHADOWDARK.chat.light_source.expired: "Le/la {lightSource} de {name} s'est éteint(e)"
 SHADOWDARK.chat.light_source.remaining: minutes restantes
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Tout Vendre
 SHADOWDARK.dialog.item.sell: Vendre
 SHADOWDARK.dialog.item.use: Utiliser
 SHADOWDARK.dialog.light_source.pick_up.title: Sélectionnez l'Acteur à qui donner la source lumineuse
-SHADOWDARK.dialog.roll_mode_label: Mode de lancer
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Jet de dés
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVERTISSEMENT : Ce sort n'est pas pour la même classe que le personnage, êtes-vous sûr de vouloir l'apprendre ?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmer l'apprentissage du sort
@@ -634,15 +634,15 @@ SHADOWDARK.roll.advantage: Avantage
 SHADOWDARK.roll.critical.failure: Échec Critique ! ({value})
 SHADOWDARK.roll.critical.success: Succès Critique ! ({value})
 SHADOWDARK.roll.D20: Lancez le D20
-SHADOWDARK.roll.damage: "Jet de Dégâts :"
-SHADOWDARK.roll.damage1h: "Dégâts à 1M :"
-SHADOWDARK.roll.damage2h: "Dégâts à 2M :"
+SHADOWDARK.roll.damage: Jet de Dégâts
 SHADOWDARK.roll.disadvantage_title: "{title} avec Désavantage"
 SHADOWDARK.roll.disadvantage: Désavantage
 SHADOWDARK.roll.failure: Échec! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: Dégâts à une main
 SHADOWDARK.roll.spell_casting_check: Jet d'Incantation
 SHADOWDARK.roll.success: Succès ! ({value})
+SHADOWDARK.roll.two_handed_damage: Dégâts à deux mains
 SHADOWDARK.settings.consume_ammunition.hint: Ajuste automatiquement les munitions pour les armes qui en utilisent lorsqu'un jet d'attaque est effectué.
 SHADOWDARK.settings.consume_ammunition.name: Consommation Automatique de Munitions
 SHADOWDARK.settings.debugEnabled.hint: Activer ou désactiver les journaux de débogage supplémentaires

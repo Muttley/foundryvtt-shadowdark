@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Eftersom {name} rullade högst, kommer de 
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
-SHADOWDARK.chat.item_roll.title: Attackerar med {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Attackerar med {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Trollstaven bryts och upphör att fungera permanent
 SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} slocknade"
 SHADOWDARK.chat.light_source.remaining: minuter kvar
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Sälj allt
 SHADOWDARK.dialog.item.sell: Sälj
 SHADOWDARK.dialog.item.use: Användning
 SHADOWDARK.dialog.light_source.pick_up.title: Välj aktör för att ge ljuskällan
-SHADOWDARK.dialog.roll_mode_label: Rull-läge
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Rulla
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VARNING: Denna besvärjelse är inte tillgänglig för klassen för karaktären, är du säker på att du vill lära dig den?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Bekräfta lärande av inkompatibel besvärjelse
@@ -634,15 +634,15 @@ SHADOWDARK.roll.advantage: Fördel
 SHADOWDARK.roll.critical.failure: Kritiskt misslyckande! ({value})
 SHADOWDARK.roll.critical.success: Kritisk framgång! ({value})
 SHADOWDARK.roll.D20: Rulla D20
-SHADOWDARK.roll.damage: "Skaderull:"
-SHADOWDARK.roll.damage1h: "1H Skada:"
-SHADOWDARK.roll.damage2h: "1H Skada:"
+SHADOWDARK.roll.damage: Skaderull
 SHADOWDARK.roll.disadvantage_title: "{title} med nackdel"
 SHADOWDARK.roll.disadvantage: Nackdel
 SHADOWDARK.roll.failure: Misslyckades! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: Enhandsskada
 SHADOWDARK.roll.spell_casting_check: Besvärjelse Check
 SHADOWDARK.roll.success: Lyckades! ({value})
+SHADOWDARK.roll.two_handed_damage: Tvåhandsskada
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare felsökningsloggning

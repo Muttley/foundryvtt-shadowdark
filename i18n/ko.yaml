@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go 
 SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
-SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
 SHADOWDARK.chat.item_roll.wand_mishap: 마법봉이 부서졌으며 영구적으로 효과를 잃었습니다
 SHADOWDARK.chat.light_source.expired: "{name} 의 {lightSource} 가 다 됐습니다"
 SHADOWDARK.chat.light_source.remaining: 분 남았습니다
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: 모두 팔기
 SHADOWDARK.dialog.item.sell: 팔기
 SHADOWDARK.dialog.item.use: 사용
 SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
-SHADOWDARK.dialog.roll_mode_label: 굴림 모드
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: 굴림
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
@@ -634,15 +634,15 @@ SHADOWDARK.roll.advantage: 유리함
 SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
 SHADOWDARK.roll.critical.success: 극단적인 성공! ({value})
 SHADOWDARK.roll.D20: D20 굴리기
-SHADOWDARK.roll.damage: "피해 굴림:"
-SHADOWDARK.roll.damage1h: "한손 피해:"
-SHADOWDARK.roll.damage2h: "양손 피해:"
+SHADOWDARK.roll.damage: 피해 굴림
 SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
 SHADOWDARK.roll.disadvantage: 불리함
 SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
+SHADOWDARK.roll.one_handed_damage: 한손 피해
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.roll.two_handed_damage: 양손 피해
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging

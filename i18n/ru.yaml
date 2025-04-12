@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Поскольку {name} выбросил
 SHADOWDARK.chat.hp_roll.apply_to_max: Добавить к максимуму ОЗ
 SHADOWDARK.chat.item_roll.double_numerical: Удвойте любое одно числовое значение!
 SHADOWDARK.chat.item_roll.mishap: Бросьте по соответствующей таблице неудач!
-SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Жезл ломается и навсегда перестает работать
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} истёк"
 SHADOWDARK.chat.light_source.remaining: минут осталось
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Продать всё
 SHADOWDARK.dialog.item.sell: Продать
 SHADOWDARK.dialog.item.use: Использовать
 SHADOWDARK.dialog.light_source.pick_up.title: Выберите персонажа, которому дать источник света
-SHADOWDARK.dialog.roll_mode_label: Режим броска
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Бросок
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "ВНИМАНИЕ: Это заклинание не относится к классу персонажа. Вы уверены, что хотите попробовать его выучить?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Подтвердить изучение заклинания
@@ -634,15 +634,15 @@ SHADOWDARK.roll.advantage: Преимущество
 SHADOWDARK.roll.critical.failure: Критический провал! ({value})
 SHADOWDARK.roll.critical.success: Критический успех! ({value})
 SHADOWDARK.roll.D20: Бросок D20
-SHADOWDARK.roll.damage: "Бросок урона:"
-SHADOWDARK.roll.damage1h: "Урон одноручным:"
-SHADOWDARK.roll.damage2h: "Урон двуручным:"
+SHADOWDARK.roll.damage: Бросок урона
 SHADOWDARK.roll.disadvantage_title: "{title} с помехой"
 SHADOWDARK.roll.disadvantage: Помеха
 SHADOWDARK.roll.failure: Провал! ({value})
 SHADOWDARK.roll.normal: Обычный
+SHADOWDARK.roll.one_handed_damage: Урон одноручным
 SHADOWDARK.roll.spell_casting_check: Проверка заклинания
 SHADOWDARK.roll.success: Успех! ({value})
+SHADOWDARK.roll.two_handed_damage: Урон двуручным
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Включить или отключить дополнительное ведение журнала отладки
