@@ -1,3 +1,10 @@
+# vX.X.X
+
+## Chores
+- [#1054] Merge French and Portuguese, Brazilian translation updates from Crowdin
+
+---
+
 # v3.4.1
 
 ## Enhancements
