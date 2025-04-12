@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Como {name} rolou o maior número, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
 SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
-SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
 SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
 SHADOWDARK.chat.light_source.remaining: minutos restantes
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Vender Tudo
 SHADOWDARK.dialog.item.sell: Vender
 SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Selecione o ator para dar a fonte de luz
-SHADOWDARK.dialog.roll_mode_label: Modo de Rolagem
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Rolar
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVISO: Esta magia não é da mesma classe que o personagem, você tem certeza de que deseja tentar aprender?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmar Aprender Feitiço
@@ -629,14 +629,14 @@ SHADOWDARK.range.touch_short: T
 SHADOWDARK.range.touch: Toque
 SHADOWDARK.range.unlimited_short: I
 SHADOWDARK.range.unlimited: Ilimitado
+SHADOWDARK.roll.1h_damage: 1H Damage
+SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} com Vantagem"
 SHADOWDARK.roll.advantage: Vantagem
 SHADOWDARK.roll.critical.failure: Falha Crítica! ({value})
 SHADOWDARK.roll.critical.success: Sucesso Crítico! ({value})
 SHADOWDARK.roll.D20: Rolar D20
-SHADOWDARK.roll.damage: "Rolagem de Dano:"
-SHADOWDARK.roll.damage1h: "Dano 1M:"
-SHADOWDARK.roll.damage2h: "Dano 2M:"
+SHADOWDARK.roll.damage: Damage Roll
 SHADOWDARK.roll.disadvantage_title: "{title} com Desvantagem"
 SHADOWDARK.roll.disadvantage: Desvantagem
 SHADOWDARK.roll.failure: Falha! ({value})
