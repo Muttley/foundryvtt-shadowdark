@@ -634,15 +634,15 @@ SHADOWDARK.roll.advantage: 유리함
 SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
 SHADOWDARK.roll.critical.success: 극단적인 성공! ({value})
 SHADOWDARK.roll.D20: D20 굴리기
-SHADOWDARK.roll.damage: Damage Roll
+SHADOWDARK.roll.damage: 피해 굴림
 SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
 SHADOWDARK.roll.disadvantage: 불리함
 SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
-SHADOWDARK.roll.one_handed_damage: One-handed Damage
+SHADOWDARK.roll.one_handed_damage: 한손 피해
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
-SHADOWDARK.roll.two_handed_damage: Two-handed Damage
+SHADOWDARK.roll.two_handed_damage: 양손 피해
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
