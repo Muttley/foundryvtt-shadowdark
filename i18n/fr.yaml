@@ -55,8 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Équipement
 SHADOWDARK.apps.character-generator.gold: Or
 SHADOWDARK.apps.character-generator.name: Nom du Personnage
 SHADOWDARK.apps.character-generator.see_details: Voir les détails
-SHADOWDARK.apps.character-generator.sidebar_create: Create
-SHADOWDARK.apps.character-generator.sidebar_import: Import
+SHADOWDARK.apps.character-generator.sidebar_create: Créer
+SHADOWDARK.apps.character-generator.sidebar_import: Importer
 SHADOWDARK.apps.character-generator.starting_gear: Équipement de départ
 SHADOWDARK.apps.character-generator.success: Personnage créé
 SHADOWDARK.apps.character-generator.title: Générateur de personnage
@@ -171,7 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Puisque {name} a fait le plus grand score,
 SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
 SHADOWDARK.chat.item_roll.double_numerical: Double n'importe quelle valeur numérique !
 SHADOWDARK.chat.item_roll.mishap: Jetez sur la table des mésaventures appropriée !
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title_vs: Jet d'attaque avec {name} contre {target}
 SHADOWDARK.chat.item_roll.title: Jet d'Attaque avec {name}
 SHADOWDARK.chat.item_roll.wand_mishap: La baguette se casse et cesse définitivement de fonctionner
 SHADOWDARK.chat.light_source.expired: "Le/la {lightSource} de {name} s'est éteint(e)"
@@ -184,7 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: a été masqué
 SHADOWDARK.chat.light_source.source.toggle.on: a été allumé
 SHADOWDARK.chat.light_source.went_out: "Les {name} de{lightSource} s'éteint"
 SHADOWDARK.chat.potion_used: "{name} a utilisé une potion"
-SHADOWDARK.chat.spell_focus_check: "Focus Check"
+SHADOWDARK.chat.spell_focus_check: "Test de concentration"
 SHADOWDARK.chat.spell_learn.failure: "{name} n'a pas réussi à apprendre quoi que ce soit du parchemin"
 SHADOWDARK.chat.spell_learn.success: "{name} a bien appris le sort {spellName}"
 SHADOWDARK.chat.spell_learn.title: Apprentissage de Sort
@@ -306,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Tout Vendre
 SHADOWDARK.dialog.item.sell: Vendre
 SHADOWDARK.dialog.item.use: Utiliser
 SHADOWDARK.dialog.light_source.pick_up.title: Sélectionnez l'Acteur à qui donner la source lumineuse
-SHADOWDARK.dialog.roll_mode_label: Rolling Mode
+SHADOWDARK.dialog.roll_mode_label: Mode de lancer
 SHADOWDARK.dialog.roll: Jet de dés
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVERTISSEMENT : Ce sort n'est pas pour la même classe que le personnage, êtes-vous sûr de vouloir l'apprendre ?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmer l'apprentissage du sort
@@ -514,9 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Formule de dégâts
 SHADOWDARK.item.npc_attack_special: Spécial
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Nombre de Dés de Dégâts
-SHADOWDARK.item.npc.spell_ability: Caractéristique d'incantation
-SHADOWDARK.item.npc.spell_bonus: Bonus pour jet d'Incantation
-SHADOWDARK.item.npc.spell_count: Number of Castings
+SHADOWDARK.item.npc.spell_ability: Capacité d'incantation
+SHADOWDARK.item.npc.spell_bonus: Bonus d'incantation
+SHADOWDARK.item.npc.spell_count: Nombre de sorts
 SHADOWDARK.item.potion.label: Potion
 SHADOWDARK.item.properties.label: Propriétés de l'Objet
 SHADOWDARK.item.scroll.label: Parchemin
@@ -654,8 +654,8 @@ SHADOWDARK.settings.debugEnabled.hint: Activer ou désactiver les journaux de d�
 SHADOWDARK.settings.debugEnabled.name: Activer/Désactiver le débogage
 SHADOWDARK.settings.effect_panel.show_passive.hint: Si coché, le panneau d'effets affichera également les effets actifs des talents et objets
 SHADOWDARK.settings.effect_panel.show_passive.name: Afficher Tous les Effets Actifs
-SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.enable_targeting.hint: Calcule automatiquement si les attaques touchent en se basant sur la CA des jetons ciblés.
+SHADOWDARK.settings.enable_targeting.name: Activer le ciblage des attaques
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Effectue une migration des données sur les compendiums du système Shadowdark RPG intégrés (ne modifiez pas ceci sauf si vous savez ce que vous faites)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrer les Compendiums du Système
 SHADOWDARK.settings.module_art.hint: Configurer quelles illustrations fournies par le module doivent être utilisées
@@ -795,7 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Basculer Édition des PV
 SHADOWDARK.sheet.player.toggle_edit_stats: Basculer Édition des Caractéristiques
 SHADOWDARK.sheet.player.toggle_spell_lost: Basculer Sort Perdu
 SHADOWDARK.sheet.player.tooltip.cast_spell: Lancer un sort
-SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Concentration sur le sort
 SHADOWDARK.sheet.player.tooltip.learn_spell: Apprendre un Sort
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Utiliser une capacité de Classe
 SHADOWDARK.sheet.player.tooltip.use_potion: Utiliser une potion
