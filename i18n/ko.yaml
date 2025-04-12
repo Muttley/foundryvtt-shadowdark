@@ -629,8 +629,6 @@ SHADOWDARK.range.touch_short: 접
 SHADOWDARK.range.touch: 접촉
 SHADOWDARK.range.unlimited_short: 무
 SHADOWDARK.range.unlimited: 무제한
-SHADOWDARK.roll.1h_damage: 1H Damage
-SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "유리함으로 {title}"
 SHADOWDARK.roll.advantage: 유리함
 SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
@@ -641,8 +639,10 @@ SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
 SHADOWDARK.roll.disadvantage: 불리함
 SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
+SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
