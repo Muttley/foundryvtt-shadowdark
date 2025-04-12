@@ -48,7 +48,7 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
-		const options = {fastForward: event.shiftKey}
+		const options = {fastForward: event.shiftKey};
 
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
