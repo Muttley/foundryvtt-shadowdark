@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Da {name} am höchsten gewürfelt hat, wir
 SHADOWDARK.chat.hp_roll.apply_to_max: Zu Max HP hinzufügen
 SHADOWDARK.chat.item_roll.double_numerical: Verdoppele einen beliebigen numerischen Wert!
 SHADOWDARK.chat.item_roll.mishap: Würfle auf die entsprechenden Ungeschickstabelle!
-SHADOWDARK.chat.item_roll.title: Angirffswurf mit {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Angirffswurf mit {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Der Zauberstab bricht und stoppt dauerhaft zu funktionieren
 SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} ist abgelaufen"
 SHADOWDARK.chat.light_source.remaining: Minuten verbleibend
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Alles verkaufen
 SHADOWDARK.dialog.item.sell: Verkaufen
 SHADOWDARK.dialog.item.use: Verwenden
 SHADOWDARK.dialog.light_source.pick_up.title: Figur auswählen, um Lichtquelle zuzuweisen
-SHADOWDARK.dialog.roll_mode_label: Wurfmodus
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Wurf
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNUNG: Dieser Zauber ist nicht von der gleichen Klasse wie der Charakter, bist du sicher, dass du versuchen möchtest ihn zu lernen?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Bestätige Zauber lernen
@@ -629,14 +629,14 @@ SHADOWDARK.range.touch_short: G
 SHADOWDARK.range.touch: Griffweite
 SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unbegrenzt
+SHADOWDARK.roll.1h_damage: 1H Damage
+SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} mit Vorteil"
 SHADOWDARK.roll.advantage: Vorteil
 SHADOWDARK.roll.critical.failure: Kritische Fehlschlag! ({value})
 SHADOWDARK.roll.critical.success: Kritischer Erfolg! ({value})
 SHADOWDARK.roll.D20: W20-Wurf
-SHADOWDARK.roll.damage: "Schadenswurf:"
-SHADOWDARK.roll.damage1h: "1H Schaden:"
-SHADOWDARK.roll.damage2h: "2H Schaden:"
+SHADOWDARK.roll.damage: Damage Roll
 SHADOWDARK.roll.disadvantage_title: "{title} mit Nachteil"
 SHADOWDARK.roll.disadvantage: Nachteil
 SHADOWDARK.roll.failure: Fehlschlag! ({value})
