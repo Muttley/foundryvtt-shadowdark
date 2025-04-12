@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go 
 SHADOWDARK.chat.hp_roll.apply_to_max: Add to Max HP
 SHADOWDARK.chat.item_roll.double_numerical: Double any one numerical value!
 SHADOWDARK.chat.item_roll.mishap: Roll on the appropriate Mishap table!
-SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title: Attack roll with {name}
 SHADOWDARK.chat.item_roll.wand_mishap: The wand breaks and permanently ceases to work
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} expired"
 SHADOWDARK.chat.light_source.remaining: minutes remaining
@@ -629,14 +629,14 @@ SHADOWDARK.range.touch_short: T
 SHADOWDARK.range.touch: Touch
 SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unlimited
+SHADOWDARK.roll.1h_damage: 1H Damage
+SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
 SHADOWDARK.roll.D20: Roll D20
 SHADOWDARK.roll.damage: Damage Roll
-SHADOWDARK.roll.damage1h: 1H Damage
-SHADOWDARK.roll.damage2h: 2H Damage
 SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
 SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: Failure! ({value})
