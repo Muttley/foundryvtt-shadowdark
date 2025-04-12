@@ -5,7 +5,11 @@
 
 ## Bugfixes
 - [#1036] Missing Stats page (page 15) in the quickstart player guide
+- [#1038] Missing translatable strings
 - [#1039] "Apply Damage" and "Apply Healing" buttons no longer appearing *(many thanks to **ashleytowner** for contributing this bugfix)*
+- [#1047] Hotbar macro no longer rolling damage
+- [#1050] The “Statue” Feature is missing on the Animated Armor
+- [#1052] Unable to roll versatile weapon attacks from item chat card
 
 ## Chores
 - [#1043] Merge French translation updates from Crowdin
