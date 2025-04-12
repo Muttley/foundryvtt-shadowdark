@@ -666,8 +666,10 @@ export default class RollSD extends Roll {
 
 			if (templateData.isWeapon) {
 				if (await data.item.isVersatile()) {
+					const hand = options.handedness === "1h" ? "one" : "two";
+
 					templateData.damageRollName = game.i18n.localize(
-						`SHADOWDARK.roll.damage${options.handedness}`
+						`SHADOWDARK.roll.${hand}_handed_damage`
 					);
 				}
 			}

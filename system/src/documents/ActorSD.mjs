@@ -1328,7 +1328,7 @@ export default class ActorSD extends Actor {
 			// remember handedness
 			if (data.isVersatile) {
 				if (options.handedness) {
-					item.system.currentHand = options.handedness;
+					item.system.currentHand = options.handedness ?? "1h";
 				}
 				data.currentHand = item.system.currentHand;
 			}

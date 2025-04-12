@@ -62,6 +62,7 @@ export default class ShadowdarkMacro {
 
 		// Get items matching name on the macro
 		const items = actor ? actor.items.filter( x => x.name === itemName) : [];
+		const item = items[0] ?? undefined;
 
 		// no items of itemName found on actor
 		if (items.length === 0) {
@@ -136,6 +137,10 @@ export default class ShadowdarkMacro {
 
 		// Roll weapon attack
 		else if (items[0].type === "Weapon") {
+			const isVersatile = await item.isVersatile();
+
+			if (isVersatile) options.handedness = "1h";
+
 			actor.rollAttack(items[0]._id, options);
 		}
 
