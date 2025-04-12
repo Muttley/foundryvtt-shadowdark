@@ -629,8 +629,6 @@ SHADOWDARK.range.touch_short: C
 SHADOWDARK.range.touch: Contact
 SHADOWDARK.range.unlimited_short: I
 SHADOWDARK.range.unlimited: Illimitée
-SHADOWDARK.roll.1h_damage: 1H Damage
-SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} avec Avantage"
 SHADOWDARK.roll.advantage: Avantage
 SHADOWDARK.roll.critical.failure: Échec Critique ! ({value})
@@ -641,8 +639,10 @@ SHADOWDARK.roll.disadvantage_title: "{title} avec Désavantage"
 SHADOWDARK.roll.disadvantage: Désavantage
 SHADOWDARK.roll.failure: Échec! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: Jet d'Incantation
 SHADOWDARK.roll.success: Succès ! ({value})
+SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.consume_ammunition.hint: Ajuste automatiquement les munitions pour les armes qui en utilisent lorsqu'un jet d'attaque est effectué.
 SHADOWDARK.settings.consume_ammunition.name: Consommation Automatique de Munitions
 SHADOWDARK.settings.debugEnabled.hint: Activer ou désactiver les journaux de débogage supplémentaires
