@@ -5,6 +5,7 @@
 
 ## Chores
 - [#1054] Merge French and Portuguese, Brazilian translation updates from Crowdin
+- [#1055] Merge French translation updates from Crowdin
 
 ---
 
