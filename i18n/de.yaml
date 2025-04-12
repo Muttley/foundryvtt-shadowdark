@@ -629,8 +629,6 @@ SHADOWDARK.range.touch_short: G
 SHADOWDARK.range.touch: Griffweite
 SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unbegrenzt
-SHADOWDARK.roll.1h_damage: 1H Damage
-SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} mit Vorteil"
 SHADOWDARK.roll.advantage: Vorteil
 SHADOWDARK.roll.critical.failure: Kritische Fehlschlag! ({value})
@@ -641,8 +639,10 @@ SHADOWDARK.roll.disadvantage_title: "{title} mit Nachteil"
 SHADOWDARK.roll.disadvantage: Nachteil
 SHADOWDARK.roll.failure: Fehlschlag! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: Zauberwurf
 SHADOWDARK.roll.success: Erfolg! ({value})
+SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.consume_ammunition.hint: Automatisch Munition für Waffen anpassen, die sie verwenden, wenn eine Angriffswurf gemacht wird
 SHADOWDARK.settings.consume_ammunition.name: Munition automatisch verbrauchen
 SHADOWDARK.settings.debugEnabled.hint: Aktivieren oder deaktivieren Sie zusätzliche Debug-Protokollierung
