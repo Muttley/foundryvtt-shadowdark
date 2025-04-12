@@ -350,9 +350,9 @@ export default class RollSD extends Roll {
 				}
 			}
 
-			const primaryParts = [baseDamageFormula, ...data.damageParts];
+			const damageParts = [baseDamageFormula, ...data.damageParts];
 
-			data.rolls.primaryDamage = await this._roll(primaryParts, data);
+			data.rolls.damage = await this._roll(damageParts, data);
 		}
 
 		return data;
@@ -396,8 +396,8 @@ export default class RollSD extends Roll {
 		if (data.actor.system.bonuses.weaponDamageDieD12.some(
 			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
 		)) {
-			if (damageDie2H) damageDie2H = "d12";
 			if (damageDie1H) damageDie1H = "d12";
+			if (damageDie2H) damageDie2H = "d12";
 		}
 
 		// Check and handle critical failure/success
@@ -426,25 +426,43 @@ export default class RollSD extends Roll {
 				1
 			);
 
-			if (damageDie1H && data.handedness === "1h") {
+			let oneHandedParts;
+			let twoHandedParts;
+
+			if (damageDie1H) {
 				const damageRoll1H = (damageMultiplier > 1)
 					? `${numDice}${damageDie1H} * ${damageMultiplier}`
 					: `${numDice}${damageDie1H}`;
 
-				const oneHandedParts = [damageRoll1H, ...data.damageParts];
-
-				data.rolls.damage = await this._roll(oneHandedParts, data);
+				oneHandedParts = [damageRoll1H, ...data.damageParts];
 			}
 
-			if (damageDie2H && data.handedness === "2h") {
+			if (damageDie2H) {
 				const damageRoll2H = (damageMultiplier > 1)
 					? `${numDice}${damageDie2H} * ${damageMultiplier}`
 					: `${numDice}${damageDie2H}`;
 
-				const twoHandedParts = [damageRoll2H, ...data.damageParts];
-
-				data.rolls.damage = await this._roll(twoHandedParts, data);
+				twoHandedParts = [damageRoll2H, ...data.damageParts];
 			}
+
+			switch (data.handedness) {
+				case "1h":
+					data.rolls.damage = await this._roll(oneHandedParts, data);
+					break;
+				case "2h":
+					data.rolls.damage = await this._roll(twoHandedParts, data);
+					break;
+				case undefined:
+					if (damageDie1H && damageDie2H) {
+						data.rolls.damage = await this._roll(oneHandedParts, data);
+						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data);
+					}
+					else {
+						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
+					}
+			}
+
+
 		}
 
 		return data;
@@ -617,7 +635,7 @@ export default class RollSD extends Roll {
 			isSpell: false,
 			isWeapon: false,
 			isFocusRoll: options.isFocusRoll,
-			isVersatile: false,
+			damageRollName: game.i18n.localize("SHADOWDARK.roll.damage"),
 			isRoll: true,
 			isNPC: data.actor?.type === "NPC",
 			targetDC: options.target ?? false,
@@ -628,8 +646,14 @@ export default class RollSD extends Roll {
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
 			templateData.isWeapon = data.item.isWeapon();
-			templateData.isVersatile = await data.item.isVersatile();
 
+			if (templateData.isWeapon) {
+				if (await data.item.isVersatile()) {
+					templateData.damageRollName = game.i18n.localize(
+						`SHADOWDARK.roll.damage${options.handedness}`
+					);
+				}
+			}
 			const propertyNames = [];
 
 			for (const property of await data.item.propertyItems()) {
@@ -743,6 +767,9 @@ export default class RollSD extends Roll {
 
 		if ( rolls.damage ) {
 			rollsToShow.push(rolls.damage.roll);
+		}
+		if ( rolls.secondaryDamage ) {
+			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
 		const { whisper, blind } = this.getRollModeSettings();

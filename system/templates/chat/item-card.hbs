@@ -19,11 +19,9 @@
 		{{/if}}
 	</header>
 
-	{{#unless isFocusRoll}}
-		<div class="card-content">
-			{{{data.item.system.description}}}
-		</div>
-	{{/unless}}
+	<div class="card-content">
+		{{{data.item.system.description}}}
+	</div>
 
 	<div class="d20-roll card-attack-rolls">
 		<div
@@ -48,11 +46,9 @@
 
 	{{#if isSpell}}
 		{{#ifEq data.rolls.main.critical "success"}}
-			{{#unless isFocusRoll}}
-				<div class="card-spell-critical">
-					<p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
-				</div>
-			{{/unless}}
+			<div class="card-spell-critical">
+				<p>{{localize "SHADOWDARK.chat.item_roll.double_numerical"}}</p>
+			</div>
 		{{/ifEq}}
 		{{#ifEq data.rolls.main.critical "failure"}}
 			<div class="card-spell-critical">
@@ -67,13 +63,30 @@
 	{{#if isWeapon}}
 		{{#ifNeq data.rolls.main.critical "failure"}}
 			<div class="card-damage-rolls">
-				<div
-					class="card-damage-roll-single blindable"
-					data-blind="{{data.rolls.main.blind}}"
-				>
-					<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
-					{{{data.rolls.damage.renderedHTML}}}
-				</div>
+				{{#if data.rolls.secondaryDamage}}
+					<div
+						class="card-damage-roll blindable"
+						data-blind="{{data.rolls.main.blind}}"
+					>
+						<h3>{{localize "SHADOWDARK.roll.damage1h"}}</h3>
+						{{{data.rolls.damage.renderedHTML}}}
+					</div>
+					<div
+						class="card-damage-roll blindable"
+						data-blind="{{data.rolls.main.blind}}"
+					>
+						<h3>{{localize "SHADOWDARK.roll.damage2h"}}</h3>
+						 {{{data.rolls.secondaryDamage.renderedHTML}}}
+					</div>
+				{{else}}
+					<div
+						class="card-damage-roll-single blindable"
+						data-blind="{{data.rolls.main.blind}}"
+					>
+						<h3>{{damageRollName}}</h3>
+						{{{data.rolls.damage.renderedHTML}}}
+					</div>
+				{{/if}}
 			</div>
 		{{/ifNeq}}
 	{{/if}}
@@ -87,7 +100,7 @@
 						data-blind="{{data.rolls.main.blind}}"
 					>
 						<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
-						{{{data.rolls.primaryDamage.renderedHTML}}}
+						{{{data.rolls.damage.renderedHTML}}}
 					</div>
 				</div>
 			{{/ifNeq}}

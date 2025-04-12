@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: 마법사
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.damage.one_handed: "한손 피해:"
-SHADOWDARK.damage.two_handed: "양손 피해"
 SHADOWDARK.dialog.ability_check.cha: 매력 판정
 SHADOWDARK.dialog.ability_check.con: 건강 판정
 SHADOWDARK.dialog.ability_check.dex: 민첩 판정
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
 SHADOWDARK.roll.critical.success: 극단적인 성공! ({value})
 SHADOWDARK.roll.D20: D20 굴리기
 SHADOWDARK.roll.damage: "피해 굴림:"
+SHADOWDARK.roll.damage1h: "한손 피해:"
+SHADOWDARK.roll.damage2h: "양손 피해:"
 SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
 SHADOWDARK.roll.disadvantage: 불리함
 SHADOWDARK.roll.failure: 실패! ({value})

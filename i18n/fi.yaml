@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
 SHADOWDARK.coins.gp: Kulta
 SHADOWDARK.coins.sp: Hopea
-SHADOWDARK.damage.one_handed: "Yksikätinen vahinko:"
-SHADOWDARK.damage.two_handed: "Kaksikätinen vahinko:"
 SHADOWDARK.dialog.ability_check.cha: Karismaheitto
 SHADOWDARK.dialog.ability_check.con: Sitkeysheitto
 SHADOWDARK.dialog.ability_check.dex: Ketteryysheitto
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Kriittinen epäonnistuminen! ({value})
 SHADOWDARK.roll.critical.success: Kriittinen onnistuminen! ({value})
 SHADOWDARK.roll.D20: Heitä n20
 SHADOWDARK.roll.damage: "Vahinkoheitto:"
+SHADOWDARK.roll.damage1h: "Yksikätinen vahinko:"
+SHADOWDARK.roll.damage2h: "Kaksikätinen vahinko:"
 SHADOWDARK.roll.disadvantage_title: "{title} haitan kanssa"
 SHADOWDARK.roll.disadvantage: Haitta
 SHADOWDARK.roll.failure: Epäonnistui! ({value})

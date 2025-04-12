@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Волшебник
 SHADOWDARK.coins.cp: МД
 SHADOWDARK.coins.gp: ЗМ
 SHADOWDARK.coins.sp: СМ
-SHADOWDARK.damage.one_handed: "Урон одной рукой:"
-SHADOWDARK.damage.two_handed: "Урон двумя руками:"
 SHADOWDARK.dialog.ability_check.cha: Проверка Харизмы
 SHADOWDARK.dialog.ability_check.con: Проверка Телосложения
 SHADOWDARK.dialog.ability_check.dex: Проверка Ловкости
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Критический провал! ({value})
 SHADOWDARK.roll.critical.success: Критический успех! ({value})
 SHADOWDARK.roll.D20: Бросок D20
 SHADOWDARK.roll.damage: "Бросок урона:"
+SHADOWDARK.roll.damage1h: "Урон одноручным:"
+SHADOWDARK.roll.damage2h: "Урон двуручным:"
 SHADOWDARK.roll.disadvantage_title: "{title} с помехой"
 SHADOWDARK.roll.disadvantage: Помеха
 SHADOWDARK.roll.failure: Провал! ({value})

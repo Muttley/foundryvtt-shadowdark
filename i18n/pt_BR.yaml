@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PP
-SHADOWDARK.damage.one_handed: "Dano de Uma Mão:"
-SHADOWDARK.damage.two_handed: "Dano de Duas Mãos:"
 SHADOWDARK.dialog.ability_check.cha: Teste de Carisma
 SHADOWDARK.dialog.ability_check.con: Teste de Constituição
 SHADOWDARK.dialog.ability_check.dex: Verificação de Destreza
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Falha Crítica! ({value})
 SHADOWDARK.roll.critical.success: Sucesso Crítico! ({value})
 SHADOWDARK.roll.D20: Rolar D20
 SHADOWDARK.roll.damage: "Rolagem de Dano:"
+SHADOWDARK.roll.damage1h: "Dano 1M:"
+SHADOWDARK.roll.damage2h: "Dano 2M:"
 SHADOWDARK.roll.disadvantage_title: "{title} com Desvantagem"
 SHADOWDARK.roll.disadvantage: Desvantagem
 SHADOWDARK.roll.failure: Falha! ({value})

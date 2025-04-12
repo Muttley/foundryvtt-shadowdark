@@ -252,8 +252,6 @@ SHADOWDARK.class.wizard: Wizard
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.damage.one_handed: "One-Handed Damage:"
-SHADOWDARK.damage.two_handed: "Two-Handed Damage:"
 SHADOWDARK.dialog.ability_check.cha: Charisma Check
 SHADOWDARK.dialog.ability_check.con: Constitution Check
 SHADOWDARK.dialog.ability_check.dex: Dexterity Check
@@ -637,6 +635,8 @@ SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
 SHADOWDARK.roll.D20: Roll D20
 SHADOWDARK.roll.damage: "Damage Roll:"
+SHADOWDARK.roll.damage1h: "1H Damage:"
+SHADOWDARK.roll.damage2h: "2H Damage:"
 SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
 SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: Failure! ({value})
