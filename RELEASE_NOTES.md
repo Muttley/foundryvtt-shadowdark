@@ -8,6 +8,7 @@
 # v3.4.1
 
 ## Enhancements
+- [#897] Check for successful attack when an actor is targeted *(many thanks to **ashleytowner** for contributing this bugfix)*
 - [#1034] Add ability to easily roll spell focus checks *(many thanks to **ashleytowner** for contributing this enhancement)*
 
 ## Bugfixes
