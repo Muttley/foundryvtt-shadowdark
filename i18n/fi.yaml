@@ -629,8 +629,6 @@ SHADOWDARK.range.touch_short: K
 SHADOWDARK.range.touch: Kosketus
 SHADOWDARK.range.unlimited_short: R
 SHADOWDARK.range.unlimited: Rajoittamaton
-SHADOWDARK.roll.1h_damage: 1H Damage
-SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} edun kanssa"
 SHADOWDARK.roll.advantage: Etu
 SHADOWDARK.roll.critical.failure: Kriittinen epäonnistuminen! ({value})
@@ -641,8 +639,10 @@ SHADOWDARK.roll.disadvantage_title: "{title} haitan kanssa"
 SHADOWDARK.roll.disadvantage: Haitta
 SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
+SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
+SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.consume_ammunition.hint: Vähennä aseiden panoksia automaattisesti kun hyökkäysheitto tehdään
 SHADOWDARK.settings.consume_ammunition.name: Vähennä automaattisesti panoksia
 SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä ylimääräinen debuggauksen lokitus
