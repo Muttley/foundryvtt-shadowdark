@@ -1,4 +1,7 @@
-# vX.X.X
+# v3.4.2
+
+## Bugfixes
+- [#1056] Non-weapon rolls broken
 
 ## Chores
 - [#1054] Merge French and Portuguese, Brazilian translation updates from Crowdin
