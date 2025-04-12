@@ -461,8 +461,6 @@ export default class RollSD extends Roll {
 						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
 					}
 			}
-
-
 		}
 
 		return data;
