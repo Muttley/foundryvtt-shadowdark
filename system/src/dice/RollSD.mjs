@@ -44,6 +44,13 @@ export default class RollSD extends Roll {
 				: game.settings.get("core", "rollMode");
 		}
 
+		if (!options.handedness) {
+			// override with form input
+			options.handedness = $form
+				? this._getHandednessFromForm($form)
+				: undefined;
+		}
+
 		// Roll the Dice
 		data.rolls = {
 			main: await this._rollAdvantage(parts, data, adv),
@@ -89,6 +96,7 @@ export default class RollSD extends Roll {
 			// Weapon? -> Roll Damage dice
 			if (data.item?.isWeapon()) {
 				data.handedness = options.handedness;
+				data.item.system.currentHand = data.handedness; // remember which hand used last
 				data = await this._rollWeapon(data);
 				if (!options.flavor) {
 					if (options.targetToken) {
@@ -491,6 +499,17 @@ export default class RollSD extends Roll {
 		if ($form.find("[name=talent-bonus]").length) bonuses.talentBonus = $form.find("[name=talent-bonus]")?.val();
 		if ($form.find("[name=weapon-backstab]").length) bonuses.backstab = $form.find("[name=weapon-backstab]")?.prop("checked");
 		return bonuses;
+	}
+
+	/**
+	 * Parses a submitted dialog form for weapon handedness
+	 * @param {jQuery} $form 	- Submitted dialog form
+	 * @returns {string}		- Handedness from the dialog form
+	 */
+	static _getHandednessFromForm($form) {
+		const radios = $form.find("[name=weapon-handedness]");
+		if (radios[0].checked) return "1h";
+		if (radios[1].checked) return "2h";
 	}
 
 	/* -------------------------------------------- */
