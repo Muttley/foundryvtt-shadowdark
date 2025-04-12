@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go 
 SHADOWDARK.chat.hp_roll.apply_to_max: 최대 HP에 추가
 SHADOWDARK.chat.item_roll.double_numerical: 숫자로 된 값 하나에 2를 곱하세요!
 SHADOWDARK.chat.item_roll.mishap: 적절한 사고 표를 보고 주사위를 굴리세요!
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.title: '{name} 로 명중 굴림'
 SHADOWDARK.chat.item_roll.wand_mishap: 마법봉이 부서졌으며 영구적으로 효과를 잃었습니다
 SHADOWDARK.chat.light_source.expired: "{name} 의 {lightSource} 가 다 됐습니다"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: 꺼졌습니다.
 SHADOWDARK.chat.light_source.source.toggle.on: 켜졌습니다
 SHADOWDARK.chat.light_source.went_out: "{name} 의 {lightSource} 가 꺼졌습니다"
 SHADOWDARK.chat.potion_used: "{name} 포션을 사용했습니다"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} 두루마리로 주문 배우기를 실패했습니다"
 SHADOWDARK.chat.spell_learn.success: "{name} 성공적으로 {spellName} 주문을 배웠습니다"
 SHADOWDARK.chat.spell_learn.title: 주문 배우기
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: 마법사
 SHADOWDARK.coins.cp: CP
 SHADOWDARK.coins.gp: GP
 SHADOWDARK.coins.sp: SP
-SHADOWDARK.damage.one_handed: "한손 피해:"
-SHADOWDARK.damage.two_handed: "양손 피해"
 SHADOWDARK.dialog.ability_check.cha: 매력 판정
 SHADOWDARK.dialog.ability_check.con: 건강 판정
 SHADOWDARK.dialog.ability_check.dex: 민첩 판정
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: 모두 팔기
 SHADOWDARK.dialog.item.sell: 팔기
 SHADOWDARK.dialog.item.use: 사용
 SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
-SHADOWDARK.dialog.roll_mode_label: 굴림 모드
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: 굴림
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
+SHADOWDARK.item.npc.spell_ability: 주문시전 능력
+SHADOWDARK.item.npc.spell_bonus: 주문시전 보너스
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: 물약
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: 두루마리
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: 유리함
 SHADOWDARK.roll.critical.failure: 극단적인 실패! ({value})
 SHADOWDARK.roll.critical.success: 극단적인 성공! ({value})
 SHADOWDARK.roll.D20: D20 굴리기
-SHADOWDARK.roll.damage: "피해 굴림:"
+SHADOWDARK.roll.damage: 피해 굴림
 SHADOWDARK.roll.disadvantage_title: "불리함으로 {title}"
 SHADOWDARK.roll.disadvantage: 불리함
 SHADOWDARK.roll.failure: 실패! ({value})
 SHADOWDARK.roll.normal: 일반
+SHADOWDARK.roll.one_handed_damage: 한손 피해
 SHADOWDARK.roll.spell_casting_check: 주문시전 판정
 SHADOWDARK.roll.success: 성공! ({value})
+SHADOWDARK.roll.two_handed_damage: 양손 피해
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: 어떤 모듈에서 제공하는 아트워크를 사용할지 설정합니다
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: 주문 불능 표시
 SHADOWDARK.sheet.player.tooltip.cast_spell: 주문 시전
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: 주문 배우기
 SHADOWDARK.sheet.player.tooltip.use_class_ability: 클래스 능력 사용
 SHADOWDARK.sheet.player.tooltip.use_potion: 포션 사용

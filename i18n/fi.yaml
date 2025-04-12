@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Varusteet
 SHADOWDARK.apps.character-generator.gold: Kulta
 SHADOWDARK.apps.character-generator.name: Hahmon nimi
 SHADOWDARK.apps.character-generator.see_details: Näytä tiedot
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Aloitusvarustus
 SHADOWDARK.apps.character-generator.success: Hahmo luotu
 SHADOWDARK.apps.character-generator.title: Hahmogeneraattori
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Koska {name} heitti parhaiten hän menee e
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
+SHADOWDARK.chat.item_roll.title_vs: Hyökkäysheitto {name} vastaan {target}
 SHADOWDARK.chat.item_roll.title: Hyökkäysheitto käyttäen {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Taikasauva meni hajalle ja pysyvästi lakkasi toimimasta
 SHADOWDARK.chat.light_source.expired: "Hahmon {name} {lightSource} valonlähde paloi loppuun tai vanhentui"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: valonlähde sammui
 SHADOWDARK.chat.light_source.source.toggle.on: valonlähde syttyi
 SHADOWDARK.chat.light_source.went_out: "Hahmon {name} {lightSource} valonlähde sammui"
 SHADOWDARK.chat.potion_used: "{name} käytti rohdon"
+SHADOWDARK.chat.spell_focus_check: "Keskittymisheitto"
 SHADOWDARK.chat.spell_learn.failure: "{name} ei oppinut taikakääröstä mitään"
 SHADOWDARK.chat.spell_learn.success: "{name} onnistuneesti oppi {spellName} loitsun"
 SHADOWDARK.chat.spell_learn.title: Opettelee loitsua
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: Velho
 SHADOWDARK.coins.cp: Kupari
 SHADOWDARK.coins.gp: Kulta
 SHADOWDARK.coins.sp: Hopea
-SHADOWDARK.damage.one_handed: "Yksikätinen vahinko:"
-SHADOWDARK.damage.two_handed: "Kaksikätinen vahinko:"
 SHADOWDARK.dialog.ability_check.cha: Karismaheitto
 SHADOWDARK.dialog.ability_check.con: Sitkeysheitto
 SHADOWDARK.dialog.ability_check.dex: Ketteryysheitto
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Myy kaikki
 SHADOWDARK.dialog.item.sell: Myy
 SHADOWDARK.dialog.item.use: Käytä
 SHADOWDARK.dialog.light_source.pick_up.title: Valitse kenelle annetaan valonlähde
-SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
+SHADOWDARK.dialog.roll_mode_label: Heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VAROITUS: Tämä loitsu ei ole saman hahmoluokan loitsu! Oletko varma, että yrität oppia sitä?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Vahvista loitsun oppiminen
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Vahingon laskukaava
 SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_type: Tyyppi
 SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
+SHADOWDARK.item.npc.spell_ability: Loihtimiskyky
+SHADOWDARK.item.npc.spell_bonus: Loihtimisbonus
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Rohto/Taikajuoma
 SHADOWDARK.item.properties.label: Tavaran ominaisuudet
 SHADOWDARK.item.scroll.label: Loitsukäärö
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: Etu
 SHADOWDARK.roll.critical.failure: Kriittinen epäonnistuminen! ({value})
 SHADOWDARK.roll.critical.success: Kriittinen onnistuminen! ({value})
 SHADOWDARK.roll.D20: Heitä n20
-SHADOWDARK.roll.damage: "Vahinkoheitto:"
+SHADOWDARK.roll.damage: Vahinkoheitto
 SHADOWDARK.roll.disadvantage_title: "{title} haitan kanssa"
 SHADOWDARK.roll.disadvantage: Haitta
 SHADOWDARK.roll.failure: Epäonnistui! ({value})
 SHADOWDARK.roll.normal: Normaali
+SHADOWDARK.roll.one_handed_damage: Yksikätinen vahinko
 SHADOWDARK.roll.spell_casting_check: Loihtimisheitto
 SHADOWDARK.roll.success: Onnistui! ({value})
+SHADOWDARK.roll.two_handed_damage: Kaksikätinen vahinko
 SHADOWDARK.settings.consume_ammunition.hint: Vähennä aseiden panoksia automaattisesti kun hyökkäysheitto tehdään
 SHADOWDARK.settings.consume_ammunition.name: Vähennä automaattisesti panoksia
 SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä ylimääräinen debuggauksen lokitus
 SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittu, efektipaneeli näyttää myös aktiivisia efektejä lahjakkuuksista ja esineistä
 SHADOWDARK.settings.effect_panel.show_passive.name: Näytä kaikki aktiiviset efektit
+SHADOWDARK.settings.enable_targeting.hint: Määritä automaattisesti osuuko hyökkäys kohteiden passarin perusteella
+SHADOWDARK.settings.enable_targeting.name: Ota käyttöön hyökkäyksen kohde
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Datamigraatio sisäänrakennettuihin Shadowdark RPG compendiumeihin (älä koske tähän jos et tiedä mitä teet)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Datamigraatio compendiumeille
 SHADOWDARK.settings.module_art.hint: Määritä minkä moduulin tuottamaa taidetta käytetään
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Osumapisteiden muokkaus päälle/pois
 SHADOWDARK.sheet.player.toggle_edit_stats: Kyvykkyysarvojen muokkaus päälle/pois
 SHADOWDARK.sheet.player.toggle_spell_lost: Merkkaa menetetty loitsu
 SHADOWDARK.sheet.player.tooltip.cast_spell: Loihdi loitsu
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Keskity loitsuun
 SHADOWDARK.sheet.player.tooltip.learn_spell: Opettele loitsu
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Käytä hahmoluokan kykyä
 SHADOWDARK.sheet.player.tooltip.use_potion: Käytä rohto

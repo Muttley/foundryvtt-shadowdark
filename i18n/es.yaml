@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Equipo
 SHADOWDARK.apps.character-generator.gold: Oro
 SHADOWDARK.apps.character-generator.name: Nombre del personaje
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Crear
+SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Personaje creado
 SHADOWDARK.apps.character-generator.title: Generador de personaje
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Ya que {name} lanzó el más alto, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: '¡Duplica cualquier valor numérico!'
 SHADOWDARK.chat.item_roll.mishap: '¡Tira en la tabla de pifias apropiada!'
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Tirada de ataque con {name}
 SHADOWDARK.chat.item_roll.wand_mishap: La varita se rompe y deja de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{name} de {lightSource} se apagó"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: se apagó
 SHADOWDARK.chat.light_source.source.toggle.on: se encendió
 SHADOWDARK.chat.light_source.went_out: "{name} de {lightSource} se apagó"
 SHADOWDARK.chat.potion_used: "{name} ha usado una poción"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} no ha podido aprender nada del pergamino"
 SHADOWDARK.chat.spell_learn.success: "{name} aprendió correctamente el hechizo {spellName}"
 SHADOWDARK.chat.spell_learn.title: Aprender hechizo
@@ -226,7 +230,7 @@ SHADOWDARK.class.language_choices.prompt: Seleccionar idioma...
 SHADOWDARK.class.languages.label: Idiomas de clase
 SHADOWDARK.class.priest: Clérigo
 SHADOWDARK.class.ranger: Explorador
-SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
+SHADOWDARK.class.spellcasting_ability.label: Habilidad de Hechizo
 SHADOWDARK.class.spellcasting_class.label: Clase de hechizo
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PP
-SHADOWDARK.damage.one_handed: "Daño a una mano:"
-SHADOWDARK.damage.two_handed: "Daño a dos manos:"
 SHADOWDARK.dialog.ability_check.cha: Prueba de carisma
 SHADOWDARK.dialog.ability_check.con: Prueba de Constitución
 SHADOWDARK.dialog.ability_check.dex: Prueba de destreza
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Vender todo
 SHADOWDARK.dialog.item.sell: Vender
 SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Seleccionar actor para dar fuente de luz
-SHADOWDARK.dialog.roll_mode_label: Modo de tirada
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Tirada
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Especial
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Número de dados de daño
+SHADOWDARK.item.npc.spell_ability: Habilidad de Hechizo
+SHADOWDARK.item.npc.spell_bonus: Bonus de Hechizo
+SHADOWDARK.item.npc.spell_count: Número de Hechizos
 SHADOWDARK.item.potion.label: Poción
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamino
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: Ventaja
 SHADOWDARK.roll.critical.failure: '¡Pifia! ({value})'
 SHADOWDARK.roll.critical.success: '¡Éxito crítico! ({value})'
 SHADOWDARK.roll.D20: Tirar D20
-SHADOWDARK.roll.damage: "Tirada de Daño:"
+SHADOWDARK.roll.damage: Tirada de daño
 SHADOWDARK.roll.disadvantage_title: "{title} con ventaja"
 SHADOWDARK.roll.disadvantage: Desventaja
 SHADOWDARK.roll.failure: '¡Fallo! ({value})'
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: Daño a una mano
 SHADOWDARK.roll.spell_casting_check: Prueba de lanzamiento de hechizo
 SHADOWDARK.roll.success: '¡Éxito! ({value})'
+SHADOWDARK.roll.two_handed_damage: Daño a dos manos
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
 SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Configurar qué arte proporcionado por el módulo debe ser utilizado
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Alternar hechizos perdidos
 SHADOWDARK.sheet.player.tooltip.cast_spell: Lanzar hechizo
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Aprender hechizo
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
 SHADOWDARK.sheet.player.tooltip.use_potion: Usar poción
@@ -827,7 +837,7 @@ SHADOWDARK.talent.type.advantage.hp: Ventaja de tirada de PV
 SHADOWDARK.talent.type.advantage.initiative: Ventaja de iniciativa
 SHADOWDARK.talent.type.advantage.spell: Ventaja de lanzamiento de hechizo
 SHADOWDARK.talent.type.advantage.title: Bonus de ventaja
-SHADOWDARK.talent.type.armor_bonus: Bono de CA de armadura
+SHADOWDARK.talent.type.armor_bonus: Bonus de CA de armadura
 SHADOWDARK.talent.type.armor_mastery: Maestría de armaduras
 SHADOWDARK.talent.type.backstab_die: Dado extra de puñalada
 SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
@@ -836,7 +846,7 @@ SHADOWDARK.talent.type.melee_attack_bonus: Bonus de Ataque Cuerpo a Cuerpo
 SHADOWDARK.talent.type.melee_damage_bonus: Bonus de daño cuerpo a cuerpo
 SHADOWDARK.talent.type.ranged_attack_bonus: Bonus de ataque a distancia
 SHADOWDARK.talent.type.ranged_damage_bonus: Bonus de daño a distancia
-SHADOWDARK.talent.type.spell_bonus: Bonus de lanzamiento de hechizo
+SHADOWDARK.talent.type.spell_bonus: Bonus de hechizo
 SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Tipo(s) de talento
 SHADOWDARK.talent.type.weapon_mastery: Maestría de armas

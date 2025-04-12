@@ -1213,9 +1213,21 @@ export default class ActorSD extends Actor {
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
-
 	async rollAttack(itemId, options={}) {
 		const item = this.items.get(itemId);
+
+		if (game.settings.get("shadowdark", "enableTargeting")) {
+			if (!options.targetToken && game.user.targets.size > 0) {
+				const promises = [];
+				for (const target of game.user.targets.values()) {
+					promises.push(this.rollAttack(itemId, { ...options, targetToken: target }));
+				}
+				return await Promise.all(promises);
+			}
+			else if (options.targetToken) {
+				options.target = options.targetToken.actor.system.attributes.ac.value;
+			}
+		}
 
 		const ammunition = item.availableAmmunition();
 
@@ -1269,12 +1281,10 @@ export default class ActorSD extends Actor {
 			}
 		}
 
-		// Talents & Ability modifiers
+		// Talent/Ability/Property modifiers
 		if (this.type === "Player") {
-
 			// Check to see if we have any extra dice that need to be added to
 			// the damage rolls due to effects
-			//
 			await this.getExtraDamageDiceForWeapon(item, data);
 
 			data.canBackstab = await this.canBackstab();
@@ -1312,6 +1322,15 @@ export default class ActorSD extends Actor {
 				data.talentBonus = bonuses.rangedAttackBonus;
 				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
 				data.damageParts.push("@rangedDamageBonus");
+			}
+
+			data.isVersatile = await item.isVersatile();
+			// remember handedness
+			if (data.isVersatile) {
+				if (options.handedness) {
+					item.system.currentHand = options.handedness ?? "1h";
+				}
+				data.currentHand = item.system.currentHand;
 			}
 
 			// Check Weapon Mastery & add if applicable

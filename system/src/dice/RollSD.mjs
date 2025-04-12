@@ -44,6 +44,13 @@ export default class RollSD extends Roll {
 				: game.settings.get("core", "rollMode");
 		}
 
+		if (!options.handedness) {
+			// override with form input
+			options.handedness = $form
+				? this._getHandednessFromForm($form)
+				: undefined;
+		}
+
 		// Roll the Dice
 		data.rolls = {
 			main: await this._rollAdvantage(parts, data, adv),
@@ -63,12 +70,23 @@ export default class RollSD extends Roll {
 				data = await this._rollNpcAttack(data);
 			}
 			if (!options.flavor) {
-				options.flavor = game.i18n.format(
-					"SHADOWDARK.chat.item_roll.title",
-					{
-						name: data.item.name,
-					}
-				);
+				if (options.targetToken) {
+					options.flavor = game.i18n.format(
+						"SHADOWDARK.chat.item_roll.title_vs",
+						{
+							name: data.item.name,
+							target: options.targetToken.actor.name,
+						}
+					);
+				}
+				else {
+					options.flavor = game.i18n.format(
+						"SHADOWDARK.chat.item_roll.title",
+						{
+							name: data.item.name,
+						}
+					);
+				}
 			}
 			return this._renderRoll(data, adv, options);
 		}
@@ -78,14 +96,26 @@ export default class RollSD extends Roll {
 			// Weapon? -> Roll Damage dice
 			if (data.item?.isWeapon()) {
 				data.handedness = options.handedness;
+				data.item.system.currentHand = data.handedness; // remember which hand used last
 				data = await this._rollWeapon(data);
 				if (!options.flavor) {
-					options.flavor = game.i18n.format(
-						"SHADOWDARK.chat.item_roll.title",
-						{
-							name: data.item.name,
-						}
-					);
+					if (options.targetToken) {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.item_roll.title_vs",
+							{
+								name: data.item.name,
+								target: options.targetToken.actor.name,
+							}
+						);
+					}
+					else {
+						options.flavor = game.i18n.format(
+							"SHADOWDARK.chat.item_roll.title",
+							{
+								name: data.item.name,
+							}
+						);
+					}
 				}
 			}
 
@@ -107,7 +137,7 @@ export default class RollSD extends Roll {
 					options.flavor = game.i18n.format(
 						"SHADOWDARK.chat.spell_roll.title",
 						{
-							name: data.item.name,
+							name: options.isFocusRoll ? game.i18n.localize("SHADOWDARK.chat.spell_focus_check") : data.item.name,
 							tier: options.tier,
 							spellDC: options.target,
 						}
@@ -122,6 +152,8 @@ export default class RollSD extends Roll {
 			data.item?.isSpell()
 			&& result
 			&& !result?.rolls?.main?.success
+			// Focus rolls shouldn't lose the spell, unless it is a critical
+			&& (!options.isFocusRoll || result?.rolls?.main?.critical === "failure")
 		) data.item.update({"system.lost": true});
 
 		// Reduce ammo if required
@@ -326,9 +358,9 @@ export default class RollSD extends Roll {
 				}
 			}
 
-			const primaryParts = [baseDamageFormula, ...data.damageParts];
+			const damageParts = [baseDamageFormula, ...data.damageParts];
 
-			data.rolls.primaryDamage = await this._roll(primaryParts, data);
+			data.rolls.damage = await this._roll(damageParts, data);
 		}
 
 		return data;
@@ -372,8 +404,8 @@ export default class RollSD extends Roll {
 		if (data.actor.system.bonuses.weaponDamageDieD12.some(
 			t => [data.item.name.slugify(), data.item.system.baseWeapon.slugify()].includes(t)
 		)) {
-			if (damageDie2H) damageDie2H = "d12";
 			if (damageDie1H) damageDie1H = "d12";
+			if (damageDie2H) damageDie2H = "d12";
 		}
 
 		// Check and handle critical failure/success
@@ -402,24 +434,40 @@ export default class RollSD extends Roll {
 				1
 			);
 
-			if (damageDie1H && data.handedness === "1h") {
+			let oneHandedParts;
+			let twoHandedParts;
+
+			if (damageDie1H) {
 				const damageRoll1H = (damageMultiplier > 1)
 					? `${numDice}${damageDie1H} * ${damageMultiplier}`
 					: `${numDice}${damageDie1H}`;
 
-				const oneHandedParts = [damageRoll1H, ...data.damageParts];
-
-				data.rolls.damage = await this._roll(oneHandedParts, data);
+				oneHandedParts = [damageRoll1H, ...data.damageParts];
 			}
 
-			if (damageDie2H && data.handedness === "2h") {
+			if (damageDie2H) {
 				const damageRoll2H = (damageMultiplier > 1)
 					? `${numDice}${damageDie2H} * ${damageMultiplier}`
 					: `${numDice}${damageDie2H}`;
 
-				const twoHandedParts = [damageRoll2H, ...data.damageParts];
+				twoHandedParts = [damageRoll2H, ...data.damageParts];
+			}
 
-				data.rolls.damage = await this._roll(twoHandedParts, data);
+			switch (data.handedness) {
+				case "1h":
+					data.rolls.damage = await this._roll(oneHandedParts, data);
+					break;
+				case "2h":
+					data.rolls.damage = await this._roll(twoHandedParts, data);
+					break;
+				case undefined:
+					if (damageDie1H && damageDie2H) {
+						data.rolls.damage = await this._roll(oneHandedParts, data);
+						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data);
+					}
+					else {
+						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
+					}
 			}
 		}
 
@@ -451,6 +499,17 @@ export default class RollSD extends Roll {
 		if ($form.find("[name=talent-bonus]").length) bonuses.talentBonus = $form.find("[name=talent-bonus]")?.val();
 		if ($form.find("[name=weapon-backstab]").length) bonuses.backstab = $form.find("[name=weapon-backstab]")?.prop("checked");
 		return bonuses;
+	}
+
+	/**
+	 * Parses a submitted dialog form for weapon handedness
+	 * @param {jQuery} $form 	- Submitted dialog form
+	 * @returns {string}		- Handedness from the dialog form
+	 */
+	static _getHandednessFromForm($form) {
+		const radios = $form.find("[name=weapon-handedness]");
+		if (radios[0].checked) return "1h";
+		if (radios[1].checked) return "2h";
 	}
 
 	/* -------------------------------------------- */
@@ -592,7 +651,8 @@ export default class RollSD extends Roll {
 					? options.title : game.i18n.localize("SHADOWDARK.chatcard.default"),
 			isSpell: false,
 			isWeapon: false,
-			isVersatile: false,
+			isFocusRoll: options.isFocusRoll,
+			damageRollName: game.i18n.localize("SHADOWDARK.roll.damage"),
 			isRoll: true,
 			isNPC: data.actor?.type === "NPC",
 			targetDC: options.target ?? false,
@@ -603,8 +663,16 @@ export default class RollSD extends Roll {
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
 			templateData.isWeapon = data.item.isWeapon();
-			templateData.isVersatile = await data.item.isVersatile();
 
+			if (templateData.isWeapon) {
+				if (await data.item.isVersatile()) {
+					const hand = options.handedness === "1h" ? "one" : "two";
+
+					templateData.damageRollName = game.i18n.localize(
+						`SHADOWDARK.roll.${hand}_handed_damage`
+					);
+				}
+			}
 			const propertyNames = [];
 
 			for (const property of await data.item.propertyItems()) {
@@ -718,6 +786,9 @@ export default class RollSD extends Roll {
 
 		if ( rolls.damage ) {
 			rollsToShow.push(rolls.damage.roll);
+		}
+		if ( rolls.secondaryDamage ) {
+			rollsToShow.push(rolls.secondaryDamage.roll);
 		}
 
 		const { whisper, blind } = this.getRollModeSettings();

@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
 SHADOWDARK.apps.character-generator.see_details: Ver detalhes
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Equipamento Inicial
 SHADOWDARK.apps.character-generator.success: Personagem criado
 SHADOWDARK.apps.character-generator.title: Gerador de Personagem
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Como {name} rolou o maior número, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
 SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
 SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: foi apagada
 SHADOWDARK.chat.light_source.source.toggle.on: foi acesa
 SHADOWDARK.chat.light_source.went_out: "{lightSource} de {name} apagou"
 SHADOWDARK.chat.potion_used: "{name} usou uma Poção"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} não conseguiu aprender o pergaminho"
 SHADOWDARK.chat.spell_learn.success: "{name} aprendeu com sucesso a magia {spellName}"
 SHADOWDARK.chat.spell_learn.title: Aprendendo Magia
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: Mago
 SHADOWDARK.coins.cp: PC
 SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PP
-SHADOWDARK.damage.one_handed: "Dano de Uma Mão:"
-SHADOWDARK.damage.two_handed: "Dano de Duas Mãos:"
 SHADOWDARK.dialog.ability_check.cha: Teste de Carisma
 SHADOWDARK.dialog.ability_check.con: Teste de Constituição
 SHADOWDARK.dialog.ability_check.dex: Verificação de Destreza
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Vender Tudo
 SHADOWDARK.dialog.item.sell: Vender
 SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Selecione o ator para dar a fonte de luz
-SHADOWDARK.dialog.roll_mode_label: Modo de Rolagem
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Rolar
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVISO: Esta magia não é da mesma classe que o personagem, você tem certeza de que deseja tentar aprender?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmar Aprender Feitiço
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Fórmula de Dano
 SHADOWDARK.item.npc_attack_special: Características de Ataque
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Núm. Dados de Dano
+SHADOWDARK.item.npc.spell_ability: Atributo de Conjuração
+SHADOWDARK.item.npc.spell_bonus: Bônus de Conjuração
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Poção
 SHADOWDARK.item.properties.label: Propriedades do Item
 SHADOWDARK.item.scroll.label: Pergaminho
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: Vantagem
 SHADOWDARK.roll.critical.failure: Falha Crítica! ({value})
 SHADOWDARK.roll.critical.success: Sucesso Crítico! ({value})
 SHADOWDARK.roll.D20: Rolar D20
-SHADOWDARK.roll.damage: "Rolagem de Dano:"
+SHADOWDARK.roll.damage: Rolagem de Dano
 SHADOWDARK.roll.disadvantage_title: "{title} com Desvantagem"
 SHADOWDARK.roll.disadvantage: Desvantagem
 SHADOWDARK.roll.failure: Falha! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: Dano de Uma Mão
 SHADOWDARK.roll.spell_casting_check: Teste de Conjuração
 SHADOWDARK.roll.success: Sucesso! ({value})
+SHADOWDARK.roll.two_handed_damage: Dano de Duas Mãos
 SHADOWDARK.settings.consume_ammunition.hint: Ajusta automaticamente a munição para as armas que a usam quando uma rolagem de ataque é feita
 SHADOWDARK.settings.consume_ammunition.name: Consumir Munição Automaticamente
 SHADOWDARK.settings.debugEnabled.hint: Ativar ou desativar o registro de depuração adicional
 SHADOWDARK.settings.debugEnabled.name: Ativar/Desativar Depuração
 SHADOWDARK.settings.effect_panel.show_passive.hint: Se marcado, o Painel de Efeitos também mostrará efeitos ativos de talentos e itens
 SHADOWDARK.settings.effect_panel.show_passive.name: Mostrar Todos os Efeitos Ativos
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Execute a migração de dados no compêndio do sistema de RPG Shadowdark (não modifique isso a menos que saiba o que está fazendo)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrar Compêndios do Sistema
 SHADOWDARK.settings.module_art.hint: Configurar qual arte fornecida por módulo deve ser usada
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Alternar Edição de PV
 SHADOWDARK.sheet.player.toggle_edit_stats: Alternar Edição de Atributos
 SHADOWDARK.sheet.player.toggle_spell_lost: Alternar Magia Perdida
 SHADOWDARK.sheet.player.tooltip.cast_spell: Conjurar Magia
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Aprender Magia
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Usar Habilidade de Classe
 SHADOWDARK.sheet.player.tooltip.use_potion: Usar Poção

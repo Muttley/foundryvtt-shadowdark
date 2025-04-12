@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Снаряжение
 SHADOWDARK.apps.character-generator.gold: Золото
 SHADOWDARK.apps.character-generator.name: Имя персонажа
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Персонаж создан
 SHADOWDARK.apps.character-generator.title: Генератор персонажей
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Поскольку {name} выбросил
 SHADOWDARK.chat.hp_roll.apply_to_max: Добавить к максимуму ОЗ
 SHADOWDARK.chat.item_roll.double_numerical: Удвойте любое одно числовое значение!
 SHADOWDARK.chat.item_roll.mishap: Бросьте по соответствующей таблице неудач!
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Жезл ломается и навсегда перестает работать
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} истёк"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: был погашен
 SHADOWDARK.chat.light_source.source.toggle.on: был зажжен
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} погас"
 SHADOWDARK.chat.potion_used: "{name} использовал зелье"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} не удалось ничему научиться из свитка"
 SHADOWDARK.chat.spell_learn.success: "{name} успешно выучил заклинание {spellName}"
 SHADOWDARK.chat.spell_learn.title: Изучение заклинания
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: Волшебник
 SHADOWDARK.coins.cp: МД
 SHADOWDARK.coins.gp: ЗМ
 SHADOWDARK.coins.sp: СМ
-SHADOWDARK.damage.one_handed: "Урон одной рукой:"
-SHADOWDARK.damage.two_handed: "Урон двумя руками:"
 SHADOWDARK.dialog.ability_check.cha: Проверка Харизмы
 SHADOWDARK.dialog.ability_check.con: Проверка Телосложения
 SHADOWDARK.dialog.ability_check.dex: Проверка Ловкости
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Продать всё
 SHADOWDARK.dialog.item.sell: Продать
 SHADOWDARK.dialog.item.use: Использовать
 SHADOWDARK.dialog.light_source.pick_up.title: Выберите персонажа, которому дать источник света
-SHADOWDARK.dialog.roll_mode_label: Режим броска
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Бросок
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "ВНИМАНИЕ: Это заклинание не относится к классу персонажа. Вы уверены, что хотите попробовать его выучить?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Подтвердить изучение заклинания
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Формула урона
 SHADOWDARK.item.npc_attack_special: Особенности атаки
 SHADOWDARK.item.npc_attack_type: Тип
 SHADOWDARK.item.npc_attack.num_damage_dice: Кол-во кубиков урона
+SHADOWDARK.item.npc.spell_ability: Способность колдовства
+SHADOWDARK.item.npc.spell_bonus: Бонус к накладыванию заклинаний
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Зелье
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Свиток
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: Преимущество
 SHADOWDARK.roll.critical.failure: Критический провал! ({value})
 SHADOWDARK.roll.critical.success: Критический успех! ({value})
 SHADOWDARK.roll.D20: Бросок D20
-SHADOWDARK.roll.damage: "Бросок урона:"
+SHADOWDARK.roll.damage: Бросок урона
 SHADOWDARK.roll.disadvantage_title: "{title} с помехой"
 SHADOWDARK.roll.disadvantage: Помеха
 SHADOWDARK.roll.failure: Провал! ({value})
 SHADOWDARK.roll.normal: Обычный
+SHADOWDARK.roll.one_handed_damage: Урон одноручным
 SHADOWDARK.roll.spell_casting_check: Проверка заклинания
 SHADOWDARK.roll.success: Успех! ({value})
+SHADOWDARK.roll.two_handed_damage: Урон двуручным
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Включить или отключить дополнительное ведение журнала отладки
 SHADOWDARK.settings.debugEnabled.name: Включить/Отключить отладку
 SHADOWDARK.settings.effect_panel.show_passive.hint: Если отмечено, Панель эффектов также будет показывать активные эффекты от талантов и предметов
 SHADOWDARK.settings.effect_panel.show_passive.name: Показывать все активные эффекты
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Выполнить миграцию данных для встроенных сборников системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Мигрировать системные сборники
 SHADOWDARK.settings.module_art.hint: Настройте, какие изображения, предоставленные модулями, следует использовать
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Переключить редактир�
 SHADOWDARK.sheet.player.toggle_edit_stats: Переключить редактирование характеристик
 SHADOWDARK.sheet.player.toggle_spell_lost: Переключить потерю заклинания
 SHADOWDARK.sheet.player.tooltip.cast_spell: Сотворить заклинание
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Выучить заклинание
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Использовать классовую способность
 SHADOWDARK.sheet.player.tooltip.use_potion: Использовать зелье

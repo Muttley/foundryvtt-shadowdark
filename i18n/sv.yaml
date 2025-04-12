@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
@@ -169,6 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Eftersom {name} rullade högst, kommer de 
 SHADOWDARK.chat.hp_roll.apply_to_max: Lägg till på max KP
 SHADOWDARK.chat.item_roll.double_numerical: Dubbla valfritt numeriskt värde!
 SHADOWDARK.chat.item_roll.mishap: Rulla på lämplig felkast-tabell!
+SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Attackerar med {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Trollstaven bryts och upphör att fungera permanent
 SHADOWDARK.chat.light_source.expired: "{name}s {lightSource} slocknade"
@@ -181,6 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: släcktes
 SHADOWDARK.chat.light_source.source.toggle.on: tändes
 SHADOWDARK.chat.light_source.went_out: "{name}s {lightSource} slocknade"
 SHADOWDARK.chat.potion_used: "{name} använde en brygd"
+SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} misslyckades lära sig något från scrollen"
 SHADOWDARK.chat.spell_learn.success: "{name} lärde sig besvärjelsen {spellName}"
 SHADOWDARK.chat.spell_learn.title: Lär sig besvärjelse
@@ -250,8 +254,6 @@ SHADOWDARK.class.wizard: Trollkarl
 SHADOWDARK.coins.cp: KP
 SHADOWDARK.coins.gp: GM
 SHADOWDARK.coins.sp: SM
-SHADOWDARK.damage.one_handed: "Enhandsskada:"
-SHADOWDARK.damage.two_handed: "Tvåhandsskada:"
 SHADOWDARK.dialog.ability_check.cha: Karisma Check
 SHADOWDARK.dialog.ability_check.con: Kondition Check
 SHADOWDARK.dialog.ability_check.dex: Smidighet Check
@@ -304,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Sälj allt
 SHADOWDARK.dialog.item.sell: Sälj
 SHADOWDARK.dialog.item.use: Användning
 SHADOWDARK.dialog.light_source.pick_up.title: Välj aktör för att ge ljuskällan
-SHADOWDARK.dialog.roll_mode_label: Rull-läge
+SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Rulla
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VARNING: Denna besvärjelse är inte tillgänglig för klassen för karaktären, är du säker på att du vill lära dig den?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Bekräfta lärande av inkompatibel besvärjelse
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Skadeformel
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
+SHADOWDARK.item.npc.spell_ability: Besvärjelseförmåga
+SHADOWDARK.item.npc.spell_bonus: Bonus för Besvärjelsekast
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamentrulle
@@ -634,19 +639,23 @@ SHADOWDARK.roll.advantage: Fördel
 SHADOWDARK.roll.critical.failure: Kritiskt misslyckande! ({value})
 SHADOWDARK.roll.critical.success: Kritisk framgång! ({value})
 SHADOWDARK.roll.D20: Rulla D20
-SHADOWDARK.roll.damage: "Skaderull:"
+SHADOWDARK.roll.damage: Skaderull
 SHADOWDARK.roll.disadvantage_title: "{title} med nackdel"
 SHADOWDARK.roll.disadvantage: Nackdel
 SHADOWDARK.roll.failure: Misslyckades! ({value})
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: Enhandsskada
 SHADOWDARK.roll.spell_casting_check: Besvärjelse Check
 SHADOWDARK.roll.success: Lyckades! ({value})
+SHADOWDARK.roll.two_handed_damage: Tvåhandsskada
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Aktivera eller inaktivera ytterligare felsökningsloggning
 SHADOWDARK.settings.debugEnabled.name: Aktivera/inaktivera felsökning
 SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
+SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Utför datamigrering på inbyggda Shadowdark RPG system kompendier (ändra inte detta om du inte vet vad du gör)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrera systemkompendier
 SHADOWDARK.settings.module_art.hint: Konfigurera vilken moduls konst ska användas
@@ -786,6 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Ange Förlorad
 SHADOWDARK.sheet.player.tooltip.cast_spell: Kasta besvärjelse
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
 SHADOWDARK.sheet.player.tooltip.learn_spell: Lär dig besvärjelse
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Använd klassförmåga
 SHADOWDARK.sheet.player.tooltip.use_potion: Använd brygd
