@@ -629,8 +629,6 @@ SHADOWDARK.range.touch_short: T
 SHADOWDARK.range.touch: Toque
 SHADOWDARK.range.unlimited_short: I
 SHADOWDARK.range.unlimited: Ilimitado
-SHADOWDARK.roll.1h_damage: 1H Damage
-SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} con ventaja"
 SHADOWDARK.roll.advantage: Ventaja
 SHADOWDARK.roll.critical.failure: '¡Pifia! ({value})'
@@ -641,8 +639,10 @@ SHADOWDARK.roll.disadvantage_title: "{title} con ventaja"
 SHADOWDARK.roll.disadvantage: Desventaja
 SHADOWDARK.roll.failure: '¡Fallo! ({value})'
 SHADOWDARK.roll.normal: Normal
+SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: Prueba de lanzamiento de hechizo
 SHADOWDARK.roll.success: '¡Éxito! ({value})'
+SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
