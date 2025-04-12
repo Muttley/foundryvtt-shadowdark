@@ -169,8 +169,8 @@ SHADOWDARK.chat.clockwise_initiative: Koska {name} heitti parhaiten hän menee e
 SHADOWDARK.chat.hp_roll.apply_to_max: Lisää osumapisteidesi maksimimäärään
 SHADOWDARK.chat.item_roll.double_numerical: Tuplaa yksi numeerinen arvo!
 SHADOWDARK.chat.item_roll.mishap: Heitä noppaa sopivaa loihtimisen tapahturmataulua vasten!
+SHADOWDARK.chat.item_roll.title_vs: Hyökkäysheitto {name} vastaan {target}
 SHADOWDARK.chat.item_roll.title: Hyökkäysheitto käyttäen {name}
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
 SHADOWDARK.chat.item_roll.wand_mishap: Taikasauva meni hajalle ja pysyvästi lakkasi toimimasta
 SHADOWDARK.chat.light_source.expired: "Hahmon {name} {lightSource} valonlähde paloi loppuun tai vanhentui"
 SHADOWDARK.chat.light_source.remaining: minuuttia jäljellä
@@ -304,7 +304,7 @@ SHADOWDARK.dialog.item.sell_all: Myy kaikki
 SHADOWDARK.dialog.item.sell: Myy
 SHADOWDARK.dialog.item.use: Käytä
 SHADOWDARK.dialog.light_source.pick_up.title: Valitse kenelle annetaan valonlähde
-SHADOWDARK.dialog.roll_mode_label: Valitse heittotapa
+SHADOWDARK.dialog.roll_mode_label: Heittotapa
 SHADOWDARK.dialog.roll: Heitä noppaa
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VAROITUS: Tämä loitsu ei ole saman hahmoluokan loitsu! Oletko varma, että yrität oppia sitä?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Vahvista loitsun oppiminen
@@ -629,14 +629,14 @@ SHADOWDARK.range.touch_short: K
 SHADOWDARK.range.touch: Kosketus
 SHADOWDARK.range.unlimited_short: R
 SHADOWDARK.range.unlimited: Rajoittamaton
+SHADOWDARK.roll.1h_damage: 1H Damage
+SHADOWDARK.roll.2h_damage: 2H Damage
 SHADOWDARK.roll.advantage_title: "{title} edun kanssa"
 SHADOWDARK.roll.advantage: Etu
 SHADOWDARK.roll.critical.failure: Kriittinen epäonnistuminen! ({value})
 SHADOWDARK.roll.critical.success: Kriittinen onnistuminen! ({value})
 SHADOWDARK.roll.D20: Heitä n20
-SHADOWDARK.roll.damage: "Vahinkoheitto:"
-SHADOWDARK.roll.damage1h: "Yksikätinen vahinko:"
-SHADOWDARK.roll.damage2h: "Kaksikätinen vahinko:"
+SHADOWDARK.roll.damage: Damage Roll
 SHADOWDARK.roll.disadvantage_title: "{title} haitan kanssa"
 SHADOWDARK.roll.disadvantage: Haitta
 SHADOWDARK.roll.failure: Epäonnistui! ({value})
@@ -649,8 +649,8 @@ SHADOWDARK.settings.debugEnabled.hint: Ota käyttöön tai poista käytöstä yl
 SHADOWDARK.settings.debugEnabled.name: Debuggaus päälle/pois
 SHADOWDARK.settings.effect_panel.show_passive.hint: Jos valittu, efektipaneeli näyttää myös aktiivisia efektejä lahjakkuuksista ja esineistä
 SHADOWDARK.settings.effect_panel.show_passive.name: Näytä kaikki aktiiviset efektit
-SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.enable_targeting.hint: Määritä automaattisesti osuuko hyökkäys kohteiden passarin perusteella
+SHADOWDARK.settings.enable_targeting.name: Ota käyttöön hyökkäyksen kohde
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Datamigraatio sisäänrakennettuihin Shadowdark RPG compendiumeihin (älä koske tähän jos et tiedä mitä teet)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Datamigraatio compendiumeille
 SHADOWDARK.settings.module_art.hint: Määritä minkä moduulin tuottamaa taidetta käytetään
