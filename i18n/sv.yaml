@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Karaktärsgenerator
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Skadeformel
 SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
+SHADOWDARK.item.npc.spell_ability: Besvärjelseförmåga
+SHADOWDARK.item.npc.spell_bonus: Bonus för Besvärjelsekast
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Brygd
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamentrulle

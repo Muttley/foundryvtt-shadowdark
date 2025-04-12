@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
 SHADOWDARK.apps.character-generator.title: Character Generator
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
+SHADOWDARK.item.npc.spell_ability: 주문시전 능력
+SHADOWDARK.item.npc.spell_bonus: 주문시전 보너스
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: 물약
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: 두루마리

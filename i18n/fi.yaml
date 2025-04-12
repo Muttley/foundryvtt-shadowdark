@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Varusteet
 SHADOWDARK.apps.character-generator.gold: Kulta
 SHADOWDARK.apps.character-generator.name: Hahmon nimi
 SHADOWDARK.apps.character-generator.see_details: Näytä tiedot
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Aloitusvarustus
 SHADOWDARK.apps.character-generator.success: Hahmo luotu
 SHADOWDARK.apps.character-generator.title: Hahmogeneraattori
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Vahingon laskukaava
 SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_type: Tyyppi
 SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
+SHADOWDARK.item.npc.spell_ability: Loihtimiskyky
+SHADOWDARK.item.npc.spell_bonus: Loihtimisbonus
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Rohto/Taikajuoma
 SHADOWDARK.item.properties.label: Tavaran ominaisuudet
 SHADOWDARK.item.scroll.label: Loitsukäärö

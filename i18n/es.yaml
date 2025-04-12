@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Equipo
 SHADOWDARK.apps.character-generator.gold: Oro
 SHADOWDARK.apps.character-generator.name: Nombre del personaje
 SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.sidebar_create: Crear
+SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Personaje creado
 SHADOWDARK.apps.character-generator.title: Generador de personaje
@@ -228,7 +230,7 @@ SHADOWDARK.class.language_choices.prompt: Seleccionar idioma...
 SHADOWDARK.class.languages.label: Idiomas de clase
 SHADOWDARK.class.priest: Clérigo
 SHADOWDARK.class.ranger: Explorador
-SHADOWDARK.class.spellcasting_ability.label: Aptitud Mágica
+SHADOWDARK.class.spellcasting_ability.label: Habilidad de Hechizo
 SHADOWDARK.class.spellcasting_class.label: Clase de hechizo
 SHADOWDARK.class.spellcasting.base_difficulty.label: Spellcasting Base DC
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: Especial
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Número de dados de daño
+SHADOWDARK.item.npc.spell_ability: Habilidad de Hechizo
+SHADOWDARK.item.npc.spell_bonus: Bonus de Hechizo
+SHADOWDARK.item.npc.spell_count: Número de Hechizos
 SHADOWDARK.item.potion.label: Poción
 SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamino
@@ -832,7 +837,7 @@ SHADOWDARK.talent.type.advantage.hp: Ventaja de tirada de PV
 SHADOWDARK.talent.type.advantage.initiative: Ventaja de iniciativa
 SHADOWDARK.talent.type.advantage.spell: Ventaja de lanzamiento de hechizo
 SHADOWDARK.talent.type.advantage.title: Bonus de ventaja
-SHADOWDARK.talent.type.armor_bonus: Bono de CA de armadura
+SHADOWDARK.talent.type.armor_bonus: Bonus de CA de armadura
 SHADOWDARK.talent.type.armor_mastery: Maestría de armaduras
 SHADOWDARK.talent.type.backstab_die: Dado extra de puñalada
 SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
@@ -841,7 +846,7 @@ SHADOWDARK.talent.type.melee_attack_bonus: Bonus de Ataque Cuerpo a Cuerpo
 SHADOWDARK.talent.type.melee_damage_bonus: Bonus de daño cuerpo a cuerpo
 SHADOWDARK.talent.type.ranged_attack_bonus: Bonus de ataque a distancia
 SHADOWDARK.talent.type.ranged_damage_bonus: Bonus de daño a distancia
-SHADOWDARK.talent.type.spell_bonus: Bonus de lanzamiento de hechizo
+SHADOWDARK.talent.type.spell_bonus: Bonus de hechizo
 SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
 SHADOWDARK.talent.type.title: Tipo(s) de talento
 SHADOWDARK.talent.type.weapon_mastery: Maestría de armas

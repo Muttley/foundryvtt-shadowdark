@@ -3,7 +3,7 @@
 	<div class="grid-3-columns" >
 
 		<div class="item-detail">
-			<h3>Number of Attacks</h3>
+			<h3>{{localize "SHADOWDARK.item.npc.spell_count"}}</h3>
 			{{numberInput
 				system.spellcastingAttackNum
 				name="system.spellcastingAttackNum"
@@ -12,7 +12,7 @@
 			}}
 		</div>
 		<div class="item-detail">
-			<h3>Casting Bonus</h3>
+			<h3>{{localize "SHADOWDARK.item.npc.spell_bonus"}}</h3>
 			{{numberInput
 				system.spellcastingBonus
 				name="system.spellcastingBonus"
@@ -21,7 +21,7 @@
 			}}
 		</div>
 		<div class="item-detail">
-			<h3>Casting Ability</h3>
+			<h3>{{localize "SHADOWDARK.item.npc.spell_ability"}}</h3>
 			<select name="system.spellcastingAbility">
 				<option value="">&mdash;</option>
 				{{selectOptions
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="SD-banner">Spells</div>
+	<div class="SD-banner">{{localize "SHADOWDARK.sheet.npc.tab.spells"}}</div>
 
 	<ol class="SD-list">
 		<li class="header">
@@ -45,9 +45,9 @@
 					data-item-type="NPC Spell"
 					data-action="item-create"
 				></a>
-				Spell
+				{{localize "SHADOWDARK.item.spell.label"}}
 			</div>
-			<div class="flex-60-px">DC</div>
+			<div class="flex-60-px">{{localize "SHADOWDARK.class-ability.dc.label"}}</div>
 			<div class="duration">{{localize 'SHADOWDARK.item.spell_duration'}}</div>
 			<div class="range">{{localize 'SHADOWDARK.item.spell_range'}}</div>
 			<div class="actions"></div>

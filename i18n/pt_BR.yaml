@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
 SHADOWDARK.apps.character-generator.see_details: Ver detalhes
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Equipamento Inicial
 SHADOWDARK.apps.character-generator.success: Personagem criado
 SHADOWDARK.apps.character-generator.title: Gerador de Personagem
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Fórmula de Dano
 SHADOWDARK.item.npc_attack_special: Características de Ataque
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Núm. Dados de Dano
+SHADOWDARK.item.npc.spell_ability: Atributo de Conjuração
+SHADOWDARK.item.npc.spell_bonus: Bônus de Conjuração
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Poção
 SHADOWDARK.item.properties.label: Propriedades do Item
 SHADOWDARK.item.scroll.label: Pergaminho

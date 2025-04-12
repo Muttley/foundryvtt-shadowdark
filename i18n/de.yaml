@@ -55,6 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Ausrüstung
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Name des Charakters
 SHADOWDARK.apps.character-generator.see_details: Details anzeigen
+SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Startausrüstung
 SHADOWDARK.apps.character-generator.success: Charakter erstellt
 SHADOWDARK.apps.character-generator.title: Charaktergenerator
@@ -512,6 +514,9 @@ SHADOWDARK.item.npc_attack_damage_formula: Schadensformel
 SHADOWDARK.item.npc_attack_special: Spezial
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Anz. Schadenswürfel
+SHADOWDARK.item.npc.spell_ability: Zauber-Fähigkeit
+SHADOWDARK.item.npc.spell_bonus: Zauberbonus
+SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Trank
 SHADOWDARK.item.properties.label: Gegenstandseigenschaften
 SHADOWDARK.item.scroll.label: Schriftrolle
