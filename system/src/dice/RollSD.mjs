@@ -508,8 +508,8 @@ export default class RollSD extends Roll {
 	 */
 	static _getHandednessFromForm($form) {
 		const radios = $form.find("[name=weapon-handedness]");
-		if (radios[0].checked) return "1h";
-		if (radios[1].checked) return "2h";
+		if (radios[0]?.checked) return "1h";
+		if (radios[1]?.checked) return "2h";
 	}
 
 	/* -------------------------------------------- */
