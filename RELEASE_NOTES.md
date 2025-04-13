@@ -1,3 +1,15 @@
+# v3.4.4
+
+## Bugfixes
+- [#1061] Character Generator and Shadowdarkling Import missing labels
+- [#1063] Stats page in wrong order in Player Quickstart Guide
+- [#1064] Typography issue on Stats page in Player Quickstart Guide (Intelligence)
+
+## Chores
+- [#1062] Merge French translation updates from Crowdin
+
+---
+
 # v3.4.3
 
 ## Bugfixes
