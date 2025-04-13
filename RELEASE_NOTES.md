@@ -1,3 +1,14 @@
+# v3.4.5
+
+## Bugfixes
+- [#1063] Stats page in wrong order in Player Quickstart Guide
+- [#1064] Typography issue on Stats page in Player Quickstart Guide (Intelligence)
+
+## Chores
+- [#1062] Merge French translation updates from Crowdin
+
+---
+
 # v3.4.4
 
 ## Bugfixes
