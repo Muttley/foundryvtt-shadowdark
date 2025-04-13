@@ -1,3 +1,10 @@
+# v3.4.3
+
+## Bugfixes
+- [#1059] Non-versatile weapon rolls triggered from item chat cards fail
+
+---
+
 # v3.4.2
 
 ## Bugfixes
