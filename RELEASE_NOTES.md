@@ -1,3 +1,10 @@
+# v3.4.4
+
+## Bugfixes
+- [#1061] Character Generator and Shadowdarkling Import missing labels
+
+---
+
 # v3.4.3
 
 ## Bugfixes
