@@ -4,9 +4,9 @@
 	"description": "A system for playing the Shadowdark RPG from Arcane Library",
 	"version": "3.4.4",
 	"compatibility": {
-		"maximum": "12",
+		"maximum": "13",
 		"minimum": "12",
-		"verified": "12"
+		"verified": "13"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json",
