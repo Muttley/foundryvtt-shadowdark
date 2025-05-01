@@ -536,9 +536,18 @@ export default class RollSD extends Roll {
 			data,
 			title: options.title,
 			formula: Array.from(parts).join(" + "),
-			rollModes: CONFIG.Dice.rollModes,
 			rollMode: options.rollMode,
 		};
+
+		if (game.version < 13) {
+			dialogData.rollModes = CONFIG.Dice.rollModes;
+		}
+		else {
+			dialogData.rollModes = {};
+			for (const [key, value] of Object.entries(CONFIG.Dice.rollModes)) {
+				dialogData.rollModes[key] = value.label;
+			}
+		}
 
 		// If rollMode is already specified, don't override it
 		if (!dialogData.rollMode) {
