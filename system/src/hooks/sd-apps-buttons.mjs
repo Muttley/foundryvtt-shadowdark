@@ -23,6 +23,27 @@ export const SDAppsButtons = {
 			}
 		});
 
+		Hooks.on("renderSidebar", async function(app, html) {
+			if (game.version > 13) {
+				const renderedHTML = $(
+					await renderTemplate(
+						"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
+					)
+				);
+
+				const footer = html.querySelector("#actors .directory-footer");
+				await footer.append(renderedHTML[0]);
+
+				footer.querySelector(".character-generator-button").addEventListener("click", () => {
+					new shadowdark.apps.CharacterGeneratorSD().render(true);
+				});
+
+				footer.querySelector(".shadowdarkling-import-button").addEventListener("click", () => {
+					new shadowdark.apps.ShadowdarklingImporterSD().render(true);
+				});
+			}
+		});
+
 
 	},
 };
