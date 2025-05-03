@@ -1,105 +1,105 @@
-SHADOWDARK.ability_cha: Cha
-SHADOWDARK.ability_charisma: Charisma
-SHADOWDARK.ability_con: Con
-SHADOWDARK.ability_constitution: Constitution
-SHADOWDARK.ability_dex: Dex
-SHADOWDARK.ability_dexterity: Dexterity
-SHADOWDARK.ability_int: Int
-SHADOWDARK.ability_intelligence: Intelligence
-SHADOWDARK.ability_str: Str
-SHADOWDARK.ability_strength: Strength
-SHADOWDARK.ability_wis: Wis
-SHADOWDARK.ability_wisdom: Wisdom
-SHADOWDARK.alignment.chaotic: Chaotic
-SHADOWDARK.alignment.lawful: Lawful
-SHADOWDARK.alignment.neutral: Neutral
-SHADOWDARK.ancestry.choice_count: Choice Count
-SHADOWDARK.ancestry.choice: Choice
-SHADOWDARK.ancestry.fixed: Fixed
-SHADOWDARK.ancestry.languages.label: Ancestry Languages
-SHADOWDARK.ancestry.languages.prompt: Select Language...
-SHADOWDARK.ancestry.nametable.label: Random Name Table
-SHADOWDARK.ancestry.nametable.placeholder: Drag Roll Table Here
-SHADOWDARK.ancestry.nametable.random_weight: Randomization Weight
-SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when using the Character Generator. Higher values increase chance. Default value is 1.
-SHADOWDARK.ancestry.talents.label: Ancestry Talents
-SHADOWDARK.ancestry.talents.prompt: Select Talent...
-SHADOWDARK.app.active_effects.title: Active Effects
-SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
-SHADOWDARK.app.gem_bag.title: Gem Bag
-SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
-SHADOWDARK.app.gem_bag.total_value: Total Value
-SHADOWDARK.app.item_properties.armor.title: Armor Properties
-SHADOWDARK.app.item_properties.languages.title: Languages
-SHADOWDARK.app.item_properties.magic_item.effects.title: Magic Item Effects
-SHADOWDARK.app.item_properties.save: Save
-SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
-SHADOWDARK.app.item_properties.title: Properties
-SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
-SHADOWDARK.app.light_tracker.minute_short: min
-SHADOWDARK.app.light_tracker.minutes_short: mins
-SHADOWDARK.app.light_tracker.title: Light Tracker
-SHADOWDARK.app.light-tracker.douse-light: Douse Light
-SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
-SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
-SHADOWDARK.app.loading.body: Searching Distant Lands...
-SHADOWDARK.app.loading.title: Loading
-SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges
-SHADOWDARK.apps.character-generator.choose: Choose
-SHADOWDARK.apps.character-generator.create_character: Create Character
+SHADOWDARK.ability_cha: 魅
+SHADOWDARK.ability_charisma: 魅力
+SHADOWDARK.ability_con: 體
+SHADOWDARK.ability_constitution: 體質
+SHADOWDARK.ability_dex: 敏
+SHADOWDARK.ability_dexterity: 敏捷
+SHADOWDARK.ability_int: 智
+SHADOWDARK.ability_intelligence: 智力
+SHADOWDARK.ability_str: 力
+SHADOWDARK.ability_strength: 力量
+SHADOWDARK.ability_wis: 感
+SHADOWDARK.ability_wisdom: 感知
+SHADOWDARK.alignment.chaotic: 混亂
+SHADOWDARK.alignment.lawful: 守序
+SHADOWDARK.alignment.neutral: 中立
+SHADOWDARK.ancestry.choice_count: 選擇數量
+SHADOWDARK.ancestry.choice: 選擇
+SHADOWDARK.ancestry.fixed: 固定
+SHADOWDARK.ancestry.languages.label: 血統語言
+SHADOWDARK.ancestry.languages.prompt: 選擇語言……
+SHADOWDARK.ancestry.nametable.label: 隨機名稱表
+SHADOWDARK.ancestry.nametable.placeholder: 拖曳隨機骰表到此
+SHADOWDARK.ancestry.nametable.random_weight: 隨機權重
+SHADOWDARK.ancestry.nametable.tooltip.weight: 影響使用角色生成器時的機率，數值越高，機率越大，預設值為 1。
+SHADOWDARK.ancestry.talents.label: 血統天賦
+SHADOWDARK.ancestry.talents.prompt: 選擇天賦.……
+SHADOWDARK.app.active_effects.title: 主動效果
+SHADOWDARK.app.gem_bag.sell_all: 出售所有寶石
+SHADOWDARK.app.gem_bag.title: 寶石袋
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: 出售寶石
+SHADOWDARK.app.gem_bag.total_value: 總價
+SHADOWDARK.app.item_properties.armor.title: 護甲特性
+SHADOWDARK.app.item_properties.languages.title: 語言
+SHADOWDARK.app.item_properties.magic_item.effects.title: 魔法物品效果
+SHADOWDARK.app.item_properties.save: 儲存
+SHADOWDARK.app.item_properties.talent.effects.title: 天賦效果類型
+SHADOWDARK.app.item_properties.title: 特性
+SHADOWDARK.app.item_properties.weapon.title: 武器特性
+SHADOWDARK.app.light_tracker.minute_short: 分鐘
+SHADOWDARK.app.light_tracker.minutes_short: 分鐘
+SHADOWDARK.app.light_tracker.title: 光源追蹤器
+SHADOWDARK.app.light-tracker.douse-light: 熄滅光源
+SHADOWDARK.app.light-tracker.hide-inactive: 隱藏無光源角色
+SHADOWDARK.app.light-tracker.show-all-actors: 顯示全部角色
+SHADOWDARK.app.light-tracker.turn-out-the-lights: 關閉所有光源
+SHADOWDARK.app.loading.body: 正在搜尋遠方地區……
+SHADOWDARK.app.loading.title: 加載中
+SHADOWDARK.app.npc_attack_ranges.title: 攻擊範圍
+SHADOWDARK.apps.character-generator.choose: 選擇
+SHADOWDARK.apps.character-generator.create_character: 創建角色
 SHADOWDARK.apps.character-generator.error.create: 建立玩家角色失敗 {error}
-SHADOWDARK.apps.character-generator.error.name: Character name cannot be blank
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Unable to roll a random name without a selected Ancestry
-SHADOWDARK.apps.character-generator.gear: Gear
-SHADOWDARK.apps.character-generator.gold: Gold
-SHADOWDARK.apps.character-generator.name: Character Name
-SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.sidebar_create: Create
-SHADOWDARK.apps.character-generator.sidebar_import: Import
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
-SHADOWDARK.apps.character-generator.success: Character created
-SHADOWDARK.apps.character-generator.title: Character Generator
-SHADOWDARK.apps.character-generator.tooltip: Fully Random Character
-SHADOWDARK.apps.character-generator.type: Type
-SHADOWDARK.apps.character-generator.update_character: Update Character
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: Do you want to delete the {effectName} effect?
-SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: Delete Effect?
-SHADOWDARK.apps.effect_panel.duration_label.expired: Expired
-SHADOWDARK.apps.effect_panel.duration_label.one_day: 1 Day Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_hour: 1 Hour Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_minute: 1 Minute Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_round: 1 Round Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_second: 1 Second Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_week: 1 Week Remaining
-SHADOWDARK.apps.effect_panel.duration_label.one_year: 1 Year Remaining
-SHADOWDARK.apps.effect_panel.duration_label.unlimited: Unlimited Duration
-SHADOWDARK.apps.effect_panel.duration_label.x_days: "{days} Days Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Hours Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minutes Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} Rounds Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
-SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
-SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
-SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
-SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
-SHADOWDARK.apps.item-importer.instruction2b: Item Name
-SHADOWDARK.apps.item-importer.instruction2c: Flavor text
-SHADOWDARK.apps.item-importer.instruction2d: Features
-SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
-SHADOWDARK.apps.item-importer.title: Import Item
-SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
-SHADOWDARK.apps.level-up.hit_points: Hit Points
-SHADOWDARK.apps.level-up.level_up: Level Up!
-SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
-SHADOWDARK.apps.level-up.missing_selections: Missing Selections
-SHADOWDARK.apps.level-up.notalent: No talents gained at this level
-SHADOWDARK.apps.level-up.or_boons: or Boons
-SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Continue with level up anyways?
-SHADOWDARK.apps.level-up.roll_boon: Roll Boon
+SHADOWDARK.apps.character-generator.error.name: 角色名稱不能空白
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: 未選擇血統，無法擲出隨機名稱
+SHADOWDARK.apps.character-generator.gear: 裝備
+SHADOWDARK.apps.character-generator.gold: 金幣
+SHADOWDARK.apps.character-generator.name: 角色名稱
+SHADOWDARK.apps.character-generator.see_details: 查看詳情
+SHADOWDARK.apps.character-generator.sidebar_create: 創建
+SHADOWDARK.apps.character-generator.sidebar_import: 匯入
+SHADOWDARK.apps.character-generator.starting_gear: 起始裝備
+SHADOWDARK.apps.character-generator.success: 角色已創建
+SHADOWDARK.apps.character-generator.title: 角色生成器
+SHADOWDARK.apps.character-generator.tooltip: 完全隨機角色
+SHADOWDARK.apps.character-generator.type: 類型
+SHADOWDARK.apps.character-generator.update_character: 更新角色
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: 您確定要刪除{effectName}效果嗎？
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: 刪除效果？
+SHADOWDARK.apps.effect_panel.duration_label.expired: 已過期
+SHADOWDARK.apps.effect_panel.duration_label.one_day: 剩餘 1 天
+SHADOWDARK.apps.effect_panel.duration_label.one_hour: 剩餘 1 小時
+SHADOWDARK.apps.effect_panel.duration_label.one_minute: 剩餘 1 分鐘
+SHADOWDARK.apps.effect_panel.duration_label.one_round: 剩餘 1 回合
+SHADOWDARK.apps.effect_panel.duration_label.one_second: 剩餘 1 秒
+SHADOWDARK.apps.effect_panel.duration_label.one_week: 剩餘 1 週
+SHADOWDARK.apps.effect_panel.duration_label.one_year: 剩餘 1 年
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: 無限持續時間
+SHADOWDARK.apps.effect_panel.duration_label.x_days: "剩餘 {days} 天"
+SHADOWDARK.apps.effect_panel.duration_label.x_hours: "剩餘 {hours} 小時"
+SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "剩餘 {minutes} 分鐘"
+SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "剩餘 {rounds} 回合"
+SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "剩餘 {seconds} 秒"
+SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "剩餘 {weeks} 週"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "剩餘 {years} 年"
+SHADOWDARK.apps.effect_panel.right_click_to_remove: "[點擊右鍵] 移除效果"
+SHADOWDARK.apps.item-importer.import_button: 匯入物品
+SHADOWDARK.apps.item-importer.instruction1: 1. 從原始資料中複製物品文字。
+SHADOWDARK.apps.item-importer.instruction2a: 2. 將文字貼上至此欄，並依照核心規則顯示的物品格式進行。
+SHADOWDARK.apps.item-importer.instruction2b: 物品名稱
+SHADOWDARK.apps.item-importer.instruction2c: 描述
+SHADOWDARK.apps.item-importer.instruction2d: 特性
+SHADOWDARK.apps.item-importer.instruction3: 3. 點擊匯入物品。
+SHADOWDARK.apps.item-importer.title: 匯入物品
+SHADOWDARK.apps.level-up.dragdrop: 拖放到此處
+SHADOWDARK.apps.level-up.errors.missing_boon_table: 無法擲出契約主恩賜，因為所設定的隨機骰表無法載入
+SHADOWDARK.apps.level-up.hit_points: 生命值
+SHADOWDARK.apps.level-up.level_up: 升級！
+SHADOWDARK.apps.level-up.leveling_to: 升級到等級
+SHADOWDARK.apps.level-up.missing_selections: 尚有未選項目
+SHADOWDARK.apps.level-up.notalent: 此等級未獲得天賦
+SHADOWDARK.apps.level-up.or_boons: 或恩賜
+SHADOWDARK.apps.level-up.prompt: 尚有必要選項未完成。仍要繼續升級嗎？
+SHADOWDARK.apps.level-up.roll_boon: 擲恩賜
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
