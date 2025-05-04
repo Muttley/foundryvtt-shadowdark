@@ -1,7 +1,19 @@
 <form autocomplete="off" spellcheck="off">
 	<div class="shadowdark-dialog">
 		<h2>{{title}}</h2>
+		{{#each bonusGroups}}
+			{{{this.outerHTML}}}
+		{{/each}}
+
 		<hr />
+
+		{{#if formGroups}}
+			{{#each formGroups}}
+				{{{this.outerHTML}}}
+			{{/each}}
+			<hr />
+		{{/if}}
+
 		<div class="form-group">
 			<label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
 			<select name="rollMode">
