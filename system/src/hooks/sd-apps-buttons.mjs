@@ -2,29 +2,30 @@
 
 export const SDAppsButtons = {
 	attach: () => {
-		Hooks.on("renderSidebarTab", async function(app, html) {
-			if (app.options.classes.includes("actors-sidebar")) {
+		if (game.version < 13) {
+			Hooks.on("renderSidebarTab", async function(app, html) {
+				if (app.options.classes.includes("actors-sidebar")) {
 
-				const renderedHTML = $(
-					await renderTemplate(
-						"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
-					)
-				);
+					const renderedHTML = $(
+						await renderTemplate(
+							"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
+						)
+					);
 
-				html.find(".directory-footer").append(renderedHTML);
+					html.find(".directory-footer").append(renderedHTML);
 
-				html.on("click", ".character-generator-button", () => {
-					new shadowdark.apps.CharacterGeneratorSD().render(true);
-				});
+					html.on("click", ".character-generator-button", () => {
+						new shadowdark.apps.CharacterGeneratorSD().render(true);
+					});
 
-				html.on("click", ".shadowdarkling-import-button", () => {
-					new shadowdark.apps.ShadowdarklingImporterSD().render(true);
-				});
-			}
-		});
-
-		Hooks.on("renderSidebar", async function(app, html) {
-			if (game.version > 13) {
+					html.on("click", ".shadowdarkling-import-button", () => {
+						new shadowdark.apps.ShadowdarklingImporterSD().render(true);
+					});
+				}
+			});
+		}
+		else {
+			Hooks.on("renderSidebar", async function(app, html) {
 				const renderedHTML = $(
 					await renderTemplate(
 						"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
@@ -41,9 +42,7 @@ export const SDAppsButtons = {
 				footer.querySelector(".shadowdarkling-import-button").addEventListener("click", () => {
 					new shadowdark.apps.ShadowdarklingImporterSD().render(true);
 				});
-			}
-		});
-
-
+			});
+		}
 	},
 };

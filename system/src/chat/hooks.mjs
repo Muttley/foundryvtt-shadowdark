@@ -1,7 +1,7 @@
 import SolodarkSD from "../apps/SoloDarkSD.mjs";
 
 export function highlightSuccessFailure(app, html, data) {
-	if ( !app.flags.shadowdark.isRoll ) return;
+	if ( !app.flags?.shadowdark?.isRoll ) return;
 
 	const value = html.find(".d20-roll .dice-total").text();
 
