@@ -633,14 +633,16 @@ export default class RollSD extends Roll {
 			user: game.user.id,
 			speaker: speaker,
 			flags: {
-				"isRoll": true,
-				"rolls": rolls,
-				"core.canPopout": true,
-				"hasTarget": target !== false,
-				"critical": rolls.main.critical,
+				shadowdark: {
+					"isRoll": true,
+					"rolls": rolls,
+					"core.canPopout": true,
+					"hasTarget": target !== false,
+					"critical": rolls.main.critical,
+				},
 			},
 		};
-		if (target) chatData.flags.success = rolls.main.roll.total >= target;
+		if (target) chatData.flags.shadowdark.success = rolls.main.roll.total >= target;
 		return chatData;
 	}
 
@@ -731,7 +733,7 @@ export default class RollSD extends Roll {
 		// TODO: Write tests for this.
 		// Add whether the roll succeeded or not to the roll data
 		data.rolls.main.success = (chatData.flags.success)
-			? chatData.flags.success
+			? chatData.flags.shadowdark.success
 			: null;
 
 		if ( options.rollMode === "blindroll" ) data.rolls.main.blind = true;

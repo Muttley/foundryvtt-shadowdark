@@ -23,6 +23,13 @@ $pause-w: 200px;
 	}
 }
 
+.dice-roll .dice-total.success {
+    color: var(--color-level-success-border);
+}
+.dice-roll .dice-total.failure {
+    color: var(--color-level-error-border);
+}
+
 .editor {
 	height: 100%;
 	padding: 0 4px;

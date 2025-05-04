@@ -1,11 +1,12 @@
 import SolodarkSD from "../apps/SoloDarkSD.mjs";
 
 export function highlightSuccessFailure(app, html, data) {
-	if ( !app.flags.isRoll ) return;
+	console.log(app.flags.shadowdark);
+	if ( !app.flags.shadowdark.isRoll ) return;
 
 	const value = html.find(".d20-roll .dice-total").text();
 
-	if ( app.flags.critical === "failure" ) {
+	if ( app.flags.shadowdark.critical === "failure" ) {
 		html.find(".d20-roll .dice-total").addClass("failure");
 
 		html.find(".d20-roll .dice-total").text(
@@ -15,7 +16,7 @@ export function highlightSuccessFailure(app, html, data) {
 			)
 		);
 	}
-	else if ( app.flags.critical === "success" ) {
+	else if ( app.flags.shadowdark.critical === "success" ) {
 		html.find(".d20-roll .dice-total").addClass("success");
 
 		html.find(".d20-roll .dice-total").text(
@@ -25,7 +26,7 @@ export function highlightSuccessFailure(app, html, data) {
 			)
 		);
 	}
-	else if ( app.flags.hasTarget && app.flags.success ) {
+	else if ( app.flags.shadowdark.hasTarget && app.flags.shadowdark.success ) {
 		html.find(".d20-roll .dice-total").addClass("success");
 
 		html.find(".d20-roll .dice-total").text(
@@ -35,7 +36,7 @@ export function highlightSuccessFailure(app, html, data) {
 			)
 		);
 	}
-	else if ( app.flags.hasTarget && !app.flags.success ) {
+	else if ( app.flags.shadowdark.hasTarget && !app.flags.shadowdark.success ) {
 		html.find(".d20-roll .dice-total").addClass("failure");
 
 		html.find(".d20-roll .dice-total").text(
