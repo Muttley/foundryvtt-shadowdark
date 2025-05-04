@@ -1,7 +1,6 @@
 import SolodarkSD from "../apps/SoloDarkSD.mjs";
 
 export function highlightSuccessFailure(app, html, data) {
-	console.log(app.flags.shadowdark);
 	if ( !app.flags.shadowdark.isRoll ) return;
 
 	const value = html.find(".d20-roll .dice-total").text();
@@ -182,7 +181,7 @@ export function onRenderChatMessage(app, html, data) {
  */
 export function addChatMessageContextOptions(html, options) {
 	const canApplyDamage = li => {
-		const message = game.messages.get(li.data("messageId"));
+		const message = getMessage(li);
 
 		return game.user.isGM
 			&& canvas.tokens?.controlled.length
@@ -191,7 +190,7 @@ export function addChatMessageContextOptions(html, options) {
 	};
 
 	const canApplySecondaryDamage = li => {
-		const message = game.messages.get(li.data("messageId"));
+		const message = getMessage(li);
 
 		return game.user.isGM
 			&& canvas.tokens?.controlled.length
@@ -228,6 +227,14 @@ export function addChatMessageContextOptions(html, options) {
 	return options;
 }
 
+function getMessage(element) {
+	return game.messages.get(
+		(element instanceof HTMLElement)
+			? element.dataset.messageId // JS HTML Element
+			: element.data("messageId") // JQuery HTML Element
+	);
+}
+
 /**
  * Apply rolled dice damage to the token or tokens which are currently controlled.
  * The multipliers allows for damage to be scaled for healing, or other modifications
@@ -238,7 +245,7 @@ export function addChatMessageContextOptions(html, options) {
  */
 function applyChatCardDamage(li, multiplier) {
 
-	const message = game.messages.get(li.data("messageId"));
+	const message = getMessage(li);
 	let roll;
 
 	// There are two version of this check.
@@ -248,7 +255,7 @@ function applyChatCardDamage(li, multiplier) {
 		roll = message.rolls[0];
 	}
 	else if (_chatMessageIsDamageCard(message)) {
-		roll = message?.flags.rolls.damage.roll;
+		roll = message?.flags.shadowdark.rolls.damage.roll;
 	}
 	else {
 		return;
@@ -271,13 +278,13 @@ function applyChatCardDamage(li, multiplier) {
  */
 function applyChatCardDamageSecondary(li, multiplier) {
 
-	const message = game.messages.get(li.data("messageId"));
+	const message = getMessage(li);
 
 	if (!_chatMessageIsDamageCardSecondary(message)) {
 		return;
 	}
 
-	let roll = message?.flags.rolls.secondaryDamage.roll;
+	let roll = message?.flags.shadowdark.rolls.secondaryDamage.roll;
 
 	return Promise.all(canvas.tokens.controlled.map(t => {
 		const a = t.actor;
@@ -302,8 +309,8 @@ function _chatMessageIsBasicRoll(message) {
  * @returns
  */
 function _chatMessageIsDamageCard(message) {
-	return message?.flags.isRoll
-		&& (message?.flags.rolls?.damage);
+	return message?.flags.shadowdark.isRoll
+		&& (message?.flags.shadowdark.rolls?.damage);
 }
 
 /**
@@ -313,6 +320,6 @@ function _chatMessageIsDamageCard(message) {
  * @returns
  */
 function _chatMessageIsDamageCardSecondary(message) {
-	return message?.flags.isRoll
-		&& message?.flags.rolls?.secondaryDamage;
+	return message?.flags.shadowdark.isRoll
+		&& message?.flags.shadowdark.rolls?.secondaryDamage;
 }

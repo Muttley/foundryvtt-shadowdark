@@ -732,7 +732,7 @@ export default class RollSD extends Roll {
 
 		// TODO: Write tests for this.
 		// Add whether the roll succeeded or not to the roll data
-		data.rolls.main.success = (chatData.flags.success)
+		data.rolls.main.success = (chatData.flags.shadowdark.success)
 			? chatData.flags.shadowdark.success
 			: null;
 

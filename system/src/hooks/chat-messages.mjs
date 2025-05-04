@@ -5,7 +5,12 @@ import {
 
 export const ChatMessageHooks = {
 	attach: () => {
-		Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
+		if (game.version < 13) {
+			Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
+		}
+		else {
+			Hooks.on("getChatMessageContextOptions", addChatMessageContextOptions);
+		}
 		Hooks.on("renderChatMessage", (app, html, data) => onRenderChatMessage(app, html, data));
 	},
 };
