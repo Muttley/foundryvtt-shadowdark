@@ -54,7 +54,7 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: 未選擇血統�
 SHADOWDARK.apps.character-generator.gear: 裝備
 SHADOWDARK.apps.character-generator.gold: 金幣
 SHADOWDARK.apps.character-generator.name: 角色名稱
-SHADOWDARK.apps.character-generator.see_details: 查看詳情
+SHADOWDARK.apps.character-generator.see_details: 查看詳細
 SHADOWDARK.apps.character-generator.sidebar_create: 創建
 SHADOWDARK.apps.character-generator.sidebar_import: 匯入
 SHADOWDARK.apps.character-generator.starting_gear: 起始裝備
@@ -107,7 +107,7 @@ SHADOWDARK.apps.monster-importer.instruction1: 1. 從原始資料中複製怪物
 SHADOWDARK.apps.monster-importer.instruction2a: 2. 依照核心規則所示的怪物格式，將文字貼到文字框中。每個能力之間加入一行空白行上下隔開。
 SHADOWDARK.apps.monster-importer.instruction2b: 怪物名稱
 SHADOWDARK.apps.monster-importer.instruction2c: 敘事性描述
-SHADOWDARK.apps.monster-importer.instruction2d: 主要屬性欄
+SHADOWDARK.apps.monster-importer.instruction2d: 主要屬性欄s
 SHADOWDARK.apps.monster-importer.instruction2e: 特性
 SHADOWDARK.apps.monster-importer.instruction3: 3. 點擊匯入怪物。
 SHADOWDARK.apps.monster-importer.title: 匯入怪物
@@ -204,15 +204,15 @@ SHADOWDARK.chat.welcome_message.title: 適用於 Foundry 的 Shadowdark RPG
 SHADOWDARK.chat.welcome_message.watch: 觀看影片教學
 SHADOWDARK.chatcard.default: 擲骰
 SHADOWDARK.check.requesting: 要求檢定
-SHADOWDARK.class-ability.ability.check: 技能檢定
-SHADOWDARK.class-ability.ability.label: 技能
+SHADOWDARK.class-ability.ability.check: 屬性檢定
+SHADOWDARK.class-ability.ability.label: 屬性
 SHADOWDARK.class-ability.available.label: 可用的
 SHADOWDARK.class-ability.boons: 恩惠
 SHADOWDARK.class-ability.dc.label: 難度
-SHADOWDARK.class-ability.group.label: 技能組
+SHADOWDARK.class-ability.group.label: 技能群組
 SHADOWDARK.class-ability.limited-uses.label: 使用次數限制？
-SHADOWDARK.class-ability.lose_on_failure.label: 失敗則失去？
-SHADOWDARK.class-ability.lost.label: 失去
+SHADOWDARK.class-ability.lose_on_failure.label: 失敗則喪失？
+SHADOWDARK.class-ability.lost.label: 遺失
 SHADOWDARK.class-ability.maximum.label: 最大值
 SHADOWDARK.class-ability.options: 設定
 SHADOWDARK.class.armor.all.label: 所有護甲
@@ -259,13 +259,13 @@ SHADOWDARK.dialog.ability_check.con: 體質檢定
 SHADOWDARK.dialog.ability_check.dex: 敏捷檢定
 SHADOWDARK.dialog.ability_check.int: 智力檢定
 SHADOWDARK.dialog.ability_check.str: 力量檢定
-SHADOWDARK.dialog.ability_check.title: 技能檢定
+SHADOWDARK.dialog.ability_check.title: 屬性檢定
 SHADOWDARK.dialog.ability_check.wis: 感知檢定
 SHADOWDARK.dialog.create_custom_item: 創建自訂物品
 SHADOWDARK.dialog.create_treasure: 創建財寶
 SHADOWDARK.dialog.create: 創建
 SHADOWDARK.dialog.edit_hp.title: 編輯生命值
-SHADOWDARK.dialog.edit_stats.title: 編輯數值
+SHADOWDARK.dialog.edit_stats.title: 編輯屬性統計
 SHADOWDARK.dialog.effect.choice.armor: 選擇護甲類型
 SHADOWDARK.dialog.effect.choice.attribute: 選擇屬性
 SHADOWDARK.dialog.effect.choice.class: 選擇職業
@@ -290,7 +290,7 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: 為第 {level} 等骰到 {hp} 點生�
 SHADOWDARK.dialog.hp_roll.sum_total: 新的生命值上限為 {total} 
 SHADOWDARK.dialog.hp_roll.summary: 生命骰總結
 SHADOWDARK.dialog.hp_roll.title: 生命骰
-SHADOWDARK.dialog.item_roll.ability_bonus: 技能加值
+SHADOWDARK.dialog.item_roll.ability_bonus: 屬性加值
 SHADOWDARK.dialog.item_roll.item_bonus: 物品加值
 SHADOWDARK.dialog.item_roll.talent_bonus: 天賦加值
 SHADOWDARK.dialog.item_roll.title: 擲攻擊骰用
@@ -334,7 +334,7 @@ SHADOWDARK.dragdrop: 拖曳至此處
 SHADOWDARK.effect_duration.hours: 小時
 SHADOWDARK.effect_duration.minutes: 分鐘
 SHADOWDARK.effect_duration.seconds: 秒
-SHADOWDARK.effect_duration.turns: 回合
+SHADOWDARK.effect_duration.turns: 輪
 SHADOWDARK.effect_duration.unlimited: 無限制
 SHADOWDARK.effect.custom: 自訂效果
 SHADOWDARK.effect.footer.add_custom: 新增自訂效果
@@ -370,11 +370,11 @@ SHADOWDARK.form.section_header.names.label: 名稱
 SHADOWDARK.form.section_header.patron.label: 契約主
 SHADOWDARK.form.section_header.spellcasting.label: 施法能力
 SHADOWDARK.form.section_header.talents.label: 天賦
-SHADOWDARK.hotbar.abilityLost: 技能目前失效
+SHADOWDARK.hotbar.abilityLost: 技能目前遺失
 SHADOWDARK.hotbar.moreThanOneItemWithName: 找到多個同名物件
 SHADOWDARK.hotbar.noActorSelected: 你必須選擇一個角色才能使用此巨集
 SHADOWDARK.hotbar.noItemWithName: 角色身上找不到此物品
-SHADOWDARK.hotbar.spellLost: 法術目前失效
+SHADOWDARK.hotbar.spellLost: 法術目前遺失
 SHADOWDARK.inventory.carried_gear: 隨身裝備
 SHADOWDARK.inventory.coins: 金錢
 SHADOWDARK.inventory.equipped_gear: 已穿戴裝備
@@ -484,7 +484,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: 無法新增效果，�
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: 無法在戰鬥外新增以回合為單位的持續時間效果。
 SHADOWDARK.item.equipped: 已穿戴
 SHADOWDARK.item.errors.no_available_ammunition: 無可用彈藥
-SHADOWDARK.item.errors.no_spellcasting_classes: 此角色不是施法職業
+SHADOWDARK.item.errors.no_spellcasting_classes: 此角色不具備施法職業
 SHADOWDARK.item.inventory_free_carry: 免費攜帶欄位
 SHADOWDARK.item.inventory_per_slot: 每格最大數量
 SHADOWDARK.item.inventory_quantity: 數量
@@ -585,269 +585,269 @@ SHADOWDARK.light_source.light_spell.double_near: 光亮術（雙倍中距離）
 SHADOWDARK.light_source.light_spell.near: 光亮術（中距離）
 SHADOWDARK.light_source.torch: 火把
 SHADOWDARK.light-source.dropped: '{name} 丟了'
-SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
-SHADOWDARK.light-tracker.active: Active
-SHADOWDARK.light-tracker.paused: Paused
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
-SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
-SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
-SHADOWDARK.macro.success: The '{macro}' macro completed successfully
-SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
-SHADOWDARK.migration.begin_migration: Performing data upgrades for Shadowdark RPG
-SHADOWDARK.migration.begin_schema: Applying updates for Shadowdark RPG schema v{version}
-SHADOWDARK.migration.completed_migration: Completed data updgrades for Shadowdark RPG
-SHADOWDARK.migration.completed_schema: Completed applying updates for Shadowdark RPG schema v{version}
-SHADOWDARK.module_art_config.portraits: Portraits
-SHADOWDARK.module_art_config.tokens: Tokens
-SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
-SHADOWDARK.npc_attack.type.physical: Physical
-SHADOWDARK.npc_attack.type.special: Special
-SHADOWDARK.npc_move.close: Close
-SHADOWDARK.npc_move.double_near: Double Near
-SHADOWDARK.npc_move.far: Far
-SHADOWDARK.npc_move.near: Near
-SHADOWDARK.npc_move.none: None
-SHADOWDARK.npc_move.special: Special
-SHADOWDARK.npc_move.triple_near: Triple Near
-SHADOWDARK.patron.boons_table.label: Patron Boons Table
-SHADOWDARK.property.type.option.armor: Armor
-SHADOWDARK.property.type.option.weapon: Weapon
-SHADOWDARK.property.type.title: Property Type
-SHADOWDARK.range.close_short: C
-SHADOWDARK.range.close: Close
-SHADOWDARK.range.double_near: Double Near
-SHADOWDARK.range.far_short: F
-SHADOWDARK.range.far: Far
-SHADOWDARK.range.near_short: "N"
-SHADOWDARK.range.near: Near
-SHADOWDARK.range.nearLine_short: NL
-SHADOWDARK.range.nearLine: Near Line
-SHADOWDARK.range.oneMile_short: 1mi
-SHADOWDARK.range.oneMile: 1 Mile
-SHADOWDARK.range.samePlane_short: SP
-SHADOWDARK.range.samePlane: On the same plane
-SHADOWDARK.range.self_short: S
-SHADOWDARK.range.self: Self
-SHADOWDARK.range.touch_short: T
-SHADOWDARK.range.touch: Touch
-SHADOWDARK.range.unlimited_short: U
-SHADOWDARK.range.unlimited: Unlimited
-SHADOWDARK.roll.advantage_title: "{title} with Advantage"
-SHADOWDARK.roll.advantage: Advantage
-SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
-SHADOWDARK.roll.critical.success: Critical Success! ({value})
-SHADOWDARK.roll.D20: Roll D20
-SHADOWDARK.roll.damage: Damage Roll
-SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
-SHADOWDARK.roll.disadvantage: Disadvantage
-SHADOWDARK.roll.failure: Failure! ({value})
-SHADOWDARK.roll.normal: Normal
-SHADOWDARK.roll.one_handed_damage: One-handed Damage
-SHADOWDARK.roll.spell_casting_check: Spellcasting Check
-SHADOWDARK.roll.success: Success! ({value})
-SHADOWDARK.roll.two_handed_damage: Two-handed Damage
-SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
-SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
-SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
-SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
-SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
-SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
-SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
-SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
-SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used
-SHADOWDARK.settings.module_art.label: Configure Art
-SHADOWDARK.settings.module_art.name: Module-provided Art
-SHADOWDARK.settings.module_art.save: Save Changes
-SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
-SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
-SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.schemaVersion.name: Schema Version
-SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
-SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
-SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
-SHADOWDARK.settings.source_filter.name: Source Filter
-SHADOWDARK.settings.source_filter.prompt: Select Source...
-SHADOWDARK.settings.source_filter.save_button: Save Configuration
-SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
-SHADOWDARK.settings.source_filter.title: Book Source Filters
-SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
-SHADOWDARK.settings.systemVersion.name: System Version
-SHADOWDARK.settings.track_light_sources.hint: If checked the system will track and update the time remaining on any active light sources.
-SHADOWDARK.settings.track_light_sources.inactive_user.hint: If checked light sources belonging to inactive (not logged in) users will still be tracked
-SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User Light Sources
-SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
-SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
-SHADOWDARK.settings.track_light_sources.name: Track Light Sources
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
-SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
-SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
-SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
-SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
-SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
-SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
-SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
-SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
-SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
-SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
-SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
-SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
-SHADOWDARK.sheet.abilities.label: Abilities
-SHADOWDARK.sheet.abilities.modifiers: Modifiers
-SHADOWDARK.sheet.abilities.stats: Stats
-SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
-SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
-SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
-SHADOWDARK.sheet.actor.ac: AC
-SHADOWDARK.sheet.actor.alignment: Alignment
-SHADOWDARK.sheet.actor.character_notes: Character Notes
-SHADOWDARK.sheet.actor.hp_max: Max
-SHADOWDARK.sheet.actor.hp: HP
-SHADOWDARK.sheet.actor.level: Level
-SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
-SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
-SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
-SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
-SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
-SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
-SHADOWDARK.sheet.general.active_effects.duration.title: Duration
-SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
-SHADOWDARK.sheet.general.active_effects.source.title: Source
-SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
-SHADOWDARK.sheet.general.add: Add
-SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
-SHADOWDARK.sheet.general.item_create.tooltip: Create {type} Item
-SHADOWDARK.sheet.general.item_delete.title: Delete Item
-SHADOWDARK.sheet.general.item_edit.title: Edit Item
-SHADOWDARK.sheet.general.roll_hp: Roll HP
-SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
-SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
-SHADOWDARK.sheet.item.tab.description: Description
-SHADOWDARK.sheet.item.tab.details: Details
-SHADOWDARK.sheet.item.tab.effects: Effects
-SHADOWDARK.sheet.item.tab.light: Light
-SHADOWDARK.sheet.item.tab.magic: Magic
-SHADOWDARK.sheet.item.tab.source: Source
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
-SHADOWDARK.sheet.item.tab.titles: Titles
-SHADOWDARK.sheet.npc.attacks_label: Attacks
-SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
-SHADOWDARK.sheet.npc.description_label: Description
-SHADOWDARK.sheet.npc.features_label: Features
-SHADOWDARK.sheet.npc.movement_short: Move
-SHADOWDARK.sheet.npc.movement: Movement
-SHADOWDARK.sheet.npc.specials_label: Special Attacks
-SHADOWDARK.sheet.npc.tab.abilities: Abilities
-SHADOWDARK.sheet.npc.tab.description: Description
-SHADOWDARK.sheet.npc.tab.spells: Spells
-SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
-SHADOWDARK.sheet.player.ancestry.label: Ancestry
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
-SHADOWDARK.sheet.player.available_spells: Available Spells
-SHADOWDARK.sheet.player.background.label: Background
-SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
-SHADOWDARK.sheet.player.boon.label: Boon
-SHADOWDARK.sheet.player.boons.blessings.label: Blessings
-SHADOWDARK.sheet.player.boons.label: Boons
-SHADOWDARK.sheet.player.boons.name: Boon Name
-SHADOWDARK.sheet.player.boons.oaths.label: Oaths
-SHADOWDARK.sheet.player.boons.secrets.label: Secrets
-SHADOWDARK.sheet.player.class_spells: Class Spells
-SHADOWDARK.sheet.player.class.label: Class
-SHADOWDARK.sheet.player.class.tooltip: Your character's job
-SHADOWDARK.sheet.player.deity.label: Deity
-SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
-SHADOWDARK.sheet.player.inventory.gear.label: Gear
-SHADOWDARK.sheet.player.inventory.items.label: Items
-SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
-SHADOWDARK.sheet.player.inventory.slots.label: Slots
-SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
-SHADOWDARK.sheet.player.inventory.treasure.label: Treasure
-SHADOWDARK.sheet.player.inventory.type.label: Type
-SHADOWDARK.sheet.player.inventory.value.label: Value
-SHADOWDARK.sheet.player.languages: Languages
-SHADOWDARK.sheet.player.luck: Luck
-SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
-SHADOWDARK.sheet.player.name.label: Name
-SHADOWDARK.sheet.player.open_spellbook.tooltip: Open Spellbook
-SHADOWDARK.sheet.player.patron.tooltip: Your patron is the source of your supernatural gifts
-SHADOWDARK.sheet.player.ranged_attacks: Ranged Attacks
-SHADOWDARK.sheet.player.spells_from_items: Spells From Items
-SHADOWDARK.sheet.player.spells_tier: Tier
-SHADOWDARK.sheet.player.spells: Spells
-SHADOWDARK.sheet.player.tab.abilities: Abilities
-SHADOWDARK.sheet.player.tab.details: Details
-SHADOWDARK.sheet.player.tab.inventory: Inventory
-SHADOWDARK.sheet.player.tab.notes: Notes
-SHADOWDARK.sheet.player.tab.spells: Spells
-SHADOWDARK.sheet.player.tab.talents: Talents
-SHADOWDARK.sheet.player.talents_level: Level
-SHADOWDARK.sheet.player.talents_name: Name
-SHADOWDARK.sheet.player.talents: Talents
-SHADOWDARK.sheet.player.title: Title
-SHADOWDARK.sheet.player.toggle_ability_lost: Toggle Ability Lost
-SHADOWDARK.sheet.player.toggle_edit_hp: Toggle Edit HP
-SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
-SHADOWDARK.sheet.player.toggle_spell_lost: Toggle Spell Lost
-SHADOWDARK.sheet.player.tooltip.cast_spell: Cast Spell
-SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
-SHADOWDARK.sheet.player.tooltip.learn_spell: Learn Spell
-SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
-SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
-SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
-SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
-SHADOWDARK.sheet.player.xp: XP
-SHADOWDARK.sheet.special_abilities.label: Special Abilities
-SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
-SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
-SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
-SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
-SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
-SHADOWDARK.source.cursed-scroll-4: Cursed Scroll Vol.4, River of Night
-SHADOWDARK.source.cursed-scroll-5: Cursed Scroll Vol.5, Dwellers in the Deep
-SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
-SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
-SHADOWDARK.spell_caster.priest: Priest
-SHADOWDARK.spell_caster.wizard: Wizard
-SHADOWDARK.spell_duration.days: Days
-SHADOWDARK.spell_duration.focus: Focus
-SHADOWDARK.spell_duration.instant: Instant
-SHADOWDARK.spell_duration.permanent: Permanent
-SHADOWDARK.spell_duration.real_time: Real Time
-SHADOWDARK.spell_duration.rounds: Rounds
-SHADOWDARK.spell_duration.turns: Turns
-SHADOWDARK.spell_range.close: Close
-SHADOWDARK.spell_range.far: Far
-SHADOWDARK.spell_range.near: Near
-SHADOWDARK.spell.classes.label: Caster Classes
-SHADOWDARK.spell.classes.prompt: Select Class...
-SHADOWDARK.talent.backstab: Backstab
-SHADOWDARK.talent.class.ancestry: Ancestry
-SHADOWDARK.talent.class.class: Class
-SHADOWDARK.talent.class.level: Level
-SHADOWDARK.talent.class.patronBoon: Patron Boon
-SHADOWDARK.talent.level_gained: Level Gained
-SHADOWDARK.talent.type.ability_improvement: Ability Improvement
-SHADOWDARK.talent.type.advantage.hp: HP Roll Advantage
-SHADOWDARK.talent.type.advantage.initiative: Initiative Advantage
-SHADOWDARK.talent.type.advantage.spell: Spellcasting Advantage
-SHADOWDARK.talent.type.advantage.title: Advantage Bonus
-SHADOWDARK.talent.type.armor_bonus: Armor AC Bonus
-SHADOWDARK.talent.type.armor_mastery: Armor Mastery
-SHADOWDARK.talent.type.backstab_die: Extra Backstab Die
-SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
-SHADOWDARK.talent.type.custom: Custom Talent
-SHADOWDARK.talent.type.melee_attack_bonus: Melee Attack Roll Bonus
-SHADOWDARK.talent.type.melee_damage_bonus: Melee Damage Roll Bonus
-SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
-SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
-SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
-SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
+SHADOWDARK.light-source.pick-up-lightsource.tooltip: 拾取光源
+SHADOWDARK.light-tracker.active: 啟用中
+SHADOWDARK.light-tracker.paused: 已暫停
+SHADOWDARK.light-tracker.status.label: 狀態
+SHADOWDARK.light-tracker.title: 光源追蹤器
+SHADOWDARK.light-tracker.user_warning: 一位或多位使用者尚未選擇角色
+SHADOWDARK.macro.error.caught_error: "巨集執行失敗，錯誤如下：{error}"
+SHADOWDARK.macro.error.gm_role_required: 巨集需擁有 '遊戲主持人' 角色權限
+SHADOWDARK.macro.success: '''{macro}'' 巨集執行成功'
+SHADOWDARK.macro.warn.create_item_requires_ownership: 僅可為所擁有的物品建立巨集按鈕
+SHADOWDARK.migration.begin_migration: 正在為 Shadowdark RPG 執行資料升級
+SHADOWDARK.migration.begin_schema: 套用 Shadowdark RPG 結構 v{version} 的更新
+SHADOWDARK.migration.completed_migration: 資料升級完成，適用於 Shadowdark RPG
+SHADOWDARK.migration.completed_schema: 完成套用 Shadowdark RPG 結構 v{version} 的更新
+SHADOWDARK.module_art_config.portraits: 頭像
+SHADOWDARK.module_art_config.tokens: 代幣
+SHADOWDARK.notify.combat.clockwise_initiative_only_gm: 當啟用順時針先攻時，僅遊戲主持人可擲先攻骰。
+SHADOWDARK.npc_attack.type.physical: 物理
+SHADOWDARK.npc_attack.type.special: 特殊
+SHADOWDARK.npc_move.close: 近距離
+SHADOWDARK.npc_move.double_near: 雙倍中距離
+SHADOWDARK.npc_move.far: 遠距離
+SHADOWDARK.npc_move.near: 中距離
+SHADOWDARK.npc_move.none: 無
+SHADOWDARK.npc_move.special: 特殊
+SHADOWDARK.npc_move.triple_near: 三倍中距離
+SHADOWDARK.patron.boons_table.label: 契約主恩賜表
+SHADOWDARK.property.type.option.armor: 護甲
+SHADOWDARK.property.type.option.weapon: 武器
+SHADOWDARK.property.type.title: 特性類型
+SHADOWDARK.range.close_short: 近
+SHADOWDARK.range.close: 近距離
+SHADOWDARK.range.double_near: 雙倍中距離
+SHADOWDARK.range.far_short: 遠
+SHADOWDARK.range.far: 遠距離
+SHADOWDARK.range.near_short: "中"
+SHADOWDARK.range.near: 中距離
+SHADOWDARK.range.nearLine_short: 中直線
+SHADOWDARK.range.nearLine: 中距離直線
+SHADOWDARK.range.oneMile_short: 1哩
+SHADOWDARK.range.oneMile: 1哩
+SHADOWDARK.range.samePlane_short: 同位面
+SHADOWDARK.range.samePlane: 在同位面
+SHADOWDARK.range.self_short: 自
+SHADOWDARK.range.self: 自身
+SHADOWDARK.range.touch_short: 觸
+SHADOWDARK.range.touch: 接觸
+SHADOWDARK.range.unlimited_short: 不限
+SHADOWDARK.range.unlimited: 無限制
+SHADOWDARK.roll.advantage_title: "{title}帶優勢"
+SHADOWDARK.roll.advantage: 優勢
+SHADOWDARK.roll.critical.failure: 大失敗！({value})
+SHADOWDARK.roll.critical.success: 大成功！({value})
+SHADOWDARK.roll.D20: 骰 D20
+SHADOWDARK.roll.damage: 傷害骰
+SHADOWDARK.roll.disadvantage_title: "{title}帶劣勢"
+SHADOWDARK.roll.disadvantage: 劣勢
+SHADOWDARK.roll.failure: 失敗！({value})
+SHADOWDARK.roll.normal: 標準
+SHADOWDARK.roll.one_handed_damage: 單手傷害
+SHADOWDARK.roll.spell_casting_check: 施法檢定
+SHADOWDARK.roll.success: 成功！({value})
+SHADOWDARK.roll.two_handed_damage: 雙手傷害
+SHADOWDARK.settings.consume_ammunition.hint: 攻擊擲骰時，自動調整需消耗彈藥的武器所用彈藥
+SHADOWDARK.settings.consume_ammunition.name: 自動消耗彈藥
+SHADOWDARK.settings.debugEnabled.hint: 啟用或停用額外的除錯紀錄
+SHADOWDARK.settings.debugEnabled.name: 啟用/停用除錯
+SHADOWDARK.settings.effect_panel.show_passive.hint: 若勾選，效果面板也會顯示來自天賦與物品的作用中效果
+SHADOWDARK.settings.effect_panel.show_passive.name: 顯示所有作用中效果
+SHADOWDARK.settings.enable_targeting.hint: 根據目標的 防禦等級 自動判定攻擊是否命中
+SHADOWDARK.settings.enable_targeting.name: 啟用攻擊鎖定
+SHADOWDARK.settings.migrateSystemCompendiums.hint: 對內建的 Shadowdark RPG 系統資料庫進行資料轉移（請勿變更，除非您清楚自己在做什麼）
+SHADOWDARK.settings.migrateSystemCompendiums.name: 系統資料庫轉移
+SHADOWDARK.settings.module_art.hint: 設定要使用哪個模組提供的圖像資源
+SHADOWDARK.settings.module_art.label: 設定圖像資源
+SHADOWDARK.settings.module_art.name: 模組提供的圖像資源
+SHADOWDARK.settings.module_art.save: 儲存變更
+SHADOWDARK.settings.roll_npc_hp.hint: 當 NPC 加入場景時自動擲其生命值
+SHADOWDARK.settings.roll_npc_hp.name: 自動擲出 NPC 生命值
+SHADOWDARK.settings.schemaVersion.hint: 記錄 Shadowdark RPG 系統資料的當前資料結構版本（請勿變更，除非您清楚自己在做什麼）
+SHADOWDARK.settings.schemaVersion.name: 資料結構版本
+SHADOWDARK.settings.source_filter.all_used: 目前允許所有資料來源
+SHADOWDARK.settings.source_filter.button_label: 設定資料來源篩選器
+SHADOWDARK.settings.source_filter.hint: 若有設定，僅限此清單中所列之書籍來源可供選擇。未設定資料來源的項目將始終可用
+SHADOWDARK.settings.source_filter.name: 資料來源篩選器
+SHADOWDARK.settings.source_filter.prompt: 選擇資料來源……
+SHADOWDARK.settings.source_filter.save_button: 儲存設定
+SHADOWDARK.settings.source_filter.these_used: 僅允許下列資料來源
+SHADOWDARK.settings.source_filter.title: 書籍來源篩選
+SHADOWDARK.settings.systemVersion.hint: 記錄 Shadowdark RPG 系統的目前版本號碼（請勿變更，除非您清楚自己在做什麼
+SHADOWDARK.settings.systemVersion.name: 系統版本
+SHADOWDARK.settings.track_light_sources.hint: 勾選後，系統將追蹤並更新所有啟用中光源的剩餘時間
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: 若勾選，將追蹤屬於非活躍（未登入）使用者的光源
+SHADOWDARK.settings.track_light_sources.inactive_user.name: 追蹤非活躍使用者的光源
+SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率（秒為單位）
+SHADOWDARK.settings.track_light_sources.interval.name: 光源追蹤間隔
+SHADOWDARK.settings.track_light_sources.name: 追蹤光源
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）
+SHADOWDARK.settings.track_light_sources.open_on_start.name: 啟動時開啟光源追蹤介面
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停
+SHADOWDARK.settings.track_light_sources.pause_with_game.name: 暫停光源追蹤
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 若勾選，光源追蹤將依照真實時間進行。若使用外部時間或日曆模組，請停用此選項。
+SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 即時光源追蹤
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: 控制玩家是否能看見光源的剩餘時間
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "顯示玩家的光源剩餘時間"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: 無
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: 僅顯示點數
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: 顯示點數與剩餘分鐘數
+SHADOWDARK.settings.use_clockwise_initiative.hint: "若勾選，擲出最高先攻的角色將優先行動，其他角色依固定順序依序行動。  \n所有 NPC 將被歸為同一組並排在先攻順序中。"
+SHADOWDARK.settings.use_clockwise_initiative.name: 使用順時針先攻順序
+SHADOWDARK.settings.use_pulp_mode.hint: 將幸運標記顯示為數值而非勾選框
+SHADOWDARK.settings.use_pulp_mode.name: 啟用英雄冒險模式
+SHADOWDARK.sheet.abilities.label: 技能
+SHADOWDARK.sheet.abilities.modifiers: 修正值
+SHADOWDARK.sheet.abilities.stats: 屬性統計
+SHADOWDARK.sheet.abilities.ungrouped.label: 其他
+SHADOWDARK.sheet.abilities.uses.decrement.tooltip: 減少可用次數
+SHADOWDARK.sheet.abilities.uses.increment.tooltip: 增加可用次數
+SHADOWDARK.sheet.actor.ac: 防禦等級
+SHADOWDARK.sheet.actor.alignment: 陣營
+SHADOWDARK.sheet.actor.character_notes: 角色筆記
+SHADOWDARK.sheet.actor.hp_max: 最大值
+SHADOWDARK.sheet.actor.hp: 生命值
+SHADOWDARK.sheet.actor.level: 等級
+SHADOWDARK.sheet.actor.placeholder.name: 新角色名稱
+SHADOWDARK.sheet.class.item: Shadowdark 物品表
+SHADOWDARK.sheet.class.npc: Shadowdark NPC表
+SHADOWDARK.sheet.class.player: Shadowdark 玩家角色表
+SHADOWDARK.sheet.general.active_effects.create_effect.title: 建立效果
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: 刪除效果
+SHADOWDARK.sheet.general.active_effects.duration.title: 持續時間
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: 編輯效果
+SHADOWDARK.sheet.general.active_effects.source.title: 來源
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: 切換效果
+SHADOWDARK.sheet.general.add: 新增
+SHADOWDARK.sheet.general.effects_and_conditions.title: 效果與狀態
+SHADOWDARK.sheet.general.item_create.tooltip: 建立 {type} 物品
+SHADOWDARK.sheet.general.item_delete.title: 刪除物品
+SHADOWDARK.sheet.general.item_edit.title: 編輯物品
+SHADOWDARK.sheet.general.roll_hp: 骰生命值
+SHADOWDARK.sheet.general.section.toggle_hide: 點擊以隱藏區塊
+SHADOWDARK.sheet.general.section.toggle_show: 點擊以顯示區塊
+SHADOWDARK.sheet.item.tab.description: 描述
+SHADOWDARK.sheet.item.tab.details: 詳細
+SHADOWDARK.sheet.item.tab.effects: 效果
+SHADOWDARK.sheet.item.tab.light: 光源
+SHADOWDARK.sheet.item.tab.magic: 魔法
+SHADOWDARK.sheet.item.tab.source: 來源
+SHADOWDARK.sheet.item.tab.spellsknown: 已知法術
+SHADOWDARK.sheet.item.tab.titles: 頭銜
+SHADOWDARK.sheet.npc.attacks_label: 攻擊
+SHADOWDARK.sheet.npc.dark_adapted: 黑暗適性
+SHADOWDARK.sheet.npc.description_label: 描述
+SHADOWDARK.sheet.npc.features_label: 特性
+SHADOWDARK.sheet.npc.movement_short: 移動
+SHADOWDARK.sheet.npc.movement: 移動
+SHADOWDARK.sheet.npc.specials_label: 特殊攻擊
+SHADOWDARK.sheet.npc.tab.abilities: 屬性
+SHADOWDARK.sheet.npc.tab.description: 描述
+SHADOWDARK.sheet.npc.tab.spells: 法術
+SHADOWDARK.sheet.player.active_effect_override: 此數值已被作用中效果修改，無法編輯。請停用該效果以進行編輯。
+SHADOWDARK.sheet.player.ancestry.label: 血統
+SHADOWDARK.sheet.player.ancestry.tooltip: 角色的文化與血緣傳承
+SHADOWDARK.sheet.player.available_spells: 可用法術
+SHADOWDARK.sheet.player.background.label: 背景
+SHADOWDARK.sheet.player.background.tooltip: 你的經歷與過往使你擅長執行與背景相關的任務。
+SHADOWDARK.sheet.player.boon.label: 恩賜
+SHADOWDARK.sheet.player.boons.blessings.label: 祝福
+SHADOWDARK.sheet.player.boons.label: 恩賜
+SHADOWDARK.sheet.player.boons.name: 恩賜名稱
+SHADOWDARK.sheet.player.boons.oaths.label: 誓約
+SHADOWDARK.sheet.player.boons.secrets.label: 秘密
+SHADOWDARK.sheet.player.class_spells: 職業法術
+SHADOWDARK.sheet.player.class.label: 職業
+SHADOWDARK.sheet.player.class.tooltip: 你的角色所屬職業
+SHADOWDARK.sheet.player.deity.label: 神祇
+SHADOWDARK.sheet.player.deity.tooltip: 角色與守序、混亂或中立平衡的宇宙力量之連結。
+SHADOWDARK.sheet.player.inventory.gear.label: 裝備
+SHADOWDARK.sheet.player.inventory.items.label: 物品
+SHADOWDARK.sheet.player.inventory.quantity_short.label: 數量
+SHADOWDARK.sheet.player.inventory.slots.label: 欄位
+SHADOWDARK.sheet.player.inventory.stashed_item.label: 庫存物品
+SHADOWDARK.sheet.player.inventory.treasure.label: 財寶
+SHADOWDARK.sheet.player.inventory.type.label: 類型
+SHADOWDARK.sheet.player.inventory.value.label: 價值
+SHADOWDARK.sheet.player.languages: 語言
+SHADOWDARK.sheet.player.luck: 幸運
+SHADOWDARK.sheet.player.melee_attacks: 近戰攻擊
+SHADOWDARK.sheet.player.name.label: 名稱
+SHADOWDARK.sheet.player.open_spellbook.tooltip: 開啟法術書
+SHADOWDARK.sheet.player.patron.tooltip: 你的契約主是你超自然力量的來源
+SHADOWDARK.sheet.player.ranged_attacks: 遠程攻擊
+SHADOWDARK.sheet.player.spells_from_items: 來自物品的法術
+SHADOWDARK.sheet.player.spells_tier: 階級
+SHADOWDARK.sheet.player.spells: 法術
+SHADOWDARK.sheet.player.tab.abilities: 屬性
+SHADOWDARK.sheet.player.tab.details: 詳細
+SHADOWDARK.sheet.player.tab.inventory: 背包
+SHADOWDARK.sheet.player.tab.notes: 筆記
+SHADOWDARK.sheet.player.tab.spells: 法術
+SHADOWDARK.sheet.player.tab.talents: 天賦
+SHADOWDARK.sheet.player.talents_level: 等級
+SHADOWDARK.sheet.player.talents_name: 名稱
+SHADOWDARK.sheet.player.talents: 天賦
+SHADOWDARK.sheet.player.title: 頭銜
+SHADOWDARK.sheet.player.toggle_ability_lost: 切換技能遺失
+SHADOWDARK.sheet.player.toggle_edit_hp: 切換編輯生命值
+SHADOWDARK.sheet.player.toggle_edit_stats: 切換編輯屬性統計
+SHADOWDARK.sheet.player.toggle_spell_lost: 切換法術遺失
+SHADOWDARK.sheet.player.tooltip.cast_spell: 施放法術
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: 專注於法術
+SHADOWDARK.sheet.player.tooltip.learn_spell: 學習法術
+SHADOWDARK.sheet.player.tooltip.use_class_ability: 使用職業能力
+SHADOWDARK.sheet.player.tooltip.use_potion: 使用藥水
+SHADOWDARK.sheet.player.tooltip.use_scroll: 使用卷軸
+SHADOWDARK.sheet.player.tooltip.use_wand: 使用魔障
+SHADOWDARK.sheet.player.xp: 經驗值
+SHADOWDARK.sheet.special_abilities.label: 特殊技能
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG：吟遊詩人、遊俠與狗頭人"
+SHADOWDARK.source.core-rules: "Shadowdark RPG：核心規則"
+SHADOWDARK.source.cursed-scroll-1: 詛咒卷軸第1卷：惡魔崇拜！
+SHADOWDARK.source.cursed-scroll-2: 詛咒卷軸第2卷：赤紅沙地
+SHADOWDARK.source.cursed-scroll-3: 詛咒卷軸第3卷：午夜陽光
+SHADOWDARK.source.cursed-scroll-4: 詛咒卷軸第4卷：暗夜之河
+SHADOWDARK.source.cursed-scroll-5: 詛咒卷軸第5卷：深淵居者
+SHADOWDARK.source.cursed-scroll-6: 詛咒卷軸第6卷：面具之城
+SHADOWDARK.source.quickstart: "Shadowdark RPG：快速入門套組"
+SHADOWDARK.spell_caster.priest: 牧師
+SHADOWDARK.spell_caster.wizard: 法師
+SHADOWDARK.spell_duration.days: 天數
+SHADOWDARK.spell_duration.focus: 專注
+SHADOWDARK.spell_duration.instant: 即時
+SHADOWDARK.spell_duration.permanent: 永久
+SHADOWDARK.spell_duration.real_time: 真實時間
+SHADOWDARK.spell_duration.rounds: 回合
+SHADOWDARK.spell_duration.turns: 輪
+SHADOWDARK.spell_range.close: 近距離
+SHADOWDARK.spell_range.far: 遠距離
+SHADOWDARK.spell_range.near: 中距離
+SHADOWDARK.spell.classes.label: 施法職業
+SHADOWDARK.spell.classes.prompt: 選擇職業……
+SHADOWDARK.talent.backstab: 背刺
+SHADOWDARK.talent.class.ancestry: 血統
+SHADOWDARK.talent.class.class: 職業
+SHADOWDARK.talent.class.level: 等級
+SHADOWDARK.talent.class.patronBoon: 契約主恩賜
+SHADOWDARK.talent.level_gained: 獲得等級
+SHADOWDARK.talent.type.ability_improvement: 屬性提升
+SHADOWDARK.talent.type.advantage.hp: 生命骰有優勢
+SHADOWDARK.talent.type.advantage.initiative: 先功骰有優勢
+SHADOWDARK.talent.type.advantage.spell: 施放法術時有優勢
+SHADOWDARK.talent.type.advantage.title: 優勢加值
+SHADOWDARK.talent.type.armor_bonus: 護甲防禦等級加值
+SHADOWDARK.talent.type.armor_mastery: 護甲精通
+SHADOWDARK.talent.type.backstab_die: 額外背刺骰
+SHADOWDARK.talent.type.bonus_caster_classes: 額外施法職業
+SHADOWDARK.talent.type.custom: 自訂天賦
+SHADOWDARK.talent.type.melee_attack_bonus: 近戰攻擊骰加值
+SHADOWDARK.talent.type.melee_damage_bonus: 近戰傷害骰加值
+SHADOWDARK.talent.type.ranged_attack_bonus: 遠程攻擊骰加值
+SHADOWDARK.talent.type.ranged_damage_bonus: 遠程傷害骰加值
+SHADOWDARK.talent.type.spell_bonus: 施法加值
+SHADOWDARK.talent.type.stoneSkinTalent: 石膚天賦
 SHADOWDARK.talent.type.title: Talent Type(s)
 SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
 SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
@@ -866,7 +866,7 @@ TYPES.Item.Armor: Armor
 TYPES.Item.Background: Background
 TYPES.Item.Basic: Basic
 TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Class Ability: 職業技能
 TYPES.Item.Class: Class
 TYPES.Item.Deity: Deity
 TYPES.Item.Effect: Effect
