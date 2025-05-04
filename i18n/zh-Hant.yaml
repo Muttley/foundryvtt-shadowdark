@@ -124,14 +124,14 @@ SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling 匯入工具
 SHADOWDARK.apps.shadowdarkling-importer.import_button: 匯入
 SHADOWDARK.apps.shadowdarkling-importer.import_button2: 部分匯入
 SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. 造訪 Shadowdarklings.net。
-SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 建立角色 ＞ 匯出 ＞ 複製 JSON 至剪貼簿
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 建立角色 ＞ 匯出 ＞ 複製 JSON 至剪貼簿。
 SHADOWDARK.apps.shadowdarkling-importer.instruction3: 在此貼上角色 JSON
 SHADOWDARK.apps.shadowdarkling-importer.title: 匯入 Shadowdarkling
 SHADOWDARK.apps.solodark.button1: 不太可能或完全不可能
-SHADOWDARK.apps.solodark.button2: 1/2機率
+SHADOWDARK.apps.solodark.button2: 一半機率
 SHADOWDARK.apps.solodark.button3: 可能或必然
 SHADOWDARK.apps.solodark.oracle: 神諭者
-SHADOWDARK.apps.solodark.phrasing: 請使用肯定句型來提出問題。例如，請勿問「這個房間裡沒有獸人嗎？」而應改問「這個房間裡有獸人嗎？」
+SHADOWDARK.apps.solodark.phrasing: 請使用肯定句型來提出問題。例如，請勿問 這個房間裡沒有獸人嗎？而應改問 這個房間裡有獸人嗎？
 SHADOWDARK.apps.solodark.question1: 你要問什麼？
 SHADOWDARK.apps.solodark.question2: '「是」的結果有多大的可能性？'
 SHADOWDARK.apps.solodark.roll_prompt: 擲骰提示
@@ -175,7 +175,7 @@ SHADOWDARK.chat.item_roll.title_vs: 用 {name} 對 {target} 進行攻擊擲骰
 SHADOWDARK.chat.item_roll.title: 用 {name} 進行攻擊擲骰
 SHADOWDARK.chat.item_roll.wand_mishap: 該魔杖破損並永久失效
 SHADOWDARK.chat.light_source.expired: "{name} 的 {lightSource} 已熄滅"
-SHADOWDARK.chat.light_source.remaining: 剩餘時間（分鐘）
+SHADOWDARK.chat.light_source.remaining: 剩餘分鐘
 SHADOWDARK.chat.light_source.seconds_remaining: 剩餘不到 1 分鐘
 SHADOWDARK.chat.light_source.source.all: 所有光源熄滅
 SHADOWDARK.chat.light_source.source.dropped: 被丟掉
@@ -217,7 +217,7 @@ SHADOWDARK.class-ability.maximum.label: 最大值
 SHADOWDARK.class-ability.options: 設定
 SHADOWDARK.class.armor.all.label: 所有護甲
 SHADOWDARK.class.armor.label: 護甲
-SHADOWDARK.class.armor.prompt: 選擇護甲
+SHADOWDARK.class.armor.prompt: 選擇護甲……
 SHADOWDARK.class.choice_count: 選擇次數
 SHADOWDARK.class.choice: 選擇
 SHADOWDARK.class.fighter: 戰士
@@ -226,7 +226,7 @@ SHADOWDARK.class.has_patron.count.label: 有契約主？
 SHADOWDARK.class.hit_points.label: 擲生命骰
 SHADOWDARK.class.language_choices.count.label: 選擇次數
 SHADOWDARK.class.language_choices.label: 語言選項
-SHADOWDARK.class.language_choices.prompt: 選擇語言......
+SHADOWDARK.class.language_choices.prompt: 選擇語言……
 SHADOWDARK.class.languages.label: 職業語言
 SHADOWDARK.class.priest: 牧師
 SHADOWDARK.class.ranger: 遊俠
@@ -237,10 +237,10 @@ SHADOWDARK.class.spells_Known.label: 各階法術已知列表
 SHADOWDARK.class.starting_boons.count.label: 起始恩賜
 SHADOWDARK.class.talent_choices.count.label: 選擇次數
 SHADOWDARK.class.talent_choices.label: 天賦選項
-SHADOWDARK.class.talent_choices.prompt: 選擇天賦......
+SHADOWDARK.class.talent_choices.prompt: 選擇天賦……
 SHADOWDARK.class.talents_table.label: 職業天賦隨機骰表
 SHADOWDARK.class.talents.label: 天賦
-SHADOWDARK.class.talents.prompt: 選擇天賦......
+SHADOWDARK.class.talents.prompt: 選擇天賦……
 SHADOWDARK.class.thief: 盜賊
 SHADOWDARK.class.titles.levels.from.label: 從
 SHADOWDARK.class.titles.levels.label: 等級
@@ -249,7 +249,7 @@ SHADOWDARK.class.weapons.all_melee.label: 所有近戰武器
 SHADOWDARK.class.weapons.all_ranged.label: 所有遠程武器
 SHADOWDARK.class.weapons.all.label: 所有武器
 SHADOWDARK.class.weapons.label: 武器
-SHADOWDARK.class.weapons.prompt: 選擇武器......
+SHADOWDARK.class.weapons.prompt: 選擇武器……
 SHADOWDARK.class.wizard: 法師
 SHADOWDARK.coins.cp: 銅幣
 SHADOWDARK.coins.gp: 金幣
@@ -287,7 +287,7 @@ SHADOWDARK.dialog.hp_roll.per_level: 為第 {level} 等骰生命值
 SHADOWDARK.dialog.hp_roll.previous_hp: "擲骰前生命值：{hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: 第 1 等骰到 {hp} 點生命值（含體質加值）
 SHADOWDARK.dialog.hp_roll.roll_per_level: 為第 {level} 等骰到 {hp} 點生命值
-SHADOWDARK.dialog.hp_roll.sum_total: 新的生命值上限為 {total} 
+SHADOWDARK.dialog.hp_roll.sum_total: 新的生命值上限為 {total}
 SHADOWDARK.dialog.hp_roll.summary: 生命骰總結
 SHADOWDARK.dialog.hp_roll.title: 生命骰
 SHADOWDARK.dialog.item_roll.ability_bonus: 屬性加值
@@ -297,7 +297,7 @@ SHADOWDARK.dialog.item_roll.title: 擲攻擊骰用
 SHADOWDARK.dialog.item_selector.default_title: 選擇物品
 SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: 此類物品最多只能選擇 {maxChoices} 個。
 SHADOWDARK.dialog.item_selector.error.no_items_found: 無法在可用的資料冊中找到正確類型的物品。
-SHADOWDARK.dialog.item_selector.select_item.prompt: 選擇物品......
+SHADOWDARK.dialog.item_selector.select_item.prompt: 選擇物品……
 SHADOWDARK.dialog.item.confirm_delete: 確認刪除
 SHADOWDARK.dialog.item.confirm_sale: 確認出售
 SHADOWDARK.dialog.item.create_from_spell: 從 {spellName} 創建物品
@@ -310,26 +310,26 @@ SHADOWDARK.dialog.roll_mode_label: 擲骰模式
 SHADOWDARK.dialog.roll: 擲骰
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "警告：此法術不屬於該角色的職業，確定要嘗試學習嗎？"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: 確認學習法術
-SHADOWDARK.dialog.select_ancestry.prompt: 選擇血統......
+SHADOWDARK.dialog.select_ancestry.prompt: 選擇血統……
 SHADOWDARK.dialog.select_ancestry.title: 選擇血統
-SHADOWDARK.dialog.select_armor_property.prompt: 選擇護甲特性......
+SHADOWDARK.dialog.select_armor_property.prompt: 選擇護甲特性……
 SHADOWDARK.dialog.select_armor_property.title: 選擇護甲特性
-SHADOWDARK.dialog.select_background.prompt: 選擇背景......
+SHADOWDARK.dialog.select_background.prompt: 選擇背景……
 SHADOWDARK.dialog.select_background.title: 選擇背景
-SHADOWDARK.dialog.select_class.prompt: 選擇職業......
+SHADOWDARK.dialog.select_class.prompt: 選擇職業……
 SHADOWDARK.dialog.select_class.title: 選擇職業
-SHADOWDARK.dialog.select_deity.prompt: 選擇神祉......
+SHADOWDARK.dialog.select_deity.prompt: 選擇神祉……
 SHADOWDARK.dialog.select_deity.title: 選擇神祉
-SHADOWDARK.dialog.select_languages.prompt: 選擇語言......
+SHADOWDARK.dialog.select_languages.prompt: 選擇語言……
 SHADOWDARK.dialog.select_languages.title: 選擇語言
 SHADOWDARK.dialog.select_patron.title: 選擇契約主
-SHADOWDARK.dialog.select_weapon_property.prompt: 選擇武器特性......
+SHADOWDARK.dialog.select_weapon_property.prompt: 選擇武器特性……
 SHADOWDARK.dialog.select_weapon_property.title: 選擇武器特性
 SHADOWDARK.dialog.spell_roll.title: 施法法術使用
 SHADOWDARK.dialog.spellbook.open_which_class.title: 選擇可用的法術書
 SHADOWDARK.dialog.submit: 提交
 SHADOWDARK.dialog.tooltip.talent_advantage: 一個天賦讓你此擲骰獲得優勢
-SHADOWDARK.dialog.type_here: 再此輸入......
+SHADOWDARK.dialog.type_here: 再此輸入……
 SHADOWDARK.dragdrop: 拖曳至此處
 SHADOWDARK.effect_duration.hours: 小時
 SHADOWDARK.effect_duration.minutes: 分鐘
@@ -359,7 +359,7 @@ SHADOWDARK.error.general.gm_required: 你必須擁有遊戲主持人身分才能
 SHADOWDARK.error.general.no_character_class: 尚未選擇角色職業
 SHADOWDARK.error.general.no_character_selected: 尚未選擇角色
 SHADOWDARK.error.patron.no_supported_class: 目前的職業不允許加入契約主
-SHADOWDARK.error.source.source_missing: 來源遺失或不明......
+SHADOWDARK.error.source.source_missing: 來源遺失或不明……
 SHADOWDARK.error.spells.unable_to_cast_spell: 你無法施放該職業的法術
 SHADOWDARK.error.spells.unable_to_use_item: 你無法使用魔法物品
 SHADOWDARK.error.too_many_tokens_selected: 選取的角色代幣數量過多
@@ -471,7 +471,7 @@ SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 石膚天賦
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: 未穿甲時的防禦等級加值
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 武器攻擊擲骰加值
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 武器傷害加值
-SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: 武器傷害骰為 D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: 武器傷害骰 D12
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: 根據特性提升武器傷害骰
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: 根據特性增加額外傷害骰
 SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: 根據特性提升額外傷害骰
@@ -496,7 +496,7 @@ SHADOWDARK.item.light.longevity: 持續時間（分鐘）
 SHADOWDARK.item.light.remaining: 剩餘時間（分鐘）
 SHADOWDARK.item.light.template: 光源模板
 SHADOWDARK.item.magic_item.is_magic: 魔法物品
-SHADOWDARK.item.magic_item.title: 魔法物品效果
+SHADOWDARK.item.magic_item.title: 魔法物品效果（複數）
 SHADOWDARK.item.magic_item.type.attackBonus: 攻擊加值
 SHADOWDARK.item.magic_item.type.criticalFailureThreshold: 大失敗門檻提高
 SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: 大成功門檻降低
@@ -591,8 +591,8 @@ SHADOWDARK.light-tracker.paused: 已暫停
 SHADOWDARK.light-tracker.status.label: 狀態
 SHADOWDARK.light-tracker.title: 光源追蹤器
 SHADOWDARK.light-tracker.user_warning: 一位或多位使用者尚未選擇角色
-SHADOWDARK.macro.error.caught_error: "巨集執行失敗，錯誤如下：{error}"
-SHADOWDARK.macro.error.gm_role_required: 巨集需擁有 '遊戲主持人' 角色權限
+SHADOWDARK.macro.error.caught_error: "'{macro}' 巨集執行失敗，錯誤如下：{error}"
+SHADOWDARK.macro.error.gm_role_required: '''{macro}'' 巨集需擁有 ''遊戲主持人'' 角色權限'
 SHADOWDARK.macro.success: '''{macro}'' 巨集執行成功'
 SHADOWDARK.macro.warn.create_item_requires_ownership: 僅可為所擁有的物品建立巨集按鈕
 SHADOWDARK.migration.begin_migration: 正在為 Shadowdark RPG 執行資料升級
@@ -668,32 +668,32 @@ SHADOWDARK.settings.schemaVersion.hint: 記錄 Shadowdark RPG 系統資料的當
 SHADOWDARK.settings.schemaVersion.name: 資料結構版本
 SHADOWDARK.settings.source_filter.all_used: 目前允許所有資料來源
 SHADOWDARK.settings.source_filter.button_label: 設定資料來源篩選器
-SHADOWDARK.settings.source_filter.hint: 若有設定，僅限此清單中所列之書籍來源可供選擇。未設定資料來源的項目將始終可用
+SHADOWDARK.settings.source_filter.hint: 若有設定，僅限此清單中所列之書籍來源可供選擇。未設定資料來源的項目將始終可用。
 SHADOWDARK.settings.source_filter.name: 資料來源篩選器
 SHADOWDARK.settings.source_filter.prompt: 選擇資料來源……
 SHADOWDARK.settings.source_filter.save_button: 儲存設定
 SHADOWDARK.settings.source_filter.these_used: 僅允許下列資料來源
 SHADOWDARK.settings.source_filter.title: 書籍來源篩選
-SHADOWDARK.settings.systemVersion.hint: 記錄 Shadowdark RPG 系統的目前版本號碼（請勿變更，除非您清楚自己在做什麼
+SHADOWDARK.settings.systemVersion.hint: 記錄 Shadowdark RPG 系統的目前版本號碼（請勿變更，除非您清楚自己在做什麼)
 SHADOWDARK.settings.systemVersion.name: 系統版本
-SHADOWDARK.settings.track_light_sources.hint: 勾選後，系統將追蹤並更新所有啟用中光源的剩餘時間
+SHADOWDARK.settings.track_light_sources.hint: 勾選後，系統將追蹤並更新所有啟用中光源的剩餘時間。
 SHADOWDARK.settings.track_light_sources.inactive_user.hint: 若勾選，將追蹤屬於非活躍（未登入）使用者的光源
 SHADOWDARK.settings.track_light_sources.inactive_user.name: 追蹤非活躍使用者的光源
-SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率（秒為單位）
+SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率，單位為秒。
 SHADOWDARK.settings.track_light_sources.interval.name: 光源追蹤間隔
 SHADOWDARK.settings.track_light_sources.name: 追蹤光源
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）。
 SHADOWDARK.settings.track_light_sources.open_on_start.name: 啟動時開啟光源追蹤介面
-SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停。
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 暫停光源追蹤
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 若勾選，光源追蹤將依照真實時間進行。若使用外部時間或日曆模組，請停用此選項。
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 即時光源追蹤
-SHADOWDARK.settings.track_light_sources.show_remaining.hint: 控制玩家是否能看見光源的剩餘時間
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: 控制玩家是否能看見光源的剩餘時間。
 SHADOWDARK.settings.track_light_sources.show_remaining.name: "顯示玩家的光源剩餘時間"
 SHADOWDARK.settings.track_light_sources.show_remaining.option0: 無
 SHADOWDARK.settings.track_light_sources.show_remaining.option1: 僅顯示點數
 SHADOWDARK.settings.track_light_sources.show_remaining.option2: 顯示點數與剩餘分鐘數
-SHADOWDARK.settings.use_clockwise_initiative.hint: "若勾選，擲出最高先攻的角色將優先行動，其他角色依固定順序依序行動。  \n所有 NPC 將被歸為同一組並排在先攻順序中。"
+SHADOWDARK.settings.use_clockwise_initiative.hint: 若勾選，擲出最高先攻的角色將優先行動，其他角色依固定順序依序行動。所有 NPC 將被歸為同一組並排在先攻順序中。
 SHADOWDARK.settings.use_clockwise_initiative.name: 使用順時針先攻順序
 SHADOWDARK.settings.use_pulp_mode.hint: 將幸運標記顯示為數值而非勾選框
 SHADOWDARK.settings.use_pulp_mode.name: 啟用英雄冒險模式
@@ -848,39 +848,39 @@ SHADOWDARK.talent.type.ranged_attack_bonus: 遠程攻擊骰加值
 SHADOWDARK.talent.type.ranged_damage_bonus: 遠程傷害骰加值
 SHADOWDARK.talent.type.spell_bonus: 施法加值
 SHADOWDARK.talent.type.stoneSkinTalent: 石膚天賦
-SHADOWDARK.talent.type.title: Talent Type(s)
-SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
-SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
-SHADOWDARK.weapon.properties.finesse: Finesse
-SHADOWDARK.weapon.properties.loading: Loading
-SHADOWDARK.weapon.properties.thrown: Thrown
-SHADOWDARK.weapon.properties.two_handed: Two-Handed
-SHADOWDARK.weapon.properties.versatile: Versatile
-SHADOWDARK.weapon.type.melee: Melee
-SHADOWDARK.weapon.type.ranged: Ranged
-TYPES.Actor.Light: Light
+SHADOWDARK.talent.type.title: 天賦類型(複數)
+SHADOWDARK.talent.type.weapon_mastery: 武器專精
+SHADOWDARK.tours.lightsource.notification.not_enabled: 你需要在設定中啟用光源追蹤器
+SHADOWDARK.weapon.properties.finesse: 靈巧
+SHADOWDARK.weapon.properties.loading: 裝填
+SHADOWDARK.weapon.properties.thrown: 投擲
+SHADOWDARK.weapon.properties.two_handed: 雙手
+SHADOWDARK.weapon.properties.versatile: 可雙手
+SHADOWDARK.weapon.type.melee: 近戰
+SHADOWDARK.weapon.type.ranged: 遠程
+TYPES.Actor.Light: 光源
 TYPES.Actor.NPC: NPC
-TYPES.Actor.Player: Player
-TYPES.Item.Ancestry: Ancestry
-TYPES.Item.Armor: Armor
-TYPES.Item.Background: Background
-TYPES.Item.Basic: Basic
-TYPES.Item.Boon: Boon
+TYPES.Actor.Player: 玩家
+TYPES.Item.Ancestry: 血統
+TYPES.Item.Armor: 護甲
+TYPES.Item.Background: 背景
+TYPES.Item.Basic: 基礎
+TYPES.Item.Boon: 恩賜
 TYPES.Item.Class Ability: 職業技能
-TYPES.Item.Class: Class
-TYPES.Item.Deity: Deity
-TYPES.Item.Effect: Effect
-TYPES.Item.Gem: Gem
-TYPES.Item.Language: Language
-TYPES.Item.NPC Attack: NPC Attack
-TYPES.Item.NPC Feature: NPC Feature
-TYPES.Item.NPC Special Attack: NPC Special Attack
-TYPES.Item.NPC Spell: NPC Spell
-TYPES.Item.Patron: Patron
-TYPES.Item.Potion: Potion
-TYPES.Item.Property: Property
-TYPES.Item.Scroll: Scroll
-TYPES.Item.Spell: Spell
-TYPES.Item.Talent: Talent
-TYPES.Item.Wand: Wand
-TYPES.Item.Weapon: Weapon
+TYPES.Item.Class: 職業
+TYPES.Item.Deity: 神祇
+TYPES.Item.Effect: 效果
+TYPES.Item.Gem: 寶石
+TYPES.Item.Language: 語言
+TYPES.Item.NPC Attack: NPC攻擊
+TYPES.Item.NPC Feature: NPC特性
+TYPES.Item.NPC Special Attack: NPC特殊攻擊
+TYPES.Item.NPC Spell: NPC法術
+TYPES.Item.Patron: 契約主
+TYPES.Item.Potion: 藥水
+TYPES.Item.Property: 特性
+TYPES.Item.Scroll: 卷軸
+TYPES.Item.Spell: 法術
+TYPES.Item.Talent: 天賦
+TYPES.Item.Wand: 魔杖
+TYPES.Item.Weapon: 武器
