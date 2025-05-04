@@ -36,6 +36,11 @@
 	"esmodules": ["shadowdark-compiled.mjs"],
 	"languages": [
 		{
+			"lang": "zh-Hant",
+			"name": "正體字",
+			"path": "i18n/zh-Hant.json"
+		},
+		{
 			"lang": "de",
 			"name": "Deutsch",
 			"path": "i18n/de.json"

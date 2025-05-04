@@ -1,3 +1,10 @@
+# v3.4.5
+
+## Chores
+- [#] Chinese
+
+---
+
 # v3.4.4
 
 ## Bugfixes
