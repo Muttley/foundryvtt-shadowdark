@@ -3,6 +3,7 @@
 export const SDAppsButtons = {
 	attach: () => {
 		if (game.version < 13) {
+			// v12 method using JQuery
 			Hooks.on("renderSidebarTab", async function(app, html) {
 				if (app.options.classes.includes("actors-sidebar")) {
 
@@ -25,15 +26,14 @@ export const SDAppsButtons = {
 			});
 		}
 		else {
-			Hooks.on("renderSidebar", async function(app, html) {
-				const renderedHTML = $(
-					await renderTemplate(
-						"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
-					)
+			// v13 method without JQuery
+			Hooks.on("renderActorDirectory", async function(app, html) {
+				const renderedHTML = await foundry.applications.handlebars.renderTemplate(
+					"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
 				);
 
 				const footer = html.querySelector("#actors .directory-footer");
-				await footer.append(renderedHTML[0]);
+				await footer.insertAdjacentHTML("beforeend", renderedHTML);
 
 				footer.querySelector(".character-generator-button").addEventListener("click", () => {
 					new shadowdark.apps.CharacterGeneratorSD().render(true);

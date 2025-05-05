@@ -5,12 +5,8 @@ import {
 
 export const ChatMessageHooks = {
 	attach: () => {
-		if (game.version < 13) {
-			Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
-		}
-		else {
-			Hooks.on("getChatMessageContextOptions", addChatMessageContextOptions);
-		}
+		Hooks.on("getChatLogEntryContext", addChatMessageContextOptions); // v12 only
+		Hooks.on("getChatMessageContextOptions", addChatMessageContextOptions); // v13 only
 		Hooks.on("renderChatMessage", (app, html, data) => onRenderChatMessage(app, html, data));
 	},
 };

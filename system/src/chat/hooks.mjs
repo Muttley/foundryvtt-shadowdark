@@ -255,7 +255,7 @@ function applyChatCardDamage(li, multiplier) {
 		roll = message.rolls[0];
 	}
 	else if (_chatMessageIsDamageCard(message)) {
-		roll = message?.flags.shadowdark.rolls.damage.roll;
+		roll = message?.flags?.shadowdark?.rolls?.damage?.roll;
 	}
 	else {
 		return;
@@ -284,7 +284,7 @@ function applyChatCardDamageSecondary(li, multiplier) {
 		return;
 	}
 
-	let roll = message?.flags.shadowdark.rolls.secondaryDamage.roll;
+	let roll = message?.flags?.shadowdark?.rolls?.secondaryDamage?.roll;
 
 	return Promise.all(canvas.tokens.controlled.map(t => {
 		const a = t.actor;
@@ -309,8 +309,8 @@ function _chatMessageIsBasicRoll(message) {
  * @returns
  */
 function _chatMessageIsDamageCard(message) {
-	return message?.flags.shadowdark.isRoll
-		&& (message?.flags.shadowdark.rolls?.damage);
+	return message?.flags?.shadowdark?.isRoll
+		&& (message?.flags?.shadowdark?.rolls?.damage);
 }
 
 /**
@@ -320,6 +320,6 @@ function _chatMessageIsDamageCard(message) {
  * @returns
  */
 function _chatMessageIsDamageCardSecondary(message) {
-	return message?.flags.shadowdark.isRoll
-		&& message?.flags.shadowdark.rolls?.secondaryDamage;
+	return message?.flags?.shadowdark?.isRoll
+		&& message?.flags?.shadowdark?.rolls?.secondaryDamage;
 }
