@@ -188,7 +188,7 @@ SHADOWDARK.chat.spell_focus_check: "專注檢定"
 SHADOWDARK.chat.spell_learn.failure: "{name} 無法從該卷軸中學到任何內容"
 SHADOWDARK.chat.spell_learn.success: "{name} 成功學會了 {spellName} 法術"
 SHADOWDARK.chat.spell_learn.title: 學習法術
-SHADOWDARK.chat.spell_roll.title: "{name}, 難度 {spellDC}"
+SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} 未能成功使用 {ability} 技能"
 SHADOWDARK.chat.use_ability.success: "{name} 成功使用了 {ability} 技能"
 SHADOWDARK.chat.use_ability.title: "使用技能"
@@ -208,7 +208,7 @@ SHADOWDARK.class-ability.ability.check: 屬性檢定
 SHADOWDARK.class-ability.ability.label: 屬性
 SHADOWDARK.class-ability.available.label: 可用的
 SHADOWDARK.class-ability.boons: 恩惠
-SHADOWDARK.class-ability.dc.label: 難度
+SHADOWDARK.class-ability.dc.label: DC
 SHADOWDARK.class-ability.group.label: 技能群組
 SHADOWDARK.class-ability.limited-uses.label: 使用次數限制？
 SHADOWDARK.class-ability.lose_on_failure.label: 失敗則喪失？
@@ -232,7 +232,7 @@ SHADOWDARK.class.priest: 牧師
 SHADOWDARK.class.ranger: 遊俠
 SHADOWDARK.class.spellcasting_ability.label: 施法技能
 SHADOWDARK.class.spellcasting_class.label: 法術職業
-SHADOWDARK.class.spellcasting.base_difficulty.label: 施法基本難度
+SHADOWDARK.class.spellcasting.base_difficulty.label: 施法基本DC
 SHADOWDARK.class.spells_Known.label: 各階法術已知列表
 SHADOWDARK.class.starting_boons.count.label: 起始恩賜
 SHADOWDARK.class.talent_choices.count.label: 選擇次數
@@ -414,7 +414,7 @@ SHADOWDARK.item_type.talent: 天賦
 SHADOWDARK.item_type.weapon: 武器
 SHADOWDARK.item.ammunition: 彈藥
 SHADOWDARK.item.armor_ac_modifier: 修正值
-SHADOWDARK.item.armor_ac: 防禦等級
+SHADOWDARK.item.armor_ac: AC
 SHADOWDARK.item.armor_bonus_attribute: 屬性加值
 SHADOWDARK.item.armor_class: 防禦等級
 SHADOWDARK.item.armor.armor_properties.label: 護甲特性
@@ -442,8 +442,8 @@ SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: 屬性值提升�
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: 屬性值提升（智）
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: 屬性值提升（力）
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: 屬性值提升（感）
-SHADOWDARK.item.effect.predefined_effect.acBonus: 防護等級加值
-SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: 來自屬性的防護等級加值
+SHADOWDARK.item.effect.predefined_effect.acBonus: AC加值
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: 來自屬性的AC加值
 SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: 額外裝備欄位
 SHADOWDARK.item.effect.predefined_effect.armorMastery: 護甲精通
 SHADOWDARK.item.effect.predefined_effect.backstabDie: 額外背刺骰
@@ -468,7 +468,7 @@ SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 施放法術時獲得�
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 施法檢定加值
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: 額外施法職業
 SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 石膚天賦
-SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: 未穿甲時的防禦等級加值
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: 未穿甲時的AC加值
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 武器攻擊擲骰加值
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 武器傷害加值
 SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: 武器傷害骰 D12
@@ -703,7 +703,7 @@ SHADOWDARK.sheet.abilities.stats: 屬性統計
 SHADOWDARK.sheet.abilities.ungrouped.label: 其他
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: 減少可用次數
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: 增加可用次數
-SHADOWDARK.sheet.actor.ac: 防禦等級
+SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: 陣營
 SHADOWDARK.sheet.actor.character_notes: 角色筆記
 SHADOWDARK.sheet.actor.hp_max: 最大值
@@ -837,7 +837,7 @@ SHADOWDARK.talent.type.advantage.hp: 生命骰有優勢
 SHADOWDARK.talent.type.advantage.initiative: 先功骰有優勢
 SHADOWDARK.talent.type.advantage.spell: 施放法術時有優勢
 SHADOWDARK.talent.type.advantage.title: 優勢加值
-SHADOWDARK.talent.type.armor_bonus: 護甲防禦等級加值
+SHADOWDARK.talent.type.armor_bonus: 護甲AC加值
 SHADOWDARK.talent.type.armor_mastery: 護甲精通
 SHADOWDARK.talent.type.backstab_die: 額外背刺骰
 SHADOWDARK.talent.type.bonus_caster_classes: 額外施法職業
