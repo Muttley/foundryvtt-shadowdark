@@ -1,7 +1,24 @@
-# v3.4.5
+# v3.4.6
+
+## Bugfixes
+- [#1080] Chinese i18n localisation lang setting misconfigured
 
 ## Chores
-- [#] Chinese
+- [#1079] Merge Finnish translation updates from Crowdin
+
+*Again, many thanks to **Han_G_FaYa** for assistance with the **Chinese, Traditional** translation config.*
+
+---
+
+# v3.4.5
+
+## Enhancements
+- [#1075] Added "Chinese, Traditional" as a fully translated system language
+
+## Chores
+- [#1073] Merge "Chinese, Traditional" translation updates from Crowdin
+
+*Many thanks to **Han_G_FaYa** for contributing **Chinese, Traditional** translation data.*
 
 ---
 
