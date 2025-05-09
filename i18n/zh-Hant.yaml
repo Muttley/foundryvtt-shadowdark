@@ -1,14 +1,14 @@
-SHADOWDARK.ability_cha: 魅
+SHADOWDARK.ability_cha: 魅力
 SHADOWDARK.ability_charisma: 魅力
-SHADOWDARK.ability_con: 體
+SHADOWDARK.ability_con: 體質
 SHADOWDARK.ability_constitution: 體質
-SHADOWDARK.ability_dex: 敏
+SHADOWDARK.ability_dex: 敏捷
 SHADOWDARK.ability_dexterity: 敏捷
-SHADOWDARK.ability_int: 智
+SHADOWDARK.ability_int: 智力
 SHADOWDARK.ability_intelligence: 智力
-SHADOWDARK.ability_str: 力
+SHADOWDARK.ability_str: 力量
 SHADOWDARK.ability_strength: 力量
-SHADOWDARK.ability_wis: 感
+SHADOWDARK.ability_wis: 感知
 SHADOWDARK.ability_wisdom: 感知
 SHADOWDARK.alignment.chaotic: 混亂
 SHADOWDARK.alignment.lawful: 守序
@@ -526,7 +526,7 @@ SHADOWDARK.item.spell_caster_classes: 可施法職業
 SHADOWDARK.item.spell_class: 法術類別
 SHADOWDARK.item.spell_duration: 持續時間
 SHADOWDARK.item.spell_name: 法術名稱
-SHADOWDARK.item.spell_range: 射程
+SHADOWDARK.item.spell_range: 距離
 SHADOWDARK.item.spell_tier: 階級
 SHADOWDARK.item.spell.label: 法術
 SHADOWDARK.item.stashed.label: 已庫存
@@ -573,9 +573,9 @@ SHADOWDARK.language.goblin: 哥布林語
 SHADOWDARK.language.merran: 梅蘭語
 SHADOWDARK.language.orcish: 獸人語
 SHADOWDARK.language.primordial: 原初語
-SHADOWDARK.language.rarity.common: 通用語
+SHADOWDARK.language.rarity.common: 常見
 SHADOWDARK.language.rarity.label: 稀有度
-SHADOWDARK.language.rarity.rare: 稀有
+SHADOWDARK.language.rarity.rare: 罕見
 SHADOWDARK.language.reptilian: 爬說語
 SHADOWDARK.language.sylvan: 林語
 SHADOWDARK.language.thanian: 塔尼亞語
@@ -797,10 +797,10 @@ SHADOWDARK.sheet.player.toggle_spell_lost: 切換法術遺失
 SHADOWDARK.sheet.player.tooltip.cast_spell: 施放法術
 SHADOWDARK.sheet.player.tooltip.focus_on_spell: 專注於法術
 SHADOWDARK.sheet.player.tooltip.learn_spell: 學習法術
-SHADOWDARK.sheet.player.tooltip.use_class_ability: 使用職業能力
+SHADOWDARK.sheet.player.tooltip.use_class_ability: 使用職業技能
 SHADOWDARK.sheet.player.tooltip.use_potion: 使用藥水
 SHADOWDARK.sheet.player.tooltip.use_scroll: 使用卷軸
-SHADOWDARK.sheet.player.tooltip.use_wand: 使用魔障
+SHADOWDARK.sheet.player.tooltip.use_wand: 使用魔杖
 SHADOWDARK.sheet.player.xp: 經驗值
 SHADOWDARK.sheet.special_abilities.label: 特殊技能
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG：吟遊詩人、遊俠與狗頭人"
