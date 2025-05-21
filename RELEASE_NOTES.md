@@ -5,6 +5,7 @@
 
 ## Bugfixes
 - [#1067] Fixed Will O Wisp attack
+- [#1070] Item importer fails for non-capitalized names
 - [#1085] Special ability won't deduced if roll dialog is cancelled
 - [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
 
