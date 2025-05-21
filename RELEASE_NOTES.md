@@ -4,6 +4,7 @@
 - [#1074] Basic support for Foundry v13 added
 
 ## Bugfixes
+- [#1067] Fixed Will O Wisp attack
 - [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
 
 ---
