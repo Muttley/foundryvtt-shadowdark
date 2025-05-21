@@ -1,3 +1,13 @@
+# v3.5.0
+
+## Enhancements
+- [#1074] Basic support for Foundry v13 added
+
+## Bugfixes
+- [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
+
+---
+
 # v3.4.6
 
 ## Bugfixes
