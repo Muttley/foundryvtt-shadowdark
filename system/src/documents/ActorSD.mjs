@@ -186,7 +186,20 @@ export default class ActorSD extends Actor {
 			prototypeToken.actorLink = true;
 		}
 
-		this.updateSource({prototypeToken});
+		const update = {prototypeToken};
+
+		if (!data.img) {
+			const image = CONFIG.SHADOWDARK.DEFAULTS.ACTOR_IMAGES[data.type];
+
+			if (image) {
+				update.img = image;
+				update.prototypeToken.texture = {
+					src: image,
+				};
+			}
+		}
+
+		this.updateSource(update);
 	}
 
 
