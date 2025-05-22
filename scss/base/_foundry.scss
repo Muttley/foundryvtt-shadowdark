@@ -17,7 +17,10 @@ $pause-w: 200px;
 	height: auto;
 	figcaption {
 		font-family: var(--font-header);
-		font-size: 50px;
+		font-size: 64px;
+		line-height: 0.5;
+		opacity: .6;
+		font-weight: normal;
 		text-transform: none;
 		color: #fff;
 	}
