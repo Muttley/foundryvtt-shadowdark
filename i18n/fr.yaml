@@ -395,14 +395,14 @@ SHADOWDARK.inventory.section.weapon: Armes
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Utilisé
 SHADOWDARK.inventory.slots: Emplacements
-SHADOWDARK.inventory.stashed_gear: Équipement Rangé
+SHADOWDARK.inventory.stashed_gear: Équipement stocké
 SHADOWDARK.inventory.tooltip.gem_bag: Ouvrir un sac de pierres précieuses
 SHADOWDARK.inventory.tooltip.item_decrement: Diminuer la Quantité
 SHADOWDARK.inventory.tooltip.item_increment: Augmenter la Quantité
 SHADOWDARK.inventory.tooltip.sell_treasure: Vendre un Trésor
 SHADOWDARK.inventory.tooltip.toggle_equipped: Afficher les Objets Équipés
 SHADOWDARK.inventory.tooltip.toggle_light_source: Activer/désactiver la Source de Lumière
-SHADOWDARK.inventory.tooltip.toggle_stashed: Basculer Rangé
+SHADOWDARK.inventory.tooltip.toggle_stashed: Basculer stocké
 SHADOWDARK.inventory.total_coins: Total de Pièces
 SHADOWDARK.inventory.total_gems: Total de pierres précieuses
 SHADOWDARK.item_type.armor: Armure
@@ -529,7 +529,7 @@ SHADOWDARK.item.spell_name: Nom du Sort
 SHADOWDARK.item.spell_range: Portée
 SHADOWDARK.item.spell_tier: Rang
 SHADOWDARK.item.spell.label: Sort
-SHADOWDARK.item.stashed.label: Rangé
+SHADOWDARK.item.stashed.label: Stocké
 SHADOWDARK.item.talent_class: Talent de classe
 SHADOWDARK.item.treasure_name: Nom du Trésor
 SHADOWDARK.item.treasure_value: Valeur du Trésor
@@ -766,7 +766,7 @@ SHADOWDARK.sheet.player.inventory.gear.label: Équipement
 SHADOWDARK.sheet.player.inventory.items.label: Objets
 SHADOWDARK.sheet.player.inventory.quantity_short.label: Qté
 SHADOWDARK.sheet.player.inventory.slots.label: Emplacements
-SHADOWDARK.sheet.player.inventory.stashed_item.label: Objet rangé
+SHADOWDARK.sheet.player.inventory.stashed_item.label: Objet stocké
 SHADOWDARK.sheet.player.inventory.treasure.label: Trésor
 SHADOWDARK.sheet.player.inventory.type.label: Type
 SHADOWDARK.sheet.player.inventory.value.label: Valeur

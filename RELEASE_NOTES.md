@@ -1,3 +1,22 @@
+# v3.5.0
+
+## Enhancements
+- [#1074] Basic support for Foundry v13 added
+- [#1093] preCreate of Actor should set custom token on creation if one not set in data
+
+## Bugfixes
+- [#1067] Fixed Will O Wisp attack
+- [#1070] Item importer fails for non-capitalized names
+- [#1085] Special ability won't deduced if roll dialog is cancelled
+- [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
+- [#1092] Spell import macro creates spell items with default Actor token as image
+- [#1094] Pause message font weight too bold in v13
+
+## Chores
+- [#1083] Merge Chinese,Traditional and French translation updates from Crowdin
+
+---
+
 # v3.4.6
 
 ## Bugfixes

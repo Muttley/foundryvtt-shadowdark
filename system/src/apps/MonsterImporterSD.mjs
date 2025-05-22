@@ -317,7 +317,7 @@ export default class MonsterImporterSD extends FormApplication {
 		// create the monster template
 		let actorObj = {
 			name: titleName,
-			img: "systems/shadowdark/assets/tokens/cowled_token.webp",
+			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
 			type: "NPC",
 			system: {
 				alignment: alignments[stats[11].toUpperCase()],

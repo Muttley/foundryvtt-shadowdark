@@ -61,7 +61,7 @@ export default class ItemImporterSD extends FormApplication {
 
 		// parse item text into 3 main parts:
 		const parsedText = itemText.match([
-			/([\sA-Z]+)/,			// parsedText[1] matches title
+			/(.*)\n/,			// parsedText[1] matches title
 			/([A-Z].*?[a-z]+?[\S\s]+?)/,	// parsedText[2] matches flavor text
 			/(Bonus\.[\S\s]*|Benefit\.[\S\s]*|Curse\.[\S\s]*|Personality\.[\S\s]*)/,
 			// parsedText[3] matches bonus, benefit, curse, and personality

@@ -54,6 +54,11 @@ SHADOWDARK.BOON_TYPES = {
 };
 
 SHADOWDARK.DEFAULTS = {
+	ACTOR_IMAGES: {
+		Light: "icons/sundries/lights/torch-purple.webp",
+		NPC: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
+		Player: "systems/shadowdark/assets/tokens/cowled_token_green.webp",
+	},
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
 	GEMS_PER_SLOT: 10,
