@@ -8,6 +8,7 @@
 	}
 
 	.SD-header {
+		flex: 0;
 		margin: 2px;
 		padding: 2px;
 		display: grid;
@@ -32,6 +33,7 @@
 
 	.SD-nav {
 		display: flex;
+		flex: 0;
 		justify-content: space-evenly;
 		align-items: baseline;
 		border-bottom: 2px solid #{$primary-color};

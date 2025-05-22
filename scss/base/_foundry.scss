@@ -13,9 +13,21 @@ $pause-w: 200px;
 	--fa-animation-duration: 30s;
 }
 
-#pause figcaption {
-	font-family: var(--font-header);
-	font-size: 3.5em;
+#pause {
+	height: auto;
+	figcaption {
+		font-family: var(--font-header);
+		font-size: 50px;
+		text-transform: none;
+		color: #fff;
+	}
+}
+
+.dice-roll .dice-total.success {
+    color: var(--color-level-success-border);
+}
+.dice-roll .dice-total.failure {
+    color: var(--color-level-error-border);
 }
 
 .editor {
