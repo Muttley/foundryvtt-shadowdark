@@ -5,7 +5,8 @@ import {
 
 export const ChatMessageHooks = {
 	attach: () => {
-		Hooks.on("getChatLogEntryContext", addChatMessageContextOptions);
+		Hooks.on("getChatLogEntryContext", addChatMessageContextOptions); // v12 only
+		Hooks.on("getChatMessageContextOptions", addChatMessageContextOptions); // v13 only
 		Hooks.on("renderChatMessage", (app, html, data) => onRenderChatMessage(app, html, data));
 	},
 };

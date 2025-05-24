@@ -186,7 +186,20 @@ export default class ActorSD extends Actor {
 			prototypeToken.actorLink = true;
 		}
 
-		this.updateSource({prototypeToken});
+		const update = {prototypeToken};
+
+		if (!data.img) {
+			const image = CONFIG.SHADOWDARK.DEFAULTS.ACTOR_IMAGES[data.type];
+
+			if (image) {
+				update.img = image;
+				update.prototypeToken.texture = {
+					src: image,
+				};
+			}
+		}
+
+		this.updateSource(update);
 	}
 
 
@@ -1490,7 +1503,28 @@ export default class ActorSD extends Actor {
 
 		if (item.type === "NPC Feature") return item.displayCard();
 
-		// If the ability has limited uses, handle that first
+		// does ability use on a roll check?
+		let success = true;
+		let rolled = false;
+		if (item.system.ability) {
+			rolled = true;
+			options = foundry.utils.mergeObject({target: item.system.dc}, options);
+			const result = await this.rollAbility(
+				item.system.ability,
+				options
+			);
+
+			// Abort if prompt is closed
+			if (!result) return;
+
+			success = result?.rolls?.main?.success ?? false;
+
+			if (!success && item.system.loseOnFailure) {
+				item.update({"system.lost": true});
+			}
+		}
+
+		// If the ability has limited uses, deduct
 		if (item.system.limitedUses) {
 			if (item.system.uses.available <= 0) {
 				return ui.notifications.error(
@@ -1515,24 +1549,6 @@ export default class ActorSD extends Actor {
 				relativeTo: this,
 			}
 		);
-
-		let success = true;
-		let rolled = false;
-		// does ability use on a roll check?
-		if (item.system.ability) {
-			rolled = true;
-			options = foundry.utils.mergeObject({target: item.system.dc}, options);
-			const result = await this.rollAbility(
-				item.system.ability,
-				options
-			);
-
-			success = result?.rolls?.main?.success ?? false;
-
-			if (!success && item.system.loseOnFailure) {
-				item.update({"system.lost": true});
-			}
-		}
 
 		return shadowdark.chat.renderUseAbilityMessage(this.actor, {
 			flavor: game.i18n.localize("SHADOWDARK.chat.use_ability.title"),

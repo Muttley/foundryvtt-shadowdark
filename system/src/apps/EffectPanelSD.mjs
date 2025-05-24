@@ -129,10 +129,10 @@ export default class EffectPanelSD extends Application {
 	 * @returns {string}
 	 */
 	getRightPx() {
-		return `${ui.sidebar.element.outerWidth()
-			+ ui.webrtc.element.outerWidth()
-			+ 18
-		}px`;
+		const sidebarElement = ui.sidebar.element instanceof jQuery
+			? ui.sidebar.element[0] : ui.sidebar.element;
+		const sidebarPosition = sidebarElement.getBoundingClientRect();
+		return `${window.innerWidth - sidebarPosition.left + 18}px`;
 	}
 
 	/**

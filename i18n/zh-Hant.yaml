@@ -1,0 +1,886 @@
+SHADOWDARK.ability_cha: 魅力
+SHADOWDARK.ability_charisma: 魅力
+SHADOWDARK.ability_con: 體質
+SHADOWDARK.ability_constitution: 體質
+SHADOWDARK.ability_dex: 敏捷
+SHADOWDARK.ability_dexterity: 敏捷
+SHADOWDARK.ability_int: 智力
+SHADOWDARK.ability_intelligence: 智力
+SHADOWDARK.ability_str: 力量
+SHADOWDARK.ability_strength: 力量
+SHADOWDARK.ability_wis: 感知
+SHADOWDARK.ability_wisdom: 感知
+SHADOWDARK.alignment.chaotic: 混亂
+SHADOWDARK.alignment.lawful: 守序
+SHADOWDARK.alignment.neutral: 中立
+SHADOWDARK.ancestry.choice_count: 選擇數量
+SHADOWDARK.ancestry.choice: 選擇
+SHADOWDARK.ancestry.fixed: 固定
+SHADOWDARK.ancestry.languages.label: 血統語言
+SHADOWDARK.ancestry.languages.prompt: 選擇語言……
+SHADOWDARK.ancestry.nametable.label: 隨機名稱表
+SHADOWDARK.ancestry.nametable.placeholder: 拖曳隨機骰表到此
+SHADOWDARK.ancestry.nametable.random_weight: 隨機權重
+SHADOWDARK.ancestry.nametable.tooltip.weight: 影響使用角色生成器時的機率，數值越高，機率越大，預設值為 1。
+SHADOWDARK.ancestry.talents.label: 血統天賦
+SHADOWDARK.ancestry.talents.prompt: 選擇天賦.……
+SHADOWDARK.app.active_effects.title: 主動效果
+SHADOWDARK.app.gem_bag.sell_all: 出售所有寶石
+SHADOWDARK.app.gem_bag.title: 寶石袋
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: 出售寶石
+SHADOWDARK.app.gem_bag.total_value: 總價
+SHADOWDARK.app.item_properties.armor.title: 護甲特性
+SHADOWDARK.app.item_properties.languages.title: 語言
+SHADOWDARK.app.item_properties.magic_item.effects.title: 魔法物品效果
+SHADOWDARK.app.item_properties.save: 儲存
+SHADOWDARK.app.item_properties.talent.effects.title: 天賦效果類型
+SHADOWDARK.app.item_properties.title: 特性
+SHADOWDARK.app.item_properties.weapon.title: 武器特性
+SHADOWDARK.app.light_tracker.minute_short: 分鐘
+SHADOWDARK.app.light_tracker.minutes_short: 分鐘
+SHADOWDARK.app.light_tracker.title: 光源追蹤器
+SHADOWDARK.app.light-tracker.douse-light: 熄滅光源
+SHADOWDARK.app.light-tracker.hide-inactive: 隱藏無光源角色
+SHADOWDARK.app.light-tracker.show-all-actors: 顯示全部角色
+SHADOWDARK.app.light-tracker.turn-out-the-lights: 關閉所有光源
+SHADOWDARK.app.loading.body: 正在搜尋遠方地區……
+SHADOWDARK.app.loading.title: 加載中
+SHADOWDARK.app.npc_attack_ranges.title: 攻擊距離
+SHADOWDARK.apps.character-generator.choose: 選擇
+SHADOWDARK.apps.character-generator.create_character: 創建角色
+SHADOWDARK.apps.character-generator.error.create: 創建玩家角色失敗 {error}
+SHADOWDARK.apps.character-generator.error.name: 角色名稱不能空白
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: 未選擇血統，無法擲出隨機名稱
+SHADOWDARK.apps.character-generator.gear: 裝備
+SHADOWDARK.apps.character-generator.gold: 金幣
+SHADOWDARK.apps.character-generator.name: 角色名稱
+SHADOWDARK.apps.character-generator.see_details: 查看詳細
+SHADOWDARK.apps.character-generator.sidebar_create: 創建
+SHADOWDARK.apps.character-generator.sidebar_import: 匯入
+SHADOWDARK.apps.character-generator.starting_gear: 起始裝備
+SHADOWDARK.apps.character-generator.success: 角色已創建
+SHADOWDARK.apps.character-generator.title: 角色生成器
+SHADOWDARK.apps.character-generator.tooltip: 完全隨機角色
+SHADOWDARK.apps.character-generator.type: 類型
+SHADOWDARK.apps.character-generator.update_character: 更新角色
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.content: 您確定要刪除{effectName}效果嗎？
+SHADOWDARK.apps.effect_panel.dialog.delete_effect.title: 刪除效果？
+SHADOWDARK.apps.effect_panel.duration_label.expired: 已過期
+SHADOWDARK.apps.effect_panel.duration_label.one_day: 剩餘 1 天
+SHADOWDARK.apps.effect_panel.duration_label.one_hour: 剩餘 1 小時
+SHADOWDARK.apps.effect_panel.duration_label.one_minute: 剩餘 1 分鐘
+SHADOWDARK.apps.effect_panel.duration_label.one_round: 剩餘 1 回合
+SHADOWDARK.apps.effect_panel.duration_label.one_second: 剩餘 1 秒
+SHADOWDARK.apps.effect_panel.duration_label.one_week: 剩餘 1 週
+SHADOWDARK.apps.effect_panel.duration_label.one_year: 剩餘 1 年
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: 無限持續時間
+SHADOWDARK.apps.effect_panel.duration_label.x_days: "剩餘 {days} 天"
+SHADOWDARK.apps.effect_panel.duration_label.x_hours: "剩餘 {hours} 小時"
+SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "剩餘 {minutes} 分鐘"
+SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "剩餘 {rounds} 回合"
+SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "剩餘 {seconds} 秒"
+SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "剩餘 {weeks} 週"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "剩餘 {years} 年"
+SHADOWDARK.apps.effect_panel.right_click_to_remove: "[點擊右鍵] 移除效果"
+SHADOWDARK.apps.item-importer.import_button: 匯入物品
+SHADOWDARK.apps.item-importer.instruction1: 1. 從原始資料中複製物品文字。
+SHADOWDARK.apps.item-importer.instruction2a: 2. 將文字貼上至此欄，並依照核心規則顯示的物品格式進行。
+SHADOWDARK.apps.item-importer.instruction2b: 物品名稱
+SHADOWDARK.apps.item-importer.instruction2c: 敘事性描述
+SHADOWDARK.apps.item-importer.instruction2d: 特性
+SHADOWDARK.apps.item-importer.instruction3: 3. 點擊匯入物品。
+SHADOWDARK.apps.item-importer.title: 匯入物品
+SHADOWDARK.apps.level-up.dragdrop: 拖放到此處
+SHADOWDARK.apps.level-up.errors.missing_boon_table: 無法擲出契約主恩賜，因為所設定的隨機骰表無法載入
+SHADOWDARK.apps.level-up.hit_points: 生命值
+SHADOWDARK.apps.level-up.level_up: 升級！
+SHADOWDARK.apps.level-up.leveling_to: 升級到等級
+SHADOWDARK.apps.level-up.missing_selections: 尚有未選項目
+SHADOWDARK.apps.level-up.notalent: 此等級未獲得天賦
+SHADOWDARK.apps.level-up.or_boons: 或恩賜
+SHADOWDARK.apps.level-up.prompt: 尚有必要選項未完成。仍要繼續升級嗎？
+SHADOWDARK.apps.level-up.roll_boon: 擲恩賜
+SHADOWDARK.apps.level-up.roll_talent: 骰天賦
+SHADOWDARK.apps.level-up.title: 升級
+SHADOWDARK.apps.monster-importer.import_button: 匯入怪物
+SHADOWDARK.apps.monster-importer.instruction1: 1. 從原始資料中複製怪物的文字內容。
+SHADOWDARK.apps.monster-importer.instruction2a: 2. 依照核心規則所示的怪物格式，將文字貼到文字框中。每個能力之間加入一行空白行上下隔開。
+SHADOWDARK.apps.monster-importer.instruction2b: 怪物名稱
+SHADOWDARK.apps.monster-importer.instruction2c: 敘事性描述
+SHADOWDARK.apps.monster-importer.instruction2d: 主要屬性欄s
+SHADOWDARK.apps.monster-importer.instruction2e: 特性
+SHADOWDARK.apps.monster-importer.instruction3: 3. 點擊匯入怪物。
+SHADOWDARK.apps.monster-importer.title: 匯入怪物
+SHADOWDARK.apps.request-check.copied: 已複製到剪貼簿
+SHADOWDARK.apps.request-check.copy_to_clipboard: 複製到剪貼簿
+SHADOWDARK.apps.request-check.custom: 自定義
+SHADOWDARK.apps.request-check.easy: 簡單
+SHADOWDARK.apps.request-check.extreme: 極難
+SHADOWDARK.apps.request-check.hard: 困難
+SHADOWDARK.apps.request-check.normal: 普通
+SHADOWDARK.apps.request-check.title: 要求檢定
+SHADOWDARK.apps.shadowdarkling-importer.errors: 未找到項目
+SHADOWDARK.apps.shadowdarkling-importer.header: Shadowdarkling 匯入工具
+SHADOWDARK.apps.shadowdarkling-importer.import_button: 匯入
+SHADOWDARK.apps.shadowdarkling-importer.import_button2: 部分匯入
+SHADOWDARK.apps.shadowdarkling-importer.instruction1: 1. 造訪 Shadowdarklings.net。
+SHADOWDARK.apps.shadowdarkling-importer.instruction2: 2. 建立角色 ＞ 匯出 ＞ 複製 JSON 至剪貼簿。
+SHADOWDARK.apps.shadowdarkling-importer.instruction3: 在此貼上角色 JSON
+SHADOWDARK.apps.shadowdarkling-importer.title: 匯入 Shadowdarkling
+SHADOWDARK.apps.solodark.button1: 不太可能或完全不可能
+SHADOWDARK.apps.solodark.button2: 一半機率
+SHADOWDARK.apps.solodark.button3: 可能或必然
+SHADOWDARK.apps.solodark.oracle: 神諭者
+SHADOWDARK.apps.solodark.phrasing: 請使用肯定句型來提出問題。例如，請勿問 這個房間裡沒有獸人嗎？而應改問 這個房間裡有獸人嗎？
+SHADOWDARK.apps.solodark.question1: 你要問什麼？
+SHADOWDARK.apps.solodark.question2: '「是」的結果有多大的可能性？'
+SHADOWDARK.apps.solodark.roll_prompt: 擲骰提示
+SHADOWDARK.apps.solodark.title: 單人dark
+SHADOWDARK.apps.spell-book.known: 已知
+SHADOWDARK.apps.spell-book.title: 職業法術列表
+SHADOWDARK.apps.spell-importer.import_button: 匯入法術
+SHADOWDARK.apps.spell-importer.instruction1: 1. 從原始資料中複製法術內容。
+SHADOWDARK.apps.spell-importer.instruction2a: 2. 依照核心規則所顯示的法術格式，將文字貼入此欄位。
+SHADOWDARK.apps.spell-importer.instruction2b: 法術名稱
+SHADOWDARK.apps.spell-importer.instruction2c: 階級與職業
+SHADOWDARK.apps.spell-importer.instruction2d: 持續時間
+SHADOWDARK.apps.spell-importer.instruction2e: 距離
+SHADOWDARK.apps.spell-importer.instruction2f: 描述
+SHADOWDARK.apps.spell-importer.instruction3: 3. 點擊匯入法術。
+SHADOWDARK.apps.spell-importer.title: 匯入法術
+SHADOWDARK.armor.properties.disadvantage_stealth: 劣勢／潛行
+SHADOWDARK.armor.properties.disadvantage_swimming: 劣勢／游泳
+SHADOWDARK.armor.properties.no_swimming: 無法游泳
+SHADOWDARK.armor.properties.one_handed: 占用一隻手
+SHADOWDARK.armor.properties.shield: 盾牌
+SHADOWDARK.boon.type.label: 恩賜類型
+SHADOWDARK.boons.blessing: 祝福
+SHADOWDARK.boons.oath: 誓約
+SHADOWDARK.boons.secret: 秘密
+SHADOWDARK.chat_card.button.attack: 擲攻擊骰
+SHADOWDARK.chat_card.button.cast_spell: 施放法術
+SHADOWDARK.chat_card.button.learn_spell: 學習法樹
+SHADOWDARK.chat_card.button.use_potion: 使用藥水
+SHADOWDARK.chat_card.button.use_scroll: 使用卷軸
+SHADOWDARK.chat_card.button.use_wand: 使用魔杖
+SHADOWDARK.chat_card.context.apply_damage_secondary: 套用次級傷害
+SHADOWDARK.chat_card.context.apply_damage: 套用傷害
+SHADOWDARK.chat_card.context.apply_healing_secondary: 套用次級治癒
+SHADOWDARK.chat_card.context.apply_healing: 套用治療
+SHADOWDARK.chat.clockwise_initiative: 由於 {name} 擲得最高，他將優先行動，其餘戰鬥者將依固定順序依序行動。
+SHADOWDARK.chat.hp_roll.apply_to_max: 增加最大生命值
+SHADOWDARK.chat.item_roll.double_numerical: 將任意一個數值加倍！
+SHADOWDARK.chat.item_roll.mishap: 在對應的失誤表上擲骰！
+SHADOWDARK.chat.item_roll.title_vs: 用 {name} 對 {target} 進行攻擊擲骰
+SHADOWDARK.chat.item_roll.title: 用 {name} 進行攻擊擲骰
+SHADOWDARK.chat.item_roll.wand_mishap: 該魔杖破損並永久失效
+SHADOWDARK.chat.light_source.expired: "{name} 的 {lightSource} 已熄滅"
+SHADOWDARK.chat.light_source.remaining: 剩餘分鐘
+SHADOWDARK.chat.light_source.seconds_remaining: 剩餘不到 1 分鐘
+SHADOWDARK.chat.light_source.source.all: 所有光源熄滅
+SHADOWDARK.chat.light_source.source.dropped: 被丟掉
+SHADOWDARK.chat.light_source.source.picked_up: 被撿起
+SHADOWDARK.chat.light_source.source.toggle.off: 被熄滅
+SHADOWDARK.chat.light_source.source.toggle.on: 被點燃
+SHADOWDARK.chat.light_source.went_out: "{name} 的 {lightSource} 已熄滅"
+SHADOWDARK.chat.potion_used: "{name} 使用了一瓶藥水"
+SHADOWDARK.chat.spell_focus_check: "專注檢定"
+SHADOWDARK.chat.spell_learn.failure: "{name} 無法從該卷軸中學到任何內容"
+SHADOWDARK.chat.spell_learn.success: "{name} 成功學會了 {spellName} 法術"
+SHADOWDARK.chat.spell_learn.title: 學習法術
+SHADOWDARK.chat.spell_roll.title: "{name}, DC {spellDC}"
+SHADOWDARK.chat.use_ability.failure: "{name} 未能成功使用 {ability} 技能"
+SHADOWDARK.chat.use_ability.success: "{name} 成功使用了 {ability} 技能"
+SHADOWDARK.chat.use_ability.title: "使用技能"
+SHADOWDARK.chat.use_ability.used: "{name} 使用了 {ability} 技能"
+SHADOWDARK.chat.welcome_message.arcane_library_button: 購買 Shadowdark RPG
+SHADOWDARK.chat.welcome_message.arcane_library_text: 造訪 Arcane Library 網站，購買官方 Shadowdark PDF、書籍和周邊商品。
+SHADOWDARK.chat.welcome_message.arcane_library: 支持 Arcane Library
+SHADOWDARK.chat.welcome_message.issues_button: 問題追蹤器
+SHADOWDARK.chat.welcome_message.issues_text: "如果您發現任何問題或有新功能建議，請查看我們的問題追蹤器。"
+SHADOWDARK.chat.welcome_message.issues: 回報問題
+SHADOWDARK.chat.welcome_message.title_text: 歡迎來到 Shadowdark RPG。以下是一些資源，幫助您開始遊戲。
+SHADOWDARK.chat.welcome_message.title: 適用於 Foundry 的 Shadowdark RPG
+SHADOWDARK.chat.welcome_message.watch: 觀看影片教學
+SHADOWDARK.chatcard.default: 擲骰
+SHADOWDARK.check.requesting: 要求檢定
+SHADOWDARK.class-ability.ability.check: 屬性檢定
+SHADOWDARK.class-ability.ability.label: 屬性
+SHADOWDARK.class-ability.available.label: 可用的
+SHADOWDARK.class-ability.boons: 恩惠
+SHADOWDARK.class-ability.dc.label: DC
+SHADOWDARK.class-ability.group.label: 技能群組
+SHADOWDARK.class-ability.limited-uses.label: 使用次數限制？
+SHADOWDARK.class-ability.lose_on_failure.label: 失敗則喪失？
+SHADOWDARK.class-ability.lost.label: 遺失
+SHADOWDARK.class-ability.maximum.label: 最大值
+SHADOWDARK.class-ability.options: 設定
+SHADOWDARK.class.armor.all.label: 所有護甲
+SHADOWDARK.class.armor.label: 護甲
+SHADOWDARK.class.armor.prompt: 選擇護甲……
+SHADOWDARK.class.choice_count: 選擇次數
+SHADOWDARK.class.choice: 選擇
+SHADOWDARK.class.fighter: 戰士
+SHADOWDARK.class.fixed: 固定值
+SHADOWDARK.class.has_patron.count.label: 有契約主？
+SHADOWDARK.class.hit_points.label: 擲生命骰
+SHADOWDARK.class.language_choices.count.label: 選擇次數
+SHADOWDARK.class.language_choices.label: 語言選項
+SHADOWDARK.class.language_choices.prompt: 選擇語言……
+SHADOWDARK.class.languages.label: 職業語言
+SHADOWDARK.class.priest: 牧師
+SHADOWDARK.class.ranger: 遊俠
+SHADOWDARK.class.spellcasting_ability.label: 施法技能
+SHADOWDARK.class.spellcasting_class.label: 法術職業
+SHADOWDARK.class.spellcasting.base_difficulty.label: 施法基本DC
+SHADOWDARK.class.spells_Known.label: 各階法術已知列表
+SHADOWDARK.class.starting_boons.count.label: 起始恩賜
+SHADOWDARK.class.talent_choices.count.label: 選擇次數
+SHADOWDARK.class.talent_choices.label: 天賦選項
+SHADOWDARK.class.talent_choices.prompt: 選擇天賦……
+SHADOWDARK.class.talents_table.label: 職業天賦隨機骰表
+SHADOWDARK.class.talents.label: 天賦
+SHADOWDARK.class.talents.prompt: 選擇天賦……
+SHADOWDARK.class.thief: 盜賊
+SHADOWDARK.class.titles.levels.from.label: 從
+SHADOWDARK.class.titles.levels.label: 等級
+SHADOWDARK.class.titles.levels.to.label: 至
+SHADOWDARK.class.weapons.all_melee.label: 所有近戰武器
+SHADOWDARK.class.weapons.all_ranged.label: 所有遠程武器
+SHADOWDARK.class.weapons.all.label: 所有武器
+SHADOWDARK.class.weapons.label: 武器
+SHADOWDARK.class.weapons.prompt: 選擇武器……
+SHADOWDARK.class.wizard: 法師
+SHADOWDARK.coins.cp: 銅幣
+SHADOWDARK.coins.gp: 金幣
+SHADOWDARK.coins.sp: 銀幣
+SHADOWDARK.dialog.ability_check.cha: 魅力檢定
+SHADOWDARK.dialog.ability_check.con: 體質檢定
+SHADOWDARK.dialog.ability_check.dex: 敏捷檢定
+SHADOWDARK.dialog.ability_check.int: 智力檢定
+SHADOWDARK.dialog.ability_check.str: 力量檢定
+SHADOWDARK.dialog.ability_check.title: 屬性檢定
+SHADOWDARK.dialog.ability_check.wis: 感知檢定
+SHADOWDARK.dialog.create_custom_item: 創建自訂物品
+SHADOWDARK.dialog.create_treasure: 創建財寶
+SHADOWDARK.dialog.create: 創建
+SHADOWDARK.dialog.edit_hp.title: 編輯生命值
+SHADOWDARK.dialog.edit_stats.title: 編輯屬性統計
+SHADOWDARK.dialog.effect.choice.armor: 選擇護甲類型
+SHADOWDARK.dialog.effect.choice.attribute: 選擇屬性
+SHADOWDARK.dialog.effect.choice.class: 選擇職業
+SHADOWDARK.dialog.effect.choice.damage_die: 選擇傷害骰
+SHADOWDARK.dialog.effect.choice.lightsource: 選擇光源
+SHADOWDARK.dialog.effect.choice.property: 選擇特性
+SHADOWDARK.dialog.effect.choice.spell: 選擇法術
+SHADOWDARK.dialog.effect.choice.weapon_property: 選擇武器特性
+SHADOWDARK.dialog.effect.choice.weapon: 選擇武器類型
+SHADOWDARK.dialog.effect.choices.title: 效果參數數
+SHADOWDARK.dialog.general.are_you_sure: 你確定嗎？
+SHADOWDARK.dialog.general.cancel: 取消
+SHADOWDARK.dialog.general.no: "否"
+SHADOWDARK.dialog.general.select: 選擇
+SHADOWDARK.dialog.general.yes: "是"
+SHADOWDARK.dialog.gm: 遊戲主持人
+SHADOWDARK.dialog.hp_re_roll.title: 重新骰生命值
+SHADOWDARK.dialog.hp_roll.per_level: 為第 {level} 等骰生命值
+SHADOWDARK.dialog.hp_roll.previous_hp: "擲骰前生命值：{hp}"
+SHADOWDARK.dialog.hp_roll.roll_level_1: 第 1 等骰到 {hp} 點生命值（含體質加值）
+SHADOWDARK.dialog.hp_roll.roll_per_level: 為第 {level} 等骰到 {hp} 點生命值
+SHADOWDARK.dialog.hp_roll.sum_total: 新的生命值上限為 {total}
+SHADOWDARK.dialog.hp_roll.summary: 生命骰總結
+SHADOWDARK.dialog.hp_roll.title: 生命骰
+SHADOWDARK.dialog.item_roll.ability_bonus: 屬性加值
+SHADOWDARK.dialog.item_roll.item_bonus: 物品加值
+SHADOWDARK.dialog.item_roll.talent_bonus: 天賦加值
+SHADOWDARK.dialog.item_roll.title: 擲攻擊骰用
+SHADOWDARK.dialog.item_selector.default_title: 選擇物品
+SHADOWDARK.dialog.item_selector.error.max_choices_exceeded: 此類物品最多只能選擇 {maxChoices} 個。
+SHADOWDARK.dialog.item_selector.error.no_items_found: 無法在可用的資料冊中找到正確類型的物品。
+SHADOWDARK.dialog.item_selector.select_item.prompt: 選擇物品……
+SHADOWDARK.dialog.item.confirm_delete: 確認刪除
+SHADOWDARK.dialog.item.confirm_sale: 確認出售
+SHADOWDARK.dialog.item.create_from_spell: 從 {spellName} 創建物品
+SHADOWDARK.dialog.item.delete: 刪除
+SHADOWDARK.dialog.item.sell_all: 全部出售
+SHADOWDARK.dialog.item.sell: 出售
+SHADOWDARK.dialog.item.use: 使用
+SHADOWDARK.dialog.light_source.pick_up.title: 選擇角色以提供光源
+SHADOWDARK.dialog.roll_mode_label: 擲骰模式
+SHADOWDARK.dialog.roll: 擲骰
+SHADOWDARK.dialog.scroll.learn_spell_class_warning: "警告：此法術不屬於該角色的職業，確定要嘗試學習嗎？"
+SHADOWDARK.dialog.scroll.wrong_class_confirm: 確認學習法術
+SHADOWDARK.dialog.select_ancestry.prompt: 選擇血統……
+SHADOWDARK.dialog.select_ancestry.title: 選擇血統
+SHADOWDARK.dialog.select_armor_property.prompt: 選擇護甲特性……
+SHADOWDARK.dialog.select_armor_property.title: 選擇護甲特性
+SHADOWDARK.dialog.select_background.prompt: 選擇背景……
+SHADOWDARK.dialog.select_background.title: 選擇背景
+SHADOWDARK.dialog.select_class.prompt: 選擇職業……
+SHADOWDARK.dialog.select_class.title: 選擇職業
+SHADOWDARK.dialog.select_deity.prompt: 選擇神祉……
+SHADOWDARK.dialog.select_deity.title: 選擇神祉
+SHADOWDARK.dialog.select_languages.prompt: 選擇語言……
+SHADOWDARK.dialog.select_languages.title: 選擇語言
+SHADOWDARK.dialog.select_patron.title: 選擇契約主
+SHADOWDARK.dialog.select_weapon_property.prompt: 選擇武器特性……
+SHADOWDARK.dialog.select_weapon_property.title: 選擇武器特性
+SHADOWDARK.dialog.spell_roll.title: 施法法術使用
+SHADOWDARK.dialog.spellbook.open_which_class.title: 選擇可用的法術書
+SHADOWDARK.dialog.submit: 提交
+SHADOWDARK.dialog.tooltip.talent_advantage: 一個天賦讓你此擲骰獲得優勢
+SHADOWDARK.dialog.type_here: 再此輸入……
+SHADOWDARK.dragdrop: 拖曳至此處
+SHADOWDARK.effect_duration.hours: 小時
+SHADOWDARK.effect_duration.minutes: 分鐘
+SHADOWDARK.effect_duration.seconds: 秒
+SHADOWDARK.effect_duration.turns: 輪
+SHADOWDARK.effect_duration.unlimited: 無限制
+SHADOWDARK.effect.custom: 自訂效果
+SHADOWDARK.effect.footer.add_custom: 新增自訂效果
+SHADOWDARK.effect.header.changes: 變更
+SHADOWDARK.effect.header.delete: 刪除
+SHADOWDARK.effect.header.edit: 編輯
+SHADOWDARK.effect.header.name: 名稱
+SHADOWDARK.effect.header.options: 選項
+SHADOWDARK.effect.header.toggle_active: 切換啟用狀態
+SHADOWDARK.effect.header.transfer: 轉移
+SHADOWDARK.effect.item: 物品效果
+SHADOWDARK.effect.new: 新增效果
+SHADOWDARK.effect.spell: 法術效果
+SHADOWDARK.effect.talent: 天賦效果
+SHADOWDARK.effect.temporary: 暫時效果
+SHADOWDARK.effect.tooltip.transfer.do_not: 不會轉移
+SHADOWDARK.effect.tooltip.transfer.do: 會轉移
+SHADOWDARK.effect.tooltip.transfer.header: 當物品新增時將效果轉移至角色
+SHADOWDARK.effect.unavailable: 已停用效果
+SHADOWDARK.error.class_ability.no-uses-remaining: 已無可用次數
+SHADOWDARK.error.general.gm_required: 你必須擁有遊戲主持人身分才能執行此操作。
+SHADOWDARK.error.general.no_character_class: 尚未選擇角色職業
+SHADOWDARK.error.general.no_character_selected: 尚未選擇角色
+SHADOWDARK.error.patron.no_supported_class: 目前的職業不允許加入契約主
+SHADOWDARK.error.source.source_missing: 來源遺失或不明……
+SHADOWDARK.error.spells.unable_to_cast_spell: 你無法施放該職業的法術
+SHADOWDARK.error.spells.unable_to_use_item: 你無法使用魔法物品
+SHADOWDARK.error.too_many_tokens_selected: 選取的角色代幣數量過多
+SHADOWDARK.form.section_header.class_abilities.label: 職業技能
+SHADOWDARK.form.section_header.equipment.label: 裝備
+SHADOWDARK.form.section_header.languages.label: 語言
+SHADOWDARK.form.section_header.names.label: 名稱
+SHADOWDARK.form.section_header.patron.label: 契約主
+SHADOWDARK.form.section_header.spellcasting.label: 施法能力
+SHADOWDARK.form.section_header.talents.label: 天賦
+SHADOWDARK.hotbar.abilityLost: 技能目前遺失
+SHADOWDARK.hotbar.moreThanOneItemWithName: 找到多個同名物件
+SHADOWDARK.hotbar.noActorSelected: 你必須選擇一個角色才能使用此巨集
+SHADOWDARK.hotbar.noItemWithName: 角色身上找不到此物品
+SHADOWDARK.hotbar.spellLost: 法術目前遺失
+SHADOWDARK.inventory.carried_gear: 隨身裝備
+SHADOWDARK.inventory.coins: 金錢
+SHADOWDARK.inventory.equipped_gear: 已穿戴裝備
+SHADOWDARK.inventory.gear: 裝備
+SHADOWDARK.inventory.gems: 寶石
+SHADOWDARK.inventory.item.light_remaining: "剩餘 {timeRemaining} 分鐘"
+SHADOWDARK.inventory.item.light_seconds_remaining: 剩餘不到 1 分鐘
+SHADOWDARK.inventory.item.light_used: '（已使用）'
+SHADOWDARK.inventory.label.quantity: 數量
+SHADOWDARK.inventory.label.slots: 欄位
+SHADOWDARK.inventory.section.armor: 護甲
+SHADOWDARK.inventory.section.basic: 基本裝備
+SHADOWDARK.inventory.section.potions: 藥水
+SHADOWDARK.inventory.section.scrolls: 卷軸
+SHADOWDARK.inventory.section.treasure: 財寶
+SHADOWDARK.inventory.section.wands: 魔杖
+SHADOWDARK.inventory.section.weapon: 武器
+SHADOWDARK.inventory.slots_max: 上限
+SHADOWDARK.inventory.slots_used: 已使用
+SHADOWDARK.inventory.slots: 欄位
+SHADOWDARK.inventory.stashed_gear: 庫存裝備
+SHADOWDARK.inventory.tooltip.gem_bag: 打開寶石袋
+SHADOWDARK.inventory.tooltip.item_decrement: 減少數量
+SHADOWDARK.inventory.tooltip.item_increment: 增加數量
+SHADOWDARK.inventory.tooltip.sell_treasure: 出售財寶
+SHADOWDARK.inventory.tooltip.toggle_equipped: 切換已穿戴狀態
+SHADOWDARK.inventory.tooltip.toggle_light_source: 切換光源狀態
+SHADOWDARK.inventory.tooltip.toggle_stashed: 切換庫存狀態
+SHADOWDARK.inventory.total_coins: 金錢總數
+SHADOWDARK.inventory.total_gems: 寶石總數
+SHADOWDARK.item_type.armor: 護甲
+SHADOWDARK.item_type.basic: 基本
+SHADOWDARK.item_type.gem: 寶石
+SHADOWDARK.item_type.potion: 藥水
+SHADOWDARK.item_type.spell: 法術
+SHADOWDARK.item_type.talent: 天賦
+SHADOWDARK.item_type.weapon: 武器
+SHADOWDARK.item.ammunition: 彈藥
+SHADOWDARK.item.armor_ac_modifier: 修正值
+SHADOWDARK.item.armor_ac: AC
+SHADOWDARK.item.armor_bonus_attribute: 屬性加值
+SHADOWDARK.item.armor_class: 防禦等級
+SHADOWDARK.item.armor.armor_properties.label: 護甲特性
+SHADOWDARK.item.armor.base_armor.chainmail: 鎖子甲
+SHADOWDARK.item.armor.base_armor.leather_armor: 皮甲
+SHADOWDARK.item.armor.base_armor.plate_mail: 板甲
+SHADOWDARK.item.armor.base_armor.shield: 盾牌
+SHADOWDARK.item.armor.base_armor.title: 基礎護甲
+SHADOWDARK.item.cost: 價格
+SHADOWDARK.item.description: 描述
+SHADOWDARK.item.effect.category.condition: 狀態
+SHADOWDARK.item.effect.category.effect: 效果
+SHADOWDARK.item.effect.category.title: 效果分類
+SHADOWDARK.item.effect.lightSource.lantern: 燈籠
+SHADOWDARK.item.effect.lightSource.lightSpellDouble: 光源（雙倍距離）
+SHADOWDARK.item.effect.lightSource.lightSpellNear: 光源
+SHADOWDARK.item.effect.lightSource.lightSuppression: 光源抑制
+SHADOWDARK.item.effect.lightSource.purpleGlow: 紫色光芒
+SHADOWDARK.item.effect.lightSource.torch: 火把
+SHADOWDARK.item.effect.pre-defined.title: 預設效果
+SHADOWDARK.item.effect.predefined_effect.abilityImprovement: 屬性值提升
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: 屬性值提升（魅）
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: 屬性值提升（體）
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex: 屬性值提升（敏）
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt: 屬性值提升（智）
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr: 屬性值提升（力）
+SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis: 屬性值提升（感）
+SHADOWDARK.item.effect.predefined_effect.acBonus: AC加值
+SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute: 來自屬性的AC加值
+SHADOWDARK.item.effect.predefined_effect.additionalGearSlots: 額外裝備欄位
+SHADOWDARK.item.effect.predefined_effect.armorMastery: 護甲精通
+SHADOWDARK.item.effect.predefined_effect.backstabDie: 額外背刺骰
+SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold: 大失敗門檻
+SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold: 大成功門檻
+SHADOWDARK.item.effect.predefined_effect.critMultiplier: 爆擊倍數
+SHADOWDARK.item.effect.predefined_effect.damageMultiplier: 傷害倍數
+SHADOWDARK.item.effect.predefined_effect.hpAdvantage: 生命骰獲得優勢
+SHADOWDARK.item.effect.predefined_effect.initAdvantage: 先攻骰獲得優勢
+SHADOWDARK.item.effect.predefined_effect.lightSource: 光源
+SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: 近戰攻擊骰加值
+SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: 近戰傷害加值
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: 永久屬性（魅）
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: 永久屬性（體）
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: 永久屬性（敏）
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: 永久屬性（智）
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: 永久屬性（力）
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: 永久屬性（感）
+SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: 遠程攻擊骰加值
+SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: 遠程傷害加值
+SHADOWDARK.item.effect.predefined_effect.spellAdvantage: 施放法術時獲得優勢
+SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: 施法檢定加值
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: 額外施法職業
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 石膚天賦
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: 未穿甲時的AC加值
+SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: 武器攻擊擲骰加值
+SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: 武器傷害加值
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: 武器傷害骰 D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: 根據特性提升武器傷害骰
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: 根據特性增加額外傷害骰
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: 根據特性提升額外傷害骰
+SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: 武器傷害倍數
+SHADOWDARK.item.effect.predefined_effect.weaponMastery: 武器精通
+SHADOWDARK.item.effect.show-on-panel: 顯示於面板
+SHADOWDARK.item.effect.show-token-icon: 顯示角色代幣圖示
+SHADOWDARK.item.effect.source.title: 物品來源
+SHADOWDARK.item.effect.warning.add_effect_without_value: 無法新增效果，請先選擇數值。
+SHADOWDARK.item.effect.warning.add_round_item_outside_combat: 無法在戰鬥外新增以回合為單位的持續時間效果。
+SHADOWDARK.item.equipped: 已穿戴
+SHADOWDARK.item.errors.no_available_ammunition: 無可用彈藥
+SHADOWDARK.item.errors.no_spellcasting_classes: 此角色不具備施法職業
+SHADOWDARK.item.inventory_free_carry: 免費攜帶欄位
+SHADOWDARK.item.inventory_per_slot: 每格最大數量
+SHADOWDARK.item.inventory_quantity: 數量
+SHADOWDARK.item.inventory_slots: 每個物品佔用欄位
+SHADOWDARK.item.level: 等級
+SHADOWDARK.item.light.in_use_tooltip: 光源啟用時無法編輯此欄位
+SHADOWDARK.item.light.is_source: 光源
+SHADOWDARK.item.light.longevity: 持續時間（分鐘）
+SHADOWDARK.item.light.remaining: 剩餘時間（分鐘）
+SHADOWDARK.item.light.template: 光源模板
+SHADOWDARK.item.magic_item.is_magic: 魔法物品
+SHADOWDARK.item.magic_item.title: 魔法物品效果（複數）
+SHADOWDARK.item.magic_item.type.attackBonus: 攻擊加值
+SHADOWDARK.item.magic_item.type.criticalFailureThreshold: 大失敗門檻提高
+SHADOWDARK.item.magic_item.type.criticalSuccessThreshold: 大成功門檻降低
+SHADOWDARK.item.magic_item.type.critMultiplier: 爆擊倍率
+SHADOWDARK.item.magic_item.type.custom: 自定義效果
+SHADOWDARK.item.magic_item.type.damageBonus: 傷害加值
+SHADOWDARK.item.magic_item.type.permanentAbility: 永久屬性變動
+SHADOWDARK.item.name_from_spell.Potion: '{spellName}藥水'
+SHADOWDARK.item.name_from_spell.Scroll: '{spellName}卷軸'
+SHADOWDARK.item.name_from_spell.Wand: '{spellName}魔杖'
+SHADOWDARK.item.name: 物品名稱
+SHADOWDARK.item.npc_attack_bonus: 攻擊加值
+SHADOWDARK.item.npc_attack_count: 攻擊次數
+SHADOWDARK.item.npc_attack_damage_formula: 傷害公式
+SHADOWDARK.item.npc_attack_special: 攻擊特性
+SHADOWDARK.item.npc_attack_type: 類型
+SHADOWDARK.item.npc_attack.num_damage_dice: 傷害骰數量
+SHADOWDARK.item.npc.spell_ability: 施法屬性
+SHADOWDARK.item.npc.spell_bonus: 施法加值
+SHADOWDARK.item.npc.spell_count: 可施放次數
+SHADOWDARK.item.potion.label: 藥水
+SHADOWDARK.item.properties.label: 物品特性
+SHADOWDARK.item.scroll.label: 卷軸
+SHADOWDARK.item.source_tag: 來源標籤
+SHADOWDARK.item.source: 來源
+SHADOWDARK.item.spell_caster_classes: 可施法職業
+SHADOWDARK.item.spell_class: 法術類別
+SHADOWDARK.item.spell_duration: 持續時間
+SHADOWDARK.item.spell_name: 法術名稱
+SHADOWDARK.item.spell_range: 距離
+SHADOWDARK.item.spell_tier: 階級
+SHADOWDARK.item.spell.label: 法術
+SHADOWDARK.item.stashed.label: 已庫存
+SHADOWDARK.item.talent_class: 天賦類別
+SHADOWDARK.item.treasure_name: 財寶名稱
+SHADOWDARK.item.treasure_value: 財寶價值
+SHADOWDARK.item.treasure: 財寶
+SHADOWDARK.item.type: 物品類型
+SHADOWDARK.item.wand.label: 魔杖
+SHADOWDARK.item.weapon_damage.oneHanded_short: 單手
+SHADOWDARK.item.weapon_damage.oneHanded: 單手傷害
+SHADOWDARK.item.weapon_damage.twoHanded_short: 雙手
+SHADOWDARK.item.weapon_damage.twoHanded: 雙手傷害
+SHADOWDARK.item.weapon_range: 距離
+SHADOWDARK.item.weapon_type: 類型
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: 變種大劍
+SHADOWDARK.item.weapon.base_weapon.club: 棍棒
+SHADOWDARK.item.weapon.base_weapon.crossbow: 弩
+SHADOWDARK.item.weapon.base_weapon.dagger: 匕首
+SHADOWDARK.item.weapon.base_weapon.greataxe: 巨斧
+SHADOWDARK.item.weapon.base_weapon.greatsword: 巨劍
+SHADOWDARK.item.weapon.base_weapon.javelin: 標槍
+SHADOWDARK.item.weapon.base_weapon.longbow: 長弓
+SHADOWDARK.item.weapon.base_weapon.longsword: 長劍
+SHADOWDARK.item.weapon.base_weapon.mace: 釘錘
+SHADOWDARK.item.weapon.base_weapon.shortbow: 短弓
+SHADOWDARK.item.weapon.base_weapon.shortsword: 短劍
+SHADOWDARK.item.weapon.base_weapon.spear: 矛
+SHADOWDARK.item.weapon.base_weapon.staff: 法杖
+SHADOWDARK.item.weapon.base_weapon.title: 基礎武器
+SHADOWDARK.item.weapon.base_weapon.wand: 魔杖
+SHADOWDARK.item.weapon.base_weapon.warhammer: 戰鎚
+SHADOWDARK.item.weapon.weapon_properties.label: 武器特性
+SHADOWDARK.language_choices.common.label: 額外通用語
+SHADOWDARK.language_choices.rare.label: 額外稀有語
+SHADOWDARK.language.celestial: 天界語
+SHADOWDARK.language.common: 通用語
+SHADOWDARK.language.diabolic: 地獄語
+SHADOWDARK.language.draconic: 龍語
+SHADOWDARK.language.dwarvish: 矮人語
+SHADOWDARK.language.elvish: 精靈語
+SHADOWDARK.language.giant: 巨人語
+SHADOWDARK.language.goblin: 哥布林語
+SHADOWDARK.language.merran: 梅蘭語
+SHADOWDARK.language.orcish: 獸人語
+SHADOWDARK.language.primordial: 原初語
+SHADOWDARK.language.rarity.common: 常見
+SHADOWDARK.language.rarity.label: 稀有度
+SHADOWDARK.language.rarity.rare: 罕見
+SHADOWDARK.language.reptilian: 爬說語
+SHADOWDARK.language.sylvan: 林語
+SHADOWDARK.language.thanian: 塔尼亞語
+SHADOWDARK.language.who_speaks_it: 使用此語言的族群
+SHADOWDARK.light_source.lantern: 燈籠
+SHADOWDARK.light_source.light_spell.double_near: 光亮術（雙倍中距離）
+SHADOWDARK.light_source.light_spell.near: 光亮術（中距離）
+SHADOWDARK.light_source.torch: 火把
+SHADOWDARK.light-source.dropped: '{name} 丟了'
+SHADOWDARK.light-source.pick-up-lightsource.tooltip: 拾取光源
+SHADOWDARK.light-tracker.active: 啟用中
+SHADOWDARK.light-tracker.paused: 已暫停
+SHADOWDARK.light-tracker.status.label: 狀態
+SHADOWDARK.light-tracker.title: 光源追蹤器
+SHADOWDARK.light-tracker.user_warning: 一位或多位使用者尚未選擇角色
+SHADOWDARK.macro.error.caught_error: "'{macro}' 巨集執行失敗，錯誤如下：{error}"
+SHADOWDARK.macro.error.gm_role_required: '''{macro}'' 巨集需擁有 ''遊戲主持人'' 角色權限'
+SHADOWDARK.macro.success: '''{macro}'' 巨集執行成功'
+SHADOWDARK.macro.warn.create_item_requires_ownership: 僅可為所擁有的物品建立巨集按鈕
+SHADOWDARK.migration.begin_migration: 正在為 Shadowdark RPG 執行資料升級
+SHADOWDARK.migration.begin_schema: 套用 Shadowdark RPG 結構 v{version} 的更新
+SHADOWDARK.migration.completed_migration: 資料升級完成，適用於 Shadowdark RPG
+SHADOWDARK.migration.completed_schema: 完成套用 Shadowdark RPG 結構 v{version} 的更新
+SHADOWDARK.module_art_config.portraits: 頭像
+SHADOWDARK.module_art_config.tokens: 代幣
+SHADOWDARK.notify.combat.clockwise_initiative_only_gm: 當啟用順時針先攻時，僅遊戲主持人可擲先攻骰。
+SHADOWDARK.npc_attack.type.physical: 物理
+SHADOWDARK.npc_attack.type.special: 特殊
+SHADOWDARK.npc_move.close: 近距離
+SHADOWDARK.npc_move.double_near: 雙倍中距離
+SHADOWDARK.npc_move.far: 遠距離
+SHADOWDARK.npc_move.near: 中距離
+SHADOWDARK.npc_move.none: 無
+SHADOWDARK.npc_move.special: 特殊
+SHADOWDARK.npc_move.triple_near: 三倍中距離
+SHADOWDARK.patron.boons_table.label: 契約主恩賜表
+SHADOWDARK.property.type.option.armor: 護甲
+SHADOWDARK.property.type.option.weapon: 武器
+SHADOWDARK.property.type.title: 特性類型
+SHADOWDARK.range.close_short: 近
+SHADOWDARK.range.close: 近距離
+SHADOWDARK.range.double_near: 雙倍中距離
+SHADOWDARK.range.far_short: 遠
+SHADOWDARK.range.far: 遠距離
+SHADOWDARK.range.near_short: "中"
+SHADOWDARK.range.near: 中距離
+SHADOWDARK.range.nearLine_short: 中直線
+SHADOWDARK.range.nearLine: 中距離直線
+SHADOWDARK.range.oneMile_short: 1哩
+SHADOWDARK.range.oneMile: 1哩
+SHADOWDARK.range.samePlane_short: 同位面
+SHADOWDARK.range.samePlane: 在同位面
+SHADOWDARK.range.self_short: 自
+SHADOWDARK.range.self: 自身
+SHADOWDARK.range.touch_short: 觸
+SHADOWDARK.range.touch: 接觸
+SHADOWDARK.range.unlimited_short: 不限
+SHADOWDARK.range.unlimited: 無限制
+SHADOWDARK.roll.advantage_title: "{title}帶優勢"
+SHADOWDARK.roll.advantage: 優勢
+SHADOWDARK.roll.critical.failure: 大失敗！({value})
+SHADOWDARK.roll.critical.success: 大成功！({value})
+SHADOWDARK.roll.D20: 骰 D20
+SHADOWDARK.roll.damage: 傷害骰
+SHADOWDARK.roll.disadvantage_title: "{title}帶劣勢"
+SHADOWDARK.roll.disadvantage: 劣勢
+SHADOWDARK.roll.failure: 失敗！({value})
+SHADOWDARK.roll.normal: 標準
+SHADOWDARK.roll.one_handed_damage: 單手傷害
+SHADOWDARK.roll.spell_casting_check: 施法檢定
+SHADOWDARK.roll.success: 成功！({value})
+SHADOWDARK.roll.two_handed_damage: 雙手傷害
+SHADOWDARK.settings.consume_ammunition.hint: 攻擊擲骰時，自動調整需消耗彈藥的武器所用彈藥
+SHADOWDARK.settings.consume_ammunition.name: 自動消耗彈藥
+SHADOWDARK.settings.debugEnabled.hint: 啟用或停用額外的除錯紀錄
+SHADOWDARK.settings.debugEnabled.name: 啟用/停用除錯
+SHADOWDARK.settings.effect_panel.show_passive.hint: 若勾選，效果面板也會顯示來自天賦與物品的作用中效果
+SHADOWDARK.settings.effect_panel.show_passive.name: 顯示所有作用中效果
+SHADOWDARK.settings.enable_targeting.hint: 根據目標的 防禦等級 自動判定攻擊是否命中
+SHADOWDARK.settings.enable_targeting.name: 啟用攻擊鎖定
+SHADOWDARK.settings.migrateSystemCompendiums.hint: 對內建的 Shadowdark RPG 系統資料庫進行資料轉移（請勿變更，除非您清楚自己在做什麼）
+SHADOWDARK.settings.migrateSystemCompendiums.name: 系統資料庫轉移
+SHADOWDARK.settings.module_art.hint: 設定要使用哪個模組提供的圖像資源
+SHADOWDARK.settings.module_art.label: 設定圖像資源
+SHADOWDARK.settings.module_art.name: 模組提供的圖像資源
+SHADOWDARK.settings.module_art.save: 儲存變更
+SHADOWDARK.settings.roll_npc_hp.hint: 當 NPC 加入場景時自動擲其生命值
+SHADOWDARK.settings.roll_npc_hp.name: 自動擲出 NPC 生命值
+SHADOWDARK.settings.schemaVersion.hint: 記錄 Shadowdark RPG 系統資料的當前資料結構版本（請勿變更，除非您清楚自己在做什麼）
+SHADOWDARK.settings.schemaVersion.name: 資料結構版本
+SHADOWDARK.settings.source_filter.all_used: 目前允許所有資料來源
+SHADOWDARK.settings.source_filter.button_label: 設定資料來源篩選器
+SHADOWDARK.settings.source_filter.hint: 若有設定，僅限此清單中所列之書籍來源可供選擇。未設定資料來源的項目將始終可用。
+SHADOWDARK.settings.source_filter.name: 資料來源篩選器
+SHADOWDARK.settings.source_filter.prompt: 選擇資料來源……
+SHADOWDARK.settings.source_filter.save_button: 儲存設定
+SHADOWDARK.settings.source_filter.these_used: 僅允許下列資料來源
+SHADOWDARK.settings.source_filter.title: 書籍來源篩選
+SHADOWDARK.settings.systemVersion.hint: 記錄 Shadowdark RPG 系統的目前版本號碼（請勿變更，除非您清楚自己在做什麼)
+SHADOWDARK.settings.systemVersion.name: 系統版本
+SHADOWDARK.settings.track_light_sources.hint: 勾選後，系統將追蹤並更新所有啟用中光源的剩餘時間。
+SHADOWDARK.settings.track_light_sources.inactive_user.hint: 若勾選，將追蹤屬於非活躍（未登入）使用者的光源
+SHADOWDARK.settings.track_light_sources.inactive_user.name: 追蹤非活躍使用者的光源
+SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率，單位為秒。
+SHADOWDARK.settings.track_light_sources.interval.name: 光源追蹤間隔
+SHADOWDARK.settings.track_light_sources.name: 追蹤光源
+SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）。
+SHADOWDARK.settings.track_light_sources.open_on_start.name: 啟動時開啟光源追蹤介面
+SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停。
+SHADOWDARK.settings.track_light_sources.pause_with_game.name: 暫停光源追蹤
+SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 若勾選，光源追蹤將依照真實時間進行。若使用外部時間或日曆模組，請停用此選項。
+SHADOWDARK.settings.track_light_sources.realtime_tracking.name: 即時光源追蹤
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: 控制玩家是否能看見光源的剩餘時間。
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "顯示玩家的光源剩餘時間"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: 無
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: 僅顯示點數
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: 顯示點數與剩餘分鐘數
+SHADOWDARK.settings.use_clockwise_initiative.hint: 若勾選，擲出最高先攻的角色將優先行動，其他角色依固定順序依序行動。所有 NPC 將被歸為同一組並排在先攻順序中。
+SHADOWDARK.settings.use_clockwise_initiative.name: 使用順時針先攻順序
+SHADOWDARK.settings.use_pulp_mode.hint: 將幸運標記顯示為數值而非勾選框
+SHADOWDARK.settings.use_pulp_mode.name: 啟用英雄冒險模式
+SHADOWDARK.sheet.abilities.label: 技能
+SHADOWDARK.sheet.abilities.modifiers: 修正值
+SHADOWDARK.sheet.abilities.stats: 屬性統計
+SHADOWDARK.sheet.abilities.ungrouped.label: 其他
+SHADOWDARK.sheet.abilities.uses.decrement.tooltip: 減少可用次數
+SHADOWDARK.sheet.abilities.uses.increment.tooltip: 增加可用次數
+SHADOWDARK.sheet.actor.ac: AC
+SHADOWDARK.sheet.actor.alignment: 陣營
+SHADOWDARK.sheet.actor.character_notes: 角色筆記
+SHADOWDARK.sheet.actor.hp_max: 最大值
+SHADOWDARK.sheet.actor.hp: 生命值
+SHADOWDARK.sheet.actor.level: 等級
+SHADOWDARK.sheet.actor.placeholder.name: 新角色名稱
+SHADOWDARK.sheet.class.item: Shadowdark 物品表
+SHADOWDARK.sheet.class.npc: Shadowdark NPC表
+SHADOWDARK.sheet.class.player: Shadowdark 玩家角色表
+SHADOWDARK.sheet.general.active_effects.create_effect.title: 建立效果
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: 刪除效果
+SHADOWDARK.sheet.general.active_effects.duration.title: 持續時間
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: 編輯效果
+SHADOWDARK.sheet.general.active_effects.source.title: 來源
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: 切換效果
+SHADOWDARK.sheet.general.add: 新增
+SHADOWDARK.sheet.general.effects_and_conditions.title: 效果與狀態
+SHADOWDARK.sheet.general.item_create.tooltip: 建立 {type} 物品
+SHADOWDARK.sheet.general.item_delete.title: 刪除物品
+SHADOWDARK.sheet.general.item_edit.title: 編輯物品
+SHADOWDARK.sheet.general.roll_hp: 骰生命值
+SHADOWDARK.sheet.general.section.toggle_hide: 點擊以隱藏區塊
+SHADOWDARK.sheet.general.section.toggle_show: 點擊以顯示區塊
+SHADOWDARK.sheet.item.tab.description: 描述
+SHADOWDARK.sheet.item.tab.details: 詳細
+SHADOWDARK.sheet.item.tab.effects: 效果
+SHADOWDARK.sheet.item.tab.light: 光源
+SHADOWDARK.sheet.item.tab.magic: 魔法
+SHADOWDARK.sheet.item.tab.source: 來源
+SHADOWDARK.sheet.item.tab.spellsknown: 已知法術
+SHADOWDARK.sheet.item.tab.titles: 頭銜
+SHADOWDARK.sheet.npc.attacks_label: 攻擊
+SHADOWDARK.sheet.npc.dark_adapted: 黑暗適性
+SHADOWDARK.sheet.npc.description_label: 描述
+SHADOWDARK.sheet.npc.features_label: 特性
+SHADOWDARK.sheet.npc.movement_short: 移動
+SHADOWDARK.sheet.npc.movement: 移動
+SHADOWDARK.sheet.npc.specials_label: 特殊攻擊
+SHADOWDARK.sheet.npc.tab.abilities: 屬性
+SHADOWDARK.sheet.npc.tab.description: 描述
+SHADOWDARK.sheet.npc.tab.spells: 法術
+SHADOWDARK.sheet.player.active_effect_override: 此數值已被作用中效果修改，無法編輯。請停用該效果以進行編輯。
+SHADOWDARK.sheet.player.ancestry.label: 血統
+SHADOWDARK.sheet.player.ancestry.tooltip: 角色的文化與血緣傳承
+SHADOWDARK.sheet.player.available_spells: 可用法術
+SHADOWDARK.sheet.player.background.label: 背景
+SHADOWDARK.sheet.player.background.tooltip: 你的經歷與過往使你擅長執行與背景相關的任務。
+SHADOWDARK.sheet.player.boon.label: 恩賜
+SHADOWDARK.sheet.player.boons.blessings.label: 祝福
+SHADOWDARK.sheet.player.boons.label: 恩賜
+SHADOWDARK.sheet.player.boons.name: 恩賜名稱
+SHADOWDARK.sheet.player.boons.oaths.label: 誓約
+SHADOWDARK.sheet.player.boons.secrets.label: 秘密
+SHADOWDARK.sheet.player.class_spells: 職業法術
+SHADOWDARK.sheet.player.class.label: 職業
+SHADOWDARK.sheet.player.class.tooltip: 你的角色所屬職業
+SHADOWDARK.sheet.player.deity.label: 神祇
+SHADOWDARK.sheet.player.deity.tooltip: 角色與守序、混亂或中立平衡的宇宙力量之連結。
+SHADOWDARK.sheet.player.inventory.gear.label: 裝備
+SHADOWDARK.sheet.player.inventory.items.label: 物品
+SHADOWDARK.sheet.player.inventory.quantity_short.label: 數量
+SHADOWDARK.sheet.player.inventory.slots.label: 欄位
+SHADOWDARK.sheet.player.inventory.stashed_item.label: 庫存物品
+SHADOWDARK.sheet.player.inventory.treasure.label: 財寶
+SHADOWDARK.sheet.player.inventory.type.label: 類型
+SHADOWDARK.sheet.player.inventory.value.label: 價值
+SHADOWDARK.sheet.player.languages: 語言
+SHADOWDARK.sheet.player.luck: 幸運
+SHADOWDARK.sheet.player.melee_attacks: 近戰攻擊
+SHADOWDARK.sheet.player.name.label: 名稱
+SHADOWDARK.sheet.player.open_spellbook.tooltip: 開啟法術書
+SHADOWDARK.sheet.player.patron.tooltip: 你的契約主是你超自然力量的來源
+SHADOWDARK.sheet.player.ranged_attacks: 遠程攻擊
+SHADOWDARK.sheet.player.spells_from_items: 來自物品的法術
+SHADOWDARK.sheet.player.spells_tier: 階級
+SHADOWDARK.sheet.player.spells: 法術
+SHADOWDARK.sheet.player.tab.abilities: 屬性
+SHADOWDARK.sheet.player.tab.details: 詳細
+SHADOWDARK.sheet.player.tab.inventory: 背包
+SHADOWDARK.sheet.player.tab.notes: 筆記
+SHADOWDARK.sheet.player.tab.spells: 法術
+SHADOWDARK.sheet.player.tab.talents: 天賦
+SHADOWDARK.sheet.player.talents_level: 等級
+SHADOWDARK.sheet.player.talents_name: 名稱
+SHADOWDARK.sheet.player.talents: 天賦
+SHADOWDARK.sheet.player.title: 頭銜
+SHADOWDARK.sheet.player.toggle_ability_lost: 切換技能遺失
+SHADOWDARK.sheet.player.toggle_edit_hp: 切換編輯生命值
+SHADOWDARK.sheet.player.toggle_edit_stats: 切換編輯屬性統計
+SHADOWDARK.sheet.player.toggle_spell_lost: 切換法術遺失
+SHADOWDARK.sheet.player.tooltip.cast_spell: 施放法術
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: 專注於法術
+SHADOWDARK.sheet.player.tooltip.learn_spell: 學習法術
+SHADOWDARK.sheet.player.tooltip.use_class_ability: 使用職業技能
+SHADOWDARK.sheet.player.tooltip.use_potion: 使用藥水
+SHADOWDARK.sheet.player.tooltip.use_scroll: 使用卷軸
+SHADOWDARK.sheet.player.tooltip.use_wand: 使用魔杖
+SHADOWDARK.sheet.player.xp: 經驗值
+SHADOWDARK.sheet.special_abilities.label: 特殊技能
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG：吟遊詩人、遊俠與狗頭人"
+SHADOWDARK.source.core-rules: "Shadowdark RPG：核心規則"
+SHADOWDARK.source.cursed-scroll-1: 詛咒卷軸第1卷：惡魔崇拜！
+SHADOWDARK.source.cursed-scroll-2: 詛咒卷軸第2卷：赤紅沙地
+SHADOWDARK.source.cursed-scroll-3: 詛咒卷軸第3卷：午夜陽光
+SHADOWDARK.source.cursed-scroll-4: 詛咒卷軸第4卷：暗夜之河
+SHADOWDARK.source.cursed-scroll-5: 詛咒卷軸第5卷：深淵居者
+SHADOWDARK.source.cursed-scroll-6: 詛咒卷軸第6卷：面具之城
+SHADOWDARK.source.quickstart: "Shadowdark RPG：快速入門套組"
+SHADOWDARK.spell_caster.priest: 牧師
+SHADOWDARK.spell_caster.wizard: 法師
+SHADOWDARK.spell_duration.days: 天數
+SHADOWDARK.spell_duration.focus: 專注
+SHADOWDARK.spell_duration.instant: 即時
+SHADOWDARK.spell_duration.permanent: 永久
+SHADOWDARK.spell_duration.real_time: 真實時間
+SHADOWDARK.spell_duration.rounds: 回合
+SHADOWDARK.spell_duration.turns: 輪
+SHADOWDARK.spell_range.close: 近距離
+SHADOWDARK.spell_range.far: 遠距離
+SHADOWDARK.spell_range.near: 中距離
+SHADOWDARK.spell.classes.label: 施法職業
+SHADOWDARK.spell.classes.prompt: 選擇職業……
+SHADOWDARK.talent.backstab: 背刺
+SHADOWDARK.talent.class.ancestry: 血統
+SHADOWDARK.talent.class.class: 職業
+SHADOWDARK.talent.class.level: 等級
+SHADOWDARK.talent.class.patronBoon: 契約主恩賜
+SHADOWDARK.talent.level_gained: 獲得等級
+SHADOWDARK.talent.type.ability_improvement: 屬性提升
+SHADOWDARK.talent.type.advantage.hp: 生命骰有優勢
+SHADOWDARK.talent.type.advantage.initiative: 先功骰有優勢
+SHADOWDARK.talent.type.advantage.spell: 施放法術時有優勢
+SHADOWDARK.talent.type.advantage.title: 優勢加值
+SHADOWDARK.talent.type.armor_bonus: 護甲AC加值
+SHADOWDARK.talent.type.armor_mastery: 護甲精通
+SHADOWDARK.talent.type.backstab_die: 額外背刺骰
+SHADOWDARK.talent.type.bonus_caster_classes: 額外施法職業
+SHADOWDARK.talent.type.custom: 自訂天賦
+SHADOWDARK.talent.type.melee_attack_bonus: 近戰攻擊骰加值
+SHADOWDARK.talent.type.melee_damage_bonus: 近戰傷害骰加值
+SHADOWDARK.talent.type.ranged_attack_bonus: 遠程攻擊骰加值
+SHADOWDARK.talent.type.ranged_damage_bonus: 遠程傷害骰加值
+SHADOWDARK.talent.type.spell_bonus: 施法加值
+SHADOWDARK.talent.type.stoneSkinTalent: 石膚天賦
+SHADOWDARK.talent.type.title: 天賦類型(複數)
+SHADOWDARK.talent.type.weapon_mastery: 武器專精
+SHADOWDARK.tours.lightsource.notification.not_enabled: 你需要在設定中啟用光源追蹤器
+SHADOWDARK.weapon.properties.finesse: 靈巧
+SHADOWDARK.weapon.properties.loading: 裝填
+SHADOWDARK.weapon.properties.thrown: 投擲
+SHADOWDARK.weapon.properties.two_handed: 雙手
+SHADOWDARK.weapon.properties.versatile: 可雙手
+SHADOWDARK.weapon.type.melee: 近戰
+SHADOWDARK.weapon.type.ranged: 遠程
+TYPES.Actor.Light: 光源
+TYPES.Actor.NPC: NPC
+TYPES.Actor.Player: 玩家
+TYPES.Item.Ancestry: 血統
+TYPES.Item.Armor: 護甲
+TYPES.Item.Background: 背景
+TYPES.Item.Basic: 基礎
+TYPES.Item.Boon: 恩賜
+TYPES.Item.Class Ability: 職業技能
+TYPES.Item.Class: 職業
+TYPES.Item.Deity: 神祇
+TYPES.Item.Effect: 效果
+TYPES.Item.Gem: 寶石
+TYPES.Item.Language: 語言
+TYPES.Item.NPC Attack: NPC攻擊
+TYPES.Item.NPC Feature: NPC特性
+TYPES.Item.NPC Special Attack: NPC特殊攻擊
+TYPES.Item.NPC Spell: NPC法術
+TYPES.Item.Patron: 契約主
+TYPES.Item.Potion: 藥水
+TYPES.Item.Property: 特性
+TYPES.Item.Scroll: 卷軸
+TYPES.Item.Spell: 法術
+TYPES.Item.Talent: 天賦
+TYPES.Item.Wand: 魔杖
+TYPES.Item.Weapon: 武器

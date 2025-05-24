@@ -87,25 +87,17 @@ export default class SpellImporter extends FormApplication {
 			durationType += "s";
 		}
 
-		console.log(titleName);
-		console.log(tier);
-		console.log(classes);
-		console.log(range);
-		console.log(description);
-		console.log(durationType);
-		console.log(durationValue);
+		let classObj = (
+			await (shadowdark.compendiums.classes())
+		).contents.filter(
+			c => classes.includes(c.name.toLowerCase())
+		);
 
-		// parse out main stat block
-
-		// build parse complex outputs
-		let classObj = (await (shadowdark.compendiums.classes())).contents.filter(
-			c => classes.includes(c.name.toLowerCase()));
-		console.log(classObj);
 		let classIDs = classObj.map(c => `Compendium.shadowdark.classes.Item.${c._id}`);
-		// create the spell template
+
 		let spellObj = {
 			name: titleName,
-			img: "systems/shadowdark/assets/tokens/cowled_token.webp",
+			img: CONFIG.SHADOWDARK.DEFAULTS.ITEM_IMAGES.Spell,
 			type: "Spell",
 			system: {
 				class: classIDs,
@@ -119,10 +111,8 @@ export default class SpellImporter extends FormApplication {
 			},
 		};
 
-		// Create the NPC actor
 		const newSpell = await Item.create(spellObj);
 
-		console.log(newSpell);
 		return newSpell;
 	}
 }

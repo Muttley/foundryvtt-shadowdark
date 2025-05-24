@@ -1,3 +1,46 @@
+# v3.5.0
+
+## Enhancements
+- [#1074] Basic support for Foundry v13 added
+- [#1093] preCreate of Actor should set custom token on creation if one not set in data
+
+## Bugfixes
+- [#1067] Fixed Will O Wisp attack
+- [#1070] Item importer fails for non-capitalized names
+- [#1085] Special ability won't deduced if roll dialog is cancelled
+- [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
+- [#1092] Spell import macro creates spell items with default Actor token as image
+- [#1094] Pause message font weight too bold in v13
+
+## Chores
+- [#1083] Merge Chinese,Traditional and French translation updates from Crowdin
+
+---
+
+# v3.4.6
+
+## Bugfixes
+- [#1080] Chinese i18n localisation lang setting misconfigured
+
+## Chores
+- [#1079] Merge Finnish translation updates from Crowdin
+
+*Again, many thanks to **Han_G_FaYa** for assistance with the **Chinese, Traditional** translation config.*
+
+---
+
+# v3.4.5
+
+## Enhancements
+- [#1075] Added "Chinese, Traditional" as a fully translated system language
+
+## Chores
+- [#1073] Merge "Chinese, Traditional" translation updates from Crowdin
+
+*Many thanks to **Han_G_FaYa** for contributing **Chinese, Traditional** translation data.*
+
+---
+
 # v3.4.4
 
 ## Bugfixes
