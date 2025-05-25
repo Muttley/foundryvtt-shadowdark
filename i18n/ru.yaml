@@ -91,7 +91,7 @@ SHADOWDARK.apps.item-importer.instruction2d: Особенности
 SHADOWDARK.apps.item-importer.instruction3: 3. Нажмите "Импортировать предмет".
 SHADOWDARK.apps.item-importer.title: Импорт предмета
 SHADOWDARK.apps.level-up.dragdrop: Перетащите сюда
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Не удается запустить Boon Patron, так как конфигурация RollTable не может быть загружена
 SHADOWDARK.apps.level-up.hit_points: Очки здоровья
 SHADOWDARK.apps.level-up.level_up: Повышение уровня!
 SHADOWDARK.apps.level-up.leveling_to: Повышение до уровня
@@ -112,12 +112,12 @@ SHADOWDARK.apps.monster-importer.instruction2e: Особенность
 SHADOWDARK.apps.monster-importer.instruction3: 3. Нажмите "Импортировать монстра".
 SHADOWDARK.apps.monster-importer.title: Импорт монстра
 SHADOWDARK.apps.request-check.copied: Copied to Clipboard
-SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
-SHADOWDARK.apps.request-check.custom: Custom
-SHADOWDARK.apps.request-check.easy: Easy
-SHADOWDARK.apps.request-check.extreme: Extreme
-SHADOWDARK.apps.request-check.hard: Hard
-SHADOWDARK.apps.request-check.normal: Normal
+SHADOWDARK.apps.request-check.copy_to_clipboard: Копировать в буфер обмена
+SHADOWDARK.apps.request-check.custom: Пользовательское
+SHADOWDARK.apps.request-check.easy: Лёгкий
+SHADOWDARK.apps.request-check.extreme: Экстремальный
+SHADOWDARK.apps.request-check.hard: Сложный
+SHADOWDARK.apps.request-check.normal: Обычный
 SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Предметы не найдены
 SHADOWDARK.apps.shadowdarkling-importer.header: Импортер Shadowdarkling
@@ -171,7 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Поскольку {name} выбросил
 SHADOWDARK.chat.hp_roll.apply_to_max: Добавить к максимуму ОЗ
 SHADOWDARK.chat.item_roll.double_numerical: Удвойте любое одно числовое значение!
 SHADOWDARK.chat.item_roll.mishap: Бросьте по соответствующей таблице неудач!
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title_vs:
 SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Жезл ломается и навсегда перестает работать
 SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} истёк"
