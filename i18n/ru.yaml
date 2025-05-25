@@ -358,7 +358,7 @@ SHADOWDARK.error.class_ability.no-uses-remaining: Не осталось испо
 SHADOWDARK.error.general.gm_required: Для этого действия требуются права Мастера игры.
 SHADOWDARK.error.general.no_character_class: Класс персонажа не выбран
 SHADOWDARK.error.general.no_character_selected: No character selected
-SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
+SHADOWDARK.error.patron.no_supported_class: Не удается добавить Покровителя, так как текущий выбранный класс не разрешает этого
 SHADOWDARK.error.source.source_missing: Источник отсутствует или неизвестен...
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
@@ -483,7 +483,7 @@ SHADOWDARK.item.effect.source.title: Источник предмета
 SHADOWDARK.item.effect.warning.add_effect_without_value: Нельзя добавить эффекты без выбора значения, когда это требуется.
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Нельзя добавить эффекты с длительностью в раундах вне боя.
 SHADOWDARK.item.equipped: Экипировано
-SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
+SHADOWDARK.item.errors.no_available_ammunition: Нет доступных боеприпасов
 SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
 SHADOWDARK.item.inventory_free_carry: Свободный перенос
 SHADOWDARK.item.inventory_per_slot: Макс. на слот
@@ -875,7 +875,7 @@ TYPES.Item.Language: Language
 TYPES.Item.NPC Attack: NPC Attack
 TYPES.Item.NPC Feature: NPC Feature
 TYPES.Item.NPC Special Attack: NPC Special Attack
-TYPES.Item.NPC Spell: NPC Spell
+TYPES.Item.NPC Spell: Заклинание НИП'а
 TYPES.Item.Patron: Покровитель
 TYPES.Item.Potion: Зелье
 TYPES.Item.Property: Свойство
