@@ -13,10 +13,10 @@ SHADOWDARK.ability_wisdom: Мудрость
 SHADOWDARK.alignment.chaotic: Хаотичный
 SHADOWDARK.alignment.lawful: Законопослушный
 SHADOWDARK.alignment.neutral: Нейтральный
-SHADOWDARK.ancestry.choice_count: Количество выборов
-SHADOWDARK.ancestry.choice: Выбор
-SHADOWDARK.ancestry.fixed: Фиксированный
-SHADOWDARK.ancestry.languages.label: Языки предков
+SHADOWDARK.ancestry.choice_count: Число вариантов
+SHADOWDARK.ancestry.choice: Вариант
+SHADOWDARK.ancestry.fixed: Базовый
+SHADOWDARK.ancestry.languages.label: Язык происхождения
 SHADOWDARK.ancestry.languages.prompt: Выберите язык...
 SHADOWDARK.ancestry.nametable.label: Таблица случайных имён
 SHADOWDARK.ancestry.nametable.placeholder: Перетащите сюда таблицу бросков
@@ -36,13 +36,13 @@ SHADOWDARK.app.item_properties.save: Сохранить
 SHADOWDARK.app.item_properties.talent.effects.title: Типы эффектов талантов
 SHADOWDARK.app.item_properties.title: Свойства
 SHADOWDARK.app.item_properties.weapon.title: Свойства оружия
-SHADOWDARK.app.light_tracker.minute_short: мин
-SHADOWDARK.app.light_tracker.minutes_short: мин
-SHADOWDARK.app.light_tracker.title: Отслеживание света
+SHADOWDARK.app.light_tracker.minute_short: минута
+SHADOWDARK.app.light_tracker.minutes_short: минут
+SHADOWDARK.app.light_tracker.title: Отслеживание освещения
 SHADOWDARK.app.light-tracker.douse-light: Погасить свет
-SHADOWDARK.app.light-tracker.hide-inactive: Скрыть актёров без света
+SHADOWDARK.app.light-tracker.hide-inactive: Скрыть актёров без освещения
 SHADOWDARK.app.light-tracker.show-all-actors: Показать всех актёров
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить свет
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить освещение
 SHADOWDARK.app.loading.body: Поиск в далёких землях...
 SHADOWDARK.app.loading.title: Загрузка
 SHADOWDARK.app.npc_attack_ranges.title: Дальность атаки
@@ -50,11 +50,11 @@ SHADOWDARK.apps.character-generator.choose: Выберите
 SHADOWDARK.apps.character-generator.create_character: Создать персонажа
 SHADOWDARK.apps.character-generator.error.create: Не удалось создать персонажа игрока {error}
 SHADOWDARK.apps.character-generator.error.name: Имя персонажа не может быть пустым
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Невозможно сгенерировать случайное имя без выбранного происхождения
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Невозможно сгенерировать случайное имя без выбора происхождения
 SHADOWDARK.apps.character-generator.gear: Снаряжение
 SHADOWDARK.apps.character-generator.gold: Золото
 SHADOWDARK.apps.character-generator.name: Имя персонажа
-SHADOWDARK.apps.character-generator.see_details: Подробнее
+SHADOWDARK.apps.character-generator.see_details: Просмотреть детали
 SHADOWDARK.apps.character-generator.sidebar_create: Создать
 SHADOWDARK.apps.character-generator.sidebar_import: Импортировать
 SHADOWDARK.apps.character-generator.starting_gear: Стартовое снаряжение
@@ -91,22 +91,22 @@ SHADOWDARK.apps.item-importer.instruction2d: Особенности
 SHADOWDARK.apps.item-importer.instruction3: 3. Нажмите "Импортировать предмет".
 SHADOWDARK.apps.item-importer.title: Импорт предмета
 SHADOWDARK.apps.level-up.dragdrop: Перетащите сюда
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Не удается запустить Boon Patron, так как конфигурация RollTable не может быть загружена
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Не удается выбрать Дар Покровителя, так как конфигурация таблицы бросков не загружена
 SHADOWDARK.apps.level-up.hit_points: Очки здоровья
 SHADOWDARK.apps.level-up.level_up: Повышение уровня!
 SHADOWDARK.apps.level-up.leveling_to: Повышение до уровня
-SHADOWDARK.apps.level-up.missing_selections: Отсутствуют выборы
-SHADOWDARK.apps.level-up.notalent: На этом уровне не получено талантов
-SHADOWDARK.apps.level-up.or_boons: или Дар
-SHADOWDARK.apps.level-up.prompt: Не все обязательные выборы сделаны. Продолжить повышение уровня в любом случае?
+SHADOWDARK.apps.level-up.missing_selections: Ничего не выбрано
+SHADOWDARK.apps.level-up.notalent: На этом уровне не даются таланты
+SHADOWDARK.apps.level-up.or_boons: или Дары
+SHADOWDARK.apps.level-up.prompt: Не все обязательные пункты выбраны. Все равно продолжить повышение уровня?
 SHADOWDARK.apps.level-up.roll_boon: Бросок Дара
-SHADOWDARK.apps.level-up.roll_talent: Бросить талант
+SHADOWDARK.apps.level-up.roll_talent: Бросить Талант
 SHADOWDARK.apps.level-up.title: Повышение уровня
 SHADOWDARK.apps.monster-importer.import_button: Импортировать монстра
 SHADOWDARK.apps.monster-importer.instruction1: 1. Скопируйте текст монстра из исходного материала.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Вставьте текст в текстовое поле, следуя формату монстра, показанному в основных правилах. Добавьте пустую строку между каждой способностью.
 SHADOWDARK.apps.monster-importer.instruction2b: Название монстра
-SHADOWDARK.apps.monster-importer.instruction2c: Художественное описание
+SHADOWDARK.apps.monster-importer.instruction2c: Описание
 SHADOWDARK.apps.monster-importer.instruction2d: Основной блок характеристик
 SHADOWDARK.apps.monster-importer.instruction2e: Особенность
 SHADOWDARK.apps.monster-importer.instruction3: 3. Нажмите "Импортировать монстра".
@@ -116,7 +116,7 @@ SHADOWDARK.apps.request-check.copy_to_clipboard: Копировать в буф�
 SHADOWDARK.apps.request-check.custom: Пользовательское
 SHADOWDARK.apps.request-check.easy: Лёгкий
 SHADOWDARK.apps.request-check.extreme: Экстремальный
-SHADOWDARK.apps.request-check.hard: Сложный
+SHADOWDARK.apps.request-check.hard: Тяжелый
 SHADOWDARK.apps.request-check.normal: Обычный
 SHADOWDARK.apps.request-check.title: Запрос проверки
 SHADOWDARK.apps.shadowdarkling-importer.errors: Предметы не найдены
@@ -153,7 +153,7 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Помеха/Плавание
 SHADOWDARK.armor.properties.no_swimming: Нельзя плавать
 SHADOWDARK.armor.properties.one_handed: Занимает одну руку
 SHADOWDARK.armor.properties.shield: Щит
-SHADOWDARK.boon.type.label: Тип благословения
+SHADOWDARK.boon.type.label: Тип Дара
 SHADOWDARK.boons.blessing: Благословение
 SHADOWDARK.boons.oath: Клятва
 SHADOWDARK.boons.secret: Секрет
@@ -165,16 +165,16 @@ SHADOWDARK.chat_card.button.use_scroll: Использовать свиток
 SHADOWDARK.chat_card.button.use_wand: Использовать жезл
 SHADOWDARK.chat_card.context.apply_damage_secondary: Применить вторичный урон
 SHADOWDARK.chat_card.context.apply_damage: Применить урон
-SHADOWDARK.chat_card.context.apply_healing_secondary: Применить вторичное лечение
+SHADOWDARK.chat_card.context.apply_healing_secondary: Применить дополнительное лечение
 SHADOWDARK.chat_card.context.apply_healing: Применить лечение
 SHADOWDARK.chat.clockwise_initiative: Поскольку {name} выбросил наивысший результат, они будут ходить первыми, а все остальные участники боя будут следовать в фиксированном порядке.
 SHADOWDARK.chat.hp_roll.apply_to_max: Добавить к максимуму ОЗ
 SHADOWDARK.chat.item_roll.double_numerical: Удвойте любое одно числовое значение!
-SHADOWDARK.chat.item_roll.mishap: Бросьте по соответствующей таблице неудач!
-SHADOWDARK.chat.item_roll.title_vs:
-SHADOWDARK.chat.item_roll.title: Бросок атаки с {name}
+SHADOWDARK.chat.item_roll.mishap: Сделайте бросок по соответствующей Таблице неудач!
+SHADOWDARK.chat.item_roll.title_vs: Бросок атаки {name} против {target}
+SHADOWDARK.chat.item_roll.title: Бросок атаки {name}
 SHADOWDARK.chat.item_roll.wand_mishap: Жезл ломается и навсегда перестает работать
-SHADOWDARK.chat.light_source.expired: "{name}'s {lightSource} истёк"
+SHADOWDARK.chat.light_source.expired: "{name} {lightSource} истёк"
 SHADOWDARK.chat.light_source.remaining: минут осталось
 SHADOWDARK.chat.light_source.seconds_remaining: Осталось менее 1 минуты
 SHADOWDARK.chat.light_source.source.all: Все источники света погасли
@@ -395,14 +395,14 @@ SHADOWDARK.inventory.section.weapon: Оружие
 SHADOWDARK.inventory.slots_max: Макс
 SHADOWDARK.inventory.slots_used: Использовано
 SHADOWDARK.inventory.slots: Слоты
-SHADOWDARK.inventory.stashed_gear: Складированное снаряжение
+SHADOWDARK.inventory.stashed_gear: Снаряжение в тайнике
 SHADOWDARK.inventory.tooltip.gem_bag: Открыть мешочек с драгоценными камнями
 SHADOWDARK.inventory.tooltip.item_decrement: Уменьшить количество
 SHADOWDARK.inventory.tooltip.item_increment: Увеличить количество
 SHADOWDARK.inventory.tooltip.sell_treasure: Продать сокровище
 SHADOWDARK.inventory.tooltip.toggle_equipped: Переключить экипировку
 SHADOWDARK.inventory.tooltip.toggle_light_source: Переключить источник света
-SHADOWDARK.inventory.tooltip.toggle_stashed: Переключить складирование
+SHADOWDARK.inventory.tooltip.toggle_stashed: Положить в тайник
 SHADOWDARK.inventory.total_coins: Всего монет
 SHADOWDARK.inventory.total_gems: Всего драгоценных камней
 SHADOWDARK.item_type.armor: Доспехи
@@ -490,7 +490,7 @@ SHADOWDARK.item.inventory_per_slot: Макс. на слот
 SHADOWDARK.item.inventory_quantity: Количество
 SHADOWDARK.item.inventory_slots: Слотов на предмет
 SHADOWDARK.item.level: Уровень
-SHADOWDARK.item.light.in_use_tooltip: Это поле не может быть изменено, пока освещение активна
+SHADOWDARK.item.light.in_use_tooltip: Это поле не может быть изменено, пока освещение активно
 SHADOWDARK.item.light.is_source: Источник света
 SHADOWDARK.item.light.longevity: Долговечность (мин)
 SHADOWDARK.item.light.remaining: Осталось (мин)
@@ -516,7 +516,7 @@ SHADOWDARK.item.npc_attack_type: Тип
 SHADOWDARK.item.npc_attack.num_damage_dice: Кол-во кубиков урона
 SHADOWDARK.item.npc.spell_ability: Способность колдовства
 SHADOWDARK.item.npc.spell_bonus: Бонус к накладыванию заклинаний
-SHADOWDARK.item.npc.spell_count: Number of Castings
+SHADOWDARK.item.npc.spell_count: Количество использований
 SHADOWDARK.item.potion.label: Зелье
 SHADOWDARK.item.properties.label: Свойства предмета
 SHADOWDARK.item.scroll.label: Свиток
@@ -529,7 +529,7 @@ SHADOWDARK.item.spell_name: Название заклинания
 SHADOWDARK.item.spell_range: Дистанция
 SHADOWDARK.item.spell_tier: Уровень
 SHADOWDARK.item.spell.label: Заклинание
-SHADOWDARK.item.stashed.label: На хранении
+SHADOWDARK.item.stashed.label: В тайнике
 SHADOWDARK.item.talent_class: Класс таланта
 SHADOWDARK.item.treasure_name: Название сокровища
 SHADOWDARK.item.treasure_value: Ценность сокровища
@@ -655,7 +655,7 @@ SHADOWDARK.settings.debugEnabled.name: Включить/Отключить от�
 SHADOWDARK.settings.effect_panel.show_passive.hint: Если отмечено, Панель эффектов также будет показывать активные эффекты от талантов и предметов
 SHADOWDARK.settings.effect_panel.show_passive.name: Показывать все активные эффекты
 SHADOWDARK.settings.enable_targeting.hint: Автоматически подсчитывать, попадает ли атака на основе КЗ выбранных токенов
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.enable_targeting.name: Включить целенаправленную атаку
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Выполнить миграцию данных для встроенных сборников системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Мигрировать системные сборники
 SHADOWDARK.settings.module_art.hint: Настройте, какие изображения, предоставленные модулями, следует использовать
@@ -688,8 +688,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Если отме�
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Приостанавливать отслеживание света
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Если отмечено, отслеживание света будет следовать реальному времени. Отключите, если используется внешний модуль времени/календаря.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Отслеживание света в реальном времени
-SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
-SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Контролировать, могут ли игроки видеть оставшееся время на источниках освещения.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Показать игрокам оставшееся освещение"
 SHADOWDARK.settings.track_light_sources.show_remaining.option0: Нет
 SHADOWDARK.settings.track_light_sources.show_remaining.option1: Только точки
 SHADOWDARK.settings.track_light_sources.show_remaining.option2: Оставшиеся точки и минуты
@@ -766,7 +766,7 @@ SHADOWDARK.sheet.player.inventory.gear.label: Снаряжение
 SHADOWDARK.sheet.player.inventory.items.label: Предметы
 SHADOWDARK.sheet.player.inventory.quantity_short.label: Кол-во
 SHADOWDARK.sheet.player.inventory.slots.label: Ячейки
-SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
+SHADOWDARK.sheet.player.inventory.stashed_item.label: Предмет в тайнике
 SHADOWDARK.sheet.player.inventory.treasure.label: Сокровища
 SHADOWDARK.sheet.player.inventory.type.label: Тип
 SHADOWDARK.sheet.player.inventory.value.label: Стоимость
@@ -882,5 +882,5 @@ TYPES.Item.Property: Свойство
 TYPES.Item.Scroll: Свиток
 TYPES.Item.Spell: Заклинание
 TYPES.Item.Talent: Талант
-TYPES.Item.Wand: Волшебная палочка
+TYPES.Item.Wand: Жезл
 TYPES.Item.Weapon: Оружие
