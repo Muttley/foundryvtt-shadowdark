@@ -45,7 +45,7 @@ SHADOWDARK.app.light-tracker.show-all-actors: Показать всех актё
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить свет
 SHADOWDARK.app.loading.body: Поиск в далёких землях...
 SHADOWDARK.app.loading.title: Загрузка
-SHADOWDARK.app.npc_attack_ranges.title: Диапазоны атак
+SHADOWDARK.app.npc_attack_ranges.title: Дальность атаки
 SHADOWDARK.apps.character-generator.choose: Выберите
 SHADOWDARK.apps.character-generator.create_character: Создать персонажа
 SHADOWDARK.apps.character-generator.error.create: Не удалось создать персонажа игрока {error}
@@ -184,7 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: был погашен
 SHADOWDARK.chat.light_source.source.toggle.on: был зажжен
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} погас"
 SHADOWDARK.chat.potion_used: "{name} использовал зелье"
-SHADOWDARK.chat.spell_focus_check: "Focus Check"
+SHADOWDARK.chat.spell_focus_check: "Проверка концентрации"
 SHADOWDARK.chat.spell_learn.failure: "{name} не удалось ничему научиться из свитка"
 SHADOWDARK.chat.spell_learn.success: "{name} успешно выучил заклинание {spellName}"
 SHADOWDARK.chat.spell_learn.title: Изучение заклинания
@@ -360,9 +360,9 @@ SHADOWDARK.error.general.no_character_class: Класс персонажа не 
 SHADOWDARK.error.general.no_character_selected: Персонаж не выбран
 SHADOWDARK.error.patron.no_supported_class: Не удается добавить Покровителя, так как текущий выбранный класс не разрешает этого
 SHADOWDARK.error.source.source_missing: Источник отсутствует или неизвестен...
-SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
-SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
-SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
+SHADOWDARK.error.spells.unable_to_cast_spell: Вы не можете накладывать заклинания этого класса
+SHADOWDARK.error.spells.unable_to_use_item: Вы не можете использовать магические предметы
+SHADOWDARK.error.too_many_tokens_selected: Выбрано слишком много токенов
 SHADOWDARK.form.section_header.class_abilities.label: Классовые умения
 SHADOWDARK.form.section_header.equipment.label: Снаряжение
 SHADOWDARK.form.section_header.languages.label: Языки
@@ -412,12 +412,12 @@ SHADOWDARK.item_type.potion: Зелье
 SHADOWDARK.item_type.spell: Заклинание
 SHADOWDARK.item_type.talent: Талант
 SHADOWDARK.item_type.weapon: Оружие
-SHADOWDARK.item.ammunition: Ammunition
+SHADOWDARK.item.ammunition: Боеприпасы
 SHADOWDARK.item.armor_ac_modifier: Модификатор
 SHADOWDARK.item.armor_ac: КЗ
 SHADOWDARK.item.armor_bonus_attribute: Бонусный атрибут
 SHADOWDARK.item.armor_class: Класс доспеха
-SHADOWDARK.item.armor.armor_properties.label: Armor Properties
+SHADOWDARK.item.armor.armor_properties.label: Свойства брони
 SHADOWDARK.item.armor.base_armor.chainmail: Кольчуга
 SHADOWDARK.item.armor.base_armor.leather_armor: Кожаный доспех
 SHADOWDARK.item.armor.base_armor.plate_mail: Латы
@@ -559,7 +559,7 @@ SHADOWDARK.item.weapon.base_weapon.staff: Посох
 SHADOWDARK.item.weapon.base_weapon.title: Базовое оружие
 SHADOWDARK.item.weapon.base_weapon.wand: Волшебная палочка
 SHADOWDARK.item.weapon.base_weapon.warhammer: Боевой молот
-SHADOWDARK.item.weapon.weapon_properties.label: Weapon Properties
+SHADOWDARK.item.weapon.weapon_properties.label: Свойства оружия
 SHADOWDARK.language_choices.common.label: Дополнительный общий
 SHADOWDARK.language_choices.rare.label: Дополнительный редкий
 SHADOWDARK.language.celestial: Небесный
@@ -611,7 +611,7 @@ SHADOWDARK.npc_move.near: Ближняя
 SHADOWDARK.npc_move.none: Нет
 SHADOWDARK.npc_move.special: Особая
 SHADOWDARK.npc_move.triple_near: Тройная ближняя
-SHADOWDARK.patron.boons_table.label: Patron Boons Table
+SHADOWDARK.patron.boons_table.label: Таблица Даров Покровителя
 SHADOWDARK.property.type.option.armor: Доспех
 SHADOWDARK.property.type.option.weapon: Оружие
 SHADOWDARK.property.type.title: Тип свойства
@@ -624,8 +624,8 @@ SHADOWDARK.range.near_short: "Б"
 SHADOWDARK.range.near: Ближняя
 SHADOWDARK.range.nearLine_short: БЛ
 SHADOWDARK.range.nearLine: Ближняя линия
-SHADOWDARK.range.oneMile_short: 1mi
-SHADOWDARK.range.oneMile: 1 Mile
+SHADOWDARK.range.oneMile_short: 1 миля
+SHADOWDARK.range.oneMile: 1 миля
 SHADOWDARK.range.samePlane_short: ОП
 SHADOWDARK.range.samePlane: На одном плане
 SHADOWDARK.range.self_short: С
@@ -663,7 +663,7 @@ SHADOWDARK.settings.module_art.label: Настроить изображения
 SHADOWDARK.settings.module_art.name: Изображения из модулей
 SHADOWDARK.settings.module_art.save: Сохранить изменения
 SHADOWDARK.settings.roll_npc_hp.hint: Автоматически бросать кубики для определения очков здоровья NPC при добавлении их на сцену
-SHADOWDARK.settings.roll_npc_hp.name: Автоматический бросок очков здоровья NPC
+SHADOWDARK.settings.roll_npc_hp.name: Автоматический бросок очков здоровья НИП
 SHADOWDARK.settings.schemaVersion.hint: Записывает текущую версию схемы данных системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.schemaVersion.name: Версия схемы
 SHADOWDARK.settings.source_filter.all_used: В настоящее время разрешены все источники
@@ -711,7 +711,7 @@ SHADOWDARK.sheet.actor.hp: ОЗ
 SHADOWDARK.sheet.actor.level: Уровень
 SHADOWDARK.sheet.actor.placeholder.name: Имя нового актора
 SHADOWDARK.sheet.class.item: Лист предмета Shadowdark
-SHADOWDARK.sheet.class.npc: Лист NPC Shadowdark
+SHADOWDARK.sheet.class.npc: Лист НИП Shadowdark
 SHADOWDARK.sheet.class.player: Лист игрока Shadowdark
 SHADOWDARK.sheet.general.active_effects.create_effect.title: Создать эффект
 SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Удалить эффект
@@ -762,12 +762,12 @@ SHADOWDARK.sheet.player.class.label: Класс
 SHADOWDARK.sheet.player.class.tooltip: Профессия вашего персонажа
 SHADOWDARK.sheet.player.deity.label: Божество
 SHADOWDARK.sheet.player.deity.tooltip: Космическая связь вашего персонажа с противоборствующими силами Закона и Хаоса или сбалансированного Нейтралитета.
-SHADOWDARK.sheet.player.inventory.gear.label: Gear
-SHADOWDARK.sheet.player.inventory.items.label: Items
-SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
-SHADOWDARK.sheet.player.inventory.slots.label: Slots
+SHADOWDARK.sheet.player.inventory.gear.label: Снаряжение
+SHADOWDARK.sheet.player.inventory.items.label: Предметы
+SHADOWDARK.sheet.player.inventory.quantity_short.label: Кол-во
+SHADOWDARK.sheet.player.inventory.slots.label: Ячейки
 SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
-SHADOWDARK.sheet.player.inventory.treasure.label: Treasure
+SHADOWDARK.sheet.player.inventory.treasure.label: Сокровища
 SHADOWDARK.sheet.player.inventory.type.label: Тип
 SHADOWDARK.sheet.player.inventory.value.label: Value
 SHADOWDARK.sheet.player.languages: Языки
@@ -810,7 +810,7 @@ SHADOWDARK.source.cursed-scroll-2: Проклятый свиток том 2, К�
 SHADOWDARK.source.cursed-scroll-3: Проклятый свиток том 3, Полуночное солнце
 SHADOWDARK.source.cursed-scroll-4: Проклятый свиток том 4, Река ночи
 SHADOWDARK.source.cursed-scroll-5: Проклятый свиток том 5, Обитатели подземья
-SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
+SHADOWDARK.source.cursed-scroll-6: Проклятый свиток том 6, Река ночи
 SHADOWDARK.source.quickstart: "Shadowdark НРИ: Набор для быстрого старта"
 SHADOWDARK.spell_caster.priest: Жрец
 SHADOWDARK.spell_caster.wizard: Волшебник
@@ -830,8 +830,8 @@ SHADOWDARK.talent.backstab: Удар в спину
 SHADOWDARK.talent.class.ancestry: Происхождение
 SHADOWDARK.talent.class.class: Класс
 SHADOWDARK.talent.class.level: Уровень
-SHADOWDARK.talent.class.patronBoon: Patron Boon
-SHADOWDARK.talent.level_gained: Level Gained
+SHADOWDARK.talent.class.patronBoon: Дар Покровителя
+SHADOWDARK.talent.level_gained: Получен новый уровень
 SHADOWDARK.talent.type.ability_improvement: Улучшение характеристики
 SHADOWDARK.talent.type.advantage.hp: Преимущество при броске ОЗ
 SHADOWDARK.talent.type.advantage.initiative: Преимущество инициативы
@@ -858,11 +858,11 @@ SHADOWDARK.weapon.properties.two_handed: Двуручное
 SHADOWDARK.weapon.properties.versatile: Универсальное
 SHADOWDARK.weapon.type.melee: Рукопашное
 SHADOWDARK.weapon.type.ranged: Дальнобойное
-TYPES.Actor.Light: Light
+TYPES.Actor.Light: Свет
 TYPES.Actor.NPC: НИП
 TYPES.Actor.Player: Игрок
-TYPES.Item.Ancestry: Ancestry
-TYPES.Item.Armor: Armor
+TYPES.Item.Ancestry: Происхождение
+TYPES.Item.Armor: Доспех
 TYPES.Item.Background: Предыстория
 TYPES.Item.Basic: Базовые
 TYPES.Item.Boon: Дар
@@ -872,9 +872,9 @@ TYPES.Item.Deity: Божество
 TYPES.Item.Effect: Эффект
 TYPES.Item.Gem: Самоцвет
 TYPES.Item.Language: Язык
-TYPES.Item.NPC Attack: NPC Attack
-TYPES.Item.NPC Feature: NPC Feature
-TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.NPC Attack: Атака НИП
+TYPES.Item.NPC Feature: Особенности НИП
+TYPES.Item.NPC Special Attack: Особая атака НИП
 TYPES.Item.NPC Spell: Заклинание НИП'а
 TYPES.Item.Patron: Покровитель
 TYPES.Item.Potion: Зелье
