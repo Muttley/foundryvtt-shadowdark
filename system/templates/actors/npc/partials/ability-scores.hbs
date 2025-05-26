@@ -13,11 +13,13 @@
 				>
 					{{ability.label}}
 				</a>
-				{{numberInput
-					ability.mod
-					name=(concat "system.abilities." id ".mod")
-					class="ability-score" placeholder="0"
-				}}
+				<input
+					name="{{concat "system.abilities." id ".mod"}}"
+					type="number"
+					value="{{ability.mod}}"
+					placeholder="0"
+					tabindex="{{calculateAbilityTabIndex @index}}"
+				>
 			</div>
 
 		{{/each}}

@@ -16,6 +16,12 @@ export default function registerHandlebarsHelpers() {
 		return newOjects;
 	});
 
+	Handlebars.registerHelper('calculateAbilityTabIndex', function(index) {
+		const row = Math.floor(index / 2);
+		const col = index % 2;
+		return row + (col === 0 ? 1 : 4); // 1-3 for col 1, 4-6 for col 2
+	});
+
 	Handlebars.registerHelper("concat", function() {
 		let outStr = "";
 		for (let arg in arguments) {
