@@ -234,7 +234,7 @@ SHADOWDARK.class.spellcasting_ability.label: Способность колдов
 SHADOWDARK.class.spellcasting_class.label: Класс заклинаний
 SHADOWDARK.class.spellcasting.base_difficulty.label: Базовая СЛ колдовства
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
-SHADOWDARK.class.starting_boons.count.label: Starting Boons
+SHADOWDARK.class.starting_boons.count.label: Начальные Дары
 SHADOWDARK.class.talent_choices.count.label: Количество выборов
 SHADOWDARK.class.talent_choices.label: Выбор талантов
 SHADOWDARK.class.talent_choices.prompt: Выберите талант...
@@ -282,7 +282,7 @@ SHADOWDARK.dialog.general.no: "Нет"
 SHADOWDARK.dialog.general.select: Выбрать
 SHADOWDARK.dialog.general.yes: "Да"
 SHADOWDARK.dialog.gm: Мастер игры
-SHADOWDARK.dialog.hp_re_roll.title: HP Re-roll
+SHADOWDARK.dialog.hp_re_roll.title: Повторный бросок ОЗ
 SHADOWDARK.dialog.hp_roll.per_level: Бросок ОЗ для уровня {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "ОЗ до броска: {hp}"
 SHADOWDARK.dialog.hp_roll.roll_level_1: Выпало {hp} ОЗ для 1 уровня (включая мод. телосложения)
@@ -306,7 +306,7 @@ SHADOWDARK.dialog.item.sell_all: Продать всё
 SHADOWDARK.dialog.item.sell: Продать
 SHADOWDARK.dialog.item.use: Использовать
 SHADOWDARK.dialog.light_source.pick_up.title: Выберите персонажа, которому дать источник света
-SHADOWDARK.dialog.roll_mode_label: Rolling Mode
+SHADOWDARK.dialog.roll_mode_label: Режим броска
 SHADOWDARK.dialog.roll: Бросок
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "ВНИМАНИЕ: Это заклинание не относится к классу персонажа. Вы уверены, что хотите попробовать его выучить?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Подтвердить изучение заклинания
@@ -322,11 +322,11 @@ SHADOWDARK.dialog.select_deity.prompt: Выберите божество...
 SHADOWDARK.dialog.select_deity.title: Выбор божества
 SHADOWDARK.dialog.select_languages.prompt: Выберите язык...
 SHADOWDARK.dialog.select_languages.title: Выбор языков
-SHADOWDARK.dialog.select_patron.title: Select Patron
+SHADOWDARK.dialog.select_patron.title: Выберите Покровителя
 SHADOWDARK.dialog.select_weapon_property.prompt: Выберите свойство оружия...
 SHADOWDARK.dialog.select_weapon_property.title: Выберите свойства оружия
 SHADOWDARK.dialog.spell_roll.title: Сотворить заклинание с помощью
-SHADOWDARK.dialog.spellbook.open_which_class.title: Choose Available Spellboook
+SHADOWDARK.dialog.spellbook.open_which_class.title: Выберите доступную книгу заклинаний
 SHADOWDARK.dialog.submit: Подтвердить
 SHADOWDARK.dialog.tooltip.talent_advantage: Талант даёт вам преимущество для этого броска
 SHADOWDARK.dialog.type_here: Введите здесь
@@ -357,7 +357,7 @@ SHADOWDARK.effect.unavailable: Отключенные эффекты
 SHADOWDARK.error.class_ability.no-uses-remaining: Не осталось использований
 SHADOWDARK.error.general.gm_required: Для этого действия требуются права Мастера игры.
 SHADOWDARK.error.general.no_character_class: Класс персонажа не выбран
-SHADOWDARK.error.general.no_character_selected: No character selected
+SHADOWDARK.error.general.no_character_selected: Персонаж не выбран
 SHADOWDARK.error.patron.no_supported_class: Не удается добавить Покровителя, так как текущий выбранный класс не разрешает этого
 SHADOWDARK.error.source.source_missing: Источник отсутствует или неизвестен...
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
@@ -859,19 +859,19 @@ SHADOWDARK.weapon.properties.versatile: Универсальное
 SHADOWDARK.weapon.type.melee: Рукопашное
 SHADOWDARK.weapon.type.ranged: Дальнобойное
 TYPES.Actor.Light: Light
-TYPES.Actor.NPC: NPC
-TYPES.Actor.Player: Player
+TYPES.Actor.NPC: НИП
+TYPES.Actor.Player: Игрок
 TYPES.Item.Ancestry: Ancestry
 TYPES.Item.Armor: Armor
-TYPES.Item.Background: Background
-TYPES.Item.Basic: Basic
-TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class Ability
-TYPES.Item.Class: Class
-TYPES.Item.Deity: Deity
-TYPES.Item.Effect: Effect
-TYPES.Item.Gem: Gem
-TYPES.Item.Language: Language
+TYPES.Item.Background: Предыстория
+TYPES.Item.Basic: Базовые
+TYPES.Item.Boon: Дар
+TYPES.Item.Class Ability: Классовая способность
+TYPES.Item.Class: Класс
+TYPES.Item.Deity: Божество
+TYPES.Item.Effect: Эффект
+TYPES.Item.Gem: Самоцвет
+TYPES.Item.Language: Язык
 TYPES.Item.NPC Attack: NPC Attack
 TYPES.Item.NPC Feature: NPC Feature
 TYPES.Item.NPC Special Attack: NPC Special Attack
