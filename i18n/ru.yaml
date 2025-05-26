@@ -22,7 +22,7 @@ SHADOWDARK.ancestry.nametable.label: Таблица случайных имён
 SHADOWDARK.ancestry.nametable.placeholder: Перетащите сюда таблицу бросков
 SHADOWDARK.ancestry.nametable.random_weight: Вес рандомизации
 SHADOWDARK.ancestry.nametable.tooltip.weight: Влияет на шанс выпадения при использовании генератора персонажей. Более высокие значения увеличивают шанс. Значение по умолчанию - 1.
-SHADOWDARK.ancestry.talents.label: Таланты предков
+SHADOWDARK.ancestry.talents.label: Таланты происхождения
 SHADOWDARK.ancestry.talents.prompt: Выберите талант...
 SHADOWDARK.app.active_effects.title: Активные эффекты
 SHADOWDARK.app.gem_bag.sell_all: Продать все самоцветы
@@ -235,7 +235,7 @@ SHADOWDARK.class.spellcasting_class.label: Класс заклинаний
 SHADOWDARK.class.spellcasting.base_difficulty.label: Базовая СЛ колдовства
 SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
 SHADOWDARK.class.starting_boons.count.label: Начальные Дары
-SHADOWDARK.class.talent_choices.count.label: Количество выборов
+SHADOWDARK.class.talent_choices.count.label: Число вариантов
 SHADOWDARK.class.talent_choices.label: Выбор талантов
 SHADOWDARK.class.talent_choices.prompt: Выберите талант...
 SHADOWDARK.class.talents_table.label: Таблица талантов класса
@@ -518,7 +518,7 @@ SHADOWDARK.item.npc.spell_ability: Способность колдовства
 SHADOWDARK.item.npc.spell_bonus: Бонус к накладыванию заклинаний
 SHADOWDARK.item.npc.spell_count: Number of Castings
 SHADOWDARK.item.potion.label: Зелье
-SHADOWDARK.item.properties.label: Item Properties
+SHADOWDARK.item.properties.label: Свойства предмета
 SHADOWDARK.item.scroll.label: Свиток
 SHADOWDARK.item.source_tag: Тег источника
 SHADOWDARK.item.source: Источник
@@ -617,7 +617,7 @@ SHADOWDARK.property.type.option.weapon: Оружие
 SHADOWDARK.property.type.title: Тип свойства
 SHADOWDARK.range.close_short: В
 SHADOWDARK.range.close: Вплотную
-SHADOWDARK.range.double_near: Double Near
+SHADOWDARK.range.double_near: Двойная ближняя
 SHADOWDARK.range.far_short: Д
 SHADOWDARK.range.far: Дальняя
 SHADOWDARK.range.near_short: "Б"
@@ -705,7 +705,7 @@ SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Уменьшить досту
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Увеличить доступные использования
 SHADOWDARK.sheet.actor.ac: КЗ
 SHADOWDARK.sheet.actor.alignment: Мировоззрение
-SHADOWDARK.sheet.actor.character_notes: Character Notes
+SHADOWDARK.sheet.actor.character_notes: Заметки персонажа
 SHADOWDARK.sheet.actor.hp_max: Макс
 SHADOWDARK.sheet.actor.hp: ОЗ
 SHADOWDARK.sheet.actor.level: Уровень
@@ -769,7 +769,7 @@ SHADOWDARK.sheet.player.inventory.slots.label: Ячейки
 SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
 SHADOWDARK.sheet.player.inventory.treasure.label: Сокровища
 SHADOWDARK.sheet.player.inventory.type.label: Тип
-SHADOWDARK.sheet.player.inventory.value.label: Value
+SHADOWDARK.sheet.player.inventory.value.label: Стоимость
 SHADOWDARK.sheet.player.languages: Языки
 SHADOWDARK.sheet.player.luck: Удача
 SHADOWDARK.sheet.player.melee_attacks: Рукопашные атаки
@@ -847,7 +847,7 @@ SHADOWDARK.talent.type.melee_damage_bonus: Бонус к броску рукоп
 SHADOWDARK.talent.type.ranged_attack_bonus: Бонус к броску дальней атаки
 SHADOWDARK.talent.type.ranged_damage_bonus: Бонус к броску дальнего урона
 SHADOWDARK.talent.type.spell_bonus: Бонус к накладыванию заклинаний
-SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
+SHADOWDARK.talent.type.stoneSkinTalent: 'Талант: Каменная кожа'
 SHADOWDARK.talent.type.title: Тип(ы) таланта
 SHADOWDARK.talent.type.weapon_mastery: Мастерство оружия
 SHADOWDARK.tours.lightsource.notification.not_enabled: Вам нужно включить отслеживание источников света в настройках, чтобы иметь возможность запустить тур
