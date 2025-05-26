@@ -29,7 +29,7 @@ SHADOWDARK.app.gem_bag.sell_all: Продать все самоцветы
 SHADOWDARK.app.gem_bag.title: Сумка для самоцветов
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать самоцвет
 SHADOWDARK.app.gem_bag.total_value: Общая стоимость
-SHADOWDARK.app.item_properties.armor.title: Свойства брони
+SHADOWDARK.app.item_properties.armor.title: Свойства доспеха
 SHADOWDARK.app.item_properties.languages.title: Языки
 SHADOWDARK.app.item_properties.magic_item.effects.title: Эффекты магических предметов
 SHADOWDARK.app.item_properties.save: Сохранить
@@ -233,7 +233,7 @@ SHADOWDARK.class.ranger: Следопыт
 SHADOWDARK.class.spellcasting_ability.label: Способность колдовства
 SHADOWDARK.class.spellcasting_class.label: Класс заклинаний
 SHADOWDARK.class.spellcasting.base_difficulty.label: Базовая СЛ колдовства
-SHADOWDARK.class.spells_Known.label: Spells Known by Spell Tier
+SHADOWDARK.class.spells_Known.label: Заклинания, известные по уровню заклинаний
 SHADOWDARK.class.starting_boons.count.label: Начальные Дары
 SHADOWDARK.class.talent_choices.count.label: Число вариантов
 SHADOWDARK.class.talent_choices.label: Выбор талантов
@@ -467,7 +467,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Бонус к уро
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Преимущество при колдовстве заклинания
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Бонус к проверке колдовства
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
-SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 'Талант: Каменная кожа'
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Бонус к КЗ без доспехов
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Бонус к броску атаки оружием
 SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Бонус к урону атаки оружием
@@ -484,7 +484,7 @@ SHADOWDARK.item.effect.warning.add_effect_without_value: Нельзя добав
 SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Нельзя добавить эффекты с длительностью в раундах вне боя.
 SHADOWDARK.item.equipped: Экипировано
 SHADOWDARK.item.errors.no_available_ammunition: Нет доступных боеприпасов
-SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
+SHADOWDARK.item.errors.no_spellcasting_classes: Этот персонаж не имеет класса заклинателя
 SHADOWDARK.item.inventory_free_carry: Свободный перенос
 SHADOWDARK.item.inventory_per_slot: Макс. на слот
 SHADOWDARK.item.inventory_quantity: Количество
@@ -648,13 +648,13 @@ SHADOWDARK.roll.one_handed_damage: Урон одноручным
 SHADOWDARK.roll.spell_casting_check: Проверка заклинания
 SHADOWDARK.roll.success: Успех! ({value})
 SHADOWDARK.roll.two_handed_damage: Урон двуручным
-SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
-SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
+SHADOWDARK.settings.consume_ammunition.hint: Автоматически регулировать боеприпасы для оружия, которое их использует, при выполнении броска атаки
+SHADOWDARK.settings.consume_ammunition.name: Автопотребление боеприпасов
 SHADOWDARK.settings.debugEnabled.hint: Включить или отключить дополнительное ведение журнала отладки
 SHADOWDARK.settings.debugEnabled.name: Включить/Отключить отладку
 SHADOWDARK.settings.effect_panel.show_passive.hint: Если отмечено, Панель эффектов также будет показывать активные эффекты от талантов и предметов
 SHADOWDARK.settings.effect_panel.show_passive.name: Показывать все активные эффекты
-SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
+SHADOWDARK.settings.enable_targeting.hint: Автоматически подсчитывать, попадает ли атака на основе КЗ выбранных токенов
 SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Выполнить миграцию данных для встроенных сборников системы Shadowdark RPG (не изменяйте, если не знаете, что делаете)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Мигрировать системные сборники
@@ -690,10 +690,10 @@ SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Если отм�
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Отслеживание света в реальном времени
 SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
 SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
-SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
-SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
-SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: Нет
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Только точки
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Оставшиеся точки и минуты
+SHADOWDARK.settings.use_clockwise_initiative.hint: Если отмечено, участник с наивысшим броском инициативы будет ходить первым, а все остальные участники будут следовать в фиксированном порядке. Все НИП будут сгруппированы вместе в порядке инициативы.
 SHADOWDARK.settings.use_clockwise_initiative.name: Использовать инициативу по часовой стрелке
 SHADOWDARK.settings.use_pulp_mode.hint: Показывает жетоны Удачи как числовое значение, а не как флажок
 SHADOWDARK.settings.use_pulp_mode.name: Включить режим Pulp
