@@ -466,7 +466,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Бонус к бро
 SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Бонус к урону дальней атаки
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Преимущество при колдовстве заклинания
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Бонус к проверке колдовства
-SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Бонус заклинательной способности
 SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 'Талант: Каменная кожа'
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Бонус к КЗ без доспехов
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Бонус к броску атаки оружием
@@ -490,7 +490,7 @@ SHADOWDARK.item.inventory_per_slot: Макс. на слот
 SHADOWDARK.item.inventory_quantity: Количество
 SHADOWDARK.item.inventory_slots: Слотов на предмет
 SHADOWDARK.item.level: Уровень
-SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
+SHADOWDARK.item.light.in_use_tooltip: Это поле не может быть изменено, пока освещение активна
 SHADOWDARK.item.light.is_source: Источник света
 SHADOWDARK.item.light.longevity: Долговечность (мин)
 SHADOWDARK.item.light.remaining: Осталось (мин)
@@ -840,7 +840,7 @@ SHADOWDARK.talent.type.advantage.title: Бонус преимущества
 SHADOWDARK.talent.type.armor_bonus: Бонус к КЗ доспеха
 SHADOWDARK.talent.type.armor_mastery: Мастерство доспехов
 SHADOWDARK.talent.type.backstab_die: Дополнительный кубик удара в спину
-SHADOWDARK.talent.type.bonus_caster_classes: Bonus Spellcasting Class
+SHADOWDARK.talent.type.bonus_caster_classes: Бонус заклинательной способности
 SHADOWDARK.talent.type.custom: Пользовательский талант
 SHADOWDARK.talent.type.melee_attack_bonus: Бонус к броску рукопашной атаки
 SHADOWDARK.talent.type.melee_damage_bonus: Бонус к броску рукопашного урона
