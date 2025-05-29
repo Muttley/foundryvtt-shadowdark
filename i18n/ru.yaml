@@ -13,29 +13,29 @@ SHADOWDARK.ability_wisdom: Мудрость
 SHADOWDARK.alignment.chaotic: Хаотичный
 SHADOWDARK.alignment.lawful: Законопослушный
 SHADOWDARK.alignment.neutral: Нейтральный
-SHADOWDARK.ancestry.choice_count: Количество происхождений
-SHADOWDARK.ancestry.choice: Вариант
+SHADOWDARK.ancestry.choice_count: Количество
+SHADOWDARK.ancestry.choice: Выбор
 SHADOWDARK.ancestry.fixed: Базовый
-SHADOWDARK.ancestry.languages.label: Язык происхождения
-SHADOWDARK.ancestry.languages.prompt: Выберите язык...
-SHADOWDARK.ancestry.nametable.label: Таблица случайных имён
-SHADOWDARK.ancestry.nametable.placeholder: Перетащите сюда таблицу бросков
-SHADOWDARK.ancestry.nametable.random_weight: Вес рандомизации
-SHADOWDARK.ancestry.nametable.tooltip.weight: Влияет на шанс выпадения при использовании генератора персонажей. Более высокие значения увеличивают шанс. Значение по умолчанию - 1.
-SHADOWDARK.ancestry.talents.label: Таланты происхождения
+SHADOWDARK.ancestry.languages.label: Язык Происхождения
+SHADOWDARK.ancestry.languages.prompt: Выберите Язык...
+SHADOWDARK.ancestry.nametable.label: Таблица Случайных Имён
+SHADOWDARK.ancestry.nametable.placeholder: Перетащите Сюда Таблицу Бросков
+SHADOWDARK.ancestry.nametable.random_weight: Вес Рандомизации
+SHADOWDARK.ancestry.nametable.tooltip.weight: Влияет на шанс выпадения при использовании Генератора Персонажей. Более высокие значения увеличивают шанс. Значение по умолчанию - 1.
+SHADOWDARK.ancestry.talents.label: Таланты Происхождения
 SHADOWDARK.ancestry.talents.prompt: Выберите талант...
-SHADOWDARK.app.active_effects.title: Активные эффекты
-SHADOWDARK.app.gem_bag.sell_all: Продать все самоцветы
+SHADOWDARK.app.active_effects.title: Активные Эффекты
+SHADOWDARK.app.gem_bag.sell_all: Продать Все Самоцветы
 SHADOWDARK.app.gem_bag.title: Сумка для самоцветов
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать самоцвет
-SHADOWDARK.app.gem_bag.total_value: Общая стоимость
-SHADOWDARK.app.item_properties.armor.title: Свойства доспеха
+SHADOWDARK.app.gem_bag.total_value: Общая Стоимость
+SHADOWDARK.app.item_properties.armor.title: Свойства Доспеха
 SHADOWDARK.app.item_properties.languages.title: Языки
-SHADOWDARK.app.item_properties.magic_item.effects.title: Эффекты магических предметов
+SHADOWDARK.app.item_properties.magic_item.effects.title: Эффекты Магических Предметов
 SHADOWDARK.app.item_properties.save: Сохранить
-SHADOWDARK.app.item_properties.talent.effects.title: Типы эффектов талантов
+SHADOWDARK.app.item_properties.talent.effects.title: Типы Эффектов Талантов
 SHADOWDARK.app.item_properties.title: Свойства
-SHADOWDARK.app.item_properties.weapon.title: Свойства оружия
+SHADOWDARK.app.item_properties.weapon.title: Свойства Оружия
 SHADOWDARK.app.light_tracker.minute_short: минута
 SHADOWDARK.app.light_tracker.minutes_short: минут
 SHADOWDARK.app.light_tracker.title: Отслеживание освещения
@@ -113,7 +113,7 @@ SHADOWDARK.apps.monster-importer.instruction3: 3. Нажмите "Импорти
 SHADOWDARK.apps.monster-importer.title: Импорт монстра
 SHADOWDARK.apps.request-check.copied: Скопировано в буфер обмена
 SHADOWDARK.apps.request-check.copy_to_clipboard: Копировать в буфер обмена
-SHADOWDARK.apps.request-check.custom: Пользовательское
+SHADOWDARK.apps.request-check.custom: Пользовательский
 SHADOWDARK.apps.request-check.easy: Лёгкий
 SHADOWDARK.apps.request-check.extreme: Экстремальный
 SHADOWDARK.apps.request-check.hard: Тяжелый
@@ -218,13 +218,13 @@ SHADOWDARK.class-ability.options: Опции
 SHADOWDARK.class.armor.all.label: Все Доспехи
 SHADOWDARK.class.armor.label: Доспехи
 SHADOWDARK.class.armor.prompt: Выберите Доспехи...
-SHADOWDARK.class.choice_count: Количество классов
+SHADOWDARK.class.choice_count: Количество
 SHADOWDARK.class.choice: Выбор
 SHADOWDARK.class.fighter: Воин
 SHADOWDARK.class.fixed: Базовый
 SHADOWDARK.class.has_patron.count.label: Есть Покровитель?
 SHADOWDARK.class.hit_points.label: Бросок Кубика ОЗ
-SHADOWDARK.class.language_choices.count.label: Количество Языков
+SHADOWDARK.class.language_choices.count.label: Количество
 SHADOWDARK.class.language_choices.label: Выбор Языков
 SHADOWDARK.class.language_choices.prompt: Выберите Язык...
 SHADOWDARK.class.languages.label: Языки Класса
@@ -235,7 +235,7 @@ SHADOWDARK.class.spellcasting_class.label: Класс Заклинателя
 SHADOWDARK.class.spellcasting.base_difficulty.label: Базовая СЛ Заклинания
 SHADOWDARK.class.spells_Known.label: Заклинания, Известные по Уровню Заклинаний
 SHADOWDARK.class.starting_boons.count.label: Начальные Дары
-SHADOWDARK.class.talent_choices.count.label: Количество Талантов
+SHADOWDARK.class.talent_choices.count.label: Количество
 SHADOWDARK.class.talent_choices.label: Выбор Талантов
 SHADOWDARK.class.talent_choices.prompt: Выберите Талант...
 SHADOWDARK.class.talents_table.label: Таблица Талантов Класса
@@ -261,7 +261,7 @@ SHADOWDARK.dialog.ability_check.int: Проверка Интеллекта
 SHADOWDARK.dialog.ability_check.str: Проверка Силы
 SHADOWDARK.dialog.ability_check.title: Проверка Характеристики
 SHADOWDARK.dialog.ability_check.wis: Проверка Мудрости
-SHADOWDARK.dialog.create_custom_item: Создать Собственный Предмет
+SHADOWDARK.dialog.create_custom_item: Создать Пользовательский Предмет
 SHADOWDARK.dialog.create_treasure: Создать Сокровище
 SHADOWDARK.dialog.create: Создать
 SHADOWDARK.dialog.edit_hp.title: Изменить ОЗ
@@ -336,8 +336,8 @@ SHADOWDARK.effect_duration.minutes: Минуты
 SHADOWDARK.effect_duration.seconds: Секунды
 SHADOWDARK.effect_duration.turns: Ходы
 SHADOWDARK.effect_duration.unlimited: Неограниченно
-SHADOWDARK.effect.custom: Свои Эффекты
-SHADOWDARK.effect.footer.add_custom: Добавить Свой Эффект
+SHADOWDARK.effect.custom: Пользовательские Эффекты
+SHADOWDARK.effect.footer.add_custom: Добавить Пользовательский Эффект
 SHADOWDARK.effect.header.changes: Изменения
 SHADOWDARK.effect.header.delete: Удалить
 SHADOWDARK.effect.header.edit: Редактировать
