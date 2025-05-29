@@ -26,8 +26,8 @@ SHADOWDARK.ancestry.talents.label: Таланты Происхождения
 SHADOWDARK.ancestry.talents.prompt: Выберите талант...
 SHADOWDARK.app.active_effects.title: Активные Эффекты
 SHADOWDARK.app.gem_bag.sell_all: Продать Все Самоцветы
-SHADOWDARK.app.gem_bag.title: Сумка для самоцветов
-SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать самоцвет
+SHADOWDARK.app.gem_bag.title: Сумка для Самоцветов
+SHADOWDARK.app.gem_bag.tooltip.sell_gem: Продать Самоцвет
 SHADOWDARK.app.gem_bag.total_value: Общая Стоимость
 SHADOWDARK.app.item_properties.armor.title: Свойства Доспеха
 SHADOWDARK.app.item_properties.languages.title: Языки
@@ -36,16 +36,16 @@ SHADOWDARK.app.item_properties.save: Сохранить
 SHADOWDARK.app.item_properties.talent.effects.title: Типы Эффектов Талантов
 SHADOWDARK.app.item_properties.title: Свойства
 SHADOWDARK.app.item_properties.weapon.title: Свойства Оружия
-SHADOWDARK.app.light_tracker.minute_short: минута
-SHADOWDARK.app.light_tracker.minutes_short: минут
+SHADOWDARK.app.light_tracker.minute_short: мин
+SHADOWDARK.app.light_tracker.minutes_short: мин
 SHADOWDARK.app.light_tracker.title: Отслеживание освещения
-SHADOWDARK.app.light-tracker.douse-light: Погасить свет
-SHADOWDARK.app.light-tracker.hide-inactive: Скрыть актёров без освещения
-SHADOWDARK.app.light-tracker.show-all-actors: Показать всех актёров
-SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить освещение
-SHADOWDARK.app.loading.body: Поиск в далёких землях...
+SHADOWDARK.app.light-tracker.douse-light: Погасить Свет
+SHADOWDARK.app.light-tracker.hide-inactive: Скрыть Актёров Без Освещения
+SHADOWDARK.app.light-tracker.show-all-actors: Показать Всех Актёров
+SHADOWDARK.app.light-tracker.turn-out-the-lights: Выключить Освещение
+SHADOWDARK.app.loading.body: Поиск в Далёких Землях...
 SHADOWDARK.app.loading.title: Загрузка
-SHADOWDARK.app.npc_attack_ranges.title: Дальность атаки
+SHADOWDARK.app.npc_attack_ranges.title: Дальность Атаки
 SHADOWDARK.apps.character-generator.choose: Выберите
 SHADOWDARK.apps.character-generator.create_character: Создать персонажа
 SHADOWDARK.apps.character-generator.error.create: Не удалось создать персонажа игрока {error}
@@ -72,15 +72,15 @@ SHADOWDARK.apps.effect_panel.duration_label.one_minute: Осталась 1 ми�
 SHADOWDARK.apps.effect_panel.duration_label.one_round: Остался 1 раунд
 SHADOWDARK.apps.effect_panel.duration_label.one_second: Осталась 1 секунда
 SHADOWDARK.apps.effect_panel.duration_label.one_week: Осталась 1 неделя
-SHADOWDARK.apps.effect_panel.duration_label.one_year: Остался 1 год
-SHADOWDARK.apps.effect_panel.duration_label.unlimited: Неограниченная длительность
+SHADOWDARK.apps.effect_panel.duration_label.one_year: Остался 1 Год
+SHADOWDARK.apps.effect_panel.duration_label.unlimited: Неограниченная Длительность
 SHADOWDARK.apps.effect_panel.duration_label.x_days: "Осталось {days} дней"
 SHADOWDARK.apps.effect_panel.duration_label.x_hours: "Осталось {hours} часов"
 SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "Осталось {minutes} минут"
 SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "Осталось {rounds} раундов"
 SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "Осталось {seconds} секунд"
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "Осталось {weeks} недель"
-SHADOWDARK.apps.effect_panel.duration_label.x_years: "Осталось {years} лет"
+SHADOWDARK.apps.effect_panel.duration_label.x_years: "Осталось {years} Лет"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "{Правый клик} Удалить эффект"
 SHADOWDARK.apps.item-importer.import_button: Импортировать предмет
 SHADOWDARK.apps.item-importer.instruction1: 1. Скопируйте текст предмета из исходного материала.
