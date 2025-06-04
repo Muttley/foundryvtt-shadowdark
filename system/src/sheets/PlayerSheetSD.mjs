@@ -571,7 +571,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true});
+			this.actor.castSpell(itemId, {...options, skipPrompt: true});
 		}
 		else {
 			this.actor.castSpell(itemId, options);
@@ -677,7 +677,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		if (event.shiftKey) {
-			this.actor.useAbility(itemId, {fastForward: true});
+			this.actor.useAbility(itemId, {skipPrompt: true});
 		}
 		else {
 			this.actor.useAbility(itemId);

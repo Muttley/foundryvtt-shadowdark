@@ -289,7 +289,7 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// skip roll prompt if shift clicked
 		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true});
+			this.actor.rollAbility(ability, {event: event, skipPrompt: true});
 		}
 		else {
 			this.actor.rollAbility(ability, {event: event});
@@ -298,24 +298,13 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRollAttack(event) {
 		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const attackType =  $(event.currentTarget).data("attack-type");
-		const handedness = $(event.currentTarget).data("handedness");
-
-		const options = {
-			attackType,
-			handedness,
+		const itemId = event.currentTarget.dataset.itemId;
+		const rollData = {
+			attackType: event.currentTarget.dataset.attackType,
+			handedness: event.currentTarget.dataset.handedness,
+			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
 		};
-
-
-		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			options.fastForward = true;
-		}
-
-		this.actor.rollAttack(itemId, options);
-
+		this.actor.rollAttack(itemId, rollData);
 	}
 
 	async _onToggleLost(event) {
