@@ -1,3 +1,12 @@
+# v3.6.0
+
+## Bugfixes
+- [#1104] light text over white background on journal pages
+
+**NOTE:** From this release onwards we are only supporting FoundryVTT v13
+
+---
+
 # v3.5.0
 
 ## Enhancements
