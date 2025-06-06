@@ -1,7 +1,8 @@
 # v3.6.0
 
 ## Bugfixes
-- [#1104] light text over white background on journal pages
+- [#1098] Context menus not showing for players on v13
+- [#1104] Light text over white background on journal pages
 
 **NOTE:** From this release onwards we are only supporting FoundryVTT v13
 
