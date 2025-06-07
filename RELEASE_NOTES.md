@@ -1,6 +1,7 @@
 # v3.6.0
 
 ## Bugfixes
+- [#1097] Broken thumbnail image for scene imported from quickstart adventure
 - [#1098] Context menus not showing for players on v13
 - [#1104] Light text over white background on journal pages
 
