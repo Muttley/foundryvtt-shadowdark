@@ -23,6 +23,7 @@
 - [#1070] Item importer fails for non-capitalized names
 - [#1085] Special ability won't deduced if roll dialog is cancelled
 - [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
+- [#1091] Effects HUD position not tied to size of right Foundry panel
 - [#1092] Spell import macro creates spell items with default Actor token as image
 - [#1094] Pause message font weight too bold in v13
 
