@@ -1,15 +1,14 @@
 {
 	"_id": "75GJHt36EtuofTvq",
 	"_key": "!tables.results!NiiJKAiBjpPAj5U1.75GJHt36EtuofTvq",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>Spell worm!</b> You lose the ability to cast a random spell on each of your turns until you pass a [[check 12 con]] check. You regain the ability to cast those spells after completing a rest",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		7,
 		7
 	],
-	"text": "<b>Spell worm!</b> You lose the ability to cast a random spell on each of your turns until you pass a [[check 12 con]] check. You regain the ability to cast those spells after completing a rest",
 	"type": "text",
 	"weight": 1
 }

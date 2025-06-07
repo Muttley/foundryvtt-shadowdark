@@ -1,15 +1,14 @@
 {
 	"_id": "PxVizZdjigztf4UH",
 	"_key": "!tables.results!q83PUKIAznuLpqSr.PxVizZdjigztf4UH",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>Dark plasma aura!</b> Attacks against you pass through a vile aura, dealing double damage for the next [[/r 2d6]] rounds",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		5,
 		5
 	],
-	"text": "<b>Dark plasma aura!</b> Attacks against you pass through a vile aura, dealing double damage for the next [[/r 2d6]] rounds",
 	"type": "text",
 	"weight": 1
 }

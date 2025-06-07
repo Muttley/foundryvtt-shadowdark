@@ -1,3 +1,17 @@
+# v3.6.0
+
+## Bugfixes
+- [#1097] Broken thumbnail image for scene imported from quickstart adventure
+- [#1098] Context menus not showing for players on v13
+- [#1104] Light text over white background on journal pages
+
+## Chores
+- [#1099] Merge Russian translation updates from Crowdin
+
+**NOTE:** From this release onwards we are only supporting FoundryVTT v13
+
+---
+
 # v3.5.0
 
 ## Enhancements
@@ -9,6 +23,7 @@
 - [#1070] Item importer fails for non-capitalized names
 - [#1085] Special ability won't deduced if roll dialog is cancelled
 - [#1089] Fixed Pit Fighter's "Ignore All Damage" talent in class rolltable
+- [#1091] Effects HUD position not tied to size of right Foundry panel
 - [#1092] Spell import macro creates spell items with default Actor token as image
 - [#1094] Pause message font weight too bold in v13
 

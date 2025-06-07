@@ -1,15 +1,14 @@
 {
 	"_id": "VNXLPRaUr8qpXVO2",
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.VNXLPRaUr8qpXVO2",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "Roll two encounters and combine the results (reroll 98-99)",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		98,
 		99
 	],
-	"text": "Roll two encounters and combine the results (reroll 98-99)",
 	"type": "text",
 	"weight": 2
 }

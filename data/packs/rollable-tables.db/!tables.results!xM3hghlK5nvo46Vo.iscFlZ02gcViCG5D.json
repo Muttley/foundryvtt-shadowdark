@@ -1,15 +1,14 @@
 {
 	"_id": "iscFlZ02gcViCG5D",
 	"_key": "!tables.results!xM3hghlK5nvo46Vo.iscFlZ02gcViCG5D",
-	"documentCollection": "shadowdark.talents",
-	"documentId": null,
+	"description": "Roll two Patron Boons and choose one to keep",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		12,
 		12
 	],
-	"text": "Roll two Patron Boons and choose one to keep",
 	"type": "text",
 	"weight": 1
 }
