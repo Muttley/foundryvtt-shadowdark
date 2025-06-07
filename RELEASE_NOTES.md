@@ -4,6 +4,9 @@
 - [#1098] Context menus not showing for players on v13
 - [#1104] Light text over white background on journal pages
 
+## Chores
+- [#1099] Merge Russian translation updates from Crowdin
+
 **NOTE:** From this release onwards we are only supporting FoundryVTT v13
 
 ---
