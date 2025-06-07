@@ -43,7 +43,6 @@
 		"flags": {
 		},
 		"height": 1,
-		"hexagonalShape": 0,
 		"light": {
 			"alpha": 0.5,
 			"angle": 360,
@@ -70,6 +69,7 @@
 			"shadows": 0
 		},
 		"lockRotation": false,
+		"movementAction": null,
 		"name": "Ralina Biggins",
 		"occludable": {
 			"radius": 0
@@ -112,6 +112,12 @@
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_token.webp",
 			"tint": "#ffffff"
+		},
+		"turnMarker": {
+			"animation": null,
+			"disposition": false,
+			"mode": 1,
+			"src": null
 		},
 		"width": 1
 	},

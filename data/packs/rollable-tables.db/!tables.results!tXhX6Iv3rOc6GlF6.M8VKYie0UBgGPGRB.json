@@ -1,15 +1,14 @@
 {
 	"_id": "M8VKYie0UBgGPGRB",
 	"_key": "!tables.results!tXhX6Iv3rOc6GlF6.M8VKYie0UBgGPGRB",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>It cannot be unseen!</b> You must pass a [[check 12 wis]] check or descend into mad raving for [[/r 1d10]] rounds",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		10,
 		10
 	],
-	"text": "<b>It cannot be unseen!</b> You must pass a [[check 12 wis]] check or descend into mad raving for [[/r 1d10]] rounds",
 	"type": "text",
 	"weight": 1
 }

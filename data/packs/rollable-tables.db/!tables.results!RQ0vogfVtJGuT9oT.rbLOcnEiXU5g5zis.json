@@ -1,15 +1,14 @@
 {
 	"_id": "rbLOcnEiXU5g5zis",
 	"_key": "!tables.results!RQ0vogfVtJGuT9oT.rbLOcnEiXU5g5zis",
-	"documentCollection": "Actor",
-	"documentId": null,
+	"description": "Choose 1",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		3,
 		7
 	],
-	"text": "Choose 1",
 	"type": "text",
 	"weight": 1
 }
