@@ -134,7 +134,7 @@ export default class ActorSheetSD extends ActorSheet {
 					this._onItemDelete(itemId);
 				},
 			},
-		]; w;
+		];
 	}
 
 	_itemContextMenu(html) {
