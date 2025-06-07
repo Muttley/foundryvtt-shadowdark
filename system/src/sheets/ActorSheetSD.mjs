@@ -105,7 +105,7 @@ export default class ActorSheetSD extends ActorSheet {
 			if (game.user.isGM) {
 				result = true;
 			}
-			else if (actor.canUserModify(game.user)) {
+			else if (actor.isOwner) {
 				result = actor.items.find(item => item._id === itemId)
 					? true
 					: false;
