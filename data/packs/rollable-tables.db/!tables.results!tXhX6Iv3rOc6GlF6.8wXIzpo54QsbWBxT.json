@@ -1,15 +1,14 @@
 {
 	"_id": "8wXIzpo54QsbWBxT",
 	"_key": "!tables.results!tXhX6Iv3rOc6GlF6.8wXIzpo54QsbWBxT",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>Radioactive energies!</b>You whirl with repulsive energies, drawing the hostility and attacks of all enemies who can see you for the next [[/r 1d4]] rounds",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		11,
 		11
 	],
-	"text": "<b>Radioactive energies!</b>You whirl with repulsive energies, drawing the hostility and attacks of all enemies who can see you for the next [[/r 1d4]] rounds",
 	"type": "text",
 	"weight": 1
 }

@@ -1,15 +1,14 @@
 {
 	"_id": "azFwWV3SqCidw5Lt",
 	"_key": "!tables.results!vPME2uXw5RuoKEP8.azFwWV3SqCidw5Lt",
-	"documentCollection": "shadowdark.talents",
-	"documentId": null,
+	"description": "Choose 1",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		10,
 		11
 	],
-	"text": "Choose 1",
 	"type": "text",
 	"weight": 1
 }

@@ -1,15 +1,14 @@
 {
 	"_id": "mSXl6A8WKJmVkGjO",
 	"_key": "!tables.results!NiiJKAiBjpPAj5U1.mSXl6A8WKJmVkGjO",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>Explosion!</b> You take [[/r 1d8]] damage",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		2,
 		2
 	],
-	"text": "<b>Explosion!</b> You take [[/r 1d8]] damage",
 	"type": "text",
 	"weight": 1
 }

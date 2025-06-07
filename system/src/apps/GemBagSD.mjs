@@ -46,7 +46,7 @@ export default class GemBagSD extends Application {
 		);
 
 		// Create context menu for items on both sheets
-		this._contextMenu(html);
+		this._contextMenu(html.get(0));
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
@@ -93,7 +93,12 @@ export default class GemBagSD extends Application {
 	}
 
 	_contextMenu(html) {
-		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
+		new foundry.applications.ux.ContextMenu.implementation(
+			html,
+			".item",
+			this._getItemContextOptions(),
+			{jQuery: false}
+		);
 	}
 
 	_getItemContextOptions() {
@@ -101,7 +106,7 @@ export default class GemBagSD extends Application {
 
 		const canEdit = function(element) {
 			let result = false;
-			const itemId = element.data("item-id");
+			const itemId = element.dataset.itemId;
 
 			if (game.user.isGM) {
 				result = true;
@@ -121,7 +126,7 @@ export default class GemBagSD extends Application {
 				icon: '<i class="fas fa-edit"></i>',
 				condition: element => canEdit(element),
 				callback: element => {
-					const itemId = element.data("item-id");
+					const itemId = element.dataset.itemId;
 					const item = this.actor.items.get(itemId);
 					return item.sheet.render(true);
 				},
@@ -131,7 +136,7 @@ export default class GemBagSD extends Application {
 				icon: '<i class="fas fa-trash"></i>',
 				condition: element => canEdit(element),
 				callback: element => {
-					const itemId = element.data("item-id");
+					const itemId = element.dataset.itemId;
 					this._onItemDelete(itemId);
 				},
 			},

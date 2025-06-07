@@ -45,7 +45,7 @@ export default class ActorSheetSD extends ActorSheet {
 		});
 
 		// Create context menu for items on both sheets
-		this._itemContextMenu(html);
+		this._itemContextMenu(html.get(0));
 
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
@@ -100,12 +100,12 @@ export default class ActorSheetSD extends ActorSheet {
 	_getItemContextOptions() {
 		const canEdit = function(element, actor) {
 			let result = false;
-			const itemId = element.data("item-id");
+			const itemId = element.dataset.itemId;
 
 			if (game.user.isGM) {
 				result = true;
 			}
-			else if (actor.canUserModify(game.user)) {
+			else if (actor.isOwner) {
 				result = actor.items.find(item => item._id === itemId)
 					? true
 					: false;
@@ -120,7 +120,7 @@ export default class ActorSheetSD extends ActorSheet {
 				icon: '<i class="fas fa-edit"></i>',
 				condition: element => canEdit(element, this.actor),
 				callback: element => {
-					const itemId = element.data("item-id");
+					const itemId = element.dataset.itemId;
 					const item = this.actor.items.get(itemId);
 					return item.sheet.render(true);
 				},
@@ -130,7 +130,7 @@ export default class ActorSheetSD extends ActorSheet {
 				icon: '<i class="fas fa-trash"></i>',
 				condition: element => canEdit(element, this.actor),
 				callback: element => {
-					const itemId = element.data("item-id");
+					const itemId = element.dataset.itemId;
 					this._onItemDelete(itemId);
 				},
 			},
@@ -138,7 +138,12 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	_itemContextMenu(html) {
-		ContextMenu.create(this, html, ".item", this._getItemContextOptions());
+		new foundry.applications.ux.ContextMenu.implementation(
+			html,
+			".item",
+			this._getItemContextOptions(),
+			{jQuery: false}
+		);
 	}
 
 	async _effectDropNotAllowed(data) {

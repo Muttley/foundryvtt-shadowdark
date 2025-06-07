@@ -1,15 +1,14 @@
 {
 	"_id": "t1IT7UBVnDsVcBhm",
 	"_key": "!tables.results!NiiJKAiBjpPAj5U1.t1IT7UBVnDsVcBhm",
-	"documentCollection": "",
-	"documentId": null,
+	"description": "<b>Devastation!</b> Roll twice and combine both effects (reroll any further 1s).",
 	"drawn": false,
 	"img": "icons/svg/d20-black.svg",
+	"name": "",
 	"range": [
 		1,
 		1
 	],
-	"text": "<b>Devastation!</b> Roll twice and combine both effects (reroll any further 1s).",
 	"type": "text",
 	"weight": 1
 }

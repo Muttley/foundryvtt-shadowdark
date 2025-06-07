@@ -9,20 +9,23 @@ $pause-w: 200px;
 	height: $pause-h;
 	top: -56px;
 	left: calc(50% - ($pause-w * .5));
-	opacity: .6;
+	opacity: .8;
 	--fa-animation-duration: 30s;
 }
 
 #pause {
 	height: auto;
+	animation: none;
+
 	figcaption {
 		font-family: var(--font-header);
 		font-size: 64px;
 		line-height: 0.5;
-		opacity: .6;
+		opacity: .8;
+		text-shadow: 4px 4px black;
 		font-weight: normal;
 		text-transform: none;
-		color: #fff;
+		color: white;
 	}
 }
 
