@@ -363,167 +363,27 @@ export default class ActorSD extends Actor {
 		);
 	}
 
-
-	async buildWeaponDisplays(itemId) {
-		const item = this.getEmbeddedDocument("Item", itemId);
-
-		const meleeAttack = this.attackBonus("melee");
-		const rangedAttack = this.attackBonus("ranged");
-
-		const baseAttackBonus = await item.isFinesseWeapon()
-			? Math.max(meleeAttack, rangedAttack)
-			: this.attackBonus(item.system.type);
-
-		const weaponOptions = {
-			weaponId: itemId,
-			weaponName: item.name,
-			handedness: "",
-			attackBonus: 0,
-			attackRange: "",
-			baseDamage: "",
-			bonusDamage: 0,
-			extraDamageDice: "",
-			properties: await item.propertiesDisplay(),
-			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
-			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
+	async calcBonuses(item={}) {
+		const data = {
+			abilityBonus: 0,
+			itemBonus: 0,
+			talentBonus: 0,
 		};
-
-		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
-
-		const weaponDisplays = {melee: [], ranged: []};
-
-		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
-		weaponOptions.bonusDamage = weaponMasterBonus;
-
-		// Find out if the user has a modified damage die
-		let oneHanded = item.system.damage.oneHanded ?? false;
-		let twoHanded = item.system.damage.twoHanded ?? false;
-
-		// Improve the base damage die if this weapon has the relevant property
-		for (const property of this.system.bonuses.weaponDamageDieImprovementByProperty) {
-			if (await item.hasProperty(property)) {
-				oneHanded = shadowdark.utils.getNextDieInList(
-					oneHanded,
-					shadowdark.config.DAMAGE_DICE
-				);
-
-				twoHanded = shadowdark.utils.getNextDieInList(
-					twoHanded,
-					shadowdark.config.DAMAGE_DICE
-				);
+		if (item) {
+			switch (item.system.attackType) {
+				case "melee":
+					data.abilityBonus = this.abilityModifier("str");
+					break;
+				case "ranged":
+					data.abilityBonus = this.abilityModifier("dex");
+					break;
+				default:
+					throw new Error(`Unknown attack type ${attackType}`);
 			}
 		}
-
-		if (this.system.bonuses.weaponDamageDieD12.some(t =>
-			[item.name.slugify(), item.system.baseWeapon.slugify()].includes(t)
-		)) {
-			oneHanded = oneHanded ? "d12" : false;
-			twoHanded = twoHanded ? "d12" : false;
-		}
-
-		if (item.system.type === "melee") {
-			weaponOptions.attackBonus =	baseAttackBonus
-				+ parseInt(this.system.bonuses.meleeAttackBonus, 10)
-				+ parseInt(item.system.bonuses.attackBonus, 10)
-				+ weaponMasterBonus;
-
-			weaponOptions.bonusDamage +=
-				parseInt(this.system.bonuses.meleeDamageBonus, 10)
-				+ parseInt(item.system.bonuses.damageBonus, 10);
-
-			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
-
-			if (oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-
-				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-			if (item.system.damage.twoHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.twoHanded
-				];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
-
-				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "2h",
-					itemId,
-				});
-			}
-			// if thrown build range attack option
-			if (await item.hasProperty("thrown")) {
-
-				const thrownBaseBonus = Math.max(meleeAttack, rangedAttack);
-
-				weaponOptions.attackBonus = thrownBaseBonus
-					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
-					+ parseInt(item.system.bonuses.attackBonus, 10)
-					+ weaponMasterBonus;
-
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
-					item.system.range
-				];
-				weaponOptions.bonusDamage =
-					weaponMasterBonus
-					+ parseInt(this.system.bonuses.rangedDamageBonus, 10)
-					+ parseInt(item.system.bonuses.damageBonus, 10);
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-		}
-		else if (item.system.type === "ranged") {
-			weaponOptions.attackBonus = baseAttackBonus
-				+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
-				+ parseInt(item.system.bonuses.attackBonus, 10)
-				+ weaponMasterBonus;
-
-			weaponOptions.bonusDamage +=
-				parseInt(this.system.bonuses.rangedDamageBonus, 10)
-				+ parseInt(item.system.bonuses.damageBonus, 10);
-
-			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
-				item.system.range
-			];
-
-			if (oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-			if (twoHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[twoHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "2h",
-					itemId,
-				});
-			}
-		}
-
-		return weaponDisplays;
 	}
 
-
-	calcAbilityValues(ability) {
+	_calcAbilityValues(ability) {
 		const total = this.system.abilities[ability].base
 			+ this.system.abilities[ability].bonus;
 
@@ -821,7 +681,7 @@ export default class ActorSD extends Actor {
 		const abilities = {};
 
 		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			abilities[ability] = this.calcAbilityValues(ability);
+			abilities[ability] = this._calcAbilityValues(ability);
 		}
 
 		return abilities;
@@ -853,7 +713,7 @@ export default class ActorSD extends Actor {
 		return await this._getItemFromUuid(uuid);
 	}
 
-
+	// TODO Override, base data model
 	getRollData() {
 		if (this.type === "Light") return;
 
@@ -1171,7 +1031,252 @@ export default class ActorSD extends Actor {
 		return await CONFIG.DiceSD.RollDialog(parts, data, options);
 	}
 
-	async rollAttack(itemId, options={}) {
+	async calcAttackRollData(rollData) {
+		if (!rollData.item) return;
+
+		if (!rollData.handedness) rollData.handedness = rollData.item.system.handedness;
+		if (!rollData.attackType) rollData.attackType = rollData.item.system.type;
+		if (!rollData.attackRange) rollData.attackRange = rollData.item.system.type;
+
+		// Calculate attack bonuses
+		// TODO calc ability bonuses
+		// TODO calc AE bonuses
+		// TODO calc item bonuses
+
+		// hanidedness
+
+		// Calculate Damage Bonuses
+	}
+
+	async _calcAttackBonusData(rollData) {
+
+
+	}
+
+	/*
+		const baseAttackBonus = await item.isFinesseWeapon()
+			? Math.max(meleeAttack, rangedAttack)
+			: this.attackBonus(item.system.type);
+
+		const weaponOptions = {
+			weaponId: itemId,
+			weaponName: item.name,
+			handedness: "",
+			attackBonus: 0,
+			attackRange: "",
+			baseDamage: "",
+			bonusDamage: 0,
+			extraDamageDice: "",
+			properties: await item.propertiesDisplay(),
+			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
+			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
+		};
+
+		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
+
+		const weaponDisplays = {melee: [], ranged: []};
+
+		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
+		weaponOptions.bonusDamage = weaponMasterBonus;
+
+		// Find out if the user has a modified damage die
+		let oneHanded = item.system.damage.oneHanded ?? false;
+		let twoHanded = item.system.damage.twoHanded ?? false;
+
+		// Improve the base damage die if this weapon has the relevant property
+		for (const property of this.system.bonuses.weaponDamageDieImprovementByProperty) {
+			if (await item.hasProperty(property)) {
+				oneHanded = shadowdark.utils.getNextDieInList(
+					oneHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+
+				twoHanded = shadowdark.utils.getNextDieInList(
+					twoHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+			}
+		}
+
+		if (this.system.bonuses.weaponDamageDieD12.some(t =>
+			[item.name.slugify(), item.system.baseWeapon.slugify()].includes(t)
+		)) {
+			oneHanded = oneHanded ? "d12" : false;
+			twoHanded = twoHanded ? "d12" : false;
+		}
+
+		if (item.system.type === "melee") {
+			weaponOptions.attackBonus =	baseAttackBonus
+				+ parseInt(this.system.bonuses.meleeAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
+				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.meleeDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
+
+			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
+
+			if (oneHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+
+				weaponDisplays.melee.push({
+					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
+					itemId,
+				});
+			}
+			if (item.system.damage.twoHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
+					item.system.damage.twoHanded
+				];
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
+
+				weaponDisplays.melee.push({
+					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
+					itemId,
+				});
+			}
+			// if thrown build range attack option
+			if (await item.hasProperty("thrown")) {
+
+				const thrownBaseBonus = Math.max(meleeAttack, rangedAttack);
+
+				weaponOptions.attackBonus = thrownBaseBonus
+					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+					+ parseInt(item.system.bonuses.attackBonus, 10)
+					+ weaponMasterBonus;
+
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
+
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
+					item.system.range
+				];
+				weaponOptions.bonusDamage =
+					weaponMasterBonus
+					+ parseInt(this.system.bonuses.rangedDamageBonus, 10)
+					+ parseInt(item.system.bonuses.damageBonus, 10);
+
+				weaponDisplays.ranged.push({
+					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
+					itemId,
+				});
+			}
+		}
+		else if (item.system.type === "ranged") {
+			weaponOptions.attackBonus = baseAttackBonus
+				+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
+				+ parseInt(item.system.bonuses.attackBonus, 10)
+				+ weaponMasterBonus;
+
+			weaponOptions.bonusDamage +=
+				parseInt(this.system.bonuses.rangedDamageBonus, 10)
+				+ parseInt(item.system.bonuses.damageBonus, 10);
+
+			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
+				item.system.range
+			];
+
+			if (oneHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
+
+				weaponDisplays.ranged.push({
+					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "1h",
+					itemId,
+				});
+			}
+			if (twoHanded) {
+				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[twoHanded];
+				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
+
+				weaponDisplays.ranged.push({
+					display: await this.buildWeaponDisplay(weaponOptions),
+					handedness: "2h",
+					itemId,
+				});
+			}
+		}
+
+		return weaponDisplays;
+	}
+*/
+
+	async _calcAttackDamageData(rollData) {
+
+	}
+
+	async _calcAttackSpecialData(rollData) {
+		// Finesse Weapon?
+		const baseAttackBonus = rollData.item.isFinesseWeapon()
+			? Math.max(meleeAttack, rangedAttack)
+			: this.attackBonus(rollData.item.system.type);
+
+		// extra Die?
+		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
+
+		// weaponMasterBonus
+		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
+		weaponOptions.bonusDamage = weaponMasterBonus;
+
+		// Modified Dice
+		// Improve the base damage die if this weapon has the relevant property
+		for (const property of this.system.bonuses.weaponDamageDieImprovementByProperty) {
+			if (await rollData.item.hasProperty(property)) {
+				oneHanded = shadowdark.utils.getNextDieInList(
+					oneHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+
+				twoHanded = shadowdark.utils.getNextDieInList(
+					twoHanded,
+					shadowdark.config.DAMAGE_DICE
+				);
+			}
+		}
+
+		if (this.system.bonuses.weaponDamageDieD12.some(t =>
+			[rollData.item.name.slugify(), rollData.item.system.baseWeapon.slugify()].includes(t)
+		)) {
+			oneHanded = oneHanded ? "d12" : false;
+			twoHanded = twoHanded ? "d12" : false;
+		}
+
+	}
+
+	async rollAttack(itemId, rollData={}) {
+
+		const item = this.items.get(itemId);
+
+		// Set target AC if targeting is enabled
+		if (typeof rollData.targetAc === "undefined" && game.settings.get("shadowdark", "enableTargeting")) {
+			const tokenAc = game.user.targets.first()?.actor.system.attributes.ac.value;
+			if (tokenAc) rollData.targetAc = tokenAc;
+		}
+
+		// Test for available amnunition
+		if (typeof rollData.ammunitionItem === "undefined") {
+			const ammunition = item.availableAmmunition();
+			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
+				rollData.ammunitionItem = ammunition[0];
+			}
+		}
+
+		generateAttackData(item, rollData);
+
+		// show prompt
+		await CONFIG.DiceSD.rollOptionsDialog(rollData);
+
+
+	}
+
+	async rollAttackLegacy(itemId, options={}) {
+
 		const item = this.items.get(itemId);
 
 		if (game.settings.get("shadowdark", "enableTargeting")) {
@@ -1185,13 +1290,6 @@ export default class ActorSD extends Actor {
 			else if (options.targetToken) {
 				options.target = options.targetToken.actor.system.attributes.ac.value;
 			}
-		}
-
-		const ammunition = item.availableAmmunition();
-
-		let ammunitionItem = undefined;
-		if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-			ammunitionItem = ammunition[0];
 		}
 
 		const data = {

@@ -1,44 +1,44 @@
 export default class RollSD extends Roll {
 
-	static async rollOptionsDialog(promptData={}) {
+	static async rollOptionsDialog(rollData={}) {
 		const fields = foundry.applications.fields;
-		if (!Array.isArray(promptData.formGroups)) promptData.formGroups = [];
-		promptData.bonusGroups = [];
+		if (!Array.isArray(rollData.formGroups)) rollData.formGroups = [];
+		rollData.bonusGroups = [];
 
 		// item bonues prompt
-		if (typeof promptData.itemBonus !== "undefined") {
-			promptData.bonusGroups.push(
+		if (typeof rollData.itemBonus !== "undefined") {
+			rollData.bonusGroups.push(
 				fields.createFormGroup({
 					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.item_bonus"),
 					input: fields.createNumberInput({
 						name: "itemBonus",
-						value: promptData.itemBonus,
+						value: rollData.itemBonus,
 					}),
 				})
 			);
 		}
 
 		// ability bonues prompt
-		if (typeof promptData.abilityBonus !== "undefined") {
-			promptData.bonusGroups.push(
+		if (typeof rollData.abilityBonus !== "undefined") {
+			rollData.bonusGroups.push(
 				fields.createFormGroup({
 					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"),
 					input: fields.createNumberInput({
 						name: "abilityBonus",
-						value: promptData.abilityBonus,
+						value: rollData.abilityBonus,
 					}),
 				})
 			);
 		}
 
 		// Talent bonues prompt
-		if (typeof promptData.talentBonus !== "undefined") {
-			promptData.bonusGroups.push(
+		if (typeof rollData.talentBonus !== "undefined") {
+			rollData.bonusGroups.push(
 				fields.createFormGroup({
 					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.talent_bonus"),
 					input: fields.createNumberInput({
 						name: "talentBonus",
-						value: promptData.talentBonus,
+						value: rollData.talentBonus,
 					}),
 				})
 			);
@@ -46,33 +46,37 @@ export default class RollSD extends Roll {
 
 		// Special cases
 		// Backstab prompt
-		if (typeof promptData.backstab !== "undefined") {
-			promptData.formGroups.push(
+		if (typeof rollData.backstab !== "undefined") {
+			rollData.formGroups.push(
 				fields.createFormGroup({
 					label: game.i18n.localize("SHADOWDARK.talent.backstab"),
 					input: fields.createCheckboxInput({
 						name: "backstab",
-						value: promptData.backstab,
+						value: rollData.backstab,
 					}),
 				})
 			);
 		}
 
 		// get roll modes options
-		promptData.rollMode = game.settings.get("core", "rollMode");
+		rollData.rollMode = game.settings.get("core", "rollMode");
 		if (game.version < 13) {
-			promptData.rollModes = CONFIG.Dice.rollModes;
+			rollData.rollModes = CONFIG.Dice.rollModes;
 		}
 		else {
-			promptData.rollModes = {};
+			rollData.rollModes = {};
 			for (const [key, value] of Object.entries(CONFIG.Dice.rollModes)) {
-				promptData.rollModes[key] = value.label;
+				rollData.rollModes[key] = value.label;
 			}
 		}
 
+		const newObject = {name: "Test"};
+		await Hooks.callAll("playerAttackSD", newObject);
+		console.error(newObject);
+
 		// calculate default
 		const defaultButton = (() => {
-			switch (promptData?.mode) {
+			switch (rollData?.mode) {
 				case 1: return "advantage";
 				case -1: return "disadvantage";
 				case 0:
@@ -91,7 +95,7 @@ export default class RollSD extends Roll {
 		const template = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		const dialogData = {
 			title: "test",
-			content: await renderTemplate(template, promptData),
+			content: await renderTemplate(template, rollData),
 			classes: ["shadowdark-dialog"],
 			buttons: {
 				advantage: {
@@ -128,7 +132,7 @@ export default class RollSD extends Roll {
 	 *
 	 * The `options` object configures the rolls, and chat messages. The following optional keys
 	 * may be used:
-	 * - fastForward {boolean}: Skips dialogs and just rolls normal rolls if set to true
+	 * - skipPrompt {boolean}: Skips dialogs and just rolls normal rolls if set to true
 	 * - rollMode {string}: If the self/gm/blind/public roll mode is to be predetermined
 	 * - flavor {string}: Flavor text on the chat card (smaller text under actor name)
 	 * - title {string}: Title of the chat card, set next to the icon
@@ -149,8 +153,8 @@ export default class RollSD extends Roll {
 	 * @returns {Promise<object>}
 	 */
 	static async Roll(parts, data, $form, adv=0, options={}) {
-		// If the dice has been fastForwarded, there is no form
-		if (!options.fastForward) {
+		// If the dice has been skipPrompted, there is no form
+		if (!options.skipPrompt) {
 			// Augment data with form bonuses & merge into data
 			const formBonuses = this._getBonusesFromForm($form);
 			data = foundry.utils.mergeObject(data, formBonuses);
@@ -685,7 +689,7 @@ export default class RollSD extends Roll {
 	 * @returns {Promise(Roll)}			- Returns the promise of evaluated roll(s)
 	 */
 	static async RollDialog(parts, data, options={}) {
-		if ( options.fastForward ) {
+		if ( options.skipPrompt ) {
 			return await this.Roll(parts, data, false, 0, options);
 		}
 
@@ -906,11 +910,6 @@ export default class RollSD extends Roll {
 	 * Renders Dice So Nice in order of D20 -> Damage Rolls and creates
 	 * a chat message with the generated content.
 	 * @param {object} rolls 					- Object containing evaluated rolls
-	 * @param {object} chatData 			- Parsed roll data as generated by _getchatCardData
-	 * 																  augmented with content from
-	 *                                  _getChatCardTemplateData
-	 * @param {boolean} chatMessage 	- Boolean to display chat message or just generate it
-	 * @return {object}								- Returns the D20 result
 	 */
 	static async _rollDiceSoNice(rolls) {
 		const rollsToShow = [rolls.main.roll];
