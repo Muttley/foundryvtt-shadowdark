@@ -37,6 +37,7 @@ export default class PlayerSD extends ActorBaseSD {
 			slots: new fields.NumberField({ integer: true, initial: 10, min: 10}),
 		};
 
+		// Add abilities
 		schema.abilities = new fields.SchemaField(
 			CONFIG.SHADOWDARK.ABILITY_KEYS.reduce((obj, key) => {
 				obj[key] = new fields.SchemaField({
@@ -47,9 +48,7 @@ export default class PlayerSD extends ActorBaseSD {
 			}, {})
 		);
 
-		const combined = Object.assign(super.defineSchema(), schema);
-		console.warn(combined);
-		return combined;
+		return Object.assign(super.defineSchema(), schema);
 	}
 
 	// triggered before Active Effects are applied

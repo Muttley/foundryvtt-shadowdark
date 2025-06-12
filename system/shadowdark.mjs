@@ -90,6 +90,13 @@ Hooks.once("init", () => {
 		NPC: models.NpcSD,
 	});
 
+	Object.assign(CONFIG.Item.dataModels, {
+		Ancestry: models.AncestrySD,
+		Armor: models.ArmorSD,
+		Background: models.BackgroundSD,
+		Basic: models.BasicSD,
+	});
+
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
 	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {

@@ -1,10 +1,6 @@
 {
 	"Item": {
 		"types": [
-			"Ancestry",
-			"Armor",
-			"Background",
-			"Basic",
 			"Boon",
 			"Class Ability",
 			"Class",
@@ -80,43 +76,6 @@
 				},
 				"stashed": false
 			}
-		},
-		"Ancestry": {
-			"templates": [
-				"common",
-				"languageChoices"
-			],
-			"talents": [],
-			"talentChoiceCount": 1,
-			"nameTable": ""
-		},
-		"Armor": {
-			"templates": [
-				"common",
-				"physical"
-			],
-			"ac": {
-				"attribute": "",
-				"base": 0,
-				"modifier": 0
-			},
-			"baseArmor": "",
-			"canBeEquipped": true,
-			"properties": []
-		},
-		"Background": {
-			"templates": [
-				"common"
-			]
-		},
-		"Basic": {
-			"templates": [
-				"common",
-				"lightSource",
-				"physical"
-			],
-			"scroll": false,
-			"treasure": false
 		},
 		"Boon": {
 			"templates": [
