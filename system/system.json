@@ -33,6 +33,13 @@
 		}
 	],
 	"esmodules": ["shadowdark-compiled.mjs"],
+	"documentTypes": {
+        "Actor": {
+            "Player": {},
+            "NPC": {},
+			"Light": {}
+        }
+    },
 	"languages": [
 		{
 			"lang": "de",

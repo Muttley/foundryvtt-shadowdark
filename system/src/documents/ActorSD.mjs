@@ -1,18 +1,5 @@
 export default class ActorSD extends Actor {
 
-	_abilityModifier(abilityScore) {
-		if (abilityScore >= 1 && abilityScore <= 3) return -4;
-		if (abilityScore >= 4 && abilityScore <= 5) return -3;
-		if (abilityScore >= 6 && abilityScore <= 7) return -2;
-		if (abilityScore >= 8 && abilityScore <= 9) return -1;
-		if (abilityScore >= 10 && abilityScore <= 11) return 0;
-		if (abilityScore >= 12 && abilityScore <= 13) return 1;
-		if (abilityScore >= 14 && abilityScore <= 15) return 2;
-		if (abilityScore >= 16 && abilityScore <= 17) return 3;
-		if (abilityScore >= 18) return 4;
-	}
-
-
 	async _applyHpRollToMax(value) {
 		const currentHpBase = this.system.attributes.hp.base;
 		await this.update({
@@ -163,13 +150,6 @@ export default class ActorSD extends Actor {
 	}
 
 
-	_populatePlayerModifiers() {
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			this.system.abilities[ability].mod = this.abilityModifier(ability);
-		}
-	}
-
-
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
@@ -202,33 +182,14 @@ export default class ActorSD extends Actor {
 		this.updateSource(update);
 	}
 
-
-	_prepareNPCData() {}
-
-
-	_preparePlayerData() {
-		this._populatePlayerModifiers();
-	}
-
-
 	abilityModifier(ability) {
-		if (this.type === "Player") {
+		return this.system.abilities[ability].mod;
 
-			return this._abilityModifier(
-				this.system.abilities[ability].base
-					+ this.system.abilities[ability].bonus
-			);
-		}
-		else {
-			return this.system.abilities[ability].mod;
-		}
 	}
-
 
 	async addAncestry(item) {
 		this.update({"system.ancestry": item.uuid});
 	}
-
 
 	async addBackground(item) {
 		this.update({"system.background": item.uuid});
@@ -237,7 +198,6 @@ export default class ActorSD extends Actor {
 	async addClass(item) {
 		this.update({"system.class": item.uuid});
 	}
-
 
 	async addDeity(item) {
 		this.update({"system.deity": item.uuid});
@@ -1184,27 +1144,12 @@ export default class ActorSD extends Actor {
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
-
 		if (this.type === "Player") {
-			this._preparePlayerData();
-
 			if (canvas.ready && game.user.character === this) {
 				game.shadowdark.effectPanel.refresh();
 			}
 		}
-		else if (this.type === "NPC") {
-			this._prepareNPCData();
-		}
 	}
-
-
-	/** @inheritDoc */
-	prepareDerivedData() {
-		// if (this.type === "Player") {
-		// 	this.updateArmorClass();
-		// }
-	}
-
 
 	async rollAbility(abilityId, options={}) {
 		const parts = ["1d20", "@abilityBonus"];

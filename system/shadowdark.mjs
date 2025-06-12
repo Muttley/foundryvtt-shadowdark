@@ -15,6 +15,7 @@ import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
+import * as models from "./src/models/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
 import {
@@ -82,6 +83,12 @@ Hooks.once("init", () => {
 	loadTemplates();
 
 	UtilitySD.loadLegacyArtMappings();
+
+	// Register Data Models
+	Object.assign(CONFIG.Actor.dataModels, {
+		Player: models.PlayerSD,
+		NPC: models.NpcSD,
+	});
 
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);
