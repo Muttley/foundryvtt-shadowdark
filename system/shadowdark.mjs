@@ -91,10 +91,29 @@ Hooks.once("init", () => {
 	});
 
 	Object.assign(CONFIG.Item.dataModels, {
-		Ancestry: models.AncestrySD,
-		Armor: models.ArmorSD,
-		Background: models.BackgroundSD,
-		Basic: models.BasicSD,
+		"Ancestry": models.AncestrySD,
+		"Armor": models.ArmorSD,
+		"Background": models.BackgroundSD,
+		"Basic": models.BasicSD,
+		"Boon": models.BoonSD,
+		"Class": models.ClassSD,
+		"Class Ability": models.ClassAbilitySD,
+		"Deity": models.DeitySD,
+		"Effect": models.EffectSD,
+		"Gem": models.GemSD,
+		"Language": models.LanguageSD,
+		"NPC Attack": models.NpcAttackSD,
+		"NPC Feature": models.NpcFeatureSD,
+		"NPC Special Attack": models.NpcSpecialAttackSD,
+		"NPC Spell": models.NpcSpellSD,
+		"Patron": models.PatronSD,
+		"Potion": models.PotionSD,
+		"Property": models.PropertySD,
+		"Scroll": models.ScrollSD,
+		"Spell": models.SpellSD,
+		"Talent": models.TalentSD,
+		"Wand": models.WandSD,
+		"Weapon": models.WeaponSD,
 	});
 
 	// Register sheet application classes

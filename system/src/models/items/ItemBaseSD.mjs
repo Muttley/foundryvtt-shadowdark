@@ -5,7 +5,7 @@ export class ItemBaseSD extends foundry.abstract.TypeDataModel {
 		return {
 			description: new fields.HTMLField(),
 			source: new fields.SchemaField({
-				title: new fields.StringField({}),
+				title: new fields.StringField({initial: ""}),
 			}),
 		};
 	}

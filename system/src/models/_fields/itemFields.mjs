@@ -25,19 +25,19 @@ export const lightSource = () => ({
 });
 
 export const magic = () => ({
-	class: new fields.DocumentUUIDField(),
+	class: new fields.ArrayField(new fields.DocumentUUIDField()),
 	duration: new fields.SchemaField({
 		type: new fields.StringField({
 			initial: "rounds",
-    		choices: Object.keys(CONFIG.SHADOWDARK.DURATION_UNITS),
+			choices: Object.keys(CONFIG.SHADOWDARK.SPELL_DURATIONS),
 		}),
-		value: new fields.NumberField({ integer: true, initial: 1, min: 0}),
+		value: new fields.StringField({inital: "1"}),
 	}),
 	range: new fields.StringField({
 		initial: "near",
     	choices: Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES),
 	}),
-	tier: new fields.NumberField({ integer: true, initial: 1, min: 1}),
+	lost: new fields.BooleanField({initial: false}),
 });
 
 export const physical = () => ({
@@ -61,3 +61,11 @@ export const physical = () => ({
 	stashed: new fields.BooleanField({initial: false}),
 });
 
+export const ranges = () => ({
+	ranges: new fields.ArrayField(
+		new fields.StringField({
+			initial: "close",
+			choices: Object.keys(CONFIG.SHADOWDARK.RANGES),
+		})
+	),
+});
