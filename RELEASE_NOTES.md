@@ -1,3 +1,14 @@
+# v4.0.0
+
+## Enhancements
+
+## Bugfixes
+
+## Chores
+- [#369] Mirgrated to using data models
+
+---
+
 # v3.6.0
 
 ## Bugfixes
