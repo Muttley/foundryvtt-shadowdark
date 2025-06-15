@@ -70,7 +70,8 @@ export default class UtilitySD {
 	}
 
 
-	static async createItemFromSpell(type, spell) {
+	static async createItemFromSpell(type, spellobj) {
+		const spell = spellobj.toObject();
 		const name = (type !== "Spell")
 			? game.i18n.format(
 				`SHADOWDARK.item.name_from_spell.${type}`,

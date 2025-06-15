@@ -15,6 +15,7 @@ import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
+import * as models from "./src/models/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
 import {
@@ -82,6 +83,38 @@ Hooks.once("init", () => {
 	loadTemplates();
 
 	UtilitySD.loadLegacyArtMappings();
+
+	// Register Data Models
+	Object.assign(CONFIG.Actor.dataModels, {
+		Player: models.PlayerSD,
+		NPC: models.NpcSD,
+	});
+
+	Object.assign(CONFIG.Item.dataModels, {
+		"Ancestry": models.AncestrySD,
+		"Armor": models.ArmorSD,
+		"Background": models.BackgroundSD,
+		"Basic": models.BasicSD,
+		"Boon": models.BoonSD,
+		"Class": models.ClassSD,
+		"Class Ability": models.ClassAbilitySD,
+		"Deity": models.DeitySD,
+		"Effect": models.EffectSD,
+		"Gem": models.GemSD,
+		"Language": models.LanguageSD,
+		"NPC Attack": models.NpcAttackSD,
+		"NPC Feature": models.NpcFeatureSD,
+		"NPC Special Attack": models.NpcSpecialAttackSD,
+		"NPC Spell": models.NpcSpellSD,
+		"Patron": models.PatronSD,
+		"Potion": models.PotionSD,
+		"Property": models.PropertySD,
+		"Scroll": models.ScrollSD,
+		"Spell": models.SpellSD,
+		"Talent": models.TalentSD,
+		"Wand": models.WandSD,
+		"Weapon": models.WeaponSD,
+	});
 
 	// Register sheet application classes
 	Actors.unregisterSheet("core", ActorSheet);

@@ -861,7 +861,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 					titles.sort((a, b) => a.from - b.from);
 				}
-				else {
+				else if (typeof updateData["title.from"] !== "undefined") {
 					titles.push({
 						to: updateData["title.to"],
 						from: updateData["title.from"],
