@@ -38,8 +38,4 @@ export default class NpcSD extends ActorBaseSD {
 		return Object.assign(super.defineSchema(), schema);
 	}
 
-	prepareBaseData() {
-    	super.prepareBaseData();
-	}
-
 }

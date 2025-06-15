@@ -67,6 +67,6 @@ export default class PlayerSD extends ActorBaseSD {
 
 	// triggered after Active Effects are applied
 	prepareDerivedData() {
-		super.prepareBaseData();
+		super.prepareDerivedData();
 	}
 }
