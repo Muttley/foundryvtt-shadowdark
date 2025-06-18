@@ -1,5 +1,5 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
@@ -15,7 +15,7 @@ function spellsknown() {
 	return new fields.SchemaField(spellsknown);
 }
 
-export default class ClassSD extends ItemBaseSD {
+export default class ClassSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.languageChoices(),

@@ -1,9 +1,9 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class WandSD extends ItemBaseSD {
+export default class WandSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.magic(),
@@ -14,5 +14,9 @@ export default class WandSD extends ItemBaseSD {
 		};
 
 		return Object.assign(super.defineSchema(), schema);
+	}
+
+	get isRollable() {
+		return true;
 	}
 }

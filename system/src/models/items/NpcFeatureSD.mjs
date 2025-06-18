@@ -1,3 +1,3 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
-export default class NpcFeatureSD extends ItemBaseSD {}
+export default class NpcFeatureSD extends BaseItemSD {}

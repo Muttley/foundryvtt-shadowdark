@@ -1,13 +1,12 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class BasicSD extends ItemBaseSD {
+export default class BasicSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.lightSource(),
-			...itemfields.physical(),
 			scroll: new fields.BooleanField({initial: false}),
 			treasure: new fields.BooleanField({initial: false}),
 		};

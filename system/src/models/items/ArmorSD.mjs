@@ -1,12 +1,10 @@
-import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class ArmorSD extends ItemBaseSD {
+export default class ArmorSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
-			...itemfields.physical(),
 			ac: new fields.SchemaField({
 				attribute: new fields.StringField({
 					initial: "dex",
@@ -16,10 +14,17 @@ export default class ArmorSD extends ItemBaseSD {
 				modifier: new fields.NumberField({ integer: true, initial: 0}),
 			}),
 			baseArmor: new fields.StringField(),
-			canBeEquipped: new fields.BooleanField({initial: true}),
 			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 		};
 
 		return Object.assign(super.defineSchema(), schema);
+	}
+
+	get canBeEquipped() {
+		return true;
+	}
+
+	get isAShield() {
+		return this.hasProperty("shield");
 	}
 }
