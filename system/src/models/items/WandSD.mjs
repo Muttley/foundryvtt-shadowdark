@@ -1,13 +1,12 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import { BaseItemSD } from "./_BaseItemSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class WandSD extends BaseItemSD {
+export default class WandSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.magic(),
-			...itemfields.physical(),
 			magicItem: new fields.BooleanField({initial: true}),
 			spellName: new fields.StringField(),
 			tier: new fields.NumberField({ integer: true, initial: 1, min: 0 }),
