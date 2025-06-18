@@ -1,5 +1,4 @@
-import * as itemfields from "../_fields/itemFields.mjs";
-import {BaseItemSD} from "./_BaseItemSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
