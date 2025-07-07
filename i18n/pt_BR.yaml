@@ -55,8 +55,8 @@ SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
 SHADOWDARK.apps.character-generator.see_details: Ver detalhes
-SHADOWDARK.apps.character-generator.sidebar_create: Create
-SHADOWDARK.apps.character-generator.sidebar_import: Import
+SHADOWDARK.apps.character-generator.sidebar_create: Criar
+SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Equipamento Inicial
 SHADOWDARK.apps.character-generator.success: Personagem criado
 SHADOWDARK.apps.character-generator.title: Gerador de Personagem
@@ -171,7 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Como {name} rolou o maior número, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
 SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title_vs: Rolagem de ataque com {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
 SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
