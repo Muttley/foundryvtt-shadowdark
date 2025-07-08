@@ -1276,7 +1276,7 @@ export default class ActorSD extends Actor {
 		}
 		if (item.system.bonuses.damageBonus) {
 			data.damageParts.push("@itemDamageBonus");
-			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
+			data.itemDamageBonus = parseInt(item.system.bonuses.damageBonus, 10) * damageMultiplier;
 		}
 
 		/* Attach Special Ability if part of the attack.
