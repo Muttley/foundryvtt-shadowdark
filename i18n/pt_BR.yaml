@@ -50,7 +50,7 @@ SHADOWDARK.apps.character-generator.choose: Escolher
 SHADOWDARK.apps.character-generator.create_character: Criar Personagem
 SHADOWDARK.apps.character-generator.error.create: Falha ao criar personagem {error}
 SHADOWDARK.apps.character-generator.error.name: O nome do personagem não pode estar em branco
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem um nome selecionado Ancestralidade
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem selecionar Ancestralidade
 SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
@@ -360,7 +360,7 @@ SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi se
 SHADOWDARK.error.general.no_character_selected: Nenhum personagem selecionado
 SHADOWDARK.error.patron.no_supported_class: Não foi possível adicionar Patrono, pois a classe atualmente configurada não permite
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
-SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode lançar feitiços dessa classe
+SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode conjurar magias dessa classe
 SHADOWDARK.error.spells.unable_to_use_item: Você não pode usar itens mágicos
 SHADOWDARK.error.too_many_tokens_selected: Muitos tokens selecionados
 SHADOWDARK.form.section_header.class_abilities.label: Habilidades de Classe
