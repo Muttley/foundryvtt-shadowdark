@@ -30,12 +30,23 @@ export class PhysicalItemSD extends BaseItemSD {
 		return false;
 	}
 
+	get hasMultiple() {
+		return this.isAmmunition || this.slots.per_slot > 1;
+	}
+
 	get isPhysical() {
 		return true;
 	}
 
 	get isRollable() {
 		return false;
+	}
+
+	get slotsUsed() {
+		const perSlot = this.slots.per_slot;
+		const quantity = this.quantity;
+		const slotsUsed = this.slots.slots_used;
+		return Math.ceil(quantity / perSlot) * slotsUsed;
 	}
 
 }

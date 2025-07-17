@@ -10,8 +10,19 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 		};
 	}
 
-	hasProperty(property) {
+	get isPhysical() {
+		return false;
+	}
 
+	getPropertyNames() {
+		const propertyItems = [];
+		for (const uuid of this.properties ?? []) {
+			propertyItems.push(fromUuidSync(uuid));
+		}
+		return propertyItems.map(p => p.name.slugify());
+	}
+
+	hasProperty(property) {
 		const propertyItems = [];
 		for (const uuid of this.properties ?? []) {
 			propertyItems.push(fromUuidSync(uuid));
@@ -19,7 +30,6 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 		const propertyItem = propertyItems.find(
 			p => p.name.slugify() === property.slugify()
 		);
-
 		return propertyItem ? true : false;
 	}
 

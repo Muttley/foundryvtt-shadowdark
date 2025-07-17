@@ -66,36 +66,12 @@ async function _getChatCardActor(card) {
 }
 
 /**
- * Applies the result of a HP roll to an actors max HP and disables
- * the button.
- * @param {Event} event - PointerEvent for click on button
- */
-async function applyHpToMax(event) {
-	const button = event.currentTarget;
-
-	// Disable button
-	button.disabled = true;
-
-	const hp = parseInt(button.dataset.value, 10);
-
-	const card = button.closest(".chat-card");
-	const actor = await _getChatCardActor(card);
-
-	await actor.addToHpBase(hp);
-}
-
-/**
  * Handles the chatcard button actions when applicable.
  * @param {ChatLog} app - The ChatLog instance
  * @param {jQuery} html - Rendered chat message html
  * @param {object} data - Data passed to the render context
  */
 async function chatCardButtonAction(app, html, data) {
-	const hpButton = html.find("button[data-action=apply-hp-to-max]");
-	hpButton.on("click", ev => {
-		ev.preventDefault();
-		applyHpToMax(ev);
-	});
 
 	const castSpellButton = html.find("button[data-action=cast-spell]");
 	castSpellButton.on("click", ev => {

@@ -1,129 +1,5 @@
 export default class RollSD extends Roll {
 
-	static async rollOptionsDialog(rollData={}) {
-		const fields = foundry.applications.fields;
-		if (!Array.isArray(rollData.formGroups)) rollData.formGroups = [];
-		rollData.bonusGroups = [];
-
-		// item bonues prompt
-		if (typeof rollData.itemBonus !== "undefined") {
-			rollData.bonusGroups.push(
-				fields.createFormGroup({
-					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.item_bonus"),
-					input: fields.createNumberInput({
-						name: "itemBonus",
-						value: rollData.itemBonus,
-					}),
-				})
-			);
-		}
-
-		// ability bonues prompt
-		if (typeof rollData.abilityBonus !== "undefined") {
-			rollData.bonusGroups.push(
-				fields.createFormGroup({
-					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"),
-					input: fields.createNumberInput({
-						name: "abilityBonus",
-						value: rollData.abilityBonus,
-					}),
-				})
-			);
-		}
-
-		// Talent bonues prompt
-		if (typeof rollData.talentBonus !== "undefined") {
-			rollData.bonusGroups.push(
-				fields.createFormGroup({
-					label: game.i18n.localize("SHADOWDARK.dialog.item_roll.talent_bonus"),
-					input: fields.createNumberInput({
-						name: "talentBonus",
-						value: rollData.talentBonus,
-					}),
-				})
-			);
-		}
-
-		// Special cases
-		// Backstab prompt
-		if (typeof rollData.backstab !== "undefined") {
-			rollData.formGroups.push(
-				fields.createFormGroup({
-					label: game.i18n.localize("SHADOWDARK.talent.backstab"),
-					input: fields.createCheckboxInput({
-						name: "backstab",
-						value: rollData.backstab,
-					}),
-				})
-			);
-		}
-
-		// get roll modes options
-		rollData.rollMode = game.settings.get("core", "rollMode");
-		if (game.version < 13) {
-			rollData.rollModes = CONFIG.Dice.rollModes;
-		}
-		else {
-			rollData.rollModes = {};
-			for (const [key, value] of Object.entries(CONFIG.Dice.rollModes)) {
-				rollData.rollModes[key] = value.label;
-			}
-		}
-
-		const newObject = {name: "Test"};
-		await Hooks.callAll("playerAttackSD", newObject);
-		console.error(newObject);
-
-		// calculate default
-		const defaultButton = (() => {
-			switch (rollData?.mode) {
-				case 1: return "advantage";
-				case -1: return "disadvantage";
-				case 0:
-				default: return "normal";
-			}
-		});
-
-		// callback function for dialog
-		const callbackHandler = ((html, mode) => {
-			const formData = new FormDataExtended(html.find("form")[0]).object;
-			formData.mode = mode;
-			return formData;
-		});
-
-		// render prompt template
-		const template = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		const dialogData = {
-			title: "test",
-			content: await renderTemplate(template, rollData),
-			classes: ["shadowdark-dialog"],
-			buttons: {
-				advantage: {
-					label: game.i18n.localize("SHADOWDARK.roll.advantage"),
-					callback: html => {
-						return callbackHandler(html, 1);
-					},
-				},
-				normal: {
-					label: game.i18n.localize("SHADOWDARK.roll.normal"),
-					callback: html => {
-						return callbackHandler(html, 0);
-					},
-				},
-				disadvantage: {
-					label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
-					callback: html => {
-						return callbackHandler(html, -1);
-					},
-				},
-			},
-			default: defaultButton(),
-		};
-
-		const result = await Dialog.wait(dialogData);
-		return result;
-	}
-
 	/**
 	 * Main roll method for rolling. It checks if the roll is a
 	 * d20, and if true, checks for special cases.
@@ -218,7 +94,7 @@ export default class RollSD extends Roll {
 		// Special cases for D20 rolls
 		if (this._isD20(parts)) {
 			// Weapon? -> Roll Damage dice
-			if (data.item?.isWeapon()) {
+			if (data.item?.system.isWeapon) {
 				data.handedness = options.handedness;
 				data.item.system.currentHand = data.handedness; // remember which hand used last
 				data = await this._rollWeapon(data);
@@ -797,10 +673,10 @@ export default class RollSD extends Roll {
 		}
 		if (data.item) {
 			templateData.isSpell = data.item.isSpell();
-			templateData.isWeapon = data.item.isWeapon();
+			templateData.isWeapon = data.item.system.isWeapon;
 
 			if (templateData.isWeapon) {
-				if (await data.item.isVersatile()) {
+				if (data.item.system.isVersatile) {
 					const hand = options.handedness === "1h" ? "one" : "two";
 
 					templateData.damageRollName = game.i18n.localize(
@@ -810,7 +686,7 @@ export default class RollSD extends Roll {
 			}
 			const propertyNames = [];
 
-			for (const property of await data.item.propertyItems()) {
+			for (const property of data.item.propertyItems) {
 				propertyNames.push(property.name);
 			}
 

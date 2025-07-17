@@ -69,7 +69,7 @@ export default class ActorSheetSD extends ActorSheet {
 			hiddenSections: this._hiddenSectionsLut,
 			isNpc: this.actor.type === "NPC",
 			isPlayer: this.actor.type === "Player",
-			items: actorData.items,
+			items: this.actor.items,
 			owner: this.actor.isOwner,
 			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
 			rollData: this.actor.getRollData.bind(this.actor),
@@ -353,6 +353,8 @@ export default class ActorSheetSD extends ActorSheet {
 	_sortAllItems(context) {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
-		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
+		return Array.from(context.items ?? []).sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
 	}
 }
