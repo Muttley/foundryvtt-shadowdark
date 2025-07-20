@@ -1,4 +1,3 @@
-import { chat } from "../chat/_module.mjs";
 import { ActorBaseSD } from "./_ActorBaseSD.mjs";
 
 const fields = foundry.data.fields;
@@ -182,138 +181,101 @@ export default class PlayerSD extends ActorBaseSD {
 		return slots;
 	}
 
-	//
-	// --- Functions ---
-	//
+	/*
+	 --- Private Functions ---
+	*/
 
 	_calcArmorClass() {
+		// TODO finish this calculation
 		return shadowdark.defaults.BASE_ARMOR_CLASS;
 	}
 
-	getEffectChanges(baseKey, rollData, item=null) {
-		if (!baseKey.startsWith("system.")) baseKey = "system.".concat(baseKey);
-
-		const keys = [];
-		keys.push(baseKey);
-
-		// keys that relate to items can have multiple selectors
-		if (item) {
-			const selectors = [];
-			selectors.push("all");
-
-			// Does item have properties?
-			const properties = item.system.getPropertyNames();
-			if (properties.length > 0) selectors.push(...properties);
-
-			// is item armor?
-			if (item.system?.baseArmor) selectors.push(item.system.baseArmor);
-
-			// is item a weapon?
-			if (item.system?.baseWeapon) selectors.push(item.system.baseWeapon);
-
-			// add name of item
-			selectors.push(item.name);
-
-			// generate full keys list
-			selectors.forEach(s => {
-				keys.push(`${baseKey}.${s.slugify()}`);
-			});
-		}
-
-		// get data from all matching keys
-		const changes = [];
-		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
-			const isItem = (c.key === baseKey.concat(".this") && e.origin === item?.uuid);
-			if (keys.includes(c.key) || isItem) {
-				c.name = e.name;
-				c.origin = e.origin;
-				c.value = CONFIG.DiceSD.resolveFormula(
-					c.value,
-					rollData
-				);
-				c.priority = c.priority ?? c.mode * 10;
-				changes.push(c);
-			}
-		}));
-
-		return changes;
-	}
-
-	async _calcAttackBonusData(weapon, rollData) {
-		if (!rollData.check) rollData.check = {};
+	_calcAttackBonusData(weapon, options) {
+		options.check ??= {};
 		const rollBonuses = [];
+		let rollBonus = 0;
 
 		// Calculate Ability Bonus
 		const abilityBonus = this.getAttackAbilityBonus(
-			rollData.attack.type,
+			options.attack.type,
 			weapon.system.isFinesse
 		);
 		if (abilityBonus) {
+			rollBonus += abilityBonus;
 			rollBonuses.push({
 				name: game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus
-				mode: 2,
 				value: abilityBonus,
 			});
 		}
 
 		// Get AE roll bonuses and add to bonuses
-		const rollBonusEffects = this.getEffectChanges(
-			`roll.${rollData.attack.type}.bonus`,
-			rollData,
+		const rollBonusKey = this.getRollKey(
+			`roll.${options.attack.type}.bonus`,
+			0,
 			weapon
 		);
-		rollBonuses.push(...rollBonusEffects);
-		const bonusFormula = CONFIG.DiceSD.formulaFromEffects("d20", rollBonuses);
+		rollBonuses.push(...rollBonusKey.changes);
+		rollBonus += rollBonusKey.value;
 
 		// calculate attack bonus formula
-		rollData.check.bonuses = rollBonuses ?? [];
-		rollData.check.formula = bonusFormula ?? "";
+		options.check.bonuses = rollBonuses ?? [];
+		const rollBonusStr = `${rollBonus > 0 ? "+" : ""}${rollBonus}`;
+		options.check.formula = `d20 ${rollBonusStr}`;
 
 		// calculate attack advantage
-		const rollAdvantageEffects = this.getEffectChanges(
-			`roll.${rollData.attack.type}.advantage`,
-			rollData,
+		const rollKeyAdv = this.getRollKey(
+			`roll.${options.attack.type}.advantage`,
+			0,
 			weapon
 		);
-		rollData.check.advantage = 0;
-		console.log(rollAdvantageEffects);
-
+		options.check.advantage = rollKeyAdv.value;
+		// TODO display advantage changes
 	}
 
-	async _calcAttackDamageData(weapon, rollData) {
-		if (!rollData.damage) rollData.damage = {};
-		rollData.damage.base = weapon.system.getDamageFormula(rollData.handedness);
+	/*
+	_calcAttackDamageData
+	*/
+	_calcAttackDamageData(weapon, options) {
+		options.damage ??= {};
+		options.damage.base ??= weapon.system.getDamageFormula(options.attack.handedness);
+		options.damage.bonuses = [];
 
-		// TODO Get roll key die improvements
-		const upgradeDamageDie = this.getEffectChanges(
-			`roll.${rollData.attack.type}.upgrade-damage-die`,
-			rollData,
+		// Get roll key die improvements
+		const rollKeyDamageDie = this.getRollKey(
+			`roll.${options.attack.type}.upgrade-damage-die`,
+			0,
 			weapon
 		);
+		if (rollKeyDamageDie.value) {
+			// TODO updgrade damagedie
+		}
 
-		// TODO Get roll key extra dice
-		const damageExtraDie = this.getEffectChanges(
-			`roll.${rollData.attack.type}.extra-damage-die`,
-			rollData,
+
+		// Get roll key extra dice
+		const rollKeyExtraDie = this.getRollKey(
+			`roll.${options.attack.type}.extra-damage-die`,
+			0,
 			weapon
 		);
+		if (rollKeyExtraDie.value) {
+			const baseDie = options.damage.base.match(/^[dD](\d*)/)[1];
+			options.damage.base += ` +${rollKeyExtraDie.value}${baseDie}`;
+			options.damage.bonuses.push(...rollKeyExtraDie.changes);
+		}
 
 		// Get damage formula and bonuses from Rolls keys
-		const damageEffects = this.getEffectChanges(
-			`roll.${rollData.attack.type}.damage`,
-			rollData,
+		const rollKeyDamage = this.getRollKey(
+			`roll.${options.attack.type}.damage`,
+			options.damage.base,
 			weapon
 		);
 
-		rollData.damage.bonuses = damageEffects ?? [];
-
-		const damageFormula = CONFIG.DiceSD.formulaFromEffects(rollData.damage.base, damageEffects);
-		rollData.damage.formula = damageFormula ?? "";
-
-		rollData.damage.advantage = 0;
+		options.damage.bonuses.push(...rollKeyDamage.changes);
+		options.damage.formula = rollKeyDamage.value;
+		options.damage.advantage = 0;
 	}
 
-	async _calcAttackTalentData(rollData) {
+	_calcAttackTalentData(options) {
 		// hard code talents logic goes here
 	}
 
@@ -330,20 +292,20 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 	}
 
-	async getAttackRollData(weapon, rollData={}) {
+	getAttackData(weapon, options={}) {
 
 		// set required fields
-		if (!rollData.handedness) rollData.handedness = "1H";
-		if (!rollData.attack) rollData.attack = {};
-		if (!rollData.attack.type) rollData.attack.type = weapon.system.type;
-		if (!rollData.attack.range) rollData.attack.range = weapon.system.range;
+		options.attack ??= {};
+		options.attack.handedness ??= "1H";
+		options.attack.type ??= weapon.system.type;
+		options.attack.range ??= weapon.system.range;
 
 		// calulate attack data
-		await this._calcAttackBonusData(weapon, rollData);
-		await this._calcAttackDamageData(weapon, rollData);
-		await this._calcAttackTalentData(weapon, rollData);
+		this._calcAttackBonusData(weapon, options);
+		this._calcAttackDamageData(weapon, options);
+		this._calcAttackTalentData(weapon, options);
 
-		return rollData;
+		return options;
 	}
 
 	getClassAbilities() {
@@ -387,31 +349,30 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 	}
 
-	async rollAttack(weaponId, rollData={}) {
+	async rollAttack(weaponId, options={}) {
 
-		foundry.utils.mergeObject(rollData, this.parent.getRollData());
-		rollData.actor = this.parent;
+		options.actor = this.parent;
 
 		const weapon = await fromUuid(weaponId);
 		if (!weapon && weapon.system.isWeapon) {
 			console.error("rollAttack: Invalid weaponId or type");
 			return false;
 		}
-		rollData.weapon = weaponId;
+		options.weapon = weaponId;
 
 		// Set target and target AC if targeting is enabled
 		if (game.settings.get("shadowdark", "enableTargeting")) {
 			const target = {};
-			if (typeof rollData.target === "undefined") {
+			if (typeof options.target === "undefined") {
 				const targetToken = game.user.targets.first();
 				if (targetToken) target.token = targetToken;
 
-				if (typeof rollData.target?.ac === "undefined") {
+				if (typeof options.target?.ac === "undefined") {
 					const tokenAc = target?.actor?.system?.attributes?.ac?.value;
 					if (tokenAc) target.ac = tokenAc;
 				}
 			}
-			rollData.target = target;
+			options.target = target;
 		}
 
 		// Test for available amnunition
@@ -423,54 +384,60 @@ export default class PlayerSD extends ActorBaseSD {
 			}
 		}*/
 
-		// generate attack data
-		await this.getAttackRollData(weapon, rollData);
+		// generate attack data options
+		this.getAttackData(weapon, options);
 
 		// Generate prompt form data
 		const appfields = foundry.applications.fields;
-		rollData.mainFormGroups = [];
+		options.mainFormGroups = [];
 
 		// Attack Bonus Prompt
-		const attackInput = appfields.createTextInput({name: "check.bonusFormula", value: rollData.check.formula});
+		const attackInput = appfields.createTextInput({name: "check.bonusFormula", value: options.check.formula});
 		const attackFormGroup = appfields.createFormGroup({
 			input: attackInput,
 			label: "Attack Roll", // TODO localize
-			hint: CONFIG.DiceSD.createBonusToolTip(rollData.check.bonuses),
+			hint: CONFIG.DiceSD.createBonusToolTip(options.check.bonuses),
 			localize: true,
 		});
-		rollData.mainFormGroups.push(attackFormGroup);
+		options.mainFormGroups.push(attackFormGroup);
 
 		// Damage Prompt
-		const damageInput = appfields.createTextInput({name: "damage.bonusFormula", value: rollData.damage.formula});
+		const damageInput = appfields.createTextInput({name: "damage.bonusFormula", value: options.damage.formula});
 		const damageFormGroup = appfields.createFormGroup({
 			input: damageInput,
 			label: "Damage Roll", // TODO localize
-			hint: CONFIG.DiceSD.createBonusToolTip(rollData.damage.bonuses),
+			hint: CONFIG.DiceSD.createBonusToolTip(options.damage.bonuses),
 		});
-		rollData.mainFormGroups.push(damageFormGroup);
+		options.mainFormGroups.push(damageFormGroup);
 
 		// call SD Player Attack hook
-		await Hooks.callAll("SD-Player-Attack", rollData);
+		await Hooks.callAll("SD-Player-Attack", options);
 
 		// show roll prompt
-		await CONFIG.DiceSD.rollDialog(rollData);
+		await CONFIG.DiceSD.rollDialog(options);
 
 		// make attack and damage Rolls
-		rollData.check.formula = CONFIG.DiceSD.applyAdvantage(
-			rollData.check.formula,
-			rollData.check.advantage
+		options.check.formula = CONFIG.DiceSD.applyAdvantage(
+			options.check.formula,
+			options.check.advantage
 		);
-		const attackRoll = await new Roll(rollData.check.formula, rollData).evaluate();
+		const attackRoll = await new Roll(
+			options.check.formula,
+			this.parent.getRolldata()
+		).evaluate();
 
 		// TODO allow for optional damage roll
-		rollData.damage.formula = CONFIG.DiceSD.applyAdvantage(
-			rollData.damage.formula,
-			rollData.damage.advantage
+		options.damage.formula = CONFIG.DiceSD.applyAdvantage(
+			options.damage.formula,
+			options.damage.advantage
 		);
-		const damageRoll = await new Roll(rollData.damage.formula, rollData).evaluate();
+		const damageRoll = await new Roll(
+			options.damage.formula,
+			this.parent.getRolldata()
+		).evaluate();
 
 		// generate chat message
-		shadowdark.chat.renderRollMessage(rollData, attackRoll, damageRoll);
+		shadowdark.chat.renderRollMessage(options, attackRoll, damageRoll);
 	}
 
 }

@@ -5,26 +5,26 @@ export default class DiceSD {
 
 	/*
 	rollDialog
-	Base rollData Options:
+	Base Options:
 		title: {String} - Title to be displayed
 		advantage: {Int} - 0: Normal, 1 for Advantage, -1 disadvantage
 		formGroups: {Array} - formsGroups to be included in the roll prompt
 		skipPrompt: {Bool} - show a dialog prompt during a roll?
 		rollingMode: {option}
 	*/
-	static async rollDialog(rollData={}) {
-		if (rollData.skipPrompt) return;
+	static async rollDialog(options={}) {
+		if (options.skipPrompt) return;
 
 		const promptData = {
 			rollModes: CONFIG.Dice.rollModes,
 		};
 
 		// get global role default if rollMode not set
-		if (!rollData.rollMode) rollData.rollMode = game.settings.get("core", "rollMode");
+		options.rollMode ??= game.settings.get("core", "rollMode");
 
 		// calculate default
 		const defaultButton = (() => {
-			switch (rollData?.check?.advantage) {
+			switch (options?.check?.advantage) {
 				case 1: return "advantage";
 				case -1: return "disadvantage";
 				case 0:
@@ -32,15 +32,15 @@ export default class DiceSD {
 			}
 		});
 
-		// Generate prompt content by merging rollData into prompData.
-		foundry.utils.mergeObject(promptData, rollData);
+		// Generate prompt content by merging options into prompData.
+		foundry.utils.mergeObject(promptData, options);
 		const content = await renderTemplate(
 			"systems/shadowdark/templates/dialog/roll-dialog.hbs",
 			   promptData
 		);
 
 		// callback function for dialog to get inputed mode
-		const callbackHandler = ((html, adv) => {
+		const callbackHandler = ((html, adv, reload=false) => {
 			const formData = new FormDataExtended(html.find("form")[0]).object;
 			formData.check = {
 				advantage: adv,
@@ -78,7 +78,7 @@ export default class DiceSD {
 
 		const result = await Dialog.wait(dialogData);
 		const expandedData = foundry.utils.expandObject(result);
-		foundry.utils.mergeObject(rollData, expandedData);
+		foundry.utils.mergeObject(options, expandedData);
 	}
 
 	static createBonusToolTip(rollBonuses) {
@@ -88,8 +88,8 @@ export default class DiceSD {
 		return text;
 	}
 
-	static resolveFormula(formula, actorData={}) {
-		const r = new Roll(formula.toString(), actorData);
+	static resolveFormula(formula, rollData={}, forceDeterministic=false) {
+		const r = new Roll(formula.toString(), rollData);
 		if (r.isDeterministic) {
 			try {
 				r.evaluateSync();
@@ -99,33 +99,12 @@ export default class DiceSD {
 			}
 			return r.total;
 		}
-		else {
-			return r.formula.toString();
+		else if (forceDeterministic) {
+			return null;
 		}
-	}
-
-	static formulaFromEffects(base, effectChanges) {
-		// Calculate bonus formula
-		let intParts = 0;
-		let strParts = "";
-
-		effectChanges.forEach(b => {
-			// TODO filter addition
-			if (Number(b.value)) intParts += Number(b.value);
-			else strParts += ` + ${b.value}`;
-		});
-
-		let additionBonus = "";
-		if (intParts) additionBonus = additionBonus.concat(` +${intParts}`);
-		if (strParts) additionBonus = additionBonus.concat(strParts);
-
-		let formula = base.concat(additionBonus);
-
-		// TODO add multiplication
-
-		// TODO add override
-
-		return formula;
+		else {
+			return formula;
+		}
 	}
 
 	static applyAdvantage(formula, adv) {

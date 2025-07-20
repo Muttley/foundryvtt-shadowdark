@@ -9,9 +9,11 @@
 		<img src="{{actor.img}}" data-tooltip="{{title}}"/>
 		<h3 class="roll-name">{{title}}</h3>
 	</header>
-	<div class="roll card-roll">
-		{{#if check.HTML}}
-			<div>{{{check.HTML}}}</div>
-		{{/if}}
-	</div>
+	{{#if check.HTML}}
+		<div>{{{check.HTML}}}</div>
+	{{/if}}
+	{{#if damage.HTML}}
+		<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
+		<div>{{{damage.HTML}}}</div>
+	{{/if}}
 </div>

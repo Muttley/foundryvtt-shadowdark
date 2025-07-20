@@ -663,8 +663,8 @@ export default class ActorSD extends Actor {
 
 	getRollData() {
 		const rollData = {...this.system};
-		if (this.system._getRollData instanceof Function) {
-			this.system._getRollData(rollData);
+		if (this.system._modifyRollData instanceof Function) {
+			this.system._modifyRollData(rollData);
 		}
 		return rollData;
 	}
