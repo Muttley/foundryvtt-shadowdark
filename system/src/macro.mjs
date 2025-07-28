@@ -137,9 +137,8 @@ export default class ShadowdarkMacro {
 
 		// Roll weapon attack
 		else if (items[0].type === "Weapon") {
-			const isVersatile = await item.isVersatile();
 
-			if (isVersatile) options.handedness = "1h";
+			if (item.system.isVersatile) options.handedness = "1h";
 
 			actor.rollAttack(items[0]._id, options);
 		}

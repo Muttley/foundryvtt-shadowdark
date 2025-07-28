@@ -196,7 +196,7 @@ export default class PlayerSD extends ActorBaseSD {
 		let rollBonus = 0;
 
 		// Calculate Ability Bonus
-		const abilityBonus = this.getAttackAbilityBonus(
+		const abilityBonus = this._getAttackAbilityBonus(
 			options.attack.type,
 			weapon.system.isFinesse
 		);
@@ -279,7 +279,7 @@ export default class PlayerSD extends ActorBaseSD {
 		// hard code talents logic goes here
 	}
 
-	getAttackAbilityBonus(attackType, finesse=false) {
+	_getAttackAbilityBonus(attackType, finesse=false) {
 		const str = this.abilities.str.mod;
 		const dex = this.abilities.dex.mod;
 		switch (attackType) {
@@ -290,6 +290,11 @@ export default class PlayerSD extends ActorBaseSD {
 			default:
 				throw new Error(`Unknown attack type ${attackType}`);
 		}
+	}
+
+	async getclass() {
+		if (!this.class) return null;
+		return await fromUuid(this.class);
 	}
 
 	getAttackData(weapon, options={}) {

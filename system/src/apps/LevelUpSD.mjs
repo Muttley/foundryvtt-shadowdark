@@ -390,6 +390,7 @@ export default class LevelUpSD extends FormApplication {
 		}
 
 		// load audit log, check for valid data, add new entry
+		/*
 		let auditLog = this.data.actor.system?.auditlog ?? {};
 		if (auditLog.constructor !== Object) auditLog = {};
 
@@ -397,13 +398,13 @@ export default class LevelUpSD extends FormApplication {
 			baseHP: newBaseHP,
 			itemsGained: itemNames,
 		};
+		*/
 
 		// update values on actor
 		await this.data.actor.update({
 			"system.attributes.hp.base": newBaseHP,
 			"system.attributes.hp.max": newMaxHP,
 			"system.attributes.hp.value": newValueHP,
-			"system.auditLog": auditLog,
 			"system.level.value": this.data.targetLevel,
 			"system.level.xp": newXP,
 		});
