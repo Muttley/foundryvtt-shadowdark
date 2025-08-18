@@ -16,13 +16,13 @@ SHADOWDARK.alignment.neutral: Нейтральный
 SHADOWDARK.ancestry.choice_count: Количество
 SHADOWDARK.ancestry.choice: Выбор
 SHADOWDARK.ancestry.fixed: Стартовый
-SHADOWDARK.ancestry.languages.label: Язык происхождения
+SHADOWDARK.ancestry.languages.label: Языки родословной
 SHADOWDARK.ancestry.languages.prompt: Выберите язык...
 SHADOWDARK.ancestry.nametable.label: Таблица случайных имён
 SHADOWDARK.ancestry.nametable.placeholder: Перетащите сюда таблицу бросков
 SHADOWDARK.ancestry.nametable.random_weight: Вес рандомизации
 SHADOWDARK.ancestry.nametable.tooltip.weight: Влияет на шанс выпадения при использовании Генератора Персонажей. Более высокие значения увеличивают шанс. Значение по умолчанию - 1.
-SHADOWDARK.ancestry.talents.label: Таланты происхождения
+SHADOWDARK.ancestry.talents.label: Таланты родословной
 SHADOWDARK.ancestry.talents.prompt: Выберите талант...
 SHADOWDARK.app.active_effects.title: Активные эффекты
 SHADOWDARK.app.gem_bag.sell_all: Продать все самоцветы
@@ -310,8 +310,8 @@ SHADOWDARK.dialog.roll_mode_label: Режим броска
 SHADOWDARK.dialog.roll: Бросок
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "ВНИМАНИЕ: Это заклинание не относится к классу персонажа. Вы уверены, что хотите попробовать его выучить?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Подтвердить изучение заклинания
-SHADOWDARK.dialog.select_ancestry.prompt: Выберите происхождение...
-SHADOWDARK.dialog.select_ancestry.title: Выбор происхождения
+SHADOWDARK.dialog.select_ancestry.prompt: Выберите родословную...
+SHADOWDARK.dialog.select_ancestry.title: Выбор родословной
 SHADOWDARK.dialog.select_armor_property.prompt: Выберите свойство доспеха...
 SHADOWDARK.dialog.select_armor_property.title: Выбор свойств доспеха
 SHADOWDARK.dialog.select_background.prompt: Выберите предысторию...
@@ -746,7 +746,7 @@ SHADOWDARK.sheet.npc.tab.abilities: Способности
 SHADOWDARK.sheet.npc.tab.description: Описание
 SHADOWDARK.sheet.npc.tab.spells: Заклинания
 SHADOWDARK.sheet.player.active_effect_override: Это значение изменяется активным эффектом и не может быть отредактировано. Отключите эффект, чтобы отредактировать его.
-SHADOWDARK.sheet.player.ancestry.label: Происхождение
+SHADOWDARK.sheet.player.ancestry.label: Родословная
 SHADOWDARK.sheet.player.ancestry.tooltip: Культурное и родовое наследие вашего персонажа
 SHADOWDARK.sheet.player.available_spells: Доступные заклинания
 SHADOWDARK.sheet.player.background.label: Предыстория
@@ -827,7 +827,7 @@ SHADOWDARK.spell_range.near: Рядом
 SHADOWDARK.spell.classes.label: Классы заклинателей
 SHADOWDARK.spell.classes.prompt: Выберите класс...
 SHADOWDARK.talent.backstab: Удар в спину
-SHADOWDARK.talent.class.ancestry: Происхождение
+SHADOWDARK.talent.class.ancestry: Родословная
 SHADOWDARK.talent.class.class: Класс
 SHADOWDARK.talent.class.level: Уровень
 SHADOWDARK.talent.class.patronBoon: Дар Покровителя
@@ -861,7 +861,7 @@ SHADOWDARK.weapon.type.ranged: Дальнобойное
 TYPES.Actor.Light: Свет
 TYPES.Actor.NPC: НИП
 TYPES.Actor.Player: Игрок
-TYPES.Item.Ancestry: Происхождение
+TYPES.Item.Ancestry: Родословная
 TYPES.Item.Armor: Доспех
 TYPES.Item.Background: Предыстория
 TYPES.Item.Basic: Базовые
