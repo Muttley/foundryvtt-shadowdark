@@ -184,7 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: был погашен
 SHADOWDARK.chat.light_source.source.toggle.on: был зажжен
 SHADOWDARK.chat.light_source.went_out: "{name} {lightSource} погас"
 SHADOWDARK.chat.potion_used: "{name} использовал Зелье"
-SHADOWDARK.chat.spell_focus_check: "Проверка концентрации"
+SHADOWDARK.chat.spell_focus_check: "Проверка фокусировки"
 SHADOWDARK.chat.spell_learn.failure: "{name} не удалось ничего выучить из свитка"
 SHADOWDARK.chat.spell_learn.success: "{name} успешно выучил заклинание {spellName}"
 SHADOWDARK.chat.spell_learn.title: Изучение заклинания
@@ -815,7 +815,7 @@ SHADOWDARK.source.quickstart: "Shadowdark НРИ: Набор для быстро
 SHADOWDARK.spell_caster.priest: Жрец
 SHADOWDARK.spell_caster.wizard: Волшебник
 SHADOWDARK.spell_duration.days: Дни
-SHADOWDARK.spell_duration.focus: Концентрация
+SHADOWDARK.spell_duration.focus: Фокус
 SHADOWDARK.spell_duration.instant: Мгновенное
 SHADOWDARK.spell_duration.permanent: Постоянное
 SHADOWDARK.spell_duration.real_time: Реальное время
