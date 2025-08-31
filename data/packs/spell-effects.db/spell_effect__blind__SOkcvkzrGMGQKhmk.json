@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Blind",
 	"system": {
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">The creature is blind and has disadvantage on tasks requiring sight.</span></p>",
+		"description": "<p>The creature is blind and has disadvantage on tasks requiring sight.</p>",
 		"duration": {
 			"type": "focus",
 			"value": 1
