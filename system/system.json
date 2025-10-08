@@ -378,8 +378,6 @@
 		"distance": 5,
 		"units": "ft"
 	},
-	"gridDistance": 5,
-	"gridUnits": "ft",
 	"socket": true,
 	"initiative": "@initiativeFormula + @initiativeBonus",
 	"primaryTokenAttribute": "attributes.hp",
