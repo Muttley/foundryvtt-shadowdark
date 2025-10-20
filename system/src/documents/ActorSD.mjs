@@ -12,6 +12,42 @@ export default class ActorSD extends Actor {
 		if (abilityScore >= 18) return 4;
 	}
 
+	_animateHpChange(delta) {
+		const isDamage = delta < 0;
+		const color = isDamage
+			? CONFIG.SHADOWDARK.TOKEN_HP_COLORS.damage
+			: CONFIG.SHADOWDARK.TOKEN_HP_COLORS.healing;
+
+		const tokens = this.isToken ? [this.token] : this.getActiveTokens(true, false);
+		for (const t of tokens) {
+			// Suppress further effects if the token is marked as defeated in combat tracker
+			if (t.document.hasStatusEffect(CONFIG.specialStatusEffects.DEFEATED)) continue;
+
+			// Flash dynamic ring if enabled
+			if (t.document.ring.enabled) {
+				const anim = isDamage ? {
+					duration: 500,
+					easing: t.ring.constructor.easeTwoPeaks,
+				} : {};
+				t.ring.flashColor(Color.from(color), anim);
+			}
+
+			// Create scrolling combat text for HP delta
+			const hpPercent = Math.clamp(
+				Math.abs(delta) / (this.system.attributes.hp.max || 1),
+				0,
+				1
+			);
+			canvas.interface.createScrollingText(t.center, delta.signedString(), {
+				anchor: CONST.TEXT_ANCHOR_POINTS.TOP,
+				fontSize: 16 + (32 * hpPercent),
+				fill: color,
+				stroke: 0x000000,
+				strokeThickness: 4,
+				jitter: 0.25,
+			});
+		}
+	}
 
 	async _applyHpRollToMax(value) {
 		const currentHpBase = this.system.attributes.hp.base;
@@ -134,6 +170,16 @@ export default class ActorSD extends Actor {
 		});
 	}
 
+	async _onUpdate(data, options, userId) {
+		super._onUpdate(data, options, userId);
+
+		// If _preUpdate captured a previous HP value, animate the change
+		const prev = options?.shadowdark?.prevHpValue;
+		if (prev !== undefined) {
+			const delta = this.system.attributes.hp.value - prev;
+			if (delta !== 0) this._animateHpChange(delta);
+		}
+	}
 
 	async _playerRollHP(options={}) {
 		const characterClass = await this.getClass();
@@ -210,6 +256,15 @@ export default class ActorSD extends Actor {
 		this._populatePlayerModifiers();
 	}
 
+	async _preUpdate(data, options, userId) {
+		await super._preUpdate(data, options, userId);
+
+		// for HP changes, store a transient value to the update options for use in _onUpdate
+		const hpValuePath = "system.attributes.hp.value";
+		if (foundry.utils.hasProperty(data, hpValuePath)) {
+			(options.shadowdark ??= {}).prevHpValue = this.system.attributes.hp.value;
+		}
+	}
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
