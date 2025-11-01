@@ -140,9 +140,4 @@ export default class VehicleSheetSD extends PlayerSheetSD {
 			]);
 		}
 	}
-
-	/** @override */
-	async _updateObject(event, formData) {
-		super._updateObject(event, formData);
-	}
 }
