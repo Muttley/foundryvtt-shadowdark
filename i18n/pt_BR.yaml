@@ -32,7 +32,7 @@ SHADOWDARK.app.gem_bag.total_value: Valor Total
 SHADOWDARK.app.item_properties.armor.title: Propriedades da Armadura
 SHADOWDARK.app.item_properties.languages.title: Línguas
 SHADOWDARK.app.item_properties.magic_item.effects.title: Efeitos de Itens Mágicos
-SHADOWDARK.app.item_properties.save: Salvaguarda
+SHADOWDARK.app.item_properties.save: Salvar
 SHADOWDARK.app.item_properties.talent.effects.title: Tipos de Efeitos de Talentos
 SHADOWDARK.app.item_properties.title: Propriedades
 SHADOWDARK.app.item_properties.weapon.title: Propriedades da Arma
@@ -623,7 +623,7 @@ SHADOWDARK.range.far: Longe
 SHADOWDARK.range.near_short: "P"
 SHADOWDARK.range.near: Próximo
 SHADOWDARK.range.nearLine_short: PL
-SHADOWDARK.range.nearLine: Próximo em Linha
+SHADOWDARK.range.nearLine: Perto em Linha
 SHADOWDARK.range.oneMile_short: 1mi
 SHADOWDARK.range.oneMile: 1 Milha
 SHADOWDARK.range.samePlane_short: MP
@@ -871,7 +871,7 @@ TYPES.Item.Class: Classe
 TYPES.Item.Deity: Divindade
 TYPES.Item.Effect: Efeito
 TYPES.Item.Gem: Gema
-TYPES.Item.Language: Língua
+TYPES.Item.Language: Idioma
 TYPES.Item.NPC Attack: Ataque PNJ
 TYPES.Item.NPC Feature: Funcionalidade PNJ
 TYPES.Item.NPC Special Attack: Ataque Especial PNJ
