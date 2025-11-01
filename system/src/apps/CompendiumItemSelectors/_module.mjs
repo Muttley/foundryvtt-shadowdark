@@ -5,4 +5,5 @@ export {default as ClassSelector} from "./ClassSelector.mjs";
 export {default as DeitySelector} from "./DeitySelector.mjs";
 export {default as LanguageSelector} from "./LanguageSelector.mjs";
 export {default as PatronSelector} from "./PatronSelector.mjs";
+export {default as VehiclePropertySelector} from "./VehiclePropertySelector.mjs";
 export {default as WeaponPropertySelector} from "./WeaponPropertySelector.mjs";

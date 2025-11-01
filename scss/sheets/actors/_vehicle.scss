@@ -1,0 +1,72 @@
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
+
+.shadowdark.sheet.vehicle {
+
+	.abilities-grid {
+		display: grid;
+		grid-template-columns: minmax(375px, 3fr) 1fr;
+		column-gap: 8px;
+		align-items: start;
+		margin-bottom: 2em;
+	}
+
+	.ability-score {
+		div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			min-width: 2em;
+			text-align: center;
+		}
+		a {
+			text-transform: uppercase;
+			font-size: 18px;
+			font-family: "Old Newspaper Font";
+			font-weight: bold;
+		}
+		input,
+		span {
+			font-size: 18px;
+			font-family: "Montserrat-SemiBold";
+			width: 2.5em;
+		}
+	}
+
+	.background-grid-a {
+		display: grid;
+		grid-template-rows: 1fr;
+		gap: 8px;
+		font-size: 16px;
+	 }
+
+	.background-content-link {
+		background: none;
+		border: none;
+		padding: 0px;
+		font-size: 16px;
+	}
+
+	.background-grid-a {
+		grid-template-columns: 1fr 2fr 2.5fr;
+	}
+
+	.inventory-grid {
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		gap: 8px;
+	}
+
+	.tab-notes.active{
+		height: 100%;
+		display: grid;
+		grid-template-rows: 30px 1fr;
+	}
+
+	.properties-list {
+		height: 26px;
+   		background-color: var(--form-background);
+		line-height: 1.75;
+	}
+
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "mH9oGkVnl2ZdjCJr",
+	"_key": "!items!mH9oGkVnl2ZdjCJr",
+	"effects": [
+	],
+	"folder": "uqttku97Y3pmwFvI",
+	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+	"name": "Seaworthy",
+	"system": {
+		"description": "<p>An unseaworthy ship has a 3:6 chance of capsizing on the open sea every day. DC 20 STR to right it if capsized.</p><p></p>",
+		"itemType": "vehicle",
+		"source": {
+			"title": "cursed-scroll-3"
+		}
+	},
+	"type": "Property"
+}

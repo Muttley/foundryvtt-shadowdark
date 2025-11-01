@@ -325,6 +325,10 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Wand", filterSources);
 	}
 
+	static async vehicleProperties(filterSources=true) {
+		return CompendiumsSD.properties(["vehicle"], filterSources);
+	}
+
 	static async weaponProperties(filterSources=true) {
 		return CompendiumsSD.properties("weapon", filterSources);
 	}
