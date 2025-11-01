@@ -16,7 +16,7 @@ SHADOWDARK.alignment.neutral: Neutro
 SHADOWDARK.ancestry.choice_count: Número de Escolhas
 SHADOWDARK.ancestry.choice: Escolha
 SHADOWDARK.ancestry.fixed: Fixo
-SHADOWDARK.ancestry.languages.label: Línguas de Ancestralidade
+SHADOWDARK.ancestry.languages.label: Idioma de Ancestralidade
 SHADOWDARK.ancestry.languages.prompt: Selecionar Idioma...
 SHADOWDARK.ancestry.nametable.label: Tabela de Nomes Aleatórios
 SHADOWDARK.ancestry.nametable.placeholder: Arraste a Tabela Aleatória Aqui
@@ -30,7 +30,7 @@ SHADOWDARK.app.gem_bag.title: Bolsa de Gemas
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vender Gema
 SHADOWDARK.app.gem_bag.total_value: Valor Total
 SHADOWDARK.app.item_properties.armor.title: Propriedades da Armadura
-SHADOWDARK.app.item_properties.languages.title: Línguas
+SHADOWDARK.app.item_properties.languages.title: Idiomas
 SHADOWDARK.app.item_properties.magic_item.effects.title: Efeitos de Itens Mágicos
 SHADOWDARK.app.item_properties.save: Salvar
 SHADOWDARK.app.item_properties.talent.effects.title: Tipos de Efeitos de Talentos
@@ -91,15 +91,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: 3. Clique em Importar Item.
 SHADOWDARK.apps.item-importer.title: Importar Item
 SHADOWDARK.apps.level-up.dragdrop: Arraste e Solte Aqui
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Benefício de Patrono, pois a Tabela configurada não pôde ser carregada
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Dádiva de Patrono, pois a Tabela configurada não pôde ser carregada
 SHADOWDARK.apps.level-up.hit_points: Pontos de Vida
 SHADOWDARK.apps.level-up.level_up: Subir de Nível!
 SHADOWDARK.apps.level-up.leveling_to: Subindo para o nível
 SHADOWDARK.apps.level-up.missing_selections: Faltando Seleções
 SHADOWDARK.apps.level-up.notalent: Nenhum talento ganho neste nível
-SHADOWDARK.apps.level-up.or_boons: ou Benefícios
+SHADOWDARK.apps.level-up.or_boons: ou Dádivas
 SHADOWDARK.apps.level-up.prompt: Nem todas as seleções necessárias foram feitas. Continuar subindo de nível mesmo assim?
-SHADOWDARK.apps.level-up.roll_boon: Rolar Benefício
+SHADOWDARK.apps.level-up.roll_boon: Rolar Dádiva
 SHADOWDARK.apps.level-up.roll_talent: Rolar Talento
 SHADOWDARK.apps.level-up.title: Subindo de nível
 SHADOWDARK.apps.monster-importer.import_button: Importar Monstro
@@ -207,7 +207,7 @@ SHADOWDARK.check.requesting: Solicitando um teste
 SHADOWDARK.class-ability.ability.check: Teste de Atributo
 SHADOWDARK.class-ability.ability.label: Atributo
 SHADOWDARK.class-ability.available.label: Disponível
-SHADOWDARK.class-ability.boons: Benefícios
+SHADOWDARK.class-ability.boons: Dádiva
 SHADOWDARK.class-ability.dc.label: CD
 SHADOWDARK.class-ability.group.label: Grupo de Atributo
 SHADOWDARK.class-ability.limited-uses.label: Usos Limitados?
@@ -581,8 +581,8 @@ SHADOWDARK.language.sylvan: Silvestre
 SHADOWDARK.language.thanian: Thaniano
 SHADOWDARK.language.who_speaks_it: Quem o fala
 SHADOWDARK.light_source.lantern: Lanterna
-SHADOWDARK.light_source.light_spell.double_near: Magia de Luz (Próximo Duplo)
-SHADOWDARK.light_source.light_spell.near: Magia de Luz (Próximo)
+SHADOWDARK.light_source.light_spell.double_near: Magia de Luz (Perto x2)
+SHADOWDARK.light_source.light_spell.near: Magia de Luz (Perto)
 SHADOWDARK.light_source.torch: Tocha
 SHADOWDARK.light-source.dropped: Soltou {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pegar Fonte de Luz
@@ -605,23 +605,23 @@ SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Quando a Iniciativa no se
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
 SHADOWDARK.npc_move.close: Adjacente
-SHADOWDARK.npc_move.double_near: Próximo Duplo
+SHADOWDARK.npc_move.double_near: Perto x2
 SHADOWDARK.npc_move.far: Longe
-SHADOWDARK.npc_move.near: Próximo
+SHADOWDARK.npc_move.near: Perto
 SHADOWDARK.npc_move.none: Nenhum
 SHADOWDARK.npc_move.special: Especial
-SHADOWDARK.npc_move.triple_near: Próximo Triplo
+SHADOWDARK.npc_move.triple_near: Perto x3
 SHADOWDARK.patron.boons_table.label: Tabela de Benefícios de Patrono
 SHADOWDARK.property.type.option.armor: Armadura
 SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo da Propriedade
 SHADOWDARK.range.close_short: A
 SHADOWDARK.range.close: Adjacente
-SHADOWDARK.range.double_near: Duplo Perto
+SHADOWDARK.range.double_near: Perto x2
 SHADOWDARK.range.far_short: L
 SHADOWDARK.range.far: Longe
 SHADOWDARK.range.near_short: "P"
-SHADOWDARK.range.near: Próximo
+SHADOWDARK.range.near: Perto
 SHADOWDARK.range.nearLine_short: PL
 SHADOWDARK.range.nearLine: Perto em Linha
 SHADOWDARK.range.oneMile_short: 1mi
@@ -823,7 +823,7 @@ SHADOWDARK.spell_duration.rounds: Rodadas
 SHADOWDARK.spell_duration.turns: Turnos
 SHADOWDARK.spell_range.close: Adjacente
 SHADOWDARK.spell_range.far: Longe
-SHADOWDARK.spell_range.near: Próximo
+SHADOWDARK.spell_range.near: Perto
 SHADOWDARK.spell.classes.label: Classes Conjuradoras
 SHADOWDARK.spell.classes.prompt: Selecionar Classe...
 SHADOWDARK.talent.backstab: Ataque Furtivo
