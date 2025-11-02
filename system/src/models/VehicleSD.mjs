@@ -23,8 +23,8 @@ export default class VehicleSD extends ActorBaseSD {
 				sp: new fields.NumberField({ integer: true, initial: 0, min: 0}),
 				cp: new fields.NumberField({ integer: true, initial: 0, min: 0}),
 			}),
-			slots: new fields.NumberField({ integer: true, initial: 10, min: 10}),
-			passengers: new fields.NumberField({ integer: true, initial: 0, min: 10}),
+			slots: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+			passengers: new fields.NumberField({ integer: true, initial: 0, min: 0}),
 			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 		};
 

@@ -88,6 +88,7 @@ Hooks.once("init", () => {
 	Object.assign(CONFIG.Actor.dataModels, {
 		Player: models.PlayerSD,
 		NPC: models.NpcSD,
+		Vehicle: models.VehicleSD,
 	});
 
 	Object.assign(CONFIG.Item.dataModels, {
