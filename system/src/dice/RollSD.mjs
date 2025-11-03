@@ -700,6 +700,19 @@ export default class RollSD extends Roll {
 			templateData.isSpell = data.item.isSpell();
 			templateData.isWeapon = data.item.isWeapon();
 
+			// If Momentum Mode is enabled and this is a spell, convert inline rolls to exploding
+			if (
+				game.settings.get("shadowdark", "useMomentumMode")
+				&& templateData.isSpell
+			) {
+				// Modify the description to add exploding dice
+				const originalDescription = data.item.system.description;
+				data.item.system.description = originalDescription.replace(
+					/(\[\[\/r(?:oll)?\s*)(\d+d\d+)(?!x)/gi,
+					"$1$2x"
+				);
+			}
+
 			if (templateData.isWeapon) {
 				if (await data.item.isVersatile()) {
 					const hand = options.handedness === "1h" ? "one" : "two";

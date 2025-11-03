@@ -62,6 +62,7 @@ export default function registerSystemSettings() {
 		config: true,
 		default: false,
 		type: Boolean,
+		requiresReload: true,
 	});
 
 	// ------------------------

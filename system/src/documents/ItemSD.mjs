@@ -147,8 +147,24 @@ export default class ItemSD extends Item {
 
 
 	async getEnrichedDescription() {
+		let description = this.system.description;
+
+		// If Momentum Mode is enabled and this is a spell, add exploding dice to inline rolls
+		if (
+			game.settings.get("shadowdark", "useMomentumMode")
+			&& this.isSpell()
+		) {
+			// Convert inline rolls to use exploding dice
+			// Match patterns like [[/r 1d6]] or [[/roll 2d8+3]]
+			// Add 'x' modifier to dice notation if not already present
+			description = description.replace(
+				/(\[\[\/r(?:oll)?\s*)(\d+d\d+)(?!x)/gi,
+				"$1$2x"
+			);
+		}
+
 		return await TextEditor.enrichHTML(
-			this.system.description,
+			description,
 			{
 				async: true,
 			}
