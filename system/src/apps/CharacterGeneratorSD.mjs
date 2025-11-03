@@ -1,4 +1,4 @@
-export default class CharacterGeneratorSD extends FormApplication {
+export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplication {
 
 	LEVEL_ZERO_GEAR_TABLE_UUID = "Compendium.shadowdark.rollable-tables.RollTable.WKVfMaGkoXe3DGub";
 

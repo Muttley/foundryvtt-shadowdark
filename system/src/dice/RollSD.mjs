@@ -1,5 +1,4 @@
-export default class RollSD extends Roll {
-
+export default class RollSD extends foundry.dice.Roll {
 	/**
 	 * Main roll method for rolling. It checks if the roll is a
 	 * d20, and if true, checks for special cases.

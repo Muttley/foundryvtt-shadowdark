@@ -1,5 +1,4 @@
-export default class CompendiumItemSelector extends FormApplication {
-
+export default class CompendiumItemSelector extends foundry.appv1.api.FormApplication {
 	closeOnSelection = false;
 
 	maxChoices = 0;

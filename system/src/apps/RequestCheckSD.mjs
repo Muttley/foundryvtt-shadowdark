@@ -1,5 +1,4 @@
-export default class RequestCheckSD extends FormApplication {
-
+export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark"],

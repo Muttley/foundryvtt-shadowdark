@@ -1,5 +1,4 @@
-export default class ItemSD extends Item {
-
+export default class ItemSD extends foundry.documents.Item {
 	get isRollable() {
 		return [
 			"Potion",

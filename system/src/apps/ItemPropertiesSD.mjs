@@ -1,4 +1,4 @@
-export default class ItemPropertiesSD extends FormApplication {
+export default class ItemPropertiesSD extends foundry.appv1.api.FormApplication {
 	constructor(object, options) {
 		super(object, options);
 

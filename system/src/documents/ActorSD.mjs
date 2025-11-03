@@ -1,5 +1,4 @@
-export default class ActorSD extends Actor {
-
+export default class ActorSD extends foundry.documents.Actor {
 	async _applyHpRollToMax(value) {
 		const currentHpBase = this.system.attributes.hp.base;
 		await this.update({
