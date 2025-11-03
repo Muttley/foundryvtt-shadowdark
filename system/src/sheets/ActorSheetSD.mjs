@@ -1,6 +1,6 @@
 import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
-export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
+export default class ActorSheetSD extends ActorSheet {
 
 	_hiddenSectionsLut = {
 		activeEffects: true,
