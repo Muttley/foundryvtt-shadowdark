@@ -226,6 +226,25 @@ export default class RollSD extends Roll {
 	}
 
 	/**
+	 * Adds exploding dice modifiers to all dice in the parts array.
+	 * This makes dice "explode" - when max value is rolled, roll again and add.
+	 * @param {Array<string>} parts - Parts with dice formulas
+	 * @returns {Array<string>}			- Parts with exploding modifiers added
+	 */
+	static _makeExploding(parts) {
+		return parts.map(part => {
+			// Only modify dice formulas (containing 'd'), skip bonuses and variables
+			if (typeof part === "string" && part.includes("d") && !part.includes("@")) {
+				// Add 'x' modifier if not already present and not already modified
+				// Handle patterns like "1d6", "2d8 * 2", "3d4"
+				// The 'x' modifier needs to be added right after the die notation
+				return part.replace(/(\d+d\d+)(?!x)/gi, "$1x");
+			}
+			return part;
+		});
+	}
+
+	/**
 	 * Modifies the first term in `rollParts` to roll with either advantage
 	 * or disadvantage. Does nothing if multiple dice are first parts.
 	 * @param {Array<string>} rollParts	- Array containing parts for rolling
@@ -256,10 +275,11 @@ export default class RollSD extends Roll {
 	 * @param {Array<string>}	parts	- Dice and Bonuses associated with the roll `@bonus`
 	 * @param {object} data					- Data for the roll, incl. values for bonuses, like
 	 * `data.bonus`
+	 * @param {boolean} isDamageRoll - Whether this is a damage roll (for exploding dice)
 	 * @returns {object} 						- Returns the evaluated `roll`, the rendered
 	 * HTML `renderedHTML`, and `critical` info.
 	 */
-	static async _roll(parts, data={}) {
+	static async _roll(parts, data={}, isDamageRoll=false) {
 		// Check the numDice has been given, otherwise add 1 dice
 		if (parts[0][0] === "d") parts[0] = `1${parts[0]}`;
 
@@ -270,6 +290,11 @@ export default class RollSD extends Roll {
 
 		// Put back the main dice
 		parts.unshift(mainDice);
+
+		// Apply exploding dice if Momentum Mode is enabled and this is a damage roll
+		if (isDamageRoll && game.settings.get("shadowdark", "useMomentumMode")) {
+			parts = this._makeExploding(parts);
+		}
 
 		const roll = await new Roll(parts.join(" + "), data).evaluate();
 		const renderedHTML = await roll.render();
@@ -360,7 +385,7 @@ export default class RollSD extends Roll {
 
 			const damageParts = [baseDamageFormula, ...data.damageParts];
 
-			data.rolls.damage = await this._roll(damageParts, data);
+			data.rolls.damage = await this._roll(damageParts, data, true);
 		}
 
 		return data;
@@ -455,18 +480,18 @@ export default class RollSD extends Roll {
 
 			switch (data.handedness) {
 				case "1h":
-					data.rolls.damage = await this._roll(oneHandedParts, data);
+					data.rolls.damage = await this._roll(oneHandedParts, data, true);
 					break;
 				case "2h":
-					data.rolls.damage = await this._roll(twoHandedParts, data);
+					data.rolls.damage = await this._roll(twoHandedParts, data, true);
 					break;
 				case undefined:
 					if (damageDie1H && damageDie2H) {
-						data.rolls.damage = await this._roll(oneHandedParts, data);
-						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data);
+						data.rolls.damage = await this._roll(oneHandedParts, data, true);
+						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data, true);
 					}
 					else {
-						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
+						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts, data, true);
 					}
 			}
 		}
