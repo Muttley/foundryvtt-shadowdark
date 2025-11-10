@@ -14,7 +14,6 @@ export default class ArmorSD extends PhysicalItemSD {
 				modifier: new fields.NumberField({ integer: true, initial: 0}),
 			}),
 			baseArmor: new fields.StringField(),
-			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 		};
 
 		return Object.assign(super.defineSchema(), schema);
@@ -24,7 +23,12 @@ export default class ArmorSD extends PhysicalItemSD {
 		return true;
 	}
 
+	get isArmor() {
+		return true;
+	}
+
 	get isAShield() {
 		return this.hasProperty("shield");
 	}
+
 }

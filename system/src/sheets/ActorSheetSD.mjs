@@ -284,27 +284,23 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-
 		let ability = $(event.currentTarget).data("ability");
-
+		if (!ability) return;
 		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, skipPrompt: true});
-		}
-		else {
-			this.actor.rollAbility(ability, {event: event});
-		}
+		const skipPrompt = event.shiftKey ? true : false;
+		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
 	}
 
 	async _onRollAttack(event) {
 		event.preventDefault();
 		const itemId = event.currentTarget.dataset.itemId;
-		const rollData = {
-			attackType: event.currentTarget.dataset.attackType,
-			handedness: event.currentTarget.dataset.handedness,
+		const data = {
 			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
 		};
-		this.actor.rollAttack(itemId, rollData);
+		if (event.currentTarget.dataset.attackType) {
+			data.attack = {Type: event.currentTarget.dataset.attackType};
+		}
+		this.actor.system.rollAttack(itemId, data);
 	}
 
 	async _onToggleLost(event) {

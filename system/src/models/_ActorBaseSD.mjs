@@ -15,23 +15,14 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		};
 	}
 
-	attackBonus(attackType) {
-		switch (attackType) {
-			case "melee":
-				return this.abilities.str.mod;
-			case "ranged":
-				return this.abilities.dex.mod;
-			default:
-				throw new Error(`Unknown attack type ${attackType}`);
-		}
-	}
-
+	// change the default data provided by actor.getRollData()
 	_modifyRollData(rollData) {
 		// calculate initiative
 		let initBonus = this.abilities.dex.mod;
 		initBonus += this.roll?.initiative?.bonus ?? 0;
 		const initAdv = this.roll?.initiative?.advantage ?? 0;
-		rollData.initiative = CONFIG.DiceSD.applyAdvantage(`d20 +${initBonus}`, initAdv);
+		const fomula = `d20 ${initBonus > 0 ? "+" : ""}${initBonus}`;
+		rollData.initiative = shadowdark.dice.applyAdvantage(fomula, initAdv);
 	}
 
 	_sortByUserOrder(collection) {
@@ -40,7 +31,17 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		);
 	}
 
-	getRollKey(baseKey, baseValue, item=null) {
+	/**
+	 * Starting at a baseValue, returns the combine total of a AE based key
+	 * and any selectors present. e.g. system.[baseKey].[selector]
+	 * Deterministic placeholders are resolved based on actor's rollData
+	 * @param {string} baseKey The base key under system. without selectors
+	 * @param {int|string} baseValue The starting value that the AE effects will modify
+	 * @param {document} item optional item to use as a selector by it's name and properties
+	 * @param {document} selected optional selectors to include i.e. system.[baseKey].optional
+	 * @returns {rollKeyObject}
+	 */
+	_getActiveEffectKeys(baseKey, baseValue, item=null, selected=[]) {
 		if (!baseKey.startsWith("system.")) baseKey = "system.".concat(baseKey);
 		const keys = [];
 		keys.push(baseKey);
@@ -50,7 +51,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			const selectors = [];
 			selectors.push("all");
 			// Does item have properties?
-			const properties = item.system.getPropertyNames();
+			const properties = item.system.propertyNames;
 			if (properties.length > 0) selectors.push(...properties);
 			// is item armor?
 			if (item.system?.baseArmor) selectors.push(item.system.baseArmor);
@@ -67,19 +68,28 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 		// get data from all matching keys
 		const changes = [];
+		const optional = [];
 		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
 			const isItem = (c.key === baseKey.concat(".this") && e.origin === item?.uuid);
-			if (keys.includes(c.key) || isItem) {
+			const isOptional = c.key === baseKey.concat(".optional");
+			if (keys.includes(c.key) || isItem || isOptional) {
 				c.name = e.name;
+				c.value = shadowdark.dice.resolveFormula(c.value, this.parent.getRollData());
 				c.origin = e.origin;
-				c.value = CONFIG.DiceSD.resolveFormula(c.value, this.parent.getRollData());
 				c.priority = c.priority ?? c.mode * 10;
+
+				if (isOptional) {
+					optional.push(c);
+					if (!selected.includes(c.name)) return;
+				}
+
 				changes.push(c);
 			}
 		}));
 
 		// calculate final value based on all Active Effect changes
-		let value = baseValue;
+		let finalValue = baseValue;
+		const tooltips =[];
 
 		// Calculate add type changes
 		let intParts = 0;
@@ -87,105 +97,99 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.ADD).forEach(c => {
 			if (Number(c.value)) intParts += Number(c.value);
 			else strParts += ` + ${c.value}`;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+"));
 		});
-		if (typeof value === "string" || strParts) {
-			value = value.toString();
-			if (intParts) value = value.concat(` +${intParts}`);
-			if (strParts) value = value.concat(strParts);
+		if (typeof finalValue === "string" || strParts) {
+			finalValue = finalValue.toString();
+			if (intParts) finalValue = finalValue.concat(` +${intParts}`);
+			if (strParts) finalValue = finalValue.concat(strParts);
 		}
 		else {
-			value += intParts;
+			finalValue += intParts;
 		}
 
 		// Calculate multiply type changes
 		let multiplyBonus = 1;
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY).forEach(c => {
 			multiplyBonus = multiplyBonus * c.value;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "x"));
 		});
 
 		if (multiplyBonus !== 1) {
-			if (typeof value === "string") {
-				value = `(${value})*${multiplyBonus}`;
+			if (typeof finalValue === "string") {
+				finalValue = `(${finalValue})*${multiplyBonus}`;
 			}
 			else {
-				value = value * multiplyBonus;
+				finalValue = finalValue * multiplyBonus;
 			}
 		}
 
 		// Calculate override type changes
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE).forEach(c => {
-			value = c.value;
+			finalValue = c.value;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "="));
 		});
 
-		return {value, changes};
+		return {
+			value: finalValue,
+			tooltips: tooltips.filter(Boolean).join(", "),
+			changes,
+			optional,
+		};
 	}
 
-	async rollCheck(abilityId, options={}) {
-		const ability = abilityId.toLowerCase();
-		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
+	generateAbilityCheckData(ability, data={}) {
+		data.check ??= {};
+		data.check.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
+		data.check.base ??= "d20";
 
-		options.actor = this.parent;
-		options.check ??= {};
+		// generate check formula from ability mod and AE roll bonuses
+		const modifer = this.abilities[ability].mod;
+		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer);
+		data.check.bonus ??= rollKey.value;
+		const bonusStr = rollKey.value !==0 ? rollKey.value: "";
+		data.check.formula ??= `${data.check.base}${bonusStr > 0 ? " +" : ""}${bonusStr}`;
 
-		let bonus = 0;
-		const bonuses = [];
-
-		const modifer = this.abilities[abilityId].mod;
-		if (modifer) {
-			bonus += modifer;
-			bonuses.push({
-				name: game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus
-				value: modifer,
-			});
+		// generate tooltips
+		const tooltips = [];
+		if (modifer !==0) {
+			tooltips.push(shadowdark.dice.createToolTip(
+				game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus name
+				modifer
+			));
 		}
-
-		// Get AE roll bonuses
-		const bonusKey = this.getRollKey(`roll.${ability}.bonus`, 0);
-		bonuses.push(...bonusKey.changes);
-		bonus += bonusKey.value;
-
-		// calculate check bonus formula
-		options.check.bonuses = bonuses ?? [];
-		const bonusStr = `${bonus > 0 ? "+" : ""}${bonus}`;
-		options.check.formula = `d20 ${bonusStr}`;
+		tooltips.push(rollKey.tooltips);
+		data.check.tooltips = tooltips.filter(Boolean).join(", ");
 
 
 		// calculate roll advantage
-		const rollKeyAdv = this.getRollKey(`roll.${ability}.advantage`, 0);
-		options.check.advantage = rollKeyAdv.value;
+		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0);
+		data.check.advantage ??= advRollKeyAdv.value;
+		data.check.advantageTooltips = advRollKeyAdv.tooltips;
+	}
 
-		// Generate prompt form data
-		const appfields = foundry.applications.fields;
-		options.mainFormGroups = [];
+	async rollAbilityCheck(abilityId, data={}) {
+		const ability = abilityId.toLowerCase();
+		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
 
-		// Check Bonus Prompt
-		const formulaInput = appfields.createTextInput({name: "check.formula", value: options.check.formula});
-		const checkFormGroup = appfields.createFormGroup({
-			input: formulaInput,
-			label: game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`),
-			hint: CONFIG.DiceSD.createBonusToolTip(options.check.bonuses),
-			localize: true,
-		});
-		options.mainFormGroups.push(checkFormGroup);
+		data.type = "ability-check";
+		data.actor = this.parent;
+		data.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
+		data.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
 
-		// call SD Actor Stat Check hook
-		await Hooks.callAll("SD-Stat-Check", options);
+		this.generateAbilityCheckData(ability, data);
 
-		// show roll prompt
-		await CONFIG.DiceSD.rollDialog(options);
+		// show roll prompt and end if closed
+		const prompt = await shadowdark.dice.rollDialog(data);
+		if (!prompt) return;
 
-		// apply advantage and roll the check
-		options.check.formula = CONFIG.DiceSD.applyAdvantage(
-			options.check.formula,
-			options.check.advantage
-		);
-		const checkRoll = await new Roll(
-			options.check.formula,
-			this.parent.getRollData()
-		).evaluate();
+		this.generateAbilityCheckData(ability, data);
 
-		// generate chat message
-		shadowdark.chat.renderRollMessage(options, checkRoll);
+		// call Stat Check hooks and cancel if any return false
+		if (!await Hooks.call("SD-Stat-Check", data)) return false;
+
+		// Prompt, evaluate and roll the attack
+		await shadowdark.dice.resolveRolls(data);
 	}
 
 }

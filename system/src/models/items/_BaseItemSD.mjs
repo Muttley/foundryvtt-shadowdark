@@ -7,6 +7,7 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 			source: new fields.SchemaField({
 				title: new fields.StringField({initial: ""}),
 			}),
+			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 		};
 	}
 
@@ -14,7 +15,7 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 		return false;
 	}
 
-	getPropertyNames() {
+	get propertyNames() {
 		const propertyItems = [];
 		for (const uuid of this.properties ?? []) {
 			propertyItems.push(fromUuidSync(uuid));

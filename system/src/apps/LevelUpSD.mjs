@@ -162,6 +162,13 @@ export default class LevelUpSD extends FormApplication {
 		this.data.talentsRolled = this.data.rolls.talent || this.data.rolls.boon;
 		this.data.talentsChosen = this.data.talents.length > 0;
 
+		// get HP advanatage
+		const hpRollKey = this.data.actor.system._getActiveEffectKeys("system.roll.hp.advantage", 0);
+		this.data.hp = {
+			advanatage: hpRollKey.value,
+			tooltips: hpRollKey.tooltips,
+		};
+
 		return this.data;
 	}
 
@@ -212,14 +219,16 @@ export default class LevelUpSD extends FormApplication {
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 		options.skipPrompt = true;
 
-		let parts = [this.data.class.system.hitPoints];
-		let advantage = 0;
-		if (data.actor?.hasAdvantage(data)) advantage = 1;
-
-		const result = await CONFIG.DiceSD.Roll(parts, data, false, advantage, options);
-
-		this.data.rolls.hp = result.rolls.main.roll.total;
-		ui.sidebar.activateTab("chat");
+		const config = {
+			formula: this.data.class.system.hitPoints,
+			advantage: this.hp.advantage,
+			actor: this.data.actor,
+		};
+		console.log(config);
+		const result = await shadowdark.dice.roll(config);
+		this.data.rolls.hp = result.total;
+		result.toMessage();
+		ui.sidebar.changeTab("chat", "primary");
 		this.render();
 	}
 

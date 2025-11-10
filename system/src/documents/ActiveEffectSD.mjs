@@ -7,26 +7,23 @@ export default class ActiveEffectSD extends ActiveEffect {
 		// allow only deterministic formulas for non roll system keys
 		if (change.key.startsWith("system.") && !change.key.startsWith("system.roll.")) {
 
-			const r = new Roll(change.value, actor.getRollData());
-			if (r.isDeterministic) {
-				// try to evaluate the formula
-				try {
-					r.evaluateSync();
-				}
-				catch(err) {
-					console.error("Unresolvable AE formula: ", change);
-				}
+			const resolvedFormula = shadowdark.dice.resolveFormula(
+				change.value,
+				actor.getRollData(),
+				true // return only deterministic
+			);
 
-				// don't apply null values
-				if (!r.total) return;
-
-				// apply resolved formula value
-				change.value = r.total;
-			}
-			else {
-				console.error("Non-deterministic AE formula: ", change);
+			// don't apply null values or non-deterministic formulas
+			if (!resolvedFormula) {
+				console.error(
+					"ERROR: Cannot Resolve AE formula:",
+					`${actor?.name} > ${change.effect?.name} > ${change.value}`
+				);
 				return;
 			}
+
+			// apply resolved formula value
+			change.value = resolvedFormula;
 		}
 
 		// call default behavior for everything else

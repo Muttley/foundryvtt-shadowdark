@@ -201,18 +201,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		// Get the inventory ready
 		await this._prepareItems(context);
 
-		context.abilitiesOverrides = Object.keys(
-			foundry.utils.flattenObject(
-				this.actor.overrides?.system?.abilities || {}
-			)
-		);
-
-		context.attributeOverrides = Object.keys(
-			foundry.utils.flattenObject(
-				this.actor.overrides?.system?.attributes || {}
-			)
-		);
-
 		context.characterClass = await this.actor.getClass();
 		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
 		context.classTitle = await this.actor.getTitle();
@@ -814,7 +802,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
-		const attacks = {melee: [], ranged: []};
+		const attacks = this.actor.system.getAttacks();
 
 		for (const i of this.actor.system.getPhysicalItems()) {
 			if (i.system.isGem) {
@@ -830,11 +818,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				inventory.carried.push(i);
 			}
 
-			if (i.system.isWeapon) {
-				const weaponAttacks = await this.actor.buildWeaponDisplays(i._id);
-				attacks.melee.push(...weaponAttacks.melee);
-				attacks.ranged.push(...weaponAttacks.ranged);
-			}
 			if (i.type === "Wand") {
 				spellitems.wands.push(i);
 			}

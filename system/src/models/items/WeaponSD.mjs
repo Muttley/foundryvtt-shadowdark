@@ -22,7 +22,6 @@ export default class WeaponSD extends PhysicalItemSD {
 				oneHanded: new fields.StringField(),
 				twoHanded: new fields.StringField(),
 			}),
-			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 			range: new fields.StringField({
 				initial: "close",
 				choices: Object.keys(CONFIG.SHADOWDARK.RANGES),
@@ -37,7 +36,16 @@ export default class WeaponSD extends PhysicalItemSD {
 		return Object.assign(super.defineSchema(), schema);
 	}
 
-	getDamageFormula(handedness) {
+	prepareBaseData() {
+		super.prepareBaseData();
+
+		// determine handedness
+		const isTwoHanded = this.hasProperty("two-handed")
+			|| (this.damage.oneHanded === "" && this.damage.twoHanded !== "");
+		this.handedness = isTwoHanded ? "2h" : "1h";
+	}
+
+	getDamageFormula(handedness=this.handedness) {
 		switch (handedness.slugify()) {
 			case "2h":
 				return this.damage.twoHanded;
@@ -61,11 +69,6 @@ export default class WeaponSD extends PhysicalItemSD {
 
 	get isThrown() {
 		return this.hasProperty("thrown");
-	}
-
-	get isTwoHanded() {
-		return this.hasProperty("two-handed")
-			|| (this.damage.oneHanded === "" && this.damage.twoHanded !== "");
 	}
 
 	get isVersatile() {

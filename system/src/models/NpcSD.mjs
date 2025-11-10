@@ -37,6 +37,58 @@ export default class NpcSD extends ActorBaseSD {
 		return Object.assign(super.defineSchema(), schema);
 	}
 
+	async generateAttackData(attack, data={}) {
+
+		data.check ??= {};
+		data.check.base ??= "d20";
+		const atkBonus = attack.system.bonuses.attackBonus
+			?`${attack.system.bonuses.attackBonus > 0 ? "+" : ""}${attack.system.bonuses.attackBonus}`
+			: "";
+		data.check.formula ??= `${data.check.base} ${atkBonus}`;
+		data.check.advantage ??= 0;
+		data.check.label ??= "Attack"; // TODO localize
+
+		data.attack ??= {};
+		data.attack.range ??= attack.system.ranges[0];
+		data.attack.type ??= (data.attack.range === "close")? "melee" : "ranged";
+
+		data.damage ??= {};
+		data.damage.label ??= "Damage"; // TODO localize
+		data.damage.base ??= attack.system.damage.value;
+		const dmgBonus = attack.system.bonuses.damageBonus
+			?`${attack.system.bonuses.damageBonus > 0 ? "+" : ""}${attack.system.bonuses.damageBonus}`
+			: "";
+		data.damage.formula ??= `${data.damage.base} ${dmgBonus}`;
+	}
+
+	async rollAttack(attackId, data={}) {
+		data.type = "npc-attack";
+		data.actor = this.parent;
+		const attack = this.parent.items.get(attackId);
+		if (!attack) {
+			console.error("invalid attack ID");
+			return;
+		}
+		data.item = attack;
+
+		shadowdark.dice.setRollTarget(data);
+
+		// generates attack data
+		this.generateAttackData(attack, data);
+
+		// show roll prompt and cancelled if closed
+		if (!await shadowdark.dice.rollDialog(data)) return false;
+
+		// re-generates attack data
+		this.generateAttackData(attack, data);
+
+		// Call NPC attack hooks
+		if (!await Hooks.call("SD-Player-Attack", data)) return false;
+
+		// Prompt, evaluate and roll the attack
+		await shadowdark.dice.resolveRolls(data);
+	}
+
 	async rollHP(options={}) {
 		// TODO refactor this
 		const data = {
@@ -53,11 +105,11 @@ export default class NpcSD extends ActorBaseSD {
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
 		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
 
-		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+		const result = await shadowdark.dice.rollDialog(parts, data, options);
 
 		const newHp = Number(result.rolls.main.roll._total);
 		await this.update({

@@ -104,12 +104,12 @@ export default class ActorSD extends Actor {
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 
 		const parts = [characterClass.system.hitPoints];
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		await shadowdark.dice.rollDialog(parts, data, options);
 	}
 
 
@@ -305,7 +305,7 @@ export default class ActorSD extends Actor {
 	}
 
 	async getWeaponAttacks(weaponIds=null) {
-		const item = this.getEmbeddedDocument("Item", itemId);
+		// const item = this.getEmbeddedDocument("Item", itemId);
 
 		// versitile
 		// thrown
@@ -944,7 +944,7 @@ export default class ActorSD extends Actor {
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
-		return await CONFIG.DiceSD.RollDialog(parts, data, options);
+		return await shadowdark.dice.rollDialog(parts, data, options);
 	}
 
 

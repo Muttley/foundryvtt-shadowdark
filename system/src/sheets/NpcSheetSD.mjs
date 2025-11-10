@@ -25,34 +25,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 		return "systems/shadowdark/templates/actors/npc.hbs";
 	}
 
-	async _onRollItem(event) {
-		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		if (item.type === "NPC Attack" && item.system.attackType === "special") {
-			// TODO These are not technically rollable, but maybe in the
-			// future we could add an interactive chat card for contested
-			// checks, etc.
-			return;
-		}
-
-		const data = {
-			item: item,
-			actor: this.actor,
-		};
-
-		// Summarize the bonuses for the attack roll
-		const parts = ["1d20", "@attackBonus"];
-		data.attackBonus = item.system.bonuses.attackBonus;
-
-		data.damageParts = ["@damageBonus"];
-		data.damageBonus = item.system.bonuses.damageBonus;
-
-		return item.rollNpcAttack(parts, data);
-	}
-
 	/** @inheritdoc */
 	activateListeners(html) {
 		html.find("[data-action='item-use-ability']").click(
@@ -206,4 +178,5 @@ export default class NpcSheetSD extends ActorSheetSD {
 			super._onDropItem(event, data);
 		}
 	}
+
 }
