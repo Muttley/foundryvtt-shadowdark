@@ -1,4 +1,4 @@
-export default class GemBagSD extends Application {
+export default class GemBagSD extends foundry.appv1.api.Application {
 	constructor(object, options) {
 		super(object, options);
 

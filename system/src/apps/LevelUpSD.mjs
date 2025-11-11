@@ -1,5 +1,4 @@
-export default class LevelUpSD extends FormApplication {
-
+export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	constructor(uid) {
 	    super();
 		this.firstrun = true;
