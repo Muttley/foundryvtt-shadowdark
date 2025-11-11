@@ -1,4 +1,4 @@
-export default class ShadowdarklingImporterSD extends FormApplication {
+export default class ShadowdarklingImporterSD extends foundry.appv1.api.FormApplication {
 	/**
 	 * Contains an importer function to generate player actors from
 	 * Shadowdarklings.net. Primary matching is done with a mapping

@@ -1,5 +1,4 @@
-export default class SolodarkSD extends FormApplication {
-
+export default class SolodarkSD extends foundry.appv1.api.FormApplication {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {

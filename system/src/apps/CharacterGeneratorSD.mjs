@@ -1,4 +1,4 @@
-export default class CharacterGeneratorSD extends FormApplication {
+export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplication {
 
 	LEVEL_ZERO_GEAR_TABLE_UUID = "Compendium.shadowdark.rollable-tables.RollTable.WKVfMaGkoXe3DGub";
 
@@ -50,7 +50,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			system: {
 				attributes: {
 					hp: {
-						base: 1,
+						max: 1,
 						value: 1,
 					},
 				},
@@ -60,27 +60,27 @@ export default class CharacterGeneratorSD extends FormApplication {
 				},
 				abilities: {
 					str: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 					int: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 					dex: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 					wis: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 					con: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 					cha: {
-						base: 10,
+						value: 10,
 						mod: 0,
 					},
 				},
@@ -96,7 +96,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 					sp: 0,
 					cp: 0,
 				},
-				showLevelUp: true,
 			},
 		};
 
@@ -180,6 +179,10 @@ export default class CharacterGeneratorSD extends FormApplication {
 			return ui.notifications.error(
 				game.i18n.format("SHADOWDARK.apps.character-generator.error.create", {error: error})
 			);
+		}
+
+		if (!level0) {
+			newActor.setFlag("shadowdark", "showLevelUp", true);
 		}
 
 		await newActor.createEmbeddedDocuments("Item", characterItems);
@@ -401,7 +404,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// make changes only for level 0 characters
 		if (this.formData.level0) {
 			this.formData.actor.system.coins.gp = 0;
-			this.formData.actor.system.showLevelUp = false;
 
 			// add gear to the items list
 			for (const item of this.formData.gearSelected) {
@@ -423,6 +425,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.actor.system.attributes.hp.value = hpConMod;
 
 		// add auditlog data
+		/*
 		const itemNames = [];
 		allItems.forEach(x => itemNames.push(x.name));
 		let auditLog = {};
@@ -432,6 +435,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			itemsGained: itemNames,
 		};
 		this.formData.actor.system.auditLog = auditLog;
+		*/
 
 		// Create the new player character
 		//
@@ -981,9 +985,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 				class: this.formData.actor.system.class,
 				languages: this.formData.actor.system.languages,
 				coins: {gp: this.formData.actor.system.coins.gp},
-				showLevelUp: true,
 			} });
 
+		actorRef.setFlag("shadowdark", "showLevelUp", true);
 
 		// Add class talents and promp player to choose effects
 		const allTalents = [

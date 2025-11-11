@@ -1,8 +1,8 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class TalentSD extends ItemBaseSD {
+export default class TalentSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			level: new fields.NumberField({ integer: true, initial: 0, min: 0 }),

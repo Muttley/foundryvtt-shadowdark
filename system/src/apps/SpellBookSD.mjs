@@ -4,8 +4,7 @@ Handlebars.registerHelper("hasspell", spell => {
 	return (hasSpells.includes(spell));
 });
 
-export default class SpellBookSD extends FormApplication {
-
+export default class SpellBookSD extends foundry.appv1.api.FormApplication {
 	constructor(classUuid, characterUid = "") {
 	    super();
 		this.classID = classUuid;

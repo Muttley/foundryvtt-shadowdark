@@ -9,18 +9,18 @@
 	</div>
 	<a class="item-name" data-action="show-details">
 		{{item.name}}
-		{{#if item.lightSourceUsed}}
+		{{#if item.system.light.hasBeenUsed}}
 			<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>
 		{{/if}}
 	</a>
-	{{#if item.lightSourceUsed}}
+	{{#if item.system.light.hasBeenUsed}}
 		<div data-tooltip="{{lightSourceTimeRemaining}}">
 			{{item.lightSourceProgress}}
 		</div>
 	{{/if}}
 
 	<div class="quantity">
-		{{#if item.showQuantity}}
+		{{#if item.system.hasMultiple}}
 			{{#if owner}}
 				<a
 					data-action="item-decrement"
@@ -48,7 +48,7 @@
 	</div>
 
 	<div class="slots">
-		{{item.slotsUsed}}
+		{{item.system.slotsUsed}}
 	</div>
 
 	<div class="actions">

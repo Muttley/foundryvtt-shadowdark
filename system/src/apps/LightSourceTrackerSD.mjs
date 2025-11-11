@@ -1,7 +1,6 @@
 import RealTimeSD from "./RealTimeSD.mjs";
 
-export default class LightSourceTrackerSD extends Application {
-
+export default class LightSourceTrackerSD extends foundry.appv1.api.Application {
 	DEFAULT_UPDATE_INTERVAL =
 		shadowdark.defaults.LIGHT_TRACKER_UPDATE_INTERVAL_SECS;
 

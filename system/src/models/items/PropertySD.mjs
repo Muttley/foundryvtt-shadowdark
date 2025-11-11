@@ -1,8 +1,8 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class PropertySD extends ItemBaseSD {
+export default class PropertySD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			itemType: new fields.StringField({

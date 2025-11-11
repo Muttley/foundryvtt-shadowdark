@@ -1,9 +1,9 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class NpcSpecialAttackSD extends ItemBaseSD {
+export default class NpcSpecialAttackSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.ranges(),

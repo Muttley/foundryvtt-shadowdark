@@ -1,8 +1,8 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class DeitySD extends ItemBaseSD {
+export default class DeitySD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			alignment: new fields.StringField({

@@ -19,16 +19,16 @@
 		<div class="grid-2-columns">
 			{{#each actor.system.abilities as |value key|}}
 				<div class="stats">
-					<label for="actor.system.abilities.{{key}}.base">
+					<label for="actor.system.abilities.{{key}}.value">
 						{{localize (concat "SHADOWDARK.ability_" key)}}
 					</label>
 					<div>
 						<select
 							id="stat"
-							name="actor.system.abilities.{{key}}.base"
+							name="actor.system.abilities.{{key}}.value"
 							{{disabled ../editing}}
 						>
-							{{#select value.base}}
+							{{#select value.value}}
 								{{#each ../statRange}}
 									<option value="{{this}}">
 										{{this}}

@@ -71,11 +71,13 @@ Hooks.once("init", () => {
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
+	CONFIG.ActiveEffect.documentClass = documents.ActiveEffectSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
-	CONFIG.DiceSD = dice.DiceSD;
 	CONFIG.Combat.documentClass = documents.EncounterSD;
-
+	CONFIG.ChatMessage.documentClass = documents.ChatMessageSD;
 	CONFIG.ActiveEffect.legacyTransferral = false;
+
+	CONFIG.Dice.rolls = [dice.RollSD];
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();

@@ -23,20 +23,20 @@
 					data-action="roll-ability-check"
 					data-ability="{{id}}"
 				>
-					{{ability.label}}
+					{{localize (concat "SHADOWDARK.ability_" id)}}
 				</a>
 				<div>
 					{{#if ../editingStats}}
 						<input
-							name="{{concat "system.abilities." id ".total"}}"
+							name="{{concat "system.abilities." id ".value"}}"
 							type="number"
-							value="{{ability.total}}"
+							value="{{ability.value}}"
 							placeholder="10"
 						>
 					{{else}}
-						<span>{{ability.total}}</span>
+						<span>{{ability.value}}</span>
 					{{/if}}
-					({{numberFormat ability.modifier decimals=0 sign=true}})
+					({{numberFormat ability.mod decimals=0 sign=true}})
 				</div>
 			</div>
 

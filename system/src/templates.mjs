@@ -22,6 +22,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/hp.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/luck.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/stats.hbs",
+		"systems/shadowdark/templates/actors/player/abilities/weapon-attack.hbs",
 		"systems/shadowdark/templates/actors/player/details.hbs",
 		"systems/shadowdark/templates/actors/player/details/alignment.hbs",
 		"systems/shadowdark/templates/actors/player/details/ancestry.hbs",
