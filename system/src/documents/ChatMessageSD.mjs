@@ -1,13 +1,18 @@
 export default class ChatMessageSD extends ChatMessage {
 
+
 	async renderHTML(options={}) {
     	const html = await super.renderHTML(options);
 		this._updateChatHeader(html);
 		return html;
 	}
 
-	get rollConfig() {
-		return this.getFlag("shadowdark", "rollConfig");
+	get damageRoll() {
+		return this.rolls.find(r => r.options.type === "damage");
+	}
+
+	get healingRoll() {
+		return this.rolls.find(r => r.options.type === "healing");
 	}
 
 	_updateChatHeader(html) {

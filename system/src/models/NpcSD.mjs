@@ -37,56 +37,56 @@ export default class NpcSD extends ActorBaseSD {
 		return Object.assign(super.defineSchema(), schema);
 	}
 
-	async generateAttackData(attack, data={}) {
+	async _generateAttackConfig(attack, config={}) {
 
-		data.check ??= {};
-		data.check.base ??= "d20";
+		config.check ??= {};
+		config.check.base ??= "d20";
 		const atkBonus = attack.system.bonuses.attackBonus
 			?`${attack.system.bonuses.attackBonus > 0 ? "+" : ""}${attack.system.bonuses.attackBonus}`
 			: "";
-		data.check.formula ??= `${data.check.base} ${atkBonus}`;
-		data.check.advantage ??= 0;
-		data.check.label ??= "Attack"; // TODO localize
+		config.check.formula ??= `${config.check.base} ${atkBonus}`;
+		config.check.advantage ??= 0;
+		config.check.label ??= "Attack"; // TODO localize
 
-		data.attack ??= {};
-		data.attack.range ??= attack.system.ranges[0];
-		data.attack.type ??= (data.attack.range === "close")? "melee" : "ranged";
+		config.attack ??= {};
+		config.attack.range ??= attack.system.ranges[0];
+		config.attack.type ??= (config.attack.range === "close")? "melee" : "ranged";
 
-		data.damage ??= {};
-		data.damage.label ??= "Damage"; // TODO localize
-		data.damage.base ??= attack.system.damage.value;
+		config.damage ??= {};
+		config.damage.label ??= "Damage"; // TODO localize
+		config.damage.base ??= attack.system.damage.value;
 		const dmgBonus = attack.system.bonuses.damageBonus
 			?`${attack.system.bonuses.damageBonus > 0 ? "+" : ""}${attack.system.bonuses.damageBonus}`
 			: "";
-		data.damage.formula ??= `${data.damage.base} ${dmgBonus}`;
+		config.damage.formula ??= `${config.damage.base} ${dmgBonus}`;
 	}
 
-	async rollAttack(attackId, data={}) {
-		data.type = "npc-attack";
-		data.actor = this.parent;
+	async rollAttack(attackId, config={}) {
+		config.type = "npc-attack";
+		config.actor = this.parent;
 		const attack = this.parent.items.get(attackId);
 		if (!attack) {
 			console.error("invalid attack ID");
 			return;
 		}
-		data.item = attack;
+		config.item = attack;
 
-		shadowdark.dice.setRollTarget(data);
+		shadowdark.dice.setRollTarget(config);
 
 		// generates attack data
-		this.generateAttackData(attack, data);
+		this._generateAttackConfig(attack, config);
 
 		// show roll prompt and cancelled if closed
-		if (!await shadowdark.dice.rollDialog(data)) return false;
+		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// re-generates attack data
-		this.generateAttackData(attack, data);
+		this._generateAttackConfig(attack, config);
 
 		// Call NPC attack hooks
-		if (!await Hooks.call("SD-Player-Attack", data)) return false;
+		if (!await Hooks.call("SD-Player-Attack", config)) return false;
 
 		// Prompt, evaluate and roll the attack
-		await shadowdark.dice.resolveRolls(data);
+		await shadowdark.dice.resolveRolls(config);
 	}
 
 	async rollHP(options={}) {

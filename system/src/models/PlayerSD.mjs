@@ -214,24 +214,24 @@ export default class PlayerSD extends ActorBaseSD {
 		};
 	}
 
-	_calcAttackCheck(data) {
-		if (!data.item) return;
-		const weapon = data.item;
-		data.check ??= {};
-		data.check.base ??= "d20";
-		data.check.label ??= "Attack"; // TODO localize
+	_calcAttackCheckConfig(config) {
+		if (!config.item) return;
+		const weapon = config.item;
+		config.check ??= {};
+		config.check.base ??= "d20";
+		config.check.label ??= "Attack"; // TODO localize
 		// Calculate Attack Bonus from Ability mod & AE bonuses
 		const abilityBonus = this._getAttackAbilityBonus(
-			data.attack.type,
+			config.attack.type,
 			weapon.system.isFinesse
 		);
 		const attackRollKey = this._getActiveEffectKeys(
-			`roll.${data.attack.type}.bonus`,
+			`roll.${config.attack.type}.bonus`,
 			abilityBonus,
 			weapon
 		);
-		data.check.bonus ??= `${attackRollKey.value > 0 ? "+" : ""}${attackRollKey.value}`;
-		data.check.formula ??= `${data.check.base} ${data.check.bonus}`;
+		config.check.bonus ??= `${attackRollKey.value > 0 ? "+" : ""}${attackRollKey.value}`;
+		config.check.formula ??= `${config.check.base} ${config.check.bonus}`;
 
 		// generate tooltips
 		const tooltips = [];
@@ -240,35 +240,35 @@ export default class PlayerSD extends ActorBaseSD {
 			abilityBonus
 		));
 		tooltips.push(attackRollKey.tooltips);
-		data.check.tooltips = tooltips.filter(Boolean).join(", ");
+		config.check.tooltips = tooltips.filter(Boolean).join(", ");
 
 		// calculate attack advantage
 		const rollKeyAdv = this._getActiveEffectKeys(
-			`roll.${data.attack.type}.advantage`,
+			`roll.${config.attack.type}.advantage`,
 			0,
 			weapon
 		);
-		data.check.advantage ??= rollKeyAdv.value;
-		data.check.advantageTooltips = rollKeyAdv.tooltips;
+		config.check.advantage ??= rollKeyAdv.value;
+		config.check.advantageTooltips = rollKeyAdv.tooltips;
 	}
 
 	/**
 	 * add damage deatils to data based on weapon details and AEs
 	 * @param {*} weapon a valid weapon item
-	 * @param {*} data existing roll data object
+	 * @param {*} config existing roll data object
 	 */
-	_calcAttackDamage(data) {
-		if (!data.item) return;
-		const weapon = data.item;
-		data.damage ??= {};
-		data.damage.label = "Damage"; // TODO localize
-		data.damage.base ??= weapon.system.getDamageFormula(data.attack.handedness);
+	_calcAttackDamageConfig(config) {
+		if (!config.item) return;
+		const weapon = config.item;
+		config.damage ??= {};
+		config.damage.label = "Damage"; // TODO localize
+		config.damage.base ??= weapon.system.getDamageFormula(config.attack.handedness);
 
 		const tooltips = [];
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
-			`roll.${data.attack.type}.upgrade-damage-die`,
+			`roll.${config.attack.type}.upgrade-damage-die`,
 			0,
 			weapon
 		);
@@ -278,9 +278,9 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 
 		// Get roll key extra dice
-		let baseDamageValue = data.damage.base;
+		let baseDamageValue = config.damage.base;
 		const extraDieRollKey = this._getActiveEffectKeys(
-			`roll.${data.attack.type}.extra-damage-die`,
+			`roll.${config.attack.type}.extra-damage-die`,
 			0,
 			weapon
 		);
@@ -293,39 +293,39 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// Get damage formula and bonuses from Rolls keys
 		const damageRollKey = this._getActiveEffectKeys(
-			`roll.${data.attack.type}.damage`,
+			`roll.${config.attack.type}.damage`,
 			baseDamageValue,
 			weapon
 		);
-		data.damage.formula = damageRollKey.value;
+		config.damage.formula = damageRollKey.value;
 
 		// generate tooltips
 		tooltips.push(damageRollKey.tooltips);
-		data.damage.tooltips = tooltips.filter(Boolean).join(", ");
+		config.damage.tooltips = tooltips.filter(Boolean).join(", ");
 
 		// TODO damage advantage
 	}
 
-	_calcAttackExtras(data) {
-		// any hard code logic can go here here
+	_calcAttackExtraConfig(config) {
+		// any hard coded logic can go here
 	}
 
-	_generateAttackData(weapon, data={}) {
+	_generateAttackConfig(weapon, config={}) {
 		if (!weapon.system.isWeapon) return;
-		data.item = weapon;
+		config.item = weapon;
 
 		// set required fields
-		data.attack ??= {};
-		data.attack.handedness ??= weapon.system.handedness;
-		data.attack.type ??= weapon.system.type;
-		data.attack.range ??= weapon.system.range;
+		config.attack ??= {};
+		config.attack.handedness ??= weapon.system.handedness;
+		config.attack.type ??= weapon.system.type;
+		config.attack.range ??= weapon.system.range;
 
-		// calulate attack data
-		this._calcAttackCheck(data);
-		this._calcAttackDamage(data);
-		this._calcAttackExtras(data);
+		// calulate attack config
+		this._calcAttackCheckConfig(config);
+		this._calcAttackDamageConfig(config);
+		this._calcAttackExtraConfig(config);
 
-		return data;
+		return config;
 	}
 
 	_getAttackAbilityBonus(attackType, finesse=false) {
@@ -357,7 +357,7 @@ export default class PlayerSD extends ActorBaseSD {
 		// get attacks from weapons
 		for (const weapon of weapons) {
 
-			const attackData = this._generateAttackData(weapon);
+			const attackData = this._generateAttackConfig(weapon);
 
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
@@ -366,7 +366,7 @@ export default class PlayerSD extends ActorBaseSD {
 			// if thrown then add a range attack
 			if (weapon.system.isThrown) {
 				const ranged = "ranged";
-				const rangedAttackData = this._generateAttackData(
+				const rangedAttackData = this._generateAttackConfig(
 					weapon,
 					{attack: {type: ranged}}
 				);
@@ -448,13 +448,13 @@ export default class PlayerSD extends ActorBaseSD {
 		}*/
 
 		// generates attack data based on the weapon and actor
-		this._generateAttackData(weapon, data);
+		this._generateAttackConfig(weapon, data);
 
 		// show roll prompt and cancelled if closed
 		if (!await shadowdark.dice.rollDialog(data)) return false;
 
 		// regenerate attack data based on new potential dialog inputs
-		this._generateAttackData(weapon, data);
+		this._generateAttackConfig(weapon, data);
 
 		// Call player attack hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Attack", data)) return false;

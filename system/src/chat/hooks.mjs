@@ -13,17 +13,6 @@ async function chatCardButtonAction(html) {
 	}
 }
 
-export function chatCardBlind(app, html, data) {
-	if (game.user.isGM) return false;
-	if (app.blind) {
-		$(html).find(".blindable .dice-total").text("???");
-		$(html).find(".dice-rolls").remove();
-		$(html).find(".dice .part-total").remove();
-		return true; // Prevent further actions to happen
-	}
-	return false;
-}
-
 /**
  * Handles the rendering of a chat message to the log
  * @param {ChatLog} message - The ChatLog instance
@@ -93,6 +82,8 @@ export function addChatMessageContextOptions(html, options) {
 
 	return options;
 }
+
+// TODO Refactor below here
 
 function getMessage(element) {
 	return game.messages.get(

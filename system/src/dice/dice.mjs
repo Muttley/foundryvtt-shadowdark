@@ -4,32 +4,32 @@
 */
 
 
-export function addStandardFormGroups(data) {
+export function addStandardFormGroups(config) {
 	// Generate prompt form data
 	const appfields = foundry.applications.fields;
-	data.mainFormGroups ??= [];
+	config.mainFormGroups ??= [];
 
-	if (data?.check?.formula) {
+	if (config?.check?.formula) {
 		// Check Prompt
-		const checkInput = appfields.createTextInput({name: "check.formula", value: data.check.formula});
+		const checkInput = appfields.createTextInput({name: "check.formula", value: config.check.formula});
 		const checkFormGroup = appfields.createFormGroup({
 			input: checkInput,
-			label: data?.check?.label,
-			hint: data?.check?.tooltips,
+			label: config?.check?.label,
+			hint: config?.check?.tooltips,
 			localize: true,
 		});
-		data.mainFormGroups.push(checkFormGroup);
+		config.mainFormGroups.push(checkFormGroup);
 	}
 
-	if (data?.damage?.formula) {
+	if (config?.damage?.formula) {
 		// Damage Prompt
-		const damageInput = appfields.createTextInput({name: "damage.formula", value: data.damage.formula});
+		const damageInput = appfields.createTextInput({name: "damage.formula", value: config.damage.formula});
 		const damageFormGroup = appfields.createFormGroup({
 			input: damageInput,
-			label: data?.damage?.label,
-			hint: data?.damage?.tooltips,
+			label: config?.damage?.label,
+			hint: config?.damage?.tooltips,
 		});
-		data.mainFormGroups.push(damageFormGroup);
+		config.mainFormGroups.push(damageFormGroup);
 	}
 
 	// TODO add optional form groups
@@ -107,8 +107,8 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 	}
 }
 
-export async function resolveRolls(data) {
-	if (!data.actor) {
+export async function resolveRolls(config) {
+	if (!config.actor) {
 		console.error("missing valid data.actor");
 		return false;
 	}
@@ -117,31 +117,32 @@ export async function resolveRolls(data) {
 	let success = true;
 	const rolls = [];
 
-	if (data?.check?.formula) {
-		const checkRoll = await roll(data.check, data.actor.getRollData());
+	if (config?.check?.formula) {
+		const checkRoll = await roll(config.check, config.actor.getRollData());
+		config.check.html = await checkRoll.render();
 		rolls.push(checkRoll);
 		success = checkRoll.success;
 	}
 
 	const chatData = {
-		content: await renderTemplate(template, data),
+		content: await renderTemplate(template, config),
 		flags: { "core.canPopout": true },
-		flavor: data.title ?? undefined,
+		flavor: config.title ?? undefined,
 		speaker: ChatMessage.getSpeaker({
-			actor: data.actor,
+			actor: config.actor,
 		}),
 		rolls,
 		user: game.user.id,
 	};
 
-	if (data.rollMode) {
-		ChatMessage.applyRollMode(chatData, data.rollMode);
+	if (config.rollMode) {
+		ChatMessage.applyRollMode(chatData, config.rollMode);
 	}
 
 	const message = await ChatMessage.create(chatData);
 
 	if (success) {
-		// TODO damage Roll from Message
+		// TODO damage Roll from Message rollDamageFromMessage
 	}
 
 	console.log(message);
@@ -149,10 +150,16 @@ export async function resolveRolls(data) {
 }
 
 export async function roll(config, rolldata={}) {
-	return await new shadowdark.dice.RollSD(config, rolldata).evaluate();
+	if ( !config?.formula) throw new Error("Missing required property: config.formula");
+	// apply advantage or disadvantage
+	if (config.advantage) {
+		config.formula = applyAdvantage(config.formula, config.advantage);
+	}
+	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
 export async function rollDamageFromMessage(msg) {
+	// TODO complete this function
 	if (!msg?.rollConfig?.damage) return false;
 	if (msg.rolls.lenth > 0) return;
 
@@ -162,8 +169,8 @@ export async function rollDamageFromMessage(msg) {
 }
 
 /**
- * Opens a rollDialog based on the provided Shadowdark roll data.
- * @param {*} data :
+ * Opens a rollDialog based on the provided Shadowdark roll config.
+ * @param {*} config :
 		title: {String} - Title to be displayed
 		advantage: {Int} - 0: Normal, 1 for Advantage, -1 disadvantage
 		formGroups: {Array} - formsGroups to be included in the roll prompt
@@ -171,26 +178,26 @@ export async function rollDamageFromMessage(msg) {
 		rollingMode: {option}
  * @returns {bool}
  */
-export async function rollDialog(data) {
+export async function rollDialog(config) {
 
 	// get global role default if rollMode not set
-	data.rollMode ??= game.settings.get("core", "rollMode");
-	data.type ??= "";
-	data.heading ??= "";
+	config.rollMode ??= game.settings.get("core", "rollMode");
+	config.type ??= "";
+	config.heading ??= "";
 
 	// adds attack, damage and optional form groups to the dialog prompt
-	addStandardFormGroups(data);
+	addStandardFormGroups(config);
 
-	await Hooks.call("SD-Roll-Dialog", data);
+	await Hooks.call("SD-Roll-Dialog", config);
 
-	if (data.skipPrompt) return 1;
+	if (config.skipPrompt) return 1;
 
 	// Generate prompt content by merging options into prompData.
 	const DIALOG_TEMPLATE = "systems/shadowdark/templates/dialog/roll.hbs";
 	const promptData = {
 		rollModes: CONFIG.Dice.rollModes,
 	};
-	foundry.utils.mergeObject(promptData, data);
+	foundry.utils.mergeObject(promptData, config);
 	const content = await foundry.applications.handlebars.renderTemplate(
 		DIALOG_TEMPLATE,
 		promptData
@@ -209,24 +216,24 @@ export async function rollDialog(data) {
 	});
 
 	const dialogData = {
-		window: { title: data.type },
+		window: { title: config.type },
 		content,
 		classes: [],
 		buttons: [{
 			action: "normal",
-			default: data?.check?.advantage === 0,
+			default: config?.check?.advantage === 0,
 			label: game.i18n.localize("SHADOWDARK.roll.normal"),
 			style: {order: "1"},
 			callback: checkHandler,
 		}, {
 			action: "advantage",
-			default: data?.check?.advantage === 1,
+			default: config?.check?.advantage === 1,
 			label: game.i18n.localize("SHADOWDARK.roll.advantage"),
 			style: {order: "0"},
 			callback: checkHandler,
 		}, {
 			action: "disadvantage",
-			default: data?.check?.advantage === -1,
+			default: config?.check?.advantage === -1,
 			label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
 			style: {order: "2"},
 			callback: checkHandler,
@@ -240,16 +247,16 @@ export async function rollDialog(data) {
 	// TODO handle optional bonuses
 
 	const expandedData = foundry.utils.expandObject(result);
-	foundry.utils.mergeObject(data, expandedData);
+	foundry.utils.mergeObject(config, expandedData);
 	return true;
 }
 
-export function setRollTarget(data={}) {
+export function setRollTarget(config={}) {
 	// Set target and target AC if targeting is enabled
 	if (game.settings.get("shadowdark", "enableTargeting")) {
-		data.target ??= {};
+		config.target ??= {};
 		const target = game.user.targets.first();
-		data.target.token ??= target;
-		data.target.ac ??= target?.actor?.system?.attributes?.ac?.value;
+		config.target.token ??= target;
+		config.target.ac ??= target?.actor?.system?.attributes?.ac?.value;
 	}
 }

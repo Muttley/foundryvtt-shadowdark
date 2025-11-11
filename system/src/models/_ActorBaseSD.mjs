@@ -138,17 +138,17 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		};
 	}
 
-	generateAbilityCheckData(ability, data={}) {
-		data.check ??= {};
-		data.check.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
-		data.check.base ??= "d20";
+	_generateAbilityCheckConfig(ability, config={}) {
+		config.check ??= {};
+		config.check.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
+		config.check.base ??= "d20";
 
 		// generate check formula from ability mod and AE roll bonuses
 		const modifer = this.abilities[ability].mod;
 		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer);
-		data.check.bonus ??= rollKey.value;
+		config.check.bonus ??= rollKey.value;
 		const bonusStr = rollKey.value !==0 ? rollKey.value: "";
-		data.check.formula ??= `${data.check.base}${bonusStr > 0 ? " +" : ""}${bonusStr}`;
+		config.check.formula ??= `${config.check.base}${bonusStr > 0 ? " +" : ""}${bonusStr}`;
 
 		// generate tooltips
 		const tooltips = [];
@@ -159,37 +159,37 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			));
 		}
 		tooltips.push(rollKey.tooltips);
-		data.check.tooltips = tooltips.filter(Boolean).join(", ");
+		config.check.tooltips = tooltips.filter(Boolean).join(", ");
 
 
 		// calculate roll advantage
 		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0);
-		data.check.advantage ??= advRollKeyAdv.value;
-		data.check.advantageTooltips = advRollKeyAdv.tooltips;
+		config.check.advantage ??= advRollKeyAdv.value;
+		config.check.advantageTooltips = advRollKeyAdv.tooltips;
 	}
 
-	async rollAbilityCheck(abilityId, data={}) {
+	async rollAbilityCheck(abilityId, config={}) {
 		const ability = abilityId.toLowerCase();
 		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
 
-		data.type = "ability-check";
-		data.actor = this.parent;
-		data.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
-		data.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
+		config.type = "ability-check";
+		config.actor = this.parent;
+		config.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
+		config.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
 
-		this.generateAbilityCheckData(ability, data);
+		this._generateAbilityCheckConfig(ability, config);
 
 		// show roll prompt and end if closed
-		const prompt = await shadowdark.dice.rollDialog(data);
+		const prompt = await shadowdark.dice.rollDialog(config);
 		if (!prompt) return;
 
-		this.generateAbilityCheckData(ability, data);
+		this._generateAbilityCheckConfig(ability, config);
 
 		// call Stat Check hooks and cancel if any return false
-		if (!await Hooks.call("SD-Stat-Check", data)) return false;
+		if (!await Hooks.call("SD-Stat-Check", config)) return false;
 
 		// Prompt, evaluate and roll the attack
-		await shadowdark.dice.resolveRolls(data);
+		await shadowdark.dice.resolveRolls(config);
 	}
 
 }
