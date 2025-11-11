@@ -58,6 +58,8 @@ SHADOWDARK.DEFAULTS = {
 		Light: "icons/sundries/lights/torch-purple.webp",
 		NPC: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
 		Player: "systems/shadowdark/assets/tokens/cowled_token_green.webp",
+		// TODO: Create a new token for vehicles
+		Vehicle: "systems/shadowdark/assets/tokens/cowled_token_green.webp",
 	},
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,
@@ -127,6 +129,7 @@ SHADOWDARK.NPC_MOVES = {
 
 SHADOWDARK.PROPERTY_TYPES = {
 	armor: "SHADOWDARK.property.type.option.armor",
+	vehicle: "SHADOWDARK.property.type.option.vehicle",
 	weapon: "SHADOWDARK.property.type.option.weapon",
 };
 

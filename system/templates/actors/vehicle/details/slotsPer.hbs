@@ -1,0 +1,25 @@
+<div class="SD-box">
+	<div class="header">
+		<label>{{localize 'SHADOWDARK.inventory.slots_per'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div class="SD-grid center centered">
+			<h3>{{localize 'SHADOWDARK.sheet.actor.hp'}}</h3>
+			{{numberInput
+				actor.system.attributes.slotsPerHp
+				name="system.attributes.slotsPerHp"
+				class="coin-value"
+				placeholder="10"
+			}}
+
+			<h3>{{localize 'SHADOWDARK.sheet.vehicle.passenger'}}</h3>
+			{{numberInput
+				actor.system.attributes.slotsPerPassenger
+				name="system.attributes.slotsPerPassenger"
+				class="coin-value"
+				placeholder="0"
+			}}
+		</div>
+	</div>
+</div>

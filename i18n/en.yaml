@@ -323,6 +323,7 @@ SHADOWDARK.dialog.select_deity.title: Choose Deity
 SHADOWDARK.dialog.select_languages.prompt: Select Language...
 SHADOWDARK.dialog.select_languages.title: Choose Languages
 SHADOWDARK.dialog.select_patron.title: Select Patron
+SHADOWDARK.dialog.select_vehicle_property.title: Select Vehicle Properties
 SHADOWDARK.dialog.select_weapon_property.prompt: Select Weapon Property...
 SHADOWDARK.dialog.select_weapon_property.title: Choose Weapon Properties
 SHADOWDARK.dialog.spell_roll.title: Cast Spell with
@@ -385,6 +386,7 @@ SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (used)
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
+SHADOWDARK.inventory.passengers: Passengers
 SHADOWDARK.inventory.section.armor: Armor
 SHADOWDARK.inventory.section.basic: Basic Equipment
 SHADOWDARK.inventory.section.potions: Potions
@@ -395,11 +397,13 @@ SHADOWDARK.inventory.section.weapon: Weapons
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Used
 SHADOWDARK.inventory.slots: Slots
+SHADOWDARK.inventory.slots_per: Slots Per
 SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.tooltip.gem_bag: Open Gem Bag
 SHADOWDARK.inventory.tooltip.item_decrement: Decrease Quantity
 SHADOWDARK.inventory.tooltip.item_increment: Increase Quantity
 SHADOWDARK.inventory.tooltip.sell_treasure: Sell Treasure
+SHADOWDARK.inventory.tooltip.split_one: Split One
 SHADOWDARK.inventory.tooltip.toggle_equipped: Toggle Equipped
 SHADOWDARK.inventory.tooltip.toggle_light_source: Toggle Light Source
 SHADOWDARK.inventory.tooltip.toggle_stashed: Toggle Stashed
@@ -613,6 +617,7 @@ SHADOWDARK.npc_move.special: Special
 SHADOWDARK.npc_move.triple_near: Triple Near
 SHADOWDARK.patron.boons_table.label: Patron Boons Table
 SHADOWDARK.property.type.option.armor: Armor
+SHADOWDARK.property.type.option.vehicle: Vehicle
 SHADOWDARK.property.type.option.weapon: Weapon
 SHADOWDARK.property.type.title: Property Type
 SHADOWDARK.range.close_short: C
@@ -715,6 +720,7 @@ SHADOWDARK.sheet.actor.placeholder.name: New Actor Name
 SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
+SHADOWDARK.sheet.class.vehicle: Shadowdark Vehicle Sheet
 SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
 SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
 SHADOWDARK.sheet.general.active_effects.duration.title: Duration
@@ -804,6 +810,13 @@ SHADOWDARK.sheet.player.tooltip.use_potion: Use Potion
 SHADOWDARK.sheet.player.tooltip.use_scroll: Use Scroll
 SHADOWDARK.sheet.player.tooltip.use_wand: Use Wand
 SHADOWDARK.sheet.player.xp: XP
+SHADOWDARK.sheet.vehicle.tab.inventory: Inventory
+SHADOWDARK.sheet.vehicle.tab.details: Details
+SHADOWDARK.sheet.vehicle.tab.notes: Notes
+SHADOWDARK.sheet.vehicle.notes: Vehicle Notes
+SHADOWDARK.sheet.vehicle.passenger: Passenger
+SHADOWDARK.sheet.vehicle.properties: Properties
+SHADOWDARK.sheet.vehicle.speed: Speed
 SHADOWDARK.sheet.special_abilities.label: Special Abilities
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
@@ -863,6 +876,7 @@ SHADOWDARK.weapon.type.ranged: Ranged
 TYPES.Actor.Light: Light
 TYPES.Actor.NPC: NPC
 TYPES.Actor.Player: Player
+TYPES.Actor.Vehicle: Vehicle
 TYPES.Item.Ancestry: Ancestry
 TYPES.Item.Armor: Armor
 TYPES.Item.Background: Background

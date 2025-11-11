@@ -90,6 +90,7 @@ Hooks.once("init", () => {
 	Object.assign(CONFIG.Actor.dataModels, {
 		Player: models.PlayerSD,
 		NPC: models.NpcSD,
+		Vehicle: models.VehicleSD,
 	});
 
 	Object.assign(CONFIG.Item.dataModels, {
@@ -136,6 +137,12 @@ Hooks.once("init", () => {
 		types: ["Light"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
+	});
+
+	Actors.registerSheet("shadowdark", sheets.VehicleSheetSD, {
+		types: ["Vehicle"],
+		makeDefault: true,
+		label: "SHADOWDARK.sheet.class.vehicle",
 	});
 
 	Items.unregisterSheet("core", ItemSheet);

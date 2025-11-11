@@ -1,0 +1,61 @@
+<li
+	class="item"
+	data-item-id="{{item._id}}"
+	data-uuid="{{item.uuid}}"
+>
+
+	<div class="item-image" style="background-image: url({{item.img}})">
+		<i class="fas fa-comment fa-lg"></i>
+	</div>
+	<a class="item-name" data-action="show-details">
+		{{item.name}}
+		{{#if item.lightSourceUsed}}
+			<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>
+		{{/if}}
+	</a>
+	{{#if item.lightSourceUsed}}
+		<div data-tooltip="{{lightSourceTimeRemaining}}">
+			{{item.lightSourceProgress}}
+		</div>
+	{{/if}}
+
+	<div class="quantity">
+		{{#if owner}}
+			<a
+				data-action="item-decrement"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_decrement'}}"
+			>
+				<i class="fa-regular fa-minus fa-xs"></i>
+			</a>
+		{{/if}}
+
+		{{item.system.quantity}}/{{item.system.slots.per_slot}}
+
+		{{#if owner}}
+			<a
+				data-action="item-increment"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.item_increment'}}"
+			>
+				<i class="fa-regular fa-plus fa-xs"></i>
+			</a>
+		{{/if}}
+	</div>
+
+	<div class="slots">
+		{{item.slotsUsed}}
+	</div>
+
+	<div class="actions">
+		{{#ifCond item.system.quantity ">" item.system.slots.per_slot}}
+			<a
+				data-action="split-one"
+				data-item-id="{{item._id}}"
+				data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.split_one'}}"
+			>
+				<i class="fa-solid fa-arrows-split-up-and-left"></i>
+			</a>
+		{{/ifCond}}
+	</div>
+</li>

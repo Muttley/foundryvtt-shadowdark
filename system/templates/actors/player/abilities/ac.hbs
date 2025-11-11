@@ -4,6 +4,14 @@
 		<span></span>
 	</div>
 	<div class="content centered larger">
+		{{#if editable}}
+			{{numberInput
+				actor.system.attributes.ac.value
+				name="system.attributes.ac.value"
+				placeholder="10"
+			}}
+		{{else}}
 			{{system.attributes.ac.value}}
+		{{/if}}
 	</div>
 </div>

@@ -1,0 +1,16 @@
+<section class="tab tab-inventory" data-group="primary" data-tab="tab-inventory">
+	<div class="inventory-grid">
+		<div>
+			{{> actors/vehicle/inventory/carried-gear }}
+		</div>
+
+		<!--Sidebar-->
+		<div>
+			<div class="grid-1-columns">
+				{{> actors/vehicle/inventory/slots }}
+				{{> actors/player/inventory/coins }}
+				{{> actors/player/inventory/gems }}
+			</div>
+		</div>
+	</div>
+</section>

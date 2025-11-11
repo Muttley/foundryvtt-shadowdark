@@ -1,0 +1,41 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	<header class="SD-header flex0">
+		<img
+			class="portrait"
+			src="{{ actor.img }}"
+			data-edit="img"
+			data-tooltip="{{ actor.name }}"
+			height="110"
+			width="110"
+		/>
+		<div class="shadowdark-logo">
+			<span>ShadowDark</span>
+		</div>
+		<div class="SD-title">
+			<input
+				name="name"
+				type="text"
+				value="{{ actor.name }}"
+				placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
+			/>
+		</div>
+	</header>
+
+	<nav class="SD-nav flex0" data-group="primary">
+		<a class="navigation-tab active" data-tab="tab-details">
+			{{localize "SHADOWDARK.sheet.vehicle.tab.details"}}
+		</a>
+		<a class="navigation-tab" data-tab="tab-inventory">
+			{{localize "SHADOWDARK.sheet.vehicle.tab.inventory"}}
+		</a>
+		<a class="navigation-tab" data-tab="tab-notes">
+			{{localize "SHADOWDARK.sheet.vehicle.tab.notes"}}
+		</a>
+	</nav>
+
+	<section class="SD-content-body flex1">
+		{{> actors/vehicle/details }}
+		{{> actors/vehicle/inventory }}
+		{{> actors/vehicle/notes }}
+	</section>
+</form>

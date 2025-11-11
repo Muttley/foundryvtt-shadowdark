@@ -1,6 +1,7 @@
 # v4.0.0
 
 ## Enhancements
+- [#1150] Add Vehicle actor type
 
 ## Bugfixes
 

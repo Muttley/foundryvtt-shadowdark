@@ -1,0 +1,30 @@
+<div class="SD-box">
+	<div class="header light">
+		<label>
+			{{localize "SHADOWDARK.sheet.vehicle.properties"}}
+		</label>
+		<span>
+			<a
+				class="property-selector"
+				data-item-type="vehicle"
+				data-select-type="vehicleProperty"
+				for="system.properties"
+				data-tooltip="{{localize 'SHADOWDARK.dialog.select_vehicle_property.title'}}"
+			>
+				<i class="fas fa-pen-to-square"></i>
+			</a>
+		</span>
+	</div>
+	<div class="content">
+		<ul class="tags">
+			{{#each propertyItems}}
+				<li
+					class="tag tag_primary"
+					data-tooltip="{{this.system.description}}"
+				>
+					{{this.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

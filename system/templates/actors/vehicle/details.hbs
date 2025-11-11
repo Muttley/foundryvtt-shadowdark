@@ -1,0 +1,40 @@
+<section class="tab tab-details" data-group="primary" data-tab="tab-details">
+
+	<div class="abilities-grid">
+		<div class="grid-3-columns">
+			{{!-- Reusing player HP/AC partials for consistency --}}
+			{{!-- AC uses direct value from actor.system.attributes.ac.value (see ActorSD.getArmorClass) --}}
+			{{> actors/player/abilities/hp columns=1 maxHp=actor.system.attributes.hp.max }}
+			{{> actors/player/abilities/ac editable=true }}
+
+			<!-- Speed -->
+			{{> actors/vehicle/_partials/largeInput
+				columns="1"
+				label='SHADOWDARK.sheet.vehicle.speed'
+				value=actor.system.attributes.speed
+				name="system.attributes.speed"
+				placeholder="2"
+			}}
+
+			<!-- Passengers -->
+			{{> actors/vehicle/_partials/largeInput
+				columns="1"
+				label='SHADOWDARK.inventory.passengers'
+				value=actor.system.passengers
+				name="system.passengers"
+				placeholder="0"
+			}}
+
+		</div>
+
+		<!--Sidebar-->
+		<div>
+			<div class="grid-1-columns">
+				{{> actors/vehicle/details/slotsPer }}
+			</div>
+		</div>
+	</div>
+
+	{{> actors/vehicle/details/properties }}
+
+</section>
