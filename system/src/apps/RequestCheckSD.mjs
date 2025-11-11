@@ -30,7 +30,7 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 				};
 
 				if (event.shiftKey) {
-					options.fastForward = true;
+					options.skipPrompt = true;
 				}
 
 				return actor.rollAbility(data.stat.toLowerCase(), options);

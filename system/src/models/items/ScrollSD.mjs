@@ -1,13 +1,12 @@
 import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class ScrollSD extends ItemBaseSD {
+export default class ScrollSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
 			...itemfields.magic(),
-			...itemfields.physical(),
 			magicItem: new fields.BooleanField({initial: true}),
 			spellImg: new fields.StringField(),
 			spellName: new fields.StringField(),
@@ -15,5 +14,9 @@ export default class ScrollSD extends ItemBaseSD {
 		};
 
 		return Object.assign(super.defineSchema(), schema);
+	}
+
+	get isRollable() {
+		return true;
 	}
 }

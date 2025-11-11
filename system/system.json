@@ -379,7 +379,7 @@
 		"units": "ft"
 	},
 	"socket": true,
-	"initiative": "@initiativeFormula + @initiativeBonus",
+	"initiative": "@initiative",
 	"primaryTokenAttribute": "attributes.hp",
 	"background": "systems/shadowdark/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
 }

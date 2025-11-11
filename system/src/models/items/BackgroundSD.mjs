@@ -1,3 +1,3 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
-export default class BackgroundSD extends ItemBaseSD {}
+export default class BackgroundSD extends BaseItemSD {}

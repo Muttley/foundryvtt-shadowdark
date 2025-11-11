@@ -68,7 +68,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 			hiddenSections: this._hiddenSectionsLut,
 			isNpc: this.actor.type === "NPC",
 			isPlayer: this.actor.type === "Player",
-			items: actorData.items,
+			items: this.actor.items,
 			owner: this.actor.isOwner,
 			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
 			rollData: this.actor.getRollData.bind(this.actor),
@@ -283,38 +283,23 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-
 		let ability = $(event.currentTarget).data("ability");
-
+		if (!ability) return;
 		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true});
-		}
-		else {
-			this.actor.rollAbility(ability, {event: event});
-		}
+		const skipPrompt = event.shiftKey ? true : false;
+		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
 	}
 
 	async _onRollAttack(event) {
 		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const attackType =  $(event.currentTarget).data("attack-type");
-		const handedness = $(event.currentTarget).data("handedness");
-
-		const options = {
-			attackType,
-			handedness,
+		const itemId = event.currentTarget.dataset.itemId;
+		const data = {
+			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
 		};
-
-
-		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			options.fastForward = true;
+		if (event.currentTarget.dataset.attackType) {
+			data.attack = {Type: event.currentTarget.dataset.attackType};
 		}
-
-		this.actor.rollAttack(itemId, options);
-
+		this.actor.system.rollAttack(itemId, data);
 	}
 
 	async _onToggleLost(event) {
@@ -363,6 +348,8 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 	_sortAllItems(context) {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
-		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
+		return Array.from(context.items ?? []).sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
 	}
 }

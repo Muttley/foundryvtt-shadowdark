@@ -1,12 +1,7 @@
-import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
-export default class GemSD extends ItemBaseSD {
-	static defineSchema() {
-		const schema = {
-			...itemfields.physical(),
-		};
-
-		return Object.assign(super.defineSchema(), schema);
+export default class GemSD extends PhysicalItemSD {
+	get isGem() {
+		return true;
 	}
 }
