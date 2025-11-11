@@ -392,7 +392,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 
 	async getSheetDataForArmorItem(context) {
-		context.propertyItems = await context.item.propertyItems();
+		context.propertyItems = await context.item.getPropertyItems();
 
 		const mySlug = context.item.name.slugify();
 
@@ -509,7 +509,7 @@ export default class ItemSheetSD extends ItemSheet {
 
 
 	async getSheetDataForWeaponItem(context) {
-		context.propertyItems = await context.item.propertyItems();
+		context.propertyItems = await context.item.getPropertyItems();
 
 		const mySlug = context.item.name.slugify();
 

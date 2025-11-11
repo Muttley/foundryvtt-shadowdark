@@ -41,7 +41,7 @@ export default class UtilitySD {
 		let flags = {};
 		let name = itemData.name;
 
-		if (itemData.isRollable) {
+		if (itemData.system.isRollable) {
 			command = `shadowdark.macro.rollItemMacro("${itemData.name}")`;
 			flags = {"shadowdark.itemMacro": true};
 			name = `${game.i18n.localize("Roll")} ${name}`;

@@ -1,20 +1,8 @@
 export default class ItemSD extends Item {
 
-	get isRollable() {
-		return [
-			"Potion",
-			"Scroll",
-			"Spell",
-			"Wand",
-			"Weapon",
-		].includes(this.type);
-	}
-
-
 	get typeSlug() {
 		return this.type.slugify();
 	}
-
 
 	get usesAmmunition() {
 		return (game.settings.get("shadowdark", "autoConsumeAmmunition")
@@ -72,7 +60,7 @@ export default class ItemSD extends Item {
 			actor: this.actor,
 			description,
 			item: this.toObject(),
-			itemProperties: await this.propertyItems(),
+			itemProperties: this.system.propertyItems,
 		};
 
 		if (this.actor.type === "Player") {
@@ -127,7 +115,7 @@ export default class ItemSD extends Item {
 		const data = {
 			description,
 			item: this.toObject(),
-			itemProperties: await this.propertyItems(),
+			itemProperties: this.system.propertyItems,
 		};
 
 		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
@@ -244,18 +232,6 @@ export default class ItemSD extends Item {
 		return roll;
 	}
 
-
-	async hasProperty(property) {
-		property = property.slugify();
-
-		const propertyItems = await this.propertyItems();
-		const propertyItem = propertyItems.find(
-			p => p.name.slugify() === property
-		);
-
-		return propertyItem ? true : false;
-	}
-
 	isActiveLight() {
 		return this.isLight() && this.system.light.active;
 	}
@@ -268,61 +244,11 @@ export default class ItemSD extends Item {
 		return ["Scroll", "Spell", "Wand", "NPC Spell"].includes(this.type);
 	}
 
-	isEffect() {
-		return this.type === "Effect";
-	}
-
-	isTalent() {
-		return this.type === "Talent";
-	}
-
-	isWeapon() {
-		return this.type === "Weapon";
-	}
-
-	isFinesseWeapon() {
-		return this.hasProperty("finesse");
-	}
-
-	isThrownWeapon() {
-		return this.hasProperty("thrown");
-	}
-
-	isMagicItem() {
-		return this.system.isPhysical && this.system.magicItem;
-	}
-
-	isVersatile() {
-		return this.hasProperty("versatile");
-	}
-
-	isOneHanded() {
-		return this.hasProperty("one-handed");
-	}
-
-	isTwoHanded() {
-		const damage = this.system.damage;
-		return this.hasProperty("two-handed")
-			|| (damage.oneHanded === "" && damage.twoHanded !== "");
-	}
-
-	async isAShield() {
-		if (!this.type === "Armor") return false;
-
-		const isAShield = await this.hasProperty("shield");
-		return isAShield;
-	}
-
-	async isNotAShield() {
-		const isAShield = await this.isAShield();
-		return !isAShield;
-	}
-
 	async propertiesDisplay() {
 		let properties = [];
 
 		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const property of await this.propertyItems()) {
+			for (const property of await this.system.propertyItems) {
 				properties.push(property.name);
 			}
 		}
@@ -345,7 +271,7 @@ export default class ItemSD extends Item {
 	}
 
 
-	async propertyItems() {
+	async getPropertyItems() {
 		const propertyItems = [];
 
 		for (const uuid of this.system.properties ?? []) {

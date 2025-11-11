@@ -1,8 +1,8 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class LanguageSD extends ItemBaseSD {
+export default class LanguageSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			rarity: new fields.StringField({

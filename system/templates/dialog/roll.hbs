@@ -1,0 +1,29 @@
+<form autocomplete="off" spellcheck="off">
+		<h2>{{heading}}</h2>
+
+		{{#if mainFormGroups}}
+			{{#each mainFormGroups}}
+				{{{this.outerHTML}}}
+			{{/each}}
+			<hr />
+		{{/if}}
+
+		{{#if optionalFormGroups}}
+			{{#each optionalFormGroups}}
+				{{{this.outerHTML}}}
+			{{/each}}
+			<hr />
+		{{/if}}
+
+		<div class="form-group">
+			<label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
+			<select name="rollMode">
+				{{#select rollMode}}
+					{{#each rollModes}}
+						<option value="{{@key}}">{{localize this.label}}</option>
+					{{/each}}
+				{{/select}}
+			</select>
+		</div>
+		<hr />
+</form>

@@ -31,7 +31,7 @@ export default class RequestCheckSD extends FormApplication {
 				};
 
 				if (event.shiftKey) {
-					options.fastForward = true;
+					options.skipPrompt = true;
 				}
 
 				return actor.rollAbility(data.stat.toLowerCase(), options);

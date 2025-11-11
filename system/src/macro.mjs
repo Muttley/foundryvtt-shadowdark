@@ -48,7 +48,7 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
-		const options = {fastForward: event.shiftKey};
+		const options = {skipPrompt: event.shiftKey};
 
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
@@ -137,9 +137,8 @@ export default class ShadowdarkMacro {
 
 		// Roll weapon attack
 		else if (items[0].type === "Weapon") {
-			const isVersatile = await item.isVersatile();
 
-			if (isVersatile) options.handedness = "1h";
+			if (item.system.isVersatile) options.handedness = "1h";
 
 			actor.rollAttack(items[0]._id, options);
 		}

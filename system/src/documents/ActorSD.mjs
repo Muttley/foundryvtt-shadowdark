@@ -1,13 +1,5 @@
 export default class ActorSD extends Actor {
 
-	async _applyHpRollToMax(value) {
-		const currentHpBase = this.system.attributes.hp.base;
-		await this.update({
-			"system.attributes.hp.base": currentHpBase + value,
-		});
-	}
-
-
 	async _getItemFromUuid(uuid) {
 		if (uuid !== "") {
 			return await fromUuid(uuid);
@@ -93,35 +85,6 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async _npcRollHP(options={}) {
-		const data = {
-			rollType: "hp",
-			actor: this,
-			conBonus: this.system.abilities.con.mod,
-		};
-
-		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
-
-		options.fastForward = true;
-		options.chatMessage = true;
-
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
-		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
-
-		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
-
-		const newHp = Number(result.rolls.main.roll._total);
-		await this.update({
-			"system.attributes.hp.max": newHp,
-			"system.attributes.hp.value": newHp,
-		});
-	}
-
-
 	async _playerRollHP(options={}) {
 		const characterClass = await this.getClass();
 
@@ -141,12 +104,12 @@ export default class ActorSD extends Actor {
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 
 		const parts = [characterClass.system.hitPoints];
 
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+		await shadowdark.dice.rollDialog(parts, data, options);
 	}
 
 
@@ -180,11 +143,6 @@ export default class ActorSD extends Actor {
 		}
 
 		this.updateSource(update);
-	}
-
-	abilityModifier(ability) {
-		return this.system.abilities[ability].mod;
-
 	}
 
 	async addAncestry(item) {
@@ -235,14 +193,6 @@ export default class ActorSD extends Actor {
 	}
 
 
-	async addToHpBase(hp) {
-		const currentHpBase = this.system.attributes.hp.base;
-		this.update({
-			"system.attributes.hp.base": currentHpBase + hp,
-		});
-	}
-
-
 	ammunitionItems(key) {
 		return this.items.filter(i => {
 			if (key) {
@@ -280,19 +230,6 @@ export default class ActorSD extends Actor {
 		});
 	}
 
-
-	attackBonus(attackType) {
-		switch (attackType) {
-			case "melee":
-				return this.abilityModifier("str");
-			case "ranged":
-				return this.abilityModifier("dex");
-			default:
-				throw new Error(`Unknown attack type ${attackType}`);
-		}
-	}
-
-
 	async buildNpcAttackDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 
@@ -300,9 +237,9 @@ export default class ActorSD extends Actor {
 			attackType: item.system.attackType,
 			attackName: item.name,
 			// numAttacks: item.system.attack.num,
-			attackBonus: parseInt(item.system.bonuses.attackBonus, 10),
+			attackBonus: parseInt(item.system.bonuses?.attackBonus, 10),
 			baseDamage: item.system.damage.value,
-			bonusDamage: parseInt(item.system.bonuses.damageBonus, 10),
+			bonusDamage: parseInt(item.system.bonuses?.damageBonus, 10),
 			itemId,
 			special: item.system.damage.special,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
@@ -335,7 +272,7 @@ export default class ActorSD extends Actor {
 		const attackOptions = {
 			attackName: item.name,
 			// numAttacks: item.system.attack.num,
-			attackBonus: item.system.bonuses.attackBonus,
+			attackBonus: item.system.bonuses?.attackBonus,
 			itemId,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
@@ -363,177 +300,44 @@ export default class ActorSD extends Actor {
 		);
 	}
 
-
 	async buildWeaponDisplays(itemId) {
-		const item = this.getEmbeddedDocument("Item", itemId);
-
-		const meleeAttack = this.attackBonus("melee");
-		const rangedAttack = this.attackBonus("ranged");
-
-		const baseAttackBonus = await item.isFinesseWeapon()
-			? Math.max(meleeAttack, rangedAttack)
-			: this.attackBonus(item.system.type);
-
-		const weaponOptions = {
-			weaponId: itemId,
-			weaponName: item.name,
-			handedness: "",
-			attackBonus: 0,
-			attackRange: "",
-			baseDamage: "",
-			bonusDamage: 0,
-			extraDamageDice: "",
-			properties: await item.propertiesDisplay(),
-			meleeAttackBonus: this.system.bonuses.meleeAttackBonus,
-			rangedAttackBonus: this.system.bonuses.rangedAttackBonus,
-		};
-
-		await this.getExtraDamageDiceForWeapon(item, weaponOptions);
-
-		const weaponDisplays = {melee: [], ranged: []};
-
-		const weaponMasterBonus = this.calcWeaponMasterBonus(item);
-		weaponOptions.bonusDamage = weaponMasterBonus;
-
-		// Find out if the user has a modified damage die
-		let oneHanded = item.system.damage.oneHanded ?? false;
-		let twoHanded = item.system.damage.twoHanded ?? false;
-
-		// Improve the base damage die if this weapon has the relevant property
-		for (const property of this.system.bonuses.weaponDamageDieImprovementByProperty) {
-			if (await item.hasProperty(property)) {
-				oneHanded = shadowdark.utils.getNextDieInList(
-					oneHanded,
-					shadowdark.config.DAMAGE_DICE
-				);
-
-				twoHanded = shadowdark.utils.getNextDieInList(
-					twoHanded,
-					shadowdark.config.DAMAGE_DICE
-				);
-			}
-		}
-
-		if (this.system.bonuses.weaponDamageDieD12.some(t =>
-			[item.name.slugify(), item.system.baseWeapon.slugify()].includes(t)
-		)) {
-			oneHanded = oneHanded ? "d12" : false;
-			twoHanded = twoHanded ? "d12" : false;
-		}
-
-		if (item.system.type === "melee") {
-			weaponOptions.attackBonus =	baseAttackBonus
-				+ parseInt(this.system.bonuses.meleeAttackBonus, 10)
-				+ parseInt(item.system.bonuses.attackBonus, 10)
-				+ weaponMasterBonus;
-
-			weaponOptions.bonusDamage +=
-				parseInt(this.system.bonuses.meleeDamageBonus, 10)
-				+ parseInt(item.system.bonuses.damageBonus, 10);
-
-			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT.close;
-
-			if (oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-
-				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-			if (item.system.damage.twoHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[
-					item.system.damage.twoHanded
-				];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
-
-				weaponDisplays.melee.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "2h",
-					itemId,
-				});
-			}
-			// if thrown build range attack option
-			if (await item.hasProperty("thrown")) {
-
-				const thrownBaseBonus = Math.max(meleeAttack, rangedAttack);
-
-				weaponOptions.attackBonus = thrownBaseBonus
-					+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
-					+ parseInt(item.system.bonuses.attackBonus, 10)
-					+ weaponMasterBonus;
-
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-				weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
-					item.system.range
-				];
-				weaponOptions.bonusDamage =
-					weaponMasterBonus
-					+ parseInt(this.system.bonuses.rangedDamageBonus, 10)
-					+ parseInt(item.system.bonuses.damageBonus, 10);
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-		}
-		else if (item.system.type === "ranged") {
-			weaponOptions.attackBonus = baseAttackBonus
-				+ parseInt(this.system.bonuses.rangedAttackBonus, 10)
-				+ parseInt(item.system.bonuses.attackBonus, 10)
-				+ weaponMasterBonus;
-
-			weaponOptions.bonusDamage +=
-				parseInt(this.system.bonuses.rangedDamageBonus, 10)
-				+ parseInt(item.system.bonuses.damageBonus, 10);
-
-			weaponOptions.attackRange = CONFIG.SHADOWDARK.RANGES_SHORT[
-				item.system.range
-			];
-
-			if (oneHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[oneHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.oneHanded_short");
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "1h",
-					itemId,
-				});
-			}
-			if (twoHanded) {
-				weaponOptions.baseDamage = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[twoHanded];
-				weaponOptions.handedness = game.i18n.localize("SHADOWDARK.item.weapon_damage.twoHanded_short");
-
-				weaponDisplays.ranged.push({
-					display: await this.buildWeaponDisplay(weaponOptions),
-					handedness: "2h",
-					itemId,
-				});
-			}
-		}
-
-		return weaponDisplays;
+		return {melee: [], ranged: []};
 	}
 
+	async getWeaponAttacks(weaponIds=null) {
+		// const item = this.getEmbeddedDocument("Item", itemId);
 
-	calcAbilityValues(ability) {
-		const total = this.system.abilities[ability].base
-			+ this.system.abilities[ability].bonus;
+		// versitile
+		// thrown
 
+	}
+
+	async calcBonuses(item={}) {
+		const data = {
+			abilityBonus: 0,
+			itemBonus: 0,
+			talentBonus: 0,
+		};
+		if (item) {
+			switch (item.system.attackType) {
+				case "melee":
+					data.abilityBonus = this.system.abilities.str.mod;
+					break;
+				case "ranged":
+					data.abilityBonus = this.system.abilities.dex.mod;
+					break;
+				default:
+					throw new Error(`Unknown attack type ${attackType}`);
+			}
+		}
+	}
+
+	_calcAbilityValues(ability) {
 		const labelKey = `SHADOWDARK.ability_${ability}`;
 
 		return {
-			total,
-			bonus: this.system.abilities[ability].bonus,
-			base: this.system.abilities[ability].base,
-			modifier: this.system.abilities[ability].mod,
+			value: this.system.abilities[ability].value,
+			mod: this.system.abilities[ability].mod,
 			label: `${game.i18n.localize(labelKey)}`,
 		};
 	}
@@ -551,8 +355,8 @@ export default class ActorSD extends Actor {
 
 		if (
 			item.system.weaponMastery
-			|| this.system.bonuses.weaponMastery.includes(item.system.baseWeapon)
-			|| this.system.bonuses.weaponMastery.includes(item.name.slugify())
+			|| this.system.bonuses?.weaponMastery.includes(item.system.baseWeapon)
+			|| this.system.bonuses?.weaponMastery.includes(item.name.slugify())
 		) {
 			bonus += 1 + Math.floor(this.system.level.value / 2);
 		}
@@ -623,9 +427,9 @@ export default class ActorSD extends Actor {
 			rollType,
 			item: item,
 			actor: this,
-			abilityBonus: this.abilityModifier(abilityId),
+			abilityBonus: this.system.abilities[abilityId].mod,
 			baseDifficulty: characterClass?.system?.spellcasting?.baseDifficulty ?? 10,
-			talentBonus: this.system.bonuses.spellcastingCheckBonus,
+			talentBonus: this.system.bonuses?.spellcastingCheckBonus,
 		};
 
 		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
@@ -697,13 +501,15 @@ export default class ActorSD extends Actor {
 
 
 	async getArmorClass() {
-		const dexModifier = this.abilityModifier("dex");
+		return this.system.attributes.ac.value;
+		/*
+		const dexModifier = this.system.abilityModifier("dex");
 
 		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
 
 		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
-			const attributeBonus = this.abilityModifier(attribute);
+			const attributeBonus = this.system.abilityModifier(attribute);
 			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
 		}
 
@@ -726,7 +532,7 @@ export default class ActorSD extends Actor {
 			const equippedShields = [];
 
 			for (const item of equippedArmorItems) {
-				if (await item.isAShield()) {
+				if (await item.system.isAShield) {
 					equippedShields.push(item);
 				}
 				else {
@@ -738,7 +544,7 @@ export default class ActorSD extends Actor {
 				const firstShield = equippedShields[0];
 				shieldBonus = firstShield.system.ac.modifier;
 
-				armorMasteryBonus = this.system.bonuses.armorMastery.filter(
+				armorMasteryBonus = this.system.bonuses?.armorMastery.filter(
 					a => a === firstShield.name.slugify()
 							|| a === firstShield.system.baseArmor
 				).length;
@@ -755,7 +561,7 @@ export default class ActorSD extends Actor {
 					// Check if armor mastery should apply to the AC.  Multiple
 					// mastery levels should stack
 					//
-					const masteryLevels = this.system.bonuses.armorMastery.filter(
+					const masteryLevels = this.system.bonuses?.armorMastery.filter(
 						a => a === armor.name.slugify()
 							|| a === armor.system.baseArmor
 					);
@@ -768,7 +574,7 @@ export default class ActorSD extends Actor {
 
 					const attribute = armor.system.ac.attribute;
 					if (attribute) {
-						const attributeBonus = this.abilityModifier(attribute);
+						const attributeBonus = this.system.abilityModifier(attribute);
 						if (bestAttributeBonus === null) {
 							bestAttributeBonus = attributeBonus;
 						}
@@ -795,25 +601,27 @@ export default class ActorSD extends Actor {
 				newArmorClass += shieldBonus;
 			}
 			else if (shieldBonus <= 0) {
-				newArmorClass += this.system.bonuses.unarmoredAcBonus ?? 0;
+				newArmorClass += this.system.bonuses?.unarmoredAcBonus ?? 0;
 			}
 			else {
 				newArmorClass += shieldBonus;
 			}
 
 			// Add AC from bonus effects
-			newArmorClass += parseInt(this.system.bonuses.acBonus, 10);
+			newArmorClass += parseInt(this.system.bonuses?.acBonus, 10);
 
 			// Stone Skin Talent provides a bonus based on level
-			if (this.system.bonuses.stoneSkinTalent > 0) {
+			if (this.system.bonuses?.stoneSkinTalent > 0) {
 				const currentLevel = this.system.level.value ?? 0;
 				newArmorClass += 2 + Math.floor(currentLevel / 2);
 			}
 		}
+		console.error(newArmorClass, parseInt(newArmorClass));
 
-		await this.update({"system.attributes.ac.value": newArmorClass});
+		await this.update({"system.attributes.ac.value": parseInt(newArmorClass)});
 
 		return this.system.attributes.ac.value;
+		*/
 	}
 
 
@@ -821,7 +629,7 @@ export default class ActorSD extends Actor {
 		const abilities = {};
 
 		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			abilities[ability] = this.calcAbilityValues(ability);
+			abilities[ability] = this._calcAbilityValues(ability);
 		}
 
 		return abilities;
@@ -853,19 +661,11 @@ export default class ActorSD extends Actor {
 		return await this._getItemFromUuid(uuid);
 	}
 
-
 	getRollData() {
-		if (this.type === "Light") return;
-
-		const rollData = super.getRollData();
-
-		rollData.initiativeBonus = this.abilityModifier("dex");
-
-		rollData.initiativeFormula = "1d20";
-		if (this.system.bonuses?.advantage?.includes("initiative")) {
-			rollData.initiativeFormula = "2d20kh1";
+		const rollData = {...this.system};
+		if (this.system._modifyRollData instanceof Function) {
+			this.system._modifyRollData(rollData);
 		}
-
 		return rollData;
 	}
 
@@ -891,7 +691,7 @@ export default class ActorSD extends Actor {
 		// De-duplicate any bonus classes the Actor has
 		const bonusClasses = [
 			...new Set(
-				this.system.bonuses.spellcastingClasses ?? []
+				this.system.bonuses?.spellcastingClasses ?? []
 			),
 		];
 
@@ -933,10 +733,10 @@ export default class ActorSD extends Actor {
 
 				if (chosenAbility === "") {
 					chosenAbility = ability;
-					bestAbilityModifier = this.abilityModifier(ability);
+					bestAbilityModifier = this.system.abilityModifier(ability);
 				}
 				else {
-					const modifier = this.abilityModifier(ability);
+					const modifier = this.system.abilityModifier(ability);
 					if (modifier > bestAbilityModifier) {
 						chosenAbility = ability;
 						bestAbilityModifier = modifier;
@@ -976,7 +776,7 @@ export default class ActorSD extends Actor {
 
 	hasAdvantage(data) {
 		if (this.type === "Player") {
-			return this.system.bonuses.advantage.includes(data.rollType);
+			return this.system.bonuses?.advantage.includes(data.rollType);
 		}
 		return false;
 	}
@@ -1016,7 +816,7 @@ export default class ActorSD extends Actor {
 			characterClass && spellcastingClass !== "__not_spellcaster__";
 
 		const hasBonusSpellcastingClasses =
-			(this.system.bonuses.spellcastingClasses ?? []).length > 0;
+			(this.system.bonuses?.spellcastingClasses ?? []).length > 0;
 
 		return isSpellcastingClass || hasBonusSpellcastingClasses
 			? true
@@ -1075,30 +875,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-
-	numGearSlots() {
-		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
-
-		if (this.type === "Player") {
-			const strength = this.system.abilities.str.base
-				+ this.system.abilities.str.bonus;
-
-			gearSlots = strength > gearSlots ? strength : gearSlots;
-
-			// Hauler's get to add their Con modifer (if positive)
-			const conModifier = this.abilityModifier("con");
-			gearSlots += this.system.bonuses.hauler && conModifier > 0
-				? conModifier
-				: 0;
-
-			// Add effects that modify gearslots
-			gearSlots += parseInt(this.system.bonuses.gearSlots, 10);
-		}
-
-		return gearSlots;
-	}
-
-
 	async openSpellBook() {
 		const playerSpellcasterClasses = await this.getSpellcasterClasses();
 
@@ -1154,7 +930,7 @@ export default class ActorSD extends Actor {
 	async rollAbility(abilityId, options={}) {
 		const parts = ["1d20", "@abilityBonus"];
 
-		const abilityBonus = this.abilityModifier(abilityId);
+		const abilityBonus = this.system.abilityModifier(abilityId);
 		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
 		const data = {
 			rollType: "ability",
@@ -1168,149 +944,12 @@ export default class ActorSD extends Actor {
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
-		return await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
-
-	async rollAttack(itemId, options={}) {
-		const item = this.items.get(itemId);
-
-		if (game.settings.get("shadowdark", "enableTargeting")) {
-			if (!options.targetToken && game.user.targets.size > 0) {
-				const promises = [];
-				for (const target of game.user.targets.values()) {
-					promises.push(this.rollAttack(itemId, { ...options, targetToken: target }));
-				}
-				return await Promise.all(promises);
-			}
-			else if (options.targetToken) {
-				options.target = options.targetToken.actor.system.attributes.ac.value;
-			}
-		}
-
-		const ammunition = item.availableAmmunition();
-
-		let ammunitionItem = undefined;
-		if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-			ammunitionItem = ammunition[0];
-		}
-
-		const data = {
-			actor: this,
-			ammunitionItem,
-			item: item,
-			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
-			usesAmmunition: item.usesAmmunition,
-		};
-
-		const bonuses = this.system.bonuses;
-
-		// Summarize the bonuses for the attack roll
-		const parts = ["1d20", "@itemBonus", "@abilityBonus", "@talentBonus"];
-		data.damageParts = [];
-
-		// Check damage multiplier
-		const damageMultiplier = Math.max(
-			parseInt(data.item.system.bonuses?.damageMultiplier, 10),
-			parseInt(data.actor.system.bonuses?.damageMultiplier, 10),
-			1);
-
-
-		// Magic Item bonuses
-		if (item.system.bonuses.attackBonus) {
-			data.itemBonus = item.system.bonuses.attackBonus;
-		}
-		if (item.system.bonuses.damageBonus) {
-			data.damageParts.push("@itemDamageBonus");
-			data.itemDamageBonus = item.system.bonuses.damageBonus * damageMultiplier;
-		}
-
-		/* Attach Special Ability if part of the attack.
-			Created in `data.itemSpecial` field.
-			Can be used in the rendering template or further automation.
-		*/
-		if (item.system.damage?.special) {
-			const itemSpecial = data.actor.items.find(
-				e => e.name === item.system.damage.special
-					&& e.type === "NPC Feature"
-			);
-
-			if (itemSpecial) {
-				data.itemSpecial = itemSpecial;
-			}
-		}
-
-		// Talent/Ability/Property modifiers
-		if (this.type === "Player") {
-			// Check to see if we have any extra dice that need to be added to
-			// the damage rolls due to effects
-			await this.getExtraDamageDiceForWeapon(item, data);
-
-			data.canBackstab = await this.canBackstab();
-
-			// Use set options for type of attack or assume item type
-			data.attackType = options.attackType ?? item.system.type;
-
-			if (data.attackType === "melee") {
-				if (await item.isFinesseWeapon()) {
-					data.abilityBonus = Math.max(
-						this.abilityModifier("str"),
-						this.abilityModifier("dex")
-					);
-				}
-				else {
-					data.abilityBonus = this.abilityModifier("str");
-				}
-
-				data.talentBonus = bonuses.meleeAttackBonus;
-				data.meleeDamageBonus = bonuses.meleeDamageBonus * damageMultiplier;
-				data.damageParts.push("@meleeDamageBonus");
-			}
-			else {
-				// if thrown item used as range, use highest modifier.
-				if (await item.isThrownWeapon()) {
-					data.abilityBonus = Math.max(
-						this.abilityModifier("str"),
-						this.abilityModifier("dex")
-					);
-				}
-				else {
-					data.abilityBonus = this.abilityModifier("dex");
-				}
-
-				data.talentBonus = bonuses.rangedAttackBonus;
-				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
-				data.damageParts.push("@rangedDamageBonus");
-			}
-
-			data.isVersatile = await item.isVersatile();
-			// remember handedness
-			if (data.isVersatile) {
-				if (options.handedness) {
-					item.system.currentHand = options.handedness ?? "1h";
-				}
-				data.currentHand = item.system.currentHand;
-			}
-
-			// Check Weapon Mastery & add if applicable
-			const weaponMasterBonus = this.calcWeaponMasterBonus(item);
-			data.talentBonus += weaponMasterBonus;
-			data.weaponMasteryBonus = weaponMasterBonus * damageMultiplier;
-			if (data.weaponMasteryBonus) data.damageParts.push("@weaponMasteryBonus");
-		}
-
-		if (data.usesAmmunition && !data.ammunitionItem) {
-			return ui.notifications.warn(
-				game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"),
-				{ permanent: false }
-			);
-		}
-
-		return item.rollItem(parts, data, options);
+		return await shadowdark.dice.rollDialog(parts, data, options);
 	}
 
 
 	async getExtraDamageDiceForWeapon(item, data) {
-		const extraDamageDiceBonuses = this.system.bonuses.weaponDamageExtraDieByProperty ?? [];
+		const extraDamageDiceBonuses = this.system.bonuses?.weaponDamageExtraDieByProperty ?? [];
 
 		for (const extraBonusDice of extraDamageDiceBonuses) {
 			const [die, property] = extraBonusDice.split("|");
@@ -1331,7 +970,7 @@ export default class ActorSD extends Actor {
 		//
 		if (data.extraDamageDice) {
 			const extraDiceImprovements =
-				this.system.bonuses.weaponDamageExtraDieImprovementByProperty ?? [];
+				this.system.bonuses?.weaponDamageExtraDieImprovementByProperty ?? [];
 
 			for (const property of extraDiceImprovements) {
 				if (await item.hasProperty(property)) {

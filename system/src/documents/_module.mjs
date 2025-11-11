@@ -1,3 +1,5 @@
 export {default as ActorSD} from "./ActorSD.mjs";
+export {default as ActiveEffectSD} from "./ActiveEffectSD.mjs";
+export {default as ChatMessageSD} from "./ChatMessageSD.mjs";
 export {default as ItemSD} from "./ItemSD.mjs";
 export {default as EncounterSD} from "./EncounterSD.mjs";

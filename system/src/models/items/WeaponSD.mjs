@@ -1,12 +1,10 @@
-import * as itemfields from "../_fields/itemFields.mjs";
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class WeaponSD extends ItemBaseSD {
+export default class WeaponSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
-			...itemfields.physical(),
 			ammoClass: new fields.StringField(),
 			baseWeapon: new fields.StringField(),
 			bonuses: new fields.SchemaField({
@@ -19,13 +17,11 @@ export default class WeaponSD extends ItemBaseSD {
 				damageBonus: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
 				damageMultiplier: new fields.NumberField({ initial: 1, min: 1 }),
 			}),
-			canBeEquipped: new fields.BooleanField({initial: true}),
 			damage: new fields.SchemaField({
 				numDice: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
 				oneHanded: new fields.StringField(),
 				twoHanded: new fields.StringField(),
 			}),
-			properties: new fields.ArrayField(new fields.DocumentUUIDField()),
 			range: new fields.StringField({
 				initial: "close",
 				choices: Object.keys(CONFIG.SHADOWDARK.RANGES),
@@ -38,5 +34,48 @@ export default class WeaponSD extends ItemBaseSD {
 		};
 
 		return Object.assign(super.defineSchema(), schema);
+	}
+
+	prepareBaseData() {
+		super.prepareBaseData();
+
+		// determine handedness
+		const isTwoHanded = this.hasProperty("two-handed")
+			|| (this.damage.oneHanded === "" && this.damage.twoHanded !== "");
+		this.handedness = isTwoHanded ? "2h" : "1h";
+	}
+
+	getDamageFormula(handedness=this.handedness) {
+		switch (handedness.slugify()) {
+			case "2h":
+				return this.damage.twoHanded;
+			case "1h":
+			default:
+				return this.damage.oneHanded;
+		}
+	}
+
+	get canBeEquipped() {
+		return true;
+	}
+
+	get isFinesse() {
+		return this.hasProperty("finesse");
+	}
+
+	get isRollable() {
+		return true;
+	}
+
+	get isThrown() {
+		return this.hasProperty("thrown");
+	}
+
+	get isVersatile() {
+		return this.hasProperty("versatile");
+	}
+
+	get isWeapon() {
+		return true;
 	}
 }

@@ -29,6 +29,32 @@ export default class ChatSD {
 		await ChatMessage.create(chatData);
 	}
 
+	static async renderRollMessage(data, roll) {
+		if (!data) return;
+
+		const template = "systems/shadowdark/templates/chat/roll-card.hbs";
+		const templateData = data;
+		templateData.check.rollHTML = await roll.render();
+
+		const chatData = {
+			content: await renderTemplate(template, templateData),
+			flags: { "core.canPopout": true },
+			flavor: data.title ?? undefined,
+			speaker: ChatMessage.getSpeaker({
+				actor: data.actor,
+			}),
+			roll,
+			user: game.user.id,
+		};
+
+		if (data.rollMode) {
+			ChatMessage.applyRollMode(chatData, data.rollMode);
+		}
+
+		const message = await ChatMessage.create(chatData);
+		console.log(message);
+	}
+
 	static async renderGeneralMessage(actor, data, mode) {
 		this._renderChatMessage(actor, data,
 			"systems/shadowdark/templates/chat/general.hbs",

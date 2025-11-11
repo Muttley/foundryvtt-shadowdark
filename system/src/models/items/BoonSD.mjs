@@ -1,8 +1,8 @@
-import {ItemBaseSD} from "./ItemBaseSD.mjs";
+import { BaseItemSD } from "./_BaseItemSD.mjs";
 
 const fields = foundry.data.fields;
 
-export default class BoonSD extends ItemBaseSD {
+export default class BoonSD extends BaseItemSD {
 	static defineSchema() {
 		const schema = {
 			boonType: new fields.StringField({
