@@ -143,9 +143,8 @@ export async function resolveRolls(config) {
 
 	if (success) {
 		// TODO damage Roll from Message rollDamageFromMessage
+		console.log(message);
 	}
-
-	console.log(message);
 
 }
 
@@ -205,7 +204,6 @@ export async function rollDialog(config) {
 
 	// callback function for dialog to get inputed mode
 	const checkHandler = ((event, button, dialog) => {
-		console.log(button.form);
 		const formData = new FormDataExtended(button.form).object;
 		// determine advantage based on button press
 		let adv = 0;
