@@ -52,6 +52,19 @@ export default function registerSystemSettings() {
 		},
 	});
 
+	// ---------------
+	//  MOMENTUM MODE
+	// ---------------
+	game.settings.register("shadowdark", "useMomentumMode", {
+		name: "SHADOWDARK.settings.use_momentum_mode.name",
+		hint: "SHADOWDARK.settings.use_momentum_mode.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+		requiresReload: true,
+	});
+
 	// ------------------------
 	//  LIGHT TRACKER SETTINGS
 	// ------------------------

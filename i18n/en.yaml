@@ -695,6 +695,8 @@ SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
 SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
 SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
 SHADOWDARK.settings.use_clockwise_initiative.name: Use Clockwise Initiative
+SHADOWDARK.settings.use_momentum_mode.hint: Damage dice explode
+SHADOWDARK.settings.use_momentum_mode.name: Enable Momentum Mode
 SHADOWDARK.settings.use_pulp_mode.hint: Shows Luck tokens as a numeric value rather than a checkbox
 SHADOWDARK.settings.use_pulp_mode.name: Enable Pulp Mode
 SHADOWDARK.sheet.abilities.label: Abilities

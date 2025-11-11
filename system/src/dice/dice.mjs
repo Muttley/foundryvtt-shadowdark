@@ -150,21 +150,31 @@ export async function resolveRolls(config) {
 
 export async function roll(config, rolldata={}) {
 	if ( !config?.formula) throw new Error("Missing required property: config.formula");
+
 	// apply advantage or disadvantage
 	if (config.advantage) {
 		config.formula = applyAdvantage(config.formula, config.advantage);
 	}
+
+	if (config.type === "damage") {
+		// apply momentum mode
+		if (game.settings.get("shadowdark", "useMomentumMode")) {
+			config.formula = applyExploding(config.formula);
+		}
+	}
+
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
 export async function rollDamageFromMessage(msg) {
 	// TODO complete this function
-	if (!msg?.rollConfig?.damage) return false;
-	if (msg.rolls.lenth > 0) return;
+	const config = msg?.rollConfig;
+	if (!config.damage?.formula || msg?.damageRoll) return false;
 
-	if (data?.damage?.formula && success !== false) {
-		const damageRoll = await roll(data.damage, data.actor.getRollData());
-	}
+	// const damageRoll = await roll(config.damage, config?.actor?.getRollData());
+	// generate new msg content from template
+	// update msg with new content & roll
+
 }
 
 /**
