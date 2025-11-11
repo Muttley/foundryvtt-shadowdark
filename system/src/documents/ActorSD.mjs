@@ -1,4 +1,4 @@
-export default class ActorSD extends Actor {
+export default class ActorSD extends foundry.documents.Actor {
 
 	async _getItemFromUuid(uuid) {
 		if (uuid !== "") {

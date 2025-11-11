@@ -1,4 +1,4 @@
-export default class RollSD extends Roll {
+export default class RollSD extends foundry.dice.Roll {
 
 	static CHAT_TEMPLATE = "systems/shadowdark/templates/dice/roll.hbs";
 
