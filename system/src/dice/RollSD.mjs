@@ -566,7 +566,7 @@ export default class RollSD extends Roll {
 	 */
 	static async RollDialog(parts, data, options={}) {
 		if ( options.fastForward ) {
-			return await this.Roll(parts, data, false, 0, options);
+			return await this.Roll(parts, data, false, options.adv ?? 0, options);
 		}
 
 		if (!options.title) {

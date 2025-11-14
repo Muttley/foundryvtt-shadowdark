@@ -173,7 +173,11 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 
 		if (event.shiftKey) {
-			this.actor.castNPCSpell(itemId, {...options, fastForward: true});
+			this.actor.castNPCSpell(itemId, {...options, fastForward: true, adv: 0});
+		} else if (event.altKey) {
+			this.actor.castNPCSpell(itemId, {...options, fastForward: true, adv: 1});
+		} else if (event.ctrlKey) {
+			this.actor.castNPCSpell(itemId, {...options, fastForward: true, adv: -1});
 		}
 		else {
 			this.actor.castNPCSpell(itemId, options);
