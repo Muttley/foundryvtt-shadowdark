@@ -53,10 +53,12 @@ export default class ShadowdarkMacro {
 		if (event.shiftKey) {
 			options.fastForward = true;
 			options.adv = 0;
-		} else if(event.altKey) {
+		}
+		else if (event.altKey) {
 			options.fastForward = true;
 			options.adv = 1;
-		} else if (event.ctrlKey) {
+		}
+		else if (event.ctrlKey) {
 			options.fastForward = true;
 			options.adv = -1;
 		}
