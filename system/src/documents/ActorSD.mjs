@@ -115,7 +115,7 @@ export default class ActorSD extends Actor {
 
 		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
 
-		options.fastForward = true;
+		options.skipPrompt = true;
 		options.chatMessage = true;
 
 		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");

@@ -571,13 +571,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: 0});
+			this.actor.castSpell(itemId, {...options, skipPrompt: true, adv: 0});
 		}
 		else if (event.altKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: 1});
+			this.actor.castSpell(itemId, {...options, skipPrompt: true, adv: 1});
 		}
 		else if (event.ctrlKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: -1});
+			this.actor.castSpell(itemId, {...options, skipPrompt: true, adv: -1});
 		}
 		else {
 			this.actor.castSpell(itemId, options);
@@ -683,13 +683,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 		if (event.shiftKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: 0});
+			this.actor.useAbility(itemId, {skipPrompt: true, adv: 0});
 		}
 		else if (event.altKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: 1});
+			this.actor.useAbility(itemId, {skipPrompt: true, adv: 1});
 		}
 		else if (event.ctrlKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: -1});
+			this.actor.useAbility(itemId, {skipPrompt: true, adv: -1});
 		}
 		else {
 			this.actor.useAbility(itemId);

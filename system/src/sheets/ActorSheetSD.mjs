@@ -289,13 +289,13 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// skip roll prompt if shift/alt/ctrl clicked
 		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: 0});
+			this.actor.rollAbility(ability, {event: event, skipPrompt: true, adv: 0});
 		}
 		else if (event.altKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: 1});
+			this.actor.rollAbility(ability, {event: event, skipPrompt: true, adv: 1});
 		}
 		else if (event.ctrlKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: -1});
+			this.actor.rollAbility(ability, {event: event, skipPrompt: true, adv: -1});
 		}
 		else {
 			this.actor.rollAbility(ability, {event: event});
@@ -317,15 +317,15 @@ export default class ActorSheetSD extends ActorSheet {
 
 		// skip roll prompt if shift/alt/ctrl clicked
 		if (event.shiftKey) {
-			options.fastForward = true;
+			options.skipPrompt = true;
 			options.adv = 0;
 		}
 		else if (event.altKey) {
-			options.fastForward = true;
+			options.skipPrompt = true;
 			options.adv = 1;
 		}
 		else if (event.ctrlKey) {
-			options.fastForward = true;
+			options.skipPrompt = true;
 			options.adv = -1;
 		}
 

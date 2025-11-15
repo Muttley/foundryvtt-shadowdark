@@ -31,15 +31,15 @@ export default class RequestCheckSD extends FormApplication {
 				};
 
 				if (event.shiftKey) {
-					options.fastForward = true;
+					options.skipPrompt = true;
 					options.adv = 0;
 				}
 				else if (event.altKey) {
-					options.fastForward = true;
+					options.skipPrompt = true;
 					options.adv = 1;
 				}
 				else if (event.ctrlKey) {
-					options.fastForward = true;
+					options.skipPrompt = true;
 					options.adv = -1;
 				}
 
