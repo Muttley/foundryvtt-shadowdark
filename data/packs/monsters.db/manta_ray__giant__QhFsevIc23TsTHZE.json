@@ -144,7 +144,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> Swooping manta rays as large as longboats. Gentle and intelligent enough to be trained. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 37, <strong>ATK</strong> 2 sting +5 (1d12 + poison), <strong>MV</strong> double near (swim), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong> Poison</strong>. [[request 15 con]] or drop to 0 hit points in 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> Swooping manta rays as large as longboats. Gentle and intelligent enough to be trained. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 37, <strong>ATK</strong> 2 sting +5 (1d12 + poison), <strong>MV</strong> double near (swim), <strong>S</strong> +3, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or drop to 0 hit points in 1d4 rounds.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

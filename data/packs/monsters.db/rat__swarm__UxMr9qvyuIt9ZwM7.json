@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A screeching tidal wave of clawing and biting rats. </i></p>\n\t\n\t<p><strong>AC</strong> 10, <strong>HP</strong> 28, <strong>ATK</strong> 4 bite +0 (1 + disease), <strong>MV</strong> near, <strong>S</strong> -3, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Disease</strong>. [[request 9 con]] or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
+		"notes": "\n\t<p><i> A screeching tidal wave of clawing and biting rats. </i></p>\n\t\n\t<p><strong>AC</strong> 10, <strong>HP</strong> 28, <strong>ATK</strong> 4 bite +0 (1 + disease), <strong>MV</strong> near, <strong>S</strong> -3, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Disease</strong>. [[check 9 con]] or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

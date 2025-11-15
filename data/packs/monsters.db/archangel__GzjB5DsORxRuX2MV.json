@@ -145,7 +145,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A radiant being with a crown of fire, snowy wings, golden armor, and a blazing greatsword. </i></p>\n\t\n\t<p><strong>AC</strong> 18 ( +3 plate mail ), <strong>HP</strong> 76, <strong>ATK</strong> 3 flaming greatsword +10 (2d12), <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +2, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +5, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 16</p>\n\t<p><strong> Command</strong>. [[request 18 cha]] to resist an archangel's command.</p><p><strong>Crown of Fire</strong>. Hostile spells targeting the archangel are extreme (DC 18) to cast.</p>",
+		"notes": "\n\t<p><i> A radiant being with a crown of fire, snowy wings, golden armor, and a blazing greatsword. </i></p>\n\t\n\t<p><strong>AC</strong> 18 ( +3 plate mail ), <strong>HP</strong> 76, <strong>ATK</strong> 3 flaming greatsword +10 (2d12), <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +2, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +5, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 16</p>\n\t<p><strong> Command</strong>. [[check 18 cha]] to resist an archangel's command.</p><p><strong>Crown of Fire</strong>. Hostile spells targeting the archangel are extreme (DC 18) to cast.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

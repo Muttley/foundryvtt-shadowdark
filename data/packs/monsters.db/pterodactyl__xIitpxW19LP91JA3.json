@@ -144,7 +144,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Long-beaked beasts with wide, triangular wings. Large enough to carry off a human. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 beak +4 (1d8 + grab), <strong>MV</strong> double near (fly), <strong>S</strong> +2, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Grab</strong>. [[request 15 str]] or held. [[request 15 str]] on turn to break free.</p>",
+		"notes": "\n\t<p><i> Long-beaked beasts with wide, triangular wings. Large enough to carry off a human. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 beak +4 (1d8 + grab), <strong>MV</strong> double near (fly), <strong>S</strong> +2, <strong>D</strong> +4, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Grab</strong>. [[check 15 str]] or held. [[check 15 str]] on turn to break free.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

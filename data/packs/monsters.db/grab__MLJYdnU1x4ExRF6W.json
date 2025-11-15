@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Grab",
 	"system": {
-		"description": "<p>[[request 15 str]] or immobilized. Tentacle auto-hits each round. [[request 15 str]] on turn to break free.</p>",
+		"description": "<p>[[check 15 str]] or immobilized. Tentacle auto-hits each round. [[check 15 str]] on turn to break free.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

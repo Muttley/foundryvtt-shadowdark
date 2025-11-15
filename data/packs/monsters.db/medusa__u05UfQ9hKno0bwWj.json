@@ -146,7 +146,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Immortal women with coiling snakes for hair and scaled skin. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 38, <strong>ATK</strong> 1 snake bite +6 (1d6 + poison), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 8</p>\n\t<p><strong> Godborn</strong>. Hostile spells targeting the medusa are DC 15 to cast.</p><p><strong>Petrify</strong>. Any creature (including medusa) who looks directly at medusa, [[request 15 con]] or petrified.</p><p><strong>Poison</strong>. [[request 15 con]] or go to 0 HP.</p>",
+		"notes": "\n\t<p><i> Immortal women with coiling snakes for hair and scaled skin. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 38, <strong>ATK</strong> 1 snake bite +6 (1d6 + poison), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 8</p>\n\t<p><strong> Godborn</strong>. Hostile spells targeting the medusa are DC 15 to cast.</p><p><strong>Petrify</strong>. Any creature (including medusa) who looks directly at medusa, [[check 15 con]] or petrified.</p><p><strong>Poison</strong>. [[check 15 con]] or go to 0 HP.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

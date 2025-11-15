@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> A glossy black, blood-drinking slug as large as a cat. </i></p>\n\t\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + attach), <strong>MV</strong> near (swim), <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Attach</strong>. Attach to target; bite auto-hits next round. [[request 12 str]] on turn to tear off.</p>",
+		"notes": "\n\t<p><i> A glossy black, blood-drinking slug as large as a cat. </i></p>\n\t\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + attach), <strong>MV</strong> near (swim), <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Attach</strong>. Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

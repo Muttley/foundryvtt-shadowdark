@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A molting, lizard-chicken hybrid with a crimson, razorlike crest. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 14, <strong>ATK</strong> 1 bite +1 (1d4 + petrify), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Petrify</strong>. [[request 12 con]] or petrified.</p>",
+		"notes": "\n\t<p><i> A molting, lizard-chicken hybrid with a crimson, razorlike crest. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 14, <strong>ATK</strong> 1 bite +1 (1d4 + petrify), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Petrify</strong>. [[check 12 con]] or petrified.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

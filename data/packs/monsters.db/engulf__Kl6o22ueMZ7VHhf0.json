@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Engulf",
 	"system": {
-		"description": "<p>If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in [[/r 2d4]] rounds. [[request 15 str]] on turn to escape.</p>",
+		"description": "<p>If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in [[/r 2d4]] rounds. [[check 15 str]] on turn to escape.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

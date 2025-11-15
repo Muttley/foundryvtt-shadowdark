@@ -145,7 +145,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Sinister, white-pelted wolves with piercing blue eyes. From the fey realms of eternal winter. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d6) or 1 frost breath, <strong>MV</strong> double near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Impervious</strong>. Cold immune.</p><p><strong>Frost Breath</strong>. Fills a near-sized cube extending from winter wolf. [[request 15 dex]] or 3d8 damage. Cannot use again for 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> Sinister, white-pelted wolves with piercing blue eyes. From the fey realms of eternal winter. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 23, <strong>ATK</strong> 2 bite +4 (1d6) or 1 frost breath, <strong>MV</strong> double near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Impervious</strong>. Cold immune.</p><p><strong>Frost Breath</strong>. Fills a near-sized cube extending from winter wolf. [[check 15 dex]] or 3d8 damage. Cannot use again for 1d4 rounds.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

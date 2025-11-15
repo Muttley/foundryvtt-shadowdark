@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Heat Aura",
 	"system": {
-		"description": "<p>Creatures within near of phoenix at start of turn [[request 15 con]] or [[/r 2d6]] damage.</p>",
+		"description": "<p>Creatures within near of phoenix at start of turn [[check 15 con]] or [[/r 2d6]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

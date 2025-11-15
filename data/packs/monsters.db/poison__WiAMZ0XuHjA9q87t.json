@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
-		"description": "<p>[[request 15 con]] or take [[/r 2d10]] damage.</p>",
+		"description": "<p>[[check 15 con]] or take [[/r 2d10]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

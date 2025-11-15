@@ -145,7 +145,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> Regal titans with sea-green skin, flowing white hair, and thundering voices. They breathe water as easily as air. </i></p>\n\t\n\t<p><strong>AC</strong> 15 (mithral chainmail), <strong>HP</strong> 58, <strong>ATK</strong> 3 greatsword +10 (2d12) or 1 lightning bolt, <strong>MV</strong> double near (swim), <strong>S</strong> +6, <strong>D</strong> +2, <strong>C</strong> +4, <strong>I</strong> +3, <strong>W</strong> +4, <strong>Ch</strong> +4, <strong>AL</strong> L, <strong>LV</strong> 12</p>\n\t<p><strong> Stormblood</strong>. Electricity immune.</p><p><strong>Lightning Bolt</strong>. 3/day, 5' wide line extending far from giant. All creatures in line [[request 15 dex]] or 5d10 damage. DISADV on check if in water.</p>",
+		"notes": "\n\t<p><i> Regal titans with sea-green skin, flowing white hair, and thundering voices. They breathe water as easily as air. </i></p>\n\t\n\t<p><strong>AC</strong> 15 (mithral chainmail), <strong>HP</strong> 58, <strong>ATK</strong> 3 greatsword +10 (2d12) or 1 lightning bolt, <strong>MV</strong> double near (swim), <strong>S</strong> +6, <strong>D</strong> +2, <strong>C</strong> +4, <strong>I</strong> +3, <strong>W</strong> +4, <strong>Ch</strong> +4, <strong>AL</strong> L, <strong>LV</strong> 12</p>\n\t<p><strong> Stormblood</strong>. Electricity immune.</p><p><strong>Lightning Bolt</strong>. 3/day, 5' wide line extending far from giant. All creatures in line [[check 15 dex]] or 5d10 damage. DISADV on check if in water.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -8,7 +8,7 @@
 	"name": "Riddle",
 	"system": {
 		"dc": "12",
-		"description": "<p>One target in far [[request 15 int]] or stupefied [[/r 1d4]] rounds.</p>",
+		"description": "<p>One target in far [[check 15 int]] or stupefied [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"

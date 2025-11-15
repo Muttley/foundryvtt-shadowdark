@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A roiling wave of snakes darting and flowing across the ground. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 19, <strong>ATK</strong> 3 bite +2 (1d4 + poison), <strong>MV</strong> near, <strong>S</strong> -3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Poison</strong>. [[request 12 con]] or go to 0 HP in 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> A roiling wave of snakes darting and flowing across the ground. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 19, <strong>ATK</strong> 3 bite +2 (1d4 + poison), <strong>MV</strong> near, <strong>S</strong> -3, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Poison</strong>. [[check 12 con]] or go to 0 HP in 1d4 rounds.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Engulf",
 	"system": {
-		"description": "<p>[[request 12 str]] or trapped inside cube. Touch attack auto-hits engulfed targets each round. [[request 12 str]] on turn to escape. Fail checks if paralyzed.</p>",
+		"description": "<p>[[check 12 str]] or trapped inside cube. Touch attack auto-hits engulfed targets each round. [[check 12 str]] on turn to escape. Fail checks if paralyzed.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

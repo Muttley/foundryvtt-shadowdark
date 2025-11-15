@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Latch",
 	"system": {
-		"description": "<p>Attach to bitten target; bites auto-hit next round. [[request 12 str]] on turn to tear off.</p>",
+		"description": "<p>Attach to bitten target; bites auto-hit next round. [[check 12 str]] on turn to tear off.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

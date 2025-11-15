@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
-		"description": "<p>[[request 9 con]] or take [[/r 1d4]] damage.</p>",
+		"description": "<p>[[check 9 con]] or take [[/r 1d4]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

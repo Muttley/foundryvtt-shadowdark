@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Polymorph",
 	"system": {
-		"description": "<p>[[request 15 int]] or turned into vermin for [[/r 1d4]] rounds.</p>",
+		"description": "<p>[[check 15 int]] or turned into vermin for [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

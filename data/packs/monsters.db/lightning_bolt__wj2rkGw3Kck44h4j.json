@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>3/day, 5' wide line extending far from giant. All creatures in line [[request 15 dex]] or [[/r 5d10]] damage. DISADV on check if in water.</p>",
+		"description": "<p>3/day, 5' wide line extending far from giant. All creatures in line [[check 15 dex]] or [[/r 5d10]] damage. DISADV on check if in water.</p>",
 		"ranges": [
 		],
 		"source": {

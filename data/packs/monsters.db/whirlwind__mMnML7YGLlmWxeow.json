@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Transform into a lashing tornado. All enemies within near [[request 18 dex]] or thrown [[/r 2d100]] feet in a random direction.</p>",
+		"description": "<p>Transform into a lashing tornado. All enemies within near [[check 18 dex]] or thrown [[/r 2d100]] feet in a random direction.</p>",
 		"ranges": [
 		],
 		"source": {

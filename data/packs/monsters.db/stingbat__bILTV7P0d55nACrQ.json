@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Darting, orange insect-bat with four wings and needlelike beak. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 4, <strong>ATK</strong> 1 beak +2 (1d4 + blood drain), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 1</p>\n\t<p><strong> Blood Drain</strong>. Attach to bitten target; auto-hit the next round. [[request 9 str]] on turn to remove.</p>",
+		"notes": "\n\t<p><i> Darting, orange insect-bat with four wings and needlelike beak. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 4, <strong>ATK</strong> 1 beak +2 (1d4 + blood drain), <strong>MV</strong> near (fly), <strong>S</strong> -2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +0, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 1</p>\n\t<p><strong> Blood Drain</strong>. Attach to bitten target; auto-hit the next round. [[check 9 str]] on turn to remove.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

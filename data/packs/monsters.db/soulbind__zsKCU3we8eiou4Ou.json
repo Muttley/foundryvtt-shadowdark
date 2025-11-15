@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>All targets within near [[request 20 cha]] or fall under control of archdevil for [[/r 1d4]] rounds. [[request 20 cha]] on turn to end the effect.</p>",
+		"description": "<p>All targets within near [[check 20 cha]] or fall under control of archdevil for [[/r 1d4]] rounds. [[check 20 cha]] on turn to end the effect.</p>",
 		"ranges": [
 		],
 		"source": {

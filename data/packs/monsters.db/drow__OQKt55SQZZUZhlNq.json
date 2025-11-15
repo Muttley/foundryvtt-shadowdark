@@ -146,7 +146,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A graceful, shadowy elf that pounces like a spider. </i></p>\n\t\n\t<p><strong>AC</strong> 16 (mithral chainmail), <strong>HP</strong> 9, <strong>ATK</strong> 1 poison dart (near) +3 (1d4 + poison) or 1 longsword +1 (1d8), <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p>\n\t<p><strong> Poison</strong>. [[request 15 con]] or sleep.</p><p><strong>Sunblind</strong>. Blinded in bright light.</p>",
+		"notes": "\n\t<p><i> A graceful, shadowy elf that pounces like a spider. </i></p>\n\t\n\t<p><strong>AC</strong> 16 (mithral chainmail), <strong>HP</strong> 9, <strong>ATK</strong> 1 poison dart (near) +3 (1d4 + poison) or 1 longsword +1 (1d8), <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or sleep.</p><p><strong>Sunblind</strong>. Blinded in bright light.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

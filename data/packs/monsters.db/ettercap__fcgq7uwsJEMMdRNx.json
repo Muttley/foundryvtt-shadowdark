@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Bipedal, eight-eyed spiderfolk with spindly legs and purple fur. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 14, <strong>ATK</strong> 2 bite +2 (1d6) or 1 poison web (near) +2, <strong>MV</strong> near (climb), <strong>S</strong> +0, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p>\n\t<p><strong> Poison Web</strong>. One target stuck in place and 1d4 damage/round. [[request 12 dex]] on turn to escape.</p>",
+		"notes": "\n\t<p><i> Bipedal, eight-eyed spiderfolk with spindly legs and purple fur. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 14, <strong>ATK</strong> 2 bite +2 (1d6) or 1 poison web (near) +2, <strong>MV</strong> near (climb), <strong>S</strong> +0, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 3</p>\n\t<p><strong> Poison Web</strong>. One target stuck in place and 1d4 damage/round. [[check 12 dex]] on turn to escape.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

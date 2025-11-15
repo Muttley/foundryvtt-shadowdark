@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Enslave",
 	"system": {
-		"description": "<p>In place of attacks, one creature within far [[request 15 wis]] or aboleth controls for [[/r 1d4]] rounds.</p>",
+		"description": "<p>In place of attacks, one creature within far [[check 15 wis]] or aboleth controls for [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

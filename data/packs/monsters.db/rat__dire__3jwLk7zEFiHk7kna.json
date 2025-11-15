@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Child-sized, savage rats bristling with bony face and spine ridges. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +2 (1d6 + disease), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Disease</strong>. [[request 12 con]] or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
+		"notes": "\n\t<p><i> Child-sized, savage rats bristling with bony face and spine ridges. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +2 (1d6 + disease), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Disease</strong>. [[check 12 con]] or 1d4 CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

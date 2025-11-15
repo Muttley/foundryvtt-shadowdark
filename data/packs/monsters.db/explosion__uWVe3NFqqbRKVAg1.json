@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Explosion",
 	"system": {
-		"description": "<p>Upon death, creatures within double near of phoenix [[request 18 dex]] or [[/r 10d6]] damage.</p>",
+		"description": "<p>Upon death, creatures within double near of phoenix [[check 18 dex]] or [[/r 10d6]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

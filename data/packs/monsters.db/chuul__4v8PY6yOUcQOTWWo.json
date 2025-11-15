@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> Brown, horse-sized lobster bugs with tentacles and pincers. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 25, <strong>ATK</strong> 2 pincer +4 (1d8 + grab), <strong>MV</strong> near (swim), <strong>S</strong> +3, <strong>D</strong> -1, <strong>C</strong> +3, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Grab</strong>. [[request 15 str]] or held in pincer. [[request 15 str]] on turn to break free.</p>",
+		"notes": "\n\t<p><i> Brown, horse-sized lobster bugs with tentacles and pincers. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 25, <strong>ATK</strong> 2 pincer +4 (1d8 + grab), <strong>MV</strong> near (swim), <strong>S</strong> +3, <strong>D</strong> -1, <strong>C</strong> +3, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Grab</strong>. [[check 15 str]] or held in pincer. [[check 15 str]] on turn to break free.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

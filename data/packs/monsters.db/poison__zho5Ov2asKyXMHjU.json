@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
-		"description": "<p>[[request 15 con]] or target's eyes go jet black and it turns on its allies for [[/r 1d4]] rounds. [[request 15 wis]] on turn to end effect.</p>",
+		"description": "<p>[[check 15 con]] or target's eyes go jet black and it turns on its allies for [[/r 1d4]] rounds. [[check 15 wis]] on turn to end effect.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""
