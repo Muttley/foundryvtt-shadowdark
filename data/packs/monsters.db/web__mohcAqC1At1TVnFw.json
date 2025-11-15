@@ -8,7 +8,7 @@
 	"name": "Web",
 	"system": {
 		"dc": "13",
-		"description": "<p>A near-sized cube of webs within far immobilizes all inside it for 5 rounds. [[check 15 str]] on turn to break free.</p>",
+		"description": "<p>A near-sized cube of webs within far immobilizes all inside it for 5 rounds. [[request 15 str]] on turn to break free.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"

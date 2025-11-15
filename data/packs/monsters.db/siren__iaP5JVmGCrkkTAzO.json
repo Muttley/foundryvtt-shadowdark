@@ -81,7 +81,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "swim, fly",
-		"notes": "\n\t<p><i> Baleful fey with dove wings and iridescent fish scales. Their singing entrances listeners. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 2 claw +2 (1d6) or 1 song, <strong>MV</strong> near (swim, fly), <strong>S</strong> +0, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> +2, <strong>W</strong> +2, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Song</strong>. Enemies who can hear within double near [[check 15 cha]] or paralyzed 1d4 rounds. Immune for 1 day if passed check.</p>",
+		"notes": "\n\t<p><i> Baleful fey with dove wings and iridescent fish scales. Their singing entrances listeners. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 18, <strong>ATK</strong> 2 claw +2 (1d6) or 1 song, <strong>MV</strong> near (swim, fly), <strong>S</strong> +0, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> +2, <strong>W</strong> +2, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Song</strong>. Enemies who can hear within double near [[request 15 cha]] or paralyzed 1d4 rounds. Immune for 1 day if passed check.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Heat Aura",
 	"system": {
-		"description": "<p>Creatures in close [[check 12 con]] on turn or [[/r 1d8]] damage.</p>",
+		"description": "<p>Creatures in close [[request 12 con]] on turn or [[/r 1d8]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

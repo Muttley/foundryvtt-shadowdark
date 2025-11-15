@@ -7,7 +7,7 @@
 	"img": "icons/svg/item-bag.svg",
 	"name": "Attach",
 	"system": {
-		"description": "<p><span class=\"fontstyle2\">Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</span></p>",
+		"description": "<p><span class=\"fontstyle2\">Attach to target; bite auto-hits next round. [[request 12 str]] on turn to tear off.</span></p>",
 		"magicItem": false,
 		"source": {
 			"page": 0,

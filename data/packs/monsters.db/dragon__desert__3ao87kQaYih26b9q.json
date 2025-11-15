@@ -83,7 +83,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -146,7 +146,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> The smell of ozone precedes this desert-dwelling dragon. Its dazzling scales of brass and lapis lazuli shimmer in the baking heat. </i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 61, <strong>ATK</strong> 3 rend +9 (2d10) or 1 lightning breath, <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> +4, <strong>W</strong> +5, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 13</p>\n\t<p><strong> Stormblood</strong>. Electricity immune.</p><p><strong>Lightning Breath</strong>. A straight line (5' wide) extending double near from dragon. [[check 15 dex]] or 4d8 damage (DISADV on check if wearing metal armor).</p><p><strong>Mirage</strong>. 1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits dragon or illusions.</p>",
+		"notes": "\n\t<p><i> The smell of ozone precedes this desert-dwelling dragon. Its dazzling scales of brass and lapis lazuli shimmer in the baking heat. </i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 61, <strong>ATK</strong> 3 rend +9 (2d10) or 1 lightning breath, <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> +4, <strong>W</strong> +5, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 13</p>\n\t<p><strong> Stormblood</strong>. Electricity immune.</p><p><strong>Lightning Breath</strong>. A straight line (5' wide) extending double near from dragon. [[request 15 dex]] or 4d8 damage (DISADV on check if wearing metal armor).</p><p><strong>Mirage</strong>. 1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits dragon or illusions.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -83,7 +83,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -146,7 +146,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A desiccated, linen-wrapped zombie. It was created with an intricate embalming ritual used only upon the most worthy warriors or rulers. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 47, <strong>ATK</strong> 3 rot touch +8 (1d10 + necrosis), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 10</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Desiccated</strong>. Can be damaged by fire. Takes x2 damage from it.</p><p><strong>Necrosis</strong>. [[check 15 con]] or drop to 0 HP. Healing spells are DC 15 to cast on target while at 0 HP due to this effect.</p>",
+		"notes": "\n\t<p><i> A desiccated, linen-wrapped zombie. It was created with an intricate embalming ritual used only upon the most worthy warriors or rulers. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 47, <strong>ATK</strong> 3 rot touch +8 (1d10 + necrosis), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> +3, <strong>W</strong> +2, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 10</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Desiccated</strong>. Can be damaged by fire. Takes x2 damage from it.</p><p><strong>Necrosis</strong>. [[request 15 con]] or drop to 0 HP. Healing spells are DC 15 to cast on target while at 0 HP due to this effect.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Hold",
 	"system": {
-		"description": "<p>[[check 15 str]] or paralyzed [[/r 1d4]] rounds.</p>",
+		"description": "<p>[[request 15 str]] or paralyzed [[/r 1d4]] rounds.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

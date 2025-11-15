@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Knock",
 	"system": {
-		"description": "<p>[[check 9 str]] or pushed a close distance and fall down.</p>",
+		"description": "<p>[[request 9 str]] or pushed a close distance and fall down.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

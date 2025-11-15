@@ -8,7 +8,7 @@
 	"name": "Anchor",
 	"system": {
 		"dc": "14",
-		"description": "<p>One target in far [[check 18 str]] or bound and anchored by chains of golden runes for [[/r 1d4]] rounds.</p>",
+		"description": "<p>One target in far [[request 18 str]] or bound and anchored by chains of golden runes for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"

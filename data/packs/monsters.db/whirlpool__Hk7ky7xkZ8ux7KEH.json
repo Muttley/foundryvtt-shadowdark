@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>All within close [[check 15 str]] or immobilized inside water elemental (treat as underwater). [[check 15 str]] on turn to escape.</p>",
+		"description": "<p>All within close [[request 15 str]] or immobilized inside water elemental (treat as underwater). [[request 15 str]] on turn to escape.</p>",
 		"ranges": [
 		],
 		"source": {

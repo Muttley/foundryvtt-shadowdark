@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Ice Aura",
 	"system": {
-		"description": "<p>Enemies within near of rime walker [[check 12 con]] at start of turn or lose action.</p>",
+		"description": "<p>Enemies within near of rime walker [[request 12 con]] at start of turn or lose action.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

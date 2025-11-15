@@ -83,7 +83,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -146,7 +146,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A human-sized snake with scales made of jewels and a corona of iridescent feathers. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 42, <strong>ATK</strong> 3 bite +6 (2d6 + poison), <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +2, <strong>I</strong> +4, <strong>W</strong> +4, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 9</p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized creature.</p><p><strong>Poison</strong>. [[check 15 con]] or fall into natural, deep sleep for 1d8 hours.</p><p><strong>Restore</strong>. In place of attacks, touch one creature to remove a curse, affliction, or heal 3d8 HP.</p>",
+		"notes": "\n\t<p><i> A human-sized snake with scales made of jewels and a corona of iridescent feathers. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 42, <strong>ATK</strong> 3 bite +6 (2d6 + poison), <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +2, <strong>I</strong> +4, <strong>W</strong> +4, <strong>Ch</strong> +5, <strong>AL</strong> L, <strong>LV</strong> 9</p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized creature.</p><p><strong>Poison</strong>. [[request 15 con]] or fall into natural, deep sleep for 1d8 hours.</p><p><strong>Restore</strong>. In place of attacks, touch one creature to remove a curse, affliction, or heal 3d8 HP.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

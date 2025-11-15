@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Confusion",
 	"system": {
-		"description": "<p>[[check 15 wis]] or attack a random ally within near.</p>",
+		"description": "<p>[[request 15 wis]] or attack a random ally within near.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

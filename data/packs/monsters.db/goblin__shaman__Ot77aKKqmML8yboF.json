@@ -84,7 +84,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -147,7 +147,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A swaying, chanting goblin wearing necklaces of teeth and a robe of musty rat pelts. </i></p>\n\t\n\t<p><strong>AC</strong> 12 (leather), <strong>HP</strong> 19, <strong>ATK</strong> 1 staff +0 (1d4) or 1 spell +3, <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Keen Senses</strong>. Can't be surprised.</p><p><strong>Bug Brain (WIS Spell)</strong>. DC 13. Near range, one target. Target's INT drops to 1 for 1d4 rounds.</p><p><strong>Skitter (WIS Spell)</strong>. DC 12. Self. Climb like a spider for 5 rounds.</p><p><strong>Stink Bomb (WIS Spell)</strong>. DC 12. One target within far 2d4 damage and [[check 12 con]] or DISADV on next check/attack.</p>",
+		"notes": "\n\t<p><i> A swaying, chanting goblin wearing necklaces of teeth and a robe of musty rat pelts. </i></p>\n\t\n\t<p><strong>AC</strong> 12 (leather), <strong>HP</strong> 19, <strong>ATK</strong> 1 staff +0 (1d4) or 1 spell +3, <strong>MV</strong> near, <strong>S</strong> +0, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Keen Senses</strong>. Can't be surprised.</p><p><strong>Bug Brain (WIS Spell)</strong>. DC 13. Near range, one target. Target's INT drops to 1 for 1d4 rounds.</p><p><strong>Skitter (WIS Spell)</strong>. DC 12. Self. Climb like a spider for 5 rounds.</p><p><strong>Stink Bomb (WIS Spell)</strong>. DC 12. One target within far 2d4 damage and [[request 12 con]] or DISADV on next check/attack.</p>",
 		"spellcastingAbility": "wis",
 		"spellcastingAttackNum": 1,
 		"spellcastingBonus": 3

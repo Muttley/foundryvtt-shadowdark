@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Hellfire",
 	"system": {
-		"description": "<p>[[check 18 dex]] or [[/r 2d8]] damage per round until flames extinguished.</p>",
+		"description": "<p>[[request 18 dex]] or [[/r 2d8]] damage per round until flames extinguished.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

@@ -8,7 +8,7 @@
 	"name": "Banish",
 	"system": {
 		"dc": 14,
-		"description": "<p>All extradimensional creatures within near [[check 15 cha]] or sent back to their home planes.</p>",
+		"description": "<p>All extradimensional creatures within near [[request 15 cha]] or sent back to their home planes.</p>",
 		"duration": {
 			"type": "instant",
 			"value": -1

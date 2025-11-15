@@ -8,7 +8,7 @@
 	"name": "Sigil of Doom",
 	"system": {
 		"dc": 15,
-		"description": "<p>One target of LV 9 or less within near [[check 15 con]] or go to 0 HP.</p>",
+		"description": "<p>One target of LV 9 or less within near [[request 15 con]] or go to 0 HP.</p>",
 		"duration": {
 			"type": "instant",
 			"value": -1

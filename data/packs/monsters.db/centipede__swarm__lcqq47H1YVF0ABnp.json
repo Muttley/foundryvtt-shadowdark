@@ -81,7 +81,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -144,7 +144,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> A crawling mass of weaving, sinuous centipedes. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 18, <strong>ATK</strong> 3 bite +1 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> -3, <strong>D</strong> +1, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> -3, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Poison</strong>. [[check 12 con]] or paralyzed 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> A crawling mass of weaving, sinuous centipedes. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 18, <strong>ATK</strong> 3 bite +1 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> -3, <strong>D</strong> +1, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> -3, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Poison</strong>. [[request 12 con]] or paralyzed 1d4 rounds.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

@@ -85,7 +85,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -148,7 +148,7 @@
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Pale, blood-drinking undead of supreme power and wickedness. They loathe sunlight and protect their coffins at all costs. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 52, <strong>ATK</strong> 3 bite +7 (1d8 + blood drain) or 1 charm, <strong>MV</strong> near (climb), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 11</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Blood Drain</strong>. Vampire heals 2d6 HP and target permanently loses 1d4 CON. At 0 CON, target dies and rises as vampire or vampire spawn (vampire chooses).</p><p><strong>Charm</strong>. One humanoid target who can see vampire within near, [[check 15 cha]] or under vampire's control for 1d4 days.</p><p><strong>Shapechange</strong>. In place of attacks, turn into a bat, wolf, or back into regular form.</p><p><strong>Vampire</strong>. Must sleep in a coffin daily or loses 2d6 HP each day that can't be healed until resting in coffin. Takes 3d8 damage each round while in direct sunlight. Cannot be killed unless pierced through heart with a wooden stake while at 0 HP.</p>",
+		"notes": "\n\t<p><i> Pale, blood-drinking undead of supreme power and wickedness. They loathe sunlight and protect their coffins at all costs. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 52, <strong>ATK</strong> 3 bite +7 (1d8 + blood drain) or 1 charm, <strong>MV</strong> near (climb), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> +1, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 11</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Blood Drain</strong>. Vampire heals 2d6 HP and target permanently loses 1d4 CON. At 0 CON, target dies and rises as vampire or vampire spawn (vampire chooses).</p><p><strong>Charm</strong>. One humanoid target who can see vampire within near, [[request 15 cha]] or under vampire's control for 1d4 days.</p><p><strong>Shapechange</strong>. In place of attacks, turn into a bat, wolf, or back into regular form.</p><p><strong>Vampire</strong>. Must sleep in a coffin daily or loses 2d6 HP each day that can't be healed until resting in coffin. Takes 3d8 damage each round while in direct sunlight. Cannot be killed unless pierced through heart with a wooden stake while at 0 HP.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

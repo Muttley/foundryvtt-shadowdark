@@ -82,7 +82,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -145,7 +145,7 @@
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Wagon-sized, filthy vultures with four limbs, midnight-blue skin, and a rash of mangy feathers. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 24, <strong>ATK</strong> 2 talons +4 (1d8) or 1 screech, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Carrion Mist</strong>. Each time vrock is hit, 3:6 chance of carrion mist in near-sized cube centered on vrock. All enemies [[check 15 con]] or violent vomiting 1d4 rounds.</p><p><strong>Screech</strong>. All enemies in double near [[check 12 wis]] or DISADV on checks and attacks for 1d4 rounds.</p>",
+		"notes": "\n\t<p><i> Wagon-sized, filthy vultures with four limbs, midnight-blue skin, and a rash of mangy feathers. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 24, <strong>ATK</strong> 2 talons +4 (1d8) or 1 screech, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Carrion Mist</strong>. Each time vrock is hit, 3:6 chance of carrion mist in near-sized cube centered on vrock. All enemies [[request 15 con]] or violent vomiting 1d4 rounds.</p><p><strong>Screech</strong>. All enemies in double near [[request 12 wis]] or DISADV on checks and attacks for 1d4 rounds.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

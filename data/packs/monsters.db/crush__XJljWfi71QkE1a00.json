@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Crush",
 	"system": {
-		"description": "<p>[[check 15 str]] or target takes [[/r 2d8]] damage.</p>",
+		"description": "<p>[[request 15 str]] or target takes [[/r 2d8]] damage.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

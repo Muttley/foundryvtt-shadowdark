@@ -84,7 +84,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -147,7 +147,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> Primordial, tentacled leviathans the size of war galleons. They live in the lightless depths of the deep ocean. </i></p>\n\t\n\t<p><strong>AC</strong> 18, <strong>HP</strong> 80, <strong>ATK</strong> 4 tentacle (near) +9 (2d12) or 1 storm or 1d4 lightning bolt, <strong>MV</strong> double near (swim), <strong>S</strong> +6, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 17</p>\n\t<p><strong> Impervious</strong>. Electricity immune.</p><p><strong>Crush</strong>. Tentacle attacks deal double damage against objects.</p><p><strong>Lightning Bolt</strong>. Straight line (5' wide) extending far from kraken. [[check 15 dex]] or 6d6 damage.</p><p><strong>Storm</strong>. Seas become violently turbulent in 1 mile radius around kraken. Lasts 2d4 rounds. Seaborne vessels have a 1:6 chance of capsizing each round.</p>",
+		"notes": "\n\t<p><i> Primordial, tentacled leviathans the size of war galleons. They live in the lightless depths of the deep ocean. </i></p>\n\t\n\t<p><strong>AC</strong> 18, <strong>HP</strong> 80, <strong>ATK</strong> 4 tentacle (near) +9 (2d12) or 1 storm or 1d4 lightning bolt, <strong>MV</strong> double near (swim), <strong>S</strong> +6, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 17</p>\n\t<p><strong> Impervious</strong>. Electricity immune.</p><p><strong>Crush</strong>. Tentacle attacks deal double damage against objects.</p><p><strong>Lightning Bolt</strong>. Straight line (5' wide) extending far from kraken. [[request 15 dex]] or 6d6 damage.</p><p><strong>Storm</strong>. Seas become violently turbulent in 1 mile radius around kraken. Lasts 2d4 rounds. Seaborne vessels have a 1:6 chance of capsizing each round.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

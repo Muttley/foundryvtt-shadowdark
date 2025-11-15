@@ -82,7 +82,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -145,7 +145,7 @@
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> The smell of wet loam follows this dragon. Its jade scales bristle with barbed thorns. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d8) or 1 poison breath, <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +3, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 12</p>\n\t<p><strong> Animate Plants</strong>. 1/day, in place of attacks. Vines grab at all enemies within double near of dragon. [[check 15 dex]] or unable to move 1d4 rounds.</p><p><strong>Poison Breath</strong>. Fills a near-sized cube extending from dragon. [[check 15 con]] or 3d8 damage.</p>",
+		"notes": "\n\t<p><i> The smell of wet loam follows this dragon. Its jade scales bristle with barbed thorns. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 58, <strong>ATK</strong> 3 rend +8 (2d8) or 1 poison breath, <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +4, <strong>I</strong> +3, <strong>W</strong> +3, <strong>Ch</strong> +4, <strong>AL</strong> N, <strong>LV</strong> 12</p>\n\t<p><strong> Animate Plants</strong>. 1/day, in place of attacks. Vines grab at all enemies within double near of dragon. [[request 15 dex]] or unable to move 1d4 rounds.</p><p><strong>Poison Breath</strong>. Fills a near-sized cube extending from dragon. [[request 15 con]] or 3d8 damage.</p>",
 		"spellcastingAbility": "",
 		"spellcastingAttackNum": 0,
 		"spellcastingBonus": 0

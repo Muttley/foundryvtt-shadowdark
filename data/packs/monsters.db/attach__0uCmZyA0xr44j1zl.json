@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Attach",
 	"system": {
-		"description": "<p>Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</p>",
+		"description": "<p>Attach to target; bite auto-hits next round. [[request 12 str]] on turn to tear off.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

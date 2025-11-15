@@ -7,7 +7,7 @@
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Barb",
 	"system": {
-		"description": "<p>Each spine sticks, dealing [[/r 1d4]] damage each round. [[check 12 str]] check on turn to remove.</p>",
+		"description": "<p>Each spine sticks, dealing [[/r 1d4]] damage each round. [[request 12 str]] check on turn to remove.</p>",
 		"predefinedEffects": "",
 		"source": {
 			"title": ""

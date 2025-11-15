@@ -13,7 +13,7 @@
 		"bonuses": {
 			"attackBonus": 0
 		},
-		"description": "<p>Fills a near-sized cube extending from brain eater. [[check 15 int]] or [[/r 3d6]] damage and paralyzed [[/r 1d4]] rounds.</p>",
+		"description": "<p>Fills a near-sized cube extending from brain eater. [[request 15 int]] or [[/r 3d6]] damage and paralyzed [[/r 1d4]] rounds.</p>",
 		"ranges": [
 		],
 		"source": {

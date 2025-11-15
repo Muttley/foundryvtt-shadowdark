@@ -88,7 +88,7 @@
 			"color": null,
 			"contrast": 0,
 			"enabled": false,
-			"range": 0,
+			"range": 100,
 			"saturation": 0,
 			"visionMode": "basic"
 		},
@@ -151,7 +151,7 @@
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A wizard who has completed a necromantic ritual to become a mighty, undead sorcerer. Its withered body is draped in moldering, silk robes, and red marshlights burn in its eyes. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 62, <strong>ATK</strong> 2 touch +6 (2d8 + paralysis) and 2 spell +7, <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 13</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Phylactery</strong>. Can't be killed while spirit vessel (an object) is intact.</p><p><strong>Paralysis</strong>. [[check 15 con]] or paralyzed 1d4 rounds.</p><p><strong>Flight (INT Spell)</strong>. Self. DC 13. Fly double near for 5 rounds.</p><p><strong>Null (INT Spell)</strong>. Self. DC 14. Hostile spells targeting lich are DC 18 to cast. Lasts 1d4 rounds.</p><p><strong>Shadow Leap (INT Spell)</strong>. Self. DC 14. Teleport up to 100 miles.</p><p><strong>Sigil of Doom (INT Spell)</strong>. DC 15. One target of LV 9 or less within near [[check 15 con]] or go to 0 HP.</p><p><strong>Wither (INT Spell)</strong>. DC 14. 4d8 damage to enemies within a near-sized cube centered on lich.</p>",
+		"notes": "\n\t<p><i> A wizard who has completed a necromantic ritual to become a mighty, undead sorcerer. Its withered body is draped in moldering, silk robes, and red marshlights burn in its eyes. </i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 62, <strong>ATK</strong> 2 touch +6 (2d8 + paralysis) and 2 spell +7, <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> +4, <strong>W</strong> +3, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 13</p>\n\t<p><strong> Supreme Undead</strong>. Immune to morale checks. Only damaged by magical sources.</p><p><strong>Phylactery</strong>. Can't be killed while spirit vessel (an object) is intact.</p><p><strong>Paralysis</strong>. [[request 15 con]] or paralyzed 1d4 rounds.</p><p><strong>Flight (INT Spell)</strong>. Self. DC 13. Fly double near for 5 rounds.</p><p><strong>Null (INT Spell)</strong>. Self. DC 14. Hostile spells targeting lich are DC 18 to cast. Lasts 1d4 rounds.</p><p><strong>Shadow Leap (INT Spell)</strong>. Self. DC 14. Teleport up to 100 miles.</p><p><strong>Sigil of Doom (INT Spell)</strong>. DC 15. One target of LV 9 or less within near [[request 15 con]] or go to 0 HP.</p><p><strong>Wither (INT Spell)</strong>. DC 14. 4d8 damage to enemies within a near-sized cube centered on lich.</p>",
 		"spellcastingAbility": "int",
 		"spellcastingAttackNum": 2,
 		"spellcastingBonus": 7
