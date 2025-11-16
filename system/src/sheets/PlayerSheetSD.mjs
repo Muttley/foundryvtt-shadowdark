@@ -692,6 +692,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.actor.usePotion(itemId);
 	}
 
+
 	async _sendToggledLightSourceToChat(active, item, options = {}) {
 		const cardData = {
 			active: active,
@@ -701,6 +702,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			actor: this,
 			item: item,
 			picked_up: options.picked_up ?? false,
+			showRemainingMins: game.settings.get("shadowdark", "playerShowLightRemaining") > 1,
 		};
 
 		let template = options.template ?? "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
