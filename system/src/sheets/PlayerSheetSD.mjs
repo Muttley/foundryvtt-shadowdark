@@ -574,7 +574,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		options = {
 			...options,
 			skipPrompt: this.getSkipPrompt(event),
-			advantage: this.getAdvantage(event),
+			adv: this.getAdvantage(event),
 		};
 
 		this.actor.castSpell(itemId, options);
@@ -680,7 +680,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const options = {
 			skipPrompt: this.getSkipPrompt(event),
-			advantage: this.getAdvantage(event),
+			adv: this.getAdvantage(event),
 		};
 
 		this.actor.useAbility(itemId, options);
