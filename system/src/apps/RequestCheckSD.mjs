@@ -15,6 +15,16 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 
 		if (!data.command) return;
 
+		const skipPrompt = event.shiftKey || event.altKey || event.ctrlKey ? true : false;
+
+		let advantage = 0;
+		if (event.altKey) {
+			advantage = 1;
+		}
+		else if (event.ctrlKey) {
+			advantage = -1;
+		}
+
 		switch (data.command) {
 			case "check":
 				const actor = await shadowdark.utils.getCurrentActor();
@@ -27,11 +37,10 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 				const options = {
 					target: data.dc,
 					stat: data.stat,
+					skipPrompt: skipPrompt,
+					advantage: advantage,
 				};
 
-				if (event.shiftKey) {
-					options.skipPrompt = true;
-				}
 
 				return actor.rollAbility(data.stat.toLowerCase(), options);
 			case "request":
