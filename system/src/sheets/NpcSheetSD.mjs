@@ -144,8 +144,11 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 
-		options.skipPrompt = this.getSkipPrompt(event);
-		options.advantage = this.getAdvantage(event);
+		options = {
+			...options,
+			skipPrompt: this.getSkipPrompt(event),
+			advantage: this.getAdvantage(event),
+		};
 
 		this.actor.castNPCSpell(itemId, options);
 	}
