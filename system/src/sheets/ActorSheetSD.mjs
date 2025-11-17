@@ -285,17 +285,26 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		event.preventDefault();
 		let ability = $(event.currentTarget).data("ability");
 		if (!ability) return;
-		// skip roll prompt if shift clicked
-		const skipPrompt = event.shiftKey ? true : false;
-		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
+
+		// skip roll prompt if shift/alt/ctrl clicked
+		const options = {
+			skipPrompt: this._getSkipPrompt(event),
+			advantage: this._getAdvantage(event),
+		};
+
+		this.actor.system.rollAbilityCheck(ability, options);
 	}
 
 	async _onRollAttack(event) {
 		event.preventDefault();
 		const itemId = event.currentTarget.dataset.itemId;
+
+		// skip roll prompt if shift/alt/ctrl clicked
 		const data = {
-			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
+			skipPrompt: this._getSkipPrompt(event),
+			advantage: this._getAdvantage(event),
 		};
+
 		if (event.currentTarget.dataset.attackType) {
 			data.attack = {Type: event.currentTarget.dataset.attackType};
 		}
@@ -351,5 +360,20 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		return Array.from(context.items ?? []).sort(
 			(a, b) => a.name.localeCompare(b.name)
 		);
+	}
+
+	_getAdvantage(event) {
+		let advantage = 0;
+		if (event.altKey) {
+			advantage = 1;
+		}
+		else if (event.ctrlKey) {
+			advantage = -1;
+		}
+		return advantage;
+	}
+
+	_getSkipPrompt(event) {
+		return event.shiftKey || event.altKey || event.ctrlKey ? true : false;
 	}
 }

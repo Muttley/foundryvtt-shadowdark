@@ -555,12 +555,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {...options, skipPrompt: true});
-		}
-		else {
-			this.actor.castSpell(itemId, options);
-		}
+
+		options.skipPrompt = this._getSkipPrompt(event);
+		options.advantage = this._getAdvantage(event);
+
+		this.actor.castSpell(itemId, options);
 	}
 
 	async _onLearnSpell(event) {
@@ -661,12 +660,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		if (event.shiftKey) {
-			this.actor.useAbility(itemId, {skipPrompt: true});
-		}
-		else {
-			this.actor.useAbility(itemId);
-		}
+		const options = {
+			skipPrompt: this._getSkipPrompt(event),
+			advantage: this._getAdvantage(event),
+		};
+
+		this.actor.useAbility(itemId, options);
 	}
 
 	async _onUsePotion(event) {
