@@ -284,22 +284,16 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-
 		let ability = $(event.currentTarget).data("ability");
+		if (!ability) return;
 
 		// skip roll prompt if shift/alt/ctrl clicked
-		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: 0});
-		}
-		else if (event.altKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: 1});
-		}
-		else if (event.ctrlKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true, adv: -1});
-		}
-		else {
-			this.actor.rollAbility(ability, {event: event});
-		}
+		const options = {
+			skipPrompt: this.getSkipPrompt(event),
+			adv: this.getAdvantage(event),
+		};
+
+		this.actor.system.rollAbilityCheck(ability, options);
 	}
 
 	async _onRollAttack(event) {
@@ -309,28 +303,15 @@ export default class ActorSheetSD extends ActorSheet {
 		const attackType =  $(event.currentTarget).data("attack-type");
 		const handedness = $(event.currentTarget).data("handedness");
 
+		// skip roll prompt if shift/alt/ctrl clicked
 		const options = {
 			attackType,
 			handedness,
+			skipPrompt: this.getSkipPrompt(event),
+			adv: this.getAdvantage(event),
 		};
 
-
-		// skip roll prompt if shift/alt/ctrl clicked
-		if (event.shiftKey) {
-			options.fastForward = true;
-			options.adv = 0;
-		}
-		else if (event.altKey) {
-			options.fastForward = true;
-			options.adv = 1;
-		}
-		else if (event.ctrlKey) {
-			options.fastForward = true;
-			options.adv = -1;
-		}
-
 		this.actor.rollAttack(itemId, options);
-
 	}
 
 	async _onToggleLost(event) {
@@ -380,5 +361,20 @@ export default class ActorSheetSD extends ActorSheet {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
 		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+	getAdvantage(event) {
+		let advantage = 0;
+		if (event.altKey) {
+			advantage = 1;
+		}
+		else if (event.ctrlKey) {
+			advantage = -1;
+		}
+		return advantage;
+	}
+
+	getSkipPrompt(event) {
+		return event.shiftKey || event.altKey || event.ctrlKey ? true : false;
 	}
 }

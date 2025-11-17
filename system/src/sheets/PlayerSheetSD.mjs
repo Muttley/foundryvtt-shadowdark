@@ -570,18 +570,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: 0});
-		}
-		else if (event.altKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: 1});
-		}
-		else if (event.ctrlKey) {
-			this.actor.castSpell(itemId, {...options, fastForward: true, adv: -1});
-		}
-		else {
-			this.actor.castSpell(itemId, options);
-		}
+
+		options = {
+			...options,
+			skipPrompt: this.getSkipPrompt(event),
+			advantage: this.getAdvantage(event),
+		};
+
+		this.actor.castSpell(itemId, options);
 	}
 
 	async _onLearnSpell(event) {
@@ -682,18 +678,12 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		if (event.shiftKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: 0});
-		}
-		else if (event.altKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: 1});
-		}
-		else if (event.ctrlKey) {
-			this.actor.useAbility(itemId, {fastForward: true, adv: -1});
-		}
-		else {
-			this.actor.useAbility(itemId);
-		}
+		const options = {
+			skipPrompt: this.getSkipPrompt(event),
+			advantage: this.getAdvantage(event),
+		};
+
+		this.actor.useAbility(itemId, options);
 	}
 
 	async _onUsePotion(event) {
