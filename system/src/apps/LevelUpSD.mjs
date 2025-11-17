@@ -210,7 +210,7 @@ export default class LevelUpSD extends FormApplication {
 
 		options.flavor = options.title;
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
-		options.fastForward = true;
+		options.skipPrompt = true;
 
 		let parts = [this.data.class.system.hitPoints];
 		let advantage = 0;
