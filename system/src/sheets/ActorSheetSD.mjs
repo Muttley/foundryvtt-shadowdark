@@ -371,7 +371,6 @@ export default class ActorSheetSD extends ActorSheet {
 		else if (event.ctrlKey) {
 			advantage = -1;
 		}
-		console.log(advantage);
 		return advantage;
 	}
 
