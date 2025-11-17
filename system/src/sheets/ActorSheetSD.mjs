@@ -288,8 +288,8 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		// skip roll prompt if shift/alt/ctrl clicked
 		const options = {
-			skipPrompt: this._getSkipPrompt(event),
-			advantage: this._getAdvantage(event),
+			skipPrompt: this.getSkipPrompt(event),
+			advantage: this.getAdvantage(event),
 		};
 
 		this.actor.system.rollAbilityCheck(ability, options);
@@ -301,8 +301,8 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		// skip roll prompt if shift/alt/ctrl clicked
 		const data = {
-			skipPrompt: this._getSkipPrompt(event),
-			advantage: this._getAdvantage(event),
+			skipPrompt: this.getSkipPrompt(event),
+			advantage: this.getAdvantage(event),
 		};
 
 		if (event.currentTarget.dataset.attackType) {
@@ -362,7 +362,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		);
 	}
 
-	_getAdvantage(event) {
+	getAdvantage(event) {
 		let advantage = 0;
 		if (event.altKey) {
 			advantage = 1;
@@ -373,7 +373,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		return advantage;
 	}
 
-	_getSkipPrompt(event) {
+	getSkipPrompt(event) {
 		return event.shiftKey || event.altKey || event.ctrlKey ? true : false;
 	}
 }
