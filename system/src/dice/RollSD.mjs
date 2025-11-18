@@ -466,7 +466,9 @@ export default class RollSD extends Roll {
 						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data);
 					}
 					else {
-						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
+						data.rolls.damage = await this._roll(
+							oneHandedParts ?? twoHandedParts,
+							data);
 					}
 			}
 		}
