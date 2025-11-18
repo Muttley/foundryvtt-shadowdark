@@ -1,11 +1,23 @@
 # v4.0.0
 
 ## Enhancements
+- [#1038] Added missing translatable strings
+- [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
 
 ## Bugfixes
+- [#1107] Handaxe Price Correction
+- [#1122] Error that prevented adding active effects
+- [#1126] Added missing Fighter talent in class rolltable *(Brittonlj)*
+- [#1129] Correct inconsistent typography in compendium items *(johncarney)*
+- [#1130] Remove repeated description in Alarm spell *(johncarney)*
+- [#1140] Manifest warning related to grid settings *(andrewbeard)*
+- [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
 
 ## Chores
-- [#369] Mirgrated to using data models
+- [#369] Mirgrated to using data models for actors and items
+- [#1153] Add tip for improving editor auto-complete *(puradox)*
+
+*Many thanks to **Ashley Towner <git@ashtowner.com>**,**andrewbeard**,**Brittonlj**, **johncarney**, **puradox** for contributing to this release*
 
 ---
 
