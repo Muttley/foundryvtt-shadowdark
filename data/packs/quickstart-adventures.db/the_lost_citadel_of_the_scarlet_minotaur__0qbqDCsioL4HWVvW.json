@@ -319,7 +319,7 @@
 							"attackBonus": 7,
 							"critical": {
 								"failureThreshold": 1,
-								"multiplier": 2,
+								"multiplier": 4,
 								"successThreshold": 20
 							},
 							"damageBonus": 0
@@ -10062,7 +10062,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.damage.critMultiplier",
+							"key": "system.bonuses.critical.multiplier",
 							"mode": 5,
 							"priority": null,
 							"value": "4"
@@ -10082,7 +10082,7 @@
 					"flags": {
 					},
 					"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
-					"name": "critMultiplier",
+					"name": "Critical Multiplier",
 					"origin": "Item.gtfx2i7YimBMi2bo",
 					"sort": 0,
 					"statuses": [
@@ -10106,7 +10106,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.attackBonus",
+							"key": "system.bonuses.attackBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -10126,7 +10126,7 @@
 					"flags": {
 					},
 					"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
-					"name": "attackBonus",
+					"name": "Weapon Attack Roll Bonus",
 					"origin": "Item.gtfx2i7YimBMi2bo",
 					"sort": 0,
 					"statuses": [
@@ -10150,7 +10150,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.damage.bonus",
+							"key": "system.bonuses.damageBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -10170,7 +10170,7 @@
 					"flags": {
 					},
 					"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-					"name": "damageBonus",
+					"name": "Weapon Attack Damage Bonus",
 					"origin": "Item.gtfx2i7YimBMi2bo",
 					"sort": 0,
 					"statuses": [
@@ -11815,7 +11815,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.attackBonus",
+							"key": "system.bonuses.attackBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -11835,7 +11835,7 @@
 					"flags": {
 					},
 					"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
-					"name": "attackBonus",
+					"name": "Weapon Attack Roll Bonus",
 					"origin": "Item.cY0UIbpokdT448Pw",
 					"sort": 0,
 					"statuses": [
@@ -11859,7 +11859,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.damage.bonus",
+							"key": "system.bonuses.damageBonus",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -11879,7 +11879,7 @@
 					"flags": {
 					},
 					"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
-					"name": "damageBonus",
+					"name": "Weapon Attack Damage Bonus",
 					"origin": "Item.cY0UIbpokdT448Pw",
 					"sort": 0,
 					"statuses": [
