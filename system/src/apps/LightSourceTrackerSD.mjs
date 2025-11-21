@@ -185,6 +185,7 @@ export default class LightSourceTrackerSD extends Application {
 				speaker: speaker ?? ChatMessage.getSpeaker(),
 				picked_up: false,
 				template: "systems/shadowdark/templates/chat/lightsource-drop.hbs",
+				showRemainingMins: game.settings.get("shadowdark", "playerShowLightRemaining") > 1,
 			}
 		);
 
@@ -262,6 +263,7 @@ export default class LightSourceTrackerSD extends Application {
 			actor,
 			item,
 			picked_up: true,
+			showRemainingMins: game.settings.get("shadowdark", "playerShowLightRemaining") > 1,
 		};
 
 		let template = "systems/shadowdark/templates/chat/lightsource-drop.hbs";
