@@ -147,7 +147,7 @@ export default class ItemSD extends Item {
 
 
 	async getEnrichedDescription() {
-		return await TextEditor.enrichHTML(
+		return await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			this.system.description,
 			{
 				async: true,

@@ -168,7 +168,9 @@ export default class LevelUpSD extends FormApplication {
 	/** @override */
 	async _onDrop(event) {
 		// get item that was dropped based on event
-		const eventData = TextEditor.getDragEventData(event);
+		const eventData =
+			foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+
 		const itemObj = await fromUuid(eventData.uuid);
 
 		if (itemObj && eventData.type === "Item") {

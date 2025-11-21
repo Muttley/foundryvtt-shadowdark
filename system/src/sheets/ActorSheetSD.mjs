@@ -81,7 +81,7 @@ export default class ActorSheetSD extends ActorSheet {
 			this.actor.allApplicableEffects()
 		);
 
-		context.notesHTML = await TextEditor.enrichHTML(
+		context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			context.system.notes,
 			{
 				secrets: this.actor.isOwner,
@@ -291,9 +291,10 @@ export default class ActorSheetSD extends ActorSheet {
 		const options = {
 			skipPrompt: this.getSkipPrompt(event),
 			adv: this.getAdvantage(event),
+			event: event,
 		};
 
-		this.actor.system.rollAbilityCheck(ability, options);
+		this.actor.rollAbility(ability, options);
 	}
 
 	async _onRollAttack(event) {

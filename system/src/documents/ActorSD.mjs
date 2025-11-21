@@ -349,12 +349,13 @@ export default class ActorSD extends Actor {
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
 
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
+		attackOptions.numAttacks =
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+				item.system.attack.num,
+				{
+					async: true,
+				}
+			);
 
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
@@ -365,12 +366,13 @@ export default class ActorSD extends Actor {
 	async buildNpcSpecialDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
 
-		const description = await TextEditor.enrichHTML(
-			jQuery(item.system.description).text(),
-			{
-				async: true,
-			}
-		);
+		const description =
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+				jQuery(item.system.description).text(),
+				{
+					async: true,
+				}
+			);
 
 		const attackOptions = {
 			attackName: item.name,
@@ -382,12 +384,13 @@ export default class ActorSD extends Actor {
 			description,
 		};
 
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
+		attackOptions.numAttacks =
+			await Tfoundry.applications.ux.TextEditor.implementationextEditor.enrichHTML(
+				item.system.attack.num,
+				{
+					async: true,
+				}
+			);
 
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
@@ -1541,14 +1544,15 @@ export default class ActorSD extends Actor {
 			}
 		}
 
-		const abilityDescription = await TextEditor.enrichHTML(
-			item.system.description,
-			{
-				secrets: this.isOwner,
-				async: true,
-				relativeTo: this,
-			}
-		);
+		const abilityDescription =
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+				item.system.description,
+				{
+					secrets: this.isOwner,
+					async: true,
+					relativeTo: this,
+				}
+			);
 
 		return shadowdark.chat.renderUseAbilityMessage(this.actor, {
 			flavor: game.i18n.localize("SHADOWDARK.chat.use_ability.title"),
@@ -1566,7 +1570,7 @@ export default class ActorSD extends Actor {
 	async usePotion(itemId) {
 		const item = this.items.get(itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/confirm-use-potion.hbs",
 			{name: item.name}
 		).then(html => {

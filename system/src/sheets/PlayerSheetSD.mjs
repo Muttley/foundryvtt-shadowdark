@@ -618,7 +618,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = $(event.currentTarget).data("item-id");
 		const itemData = this.object.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/sell-item.hbs",
 			{name: itemData.name}
 		).then(html => {
