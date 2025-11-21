@@ -1599,7 +1599,7 @@ export default class ActorSD extends Actor {
 
 							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
 
-							const content = foundry.applications.handlebars.renderTemplate(
+							const content = await foundry.applications.handlebars.renderTemplate(
 								template,
 								cardData);
 
