@@ -556,7 +556,7 @@ export default class RollSD extends Roll {
 			dialogData.rollMode = game.settings.get("core", "rollMode");
 		}
 
-		return renderTemplate(dialogTemplate, dialogData);
+		return foundry.applications.handlebars.renderTemplate(dialogTemplate, dialogData);
 	}
 
 	/**
@@ -714,7 +714,7 @@ export default class RollSD extends Roll {
 
 		const chatCardData = await this._getChatCardTemplateData(data, options);
 
-		return renderTemplate(chatCardTemplate, chatCardData);
+		return foundry.applications.handlebars.renderTemplate(chatCardTemplate, chatCardData);
 	}
 
 	/**

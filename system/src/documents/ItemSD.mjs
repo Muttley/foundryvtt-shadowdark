@@ -142,7 +142,7 @@ export default class ItemSD extends Item {
 			"systems/shadowdark/templates/_partials/details"
 		);
 
-		return await renderTemplate(templatePath, data);
+		return await foundry.applications.handlebars.renderTemplate(templatePath, data);
 	}
 
 

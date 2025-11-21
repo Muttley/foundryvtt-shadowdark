@@ -8,7 +8,7 @@ export const SDAppsButtons = {
 				if (app.options.classes.includes("actors-sidebar")) {
 
 					const renderedHTML = $(
-						await renderTemplate(
+						await foundry.applications.handlebars.renderTemplate(
 							"systems/shadowdark/templates/ui/sd-apps-buttons.hbs"
 						)
 					);

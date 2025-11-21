@@ -3,12 +3,14 @@ import SolodarkSD from "../apps/SoloDarkSD.mjs";
 export function highlightSuccessFailure(app, html, data) {
 	if ( !app.flags?.shadowdark?.isRoll ) return;
 
-	const value = html.find(".d20-roll .dice-total").text();
+	const $html = $(html);
+
+	const value = $html.find(".d20-roll .dice-total").text();
 
 	if ( app.flags.shadowdark.critical === "failure" ) {
-		html.find(".d20-roll .dice-total").addClass("failure");
+		$html.find(".d20-roll .dice-total").addClass("failure");
 
-		html.find(".d20-roll .dice-total").text(
+		$html.find(".d20-roll .dice-total").text(
 			game.i18n.format(
 				"SHADOWDARK.roll.critical.failure",
 				{value: value}
@@ -16,9 +18,9 @@ export function highlightSuccessFailure(app, html, data) {
 		);
 	}
 	else if ( app.flags.shadowdark.critical === "success" ) {
-		html.find(".d20-roll .dice-total").addClass("success");
+		$html.find(".d20-roll .dice-total").addClass("success");
 
-		html.find(".d20-roll .dice-total").text(
+		$html.find(".d20-roll .dice-total").text(
 			game.i18n.format(
 				"SHADOWDARK.roll.critical.success",
 				{value: value}
@@ -26,9 +28,9 @@ export function highlightSuccessFailure(app, html, data) {
 		);
 	}
 	else if ( app.flags.shadowdark.hasTarget && app.flags.shadowdark.success ) {
-		html.find(".d20-roll .dice-total").addClass("success");
+		$html.find(".d20-roll .dice-total").addClass("success");
 
-		html.find(".d20-roll .dice-total").text(
+		$html.find(".d20-roll .dice-total").text(
 			game.i18n.format(
 				"SHADOWDARK.roll.success",
 				{value: value}
@@ -36,9 +38,9 @@ export function highlightSuccessFailure(app, html, data) {
 		);
 	}
 	else if ( app.flags.shadowdark.hasTarget && !app.flags.shadowdark.success ) {
-		html.find(".d20-roll .dice-total").addClass("failure");
+		$html.find(".d20-roll .dice-total").addClass("failure");
 
-		html.find(".d20-roll .dice-total").text(
+		$html.find(".d20-roll .dice-total").text(
 			game.i18n.format(
 				"SHADOWDARK.roll.failure",
 				{value: value}
@@ -91,13 +93,15 @@ async function applyHpToMax(event) {
  * @param {object} data - Data passed to the render context
  */
 async function chatCardButtonAction(app, html, data) {
-	const hpButton = html.find("button[data-action=apply-hp-to-max]");
+	const $html = $(html);
+
+	const hpButton = $html.find("button[data-action=apply-hp-to-max]");
 	hpButton.on("click", ev => {
 		ev.preventDefault();
 		applyHpToMax(ev);
 	});
 
-	const castSpellButton = html.find("button[data-action=cast-spell]");
+	const castSpellButton = $html.find("button[data-action=cast-spell]");
 	castSpellButton.on("click", ev => {
 		ev.preventDefault();
 		const itemId = $(ev.currentTarget).data("item-id");
@@ -107,7 +111,7 @@ async function chatCardButtonAction(app, html, data) {
 		actor.castSpell(itemId);
 	});
 
-	const learnSpellButton = html.find("button[data-action=learn-spell]");
+	const learnSpellButton = $html.find("button[data-action=learn-spell]");
 	learnSpellButton.on("click", ev => {
 		ev.preventDefault();
 		const itemId = $(ev.currentTarget).data("item-id");
@@ -117,7 +121,7 @@ async function chatCardButtonAction(app, html, data) {
 		actor.learnSpell(itemId);
 	});
 
-	const usePotionButton = html.find("button[data-action=use-potion]");
+	const usePotionButton = $html.find("button[data-action=use-potion]");
 	usePotionButton.on("click", ev => {
 		ev.preventDefault();
 		const itemId = $(ev.currentTarget).data("item-id");
@@ -127,7 +131,7 @@ async function chatCardButtonAction(app, html, data) {
 		actor.usePotion(itemId);
 	});
 
-	const weaponAttackButton = html.find("button[data-action=roll-attack]");
+	const weaponAttackButton = $html.find("button[data-action=roll-attack]");
 	weaponAttackButton.on("click", ev => {
 		ev.preventDefault();
 		const itemId = $(ev.currentTarget).data("item-id");
@@ -137,7 +141,7 @@ async function chatCardButtonAction(app, html, data) {
 		actor.rollAttack(itemId);
 	});
 
-	const rollPromptButton = html.find("button[data-action=roll-prompt]");
+	const rollPromptButton = $html.find("button[data-action=roll-prompt]");
 	rollPromptButton.on("click", ev => {
 		ev.preventDefault();
 		SolodarkSD.rollPrompt();
@@ -146,10 +150,13 @@ async function chatCardButtonAction(app, html, data) {
 
 export function chatCardBlind(app, html, data) {
 	if (game.user.isGM) return false;
+
+	const $html = $(html);
+
 	if (app.blind) {
-		$(html).find(".blindable .dice-total").text("???");
-		$(html).find(".dice-rolls").remove();
-		$(html).find(".dice .part-total").remove();
+		$html.find(".blindable .dice-total").text("???");
+		$html.find(".dice-rolls").remove();
+		$html.find(".dice .part-total").remove();
 		return true; // Prevent further actions to happen
 	}
 	return false;

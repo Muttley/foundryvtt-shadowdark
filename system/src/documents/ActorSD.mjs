@@ -67,7 +67,7 @@ export default class ActorSD extends Actor {
 
 		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(template, cardData);
 
 		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
 
@@ -356,7 +356,7 @@ export default class ActorSD extends Actor {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
@@ -389,7 +389,7 @@ export default class ActorSD extends Actor {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
@@ -397,7 +397,7 @@ export default class ActorSD extends Actor {
 
 
 	async buildWeaponDisplay(options) {
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/weapon-attack.hbs",
 			options
 		);
@@ -1159,7 +1159,7 @@ export default class ActorSD extends Actor {
 			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
 		}
 		else {
-			return renderTemplate(
+			return foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
 				{classes: playerSpellcasterClasses}
 			).then(html => {
@@ -1595,7 +1595,9 @@ export default class ActorSD extends Actor {
 
 							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
 
-							const content = await renderTemplate(template, cardData);
+							const content = foundry.applications.handlebars.renderTemplate(
+								template,
+								cardData);
 
 							await ChatMessage.create({
 								content,
@@ -1638,7 +1640,7 @@ export default class ActorSD extends Actor {
 
 		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,
@@ -1666,7 +1668,7 @@ export default class ActorSD extends Actor {
 
 		let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,

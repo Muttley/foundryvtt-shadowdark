@@ -19,7 +19,7 @@ export default class ActiveEffectsSD {
 			parameter.uuid = foundry.utils.randomID();
 		}
 
-		const content = await renderTemplate(
+		const content = await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/effect-list-choice.hbs",
 			{
 				effectParameters: parameters,
@@ -396,7 +396,7 @@ export default class ActiveEffectsSD {
 			case "edit":
 				return effect.sheet.render(true);
 			case "delete":
-				return renderTemplate(
+				return foundry.applications.handlebars.renderTemplate(
 					"systems/shadowdark/templates/dialog/are-you-sure.hbs"
 				).then(html => {
 					new Dialog({
