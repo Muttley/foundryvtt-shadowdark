@@ -1680,4 +1680,19 @@ export default class ActorSD extends Actor {
 		});
 	}
 
+	buildOptionsForSkipPrompt(event, options = {}) {
+		options = foundry.utils.mergeObject(options, {
+			skipPrompt: event.shiftKey || event.altKey || event.ctrlKey ? true : false,
+			adv: 0,
+		});
+
+		if (event.altKey) {
+			options.adv = 1;
+		}
+		else if (event.ctrlKey) {
+			options.adv = -1;
+		}
+
+		return options;
+	}
 }

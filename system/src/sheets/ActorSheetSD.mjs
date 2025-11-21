@@ -288,11 +288,9 @@ export default class ActorSheetSD extends ActorSheet {
 		if (!ability) return;
 
 		// skip roll prompt if shift/alt/ctrl clicked
-		const options = {
-			skipPrompt: this.getSkipPrompt(event),
-			adv: this.getAdvantage(event),
+		const options = this.actor.buildOptionsForSkipPrompt(event, {
 			event: event,
-		};
+		});
 
 		this.actor.rollAbility(ability, options);
 	}
@@ -305,12 +303,10 @@ export default class ActorSheetSD extends ActorSheet {
 		const handedness = $(event.currentTarget).data("handedness");
 
 		// skip roll prompt if shift/alt/ctrl clicked
-		const options = {
+		const options = this.actor.buildOptionsForSkipPrompt(event, {
 			attackType,
 			handedness,
-			skipPrompt: this.getSkipPrompt(event),
-			adv: this.getAdvantage(event),
-		};
+		});
 
 		this.actor.rollAttack(itemId, options);
 	}
@@ -362,20 +358,5 @@ export default class ActorSheetSD extends ActorSheet {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
 		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
-	}
-
-	getAdvantage(event) {
-		let advantage = 0;
-		if (event.altKey) {
-			advantage = 1;
-		}
-		else if (event.ctrlKey) {
-			advantage = -1;
-		}
-		return advantage;
-	}
-
-	getSkipPrompt(event) {
-		return event.shiftKey || event.altKey || event.ctrlKey ? true : false;
 	}
 }
