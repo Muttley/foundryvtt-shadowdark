@@ -1086,7 +1086,7 @@ export default class ActorSD extends Actor {
 		);
 
 		if (!correctSpellClass) {
-			renderTemplate(
+			foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/confirm-learn-spell.hbs",
 				{
 					name: item.name,

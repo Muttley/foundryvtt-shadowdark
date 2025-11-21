@@ -218,7 +218,7 @@ export default class ActorSheetSD extends ActorSheet {
 	_onItemDelete(itemId) {
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/delete-item.hbs",
 			{name: itemData.name}
 		).then(html => {
