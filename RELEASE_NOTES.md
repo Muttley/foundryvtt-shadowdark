@@ -1,3 +1,15 @@
+# v3.6.1
+
+## Bugfixes
+- [#1037] Fixed “Item not found” error when spell effect expires on player-assigned actor
+- [#1072] Fixed issues with weapon damage bonus and weapon attack bonuses not working
+- [#1111] Fixed HUD on dropped torches, fixed issues with picking up torches.
+- [#1122] Fixed error when adding new blank Active Effects
+- [#1128] Fixed issue with negative strength modifiers not working on melee attacks.
+- [#1020] Fixed issue with Vigilance and Asterion not having working bonuses
+
+---
+
 # v3.6.0
 
 ## Bugfixes
