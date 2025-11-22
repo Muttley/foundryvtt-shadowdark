@@ -388,6 +388,7 @@ export default class ActiveEffectsSD {
 					disabled: li.dataset.effectType === "inactive",
 					img: "icons/commodities/tech/cog-steel-grey.webp",
 					label: "New Effect",
+					name: "New Effect",
 					origin: owner.uuid,
 				}]);
 
