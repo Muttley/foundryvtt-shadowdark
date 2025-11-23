@@ -12,7 +12,7 @@
 - [#1128] Fixed issue with negative strength modifiers not working on melee attacks.
 - [#1146] Fixed issue with torch time displaying in chat when configured not to.
 - [#1161] Fixed issue where monsters with dark adapted trait can't see in dark.
-
+- [#1172] Fixed random name display on character generator after editing rollable tables.
 
 ---
 
