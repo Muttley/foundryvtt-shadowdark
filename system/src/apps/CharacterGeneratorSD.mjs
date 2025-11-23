@@ -904,8 +904,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 		const table = await fromUuid(this.ancestry.system.nameTable);
 		if (table) {
 			const result = await table.draw({displayChat: false});
-			// regex to replace <p></p> tags when the names are edited by the table editor
-			this.formData.actor.name = result.results[0].text.replace(/<p[^>]*>|<\/p>/g, "");
+			// regex to remove all html tags when the names are edited by the table editor
+			this.formData.actor.name = result.results[0].text.replace(/<[^>]*>|<\/[^>]*>/g, "");
 		}
 		else {
 			this.formData.actor.name = `Unnamed ${this.ancestry.name}`;
