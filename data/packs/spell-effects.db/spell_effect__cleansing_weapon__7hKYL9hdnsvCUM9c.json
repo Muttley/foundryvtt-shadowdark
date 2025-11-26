@@ -12,7 +12,7 @@
 			"meleeDamageBonus": "1d4"
 		},
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</span></p>",
+		"description": "<p>One weapon you touch is wreathed in purifying flames. It deals an additional [[/r 1d4]] damage ([[/r 1d6]] vs. undead) for the duration.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"

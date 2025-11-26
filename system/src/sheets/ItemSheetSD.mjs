@@ -1,7 +1,6 @@
 import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
-export default class ItemSheetSD extends ItemSheet {
-
+export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 	firstLoad = true;
 
 	/* -------------------------------------------- */

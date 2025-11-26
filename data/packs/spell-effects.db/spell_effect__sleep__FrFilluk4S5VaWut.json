@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Sleep",
 	"system": {
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">Injury or vigorous shaking wakes the creature.</span></p>",
+		"description": "<p>Injury or vigorous shaking wakes the creature.</p>",
 		"duration": {
 			"type": "unlimited",
 			"value": 1

@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Web",
 	"system": {
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</span></p>",
+		"description": "<p>A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"

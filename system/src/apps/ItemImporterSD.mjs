@@ -1,4 +1,4 @@
-export default class ItemImporterSD extends FormApplication {
+export default class ItemImporterSD extends foundry.appv1.api.FormApplication {
 	/**
 	 * Contains an importer function to import item stat blocks
 	 */

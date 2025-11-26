@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Zone of Truth",
 	"system": {
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">Can’t utter a deliberate lie when within range from source.</span></p>",
+		"description": "<p>Can’t utter a deliberate lie when within range from source.</p>",
 		"duration": {
 			"type": "focus",
 			"value": 1

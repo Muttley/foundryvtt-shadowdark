@@ -1,4 +1,4 @@
-export default class ShadowdarklingImporterSD extends FormApplication {
+export default class ShadowdarklingImporterSD extends foundry.appv1.api.FormApplication {
 	/**
 	 * Contains an importer function to generate player actors from
 	 * Shadowdarklings.net. Primary matching is done with a mapping
@@ -384,14 +384,14 @@ export default class ShadowdarklingImporterSD extends FormApplication {
 		this.importedActor.system.class = classObj?.uuid ?? "";
 
 		// Add class abilities
-		if (classObj.system.classAbilities) {
+		if (classObj?.system?.classAbilities) {
 			for (const classAbilityUuid of classObj.system.classAbilities) {
 				this.classAbilities.push((await fromUuid(classAbilityUuid)).toObject());
 			}
 		}
 
 		// Add starting spells
-		if (classObj.system.startingSpells) {
+		if (classObj?.system?.startingSpells) {
 			for (const spellUuid of classObj.system.startingSpells) {
 				this.spells.push((await fromUuid(spellUuid)).toObject());
 			}
