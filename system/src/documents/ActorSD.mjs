@@ -385,7 +385,7 @@ export default class ActorSD extends Actor {
 		};
 
 		attackOptions.numAttacks =
-			await Tfoundry.applications.ux.TextEditor.implementationextEditor.enrichHTML(
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 				item.system.attack.num,
 				{
 					async: true,
