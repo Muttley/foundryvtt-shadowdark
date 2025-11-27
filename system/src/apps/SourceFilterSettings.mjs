@@ -1,4 +1,4 @@
-export default class SourceFilterSettings extends FormApplication {
+export default class SourceFilterSettings extends foundry.appv1.api.FormApplication {
 	constructor(object, options) {
 		super(object, options);
 
