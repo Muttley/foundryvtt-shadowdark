@@ -126,7 +126,7 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 				this.data.startingBoons = classData.patron.startingBoons;
 			}
 
-			if (await this.data.actor.isSpellCaster()) {
+			if (await this.data.actor.system.isSpellCaster()) {
 				this.data.spellcastingClass =
 					this.data.class.system.spellcasting.class === ""
 						? this.data.actor.system.class
@@ -200,14 +200,10 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	}
 
 	async _openSpellBook() {
-		this.data.actor.openSpellBook();
+		this.data.actor.system.openSpellBook();
 	}
 
 	async _onRollHP({isReroll = false}) {
-		const data = {
-			rollType: "hp",
-			actor: this.data.actor,
-		};
 		let options = {};
 
 		options.title = isReroll
@@ -218,13 +214,15 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
 		options.skipPrompt = true;
 
+		// TODO add labels to roll
 		const config = {
-			formula: this.data.class.system.hitPoints,
-			advantage: this.hp.advantage,
+			mainRoll: {
+				formula: this.data.class.system.hitPoints,
+				advantage: this.hp.advantage,
+			},
 			actor: this.data.actor,
 		};
-		console.log(config);
-		const result = await shadowdark.dice.roll(config);
+		const result = await shadowdark.dice.rollFromConfig(config);
 		this.data.rolls.hp = result.total;
 		result.toMessage();
 		ui.sidebar.changeTab("chat", "primary");

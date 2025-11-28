@@ -12,14 +12,15 @@ export default class RollSD extends foundry.dice.Roll {
 	}
 
 	get criticalSuccess() {
-		if (!this._evaluated || this.dice.length < 1) return null;
+		if (!this.success || this.dice.length < 1) return null;
 		const baseDie = this.dice[0];
 		const target = this.options?.criticalSuccessAt ?? baseDie.faces;
 		return target ? baseDie.total >= target : false;
 	}
 
 	get success() {
-		if (!this._evaluated || !this.options?.dc) return null;
+		if (!this._evaluated) return null;
+		if (!this.options?.dc) return true;
 		return this.total >= this.options?.dc;
 	}
 

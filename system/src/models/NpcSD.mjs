@@ -1,30 +1,25 @@
 import { ActorBaseSD } from "./_ActorBaseSD.mjs";
+import * as actorFields from "./_fields/actorFields.mjs";
 
 const fields = foundry.data.fields;
 
 export default class NpcSD extends ActorBaseSD {
 	static defineSchema() {
-		const schema = super.defineSchema();
-
-		schema.attributes = new fields.SchemaField({
-			ac: new fields.SchemaField({
-				value: new fields.NumberField({integer: true, initial: 10, min: 0}),
+		const schema = {
+			...actorFields.alignment(),
+			...actorFields.level(),
+			darkAdapted: new fields.BooleanField({initial: false}),
+			move: new fields.StringField({
+				initial: "near",
+				choices: Object.keys(CONFIG.SHADOWDARK.NPC_MOVES),
 			}),
-			hp: new fields.SchemaField({
-				value: new fields.NumberField({ integer: true, initial: 0, min: 0}),
-				max: new fields.NumberField({ integer: true, initial: 0, min: 0}),
-			}),
-		});
-		schema.darkAdapted = new fields.BooleanField({initial: false});
-		schema.move = new fields.StringField({
-			initial: "near",
-			choices: Object.keys(CONFIG.SHADOWDARK.NPC_MOVES),
-		});
-		schema.moveNote = new fields.StringField();
-		schema.spellcastingAbility = new fields.StringField();
-		schema.spellcastingBonus = new fields.NumberField({ integer: true, initial: 0, min: 0});
-		schema.spellcastingAttackNum = new fields.NumberField({ integer: true, initial: 0, min: 0});
+			moveNote: new fields.StringField(),
+			spellcastingAbility: new fields.StringField(),
+			spellcastingBonus: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+			spellcastingAttackNum: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+		};
 
+		// add simplified NPC abilities
 		schema.abilities = new fields.SchemaField(
 			CONFIG.SHADOWDARK.ABILITY_KEYS.reduce((obj, key) => {
 				obj[key] = new fields.SchemaField({
@@ -39,31 +34,28 @@ export default class NpcSD extends ActorBaseSD {
 
 	async _generateAttackConfig(attack, config={}) {
 
-		config.check ??= {};
-		config.check.base ??= "d20";
-		const atkBonus = attack.system.bonuses.attackBonus
-			?`${attack.system.bonuses.attackBonus > 0 ? "+" : ""}${attack.system.bonuses.attackBonus}`
-			: "";
-		config.check.formula ??= `${config.check.base} ${atkBonus}`;
-		config.check.advantage ??= 0;
-		config.check.label ??= "Attack"; // TODO localize
+		config.mainRoll ??= {};
+		config.mainRoll.base ??= "d20";
+		const atkBonus = shadowdark.dice.formatBonus(attack.system.bonuses.attackBonus);
+		config.mainRoll.formula ??= `${config.mainRoll.base}${atkBonus}`;
+		config.mainRoll.advantage ??= 0;
+		config.mainRoll.label ??= "Attack"; // TODO localize
 
 		config.attack ??= {};
 		config.attack.range ??= attack.system.ranges[0];
 		config.attack.type ??= (config.attack.range === "close")? "melee" : "ranged";
 
-		config.damage ??= {};
-		config.damage.label ??= "Damage"; // TODO localize
-		config.damage.base ??= attack.system.damage.value;
-		const dmgBonus = attack.system.bonuses.damageBonus
-			?`${attack.system.bonuses.damageBonus > 0 ? "+" : ""}${attack.system.bonuses.damageBonus}`
-			: "";
-		config.damage.formula ??= `${config.damage.base} ${dmgBonus}`;
+		config.damageRoll ??= {};
+		config.damageRoll.label ??= "Damage"; // TODO localize
+		config.damageRoll.base ??= attack.system.damage.value;
+		const dmgBonus = shadowdark.dice.formatBonus(attack.system.bonuses.damageBonus);
+		config.damageRoll.formula ??= `${config.damageRoll.base}${dmgBonus}`;
+		// TODO apply AE roll keys
 	}
 
 	async rollAttack(attackId, config={}) {
 		config.type = "npc-attack";
-		config.actor = this.parent;
+		config.actorId = this.parent.id;
 		const attack = this.parent.items.get(attackId);
 		if (!attack) {
 			console.error("invalid attack ID");
@@ -86,36 +78,30 @@ export default class NpcSD extends ActorBaseSD {
 		if (!await Hooks.call("SD-Player-Attack", config)) return false;
 
 		// Prompt, evaluate and roll the attack
-		await shadowdark.dice.resolveRolls(config);
+		await shadowdark.dice.rollFromConfig(config);
 	}
 
-	async rollHP(options={}) {
-		// TODO refactor this
-		const data = {
-			rollType: "hp",
-			actor: this,
-			conBonus: this.system.abilities.con.mod,
+	async rollHP() {
+
+		const conBonus = shadowdark.dice.formatBonus(this.abilities.con.mod);
+		const level = this.level.value ?? 1;
+		const formula = `${level}d8${conBonus}`;
+
+		const config = {
+			actorId: this.parent.id,
+			title: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title"),
+			roll: {formula},
+			rollMode: CONST.DICE_ROLL_MODES.PRIVATE,
 		};
 
-		const parts = [`max(1, ${this.system.level.value}d8 + @conBonus)`];
-
-		options.fastForward = true;
-		options.chatMessage = true;
-
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
-		options.rollMode = CONST.DICE_ROLL_MODES.PRIVATE;
-
-		const result = await shadowdark.dice.rollDialog(parts, data, options);
-
-		const newHp = Number(result.rolls.main.roll._total);
-		await this.update({
-			"system.attributes.hp.max": newHp,
-			"system.attributes.hp.value": newHp,
-		});
+		const result = await shadowdark.dice.rollFromConfig(config);
+		if (result) {
+			const newHp = Number(result.total);
+			await this.parent.update({
+				"system.attributes.hp.max": newHp,
+				"system.attributes.hp.value": newHp,
+			});
+		}
 	}
 
 }

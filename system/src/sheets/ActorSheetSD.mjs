@@ -277,8 +277,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onRollHP(event) {
 		event.preventDefault();
-
-		this.actor.rollHP();
+		this.actor.system.rollHP();
 	}
 
 	async _onRollAbilityCheck(event) {

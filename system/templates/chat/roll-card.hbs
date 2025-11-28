@@ -1,18 +1,30 @@
-<div
-	class="shadowdark chat-card roll-card"
-	data-actor-id="{{actor.id}}"
-	{{#if tokenId}}
-		data-token-id="{{tokenId}}"
+<divclass="shadowdark chat-card">
+	{{#if mainRoll.html}}
+		<h3>{{mainRoll.label}}</h3>
+		{{{mainRoll.html}}}
 	{{/if}}
->
-	<header class="card-header flexrow">
-		<h3 class="roll-name">{{heading}}</h3>
-	</header>
-	{{#if check.html}}
-		<div>{{{check.html}}}</div>
+
+	{{#if item}}
+		<img src="{{item.img}}" style="width:20px;height:20px;display:inline">
+		<span>{{item.name}}</span>
 	{{/if}}
-	{{#if damage.html}}
-		<h3>{{localize "SHADOWDARK.roll.damage"}}</h3>
-		<div>{{{damage.html}}}</div>
+
+	{{#if damageRoll.html}}
+		<h3>{{damageRoll.label}}</h3>
+		<div>{{{damageRoll.html}}}</div>
+	{{else}}
+		{{#if damageRoll.needed}}
+			<div data-action="expandRoll">
+				<button data-action="rollDamage">
+					Roll Damage
+				</button>
+			</div>
+		{{/if}}
+	{{/if}}
+
+	{{#if target}}
+	<div class="target">
+		<img src="{{target.texture.src}}" style="width:20px;height:20px;display:inline">
+		<span>{{target.name}}</span>
 	{{/if}}
 </div>

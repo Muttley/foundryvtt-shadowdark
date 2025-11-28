@@ -1,28 +1,3 @@
-import SolodarkSD from "../apps/SoloDarkSD.mjs";
-
-/**
- * Handles the chatcard button actions when applicable.
- * @param {jQuery} html - Rendered chat message html
- */
-async function chatCardButtonAction(html) {
-
-	// Enable roll prompt button for solodark
-	const rollPromptButton = html.querySelector("button[data-action=roll-prompt]");
-	if (rollPromptButton) {
-		rollPromptButton.addEventListener("click", SolodarkSD.rollPrompt);
-	}
-}
-
-/**
- * Handles the rendering of a chat message to the log
- * @param {ChatLog} message - The ChatLog instance
- * @param {object} html - Rendered chat message html
- * @param {object} context - Data passed to the render context
- */
-export function onRenderChatMessage(message, html, context) {
-	chatCardButtonAction(html);
-}
-
 /**
  * This function is used to hook into the Chat Log context menu, adds additional
  * options to each

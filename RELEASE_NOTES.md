@@ -17,7 +17,13 @@
 - [#369] Mirgrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 
-*Many thanks to **Ashley Towner <git@ashtowner.com>**,**andrewbeard**,**Brittonlj**, **johncarney**, **puradox** for contributing to this release*
+*Many thanks to
+**Ashley Towner <git@ashtowner.com>**
+**andrewbeard**
+**Brittonlj**
+**johncarney**
+**puradox**
+for contributing to this release*
 
 ---
 

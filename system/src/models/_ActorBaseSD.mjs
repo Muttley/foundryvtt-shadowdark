@@ -3,17 +3,113 @@ const fields = foundry.data.fields;
 export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	static defineSchema() {
 		return {
-			alignment: new fields.StringField({
-				initial: "neutral",
-				choices: Object.keys(CONFIG.SHADOWDARK.ALIGNMENTS),
-			}),
-			level: new fields.SchemaField({
-				value: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
-				xp: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+			attributes: new fields.SchemaField({
+				ac: new fields.SchemaField({
+					value: new fields.NumberField({integer: true, initial: 10, min: 0}),
+				}),
+				hp: new fields.SchemaField({
+					value: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+					max: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+				}),
 			}),
 			notes: new fields.HTMLField(),
 		};
 	}
+
+	/* ----------------------- */
+	/* Getters       */
+	/* ----------------------- */
+
+	get isPlayer() {
+		return false;
+	}
+
+	get isNPC() {
+		return false;
+	}
+
+	/* ----------------------- */
+	/* Public Functions       */
+	/* ----------------------- */
+
+	getPhysicalItems(group=true) {
+		return this._sortByUserOrder(
+			this.parent.items.filter(
+				i => i.system.isPhysical && !i.system.stashed
+			)
+		);
+	}
+
+	getSlotUsage() {
+		const slots = {
+			coins: 0,
+			gear: 0,
+			gems: 0,
+			treasure: 0,
+			total: 0,
+		};
+
+		// Coins. Work out how many slots all these coins are taking up.
+		if (this.coins) {
+			const totalCoins = this.coins.gp + this.coins.sp + this.coins.cp;
+			const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
+			if (totalCoins > freeCoins) {
+				slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
+			}
+		}
+
+		// Gear and treasure. Only carried gear taking into account the free carry limits.
+		const freeCarrySeen = {};
+		let gemCount = 0;
+		for (const i of this.getPhysicalItems()) {
+			// Skip if gem
+			if (i.system.isGem) {
+				gemCount++;
+				continue;
+			}
+
+			// calculate free carry
+			let freeCarry = i.system.slots.free_carry;
+			if (Object.hasOwn(freeCarrySeen, i.name)) {
+				freeCarry = Math.max(0, freeCarry - freeCarrySeen[i.name]);
+				freeCarrySeen[i.name] += freeCarry;
+			}
+			else {
+				freeCarrySeen[i.name] = freeCarry;
+			}
+			freeCarry = freeCarry * i.system.slots.slots_used;
+			const totalUsed = i.system.slotsUsed - freeCarry;
+
+			// Seperate Treasure
+			if (i.system.isTreasure) {
+				slots.treasure += totalUsed;
+			}
+			else {
+				slots.gear += totalUsed;
+			}
+		}
+
+		// Gems
+		if (gemCount > 0) {
+			slots.gems = Math.ceil(gemCount / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
+		}
+
+		// Total
+		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
+		return slots;
+	}
+
+	getStashedItems() {
+		return this._sortByUserOrder(
+			this.parent.items.filter(
+				i => i.system.stashed
+			)
+		);
+	}
+
+	/* ----------------------- */
+	/* Private Functions       */
+	/* ----------------------- */
 
 	// change the default data provided by actor.getRollData()
 	_modifyRollData(rollData) {
@@ -21,7 +117,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		let initBonus = this.abilities.dex.mod;
 		initBonus += this.roll?.initiative?.bonus ?? 0;
 		const initAdv = this.roll?.initiative?.advantage ?? 0;
-		const fomula = `d20 ${initBonus > 0 ? "+" : ""}${initBonus}`;
+		const fomula = `d20${shadowdark.dice.formatBonus(initBonus)}`;
 		rollData.initiative = shadowdark.dice.applyAdvantage(fomula, initAdv);
 	}
 
@@ -32,7 +128,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	}
 
 	/**
-	 * Starting at a baseValue, returns the combine total of a AE based key
+	 * Starting at a baseValue, returns the combined total of a AE based key
 	 * and any selectors present. e.g. system.[baseKey].[selector]
 	 * Deterministic placeholders are resolved based on actor's rollData
 	 * @param {string} baseKey The base key under system. without selectors
@@ -101,7 +197,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		});
 		if (typeof finalValue === "string" || strParts) {
 			finalValue = finalValue.toString();
-			if (intParts) finalValue = finalValue.concat(` +${intParts}`);
+			if (intParts) finalValue = finalValue.concat(shadowdark.dice.formatBonus(intParts));
 			if (strParts) finalValue = finalValue.concat(strParts);
 		}
 		else {
@@ -139,16 +235,15 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	}
 
 	_generateAbilityCheckConfig(ability, config={}) {
-		config.check ??= {};
-		config.check.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
-		config.check.base ??= "d20";
+		config.mainRoll ??= {};
+		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
+		config.mainRoll.base ??= "d20";
 
 		// generate check formula from ability mod and AE roll bonuses
 		const modifer = this.abilities[ability].mod;
 		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer);
-		config.check.bonus ??= rollKey.value;
-		const bonusStr = rollKey.value !==0 ? rollKey.value: "";
-		config.check.formula ??= `${config.check.base}${bonusStr > 0 ? " +" : ""}${bonusStr}`;
+		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(rollKey.value);
+		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
 		// generate tooltips
 		const tooltips = [];
@@ -159,21 +254,21 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			));
 		}
 		tooltips.push(rollKey.tooltips);
-		config.check.tooltips = tooltips.filter(Boolean).join(", ");
+		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 
 		// calculate roll advantage
 		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0);
-		config.check.advantage ??= advRollKeyAdv.value;
-		config.check.advantageTooltips = advRollKeyAdv.tooltips;
+		config.mainRoll.advantage ??= advRollKeyAdv.value;
+		config.mainRoll.advantageTooltips = advRollKeyAdv.tooltips;
 	}
 
 	async rollAbilityCheck(abilityId, config={}) {
 		const ability = abilityId.toLowerCase();
-		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
+		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return false;
 
 		config.type = "ability-check";
-		config.actor = this.parent;
+		config.actorId = this.parent.id;
 		config.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
 		config.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
 
@@ -181,15 +276,15 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 		// show roll prompt and end if closed
 		const prompt = await shadowdark.dice.rollDialog(config);
-		if (!prompt) return;
+		if (!prompt) return false;
 
 		this._generateAbilityCheckConfig(ability, config);
 
 		// call Stat Check hooks and cancel if any return false
 		if (!await Hooks.call("SD-Stat-Check", config)) return false;
 
-		// Prompt, evaluate and roll the attack
-		await shadowdark.dice.resolveRolls(config);
+		// Prompt, evaluate and roll the check
+		return await shadowdark.dice.rollFromConfig(config);
 	}
 
 }

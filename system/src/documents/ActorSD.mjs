@@ -1,118 +1,5 @@
 export default class ActorSD extends foundry.documents.Actor {
 
-	async _getItemFromUuid(uuid) {
-		if (uuid !== "") {
-			return await fromUuid(uuid);
-		}
-		else {
-			return null;
-		}
-	}
-
-
-	async _learnSpell(item) {
-		const characterClass = await this.getClass();
-
-		const spellcastingAttribute =
-			characterClass?.system?.spellcasting?.ability ?? "int";
-
-		const result = await this.rollAbility(
-			spellcastingAttribute,
-			{ target: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC }
-		);
-
-		// Player cancelled the roll
-		if (result === null) return;
-
-		const success = result?.rolls?.main?.success ?? false;
-
-		const messageType = success
-			? "SHADOWDARK.chat.spell_learn.success"
-			: "SHADOWDARK.chat.spell_learn.failure";
-
-		const message = game.i18n.format(
-			messageType,
-			{
-				name: this.name,
-				spellName: item.system.spellName,
-			}
-		);
-
-		const cardData = {
-			actor: this,
-			item: item,
-			message,
-		};
-
-		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
-
-		const content = await renderTemplate(template, cardData);
-
-		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
-
-		await ChatMessage.create({
-			title,
-			content,
-			flags: { "core.canPopout": true },
-			flavor: title,
-			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
-			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
-			user: game.user.id,
-		});
-
-		if (success) {
-			const spell = {
-				type: "Spell",
-				img: item.system.spellImg,
-				name: item.system.spellName,
-				system: {
-					class: item.system.class,
-					description: item.system.description,
-					duration: item.system.duration,
-					range: item.system.range,
-					tier: item.system.tier,
-				},
-			};
-
-			this.createEmbeddedDocuments("Item", [spell]);
-		}
-
-		// original scroll always lost regardless of outcome
-		await this.deleteEmbeddedDocuments(
-			"Item",
-			[item._id]
-		);
-	}
-
-
-	async _playerRollHP(options={}) {
-		const characterClass = await this.getClass();
-
-		if (!characterClass) {
-			ui.notifications.error(
-				game.i18n.format("SHADOWDARK.error.general.no_character_class"),
-				{permanent: false}
-			);
-			return;
-		}
-
-		const data = {
-			rollType: "hp",
-			actor: this,
-		};
-
-		options.title = game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
-
-		const parts = [characterClass.system.hitPoints];
-
-		await shadowdark.dice.rollDialog(parts, data, options);
-	}
-
-
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
@@ -143,53 +30,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		}
 
 		this.updateSource(update);
-	}
-
-	async addAncestry(item) {
-		this.update({"system.ancestry": item.uuid});
-	}
-
-	async addBackground(item) {
-		this.update({"system.background": item.uuid});
-	}
-
-	async addClass(item) {
-		this.update({"system.class": item.uuid});
-	}
-
-	async addDeity(item) {
-		this.update({"system.deity": item.uuid});
-	}
-
-
-	async addLanguage(item) {
-		let languageFound = false;
-		for (const language of await this.languageItems()) {
-			if (language.uuid === item.uuid) {
-				languageFound = true;
-				break;
-			}
-		}
-
-		if (!languageFound) {
-			const currentLanguages = this.system.languages;
-			currentLanguages.push(item.uuid);
-			this.update({"system.languages": currentLanguages});
-		}
-	}
-
-
-	async addPatron(item) {
-		const myClass = await this.getClass();
-
-		if (myClass && myClass.system.patron.required) {
-			this.update({"system.patron": item.uuid});
-		}
-		else {
-			ui.notifications.error(
-				game.i18n.localize("SHADOWDARK.error.patron.no_supported_class")
-			);
-		}
 	}
 
 
@@ -292,91 +132,8 @@ export default class ActorSD extends foundry.documents.Actor {
 		);
 	}
 
-
-	async buildWeaponDisplay(options) {
-		return await renderTemplate(
-			"systems/shadowdark/templates/_partials/weapon-attack.hbs",
-			options
-		);
-	}
-
-	async buildWeaponDisplays(itemId) {
-		return {melee: [], ranged: []};
-	}
-
-	async getWeaponAttacks(weaponIds=null) {
-		// const item = this.getEmbeddedDocument("Item", itemId);
-
-		// versitile
-		// thrown
-
-	}
-
-	async calcBonuses(item={}) {
-		const data = {
-			abilityBonus: 0,
-			itemBonus: 0,
-			talentBonus: 0,
-		};
-		if (item) {
-			switch (item.system.attackType) {
-				case "melee":
-					data.abilityBonus = this.system.abilities.str.mod;
-					break;
-				case "ranged":
-					data.abilityBonus = this.system.abilities.dex.mod;
-					break;
-				default:
-					throw new Error(`Unknown attack type ${attackType}`);
-			}
-		}
-	}
-
-	_calcAbilityValues(ability) {
-		const labelKey = `SHADOWDARK.ability_${ability}`;
-
-		return {
-			value: this.system.abilities[ability].value,
-			mod: this.system.abilities[ability].mod,
-			label: `${game.i18n.localize(labelKey)}`,
-		};
-	}
-
-
-	/**
-	 * Checks if the item (weapon) has any combination of settings
-	 * or the actor has bonuses that would mean it should have weapon
-	 * mastery bonuses applied to it.
-	 * @param {Item} item - Item to calculate bonus for
-	 * @returns {number} bonus
-	 */
-	calcWeaponMasterBonus(item) {
-		let bonus = 0;
-
-		if (
-			item.system.weaponMastery
-			|| this.system.bonuses?.weaponMastery.includes(item.system.baseWeapon)
-			|| this.system.bonuses?.weaponMastery.includes(item.name.slugify())
-		) {
-			bonus += 1 + Math.floor(this.system.level.value / 2);
-		}
-
-		return bonus;
-	}
-
-
-	async canBackstab() {
-		const backstab = this.items.find(i => {
-			return i.type === "Talent"
-				&& i.name === "Backstab";
-		});
-
-		return backstab ? true : false;
-	}
-
-
 	async canUseMagicItems() {
-		const characterClass = await this.getClass();
+		const characterClass = await this.system.getClass();
 
 		const spellcastingClass =
 			characterClass?.system?.spellcasting?.ability ?? "";
@@ -384,60 +141,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		return characterClass && spellcastingClass !== ""
 			? true
 			: false;
-	}
-
-
-	async castSpell(itemId, options={}) {
-		const item = this.items.get(itemId);
-
-		if (!item) {
-			ui.notifications.warn(
-				"Item no longer exists",
-				{ permanent: false }
-			);
-			return;
-		}
-
-		const abilityId = await this.getSpellcastingAbility(item);
-
-		if (abilityId === "") {
-			if (item.type === "Spell") {
-				return ui.notifications.error(
-					game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell"),
-					{permanent: false}
-				);
-			}
-			return ui.notifications.error(
-				game.i18n.format("SHADOWDARK.error.spells.unable_to_use_item"),
-				{permanent: false}
-			);
-		}
-
-		let rollType;
-		if (item.type === "Spell") {
-			rollType = item.name.slugify();
-		}
-		else {
-			rollType = item.system.spellName.slugify();
-		}
-
-		const characterClass = await this.getClass();
-
-		const data = {
-			rollType,
-			item: item,
-			actor: this,
-			abilityBonus: this.system.abilities[abilityId].mod,
-			baseDifficulty: characterClass?.system?.spellcasting?.baseDifficulty ?? 10,
-			talentBonus: this.system.bonuses?.spellcastingCheckBonus,
-		};
-
-		const parts = ["1d20", "@abilityBonus", "@talentBonus"];
-
-		// TODO: push to parts & for set talentBonus as sum of talents affecting
-		// spell rolls
-
-		return item.rollSpell(parts, data, options);
 	}
 
 
@@ -493,149 +196,10 @@ export default class ActorSD extends foundry.documents.Actor {
 		return items;
 	}
 
-
-	async getAncestry() {
-		const uuid = this.system.ancestry ?? "";
-		return await this._getItemFromUuid(uuid);
-	}
-
-
-	async getArmorClass() {
-		return this.system.attributes.ac.value;
-		/*
-		const dexModifier = this.system.abilityModifier("dex");
-
-		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
-		baseArmorClass += dexModifier;
-
-		for (const attribute of this.system.bonuses?.acBonusFromAttribute ?? []) {
-			const attributeBonus = this.system.abilityModifier(attribute);
-			baseArmorClass += attributeBonus > 0 ? attributeBonus : 0;
-		}
-
-		let newArmorClass = baseArmorClass;
-		let shieldBonus = 0;
-
-		const acOverride = this.system.attributes.ac?.override ?? null;
-		if (Number.isInteger(acOverride)) {
-			// AC is being overridden by an effect so we just use that value
-			// and ignore everything else
-			newArmorClass = acOverride;
-		}
-		else {
-			let armorMasteryBonus = 0;
-
-			const equippedArmorItems = this.items.filter(
-				item => item.type === "Armor" && item.system.equipped
-			);
-			const equippedArmor = [];
-			const equippedShields = [];
-
-			for (const item of equippedArmorItems) {
-				if (await item.system.isAShield) {
-					equippedShields.push(item);
-				}
-				else {
-					equippedArmor.push(item);
-				}
-			}
-
-			if (equippedShields.length > 0) {
-				const firstShield = equippedShields[0];
-				shieldBonus = firstShield.system.ac.modifier;
-
-				armorMasteryBonus = this.system.bonuses?.armorMastery.filter(
-					a => a === firstShield.name.slugify()
-							|| a === firstShield.system.baseArmor
-				).length;
-			}
-
-			if (equippedArmor.length > 0) {
-				newArmorClass = 0;
-
-				let bestAttributeBonus = null;
-				let baseArmorClassApplied = false;
-
-				for (const armor of equippedArmor) {
-
-					// Check if armor mastery should apply to the AC.  Multiple
-					// mastery levels should stack
-					//
-					const masteryLevels = this.system.bonuses?.armorMastery.filter(
-						a => a === armor.name.slugify()
-							|| a === armor.system.baseArmor
-					);
-					armorMasteryBonus += masteryLevels.length;
-
-					if (armor.system.ac.base > 0) baseArmorClassApplied = true;
-
-					newArmorClass += armor.system.ac.base;
-					newArmorClass += armor.system.ac.modifier;
-
-					const attribute = armor.system.ac.attribute;
-					if (attribute) {
-						const attributeBonus = this.system.abilityModifier(attribute);
-						if (bestAttributeBonus === null) {
-							bestAttributeBonus = attributeBonus;
-						}
-						else {
-							bestAttributeBonus =
-								attributeBonus > bestAttributeBonus
-									? attributeBonus
-									: bestAttributeBonus;
-						}
-					}
-				}
-
-				if (!baseArmorClassApplied) {
-					// None of the armor we're wearing has a base value, only
-					// bonuses so we will use the default base class of
-					// 10+DEX to allow for unarmored characters wearing Bracers
-					// of defense (as an example)
-					//
-					newArmorClass += baseArmorClass;
-				}
-
-				newArmorClass += bestAttributeBonus;
-				newArmorClass += armorMasteryBonus;
-				newArmorClass += shieldBonus;
-			}
-			else if (shieldBonus <= 0) {
-				newArmorClass += this.system.bonuses?.unarmoredAcBonus ?? 0;
-			}
-			else {
-				newArmorClass += shieldBonus;
-			}
-
-			// Add AC from bonus effects
-			newArmorClass += parseInt(this.system.bonuses?.acBonus, 10);
-
-			// Stone Skin Talent provides a bonus based on level
-			if (this.system.bonuses?.stoneSkinTalent > 0) {
-				const currentLevel = this.system.level.value ?? 0;
-				newArmorClass += 2 + Math.floor(currentLevel / 2);
-			}
-		}
-		console.error(newArmorClass, parseInt(newArmorClass));
-
-		await this.update({"system.attributes.ac.value": parseInt(newArmorClass)});
-
-		return this.system.attributes.ac.value;
-		*/
-	}
-
-
-	getCalculatedAbilities() {
-		const abilities = {};
-
-		for (const ability of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			abilities[ability] = this._calcAbilityValues(ability);
-		}
-
-		return abilities;
-	}
-
-
+	/**
+	 * Returns any tokens linked to this actor on the currently viewed scene
+	 * @returns {Token}
+	 */
 	getCanvasToken() {
 		const ownedTokens = canvas.tokens.ownedTokens;
 		return ownedTokens.find(
@@ -643,24 +207,11 @@ export default class ActorSD extends foundry.documents.Actor {
 		);
 	}
 
-
-	async getClass() {
-		const uuid = this.system.class ?? "";
-		return await this._getItemFromUuid(uuid);
-	}
-
-
-	async getPatron() {
-		const uuid = this.system.patron ?? "";
-		return await this._getItemFromUuid(uuid);
-	}
-
-
-	async getDeity() {
-		const uuid = this.system.deity ?? "";
-		return await this._getItemFromUuid(uuid);
-	}
-
+	/**
+	 * Foundry standard method providing actor data for rolls.
+	 * Returns this.system unless modified by the objects data model.
+	 * @returns {rollData}
+	 */
 	getRollData() {
 		const rollData = {...this.system};
 		if (this.system._modifyRollData instanceof Function) {
@@ -669,171 +220,23 @@ export default class ActorSD extends foundry.documents.Actor {
 		return rollData;
 	}
 
-
-	async getSpellcasterClasses() {
-		const actorClass = await this.getClass();
-
-		const playerSpellClasses = [];
-
-		let spellClass = actorClass.system.spellcasting.class;
-		if (spellClass === "") {
-			playerSpellClasses.push(actorClass);
-		}
-		else if (spellClass !== "__not_spellcaster__") {
-			playerSpellClasses.push(
-				await this._getItemFromUuid(spellClass)
-			);
-		}
-
-		const spellcasterClasses =
-			await shadowdark.compendiums.spellcastingBaseClasses();
-
-		// De-duplicate any bonus classes the Actor has
-		const bonusClasses = [
-			...new Set(
-				this.system.bonuses?.spellcastingClasses ?? []
-			),
-		];
-
-		for (const bonusClass of bonusClasses) {
-			playerSpellClasses.push(
-				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
-			);
-		}
-
-		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
-	}
-
-
-	async getSpellcastingAbility(item) {
-		if (item.type !== "Spell") {
-			// Always use our class spellcasting ability if we have one for
-			// Wands and Scrolls, etc.  If you don't have a spellcasting
-			// ability then you can't use these items
-			const actorClass = await this.getClass();
-			return actorClass?.system?.spellcasting?.ability ?? "";
-		}
-
-		const usableSpellcasterClasses = [];
-		for (const classUuid of item?.system?.class ?? []) {
-			const spellClass = await fromUuid(classUuid);
-			const hasSpellcastingClass = await this.hasSpellcastingClass(spellClass.name);
-
-			if (hasSpellcastingClass) usableSpellcasterClasses.push(spellClass);
-		}
-
-		let chosenAbility = "";
-		let bestAbilityModifier = 0;
-		if (usableSpellcasterClasses.length > 0) {
-			// If the spell can be cast by this actor, choose the best ability
-			// to use that is supported by the specific spell
-			//
-			for (const casterClass of usableSpellcasterClasses) {
-				const ability = casterClass?.system?.spellcasting?.ability ?? "";
-
-				if (chosenAbility === "") {
-					chosenAbility = ability;
-					bestAbilityModifier = this.system.abilityModifier(ability);
-				}
-				else {
-					const modifier = this.system.abilityModifier(ability);
-					if (modifier > bestAbilityModifier) {
-						chosenAbility = ability;
-						bestAbilityModifier = modifier;
-					}
-				}
-			}
-
-		}
-
-		return chosenAbility;
-	}
-
-
-	async getTitle() {
-		const characterClass = await this.getClass();
-
-		if (characterClass && this.system.alignment !== "") {
-			const titles = characterClass.system.titles ?? [];
-			const level = this.system.level?.value ?? 0;
-
-			for (const title of titles) {
-				if (level >= title.from && level <= title.to) {
-					return title[this.system.alignment];
-				}
-			}
-		}
-		else {
-			return "";
-		}
-	}
-
-
 	async hasActiveLightSources() {
 		return this.getActiveLightSources.length > 0;
 	}
-
-
-	hasAdvantage(data) {
-		if (this.type === "Player") {
-			return this.system.bonuses?.advantage.includes(data.rollType);
-		}
-		return false;
-	}
-
-
-	async hasSpellcastingClass(className) {
-		const myClasses = await this.getSpellcasterClasses();
-
-		const foundClass = myClasses.find(
-			c => c.name.toLowerCase() === className.toLowerCase()
-		);
-
-		return foundClass ? foundClass : undefined;
-	}
-
 
 	async hasNoActiveLightSources() {
 		return this.getActiveLightSources.length <= 0;
 	}
 
-
+	/**
+	 * // Check that the Actor is claimed by a User
+	 * @returns {boolean}
+	 */
 	async isClaimedByUser() {
-		// Check that the Actor is claimed by a User
 		return game.users.find(user => user.character?.id === this.id)
 			? true
 			: false;
 	}
-
-
-	async isSpellCaster() {
-		const characterClass = await this.getClass();
-
-		const spellcastingClass =
-			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
-
-		const isSpellcastingClass =
-			characterClass && spellcastingClass !== "__not_spellcaster__";
-
-		const hasBonusSpellcastingClasses =
-			(this.system.bonuses?.spellcastingClasses ?? []).length > 0;
-
-		return isSpellcastingClass || hasBonusSpellcastingClasses
-			? true
-			: false;
-	}
-
-
-	async languageItems() {
-		const languageItems = [];
-
-		for (const uuid of this.system.languages ?? []) {
-			languageItems.push(await fromUuid(uuid));
-		}
-
-		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
-	}
-
 
 	async learnSpell(itemId) {
 		const item = this.items.get(itemId);
@@ -875,47 +278,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		}
 	}
 
-	async openSpellBook() {
-		const playerSpellcasterClasses = await this.getSpellcasterClasses();
-
-		const openChosenSpellbook = classUuid => {
-			new shadowdark.apps.SpellBookSD(
-				classUuid,
-				this.id
-			).render(true);
-		};
-
-		if (playerSpellcasterClasses.length <= 0) {
-			return ui.notifications.error(
-				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
-				{ permanent: false }
-			);
-		}
-		else if (playerSpellcasterClasses.length === 1) {
-			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
-		}
-		else {
-			return renderTemplate(
-				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
-				{classes: playerSpellcasterClasses}
-			).then(html => {
-				const dialog = new Dialog({
-					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
-					content: html,
-					buttons: {},
-					render: html => {
-						html.find("[data-action='open-class-spellbook']").click(
-							event => {
-								event.preventDefault();
-								openChosenSpellbook(event.currentTarget.dataset.uuid);
-								dialog.close();
-							}
-						);
-					},
-				}).render(true);
-			});
-		}
-	}
 
 	/** @inheritDoc */
 	prepareData() {
@@ -926,125 +288,6 @@ export default class ActorSD extends foundry.documents.Actor {
 			}
 		}
 	}
-
-	async rollAbility(abilityId, options={}) {
-		const parts = ["1d20", "@abilityBonus"];
-
-		const abilityBonus = this.system.abilityModifier(abilityId);
-		const ability = CONFIG.SHADOWDARK.ABILITIES_LONG[abilityId];
-		const data = {
-			rollType: "ability",
-			abilityBonus,
-			ability,
-			actor: this,
-		};
-
-		options.title = game.i18n.localize(`SHADOWDARK.dialog.ability_check.${abilityId}`);
-		options.flavor = options.title;
-		options.speaker = ChatMessage.getSpeaker({ actor: this });
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-ability-check-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/ability-card.hbs";
-		return await shadowdark.dice.rollDialog(parts, data, options);
-	}
-
-
-	async getExtraDamageDiceForWeapon(item, data) {
-		const extraDamageDiceBonuses = this.system.bonuses?.weaponDamageExtraDieByProperty ?? [];
-
-		for (const extraBonusDice of extraDamageDiceBonuses) {
-			const [die, property] = extraBonusDice.split("|");
-
-			if (await item.hasProperty(property)) {
-				data.extraDamageDice = die;
-
-				if (data.damageParts) {
-					data.damageParts.push("@extraDamageDice");
-				}
-				break;
-			}
-		}
-
-		// If the attack has extra damage die due to an effect, then also
-		// check to see if that damage die should be improved from its
-		// base type
-		//
-		if (data.extraDamageDice) {
-			const extraDiceImprovements =
-				this.system.bonuses?.weaponDamageExtraDieImprovementByProperty ?? [];
-
-			for (const property of extraDiceImprovements) {
-				if (await item.hasProperty(property)) {
-					data.extraDamageDice = shadowdark.utils.getNextDieInList(
-						data.extraDamageDice,
-						shadowdark.config.DAMAGE_DICE
-					);
-				}
-			}
-		}
-	}
-
-
-	async rollHP(options={}) {
-		if (this.type === "Player") {
-			this._playerRollHP(options);
-		}
-		else if (this.type === "NPC") {
-			this._npcRollHP(options);
-		}
-	}
-
-
-	async sellAllGems() {
-		const items = this.items.filter(item => item.type === "Gem");
-		return this.sellAllItems(items);
-	}
-
-
-	async sellAllItems(items) {
-		const coins = this.system.coins;
-
-		const soldItems = [];
-		for (let i = 0; i < items.length; i++) {
-			const item = items[i];
-
-			coins.gp += item.system.cost.gp;
-			coins.sp += item.system.cost.sp;
-			coins.cp += item.system.cost.cp;
-
-			soldItems.push(item._id);
-		}
-
-		await this.deleteEmbeddedDocuments(
-			"Item",
-			soldItems
-		);
-
-		Actor.updateDocuments([{
-			"_id": this._id,
-			"system.coins": coins,
-		}]);
-	}
-
-
-	async sellItemById(itemId) {
-		const item = this.getEmbeddedDocument("Item", itemId);
-		const coins = this.system.coins;
-
-		coins.gp += item.system.cost.gp;
-		coins.sp += item.system.cost.sp;
-		coins.cp += item.system.cost.cp;
-
-		await this.deleteEmbeddedDocuments(
-			"Item",
-			[itemId]
-		);
-
-		Actor.updateDocuments([{
-			"_id": this._id,
-			"system.coins": coins,
-		}]);
-	}
-
 
 	async toggleLight(active, itemId) {
 		if (active) {

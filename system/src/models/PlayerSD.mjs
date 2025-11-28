@@ -1,4 +1,5 @@
 import { ActorBaseSD } from "./_ActorBaseSD.mjs";
+import * as actorFields from "./_fields/actorFields.mjs";
 
 const fields = foundry.data.fields;
 
@@ -25,16 +26,9 @@ export default class PlayerSD extends ActorBaseSD {
 	static defineSchema() {
 
 		const schema = {
+			...actorFields.alignment(),
+			...actorFields.level(),
 			ancestry: new fields.DocumentUUIDField(),
-			attributes: new fields.SchemaField({
-				hp: new fields.SchemaField({
-					value: new fields.NumberField({ integer: true, initial: 0, min: 0}),
-					max: new fields.NumberField({ integer: true, initial: 0, min: 0}),
-				}),
-				ac: new fields.SchemaField({
-					value: new fields.NumberField({integer: true, initial: 10, min: 0}),
-				}),
-			}),
 			background: new fields.DocumentUUIDField(),
 			class: new fields.DocumentUUIDField(),
 			coins: new fields.SchemaField({
@@ -50,7 +44,6 @@ export default class PlayerSD extends ActorBaseSD {
 			}),
 			patron: new fields.DocumentUUIDField(),
 			slots: new fields.NumberField({ integer: true, initial: 10, min: 10}),
-			spellcastingClass: new fields.ArrayField(new fields.StringField()),
 		};
 
 		// Add abilities as additional data model
@@ -110,8 +103,8 @@ export default class PlayerSD extends ActorBaseSD {
 	/* Getters                 */
 	/* ----------------------- */
 
-	get isSpellCaster() {
-		return this.spellcastingClasses.length ? true : false;
+	get isPlayer() {
+		return true;
 	}
 
 	get slotUsage() {
@@ -188,6 +181,7 @@ export default class PlayerSD extends ActorBaseSD {
 		let aeBonuses = 0;
 		let bestArmor = null;
 
+		// apply armor mod from best item equiped
 		const armors = this.parent.items.filter(i => i.system.isArmor && i.system.equipped);
 		armors.forEach(armor => {
 			if (armor.system?.ac?.base) {
@@ -201,6 +195,7 @@ export default class PlayerSD extends ActorBaseSD {
 			modAC += Number(armor.system?.ac?.modifier);
 		});
 
+		// get the correct AE bonuses to apply.
 		if (bestArmor) {
 			aeBonuses = this._getActiveEffectKeys("attributes.ac", 0, bestArmor);
 		}
@@ -214,12 +209,11 @@ export default class PlayerSD extends ActorBaseSD {
 		};
 	}
 
-	_calcAttackCheckConfig(config) {
-		if (!config.item) return;
-		const weapon = config.item;
-		config.check ??= {};
-		config.check.base ??= "d20";
-		config.check.label ??= "Attack"; // TODO localize
+	_calcAttackRollConfig(weapon, config) {
+		config.mainRoll ??= {};
+		config.mainRoll.type = "Attack";
+		config.mainRoll.base ??= "d20";
+		config.mainRoll.label ??= "Attack Roll"; // TODO localize
 		// Calculate Attack Bonus from Ability mod & AE bonuses
 		const abilityBonus = this._getAttackAbilityBonus(
 			config.attack.type,
@@ -230,8 +224,8 @@ export default class PlayerSD extends ActorBaseSD {
 			abilityBonus,
 			weapon
 		);
-		config.check.bonus ??= `${attackRollKey.value > 0 ? "+" : ""}${attackRollKey.value}`;
-		config.check.formula ??= `${config.check.base} ${config.check.bonus}`;
+		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
+		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
 		// generate tooltips
 		const tooltips = [];
@@ -240,7 +234,7 @@ export default class PlayerSD extends ActorBaseSD {
 			abilityBonus
 		));
 		tooltips.push(attackRollKey.tooltips);
-		config.check.tooltips = tooltips.filter(Boolean).join(", ");
+		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 		// calculate attack advantage
 		const rollKeyAdv = this._getActiveEffectKeys(
@@ -248,8 +242,8 @@ export default class PlayerSD extends ActorBaseSD {
 			0,
 			weapon
 		);
-		config.check.advantage ??= rollKeyAdv.value;
-		config.check.advantageTooltips = rollKeyAdv.tooltips;
+		config.mainRoll.advantage ??= rollKeyAdv.value;
+		config.mainRoll.advantageTooltips = rollKeyAdv.tooltips;
 	}
 
 	/**
@@ -257,12 +251,10 @@ export default class PlayerSD extends ActorBaseSD {
 	 * @param {*} weapon a valid weapon item
 	 * @param {*} config existing roll data object
 	 */
-	_calcAttackDamageConfig(config) {
-		if (!config.item) return;
-		const weapon = config.item;
-		config.damage ??= {};
-		config.damage.label = "Damage"; // TODO localize
-		config.damage.base ??= weapon.system.getDamageFormula(config.attack.handedness);
+	_calcAttackDamageConfig(weapon, config) {
+		config.damageRoll ??= {};
+		config.damageRoll.label = "Damage"; // TODO localize
+		config.damageRoll.base ??= weapon.system.getDamageFormula(config.attack.handedness);
 
 		const tooltips = [];
 
@@ -278,7 +270,7 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 
 		// Get roll key extra dice
-		let baseDamageValue = config.damage.base;
+		let baseDamageValue = config.damageRoll.base;
 		const extraDieRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.extra-damage-die`,
 			0,
@@ -297,22 +289,22 @@ export default class PlayerSD extends ActorBaseSD {
 			baseDamageValue,
 			weapon
 		);
-		config.damage.formula = damageRollKey.value;
+		config.damageRoll.formula ??= damageRollKey.value;
 
 		// generate tooltips
 		tooltips.push(damageRollKey.tooltips);
-		config.damage.tooltips = tooltips.filter(Boolean).join(", ");
+		config.damageRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 		// TODO damage advantage
 	}
 
-	_calcAttackExtraConfig(config) {
+	_calcAttackExtraConfig(weapon, config) {
 		// any hard coded logic can go here
 	}
 
 	_generateAttackConfig(weapon, config={}) {
 		if (!weapon.system.isWeapon) return;
-		config.item = weapon;
+		config.itemUuid = weapon.uuid;
 
 		// set required fields
 		config.attack ??= {};
@@ -321,11 +313,38 @@ export default class PlayerSD extends ActorBaseSD {
 		config.attack.range ??= weapon.system.range;
 
 		// calulate attack config
-		this._calcAttackCheckConfig(config);
-		this._calcAttackDamageConfig(config);
-		this._calcAttackExtraConfig(config);
+		this._calcAttackRollConfig(weapon, config);
+		this._calcAttackDamageConfig(weapon, config);
+		this._calcAttackExtraConfig(weapon, config);
 
 		return config;
+	}
+
+	async _generateSpellConfig(spell, ability, config={}) {
+		if (!spell.system.isSpell) return;
+		config.itemUuid = spell.uuid;
+
+		config.cast ??= {};
+		config.cast.ability = ability;
+		config.cast.focus ??= false;
+		config.cast.range ??= spell.system.range;
+		config.cast.duration ??= spell.system?.duration;
+		config.cast.features ??= [];
+
+		config.mainRoll ??= {};
+		config.mainRoll.type = "Spell";
+		config.mainRoll.base ??= "d20";
+		config.mainRoll.label ??= "Spell Roll"; // TODO localize
+
+		const spellRollKey = this._getActiveEffectKeys(
+			"system.roll.spell.bonus",
+			this.abilities[ability].mod,
+			spell
+		);
+
+		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);
+		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+
 	}
 
 	_getAttackAbilityBonus(attackType, finesse=false) {
@@ -341,9 +360,207 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 	}
 
+	async _getSpellcastingAbility(item) {
+		if (item.type !== "Spell") {
+			// Always use our class spellcasting ability if we have one for
+			// Wands and Scrolls, etc.  If you don't have a spellcasting
+			// ability then you can't use these items
+			const actorClass = await this.getClass();
+			return actorClass?.system?.spellcasting?.ability ?? "";
+		}
+
+		const usableSpellcasterClasses = [];
+		for (const classUuid of item?.system?.class ?? []) {
+			const spellClass = await fromUuid(classUuid);
+			const myClasses = await this.getSpellcasterClasses();
+			const foundClass = myClasses.find(
+				c => c.name.toLowerCase() === spellClass.name.toLowerCase()
+			);
+			if (foundClass) usableSpellcasterClasses.push(spellClass);
+		}
+
+		let chosenAbility = "";
+		let bestAbilityModifier = 0;
+		if (usableSpellcasterClasses.length > 0) {
+			// If the spell can be cast by this actor, choose the best ability
+			// to use that is supported by the specific spell
+			//
+			for (const casterClass of usableSpellcasterClasses) {
+				const ability = casterClass?.system?.spellcasting?.ability ?? "";
+
+				if (chosenAbility === "") {
+					chosenAbility = ability;
+					bestAbilityModifier = this.abilities[ability].mod;
+				}
+				else {
+					const modifier = this.abilities[ability].mod;
+					if (modifier > bestAbilityModifier) {
+						chosenAbility = ability;
+						bestAbilityModifier = modifier;
+					}
+				}
+			}
+
+		}
+
+		return chosenAbility;
+	}
+
+	async _learnSpell(item) {
+		const characterClass = await this.getClass();
+
+		const spellcastingAttribute =
+			characterClass?.system?.spellcasting?.ability ?? "int";
+
+		const checkRoll = await this.rollAbilityCheck(
+			spellcastingAttribute,
+			{ mainRoll: {dc: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC} }
+		);
+
+		// Player cancelled the roll
+		if (checkRoll === false) return;
+		const messageType = checkRoll.success
+			? "SHADOWDARK.chat.spell_learn.success"
+			: "SHADOWDARK.chat.spell_learn.failure";
+
+		const message = game.i18n.format(
+			messageType,
+			{
+				name: this.name,
+				spellName: item.system.spellName,
+			}
+		);
+
+		const cardData = {
+			actor: this,
+			item: item,
+			message,
+		};
+
+		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+
+		const content = await renderTemplate(template, cardData);
+
+		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+
+		await ChatMessage.create({
+			title,
+			content,
+			flags: { "core.canPopout": true },
+			flavor: title,
+			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
+			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+			user: game.user.id,
+		});
+
+		if (success) {
+			const spell = {
+				type: "Spell",
+				img: item.system.spellImg,
+				name: item.system.spellName,
+				system: {
+					class: item.system.class,
+					description: item.system.description,
+					duration: item.system.duration,
+					range: item.system.range,
+					tier: item.system.tier,
+				},
+			};
+
+			this.parent.createEmbeddedDocuments("Item", [spell]);
+		}
+
+		// original scroll always lost regardless of outcome
+		await this.parent.deleteEmbeddedDocuments(
+			"Item",
+			[item._id]
+		);
+	}
+
 	/* ----------------------- */
 	/* Public Functions       */
 	/* ----------------------- */
+
+	async addAncestry(item) {
+		this.update({"system.ancestry": item.uuid});
+	}
+
+	async addBackground(item) {
+		this.update({"system.background": item.uuid});
+	}
+
+	async addClass(item) {
+		this.update({"system.class": item.uuid});
+	}
+
+	async addDeity(item) {
+		this.update({"system.deity": item.uuid});
+	}
+
+	async addLanguage(item) {
+		let languageFound = false;
+		for (const language of await this.getLanguageItems()) {
+			if (language.uuid === item.uuid) {
+				languageFound = true;
+				break;
+			}
+		}
+
+		if (!languageFound) {
+			const currentLanguages = this.languages;
+			currentLanguages.push(item.uuid);
+			this.update({"system.languages": currentLanguages});
+		}
+	}
+
+	async addPatron(item) {
+		const myClass = await this.getClass();
+
+		if (myClass && myClass.system.patron.required) {
+			this.update({"system.patron": item.uuid});
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.patron.no_supported_class")
+			);
+		}
+	}
+
+	async castSpell(spellUuid, config={}) {
+
+		config.actorId = this.parent.id;
+		config.itemUuid = spellUuid;
+
+		const spell = await fromUuid(spellUuid);
+		if (!spell) {
+			ui.notifications.warn(
+				"Error: Item no longer exists or is not a spell",
+				{ permanent: false }
+			);
+			return;
+		}
+
+		const abilityId = await this._getSpellcastingAbility(spell);
+		if (abilityId === "") {
+			return ui.notifications.error(
+				game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell"),
+				{permanent: false}
+			);
+		}
+
+		shadowdark.dice.setRollTarget(config);
+
+		await this._generateSpellConfig(spell, abilityId, config);
+
+		if (!await shadowdark.dice.rollDialog(config)) return false;
+
+		// Call player cast spell hooks and cancel if any return false
+		if (!await Hooks.call("SD-Player-Spell", config)) return false;
+
+		const roll = shadowdark.dice.rollFromConfig(config);
+
+		return roll.success;
+	}
 
 	async getAncestry() {
 		if (!this.ancestry) return null;
@@ -361,6 +578,9 @@ export default class PlayerSD extends ActorBaseSD {
 
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
+
+			if (attackData.itemUuid) attackData.item = fromUuidSync(attackData.itemUuid);
+
 			attacks[type].push(attackData);
 
 			// if thrown then add a range attack
@@ -409,26 +629,169 @@ export default class PlayerSD extends ActorBaseSD {
 		return classAbilities;
 	}
 
-	getPhysicalItems() {
-		return this._sortByUserOrder(
-			this.parent.items.filter(
-				i => i.system.isPhysical && !i.system.stashed
-			)
-		);
+	async getDeity() {
+		if (!this.deity) return null;
+		return await shadowdark.utils.getFromUuid(this.deity);
 	}
 
-	getStashedItems() {
-		return this._sortByUserOrder(
-			this.parent.items.filter(
-				i => i.system.stashed
-			)
-		);
+	async getLanguageItems() {
+		const languageItems = [];
+		for (const uuid of this.languages ?? []) {
+			languageItems.push(await shadowdark.utils.getFromUuid(uuid));
+		}
+		return languageItems.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
-	async rollAttack(weaponUuid, data={}) {
+	async getPatron() {
+		if (!this.patron) return null;
+		return await shadowdark.utils.getFromUuid(this.patron);
+	}
 
-		data.type = "player-attack";
-		data.actor = this.parent;
+	async getSpellcasterClasses() {
+		const actorClass = await this.getClass();
+
+		const playerSpellClasses = [];
+
+		let spellClass = actorClass.system.spellcasting.class;
+		if (spellClass === "") {
+			playerSpellClasses.push(actorClass);
+		}
+		else if (spellClass !== "__not_spellcaster__") {
+			playerSpellClasses.push(
+				await this.shadowdark.utils.getFromUuid(spellClass)
+			);
+		}
+
+		const spellcasterClasses =
+			await shadowdark.compendiums.spellcastingBaseClasses();
+
+		// De-duplicate any bonus classes the Actor has
+		const bonusClasses = [
+			...new Set(
+				this.bonuses?.spellcastingClasses ?? []
+			),
+		];
+
+		for (const bonusClass of bonusClasses) {
+			playerSpellClasses.push(
+				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
+			);
+		}
+
+		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+	getTalents(grouped=true) {
+		const groupedTalents = {
+			ancestry: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.ancestry"),
+				items: [],
+			},
+			class: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.class"),
+				items: [],
+			},
+			level: {
+				label: game.i18n.localize("SHADOWDARK.talent.class.level"),
+				items: [],
+			},
+		};
+
+		const talentItems = this.parent.items.filter(i => i.type === "Talent");
+		if (grouped === false) {
+			return talentItems;
+		}
+		else {
+			talentItems.forEach(i => {
+				const talentClass = i.system.talentClass;
+				const section = talentClass !== "patronBoon" ? talentClass : "level";
+				groupedTalents[section].items.push(i);
+			});
+			return groupedTalents;
+		}
+	}
+
+	async getTitle() {
+		const characterClass = await this.getClass();
+
+		if (characterClass && this.alignment !== "") {
+			const titles = characterClass.system.titles ?? [];
+			const level = this.level?.value ?? 0;
+
+			for (const title of titles) {
+				if (level >= title.from && level <= title.to) {
+					return title[this.alignment];
+				}
+			}
+		}
+		else {
+			return "";
+		}
+	}
+
+	async isSpellCaster() {
+		const characterClass = await this.getClass();
+
+		const spellcastingClass =
+			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
+
+		const isSpellcastingClass =
+			characterClass && spellcastingClass !== "__not_spellcaster__";
+
+		const hasBonusSpellcastingClasses =
+			(this.bonuses?.spellcastingClasses ?? []).length > 0;
+
+		return isSpellcastingClass || hasBonusSpellcastingClasses
+			? true
+			: false;
+	}
+
+	async openSpellBook() {
+		const playerSpellcasterClasses = await this.getSpellcasterClasses();
+
+		const openChosenSpellbook = classUuid => {
+			new shadowdark.apps.SpellBookSD(
+				classUuid,
+				this.parent.id
+			).render(true);
+		};
+
+		if (playerSpellcasterClasses.length <= 0) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
+				{ permanent: false }
+			);
+		}
+		else if (playerSpellcasterClasses.length === 1) {
+			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		}
+		else {
+			return renderTemplate(
+				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
+				{classes: playerSpellcasterClasses}
+			).then(html => {
+				const dialog = new Dialog({
+					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),
+					content: html,
+					buttons: {},
+					render: html => {
+						html.find("[data-action='open-class-spellbook']").click(
+							event => {
+								event.preventDefault();
+								openChosenSpellbook(event.currentTarget.dataset.uuid);
+								dialog.close();
+							}
+						);
+					},
+				}).render(true);
+			});
+		}
+	}
+
+	async rollAttack(weaponUuid, config={}) {
+
+		config.type = "player-attack";
+		config.actorId = this.parent.id;
 
 		const weapon = await fromUuid(weaponUuid);
 		if (!weapon && weapon.system.isWeapon) {
@@ -436,7 +799,7 @@ export default class PlayerSD extends ActorBaseSD {
 			return false;
 		}
 
-		shadowdark.dice.setRollTarget(data);
+		shadowdark.dice.setRollTarget(config);
 
 		// TODO Test for available amnunition
 		/*
@@ -448,22 +811,74 @@ export default class PlayerSD extends ActorBaseSD {
 		}*/
 
 		// generates attack data based on the weapon and actor
-		this._generateAttackConfig(weapon, data);
+		this._generateAttackConfig(weapon, config);
 
 		// show roll prompt and cancelled if closed
-		if (!await shadowdark.dice.rollDialog(data)) return false;
+		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// regenerate attack data based on new potential dialog inputs
-		this._generateAttackConfig(weapon, data);
+		this._generateAttackConfig(weapon, config);
 
 		// Call player attack hooks and cancel if any return false
-		if (!await Hooks.call("SD-Player-Attack", data)) return false;
+		if (!await Hooks.call("SD-Player-Attack", config)) return false;
 
 		// Roll the attack and post to chat
-		if (!await shadowdark.dice.resolveRolls(data)) return false;
+		const roll = await shadowdark.dice.rollFromConfig(config);
 
 		// TODO decrement ammo
 
+		return roll.success;
+
 	}
+
+	async sellAllGems() {
+		const items = this.parent.items.filter(item => item.type === "Gem");
+		return this.sellAllItems(items);
+	}
+
+	async sellAllItems(items) {
+		const coins = this.coins;
+
+		const soldItems = [];
+		for (let i = 0; i < items.length; i++) {
+			const item = items[i];
+
+			coins.gp += item.system.cost.gp;
+			coins.sp += item.system.cost.sp;
+			coins.cp += item.system.cost.cp;
+
+			soldItems.push(item._id);
+		}
+
+		await this.parent.deleteEmbeddedDocuments(
+			"Item",
+			soldItems
+		);
+
+ 		this.parent.update({"system.coins": coins});
+	}
+
+	async sellAllTreasure() {
+		const items = this.parent.items.filter(item => item.type === "Treasure");
+		return this.sellAllItems(items);
+	}
+
+
+	async sellItemById(itemId) {
+		const item = this.parent.getEmbeddedDocument("Item", itemId);
+		const coins = this.coins;
+
+		coins.gp += item.system.cost.gp;
+		coins.sp += item.system.cost.sp;
+		coins.cp += item.system.cost.cp;
+
+		await this.parent.deleteEmbeddedDocuments(
+			"Item",
+			[itemId]
+		);
+
+		this.parent.update({"system.coins": coins});
+	}
+
 
 }

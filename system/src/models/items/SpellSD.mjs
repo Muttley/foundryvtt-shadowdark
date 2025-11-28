@@ -16,4 +16,8 @@ export default class SpellSD extends BaseItemSD {
 	get isRollable() {
 		return true;
 	}
+
+	get isSpell() {
+		return true;
+	}
 }

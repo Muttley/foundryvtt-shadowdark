@@ -188,24 +188,24 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = context.system.level.value * 10;
 		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
 
-		context.isSpellCaster = await this.actor.isSpellCaster();
+		context.isSpellCaster = await this.actor.system.isSpellCaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
 		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.max;
 
-		context.knownLanguages = await this.actor.languageItems();
+		context.knownLanguages = await this.actor.system.getLanguageItems();
 
 		context.backgroundSelectors = await this.getBackgroundSelectors();
 
 		// Get the inventory ready
 		await this._prepareItems(context);
 
-		context.characterClass = await this.actor.getClass();
+		context.characterClass = await this.actor.system.getClass();
 		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
-		context.classTitle = await this.actor.getTitle();
+		context.classTitle = await this.actor.system.getTitle();
 
-		context.characterPatron = await this.actor.getPatron();
+		context.characterPatron = await this.actor.system.getPatron();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
@@ -221,17 +221,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onDropBackgroundItem(item) {
 		switch (item.type) {
 			case "Ancestry":
-				return this.actor.addAncestry(item);
+				return this.actor.system.addAncestry(item);
 			case "Background":
-				return this.actor.addBackground(item);
+				return this.actor.system.addBackground(item);
 			case "Class":
-				return this.actor.addClass(item);
+				return this.actor.system.addClass(item);
 			case "Deity":
-				return this.actor.addDeity(item);
+				return this.actor.system.addDeity(item);
 			case "Language":
-				return this.actor.addLanguage(item);
+				return this.actor.system.addLanguage(item);
 			case "Patron":
-				return this.actor.addPatron(item);
+				return this.actor.system.addPatron(item);
 		}
 	}
 
@@ -551,15 +551,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.render();
 	}
 
-	async _onCastSpell(event, options) {
+	async _onCastSpell(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.uuid;
+
 		if (event.shiftKey) {
-			this.actor.castSpell(itemId, {...options, skipPrompt: true});
+			this.actor.system.castSpell(itemId, {skipPrompt: true});
 		}
 		else {
-			this.actor.castSpell(itemId, options);
+			this.actor.system.castSpell(itemId);
 		}
 	}
 
@@ -573,13 +574,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	async _onOpenSpellBook(event) {
 		event.preventDefault();
-		this.actor.openSpellBook();
+		this.actor.system.openSpellBook();
 	}
 
 	async _onlevelUp(event) {
 		event.preventDefault();
 
-		let actorClass = await this.actor.getClass();
+		let actorClass = await this.actor.system.getClass();
 		if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
 			new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
 			this.close();
@@ -613,7 +614,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: game.i18n.localize("SHADOWDARK.dialog.general.yes"),
 						callback: async () => {
-							this.actor.sellItemById(itemId);
+							this.actor.system.sellItemById(itemId);
 						},
 					},
 					Cancel: {
@@ -902,7 +903,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gems = {items: gems, totalGems: gems.length};
 		context.inventory = inventory;
 		context.spellitems = spellitems;
-		context.slots = this.actor.system.slotUsage;
+		context.slots = this.actor.system.getSlotUsage();
 		context.spells = spells;
 		context.talents = talents;
 		context.effects = effects;

@@ -204,7 +204,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							await actor.sellItemById(itemId);
+							await actor.system.sellItemById(itemId);
 
 							if (this.gemBagIsEmpty()) {
 								this.close();
@@ -236,7 +236,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							this.actor.sellAllGems();
+							this.actor.system.sellAllGems();
 							this.close();
 						},
 					},

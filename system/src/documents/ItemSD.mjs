@@ -63,8 +63,8 @@ export default class ItemSD extends foundry.documents.Item {
 			itemProperties: this.system.propertyItems,
 		};
 
-		if (this.actor.type === "Player") {
-			data.isSpellCaster = await this.actor.isSpellCaster();
+		if (this.actor.system.isPlayer) {
+			data.isSpellCaster = await this.actor.system.isSpellCaster();
 			data.canUseMagicItems = await this.actor.canUseMagicItems();
 		}
 
