@@ -569,7 +569,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = $(event.currentTarget).data("item-id");
 
-		this.actor.learnSpell(itemId);
+		this.actor.system.learnSpell(itemId);
 	}
 
 	async _onOpenSpellBook(event) {

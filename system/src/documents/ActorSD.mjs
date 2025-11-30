@@ -238,47 +238,6 @@ export default class ActorSD extends foundry.documents.Actor {
 			: false;
 	}
 
-	async learnSpell(itemId) {
-		const item = this.items.get(itemId);
-
-		const correctSpellClass = item.system.class.includes(
-			this.system.class
-		);
-
-		if (!correctSpellClass) {
-			renderTemplate(
-				"systems/shadowdark/templates/dialog/confirm-learn-spell.hbs",
-				{
-					name: item.name,
-					correctSpellClass,
-				}
-			).then(html => {
-				new Dialog({
-					title: `${game.i18n.localize("SHADOWDARK.dialog.scroll.wrong_class_confirm")}`,
-					content: html,
-					buttons: {
-						Yes: {
-							icon: "<i class=\"fa fa-check\"></i>",
-							label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
-							callback: async () => {
-								this._learnSpell(item);
-							},
-						},
-						Cancel: {
-							icon: "<i class=\"fa fa-times\"></i>",
-							label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
-						},
-					},
-					default: "Yes",
-				}).render(true);
-			});
-		}
-		else {
-			await this._learnSpell(item);
-		}
-	}
-
-
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
