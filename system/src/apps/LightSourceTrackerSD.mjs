@@ -49,7 +49,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			async event => {
 				event.preventDefault();
 
-				const actorId = $(event.currentTarget).data("actor-id");
+				const actorId = event.currentTarget.dataset.actorId;
 
 				const actor = game.actors.get(actorId);
 
@@ -115,8 +115,8 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		html.find(".disable-light").click(
 			async event => {
 				event.preventDefault();
-				const itemId = $(event.currentTarget).data("item-id");
-				const actorId = $(event.currentTarget).data("actor-id");
+				const itemId = event.currentTarget.dataset.itemId;
+				const actorId = event.currentTarget.dataset.actorId;
 
 				const actor = game.actors.get(actorId);
 				const item = actor.getEmbeddedDocument("Item", itemId);

@@ -541,8 +541,8 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		event.preventDefault();
 		event.stopPropagation();
 
-		const deleteUuid = $(event.currentTarget).data("uuid");
-		const choicesKey = $(event.currentTarget).data("choices-key");
+		const deleteUuid = event.currentTarget.dataset.uuid;
+		const choicesKey = event.currentTarget.dataset.choicesKey;
 
 		// handles cases where choicesKey is nested property.
 		const currentChoices = choicesKey
@@ -596,8 +596,8 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		// We only have to do something special if we're handling a multi-choice
 		// datalist
 
-		const choicesKey = $(event.currentTarget).data("choices-key");
-		const isItem = $(event.currentTarget).data("is-item") === "true";
+		const choicesKey = event.currentTarget.dataset.choicesKey;
+		const isItem = event.currentTarget.dataset.isItem === "true";
 		if (event.target.list && choicesKey) {
 			return await this._onChangeChoiceList(event, choicesKey, isItem);
 		}

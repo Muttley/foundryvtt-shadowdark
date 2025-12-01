@@ -164,7 +164,9 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		);
 
 		html.find("[data-action='select-language']").click(
-			event => this._selectLanguage($(event.currentTarget).data("uuid"), $(event.currentTarget).data("key"))
+			event => this._selectLanguage(
+				event.currentTarget.dataset.uuid,
+				event.currentTarget.dataset.key)
 		);
 
 	}

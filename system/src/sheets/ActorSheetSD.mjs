@@ -282,7 +282,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-		let ability = $(event.currentTarget).data("ability");
+		let ability = event.currentTarget.dataset.ability;
 		if (!ability) return;
 		// skip roll prompt if shift clicked
 		const skipPrompt = event.shiftKey ? true : false;
@@ -303,7 +303,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onToggleLost(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		this.actor.updateEmbeddedDocuments("Item", [
@@ -316,7 +316,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onItemCreate(event) {
 		event.preventDefault();
-		const itemType = $(event.currentTarget).data("item-type");
+		const itemType = event.currentTarget.dataset.itemType;
 
 		const itemData = {
 			name: `New ${itemType}`,
@@ -326,17 +326,17 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		switch (itemType) {
 			case "Basic":
-				if ($(event.currentTarget).data("item-treasure")) {
+				if (event.currentTarget.dataset.itemTreasure) {
 					itemData.system.treasure = true;
 				}
 				break;
 			case "Spell":
 				itemData.system.tier =
-					$(event.currentTarget).data("spell-tier") || 1;
+					event.currentTarget.dataset.spellTier || 1;
 				break;
 			case "Talent":
 				itemData.system.talentClass =
-					$(event.currentTarget).data("talent-class") || "level";
+					event.currentTarget.dataset.talentClass || "level";
 				break;
 		}
 

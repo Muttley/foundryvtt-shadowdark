@@ -135,14 +135,14 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	async _onUseAbility(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		this.actor.useAbility(itemId);
 	}
 
 	async _onCastSpell(event, options) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 
 		if (event.shiftKey) {
 			this.actor.castNPCSpell(itemId, {...options, skipPrompt: true});

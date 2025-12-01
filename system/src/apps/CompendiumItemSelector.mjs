@@ -125,7 +125,7 @@ export default class CompendiumItemSelector extends foundry.appv1.api.FormApplic
 		event.preventDefault();
 		event.stopPropagation();
 
-		let itemIndex = $(event.currentTarget).data("item-index");
+		let itemIndex = event.currentTarget.dataset.itemIndex;
 
 		const newItemUuids = [];
 

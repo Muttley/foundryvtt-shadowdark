@@ -187,7 +187,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 	_onSellGem(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
 		const actor = this.actor;
