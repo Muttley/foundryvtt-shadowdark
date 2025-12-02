@@ -82,13 +82,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 		for (const i of this._sortAllItems(context)) {
 			// Push Attacks
 			if (i.type === "NPC Attack") {
-				const display = await this.actor.buildNpcAttackDisplays(i._id);
+				const display = await this.actor.system.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
 			}
 
 			// Push Specials
 			else if (i.type === "NPC Special Attack") {
-				const display = await this.actor.buildNpcSpecialDisplays(i._id);
+				const display = await this.actor.system.buildNpcSpecialDisplays(i._id);
 				specials.push({itemId: i._id, display});
 			}
 
@@ -109,7 +109,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 			}
 
 			// Push Spells
-			else if (i.type === "NPC Spell") {
+			else if (i.type === "Spell") {
 				i.description = await TextEditor.enrichHTML(
 					jQuery(i.system.description).text(),
 					{
@@ -142,13 +142,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 	async _onCastSpell(event, options) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemUuid = event.currentTarget.dataset.itemUuid;
 
 		if (event.shiftKey) {
-			this.actor.castNPCSpell(itemId, {...options, skipPrompt: true});
+			this.actor.system.castSpell(itemUuid, {skipPrompt: true});
 		}
 		else {
-			this.actor.castNPCSpell(itemId, options);
+			this.actor.system.castSpell(itemUuid);
 		}
 	}
 
@@ -156,23 +156,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 		// get uuid of dropped item
 		const droppedItem = await fromUuid(data.uuid);
 
-		// if it's an PC spell, convert to NPC spell, else return as normal
+		// if it's an spell, else return as normal
 		if (droppedItem.type === "Spell") {
-			const newNpcSpell = {
-				name: droppedItem.name,
-				type: "NPC Spell",
-				system: {
-					description: droppedItem.system.description,
-					duration: {
-						type: droppedItem.system.duration.type,
-						value: droppedItem.system.duration.value,
-					},
-					range: droppedItem.system.range,
-					dc: droppedItem.system.tier + 10,
-				},
-			};
 			// add new spell to NPC
-			this.actor.createEmbeddedDocuments("Item", [newNpcSpell]);
+			this.actor.createEmbeddedDocuments("Item", [droppedItem]);
 		}
 		else {
 			super._onDropItem(event, data);

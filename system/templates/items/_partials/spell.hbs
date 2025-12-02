@@ -18,12 +18,17 @@
 
 
 		<h3>{{localize 'SHADOWDARK.item.spell_tier'}}</h3>
-		{{numberInput
-			system.tier
-			name="system.tier"
-			class="spell-tier-value"
-			placeholder="0"
-		}}
+		<div class="grid-2-columns">
+			{{numberInput
+				system.tier
+				name="system.tier"
+				class="spell-tier-value"
+				placeholder="0"
+			}}
+			<div style="text-align: center">
+				<h3>{{localize "SHADOWDARK.class-ability.dc.label"}}</h3> {{system.dc}}
+			</div>
+		</div>
 
 		<h3>{{localize "SHADOWDARK.item.spell_duration"}}</h3>
 		{{> items/_partials/duration

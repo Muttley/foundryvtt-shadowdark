@@ -325,16 +325,16 @@ export default class PlayerSD extends ActorBaseSD {
 		config.itemUuid = spell.uuid;
 
 		config.cast ??= {};
-		config.cast.ability = ability;
 		config.cast.focus ??= false;
 		config.cast.range ??= spell.system.range;
 		config.cast.duration ??= spell.system?.duration;
-		config.cast.features ??= [];
+		config.cast.features ??= [spell.system?.description];
 
 		config.mainRoll ??= {};
 		config.mainRoll.type = "Spell";
 		config.mainRoll.base ??= "d20";
 		config.mainRoll.label ??= "Spell Roll"; // TODO localize
+		config.mainRoll.dc ??= spell.system?.dc;
 
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",
@@ -528,9 +528,6 @@ export default class PlayerSD extends ActorBaseSD {
 
 	async castSpell(spellUuid, config={}) {
 
-		config.actorId = this.parent.id;
-		config.itemUuid = spellUuid;
-
 		const spell = await fromUuid(spellUuid);
 		if (!spell) {
 			ui.notifications.warn(
@@ -539,6 +536,9 @@ export default class PlayerSD extends ActorBaseSD {
 			);
 			return;
 		}
+
+		config.actorId = this.parent.id;
+		config.itemUuid = spellUuid;
 
 		const abilityId = await this._getSpellcastingAbility(spell);
 		if (abilityId === "") {

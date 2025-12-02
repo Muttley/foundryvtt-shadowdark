@@ -107,7 +107,6 @@ Hooks.once("init", () => {
 		"NPC Attack": models.NpcAttackSD,
 		"NPC Feature": models.NpcFeatureSD,
 		"NPC Special Attack": models.NpcSpecialAttackSD,
-		"NPC Spell": models.NpcSpellSD,
 		"Patron": models.PatronSD,
 		"Potion": models.PotionSD,
 		"Property": models.PropertySD,
