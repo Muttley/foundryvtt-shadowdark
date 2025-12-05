@@ -135,7 +135,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	async _onUseAbility(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		this.actor.useAbility(itemId);
 	}
 

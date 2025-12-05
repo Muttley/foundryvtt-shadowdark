@@ -294,7 +294,7 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	}
 
 	_onDeleteTalent(event) {
-		this.data.talents.splice($(event.currentTarget).data("index"), 1);
+		this.data.talents.splice(event.currentTarget.dataset.index, 1);
 		this.render();
 	}
 
@@ -314,8 +314,8 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 
 	_onDeleteSpell(event) {
 		// get tier and index from passed event and remove that spell from array
-		let tier = $(event.currentTarget).data("tier");
-		let index = $(event.currentTarget).data("index");
+		let tier = event.currentTarget.dataset.tier;
+		let index = event.currentTarget.dataset.index;
 		this.data.spells[tier].objects.splice(index, 1);
 		this.render();
 	}
