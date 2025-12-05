@@ -5,8 +5,8 @@
 		<div class="item-detail">
 			<h3>{{localize "SHADOWDARK.item.npc.spell_count"}}</h3>
 			{{numberInput
-				system.spellcastingAttackNum
-				name="system.spellcastingAttackNum"
+				system.spellcasting.attacks
+				name="system.spellcasting.attacks"
 				class="spell-attack-number"
 				placeholder="0"
 			}}
@@ -14,19 +14,19 @@
 		<div class="item-detail">
 			<h3>{{localize "SHADOWDARK.item.npc.spell_bonus"}}</h3>
 			{{numberInput
-				system.spellcastingBonus
-				name="system.spellcastingBonus"
+				system.spellcasting.bonus
+				name="system.spellcasting.bonus"
 				class="spell-casting-bonus"
 				placeholder="0"
 			}}
 		</div>
 		<div class="item-detail">
 			<h3>{{localize "SHADOWDARK.item.npc.spell_ability"}}</h3>
-			<select name="system.spellcastingAbility">
+			<select name="system.spellcasting.ability">
 				<option value="">&mdash;</option>
 				{{selectOptions
 					config.ABILITIES_LONG
-					selected=system.spellcastingAbility
+					selected=system.spellcasting.ability
 					localize=false
 				}}
 			</select>
@@ -41,8 +41,8 @@
 				<a
 					class="fa-solid fa-square-plus"
 					style="margin:0px 8px 0px 4px"
-					data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='NPC Spell'}}"
-					data-item-type="NPC Spell"
+					data-tooltip="{{localize 'SHADOWDARK.sheet.general.item_create.tooltip' type='Spell'}}"
+					data-item-type="Spell"
 					data-action="item-create"
 				></a>
 				{{localize "SHADOWDARK.item.spell.label"}}
@@ -73,6 +73,7 @@
 						<a
 							data-action="focus-npc-spell"
 							data-item-id="{{spell._id}}"
+							data-item-uuid="{{spell.uuid}}"
 							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 						>
 							<i class="fa-solid fa-brain"></i>
@@ -81,6 +82,7 @@
 					<a
 						data-action="cast-npc-spell"
 						data-item-id="{{spell._id}}"
+						data-item-uuid="{{spell.uuid}}"
 						data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
 					>
 						<i class="fa-solid fa-hand-sparkles"></i>
@@ -89,6 +91,7 @@
 				<a
 					data-action="toggle-lost"
 					data-item-id="{{spell._id}}"
+					data-item-uuid="{{spell.uuid}}"
 					data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 				>
 					{{#if spell.system.lost}}

@@ -15,6 +15,13 @@ export default class Update_251001_1 extends UpdateBaseSD {
 	async updateItem(itemData, actorData) {
 		let updateData = {};
 		updateData.effects = await this.updateEffects(itemData.effects);
+
+		// NPC spell to Spell
+		if (itemData.type === "NPC Spell") {
+			updateData.type = "Spell";
+			updateData["==system"] = {...itemData.system};
+		}
+
 		return updateData;
 	}
 
@@ -39,7 +46,6 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						// search spells
 						const spells = await shadowdark.compendiums.spells();
 						if (spells.map(s => s.name.slugify()).includes(change.value)) {
-							console.error("spell", change.value);
 							change.key = `system.roll.spell.advantage.${change.value}`;
 							change.mode = 2;
 							change.value = 1;

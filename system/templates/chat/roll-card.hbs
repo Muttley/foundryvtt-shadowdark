@@ -5,9 +5,19 @@
 	{{/if}}
 
 	{{#if item}}
+	<a data-link data-uuid="{{item.uuid}}">
 		<img src="{{item.img}}" style="width:20px;height:20px;display:inline">
 		<span>{{item.name}}</span>
+	</a>
 	{{/if}}
+
+	{{#each attack.features}}
+		{{{this}}}
+	{{/each}}
+
+	{{#each cast.features}}
+		{{{this}}}
+	{{/each}}
 
 	{{#if damageRoll.html}}
 		<h3>{{damageRoll.label}}</h3>

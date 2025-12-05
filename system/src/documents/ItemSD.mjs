@@ -241,7 +241,7 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 	isSpell() {
-		return ["Scroll", "Spell", "Wand", "NPC Spell"].includes(this.type);
+		return ["Scroll", "Spell", "Wand"].includes(this.type);
 	}
 
 	async propertiesDisplay() {

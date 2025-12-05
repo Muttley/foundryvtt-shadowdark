@@ -81,6 +81,7 @@ export function createToolTip(name, value, prefix="+") {
 
 export function formatBonus(bonus) {
 	if (typeof bonus === "number") {
+		if (bonus === 0) return "";
 		if (bonus > 0) return ` +${bonus}`;
 		if (bonus < 0) return ` ${bonus}`;
 	}

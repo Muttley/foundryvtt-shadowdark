@@ -554,13 +554,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCastSpell(event) {
 		event.preventDefault();
 
-		const itemId = event.currentTarget.dataset.uuid;
+		const itemUuid = event.currentTarget.dataset.itemUuid;
 
 		if (event.shiftKey) {
-			this.actor.system.castSpell(itemId, {skipPrompt: true});
+			this.actor.system.castSpell(itemUuid, {skipPrompt: true});
 		}
 		else {
-			this.actor.system.castSpell(itemId);
+			this.actor.system.castSpell(itemUuid);
 		}
 	}
 
@@ -569,7 +569,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const itemId = event.currentTarget.dataset.itemId;
 
-		this.actor.learnSpell(itemId);
+		this.actor.system.learnSpell(itemId);
 	}
 
 	async _onOpenSpellBook(event) {

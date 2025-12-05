@@ -80,7 +80,6 @@ SHADOWDARK.DEFAULTS = {
 		"NPC Attack": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 		"NPC Feature": "icons/creatures/abilities/dragon-breath-purple.webp",
 		"NPC Special Attack": "icons/magic/death/weapon-sword-skull-purple.webp",
-		"NPC Spell": "icons/magic/symbols/runes-star-magenta.webp",
 		"Patron": "icons/magic/unholy/silhouette-light-fire-blue.webp",
 		"Potion": "icons/consumables/potions/bottle-corked-red.webp",
 		"Property": "icons/sundries/documents/document-torn-diagram-tan.webp",

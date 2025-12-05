@@ -70,67 +70,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		});
 	}
 
-	async buildNpcAttackDisplays(itemId) {
-		const item = this.getEmbeddedDocument("Item", itemId);
-
-		const attackOptions = {
-			attackType: item.system.attackType,
-			attackName: item.name,
-			// numAttacks: item.system.attack.num,
-			attackBonus: parseInt(item.system.bonuses?.attackBonus, 10),
-			baseDamage: item.system.damage.value,
-			bonusDamage: parseInt(item.system.bonuses?.damageBonus, 10),
-			itemId,
-			special: item.system.damage.special,
-			ranges: item.system.ranges.map(s => game.i18n.localize(
-				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
-		};
-
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
-
-		return await renderTemplate(
-			"systems/shadowdark/templates/_partials/npc-attack.hbs",
-			attackOptions
-		);
-	}
-
-	async buildNpcSpecialDisplays(itemId) {
-		const item = this.getEmbeddedDocument("Item", itemId);
-
-		const description = await TextEditor.enrichHTML(
-			jQuery(item.system.description).text(),
-			{
-				async: true,
-			}
-		);
-
-		const attackOptions = {
-			attackName: item.name,
-			// numAttacks: item.system.attack.num,
-			attackBonus: item.system.bonuses?.attackBonus,
-			itemId,
-			ranges: item.system.ranges.map(s => game.i18n.localize(
-				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
-			description,
-		};
-
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
-
-		return await renderTemplate(
-			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
-			attackOptions
-		);
-	}
 
 	async canUseMagicItems() {
 		const characterClass = await this.system.getClass();
@@ -141,28 +80,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		return characterClass && spellcastingClass !== ""
 			? true
 			: false;
-	}
-
-
-	async castNPCSpell(itemId, options={}) {
-		const item = this.items.get(itemId);
-
-		const abilityBonus = this.system.spellcastingBonus;
-
-		const rollType = item.name.slugify();
-
-		const data = {
-			rollType,
-			item: item,
-			actor: this,
-			abilityBonus: abilityBonus,
-		};
-
-		const parts = ["1d20", "@abilityBonus"];
-
-		options.isNPC = true;
-
-		return item.rollSpell(parts, data, options);
 	}
 
 
@@ -237,47 +154,6 @@ export default class ActorSD extends foundry.documents.Actor {
 			? true
 			: false;
 	}
-
-	async learnSpell(itemId) {
-		const item = this.items.get(itemId);
-
-		const correctSpellClass = item.system.class.includes(
-			this.system.class
-		);
-
-		if (!correctSpellClass) {
-			renderTemplate(
-				"systems/shadowdark/templates/dialog/confirm-learn-spell.hbs",
-				{
-					name: item.name,
-					correctSpellClass,
-				}
-			).then(html => {
-				new Dialog({
-					title: `${game.i18n.localize("SHADOWDARK.dialog.scroll.wrong_class_confirm")}`,
-					content: html,
-					buttons: {
-						Yes: {
-							icon: "<i class=\"fa fa-check\"></i>",
-							label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
-							callback: async () => {
-								this._learnSpell(item);
-							},
-						},
-						Cancel: {
-							icon: "<i class=\"fa fa-times\"></i>",
-							label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
-						},
-					},
-					default: "Yes",
-				}).render(true);
-			});
-		}
-		else {
-			await this._learnSpell(item);
-		}
-	}
-
 
 	/** @inheritDoc */
 	prepareData() {

@@ -193,9 +193,9 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 
 		const spellObj = {
 			name: parsedSpell[1],
-			type: "NPC Spell",
+			type: "Spell",
 			system: {
-				dc: parsedSpell[3],
+				tier: parsedSpell[3] - 10,
 				description: `<p>${parsedSpell[4].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
 				range: "",
 				duration: {
@@ -371,8 +371,8 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 			const attackObj = this._parseAttack(line);
 			// if attack is a spell, update actors details for spellcasting
 			if (attackObj.name.toLowerCase() === "spell") {
-				newActor.update({"system.spellcastingAttackNum": `${attackObj.system.attack.num}`});
-				newActor.update({"system.spellcastingBonus": attackObj.system.bonuses.attackBonus});
+				newActor.update({"system.spellcasting.attacks": `${attackObj.system.attack.num}`});
+				newActor.update({"system.spellcasting.bonus": attackObj.system.bonuses.attackBonus});
 			}
 			else {
 				attackArray.push(attackObj);

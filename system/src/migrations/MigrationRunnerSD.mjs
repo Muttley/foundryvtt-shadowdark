@@ -70,6 +70,27 @@ export default class MigrationRunnerSD {
 				switch (documentName) {
 					case "Actor":
 						updateData = await this.currentMigrationTask.updateActor(objectData);
+
+						const items = doc.items.map(a => [a, true])
+							.concat(Array.from(doc.items.invalidDocumentIds).map(
+								id => [doc.items.getInvalid(id), false]
+							));
+
+						for (const [item, validItem] of items) {
+							const itemSource = validItem
+								? item.toObject()
+								: doc.items.find(a => a._id === item.id);
+
+							const updateData = await this.currentMigrationTask.updateItem(
+								itemSource,
+								objectData
+							);
+
+							if (!foundry.utils.isEmpty(updateData)) {
+								shadowdark.log(`Migrating Actor Item document '${item.name}'`);
+								await item.update(updateData);
+							}
+						}
 						break;
 					case "Item":
 						updateData = await this.currentMigrationTask.updateItem(objectData);

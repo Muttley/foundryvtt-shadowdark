@@ -23,6 +23,7 @@
 			{{/if}}
 		</h3>
 	</header>
+	{{#if showRemainingMins}}
 	<div class="light-source {{#if active}}on{{else}}off{{/if}}">
 		<h4>
 			{{#ifCond timeRemaining '<' 1}}
@@ -32,4 +33,5 @@
 			{{/ifCond}}
 		</h4>
 	</div>
+	{{/if}}
 </div>
