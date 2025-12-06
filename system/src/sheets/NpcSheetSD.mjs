@@ -27,8 +27,8 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find("[data-action='item-use-ability']").click(
-			event => this._onUseAbility(event)
+		html.find("[data-action='display-feature']").click(
+			event => this._displayFeature(event)
 		);
 
 		html.find("[data-action='focus-npc-spell']").click(
@@ -133,10 +133,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 		context.effects = effects;
 	}
 
-	async _onUseAbility(event) {
+	async _displayFeature(event) {
 		event.preventDefault();
-		const itemId = event.currentTarget.dataset.itemId;
-		this.actor.useAbility(itemId);
+		const item = this.actor.items.get(event.currentTarget?.dataset?.itemId);
+		return item.displayCard();
 	}
 
 	async _onCastSpell(event, options) {

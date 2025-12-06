@@ -273,45 +273,18 @@ export async function rollFromConfig(config) {
 	}
 
 	// evaluate main roll
+	const rolls = [];
 	config.mainRoll.type = "main";
 	const mainRoll = await roll(config.mainRoll, actor.getRollData());
+	rolls.push(mainRoll);
 
 	if (mainRoll.success && config?.damageRoll?.formula) {
 		// await rollDamageFromMessage(message);
 		config.damageRoll.needed = true;
 	}
 
-	// generate template data
-	const template = "systems/shadowdark/templates/chat/roll-card.hbs";
-	const templateData = {...config};
-	templateData.actor = actor;
-	templateData.mainRoll.html = await mainRoll.render();
-	if (config.itemUuid) {
-		templateData.item = await fromUuid(config.itemUuid);
-	}
-	if (config.targetUuid) {
-		templateData.target = await fromUuid(config.targetUuid);
-	}
-	const content = await foundry.applications.handlebars.renderTemplate(template, templateData);
-
-	// Create Chat Message
-	const chatData = {
-		content,
-		flags: {
-			"core.canPopout": true,
-			"shadowdark.rollConfig": config,
-		},
-		flavor: config.title ?? undefined,
-		speaker: ChatMessage.getSpeaker({
-			actor,
-		}),
-		rolls: [mainRoll],
-		user: game.user.id,
-	};
-	if (config.rollMode) {
-		ChatMessage.applyRollMode(chatData, config.rollMode);
-	}
-
+	// render roll
+	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
 	await ChatMessage.create(chatData);
 
 	return mainRoll;

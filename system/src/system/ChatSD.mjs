@@ -53,4 +53,55 @@ export default class ChatSD {
 			mode
 		);
 	}
+
+	static async renderRollMessage(config, rolls=[]) {
+		if (!Array.isArray(rolls)) return;
+
+		const actor = game.actors.get(config.actorId);
+
+		const mainRoll = rolls.find(r => r && r.options.type === "main");
+		const damageRoll = rolls.find(r => r && r.options.type === "damage");
+
+		// generate template data
+		const template = "systems/shadowdark/templates/chat/roll-card.hbs";
+		const templateData = {...config};
+		templateData.actor = actor;
+
+		if (config.itemUuid) {
+			templateData.item = await fromUuid(config.itemUuid);
+		}
+		if (config.targetUuid) {
+			templateData.target = await fromUuid(config.targetUuid);
+		}
+		if (mainRoll) {
+			templateData.mainRoll.html = await mainRoll.render();
+		}
+		if (damageRoll) {
+			templateData.damageRoll.html = await damageRoll.render();
+		}
+		const content = await foundry.applications.handlebars.renderTemplate(
+			template,
+			templateData
+		);
+
+		// Create Chat Message
+		const chatData = {
+			content,
+			flags: {
+				"core.canPopout": true,
+				"shadowdark.rollConfig": config,
+			},
+			flavor: config.title ?? undefined,
+			speaker: ChatMessage.getSpeaker({
+				actor,
+			}),
+			rolls,
+			user: game.user.id,
+		};
+		if (config.rollMode) {
+			ChatMessage.applyRollMode(chatData, config.rollMode);
+		}
+
+		return chatData;
+	}
 }

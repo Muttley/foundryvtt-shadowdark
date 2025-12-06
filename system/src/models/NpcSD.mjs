@@ -112,7 +112,9 @@ export default class NpcSD extends ActorBaseSD {
 		config.cast.focus ??= false;
 		config.cast.range ??= spell.system.range;
 		config.cast.duration ??= spell.system?.duration;
-		config.cast.features ??= [spell.system?.description];
+
+		config.descriptions ??= [];
+		config.descriptions.push(spell.system?.description);
 
 		config.mainRoll ??= {};
 		config.mainRoll.type = "spell";
@@ -222,6 +224,9 @@ export default class NpcSD extends ActorBaseSD {
 		config.mainRoll.formula ??= `${config.mainRoll.base}${atkBonus}`;
 		config.mainRoll.advantage ??= 0;
 		config.mainRoll.label ??= "Attack"; // TODO localize
+
+		config.descriptions ??= [];
+		config.descriptions.push(attack.system?.description);
 
 		config.attack ??= {};
 		config.attack.range ??= attack.system.ranges[0];

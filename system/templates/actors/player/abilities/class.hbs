@@ -14,7 +14,7 @@
 				</li>
 
 				{{#each group.abilities}}
-				<li class="item" data-item-id="{{this._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{this._id}}">
+				<li class="item" data-item-id="{{this.id}}" data-uuid="{{this.uuid}}">
 					<div class="item-image" style="background-image: url({{this.img}})"></div>
 					<a class="item-name {{#if this.system.lost}}strike-through{{/if}}" data-action="show-details">
 						{{this.name}}
@@ -24,7 +24,8 @@
 							{{#if ../../owner}}
 								<a
 									data-action="ability-decrement"
-									data-item-id="{{this._id}}"
+									data-item-id="{{this.id}}"
+									data-item-uuid="{{this.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.decrement.tooltip'}}"
 								>
 									<i class="fa-regular fa-minus fa-xs"></i>
@@ -34,7 +35,8 @@
 							{{#if ../../owner}}
 								<a
 									data-action="ability-increment"
-									data-item-id="{{this._id}}"
+									data-item-id="{{this.id}}"
+									data-item-uuid="{{this.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.abilities.uses.increment.tooltip'}}"
 								>
 									<i class="fa-regular fa-plus fa-xs"></i>
@@ -48,7 +50,8 @@
 						{{#unless this.system.lost}}
 						<a
 							data-action="use-ability"
-							data-item-id="{{this._id}}"
+							data-item-id="{{this.id}}"
+							data-item-uuid="{{this.uuid}}"
 							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
 						>
 							<i class="fa-solid fa-dice-d20"></i>
@@ -57,7 +60,8 @@
 						{{/unless}}
 						<a
 							data-action="toggle-lost"
-							data-item-id="{{this._id}}"
+							data-item-id="{{this.id}}"
+							data-item-uuid="{{this.uuid}}"
 							data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_ability_lost"}}"
 						>
 							{{#if this.system.lost}}
