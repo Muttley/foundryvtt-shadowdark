@@ -43,6 +43,7 @@ export default class PlayerSD extends ActorBaseSD {
 				available: new fields.BooleanField({initial: false}),
 			}),
 			patron: new fields.DocumentUUIDField(),
+			renown: new fields.NumberField({ integer: true, initial: 0}),
 			slots: new fields.NumberField({ integer: true, initial: 10, min: 10}),
 		};
 

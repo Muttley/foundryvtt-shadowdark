@@ -33,6 +33,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/details/languages.hbs",
 		"systems/shadowdark/templates/actors/player/details/level.hbs",
 		"systems/shadowdark/templates/actors/player/details/patron.hbs",
+		"systems/shadowdark/templates/actors/player/details/renown.hbs",
 		"systems/shadowdark/templates/actors/player/details/title.hbs",
 		"systems/shadowdark/templates/actors/player/details/xp.hbs",
 		"systems/shadowdark/templates/actors/player/inventory.hbs",
