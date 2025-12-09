@@ -119,26 +119,25 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 /**
  * // Wrapper function for creating a roll using shadowdark specific options.
  * // Requires options.formula
- * @param {Object} options shdowdark specific options for describing a single roll
+ * @param {Object} config shdowdark specific options for describing a single roll
  * @param {Object} rolldata data used to parse attributes included in roll formulas
  * @returns {RollSD}
  */
-export async function roll(options, rolldata={}) {
-	if ( !options?.formula) throw new Error("Missing required property: config.formula");
+export async function roll(config, rolldata={}) {
+	if ( !config?.formula) throw new Error("Missing required property: config.formula");
 
 	// apply advantage or disadvantage
-	if (options.advantage) {
-		options.formula = applyAdvantage(options.formula, options.advantage);
+	if (config.advantage) {
+		config.formula = applyAdvantage(config.formula, config.advantage);
 	}
 
-	if (options.type === "damage") {
+	if (config.type === "damage") {
 		// apply momentum mode
 		if (game.settings.get("shadowdark", "useMomentumMode")) {
-			options.formula = applyExploding(options.formula);
+			config.formula = applyExploding(config.formula);
 		}
 	}
-
-	return await new shadowdark.dice.RollSD(options.formula, rolldata, options).evaluate();
+	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
 export async function rollDamageFromMessage(msg) {
@@ -147,7 +146,6 @@ export async function rollDamageFromMessage(msg) {
 	if (!config.damageRoll?.formula || msg.getRoll("damage")) return false;
 	const actor = game.actors.get(config.actorId);
 	if (!actor) return; // TODO Error message
-
 	config.damageRoll.type = "damage";
 	const damageRoll = await roll(config.damageRoll, actor.getRollData());
 	config.damageRoll.html = await damageRoll.render();
@@ -168,10 +166,14 @@ export async function rollDamageFromMessage(msg) {
 
 	// update message with new roll and content
 	await msg.update({rolls: [...msg.rolls, damageRoll]});
-	game.dice3d.waitFor3DAnimationByMessageID(msg.id).then(() =>
-		msg.update({content})
-	);
-
+	if (game.dice3d && !damageRoll.isDeterministic) {
+		game.dice3d.waitFor3DAnimationByMessageID(msg.id).then(() =>
+			msg.update({content})
+		);
+	}
+	else {
+		msg.update({content});
+	}
 }
 
 /**
@@ -285,7 +287,9 @@ export async function rollFromConfig(config) {
 
 	// render roll
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
-	await ChatMessage.create(chatData);
+	const msg = await ChatMessage.create(chatData);
+
+	if (game.settings.get("shadowdark", "rollDamage") && config.damageRoll.needed) rollDamageFromMessage(msg);
 
 	return mainRoll;
 }

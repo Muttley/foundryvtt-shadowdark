@@ -20,6 +20,19 @@ export default function registerSystemSettings() {
 	SourceFilterSettings.registerSetting();
 
 	// ----------------
+	//  Roll Damage Automatically
+	// ----------------
+	//
+	game.settings.register("shadowdark", "rollDamage", {
+		name: "SHADOWDARK.settings.roll_damage.name",
+		hint: "SHADOWDARK.settings.roll_damage.hint",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+	});
+
+	// ----------------
 	//  NPC HIT POINTS
 	// ----------------
 	//

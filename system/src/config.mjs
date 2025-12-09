@@ -561,6 +561,7 @@ SHADOWDARK.TALENT_CLASSES = {
 };
 
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
+	1: "1",
 	d2: "1d2",
 	d4: "1d4",
 	d6: "1d6",

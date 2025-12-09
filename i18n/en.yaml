@@ -662,6 +662,8 @@ SHADOWDARK.settings.module_art.hint: Configure which module-provided art should 
 SHADOWDARK.settings.module_art.label: Configure Art
 SHADOWDARK.settings.module_art.name: Module-provided Art
 SHADOWDARK.settings.module_art.save: Save Changes
+SHADOWDARK.settings.roll_damage.hint: Automatically roll damage dice after hit
+SHADOWDARK.settings.roll_damage.name: Auto Roll Damage
 SHADOWDARK.settings.roll_npc_hp.hint: Automatically roll NPC Hit Points when they are added to a scene
 SHADOWDARK.settings.roll_npc_hp.name: Auto Roll NPC Hit Points
 SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
