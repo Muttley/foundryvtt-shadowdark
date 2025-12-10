@@ -1,10 +1,12 @@
 # v4.0.0
 
 ## Enhancements
+- [#966] Item Active Effects now get suspended when an item is Stashed
 - [#1038] Added missing translatable strings
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
 
 ## Bugfixes
+- [#1068] Blowgun weapon attack can now be rolled
 - [#1107] Handaxe Price Correction
 - [#1122] Error that prevented adding active effects
 - [#1126] Added missing Fighter talent in class rolltable *(Brittonlj)*
