@@ -29,4 +29,17 @@ export default class ActiveEffectSD extends ActiveEffect {
 		// call default behavior for everything else
 		return super.apply(actor, change);
 	}
+
+	/**
+	 * Automatically deactivate effects when parent item is stashed.
+	 * @inheritdoc
+	 */
+	get isSuppressed() {
+		if (this.parent?.system?.stashed) {
+			return true;
+		}
+		else {
+			return super.isSuppressed;
+		}
+	}
 }

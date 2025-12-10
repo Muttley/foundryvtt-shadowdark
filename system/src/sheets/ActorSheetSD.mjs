@@ -77,7 +77,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		};
 
 		context.activeEffects = shadowdark.effects.prepareActiveEffectCategories(
-			this.actor.allApplicableEffects()
+			this.actor.allApplicableEffects().filter(e => !e.isSuppressed)
 		);
 
 		context.notesHTML = await TextEditor.enrichHTML(
