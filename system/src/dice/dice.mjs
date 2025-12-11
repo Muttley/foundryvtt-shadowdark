@@ -308,3 +308,15 @@ export function setRollTarget(config={}) {
 		}
 	}
 }
+
+export function upgradeDie(die, modifier=0) {
+	const shadowdarkDice = Object.values(CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE_DIE_ONLY);
+	let index = shadowdarkDice.indexOf(die);
+	// make sure die is on the list
+	if (index === -1) return die;
+
+	let newIndex = index + modifier;
+	newIndex = Math.max(0, Math.min(shadowdarkDice.length - 1, newIndex));
+
+	return shadowdarkDice[newIndex];
+}

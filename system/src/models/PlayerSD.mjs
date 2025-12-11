@@ -228,6 +228,31 @@ export default class PlayerSD extends ActorBaseSD {
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
 		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
+		// attack critical threshold
+		const critThresholdKey = this._getActiveEffectKeys(
+			`roll.${config.attack.type}.critical-threshold`,
+			20,
+			weapon
+		);
+		config.mainRoll.criticalSuccessAt = critThresholdKey.value;
+
+		// attack failure threshold
+		const failThresholdKey = this._getActiveEffectKeys(
+			`roll.${config.attack.type}.failure-threshold`,
+			1,
+			weapon
+		);
+		config.mainRoll.criticalFailureAt = failThresholdKey.value;
+
+		// critical Multiplier
+		const critMultiplierKey = this._getActiveEffectKeys(
+			`roll.${config.attack.type}.critical-multiplier`,
+			2,
+			weapon
+		);
+		config.mainRoll.criticalMultiplier = critMultiplierKey.value;
+
+
 		// generate tooltips
 		const tooltips = [];
 		tooltips.push(shadowdark.dice.createToolTip(
@@ -235,6 +260,9 @@ export default class PlayerSD extends ActorBaseSD {
 			abilityBonus
 		));
 		tooltips.push(attackRollKey.tooltips);
+		tooltips.push(critThresholdKey.tooltips.replace("(", "(Crit.Succ ")); // TODO localize
+		tooltips.push(failThresholdKey.tooltips.replace("(", "(Crit.Fail ")); // TODO localize
+		tooltips.push(critMultiplierKey.tooltips.replace("(", "(Crit.Multi ")); // TODO localize
 		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 		// calculate attack advantage
@@ -254,7 +282,7 @@ export default class PlayerSD extends ActorBaseSD {
 	 */
 	_calcAttackDamageConfig(weapon, config) {
 		config.damageRoll ??= {};
-		config.damageRoll.label = "Damage"; // TODO localize
+		config.damageRoll.label = "Damage Roll"; // TODO localize
 		config.damageRoll.base ??= weapon.system.getDamageFormula(config.attack.handedness);
 
 		const tooltips = [];
@@ -266,8 +294,11 @@ export default class PlayerSD extends ActorBaseSD {
 			weapon
 		);
 		if (damageDieRollKey.value) {
-			// TODO updgrade damagedie
-			tooltips.push(damageDieRollKey.tooltips);
+			config.damageRoll.base = shadowdark.dice.upgradeDie(
+				config.damageRoll.base,
+				damageDieRollKey.value
+			);
+			tooltips.push(damageDieRollKey.tooltips.replace("(", "(up.Die ")); // TODO localize
 		}
 
 		// Get roll key extra dice
@@ -279,8 +310,8 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		if (extraDieRollKey.value) {
 			const baseDie = baseDamageValue.match(/^[dD](\d*)/)[1];
-			baseDamageValue += ` +${extraDieRollKey.value}${baseDie}`;
-			tooltips.push(extraDieRollKey.tooltips);
+			baseDamageValue += ` +${extraDieRollKey.value}d${baseDie}`;
+			tooltips.push(extraDieRollKey.tooltips.replace("(", "(Add.Die ")); // TODO localize
 		}
 
 
@@ -379,7 +410,7 @@ export default class PlayerSD extends ActorBaseSD {
 		config.mainRoll ??= {};
 		config.mainRoll.type = "Spell";
 		config.mainRoll.base ??= "d20";
-		config.mainRoll.label ??= "Spell Roll"; // TODO localize
+		config.mainRoll.label ??= "Spell Cast Roll"; // TODO localize
 		config.mainRoll.dc ??= spell.system?.dc;
 
 		const spellRollKey = this._getActiveEffectKeys(

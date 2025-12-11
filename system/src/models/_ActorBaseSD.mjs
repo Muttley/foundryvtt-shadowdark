@@ -154,7 +154,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			// is item a weapon?
 			if (item.system?.baseWeapon) selectors.push(item.system.baseWeapon);
 			// add name of item
-			selectors.push(item.name);
+			selectors.push(item.name.slugify());
 
 			// generate full keys list
 			selectors.forEach(s => {
@@ -166,12 +166,11 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		const changes = [];
 		const optional = [];
 		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
-			const isItem = (c.key === baseKey.concat(".this") && e.origin === item?.uuid);
+ 			const isItem = (c.key === baseKey.concat(".this") && e.parent.uuid === item?.uuid);
 			const isOptional = c.key === baseKey.concat(".optional");
 			if (keys.includes(c.key) || isItem || isOptional) {
-				c.name = e.name;
+				c.name = e.parent.name;
 				c.value = shadowdark.dice.resolveFormula(c.value, this.parent.getRollData());
-				c.origin = e.origin;
 				c.priority = c.priority ?? c.mode * 10;
 
 				if (isOptional) {
