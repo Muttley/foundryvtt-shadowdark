@@ -669,6 +669,9 @@ export default class PlayerSD extends ActorBaseSD {
 				);
 
 				if (!attacks[ranged]) attacks[ranged] = [];
+				if (rangedAttackData.itemUuid) {
+					rangedAttackData.item = fromUuidSync(rangedAttackData.itemUuid);
+				}
 				attacks[ranged].push(rangedAttackData);
 			}
 

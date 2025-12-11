@@ -289,7 +289,7 @@ export async function rollFromConfig(config) {
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
 	const msg = await ChatMessage.create(chatData);
 
-	if (game.settings.get("shadowdark", "rollDamage") && config.damageRoll.needed) rollDamageFromMessage(msg);
+	if (game.settings.get("shadowdark", "rollDamage") && config?.damageRoll?.needed) rollDamageFromMessage(msg);
 
 	return mainRoll;
 }

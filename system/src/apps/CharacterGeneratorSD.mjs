@@ -59,30 +59,12 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 					xp: 0,
 				},
 				abilities: {
-					str: {
-						value: 10,
-						mod: 0,
-					},
-					int: {
-						value: 10,
-						mod: 0,
-					},
-					dex: {
-						value: 10,
-						mod: 0,
-					},
-					wis: {
-						value: 10,
-						mod: 0,
-					},
-					con: {
-						value: 10,
-						mod: 0,
-					},
-					cha: {
-						value: 10,
-						mod: 0,
-					},
+					str: {},
+					int: {},
+					dex: {},
+					wis: {},
+					con: {},
+					cha: {},
 				},
 				ancestry: "",
 				background: "",
@@ -189,14 +171,6 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 		await newActor.createEmbeddedDocuments("Item", characterItems);
 
-		let maxHP = newActor.system.attributes.hp.base + newActor.system.attributes.hp.bonus;
-		let newHP = maxHP;
-
-		await newActor.update({
-			"system.attributes.hp.max": maxHP,
-			"system.attributes.hp.value": newHP,
-		});
-
 		if (userId !== game.userId) {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
@@ -247,7 +221,7 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 			// set all player ability scores to 10
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				this.formData.actor.system.abilities[x] = { base: 10, mod: 0};
+				this.formData.actor.system.abilities[x] = { value: 10, mod: 0};
 			});
 
 			// load all relevent data from compendiums
@@ -302,6 +276,7 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 				this.formData.editing = true;
 				this.formData.level0 = false;
 				this.formData.actor.system.class = "";
+				this._calculateModifiers();
 				await this._loadAncestry(this.formData.actor.system.ancestry, true);
 			}
 
@@ -328,8 +303,8 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 	_calculateModifiers() {
 		CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-			let baseInt = this.formData.actor.system.abilities[x].base;
-			this.formData.actor.system.abilities[x].mod = Math.floor((baseInt - 10)/2);
+			let value = this.formData.actor.system.abilities[x].value;
+			this.formData.actor.system.abilities[x].mod = Math.floor((value - 10)/2);
 		});
 	}
 
@@ -365,12 +340,6 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 
 	async _createCharacter() {
-
-		// sets initial totals on all stats
-		for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			this.formData.actor.system.abilities[key].total =
-				this.formData.actor.system.abilities[key].base;
-		}
 
 		const allItems = [];
 
@@ -421,23 +390,10 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		}
 
 		// Calculate initial HP
-		let hpConMod = this.formData.actor.system.abilities.con.mod;
+		let hpConMod = this.formData.actor.system.abilities.con.mod + 1;
 		if (hpConMod < 1) hpConMod = 1;
-		this.formData.actor.system.attributes.hp.base = hpConMod;
+		this.formData.actor.system.attributes.hp.max = hpConMod;
 		this.formData.actor.system.attributes.hp.value = hpConMod;
-
-		// add auditlog data
-		/*
-		const itemNames = [];
-		allItems.forEach(x => itemNames.push(x.name));
-		let auditLog = {};
-		auditLog[0] = {
-			startingStats: this.formData.actor.system.abilities,
-			baseHP: this.formData.actor.system.attributes.hp.base,
-			itemsGained: itemNames,
-		};
-		this.formData.actor.system.auditLog = auditLog;
-		*/
 
 		// Create the new player character
 		//
@@ -934,7 +890,7 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 	async _randomizeStats() {
 		for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
-			this.formData.actor.system.abilities[key].base = await this._roll("3d6");
+			this.formData.actor.system.abilities[key].value = await this._roll("3d6");
 		}
 		this._calculateModifiers();
 	}
@@ -1070,8 +1026,8 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		// covert incoming stat data from string to int
 		if (expandedData.actor.system.abilities) {
 			CONFIG.SHADOWDARK.ABILITY_KEYS.forEach(x => {
-				let baseInt = parseInt(expandedData.actor.system.abilities[x].base);
-				expandedData.actor.system.abilities[x].base = baseInt;
+				let value = parseInt(expandedData.actor.system.abilities[x].value);
+				expandedData.actor.system.abilities[x].value = value;
 			});
 		}
 

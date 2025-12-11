@@ -204,27 +204,23 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	}
 
 	async _onRollHP({isReroll = false}) {
-		let options = {};
-
-		options.title = isReroll
+		const label = isReroll
 			? game.i18n.localize("SHADOWDARK.dialog.hp_re_roll.title")
 			: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 
-		options.flavor = options.title;
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
-		options.skipPrompt = true;
-
 		// TODO add labels to roll
 		const config = {
+			skipPrompt: true,
 			mainRoll: {
 				formula: this.data.class.system.hitPoints,
-				advantage: this.hp.advantage,
+				advantage: this.data.hp.advantage,
+				label: label,
 			},
-			actor: this.data.actor,
+			actorId: this.data.actor.id,
 		};
 		const result = await shadowdark.dice.rollFromConfig(config);
 		this.data.rolls.hp = result.total;
-		result.toMessage();
+		// result.toMessage();
 		ui.sidebar.changeTab("chat", "primary");
 		this.render();
 	}
@@ -369,46 +365,25 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 			];
 		}
 
-		// Names for audit log
-		const itemNames = [];
-		allItems.forEach(x => itemNames.push(x.name));
-
 		// add talents and spells to actor
 		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		// calculate new HP base
-		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newMaxHP = this.data.actor.system.attributes.hp.max + this.data.rolls.hp;
 		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
-		let newMaxHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
 
 		if (this.data.targetLevel === 1) {
 			let hpConMod = this.data.actor.system.abilities.con.mod;
-			// apply conmod to a set minimum 1 HP
-			if ((this.data.rolls.hp + hpConMod) > 1) {
-				newBaseHP = this.data.rolls.hp + hpConMod;
-
-			}
-			else {
-				newBaseHP = 1;
-			}
-			newValueHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
-			newMaxHP = newValueHP;
+			let startingHP = this.data.rolls.hp + hpConMod;
+			// apply con mod to a set minimum 1 HP
+			newMaxHP = Math.max(startingHP, 1);
+			newValueHP = Math.max(startingHP, 1);
 		}
 
-		// load audit log, check for valid data, add new entry
-		/*
-		let auditLog = this.data.actor.system?.auditlog ?? {};
-		if (auditLog.constructor !== Object) auditLog = {};
-
-		auditLog[this.data.targetLevel] = {
-			baseHP: newBaseHP,
-			itemsGained: itemNames,
-		};
-		*/
+		// TODO implement audit log entry
 
 		// update values on actor
 		await this.data.actor.update({
-			"system.attributes.hp.base": newBaseHP,
 			"system.attributes.hp.max": newMaxHP,
 			"system.attributes.hp.value": newValueHP,
 			"system.level.value": this.data.targetLevel,
