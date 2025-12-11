@@ -560,6 +560,12 @@ SHADOWDARK.TALENT_CLASSES = {
 	patronBoon: "SHADOWDARK.talent.class.patronBoon",
 };
 
+SHADOWDARK.TOKEN_HP_COLORS = {
+	damage: 0xDD0000,
+	healing: 0x00DD00,
+	defeated: 0x303030,
+};
+
 SHADOWDARK.WEAPON_BASE_DAMAGE = {
 	1: "1",
 	d2: "1d2",

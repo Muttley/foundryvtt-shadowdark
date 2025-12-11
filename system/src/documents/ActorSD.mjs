@@ -1,5 +1,59 @@
 export default class ActorSD extends foundry.documents.Actor {
 
+	_animateHpChange(delta) {
+		if (!game.settings.get("shadowdark", "animateHpChange")) return;
+		try {
+			const isDamage = delta < 0;
+			const color = isDamage
+				? CONFIG.SHADOWDARK.TOKEN_HP_COLORS.damage
+				: CONFIG.SHADOWDARK.TOKEN_HP_COLORS.healing;
+
+			const tokens = this.isToken ? [this.token] : this.getActiveTokens(true, true);
+			for (const tokenDoc of tokens) {
+				// Suppress further effects if the token is marked as defeated in combat tracker
+				if (tokenDoc.hasStatusEffect(CONFIG.specialStatusEffects.DEFEATED)) continue;
+
+				// Flash dynamic ring if enabled
+				if (tokenDoc.ring.enabled) {
+					const anim = isDamage ? {
+						duration: 500,
+						easing: tokenDoc.object.ring.constructor.easeTwoPeaks,
+					} : {};
+					tokenDoc.object.ring.flashColor(Color.from(color), anim);
+				}
+
+				// Create scrolling combat text for HP delta
+				const hpPercent = Math.clamp(
+					Math.abs(delta) / (this.system.attributes.hp.max || 1),
+					0,
+					1
+				);
+				canvas.interface.createScrollingText(tokenDoc.object.center, delta.signedString(), {
+					anchor: CONST.TEXT_ANCHOR_POINTS.TOP,
+					fontSize: 16 + (32 * hpPercent),
+					fill: color,
+					stroke: 0x000000,
+					strokeThickness: 4,
+					jitter: 0.25,
+				});
+			}
+		}
+		catch(error) {
+			console.error("Dynamic Token Ring Error:", error);
+		}
+	}
+
+	async _onUpdate(data, options, userId) {
+		super._onUpdate(data, options, userId);
+
+		// If _preUpdate captured a previous HP value, animate the change
+		const prev = options?.shadowdark?.prevHpValue;
+		if (prev !== undefined && this.system.attributes?.hp?.value) {
+			const delta = this.system.attributes.hp.value - prev;
+			if (delta !== 0) this._animateHpChange(delta);
+		}
+	}
+
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
@@ -30,6 +84,16 @@ export default class ActorSD extends foundry.documents.Actor {
 		}
 
 		this.updateSource(update);
+	}
+
+	async _preUpdate(data, options, userId) {
+		await super._preUpdate(data, options, userId);
+
+		// for HP changes, store a transient value to the update options for use in _onUpdate
+		const hpValuePath = "system.attributes.hp.value";
+		if (foundry.utils.hasProperty(data, hpValuePath)) {
+			(options.shadowdark ??= {}).prevHpValue = this.system.attributes.hp.value;
+		}
 	}
 
 

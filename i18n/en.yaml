@@ -648,6 +648,8 @@ SHADOWDARK.roll.one_handed_damage: One-handed Damage
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
 SHADOWDARK.roll.two_handed_damage: Two-handed Damage
+SHADOWDARK.settings.animate-hp-change.hint: Show changes to HP as scrolling text on the actor's token
+SHADOWDARK.settings.animate-hp-change.name: Animate HP Changes
 SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
 SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging

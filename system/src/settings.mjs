@@ -173,6 +173,19 @@ export default function registerSystemSettings() {
 		type: Boolean,
 	});
 
+	// ----------------------
+	//  Animate HP changes SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "animateHpChange", {
+		name: "SHADOWDARK.settings.animate-hp-change.name",
+		hint: "SHADOWDARK.settings.animate-hp-change.hint",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+	});
+
 	// ------------------
 	//  AMMO CONSUMPTION
 	// ------------------
