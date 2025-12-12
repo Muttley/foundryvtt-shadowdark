@@ -145,7 +145,6 @@ export default class ActiveEffectsSD {
 		const effectData = [
 			{
 				name: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
-				label: game.i18n.localize(`SHADOWDARK.item.effect.predefined_effect.${key}`),
 				img: data.img,
 				changes: [{
 					key: data.effectKey,
@@ -387,7 +386,6 @@ export default class ActiveEffectsSD {
 				const docs = await owner.createEmbeddedDocuments("ActiveEffect", [{
 					disabled: li.dataset.effectType === "inactive",
 					img: "icons/commodities/tech/cog-steel-grey.webp",
-					label: "New Effect",
 					name: "New Effect",
 					origin: owner.uuid,
 				}]);
