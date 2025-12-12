@@ -14,6 +14,9 @@
 - [#1161] Fixed issue where monsters with dark adapted trait can't see in dark.
 - [#1172] Fixed random name display on character generator after editing rollable tables.
 
+## Chores
+- [#1113] Merge Portuguese (Brazilian), Russian and Spanish translation updates from Crowdin
+
 ---
 
 # v3.6.0
@@ -99,7 +102,7 @@
 - [#1056] Non-weapon rolls broken
 
 ## Chores
-- [#1054] Merge French and Portuguese, Brazilian translation updates from Crowdin
+- [#1054] Merge French and Portuguese (Brazilian) translation updates from Crowdin
 - [#1055] Merge French translation updates from Crowdin
 
 ---
