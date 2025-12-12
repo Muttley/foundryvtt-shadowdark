@@ -48,7 +48,6 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
-		const options = {fastForward: event.shiftKey};
 
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
@@ -108,6 +107,8 @@ export default class ShadowdarkMacro {
 				})
 			);
 		}
+
+		const options = actor.buildOptionsForSkipPrompt(event);
 
 		// Cast spell or wand or scroll
 		if (items[0].type === "Spell" || items[0].type === "Wand" || items[0].type === "Scroll") {

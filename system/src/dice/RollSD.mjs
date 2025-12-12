@@ -8,7 +8,7 @@ export default class RollSD extends Roll {
 	 *
 	 * The `options` object configures the rolls, and chat messages. The following optional keys
 	 * may be used:
-	 * - fastForward {boolean}: Skips dialogs and just rolls normal rolls if set to true
+	 * - skipPrompt {boolean}: Skips dialogs and just rolls normal rolls if set to true
 	 * - rollMode {string}: If the self/gm/blind/public roll mode is to be predetermined
 	 * - flavor {string}: Flavor text on the chat card (smaller text under actor name)
 	 * - title {string}: Title of the chat card, set next to the icon
@@ -29,8 +29,8 @@ export default class RollSD extends Roll {
 	 * @returns {Promise<object>}
 	 */
 	static async Roll(parts, data, $form, adv=0, options={}) {
-		// If the dice has been fastForwarded, there is no form
-		if (!options.fastForward) {
+		// If the dice has been skipPrompted, there is no form
+		if (!options.skipPrompt) {
 			// Augment data with form bonuses & merge into data
 			const formBonuses = this._getBonusesFromForm($form);
 			data = foundry.utils.mergeObject(data, formBonuses);
@@ -466,7 +466,9 @@ export default class RollSD extends Roll {
 						data.rolls.secondaryDamage = await this._roll(twoHandedParts, data);
 					}
 					else {
-						data.rolls.damage = await this._roll(oneHandedParts ?? twoHandedParts);
+						data.rolls.damage = await this._roll(
+							oneHandedParts ?? twoHandedParts,
+							data);
 					}
 			}
 		}
@@ -554,7 +556,7 @@ export default class RollSD extends Roll {
 			dialogData.rollMode = game.settings.get("core", "rollMode");
 		}
 
-		return renderTemplate(dialogTemplate, dialogData);
+		return foundry.applications.handlebars.renderTemplate(dialogTemplate, dialogData);
 	}
 
 	/**
@@ -565,8 +567,8 @@ export default class RollSD extends Roll {
 	 * @returns {Promise(Roll)}			- Returns the promise of evaluated roll(s)
 	 */
 	static async RollDialog(parts, data, options={}) {
-		if ( options.fastForward ) {
-			return await this.Roll(parts, data, false, 0, options);
+		if ( options.skipPrompt ) {
+			return await this.Roll(parts, data, false, options.adv ?? 0, options);
 		}
 
 		if (!options.title) {
@@ -712,7 +714,7 @@ export default class RollSD extends Roll {
 
 		const chatCardData = await this._getChatCardTemplateData(data, options);
 
-		return renderTemplate(chatCardTemplate, chatCardData);
+		return foundry.applications.handlebars.renderTemplate(chatCardTemplate, chatCardData);
 	}
 
 	/**

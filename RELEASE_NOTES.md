@@ -1,3 +1,21 @@
+# v3.6.1
+
+## Enhancements
+- [#1149] Added fast forwards for alt=advantage and ctrl=disadvantage rolls.
+
+## Bugfixes
+- [#1020] Fixed issue with Vigilance and Asterion not having working bonuses
+- [#1037] Fixed “Item not found” error when spell effect expires on player-assigned actor
+- [#1072] Fixed issues with weapon damage bonus and weapon attack bonuses not working
+- [#1111] Fixed HUD on dropped torches, fixed issues with picking up torches.
+- [#1122] Fixed error when adding new blank Active Effects
+- [#1128] Fixed issue with negative strength modifiers not working on melee attacks.
+- [#1146] Fixed issue with torch time displaying in chat when configured not to.
+- [#1161] Fixed issue where monsters with dark adapted trait can't see in dark.
+- [#1172] Fixed random name display on character generator after editing rollable tables.
+
+---
+
 # v3.6.0
 
 ## Bugfixes

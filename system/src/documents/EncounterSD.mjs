@@ -1,5 +1,4 @@
-export default class EncounterSD extends Combat {
-
+export default class EncounterSD extends foundry.documents.Combat {
 	// Roll clockwise initiative (rulebook page 83) if that setting is selected
 	async rollInitiative(ids, { formula = null, updateTurn = true, messageOptions = {} } = {}) {
 		if (!game.settings.get("shadowdark", "useClockwiseInitiative")) {

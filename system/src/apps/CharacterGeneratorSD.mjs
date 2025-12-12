@@ -1,4 +1,4 @@
-export default class CharacterGeneratorSD extends FormApplication {
+export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplication {
 
 	LEVEL_ZERO_GEAR_TABLE_UUID = "Compendium.shadowdark.rollable-tables.RollTable.WKVfMaGkoXe3DGub";
 
@@ -471,7 +471,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 
 	async _formatDescription(text) {
-		return await TextEditor.enrichHTML(
+		return await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
 			{
 				async: false,
@@ -904,7 +904,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		const table = await fromUuid(this.ancestry.system.nameTable);
 		if (table) {
 			const result = await table.draw({displayChat: false});
-			this.formData.actor.name = result.results[0].text;
+			this.formData.actor.name = result.results[0].name;
 		}
 		else {
 			this.formData.actor.name = `Unnamed ${this.ancestry.name}`;

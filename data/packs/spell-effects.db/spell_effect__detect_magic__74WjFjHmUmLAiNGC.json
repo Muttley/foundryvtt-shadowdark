@@ -9,7 +9,7 @@
 	"name": "Spell Effect: Detect Magic",
 	"system": {
 		"category": "effect",
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</span></p>",
+		"description": "<p>You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</p>",
 		"duration": {
 			"type": "focus",
 			"value": 1
