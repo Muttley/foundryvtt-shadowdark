@@ -75,7 +75,7 @@ export default class RollSD extends Roll {
 						"SHADOWDARK.chat.item_roll.title_vs",
 						{
 							name: data.item.name,
-							target: options.targetToken.actor.name,
+							target: options.targetToken.name,
 						}
 					);
 				}
@@ -104,7 +104,7 @@ export default class RollSD extends Roll {
 							"SHADOWDARK.chat.item_roll.title_vs",
 							{
 								name: data.item.name,
-								target: options.targetToken.actor.name,
+								target: options.targetToken.name,
 							}
 						);
 					}

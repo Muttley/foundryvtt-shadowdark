@@ -9,6 +9,7 @@
 - [#1072] Fixed issues with weapon damage bonus and weapon attack bonuses not working
 - [#1111] Fixed HUD on dropped torches, fixed issues with picking up torches.
 - [#1122] Fixed error when adding new blank Active Effects
+- [#1127] Chat card text when a targetted attack roll is made should use the Token's name, not the Actor's
 - [#1128] Fixed issue with negative strength modifiers not working on melee attacks.
 - [#1130] Alarm spell has repeated description
 - [#1146] Fixed issue with torch time displaying in chat when configured not to.
