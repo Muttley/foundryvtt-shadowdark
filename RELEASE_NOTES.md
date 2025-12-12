@@ -16,6 +16,7 @@
 
 ## Chores
 - [#1113] Merge Portuguese (Brazilian), Russian and Spanish translation updates from Crowdin
+- [#1183] Take new snapshot of comendium data
 
 ---
 
