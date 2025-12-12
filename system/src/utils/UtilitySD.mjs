@@ -178,7 +178,7 @@ export default class UtilitySD {
 
 
 	static getFromUuidSync(uuid) {
-		const itemObj =  fromUuidSync(uuid);
+		const itemObj = fromUuidSync(uuid);
 		if (itemObj) {
 			return itemObj;
 		}
