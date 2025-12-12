@@ -10,6 +10,7 @@
 - [#1111] Fixed HUD on dropped torches, fixed issues with picking up torches.
 - [#1122] Fixed error when adding new blank Active Effects
 - [#1128] Fixed issue with negative strength modifiers not working on melee attacks.
+- [#1130] Alarm spell has repeated description
 - [#1146] Fixed issue with torch time displaying in chat when configured not to.
 - [#1161] Fixed issue where monsters with dark adapted trait can't see in dark.
 - [#1172] Fixed random name display on character generator after editing rollable tables.
