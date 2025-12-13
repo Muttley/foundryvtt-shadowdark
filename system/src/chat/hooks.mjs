@@ -165,9 +165,7 @@ export function chatCardBlind(app, html, data) {
 export function removeTorchTimer(app, html, data) {
 	if (game.user.isGM || game.settings.get("shadowdark", "playerShowLightRemaining") > 1) return;
 
-	html.querySelectorAll(".light-source").forEach(el => {
-  		el.remove();
-	});
+	html.querySelector(".light-source").remove();
 }
 
 /**
