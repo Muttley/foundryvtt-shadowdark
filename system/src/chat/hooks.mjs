@@ -162,6 +162,13 @@ export function chatCardBlind(app, html, data) {
 	return false;
 }
 
+export function removeTorchTimer(app, html, data) {
+	if (game.user.isGM || game.settings.get("shadowdark", "playerShowLightRemaining") > 1) return;
+
+	const $html = $(html);
+	$html.find(".light-source").remove();
+}
+
 /**
  * Handles the rendering of a chat message to the log
  * @param {ChatLog} app - The ChatLog instance
@@ -170,6 +177,7 @@ export function chatCardBlind(app, html, data) {
  */
 export function onRenderChatMessage(app, html, data) {
 	chatCardButtonAction(app, html, data);
+	removeTorchTimer(app, html, data);
 	const blind = chatCardBlind(app, html, data);
 	if (!blind) highlightSuccessFailure(app, html, data);
 }
