@@ -23,6 +23,8 @@
 - [#1185] Remove deprecated label parameter from active effects manager
 - [#1186] Update node packages used for build.
 
+**NOTE:** Many thanks to *Brittonlj* for multiple contributions included in this build.
+
 ---
 
 # v3.6.0
