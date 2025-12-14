@@ -10,7 +10,8 @@
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
 		"notes": "gulp compileNotes",
-		"packs": "gulp compilePacks"
+		"packs": "gulp compilePacks",
+		"createSymlinks": "node ./utils/create-symlinks.mjs"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.3",
