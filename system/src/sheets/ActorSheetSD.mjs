@@ -1,7 +1,6 @@
 import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
-export default class ActorSheetSD extends ActorSheet {
-
+export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 	_hiddenSectionsLut = {
 		activeEffects: true,
 	};
@@ -81,7 +80,7 @@ export default class ActorSheetSD extends ActorSheet {
 			this.actor.allApplicableEffects()
 		);
 
-		context.notesHTML = await TextEditor.enrichHTML(
+		context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			context.system.notes,
 			{
 				secrets: this.actor.isOwner,
@@ -218,7 +217,7 @@ export default class ActorSheetSD extends ActorSheet {
 	_onItemDelete(itemId) {
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/delete-item.hbs",
 			{name: itemData.name}
 		).then(html => {
@@ -284,16 +283,15 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-
 		let ability = $(event.currentTarget).data("ability");
+		if (!ability) return;
 
-		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			this.actor.rollAbility(ability, {event: event, fastForward: true});
-		}
-		else {
-			this.actor.rollAbility(ability, {event: event});
-		}
+		// skip roll prompt if shift/alt/ctrl clicked
+		const options = this.actor.buildOptionsForSkipPrompt(event, {
+			event: event,
+		});
+
+		this.actor.rollAbility(ability, options);
 	}
 
 	async _onRollAttack(event) {
@@ -303,19 +301,13 @@ export default class ActorSheetSD extends ActorSheet {
 		const attackType =  $(event.currentTarget).data("attack-type");
 		const handedness = $(event.currentTarget).data("handedness");
 
-		const options = {
+		// skip roll prompt if shift/alt/ctrl clicked
+		const options = this.actor.buildOptionsForSkipPrompt(event, {
 			attackType,
 			handedness,
-		};
-
-
-		// skip roll prompt if shift clicked
-		if (event.shiftKey) {
-			options.fastForward = true;
-		}
+		});
 
 		this.actor.rollAttack(itemId, options);
-
 	}
 
 	async _onToggleLost(event) {

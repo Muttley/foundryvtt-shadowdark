@@ -6,7 +6,10 @@ export async function welcomeMessage() {
 			title: game.i18n.localize("SHADOWDARK.chat.welcome_message.title"),
 		};
 
-		const content = await renderTemplate(template, chatCardData);
+		const content = await foundry.applications.handlebars.renderTemplate(
+			template,
+			chatCardData);
+
 		const card = {
 			content,
 			user: game.user.id,

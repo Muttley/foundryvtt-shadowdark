@@ -7,18 +7,22 @@
 	color: rgb(25, 24, 19);
 };
 
-.system-shadowdark .journal-sheet .journal-header input[type="text"] {
-	background: none;
-	color: black;
-	border: none;
-	border-radius: 0;
+.system-shadowdark .sheet.journal-entry .journal-header {
+
+	input[type="text"] {
+		background: none;
+		color: black;
+		border: none;
+		border-radius: 0;
+	}
+
+	.title {
+		font-family: "Montserrat-Bold";
+		font-size: 2.2em;
+		font-variant-caps: small-caps;
+	}
 }
 
-.system-shadowdark .journal-sheet .journal-header .title {
-	font-family: "Montserrat-Bold";
-	font-size: 2.2em;
-	font-variant-caps: small-caps;
-}
 
 .system-shadowdark .sheet.journal-entry .journal-entry-page {
 

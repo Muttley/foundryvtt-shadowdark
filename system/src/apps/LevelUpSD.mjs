@@ -1,5 +1,4 @@
-export default class LevelUpSD extends FormApplication {
-
+export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	constructor(uid) {
 	    super();
 		this.firstrun = true;
@@ -168,7 +167,9 @@ export default class LevelUpSD extends FormApplication {
 	/** @override */
 	async _onDrop(event) {
 		// get item that was dropped based on event
-		const eventData = TextEditor.getDragEventData(event);
+		const eventData =
+			foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+
 		const itemObj = await fromUuid(eventData.uuid);
 
 		if (itemObj && eventData.type === "Item") {
@@ -210,7 +211,7 @@ export default class LevelUpSD extends FormApplication {
 
 		options.flavor = options.title;
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
-		options.fastForward = true;
+		options.skipPrompt = true;
 
 		let parts = [this.data.class.system.hitPoints];
 		let advantage = 0;

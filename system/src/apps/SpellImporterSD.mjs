@@ -1,4 +1,4 @@
-export default class SpellImporter extends FormApplication {
+export default class SpellImporter extends foundry.appv1.api.FormApplication {
 	/**
 	 * Contains an importer function to import spell stat blocks
 	 */

@@ -16,7 +16,7 @@ SHADOWDARK.alignment.neutral: Neutro
 SHADOWDARK.ancestry.choice_count: Número de Escolhas
 SHADOWDARK.ancestry.choice: Escolha
 SHADOWDARK.ancestry.fixed: Fixo
-SHADOWDARK.ancestry.languages.label: Línguas de Ancestralidade
+SHADOWDARK.ancestry.languages.label: Idioma de Ancestralidade
 SHADOWDARK.ancestry.languages.prompt: Selecionar Idioma...
 SHADOWDARK.ancestry.nametable.label: Tabela de Nomes Aleatórios
 SHADOWDARK.ancestry.nametable.placeholder: Arraste a Tabela Aleatória Aqui
@@ -30,9 +30,9 @@ SHADOWDARK.app.gem_bag.title: Bolsa de Gemas
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Vender Gema
 SHADOWDARK.app.gem_bag.total_value: Valor Total
 SHADOWDARK.app.item_properties.armor.title: Propriedades da Armadura
-SHADOWDARK.app.item_properties.languages.title: Línguas
+SHADOWDARK.app.item_properties.languages.title: Idiomas
 SHADOWDARK.app.item_properties.magic_item.effects.title: Efeitos de Itens Mágicos
-SHADOWDARK.app.item_properties.save: Salvaguarda
+SHADOWDARK.app.item_properties.save: Salvar
 SHADOWDARK.app.item_properties.talent.effects.title: Tipos de Efeitos de Talentos
 SHADOWDARK.app.item_properties.title: Propriedades
 SHADOWDARK.app.item_properties.weapon.title: Propriedades da Arma
@@ -50,13 +50,13 @@ SHADOWDARK.apps.character-generator.choose: Escolher
 SHADOWDARK.apps.character-generator.create_character: Criar Personagem
 SHADOWDARK.apps.character-generator.error.create: Falha ao criar personagem {error}
 SHADOWDARK.apps.character-generator.error.name: O nome do personagem não pode estar em branco
-SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem um nome selecionado Ancestralidade
+SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Não é possível rolar um nome aleatório sem selecionar Ancestralidade
 SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
 SHADOWDARK.apps.character-generator.see_details: Ver detalhes
-SHADOWDARK.apps.character-generator.sidebar_create: Create
-SHADOWDARK.apps.character-generator.sidebar_import: Import
+SHADOWDARK.apps.character-generator.sidebar_create: Criar
+SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Equipamento Inicial
 SHADOWDARK.apps.character-generator.success: Personagem criado
 SHADOWDARK.apps.character-generator.title: Gerador de Personagem
@@ -91,15 +91,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: 3. Clique em Importar Item.
 SHADOWDARK.apps.item-importer.title: Importar Item
 SHADOWDARK.apps.level-up.dragdrop: Arraste e Solte Aqui
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Benefício de Patrono, pois a Tabela configurada não pôde ser carregada
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Dádiva de Patrono, pois a Tabela configurada não pôde ser carregada
 SHADOWDARK.apps.level-up.hit_points: Pontos de Vida
 SHADOWDARK.apps.level-up.level_up: Subir de Nível!
 SHADOWDARK.apps.level-up.leveling_to: Subindo para o nível
 SHADOWDARK.apps.level-up.missing_selections: Faltando Seleções
 SHADOWDARK.apps.level-up.notalent: Nenhum talento ganho neste nível
-SHADOWDARK.apps.level-up.or_boons: ou Benefícios
+SHADOWDARK.apps.level-up.or_boons: ou Dádivas
 SHADOWDARK.apps.level-up.prompt: Nem todas as seleções necessárias foram feitas. Continuar subindo de nível mesmo assim?
-SHADOWDARK.apps.level-up.roll_boon: Rolar Benefício
+SHADOWDARK.apps.level-up.roll_boon: Rolar Dádiva
 SHADOWDARK.apps.level-up.roll_talent: Rolar Talento
 SHADOWDARK.apps.level-up.title: Subindo de nível
 SHADOWDARK.apps.monster-importer.import_button: Importar Monstro
@@ -171,7 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Como {name} rolou o maior número, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Adicionar aos PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: Dobre qualquer valor numérico!
 SHADOWDARK.chat.item_roll.mishap: Role na tabela de Contratempos apropriada!
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title_vs: Rolagem de ataque com {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Rolagem de ataque com {name}
 SHADOWDARK.chat.item_roll.wand_mishap: A varinha quebra e para de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{lightSource} de {name} expirou"
@@ -184,7 +184,7 @@ SHADOWDARK.chat.light_source.source.toggle.off: foi apagada
 SHADOWDARK.chat.light_source.source.toggle.on: foi acesa
 SHADOWDARK.chat.light_source.went_out: "{lightSource} de {name} apagou"
 SHADOWDARK.chat.potion_used: "{name} usou uma Poção"
-SHADOWDARK.chat.spell_focus_check: "Focus Check"
+SHADOWDARK.chat.spell_focus_check: "Teste de Foco"
 SHADOWDARK.chat.spell_learn.failure: "{name} não conseguiu aprender o pergaminho"
 SHADOWDARK.chat.spell_learn.success: "{name} aprendeu com sucesso a magia {spellName}"
 SHADOWDARK.chat.spell_learn.title: Aprendendo Magia
@@ -192,14 +192,14 @@ SHADOWDARK.chat.spell_roll.title: "{name}, CD {spellDC}"
 SHADOWDARK.chat.use_ability.failure: "{name} falhou em usar a habilidade {ability}"
 SHADOWDARK.chat.use_ability.success: "{name} usou a habilidade {ability} com sucesso"
 SHADOWDARK.chat.use_ability.title: "Usando Habilidade"
-SHADOWDARK.chat.use_ability.used: "{name} used the {ability} ability"
+SHADOWDARK.chat.use_ability.used: "{name} usou a habilidade {ability}"
 SHADOWDARK.chat.welcome_message.arcane_library_button: Compre o RPG Shadowdark
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visite o site da The Arcane Library para PDFs, livros e produtos oficiais do Shadowdark.
 SHADOWDARK.chat.welcome_message.arcane_library: Apoie The Arcane Library
 SHADOWDARK.chat.welcome_message.issues_button: Monitor de Problemas
 SHADOWDARK.chat.welcome_message.issues_text: "Se você encontrar quaisquer problemas ou tiver ideias para novas funcionalidades para o sistema, confira nosso rastreador de problemas."
 SHADOWDARK.chat.welcome_message.issues: Reportar Problemas
-SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.title_text: Bem-vindo ao Shadowdark RPG. Aqui estão alguns recursos para você começar.
 SHADOWDARK.chat.welcome_message.title: RPG Shadowdark para o Foundry
 SHADOWDARK.chat.welcome_message.watch: Assista ao Tutorial em Vídeo
 SHADOWDARK.chatcard.default: Rolar
@@ -207,7 +207,7 @@ SHADOWDARK.check.requesting: Solicitando um teste
 SHADOWDARK.class-ability.ability.check: Teste de Atributo
 SHADOWDARK.class-ability.ability.label: Atributo
 SHADOWDARK.class-ability.available.label: Disponível
-SHADOWDARK.class-ability.boons: Benefícios
+SHADOWDARK.class-ability.boons: Dádiva
 SHADOWDARK.class-ability.dc.label: CD
 SHADOWDARK.class-ability.group.label: Grupo de Atributo
 SHADOWDARK.class-ability.limited-uses.label: Usos Limitados?
@@ -256,7 +256,7 @@ SHADOWDARK.coins.gp: PO
 SHADOWDARK.coins.sp: PP
 SHADOWDARK.dialog.ability_check.cha: Teste de Carisma
 SHADOWDARK.dialog.ability_check.con: Teste de Constituição
-SHADOWDARK.dialog.ability_check.dex: Verificação de Destreza
+SHADOWDARK.dialog.ability_check.dex: Teste de Destreza
 SHADOWDARK.dialog.ability_check.int: Teste de Inteligência
 SHADOWDARK.dialog.ability_check.str: Teste de Força
 SHADOWDARK.dialog.ability_check.title: Teste de Atributo
@@ -306,10 +306,10 @@ SHADOWDARK.dialog.item.sell_all: Vender Tudo
 SHADOWDARK.dialog.item.sell: Vender
 SHADOWDARK.dialog.item.use: Usar
 SHADOWDARK.dialog.light_source.pick_up.title: Selecione o ator para dar a fonte de luz
-SHADOWDARK.dialog.roll_mode_label: Rolling Mode
+SHADOWDARK.dialog.roll_mode_label: Modo de Rolagem
 SHADOWDARK.dialog.roll: Rolar
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVISO: Esta magia não é da mesma classe que o personagem, você tem certeza de que deseja tentar aprender?"
-SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmar Aprender Feitiço
+SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmar Aprender Magia
 SHADOWDARK.dialog.select_ancestry.prompt: Selecionar Ancestralidade...
 SHADOWDARK.dialog.select_ancestry.title: Escolha Ancestralidade
 SHADOWDARK.dialog.select_armor_property.prompt: Selecionar Propriedade da Armadura...
@@ -360,10 +360,10 @@ SHADOWDARK.error.general.no_character_class: Nenhuma classe de personagem foi se
 SHADOWDARK.error.general.no_character_selected: Nenhum personagem selecionado
 SHADOWDARK.error.patron.no_supported_class: Não foi possível adicionar Patrono, pois a classe atualmente configurada não permite
 SHADOWDARK.error.source.source_missing: Fonte ausente ou desconhecida...
-SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode lançar feitiços dessa classe
+SHADOWDARK.error.spells.unable_to_cast_spell: Você não pode conjurar magias dessa classe
 SHADOWDARK.error.spells.unable_to_use_item: Você não pode usar itens mágicos
 SHADOWDARK.error.too_many_tokens_selected: Muitos tokens selecionados
-SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
+SHADOWDARK.form.section_header.class_abilities.label: Habilidades de Classe
 SHADOWDARK.form.section_header.equipment.label: Equipamento
 SHADOWDARK.form.section_header.languages.label: Idiomas
 SHADOWDARK.form.section_header.names.label: Nomes
@@ -516,7 +516,7 @@ SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Núm. Dados de Dano
 SHADOWDARK.item.npc.spell_ability: Atributo de Conjuração
 SHADOWDARK.item.npc.spell_bonus: Bônus de Conjuração
-SHADOWDARK.item.npc.spell_count: Number of Castings
+SHADOWDARK.item.npc.spell_count: Número de Conjurações
 SHADOWDARK.item.potion.label: Poção
 SHADOWDARK.item.properties.label: Propriedades do Item
 SHADOWDARK.item.scroll.label: Pergaminho
@@ -581,8 +581,8 @@ SHADOWDARK.language.sylvan: Silvestre
 SHADOWDARK.language.thanian: Thaniano
 SHADOWDARK.language.who_speaks_it: Quem o fala
 SHADOWDARK.light_source.lantern: Lanterna
-SHADOWDARK.light_source.light_spell.double_near: Magia de Luz (Próximo Duplo)
-SHADOWDARK.light_source.light_spell.near: Magia de Luz (Próximo)
+SHADOWDARK.light_source.light_spell.double_near: Magia de Luz (Perto x2)
+SHADOWDARK.light_source.light_spell.near: Magia de Luz (Perto)
 SHADOWDARK.light_source.torch: Tocha
 SHADOWDARK.light-source.dropped: Soltou {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pegar Fonte de Luz
@@ -605,25 +605,25 @@ SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Quando a Iniciativa no se
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
 SHADOWDARK.npc_move.close: Adjacente
-SHADOWDARK.npc_move.double_near: Próximo Duplo
+SHADOWDARK.npc_move.double_near: Perto x2
 SHADOWDARK.npc_move.far: Longe
-SHADOWDARK.npc_move.near: Próximo
+SHADOWDARK.npc_move.near: Perto
 SHADOWDARK.npc_move.none: Nenhum
 SHADOWDARK.npc_move.special: Especial
-SHADOWDARK.npc_move.triple_near: Próximo Triplo
+SHADOWDARK.npc_move.triple_near: Perto x3
 SHADOWDARK.patron.boons_table.label: Tabela de Benefícios de Patrono
 SHADOWDARK.property.type.option.armor: Armadura
 SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo da Propriedade
 SHADOWDARK.range.close_short: A
 SHADOWDARK.range.close: Adjacente
-SHADOWDARK.range.double_near: Double Near
+SHADOWDARK.range.double_near: Perto x2
 SHADOWDARK.range.far_short: L
 SHADOWDARK.range.far: Longe
 SHADOWDARK.range.near_short: "P"
-SHADOWDARK.range.near: Próximo
+SHADOWDARK.range.near: Perto
 SHADOWDARK.range.nearLine_short: PL
-SHADOWDARK.range.nearLine: Próximo em Linha
+SHADOWDARK.range.nearLine: Perto em Linha
 SHADOWDARK.range.oneMile_short: 1mi
 SHADOWDARK.range.oneMile: 1 Milha
 SHADOWDARK.range.samePlane_short: MP
@@ -654,8 +654,8 @@ SHADOWDARK.settings.debugEnabled.hint: Ativar ou desativar o registro de depura�
 SHADOWDARK.settings.debugEnabled.name: Ativar/Desativar Depuração
 SHADOWDARK.settings.effect_panel.show_passive.hint: Se marcado, o Painel de Efeitos também mostrará efeitos ativos de talentos e itens
 SHADOWDARK.settings.effect_panel.show_passive.name: Mostrar Todos os Efeitos Ativos
-SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.enable_targeting.hint: Calcular automaticamente se um ataque acerta baseado na CA dos tokens alvos
+SHADOWDARK.settings.enable_targeting.name: Habilitar Alvo de Ataque
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Execute a migração de dados no compêndio do sistema de RPG Shadowdark (não modifique isso a menos que saiba o que está fazendo)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrar Compêndios do Sistema
 SHADOWDARK.settings.module_art.hint: Configurar qual arte fornecida por módulo deve ser usada
@@ -688,12 +688,12 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Se marcado, o Moni
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar Monitoramento de Luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Se marcado, o Monitoramento de Luz seguirá em tempo real. Desative se um módulo de hora/calendário externo for usado.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Monitoramento de Luz em Tempo Real
-SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
-SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
-SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
-SHADOWDARK.settings.track_light_sources.show_remaining.option1: Dots Only
-SHADOWDARK.settings.track_light_sources.show_remaining.option2: Dots and Minutes Remaining
-SHADOWDARK.settings.use_clockwise_initiative.hint: If checked the combatant with the highest initiative roll will go first, and all other combatants will follow in a fixed order. All NPCs will be grouped together in the initiative order.
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controla se os jogadores podem ver o tempo restante nas fontes de luz.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Mostrar Luz Restante dos Jogadores"
+SHADOWDARK.settings.track_light_sources.show_remaining.option0: Nenhum
+SHADOWDARK.settings.track_light_sources.show_remaining.option1: Apenas Pontos
+SHADOWDARK.settings.track_light_sources.show_remaining.option2: Pontos e Minutos Restantes
+SHADOWDARK.settings.use_clockwise_initiative.hint: Se marcado, o combatente com a maior rolagem de iniciativa vai primeiro e todos os outros combatentes seguirão em ordem fixa. Todos os PDMs serão agrupados na ordem de iniciativa.
 SHADOWDARK.settings.use_clockwise_initiative.name: Usar Iniciativa Horária
 SHADOWDARK.settings.use_pulp_mode.hint: Mostra tokens de Sorte como um valor numérico em vez de uma caixa de seleção
 SHADOWDARK.settings.use_pulp_mode.name: Habilitar modo Pulp
@@ -795,7 +795,7 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Alternar Edição de PV
 SHADOWDARK.sheet.player.toggle_edit_stats: Alternar Edição de Atributos
 SHADOWDARK.sheet.player.toggle_spell_lost: Alternar Magia Perdida
 SHADOWDARK.sheet.player.tooltip.cast_spell: Conjurar Magia
-SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focar na Magia
 SHADOWDARK.sheet.player.tooltip.learn_spell: Aprender Magia
 SHADOWDARK.sheet.player.tooltip.use_class_ability: Usar Habilidade de Classe
 SHADOWDARK.sheet.player.tooltip.use_potion: Usar Poção
@@ -803,7 +803,7 @@ SHADOWDARK.sheet.player.tooltip.use_scroll: Usar Pergaminho
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar Varinha
 SHADOWDARK.sheet.player.xp: XP
 SHADOWDARK.sheet.special_abilities.label: Habilidades Especiais
-SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
+SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger e Kobold"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Core Rules"
 SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
@@ -823,7 +823,7 @@ SHADOWDARK.spell_duration.rounds: Rodadas
 SHADOWDARK.spell_duration.turns: Turnos
 SHADOWDARK.spell_range.close: Adjacente
 SHADOWDARK.spell_range.far: Longe
-SHADOWDARK.spell_range.near: Próximo
+SHADOWDARK.spell_range.near: Perto
 SHADOWDARK.spell.classes.label: Classes Conjuradoras
 SHADOWDARK.spell.classes.prompt: Selecionar Classe...
 SHADOWDARK.talent.backstab: Ataque Furtivo
@@ -871,7 +871,7 @@ TYPES.Item.Class: Classe
 TYPES.Item.Deity: Divindade
 TYPES.Item.Effect: Efeito
 TYPES.Item.Gem: Gema
-TYPES.Item.Language: Língua
+TYPES.Item.Language: Idioma
 TYPES.Item.NPC Attack: Ataque PNJ
 TYPES.Item.NPC Feature: Funcionalidade PNJ
 TYPES.Item.NPC Special Attack: Ataque Especial PNJ

@@ -1,4 +1,4 @@
-export default class GemBagSD extends Application {
+export default class GemBagSD extends foundry.appv1.api.Application {
 	constructor(object, options) {
 		super(object, options);
 
@@ -156,7 +156,7 @@ export default class GemBagSD extends Application {
 	_onItemDelete(itemId) {
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/delete-item.hbs",
 			{name: itemData.name}
 		).then(html => {
@@ -192,7 +192,7 @@ export default class GemBagSD extends Application {
 
 		const actor = this.actor;
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/sell-item.hbs",
 			{name: itemData.name}
 		).then(html => {
@@ -224,7 +224,7 @@ export default class GemBagSD extends Application {
 	_onSellAllGems(event) {
 		event.preventDefault();
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/sell-all-items.hbs",
 			{name: "Gems"}
 		).then(html => {

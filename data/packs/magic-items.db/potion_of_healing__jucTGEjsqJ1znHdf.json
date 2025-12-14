@@ -9,12 +9,18 @@
 	"system": {
 		"broken": false,
 		"canBeEquipped": false,
+		"class": [
+		],
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
 		"description": "<p><em>A glass bottle with a fizzy, lemon-vanilla liquid inside.</em></p><p><strong>Benefit</strong>. The imbiber of this potion regains hit points based on its level.</p><p><strong>LV 1-3</strong>: [[/r 1d6]] hit points.</p><p><strong>LV 4-6</strong>: [[/r 2d8]] hit points.</p><p><strong>LV 7-9</strong>: [[/r 3d10]] hit points.</p><p><strong>LV 10+</strong>: [[/r 4d12]] hit points.</p>",
+		"duration": {
+			"type": "",
+			"value": 1
+		},
 		"equipped": false,
 		"isAmmunition": false,
 		"isPhysical": true,
@@ -29,6 +35,7 @@
 		"magicItem": true,
 		"predefinedEffects": "",
 		"quantity": 1,
+		"range": "",
 		"scroll": false,
 		"slots": {
 			"free_carry": 0,
@@ -38,8 +45,10 @@
 		"source": {
 			"title": "core-rules"
 		},
+		"spellName": "",
 		"stashed": false,
+		"tier": 1,
 		"treasure": false
 	},
-	"type": "Basic"
+	"type": "Potion"
 }
