@@ -15,7 +15,7 @@ async function addTorchButton(hud, hudHTML, _hudData) {
 		</div>
 	`);
 
-	hudHTML.find(".col.middle").prepend(button);
+	$(hudHTML).find(".col.middle").prepend(button);
 
 	// Add listeners to button
 	button.find("i").click(async event => {

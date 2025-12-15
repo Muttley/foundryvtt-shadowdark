@@ -6,7 +6,9 @@ export default class ChatSD {
 		template,
 		mode
 	) {
-		const html = await renderTemplate(template, data.templateData);
+		const html = await foundry.applications.handlebars.renderTemplate(
+			template,
+			data.templateData);
 
 		if (!mode) {
 			mode = game.settings.get("core", "rollMode");

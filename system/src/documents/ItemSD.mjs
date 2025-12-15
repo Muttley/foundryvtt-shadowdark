@@ -130,12 +130,12 @@ export default class ItemSD extends foundry.documents.Item {
 			"systems/shadowdark/templates/_partials/details"
 		);
 
-		return await renderTemplate(templatePath, data);
+		return await foundry.applications.handlebars.renderTemplate(templatePath, data);
 	}
 
 
 	async getEnrichedDescription() {
-		return await TextEditor.enrichHTML(
+		return await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			this.system.description,
 			{
 				async: true,

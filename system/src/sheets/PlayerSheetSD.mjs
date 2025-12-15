@@ -338,7 +338,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 * Creates a scroll from a spell item
 	 */
 	async _createItemFromSpellDialog(item) {
-		const content = await renderTemplate(
+		const content = foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
 			{
 				spellName: item.name,
@@ -419,7 +419,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCreateBoon(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
-			content: await renderTemplate(
+			content: await foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/create-new-boon.hbs",
 				{
 					boonTypes: CONFIG.SHADOWDARK.BOON_TYPES,
@@ -452,7 +452,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCreateItem(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
-			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-item.hbs"),
+			content: await foundry.applications.handlebars.renderTemplate("systems/shadowdark/templates/dialog/create-new-item.hbs"),
 			buttons: {
 				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
@@ -475,7 +475,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCreateTreasure(event) {
 		new Dialog( {
 			title: game.i18n.localize("SHADOWDARK.dialog.create_treasure"),
-			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-treasure.hbs"),
+			content: await foundry.applications.handlebars.renderTemplate("systems/shadowdark/templates/dialog/create-new-treasure.hbs"),
 			buttons: {
 				create: {
 					label: game.i18n.localize("SHADOWDARK.dialog.create"),
@@ -602,7 +602,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		const itemId = event.currentTarget.dataset.itemId;
 		const itemData = this.object.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/sell-item.hbs",
 			{name: itemData.name}
 		).then(html => {
@@ -692,7 +692,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		let template = options.template ?? "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,

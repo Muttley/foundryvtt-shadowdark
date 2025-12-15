@@ -94,12 +94,14 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 			// Push Features
 			else if (i.type === "NPC Feature") {
-				const description = await TextEditor.enrichHTML(
-					jQuery(i.system.description).text(),
-					{
-						async: true,
-					}
-				);
+				// TODO remove jQuery
+				const description =
+					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+						jQuery(i.system.description).text(),
+						{
+							async: true,
+						}
+					);
 
 				features.push({
 					itemId: i._id,
@@ -110,12 +112,15 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 			// Push Spells
 			else if (i.type === "Spell") {
-				i.description = await TextEditor.enrichHTML(
-					jQuery(i.system.description).text(),
-					{
-						async: true,
-					}
-				);
+				// TODO remove jQuery
+				i.description =
+					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+						jQuery(i.system.description).text(),
+						{
+							async: true,
+						}
+					);
+
 				spells.push(i);
 			}
 

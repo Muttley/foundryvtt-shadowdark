@@ -31,6 +31,14 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 				if (event.shiftKey) {
 					config.skipPrompt = true;
 				}
+				else if (event.altKey) {
+					config.skipPrompt = true;
+					(config.mainRoll ??= {}).advantage = 1;
+				}
+				else if (event.ctrlKey) {
+					config.skipPrompt = true;
+					(config.mainRoll ??= {}).advantage = -1;
+				}
 
 				return actor.system.rollAbilityCheck(data.stat.toLowerCase(), config);
 			case "request":

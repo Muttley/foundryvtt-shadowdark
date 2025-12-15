@@ -63,7 +63,7 @@ export default class SolodarkSD extends foundry.appv1.api.FormApplication {
 		shadowdark.utils.diceSound();
 
 		// display results to chat
-		const HTML = await renderTemplate(
+		const HTML = await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/chat/solodark-card.hbs",
 			{
 				question: event.target.question.value,
@@ -92,7 +92,7 @@ export default class SolodarkSD extends foundry.appv1.api.FormApplication {
 		const noun = result.results[0].text;
 
 		shadowdark.utils.diceSound();
-		const HTML = await renderTemplate(
+		const HTML = await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/chat/solodark-prompt-card.hbs",
 			{verb, noun}
 		);

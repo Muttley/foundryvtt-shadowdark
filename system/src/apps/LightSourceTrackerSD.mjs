@@ -100,7 +100,9 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 
 				let template = "systems/shadowdark/templates/chat/lightsource-toggle-gm.hbs";
 
-				const content = await renderTemplate(template, cardData);
+				const content = await foundry.applications.handlebars.renderTemplate(
+					template,
+					cardData);
 
 				await ChatMessage.create({
 					content,
@@ -264,7 +266,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 
 		let template = "systems/shadowdark/templates/chat/lightsource-drop.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(template, cardData);
 
 		await ChatMessage.create({
 			content,

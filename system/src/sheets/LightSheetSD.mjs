@@ -64,7 +64,7 @@ export default class LightSheetSD extends ActorSheetSD {
 			// const activeUsers = game.users
 			// 	.filter(u => u.active && !u.isGM);
 
-			const content = await renderTemplate(
+			const content = await foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/assign-picked-up-lightsource.hbs",
 				{
 					playerActors,

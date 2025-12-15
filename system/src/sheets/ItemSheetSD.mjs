@@ -349,14 +349,15 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			system: context.item.system,
 		});
 
-		context.descriptionHTML = await TextEditor.enrichHTML(
-			context.system.description,
-			{
-				secrets: context.item.isOwner,
-				async: true,
-				relativeTo: this.item,
-			}
-		);
+		context.descriptionHTML =
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+				context.system.description,
+				{
+					secrets: context.item.isOwner,
+					async: true,
+					relativeTo: this.item,
+				}
+			);
 
 		// Call any type-specific methods for this item type to gather
 		// additional data for the sheet
@@ -726,7 +727,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 	/** @inheritdoc */
 	async _onDrop(event) {
-		const data = TextEditor.getDragEventData(event);
+		const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
 
 		switch (data.type) {
 			case "Item":

@@ -80,7 +80,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 			this.actor.allApplicableEffects().filter(e => !e.isSuppressed)
 		);
 
-		context.notesHTML = await TextEditor.enrichHTML(
+		context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 			context.system.notes,
 			{
 				secrets: this.actor.isOwner,
@@ -217,7 +217,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 	_onItemDelete(itemId) {
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
 
-		renderTemplate(
+		foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/delete-item.hbs",
 			{name: itemData.name}
 		).then(html => {
