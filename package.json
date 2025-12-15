@@ -4,14 +4,14 @@
 		"build:watch": "gulp",
 		"build": "gulp build",
 		"clean": "gulp clean",
+		"createSymlinks": "./utils/create-symlinks.mjs",
 		"css": "gulp compileCss",
 		"export": "./utils/smelter.mjs unpack -i leveldb -s system/packs -d ./data/packs",
 		"import": "./utils/smelter.mjs pack -s ./data/packs -d ./system/packs",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
 		"notes": "gulp compileNotes",
-		"packs": "gulp compilePacks",
-		"createSymlinks": "node ./utils/create-symlinks.mjs"
+		"packs": "gulp compilePacks"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.3",
