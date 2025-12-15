@@ -7,7 +7,7 @@
 	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
 	"name": "Relentless",
 	"system": {
-		"description": "<p><span>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP. </span></p><p>@UUID[Compendium.shadowdark.class-abilities.Item.z5uKTDf4wtkipQ4s]{Relentless}</p>",
+		"description": "<p>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.z5uKTDf4wtkipQ4s]{Relentless}</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {

@@ -7,7 +7,7 @@
 	"img": "icons/skills/melee/sword-twirl-orange.webp",
 	"name": "Flourish",
 	"system": {
-		"description": "<p><span>3/day, regain 1d6 hit points when you hit an enemy with a melee attack. </span></p><p>@UUID[Compendium.shadowdark.class-abilities.Item.6snDwCm38HjvO1uv]{Flourish}</p>",
+		"description": "<p>3/day, regain [[/r 1d6]] hit points when you hit an enemy with a melee attack.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.6snDwCm38HjvO1uv]{Flourish}</p>",
 		"level": 0,
 		"predefinedEffects": "",
 		"source": {
