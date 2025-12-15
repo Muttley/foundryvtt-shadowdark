@@ -34,7 +34,7 @@ export default class ItemSD extends foundry.documents.Item {
 				? `${game.combat.round}.${game.combat.turn}`
 				: null;
 
-			updateData["system.start"] = {
+			updateData["flags.shadowdark.start"] = {
 				value: game.time.worldTime,
 				combatTime,
 			};
@@ -316,7 +316,7 @@ export default class ItemSD extends foundry.documents.Item {
 			// If there is combat, check if it was added during combat, otherwise
 			// consider it expired
 			if (game.combat) {
-				const startCombatTime = this.system.start.combatTime;
+				const startCombatTime = this.getFlag("shadowdark", "start")?.combatTime ?? null;
 				if (!startCombatTime) return { expired: true, remaining: 0, progress: 100 };
 
 				const round = startCombatTime.split(".")[0];
@@ -357,7 +357,7 @@ export default class ItemSD extends foundry.documents.Item {
 			return { expired: true, remaining: 0, progress: 0 };
 		}
 		else {
-			const start = this.system.start?.value ?? 0;
+			const start = this.getFlag("shadowdark", "start")?.value ?? 0;
 			const remaining = start + duration - game.time.worldTime;
 			const progress = (100 - Math.floor(100 * remaining / duration));
 			const result = { expired: remaining <= 0, remaining, progress };
