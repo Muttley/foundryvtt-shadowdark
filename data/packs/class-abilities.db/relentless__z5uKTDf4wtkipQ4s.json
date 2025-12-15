@@ -9,7 +9,7 @@
 	"system": {
 		"ability": "con",
 		"dc": 18,
-		"description": "<p><span>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</span></p>",
+		"description": "<p>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</p>",
 		"group": "Pit Fighter",
 		"limitedUses": true,
 		"loseOnFailure": false,

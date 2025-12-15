@@ -7,7 +7,7 @@
 	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
 	"name": "Turn Undead",
 	"system": {
-		"description": "<p><span class=\"fontstyle0\">You know the </span><span class=\"fontstyle2\">turn undead </span><span class=\"fontstyle0\">spell. It doesn’t count toward your number of known spells.</span></p>",
+		"description": "<p>You know the turn undead spell. It doesn’t count toward your number of known spells.</p>",
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
