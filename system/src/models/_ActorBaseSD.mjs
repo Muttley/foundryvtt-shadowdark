@@ -139,35 +139,53 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	 */
 	_getActiveEffectKeys(baseKey, baseValue, item=null, selected=[]) {
 		if (!baseKey.startsWith("system.")) baseKey = "system.".concat(baseKey);
-		const keys = [];
-		keys.push(baseKey);
 
-		// keys that relate to items can have multiple selectors
-		if (item) {
-			const selectors = [];
-			selectors.push("all");
-			// Does item have properties?
-			const properties = item.system.propertyNames;
-			if (properties.length > 0) selectors.push(...properties);
-			// is item armor?
-			if (item.system?.baseArmor) selectors.push(item.system.baseArmor);
-			// is item a weapon?
-			if (item.system?.baseWeapon) selectors.push(item.system.baseWeapon);
-			// add name of item
-			selectors.push(item.name.slugify());
+		// add extra base keys
+		const baseKeys = [baseKey];
+		if (baseKey.startsWith("system.roll.melee") || baseKey.startsWith("system.roll.ranged")) {
+			baseKeys.push(
+				baseKey.replace(/^system\.roll\.(melee|ranged)\./, "system.roll.attack.")
+			);
+		}
 
-			// generate full keys list
-			selectors.forEach(s => {
-				keys.push(`${baseKey}.${s.slugify()}`);
-			});
+		const keys = [...baseKeys];
+		const changes = [];
+		const optional = [];
+
+		for (const base of baseKeys) {
+
+			// keys that relate to items can have multiple selectors
+			if (item) {
+				const selectors = [];
+				selectors.push("all");
+				// Does item have properties?
+				const properties = item.system.propertyNames;
+				if (properties.length > 0) selectors.push(...properties);
+				// is item armor?
+				if (item.system?.baseArmor) selectors.push(item.system.baseArmor);
+				// is item a weapon?
+				if (item.system?.baseWeapon) selectors.push(item.system.baseWeapon);
+				// add name of item
+				selectors.push(item.name.slugify());
+
+				// generate full keys list
+				selectors.forEach(s => {
+					keys.push(`${base}.${s.slugify()}`);
+				});
+			}
 		}
 
 		// get data from all matching keys
-		const changes = [];
-		const optional = [];
 		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
- 			const isItem = (c.key === baseKey.concat(".this") && e.parent.uuid === item?.uuid);
-			const isOptional = c.key === baseKey.concat(".optional");
+
+			const isItem = item && baseKeys.some(base =>
+				c.key === `${base}.this` && e.parent.uuid === item.uuid
+			);
+
+			const isOptional = baseKeys.some(base =>
+				c.key === `${base}.optional`
+			);
+
 			if (keys.includes(c.key) || isItem || isOptional) {
 				c.name = e.parent.name;
 				c.value = shadowdark.dice.resolveFormula(c.value, this.parent.getRollData());
