@@ -35,6 +35,13 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.advantage":
 
+						// check initiative
+						if (change.value === "initiative") {
+							change.key = "system.roll.initiative.advantage";
+							change.value = 1;
+							continue;
+						}
+
 						// check HP
 						if (change.value === "hp") {
 							change.key = "system.roll.hp.advantage";
@@ -102,6 +109,37 @@ export default class Update_251001_1 extends UpdateBaseSD {
 					case "system.abilities.cha.base":
 						change.key = "system.abilities.cha.value"; continue;
 
+					case "system.bonuses.acBonus":
+						change.key = "system.attributes.ac.value"; continue;
+
+					case "system.bonuses.acBonusFromAttribute":
+						change.key = "system.attributes.ac.value";
+						change.value = `@attributes.${change.value}.mod`;
+						continue;
+
+					case "system.bonuses.gearSlots":
+						change.key = "system.slots"; continue;
+
+					case "system.bonuses.meleeAttackBonus":
+						change.key = "system.roll.melee.bonus.this"; continue;
+
+					case "system.bonuses.meleeDamageBonus":
+						change.key = "system.roll.melee.damage.all"; continue;
+
+					case "system.bonuses.rangedAttackBonus":
+						change.key = "system.roll.ranged.bonus.this"; continue;
+
+					case "system.bonuses.rangedDamageBonus":
+						change.key = "system.roll.ranged.damage.all"; continue;
+
+					case "system.bonuses.damageBonus":
+						change.key = "system.roll.attack.damage.this"; continue;
+
+					case "system.bonuses.spellcastingCheckBonus":
+						change.key = "system.roll.spell.advantage.all"; continue;
+
+					case "system.bonuses.unarmoredAcBonus":
+						change.key = "system.attributes.ac.unarmored"; continue;
 				}
 
 			}
