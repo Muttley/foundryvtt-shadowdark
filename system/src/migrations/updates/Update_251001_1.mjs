@@ -45,7 +45,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						// check HP
 						if (change.value === "hp") {
 							change.key = "system.roll.hp.advantage";
-							change.mode = 2;
+							change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 							change.value = 1;
 							continue;
 						}
@@ -54,31 +54,31 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						const spells = await shadowdark.compendiums.spells();
 						if (spells.map(s => s.name.slugify()).includes(change.value)) {
 							change.key = `system.roll.spell.advantage.${change.value}`;
-							change.mode = 2;
+							change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 							change.value = 1;
 							continue;
 						}
 
 					case "system.bonuses.armorMastery":
 						change.key = `system.attributes.ac.${change.value}`;
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = 1;
 						continue;
 
 					case "system.bonuses.hauler":
 						change.key = "system.slots";
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = "max(@abilities.con.mod, 0)";
 						continue;
 
 					case "system.bonuses.weaponMastery":
 						const weapon = change.value;
 						change.key = `system.roll.melee.bonus.${weapon}`;
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = "1+floor(@level.value/2)";
 						effect.changes.push({
 							key: `system.roll.melee.damage.${weapon}`,
-							mode: 2,
+							mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 							value: "1+floor(@level.value/2)",
 						});
 						continue;
@@ -140,6 +140,30 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.unarmoredAcBonus":
 						change.key = "system.attributes.ac.unarmored"; continue;
+
+					case "system.bonuses.attackBonus":
+						change.key = "system.roll.attack.bonus.this"; continue;
+
+					case "system.bonuses.critical.multiplier":
+						change.key = "system.roll.attack.critical-multiplier.this"; continue;
+
+					case "system.bonuses.stoneSkinTalent":
+						change.key = "system.attributes.ac.value";
+						change.value = "2+floor(@level.value/2)";
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
+						continue;
+
+					case "system.bonuses.backstabDie":
+						change.key = "system.roll.attack.extra-damage-die.this";
+						change.value = "1+floor(@level.value/2)";
+						continue;
+
+					case "system.bonuses.critical.failureThreshold":
+						change.key = "system.roll.attack.failure-threshold.this"; continue;
+
+					case "system.bonuses.critical.successThreshold":
+						change.key = "system.roll.attack.critical-threshold.this"; continue;
+
 				}
 
 			}
