@@ -171,7 +171,7 @@ export default class MigrationRunnerSD {
 			// enabled
 			//
 			if (!this.migrateSystemCompendiumsEnbabled) {
-				if (pack.metadata.packageType !== "world") continue;
+				if (pack.metadata.packageType === "system") continue;
 			}
 
 			await this.migrateCompendium(pack);
