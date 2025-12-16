@@ -17,7 +17,7 @@
 - [#1194] Compendium migrations skipped when in a Module
 
 ## Chores
-- [#369] Mirgrated to using data models for actors and items
+- [#369] Migrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 - [#1193] Remove redundant span elements from all compendium text fields.
 
