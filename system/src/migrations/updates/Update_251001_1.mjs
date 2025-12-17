@@ -121,7 +121,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.key = "system.slots"; continue;
 
 					case "system.bonuses.meleeAttackBonus":
-						change.key = "system.roll.melee.bonus.this";
+						change.key = "system.roll.melee.bonus";
 						if (effect.parent.type === "weapon") {
 							change.key += ".this";
 						}
