@@ -164,6 +164,29 @@ export default class Update_251001_1 extends UpdateBaseSD {
 					case "system.bonuses.critical.successThreshold":
 						change.key = "system.roll.attack.critical-threshold.this"; continue;
 
+					case "system.bonuses.weaponDamageDieD12":
+						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
+						change.value = 4;
+						continue;
+
+					case "system.bonuses.damageMultiplier":
+						change.key = "system.roll.attack.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						change.mode = CONST.ACTIVE_EFFECT_MODES.MULTIPLY;
+						continue;
+
+					case "system.bonuses.weaponDamageDieImprovementByProperty":
+						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
+						change.value = 1;
+						continue;
+
+					case "system.bonuses.weaponDamageExtraDieByProperty":
+						change.key = "system.roll.attack.extra-damage-die.this";
+						change.value = `@attributes.${change.value}.mod`;
+						continue;
+
 				}
 
 			}
