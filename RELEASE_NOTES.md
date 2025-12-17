@@ -13,10 +13,12 @@
 - [#1129] Correct inconsistent typography in compendium items *(johncarney)*
 - [#1130] Remove repeated description in Alarm spell *(johncarney)*
 - [#1140] Manifest warning related to grid settings *(andrewbeard)*
+- [#1143] CSS in v12 causing problems, cannot override
 - [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
+- [#1194] Compendium migrations skipped when in a Module
 
 ## Chores
-- [#369] Mirgrated to using data models for actors and items
+- [#369] Migrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 - [#1193] Remove redundant span elements from all compendium text fields.
 
