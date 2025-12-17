@@ -121,19 +121,51 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.key = "system.slots"; continue;
 
 					case "system.bonuses.meleeAttackBonus":
-						change.key = "system.roll.melee.bonus.this"; continue;
+						change.key = "system.roll.melee.bonus.this";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.meleeDamageBonus":
-						change.key = "system.roll.melee.damage.all"; continue;
+						change.key = "system.roll.melee.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.rangedAttackBonus":
-						change.key = "system.roll.ranged.bonus.this"; continue;
+						change.key = "system.roll.ranged.bonus";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.rangedDamageBonus":
 						change.key = "system.roll.ranged.damage.all"; continue;
 
 					case "system.bonuses.damageBonus":
-						change.key = "system.roll.attack.damage.this"; continue;
+						change.key = "system.roll.attack.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.spellcastingCheckBonus":
 						change.key = "system.roll.spell.advantage.all"; continue;
@@ -142,10 +174,26 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.key = "system.attributes.ac.unarmored"; continue;
 
 					case "system.bonuses.attackBonus":
-						change.key = "system.roll.attack.bonus.this"; continue;
+						change.key = "system.roll.attack.bonus";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.critical.multiplier":
-						change.key = "system.roll.attack.critical-multiplier.this"; continue;
+						change.key = "system.roll.attack.critical-multiplier";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.stoneSkinTalent":
 						change.key = "system.attributes.ac.value";
@@ -154,15 +202,31 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.backstabDie":
-						change.key = "system.roll.attack.extra-damage-die.this";
+						change.key = "system.roll.attack.extra-damage-die.all";
 						change.value = "1+floor(@level.value/2)";
 						continue;
 
 					case "system.bonuses.critical.failureThreshold":
-						change.key = "system.roll.attack.failure-threshold.this"; continue;
+						change.key = "system.roll.attack.failure-threshold";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.critical.successThreshold":
-						change.key = "system.roll.attack.critical-threshold.this"; continue;
+						change.key = "system.roll.attack.critical-threshold";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.weaponDamageDieD12":
 						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
@@ -173,6 +237,9 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.key = "system.roll.attack.damage";
 						if (effect.parent.type === "weapon") {
 							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
 						}
 						change.mode = CONST.ACTIVE_EFFECT_MODES.MULTIPLY;
 						continue;
