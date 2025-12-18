@@ -35,10 +35,17 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.advantage":
 
+						// check initiative
+						if (change.value === "initiative") {
+							change.key = "system.roll.initiative.advantage";
+							change.value = 1;
+							continue;
+						}
+
 						// check HP
 						if (change.value === "hp") {
 							change.key = "system.roll.hp.advantage";
-							change.mode = 2;
+							change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 							change.value = 1;
 							continue;
 						}
@@ -47,31 +54,31 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						const spells = await shadowdark.compendiums.spells();
 						if (spells.map(s => s.name.slugify()).includes(change.value)) {
 							change.key = `system.roll.spell.advantage.${change.value}`;
-							change.mode = 2;
+							change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 							change.value = 1;
 							continue;
 						}
 
 					case "system.bonuses.armorMastery":
 						change.key = `system.attributes.ac.${change.value}`;
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = 1;
 						continue;
 
 					case "system.bonuses.hauler":
 						change.key = "system.slots";
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = "max(@abilities.con.mod, 0)";
 						continue;
 
 					case "system.bonuses.weaponMastery":
 						const weapon = change.value;
 						change.key = `system.roll.melee.bonus.${weapon}`;
-						change.mode = 2;
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
 						change.value = "1+floor(@level.value/2)";
 						effect.changes.push({
 							key: `system.roll.melee.damage.${weapon}`,
-							mode: 2,
+							mode: CONST.ACTIVE_EFFECT_MODES.ADD,
 							value: "1+floor(@level.value/2)",
 						});
 						continue;
@@ -101,6 +108,151 @@ export default class Update_251001_1 extends UpdateBaseSD {
 					case "system.abilities.cha.bonus":
 					case "system.abilities.cha.base":
 						change.key = "system.abilities.cha.value"; continue;
+
+					case "system.bonuses.acBonus":
+						change.key = "system.attributes.ac.value"; continue;
+
+					case "system.bonuses.acBonusFromAttribute":
+						change.key = "system.attributes.ac.value";
+						change.value = `@attributes.${change.value}.mod`;
+						continue;
+
+					case "system.bonuses.gearSlots":
+						change.key = "system.slots"; continue;
+
+					case "system.bonuses.meleeAttackBonus":
+						change.key = "system.roll.melee.bonus";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.meleeDamageBonus":
+						change.key = "system.roll.melee.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.rangedAttackBonus":
+						change.key = "system.roll.ranged.bonus";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.rangedDamageBonus":
+						change.key = "system.roll.ranged.damage.all"; continue;
+
+					case "system.bonuses.damageBonus":
+						change.key = "system.roll.attack.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.spellcastingCheckBonus":
+						change.key = "system.roll.spell.advantage.all"; continue;
+
+					case "system.bonuses.unarmoredAcBonus":
+						change.key = "system.attributes.ac.unarmored"; continue;
+
+					case "system.bonuses.attackBonus":
+						change.key = "system.roll.attack.bonus";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.critical.multiplier":
+						change.key = "system.roll.attack.critical-multiplier";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.stoneSkinTalent":
+						change.key = "system.attributes.ac.value";
+						change.value = "2+floor(@level.value/2)";
+						change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;
+						continue;
+
+					case "system.bonuses.backstabDie":
+						change.key = "system.roll.attack.extra-damage-die.all";
+						change.value = "1+floor(@level.value/2)";
+						continue;
+
+					case "system.bonuses.critical.failureThreshold":
+						change.key = "system.roll.attack.failure-threshold";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.critical.successThreshold":
+						change.key = "system.roll.attack.critical-threshold";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
+
+					case "system.bonuses.weaponDamageDieD12":
+						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
+						change.value = 4;
+						continue;
+
+					case "system.bonuses.damageMultiplier":
+						change.key = "system.roll.attack.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+						change.mode = CONST.ACTIVE_EFFECT_MODES.MULTIPLY;
+						continue;
+
+					case "system.bonuses.weaponDamageDieImprovementByProperty":
+						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
+						change.value = 1;
+						continue;
+
+					case "system.bonuses.weaponDamageExtraDieByProperty":
+						change.key = `system.roll.attack.extra-damage-die.${change.value}`;
+						change.value = 1;
+						continue;
 
 				}
 
