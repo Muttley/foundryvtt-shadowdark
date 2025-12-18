@@ -250,8 +250,8 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.weaponDamageExtraDieByProperty":
-						change.key = "system.roll.attack.extra-damage-die.this";
-						change.value = `@attributes.${change.value}.mod`;
+						change.key = `system.roll.attack.extra-damage-die.${change.value}`;
+						change.value = 1;
 						continue;
 
 				}
