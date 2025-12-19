@@ -57,31 +57,23 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	/** @override */
 	async getData(options) {
-		const source = this.actor.toObject();
-		const actorData = this.actor.toObject(false);
 
 		const context = {
-			actor: actorData,
+			actor: this.actor,
 			config: CONFIG.SHADOWDARK,
 			cssClass: this.actor.isOwner ? "editable" : "locked",
 			editable: this.isEditable,
 			hiddenSections: this._hiddenSectionsLut,
-			isNpc: this.actor.type === "NPC",
-			isPlayer: this.actor.type === "Player",
 			items: this.actor.items,
 			owner: this.actor.isOwner,
 			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
-			rollData: this.actor.getRollData.bind(this.actor),
-			source: source.system,
-			system: actorData.system,
+			system: this.actor.system,
 		};
 
-		context.activeEffects = shadowdark.effects.prepareActiveEffectCategories(
-			this.actor.allApplicableEffects().filter(e => !e.isSuppressed)
-		);
+		context.activeEffects = this.actor.allApplicableEffects().filter(e => !e.isSuppressed);
 
 		context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-			context.system.notes,
+			this.actor.system.notes,
 			{
 				secrets: this.actor.isOwner,
 				async: true,

@@ -4,13 +4,14 @@
 */
 
 
-export function addStandardFormGroups(config) {
+export async function addStandardFormGroups(config) {
 	// Generate prompt form data
 	const appfields = foundry.applications.fields;
 	config.mainFormGroups ??= [];
+	config.optionalFormGroups ??= [];
 
+	// Main Roll Prompt
 	if (config?.mainRoll?.formula) {
-		// Roll Prompt
 		const rollInput = appfields.createTextInput({name: "mainRoll.formula", value: config.mainRoll.formula});
 		const rollFormGroup = appfields.createFormGroup({
 			input: rollInput,
@@ -21,8 +22,8 @@ export function addStandardFormGroups(config) {
 		config.mainFormGroups.push(rollFormGroup);
 	}
 
+	// Damage Prompt
 	if (config?.damageRoll?.formula) {
-		// Damage Prompt
 		const damageInput = appfields.createTextInput({name: "damageRoll.formula", value: config.damageRoll.formula});
 		const damageFormGroup = appfields.createFormGroup({
 			input: damageInput,
@@ -32,7 +33,24 @@ export function addStandardFormGroups(config) {
 		config.mainFormGroups.push(damageFormGroup);
 	}
 
-	// TODO add optional form groups
+	// Generate Situational options
+	if (config.situational?.length > 0) {
+		for (const uuid of config.situational) {
+			const effect = await fromUuid(uuid);
+			const checkbox = document.createElement("input");
+			checkbox.type = "checkbox";
+  			checkbox.name = "selected";
+			checkbox.value = uuid;
+			checkbox.checked = false;
+
+			const checkboxFormGroup = appfields.createFormGroup({
+				input: checkbox,
+				label: effect.parent.name,
+				hint: shadowdark.utils.removeHTML(effect.description),
+			});
+			config.optionalFormGroups.push(checkboxFormGroup);
+		}
+	}
 }
 
 
@@ -194,7 +212,7 @@ export async function rollDialog(config) {
 	config.heading ??= "";
 
 	// adds attack, damage and optional form groups to the dialog prompt
-	addStandardFormGroups(config);
+	await addStandardFormGroups(config);
 
 	await Hooks.call("SD-Roll-Dialog", config);
 
@@ -214,6 +232,12 @@ export async function rollDialog(config) {
 	// callback function for dialog to get inputed mode
 	const callbackHandler = ((event, button, dialog) => {
 		const formData = new FormDataExtended(button.form).object;
+		// make sure formData.selected is an array
+		if (formData.selected) {
+			formData.selected = formData.selected && Array.isArray(formData.selected)
+				? formData.selected.filter(s => s !== null)
+				: [formData.selected].filter(s => s !== null);
+		}
 		// determine advantage based on button press
 		let adv = 0;
 		if (button.dataset.action === "advantage") adv = 1;
@@ -223,9 +247,14 @@ export async function rollDialog(config) {
 	});
 
 	const dialogData = {
-		window: { title: config.type },
+		window: {
+			title: config.type,
+		},
 		content,
 		classes: [],
+		position: {
+			width: 500,
+		},
 		buttons: [{
 			action: "normal",
 			default: config?.mainRoll?.advantage === 0,

@@ -125,7 +125,8 @@ export default class NpcSD extends ActorBaseSD {
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",
 			this.spellcasting.bonus,
-			spell
+			spell,
+			config
 		);
 
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);
