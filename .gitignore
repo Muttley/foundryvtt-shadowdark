@@ -1,4 +1,5 @@
 .vscode/
+foundry/
 node_modules/
 scratch/
 system/css/
@@ -7,4 +8,5 @@ system/packs/
 
 .env
 *.code-workspace
+foundry-config.yaml
 shadowdark-compiled*

@@ -5,7 +5,7 @@
 		"node": true,
 		"jquery": true
 	},
-	"ignorePatterns": ["**/*compiled.mjs"],
+	"ignorePatterns": ["**/*compiled.mjs", "foundry/**/*"],
 	"parserOptions": {
 		"requireConfigFile": false,
 		"sourceType": "module",
