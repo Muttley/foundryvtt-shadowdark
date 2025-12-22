@@ -22,13 +22,7 @@
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 - [#1193] Remove redundant span elements from all compendium text fields.
 
-*Many thanks to
-**Ashley Towner <git@ashtowner.com>**
-**andrewbeard**
-**Brittonlj**
-**johncarney**
-**puradox**
-for contributing to this release*
+*Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
 
 ---
 
