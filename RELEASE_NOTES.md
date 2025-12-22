@@ -22,13 +22,17 @@
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 - [#1193] Remove redundant span elements from all compendium text fields.
 
-*Many thanks to
-**Ashley Towner <git@ashtowner.com>**
-**andrewbeard**
-**Brittonlj**
-**johncarney**
-**puradox**
-for contributing to this release*
+*Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
+
+---
+
+# v3.6.2
+
+## Bugfixes
+- [#1197] Fixed issue with Ability checks on character sheet
+
+## Chores
+- [#1192] Merge Portuguese (Brazilian) translation updates from Crowdin
 
 ---
 

@@ -267,6 +267,12 @@ export default class UtilitySD {
 		}
 	}
 
+	static removeHTML(text) {
+		const el = document.createElement("div");
+		el.innerHTML = text;
+		return el.textContent;
+	}
+
 
 	// If this is a new release, show the release notes to the GM the first time
 	// they login

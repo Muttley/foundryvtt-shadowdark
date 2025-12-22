@@ -185,8 +185,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.abilities = this.actor.system.abilities;
 		context.gearSlots = this.actor.system.slots;
 
-		context.xpNextLevel = context.system.level.value * 10;
-		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
+		context.xpNextLevel = this.actor.system.level.value * 10;
+		context.levelUp = (this.actor.system.level.xp >= context.xpNextLevel);
 
 		context.isSpellCaster = await this.actor.system.isSpellCaster();
 		context.canUseMagicItems = await this.actor.canUseMagicItems();
@@ -661,13 +661,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onUseAbility(event) {
 		event.preventDefault();
 
-		const itemUuid = event.currentTarget.dataset.itemUuid;
-		if (event.shiftKey) {
-			this.actor.system.useAbility(itemUuid, {skipPrompt: true});
-		}
-		else {
-			this.actor.system.useAbility(itemUuid);
-		}
+		const itemId = $(event.currentTarget).data("item-id");
+		const options = this.actor.buildOptionsForSkipPrompt(event);
+
+		this.actor.useAbility(itemId, options);
 	}
 
 	async _onUsePotion(event) {

@@ -52,7 +52,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const context = await super.getData(options);
 
 		// Ability Scores
-		for (const [key, ability] of Object.entries(context.system.abilities)) {
+		for (const [key, ability] of Object.entries(this.actor.system.abilities)) {
 			const labelKey = `SHADOWDARK.ability_${key}`;
 			ability.label = `${game.i18n.localize(labelKey)}`;
 		}

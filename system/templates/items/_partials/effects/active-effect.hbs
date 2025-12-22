@@ -40,6 +40,21 @@
 
 		<a
 			class="effect-control"
+			data-action="toggle-situational"
+			data-tooltip="{{localize "SHADOWDARK.sheet.general.active_effects.toggle_situational.tooltip"}}"
+		>
+			{{#if effect.isSituational}}
+				<i
+					class="fas fa-circle-question"
+					style="color:var(--primary);"
+				></i>
+			{{else}}
+				<i class="far fa-circle-question"></i>
+			{{/if}}
+		</a>
+
+		<a
+			class="effect-control"
 			data-action="edit"
 			data-tooltip="{{localize 'SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip'}}"
 		>

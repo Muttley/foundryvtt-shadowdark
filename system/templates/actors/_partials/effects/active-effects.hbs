@@ -29,14 +29,10 @@
 			<div class="actions"></div>
 		</li>
 
-		{{#each activeEffects as |section sid|}}
-			{{#each section.effects as |effect|}}
-
-				{{> actors/_partials/effects/active-effect
-					effect=effect
-				}}
-
-			{{/each}}
+		{{#each activeEffects as |effect|}}
+			{{> actors/_partials/effects/active-effect
+				effect=effect
+			}}
 		{{/each}}
 	</ol>
 {{/ui/sd-hideable-section}}

@@ -133,11 +133,11 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	 * Deterministic placeholders are resolved based on actor's rollData
 	 * @param {string} baseKey The base key under system. without selectors
 	 * @param {int|string} baseValue The starting value that the AE effects will modify
+	 * @param {document} config Roll config object. Used to apply situational modifiers
 	 * @param {document} item optional item to use as a selector by it's name and properties
-	 * @param {document} selected optional selectors to include i.e. system.[baseKey].optional
 	 * @returns {rollKeyObject}
 	 */
-	_getActiveEffectKeys(baseKey, baseValue, item=null, selected=[]) {
+	_getActiveEffectKeys(baseKey, baseValue, item=null, config={}) {
 		if (!baseKey.startsWith("system.")) baseKey = "system.".concat(baseKey);
 
 		// add extra base keys
@@ -150,7 +150,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 		const keys = [...baseKeys];
 		const changes = [];
-		const optional = [];
+		config.situational ??= [];
 
 		for (const base of baseKeys) {
 
@@ -182,20 +182,16 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 				c.key === `${base}.this` && e.parent.uuid === item.uuid
 			);
 
-			const isOptional = baseKeys.some(base =>
-				c.key === `${base}.optional`
-			);
+			if (keys.includes(c.key) || isItem) {
+				// include only selected situational active effects
+				if (e.isSituational) {
+					config.situational.push(e.uuid);
+					if (!config.selected?.includes(e.uuid)) return;
+				}
 
-			if (keys.includes(c.key) || isItem || isOptional) {
 				c.name = e.parent.name;
 				c.value = shadowdark.dice.resolveFormula(c.value, this.parent.getRollData());
 				c.priority = c.priority ?? c.mode * 10;
-
-				if (isOptional) {
-					optional.push(c);
-					if (!selected.includes(c.name)) return;
-				}
-
 				changes.push(c);
 			}
 		}));
@@ -247,18 +243,18 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			value: finalValue,
 			tooltips: tooltips.filter(Boolean).join(", "),
 			changes,
-			optional,
 		};
 	}
 
 	_generateAbilityCheckConfig(ability, config={}) {
+		config.situational = [];
 		config.mainRoll ??= {};
 		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
 		config.mainRoll.base ??= "d20";
 
 		// generate check formula from ability mod and AE roll bonuses
 		const modifer = this.abilities[ability].mod;
-		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer);
+		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer, null, config);
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(rollKey.value);
 		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
@@ -275,7 +271,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 
 		// calculate roll advantage
-		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0);
+		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0, null, config);
 		config.mainRoll.advantage ??= advRollKeyAdv.value;
 		config.mainRoll.advantageTooltips = advRollKeyAdv.tooltips;
 	}

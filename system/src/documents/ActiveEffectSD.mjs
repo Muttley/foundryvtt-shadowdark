@@ -30,6 +30,10 @@ export default class ActiveEffectSD extends ActiveEffect {
 		return super.apply(actor, change);
 	}
 
+	get isSituational() {
+		return this.getFlag("shadowdark", "situational") ?? false;
+	}
+
 	/**
 	 * Automatically deactivate effects when parent item is stashed.
 	 * @inheritdoc
@@ -41,5 +45,9 @@ export default class ActiveEffectSD extends ActiveEffect {
 		else {
 			return super.isSuppressed;
 		}
+	}
+
+	async toggleSituational() {
+		await this.setFlag("shadowdark", "situational", !this.isSituational);
 	}
 }

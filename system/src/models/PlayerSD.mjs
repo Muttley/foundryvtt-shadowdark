@@ -223,7 +223,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const attackRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.bonus`,
 			abilityBonus,
-			weapon
+			weapon,
+			config
 		);
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
 		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
@@ -232,7 +233,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const critThresholdKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.critical-threshold`,
 			20,
-			weapon
+			weapon,
+			config
 		);
 		config.mainRoll.criticalSuccessAt = critThresholdKey.value;
 
@@ -240,7 +242,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const failThresholdKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.failure-threshold`,
 			1,
-			weapon
+			weapon,
+			config
 		);
 		config.mainRoll.criticalFailureAt = failThresholdKey.value;
 
@@ -248,7 +251,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const critMultiplierKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.critical-multiplier`,
 			2,
-			weapon
+			weapon,
+			config
 		);
 		config.mainRoll.criticalMultiplier = critMultiplierKey.value;
 
@@ -269,7 +273,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const rollKeyAdv = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.advantage`,
 			0,
-			weapon
+			weapon,
+			config
 		);
 		config.mainRoll.advantage ??= rollKeyAdv.value;
 		config.mainRoll.advantageTooltips = rollKeyAdv.tooltips;
@@ -291,7 +296,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const damageDieRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.upgrade-damage-die`,
 			0,
-			weapon
+			weapon,
+			config
 		);
 		if (damageDieRollKey.value) {
 			config.damageRoll.base = shadowdark.dice.upgradeDie(
@@ -306,7 +312,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const extraDieRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.extra-damage-die`,
 			0,
-			weapon
+			weapon,
+			config
 		);
 		if (extraDieRollKey.value) {
 			const baseDie = baseDamageValue.match(/^[dD](\d*)/)[1];
@@ -319,7 +326,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const damageRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.damage`,
 			baseDamageValue,
-			weapon
+			weapon,
+			config
 		);
 		config.damageRoll.formula ??= damageRollKey.value;
 
@@ -352,7 +360,8 @@ export default class PlayerSD extends ActorBaseSD {
 			const abilityRollKey = this._getActiveEffectKeys(
 				"system.roll.ability.bonus",
 				0,
-				ability
+				ability,
+				config
 			);
 
 			config.mainRoll.bonus ??= shadowdark.dice.formatBonus(abilityRollKey.value);
@@ -362,7 +371,8 @@ export default class PlayerSD extends ActorBaseSD {
 			const abilityAdvKey = this._getActiveEffectKeys(
 				"system.roll.ability.advantage",
 				0,
-				ability
+				ability,
+				config
 			);
 			config.mainRoll.advantage ??= abilityAdvKey.value;
 			config.mainRoll.advantageTooltips = abilityAdvKey.tooltips;
@@ -416,7 +426,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",
 			this.abilities[ability].mod,
-			spell
+			spell,
+			config
 		);
 
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);

@@ -420,61 +420,9 @@ export default class ActiveEffectsSD {
 				});
 			case "toggle":
 				return effect.update({disabled: !effect.disabled});
+			case "toggle-situational":
+				return effect.toggleSituational();
 		}
-	}
-
-
-	/**
-	* Prepare the data structure for Active Effects which are currently applied
-	* to an Actor or Item.
-	*
-	* @param {ActiveEffect[]} effects    The array of Active Effect instances
-	*                                    to prepare sheet data for
-	* @return {object}                   Data for rendering
-	*/
-	static prepareActiveEffectCategories(effects) {
-		const categories = {
-			active: {
-				type: "active",
-				effects: [],
-			},
-			inactive: {
-				type: "inactive",
-				effects: [],
-			},
-		};
-
-		for (const effect of effects) {
-			const decoratedEffect = {
-				disabled: effect.disabled,
-				durationLabel: effect.duration.label,
-				id: effect.id,
-				img: effect.img,
-				name: effect.name,
-				sourceName: effect.parent?.name ?? "Unknown",
-			};
-
-			if (effect.disabled) {
-				categories.inactive.effects.push(decoratedEffect);
-			}
-			else {
-				categories.active.effects.push(decoratedEffect);
-			}
-		}
-
-		categories.active.effects.sort(
-			(a, b) => a.name.localeCompare(b.name)
-		).sort(
-			(a, b) => a.sourceName.localeCompare(b.sourceName)
-		);
-
-		categories.inactive.effects.sort(
-			(a, b) => a.name.localeCompare(b.name)
-		).sort(
-			(a, b) => a.sourceName.localeCompare(b.sourceName)
-		);
-
-		return categories;
 	}
 
 }
