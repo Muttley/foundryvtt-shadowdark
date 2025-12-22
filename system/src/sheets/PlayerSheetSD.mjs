@@ -674,10 +674,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		event.preventDefault();
 
 		const itemId = $(event.currentTarget).data("item-id");
-		const options = {
-			skipPrompt: this.getSkipPrompt(event),
-			adv: this.getAdvantage(event),
-		};
+		const options = this.actor.buildOptionsForSkipPrompt(event);
 
 		this.actor.useAbility(itemId, options);
 	}
