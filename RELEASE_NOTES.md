@@ -1,3 +1,10 @@
+# v3.6.2
+
+## Bugfixes
+- [#1197] Fixed issue with Ability checks on character sheet
+
+---
+
 # v3.6.1
 
 ## Enhancements
