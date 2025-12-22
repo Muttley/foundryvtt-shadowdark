@@ -661,13 +661,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onUseAbility(event) {
 		event.preventDefault();
 
-		const itemUuid = event.currentTarget.dataset.itemUuid;
-		if (event.shiftKey) {
-			this.actor.system.useAbility(itemUuid, {skipPrompt: true});
-		}
-		else {
-			this.actor.system.useAbility(itemUuid);
-		}
+		const itemId = $(event.currentTarget).data("item-id");
+		const options = this.actor.buildOptionsForSkipPrompt(event);
+
+		this.actor.useAbility(itemId, options);
 	}
 
 	async _onUsePotion(event) {

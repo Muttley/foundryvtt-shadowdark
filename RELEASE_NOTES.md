@@ -32,6 +32,16 @@ for contributing to this release*
 
 ---
 
+# v3.6.2
+
+## Bugfixes
+- [#1197] Fixed issue with Ability checks on character sheet
+
+## Chores
+- [#1192] Merge Portuguese (Brazilian) translation updates from Crowdin
+
+---
+
 # v3.6.1
 
 ## Enhancements
