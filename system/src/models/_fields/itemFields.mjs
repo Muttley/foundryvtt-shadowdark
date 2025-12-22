@@ -14,6 +14,7 @@ export const lightSource = () => ({
 	light: new fields.SchemaField({
 		active: new fields.BooleanField({initial: false}),
 		hasBeenUsed: new fields.BooleanField({initial: false}),
+		isMagical: new fields.BooleanField({initial: false}),
 		isSource: new fields.BooleanField({initial: false}),
 		longevityMins: new fields.NumberField({ integer: true, initial: 60, min: 0}),
 		remainingSecs: new fields.NumberField({ integer: true, initial: 3600, min: 0}),

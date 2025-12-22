@@ -1,3 +1,5 @@
+import { SHADOWDARK, SYSTEM_ID, SYSTEM_NAME } from "./src/config.mjs";
+
 import ActiveEffectsSD from "./src/system/ActiveEffectsSD.mjs";
 import ChatSD from "./src/system/ChatSD.mjs";
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
@@ -7,7 +9,6 @@ import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import registerTextEditorEnrichers from "./src/enrichers.mjs";
-import SHADOWDARK from "./src/config.mjs";
 import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
 
@@ -30,6 +31,9 @@ import listenOnSocket from "./src/socket.mjs";
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
 
+globalThis.SYSTEM_ID = SYSTEM_ID;
+globalThis.SYSTEM_NAME = SYSTEM_NAME;
+
 globalThis.shadowdark = {
 	apps,
 	chat: ChatSD,
@@ -48,6 +52,7 @@ globalThis.shadowdark = {
 	warn: Logger.warn,
 };
 
+
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
@@ -56,12 +61,12 @@ globalThis.shadowdark = {
 // initialization tasks have begun.
 //
 Hooks.once("init", () => {
+	shadowdark.log("Running init hook");
+
 	globalThis.shadowdark = game.shadowdark = Object.assign(
 		game.system,
 		globalThis.shadowdark
 	);
-
-	shadowdark.log("Initialising the Shadowdark RPG Game System");
 
 	game.shadowdark = {
 		config: SHADOWDARK,
