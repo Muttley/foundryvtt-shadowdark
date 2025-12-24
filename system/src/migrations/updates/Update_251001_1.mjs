@@ -154,7 +154,15 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.rangedDamageBonus":
-						change.key = "system.roll.ranged.damage.all"; continue;
+						change.key = "system.roll.ranged.damage";
+						if (effect.parent.type === "weapon") {
+							change.key += ".this";
+						}
+						else {
+							change.key += ".all";
+						}
+
+						continue;
 
 					case "system.bonuses.damageBonus":
 						change.key = "system.roll.attack.damage";
