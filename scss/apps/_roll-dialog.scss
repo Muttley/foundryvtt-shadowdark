@@ -1,0 +1,132 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+#sd-roll-dialog {
+
+	hr {
+		margin: 0.75rem 0;
+		border: none;
+		border-top: 1px solid var(--color-border-light-primary);
+	}
+
+
+
+	.roll-input {
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		label {
+			font-weight: bold;
+			flex: 1;
+			font-size: 1.25em;
+		}
+
+		input {
+			flex: 1;
+		}
+
+		.tooltips {
+			flex-basis: 100%;
+			font-size: 0.75rem;
+			color: var(--color-text-dark-secondary);
+			line-height: 1.2;
+			margin: 0;
+		}
+	}
+
+	.advantage-buttons {
+		display: flex;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		input {
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		label {
+			flex: 1;
+			display: block;
+			padding: 0.5rem 1rem;
+			text-align: center;
+			background: transparent;
+			color: #777;
+			border-radius: 3px;
+			transition: background 0.15s;
+			user-select: none;
+			cursor: pointer;
+		}
+
+		input:checked + label {
+			background: #6c757d;
+			color: #fff;
+		}
+
+		input:not(:checked) + label:hover {
+			background: #1f2224;
+		}
+
+		input:focus-visible + label {
+			outline: 2px solid #4a9eff;
+			outline-offset: 2px;
+		}
+	}
+
+	.situational-options {
+
+		label {
+			font-weight: bold;
+			flex: 1;
+			font-size: 1.25em;
+		}
+
+		.situational-option {
+			display: flex;
+			align-items: start;
+			gap: 0.75rem;
+			padding: 0.5rem;
+			border: 1px solid var(--color-border-light-primary);
+			border-radius: 3px;
+			margin-bottom: 0.5rem;
+
+			.tooltips {
+				flex: 1;
+				font-size: 0.75rem;
+				line-height: 1.3;
+				color: var(--color-text-dark-primary);
+				margin: 0;
+			}
+
+			input {
+				flex-shrink: 0;
+				width: 1.2rem;
+				height: 1.2rem;
+				margin: 0;
+				cursor: pointer;
+			}
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.05);
+			}
+		}
+	}
+
+	.roll-footer {
+		display: flex;
+		align-items: flex-end;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
+
+		select {
+			flex: 1;
+			height: 2.5rem;
+		}
+
+		button {
+			flex: 1;
+			height: 2.5rem;
+		}
+	}
+
+}

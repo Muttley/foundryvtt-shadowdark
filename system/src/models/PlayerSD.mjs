@@ -210,11 +210,11 @@ export default class PlayerSD extends ActorBaseSD {
 		};
 	}
 
-	_calcAttackRollConfig(weapon, config) {
+	_calcAttackMainConfig(weapon, config) {
 		config.mainRoll ??= {};
 		config.mainRoll.type = "Attack";
 		config.mainRoll.base ??= "d20";
-		config.mainRoll.label ??= "Attack Roll"; // TODO localize
+		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.attack");
 		// Calculate Attack Bonus from Ability mod & AE bonuses
 		const abilityBonus = this._getAttackAbilityBonus(
 			config.attack.type,
@@ -231,7 +231,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// attack critical threshold
 		const critThresholdKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.critical-threshold`,
+			`roll.${config.attack.type}.critical-success`,
 			20,
 			weapon,
 			config
@@ -240,7 +240,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// attack failure threshold
 		const failThresholdKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.failure-threshold`,
+			`roll.${config.attack.type}.critical-failure`,
 			1,
 			weapon,
 			config
@@ -256,6 +256,14 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		config.mainRoll.criticalMultiplier = critMultiplierKey.value;
 
+		// calculate attack advantage
+		const rollKeyAdv = this._getActiveEffectKeys(
+			`roll.${config.attack.type}.advantage`,
+			0,
+			weapon,
+			config
+		);
+		config.mainRoll.advantage = rollKeyAdv.value;
 
 		// generate tooltips
 		const tooltips = [];
@@ -264,20 +272,12 @@ export default class PlayerSD extends ActorBaseSD {
 			abilityBonus
 		));
 		tooltips.push(attackRollKey.tooltips);
-		tooltips.push(critThresholdKey.tooltips.replace("(", "(Crit.Succ ")); // TODO localize
-		tooltips.push(failThresholdKey.tooltips.replace("(", "(Crit.Fail ")); // TODO localize
-		tooltips.push(critMultiplierKey.tooltips.replace("(", "(Crit.Multi ")); // TODO localize
+		tooltips.push(critThresholdKey.tooltips);
+		tooltips.push(failThresholdKey.tooltips);
+		tooltips.push(critMultiplierKey.tooltips);
+		tooltips.push(rollKeyAdv.tooltips);
 		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
-		// calculate attack advantage
-		const rollKeyAdv = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.advantage`,
-			0,
-			weapon,
-			config
-		);
-		config.mainRoll.advantage ??= rollKeyAdv.value;
-		config.mainRoll.advantageTooltips = rollKeyAdv.tooltips;
 	}
 
 	/**
@@ -287,10 +287,8 @@ export default class PlayerSD extends ActorBaseSD {
 	 */
 	_calcAttackDamageConfig(weapon, config) {
 		config.damageRoll ??= {};
-		config.damageRoll.label = "Damage Roll"; // TODO localize
-		config.damageRoll.base ??= weapon.system.getDamageFormula(config.attack.handedness);
-
-		const tooltips = [];
+		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
+		config.damageRoll.base = weapon.system.getDamageFormula(config.attack.handedness);
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
@@ -304,7 +302,6 @@ export default class PlayerSD extends ActorBaseSD {
 				config.damageRoll.base,
 				damageDieRollKey.value
 			);
-			tooltips.push(damageDieRollKey.tooltips.replace("(", "(up.Die ")); // TODO localize
 		}
 
 		// Get roll key extra dice
@@ -318,9 +315,7 @@ export default class PlayerSD extends ActorBaseSD {
 		if (extraDieRollKey.value) {
 			const baseDie = baseDamageValue.match(/^[dD](\d*)/)[1];
 			baseDamageValue += ` +${extraDieRollKey.value}d${baseDie}`;
-			tooltips.push(extraDieRollKey.tooltips.replace("(", "(Add.Die ")); // TODO localize
 		}
-
 
 		// Get damage formula and bonuses from Rolls keys
 		const damageRollKey = this._getActiveEffectKeys(
@@ -329,13 +324,15 @@ export default class PlayerSD extends ActorBaseSD {
 			weapon,
 			config
 		);
-		config.damageRoll.formula ??= damageRollKey.value;
+		config.damageRoll.formula = damageRollKey.value;
 
 		// generate tooltips
+		const tooltips = [];
 		tooltips.push(damageRollKey.tooltips);
+		tooltips.push(damageDieRollKey.tooltips);
+		tooltips.push(extraDieRollKey.tooltips);
 		config.damageRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
-		// TODO damage advantage
 	}
 
 	_calcAttackExtraConfig(weapon, config) {
@@ -346,26 +343,24 @@ export default class PlayerSD extends ActorBaseSD {
 		if (!ability) return; // TODO error message
 		config.itemUuid = ability.uuid;
 
-		config.descriptions ??= [];
+		config.descriptions = [];
 		config.descriptions.push(ability.system.description);
 
 		// roll required?
 		if (ability.system.ability) {
+			config.situational = [];
 			config.mainRoll ??= {};
 			config.mainRoll.type = "Ability";
 			config.mainRoll.base ??= "d20";
-			config.mainRoll.label ??= "Special Ability Roll"; // TODO localize
+			config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.special_ability");
 			config.mainRoll.dc ??= ability.system.dc;
 
-			const abilityRollKey = this._getActiveEffectKeys(
-				"system.roll.ability.bonus",
-				0,
-				ability,
-				config
-			);
 
-			config.mainRoll.bonus ??= shadowdark.dice.formatBonus(abilityRollKey.value);
-			config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+			// generate check formula from ability mod and AE roll bonuses
+			const modifer = this.abilities[ability.system.ability].mod;
+			const rollKey = this._getActiveEffectKeys("roll.ability.bonus", modifer, ability, config);
+			config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
+			config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
 			// calculate attack advantage
 			const abilityAdvKey = this._getActiveEffectKeys(
@@ -374,8 +369,19 @@ export default class PlayerSD extends ActorBaseSD {
 				ability,
 				config
 			);
-			config.mainRoll.advantage ??= abilityAdvKey.value;
-			config.mainRoll.advantageTooltips = abilityAdvKey.tooltips;
+			config.mainRoll.advantage = abilityAdvKey.value;
+
+			// generate tooltips
+			const tooltips = [];
+			if (modifer !==0) {
+				tooltips.push(shadowdark.dice.createToolTip(
+					game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus name
+					modifer
+				));
+			}
+			tooltips.push(rollKey.tooltips);
+			tooltips.push(abilityAdvKey.tooltips);
+			config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 		}
 		else {
 			config.skipPrompt = true;
@@ -394,45 +400,62 @@ export default class PlayerSD extends ActorBaseSD {
 		config.attack.type ??= weapon.system.type;
 		config.attack.range ??= weapon.system.range;
 
-		config.descriptions ??= [];
+		config.situational = [];
+		config.descriptions = [];
 		config.descriptions.push(weapon.system?.description);
 
 		// calulate attack config
-		this._calcAttackRollConfig(weapon, config);
+		this._calcAttackMainConfig(weapon, config);
 		this._calcAttackDamageConfig(weapon, config);
 		this._calcAttackExtraConfig(weapon, config);
 
 		return config;
 	}
 
-	async _generateSpellConfig(spell, ability, config={}) {
+	_generateSpellConfig(spell, config={}) {
 		if (!spell.system.isSpell) return;
 		config.itemUuid = spell.uuid;
 
 		config.cast ??= {};
 		config.cast.focus ??= false;
-		config.cast.range ??= spell.system.range;
-		config.cast.duration ??= spell.system?.duration;
+		config.cast.ability ??= "int";
+		config.cast.range = spell.system.range;
+		config.cast.duration = spell.system?.duration;
 
-		config.descriptions ??= [];
+		config.descriptions = [];
 		config.descriptions.push(spell.system?.description);
 
+		config.situational = [];
 		config.mainRoll ??= {};
 		config.mainRoll.type = "Spell";
 		config.mainRoll.base ??= "d20";
-		config.mainRoll.label ??= "Spell Cast Roll"; // TODO localize
-		config.mainRoll.dc ??= spell.system?.dc;
+		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.spell_cast");
+		config.mainRoll.dc = spell.system?.dc;
 
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",
-			this.abilities[ability].mod,
+			this.abilities[config.cast.ability].mod,
 			spell,
 			config
 		);
 
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(spellRollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
+		// calculate spell advantage
+		const spellAdvKey = this._getActiveEffectKeys(
+			"system.roll.spell.advantage",
+			0,
+			spell,
+			config
+		);
+		config.mainRoll.advantage = spellAdvKey.value;
+
+		// generate tooltips
+		const tooltips = [];
+		tooltips.push(spellRollKey.tooltips);
+		tooltips.push(spellAdvKey.tooltips);
+		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 	}
 
 	_getAttackAbilityBonus(attackType, finesse=false) {
@@ -628,25 +651,30 @@ export default class PlayerSD extends ActorBaseSD {
 		config.actorId = this.parent.id;
 		config.itemUuid = spellUuid;
 
-		const abilityId = await this._getSpellcastingAbility(spell);
-		if (abilityId === "") {
+		// get casting ability
+		const castingAbility = await this._getSpellcastingAbility(spell);
+		if (castingAbility === "") {
 			return ui.notifications.error(
 				game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell"),
 				{permanent: false}
 			);
 		}
+		config.cast ??= {};
+		config.cast.ability = castingAbility;
 
 		shadowdark.dice.setRollTarget(config);
 
-		await this._generateSpellConfig(spell, abilityId, config);
+		this._generateSpellConfig(spell, config);
 
-		if (!await shadowdark.dice.rollDialog(config)) return false;
+		if (!await shadowdark.dice.rollDialog(
+			config,
+			() => this._generateSpellConfig(spell, config)
+		)) return false;
 
 		// Call player cast spell hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Spell", config)) return false;
 
 		const roll = shadowdark.dice.rollFromConfig(config);
-
 		return roll.success;
 	}
 
@@ -932,6 +960,8 @@ export default class PlayerSD extends ActorBaseSD {
 
 		shadowdark.dice.setRollTarget(config);
 
+		config.heading = `Attacking with ${weapon.name}`;
+
 		// TODO Test for available amnunition
 		/*
 		if (typeof rollData.ammunitionItem === "undefined") {
@@ -945,10 +975,9 @@ export default class PlayerSD extends ActorBaseSD {
 		this._generateAttackConfig(weapon, config);
 
 		// show roll prompt and cancelled if closed
-		if (!await shadowdark.dice.rollDialog(config)) return false;
-
-		// regenerate attack data based on new potential dialog inputs
-		this._generateAttackConfig(weapon, config);
+		if (!await shadowdark.dice.rollDialog(config,
+			() => this._generateAttackConfig(weapon, config)
+		)) return false;
 
 		// Call player attack hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Attack", config)) return false;
@@ -1016,7 +1045,10 @@ export default class PlayerSD extends ActorBaseSD {
 		config.actorId = this.parent.id;
 
 		this._generateAbilityConfig(ability, config);
-		if (!await shadowdark.dice.rollDialog(config)) return false;
+
+		if (!await shadowdark.dice.rollDialog(config,
+			() => this._generateAbilityConfig(ability, config)
+		)) return false;
 
 		// Call player classAbility hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-classAbility", config)) return false;

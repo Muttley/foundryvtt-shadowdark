@@ -224,7 +224,7 @@ export default class NpcSD extends ActorBaseSD {
 		const atkBonus = shadowdark.dice.formatBonus(attack.system.bonuses.attackBonus);
 		config.mainRoll.formula ??= `${config.mainRoll.base}${atkBonus}`;
 		config.mainRoll.advantage ??= 0;
-		config.mainRoll.label ??= "Attack"; // TODO localize
+		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.attack");
 
 		config.descriptions ??= [];
 		config.descriptions.push(attack.system?.description);
@@ -234,7 +234,7 @@ export default class NpcSD extends ActorBaseSD {
 		config.attack.type ??= (config.attack.range === "close")? "melee" : "ranged";
 
 		config.damageRoll ??= {};
-		config.damageRoll.label ??= "Damage"; // TODO localize
+		config.damageRoll.label ??= game.i18n.localize("SHADOWDARK.roll.damage");
 		config.damageRoll.base ??= attack.system.damage.value;
 		const dmgBonus = shadowdark.dice.formatBonus(attack.system.bonuses.damageBonus);
 		config.damageRoll.formula ??= `${config.damageRoll.base}${dmgBonus}`;

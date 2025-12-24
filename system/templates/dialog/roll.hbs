@@ -1,29 +1,48 @@
-<form autocomplete="off" spellcheck="off">
-		<h2>{{heading}}</h2>
+<div>
+	<h2>{{heading}}</h2>
 
-		{{#if mainFormGroups}}
-			{{#each mainFormGroups}}
-				{{{this.outerHTML}}}
-			{{/each}}
-			<hr />
-		{{/if}}
-
-		{{#if optionalFormGroups}}
-			{{#each optionalFormGroups}}
-				{{{this.outerHTML}}}
-			{{/each}}
-			<hr />
-		{{/if}}
-
-		<div class="form-group">
-			<label>{{localize "SHADOWDARK.dialog.roll_mode_label"}}</label>
-			<select name="rollMode">
-				{{#select rollMode}}
-					{{#each rollModes}}
-						<option value="{{@key}}">{{localize this.label}}</option>
-					{{/each}}
-				{{/select}}
-			</select>
+	{{#if mainRoll}}
+		<div class="roll-input flexrow">
+			<label>{{mainRoll.label}}</label>
+			<input type="text" name="{{mainRoll.key}}" value="{{mainRoll.formula}}">
+			{{#if mainRoll.tooltip}}
+				<p class="tooltips">{{mainRoll.tooltip}}</p>
+			{{/if}}
 		</div>
-		<hr />
-</form>
+
+		{{#if advantageOptions}}
+			<div class="advantage-buttons">
+				{{#each advantageOptions}}
+					<input type="radio" name="advantage" value="{{this.value}}" {{#if this.checked}}checked{{/if}} id="adv-{{this.value}}">
+					<label for="adv-{{this.value}}">{{this.label}}</label>
+				{{/each}}
+			</div>
+			<hr>
+		{{/if}}
+	{{/if}}
+
+	{{#if damageRoll}}
+		<div class="roll-input flexrow">
+			<label>{{damageRoll.label}}</label>
+			<input type="text" name="{{damageRoll.key}}" value="{{damageRoll.formula}}">
+			{{#if damageRoll.tooltip}}
+				<p class="tooltips">{{damageRoll.tooltip}}</p>
+			{{/if}}
+		</div>
+		<hr>
+	{{/if}}
+
+	{{#if situationalOptions}}
+		<div class="situational-options">
+			<label style="font-size:1.25em;">Situational Bonuses</label>
+			{{#each situationalOptions}}
+				<div class="situational-option">
+					<p class="tooltips"><b>{{this.name}}.</b> {{this.description}}</p>
+					<input type="checkbox" name="selected" value="{{this.key}}" {{#if this.selected}}checked{{/if}}>
+				</div>
+			{{/each}}
+		</div>
+		<hr>
+	{{/if}}
+
+</div>

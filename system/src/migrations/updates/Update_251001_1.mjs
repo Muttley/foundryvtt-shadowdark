@@ -207,7 +207,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.critical.failureThreshold":
-						change.key = "system.roll.attack.failure-threshold";
+						change.key = "system.roll.attack.critical-failure";
 						if (effect.parent.type === "weapon") {
 							change.key += ".this";
 						}
@@ -218,7 +218,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.critical.successThreshold":
-						change.key = "system.roll.attack.critical-threshold";
+						change.key = "system.roll.attack.critical-success";
 						if (effect.parent.type === "weapon") {
 							change.key += ".this";
 						}

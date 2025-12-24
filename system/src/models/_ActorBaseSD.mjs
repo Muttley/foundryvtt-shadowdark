@@ -127,6 +127,20 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		);
 	}
 
+	_getAbilityModifier(ability) {
+		const modifer = this.abilities[ability].mod;
+		const tooltip = [];
+		if (modifer !==0) {
+			tooltip.push(shadowdark.dice.createToolTip(
+				game.i18n.format(
+					"SHADOWDARK.roll.tooltip.stat_bonus",
+					{stat: CONFIG.SHADOWDARK.ABILITIES_LONG[ability]}),
+				modifer
+			));
+		}
+		return {modifer, tooltip};
+	}
+
 	/**
 	 * Starting at a baseValue, returns the combined total of a AE based key
 	 * and any selectors present. e.g. system.[baseKey].[selector]
@@ -206,7 +220,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.ADD).forEach(c => {
 			if (Number(c.value)) intParts += Number(c.value);
 			else strParts += ` + ${c.value}`;
-			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+"));
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+", c.key));
 		});
 		if (typeof finalValue === "string" || strParts) {
 			finalValue = finalValue.toString();
@@ -221,7 +235,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		let multiplyBonus = 1;
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY).forEach(c => {
 			multiplyBonus = multiplyBonus * c.value;
-			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "x"));
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "x", c.key));
 		});
 
 		if (multiplyBonus !== 1) {
@@ -236,7 +250,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		// Calculate override type changes
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE).forEach(c => {
 			finalValue = c.value;
-			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "="));
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "=", c.key));
 		});
 
 		return {
@@ -249,31 +263,26 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	_generateAbilityCheckConfig(ability, config={}) {
 		config.situational = [];
 		config.mainRoll ??= {};
-		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.dialog.roll");
-		config.mainRoll.base ??= "d20";
+		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.check");
+		config.mainRoll.base = "d20";
 
 		// generate check formula from ability mod and AE roll bonuses
-		const modifer = this.abilities[ability].mod;
-		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, modifer, null, config);
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(rollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
-
-		// generate tooltips
-		const tooltips = [];
-		if (modifer !==0) {
-			tooltips.push(shadowdark.dice.createToolTip(
-				game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus name
-				modifer
-			));
-		}
-		tooltips.push(rollKey.tooltips);
-		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
-
+		const abilityMod = this._getAbilityModifier(ability);
+		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, abilityMod.modifer, null, config);
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
 		// calculate roll advantage
 		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0, null, config);
-		config.mainRoll.advantage ??= advRollKeyAdv.value;
-		config.mainRoll.advantageTooltips = advRollKeyAdv.tooltips;
+		config.mainRoll.advantage = advRollKeyAdv.value;
+
+		// generate tooltips
+		const tooltips = [];
+		if (abilityMod.tooltip) tooltips.push(abilityMod.tooltip);
+		tooltips.push(rollKey.tooltips);
+		tooltips.push(advRollKeyAdv.tooltips);
+		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
+
 	}
 
 	async rollAbilityCheck(abilityId, config={}) {
@@ -288,10 +297,11 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		this._generateAbilityCheckConfig(ability, config);
 
 		// show roll prompt and end if closed
-		const prompt = await shadowdark.dice.rollDialog(config);
+		const prompt = await shadowdark.dice.rollDialog(
+			config,
+			() => this._generateAbilityCheckConfig(ability, config)
+		);
 		if (!prompt) return false;
-
-		this._generateAbilityCheckConfig(ability, config);
 
 		// call Stat Check hooks and cancel if any return false
 		if (!await Hooks.call("SD-Stat-Check", config)) return false;

@@ -3,57 +3,6 @@
  * Functions for handling Shadowdark dice roles
 */
 
-
-export async function addStandardFormGroups(config) {
-	// Generate prompt form data
-	const appfields = foundry.applications.fields;
-	config.mainFormGroups ??= [];
-	config.optionalFormGroups ??= [];
-
-	// Main Roll Prompt
-	if (config?.mainRoll?.formula) {
-		const rollInput = appfields.createTextInput({name: "mainRoll.formula", value: config.mainRoll.formula});
-		const rollFormGroup = appfields.createFormGroup({
-			input: rollInput,
-			label: config?.mainRoll?.label,
-			hint: config?.mainRoll?.tooltips,
-			localize: true,
-		});
-		config.mainFormGroups.push(rollFormGroup);
-	}
-
-	// Damage Prompt
-	if (config?.damageRoll?.formula) {
-		const damageInput = appfields.createTextInput({name: "damageRoll.formula", value: config.damageRoll.formula});
-		const damageFormGroup = appfields.createFormGroup({
-			input: damageInput,
-			label: config?.damageRoll?.label,
-			hint: config?.damageRoll?.tooltips,
-		});
-		config.mainFormGroups.push(damageFormGroup);
-	}
-
-	// Generate Situational options
-	if (config.situational?.length > 0) {
-		for (const uuid of config.situational) {
-			const effect = await fromUuid(uuid);
-			const checkbox = document.createElement("input");
-			checkbox.type = "checkbox";
-  			checkbox.name = "selected";
-			checkbox.value = uuid;
-			checkbox.checked = false;
-
-			const checkboxFormGroup = appfields.createFormGroup({
-				input: checkbox,
-				label: effect.parent.name,
-				hint: shadowdark.utils.removeHTML(effect.description),
-			});
-			config.optionalFormGroups.push(checkboxFormGroup);
-		}
-	}
-}
-
-
 /**
  * Applies advantage or disadvantage to the provided roll formula
  * @param {string} formula // roll formula
@@ -86,11 +35,31 @@ export function applyExploding(formula) {
  * @param {string} name 	Name of the tooltip entry
  * @param {*} value 		Value the tools tip entry provides
  * @param {string} prefix 	Prefix to include before positive values
+ * @param {string} key 		Key identifier (checked for "advantage")
  * @returns {string}
  */
-export function createToolTip(name, value, prefix="+") {
-	if (prefix==="adv") {
-		return `${name} (${value > 0 ? "adv" : "dis"})`;
+export function createToolTip(name, value, prefix="+", key="") {
+	// test for well known keys
+	if (key.includes("advantage")) {
+		const text = value > 0
+			? game.i18n.localize("SHADOWDARK.roll.tooltip.advantage")
+			: game.i18n.localize("SHADOWDARK.roll.tooltip.disadvantage");
+		return `${name} (${text})`;
+	}
+	else if (key.includes("critical-success")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.critical_success")} ${value})`;
+	}
+	else if (key.includes("critical-failure")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.critical_failure")} ${value})`;
+	}
+	else if (key.includes("critical-multiplier")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.critical_multiplier")} ${value})`;
+	}
+	else if (key.includes("upgrade-damage-die")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.upgrade_die")} ${value})`;
+	}
+	else if (key.includes("extra-damage-die")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.extra_die")} ${value})`;
 	}
 	else {
 		return `${name} (${value > 0 ? prefix : ""}${value})`;
@@ -158,6 +127,11 @@ export async function roll(config, rolldata={}) {
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
+/**
+ * Rolls damage for an existing chat message and updates the message with the result
+ * @param {ChatMessage} msg Chat message containing the attack roll
+ * @returns {boolean|undefined} false if damage already exists or no formula, undefined otherwise
+ */
 export async function rollDamageFromMessage(msg) {
 	const config = msg?.rollConfig;
 	if (!config) return; // TODO Error message
@@ -204,87 +178,27 @@ export async function rollDamageFromMessage(msg) {
 		rollingMode: {option}
  * @returns {bool} /returns false if closed without submit
  */
-export async function rollDialog(config) {
+export async function rollDialog(config, dataFunction) {
 
 	// get global role default if rollMode not set
 	config.rollMode ??= game.settings.get("core", "rollMode");
 	config.type ??= "";
 	config.heading ??= "";
 
-	// adds attack, damage and optional form groups to the dialog prompt
-	await addStandardFormGroups(config);
+	// skip dialog if configured
+	if (config.skipPrompt) return true;
 
-	await Hooks.call("SD-Roll-Dialog", config);
+	// Show roll prompt and wait for close
+	const dialog = new shadowdark.apps.RollDialogSD(config, dataFunction);
+	dialog.render({force: true});
 
-	if (config.skipPrompt) return 1;
-
-	// Generate prompt content by merging options into prompData.
-	const DIALOG_TEMPLATE = "systems/shadowdark/templates/dialog/roll.hbs";
-	const promptData = {
-		rollModes: CONFIG.Dice.rollModes,
-	};
-	foundry.utils.mergeObject(promptData, config);
-	const content = await foundry.applications.handlebars.renderTemplate(
-		DIALOG_TEMPLATE,
-		promptData
-	);
-
-	// callback function for dialog to get inputed mode
-	const callbackHandler = ((event, button, dialog) => {
-		const formData = new FormDataExtended(button.form).object;
-		// make sure formData.selected is an array
-		if (formData.selected) {
-			formData.selected = formData.selected && Array.isArray(formData.selected)
-				? formData.selected.filter(s => s !== null)
-				: [formData.selected].filter(s => s !== null);
-		}
-		// determine advantage based on button press
-		let adv = 0;
-		if (button.dataset.action === "advantage") adv = 1;
-		else if (button.dataset.action === "disadvantage") adv = -1;
-		formData["mainRoll.advantage"] = adv;
-		return formData;
+	const result = await new Promise(resolve => {
+		dialog.addEventListener("close", () => {
+			resolve(dialog.submitted ? dialog.result : false);
+		}, {once: true});
 	});
 
-	const dialogData = {
-		window: {
-			title: config.type,
-		},
-		content,
-		classes: [],
-		position: {
-			width: 500,
-		},
-		buttons: [{
-			action: "normal",
-			default: config?.mainRoll?.advantage === 0,
-			label: game.i18n.localize("SHADOWDARK.roll.normal"),
-			style: {order: "1"},
-			callback: callbackHandler,
-		}, {
-			action: "advantage",
-			default: config?.mainRoll?.advantage === 1,
-			label: game.i18n.localize("SHADOWDARK.roll.advantage"),
-			style: {order: "0"},
-			callback: callbackHandler,
-		}, {
-			action: "disadvantage",
-			default: config?.mainRoll?.advantage === -1,
-			label: game.i18n.localize("SHADOWDARK.roll.disadvantage"),
-			style: {order: "2"},
-			callback: callbackHandler,
-		}],
-	};
-
-	// Show roll prompt
-	const result = await foundry.applications.api.DialogV2.wait(dialogData);
-	if (!result) return false; // if closed, cancel roll action
-
-	// TODO handle optional bonuses
-
-	const expandedData = foundry.utils.expandObject(result);
-	foundry.utils.mergeObject(config, expandedData);
-	return true;
+	return result ? true : false;
 }
 
 /**
@@ -318,7 +232,9 @@ export async function rollFromConfig(config) {
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
 	const msg = await ChatMessage.create(chatData);
 
-	if (game.settings.get("shadowdark", "rollDamage") && config?.damageRoll?.needed) rollDamageFromMessage(msg);
+	if (game.settings.get("shadowdark", "rollDamage") && config?.damageRoll?.needed) {
+		await rollDamageFromMessage(msg);
+	}
 
 	return mainRoll;
 }
