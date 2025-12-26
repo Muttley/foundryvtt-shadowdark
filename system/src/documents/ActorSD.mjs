@@ -1682,14 +1682,15 @@ export default class ActorSD extends Actor {
 
 	buildOptionsForSkipPrompt(event, options = {}) {
 		options = foundry.utils.mergeObject(options, {
-			skipPrompt: event.shiftKey || event.altKey || event.ctrlKey ? true : false,
+			skipPrompt: event.shiftKey || event.altKey || event.ctrlKey || event.metaKey
+				? true : false,
 			adv: 0,
 		});
 
 		if (event.altKey) {
 			options.adv = 1;
 		}
-		else if (event.ctrlKey) {
+		else if (event.ctrlKey || event.metaKey) {
 			options.adv = -1;
 		}
 
