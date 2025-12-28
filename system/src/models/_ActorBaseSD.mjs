@@ -128,17 +128,18 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	}
 
 	_getAbilityModifier(ability) {
-		const modifer = this.abilities[ability].mod;
+		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
+		const modifier = this.abilities[ability].mod;
 		const tooltip = [];
-		if (modifer !==0) {
+		if (modifier !==0) {
 			tooltip.push(shadowdark.dice.createToolTip(
 				game.i18n.format(
 					"SHADOWDARK.roll.tooltip.stat_bonus",
 					{stat: CONFIG.SHADOWDARK.ABILITIES_LONG[ability]}),
-				modifer
+				modifier
 			));
 		}
-		return {modifer, tooltip};
+		return {modifier, tooltip};
 	}
 
 	/**
@@ -261,14 +262,12 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	}
 
 	_generateAbilityCheckConfig(ability, config={}) {
-		config.situational = [];
-		config.mainRoll ??= {};
+		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.check");
-		config.mainRoll.base = "d20";
 
 		// generate check formula from ability mod and AE roll bonuses
 		const abilityMod = this._getAbilityModifier(ability);
-		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, abilityMod.modifer, null, config);
+		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, abilityMod.modifier, null, config);
 		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
 		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 

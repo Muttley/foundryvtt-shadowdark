@@ -75,6 +75,15 @@ export function formatBonus(bonus) {
 	return bonus;
 }
 
+export function initializeD20Check(config={}) {
+	config.mainRoll ??= {};
+	config.mainRoll.type = "main";
+	config.mainRoll.base = "d20";
+	config.mainRoll.canCritical = true;
+	config.situational = [];
+	return config;
+}
+
 /**
  * Used to resolve deterministic roll formulas using provided roll data
  * @param {string} formula 			Roll formula to resolve

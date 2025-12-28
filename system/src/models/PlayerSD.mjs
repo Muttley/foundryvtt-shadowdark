@@ -211,18 +211,17 @@ export default class PlayerSD extends ActorBaseSD {
 	}
 
 	_calcAttackMainConfig(weapon, config) {
-		config.mainRoll ??= {};
-		config.mainRoll.type = "Attack";
-		config.mainRoll.base ??= "d20";
+		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.attack");
+
 		// Calculate Attack Bonus from Ability mod & AE bonuses
-		const abilityBonus = this._getAttackAbilityBonus(
+		const abilityBonus = this._getAttackAbilityModifier(
 			config.attack.type,
 			weapon.system.isFinesse
 		);
 		const attackRollKey = this._getActiveEffectKeys(
 			`roll.${config.attack.type}.bonus`,
-			abilityBonus,
+			abilityBonus.modifier,
 			weapon,
 			config
 		);
@@ -267,10 +266,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// generate tooltips
 		const tooltips = [];
-		tooltips.push(shadowdark.dice.createToolTip(
-			game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"),
-			abilityBonus
-		));
+		tooltips.push(abilityBonus.tooltip);
 		tooltips.push(attackRollKey.tooltips);
 		tooltips.push(critThresholdKey.tooltips);
 		tooltips.push(failThresholdKey.tooltips);
@@ -348,17 +344,14 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// roll required?
 		if (ability.system.ability) {
-			config.situational = [];
-			config.mainRoll ??= {};
-			config.mainRoll.type = "Ability";
-			config.mainRoll.base ??= "d20";
+			shadowdark.dice.initializeD20Check(config);
 			config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.special_ability");
 			config.mainRoll.dc ??= ability.system.dc;
 
 
 			// generate check formula from ability mod and AE roll bonuses
-			const modifer = this.abilities[ability.system.ability].mod;
-			const rollKey = this._getActiveEffectKeys("roll.ability.bonus", modifer, ability, config);
+			const modifier = this.abilities[ability.system.ability].mod;
+			const rollKey = this._getActiveEffectKeys("roll.ability.bonus", modifier, ability, config);
 			config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
 			config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 
@@ -373,10 +366,10 @@ export default class PlayerSD extends ActorBaseSD {
 
 			// generate tooltips
 			const tooltips = [];
-			if (modifer !==0) {
+			if (modifier !==0) {
 				tooltips.push(shadowdark.dice.createToolTip(
 					game.i18n.localize("SHADOWDARK.dialog.item_roll.ability_bonus"), // TODO Stat bonus name
-					modifer
+					modifier
 				));
 			}
 			tooltips.push(rollKey.tooltips);
@@ -400,7 +393,6 @@ export default class PlayerSD extends ActorBaseSD {
 		config.attack.type ??= weapon.system.type;
 		config.attack.range ??= weapon.system.range;
 
-		config.situational = [];
 		config.descriptions = [];
 		config.descriptions.push(weapon.system?.description);
 
@@ -425,10 +417,7 @@ export default class PlayerSD extends ActorBaseSD {
 		config.descriptions = [];
 		config.descriptions.push(spell.system?.description);
 
-		config.situational = [];
-		config.mainRoll ??= {};
-		config.mainRoll.type = "Spell";
-		config.mainRoll.base ??= "d20";
+		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.spell_cast");
 		config.mainRoll.dc = spell.system?.dc;
 
@@ -458,12 +447,12 @@ export default class PlayerSD extends ActorBaseSD {
 		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 	}
 
-	_getAttackAbilityBonus(attackType, finesse=false) {
-		const str = this.abilities.str.mod;
-		const dex = this.abilities.dex.mod;
+	_getAttackAbilityModifier(attackType, finesse=false) {
+		const str = this._getAbilityModifier("str");
+		const dex = this._getAbilityModifier("dex");
 		switch (attackType) {
 			case "melee":
-				return (finesse) ? Math.max(str, dex) : str;
+				return (finesse && (dex.modifier > str.modifier))? dex : str;
 			case "ranged":
 				return dex;
 			default:

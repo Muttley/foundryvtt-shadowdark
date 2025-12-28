@@ -20,6 +20,13 @@
 
 .chat-message {
 	font-family: "Montserrat-Medium";
+
+	h3 {
+		font-family: "Montserrat-bold";
+		font-size: var(--font-size-18);
+		margin: 4px;
+	}
+
 	.message-header {
 		margin-bottom: 8px;
 
@@ -108,7 +115,61 @@
 		}
 
 		.dice-roll {
-			margin-top: 8px;
+
+			.dice-result {
+				display: flex;
+				order: 0;
+				background: rgba(0, 0, 0, 0.1);
+				border: 1px solid #999;
+				border-radius: 3px;
+				box-shadow: 0 0 2px #FFF inset;
+				align-items: stretch;
+
+				.dice-total {
+					flex: 1;
+					font-size: var(--font-size-20);
+					background: none;
+					border: solid black 1px;
+					box-shadow: none;
+					max-width: fit-content;
+					min-width: 2em;
+					font-family: "Montserrat-Bold";
+					padding: 0px 4px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+				}
+
+				.dice-text {
+					flex:1;
+					margin: 0px 4px;
+					align-content: center;
+
+					.dice-success {
+						font-size: var(--font-size-18);
+						font-family: 'Montserrat-Bold';
+						text-align: center;
+					}
+
+					.dice-formula {
+						color: #444;
+						font-size: var(--font-size-14);
+						margin: 0px;
+						border: none;
+						background: none;
+						box-shadow: none;
+						line-height: normal;
+
+						&.small {
+							font-size: var(--font-size-12);
+						}
+					}
+				}
+			}
+			.dice-tooltip {
+				margin-top: 4px;
+			}
 		}
 	}
 }
