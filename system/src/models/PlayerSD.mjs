@@ -951,14 +951,19 @@ export default class PlayerSD extends ActorBaseSD {
 
 		config.heading = `Attacking with ${weapon.name}`;
 
-		// TODO Test for available amnunition
-		/*
-		if (typeof rollData.ammunitionItem === "undefined") {
-			const ammunition = rollData.item.availableAmmunition();
+		// TODO: Not sure if undefined check is needed as it always appears to be true
+		if (weapon.usesAmmunition && typeof config.ammunitionItem === "undefined") {
+			const ammunition = weapon.availableAmmunition();
 			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-				rollData.ammunitionItem = ammunition[0];
+				config.ammunitionItem = ammunition[0];
 			}
-		}*/
+			else {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"),
+					{ permanent: false }
+				);
+			}
+		}
 
 		// generates attack data based on the weapon and actor
 		this._generateAttackConfig(weapon, config);
@@ -974,7 +979,9 @@ export default class PlayerSD extends ActorBaseSD {
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		// TODO decrement ammo
+		if (weapon.usesAmmunition && config.ammunitionItem) {
+			config.ammunitionItem.reduceAmmunition(1);
+		}
 
 		return roll.success;
 
