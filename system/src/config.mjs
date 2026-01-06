@@ -291,7 +291,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
 	armorMastery: {
-		defaultValue: "",
+		defaultValue: 1,
 		effectKey: "system.attributes.ac.REPLACEME",
 		img: "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.armorMastery",
@@ -321,7 +321,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 	},
 	damageMultiplier: {
 		defaultValue: 2,
-		effectKey: "system.roll.attack.damage",
+		effectKey: "system.roll.attack.damage.this",
 		img: "icons/skills/melee/strike-hammer-destructive-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
 		mode: "CONST.ACTIVE_EFFECT_MODES.MULTIPLY",
