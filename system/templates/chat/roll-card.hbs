@@ -4,10 +4,15 @@
 	{{/if}}
 
 	{{#if item}}
-		<a data-link data-uuid="{{item.uuid}}">
-			<img src="{{item.img}}" style="width:20px;height:20px;display:inline">
-			<span>{{item.name}}</span>
-		</a>
+		<div class="item-wrapper">
+			<a data-link data-uuid="{{item.uuid}}">
+				<img class="item-image" src="{{item.img}}">
+			</a>
+			<div class="item-text-wrapper">
+				<span class="item-name">{{item.name}}</span>
+				<span class="item-subtext">{{item.system.subtext}}</span>
+			</div>
+		</div>
 	{{/if}}
 
 	{{#each descriptions}}

@@ -66,4 +66,8 @@ export default class WeaponSD extends PhysicalItemSD {
 	get isWeapon() {
 		return true;
 	}
+
+	get subtext() {
+		return `${this.range.titleCase()}`;
+	}
 }
