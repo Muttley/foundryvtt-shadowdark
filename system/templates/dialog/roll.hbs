@@ -35,11 +35,11 @@
 		<div class="roll-input flexrow">
 			<label>{{localize 'SHADOWDARK.item.ammunition'}}</label>
 			<select name="ammunitionId">
-			{{#each ammunitionOptions as |value key|}}
+			{{#each ammunitionOptions}}
 				<option
-					title="{{value.name}}"
-					value="{{value._id}}"
-				>{{value.name}} ({{value.system.quantity}}/{{value.system.slots.per_slot}})</option>
+					title="{{this.name}}"
+					value="{{this._id}}"
+				>{{this.name}} ({{this.system.quantity}}/{{this.system.slots.per_slot}})</option>
 			{{/each}}
 			</select>
 		</div>
