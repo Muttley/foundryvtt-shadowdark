@@ -44,10 +44,6 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 		super._onSubmit(event);
 	}
 
-	_toTitleCase(str) {
-		return str.replace(/\w\S*/g, m =>  m.charAt(0).toUpperCase() + m.substr(1).toLowerCase());
-	}
-
 	_toCamelCase(str) {
 		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 	}
@@ -95,7 +91,7 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 		}).join(""));
 
 		let attackObj = {
-			name: this._toTitleCase(atk[2].trim()),
+			name: atk[2].trim().titleCase(),
 			type: "NPC Special Attack",
 			system: {
 				attack: {
@@ -150,7 +146,7 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 					attackObj.system.bonuses.damageBonus = parseInt(dmgStrs[i]);
 				}
 				else {
-					attackObj.system.damage.special = this._toTitleCase(dmgStrs[i]);
+					attackObj.system.damage.special = dmgStrs[i].titleCase();
 				}
 			}
 		}
@@ -166,7 +162,7 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 	_parseFeature(str) {
 		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
 		const featureObj = {
-			name: this._toTitleCase(featureStr[1]),
+			name: featureStr[1].titleCase(),
 			type: "NPC Feature",
 			system: {
 				description: `<p>${featureStr[2].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
@@ -284,7 +280,7 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 		}).join(""));
 
 		// set 4 main variables, removing newlines
-		const titleName = this._toTitleCase(parsedText[1]);
+		const titleName = parsedText[1].titleCase();
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
 		let features = [];

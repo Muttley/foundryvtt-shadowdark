@@ -42,6 +42,18 @@ export default class NpcSD extends ActorBaseSD {
 	}
 
 	/* ----------------------- */
+	/* Getters       */
+	/* ----------------------- */
+
+	get isNPC() {
+		return true;
+	}
+
+	get isMonster() {
+		return true;
+	}
+
+	/* ----------------------- */
 	/* Public Functions        */
 	/* ----------------------- */
 

@@ -20,11 +20,15 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 	/* Getters       */
 	/* ----------------------- */
 
-	get isPlayer() {
+	get isPC() {
 		return false;
 	}
 
 	get isNPC() {
+		return false;
+	}
+
+	get isMonster() {
 		return false;
 	}
 

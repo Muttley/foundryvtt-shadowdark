@@ -43,10 +43,6 @@ export default class SpellImporter extends foundry.appv1.api.FormApplication {
 		super._onSubmit(event);
 	}
 
-	_toTitleCase(str) {
-		return str.replace(/\w\S*/g, m => m.charAt(0).toUpperCase() + m.substr(1).toLowerCase());
-	}
-
 	_toCamelCase(str) {
 		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 	}
@@ -74,7 +70,7 @@ export default class SpellImporter extends foundry.appv1.api.FormApplication {
 		}).join(""));
 
 		// set 4 main variables, removing newlines
-		const titleName = this._toTitleCase(parsedText[1]);
+		const titleName = parsedText[1].titleCase();
 		const tier = parsedText[2];
 		const classes = parsedText[3].trim().split(", ");
 		let durationType = parsedText[5].replace(/(\r\n|\n|\r)/gm, " ");

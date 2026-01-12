@@ -104,7 +104,7 @@ export default class PlayerSD extends ActorBaseSD {
 	/* Getters                 */
 	/* ----------------------- */
 
-	get isPlayer() {
+	get isPC() {
 		return true;
 	}
 

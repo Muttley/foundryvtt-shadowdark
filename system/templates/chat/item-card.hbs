@@ -7,7 +7,7 @@
 >
 	<header class="card-header flexrow">
 		{{#if data.item}}
-			{{#if data.actor.system.isNPC}}
+			{{#if data.actor.system.isMonster}}
 				<img src="{{data.actor.img}}" data-tooltip="{{data.item.name}}"/>
 			{{else}}
 				<img src="{{data.item.img}}" data-tooltip="{{data.item.name}}"/>
@@ -95,7 +95,7 @@
 		{{/ifNeq}}
 	{{/if}}
 
-	{{#if data.actor.system.isNPC}}
+	{{#if data.actor.system.isMonster}}
 		{{#ifEq data.item.type "NPC Attack"}}
 			{{#ifNeq data.rolls.main.critical "failure"}}
 				<div class="card-damage-rolls">
