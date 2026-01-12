@@ -85,6 +85,11 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 			};
 		}
 
+		context.ammunitionOptions = [];
+		if (this.config.ammunitionOptions?.length > 0) {
+			context.ammunitionOptions = this.config.ammunitionOptions;
+		}
+
 		// Prepare situational options
 		context.situationalOptions = [];
 		if (this.config.situational?.length > 0) {
@@ -181,6 +186,10 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 			if (this.config?.mainRoll) {
 				this.config.mainRoll.advantage = advantageValue;
 			}
+		}
+
+		if (formData.ammunitionId !== undefined) {
+			this.config.ammunitionId = formData.ammunitionId;
 		}
 
 		this.result = formData;

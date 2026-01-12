@@ -952,10 +952,11 @@ export default class PlayerSD extends ActorBaseSD {
 		config.heading = `Attacking with ${weapon.name}`;
 
 		// TODO: Not sure if undefined check is needed as it always appears to be true
-		if (weapon.usesAmmunition && typeof config.ammunitionItem === "undefined") {
+		if (weapon.usesAmmunition && typeof config.ammunitionOptions === "undefined") {
 			const ammunition = weapon.availableAmmunition();
 			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-				config.ammunitionItem = ammunition[0];
+				// config.ammunitionItem = ammunition[0];
+				config.ammunitionOptions = ammunition;
 			}
 			else {
 				return ui.notifications.error(
@@ -979,8 +980,11 @@ export default class PlayerSD extends ActorBaseSD {
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		if (weapon.usesAmmunition && config.ammunitionItem) {
-			config.ammunitionItem.reduceAmmunition(1);
+		if (weapon.usesAmmunition && config.ammunitionId) {
+			const ammunitionItem = await fromUuid(`Actor.${config.actorId}.Item.${config.ammunitionId}`);
+			if (ammunitionItem) {
+				ammunitionItem.reduceAmmunition(1);
+			}
 		}
 
 		return roll.success;
