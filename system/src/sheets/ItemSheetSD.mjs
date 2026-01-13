@@ -386,15 +386,6 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 	//     getSheetDataFor{item_type_with_no_spaces}Item
 	// ------------------------------------------------------------------------
 
-	async getSheetDataForAmmunitionItem(context) {
-		const mySlug = context.item.name.slugify();
-		context.baseAmmunition = await shadowdark.utils.getSlugifiedItemList(
-			await shadowdark.compendiums.ammunition()
-		);
-		delete context.baseAmmunition[mySlug];
-	}
-
-
 	async getSheetDataForAncestryItem(context) {
 		await this.getAncestrySelectorConfigs(context);
 	}

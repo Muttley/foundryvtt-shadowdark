@@ -56,8 +56,7 @@ export default class CompendiumsSD {
 
 	static async ammunition(filterSources=true) {
 		const documents = shadowdark.utils.combineCollection(
-			await CompendiumsSD._documents("Item", "Basic", filterSources), // TODO: Remove once migrated
-			await CompendiumsSD._documents("Item", "Ammunition", filterSources),
+			await CompendiumsSD._documents("Item", "Basic", filterSources),
 			await CompendiumsSD._documents("Item", "Weapon", filterSources)
 		);
 
