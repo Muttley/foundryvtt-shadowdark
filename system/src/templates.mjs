@@ -104,6 +104,8 @@ export default function() {
 		"systems/shadowdark/templates/items/ancestry/_partials/languages.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/talents.hbs",
 		"systems/shadowdark/templates/items/ancestry/details-tab.hbs",
+		"systems/shadowdark/templates/items/ammunition/_partials/item-properties.hbs",
+		"systems/shadowdark/templates/items/ammunition/details-tab.hbs",
 		"systems/shadowdark/templates/items/armor/_partials/armor-properties.hbs",
 		"systems/shadowdark/templates/items/armor/_partials/armor.hbs",
 		"systems/shadowdark/templates/items/armor/_partials/item-properties.hbs",

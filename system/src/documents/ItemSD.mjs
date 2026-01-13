@@ -146,6 +146,8 @@ export default class ItemSD extends foundry.documents.Item {
 
 	getItemTemplate(basePath) {
 		switch (this.type) {
+			case "Ammunition":
+				return `${basePath}/ammunition.hbs`;
 			case "Armor":
 				return `${basePath}/armor.hbs`;
 			case "Effect":
