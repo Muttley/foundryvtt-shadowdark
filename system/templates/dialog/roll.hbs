@@ -39,6 +39,9 @@
 				<option
 					title="{{this.name}}"
 					value="{{this._id}}"
+					{{#if this.isDefault}}
+						selected
+					{{/if}}
 				>{{this.name}} ({{this.system.quantity}}/{{this.system.slots.per_slot}})</option>
 			{{/each}}
 			</select>

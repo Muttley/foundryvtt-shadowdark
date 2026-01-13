@@ -951,11 +951,19 @@ export default class PlayerSD extends ActorBaseSD {
 
 		config.heading = `Attacking with ${weapon.name}`;
 
-		// TODO: Not sure if undefined check is needed as it always appears to be true
-		if (weapon.usesAmmunition && typeof config.ammunitionOptions === "undefined") {
-			const ammunition = weapon.availableAmmunition();
+		if (weapon.usesAmmunition) {
+			const ammunition = weapon.actor.ammunitionItems();
 			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-				// config.ammunitionItem = ammunition[0];
+				const defaultAmmunition = weapon.actor.ammunitionItems(weapon.system.ammoClass);
+
+				if (defaultAmmunition
+					&& Array.isArray(defaultAmmunition)
+					&& defaultAmmunition.length > 0) {
+					for (const ammo of ammunition) {
+						ammo.isDefault = ammo._id === defaultAmmunition[0]._id ? true : false;
+					}
+				}
+
 				config.ammunitionOptions = ammunition;
 			}
 			else {
