@@ -980,11 +980,8 @@ export default class PlayerSD extends ActorBaseSD {
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		if (weapon.usesAmmunition && config.ammunitionId) {
-			const ammunitionItem = await fromUuid(`Actor.${config.actorId}.Item.${config.ammunitionId}`);
-			if (ammunitionItem) {
-				ammunitionItem.reduceAmmunition(1);
-			}
+		if (weapon.usesAmmunition && config.selectedAmmunition) {
+			config.selectedAmmunition.reduceAmmunition(1);
 		}
 
 		return roll.success;
