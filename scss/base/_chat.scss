@@ -20,6 +20,13 @@
 
 .chat-message {
 	font-family: "Montserrat-Medium";
+
+	h3 {
+		font-family: "Montserrat-bold";
+		font-size: var(--font-size-16);
+		margin: 4px 0px;
+	}
+
 	.message-header {
 		margin-bottom: 8px;
 
@@ -54,61 +61,104 @@
 	.message-content {
 		font-family: "Montserrat-Medium";
 
-		.action-wrapper {
-			padding: 4px 0px;
+		.item-wrapper {
 			display: flex;
-			gap: 8px;
-			align-items: center;
+			flex-direction: row;
+			gap: 4px;
+			line-height: 1;
+			margin: 4px;
 
-			img {
-				width: 30px;
-				height: 30px;
-				border: 1px solid black;
+			.item-image {
+				width: 25px;
+				height: 25px;
+				display: inline-block;
+				flex-shrink: 0;
 			}
 
-			.action-header {
+			.item-text-wrapper {
 				display: flex;
 				flex-direction: column;
-				flex: auto 1 1;
-				line-height: 1;
+				gap: 2px;
+				flex: 1;
 
-				.action-title {
-					font-size: var(--font-size-18);
-					font-family: "Montserrat-Bold";
+				.item-name {
+					font-size: 1em;
 				}
 
-				.action-subtitle {
-					font-size: var(--font-size-12);
+				.item-subtext {
+					font-size: 0.75em;
+					color: #888;
 				}
-
-				.action-formula {
-					font-size: var(--font-size-12);
-					justify-self: right;
-				}
-
-
 			}
 
-			.action-vs {
-				font-size: var(--font-size-12);
-				margin: 4px;
-				text-wrap: nowrap;
-			};
-
-			.action-target {
-				display: flex;
-				flex: auto 1 1;
-				font-size: var(--font-size-12);
-				img {
-					width: 20px;
-					height: 20px;
-				}
-
+			.action-title {
+				font-size: var(--font-size-18);
+				font-family: "Montserrat-Bold";
 			}
+
+			.action-subtitle {
+				font-size: var(--font-size-12);
+			}
+
 		}
 
 		.dice-roll {
-			margin-top: 8px;
+
+			.dice-result {
+				display: flex;
+				order: 0;
+				background: rgba(0, 0, 0, 0.1);
+				border: 1px solid #999;
+				border-radius: 3px;
+				box-shadow: 0 0 2px #FFF inset;
+				align-items: stretch;
+
+				.dice-total {
+					flex: 1;
+					font-size: var(--font-size-20);
+					background: none;
+					border: solid black 1px;
+					box-shadow: none;
+					max-width: fit-content;
+					min-width: 2em;
+					font-family: "Montserrat-Bold";
+					padding: 0px 4px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+				}
+
+				.dice-text {
+					flex:1;
+					margin: 0px 4px;
+					align-content: center;
+					line-height: 1;
+
+					.dice-success {
+						font-size: var(--font-size-14);
+						font-family: 'Montserrat-Bold';
+						text-align: center;
+					}
+
+					.dice-formula {
+						color: #444;
+						font-size: var(--font-size-14);
+						margin: 0px;
+						border: none;
+						background: none;
+						box-shadow: none;
+						line-height: normal;
+
+						&.small {
+							font-size: var(--font-size-10);
+						}
+					}
+				}
+			}
+			.dice-tooltip {
+				margin-top: 4px;
+			}
 		}
 	}
 }

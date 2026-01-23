@@ -98,7 +98,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 
 	ammunitionItems(key) {
-		return this.items.filter(i => {
+		return this.system.getPhysicalItems().filter(i => {
 			if (key) {
 				return i.system.isAmmunition
 					&& i.system.quantity > 0
@@ -276,7 +276,7 @@ export default class ActorSD extends foundry.documents.Actor {
 		if (item.system.ability) {
 			rolled = true;
 			options = foundry.utils.mergeObject({target: item.system.dc}, options);
-			const result = await this.rollAbility(
+			const result = await this.system.rollAbilityCheck(
 				item.system.ability,
 				options
 			);
@@ -284,7 +284,7 @@ export default class ActorSD extends foundry.documents.Actor {
 			// Abort if prompt is closed
 			if (!result) return;
 
-			success = result?.rolls?.main?.success ?? false;
+			success = result?.success ?? false;
 
 			if (!success && item.system.loseOnFailure) {
 				item.update({"system.lost": true});

@@ -636,6 +636,8 @@ SHADOWDARK.range.unlimited_short: U
 SHADOWDARK.range.unlimited: Unlimited
 SHADOWDARK.roll.advantage_title: "{title} with Advantage"
 SHADOWDARK.roll.advantage: Advantage
+SHADOWDARK.roll.attack: Attack Roll
+SHADOWDARK.roll.check: Check Roll
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
 SHADOWDARK.roll.D20: Roll D20
@@ -645,8 +647,18 @@ SHADOWDARK.roll.disadvantage: Disadvantage
 SHADOWDARK.roll.failure: Failure! ({value})
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.one_handed_damage: One-handed Damage
+SHADOWDARK.roll.special_ability: Ability Check Roll
+SHADOWDARK.roll.spell_cast: Spell Cast Roll
 SHADOWDARK.roll.spell_casting_check: Spellcasting Check
 SHADOWDARK.roll.success: Success! ({value})
+SHADOWDARK.roll.tooltip.advantage: Adv
+SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
+SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
+SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
+SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.extra_die: Add.Die
+SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
+SHADOWDARK.roll.tooltip.upgrade_die: Up.Die
 SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.animate-hp-change.hint: Show changes to HP as scrolling text on the actor's token
 SHADOWDARK.settings.animate-hp-change.name: Animate HP Changes

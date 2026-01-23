@@ -43,9 +43,6 @@ export default class ItemImporterSD extends foundry.appv1.api.FormApplication {
 		super._onSubmit(event);
 	}
 
-	_toTitleCase(str) {
-		return str.replace(/\w\S*/g, m => m.charAt(0).toUpperCase() + m.substr(1).toLowerCase());
-	}
 
 	_toCamelCase(str) {
 		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
@@ -72,7 +69,7 @@ export default class ItemImporterSD extends foundry.appv1.api.FormApplication {
 		let data = {}; // data object to be passed to the final item creator
 
 		// set main variables, removing newlines
-		data.name = this._toTitleCase(parsedText[1]).replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
+		data.name = parsedText[1].titleCase().replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
 		const flavorText = parsedText[2].replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
 
 		let features = [];

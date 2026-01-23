@@ -81,6 +81,11 @@ export default class ChatSD {
 		if (damageRoll) {
 			templateData.damageRoll.html = await damageRoll.render();
 		}
+		if (config.selectedAmmunition) {
+			templateData.ammunitionName =
+				`${config.selectedAmmunition.name} (${config.selectedAmmunition.system.quantity}/${config.selectedAmmunition.system.slots.per_slot})`;
+		}
+
 		const content = await foundry.applications.handlebars.renderTemplate(
 			template,
 			templateData
