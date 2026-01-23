@@ -98,7 +98,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 
 	ammunitionItems(key) {
-		return this.items.filter(i => {
+		return this.system.getPhysicalItems().filter(i => {
 			if (key) {
 				return i.system.isAmmunition
 					&& i.system.quantity > 0

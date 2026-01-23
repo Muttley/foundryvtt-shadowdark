@@ -31,6 +31,23 @@
 		</div>
 		<hr>
 	{{/if}}
+	{{#if ammunitionOptions}}
+		<div class="roll-input flexrow">
+			<label>{{localize 'SHADOWDARK.item.ammunition'}}</label>
+			<select name="ammunitionId">
+			{{#each ammunitionOptions}}
+				<option
+					title="{{this.name}}"
+					value="{{this._id}}"
+					{{#if this.isDefault}}
+						selected
+					{{/if}}
+				>{{this.name}} ({{this.system.quantity}}/{{this.system.slots.per_slot}})</option>
+			{{/each}}
+			</select>
+		</div>
+
+	{{/if}}
 
 	{{#if situationalOptions}}
 		<div class="situational-options">

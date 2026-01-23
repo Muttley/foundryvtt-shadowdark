@@ -951,14 +951,28 @@ export default class PlayerSD extends ActorBaseSD {
 
 		config.heading = `Attacking with ${weapon.name}`;
 
-		// TODO Test for available amnunition
-		/*
-		if (typeof rollData.ammunitionItem === "undefined") {
-			const ammunition = rollData.item.availableAmmunition();
+		if (weapon.usesAmmunition) {
+			const ammunition = weapon.actor.ammunitionItems();
 			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
-				rollData.ammunitionItem = ammunition[0];
+				const defaultAmmunition = weapon.actor.ammunitionItems(weapon.system.ammoClass);
+
+				if (defaultAmmunition
+					&& Array.isArray(defaultAmmunition)
+					&& defaultAmmunition.length > 0) {
+					for (const ammo of ammunition) {
+						ammo.isDefault = ammo._id === defaultAmmunition[0]._id ? true : false;
+					}
+				}
+
+				config.ammunitionOptions = ammunition;
 			}
-		}*/
+			else {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"),
+					{ permanent: false }
+				);
+			}
+		}
 
 		// generates attack data based on the weapon and actor
 		this._generateAttackConfig(weapon, config);
@@ -974,7 +988,9 @@ export default class PlayerSD extends ActorBaseSD {
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		// TODO decrement ammo
+		if (weapon.usesAmmunition && config.selectedAmmunition) {
+			config.selectedAmmunition.reduceAmmunition(1);
+		}
 
 		return roll.success;
 
