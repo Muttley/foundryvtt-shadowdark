@@ -4,6 +4,7 @@
 - [#966] Item Active Effects now get suspended when an item is Stashed
 - [#1038] Added missing translatable strings
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1202] Ammo type should be overridable as part of the attack roll dialog
 
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
