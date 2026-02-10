@@ -8,6 +8,7 @@ export default function registerHandlebarsHelpers() {
 			: effect.icon;
 	});
 
+
 	Handlebars.registerHelper("addEmptySlots", (objects, max) => {
 		const newOjects = objects.map(a => ({...a}));
 		for (let j = 0; j < max - objects.length; j++) {
@@ -15,6 +16,7 @@ export default function registerHandlebarsHelpers() {
 		}
 		return newOjects;
 	});
+
 
 	Handlebars.registerHelper("concat", function() {
 		let outStr = "";
@@ -26,6 +28,7 @@ export default function registerHandlebarsHelpers() {
 		return outStr;
 	});
 
+
 	Handlebars.registerHelper("displayCost", item => {
 		let costInGp = item.system.cost.gp
 		+ (item.system.cost.sp /10 )
@@ -34,15 +37,18 @@ export default function registerHandlebarsHelpers() {
 		return costInGp.toString().concat(" gp");
 	});
 
+
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
 		return CONFIG.SHADOWDARK[arg1][arg2] ? CONFIG.SHADOWDARK[arg1][arg2] : arg2;
 	});
+
 
 	Handlebars.registerHelper("getSpellDuration", (type, value) => {
 		return (CONFIG.SHADOWDARK.VARIABLE_DURATIONS.includes(type))
 			? `${value} ${CONFIG.SHADOWDARK.SPELL_DURATIONS[type]}`
 			: CONFIG.SHADOWDARK.SPELL_DURATIONS[type];
 	});
+
 
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
@@ -71,27 +77,38 @@ export default function registerHandlebarsHelpers() {
 		}
 	});
 
+
 	Handlebars.registerHelper("ifEq", function(arg1, arg2, options) {
 		return arg1 === arg2 ? options.fn(this) : options.inverse(this);
 	});
+
 
 	Handlebars.registerHelper("ifNeq", function(arg1, arg2, options) {
 		return arg1 !== arg2 ? options.fn(this) : options.inverse(this);
 	});
 
+
 	Handlebars.registerHelper("ifObjIndex", function(obj, index, options) {
 		return obj[index] ? options.fn(this) : options.inverse(this);
 	});
+
 
 	Handlebars.registerHelper("ifVariableSpellDuration", (value, options) => {
 		return CONFIG.SHADOWDARK.VARIABLE_DURATIONS
 			.includes(value) ? options.fn(this) : options.inverse(this);
 	});
 
+
 	Handlebars.registerHelper("joinStrings", value => {
 		value = value ? value : [];
 		return value.join(", ");
 	});
+
+
+	Handlebars.registerHelper("template", function(arg1) {
+		return templatePath(arg1);
+	});
+
 
 	Handlebars.registerHelper("uuidToName", uuid => {
 		if (!uuid) return "";

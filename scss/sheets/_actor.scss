@@ -2,8 +2,8 @@
 @use "../mixins" as *;
 @forward "actors";
 
-.shadowdark.sheet.player,
-.shadowdark.sheet.npc {
+.shadowdark
+.shadowdark .sheet.npc {
 
 	min-width: 550px;
 

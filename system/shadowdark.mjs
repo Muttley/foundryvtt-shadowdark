@@ -103,12 +103,13 @@ Hooks.once("init", () => {
 		"Background": models.BackgroundSD,
 		"Basic": models.BasicSD,
 		"Boon": models.BoonSD,
-		"Class": models.ClassSD,
 		"Class Ability": models.ClassAbilitySD,
+		"Class": models.ClassSD,
 		"Deity": models.DeitySD,
 		"Effect": models.EffectSD,
 		"Gem": models.GemSD,
 		"Language": models.LanguageSD,
+		"Light Source": models.LightSourceSD,
 		"NPC Attack": models.NpcAttackSD,
 		"NPC Feature": models.NpcFeatureSD,
 		"NPC Special Attack": models.NpcSpecialAttackSD,
@@ -123,30 +124,65 @@ Hooks.once("init", () => {
 	});
 
 	// Register sheet application classes
-	Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
 		types: ["Player"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.player",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
 		types: ["NPC"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
 		types: ["Light"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
-		makeDefault: true,
-		label: "SHADOWDARK.sheet.class.item",
-	});
+
+	foundry.documents.collections.Items.registerSheet(
+		"shadowdark",
+		sheets.LightSourceSheetSD,
+		{
+			types: ["Light Source"],
+			makeDefault: true,
+		}
+	);
+	foundry.documents.collections.Items.registerSheet(
+		"shadowdark",
+		sheets.ItemSheetSD,
+		{
+			type: [
+				"Ancestry",
+				"Armor",
+				"Background",
+				"Basic",
+				"Boon",
+				"Class Ability",
+				"Class",
+				"Deity",
+				"Effect",
+				"Gem",
+				"Language",
+				"NPC Attack",
+				"NPC Feature",
+				"NPC Special Attack",
+				"Patron",
+				"Potion",
+				"Property",
+				"Scroll",
+				"Spell",
+				"Talent",
+				"Wand",
+				"Weapon",
+			],
+			makeDefault: true,
+		}
+	);
+
 
 	// Attack init hooks
 	HooksInitSD.attach();
