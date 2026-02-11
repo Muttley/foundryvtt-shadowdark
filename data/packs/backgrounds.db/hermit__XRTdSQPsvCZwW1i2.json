@@ -8,9 +8,9 @@
 	"name": "Hermit",
 	"system": {
 		"description": "<p>The wilds (and its creatures) are your family</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

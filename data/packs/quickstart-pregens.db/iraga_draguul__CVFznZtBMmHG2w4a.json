@@ -129,28 +129,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			},
 			"con": {
-				"base": 13,
-				"bonus": 0
+				"value": 13
 			},
 			"dex": {
-				"base": 9,
-				"bonus": 0
+				"value": 9
 			},
 			"int": {
-				"base": 10,
-				"bonus": 0
+				"value": 10
 			},
 			"str": {
-				"base": 16,
-				"bonus": 0
+				"value": 16
 			},
 			"wis": {
-				"base": 15,
-				"bonus": 0
+				"value": 15
 			}
 		},
 		"alignment": "lawful",
@@ -160,51 +154,11 @@
 				"value": 14
 			},
 			"hp": {
-				"base": 5,
-				"bonus": 0,
 				"max": 5,
 				"value": 5
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.jkZbwzeer9YNCf29",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
 		"coins": {
 			"cp": 0,
@@ -212,10 +166,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.hNbUUJnD6HIda5tl",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
@@ -230,7 +180,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

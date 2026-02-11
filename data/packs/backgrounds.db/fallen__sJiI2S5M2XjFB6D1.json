@@ -8,9 +8,9 @@
 	"name": "Fallen",
 	"system": {
 		"description": "<p>You fell from grace. Will you atone, or embrace it?</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

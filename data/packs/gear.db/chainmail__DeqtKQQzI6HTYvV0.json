@@ -14,7 +14,6 @@
 		},
 		"baseArmor": "",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 60,
@@ -23,9 +22,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
 			"Compendium.shadowdark.properties.Item.F4wv0ycualMPaoco"

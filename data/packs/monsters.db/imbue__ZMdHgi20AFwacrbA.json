@@ -7,17 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Imbue",
 	"system": {
-		"dc": "13",
+		"class": [
+		],
 		"description": "<p>Staff becomes a +3 magic weapon for 10 rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "0"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 3
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

@@ -3,10 +3,10 @@
 	"_key": "!items.effects!HzzgAIdhoAyfeItJ.AmcPerJgnykmMwVA",
 	"changes": [
 		{
-			"key": "system.bonuses.backstabDie",
+			"key": "system.roll.attack.extra-damage-die.all",
 			"mode": 2,
 			"priority": null,
-			"value": "1"
+			"value": "1+floor(@level.value/2)"
 		}
 	],
 	"description": "",

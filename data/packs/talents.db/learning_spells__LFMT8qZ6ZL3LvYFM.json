@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p><strong>Learning Spells.</strong> You can permanently learn a wizard spell from a spell scroll by studying it for a day and succeeding on a [[check 15 int]] check.</p><p>Whether you succeed or fail, you expend the spell scroll.</p><p>Spells you learn in this way don't count toward your known spells.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

@@ -25,12 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

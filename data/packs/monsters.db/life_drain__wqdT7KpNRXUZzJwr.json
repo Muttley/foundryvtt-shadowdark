@@ -8,7 +8,8 @@
 	"name": "Life Drain",
 	"system": {
 		"description": "<p>[[/r 1d4]] CON damage. Death if reduced to 0 CON.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,9 +8,9 @@
 	"name": "Nobleborn",
 	"system": {
 		"description": "<p>You are the child of a jarl.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

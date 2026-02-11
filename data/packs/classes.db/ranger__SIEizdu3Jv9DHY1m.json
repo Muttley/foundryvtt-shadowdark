@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Ranger",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -29,9 +29,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.PPsLlxyDTbhy1aRI",
 		"description": "<p>Skilled trackers, stealthy wanderers, and peerless warriors who call the wilds their home.</p>",
 		"hitPoints": "d8",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -45,7 +42,8 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

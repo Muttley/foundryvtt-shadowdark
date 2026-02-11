@@ -8,7 +8,8 @@
 	"name": "Camouflage",
 	"system": {
 		"description": "<p>Hard to see in cave terrain or rocks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

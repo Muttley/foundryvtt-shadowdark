@@ -8,7 +8,8 @@
 	"name": "Stone Meld",
 	"system": {
 		"description": "<p>2/day, underground only. Turn invisible for 3 rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

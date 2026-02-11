@@ -8,7 +8,8 @@
 	"name": "Execute",
 	"system": {
 		"description": "<p>Deals x3 damage against surprised targets.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

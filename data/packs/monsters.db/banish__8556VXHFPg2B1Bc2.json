@@ -7,18 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Banish",
 	"system": {
-		"dc": 14,
+		"class": [
+		],
 		"description": "<p>All extradimensional creatures within near [[check 15 cha]] or sent back to their home planes.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": "-1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 4
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

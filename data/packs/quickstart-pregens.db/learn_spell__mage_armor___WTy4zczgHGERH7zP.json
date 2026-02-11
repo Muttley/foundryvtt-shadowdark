@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Learn one additional wizard spell of any tier you know.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "level"

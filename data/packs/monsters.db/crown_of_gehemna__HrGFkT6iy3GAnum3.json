@@ -8,7 +8,8 @@
 	"name": "Crown Of Gehemna",
 	"system": {
 		"description": "<p>3/day, cause a spell being cast within far to fail.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

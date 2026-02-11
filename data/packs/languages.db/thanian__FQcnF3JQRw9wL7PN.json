@@ -8,7 +8,8 @@
 	"name": "Thanian",
 	"system": {
 		"description": "<p>Minotaurs, beastmen, manticores</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

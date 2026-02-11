@@ -3,10 +3,10 @@
 	"_key": "!actors.effects!4gxXdPgUd0ofz89A.rMUM2XZ6Fg71dY3P",
 	"changes": [
 		{
-			"key": "system.bonuses.hauler",
-			"mode": 5,
+			"key": "system.slots",
+			"mode": 2,
 			"priority": null,
-			"value": "true"
+			"value": "max(@abilities.con.mod, 0)"
 		}
 	],
 	"description": "",

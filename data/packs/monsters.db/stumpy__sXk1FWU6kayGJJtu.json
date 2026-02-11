@@ -8,7 +8,8 @@
 	"name": "Stumpy",
 	"system": {
 		"description": "<p>ADV on STR checks to grab or drag other creatures.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

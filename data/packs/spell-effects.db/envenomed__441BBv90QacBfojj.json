@@ -3,8 +3,8 @@
 	"_key": "!items.effects!sZ6msFePi3R6DUju.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.bonuses.damageMultiplier",
-			"mode": 4,
+			"key": "system.roll.attack.damage.all",
+			"mode": 1,
 			"priority": null,
 			"value": "2"
 		}

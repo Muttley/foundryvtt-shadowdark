@@ -10,38 +10,21 @@
 	"name": "Sword of the Ancients",
 	"system": {
 		"ammoClass": "",
-		"attackBonus": "2",
 		"baseWeapon": "longsword",
-		"bonuses": {
-			"attackBonus": "2",
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": "2",
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
 		"damage": {
-			"bonus": "2",
-			"critMultiplier": 2,
-			"numDice": 1,
 			"oneHanded": "d8",
 			"twoHanded": ""
 		},
 		"description": "<p><em>A chipped and rusting blade with an oiled leather grip.</em></p><p><strong>Bonus</strong>. +2 longsword.</p><p><strong>Benefit</strong>. The sword is unbreakable and can carve through any material.</p><p>The owner can summon the sword to their hand if it's on the same plane.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": true,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,
@@ -55,8 +38,7 @@
 			"title": "core-rules"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

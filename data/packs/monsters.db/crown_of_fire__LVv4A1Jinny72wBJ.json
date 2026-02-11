@@ -8,7 +8,8 @@
 	"name": "Crown Of Fire",
 	"system": {
 		"description": "<p>Hostile spells targeting the archangel are extreme (DC 18) to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

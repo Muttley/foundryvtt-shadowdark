@@ -8,9 +8,9 @@
 	"name": "Marked",
 	"system": {
 		"description": "<p>You carry an eldritch mark. Is it a curse, or a gift?</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

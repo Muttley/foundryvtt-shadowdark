@@ -7,20 +7,10 @@
 	"img": "icons/skills/movement/feet-winged-sandals-tan.webp",
 	"name": "Walk on Sheer Surfaces",
 	"system": {
-		"bonuses": {
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "1"
-		},
 		"description": "<p>1/day, you can walk on sheer surfaces like walls for 1d4 rds.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.1hc2HGy3pZ89jvGM]{Walk on Sheer Surfaces}</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

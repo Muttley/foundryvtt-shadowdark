@@ -3,13 +3,13 @@
 	"_key": "!items.effects!pKu2XsypNq65vkbV.RftwcR3tZiYQwCZy",
 	"changes": [
 		{
-			"key": "system.bonuses.meleeAttackBonus",
+			"key": "system.roll.melee.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "2"
 		},
 		{
-			"key": "system.bonuses.rangedAttackBonus",
+			"key": "system.roll.ranged.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "2"

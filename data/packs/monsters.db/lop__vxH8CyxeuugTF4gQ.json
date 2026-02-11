@@ -8,7 +8,8 @@
 	"name": "Lop",
 	"system": {
 		"description": "<p>On a natural attack roll of 18-20, behead the target.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

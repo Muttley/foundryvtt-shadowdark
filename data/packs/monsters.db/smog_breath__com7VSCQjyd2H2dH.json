@@ -8,13 +8,14 @@
 	"name": "Smog Breath",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Fills a near-sized cube extending from dragon. [[check 15 con]] or [[/r 2d10]] damage and blinded for 1 round.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

@@ -25,14 +25,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
 			"combatTime": null,
-			"initiative": null,
 			"value": 0
 		},
 		"tokenIcon": {

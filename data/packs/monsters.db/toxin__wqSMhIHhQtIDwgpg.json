@@ -8,7 +8,8 @@
 	"name": "Toxin",
 	"system": {
 		"description": "<p>[[check 15 con]] or paralyzed [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

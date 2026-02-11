@@ -8,7 +8,8 @@
 	"name": "Weakness",
 	"system": {
 		"description": "<p>A crossbow bolt under the effects of the holy weapon spell kills the rakshasa.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

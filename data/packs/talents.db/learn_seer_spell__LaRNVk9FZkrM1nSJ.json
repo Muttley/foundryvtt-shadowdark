@@ -9,8 +9,8 @@
 	"system": {
 		"description": "<p>Learn one additional seer spell of any tier you know.</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

@@ -9,8 +9,8 @@
 	"system": {
 		"description": "<p>Learn an additional witch spell of any tier you can cast</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},

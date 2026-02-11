@@ -8,7 +8,8 @@
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Only damaged by magical sources. Immune to hostile spells of 3rd tier or lower.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

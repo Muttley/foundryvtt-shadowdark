@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You can only use one hand when using this item</p>",
 		"itemType": "armor",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

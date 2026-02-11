@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Your Presence effects become DC 9 to enact</p><p>duplicate = reroll</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

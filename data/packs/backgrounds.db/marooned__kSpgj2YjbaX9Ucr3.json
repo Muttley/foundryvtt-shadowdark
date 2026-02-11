@@ -8,9 +8,9 @@
 	"name": "Marooned",
 	"system": {
 		"description": "<p>They left you behind, but you refused to die</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

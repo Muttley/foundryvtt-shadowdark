@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>This weapon breaks on a natural 1 attack roll.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		}

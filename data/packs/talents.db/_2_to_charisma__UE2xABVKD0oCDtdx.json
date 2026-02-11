@@ -8,30 +8,10 @@
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "+2 to Charisma",
 	"system": {
-		"abilities": {
-			"cha": {
-				"bonus": "2"
-			},
-			"con": {
-				"bonus": "0"
-			},
-			"dex": {
-				"bonus": "0"
-			},
-			"int": {
-				"bonus": "0"
-			},
-			"str": {
-				"bonus": "0"
-			},
-			"wis": {
-				"bonus": "0"
-			}
-		},
 		"description": "",
 		"level": null,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

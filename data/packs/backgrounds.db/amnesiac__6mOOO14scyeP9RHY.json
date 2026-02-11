@@ -8,9 +8,9 @@
 	"name": "Amnesiac",
 	"system": {
 		"description": "<p>Your past is a haze, but some memories return</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

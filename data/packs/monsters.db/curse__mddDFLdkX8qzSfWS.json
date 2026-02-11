@@ -8,7 +8,8 @@
 	"name": "Curse",
 	"system": {
 		"description": "<p>[[check 15 con]] or target gains a magical curse, turning into a deep one over [[/r 2d10]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

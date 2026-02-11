@@ -8,7 +8,8 @@
 	"name": "Corrosive",
 	"system": {
 		"description": "<p>Metal that touches the rust monster is destroyed on a d6 roll of 1-3.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

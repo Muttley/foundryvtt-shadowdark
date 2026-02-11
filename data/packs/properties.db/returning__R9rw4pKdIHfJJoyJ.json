@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>On a missed ranged attack, this weapon returns to the thrower.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		}

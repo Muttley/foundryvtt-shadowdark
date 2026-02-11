@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Death",
 	"system": {
 		"description": "<p>[[check 15 con]] or drop to 0 HP with a death timer of 1.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

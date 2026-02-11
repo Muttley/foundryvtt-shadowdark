@@ -8,7 +8,8 @@
 	"name": "Celestial",
 	"system": {
 		"description": "<p>Angels</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "rare",
 		"source": {
 			"title": "core-rules"

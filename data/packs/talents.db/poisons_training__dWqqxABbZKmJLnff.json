@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You are trained in the use of poisons (see pg. 27)</p><p>duplicate = reroll</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

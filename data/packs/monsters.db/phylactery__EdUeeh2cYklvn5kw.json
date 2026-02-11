@@ -8,7 +8,8 @@
 	"name": "Phylactery",
 	"system": {
 		"description": "<p>Cannot be killed while spirit vessel (a diamond) is intact.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

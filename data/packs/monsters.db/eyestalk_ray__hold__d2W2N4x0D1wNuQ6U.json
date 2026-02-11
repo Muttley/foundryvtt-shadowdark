@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Hold",
 	"system": {
 		"description": "<p>[[check 15 str]] or paralyzed [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

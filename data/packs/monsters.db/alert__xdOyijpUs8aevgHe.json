@@ -8,7 +8,8 @@
 	"name": "Alert",
 	"system": {
 		"description": "<p>ADV on checks to detect sneaking or hiding creatures.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

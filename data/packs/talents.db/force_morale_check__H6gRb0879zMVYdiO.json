@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>1/day, force a close being to check morale, even if immune</p><p>duplicate = +1 use per day</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

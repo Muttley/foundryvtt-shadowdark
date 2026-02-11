@@ -8,7 +8,8 @@
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Only harmed by fire.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

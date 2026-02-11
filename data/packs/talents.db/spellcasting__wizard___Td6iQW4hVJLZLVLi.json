@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p><strong>Spellcasting.</strong> You can cast wizard spells you know.</p><p>You know three tier 1 spells of your choice from the wizard spell list (see pg. 57).</p><p>Each time you gain a level, you choose new wizard spells to learn according to the Wizard Spells Known table.</p><p>For casting wizard spells, see Spellcasting on pg. 52.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

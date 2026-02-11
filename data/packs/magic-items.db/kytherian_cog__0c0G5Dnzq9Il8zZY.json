@@ -8,7 +8,6 @@
 	"name": "Kytherian Cog",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +16,6 @@
 		"description": "<p>A coin-sized, toothed wheel buffed to a silvery shine.</p><p><strong>Benefit</strong>. You start every session with a luck token.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,7 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

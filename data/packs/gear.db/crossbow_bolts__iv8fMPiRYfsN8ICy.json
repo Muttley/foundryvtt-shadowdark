@@ -8,7 +8,6 @@
 	"name": "Crossbow Bolts",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 1,
@@ -17,7 +16,6 @@
 		"description": "<p>Ammunition for crossbows.</p>",
 		"equipped": false,
 		"isAmmunition": true,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,7 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 20,
 		"scroll": false,
 		"slots": {

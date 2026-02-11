@@ -8,6 +8,8 @@
 	"name": "Petrify",
 	"system": {
 		"description": "<p>Any creature that touches the basilisk or meets its gaze, [[check 9 con]] or one of its limbs (determine randomly) is petrified for a day.</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		}

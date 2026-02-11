@@ -7,20 +7,10 @@
 	"img": "icons/creatures/unholy/demon-fire-horned-mask.webp",
 	"name": "Morale Checks at DC 18",
 	"system": {
-		"bonuses": {
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "1"
-		},
 		"description": "<p>When enemies who can see you make a morale check, the DC is 18 instead of 15</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

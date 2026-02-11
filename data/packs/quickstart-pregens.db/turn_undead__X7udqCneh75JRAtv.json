@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>You know the turn undead spell. It doesn’t count toward your number of known spells.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "class"

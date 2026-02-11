@@ -8,12 +8,14 @@
 	"name": "Lightning Bolt",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>3/day, 5' wide line extending far from giant. All creatures in line [[check 15 dex]] or [[/r 5d10]] damage. DISADV on check if in water.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

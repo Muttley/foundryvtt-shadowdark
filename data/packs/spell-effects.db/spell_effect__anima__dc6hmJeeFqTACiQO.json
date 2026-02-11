@@ -25,11 +25,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.1",
+			"combatTime": 18.1,
 			"value": 37189
 		},
 		"tokenIcon": {

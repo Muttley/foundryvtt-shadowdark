@@ -7,13 +7,10 @@
 	"img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
 	"name": "Demonic Possession Bonus",
 	"system": {
-		"bonuses": {
-			"backstabDie": "1"
-		},
 		"description": "<p>Your Demonic Possession bonus increases by 1 point.</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},

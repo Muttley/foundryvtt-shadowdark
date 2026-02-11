@@ -12,7 +12,7 @@
 		"description": "<p>The character is beguiled.</p>",
 		"duration": {
 			"type": "unlimited",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +25,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

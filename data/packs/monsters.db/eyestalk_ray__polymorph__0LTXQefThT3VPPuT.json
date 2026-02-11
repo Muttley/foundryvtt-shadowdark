@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Polymorph",
 	"system": {
 		"description": "<p>[[check 15 int]] or turned into vermin for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,7 +8,8 @@
 	"name": "Dissolve",
 	"system": {
 		"description": "<p>One random piece of non-magical gear the target carries is destroyed.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

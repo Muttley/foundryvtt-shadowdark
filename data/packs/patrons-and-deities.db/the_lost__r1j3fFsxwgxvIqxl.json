@@ -7,9 +7,10 @@
 	"img": "icons/magic/holy/yin-yang-balance-symbol.webp",
 	"name": "The Lost",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"description": "<p>Two of The Nine are lost to the ages, their names expunged from history and memory. Yet their whispered legend lingers on in ancient, forbidden texts and secret, deep places...</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

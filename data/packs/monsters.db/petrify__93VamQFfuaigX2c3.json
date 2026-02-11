@@ -8,7 +8,8 @@
 	"name": "Petrify",
 	"system": {
 		"description": "<p>Any creature (including medusa) who looks directly at medusa, [[check 15 con]] or petrified.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

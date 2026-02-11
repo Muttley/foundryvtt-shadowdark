@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You have advantage on checks related to navigating and crewing boats.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Gain an additional use of your Smoke Step talent.</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

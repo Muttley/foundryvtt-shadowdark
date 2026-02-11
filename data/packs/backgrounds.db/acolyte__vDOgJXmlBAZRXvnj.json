@@ -8,7 +8,8 @@
 	"name": "Acolyte",
 	"system": {
 		"description": "<p>You're well trained in religious rites and doctrines</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

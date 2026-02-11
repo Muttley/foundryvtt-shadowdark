@@ -8,29 +8,6 @@
 	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
 	"name": "Spell Effect: World Tree",
 	"system": {
-		"abilities": {
-			"int": {
-				"base": "3"
-			},
-			"str": {
-				"base": "3"
-			},
-			"wis": {
-				"base": "3"
-			}
-		},
-		"attributes": {
-			"ac": {
-				"override": "17",
-				"value": "14"
-			}
-		},
-		"bonuses": {
-			"critical": {
-				"multiplier": "4"
-			},
-			"damageMultiplier": "2"
-		},
 		"category": "effect",
 		"description": "<p>For the spell's duration, the target can't be brought below 1 HP.</p>",
 		"duration": {
@@ -48,13 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

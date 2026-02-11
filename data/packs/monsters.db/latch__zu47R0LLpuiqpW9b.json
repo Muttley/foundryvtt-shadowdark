@@ -8,7 +8,8 @@
 	"name": "Latch",
 	"system": {
 		"description": "<p>Attach to bitten target; bites auto-hit next round. [[check 12 str]] on turn to tear off.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

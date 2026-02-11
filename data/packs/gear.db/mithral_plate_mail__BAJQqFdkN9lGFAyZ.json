@@ -8,13 +8,12 @@
 	"name": "Mithral Plate Mail",
 	"system": {
 		"ac": {
-			"attribute": "",
+			"attribute": "dex",
 			"base": 15,
 			"modifier": 0
 		},
 		"baseArmor": "plate-mail",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 520,
@@ -23,9 +22,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,

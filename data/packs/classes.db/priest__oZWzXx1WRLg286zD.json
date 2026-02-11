@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Priest",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": true,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -22,9 +22,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.CtkKBhsOpV1v5YjX",
 		"description": "<p>Crusading templars, prophetic shamans, or mad-eyed zealots who wield the power of their gods to cleanse the unholy.</p>",
 		"hitPoints": "d6",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -41,7 +38,8 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
@@ -122,9 +120,6 @@
 				}
 			}
 		},
-		"startingSpells": [
-			"Compendium.shadowdark.spells.Item.mByUvcHIVEPWscfH"
-		],
 		"talentChoiceCount": 0,
 		"talentChoices": [
 		],

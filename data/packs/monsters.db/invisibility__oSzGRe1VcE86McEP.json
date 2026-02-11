@@ -8,7 +8,8 @@
 	"name": "Invisibility",
 	"system": {
 		"description": "<p>1/day, turn invisible for 3 rounds. Ends if duergar attacks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

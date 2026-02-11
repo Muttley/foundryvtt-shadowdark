@@ -8,12 +8,14 @@
 	"name": "Scream",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

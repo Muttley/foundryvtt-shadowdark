@@ -8,7 +8,6 @@
 	"name": "Immovable Rod",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +16,6 @@
 		"description": "<p><em>A short, bejeweled iron rod with a button on one end.</em></p><p><strong>Benefit</strong>. When you click the button, the rod becomes fixed in space. Clicking the button again ends the effect.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,7 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

@@ -3,10 +3,15 @@
 	"_key": "!actors.items.effects!4gxXdPgUd0ofz89A.q4XASzehX7TfLgjb.XmlEQByLpzXULngp",
 	"changes": [
 		{
-			"key": "system.bonuses.weaponMastery",
+			"key": "system.roll.melee.bonus.bastard-sword",
 			"mode": 2,
 			"priority": null,
-			"value": "bastard-sword"
+			"value": "1+floor(@level.value/2)"
+		},
+		{
+			"key": "system.roll.melee.damage.bastard-sword",
+			"mode": 2,
+			"value": "1+floor(@level.value/2)"
 		}
 	],
 	"description": "",

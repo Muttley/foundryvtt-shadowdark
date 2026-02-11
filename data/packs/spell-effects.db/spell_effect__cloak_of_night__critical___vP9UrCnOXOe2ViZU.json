@@ -8,17 +8,11 @@
 	"img": "icons/equipment/back/cloak-layered-tattered-purple.webp",
 	"name": "Spell Effect: Cloak of Night (Critical)",
 	"system": {
-		"attributes": {
-			"ac": {
-				"override": "20",
-				"value": "20"
-			}
-		},
 		"category": "effect",
 		"description": "<p>For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p>You have advantage on Dexterity checks to sneak and hide for the spell's duration.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "8"
+			"value": 8
 		},
 		"effectPanel": {
 			"show": true
@@ -31,13 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

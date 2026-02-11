@@ -8,7 +8,8 @@
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 9 con]] or take [[/r 1d4]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

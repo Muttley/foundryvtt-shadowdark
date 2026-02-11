@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</span></p> <p>You are trained in the following tasks and have advantage on any associated checks:</span> </p> <ul> <li> <p>Climbing</span></p> </li> <li> <p>Sneaking and hiding</span></p> </li> <li> <p>Applying disguises</span></p> </li> <li> <p>Finding and disabling traps</span></p> </li> <li> <p>Delicate tasks such as picking pockets and opening locks</p> </li> </ul>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "class"

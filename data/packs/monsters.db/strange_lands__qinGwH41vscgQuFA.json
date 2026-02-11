@@ -8,7 +8,8 @@
 	"name": "Strange Lands",
 	"system": {
 		"description": "<p>The Wandering Merchant does not suffer any ill effects from the natural environment he does not wish to suffer.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

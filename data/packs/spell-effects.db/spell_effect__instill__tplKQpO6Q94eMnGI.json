@@ -12,7 +12,7 @@
 		"description": "<p>One weapon you wield is imbued with life force. It becomes a +1 weapon for the spell's duration.</p><p>If the weapon is a staff, it deals d6 damage instead of d4.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,11 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.-1",
 			"value": 1
 		},
 		"tokenIcon": {

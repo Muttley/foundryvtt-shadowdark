@@ -8,7 +8,8 @@
 	"name": "Moonbite Properties",
 	"system": {
 		"description": "<p>+2 greatsword , thrown weapon, returns after being thrown. Spells to heal damage it inflicts are DC 15 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

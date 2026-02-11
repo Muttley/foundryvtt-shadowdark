@@ -8,9 +8,9 @@
 	"name": "Drawn",
 	"system": {
 		"description": "<p>You hear a whispered call and follow it</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

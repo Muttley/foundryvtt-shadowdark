@@ -7,17 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Float",
 	"system": {
-		"dc": "14",
+		"class": [
+		],
 		"description": "<p>Fly double near for 5 rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 4
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

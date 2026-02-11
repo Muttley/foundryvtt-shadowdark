@@ -8,7 +8,8 @@
 	"name": "Contract",
 	"system": {
 		"description": "<p>Can grant mighty boons and patronage on behalf of an archdevil in exchange for a sworn soul. ADV on related Charisma checks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

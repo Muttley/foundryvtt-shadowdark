@@ -8,7 +8,8 @@
 	"name": "Permanent Death",
 	"system": {
 		"description": "<p>Cannot be permanently killed unless a wish spell is cast on it while it is at 0 HP.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

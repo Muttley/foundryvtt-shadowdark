@@ -3,10 +3,15 @@
 	"_key": "!actors.effects!wnjtoBC4k5dIiG8X.2rr100ySVxZn510u",
 	"changes": [
 		{
-			"key": "system.bonuses.weaponMastery",
+			"key": "system.roll.melee.bonus.greataxe",
 			"mode": 2,
 			"priority": null,
-			"value": "greataxe"
+			"value": "1+floor(@level.value/2)"
+		},
+		{
+			"key": "system.roll.melee.damage.greataxe",
+			"mode": 2,
+			"value": "1+floor(@level.value/2)"
 		}
 	],
 	"description": "",

@@ -8,13 +8,14 @@
 	"name": "Blind",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>One target within near [[check 15 cha]] or blinded for [[/r 1d4]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

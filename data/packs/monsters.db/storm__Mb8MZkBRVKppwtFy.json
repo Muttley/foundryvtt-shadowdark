@@ -8,12 +8,14 @@
 	"name": "Storm",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Seas become violently turbulent in 1 mile radius around kraken. Lasts [[/r 2d4]] rounds. Seaborne vessels have a 1:6 chance of capsizing each round.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

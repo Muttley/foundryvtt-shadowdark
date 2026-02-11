@@ -8,7 +8,8 @@
 	"name": "Minstrel",
 	"system": {
 		"description": "<p>You've traveled far with your charm and talent</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

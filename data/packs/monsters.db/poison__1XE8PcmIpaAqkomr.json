@@ -8,7 +8,8 @@
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 15 con]] or sleep.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,7 +8,8 @@
 	"name": "Iron Hide",
 	"system": {
 		"description": "<p>Half damage from non-magical weapons.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

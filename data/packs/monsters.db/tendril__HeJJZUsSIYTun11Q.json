@@ -8,9 +8,8 @@
 	"name": "Tendril",
 	"system": {
 		"attack": {
-			"num": "4"
+			"num": 4
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 4,
 			"critical": {
@@ -21,12 +20,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "Grab",
 			"value": "1d6"
 		},
 		"description": "",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

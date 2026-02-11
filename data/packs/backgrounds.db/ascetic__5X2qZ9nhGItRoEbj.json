@@ -8,9 +8,9 @@
 	"name": "Ascetic",
 	"system": {
 		"description": "<p>People fear you, but seek out your guidance</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

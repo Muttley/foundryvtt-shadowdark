@@ -8,7 +8,8 @@
 	"name": "Dice Of Truth",
 	"system": {
 		"description": "<p>A set of three six-sided dice whose rolls cannot be magically or mundanely altered in any way.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

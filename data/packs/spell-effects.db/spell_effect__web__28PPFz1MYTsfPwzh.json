@@ -12,7 +12,7 @@
 		"description": "<p>A creature stuck in the web can’t move and must succeed on a Strength check opposed by the casters spellcasting check to free itself.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +25,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

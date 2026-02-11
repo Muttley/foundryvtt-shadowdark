@@ -8,7 +8,8 @@
 	"name": "Desiccated",
 	"system": {
 		"description": "<p>Can be damaged by fire. Takes x2 damage from it.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

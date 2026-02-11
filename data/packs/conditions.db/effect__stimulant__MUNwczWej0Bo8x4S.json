@@ -12,7 +12,7 @@
 		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.EhaA5tBROfrws1Kx]{Stimulant}</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "10"
+			"value": 10
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +25,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

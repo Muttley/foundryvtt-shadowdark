@@ -8,9 +8,9 @@
 	"name": "Livestock Farmer",
 	"system": {
 		"description": "<p>You have intuition about all animals</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

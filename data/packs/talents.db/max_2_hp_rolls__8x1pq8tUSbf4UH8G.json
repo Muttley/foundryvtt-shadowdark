@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Maximize 2 hit point rolls (prior or future)</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

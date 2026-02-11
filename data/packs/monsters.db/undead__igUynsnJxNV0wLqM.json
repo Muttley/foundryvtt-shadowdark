@@ -8,7 +8,8 @@
 	"name": "Undead",
 	"system": {
 		"description": "<p>Immune to morale checks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

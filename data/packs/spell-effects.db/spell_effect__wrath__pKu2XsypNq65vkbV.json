@@ -8,16 +8,11 @@
 	"img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
 	"name": "Spell Effect: Wrath",
 	"system": {
-		"bonuses": {
-			"meleeAttackBonus": "2",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "2"
-		},
 		"category": "effect",
 		"description": "<p>Your weapons become magical +2 and deal an additional d8 damage for the spell's duration.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "10"
+			"value": 10
 		},
 		"effectPanel": {
 			"show": true
@@ -30,13 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

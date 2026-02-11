@@ -8,12 +8,14 @@
 	"name": "Water Spout",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Fills a near-sized cube within far. [[check 15 str]] or creatures inside flung [[/r 2d100]] feet in a random direction.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

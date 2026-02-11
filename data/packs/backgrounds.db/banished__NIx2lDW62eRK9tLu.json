@@ -8,7 +8,8 @@
 	"name": "Banished",
 	"system": {
 		"description": "<p>Your people cast you out for supposed crimes</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

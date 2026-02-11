@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You find a random priest or wizard wand (you choose)</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

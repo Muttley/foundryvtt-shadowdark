@@ -8,12 +8,14 @@
 	"name": "Poison Breath",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within near, [[check 15 con]] or [[/r 8d6]] damage.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

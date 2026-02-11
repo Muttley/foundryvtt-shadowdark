@@ -14,7 +14,6 @@
 		},
 		"baseArmor": "",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 60,
@@ -23,7 +22,6 @@
 		"description": "",
 		"equipped": true,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
 		"properties": [
 			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
@@ -36,7 +34,6 @@
 			"slots_used": 2
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false
