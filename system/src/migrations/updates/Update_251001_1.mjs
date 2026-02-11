@@ -3,18 +3,60 @@ import { UpdateBaseSD } from "../UpdateBaseSD.mjs";
 export default class Update_251001_1 extends UpdateBaseSD {
 	static version = 251001.1;
 
+	NEW_KEYS = [
+		"system.abilities.cha.value",
+		"system.abilities.con.value",
+		"system.abilities.dex.value",
+		"system.abilities.int.value",
+		"system.abilities.str.value",
+		"system.abilities.wis.value",
+		"system.attributes.ac.unarmored",
+		"system.attributes.ac.value",
+		"system.attributes.hp.max",
+		"system.roll.attack.bonus.all",
+		"system.roll.attack.bonus.this",
+		"system.roll.attack.critical-failure.all",
+		"system.roll.attack.critical-failure.this",
+		"system.roll.attack.critical-multiplier.all",
+		"system.roll.attack.critical-multiplier.this",
+		"system.roll.attack.critical-success.all",
+		"system.roll.attack.critical-success.this",
+		"system.roll.attack.damage.all",
+		"system.roll.attack.damage.this",
+		"system.roll.attack.extra-damage-die.all",
+		"system.roll.hp.advantage",
+		"system.roll.initiative.advantage",
+		"system.roll.melee.bonus.all",
+		"system.roll.melee.bonus.this",
+		"system.roll.melee.damage.all",
+		"system.roll.melee.damage.this",
+		"system.roll.ranged.bonus.all",
+		"system.roll.ranged.bonus.this",
+		"system.roll.ranged.damage.all",
+		"system.roll.ranged.damage.this",
+		"system.roll.spell.advantage.all",
+		"system.slots",
+		"system.attributes.ac.",
+		"system.roll.attack.extra-damage-die.",
+		"system.roll.attack.upgrade-damage-die.",
+		"system.roll.attack.upgrade-damage-die.",
+		"system.roll.melee.bonus.",
+		"system.roll.melee.damage.",
+		"system.roll.spell.advantage.",
+	];
+
 	async updateActor(actorData) {
 		if (actorData.type !== "Player") return;
 
 		let updateData = {};
-		updateData.effects = await this.updateEffects(actorData.effects);
+		updateData.effects = await this.updateEffects(actorData.effects, actorData.type);
 
 		return updateData;
 	}
 
 	async updateItem(itemData, actorData) {
 		let updateData = {};
-		updateData.effects = await this.updateEffects(itemData.effects);
+		updateData.effects = await this.updateEffects(itemData.effects, itemData.type);
 
 		// NPC spell to Spell
 		if (itemData.type === "NPC Spell") {
@@ -25,7 +67,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 		return updateData;
 	}
 
-	async updateEffects(effects) {
+	async updateEffects(effects, parentType = undefined) {
 		// Update Active Effect keys
 		for (const effect of effects) {
 			for (const change of effect.changes) {
@@ -83,34 +125,47 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						});
 						continue;
 
-					case "system.attributes.hp.bonus": change.key = "system.attributes.hp.max"; continue;
+					case "system.attributes.hp.bonus":
+						change.key = "system.attributes.hp.max";
+						continue;
 
 					case "system.abilities.str.bonus":
 					case "system.abilities.str.base":
-						change.key = "system.abilities.str.value"; continue;
+						change.key = "system.abilities.str.value";
+						continue;
 
 					case "system.abilities.dex.bonus":
 					case "system.abilities.dex.base":
-						change.key = "system.abilities.dex.value"; continue;
+						change.key = "system.abilities.dex.value";
+						continue;
 
 					case "system.abilities.con.bonus":
 					case "system.abilities.con.base":
-						change.key = "system.abilities.con.value"; continue;
+						change.key = "system.abilities.con.value";
+						continue;
 
 					case "system.abilities.int.bonus":
 					case "system.abilities.int.base":
-						change.key = "system.abilities.int.value"; continue;
+						change.key = "system.abilities.int.value";
+						continue;
 
 					case "system.abilities.wis.bonus":
 					case "system.abilities.wis.base":
-						change.key = "system.abilities.wis.value"; continue;
+						change.key = "system.abilities.wis.value";
+						continue;
 
 					case "system.abilities.cha.bonus":
 					case "system.abilities.cha.base":
-						change.key = "system.abilities.cha.value"; continue;
+						change.key = "system.abilities.cha.value";
+						continue;
 
 					case "system.bonuses.acBonus":
-						change.key = "system.attributes.ac.value"; continue;
+						change.key = "system.attributes.ac.value";
+						continue;
+
+					case "system.attributes.ac.override":
+						change.key = "system.attributes.ac.value";
+						continue;
 
 					case "system.bonuses.acBonusFromAttribute":
 						change.key = "system.attributes.ac.value";
@@ -118,11 +173,13 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.gearSlots":
-						change.key = "system.slots"; continue;
+						change.key = "system.slots";
+						continue;
 
 					case "system.bonuses.meleeAttackBonus":
 						change.key = "system.roll.melee.bonus";
-						if (effect.parent.type === "weapon") {
+
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -133,7 +190,8 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.meleeDamageBonus":
 						change.key = "system.roll.melee.damage";
-						if (effect.parent.type === "weapon") {
+
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -144,7 +202,8 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.rangedAttackBonus":
 						change.key = "system.roll.ranged.bonus";
-						if (effect.parent.type === "weapon") {
+
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -155,7 +214,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.rangedDamageBonus":
 						change.key = "system.roll.ranged.damage";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -166,7 +225,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.damageBonus":
 						change.key = "system.roll.attack.damage";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -176,14 +235,16 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.spellcastingCheckBonus":
-						change.key = "system.roll.spell.advantage.all"; continue;
+						change.key = "system.roll.spell.advantage.all";
+						continue;
 
 					case "system.bonuses.unarmoredAcBonus":
-						change.key = "system.attributes.ac.unarmored"; continue;
+						change.key = "system.attributes.ac.unarmored";
+						continue;
 
 					case "system.bonuses.attackBonus":
 						change.key = "system.roll.attack.bonus";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -194,7 +255,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.critical.multiplier":
 						change.key = "system.roll.attack.critical-multiplier";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -216,7 +277,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.critical.failureThreshold":
 						change.key = "system.roll.attack.critical-failure";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -227,7 +288,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.critical.successThreshold":
 						change.key = "system.roll.attack.critical-success";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -243,7 +304,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.damageMultiplier":
 						change.key = "system.roll.attack.damage";
-						if (effect.parent.type === "weapon") {
+						if (parentType === "Weapon") {
 							change.key += ".this";
 						}
 						else {
@@ -262,6 +323,23 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.value = 1;
 						continue;
 
+					default:
+						// Make sure we're not trying to migrate an effect which
+						// is already using the correct key
+						let isNewKey = false;
+						for (const KEY of this.NEW_KEYS) {
+							if (change.key.startsWith(KEY)) {
+								isNewKey = true;
+								break;
+							}
+						}
+
+						if (isNewKey) {
+							continue;
+						}
+						else {
+							throw Error(`No migration path for Active Effect key "${change.key}" with value "${change.value}"`);
+						}
 				}
 
 			}
