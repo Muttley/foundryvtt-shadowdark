@@ -672,7 +672,7 @@ export default class PlayerSD extends ActorBaseSD {
 		return await shadowdark.utils.getFromUuid(this.ancestry);
 	}
 
-	getAttacks() {
+	async getAttacks() {
 		const weapons = this.parent.items.filter(i => i.system.isWeapon && i.system.equipped);
 		const attacks = {};
 
@@ -684,7 +684,7 @@ export default class PlayerSD extends ActorBaseSD {
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
 
-			if (attackData.itemUuid) attackData.item = fromUuidSync(attackData.itemUuid);
+			if (attackData.itemUuid) attackData.item = await fromUuid(attackData.itemUuid);
 
 			attacks[type].push(attackData);
 
@@ -698,7 +698,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 				if (!attacks[ranged]) attacks[ranged] = [];
 				if (rangedAttackData.itemUuid) {
-					rangedAttackData.item = fromUuidSync(rangedAttackData.itemUuid);
+					rangedAttackData.item = await fromUuid(rangedAttackData.itemUuid);
 				}
 				attacks[ranged].push(rangedAttackData);
 			}

@@ -17,6 +17,7 @@
 - [#1143] CSS in v12 causing problems, cannot override
 - [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
 - [#1194] Compendium migrations skipped when in a Module
+- [#1214] Unable to open Player character sheets directly from compendiums
 
 ## Chores
 - [#369] Migrated to using data models for actors and items

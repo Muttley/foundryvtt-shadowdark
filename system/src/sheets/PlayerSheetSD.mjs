@@ -805,7 +805,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
-		const attacks = this.actor.system.getAttacks();
+		const attacks = await this.actor.system.getAttacks();
 
 		for (const i of this.actor.system.getPhysicalItems()) {
 			if (i.system.isGem) {
