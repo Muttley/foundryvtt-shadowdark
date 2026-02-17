@@ -22,6 +22,7 @@
 ## Chores
 - [#369] Migrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
+- [#1167] Migrate Pre-existing Active Effects to new model
 - [#1193] Remove redundant span elements from all compendium text fields.
 - [#1213] Sanity check Quickstart adventure and Pregen characters to ensure the new Active Effects are being used effectively
 - [#1218] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Items
