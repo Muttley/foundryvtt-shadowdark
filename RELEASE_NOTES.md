@@ -23,11 +23,13 @@
 - [#369] Migrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
 - [#1193] Remove redundant span elements from all compendium text fields.
+- [#1213] Sanity check Quickstart adventure and Pregen characters to ensure the new Active Effects are being used effectively
 - [#1218] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Items
 - [#1219] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
 - [#1220] Accessing the global "ActorSheet" which is now namespaced under foundry.appv1.sheets.ActorSheet
 - [#1221] Accessing the global "ItemSheet" which is now namespaced under foundry.appv1.sheets.ItemSheet
 - [#1222] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
+- [#1223] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
 
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
