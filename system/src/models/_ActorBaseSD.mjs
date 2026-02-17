@@ -133,16 +133,20 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 	_getAbilityModifier(ability) {
 		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
+
 		const modifier = this.abilities[ability].mod;
-		const tooltip = [];
-		if (modifier !==0) {
-			tooltip.push(shadowdark.dice.createToolTip(
+
+		let tooltip = "";
+		if (modifier !== 0) {
+			tooltip = shadowdark.dice.createToolTip(
 				game.i18n.format(
 					"SHADOWDARK.roll.tooltip.stat_bonus",
-					{stat: CONFIG.SHADOWDARK.ABILITIES_LONG[ability]}),
+					{stat: CONFIG.SHADOWDARK.ABILITIES_LONG[ability]}
+				),
 				modifier
-			));
+			);
 		}
+
 		return {modifier, tooltip};
 	}
 
