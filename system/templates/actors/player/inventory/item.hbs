@@ -53,6 +53,20 @@
 
 	<div class="actions">
 		{{#if item.system.canBeEquipped}}
+			{{#ifCond item.system.isVersatile "&&" item.system.equipped}}
+				<a
+					data-action="toggle-handedness"
+					data-item-id="{{item._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_handedness'}}"
+				>
+					{{#ifEq item.system.handedness "1h"}}
+						<i class="fa-solid fa-hand-holding" style="color:var(--primary);"></i>
+					{{/ifEq}}
+					{{#ifEq item.system.handedness "2h"}}
+						<i class="fa-solid fa-hand-holding-hand" style="color:var(--primary);"></i>
+					{{/ifEq}}
+				</a>
+			{{/ifCond}}
 			<a
 				data-action="toggle-equipped"
 				data-item-id="{{item._id}}"

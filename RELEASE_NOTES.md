@@ -5,6 +5,7 @@
 - [#1038] Added missing translatable strings
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
+- [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
@@ -18,6 +19,7 @@
 - [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
 - [#1194] Compendium migrations skipped when in a Module
 - [#1214] Unable to open Player character sheets directly from compendiums
+- [#1215] No way of rolling 2H damage for versatile weapons currently
 
 ## Chores
 - [#369] Migrated to using data models for actors and items

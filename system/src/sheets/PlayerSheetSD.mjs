@@ -109,6 +109,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find("[data-action='toggle-handedness']").click(
+			event => this._onToggleHandedness(event)
+		);
+
 		html.find("[data-action='toggle-light']").click(
 			event => this._onToggleLightSource(event)
 		);
@@ -641,6 +645,26 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
+	}
+
+	async _onToggleHandedness(event) {
+		event.preventDefault();
+
+		const itemId = event.currentTarget.dataset.itemId;
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (!item || !item.system.isVersatile) return;
+
+		if (item.system.handedness === "1h") {
+			const shields = await this.actor.system.getEquippedShields();
+			for (const shield of shields) {
+				shield.update({"system.equipped": false});
+			}
+			item.update({"system.handedness": "2h"});
+		}
+		else {
+			item.update({"system.handedness": "1h"});
+		}
 	}
 
 	async _onToggleStashed(event) {

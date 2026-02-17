@@ -717,7 +717,6 @@ export default class PlayerSD extends ActorBaseSD {
 	}
 
 	getClassAbilities() {
-
 		const sortedAbilityItems = this.parent.items.filter(
 			i => i.type === "Class Ability"
 		).sort((a, b) => a.name - b.name);
@@ -744,6 +743,12 @@ export default class PlayerSD extends ActorBaseSD {
 	async getDeity() {
 		if (!this.deity) return null;
 		return await shadowdark.utils.getFromUuid(this.deity);
+	}
+
+	async getEquippedShields() {
+		return this.parent.items.filter(
+			i => i.type === "Armor" && i.system.isAShield && i.system.equipped
+		);
 	}
 
 	async getLanguageItems() {
