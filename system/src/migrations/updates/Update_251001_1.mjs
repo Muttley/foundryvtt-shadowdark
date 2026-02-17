@@ -237,7 +237,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.spellcastingCheckBonus":
-						change.key = "system.roll.spell.advantage.all";
+						change.key = "system.roll.spell.bonus.all";
 						continue;
 
 					case "system.bonuses.unarmoredAcBonus":
