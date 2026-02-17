@@ -9,13 +9,10 @@
 	"img": "icons/skills/melee/spear-tips-triple-orange.webp",
 	"name": "+1 to Damage",
 	"system": {
-		"bonuses": {
-			"meleeDamageBonus": "1",
-			"rangedDamageBonus": "1"
-		},
 		"description": "",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		},

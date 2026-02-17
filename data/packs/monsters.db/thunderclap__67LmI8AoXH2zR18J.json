@@ -7,17 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Thunderclap",
 	"system": {
-		"dc": "13",
+		"class": [
+		],
 		"description": "<p>Fills a near-sized cube extending from druid. Creatures within are thrown [[/r 2d20]] feet in a random direction.</p>",
 		"duration": {
-			"type": "",
-			"value": -1
+			"type": "rounds",
+			"value": "-1"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 3
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

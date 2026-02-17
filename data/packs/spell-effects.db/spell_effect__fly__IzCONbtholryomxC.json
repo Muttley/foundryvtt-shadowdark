@@ -12,7 +12,7 @@
 		"description": "<p>You can fly near for the spell's duration and are able to hover in place.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,13 +25,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

@@ -8,7 +8,8 @@
 	"name": "Strangle",
 	"system": {
 		"description": "<p>Deals x2 damage against surprised creatures.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

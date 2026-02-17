@@ -177,7 +177,9 @@ export default class PlayerSD extends ActorBaseSD {
 	 */
 
 	_calcBaseArmorClass() {
-		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS;
+		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS
+			+ (this.abilities?.dex?.mod ?? 0);
+
 		let modAC = 0;
 		let aeBonuses = 0;
 		let bestArmor = null;
@@ -225,8 +227,9 @@ export default class PlayerSD extends ActorBaseSD {
 			weapon,
 			config
 		);
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(attackRollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		// attack critical threshold
 		const critThresholdKey = this._getActiveEffectKeys(
@@ -321,6 +324,7 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 		config.damageRoll.formula = damageRollKey.value;
+		config.damageRoll.formulaBackup = config.damageRoll.formula;
 
 		// generate tooltips
 		const tooltips = [];
@@ -672,7 +676,7 @@ export default class PlayerSD extends ActorBaseSD {
 		return await shadowdark.utils.getFromUuid(this.ancestry);
 	}
 
-	getAttacks() {
+	async getAttacks() {
 		const weapons = this.parent.items.filter(i => i.system.isWeapon && i.system.equipped);
 		const attacks = {};
 
@@ -684,7 +688,7 @@ export default class PlayerSD extends ActorBaseSD {
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
 
-			if (attackData.itemUuid) attackData.item = fromUuidSync(attackData.itemUuid);
+			if (attackData.itemUuid) attackData.item = await fromUuid(attackData.itemUuid);
 
 			attacks[type].push(attackData);
 
@@ -698,7 +702,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 				if (!attacks[ranged]) attacks[ranged] = [];
 				if (rangedAttackData.itemUuid) {
-					rangedAttackData.item = fromUuidSync(rangedAttackData.itemUuid);
+					rangedAttackData.item = await fromUuid(rangedAttackData.itemUuid);
 				}
 				attacks[ranged].push(rangedAttackData);
 			}

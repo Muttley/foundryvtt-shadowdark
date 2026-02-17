@@ -8,7 +8,8 @@
 	"name": "Lycanthropy",
 	"system": {
 		"description": "<p>If 12 or more damage from the same werewolf, contract lycanthropy.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

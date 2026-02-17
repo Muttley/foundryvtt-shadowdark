@@ -8,7 +8,8 @@
 	"name": "Legendary",
 	"system": {
 		"description": "<p>Only damaged by magical sources. Hostile spells targeting The Ten-Eyed Oracle are DC 18 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

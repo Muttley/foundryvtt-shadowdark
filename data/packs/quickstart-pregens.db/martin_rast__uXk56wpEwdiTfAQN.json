@@ -2,8 +2,6 @@
 	"_id": "uXk56wpEwdiTfAQN",
 	"_key": "!actors!uXk56wpEwdiTfAQN",
 	"effects": [
-		"KBbKi9YYaC8xqVsI",
-		"0jy4lHT3X9ryT7p9"
 	],
 	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Martin_Rast_portrait.webp",
@@ -19,11 +17,11 @@
 		"CGJ4zxmqFilgRBIZ",
 		"HsowE8JPDwcXugdG",
 		"15j8vdCGXCjRSxFw",
-		"sY8GphUjJgRWSDnZ",
-		"TZL7hE00xuS1Sln3",
-		"gSPtr4NJUnpEBDW0",
-		"o8o0rx4FZL3XFJ6o",
-		"1aradLNjYF4F3EAU"
+		"XG40F8MkXEHxeuAD",
+		"zOpXczZOt9Hgsb5Y",
+		"eKWXox9KuxnErU26",
+		"uyQ6Gk66YqMVbwmu",
+		"1F7ax6jrD0B6SyEp"
 	],
 	"name": "Martin Rast",
 	"prototypeToken": {
@@ -125,28 +123,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 14,
-				"bonus": 0
+				"value": 14
 			},
 			"con": {
-				"base": 10,
-				"bonus": 0
+				"value": 10
 			},
 			"dex": {
-				"base": 16,
-				"bonus": 0
+				"value": 16
 			},
 			"int": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			},
 			"str": {
-				"base": 9,
-				"bonus": 0
+				"value": 9
 			},
 			"wis": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			}
 		},
 		"alignment": "neutral",
@@ -156,51 +148,11 @@
 				"value": 15
 			},
 			"hp": {
-				"base": 3,
-				"bonus": 0,
 				"max": 3,
 				"value": 3
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.sBbHjpCaF0iIoDNM",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.C6wkCa2w5dlgSq7f",
 		"coins": {
 			"cp": 0,
@@ -208,10 +160,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.r1j3fFsxwgxvIqxl",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
 			"Compendium.shadowdark.languages.Item.FQcnF3JQRw9wL7PN"
@@ -225,7 +173,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

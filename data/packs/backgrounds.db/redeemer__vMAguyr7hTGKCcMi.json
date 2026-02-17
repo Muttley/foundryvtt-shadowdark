@@ -8,9 +8,9 @@
 	"name": "Redeemer",
 	"system": {
 		"description": "<p>You must redeem the name of your kin</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

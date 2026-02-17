@@ -8,7 +8,8 @@
 	"name": "Wall Of Flame",
 	"system": {
 		"description": "<p>1/day, 20' high curtain of fire, double near length. Touching it deals [[/r 4d8]] damage. Lasts [[/r 2d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

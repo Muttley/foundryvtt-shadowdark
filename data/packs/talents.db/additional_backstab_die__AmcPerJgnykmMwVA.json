@@ -3,13 +3,13 @@
 	"_key": "!items.effects!HzzgAIdhoAyfeItJ.AmcPerJgnykmMwVA",
 	"changes": [
 		{
-			"key": "system.bonuses.backstabDie",
+			"key": "system.bonus.backstabdice",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
 		}
 	],
-	"description": "",
+	"description": "<p>Your Backstab deals +1 dice of damage.</p>",
 	"disabled": false,
 	"duration": {
 		"combat": null,

@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>3/day, when you are reduced to 0 HP, make a [[check 18 con]] check (the Implacable talent applies to this roll). On a success, you instead go to 1 HP.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.z5uKTDf4wtkipQ4s]{Relentless}</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"talentClass": "class"

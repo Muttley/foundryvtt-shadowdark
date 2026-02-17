@@ -8,13 +8,14 @@
 	"name": "Lightning Bolt",
 	"system": {
 		"attack": {
-			"num": "1d4"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Straight line (5' wide) extending far from kraken. [[check 15 dex]] or [[/r 6d6]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Charm",
 	"system": {
 		"description": "<p>[[check 15 cha]] or become ally for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

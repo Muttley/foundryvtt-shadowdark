@@ -8,9 +8,8 @@
 	"name": "Needle",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 3,
 			"critical": {
@@ -26,6 +25,8 @@
 			"value": "1"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

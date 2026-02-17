@@ -8,7 +8,8 @@
 	"name": "Phantoms",
 	"system": {
 		"description": "<p>1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits cloaker or illusions.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Provides additional protection</p>",
 		"itemType": "armor",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

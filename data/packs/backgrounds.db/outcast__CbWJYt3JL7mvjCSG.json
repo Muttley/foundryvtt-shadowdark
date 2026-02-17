@@ -8,9 +8,9 @@
 	"name": "Outcast",
 	"system": {
 		"description": "<p>You were thrown out for real or supposed crimes</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

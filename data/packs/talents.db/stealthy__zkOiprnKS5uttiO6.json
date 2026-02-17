@@ -7,10 +7,10 @@
 	"img": "icons/environment/people/group.webp",
 	"name": "Stealthy",
 	"system": {
-		"description": "<p>Once per day, you can become invisible for 3 rounds.</p>",
+		"description": "<p>Once per day, you can become invisible for 3 rounds.</p><p>@UUID[Compendium.shadowdark.conditions.Item.piycdXLudXTFLG0k]{Condition: Invisible (Stealthy)}</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

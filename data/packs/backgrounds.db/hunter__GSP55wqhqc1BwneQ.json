@@ -8,9 +8,9 @@
 	"name": "Hunter",
 	"system": {
 		"description": "<p>You know how to move quietly in the wilds</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

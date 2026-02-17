@@ -7,17 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Bug Brain",
 	"system": {
-		"dc": "13",
+		"class": [
+		],
 		"description": "<p>Near range, one target. Target's INT drops to 1 for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 3
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

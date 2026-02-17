@@ -8,7 +8,8 @@
 	"name": "Blood Drain",
 	"system": {
 		"description": "<p>Attach to bitten target; auto-hit the next round. [[check 9 str]] on turn to remove.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

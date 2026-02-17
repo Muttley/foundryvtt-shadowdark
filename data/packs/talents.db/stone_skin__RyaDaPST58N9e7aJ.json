@@ -2,19 +2,17 @@
 	"_id": "RyaDaPST58N9e7aJ",
 	"_key": "!items!RyaDaPST58N9e7aJ",
 	"effects": [
-		"4CAhqfyLJIkeEoPW"
+		"4CAhqfyLJIkeEoPW",
+		"Y9m57iq0VaFQm0yi"
 	],
 	"folder": "8t1Gmpgn1Q6HXJAz",
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Stone Skin",
 	"system": {
-		"bonuses": {
-			"acBonus": "2",
-			"stoneSkinTalent": "1"
-		},
 		"description": "<p>Add 2 + half your level (round down) to your AC.</p><p>You have advantage on checks to hide in natural environments.</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},

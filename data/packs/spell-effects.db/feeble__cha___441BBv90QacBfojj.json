@@ -3,16 +3,10 @@
 	"_key": "!items.effects!OTHSzCFY9zLlwzFF.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.abilities.cha.base",
+			"key": "system.abilities.cha.value",
 			"mode": 3,
 			"priority": null,
 			"value": "3"
-		},
-		{
-			"key": "system.abilities.cha.mod",
-			"mode": 3,
-			"priority": null,
-			"value": "-4"
 		}
 	],
 	"description": "",

@@ -8,7 +8,8 @@
 	"name": "Clever",
 	"system": {
 		"description": "<p>+[[/r 1d4]] damage when attacking with surprise.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

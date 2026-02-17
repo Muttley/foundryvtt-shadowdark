@@ -8,12 +8,14 @@
 	"name": "Avalanche",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within close [[check 15 str]] or entombed for [[/r 1d4]] rounds under mounds of earth.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

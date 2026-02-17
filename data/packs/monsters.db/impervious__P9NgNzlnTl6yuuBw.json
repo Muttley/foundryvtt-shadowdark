@@ -8,7 +8,8 @@
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Fire immune. Healed by electricity.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

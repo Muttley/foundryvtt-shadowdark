@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Choose two different @UUID[Compendium.shadowdark.talents.Item.A8Siwy6S27LwEkx5]{Old Gods} effects each day</p><p>duplicate = reroll</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

@@ -8,7 +8,8 @@
 	"name": "Golem",
 	"system": {
 		"description": "<p>Immune to damage from fire, cold, electricity, or non-magical sources.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

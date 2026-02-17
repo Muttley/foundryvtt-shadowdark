@@ -8,7 +8,8 @@
 	"name": "Carrion Tracker",
 	"system": {
 		"description": "<p>Can track dead flesh unerringly within a mile.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

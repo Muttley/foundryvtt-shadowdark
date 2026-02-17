@@ -8,7 +8,8 @@
 	"name": "Oath",
 	"system": {
 		"description": "<p>3/day, ADV on a roll made in service of knight's order.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

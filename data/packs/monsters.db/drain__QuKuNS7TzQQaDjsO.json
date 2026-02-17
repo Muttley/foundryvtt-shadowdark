@@ -8,7 +8,8 @@
 	"name": "Drain",
 	"system": {
 		"description": "<p>The target takes [[/r 1d6]] WIS damage. A target reduced to 0 WIS this way swears its soul to an archdevil.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

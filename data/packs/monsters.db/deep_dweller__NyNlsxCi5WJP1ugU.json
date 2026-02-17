@@ -8,7 +8,8 @@
 	"name": "Deep Dweller",
 	"system": {
 		"description": "<p>Immune to harm from fire and cold. Amphibious.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,12 +8,14 @@
 	"name": "Charm",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>One humanoid in near [[check 15 cha]] or bewitched by cubi for [[/r 1d6]] hours.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

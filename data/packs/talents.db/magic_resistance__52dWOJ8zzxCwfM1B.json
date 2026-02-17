@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Hostile spells that target you are always hard to cast</p><p>duplicate = reroll</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "level"

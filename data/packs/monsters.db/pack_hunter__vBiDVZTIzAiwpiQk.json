@@ -8,7 +8,8 @@
 	"name": "Pack Hunter",
 	"system": {
 		"description": "<p>Deals +1 damage while an ally is close.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

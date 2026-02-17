@@ -7,13 +7,10 @@
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Sacrifice",
 	"system": {
-		"class": [
-			"Compendium.shadowdark-expanded.sd-expanded-items.Item.gzppRplU9cNif8P1"
-		],
 		"description": "<p>You were to be ritually sacrificed, but escaped</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

@@ -8,12 +8,14 @@
 	"name": "Horn",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All enemies in near [[check 15 cha]] or paralyzed [[/r 1d4]] rounds.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

@@ -8,7 +8,8 @@
 	"name": "Constrict",
 	"system": {
 		"description": "<p>Contested STR to hold target immobile for one round.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

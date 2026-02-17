@@ -1,0 +1,33 @@
+{
+	"_id": "fsh7dPOotCEuj2ic",
+	"_key": "!items.effects!KLDZKFY6SrqQKSva.fsh7dPOotCEuj2ic",
+	"changes": [
+		{
+			"key": "system.roll.attack.extra-damage-die.all",
+			"mode": 2,
+			"priority": null,
+			"value": "1+@bonus.backstabdice+floor(@level.value/2)"
+		}
+	],
+	"description": "<p>If you hit a creature who is unaware of your attack, you deal an extra weapon die of damage. Add additional weapon dice of damage equal to half your level (round down).</p>",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
+	"name": "Backstab",
+	"origin": "Compendium.shadowdark.talents.Item.KLDZKFY6SrqQKSva",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

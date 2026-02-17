@@ -8,7 +8,8 @@
 	"name": "Curse",
 	"system": {
 		"description": "<p>Slam damage can only be healed by level 5+ priest.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

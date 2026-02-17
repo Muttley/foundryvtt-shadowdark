@@ -8,7 +8,8 @@
 	"name": "Scream",
 	"system": {
 		"description": "<p>Creatures who hear in double near [[check 12 cha]] or paralyzed for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

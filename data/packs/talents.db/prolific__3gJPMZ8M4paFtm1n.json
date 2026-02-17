@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Add 1d6 to your learning rolls. Groups carousing with 1 or more bards add 1d6 to their rolls.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

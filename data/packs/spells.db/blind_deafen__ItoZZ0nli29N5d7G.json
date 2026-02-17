@@ -13,11 +13,11 @@
 		"description": "<p>You utter a divine censure, blinding or deafening one creature you can see in range. The creature has disadvantage on tasks requiring the lost sense.</p><p>@UUID[Compendium.shadowdark.spell-effects.SOkcvkzrGMGQKhmk]{Spell Effect: Blind}</p><p>@UUID[Compendium.shadowdark.spell-effects.aAdqy5QwVJrT8JWE]{Spell Effect: Deaf}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

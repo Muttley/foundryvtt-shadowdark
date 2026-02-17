@@ -805,7 +805,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
-		const attacks = this.actor.system.getAttacks();
+		const attacks = await this.actor.system.getAttacks();
 
 		for (const i of this.actor.system.getPhysicalItems()) {
 			if (i.system.isGem) {
@@ -893,10 +893,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 
-		// Sort talents by level for display...
-		talents.level.items = talents.level.items.sort(
-			(a, b) => a.system.level - b.system.level
-		);
+		// Sort Level Talents by level for display, sort Ancestry and Class
+		// talents alphabetically
+		talents.ancestry.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.class.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.level.items.sort((a, b) => a.system.level - b.system.level);
+
+		// Sort all spells alphabetically by tier
+		for (const tier in spells) {
+			spells[tier].sort((a, b) => a.name.localeCompare(b.name));
+		}
 
 		context.classAbilities = this.actor.system.getClassAbilities();
 		context.attacks = attacks;

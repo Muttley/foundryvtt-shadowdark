@@ -14,7 +14,6 @@
 		},
 		"baseArmor": "chainmail",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 240,
@@ -23,9 +22,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,

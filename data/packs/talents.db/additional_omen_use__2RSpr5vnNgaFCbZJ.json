@@ -9,8 +9,8 @@
 	"system": {
 		"description": "<p>Gain an additional use of your Omen talent each day.</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

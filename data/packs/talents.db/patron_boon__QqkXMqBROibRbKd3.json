@@ -9,8 +9,8 @@
 	"system": {
 		"description": "<p>At 1st level, you gain a random Patron Boon talent (see pg. 18) based on your chosen patron. </p><p>Whenever you gain a new talent roll, you may choose to roll on your Patron Boon table rather than the Warlock Talents table.</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},

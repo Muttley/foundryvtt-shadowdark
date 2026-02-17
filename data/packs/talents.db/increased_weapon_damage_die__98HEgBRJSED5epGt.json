@@ -8,13 +8,10 @@
 	"img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 	"name": "Increased Weapon Damage Die",
 	"system": {
-		"bonuses": {
-			"weaponDamageDieD12": "REPLACEME"
-		},
 		"description": "",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

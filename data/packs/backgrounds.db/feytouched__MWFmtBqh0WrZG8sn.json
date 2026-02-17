@@ -8,9 +8,9 @@
 	"name": "Feytouched",
 	"system": {
 		"description": "<p>A fairy befriended you in your childhood</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

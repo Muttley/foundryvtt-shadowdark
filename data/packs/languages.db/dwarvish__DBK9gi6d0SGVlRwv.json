@@ -8,7 +8,8 @@
 	"name": "Dwarvish",
 	"system": {
 		"description": "<p>Dwarves</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

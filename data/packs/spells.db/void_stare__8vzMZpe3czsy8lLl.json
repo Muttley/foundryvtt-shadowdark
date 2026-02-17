@@ -13,10 +13,11 @@
 		"description": "<p>Your eyes turn black as you look into the dark between the stars.</p><p>One creature of LV 6 or less you can see falls under your control. You decide its actions during its turn.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.nctlTXcIkACzb0yd]{Spell Effect: Void Stare}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

@@ -8,7 +8,8 @@
 	"name": "Rebirth",
 	"system": {
 		"description": "<p>A red-hot egg remains after death. Phoenix hatches from it in [[/r 1d4]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

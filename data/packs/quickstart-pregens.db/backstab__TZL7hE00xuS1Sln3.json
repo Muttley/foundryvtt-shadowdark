@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>If you hit a creature who is unaware of your attack, you deal an extra weapon die of damage. Add additional weapon dice of damage equal to half your level (round down).</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "class"

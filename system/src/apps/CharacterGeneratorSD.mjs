@@ -618,7 +618,8 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 			armorData = ["All armor"];
 		}
 		for (const armor of classObj.system.armor) {
-			armorData.push(fromUuidSync(armor).name);
+			const armorItem = await fromUuid(armor);
+			armorData.push(armorItem.name);
 		}
 		this.formData.armor = armorData;
 

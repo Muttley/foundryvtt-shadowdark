@@ -8,7 +8,8 @@
 	"name": "Phalanx",
 	"system": {
 		"description": "<p>+1 to attacks and AC when in close range of an allied hobgoblin.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

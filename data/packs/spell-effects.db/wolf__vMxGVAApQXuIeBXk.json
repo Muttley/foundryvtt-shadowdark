@@ -3,58 +3,34 @@
 	"_key": "!items.effects!B9ChlhtUjECrLlre.vMxGVAApQXuIeBXk",
 	"changes": [
 		{
-			"key": "system.abilities.str.base",
-			"mode": 4,
+			"key": "system.abilities.str.value",
+			"mode": 5,
 			"priority": null,
 			"value": "14"
 		},
 		{
-			"key": "system.abilities.dex.base",
-			"mode": 4,
+			"key": "system.abilities.dex.value",
+			"mode": 5,
 			"priority": null,
 			"value": "14"
 		},
 		{
-			"key": "system.abilities.con.base",
-			"mode": 4,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.attributes.hp.base",
-			"mode": 3,
-			"priority": null,
-			"value": "10"
-		},
-		{
-			"key": "system.attributes.ac.override",
+			"key": "system.abilities.con.value",
 			"mode": 5,
 			"priority": null,
 			"value": "12"
 		},
 		{
-			"key": "system.abilities.str.base",
-			"mode": 3,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.dex.base",
-			"mode": 3,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.con.base",
-			"mode": 3,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.attributes.hp.base",
-			"mode": 4,
+			"key": "system.attributes.hp.max",
+			"mode": 5,
 			"priority": null,
 			"value": "10"
+		},
+		{
+			"key": "system.attributes.ac.all",
+			"mode": 5,
+			"priority": null,
+			"value": "12"
 		}
 	],
 	"description": "",

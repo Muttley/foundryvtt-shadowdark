@@ -8,7 +8,8 @@
 	"name": "Diabolic",
 	"system": {
 		"description": "<p>Demons, devils</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "rare",
 		"source": {
 			"title": "core-rules"

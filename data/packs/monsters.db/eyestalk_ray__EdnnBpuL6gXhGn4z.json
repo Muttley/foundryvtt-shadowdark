@@ -8,13 +8,14 @@
 	"name": "Eyestalk Ray",
 	"system": {
 		"attack": {
-			"num": "2d4"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Each ray can shoot once per round and target one creature or an object up to 1,000 pounds (up to four on same target).</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 			"nearLine"
 		],

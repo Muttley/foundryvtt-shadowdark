@@ -8,7 +8,8 @@
 	"name": "Ur-vampire",
 	"system": {
 		"description": "<p>Must sleep in sarcophagus at least once per moon cycle or loses [[/r 2d8]] HP per day that cannot heal until sleeping in sarcophagus. Takes [[/r 3d8]] damage each round while in direct sunlight. Cannot be killed unless pierced through heart while at 0 HP with a wooden stake carved from a tree from the Tal-Yool jungle.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

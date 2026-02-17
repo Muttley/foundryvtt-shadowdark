@@ -8,7 +8,6 @@
 	"name": "Grappling Hook",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 1,
@@ -17,7 +16,6 @@
 		"description": "<p>A rope anchor with three, curved tines.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,6 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

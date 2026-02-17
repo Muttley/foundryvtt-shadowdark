@@ -8,9 +8,8 @@
 	"name": "Iron Scepter",
 	"system": {
 		"attack": {
-			"num": "4"
+			"num": 4
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 10,
 			"critical": {
@@ -21,11 +20,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "3",
+			"numDice": 3,
 			"special": "",
 			"value": "3d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

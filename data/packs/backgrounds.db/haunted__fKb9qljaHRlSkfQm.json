@@ -8,9 +8,9 @@
 	"name": "Haunted",
 	"system": {
 		"description": "<p>A restless spirit wants something from you</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

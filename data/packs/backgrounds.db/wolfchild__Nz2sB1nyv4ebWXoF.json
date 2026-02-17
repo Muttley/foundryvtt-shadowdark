@@ -8,9 +8,9 @@
 	"name": "Wolfchild",
 	"system": {
 		"description": "<p>Long ago, you walked into town wearing pelts</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

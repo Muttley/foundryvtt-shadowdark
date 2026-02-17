@@ -8,7 +8,8 @@
 	"name": "Elvish",
 	"system": {
 		"description": "<p>Elves</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

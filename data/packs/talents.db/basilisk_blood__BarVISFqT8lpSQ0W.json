@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You have ADV on CON checks to avoid harmful maladies, poisons, or afflictions.</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},

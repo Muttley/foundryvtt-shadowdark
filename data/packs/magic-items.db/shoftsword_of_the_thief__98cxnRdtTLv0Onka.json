@@ -10,38 +10,21 @@
 	"name": "Shoftsword of the Thief",
 	"system": {
 		"ammoClass": "",
-		"attackBonus": "1",
 		"baseWeapon": "shortsword",
-		"bonuses": {
-			"attackBonus": "1",
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": "1",
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
 		"damage": {
-			"bonus": "1",
-			"critMultiplier": 2,
-			"numDice": 1,
 			"oneHanded": "d6",
 			"twoHanded": ""
 		},
 		"description": "<p><em>A stubby, grey blade riddled with notches and scars.</em></p><p><strong>Bonus</strong>. +1 shortsword. +2 if wielded by a halfling or thief.</p><p><strong>Benefit</strong>. Once per day, regain a luck token you just spent.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": true,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,
@@ -55,8 +38,7 @@
 			"title": "core-rules"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

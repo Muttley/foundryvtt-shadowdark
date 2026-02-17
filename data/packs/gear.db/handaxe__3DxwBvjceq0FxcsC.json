@@ -9,34 +9,20 @@
 	"system": {
 		"ammoClass": "",
 		"baseWeapon": "",
-		"bonuses": {
-			"attackBonus": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": 0,
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 2,
 			"sp": 0
 		},
 		"damage": {
-			"numDice": 1,
 			"oneHanded": "d6",
 			"twoHanded": ""
 		},
 		"description": "<p><strong>Finesse (F).</strong> You can use your Strength or Dexterity when attacking with this weapon.</p><p><strong>Thrown (Th).</strong> You can throw this weapon to make a ranged attack with it using Strength.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
 			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
@@ -49,12 +35,10 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

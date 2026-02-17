@@ -8,7 +8,8 @@
 	"name": "Reptilian",
 	"system": {
 		"description": "<p>Lizardfolk, viperians</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

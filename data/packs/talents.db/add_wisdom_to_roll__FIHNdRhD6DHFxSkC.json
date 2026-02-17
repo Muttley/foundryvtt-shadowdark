@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>3/day, add your Wis bonus to any roll (reroll duplicates)</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

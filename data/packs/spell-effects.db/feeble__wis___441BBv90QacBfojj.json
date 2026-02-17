@@ -3,16 +3,10 @@
 	"_key": "!items.effects!Jlv9MzbDrXu92djm.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.abilities.wis.base",
+			"key": "system.abilities.wis.value",
 			"mode": 3,
 			"priority": null,
 			"value": "3"
-		},
-		{
-			"key": "system.abilities.wis.mod",
-			"mode": 3,
-			"priority": null,
-			"value": "-4"
 		}
 	],
 	"description": "",

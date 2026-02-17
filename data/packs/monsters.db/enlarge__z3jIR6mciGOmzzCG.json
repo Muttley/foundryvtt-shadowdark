@@ -8,7 +8,8 @@
 	"name": "Enlarge",
 	"system": {
 		"description": "<p>1/day, +[[/r 1d6]] damage on melee attacks and ADV on STR checks for 3 rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

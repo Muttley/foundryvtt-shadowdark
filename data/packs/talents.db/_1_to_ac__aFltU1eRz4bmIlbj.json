@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Gain +1 to your AC through supernatural foresight</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Bard",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -27,9 +27,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.ZzffJkaIfmdPzdE7",
 		"description": "<p>Bards are welcome wanderers and wise advisors; it is their task to protect and share knowledge handed down through the ages.</p>",
 		"hitPoints": "d6",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 4,
 			"fixed": [
@@ -43,7 +40,8 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

@@ -8,7 +8,8 @@
 	"name": "Primordial",
 	"system": {
 		"description": "<p>Elder things, elementals</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "rare",
 		"source": {
 			"title": "core-rules"

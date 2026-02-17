@@ -8,7 +8,8 @@
 	"name": "Wish",
 	"system": {
 		"description": "<p>Cast wish once a week for a mortal, no spellcasting check.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Cancel",
 	"system": {
 		"description": "<p>[[check 15 dex]] or all magical effects on target end.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -7,17 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Omens",
 	"system": {
-		"dc": "12",
+		"class": [
+		],
 		"description": "<p>Self. ADV on all actions for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 2
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

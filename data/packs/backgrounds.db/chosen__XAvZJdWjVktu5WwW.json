@@ -8,9 +8,9 @@
 	"name": "Chosen",
 	"system": {
 		"description": "<p>An eldritch being selected you for a purpose</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You're trained in oration, performing arts, lore, and diplomacy. You have advantage on related checks.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

@@ -133,21 +133,23 @@
 				"value": 17
 			},
 			"hp": {
-				"hd": 0,
 				"max": 35,
 				"value": 35
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 7
+			"value": 7,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Plodding herbivores with a wide, bony skull frill and three horns. </i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 35, <strong>ATK</strong> 2 horns +6 (1d10) or 1 charge, <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 7</p>\n\t<p><strong> Charge</strong>. Move up to double near in straight line and make 1 horn attack. If hit, x3 damage.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Plodding herbivores with a wide, bony skull frill and three horns. </i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 35, <strong>ATK</strong> 2 horns +6 (1d10) or 1 charge, <strong>MV</strong> near, <strong>S</strong> +4, <strong>D</strong> -1, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 7</p>\n\t<p><strong> Charge</strong>. Move up to double near in straight line and make 1 horn attack. If hit, x3 damage.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

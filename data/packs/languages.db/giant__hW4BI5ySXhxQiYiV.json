@@ -8,7 +8,8 @@
 	"name": "Giant",
 	"system": {
 		"description": "<p>Giants, ogres, trolls</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

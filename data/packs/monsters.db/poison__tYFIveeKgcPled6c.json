@@ -8,7 +8,8 @@
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 18 con]] or go to 0 HP with a death timer of 1.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

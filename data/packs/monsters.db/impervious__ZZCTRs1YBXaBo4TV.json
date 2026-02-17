@@ -8,7 +8,8 @@
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Immune to damage from acid, cold, or fire.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

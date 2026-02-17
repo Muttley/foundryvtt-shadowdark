@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>You have advantage on Constitution checks to resist injury, poison, or endure extreme environments.</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"talentClass": "class"

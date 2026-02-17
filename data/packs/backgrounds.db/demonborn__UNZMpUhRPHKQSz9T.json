@@ -8,9 +8,9 @@
 	"name": "Demonborn",
 	"system": {
 		"description": "<p>An ancestor of yours is a powerful demon</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

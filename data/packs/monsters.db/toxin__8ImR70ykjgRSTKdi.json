@@ -8,7 +8,8 @@
 	"name": "Toxin",
 	"system": {
 		"description": "<p>[[check 12 con]] or unconscious for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

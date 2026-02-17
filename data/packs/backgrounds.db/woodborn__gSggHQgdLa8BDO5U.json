@@ -8,9 +8,9 @@
 	"name": "Woodborn",
 	"system": {
 		"description": "<p>They found you in the hollow of an oak tree</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

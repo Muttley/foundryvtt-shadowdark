@@ -9,12 +9,11 @@
 	"system": {
 		"ac": {
 			"attribute": "",
-			"base": 0,
+			"base": null,
 			"modifier": 2
 		},
 		"baseArmor": "",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 15,
@@ -23,9 +22,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.bAzl6RH1PW95ZkFE"
 		],
@@ -36,7 +33,6 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		},
 		"stashed": false

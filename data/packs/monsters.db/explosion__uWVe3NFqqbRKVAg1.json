@@ -8,7 +8,8 @@
 	"name": "Explosion",
 	"system": {
 		"description": "<p>Upon death, creatures within double near of phoenix [[check 18 dex]] or [[/r 10d6]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -8,6 +8,7 @@ export default class ArmorSD extends PhysicalItemSD {
 			ac: new fields.SchemaField({
 				attribute: new fields.StringField({
 					initial: "dex",
+					blank: true,
 					choices: Object.keys(CONFIG.SHADOWDARK.ARMOR_BONUS_ATTRIBUTES),
 				}),
 				base: new fields.NumberField({ integer: true, initial: 0}),

@@ -8,9 +8,8 @@
 	"name": "Bite",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 13,
 			"critical": {
@@ -21,11 +20,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "5",
+			"numDice": 5,
 			"special": "Swallow",
 			"value": "5d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

@@ -8,9 +8,8 @@
 	"name": "Thrash",
 	"system": {
 		"attack": {
-			"num": "4"
+			"num": 4
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 13,
 			"critical": {
@@ -21,11 +20,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "3",
+			"numDice": 3,
 			"special": "Sever",
 			"value": "3d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

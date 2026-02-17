@@ -8,7 +8,8 @@
 	"name": "Supreme Undead",
 	"system": {
 		"description": "<p>Immune to morale checks. Only damaged by magical sources.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

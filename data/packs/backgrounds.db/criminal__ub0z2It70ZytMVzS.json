@@ -8,9 +8,9 @@
 	"name": "Criminal",
 	"system": {
 		"description": "<p>You were exiled from your village for a crime</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

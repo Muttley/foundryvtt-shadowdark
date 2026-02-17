@@ -8,7 +8,8 @@
 	"name": "Savage",
 	"system": {
 		"description": "<p>ADV on attacks against creatures below half their HP.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

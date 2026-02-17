@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Once per day, you can become invisible for 3 rounds.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "ancestry"

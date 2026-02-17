@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>You can use your Strength or Dexterity when attacking with this weapon</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

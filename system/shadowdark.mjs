@@ -118,27 +118,27 @@ Hooks.once("init", () => {
 	});
 
 	// Register sheet application classes
-	Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
+	foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
 		types: ["Player"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.player",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
 		types: ["NPC"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
 		types: ["Light"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
+	foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+	foundry.documents.collections.Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.item",
 	});

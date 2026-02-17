@@ -8,9 +8,9 @@
 	"name": "God's Blood",
 	"system": {
 		"description": "<p>You are descended from a god; it marks you</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

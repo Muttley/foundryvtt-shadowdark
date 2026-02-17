@@ -1,9 +1,9 @@
 {
 	"_id": "sx2uVw9MzQNA7mnd",
-	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.1aradLNjYF4F3EAU.sx2uVw9MzQNA7mnd",
+	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.eKWXox9KuxnErU26.sx2uVw9MzQNA7mnd",
 	"changes": [
 		{
-			"key": "system.abilities.dex.bonus",
+			"key": "system.abilities.dex.value",
 			"mode": 2,
 			"priority": null,
 			"value": "2"
@@ -15,9 +15,9 @@
 		"combat": null,
 		"rounds": null,
 		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
+		"startRound": 2,
+		"startTime": 13756,
+		"startTurn": 0,
 		"turns": null
 	},
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",

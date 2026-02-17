@@ -8,9 +8,8 @@
 	"name": "Bite",
 	"system": {
 		"attack": {
-			"num": "2"
+			"num": 2
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 1,
 			"critical": {
@@ -26,6 +25,8 @@
 			"value": "1"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

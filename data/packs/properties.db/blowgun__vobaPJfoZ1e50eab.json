@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>Firing this weapon from hiding doesn't reveal your position.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		}
 	},

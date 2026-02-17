@@ -7,18 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Illusion",
 	"system": {
-		"dc": 11,
+		"class": [
+		],
 		"description": "<p>Create a convincing visual and/ or auditory illusion within near. Lasts until dismissed.</p>",
 		"duration": {
 			"type": "permanent",
-			"value": -1
+			"value": "-1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 1
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

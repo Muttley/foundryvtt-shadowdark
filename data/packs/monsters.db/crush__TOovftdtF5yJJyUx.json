@@ -8,7 +8,8 @@
 	"name": "Crush",
 	"system": {
 		"description": "<p>[[check 15 str]] or target takes [[/r 1d8]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

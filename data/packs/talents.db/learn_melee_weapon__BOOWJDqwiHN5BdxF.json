@@ -2,7 +2,6 @@
 	"_id": "BOOWJDqwiHN5BdxF",
 	"_key": "!items!BOOWJDqwiHN5BdxF",
 	"effects": [
-		"cCz1g6lENouunQcI"
 	],
 	"folder": "TcpWrnecaN2k2gYr",
 	"img": "icons/skills/melee/hand-grip-hammer-spiked-blue.webp",
@@ -10,9 +9,9 @@
 	"system": {
 		"description": "<p>Learn to wield 1 melee weapon</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

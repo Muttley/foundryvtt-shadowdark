@@ -8,7 +8,8 @@
 	"name": "Crown Of Darkness",
 	"system": {
 		"description": "<p>All hostile spells are reflected at caster with a spellcasting check less than 20.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

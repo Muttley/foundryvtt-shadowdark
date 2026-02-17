@@ -8,7 +8,8 @@
 	"name": "Common",
 	"system": {
 		"description": "<p>Most humanoids</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

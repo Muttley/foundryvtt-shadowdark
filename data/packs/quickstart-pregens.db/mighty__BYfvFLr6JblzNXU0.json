@@ -9,15 +9,11 @@
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Mighty",
 	"system": {
-		"bonuses": {
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1"
-		},
 		"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "ancestry"

@@ -1,0 +1,43 @@
+{
+	"_id": "JHVaQhNjxYJMNH78",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.JHVaQhNjxYJMNH78",
+	"effects": [
+	],
+	"folder": "LVzvIhYHieRT4O6q",
+	"img": "icons/weapons/polearms/spear-hooked-double.webp",
+	"name": "Spear",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "",
+		"equipped": false,
+		"isAmmunition": true,
+		"magicItem": false,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

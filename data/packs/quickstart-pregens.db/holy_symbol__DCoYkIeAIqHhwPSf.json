@@ -8,7 +8,6 @@
 	"name": "Holy Symbol",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +16,6 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,15 +25,16 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
-			"free_carry": 1,
+			"free_carry": 0,
 			"per_slot": 1,
-			"slots_used": 1
+			"slots_used": 0
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false,

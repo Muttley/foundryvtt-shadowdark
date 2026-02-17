@@ -8,6 +8,8 @@
 	"name": "Herbalist",
 	"system": {
 		"description": "<p>You know plants, medicines, and poisons</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

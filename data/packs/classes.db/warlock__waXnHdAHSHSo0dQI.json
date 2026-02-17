@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Warlock",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -25,9 +25,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.xM3hghlK5nvo46Vo",
 		"description": "<p>Howling warriors with sharpened teeth, wild-eyed doomspeakers preaching of The Dissolution, and cloaked lore-hunters bearing the hidden Mark of Shune.</p>",
 		"hitPoints": "d6",
-		"language": {
-			"select": 1
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -46,9 +43,9 @@
 			"required": true,
 			"startingBoons": 1
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"spellcasting": {

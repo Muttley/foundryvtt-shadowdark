@@ -9,7 +9,8 @@
 	"system": {
 		"description": "<p>Roll an additional talent on the @UUID[Compendium.shadowdark.rollable-tables.RollTable.pQAyZAcfrs9JrG0Q]{Black Lotus Talents} table.</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

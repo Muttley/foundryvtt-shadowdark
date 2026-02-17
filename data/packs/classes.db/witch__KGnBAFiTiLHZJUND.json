@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Witch",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -23,9 +23,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.fifOKQmilp9Y45lf",
 		"description": "<p>Cackling crones stooped over cauldrons, chanting shamans smeared in blood and clay, and outcast maidens with milky eyes that see portents and secrets.</p>",
 		"hitPoints": "d4",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -42,9 +39,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"spellcasting": {

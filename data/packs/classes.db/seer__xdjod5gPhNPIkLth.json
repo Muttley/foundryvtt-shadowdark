@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Seer",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -24,9 +24,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.XU4gJD2AK8FCeEZh",
 		"description": "<p>Baleful diviners who reek of smoke and blood. They untangle the whispers of the gods by reading the runes, the bones, and the stars. Their knowledge of fate allows them to bend it.</p>",
 		"hitPoints": "d6",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -40,9 +37,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		},
 		"spellcasting": {

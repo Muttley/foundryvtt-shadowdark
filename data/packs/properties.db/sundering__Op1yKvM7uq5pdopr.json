@@ -9,9 +9,9 @@
 	"system": {
 		"description": "<p>When you are hit with a melee attack, you may choose to destroy this weapon or armor to negate all damage from the attack.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

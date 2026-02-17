@@ -7,20 +7,10 @@
 	"img": "icons/skills/melee/strike-dagger-skull-white.webp",
 	"name": "Triple Damage Assassin",
 	"system": {
-		"bonuses": {
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "1"
-		},
 		"description": "<p>Your deal triple damage with your Trained Assassin talent.</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

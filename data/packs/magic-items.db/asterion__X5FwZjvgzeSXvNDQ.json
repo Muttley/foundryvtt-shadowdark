@@ -10,38 +10,21 @@
 	"name": "Asterion",
 	"system": {
 		"ammoClass": "",
-		"attackBonus": "1",
 		"baseWeapon": "greatsword",
-		"bonuses": {
-			"attackBonus": "1",
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": "1",
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
 		"damage": {
-			"bonus": "1",
-			"critMultiplier": 2,
-			"numDice": 1,
 			"oneHanded": "",
 			"twoHanded": "d12"
 		},
 		"description": "<p><strong>Benefit</strong>. A creature cannot move the wielder against their will.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": true,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
 		],
@@ -56,8 +39,7 @@
 			"title": "core-rules"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

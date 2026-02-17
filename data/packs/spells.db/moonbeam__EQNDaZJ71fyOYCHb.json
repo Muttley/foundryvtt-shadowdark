@@ -13,10 +13,11 @@
 		"description": "<p>A wavering ray of silvery moonlight strikes one creature within far. It takes 3d6 damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

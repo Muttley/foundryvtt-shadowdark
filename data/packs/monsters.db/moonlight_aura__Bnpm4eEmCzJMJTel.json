@@ -8,7 +8,8 @@
 	"name": "Moonlight Aura",
 	"system": {
 		"description": "<p>Hostile spells targeting the principi are DC 15.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

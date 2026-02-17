@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Wizard",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -22,9 +22,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.RQ0vogfVtJGuT9oT",
 		"description": "<p>Rune-tattooed adepts, bespectacled magi, and flameconjuring witches who dare to manipulate the fell forces of magic.</p>",
 		"hitPoints": "d4",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 2,
 			"fixed": [
@@ -38,7 +35,8 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

@@ -8,7 +8,8 @@
 	"name": "Hear Thoughts",
 	"system": {
 		"description": "<p>Can hear the surface thoughts of all intelligent creatures within near.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

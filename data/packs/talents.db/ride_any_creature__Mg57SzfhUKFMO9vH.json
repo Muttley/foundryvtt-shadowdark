@@ -7,19 +7,10 @@
 	"img": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp",
 	"name": "Ride any Creature",
 	"system": {
-		"bonuses": {
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1"
-		},
 		"description": "<p>You can use any rider-bearing creature as your mount.</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

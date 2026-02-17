@@ -8,17 +8,11 @@
 	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
 	"name": "Spell Effect: Mage Armor",
 	"system": {
-		"attributes": {
-			"ac": {
-				"override": "14",
-				"value": "14"
-			}
-		},
 		"category": "effect",
 		"description": "",
 		"duration": {
 			"type": "rounds",
-			"value": "10"
+			"value": 10
 		},
 		"effectPanel": {
 			"show": true
@@ -31,8 +25,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

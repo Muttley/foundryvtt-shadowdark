@@ -7,7 +7,7 @@
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Sea Wolf",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -25,9 +25,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.r87J1r4hXVNnPDUK",
 		"description": "<p>Seafaring raiders who prowl the isles for plunder in dragonheaded longboats. When the warhorn sounds, they become fierce berserkers and shield maidens who hope to please their gods with a brave death.</p>",
 		"hitPoints": "d8",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -41,9 +38,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		},
 		"spellcasting": {

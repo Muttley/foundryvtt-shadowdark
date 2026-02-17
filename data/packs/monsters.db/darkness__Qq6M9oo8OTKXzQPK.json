@@ -8,13 +8,14 @@
 	"name": "Darkness",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Extinguish all light sources in near.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

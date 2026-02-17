@@ -8,7 +8,6 @@
 	"name": "Basilisk Egg",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +16,6 @@
 		"description": "<p>A loyal baby hatches in [[/r 1d4]] days.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,6 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

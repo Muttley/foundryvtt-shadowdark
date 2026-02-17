@@ -8,7 +8,8 @@
 	"name": "Spikes",
 	"system": {
 		"description": "<p>Manticores have [[/r 4d6]] tail spikes. They regrow each day.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

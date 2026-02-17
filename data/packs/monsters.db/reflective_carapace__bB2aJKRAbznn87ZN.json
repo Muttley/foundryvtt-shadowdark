@@ -8,7 +8,8 @@
 	"name": "Reflective Carapace",
 	"system": {
 		"description": "<p>Immune to rays, blasts, or bolts of energy. 1:6 chance these are reflected back at their originator.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

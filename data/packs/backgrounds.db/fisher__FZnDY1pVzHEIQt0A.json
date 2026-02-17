@@ -8,9 +8,9 @@
 	"name": "Fisher",
 	"system": {
 		"description": "<p>You know all the sea creatures and legends</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

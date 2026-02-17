@@ -8,7 +8,8 @@
 	"name": "Eyestalk Ray: Sleep",
 	"system": {
 		"description": "<p>[[check 15 wis]] or asleep [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

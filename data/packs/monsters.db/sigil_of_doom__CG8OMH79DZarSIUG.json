@@ -7,18 +7,21 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Sigil of Doom",
 	"system": {
-		"dc": 15,
+		"class": [
+		],
 		"description": "<p>One target of LV 9 or less within near [[check 15 con]] or go to 0 HP.</p>",
 		"duration": {
 			"type": "instant",
-			"value": -1
+			"value": "-1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 5
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

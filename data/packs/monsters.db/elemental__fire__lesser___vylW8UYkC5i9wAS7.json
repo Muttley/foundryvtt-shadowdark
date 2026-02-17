@@ -134,21 +134,23 @@
 				"value": 15
 			},
 			"hp": {
-				"hd": 0,
 				"max": 30,
 				"value": 30
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 6
+			"value": 6,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A roaring column of flames. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 30, <strong>ATK</strong> 3 slam +6 (2d10/3d10) or 1 inferno, <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources. Fire immune.</p><p><strong>Inferno</strong>. All within near [[check 15 dex]] or 3d8 damage.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A roaring column of flames. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 30, <strong>ATK</strong> 3 slam +6 (2d10/3d10) or 1 inferno, <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +3, <strong>C</strong> +3, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources. Fire immune.</p><p><strong>Inferno</strong>. All within near [[check 15 dex]] or 3d8 damage.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

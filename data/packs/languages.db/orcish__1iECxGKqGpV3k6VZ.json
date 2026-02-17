@@ -8,7 +8,8 @@
 	"name": "Orcish",
 	"system": {
 		"description": "<p>Orcs</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

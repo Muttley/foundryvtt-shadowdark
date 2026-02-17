@@ -8,7 +8,8 @@
 	"name": "Knock",
 	"system": {
 		"description": "<p>[[check 9 str]] or pushed a close distance and fall down.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

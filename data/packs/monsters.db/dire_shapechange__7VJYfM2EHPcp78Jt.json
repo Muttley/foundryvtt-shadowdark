@@ -8,7 +8,8 @@
 	"name": "Dire Shapechange",
 	"system": {
 		"description": "<p>In place of attacks, turn into a giant bat, dire wolf, or back into regular form.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

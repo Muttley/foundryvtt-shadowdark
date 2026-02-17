@@ -8,9 +8,9 @@
 	"name": "Healer",
 	"system": {
 		"description": "<p>You understand how life and death intertwine</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

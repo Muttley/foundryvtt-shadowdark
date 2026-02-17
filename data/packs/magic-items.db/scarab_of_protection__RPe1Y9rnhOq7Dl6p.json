@@ -8,7 +8,6 @@
 	"name": "Scarab of Protection",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +16,6 @@
 		"description": "<p><em>A brooch made from a horned scarab beetle dipped in gold.</em></p><p><strong>Benefit</strong>. If you die, make a [[check 18 con]] check. If you succeed, you are unconscious instead of dead.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,7 +25,8 @@
 			"template": "torch"
 		},
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

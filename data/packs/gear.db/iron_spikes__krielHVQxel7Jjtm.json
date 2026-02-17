@@ -1,0 +1,44 @@
+{
+	"_id": "krielHVQxel7Jjtm",
+	"_key": "!items!krielHVQxel7Jjtm",
+	"effects": [
+	],
+	"folder": "0ws7y8D3IktigkiB",
+	"img": "icons/tools/fasteners/pin-spiked.webp",
+	"name": "Iron Spikes",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 1,
+			"sp": 0
+		},
+		"description": "<p>Strong spikes. Each has a hole for threading</p><p>rope. Can be hammered in with weapons or other iron spikes.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 10,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 10,
+			"slots_used": 1
+		},
+		"source": {
+			"title": ""
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

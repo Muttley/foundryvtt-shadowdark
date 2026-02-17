@@ -1,6 +1,8 @@
 import { ActorBaseSD } from "./_ActorBaseSD.mjs";
 import * as actorFields from "./_fields/actorFields.mjs";
 
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
+
 const fields = foundry.data.fields;
 
 export default class NpcSD extends ActorBaseSD {

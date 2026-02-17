@@ -8,11 +8,6 @@
 	"img": "icons/magic/death/skull-poison-green.webp",
 	"name": "Condition: Disease (2)",
 	"system": {
-		"abilities": {
-			"con": {
-				"bonus": "-2"
-			}
-		},
 		"category": "condition",
 		"description": "",
 		"duration": {
@@ -30,8 +25,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

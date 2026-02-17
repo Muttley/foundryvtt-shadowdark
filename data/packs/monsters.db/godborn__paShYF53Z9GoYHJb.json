@@ -8,7 +8,8 @@
 	"name": "Godborn",
 	"system": {
 		"description": "<p>Hostile spells targeting the medusa are DC 15 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}
