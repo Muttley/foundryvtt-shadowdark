@@ -33,6 +33,7 @@
 - [#1221] Accessing the global "ItemSheet" which is now namespaced under foundry.appv1.sheets.ItemSheet
 - [#1222] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
 - [#1223] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
+- [#1225] TableResult#documentId is deprecated. Consult TableResult#uuid instead
 
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*

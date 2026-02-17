@@ -193,14 +193,8 @@ export default class UtilitySD {
 		const items = [];
 
 		for (const result of results) {
-			const uuid = [
-				"Compendium",
-				result.documentCollection,
-				result.documentId,
-
-			].join(".");
-
-			items.push(await fromUuid(uuid));
+			const uuid = result.documentUuid ?? undefined;
+			if (uuid) items.push(await fromUuid(uuid));
 		}
 
 		return items;
