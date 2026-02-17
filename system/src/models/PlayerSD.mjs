@@ -225,8 +225,9 @@ export default class PlayerSD extends ActorBaseSD {
 			weapon,
 			config
 		);
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(attackRollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		// attack critical threshold
 		const critThresholdKey = this._getActiveEffectKeys(
@@ -321,6 +322,7 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 		config.damageRoll.formula = damageRollKey.value;
+		config.damageRoll.formulaBackup = config.damageRoll.formula;
 
 		// generate tooltips
 		const tooltips = [];
