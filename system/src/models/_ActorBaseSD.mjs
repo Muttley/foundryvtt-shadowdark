@@ -208,7 +208,9 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			if (keys.includes(c.key) || isItem) {
 				// include only selected situational active effects
 				if (e.isSituational) {
-					config.situational.push(e.uuid);
+					if (!config.situational.includes(e.uuid)) {
+						config.situational.push(e.uuid);
+					}
 					if (!config.selected?.includes(e.uuid)) return;
 				}
 
