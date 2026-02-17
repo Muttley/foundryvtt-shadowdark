@@ -170,6 +170,12 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 				baseKey.replace(/^system\.roll\.(melee|ranged)\./, "system.roll.attack.")
 			);
 		}
+		else if (baseKey.startsWith("system.roll.stat.")) {
+			// Also search for the "all" key for stat rolls
+			baseKeys.push(
+				baseKey.replace(/(str|dex|con|int|wis|cha)$/, "all")
+			);
+		}
 
 		const keys = [...baseKeys];
 		const changes = [];
@@ -277,12 +283,13 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 		// generate check formula from ability mod and AE roll bonuses
 		const abilityMod = this._getAbilityModifier(ability);
-		const rollKey = this._getActiveEffectKeys(`roll.${ability}.bonus`, abilityMod.modifier, null, config);
+		const rollKey = this._getActiveEffectKeys(`roll.stat.bonus.${ability}`, abilityMod.modifier, null, config);
 		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
 		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		// calculate roll advantage
-		const advRollKeyAdv = this._getActiveEffectKeys(`roll.${ability}.advantage`, 0, null, config);
+		const advRollKeyAdv = this._getActiveEffectKeys(`roll.stat.advantage.${ability}`, 0, null, config);
 		config.mainRoll.advantage = advRollKeyAdv.value;
 
 		// generate tooltips
