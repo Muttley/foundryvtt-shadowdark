@@ -177,7 +177,9 @@ export default class PlayerSD extends ActorBaseSD {
 	 */
 
 	_calcBaseArmorClass() {
-		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS;
+		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS
+			+ (this.abilities?.dex?.mod ?? 0);
+
 		let modAC = 0;
 		let aeBonuses = 0;
 		let bestArmor = null;
