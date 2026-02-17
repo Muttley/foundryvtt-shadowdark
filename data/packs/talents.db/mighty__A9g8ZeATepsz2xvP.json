@@ -1,7 +1,13 @@
 {
-	"_id": "9LnTbRJXNUH9wLTy",
-	"_key": "!items.effects!LR6h4lXVXwx7AFQ6.9LnTbRJXNUH9wLTy",
+	"_id": "A9g8ZeATepsz2xvP",
+	"_key": "!items.effects!LR6h4lXVXwx7AFQ6.A9g8ZeATepsz2xvP",
 	"changes": [
+		{
+			"key": "system.roll.melee.bonus.all",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		},
 		{
 			"key": "system.roll.melee.damage.all",
 			"mode": 2,
@@ -9,7 +15,7 @@
 			"value": "1"
 		}
 	],
-	"description": "",
+	"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -21,8 +27,8 @@
 		"turns": null
 	},
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
-	"name": "Melee Damage Bonus",
-	"origin": null,
+	"name": "Mighty",
+	"origin": "Compendium.shadowdark.talents.Item.LR6h4lXVXwx7AFQ6",
 	"statuses": [
 	],
 	"system": {
