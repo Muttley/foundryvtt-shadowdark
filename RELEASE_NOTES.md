@@ -18,6 +18,7 @@
 - [#1143] CSS in v12 causing problems, cannot override
 - [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
 - [#1194] Compendium migrations skipped when in a Module
+- [#1205] Damage should always be rolled if no actors have been targetted
 - [#1214] Unable to open Player character sheets directly from compendiums
 - [#1215] No way of rolling 2H damage for versatile weapons currently
 
