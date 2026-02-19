@@ -236,6 +236,9 @@ export async function rollFromConfig(config) {
 		// await rollDamageFromMessage(message);
 		config.damageRoll.needed = true;
 	}
+	else if (!config.targetUuid && config?.damageRoll?.formula) {
+		config.damageRoll.needed = true;
+	}
 
 	// render roll
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
