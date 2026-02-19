@@ -232,10 +232,7 @@ export async function rollFromConfig(config) {
 	const mainRoll = await roll(config.mainRoll, actor.getRollData());
 	rolls.push(mainRoll);
 
-	const hasTarget = config.targetUuid;
-	const goodHit = hasTarget && mainRoll.success && config?.damageRoll?.formula !== "";
-
-	if (goodHit || !hasTarget) {
+	if (mainRoll.success && config?.damageRoll?.formula) {
 		// await rollDamageFromMessage(message);
 		config.damageRoll.needed = true;
 	}
