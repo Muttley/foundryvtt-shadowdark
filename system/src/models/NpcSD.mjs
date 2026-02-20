@@ -82,7 +82,7 @@ export default class NpcSD extends ActorBaseSD {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
@@ -115,7 +115,7 @@ export default class NpcSD extends ActorBaseSD {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);

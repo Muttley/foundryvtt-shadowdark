@@ -543,7 +543,9 @@ export default class PlayerSD extends ActorBaseSD {
 
 		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(
+			template, cardData
+		);
 
 		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
 
@@ -923,7 +925,7 @@ export default class PlayerSD extends ActorBaseSD {
 			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
 		}
 		else {
-			return renderTemplate(
+			return foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
 				{classes: playerSpellcasterClasses}
 			).then(html => {
