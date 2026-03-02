@@ -22,7 +22,7 @@ SHADOWDARK.ancestry.nametable.label: Zufallsnamen-Tabelle
 SHADOWDARK.ancestry.nametable.placeholder: Tabelle hierher ziehen
 SHADOWDARK.ancestry.nametable.random_weight: Zufallsgewichtung
 SHADOWDARK.ancestry.nametable.tooltip.weight: Beeinflusst die Würfel-Chance, wenn du den Charaktergenerator verwendest. Höhere Werte erhöhen die Chance. Standardwert ist 1.
-SHADOWDARK.ancestry.talents.label: Abstammungs-Talente
+SHADOWDARK.ancestry.talents.label: Abstammungstalente
 SHADOWDARK.ancestry.talents.prompt: Talent wählen...
 SHADOWDARK.app.active_effects.title: Aktive Effekte
 SHADOWDARK.app.gem_bag.sell_all: Alle Edelsteine verkaufen
@@ -31,12 +31,12 @@ SHADOWDARK.app.gem_bag.tooltip.sell_gem: Edelstein verkaufen
 SHADOWDARK.app.gem_bag.total_value: Gesamtwert
 SHADOWDARK.app.item_properties.armor.title: Rüstungseigenschaften
 SHADOWDARK.app.item_properties.languages.title: Sprachen
-SHADOWDARK.app.item_properties.magic_item.effects.title: Magische Gegenstandseffekte
+SHADOWDARK.app.item_properties.magic_item.effects.title: Magische Gegenstandeffekte
 SHADOWDARK.app.item_properties.save: Speichern
 SHADOWDARK.app.item_properties.talent.effects.title: Talenteffekttypen
 SHADOWDARK.app.item_properties.title: Eigenschaften
 SHADOWDARK.app.item_properties.weapon.title: Waffeneigenschaften
-SHADOWDARK.app.light_tracker.minute_short: Min
+SHADOWDARK.app.light_tracker.minute_short: min
 SHADOWDARK.app.light_tracker.minutes_short: min
 SHADOWDARK.app.light_tracker.title: Licht-Tracker
 SHADOWDARK.app.light-tracker.douse-light: Licht löschen
@@ -99,7 +99,7 @@ SHADOWDARK.apps.level-up.missing_selections: Fehlende Auswahlen
 SHADOWDARK.apps.level-up.notalent: Keine Talente auf dieser Stufe erhalten
 SHADOWDARK.apps.level-up.or_boons: oder Nachteile
 SHADOWDARK.apps.level-up.prompt: Es wurden noch nicht alle erforderlichen Auswahlen getroffen. Trotzdem fortfahren?
-SHADOWDARK.apps.level-up.roll_boon: Vorteilswürfel
+SHADOWDARK.apps.level-up.roll_boon: Vorteilwurf
 SHADOWDARK.apps.level-up.roll_talent: Talentwurf
 SHADOWDARK.apps.level-up.title: Aufstieg
 SHADOWDARK.apps.monster-importer.import_button: Monster importieren
