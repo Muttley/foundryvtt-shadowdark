@@ -37,16 +37,16 @@ SHADOWDARK.app.item_properties.talent.effects.title: Tipos de efecto de talento
 SHADOWDARK.app.item_properties.title: Propiedades
 SHADOWDARK.app.item_properties.weapon.title: Propiedades del arma
 SHADOWDARK.app.light_tracker.minute_short: min
-SHADOWDARK.app.light_tracker.minutes_short: min
+SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light_tracker.title: Seguimiento de la luz
 SHADOWDARK.app.light-tracker.douse-light: Apagar la luz
 SHADOWDARK.app.light-tracker.hide-inactive: Ocultar actores sin luz
 SHADOWDARK.app.light-tracker.show-all-actors: Mostrar todos los actores
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Apagar las luces
-SHADOWDARK.app.loading.body: Burcando en tierras lejanas...
+SHADOWDARK.app.loading.body: Buscando en tierras lejanas...
 SHADOWDARK.app.loading.title: Cargando
 SHADOWDARK.app.npc_attack_ranges.title: Rangos de ataque
-SHADOWDARK.apps.character-generator.choose: Choose
+SHADOWDARK.apps.character-generator.choose: Elegir
 SHADOWDARK.apps.character-generator.create_character: Crear personaje
 SHADOWDARK.apps.character-generator.error.create: Error al crear el personaje jugador {error}
 SHADOWDARK.apps.character-generator.error.name: El nombre del personaje no puede estar en blanco
@@ -54,10 +54,10 @@ SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: No se puede gene
 SHADOWDARK.apps.character-generator.gear: Equipo
 SHADOWDARK.apps.character-generator.gold: Oro
 SHADOWDARK.apps.character-generator.name: Nombre del personaje
-SHADOWDARK.apps.character-generator.see_details: See Details
+SHADOWDARK.apps.character-generator.see_details: Ver Detalles
 SHADOWDARK.apps.character-generator.sidebar_create: Crear
 SHADOWDARK.apps.character-generator.sidebar_import: Importar
-SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
+SHADOWDARK.apps.character-generator.starting_gear: Equipamiento Inicial
 SHADOWDARK.apps.character-generator.success: Personaje creado
 SHADOWDARK.apps.character-generator.title: Generador de personaje
 SHADOWDARK.apps.character-generator.tooltip: Personaje aleatorio
@@ -91,15 +91,15 @@ SHADOWDARK.apps.item-importer.instruction2d: Características
 SHADOWDARK.apps.item-importer.instruction3: Clic en importar elemento.
 SHADOWDARK.apps.item-importer.title: Importar elemento
 SHADOWDARK.apps.level-up.dragdrop: Arrastrar y soltar aquí
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
+SHADOWDARK.apps.level-up.errors.missing_boon_table: No se puede tirar la Bendición del Patrón porque no se pudo cargar la tabla de tiradas configurada
 SHADOWDARK.apps.level-up.hit_points: Puntos de Vida
 SHADOWDARK.apps.level-up.level_up: '¡Subir nivel!'
 SHADOWDARK.apps.level-up.leveling_to: Subiendo nivel
 SHADOWDARK.apps.level-up.missing_selections: Faltan selecciones
 SHADOWDARK.apps.level-up.notalent: Sin talentos ganados en este nivel
-SHADOWDARK.apps.level-up.or_boons: or Boons
+SHADOWDARK.apps.level-up.or_boons: o Bendiciones
 SHADOWDARK.apps.level-up.prompt: No se han realizado las selecciones requeridas. ¿Continuar con la subida de nivel?
-SHADOWDARK.apps.level-up.roll_boon: Roll Boon
+SHADOWDARK.apps.level-up.roll_boon: Tirar Bendición
 SHADOWDARK.apps.level-up.roll_talent: Lanzar talento
 SHADOWDARK.apps.level-up.title: Subiendo nivel
 SHADOWDARK.apps.monster-importer.import_button: Importar monstruo
@@ -111,12 +111,12 @@ SHADOWDARK.apps.monster-importer.instruction2d: Perfil principal
 SHADOWDARK.apps.monster-importer.instruction2e: Característica
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clic en importar monstruo.
 SHADOWDARK.apps.monster-importer.title: Importar monstruo
-SHADOWDARK.apps.request-check.copied: Copied to Clipboard
-SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
+SHADOWDARK.apps.request-check.copied: Copiado al Portapapeles
+SHADOWDARK.apps.request-check.copy_to_clipboard: Copiar al Portapapeles
 SHADOWDARK.apps.request-check.custom: Custom
-SHADOWDARK.apps.request-check.easy: Easy
+SHADOWDARK.apps.request-check.easy: Fácil
 SHADOWDARK.apps.request-check.extreme: Extreme
-SHADOWDARK.apps.request-check.hard: Hard
+SHADOWDARK.apps.request-check.hard: Difícil
 SHADOWDARK.apps.request-check.normal: Normal
 SHADOWDARK.apps.request-check.title: Request Check
 SHADOWDARK.apps.shadowdarkling-importer.errors: Elementos no encontrados
