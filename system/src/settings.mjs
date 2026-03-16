@@ -267,4 +267,17 @@ export default function registerSystemSettings() {
 		requiresReload: true,
 	});
 
+	// ----------------------
+	//  MAGIC ITEM IDENTIFICATION
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "useMagicItemIdentification", {
+		name: "SHADOWDARK.settings.use_magic_item_identification.name",
+		hint: "SHADOWDARK.settings.use_magic_item_identification.hint",
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+
+	});
 }

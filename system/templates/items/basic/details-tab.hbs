@@ -4,4 +4,9 @@
 		{{> items/_partials/slots }}
 		{{> items/basic/_partials/item-properties }}
 	</div>
+	{{#if showIdentification}}
+		<div class="identification">
+			{{> items/_partials/identification }}
+		</div>
+	{{/if}}
 </section>

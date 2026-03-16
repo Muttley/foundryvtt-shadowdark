@@ -505,6 +505,12 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
 SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.magic_item.identified: Identified
+SHADOWDARK.item.magic_item.identification: Identification
+SHADOWDARK.item.magic_item.unidentifiedName: Unidentified Name
+SHADOWDARK.item.magic_item.identifiedName: Identified Name
+SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
+SHADOWDARK.item.magic_item.identifiedTooltip: Checking this will update current item name to Identified Name and append Identified Description to item Description.
 SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
@@ -671,6 +677,8 @@ SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
 SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
 SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.use_magic_item_identification.hint: Allows GMs to withhold the names and effects of magic items from players until they are identified.
+SHADOWDARK.settings.use_magic_item_identification.name: Enable Magic Item Identification
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Configure which module-provided art should be used

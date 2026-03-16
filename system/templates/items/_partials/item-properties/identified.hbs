@@ -1,0 +1,20 @@
+<h3>
+	{{localize "SHADOWDARK.item.magic_item.identified"}}
+	{{#unless system.identification.identified}}
+		<a
+			class="effect-control"
+			data-action="toggle-situational"
+			data-tooltip="{{localize "SHADOWDARK.item.magic_item.identifiedTooltip"}}"
+		>
+			<i
+				class="fas fa-circle-question"
+				style="color:var(--primary);"
+			></i>
+		</a>
+	{{/unless}}
+</h3>
+<input
+	name="system.identification.identified"
+	type="checkbox"
+	{{checked system.identification.identified}}
+/>

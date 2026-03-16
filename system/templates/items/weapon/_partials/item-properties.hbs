@@ -6,5 +6,8 @@
 		{{> items/_partials/item-properties/ammunition }}
 		{{> items/_partials/item-properties/equipped }}
 		{{> items/_partials/item-properties/magic-item }}
+		{{#if showIdentification}}
+			{{> items/_partials/item-properties/identified }}
+		{{/if}}
 	</div>
 {{/ui/sd-box}}

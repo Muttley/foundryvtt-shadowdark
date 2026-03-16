@@ -62,4 +62,18 @@
 		padding: 0px 8px 8px 8px;
 		overflow: auto;
 	}
+
+	.identification {
+
+		margin-top: 8px;
+
+		.content > div:first-child {
+			display: grid;
+			gap: 4px;
+			align-items: center;
+			align-content: start;
+			grid-template-columns: 2fr 2fr;
+			grid-auto-rows: 26px;
+		}
+	}
 }

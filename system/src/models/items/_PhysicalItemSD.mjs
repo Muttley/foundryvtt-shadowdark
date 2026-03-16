@@ -14,6 +14,12 @@ export class PhysicalItemSD extends BaseItemSD {
 			equipped: new fields.BooleanField({initial: false}),
 			isAmmunition: new fields.BooleanField({initial: false}),
 			magicItem: new fields.BooleanField({initial: false}),
+			identification: new fields.SchemaField({
+				identified: new fields.BooleanField({initial: false}),
+				identifiedName: new fields.StringField({initial: () => game.i18n.localize("SHADOWDARK.item.magic_item.identifiedName")}),
+				identifiedDescription: new fields.StringField({initial: ""}),
+				unidentifiedName: new fields.StringField({initial: () => game.i18n.localize("SHADOWDARK.item.magic_item.unidentifiedName")}),
+			}),
 			quantity: new fields.NumberField({ integer: true, initial: 1, min: 0}),
 			slots: new fields.SchemaField({
 				free_carry: new fields.NumberField({ integer: true, initial: 0}),

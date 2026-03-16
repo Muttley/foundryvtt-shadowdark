@@ -1,0 +1,36 @@
+<div class="SD-box">
+	<div class="header light">
+		<label>{{localize 'SHADOWDARK.item.magic_item.identification'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div>
+			<h3>
+				{{localize 'SHADOWDARK.item.magic_item.unidentifiedName'}}
+			</h3>
+			<input
+				name="unidentifiedName"
+				type="text"
+				value="{{item.system.identification.unidentifiedName}}"
+			>
+			<h3>
+				{{localize 'SHADOWDARK.item.magic_item.identifiedName'}}
+			</h3>
+			<input
+				name="identifiedName"
+				type="text"
+				value="{{item.system.identification.identifiedName}}"
+			>
+			<h3>
+				{{localize 'SHADOWDARK.item.magic_item.identifiedDescription'}}
+			</h3>
+		</div>
+		{{editor system.identification.identifiedDescription
+			button=true
+			collaborate=false
+			editable=editable
+			engine="prosemirror"
+			target="system.identification.identifiedDescription"
+		}}
+	</div>
+</div>

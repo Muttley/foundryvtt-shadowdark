@@ -359,6 +359,17 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 				}
 			);
 
+		if (context.system.isPhysical) {
+			context.showIdentification = context.item.system.magicItem
+				&& game.settings.get("shadowdark", "useMagicItemIdentification")
+				&& game.user.isGM;
+
+			context.showEffectsTab = (context.item.system.magicItem
+				&& !game.settings.get("shadowdark", "useMagicItemIdentification"))
+				|| context.showIdentification
+				|| context.item.system.identification.identified;
+		}
+
 		// Call any type-specific methods for this item type to gather
 		// additional data for the sheet
 		//
@@ -601,6 +612,14 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		const isItem = event.currentTarget.dataset.isItem === "true";
 		if (event.target.list && choicesKey) {
 			return await this._onChangeChoiceList(event, choicesKey, isItem);
+		}
+
+		if (["name", "identifiedName", "unidentifiedName"].includes(event.target?.name)) {
+			await this._onChangeItemName(event);
+		}
+
+		if (event.target?.name === "system.identification.identified") {
+			await this._onChangeIdentified(event);
 		}
 
 		await super._onChangeInput(event);
@@ -959,5 +978,51 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			formData["system.light.remainingSecs"] = formData["system.light.remainingSecs"] * 60;
 		}
 		super._updateObject(event, formData);
+	}
+
+	async _onChangeItemName(event) {
+		if (!this.isEditable) return;
+
+		if (game.settings.get("shadowdark", "useMagicItemIdentification")) {
+			const isIdentified = this.item.system.identification.identified;
+			const newName = event.target.value;
+
+			if (event.target.name === "name") {
+				const inputName = isIdentified ? "identifiedName" : "unidentifiedName";
+				this.item.update({[`system.identification.${inputName}`]: newName});
+			}
+			else {
+				const prop = event.target.name === "identifiedName"	? "identifiedName" : "unidentifiedName";
+				// If blank, will throw a validation error when it tries to update item name with ""
+				if (newName.trim().length === 0) {
+					this.item.update({[`system.identification.${prop}`]: game.i18n.localize(`SHADOWDARK.item.magic_item.${prop}`)});
+					return;
+				}
+				const updateItemName = (isIdentified && prop === "identifiedName") || (!isIdentified && prop === "unidentifiedName");
+				const itemNameData = updateItemName ? {"name": newName, "system.name": newName} : {};
+				this.item.update({[`system.identification.${prop}`]: newName, ...itemNameData});
+			}
+		}
+	}
+
+	async _onChangeIdentified(event) {
+		if (!this.isEditable) return;
+
+		// Check to determine what to use as the item name
+		const prop = event.target.checked ? "identifiedName" : "unidentifiedName";
+		const newName = this.item.system.identification[prop];
+		const updateData = {"name": newName, "system.name": newName};
+		const identifiedDesc = this.item.system.identification.identifiedDescription;
+
+		if (event.target.checked) {
+			if (!this.item.system.description.includes(identifiedDesc)) {
+				updateData["system.description"] = this.item.system.description + identifiedDesc;
+			}
+		}
+		else if (this.item.system.description.includes(identifiedDesc)) {
+			updateData["system.description"] = this.item.system.description.replace(identifiedDesc, "");
+		}
+
+		this.item.update(updateData);
 	}
 }
