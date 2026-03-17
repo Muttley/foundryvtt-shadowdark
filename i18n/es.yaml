@@ -572,7 +572,7 @@ SHADOWDARK.language.giant: Gigante
 SHADOWDARK.language.goblin: Duende
 SHADOWDARK.language.merran: Merran
 SHADOWDARK.language.orcish: Orco
-SHADOWDARK.language.primordial: Primordial
+SHADOWDARK.language.primordial: Antiguo
 SHADOWDARK.language.rarity.common: Común
 SHADOWDARK.language.rarity.label: Rareza
 SHADOWDARK.language.rarity.rare: Rara
@@ -591,10 +591,10 @@ SHADOWDARK.light-tracker.paused: En pausa
 SHADOWDARK.light-tracker.status.label: Estado
 SHADOWDARK.light-tracker.title: Light Tracker
 SHADOWDARK.light-tracker.user_warning: Uno o más usuarios no han seleccionado un personaje
-SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
-SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
+SHADOWDARK.macro.error.caught_error: "La '{macro}' macro ha fallado por el siguiente error: {error}"
+SHADOWDARK.macro.error.gm_role_required: La macro '{macro}' requiere que tengas el rol de usuario 'Maestro de Juego'
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
-SHADOWDARK.macro.warn.create_item_requires_ownership: You can only create macro buttons for owned Items
+SHADOWDARK.macro.warn.create_item_requires_ownership: Solo puedes crear botones de macros para tus propios objetos
 SHADOWDARK.migration.begin_migration: Realizando actualizaciones para Shadowdark RPG
 SHADOWDARK.migration.begin_schema: Aplicando actualizaciones para Shadowdark RPG esquema v-{version}
 SHADOWDARK.migration.completed_migration: Actualización completada para Shadowdark RPG
@@ -625,7 +625,7 @@ SHADOWDARK.range.near: Próximo
 SHADOWDARK.range.nearLine_short: PL
 SHADOWDARK.range.nearLine: Línea próxima
 SHADOWDARK.range.oneMile_short: 1mi
-SHADOWDARK.range.oneMile: 1 Mile
+SHADOWDARK.range.oneMile: 1 Milla
 SHADOWDARK.range.samePlane_short: MP
 SHADOWDARK.range.samePlane: En el mismo plano
 SHADOWDARK.range.self_short: M
@@ -648,14 +648,14 @@ SHADOWDARK.roll.one_handed_damage: Daño a una mano
 SHADOWDARK.roll.spell_casting_check: Prueba de lanzamiento de hechizo
 SHADOWDARK.roll.success: '¡Éxito! ({value})'
 SHADOWDARK.roll.two_handed_damage: Daño a dos manos
-SHADOWDARK.settings.consume_ammunition.hint: Automatically adjust ammunition for weapons that use it when an attack roll is made
-SHADOWDARK.settings.consume_ammunition.name: Auto-Consume Ammunition
+SHADOWDARK.settings.consume_ammunition.hint: Ajustar automáticamente la munición para las armas que la utilizan cuando se lanza un ataque
+SHADOWDARK.settings.consume_ammunition.name: Autoconsumir munición
 SHADOWDARK.settings.debugEnabled.hint: Enable or Disable additional debug logging
-SHADOWDARK.settings.debugEnabled.name: Enable/Disable Debug
-SHADOWDARK.settings.effect_panel.show_passive.hint: If checked, the Effect Panel will also show active effects from talents and items
+SHADOWDARK.settings.debugEnabled.name: Activar/Desactivar depuración
+SHADOWDARK.settings.effect_panel.show_passive.hint: Si está marcado, el panel de efectos también mostrará efectos activos de talentos y objetos
 SHADOWDARK.settings.effect_panel.show_passive.name: Show All Active Effects
 SHADOWDARK.settings.enable_targeting.hint: Automatically calculate whether an attack hits based on the AC of targeted tokens
-SHADOWDARK.settings.enable_targeting.name: Enable Attack Targeting
+SHADOWDARK.settings.enable_targeting.name: Activar Ataque de Objetivo
 SHADOWDARK.settings.migrateSystemCompendiums.hint: Perform data migration on the built in Shadowdark RPG system compendiums (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.migrateSystemCompendiums.name: Migrate System Compendiums
 SHADOWDARK.settings.module_art.hint: Configurar qué arte proporcionado por el módulo debe ser utilizado
@@ -664,15 +664,15 @@ SHADOWDARK.settings.module_art.name: Arte proporcionado por módulo
 SHADOWDARK.settings.module_art.save: Guardar cambios
 SHADOWDARK.settings.roll_npc_hp.hint: Lanzar automáticamente puntos de vida del NPC cuando se añaden a una escena
 SHADOWDARK.settings.roll_npc_hp.name: Calcular automáticamente los puntos de vida del NPC
-SHADOWDARK.settings.schemaVersion.hint: Records the current schema version for the Shadowdark RPG system data. (don't modify this unless you know what you are doing)
+SHADOWDARK.settings.schemaVersion.hint: Graba la versión actual del esquema para los datos del sistema Shadowdark RPG. (no modifiques esto a menos que sepas lo que estás haciendo)
 SHADOWDARK.settings.schemaVersion.name: Schema Version
-SHADOWDARK.settings.source_filter.all_used: All sources are currently allowed
+SHADOWDARK.settings.source_filter.all_used: Todas las fuentes están permitidas actualmente
 SHADOWDARK.settings.source_filter.button_label: Configure Source Filters
 SHADOWDARK.settings.source_filter.hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
 SHADOWDARK.settings.source_filter.name: Filtro de la fuente
 SHADOWDARK.settings.source_filter.prompt: Seleccionar fuente...
 SHADOWDARK.settings.source_filter.save_button: Save Configuration
-SHADOWDARK.settings.source_filter.these_used: Only the following sources will be allowed
+SHADOWDARK.settings.source_filter.these_used: Solo se permitirán las siguientes fuentes
 SHADOWDARK.settings.source_filter.title: Filtros de Libros Fuente
 SHADOWDARK.settings.systemVersion.hint: Records the current Shadowdark RPG system version number. (don't modify this unless you know what you are doing)
 SHADOWDARK.settings.systemVersion.name: System Version
@@ -688,8 +688,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Si está marcado, 
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento de luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Seguimiento de luz en tiempo real
-SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
-SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
+SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controla si los jugadores pueden ver el tiempo restante en las fuentes de luz.
+SHADOWDARK.settings.track_light_sources.show_remaining.name: "Mostrar luz restante de jugadores"
 SHADOWDARK.settings.track_light_sources.show_remaining.option0: Nada
 SHADOWDARK.settings.track_light_sources.show_remaining.option1: Sólo puntos
 SHADOWDARK.settings.track_light_sources.show_remaining.option2: Puntos y Minutos restantes
@@ -795,14 +795,14 @@ SHADOWDARK.sheet.player.toggle_edit_hp: Alternar Editar PV
 SHADOWDARK.sheet.player.toggle_edit_stats: Toggle Edit Stats
 SHADOWDARK.sheet.player.toggle_spell_lost: Alternar hechizos perdidos
 SHADOWDARK.sheet.player.tooltip.cast_spell: Lanzar hechizo
-SHADOWDARK.sheet.player.tooltip.focus_on_spell: Focus on Spell
+SHADOWDARK.sheet.player.tooltip.focus_on_spell: Concéntrate en hechizos
 SHADOWDARK.sheet.player.tooltip.learn_spell: Aprender hechizo
-SHADOWDARK.sheet.player.tooltip.use_class_ability: Use Class Ability
+SHADOWDARK.sheet.player.tooltip.use_class_ability: Usar habilidad de clase
 SHADOWDARK.sheet.player.tooltip.use_potion: Usar poción
 SHADOWDARK.sheet.player.tooltip.use_scroll: Usar pergamino
 SHADOWDARK.sheet.player.tooltip.use_wand: Usar varita
 SHADOWDARK.sheet.player.xp: EXP
-SHADOWDARK.sheet.special_abilities.label: Special Abilities
+SHADOWDARK.sheet.special_abilities.label: Habilidades especiales
 SHADOWDARK.source.bard-and-ranger: "Shadowdark RPG: Bard, Ranger and Kobold"
 SHADOWDARK.source.core-rules: "Shadowdark RPG: Reglas Basicas"
 SHADOWDARK.source.cursed-scroll-1: Pergamino Maldito Vol.1, Diablerie!
@@ -820,7 +820,7 @@ SHADOWDARK.spell_duration.instant: Instantáneo
 SHADOWDARK.spell_duration.permanent: Permanente
 SHADOWDARK.spell_duration.real_time: Tiempo real
 SHADOWDARK.spell_duration.rounds: Rondas
-SHADOWDARK.spell_duration.turns: Turns
+SHADOWDARK.spell_duration.turns: Turnos
 SHADOWDARK.spell_range.close: Cerca
 SHADOWDARK.spell_range.far: Lejos
 SHADOWDARK.spell_range.near: Próximo
@@ -831,7 +831,7 @@ SHADOWDARK.talent.class.ancestry: Ancestro
 SHADOWDARK.talent.class.class: Clase
 SHADOWDARK.talent.class.level: Nivel
 SHADOWDARK.talent.class.patronBoon: Patron Boon
-SHADOWDARK.talent.level_gained: Level Gained
+SHADOWDARK.talent.level_gained: Nivel Obtenido
 SHADOWDARK.talent.type.ability_improvement: Mejora de Habilidad
 SHADOWDARK.talent.type.advantage.hp: Ventaja de tirada de PV
 SHADOWDARK.talent.type.advantage.initiative: Ventaja de iniciativa
@@ -858,29 +858,29 @@ SHADOWDARK.weapon.properties.two_handed: A dos manos
 SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Cuerpo a Cuerpo
 SHADOWDARK.weapon.type.ranged: A distancia
-TYPES.Actor.Light: Light
+TYPES.Actor.Light: Luz
 TYPES.Actor.NPC: NPC
-TYPES.Actor.Player: Player
-TYPES.Item.Ancestry: Ancestry
-TYPES.Item.Armor: Armor
-TYPES.Item.Background: Background
-TYPES.Item.Basic: Basic
+TYPES.Actor.Player: Jugador
+TYPES.Item.Ancestry: Ancestría
+TYPES.Item.Armor: Armadura
+TYPES.Item.Background: Trasfondo
+TYPES.Item.Basic: Básico
 TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class Ability
-TYPES.Item.Class: Class
-TYPES.Item.Deity: Deity
-TYPES.Item.Effect: Effect
-TYPES.Item.Gem: Gem
-TYPES.Item.Language: Language
-TYPES.Item.NPC Attack: NPC Attack
-TYPES.Item.NPC Feature: NPC Feature
-TYPES.Item.NPC Special Attack: NPC Special Attack
+TYPES.Item.Class Ability: Habilidad de Clase
+TYPES.Item.Class: Clase
+TYPES.Item.Deity: Deidad
+TYPES.Item.Effect: Efecto
+TYPES.Item.Gem: Gema
+TYPES.Item.Language: Idioma
+TYPES.Item.NPC Attack: Ataque de NPC
+TYPES.Item.NPC Feature: Característica de NPC
+TYPES.Item.NPC Special Attack: Ataque Especial de NPC
 TYPES.Item.NPC Spell: NPC Spell
-TYPES.Item.Patron: Patron
-TYPES.Item.Potion: Potion
-TYPES.Item.Property: Property
-TYPES.Item.Scroll: Scroll
-TYPES.Item.Spell: Spell
-TYPES.Item.Talent: Talent
+TYPES.Item.Patron: Patrón
+TYPES.Item.Potion: Poción
+TYPES.Item.Property: Propiedad
+TYPES.Item.Scroll: Pergamino
+TYPES.Item.Spell: Hechizo
+TYPES.Item.Talent: Talento
 TYPES.Item.Wand: Wand
-TYPES.Item.Weapon: Weapon
+TYPES.Item.Weapon: Arma
