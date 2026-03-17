@@ -113,12 +113,12 @@ SHADOWDARK.apps.monster-importer.instruction3: 3. Clic en importar monstruo.
 SHADOWDARK.apps.monster-importer.title: Importar monstruo
 SHADOWDARK.apps.request-check.copied: Copiado al Portapapeles
 SHADOWDARK.apps.request-check.copy_to_clipboard: Copiar al Portapapeles
-SHADOWDARK.apps.request-check.custom: Custom
+SHADOWDARK.apps.request-check.custom: Personalizado
 SHADOWDARK.apps.request-check.easy: Fácil
-SHADOWDARK.apps.request-check.extreme: Extreme
+SHADOWDARK.apps.request-check.extreme: Extremo
 SHADOWDARK.apps.request-check.hard: Difícil
 SHADOWDARK.apps.request-check.normal: Normal
-SHADOWDARK.apps.request-check.title: Request Check
+SHADOWDARK.apps.request-check.title: Solicitud de verificación
 SHADOWDARK.apps.shadowdarkling-importer.errors: Elementos no encontrados
 SHADOWDARK.apps.shadowdarkling-importer.header: Importador de Shadowdarkling
 SHADOWDARK.apps.shadowdarkling-importer.import_button: Importar
@@ -171,7 +171,7 @@ SHADOWDARK.chat.clockwise_initiative: Ya que {name} lanzó el más alto, irá pr
 SHADOWDARK.chat.hp_roll.apply_to_max: Añadir a PV máximos
 SHADOWDARK.chat.item_roll.double_numerical: '¡Duplica cualquier valor numérico!'
 SHADOWDARK.chat.item_roll.mishap: '¡Tira en la tabla de pifias apropiada!'
-SHADOWDARK.chat.item_roll.title_vs: Attack roll with {name} vs {target}
+SHADOWDARK.chat.item_roll.title_vs: Tirada de ataque con {name} vs {target}
 SHADOWDARK.chat.item_roll.title: Tirada de ataque con {name}
 SHADOWDARK.chat.item_roll.wand_mishap: La varita se rompe y deja de funcionar permanentemente
 SHADOWDARK.chat.light_source.expired: "{name} de {lightSource} se apagó"
@@ -184,26 +184,26 @@ SHADOWDARK.chat.light_source.source.toggle.off: se apagó
 SHADOWDARK.chat.light_source.source.toggle.on: se encendió
 SHADOWDARK.chat.light_source.went_out: "{name} de {lightSource} se apagó"
 SHADOWDARK.chat.potion_used: "{name} ha usado una poción"
-SHADOWDARK.chat.spell_focus_check: "Focus Check"
+SHADOWDARK.chat.spell_focus_check: "Chequeo de enfoque"
 SHADOWDARK.chat.spell_learn.failure: "{name} no ha podido aprender nada del pergamino"
 SHADOWDARK.chat.spell_learn.success: "{name} aprendió correctamente el hechizo {spellName}"
 SHADOWDARK.chat.spell_learn.title: Aprender hechizo
 SHADOWDARK.chat.spell_roll.title: "{name}, CD {spellDC}"
-SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability"
+SHADOWDARK.chat.use_ability.failure: "{name} no logró usar la habilidad {ability}"
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Usando habilidad"
-SHADOWDARK.chat.use_ability.used: "{name} used the {ability} ability"
-SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
+SHADOWDARK.chat.use_ability.used: "{name} usó la habilidad {ability}"
+SHADOWDARK.chat.welcome_message.arcane_library_button: Tienda Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
-SHADOWDARK.chat.welcome_message.issues_button: Issue Tracker
-SHADOWDARK.chat.welcome_message.issues_text: "If you find any issues or have ideas for new features for the system, check out our issue tracker."
-SHADOWDARK.chat.welcome_message.issues: Report Issues
-SHADOWDARK.chat.welcome_message.title_text: Welcome to Shadowdark RPG. Here are some resources to get you started.
+SHADOWDARK.chat.welcome_message.issues_button: Gestor de Incidencias
+SHADOWDARK.chat.welcome_message.issues_text: "Si encuentras algún problema o tienes ideas para nuevas características para el sistema, revisa nuestro seguimiento de incidencias."
+SHADOWDARK.chat.welcome_message.issues: Reportar problemas
+SHADOWDARK.chat.welcome_message.title_text: Bienvenido a Shadowdark RPG. Aquí hay algunos recursos para empezar.
 SHADOWDARK.chat.welcome_message.title: Shadowdark RPG para Foundry
 SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Tirada
-SHADOWDARK.check.requesting: Requesting a check
+SHADOWDARK.check.requesting: Solicitando un cheque
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Habilidad
 SHADOWDARK.class-ability.available.label: Disponible
