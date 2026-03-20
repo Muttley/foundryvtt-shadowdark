@@ -33,7 +33,7 @@ export default class RollSD extends foundry.dice.Roll {
 
 	async _prepareChatRenderContext({flavor, isPrivate=false, ...options}={}) {
 		const context = await super._prepareChatRenderContext(
-			{flavor, isPrivate=false, ...options}={}
+			{flavor, isPrivate, ...options}
 		);
 
 		// context for success or failure
