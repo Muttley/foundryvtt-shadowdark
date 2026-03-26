@@ -39,7 +39,7 @@ export default class EncounterSD extends foundry.documents.Combat {
 
 		if (npcs.length > 0) {
 			npcs.sort((a, b) =>
-				b.actor.getRollData().initiativeBonus - a.actor.getRollData().initiativeBonus);
+				b.actor.getRollData().abilities.dex.mod - a.actor.getRollData().abilities.dex.mod);
 			rollers.push(npcs[0]);
 		}
 
