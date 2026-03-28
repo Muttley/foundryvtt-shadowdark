@@ -36,8 +36,11 @@
 	{{/if}}
 
 	{{#if target}}
-	<div class="target">
-		<img src="{{target.texture.src}}" style="width:20px;height:20px;display:inline">
+	<div class="target-wrapper">
+		<a data-link data-uuid="{{target.actor.uuid}}">
+			<img src="{{target.texture.src}}" style="width:20px;height:20px;display:inline">
+		</a>
 		<span>{{target.name}}</span>
+	</div>
 	{{/if}}
 </div>
