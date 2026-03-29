@@ -18,7 +18,7 @@ export default class PatronSelector extends CompendiumItemSelector {
 	async getUuids() {
 		const uuid = this.object?.system?.patron;
 
-		return uuid !== "" ? [uuid] : [];
+		return uuid ? [uuid] : [];
 	}
 
 	async saveUuids(uuids) {

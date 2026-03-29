@@ -25,7 +25,7 @@ export default class DeitySelector extends CompendiumItemSelector {
 	async getUuids() {
 		const uuid = this.object?.system?.deity;
 
-		return uuid !== "" ? [uuid] : [];
+		return uuid ? [uuid] : [];
 	}
 
 	async saveUuids(uuids) {

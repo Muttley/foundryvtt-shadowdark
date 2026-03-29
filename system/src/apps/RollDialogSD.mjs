@@ -199,6 +199,10 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 				this.config.ammunitionOptions.find(x => x._id === formData.ammunitionId);
 		}
 
+		if (formData.rollMode !== undefined) {
+			this.config.rollMode = formData.rollMode;
+		}
+
 		this.result = formData;
 		this.submitted = true;
 

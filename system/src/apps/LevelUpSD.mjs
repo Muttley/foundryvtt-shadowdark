@@ -161,10 +161,10 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 		this.data.talentsRolled = this.data.rolls.talent || this.data.rolls.boon;
 		this.data.talentsChosen = this.data.talents.length > 0;
 
-		// get HP advanatage
+		// get HP advantage
 		const hpRollKey = this.data.actor.system._getActiveEffectKeys("system.roll.hp.advantage", 0);
 		this.data.hp = {
-			advanatage: hpRollKey.value,
+			advantage: hpRollKey.value,
 			tooltips: hpRollKey.tooltips,
 		};
 
