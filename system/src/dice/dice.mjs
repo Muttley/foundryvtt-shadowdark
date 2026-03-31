@@ -20,12 +20,23 @@ export function applyAdvantage(formula, adv) {
 }
 
 /**
+ * Applies critical hit to the provided roll formula
+ * @param {string} formula // roll formula
+ * @returns {string} // new roll formula
+ */
+export function applyCriticalHit(formula) {
+	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
+		return `(${match}*2)`;
+	});
+}
+
+/**
  * Applies exploding dice to the provided roll formula
  * @param {string} formula // roll formula
  * @returns {string} // new roll formula
  */
 export function applyExploding(formula) {
-	return formula.replace(/^(\d*)d(\d+)/, function(match, dice, sides) {
+	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
 		return `${match}x`;
 	});
 }
@@ -128,6 +139,10 @@ export async function roll(config, rolldata={}) {
 	}
 
 	if (config.type === "damage") {
+		// double base damage on critical hit
+		if (config.criticalHit) {
+			config.formula = applyCriticalHit(config.formula);
+		}
 		// apply momentum mode
 		if (game.settings.get("shadowdark", "useMomentumMode")) {
 			config.formula = applyExploding(config.formula);
@@ -148,6 +163,7 @@ export async function rollDamageFromMessage(msg) {
 	const actor = game.actors.get(config.actorId);
 	if (!actor) return; // TODO Error message
 	config.damageRoll.type = "damage";
+	config.damageRoll.criticalHit = msg.getRoll("main").criticalSuccess;
 	const damageRoll = await roll(config.damageRoll, actor.getRollData());
 	config.damageRoll.html = await damageRoll.render();
 
