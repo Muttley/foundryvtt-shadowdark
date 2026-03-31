@@ -162,24 +162,14 @@ export async function rollDamageFromMessage(msg) {
 	if (!config.damageRoll?.formula || msg.getRoll("damage")) return false;
 	const actor = game.actors.get(config.actorId);
 	if (!actor) return; // TODO Error message
-	config.damageRoll.type = "damage";
-	config.damageRoll.criticalHit = msg.getRoll("main").criticalSuccess;
-	const damageRoll = await roll(config.damageRoll, actor.getRollData());
-	config.damageRoll.html = await damageRoll.render();
 
-	// Generate template data a new content
-	const template = "systems/shadowdark/templates/chat/roll-card.hbs";
-	const templateData = {...config};
-	templateData.actor = actor;
-	templateData.mainRoll.html = await msg.getRoll("main").render();
-	templateData.damageRoll.html = await damageRoll.render();
-	if (config.itemUuid) {
-		templateData.item = await fromUuid(config.itemUuid);
-	}
-	if (config.targetUuid) {
-		templateData.target = await fromUuid(config.targetUuid);
-	}
-	const content = await foundry.applications.handlebars.renderTemplate(template, templateData);
+	const mainRoll = msg.getRoll("main");
+
+	config.damageRoll.type = "damage";
+	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
+	const damageRoll = await roll(config.damageRoll, actor.getRollData());
+
+	const content = await shadowdark.chat.renderRollCard(config, [mainRoll, damageRoll]);
 
 	// update message with new roll and content
 	await msg.update({rolls: [...msg.rolls, damageRoll]});

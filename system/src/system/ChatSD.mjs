@@ -56,7 +56,7 @@ export default class ChatSD {
 		);
 	}
 
-	static async renderRollMessage(config, rolls=[]) {
+	static async renderRollCard(config, rolls = []) {
 		if (!Array.isArray(rolls)) return;
 
 		const actor = game.actors.get(config.actorId);
@@ -86,10 +86,16 @@ export default class ChatSD {
 				`${config.selectedAmmunition.name} (${config.selectedAmmunition.system.quantity}/${config.selectedAmmunition.system.slots.per_slot})`;
 		}
 
-		const content = await foundry.applications.handlebars.renderTemplate(
+		return foundry.applications.handlebars.renderTemplate(
 			template,
 			templateData
 		);
+	}
+
+	static async renderRollMessage(config, rolls=[]) {
+
+		const content = await ChatSD.renderRollCard(config, rolls);
+		const actor = game.actors.get(config.actorId);
 
 		// Create Chat Message
 		const chatData = {
