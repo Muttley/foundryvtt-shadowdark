@@ -3,10 +3,10 @@
 	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.g21kFm6j6U70zbhc.rqplFhIShnvmV0U4",
 	"changes": [
 		{
-			"key": "system.bonuses.hauler",
-			"mode": 5,
+			"key": "system.slots",
+			"mode": 2,
 			"priority": null,
-			"value": "true"
+			"value": "max(@abilities.con.mod, 0)"
 		}
 	],
 	"description": "",
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/containers/bags/sack-leather-tan.webp",
 	"name": "Hauler",

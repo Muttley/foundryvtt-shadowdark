@@ -177,7 +177,9 @@ export default class PlayerSD extends ActorBaseSD {
 	 */
 
 	_calcBaseArmorClass() {
-		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS;
+		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS
+			+ (this.abilities?.dex?.mod ?? 0);
+
 		let modAC = 0;
 		let aeBonuses = 0;
 		let bestArmor = null;
@@ -225,8 +227,9 @@ export default class PlayerSD extends ActorBaseSD {
 			weapon,
 			config
 		);
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(attackRollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(attackRollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		// attack critical threshold
 		const critThresholdKey = this._getActiveEffectKeys(
@@ -310,7 +313,7 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		if (extraDieRollKey.value) {
 			const baseDie = baseDamageValue.match(/^[dD](\d*)/)[1];
-			baseDamageValue += ` +${extraDieRollKey.value}d${baseDie}`;
+			baseDamageValue += ` + ${extraDieRollKey.value}d${baseDie}`;
 		}
 
 		// Get damage formula and bonuses from Rolls keys
@@ -321,6 +324,7 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 		config.damageRoll.formula = damageRollKey.value;
+		config.damageRoll.formulaBackup = config.damageRoll.formula;
 
 		// generate tooltips
 		const tooltips = [];
@@ -539,7 +543,9 @@ export default class PlayerSD extends ActorBaseSD {
 
 		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
 
-		const content = await renderTemplate(template, cardData);
+		const content = await foundry.applications.handlebars.renderTemplate(
+			template, cardData
+		);
 
 		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
 
@@ -672,7 +678,7 @@ export default class PlayerSD extends ActorBaseSD {
 		return await shadowdark.utils.getFromUuid(this.ancestry);
 	}
 
-	getAttacks() {
+	async getAttacks() {
 		const weapons = this.parent.items.filter(i => i.system.isWeapon && i.system.equipped);
 		const attacks = {};
 
@@ -684,7 +690,7 @@ export default class PlayerSD extends ActorBaseSD {
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
 
-			if (attackData.itemUuid) attackData.item = fromUuidSync(attackData.itemUuid);
+			if (attackData.itemUuid) attackData.item = await fromUuid(attackData.itemUuid);
 
 			attacks[type].push(attackData);
 
@@ -698,7 +704,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 				if (!attacks[ranged]) attacks[ranged] = [];
 				if (rangedAttackData.itemUuid) {
-					rangedAttackData.item = fromUuidSync(rangedAttackData.itemUuid);
+					rangedAttackData.item = await fromUuid(rangedAttackData.itemUuid);
 				}
 				attacks[ranged].push(rangedAttackData);
 			}
@@ -713,7 +719,6 @@ export default class PlayerSD extends ActorBaseSD {
 	}
 
 	getClassAbilities() {
-
 		const sortedAbilityItems = this.parent.items.filter(
 			i => i.type === "Class Ability"
 		).sort((a, b) => a.name - b.name);
@@ -740,6 +745,12 @@ export default class PlayerSD extends ActorBaseSD {
 	async getDeity() {
 		if (!this.deity) return null;
 		return await shadowdark.utils.getFromUuid(this.deity);
+	}
+
+	async getEquippedShields() {
+		return this.parent.items.filter(
+			i => i.type === "Armor" && i.system.isAShield && i.system.equipped
+		);
 	}
 
 	async getLanguageItems() {
@@ -914,7 +925,7 @@ export default class PlayerSD extends ActorBaseSD {
 			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
 		}
 		else {
-			return renderTemplate(
+			return foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
 				{classes: playerSpellcasterClasses}
 			).then(html => {
@@ -984,6 +995,21 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// Call player attack hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Attack", config)) return false;
+
+		// test for ammunition
+		if (weapon.usesAmmunition) {
+			if (!config.selectedAmmunition) {
+				// Try to find ammo if none is selected
+				const defaultAmmo = weapon.actor.ammunitionItems(weapon.system.ammoClass);
+				if (defaultAmmo?.length > 0) {
+					config.selectedAmmunition = defaultAmmo[0];
+				}
+			}
+			// error out if no ammo is found
+			if (!config.selectedAmmunition || config.selectedAmmunition.system.quantity <= 0) {
+				return ui.notifications.error(game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"));
+			}
+		}
 
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);

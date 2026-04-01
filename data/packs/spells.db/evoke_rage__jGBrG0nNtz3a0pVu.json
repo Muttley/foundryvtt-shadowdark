@@ -3,6 +3,8 @@
 	"_key": "!items!jGBrG0nNtz3a0pVu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "G4Rg3SiJ4c0vIpqq",
 	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
 	"name": "Evoke Rage",
@@ -16,7 +18,8 @@
 			"value": "1d4"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-3"

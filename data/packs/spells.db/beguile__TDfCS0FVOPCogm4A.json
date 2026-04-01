@@ -3,6 +3,8 @@
 	"_key": "!items!TDfCS0FVOPCogm4A",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "GjEoxJ1IlFDjGKIa",
 	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
 	"name": "Beguile",
@@ -13,10 +15,11 @@
 		"description": "<p>You conjure a convincing visible and audible illusion within range. </p><p>Creatures who perceive the illusion react to it as though it were real, although it can't cause actual harm. </p><p>Touching the illusion instantly reveals its false nature. </p><p>You may force a creature who interacts with the illusion to make a [[check 15 wis]] check. If the creature fails, it is enchanted by the illusion for the spell's duration and seeks to protect it.</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "cursed-scroll-1"

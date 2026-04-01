@@ -3,12 +3,15 @@
 	"_key": "!actors.items!LV2ZWlK1qUQz5J4K.wqdT7KpNRXUZzJwr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Life Drain",
 	"system": {
 		"description": "<p>[[/r 1d4]] CON damage. Death if reduced to 0 CON.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,13 +3,16 @@
 	"_key": "!items!jq0m0lGb7QOCSJXL",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "HwVNTdYe7cKVBJC7",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Occupies One Hand",
 	"system": {
 		"description": "<p>You can only use one hand when using this item</p>",
 		"itemType": "armor",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

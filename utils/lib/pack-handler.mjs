@@ -260,8 +260,17 @@ export default class PackHandler {
 				// Tidy up some junky top-level fields we don't want to store
 				delete value._stats;
 				delete value.ownership;
-				delete value.flags;
 				delete value.sort;
+
+				// Only keep "shadowdark" flags to stop pollution from other
+				// modules
+				//
+				for (const subSection in value.flags) {
+					if (subSection !== "shadowdark") {
+						delete value.flags[subSection];
+					}
+				}
+
 
 				const basefileName = `${outputDir}/${name}`;
 				switch (this.outputFormat) {

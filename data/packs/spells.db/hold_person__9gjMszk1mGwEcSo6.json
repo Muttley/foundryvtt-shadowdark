@@ -3,6 +3,8 @@
 	"_key": "!items!9gjMszk1mGwEcSo6",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Hold Person",
@@ -13,11 +15,11 @@
 		"description": "<p>You magically paralyze one humanoid creature of LV 4 or less you can see within range.</p><p>@UUID[Compendium.shadowdark.spell-effects.SN9lU9LUViWo1Plm]{Spell Effect: Hold Person}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

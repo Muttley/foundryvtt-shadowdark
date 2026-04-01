@@ -3,15 +3,17 @@
 	"_key": "!items!cOIRoHL3D9zGpOyX",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "TcpWrnecaN2k2gYr",
 	"img": "icons/magic/water/snowflake-ice-blue-white.webp",
 	"name": "Immunity to Cold",
 	"system": {
 		"description": "",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

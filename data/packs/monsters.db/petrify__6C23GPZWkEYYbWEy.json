@@ -3,12 +3,15 @@
 	"_key": "!actors.items!r9PchmCuVg1r9FOA.6C23GPZWkEYYbWEy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Petrify",
 	"system": {
 		"description": "<p>Any creature that touches the basilisk or meets its gaze, [[check 15 con]] or petrified.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

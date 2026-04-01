@@ -3,14 +3,16 @@
 	"_key": "!items!GSP55wqhqc1BwneQ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Hunter",
 	"system": {
 		"description": "<p>You know how to move quietly in the wilds</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

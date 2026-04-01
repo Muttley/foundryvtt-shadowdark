@@ -3,6 +3,8 @@
 	"_key": "!items!pgK3RSSsg6CrReDr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "a6WcvmZpOASURb60",
 	"img": "icons/magic/unholy/beam-impact-purple.webp",
 	"name": "Disintegrate",
@@ -13,10 +15,11 @@
 		"description": "<p>A green ray shoots from your finger and turns a creature or object into ash. </p><p>A target creature of LV 5 or less instantly dies. If it is LV 6+, it takes 3d8 damage, instead. </p><p>A non-magical object up to the size of a large tree is destroyed.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "core-rules"

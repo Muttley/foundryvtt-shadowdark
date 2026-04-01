@@ -3,12 +3,15 @@
 	"_key": "!actors.items!IDgaXGnSleQcfAwm.YnbHXlNqcxkObmCd",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Golem",
 	"system": {
 		"description": "<p>Immune to damage from fire, cold, or non-magical sources. Healed by electricity.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

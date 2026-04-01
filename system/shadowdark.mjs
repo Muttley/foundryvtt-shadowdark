@@ -124,6 +124,7 @@ Hooks.once("init", () => {
 	});
 
 	// Register sheet application classes
+	foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
 	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
 		types: ["Player"],
 		makeDefault: true,

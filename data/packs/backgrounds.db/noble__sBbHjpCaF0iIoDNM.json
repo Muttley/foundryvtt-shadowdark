@@ -3,11 +3,15 @@
 	"_key": "!items!sBbHjpCaF0iIoDNM",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Noble",
 	"system": {
 		"description": "<p>A famous name has opened many doors for you</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

@@ -3,14 +3,16 @@
 	"_key": "!items!IciCrV0cEOXxV5GI",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "God's Blood",
 	"system": {
 		"description": "<p>You are descended from a god; it marks you</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

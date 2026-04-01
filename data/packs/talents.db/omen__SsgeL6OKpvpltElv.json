@@ -3,13 +3,16 @@
 	"_key": "!items!SsgeL6OKpvpltElv",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "8t1Gmpgn1Q6HXJAz",
 	"img": "icons/magic/perception/orb-eye-scrying.webp",
 	"name": "Omen",
 	"system": {
 		"description": "<p>@UUID[Compendium.shadowdark.class-abilities.Item.pRO1kFMnFkkcYOgC]</p><p>3/day, you can make a [[check 9 wis]] check. On a success, gain a luck token (you can't have more than one luck token at a time).</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

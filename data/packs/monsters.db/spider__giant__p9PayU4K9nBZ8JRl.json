@@ -3,6 +3,8 @@
 	"_key": "!actors!p9PayU4K9nBZ8JRl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -133,21 +135,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 13,
 				"value": 13
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 3
+			"value": 3,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Bulbous abdomen and eight, spindly legs. Dwells high in trees or caves and ambushes prey, capturing them to eat later. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 13, <strong>ATK</strong> 1 bite +3 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Poison</strong>. [[check 12 con]] or paralyzed 1d4 hours.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Bulbous abdomen and eight, spindly legs. Dwells high in trees or caves and ambushes prey, capturing them to eat later. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 13, <strong>ATK</strong> 1 bite +3 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +0, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Poison</strong>. [[check 12 con]] or paralyzed 1d4 hours.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

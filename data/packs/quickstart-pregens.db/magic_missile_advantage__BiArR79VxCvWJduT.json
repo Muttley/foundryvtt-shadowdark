@@ -7,14 +7,11 @@
 	"img": "icons/magic/light/projectiles-trio-pink.webp",
 	"name": "Magic Missile Advantage",
 	"system": {
-		"bonuses": {
-			"advantage": "magic-missile"
-		},
 		"description": "<p>Wizards always have advantage on casting Magic Missile.</p>",
 		"level": null,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "class"

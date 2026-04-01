@@ -4,6 +4,8 @@
 	"effects": [
 		"qSuLDWBjPNH2wizr"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
 	"name": "Condition: Beguiled",
@@ -12,7 +14,7 @@
 		"description": "<p>The character is beguiled.</p>",
 		"duration": {
 			"type": "unlimited",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

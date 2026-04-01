@@ -3,12 +3,15 @@
 	"_key": "!actors.items!YHdOAuMUdCigLIHR.OtNVubibwRxLDwX6",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Constrict",
 	"system": {
 		"description": "<p>Contested STR to hold target immobile for one round.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

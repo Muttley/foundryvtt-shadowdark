@@ -1,6 +1,8 @@
 import { ActorBaseSD } from "./_ActorBaseSD.mjs";
 import * as actorFields from "./_fields/actorFields.mjs";
 
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
+
 const fields = foundry.data.fields;
 
 export default class NpcSD extends ActorBaseSD {
@@ -80,7 +82,7 @@ export default class NpcSD extends ActorBaseSD {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
 			attackOptions
 		);
@@ -113,7 +115,7 @@ export default class NpcSD extends ActorBaseSD {
 			}
 		);
 
-		return await renderTemplate(
+		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
@@ -206,7 +208,7 @@ export default class NpcSD extends ActorBaseSD {
 
 		const conBonus = shadowdark.dice.formatBonus(this.abilities.con.mod);
 		const level = this.level.value ?? 1;
-		const formula = `${level}d8${conBonus}`;
+		const formula = level ? `${level}d8${conBonus}` : `1${conBonus}`;
 
 		const config = {
 			actorId: this.parent.id,

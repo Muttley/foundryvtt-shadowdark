@@ -3,21 +3,19 @@
 	"_key": "!items!2Ht3xGj1QvHt3znG",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/equipment/wrist/bracer-armored-steel-purple.webp",
 	"name": "Bracers of Defense",
 	"system": {
 		"ac": {
-			"attribute": "",
+			"attribute": "dex",
 			"base": 0,
 			"modifier": 1
 		},
 		"baseArmor": "",
-		"bonuses": {
-			"acBonus": "1"
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -26,9 +24,7 @@
 		"description": "<p><em>Steel bracers traced with dwarvish runes of protection.</em></p><p><strong>Benefit</strong>. You get a +1 bonus to your armor class.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": true,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,

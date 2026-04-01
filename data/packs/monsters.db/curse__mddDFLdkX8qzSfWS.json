@@ -3,12 +3,15 @@
 	"_key": "!actors.items!sgVqRuCaadRK1P7R.mddDFLdkX8qzSfWS",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Curse",
 	"system": {
 		"description": "<p>[[check 15 con]] or target gains a magical curse, turning into a deep one over [[/r 2d10]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

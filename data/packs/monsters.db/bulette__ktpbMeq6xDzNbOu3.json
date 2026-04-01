@@ -3,6 +3,8 @@
 	"_key": "!actors!ktpbMeq6xDzNbOu3",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -130,24 +132,26 @@
 		"alignment": "neutral",
 		"attributes": {
 			"ac": {
-				"value": "17"
+				"value": 17
 			},
 			"hp": {
-				"hd": 0,
-				"max": "40",
-				"value": "40"
+				"max": 40,
+				"value": 40
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": "8"
+			"value": 8,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "burrow",
-		"notes": "\n\t<p><i>A hulking, shark-sized lizard with a steely, arrow-shaped carapace and a massive gullet.</i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 40, <strong>ATK</strong> 3 bite +5 (2d6) or 1 leap, <strong>MV</strong> near (burrow), <strong>S</strong> +5, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong>Leap</strong>. Jump up to near in height and double near in distance, then make 2 bite attacks.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i>A hulking, shark-sized lizard with a steely, arrow-shaped carapace and a massive gullet.</i></p>\n\t\n\t<p><strong>AC</strong> 17, <strong>HP</strong> 40, <strong>ATK</strong> 3 bite +5 (2d6) or 1 leap, <strong>MV</strong> near (burrow), <strong>S</strong> +5, <strong>D</strong> +1, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong>Leap</strong>. Jump up to near in height and double near in distance, then make 2 bite attacks.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

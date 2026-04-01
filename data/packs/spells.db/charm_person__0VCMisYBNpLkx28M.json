@@ -3,6 +3,8 @@
 	"_key": "!items!0VCMisYBNpLkx28M",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "7DWu9AynRV2zb9Rw",
 	"img": "icons/magic/life/heart-shadow-red.webp",
 	"name": "Charm Person",
@@ -16,8 +18,8 @@
 			"value": "1d8"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

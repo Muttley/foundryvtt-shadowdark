@@ -3,12 +3,15 @@
 	"_key": "!actors.items!t3Wr5E8hsOs1xtfK.qdYSq7BfKFsmWzQX",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Heat Aura",
 	"system": {
 		"description": "<p>Creatures in close [[check 12 con]] on turn or [[/r 1d8]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

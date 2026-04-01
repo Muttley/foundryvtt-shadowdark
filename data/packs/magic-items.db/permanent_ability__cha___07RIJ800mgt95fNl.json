@@ -3,7 +3,7 @@
 	"_key": "!items.effects!ZypO4jCOurSK2aOB.07RIJ800mgt95fNl",
 	"changes": [
 		{
-			"key": "system.abilities.cha.base",
+			"key": "system.abilities.cha.value",
 			"mode": 5,
 			"priority": null,
 			"value": "18"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Permanent Ability (Cha)",

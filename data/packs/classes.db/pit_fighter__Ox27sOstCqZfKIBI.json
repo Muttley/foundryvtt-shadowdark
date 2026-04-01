@@ -3,11 +3,13 @@
 	"_key": "!items!Ox27sOstCqZfKIBI",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Pit Fighter",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -26,9 +28,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.owING8sYmiI43Od0",
 		"description": "<p>Blood-soaked warriors circling each other in a roaring arena, scarred desert bandits dueling for the right to lead their gang, or brash tavern brawlers who never turn down a challenge.</p>",
 		"hitPoints": "d8",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -42,9 +41,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"spellcasting": {

@@ -3,6 +3,8 @@
 	"_key": "!items!uHAZVTt5bXwQvhFy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "24bp7luJolmj7e9e",
 	"img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
 	"name": "Wall of Force",
@@ -16,7 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

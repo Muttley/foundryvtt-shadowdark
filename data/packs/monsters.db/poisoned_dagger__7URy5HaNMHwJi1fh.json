@@ -3,14 +3,15 @@
 	"_key": "!actors.items!I5y9YDSIg2n0u8CM.7URy5HaNMHwJi1fh",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Poisoned Dagger",
 	"system": {
 		"attack": {
-			"num": "2"
+			"num": 2
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 6,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d4"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close",
 			"near"

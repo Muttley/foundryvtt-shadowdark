@@ -3,12 +3,15 @@
 	"_key": "!actors.items!SEZS6U1BW8lEznja.yfldIma3djL6Xu6a",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Clever",
 	"system": {
 		"description": "<p>+[[/r 1d4]] damage when attacking with surprise.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

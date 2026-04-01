@@ -3,7 +3,7 @@
 	"_key": "!items.effects!jEeDexWHYy7wKsfa.HhILvM8lD0Nby5gq",
 	"changes": [
 		{
-			"key": "system.bonuses.attackBonus",
+			"key": "system.roll.attack.bonus.this",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
 	"name": "Attack Roll Bonus",

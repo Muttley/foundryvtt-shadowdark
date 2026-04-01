@@ -3,12 +3,13 @@
 	"_key": "!items!m857P6MI00wAONTp",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "iHOSxtXRWKd2vx1U",
 	"img": "icons/commodities/materials/bowl-liquid-white.webp",
 	"name": "Salve",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"class": [
 		],
 		"cost": {
@@ -18,16 +19,17 @@
 		},
 		"description": "<p>Heals 1 HP</p>",
 		"duration": {
-			"type": "",
+			"type": "rounds",
 			"value": ""
 		},
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
+		"lost": false,
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
-		"range": "",
+		"range": "near",
 		"slots": {
 			"free_carry": 1,
 			"per_slot": 1,
@@ -37,8 +39,7 @@
 			"title": "core-rules"
 		},
 		"spellName": "",
-		"stashed": false,
-		"tier": 1
+		"stashed": false
 	},
 	"type": "Potion"
 }

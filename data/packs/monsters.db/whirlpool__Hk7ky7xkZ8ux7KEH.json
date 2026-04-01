@@ -3,17 +3,21 @@
 	"_key": "!actors.items!Fb4nfQoOqplwmGHe.Hk7ky7xkZ8ux7KEH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Whirlpool",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within close [[check 15 str]] or immobilized inside water elemental (treat as underwater). [[check 15 str]] on turn to escape.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

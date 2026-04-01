@@ -3,12 +3,15 @@
 	"_key": "!actors.items!BviPIbrJao1ubOX1.4uIQLGgxD2nobby9",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Oath",
 	"system": {
 		"description": "<p>3/day, ADV on a roll made in service of knight's order.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

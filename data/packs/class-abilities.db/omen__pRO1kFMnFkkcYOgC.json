@@ -3,6 +3,8 @@
 	"_key": "!items!pRO1kFMnFkkcYOgC",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "m4dDLdsMVfNF9LdP",
 	"img": "icons/magic/perception/orb-eye-scrying.webp",
 	"name": "Omen",
@@ -14,7 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},

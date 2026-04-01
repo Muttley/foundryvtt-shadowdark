@@ -3,6 +3,8 @@
 	"_key": "!items!UDyHeJCreIFZ9y2I",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "np4FRJ73NRBEQKnS",
 	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
 	"name": "Mithral Chainmail",
@@ -14,7 +16,6 @@
 		},
 		"baseArmor": "chainmail",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 240,
@@ -23,9 +24,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 		],
 		"quantity": 1,

@@ -3,16 +3,10 @@
 	"_key": "!items.effects!Eojo6v3WsiHEDcKm.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.abilities.con.base",
+			"key": "system.abilities.con.value",
 			"mode": 3,
 			"priority": null,
 			"value": "3"
-		},
-		{
-			"key": "system.abilities.con.mod",
-			"mode": 3,
-			"priority": null,
-			"value": "-4"
 		}
 	],
 	"description": "",
@@ -25,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/control/fear-fright-white.webp",
 	"name": "Feeble (CON)",

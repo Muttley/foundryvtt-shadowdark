@@ -4,6 +4,8 @@
 	"effects": [
 		"qohPOvbaVcxpRumR"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/social/wave-halt-stop.webp",
 	"name": "Spell Effect: Anathema",
@@ -12,7 +14,7 @@
 		"description": "<p>Enchanted with another creature.</p><p>Each time one of the affected creatures takes damage, it may make a [[check 15 cha]] check. On a success, the spell ends.</p>",
 		"duration": {
 			"type": "days",
-			"value": "1"
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

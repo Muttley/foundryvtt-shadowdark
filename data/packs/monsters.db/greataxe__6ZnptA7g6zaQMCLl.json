@@ -3,14 +3,15 @@
 	"_key": "!actors.items!Om5RbAEQDbXI8MwN.6ZnptA7g6zaQMCLl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Greataxe",
 	"system": {
 		"attack": {
-			"num": "3"
+			"num": 3
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 8,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

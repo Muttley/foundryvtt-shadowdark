@@ -3,12 +3,15 @@
 	"_key": "!actors.items!TZGzGBYncOs3r9ZF.lgOTiUpoDRhYY7ED",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Grab",
 	"system": {
 		"description": "<p>[[check 12 str]] or target held. [[check 12 str]] on turn to break free.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

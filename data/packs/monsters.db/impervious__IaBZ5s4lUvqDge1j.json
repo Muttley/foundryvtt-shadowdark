@@ -3,12 +3,15 @@
 	"_key": "!actors.items!VRZ60vAEV5ltvs6k.IaBZ5s4lUvqDge1j",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Can only be harmed by magical sources.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,6 +3,8 @@
 	"_key": "!items!b1ZHAbGQRFPqgLMv",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "24bp7luJolmj7e9e",
 	"img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
 	"name": "Polymorph",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "core-rules"

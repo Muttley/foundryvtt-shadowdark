@@ -3,12 +3,15 @@
 	"_key": "!actors.items!h0NMkJj2DCJiQ9Zw.PocUS1Ct2HYh8w6m",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Ink",
 	"system": {
 		"description": "<p>In place of attacks, ink cloud blinds all in near for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

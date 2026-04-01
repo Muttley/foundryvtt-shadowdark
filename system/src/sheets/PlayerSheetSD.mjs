@@ -109,6 +109,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			event => this._onToggleEquipped(event)
 		);
 
+		html.find("[data-action='toggle-handedness']").click(
+			event => this._onToggleHandedness(event)
+		);
+
 		html.find("[data-action='toggle-light']").click(
 			event => this._onToggleLightSource(event)
 		);
@@ -275,8 +279,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.effects.toObject().length > 0) {
 			let itemObj = await shadowdark.effects.createItemWithEffect(item);
 
-			// add item to actor
-			const [newItem] = await super._onDropItem(event, data);
+			const newItem = await this.actor.createEmbeddedDocuments("Item", [itemObj]);
 
 			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
 				this._toggleLightSource(newItem);
@@ -643,6 +646,26 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	}
 
+	async _onToggleHandedness(event) {
+		event.preventDefault();
+
+		const itemId = event.currentTarget.dataset.itemId;
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (!item || !item.system.isVersatile) return;
+
+		if (item.system.handedness === "1h") {
+			const shields = await this.actor.system.getEquippedShields();
+			for (const shield of shields) {
+				shield.update({"system.equipped": false});
+			}
+			item.update({"system.handedness": "2h"});
+		}
+		else {
+			item.update({"system.handedness": "1h"});
+		}
+	}
+
 	async _onToggleStashed(event) {
 		event.preventDefault();
 
@@ -805,7 +828,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
-		const attacks = this.actor.system.getAttacks();
+		const attacks = await this.actor.system.getAttacks();
 
 		for (const i of this.actor.system.getPhysicalItems()) {
 			if (i.system.isGem) {
@@ -893,10 +916,16 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 
-		// Sort talents by level for display...
-		talents.level.items = talents.level.items.sort(
-			(a, b) => a.system.level - b.system.level
-		);
+		// Sort Level Talents by level for display, sort Ancestry and Class
+		// talents alphabetically
+		talents.ancestry.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.class.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.level.items.sort((a, b) => a.system.level - b.system.level);
+
+		// Sort all spells alphabetically by tier
+		for (const tier in spells) {
+			spells[tier].sort((a, b) => a.name.localeCompare(b.name));
+		}
 
 		context.classAbilities = this.actor.system.getClassAbilities();
 		context.attacks = attacks;

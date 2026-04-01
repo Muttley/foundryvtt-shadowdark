@@ -3,6 +3,8 @@
 	"_key": "!items!c3AotHi0DiEMVoIg",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "S2MLlGpmsIRnqf6Z",
 	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
 	"name": "Divine Vengeance",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

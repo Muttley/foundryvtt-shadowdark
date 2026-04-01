@@ -3,6 +3,8 @@
 	"_key": "!items!1kZcu5aIUsIUbJzM",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/control/debuff-chains-ropes-net-white.webp",
 	"name": "Fabricate",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!8aDS9mPcNoxNc3Ha.zu47R0LLpuiqpW9b",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Latch",
 	"system": {
 		"description": "<p>Attach to bitten target; bites auto-hit next round. [[check 12 str]] on turn to tear off.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

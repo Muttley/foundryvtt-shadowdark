@@ -3,6 +3,8 @@
 	"_key": "!items!YDZEbLXu1PJrPAdY",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "0CqAJEHgk6zHXr8Y",
 	"img": "icons/consumables/mushrooms/convex-spotted-orange-white.webp",
 	"name": "Toadstool",
@@ -13,11 +15,11 @@
 		"description": "<p>You conjure a plump, speckled toadstool in your hand. It disappears at the end of your next turn. </p><p>A creature that eats the toadstool regains 1d6 hit points.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

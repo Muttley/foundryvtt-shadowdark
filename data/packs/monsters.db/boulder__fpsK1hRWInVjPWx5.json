@@ -3,14 +3,15 @@
 	"_key": "!actors.items!sFz8XfLheORSuxxM.fpsK1hRWInVjPWx5",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Boulder",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 6,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"far"
 		],

@@ -3,40 +3,28 @@
 	"_key": "!items!TQ0x7zmYfTCykZOh",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "LVzvIhYHieRT4O6q",
 	"img": "icons/weapons/daggers/dagger-straight-stone.webp",
 	"name": "Dagger (Obsidian)",
 	"system": {
 		"ammoClass": "",
 		"baseWeapon": "dagger",
-		"bonuses": {
-			"attackBonus": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": 0,
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 3,
 			"sp": 0
 		},
 		"damage": {
-			"numDice": 1,
 			"oneHanded": "d6",
 			"twoHanded": ""
 		},
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.e5RpI0crHweCVt8B",
 			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
@@ -53,8 +41,7 @@
 			"title": "cursed-scroll-4"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

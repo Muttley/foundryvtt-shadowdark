@@ -3,6 +3,8 @@
 	"_key": "!actors!ubcYvhvDW1WywYcw",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -133,21 +135,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 6,
 				"value": 6
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 1
+			"value": 1,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
 		"notes": "<p>Fledgling, six-legged basilisks the size of iguanas. They can partially petrify creatures for a short time.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

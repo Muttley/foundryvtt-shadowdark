@@ -3,14 +3,16 @@
 	"_key": "!items!Ey3P0EplF5SHIdey",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/sundries/books/book-worn-red.webp",
 	"name": "Learn Extra Spell",
 	"system": {
 		"description": "<p>Learn one additional spell of any tier you know.</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

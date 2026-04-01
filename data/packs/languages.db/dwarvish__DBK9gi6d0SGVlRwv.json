@@ -3,12 +3,15 @@
 	"_key": "!items!DBK9gi6d0SGVlRwv",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "aDYnRuOBkR4FXCDR",
 	"img": "icons/tools/scribal/ink-quill-pink.webp",
 	"name": "Dwarvish",
 	"system": {
 		"description": "<p>Dwarves</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

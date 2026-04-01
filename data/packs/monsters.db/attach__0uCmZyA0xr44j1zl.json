@@ -3,12 +3,15 @@
 	"_key": "!actors.items!UGsq7I9Gyahgd0dG.0uCmZyA0xr44j1zl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Attach",
 	"system": {
 		"description": "<p>Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

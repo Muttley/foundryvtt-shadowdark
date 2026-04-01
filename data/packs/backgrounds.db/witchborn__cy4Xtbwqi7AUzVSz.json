@@ -3,14 +3,16 @@
 	"_key": "!items!cy4Xtbwqi7AUzVSz",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Witchborn",
 	"system": {
 		"description": "<p>They burned your mother, but spared you</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

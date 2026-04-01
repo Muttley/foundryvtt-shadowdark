@@ -3,6 +3,8 @@
 	"_key": "!items!07syJLlt7uUSQgct",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/magic/air/fog-gas-smoke-blue-gray.webp",
 	"name": "Fog",
@@ -13,10 +15,11 @@
 		"description": "<p>A thick cloud of fog blooms in a close area around you, making you hard to see. The cloud moves with you. Attacks against creatures in the cloud have disadvantage.</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "cursed-scroll-1"

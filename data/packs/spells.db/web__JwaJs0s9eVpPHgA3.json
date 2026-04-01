@@ -3,6 +3,8 @@
 	"_key": "!items!JwaJs0s9eVpPHgA3",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/commodities/materials/material-webbing.webp",
 	"name": "Web",
@@ -16,8 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "core-rules"

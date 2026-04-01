@@ -3,6 +3,8 @@
 	"_key": "!items!hMGQuETjBxuMwjsR",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "a6WcvmZpOASURb60",
 	"img": "icons/magic/light/beam-strike-village-yellow.webp",
 	"name": "Wish",
@@ -13,10 +15,11 @@
 		"description": "<p>This mighty spell alters reality. </p><p>Make a single wish, stating it as exactly as possible. Your wish occurs, as interpreted by the GM. </p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

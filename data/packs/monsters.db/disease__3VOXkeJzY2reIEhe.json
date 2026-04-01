@@ -3,12 +3,15 @@
 	"_key": "!actors.items!UxMr9qvyuIt9ZwM7.3VOXkeJzY2reIEhe",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Disease",
 	"system": {
 		"description": "<p>[[check 9 con]] or [[/r 1d4]] CON damage (can't heal while ill). Repeat check once per day; ends on success. Die at 0 CON.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

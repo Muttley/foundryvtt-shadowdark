@@ -3,12 +3,15 @@
 	"_key": "!actors.items!pB9F8QWYdWzfZMzs.hmmFs6UJluNSAPEL",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Only harmed by fire.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

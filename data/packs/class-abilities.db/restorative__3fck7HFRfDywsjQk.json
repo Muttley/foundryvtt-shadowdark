@@ -3,6 +3,8 @@
 	"_key": "!items!3fck7HFRfDywsjQk",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Agdcg0ystOpP8kcL",
 	"img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
 	"name": "Restorative",
@@ -14,7 +16,8 @@
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

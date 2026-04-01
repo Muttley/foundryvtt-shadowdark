@@ -3,6 +3,8 @@
 	"_key": "!items!QG1lAZeLfBtXR6zh",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Goblin",
@@ -20,7 +22,8 @@
 			]
 		},
 		"nameTable": "Compendium.shadowdark.rollable-tables.RollTable.PCDY6HMLaToPHurV",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"randomWeight": 1,
 		"source": {
 			"title": "core-rules"

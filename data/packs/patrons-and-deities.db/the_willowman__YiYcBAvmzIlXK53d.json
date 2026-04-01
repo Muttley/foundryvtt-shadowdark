@@ -3,12 +3,16 @@
 	"_key": "!items!YiYcBAvmzIlXK53d",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "3aze8z3qds3mZZm9",
 	"img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
 	"name": "The Willowman",
 	"system": {
 		"boonTable": "Compendium.shadowdark.rollable-tables.RollTable.jeMMr372yditrKMj",
 		"description": "<p>A ghostly, elongated being who stalks misty forests and watches from the edge of nightmares. The Willowman seeks fear.</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		}

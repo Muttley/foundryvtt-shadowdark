@@ -4,17 +4,16 @@
 	"effects": [
 		"OU9XGvWpbh2ADVNy"
 	],
+	"flags": {
+	},
 	"folder": "MFeFmA2ubOJxaTwm",
 	"img": "icons/magic/control/sihouette-hold-beam-green.webp",
 	"name": "Knack (Spellcasting)",
 	"system": {
-		"bonuses": {
-			"spellcastingCheckBonus": "1"
-		},
 		"description": "<p>You get +1 to spellcasting checks.</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

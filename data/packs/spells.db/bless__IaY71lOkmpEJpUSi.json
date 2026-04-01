@@ -3,6 +3,8 @@
 	"_key": "!items!IaY71lOkmpEJpUSi",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "IqNdoEHw03QSMA55",
 	"img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
 	"name": "Bless",
@@ -13,11 +15,11 @@
 		"description": "<p>One creature you touch gains a luck token.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

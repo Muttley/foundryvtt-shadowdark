@@ -3,12 +3,15 @@
 	"_key": "!actors.items!KZNQRwpG4DaN57zB.CXArphxjriKmOxCO",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Golem",
 	"system": {
 		"description": "<p>Immune to damage from cold or non-magical sources. Healed by fire.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

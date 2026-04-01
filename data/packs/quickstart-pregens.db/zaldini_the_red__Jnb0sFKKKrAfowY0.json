@@ -2,9 +2,9 @@
 	"_id": "Jnb0sFKKKrAfowY0",
 	"_key": "!actors!Jnb0sFKKKrAfowY0",
 	"effects": [
-		"kpP7k0q22F1ktYTF",
-		"KKuguluCP3repDNL"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Zaldini_the_Red_portrait.webp",
 	"items": [
@@ -23,8 +23,8 @@
 		"jNUs34pMyNSjQdP4",
 		"ULGt6UxOyy9TS7vr",
 		"ArsAS1ABBasOHhSq",
-		"BiArR79VxCvWJduT",
-		"XVUaR231fv7CO42u"
+		"G4l6AkXLpP0NtKRR",
+		"x4DmDvHFA6e8akrR"
 	],
 	"name": "Zaldini the Red",
 	"prototypeToken": {
@@ -126,28 +126,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			},
 			"con": {
-				"base": 11,
-				"bonus": 0
+				"value": 11
 			},
 			"dex": {
-				"base": 15,
-				"bonus": 0
+				"value": 15
 			},
 			"int": {
-				"base": 17,
-				"bonus": 0
+				"value": 17
 			},
 			"str": {
-				"base": 8,
-				"bonus": 0
+				"value": 8
 			},
 			"wis": {
-				"base": 9,
-				"bonus": 0
+				"value": 9
 			}
 		},
 		"alignment": "chaotic",
@@ -157,51 +151,11 @@
 				"value": 12
 			},
 			"hp": {
-				"base": 3,
-				"bonus": 0,
 				"max": 3,
 				"value": 3
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.eRi9oX0cqwQwV7tk",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs",
 		"coins": {
 			"cp": 0,
@@ -209,10 +163,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.6qeBzYJUTgrMhUcW",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
 			"Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
@@ -230,7 +180,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

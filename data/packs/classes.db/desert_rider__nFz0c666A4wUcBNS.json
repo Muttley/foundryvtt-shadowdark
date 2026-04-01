@@ -3,11 +3,13 @@
 	"_key": "!items!nFz0c666A4wUcBNS",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Desert Rider",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -25,9 +27,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.vwwDlzGjfaiM0R4S",
 		"description": "<p>Howling barbarians thundering across the sand on wild horses, elven spies wielding curved blades atop silvery camels, or bandits wrapped in colorful silks racing on sleek, desert stallions.</p>",
 		"hitPoints": "d8",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -41,9 +40,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"spellcasting": {

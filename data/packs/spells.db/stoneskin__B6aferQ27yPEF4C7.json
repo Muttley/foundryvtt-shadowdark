@@ -3,6 +3,8 @@
 	"_key": "!items!B6aferQ27yPEF4C7",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "24bp7luJolmj7e9e",
 	"img": "icons/magic/defensive/armor-stone-skin.webp",
 	"name": "Stoneskin",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

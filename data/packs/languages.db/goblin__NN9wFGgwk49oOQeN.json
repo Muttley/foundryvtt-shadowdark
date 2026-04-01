@@ -3,12 +3,15 @@
 	"_key": "!items!NN9wFGgwk49oOQeN",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "aDYnRuOBkR4FXCDR",
 	"img": "icons/tools/scribal/ink-quill-pink.webp",
 	"name": "Goblin",
 	"system": {
 		"description": "<p>Bugbears, goblins, hobgoblins</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

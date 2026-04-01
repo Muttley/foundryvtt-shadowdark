@@ -3,6 +3,8 @@
 	"_key": "!actors!VvkJkRVLs6l9UaZy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -135,21 +137,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 34,
 				"value": 34
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 7
+			"value": 7,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Scythe-like limbs jut from a purple bulb as big as an ogre. Its lower half is a nest of tentacles. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 34, <strong>ATK</strong> 2 scythe +6 (1d10) and 1 tentacles +6 (1d12 + toxin), <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p><strong>Toxin</strong>. [[check 12 con]] or paralyzed for 1d4 rounds.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Scythe-like limbs jut from a purple bulb as big as an ogre. Its lower half is a nest of tentacles. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 34, <strong>ATK</strong> 2 scythe +6 (1d10) and 1 tentacles +6 (1d12 + toxin), <strong>MV</strong> near (fly), <strong>S</strong> +4, <strong>D</strong> +1, <strong>C</strong> +3, <strong>I</strong> +0, <strong>W</strong> +1, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p>\n\t<p><strong> Impervious</strong>. Immune to cold.</p><p><strong>Toxin</strong>. [[check 12 con]] or paralyzed for 1d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

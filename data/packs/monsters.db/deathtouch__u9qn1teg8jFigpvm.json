@@ -3,21 +3,27 @@
 	"_key": "!actors.items!CpHttsoemSoZRiDe.u9qn1teg8jFigpvm",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Deathtouch",
 	"system": {
-		"dc": "12",
+		"class": [
+		],
 		"description": "<p>[[/r 2d4]] damage to one creature within close.</p>",
 		"duration": {
-			"type": "",
-			"value": -1
+			"type": "rounds",
+			"value": "-1"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 2
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

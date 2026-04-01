@@ -3,13 +3,16 @@
 	"_key": "!items!3gJPMZ8M4paFtm1n",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "8t1Gmpgn1Q6HXJAz",
 	"img": "icons/sundries/books/book-open-turquoise.webp",
 	"name": "Prolific",
 	"system": {
 		"description": "<p>Add 1d6 to your learning rolls. Groups carousing with 1 or more bards add 1d6 to their rolls.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

@@ -3,6 +3,8 @@
 	"_key": "!items!NdxoRY1HUpq3aD1V",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "8JSBHA3M9HLBIWmB",
 	"img": "icons/magic/nature/moon-crescent.webp",
 	"name": "Mother of Night",
@@ -13,10 +15,11 @@
 		"description": "<p>You beseech the Mother of Night to lend you power. </p><p>Make a single wish, stating it as exactly as possible. Your wish occurs, as interpreted by the GM. </p><p>If you fail this spellcasting check, the Mother of Night pulls you into The Nightfall for judgment. You can't cast this spell again until you appease her demands.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

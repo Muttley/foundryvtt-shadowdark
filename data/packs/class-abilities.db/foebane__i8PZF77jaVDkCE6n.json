@@ -3,6 +3,8 @@
 	"_key": "!items!i8PZF77jaVDkCE6n",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Agdcg0ystOpP8kcL",
 	"img": "icons/consumables/potions/potion-bottle-skull-label-poison-teal.webp",
 	"name": "Foebane",
@@ -14,7 +16,8 @@
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

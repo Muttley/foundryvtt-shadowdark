@@ -3,12 +3,15 @@
 	"_key": "!actors.items!DbkmPt2k9fw5zxJw.NEZDkbCnKJuanUho",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Reckoning",
 	"system": {
 		"description": "<p>Any creature who steals from The Wandering Merchant develops a curse. Over the next [[/r 2d8]] days, that creature turns into a cockatrice. This curse can only be lifted by a wish spell or by returning the stolen goods.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

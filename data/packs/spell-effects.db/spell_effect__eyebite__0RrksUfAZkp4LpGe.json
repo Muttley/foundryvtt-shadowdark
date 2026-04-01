@@ -4,6 +4,8 @@
 	"effects": [
 		"ayif1AZ50Ji9yhIi"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
 	"name": "Spell Effect: Eyebite",
@@ -25,12 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

@@ -3,14 +3,15 @@
 	"_key": "!actors.items!ju93VWtuoi9BRX5F.VtKZ8tWdZuHKkEww",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Fire Whip",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 10,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "Grab",
 			"value": "2d6"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

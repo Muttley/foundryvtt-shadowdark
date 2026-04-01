@@ -3,6 +3,8 @@
 	"_key": "!items!R2wsJJPkIQwLa6Ea",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "24bp7luJolmj7e9e",
 	"img": "icons/magic/control/debuff-energy-snare-purple-pink.webp",
 	"name": "Passwall",
@@ -16,7 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

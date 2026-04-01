@@ -3,17 +3,21 @@
 	"_key": "!actors.items!MnV9R6AbzWjLreaZ.ZuKLfwSmv5cpZCpg",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Mind Blast",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Fills a near-sized cube extending from brain eater. [[check 15 int]] or [[/r 3d6]] damage and paralyzed [[/r 1d4]] rounds.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

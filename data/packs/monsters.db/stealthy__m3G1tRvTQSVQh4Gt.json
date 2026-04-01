@@ -3,12 +3,15 @@
 	"_key": "!actors.items!qUuNdFtYmo1vXVP5.m3G1tRvTQSVQh4Gt",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Stealthy",
 	"system": {
 		"description": "<p>ADV on checks to sneak and hide.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

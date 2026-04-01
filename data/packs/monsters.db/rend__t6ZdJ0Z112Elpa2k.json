@@ -3,14 +3,15 @@
 	"_key": "!actors.items!KKc8fESqPDECz0bL.t6ZdJ0Z112Elpa2k",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Rend",
 	"system": {
 		"attack": {
-			"num": "3"
+			"num": 3
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 8,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

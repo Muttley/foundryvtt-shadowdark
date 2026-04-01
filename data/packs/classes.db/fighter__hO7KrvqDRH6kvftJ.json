@@ -3,11 +3,13 @@
 	"_key": "!items!hO7KrvqDRH6kvftJ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Fighter",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": true,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -22,9 +24,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.dExHo4P85MgpwHd9",
 		"description": "<p>Blood-soaked gladiators in dented armor, acrobatic duelists with darting swords, or far-eyed elven archers who carve their legends with steel and grit.</p>",
 		"hitPoints": "d8",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -38,7 +37,8 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

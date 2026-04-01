@@ -3,14 +3,16 @@
 	"_key": "!items!DYWFJu5XeazJYc0P",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "MFeFmA2ubOJxaTwm",
 	"img": "icons/environment/people/group.webp",
 	"name": "Ambitious",
 	"system": {
 		"description": "<p>You gain one additional talent roll at 1st level.</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

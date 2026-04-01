@@ -3,6 +3,8 @@
 	"_key": "!items!TKDuwFu1hP2lX549",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "24bp7luJolmj7e9e",
 	"img": "icons/magic/water/pseudopod-swirl-blue.webp",
 	"name": "Control Water",
@@ -13,10 +15,11 @@
 		"description": "<p>You move and shape water. You can cause a section of water up to 100 feet in width and depth to change shape, defy gravity, or flow in a different direction.</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "core-rules"

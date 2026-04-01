@@ -3,12 +3,15 @@
 	"_key": "!actors.items!Crc6mFgLL9vNJuaS.koPxZQBcecCwEm1z",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Disease",
 	"system": {
 		"description": "<p>[[check 15 con]] or infected. [[check 15 con]] each day or lose [[/r 1d6]] HP (can't heal). Ends on success.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

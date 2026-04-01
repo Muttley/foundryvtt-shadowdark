@@ -3,12 +3,15 @@
 	"_key": "!actors.items!yMyZ18conSZhwlpg.WnsQfjIdrFmySmtu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Shapeshift",
 	"system": {
 		"description": "<p>In place of attacks, turn into any humanoid or back into original form.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

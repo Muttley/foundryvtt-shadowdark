@@ -3,6 +3,8 @@
 	"_key": "!items!DrwHiFrcGjIBJNQF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/air/wind-tornado-wall-blue.webp",
 	"name": "Gaseous Form",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

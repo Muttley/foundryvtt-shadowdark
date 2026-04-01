@@ -4,6 +4,8 @@
 	"effects": [
 		"SeGDXtfZW1ZclMlC"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/invertebrates/wasp-swarm-tan.webp",
 	"name": "Spell Effect: Locusts",
@@ -25,11 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.1",
+			"combatTime": 18.1,
 			"value": 39232
 		},
 		"tokenIcon": {

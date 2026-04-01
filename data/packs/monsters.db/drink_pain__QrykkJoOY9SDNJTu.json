@@ -3,18 +3,21 @@
 	"_key": "!actors.items!9q5O77FFFJ7pTjhL.QrykkJoOY9SDNJTu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Drink Pain",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Near range. [[check 12 cha]] to deal [[/r 2d4]] damage to a creature; regain that many HP.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

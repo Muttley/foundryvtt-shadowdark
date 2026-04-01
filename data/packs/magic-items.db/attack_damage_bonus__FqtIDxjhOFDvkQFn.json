@@ -3,7 +3,7 @@
 	"_key": "!items.effects!jEeDexWHYy7wKsfa.FqtIDxjhOFDvkQFn",
 	"changes": [
 		{
-			"key": "system.bonuses.damageBonus",
+			"key": "system.roll.attack.damage.this",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "Attack Damage Bonus",

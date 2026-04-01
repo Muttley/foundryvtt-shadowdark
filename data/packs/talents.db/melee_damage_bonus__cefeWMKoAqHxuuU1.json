@@ -3,7 +3,7 @@
 	"_key": "!items.effects!38PGv4JtkfDumLDu.cefeWMKoAqHxuuU1",
 	"changes": [
 		{
-			"key": "system.bonuses.meleeDamageBonus",
+			"key": "system.roll.melee.damage.all",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Melee Damage Bonus",

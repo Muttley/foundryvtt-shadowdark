@@ -3,6 +3,8 @@
 	"_key": "!items!55VYMMlUp2BhYyeR",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Gi0Kjg7bAAVEqjvM",
 	"img": "icons/weapons/swords/sword-gold-holy.webp",
 	"name": "Holy Weapon",
@@ -16,8 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

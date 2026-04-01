@@ -3,10 +3,10 @@
 	"_key": "!items.effects!98HEgBRJSED5epGt.UGQKMdNcgb1O8qwy",
 	"changes": [
 		{
-			"key": "system.bonuses.weaponDamageDieD12",
+			"key": "system.roll.attack.upgrade-damage-die.longsword",
 			"mode": 2,
 			"priority": null,
-			"value": "REPLACEME"
+			"value": "5"
 		}
 	],
 	"description": "",
@@ -20,8 +20,10 @@
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {
+	},
 	"img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
-	"name": "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
+	"name": "Increased Weapon Damage Die",
 	"origin": null,
 	"statuses": [
 	],

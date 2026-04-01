@@ -2,8 +2,9 @@
 	"_id": "x3L0onniGSB97CU7",
 	"_key": "!actors!x3L0onniGSB97CU7",
 	"effects": [
-		"1g9lxw8bhW2NVR0D"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_portrait.webp",
 	"items": [
@@ -20,9 +21,9 @@
 		"LRXImQ7OWk4vOjrl",
 		"kJbjoRI9rKem1LGC",
 		"2XLFXhGu9IZRx5zp",
-		"44W0OltnIZLxwMXD",
-		"pCkZzce1B4WcDqKY",
-		"kB2LygBinZXTN337"
+		"kB2LygBinZXTN337",
+		"N8CNl0oyF59kXOF3",
+		"oyitm9xjkIlIiwp3"
 	],
 	"name": "Ralina Biggins",
 	"prototypeToken": {
@@ -124,28 +125,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 15,
-				"bonus": 0
+				"value": 15
 			},
 			"con": {
-				"base": 9,
-				"bonus": 0
+				"value": 9
 			},
 			"dex": {
-				"base": 17,
-				"bonus": 0
+				"value": 17
 			},
 			"int": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			},
 			"str": {
-				"base": 11,
-				"bonus": 0
+				"value": 11
 			},
 			"wis": {
-				"base": 8,
-				"bonus": 0
+				"value": 8
 			}
 		},
 		"alignment": "neutral",
@@ -155,51 +150,11 @@
 				"value": 14
 			},
 			"hp": {
-				"base": 3,
-				"bonus": 0,
 				"max": 3,
 				"value": 3
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.FRz7qiokf1r9BcjJ",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.C6wkCa2w5dlgSq7f",
 		"coins": {
 			"cp": 0,
@@ -207,10 +162,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.FhDBOHUircue27aV",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP"
 		],
@@ -223,7 +174,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

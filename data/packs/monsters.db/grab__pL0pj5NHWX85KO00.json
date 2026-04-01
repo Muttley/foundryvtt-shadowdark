@@ -3,12 +3,15 @@
 	"_key": "!actors.items!C0CuPZJOFDmuplw8.pL0pj5NHWX85KO00",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Grab",
 	"system": {
 		"description": "<p>[[check 15 str]] or target trapped in tendril. Tendril auto-hits target next round. [[check 15 str]] on turn to break free.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

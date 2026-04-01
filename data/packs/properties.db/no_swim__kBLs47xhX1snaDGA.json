@@ -3,13 +3,16 @@
 	"_key": "!items!kBLs47xhX1snaDGA",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "HwVNTdYe7cKVBJC7",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "No Swim",
 	"system": {
 		"description": "<p>You are unable to swim when wearing this armor</p>",
 		"itemType": "armor",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

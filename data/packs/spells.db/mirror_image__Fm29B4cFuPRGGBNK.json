@@ -3,6 +3,8 @@
 	"_key": "!items!Fm29B4cFuPRGGBNK",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
 	"name": "Mirror Image",
@@ -16,8 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

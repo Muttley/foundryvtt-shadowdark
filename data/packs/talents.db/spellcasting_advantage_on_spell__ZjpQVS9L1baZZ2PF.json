@@ -3,10 +3,10 @@
 	"_key": "!items.effects!VRZxd1xswPr1GaKs.ZjpQVS9L1baZZ2PF",
 	"changes": [
 		{
-			"key": "system.bonuses.advantage",
+			"key": "system.roll.spell.advantage.magic-missile",
 			"mode": 2,
 			"priority": null,
-			"value": "magic-missile"
+			"value": "1"
 		}
 	],
 	"description": "",
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",

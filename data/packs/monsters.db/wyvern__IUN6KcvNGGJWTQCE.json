@@ -3,6 +3,8 @@
 	"_key": "!actors!IUN6KcvNGGJWTQCE",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -134,21 +136,23 @@
 				"value": 15
 			},
 			"hp": {
-				"hd": 0,
 				"max": 37,
 				"value": 37
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 8
+			"value": 8,
+			"xp": 0
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> Dragon-cousins with a large tail stinger, mottled lizard skin, and leathery wings. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 37, <strong>ATK</strong> 2 rend +6 (1d8) and 1 stinger +6 (1d6 + poison), <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or take 2d10 damage.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Dragon-cousins with a large tail stinger, mottled lizard skin, and leathery wings. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 37, <strong>ATK</strong> 2 rend +6 (1d8) and 1 stinger +6 (1d6 + poison), <strong>MV</strong> double near (fly), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> +1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 8</p>\n\t<p><strong> Poison</strong>. [[check 15 con]] or take 2d10 damage.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

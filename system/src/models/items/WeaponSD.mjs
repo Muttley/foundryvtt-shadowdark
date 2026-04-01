@@ -11,6 +11,11 @@ export default class WeaponSD extends PhysicalItemSD {
 				oneHanded: new fields.StringField(),
 				twoHanded: new fields.StringField(),
 			}),
+			handedness: new fields.StringField({
+				initial: "",
+				blank: true,
+				choices: ["1h", "2h"],
+			}),
 			range: new fields.StringField({
 				initial: "close",
 				choices: Object.keys(CONFIG.SHADOWDARK.RANGES),
@@ -27,10 +32,12 @@ export default class WeaponSD extends PhysicalItemSD {
 	prepareBaseData() {
 		super.prepareBaseData();
 
-		// determine handedness
-		const isTwoHanded = this.hasProperty("two-handed")
-			|| (this.damage.oneHanded === "" && this.damage.twoHanded !== "");
-		this.handedness = isTwoHanded ? "2h" : "1h";
+		// determine default handedness
+		if (!this.handedness) {
+			const isTwoHanded = this.hasProperty("two-handed")
+				|| (this.damage.oneHanded === "" && this.damage.twoHanded !== "");
+			this.handedness = isTwoHanded ? "2h" : "1h";
+		}
 	}
 
 	getDamageFormula(handedness=this.handedness) {

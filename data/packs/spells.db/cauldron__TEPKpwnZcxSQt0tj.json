@@ -3,6 +3,8 @@
 	"_key": "!items!TEPKpwnZcxSQt0tj",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/skills/toxins/cauldron-pot-bubbles-green.webp",
 	"name": "Cauldron",
@@ -16,7 +18,8 @@
 			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "cursed-scroll-1"

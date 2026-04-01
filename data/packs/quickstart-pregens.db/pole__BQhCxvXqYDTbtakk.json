@@ -3,12 +3,13 @@
 	"_key": "!actors.items!wnjtoBC4k5dIiG8X.BQhCxvXqYDTbtakk",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/commodities/wood/wood-pole.webp",
 	"name": "Pole",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +18,6 @@
 		"description": "<p>Wooden, 10' long.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,6 +27,8 @@
 			"template": "torch"
 		},
 		"magicItem": false,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
@@ -35,7 +37,6 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false,

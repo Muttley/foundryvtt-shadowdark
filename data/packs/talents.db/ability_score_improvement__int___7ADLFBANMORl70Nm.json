@@ -3,7 +3,7 @@
 	"_key": "!items.effects!LDJCx5syOcenLMZf.7ADLFBANMORl70Nm",
 	"changes": [
 		{
-			"key": "system.abilities.int.bonus",
+			"key": "system.abilities.int.value",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Ability Score Improvement (Int)",

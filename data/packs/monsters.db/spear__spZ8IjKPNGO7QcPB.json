@@ -3,14 +3,15 @@
 	"_key": "!actors.items!h4e6ntO5vWTShNi9.spZ8IjKPNGO7QcPB",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Spear",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 2,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "",
 			"value": "1d6"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close",
 			"near"

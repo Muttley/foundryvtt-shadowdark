@@ -3,6 +3,8 @@
 	"_key": "!items!Bu0YbZfePyD4dCBr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "EDfN0tPLXXsmyaEn",
 	"img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
 	"name": "Wrath",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

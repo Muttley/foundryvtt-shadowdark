@@ -3,6 +3,8 @@
 	"_key": "!items!cXyvO6H22jfOxcz4",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "b5OE7k6Q0rfydKZ6",
 	"img": "icons/magic/movement/trail-streak-zigzag-teal.webp",
 	"name": "Teleport to Familiar",
@@ -14,6 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		},

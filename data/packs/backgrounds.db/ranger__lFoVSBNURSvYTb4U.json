@@ -3,11 +3,15 @@
 	"_key": "!items!lFoVSBNURSvYTb4U",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Ranger",
 	"system": {
 		"description": "<p>The woods and wilds are your true home</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

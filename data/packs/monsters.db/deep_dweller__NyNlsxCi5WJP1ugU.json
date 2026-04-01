@@ -3,12 +3,15 @@
 	"_key": "!actors.items!NTRHmnsw7poR4rZ9.NyNlsxCi5WJP1ugU",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Deep Dweller",
 	"system": {
 		"description": "<p>Immune to harm from fire and cold. Amphibious.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!u05UfQ9hKno0bwWj.93VamQFfuaigX2c3",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Petrify",
 	"system": {
 		"description": "<p>Any creature (including medusa) who looks directly at medusa, [[check 15 con]] or petrified.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

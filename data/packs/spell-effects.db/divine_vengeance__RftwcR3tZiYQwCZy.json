@@ -3,25 +3,25 @@
 	"_key": "!items.effects!o74l0TnCb0E2fAKp.RftwcR3tZiYQwCZy",
 	"changes": [
 		{
-			"key": "system.bonuses.meleeAttackBonus",
+			"key": "system.roll.melee.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "4"
 		},
 		{
-			"key": "system.bonuses.rangedAttackBonus",
+			"key": "system.roll.ranged.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "4"
 		},
 		{
-			"key": "system.bonuses.meleeDamageBonus",
+			"key": "system.roll.melee.damage.all",
 			"mode": 2,
 			"priority": null,
 			"value": "4"
 		},
 		{
-			"key": "system.bonuses.rangedDamageBonus",
+			"key": "system.roll.ranged.damage.all",
 			"mode": 2,
 			"priority": null,
 			"value": "4"
@@ -37,6 +37,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
 	"name": "Divine Vengeance",

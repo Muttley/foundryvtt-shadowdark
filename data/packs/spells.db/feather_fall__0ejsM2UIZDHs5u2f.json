@@ -3,6 +3,8 @@
 	"_key": "!items!0ejsM2UIZDHs5u2f",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "7DWu9AynRV2zb9Rw",
 	"img": "icons/commodities/materials/feather-white.webp",
 	"name": "Feather Fall",
@@ -13,10 +15,11 @@
 		"description": "<p>You may make an attempt to cast this spell when you fall.</p><p>Your rate of descent slows so that you land safely on your feet.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

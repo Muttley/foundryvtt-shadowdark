@@ -3,12 +3,15 @@
 	"_key": "!actors.items!k8tAgECWIzPIStGU.Kf0yKXcmO5FTRyDf",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Brutal",
 	"system": {
 		"description": "<p>+1 damage with melee weapons (included).</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

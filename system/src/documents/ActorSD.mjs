@@ -127,11 +127,13 @@ export default class ActorSD extends foundry.documents.Actor {
 		const amountToApply = Math.floor(parseInt(damageAmount) * multiplier);
 
 		// Ensures that we don't go above Max or below Zero
-		const newHpValue = Math.clamped(currentHpValue - amountToApply, 0, maxHpValue);
+		const newHpValue = Math.clamp(currentHpValue - amountToApply, 0, maxHpValue);
 
 		this.update({
 			"system.attributes.hp.value": newHpValue,
 		});
+
+		if (newHpValue === 0 && multiplier === 1) this._setDefeated();
 	}
 
 
@@ -225,6 +227,49 @@ export default class ActorSD extends foundry.documents.Actor {
 		if (this.type === "Player") {
 			if (canvas.ready && game.user.character === this) {
 				game.shadowdark.effectPanel.refresh();
+			}
+		}
+	}
+
+	async _setDefeated() {
+		// If this actor is in a combat tracker, then set them as defeated and
+		// add the "dead" effect icon to the token in the scene
+		//
+		for (const combat of game.combats) {
+			for (const combatant of combat.combatants) {
+
+				// Make sure we"re matching on the correct id depending on whether we"re
+				// a linked actor, or just a token
+				//
+				const matchFound = this.isToken
+					? combatant.tokenId === this.token.id
+					: combatant.actorId === this.id;
+
+				if (!matchFound) continue;
+
+				combatant.update({defeated: true});
+
+				const token = combatant.token;
+
+				if (!token) return;
+
+				const actor = token.actor;
+
+				if (!actor) return;
+
+				const statusEffectOptions = { active: true, overlay: true };
+
+				let newStatusEffects = [];
+				if (actor.type === "Player") {
+					newStatusEffects.push("prone", "unconscious");
+				}
+				else {
+					newStatusEffects.push("dead");
+				}
+
+				for (const effect of newStatusEffects) {
+					actor.toggleStatusEffect(effect, statusEffectOptions);
+				}
 			}
 		}
 	}

@@ -3,7 +3,7 @@
 	"_key": "!items.effects!UE2xABVKD0oCDtdx.hkfq4SGF4mkDjQmt",
 	"changes": [
 		{
-			"key": "system.abilities.cha.bonus",
+			"key": "system.abilities.cha.value",
 			"mode": 2,
 			"priority": null,
 			"value": "2"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Ability Score Improvement (Cha)",

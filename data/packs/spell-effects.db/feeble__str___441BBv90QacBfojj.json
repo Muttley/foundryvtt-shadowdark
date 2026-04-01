@@ -3,16 +3,10 @@
 	"_key": "!items.effects!Ya5tD4kFDne19zZO.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.abilities.str.base",
+			"key": "system.abilities.str.value",
 			"mode": 3,
 			"priority": null,
 			"value": "3"
-		},
-		{
-			"key": "system.abilities.str.mod",
-			"mode": 3,
-			"priority": null,
-			"value": "-4"
 		}
 	],
 	"description": "",
@@ -25,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/control/fear-fright-white.webp",
 	"name": "Feeble (STR)",

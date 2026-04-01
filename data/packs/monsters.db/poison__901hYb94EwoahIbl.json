@@ -3,12 +3,15 @@
 	"_key": "!actors.items!QhFsevIc23TsTHZE.901hYb94EwoahIbl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 15 con]] or drop to 0 hit points in [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

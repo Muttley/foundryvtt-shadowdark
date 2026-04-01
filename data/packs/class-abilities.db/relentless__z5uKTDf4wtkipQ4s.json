@@ -3,6 +3,8 @@
 	"_key": "!items!z5uKTDf4wtkipQ4s",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "ntYpdY6HvWuXyrsm",
 	"img": "icons/skills/wounds/injury-face-impact-orange.webp",
 	"name": "Relentless",
@@ -14,9 +16,9 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"uses": {

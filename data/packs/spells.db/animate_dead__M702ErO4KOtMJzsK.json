@@ -3,6 +3,8 @@
 	"_key": "!items!M702ErO4KOtMJzsK",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
 	"name": "Animate Dead",
@@ -16,7 +18,8 @@
 			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

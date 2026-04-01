@@ -3,17 +3,21 @@
 	"_key": "!actors.items!c9n0i79sjiUWwkiV.9BaW9Yx4WaDTJkZS",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Petrifying Breath",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Fills a near-sized cube extending from gorgon. [[check 15 con]] or petrified (gorgons immune).</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

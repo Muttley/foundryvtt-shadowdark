@@ -71,25 +71,12 @@ export default class ActiveEffectsSD {
 	 */
 	static async createItemWithEffect(item) {
 		let itemObj = item.toObject();
-		await Promise.all(itemObj.effects?.map(async e => {
+
+		await Promise.all(itemObj.effects?.map(async effect => {
 			// If the item contains effects that require user input,
 			// ask and modify talent before creating
-			if (
-				e.changes?.some(c =>
-					CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)
-				)
-			) {
-				// Spell Advantage requires special handling as it uses the `advantage` bons
-				if (e.changes.some(c => c.key === "system.bonuses.advantage")) {
-					// If there is no value with REPLACME, it is another type of advantage talent
-					if (e.changes.some(c => c.value === "REPLACEME")) {
-						const key = "spellAdvantage";
-						itemObj = await this.modifyEffectChangesWithInput(item, e, key);
-					}
-				}
-				else {
-					itemObj = await this.modifyEffectChangesWithInput(item, e);
-				}
+			if (effect.changes?.some(c => c.key.includes("REPLACEME"))) {
+				itemObj = await this.modifyEffectChangesWithInput(item, effect);
 			}
 		}));
 
@@ -195,21 +182,13 @@ export default class ActiveEffectsSD {
 	/**
 	 * Handles special cases for predefined effect mappings
 	 *
-	 * @param {string} key - effectKey from mapping
+	 * @param {string} effectName - effectKey from mapping
 	 * @param {Object} value - data value from mapping
 	 * @param {Object} name - name value from mapping
 	 * @returns {Object}
 	 */
-	static async handlePredefinedEffect(key, value, name=null) {
-		if (key === "acBonusFromAttribute") {
-			const type = "attribute";
-
-			const options = shadowdark.config.ABILITIES_LONG;
-
-			const chosen = await this.askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "armorMastery") {
+	static async handlePredefinedEffect(effectName, value, name=null) {
+		if (effectName === "Armor Mastery") {
 			const type = "armor";
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
@@ -219,7 +198,7 @@ export default class ActiveEffectsSD {
 			const chosen = await this.askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
-		else if (key === "lightSource") {
+		else if (effectName === "lightSource") {
 			const type = "lightsource";
 
 			// TODO Need to move to light source objects to allow customisation
@@ -236,7 +215,7 @@ export default class ActiveEffectsSD {
 			const chosen = await this.askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
-		else if (key === "spellAdvantage") {
+		else if (effectName === "Spellcasting Advantage on Spell") {
 			const type = "spell";
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
@@ -246,58 +225,7 @@ export default class ActiveEffectsSD {
 			const chosen = await this.askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
 		}
-		else if (key === "spellcastingClasses") {
-			const type = "class";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.spellcastingBaseClasses()
-			);
-
-			const chosen = await this.askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (
-			[
-				"weaponDamageDieImprovementByProperty",
-				"weaponDamageExtraDieImprovementByProperty",
-			].includes(key)
-		) {
-			const type = "weapon_property";
-
-			const options = await shadowdark.utils.getSlugifiedItemList(
-				await shadowdark.compendiums.weaponProperties()
-			);
-
-			const chosen = await this.askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (key === "weaponDamageExtraDieByProperty") {
-			const parameters = [
-				{
-					key: key,
-					type: "damage_die",
-					options: shadowdark.config.DICE,
-				},
-				{
-					key: key,
-					type: "weapon_property",
-					options: await shadowdark.utils.getSlugifiedItemList(
-						await shadowdark.compendiums.weaponProperties()
-					),
-				},
-			];
-
-			const chosen = await this.askEffectInput(parameters);
-
-
-			if (chosen.damage_die && chosen.weapon_property) {
-				return [`${chosen.damage_die[0]}|${chosen.weapon_property[0]}`];
-			}
-			else {
-				return [value];
-			}
-		}
-		else if (["weaponMastery", "weaponDamageDieD12"].includes(key)) {
+		else if (["Weapon Mastery", "Increased Weapon Damage Die"].includes(effectName)) {
 			const type = "weapon";
 
 			const options = await shadowdark.utils.getSlugifiedItemList(
@@ -319,40 +247,42 @@ export default class ActiveEffectsSD {
 	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
 	 * @returns {Object} - Object updated with the changes
 	 */
-	static async modifyEffectChangesWithInput(item, effect, key = false) {
+	static async modifyEffectChangesWithInput(item, effect) {
 		// Create an object out of the item to modify before creating
 		const itemObject = item.toObject();
 		let name = itemObject.name;
 
-		const changes = await Promise.all(
-			effect.changes.map(async c => {
-				if (CONFIG.SHADOWDARK.EFFECT_ASK_INPUT.includes(c.key)) {
-					const effectKey = (key) ? key : c.key.split(".")[2];
-
-					// Ask for user input
-					let linkedName;
-					[c.value, linkedName] = await this.handlePredefinedEffect(
-						effectKey,
-						null,
-						name
-					);
-
-					if (c.value) {
-						name += ` (${linkedName})`;
-					}
-				}
-				return c;
-			})
-		);
-
-		// Modify the Effect object
-		itemObject.effects.map(e => {
-			if (e._id === effect._id) {
-				e.changes = changes;
-				itemObject.name = name;
+		let hasReplaceMe = false;
+		for (const change of effect.changes) {
+			if (change.key.includes("REPLACEME")) {
+				hasReplaceMe = true;
+				break;
 			}
-			return e;
-		});
+		}
+
+		if (hasReplaceMe) {
+			let linkedName;
+			let slugifiedValue;
+
+			[slugifiedValue, linkedName] = await this.handlePredefinedEffect(
+				effect.name,
+				null,
+				name
+			);
+
+			if (slugifiedValue) {
+				itemObject.name += ` (${linkedName})`;
+
+				for (const effectEntry of itemObject.effects) {
+					if (effect.name !== effectEntry.name) continue;
+
+					effectEntry.changes.forEach(change => {
+						change.key = change.key.replace("REPLACEME", slugifiedValue);
+					});
+				}
+			}
+		}
+
 		return itemObject;
 	}
 

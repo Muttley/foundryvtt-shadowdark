@@ -3,6 +3,8 @@
 	"_key": "!items!1ZAZQsFvPBEZPkVP",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "GjEoxJ1IlFDjGKIa",
 	"img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
 	"name": "Polymorph",
@@ -16,7 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-1"

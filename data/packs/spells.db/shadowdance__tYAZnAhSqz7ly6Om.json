@@ -3,6 +3,8 @@
 	"_key": "!items!tYAZnAhSqz7ly6Om",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/magic/perception/silhouette-stealth-shadow.webp",
 	"name": "Shadowdance",
@@ -16,7 +18,8 @@
 			"value": "3"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "cursed-scroll-1"

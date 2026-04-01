@@ -3,7 +3,7 @@
 	"_key": "!items.effects!w3UsdCcYKnwcAgbH.b7lXcLAavPlpMhqp",
 	"changes": [
 		{
-			"key": "system.bonuses.critical.successThreshold",
+			"key": "system.roll.attack.critical-success.all",
 			"mode": 5,
 			"priority": null,
 			"value": "18"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Critical Success Threshold",

@@ -3,6 +3,8 @@
 	"_key": "!items!oeJmT9gfvZ5Ha19w",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Fixed Object",
@@ -16,7 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

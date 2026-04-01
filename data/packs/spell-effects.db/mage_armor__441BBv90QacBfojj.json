@@ -3,7 +3,7 @@
 	"_key": "!items.effects!h9MTxzrrPmyhEmRL.441BBv90QacBfojj",
 	"changes": [
 		{
-			"key": "system.attributes.ac.override",
+			"key": "system.attributes.ac.value",
 			"mode": 5,
 			"priority": null,
 			"value": "14"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
 	"name": "Mage Armor",

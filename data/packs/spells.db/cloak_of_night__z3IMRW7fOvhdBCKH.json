@@ -3,6 +3,8 @@
 	"_key": "!items!z3IMRW7fOvhdBCKH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "GjEoxJ1IlFDjGKIa",
 	"img": "icons/equipment/back/cloak-layered-tattered-purple.webp",
 	"name": "Cloak of Night",
@@ -16,7 +18,8 @@
 			"value": "8"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

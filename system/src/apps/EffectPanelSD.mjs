@@ -118,8 +118,8 @@ export default class EffectPanelSD extends foundry.appv1.api.Application {
 				return self.findIndex(v => v.origin === value.origin) === index;
 			});
 
-		expiredEffects.forEach(e => {
-			const i = fromUuidSync(e.parent.uuid);
+		expiredEffects.forEach(async e => {
+			const i = await fromUuid(e.parent.uuid);
 			i.delete();
 		});
 	}

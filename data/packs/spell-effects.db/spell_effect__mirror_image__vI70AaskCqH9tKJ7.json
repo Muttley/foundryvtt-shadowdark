@@ -4,6 +4,8 @@
 	"effects": [
 		"P1QXkErKypSKB6bl"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
 	"name": "Spell Effect: Mirror Image",
@@ -12,7 +14,7 @@
 		"description": "",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

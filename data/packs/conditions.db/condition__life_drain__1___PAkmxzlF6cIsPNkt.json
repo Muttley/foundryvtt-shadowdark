@@ -3,7 +3,7 @@
 	"_key": "!items.effects!eAWhmC9ZXzjhIa1H.PAkmxzlF6cIsPNkt",
 	"changes": [
 		{
-			"key": "system.abilities.con.bonus",
+			"key": "system.abilities.con.value",
 			"mode": 2,
 			"priority": null,
 			"value": "-1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Condition: Life Drain (1)",

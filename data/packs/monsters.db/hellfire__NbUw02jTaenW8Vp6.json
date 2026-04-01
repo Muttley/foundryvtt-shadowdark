@@ -3,12 +3,15 @@
 	"_key": "!actors.items!ju93VWtuoi9BRX5F.NbUw02jTaenW8Vp6",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Hellfire",
 	"system": {
 		"description": "<p>[[check 18 dex]] or [[/r 2d8]] damage per round until flames extinguished.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

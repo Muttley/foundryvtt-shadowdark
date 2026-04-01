@@ -3,6 +3,8 @@
 	"_key": "!items!IKeJTVUWWMWy9Rvp",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "sE2Ooa1HgAMXmCra",
 	"img": "icons/tools/hand/broom-straw-brown.webp",
 	"name": "Broomstick",
@@ -13,11 +15,11 @@
 		"description": "<p>You conjure a flying broomstick in your hand.</p><p>The broomstick's rider can fly a near distance each round and can hover in place.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.23KrUIOKwPNwVSCh]{Spell Effect: Broomstick}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

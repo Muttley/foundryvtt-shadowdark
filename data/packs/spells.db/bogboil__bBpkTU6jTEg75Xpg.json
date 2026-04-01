@@ -3,6 +3,8 @@
 	"_key": "!items!bBpkTU6jTEg75Xpg",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "0CqAJEHgk6zHXr8Y",
 	"img": "icons/creatures/slimes/bubbling-purple.webp",
 	"name": "Bogboil",
@@ -16,8 +18,8 @@
 			"value": "5"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

@@ -3,6 +3,8 @@
 	"_key": "!items!ImNCjjU9ewcFDQO2",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "EDfN0tPLXXsmyaEn",
 	"img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
 	"name": "Commune",
@@ -13,10 +15,11 @@
 		"description": "<p>You seek your god's counsel. Ask the GM up to three yes or no questions. The GM truthfully answers \"yes\" or \"no\" to each. </p><p>If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure, instead.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "core-rules"

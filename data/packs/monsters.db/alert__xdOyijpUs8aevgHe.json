@@ -3,12 +3,15 @@
 	"_key": "!actors.items!vdCzdpAsjmYTa1ps.xdOyijpUs8aevgHe",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Alert",
 	"system": {
 		"description": "<p>ADV on checks to detect sneaking or hiding creatures.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

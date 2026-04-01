@@ -3,14 +3,15 @@
 	"_key": "!actors.items!RAEbIzHkREYWKvLh.9Q0RtuGxslini2Bt",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Needle",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 3,
 			"critical": {
@@ -26,6 +27,8 @@
 			"value": "1"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!Q89EgThYcungYTke.iqFQAHx7jgMiLIWO",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Undead",
 	"system": {
 		"description": "<p>Immune to morale checks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

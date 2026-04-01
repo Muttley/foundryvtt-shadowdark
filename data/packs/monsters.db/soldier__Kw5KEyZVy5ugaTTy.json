@@ -3,6 +3,8 @@
 	"_key": "!actors!Kw5KEyZVy5ugaTTy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -133,21 +135,23 @@
 				"value": 15
 			},
 			"hp": {
-				"hd": 0,
 				"max": 10,
 				"value": 10
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": 2,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> An armed footsoldier trained in the ways of battlefield combat. </i></p>\n\t\n\t<p><strong>AC</strong> 15 (chainmail + shield), <strong>HP</strong> 10, <strong>ATK</strong> 1 longsword +2 (1d8) or 1 crossbow (far) +1 (1d6), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +0, <strong>AL</strong> L, <strong>LV</strong> 2</p>\n\t",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> An armed footsoldier trained in the ways of battlefield combat. </i></p>\n\t\n\t<p><strong>AC</strong> 15 (chainmail + shield), <strong>HP</strong> 10, <strong>ATK</strong> 1 longsword +2 (1d8) or 1 crossbow (far) +1 (1d6), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +0, <strong>AL</strong> L, <strong>LV</strong> 2</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

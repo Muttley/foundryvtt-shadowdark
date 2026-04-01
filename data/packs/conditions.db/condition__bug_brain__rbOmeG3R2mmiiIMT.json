@@ -4,15 +4,12 @@
 	"effects": [
 		"YPYxo5WhLBPCnkRd"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/invertebrates/centipede-brown.webp",
 	"name": "Condition: Bug Brain",
 	"system": {
-		"abilities": {
-			"int": {
-				"base": "1"
-			}
-		},
 		"category": "condition",
 		"description": "",
 		"duration": {
@@ -30,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

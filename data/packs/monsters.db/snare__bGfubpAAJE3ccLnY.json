@@ -3,21 +3,27 @@
 	"_key": "!actors.items!manaoose71vhAWCT.bGfubpAAJE3ccLnY",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Snare",
 	"system": {
-		"dc": "13",
+		"class": [
+		],
 		"description": "<p>Focus. One humanoid target within near paralyzed for duration.</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": "-1"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 3
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

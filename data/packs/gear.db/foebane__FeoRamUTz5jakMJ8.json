@@ -3,12 +3,13 @@
 	"_key": "!items!FeoRamUTz5jakMJ8",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "iHOSxtXRWKd2vx1U",
 	"img": "icons/creatures/invertebrates/tick-cross-glowing-purple.webp",
 	"name": "Foebane",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"class": [
 		],
 		"cost": {
@@ -18,16 +19,17 @@
 		},
 		"description": "<p>ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p>",
 		"duration": {
-			"type": "",
+			"type": "rounds",
 			"value": ""
 		},
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
+		"lost": false,
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
-		"range": "",
+		"range": "near",
 		"slots": {
 			"free_carry": 0,
 			"per_slot": 1,
@@ -37,8 +39,7 @@
 			"title": "core-rules"
 		},
 		"spellName": "",
-		"stashed": false,
-		"tier": 1
+		"stashed": false
 	},
 	"type": "Potion"
 }

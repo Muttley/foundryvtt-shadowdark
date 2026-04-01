@@ -3,7 +3,7 @@
 	"_key": "!items.effects!Mb7OBENXa5XnClS9.2NdFJHTHy28UaTCh",
 	"changes": [
 		{
-			"key": "system.bonuses.critical.multiplier",
+			"key": "system.roll.attack.critical-multiplier.this",
 			"mode": 5,
 			"priority": null,
 			"value": "4"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Critical Multiplier",

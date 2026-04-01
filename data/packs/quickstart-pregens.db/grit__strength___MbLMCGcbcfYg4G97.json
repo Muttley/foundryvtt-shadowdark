@@ -9,8 +9,9 @@
 	"system": {
 		"description": "<p>Choose Strength or Dexterity. You have advantage on checks of that type to overcome an opposing force, such as kicking open a stuck door (Strength) or slipping free of rusty chains (Dexterity).</p>",
 		"level": 1,
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "class"

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!0kzqjwTD3ouYsDZh.lESGAghSx3NPQf7Y",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Animate Tree",
 	"system": {
 		"description": "<p>2/day. In place of attacks, one tree within near awakens as a treant ally without this ability. Reverts back in 1 day.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

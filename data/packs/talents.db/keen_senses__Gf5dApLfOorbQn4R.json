@@ -3,14 +3,16 @@
 	"_key": "!items!Gf5dApLfOorbQn4R",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "MFeFmA2ubOJxaTwm",
 	"img": "icons/environment/people/group.webp",
 	"name": "Keen Senses",
 	"system": {
 		"description": "<p>You can't be surprised.</p>",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

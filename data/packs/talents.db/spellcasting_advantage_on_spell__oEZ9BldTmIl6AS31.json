@@ -3,10 +3,10 @@
 	"_key": "!items.effects!IZZnFjWhZurAIZPP.oEZ9BldTmIl6AS31",
 	"changes": [
 		{
-			"key": "system.bonuses.advantage",
+			"key": "system.roll.spell.advantage.REPLACEME",
 			"mode": 2,
 			"priority": null,
-			"value": "REPLACEME"
+			"value": "1"
 		}
 	],
 	"description": "",
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",

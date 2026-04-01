@@ -3,12 +3,15 @@
 	"_key": "!actors.items!K2FMeD45kPEr8RNS.UvUhgkUMBlaSYOdU",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Telepathic",
 	"system": {
 		"description": "<p>Speak mentally with creatures within double near.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

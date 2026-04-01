@@ -3,6 +3,8 @@
 	"_key": "!actors!UGsq7I9Gyahgd0dG",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -133,21 +135,23 @@
 				"value": 9
 			},
 			"hp": {
-				"hd": 0,
 				"max": 10,
 				"value": 10
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": 2,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> A glossy black, blood-drinking slug as large as a cat. </i></p>\n\t\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + attach), <strong>MV</strong> near (swim), <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Attach</strong>. Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A glossy black, blood-drinking slug as large as a cat. </i></p>\n\t\n\t<p><strong>AC</strong> 9, <strong>HP</strong> 10, <strong>ATK</strong> 1 bite +1 (1d4 + attach), <strong>MV</strong> near (swim), <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Attach</strong>. Attach to target; bite auto-hits next round. [[check 12 str]] on turn to tear off.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

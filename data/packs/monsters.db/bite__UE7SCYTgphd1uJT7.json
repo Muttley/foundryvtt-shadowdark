@@ -3,14 +3,15 @@
 	"_key": "!actors.items!NTRHmnsw7poR4rZ9.UE7SCYTgphd1uJT7",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Bite",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 13,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "5",
+			"numDice": 5,
 			"special": "Swallow",
 			"value": "5d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

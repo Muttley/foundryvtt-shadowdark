@@ -1,3 +1,5 @@
+const FormDataExtended = foundry.applications.ux.FormDataExtended;
+
 export default class RollDialogSD extends foundry.applications.api.HandlebarsApplicationMixin(
 	foundry.applications.api.ApplicationV2
 ) {
@@ -164,16 +166,20 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		event.preventDefault();
 
 		// Get form data - this.element is the form since tag is "form"
-		const formData = new foundry.applications.ux.FormDataExtended(this.element).object;
+		const formData = new FormDataExtended(this.element).object;
 
 		// Update config.mainRoll.formula if present
 		if (formData["mainRoll.formula"] !== undefined && this.config?.mainRoll) {
 			this.config.mainRoll.formula = formData["mainRoll.formula"];
+			this.config.mainRoll.modified =
+				this.config.mainRoll.formula !== this.config.mainRoll.formulaBackup;
 		}
 
 		// Update config.damageRoll.formula if present
 		if (formData["damageRoll.formula"] !== undefined && this.config?.damageRoll) {
 			this.config.damageRoll.formula = formData["damageRoll.formula"];
+			this.config.damageRoll.modified =
+				this.config.damageRoll.formula !== this.config.damageRoll.formulaBackup;
 		}
 
 		// Convert advantage string to number and update config
@@ -191,6 +197,10 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		if (formData.ammunitionId !== undefined) {
 			this.config.selectedAmmunition =
 				this.config.ammunitionOptions.find(x => x._id === formData.ammunitionId);
+		}
+
+		if (formData.rollMode !== undefined) {
+			this.config.rollMode = formData.rollMode;
 		}
 
 		this.result = formData;

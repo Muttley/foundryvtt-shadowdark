@@ -17,7 +17,7 @@ export default class BackgroundSelector extends CompendiumItemSelector {
 	async getUuids() {
 		const uuid = this.object?.system?.background;
 
-		return uuid !== "" ? [uuid] : [];
+		return uuid ? [uuid] : [];
 	}
 
 	async saveUuids(uuids) {

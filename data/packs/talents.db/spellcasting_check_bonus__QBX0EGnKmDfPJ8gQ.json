@@ -3,7 +3,7 @@
 	"_key": "!items.effects!0WmG5j0Wv685YTqO.QBX0EGnKmDfPJ8gQ",
 	"changes": [
 		{
-			"key": "system.bonuses.spellcastingCheckBonus",
+			"key": "system.roll.spell.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Spellcasting Check Bonus",

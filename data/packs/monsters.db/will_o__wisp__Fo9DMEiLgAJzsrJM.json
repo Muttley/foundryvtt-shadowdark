@@ -3,6 +3,8 @@
 	"_key": "!actors!Fo9DMEiLgAJzsrJM",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -132,20 +134,22 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 10,
 				"value": 10
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": 2,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "Fly",
 		"notes": "<p><em>A bobbing marsh light animated by an evil spirit. It tries to lead the living into danger.</em></p><p><strong>AC</strong> 13, <strong>HP</strong> 10, <strong>ATK</strong> 1 life drain +3, <strong>MV</strong> near (fly), <strong>S</strong> -3, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> -1, <strong>Ch</strong> -2, <strong>AL</strong> C, <strong>LV</strong> 2</p><p><strong>Life Drain.</strong> 1d4 CON damage. Death if reduced to 0 CON.</p>",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"spellcasting": {
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

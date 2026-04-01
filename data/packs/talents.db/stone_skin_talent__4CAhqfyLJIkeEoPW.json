@@ -3,10 +3,10 @@
 	"_key": "!items.effects!RyaDaPST58N9e7aJ.4CAhqfyLJIkeEoPW",
 	"changes": [
 		{
-			"key": "system.bonuses.stoneSkinTalent",
-			"mode": 5,
+			"key": "system.attributes.ac.value",
+			"mode": 2,
 			"priority": null,
-			"value": "1"
+			"value": "2+floor(@level.value/2)"
 		}
 	],
 	"description": "",
@@ -19,6 +19,8 @@
 		"startTime": null,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Stone Skin Talent",

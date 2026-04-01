@@ -3,6 +3,8 @@
 	"_key": "!items!Dk64m8eDsEx235lo",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Witchlight",
@@ -13,10 +15,11 @@
 		"description": "<p>You summon a floating marsh light that bobs in the air and casts light out to a close radius around it. </p><p>The light can change colors and take on vague shapes. It can float up to a near distance on your turn.</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "cursed-scroll-1"

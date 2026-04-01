@@ -3,6 +3,8 @@
 	"_key": "!items!3nOduBggYvyIPykI",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "7DWu9AynRV2zb9Rw",
 	"img": "icons/commodities/metal/plate-steel-pink.webp",
 	"name": "Floating Disk",
@@ -16,8 +18,8 @@
 			"value": "10"
 		},
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"
