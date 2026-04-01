@@ -22,6 +22,7 @@
 - [#1205] Damage should always be rolled if no actors have been targetted
 - [#1214] Unable to open Player character sheets directly from compendiums
 - [#1215] No way of rolling 2H damage for versatile weapons currently
+- [#1247] Critical Success attacks do not roll double the dice for damage
 
 ## Chores
 - [#369] Migrated to using data models for actors and items
