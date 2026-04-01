@@ -208,7 +208,7 @@ export default class NpcSD extends ActorBaseSD {
 
 		const conBonus = shadowdark.dice.formatBonus(this.abilities.con.mod);
 		const level = this.level.value ?? 1;
-		const formula = `${level}d8${conBonus}`;
+		const formula = level ? `${level}d8${conBonus}` : `1${conBonus}`;
 
 		const config = {
 			actorId: this.parent.id,
