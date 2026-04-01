@@ -11,6 +11,7 @@
 		{
 			"key": "system.roll.melee.damage.REPLACEME",
 			"mode": 2,
+			"priority": null,
 			"value": "1+floor(@level.value/2)"
 		}
 	],
@@ -26,7 +27,7 @@
 		"turns": null
 	},
 	"img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
-	"name": "weaponMastery",
+	"name": "Weapon Mastery",
 	"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
 	"statuses": [
 	],
