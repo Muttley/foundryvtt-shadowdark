@@ -486,6 +486,7 @@ SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects 
 SHADOWDARK.item.equipped: Equipped
 SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
 SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
+SHADOWDARK.item.gm_only: GM Only
 SHADOWDARK.item.inventory_free_carry: Free Carry
 SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantity
@@ -496,6 +497,13 @@ SHADOWDARK.item.light.is_source: Light Source
 SHADOWDARK.item.light.longevity: Longevity (Mins)
 SHADOWDARK.item.light.remaining: Remaining (Mins)
 SHADOWDARK.item.light.template: Light Template
+SHADOWDARK.item.magic_item.identificationDetails: Identification Details
+SHADOWDARK.item.magic_item.identified: Identified
+SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
+SHADOWDARK.item.magic_item.identifiedName: Identified Name
+SHADOWDARK.item.magic_item.identifiedTooltip: Unchecking will update current item name to Identified Name and append Identified Description to item Description.
+SHADOWDARK.item.magic_item.identify: Identify
+SHADOWDARK.item.magic_item.unidentified: Unidentified
 SHADOWDARK.item.magic_item.is_magic: Magic Item
 SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
 SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus

@@ -845,10 +845,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				inventory.carried.push(i);
 			}
 
-			if (i.type === "Wand") {
+			if (i.type === "Wand" && i.system.isIdentified) {
 				spellitems.wands.push(i);
 			}
-			if (i.type === "Scroll") {
+			if (i.type === "Scroll" && i.system.isIdentified) {
 				spellitems.scrolls.push(i);
 			}
 

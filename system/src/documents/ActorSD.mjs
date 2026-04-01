@@ -391,8 +391,14 @@ export default class ActorSD extends foundry.documents.Actor {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							const potionDescription = await item.getEnrichedDescription();
-
+							let potionDescription = await item.getEnrichedDescription();
+							// If unidentified, append the identified description
+							if (item.system?.isIdentified === false
+								&& item.system?.identification.description) {
+								potionDescription = potionDescription.concat(
+									item.system.identification.description
+								);
+							}
 							const cardData = {
 								actor: this,
 								item: item,

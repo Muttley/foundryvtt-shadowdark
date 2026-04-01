@@ -3,5 +3,8 @@
 		{{> items/_partials/cost }}
 		{{> items/_partials/slots }}
 		{{> items/basic/_partials/item-properties }}
+		{{#if isGM}}
+			{{> items/_partials/gm-only }}
+		{{/if}}
 	</div>
 </section>

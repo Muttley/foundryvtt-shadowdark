@@ -4,6 +4,8 @@
 }}
 	<div class="SD-grid">
 		{{> items/_partials/item-properties/equipped }}
-		{{> items/_partials/item-properties/magic-item }}
+		{{#ifCond isGM '||' isIdentified}}
+			{{> items/_partials/item-properties/magic-item }}
+		{{/ifCond}}
 	</div>
 {{/ui/sd-box}}

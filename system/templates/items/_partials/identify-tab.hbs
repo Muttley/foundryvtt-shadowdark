@@ -1,0 +1,29 @@
+<section class="tab tab-identify" data-group="primary" data-tab="tab-identify">
+
+	<div class="SD-banner">{{localize 'SHADOWDARK.item.magic_item.identificationDetails'}}</div>
+	<div class="grid-2-columns">
+		<div>
+			<h3>
+				{{localize 'SHADOWDARK.item.magic_item.identifiedName'}}
+			</h3>
+		</div>
+		<div>
+			<input
+				name="system.identification.name"
+				type="text"
+				value="{{item.system.identification.name}}"
+			>
+		</div>
+	</div>
+	<h3>
+		{{localize 'SHADOWDARK.item.magic_item.identifiedDescription'}}
+	</h3>
+	{{editor system.identification.description
+		button=true
+		collaborate=false
+		editable=editable
+		engine="prosemirror"
+		target="system.identification.description"
+	}}
+
+</section>

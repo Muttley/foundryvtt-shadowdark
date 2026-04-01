@@ -70,6 +70,10 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			event => this._onRemoveTable(event)
 		);
 
+		html.find("[data-action=toggle-identified]").click(
+			async () => await this.item.system.toggleIdentified()
+		);
+
 		html.find(".effect-control").click(event => {
 			shadowdark.effects.onManageActiveEffect(event, this.item);
 		});
@@ -358,6 +362,15 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 					relativeTo: this.item,
 				}
 			);
+
+		if (context.system.isPhysical) {
+			context.isGM = game.user.isGM;
+			context.isIdentified = context.system.isIdentified;
+			context.isUnidentified = !context.system.isIdentified;
+			context.showIdentifyTab = context.isUnidentified && context.isGM;
+			context.showEffectsTab = context.system.magicItem
+				&& (context.system.isIdentified || context.isGM);
+		}
 
 		// Call any type-specific methods for this item type to gather
 		// additional data for the sheet
@@ -960,4 +973,5 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		}
 		super._updateObject(event, formData);
 	}
+
 }
