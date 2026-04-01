@@ -3,6 +3,8 @@
 	"_key": "!macros!voMfAOHKkRnozC9J",
 	"author": "kJP435n33glBI4iD",
 	"command": "/************************************\n * This macro opens the SoloDark Oracle\n ************************************/\n\nnew shadowdark.apps.SoloDarkSD().render(true);",
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/cleric-orange.webp",
 	"name": "SoloDark: Open Oracle",

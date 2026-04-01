@@ -20,6 +20,11 @@
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"name": "Backstab",
 	"origin": "Compendium.shadowdark.talents.Item.KLDZKFY6SrqQKSva",
