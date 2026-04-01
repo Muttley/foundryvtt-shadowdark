@@ -24,9 +24,17 @@ export function applyAdvantage(formula, adv) {
  * @param {string} formula // roll formula
  * @returns {string} // new roll formula
  */
-export function applyCriticalHit(formula) {
-	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
-		return `(${match}*2)`;
+export function applyCriticalHit(formula, multiplier) {
+	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/ig, function(match) {
+		if (match.startsWith("d")) {
+			let count = Number(multiplier);
+			return `${count}${match}`; // match starting with a "d" means a single die
+		}
+		else {
+			let diceCountMatch = match.match(/(\d)(d[a-z0-9]+)/);
+			let count = Number(diceCountMatch[1]) * Number(multiplier);
+			return `${count}${diceCountMatch[2]}`;
+		}
 	});
 }
 
@@ -80,8 +88,8 @@ export function createToolTip(name, value, prefix="+", key="") {
 export function formatBonus(bonus) {
 	if (typeof bonus === "number") {
 		if (bonus === 0) return "";
-		if (bonus > 0) return ` +${bonus}`;
-		if (bonus < 0) return ` ${bonus}`;
+		if (bonus > 0) return ` + ${bonus}`;
+		if (bonus < 0) return ` - ${Math.abs(bonus)}`;
 	}
 	return bonus;
 }
@@ -141,7 +149,7 @@ export async function roll(config, rolldata={}) {
 	if (config.type === "damage") {
 		// double base damage on critical hit
 		if (config.criticalHit) {
-			config.formula = applyCriticalHit(config.formula);
+			config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
 		}
 		// apply momentum mode
 		if (game.settings.get("shadowdark", "useMomentumMode")) {
@@ -167,6 +175,7 @@ export async function rollDamageFromMessage(msg) {
 
 	config.damageRoll.type = "damage";
 	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
+	config.damageRoll.criticalMultiplier = mainRoll.options.criticalMultiplier;
 	const damageRoll = await roll(config.damageRoll, actor.getRollData());
 
 	const content = await shadowdark.chat.renderRollCard(config, [mainRoll, damageRoll]);

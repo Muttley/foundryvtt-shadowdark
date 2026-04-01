@@ -313,7 +313,7 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		if (extraDieRollKey.value) {
 			const baseDie = baseDamageValue.match(/^[dD](\d*)/)[1];
-			baseDamageValue += ` +${extraDieRollKey.value}d${baseDie}`;
+			baseDamageValue += ` + ${extraDieRollKey.value}d${baseDie}`;
 		}
 
 		// Get damage formula and bonuses from Rolls keys
