@@ -996,6 +996,21 @@ export default class PlayerSD extends ActorBaseSD {
 		// Call player attack hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Attack", config)) return false;
 
+		// test for ammunition
+		if (weapon.usesAmmunition) {
+			if (!config.selectedAmmunition) {
+				// Try to find ammo if none is selected
+				const defaultAmmo = weapon.actor.ammunitionItems(weapon.system.ammoClass);
+				if (defaultAmmo?.length > 0) {
+					config.selectedAmmunition = defaultAmmo[0];
+				}
+			}
+			// error out if no ammo is found
+			if (!config.selectedAmmunition || config.selectedAmmunition.system.quantity <= 0) {
+				return ui.notifications.error(game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"));
+			}
+		}
+
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 

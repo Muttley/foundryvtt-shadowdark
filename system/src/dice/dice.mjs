@@ -20,12 +20,23 @@ export function applyAdvantage(formula, adv) {
 }
 
 /**
+ * Applies critical hit to the provided roll formula
+ * @param {string} formula // roll formula
+ * @returns {string} // new roll formula
+ */
+export function applyCriticalHit(formula) {
+	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
+		return `(${match}*2)`;
+	});
+}
+
+/**
  * Applies exploding dice to the provided roll formula
  * @param {string} formula // roll formula
  * @returns {string} // new roll formula
  */
 export function applyExploding(formula) {
-	return formula.replace(/^(\d*)d(\d+)/, function(match, dice, sides) {
+	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
 		return `${match}x`;
 	});
 }
@@ -128,6 +139,10 @@ export async function roll(config, rolldata={}) {
 	}
 
 	if (config.type === "damage") {
+		// double base damage on critical hit
+		if (config.criticalHit) {
+			config.formula = applyCriticalHit(config.formula);
+		}
 		// apply momentum mode
 		if (game.settings.get("shadowdark", "useMomentumMode")) {
 			config.formula = applyExploding(config.formula);
@@ -147,23 +162,14 @@ export async function rollDamageFromMessage(msg) {
 	if (!config.damageRoll?.formula || msg.getRoll("damage")) return false;
 	const actor = game.actors.get(config.actorId);
 	if (!actor) return; // TODO Error message
-	config.damageRoll.type = "damage";
-	const damageRoll = await roll(config.damageRoll, actor.getRollData());
-	config.damageRoll.html = await damageRoll.render();
 
-	// Generate template data a new content
-	const template = "systems/shadowdark/templates/chat/roll-card.hbs";
-	const templateData = {...config};
-	templateData.actor = actor;
-	templateData.mainRoll.html = await msg.getRoll("main").render();
-	templateData.damageRoll.html = await damageRoll.render();
-	if (config.itemUuid) {
-		templateData.item = await fromUuid(config.itemUuid);
-	}
-	if (config.targetUuid) {
-		templateData.target = await fromUuid(config.targetUuid);
-	}
-	const content = await foundry.applications.handlebars.renderTemplate(template, templateData);
+	const mainRoll = msg.getRoll("main");
+
+	config.damageRoll.type = "damage";
+	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
+	const damageRoll = await roll(config.damageRoll, actor.getRollData());
+
+	const content = await shadowdark.chat.renderRollCard(config, [mainRoll, damageRoll]);
 
 	// update message with new roll and content
 	await msg.update({rolls: [...msg.rolls, damageRoll]});

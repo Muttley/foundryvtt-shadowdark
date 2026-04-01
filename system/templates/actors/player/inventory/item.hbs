@@ -59,12 +59,8 @@
 					data-item-id="{{item._id}}"
 					data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_handedness'}}"
 				>
-					{{#ifEq item.system.handedness "1h"}}
-						<i class="fa-solid fa-hand-holding" style="color:var(--primary);"></i>
-					{{/ifEq}}
-					{{#ifEq item.system.handedness "2h"}}
-						<i class="fa-solid fa-hand-holding-hand" style="color:var(--primary);"></i>
-					{{/ifEq}}
+					<i class="fa-solid fa-hand-fist" style="margin:-3px;{{#ifEq item.system.handedness "2h"}}color:var(--primary);{{/ifEq}}"></i>
+  					<i class="fa-solid fa-hand-back-fist" style="margin:-3px;color:var(--primary);"></i>
 				</a>
 			{{/ifCond}}
 			<a

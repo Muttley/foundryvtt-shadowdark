@@ -1,10 +1,10 @@
 export default function() {
 	const partials = [
 		"systems/shadowdark/templates/_partials/predefined-effects-selector.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/active-effect.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/active-effects.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/effects-and-conditions.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/active-effect.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/active-effects.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/effects-and-conditions.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/attacks.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/features.hbs",
