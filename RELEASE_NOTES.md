@@ -39,6 +39,7 @@
 - [#1225] TableResult#documentId is deprecated. Consult TableResult#uuid instead
 - [#1229] Update Active Effects drop handlers that use the REPLACEME placeholder to trigger configuration to use new AE schema
 - [#1230] Merge German translation updates from Crowdin
+- [#1237] Merge Spanish translation updates from Crowdin
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
 
