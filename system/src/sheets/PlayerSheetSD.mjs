@@ -279,8 +279,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.effects.toObject().length > 0) {
 			let itemObj = await shadowdark.effects.createItemWithEffect(item);
 
-			// add item to actor
-			const [newItem] = await super._onDropItem(event, data);
+			const newItem = await this.actor.createEmbeddedDocuments("Item", [itemObj]);
 
 			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
 				this._toggleLightSource(newItem);

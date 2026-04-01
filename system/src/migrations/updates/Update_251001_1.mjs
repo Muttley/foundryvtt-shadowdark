@@ -27,6 +27,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 		"system.roll.attack.extra-damage-die.all",
 		"system.roll.hp.advantage",
 		"system.roll.initiative.advantage",
+		"system.roll.initiative.bonus",
 		"system.roll.melee.bonus.all",
 		"system.roll.melee.bonus.this",
 		"system.roll.melee.damage.all",
@@ -45,6 +46,8 @@ export default class Update_251001_1 extends UpdateBaseSD {
 		"system.roll.melee.bonus.",
 		"system.roll.melee.damage.",
 		"system.roll.spell.advantage.",
+		"system.roll.stat.advantage.",
+		"system.roll.stat.bonus.",
 	];
 
 	async updateActor(actorData) {
@@ -301,7 +304,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 
 					case "system.bonuses.weaponDamageDieD12":
 						change.key = `system.roll.attack.upgrade-damage-die.${change.value}`;
-						change.value = 4;
+						change.value = 5;
 						continue;
 
 					case "system.bonuses.damageMultiplier":

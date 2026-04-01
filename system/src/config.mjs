@@ -165,12 +165,6 @@ SHADOWDARK.SPELL_DURATIONS = {
 	permanent: "SHADOWDARK.spell_duration.permanent",
 };
 
-SHADOWDARK.EFFECT_ASK_INPUT = [
-	"system.bonuses.weaponMastery",
-	"system.bonuses.armorMastery",
-	"system.bonuses.advantage",
-];
-
 SHADOWDARK.EFFECT_CATEGORIES = {
 	effect: "SHADOWDARK.item.effect.category.effect",
 	condition: "SHADOWDARK.item.effect.category.condition",
@@ -493,7 +487,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		transfer: false,
 	},
 	weaponMastery: {
-		defaultValue: "REPLACEME",
+		defaultValue: 1,
 		effectKey: "system.bonuses.weaponMastery",
 		img: "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponMastery",

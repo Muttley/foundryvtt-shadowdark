@@ -36,7 +36,8 @@
 - [#1222] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
 - [#1223] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
 - [#1225] TableResult#documentId is deprecated. Consult TableResult#uuid instead
-
+- [#1229] Update Active Effects drop handlers that use the REPLACEME placeholder to trigger configuration to use new AE schema
+- [#1230] Merge German translation updates from Crowdin
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
 
