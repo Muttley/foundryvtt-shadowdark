@@ -213,7 +213,7 @@ export default class NpcSD extends ActorBaseSD {
 		const config = {
 			actorId: this.parent.id,
 			title: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title"),
-			roll: {formula},
+			mainRoll: {formula},
 			rollMode: CONST.DICE_ROLL_MODES.PRIVATE,
 		};
 
