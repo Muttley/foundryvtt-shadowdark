@@ -11,7 +11,8 @@
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
 		"notes": "gulp compileNotes",
-		"packs": "gulp compilePacks"
+		"packs": "gulp compilePacks",
+		"test": "vitest run"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.3",
@@ -31,6 +32,7 @@
 		"node-gyp-build": "^4.8.4",
 		"rollup": "^4.53.3",
 		"sass": "^1.96.0",
+		"vitest": "^4.1.3",
 		"yaml": "^2.8.2",
 		"yargs": "^18.0.0"
 	}
