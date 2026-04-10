@@ -175,12 +175,13 @@
 			}
 
 			.actions {
-				flex: 0 0 60px;
+				flex: 0 0 50px;
 				display:flex;
 				flex-direction: row;
 				justify-content: flex-end;
+				align-items: center;
 
-				a{
+				a {
 					margin: 0px 4px;
 					color: var(--inactive-control);
 					&:hover {
