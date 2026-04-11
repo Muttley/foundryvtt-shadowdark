@@ -26,6 +26,15 @@ export default class ActiveEffectSD extends ActiveEffect {
 			change.value = resolvedFormula;
 		}
 
+		if (change.key === "system.attributes.ac") {
+			console.error(
+				"ERROR: Invalid AE key:",
+				`${actor?.name} > ${change.effect?.name} > ${change.value}. `,
+				"Use 'system.attributes.ac.value' instead."
+			);
+			return;
+		}
+
 		// call default behavior for everything else
 		return super.apply(actor, change);
 	}

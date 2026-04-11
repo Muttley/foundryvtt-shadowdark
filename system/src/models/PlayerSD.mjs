@@ -92,7 +92,9 @@ export default class PlayerSD extends ActorBaseSD {
 	prepareDerivedData() {
 		super.prepareDerivedData();
 
-		this.attributes.ac.value = this._calcBaseArmorClass().value;
+		const ac = this._calcArmorClass();
+		this.attributes.ac.value = ac.value;
+		this.attributes.ac.tooltips = ac.tooltips;
 
 		// calculate str slot bonus wihtout overriding AEs affecting system.slots
 		const slotsBonus = Math.max(0, this.abilities.str.value - 10);
@@ -171,44 +173,77 @@ export default class PlayerSD extends ActorBaseSD {
 	/* ----------------------- */
 
 	/**
-	 * Prepare a PointMovementSource for the document
-	 * @param {ElevatedPoint} origin        The origin of the source
-	 * @returns {value, bonuses}
+	 * Calculates effective AC based on equiped armor items
+	 * @returns {value, tooltips}
 	 */
-
-	_calcBaseArmorClass() {
-		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS
-			+ (this.abilities?.dex?.mod ?? 0);
-
-		let modAC = 0;
-		let aeBonuses = 0;
-		let bestArmor = null;
-
-		// apply armor mod from best item equiped
+	_calcArmorClass() {
+		let baseAC = shadowdark.defaults.BASE_ARMOR_CLASS + (this.abilities?.dex?.mod ?? 0);
 		const armors = this.parent.items.filter(i => i.system.isArmor && i.system.equipped);
-		armors.forEach(armor => {
-			if (armor.system?.ac?.base) {
-				const abilityMod = this.abilities[armor.system.ac.attribute]?.mod ?? 0;
-				const ac = (armor.system.ac.base ?? 0) + abilityMod;
-				if (ac > baseAC) {
-					baseAC = ac;
-					bestArmor = armor;
-				}
+		let unarmored = true;
+		const tooltips = [];
+
+		// MAIN ARMOR ITEMS
+		// compare main armor items and select the one with best total AC with applied AEs
+		let bestArmor = {
+			name: "Base",
+			ac: baseAC,
+			tooltips: [],
+		};
+		// TODO improve in v4.1 by removing static mod from main armor items.
+		// Ideally, only allow 1 main armor should be allowed to be set.
+		armors.filter(armor => armor.system?.ac?.base).forEach(armor => {
+			unarmored = false;
+			const armorBaseAC = armor.system?.ac?.base ?? 0;
+			const armorabilityMod = this.abilities[armor.system.ac.attribute]?.mod ?? 0;
+			const armorstaticMod = armor.system?.ac?.modifier ?? 0;
+			const armorAC = armorBaseAC + armorabilityMod + armorstaticMod;
+			const totalAC = this._getActiveEffectKeys("attributes.ac", armorAC, armor);
+			if (totalAC.value > bestArmor.ac) {
+				bestArmor.name = armor.name;
+				bestArmor.ac = totalAC.value;
+				bestArmor.tooltips = [];
+				bestArmor.tooltips.push(shadowdark.dice.createToolTip(armor.name, armorAC, ""));
+				bestArmor.tooltips.push(totalAC.tooltips);
 			}
-			modAC += Number(armor.system?.ac?.modifier);
 		});
 
-		// get the correct AE bonuses to apply.
-		if (bestArmor) {
-			aeBonuses = this._getActiveEffectKeys("attributes.ac", 0, bestArmor);
+		// BONUS ARMOR ITEMS
+		// get armor value from armor bonus items, ie Shields and matching item AEs
+		let bonusArmor = {
+			ac: 0,
+			tooltips: [],
+		};
+		// TODO improve this filtering in v4.1
+		armors.filter(armor => !armor.system?.ac?.base).forEach(armor => {
+			unarmored = false;
+			const itemACMod = Number(armor.system?.ac?.modifier ?? 0);
+			const bonuses = this._getActiveEffectKeys("attributes.ac", itemACMod, armor);
+			bonusArmor.ac += bonuses.value;
+			bonusArmor.tooltips.push(shadowdark.dice.createToolTip(armor.name, itemACMod));
+			bonusArmor.tooltips.push(bonuses.tooltips);
+		});
+
+		// Determine total AC from Armor
+		let totalArmorAC = 0;
+		if (unarmored) {
+			const unarmoredBonues = this._getActiveEffectKeys("attributes.ac.unarmored", baseAC);
+			totalArmorAC = unarmoredBonues.value;
+			tooltips.push(shadowdark.dice.createToolTip("Unarmored", baseAC, ""));
+			tooltips.push(unarmoredBonues.tooltips);
 		}
 		else {
-			aeBonuses = this._getActiveEffectKeys("attributes.ac.unarmored", 0);
+			totalArmorAC = bestArmor.ac + bonusArmor.ac;
+			tooltips.push(...bestArmor.tooltips);
+			tooltips.push(...bonusArmor.tooltips);
 		}
 
+		// return final AC values applying remaining AEs
+		const finalAC = this._getActiveEffectKeys("attributes.ac.value", totalArmorAC);
+		tooltips.push(finalAC.tooltips);
+
 		return {
-			value: baseAC + modAC + Number(aeBonuses.value),
-			tooltips: aeBonuses.tooltips,
+			value: finalAC.value,
+			tooltips: tooltips.filter(Boolean).join(", "),
 		};
 	}
 
