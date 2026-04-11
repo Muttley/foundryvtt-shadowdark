@@ -204,6 +204,15 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			}
 		}
 
+		// Exclude "all" keys from armor items as ac.value is used for that instead
+		if (item?.system?.isArmor) {
+			const excludeKeys = ["system.attributes.ac", "system.attributes.ac.all"];
+			excludeKeys.forEach(k => {
+				const idx = keys.indexOf(k);
+				if (idx !== -1) keys.splice(idx, 1);
+			});
+		}
+
 		// get data from all matching keys
 		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
 
