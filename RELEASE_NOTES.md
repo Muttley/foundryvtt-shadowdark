@@ -7,6 +7,7 @@
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 
+
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
 - [#1107] Handaxe Price Correction
@@ -22,6 +23,7 @@
 - [#1205] Damage should always be rolled if no actors have been targetted
 - [#1214] Unable to open Player character sheets directly from compendiums
 - [#1215] No way of rolling 2H damage for versatile weapons currently
+- [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
 - [#1247] Critical Success attacks do not roll double the dice for damage
 
 ## Chores
@@ -41,7 +43,7 @@
 - [#1230] Merge German translation updates from Crowdin
 - [#1237] Merge Spanish translation updates from Crowdin
 
-*Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
+*Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
 
 ---
 
