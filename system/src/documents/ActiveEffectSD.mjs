@@ -51,6 +51,9 @@ export default class ActiveEffectSD extends ActiveEffect {
 		if (this.parent?.system?.stashed) {
 			return true;
 		}
+		else if (this.parent?.system?.identification?.identified === false) {
+			return true;
+		}
 		else {
 			return super.isSuppressed;
 		}

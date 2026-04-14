@@ -6,9 +6,15 @@
 			{{localize "SHADOWDARK.sheet.item.tab.details"}}
 		</a>
 
-		{{#if system.magicItem}}
+		{{#if showEffectsTab}}
 			<a class="navigation-tab" data-tab="tab-effects">
 				{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+			</a>
+		{{/if}}
+
+		{{#if showIdentifyTab}}
+			<a class="navigation-tab" data-tab="tab-identify">
+				{{localize "SHADOWDARK.item.magic_item.identify"}}
 			</a>
 		{{/if}}
 
@@ -29,8 +35,11 @@
 
 	<section class="SD-content-body flex1">
 		{{> items/basic/details-tab }}
-		{{#if system.magicItem}}
+		{{#if showEffectsTab}}
 			{{> items/_partials/effects-tab }}
+		{{/if}}
+		{{#if isUnidentified}}
+			{{> items/_partials/identify-tab }}
 		{{/if}}
 		{{#if system.light.isSource}}
 			{{> items/basic/light-tab }}

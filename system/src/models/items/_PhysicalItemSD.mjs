@@ -12,6 +12,11 @@ export class PhysicalItemSD extends BaseItemSD {
 				sp: new fields.NumberField({ integer: true, initial: 0, min: 0}),
 			}),
 			equipped: new fields.BooleanField({initial: false}),
+			identification: new fields.SchemaField({
+				description: new fields.StringField({initial: ""}),
+				identified: new fields.BooleanField({initial: true}),
+				name: new fields.StringField({initial: () => game.i18n.localize("SHADOWDARK.item.magic_item.identifiedName")}),
+			}),
 			isAmmunition: new fields.BooleanField({initial: false}),
 			magicItem: new fields.BooleanField({initial: false}),
 			quantity: new fields.NumberField({ integer: true, initial: 1, min: 0}),
@@ -47,6 +52,33 @@ export class PhysicalItemSD extends BaseItemSD {
 		const quantity = this.quantity;
 		const slotsUsed = this.slots.slots_used;
 		return Math.ceil(quantity / perSlot) * slotsUsed;
+	}
+
+	get isIdentified() {
+		return this.identification.identified;
+	}
+
+	/**
+	 * Toggles the identified state of this item. When identified, updates the item
+	 * name and appends the identified description. When unidentified, reverts these
+	 * changes and disables all Active Effects.
+	 * @returns {Promise<boolean>} The new identified state.
+	 */
+	async toggleIdentified() {
+		const updateData = {"system.identification.identified": !this.isIdentified};
+		const identifiedDesc = this.identification.description;
+		if (this.isIdentified === false) {
+			updateData.name = this.identification.name || this.parent.name;
+			updateData["system.description"] = this.description.concat(identifiedDesc);
+			await Promise.all(this.parent.effects.map(e => e.update({ disabled: false })));
+		}
+		else {
+			updateData["system.identification.name"] = this.parent.name; // For convenience
+			updateData["system.description"] = this.description.replace(identifiedDesc, "");
+			await Promise.all(this.parent.effects.map(e => e.update({ disabled: true })));
+		}
+		await this.parent.update(updateData);
+		return updateData["system.identification.identified"];
 	}
 
 }

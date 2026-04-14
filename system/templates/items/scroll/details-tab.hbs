@@ -1,7 +1,12 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
-		{{> items/_partials/spell }}
+		{{#ifCond isGM '||' isIdentified}}
+			{{> items/_partials/spell }}
+		{{/ifCond}}
 		{{> items/_partials/cost }}
 		{{> items/_partials/slots }}
+		{{#if isGM}}
+			{{> items/_partials/gm-only }}
+		{{/if}}
 	</div>
 </section>
