@@ -88,10 +88,15 @@ export function createToolTip(name, value, prefix="+", key="") {
 export function formatBonus(bonus) {
 	if (typeof bonus === "number") {
 		if (bonus === 0) return "";
-		if (bonus > 0) return ` + ${bonus}`;
 		if (bonus < 0) return ` - ${Math.abs(bonus)}`;
 	}
-	return bonus;
+	const trimmed = bonus.trim();
+	if (trimmed.startsWith("+") || trimmed.startsWith("-")) {
+		return ` ${trimmed}`;
+	}
+	else {
+		return ` + ${trimmed}`;
+	}
 }
 
 export function initializeD20Check(config={}) {
@@ -127,7 +132,7 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 		return null;
 	}
 	else {
-		return formula;
+		return r.formula;
 	}
 }
 
@@ -166,10 +171,16 @@ export async function roll(config, rolldata={}) {
  */
 export async function rollDamageFromMessage(msg) {
 	const config = msg?.rollConfig;
-	if (!config) return; // TODO Error message
+	if (!config) {
+		console.error("Error: No roll config found on message");
+		return;
+	}
 	if (!config.damageRoll?.formula || msg.getRoll("damage")) return false;
 	const actor = game.actors.get(config.actorId);
-	if (!actor) return; // TODO Error message
+	if (!actor) {
+		console.error(`Error: Actor ${config.actorId} not found`);
+		return;
+	}
 
 	const mainRoll = msg.getRoll("main");
 
