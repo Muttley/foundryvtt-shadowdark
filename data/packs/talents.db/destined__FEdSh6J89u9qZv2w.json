@@ -1,0 +1,50 @@
+{
+	"_id": "FEdSh6J89u9qZv2w",
+	"_key": "!items.effects!Az2fXCwgo5C3x2X7.FEdSh6J89u9qZv2w",
+	"changes": [
+		{
+			"key": "system.roll.stat.bonus.all",
+			"mode": 2,
+			"priority": null,
+			"value": "d@bonus.destineddie"
+		},
+		{
+			"key": "system.roll.attack.bonus.all",
+			"mode": 2,
+			"priority": null,
+			"value": "d@bonus.destineddie"
+		},
+		{
+			"key": "system.roll.spell.bonus.all",
+			"mode": 2,
+			"priority": null,
+			"value": "d@bonus.destineddie"
+		}
+	],
+	"description": "<p>Whenever you use a luck token, add 1d6 to the roll.</p>",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Destined",
+	"origin": "Compendium.shadowdark.talents.Item.Az2fXCwgo5C3x2X7",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

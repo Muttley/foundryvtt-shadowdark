@@ -11,7 +11,7 @@
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Stone Skin",
 	"system": {
-		"description": "<p>Add 2 + half your level (round down) to your AC.</p><p>You have advantage on checks to hide in natural environments.</p>",
+		"description": "<p>Add 2 + half your level (round down) to your AC if you are unarmored.</p><p>You have advantage on checks to hide in natural environments.</p>",
 		"level": 0,
 		"properties": [
 		],
