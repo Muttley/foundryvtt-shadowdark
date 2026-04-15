@@ -1,12 +1,12 @@
 {
-	"_id": "cGGttIknipaR4UIo",
-	"_key": "!items.effects!quYUUqTTAX3QlAGa.cGGttIknipaR4UIo",
+	"_id": "0auHRW7slkgAluWk",
+	"_key": "!items.effects!kX94lNYCOdjAuSYx.0auHRW7slkgAluWk",
 	"changes": [
 		{
-			"key": "system.attributes.ac.value",
+			"key": "system.bonus.destineddie",
 			"mode": 2,
 			"priority": null,
-			"value": "1"
+			"value": "2"
 		}
 	],
 	"description": "",
@@ -21,13 +21,10 @@
 		"turns": null
 	},
 	"flags": {
-		"shadowdark": {
-			"situational": true
-		}
 	},
-	"img": "icons/skills/melee/swords-parry-block-blue.webp",
-	"name": "+1 AC Dual Wield",
-	"origin": "Compendium.shadowdark.talents.Item.quYUUqTTAX3QlAGa",
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Destine Die Upgrade",
+	"origin": "Compendium.shadowdark.talents.Item.kX94lNYCOdjAuSYx",
 	"statuses": [
 	],
 	"system": {
