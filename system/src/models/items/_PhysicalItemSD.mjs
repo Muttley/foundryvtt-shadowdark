@@ -59,26 +59,35 @@ export class PhysicalItemSD extends BaseItemSD {
 	}
 
 	/**
-	 * Toggles the identified state of this item. When identified, updates the item
-	 * name and appends the identified description. When unidentified, reverts these
-	 * changes and disables all Active Effects.
+	 * Toggles the identified state of this item. When identified, swaps the item
+	 * name and description with the ones stored in identified.
+	 * When unidentified, disables all Active Effects.
 	 * @returns {Promise<boolean>} The new identified state.
 	 */
 	async toggleIdentified() {
-		const updateData = {"system.identification.identified": !this.isIdentified};
-		const identifiedDesc = this.identification.description;
-		if (this.isIdentified === false) {
-			updateData.name = this.identification.name || this.parent.name;
-			updateData["system.description"] = this.description.concat(identifiedDesc);
-			await Promise.all(this.parent.effects.map(e => e.update({ disabled: false })));
-		}
-		else {
-			updateData["system.identification.name"] = this.parent.name; // For convenience
-			updateData["system.description"] = this.description.replace(identifiedDesc, "");
-			await Promise.all(this.parent.effects.map(e => e.update({ disabled: true })));
-		}
+		const newState = !this.isIdentified;
+		const updateData = {
+			name: this.identification.name,
+			system: {
+				description: this.identification.description,
+				identification: {
+					identified: newState,
+					name: this.parent.name,
+					description: this.description,
+				},
+			},
+		};
+
 		await this.parent.update(updateData);
-		return updateData["system.identification.identified"];
+
+		// update effects
+		await Promise.all(
+			this.parent.effects.map(e =>
+				e.update({disabled: !newState})
+			)
+		);
+
+		return newState;
 	}
 
 }
