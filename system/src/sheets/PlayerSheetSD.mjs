@@ -341,7 +341,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 * Creates a scroll from a spell item
 	 */
 	async _createItemFromSpellDialog(item) {
-		const content = foundry.applications.handlebars.renderTemplate(
+		const content = await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
 			{
 				spellName: item.name,

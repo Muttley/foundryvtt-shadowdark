@@ -198,7 +198,7 @@ export default class NpcSD extends ActorBaseSD {
 		this._generateAttackConfig(attack, config);
 
 		// Call NPC attack hooks
-		if (!await Hooks.call("SD-Player-Attack", config)) return false;
+		if (!await Hooks.call("SD-NPC-Attack", config)) return false;
 
 		// Prompt, evaluate and roll the attack
 		await shadowdark.dice.rollFromConfig(config);

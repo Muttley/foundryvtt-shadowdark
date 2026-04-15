@@ -244,15 +244,31 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		let intParts = 0;
 		let strParts = "";
 		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.ADD).forEach(c => {
-			if (Number(c.value)) intParts += Number(c.value);
+			if (!isNaN(Number(c.value)) && c.value !== "") intParts += Number(c.value);
 			else strParts += ` + ${c.value}`;
 			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+", c.key));
 		});
+		// string output
 		if (typeof finalValue === "string" || strParts) {
-			finalValue = finalValue.toString();
-			if (intParts) finalValue = finalValue.concat(shadowdark.dice.formatBonus(intParts));
+
+			if (typeof finalValue === "number") {
+				finalValue += intParts;
+				finalValue = shadowdark.dice.formatBonus(finalValue).toString();
+			}
+			else if (typeof finalValue === "string") {
+				finalValue = finalValue.concat(shadowdark.dice.formatBonus(intParts));
+			}
+			else {
+				finalValue = "";
+			}
+
 			if (strParts) finalValue = finalValue.concat(strParts);
+
+			// trim any leading + as this is added elsewhere if needed.
+			finalValue = finalValue.trim().replace(/^\+\s*/, "");
+
 		}
+		// int output
 		else {
 			finalValue += intParts;
 		}

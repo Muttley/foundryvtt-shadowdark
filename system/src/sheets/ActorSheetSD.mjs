@@ -288,7 +288,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
 		};
 		if (event.currentTarget.dataset.attackType) {
-			data.attack = {Type: event.currentTarget.dataset.attackType};
+			data.attack = {type: event.currentTarget.dataset.attackType};
 		}
 		this.actor.system.rollAttack(itemId, data);
 	}
