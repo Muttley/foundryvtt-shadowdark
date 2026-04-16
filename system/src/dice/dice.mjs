@@ -88,14 +88,21 @@ export function createToolTip(name, value, prefix="+", key="") {
 export function formatBonus(bonus) {
 	if (typeof bonus === "number") {
 		if (bonus === 0) return "";
+		if (bonus > 0) return ` + ${bonus}`;
 		if (bonus < 0) return ` - ${Math.abs(bonus)}`;
 	}
-	const trimmed = bonus.trim();
-	if (trimmed.startsWith("+") || trimmed.startsWith("-")) {
-		return ` ${trimmed}`;
+	else if (typeof bonus === "string") {
+		// ensure correct operator
+		const trimmed = bonus.trim();
+		if (trimmed.startsWith("+") || trimmed.startsWith("-")) {
+			return ` ${trimmed}`;
+		}
+		else {
+			return ` + ${trimmed}`;
+		}
 	}
 	else {
-		return ` + ${trimmed}`;
+		return "";
 	}
 }
 
