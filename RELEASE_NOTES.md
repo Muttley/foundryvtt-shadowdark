@@ -3,9 +3,11 @@
 ## Enhancements
 - [#966] Item Active Effects now get suspended when an item is Stashed
 - [#1038] Added missing translatable strings
+- [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identfied *(deukalion)*
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
+- [#1252] Restore unidentified item name and description when identified toggled off
 
 
 ## Bugfixes
@@ -25,6 +27,7 @@
 - [#1215] No way of rolling 2H damage for versatile weapons currently
 - [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
 - [#1247] Critical Success attacks do not roll double the dice for damage
+- [#1257] Ammunition not being reduced when used for an attack
 
 ## Chores
 - [#369] Migrated to using data models for actors and items

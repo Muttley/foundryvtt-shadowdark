@@ -1050,7 +1050,11 @@ export default class PlayerSD extends ActorBaseSD {
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
 		if (weapon.usesAmmunition && config.selectedAmmunition) {
-			config.selectedAmmunition.reduceAmmunition(1);
+			const item = this.parent.items.find(
+				i => i._id === config.selectedAmmunition._id
+			);
+
+			item.reduceAmmunition(1);
 		}
 
 		return roll.success;
