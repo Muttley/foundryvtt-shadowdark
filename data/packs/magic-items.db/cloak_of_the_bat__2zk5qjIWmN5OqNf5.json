@@ -1,0 +1,44 @@
+{
+	"_id": "2zk5qjIWmN5OqNf5",
+	"_key": "!items!2zk5qjIWmN5OqNf5",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/back/cloak-heavy-black-red.webp",
+	"name": "Cloak of the bat",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A leathery, black cloak that has a ragged hem and a hood with pointed ears.</em></p><p><strong>Benefit.</strong> You can fly a near distance as your movement while in a shadowy area.</p><p><strong>Curse.</strong> Each time you use the cloak to fly, roll a d20. On a result of 1, you and your gear turn into a small bat for 3 rounds.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}
