@@ -1,0 +1,44 @@
+{
+	"_id": "LflQgWEekkaKPm8Z",
+	"_key": "!items!LflQgWEekkaKPm8Z",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/consumables/eggs/egg-spotted-cyan.webp",
+	"name": "Egg of the Cockatrice",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A blue, hard egg as big as a coconut and heavy as a stone.</em></p><p><strong>Benefit.</strong> Once per week, you can speak a command word that causes a @UUID[Compendium.shadowdark.monsters.Actor.xUxKG0CR6Elw1l7h]{cockatrice} to hatch and follow your commands for 5 rounds before flying away. The egg repairs itself over one week.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}
