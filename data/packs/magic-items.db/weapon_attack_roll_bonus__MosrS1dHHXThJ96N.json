@@ -1,0 +1,27 @@
+{
+	"_id": "MosrS1dHHXThJ96N",
+	"_key": "!items.effects!SuPwL1LQKe8DdaRq.MosrS1dHHXThJ96N",
+	"changes": [
+		{
+			"key": "system.bonuses.attackBonus",
+			"mode": 2,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"startTime": null
+	},
+	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"name": "Weapon Attack Roll Bonus",
+	"origin": "Item.P0NDz7qmT3RsOhz7",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": false,
+	"type": "base"
+}

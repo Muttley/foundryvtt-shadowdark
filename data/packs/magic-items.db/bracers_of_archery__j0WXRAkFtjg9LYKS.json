@@ -1,0 +1,46 @@
+{
+	"_id": "j0WXRAkFtjg9LYKS",
+	"_key": "!items!j0WXRAkFtjg9LYKS",
+	"effects": [
+		"yrS7j3rhCRynCLL6"
+	],
+	"folder": null,
+	"img": "icons/equipment/wrist/bracer-quilted-leather.webp",
+	"name": "Bracers of Archery",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"bonuses": {
+			"rangedDamageBonus": "1"
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Leather bracers embossed with soaring hawks.</em></p><p><strong>Benefit.</strong> You deal +1 damage with ranged weapons.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}
