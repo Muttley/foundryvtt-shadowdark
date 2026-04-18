@@ -1,0 +1,44 @@
+{
+	"_id": "lYl5E9urwAHXoqIr",
+	"_key": "!items!lYl5E9urwAHXoqIr",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/magic/perception/orb-crystal-ball-scrying.webp",
+	"name": "Crystal Ball",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A flawless glass orb with roiling images swirling inside it.</em></p><p><strong>Benefit.</strong> Only wizards can use a Crystal Ball. You can use it to cast the @UUID[Compendium.shadowdark.spells.Item.FrdLzy8cWPcVS2Mz]{scrying} spell (pg. 70). If you fail the spellcasting check to cast scrying, the Crystal Ball ceases to function for a day.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}
