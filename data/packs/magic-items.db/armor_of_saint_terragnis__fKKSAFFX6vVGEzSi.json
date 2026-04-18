@@ -1,0 +1,48 @@
+{
+	"_id": "fKKSAFFX6vVGEzSi",
+	"_key": "!items!fKKSAFFX6vVGEzSi",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-layered-steel.webp",
+	"name": "Armor of Saint Terragnis",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 18,
+			"modifier": 0
+		},
+		"baseArmor": "plate-mail",
+		"bonuses": {
+			"acBonus": "3"
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": null,
+			"sp": 0
+		},
+		"description": "<p><em>Golden plate mail carved from head to toe with warrior angels.</em></p><p><strong>Bonus.</strong> +3 plate mail. Only a lawful worshipper of Saint Terragnis can wear this armor.</p><p><strong>Benefit.</strong> Hostile spells that target you are DC 18 to cast. Once per month, you can summon an Avatar of Saint Terragnis (treat as an archangel) to fight by your side for 10 rounds.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"predefinedEffects": "",
+		"properties": [
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
+			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 3
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

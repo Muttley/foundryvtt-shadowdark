@@ -1,0 +1,44 @@
+{
+	"_id": "qHyL2dlqQaxwMzKX",
+	"_key": "!items!qHyL2dlqQaxwMzKX",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/equipment/neck/amulet-geometric-gold-red.webp",
+	"name": "Amulet of Vitality",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A gold amulet with a red ruby teardrop at its center.</em></p><p><strong>Benefit.</strong> Your Constitution stat becomes 18 (+4) while wearing this amulet.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}
