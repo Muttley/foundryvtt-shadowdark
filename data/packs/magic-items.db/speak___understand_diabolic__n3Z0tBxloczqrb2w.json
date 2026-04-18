@@ -1,0 +1,33 @@
+{
+	"_id": "n3Z0tBxloczqrb2w",
+	"_key": "!items.effects!hcC1kuGgQ2VdnHmj.n3Z0tBxloczqrb2w",
+	"changes": [
+		{
+			"key": "system.languages",
+			"mode": 2,
+			"priority": null,
+			"value": "Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Speak & Understand Diabolic",
+	"origin": "Item.WQAnfvteIZallISc",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
