@@ -1,0 +1,31 @@
+{
+	"_id": "UmHdci1cvynol7xU",
+	"_key": "!items.effects!LhREsz1KVI5yuEwM.UmHdci1cvynol7xU",
+	"changes": [
+		{
+			"key": "system.attributes.ac.value",
+			"mode": 2,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startTime": null
+	},
+	"flags": {
+	},
+	"img": "icons/skills/melee/shield-block-gray-orange.webp",
+	"name": "AC Bonus",
+	"origin": "Item.hIWLvLNP6JWumyrw",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
