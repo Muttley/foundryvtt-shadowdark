@@ -1,0 +1,53 @@
+{
+	"_id": "DtswEluGPMrFpzW1",
+	"_key": "!items!DtswEluGPMrFpzW1",
+	"effects": [
+		"HOkTvzEf4v5RBLfx",
+		"UTm25I1vjFzNqZKZ"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/bows/shortbow-leather.webp",
+	"name": "Longbow of the Elven Kings",
+	"system": {
+		"ammoClass": "arrows",
+		"baseWeapon": "longbow",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d8"
+		},
+		"description": "<p><em>A deeply curved longbow with deer antler reinforcements.</em></p><p><strong>Bonus.</strong> +1 longbow.</p><p><strong>Benefit.</strong> You have advantage on attacks with this bow against unnatural creatures and outsiders.</p><p><strong>Personality.</strong> Neutral. Proud, timeless. Believes protecting the natural order is the highest calling. Demands all unnatural creatures be found and slain.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "ranged"
+	},
+	"type": "Weapon"
+}
