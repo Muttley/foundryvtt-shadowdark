@@ -4,8 +4,19 @@ export default class ActiveEffectSD extends ActiveEffect {
 
 		if (!change.value) return;
 
-		// allow only deterministic formulas for non roll system keys
-		if (change.key.startsWith("system.") && !change.key.startsWith("system.roll.")) {
+		// Overriding this value can cause failures as it's a schema object
+		if (change.key === "system.attributes.ac" || change.key.startsWith("system.bonuses")) {
+			console.error(
+				"ERROR: Invalid AE key:",
+				`${actor?.name} > ${change.effect?.name} > ${change.value}. `
+			);
+			return;
+		}
+
+		const field = actor.system.schema.getField(change.key.slice(7));
+
+		// enforce deterministic formulas for integer keys
+		if (field?.integer) {
 
 			const resolvedFormula = shadowdark.dice.resolveFormula(
 				change.value,
@@ -16,7 +27,7 @@ export default class ActiveEffectSD extends ActiveEffect {
 			// don't apply null values or non-deterministic formulas
 			if (!resolvedFormula) {
 				console.error(
-					"ERROR: Cannot Resolve AE formula:",
+					"ERROR: Cannot Resolve AE formula to integer:",
 					`${actor?.name} > ${change.effect?.name} > ${change.value}`
 				);
 				return;
@@ -26,14 +37,7 @@ export default class ActiveEffectSD extends ActiveEffect {
 			change.value = resolvedFormula;
 		}
 
-		if (change.key === "system.attributes.ac") {
-			console.error(
-				"ERROR: Invalid AE key:",
-				`${actor?.name} > ${change.effect?.name} > ${change.value}. `,
-				"Use 'system.attributes.ac.value' instead."
-			);
-			return;
-		}
+		// TODO Enforce validation where (field.constructor.name === "DocumentUUIDField")
 
 		// call default behavior for everything else
 		return super.apply(actor, change);
@@ -44,13 +48,19 @@ export default class ActiveEffectSD extends ActiveEffect {
 	}
 
 	/**
-	 * Automatically deactivate effects when parent item is stashed.
+	 * Automatically deactivate effects under some conditions.
 	 * @inheritdoc
 	 */
 	get isSuppressed() {
+		// item is stashed
 		if (this.parent?.system?.stashed) {
 			return true;
 		}
+		// item can be equipped but isn't
+		else if (this.parent?.system.canBeEquipped && this.parent?.system?.equipped === false ) {
+			return true;
+		}
+		// item is not identified
 		else if (this.parent?.system?.identification?.identified === false) {
 			return true;
 		}

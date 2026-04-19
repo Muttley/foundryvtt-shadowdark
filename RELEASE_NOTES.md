@@ -5,6 +5,7 @@
 - [#1038] Added missing translatable strings
 - [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identfied *(deukalion)*
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1182] Unequipped armor no longer applies Active Effects
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
