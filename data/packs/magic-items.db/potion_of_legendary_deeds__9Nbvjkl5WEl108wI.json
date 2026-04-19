@@ -1,0 +1,48 @@
+{
+	"_id": "9Nbvjkl5WEl108wI",
+	"_key": "!items!9Nbvjkl5WEl108wI",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/consumables/potions/potion-flask-corked-orange.webp",
+	"name": "Potion of Legendary Deeds",
+	"system": {
+		"broken": false,
+		"class": [
+		],
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A golden elixir that resonates with a faint, angelic chord.</em></p><p><strong>Benefit.</strong> When you drink this potion, you gain one level and your XP total resets to zero.</p>",
+		"duration": {
+			"type": "rounds"
+		},
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"lost": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Potion"
+}
