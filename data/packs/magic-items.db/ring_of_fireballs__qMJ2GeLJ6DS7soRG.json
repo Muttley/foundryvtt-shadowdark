@@ -1,0 +1,47 @@
+{
+	"_id": "qMJ2GeLJ6DS7soRG",
+	"_key": "!items!qMJ2GeLJ6DS7soRG",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/finger/ring-cabochon-thin-copper-red.webp",
+	"name": "Ring of Fireballs",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A bronze loop with claws holding a red marble. A fiery miasma swirls inside the glass.</em></p><p><strong>Benefit.</strong> You can pluck the glass marble from the ring and throw it up to a far distance, causing a @UUID[Compendium.shadowdark.spells.Item.j2gvzfnMGQwxqgGg]{fireball} spell (pg. 60) to bloom at the site of impact. The glass marble regrows after you successfully complete a rest.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

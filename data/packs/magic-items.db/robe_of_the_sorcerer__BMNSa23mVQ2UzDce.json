@@ -1,0 +1,48 @@
+{
+	"_id": "BMNSa23mVQ2UzDce",
+	"_key": "!items!BMNSa23mVQ2UzDce",
+	"effects": [
+		"OJ3nY3HrPcGtdv4L"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/back/cloak-hooded-blue.webp",
+	"name": "Robe of the Sorcerer",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 15,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A black leather robe with a shadowed cowl and clawed clasps on thin, mithral chains.</em></p><p><strong>Benefit.</strong> Only a wizard with the Sorcerer title can wear this robe.</p><p>Your unarmored AC becomes 15 plus your Dexterity modifier.</p><p>When you cast a spell that deals damage, add your Intelligence modifier to the total. You have advantage on casting the @UUID[Item.ECmGYgkY6fCSpazn]{power word kill} spell.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}
