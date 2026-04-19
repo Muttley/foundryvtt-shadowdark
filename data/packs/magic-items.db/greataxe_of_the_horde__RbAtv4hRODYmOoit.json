@@ -1,0 +1,53 @@
+{
+	"_id": "RbAtv4hRODYmOoit",
+	"_key": "!items!RbAtv4hRODYmOoit",
+	"effects": [
+		"ENAyqljvyYqIr8rK",
+		"ZDqSlow0fxMp6JOf"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/axes/axe-battle-broad-stone.webp",
+	"name": "Greataxe of the Horde",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "greataxe",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "<p><em>A jagged greataxe carved from a weighty dragon bone.</em></p><p><strong>Bonus.</strong> +2 greataxe.</p><p><strong>Benefit.</strong> Once per day, you can turn a regular hit with this weapon into a critical hit.</p><p><strong>Curse.</strong> Each time you go below half your hit points, make a DC 12 Charisma check. On a failure, you enter a battle rage for 1d4 rounds and must attack the nearest creature.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}
