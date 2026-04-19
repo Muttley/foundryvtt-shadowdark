@@ -1,0 +1,53 @@
+{
+	"_id": "4BkbHe0cL8Zvsd7a",
+	"_key": "!items!4BkbHe0cL8Zvsd7a",
+	"effects": [
+		"MYoK22maOIV6Z0VE",
+		"qx4j9GoWPYmbbu9g"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/greatsword-crossguard-flanged-red.webp",
+	"name": "Memnon's Discordant Blade (Completed Set)",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "greatsword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d12"
+		},
+		"description": "<p><em>This barbed greatsword's red blade trails a shower of sparks when swung to strike.</em></p><p><strong>Bonus.</strong> +1 greatsword. Can only be wielded by a chaotic being. If you also wield Memnon's Entropic Armor and Memnon's Blazing Javelin, it becomes a +3 greatsword.</p><p><strong>Benefit.</strong> Once per day, you can utterly annihilate one creature of level 9 or less that you damage with this blade. The creature can pass a [[request 18 con]] check to take [[/r 3d8]] damage instead.</p><p><strong>Curse.</strong> You cannot relinquish ownership of this blade unless it is taken from you by a creature that defeats you in combat. For each day you do not slay a LV 2 or greater creature with this sword, you lose [[/r 1d6]] hit points. These are restored only when you kill a LV 2 or greater creature with the sword.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

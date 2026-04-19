@@ -1,0 +1,53 @@
+{
+	"_id": "5gdNWsFJjgmtZroK",
+	"_key": "!items!5gdNWsFJjgmtZroK",
+	"effects": [
+		"POfmKSqbE5nitw2s",
+		"HIFDdRlLUKbLS5zK"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/polearms/javelin.webp",
+	"name": "Memnon's Blazing Javelin (Completed Set)",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "javelin",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><em>This golden javelin occasionally blinks and wavers, briefly turning into a bolt of lightning.</em></p><p><strong>Bonus.</strong> +1 javelin. Can only be wielded by a chaotic being. If you also wield Memnon's Discordant Blade and Memnon's Entropic Armor, it becomes a +3 javelin.</p><p><strong>Benefit.</strong> The javelin always returns to your hand after being thrown. Once per day, when you throw this javelin, you can turn it into lightning as per the @UUID[Compendium.shadowdark.spells.Item.7uTblEDfklCO1et7]{lightning bolt} spell (no spellcasting check).</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "far",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": ""
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}
