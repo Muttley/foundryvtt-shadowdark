@@ -1,0 +1,52 @@
+{
+	"_id": "MgWPwzNTzC7cPi7H",
+	"_key": "!items!MgWPwzNTzC7cPi7H",
+	"effects": [
+		"un7hIgJAJuzdyLvo",
+		"uBVpxbCrrpyNJxZS"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/sword-guard.webp",
+	"name": "Thrice-Blessed Sword",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "longsword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 9,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d8",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A lustrous, golden-handled blade anointed with blessed tears, incense, and prayers.</em></p><p><strong>Bonus.</strong> +3 longsword. Only a lawful priest who has achieved the Templar title or higher can wield this sword.</p><p><strong>Benefit.</strong> You deal double damage against demons, devils, and undead.</p><p><strong>Personality.</strong> Lawful. Virtuous, naive. Refuses to be wielded against worshippers of lawful gods, especially self-proclaimed converts. Demands each foe be given the chance to convert before being slain.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}
