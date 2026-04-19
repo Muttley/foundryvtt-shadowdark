@@ -1,12 +1,12 @@
 {
-	"_id": "n3Z0tBxloczqrb2w",
-	"_key": "!items.effects!hcC1kuGgQ2VdnHmj.n3Z0tBxloczqrb2w",
+	"_id": "tOLeg6MI1ii7c98V",
+	"_key": "!items.effects!YITrYmzXxk6Yjxfc.tOLeg6MI1ii7c98V",
 	"changes": [
 		{
-			"key": "system.languages",
+			"key": "system.roll.attack.damage.this",
 			"mode": 2,
 			"priority": null,
-			"value": "Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu"
+			"value": "1"
 		}
 	],
 	"description": "",
@@ -22,9 +22,9 @@
 	},
 	"flags": {
 	},
-	"img": "icons/commodities/tech/cog-steel-grey.webp",
-	"name": "Speak & Understand Diabolic",
-	"origin": "Item.WQAnfvteIZallISc",
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"name": "Weapon Attack Damage Bonus",
+	"origin": "Compendium.shadowdark.magic-items.Item.YITrYmzXxk6Yjxfc",
 	"statuses": [
 	],
 	"system": {

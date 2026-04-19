@@ -2,8 +2,10 @@
 	"_id": "yE6fl9FlZldHBupD",
 	"_key": "!items!yE6fl9FlZldHBupD",
 	"effects": [
-		"JGN2W0klkumjFNoV"
+		"FKzhrPnFt0njaDh8"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
 	"name": "Circlet of Wisdom",
@@ -20,7 +22,7 @@
 			"gp": 0,
 			"sp": 0
 		},
-		"description": "",
+		"description": "<p><em>A thin, silver circlet set with a shimmering, blue pearl.</em></p><p><strong>Benefit.</strong> Your Wisdom stat becomes 18 (+4) while wearing this circlet.</p>",
 		"equipped": false,
 		"isAmmunition": false,
 		"isPhysical": true,

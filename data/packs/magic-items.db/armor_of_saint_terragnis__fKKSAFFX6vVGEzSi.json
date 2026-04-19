@@ -3,14 +3,16 @@
 	"_key": "!items!fKKSAFFX6vVGEzSi",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/equipment/chest/breastplate-layered-steel.webp",
 	"name": "Armor of Saint Terragnis",
 	"system": {
 		"ac": {
 			"attribute": "",
-			"base": 18,
-			"modifier": 0
+			"base": 15,
+			"modifier": 3
 		},
 		"baseArmor": "plate-mail",
 		"bonuses": {

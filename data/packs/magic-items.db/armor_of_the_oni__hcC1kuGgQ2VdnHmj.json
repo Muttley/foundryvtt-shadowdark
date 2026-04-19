@@ -3,16 +3,18 @@
 	"_key": "!items!hcC1kuGgQ2VdnHmj",
 	"effects": [
 		"n3Z0tBxloczqrb2w",
-		"neOYG1GjgRxHKIMr"
+		"SzyJeSkWrWDD64zP"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
 	"name": "Armor of the Oni",
 	"system": {
 		"ac": {
 			"attribute": "",
-			"base": 16,
-			"modifier": 0
+			"base": 15,
+			"modifier": 1
 		},
 		"baseArmor": "plate-mail",
 		"bonuses": {
@@ -32,6 +34,8 @@
 		"languages": "Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
 		"magicItem": true,
 		"properties": [
+			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA",
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV"
 		],
 		"quantity": 1,
 		"slots": {
