@@ -1,0 +1,38 @@
+{
+	"_id": "us7NkXHO8GnlNAiE",
+	"_key": "!items.effects!MgWPwzNTzC7cPi7H.us7NkXHO8GnlNAiE",
+	"changes": [
+		{
+			"key": "system.roll.spell.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Double Damage vs Demons, Devils &  Undead",
+	"origin": "Compendium.shadowdark.magic-items.Item.MgWPwzNTzC7cPi7H",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

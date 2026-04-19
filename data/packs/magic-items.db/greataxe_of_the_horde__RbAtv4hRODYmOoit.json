@@ -23,7 +23,7 @@
 			"oneHanded": "d8",
 			"twoHanded": "d10"
 		},
-		"description": "<p><em>A jagged greataxe carved from a weighty dragon bone.</em></p><p><strong>Bonus.</strong> +2 greataxe.</p><p><strong>Benefit.</strong> Once per day, you can turn a regular hit with this weapon into a critical hit.</p><p><strong>Curse.</strong> Each time you go below half your hit points, make a DC 12 Charisma check. On a failure, you enter a battle rage for 1d4 rounds and must attack the nearest creature.</p>",
+		"description": "<p><em>A jagged greataxe carved from a weighty dragon bone.</em></p><p><strong>Bonus.</strong> +2 greataxe.</p><p><strong>Benefit.</strong> Once per day, you can turn a regular hit with this weapon into a critical hit.</p><p><strong>Curse.</strong> Each time you go below half your hit points, make a [[check 12 cha]] check. On a failure, you enter a battle rage for [[/r 1d4]] rounds and must attack the nearest creature.</p>",
 		"equipped": false,
 		"handedness": "",
 		"identification": {

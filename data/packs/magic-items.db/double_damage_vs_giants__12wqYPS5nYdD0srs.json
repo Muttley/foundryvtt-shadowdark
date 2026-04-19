@@ -1,0 +1,38 @@
+{
+	"_id": "12wqYPS5nYdD0srs",
+	"_key": "!items.effects!EBfBPArPRSyLXFPM.12wqYPS5nYdD0srs",
+	"changes": [
+		{
+			"key": "system.roll.attack.damage.this",
+			"mode": 1,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Double Damage vs Giants",
+	"origin": "Compendium.shadowdark.magic-items.Item.EBfBPArPRSyLXFPM",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

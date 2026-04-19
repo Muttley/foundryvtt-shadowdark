@@ -1,0 +1,38 @@
+{
+	"_id": "0SIRUg3EWmVGZkBZ",
+	"_key": "!items.effects!REKbDm3ShTNQouM2.0SIRUg3EWmVGZkBZ",
+	"changes": [
+		{
+			"key": "system.roll.spell.bonus.control-water",
+			"mode": 2,
+			"priority": null,
+			"value": "4"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Bonus to Control Water",
+	"origin": "Compendium.shadowdark.magic-items.Item.REKbDm3ShTNQouM2",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

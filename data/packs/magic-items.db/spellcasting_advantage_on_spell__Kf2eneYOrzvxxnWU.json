@@ -1,0 +1,38 @@
+{
+	"_id": "Kf2eneYOrzvxxnWU",
+	"_key": "!items.effects!v2khQSVLOXjdYA4j.Kf2eneYOrzvxxnWU",
+	"changes": [
+		{
+			"key": "system.roll.spell.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/magic/air/air-smoke-casting.webp",
+	"name": "Spellcasting Advantage on Spell",
+	"origin": "Compendium.shadowdark.magic-items.Item.v2khQSVLOXjdYA4j",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

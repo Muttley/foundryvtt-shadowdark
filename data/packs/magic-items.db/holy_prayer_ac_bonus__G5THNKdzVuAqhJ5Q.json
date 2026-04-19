@@ -1,0 +1,38 @@
+{
+	"_id": "G5THNKdzVuAqhJ5Q",
+	"_key": "!items.effects!8RyBRclanxBD4pMx.G5THNKdzVuAqhJ5Q",
+	"changes": [
+		{
+			"key": "system.attributes.ac.value",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Holy Prayer AC Bonus",
+	"origin": "Compendium.shadowdark.magic-items.Item.8RyBRclanxBD4pMx",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
