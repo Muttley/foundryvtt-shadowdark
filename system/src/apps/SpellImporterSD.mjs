@@ -1,33 +1,38 @@
-export default class SpellImporter extends foundry.appv1.api.FormApplication {
+export default class SpellImporter extends foundry.applications.api.HandlebarsApplicationMixin(
+	foundry.applications.api.ApplicationV2
+) {
 	/**
 	 * Contains an importer function to import spell stat blocks
 	 */
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["spell-importer"],
-			width: 300,
-			resizable: false,
-		});
-	}
+	static DEFAULT_OPTIONS = {
+		id: "sd-spell-importer",
+		tag: "form",
+		window: {
+			resizable: true,
+			title: "SHADOWDARK.apps.spell-importer.title",
+			contentClasses: ["standard-form"],
+		},
+		position: {
+			width: 600,
+			height: 600,
+		},
+		form: {
+			handler: SpellImporter._onSubmitForm,
+			closeOnSubmit: false,
+		},
+	};
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/apps/spell-importer.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/apps/spell-importer.hbs",
+		},
+	};
 
-	/** @inheritdoc */
-	get title() {
-		const title = game.i18n.localize("SHADOWDARK.apps.spell-importer.title");
-		return `${title}`;
-	}
-
-	/** @inheritdoc */
-	async _updateObject(event, formData) {
-		event.preventDefault();
+	/** @override */
+	static async _onSubmitForm(event, form, formData) {
 		try {
-			let newSpell = await this._importSpell(formData.spellText);
+			let newSpell = await this._importSpell(formData.object.spellText);
 			ui.notifications.info(`Successfully Created: ${newSpell.name} [${newSpell._id}]`);
 			ui.sidebar.activateTab("items");
 
@@ -35,12 +40,6 @@ export default class SpellImporter extends foundry.appv1.api.FormApplication {
 		catch(error) {
 			ui.notifications.error(`Failed to fully parse the spell stat block. ${error}`);
 		}
-	}
-
-	/** @inheritdoc */
-	_onSubmit(event) {
-		event.preventDefault();
-		super._onSubmit(event);
 	}
 
 	_toCamelCase(str) {
