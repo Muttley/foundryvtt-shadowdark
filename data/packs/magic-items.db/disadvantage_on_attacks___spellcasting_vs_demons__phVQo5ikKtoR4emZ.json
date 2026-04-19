@@ -18,10 +18,10 @@
 			"key": "system.roll.spell.advantage.all",
 			"mode": 2,
 			"priority": null,
-			"value": ""
+			"value": "-1"
 		}
 	],
-	"description": "",
+	"description": "Disadvantage on Attacks & Spellcasting vs Demons",
 	"disabled": false,
 	"duration": {
 		"combat": null,
@@ -33,6 +33,9 @@
 		"turns": null
 	},
 	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
 	},
 	"img": "icons/commodities/tech/cog-steel-grey.webp",
 	"name": "Disadvantage on Attacks & Spellcasting vs Demons",
