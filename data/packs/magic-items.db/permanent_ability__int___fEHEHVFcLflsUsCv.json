@@ -1,0 +1,29 @@
+{
+	"_id": "fEHEHVFcLflsUsCv",
+	"_key": "!items.effects!BJ59d0lCvvMKSbu7.fEHEHVFcLflsUsCv",
+	"changes": [
+		{
+			"key": "system.abilities.int.value",
+			"mode": 5,
+			"value": "18"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"startTime": null
+	},
+	"flags": {
+	},
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Int)",
+	"origin": "Compendium.shadowdark.magic-items.Item.BJ59d0lCvvMKSbu7",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
