@@ -1,25 +1,14 @@
-export default class ItemImporterSD extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+import ImporterSD from "./ImporterSD.mjs";
+
+export default class ItemImporterSD extends ImporterSD {
 	/**
 	 * Contains an importer function to import item stat blocks
 	 */
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-item-importer",
-		tag: "form",
 		window: {
-			resizable: true,
 			title: "SHADOWDARK.apps.item-importer.title",
-			contentClasses: ["standard-form"],
-		},
-		position: {
-			width: 600,
-			height: 600,
-		},
-		form: {
-			handler: ItemImporterSD._onSubmitForm,
-			closeOnSubmit: false,
 		},
 	};
 
@@ -29,22 +18,15 @@ export default class ItemImporterSD extends foundry.applications.api.HandlebarsA
 		},
 	};
 
+	static IMPORTER_CONFIG = {
+		textField: "itemText",
+		sidebarTab: "items",
+		errorMessage: "Failed to fully parse the item stat block.",
+	};
+
 	/** @override */
-	static async _onSubmitForm(event, form, formData) {
-		try {
-			let newItem = await this._importItem(formData.object.itemText);
-			ui.notifications.info(`Successfully Created: ${newItem.name} [${newItem._id}]`);
-			ui.sidebar.activateTab("items");
-
-		}
-		catch(error) {
-			ui.notifications.error(`Failed to fully parse the item stat block. ${error}`);
-		}
-	}
-
-
-	_toCamelCase(str) {
-		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	async _import(itemText) {
+		return this._importItem(itemText);
 	}
 
 	/**

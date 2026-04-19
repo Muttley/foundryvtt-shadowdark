@@ -1,25 +1,14 @@
-export default class MonsterImporterSD extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+import ImporterSD from "./ImporterSD.mjs";
+
+export default class MonsterImporterSD extends ImporterSD {
 	/**
 	 * Contains an importer function to import monster stat blocks
 	 */
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-monster-importer",
-		tag: "form",
 		window: {
-			resizable: true,
 			title: "SHADOWDARK.apps.monster-importer.title",
-			contentClasses: ["standard-form"],
-		},
-		position: {
-			width: 600,
-			height: 600,
-		},
-		form: {
-			handler: MonsterImporterSD._onSubmitForm,
-			closeOnSubmit: false,
 		},
 	};
 
@@ -29,21 +18,15 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 		},
 	};
 
+	static IMPORTER_CONFIG = {
+		textField: "monsterText",
+		sidebarTab: "actors",
+		errorMessage: "Failed to fully parse the monster stat block.",
+	};
+
 	/** @override */
-	static async _onSubmitForm(event, form, formData) {
-		try {
-			let newNPC = await this._importMonster(formData.object.monsterText);
-			ui.notifications.info(`Successfully Created: ${newNPC.name} [${newNPC._id}]`);
-			ui.sidebar.activateTab("actors");
-
-		}
-		catch(error) {
-			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
-		}
-	}
-
-	_toCamelCase(str) {
-		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	async _import(monsterText) {
+		return this._importMonster(monsterText);
 	}
 
 	/**
