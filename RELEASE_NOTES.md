@@ -4,6 +4,7 @@
 - [#966] Item Active Effects now get suspended when an item is Stashed
 - [#1038] Added missing translatable strings
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1182] Unequipped armor no longer applies Active Effects
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 

@@ -219,7 +219,9 @@ export default class PlayerSD extends ActorBaseSD {
 			const itemACMod = Number(armor.system?.ac?.modifier ?? 0);
 			const bonuses = this._getActiveEffectKeys("attributes.ac", itemACMod, armor);
 			bonusArmor.ac += bonuses.value;
-			bonusArmor.tooltips.push(shadowdark.dice.createToolTip(armor.name, itemACMod));
+			if (bonuses.value !==0) {
+				bonusArmor.tooltips.push(shadowdark.dice.createToolTip(armor.name, itemACMod));
+			}
 			bonusArmor.tooltips.push(bonuses.tooltips);
 		});
 
