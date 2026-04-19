@@ -1,34 +1,38 @@
-export default class MonsterImporterSD extends foundry.appv1.api.FormApplication {
+export default class MonsterImporterSD extends foundry.applications.api.HandlebarsApplicationMixin(
+	foundry.applications.api.ApplicationV2
+) {
 	/**
 	 * Contains an importer function to import monster stat blocks
 	 */
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["monster-importer"],
+	static DEFAULT_OPTIONS = {
+		id: "sd-monster-importer",
+		tag: "form",
+		window: {
+			resizable: true,
+			title: "SHADOWDARK.apps.monster-importer.title",
+			contentClasses: ["standard-form"],
+		},
+		position: {
 			width: 600,
 			height: 600,
-			resizable: true,
-		});
-	}
+		},
+		form: {
+			handler: MonsterImporterSD._onSubmitForm,
+			closeOnSubmit: false,
+		},
+	};
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/apps/monster-importer.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/apps/monster-importer.hbs",
+		},
+	};
 
-	/** @inheritdoc */
-	get title() {
-		const title = game.i18n.localize("SHADOWDARK.apps.monster-importer.title");
-		return `${title}`;
-	}
-
-	/** @inheritdoc */
-	async _updateObject(event, formData) {
-		event.preventDefault();
+	/** @override */
+	static async _onSubmitForm(event, form, formData) {
 		try {
-			let newNPC = await this._importMonster(formData.monsterText);
+			let newNPC = await this._importMonster(formData.object.monsterText);
 			ui.notifications.info(`Successfully Created: ${newNPC.name} [${newNPC._id}]`);
 			ui.sidebar.activateTab("actors");
 
@@ -36,12 +40,6 @@ export default class MonsterImporterSD extends foundry.appv1.api.FormApplication
 		catch(error) {
 			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
 		}
-	}
-
-	/** @inheritdoc */
-	_onSubmit(event) {
-		event.preventDefault();
-		super._onSubmit(event);
 	}
 
 	_toCamelCase(str) {
