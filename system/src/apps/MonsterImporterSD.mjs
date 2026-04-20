@@ -242,11 +242,11 @@ export default class MonsterImporterSD extends ImporterSD {
 		.join("")}`;
 
 	/**
-	 * Parses pasted text representing a monster and creates an NPC actor from it.
-	 * @param {string} string - String data posted by user
-	 * @returns {ActorSD}
+	 * Parses pasted text into structured data without creating any documents.
+	 * @param {string} monsterText - Raw pasted monster text
+	 * @returns {object} { actorObj, attackArray, featureArray, castingAbility }
 	 */
-	async _importMonster(monsterText) {
+	_parseMonster(monsterText) {
 		// trim spaces from the end of each line:
 		monsterText = monsterText.replace(/[^\S\r\n]+$/gm, "");
 
@@ -339,25 +339,24 @@ export default class MonsterImporterSD extends ImporterSD {
 			},
 		};
 
-		// Create the NPC actor
-		const newActor = await Actor.create(actorObj);
-
-		// Parse attacks features, and spells and add to actor
+		// Parse attacks
 		let attackArray = [];
+		let spellcasting = null;
 		stats[3].split(/ and | or /).forEach( line => {
 			const attackObj = this._parseAttack(line);
-			// if attack is a spell, update actors details for spellcasting
+			// if attack is a spell, store spellcasting details
 			if (attackObj.name.toLowerCase() === "spell") {
-				newActor.update({"system.spellcasting.attacks": `${attackObj.system.attack.num}`});
-				newActor.update({"system.spellcasting.bonus": attackObj.system.bonuses.attackBonus});
+				spellcasting = {
+					attacks: `${attackObj.system.attack.num}`,
+					bonus: attackObj.system.bonuses.attackBonus,
+				};
 			}
 			else {
 				attackArray.push(attackObj);
 			}
 		});
-		await newActor.createEmbeddedDocuments("Item", attackArray);
 
-		// Parse features and add to actor
+		// Parse features and spells
 		let featureArray = [];
 		let castingAbility ="";
 
@@ -375,27 +374,51 @@ export default class MonsterImporterSD extends ImporterSD {
 			}
 			// Parse Feature
 			else {
-				const parsedFeatureObj = this._parseFeature(text);
+				featureArray.push(this._parseFeature(text));
+			}
+		});
 
-				// Is the feature a description of a special attack?
-				let isSpecialAttack = false;
-				newActor.items.forEach(x => {
-					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name) {
-						x.update({"system.description": parsedFeatureObj.system.description});
-						isSpecialAttack = true;
-					}
-				});
+		return { actorObj, attackArray, featureArray, castingAbility, spellcasting };
+	}
 
-				// push feature to actor
-				if (!isSpecialAttack) {
-					featureArray.push(parsedFeatureObj);
+	/**
+	 * Parses pasted text representing a monster and creates an NPC actor from it.
+	 * @param {string} monsterText - String data posted by user
+	 * @returns {ActorSD}
+	 */
+	async _importMonster(monsterText) {
+		const { actorObj, attackArray, featureArray, castingAbility, spellcasting } =
+			this._parseMonster(monsterText);
+
+		// Create the NPC actor
+		const newActor = await Actor.create(actorObj);
+
+		// Set spellcasting details if this NPC has spell attacks
+		if (spellcasting) {
+			newActor.update({"system.spellcasting.attacks": spellcasting.attacks});
+			newActor.update({"system.spellcasting.bonus": spellcasting.bonus});
+		}
+
+		await newActor.createEmbeddedDocuments("Item", attackArray);
+
+		// Merge feature descriptions into matching special attacks
+		const finalFeatures = [];
+		featureArray.forEach(feat => {
+			let isSpecialAttack = false;
+			newActor.items.forEach(x => {
+				if (x.type === "NPC Special Attack" && x.name === feat.name) {
+					x.update({"system.description": feat.system.description});
+					isSpecialAttack = true;
 				}
+			});
+			if (!isSpecialAttack) {
+				finalFeatures.push(feat);
 			}
 		});
 
 		await newActor.update({"system.spellcastingAbility": castingAbility});
 
-		await newActor.createEmbeddedDocuments("Item", featureArray);
+		await newActor.createEmbeddedDocuments("Item", finalFeatures);
 		return newActor;
 	}
 }
