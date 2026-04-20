@@ -136,6 +136,37 @@ export default class MonsterImporterSD extends ImporterSD {
 	}
 
 	/**
+	 * Splits raw features text into individual feature strings.
+	 * A new feature starts when a line begins with a capitalized word
+	 * followed by ". " (e.g. "Backstab. ") or after a blank line.
+	 * @param {string} text - Raw features text (may contain newlines)
+	 * @returns {string[]}
+	 */
+	_parseFeatures(text) {
+		const features = [];
+		let current = "";
+		for (const line of text.split(/\r?\n/)) {
+			const isBlank = line.trim() === "";
+			const isFeatureStart = /^[A-Z][a-z].*\.\s/.test(line);
+
+			// Boundary reached — save the current feature
+			if ((isBlank || isFeatureStart) && current.trim()) {
+				features.push(current.trim());
+				current = "";
+			}
+			// Append non-blank lines to the current feature
+			if (!isBlank) {
+				current += (current ? " " : "") + line;
+			}
+		}
+		// Don't forget the last feature
+		if (current.trim()) {
+			features.push(current.trim());
+		}
+		return features;
+	}
+
+	/**
 	 * Parses an NPC feature string and returns an obj
 	 * @param {string} str
 	 * @returns {featureObj}
@@ -264,10 +295,11 @@ export default class MonsterImporterSD extends ImporterSD {
 		const titleName = parsedText[1].titleCase();
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		let features = [];
-		if (typeof parsedText[4] !== "undefined") {
-			features = parsedText[4].split(/\n\s*\n/).map( x => x.replace(/(\r\n|\n|\r)/gm, " "));
-		}
+		const featuresText = parsedText[4];
+
+		const features = typeof featuresText !== "undefined"
+			? this._parseFeatures(featuresText)
+			: [];
 		// parse out main stat block
 		const stats = statBlock.match([
 			/.*AC (\d*)/,		// stats[1] matches AC
