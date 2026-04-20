@@ -56,6 +56,51 @@ export default class MonsterImporterSD extends ImporterSD {
 	}
 
 	/**
+	 * Parses a stat block string into individual fields.
+	 * Splits on ", " and identifies each field by its key prefix.
+	 * Missing fields get empty string defaults instead of crashing.
+	 * @param {string} statBlock - Stat block with newlines already collapsed
+	 * @returns {object} { ac, hp, atk, mv, str, dex, con, int, wis, cha, al, lv }
+	 */
+	_parseStatBlock(statBlock) {
+		const stats = {
+			ac: null, hp: null, atk: null, mv: null,
+			str: null, dex: null, con: null, int: null, wis: null, cha: null,
+			al: null, lv: null,
+		};
+		const errors = [];
+
+		const keyMap = {
+			AC: "ac", HP: "hp", ATK: "atk", MV: "mv",
+			S: "str", D: "dex", C: "con", I: "int", W: "wis", Ch: "cha",
+			AL: "al", LV: "lv",
+		};
+
+		// Split on ", " and match each chunk to a known key
+		for (const chunk of statBlock.split(", ")) {
+			const [key, ...rest] = chunk.trim().split(" ");
+			const field = keyMap[key];
+
+			// Unknown key — report it
+			if (!field) {
+				errors.push(`Unknown stat field: "${chunk.trim()}"`);
+				continue;
+			}
+
+			let value = rest.join(" ");
+			// AC may include armor type in parens — extract just the number
+			if (field === "ac") {
+				const acMatch = value.match(/^(\d+)/);
+				value = acMatch ? acMatch[1] : value;
+			}
+			stats[field] = value;
+		}
+
+		stats.errors = errors;
+		return stats;
+	}
+
+	/**
 	 * Parses an NPC attack string and returns an item obj representing that attack
 	 * @param {string} str
 	 * @returns {attackObj}
@@ -300,27 +345,13 @@ export default class MonsterImporterSD extends ImporterSD {
 		const features = typeof featuresText !== "undefined"
 			? this._parseFeatures(featuresText)
 			: [];
-		// parse out main stat block
-		const stats = statBlock.match([
-			/.*AC (\d*)/,		// stats[1] matches AC
-			/.*HP (\d*)/,		// stats[2] matches HP
-			/.*ATK (.*),/,		// stats[3] matches unparsed ATK
-			/.*MV (.*),/,		// stats[4] matches unparsed MV
-			/.*S ([-+]\d*),/,	// stats[5] matches STR
-			/.*D ([-+]\d*),/,	// stats[6] matches DEX
-			/.*C ([-+]\d*),/,	// stats[7] matches CON
-			/.*I ([-+]\d*),/,	// stats[8] matches INT
-			/.*W ([-+]\d*),/,	// stats[9] matches WIS
-			/.*Ch ([-+]\d*),/,	// stats[10] matches CHA
-			/.*AL (\w),/,		// stats[11] matches AL (single letter)
-			/.*LV (\d*)/,		// stats[12] matches LV
-		].map(function(r) {
-			return r.source;
-		}).join(""));
+
+		// parse out main stat block field by field
+		const stats = this._parseStatBlock(statBlock);
 
 		// build parse complex outputs
 		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
-		const movement = this._parseMovement(stats[4]);
+		const movement = stats.mv ? this._parseMovement(stats.mv) : { type: "", notes: "" };
 		const notesText = this._generateNotesText(statBlock, flavorText, features);
 
 		// create the monster template
@@ -329,39 +360,39 @@ export default class MonsterImporterSD extends ImporterSD {
 			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
 			type: "NPC",
 			system: {
-				alignment: alignments[stats[11].toUpperCase()],
+				alignment: (stats.al && alignments[stats.al.toUpperCase()]) || "",
 				attributes: {
 					ac: {
-						value: stats[1],
+						value: stats.ac,
 					},
 					hp: {
-						max: stats[2],
-						value: stats[2],
+						max: stats.hp,
+						value: stats.hp,
 						hd: 0,
 					},
 				},
 				level: {
-					value: stats[12],
+					value: stats.lv,
 				},
 				notes: notesText,
 				abilities: {
 					str: {
-						mod: parseInt(stats[5]),
+						mod: parseInt(stats.str) || 0,
 					},
 					int: {
-						mod: parseInt(stats[8]),
+						mod: parseInt(stats.int) || 0,
 					},
 					dex: {
-						mod: parseInt(stats[6]),
+						mod: parseInt(stats.dex) || 0,
 					},
 					wis: {
-						mod: parseInt(stats[9]),
+						mod: parseInt(stats.wis) || 0,
 					},
 					con: {
-						mod: parseInt(stats[7]),
+						mod: parseInt(stats.con) || 0,
 					},
 					cha: {
-						mod: parseInt(stats[10]),
+						mod: parseInt(stats.cha) || 0,
 					},
 				},
 				darkAdapted: true,
@@ -374,7 +405,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		// Parse attacks
 		let attackArray = [];
 		let spellcasting = null;
-		stats[3].split(/ and | or /).forEach( line => {
+		if (stats.atk) stats.atk.split(/ and | or /).forEach( line => {
 			const attackObj = this._parseAttack(line);
 			// if attack is a spell, store spellcasting details
 			if (attackObj.name.toLowerCase() === "spell") {
