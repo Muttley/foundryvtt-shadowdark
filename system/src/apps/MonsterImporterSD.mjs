@@ -84,6 +84,7 @@ export default class MonsterImporterSD extends ImporterSD {
 
 			if (FIELDS[key] === "int" && isNaN(parseInt(value))) {
 				errors.push(`Invalid ${key}: "${value}"`);
+				stats[key] = value;
 				continue;
 			}
 
