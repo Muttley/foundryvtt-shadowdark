@@ -266,7 +266,7 @@ export default class MonsterImporterSD extends ImporterSD {
 				description: `<p>${parsedSpell[4].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
 				range: "",
 				duration: {
-					type: "",
+					type: "instant",
 					value: -1,
 				},
 			},
