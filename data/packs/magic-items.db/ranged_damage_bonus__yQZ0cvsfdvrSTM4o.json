@@ -1,0 +1,29 @@
+{
+	"_id": "yQZ0cvsfdvrSTM4o",
+	"_key": "!items.effects!j0WXRAkFtjg9LYKS.yQZ0cvsfdvrSTM4o",
+	"changes": [
+		{
+			"key": "system.roll.ranged.damage.all",
+			"mode": 2,
+			"value": "1"
+		}
+	],
+	"description": "Ranged Damage Bonus",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"startTime": null
+	},
+	"flags": {
+	},
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Ranged Damage Bonus",
+	"origin": "Compendium.shadowdark.magic-items.Item.j0WXRAkFtjg9LYKS",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

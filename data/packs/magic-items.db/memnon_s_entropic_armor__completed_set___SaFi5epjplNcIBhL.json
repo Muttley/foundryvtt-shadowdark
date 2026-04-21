@@ -1,0 +1,49 @@
+{
+	"_id": "SaFi5epjplNcIBhL",
+	"_key": "!items!SaFi5epjplNcIBhL",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-cuirass-steel-blue.webp",
+	"name": "Memnon's Entropic Armor (Completed Set)",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 15,
+			"modifier": 3
+		},
+		"baseArmor": "plate-mail",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 130,
+			"sp": 0
+		},
+		"description": "<p><em>Deep blue plate mail traced with gold lightning motifs and red gems arrayed into the shape of flames.</em></p><p><strong>Bonus.</strong> +1 plate mail. Can only be worn by a chaotic being. If you also wield Memnon's Discordant Blade and Memnon's Blazing Javelin, it becomes +3 plate mail.</p><p><strong>Benefit.</strong> Once per day, you can speak the armor's command word. Until your next turn, all non-magical weapons that strike you are instantly unmade, shattering into dust. You take no damage from them.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
+			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 3
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

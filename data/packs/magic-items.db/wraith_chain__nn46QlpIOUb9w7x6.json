@@ -1,0 +1,47 @@
+{
+	"_id": "nn46QlpIOUb9w7x6",
+	"_key": "!items!nn46QlpIOUb9w7x6",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-scale-grey.webp",
+	"name": "Wraith Chain",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 13,
+			"modifier": 1
+		},
+		"baseArmor": "chainmail",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 240,
+			"sp": 0
+		},
+		"description": "<p><em>A chainmail shirt of black, mithral links that trails a long cloak of writhing shadows.</em></p><p><strong>Bonus.</strong> +1 mithral chainmail.</p><p><strong>Benefit.</strong> Once per day, you may cause an attack that hits you to miss instead.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

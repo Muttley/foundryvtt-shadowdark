@@ -1,0 +1,52 @@
+{
+	"_id": "r4V3eAGkZ1klmFe7",
+	"_key": "!items!r4V3eAGkZ1klmFe7",
+	"effects": [
+		"Qt03jfl943CxPGeL",
+		"CaRqa4l3vE2ZALbE"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/maces/mace-round-ornate-purple.webp",
+	"name": "Necrotic Mace of Withering",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "mace",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A wrought iron mace tipped with a heavy, screaming skull. Black ichor runs from the skull's eyes when the mace is used to channel necrotic energy.</em></p><p><strong>Bonus.</strong> +1 mace. Can only be wielded by a chaotic priest.</p><p><strong>Benefit.</strong> While holding the mace, you can turn @UUID[Compendium.shadowdark.spells.Item.N9NvonT0RL6PyiiV]{cure wounds} spells you cast into harmful magic that instead inflicts the same amount of damage it would heal.</p><p><strong>Curse.</strong> If you use the mace to cast an inverted cure wounds spell, you are haunted by nightmares that night. You must pass a [[check 12 wis]] check during your next rest or gain no benefit from resting.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

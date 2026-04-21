@@ -1,0 +1,48 @@
+{
+	"_id": "BJ59d0lCvvMKSbu7",
+	"_key": "!items!BJ59d0lCvvMKSbu7",
+	"effects": [
+		"fEHEHVFcLflsUsCv"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/head/hat-pointed-leather-pink.webp",
+	"name": "Hat of Intellect",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A floppy, pointed hat with a wide brim.</em></p><p><strong>Benefit.</strong> Your Intelligence stat becomes 18 (+4) while wearing this hat.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

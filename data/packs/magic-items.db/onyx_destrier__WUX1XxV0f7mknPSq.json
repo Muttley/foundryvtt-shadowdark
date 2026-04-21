@@ -1,0 +1,51 @@
+{
+	"_id": "WUX1XxV0f7mknPSq",
+	"_key": "!items!WUX1XxV0f7mknPSq",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/gaming/chess-knite-gray.webp",
+	"name": "Onyx Destrier",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A polished, ebony statuette of a running horse.</em></p><p><strong>Benefit.</strong> Once per day, the wielder can speak the command word to turn the statuette into a @UUID[Compendium.shadowdark.monsters.Actor.bxcbuzesUqGpEBxw]{nightmare} that accepts neutral or chaotic riders. The statuette remains in this form for 1 hour.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

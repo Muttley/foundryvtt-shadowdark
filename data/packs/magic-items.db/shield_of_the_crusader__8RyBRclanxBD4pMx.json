@@ -1,0 +1,51 @@
+{
+	"_id": "8RyBRclanxBD4pMx",
+	"_key": "!items!8RyBRclanxBD4pMx",
+	"effects": [
+		"naxiMCPRWIxWceVj",
+		"G5THNKdzVuAqhJ5Q"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/shield/kite-bronze-boss-brown.webp",
+	"name": "Shield of the Crusader",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 2
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "<p><em>A weighty kite shield painted with a faded, crimson cross.</em></p><p><strong>Bonus.</strong> +1 shield. Can only be wielded by a lawful being.</p><p><strong>Benefit.</strong> Once per day, you can speak a prayer to wreathe the shield in holy flames, granting +2 to your AC for 3 rounds.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
+			"Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

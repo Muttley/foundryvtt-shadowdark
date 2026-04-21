@@ -1,0 +1,54 @@
+{
+	"_id": "3Wgj18VMKb0KmRHI",
+	"_key": "!items!3Wgj18VMKb0KmRHI",
+	"effects": [
+		"U8i8NfAsHGKpezHN",
+		"1WtVBmSCkzVeEdL7"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/daggers/dagger-simple-violet.webp",
+	"name": "Obsidian Witchknife",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "dagger",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 1,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A glinting, obsidian blade that trails black smoke in thin curls.</em></p><p><strong>Bonus.</strong> +2 dagger. Cannot be wielded by a lawful being.</p><p><strong>Benefit.</strong> When you cast a spell while holding this dagger, you may wound yourself with it. Add the amount of damage you take to your spellcasting check.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

@@ -1,0 +1,29 @@
+{
+	"_id": "SzyJeSkWrWDD64zP",
+	"_key": "!items.effects!hcC1kuGgQ2VdnHmj.SzyJeSkWrWDD64zP",
+	"changes": [
+		{
+			"key": "system.roll.melee.damage.all",
+			"mode": 2,
+			"value": "1"
+		}
+	],
+	"description": "Melee Damage Bonus",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"startTime": null
+	},
+	"flags": {
+	},
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Melee Damage Bonus",
+	"origin": "Compendium.shadowdark.magic-items.Item.hcC1kuGgQ2VdnHmj",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

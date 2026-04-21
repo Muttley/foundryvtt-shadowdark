@@ -1,0 +1,47 @@
+{
+	"_id": "dGfhC5esJRavsNGW",
+	"_key": "!items!dGfhC5esJRavsNGW",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/finger/ring-shell-white-blue.webp",
+	"name": "Ring of Feather Falling",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A pearly ring carved in the likeness of an owl feather.</em></p><p><strong>Benefit.</strong> Once per day, the ring can cast @UUID[Compendium.shadowdark.spells.Item.0ejsM2UIZDHs5u2f]{feather fall }(pg. 60) on you when you fall.</p><p><strong>Personality.</strong> Neutral. Fearful of heights. Mentally hoots in an owl-like voice to stay away from the edge of cliffs and pits.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

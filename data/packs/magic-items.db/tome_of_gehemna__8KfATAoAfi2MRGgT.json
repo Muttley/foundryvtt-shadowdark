@@ -1,0 +1,51 @@
+{
+	"_id": "8KfATAoAfi2MRGgT",
+	"_key": "!items!8KfATAoAfi2MRGgT",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/books/book-reye-reptile-brown.webp",
+	"name": "Tome of Gehemna",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A sturdy, russet volume held by metal clasps. A golden eye in a circle adorns the cover.</em></p><p><strong>Benefit.</strong> Each day, a random wizard spell scroll appears inside the tome, replacing the spell scroll from the prior day.</p><p><strong>Personality.</strong> Neutral. Instructive, technical. Drones on about the obscure points of spellcasting and has an opinion on every wizard's technique.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

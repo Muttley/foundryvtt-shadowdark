@@ -1,0 +1,55 @@
+{
+	"_id": "EBfBPArPRSyLXFPM",
+	"_key": "!items!EBfBPArPRSyLXFPM",
+	"effects": [
+		"12wqYPS5nYdD0srs",
+		"nYIEUngawHOWjKLV",
+		"5k96o8ZHd5spUP9K"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/hammers/hammer-war-rounding.webp",
+	"name": "Warhammer of the Dwarf Lords",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d10"
+		},
+		"description": "<p><em>A boxy hammer with a stout handle and leather throwing strap. It hums with a baritone resonance when spun.</em></p><p><strong>Bonus.</strong> +1 warhammer. +2 if wielded by a dwarf.</p><p><strong>Benefit.</strong> This weapon has the thrown property (pg. 37) to a near distance. It always returns to your hand after being thrown.<br>Your attacks with this weapon deal double damage against giants.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ",
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}
