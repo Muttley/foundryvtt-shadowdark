@@ -1,14 +1,22 @@
 # v4.0.0
 
 ## Enhancements
+- [#41] Hook calls added to rolling functions. Documentation in compendium
+- [#915] Complete overhaul of rolling and Active Effects.
+	- All dice rolls now defined by a rollConfig object. Documentation in compendium
+	- Active Effects keys have reworked. Documentation in compendium
 - [#966] Item Active Effects now get suspended when an item is Stashed
 - [#1038] Added missing translatable strings
-- [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identfied *(deukalion)*
+- [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identified *(deukalion)*
+- [#1147] Improvements to Token Ring functionality and HP change animation *(Henry Malinowski)*
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1178] Add Renown value to player sheets
 - [#1182] Unequipped armor no longer applies Active Effects
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
+- [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
+- [#1200] Added Mac Command key support for fast-forward rolls *(Brittonlj)*
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 
 
@@ -22,20 +30,21 @@
 - [#1140] Manifest warning related to grid settings *(andrewbeard)*
 - [#1143] CSS in v12 causing problems, cannot override
 - [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
-- [#1194] Compendium migrations skipped when in a Module
-- [#1204] Too much damage taken when applied from chat card
-- [#1205] Damage should always be rolled if no actors have been targetted
-- [#1214] Unable to open Player character sheets directly from compendiums
-- [#1215] No way of rolling 2H damage for versatile weapons currently
+- [#1194] Compendium migrations skipped when in a Module in v4
+- [#1204] Too much damage taken when applied from chat card in v4
+- [#1205] Damage should always be rolled if no actors have been targeted in v4
+- [#1214] Unable to open Player character sheets directly from compendiums in v4
+- [#1215] No way of rolling 2H damage for versatile weapons currently in v4
+- [#1239-#1243,#1245,#1248] Multiple bug fixes related to v4 *(deukalion)*
 - [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
-- [#1247] Critical Success attacks do not roll double the dice for damage
-- [#1257] Ammunition not being reduced when used for an attack
+- [#1247] Critical Success attacks do not roll double the dice for damage in v4
+- [#1257] Ammunition not being reduced when used for an attack in v4
 
 ## Chores
 - [#369] Migrated to using data models for actors and items
 - [#1153] Add tip for improving editor auto-complete *(puradox)*
-- [#1167] Migrate Pre-existing Active Effects to new model
 - [#1193] Remove redundant span elements from all compendium text fields.
+- [#1199] Migrate Pre-existing Active Effects to new model *(Brittonlj)*
 - [#1213] Sanity check Quickstart adventure and Pregen characters to ensure the new Active Effects are being used effectively
 - [#1218] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Items
 - [#1219] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
@@ -48,7 +57,7 @@
 - [#1230] Merge German translation updates from Crowdin
 - [#1237] Merge Spanish translation updates from Crowdin
 
-*Many thanks to **Ashley Towner <git@ashtowner.com>**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, and **puradox** for contributing to this release*
+*Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
 
 ---
 
