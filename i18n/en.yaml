@@ -82,7 +82,9 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remain
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
+SHADOWDARK.apps.item-importer.header: Item Importer
 SHADOWDARK.apps.item-importer.import_button: Import Item
+SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
 SHADOWDARK.apps.item-importer.instruction2b: Item Name
@@ -102,7 +104,9 @@ SHADOWDARK.apps.level-up.prompt: Not all required selections have been made. Con
 SHADOWDARK.apps.level-up.roll_boon: Roll Boon
 SHADOWDARK.apps.level-up.roll_talent: Roll Talent
 SHADOWDARK.apps.level-up.title: Leveling Up
+SHADOWDARK.apps.monster-importer.header: Monster Importer
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
+SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
 SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
@@ -138,7 +142,9 @@ SHADOWDARK.apps.solodark.roll_prompt: Roll Prompt
 SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
+SHADOWDARK.apps.spell-importer.header: Spell Importer
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
+SHADOWDARK.apps.spell-importer.placeholder: Paste spell text here...
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
 SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
