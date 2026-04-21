@@ -121,24 +121,29 @@ export default class MonsterImporterSD extends ImporterSD {
 			type: "NPC Special Attack",
 			system: {
 				attack: {
-					num: atk[1],
+					num: parseInt(atk[1]) || 1,
 				},
+				ranges: [],
 				bonuses: {
 					attackBonus: 0,
+					damageBonus: 0,
+					critical: {
+						failureThreshold: 1,
+						multiplier: 2,
+						successThreshold: 20,
+					},
 				},
 			},
 		};
 
 		// Validate Attack ranges and add
 		if (typeof atk[3] !== "undefined") {
-			let rangeArray = [];
 			atk[3].split(/\/|,/).forEach( x => {
 				let range = this._toCamelCase(x);
 				if (range in CONFIG.SHADOWDARK.RANGES) {
-					rangeArray.push(range);
+					attackObj.system.ranges.push(range);
 				}
 			});
-			attackObj.system.ranges = rangeArray;
 		}
 
 		// Add Hit bonus if any
@@ -146,7 +151,7 @@ export default class MonsterImporterSD extends ImporterSD {
 			attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
 		}
 
-		// Attack is a phyical attack if damage exists
+		// Attack is a physical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
 			attackObj.type = "NPC Attack";
@@ -157,13 +162,17 @@ export default class MonsterImporterSD extends ImporterSD {
 			});
 			// parse first object as # dice and dice type
 			const diceStr = dmgStrs[0].match(/(\d*)(d\d*)?/);
+			// TODO: special should not need to be set here, the sheet
+			// should handle missing/undefined special gracefully
 			if (typeof diceStr[2] !== "undefined") {
-				attackObj.system.damage = {};
-				attackObj.system.damage.numDice = diceStr[1];
-				attackObj.system.damage.value = diceStr[1] + diceStr[2];
+				attackObj.system.damage = {
+					numDice: parseInt(diceStr[1]),
+					value: diceStr[1] + diceStr[2],
+					special: "",
+				};
 			}
 			else {
-				attackObj.system.damage = { value: diceStr[1] };
+				attackObj.system.damage = { value: diceStr[1], special: "" };
 			}
 
 			// parse remaining string parts for +dmg or feature
@@ -175,6 +184,11 @@ export default class MonsterImporterSD extends ImporterSD {
 					attackObj.system.damage.special = dmgStrs[i].titleCase();
 				}
 			}
+		}
+
+		// Default physical attacks without explicit range to close
+		if (attackObj.type === "NPC Attack" && attackObj.system.ranges.length === 0) {
+			attackObj.system.ranges.push("close");
 		}
 
 		return attackObj;
