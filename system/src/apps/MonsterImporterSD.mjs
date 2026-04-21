@@ -35,68 +35,78 @@ export default class MonsterImporterSD extends ImporterSD {
 	 * @returns {moveObj}
 	 */
 	_parseMovement(str) {
-		let moveObj ={
-			type: "",
-			notes: "",
+		const parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
+		if (!parsedMove) {
+			throw new Error(`Unrecognized MV format: "${str}"`);
+		}
+
+		const type = this._toCamelCase(parsedMove[1].trim());
+		if (!(type in CONFIG.SHADOWDARK.NPC_MOVES)) {
+			throw new Error(`Unrecognized movement type: "${parsedMove[1].trim()}"`);
+		}
+
+		return {
+			type,
+			notes: parsedMove[2] ?? "",
 		};
-		let parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
-		moveObj.type = this._toCamelCase(parsedMove[1].trim());
-
-		// makes sure the string is a valid move type
-		if (!(moveObj.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
-			moveObj.type = "";
-		}
-
-		// if there are () in the move string copy to move notes
-		if (typeof parsedMove[2] !== "undefined") {
-			moveObj.notes = parsedMove[2];
-		}
-
-		return moveObj;
 	}
 
 	/**
-	 * Parses a stat block string into individual fields.
-	 * Splits on ", " and identifies each field by its key prefix.
-	 * Missing fields get empty string defaults instead of crashing.
+	 * Parses and validates a stat block string into individual fields.
 	 * @param {string} statBlock - Stat block with newlines already collapsed
-	 * @returns {object} { ac, hp, atk, mv, str, dex, con, int, wis, cha, al, lv }
+	 * @returns {object} Stats keyed by short codes (AC, HP, ATK, MV, S, D, C, I, W, Ch, AL, LV)
+	 * @throws {Error} With .details array listing missing, unknown, or invalid fields
 	 */
 	_parseStatBlock(statBlock) {
-		const stats = {
-			ac: null, hp: null, atk: null, mv: null,
-			str: null, dex: null, con: null, int: null, wis: null, cha: null,
-			al: null, lv: null,
+		const FIELDS = {
+			AC: "int", HP: "int", ATK: "str", MV: "str",
+			S: "int", D: "int", C: "int", I: "int", W: "int", Ch: "int",
+			AL: "str", LV: "int",
 		};
+
+		const stats = Object.fromEntries(Object.keys(FIELDS).map(k => [k, null]));
 		const errors = [];
 
-		const keyMap = {
-			AC: "ac", HP: "hp", ATK: "atk", MV: "mv",
-			S: "str", D: "dex", C: "con", I: "int", W: "wis", Ch: "cha",
-			AL: "al", LV: "lv",
-		};
-
-		// Split on ", " and match each chunk to a known key
 		for (const chunk of statBlock.split(", ")) {
 			const [key, ...rest] = chunk.trim().split(" ");
-			const field = keyMap[key];
+			let value = rest.join(" ");
 
-			// Unknown key — report it
-			if (!field) {
-				errors.push(`Unknown stat field: "${chunk.trim()}"`);
+			if (!(key in FIELDS)) {
+				errors.push(`Unknown field: "${chunk.trim()}"`);
 				continue;
 			}
 
-			let value = rest.join(" ");
 			// AC may include armor type in parens — extract just the number
-			if (field === "ac") {
+			if (key === "AC") {
 				const acMatch = value.match(/^(\d+)/);
 				value = acMatch ? acMatch[1] : value;
 			}
-			stats[field] = value;
+
+			if (FIELDS[key] === "int" && isNaN(parseInt(value))) {
+				errors.push(`Invalid ${key}: "${value}"`);
+				continue;
+			}
+
+			stats[key] = value;
 		}
 
-		stats.errors = errors;
+		// Check for missing fields
+		for (const key of Object.keys(FIELDS)) {
+			if (stats[key] === null) {
+				errors.push(`Missing: ${key}`);
+			}
+		}
+
+		if (stats.AL && !["L", "N", "C"].includes(stats.AL.toUpperCase())) {
+			errors.push(`Invalid AL: "${stats.AL}" (expected L, N, or C)`);
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Stat block validation failed");
+			error.details = errors;
+			throw error;
+		}
+
 		return stats;
 	}
 
@@ -115,6 +125,10 @@ export default class MonsterImporterSD extends ImporterSD {
 		].map(function(r) {
 			return r.source;
 		}).join(""));
+
+		if (!atk || !atk[2]?.trim()) {
+			throw new Error(`Could not parse attack: "${str.trim()}"`);
+		}
 
 		let attackObj = {
 			name: atk[2].trim().titleCase(),
@@ -232,6 +246,9 @@ export default class MonsterImporterSD extends ImporterSD {
 	 */
 	_parseFeature(str) {
 		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
+		if (!featureStr) {
+			throw new Error(`Could not parse feature: "${str.substring(0, 40)}"`);
+		}
 		const featureObj = {
 			name: featureStr[1].titleCase(),
 			type: "NPC Feature",
@@ -257,6 +274,10 @@ export default class MonsterImporterSD extends ImporterSD {
 		].map(function(r) {
 			return r.source;
 		}).join(""));
+
+		if (!parsedSpell) {
+			throw new Error(`Could not parse spell: "${str.substring(0, 40)}"`);
+		}
 
 		const spellObj = {
 			name: parsedSpell[1],
@@ -332,15 +353,135 @@ export default class MonsterImporterSD extends ImporterSD {
 		.join("")}`;
 
 	/**
+	 * Parses an ATK field into attack items and spellcasting info.
+	 * @param {string} atkStr - e.g. "2 claw +7 (1d12) or 1 spell +2"
+	 * @returns {{ attackArray: object[], spellcasting: object|null }}
+	 * @throws {Error} With .details array listing parse failures
+	 */
+	_parseAttacks(atkStr) {
+		const attackArray = [];
+		let spellcasting = null;
+		const errors = [];
+
+		for (const line of atkStr.split(/ and | or /)) {
+			try {
+				const atk = this._parseAttack(line);
+				if (atk.name.toLowerCase() === "spell") {
+					spellcasting = {
+						attacks: `${atk.system.attack.num}`,
+						bonus: atk.system.bonuses.attackBonus,
+					};
+				}
+				else {
+					attackArray.push(atk);
+				}
+			}
+			catch(e) {
+				errors.push(`Failed to parse attack: "${line.trim()}"`);
+			}
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Attack parsing failed");
+			error.details = errors;
+			throw error;
+		}
+
+		return { attackArray, spellcasting };
+	}
+
+	/**
+	 * Parses feature strings into feature/spell items and casting ability.
+	 * @param {string[]} features - Individual feature strings from _parseFeatures
+	 * @returns {{ featureArray: object[], castingAbility: string }}
+	 * @throws {Error} With .details array listing parse failures
+	 */
+	_parseFeaturesAndSpells(features) {
+		const featureArray = [];
+		let castingAbility = "";
+		const errors = [];
+
+		for (const text of features) {
+			const spellMatch = text.match(/\(([\w]*)?\s*Spell\)/);
+			if (spellMatch) {
+				try {
+					featureArray.push(this._parseSpell(text));
+					if (spellMatch[1]
+						&& CONFIG.SHADOWDARK.ABILITY_KEYS.includes(
+							spellMatch[1].toLowerCase()
+						)) {
+						castingAbility = spellMatch[1].toLowerCase();
+					}
+				}
+				catch(e) {
+					errors.push(`Failed to parse spell: "${text.substring(0, 40)}..."`);
+				}
+			}
+			else {
+				try {
+					featureArray.push(this._parseFeature(text));
+				}
+				catch(e) {
+					errors.push(`Failed to parse feature: "${text.substring(0, 40)}..."`);
+				}
+			}
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Feature parsing failed");
+			error.details = errors;
+			throw error;
+		}
+
+		return { featureArray, castingAbility };
+	}
+
+	/**
+	 * Builds a Foundry actor data object from validated parsed data.
+	 */
+	_buildActorObj(titleName, stats, statBlock, flavorText, features) {
+		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
+		const movement = this._parseMovement(stats.MV);
+		const notesText = this._generateNotesText(statBlock, flavorText, features);
+
+		return {
+			name: titleName,
+			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
+			type: "NPC",
+			system: {
+				alignment: alignments[stats.AL.toUpperCase()],
+				attributes: {
+					ac: { value: stats.AC },
+					hp: { max: stats.HP, value: stats.HP, hd: 0 },
+				},
+				level: { value: stats.LV },
+				notes: notesText,
+				abilities: {
+					str: { mod: parseInt(stats.S) },
+					int: { mod: parseInt(stats.I) },
+					dex: { mod: parseInt(stats.D) },
+					wis: { mod: parseInt(stats.W) },
+					con: { mod: parseInt(stats.C) },
+					cha: { mod: parseInt(stats.Ch) },
+				},
+				darkAdapted: true,
+				move: movement.type,
+				moveNote: movement.notes,
+				spellcastingAbility: "",
+			},
+		};
+	}
+
+	/**
 	 * Parses pasted text into structured data without creating any documents.
+	 * Collects errors from all parsing stages and throws once with the full list.
 	 * @param {string} monsterText - Raw pasted monster text
-	 * @returns {object} { actorObj, attackArray, featureArray, castingAbility }
+	 * @returns {object} { actorObj, attackArray, featureArray, castingAbility, spellcasting }
+	 * @throws {Error} With .details array listing all parse failures
 	 */
 	_parseMonster(monsterText) {
-		// trim spaces from the end of each line:
 		monsterText = monsterText.replace(/[^\S\r\n]+$/gm, "");
 
-		// parse monster text into 4 main parts:
 		const parsedText = monsterText.match([
 			/(.*)\n/,							// parsedText[1] matches Title
 			/([\S\s]*)\n/,						// parsedText[2] matches flavor Text
@@ -350,111 +491,63 @@ export default class MonsterImporterSD extends ImporterSD {
 			return r.source;
 		}).join(""));
 
-		// set 4 main variables, removing newlines
+		if (!parsedText) {
+			const error = new Error("Import validation failed");
+			error.details = [
+				"Could not parse stat block. Expected format: "
+				+ "Name, description, stat block (AC ... LV), "
+				+ "then optional features.",
+			];
+			throw error;
+		}
+
 		const titleName = parsedText[1].titleCase();
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
 		const featuresText = parsedText[4];
-
 		const features = typeof featuresText !== "undefined"
-			? this._parseFeatures(featuresText)
-			: [];
+			? this._parseFeatures(featuresText) : [];
 
-		// parse out main stat block field by field
-		const stats = this._parseStatBlock(statBlock);
+		// Collect errors from all parsing stages
+		const errors = [];
 
-		// build parse complex outputs
-		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
-		const movement = stats.mv ? this._parseMovement(stats.mv) : { type: "", notes: "" };
-		const notesText = this._generateNotesText(statBlock, flavorText, features);
+		let stats = null;
+		try {
+			stats = this._parseStatBlock(statBlock);
+		}
+		catch(e) {
+			errors.push(...e.details);
+		}
 
-		// create the monster template
-		let actorObj = {
-			name: titleName,
-			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
-			type: "NPC",
-			system: {
-				alignment: (stats.al && alignments[stats.al.toUpperCase()]) || "",
-				attributes: {
-					ac: {
-						value: stats.ac,
-					},
-					hp: {
-						max: stats.hp,
-						value: stats.hp,
-						hd: 0,
-					},
-				},
-				level: {
-					value: stats.lv,
-				},
-				notes: notesText,
-				abilities: {
-					str: {
-						mod: parseInt(stats.str) || 0,
-					},
-					int: {
-						mod: parseInt(stats.int) || 0,
-					},
-					dex: {
-						mod: parseInt(stats.dex) || 0,
-					},
-					wis: {
-						mod: parseInt(stats.wis) || 0,
-					},
-					con: {
-						mod: parseInt(stats.con) || 0,
-					},
-					cha: {
-						mod: parseInt(stats.cha) || 0,
-					},
-				},
-				darkAdapted: true,
-				move: movement.type,
-				moveNote: movement.notes,
-				spellcastingAbility: "",
-			},
-		};
-
-		// Parse attacks
 		let attackArray = [];
 		let spellcasting = null;
-		if (stats.atk) stats.atk.split(/ and | or /).forEach( line => {
-			const attackObj = this._parseAttack(line);
-			// if attack is a spell, store spellcasting details
-			if (attackObj.name.toLowerCase() === "spell") {
-				spellcasting = {
-					attacks: `${attackObj.system.attack.num}`,
-					bonus: attackObj.system.bonuses.attackBonus,
-				};
+		if (stats?.ATK) {
+			try {
+				({ attackArray, spellcasting } = this._parseAttacks(stats.ATK));
 			}
-			else {
-				attackArray.push(attackObj);
+			catch(e) {
+				errors.push(...e.details);
 			}
-		});
+		}
 
-		// Parse features and spells
 		let featureArray = [];
-		let castingAbility ="";
+		let castingAbility = "";
+		try {
+			({ featureArray, castingAbility } = this._parseFeaturesAndSpells(features));
+		}
+		catch(e) {
+			errors.push(...e.details);
+		}
 
-		features.forEach( text => {
+		if (errors.length > 0) {
+			const error = new Error("Import validation failed");
+			error.details = errors;
+			throw error;
+		}
 
-			// Is the feature a spell?
-			const spellTestStr = text.match(/\(([\w]*)?\s*Spell\)/);
-			if (spellTestStr) {
-				featureArray.push(this._parseSpell(text));
-
-				// does the spell list a casting ability?
-				if (typeof spellTestStr[1] !== "undefined" && CONFIG.SHADOWDARK.ABILITY_KEYS.includes(spellTestStr[1].toLowerCase())) {
-					castingAbility = spellTestStr[1].toLowerCase();
-				}
-			}
-			// Parse Feature
-			else {
-				featureArray.push(this._parseFeature(text));
-			}
-		});
-
+		const actorObj = this._buildActorObj(
+			titleName, stats, statBlock, flavorText, features
+		);
 		return { actorObj, attackArray, featureArray, castingAbility, spellcasting };
 	}
 
