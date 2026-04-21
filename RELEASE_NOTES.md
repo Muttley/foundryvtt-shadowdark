@@ -9,6 +9,7 @@
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
+- [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 
 
 ## Bugfixes
