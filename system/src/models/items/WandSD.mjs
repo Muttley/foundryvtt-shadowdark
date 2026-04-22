@@ -18,4 +18,8 @@ export default class WandSD extends PhysicalItemSD {
 	get isRollable() {
 		return true;
 	}
+
+	get isSpell() {
+		return true;
+	}
 }

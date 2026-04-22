@@ -19,4 +19,8 @@ export default class ScrollSD extends PhysicalItemSD {
 	get isRollable() {
 		return true;
 	}
+
+	get isSpell() {
+		return true;
+	}
 }
