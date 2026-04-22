@@ -119,7 +119,7 @@ export default class ShadowdarkMacro {
 					})
 				);
 			}
-			actor.castSpell(items[0]._id, options);
+			actor.castSpell(items[0].uuid, options);
 		}
 
 		// Use class ability
