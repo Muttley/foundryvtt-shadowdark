@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>A creature you touch becomes invisible for the spell’s duration.</p><p>The spell ends if the target attacks or casts a spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

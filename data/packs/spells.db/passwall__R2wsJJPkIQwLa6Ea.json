@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>A tunnel of your height opens in a barrier you touch and lasts for the duration.</p><p>The passage can be up to near distance in length and must be in a straight line.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

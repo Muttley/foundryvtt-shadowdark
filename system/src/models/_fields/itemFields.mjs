@@ -26,6 +26,10 @@ export const lightSource = () => ({
 
 export const magic = () => ({
 	class: new fields.ArrayField(new fields.DocumentUUIDField()),
+	damageType: new fields.StringField({
+    	initial: "none",
+		choices: Object.keys(CONFIG.SHADOWDARK.SPELL_DAMAGE_TYPES),
+	}),
 	duration: new fields.SchemaField({
 		type: new fields.StringField({
 			initial: "rounds",
@@ -33,6 +37,7 @@ export const magic = () => ({
 		}),
 		value: new fields.StringField({inital: "1"}),
 	}),
+	formula: new fields.StringField(),
 	range: new fields.StringField({
 		initial: "near",
     	choices: Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES),

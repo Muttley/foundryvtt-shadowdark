@@ -48,6 +48,22 @@
 				localize=false
 			}}
 		</select>
+
+		<h3>{{localize 'SHADOWDARK.spell_damage.formula'}}</h3>
+		<input
+			name="system.formula"
+			type="text"
+			value="{{item.system.formula}}"
+		/>
+
+		<h3>{{localize 'SHADOWDARK.spell_damage.type'}}</h3>
+		<select name="system.damageType" {{#unless system.formula}} disabled {{/unless}}>
+			{{selectOptions
+				config.SPELL_DAMAGE_TYPES
+				selected=system.damageType
+				localize=false
+			}}
+		</select>
 	{{/ui/sd-box}}
 
 	{{#> ui/sd-box

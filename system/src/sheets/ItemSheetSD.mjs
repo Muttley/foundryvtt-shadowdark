@@ -616,6 +616,11 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			return await this._onChangeChoiceList(event, choicesKey, isItem);
 		}
 
+		// Test for spell damage formula change
+		if (event.target.name === "system.formula") {
+			return await this.onFormulaChange(event);
+		}
+
 		await super._onChangeInput(event);
 	}
 
@@ -972,6 +977,28 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			formData["system.light.remainingSecs"] = formData["system.light.remainingSecs"] * 60;
 		}
 		super._updateObject(event, formData);
+	}
+
+	async onFormulaChange(event) {
+		if (Roll.validate(event.target.value) === false
+			&& event.target.value !== ""
+		) {
+			ui.notifications.error(game.i18n.localize("SHADOWDARK.spell_damage.invalid_formula"));
+			return;
+		}
+
+		const damageType = event.target.parentElement.querySelector('select[name="system.damageType"]');
+
+		// If formula is empty, reset and disable damageType, unless healing is selected
+		const isEmpty = event.target.value === "";
+		if (isEmpty) {
+			damageType.value = "none";
+		}
+		else if (damageType.value === "none") {
+			damageType.value = "damage"; // assume damage simply to set a value
+		}
+		damageType.disabled = isEmpty;
+
 	}
 
 }

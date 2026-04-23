@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
+		"damageType": "damage",
 		"description": "<p>Thor casts down a bolt of lightning to strike one target. The target takes [[/r 3d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
+		"formula": "3d6",
 		"lost": false,
 		"properties": [
 		],

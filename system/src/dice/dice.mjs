@@ -265,13 +265,13 @@ export async function rollFromConfig(config) {
 	const mainRoll = await roll(config.mainRoll, actor.getRollData());
 	rolls.push(mainRoll);
 
-	if (mainRoll.success && config?.damageRoll?.formula) {
-		// await rollDamageFromMessage(message);
-		config.damageRoll.needed = true;
-	}
-	else if (!config.targetUuid && config?.damageRoll?.formula) {
-		config.damageRoll.needed = true;
-	}
+	const weaponRollable = config?.damageRoll?.formula
+		&& (mainRoll.success || !config.targetUuid)
+		&& ["melee", "ranged"].includes(config.attack.type);
+
+	const spellRollable = config?.damageRoll?.formula && mainRoll.success;
+
+	if (weaponRollable || spellRollable) config.damageRoll.needed = true;
 
 	// render roll
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
