@@ -1,0 +1,53 @@
+{
+	"_id": "bpJlJ3vnZVmvOEJV",
+	"_key": "!items!bpJlJ3vnZVmvOEJV",
+	"effects": [
+		"l9MlejatmWj0EesQ",
+		"Vn1UKd6iBKvZh0tc",
+		"G7VI8iNu9to3a2iz"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/maces/mace-spiked-cube-wood.webp",
+	"name": "Silver Mace of Wrath",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 5,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A tarnished, silver mace with seven flanges in the shape of crescent moons.</em></p><p><strong>Bonus.</strong> +1 mace.</p><p><strong>Benefit.</strong> This weapon deals double damage against creatures with lycanthropy.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

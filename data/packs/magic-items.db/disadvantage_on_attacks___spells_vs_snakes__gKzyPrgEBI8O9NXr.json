@@ -1,0 +1,50 @@
+{
+	"_id": "gKzyPrgEBI8O9NXr",
+	"_key": "!items.effects!EiyxS6MOvGlZgG65.gKzyPrgEBI8O9NXr",
+	"changes": [
+		{
+			"key": "system.roll.melee.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		},
+		{
+			"key": "system.roll.ranged.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		},
+		{
+			"key": "system.roll.spell.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		}
+	],
+	"description": "Disadvantage on attacks and hostile spells targeting snakes",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Disadvantage on Attacks & Spells vs Snakes",
+	"origin": "Compendium.shadowdark.magic-items.Item.EiyxS6MOvGlZgG65",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

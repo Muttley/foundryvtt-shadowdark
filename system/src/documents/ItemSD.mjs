@@ -1,5 +1,13 @@
 export default class ItemSD extends foundry.documents.Item {
 
+	static migrateData(data) {
+		// migrate legacy Scolls and Wands
+		if (["Scroll", "Wand"].includes(data.type) && data.system?.spellName) {
+			foundry.utils.setProperty(data, "flags.shadowdark.legacyData", foundry.utils.deepClone(data.system));
+		}
+		return super.migrateData(data);
+	}
+
 	get typeSlug() {
 		return this.type.slugify();
 	}
@@ -68,11 +76,16 @@ export default class ItemSD extends foundry.documents.Item {
 			data.canUseMagicItems = await this.actor.canUseMagicItems();
 		}
 
-		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+		if (this.system.isSpell) {
 			data.spellClasses = await this.getSpellClassesDisplay();
 		}
 
-		if (["Armor", "Weapon"].includes(this.type)) {
+		if (this.system.isScroll) {
+			const spellObj = await fromUuid(this.system.spellUuid);
+			if (spellObj) data.spellName = spellObj.name;
+		}
+
+		if (this.system.isArmor || this.system.isWeapon) {
 			data.baseItemName = await this.getBaseItemName();
 		}
 
@@ -118,11 +131,11 @@ export default class ItemSD extends foundry.documents.Item {
 			itemProperties: this.system.propertyItems,
 		};
 
-		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+		if (this.system.isSpell) {
 			data.spellClasses = await this.getSpellClassesDisplay();
 		}
 
-		if (["Armor", "Weapon"].includes(this.type)) {
+		if (this.system.isArmor || this.system.isWeapon) {
 			data.baseItemName = await this.getBaseItemName();
 		}
 
@@ -219,10 +232,10 @@ export default class ItemSD extends foundry.documents.Item {
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (roll) {
-			if (this.type === "Scroll") {
+			if (this.system.isScroll) {
 				data.actor.deleteEmbeddedDocuments("Item", [this._id]);
 			}
-			else if (this.type === "Wand") {
+			else if (this.system.isWand) {
 				if (roll.rolls.main.critical === "failure") {
 					data.actor.deleteEmbeddedDocuments("Item", [this._id]);
 				}

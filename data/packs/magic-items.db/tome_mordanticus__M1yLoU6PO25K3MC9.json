@@ -1,0 +1,51 @@
+{
+	"_id": "M1yLoU6PO25K3MC9",
+	"_key": "!items!M1yLoU6PO25K3MC9",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/books/book-open-brown.webp",
+	"name": "Tome Mordanticus",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A hand-drawn bestiary of the multiverse's most notable creatures and people.</em></p><p><strong>Benefit.</strong> When you read the tome, you learn three @UUID[Compendium.shadowdark.magic-items.Item.gNah418e2ykhDWDE]{True Names} (pg. 319) of three beings you choose. Your True Name also appears in the book after reading it.</p><p><strong>Personality.</strong> Neutral. Pedantic, fussy. The book constantly tries to escape its owner and can telepathically reach out a near distance to any creature.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

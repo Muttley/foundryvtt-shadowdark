@@ -79,22 +79,23 @@ export default class UtilitySD {
 			)
 			: spell.name;
 
-		const itemData = {
+		if (type === "Spell") {
+			return { type, name, img: spell.img, system: spell.system };
+		}
+
+		if (type === "Wand") {
+			return {
+				type,
+				name,
+				system: { spells: [{uuid: spellobj.uuid, lost: false}] },
+			};
+		}
+
+		return {
 			type,
 			name,
-			system: spell.system,
+			system: { spellUuid: spellobj.uuid },
 		};
-
-		if (type === "Spell") {
-			itemData.img = spell.img;
-		}
-		else {
-			delete itemData.system.lost;
-			itemData.system.magicItem = true;
-			itemData.system.spellImg = spell.img;
-			itemData.system.spellName = spell.name;
-		}
-		return itemData;
 	}
 
 

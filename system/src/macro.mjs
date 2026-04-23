@@ -110,7 +110,22 @@ export default class ShadowdarkMacro {
 		}
 
 		// Cast spell or wand or scroll
-		if (items[0].type === "Spell" || items[0].type === "Wand" || items[0].type === "Scroll") {
+		// TODO multi spell wands don't play nice here
+		if (items[0].system.isWand) {
+			const wand = items[0];
+			const firstSpell = (wand.system.spells ?? []).find(s => !s.lost);
+			if (wand.system.broken || !firstSpell) {
+				ui.notifications.warn(
+					game.i18n.format("SHADOWDARK.hotbar.spellLost", {
+						actorName: actor.name,
+						itemName,
+					})
+				);
+				return;
+			}
+			actor.system.castSpell(firstSpell.uuid, {cast: {item: wand.uuid}, ...options});
+		}
+		else if (items[0].system.isSpell || items[0].system.isScroll) {
 			if (items[0].system.lost === true) {
 				ui.notifications.warn(
 					game.i18n.format("SHADOWDARK.hotbar.spellLost", {
@@ -119,7 +134,7 @@ export default class ShadowdarkMacro {
 					})
 				);
 			}
-			actor.castSpell(items[0]._id, options);
+			actor.system.castSpell(items[0].system.spellUuid ?? items[0]._id, options);
 		}
 
 		// Use class ability

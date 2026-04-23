@@ -7,7 +7,7 @@
 	<div class="item-image" style="background-image: url({{item.img}})">
 		<i class="fas fa-comment fa-lg"></i>
 	</div>
-	<a class="item-name" data-action="show-details">
+	<a class="item-name" data-action="show-details"{{#if item.system.broken}} style="text-decoration: line-through;"{{/if}}>
 		{{item.name}}
 		{{#if item.system.light.hasBeenUsed}}
 			<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>

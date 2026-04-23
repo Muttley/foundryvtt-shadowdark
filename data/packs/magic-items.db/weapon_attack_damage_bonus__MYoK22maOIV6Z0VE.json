@@ -1,0 +1,29 @@
+{
+	"_id": "MYoK22maOIV6Z0VE",
+	"_key": "!items.effects!5vaHRsgVMO4v6ePR.MYoK22maOIV6Z0VE",
+	"changes": [
+		{
+			"key": "system.roll.attack.damage.this",
+			"mode": 2,
+			"value": "1"
+		}
+	],
+	"description": "Weapon Attack Damage Bonus",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"startTime": null
+	},
+	"flags": {
+	},
+	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+	"name": "Weapon Attack Damage Bonus",
+	"origin": "Item.B30rw9qP2aK1r73k",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -1,0 +1,51 @@
+{
+	"_id": "bN40eJ3tMTx1R4zT",
+	"_key": "!items!bN40eJ3tMTx1R4zT",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/misc/hourglass-wood.webp",
+	"name": "Hourglass of the Black Sands",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>An ancient hourglass running with obsidian sand.</em></p><p><strong>Benefit.</strong> Once per day, you can turn the hourglass when you cast a spell. The spell's effects last 1d4 rounds longer.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

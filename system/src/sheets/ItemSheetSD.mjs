@@ -15,6 +15,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			classes: ["shadowdark", "sheet", "item"],
 			scrollY: ["section.SD-content-body"],
 			resizable: true,
+			dragDrop: [{dropSelector: null}],
 			tabs: [
 				{
 					navSelector: ".SD-nav",
@@ -488,10 +489,18 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 
 	async getSheetDataForScrollItem(context) {
-		await this.getSpellSelectorConfigs(context);
+		const allSpells = await shadowdark.compendiums.spells();
+		const currentUuid = this.item.system.spellUuid ?? null;
+		const selectedSpell = currentUuid ? await fromUuid(currentUuid) : null;
 
-		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-			.includes(context.item.system.duration.type);
+		context.spellSelectorConfig = {
+			availableItems: allSpells.filter(s => s.uuid !== currentUuid),
+			choicesKey: "spellUuid",
+			isItem: true,
+			isSingle: true,
+			name: "system.spellUuid",
+			selectedItems: selectedSpell ? [selectedSpell] : [],
+		};
 	}
 
 
@@ -514,10 +523,25 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 
 	async getSheetDataForWandItem(context) {
-		await this.getSpellSelectorConfigs(context);
+		const allSpells = await shadowdark.compendiums.spells();
+		const currentSpells = this.item.system.spells ?? [];
+		const selectedUuids = currentSpells.map(s => s.uuid);
 
-		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-			.includes(context.item.system.duration.type);
+		const selectedSpells = [];
+		for (const spell of currentSpells) {
+			if (!spell.uuid) continue;
+			const spellObj = await fromUuid(spell.uuid);
+			if (spellObj) selectedSpells.push(spellObj);
+		}
+
+		context.spellSelectorConfig = {
+			availableItems: allSpells.filter(s => !selectedUuids.includes(s.uuid)),
+			choicesKey: "spells",
+			isItem: true,
+			isSingle: false,
+			name: "system.spells",
+			selectedItems: selectedSpells,
+		};
 	}
 
 
@@ -557,6 +581,20 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 		const deleteUuid = event.currentTarget.dataset.uuid;
 		const choicesKey = event.currentTarget.dataset.choicesKey;
+		const isSingle = event.currentTarget.dataset.isSingle === "true";
+		const dataKey = `system.${choicesKey}`;
+
+		if (isSingle) {
+			this.item.update({[dataKey]: null});
+			return;
+		}
+
+		// Wand spells are stored as {uuid, lost} objects rather than plain UUIDs
+		if (this.item.system.isWand && choicesKey === "spells") {
+			const newSpells = (this.item.system.spells ?? []).filter(s => s.uuid !== deleteUuid);
+			this.item.update({[dataKey]: newSpells});
+			return;
+		}
 
 		// handles cases where choicesKey is nested property.
 		const currentChoices = choicesKey
@@ -569,7 +607,6 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			newChoices.push(itemUuid);
 		}
 
-		const dataKey = `system.${choicesKey}`;
 		this.item.update({[dataKey]: newChoices});
 	}
 
@@ -612,14 +649,15 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 		const choicesKey = event.currentTarget.dataset.choicesKey;
 		const isItem = event.currentTarget.dataset.isItem === "true";
+		const isSingle = event.currentTarget.dataset.isSingle === "true";
 		if (event.target.list && choicesKey) {
-			return await this._onChangeChoiceList(event, choicesKey, isItem);
+			return await this._onChangeChoiceList(event, choicesKey, isItem, isSingle);
 		}
 
 		await super._onChangeInput(event);
 	}
 
-	async _onChangeChoiceList(event, choicesKey, isItem) {
+	async _onChangeChoiceList(event, choicesKey, isItem, isSingle=false) {
 		const options = event.target.list.options;
 		const value = event.target.value;
 
@@ -632,6 +670,18 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		}
 
 		if (uuid === null) return;
+
+		if (isSingle) {
+			return this.item.update({[event.target.name]: uuid});
+		}
+
+		// Wand spells are stored as {uuid, lost} objects rather than plain UUIDs
+		if (this.item.system.isWand && choicesKey === "spells") {
+			const spells = this.item.system.spells ?? [];
+			if (spells.some(s => s.uuid === uuid)) return;
+			event.target.value = "";
+			return this.item.update({"system.spells": [...spells, {uuid, lost: false}]});
+		}
 
 		// handles cases where choicesKey is nested property.
 		let currentChoices = choicesKey
@@ -765,22 +815,28 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 		if (!(allowedType && isSpellDrop)) return super._onDrop();
 
+		if (myType === "Wand") {
+			const spells = this.item.system.spells ?? [];
+			if (spells.some(s => s.uuid === droppedItem.uuid)) return;
+			const update = {"system.spells": [...spells, {uuid: droppedItem.uuid, lost: false}]};
+			if (spells.length === 0) {
+				update.name = game.i18n.format(
+					"SHADOWDARK.item.name_from_spell.Wand",
+					{spellName: droppedItem.name}
+				);
+			}
+			return this.item.update(update);
+		}
+
 		const name = game.i18n.format(
 			`SHADOWDARK.item.name_from_spell.${myType}`,
 			{spellName: droppedItem.name}
 		);
 
-		const updateData = {
+		this.item.update({
 			name,
-			system: droppedItem.system,
-			// TODO Add some kind of default cost to the new item?
-		};
-
-		delete updateData.system.lost;
-		updateData.system.magicItem = true;
-		updateData.system.spellName = droppedItem.name;
-
-		this.item.update(updateData);
+			system: { spellUuid: droppedItem.uuid },
+		});
 	}
 
 	async _onDropTable(event, data) {
@@ -893,9 +949,21 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 				this.item.update(updateData);
 				break;
 			}
-			case "Scroll":
-			case "Spell":
+			case "Scroll": {
+				const updateData = this._getSubmitData();
+
+				delete updateData["system.spellUuid"];
+
+				this.item.update(updateData);
+				break;
+			}
 			case "Wand": {
+				const updateData = this._getSubmitData();
+				delete updateData["system.spells"];
+				this.item.update(updateData);
+				break;
+			}
+			case "Spell": {
 				const updateData = this._getSubmitData();
 
 				delete updateData["system.class"];

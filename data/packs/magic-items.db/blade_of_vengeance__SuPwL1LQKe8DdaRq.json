@@ -1,0 +1,62 @@
+{
+	"_id": "SuPwL1LQKe8DdaRq",
+	"_key": "!items!SuPwL1LQKe8DdaRq",
+	"effects": [
+		"WhT5yrk9W2vCWs6X",
+		"9ScRP2bW6K4ljUpQ",
+		"CcqfuguaihVg3TY3"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/greatsword-crossguard-embossed-gold.webp",
+	"name": "Blade of Vengeance",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "bastard-sword",
+		"bonuses": {
+			"attackBonus": "1",
+			"critical": {
+				"failureThreshold": 1,
+				"multiplier": 2,
+				"successThreshold": 20
+			},
+			"damageBonus": 0,
+			"damageMultiplier": 1
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"numDice": 1,
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "<p><em>A gray blade with a diamond- cut ruby in the pommel. It whistles sharply with each slice.</em></p><p><strong>Bonus.</strong> +2 bastard sword. Cannot be wielded by undead.</p><p><strong>Benefit.</strong> You have advantage on attacks against undead creatures with this sword. You can use the sword to cast @UUID[Compendium.shadowdark.spells.Item.mByUvcHIVEPWscfH]{turn undead }once per day (+4 bonus).</p><p><strong>Personality.</strong> Lawful. Grim, suspicious. Forged as a failsafe against the Witch-Kings if they should fall to darkness, which they did. Demands they be slain.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee",
+		"weaponMastery": false
+	},
+	"type": "Weapon"
+}

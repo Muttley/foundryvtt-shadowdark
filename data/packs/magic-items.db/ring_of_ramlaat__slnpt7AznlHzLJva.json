@@ -1,0 +1,47 @@
+{
+	"_id": "slnpt7AznlHzLJva",
+	"_key": "!items!slnpt7AznlHzLJva",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/finger/ring-bone-spiked-white.webp",
+	"name": "Ring of Ramlaat",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A bone-carved ring with a ram skull. Its horns twist forward and red lights glow in its eye sockets.</em></p><p><strong>Benefit.</strong> Once per day, you can enter a rage where you deal double damage for 5 rounds. During the rage, you can't cast spells and enemies have advantage on melee attacks against you.</p><p><strong>Personality.</strong> Chaotic. Aggressive, overconfident. Seeks to provoke you and your enemies into battle.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

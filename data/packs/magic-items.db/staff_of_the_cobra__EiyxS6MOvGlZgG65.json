@@ -1,0 +1,54 @@
+{
+	"_id": "EiyxS6MOvGlZgG65",
+	"_key": "!items!EiyxS6MOvGlZgG65",
+	"effects": [
+		"2QCEx24N0mtaaRR7",
+		"apF91F2anJCrmkSm",
+		"gKzyPrgEBI8O9NXr"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/staves/staff-animal-skull-feathers.webp",
+	"name": "Staff of The Cobra",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d4"
+		},
+		"description": "<p><em>A curved scepter tipped with a ruby-eyed, flaring cobra head.</em></p><p><strong>Bonus.</strong> +1 staff.</p><p><strong>Benefit.</strong> All snakes regard you with a friendly attitude unless you do something to upset them. Once per day, you can throw the staff to the ground. It becomes a giant snake for 5 rounds that obeys your mental commands. If the giant snake goes to 0 HP, it reverts into a staff.</p><p><strong>Curse.</strong> You have disadvantage on attacks and casting hostile spells targeting snakes.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

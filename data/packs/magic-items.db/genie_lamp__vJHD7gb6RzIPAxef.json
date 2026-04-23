@@ -1,0 +1,51 @@
+{
+	"_id": "vJHD7gb6RzIPAxef",
+	"_key": "!items!vJHD7gb6RzIPAxef",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/commodities/treasure/brass-lamp-yellow.webp",
+	"name": "Genie Lamp",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A tarnished, brass oil lamp.</em></p><p><strong>Benefit.</strong> Rubbing the lamp causes its resident @UUID[Compendium.shadowdark.monsters.Actor.ytftI0motwEnF29v]{djinni} (50% chance) or efreeti (50% chance) to emerge. A djinni grants its summoner one @UUID[Compendium.shadowdark.spells.Item.hMGQuETjBxuMwjsR]{wish} spell (pg. 73) before disappearing. An @UUID[Compendium.shadowdark.monsters.Actor.o1aBfxHFxYVHLTRn]{efreeti} does the same, but only after being defeated in combat.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

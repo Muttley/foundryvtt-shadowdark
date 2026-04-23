@@ -1,0 +1,47 @@
+{
+	"_id": "VBGCekyAG0Z5wsqq",
+	"_key": "!items!VBGCekyAG0Z5wsqq",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-layered-leather-studded-black.webp",
+	"name": "Nightcloak Armor",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 11,
+			"modifier": 1
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "<p><em>Matte black leathers enchanted to deepen and darken shadows.</em></p><p><strong>Bonus.</strong> +1 leather armor.</p><p><strong>Benefit.</strong> Once per day, you may choose to automatically pass a Dexterity check to hide.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

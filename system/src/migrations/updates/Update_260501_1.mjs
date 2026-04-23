@@ -41,7 +41,50 @@ export default class Update_260501_1 extends UpdateBaseSD {
 			updateData["==system"] = {...itemData.system};
 		}
 
+		// finish migrating any Scroll or Wand data from old schema to spellUuid or spells array
+		if (itemData.type === "Scroll" || itemData.type === "Wand") {
+			const legacyData = itemData.flags?.shadowdark?.legacyData;
+
+			if (legacyData?.spellName) {
+				const spell = await this._findSpell(legacyData.spellName, legacyData.class ?? []);
+
+				if (spell) {
+					if (itemData.type === "Scroll") {
+						updateData["system.spellUuid"] = spell.uuid;
+					}
+					else if (itemData.type === "Wand") {
+						updateData["system.spells"] = [{uuid: spell.uuid, lost: legacyData.lost ?? false}];
+					}
+				}
+				else {
+					const details = [
+						legacyData.spellName ? `Spell: ${legacyData.spellName}` : null,
+						legacyData.class?.length ? `CastingClasses: ${legacyData.class.join(", ")}` : null,
+						legacyData.tier ? `Tier ${legacyData.tier}` : null,
+						legacyData.duration ? `Duration: ${legacyData.duration.value} ${legacyData.duration.type}` : null,
+						legacyData.range ? `Range: ${legacyData.range}` : null,
+					].filter(Boolean).join(", ");
+					updateData["system.description"] = `${itemData.system.description ?? ""}<p><strong>[Migration Failure]</strong> Could not find spell "${legacyData.spellName}" in the compendium. Please link the spell manually on the item sheet.</p><p>${details}</p>`;
+				}
+
+			}
+		}
+
 		return updateData;
+	}
+
+	async _findSpell(spellName, classUuids = []) {
+		const spells = await shadowdark.compendiums.spells();
+		const matches = spells.filter(s => s.name === spellName);
+		// 0 matches
+		if (matches.length < 1) return null;
+		// 1 match
+		if (matches.length === 1) return matches[0];
+		// For more than 1 match, select by matching castingClass
+		const classMatch = matches.find(s =>
+			(s.system.class ?? []).find(uuid => classUuids.includes(uuid))
+		);
+		return classMatch ?? matches[0];
 	}
 
 	async updateEffects(effects, parentType = undefined) {

@@ -1,0 +1,47 @@
+{
+	"_id": "qOpf91Qn5FFNABid",
+	"_key": "!items!qOpf91Qn5FFNABid",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/head/mask-horned-skull.webp",
+	"name": "Horned Helm of Ramlaat",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 1
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A bloodstained helm made of a ram's skull.</em></p><p><strong>Benefit.</strong> This helm grants you a +1 bonus to your armor class. You have advantage on any check you make to knock down creatures or objects.</p><p><strong>Curse.</strong> You feel compelled to headbutt delicate objects.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

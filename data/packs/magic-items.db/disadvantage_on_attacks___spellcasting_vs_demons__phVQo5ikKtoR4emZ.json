@@ -1,0 +1,50 @@
+{
+	"_id": "phVQo5ikKtoR4emZ",
+	"_key": "!items.effects!hcC1kuGgQ2VdnHmj.phVQo5ikKtoR4emZ",
+	"changes": [
+		{
+			"key": "system.roll.melee.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		},
+		{
+			"key": "system.roll.ranged.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		},
+		{
+			"key": "system.roll.spell.advantage.all",
+			"mode": 2,
+			"priority": null,
+			"value": "-1"
+		}
+	],
+	"description": "Disadvantage on Attacks &amp; Spellcasting vs Demons",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Disadvantage on Attacks & Spellcasting vs Demons",
+	"origin": "Compendium.shadowdark.magic-items.Item.hcC1kuGgQ2VdnHmj",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

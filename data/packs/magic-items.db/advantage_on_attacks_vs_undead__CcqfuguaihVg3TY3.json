@@ -1,0 +1,38 @@
+{
+	"_id": "CcqfuguaihVg3TY3",
+	"_key": "!items.effects!SuPwL1LQKe8DdaRq.CcqfuguaihVg3TY3",
+	"changes": [
+		{
+			"key": "system.roll.melee.advantage.this",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
+	"description": "Advantage on attacks vs Undead",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Advantage on attacks vs Undead",
+	"origin": "Compendium.shadowdark.magic-items.Item.SuPwL1LQKe8DdaRq",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

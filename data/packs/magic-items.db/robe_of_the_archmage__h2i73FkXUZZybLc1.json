@@ -1,0 +1,48 @@
+{
+	"_id": "h2i73FkXUZZybLc1",
+	"_key": "!items!h2i73FkXUZZybLc1",
+	"effects": [
+		"2O1rrQbpFSYKLiI8"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/back/cloak-collared-red-gold.webp",
+	"name": "Robe of the Archmage",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 15,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A red silk robe with a wide, gold-hemmed mantle. Golden eyes and moons dust its sleeves.</em></p><p><strong>Benefit.</strong> Only a wizard with the Archmage title can wear this robe. </p><p>Your unarmored AC becomes 15 plus your Dexterity modifier. </p><p>Choose three spells you know. Their spellcasting DC is always 11. </p><p>You have advantage on casting the disintegrate spell.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

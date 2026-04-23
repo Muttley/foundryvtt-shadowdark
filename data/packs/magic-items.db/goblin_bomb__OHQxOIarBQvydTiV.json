@@ -1,0 +1,51 @@
+{
+	"_id": "OHQxOIarBQvydTiV",
+	"_key": "!items!OHQxOIarBQvydTiV",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/thrown/bomb-fuse-black.webp",
+	"name": "Goblin Bomb",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A preserved rat stuffed with an explosive charge and a fuse.</em></p><p><strong>Benefit.</strong> You can light the bomb's fuse and throw it a near distance. It explodes in [[/r 1d4]] rounds, dealing [[/r 2d8]] damage to everything in near range.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}
