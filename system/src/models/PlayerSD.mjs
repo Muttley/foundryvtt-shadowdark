@@ -438,7 +438,7 @@ export default class PlayerSD extends ActorBaseSD {
 		this._calcDamageConfig(weapon,
 			config,
 			config.attack.type,
-			item.system.getDamageFormula(config.attack.handedness));
+			weapon.system.getDamageFormula(config.attack.handedness));
 		this._calcAttackExtraConfig(weapon, config);
 
 		return config;
