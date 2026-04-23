@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "damage",
 		"description": "<p>A wavering ray of silvery moonlight strikes one creature within far. It takes 3d6 damage.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
-		"formula": "3d6",
 		"lost": false,
 		"properties": [
 		],

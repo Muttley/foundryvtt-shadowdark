@@ -1,63 +1,63 @@
 {
 	"_id": "GJXEM96MY9ydNQ47",
 	"_key": "!items.effects!eJHwfYQZ9LmLQeSn.GJXEM96MY9ydNQ47",
-	"changes": [
-		{
-			"key": "system.abilities.str.value",
-			"mode": 2,
-			"priority": null,
-			"value": "0"
-		},
-		{
-			"key": "system.abilities.int.value",
-			"mode": 2,
-			"priority": null,
-			"value": "0"
-		},
-		{
-			"key": "system.abilities.wis.value",
-			"mode": 2,
-			"priority": null,
-			"value": "0"
-		},
-		{
-			"key": "system.abilities.con.value",
-			"mode": 2,
-			"priority": null,
-			"value": "0"
-		},
-		{
-			"key": "system.abilities.cha.value",
-			"mode": 2,
-			"priority": null,
-			"value": "0"
-		},
-		{
-			"key": "system.abilities.dex.value",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "abilityImprovement",
 	"origin": "Item.6iZplEBazA2f66A3",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.str.value",
+				"priority": null,
+				"type": "add",
+				"value": 0
+			},
+			{
+				"key": "system.abilities.int.value",
+				"priority": null,
+				"type": "add",
+				"value": 0
+			},
+			{
+				"key": "system.abilities.wis.value",
+				"priority": null,
+				"type": "add",
+				"value": 0
+			},
+			{
+				"key": "system.abilities.con.value",
+				"priority": null,
+				"type": "add",
+				"value": 0
+			},
+			{
+				"key": "system.abilities.cha.value",
+				"priority": null,
+				"type": "add",
+				"value": 0
+			},
+			{
+				"key": "system.abilities.dex.value",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

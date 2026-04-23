@@ -1,27 +1,27 @@
 {
 	"_id": "rEjr6iPhgVuFTCWl",
 	"_key": "!items.effects!OL2kOP05K96L9JV9.rEjr6iPhgVuFTCWl",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/perception/hand-eye-pink.webp",
 	"name": "Condition: Possessed",
 	"origin": "Item.OL2kOP05K96L9JV9",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

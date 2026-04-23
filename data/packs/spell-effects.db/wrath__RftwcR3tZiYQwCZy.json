@@ -1,39 +1,39 @@
 {
 	"_id": "RftwcR3tZiYQwCZy",
 	"_key": "!items.effects!pKu2XsypNq65vkbV.RftwcR3tZiYQwCZy",
-	"changes": [
-		{
-			"key": "system.roll.melee.bonus.all",
-			"mode": 2,
-			"priority": null,
-			"value": "2"
-		},
-		{
-			"key": "system.roll.ranged.bonus.all",
-			"mode": 2,
-			"priority": null,
-			"value": "2"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 10,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 10
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
 	"name": "Wrath",
 	"origin": "Item.xOHpjBx4PhrNXQ4U",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.melee.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 2
+			},
+			{
+				"key": "system.roll.ranged.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 2
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

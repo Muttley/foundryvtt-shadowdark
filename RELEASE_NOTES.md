@@ -21,7 +21,6 @@
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 - [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
 
-
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
 - [#1107] Handaxe Price Correction
@@ -57,6 +56,12 @@
 - [#1225] TableResult#documentId is deprecated. Consult TableResult#uuid instead
 - [#1229] Update Active Effects drop handlers that use the REPLACEME placeholder to trigger configuration to use new AE schema
 - [#1230] Merge German translation updates from Crowdin
+- [#1233] Make required Shadowdarklings import changes
+
+	* Original "Bard" renamed to "Bard (Legacy)" but Shadowdarklings still refers to it as "Bard" in JSON
+	* New CS6 Bard will be named "Bard (CS6)" in JSON, but just "Bard" in interface.
+	* We can now map incoming class names to new ones if required.
+
 - [#1237] Merge Spanish translation updates from Crowdin
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*

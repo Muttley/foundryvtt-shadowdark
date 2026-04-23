@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "none",
 		"description": "<p>One creature of LV 3 or less that can see you is rendered stupefied.</p><p>Breaking the creature's line of sight to you allows it to make a [[check 15 cha]] check. On a success, the spell ends.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.6wfBZBYV85NQTcJz]{Spell Effect: Hypnotize}</p>",
 		"duration": {
 			"type": "focus",
 			"value": "1"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],

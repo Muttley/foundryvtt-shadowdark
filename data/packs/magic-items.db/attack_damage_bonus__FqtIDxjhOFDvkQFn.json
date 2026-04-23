@@ -1,33 +1,33 @@
 {
 	"_id": "FqtIDxjhOFDvkQFn",
 	"_key": "!items.effects!jEeDexWHYy7wKsfa.FqtIDxjhOFDvkQFn",
-	"changes": [
-		{
-			"key": "system.roll.attack.damage.this",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
-	],
 	"description": "Attack Damage Bonus",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "Attack Damage Bonus",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.damage.this",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": false,

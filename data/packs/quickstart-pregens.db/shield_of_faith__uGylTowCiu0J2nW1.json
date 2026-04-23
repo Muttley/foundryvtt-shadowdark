@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"damageType": "none",
 		"description": "<p>A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.</p><p>@UUID[Compendium.shadowdark.spell-effects.4dCcpPeyRKWt9XkC]{Spell Effect: Shield of Faith}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],
