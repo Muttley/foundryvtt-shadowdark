@@ -1,5 +1,13 @@
 export default class ItemSD extends foundry.documents.Item {
 
+	static migrateData(data) {
+		// migrate legacy Scolls and Wands
+		if (["Scroll", "Wand"].includes(data.type) && data.system?.spellName) {
+			foundry.utils.setProperty(data, "flags.shadowdark.legacyData", foundry.utils.deepClone(data.system));
+		}
+		return super.migrateData(data);
+	}
+
 	get typeSlug() {
 		return this.type.slugify();
 	}
