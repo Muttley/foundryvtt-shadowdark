@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>Your skin becomes like granite. For the spell's duration, your armor class becomes 17 (20 on a critical spellcasting check).</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.deNtIVyGoXaDPrmJ]{Spell Effect: Stoneskin}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.5rK6guXTllcryhLv]{Spell Effect: Stoneskin (Critical)}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

@@ -265,12 +265,15 @@ export async function rollFromConfig(config) {
 	const mainRoll = await roll(config.mainRoll, actor.getRollData());
 	rolls.push(mainRoll);
 
-	if (mainRoll.success && config?.damageRoll?.formula) {
-		// await rollDamageFromMessage(message);
-		config.damageRoll.needed = true;
-	}
-	else if (!config.targetUuid && config?.damageRoll?.formula) {
-		config.damageRoll.needed = true;
+	// Is a damage roll needed?
+	if (config?.damageRoll?.formula) {
+		// Default: damage on success only
+		let needsDamage = mainRoll.success;
+
+		// Weapon: damage on success, or if no target selected
+		if ( config.attack && !config.targetUuid) needsDamage = true;
+
+		config.damageRoll.needed = needsDamage;
 	}
 
 	// render roll

@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>You teleport yourself and up to one other willing creature within close to any point you can see.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

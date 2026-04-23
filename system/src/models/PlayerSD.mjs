@@ -268,32 +268,7 @@ export default class PlayerSD extends ActorBaseSD {
 		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
 		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
-		// attack critical threshold
-		const critThresholdKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.critical-success`,
-			20,
-			weapon,
-			config
-		);
-		config.mainRoll.criticalSuccessAt = critThresholdKey.value;
-
-		// attack failure threshold
-		const failThresholdKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.critical-failure`,
-			1,
-			weapon,
-			config
-		);
-		config.mainRoll.criticalFailureAt = failThresholdKey.value;
-
-		// critical Multiplier
-		const critMultiplierKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.critical-multiplier`,
-			2,
-			weapon,
-			config
-		);
-		config.mainRoll.criticalMultiplier = critMultiplierKey.value;
+		const critTooltips = this._calcCriticalConfig(weapon, config, config.attack.type);
 
 		// calculate attack advantage
 		const rollKeyAdv = this._getActiveEffectKeys(
@@ -308,29 +283,50 @@ export default class PlayerSD extends ActorBaseSD {
 		const tooltips = [];
 		tooltips.push(abilityBonus.tooltip);
 		tooltips.push(attackRollKey.tooltips);
-		tooltips.push(critThresholdKey.tooltips);
-		tooltips.push(failThresholdKey.tooltips);
-		tooltips.push(critMultiplierKey.tooltips);
+		tooltips.push(...critTooltips);
 		tooltips.push(rollKeyAdv.tooltips);
 		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 	}
 
+	// Common to both weapon and spell attacks.
+	_calcCriticalConfig(item, config, key) {
+
+		const critSuccess = this._getActiveEffectKeys(
+			`roll.${key}.critical-success`, 20, item, config
+		);
+		const critFailure = this._getActiveEffectKeys(
+			`roll.${key}.critical-failure`, 1, item, config
+		);
+		const critMultiplier = this._getActiveEffectKeys(
+			`roll.${key}.critical-multiplier`, 2, item, config
+		);
+
+		config.mainRoll.criticalSuccessAt = critSuccess.value;
+		config.mainRoll.criticalFailureAt = critFailure.value;
+		config.mainRoll.criticalMultiplier = critMultiplier.value;
+
+		return [critSuccess.tooltips, critFailure.tooltips, critMultiplier.tooltips];
+	}
+
 	/**
-	 * add damage deatils to data based on weapon details and AEs
-	 * @param {*} weapon a valid weapon item
+	 * Add a damage roll to rollConfig object based on item details and AEs
+	 * @param {*} item a valid weapon or spell item
 	 * @param {*} config existing roll data object
+	 * @param {*} key Rollkey base
+	 * @param {*} base base damage formula
 	 */
-	_calcAttackDamageConfig(weapon, config) {
+	_calcDamageConfig(item, config, key, base=1) {
+
 		config.damageRoll ??= {};
 		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
-		config.damageRoll.base = weapon.system.getDamageFormula(config.attack.handedness);
+		config.damageRoll.base = base;
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.upgrade-damage-die`,
+			`roll.${key}.upgrade-damage-die`,
 			0,
-			weapon,
+			item,
 			config
 		);
 		if (damageDieRollKey.value) {
@@ -343,9 +339,9 @@ export default class PlayerSD extends ActorBaseSD {
 		// Get roll key extra dice
 		let baseDamageValue = config.damageRoll.base;
 		const extraDieRollKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.extra-damage-die`,
+			`roll.${key}.extra-damage-die`,
 			0,
-			weapon,
+			item,
 			config
 		);
 		if (extraDieRollKey.value) {
@@ -355,9 +351,9 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// Get damage formula and bonuses from Rolls keys
 		const damageRollKey = this._getActiveEffectKeys(
-			`roll.${config.attack.type}.damage`,
+			`roll.${key}.damage`,
 			baseDamageValue,
-			weapon,
+			item,
 			config
 		);
 		config.damageRoll.formula = damageRollKey.value;
@@ -439,7 +435,10 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// calulate attack config
 		this._calcAttackMainConfig(weapon, config);
-		this._calcAttackDamageConfig(weapon, config);
+		this._calcDamageConfig(weapon,
+			config,
+			config.attack.type,
+			item.system.getDamageFormula(config.attack.handedness));
 		this._calcAttackExtraConfig(weapon, config);
 
 		return config;
@@ -454,6 +453,17 @@ export default class PlayerSD extends ActorBaseSD {
 		config.cast.ability ??= "int";
 		config.cast.range = spell.system.range;
 		config.cast.duration = spell.system?.duration;
+		config.cast.damageType = spell.system?.damageType;
+
+		// Does the spell need a damage roll?
+		let formula = spell.system?.formula?.trim();
+		if (formula && spell.system.damageType !== "none") {
+			this._calcDamageConfig(spell, config, "spell", formula);
+			if (config.cast.damageType === "healing") {
+				config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.healing");
+				config.damageRoll.type = "healing";
+			}
+		}
 
 		config.descriptions = [];
 		config.descriptions.push(spell.system?.description);
@@ -481,9 +491,13 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		config.mainRoll.advantage = spellAdvKey.value;
 
+		// calculate spell crit modifiers
+		const critTooltips = this._calcCriticalConfig(spell, config, "spell");
+
 		// generate tooltips
 		const tooltips = [];
 		tooltips.push(spellRollKey.tooltips);
+		tooltips.push(...critTooltips);
 		tooltips.push(spellAdvKey.tooltips);
 		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
 	}
@@ -826,7 +840,7 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 		else if (spellClass !== "__not_spellcaster__") {
 			playerSpellClasses.push(
-				await this.shadowdark.utils.getFromUuid(spellClass)
+				await shadowdark.utils.getFromUuid(spellClass)
 			);
 		}
 

@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>You conjure an invisible, grapesized eye within range. </p><p>You can see through the eye. It can see in the dark out to near range, fly near on your turn, and squeeze through openings as narrow as a keyhole.</p>",
 		"duration": {
 			"type": "focus",
 			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

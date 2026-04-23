@@ -432,6 +432,13 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
+	spellDamageBonus: {
+		defaultValue: 1,
+		effectKey: "system.roll.spell.damage",
+		img: "icons/magic/lightning/orb-ball-blue.webp",
+		name: "SHADOWDARK.item.effect.predefined_effect.spellDamageBonus",
+		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+	},
 	stoneSkinTalent: {
 		defaultValue: "2+floor(@level.value/2)",
 		effectKey: "system.attributes.ac.value",
@@ -524,6 +531,12 @@ SHADOWDARK.SPELL_RANGES = {
 	oneMile: "SHADOWDARK.range.oneMile",
 	samePlane: "SHADOWDARK.range.samePlane",
 	unlimited: "SHADOWDARK.range.unlimited",
+};
+
+SHADOWDARK.SPELL_DAMAGE_TYPES = {
+	none: "SHADOWDARK.spell_damage.types.none",
+	damage: "SHADOWDARK.spell_damage.types.damage",
+	healing: "SHADOWDARK.spell_damage.types.healing",
 };
 
 SHADOWDARK.TALENT_CLASSES = {

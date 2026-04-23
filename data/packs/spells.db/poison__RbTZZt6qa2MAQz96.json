@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "damage",
 		"description": "<p>One worn or carried object you touch becomes toxic for the spell's duration. Any creature in contact with the object at the start of its turn takes 1d6 damage.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
+		"formula": "1d6",
 		"lost": false,
 		"properties": [
 		],

@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>One creature you touch of LV 9 or less dies. </p><p>Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

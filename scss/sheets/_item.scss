@@ -1,5 +1,4 @@
 .shadowdark.item {
-
 	min-width: 550px;
 
 	.effect-list-changes {
@@ -17,17 +16,17 @@
 		}
 
 		input {
-			height:auto;
+			height: auto;
 		}
 	}
 
 	.properties-list {
 		height: 26px;
-   		background-color: var(--form-background);
+		background-color: var(--form-background);
 		line-height: 1.75;
 	}
 
-	.tab-description.active{
+	.tab-description.active {
 		height: 100%;
 		display: grid;
 		grid-template-rows: 30px 1fr;
@@ -35,5 +34,9 @@
 
 	.tab-identify .grid-2-columns {
 		margin: 8px 0;
+	}
+
+	select:disabled {
+		opacity: 50%;
 	}
 }

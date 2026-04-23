@@ -10,6 +10,7 @@
 - [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identified *(deukalion)*
 - [#1147] Improvements to Token Ring functionality and HP change animation *(Henry Malinowski)*
 - [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1157] Spells now support rolling for damage and healing *(deukalion)*
 - [#1178] Add Renown value to player sheets
 - [#1182] Unequipped armor no longer applies Active Effects
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
