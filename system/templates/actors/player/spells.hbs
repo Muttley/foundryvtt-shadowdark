@@ -41,8 +41,7 @@
 										{{/if}}
 										<a
 											data-action="cast-spell"
-											data-item-id="{{spell._id}}"
-											data-item-uuid="{{spell.uuid}}"
+											data-spell-uuid="{{spell.uuid}}"
 											data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.cast_spell'}}"
 										>
 											<i class="fa-solid fa-hand-sparkles"></i>
@@ -83,37 +82,37 @@
 						<div class="actions"></div>
 					</li>
 
-				{{#each spellitems.wands as |item|}}
+				{{#each spellitems.wands}}
 
-					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
-						<div class="item-image" style="background-image: url({{item.img}})">
+					<li class="item" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
+						<div class="item-image" style="background-image: url({{this.spell.img}})">
 							<i class="fas fa-comment fa-lg"></i>
 						</div>
-						<a class="item-name {{#if item.system.lost}}strike-through{{/if}}" data-action="show-details">
-							{{item.system.spellName}}
+						<a class="item-name {{#if this.lost}}strike-through{{/if}}" data-action="show-details">
+							{{this.spell.name}}
 						</a>
 						<div class="duration">
-							{{getSpellDuration item.system.duration.type item.system.duration.value}}
+							{{getSpellDuration this.spell.system.duration.type this.spell.system.duration.value}}
 						</div>
 						<div class="range">
-							{{fromConfig "SPELL_RANGES" item.system.range}}
+							{{fromConfig "SPELL_RANGES" this.spell.system.range}}
 						</div>
 						<div class="actions">
-							{{#if (eq item.system.duration.type 'focus')}}
+							{{#if (eq this.spell.system.duration.type 'focus')}}
 								<a
 									data-action="focus-spell"
-									data-item-id="{{item._id}}"
-									data-item-uuid="{{spell.uuid}}"
+									data-item-id="{{this.item._id}}"
+									data-item-uuid="{{this.item.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 								>
 									<i class="fa-solid fa-brain"></i>
 								</a>
 							{{/if}}
-							{{#unless item.system.lost}}
+							{{#unless this.lost}}
 								<a
 									data-action="cast-spell"
-									data-item-id="{{item._id}}"
-									data-item-uuid="{{spell.uuid}}"
+									data-spell-uuid="{{this.spell.uuid}}"
+									data-item-uuid="{{this.item.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_wand'}}"
 								>
 									<i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -122,11 +121,11 @@
 							{{/unless}}
 							<a
 								data-action="toggle-lost"
-								data-item-id="{{item._id}}"
-								data-item-uuid="{{spell.uuid}}"
+								data-item-id="{{this.item._id}}"
+								data-wand-spell-uuid="{{this.spell.uuid}}"
 								data-tooltip="{{localize "SHADOWDARK.sheet.player.toggle_spell_lost"}}"
 							>
-								{{#if item.system.lost}}
+								{{#if this.lost}}
 									<i style="color:red;" class="fa-solid fa-xmark"></i>
 								{{else}}
 									<i class="fa-solid fa-check"></i>
@@ -147,26 +146,26 @@
 						<div class="actions"></div>
 					</li>
 
-				{{#each spellitems.scrolls as |item|}}
-					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
-						<div class="item-image" style="background-image: url({{item.system.spellImg}})">
+				{{#each spellitems.scrolls}}
+					<li class="item" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
+						<div class="item-image" style="background-image: url({{this.spell.img}})">
 							<i class="fas fa-comment fa-lg"></i>
 						</div>
-						<a class="item-name {{#if spell.system.lost}}strike-through{{/if}}" data-action="show-details">
-							{{item.system.spellName}}
+						<a class="item-name {{#if this.item.system.lost}}strike-through{{/if}}" data-action="show-details">
+							{{this.spell.name}}
 						</a>
 						<div class="duration">
-							{{getSpellDuration item.system.duration.type item.system.duration.value}}
+							{{getSpellDuration this.spell.system.duration.type this.spell.system.duration.value}}
 						</div>
 						<div class="range">
-							{{fromConfig "SPELL_RANGES" item.system.range}}
+							{{fromConfig "SPELL_RANGES" this.spell.system.range}}
 						</div>
 						<div class="actions">
-								{{#if (eq item.system.duration.type 'focus')}}
+								{{#if (eq this.spell.system.duration.type 'focus')}}
 									<a
 										data-action="focus-spell"
-										data-item-id="{{item._id}}"
-										data-item-uuid="{{spell.uuid}}"
+										data-item-id="{{this.item._id}}"
+										data-item-uuid="{{this.item.uuid}}"
 										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 									>
 										<i class="fa-solid fa-brain"></i>
@@ -174,8 +173,8 @@
 								{{/if}}
 								<a
 									data-action="cast-spell"
-									data-item-id="{{item._id}}"
-									data-item-uuid="{{spell.uuid}}"
+									data-spell-uuid="{{this.item.system.spellUuid}}"
+									data-item-uuid="{{this.item.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_scroll'}}"
 								>
 									<i class="fa-solid fa-scroll"></i>
@@ -183,8 +182,8 @@
 								{{#if ../isSpellCaster}}
 									<a
 										data-action="learn-spell"
-										data-item-id="{{item._id}}"
-										data-item-uuid="{{spell.uuid}}"
+										data-item-id="{{this.item._id}}"
+										data-item-uuid="{{this.item.uuid}}"
 										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.learn_spell'}}"
 									>
 										<i class="fa-solid fa-graduation-cap"></i>

@@ -101,7 +101,6 @@ export default function() {
 		"systems/shadowdark/templates/items/_partials/item-properties/treasure.hbs",
 		"systems/shadowdark/templates/items/_partials/slots.hbs",
 		"systems/shadowdark/templates/items/_partials/source-tab.hbs",
-		"systems/shadowdark/templates/items/_partials/spell.hbs",
 		"systems/shadowdark/templates/items/_partials/unidentified.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/character-generator.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/languages.hbs",

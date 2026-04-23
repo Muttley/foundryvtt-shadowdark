@@ -18,6 +18,7 @@
 - [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
 - [#1200] Added Mac Command key support for fast-forward rolls *(Brittonlj)*
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
+- [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
 
 
 ## Bugfixes

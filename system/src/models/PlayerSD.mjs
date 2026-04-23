@@ -548,6 +548,14 @@ export default class PlayerSD extends ActorBaseSD {
 	}
 
 	async _learnSpell(item) {
+
+		const linkedSpell = await fromUuid(item.system?.spellUuid);
+		if (!linkedSpell) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.scroll.spell_not_set")
+			);
+		}
+
 		const characterClass = await this.getClass();
 
 		const spellcastingAttribute =
@@ -568,7 +576,7 @@ export default class PlayerSD extends ActorBaseSD {
 			messageType,
 			{
 				name: this.parent.name,
-				spellName: item.system.spellName,
+				spellName: linkedSpell?.name,
 			}
 		);
 
@@ -596,21 +604,8 @@ export default class PlayerSD extends ActorBaseSD {
 			user: game.user.id,
 		});
 
-		if (checkRoll.success) {
-			const spell = {
-				type: "Spell",
-				img: item.system.spellImg,
-				name: item.system.spellName,
-				system: {
-					class: item.system.class,
-					description: item.system.description,
-					duration: item.system.duration,
-					range: item.system.range,
-					tier: item.system.tier,
-				},
-			};
-
-			this.parent.createEmbeddedDocuments("Item", [spell]);
+		if (checkRoll.success && linkedSpell) {
+			this.parent.createEmbeddedDocuments("Item", [linkedSpell.toObject()]);
 		}
 
 		// original scroll always lost regardless of outcome
@@ -680,6 +675,10 @@ export default class PlayerSD extends ActorBaseSD {
 			return;
 		}
 
+		const triggeringItem = config.cast?.item
+			? await fromUuid(config.cast.item)
+			: null;
+
 		config.actorId = this.parent.id;
 		config.itemUuid = spellUuid;
 
@@ -706,7 +705,20 @@ export default class PlayerSD extends ActorBaseSD {
 		// Call player cast spell hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Spell", config)) return false;
 
-		const roll = shadowdark.dice.rollFromConfig(config);
+		const roll = await shadowdark.dice.rollFromConfig(config);
+
+		if (triggeringItem?.system.isScroll) {
+			triggeringItem.delete();
+		}
+		else if (triggeringItem?.system.isWand) {
+			if (roll.criticalFailure) {
+				triggeringItem.update({"system.broken": true});
+			}
+			else if (!roll.success) {
+				triggeringItem.system.toggleSpellLost(spellUuid);
+			}
+		}
+
 		return roll.success;
 	}
 
@@ -905,9 +917,10 @@ export default class PlayerSD extends ActorBaseSD {
 	async learnSpell(itemId) {
 		const item = this.parent.items.get(itemId);
 
-		const correctSpellClass = item.system.class.includes(
-			this.class
-		);
+		const linkedSpell = await fromUuid(item.system.spellUuid);
+
+		const spellClass = linkedSpell?.system?.class ?? [];
+		const correctSpellClass = spellClass.includes(this.class);
 
 		if (!correctSpellClass) {
 			renderTemplate(

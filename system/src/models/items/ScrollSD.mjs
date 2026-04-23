@@ -1,4 +1,3 @@
-import * as itemfields from "../_fields/itemFields.mjs";
 import { PhysicalItemSD } from "./_PhysicalItemSD.mjs";
 
 const fields = foundry.data.fields;
@@ -6,17 +5,22 @@ const fields = foundry.data.fields;
 export default class ScrollSD extends PhysicalItemSD {
 	static defineSchema() {
 		const schema = {
-			...itemfields.magic(),
-			magicItem: new fields.BooleanField({initial: true}),
-			spellImg: new fields.StringField(),
-			spellName: new fields.StringField(),
-			tier: new fields.NumberField({ integer: true, initial: 1, min: 0 }),
+			spellUuid: new fields.DocumentUUIDField(),
 		};
 
 		return Object.assign(super.defineSchema(), schema);
 	}
 
+	prepareBaseData() {
+		super.prepareBaseData();
+		this.magicItem = true;
+	}
+
 	get isRollable() {
+		return true;
+	}
+
+	get isScroll() {
 		return true;
 	}
 }
