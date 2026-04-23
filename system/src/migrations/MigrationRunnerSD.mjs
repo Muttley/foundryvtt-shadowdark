@@ -79,7 +79,7 @@ export default class MigrationRunnerSD {
 						for (const [item, validItem] of items) {
 							const itemSource = validItem
 								? item.toObject()
-								: doc.items.find(a => a._id === item.id);
+								: item._source;
 
 							const updateData = await this.currentMigrationTask.updateItem(
 								itemSource,
@@ -206,7 +206,7 @@ export default class MigrationRunnerSD {
 				for (const [item, validItem] of items) {
 					const itemSource = validItem
 						? item.toObject()
-						: actor.items.find(a => a._id === item.id);
+						: item._source;
 
 					const updateData = await this.currentMigrationTask.updateItem(
 						itemSource,
@@ -237,7 +237,7 @@ export default class MigrationRunnerSD {
 			try {
 				const source = valid
 					? item.toObject()
-					: game.items.find(a => a._id === item.id);
+					: item._source;
 
 				const updateData = await this.currentMigrationTask.updateItem(source);
 
@@ -312,7 +312,9 @@ export default class MigrationRunnerSD {
 			if (this.currentVersion < migration.version) {
 				this.currentMigrationTask = migration;
 
+				console.log(`Migration Scema version to ${this.currentVersion}`);
 				await this.migrateWorld();
+				console.log(`Migration Complete for ${this.currentVersion} to ${migration.version}`);
 
 				game.settings.set("shadowdark", "schemaVersion", migration.version);
 			}

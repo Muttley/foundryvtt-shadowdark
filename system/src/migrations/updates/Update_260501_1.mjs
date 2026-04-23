@@ -1,53 +1,24 @@
 import { UpdateBaseSD } from "../UpdateBaseSD.mjs";
 
-export default class Update_251001_1 extends UpdateBaseSD {
-	static version = 251001.1;
+export default class Update_260501_1 extends UpdateBaseSD {
+	static version = 260501.1;
 
 	NEW_KEYS = [
+
 		"system.abilities.cha.value",
 		"system.abilities.con.value",
 		"system.abilities.dex.value",
 		"system.abilities.int.value",
 		"system.abilities.str.value",
 		"system.abilities.wis.value",
-		"system.attributes.ac.unarmored",
-		"system.attributes.ac.value",
+		"system.attributes.ac.",
 		"system.attributes.hp.max",
 		"system.attributes.hp.value",
-		"system.roll.attack.bonus.all",
-		"system.roll.attack.bonus.this",
-		"system.roll.attack.critical-failure.all",
-		"system.roll.attack.critical-failure.this",
-		"system.roll.attack.critical-multiplier.all",
-		"system.roll.attack.critical-multiplier.this",
-		"system.roll.attack.critical-success.all",
-		"system.roll.attack.critical-success.this",
-		"system.roll.attack.damage.all",
-		"system.roll.attack.damage.this",
-		"system.roll.attack.extra-damage-die.all",
-		"system.roll.hp.advantage",
-		"system.roll.initiative.advantage",
-		"system.roll.initiative.bonus",
-		"system.roll.melee.bonus.all",
-		"system.roll.melee.bonus.this",
-		"system.roll.melee.damage.all",
-		"system.roll.melee.damage.this",
-		"system.roll.ranged.bonus.all",
-		"system.roll.ranged.bonus.this",
-		"system.roll.ranged.damage.all",
-		"system.roll.ranged.damage.this",
-		"system.roll.spell.advantage.all",
+		"system.bonus.",
+		"system.roll.",
 		"system.slots",
 		"system.spellcastingClasses",
-		"system.attributes.ac.",
-		"system.roll.attack.extra-damage-die.",
-		"system.roll.attack.upgrade-damage-die.",
-		"system.roll.attack.upgrade-damage-die.",
-		"system.roll.melee.bonus.",
-		"system.roll.melee.damage.",
-		"system.roll.spell.advantage.",
-		"system.roll.stat.advantage.",
-		"system.roll.stat.bonus.",
+
 	];
 
 	async updateActor(actorData) {
@@ -60,6 +31,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 	}
 
 	async updateItem(itemData, actorData) {
+		if (!itemData) return {};
 		let updateData = {};
 		updateData.effects = await this.updateEffects(itemData.effects, itemData.type);
 
@@ -120,8 +92,6 @@ export default class Update_251001_1 extends UpdateBaseSD {
 		for (const effect of effects) {
 			for (const change of effect.changes) {
 				switch (change.key) {
-
-					// TODO add more migration cases
 
 					case "system.bonuses.advantage":
 
@@ -371,6 +341,25 @@ export default class Update_251001_1 extends UpdateBaseSD {
 						change.value = 1;
 						continue;
 
+					case "system.bonuses.spellcastingClasses":
+						change.key = "system.spellcastingClasses";
+						continue;
+
+					case "system.attackBonus":
+						change.key = "system.roll.attack.bonus";
+						change.key += (parentType === "Weapon") ? ".this" : ".all";
+						continue;
+
+					case "system.damage.bonus":
+						change.key = "system.roll.attack.damage";
+						change.key += (parentType === "Weapon") ? ".this" : ".all";
+						continue;
+
+					case "system.damage.critMultiplier":
+						change.key = "system.roll.attack.critical-multiplier";
+						change.key += (parentType === "Weapon") ? ".this" : ".all";
+						continue;
+
 					default:
 						// Make sure we're not trying to migrate an effect which
 						// is already using the correct key
@@ -386,7 +375,7 @@ export default class Update_251001_1 extends UpdateBaseSD {
 							continue;
 						}
 						else {
-							throw Error(`No migration path for Active Effect key "${change.key}" with value "${change.value}"`);
+							console.error(`ERROR: No migration path for Active Effect key "${effect.target} > ${effect.name} > ${change.key}" with value "${change.value}"`);
 						}
 				}
 
