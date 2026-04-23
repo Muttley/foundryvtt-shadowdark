@@ -557,14 +557,14 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onCastSpell(event) {
 		event.preventDefault();
 
+		const spellUuid = event.currentTarget.dataset.spellUuid;
 		const itemUuid = event.currentTarget.dataset.itemUuid;
 
-		if (event.shiftKey) {
-			this.actor.system.castSpell(itemUuid, {skipPrompt: true});
-		}
-		else {
-			this.actor.system.castSpell(itemUuid);
-		}
+		const config = {};
+		if (itemUuid) config.cast = { item: itemUuid };
+		if (event.shiftKey) config.skipPrompt = true;
+
+		this.actor.system.castSpell(spellUuid, config);
 	}
 
 	async _onLearnSpell(event) {
@@ -844,11 +844,18 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				inventory.carried.push(i);
 			}
 
-			if (i.type === "Wand" && i.system.isIdentified) {
-				spellitems.wands.push(i);
+			if (i.system.isWand && i.system.isIdentified && !i.system.broken) {
+				for (const spell of (i.system.spells ?? [])) {
+					if (!spell.uuid) continue;
+					const spellObj = await fromUuid(spell.uuid);
+					if (spellObj) {
+						spellitems.wands.push({item: i, spell: spellObj, lost: spell.lost});
+					}
+				}
 			}
-			if (i.type === "Scroll" && i.system.isIdentified) {
-				spellitems.scrolls.push(i);
+			if (i.system.isScroll && i.system.isIdentified) {
+				const spellObj = await fromUuid(i.system.spellUuid);
+				spellitems.scrolls.push({item: i, spell: spellObj});
 			}
 
 		}

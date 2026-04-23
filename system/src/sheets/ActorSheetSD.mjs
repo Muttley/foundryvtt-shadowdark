@@ -297,13 +297,19 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		event.preventDefault();
 		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
+		const wandSpellUuid = event.currentTarget.dataset.wandSpellUuid;
 
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				"_id": itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
+		if (wandSpellUuid) {
+			item.system.toggleSpellLost(wandSpellUuid);
+		}
+		else {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					"_id": itemId,
+					"system.lost": !item.system.lost,
+				},
+			]);
+		}
 	}
 
 	async _onItemCreate(event) {
