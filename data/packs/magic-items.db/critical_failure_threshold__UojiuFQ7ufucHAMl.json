@@ -1,33 +1,33 @@
 {
 	"_id": "UojiuFQ7ufucHAMl",
 	"_key": "!items.effects!w3UsdCcYKnwcAgbH.UojiuFQ7ufucHAMl",
-	"changes": [
-		{
-			"key": "system.roll.attack.critical-failure.all",
-			"mode": 5,
-			"priority": null,
-			"value": "3"
-		}
-	],
 	"description": "Critical Failure Threshold",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/life/cross-area-circle-green-white.webp",
 	"name": "Critical Failure Threshold",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.critical-failure.all",
+				"priority": null,
+				"type": "override",
+				"value": 3
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

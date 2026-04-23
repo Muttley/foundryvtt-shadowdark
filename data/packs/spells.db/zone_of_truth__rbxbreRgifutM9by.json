@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"damageType": "none",
 		"description": "<p>You compel a creature you can see to speak truth. It can’t utter a deliberate lie while within range.</p><p>@UUID[Compendium.shadowdark.spell-effects.cL5aPfXcad9FtHoK]{Spell Effect: Zone of Truth}</p>",
 		"duration": {
 			"type": "focus",
 			"value": "1"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],

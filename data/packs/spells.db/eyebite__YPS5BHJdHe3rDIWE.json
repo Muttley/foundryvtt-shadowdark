@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "damage",
 		"description": "<p>One creature you target takes 1d4 damage, and it can't see you until the end of its next turn.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.0RrksUfAZkp4LpGe]{Spell Effect: Eyebite}</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
-		"formula": "1d4",
 		"lost": false,
 		"properties": [
 		],

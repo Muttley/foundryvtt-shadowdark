@@ -1,33 +1,33 @@
 {
 	"_id": "O8bVaWHv6gSA7mPq",
 	"_key": "!items.effects!ov1K3L3kuKj8hCUG.O8bVaWHv6gSA7mPq",
-	"changes": [
-		{
-			"key": "system.abilities.str.value",
-			"mode": 5,
-			"priority": null,
-			"value": "3"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/unholy/strike-hand-glow-pink.webp",
 	"name": "Permanent Ability (Str)",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.str.value",
+				"priority": null,
+				"type": "override",
+				"value": 3
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

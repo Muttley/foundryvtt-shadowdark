@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
-		"damageType": "none",
 		"description": "<p>One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.</p><p>@UUID[Compendium.shadowdark.gear.Item.PkQXG3AaHNMVwGTc]{Light Spell}</p><p>@UUID[Compendium.shadowdark.gear.Item.BBDG7QpHOFXG6sKe]{Light Spell (Double Range)}</p><p>@UUID[Compendium.shadowdark.gear.Item.rjNBToTJCYLLdVcT]{Light Spell (Double Time)}</p>",
 		"duration": {
 			"type": "realTime",
 			"value": "1h"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],

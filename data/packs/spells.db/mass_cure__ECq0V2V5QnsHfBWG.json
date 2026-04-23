@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"damageType": "healing",
 		"description": "<p>All allies within near range of you regain 2d6 hit points.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
-		"formula": "2d6",
 		"lost": false,
 		"properties": [
 		],

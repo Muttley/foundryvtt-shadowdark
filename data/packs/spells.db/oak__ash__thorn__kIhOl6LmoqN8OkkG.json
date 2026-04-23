@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "none",
 		"description": "<p>For the spell’s duration, faeries, demons, and devils can't attack you. These beings also can’t possess, compel, or beguile you.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.88nOOPKvH7t6mhVu]{Spell Effect: Oak, Ash, Thorn}</p>",
 		"duration": {
 			"type": "focus",
 			"value": "1"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],

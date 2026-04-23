@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "none",
 		"description": "<p>A thick cloud of fog blooms in a close area around you, making you hard to see. The cloud moves with you. Attacks against creatures in the cloud have disadvantage.</p>",
 		"duration": {
 			"type": "focus",
 			"value": "1"
 		},
-		"formula": "",
 		"lost": false,
 		"properties": [
 		],

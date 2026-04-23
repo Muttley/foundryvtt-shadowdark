@@ -12,13 +12,11 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
-		"damageType": "healing",
 		"description": "<p>You conjure a plump, speckled toadstool in your hand. It disappears at the end of your next turn. </p><p>A creature that eats the toadstool regains 1d6 hit points.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "1"
 		},
-		"formula": "1d6",
 		"lost": false,
 		"properties": [
 		],
