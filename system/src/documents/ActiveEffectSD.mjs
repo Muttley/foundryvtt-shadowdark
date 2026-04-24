@@ -25,7 +25,7 @@ export default class ActiveEffectSD extends ActiveEffect {
 			);
 
 			// don't apply null values or non-deterministic formulas
-			if (!resolvedFormula) {
+			if (!Number.isInteger(resolvedFormula)) {
 				console.error(
 					"ERROR: Cannot Resolve AE formula to integer:",
 					`${actor?.name} > ${change.effect?.name} > ${change.value}`
