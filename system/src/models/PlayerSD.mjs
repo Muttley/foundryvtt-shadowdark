@@ -446,9 +446,9 @@ export default class PlayerSD extends ActorBaseSD {
 
 	_generateSpellConfig(spell, config={}) {
 		if (!spell.system.isSpell) return;
-		config.itemUuid = spell.uuid;
 
 		config.cast ??= {};
+		config.cast.spellUuid = spell.uuid;
 		config.cast.focus ??= false;
 		config.cast.ability ??= "int";
 		config.cast.range = spell.system.range;
@@ -689,12 +689,8 @@ export default class PlayerSD extends ActorBaseSD {
 			return;
 		}
 
-		const triggeringItem = config.cast?.item
-			? await fromUuid(config.cast.item)
-			: null;
-
 		config.actorId = this.parent.id;
-		config.itemUuid = spellUuid;
+		config.itemUuid ??= spellUuid;
 
 		// get casting ability
 		const castingAbility = await this._getSpellcastingAbility(spell);
@@ -721,7 +717,18 @@ export default class PlayerSD extends ActorBaseSD {
 
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		if (triggeringItem?.system.isScroll) {
+		// After cast actions
+		const triggeringItem = config.itemUuid
+			? await fromUuid(config.itemUuid)
+			: null;
+
+		if (triggeringItem?.system?.isSpell && !roll.success) {
+			if (!config.cast.focus) {
+				console.error("spell lost");
+				triggeringItem.update({"system.lost": true});
+			}
+		}
+		else if (triggeringItem?.system.isScroll) {
 			triggeringItem.delete();
 		}
 		else if (triggeringItem?.system.isWand) {
@@ -732,6 +739,8 @@ export default class PlayerSD extends ActorBaseSD {
 				triggeringItem.system.toggleSpellLost(spellUuid);
 			}
 		}
+
+		// TODO Maybe a Spell Mishap Message?
 
 		return roll.success;
 	}
