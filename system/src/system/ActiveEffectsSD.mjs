@@ -297,19 +297,10 @@ export default class ActiveEffectsSD {
 
 		const a = event.currentTarget;
 		const li = a.closest("li");
-		const effectId = li.dataset.effectId;
 
-		let effect = null;
-		if (owner.documentName === "Actor") {
-			effect = effectId
-				? owner.allApplicableEffects().find(effect => effect.id === effectId)
-				: null;
-		}
-		else if (owner.documentName === "Item") {
-			effect = effectId
-				? owner.effects.find(effect => effect.id === effectId)
-				: null;
-		}
+		const effect = li.dataset.effectUuid
+			? await fromUuid(li.dataset.effectUuid)
+			: null;
 
 		switch (a.dataset.action) {
 			case "create":
