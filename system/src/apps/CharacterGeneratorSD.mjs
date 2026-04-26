@@ -22,7 +22,7 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 			},
 			armor: ["All armor"],
 			classDesc: "",
-			classHP: "1",
+			classHP: "0",
 			classTalents: {
 				choice: [],
 				fixed: [],
@@ -269,6 +269,11 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 				}
 			});
 
+			// load level 0 class talents
+			if (this.formData.level0) {
+				await this._loadClass(this.formData.level0Class.uuid);
+			}
+
 			// load info for an exiting actor
 			if (this.formData.editing) {
 
@@ -390,7 +395,7 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		}
 
 		// Calculate initial HP
-		let hpConMod = this.formData.actor.system.abilities.con.mod + 1;
+		let hpConMod = this.formData.actor.system.abilities.con.mod;
 		if (hpConMod < 1) hpConMod = 1;
 		this.formData.actor.system.attributes.hp.max = hpConMod;
 		this.formData.actor.system.attributes.hp.value = hpConMod;
@@ -445,14 +450,14 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 	async _getClassObject(uuid) {
 		// find the class object from uuid including looking at level0
-		let classObj = {};
+		let classObj = null;
 		if (uuid === this.formData.level0Class.uuid) {
 			classObj = this.formData.level0Class;
 		}
 		else {
 			classObj = await fromUuid(uuid);
 		}
-		return classObj ?? {};
+		return classObj ?? null;
 	}
 
 
@@ -527,23 +532,21 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 
 
 	/**
-	 * loads linked class items when class is selected
+	 * loads linked class items when class is selected. Clears class info if Uuid is missing.
 	 * @param {string} Uuid
 	 */
 	async _loadClass(UuID, randomize) {
 		// find the class object
-		let classObj = await this._getClassObject(UuID);
+		let classObj = UuID ? await this._getClassObject(UuID) : null;
 
 		let talentData = [];
 
 		// grab fixed talents from class item
-		if (classObj.system.talents) {
-			for (const talent of classObj.system.talents) {
-				let talentObj = await fromUuid(talent);
-				let fDesc = await this._formatDescription(talentObj.system.description);
-				talentObj.formattedDescription = fDesc;
-				talentData.push(talentObj);
-			}
+		for (const talent of classObj?.system?.talents ?? []) {
+			let talentObj = await fromUuid(talent);
+			let fDesc = await this._formatDescription(talentObj.system.description);
+			talentObj.formattedDescription = fDesc;
+			talentData.push(talentObj);
 		}
 
 		// sort and save fixed talents
@@ -555,47 +558,42 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		// grab starting class abilities from class item
 		let classAbilityData = [];
 
-		if (classObj.system.classAbilities) {
-			for (const ability of classObj.system.classAbilities) {
-				let abilityObj = await fromUuid(ability);
-				let fDesc = await this._formatDescription(abilityObj.system.description);
-				abilityObj.formattedDescription = fDesc;
-				classAbilityData.push(abilityObj);
-			}
+		for (const ability of classObj?.system?.classAbilities ?? []) {
+			let abilityObj = await fromUuid(ability);
+			let fDesc = await this._formatDescription(abilityObj.system.description);
+			abilityObj.formattedDescription = fDesc;
+			classAbilityData.push(abilityObj);
 		}
 
-		if (classObj.system.classAbilityChoices) {
-			for (const ability of classObj.system.classAbilityChoices) {
-				let classAbilityObj = await fromUuid(ability);
-				let fDesc = await this._formatDescription(classAbilityObj.system.description);
-				classAbilityObj.formattedDescription = fDesc;
-				classAbilityData.push(classAbilityObj);
-			}
+		for (const ability of classObj?.system?.classAbilityChoices ?? []) {
+			let classAbilityObj = await fromUuid(ability);
+			let fDesc = await this._formatDescription(classAbilityObj.system.description);
+			classAbilityObj.formattedDescription = fDesc;
+			classAbilityData.push(classAbilityObj);
 		}
+
 		this.formData.classAbilities = classAbilityData;
 
 		// grab starting spells (e.g. turn undead) from class item
 		let spellData = [];
 
-		if (classObj.system.startingSpells) {
-			for (const spell of classObj.system.startingSpells) {
-				let spellObj = await fromUuid(spell);
-				let fDesc = await this._formatDescription(spellObj.system.description);
-				spellObj.formattedDescription = fDesc;
-				spellData.push(spellObj);
-			}
+		for (const spell of classObj?.system?.startingSpells ?? []) {
+			let spellObj = await fromUuid(spell);
+			let fDesc = await this._formatDescription(spellObj.system.description);
+			spellObj.formattedDescription = fDesc;
+			spellData.push(spellObj);
 		}
+
 		this.formData.startingSpells = spellData;
 
 		// grab choice talents from class item
-		if (classObj.system.talentChoices) {
-			for (const talent of classObj.system.talentChoices) {
-				let talentObj = await fromUuid(talent);
-				let fDesc = await this._formatDescription(talentObj.system.description);
-				talentObj.formattedDescription = fDesc;
-				talentData.push(talentObj);
-			}
+		for (const talent of classObj?.system?.talentChoices ?? []) {
+			let talentObj = await fromUuid(talent);
+			let fDesc = await this._formatDescription(talentObj.system.description);
+			talentObj.formattedDescription = fDesc;
+			talentData.push(talentObj);
 		}
+
 		this.formData.classTalents.choice = talentData;
 		this.formData.classTalents.selection = [];
 
@@ -605,19 +603,19 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		}
 
 		// load hit dice information and randomize HP
-		if (classObj.system.hitPoints) {
+		if (classObj?.system?.hitPoints) {
 			this.formData.classHP = classObj.system.hitPoints;
 		}
 		else {
-			this.formData.classHP = "1";
+			this.formData.classHP = "0";
 		}
 
 		// get armor details
 		let armorData = [];
-		if (classObj.system.allArmor === true) {
+		if (classObj?.system?.allArmor === true) {
 			armorData = ["All armor"];
 		}
-		for (const armor of classObj.system.armor) {
+		for (const armor of classObj?.system?.armor ?? []) {
 			const armorItem = await fromUuid(armor);
 			armorData.push(armorItem.name);
 		}
@@ -626,18 +624,18 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		// get weapon details
 		let weaponData = [];
 		switch (true) {
-			case classObj.system.allWeapons:
-			case (classObj.system.allMeleeWeapons && classObj.system.allRangedWeapons):
+			case classObj?.system?.allWeapons:
+			case (classObj?.system?.allMeleeWeapons && classObj?.system?.allRangedWeapons):
 				weaponData = ["All weapons"];
 				break;
-			case classObj.system.allMeleeWeapons:
+			case classObj?.system?.allMeleeWeapons:
 				weaponData = ["All Melee Weapons"];
 				break;
-			case classObj.system.allRangedWeapons:
+			case classObj?.system?.allRangedWeapons:
 				weaponData = ["All Ranged Weapons"];
 				break;
 		}
-		for (const weapon of classObj.system.weapons) {
+		for (const weapon of classObj?.system?.weapons ?? []) {
 			const weaponItem = await fromUuid(weapon);
 
 			if (weaponItem) {
@@ -647,23 +645,26 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 		this.formData.weapons = weaponData.sort((a, b) => a.localeCompare(b));
 
 		this.class = classObj;
-		this.formData.classDesc = await this._formatDescription(classObj.system.description);
+		this.formData.classDesc = classObj?.system?.description
+			? await this._formatDescription(classObj.system.description)
+			: "";
 		await this._loadLanguages();
 
+		// load patron data
 		this.patron = null;
 		this.formData.patron.choose = false;
 		this.formData.patron.required = false;
 		this.formData.actor.system.patron = null;
 		this.formData.patron.name = "";
 
-		if (this.class.system.patron.required) {
+		if (this.class?.system?.patron?.required) {
 			this.formData.patron.choose = true;
 			this.formData.patron.required = true;
 
 			if (randomize) await this._randomizePatron();
 		}
 
-		if (this.class.system.alignment !== "") {
+		if (this.class?.system?.alignment) {
 			this.formData.actor.system.alignment = this.class.system.alignment;
 		}
 	}
@@ -938,6 +939,9 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 	async _updateCharacter() {
 		let actorRef = game.actors.get(this.actorUid);
 
+		// remove all talents from the actor's current class
+		await shadowdark.utils.clearClassTalents(actorRef.uuid);
+
 		// set class, languages and starting gold
 		await actorRef.update({
 			system: {
@@ -1070,7 +1074,10 @@ export default class CharacterGeneratorSD extends foundry.appv1.api.FormApplicat
 			case "level0":
 				if (this.formData.level0) {
 					this.formData.actor.system.class = this.formData.level0Class.uuid;
-					this._loadClass(this.formData.level0Class.uuid);
+					await this._loadClass(this.formData.level0Class.uuid);
+				}
+				else {
+					await this._loadClass();
 				}
 				break;
 		}

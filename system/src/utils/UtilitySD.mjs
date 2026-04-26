@@ -310,6 +310,32 @@ export default class UtilitySD {
 	}
 
 
+	static async clearClassTalents(actorUuid) {
+		const actor = await fromUuid(actorUuid);
+		if (!actor) return;
+
+		const currentClass = await fromUuid(actor.system.class);
+		if (!currentClass || currentClass.system.talents.length === 0) return;
+
+		// match talents based on name
+		const talentNames = [];
+		for (const uuid of currentClass.system.talents) {
+			const talent = await fromUuid(uuid);
+			if (talent) talentNames.push(talent.name);
+		}
+
+		const toDelete = actor.items
+			.filter(item => item.system.isTalent
+				&& item.system.talentClass === "class"
+				&& talentNames.includes(item.name))
+			.map(item => item.id);
+
+		if (toDelete.length > 0) {
+			await actor.deleteEmbeddedDocuments("Item", toDelete);
+		}
+	}
+
+
 	static async toggleItemDetails(target) {
 		const listObj = $(target).parent();
 

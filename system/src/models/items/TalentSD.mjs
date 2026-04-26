@@ -14,4 +14,8 @@ export default class TalentSD extends BaseItemSD {
 
 		return Object.assign(super.defineSchema(), schema);
 	}
+
+	get isTalent() {
+		return true;
+	}
 }
