@@ -17,7 +17,9 @@ export default class Update_260501_1 extends UpdateBaseSD {
 		"system.bonus.",
 		"system.roll.",
 		"system.slots",
-		"system.spellcastingClasses",
+		"system.spellcasting.classes",
+		"system.spellcasting.allowAllItems",
+		"system.spellcasting.itemAbility",
 
 	];
 
@@ -34,6 +36,11 @@ export default class Update_260501_1 extends UpdateBaseSD {
 		if (!itemData) return {};
 		let updateData = {};
 		updateData.effects = await this.updateEffects(itemData.effects, itemData.type);
+
+		// Migrate __not_spellcaster__ to ""
+		if (itemData.type === "Class" && itemData.system?.spellcasting?.class === "__not_spellcaster__") {
+			updateData["system.spellcasting.class"] = "";
+		}
 
 		// NPC spell to Spell
 		if (itemData.type === "NPC Spell") {
@@ -342,7 +349,7 @@ export default class Update_260501_1 extends UpdateBaseSD {
 						continue;
 
 					case "system.bonuses.spellcastingClasses":
-						change.key = "system.spellcastingClasses";
+						change.key = "system.spellcasting.classes";
 						continue;
 
 					case "system.attackBonus":

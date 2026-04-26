@@ -426,7 +426,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 	},
 	spellcastingClasses: {
 		defaultValue: "REPLACEME",
-		effectKey: "system.spellcastingClasses",
+		effectKey: "system.spellcasting.classes",
 		img: "icons/sundries/documents/document-sealed-brown-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",

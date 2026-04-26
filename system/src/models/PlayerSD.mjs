@@ -78,10 +78,12 @@ export default class PlayerSD extends ActorBaseSD {
 		super.prepareBaseData();
 		this.slots = 10;
 
-		// add spellcasting class
-		this.spellcastingClasses = [];
-		const castingClass = this.class?.system?.spellcasting?.class;
-		if (castingClass) this.spellcastingClasses.push(castingClass);
+		// initilize spellcasting class
+		this.spellcasting = {
+			classes: [], // allows the use of innate spells and items of class
+			allowAllItems: false, // allows the use of all spell items regardless of class
+			itemAbility: "", // override the ability used for spell items. Default is the spell's class ability.
+		};
 
 	}
 
@@ -92,6 +94,7 @@ export default class PlayerSD extends ActorBaseSD {
 	prepareDerivedData() {
 		super.prepareDerivedData();
 
+		// calculate AC
 		const ac = this._calcArmorClass();
 		this.attributes.ac.value = ac.value;
 		this.attributes.ac.tooltips = ac.tooltips;
@@ -100,14 +103,34 @@ export default class PlayerSD extends ActorBaseSD {
 		const slotsBonus = Math.max(0, this.abilities.str.value - 10);
 		this.slots += slotsBonus;
 
+		// dedup and sort spellcasting
+		this.spellcasting.classes = [...new Set(this.spellcasting.classes)].sort();
+
+		// ensures allowAllItems is boolean. Any set value is converted to true
+		this.spellcasting.allowAllItems = !!this.spellcasting.allowAllItems;
+
+		// check that itemAbility is set correctly
+		const itemAbility = this.spellcasting.itemAbility;
+		if (itemAbility && !CONFIG.SHADOWDARK.ABILITY_KEYS.includes(itemAbility)) {
+			this.spellcasting.itemAbility = "";
+		}
+
 	}
 
 	/* ----------------------- */
 	/* Getters                 */
 	/* ----------------------- */
 
+	get canUseMagicItems() {
+		return (this.isSpellCaster || this.spellcasting.allowAllItems);
+	}
+
 	get isPC() {
 		return true;
+	}
+
+	get isSpellCaster() {
+		return this.spellcasting.classes.length > 0;
 	}
 
 	get slotUsage() {
@@ -515,50 +538,57 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 	}
 
-	async _getSpellcastingAbility(item) {
-		if (item.type !== "Spell") {
-			// Always use our class spellcasting ability if we have one for
-			// Wands and Scrolls, etc.  If you don't have a spellcasting
-			// ability then you can't use these items
-			const actorClass = await this.getClass();
-			return actorClass?.system?.spellcasting?.ability ?? "";
+	async _getSpellcastingAbility(spellUuid, item=false) {
+
+		// Ability override in place, ie Bard
+		if (item && this.spellcasting.itemAbility) {
+			return this.spellcasting.itemAbility;
 		}
 
-		const usableSpellcasterClasses = [];
-		for (const classUuid of item?.system?.class ?? []) {
-			const spellClass = await fromUuid(classUuid);
-			const myClasses = await this.getSpellcasterClasses();
-			const foundClass = myClasses.find(
-				c => c.name.toLowerCase() === spellClass.name.toLowerCase()
+		// get spell object
+		const spellObj = await fromUuid(spellUuid);
+		if (!spellObj) {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.spells.spell_not_found")
 			);
-			if (foundClass) usableSpellcasterClasses.push(spellClass);
+			return "";
 		}
 
-		let chosenAbility = "";
-		let bestAbilityModifier = 0;
-		if (usableSpellcasterClasses.length > 0) {
-			// If the spell can be cast by this actor, choose the best ability
-			// to use that is supported by the specific spell
-			//
-			for (const casterClass of usableSpellcasterClasses) {
-				const ability = casterClass?.system?.spellcasting?.ability ?? "";
+		// has allowItems set?
+		const allowAllItems = (item && this.spellcasting.allowAllItems);
 
-				if (chosenAbility === "") {
-					chosenAbility = ability;
-					bestAbilityModifier = this.abilities[ability].mod;
-				}
-				else {
-					const modifier = this.abilities[ability].mod;
-					if (modifier > bestAbilityModifier) {
-						chosenAbility = ability;
-						bestAbilityModifier = modifier;
-					}
-				}
-			}
+		// get all spell classes from the spell
+		const spellClassObjects = await Promise.all(
+			(spellObj.system.class ?? []).map(uuid => fromUuid(uuid))
+		);
+		let spellClasses = spellClassObjects
+			.filter(Boolean)
+			.filter(c => c.system.isCastingClass)
+			.map(c => ({ name: c.name.slugify(), ability: c.system.spellcasting.ability }));
 
+		if (spellClasses.length === 0) {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.spells.no_class_selected")
+			);
+			return "";
 		}
 
-		return chosenAbility;
+		if (!allowAllItems) {
+			// compare with PC spell classes and return the best matching class by ability mod
+			spellClasses = spellClasses.filter(c => this.spellcasting.classes.includes(c.name));
+
+			if (spellClasses.length === 0) return "";
+			if (spellClasses.length === 1) return spellClasses[0].ability;
+		}
+
+		let bestMatch = spellClasses[0];
+		for (const spellClass of spellClasses) {
+			const matchMod = this.abilities[spellClass.ability]?.mod ?? -99;
+			const bestMod = this.abilities[bestMatch.ability]?.mod ?? -99;
+			if (matchMod > bestMod) bestMatch = spellClass;
+		}
+		return bestMatch.ability;
+
 	}
 
 	async _learnSpell(item) {
@@ -682,22 +712,37 @@ export default class PlayerSD extends ActorBaseSD {
 
 		const spell = await fromUuid(spellUuid);
 		if (!spell) {
-			ui.notifications.warn(
-				"Error: Item no longer exists or is not a spell",
-				{ permanent: false }
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.spells.spell_not_found")
 			);
-			return;
 		}
 
 		config.actorId = this.parent.id;
 		config.itemUuid ??= spellUuid;
 
+		const triggeringItem = config.itemUuid
+			? await fromUuid(config.itemUuid)
+			: null;
+
+		// test if actor can cast
+		let canCast = this.isSpellCaster;
+		if (!triggeringItem?.system?.isSpell && this.spellcasting.allowAllItems) {
+			canCast = true;
+		}
+		if (!canCast) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.spells.not_a_spellcaster")
+			);
+		}
+
 		// get casting ability
-		const castingAbility = await this._getSpellcastingAbility(spell);
+		const castingAbility = await this._getSpellcastingAbility(
+			spellUuid,
+			triggeringItem !== null
+		);
 		if (castingAbility === "") {
 			return ui.notifications.error(
-				game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell"),
-				{permanent: false}
+				game.i18n.format("SHADOWDARK.error.spells.unable_to_cast_spell")
 			);
 		}
 		config.cast ??= {};
@@ -718,13 +763,8 @@ export default class PlayerSD extends ActorBaseSD {
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
 		// After cast actions
-		const triggeringItem = config.itemUuid
-			? await fromUuid(config.itemUuid)
-			: null;
-
 		if (triggeringItem?.system?.isSpell && !roll.success) {
 			if (!config.cast.focus) {
-				console.error("spell lost");
 				triggeringItem.update({"system.lost": true});
 			}
 		}
@@ -838,40 +878,6 @@ export default class PlayerSD extends ActorBaseSD {
 		return await shadowdark.utils.getFromUuid(this.patron);
 	}
 
-	async getSpellcasterClasses() {
-		const actorClass = await this.getClass();
-
-		const playerSpellClasses = [];
-
-		let spellClass = actorClass.system.spellcasting.class;
-		if (spellClass === "") {
-			playerSpellClasses.push(actorClass);
-		}
-		else if (spellClass !== "__not_spellcaster__") {
-			playerSpellClasses.push(
-				await shadowdark.utils.getFromUuid(spellClass)
-			);
-		}
-
-		const spellcasterClasses =
-			await shadowdark.compendiums.spellcastingBaseClasses();
-
-		// De-duplicate any bonus classes the Actor has
-		const bonusClasses = [
-			...new Set(
-				this.bonuses?.spellcastingClasses ?? []
-			),
-		];
-
-		for (const bonusClass of bonusClasses) {
-			playerSpellClasses.push(
-				spellcasterClasses.find(c => c.name.slugify() === bonusClass)
-			);
-		}
-
-		return playerSpellClasses.sort((a, b) => a.name.localeCompare(b.name));
-	}
-
 	getTalents(grouped=true) {
 		const groupedTalents = {
 			ancestry: {
@@ -920,23 +926,6 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 	}
 
-	async isSpellCaster() {
-		const characterClass = await this.getClass();
-
-		const spellcastingClass =
-			characterClass?.system?.spellcasting?.class ?? "__not_spellcaster__";
-
-		const isSpellcastingClass =
-			characterClass && spellcastingClass !== "__not_spellcaster__";
-
-		const hasBonusSpellcastingClasses =
-			(this.bonuses?.spellcastingClasses ?? []).length > 0;
-
-		return isSpellcastingClass || hasBonusSpellcastingClasses
-			? true
-			: false;
-	}
-
 	async learnSpell(itemId) {
 		const item = this.parent.items.get(itemId);
 
@@ -979,7 +968,10 @@ export default class PlayerSD extends ActorBaseSD {
 	}
 
 	async openSpellBook() {
-		const playerSpellcasterClasses = await this.getSpellcasterClasses();
+		const castingClasses =
+			await shadowdark.utils.resolveSpellClasses(
+				this.spellcasting.classes
+			);
 
 		const openChosenSpellbook = classUuid => {
 			new shadowdark.apps.SpellBookSD(
@@ -988,19 +980,19 @@ export default class PlayerSD extends ActorBaseSD {
 			).render(true);
 		};
 
-		if (playerSpellcasterClasses.length <= 0) {
+		if (castingClasses.length <= 0) {
 			return ui.notifications.error(
 				game.i18n.localize("SHADOWDARK.item.errors.no_spellcasting_classes"),
 				{ permanent: false }
 			);
 		}
-		else if (playerSpellcasterClasses.length === 1) {
-			return openChosenSpellbook(playerSpellcasterClasses[0].uuid);
+		else if (castingClasses.length === 1) {
+			return openChosenSpellbook(castingClasses[0].uuid);
 		}
 		else {
 			return foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/choose-spellbook.hbs",
-				{classes: playerSpellcasterClasses}
+				{classes: castingClasses}
 			).then(html => {
 				const dialog = new Dialog({
 					title: game.i18n.localize("SHADOWDARK.dialog.spellbook.open_which_class.title"),

@@ -289,16 +289,15 @@ export default class CompendiumsSD {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
 
 		return this._collectionFromArray(documents.filter(document =>
-			document.system.spellcasting.class === ""
+			document.system.spellcasting?.ability !== ""
+			&& document.system.spellcasting?.class === ""
 		));
 	}
 
 	static async spellcastingClasses(filterSources=true) {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
-
 		return this._collectionFromArray(documents.filter(document =>
-			document.system.spellcasting.ability !== ""
-			&& document.system.spellcasting.class !== "__not_spellcaster__"
+			document.system.spellcasting?.ability !== ""
 		));
 	}
 

@@ -33,6 +33,7 @@
 											<a
 												data-action="focus-spell"
 												data-item-id="{{spell._id}}"
+												data-spell-uuid="{{spell.uuid}}"
 												data-item-uuid="{{spell.uuid}}"
 												data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 											>
@@ -103,6 +104,7 @@
 								<a
 									data-action="focus-spell"
 									data-item-id="{{this.item._id}}"
+									data-spell-uuid="{{this.spell.uuid}}"
 									data-item-uuid="{{this.item.uuid}}"
 									data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 								>
@@ -166,6 +168,7 @@
 									<a
 										data-action="focus-spell"
 										data-item-id="{{this.item._id}}"
+										data-spell-uuid="{{this.item.system.spellUuid}}"
 										data-item-uuid="{{this.item.uuid}}"
 										data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.focus_on_spell'}}"
 									>

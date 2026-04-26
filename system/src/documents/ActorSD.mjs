@@ -136,19 +136,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		if (newHpValue === 0 && multiplier === 1) this._setDefeated();
 	}
 
-
-	async canUseMagicItems() {
-		const characterClass = await this.system.getClass();
-
-		const spellcastingClass =
-			characterClass?.system?.spellcasting?.ability ?? "";
-
-		return characterClass && spellcastingClass !== ""
-			? true
-			: false;
-	}
-
-
 	async changeLightSettings(lightData) {
 		const token = this.getCanvasToken();
 		if (token) await token.document.update({light: lightData});

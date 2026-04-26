@@ -214,7 +214,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		}
 
 		// Use different a item for .this in cases like wands or scrolls
-		if (config.itemUuid !== item.uuid) {
+		if (item == null || config.itemUuid !== item.uuid) {
 			item = config.itemUuid
 				? fromUuidSync(config.itemUuid)
 				: item;

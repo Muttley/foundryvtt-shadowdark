@@ -268,6 +268,19 @@ export default class UtilitySD {
 		return el.textContent;
 	}
 
+	/**
+	 * Resolves an array of spellcasting class name to their compendium objects.
+	 * @param {string[]} spellClasses - Array of class name (e.g. ["wizard", "priest"])
+	 * @returns {Promise<Array<{name: string, label: string, uuid: string}>>}
+	 */
+	static async resolveSpellClasses(spellClasses) {
+		const castingClasses = await shadowdark.compendiums.spellcastingClasses();
+		return spellClasses.reduce((acc, className) => {
+			const found = castingClasses.find(c => c.name.slugify() === className);
+			if (found) acc.push({ name: className, label: found.name, uuid: found.uuid });
+			return acc;
+		}, []);
+	}
 
 	// If this is a new release, show the release notes to the GM the first time
 	// they login

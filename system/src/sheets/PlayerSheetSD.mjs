@@ -192,8 +192,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = this.actor.system.level.value * 10;
 		context.levelUp = (this.actor.system.level.xp >= context.xpNextLevel);
 
-		context.isSpellCaster = await this.actor.system.isSpellCaster();
-		context.canUseMagicItems = await this.actor.canUseMagicItems();
+		context.isSpellCaster = this.actor.system.isSpellCaster;
+		context.canUseMagicItems = this.actor.system.canUseMagicItems;
 		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.max;

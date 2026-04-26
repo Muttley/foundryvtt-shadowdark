@@ -449,7 +449,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		await this.getClassSelectorConfigs(context);
 
 		context.spellsKnown =
-			context.item.system.spellcasting.class !== "__not_spellcaster__";
+			context.item.system.spellcasting.ability !== "";
 	}
 
 
