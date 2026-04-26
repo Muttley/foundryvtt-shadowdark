@@ -1,0 +1,35 @@
+{
+	"_id": "Pd70qHF14hMBGKoj",
+	"_key": "!items.effects!7XtnCM9VdxVmh6D3.Pd70qHF14hMBGKoj",
+	"changes": [
+		{
+			"key": "system.spellcasting.classes",
+			"mode": 2,
+			"priority": null,
+			"value": "witch"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+	},
+	"img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+	"name": "Spell Class",
+	"origin": "Compendium.shadowdark.talents.Item.7XtnCM9VdxVmh6D3",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

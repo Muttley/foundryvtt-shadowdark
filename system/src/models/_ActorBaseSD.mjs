@@ -213,6 +213,13 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			});
 		}
 
+		// Use different a item for .this in cases like wands or scrolls
+		if (item == null || config.itemUuid !== item.uuid) {
+			item = config.itemUuid
+				? fromUuidSync(config.itemUuid)
+				: item;
+		}
+
 		// get data from all matching keys
 		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
 

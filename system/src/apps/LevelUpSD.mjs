@@ -126,7 +126,7 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 				this.data.startingBoons = classData.patron.startingBoons;
 			}
 
-			if (await this.data.actor.system.isSpellCaster()) {
+			if (this.data.actor.system.isSpellCaster) {
 				this.data.spellcastingClass =
 					this.data.class.system.spellcasting.class === ""
 						? this.data.actor.system.class

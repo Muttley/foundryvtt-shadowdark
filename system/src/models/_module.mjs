@@ -16,7 +16,6 @@ export {default as LanguageSD} from "./items/LanguageSD.mjs";
 export {default as NpcAttackSD} from "./items/NpcAttackSD.mjs";
 export {default as NpcFeatureSD} from "./items/NpcFeatureSD.mjs";
 export {default as NpcSpecialAttackSD} from "./items/NpcSpecialAttackSD.mjs";
-export {default as NpcSpellSD} from "./items/NpcSpellSD.mjs";
 export {default as PatronSD} from "./items/PatronSD.mjs";
 export {default as PotionSD} from "./items/PotionSD.mjs";
 export {default as PropertySD} from "./items/PropertySD.mjs";

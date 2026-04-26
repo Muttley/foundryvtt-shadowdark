@@ -41,6 +41,7 @@
 - [#1247] Critical Success attacks do not roll double the dice for damage in v4
 - [#1257] Ammunition not being reduced when used for an attack in v4
 - [#1281] Some Magic Items in the compendiums are of the wrong types
+- [#1282] Fixed a bug in level up spell validation *(deukalion)*
 
 ## Chores
 - [#369] Migrated to using data models for actors and items

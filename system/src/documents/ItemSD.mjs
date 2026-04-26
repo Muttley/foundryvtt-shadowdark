@@ -72,8 +72,8 @@ export default class ItemSD extends foundry.documents.Item {
 		};
 
 		if (this.actor.system.isPC) {
-			data.isSpellCaster = await this.actor.system.isSpellCaster();
-			data.canUseMagicItems = await this.actor.canUseMagicItems();
+			data.isSpellCaster = this.actor.system.isSpellCaster;
+			data.canUseMagicItems = this.actor.system.canUseMagicItems;
 		}
 
 		if (this.system.isSpell) {

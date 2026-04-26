@@ -1,0 +1,35 @@
+{
+	"_id": "8BIQChg1O4MQJ9xV",
+	"_key": "!items.effects!Qu0KqU3KzzRS1oer.8BIQChg1O4MQJ9xV",
+	"changes": [
+		{
+			"key": "system.spellcasting.classes",
+			"mode": 2,
+			"priority": null,
+			"value": "seer"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+	},
+	"img": "icons/magic/symbols/runes-star-pentagon-orange-purple.webp",
+	"name": "Spell Class",
+	"origin": "Compendium.shadowdark.talents.Item.Qu0KqU3KzzRS1oer",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -311,7 +311,6 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.critMultiplier",
 		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
-		transfer: false,
 	},
 	damageMultiplier: {
 		defaultValue: 2,
@@ -427,7 +426,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 	},
 	spellcastingClasses: {
 		defaultValue: "REPLACEME",
-		effectKey: "system.spellcastingClasses",
+		effectKey: "system.spellcasting.classes",
 		img: "icons/sundries/documents/document-sealed-brown-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
@@ -460,7 +459,6 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 		restriction: "Weapon",
-		transfer: false,
 	},
 	weaponDamageBonus: {
 		defaultValue: 1,
@@ -469,7 +467,6 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 		restriction: "Weapon",
-		transfer: false,
 	},
 	weaponDamageDieD12: {
 		defaultValue: 4,
@@ -491,7 +488,6 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		img: "icons/skills/melee/strike-hammer-destructive-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
 		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
-		transfer: false,
 	},
 	weaponMastery: {
 		defaultValue: 1,

@@ -268,6 +268,19 @@ export default class UtilitySD {
 		return el.textContent;
 	}
 
+	/**
+	 * Resolves an array of spellcasting class name to their compendium objects.
+	 * @param {string[]} spellClasses - Array of class name (e.g. ["wizard", "priest"])
+	 * @returns {Promise<Array<{name: string, label: string, uuid: string}>>}
+	 */
+	static async resolveSpellClasses(spellClasses) {
+		const castingClasses = await shadowdark.compendiums.spellcastingClasses();
+		return spellClasses.reduce((acc, className) => {
+			const found = castingClasses.find(c => c.name.slugify() === className);
+			if (found) acc.push({ name: className, label: found.name, uuid: found.uuid });
+			return acc;
+		}, []);
+	}
 
 	// If this is a new release, show the release notes to the GM the first time
 	// they login
@@ -294,6 +307,32 @@ export default class UtilitySD {
 		return new Promise((resolve, reject) => {
   			setTimeout(resolve, millisecs);
 		});
+	}
+
+
+	static async clearClassTalents(actorUuid) {
+		const actor = await fromUuid(actorUuid);
+		if (!actor) return;
+
+		const currentClass = await fromUuid(actor.system.class);
+		if (!currentClass || currentClass.system.talents.length === 0) return;
+
+		// match talents based on name
+		const talentNames = [];
+		for (const uuid of currentClass.system.talents) {
+			const talent = await fromUuid(uuid);
+			if (talent) talentNames.push(talent.name);
+		}
+
+		const toDelete = actor.items
+			.filter(item => item.system.isTalent
+				&& item.system.talentClass === "class"
+				&& talentNames.includes(item.name))
+			.map(item => item.id);
+
+		if (toDelete.length > 0) {
+			await actor.deleteEmbeddedDocuments("Item", toDelete);
+		}
 	}
 
 

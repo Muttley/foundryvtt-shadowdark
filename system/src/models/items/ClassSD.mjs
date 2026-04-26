@@ -45,7 +45,7 @@ export default class ClassSD extends BaseItemSD {
 				}),
 				baseDifficulty: new fields.NumberField({ integer: true, initial: 10, min: 0 }),
 				class: new fields.StringField({
-					initial: "__not_spellcaster__",
+					initial: "",
 					blank: true,
 				}),
 				spellsknown: spellsknown(),
@@ -66,5 +66,9 @@ export default class ClassSD extends BaseItemSD {
 		};
 
 		return Object.assign(super.defineSchema(), schema);
+	}
+
+	get isCastingClass() {
+		return this.spellcasting.ability !== "";
 	}
 }

@@ -53,7 +53,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find("[data-action='focus-spell']").click(
 			event => {
-				this._onCastSpell(event, { isFocusRoll: true });
+				this._onCastSpell(event, { focus: true });
 			}
 		);
 
@@ -192,8 +192,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.xpNextLevel = this.actor.system.level.value * 10;
 		context.levelUp = (this.actor.system.level.xp >= context.xpNextLevel);
 
-		context.isSpellCaster = await this.actor.system.isSpellCaster();
-		context.canUseMagicItems = await this.actor.canUseMagicItems();
+		context.isSpellCaster = this.actor.system.isSpellCaster;
+		context.canUseMagicItems = this.actor.system.canUseMagicItems;
 		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
 		context.maxHp = this.actor.system.attributes.hp.max;
@@ -554,14 +554,15 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.render();
 	}
 
-	async _onCastSpell(event) {
+	async _onCastSpell(event, options={}) {
 		event.preventDefault();
 
 		const spellUuid = event.currentTarget.dataset.spellUuid;
 		const itemUuid = event.currentTarget.dataset.itemUuid;
 
 		const config = {};
-		if (itemUuid) config.cast = { item: itemUuid };
+		if (itemUuid) config.itemUuid = itemUuid;
+		if (options.focus) config.cast = { focus: true };
 		if (event.shiftKey) config.skipPrompt = true;
 
 		this.actor.system.castSpell(spellUuid, config);
