@@ -40,6 +40,7 @@
 - [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
 - [#1247] Critical Success attacks do not roll double the dice for damage in v4
 - [#1257] Ammunition not being reduced when used for an attack in v4
+- [#1281] Some Magic Items in the compendiums are of the wrong types
 
 ## Chores
 - [#369] Migrated to using data models for actors and items
