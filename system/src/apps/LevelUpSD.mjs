@@ -298,14 +298,17 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 
 	_onDropSpell(spellObj) {
 		let spellTier = spellObj.system.tier;
-		// Check to see if the spell is out of bounds
-		if (1 > spellTier > 5) {
-			ui.notifictions.error("Spell tier out of range");
-			return;
-		}
-		// add spell if there is room in that tier
-		if (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max) {
+		// Add spell if there is room in tier and tier is between 1 and 5
+		if ((spellTier >= 1 && spellTier <= 5)
+				&& (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max)
+		) {
 			this.data.spells[spellTier].objects.push(spellObj);
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.apps.level-up.spell_tier_out_of_range")
+			);
+			return;
 		}
 		this.render();
 	}
