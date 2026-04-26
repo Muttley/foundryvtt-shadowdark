@@ -1,0 +1,35 @@
+{
+	"_id": "z7bM0dO1y64K6091",
+	"_key": "!items.effects!XRW3jhpTni15hwFc.z7bM0dO1y64K6091",
+	"changes": [
+		{
+			"key": "system.spellcasting.classes",
+			"mode": 2,
+			"priority": null,
+			"value": "knight-of-st.-ydris"
+		}
+	],
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
+	},
+	"flags": {
+	},
+	"img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+	"name": "Spell Class",
+	"origin": "Compendium.shadowdark.talents.Item.XRW3jhpTni15hwFc",
+	"statuses": [
+	],
+	"system": {
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

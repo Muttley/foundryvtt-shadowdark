@@ -1,0 +1,23 @@
+{
+	"_id": "uMEh2Cwn7uKjEVSK",
+	"_key": "!items!uMEh2Cwn7uKjEVSK",
+	"effects": [
+		"Fzx8i0bzbmuK8IoZ"
+	],
+	"flags": {
+	},
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/sword-shield-stylized-white.webp",
+	"name": "Beginner's Luck",
+	"system": {
+		"description": "<p>0-level characters can wield all gear until 1st level.</p>",
+		"level": 0,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}
