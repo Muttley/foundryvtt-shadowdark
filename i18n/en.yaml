@@ -84,13 +84,13 @@ SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
 SHADOWDARK.apps.item-importer.header: Item Importer
 SHADOWDARK.apps.item-importer.import_button: Import Item
-SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.instruction1: 1. Copy item text from source material.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Paste text into this box following the item format shown in the core rules.
 SHADOWDARK.apps.item-importer.instruction2b: Item Name
 SHADOWDARK.apps.item-importer.instruction2c: Flavor text
 SHADOWDARK.apps.item-importer.instruction2d: Features
 SHADOWDARK.apps.item-importer.instruction3: 3. Click Import Item.
+SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
@@ -107,7 +107,6 @@ SHADOWDARK.apps.level-up.spell_tier_out_of_range: Spell tier out of range
 SHADOWDARK.apps.level-up.title: Leveling Up
 SHADOWDARK.apps.monster-importer.header: Monster Importer
 SHADOWDARK.apps.monster-importer.import_button: Import Monster
-SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copy monster text from source material.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Paste text into the text box following the monster format shown in the core rules. Add a blank line between each ability.
 SHADOWDARK.apps.monster-importer.instruction2b: Monster Name
@@ -115,6 +114,7 @@ SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
 SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.request-check.copied: Copied to Clipboard
 SHADOWDARK.apps.request-check.copy_to_clipboard: Copy to Clipboard
@@ -145,7 +145,6 @@ SHADOWDARK.apps.spell-book.known: Known
 SHADOWDARK.apps.spell-book.title: Class Spell List
 SHADOWDARK.apps.spell-importer.header: Spell Importer
 SHADOWDARK.apps.spell-importer.import_button: Import Spell
-SHADOWDARK.apps.spell-importer.placeholder: Paste spell text here...
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copy spell text from source material.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Paste text into this box following the spell format shown in the core rules.
 SHADOWDARK.apps.spell-importer.instruction2b: Spell Name
@@ -154,6 +153,7 @@ SHADOWDARK.apps.spell-importer.instruction2d: Duration
 SHADOWDARK.apps.spell-importer.instruction2e: Range
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Click Import Spell.
+SHADOWDARK.apps.spell-importer.placeholder: Paste spell text here...
 SHADOWDARK.apps.spell-importer.title: Import Spell
 SHADOWDARK.armor.properties.disadvantage_stealth: Disadvantage/Stealth
 SHADOWDARK.armor.properties.disadvantage_swimming: Disadvantage/Swim
@@ -435,6 +435,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Leather Armor
 SHADOWDARK.item.armor.base_armor.plate_mail: Plate Mail
 SHADOWDARK.item.armor.base_armor.shield: Shield
 SHADOWDARK.item.armor.base_armor.title: Base Armor
+SHADOWDARK.item.broken: Broken
 SHADOWDARK.item.cost: Cost
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.effect.category.condition: Condition
@@ -515,7 +516,6 @@ SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
 SHADOWDARK.item.magic_item.identifiedName: Identified Name
 SHADOWDARK.item.magic_item.identifiedTooltip: Unchecking will update current item name to Identified Name and append Identified Description to item Description.
 SHADOWDARK.item.magic_item.identify: Identify
-SHADOWDARK.item.magic_item.unidentified: Unidentified
 SHADOWDARK.item.magic_item.is_magic: Magic Item
 SHADOWDARK.item.magic_item.title: Magic Item Effect(s)
 SHADOWDARK.item.magic_item.type.attackBonus: Attack Bonus
@@ -525,6 +525,8 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Critical Multiplier
 SHADOWDARK.item.magic_item.type.custom: Custom Effect
 SHADOWDARK.item.magic_item.type.damageBonus: Damage Bonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanent Ability Change
+SHADOWDARK.item.magic_item.unidentified: Unidentified
+SHADOWDARK.item.magic_item.unidentifiedName: Unidentified {type}
 SHADOWDARK.item.name_from_spell.Potion: Potion of {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Scroll of {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Wand of {spellName}
@@ -549,7 +551,6 @@ SHADOWDARK.item.spell_duration: Duration
 SHADOWDARK.item.spell_name: Spell Name
 SHADOWDARK.item.spell_range: Range
 SHADOWDARK.item.spell_tier: Tier
-SHADOWDARK.item.broken: Broken
 SHADOWDARK.item.spell.label: Spell
 SHADOWDARK.item.stashed.label: Stashed
 SHADOWDARK.item.talent_class: Talent Class

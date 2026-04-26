@@ -1,6 +1,6 @@
 {
-	"_id": "yyUwr6H9imWcJ9YS",
-	"_key": "!items!yyUwr6H9imWcJ9YS",
+	"_id": "pwDZ6d2CHea0rHLi",
+	"_key": "!items!pwDZ6d2CHea0rHLi",
 	"effects": [
 	],
 	"flags": {
@@ -9,36 +9,39 @@
 	"img": "icons/weapons/wands/wand-gem-purple.webp",
 	"name": "Wand of Blind/Deafen",
 	"system": {
-		"ammoClass": "",
-		"baseWeapon": "",
 		"broken": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
-		"damage": {
-			"oneHanded": "",
-			"twoHanded": ""
-		},
-		"description": "<p>@UUID[Compendium.shadowdark.spells.ItoZZ0nli29N5d7G]{Blind/Deafen}</p><p>DC 12</p>",
+		"description": "",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Unidentified Wand"
+		},
 		"isAmmunition": false,
-		"magicItem": true,
+		"magicItem": false,
 		"properties": [
 		],
 		"quantity": 1,
-		"range": "close",
 		"slots": {
 			"free_carry": 0,
 			"per_slot": 1,
 			"slots_used": 1
 		},
 		"source": {
-			"title": "core-rules"
+			"title": "quickstart"
 		},
-		"stashed": false,
-		"type": "melee"
+		"spells": [
+			{
+				"lost": false,
+				"uuid": "Compendium.shadowdark.spells.Item.ItoZZ0nli29N5d7G"
+			}
+		],
+		"stashed": false
 	},
-	"type": "Weapon"
+	"type": "Wand"
 }

@@ -15,7 +15,7 @@ export class PhysicalItemSD extends BaseItemSD {
 			identification: new fields.SchemaField({
 				description: new fields.StringField({initial: ""}),
 				identified: new fields.BooleanField({initial: true}),
-				name: new fields.StringField({initial: () => game.i18n.localize("SHADOWDARK.item.magic_item.identifiedName")}),
+				name: new fields.StringField({initial: ""}),
 			}),
 			isAmmunition: new fields.BooleanField({initial: false}),
 			magicItem: new fields.BooleanField({initial: false}),
@@ -66,8 +66,16 @@ export class PhysicalItemSD extends BaseItemSD {
 	 */
 	async toggleIdentified() {
 		const newState = !this.isIdentified;
+
+		// If it's blank give a default type-specific value to make things
+		// easier for GMs making things undentified on the fly
+		//
+		const newName = this.identification.name !== ""
+			? this.identification.name
+			: game.i18n.format("SHADOWDARK.item.magic_item.unidentifiedName", {type: this.parent.type});
+
 		const updateData = {
-			name: this.identification.name,
+			name: newName,
 			system: {
 				description: this.identification.description,
 				identification: {
