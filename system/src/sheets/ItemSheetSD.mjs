@@ -761,10 +761,10 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 	async _onEffectChangeValue(event) {
 		const li = event.target.closest("li");
-		const effectId = li.dataset.effectId;
-		const effect = this.item.effects.get(effectId);
+		const effectUuid = li.dataset.effectUuid;
+		const effect = this.item.effects.get(foundry.utils.parseUuid(effectUuid).id);
 
-		console.log(`Modifying talent ${event.target.name} (${effectId}) with value ${event.target.value}`);
+		console.log(`Modifying talent ${event.target.name} (${effectUuid}) with value ${event.target.value}`);
 		const updates = {};
 
 		const value = (isNaN(parseInt(event.target.value, 10)))
