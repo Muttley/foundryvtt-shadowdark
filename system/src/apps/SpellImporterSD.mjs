@@ -1,25 +1,14 @@
-export default class SpellImporter extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+import ImporterSD from "./ImporterSD.mjs";
+
+export default class SpellImporter extends ImporterSD {
 	/**
 	 * Contains an importer function to import spell stat blocks
 	 */
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-spell-importer",
-		tag: "form",
 		window: {
-			resizable: true,
 			title: "SHADOWDARK.apps.spell-importer.title",
-			contentClasses: ["standard-form"],
-		},
-		position: {
-			width: 600,
-			height: 600,
-		},
-		form: {
-			handler: SpellImporter._onSubmitForm,
-			closeOnSubmit: false,
 		},
 	};
 
@@ -29,21 +18,15 @@ export default class SpellImporter extends foundry.applications.api.HandlebarsAp
 		},
 	};
 
+	static IMPORTER_CONFIG = {
+		textField: "spellText",
+		sidebarTab: "items",
+		errorMessage: "Failed to fully parse the spell stat block.",
+	};
+
 	/** @override */
-	static async _onSubmitForm(event, form, formData) {
-		try {
-			let newSpell = await this._importSpell(formData.object.spellText);
-			ui.notifications.info(`Successfully Created: ${newSpell.name} [${newSpell._id}]`);
-			ui.sidebar.activateTab("items");
-
-		}
-		catch(error) {
-			ui.notifications.error(`Failed to fully parse the spell stat block. ${error}`);
-		}
-	}
-
-	_toCamelCase(str) {
-		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	async _import(spellText) {
+		return this._importSpell(spellText);
 	}
 
 	/**

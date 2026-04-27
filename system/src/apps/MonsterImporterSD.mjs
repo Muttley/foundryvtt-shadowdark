@@ -1,25 +1,14 @@
-export default class MonsterImporterSD extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+import ImporterSD from "./ImporterSD.mjs";
+
+export default class MonsterImporterSD extends ImporterSD {
 	/**
 	 * Contains an importer function to import monster stat blocks
 	 */
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-monster-importer",
-		tag: "form",
 		window: {
-			resizable: true,
 			title: "SHADOWDARK.apps.monster-importer.title",
-			contentClasses: ["standard-form"],
-		},
-		position: {
-			width: 600,
-			height: 600,
-		},
-		form: {
-			handler: MonsterImporterSD._onSubmitForm,
-			closeOnSubmit: false,
 		},
 	};
 
@@ -29,21 +18,15 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 		},
 	};
 
+	static IMPORTER_CONFIG = {
+		textField: "monsterText",
+		sidebarTab: "actors",
+		errorMessage: "Failed to fully parse the monster stat block.",
+	};
+
 	/** @override */
-	static async _onSubmitForm(event, form, formData) {
-		try {
-			let newNPC = await this._importMonster(formData.object.monsterText);
-			ui.notifications.info(`Successfully Created: ${newNPC.name} [${newNPC._id}]`);
-			ui.sidebar.activateTab("actors");
-
-		}
-		catch(error) {
-			ui.notifications.error(`Failed to fully parse the monster stat block. ${error}`);
-		}
-	}
-
-	_toCamelCase(str) {
-		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	async _import(monsterText) {
+		return this._importMonster(monsterText);
 	}
 
 	/**
@@ -52,24 +35,80 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 	 * @returns {moveObj}
 	 */
 	_parseMovement(str) {
-		let moveObj ={
-			type: "",
-			notes: "",
+		const parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
+		if (!parsedMove) {
+			throw new Error(`Unrecognized MV format: "${str}"`);
+		}
+
+		const type = this._toCamelCase(parsedMove[1].trim());
+		if (!(type in CONFIG.SHADOWDARK.NPC_MOVES)) {
+			throw new Error(`Unrecognized movement type: "${parsedMove[1].trim()}"`);
+		}
+
+		return {
+			type,
+			notes: parsedMove[2] ?? "",
 		};
-		let parsedMove = str.match(/([\s\w]*)(?:\(([\s\w]*)\))?/);
-		moveObj.type = this._toCamelCase(parsedMove[1].trim());
+	}
 
-		// makes sure the string is a valid move type
-		if (!(moveObj.type in CONFIG.SHADOWDARK.NPC_MOVES)) {
-			moveObj.type = "";
+	/**
+	 * Parses and validates a stat block string into individual fields.
+	 * @param {string} statBlock - Stat block with newlines already collapsed
+	 * @returns {object} Stats keyed by short codes (AC, HP, ATK, MV, S, D, C, I, W, Ch, AL, LV)
+	 * @throws {Error} With .details array listing missing, unknown, or invalid fields
+	 */
+	_parseStatBlock(statBlock) {
+		const FIELDS = {
+			AC: "int", HP: "int", ATK: "str", MV: "str",
+			S: "int", D: "int", C: "int", I: "int", W: "int", Ch: "int",
+			AL: "str", LV: "int",
+		};
+
+		const stats = Object.fromEntries(Object.keys(FIELDS).map(k => [k, null]));
+		const errors = [];
+
+		for (const chunk of statBlock.split(", ")) {
+			const [key, ...rest] = chunk.trim().split(" ");
+			let value = rest.join(" ");
+
+			if (!(key in FIELDS)) {
+				errors.push(`Unknown field: "${chunk.trim()}"`);
+				continue;
+			}
+
+			// AC may include armor type in parens — extract just the number
+			if (key === "AC") {
+				const acMatch = value.match(/^(\d+)/);
+				value = acMatch ? acMatch[1] : value;
+			}
+
+			if (FIELDS[key] === "int" && isNaN(parseInt(value))) {
+				errors.push(`Invalid ${key}: "${value}"`);
+				stats[key] = value;
+				continue;
+			}
+
+			stats[key] = value;
 		}
 
-		// if there are () in the move string copy to move notes
-		if (typeof parsedMove[2] !== "undefined") {
-			moveObj.notes = parsedMove[2];
+		// Check for missing fields
+		for (const key of Object.keys(FIELDS)) {
+			if (stats[key] === null) {
+				errors.push(`Missing: ${key}`);
+			}
 		}
 
-		return moveObj;
+		if (stats.AL && !["L", "N", "C"].includes(stats.AL.toUpperCase())) {
+			errors.push(`Invalid AL: "${stats.AL}" (expected L, N, or C)`);
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Stat block validation failed");
+			error.details = errors;
+			throw error;
+		}
+
+		return stats;
 	}
 
 	/**
@@ -88,29 +127,38 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			return r.source;
 		}).join(""));
 
+		if (!atk || !atk[2]?.trim()) {
+			throw new Error(`Could not parse attack: "${str.trim()}"`);
+		}
+
 		let attackObj = {
 			name: atk[2].trim().titleCase(),
 			type: "NPC Special Attack",
 			system: {
 				attack: {
-					num: atk[1],
+					num: parseInt(atk[1]) || 1,
 				},
+				ranges: [],
 				bonuses: {
 					attackBonus: 0,
+					damageBonus: 0,
+					critical: {
+						failureThreshold: 1,
+						multiplier: 2,
+						successThreshold: 20,
+					},
 				},
 			},
 		};
 
 		// Validate Attack ranges and add
 		if (typeof atk[3] !== "undefined") {
-			let rangeArray = [];
 			atk[3].split(/\/|,/).forEach( x => {
 				let range = this._toCamelCase(x);
 				if (range in CONFIG.SHADOWDARK.RANGES) {
-					rangeArray.push(range);
+					attackObj.system.ranges.push(range);
 				}
 			});
-			attackObj.system.ranges = rangeArray;
 		}
 
 		// Add Hit bonus if any
@@ -118,7 +166,7 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			attackObj.system.bonuses.attackBonus = parseInt(atk[4]);
 		}
 
-		// Attack is a phyical attack if damage exists
+		// Attack is a physical attack if damage exists
 		if (typeof atk[5] !== "undefined") {
 			attackObj.system.attackType = "physical";
 			attackObj.type = "NPC Attack";
@@ -129,13 +177,17 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			});
 			// parse first object as # dice and dice type
 			const diceStr = dmgStrs[0].match(/(\d*)(d\d*)?/);
+			// TODO: special should not need to be set here, the sheet
+			// should handle missing/undefined special gracefully
 			if (typeof diceStr[2] !== "undefined") {
-				attackObj.system.damage = {};
-				attackObj.system.damage.numDice = diceStr[1];
-				attackObj.system.damage.value = diceStr[1] + diceStr[2];
+				attackObj.system.damage = {
+					numDice: parseInt(diceStr[1]),
+					value: diceStr[1] + diceStr[2],
+					special: "",
+				};
 			}
 			else {
-				attackObj.system.damage = { value: diceStr[1] };
+				attackObj.system.damage = { value: diceStr[1], special: "" };
 			}
 
 			// parse remaining string parts for +dmg or feature
@@ -149,7 +201,43 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			}
 		}
 
+		// Default physical attacks without explicit range to close
+		if (attackObj.type === "NPC Attack" && attackObj.system.ranges.length === 0) {
+			attackObj.system.ranges.push("close");
+		}
+
 		return attackObj;
+	}
+
+	/**
+	 * Splits raw features text into individual feature strings.
+	 * A new feature starts when a line begins with a capitalized word
+	 * followed by ". " (e.g. "Backstab. ") or after a blank line.
+	 * @param {string} text - Raw features text (may contain newlines)
+	 * @returns {string[]}
+	 */
+	_parseFeatures(text) {
+		const features = [];
+		let current = "";
+		for (const line of text.split(/\r?\n/)) {
+			const isBlank = line.trim() === "";
+			const isFeatureStart = /^[A-Z][a-z].*\.\s/.test(line);
+
+			// Boundary reached — save the current feature
+			if ((isBlank || isFeatureStart) && current.trim()) {
+				features.push(current.trim());
+				current = "";
+			}
+			// Append non-blank lines to the current feature
+			if (!isBlank) {
+				current += (current ? " " : "") + line;
+			}
+		}
+		// Don't forget the last feature
+		if (current.trim()) {
+			features.push(current.trim());
+		}
+		return features;
 	}
 
 	/**
@@ -159,6 +247,9 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 	 */
 	_parseFeature(str) {
 		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
+		if (!featureStr) {
+			throw new Error(`Could not parse feature: "${str.substring(0, 40)}"`);
+		}
 		const featureObj = {
 			name: featureStr[1].titleCase(),
 			type: "NPC Feature",
@@ -185,6 +276,10 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			return r.source;
 		}).join(""));
 
+		if (!parsedSpell) {
+			throw new Error(`Could not parse spell: "${str.substring(0, 40)}"`);
+		}
+
 		const spellObj = {
 			name: parsedSpell[1],
 			type: "Spell",
@@ -193,7 +288,7 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 				description: `<p>${parsedSpell[4].replaceAll(/(\d+d\d+)/gi, "[[/r $&]]")}</p>`,
 				range: "",
 				duration: {
-					type: "",
+					type: "instant",
 					value: -1,
 				},
 			},
@@ -259,15 +354,135 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 		.join("")}`;
 
 	/**
-	 * Parses pasted text representing a monster and creates an NPC actor from it.
-	 * @param {string} string - String data posted by user
-	 * @returns {ActorSD}
+	 * Parses an ATK field into attack items and spellcasting info.
+	 * @param {string} atkStr - e.g. "2 claw +7 (1d12) or 1 spell +2"
+	 * @returns {{ attackArray: object[], spellcasting: object|null }}
+	 * @throws {Error} With .details array listing parse failures
 	 */
-	async _importMonster(monsterText) {
-		// trim spaces from the end of each line:
+	_parseAttacks(atkStr) {
+		const attackArray = [];
+		let spellcasting = null;
+		const errors = [];
+
+		for (const line of atkStr.split(/ and | or /)) {
+			try {
+				const atk = this._parseAttack(line);
+				if (atk.name.toLowerCase() === "spell") {
+					spellcasting = {
+						attacks: `${atk.system.attack.num}`,
+						bonus: atk.system.bonuses.attackBonus,
+					};
+				}
+				else {
+					attackArray.push(atk);
+				}
+			}
+			catch(e) {
+				errors.push(`Failed to parse attack: "${line.trim()}"`);
+			}
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Attack parsing failed");
+			error.details = errors;
+			throw error;
+		}
+
+		return { attackArray, spellcasting };
+	}
+
+	/**
+	 * Parses feature strings into feature/spell items and casting ability.
+	 * @param {string[]} features - Individual feature strings from _parseFeatures
+	 * @returns {{ featureArray: object[], castingAbility: string }}
+	 * @throws {Error} With .details array listing parse failures
+	 */
+	_parseFeaturesAndSpells(features) {
+		const featureArray = [];
+		let castingAbility = "";
+		const errors = [];
+
+		for (const text of features) {
+			const spellMatch = text.match(/\(([\w]*)?\s*Spell\)/);
+			if (spellMatch) {
+				try {
+					featureArray.push(this._parseSpell(text));
+					if (spellMatch[1]
+						&& CONFIG.SHADOWDARK.ABILITY_KEYS.includes(
+							spellMatch[1].toLowerCase()
+						)) {
+						castingAbility = spellMatch[1].toLowerCase();
+					}
+				}
+				catch(e) {
+					errors.push(`Failed to parse spell: "${text.substring(0, 40)}..."`);
+				}
+			}
+			else {
+				try {
+					featureArray.push(this._parseFeature(text));
+				}
+				catch(e) {
+					errors.push(`Failed to parse feature: "${text.substring(0, 40)}..."`);
+				}
+			}
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Feature parsing failed");
+			error.details = errors;
+			throw error;
+		}
+
+		return { featureArray, castingAbility };
+	}
+
+	/**
+	 * Builds a Foundry actor data object from validated parsed data.
+	 */
+	_buildActorObj(titleName, stats, statBlock, flavorText, features) {
+		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
+		const movement = this._parseMovement(stats.MV);
+		const notesText = this._generateNotesText(statBlock, flavorText, features);
+
+		return {
+			name: titleName,
+			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
+			type: "NPC",
+			system: {
+				alignment: alignments[stats.AL.toUpperCase()],
+				attributes: {
+					ac: { value: stats.AC },
+					hp: { max: stats.HP, value: stats.HP, hd: 0 },
+				},
+				level: { value: stats.LV },
+				notes: notesText,
+				abilities: {
+					str: { mod: parseInt(stats.S) },
+					int: { mod: parseInt(stats.I) },
+					dex: { mod: parseInt(stats.D) },
+					wis: { mod: parseInt(stats.W) },
+					con: { mod: parseInt(stats.C) },
+					cha: { mod: parseInt(stats.Ch) },
+				},
+				darkAdapted: true,
+				move: movement.type,
+				moveNote: movement.notes,
+				spellcastingAbility: "",
+			},
+		};
+	}
+
+	/**
+	 * Parses pasted text into structured data without creating any documents.
+	 * Collects errors from all parsing stages and throws once with the full list.
+	 * @param {string} monsterText - Raw pasted monster text
+	 * @returns {object} { actorObj, attackArray, featureArray, castingAbility, spellcasting }
+	 * @throws {Error} With .details array listing all parse failures
+	 */
+	_parseMonster(monsterText) {
 		monsterText = monsterText.replace(/[^\S\r\n]+$/gm, "");
 
-		// parse monster text into 4 main parts:
 		const parsedText = monsterText.match([
 			/(.*)\n/,							// parsedText[1] matches Title
 			/([\S\s]*)\n/,						// parsedText[2] matches flavor Text
@@ -277,142 +492,104 @@ export default class MonsterImporterSD extends foundry.applications.api.Handleba
 			return r.source;
 		}).join(""));
 
-		// set 4 main variables, removing newlines
+		if (!parsedText) {
+			const error = new Error("Import validation failed");
+			error.details = [
+				"Could not parse stat block. Expected format: "
+				+ "Name, description, stat block (AC ... LV), "
+				+ "then optional features.",
+			];
+			throw error;
+		}
+
 		const titleName = parsedText[1].titleCase();
 		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		let features = [];
-		if (typeof parsedText[4] !== "undefined") {
-			features = parsedText[4].split(/\n\s*\n/).map( x => x.replace(/(\r\n|\n|\r)/gm, " "));
+		const featuresText = parsedText[4];
+		const features = typeof featuresText !== "undefined"
+			? this._parseFeatures(featuresText) : [];
+
+		// Collect errors from all parsing stages
+		const errors = [];
+
+		let stats = null;
+		try {
+			stats = this._parseStatBlock(statBlock);
 		}
-		// parse out main stat block
-		const stats = statBlock.match([
-			/.*AC (\d*)/,		// stats[1] matches AC
-			/.*HP (\d*)/,		// stats[2] matches HP
-			/.*ATK (.*),/,		// stats[3] matches unparsed ATK
-			/.*MV (.*),/,		// stats[4] matches unparsed MV
-			/.*S ([-+]\d*),/,	// stats[5] matches STR
-			/.*D ([-+]\d*),/,	// stats[6] matches DEX
-			/.*C ([-+]\d*),/,	// stats[7] matches CON
-			/.*I ([-+]\d*),/,	// stats[8] matches INT
-			/.*W ([-+]\d*),/,	// stats[9] matches WIS
-			/.*Ch ([-+]\d*),/,	// stats[10] matches CHA
-			/.*AL (\w),/,		// stats[11] matches AL (single letter)
-			/.*LV (\d*)/,		// stats[12] matches LV
-		].map(function(r) {
-			return r.source;
-		}).join(""));
+		catch(e) {
+			errors.push(...e.details);
+		}
 
-		// build parse complex outputs
-		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
-		const movement = this._parseMovement(stats[4]);
-		const notesText = this._generateNotesText(statBlock, flavorText, features);
+		let attackArray = [];
+		let spellcasting = null;
+		if (stats?.ATK) {
+			try {
+				({ attackArray, spellcasting } = this._parseAttacks(stats.ATK));
+			}
+			catch(e) {
+				errors.push(...e.details);
+			}
+		}
 
-		// create the monster template
-		let actorObj = {
-			name: titleName,
-			img: "systems/shadowdark/assets/tokens/cowled_token_red.webp",
-			type: "NPC",
-			system: {
-				alignment: alignments[stats[11].toUpperCase()],
-				attributes: {
-					ac: {
-						value: stats[1],
-					},
-					hp: {
-						max: stats[2],
-						value: stats[2],
-						hd: 0,
-					},
-				},
-				level: {
-					value: stats[12],
-				},
-				notes: notesText,
-				abilities: {
-					str: {
-						mod: parseInt(stats[5]),
-					},
-					int: {
-						mod: parseInt(stats[8]),
-					},
-					dex: {
-						mod: parseInt(stats[6]),
-					},
-					wis: {
-						mod: parseInt(stats[9]),
-					},
-					con: {
-						mod: parseInt(stats[7]),
-					},
-					cha: {
-						mod: parseInt(stats[10]),
-					},
-				},
-				darkAdapted: true,
-				move: movement.type,
-				moveNote: movement.notes,
-				spellcastingAbility: "",
-			},
-		};
+		let featureArray = [];
+		let castingAbility = "";
+		try {
+			({ featureArray, castingAbility } = this._parseFeaturesAndSpells(features));
+		}
+		catch(e) {
+			errors.push(...e.details);
+		}
+
+		if (errors.length > 0) {
+			const error = new Error("Import validation failed");
+			error.details = errors;
+			throw error;
+		}
+
+		const actorObj = this._buildActorObj(
+			titleName, stats, statBlock, flavorText, features
+		);
+		return { actorObj, attackArray, featureArray, castingAbility, spellcasting };
+	}
+
+	/**
+	 * Parses pasted text representing a monster and creates an NPC actor from it.
+	 * @param {string} monsterText - String data posted by user
+	 * @returns {ActorSD}
+	 */
+	async _importMonster(monsterText) {
+		const { actorObj, attackArray, featureArray, castingAbility, spellcasting } =
+			this._parseMonster(monsterText);
 
 		// Create the NPC actor
 		const newActor = await Actor.create(actorObj);
 
-		// Parse attacks features, and spells and add to actor
-		let attackArray = [];
-		stats[3].split(/ and | or /).forEach( line => {
-			const attackObj = this._parseAttack(line);
-			// if attack is a spell, update actors details for spellcasting
-			if (attackObj.name.toLowerCase() === "spell") {
-				newActor.update({"system.spellcasting.attacks": `${attackObj.system.attack.num}`});
-				newActor.update({"system.spellcasting.bonus": attackObj.system.bonuses.attackBonus});
-			}
-			else {
-				attackArray.push(attackObj);
-			}
-		});
+		// Set spellcasting details if this NPC has spell attacks
+		if (spellcasting) {
+			newActor.update({"system.spellcasting.attacks": spellcasting.attacks});
+			newActor.update({"system.spellcasting.bonus": spellcasting.bonus});
+		}
+
 		await newActor.createEmbeddedDocuments("Item", attackArray);
 
-		// Parse features and add to actor
-		let featureArray = [];
-		let castingAbility ="";
-
-		features.forEach( text => {
-
-			// Is the feature a spell?
-			const spellTestStr = text.match(/\(([\w]*)?\s*Spell\)/);
-			if (spellTestStr) {
-				featureArray.push(this._parseSpell(text));
-
-				// does the spell list a casting ability?
-				if (typeof spellTestStr[1] !== "undefined" && CONFIG.SHADOWDARK.ABILITY_KEYS.includes(spellTestStr[1].toLowerCase())) {
-					castingAbility = spellTestStr[1].toLowerCase();
+		// Merge feature descriptions into matching special attacks
+		const finalFeatures = [];
+		featureArray.forEach(feat => {
+			let isSpecialAttack = false;
+			newActor.items.forEach(x => {
+				if (x.type === "NPC Special Attack" && x.name === feat.name) {
+					x.update({"system.description": feat.system.description});
+					isSpecialAttack = true;
 				}
-			}
-			// Parse Feature
-			else {
-				const parsedFeatureObj = this._parseFeature(text);
-
-				// Is the feature a description of a special attack?
-				let isSpecialAttack = false;
-				newActor.items.forEach(x => {
-					if (x.type === "NPC Special Attack" && x.name === parsedFeatureObj.name) {
-						x.update({"system.description": parsedFeatureObj.system.description});
-						isSpecialAttack = true;
-					}
-				});
-
-				// push feature to actor
-				if (!isSpecialAttack) {
-					featureArray.push(parsedFeatureObj);
-				}
+			});
+			if (!isSpecialAttack) {
+				finalFeatures.push(feat);
 			}
 		});
 
 		await newActor.update({"system.spellcastingAbility": castingAbility});
 
-		await newActor.createEmbeddedDocuments("Item", featureArray);
+		await newActor.createEmbeddedDocuments("Item", finalFeatures);
 		return newActor;
 	}
 }
