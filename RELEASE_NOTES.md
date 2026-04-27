@@ -14,6 +14,7 @@
 - [#1178] Add Renown value to player sheets
 - [#1182] Unequipped armor no longer applies Active Effects
 - [#1202] Ammo type should be overridable as part of the attack roll dialog
+- [#1209] Player-Initiated Initiative Rolls with Clockwise Initiative Enabled *(deukalion)*
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
 - [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
@@ -36,9 +37,15 @@
 - [#1205] Damage should always be rolled if no actors have been targeted in v4
 - [#1214] Unable to open Player character sheets directly from compendiums in v4
 - [#1215] No way of rolling 2H damage for versatile weapons currently in v4
-- [#1239-#1243,#1245,#1248] Multiple bug fixes related to v4 *(deukalion)*
+- [#1239] Fix isPrivate always being false in RollSD._prepareChatRenderContex *(deukalion)*
+- [#1240] Persist selected rollMode from dialog form back to config *(deukalion)*
+- [#1241] Coerce itemIndex to Number in CompendiumItemSelector *(deukalion)*
+- [#1242] Convert uuid check from String to Boolean in Selector subclasses  *(deukalion)*
+- [#1243] Fix advantage typo *(deukalion)*
 - [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
+- [#1245] Update roll to mainRoll in rollHP() config *(deukalion)*
 - [#1247] Critical Success attacks do not roll double the dice for damage in v4
+- [#1248] Ensure 0 level NPCs have at least 1 HP *(deukalion)*
 - [#1257] Ammunition not being reduced when used for an attack in v4
 - [#1281] Some Magic Items in the compendiums are of the wrong types
 - [#1282] Fixed a bug in level up spell validation *(deukalion)*
