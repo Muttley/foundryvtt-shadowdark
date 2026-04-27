@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>You touch one object, such as a door threshold, setting a magical alarm on it.</p><p>If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.</p>",
 		"duration": {
 			"type": "days",
 			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
 		"properties": [
 		],

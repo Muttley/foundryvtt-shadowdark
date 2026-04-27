@@ -12,11 +12,13 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "damage",
 		"description": "<p>You have advantage on your check to cast this spell.</p><p>A glowing bolt of force streaks from your open hand, dealing [[/r 1d4]] damage to one target.</p>",
 		"duration": {
 			"type": "instant",
 			"value": "-1"
 		},
+		"formula": "1d4",
 		"lost": false,
 		"properties": [
 		],
