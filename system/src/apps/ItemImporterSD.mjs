@@ -179,166 +179,114 @@ export default class ItemImporterSD extends ImporterSD {
 	}
 
 	/**
+	 * Builds a Foundry Weapon item object from parsed data and a base weapon.
+	 * @param {string} name - Item name
+	 * @param {string} description - HTML description
+	 * @param {object} bonusHint - { value, text, isMithral }
+	 * @param {object} baseWeapon - Base weapon from compendium
+	 * @returns {object}
+	 */
+	_buildWeaponObj(name, description, bonusHint, baseWeapon) {
+		return {
+			...baseWeapon,
+			name,
+			type: "Weapon",
+			system: {
+				...baseWeapon.system,
+				attackBonus: bonusHint.value,
+				damageBonus: bonusHint.value,
+				bonuses: {
+					...baseWeapon.system.bonuses,
+					attackBonus: bonusHint.value,
+					damageBonus: bonusHint.value,
+				},
+				damage: {
+					...baseWeapon.system.damage,
+					bonus: bonusHint.value,
+				},
+				description,
+				magicItem: true,
+				baseWeapon: baseWeapon.name.slugify(),
+			},
+		};
+	}
+
+	/**
+	 * Builds a Foundry Armor item object from parsed data and a base armor.
+	 * @param {string} name - Item name
+	 * @param {string} description - HTML description
+	 * @param {object} bonusHint - { value, text, isMithral }
+	 * @param {object} baseArmor - Base armor from compendium
+	 * @returns {object}
+	 */
+	_buildArmorObj(name, description, bonusHint, baseArmor) {
+		return {
+			...baseArmor,
+			name,
+			type: "Armor",
+			system: {
+				...baseArmor.system,
+				ac: {
+					...baseArmor.system.ac,
+					modifier: bonusHint.value,
+				},
+				properties: bonusHint.isMithral
+					? [] : baseArmor.system.properties,
+				description,
+				magicItem: true,
+				baseArmor: baseArmor.name.slugify(),
+			},
+		};
+	}
+
+	/**
 	 * Parses pasted text representing an item and creates an Item from it.
 	 * @param {string} itemText - String data posted by user
 	 * @returns {Item}
 	 */
 	async _importItem(itemText) {
-		console.log(itemText);
+		const { name, description, bonusHint } =
+			this._parseItem(itemText);
 
-		// parse item text into 3 main parts:
-		const parsedText = itemText.match([
-			/(.*)\n/,			// parsedText[1] matches title
-			/([A-Z].*?[a-z]+?[\S\s]+?)/,	// parsedText[2] matches flavor text
-			/(Bonus\.[\S\s]*|Benefit\.[\S\s]*|Curse\.[\S\s]*|Personality\.[\S\s]*)/,
-			// parsedText[3] matches bonus, benefit, curse, and personality
-		].map(function(r) {
-			return r.source;
-		}).join(""));
+		// Resolve weapon/armor type from compendiums if bonus hint present
+		if (bonusHint) {
+			const weapons =
+				(await shadowdark.compendiums.baseWeapons()).contents;
+			const matchedWeapon = weapons.find(
+				weapon => bonusHint.text.toLowerCase()
+					.includes(weapon.name.toLowerCase())
+			);
+			if (matchedWeapon) {
+				return Item.create(
+					this._buildWeaponObj(
+						name, description, bonusHint, matchedWeapon
+					)
+				);
+			}
 
-		let data = {}; // data object to be passed to the final item creator
-
-		// set main variables, removing newlines
-		data.name = parsedText[1].titleCase().replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
-		const flavorText = parsedText[2].replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
-
-		let features = [];
-		const parsedFeatures = parsedText[3].replaceAll(/(\r\n|\n|\r)/gm, " ").trim().split(/[\s\t\n]+/).join(" ");
-
-		const parsedBonus = parsedFeatures.trim().match([
-			/Bonus\.\s(.*?)/,
-			/(Benefit\.|Curse\.|Personality\.|$)/,
-		].map(function(r) {
-			return r.source;
-		}).join(""));
-
-		// gather base weapons and armor from compendium
-		const weapons = (await shadowdark.compendiums.baseWeapons()).contents;
-		const armor = (await shadowdark.compendiums.baseArmor()).contents;
-
-		// parse "Bonus" field to see if item is a magic armor or weapon
-		if (parsedBonus?.length > 1) {
-			features.push(`<strong>Bonus.</strong> ${parsedBonus[1]}`);
-			if (parsedBonus[1].charAt(0) === "+") {
-				if (weapons.every(w => {
-					if (parsedBonus[1].toLowerCase().includes(w.name.toLowerCase())) {
-						if (/\d/.test(parsedBonus[1].charAt(1))) {
-							data.attackBonus = parsedBonus[1].charAt(1);
-							data.damageBonus = parsedBonus[1].charAt(1);
-						}
-						data.type = "Weapon";
-						data.baseWeapon = w;
-						return false;
-					}
-					return true;
-				})) {
-					armor.every(a => {
-						if (parsedBonus[1].toLowerCase().includes(a.name.toLowerCase())) {
-							if (/\d/.test(parsedBonus[1].charAt(1))) {
-								data.acModifier = parsedBonus[1].charAt(1);
-							}
-							data.armorProperties = parsedBonus[1].toLowerCase().includes("mithral")
-								? [] : a.system.properties; // Remove properties from mithral armor
-							data.type = "Armor";
-							data.baseArmor = a;
-							return false;
-						}
-						return true;
-					});
-				}
+			const armor =
+				(await shadowdark.compendiums.baseArmor()).contents;
+			const matchedArmor = armor.find(
+				piece => bonusHint.text.toLowerCase()
+					.includes(piece.name.toLowerCase())
+			);
+			if (matchedArmor) {
+				return Item.create(
+					this._buildArmorObj(
+						name, description, bonusHint, matchedArmor
+					)
+				);
 			}
 		}
 
-		const parsedBenefit = parsedFeatures.trim().match([
-			/Benefit\.\s(.*?)/,
-			/(Curse\.|Personality\.|$)/,
-		].map(function(r) {
-			return r.source;
-		}).join(""));
-		if (parsedBenefit?.length > 1) features.push(`<strong>Benefit.</strong> ${parsedBenefit[1]}`);
-
-		const parsedCurse = parsedFeatures.trim().match([
-			/Curse\.\s(.*?)/,
-			/(Personality\.|$)/,
-		].map(function(r) {
-			return r.source;
-		}).join(""));
-		if (parsedCurse?.length > 1) features.push(`<strong>Curse.</strong> ${parsedCurse[1]}`);
-
-		const parsedPersonality = parsedFeatures.trim().match([
-			/Personality\.\s(.*)/,
-		].map(function(r) {
-			return r.source;
-		}).join(""));
-		if (parsedPersonality?.length > 1) features.push(`<strong>Personality.</strong> ${parsedPersonality[1]}`);
-
-		// HTML description
-		data.description = `
-			<p><em>${flavorText}</em></p><p></p><p>${features.join("</p><p></p><p>")}</p>`;
-		console.log(data);
-
-		// create the item template
-		let itemObj;
-		switch (data.type) {
-			case "Weapon":
-				itemObj = {
-					...data.baseWeapon,
-					name: data.name,
-					type: data.type,
-					system: {
-						...data.baseWeapon.system,
-						attackBonus: data.attackBonus,
-						damageBonus: data.damageBonus,
-						bonuses: {
-							...data.baseWeapon.system.bonuses,
-							attackBonus: data.attackBonus,
-							damageBonus: data.damageBonus,
-						},
-						damage: {
-							...data.baseWeapon.system.damage,
-							bonus: data.damageBonus,
-						},
-						description: data.description,
-						magicItem: true,
-						baseWeapon: data.baseWeapon.name.slugify(),
-					},
-				};
-				break;
-			case "Armor":
-				itemObj = {
-					...data.baseArmor,
-					name: data.name,
-					type: data.type,
-					system: {
-						...data.baseArmor.system,
-						ac: {
-							...data.baseArmor.system.ac,
-							modifier: data.acModifier,
-						},
-						properties: data.armorProperties,
-						description: data.description,
-						magicItem: true,
-						baseArmor: data.baseArmor.name.slugify(),
-
-					},
-				};
-				break;
-			default:
-				itemObj = {
-					name: data.name,
-					type: "Basic",
-					system: {
-						description: data.description,
-						magicItem: true,
-					},
-				};
-				break;
-		}
-
-		// Create the item object
-		const newItem = await Item.create(itemObj);
-
-		console.log(newItem);
-		return newItem;
+		// Default: Basic magic item
+		return Item.create({
+			name,
+			type: "Basic",
+			system: {
+				description,
+				magicItem: true,
+			},
+		});
 	}
 }
