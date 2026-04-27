@@ -193,21 +193,38 @@ export default class ItemImporterSD extends ImporterSD {
 			type: "Weapon",
 			system: {
 				...baseWeapon.system,
-				attackBonus: bonusHint.value,
-				damageBonus: bonusHint.value,
-				bonuses: {
-					...baseWeapon.system.bonuses,
-					attackBonus: bonusHint.value,
-					damageBonus: bonusHint.value,
-				},
-				damage: {
-					...baseWeapon.system.damage,
-					bonus: bonusHint.value,
-				},
 				description,
 				magicItem: true,
 				baseWeapon: baseWeapon.name.slugify(),
 			},
+		};
+	}
+
+	/**
+	 * Builds an Active Effect data object from a predefined effect config.
+	 * Uses CONFIG.SHADOWDARK.PREDEFINED_EFFECTS for names, icons, and keys.
+	 * @param {string} key - Predefined effect key (e.g. "weaponAttackBonus")
+	 * @param {number} value - The effect value
+	 * @returns {object}
+	 */
+	_buildPredefinedEffect(key, value) {
+		const data = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
+		const effectMode = foundry.utils.getProperty(
+			CONST.ACTIVE_EFFECT_MODES,
+			data.mode.split(".")[2]
+		);
+		return {
+			name: game.i18n.localize(
+				`SHADOWDARK.item.effect.predefined_effect.${key}`
+			),
+			img: data.img,
+			changes: [{
+				key: data.effectKey,
+				value,
+				mode: effectMode,
+			}],
+			disabled: false,
+			transfer: data.transfer ?? true,
 		};
 	}
 
@@ -257,11 +274,22 @@ export default class ItemImporterSD extends ImporterSD {
 					.includes(weapon.name.toLowerCase())
 			);
 			if (matchedWeapon) {
-				return Item.create(
+				const newWeapon = await Item.create(
 					this._buildWeaponObj(
 						name, description, bonusHint, matchedWeapon
 					)
 				);
+				await newWeapon.createEmbeddedDocuments(
+					"ActiveEffect", [
+						this._buildPredefinedEffect(
+							"weaponAttackBonus", bonusHint.value
+						),
+						this._buildPredefinedEffect(
+							"weaponDamageBonus", bonusHint.value
+						),
+					]
+				);
+				return newWeapon;
 			}
 
 			const armor =
