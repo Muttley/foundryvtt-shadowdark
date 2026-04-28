@@ -33,40 +33,32 @@ export default class ItemImporterSD extends ImporterSD {
 	 */
 	static BENEFIT_EFFECT_PATTERNS = [
 		{
-			pattern: /\+(\d+)\s+bonus\s+to\s+(?:your\s+)?armor\s+class/i,
+			pattern: /\+(?<value>\d+)\s+bonus\s+to\s+(?:your\s+)?armor\s+class/i,
 			effect: "acBonus",
 		},
 		{
-			pattern: /\+(\d+)\s+damage\s+with\s+ranged/i,
-			effect: "rangedDamageBonus",
+			pattern: /Strength\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityStr",
 		},
 		{
-			pattern: /deal\s+\+(\d+)\s+damage.*melee|melee.*\+(\d+)\s+damage/i,
-			effect: "meleeDamageBonus",
+			pattern: /Dexterity\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityDex",
 		},
 		{
-			pattern: /Strength\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityStr", value: 18,
+			pattern: /Constitution\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityCon",
 		},
 		{
-			pattern: /Dexterity\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityDex", value: 18,
+			pattern: /Intelligence\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityInt",
 		},
 		{
-			pattern: /Constitution\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityCon", value: 18,
+			pattern: /Wisdom\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityWis",
 		},
 		{
-			pattern: /Intelligence\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityInt", value: 18,
-		},
-		{
-			pattern: /Wisdom\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityWis", value: 18,
-		},
-		{
-			pattern: /Charisma\s+stat\s+becomes\s+18/i,
-			effect: "permanentAbilityCha", value: 18,
+			pattern: /Charisma\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityCha",
 		},
 	];
 
@@ -175,7 +167,6 @@ export default class ItemImporterSD extends ImporterSD {
 		return {
 			value: parseInt(match[1], 10),
 			text: bonus.text,
-			isMithral: /mithral/i.test(bonus.text),
 		};
 	}
 
@@ -191,8 +182,7 @@ export default class ItemImporterSD extends ImporterSD {
 			for (const entry of ItemImporterSD.BENEFIT_EFFECT_PATTERNS) {
 				const match = trait.text.match(entry.pattern);
 				if (match) {
-					const value = entry.value
-						?? parseInt(match[1] ?? match[2], 10);
+					const value = parseInt(match.groups.value, 10);
 					matched.push({ effect: entry.effect, value });
 				}
 			}
@@ -316,13 +306,15 @@ export default class ItemImporterSD extends ImporterSD {
 
 	/**
 	 * Builds a Foundry Armor item object from parsed data and a base armor.
+	 * Mithral items have their armor properties stripped.
 	 * @param {string} name - Item name
 	 * @param {string} description - HTML description
-	 * @param {object} bonusHint - { value, text, isMithral }
+	 * @param {object} bonusHint - { value, text }
 	 * @param {object} baseArmor - Base armor from compendium
 	 * @returns {object}
 	 */
 	_buildArmorObj(name, description, bonusHint, baseArmor) {
+		const isMithral = /mithral/i.test(bonusHint.text);
 		return {
 			...baseArmor,
 			name,
@@ -333,7 +325,7 @@ export default class ItemImporterSD extends ImporterSD {
 					...baseArmor.system.ac,
 					modifier: bonusHint.value,
 				},
-				properties: bonusHint.isMithral
+				properties: isMithral
 					? [] : baseArmor.system.properties,
 				description,
 				magicItem: true,
