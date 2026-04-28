@@ -52,6 +52,7 @@ export default class ItemImporterSD extends ImporterSD {
 	 */
 	_parseName(lines) {
 		const parts = [];
+		// Consume lines until end of CAPS, see docstring
 		while (lines.length > 0 && /[A-Z]/.test(lines[0]) && !/[a-z]/.test(lines[0])) {
 			parts.push(lines.shift());
 		}
@@ -73,9 +74,28 @@ export default class ItemImporterSD extends ImporterSD {
 	}
 
 	/**
-	 * Parses remaining lines into trait objects, grouping multi-line traits.
-	 * Type is normalized to canonical title-case from TRAIT_KEYWORDS.
-	 * @param {string[]} lines
+	 * Helper that parses a trait-start line into type and text.
+	 * Splits at the first period, normalizes type to canonical
+	 * title-case from TRAIT_KEYWORDS (e.g. "BENEFIT" → "Benefit").
+	 * @param {string} line - A line where _isTraitStart() returned true
+	 * @returns {{ type: string, text: string }}
+	 */
+	_parseTraitStart(line) {
+		const dotIndex = line.indexOf(".");
+		const rawType = line.substring(0, dotIndex);
+		const traitText = line.substring(dotIndex + 1).trim();
+
+		const type = ItemImporterSD.TRAIT_KEYWORDS.find(
+			keyword => keyword.toLowerCase() === rawType.toLowerCase()
+		) ?? rawType;
+
+		return { type, text: traitText };
+	}
+
+	/**
+	 * Groups remaining lines into trait objects. A new trait starts
+	 * at each _isTraitStart() boundary; continuation lines are joined.
+	 * @param {string[]} lines - Lines after name and flavor text
 	 * @returns {{ type: string, text: string }[]}
 	 */
 	_parseTraits(lines) {
@@ -85,15 +105,7 @@ export default class ItemImporterSD extends ImporterSD {
 		for (const line of lines) {
 			if (this._isTraitStart(line)) {
 				if (current) traits.push(current);
-				const dotIndex = line.indexOf(".");
-				const rawType = line.substring(0, dotIndex);
-				const type = ItemImporterSD.TRAIT_KEYWORDS.find(
-					keyword => keyword.toLowerCase() === rawType.toLowerCase()
-				) ?? rawType;
-				current = {
-					type,
-					text: line.substring(dotIndex + 1).trim(),
-				};
+				current = this._parseTraitStart(line);
 			}
 			else if (current) {
 				current.text += ` ${line}`;
@@ -265,15 +277,16 @@ export default class ItemImporterSD extends ImporterSD {
 	}
 
 	/**
-	 * Parses pasted text representing an item and creates an Item from it.
-	 * @param {string} itemText - String data posted by user
-	 * @returns {Item}
+	 * Resolves item type and builds the item data object.
+	 * Checks bonus hint against compendium weapons/armor.
+	 * @param {object} parsed - Output from _parseItem()
+	 * @returns {object} { itemObj, effects }
 	 */
-	async _importItem(itemText) {
-		const { name, description, bonusHint } =
-			this._parseItem(itemText);
+	async _resolveItemType(parsed) {
+		const { name, description, bonusHint } = parsed;
+		const effects = [];
 
-		// Resolve weapon/armor type from compendiums if bonus hint present
+		// Bonus trait with +N: check compendium weapons, then armor
 		if (bonusHint) {
 			const weapons =
 				(await shadowdark.compendiums.baseWeapons()).contents;
@@ -282,22 +295,20 @@ export default class ItemImporterSD extends ImporterSD {
 					.includes(weapon.name.toLowerCase())
 			);
 			if (matchedWeapon) {
-				const newWeapon = await Item.create(
-					this._buildWeaponObj(
-						name, description, bonusHint, matchedWeapon
+				effects.push(
+					this._buildPredefinedEffect(
+						"weaponAttackBonus", bonusHint.value
+					),
+					this._buildPredefinedEffect(
+						"weaponDamageBonus", bonusHint.value
 					)
 				);
-				await newWeapon.createEmbeddedDocuments(
-					"ActiveEffect", [
-						this._buildPredefinedEffect(
-							"weaponAttackBonus", bonusHint.value
-						),
-						this._buildPredefinedEffect(
-							"weaponDamageBonus", bonusHint.value
-						),
-					]
-				);
-				return newWeapon;
+				return {
+					itemObj: this._buildWeaponObj(
+						name, description, bonusHint, matchedWeapon
+					),
+					effects,
+				};
 			}
 
 			const armor =
@@ -307,22 +318,51 @@ export default class ItemImporterSD extends ImporterSD {
 					.includes(piece.name.toLowerCase())
 			);
 			if (matchedArmor) {
-				return Item.create(
-					this._buildArmorObj(
+				return {
+					itemObj: this._buildArmorObj(
 						name, description, bonusHint, matchedArmor
-					)
-				);
+					),
+					effects,
+				};
 			}
+
+			// +N bonus but no matching weapon or armor
+			const error = new Error("Import validation failed");
+			error.details = [
+				"Bonus has a +N modifier but no matching weapon"
+				+ " or armor was found in the compendium.",
+			];
+			throw error;
 		}
 
 		// Default: Basic magic item
-		return Item.create({
-			name,
-			type: "Basic",
-			system: {
-				description,
-				magicItem: true,
+		return {
+			itemObj: {
+				name,
+				type: "Basic",
+				system: { description, magicItem: true },
 			},
-		});
+			effects,
+		};
+	}
+
+	/**
+	 * Parses pasted text representing an item and creates an Item from it.
+	 * @param {string} itemText - String data posted by user
+	 * @returns {Item}
+	 */
+	async _importItem(itemText) {
+		const parsed = this._parseItem(itemText);
+		const { itemObj, effects } = await this._resolveItemType(parsed);
+
+		const newItem = await Item.create(itemObj);
+
+		if (effects.length > 0) {
+			await newItem.createEmbeddedDocuments(
+				"ActiveEffect", effects
+			);
+		}
+
+		return newItem;
 	}
 }
