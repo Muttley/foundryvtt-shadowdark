@@ -30,6 +30,8 @@ export default class ItemImporterSD extends ImporterSD {
 	 * Tests if a line starts a trait section (case-insensitive).
 	 * @param {string} line
 	 * @returns {boolean}
+	 *
+	 * For example, it matches "Bonus. " or "Personality. ".
 	 */
 	_isTraitStart(line) {
 		const lower = line.toLowerCase();
@@ -43,6 +45,10 @@ export default class ItemImporterSD extends ImporterSD {
 	 * All-caps = has at least one uppercase letter and no lowercase letters.
 	 * @param {string[]} lines - Mutated: consumed lines are removed
 	 * @returns {string|null} Title-cased name, or null if no all-caps lines found
+	 *
+	 * For example:
+	 * BRACERS OF
+	 * ARMOR
 	 */
 	_parseName(lines) {
 		const parts = [];
@@ -142,7 +148,9 @@ export default class ItemImporterSD extends ImporterSD {
 	 * @throws {Error} With .details array listing all parse failures
 	 */
 	_parseItem(itemText) {
-		const lines = itemText.split(/\r?\n/)
+		// Fix PDF copy-paste hyphenation: "diamond-\ncut" → "diamond-cut"
+		const dehyphenated = itemText.replace(/- *\n/g, "-");
+		const lines = dehyphenated.split(/\r?\n/)
 			.map(line => line.trim())
 			.filter(line => line.length > 0);
 
