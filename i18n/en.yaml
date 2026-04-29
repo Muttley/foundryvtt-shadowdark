@@ -25,6 +25,8 @@ SHADOWDARK.ancestry.nametable.tooltip.weight: Affects the chance of rolling when
 SHADOWDARK.ancestry.talents.label: Ancestry Talents
 SHADOWDARK.ancestry.talents.prompt: Select Talent...
 SHADOWDARK.app.active_effects.title: Active Effects
+SHADOWDARK.app.active_effects.singular: Active Effect
+SHADOWDARK.app.active_effects.new_active_effect: New Active Effect
 SHADOWDARK.app.gem_bag.sell_all: Sell All Gems
 SHADOWDARK.app.gem_bag.title: Gem Bag
 SHADOWDARK.app.gem_bag.tooltip.sell_gem: Sell Gem
@@ -447,7 +449,7 @@ SHADOWDARK.item.effect.lightSource.lightSpellNear: Light
 SHADOWDARK.item.effect.lightSource.lightSuppression: Light Suppression
 SHADOWDARK.item.effect.lightSource.purpleGlow: Purple Glow
 SHADOWDARK.item.effect.lightSource.torch: Torch
-SHADOWDARK.item.effect.pre-defined.title: Pre-defined Effects
+SHADOWDARK.item.effect.pre-defined.title: Pre-defined Active Effects
 SHADOWDARK.item.effect.predefined_effect.abilityImprovement: Ability Score Improvement
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha: Ability Score Improvement (Cha)
 SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon: Ability Score Improvement (Con)
@@ -756,11 +758,11 @@ SHADOWDARK.sheet.class.item: Shadowdark Item Sheet
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Sheet
 SHADOWDARK.sheet.class.player: Shadowdark Player Sheet
 SHADOWDARK.sheet.general.active_effects.create_effect.title: Create Effect
-SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Effect
+SHADOWDARK.sheet.general.active_effects.delete_effect.tooltip: Delete Active Effect
 SHADOWDARK.sheet.general.active_effects.duration.title: Duration
-SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Effect
+SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Edit Active Effect
 SHADOWDARK.sheet.general.active_effects.source.title: Source
-SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Effect
+SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Toggle Active Effect
 SHADOWDARK.sheet.general.active_effects.toggle_situational.tooltip: Toggle Situational
 SHADOWDARK.sheet.general.add: Add
 SHADOWDARK.sheet.general.effects_and_conditions.title: Effects and Conditions
