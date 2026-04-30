@@ -320,6 +320,7 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.roll.situational_bonuses: Situational Bonuses
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
@@ -692,6 +693,7 @@ SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
+SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.upgrade_die: Up.Die
 SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.animate-hp-change.hint: Show changes to HP as scrolling text on the actor's token

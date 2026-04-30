@@ -86,9 +86,12 @@ export default class ChatSD {
 				templateData.healing = true;
 			}
 		}
-		if (config.selectedAmmunition) {
-			templateData.ammunitionName =
-				`${config.selectedAmmunition.name} (${config.selectedAmmunition.system.quantity}/${config.selectedAmmunition.system.slots.per_slot})`;
+		if (config.attack?.selectedAmmunition) {
+			const ammoItem = await fromUuid(config.attack.selectedAmmunition);
+			if (ammoItem) {
+				templateData.ammunitionName =
+					`${ammoItem.name} (${ammoItem.system.quantity}/${ammoItem.system.slots.per_slot})`;
+			}
 		}
 
 		return foundry.applications.handlebars.renderTemplate(

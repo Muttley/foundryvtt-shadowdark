@@ -36,6 +36,8 @@ export default class RollSD extends foundry.dice.Roll {
 			{flavor, isPrivate, ...options}
 		);
 
+		context.options = this.options;
+
 		// context for success or failure
 		if (this.criticalSuccess) {
 			context.success = "critical-success";

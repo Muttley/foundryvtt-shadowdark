@@ -325,7 +325,6 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		const rollKey = this._getActiveEffectKeys(`roll.stat.bonus.${ability}`, abilityMod.modifier, null, config);
 		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
 		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
-		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		// calculate roll advantage
 		const advRollKeyAdv = this._getActiveEffectKeys(`roll.stat.advantage.${ability}`, 0, null, config);

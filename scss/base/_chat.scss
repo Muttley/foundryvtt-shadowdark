@@ -47,6 +47,7 @@
 				font-size: var(--font-size-18);
 				font-family: "Montserrat-Bold";
 				color: black;
+
 			}
 
 		}
@@ -157,6 +158,11 @@
 
 						&.small {
 							font-size: var(--font-size-10);
+						}
+
+						i {
+							margin: 0px 4px;
+							color: #361010;
 						}
 					}
 				}

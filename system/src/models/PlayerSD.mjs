@@ -302,7 +302,6 @@ export default class PlayerSD extends ActorBaseSD {
 		);
 		config.mainRoll.bonus = shadowdark.dice.formatBonus(attackRollKey.value);
 		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
-		config.mainRoll.formulaBackup = config.mainRoll.formula;
 
 		const critTooltips = this._calcCriticalConfig(weapon, config, config.attack.type);
 
@@ -397,7 +396,6 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 		config.damageRoll.formula = damageRollKey.value;
-		config.damageRoll.formulaBackup = config.damageRoll.formula;
 
 		// generate tooltips
 		const tooltips = [];
@@ -1049,15 +1047,11 @@ export default class PlayerSD extends ActorBaseSD {
 			if (ammunition && Array.isArray(ammunition) && ammunition.length > 0) {
 				const defaultAmmunition = weapon.actor.ammunitionItems(weapon.system.ammoClass);
 
-				if (defaultAmmunition
-					&& Array.isArray(defaultAmmunition)
-					&& defaultAmmunition.length > 0) {
-					for (const ammo of ammunition) {
-						ammo.isDefault = ammo._id === defaultAmmunition[0]._id ? true : false;
-					}
+				config.attack ??= {};
+				config.attack.ammunitionOptions = ammunition.map(a => a.uuid);
+				if (defaultAmmunition?.length > 0) {
+					config.attack.defaultAmmunitionUuid = defaultAmmunition[0].uuid;
 				}
-
-				config.ammunitionOptions = ammunition;
 			}
 			else {
 				return ui.notifications.error(
@@ -1078,15 +1072,18 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// test for ammunition
 		if (weapon.usesAmmunition) {
-			if (!config.selectedAmmunition) {
+			if (!config.attack.selectedAmmunition) {
 				// Try to find ammo if none is selected
 				const defaultAmmo = weapon.actor.ammunitionItems(weapon.system.ammoClass);
 				if (defaultAmmo?.length > 0) {
-					config.selectedAmmunition = defaultAmmo[0];
+					config.attack.selectedAmmunition = defaultAmmo[0].uuid;
 				}
 			}
 			// error out if no ammo is found
-			if (!config.selectedAmmunition || config.selectedAmmunition.system.quantity <= 0) {
+			const selectedAmmoItem = config.attack.selectedAmmunition
+				? await fromUuid(config.attack.selectedAmmunition)
+				: null;
+			if (!selectedAmmoItem || selectedAmmoItem.system.quantity <= 0) {
 				return ui.notifications.error(game.i18n.localize("SHADOWDARK.item.errors.no_available_ammunition"));
 			}
 		}
@@ -1094,11 +1091,8 @@ export default class PlayerSD extends ActorBaseSD {
 		// Roll the attack and post to chat
 		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		if (weapon.usesAmmunition && config.selectedAmmunition) {
-			const item = this.parent.items.find(
-				i => i._id === config.selectedAmmunition._id
-			);
-
+		if (weapon.usesAmmunition && config.attack.selectedAmmunition) {
+			const item = await fromUuid(config.attack.selectedAmmunition);
 			item.reduceAmmunition(1);
 		}
 

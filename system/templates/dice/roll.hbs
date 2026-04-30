@@ -4,7 +4,9 @@
 		<h4 class="dice-total">{{total}}</h4>
 		<div class="dice-text">
 			{{#if successLabel}}<div class="dice-success">{{successLabel}}</div>{{/if}}
-			<div class="dice-formula {{#if successLabel}}small{{/if}}">{{formula}}</div>
+			<div class="dice-formula {{#if successLabel}}small{{/if}}">
+				{{formula}} {{#if options.modified}}<i class="fas fa-asterisk"></i>{{/if}}
+			</div>
 		</div>
     </div>
 	{{{tooltip}}}

@@ -38,11 +38,11 @@
 			{{#each ammunitionOptions}}
 				<option
 					title="{{this.name}}"
-					value="{{this._id}}"
+					value="{{this.uuid}}"
 					{{#if this.isDefault}}
 						selected
 					{{/if}}
-				>{{this.name}} ({{this.system.quantity}}/{{this.system.slots.per_slot}})</option>
+				>{{this.name}} ({{this.quantity}}/{{this.perSlot}})</option>
 			{{/each}}
 			</select>
 		</div>
@@ -51,7 +51,7 @@
 
 	{{#if situationalOptions}}
 		<div class="situational-options">
-			<label style="font-size:1.25em;">Situational Bonuses</label>
+			<label style="font-size:1.25em;">{{localize "SHADOWDARK.dialog.roll.situational_bonuses"}}</label>
 			{{#each situationalOptions}}
 				<div class="situational-option">
 					<p class="tooltips"><b>{{this.name}}.</b> {{this.description}}</p>
