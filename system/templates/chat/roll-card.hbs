@@ -1,8 +1,16 @@
 <divclass="shadowdark chat-card">
+	<!-- mainRoll -->
 	{{#if mainRoll.html}}
+		<h3 class="sub-heading">
+			{{mainRoll.label}}
+			{{#unless mainRoll.success}}
+				<i class="fa-solid fa-arrows-rotate reroll-icon" data-action="reroll" data-roll-type="main"></i>
+			{{/unless}}
+		</h3>
 		{{{mainRoll.html}}}
 	{{/if}}
 
+	<!-- Item -->
 	{{#if item}}
 		<div class="item-wrapper">
 			<a data-link data-uuid="{{item.uuid}}">
@@ -18,28 +26,60 @@
 		</div>
 	{{/if}}
 
-	{{#each descriptions}}
-		{{{this}}}
-	{{/each}}
+	<div class="descriptions">
+		{{#each descriptions}}
+			{{{this}}}
+		{{/each}}
+	</div>
 
+	<!-- Damage Roll -->
 	{{#if damageRoll.html}}
+		<h3 class="sub-heading">
+			{{damageRoll.label}}
+			<a data-action="reroll" data-roll-type="damage"><i class="fa-solid fa-arrows-rotate reroll-icon" ></i></a>
+		</h3>
 		{{{damageRoll.html}}}
 	{{else}}
 		{{#if damageRoll.needed}}
-			<div data-action="expandRoll">
-				<button data-action="rollDamage">
-					Roll Damage
-				</button>
+			<h3 class="sub-heading">{{damageRoll.label}}</h3>
+			<div class="dice-roll" data-action="expandRoll" >
+				<div class="dice-result" data-action="rollDamage">
+					<div class="dice-text">
+						<div class="dice-success"><i class="fa-solid fa-dice"></i> Roll</div>
+					</div>
+				</div>
+				<div class="dice-tooltip"></div>
 			</div>
 		{{/if}}
 	{{/if}}
 
-	{{#if target}}
-	<div class="target-wrapper">
-		<a data-link data-uuid="{{target.actor.uuid}}">
-			<img src="{{target.texture.src}}" style="width:20px;height:20px;display:inline">
-		</a>
-		<span>{{target.name}}</span>
-	</div>
+	<!-- Damage Selectors -->
+	{{#if damageRoll.html}}
+		<div class="apply-damage-wrapper">
+			<a class="apply-damage" data-action="apply-damage" data-target="selected" data-tooltip="Apply damage to selected tokens">
+				{{#if healing}}<i class="fa-solid fa-heart-circle-plus"></i>{{else}}<i class="fa-solid fa-heart-circle-minus"></i>{{/if}}
+				<i class="fa-solid fa-arrow-right"></i>
+				<i class="fa-solid fa-arrow-pointer"></i>
+			</a>
+			{{#if target}}
+			|
+			<a class="apply-damage" data-action="apply-damage" data-target="target" data-tooltip="Apply damage to selected Targets">
+				{{#if healing}}<i class="fa-solid fa-heart-circle-plus"></i>{{else}}<i class="fa-solid fa-heart-circle-minus"></i>{{/if}}
+				<i class="fa-solid fa-arrow-right"></i>
+				<i class="fa-solid fa-crosshairs"></i>
+			</a>
+			{{/if}}
+		</div>
+	{{/if}}
+
+	<!-- Targets -->
+	{{#if showTargets}}
+		<h3 class="sub-heading">{{localize "SHADOWDARK.chat.targets"}}</h3>
+		<div class="target-wrapper">
+			<a class="target" data-action="focus-target" data-target-uuid="{{target.uuid}}" data-actor-uuid="{{target.actor.uuid}}">
+				<img src="{{target.texture.src}}">
+				<span>{{target.name}}</span>
+			</a>
+		</div>
 	{{/if}}
 </div>

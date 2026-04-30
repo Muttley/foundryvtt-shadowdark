@@ -16,6 +16,10 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		};
 	}
 
+	rollConfigGenerators = {
+		check: this._generateStatCheckConfig.bind(this),
+	};
+
 	/* ----------------------- */
 	/* Getters       */
 	/* ----------------------- */
@@ -309,11 +313,14 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		};
 	}
 
-	_generateAbilityCheckConfig(ability, config={}) {
+	_generateStatCheckConfig(config) {
+		if (!config.check.stat) return;
+		config.type = "check";
 		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.check");
 
 		// generate check formula from ability mod and AE roll bonuses
+		const ability = config.check.stat;
 		const abilityMod = this._getAbilityModifier(ability);
 		const rollKey = this._getActiveEffectKeys(`roll.stat.bonus.${ability}`, abilityMod.modifier, null, config);
 		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
@@ -333,22 +340,20 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 	}
 
-	async rollAbilityCheck(abilityId, config={}) {
+	async rollStatCheck(abilityId, config={}) {
 		const ability = abilityId.toLowerCase();
 		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return false;
-
-		config.type = "ability-check";
+		config.check = {
+			stat: ability,
+		};
 		config.actorId = this.parent.id;
 		config.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
 		config.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
 
-		this._generateAbilityCheckConfig(ability, config);
+		this.rollConfigGenerators.check?.(config);
 
 		// show roll prompt and end if closed
-		const prompt = await shadowdark.dice.rollDialog(
-			config,
-			() => this._generateAbilityCheckConfig(ability, config)
-		);
+		const prompt = await shadowdark.dice.rollDialog(config);
 		if (!prompt) return false;
 
 		// call Stat Check hooks and cancel if any return false

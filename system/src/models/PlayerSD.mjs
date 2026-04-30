@@ -70,6 +70,13 @@ export default class PlayerSD extends ActorBaseSD {
 		return super.migrateData(data);
 	}
 
+	rollConfigGenerators = {
+		check: this._generateStatCheckConfig.bind(this),
+		ability: this._generateAbilityConfig.bind(this),
+		spell: this._generateSpellConfig.bind(this),
+		attack: this._generateAttackConfig.bind(this),
+	};
+
 	/**
 	 * // triggered before Active Effects are applied
 	 * @override
@@ -123,6 +130,12 @@ export default class PlayerSD extends ActorBaseSD {
 
 	get canUseMagicItems() {
 		return (this.isSpellCaster || this.spellcasting.allowAllItems);
+	}
+
+	get hasLuckToken() {
+		return game.settings.get("shadowdark", "usePulpMode")
+			? this.luck.remaining > 0
+			: this.luck.available;
 	}
 
 	get isPC() {
@@ -327,7 +340,11 @@ export default class PlayerSD extends ActorBaseSD {
 
 		config.mainRoll.criticalSuccessAt = critSuccess.value;
 		config.mainRoll.criticalFailureAt = critFailure.value;
-		config.mainRoll.criticalMultiplier = critMultiplier.value;
+
+		if (critMultiplier.value !== 2) {
+			config.damageRoll ??= {};
+			config.damageRoll.criticalMultiplier = critMultiplier.value;
+		}
 
 		return [critSuccess.tooltips, critFailure.tooltips, critMultiplier.tooltips];
 	}
@@ -395,9 +412,10 @@ export default class PlayerSD extends ActorBaseSD {
 		// any hard coded logic can go here
 	}
 
-	_generateAbilityConfig(ability, config={}) {
-		if (!ability) return; // TODO error message
-		config.itemUuid = ability.uuid;
+	async _generateAbilityConfig(config) {
+		const ability = await fromUuid(config.itemUuid);
+		if (!ability) return;
+		config.type = "ability";
 
 		config.descriptions = [];
 		config.descriptions.push(ability.system.description);
@@ -443,9 +461,10 @@ export default class PlayerSD extends ActorBaseSD {
 		return config;
 	}
 
-	_generateAttackConfig(weapon, config={}) {
-		if (!weapon.system.isWeapon) return;
-		config.itemUuid = weapon.uuid;
+	async _generateAttackConfig(config={}) {
+		const weapon = await fromUuid(config.itemUuid);
+		if (!weapon?.system.isWeapon) return;
+		config.type = "attack";
 
 		// set required fields
 		config.attack ??= {};
@@ -467,8 +486,10 @@ export default class PlayerSD extends ActorBaseSD {
 		return config;
 	}
 
-	_generateSpellConfig(spell, config={}) {
-		if (!spell.system.isSpell) return;
+	async _generateSpellConfig(config={}) {
+		const spell = await fromUuid(config.cast?.spellUuid);
+		if (!spell?.system.isSpell) return;
+		config.type = "spell";
 
 		config.cast ??= {};
 		config.cast.spellUuid = spell.uuid;
@@ -484,7 +505,6 @@ export default class PlayerSD extends ActorBaseSD {
 			this._calcDamageConfig(spell, config, "spell", formula);
 			if (config.cast.damageType === "healing") {
 				config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.healing");
-				config.damageRoll.type = "healing";
 			}
 		}
 
@@ -596,7 +616,7 @@ export default class PlayerSD extends ActorBaseSD {
 		const linkedSpell = await fromUuid(item.system?.spellUuid);
 		if (!linkedSpell) {
 			return ui.notifications.error(
-				game.i18n.localize("SHADOWDARK.error.scroll.spell_not_set")
+				game.i18n.localize("SHADOWDARK.error.spells.spell_not_found")
 			);
 		}
 
@@ -605,7 +625,7 @@ export default class PlayerSD extends ActorBaseSD {
 		const spellcastingAttribute =
 			characterClass?.system?.spellcasting?.ability ?? "int";
 
-		const checkRoll = await this.rollAbilityCheck(
+		const checkRoll = await this.rollStatCheck(
 			spellcastingAttribute,
 			{ mainRoll: {dc: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC} }
 		);
@@ -747,15 +767,13 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 		config.cast ??= {};
 		config.cast.ability = castingAbility;
+		config.cast.spellUuid = spellUuid;
 
 		shadowdark.dice.setRollTarget(config);
 
-		this._generateSpellConfig(spell, config);
+		await this.rollConfigGenerators.spell?.(config);
 
-		if (!await shadowdark.dice.rollDialog(
-			config,
-			() => this._generateSpellConfig(spell, config)
-		)) return false;
+		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// Call player cast spell hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Spell", config)) return false;
@@ -797,7 +815,8 @@ export default class PlayerSD extends ActorBaseSD {
 		// get attacks from weapons
 		for (const weapon of weapons) {
 
-			const attackData = this._generateAttackConfig(weapon);
+			const attackData = {itemUuid: weapon.uuid};
+			await this.rollConfigGenerators.attack?.(attackData);
 
 			const type = attackData?.attack?.type ?? "none";
 			if (!attacks[type]) attacks[type] = [];
@@ -809,10 +828,8 @@ export default class PlayerSD extends ActorBaseSD {
 			// if thrown then add a range attack
 			if (weapon.system.isThrown) {
 				const ranged = "ranged";
-				const rangedAttackData = this._generateAttackConfig(
-					weapon,
-					{attack: {type: ranged}}
-				);
+				const rangedAttackData = {itemUuid: weapon.uuid, attack: {type: ranged}};
+				await this.rollConfigGenerators.attack?.(rangedAttackData);
 
 				if (!attacks[ranged]) attacks[ranged] = [];
 				if (rangedAttackData.itemUuid) {
@@ -1014,11 +1031,11 @@ export default class PlayerSD extends ActorBaseSD {
 
 	async rollAttack(weaponUuid, config={}) {
 
-		config.type = "player-attack";
 		config.actorId = this.parent.id;
+		config.itemUuid = weaponUuid;
 
 		const weapon = await fromUuid(weaponUuid);
-		if (!weapon && weapon.system.isWeapon) {
+		if (!weapon || !weapon.system.isWeapon) {
 			console.error("rollAttack: Invalid weaponId or type");
 			return false;
 		}
@@ -1051,12 +1068,10 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 
 		// generates attack data based on the weapon and actor
-		this._generateAttackConfig(weapon, config);
+		await this.rollConfigGenerators.attack?.(config);
 
 		// show roll prompt and cancelled if closed
-		if (!await shadowdark.dice.rollDialog(config,
-			() => this._generateAttackConfig(weapon, config)
-		)) return false;
+		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// Call player attack hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-Attack", config)) return false;
@@ -1142,13 +1157,16 @@ export default class PlayerSD extends ActorBaseSD {
 
 	async useAbility(abilityUuid, config={}) {
 		const ability = await fromUuid(abilityUuid);
+		if (!ability) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.general.item_uuid_not_found")
+			);
+		}
 		config.actorId = this.parent.id;
+		config.itemUuid = abilityUuid;
+		await this.rollConfigGenerators.ability?.(config);
 
-		this._generateAbilityConfig(ability, config);
-
-		if (!await shadowdark.dice.rollDialog(config,
-			() => this._generateAbilityConfig(ability, config)
-		)) return false;
+		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// Call player classAbility hooks and cancel if any return false
 		if (!await Hooks.call("SD-Player-classAbility", config)) return false;
@@ -1182,6 +1200,37 @@ export default class PlayerSD extends ActorBaseSD {
 		else {
 			const chatData = await shadowdark.chat.renderRollMessage(config);
 			await ChatMessage.create(chatData);
+		}
+	}
+
+	async useLuckToken(postToChat=false) {
+		let update = null;
+		if (game.settings.get("shadowdark", "usePulpMode")) {
+			if (this.luck.remaining > 0) {
+				update = {"system.luck.remaining": this.luck.remaining-1};
+			}
+		}
+		else if (this.luck.available) {
+			update = {"system.luck.available": false};
+		}
+
+		if (update) {
+			await this.parent.update(update);
+			if (postToChat) {
+				await ChatMessage.create({
+					content: game.i18n.format(
+						"SHADOWDARK.chat.luck_token.used", { name: this.parent.name }
+					),
+					speaker: ChatMessage.getSpeaker(
+						{ actor: this.parent, token: this.parent.token }
+					),
+					user: game.user.id,
+				});
+			}
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 

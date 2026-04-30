@@ -27,10 +27,9 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		},
 	};
 
-	constructor(config, dataFunction=null, options = {}) {
+	constructor(config, options = {}) {
 		super(options);
 		this.config = config;
-		this.dataFunction = dataFunction;
 		this.submitted = false;
 	}
 
@@ -150,12 +149,9 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 
 		this.config.selected = selectedArray;
 
-		// Run dataFunction to regenerate config
-		if (typeof this.dataFunction === "function") {
-			await this.dataFunction();
-			// Re-render the dialog with updated config
-			await this.render(true);
-		}
+		const actor = game.actors.get(this.config.actorId);
+		await actor?.system.rollConfigGenerators[this.config.type]?.(this.config);
+		await this.render(true);
 	}
 
 	/**

@@ -24,7 +24,7 @@ export function applyAdvantage(formula, adv) {
  * @param {string} formula // roll formula
  * @returns {string} // new roll formula
  */
-export function applyCriticalHit(formula, multiplier) {
+export function applyCriticalHit(formula, multiplier=2) {
 	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/ig, function(match) {
 		if (match.startsWith("d")) {
 			let count = Number(multiplier);
@@ -153,19 +153,21 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 export async function roll(config, rolldata={}) {
 	if ( !config?.formula) throw new Error("Missing required property: config.formula");
 
-	// apply advantage or disadvantage
-	if (config.advantage) {
-		config.formula = applyAdvantage(config.formula, config.advantage);
-	}
-
-	if (config.type === "damage") {
-		// double base damage on critical hit
-		if (config.criticalHit) {
-			config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
+	if (!config.reroll) {
+		// apply advantage or disadvantage
+		if (config.advantage) {
+			config.formula = applyAdvantage(config.formula, config.advantage);
 		}
-		// apply momentum mode
-		if (game.settings.get("shadowdark", "useMomentumMode")) {
-			config.formula = applyExploding(config.formula);
+
+		if (config.type === "damage") {
+			// double base damage on critical hit
+			if (config.criticalHit) {
+				config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
+			}
+			// apply momentum mode
+			if (game.settings.get("shadowdark", "useMomentumMode")) {
+				config.formula = applyExploding(config.formula);
+			}
 		}
 	}
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
@@ -191,12 +193,11 @@ export async function rollDamageFromMessage(msg) {
 
 	const mainRoll = msg.getRoll("main");
 
-	config.damageRoll.type = "damage";
+	config.damageRoll.type = config.damageRoll.type ?? "damage";
 	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
-	config.damageRoll.criticalMultiplier = mainRoll.options.criticalMultiplier;
 	const damageRoll = await roll(config.damageRoll, actor.getRollData());
 
-	const content = await shadowdark.chat.renderRollCard(config, [mainRoll, damageRoll]);
+	const content = await shadowdark.chat.renderRollHTML(config, [mainRoll, damageRoll]);
 
 	// update message with new roll and content
 	await msg.update({rolls: [...msg.rolls, damageRoll]});
@@ -211,6 +212,46 @@ export async function rollDamageFromMessage(msg) {
 }
 
 /**
+ * Rerolls a main or damage roll from an existing chat message.
+ * Main reroll creates a new message; damage reroll updates the existing one.
+ * @param {ChatMessage} msg Chat message to reroll from
+ * @param {string} rollType "main" or "damage"
+ */
+export async function rerollFromMessage(msg, rollType) {
+	const config = msg?.rollConfig;
+	if (!config) {
+		console.error("Error: No roll config found on message");
+		return;
+	}
+	const actor = game.actors.get(config.actorId);
+
+	if (!game.user.isGM) {
+		if (actor.system.hasLuckToken) {
+			await actor.system.useLuckToken(true);
+		}
+		else {
+			ui.notifications.warn("No luck token available");
+			return;
+		}
+	}
+
+	if (rollType === "main") {
+		// modify config
+		config.mainRoll.reroll = true;
+		await rollFromConfig(config);
+	}
+	else if (rollType === "damage") {
+		config.damageRoll.reroll = true;
+		const updatedRolls = msg.rolls.filter(r => r.options?.type !== "damage");
+		await msg.update({
+			"rolls": updatedRolls,
+			"flags.shadowdark.rollConfig": config,
+		});
+		await rollDamageFromMessage(msg);
+	}
+}
+
+/**
  * Opens a rollDialog based on the provided Shadowdark roll config.
  * @param {object} config :
 		title: {String} - Title to be displayed
@@ -220,7 +261,7 @@ export async function rollDamageFromMessage(msg) {
 		rollingMode: {option}
  * @returns {bool} /returns false if closed without submit
  */
-export async function rollDialog(config, dataFunction) {
+export async function rollDialog(config) {
 
 	// get global role default if rollMode not set
 	config.rollMode ??= game.settings.get("core", "rollMode");
@@ -231,7 +272,7 @@ export async function rollDialog(config, dataFunction) {
 	if (config.skipPrompt) return true;
 
 	// Show roll prompt and wait for close
-	const dialog = new shadowdark.apps.RollDialogSD(config, dataFunction);
+	const dialog = new shadowdark.apps.RollDialogSD(config);
 	dialog.render({force: true});
 
 	const result = await new Promise(resolve => {

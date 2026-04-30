@@ -1,7 +1,6 @@
-{{#if label}}<h3>{{label}}</h3>{{/if}}
 <div class="dice-roll" data-action="expandRoll">
     {{#if flavor}}<div class="dice-flavor">{{flavor}}</div>{{/if}}
-    <div class="dice-result">
+    <div class="dice-result {{success}}">
 		<h4 class="dice-total">{{total}}</h4>
 		<div class="dice-text">
 			{{#if successLabel}}<div class="dice-success">{{successLabel}}</div>{{/if}}

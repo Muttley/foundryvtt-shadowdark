@@ -37,13 +37,26 @@ export default class RollSD extends foundry.dice.Roll {
 		);
 
 		// context for success or failure
-		if (this.criticalSuccess) context.successLabel = "Critical Success";
-		else if (this.criticalFailure) context.successLabel = "Critical Failure";
-		else if (this.success) context.successLabel = "Success";
-		else if (this.success === false) context.successLabel = "Failure";
-		else context.successLabel = ""; // No DC
-
-		context.label = this.options?.label ?? null;
+		if (this.criticalSuccess) {
+			context.success = "critical-success";
+			context.successLabel = game.i18n.localize("SHADOWDARK.roll.label.critical_success");
+		}
+		else if (this.criticalFailure) {
+			context.success = "critical-failure";
+			context.successLabel = game.i18n.localize("SHADOWDARK.roll.label.critical_failure");
+		}
+		else if (this.success) {
+			context.success = "success";
+			context.successLabel = game.i18n.localize("SHADOWDARK.roll.label.success");
+		}
+		else if (this.success === false) {
+			context.success = "failure";
+			context.successLabel = game.i18n.localize("SHADOWDARK.roll.label.failure");
+		}
+		else {
+			context.success = "";
+			context.successLabel = ""; // No DC
+		}
 
 		return context;
 	}
