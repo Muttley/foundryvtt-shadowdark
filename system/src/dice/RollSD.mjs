@@ -37,6 +37,7 @@ export default class RollSD extends foundry.dice.Roll {
 		);
 
 		context.options = this.options;
+		context.damage = this.options.type === "damage";
 
 		// context for success or failure
 		if (this.criticalSuccess) {

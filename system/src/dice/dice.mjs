@@ -238,7 +238,27 @@ export async function rerollFromMessage(msg, rollType) {
 	if (rollType === "main") {
 		// modify config
 		config.mainRoll.reroll = true;
-		await rollFromConfig(config);
+		const result = await rollFromConfig(config);
+
+		// Reset lost spells and broken wands on a reroll success
+		if (config?.cast?.spellUuid) {
+			const spell = await fromUuid(config?.cast?.spellUuid);
+
+			// Revert wand spell and unbreak wand
+			if (config?.cast?.spellUuid !== config?.itemUuid) {
+				const triggeringItem = await fromUuid(config?.itemUuid);
+				if (triggeringItem?.system?.isWand) {
+					triggeringItem?.system?.setSpellLost(
+						spell?.uuid, !result?.success, result?.criticalFailure
+					);
+				}
+			}
+			// Revert spell
+			else if (spell) {
+				await spell.update({"system.lost": !result?.success});
+			}
+		}
+
 	}
 	else if (rollType === "damage") {
 		config.damageRoll.reroll = true;

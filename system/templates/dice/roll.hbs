@@ -2,11 +2,14 @@
     {{#if flavor}}<div class="dice-flavor">{{flavor}}</div>{{/if}}
     <div class="dice-result {{success}}">
 		<h4 class="dice-total">{{total}}</h4>
-		<div class="dice-text">
+		<div class="dice-text {{#if damage}}dice-damage{{/if}}">
 			{{#if successLabel}}<div class="dice-success">{{successLabel}}</div>{{/if}}
 			<div class="dice-formula {{#if successLabel}}small{{/if}}">
 				{{formula}} {{#if options.modified}}<i class="fas fa-asterisk"></i>{{/if}}
 			</div>
+			{{#if damage}}
+			<a class="apply-damage" data-action="apply-damage" data-target="selected" data-tooltip="Apply damage to selected tokens"></a>
+			{{/if}}
 		</div>
     </div>
 	{{{tooltip}}}

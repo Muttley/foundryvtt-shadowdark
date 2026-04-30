@@ -55,20 +55,30 @@ export default class ChatMessageSD extends ChatMessage {
 		if (!canReroll) {
 			html.querySelectorAll('[data-action="reroll"]').forEach(btn => btn.remove());
 		}
-		if (!game.user.isGM) {
-			html.querySelector(".apply-damage-wrapper")?.remove();
+		if (game.user.isGM) {
+			html.querySelectorAll(".apply-damage").forEach(async a => {
+				const context = {};
+				context.healing = (this.rollConfig?.cast?.damageType === "healing");
+				context.target = a.dataset.target === "target";
+				const selectorhtml = await foundry.applications.handlebars.renderTemplate(
+					"systems/shadowdark/templates/dice/_partials/damage-selectors.hbs",
+					context
+				);
+				a.innerHTML = selectorhtml;
+			}
+			);
+		}
+		else {
+    		html.querySelectorAll(".apply-damage").forEach(a => a.remove());
 		}
 	}
 
 	async _onApplyDamage(event, btn) {
 		event.preventDefault();
-		const li = btn.closest("[data-message-id]");
-		if (!li) return;
-		const message = game.messages.get(li.dataset.messageId);
-		const config = message?.rollConfig;
+		const config = this.rollConfig;
 		if (!config) return;
 
-		if (message.getFlag("shadowdark", "damageApplied")) {
+		if (this.getFlag("shadowdark", "damageApplied")) {
 			const reapply = await Dialog.confirm({
 				title: game.i18n.localize("SHADOWDARK.chat_card.dialog.reapply_damage.title"),
 				content: `<p>${game.i18n.localize("SHADOWDARK.chat_card.dialog.reapply_damage.content")}</p>`,
@@ -77,7 +87,7 @@ export default class ChatMessageSD extends ChatMessage {
 			if (!reapply) return;
 		}
 
-		const damageRoll = message.getRoll("damage");
+		const damageRoll = this.getRoll("damage");
 		if (!damageRoll) return;
 
 		let actor;
@@ -98,7 +108,7 @@ export default class ChatMessageSD extends ChatMessage {
 			: damageRoll.total;
 		actor.applyDamage(damage);
 
-		await message.setFlag("shadowdark", "damageApplied", true);
+		await this.setFlag("shadowdark", "damageApplied", true);
 	}
 
 	async _onFocusTarget(event) {
@@ -119,18 +129,12 @@ export default class ChatMessageSD extends ChatMessage {
 
 	_onReroll(event, btn) {
 		event.preventDefault();
-		const li = btn.closest("[data-message-id]");
-		if (!li) return;
-		const message = game.messages.get(li.dataset.messageId);
-		shadowdark.dice.rerollFromMessage(message, btn.dataset.rollType);
+		shadowdark.dice.rerollFromMessage(this, btn.dataset.rollType);
 	}
 
 	_onRollDamage(event, btn) {
 		event.preventDefault();
-		const li = btn.closest("[data-message-id]");
-		if (!li) return;
-		const message = game.messages.get(li.dataset.messageId);
-		shadowdark.dice.rollDamageFromMessage(message);
+		shadowdark.dice.rollDamageFromMessage(this);
 	}
 
 	/**

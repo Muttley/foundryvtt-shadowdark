@@ -82,9 +82,6 @@ export default class ChatSD {
 		}
 		if (damageRoll) {
 			templateData.damageRoll.html = await damageRoll.render();
-			if (config?.cast?.damageType === "healing") {
-				templateData.healing = true;
-			}
 		}
 		if (config.attack?.selectedAmmunition) {
 			const ammoItem = await fromUuid(config.attack.selectedAmmunition);

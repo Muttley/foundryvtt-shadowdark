@@ -139,6 +139,7 @@
 					flex:1;
 					margin: 0px 4px;
 					align-content: center;
+					align-items: center;
 					line-height: 1;
 
 					.dice-success {
@@ -155,6 +156,7 @@
 						background: none;
 						box-shadow: none;
 						line-height: normal;
+						flex:1;
 
 						&.small {
 							font-size: var(--font-size-10);
@@ -164,6 +166,10 @@
 							margin: 0px 4px;
 							color: #361010;
 						}
+					}
+
+					&.dice-damage {
+						display: flex;
 					}
 				}
 
@@ -196,43 +202,44 @@
 			}
 		}
 
-		.apply-damage-wrapper {
-			text-align: center;
-			margin-top: 4px;
-			.apply-damage {
-				margin: 0px 12px;
-				i {
-					font-size: var(--font-size-16);
-				}
-				.fa-arrow-right {
-					font-size: var(--font-size-14);
-				}
+		.apply-damage {
+			margin: 0px 4px;
+
+			i {
+				font-size: var(--font-size-14);
 			}
-			.apply-damage.damage-applied {
+
+			&.damage-applied {
 				opacity: 0.4;
 			}
 		}
 
 		.target-wrapper {
 			display: flex;
-			margin:4px 4px 0px;
-			.target {
-				display: flex;
-				flex: 1;
-				margin-top: 4px;
+			margin:4px 0px 0px 4px;
+			align-items: center;
 
-				img {
-					width: 25px;
-					height: 25px;
-					display: inline-block;
-					text-align: center;
-					font-size: var(--font-size-18);
-				}
+			.targets {
+				flex:1;
 
-				span {
-					margin: 0px 4px;
-					line-height: 25px;
-					font-size: var(--font-size-14);
+				.target {
+					display: flex;
+					flex: 1;
+					margin-top: 4px;
+
+					img {
+						width: 25px;
+						height: 25px;
+						display: inline-block;
+						text-align: center;
+						font-size: var(--font-size-18);
+					}
+
+					span {
+						margin: 0px 4px;
+						line-height: 25px;
+						font-size: var(--font-size-14);
+					}
 				}
 			}
 

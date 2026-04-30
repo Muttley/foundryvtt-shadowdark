@@ -788,15 +788,10 @@ export default class PlayerSD extends ActorBaseSD {
 			triggeringItem.delete();
 		}
 		else if (triggeringItem?.system.isWand) {
-			if (roll.criticalFailure) {
-				triggeringItem.update({"system.broken": true});
-			}
-			else if (!roll.success) {
-				triggeringItem.system.toggleSpellLost(spellUuid);
+			if (!roll.success) {
+				triggeringItem.system.setSpellLost(spellUuid, true, roll.criticalFailure);
 			}
 		}
-
-		// TODO Maybe a Spell Mishap Message?
 
 		return roll.success;
 	}
