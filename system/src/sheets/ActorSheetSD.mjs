@@ -54,17 +54,15 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 	async _prepareContext(options) {
 		const context = await super._prepareContext(options);
 
-		Object.assign(context, {
-			actor: this.actor,
-			config: CONFIG.SHADOWDARK,
-			cssClass: this.actor.isOwner ? "editable" : "locked",
-			editable: this.isEditable,
-			hiddenSections: this._hiddenSectionsLut,
-			items: this.actor.items,
-			owner: this.actor.isOwner,
-			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
-			system: this.actor.system,
-		});
+		context.actor = this.actor;
+		context.config = CONFIG.SHADOWDARK;
+		context.cssClass = this.actor.isOwner ? "editable" : "locked";
+		context.editable = this.isEditable;
+		context.hiddenSections = this._hiddenSectionsLut;
+		context.items = this.actor.items;
+		context.owner = this.actor.isOwner;
+		context.predefinedEffects = await shadowdark.effects.getPredefinedEffectsList();
+		context.system = this.actor.system;
 
 		context.activeEffects = this.actor.allApplicableEffects().filter(e => !e.isSuppressed);
 
