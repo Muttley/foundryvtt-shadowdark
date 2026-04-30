@@ -167,8 +167,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async _render(options, _options) {
-		await super._render(options, _options);
+	async _onRender(context, options) {
+		await super._onRender(context, options);
 
 		if (this.actor.getFlag("shadowdark", "showLevelUp")) {
 			this.actor.setFlag("shadowdark", "showLevelUp", false);
@@ -177,8 +177,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async getData(options) {
-		const context = await super.getData(options);
+	async _prepareContext(options) {
+		const context = await super._prepareContext(options);
 
 		context.abilities = this.actor.system.abilities;
 		context.gearSlots = this.actor.system.slots;
@@ -234,26 +234,20 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async _onDropItem(event, data) {
-		switch ( data.type ) {
-			case "Item":
-				return this._onDropItemSD(event, data);
-		}
-		super._onDropItem(event, data);
+	async _onDropItem(event, item) {
+		return this._onDropItemSD(event, item);
 	}
 
 	/**
 	 * Checks if the dropped item should be handled in a special way
 	 * @param {Event} event - The triggering event
-	 * @param {object} data - Contains the type of dropped item, and the uuid
+	 * @param {Item} item - The resolved Item document
 	 * @returns {Promise<any>}
 	 */
-	async _onDropItemSD(event, data) {
-		const item = await fromUuid(data.uuid);
-
+	async _onDropItemSD(event, item) {
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
-		if (await this._effectDropNotAllowed(data)) return false;
+		if (this._effectDropNotAllowed(item)) return false;
 
 		// Background items are handled differently currently
 		const backgroundItems = [
@@ -301,7 +295,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			}
 
 			// Now create a copy of the item on the target
-			const [newItem] = await super._onDropItem(event, data);
+			const newItem = await super._onDropItem(event, item);
 
 			if (isActiveLight) {
 				// Turn the original light off before it gets deleted, and
@@ -316,7 +310,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			);
 		}
 		else {
-			super._onDropItem(event, data);
+			super._onDropItem(event, item);
 		}
 	}
 

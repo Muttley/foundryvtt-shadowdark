@@ -42,8 +42,8 @@ export default class NpcSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async getData(options) {
-		const context = await super.getData(options);
+	async _prepareContext(options) {
+		const context = await super._prepareContext(options);
 
 		// Ability Scores
 		for (const [key, ability] of Object.entries(this.actor.system.abilities)) {
@@ -151,17 +151,13 @@ export default class NpcSheetSD extends ActorSheetSD {
 		}
 	}
 
-	async _onDropItem(event, data) {
-		// get uuid of dropped item
-		const droppedItem = await fromUuid(data.uuid);
-
-		// if it's an spell, else return as normal
-		if (droppedItem.type === "Spell") {
+	async _onDropItem(event, item) {
+		if (item.type === "Spell") {
 			// add new spell to NPC
-			this.actor.createEmbeddedDocuments("Item", [droppedItem]);
+			this.actor.createEmbeddedDocuments("Item", [item]);
 		}
 		else {
-			super._onDropItem(event, data);
+			super._onDropItem(event, item);
 		}
 	}
 

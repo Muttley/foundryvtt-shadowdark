@@ -34,8 +34,8 @@ export default class LightSheetSD extends ActorSheetSD {
 	}
 
 	/** @override */
-	async getData(options) {
-		const context = await super.getData(options);
+	async _prepareContext(options) {
+		const context = await super._prepareContext(options);
 
 		return context;
 	}
