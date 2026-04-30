@@ -14,7 +14,7 @@
 						<div class="actions"></div>
 					</li>
 					{{#each tier as |spell|}}
-						<li class="item" data-item-id="{{spell._id}}" data-uuid="{{spell.uuid}}">
+						<li class="item draggable" data-item-id="{{spell._id}}" data-uuid="{{spell.uuid}}">
 							<div class="item-image" style="background-image: url({{spell.img}})">
 								<i class="fas fa-comment fa-lg"></i>
 							</div>
@@ -86,7 +86,7 @@
 
 				{{#each spellitems.wands}}
 
-					<li class="item" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
+					<li class="item draggable" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
 						<div class="item-image" style="background-image: url({{this.spell.img}})">
 							<i class="fas fa-comment fa-lg"></i>
 						</div>
@@ -150,7 +150,7 @@
 					</li>
 
 				{{#each spellitems.scrolls}}
-					<li class="item" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
+					<li class="item draggable" data-item-id="{{this.item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{this.item._id}}">
 						<div class="item-image" style="background-image: url({{this.spell.img}})">
 							<i class="fas fa-comment fa-lg"></i>
 						</div>

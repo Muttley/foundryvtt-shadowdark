@@ -53,7 +53,7 @@
 			<div class="actions"></div>
 		</li>
 		{{#each spells as |spell|}}
-		<li class="item expanded" data-item-id="{{spell._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{spell._id}}">
+		<li class="item draggable expanded" data-item-id="{{spell._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{spell._id}}">
 			<div class="item-image" style="background-image: url({{spell.img}})">
 				<i class="fas fa-comment"></i>
 			</div>

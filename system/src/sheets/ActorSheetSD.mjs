@@ -1,64 +1,60 @@
 import * as select from "../apps/CompendiumItemSelectors/_module.mjs";
 
-export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
+export default class ActorSheetSD extends foundry.applications.api.HandlebarsApplicationMixin(
+	foundry.applications.sheets.ActorSheetV2
+) {
+
 	_hiddenSectionsLut = {
 		activeEffects: true,
 	};
 
-	/** @inheritdoc */
-	activateListeners(html) {
-		html.find("[data-action='hide-section']").click(
-			event => this._onHideSection(event)
-		);
+	static DEFAULT_OPTIONS = {
+		classes: ["shadowdark", "sheet"],
+		window: {
+			resizable: true,
+		},
+		form: {
+			submitOnChange: true,
+			closeOnSubmit: false,
+		},
+		actions: {
+			"hide-section": ActorSheetSD.prototype._onHideSection,
+			"roll-ability-check": ActorSheetSD.prototype._onRollAbilityCheck,
+			"roll-hp": ActorSheetSD.prototype._onRollHP,
+			"item-selector": ActorSheetSD.prototype._onItemSelection,
+			"show-details": ActorSheetSD.prototype._onShowDetails,
+			"item-attack": ActorSheetSD.prototype._onRollAttack,
+			"toggle-lost": ActorSheetSD.prototype._onToggleLost,
+			"item-create": ActorSheetSD.prototype._onItemCreate,
+			// Effects-tab actions — five bare verbs all routed to the same
+			// helper, which dispatches on `target.dataset.action`.
+			"create": ActorSheetSD.prototype._onEffectControl,
+			"edit": ActorSheetSD.prototype._onEffectControl,
+			"delete": ActorSheetSD.prototype._onEffectControl,
+			"toggle": ActorSheetSD.prototype._onEffectControl,
+			"toggle-situational": ActorSheetSD.prototype._onEffectControl,
+		},
+	};
 
-		html.find("[data-action='roll-ability-check']").click(
-			event => this._onRollAbilityCheck(event)
-		);
+	/**
+	 * Stub for v1 subclass `super.activateListeners(html)` calls during the
+	 * v1→v2 migration. Removed once all subclasses define their own v2
+	 * actions and no longer call super.
+	 */
+	activateListeners(html) {}
 
-		html.find("[data-action='roll-hp']").click(
-			event => this._onRollHP(event)
-		);
-
-		html.find(".item-selector").click(
-			event => this._onItemSelection(event)
-		);
-
-		html.find("[data-action='show-details']").click(
-			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
-		);
-
-		html.find("[data-action='item-attack']").click(
-			event => this._onRollAttack(event)
-		);
-
-		html.find("[data-action='toggle-lost']").click(
-			event => this._onToggleLost(event)
-		);
-
-		html.find("[data-action='item-create']").click(
-			event => this._onItemCreate(event)
-		);
-
-		html.find(".effect-control").click(ev => {
-			shadowdark.effects.onManageActiveEffect(ev, this.actor);
-		});
-
-		// Create context menu for items on both sheets
-		this._itemContextMenu(html.get(0));
-
-		// Handle default listeners last so system listeners are triggered first
-		super.activateListeners(html);
-	}
-
-	// Emulate a itom drop as it was on the sheet, when dropped on the canvas
+	// Public method retained for canvas-drop emulation. Resolves the uuid
+	// then forwards to the v2 _onDropItem entry point.
 	async emulateItemDrop(data) {
-		return this._onDropItem({}, data);
+		const item = await fromUuid(data.uuid);
+		return this._onDropItem({}, item);
 	}
 
 	/** @override */
-	async getData(options) {
+	async _prepareContext(options) {
+		const context = await super._prepareContext(options);
 
-		const context = {
+		Object.assign(context, {
 			actor: this.actor,
 			config: CONFIG.SHADOWDARK,
 			cssClass: this.actor.isOwner ? "editable" : "locked",
@@ -68,7 +64,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 			owner: this.actor.isOwner,
 			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
 			system: this.actor.system,
-		};
+		});
 
 		context.activeEffects = this.actor.allApplicableEffects().filter(e => !e.isSuppressed);
 
@@ -84,8 +80,50 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		return context;
 	}
 
-	_getActorOverrides() {
-		return Object.keys(foundry.utils.flattenObject(this.object.overrides || {}));
+	/** @override */
+	async _onFirstRender(context, options) {
+		await super._onFirstRender(context, options);
+	}
+
+	/** @override */
+	async _onRender(context, options) {
+		await super._onRender(context, options);
+
+		// Item context menu (right-click on .item rows).
+		this._itemContextMenu(this.element);
+
+		// Bridge: while subclasses are still v1, dispatch to their
+		// activateListeners. Subclasses migrating to v2 stop defining it,
+		// at which point this falls through to the no-op stub above.
+		this.activateListeners($(this.element));
+	}
+
+	/** @override */
+	_onChangeForm(formConfig, event) {
+		// Intercept the unbound predefined-effects input. Its change creates
+		// an active effect and shouldn't reach the standard form submit.
+		// (The defensive strip in _processFormData covers any path that
+		// bypasses this hook.)
+		if (event.target?.name === "predefinedEffects") {
+			const key = event.target.value;
+			shadowdark.effects.createPredefinedEffect(this.actor, key);
+			return;
+		}
+		super._onChangeForm(formConfig, event);
+	}
+
+	/** @override */
+	_processFormData(event, form, formData) {
+		// Mirror v1 ActorSheet._getSubmitData: strip fields whose paths are
+		// currently overridden by an active effect, so the post-override
+		// displayed value isn't persisted as new base data.
+		const overrides = foundry.utils.flattenObject(this.actor.overrides ?? {});
+		for (const key of Object.keys(overrides)) {
+			delete formData.object[key];
+		}
+		// Defensive: predefinedEffects is unbound; never let it reach actor.update.
+		delete formData.object.predefinedEffects;
+		return super._processFormData(event, form, formData);
 	}
 
 	_getItemContextOptions() {
@@ -137,50 +175,33 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		);
 	}
 
-	async _effectDropNotAllowed(data) {
-		const item = await fromUuid(data.uuid);
+	_effectDropNotAllowed(item) {
+		if (item?.type !== "Effect") return false;
+		if (item?.system?.duration?.type !== "rounds") return false;
+		if (game.combat) return false;
 
-		if (item.type === "Effect") {
-			if (item.system.duration.type === "rounds" && !game.combat) {
-				ui.notifications.warn(
-					game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
-				);
-				return true;
-			}
-		}
-
-		return false;
+		ui.notifications.warn(
+			game.i18n.localize("SHADOWDARK.item.effect.warning.add_round_item_outside_combat")
+		);
+		return true;
 	}
 
-	/** @inheritdoc */
-	async _onChangeInput(event) {
-		// Test for Predefiend Effects
-		// Create effects when added through the predefined effects input
-		if (event.target?.name === "predefinedEffects") {
-			const key = event.target.value;
-			return shadowdark.effects.createPredefinedEffect(this.actor, key);
-		}
-
-		await super._onChangeInput(event);
+	/** @override */
+	async _onDropItem(event, item) {
+		if (this._effectDropNotAllowed(item)) return false;
+		return super._onDropItem(event, item);
 	}
 
-	async _onDropItem(event, data) {
-		if (await this._effectDropNotAllowed(data)) return false;
-
-		return super._onDropItem(event, data);
-	}
-
-	async _onHideSection(event) {
+	async _onHideSection(event, target) {
 		event.preventDefault();
 
-		const data = event.currentTarget.dataset;
-		const sectionId = data.sectionToHide;
+		const sectionId = target.dataset.sectionToHide;
 
-		const hideableSection = $(this._element).find(
+		const hideableSection = $(this.element).find(
 			`[data-hideable-section-id="${sectionId}"]`
 		);
 
-		const iconElement = event.currentTarget.querySelector("i");
+		const iconElement = target.querySelector("i");
 
 		if (this._hiddenSectionsLut[sectionId]) {
 			this._hiddenSectionsLut[sectionId] = !this._hiddenSectionsLut[sectionId];
@@ -191,13 +212,13 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		if (this._hiddenSectionsLut[sectionId]) {
 			hideableSection.slideUp(200);
-			event.currentTarget.dataset.tooltip = game.i18n.localize(
+			target.dataset.tooltip = game.i18n.localize(
 				"SHADOWDARK.sheet.general.section.toggle_show"
 			);
 		}
 		else {
 			hideableSection.slideDown(200);
-			event.currentTarget.dataset.tooltip = game.i18n.localize(
+			target.dataset.tooltip = game.i18n.localize(
 				"SHADOWDARK.sheet.general.section.toggle_hide"
 			);
 		}
@@ -240,10 +261,10 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		});
 	}
 
-	_onItemSelection(event) {
+	_onItemSelection(event, target) {
 		event.preventDefault();
 
-		const itemType = event.currentTarget.dataset.options;
+		const itemType = target.dataset.options;
 
 		switch (itemType) {
 			case "ancestry":
@@ -267,37 +288,40 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		}
 	}
 
-	async _onRollHP(event) {
+	_onShowDetails(event, target) {
+		shadowdark.utils.toggleItemDetails(target);
+	}
+
+	async _onRollHP(event, target) {
 		event.preventDefault();
 		this.actor.system.rollHP();
 	}
 
-	async _onRollAbilityCheck(event) {
+	async _onRollAbilityCheck(event, target) {
 		event.preventDefault();
-		let ability = event.currentTarget.dataset.ability;
+		const ability = target.dataset.ability;
 		if (!ability) return;
-		// skip roll prompt if shift clicked
 		const skipPrompt = event.shiftKey ? true : false;
 		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
 	}
 
-	async _onRollAttack(event) {
+	async _onRollAttack(event, target) {
 		event.preventDefault();
-		const itemId = event.currentTarget.dataset.itemId;
+		const itemId = target.dataset.itemId;
 		const data = {
-			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
+			skipPrompt: event.shiftKey,
 		};
-		if (event.currentTarget.dataset.attackType) {
-			data.attack = {type: event.currentTarget.dataset.attackType};
+		if (target.dataset.attackType) {
+			data.attack = {type: target.dataset.attackType};
 		}
 		this.actor.system.rollAttack(itemId, data);
 	}
 
-	async _onToggleLost(event) {
+	async _onToggleLost(event, target) {
 		event.preventDefault();
-		const itemId = event.currentTarget.dataset.itemId;
+		const itemId = target.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
-		const wandSpellUuid = event.currentTarget.dataset.wandSpellUuid;
+		const wandSpellUuid = target.dataset.wandSpellUuid;
 
 		if (wandSpellUuid) {
 			item.system.toggleSpellLost(wandSpellUuid);
@@ -312,9 +336,9 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		}
 	}
 
-	async _onItemCreate(event) {
+	async _onItemCreate(event, target) {
 		event.preventDefault();
-		const itemType = event.currentTarget.dataset.itemType;
+		const itemType = target.dataset.itemType;
 
 		const itemData = {
 			name: `New ${itemType}`,
@@ -324,22 +348,24 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		switch (itemType) {
 			case "Basic":
-				if (event.currentTarget.dataset.itemTreasure) {
+				if (target.dataset.itemTreasure) {
 					itemData.system.treasure = true;
 				}
 				break;
 			case "Spell":
-				itemData.system.tier =
-					event.currentTarget.dataset.spellTier || 1;
+				itemData.system.tier = target.dataset.spellTier || 1;
 				break;
 			case "Talent":
-				itemData.system.talentClass =
-					event.currentTarget.dataset.talentClass || "level";
+				itemData.system.talentClass = target.dataset.talentClass || "level";
 				break;
 		}
 
 		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
 		newItem.sheet.render(true);
+	}
+
+	_onEffectControl(event, target) {
+		shadowdark.effects.onManageActiveEffect(event, target, this.actor);
 	}
 
 	_sortAllItems(context) {

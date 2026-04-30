@@ -14,7 +14,7 @@
 				</li>
 
 				{{#each group.abilities}}
-				<li class="item" data-item-id="{{this.id}}" data-uuid="{{this.uuid}}">
+				<li class="item draggable" data-item-id="{{this.id}}" data-uuid="{{this.uuid}}">
 					<div class="item-image" style="background-image: url({{this.img}})"></div>
 					<a class="item-name {{#if this.system.lost}}strike-through{{/if}}" data-action="show-details">
 						{{this.name}}

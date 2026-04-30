@@ -4,20 +4,22 @@ export default class LightSheetSD extends ActorSheetSD {
 
 	// TODO: How to add a button to the token HUD for picking up torch?
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
+	static DEFAULT_OPTIONS = foundry.utils.mergeObject(
+		ActorSheetSD.DEFAULT_OPTIONS,
+		{
 			classes: ["shadowdark", "sheet"],
-			width: 450,
-			height: 200, // Memnon said "Hi!" at one point
-			resizable: true,
-		});
-	}
+			position: { width: 450, height: 200 }, // Memnon said "Hi!" at one point
+			window: { resizable: true },
+		},
+		{ inplace: false }
+	);
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/actors/light.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/actors/light.hbs",
+			scrollable: [".SD-content-body"],
+		},
+	};
 
 	/** @inheritdoc */
 	activateListeners(html) {

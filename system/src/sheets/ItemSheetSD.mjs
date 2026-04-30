@@ -76,7 +76,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		);
 
 		html.find(".effect-control").click(event => {
-			shadowdark.effects.onManageActiveEffect(event, this.item);
+			shadowdark.effects.onManageActiveEffect(event, event.currentTarget, this.item);
 		});
 
 		// Handle default listeners last so system listeners are triggered first

@@ -2,28 +2,22 @@ import ActorSheetSD from "./ActorSheetSD.mjs";
 
 export default class NpcSheetSD extends ActorSheetSD {
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
+	static DEFAULT_OPTIONS = foundry.utils.mergeObject(
+		ActorSheetSD.DEFAULT_OPTIONS,
+		{
 			classes: ["shadowdark", "sheet", "npc"],
-			scrollY: ["section.SD-content-body"],
-			width: 600,
-			height: 730,
-			resizable: true,
-			tabs: [
-				{
-					navSelector: ".SD-nav",
-					contentSelector: ".SD-content-body",
-					initial: "tab-details",
-				},
-			],
-		});
-	}
+			position: { width: 600, height: 730 },
+			window: { resizable: true },
+		},
+		{ inplace: false }
+	);
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/actors/npc.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/actors/npc.hbs",
+			scrollable: [".SD-content-body"],
+		},
+	};
 
 	/** @inheritdoc */
 	activateListeners(html) {

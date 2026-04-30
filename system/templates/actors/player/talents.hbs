@@ -20,7 +20,7 @@
 			</li>
 
 			{{#each talents.ancestry.items}}
-				<li class="item"
+				<li class="item draggable"
 					data-item-id="{{this._id}}"
 					data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
 				>
@@ -40,7 +40,7 @@
 			{{/each}}
 
 			{{#each talents.class.items}}
-				<li class="item"
+				<li class="item draggable"
 					data-item-id="{{this._id}}"
 					data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
 				>
@@ -78,7 +78,7 @@
 			</div>
 		</li>
 		{{#each talents.level.items}}
-			<li class="item"
+			<li class="item draggable"
 				data-item-id="{{this._id}}"
 				data-uuid="Actor.{{../actor._id}}.Item.{{this._id}}"
 			>

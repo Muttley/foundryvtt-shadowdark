@@ -25,7 +25,7 @@
 			{{#each boons as |boonType|}}
 				{{#each boonType.items as |boon|}}
 					<li
-						class="item"
+						class="item draggable"
 						data-item-id="{{boon._id}}"
 						data-uuid="Actor.{{../../actor._id}}.Item.{{boon._id}}"
 					>

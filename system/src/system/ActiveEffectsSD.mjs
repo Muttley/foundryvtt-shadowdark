@@ -290,12 +290,13 @@ export default class ActiveEffectsSD {
 	/**
 	* Manage Active Effect instances through the Actor Sheet via effect control buttons.
 	* @param {MouseEvent} event      The left-click event on the effect control
+	* @param {HTMLElement} target    The element with the [data-action] attribute
 	* @param {Actor|Item} owner      The owning entity which manages this effect
 	*/
-	static async onManageActiveEffect(event, owner) {
+	static async onManageActiveEffect(event, target, owner) {
 		event.preventDefault();
 
-		const a = event.currentTarget;
+		const a = target;
 		const li = a.closest("li");
 
 		const effect = li.dataset.effectUuid

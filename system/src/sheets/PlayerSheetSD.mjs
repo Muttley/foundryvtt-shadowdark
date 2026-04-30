@@ -10,28 +10,22 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.gemBag = new shadowdark.apps.GemBagSD(this.actor);
 	}
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
+	static DEFAULT_OPTIONS = foundry.utils.mergeObject(
+		ActorSheetSD.DEFAULT_OPTIONS,
+		{
 			classes: ["shadowdark", "sheet", "player"],
-			scrollY: ["section.SD-content-body"],
-			width: 600,
-			height: 700,
-			resizable: true,
-			tabs: [
-				{
-					navSelector: ".SD-nav",
-					contentSelector: ".SD-content-body",
-					initial: "tab-abilities",
-				},
-			],
-		});
-	}
+			position: { width: 600, height: 700 },
+			window: { resizable: true },
+		},
+		{ inplace: false }
+	);
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/actors/player.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/actors/player.hbs",
+			scrollable: [".SD-content-body"],
+		},
+	};
 
 	/** @inheritdoc */
 	activateListeners(html) {
