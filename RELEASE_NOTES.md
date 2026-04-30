@@ -72,6 +72,7 @@
 	* We can now map incoming class names to new ones if required.
 
 - [#1237] Merge Spanish translation updates from Crowdin
+- [#1283] Migrate existing Character Spells to newer versions in Compendiums
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
 

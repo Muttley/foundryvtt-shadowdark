@@ -67,6 +67,11 @@ export default class MigrationRunnerSD {
 			let updateData = {};
 			try {
 				const objectData = doc.toObject();
+
+				// Keep original UUID for reference when migrating compendium
+				// items
+				objectData.uuid = doc.uuid;
+
 				switch (documentName) {
 					case "Actor":
 						updateData = await this.currentMigrationTask.updateActor(objectData);

@@ -1,10 +1,9 @@
 import { UpdateBaseSD } from "../UpdateBaseSD.mjs";
 
-export default class Update_260501_1 extends UpdateBaseSD {
-	static version = 260501.1;
+export default class Update_251001_1 extends UpdateBaseSD {
+	static version = 251001.1;
 
 	NEW_KEYS = [
-
 		"system.abilities.cha.value",
 		"system.abilities.con.value",
 		"system.abilities.dex.value",
@@ -20,8 +19,8 @@ export default class Update_260501_1 extends UpdateBaseSD {
 		"system.spellcasting.classes",
 		"system.spellcasting.allowAllItems",
 		"system.spellcasting.itemAbility",
-
 	];
+
 
 	async updateActor(actorData) {
 		if (actorData.type !== "Player") return;
@@ -31,6 +30,7 @@ export default class Update_260501_1 extends UpdateBaseSD {
 
 		return updateData;
 	}
+
 
 	async updateItem(itemData, actorData) {
 		if (!itemData) return {};
@@ -53,7 +53,9 @@ export default class Update_260501_1 extends UpdateBaseSD {
 			const legacyData = itemData.flags?.shadowdark?.legacyData;
 
 			if (legacyData?.spellName) {
-				const spell = await this._findSpell(legacyData.spellName, legacyData.class ?? []);
+				const spell = await shadowdark.compendiums.findSpell(
+					legacyData.spellName, legacyData.class ?? []
+				);
 
 				if (spell) {
 					if (itemData.type === "Scroll") {
@@ -80,19 +82,6 @@ export default class Update_260501_1 extends UpdateBaseSD {
 		return updateData;
 	}
 
-	async _findSpell(spellName, classUuids = []) {
-		const spells = await shadowdark.compendiums.spells();
-		const matches = spells.filter(s => s.name === spellName);
-		// 0 matches
-		if (matches.length < 1) return null;
-		// 1 match
-		if (matches.length === 1) return matches[0];
-		// For more than 1 match, select by matching castingClass
-		const classMatch = matches.find(s =>
-			(s.system.class ?? []).find(uuid => classUuids.includes(uuid))
-		);
-		return classMatch ?? matches[0];
-	}
 
 	async updateEffects(effects, parentType = undefined) {
 		// Update Active Effect keys
@@ -118,7 +107,7 @@ export default class Update_260501_1 extends UpdateBaseSD {
 						}
 
 						// search spells
-						const spells = await shadowdark.compendiums.spells();
+						const spells = await shadowdark.compendiums.spells(false);
 						if (spells.map(s => s.name.slugify()).includes(change.value)) {
 							change.key = `system.roll.spell.advantage.${change.value}`;
 							change.mode = CONST.ACTIVE_EFFECT_MODES.ADD;

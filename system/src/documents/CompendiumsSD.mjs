@@ -182,6 +182,22 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Effect", filterSources);
 	}
 
+
+	static async findSpell(spellName, classUuids = []) {
+		const spells = await CompendiumsSD.spells(false);
+		const matches = spells.filter(s => s.name === spellName);
+		// 0 matches
+		if (matches.length < 1) return null;
+		// 1 match
+		if (matches.length === 1) return matches[0];
+		// For more than 1 match, select by matching castingClass
+		const classMatch = matches.find(s =>
+			(s.system.class ?? []).find(uuid => classUuids.includes(uuid))
+		);
+		return classMatch ?? matches[0];
+	}
+
+
 	static async languages(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
 			return CompendiumsSD._documents("Item", "Language", filterSources);
