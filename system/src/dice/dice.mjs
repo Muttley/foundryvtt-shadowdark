@@ -116,7 +116,7 @@ export function initializeD20Check(config={}) {
 }
 
 /**
- * Used to resolve deterministic roll formulas using provided roll data
+ * Used to cleanup and resolve deterministic roll formulas using provided roll data
  * @param {string} formula 			Roll formula to resolve
  * @param {*} rollData 				Actor rolldata
  * @param {*} forceDeterministic 	Return only deterministic results
@@ -139,6 +139,24 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 		return null;
 	}
 	else {
+		// for non-deterministic formulas try to reduce deterministic dice/face expressions
+		for (const term of r.terms) {
+			try {
+				// dice number
+				if (term._number instanceof Roll && term._number.isDeterministic) {
+					term._number.evaluateSync();
+					term.number = term._number.total;
+				}
+				// die faces
+				if (term._faces instanceof Roll && term._faces.isDeterministic) {
+					term._faces.evaluateSync();
+					term.faces = term._faces.total;
+				}
+			}
+			catch(err) {
+				console.error(err);
+			}
+		}
 		return r.formula;
 	}
 }
@@ -170,6 +188,7 @@ export async function roll(config, rolldata={}) {
 			}
 		}
 	}
+
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 

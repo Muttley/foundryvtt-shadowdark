@@ -395,7 +395,10 @@ export default class PlayerSD extends ActorBaseSD {
 			item,
 			config
 		);
-		config.damageRoll.formula = damageRollKey.value;
+
+		config.damageRoll.formula = shadowdark.dice.resolveFormula(
+			damageRollKey.value, this.parent.getRollData()
+		);
 
 		// generate tooltips
 		const tooltips = [];
