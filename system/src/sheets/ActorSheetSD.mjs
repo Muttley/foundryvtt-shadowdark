@@ -36,15 +36,9 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 		},
 	};
 
-	/**
-	 * Stub for v1 subclass `super.activateListeners(html)` calls during the
-	 * v1→v2 migration. Removed once all subclasses define their own v2
-	 * actions and no longer call super.
-	 */
+	// No-op so v1 subclasses' `super.activateListeners(html)` calls don't throw.
 	activateListeners(html) {}
 
-	// Public method retained for canvas-drop emulation. Resolves the uuid
-	// then forwards to the v2 _onDropItem entry point.
 	async emulateItemDrop(data) {
 		const item = await fromUuid(data.uuid);
 		return this._onDropItem({}, item);
@@ -79,29 +73,19 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 	}
 
 	/** @override */
-	async _onFirstRender(context, options) {
-		await super._onFirstRender(context, options);
-	}
-
-	/** @override */
 	async _onRender(context, options) {
 		await super._onRender(context, options);
 
-		// Item context menu (right-click on .item rows).
 		this._itemContextMenu(this.element);
 
-		// Bridge: while subclasses are still v1, dispatch to their
-		// activateListeners. Subclasses migrating to v2 stop defining it,
-		// at which point this falls through to the no-op stub above.
+		// Bridge: dispatch to subclass activateListeners while they're still v1.
 		this.activateListeners($(this.element));
 	}
 
 	/** @override */
 	_onChangeForm(formConfig, event) {
-		// Intercept the unbound predefined-effects input. Its change creates
-		// an active effect and shouldn't reach the standard form submit.
-		// (The defensive strip in _processFormData covers any path that
-		// bypasses this hook.)
+		// The predefined-effects input creates an active effect on change
+		// rather than writing to a document field; short-circuit the submit.
 		if (event.target?.name === "predefinedEffects") {
 			const key = event.target.value;
 			shadowdark.effects.createPredefinedEffect(this.actor, key);

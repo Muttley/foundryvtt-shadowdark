@@ -296,14 +296,13 @@ export default class ActiveEffectsSD {
 	static async onManageActiveEffect(event, target, owner) {
 		event.preventDefault();
 
-		const a = target;
-		const li = a.closest("li");
+		const li = target.closest("li");
 
 		const effect = li.dataset.effectUuid
 			? await fromUuid(li.dataset.effectUuid)
 			: null;
 
-		switch (a.dataset.action) {
+		switch (target.dataset.action) {
 			case "create":
 				const docs = await owner.createEmbeddedDocuments("ActiveEffect", [{
 					disabled: li.dataset.effectType === "inactive",
