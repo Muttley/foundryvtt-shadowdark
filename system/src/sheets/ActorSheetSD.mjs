@@ -278,7 +278,7 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 		if (!ability) return;
 		// skip roll prompt if shift clicked
 		const skipPrompt = event.shiftKey ? true : false;
-		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
+		this.actor.system.rollStatCheck(ability, {skipPrompt});
 	}
 
 	async _onRollAttack(event) {

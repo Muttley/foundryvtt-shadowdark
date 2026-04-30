@@ -56,7 +56,7 @@ export default class ChatSD {
 		);
 	}
 
-	static async renderRollCard(config, rolls = []) {
+	static async renderRollHTML(config, rolls = []) {
 		if (!Array.isArray(rolls)) return;
 
 		const actor = game.actors.get(config.actorId);
@@ -66,7 +66,7 @@ export default class ChatSD {
 
 		// generate template data
 		const template = "systems/shadowdark/templates/chat/roll-card.hbs";
-		const templateData = {...config};
+		const templateData = foundry.utils.deepClone(config);
 		templateData.actor = actor;
 
 		if (config.itemUuid) {
@@ -74,16 +74,21 @@ export default class ChatSD {
 		}
 		if (config.targetUuid) {
 			templateData.target = await fromUuid(config.targetUuid);
+			if (config.type !== "check") templateData.showTargets = true;
 		}
 		if (mainRoll) {
 			templateData.mainRoll.html = await mainRoll.render();
+			templateData.mainRoll.success = mainRoll.success;
 		}
 		if (damageRoll) {
 			templateData.damageRoll.html = await damageRoll.render();
 		}
-		if (config.selectedAmmunition) {
-			templateData.ammunitionName =
-				`${config.selectedAmmunition.name} (${config.selectedAmmunition.system.quantity}/${config.selectedAmmunition.system.slots.per_slot})`;
+		if (config.attack?.selectedAmmunition) {
+			const ammoItem = await fromUuid(config.attack.selectedAmmunition);
+			if (ammoItem) {
+				templateData.ammunitionName =
+					`${ammoItem.name} (${ammoItem.system.quantity}/${ammoItem.system.slots.per_slot})`;
+			}
 		}
 
 		return foundry.applications.handlebars.renderTemplate(
@@ -94,7 +99,7 @@ export default class ChatSD {
 
 	static async renderRollMessage(config, rolls=[]) {
 
-		const content = await ChatSD.renderRollCard(config, rolls);
+		const content = await ChatSD.renderRollHTML(config, rolls);
 		const actor = game.actors.get(config.actorId);
 
 		// Create Chat Message
@@ -104,7 +109,7 @@ export default class ChatSD {
 				"core.canPopout": true,
 				"shadowdark.rollConfig": config,
 			},
-			flavor: config.title ?? undefined,
+			flavor: config.heading ?? undefined,
 			speaker: ChatMessage.getSpeaker({
 				actor,
 			}),

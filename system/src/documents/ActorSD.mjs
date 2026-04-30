@@ -121,7 +121,7 @@ export default class ActorSD extends foundry.documents.Actor {
 	 * @param {number} damageAmount
 	 * @param {number} multiplier
 	 */
-	async applyDamage(damageAmount, multiplier) {
+	async applyDamage(damageAmount, multiplier=1) {
 		const maxHpValue = this.system.attributes.hp.max;
 		const currentHpValue = this.system.attributes.hp.value;
 		const amountToApply = Math.floor(parseInt(damageAmount) * multiplier);
@@ -308,7 +308,7 @@ export default class ActorSD extends foundry.documents.Actor {
 		if (item.system.ability) {
 			rolled = true;
 			options = foundry.utils.mergeObject({target: item.system.dc}, options);
-			const result = await this.system.rollAbilityCheck(
+			const result = await this.system.rollStatCheck(
 				item.system.ability,
 				options
 			);

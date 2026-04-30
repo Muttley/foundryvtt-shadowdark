@@ -43,6 +43,12 @@ export default class NpcSD extends ActorBaseSD {
 		return super.migrateData(data);
 	}
 
+	rollConfigGenerators = {
+		check: this._generateStatCheckConfig.bind(this),
+		spell: this._generateSpellConfig.bind(this),
+		attack: this._generateAttackConfig.bind(this),
+	};
+
 	/* ----------------------- */
 	/* Getters       */
 	/* ----------------------- */
@@ -121,8 +127,12 @@ export default class NpcSD extends ActorBaseSD {
 		);
 	}
 
-	_generateSpellConfig(spell, config) {
+	async _generateSpellConfig(config) {
+		const spell = await fromUuid(config.cast?.spellUuid ?? config.itemUuid);
+		if (!spell) return;
+		config.type = "spell";
 		config.cast ??= {};
+		config.cast.spellUuid ??= spell.uuid;
 		config.cast.focus ??= false;
 		config.cast.range ??= spell.system.range;
 		config.cast.duration ??= spell.system?.duration;
@@ -161,10 +171,12 @@ export default class NpcSD extends ActorBaseSD {
 
 		config.actorId = this.parent.id;
 		config.itemUuid = spellUuid;
+		config.cast ??= {};
+		config.cast.spellUuid = spellUuid;
 
 		shadowdark.dice.setRollTarget(config);
 
-		this._generateSpellConfig(spell, config);
+		await this.rollConfigGenerators.spell?.(config);
 
 		if (!await shadowdark.dice.rollDialog(config)) return false;
 
@@ -177,25 +189,24 @@ export default class NpcSD extends ActorBaseSD {
 	}
 
 	async rollAttack(attackId, config={}) {
-		config.type = "npc-attack";
 		config.actorId = this.parent.id;
 		const attack = this.parent.items.get(attackId);
 		if (!attack) {
 			console.error("invalid attack ID");
 			return;
 		}
-		config.item = attack;
+		config.itemUuid = attack.uuid;
 
 		shadowdark.dice.setRollTarget(config);
 
 		// generates attack data
-		this._generateAttackConfig(attack, config);
+		await this.rollConfigGenerators.attack?.(config);
 
 		// show roll prompt and cancelled if closed
 		if (!await shadowdark.dice.rollDialog(config)) return false;
 
 		// re-generates attack data
-		this._generateAttackConfig(attack, config);
+		await this.rollConfigGenerators.attack?.(config);
 
 		// Call NPC attack hooks
 		if (!await Hooks.call("SD-NPC-Attack", config)) return false;
@@ -231,7 +242,10 @@ export default class NpcSD extends ActorBaseSD {
 	/* Private Functions       */
 	/* ----------------------- */
 
-	async _generateAttackConfig(attack, config={}) {
+	async _generateAttackConfig(config={}) {
+		const attack = await fromUuid(config.itemUuid);
+		if (!attack) return;
+		config.type = "attack";
 
 		config.mainRoll ??= {};
 		config.mainRoll.base ??= "d20";

@@ -172,6 +172,8 @@ SHADOWDARK.chat_card.button.use_scroll: Use Scroll
 SHADOWDARK.chat_card.button.use_wand: Use Wand
 SHADOWDARK.chat_card.context.apply_damage_secondary: Apply Secondary Damage
 SHADOWDARK.chat_card.context.apply_damage: Apply Damage
+SHADOWDARK.chat_card.dialog.reapply_damage.title: Damage Already Applied
+SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?
 SHADOWDARK.chat_card.context.apply_healing_secondary: Apply Secondary Healing
 SHADOWDARK.chat_card.context.apply_healing: Apply Healing
 SHADOWDARK.chat.clockwise_initiative: Since {name} rolled highest, they will go first, and all other combatants will follow in a fixed order.
@@ -190,6 +192,7 @@ SHADOWDARK.chat.light_source.source.picked_up: was picked up
 SHADOWDARK.chat.light_source.source.toggle.off: was doused
 SHADOWDARK.chat.light_source.source.toggle.on: was lit
 SHADOWDARK.chat.light_source.went_out: "{name}'s {lightSource} went out"
+SHADOWDARK.chat.luck_token.used: "{name} used a luck token"
 SHADOWDARK.chat.potion_used: "{name} used a Potion"
 SHADOWDARK.chat.spell_focus_check: "Focus Check"
 SHADOWDARK.chat.spell_learn.failure: "{name} failed to learn anything from the scroll"
@@ -200,6 +203,7 @@ SHADOWDARK.chat.use_ability.failure: "{name} failed to use the {ability} ability
 SHADOWDARK.chat.use_ability.success: "{name} successfully used the {ability} ability"
 SHADOWDARK.chat.use_ability.title: "Using Ability"
 SHADOWDARK.chat.use_ability.used: "{name} used the {ability} ability"
+SHADOWDARK.chat.targets: Targets
 SHADOWDARK.chat.welcome_message.arcane_library_button: Shop Shadowdark RPG
 SHADOWDARK.chat.welcome_message.arcane_library_text: Visit the Arcane Library website for official Shadowdark PDFs, books and merch.
 SHADOWDARK.chat.welcome_message.arcane_library: Support The Arcane Library
@@ -316,6 +320,7 @@ SHADOWDARK.dialog.item.use: Use
 SHADOWDARK.dialog.light_source.pick_up.title: Select actor to give lightsource
 SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll: Roll
+SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNING: This spell is not of the same class as the character, are you sure you wish to try and learn it?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirm Learn Spell
 SHADOWDARK.dialog.select_ancestry.prompt: Select Ancestry...
@@ -363,6 +368,7 @@ SHADOWDARK.effect.tooltip.transfer.do: Does transfer
 SHADOWDARK.effect.tooltip.transfer.header: Transfer effect to actor when item is added
 SHADOWDARK.effect.unavailable: Disabled Effects
 SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
+SHADOWDARK.error.general.item_uuid_not_found: "ERROR: Item UUID not found"
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.error.general.no_character_class: No character class has been selected
 SHADOWDARK.error.general.no_character_selected: No character selected
@@ -373,6 +379,7 @@ SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
+SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
 SHADOWDARK.form.section_header.equipment.label: Equipment
@@ -663,6 +670,10 @@ SHADOWDARK.roll.attack: Attack Roll
 SHADOWDARK.roll.check: Check Roll
 SHADOWDARK.roll.critical.failure: Critical Failure! ({value})
 SHADOWDARK.roll.critical.success: Critical Success! ({value})
+SHADOWDARK.roll.label.critical_failure: Critical Failure
+SHADOWDARK.roll.label.critical_success: Critical Success
+SHADOWDARK.roll.label.failure: Failure
+SHADOWDARK.roll.label.success: Success
 SHADOWDARK.roll.D20: Roll D20
 SHADOWDARK.roll.damage: Damage Roll
 SHADOWDARK.roll.disadvantage_title: "{title} with Disadvantage"
@@ -682,6 +693,7 @@ SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
+SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.upgrade_die: Up.Die
 SHADOWDARK.roll.two_handed_damage: Two-handed Damage
 SHADOWDARK.settings.animate-hp-change.hint: Show changes to HP as scrolling text on the actor's token
