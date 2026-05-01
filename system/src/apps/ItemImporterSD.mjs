@@ -208,8 +208,19 @@ export default class ItemImporterSD extends ImporterSD {
 	}
 
 	/**
+	 * Normalises OpenShadowdark format by uppercasing the first line so the
+	 * CRB parser can detect it as an all-caps name.
+	 * @param {string[]} lines - Mutated in place
+	 */
+	_normalizeOpenShadowdark(lines) {
+		lines[0] = lines[0].toUpperCase();
+	}
+
+	/**
 	 * Parses item text into structured data without creating any documents.
-	 * Collects errors from all parsing stages and throws once with the full list.
+	 * Supports CRB format (all-caps name, no blank lines) and OpenShadowdark
+	 * format (title-case name, blank line after title). Collects errors from
+	 * all parsing stages and throws once with the full list.
 	 * @param {string} itemText - Raw pasted item text
 	 * @returns {object} { name, flavorText, traits, bonusHint, benefitEffects, description }
 	 * @throws {Error} With .details array listing all parse failures
@@ -225,6 +236,15 @@ export default class ItemImporterSD extends ImporterSD {
 			const error = new Error("Import validation failed");
 			error.details = ["Input is empty"];
 			throw error;
+		}
+
+		// OpenShadowdark format: title-case first line followed by a blank line.
+		// Normalise by uppercasing the first line so the CRB parser handles the rest.
+		const isOpenShadowdark = /[a-z]/.test(lines[0])
+			&& /^[^\n]*\n\s*\n/.test(dehyphenated.trimStart());
+
+		if (isOpenShadowdark) {
+			this._normalizeOpenShadowdark(lines);
 		}
 
 		const errors = [];
