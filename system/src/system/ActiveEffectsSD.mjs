@@ -311,7 +311,7 @@ export default class ActiveEffectsSD {
 			: null;
 
 		switch (target.dataset.action) {
-			case "create":
+			case "effect-create":
 				const docs = await owner.createEmbeddedDocuments("ActiveEffect", [{
 					disabled: li.dataset.effectType === "inactive",
 					img: "icons/commodities/tech/cog-steel-grey.webp",
@@ -322,9 +322,9 @@ export default class ActiveEffectsSD {
 
 				if (docs && docs[0]) docs[0].sheet.render(true);
 				break;
-			case "edit":
+			case "effect-edit":
 				return effect.sheet.render(true);
-			case "delete":
+			case "effect-delete":
 				return foundry.applications.handlebars.renderTemplate(
 					"systems/shadowdark/templates/dialog/are-you-sure.hbs"
 				).then(html => {
@@ -347,9 +347,9 @@ export default class ActiveEffectsSD {
 						default: "Yes",
 					}).render(true);
 				});
-			case "toggle":
+			case "effect-toggle":
 				return effect.update({disabled: !effect.disabled});
-			case "toggle-situational":
+			case "effect-toggle-situational":
 				return effect.toggleSituational();
 		}
 	}
