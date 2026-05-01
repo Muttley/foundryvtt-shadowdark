@@ -40,7 +40,7 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 					(config.mainRoll ??= {}).advantage = -1;
 				}
 
-				return actor.system.rollAbilityCheck(data.stat.toLowerCase(), config);
+				return actor.system.rollStatCheck(data.stat.toLowerCase(), config);
 			case "request":
 				return RequestCheckSD.displayRequest(data.dc, data.stat);
 		}
