@@ -24,6 +24,7 @@
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 - [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
 - [#1288] Item Importer improvements to parsing and error handling *(allardhoeve)*
+- [#1295] Equiping a Shield unequips 2 handed weapons or switches to 1 handed. Equiping a 2 handed weapon, removes shields
 
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
