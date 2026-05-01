@@ -30,10 +30,15 @@
 						name="system.attributes.hp.max"
 						placeholder="0"
 					}}
+				{{else}}
+					<input
+						type="number"
+						value="{{maxHp}}"
+						placeholder="0"
+						readonly
+						tabindex="-1"
+					>
 				{{/if}}
-				{{#unless editingHp}}
-					{{maxHp}}
-				{{/unless}}
 			</div>
 		</div>
 	</div>

@@ -1,15 +1,13 @@
-<section class="tab tab-notes" data-group="primary" data-tab="tab-notes">
+<section class="tab tab-notes flex1 SD-content-body {{tab.cssClass}}" data-group="primary" data-tab="notes">
 	{{#> ui/sd-hideable-section
 		sectionId=""
 		sectionTitle=(localize "SHADOWDARK.sheet.actor.character_notes")
 	}}
-		{{editor
-			notesHTML
-			target="system.notes"
-			button=true
-			editable=editable
-			engine="prosemirror"
-			collaborate=false
-		}}
+		<prose-mirror
+			name="system.notes"
+			toggled
+			value="{{actor.system.notes}}"
+			data-document-uuid="{{actor.uuid}}"
+		>{{{notesHTML}}}</prose-mirror>
 	{{/ui/sd-hideable-section}}
 </section>
