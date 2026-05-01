@@ -404,12 +404,15 @@ export default class ItemImporterSD extends ImporterSD {
 			throw error;
 		}
 
-		// Benefit-based AC bonus: create as Armor with base 0
+		// Benefit-based AC bonus: create as Armor with base 0.
+		// Use modifier field only for static bonuses — no AE, to avoid doubling.
+		// No ability attribute: bonus armor items don't add an ability mod.
 		const acEffect = benefitEffects.find(
 			be => be.effect === "acBonus"
 		);
 		if (acEffect) {
 			for (const be of benefitEffects) {
+				if (be.effect === "acBonus") continue;
 				effects.push(
 					this._buildPredefinedEffect(be.effect, be.value)
 				);
@@ -419,7 +422,7 @@ export default class ItemImporterSD extends ImporterSD {
 					name,
 					type: "Armor",
 					system: {
-						ac: { attribute: "dex", base: 0, modifier: acEffect.value },
+						ac: { attribute: "", base: 0, modifier: acEffect.value },
 						baseArmor: "",
 						properties: [],
 						description,
