@@ -4,16 +4,20 @@
     <hr />
 
     <div class="form-group">
-			<div class="actor-selector">
-				{{#each playerActors as |actor|}}
-					<div class="actor">
-						<input type="radio" id="{{actor._id}}" name="selected-actor" value="{{actor.name}}">
-						<label for="{{actor._id}}">
-							<img src="{{actor.img}}" />{{actor.name}}
-						</label>
-					</div>
-				{{/each}}
-			</div>
+			{{#if playerActors.length}}
+				<div class="actor-selector">
+					{{#each playerActors as |actor|}}
+						<div class="actor">
+							<input type="radio" id="{{actor._id}}" name="selected-actor" value="{{actor.name}}">
+							<label for="{{actor._id}}">
+								<img src="{{actor.img}}" />{{actor.name}}
+							</label>
+						</div>
+					{{/each}}
+				</div>
+			{{else}}
+				<p>{{localize "SHADOWDARK.light-source.pick-up.no-eligible-players"}}</p>
+			{{/if}}
     </div>
     <hr />
   </div>

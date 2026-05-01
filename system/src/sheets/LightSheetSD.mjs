@@ -2,14 +2,18 @@ import ActorSheetSD from "./ActorSheetSD.mjs";
 
 export default class LightSheetSD extends ActorSheetSD {
 
-	// TODO: How to add a button to the token HUD for picking up torch?
-
 	static DEFAULT_OPTIONS = foundry.utils.mergeObject(
 		ActorSheetSD.DEFAULT_OPTIONS,
 		{
-			classes: ["shadowdark", "sheet"],
-			position: { width: 450, height: 200 }, // Memnon said "Hi!" at one point
-			window: { resizable: true },
+			classes: ["shadowdark-app", "shadowdark-light"],
+			position: { width: 450, height: 200 },
+			window: {
+				resizable: true,
+				contentClasses: ["shadowdark", "sheet", "light"],
+			},
+			actions: {
+				"pick-up-light": LightSheetSD.prototype._onPickupLight,
+			},
 		},
 		{ inplace: false }
 	);
@@ -17,31 +21,18 @@ export default class LightSheetSD extends ActorSheetSD {
 	static PARTS = {
 		form: {
 			template: "systems/shadowdark/templates/actors/light.hbs",
-			scrollable: [".SD-content-body"],
 		},
 	};
 
-	/** @inheritdoc */
-	activateListeners(html) {
-		// Handle default listeners last so system listeners are triggered first
-		super.activateListeners(html);
-
-		// Button that transfers the light source to the assigned character
-		// and deletes the Light actor.
-		html.find("[data-action='pick-up-light']").click(
-			event => this._onPickupLight(event)
-		);
-	}
-
-	/** @override */
-	async _prepareContext(options) {
-		const context = await super._prepareContext(options);
-
-		return context;
-	}
-
-	async _onPickupLight(event, options = {}) {
+	async _onPickupLight(event, target) {
 		event.preventDefault();
+
+		if (!this.token) {
+			ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.light-source.pick-up.no-token")
+			);
+			return;
+		}
 
 		if (!game.user.isGM) {
 			game.socket.emit(
@@ -50,27 +41,21 @@ export default class LightSheetSD extends ActorSheetSD {
 					type: "pickupLightSourceFromScene",
 					data: {
 						character: game.user.character,
-						lightActor: options.actor ?? this.actor,
-						lightToken: options.token ?? this.object.token,
+						lightActor: this.actor,
+						lightToken: this.token,
 						speaker: ChatMessage.getSpeaker(),
 					},
 				}
 			);
 		}
 		else {
-			// Display a dialog allowing the GM to choose which character to assign
-			// the dropped light source to.
 			const playerActors = game.actors.filter(
 				actor => actor.type === "Player" && actor.hasPlayerOwner
 			);
-			// const activeUsers = game.users
-			// 	.filter(u => u.active && !u.isGM);
 
 			const content = await foundry.applications.handlebars.renderTemplate(
 				"systems/shadowdark/templates/dialog/assign-picked-up-lightsource.hbs",
-				{
-					playerActors,
-				}
+				{ playerActors }
 			);
 
 			const targetActor = await Dialog.wait({
@@ -91,13 +76,13 @@ export default class LightSheetSD extends ActorSheetSD {
 					},
 				},
 				default: "select",
-				close: () => console.log("Closed Dialog"),
+				close: () => false,
 			});
 
 			if (targetActor) {
 				game.shadowdark.lightSourceTracker.pickupLightSourceFromScene(
 					game.actors.get(targetActor),
-					options.actor ?? this.actor,
+					this.actor,
 					ChatMessage.getSpeaker()
 				);
 			}
