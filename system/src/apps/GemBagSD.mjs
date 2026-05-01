@@ -1,64 +1,47 @@
-export default class GemBagSD extends foundry.appv1.api.Application {
-	constructor(object, options) {
-		super(object, options);
-
-		this.actor = object;
+export default class GemBagSD extends foundry.applications.api.HandlebarsApplicationMixin(
+	foundry.applications.api.ApplicationV2
+) {
+	constructor(actor, options = {}) {
+		super(options);
+		this.actor = actor;
 	}
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark"],
-			height: "auto",
+	static DEFAULT_OPTIONS = {
+		classes: ["shadowdark-app", "shadowdark-gem-bag"],
+		position: { width: 400, height: "auto" },
+		window: {
 			resizable: true,
-			width: 400,
-		});
-	}
+			contentClasses: ["shadowdark", "gem-bag"],
+		},
+		actions: {
+			"sell-all-gems": GemBagSD.prototype._onSellAllGems,
+			"sell-gem": GemBagSD.prototype._onSellGem,
+			"item-create": GemBagSD.prototype._onItemCreate,
+			"show-details": GemBagSD.prototype._onShowDetails,
+		},
+	};
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/apps/gem-bag.hbs";
-	}
+	static PARTS = {
+		content: {
+			template: "systems/shadowdark/templates/apps/gem-bag.hbs",
+		},
+	};
 
-	/** @inheritdoc */
 	get title() {
 		const title = game.i18n.localize("SHADOWDARK.app.gem_bag.title");
 		return `${title}: ${this.actor.name}`;
 	}
 
-	/** @inheritdoc */
-	activateListeners(html) {
-
-		html.find("[data-action='sell-all-gems']").click(
-			event => this._onSellAllGems(event)
-		);
-
-		html.find("[data-action='sell-gem']").click(
-			event => this._onSellGem(event)
-		);
-
-		html.find("[data-action='item-create']").click(
-			event => this._onItemCreate(event)
-		);
-
-		html.find("[data-action='show-details']").click(
-			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
-		);
-
-		// Create context menu for items on both sheets
-		this._contextMenu(html.get(0));
-
-		// Handle default listeners last so system listeners are triggered first
-		super.activateListeners(html);
-	}
-
-	/** @override */
-	async getData(options) {
+	async _prepareContext(options) {
 		const items = this.getGems();
 		const totals = this.getGemValueTotal(items);
-		const actor = this.actor;
+		return { items, totals, actor: this.actor };
+	}
 
-		return {items, totals, actor};
+	async _onRender(context, options) {
+		await super._onRender(context, options);
+		// Enable right-clicking a gem to edit / delete it.
+		this._contextMenu(this.element);
 	}
 
 	gemBagIsEmpty() {
@@ -81,9 +64,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 			},
 		};
 
-		for (let i = 0; i < items.length; i++) {
-			const item = items[i];
-
+		for (const item of items) {
 			totals.system.cost.gp += item.system.cost.gp;
 			totals.system.cost.sp += item.system.cost.sp;
 			totals.system.cost.cp += item.system.cost.cp;
@@ -102,29 +83,17 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 	}
 
 	_getItemContextOptions() {
-		const me = this;
-
-		const canEdit = function(element) {
-			let result = false;
+		const canEdit = element => {
 			const itemId = element.dataset.itemId;
-
-			if (game.user.isGM) {
-				result = true;
-			}
-			else {
-				result = me.actor.items.find(item => item._id === itemId)
-					? true
-					: false;
-			}
-
-			return result;
+			if (game.user.isGM) return true;
+			return !!this.actor.items.find(item => item._id === itemId);
 		};
 
 		return [
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
 				icon: '<i class="fas fa-edit"></i>',
-				condition: element => canEdit(element),
+				condition: canEdit,
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					const item = this.actor.items.get(itemId);
@@ -134,7 +103,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 			{
 				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: element => canEdit(element),
+				condition: canEdit,
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					this._onItemDelete(itemId);
@@ -143,9 +112,12 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 		];
 	}
 
-	async _onItemCreate(event) {
-		event.preventDefault();
+	_onShowDetails(event, target) {
+		shadowdark.utils.toggleItemDetails(target);
+	}
 
+	async _onItemCreate(event, target) {
+		event.preventDefault();
 		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [{
 			name: "New Gem",
 			type: "Gem",
@@ -184,12 +156,11 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 		});
 	}
 
-	_onSellGem(event) {
+	_onSellGem(event, target) {
 		event.preventDefault();
 
-		const itemId = event.currentTarget.dataset.itemId;
+		const itemId = target.dataset.itemId;
 		const itemData = this.actor.getEmbeddedDocument("Item", itemId);
-
 		const actor = this.actor;
 
 		foundry.applications.handlebars.renderTemplate(
@@ -221,7 +192,7 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 		});
 	}
 
-	_onSellAllGems(event) {
+	_onSellAllGems(event, target) {
 		event.preventDefault();
 
 		foundry.applications.handlebars.renderTemplate(
