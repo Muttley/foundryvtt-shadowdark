@@ -582,7 +582,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: game.i18n.localize("SHADOWDARK.dialog.general.yes"),
 						callback: async () => {
-							this.actor.system.sellItemById(itemId);
+							await this.actor.system.sellItemById(itemId);
 						},
 					},
 					Cancel: {

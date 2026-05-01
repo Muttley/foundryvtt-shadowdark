@@ -207,7 +207,7 @@ export default class GemBagSD extends foundry.applications.api.HandlebarsApplica
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
 						callback: async () => {
-							this.actor.system.sellAllGems();
+							await this.actor.system.sellAllGems();
 							this.close();
 						},
 					},

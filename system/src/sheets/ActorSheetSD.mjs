@@ -180,7 +180,7 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 
 		const sectionId = target.dataset.sectionToHide;
 
-		const hideableSection = $(this.element).find(
+		const hideableSection = this.element.querySelector(
 			`[data-hideable-section-id="${sectionId}"]`
 		);
 
@@ -194,13 +194,13 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 		}
 
 		if (this._hiddenSectionsLut[sectionId]) {
-			hideableSection.slideUp(200);
+			hideableSection.style.display = "none";
 			target.dataset.tooltip = game.i18n.localize(
 				"SHADOWDARK.sheet.general.section.toggle_show"
 			);
 		}
 		else {
-			hideableSection.slideDown(200);
+			hideableSection.style.display = "";
 			target.dataset.tooltip = game.i18n.localize(
 				"SHADOWDARK.sheet.general.section.toggle_hide"
 			);
