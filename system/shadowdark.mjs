@@ -1,5 +1,5 @@
 import ActiveEffectsSD from "./src/system/ActiveEffectsSD.mjs";
-import ChatSD from "./src/system/ChatSD.mjs";
+import ChatSD from "./src/chat/ChatSD.mjs";
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
 import Logger from "./src/utils/Logger.mjs";
@@ -20,7 +20,6 @@ import * as sheets from "./src/sheets/_module.mjs";
 
 import {
 	HooksSD,
-	HooksImmediate,
 	HooksInitSD,
 } from "./src/hooks.mjs";
 
@@ -201,5 +200,3 @@ Hooks.once("setup", () => {
 			);
 	}
 });
-
-HooksImmediate.attach();

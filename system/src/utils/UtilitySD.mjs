@@ -99,10 +99,10 @@ export default class UtilitySD {
 	}
 
 
-	static diceSound() {
+	static diceSound(playToAllUsers=false) {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		game.audio.play(src, {volume: 1});
+		foundry.audio.AudioHelper.play({src, volume: 1}, playToAllUsers);
 	}
 
 

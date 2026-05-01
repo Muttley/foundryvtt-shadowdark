@@ -25,6 +25,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					initial: "tab-abilities",
 				},
 			],
+			dragDrop: [
+				{dragSelector: ".item-list .item"},
+				{dragSelector: ".attack[data-item-uuid]"},
+			],
 		});
 	}
 
@@ -256,6 +260,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
+
+		// If the item is already on this actor, delegate to sort handling
+		if (item?.parent?.uuid === this.actor.uuid) {
+			return super._onDropItem(event, data);
+		}
 
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
@@ -645,6 +654,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
+		// if equiping shield, remove 2h weapons or switch to 1h
+		if (item.system.isAShield && item.system.equipped) {
+			const updates = [];
+			for (const pi of this.actor.system.getPhysicalItems()) {
+				if (pi.system.isWeapon && pi.system.equipped && pi.system.handedness === "2h") {
+					if (pi.system.isVersatile) {
+						updates.push({ "_id": pi.id, "system.handedness": "1h" });
+					}
+					else {
+						updates.push({ "_id": pi.id, "system.equipped": false });
+					}
+				}
+			}
+			if (updates.length > 0) {
+				await this.actor.updateEmbeddedDocuments("Item", updates);
+			}
+		}
 	}
 
 	async _onToggleHandedness(event) {

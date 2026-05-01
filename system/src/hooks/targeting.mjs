@@ -6,11 +6,6 @@ export const TargetingHooks = {
 			// return early if we are removing a target
 			if (!targeted) return;
 
-			// only GMs are allowed to have more than one target
-			if (game.user.targets.size > 1 && !user.isGM) {
-				game.user.updateTokenTargets([token.id]);
-			}
-
 			// if a token has a dynamic ring configured, flash using the user's color
 			if (token.document.ring.enabled) {
 				const color = Color.from(user.color);

@@ -44,4 +44,13 @@ export default class SpellSD extends BaseItemSD {
 		return true;
 	}
 
+	get subtext() {
+		const tier = `${game.i18n.localize("SHADOWDARK.item.spell_tier")} ${this.tier}`;
+		const range = Handlebars.helpers.fromConfig("SPELL_RANGES", this.range);
+		const duration = Handlebars.helpers.getSpellDuration(
+			this.duration.type, this.duration.value
+		);
+		return [tier, range, duration].filter(Boolean).join(", ");
+	}
+
 }

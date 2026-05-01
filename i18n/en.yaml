@@ -217,6 +217,7 @@ SHADOWDARK.chatcard.default: Roll
 SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Ability Check
 SHADOWDARK.class-ability.ability.label: Ability
+SHADOWDARK.class-ability.ability.group: "{group} Ability"
 SHADOWDARK.class-ability.available.label: Available
 SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: DC
@@ -367,6 +368,7 @@ SHADOWDARK.effect.tooltip.transfer.do_not: Does not transfer
 SHADOWDARK.effect.tooltip.transfer.do: Does transfer
 SHADOWDARK.effect.tooltip.transfer.header: Transfer effect to actor when item is added
 SHADOWDARK.effect.unavailable: Disabled Effects
+SHADOWDARK.error.class_ability.lost: Ability currently lost
 SHADOWDARK.error.class_ability.no-uses-remaining: No uses remaining
 SHADOWDARK.error.general.gm_required: You must have the Game Master role to do that.
 SHADOWDARK.error.general.item_uuid_not_found: "ERROR: Item UUID not found"
@@ -379,7 +381,9 @@ SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
 SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
 SHADOWDARK.form.section_header.equipment.label: Equipment
@@ -388,11 +392,10 @@ SHADOWDARK.form.section_header.names.label: Names
 SHADOWDARK.form.section_header.patron.label: Patron
 SHADOWDARK.form.section_header.spellcasting.label: Spellcasting
 SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.hotbar.abilityLost: Ability currently lost
 SHADOWDARK.hotbar.moreThanOneItemWithName: More than one item found with that name
 SHADOWDARK.hotbar.noActorSelected: You must select an actor to use this macro
 SHADOWDARK.hotbar.noItemWithName: No such item found on character
-SHADOWDARK.hotbar.spellLost: Spell currently lost
+SHADOWDARK.hotbar.wandAllSpellsLost: All spells in this wand are lost
 SHADOWDARK.inventory.carried_gear: Carried Gear
 SHADOWDARK.inventory.coins: Coins
 SHADOWDARK.inventory.equipped_gear: Equipped Gear

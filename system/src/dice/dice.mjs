@@ -226,7 +226,8 @@ export async function rollDamageFromMessage(msg) {
 		);
 	}
 	else {
-		msg.update({content});
+		await msg.update({content});
+		shadowdark.utils.diceSound(true);
 	}
 }
 
