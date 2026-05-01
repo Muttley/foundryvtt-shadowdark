@@ -5,50 +5,65 @@ export default class NpcSheetSD extends ActorSheetSD {
 	static DEFAULT_OPTIONS = foundry.utils.mergeObject(
 		ActorSheetSD.DEFAULT_OPTIONS,
 		{
-			classes: ["shadowdark", "sheet", "npc"],
+			classes: ["shadowdark-app", "shadowdark-npc"],
 			position: { width: 600, height: 730 },
-			window: { resizable: true },
+			window: {
+				resizable: true,
+				contentClasses: ["shadowdark", "sheet", "npc"],
+			},
+			actions: {
+				"display-feature": NpcSheetSD.prototype._onDisplayFeature,
+				"cast-npc-spell": NpcSheetSD.prototype._onCastSpell,
+				"focus-npc-spell": NpcSheetSD.prototype._onFocusNpcSpell,
+			},
 		},
 		{ inplace: false }
 	);
 
 	static PARTS = {
-		form: {
-			template: "systems/shadowdark/templates/actors/npc.hbs",
-			scrollable: [".SD-content-body"],
+		header: {
+			template: "systems/shadowdark/templates/actors/_partials/header.hbs",
+		},
+		nav: {
+			template: "systems/shadowdark/templates/actors/_partials/nav.hbs",
+		},
+		abilities: {
+			template: "systems/shadowdark/templates/actors/npc/abilities.hbs",
+			scrollable: [""],
+		},
+		spells: {
+			template: "systems/shadowdark/templates/actors/npc/spells.hbs",
+			scrollable: [""],
+		},
+		description: {
+			template: "systems/shadowdark/templates/actors/npc/description.hbs",
+			scrollable: [""],
+		},
+		effects: {
+			template: "systems/shadowdark/templates/actors/_partials/effects-tab.hbs",
+			scrollable: [""],
 		},
 	};
 
-	/** @inheritdoc */
-	activateListeners(html) {
-		html.find("[data-action='display-feature']").click(
-			event => this._displayFeature(event)
-		);
-
-		html.find("[data-action='focus-npc-spell']").click(
-			event => this._onCastSpell(event, { isFocusRoll: true })
-		);
-
-		html.find("[data-action='cast-npc-spell']").click(
-			event => this._onCastSpell(event)
-		);
-
-		html.find(".toggle-lost").click(
-			event => this._onToggleLost(event)
-		);
-
-		// Handle default listeners last so system listeners are triggered first
-		super.activateListeners(html);
-	}
+	static TABS = {
+		primary: {
+			initial: "abilities",
+			labelPrefix: "SHADOWDARK.sheet.npc.tab",
+			tabs: [
+				{ id: "abilities" },
+				{ id: "spells" },
+				{ id: "description" },
+				{ id: "effects", label: "SHADOWDARK.sheet.item.tab.effects" },
+			],
+		},
+	};
 
 	/** @override */
 	async _prepareContext(options) {
 		const context = await super._prepareContext(options);
 
-		// Ability Scores
 		for (const [key, ability] of Object.entries(this.actor.system.abilities)) {
-			const labelKey = `SHADOWDARK.ability_${key}`;
-			ability.label = `${game.i18n.localize(labelKey)}`;
+			ability.label = game.i18n.localize(`SHADOWDARK.ability_${key}`);
 		}
 
 		await this._prepareItems(context);
@@ -61,7 +76,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const specials = [];
 		const spells = [];
 		const features = [];
-
 		const effects = {
 			effect: {
 				label: game.i18n.localize("SHADOWDARK.item.effect.category.effect"),
@@ -73,52 +87,34 @@ export default class NpcSheetSD extends ActorSheetSD {
 			},
 		};
 
+		const stripHtml = html =>
+			new DOMParser().parseFromString(html ?? "", "text/html").body.textContent ?? "";
+
 		for (const i of this._sortAllItems(context)) {
-			// Push Attacks
 			if (i.type === "NPC Attack") {
 				const display = await this.actor.system.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
 			}
-
-			// Push Specials
 			else if (i.type === "NPC Special Attack") {
 				const display = await this.actor.system.buildNpcSpecialDisplays(i._id);
 				specials.push({itemId: i._id, display});
 			}
-
-			// Push Features
 			else if (i.type === "NPC Feature") {
-				// TODO remove jQuery
 				const description =
 					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-						jQuery(i.system.description).text(),
-						{
-							async: true,
-						}
+						stripHtml(i.system.description),
+						{ async: true }
 					);
-
-				features.push({
-					itemId: i._id,
-					name: i.name,
-					description,
-				});
+				features.push({itemId: i._id, name: i.name, description});
 			}
-
-			// Push Spells
 			else if (i.type === "Spell") {
-				// TODO remove jQuery
 				i.description =
 					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-						jQuery(i.system.description).text(),
-						{
-							async: true,
-						}
+						stripHtml(i.system.description),
+						{ async: true }
 					);
-
 				spells.push(i);
 			}
-
-			// Push Effects
 			else if (i.type === "Effect") {
 				const category = i.system.category;
 				effects[category].items.push(i);
@@ -132,32 +128,32 @@ export default class NpcSheetSD extends ActorSheetSD {
 		context.effects = effects;
 	}
 
-	async _displayFeature(event) {
+	async _onDisplayFeature(event, target) {
 		event.preventDefault();
-		const item = this.actor.items.get(event.currentTarget?.dataset?.itemId);
+		const item = this.actor.items.get(target.dataset.itemId);
 		return item.displayCard();
 	}
 
-	async _onCastSpell(event, options) {
+	async _onCastSpell(event, target, focus = false) {
 		event.preventDefault();
 
-		const itemUuid = event.currentTarget.dataset.itemUuid;
+		const itemUuid = target.dataset.itemUuid;
+		const config = { cast: { focus: focus }, skipPrompt: event.shiftKey };
 
-		if (event.shiftKey) {
-			this.actor.system.castSpell(itemUuid, {skipPrompt: true});
-		}
-		else {
-			this.actor.system.castSpell(itemUuid);
-		}
+		this.actor.system.castSpell(itemUuid, config);
+	}
+
+	async _onFocusNpcSpell(event, target) {
+		return this._onCastSpell(event, target, true);
 	}
 
 	async _onDropItem(event, item) {
 		if (item.type === "Spell") {
 			// add new spell to NPC
-			this.actor.createEmbeddedDocuments("Item", [item]);
+			return this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
 		}
 		else {
-			super._onDropItem(event, item);
+			return super._onDropItem(event, item);
 		}
 	}
 

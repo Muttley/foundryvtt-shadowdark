@@ -1,11 +1,9 @@
-<section class="tab tab-description" data-group="primary" data-tab="tab-description">
+<section class="tab tab-description flex1 SD-content-body {{tab.cssClass}}" data-group="primary" data-tab="description">
 	<div class="SD-banner">Description</div>
-		{{editor
-			notesHTML
-			target="system.notes"
-			button=true
-			editable=editable
-			engine="prosemirror"
-			collaborate=false
-		}}
+		<prose-mirror
+			name="system.notes"
+			toggled
+			value="{{actor.system.notes}}"
+			data-document-uuid="{{actor.uuid}}"
+		>{{{notesHTML}}}</prose-mirror>
 </section>
