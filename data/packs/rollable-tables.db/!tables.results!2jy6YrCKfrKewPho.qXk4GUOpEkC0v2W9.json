@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2jy6YrCKfrKewPho.qXk4GUOpEkC0v2W9",
 	"description": "Redoubt",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		72,
 		73
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

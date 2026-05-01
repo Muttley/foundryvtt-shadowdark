@@ -4,6 +4,8 @@
 	"effects": [
 		"cBbGoho9OMDVIR8n"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/air/air-pressure-shield-blue.webp",
 	"name": "Spell Effect: Breath",
@@ -12,7 +14,7 @@
 		"description": "<p>You can hold your breath for the spell's duration.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "10"
+			"value": 10
 		},
 		"effectPanel": {
 			"show": true
@@ -25,11 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.-1",
 			"value": 0
 		},
 		"tokenIcon": {

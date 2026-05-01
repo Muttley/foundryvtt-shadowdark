@@ -1,25 +1,27 @@
 {
 	"_id": "Jg6Jkbl7zFxeQvW5",
 	"_key": "!items.effects!HxMd3lV8CPpvL3my.Jg6Jkbl7zFxeQvW5",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 1,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-blue-yellow.webp",
 	"name": "Protection from Electricity",
 	"origin": "Item.qqgYJ0vX64GVKLMu",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

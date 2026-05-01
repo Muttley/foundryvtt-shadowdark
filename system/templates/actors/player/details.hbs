@@ -10,22 +10,24 @@
 			{{> actors/player/details/xp }}
 			{{> actors/player/details/ancestry }}
 			{{> actors/player/details/background }}
+
+			{{> actors/player/details/renown }}
+			{{> actors/player/details/alignment }}
+			{{> actors/player/details/deity }}
+
+
+			{{#if classHasPatron}}
+				<div style="grid-column: span 2;">
+					{{> actors/player/details/languages }}
+				</div>
+				{{> actors/player/details/patron }}
+			{{else}}
+				<div style="grid-column: span 3;">
+				{{> actors/player/details/languages }}
+				</div>
+			{{/if}}
 		</div>
 
-		{{#if classHasPatron}}
-			<div class="grid-3-columns">
-				{{> actors/player/details/alignment }}
-				{{> actors/player/details/deity }}
-				{{> actors/player/details/patron }}
-			</div>
-		{{else}}
-			<div class="grid-2-columns">
-				{{> actors/player/details/alignment }}
-				{{> actors/player/details/deity }}
-			</div>
-		{{/if}}
-
-		{{> actors/player/details/languages }}
 		{{> actors/player/details/boons }}
 	</div>
 </section>

@@ -1,0 +1,48 @@
+{
+	"_id": "aw7hHQoAE6rlpR3R",
+	"_key": "!items!aw7hHQoAE6rlpR3R",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/consumables/potions/potion-flask-corled-pink-red.webp",
+	"name": "Potion of Forgetfulness",
+	"system": {
+		"broken": false,
+		"class": [
+		],
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A pink draught that swirls with a counter-clockwise current.</em></p><p><strong>Benefit.</strong> If you serve this potion to an intelligent being and that being drinks it, the imbiber permanently forgets one memory of your choosing.</p>",
+		"duration": {
+			"type": "rounds"
+		},
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"lost": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Potion"
+}

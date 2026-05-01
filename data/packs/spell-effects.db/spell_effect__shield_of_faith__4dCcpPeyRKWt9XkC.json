@@ -4,18 +4,17 @@
 	"effects": [
 		"GKcLELNdIj1o3OX3"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-blue.webp",
 	"name": "Spell Effect: Shield of Faith",
 	"system": {
-		"bonuses": {
-			"acBonus": "2"
-		},
 		"category": "effect",
 		"description": "",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -28,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

@@ -57,31 +57,23 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	/** @override */
 	async getData(options) {
-		const source = this.actor.toObject();
-		const actorData = this.actor.toObject(false);
 
 		const context = {
-			actor: actorData,
+			actor: this.actor,
 			config: CONFIG.SHADOWDARK,
 			cssClass: this.actor.isOwner ? "editable" : "locked",
 			editable: this.isEditable,
 			hiddenSections: this._hiddenSectionsLut,
-			isNpc: this.actor.type === "NPC",
-			isPlayer: this.actor.type === "Player",
-			items: actorData.items,
+			items: this.actor.items,
 			owner: this.actor.isOwner,
 			predefinedEffects: await shadowdark.effects.getPredefinedEffectsList(),
-			rollData: this.actor.getRollData.bind(this.actor),
-			source: source.system,
-			system: actorData.system,
+			system: this.actor.system,
 		};
 
-		context.activeEffects = shadowdark.effects.prepareActiveEffectCategories(
-			this.actor.allApplicableEffects()
-		);
+		context.activeEffects = this.actor.allApplicableEffects().filter(e => !e.isSuppressed);
 
 		context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-			context.system.notes,
+			this.actor.system.notes,
 			{
 				secrets: this.actor.isOwner,
 				async: true,
@@ -277,55 +269,52 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 	async _onRollHP(event) {
 		event.preventDefault();
-
-		this.actor.rollHP();
+		this.actor.system.rollHP();
 	}
 
 	async _onRollAbilityCheck(event) {
 		event.preventDefault();
-		let ability = $(event.currentTarget).data("ability");
+		let ability = event.currentTarget.dataset.ability;
 		if (!ability) return;
-
-		// skip roll prompt if shift/alt/ctrl clicked
-		const options = this.actor.buildOptionsForSkipPrompt(event, {
-			event: event,
-		});
-
-		this.actor.rollAbility(ability, options);
+		// skip roll prompt if shift clicked
+		const skipPrompt = event.shiftKey ? true : false;
+		this.actor.system.rollStatCheck(ability, {skipPrompt});
 	}
 
 	async _onRollAttack(event) {
 		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const attackType =  $(event.currentTarget).data("attack-type");
-		const handedness = $(event.currentTarget).data("handedness");
-
-		// skip roll prompt if shift/alt/ctrl clicked
-		const options = this.actor.buildOptionsForSkipPrompt(event, {
-			attackType,
-			handedness,
-		});
-
-		this.actor.rollAttack(itemId, options);
+		const itemId = event.currentTarget.dataset.itemId;
+		const data = {
+			skipPrompt: event.shiftKey, // skip roll prompt if shift clicked
+		};
+		if (event.currentTarget.dataset.attackType) {
+			data.attack = {type: event.currentTarget.dataset.attackType};
+		}
+		this.actor.system.rollAttack(itemId, data);
 	}
 
 	async _onToggleLost(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
+		const wandSpellUuid = event.currentTarget.dataset.wandSpellUuid;
 
-		this.actor.updateEmbeddedDocuments("Item", [
-			{
-				"_id": itemId,
-				"system.lost": !item.system.lost,
-			},
-		]);
+		if (wandSpellUuid) {
+			item.system.toggleSpellLost(wandSpellUuid);
+		}
+		else {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					"_id": itemId,
+					"system.lost": !item.system.lost,
+				},
+			]);
+		}
 	}
 
 	async _onItemCreate(event) {
 		event.preventDefault();
-		const itemType = $(event.currentTarget).data("item-type");
+		const itemType = event.currentTarget.dataset.itemType;
 
 		const itemData = {
 			name: `New ${itemType}`,
@@ -335,17 +324,17 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		switch (itemType) {
 			case "Basic":
-				if ($(event.currentTarget).data("item-treasure")) {
+				if (event.currentTarget.dataset.itemTreasure) {
 					itemData.system.treasure = true;
 				}
 				break;
 			case "Spell":
 				itemData.system.tier =
-					$(event.currentTarget).data("spell-tier") || 1;
+					event.currentTarget.dataset.spellTier || 1;
 				break;
 			case "Talent":
 				itemData.system.talentClass =
-					$(event.currentTarget).data("talent-class") || "level";
+					event.currentTarget.dataset.talentClass || "level";
 				break;
 		}
 
@@ -356,6 +345,8 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 	_sortAllItems(context) {
 		// Pre-sort all items so that when they are filtered into their relevant
 		// categories they are already sorted alphabetically (case-sensitive)
-		return (context.items ?? []).sort((a, b) => a.name.localeCompare(b.name));
+		return Array.from(context.items ?? []).sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
 	}
 }

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.NyZFCPyd2HqPPa9E",
 	"description": "The ground shakes violently and a massive fissure opens",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		1,
 		1
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

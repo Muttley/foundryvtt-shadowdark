@@ -3,12 +3,14 @@
 	"_key": "!tables.results!tXhX6Iv3rOc6GlF6.S2SRrlxctDoHACm1",
 	"description": "<b>You flubbed the incantation!</b> You cast a random spell from your known spells at the same targets, even if it would not normally be possible",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		4,
 		4
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

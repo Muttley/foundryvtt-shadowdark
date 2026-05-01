@@ -1,3 +1,89 @@
+# v4.0.0
+
+## Enhancements
+- [#41] Hook calls added to rolling functions. Documentation in compendium
+- [#277] Roll based chat cards have been overhauled with new look and features
+- [#915] Complete overhaul of rolling and Active Effects.
+	- All dice rolls now defined by a rollConfig object. Documentation in compendium
+	- Active Effects keys have reworked. Documentation in compendium
+- [#966] Item Active Effects now get suspended when an item is Stashed
+- [#1038] Added missing translatable strings
+- [#1069] Add ability to flag items as unidentified and hide certain information until it has been formally identified *(deukalion)*
+- [#1147] Improvements to Token Ring functionality and HP change animation *(Henry Malinowski)*
+- [#1152] Add "Momentum Mode" Option *(Ashley Towner)*
+- [#1157] Spells now support rolling for damage and healing *(deukalion)*
+- [#1178] Add Renown value to player sheets
+- [#1182] Unequipped armor no longer applies Active Effects
+- [#1202] Ammo type should be overridable as part of the attack roll dialog
+- [#1209] Player-Initiated Initiative Rolls with Clockwise Initiative Enabled *(deukalion)*
+- [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
+- [#1252] Restore unidentified item name and description when identified toggled off
+- [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
+- [#1265] Monster Importer improvements to parsing and error handling *(allardhoeve)*
+- [#1200] Added Mac Command key support for fast-forward rolls *(Brittonlj)*
+- [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
+- [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
+- [#1288] Item Importer improvements to parsing and error handling *(allardhoeve)*
+- [#1295] Equiping a Shield unequips 2 handed weapons or switches to 1 handed. Equiping a 2 handed weapon, removes shields
+
+## Bugfixes
+- [#1068] Blowgun weapon attack can now be rolled
+- [#1107] Handaxe Price Correction
+- [#1122] Error that prevented adding active effects
+- [#1126] Added missing Fighter talent in class rolltable *(Brittonlj)*
+- [#1129] Correct inconsistent typography in compendium items *(johncarney)*
+- [#1130] Remove repeated description in Alarm spell *(johncarney)*
+- [#1140] Manifest warning related to grid settings *(andrewbeard)*
+- [#1143] CSS in v12 causing problems, cannot override
+- [#1146] Remaining torch time shown on chat card when using hide timer *(Brittonlj)*
+- [#1194] Compendium migrations skipped when in a Module in v4
+- [#1204] Too much damage taken when applied from chat card in v4
+- [#1205] Damage should always be rolled if no actors have been targeted in v4
+- [#1214] Unable to open Player character sheets directly from compendiums in v4
+- [#1215] No way of rolling 2H damage for versatile weapons currently in v4
+- [#1239] Fix isPrivate always being false in RollSD._prepareChatRenderContex *(deukalion)*
+- [#1240] Persist selected rollMode from dialog form back to config *(deukalion)*
+- [#1241] Coerce itemIndex to Number in CompendiumItemSelector *(deukalion)*
+- [#1242] Convert uuid check from String to Boolean in Selector subclasses  *(deukalion)*
+- [#1243] Fix advantage typo *(deukalion)*
+- [#1244] NPC actors should be sorted amongst themselves by DEX mod in combat tracker *(deukalion)*
+- [#1245] Update roll to mainRoll in rollHP() config *(deukalion)*
+- [#1247] Critical Success attacks do not roll double the dice for damage in v4
+- [#1248] Ensure 0 level NPCs have at least 1 HP *(deukalion)*
+- [#1257] Ammunition not being reduced when used for an attack in v4
+- [#1262] Legacy Weapon AEs not migrating properly in v4
+- [#1281] Some Magic Items in the compendiums are of the wrong types
+- [#1282] Fixed a bug in level up spell validation *(deukalion)*
+
+## Chores
+- [#369] Migrated to using data models for actors and items
+- [#1153] Add tip for improving editor auto-complete *(puradox)*
+- [#1193] Remove redundant span elements from all compendium text fields.
+- [#1199] Migrate Pre-existing Active Effects to new model *(Brittonlj)*
+- [#1213] Sanity check Quickstart adventure and Pregen characters to ensure the new Active Effects are being used effectively
+- [#1218] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Items
+- [#1219] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
+- [#1220] Accessing the global "ActorSheet" which is now namespaced under foundry.appv1.sheets.ActorSheet
+- [#1221] Accessing the global "ItemSheet" which is now namespaced under foundry.appv1.sheets.ItemSheet
+- [#1222] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
+- [#1223] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
+- [#1225] TableResult#documentId is deprecated. Consult TableResult#uuid instead
+- [#1229] Update Active Effects drop handlers that use the REPLACEME placeholder to trigger configuration to use new AE schema
+- [#1230] Merge German translation updates from Crowdin
+- [#1233] Make required Shadowdarklings import changes
+
+	* Original "Bard" renamed to "Bard (Legacy)" but Shadowdarklings still refers to it as "Bard" in JSON
+	* New CS6 Bard will be named "Bard (CS6)" in JSON, but just "Bard" in interface.
+	* We can now map incoming class names to new ones if required.
+
+- [#1237] Merge Spanish translation updates from Crowdin
+- [#1283] Migrate existing Character Spells to newer versions in Compendiums
+- [#1284] Migrate existing Character Talents to newer versions in Compendiums
+
+*Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
+
+---
+
 # v3.6.2
 
 ## Bugfixes

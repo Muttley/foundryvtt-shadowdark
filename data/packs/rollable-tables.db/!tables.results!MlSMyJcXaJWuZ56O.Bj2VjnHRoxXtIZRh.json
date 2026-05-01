@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.Bj2VjnHRoxXtIZRh",
 	"description": "Windstorms uncovered a stone monolith in the desert",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		86,
 		87
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

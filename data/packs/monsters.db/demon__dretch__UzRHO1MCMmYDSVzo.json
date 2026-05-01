@@ -3,6 +3,8 @@
 	"_key": "!actors!UzRHO1MCMmYDSVzo",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -20,8 +22,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -90,9 +93,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -133,21 +133,23 @@
 				"value": 12
 			},
 			"hp": {
-				"hd": 0,
 				"max": 11,
 				"value": 11
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": 2,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Green, pig-faced demons with thick claws and an oily stench. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 11, <strong>ATK</strong> 1 claw +2 (1d6) or 1 gas, <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p>\n\t<p><strong> Gas</strong>. All in near [[check 12 con]] or blinded for 1d4 rounds.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Green, pig-faced demons with thick claws and an oily stench. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 11, <strong>ATK</strong> 1 claw +2 (1d6) or 1 gas, <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +0, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 2</p>\n\t<p><strong> Gas</strong>. All in near [[check 12 con]] or blinded for 1d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

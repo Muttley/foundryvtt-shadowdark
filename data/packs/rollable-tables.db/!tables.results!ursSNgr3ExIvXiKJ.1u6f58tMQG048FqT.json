@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ursSNgr3ExIvXiKJ.1u6f58tMQG048FqT",
 	"description": "Pirates",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		16,
 		17
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

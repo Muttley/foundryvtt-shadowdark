@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.loaxCAEIlNdilQky",
 	"description": "A roving @UUID[Compendium.shadowdark.monsters.RG84tprafQTDEFCa]{Brown Bear} scavenges for dead bodies to eat",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		4,
 		5
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

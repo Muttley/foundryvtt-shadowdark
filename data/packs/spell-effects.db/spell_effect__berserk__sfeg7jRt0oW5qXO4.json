@@ -4,6 +4,8 @@
 	"effects": [
 		"kYzSScmkTg4o1DKM"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
 	"name": "Spell Effect: Berserk",
@@ -12,7 +14,7 @@
 		"description": "<p>Immune to damage for 3 rounds</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "3"
+			"value": 3
 		},
 		"effectPanel": {
 			"show": true
@@ -25,12 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},
 		"start": {
-			"combatTime": "4.0",
+			"combatTime": 4,
 			"value": 29759
 		},
 		"tokenIcon": {

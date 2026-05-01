@@ -1,31 +1,33 @@
 {
 	"_id": "sx2uVw9MzQNA7mnd",
 	"_key": "!items.effects!vIbwotCa1eqCVZMU.sx2uVw9MzQNA7mnd",
-	"changes": [
-		{
-			"key": "system.abilities.dex.bonus",
-			"mode": 2,
-			"priority": null,
-			"value": "2"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Ability Score Improvement (Dex)",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.dex.value",
+				"priority": null,
+				"type": "add",
+				"value": 2
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

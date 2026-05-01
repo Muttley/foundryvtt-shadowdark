@@ -1,31 +1,33 @@
 {
 	"_id": "AmcPerJgnykmMwVA",
 	"_key": "!items.effects!HzzgAIdhoAyfeItJ.AmcPerJgnykmMwVA",
-	"changes": [
-		{
-			"key": "system.bonuses.backstabDie",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
-	],
-	"description": "",
+	"description": "<p>Your Backstab deals +1 dice of damage.</p>",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/skills/melee/strike-dagger-white-orange.webp",
 	"name": "Additional Backstab Die",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.bonus.backstabdice",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

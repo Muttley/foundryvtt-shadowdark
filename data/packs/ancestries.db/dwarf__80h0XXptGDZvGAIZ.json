@@ -3,6 +3,8 @@
 	"_key": "!items!80h0XXptGDZvGAIZ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Dwarf",
@@ -20,7 +22,8 @@
 			]
 		},
 		"nameTable": "Compendium.shadowdark.rollable-tables.RollTable.IVnsYyvJAM36YQsv",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"randomWeight": 2,
 		"source": {
 			"title": "core-rules"

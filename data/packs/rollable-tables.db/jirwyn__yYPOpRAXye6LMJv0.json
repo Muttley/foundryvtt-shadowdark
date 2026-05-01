@@ -3,12 +3,14 @@
 	"_key": "!tables.results!44P8mz0yaCsTtKeq.yYPOpRAXye6LMJv0",
 	"description": "Jirwyn",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Jirwyn",
 	"range": [
 		17,
 		17
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

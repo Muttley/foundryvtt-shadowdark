@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2jy6YrCKfrKewPho.axRPKVtjcWHzLE18",
 	"description": "Undercity",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		42,
 		43
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

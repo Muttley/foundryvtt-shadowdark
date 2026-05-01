@@ -4,6 +4,8 @@
 	"effects": [
 		"LmXXpHviIuB684gX"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/light/explosion-star-glow-silhouette.webp",
 	"name": "Condition: Invisible (Stealthy)",
@@ -12,7 +14,7 @@
 		"description": "<p>The character is invisible.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "3"
+			"value": 3
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

@@ -3,12 +3,16 @@
 	"_key": "!items!YCI8gRcCC4fA79uS",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
 	"name": "+1 use per day of Petrifying Gaze",
 	"system": {
 		"description": "",
 		"level": 0,
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},

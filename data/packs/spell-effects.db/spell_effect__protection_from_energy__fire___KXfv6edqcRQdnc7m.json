@@ -4,6 +4,8 @@
 	"effects": [
 		"Ivoesj08KB4Fg49z"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-orange.webp",
 	"name": "Spell Effect: Protection from Energy (Fire)",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

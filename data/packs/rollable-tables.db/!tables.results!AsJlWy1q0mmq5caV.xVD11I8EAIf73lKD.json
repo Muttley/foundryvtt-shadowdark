@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.xVD11I8EAIf73lKD",
 	"description": "Every light source suddenly extinguishes",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		68,
 		69
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

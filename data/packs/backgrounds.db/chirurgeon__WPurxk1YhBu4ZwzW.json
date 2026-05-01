@@ -3,12 +3,15 @@
 	"_key": "!items!WPurxk1YhBu4ZwzW",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Chirurgeon",
 	"system": {
 		"description": "<p>You know anatomy, surgery, and first aid</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

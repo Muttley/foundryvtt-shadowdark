@@ -3,21 +3,27 @@
 	"_key": "!actors.items!dNSmJX2keI0T2Gig.i1UPR5s1LPnsGRTd",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Invisibility",
 	"system": {
-		"dc": "12",
+		"class": [
+		],
 		"description": "<p>Self. Become invisible for [[/r 2d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "2d4"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 2
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

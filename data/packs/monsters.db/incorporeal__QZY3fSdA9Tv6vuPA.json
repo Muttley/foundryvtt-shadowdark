@@ -3,12 +3,15 @@
 	"_key": "!actors.items!ch1UpQSCVBgUNS2a.QZY3fSdA9Tv6vuPA",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Incorporeal",
 	"system": {
 		"description": "<p>In place of attacks, become corporeal or incorporeal.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

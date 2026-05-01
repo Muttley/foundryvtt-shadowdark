@@ -3,12 +3,15 @@
 	"_key": "!actors.items!OrFJy0frYF2B8wbh.b1R2wmHEPUFWBBab",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Immune to cold and fire.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

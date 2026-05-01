@@ -1,0 +1,53 @@
+{
+	"_id": "Zci7qHVAp0lHEYID",
+	"_key": "!items!Zci7qHVAp0lHEYID",
+	"effects": [
+		"LryuYkHDYOAm4I0g",
+		"4JjKaawthhmI2NLb"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/scimitar-guard-red.webp",
+	"name": "Scimitar of the Ash Moon",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "greatsword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 12,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d12"
+		},
+		"description": "<p><em>This wide, curved blade has a snarling efreeti head on the bronze pommel.</em></p><p><strong>Bonus.</strong> +3 greatsword.</p><p><strong>Benefit.</strong> If you roll a critical hit with this weapon, the target is beheaded. It dies instantly if decapitation would kill it.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

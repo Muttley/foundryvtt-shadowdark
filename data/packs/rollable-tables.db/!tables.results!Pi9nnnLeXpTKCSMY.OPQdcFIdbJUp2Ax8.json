@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.OPQdcFIdbJUp2Ax8",
 	"description": "Radiant, polished pearl (40 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		76,
 		77
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

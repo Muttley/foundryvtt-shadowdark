@@ -126,7 +126,7 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 				this.data.startingBoons = classData.patron.startingBoons;
 			}
 
-			if (await this.data.actor.isSpellCaster()) {
+			if (this.data.actor.system.isSpellCaster) {
 				this.data.spellcastingClass =
 					this.data.class.system.spellcasting.class === ""
 						? this.data.actor.system.class
@@ -160,6 +160,13 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 		}
 		this.data.talentsRolled = this.data.rolls.talent || this.data.rolls.boon;
 		this.data.talentsChosen = this.data.talents.length > 0;
+
+		// get HP advantage
+		const hpRollKey = this.data.actor.system._getActiveEffectKeys("system.roll.hp.advantage", 0);
+		this.data.hp = {
+			advantage: hpRollKey.value,
+			tooltips: hpRollKey.tooltips,
+		};
 
 		return this.data;
 	}
@@ -195,32 +202,28 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	}
 
 	async _openSpellBook() {
-		this.data.actor.openSpellBook();
+		this.data.actor.system.openSpellBook();
 	}
 
 	async _onRollHP({isReroll = false}) {
-		const data = {
-			rollType: "hp",
-			actor: this.data.actor,
-		};
-		let options = {};
-
-		options.title = isReroll
+		const label = isReroll
 			? game.i18n.localize("SHADOWDARK.dialog.hp_re_roll.title")
 			: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title");
 
-		options.flavor = options.title;
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-hp.hbs";
-		options.skipPrompt = true;
-
-		let parts = [this.data.class.system.hitPoints];
-		let advantage = 0;
-		if (data.actor?.hasAdvantage(data)) advantage = 1;
-
-		const result = await CONFIG.DiceSD.Roll(parts, data, false, advantage, options);
-
-		this.data.rolls.hp = result.rolls.main.roll.total;
-		ui.sidebar.activateTab("chat");
+		// TODO add labels to roll
+		const config = {
+			skipPrompt: true,
+			mainRoll: {
+				formula: this.data.class.system.hitPoints,
+				advantage: this.data.hp.advantage,
+				label: label,
+			},
+			actorId: this.data.actor.id,
+		};
+		const result = await shadowdark.dice.rollFromConfig(config);
+		this.data.rolls.hp = result.total;
+		// result.toMessage();
+		ui.sidebar.changeTab("chat", "primary");
 		this.render();
 	}
 
@@ -289,28 +292,31 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 	}
 
 	_onDeleteTalent(event) {
-		this.data.talents.splice($(event.currentTarget).data("index"), 1);
+		this.data.talents.splice(event.currentTarget.dataset.index, 1);
 		this.render();
 	}
 
 	_onDropSpell(spellObj) {
 		let spellTier = spellObj.system.tier;
-		// Check to see if the spell is out of bounds
-		if (1 > spellTier > 5) {
-			ui.notifictions.error("Spell tier out of range");
-			return;
-		}
-		// add spell if there is room in that tier
-		if (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max) {
+		// Add spell if there is room in tier and tier is between 1 and 5
+		if ((spellTier >= 1 && spellTier <= 5)
+				&& (this.data.spells[spellTier].objects.length < this.data.spells[spellTier].max)
+		) {
 			this.data.spells[spellTier].objects.push(spellObj);
+		}
+		else {
+			ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.apps.level-up.spell_tier_out_of_range")
+			);
+			return;
 		}
 		this.render();
 	}
 
 	_onDeleteSpell(event) {
 		// get tier and index from passed event and remove that spell from array
-		let tier = $(event.currentTarget).data("tier");
-		let index = $(event.currentTarget).data("index");
+		let tier = event.currentTarget.dataset.tier;
+		let index = event.currentTarget.dataset.index;
 		this.data.spells[tier].objects.splice(index, 1);
 		this.render();
 	}
@@ -364,47 +370,27 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 			];
 		}
 
-		// Names for audit log
-		const itemNames = [];
-		allItems.forEach(x => itemNames.push(x.name));
-
 		// add talents and spells to actor
 		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		// calculate new HP base
-		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newMaxHP = this.data.actor.system.attributes.hp.max + this.data.rolls.hp;
 		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
-		let newMaxHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
 
 		if (this.data.targetLevel === 1) {
 			let hpConMod = this.data.actor.system.abilities.con.mod;
-			// apply conmod to a set minimum 1 HP
-			if ((this.data.rolls.hp + hpConMod) > 1) {
-				newBaseHP = this.data.rolls.hp + hpConMod;
-
-			}
-			else {
-				newBaseHP = 1;
-			}
-			newValueHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
-			newMaxHP = newValueHP;
+			let startingHP = this.data.rolls.hp + hpConMod;
+			// apply con mod to a set minimum 1 HP
+			newMaxHP = Math.max(startingHP, 1);
+			newValueHP = Math.max(startingHP, 1);
 		}
 
-		// load audit log, check for valid data, add new entry
-		let auditLog = this.data.actor.system?.auditlog ?? {};
-		if (auditLog.constructor !== Object) auditLog = {};
-
-		auditLog[this.data.targetLevel] = {
-			baseHP: newBaseHP,
-			itemsGained: itemNames,
-		};
+		// TODO implement audit log entry
 
 		// update values on actor
 		await this.data.actor.update({
-			"system.attributes.hp.base": newBaseHP,
 			"system.attributes.hp.max": newMaxHP,
 			"system.attributes.hp.value": newValueHP,
-			"system.auditLog": auditLog,
 			"system.level.value": this.data.targetLevel,
 			"system.level.xp": newXP,
 		});

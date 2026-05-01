@@ -3,12 +3,14 @@
 	"_key": "!tables.results!xM3hghlK5nvo46Vo.xzMXXzgv5KOW79vk",
 	"description": "Roll two Patron Boons and choose one to keep",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		10,
 		11
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

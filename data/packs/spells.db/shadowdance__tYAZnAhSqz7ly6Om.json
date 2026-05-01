@@ -3,6 +3,8 @@
 	"_key": "!items!tYAZnAhSqz7ly6Om",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/magic/perception/silhouette-stealth-shadow.webp",
 	"name": "Shadowdance",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>You spin shadowstuff into a convincing visible and audible illusion at a point within near. </p><p>The illusion can be as big as a person and can move within a near range of where it appeared. </p><p>The illusion can't affect physical objects. Touching the illusion reveals its false nature.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "3"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "cursed-scroll-1"

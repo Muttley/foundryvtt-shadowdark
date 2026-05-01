@@ -3,12 +3,15 @@
 	"_key": "!actors.items!GzjB5DsORxRuX2MV.UoZZ5KKZ8UdPcaM5",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Command",
 	"system": {
 		"description": "<p>[[check 18 cha]] to resist an archangel's command.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

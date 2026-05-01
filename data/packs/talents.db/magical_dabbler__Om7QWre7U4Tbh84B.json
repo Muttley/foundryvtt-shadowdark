@@ -2,14 +2,18 @@
 	"_id": "Om7QWre7U4Tbh84B",
 	"_key": "!items!Om7QWre7U4Tbh84B",
 	"effects": [
+		"7Rv0ynJ2wKOIJGnw"
 	],
+	"flags": {
+	},
 	"folder": "8t1Gmpgn1Q6HXJAz",
 	"img": "icons/magic/symbols/runes-triangle-magenta.webp",
 	"name": "Magical Dabbler",
 	"system": {
 		"description": "<p>You can activate spell scrolls and wands using Charisma as your spellcasting stat. If you critically fail, roll a wizard mishap.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

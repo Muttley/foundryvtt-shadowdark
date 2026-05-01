@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ursSNgr3ExIvXiKJ.1RkGLZQCnmmTQdBc",
 	"description": "Hunter",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		62,
 		63
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

@@ -1,0 +1,34 @@
+{
+	"_id": "FKzhrPnFt0njaDh8",
+	"_key": "!items.effects!yE6fl9FlZldHBupD.FKzhrPnFt0njaDh8",
+	"description": "Permanent Ability (Wis)",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Wis)",
+	"origin": "Compendium.shadowdark.magic-items.Item.yE6fl9FlZldHBupD",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.wis.value",
+				"type": "override",
+				"value": 18
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

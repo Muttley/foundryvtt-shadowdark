@@ -1,0 +1,48 @@
+{
+	"_id": "Ka1NPr6edk9cwrzo",
+	"_key": "!items!Ka1NPr6edk9cwrzo",
+	"effects": [
+		"I9RcaNvoUpSqiWUz"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/hand/gloves-leather-tan.webp",
+	"name": "Gloves of Agility",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Thin, leather gloves that seem to meld with the wearer's hands.</em></p><p><strong>Benefit.</strong> Your Dexterity stat becomes 18 (+4) while wearing these gloves.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

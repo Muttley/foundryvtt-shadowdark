@@ -3,12 +3,15 @@
 	"_key": "!actors.items!6ldPPlMIMSd4ALoZ.cT7Iyz5oTdmvXdJp",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Change Shape",
 	"system": {
 		"description": "<p>In place of attacks, transform into any similarly-sized humanoid.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

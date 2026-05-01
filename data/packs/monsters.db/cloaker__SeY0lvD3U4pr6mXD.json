@@ -3,6 +3,8 @@
 	"_key": "!actors!SeY0lvD3U4pr6mXD",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -21,8 +23,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +94,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -134,21 +134,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 28,
 				"value": 28
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 6
+			"value": 6,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i> A midnight blue manta ray with a bony tail and crescent-shaped maw above its belly. It swoops through deep, lightless caverns. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 28, <strong>ATK</strong> 3 lash +4 (1d8) or 1 screech, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p>\n\t<p><strong> Phantoms</strong>. 1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits cloaker or illusions.</p><p><strong>Screech</strong>. Enemies within double near [[check 15 wis]] or DISADV on attacks and checks 1d4 rounds.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A midnight blue manta ray with a bony tail and crescent-shaped maw above its belly. It swoops through deep, lightless caverns. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 28, <strong>ATK</strong> 3 lash +4 (1d8) or 1 screech, <strong>MV</strong> near (fly), <strong>S</strong> +2, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +1, <strong>W</strong> +1, <strong>Ch</strong> +0, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p>\n\t<p><strong> Phantoms</strong>. 1/day, in place of attacks. Create 3 illusory duplicates that disappear when hit. Determine randomly if an attack hits cloaker or illusions.</p><p><strong>Screech</strong>. Enemies within double near [[check 15 wis]] or DISADV on attacks and checks 1d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

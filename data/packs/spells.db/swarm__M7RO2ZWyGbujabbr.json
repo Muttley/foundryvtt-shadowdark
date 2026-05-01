@@ -3,6 +3,8 @@
 	"_key": "!items!M7RO2ZWyGbujabbr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "sE2Ooa1HgAMXmCra",
 	"img": "icons/creatures/mammals/bats-movement-flying-black.webp",
 	"name": "Swarm",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "damage",
 		"description": "<p>A dense swarm of biting bats, rats, or locusts appears in a nearsized cube around a point you can see within range. </p><p>All creatures that start their turn within the swarm take 2d6 damage and are blinded.</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "2d6",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

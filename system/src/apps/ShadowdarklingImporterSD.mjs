@@ -68,6 +68,20 @@ export default class ShadowdarklingImporterSD extends foundry.appv1.api.FormAppl
 		// required method
 	}
 
+	_mapClassName(name) {
+		// Handle situations where the internal class name used by
+		// Shadowdarklings doesn't match the name in Foundry
+		//
+		switch (name) {
+			case "Bard":
+				return "Bard (Legacy)";
+			case "Bard (CS6)":
+				return "Bard";
+			default:
+				return name;
+		}
+	}
+
 	/**
 	 * Handles pasting of json data
 	 */
@@ -380,7 +394,8 @@ export default class ShadowdarklingImporterSD extends foundry.appv1.api.FormAppl
 
 		// Load Class
 		this.classList = await shadowdark.compendiums.classes(false);
-		const classObj = await this._findItem(json.class, "Class");
+		const className = this._mapClassName(json.class);
+		const classObj = await this._findItem(className, "Class");
 		this.importedActor.system.class = classObj?.uuid ?? "";
 
 		// Add class abilities

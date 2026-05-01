@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.Dc50WQCqc87G3eD1",
 	"description": "An earthquake uncovered a ruin inside a deep rift",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		14,
 		15
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

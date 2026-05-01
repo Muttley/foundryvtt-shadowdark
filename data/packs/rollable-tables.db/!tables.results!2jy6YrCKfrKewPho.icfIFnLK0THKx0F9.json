@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2jy6YrCKfrKewPho.icfIFnLK0THKx0F9",
 	"description": "Palace",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		58,
 		59
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

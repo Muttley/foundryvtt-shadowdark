@@ -3,6 +3,8 @@
 	"_key": "!actors!HO9aYtRdsjHHAYHj",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -20,8 +22,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -90,9 +93,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -133,21 +133,23 @@
 				"value": 17
 			},
 			"hp": {
-				"hd": 0,
 				"max": 28,
 				"value": 28
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 6
+			"value": 6,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A knight in blackened armor riddled with cruel barbs. </i></p>\n\t\n\t<p><strong>AC</strong> 17 (plate mail + shield), <strong>HP</strong> 28, <strong>ATK</strong> 3 bastard sword +4 (1d8 + 2), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p>\n\t<p><strong> Bloodlust</strong>. +2 damage with melee weapons (included).</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A knight in blackened armor riddled with cruel barbs. </i></p>\n\t\n\t<p><strong>AC</strong> 17 (plate mail + shield), <strong>HP</strong> 28, <strong>ATK</strong> 3 bastard sword +4 (1d8 + 2), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +0, <strong>C</strong> +1, <strong>I</strong> +0, <strong>W</strong> +0, <strong>Ch</strong> +2, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 6</p>\n\t<p><strong> Bloodlust</strong>. +2 damage with melee weapons (included).</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

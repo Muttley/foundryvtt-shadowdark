@@ -3,6 +3,8 @@
 	"_key": "!items!EQNDaZJ71fyOYCHb",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "GjEoxJ1IlFDjGKIa",
 	"img": "icons/magic/light/beam-rays-yellow-blue-small.webp",
 	"name": "Moonbeam",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "damage",
 		"description": "<p>A wavering ray of silvery moonlight strikes one creature within far. It takes 3d6 damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "3d6",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

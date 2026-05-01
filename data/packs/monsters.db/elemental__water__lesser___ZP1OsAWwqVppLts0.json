@@ -3,6 +3,8 @@
 	"_key": "!actors!ZP1OsAWwqVppLts0",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -21,8 +23,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +94,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -134,21 +134,23 @@
 				"value": 15
 			},
 			"hp": {
-				"hd": 0,
 				"max": 29,
 				"value": 29
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 6
+			"value": 6,
+			"xp": 0
 		},
 		"move": "doubleNear",
 		"moveNote": "swim",
-		"notes": "\n\t<p><i> A crashing vortex of water. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 29, <strong>ATK</strong> 3 slam +6 (2d6) or 1 whirlpool, <strong>MV</strong> double near (swim), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p><strong>Whirlpool</strong>. All within close [[check 15 str]] or immobilized inside water elemental (treat as underwater). [[check 15 str]] on turn to escape.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A crashing vortex of water. </i></p>\n\t\n\t<p><strong>AC</strong> 15, <strong>HP</strong> 29, <strong>ATK</strong> 3 slam +6 (2d6) or 1 whirlpool, <strong>MV</strong> double near (swim), <strong>S</strong> +4, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -2, <strong>W</strong> +1, <strong>Ch</strong> -2, <strong>AL</strong> N, <strong>LV</strong> 6</p>\n\t<p><strong> Impervious</strong>. Only damaged by magical sources.</p><p><strong>Whirlpool</strong>. All within close [[check 15 str]] or immobilized inside water elemental (treat as underwater). [[check 15 str]] on turn to escape.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

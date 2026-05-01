@@ -3,6 +3,8 @@
 	"_key": "!actors!dNSmJX2keI0T2Gig",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -23,8 +25,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -93,9 +96,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -136,21 +136,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 19,
 				"value": 19
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 4
+			"value": 4,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i>Impish fey who favor green garb and love fooling \"tall folk\" with promises of gold.</i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 spell +4, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +2, <strong>W</strong> +1, <strong>Ch</strong> +3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong>Alert</strong>. Cannot be surprised.</p><p><strong>Slippery</strong>. Hostile spells targeting the leprechaun are DC 15 to cast.</p><p><strong>Fool's Gold (CHA Spell)</strong>. DC 12. Close. One small object or small group of similar objects. Turn objects into silver or gold pieces. Lasts 1 day.</p><p><strong>Illusion (CHA Spell)</strong>. DC 11. Create a convincing visual and/ or auditory illusion within near. Lasts until dismissed.</p><p><strong>Invisibility (CHA Spell)</strong>. DC 12. Self. Become invisible for 2d4 rounds.</p>",
-		"spellcastingAbility": "cha",
-		"spellcastingAttackNum": 1,
-		"spellcastingBonus": 4
+		"notes": "<p><i>Impish fey who favor green garb and love fooling \"tall folk\" with promises of gold.</i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 19, <strong>ATK</strong> 1 spell +4, <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +3, <strong>C</strong> +1, <strong>I</strong> +2, <strong>W</strong> +1, <strong>Ch</strong> +3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong>Alert</strong>. Cannot be surprised.</p><p><strong>Slippery</strong>. Hostile spells targeting the leprechaun are DC 15 to cast.</p><p><strong>Fool's Gold (CHA Spell)</strong>. DC 12. Close. One small object or small group of similar objects. Turn objects into silver or gold pieces. Lasts 1 day.</p><p><strong>Illusion (CHA Spell)</strong>. DC 11. Create a convincing visual and/ or auditory illusion within near. Lasts until dismissed.</p><p><strong>Invisibility (CHA Spell)</strong>. DC 12. Self. Become invisible for 2d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "cha",
+			"attacks": 1,
+			"bonus": 4
+		}
 	},
 	"type": "NPC"
 }

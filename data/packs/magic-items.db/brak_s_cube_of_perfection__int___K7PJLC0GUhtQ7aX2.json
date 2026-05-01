@@ -4,27 +4,13 @@
 	"effects": [
 		"94JaF8oYeiAAWASd"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/gaming/dice-runed-brown.webp",
 	"name": "Brak's Cube of Perfection (Int)",
 	"system": {
-		"abilities": {
-			"con": {
-				"value": "18"
-			},
-			"dex": {
-				"value": "18"
-			},
-			"int": {
-				"base": "18",
-				"value": "18"
-			},
-			"str": {
-				"value": "18"
-			}
-		},
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -33,7 +19,6 @@
 		"description": "<p><em>A tiny cube with paintings of goblins on each face, each one depicting transcendence in a physical or mental trait.</em></p><p><strong>Benefit</strong>. Roll the cube by rolling a [[/r d6]]. Your corresponding stat permanently increases to 18 (+4). 1. Strength. 2. Dexterity. 3. Constitution. 4. Intelligence. 5. Wisdom. 6. Charisma.</p><p>After being rolled, <em>Brak's Cube of Perfection</em> teleports to a random location in the multiverse.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -43,7 +28,8 @@
 			"template": "torch"
 		},
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ursSNgr3ExIvXiKJ.URGOZdVQzm4Cfbeu",
 	"description": "Beast",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		24,
 		25
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

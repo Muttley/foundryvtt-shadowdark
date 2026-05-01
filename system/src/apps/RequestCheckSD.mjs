@@ -24,25 +24,23 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 					);
 				}
 
-				const options = {
-					target: data.dc,
-					stat: data.stat,
+				const config = {
+					mainRoll: { dc: data.dc},
 				};
 
 				if (event.shiftKey) {
-					options.skipPrompt = true;
-					options.adv = 0;
+					config.skipPrompt = true;
 				}
 				else if (event.altKey) {
-					options.skipPrompt = true;
-					options.adv = 1;
+					config.skipPrompt = true;
+					(config.mainRoll ??= {}).advantage = 1;
 				}
 				else if (event.ctrlKey) {
-					options.skipPrompt = true;
-					options.adv = -1;
+					config.skipPrompt = true;
+					(config.mainRoll ??= {}).advantage = -1;
 				}
 
-				return actor.rollAbility(data.stat.toLowerCase(), options);
+				return actor.system.rollStatCheck(data.stat.toLowerCase(), config);
 			case "request":
 				return RequestCheckSD.displayRequest(data.dc, data.stat);
 		}

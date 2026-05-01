@@ -3,12 +3,14 @@
 	"_key": "!tables.results!noInf0ReaXapH7xb.wodWI2jhHXkfpRX0",
 	"description": "Ulara",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Ulara",
 	"range": [
 		13,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

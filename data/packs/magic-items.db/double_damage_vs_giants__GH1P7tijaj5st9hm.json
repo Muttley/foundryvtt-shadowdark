@@ -1,0 +1,35 @@
+{
+	"_id": "GH1P7tijaj5st9hm",
+	"_key": "!items.effects!FqhEJHkaKd0emTzn.GH1P7tijaj5st9hm",
+	"description": "Double Damage vs Giants",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Double Damage vs Giants",
+	"origin": "Compendium.shadowdark.magic-items.Item.FqhEJHkaKd0emTzn",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.damage.this",
+				"priority": null,
+				"type": "multiply",
+				"value": 2
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -3,13 +3,16 @@
 	"_key": "!items!w9GdZSr5XYNjIeeR",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "DOr658CRB6xwzgeB",
 	"img": "icons/magic/holy/yin-yang-balance-symbol.webp",
 	"name": "Ord",
 	"system": {
 		"alignment": "neutral",
 		"description": "<p>Ord the Unbending, the Wise, the Secret-Keeper. He is the god of magic, knowledge, secrets, and equilibrium.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

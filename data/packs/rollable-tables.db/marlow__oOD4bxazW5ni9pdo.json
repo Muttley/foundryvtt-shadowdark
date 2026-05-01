@@ -3,12 +3,14 @@
 	"_key": "!tables.results!zIJh954RRbmssIFq.oOD4bxazW5ni9pdo",
 	"description": "Marlow",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Marlow",
 	"range": [
 		18,
 		18
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

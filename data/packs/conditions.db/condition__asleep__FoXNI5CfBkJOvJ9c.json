@@ -4,6 +4,8 @@
 	"effects": [
 		"9LKEdqM5gksbj8xV"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/sleep-bubble-purple.webp",
 	"name": "Condition: Asleep",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

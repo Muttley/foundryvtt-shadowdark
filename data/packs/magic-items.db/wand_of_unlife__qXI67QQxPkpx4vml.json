@@ -1,0 +1,51 @@
+{
+	"_id": "qXI67QQxPkpx4vml",
+	"_key": "!items!qXI67QQxPkpx4vml",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/wands/wand-skull-horned.webp",
+	"name": "Wand of Unlife",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>The knobby finger-bone of a swamp troll steeped in acrid embalming fluid.</em></p><p><strong>Benefit</strong>. This wand contains the spells @UUID[Compendium.shadowdark.spells.Item.M702ErO4KOtMJzsK]{animate dead} (pg. 54) and @UUID[Compendium.shadowdark.spells.Item.uNxbpd7fENzDUxfd]{create undead} (pg. 58).</p><p><strong>Curse</strong>. Each time you use the wand to cast a spell, you take [[/r 1d4]] points of Constitution damage. If you reach 0 Constitution from this effect, you die and turn into a zombie.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"spells": [
+			{
+				"lost": false,
+				"uuid": "Compendium.shadowdark.spells.Item.M702ErO4KOtMJzsK"
+			},
+			{
+				"lost": false,
+				"uuid": "Compendium.shadowdark.spells.Item.uNxbpd7fENzDUxfd"
+			}
+		],
+		"stashed": false
+	},
+	"type": "Wand"
+}

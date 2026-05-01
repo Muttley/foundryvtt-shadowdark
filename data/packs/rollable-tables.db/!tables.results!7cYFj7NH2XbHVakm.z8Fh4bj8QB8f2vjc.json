@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.z8Fh4bj8QB8f2vjc",
 	"description": "Way",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		73,
 		73
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

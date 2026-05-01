@@ -3,6 +3,8 @@
 	"_key": "!actors.items!PTFsYZ8ni3MbSdw8.B9L3dgwKFfsfHWYL",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/perception/eye-slit-pink.webp",
 	"name": "Detect Magic",
@@ -10,16 +12,18 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.74WjFjHmUmLAiNGC]{Spell Effect: Detect Magic}</p>",
 		"duration": {
 			"type": "focus",
-			"value": -1
+			"value": "-1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"tier": 1

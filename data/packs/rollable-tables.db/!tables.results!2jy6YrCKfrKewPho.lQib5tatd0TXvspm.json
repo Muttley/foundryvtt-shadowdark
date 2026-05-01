@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2jy6YrCKfrKewPho.lQib5tatd0TXvspm",
 	"description": "Barrow",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		56,
 		57
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

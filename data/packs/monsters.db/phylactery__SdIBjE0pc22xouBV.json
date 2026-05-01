@@ -3,12 +3,15 @@
 	"_key": "!actors.items!sncxcSi6ziTStjAh.SdIBjE0pc22xouBV",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Phylactery",
 	"system": {
 		"description": "<p>Can't be killed while spirit vessel (an object) is intact.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

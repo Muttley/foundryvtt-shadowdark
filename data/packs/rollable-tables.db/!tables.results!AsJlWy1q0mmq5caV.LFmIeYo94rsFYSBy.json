@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.LFmIeYo94rsFYSBy",
 	"description": "The smell of ozone rises and electricity crackles in the air",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		62,
 		63
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

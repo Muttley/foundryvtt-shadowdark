@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.rBdSPxlp1M8vYCne",
 	"description": "[[/r 2d6]] @UUID[Compendium.shadowdark.monsters.BxilUr9Ac6zgekYU]{Kobolds} work in a makeshift, volatile alchemy lab",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		84,
 		85
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

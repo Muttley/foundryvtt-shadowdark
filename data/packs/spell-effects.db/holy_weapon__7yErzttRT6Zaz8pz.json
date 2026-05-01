@@ -1,0 +1,41 @@
+{
+	"_id": "7yErzttRT6Zaz8pz",
+	"_key": "!items.effects!r2JNgS2474vuq9oy.7yErzttRT6Zaz8pz",
+	"description": "<p>The weapon becomes magical and has +1 to attack and damage rolls for the duration.</p>",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/sword-gold-holy.webp",
+	"name": "Holy Weapon",
+	"origin": "Compendium.shadowdark.spell-effects.Item.r2JNgS2474vuq9oy",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			},
+			{
+				"key": "system.roll.attack.damage.all",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

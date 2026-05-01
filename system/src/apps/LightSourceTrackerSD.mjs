@@ -49,7 +49,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			async event => {
 				event.preventDefault();
 
-				const actorId = $(event.currentTarget).data("actor-id");
+				const actorId = event.currentTarget.dataset.actorId;
 
 				const actor = game.actors.get(actorId);
 
@@ -66,7 +66,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			async event => {
 				event.preventDefault();
 
-				shadowdark.log("Turning out all the lights");
+				shadowdark.debug("Turning out all the lights");
 
 				if (this.monitoredLightSources.length <= 0) return;
 
@@ -78,7 +78,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 					await actor.turnLightOff();
 
 					for (const itemData of actorData.lightSources) {
-						shadowdark.log(`Turning off ${actor.name}'s ${itemData.name} light source`);
+						shadowdark.debug(`Turning off ${actor.name}'s ${itemData.name} light source`);
 
 						if (itemData.type === "Effect") {
 							await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
@@ -117,13 +117,13 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		html.find(".disable-light").click(
 			async event => {
 				event.preventDefault();
-				const itemId = $(event.currentTarget).data("item-id");
-				const actorId = $(event.currentTarget).data("actor-id");
+				const itemId = event.currentTarget.dataset.itemId;
+				const actorId = event.currentTarget.dataset.actorId;
 
 				const actor = game.actors.get(actorId);
 				const item = actor.getEmbeddedDocument("Item", itemId);
 
-				shadowdark.log(`Turning off ${actor.name}'s ${item.name} light source`);
+				shadowdark.debug(`Turning off ${actor.name}'s ${item.name} light source`);
 
 				await actor.yourLightWentOut(itemId);
 
@@ -261,6 +261,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			actor,
 			item,
 			picked_up: true,
+			showRemainingMins: game.settings.get("shadowdark", "playerShowLightRemaining") > 1,
 		};
 
 		let template = "systems/shadowdark/templates/chat/lightsource-drop.hbs";
@@ -287,7 +288,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 	async start() {
 		// Make sure we're actualled enable and are supposed to be running.
 		if (this._isDisabled()) {
-			shadowdark.log("Light Tracker is disabled in settings");
+			shadowdark.debug("Light Tracker is disabled in settings");
 			return;
 		}
 
@@ -298,7 +299,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		await game.user.setFlag("shadowdark", "primaryGM", false);
 
 		// Now we can actually start properly
-		shadowdark.log("Light Tracker starting");
+		shadowdark.debug("Light Tracker starting");
 
 		// Start the realtime clock (if enabled).
 		this.realTime.start();
@@ -353,7 +354,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 
 		const status = item.system.light.active ? "on" : "off";
 
-		shadowdark.log(`Turning ${status} ${actor.name}'s ${item.name} light source`);
+		shadowdark.debug(`Turning ${status} ${actor.name}'s ${item.name} light source`);
 
 		this._onToggleLightSource();
 	}
@@ -378,7 +379,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		this.updatingLightSources = true;
 		this.dirty = false;
 
-		shadowdark.log("Checking for new/changed light sources");
+		shadowdark.debug("Checking for new/changed light sources");
 
 		this.monitoredLightSources = [];
 
@@ -513,7 +514,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			this.render(false);
 			return;
 		}
-		shadowdark.log("Updating light sources");
+		shadowdark.debug("Updating light sources");
 
 		try {
 			this.performingTick = true;
@@ -521,7 +522,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			for (const actorData of this.monitoredLightSources) {
 				const numLightSources = actorData.lightSources.length;
 
-				shadowdark.log(`Updating ${numLightSources} light sources for ${actorData.name}`);
+				shadowdark.debug(`Updating ${numLightSources} light sources for ${actorData.name}`);
 
 				for (const itemData of actorData.lightSources) {
 					const actor = await game.actors.get(actorData._id);
@@ -568,7 +569,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 						this.dirty = true;
 					}
 					else {
-						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has ${Math.ceil(light.remainingSecs)} seconds remaining`);
+						shadowdark.debug(`Light source ${itemData.name} owned by ${actorData.name} has ${Math.ceil(light.remainingSecs)} seconds remaining`);
 
 						const item = await actor.getEmbeddedDocument(
 							"Item", itemData._id
@@ -584,14 +585,14 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			this.render(false);
 		}
 		catch(error) {
-			shadowdark.log(`An error ocurred updating light sources: ${error}`);
+			shadowdark.error(`An error ocurred updating light sources: ${error}`);
 			console.error(error);
 		}
 		finally {
 			this.performingTick = false;
 		}
 
-		shadowdark.log("Finished updating light sources");
+		shadowdark.debug("Finished updating light sources");
 	}
 
 	async _pauseGameHook() {

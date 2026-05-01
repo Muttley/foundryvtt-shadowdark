@@ -17,7 +17,7 @@ export default class ClassSelector extends CompendiumItemSelector {
 	async getUuids() {
 		const uuid = this.object?.system?.class;
 
-		return uuid !== "" ? [uuid] : [];
+		return uuid ? [uuid] : [];
 	}
 
 	async saveUuids(uuids) {

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!u05UfQ9hKno0bwWj.paShYF53Z9GoYHJb",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Godborn",
 	"system": {
 		"description": "<p>Hostile spells targeting the medusa are DC 15 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

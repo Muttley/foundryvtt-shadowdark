@@ -3,12 +3,14 @@
 	"_key": "!tables.results!swiCqIGo0Bb3sJyI.VIdEkHBgv4y6Gj0u",
 	"description": "Koops",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Koops",
 	"range": [
 		8,
 		8
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

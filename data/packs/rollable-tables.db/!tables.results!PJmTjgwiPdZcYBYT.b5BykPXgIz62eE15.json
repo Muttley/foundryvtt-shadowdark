@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.b5BykPXgIz62eE15",
 	"description": "[[/r 3d4]] @UUID[Compendium.shadowdark.monsters.I7CMFbyFmFHVwE5U]{Goblin} scavengers barter and trade for odd trinkets",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		60,
 		61
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

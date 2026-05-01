@@ -4,6 +4,8 @@
 	"effects": [
 		"3XkiakzqwT78EG4j"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
 	"name": "Condition: Mesmerized",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

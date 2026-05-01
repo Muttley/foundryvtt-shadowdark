@@ -3,12 +3,14 @@
 	"_key": "!tables.results!y0TtbiVpG3NBjQjy.sYWHR1sWSv9d7BRp",
 	"description": "Sticky webs",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		9,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

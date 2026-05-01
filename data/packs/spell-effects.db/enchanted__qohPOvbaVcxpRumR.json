@@ -1,25 +1,27 @@
 {
 	"_id": "qohPOvbaVcxpRumR",
 	"_key": "!items.effects!CFnP5fuBHsNZzrkY.qohPOvbaVcxpRumR",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 86400,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 86400
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/consumables/fruit/huckleberry.webp",
 	"name": "Enchanted",
 	"origin": "Item.FrFilluk4S5VaWut",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

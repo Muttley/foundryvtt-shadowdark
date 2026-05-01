@@ -3,12 +3,14 @@
 	"_key": "!tables.results!o3UHKv5XsgEaPuKt.JY17MyvXNA8UVqjT",
 	"description": "Lava",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		4,
 		4
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

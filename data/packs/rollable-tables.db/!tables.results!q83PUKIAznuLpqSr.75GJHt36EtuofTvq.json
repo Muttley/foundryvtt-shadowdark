@@ -3,12 +3,14 @@
 	"_key": "!tables.results!q83PUKIAznuLpqSr.75GJHt36EtuofTvq",
 	"description": "<b>Runaway arcana loop!</b> Your spell targets a random creature you can see, even if it would not normally be possible. Each subsequent turn, you must pass a spellcasting check for that spell or you cast it on another random creature in the same way (effect ends on success)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		7,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

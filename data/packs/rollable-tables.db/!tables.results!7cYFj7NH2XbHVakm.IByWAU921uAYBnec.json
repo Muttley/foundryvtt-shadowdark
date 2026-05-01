@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.IByWAU921uAYBnec",
 	"description": "Surprise",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		70,
 		70
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

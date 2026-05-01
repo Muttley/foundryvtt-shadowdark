@@ -3,12 +3,15 @@
 	"_key": "!actors.items!p9PayU4K9nBZ8JRl.qfIjIAkMmlWRYU0P",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 12 con]] or paralyzed [[/r 1d4]] hours.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

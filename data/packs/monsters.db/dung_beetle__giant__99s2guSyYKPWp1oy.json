@@ -3,6 +3,8 @@
 	"_key": "!actors!99s2guSyYKPWp1oy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -20,8 +22,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -90,9 +93,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -133,21 +133,23 @@
 				"value": 13
 			},
 			"hp": {
-				"hd": 0,
 				"max": 10,
 				"value": 10
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 2
+			"value": 2,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A trundling, barrel-sized beetle with a T-shaped horn. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 10, <strong>ATK</strong> 1 horn +1 (1d4 + knock), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Knock</strong>. [[check 9 str]] or pushed a close distance and fall down.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A trundling, barrel-sized beetle with a T-shaped horn. </i></p>\n\t\n\t<p><strong>AC</strong> 13, <strong>HP</strong> 10, <strong>ATK</strong> 1 horn +1 (1d4 + knock), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> -1, <strong>C</strong> +1, <strong>I</strong> -3, <strong>W</strong> -1, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 2</p>\n\t<p><strong> Knock</strong>. [[check 9 str]] or pushed a close distance and fall down.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

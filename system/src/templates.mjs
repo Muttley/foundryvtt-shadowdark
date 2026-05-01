@@ -1,10 +1,10 @@
 export default function() {
 	const partials = [
 		"systems/shadowdark/templates/_partials/predefined-effects-selector.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/active-effect.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/active-effects.hbs",
-		"systems/shadowdark/templates/actors/_partials/effects/effects-and-conditions.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/active-effect.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/active-effects.hbs",
+		"systems/shadowdark/templates/actors/_partials/effects-tab/effects-and-conditions.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/attacks.hbs",
 		"systems/shadowdark/templates/actors/npc/abilities/features.hbs",
@@ -22,6 +22,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/hp.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/luck.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/stats.hbs",
+		"systems/shadowdark/templates/actors/player/abilities/weapon-attack.hbs",
 		"systems/shadowdark/templates/actors/player/details.hbs",
 		"systems/shadowdark/templates/actors/player/details/alignment.hbs",
 		"systems/shadowdark/templates/actors/player/details/ancestry.hbs",
@@ -32,6 +33,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/details/languages.hbs",
 		"systems/shadowdark/templates/actors/player/details/level.hbs",
 		"systems/shadowdark/templates/actors/player/details/patron.hbs",
+		"systems/shadowdark/templates/actors/player/details/renown.hbs",
 		"systems/shadowdark/templates/actors/player/details/title.hbs",
 		"systems/shadowdark/templates/actors/player/details/xp.hbs",
 		"systems/shadowdark/templates/actors/player/inventory.hbs",
@@ -89,7 +91,9 @@ export default function() {
 		"systems/shadowdark/templates/items/_partials/effects-tab.hbs",
 		"systems/shadowdark/templates/items/_partials/effects/active-effect.hbs",
 		"systems/shadowdark/templates/items/_partials/effects/active-effects-list.hbs",
+		"systems/shadowdark/templates/items/_partials/gm-only.hbs",
 		"systems/shadowdark/templates/items/_partials/header.hbs",
+		"systems/shadowdark/templates/items/_partials/identify-tab.hbs",
 		"systems/shadowdark/templates/items/_partials/item-properties/ammunition.hbs",
 		"systems/shadowdark/templates/items/_partials/item-properties/equipped.hbs",
 		"systems/shadowdark/templates/items/_partials/item-properties/light-source.hbs",
@@ -97,7 +101,7 @@ export default function() {
 		"systems/shadowdark/templates/items/_partials/item-properties/treasure.hbs",
 		"systems/shadowdark/templates/items/_partials/slots.hbs",
 		"systems/shadowdark/templates/items/_partials/source-tab.hbs",
-		"systems/shadowdark/templates/items/_partials/spell.hbs",
+		"systems/shadowdark/templates/items/_partials/unidentified.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/character-generator.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/languages.hbs",
 		"systems/shadowdark/templates/items/ancestry/_partials/talents.hbs",
@@ -134,7 +138,6 @@ export default function() {
 		"systems/shadowdark/templates/items/language/details-tab.hbs",
 		"systems/shadowdark/templates/items/npc-attack/details-tab.hbs",
 		"systems/shadowdark/templates/items/npc-special-attack/details-tab.hbs",
-		"systems/shadowdark/templates/items/npc-spell/details-tab.hbs",
 		"systems/shadowdark/templates/items/patron/details-tab.hbs",
 		"systems/shadowdark/templates/items/potion/details-tab.hbs",
 		"systems/shadowdark/templates/items/property/details-tab.hbs",
@@ -157,5 +160,5 @@ export default function() {
 		paths[key] = path;
 	}
 
-	return loadTemplates(paths);
+	return foundry.applications.handlebars.loadTemplates(paths);
 }

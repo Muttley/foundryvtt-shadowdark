@@ -3,12 +3,15 @@
 	"_key": "!actors.items!WMw4J1wECaLGf3Am.jRGtXnGao8A3HWJF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Stone Meld",
 	"system": {
 		"description": "<p>2/day, underground only. Turn invisible for 3 rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

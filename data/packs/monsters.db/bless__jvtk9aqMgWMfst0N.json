@@ -3,12 +3,15 @@
 	"_key": "!actors.items!9mHBuBhx1RxUdheA.jvtk9aqMgWMfst0N",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Bless",
 	"system": {
 		"description": "<p>3/day, touch one target to give it a luck token.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

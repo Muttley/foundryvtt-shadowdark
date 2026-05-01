@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.JYiEvRkO3VmmNiUk",
 	"description": "Justice",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		38,
 		38
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

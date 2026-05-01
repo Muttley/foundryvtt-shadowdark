@@ -20,6 +20,19 @@ export default function registerSystemSettings() {
 	SourceFilterSettings.registerSetting();
 
 	// ----------------
+	//  Roll Damage Automatically
+	// ----------------
+	//
+	game.settings.register("shadowdark", "rollDamage", {
+		name: "SHADOWDARK.settings.roll_damage.name",
+		hint: "SHADOWDARK.settings.roll_damage.hint",
+		scope: "world",
+		config: true,
+		default: true,
+		type: Boolean,
+	});
+
+	// ----------------
 	//  NPC HIT POINTS
 	// ----------------
 	//
@@ -50,6 +63,19 @@ export default function registerSystemSettings() {
 				}
 			}
 		},
+	});
+
+	// ---------------
+	//  MOMENTUM MODE
+	// ---------------
+	game.settings.register("shadowdark", "useMomentumMode", {
+		name: "SHADOWDARK.settings.use_momentum_mode.name",
+		hint: "SHADOWDARK.settings.use_momentum_mode.hint",
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean,
+		requiresReload: true,
 	});
 
 	// ------------------------
@@ -144,6 +170,19 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: true,
 		default: false,
+		type: Boolean,
+	});
+
+	// ----------------------
+	//  Animate HP changes SETTINGS
+	// ----------------------
+	//
+	game.settings.register("shadowdark", "animateHpChange", {
+		name: "SHADOWDARK.settings.animate-hp-change.name",
+		hint: "SHADOWDARK.settings.animate-hp-change.hint",
+		scope: "world",
+		config: true,
+		default: true,
 		type: Boolean,
 	});
 

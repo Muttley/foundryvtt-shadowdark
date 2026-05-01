@@ -3,12 +3,14 @@
 	"_key": "!tables.results!8piSI566ZPW7kA87.awC49RzaIjSh5iM5",
 	"description": "Madeera's",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		12
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

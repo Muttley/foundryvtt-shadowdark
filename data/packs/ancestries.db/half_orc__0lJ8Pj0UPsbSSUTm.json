@@ -3,6 +3,8 @@
 	"_key": "!items!0lJ8Pj0UPsbSSUTm",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Half-Orc",
@@ -20,7 +22,8 @@
 			]
 		},
 		"nameTable": "Compendium.shadowdark.rollable-tables.RollTable.noInf0ReaXapH7xb",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"randomWeight": 1,
 		"source": {
 			"title": "core-rules"

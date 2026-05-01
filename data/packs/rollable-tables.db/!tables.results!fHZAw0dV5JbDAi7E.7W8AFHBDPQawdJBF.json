@@ -3,12 +3,14 @@
 	"_key": "!tables.results!fHZAw0dV5JbDAi7E.7W8AFHBDPQawdJBF",
 	"description": "Castle of the",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		13,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

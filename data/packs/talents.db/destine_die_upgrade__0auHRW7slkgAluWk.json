@@ -1,0 +1,35 @@
+{
+	"_id": "0auHRW7slkgAluWk",
+	"_key": "!items.effects!kX94lNYCOdjAuSYx.0auHRW7slkgAluWk",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Destine Die Upgrade",
+	"origin": "Compendium.shadowdark.talents.Item.kX94lNYCOdjAuSYx",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.bonus.destineddie",
+				"priority": null,
+				"type": "add",
+				"value": 2
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

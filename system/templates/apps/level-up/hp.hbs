@@ -28,5 +28,8 @@
 				{{localize "SHADOWDARK.sheet.general.roll_hp"}}
 			</button>
 		{{/unless}}
+		{{#if hp.tooltips}}
+			<div style="font-size:12px;text-align:left;margin:4px">{{hp.tooltips}}</span>
+		{{/if}}
 	</div>
 </div>

@@ -3,6 +3,8 @@
 	"_key": "!items!EhaA5tBROfrws1Kx",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Agdcg0ystOpP8kcL",
 	"img": "icons/consumables/potions/potion-flask-corled-pink-red.webp",
 	"name": "Stimulant",
@@ -14,7 +16,8 @@
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

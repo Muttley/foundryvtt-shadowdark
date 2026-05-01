@@ -4,6 +4,8 @@
 	"effects": [
 		"5Q6foTiBhvvLG7y3"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/water/barrier-ice-crystal-wall-faceted-blue.webp",
 	"name": "Condition: Paralyzed",
@@ -25,14 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
 			"combatTime": null,
-			"initiative": null,
 			"value": 0
 		},
 		"tokenIcon": {

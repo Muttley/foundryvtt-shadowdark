@@ -1,5 +1,5 @@
 import ActiveEffectsSD from "./src/system/ActiveEffectsSD.mjs";
-import ChatSD from "./src/system/ChatSD.mjs";
+import ChatSD from "./src/chat/ChatSD.mjs";
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
 import loadTemplates from "./src/templates.mjs";
 import Logger from "./src/utils/Logger.mjs";
@@ -15,11 +15,11 @@ import * as apps from "./src/apps/_module.mjs";
 import * as chat from "./src/chat/_module.mjs";
 import * as dice from "./src/dice/_module.mjs";
 import * as documents from "./src/documents/_module.mjs";
+import * as models from "./src/models/_module.mjs";
 import * as sheets from "./src/sheets/_module.mjs";
 
 import {
 	HooksSD,
-	HooksImmediate,
 	HooksInitSD,
 } from "./src/hooks.mjs";
 
@@ -70,11 +70,12 @@ Hooks.once("init", () => {
 
 	CONFIG.SHADOWDARK = SHADOWDARK;
 	CONFIG.Actor.documentClass = documents.ActorSD;
+	CONFIG.ActiveEffect.documentClass = documents.ActiveEffectSD;
 	CONFIG.Item.documentClass = documents.ItemSD;
-	CONFIG.DiceSD = dice.DiceSD;
-	CONFIG.Combat.documentClass = documents.EncounterSD;
-
+	CONFIG.ChatMessage.documentClass = documents.ChatMessageSD;
 	CONFIG.ActiveEffect.legacyTransferral = false;
+
+	CONFIG.Dice.rolls = [dice.RollSD];
 
 	registerHandlebarsHelpers();
 	registerSystemSettings();
@@ -83,28 +84,59 @@ Hooks.once("init", () => {
 
 	UtilitySD.loadLegacyArtMappings();
 
+	// Register Data Models
+	Object.assign(CONFIG.Actor.dataModels, {
+		Player: models.PlayerSD,
+		NPC: models.NpcSD,
+	});
+
+	Object.assign(CONFIG.Item.dataModels, {
+		"Ancestry": models.AncestrySD,
+		"Armor": models.ArmorSD,
+		"Background": models.BackgroundSD,
+		"Basic": models.BasicSD,
+		"Boon": models.BoonSD,
+		"Class": models.ClassSD,
+		"Class Ability": models.ClassAbilitySD,
+		"Deity": models.DeitySD,
+		"Effect": models.EffectSD,
+		"Gem": models.GemSD,
+		"Language": models.LanguageSD,
+		"NPC Attack": models.NpcAttackSD,
+		"NPC Feature": models.NpcFeatureSD,
+		"NPC Special Attack": models.NpcSpecialAttackSD,
+		"Patron": models.PatronSD,
+		"Potion": models.PotionSD,
+		"Property": models.PropertySD,
+		"Scroll": models.ScrollSD,
+		"Spell": models.SpellSD,
+		"Talent": models.TalentSD,
+		"Wand": models.WandSD,
+		"Weapon": models.WeaponSD,
+	});
+
 	// Register sheet application classes
-	Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
+	foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.PlayerSheetSD, {
 		types: ["Player"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.player",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.NpcSheetSD, {
 		types: ["NPC"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
+	foundry.documents.collections.Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
 		types: ["Light"],
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
-	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
+	foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+	foundry.documents.collections.Items.registerSheet("shadowdark", sheets.ItemSheetSD, {
 		makeDefault: true,
 		label: "SHADOWDARK.sheet.class.item",
 	});
@@ -168,5 +200,3 @@ Hooks.once("setup", () => {
 			);
 	}
 });
-
-HooksImmediate.attach();

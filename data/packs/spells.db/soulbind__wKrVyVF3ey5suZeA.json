@@ -3,6 +3,8 @@
 	"_key": "!items!wKrVyVF3ey5suZeA",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "CA2RNQkxe3h4GdI1",
 	"img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
 	"name": "Soulbind",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
+		"damageType": "none",
 		"description": "<p>You seal the soul of a living creature, preventing magic from leeching into it.</p><p>One creature you touch becomes nearly impervious to all magic. For the spell's duration, all other spells targeting the creature (harmful or helpful) are DC 18 to cast.</p><p>This spell ends as soon as the target is affected by another spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.z7X1jRQHFTnSXpds]{Spell Effect: Soulbind}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-3"

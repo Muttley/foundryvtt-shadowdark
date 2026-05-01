@@ -1,0 +1,47 @@
+{
+	"_id": "9esQ9xXLB2gHf0Sf",
+	"_key": "!items!9esQ9xXLB2gHf0Sf",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/finger/ring-band-thick-rounded-gold.webp",
+	"name": "Ring of Invisibility",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A simple, gold band polished to a warm shine.</em></p><p><strong>Benefit.</strong> Once per day, the ring can cast the @UUID[Compendium.shadowdark.spells.Item.PZ0qPp6lG9SVMoAr]{invisibility} spell (pg. 63) on you.</p><p><strong>Curse.</strong> There is a cumulative 1% chance each time you rest that your sleep is ruined by apocalyptic nightmares, and you gain no benefit from resting. This resets to a 1% chance each time it triggers.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

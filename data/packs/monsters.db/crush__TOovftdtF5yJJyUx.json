@@ -3,12 +3,15 @@
 	"_key": "!actors.items!2KRkhIG0f9YAnUHb.TOovftdtF5yJJyUx",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Crush",
 	"system": {
 		"description": "<p>[[check 15 str]] or target takes [[/r 1d8]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

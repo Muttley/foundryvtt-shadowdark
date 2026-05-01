@@ -4,6 +4,8 @@
 	"effects": [
 		"tx8UjK6umZHVyLJ6"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/social/trading-justice-scale-gold.webp",
 	"name": "Spell Effect: Zone of Truth",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

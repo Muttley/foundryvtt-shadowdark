@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.gYe9bAGW9HBk2GIV",
 	"description": "Silver tooth (1 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		10,
 		11
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

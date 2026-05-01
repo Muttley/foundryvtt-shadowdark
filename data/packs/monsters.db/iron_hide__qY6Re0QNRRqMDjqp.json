@@ -3,12 +3,15 @@
 	"_key": "!actors.items!TWzBMX1oWU10HBOW.qY6Re0QNRRqMDjqp",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Iron Hide",
 	"system": {
 		"description": "<p>Half damage from non-magical weapons.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

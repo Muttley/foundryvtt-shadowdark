@@ -17,7 +17,7 @@ export default class AncestrySelector extends CompendiumItemSelector {
 	async getUuids() {
 		const uuid = this.object?.system?.ancestry;
 
-		return uuid !== "" ? [uuid] : [];
+		return uuid ? [uuid] : [];
 	}
 
 	async saveUuids(uuids) {

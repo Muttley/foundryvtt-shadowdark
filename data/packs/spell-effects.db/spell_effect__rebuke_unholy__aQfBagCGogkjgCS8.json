@@ -4,6 +4,8 @@
 	"effects": [
 		"pTKFUJ3czAqssXCu"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/skeleton-skull-soul-blue.webp",
 	"name": "Spell Effect: Rebuke Unholy",
@@ -12,7 +14,7 @@
 		"description": "<p>Creature flees from you for 5 rounds.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

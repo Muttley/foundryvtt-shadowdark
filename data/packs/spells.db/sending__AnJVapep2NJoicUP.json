@@ -3,6 +3,8 @@
 	"_key": "!items!AnJVapep2NJoicUP",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/skills/social/diplomacy-writing-letter.webp",
 	"name": "Sending",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>You send a brief, mental message to any creature with whom you are familiar who is on the same plane.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "unlimited",
 		"source": {
 			"title": "core-rules"

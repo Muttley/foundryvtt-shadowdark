@@ -7,20 +7,20 @@
 	<div class="item-image" style="background-image: url({{item.img}})">
 		<i class="fas fa-comment fa-lg"></i>
 	</div>
-	<a class="item-name" data-action="show-details">
+	<a class="item-name" data-action="show-details"{{#if item.system.broken}} style="text-decoration: line-through;"{{/if}}>
 		{{item.name}}
-		{{#if item.lightSourceUsed}}
+		{{#if item.system.light.hasBeenUsed}}
 			<em>{{localize "SHADOWDARK.inventory.item.light_used"}}</em>
 		{{/if}}
 	</a>
-	{{#if item.lightSourceUsed}}
+	{{#if item.system.light.hasBeenUsed}}
 		<div data-tooltip="{{lightSourceTimeRemaining}}">
 			{{item.lightSourceProgress}}
 		</div>
 	{{/if}}
 
 	<div class="quantity">
-		{{#if item.showQuantity}}
+		{{#if item.system.hasMultiple}}
 			{{#if owner}}
 				<a
 					data-action="item-decrement"
@@ -48,11 +48,21 @@
 	</div>
 
 	<div class="slots">
-		{{item.slotsUsed}}
+		{{item.system.slotsUsed}}
 	</div>
 
 	<div class="actions">
 		{{#if item.system.canBeEquipped}}
+			{{#ifCond item.system.isVersatile "&&" item.system.equipped}}
+				<a
+					data-action="toggle-handedness"
+					data-item-id="{{item._id}}"
+					data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_handedness'}}"
+				>
+					<i class="fa-solid fa-hand-fist" style="margin:-3px;{{#ifEq item.system.handedness "2h"}}color:var(--primary);{{/ifEq}}"></i>
+  					<i class="fa-solid fa-hand-back-fist" style="margin:-3px;color:var(--primary);"></i>
+				</a>
+			{{/ifCond}}
 			<a
 				data-action="toggle-equipped"
 				data-item-id="{{item._id}}"

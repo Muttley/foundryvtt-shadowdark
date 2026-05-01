@@ -3,6 +3,8 @@
 	"_key": "!items!cjMeJWmom6jpB2JA",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "8JSBHA3M9HLBIWmB",
 	"img": "icons/skills/social/wave-halt-stop.webp",
 	"name": "Anathema",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>All allies revile and abandon the creature you touch for 1 day.</p><p>Each time you or your allies harm the target, its former allies may pass a [[check 15 wis]] check to end the effects of the spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.vApjjHkL9nghvbQT]{Spell Effect: Anathema}</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-1"

@@ -4,6 +4,8 @@
 	"effects": [
 		"Jg6Jkbl7zFxeQvW5"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-blue-yellow.webp",
 	"name": "Spell Effect: Protection from Energy (Electricity)",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

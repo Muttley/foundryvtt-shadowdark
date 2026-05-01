@@ -3,12 +3,15 @@
 	"_key": "!actors.items!Ot77aKKqmML8yboF.qz5bltkcGeEDjfng",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Keen Senses",
 	"system": {
 		"description": "<p>Can't be surprised.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -25,6 +25,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					initial: "tab-abilities",
 				},
 			],
+			dragDrop: [
+				{dragSelector: ".item-list .item"},
+				{dragSelector: ".attack[data-item-uuid]"},
+			],
 		});
 	}
 
@@ -53,7 +57,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find("[data-action='focus-spell']").click(
 			event => {
-				this._onCastSpell(event, { isFocusRoll: true });
+				this._onCastSpell(event, { focus: true });
 			}
 		);
 
@@ -107,6 +111,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		html.find("[data-action='toggle-equipped']").click(
 			event => this._onToggleEquipped(event)
+		);
+
+		html.find("[data-action='toggle-handedness']").click(
+			event => this._onToggleHandedness(event)
 		);
 
 		html.find("[data-action='toggle-light']").click(
@@ -172,8 +180,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _render(options, _options) {
 		await super._render(options, _options);
 
-		if (this.actor.system.showLevelUp) {
-			this.actor.update({"system.showLevelUp": false});
+		if (this.actor.getFlag("shadowdark", "showLevelUp")) {
+			this.actor.setFlag("shadowdark", "showLevelUp", false);
 			new shadowdark.apps.LevelUpSD(this.actor.id).render(true);
 		}
 	}
@@ -181,46 +189,31 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
-		context.gearSlots = this.actor.numGearSlots();
 
-		context.xpNextLevel = context.system.level.value * 10;
-		context.levelUp = (context.system.level.xp >= context.xpNextLevel);
+		context.abilities = this.actor.system.abilities;
+		context.gearSlots = this.actor.system.slots;
 
-		context.system.attributes.ac.value = await this.actor.getArmorClass();
+		context.xpNextLevel = this.actor.system.level.value * 10;
+		context.levelUp = (this.actor.system.level.xp >= context.xpNextLevel);
 
-		context.isSpellCaster = await this.actor.isSpellCaster();
-		context.canUseMagicItems = await this.actor.canUseMagicItems();
+		context.isSpellCaster = this.actor.system.isSpellCaster;
+		context.canUseMagicItems = this.actor.system.canUseMagicItems;
 		context.showSpellsTab = context.isSpellCaster || context.canUseMagicItems;
 
-		context.maxHp = this.actor.system.attributes.hp.base
-			+ this.actor.system.attributes.hp.bonus;
+		context.maxHp = this.actor.system.attributes.hp.max;
 
-		context.abilities = this.actor.getCalculatedAbilities();
-
-		context.knownLanguages = await this.actor.languageItems();
+		context.knownLanguages = await this.actor.system.getLanguageItems();
 
 		context.backgroundSelectors = await this.getBackgroundSelectors();
 
 		// Get the inventory ready
 		await this._prepareItems(context);
 
-		context.abilitiesOverrides = Object.keys(
-			foundry.utils.flattenObject(
-				this.actor.overrides?.system?.abilities || {}
-			)
-		);
-
-		context.attributeOverrides = Object.keys(
-			foundry.utils.flattenObject(
-				this.actor.overrides?.system?.attributes || {}
-			)
-		);
-
-		context.characterClass = await this.actor.getClass();
+		context.characterClass = await this.actor.system.getClass();
 		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
-		context.classTitle = await this.actor.getTitle();
+		context.classTitle = await this.actor.system.getTitle();
 
-		context.characterPatron = await this.actor.getPatron();
+		context.characterPatron = await this.actor.system.getPatron();
 
 		context.usePulpMode = game.settings.get("shadowdark", "usePulpMode");
 
@@ -236,17 +229,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onDropBackgroundItem(item) {
 		switch (item.type) {
 			case "Ancestry":
-				return this.actor.addAncestry(item);
+				return this.actor.system.addAncestry(item);
 			case "Background":
-				return this.actor.addBackground(item);
+				return this.actor.system.addBackground(item);
 			case "Class":
-				return this.actor.addClass(item);
+				return this.actor.system.addClass(item);
 			case "Deity":
-				return this.actor.addDeity(item);
+				return this.actor.system.addDeity(item);
 			case "Language":
-				return this.actor.addLanguage(item);
+				return this.actor.system.addLanguage(item);
 			case "Patron":
-				return this.actor.addPatron(item);
+				return this.actor.system.addPatron(item);
 		}
 	}
 
@@ -267,6 +260,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
+
+		// If the item is already on this actor, delegate to sort handling
+		if (item?.parent?.uuid === this.actor.uuid) {
+			return super._onDropItem(event, data);
+		}
 
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
@@ -290,8 +288,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.effects.toObject().length > 0) {
 			let itemObj = await shadowdark.effects.createItemWithEffect(item);
 
-			// add item to actor
-			const [newItem] = await super._onDropItem(event, data);
+			const newItem = await this.actor.createEmbeddedDocuments("Item", [itemObj]);
 
 			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
 				this._toggleLightSource(newItem);
@@ -353,7 +350,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 * Creates a scroll from a spell item
 	 */
 	async _createItemFromSpellDialog(item) {
-		const content = foundry.applications.handlebars.renderTemplate(
+		const content = await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/dialog/create-item-from-spell.hbs",
 			{
 				spellName: item.name,
@@ -402,7 +399,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onAbilityUsesDecrement(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		if (item.system.uses.available > 0) {
@@ -418,7 +415,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onAbilityUsesIncrement(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		if (item.system.uses.available < item.system.uses.max) {
@@ -502,9 +499,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 							system: {
 								treasure: true,
 								cost: {
-									gp: parseInt(html.find("#item-gp").val()),
-									sp: parseInt(html.find("#item-sp").val()),
-									cp: parseInt(html.find("#item-cp").val()),
+									gp: parseInt(html.find("#item-gp").val() ?? 0),
+									sp: parseInt(html.find("#item-sp")?.val() ?? 0),
+									cp: parseInt(html.find("#item-cp").val() ?? 0),
 								},
 							},
 						};
@@ -527,7 +524,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onItemQuantityDecrement(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		if (item.system.quantity > 0) {
@@ -543,7 +540,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onItemQuantityIncrement(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		if (item.system.quantity < item.system.slots.per_slot) {
@@ -566,33 +563,37 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		this.render();
 	}
 
-	async _onCastSpell(event, options) {
+	async _onCastSpell(event, options={}) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const spellUuid = event.currentTarget.dataset.spellUuid;
+		const itemUuid = event.currentTarget.dataset.itemUuid;
 
-		options = this.actor.buildOptionsForSkipPrompt(event, options);
+		const config = {};
+		if (itemUuid) config.itemUuid = itemUuid;
+		if (options.focus) config.cast = { focus: true };
+		if (event.shiftKey) config.skipPrompt = true;
 
-		this.actor.castSpell(itemId, options);
+		this.actor.system.castSpell(spellUuid, config);
 	}
 
 	async _onLearnSpell(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 
-		this.actor.learnSpell(itemId);
+		this.actor.system.learnSpell(itemId);
 	}
 
 	async _onOpenSpellBook(event) {
 		event.preventDefault();
-		this.actor.openSpellBook();
+		this.actor.system.openSpellBook();
 	}
 
 	async _onlevelUp(event) {
 		event.preventDefault();
 
-		let actorClass = await this.actor.getClass();
+		let actorClass = await this.actor.system.getClass();
 		if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
 			new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
 			this.close();
@@ -611,7 +612,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	_onSellTreasure(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const itemData = this.object.getEmbeddedDocument("Item", itemId);
 
 		foundry.applications.handlebars.renderTemplate(
@@ -626,7 +627,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 						icon: "<i class=\"fa fa-check\"></i>",
 						label: game.i18n.localize("SHADOWDARK.dialog.general.yes"),
 						callback: async () => {
-							this.actor.sellItemById(itemId);
+							this.actor.system.sellItemById(itemId);
 						},
 					},
 					Cancel: {
@@ -642,7 +643,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onToggleEquipped(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		await this.actor.updateEmbeddedDocuments("Item", [
@@ -653,12 +654,49 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		]);
 
+		// if equiping shield, remove 2h weapons or switch to 1h
+		if (item.system.isAShield && item.system.equipped) {
+			const updates = [];
+			for (const pi of this.actor.system.getPhysicalItems()) {
+				if (pi.system.isWeapon && pi.system.equipped && pi.system.handedness === "2h") {
+					if (pi.system.isVersatile) {
+						updates.push({ "_id": pi.id, "system.handedness": "1h" });
+					}
+					else {
+						updates.push({ "_id": pi.id, "system.equipped": false });
+					}
+				}
+			}
+			if (updates.length > 0) {
+				await this.actor.updateEmbeddedDocuments("Item", updates);
+			}
+		}
+	}
+
+	async _onToggleHandedness(event) {
+		event.preventDefault();
+
+		const itemId = event.currentTarget.dataset.itemId;
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (!item || !item.system.isVersatile) return;
+
+		if (item.system.handedness === "1h") {
+			const shields = await this.actor.system.getEquippedShields();
+			for (const shield of shields) {
+				shield.update({"system.equipped": false});
+			}
+			item.update({"system.handedness": "2h"});
+		}
+		else {
+			item.update({"system.handedness": "1h"});
+		}
 	}
 
 	async _onToggleStashed(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		await this.actor.updateEmbeddedDocuments("Item", [
@@ -673,16 +711,20 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onUseAbility(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
-		const options = this.actor.buildOptionsForSkipPrompt(event);
+		const itemUuid = event.currentTarget.dataset.itemUuid;
 
-		this.actor.useAbility(itemId, options);
+		if (event.shiftKey) {
+			this.actor.system.useAbility(itemUuid, {skipPrompt: true});
+		}
+		else {
+			this.actor.system.useAbility(itemUuid);
+		}
 	}
 
 	async _onUsePotion(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 
 		this.actor.usePotion(itemId);
 	}
@@ -696,6 +738,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			actor: this,
 			item: item,
 			picked_up: options.picked_up ?? false,
+			showRemainingMins: game.settings.get("shadowdark", "playerShowLightRemaining") > 1,
 		};
 
 		let template = options.template ?? "systems/shadowdark/templates/chat/lightsource-toggle.hbs";
@@ -712,7 +755,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onToggleLightSource(event) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemId = event.currentTarget.dataset.itemId;
 		const item = this.actor.getEmbeddedDocument("Item", itemId);
 
 		this._toggleLightSource(item);
@@ -774,9 +817,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		const inventory = {
 			equipped: [],
-			stashed: [],
 			treasure: [],
 			carried: [],
+			stashed: this.actor.system.getStashedItems(),
 		};
 
 		const spellitems = {
@@ -785,7 +828,6 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		};
 
 		const spells = {};
-
 
 		const talents = {
 			ancestry: {
@@ -813,137 +855,83 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
-		const attacks = {melee: [], ranged: []};
+		const attacks = await this.actor.system.getAttacks();
 
-		const allClassAbilities = {};
+		for (const i of this.actor.system.getPhysicalItems()) {
+			if (i.system.isGem) {
+				gems.push(i);
+			}
+			else if (i.system.equipped) {
+				inventory.equipped.push(i);
+			}
+			else if (i.system.treasure) {
+				inventory.treasure.push(i);
+			}
+			else {
+				inventory.carried.push(i);
+			}
 
-		const slots = {
-			total: 0,
-			gear: 0,
-			treasure: 0,
-			coins: 0,
-			gems: 0,
-		};
-
-		const freeCarrySeen = {};
-
-		for (const i of this._sortAllItems(context)) {
-			i.uuid = `Actor.${this.actor._id}.Item.${i._id}`;
-
-			if (i.system.isPhysical && i.type !== "Gem") {
-				i.showQuantity =
-					i.system.isAmmunition || i.system.slots.per_slot > 1
-						? true
-						: false;
-
-				// We calculate how many slots are used by this item, taking
-				// into account the quantity and any free items.
-				//
-				let freeCarry = i.system.slots.free_carry;
-
-				if (Object.hasOwn(freeCarrySeen, i.name)) {
-					freeCarry = Math.max(0, freeCarry - freeCarrySeen[i.name]);
-					freeCarrySeen[i.name] += freeCarry;
-				}
-				else {
-					freeCarrySeen[i.name] = freeCarry;
-				}
-
-				const perSlot = i.system.slots.per_slot;
-				const quantity = i.system.quantity;
-				const slotsUsed = i.system.slots.slots_used;
-
-				let totalSlotsUsed = Math.ceil(quantity / perSlot) * slotsUsed;
-				totalSlotsUsed -= freeCarry * slotsUsed;
-
-				i.slotsUsed = totalSlotsUsed;
-
-				// calculate slot usage
-				if (!i.system.stashed) {
-					if (i.system.treasure) {
-						slots.treasure += i.slotsUsed;
+			if (i.system.isWand && i.system.isIdentified && !i.system.broken) {
+				for (const spell of (i.system.spells ?? [])) {
+					if (!spell.uuid) continue;
+					const spellObj = await fromUuid(spell.uuid);
+					if (spellObj) {
+						spellitems.wands.push({item: i, spell: spellObj, lost: spell.lost});
 					}
-					else {
-						slots.gear += i.slotsUsed;
-					}
-				}
-
-				// sort into groups
-				if (i.system.equipped) {
-					inventory.equipped.push(i);
-				}
-				else if (i.system.stashed) {
-					inventory.stashed.push(i);
-				}
-				else if (i.system.treasure) {
-					inventory.treasure.push(i);
-				}
-				else {
-					inventory.carried.push(i);
-				}
-
-				if (i.type === "Basic" && i.system.light.isSource) {
-					i.isLightSource = true;
-					i.lightSourceActive = i.system.light.active;
-					i.lightSourceUsed = i.system.light.hasBeenUsed;
-
-					const timeRemaining = Math.ceil(
-						i.system.light.remainingSecs / 60
-					);
-
-					const lightRemainingSetting = (game.user.isGM)? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
-
-					if (lightRemainingSetting > 0) {
-						// construct time remaing progress bar
-						const maxSeconds = i.system.light.longevityMins * 60;
-						i.lightSourceProgress = "◆";
-						for (let x = 1; x < 4; x++) {
-							if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
-								i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
-							}
-							else {
-								i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
-							}
-						}
-					}
-
-					if (lightRemainingSetting < 2) {
-						i.lightSourceTimeRemaining = "";
-					}
-					else if (i.system.light.remainingSecs < 60) {
-						i.lightSourceTimeRemaining = game.i18n.localize(
-							"SHADOWDARK.inventory.item.light_seconds_remaining"
-						);
-					}
-					else {
-						i.lightSourceTimeRemaining = game.i18n.format(
-							"SHADOWDARK.inventory.item.light_remaining",
-							{ timeRemaining }
-						);
-					}
-				}
-
-				if (i.type === "Weapon" && i.system.equipped) {
-					const weaponAttacks = await this.actor.buildWeaponDisplays(i._id);
-					attacks.melee.push(...weaponAttacks.melee);
-					attacks.ranged.push(...weaponAttacks.ranged);
-				}
-
-				if (i.type === "Wand" && !i.system.stashed) {
-					spellitems.wands.push(i);
-				}
-
-				if (i.type === "Scroll" && !i.system.stashed) {
-					spellitems.scrolls.push(i);
 				}
 			}
-			else if (i.type === "Boon") {
+			if (i.system.isScroll && i.system.isIdentified) {
+				const spellObj = await fromUuid(i.system.spellUuid);
+				spellitems.scrolls.push({item: i, spell: spellObj});
+			}
+
+		}
+
+		/*
+		if (i.system.light.isSource) {
+
+			const timeRemaining = Math.ceil(
+				i.system.light.remainingSecs / 60
+			);
+			const lightRemainingSetting = (game.user.isGM)
+				? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
+
+			if (lightRemainingSetting > 0) {
+				// construct time remaing progress bar
+				const maxSeconds = i.system.light.longevityMins * 60;
+				i.lightSourceProgress = "◆";
+				for (let x = 1; x < 4; x++) {
+					if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
+						i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
+					}
+					else {
+						i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
+					}
+				}
+			}
+
+			if (lightRemainingSetting < 2) {
+				i.lightSourceTimeRemaining = "";
+			}
+			else if (i.system.light.remainingSecs < 60) {
+				i.lightSourceTimeRemaining = game.i18n.localize(
+					"SHADOWDARK.inventory.item.light_seconds_remaining"
+				);
+			}
+			else {
+				i.lightSourceTimeRemaining = game.i18n.format(
+					"SHADOWDARK.inventory.item.light_remaining",
+					{ timeRemaining }
+				);
+			}
+		}*/
+		const nonPhysicalItems = this.actor.items.filter(i => !i.system.isPhysical);
+		for (const i of nonPhysicalItems) {
+
+			if (i.type === "Boon") {
 				if (boons[i.system.boonType]) {
 					boons[i.system.boonType].items.push(i);
 				}
-			}
-			else if (i.type === "Gem") {
-				gems.push(i);
 			}
 			else if (i.type === "Spell") {
 				const spellTier = i.system.tier;
@@ -959,68 +947,27 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				const category = i.system.category;
 				effects[category].items.push(i);
 			}
-			else if (i.type === "Class Ability") {
-				const group = i.system.group !== ""
-					? i.system.group
-					: game.i18n.localize("SHADOWDARK.sheet.abilities.ungrouped.label");
-
-				if (Array.isArray(allClassAbilities[group])) {
-					allClassAbilities[group].push(i);
-				}
-				else {
-					allClassAbilities[group] = [i];
-				}
-			}
 		}
 
-		// Work out how many slots all these coins are taking up...
-		const coins = this.actor.system.coins;
-		const totalCoins = coins.gp + coins.sp + coins.cp;
 
-		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
-		if (totalCoins > freeCoins) {
-			slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
+		// Sort Level Talents by level for display, sort Ancestry and Class
+		// talents alphabetically
+		talents.ancestry.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.class.items.sort((a, b) => a.name.localeCompare(b.name));
+		talents.level.items.sort((a, b) => a.system.level - b.system.level);
+
+		// Sort all spells alphabetically by tier
+		for (const tier in spells) {
+			spells[tier].sort((a, b) => a.name.localeCompare(b.name));
 		}
 
-		// Now do the same for gems...
-		let totalGems = gems.length;
-		if (totalGems > 0) {
-			slots.gems = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
-		}
-
-		// calculate total slots
-		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
-
-		const classAbilities = [];
-
-		const sortedGroups = Object.keys(allClassAbilities).sort((a, b) => a.localeCompare(b));
-		for (const group of sortedGroups) {
-			classAbilities.push({
-				name: group,
-				abilities: allClassAbilities[group],
-			});
-		}
-
-		// Sort talents by level for display...
-		talents.level.items = talents.level.items.sort(
-			(a, b) => a.system.level - b.system.level
-		);
-
-		// Sorts inventory items by user defined order
-		Object.keys(inventory).forEach(key => {
-			inventory[key] = inventory[key].sort((a, b) => (a.sort || 0) - (b.sort || 0));
-		  });
-
-		context.classAbilities = classAbilities;
-		context.hasClassAbilities = classAbilities.length > 0;
-
+		context.classAbilities = this.actor.system.getClassAbilities();
 		context.attacks = attacks;
 		context.boons = boons;
-		context.totalCoins = totalCoins;
-		context.gems = {items: gems, totalGems};
+		context.gems = {items: gems, totalGems: gems.length};
 		context.inventory = inventory;
 		context.spellitems = spellitems;
-		context.slots = slots;
+		context.slots = this.actor.system.getSlotUsage();
 		context.spells = spells;
 		context.talents = talents;
 		context.effects = effects;
@@ -1028,26 +975,19 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
  	async _updateObject(event, formData) {
 		if (event.target) {
-			// if HP MAX was change, turn off editing and set base hp value
-			if (event.target.name === "system.attributes.hp.max") {
-				this.editingHp = false;
-
-				// Calculate new base hp value to pass to super
-				const hpValues = this.object.system.attributes.hp;
-				formData["system.attributes.hp.base"] =
-						formData["system.attributes.hp.max"] - hpValues.bonus;
-			}
-
-			// if a stat was manually changed, also change base values, turn off editing
-			if (event.target.name.match(/system\.abilities\.(\w*)\.total/)) {
-				const abilityKey = event.target.name.match(/system\.abilities\.(\w*)\.total/);
-				const base = `system.abilities.${abilityKey[1]}.base`;
-				const total = `system.abilities.${abilityKey[1]}.total`;
-				formData[base] = formData[total]
-					- this.object.system.abilities[abilityKey[1]].bonus;
-				this.editingStats = false;
+			// check if changed key is under any active effects
+			const targetKey = event.target.name;
+			const overrideKeys = Object.keys(foundry.utils.flattenObject(this.object.overrides));
+			if (overrideKeys.includes(targetKey)) {
+				// calculate the correct value to update for the modifed key
+				const base = foundry.utils.getProperty(this.object._source, targetKey);
+				const current = foundry.utils.getProperty(this.object, targetKey);
+				const delta = current - base;
+				const change =  this.form.querySelector(`input[name='${targetKey}']`).valueAsNumber;
+				formData[targetKey] = change - delta;
 			}
 		}
+
 		super._updateObject(event, formData);
 	}
 }

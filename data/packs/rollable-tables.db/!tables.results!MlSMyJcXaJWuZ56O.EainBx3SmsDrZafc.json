@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.EainBx3SmsDrZafc",
 	"description": "The Thieves' Guild is about to attack a rival merchant lord",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		84,
 		85
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!8piSI566ZPW7kA87.H3VxVLcdFh68qFe8",
 	"description": "The Whispering",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		13,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,21 +3,27 @@
 	"_key": "!actors.items!yMyZ18conSZhwlpg.pJVRurHOdHPsdDwn",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Fade",
 	"system": {
-		"dc": "13",
+		"class": [
+		],
 		"description": "<p>Self. Become invisible for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d4"
 		},
 		"lost": false,
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": ""
-		}
+		},
+		"tier": 3
 	},
-	"type": "NPC Spell"
+	"type": "Spell"
 }

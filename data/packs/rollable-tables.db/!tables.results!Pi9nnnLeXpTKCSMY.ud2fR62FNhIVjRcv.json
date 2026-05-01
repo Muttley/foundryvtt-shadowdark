@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.ud2fR62FNhIVjRcv",
 	"description": "Two empty, glass vials (6 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		14,
 		15
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

@@ -3,6 +3,8 @@
 	"_key": "!actors!udRspLiTyURGmLav",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -22,8 +24,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -92,9 +95,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -135,21 +135,23 @@
 				"value": 11
 			},
 			"hp": {
-				"hd": 0,
 				"max": 24,
 				"value": 24
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 5
+			"value": 5,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A translucent cube of slime that silently mows through tunnels. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 24, <strong>ATK</strong> 1 touch +4 (1d8 + toxin + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> -4, <strong>W</strong> +1, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 5</p>\n\t<p><strong> Engulf</strong>. [[check 12 str]] or trapped inside cube. Touch attack auto-hits engulfed targets each round. [[check 12 str]] on turn to escape. Fail checks if paralyzed.</p><p><strong>Rubbery</strong>. Half damage from stabbing weapons.</p><p><strong>Toxin</strong>. [[check 15 con]] or paralyzed 1d4 rounds.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> A translucent cube of slime that silently mows through tunnels. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 24, <strong>ATK</strong> 1 touch +4 (1d8 + toxin + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> -4, <strong>W</strong> +1, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 5</p>\n\t<p><strong> Engulf</strong>. [[check 12 str]] or trapped inside cube. Touch attack auto-hits engulfed targets each round. [[check 12 str]] on turn to escape. Fail checks if paralyzed.</p><p><strong>Rubbery</strong>. Half damage from stabbing weapons.</p><p><strong>Toxin</strong>. [[check 15 con]] or paralyzed 1d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

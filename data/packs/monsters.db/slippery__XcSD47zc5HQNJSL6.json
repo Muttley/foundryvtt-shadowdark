@@ -3,12 +3,15 @@
 	"_key": "!actors.items!dNSmJX2keI0T2Gig.XcSD47zc5HQNJSL6",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Slippery",
 	"system": {
 		"description": "<p>Hostile spells targeting the leprechaun are DC 15 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

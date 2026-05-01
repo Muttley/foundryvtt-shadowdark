@@ -15,6 +15,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			classes: ["shadowdark", "sheet", "item"],
 			scrollY: ["section.SD-content-body"],
 			resizable: true,
+			dragDrop: [{dropSelector: null}],
 			tabs: [
 				{
 					navSelector: ".SD-nav",
@@ -68,6 +69,10 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 		html.find("[data-action=remove-name-table]").click(
 			event => this._onRemoveTable(event)
+		);
+
+		html.find("[data-action=toggle-identified]").click(
+			async () => await this.item.system.toggleIdentified()
 		);
 
 		html.find(".effect-control").click(event => {
@@ -359,6 +364,15 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 				}
 			);
 
+		if (context.system.isPhysical) {
+			context.isGM = game.user.isGM;
+			context.isIdentified = context.system.isIdentified;
+			context.isUnidentified = !context.system.isIdentified;
+			context.showIdentifyTab = context.isUnidentified && context.isGM;
+			context.showEffectsTab = context.system.magicItem
+				&& (context.system.isIdentified || context.isGM);
+		}
+
 		// Call any type-specific methods for this item type to gather
 		// additional data for the sheet
 		//
@@ -392,7 +406,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 
 	async getSheetDataForArmorItem(context) {
-		context.propertyItems = await context.item.propertyItems();
+		context.propertyItems = await context.item.getPropertyItems();
 
 		const mySlug = context.item.name.slugify();
 
@@ -435,7 +449,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		await this.getClassSelectorConfigs(context);
 
 		context.spellsKnown =
-			context.item.system.spellcasting.class !== "__not_spellcaster__";
+			context.item.system.spellcasting.ability !== "";
 	}
 
 
@@ -455,12 +469,6 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 	}
 
 
-	async getSheetDataForNPCSpellItem(context) {
-		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-			.includes(context.item.system.duration.type);
-	}
-
-
 	async getSheetDataForPatronItem(context) {
 		const patronBoonTables =
 			await shadowdark.compendiums.patronBoonTables();
@@ -475,10 +483,18 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 
 	async getSheetDataForScrollItem(context) {
-		await this.getSpellSelectorConfigs(context);
+		const allSpells = await shadowdark.compendiums.spells();
+		const currentUuid = this.item.system.spellUuid ?? null;
+		const selectedSpell = currentUuid ? await fromUuid(currentUuid) : null;
 
-		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-			.includes(context.item.system.duration.type);
+		context.spellSelectorConfig = {
+			availableItems: allSpells.filter(s => s.uuid !== currentUuid),
+			choicesKey: "spellUuid",
+			isItem: true,
+			isSingle: true,
+			name: "system.spellUuid",
+			selectedItems: selectedSpell ? [selectedSpell] : [],
+		};
 	}
 
 
@@ -501,15 +517,30 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 
 	async getSheetDataForWandItem(context) {
-		await this.getSpellSelectorConfigs(context);
+		const allSpells = await shadowdark.compendiums.spells();
+		const currentSpells = this.item.system.spells ?? [];
+		const selectedUuids = currentSpells.map(s => s.uuid);
 
-		context.variableDuration = CONFIG.SHADOWDARK.VARIABLE_DURATIONS
-			.includes(context.item.system.duration.type);
+		const selectedSpells = [];
+		for (const spell of currentSpells) {
+			if (!spell.uuid) continue;
+			const spellObj = await fromUuid(spell.uuid);
+			if (spellObj) selectedSpells.push(spellObj);
+		}
+
+		context.spellSelectorConfig = {
+			availableItems: allSpells.filter(s => !selectedUuids.includes(s.uuid)),
+			choicesKey: "spells",
+			isItem: true,
+			isSingle: false,
+			name: "system.spells",
+			selectedItems: selectedSpells,
+		};
 	}
 
 
 	async getSheetDataForWeaponItem(context) {
-		context.propertyItems = await context.item.propertyItems();
+		context.propertyItems = await context.item.getPropertyItems();
 
 		const mySlug = context.item.name.slugify();
 
@@ -542,8 +573,22 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		event.preventDefault();
 		event.stopPropagation();
 
-		const deleteUuid = $(event.currentTarget).data("uuid");
-		const choicesKey = $(event.currentTarget).data("choices-key");
+		const deleteUuid = event.currentTarget.dataset.uuid;
+		const choicesKey = event.currentTarget.dataset.choicesKey;
+		const isSingle = event.currentTarget.dataset.isSingle === "true";
+		const dataKey = `system.${choicesKey}`;
+
+		if (isSingle) {
+			this.item.update({[dataKey]: null});
+			return;
+		}
+
+		// Wand spells are stored as {uuid, lost} objects rather than plain UUIDs
+		if (this.item.system.isWand && choicesKey === "spells") {
+			const newSpells = (this.item.system.spells ?? []).filter(s => s.uuid !== deleteUuid);
+			this.item.update({[dataKey]: newSpells});
+			return;
+		}
 
 		// handles cases where choicesKey is nested property.
 		const currentChoices = choicesKey
@@ -556,7 +601,6 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			newChoices.push(itemUuid);
 		}
 
-		const dataKey = `system.${choicesKey}`;
 		this.item.update({[dataKey]: newChoices});
 	}
 
@@ -597,16 +641,22 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		// We only have to do something special if we're handling a multi-choice
 		// datalist
 
-		const choicesKey = $(event.currentTarget).data("choices-key");
-		const isItem = $(event.currentTarget).data("is-item") === "true";
+		const choicesKey = event.currentTarget.dataset.choicesKey;
+		const isItem = event.currentTarget.dataset.isItem === "true";
+		const isSingle = event.currentTarget.dataset.isSingle === "true";
 		if (event.target.list && choicesKey) {
-			return await this._onChangeChoiceList(event, choicesKey, isItem);
+			return await this._onChangeChoiceList(event, choicesKey, isItem, isSingle);
+		}
+
+		// Test for spell damage formula change
+		if (event.target.name === "system.formula") {
+			return await this.onFormulaChange(event);
 		}
 
 		await super._onChangeInput(event);
 	}
 
-	async _onChangeChoiceList(event, choicesKey, isItem) {
+	async _onChangeChoiceList(event, choicesKey, isItem, isSingle=false) {
 		const options = event.target.list.options;
 		const value = event.target.value;
 
@@ -619,6 +669,18 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		}
 
 		if (uuid === null) return;
+
+		if (isSingle) {
+			return this.item.update({[event.target.name]: uuid});
+		}
+
+		// Wand spells are stored as {uuid, lost} objects rather than plain UUIDs
+		if (this.item.system.isWand && choicesKey === "spells") {
+			const spells = this.item.system.spells ?? [];
+			if (spells.some(s => s.uuid === uuid)) return;
+			event.target.value = "";
+			return this.item.update({"system.spells": [...spells, {uuid, lost: false}]});
+		}
 
 		// handles cases where choicesKey is nested property.
 		let currentChoices = choicesKey
@@ -699,10 +761,10 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 	async _onEffectChangeValue(event) {
 		const li = event.target.closest("li");
-		const effectId = li.dataset.effectId;
-		const effect = this.item.effects.get(effectId);
+		const effectUuid = li.dataset.effectUuid;
+		const effect = this.item.effects.get(foundry.utils.parseUuid(effectUuid).id);
 
-		console.log(`Modifying talent ${event.target.name} (${effectId}) with value ${event.target.value}`);
+		console.log(`Modifying talent ${event.target.name} (${effectUuid}) with value ${event.target.value}`);
 		const updates = {};
 
 		const value = (isNaN(parseInt(event.target.value, 10)))
@@ -752,22 +814,28 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 		if (!(allowedType && isSpellDrop)) return super._onDrop();
 
+		if (myType === "Wand") {
+			const spells = this.item.system.spells ?? [];
+			if (spells.some(s => s.uuid === droppedItem.uuid)) return;
+			const update = {"system.spells": [...spells, {uuid: droppedItem.uuid, lost: false}]};
+			if (spells.length === 0) {
+				update.name = game.i18n.format(
+					"SHADOWDARK.item.name_from_spell.Wand",
+					{spellName: droppedItem.name}
+				);
+			}
+			return this.item.update(update);
+		}
+
 		const name = game.i18n.format(
 			`SHADOWDARK.item.name_from_spell.${myType}`,
 			{spellName: droppedItem.name}
 		);
 
-		const updateData = {
+		this.item.update({
 			name,
-			system: droppedItem.system,
-			// TODO Add some kind of default cost to the new item?
-		};
-
-		delete updateData.system.lost;
-		updateData.system.magicItem = true;
-		updateData.system.spellName = droppedItem.name;
-
-		this.item.update(updateData);
+			system: { spellUuid: droppedItem.uuid },
+		});
 	}
 
 	async _onDropTable(event, data) {
@@ -861,7 +929,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 					titles.sort((a, b) => a.from - b.from);
 				}
-				else {
+				else if (typeof updateData["title.from"] !== "undefined") {
 					titles.push({
 						to: updateData["title.to"],
 						from: updateData["title.from"],
@@ -880,9 +948,21 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 				this.item.update(updateData);
 				break;
 			}
-			case "Scroll":
-			case "Spell":
+			case "Scroll": {
+				const updateData = this._getSubmitData();
+
+				delete updateData["system.spellUuid"];
+
+				this.item.update(updateData);
+				break;
+			}
 			case "Wand": {
+				const updateData = this._getSubmitData();
+				delete updateData["system.spells"];
+				this.item.update(updateData);
+				break;
+			}
+			case "Spell": {
 				const updateData = this._getSubmitData();
 
 				delete updateData["system.class"];
@@ -960,4 +1040,27 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		}
 		super._updateObject(event, formData);
 	}
+
+	async onFormulaChange(event) {
+		if (Roll.validate(event.target.value) === false
+			&& event.target.value !== ""
+		) {
+			ui.notifications.error(game.i18n.localize("SHADOWDARK.spell_damage.invalid_formula"));
+			return;
+		}
+
+		const damageType = event.target.parentElement.querySelector('select[name="system.damageType"]');
+
+		// If formula is empty, reset and disable damageType, unless healing is selected
+		const isEmpty = event.target.value === "";
+		if (isEmpty) {
+			damageType.value = "none";
+		}
+		else if (damageType.value === "none") {
+			damageType.value = "damage"; // assume damage simply to set a value
+		}
+		damageType.disabled = isEmpty;
+
+	}
+
 }

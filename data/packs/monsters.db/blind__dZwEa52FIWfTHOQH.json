@@ -3,18 +3,21 @@
 	"_key": "!actors.items!hi47xC8rfvviBoOO.dZwEa52FIWfTHOQH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Blind",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>One target within near [[check 15 cha]] or blinded for [[/r 1d4]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

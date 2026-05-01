@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.TpxjmlUWD8PYMMx2",
 	"description": "1st-tier spell scroll (80 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		88,
 		89
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

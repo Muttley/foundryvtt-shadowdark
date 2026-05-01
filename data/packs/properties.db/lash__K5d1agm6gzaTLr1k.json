@@ -3,15 +3,17 @@
 	"_key": "!items!K5d1agm6gzaTLr1k",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "vFaoMFPGDGlKn4gF",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Lash",
 	"system": {
 		"description": "<p>When you make a ranged attack with this weapon, it does not leave your grasp.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		}
 	},

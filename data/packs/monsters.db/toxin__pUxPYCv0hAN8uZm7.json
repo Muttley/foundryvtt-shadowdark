@@ -3,12 +3,15 @@
 	"_key": "!actors.items!uNah6fsgfkt4Aiet.pUxPYCv0hAN8uZm7",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Toxin",
 	"system": {
 		"description": "<p>[[check 9 con]] or paralyzed [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -4,6 +4,8 @@
 	"effects": [
 		"4v6DbfBT6c4qzSEc"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/mammals/cat-hunched-glowing-red.webp",
 	"name": "Spell Effect: Cat's Eye",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

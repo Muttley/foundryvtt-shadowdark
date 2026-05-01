@@ -3,14 +3,16 @@
 	"_key": "!items!AENjm94YYccY8zP4",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Bowyer",
 	"system": {
 		"description": "<p>You can make and fix any bow or arrow</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

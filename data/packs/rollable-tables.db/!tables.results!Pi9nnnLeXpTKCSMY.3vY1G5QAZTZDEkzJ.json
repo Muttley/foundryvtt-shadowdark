@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.3vY1G5QAZTZDEkzJ",
 	"description": "Jade-and-gold scarab pin (20 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		46,
 		47
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

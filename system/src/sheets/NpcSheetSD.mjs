@@ -25,38 +25,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 		return "systems/shadowdark/templates/actors/npc.hbs";
 	}
 
-	async _onRollItem(event) {
-		event.preventDefault();
-
-		const itemId = $(event.currentTarget).data("item-id");
-		const item = this.actor.items.get(itemId);
-
-		if (item.type === "NPC Attack" && item.system.attackType === "special") {
-			// TODO These are not technically rollable, but maybe in the
-			// future we could add an interactive chat card for contested
-			// checks, etc.
-			return;
-		}
-
-		const data = {
-			item: item,
-			actor: this.actor,
-		};
-
-		// Summarize the bonuses for the attack roll
-		const parts = ["1d20", "@attackBonus"];
-		data.attackBonus = item.system.bonuses.attackBonus;
-
-		data.damageParts = ["@damageBonus"];
-		data.damageBonus = item.system.bonuses.damageBonus;
-
-		return item.rollNpcAttack(parts, data);
-	}
-
 	/** @inheritdoc */
 	activateListeners(html) {
-		html.find("[data-action='item-use-ability']").click(
-			event => this._onUseAbility(event)
+		html.find("[data-action='display-feature']").click(
+			event => this._displayFeature(event)
 		);
 
 		html.find("[data-action='focus-npc-spell']").click(
@@ -80,7 +52,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const context = await super.getData(options);
 
 		// Ability Scores
-		for (const [key, ability] of Object.entries(context.system.abilities)) {
+		for (const [key, ability] of Object.entries(this.actor.system.abilities)) {
 			const labelKey = `SHADOWDARK.ability_${key}`;
 			ability.label = `${game.i18n.localize(labelKey)}`;
 		}
@@ -110,18 +82,19 @@ export default class NpcSheetSD extends ActorSheetSD {
 		for (const i of this._sortAllItems(context)) {
 			// Push Attacks
 			if (i.type === "NPC Attack") {
-				const display = await this.actor.buildNpcAttackDisplays(i._id);
+				const display = await this.actor.system.buildNpcAttackDisplays(i._id);
 				attacks.push({itemId: i._id, display});
 			}
 
 			// Push Specials
 			else if (i.type === "NPC Special Attack") {
-				const display = await this.actor.buildNpcSpecialDisplays(i._id);
+				const display = await this.actor.system.buildNpcSpecialDisplays(i._id);
 				specials.push({itemId: i._id, display});
 			}
 
 			// Push Features
 			else if (i.type === "NPC Feature") {
+				// TODO remove jQuery
 				const description =
 					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 						jQuery(i.system.description).text(),
@@ -138,7 +111,8 @@ export default class NpcSheetSD extends ActorSheetSD {
 			}
 
 			// Push Spells
-			else if (i.type === "NPC Spell") {
+			else if (i.type === "Spell") {
+				// TODO remove jQuery
 				i.description =
 					await foundry.applications.ux.TextEditor.implementation.enrichHTML(
 						jQuery(i.system.description).text(),
@@ -164,46 +138,37 @@ export default class NpcSheetSD extends ActorSheetSD {
 		context.effects = effects;
 	}
 
-	async _onUseAbility(event) {
+	async _displayFeature(event) {
 		event.preventDefault();
-		const itemId = $(event.currentTarget).data("item-id");
-		this.actor.useAbility(itemId);
+		const item = this.actor.items.get(event.currentTarget?.dataset?.itemId);
+		return item.displayCard();
 	}
 
 	async _onCastSpell(event, options) {
 		event.preventDefault();
 
-		const itemId = $(event.currentTarget).data("item-id");
+		const itemUuid = event.currentTarget.dataset.itemUuid;
 
-		options = this.actor.buildOptionsForSkipPrompt(event, options);
-
-		this.actor.castNPCSpell(itemId, options);
+		if (event.shiftKey) {
+			this.actor.system.castSpell(itemUuid, {skipPrompt: true});
+		}
+		else {
+			this.actor.system.castSpell(itemUuid);
+		}
 	}
 
 	async _onDropItem(event, data) {
 		// get uuid of dropped item
 		const droppedItem = await fromUuid(data.uuid);
 
-		// if it's an PC spell, convert to NPC spell, else return as normal
+		// if it's an spell, else return as normal
 		if (droppedItem.type === "Spell") {
-			const newNpcSpell = {
-				name: droppedItem.name,
-				type: "NPC Spell",
-				system: {
-					description: droppedItem.system.description,
-					duration: {
-						type: droppedItem.system.duration.type,
-						value: droppedItem.system.duration.value,
-					},
-					range: droppedItem.system.range,
-					dc: droppedItem.system.tier + 10,
-				},
-			};
 			// add new spell to NPC
-			this.actor.createEmbeddedDocuments("Item", [newNpcSpell]);
+			this.actor.createEmbeddedDocuments("Item", [droppedItem]);
 		}
 		else {
 			super._onDropItem(event, data);
 		}
 	}
+
 }

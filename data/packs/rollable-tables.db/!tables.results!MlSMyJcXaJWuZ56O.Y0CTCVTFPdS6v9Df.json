@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.Y0CTCVTFPdS6v9Df",
 	"description": "The cult of Shune is planning a fiery coup at midnight",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		6,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

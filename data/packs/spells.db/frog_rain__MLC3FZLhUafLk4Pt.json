@@ -3,6 +3,8 @@
 	"_key": "!items!MLC3FZLhUafLk4Pt",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "0CqAJEHgk6zHXr8Y",
 	"img": "icons/creatures/amphibians/frog-water-teal.webp",
 	"name": "Frog Rain",
@@ -10,14 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "damage",
 		"description": "<p>A rain of indignant frogs pelts a near-sized cube around a point you can see within range. </p><p>All creatures within the frog rain take 1d6 damage. Any surviving frogs hop away and disappear.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "1d6",
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "cursed-scroll-1"

@@ -4,6 +4,8 @@
 	"effects": [
 		"xJe5blefAwRNfYJk"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/sonic/scream-wail-shout-teal.webp",
 	"name": "Spell Effect: Deaf",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

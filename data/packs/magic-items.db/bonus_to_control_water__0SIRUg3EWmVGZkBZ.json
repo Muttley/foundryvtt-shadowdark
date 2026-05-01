@@ -1,0 +1,38 @@
+{
+	"_id": "0SIRUg3EWmVGZkBZ",
+	"_key": "!items.effects!REKbDm3ShTNQouM2.0SIRUg3EWmVGZkBZ",
+	"description": "+4 to control water spellcasting checks (1/day)",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"folder": null,
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Bonus to Control Water",
+	"origin": "Compendium.shadowdark.magic-items.Item.REKbDm3ShTNQouM2",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.bonus.control-water",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

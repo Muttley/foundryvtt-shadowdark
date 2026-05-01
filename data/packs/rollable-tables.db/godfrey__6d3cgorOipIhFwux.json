@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ZbrMK1WDNtz1ajJn.6d3cgorOipIhFwux",
 	"description": "Godfrey",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Godfrey",
 	"range": [
 		20,
 		20
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

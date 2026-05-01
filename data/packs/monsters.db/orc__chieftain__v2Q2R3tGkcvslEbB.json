@@ -3,6 +3,8 @@
 	"_key": "!actors!v2Q2R3tGkcvslEbB",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -20,8 +22,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -90,9 +93,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -133,21 +133,23 @@
 				"value": 14
 			},
 			"hp": {
-				"hd": 0,
 				"max": 19,
 				"value": 19
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 4
+			"value": 4,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> An imposing orc with scars crisscrossing its body. </i></p>\n\t\n\t<p><strong>AC</strong> 14 (chainmail), <strong>HP</strong> 19, <strong>ATK</strong> 2 greataxe +4 (1d10), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Rage</strong>. 1/day, immune to morale checks, +1d4 damage (3 rounds).</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> An imposing orc with scars crisscrossing its body. </i></p>\n\t\n\t<p><strong>AC</strong> 14 (chainmail), <strong>HP</strong> 19, <strong>ATK</strong> 2 greataxe +4 (1d10), <strong>MV</strong> near, <strong>S</strong> +2, <strong>D</strong> +1, <strong>C</strong> +1, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Rage</strong>. 1/day, immune to morale checks, +1d4 damage (3 rounds).</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

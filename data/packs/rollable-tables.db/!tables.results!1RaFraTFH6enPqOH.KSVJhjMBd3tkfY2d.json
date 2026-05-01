@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1RaFraTFH6enPqOH.KSVJhjMBd3tkfY2d",
 	"description": "of the Corrupt",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		66,
 		67
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

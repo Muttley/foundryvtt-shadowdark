@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.clHm2CbFpVjgpdk0",
 	"description": "You smell lilacs and hear faint, ghostly laughter",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		38,
 		39
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

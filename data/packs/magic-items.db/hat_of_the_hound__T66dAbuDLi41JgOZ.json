@@ -1,0 +1,47 @@
+{
+	"_id": "T66dAbuDLi41JgOZ",
+	"_key": "!items!T66dAbuDLi41JgOZ",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/head/hat-belted-simple-brown.webp",
+	"name": "Hat of the Hound",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A rounded, jaunty bowler hat.</em></p><p><strong>Benefit.</strong> You can transform into a @UUID[Compendium.shadowdark.monsters.Actor.lJyH2RWm3t5MB5iG]{mastiff} each day for up to 10 rounds total. Your clothing and possessions transform with you.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

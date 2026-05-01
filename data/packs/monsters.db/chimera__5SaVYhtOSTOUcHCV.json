@@ -3,6 +3,8 @@
 	"_key": "!actors!5SaVYhtOSTOUcHCV",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -20,8 +22,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -90,9 +93,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -133,21 +133,23 @@
 				"value": 16
 			},
 			"hp": {
-				"hd": 0,
 				"max": 49,
 				"value": 49
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 10
+			"value": 10,
+			"xp": 0
 		},
 		"move": "doubleNear",
 		"moveNote": "fly",
-		"notes": "\n\t<p><i>A monstrous beast with a half-goat, half-lion body, wide dragon wings, and the heads of a goat, lion, and dragon.</i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 49, <strong>ATK</strong> 4 rend +7 (2d8) and 1 fire breath, <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +4, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +2, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 10</p>\n\t<p><strong>Fire Breath</strong>. Fills a near-sized cube extending from chimera. [[check 15 dex]] or 4d6 damage.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i>A monstrous beast with a half-goat, half-lion body, wide dragon wings, and the heads of a goat, lion, and dragon.</i></p>\n\t\n\t<p><strong>AC</strong> 16, <strong>HP</strong> 49, <strong>ATK</strong> 4 rend +7 (2d8) and 1 fire breath, <strong>MV</strong> double near (fly), <strong>S</strong> +5, <strong>D</strong> +4, <strong>C</strong> +4, <strong>I</strong> -3, <strong>W</strong> +2, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 10</p>\n\t<p><strong>Fire Breath</strong>. Fills a near-sized cube extending from chimera. [[check 15 dex]] or 4d6 damage.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

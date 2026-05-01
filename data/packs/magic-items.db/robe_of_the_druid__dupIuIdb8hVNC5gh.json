@@ -1,0 +1,48 @@
+{
+	"_id": "dupIuIdb8hVNC5gh",
+	"_key": "!items!dupIuIdb8hVNC5gh",
+	"effects": [
+		"OJ3nY3HrPcGtdv4L"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/back/cloak-collared-leaves-green.webp",
+	"name": "Robe of the Druid",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 15,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A green velvet robe with a deep hood and hems embroidered with silver leaves and vines.</em></p><p><strong>Benefit.</strong> Only a wizard with the Druid title can wear this robe.</p><p>Your unarmored AC becomes 15 plus your Dexterity modifier.</p><p>Twice per day, you can regain the ability to cast one lost spell.</p><p>You have advantage on casting the @UUID[Compendium.shadowdark.spells.Item.qz6bKMyDaGyifklx]{shapechange} spell. When you cast it, its duration is 1 hour instead of focus.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

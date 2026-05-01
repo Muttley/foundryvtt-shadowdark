@@ -3,12 +3,13 @@
 	"_key": "!items!dBQr9YPyhvwyPm0g",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "iHOSxtXRWKd2vx1U",
 	"img": "icons/commodities/materials/powder-grey.webp",
 	"name": "Stimulant",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"class": [
 		],
 		"cost": {
@@ -18,16 +19,17 @@
 		},
 		"description": "<p>You can't be surprised for 10 rounds</p><p>@UUID[Compendium.shadowdark.conditions.MUNwczWej0Bo8x4S]{Effect: Stimulant}</p>",
 		"duration": {
-			"type": "",
+			"type": "rounds",
 			"value": ""
 		},
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
+		"lost": false,
 		"magicItem": true,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"quantity": 1,
-		"range": "",
+		"range": "near",
 		"slots": {
 			"free_carry": 1,
 			"per_slot": 1,
@@ -37,8 +39,7 @@
 			"title": "core-rules"
 		},
 		"spellName": "",
-		"stashed": false,
-		"tier": 1
+		"stashed": false
 	},
 	"type": "Potion"
 }

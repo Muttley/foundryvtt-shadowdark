@@ -1,0 +1,22 @@
+{
+	"_id": "1F7ax6jrD0B6SyEp",
+	"_key": "!actors.items!uXk56wpEwdiTfAQN.1F7ax6jrD0B6SyEp",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+	"name": "Thievery",
+	"system": {
+		"description": "<p>You are adept at thieving skills and have the necessary tools of the trade secreted on your person (they take up no gear slots).</p><p>You are trained in the following tasks and have advantage on any associated checks:</p><ul><li><p>Climbing</p></li><li><p>Sneaking and hiding</p></li><li><p>Applying disguises</p></li><li><p>Finding and disabling traps</p></li><li><p>Delicate tasks such as picking pockets and opening locks</p></li></ul>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

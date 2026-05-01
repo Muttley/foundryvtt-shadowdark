@@ -4,15 +4,12 @@
 	"effects": [
 		"iatMWq8uzO8KPaxd"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/unholy/strike-body-life-soul-green.webp",
 	"name": "Condition: Drained (3)",
 	"system": {
-		"abilities": {
-			"wis": {
-				"bonus": "-3"
-			}
-		},
 		"category": "effect",
 		"description": "",
 		"duration": {
@@ -30,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

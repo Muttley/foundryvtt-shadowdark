@@ -3,17 +3,21 @@
 	"_key": "!actors.items!V1wcRoUEnIbaNjXN.Y5R7txciv069WSAr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Inferno",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within near [[check 15 dex]] or [[/r 3d8]] damage.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

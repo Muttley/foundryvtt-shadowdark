@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.ZqxJu8onLmdmshKj",
 	"description": "Alric",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Alric",
 	"range": [
 		10,
 		10
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!cUUnqWyaNDYghKxE.2gyf2II3CBFEwn6Q",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 12 con]] or go to 0 HP in [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

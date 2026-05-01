@@ -7,7 +7,7 @@
 	"img": "icons/svg/item-bag.svg",
 	"name": "Life Drain",
 	"system": {
-		"description": "<p><span style=\"font-family: Signika, sans-serif\">1d4 CON damage. Death if reduced to 0 CON.</span></p>",
+		"description": "<p>1d4 CON damage. Death if reduced to 0 CON.</p>",
 		"magicItem": false,
 		"source": {
 			"page": 0,

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!44P8mz0yaCsTtKeq.Uu1MN0Ioop6z7gL8",
 	"description": "Tirolas",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Tirolas",
 	"range": [
 		4,
 		4
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1RaFraTFH6enPqOH.yoB72fSLTa36KPcH",
 	"description": "of the Elemental",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		48,
 		49
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

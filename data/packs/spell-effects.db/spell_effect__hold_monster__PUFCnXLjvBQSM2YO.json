@@ -4,6 +4,8 @@
 	"effects": [
 		"6sDtwzG4ddaew8SZ"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Spell Effect: Hold Monster",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

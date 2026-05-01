@@ -4,15 +4,12 @@
 	"effects": [
 		"PAkmxzlF6cIsPNkt"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Condition: Life Drain (2)",
 	"system": {
-		"abilities": {
-			"con": {
-				"bonus": "-2"
-			}
-		},
 		"category": "condition",
 		"description": "",
 		"duration": {
@@ -30,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

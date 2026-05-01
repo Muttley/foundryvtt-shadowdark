@@ -3,18 +3,21 @@
 	"_key": "!actors.items!vXaqgfDykZPdXnIm.kOFFYAB50N6vLH8G",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Charm",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>Near, one creature, [[check 14 cha]] or friendship for [[/r 1d8]] days.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

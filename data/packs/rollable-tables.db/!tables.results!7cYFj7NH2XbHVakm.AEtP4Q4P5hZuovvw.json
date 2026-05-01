@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.AEtP4Q4P5hZuovvw",
 	"description": "Strife",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		39,
 		39
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

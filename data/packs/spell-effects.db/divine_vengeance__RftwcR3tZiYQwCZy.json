@@ -1,49 +1,51 @@
 {
 	"_id": "RftwcR3tZiYQwCZy",
 	"_key": "!items.effects!o74l0TnCb0E2fAKp.RftwcR3tZiYQwCZy",
-	"changes": [
-		{
-			"key": "system.bonuses.meleeAttackBonus",
-			"mode": 2,
-			"priority": null,
-			"value": "4"
-		},
-		{
-			"key": "system.bonuses.rangedAttackBonus",
-			"mode": 2,
-			"priority": null,
-			"value": "4"
-		},
-		{
-			"key": "system.bonuses.meleeDamageBonus",
-			"mode": 2,
-			"priority": null,
-			"value": "4"
-		},
-		{
-			"key": "system.bonuses.rangedDamageBonus",
-			"mode": 2,
-			"priority": null,
-			"value": "4"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 5,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 5
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
 	"name": "Divine Vengeance",
 	"origin": "Item.xOHpjBx4PhrNXQ4U",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.melee.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			},
+			{
+				"key": "system.roll.ranged.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			},
+			{
+				"key": "system.roll.melee.damage.all",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			},
+			{
+				"key": "system.roll.ranged.damage.all",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

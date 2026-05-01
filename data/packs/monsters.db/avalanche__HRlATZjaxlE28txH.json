@@ -3,17 +3,21 @@
 	"_key": "!actors.items!w14e0EzbGfvjkbes.HRlATZjaxlE28txH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Avalanche",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within close [[check 15 str]] or entombed for [[/r 1d4]] rounds under mounds of earth.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

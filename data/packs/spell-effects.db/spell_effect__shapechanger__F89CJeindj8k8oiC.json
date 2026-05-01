@@ -4,6 +4,8 @@
 	"effects": [
 		"vMxGVAApQXuIeBXk"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/nature/wolf-paw-glow-orange.webp",
 	"name": "Spell Effect: Shapechanger",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

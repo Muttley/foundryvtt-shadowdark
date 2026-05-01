@@ -4,24 +4,17 @@
 	"effects": [
 		"O8bVaWHv6gSA7mPq"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/unholy/strike-hand-glow-pink.webp",
 	"name": "Condition: Enfeebled (Dex)",
 	"system": {
-		"abilities": {
-			"dex": {
-				"base": "3"
-			},
-			"str": {
-				"base": "3",
-				"value": "3"
-			}
-		},
 		"category": "condition",
 		"description": "<p>The character is enfeebled.</p>",
 		"duration": {
 			"type": "unlimited",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -34,14 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
 			"combatTime": null,
-			"initiative": null,
 			"value": 0
 		},
 		"tokenIcon": {

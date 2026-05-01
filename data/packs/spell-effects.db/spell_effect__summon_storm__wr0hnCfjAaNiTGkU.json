@@ -4,6 +4,8 @@
 	"effects": [
 		"uhBasLNp1gdVJtjj"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/lightning/bolt-strike-cloud-gray.webp",
 	"name": "Spell Effect: Summon Storm",
@@ -12,7 +14,7 @@
 		"description": "<p>You summon a violent storm that affects an area around you out to one mile for the duration.</p><p>The storm brings darkened skies, severe wind, and driving rain.</p><p>For the duration of the spell, you can cast control water (Shadowdark RPG pg. 57), even if you do not know the spell.</p><p>For the duration of the spell, you can cast lightning bolt (Shadowdark RPG pg. 64), even if you do not know the spell.</p><p>@UUID[Compendium.shadowdark.spells.Item.TKDuwFu1hP2lX549]{Control Water}</p><p>@UUID[Compendium.shadowdark.spells.Item.7uTblEDfklCO1et7]{Lightning Bolt}</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "10"
+			"value": 10
 		},
 		"effectPanel": {
 			"show": true
@@ -25,11 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.1",
+			"combatTime": 18.1,
 			"value": 47548
 		},
 		"tokenIcon": {

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!Om5RbAEQDbXI8MwN.Y6gRyvAxV7AfgYIM",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Frostblood",
 	"system": {
 		"description": "<p>Cold immune.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

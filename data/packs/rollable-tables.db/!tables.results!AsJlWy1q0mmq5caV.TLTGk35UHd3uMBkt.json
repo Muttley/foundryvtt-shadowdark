@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.TLTGk35UHd3uMBkt",
 	"description": "You spot a trail of tiny silver coins leading around a bend",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		64,
 		65
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

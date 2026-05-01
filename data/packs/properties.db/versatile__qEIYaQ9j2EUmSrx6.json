@@ -3,13 +3,16 @@
 	"_key": "!items!qEIYaQ9j2EUmSrx6",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "vFaoMFPGDGlKn4gF",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Versatile",
 	"system": {
 		"description": "<p>You can use this weapon with one or two hands. Use the higher damage die if you’re wielding it with two</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

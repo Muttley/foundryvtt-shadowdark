@@ -1,0 +1,51 @@
+{
+	"_id": "UgFCjZ4xbq7MgOMV",
+	"_key": "!items!UgFCjZ4xbq7MgOMV",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/tools/navigation/spyglass-telescope-brass.webp",
+	"name": "Spyglass of True Sight",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A brass, telescoping lens with magical runes carved on it.</em></p><p><strong>Benefit.</strong> When you look through the spyglass, you can see invisible creatures and objects.</p><p><strong>Curse.</strong> The wielder feels a compulsion to look at everything through the spyglass.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

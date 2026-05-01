@@ -4,17 +4,16 @@
 	"effects": [
 		"oEZ9BldTmIl6AS31"
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage",
 	"system": {
-		"bonuses": {
-			"advantage": "REPLACEME"
-		},
 		"description": "<p>Gain advantage on casting one spell you know.</p>",
 		"level": null,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

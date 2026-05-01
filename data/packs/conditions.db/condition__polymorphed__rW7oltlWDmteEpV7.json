@@ -4,6 +4,8 @@
 	"effects": [
 		"xyhx2skwDPYWZ20G"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/mammals/rodent-rat-diseaed-gray.webp",
 	"name": "Condition: Polymorphed",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

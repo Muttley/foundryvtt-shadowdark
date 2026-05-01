@@ -3,6 +3,8 @@
 	"_key": "!actors!6ldPPlMIMSd4ALoZ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -21,8 +23,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +94,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -134,21 +134,23 @@
 				"value": 12
 			},
 			"hp": {
-				"hd": 0,
 				"max": 20,
 				"value": 20
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 4
+			"value": 4,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Gray, featureless humanoids that delight in sowing chaos. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 20, <strong>ATK</strong> 1 dagger (close/near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> +1, <strong>W</strong> +0, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized humanoid.</p><p><strong>Telepathy</strong>. Can secretly hear the surface thoughts of all humanoids within near.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Gray, featureless humanoids that delight in sowing chaos. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 20, <strong>ATK</strong> 1 dagger (close/near) +2 (1d4), <strong>MV</strong> near, <strong>S</strong> +1, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> +1, <strong>W</strong> +0, <strong>Ch</strong> +4, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 4</p>\n\t<p><strong> Change Shape</strong>. In place of attacks, transform into any similarly-sized humanoid.</p><p><strong>Telepathy</strong>. Can secretly hear the surface thoughts of all humanoids within near.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

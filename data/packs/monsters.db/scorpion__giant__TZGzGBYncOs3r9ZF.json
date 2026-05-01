@@ -3,6 +3,8 @@
 	"_key": "!actors!TZGzGBYncOs3r9ZF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -22,8 +24,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -92,9 +95,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -135,21 +135,23 @@
 				"value": 14
 			},
 			"hp": {
-				"hd": 0,
 				"max": 13,
 				"value": 13
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 3
+			"value": 3,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "climb",
-		"notes": "\n\t<p><i> Chitin-plated scorpions as big as camels. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 13, <strong>ATK</strong> 1 claw +2 (1d6 + grab) and 1 sting +2 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> +0, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Grab</strong>. [[check 12 str]] or target held. [[check 12 str]] on turn to break free.</p><p><strong>Poison</strong>. [[check 12 con]] or go to 0 HP.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Chitin-plated scorpions as big as camels. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 13, <strong>ATK</strong> 1 claw +2 (1d6 + grab) and 1 sting +2 (1d4 + poison), <strong>MV</strong> near (climb), <strong>S</strong> +2, <strong>D</strong> +2, <strong>C</strong> +0, <strong>I</strong> -4, <strong>W</strong> +0, <strong>Ch</strong> -4, <strong>AL</strong> N, <strong>LV</strong> 3</p>\n\t<p><strong> Grab</strong>. [[check 12 str]] or target held. [[check 12 str]] on turn to break free.</p><p><strong>Poison</strong>. [[check 12 con]] or go to 0 HP.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

@@ -3,14 +3,16 @@
 	"_key": "!items!gSggHQgdLa8BDO5U",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Woodborn",
 	"system": {
 		"description": "<p>They found you in the hollow of an oak tree</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

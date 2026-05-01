@@ -3,12 +3,15 @@
 	"_key": "!actors.items!6ce2xr1QmjJFMe5P.7pjkmESREJq1ADQa",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Moonbite Properties",
 	"system": {
 		"description": "<p>+2 greatsword , thrown weapon, returns after being thrown. Spells to heal damage it inflicts are DC 15 to cast.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

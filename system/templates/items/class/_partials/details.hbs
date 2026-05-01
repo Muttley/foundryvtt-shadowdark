@@ -8,34 +8,6 @@
 </div>
 
 <div>
-	<h3>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</h3>
-	<select name="system.spellcasting.class">
-		<option
-			value="__not_spellcaster__"
-			{{#ifEq system.spellcasting.class "__not_spellcaster__"}}
-				selected
-			{{/ifEq}}
-		>
-			&mdash;
-		</option>
-		<option
-			value=""
-			{{#ifEq system.spellcasting.class ""}}
-				selected
-			{{/ifEq}}
-		>
-			(Class Name)
-		</option>
-		{{selectOptions
-			spellcastingClasses
-			selected=system.spellcasting.class
-			localize=false
-		}}
-	</select>
-</div>
-
-
-<div>
 	<h3>{{localize "SHADOWDARK.class.spellcasting_ability.label"}}</h3>
 	<select name="system.spellcasting.ability">
 		<option value="">&mdash;</option>
@@ -45,6 +17,27 @@
 			localize=false
 		}}
 	</select>
+</div>
+
+<div>
+	{{#if system.spellcasting.ability}}
+	<h3>{{localize "SHADOWDARK.class.spellcasting_class.label"}}</h3>
+	<select name="system.spellcasting.class">
+		<option
+			value=""
+			{{#ifEq system.spellcasting.class ""}}
+				selected
+			{{/ifEq}}
+		>
+			{{localize "SHADOWDARK.class.spellcasting_class.this_class" name=item.name}}
+		</option>
+		{{selectOptions
+			spellcastingClasses
+			selected=system.spellcasting.class
+			localize=false
+		}}
+	</select>
+	{{/if}}
 </div>
 
 <div>

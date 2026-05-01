@@ -3,12 +3,15 @@
 	"_key": "!actors.items!C0CuPZJOFDmuplw8.88oHWNwVAvYck4gu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Tendrils",
 	"system": {
 		"description": "<p>Four total. AC 18 each. 4+ damage to one severs it.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

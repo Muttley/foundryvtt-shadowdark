@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.keVuRfr5t1gIcQ9b",
 	"description": "Brenna",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Brenna",
 	"range": [
 		7,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

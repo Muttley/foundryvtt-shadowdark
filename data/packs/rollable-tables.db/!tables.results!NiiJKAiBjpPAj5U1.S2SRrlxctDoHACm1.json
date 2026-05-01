@@ -3,12 +3,14 @@
 	"_key": "!tables.results!NiiJKAiBjpPAj5U1.S2SRrlxctDoHACm1",
 	"description": "<b>Your hand slipped!</b> You target a random ally with the spell",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		4,
 		4
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

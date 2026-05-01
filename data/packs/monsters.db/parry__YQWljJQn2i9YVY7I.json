@@ -3,12 +3,15 @@
 	"_key": "!actors.items!P53eJcTVm4axJ2bR.YQWljJQn2i9YVY7I",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Parry",
 	"system": {
 		"description": "<p>Trade 2 longsword attacks next round to deflect a melee attack that would hit.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!es2O2GjdzKjSCMMG.8SN92yMHjnXrTEyt",
 	"description": "No",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		1,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

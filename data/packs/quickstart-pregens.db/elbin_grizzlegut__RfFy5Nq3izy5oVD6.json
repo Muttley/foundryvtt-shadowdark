@@ -2,10 +2,9 @@
 	"_id": "RfFy5Nq3izy5oVD6",
 	"_key": "!actors!RfFy5Nq3izy5oVD6",
 	"effects": [
-		"H83UQWfWESNMQUo8",
-		"cDGzOUOtVhzSVsJn",
-		"CtIJf3RlEZHk66Ww"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Elbin_Grizzlegut_portrait.webp",
 	"items": [
@@ -21,12 +20,14 @@
 		"RE57glfjQDWmUPvb",
 		"cHZjYo5oMf0HxWTy",
 		"mtW8WkUwBnpqlZ4h",
-		"EaKWCUnoGhszdJCm",
 		"uGylTowCiu0J2nW1",
 		"pdCL2elKH5ufXMAA",
-		"DP89QQbqMjvF1hB1",
 		"X7udqCneh75JRAtv",
-		"ufk3xI6cL6wueXj4"
+		"xeBDP9mqfwoLrI0P",
+		"30Mu5fwnh1Js5hpZ",
+		"3LgBOXugwE3Ufxjy",
+		"9xw959YctkqyX0iu",
+		"91nHRBqyG4dlLAGX"
 	],
 	"name": "Elbin Grizzlegut",
 	"prototypeToken": {
@@ -39,8 +40,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -109,9 +111,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Elbin_Grizzlegut_token.webp",
@@ -128,28 +127,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 8,
-				"bonus": 0
+				"value": 8
 			},
 			"con": {
-				"base": 11,
-				"bonus": 0
+				"value": 11
 			},
 			"dex": {
-				"base": 9,
-				"bonus": 0
+				"value": 9
 			},
 			"int": {
-				"base": 12,
-				"bonus": 0
+				"value": 12
 			},
 			"str": {
-				"base": 15,
-				"bonus": 0
+				"value": 15
 			},
 			"wis": {
-				"base": 17,
-				"bonus": 0
+				"value": 17
 			}
 		},
 		"alignment": "lawful",
@@ -159,51 +152,11 @@
 				"value": 14
 			},
 			"hp": {
-				"base": 5,
-				"bonus": 0,
-				"max": 7,
+				"max": 5,
 				"value": 7
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.2bf6cUSTzdI7CMHE",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD",
 		"coins": {
 			"cp": 0,
@@ -211,10 +164,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.p91vJhT8FXvb2mLj",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.EP8NdjL8B5xXK7u9",
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
@@ -229,7 +178,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

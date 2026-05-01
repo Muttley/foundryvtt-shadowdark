@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.3pRG7fxQRXBojepq",
 	"description": "A @UUID[Compendium.shadowdark.monsters.rwE58nsTLAG7pW1u]{Swarm of Spiders} surges out of a gauzy egg sack",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		68,
 		69
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

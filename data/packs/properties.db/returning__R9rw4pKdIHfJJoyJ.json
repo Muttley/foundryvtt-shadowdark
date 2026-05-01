@@ -3,13 +3,16 @@
 	"_key": "!items!R9rw4pKdIHfJJoyJ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "vFaoMFPGDGlKn4gF",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Returning",
 	"system": {
 		"description": "<p>On a missed ranged attack, this weapon returns to the thrower.</p>",
 		"itemType": "weapon",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		}

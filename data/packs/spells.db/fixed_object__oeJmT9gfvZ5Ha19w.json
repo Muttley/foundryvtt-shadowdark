@@ -3,6 +3,8 @@
 	"_key": "!items!oeJmT9gfvZ5Ha19w",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "riXhNqeauiWpVKAz",
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Fixed Object",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>An object you touch that weighs no more than 5 pounds becomes fixed in its current location. It can support up to 5,000 pounds of weight for the duration of the spell.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

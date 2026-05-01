@@ -3,6 +3,8 @@
 	"_key": "!items!j2gvzfnMGQwxqgGg",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/fire/explosion-fireball-large-orange.webp",
 	"name": "Fireball",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "damage",
 		"description": "<p>You hurl a small flame that erupts into a fiery blast. All creatures in a near-sized cube around where the flame lands take [[/r 4d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "4d6",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "far",
 		"source": {
 			"title": "core-rules"

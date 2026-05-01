@@ -3,14 +3,16 @@
 	"_key": "!items!6y5G8ftyLbC52Rhb",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Fugitive",
 	"system": {
 		"description": "<p>An anonymous savior helped you disappear</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

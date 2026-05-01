@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.gyz17J5Mt45HYMyf",
 	"description": "Connection",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		49,
 		49
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

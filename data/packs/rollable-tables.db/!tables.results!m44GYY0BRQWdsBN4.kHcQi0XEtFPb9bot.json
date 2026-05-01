@@ -3,12 +3,14 @@
 	"_key": "!tables.results!m44GYY0BRQWdsBN4.kHcQi0XEtFPb9bot",
 	"description": "Ravine",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		14,
 		14
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

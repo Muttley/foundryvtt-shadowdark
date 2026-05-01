@@ -3,12 +3,14 @@
 	"_key": "!tables.results!44P8mz0yaCsTtKeq.9o8sD60YsgGTlTBj",
 	"description": "Zaphiel",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Zaphiel",
 	"range": [
 		12,
 		12
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

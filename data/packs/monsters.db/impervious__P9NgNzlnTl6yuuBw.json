@@ -3,12 +3,15 @@
 	"_key": "!actors.items!uTmirbJfdHFTag2i.P9NgNzlnTl6yuuBw",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Fire immune. Healed by electricity.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,15 +3,17 @@
 	"_key": "!items!8x1pq8tUSbf4UH8G",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "TcpWrnecaN2k2gYr",
 	"img": "icons/magic/life/crosses-trio-red.webp",
 	"name": "Max 2 HP Rolls",
 	"system": {
 		"description": "<p>Maximize 2 hit point rolls (prior or future)</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

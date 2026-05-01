@@ -3,12 +3,15 @@
 	"_key": "!actors.items!3ao87kQaYih26b9q.nKmNM6nnRLMWy1kx",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Stormblood",
 	"system": {
 		"description": "<p>Electricity immune.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

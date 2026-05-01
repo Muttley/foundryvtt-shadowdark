@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.QHYJ1w9PoaDg9qqo",
 	"description": "A famous gambler will bet a ruby on a Wizard Thief game",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		76,
 		77
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

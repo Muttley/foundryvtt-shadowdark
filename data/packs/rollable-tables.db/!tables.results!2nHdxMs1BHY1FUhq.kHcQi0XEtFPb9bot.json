@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2nHdxMs1BHY1FUhq.kHcQi0XEtFPb9bot",
 	"description": "Blighted",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		14,
 		14
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

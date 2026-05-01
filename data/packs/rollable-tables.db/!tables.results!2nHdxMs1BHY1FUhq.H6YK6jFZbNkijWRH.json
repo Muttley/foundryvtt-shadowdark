@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2nHdxMs1BHY1FUhq.H6YK6jFZbNkijWRH",
 	"description": "Revenant",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		9,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

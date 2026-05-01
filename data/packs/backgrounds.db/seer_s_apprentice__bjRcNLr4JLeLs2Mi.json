@@ -3,14 +3,16 @@
 	"_key": "!items!bjRcNLr4JLeLs2Mi",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Seer's Apprentice",
 	"system": {
 		"description": "<p>You know some of the mystic arts</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

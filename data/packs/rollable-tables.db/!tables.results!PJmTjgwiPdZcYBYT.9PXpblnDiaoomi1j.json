@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.9PXpblnDiaoomi1j",
 	"description": "[[/r 1d6]] @UUID[Compendium.shadowdark.monsters.qISCrzLvHr4uQ9Q8]{Rust Monsters} swarm a crack bubbling with mercury",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		8,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

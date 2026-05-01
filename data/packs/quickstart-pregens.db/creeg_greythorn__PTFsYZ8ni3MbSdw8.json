@@ -2,9 +2,9 @@
 	"_id": "PTFsYZ8ni3MbSdw8",
 	"_key": "!actors!PTFsYZ8ni3MbSdw8",
 	"effects": [
-		"gkKBIvn9MFzJVHRo",
-		"hLAUcwBamgdBx4fj"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/quickstart/pregens/Creeg_Greythorn-portrait.webp",
 	"items": [
@@ -26,7 +26,8 @@
 		"MYxdVR3i1TOckdK0",
 		"9IM4SDWD0HsdFNav",
 		"ziR7s77XEKZFpap3",
-		"WTy4zczgHGERH7zP"
+		"WTy4zczgHGERH7zP",
+		"EwB1DjbYV8wvdnLn"
 	],
 	"name": "Creeg Greythorn",
 	"prototypeToken": {
@@ -39,8 +40,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -109,9 +111,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Creeg_Greythorn_token.webp",
@@ -128,28 +127,22 @@
 	"system": {
 		"abilities": {
 			"cha": {
-				"base": 11,
-				"bonus": 0
+				"value": 11
 			},
 			"con": {
-				"base": 10,
-				"bonus": 0
+				"value": 10
 			},
 			"dex": {
-				"base": 13,
-				"bonus": 0
+				"value": 13
 			},
 			"int": {
-				"base": 16,
-				"bonus": 0
+				"value": 16
 			},
 			"str": {
-				"base": 7,
-				"bonus": 0
+				"value": 7
 			},
 			"wis": {
-				"base": 14,
-				"bonus": 0
+				"value": 14
 			}
 		},
 		"alignment": "lawful",
@@ -159,51 +152,11 @@
 				"value": 11
 			},
 			"hp": {
-				"base": 3,
-				"bonus": 0,
 				"max": 3,
 				"value": 3
 			}
 		},
 		"background": "Compendium.shadowdark.backgrounds.Item.4QQNmFHKVIY6aOpW",
-		"bonuses": {
-			"acBonus": 0,
-			"acBonusFromAttribute": [
-			],
-			"advantage": [
-			],
-			"armorMastery": [
-			],
-			"backstabDie": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageMultiplier": 1,
-			"gearSlots": 0,
-			"hauler": false,
-			"lightSource": "",
-			"meleeAttackBonus": 0,
-			"meleeDamageBonus": 0,
-			"rangedAttackBonus": 0,
-			"rangedDamageBonus": 0,
-			"spellcastingCheckBonus": 0,
-			"spellcastingClasses": [
-			],
-			"stoneSkinTalent": 0,
-			"unarmoredAcBonus": 0,
-			"weaponDamageDieD12": [
-			],
-			"weaponDamageDieImprovementByProperty": [
-			],
-			"weaponDamageExtraDieByProperty": [
-			],
-			"weaponDamageExtraDieImprovementByProperty": [
-			],
-			"weaponMastery": [
-			]
-		},
 		"class": "Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs",
 		"coins": {
 			"cp": 0,
@@ -211,10 +164,6 @@
 			"sp": 0
 		},
 		"deity": "Compendium.shadowdark.patrons-and-deities.Item.w9GdZSr5XYNjIeeR",
-		"flags": {
-			"hpRollLevels": [
-			]
-		},
 		"languages": [
 			"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
 			"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz",
@@ -232,7 +181,8 @@
 			"remaining": 0
 		},
 		"notes": "",
-		"patron": "",
+		"patron": null,
+		"renown": 0,
 		"slots": 10
 	},
 	"type": "Player"

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!RAEbIzHkREYWKvLh.r6qkMau5LhjCN1gF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 12 con]] or fall into deep sleep for [[/r 1d4]] hours.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

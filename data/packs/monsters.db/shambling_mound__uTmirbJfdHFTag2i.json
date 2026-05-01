@@ -3,6 +3,8 @@
 	"_key": "!actors!uTmirbJfdHFTag2i",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -21,8 +23,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +94,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -134,21 +134,23 @@
 				"value": 14
 			},
 			"hp": {
-				"hd": 0,
 				"max": 20,
 				"value": 20
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 4
+			"value": 4,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Fetid piles of slimy vegetation animated to life by lightning. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 slam +3 (1d6 + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -2, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Impervious</strong>. Fire immune. Healed by electricity.</p><p><strong>Engulf</strong>. If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in 2d4 rounds. [[check 15 str]] on turn to escape.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Fetid piles of slimy vegetation animated to life by lightning. </i></p>\n\t\n\t<p><strong>AC</strong> 14, <strong>HP</strong> 20, <strong>ATK</strong> 2 slam +3 (1d6 + engulf), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> -2, <strong>C</strong> +2, <strong>I</strong> -3, <strong>W</strong> +0, <strong>Ch</strong> -3, <strong>AL</strong> N, <strong>LV</strong> 4</p>\n\t<p><strong> Impervious</strong>. Fire immune. Healed by electricity.</p><p><strong>Engulf</strong>. If a target is hit by both slams in same round, it is pulled into shambling mound's body and suffocates in 2d4 rounds. [[check 15 str]] on turn to escape.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

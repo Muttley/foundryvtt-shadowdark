@@ -3,6 +3,8 @@
 	"_key": "!items!P44kXQZ8PDtOWzag",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "8JSBHA3M9HLBIWmB",
 	"img": "icons/containers/kitchenware/jug-clay-brown-sealed.webp",
 	"name": "Soul Jar",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>You transfer the soul of one creature you touch of LV 9 or less into a vessel, such as a jar. The creature's body becomes comatose, but it doesn't die. </p><p>If the vessel opens or breaks, the creature's soul returns to its body. </p><p>You can possess the empty body with your own spirit, taking control of it. Your body becomes comatose during this time. If the body dies while you possess it, your soul returns to your body.</p>",
 		"duration": {
 			"type": "permanent",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-1"

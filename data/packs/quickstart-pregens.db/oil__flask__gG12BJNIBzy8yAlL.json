@@ -3,12 +3,13 @@
 	"_key": "!actors.items!Jnb0sFKKKrAfowY0.gG12BJNIBzy8yAlL",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/consumables/potions/potion-bottle-corked-blue.webp",
 	"name": "Oil, Flask",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -17,7 +18,6 @@
 		"description": "<p>Fuels a lantern for one hour of real time. One flask covers a close area and burns for 4 rounds, dealing 1d4 damage each round.</p>",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
 			"hasBeenUsed": false,
@@ -27,6 +27,8 @@
 			"template": "lantern"
 		},
 		"magicItem": false,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
@@ -35,7 +37,6 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false,

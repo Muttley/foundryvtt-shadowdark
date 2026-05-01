@@ -182,6 +182,30 @@ export default class CompendiumsSD {
 		return CompendiumsSD._documents("Item", "Effect", filterSources);
 	}
 
+	static async findSpell(spellName, classUuids = []) {
+		const spells = await CompendiumsSD.spells(false);
+		const matches = spells.filter(s => s.name === spellName);
+
+		if (matches.length < 1) return null;
+		if (matches.length === 1) return matches[0];
+
+		// For more than 1 match, select by matching castingClass
+		const classMatch = matches.find(s =>
+			(s.system.class ?? []).find(uuid => classUuids.includes(uuid))
+		);
+		return classMatch ?? matches[0];
+	}
+
+	static async findTalent(talentName, talentType) {
+		const talents = await CompendiumsSD.talents([talentType], false);
+		const matches = talents.filter(s => s.name === talentName);
+
+		if (matches.length < 1) return null;
+		if (matches.length === 1) return matches[0];
+
+		return null;
+	}
+
 	static async languages(subtypes=[], filterSources=true) {
 		if (subtypes.length === 0) {
 			return CompendiumsSD._documents("Item", "Language", filterSources);
@@ -289,16 +313,15 @@ export default class CompendiumsSD {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
 
 		return this._collectionFromArray(documents.filter(document =>
-			document.system.spellcasting.class === ""
+			document.system.spellcasting?.ability !== ""
+			&& document.system.spellcasting?.class === ""
 		));
 	}
 
 	static async spellcastingClasses(filterSources=true) {
 		const documents = await CompendiumsSD._documents("Item", "Class", filterSources);
-
 		return this._collectionFromArray(documents.filter(document =>
-			document.system.spellcasting.ability !== ""
-			&& document.system.spellcasting.class !== "__not_spellcaster__"
+			document.system.spellcasting?.ability !== ""
 		));
 	}
 

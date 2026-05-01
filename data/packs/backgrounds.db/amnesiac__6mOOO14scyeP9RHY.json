@@ -3,14 +3,16 @@
 	"_key": "!items!6mOOO14scyeP9RHY",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Amnesiac",
 	"system": {
 		"description": "<p>Your past is a haze, but some memories return</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

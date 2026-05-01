@@ -4,6 +4,8 @@
 	"effects": [
 		"pTKFUJ3czAqssXCu"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/mouth-smile-deception-purple.webp",
 	"name": "Spell Effect: Cacklerot",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

@@ -3,6 +3,8 @@
 	"_key": "!items!7Z57aIE3y6ym1f56",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "0CqAJEHgk6zHXr8Y",
 	"img": "icons/creatures/webs/web-spider-caught-hand-purple.webp",
 	"name": "Spidersilk",
@@ -10,14 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>Sticky spidersilk covers your hands and feet.</p><p>For the spell's duration, you can walk on vertical surfaces as easily as if it were flat ground.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.4UAVHmqFCt47sh7D]{Spell Effect: Spidersilk}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

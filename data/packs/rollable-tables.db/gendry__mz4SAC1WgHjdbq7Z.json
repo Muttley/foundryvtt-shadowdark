@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.mz4SAC1WgHjdbq7Z",
 	"description": "Gendry",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Gendry",
 	"range": [
 		12,
 		12
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

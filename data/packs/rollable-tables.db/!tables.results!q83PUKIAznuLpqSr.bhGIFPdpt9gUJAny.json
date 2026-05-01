@@ -3,12 +3,14 @@
 	"_key": "!tables.results!q83PUKIAznuLpqSr.bhGIFPdpt9gUJAny",
 	"description": "<b>Shred!</b> You tear a large hole in the fabric of the universe close to you; the lightless tear grows larger every round",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		12
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

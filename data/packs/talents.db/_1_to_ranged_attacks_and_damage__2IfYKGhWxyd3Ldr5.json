@@ -5,18 +5,16 @@
 		"lodEOfzuI5jDWc4h",
 		"OQQ5fxWh3zBw8W5O"
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "+1 to Ranged Attacks and Damage",
 	"system": {
-		"bonuses": {
-			"rangedAttackBonus": "1",
-			"rangedDamageBonus": "1"
-		},
 		"description": "",
 		"level": 1,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
