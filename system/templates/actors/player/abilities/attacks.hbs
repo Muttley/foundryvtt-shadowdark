@@ -5,7 +5,7 @@
 	</div>
 	<div class="content">
 		{{#each attacks.melee}}
-			<div class="attack">
+			<div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
 				<a
 					class="rollable"
 					data-action="item-attack"
@@ -27,7 +27,7 @@
 	</div>
 	<div class="content">
 		{{#each attacks.ranged}}
-			<div class="attack">
+			<div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
 				<a
 					class="rollable"
 					data-action="item-attack"

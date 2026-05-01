@@ -25,6 +25,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					initial: "tab-abilities",
 				},
 			],
+			dragDrop: [
+				{dragSelector: ".item-list .item"},
+				{dragSelector: ".attack[data-item-uuid]"},
+			],
 		});
 	}
 
@@ -256,6 +260,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	 */
 	async _onDropItemSD(event, data) {
 		const item = await fromUuid(data.uuid);
+
+		// If the item is already on this actor, delegate to sort handling
+		if (item?.parent?.uuid === this.actor.uuid) {
+			return super._onDropItem(event, data);
+		}
 
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
