@@ -6,11 +6,7 @@
 @use "mixins" as *;
 
 .shadowdark {
-
-	form {
-		font-family: "Montserrat-Medium";
-		height: 100%;
-	}
+	font-family: "Montserrat-Medium";
 
 	input,
 	select {
@@ -20,13 +16,15 @@
 		width: 100%;
 	}
 
+	input[type=checkbox],
+	input[type=radio] {
+		background: none;
+		width: auto;
+	}
+
 	button {
 		font-size: 1.1rem;
 		font-family: "Old Newspaper Font" !important;
-	}
-
-	input[type=radio] {
-		width: auto;
 	}
 
 	hr {
@@ -69,6 +67,10 @@
 		justify-content: center;
 		text-align: center;
 		vertical-align: middle;
+
+		input {
+			text-align: center;
+		}
 	}
 
 	.large {

@@ -9,9 +9,10 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 	};
 
 	static DEFAULT_OPTIONS = {
-		classes: ["shadowdark", "sheet"],
+		classes: ["shadowdark-app"],
 		window: {
 			resizable: true,
+			contentClasses: ["shadowdark", "sheet"],
 		},
 		form: {
 			submitOnChange: true,
@@ -26,18 +27,13 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 			"item-attack": ActorSheetSD.prototype._onRollAttack,
 			"toggle-lost": ActorSheetSD.prototype._onToggleLost,
 			"item-create": ActorSheetSD.prototype._onItemCreate,
-			// Effects-tab actions — five bare verbs all routed to the same
-			// helper, which dispatches on `target.dataset.action`.
-			"create": ActorSheetSD.prototype._onEffectControl,
-			"edit": ActorSheetSD.prototype._onEffectControl,
-			"delete": ActorSheetSD.prototype._onEffectControl,
-			"toggle": ActorSheetSD.prototype._onEffectControl,
-			"toggle-situational": ActorSheetSD.prototype._onEffectControl,
+			"effect-create": ActorSheetSD.prototype._onEffectControl,
+			"effect-edit": ActorSheetSD.prototype._onEffectControl,
+			"effect-delete": ActorSheetSD.prototype._onEffectControl,
+			"effect-toggle": ActorSheetSD.prototype._onEffectControl,
+			"effect-toggle-situational": ActorSheetSD.prototype._onEffectControl,
 		},
 	};
-
-	// No-op so v1 subclasses' `super.activateListeners(html)` calls don't throw.
-	activateListeners(html) {}
 
 	async emulateItemDrop(data) {
 		const item = await fromUuid(data.uuid);
@@ -73,13 +69,19 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 	}
 
 	/** @override */
+	async _preparePartContext(partId, context, options) {
+		context = await super._preparePartContext(partId, context, options);
+		// Expose the matching tab record to each tab part so its template can
+		// render `.active`. Same pattern as Foundry's scene-config / drawing-config.
+		if (context.tabs?.[partId]) context.tab = context.tabs[partId];
+		return context;
+	}
+
+	/** @override */
 	async _onRender(context, options) {
 		await super._onRender(context, options);
 
 		this._itemContextMenu(this.element);
-
-		// Bridge: dispatch to subclass activateListeners while they're still v1.
-		this.activateListeners($(this.element));
 	}
 
 	/** @override */
@@ -87,8 +89,7 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 		// The predefined-effects input creates an active effect on change
 		// rather than writing to a document field; short-circuit the submit.
 		if (event.target?.name === "predefinedEffects") {
-			const key = event.target.value;
-			shadowdark.effects.createPredefinedEffect(this.actor, key);
+			shadowdark.effects.createPredefinedEffectByName(this.actor, event.target.value);
 			return;
 		}
 		super._onChangeForm(formConfig, event);

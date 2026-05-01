@@ -1,0 +1,7 @@
+<nav class="SD-nav tabs flex0" data-group="primary">
+	{{#each tabs as |tab|}}
+		<a class="navigation-tab {{tab.cssClass}}" data-action="tab" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+			{{localize tab.label}}
+		</a>
+	{{/each}}
+</nav>

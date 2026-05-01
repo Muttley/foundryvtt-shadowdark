@@ -1,0 +1,22 @@
+<header class="SD-header flex0">
+	<img
+		class="portrait"
+		src="{{ actor.img }}"
+		data-edit="img"
+		data-action="editImage"
+		data-tooltip="{{ actor.name }}"
+		height="110"
+		width="110"
+	/>
+	<div class="shadowdark-logo">
+		<span>ShadowDark</span>
+	</div>
+	<div class="SD-title">
+		<input
+			name="name"
+			type="text"
+			value="{{ actor.name }}"
+			placeholder="{{localize 'SHADOWDARK.sheet.actor.placeholder.name'}}"
+		/>
+	</div>
+</header>
