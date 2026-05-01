@@ -616,8 +616,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 		// Test for Predefiend Effects
 		// Create effects when added through the predefined effects input
 		if (event.target?.name === "predefinedEffects") {
-			const key = event.target.value;
-			return shadowdark.effects.createPredefinedEffect(this.item, key);
+			return shadowdark.effects.createPredefinedEffectByName(this.item, event.target.value);
 		}
 
 		// Test for Effect Duration Change

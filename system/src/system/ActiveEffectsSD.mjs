@@ -105,6 +105,14 @@ export default class ActiveEffectsSD {
 	 * @param {Object} data - The item data of the item to be created
 	 * @returns {ActiveEffect}
 	 */
+	static async createPredefinedEffectByName(owner, name) {
+		if (!name) return;
+		const entry = Object.entries(CONFIG.SHADOWDARK.PREDEFINED_EFFECTS)
+			.find(([, def]) => def.name === name);
+		if (!entry) return shadowdark.error(`No effect found (${name})`);
+		return shadowdark.effects.createPredefinedEffect(owner, entry[0]);
+	}
+
 	static async createPredefinedEffect(owner, key) {
 		const data = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
 
