@@ -73,6 +73,7 @@
 
 - [#1237] Merge Spanish translation updates from Crowdin
 - [#1283] Migrate existing Character Spells to newer versions in Compendiums
+- [#1284] Migrate existing Character Talents to newer versions in Compendiums
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
 
