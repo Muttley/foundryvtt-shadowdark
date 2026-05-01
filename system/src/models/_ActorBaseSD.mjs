@@ -89,7 +89,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 			const totalUsed = i.system.slotsUsed - freeCarry;
 
 			// Seperate Treasure
-			if (i.system.isTreasure) {
+			if (i.system.treasure) {
 				slots.treasure += totalUsed;
 			}
 			else {

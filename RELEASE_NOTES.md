@@ -51,6 +51,7 @@
 - [#1247] Critical Success attacks do not roll double the dice for damage in v4
 - [#1248] Ensure 0 level NPCs have at least 1 HP *(deukalion)*
 - [#1257] Ammunition not being reduced when used for an attack in v4
+- [#1262] Legacy Weapon AEs not migrating properly in v4
 - [#1281] Some Magic Items in the compendiums are of the wrong types
 - [#1282] Fixed a bug in level up spell validation *(deukalion)*
 
@@ -76,6 +77,8 @@
 	* We can now map incoming class names to new ones if required.
 
 - [#1237] Merge Spanish translation updates from Crowdin
+- [#1283] Migrate existing Character Spells to newer versions in Compendiums
+- [#1284] Migrate existing Character Talents to newer versions in Compendiums
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
 
