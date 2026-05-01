@@ -745,6 +745,21 @@ export default class PlayerSD extends ActorBaseSD {
 			? await fromUuid(config.itemUuid)
 			: null;
 
+		// Check for broken wand
+		if (triggeringItem?.system?.isWand && triggeringItem?.system?.broken) {
+			return ui.notifications.error(
+				game.i18n.localize("SHADOWDARK.error.wand.broken")
+			);
+		}
+
+		// Check for spell lost
+		const wandLost = triggeringItem?.system?.spells?.find(s => s.uuid === spellUuid)?.lost;
+		if (spell.system.lost || wandLost) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.error.spells.lost")
+			);
+		}
+
 		// test if actor can cast
 		let canCast = this.isSpellCaster;
 		if (!triggeringItem?.system?.isSpell && this.spellcasting.allowAllItems) {
@@ -1086,13 +1101,13 @@ export default class PlayerSD extends ActorBaseSD {
 			}
 		}
 
-		// Roll the attack and post to chat
-		const roll = await shadowdark.dice.rollFromConfig(config);
-
 		if (weapon.usesAmmunition && config.attack.selectedAmmunition) {
 			const item = await fromUuid(config.attack.selectedAmmunition);
-			item.reduceAmmunition(1);
+			await item.reduceAmmunition(1);
 		}
+
+		// Roll the attack and post to chat
+		const roll = await shadowdark.dice.rollFromConfig(config);
 
 		return roll.success;
 
@@ -1154,6 +1169,12 @@ export default class PlayerSD extends ActorBaseSD {
 				game.i18n.localize("SHADOWDARK.error.general.item_uuid_not_found")
 			);
 		}
+		if (ability.system.lost === true) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.error.class_ability.lost")
+			);
+		}
+
 		config.actorId = this.parent.id;
 		config.itemUuid = abilityUuid;
 		await this.rollConfigGenerators.ability?.(config);
@@ -1166,7 +1187,7 @@ export default class PlayerSD extends ActorBaseSD {
 		// If the ability has limited uses, deduct
 		if (ability.system.limitedUses) {
 			if (ability.system.uses.available <= 0) {
-				return ui.notifications.error(
+				return ui.notifications.warn(
 					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
 					{permanent: false}
 				);
@@ -1174,7 +1195,7 @@ export default class PlayerSD extends ActorBaseSD {
 			else {
 				const newUsesAvailable = ability.system.uses.available - 1;
 
-				ability.update({
+				await ability.update({
 					"system.uses.available": Math.max(0, newUsesAvailable),
 				});
 			}
@@ -1186,7 +1207,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 			// lost on failure
 			if (!roll.success && ability.system.loseOnFailure) {
-				ability.update({"system.lost": true});
+				await ability.update({"system.lost": true});
 			}
 		}
 		else {

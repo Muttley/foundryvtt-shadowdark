@@ -23,4 +23,15 @@ export default class ClassAbilitySD extends BaseItemSD {
 
 		return Object.assign(super.defineSchema(), schema);
 	}
+
+	get isAbility() {
+		return true;
+	}
+
+	get subtext() {
+		const ability = game.i18n.format("SHADOWDARK.class-ability.ability.group", {group: this.group});
+		const uses = this.limitedUses ? `${this.uses.available} / ${this.uses.max}` : "";
+		return [ability, uses].filter(Boolean).join(", ");
+	}
+
 }

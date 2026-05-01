@@ -19,8 +19,7 @@
 			<div class="item-text-wrapper">
 				<span class="item-name">{{item.name}}</span>
 				<span class="item-subtext">
-					{{item.system.subtext}}
-					{{#if ammunitionName}}, {{ammunitionName}}{{/if}}
+					{{item.system.subtext}}{{#if ammunitionName}}, {{ammunitionName}}{{/if}}
 				</span>
 			</div>
 		</div>
@@ -63,7 +62,9 @@
 					<span>{{target.name}}</span>
 				</a>
 			</div>
-			<a class="apply-damage" data-action="apply-damage" data-target="target" data-tooltip="Apply damage to selected Targets"></a>
+			{{#if damageRoll.html}}
+				<a class="apply-damage" data-action="apply-damage" data-target="target" data-tooltip="Apply damage to selected Targets"></a>
+			{{/if}}
 		</div>
 	{{/if}}
 </div>
