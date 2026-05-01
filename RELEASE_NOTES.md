@@ -2,6 +2,7 @@
 
 ## Enhancements
 - [#41] Hook calls added to rolling functions. Documentation in compendium
+- [#277] Roll based chat cards have been overhauled with new look and features
 - [#915] Complete overhaul of rolling and Active Effects.
 	- All dice rolls now defined by a rollConfig object. Documentation in compendium
 	- Active Effects keys have reworked. Documentation in compendium
@@ -18,9 +19,11 @@
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
 - [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
+- [#1265] Monster Importer improvements to parsing and error handling *(allardhoeve)*
 - [#1200] Added Mac Command key support for fast-forward rolls *(Brittonlj)*
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 - [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
+- [#1288] Item Importer improvements to parsing and error handling *(allardhoeve)*
 
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
