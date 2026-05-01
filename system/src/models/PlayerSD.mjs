@@ -146,64 +146,6 @@ export default class PlayerSD extends ActorBaseSD {
 		return this.spellcasting.classes.length > 0;
 	}
 
-	get slotUsage() {
-		const slots = {
-			coins: 0,
-			gear: 0,
-			gems: 0,
-			treasure: 0,
-			total: 0,
-		};
-
-		// Coins. Work out how many slots all these coins are taking up.
-		const totalCoins = this.coins.gp + this.coins.sp + this.coins.cp;
-		const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
-		if (totalCoins > freeCoins) {
-			slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
-		}
-
-		// Gear and treasure. Only carried gear taking into account the free carry limits.
-		const freeCarrySeen = {};
-		let gemCount = 0;
-		for (const i of this.getPhysicalItems()) {
-			// Skip if gem
-			if (i.system.isGem) {
-				gemCount++;
-				continue;
-			}
-
-			// calculate free carry
-			let freeCarry = i.system.slots.free_carry;
-			if (Object.hasOwn(freeCarrySeen, i.name)) {
-				freeCarry = Math.max(0, freeCarry - freeCarrySeen[i.name]);
-				freeCarrySeen[i.name] += freeCarry;
-			}
-			else {
-				freeCarrySeen[i.name] = freeCarry;
-			}
-			freeCarry = freeCarry * i.system.slots.slots_used;
-			const totalUsed = i.system.slotsUsed - freeCarry;
-
-			// Seperate Treasure
-			if (i.system.isTreasure) {
-				slots.treasure += totalUsed;
-			}
-			else {
-				slots.gear += totalUsed;
-			}
-		}
-
-		// Gems
-		if (gemCount > 0) {
-			slots.gems = Math.ceil(gemCount / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
-		}
-
-		// Total
-		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
-
-		return slots;
-	}
-
 	/* ----------------------- */
 	/* Private Functions       */
 	/* ----------------------- */
