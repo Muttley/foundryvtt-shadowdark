@@ -12,9 +12,10 @@
 ## Features
 
 **Core Rule Book Content**
-- All Weapons, armor, gear
-- All Ancestries, Background, Classes, Deities
+- All Weapons, armor, gear and magic items
+- All Ancestries, Background, Classes, Deities, Patrons
 - All Talents with Roll Tables
+- Patron Boons with Roll Tables
 - Spells (Teir 1-5)
 - all 238 monsters from the core rules book
 
@@ -31,6 +32,14 @@
 - Wizard Mishap tier 1-3 Table
 - Macros for The Lost Citadel available: random beastman NPC, random ettercap NPC, random encounter check
 
+**SoloDark**
+- SoloDark rules as journals
+- SoloDark rolltables
+
+**Bonus Content**
+- Basilisk Warrior (preview from Cursed Scrolls zine #4)
+- Early versions of the Ranger and Bard classes
+
 **Sheets**
 - Automated checks with calculated modifiers:
 	- Attack checks (based on equipped weapons)
@@ -42,10 +51,14 @@
     - Light source item tracking, automatically sets the light settings for your tokens
 	- Selling of treasure and gems
 	- Items can be equipped, carried or stashed
+	- Ammunition tracking
+	- Automated rolls for learning spells from scrolls
+	- Cast spells from wands nad scrolls
 - Characters (Players)
     - Calculated HP (augmented by talents),
 	- Calculated AC (based on equipped armor)
     - Luck token tracking in normal or pulp mode
+	- Track and roll class special abilities
 - Monsters (NPCs)
 	- Fix HP or randomized by hit dice
 	- Basic attacks, spells, features,
@@ -67,6 +80,8 @@
 		- Weapon mastery calculations
     	- Additional damage dice during Backstab
 		- Spell advantage on named spells
+	- Item-specific bonuses that only apply when specific item equipped and/or used
+	- Active effects can be flagged as situational and can be toggled on/off as appropriate during dice rolls
 
 **Light source Tracker for GMs**
 - Track the remaining burn time of Light sources
@@ -82,9 +97,9 @@
 - Import monsters from source PDFs using the Monster Importer
 - Support for monster token image remapping from a custom module or supported product. e.g. Pathfinder Token Pack: Bestiaries module
 
-**Localization**
-- Full support for English and Swedish translations
-- Best effort support for French, German & Finnish translations.
+**Localization of User Interface**
+- Native support for English
+- Best effort support for Chinese (Traditional), Finnish, French, German, Korean, Portugeuese (Brazilian), Russian, Spanish and Swedish translations.
 - Please see the [Translation][5] information on our [Wiki][4] for details on how to help with existing translations, or with getting new languages added
 
 # Video Tutorial

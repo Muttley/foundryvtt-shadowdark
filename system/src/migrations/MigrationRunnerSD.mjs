@@ -367,7 +367,7 @@ export default class MigrationRunnerSD {
 
 		// If this is a brand new world then we don't need to do any migrations.
 		//
-		if (game.world.playtime === 0) {
+		if (this.currentVersion === -1) {
 			shadowdark.log(`Setting new world schema version to ${this.latestVersion}`);
 
 			await game.settings.set(
