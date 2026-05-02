@@ -1,3 +1,10 @@
+# v4.0.2
+
+## Bugfixes
+- [#1305] Zaldini the Red was missing his spellcasting talent completely
+
+---
+
 # v4.0.1
 
 ## Bugfixes
