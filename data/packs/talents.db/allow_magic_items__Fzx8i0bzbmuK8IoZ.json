@@ -1,33 +1,33 @@
 {
 	"_id": "Fzx8i0bzbmuK8IoZ",
 	"_key": "!items.effects!uMEh2Cwn7uKjEVSK.Fzx8i0bzbmuK8IoZ",
-	"changes": [
-		{
-			"key": "system.spellcasting.allowAllItems",
-			"mode": 2,
-			"priority": null,
-			"value": "true"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/sundries/scrolls/scroll-bound-green.webp",
 	"name": "Allow Magic Items",
 	"origin": "Compendium.shadowdark.talents.Item.uMEh2Cwn7uKjEVSK",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.spellcasting.allowAllItems",
+				"priority": null,
+				"type": "add",
+				"value": true
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

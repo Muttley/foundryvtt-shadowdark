@@ -1,6 +1,6 @@
 {
 	"_id": "peAz8xVvIeZ6SLHd",
-	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.eHzYmU6Sg5ZLr4GG.peAz8xVvIeZ6SLHd",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.y8IhCqOC8xJNynyB.peAz8xVvIeZ6SLHd",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.abilities.str.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 2

@@ -1,0 +1,22 @@
+{
+	"_id": "lIxYM8I3mhj5wSJi",
+	"_key": "!actors.items!x3L0onniGSB97CU7.lIxYM8I3mhj5wSJi",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/environment/people/group.webp",
+	"name": "Stealthy",
+	"system": {
+		"description": "<p>Once per day, you can become invisible for 3 rounds.</p><p>@UUID[Compendium.shadowdark.conditions.Item.piycdXLudXTFLG0k]{Condition: Invisible (Stealthy)}</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

@@ -1,6 +1,6 @@
 {
 	"_id": "ZjpQVS9L1baZZ2PF",
-	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.9IM4SDWD0HsdFNav.ZjpQVS9L1baZZ2PF",
+	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.l4qJ5oTNgfwQbdbL.ZjpQVS9L1baZZ2PF",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.spell.advantage.magic-missile",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1
