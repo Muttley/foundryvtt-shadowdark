@@ -27,6 +27,42 @@ export default class ItemImporterSD extends ImporterSD {
 	static TRAIT_KEYWORDS = ["Bonus", "Benefit", "Curse", "Personality"];
 
 	/**
+	 * Patterns that map trait text to predefined Active Effects.
+	 * Each entry has a regex pattern, a predefined effect key, and
+	 * optionally a fixed value (otherwise extracted from capture group 1).
+	 */
+	static BENEFIT_EFFECT_PATTERNS = [
+		{
+			pattern: /\+(?<value>\d+)\s+bonus\s+to\s+(?:your\s+)?armor\s+class/i,
+			effect: "acBonus",
+		},
+		{
+			pattern: /Strength\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityStr",
+		},
+		{
+			pattern: /Dexterity\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityDex",
+		},
+		{
+			pattern: /Constitution\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityCon",
+		},
+		{
+			pattern: /Intelligence\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityInt",
+		},
+		{
+			pattern: /Wisdom\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityWis",
+		},
+		{
+			pattern: /Charisma\s+stat\s+becomes\s+(?<value>\d+)/i,
+			effect: "permanentAbilityCha",
+		},
+	];
+
+	/**
 	 * Tests if a line starts a trait section (case-insensitive).
 	 * @param {string} line
 	 * @returns {boolean}
@@ -131,8 +167,27 @@ export default class ItemImporterSD extends ImporterSD {
 		return {
 			value: parseInt(match[1], 10),
 			text: bonus.text,
-			isMithral: /mithral/i.test(bonus.text),
 		};
+	}
+
+	/**
+	 * Scans trait text against BENEFIT_EFFECT_PATTERNS and returns
+	 * matched predefined effects with their values.
+	 * @param {{ type: string, text: string }[]} traits
+	 * @returns {{ effect: string, value: number }[]}
+	 */
+	_matchBenefitEffects(traits) {
+		const matched = [];
+		for (const trait of traits) {
+			for (const entry of ItemImporterSD.BENEFIT_EFFECT_PATTERNS) {
+				const match = trait.text.match(entry.pattern);
+				if (match) {
+					const value = parseInt(match.groups.value, 10);
+					matched.push({ effect: entry.effect, value });
+				}
+			}
+		}
+		return matched;
 	}
 
 	/**
@@ -153,10 +208,21 @@ export default class ItemImporterSD extends ImporterSD {
 	}
 
 	/**
+	 * Normalises OpenShadowdark format by uppercasing the first line so the
+	 * CRB parser can detect it as an all-caps name.
+	 * @param {string[]} lines - Mutated in place
+	 */
+	_normalizeOpenShadowdark(lines) {
+		lines[0] = lines[0].toUpperCase();
+	}
+
+	/**
 	 * Parses item text into structured data without creating any documents.
-	 * Collects errors from all parsing stages and throws once with the full list.
+	 * Supports CRB format (all-caps name, no blank lines) and OpenShadowdark
+	 * format (title-case name, blank line after title). Collects errors from
+	 * all parsing stages and throws once with the full list.
 	 * @param {string} itemText - Raw pasted item text
-	 * @returns {object} { name, flavorText, traits, bonusHint, description }
+	 * @returns {object} { name, flavorText, traits, bonusHint, benefitEffects, description }
 	 * @throws {Error} With .details array listing all parse failures
 	 */
 	_parseItem(itemText) {
@@ -172,6 +238,15 @@ export default class ItemImporterSD extends ImporterSD {
 			throw error;
 		}
 
+		// OpenShadowdark format: title-case first line followed by a blank line.
+		// Normalise by uppercasing the first line so the CRB parser handles the rest.
+		const isOpenShadowdark = /[a-z]/.test(lines[0])
+			&& /^[^\n]*\n\s*\n/.test(dehyphenated.trimStart());
+
+		if (isOpenShadowdark) {
+			this._normalizeOpenShadowdark(lines);
+		}
+
 		const errors = [];
 
 		const name = this._parseName(lines);
@@ -182,6 +257,7 @@ export default class ItemImporterSD extends ImporterSD {
 		const flavorText = this._parseFlavorText(lines);
 		const traits = this._parseTraits(lines);
 		const bonusHint = this._parseBonusHint(traits);
+		const benefitEffects = this._matchBenefitEffects(traits);
 		const description = this._buildDescription(flavorText, traits);
 
 		if (errors.length > 0) {
@@ -190,7 +266,7 @@ export default class ItemImporterSD extends ImporterSD {
 			throw error;
 		}
 
-		return { name, flavorText, traits, bonusHint, description };
+		return { name, flavorText, traits, bonusHint, benefitEffects, description };
 	}
 
 	/** @override */
@@ -250,13 +326,15 @@ export default class ItemImporterSD extends ImporterSD {
 
 	/**
 	 * Builds a Foundry Armor item object from parsed data and a base armor.
+	 * Mithral items have their armor properties stripped.
 	 * @param {string} name - Item name
 	 * @param {string} description - HTML description
-	 * @param {object} bonusHint - { value, text, isMithral }
+	 * @param {object} bonusHint - { value, text }
 	 * @param {object} baseArmor - Base armor from compendium
 	 * @returns {object}
 	 */
 	_buildArmorObj(name, description, bonusHint, baseArmor) {
+		const isMithral = /mithral/i.test(bonusHint.text);
 		return {
 			...baseArmor,
 			name,
@@ -267,7 +345,7 @@ export default class ItemImporterSD extends ImporterSD {
 					...baseArmor.system.ac,
 					modifier: bonusHint.value,
 				},
-				properties: bonusHint.isMithral
+				properties: isMithral
 					? [] : baseArmor.system.properties,
 				description,
 				magicItem: true,
@@ -283,7 +361,7 @@ export default class ItemImporterSD extends ImporterSD {
 	 * @returns {object} { itemObj, effects }
 	 */
 	async _resolveItemType(parsed) {
-		const { name, description, bonusHint } = parsed;
+		const { name, description, bonusHint, benefitEffects } = parsed;
 		const effects = [];
 
 		// Bonus trait with +N: check compendium weapons, then armor
@@ -303,6 +381,12 @@ export default class ItemImporterSD extends ImporterSD {
 						"weaponDamageBonus", bonusHint.value
 					)
 				);
+				// Weapon may also have benefit effects (e.g. Armor of the Oni)
+				for (const be of benefitEffects) {
+					effects.push(
+						this._buildPredefinedEffect(be.effect, be.value)
+					);
+				}
 				return {
 					itemObj: this._buildWeaponObj(
 						name, description, bonusHint, matchedWeapon
@@ -318,6 +402,11 @@ export default class ItemImporterSD extends ImporterSD {
 					.includes(piece.name.toLowerCase())
 			);
 			if (matchedArmor) {
+				for (const be of benefitEffects) {
+					effects.push(
+						this._buildPredefinedEffect(be.effect, be.value)
+					);
+				}
 				return {
 					itemObj: this._buildArmorObj(
 						name, description, bonusHint, matchedArmor
@@ -333,6 +422,42 @@ export default class ItemImporterSD extends ImporterSD {
 				+ " or armor was found in the compendium.",
 			];
 			throw error;
+		}
+
+		// Benefit-based AC bonus: create as Armor with base 0.
+		// Use modifier field only for static bonuses — no AE, to avoid doubling.
+		// No ability attribute: bonus armor items don't add an ability mod.
+		const acEffect = benefitEffects.find(
+			be => be.effect === "acBonus"
+		);
+		if (acEffect) {
+			for (const be of benefitEffects) {
+				if (be.effect === "acBonus") continue;
+				effects.push(
+					this._buildPredefinedEffect(be.effect, be.value)
+				);
+			}
+			return {
+				itemObj: {
+					name,
+					type: "Armor",
+					system: {
+						ac: { attribute: "", base: 0, modifier: acEffect.value },
+						baseArmor: "",
+						properties: [],
+						description,
+						magicItem: true,
+					},
+				},
+				effects,
+			};
+		}
+
+		// Build benefit effects for Basic items too
+		for (const be of benefitEffects) {
+			effects.push(
+				this._buildPredefinedEffect(be.effect, be.value)
+			);
 		}
 
 		// Default: Basic magic item
