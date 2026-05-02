@@ -54,6 +54,7 @@
 - [#1262] Legacy Weapon AEs not migrating properly in v4
 - [#1281] Some Magic Items in the compendiums are of the wrong types
 - [#1282] Fixed a bug in level up spell validation *(deukalion)*
+- [#1300] Effect items with malformed combatTime values fail to migrate to new schema
 
 ## Chores
 - [#369] Migrated to using data models for actors and items
