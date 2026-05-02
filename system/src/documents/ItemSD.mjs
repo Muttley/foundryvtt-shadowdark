@@ -198,7 +198,7 @@ export default class ItemSD extends foundry.documents.Item {
 
 	async reduceAmmunition(amount) {
 		const newAmount = Math.max(0, this.system.quantity - amount);
-		this.update({"system.quantity": newAmount});
+		await this.update({"system.quantity": newAmount});
 	}
 
 

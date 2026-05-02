@@ -75,6 +75,8 @@ export default class WeaponSD extends PhysicalItemSD {
 	}
 
 	get subtext() {
-		return `${this.range.titleCase()}`;
+		const range = Handlebars.helpers.fromConfig("RANGES", this.range);
+		const properties = this.propertyNames.filter(Boolean).join(", ");
+		return [range, this.handedness, properties].filter(Boolean).join(", ");
 	}
 }

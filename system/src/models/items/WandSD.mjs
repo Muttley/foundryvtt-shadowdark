@@ -31,18 +31,23 @@ export default class WandSD extends PhysicalItemSD {
 	}
 
 	async toggleSpellLost(spellUuid) {
+		const index = this.spells.findIndex(s => s.uuid === spellUuid);
+		if (index === -1) return;
+		return this.setSpellLost(spellUuid, !this.spells[index].lost);
+	}
+
+	async setSpellLost(spellUuid, lost=true, criticalFailure=false) {
 		const spells = this.spells.map(s => foundry.utils.deepClone(s));
-
-		// find and reset spell
-		if (spellUuid) {
-			const spell = spells.find(s => s.uuid === spellUuid);
-			if (spell) spell.lost = !spell.lost;
+		const spell = spells.find(s => s.uuid === spellUuid);
+		if (!spell) {
+			return console.error(game.i18n.localize("SHADOWDARK.error.spells.spell_not_found"), spellUuid);
 		}
-		else {
-			// reset all spells if no spellUuid is given
-			for (const spell of spells) spell.lost = false;
-		}
-
-		return this.parent.update({"system.spells": spells});
+		spell.lost = lost;
+		return this.parent.update({
+			system: {
+				spells: spells,
+				broken: criticalFailure,
+			},
+		});
 	}
 }

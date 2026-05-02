@@ -48,7 +48,7 @@ export default class ShadowdarkMacro {
 
 	static async rollItemMacro(itemName) {
 		const speaker = ChatMessage.getSpeaker();
-		const options = {skipPrompt: event.shiftKey};
+		const config = {skipPrompt: event.shiftKey};
 
 		// Active actor, or inactive actor + token on scene allowed
 		if (!(speaker.actor && speaker.scene)) {
@@ -59,10 +59,10 @@ export default class ShadowdarkMacro {
 
 		// get actor using macro
 		let actor = game.actors.get(speaker.actor);
+		if (!actor?.system?.isPC) return;
 
 		// Get items matching name on the macro
-		const items = actor ? actor.items.filter( x => x.name === itemName) : [];
-		const item = items[0] ?? undefined;
+		const items = actor.items.filter(i => i.name === itemName);
 
 		// no items of itemName found on actor
 		if (items.length === 0) {
@@ -74,8 +74,19 @@ export default class ShadowdarkMacro {
 			);
 		}
 
+		// multiple items of itemName found on actor. Warn, then use first found.
+		if (items.length > 1) {
+			ui.notifications.warn(
+				game.i18n.format("SHADOWDARK.hotbar.moreThanOneItemWithName", {
+					actorName: actor.name,
+					itemName,
+				})
+			);
+		}
+		const item = items[0];
+
 		// special case for light sources
-		if (items[0]?.system?.light?.isSource === true) {
+		if (item?.system?.light?.isSource === true) {
 
 			// turn off any active lights
 			let lightActive = false;
@@ -88,7 +99,7 @@ export default class ShadowdarkMacro {
 
 			// else turn on most used up light source making itemName
 			if (lightActive === false) {
-				let lightSource = items[0];
+				let lightSource = item;
 				items.forEach(x => {
 					if (x.system.light.remainingSecs < lightSource.system.remainingSecs) {
 						lightSource = x;
@@ -96,75 +107,52 @@ export default class ShadowdarkMacro {
 				});
 				await lightSource.parent.sheet._toggleLightSource(lightSource);
 			}
-			return;
 		}
 
-		// multiple items of itemName found on actor. Warn, then use first found.
-		if (items.length > 1) {
-			ui.notifications.warn(
-				game.i18n.format("SHADOWDARK.hotbar.moreThanOneItemWithName", {
-					actorName: actor.name,
-					itemName,
-				})
-			);
-		}
+		// special case for wands
+		else if (item.system.isWand) {
 
-		// Cast spell or wand or scroll
-		// TODO multi spell wands don't play nice here
-		if (items[0].system.isWand) {
-			const wand = items[0];
-			const firstSpell = (wand.system.spells ?? []).find(s => !s.lost);
-			if (wand.system.broken || !firstSpell) {
-				ui.notifications.warn(
-					game.i18n.format("SHADOWDARK.hotbar.spellLost", {
-						actorName: actor.name,
-						itemName,
-					})
-				);
-				return;
-			}
-			actor.system.castSpell(firstSpell.uuid, {cast: {item: wand.uuid}, ...options});
-		}
-		else if (items[0].system.isSpell || items[0].system.isScroll) {
-			if (items[0].system.lost === true) {
-				ui.notifications.warn(
-					game.i18n.format("SHADOWDARK.hotbar.spellLost", {
-						actorName: actor.name,
-						itemName,
-					})
+			const availableSpells = item.system.spells.filter(s => !s.lost);
+			if (availableSpells.length === 0) {
+				return ui.notifications.warn(
+					game.i18n.format("SHADOWDARK.hotbar.wandAllSpellsLost", { itemName })
 				);
 			}
-			actor.system.castSpell(items[0].system.spellUuid ?? items[0]._id, options);
-		}
 
-		// Use class ability
-		else if (items[0].type === "Class Ability") {
-			if (items[0].system.lost === true) {
-				ui.notifications.warn(
-					game.i18n.format("SHADOWDARK.hotbar.abilityLost", {
-						actorName: actor.name,
-						itemName,
-					})
-				);
+			let spellUuid;
+			if (availableSpells.length === 1) {
+				spellUuid = availableSpells[0].uuid;
 			}
-			actor.useAbility(items[0]._id, options);
+			else {
+				const spellObjs = await Promise.all(
+					availableSpells.map(s => fromUuid(s.uuid))
+				);
+
+				const optionsHtml = spellObjs
+					.map((s, i) => `<option value="${availableSpells[i].uuid}">${s?.name ?? availableSpells[i].uuid}</option>`)
+					.join("");
+
+				spellUuid = await foundry.applications.api.DialogV2.prompt({
+					window: { title: game.i18n.localize("SHADOWDARK.dialog.effect.choice.spell") },
+					content: `<select name="spell">${optionsHtml}</select>`,
+					ok: {
+						label: game.i18n.localize("SHADOWDARK.dialog.general.select"),
+						callback: (_event, button) => button.form.elements.spell.value,
+					},
+				});
+			}
+			if (!spellUuid) return;
+
+			actor.system.castSpell(spellUuid, { itemUuid: item.uuid, ...config});
 		}
 
-		// Roll weapon attack
-		else if (items[0].type === "Weapon") {
-
-			if (item.system.isVersatile) options.handedness = "1h";
-
-			actor.rollAttack(items[0]._id, options);
+		else if (item.system.isScroll) {
+			actor.system.castSpell(item.system?.spellUuid, {itemUuid: item.uuid, ...config});
 		}
-
-		else if (items[0].type === "Potion") {
-			actor.usePotion(items[0]._id, options);
-		}
-
-		// Show basic item
-		else {
-			items[0].sheet.render(true);
-		}
+		else if (item.system.isSpell) actor.system.castSpell(item.uuid, config);
+		else if (item.system.isAbility) actor.system.useAbility(item.uuid, config);
+		else if (item.system.isWeapon) actor.system.rollAttack(item.uuid, config);
+		else if (item.type === "Potion") actor.usePotion(item._id);
+		else item.sheet.render(true);
 	}
 }

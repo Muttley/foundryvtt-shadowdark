@@ -24,7 +24,7 @@ export function applyAdvantage(formula, adv) {
  * @param {string} formula // roll formula
  * @returns {string} // new roll formula
  */
-export function applyCriticalHit(formula, multiplier) {
+export function applyCriticalHit(formula, multiplier=2) {
 	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/ig, function(match) {
 		if (match.startsWith("d")) {
 			let count = Number(multiplier);
@@ -116,7 +116,7 @@ export function initializeD20Check(config={}) {
 }
 
 /**
- * Used to resolve deterministic roll formulas using provided roll data
+ * Used to cleanup and resolve deterministic roll formulas using provided roll data
  * @param {string} formula 			Roll formula to resolve
  * @param {*} rollData 				Actor rolldata
  * @param {*} forceDeterministic 	Return only deterministic results
@@ -139,6 +139,24 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 		return null;
 	}
 	else {
+		// for non-deterministic formulas try to reduce deterministic dice/face expressions
+		for (const term of r.terms) {
+			try {
+				// dice number
+				if (term._number instanceof Roll && term._number.isDeterministic) {
+					term._number.evaluateSync();
+					term.number = term._number.total;
+				}
+				// die faces
+				if (term._faces instanceof Roll && term._faces.isDeterministic) {
+					term._faces.evaluateSync();
+					term.faces = term._faces.total;
+				}
+			}
+			catch(err) {
+				console.error(err);
+			}
+		}
 		return r.formula;
 	}
 }
@@ -153,21 +171,24 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 export async function roll(config, rolldata={}) {
 	if ( !config?.formula) throw new Error("Missing required property: config.formula");
 
-	// apply advantage or disadvantage
-	if (config.advantage) {
-		config.formula = applyAdvantage(config.formula, config.advantage);
+	if (!config.reroll) {
+		// apply advantage or disadvantage
+		if (config.advantage) {
+			config.formula = applyAdvantage(config.formula, config.advantage);
+		}
+
+		if (config.type === "damage") {
+			// double base damage on critical hit
+			if (config.criticalHit) {
+				config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
+			}
+			// apply momentum mode
+			if (game.settings.get("shadowdark", "useMomentumMode")) {
+				config.formula = applyExploding(config.formula);
+			}
+		}
 	}
 
-	if (config.type === "damage") {
-		// double base damage on critical hit
-		if (config.criticalHit) {
-			config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
-		}
-		// apply momentum mode
-		if (game.settings.get("shadowdark", "useMomentumMode")) {
-			config.formula = applyExploding(config.formula);
-		}
-	}
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
@@ -191,12 +212,11 @@ export async function rollDamageFromMessage(msg) {
 
 	const mainRoll = msg.getRoll("main");
 
-	config.damageRoll.type = "damage";
+	config.damageRoll.type = config.damageRoll.type ?? "damage";
 	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
-	config.damageRoll.criticalMultiplier = mainRoll.options.criticalMultiplier;
 	const damageRoll = await roll(config.damageRoll, actor.getRollData());
 
-	const content = await shadowdark.chat.renderRollCard(config, [mainRoll, damageRoll]);
+	const content = await shadowdark.chat.renderRollHTML(config, [mainRoll, damageRoll]);
 
 	// update message with new roll and content
 	await msg.update({rolls: [...msg.rolls, damageRoll]});
@@ -206,7 +226,68 @@ export async function rollDamageFromMessage(msg) {
 		);
 	}
 	else {
-		msg.update({content});
+		await msg.update({content});
+		shadowdark.utils.diceSound(true);
+	}
+}
+
+/**
+ * Rerolls a main or damage roll from an existing chat message.
+ * Main reroll creates a new message; damage reroll updates the existing one.
+ * @param {ChatMessage} msg Chat message to reroll from
+ * @param {string} rollType "main" or "damage"
+ */
+export async function rerollFromMessage(msg, rollType) {
+	const config = msg?.rollConfig;
+	if (!config) {
+		console.error("Error: No roll config found on message");
+		return;
+	}
+	const actor = game.actors.get(config.actorId);
+
+	if (!game.user.isGM) {
+		if (actor.system.hasLuckToken) {
+			await actor.system.useLuckToken(true);
+		}
+		else {
+			ui.notifications.warn("No luck token available");
+			return;
+		}
+	}
+
+	if (rollType === "main") {
+		// modify config
+		config.mainRoll.reroll = true;
+		const result = await rollFromConfig(config);
+
+		// Reset lost spells and broken wands on a reroll success
+		if (config?.cast?.spellUuid) {
+			const spell = await fromUuid(config?.cast?.spellUuid);
+
+			// Revert wand spell and unbreak wand
+			if (config?.cast?.spellUuid !== config?.itemUuid) {
+				const triggeringItem = await fromUuid(config?.itemUuid);
+				if (triggeringItem?.system?.isWand) {
+					triggeringItem?.system?.setSpellLost(
+						spell?.uuid, !result?.success, result?.criticalFailure
+					);
+				}
+			}
+			// Revert spell
+			else if (spell) {
+				await spell.update({"system.lost": !result?.success});
+			}
+		}
+
+	}
+	else if (rollType === "damage") {
+		config.damageRoll.reroll = true;
+		const updatedRolls = msg.rolls.filter(r => r.options?.type !== "damage");
+		await msg.update({
+			"rolls": updatedRolls,
+			"flags.shadowdark.rollConfig": config,
+		});
+		await rollDamageFromMessage(msg);
 	}
 }
 
@@ -220,7 +301,7 @@ export async function rollDamageFromMessage(msg) {
 		rollingMode: {option}
  * @returns {bool} /returns false if closed without submit
  */
-export async function rollDialog(config, dataFunction) {
+export async function rollDialog(config) {
 
 	// get global role default if rollMode not set
 	config.rollMode ??= game.settings.get("core", "rollMode");
@@ -231,7 +312,7 @@ export async function rollDialog(config, dataFunction) {
 	if (config.skipPrompt) return true;
 
 	// Show roll prompt and wait for close
-	const dialog = new shadowdark.apps.RollDialogSD(config, dataFunction);
+	const dialog = new shadowdark.apps.RollDialogSD(config);
 	dialog.render({force: true});
 
 	const result = await new Promise(resolve => {

@@ -43,6 +43,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				"use-ability": PlayerSheetSD.prototype._onUseAbility,
 				"use-potion": PlayerSheetSD.prototype._onUsePotion,
 			},
+			dragDrop: [
+				{dragSelector: ".item-list .item"},
+				{dragSelector: ".attack[data-item-uuid]"},
+			],
 		},
 		{ inplace: false }
 	);
@@ -226,6 +230,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 	/** @override */
 	async _onDropItem(event, item) {
+		if (item?.parent?.uuid === this.actor.uuid) {
+			return super._onDropItem(event, item);
+		}
+
 		if (item.type === "Spell") return this._createItemFromSpellDialog(item);
 
 		if (this._effectDropNotAllowed(item)) return false;
@@ -605,6 +613,23 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			"system.equipped": !item.system.equipped,
 			"system.stashed": false,
 		}]);
+
+		if (item.system.isAShield && item.system.equipped) {
+			const updates = [];
+			for (const pi of this.actor.system.getPhysicalItems()) {
+				if (pi.system.isWeapon && pi.system.equipped && pi.system.handedness === "2h") {
+					if (pi.system.isVersatile) {
+						updates.push({ "_id": pi.id, "system.handedness": "1h" });
+					}
+					else {
+						updates.push({ "_id": pi.id, "system.equipped": false });
+					}
+				}
+			}
+			if (updates.length > 0) {
+				await this.actor.updateEmbeddedDocuments("Item", updates);
+			}
+		}
 	}
 
 	async _onToggleHandedness(event, target) {

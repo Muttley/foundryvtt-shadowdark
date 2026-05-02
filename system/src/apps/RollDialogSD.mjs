@@ -27,10 +27,9 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		},
 	};
 
-	constructor(config, dataFunction=null, options = {}) {
+	constructor(config, options = {}) {
 		super(options);
 		this.config = config;
-		this.dataFunction = dataFunction;
 		this.submitted = false;
 	}
 
@@ -87,9 +86,20 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 			};
 		}
 
-		context.ammunitionOptions = [];
-		if (this.config.ammunitionOptions?.length > 0) {
-			context.ammunitionOptions = this.config.ammunitionOptions;
+		// Ammo Calculations
+		if (this.config.attack?.ammunitionOptions?.length > 0) {
+			context.ammunitionOptions = [];
+			for (const uuid of this.config.attack.ammunitionOptions) {
+				const item = await fromUuid(uuid);
+				if (!item) continue;
+				context.ammunitionOptions.push({
+					uuid,
+					name: item.name,
+					quantity: item.system.quantity,
+					perSlot: item.system.slots.per_slot,
+					isDefault: uuid === this.config.attack.defaultAmmunitionUuid,
+				});
+			}
 		}
 
 		// Prepare situational options
@@ -97,6 +107,7 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		if (this.config.situational?.length > 0) {
 			for (const uuid of this.config.situational) {
 				const effect = await fromUuid(uuid);
+				if (!effect) continue;
 				// Check if this option is in the selected array
 				const isSelected = this.config.selected?.includes(uuid) ?? false;
 				context.situationalOptions.push({
@@ -150,12 +161,9 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 
 		this.config.selected = selectedArray;
 
-		// Run dataFunction to regenerate config
-		if (typeof this.dataFunction === "function") {
-			await this.dataFunction();
-			// Re-render the dialog with updated config
-			await this.render(true);
-		}
+		const actor = game.actors.get(this.config.actorId);
+		await actor?.system.rollConfigGenerators[this.config.type]?.(this.config);
+		await this.render(true);
 	}
 
 	/**
@@ -170,16 +178,24 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 
 		// Update config.mainRoll.formula if present
 		if (formData["mainRoll.formula"] !== undefined && this.config?.mainRoll) {
+			if (formData["mainRoll.formula"] !== this.config.mainRoll.formula) {
+				this.config.mainRoll.modified = true;
+				const fr = `${game.i18n.format("SHADOWDARK.roll.tooltip.formula_replaced",
+					{ formula: this.config.mainRoll.formula })}, `;
+				this.config.mainRoll.tooltips = fr.concat(this.config.mainRoll.tooltips);
+			}
 			this.config.mainRoll.formula = formData["mainRoll.formula"];
-			this.config.mainRoll.modified =
-				this.config.mainRoll.formula !== this.config.mainRoll.formulaBackup;
 		}
 
 		// Update config.damageRoll.formula if present
 		if (formData["damageRoll.formula"] !== undefined && this.config?.damageRoll) {
+			if (formData["damageRoll.formula"] !== this.config.damageRoll.formula) {
+				this.config.damageRoll.modified = true;
+				const fr = `${game.i18n.format("SHADOWDARK.roll.tooltip.formula_replaced",
+					{ formula: this.config.damageRoll.formula })}, `;
+				this.config.damageRoll.tooltips = fr.concat(this.config.damageRoll.tooltips);
+			}
 			this.config.damageRoll.formula = formData["damageRoll.formula"];
-			this.config.damageRoll.modified =
-				this.config.damageRoll.formula !== this.config.damageRoll.formulaBackup;
 		}
 
 		// Convert advantage string to number and update config
@@ -195,8 +211,7 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 		}
 
 		if (formData.ammunitionId !== undefined) {
-			this.config.selectedAmmunition =
-				this.config.ammunitionOptions.find(x => x._id === formData.ammunitionId);
+			this.config.attack.selectedAmmunition = formData.ammunitionId;
 		}
 
 		if (formData.rollMode !== undefined) {

@@ -315,8 +315,8 @@ export default class ActiveEffectsSD {
 				const docs = await owner.createEmbeddedDocuments("ActiveEffect", [{
 					disabled: li.dataset.effectType === "inactive",
 					img: "icons/commodities/tech/cog-steel-grey.webp",
-					label: "New Effect",
-					name: "New Effect",
+					label: game.i18n.localize("SHADOWDARK.effect.new"),
+					name: game.i18n.localize("SHADOWDARK.effect.new"),
 					origin: owner.uuid,
 				}]);
 

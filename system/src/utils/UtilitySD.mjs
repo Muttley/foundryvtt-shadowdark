@@ -99,10 +99,10 @@ export default class UtilitySD {
 	}
 
 
-	static diceSound() {
+	static diceSound(playToAllUsers=false) {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		game.audio.play(src, {volume: 1});
+		foundry.audio.AudioHelper.play({src, volume: 1}, playToAllUsers);
 	}
 
 
@@ -169,24 +169,26 @@ export default class UtilitySD {
 
 
 	static async getFromUuid(uuid) {
-		const itemObj = await fromUuid(uuid);
-		if (itemObj) {
-			return itemObj;
+		try {
+			const itemObj = await fromUuid(uuid);
+			if (itemObj) return itemObj;
 		}
-		else {
-			return {name: "[Invalid ID]", uuid: uuid};
+		catch(error) {
+
 		}
+		return {name: "[Invalid ID]", uuid: uuid};
 	}
 
 
 	static getFromUuidSync(uuid) {
-		const itemObj = fromUuidSync(uuid);
-		if (itemObj) {
-			return itemObj;
+		try {
+			const itemObj = fromUuidSync(uuid);
+			if (itemObj) return itemObj;
 		}
-		else {
-			return {name: "[Invalid ID]", uuid: uuid};
+		catch(error) {
+
 		}
+		return {name: "[Invalid ID]", uuid: uuid};
 	}
 
 

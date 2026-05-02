@@ -285,7 +285,7 @@ export default class ActorSheetSD extends foundry.applications.api.HandlebarsApp
 		const ability = target.dataset.ability;
 		if (!ability) return;
 		const skipPrompt = event.shiftKey ? true : false;
-		this.actor.system.rollAbilityCheck(ability, {skipPrompt});
+		this.actor.system.rollStatCheck(ability, {skipPrompt});
 	}
 
 	async _onRollAttack(event, target) {

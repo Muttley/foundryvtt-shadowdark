@@ -1,5 +1,4 @@
 import { CanvasHooks } from "./hooks/canvas.mjs";
-import { ChatMessageHooks } from "./hooks/chat-messages.mjs";
 import { CombatHooks } from "./hooks/combat.mjs";
 import { DropLightsourceHooks } from "./hooks/drop-lightsource-on-scene.mjs";
 import { EffectHooks } from "./hooks/effects.mjs";
@@ -21,18 +20,6 @@ export const HooksSD = {
 			NPCHooks,
 			TargetingHooks,
 			hotbarHooks,
-		];
-
-		for (const listener of listeners) {
-			listener.attach();
-		}
-	},
-};
-
-export const HooksImmediate = {
-	attach: () => {
-		const listeners = [
-			ChatMessageHooks,
 		];
 
 		for (const listener of listeners) {

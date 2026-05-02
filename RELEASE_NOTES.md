@@ -2,6 +2,7 @@
 
 ## Enhancements
 - [#41] Hook calls added to rolling functions. Documentation in compendium
+- [#277] Roll based chat cards have been overhauled with new look and features
 - [#915] Complete overhaul of rolling and Active Effects.
 	- All dice rolls now defined by a rollConfig object. Documentation in compendium
 	- Active Effects keys have reworked. Documentation in compendium
@@ -18,9 +19,12 @@
 - [#1216] Allow Versatile weapons to be switched between 1H and 2H in the inventory so correct damage is displayed/rolled
 - [#1252] Restore unidentified item name and description when identified toggled off
 - [#1261] Migrate MonsterImporter, ItemImporter, and SpellImporter to v2 *(allardhoeve)*
+- [#1265] Monster Importer improvements to parsing and error handling *(allardhoeve)*
 - [#1200] Added Mac Command key support for fast-forward rolls *(Brittonlj)*
 - [#1268] Added magic items from core rules and Cursed Scrolls 1-3 *(Ashley Towner)*
 - [#1277] Scrolls and Wands now link directy to spells. Wands can have multiple spells.
+- [#1288] Item Importer improvements to parsing and error handling *(allardhoeve)*
+- [#1295] Equiping a Shield unequips 2 handed weapons or switches to 1 handed. Equiping a 2 handed weapon, removes shields
 
 ## Bugfixes
 - [#1068] Blowgun weapon attack can now be rolled
@@ -47,6 +51,7 @@
 - [#1247] Critical Success attacks do not roll double the dice for damage in v4
 - [#1248] Ensure 0 level NPCs have at least 1 HP *(deukalion)*
 - [#1257] Ammunition not being reduced when used for an attack in v4
+- [#1262] Legacy Weapon AEs not migrating properly in v4
 - [#1281] Some Magic Items in the compendiums are of the wrong types
 - [#1282] Fixed a bug in level up spell validation *(deukalion)*
 
@@ -72,6 +77,8 @@
 	* We can now map incoming class names to new ones if required.
 
 - [#1237] Merge Spanish translation updates from Crowdin
+- [#1283] Migrate existing Character Spells to newer versions in Compendiums
+- [#1284] Migrate existing Character Talents to newer versions in Compendiums
 
 *Many thanks to **Ashley Towner <git@ashtowner.com>**, **allardhoeve**, **andrewbeard**, **deukalion**, **Brittonlj**, **johncarney**, **Henry Malinowski**, and **puradox** for contributing to this release*
 
