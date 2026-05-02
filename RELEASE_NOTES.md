@@ -1,3 +1,10 @@
+# v4.0.1
+
+## Bugfixes
+- [#1303] Pregen characters in system compendiums missing new versions of talents
+
+---
+
 # v4.0.0
 
 ## Enhancements

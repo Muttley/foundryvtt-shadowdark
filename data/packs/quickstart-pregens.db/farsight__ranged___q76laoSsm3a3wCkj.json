@@ -1,0 +1,23 @@
+{
+	"_id": "q76laoSsm3a3wCkj",
+	"_key": "!actors.items!4gxXdPgUd0ofz89A.q76laoSsm3a3wCkj",
+	"effects": [
+		"p0eEwLNQh9oSEtEj"
+	],
+	"flags": {
+	},
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
+	"name": "Farsight (Ranged)",
+	"system": {
+		"description": "<p>You get a +1 bonus to attack rolls with ranged weapons <strong>or</strong> a +1 bonus to spellcasting checks.</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

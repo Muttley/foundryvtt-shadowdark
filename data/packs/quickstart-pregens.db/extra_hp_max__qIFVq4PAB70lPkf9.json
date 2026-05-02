@@ -1,6 +1,6 @@
 {
 	"_id": "qIFVq4PAB70lPkf9",
-	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.84S8aIQnu84q0i9h.qIFVq4PAB70lPkf9",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.MCdhS0bbs9sPEGq9.qIFVq4PAB70lPkf9",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.attributes.hp.max",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 2

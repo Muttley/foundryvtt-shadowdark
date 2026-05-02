@@ -1,0 +1,23 @@
+{
+	"_id": "XRR6AHXzayLet62o",
+	"_key": "!actors.items!CVFznZtBMmHG2w4a.XRR6AHXzayLet62o",
+	"effects": [
+		"QBX0EGnKmDfPJ8gQ"
+	],
+	"flags": {
+	},
+	"folder": "Z4zDnZoxthjHXo5V",
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"name": "+1 on Spellcasting Checks",
+	"system": {
+		"description": "",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "level"
+	},
+	"type": "Talent"
+}

@@ -1,6 +1,6 @@
 {
 	"_id": "0rcSjPSjHdvGwtOu",
-	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.84S8aIQnu84q0i9h.0rcSjPSjHdvGwtOu",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.MCdhS0bbs9sPEGq9.0rcSjPSjHdvGwtOu",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.hp.advantage",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

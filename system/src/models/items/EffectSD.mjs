@@ -35,7 +35,7 @@ export default class EffectSD extends BaseItemSD {
 
 
 	static migrateData(data) {
-		if (data.start.combatTime.endsWith(".null")) {
+		if (`${data.start.combatTime}`.endsWith(".null")) {
 			data.start.combatTime = null;
 		}
 

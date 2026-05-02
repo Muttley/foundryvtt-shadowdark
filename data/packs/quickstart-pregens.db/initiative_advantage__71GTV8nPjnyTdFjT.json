@@ -1,0 +1,36 @@
+{
+	"_id": "71GTV8nPjnyTdFjT",
+	"_key": "!actors.items.effects!x3L0onniGSB97CU7.YygPeZWAadicBJLM.71GTV8nPjnyTdFjT",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"name": "Initiative Advantage",
+	"origin": "Compendium.shadowdark.talents.Item.UVsf7VJCOrBm42Yz",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.initiative.advantage",
+				"phase": "initial",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
