@@ -1,0 +1,38 @@
+{
+	"_id": "Jezaa6jJyGQpprzu",
+	"_key": "!items.effects!MyHXrPewu36OmWB6.Jezaa6jJyGQpprzu",
+	"description": "Advantage vs Poison",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"folder": null,
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Advantage vs Poison",
+	"origin": "Compendium.shadowdark.magic-items.Item.MyHXrPewu36OmWB6",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.stat.advantage.con",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

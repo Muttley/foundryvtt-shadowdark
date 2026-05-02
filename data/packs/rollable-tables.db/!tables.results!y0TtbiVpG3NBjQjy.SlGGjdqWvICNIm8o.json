@@ -3,12 +3,14 @@
 	"_key": "!tables.results!y0TtbiVpG3NBjQjy.SlGGjdqWvICNIm8o",
 	"description": "Slippery ice",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		7,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

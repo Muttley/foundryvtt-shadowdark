@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ursSNgr3ExIvXiKJ.fvfZO826nSjs3OyN",
 	"description": "Knight",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

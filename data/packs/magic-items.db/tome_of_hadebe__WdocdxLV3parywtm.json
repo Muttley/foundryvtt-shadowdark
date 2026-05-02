@@ -1,0 +1,51 @@
+{
+	"_id": "WdocdxLV3parywtm",
+	"_key": "!items!WdocdxLV3parywtm",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+	"name": "Tome of Hadebe",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A brass-plated book with pages of etched copper leaf.</em></p><p><strong>Benefit.</strong> The tome contains one each of the following scrolls: @UUID[Compendium.shadowdark.spells.Item.ItN82uLU3PhJFLNm]{burning hands} (pg. 56), @UUID[Compendium.shadowdark.spells.Item.j2gvzfnMGQwxqgGg]{fireball} (pg. 60), and @UUID[Compendium.shadowdark.spells.Item.71VbHnopcTmRXz47]{prismatic orb} (pg. 67).</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

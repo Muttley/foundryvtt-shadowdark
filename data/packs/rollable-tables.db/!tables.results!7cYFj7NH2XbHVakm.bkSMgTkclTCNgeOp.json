@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.bkSMgTkclTCNgeOp",
 	"description": "Harm",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		96,
 		96
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,14 +3,15 @@
 	"_key": "!actors.items!rrI5NuJ8q0Pm4ehs.DzUDsSXVfPZ3lEnG",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Acid Spray",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 4,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d6"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

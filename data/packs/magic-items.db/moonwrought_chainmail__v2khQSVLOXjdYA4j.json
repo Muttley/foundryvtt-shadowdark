@@ -1,0 +1,48 @@
+{
+	"_id": "v2khQSVLOXjdYA4j",
+	"_key": "!items!v2khQSVLOXjdYA4j",
+	"effects": [
+		"Kf2eneYOrzvxxnWU"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
+	"name": "Moonwrought Chainmail",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 13,
+			"modifier": 1
+		},
+		"baseArmor": "chainmail",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 240,
+			"sp": 0
+		},
+		"description": "<p><em>A luminous jacket of chainmail as lightweight as a silk shirt.</em></p><p><strong>Bonus.</strong> +1 mithral chainmail.</p><p><strong>Benefit.</strong> Once per day, you can speak the armor's command word. You gain a +1 bonus to your next spellcasting check or ranged attack.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

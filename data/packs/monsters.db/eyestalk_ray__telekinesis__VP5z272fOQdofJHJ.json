@@ -3,12 +3,15 @@
 	"_key": "!actors.items!hiZvVJPOJWtOXV4m.VP5z272fOQdofJHJ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Telekinesis",
 	"system": {
 		"description": "<p>[[check 15 str]] or hover target up to double near.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

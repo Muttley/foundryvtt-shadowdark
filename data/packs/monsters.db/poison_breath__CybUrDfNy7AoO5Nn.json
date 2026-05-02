@@ -3,17 +3,21 @@
 	"_key": "!actors.items!KZNQRwpG4DaN57zB.CybUrDfNy7AoO5Nn",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Poison Breath",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All within near, [[check 15 con]] or [[/r 8d6]] damage.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

@@ -67,9 +67,53 @@ export default class MigrationRunnerSD {
 			let updateData = {};
 			try {
 				const objectData = doc.toObject();
+
+				// Keep original UUID for reference when migrating compendium
+				// items
+				objectData.uuid = doc.uuid;
+
 				switch (documentName) {
 					case "Actor":
 						updateData = await this.currentMigrationTask.updateActor(objectData);
+
+						// update actor items
+						const items = doc.items.map(a => [a, true])
+							.concat(Array.from(doc.items.invalidDocumentIds).map(
+								id => [doc.items.getInvalid(id), false]
+							));
+
+						const invalidItemUpdates = [];
+
+						for (const [item, validItem] of items) {
+							const itemSource = validItem
+								? item.toObject()
+								: item._source;
+
+							const itemUpdateData = await this.currentMigrationTask.updateItem(
+								itemSource,
+								objectData
+							);
+
+							if (!foundry.utils.isEmpty(itemUpdateData)) {
+								if (validItem) {
+									shadowdark.log(`Migrating Actor Item document '${item.name}'`);
+									await item.update(itemUpdateData);
+								}
+								else {
+									invalidItemUpdates.push(
+										{_id: itemSource._id, ...itemUpdateData}
+									);
+								}
+							}
+						}
+
+						if (invalidItemUpdates.length > 0) {
+							await doc.updateEmbeddedDocuments(
+								"Item",
+								invalidItemUpdates,
+								{enforceTypes: false}
+							);
+						}
 						break;
 					case "Item":
 						updateData = await this.currentMigrationTask.updateItem(objectData);
@@ -93,16 +137,14 @@ export default class MigrationRunnerSD {
 		shadowdark.log(`Migrated all '${documentName}' documents from Compendium '${pack.collection}'`);
 	}
 
+	// migrate token delta actors that only exist on a scene.
 	async migrateSceneTokens(scene) {
 		for (const token of scene.tokens) {
 			try {
-				// If the token is linked or has no actor, we don"t need to do
-				// anything
+				// No action needed if the token is linked or has no actor
 				if (token.actorLink || !game.actors.has(token.actorId)) continue;
 
-				const actorData = foundry.utils.duplicate(
-					game.actors.get(token.actorId)
-				);
+				const actorData = foundry.utils.duplicate(game.actors.get(token.actorId));
 
 				const delta = token.delta;
 
@@ -117,7 +159,7 @@ export default class MigrationRunnerSD {
 				const updateData = await this.currentMigrationTask.updateActor(actorData);
 
 				if (!foundry.utils.isEmpty(updateData)) {
-					shadowdark.log(`Migrating Token document "${token.name}"`);
+					shadowdark.log(`Migrating Token delta actor "${token.name}"`);
 
 					updateData._id = token.id;
 
@@ -126,6 +168,42 @@ export default class MigrationRunnerSD {
 						[updateData],
 						{enforceTypes: false}
 					);
+				}
+
+				// Migrate token delta actor items in one update
+				if (delta) {
+					const deltaItems = delta.items.map(i => [i, true])
+						.concat(Array.from(delta.items.invalidDocumentIds).map(
+							id => [delta.items.getInvalid(id), false]
+						));
+
+					const deltaItemUpdates = [];
+
+					for (const [item, validItem] of deltaItems) {
+						const itemSource = validItem
+							? item.toObject()
+							: item._source;
+
+						const itemUpdateData = await this.currentMigrationTask.updateItem(
+							itemSource,
+							actorData
+						);
+
+						if (!foundry.utils.isEmpty(itemUpdateData)) {
+							deltaItemUpdates.push(
+								{_id: itemSource._id, ...itemUpdateData}
+							);
+						}
+					}
+
+					if (deltaItemUpdates.length > 0) {
+						shadowdark.log(`Migrating ${deltaItemUpdates.length} Token Delta Item(s) in Token "${token.name}"`);
+						await delta.updateEmbeddedDocuments(
+							"Item",
+							deltaItemUpdates,
+							{enforceTypes: false}
+						);
+					}
 				}
 			}
 			catch(err) {
@@ -150,7 +228,7 @@ export default class MigrationRunnerSD {
 			// enabled
 			//
 			if (!this.migrateSystemCompendiumsEnbabled) {
-				if (pack.metadata.packageType !== "world") continue;
+				if (pack.metadata.packageType === "system") continue;
 			}
 
 			await this.migrateCompendium(pack);
@@ -177,25 +255,43 @@ export default class MigrationRunnerSD {
 					await actor.update(updateData);
 				}
 
-				const items = actor.items.map(a => [a, true])
-					.concat(Array.from(actor.items.invalidDocumentIds).map(
-						id => [actor.items.getInvalid(id), false]
-					));
+				const validItems = actor.items.map(a => [a, true]);
+				const invalidItems = Array.from(actor.items.invalidDocumentIds).map(
+					id => [actor.items.getInvalid(id), false]
+				);
+
+				const items = validItems.concat(invalidItems);
+				const invalidItemUpdates = [];
 
 				for (const [item, validItem] of items) {
 					const itemSource = validItem
 						? item.toObject()
-						: actor.items.find(a => a._id === item.id);
+						: item._source;
 
-					const updateData = await this.currentMigrationTask.updateItem(
+					const itemUpdateData = await this.currentMigrationTask.updateItem(
 						itemSource,
 						actorSource
 					);
 
-					if (!foundry.utils.isEmpty(updateData)) {
-						shadowdark.log(`Migrating Actor Item document '${item.name}'`);
-						await item.update(updateData);
+					if (!foundry.utils.isEmpty(itemUpdateData)) {
+						if (validItem) {
+							shadowdark.log(`Migrating Actor Item document '${item.name}'`);
+							await item.update(itemUpdateData);
+						}
+						else {
+							invalidItemUpdates.push(
+								{_id: itemSource._id, ...itemUpdateData}
+							);
+						}
 					}
+				}
+
+				if (invalidItemUpdates.length > 0) {
+					await actor.updateEmbeddedDocuments(
+						"Item",
+						invalidItemUpdates,
+						{enforceTypes: false}
+					);
 				}
 			}
 			catch(err) {
@@ -216,7 +312,7 @@ export default class MigrationRunnerSD {
 			try {
 				const source = valid
 					? item.toObject()
-					: game.items.find(a => a._id === item.id);
+					: item._source;
 
 				const updateData = await this.currentMigrationTask.updateItem(source);
 
@@ -247,9 +343,9 @@ export default class MigrationRunnerSD {
 		);
 
 		await this.migrateSettings();
+		await this.migrateWorldScenes();
 		await this.migrateWorldActors();
 		await this.migrateWorldItems();
-		await this.migrateWorldScenes();
 		await this.migrateWorldCompendiums();
 
 		ui.notifications.info(
@@ -271,7 +367,7 @@ export default class MigrationRunnerSD {
 
 		// If this is a brand new world then we don't need to do any migrations.
 		//
-		if (game.world.playtime === 0) {
+		if (this.currentVersion === -1) {
 			shadowdark.log(`Setting new world schema version to ${this.latestVersion}`);
 
 			await game.settings.set(
@@ -291,7 +387,9 @@ export default class MigrationRunnerSD {
 			if (this.currentVersion < migration.version) {
 				this.currentMigrationTask = migration;
 
+				console.log(`Migration Scema version to ${this.currentVersion}`);
 				await this.migrateWorld();
+				console.log(`Migration Complete for ${this.currentVersion} to ${migration.version}`);
 
 				game.settings.set("shadowdark", "schemaVersion", migration.version);
 			}

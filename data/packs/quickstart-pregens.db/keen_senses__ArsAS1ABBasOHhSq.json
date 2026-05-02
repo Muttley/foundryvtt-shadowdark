@@ -3,15 +3,17 @@
 	"_key": "!actors.items!Jnb0sFKKKrAfowY0.ArsAS1ABBasOHhSq",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Keen Senses",
 	"system": {
-		"description": "<p><span class=\"fontstyle0\">You can't be surprised.</span></p>",
+		"description": "<p>You can't be surprised.</p>",
 		"level": 1,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "ancestry"

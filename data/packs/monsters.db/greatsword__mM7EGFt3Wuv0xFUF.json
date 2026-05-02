@@ -3,14 +3,15 @@
 	"_key": "!actors.items!6ce2xr1QmjJFMe5P.mM7EGFt3Wuv0xFUF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Greatsword",
 	"system": {
 		"attack": {
-			"num": "4"
+			"num": 4
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 11,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 2
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "Moonbite Properties",
 			"value": "1d12"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"near"
 		],

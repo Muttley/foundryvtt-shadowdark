@@ -1,0 +1,48 @@
+{
+	"_id": "yyJOvnqhX1euicdL",
+	"_key": "!items!yyJOvnqhX1euicdL",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+	"name": "Potion of Flying",
+	"system": {
+		"broken": false,
+		"class": [
+		],
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A sunny liquid with bubbles that flash and pop like tiny stars.</em></p><p><strong>Benefit.</strong> You can fly a near distance for 10 rounds when you drink this potion.</p>",
+		"duration": {
+			"type": "rounds"
+		},
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"lost": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Potion"
+}

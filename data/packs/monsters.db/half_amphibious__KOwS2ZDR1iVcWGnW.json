@@ -3,12 +3,15 @@
 	"_key": "!actors.items!soe49ydTgVbQ0AwZ.KOwS2ZDR1iVcWGnW",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Half-amphibious",
 	"system": {
 		"description": "<p>Must be submerged in water every 4 hours or suffocates.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

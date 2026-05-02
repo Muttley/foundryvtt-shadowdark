@@ -41,7 +41,7 @@ export default class UtilitySD {
 		let flags = {};
 		let name = itemData.name;
 
-		if (itemData.isRollable) {
+		if (itemData.system.isRollable) {
 			command = `shadowdark.macro.rollItemMacro("${itemData.name}")`;
 			flags = {"shadowdark.itemMacro": true};
 			name = `${game.i18n.localize("Roll")} ${name}`;
@@ -70,7 +70,8 @@ export default class UtilitySD {
 	}
 
 
-	static async createItemFromSpell(type, spell) {
+	static async createItemFromSpell(type, spellobj) {
+		const spell = spellobj.toObject();
 		const name = (type !== "Spell")
 			? game.i18n.format(
 				`SHADOWDARK.item.name_from_spell.${type}`,
@@ -78,29 +79,30 @@ export default class UtilitySD {
 			)
 			: spell.name;
 
-		const itemData = {
+		if (type === "Spell") {
+			return { type, name, img: spell.img, system: spell.system };
+		}
+
+		if (type === "Wand") {
+			return {
+				type,
+				name,
+				system: { spells: [{uuid: spellobj.uuid, lost: false}] },
+			};
+		}
+
+		return {
 			type,
 			name,
-			system: spell.system,
+			system: { spellUuid: spellobj.uuid },
 		};
-
-		if (type === "Spell") {
-			itemData.img = spell.img;
-		}
-		else {
-			delete itemData.system.lost;
-			itemData.system.magicItem = true;
-			itemData.system.spellImg = spell.img;
-			itemData.system.spellName = spell.name;
-		}
-		return itemData;
 	}
 
 
-	static diceSound() {
+	static diceSound(playToAllUsers=false) {
 		const sounds = [CONFIG.sounds.dice];
 		const src = sounds[0];
-		game.audio.play(src, {volume: 1});
+		foundry.audio.AudioHelper.play({src, volume: 1}, playToAllUsers);
 	}
 
 
@@ -167,24 +169,26 @@ export default class UtilitySD {
 
 
 	static async getFromUuid(uuid) {
-		const itemObj = await fromUuid(uuid);
-		if (itemObj) {
-			return itemObj;
+		try {
+			const itemObj = await fromUuid(uuid);
+			if (itemObj) return itemObj;
 		}
-		else {
-			return {name: "[Invalid ID]", uuid: uuid};
+		catch(error) {
+
 		}
+		return {name: "[Invalid ID]", uuid: uuid};
 	}
 
 
 	static getFromUuidSync(uuid) {
-		const itemObj = fromUuidSync(uuid);
-		if (itemObj) {
-			return itemObj;
+		try {
+			const itemObj = fromUuidSync(uuid);
+			if (itemObj) return itemObj;
 		}
-		else {
-			return {name: "[Invalid ID]", uuid: uuid};
+		catch(error) {
+
 		}
+		return {name: "[Invalid ID]", uuid: uuid};
 	}
 
 
@@ -192,14 +196,8 @@ export default class UtilitySD {
 		const items = [];
 
 		for (const result of results) {
-			const uuid = [
-				"Compendium",
-				result.documentCollection,
-				result.documentId,
-
-			].join(".");
-
-			items.push(await fromUuid(uuid));
+			const uuid = result.documentUuid ?? undefined;
+			if (uuid) items.push(await fromUuid(uuid));
 		}
 
 		return items;
@@ -266,6 +264,25 @@ export default class UtilitySD {
 		}
 	}
 
+	static removeHTML(text) {
+		const el = document.createElement("div");
+		el.innerHTML = text;
+		return el.textContent;
+	}
+
+	/**
+	 * Resolves an array of spellcasting class name to their compendium objects.
+	 * @param {string[]} spellClasses - Array of class name (e.g. ["wizard", "priest"])
+	 * @returns {Promise<Array<{name: string, label: string, uuid: string}>>}
+	 */
+	static async resolveSpellClasses(spellClasses) {
+		const castingClasses = await shadowdark.compendiums.spellcastingClasses();
+		return spellClasses.reduce((acc, className) => {
+			const found = castingClasses.find(c => c.name.slugify() === className);
+			if (found) acc.push({ name: className, label: found.name, uuid: found.uuid });
+			return acc;
+		}, []);
+	}
 
 	// If this is a new release, show the release notes to the GM the first time
 	// they login
@@ -292,6 +309,32 @@ export default class UtilitySD {
 		return new Promise((resolve, reject) => {
   			setTimeout(resolve, millisecs);
 		});
+	}
+
+
+	static async clearClassTalents(actorUuid) {
+		const actor = await fromUuid(actorUuid);
+		if (!actor) return;
+
+		const currentClass = await fromUuid(actor.system.class);
+		if (!currentClass || currentClass.system.talents.length === 0) return;
+
+		// match talents based on name
+		const talentNames = [];
+		for (const uuid of currentClass.system.talents) {
+			const talent = await fromUuid(uuid);
+			if (talent) talentNames.push(talent.name);
+		}
+
+		const toDelete = actor.items
+			.filter(item => item.system.isTalent
+				&& item.system.talentClass === "class"
+				&& talentNames.includes(item.name))
+			.map(item => item.id);
+
+		if (toDelete.length > 0) {
+			await actor.deleteEmbeddedDocuments("Item", toDelete);
+		}
 	}
 
 

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!q83PUKIAznuLpqSr.8wXIzpo54QsbWBxT",
 	"description": "<b>Unmitigated chain reaction!</b> You have disadvantage on casting all spells for the next 10 rounds",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		11,
 		11
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

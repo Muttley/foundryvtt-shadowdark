@@ -3,12 +3,15 @@
 	"_key": "!actors.items!HO9aYtRdsjHHAYHj.jHWOzWhU8UdwyFei",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Bloodlust",
 	"system": {
 		"description": "<p>+2 damage with melee weapons (included).</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

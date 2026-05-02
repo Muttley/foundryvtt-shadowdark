@@ -3,24 +3,16 @@
 	"_key": "!items!279opQ7jDyCaRGAu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
 	"name": "Sleep a Creature",
 	"system": {
-		"bonuses": {
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "1"
-		},
 		"description": "<p>1/day, choose a living creature of LV 5 or less you can see within near; it must pass a [[check 15 con]] check or fall asleep.</p><p>@UUID[Compendium.shadowdark.class-abilities.Item.i0IHFrEbhd0MOvkQ]{Sleep a Creature}</p>",
 		"level": 0,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

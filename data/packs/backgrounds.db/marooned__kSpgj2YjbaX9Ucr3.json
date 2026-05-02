@@ -3,14 +3,16 @@
 	"_key": "!items!kSpgj2YjbaX9Ucr3",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Marooned",
 	"system": {
 		"description": "<p>They left you behind, but you refused to die</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

@@ -3,6 +3,8 @@
 	"_key": "!items!gxSxaMo8eh8mLYYH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "GjEoxJ1IlFDjGKIa",
 	"img": "icons/magic/air/air-burst-spiral-large-yellow.webp",
 	"name": "Dimension Door",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>You teleport yourself and up to one other willing creature within close to any point you can see.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

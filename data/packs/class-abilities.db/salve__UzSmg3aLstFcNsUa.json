@@ -3,6 +3,8 @@
 	"_key": "!items!UzSmg3aLstFcNsUa",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Agdcg0ystOpP8kcL",
 	"img": "icons/consumables/potions/potion-tube-corked-orange.webp",
 	"name": "Salve",
@@ -14,7 +16,8 @@
 		"limitedUses": false,
 		"loseOnFailure": true,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "bard-and-ranger"
 		},

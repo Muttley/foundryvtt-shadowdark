@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.gp4nHWElOIrQVDp1",
 	"description": "The Church of St. Terragnis will pay for the return of a relic",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		70,
 		71
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

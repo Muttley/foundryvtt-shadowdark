@@ -3,12 +3,15 @@
 	"_key": "!actors.items!LZsDirxnEAlPoOhH.q8ptzvh5TcVdgUB9",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Savage",
 	"system": {
 		"description": "<p>ADV on attacks against creatures below half their HP.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -1,31 +1,33 @@
 {
 	"_id": "oEZ9BldTmIl6AS31",
 	"_key": "!items.effects!IZZnFjWhZurAIZPP.oEZ9BldTmIl6AS31",
-	"changes": [
-		{
-			"key": "system.bonuses.advantage",
-			"mode": 2,
-			"priority": null,
-			"value": "REPLACEME"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.advantage.REPLACEME",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

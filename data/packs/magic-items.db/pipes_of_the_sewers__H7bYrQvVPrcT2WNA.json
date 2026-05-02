@@ -1,0 +1,51 @@
+{
+	"_id": "H7bYrQvVPrcT2WNA",
+	"_key": "!items!H7bYrQvVPrcT2WNA",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/tools/instruments/pipe-flue-tan.webp",
+	"name": "Pipes of the Sewers",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A set of tarnished, brass pan pipes with seven cylinders.</em></p><p><strong>Benefit.</strong> Once per day, you can play these pipes to summon [[/r 2d6]] @UUID[Compendium.shadowdark.monsters.Actor.OYtg4Ta4PIpvIZxq]{giant rats}. The rats obey you for [[/r 1d6]] rounds, and then they scatter and flee.</p><p><strong>Curse.</strong> If you stop playing while the rats are present, they turn on you and attack.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!vXaqgfDykZPdXnIm.iRC6Jk66uxbIWOlP",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Meld",
 	"system": {
 		"description": "<p>Step inside bonded tree.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

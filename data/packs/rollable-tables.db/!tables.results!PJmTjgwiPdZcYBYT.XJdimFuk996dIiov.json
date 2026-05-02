@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.XJdimFuk996dIiov",
 	"description": "[[/r 2d4]] @UUID[Compendium.shadowdark.monsters.j7sQ6Km2jSx5twCC]{Cave Creepers} swarm up the hallway",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		92,
 		93
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

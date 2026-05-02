@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Ji8vkF8Lj0ZFMnBO.5K8QyOEp7PuxrlGD",
 	"description": "[[/r 3d10]]",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		9,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,17 +3,21 @@
 	"_key": "!actors.items!63d5P0opwEQTdDIn.li5WO5TO9K1JNurG",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Horn",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All enemies in near [[check 15 cha]] or paralyzed [[/r 1d4]] rounds.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

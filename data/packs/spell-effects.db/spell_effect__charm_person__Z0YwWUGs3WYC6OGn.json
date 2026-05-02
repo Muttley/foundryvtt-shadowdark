@@ -4,6 +4,8 @@
 	"effects": [
 		"6ILACQIHM3Gp8EVG"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/life/heart-shadow-red.webp",
 	"name": "Spell Effect: Charm Person",
@@ -12,7 +14,7 @@
 		"description": "<p>The humanoid regards the caster as a friend for the duration.<br class=\"Apple-interchange-newline\">The effect ends if you or your allies do anything harmful to the target.</p>",
 		"duration": {
 			"type": "days",
-			"value": "1"
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

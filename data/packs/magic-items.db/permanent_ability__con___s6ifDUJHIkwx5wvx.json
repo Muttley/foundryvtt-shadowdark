@@ -1,0 +1,34 @@
+{
+	"_id": "s6ifDUJHIkwx5wvx",
+	"_key": "!items.effects!qHyL2dlqQaxwMzKX.s6ifDUJHIkwx5wvx",
+	"description": "Permanent Ability (Con)",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Con)",
+	"origin": "Compendium.shadowdark.magic-items.Item.qHyL2dlqQaxwMzKX",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.con.value",
+				"type": "override",
+				"value": 18
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

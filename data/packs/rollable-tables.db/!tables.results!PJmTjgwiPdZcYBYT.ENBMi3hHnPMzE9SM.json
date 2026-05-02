@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.ENBMi3hHnPMzE9SM",
 	"description": "A groaning wall collapses at the slightest touch",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

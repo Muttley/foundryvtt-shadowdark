@@ -1,0 +1,53 @@
+{
+	"_id": "hcC1kuGgQ2VdnHmj",
+	"_key": "!items!hcC1kuGgQ2VdnHmj",
+	"effects": [
+		"n3Z0tBxloczqrb2w",
+		"SzyJeSkWrWDD64zP",
+		"phVQo5ikKtoR4emZ"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+	"name": "Armor of the Oni",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 15,
+			"modifier": 1
+		},
+		"baseArmor": "plate-mail",
+		"bonuses": {
+			"meleeAttackBonus": "1"
+		},
+		"broken": false,
+		"canBeEquipped": true,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Black plate mail of lacquered, ironwood panels. The helm's visor is the face of a snarling oni.</em></p><p><strong>Bonus.</strong> +1 plate mail.</p><p><strong>Benefit.</strong> You can speak and understand Diabolic. Your melee weapon attacks deal +1 damage.</p><p><strong>Curse.</strong> You have disadvantage on attacks and spellcasting checks against demons.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"languages": "Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu",
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA",
+			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 3
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

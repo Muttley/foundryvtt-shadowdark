@@ -4,6 +4,8 @@
 	"effects": [
 		"g02s1plvTDRI6Ido"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/life/heart-shadow-red.webp",
 	"name": "Condition: Charmed",
@@ -25,14 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
 			"combatTime": null,
-			"initiative": null,
 			"value": 0
 		},
 		"tokenIcon": {

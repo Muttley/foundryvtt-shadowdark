@@ -1,25 +1,27 @@
 {
 	"_id": "xE08WjX14HjHwSJC",
 	"_key": "!items.effects!Grd46xo0lgHLtfVe.xE08WjX14HjHwSJC",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
 	"name": "Blind",
 	"origin": "Item.Grd46xo0lgHLtfVe",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

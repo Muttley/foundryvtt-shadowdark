@@ -3,10 +3,10 @@
 	"_key": "!actors.effects!x3L0onniGSB97CU7.1g9lxw8bhW2NVR0D",
 	"changes": [
 		{
-			"key": "system.bonuses.advantage",
+			"key": "system.roll.initiative.advantage",
 			"mode": 2,
 			"priority": null,
-			"value": "initiative"
+			"value": "1"
 		}
 	],
 	"description": "",

@@ -3,14 +3,15 @@
 	"_key": "!actors.items!X8hc2Uhflvy8F634.8RpX2sRZ9HRN9fKd",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Silvered Bastard Sword",
 	"system": {
 		"attack": {
-			"num": "3"
+			"num": 3
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 9,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "",
 			"value": "1d10"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

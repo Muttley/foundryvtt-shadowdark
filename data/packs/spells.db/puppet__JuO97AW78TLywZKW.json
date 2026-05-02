@@ -3,6 +3,8 @@
 	"_key": "!items!JuO97AW78TLywZKW",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "bstYVdHWm575lPri",
 	"img": "icons/magic/control/control-influence-puppet.webp",
 	"name": "Puppet",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>One humanoid creature of LV 2 or less you touch becomes ensnared by your movements. On your turn, the creature mimics all your movements.</p><p>If mimicking you would cause the creature to directly harm itself or an ally, it can make a [[check 15 cha]] check. On a success, it resists mimicking you.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.Cu3dona3PiHxO1lK]{Spell Effect: Puppet}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-1"

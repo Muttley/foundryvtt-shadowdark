@@ -82,6 +82,7 @@ SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} secondes resta
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} semaines restantes"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} années restantes"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Clic droit] Supprimer l'effet"
+SHADOWDARK.apps.item-importer.header: Item Importer
 SHADOWDARK.apps.item-importer.import_button: Importer l'objet
 SHADOWDARK.apps.item-importer.instruction1: 1. Copiez le texte de l'objet à partir du matériel source.
 SHADOWDARK.apps.item-importer.instruction2a: 2. Collez le texte dans cette boîte en suivant le format de l'objet indiqué dans les règles de base.
@@ -89,6 +90,7 @@ SHADOWDARK.apps.item-importer.instruction2b: Nom de l'objet
 SHADOWDARK.apps.item-importer.instruction2c: Texte descriptif
 SHADOWDARK.apps.item-importer.instruction2d: Caractéristiques
 SHADOWDARK.apps.item-importer.instruction3: 3. Cliquez sur Importer l'objet.
+SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Import d'objet
 SHADOWDARK.apps.level-up.dragdrop: Glisser-déposer ici
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Impossible de lancer la faveur du protecteur car la Table aléatoire configurée n'a pas pu être chargée
@@ -101,7 +103,9 @@ SHADOWDARK.apps.level-up.or_boons: Ou faveurs
 SHADOWDARK.apps.level-up.prompt: Toutes les sélections requises n'ont pas été effectuées. Continuer avec la montée en niveau quand même ?
 SHADOWDARK.apps.level-up.roll_boon: Jet de faveur
 SHADOWDARK.apps.level-up.roll_talent: Jet de talent
+SHADOWDARK.apps.level-up.spell_tier_out_of_range: Spell tier out of range
 SHADOWDARK.apps.level-up.title: Gain de niveau !
+SHADOWDARK.apps.monster-importer.header: Monster Importer
 SHADOWDARK.apps.monster-importer.import_button: Importer Monstre
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copiez le texte du monstre à partir de sa source.
 SHADOWDARK.apps.monster-importer.instruction2a: 2. Collez le texte dans la zone de texte en suivant le format du monstre montré dans les règles de base. Ajoutez une ligne vide entre chaque capacité.
@@ -110,6 +114,7 @@ SHADOWDARK.apps.monster-importer.instruction2c: Texte d'ambiance
 SHADOWDARK.apps.monster-importer.instruction2d: Bloc de statistiques principal
 SHADOWDARK.apps.monster-importer.instruction2e: Caractéristique
 SHADOWDARK.apps.monster-importer.instruction3: 3. Cliquez sur "Importer Monstre".
+SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Importer un monstre
 SHADOWDARK.apps.request-check.copied: Copier dans le Presse-papier
 SHADOWDARK.apps.request-check.copy_to_clipboard: Copier dans le Presse-papier
@@ -138,6 +143,7 @@ SHADOWDARK.apps.solodark.roll_prompt: Lancer le Prompt
 SHADOWDARK.apps.solodark.title: SoloDark
 SHADOWDARK.apps.spell-book.known: Connu
 SHADOWDARK.apps.spell-book.title: Liste des sorts de classe
+SHADOWDARK.apps.spell-importer.header: Spell Importer
 SHADOWDARK.apps.spell-importer.import_button: Importer le Sort
 SHADOWDARK.apps.spell-importer.instruction1: 1. Copiez le texte du sort à partir du matériel source.
 SHADOWDARK.apps.spell-importer.instruction2a: 2. Collez le texte dans cette boîte en suivant le format du sort montré dans les règles de base.
@@ -147,6 +153,7 @@ SHADOWDARK.apps.spell-importer.instruction2d: Durée
 SHADOWDARK.apps.spell-importer.instruction2e: Portée
 SHADOWDARK.apps.spell-importer.instruction2f: Description
 SHADOWDARK.apps.spell-importer.instruction3: 3. Cliquez sur Importer le Sort.
+SHADOWDARK.apps.spell-importer.placeholder: Paste spell text here...
 SHADOWDARK.apps.spell-importer.title: Importer le Sort
 SHADOWDARK.armor.properties.disadvantage_stealth: Désavantage/Discrétion
 SHADOWDARK.armor.properties.disadvantage_swimming: Désavantage/Natation
@@ -167,6 +174,8 @@ SHADOWDARK.chat_card.context.apply_damage_secondary: Appliquer les dégâts seco
 SHADOWDARK.chat_card.context.apply_damage: Appliquer les dégâts
 SHADOWDARK.chat_card.context.apply_healing_secondary: Appliquer la guérison secondaire
 SHADOWDARK.chat_card.context.apply_healing: Appliquer les soins
+SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?
+SHADOWDARK.chat_card.dialog.reapply_damage.title: Damage Already Applied
 SHADOWDARK.chat.clockwise_initiative: Puisque {name} a fait le plus grand score, iel agira en premier, et tous les autres combattants suivront dans un ordre fixe.
 SHADOWDARK.chat.hp_roll.apply_to_max: Ajouter aux PV Max
 SHADOWDARK.chat.item_roll.double_numerical: Double n'importe quelle valeur numérique !
@@ -183,12 +192,14 @@ SHADOWDARK.chat.light_source.source.picked_up: a été ramassée
 SHADOWDARK.chat.light_source.source.toggle.off: a été éteinte
 SHADOWDARK.chat.light_source.source.toggle.on: a été allumée
 SHADOWDARK.chat.light_source.went_out: "La {lightSource} de {name} s'est éteinte"
+SHADOWDARK.chat.luck_token.used: "{name} used a luck token"
 SHADOWDARK.chat.potion_used: "{name} a utilisé une potion"
 SHADOWDARK.chat.spell_focus_check: "Test de concentration"
 SHADOWDARK.chat.spell_learn.failure: "{name} n'a pas réussi à apprendre quoi que ce soit du parchemin"
 SHADOWDARK.chat.spell_learn.success: "{name} a bien appris le sort {spellName}"
 SHADOWDARK.chat.spell_learn.title: Apprentissage de Sort
 SHADOWDARK.chat.spell_roll.title: "{name} : ND {spellDC}"
+SHADOWDARK.chat.targets: Targets
 SHADOWDARK.chat.use_ability.failure: "{name} n'a pas réussi à utiliser la Capacité {ability}"
 SHADOWDARK.chat.use_ability.success: "{name} a utilisé la capacité {ability} avec succès"
 SHADOWDARK.chat.use_ability.title: "Utiliser une capacité"
@@ -206,6 +217,7 @@ SHADOWDARK.chatcard.default: Lancer
 SHADOWDARK.check.requesting: 'Requête : Test de Difficulté'
 SHADOWDARK.class-ability.ability.check: Test de Capacité
 SHADOWDARK.class-ability.ability.label: Capacité
+SHADOWDARK.class-ability.ability.group: "{group} Ability"
 SHADOWDARK.class-ability.available.label: Disponible
 SHADOWDARK.class-ability.boons: Faveurs
 SHADOWDARK.class-ability.dc.label: ND
@@ -232,6 +244,7 @@ SHADOWDARK.class.priest: Prêtre
 SHADOWDARK.class.ranger: Rôdeur
 SHADOWDARK.class.spellcasting_ability.label: Caractéristique d'incantation
 SHADOWDARK.class.spellcasting_class.label: Lanceur de sorts
+SHADOWDARK.class.spellcasting_class.this_class: "This ({name})"
 SHADOWDARK.class.spellcasting.base_difficulty.label: ND de base pour lancer de sort
 SHADOWDARK.class.spells_Known.label: Sorts connus par rang
 SHADOWDARK.class.starting_boons.count.label: Faveurs de départ
@@ -307,6 +320,7 @@ SHADOWDARK.dialog.item.sell: Vendre
 SHADOWDARK.dialog.item.use: Utiliser
 SHADOWDARK.dialog.light_source.pick_up.title: Sélectionnez l'Acteur à qui donner la source lumineuse
 SHADOWDARK.dialog.roll_mode_label: Mode de lancer
+SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
 SHADOWDARK.dialog.roll: Jet de dés
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVERTISSEMENT : Ce sort n'est pas pour la même classe que le personnage, êtes-vous sûr de vouloir l'apprendre ?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmer l'apprentissage du sort
@@ -354,14 +368,22 @@ SHADOWDARK.effect.tooltip.transfer.do_not: Ne se transfère pas
 SHADOWDARK.effect.tooltip.transfer.do: Se transfère
 SHADOWDARK.effect.tooltip.transfer.header: Transférer l'effet à l'acteur lorsque l'objet est ajouté
 SHADOWDARK.effect.unavailable: Effets Désactivés
+SHADOWDARK.error.class_ability.lost: Ability currently lost
 SHADOWDARK.error.class_ability.no-uses-remaining: Aucune utilisation restante
 SHADOWDARK.error.general.gm_required: Vous devez avoir le rôle "Maître de jeu" pour faire cela.
+SHADOWDARK.error.general.item_uuid_not_found: "ERROR: Item UUID not found"
 SHADOWDARK.error.general.no_character_class: Aucune classe de personnage n’a été sélectionnée
 SHADOWDARK.error.general.no_character_selected: Aucun personnage sélectionné
+SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Impossible d'ajouter le protecteur car la classe actuellement configurée ne le permet pas
 SHADOWDARK.error.source.source_missing: Source manquante ou inconnue...
+SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
+SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
+SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: Vous ne pouvez pas lancer des sorts de cette classe
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: Vous ne pouvez pas utiliser d'objets magiques
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Trop de jetons sélectionnés
 SHADOWDARK.form.section_header.class_abilities.label: Talents de classe
 SHADOWDARK.form.section_header.equipment.label: Équipement
@@ -370,11 +392,10 @@ SHADOWDARK.form.section_header.names.label: Noms
 SHADOWDARK.form.section_header.patron.label: Protecteur
 SHADOWDARK.form.section_header.spellcasting.label: Incantation
 SHADOWDARK.form.section_header.talents.label: Talents
-SHADOWDARK.hotbar.abilityLost: Capacité actuellement perdue
 SHADOWDARK.hotbar.moreThanOneItemWithName: Plus d'un objet trouvé avec ce nom
 SHADOWDARK.hotbar.noActorSelected: Vous devez sélectionner un acteur pour utiliser cette macro
 SHADOWDARK.hotbar.noItemWithName: Aucun objet trouvé sur le personnage
-SHADOWDARK.hotbar.spellLost: Sort actuellement perdu
+SHADOWDARK.hotbar.wandAllSpellsLost: All spells in this wand are lost
 SHADOWDARK.inventory.carried_gear: Équipement Transporté
 SHADOWDARK.inventory.coins: Pièces
 SHADOWDARK.inventory.equipped_gear: Équipement Équipé
@@ -401,6 +422,7 @@ SHADOWDARK.inventory.tooltip.item_decrement: Diminuer la Quantité
 SHADOWDARK.inventory.tooltip.item_increment: Augmenter la Quantité
 SHADOWDARK.inventory.tooltip.sell_treasure: Vendre un Trésor
 SHADOWDARK.inventory.tooltip.toggle_equipped: Afficher les Objets Équipés
+SHADOWDARK.inventory.tooltip.toggle_handedness: Toggle Handedness
 SHADOWDARK.inventory.tooltip.toggle_light_source: Activer/désactiver la Source de Lumière
 SHADOWDARK.inventory.tooltip.toggle_stashed: Basculer stocké
 SHADOWDARK.inventory.total_coins: Total de Pièces
@@ -423,6 +445,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Armure de cuir
 SHADOWDARK.item.armor.base_armor.plate_mail: Armure de plates
 SHADOWDARK.item.armor.base_armor.shield: Bouclier
 SHADOWDARK.item.armor.base_armor.title: Armure de base
+SHADOWDARK.item.broken: Broken
 SHADOWDARK.item.cost: Coût
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.effect.category.condition: États
@@ -467,6 +490,7 @@ SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus aux dégâts �
 SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Avantage d'incantation sur le sort
 SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus jet d'incantation
 SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus de Classe d'Incantation
+SHADOWDARK.item.effect.predefined_effect.spellDamageBonus: Spell Damage Bonus
 SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: 'Talent : Peau de Pierre'
 SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bonus CA sans Armure
 SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus au jet d'Attaque d'Arme
@@ -485,6 +509,7 @@ SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Impossible d'ajout
 SHADOWDARK.item.equipped: Équipé
 SHADOWDARK.item.errors.no_available_ammunition: Aucune munition disponible
 SHADOWDARK.item.errors.no_spellcasting_classes: Ce personnage n'a pas de classe de lanceur de sorts
+SHADOWDARK.item.gm_only: GM Only
 SHADOWDARK.item.inventory_free_carry: Transport Gratuit
 SHADOWDARK.item.inventory_per_slot: Max par Slot
 SHADOWDARK.item.inventory_quantity: Quantité
@@ -495,6 +520,12 @@ SHADOWDARK.item.light.is_source: Source de Lumière
 SHADOWDARK.item.light.longevity: Longévité (Min)
 SHADOWDARK.item.light.remaining: Restant (Min)
 SHADOWDARK.item.light.template: Modèle de Lumière
+SHADOWDARK.item.magic_item.identificationDetails: Identification Details
+SHADOWDARK.item.magic_item.identified: Identified
+SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
+SHADOWDARK.item.magic_item.identifiedName: Identified Name
+SHADOWDARK.item.magic_item.identifiedTooltip: Unchecking will update current item name to Identified Name and append Identified Description to item Description.
+SHADOWDARK.item.magic_item.identify: Identify
 SHADOWDARK.item.magic_item.is_magic: Objet Magique
 SHADOWDARK.item.magic_item.title: Effet(s) d'Objet Magique
 SHADOWDARK.item.magic_item.type.attackBonus: Bonus d'Attaque
@@ -504,6 +535,8 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Multiplicateur de critique
 SHADOWDARK.item.magic_item.type.custom: Effet Personnalisé
 SHADOWDARK.item.magic_item.type.damageBonus: Bonus aux dégâts
 SHADOWDARK.item.magic_item.type.permanentAbility: Changement de capacité Permanente
+SHADOWDARK.item.magic_item.unidentified: Unidentified
+SHADOWDARK.item.magic_item.unidentifiedName: Unidentified {type}
 SHADOWDARK.item.name_from_spell.Potion: Potion de {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Parchemin de {spellName}
 SHADOWDARK.item.name_from_spell.Wand: Baguette de {spellName}
@@ -636,6 +669,8 @@ SHADOWDARK.range.unlimited_short: I
 SHADOWDARK.range.unlimited: Illimitée
 SHADOWDARK.roll.advantage_title: "{title} avec Avantage"
 SHADOWDARK.roll.advantage: Avantage
+SHADOWDARK.roll.attack: Attack Roll
+SHADOWDARK.roll.check: Check Roll
 SHADOWDARK.roll.critical.failure: Échec Critique ! ({value})
 SHADOWDARK.roll.critical.success: Succès Critique ! ({value})
 SHADOWDARK.roll.D20: Lancez le D20
@@ -643,11 +678,29 @@ SHADOWDARK.roll.damage: Jet de dégâts
 SHADOWDARK.roll.disadvantage_title: "{title} avec Désavantage"
 SHADOWDARK.roll.disadvantage: Désavantage
 SHADOWDARK.roll.failure: Échec! ({value})
+SHADOWDARK.roll.healing: Healing Roll
+SHADOWDARK.roll.label.critical_failure: Critical Failure
+SHADOWDARK.roll.label.critical_success: Critical Success
+SHADOWDARK.roll.label.failure: Failure
+SHADOWDARK.roll.label.success: Success
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.one_handed_damage: Dégâts à une main
+SHADOWDARK.roll.special_ability: Ability Check Roll
+SHADOWDARK.roll.spell_cast: Spell Cast Roll
 SHADOWDARK.roll.spell_casting_check: Jet d'Incantation
 SHADOWDARK.roll.success: Succès ! ({value})
+SHADOWDARK.roll.tooltip.advantage: Adv
+SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
+SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
+SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
+SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.extra_die: Add.Die
+SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
+SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
+SHADOWDARK.roll.tooltip.upgrade_die: Up.Die
 SHADOWDARK.roll.two_handed_damage: Dégâts à deux mains
+SHADOWDARK.settings.animate-hp-change.hint: Show changes to HP as scrolling text on the actor's token
+SHADOWDARK.settings.animate-hp-change.name: Animate HP Changes
 SHADOWDARK.settings.consume_ammunition.hint: Ajuste automatiquement les munitions pour les armes qui en utilisent lorsqu'un jet d'attaque est effectué.
 SHADOWDARK.settings.consume_ammunition.name: Consommation Automatique de Munitions
 SHADOWDARK.settings.debugEnabled.hint: Activer ou désactiver les journaux de débogage supplémentaires
@@ -662,6 +715,8 @@ SHADOWDARK.settings.module_art.hint: Configurer quelles illustrations fournies p
 SHADOWDARK.settings.module_art.label: Configurer l'illustration
 SHADOWDARK.settings.module_art.name: Illustration fournie par le module
 SHADOWDARK.settings.module_art.save: Enregistrer les Modifications
+SHADOWDARK.settings.roll_damage.hint: Automatically roll damage dice after hit
+SHADOWDARK.settings.roll_damage.name: Auto Roll Damage
 SHADOWDARK.settings.roll_npc_hp.hint: Lancer automatiquement les points de vie des PNJ lorsqu'ils sont ajoutés à une scène
 SHADOWDARK.settings.roll_npc_hp.name: Lancer Automatiquement les PV des PNJ
 SHADOWDARK.settings.schemaVersion.hint: Enregistre la version actuelle du schéma des données du système Shadowdark RPG. (ne modifiez pas ceci sauf si vous savez ce que vous faites)
@@ -695,6 +750,8 @@ SHADOWDARK.settings.track_light_sources.show_remaining.option1: Points seulement
 SHADOWDARK.settings.track_light_sources.show_remaining.option2: Points et minutes restantes
 SHADOWDARK.settings.use_clockwise_initiative.hint: Si coché, le combattant avec le plus haut jet d'initiative commencera, et tous les autres suivront dans un ordre fixe. Tous les PNJ seront regroupés ensemble dans l'ordre d'initiative.
 SHADOWDARK.settings.use_clockwise_initiative.name: Utiliser l'Initiative en Sens Horaire
+SHADOWDARK.settings.use_momentum_mode.hint: Damage dice explode
+SHADOWDARK.settings.use_momentum_mode.name: Enable Momentum Mode
 SHADOWDARK.settings.use_pulp_mode.hint: Affiche les Jetons de Chance sous forme de valeur numérique plutôt qu'une case à cocher
 SHADOWDARK.settings.use_pulp_mode.name: Activer le mode Pulp
 SHADOWDARK.sheet.abilities.label: Talents
@@ -719,6 +776,7 @@ SHADOWDARK.sheet.general.active_effects.duration.title: Durée
 SHADOWDARK.sheet.general.active_effects.edit_effect.tooltip: Modifier l'effet
 SHADOWDARK.sheet.general.active_effects.source.title: Source
 SHADOWDARK.sheet.general.active_effects.toggle_effect.tooltip: Activer/Désactiver l'effet
+SHADOWDARK.sheet.general.active_effects.toggle_situational.tooltip: Toggle Situational
 SHADOWDARK.sheet.general.add: Ajouter
 SHADOWDARK.sheet.general.effects_and_conditions.title: Effets et États
 SHADOWDARK.sheet.general.item_create.tooltip: Créer un objet de type {type}
@@ -777,6 +835,7 @@ SHADOWDARK.sheet.player.name.label: Nom
 SHADOWDARK.sheet.player.open_spellbook.tooltip: Ouvrir le Grimoire
 SHADOWDARK.sheet.player.patron.tooltip: Votre protecteur est la source de vos dons surnaturels
 SHADOWDARK.sheet.player.ranged_attacks: Attaques à Distance
+SHADOWDARK.sheet.player.renown: Renown
 SHADOWDARK.sheet.player.spells_from_items: Sorts provenant d'objets
 SHADOWDARK.sheet.player.spells_tier: Rang
 SHADOWDARK.sheet.player.spells: Sorts
@@ -814,6 +873,12 @@ SHADOWDARK.source.cursed-scroll-6: Cursed Scroll Vol.6, City of Masks
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Guides de démarrage"
 SHADOWDARK.spell_caster.priest: Prêtre
 SHADOWDARK.spell_caster.wizard: Magicien
+SHADOWDARK.spell_damage.formula: Formula
+SHADOWDARK.spell_damage.invalid_formula: Please enter a valid damage formula, e.g. "2d6 + 3"
+SHADOWDARK.spell_damage.type: Type
+SHADOWDARK.spell_damage.types.damage: Damage
+SHADOWDARK.spell_damage.types.healing: Healing
+SHADOWDARK.spell_damage.types.none: None
 SHADOWDARK.spell_duration.days: Jours
 SHADOWDARK.spell_duration.focus: Concentration
 SHADOWDARK.spell_duration.instant: Instantané

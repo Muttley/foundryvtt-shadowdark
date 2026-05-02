@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.wfiv5bXKBslPze7c",
 	"description": "Disgust",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		40,
 		40
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

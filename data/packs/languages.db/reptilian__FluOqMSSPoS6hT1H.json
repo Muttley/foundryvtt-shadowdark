@@ -3,12 +3,15 @@
 	"_key": "!items!FluOqMSSPoS6hT1H",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "aDYnRuOBkR4FXCDR",
 	"img": "icons/tools/scribal/ink-quill-pink.webp",
 	"name": "Reptilian",
 	"system": {
 		"description": "<p>Lizardfolk, viperians</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

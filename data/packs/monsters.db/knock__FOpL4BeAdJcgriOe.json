@@ -3,12 +3,15 @@
 	"_key": "!actors.items!99s2guSyYKPWp1oy.FOpL4BeAdJcgriOe",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Knock",
 	"system": {
 		"description": "<p>[[check 9 str]] or pushed a close distance and fall down.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -4,6 +4,8 @@
 	"effects": [
 		"rEjr6iPhgVuFTCWl"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/perception/hand-eye-pink.webp",
 	"name": "Condition: Possessed",
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

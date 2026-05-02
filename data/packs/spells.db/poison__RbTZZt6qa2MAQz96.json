@@ -3,6 +3,8 @@
 	"_key": "!items!RbTZZt6qa2MAQz96",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "0CqAJEHgk6zHXr8Y",
 	"img": "icons/magic/acid/dissolve-pool-bubbles.webp",
 	"name": "Poison",
@@ -10,14 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "damage",
 		"description": "<p>One worn or carried object you touch becomes toxic for the spell's duration. Any creature in contact with the object at the start of its turn takes 1d6 damage.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "5"
 		},
+		"formula": "1d6",
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-1"

@@ -1,0 +1,38 @@
+{
+	"_id": "uiRL8aHCDWjd3e8w",
+	"_key": "!items.effects!DGZqkVUtcmxejdm1.uiRL8aHCDWjd3e8w",
+	"description": "<p>You have advantage on Dexterity checks to overcome an opposing force, such as slipping free of rusty chains, etc.</p>",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"folder": null,
+	"img": "icons/environment/people/infantry.webp",
+	"name": "Advantage Against Opposing Force",
+	"origin": "Compendium.shadowdark.talents.Item.DGZqkVUtcmxejdm1",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.stat.advantage.dex",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

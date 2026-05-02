@@ -60,7 +60,7 @@ export default class SourceFilterSettings extends foundry.appv1.api.FormApplicat
 		event.preventDefault();
 		event.stopPropagation();
 
-		const deleteUuid = $(event.currentTarget).data("uuid");
+		const deleteUuid = event.currentTarget.dataset.uuid;
 
 		const newChoices = [];
 		for (const itemUuid of this.filtered) {

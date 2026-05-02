@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1xuTMmp7d9BKkAgk.6sSAIO3tll7v6rvA",
 	"description": "Drain",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		79,
 		79
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

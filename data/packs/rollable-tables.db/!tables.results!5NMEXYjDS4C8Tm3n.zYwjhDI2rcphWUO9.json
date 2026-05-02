@@ -3,12 +3,14 @@
 	"_key": "!tables.results!5NMEXYjDS4C8Tm3n.zYwjhDI2rcphWUO9",
 	"description": "a Hook on a thread",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		10,
 		10
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

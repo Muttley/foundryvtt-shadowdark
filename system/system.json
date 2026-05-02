@@ -2,10 +2,10 @@
 	"id": "shadowdark",
 	"title": "Shadowdark RPG",
 	"description": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "3.6.2",
+	"version": "4.0.0",
 	"compatibility": {
 		"minimum": "13",
-		"verified": "13"
+		"verified": "14"
 	},
 	"url": "https://github.com/Muttley/foundryvtt-shadowdark",
 	"manifest": "https://github.com/Muttley/foundryvtt-shadowdark/releases/latest/download/system.json",
@@ -33,6 +33,37 @@
 		}
 	],
 	"esmodules": ["shadowdark-compiled.mjs"],
+	"documentTypes": {
+        "Actor": {
+            "Player": {},
+            "NPC": {},
+			"Light": {}
+        },
+		"Item": {
+			"Ancestry": {},
+			"Armor": {},
+			"Background": {},
+			"Basic": {},
+			"Boon": {},
+			"Class": {},
+			"Class Ability": {},
+			"Deity": {},
+			"Effect": {},
+			"Gem": {},
+			"Language": {},
+			"NPC Attack": {},
+			"NPC Special Attack": {},
+			"NPC Feature": {},
+			"Patron": {},
+			"Potion": {},
+			"Property": {},
+			"Scroll": {},
+			"Spell": {},
+			"Talent": {},
+			"Wand": {},
+			"Weapon": {}
+		}
+    },
 	"languages": [
 		{
 			"lang": "de",
@@ -347,7 +378,7 @@
 		"units": "ft"
 	},
 	"socket": true,
-	"initiative": "@initiativeFormula + @initiativeBonus",
+	"initiative": "@initiative",
 	"primaryTokenAttribute": "attributes.hp",
 	"background": "systems/shadowdark/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
 }

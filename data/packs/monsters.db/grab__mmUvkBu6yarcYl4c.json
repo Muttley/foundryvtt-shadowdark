@@ -3,12 +3,15 @@
 	"_key": "!actors.items!Jn5JjEPCUT86txAg.mmUvkBu6yarcYl4c",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Grab",
 	"system": {
 		"description": "<p>Target is immobilized. [[check 15 str]] check on turn to break free.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

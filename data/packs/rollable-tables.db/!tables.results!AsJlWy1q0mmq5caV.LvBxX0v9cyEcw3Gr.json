@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.LvBxX0v9cyEcw3Gr",
 	"description": "A woman hands you a black cat and then runs away",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		34,
 		35
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

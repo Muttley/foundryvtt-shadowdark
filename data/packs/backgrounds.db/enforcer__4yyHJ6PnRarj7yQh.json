@@ -3,14 +3,16 @@
 	"_key": "!items!4yyHJ6PnRarj7yQh",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Enforcer",
 	"system": {
 		"description": "<p>You enforce the jarl's law in your village</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

@@ -4,6 +4,8 @@
 	"effects": [
 		"CyZNMVHNjIMTM0g7"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/fear-fright-white.webp",
 	"name": "Condition: Afraid",
@@ -12,7 +14,7 @@
 		"description": "<p>The character is afraid.</p>",
 		"duration": {
 			"type": "unlimited",
-			"value": -1
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

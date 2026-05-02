@@ -3,12 +3,15 @@
 	"_key": "!actors.items!nhKDBbnOnXXTzfBr.RAfF2wCNn0ey6xAT",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Bewilder",
 	"system": {
 		"description": "<p>Creatures within near that see the cave brute's eyes, [[check 12 cha]] at start of their turn or dazed and no action.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

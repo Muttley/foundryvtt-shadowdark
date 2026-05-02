@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1RaFraTFH6enPqOH.uhr4e1k0vf3wPIFd",
 	"description": "of the Forgotten",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		2,
 		3
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

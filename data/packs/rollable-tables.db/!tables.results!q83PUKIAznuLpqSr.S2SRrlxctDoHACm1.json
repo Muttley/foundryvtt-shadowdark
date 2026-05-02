@@ -3,12 +3,14 @@
 	"_key": "!tables.results!q83PUKIAznuLpqSr.S2SRrlxctDoHACm1",
 	"description": "<b>The grimlow!</b> You accidentally summon a hostile grimlow in a space near to you. It persists for 2d4 rounds before disappearing whence it came",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		4,
 		4
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

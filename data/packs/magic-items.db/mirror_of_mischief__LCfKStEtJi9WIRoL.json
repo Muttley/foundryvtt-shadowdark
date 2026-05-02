@@ -1,0 +1,51 @@
+{
+	"_id": "LCfKStEtJi9WIRoL",
+	"_key": "!items!LCfKStEtJi9WIRoL",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/survival/mirror-plain.webp",
+	"name": "Mirror of Mischief",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A full-length mirror polished to a gleaming shine. Grinning, silver demons grasp the mirror, their claws forming its frame.</em></p><p><strong>Curse.</strong> The first time a humanoid creature looks into this mirror, the mirror creates an evil and malicious duplicate of them. The duplicate can step from the mirror and is an exact copy of the subject (except for magical gear, which looks identical but is mundane in nature). The evil duplicate can live indefinitely outside the mirror. It attempts to sow chaos in the life of the creature it duplicated.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

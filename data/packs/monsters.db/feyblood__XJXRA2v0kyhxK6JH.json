@@ -3,12 +3,15 @@
 	"_key": "!actors.items!GvxrOdZ1MejJL8DV.XJXRA2v0kyhxK6JH",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Feyblood",
 	"system": {
 		"description": "<p>ADV on DEX checks while in the natural wilds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

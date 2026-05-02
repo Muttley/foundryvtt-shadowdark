@@ -1,8 +1,10 @@
 {
 	"_id": "sJTtbWtWigzBHf6N",
 	"_key": "!macros!sJTtbWtWigzBHf6N",
-	"author": "mu8H7NbWc0seFWcA",
+	"author": "kJP435n33glBI4iD",
 	"command": "/**\n ****************************************************************\n * This macro can be used to open the monster importer\n ***************************************************************/\n\nnew shadowdark.apps.MonsterImporterSD().render(true);",
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/skull-energy-light-purple.webp",
 	"name": "Open Monster Importer",

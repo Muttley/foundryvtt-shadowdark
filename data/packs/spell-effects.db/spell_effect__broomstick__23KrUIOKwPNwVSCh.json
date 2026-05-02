@@ -4,6 +4,8 @@
 	"effects": [
 		"gbIJz5HZymMEOrpU"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/tools/hand/broom-straw-brown.webp",
 	"name": "Spell Effect: Broomstick",
@@ -12,7 +14,7 @@
 		"description": "<p>The broomstick's rider can fly a near distance each round and can hover in place.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

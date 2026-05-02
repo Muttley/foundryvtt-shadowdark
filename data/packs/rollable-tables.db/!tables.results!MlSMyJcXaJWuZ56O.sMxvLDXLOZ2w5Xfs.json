@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.sMxvLDXLOZ2w5Xfs",
 	"description": "A glowing meteor crashed deep inside the marshlands",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		34,
 		35
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

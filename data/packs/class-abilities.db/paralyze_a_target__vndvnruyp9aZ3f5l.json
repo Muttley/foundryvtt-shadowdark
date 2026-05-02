@@ -3,6 +3,8 @@
 	"_key": "!items!vndvnruyp9aZ3f5l",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "y6T37zGPt9EZBlPO",
 	"img": "icons/skills/melee/blade-tip-energy-green.webp",
 	"name": "Paralyze a Target",
@@ -14,6 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

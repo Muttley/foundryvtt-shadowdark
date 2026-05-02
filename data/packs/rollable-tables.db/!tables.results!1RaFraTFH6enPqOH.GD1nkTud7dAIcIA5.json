@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1RaFraTFH6enPqOH.GD1nkTud7dAIcIA5",
 	"description": "of the Insectoid",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		46,
 		47
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

@@ -1,7 +1,34 @@
 <section class="tab tab-details" data-group="primary" data-tab="tab-details">
 	<div class="grid-3-columns">
-		{{> items/_partials/spell }}
+		{{#ifCond isGM '||' isIdentified}}
+			{{#> ui/sd-box
+				header-label=(localize "SHADOWDARK.item.spell.label")
+				header-class="light"
+			}}
+				{{>
+				items/_partials/choice-selector
+				config=spellSelectorConfig
+				editable=editable
+				}}
+			{{/ui/sd-box}}
+		{{/ifCond}}
+		{{#> ui/sd-box
+			header-label="Item Properties"
+			header-class="light"
+		}}
+			<div class="SD-grid right">
+				<h3>{{localize "SHADOWDARK.item.broken"}}</h3>
+				<input
+					name="system.broken"
+					type="checkbox"
+					{{checked system.broken}}
+				/>
+			</div>
+		{{/ui/sd-box}}
 		{{> items/_partials/cost }}
 		{{> items/_partials/slots }}
+		{{#if isGM}}
+			{{> items/_partials/gm-only }}
+		{{/if}}
 	</div>
 </section>

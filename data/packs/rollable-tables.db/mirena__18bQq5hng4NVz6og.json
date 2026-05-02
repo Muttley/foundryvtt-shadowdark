@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ZbrMK1WDNtz1ajJn.18bQq5hng4NVz6og",
 	"description": "Mirena",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Mirena",
 	"range": [
 		7,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

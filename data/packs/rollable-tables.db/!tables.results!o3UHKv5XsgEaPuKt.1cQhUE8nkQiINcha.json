@@ -3,12 +3,14 @@
 	"_key": "!tables.results!o3UHKv5XsgEaPuKt.1cQhUE8nkQiINcha",
 	"description": "Curtain of fire",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		10,
 		10
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

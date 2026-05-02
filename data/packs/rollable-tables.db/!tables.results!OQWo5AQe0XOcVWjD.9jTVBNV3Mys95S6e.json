@@ -3,12 +3,14 @@
 	"_key": "!tables.results!OQWo5AQe0XOcVWjD.9jTVBNV3Mys95S6e",
 	"description": "Sword",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		14,
 		14
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

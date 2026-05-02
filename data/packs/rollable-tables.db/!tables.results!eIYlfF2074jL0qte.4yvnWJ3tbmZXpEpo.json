@@ -3,12 +3,14 @@
 	"_key": "!tables.results!eIYlfF2074jL0qte.4yvnWJ3tbmZXpEpo",
 	"description": "Toxic gas",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		3,
 		3
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

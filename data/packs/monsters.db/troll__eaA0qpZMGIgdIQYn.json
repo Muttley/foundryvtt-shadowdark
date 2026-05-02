@@ -3,6 +3,8 @@
 	"_key": "!actors!eaA0qpZMGIgdIQYn",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -21,8 +23,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +94,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -134,21 +134,23 @@
 				"value": 12
 			},
 			"hp": {
-				"hd": 0,
 				"max": 24,
 				"value": 24
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 5
+			"value": 5,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Green, lanky giants with warty skin and territorial rage. Lair in deep forests and swamps. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 24, <strong>ATK</strong> 2 claw +4 (1d6) and 1 bite +4 (1d10), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Regenerate</strong>. Regains 2d6 HP on its turn unless its wounds are cauterized with fire or acid.</p>",
-		"spellcastingAbility": "",
-		"spellcastingAttackNum": 0,
-		"spellcastingBonus": 0
+		"notes": "<p><i> Green, lanky giants with warty skin and territorial rage. Lair in deep forests and swamps. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 24, <strong>ATK</strong> 2 claw +4 (1d6) and 1 bite +4 (1d10), <strong>MV</strong> near, <strong>S</strong> +3, <strong>D</strong> +2, <strong>C</strong> +2, <strong>I</strong> -1, <strong>W</strong> +0, <strong>Ch</strong> -1, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 5</p>\n\t<p><strong> Regenerate</strong>. Regains 2d6 HP on its turn unless its wounds are cauterized with fire or acid.</p>",
+		"spellcasting": {
+			"ability": "",
+			"attacks": 0,
+			"bonus": 0
+		}
 	},
 	"type": "NPC"
 }

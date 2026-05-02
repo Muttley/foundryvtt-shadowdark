@@ -3,6 +3,8 @@
 	"_key": "!items!P9LFIH0PW4Zlx3RG",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-blue-yellow.webp",
 	"name": "Protection from Energy",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>One creature you touch becomes impervious to the wild fury of the elements.</p><p>Choose fire, cold, or electricity. For the spell's duration, the target is immune to harm from energy of the chosen type.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.KXfv6edqcRQdnc7m]{Spell Effect: Protection from Energy (Fire)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.8mFFTIDKLulz3Yp6]{Spell Effect: Protection from Energy (Cold)}</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.HxMd3lV8CPpvL3my]{Spell Effect: Protection from Energy (Electricity)}</p>",
 		"duration": {
 			"type": "focus",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

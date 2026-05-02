@@ -1,0 +1,35 @@
+{
+	"_id": "n3Z0tBxloczqrb2w",
+	"_key": "!items.effects!hcC1kuGgQ2VdnHmj.n3Z0tBxloczqrb2w",
+	"description": "Speak &amp; Understand Diabolic",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/commodities/tech/cog-steel-grey.webp",
+	"name": "Speak & Understand Diabolic",
+	"origin": "Item.WQAnfvteIZallISc",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.languages",
+				"priority": null,
+				"type": "add",
+				"value": "Compendium.shadowdark.languages.Item.b5yBrLaRIl7ZEWKu"
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

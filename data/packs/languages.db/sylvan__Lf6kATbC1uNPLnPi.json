@@ -3,12 +3,15 @@
 	"_key": "!items!Lf6kATbC1uNPLnPi",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "aDYnRuOBkR4FXCDR",
 	"img": "icons/tools/scribal/ink-quill-pink.webp",
 	"name": "Sylvan",
 	"system": {
 		"description": "<p>Centaurs, dryads, faeries</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"rarity": "common",
 		"source": {
 			"title": "core-rules"

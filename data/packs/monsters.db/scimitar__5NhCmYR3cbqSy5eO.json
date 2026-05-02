@@ -3,14 +3,15 @@
 	"_key": "!actors.items!1lgm8jaBx4YNXmr7.5NhCmYR3cbqSy5eO",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Scimitar",
 	"system": {
 		"attack": {
-			"num": "2"
+			"num": 2
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 2,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "",
 			"value": "1d6"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

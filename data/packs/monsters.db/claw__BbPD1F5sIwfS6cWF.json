@@ -3,14 +3,15 @@
 	"_key": "!actors.items!A84XNl4aGBeeDDLu.BbPD1F5sIwfS6cWF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Claw",
 	"system": {
 		"attack": {
-			"num": "2"
+			"num": 2
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 6,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d6"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

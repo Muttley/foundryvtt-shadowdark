@@ -1,0 +1,46 @@
+{
+	"_id": "RQ4nLtB4DgQiTt2d",
+	"_key": "!items!RQ4nLtB4DgQiTt2d",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/neck/amulet-carved-stone-eye.webp",
+	"name": "Amulet of Secrecy",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A heavy, flat pendant carved with a lidded eye.</em></p><p><strong>Benefit.</strong> You can't be detected by divination magic such as the scrying spell or a Crystal Ball while wearing this amulet.</p><p><strong>Curse.</strong> You constantly have the sensation of being watched.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2nHdxMs1BHY1FUhq.GPaRJPXAsbqOl1hU",
 	"description": "Shimmering",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		11,
 		11
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

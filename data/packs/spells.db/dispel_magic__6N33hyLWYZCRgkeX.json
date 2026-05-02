@@ -3,6 +3,8 @@
 	"_key": "!items!6N33hyLWYZCRgkeX",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JWPZqQ3Dk9n1iW1g",
 	"img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
 	"name": "Dispel Magic",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.035nuVkU9q2wtMPs"
 		],
+		"damageType": "none",
 		"description": "<p>End one spell that affects one target you can see in range.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

@@ -3,6 +3,8 @@
 	"_key": "!items!dsFmHTTuERiQePky",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "JecnLEQ8FwHnDCny",
 	"img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
 	"name": "Demonic Possession",
@@ -14,7 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},

@@ -3,6 +3,8 @@
 	"_key": "!items!mpqXJtii4nj4ukKk",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/people/group.webp",
 	"name": "Elf",
@@ -21,7 +23,8 @@
 			]
 		},
 		"nameTable": "Compendium.shadowdark.rollable-tables.RollTable.44P8mz0yaCsTtKeq",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"randomWeight": 2,
 		"source": {
 			"title": "core-rules"

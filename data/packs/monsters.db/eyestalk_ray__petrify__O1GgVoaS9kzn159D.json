@@ -3,12 +3,15 @@
 	"_key": "!actors.items!hiZvVJPOJWtOXV4m.O1GgVoaS9kzn159D",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Eyestalk Ray: Petrify",
 	"system": {
 		"description": "<p>[[check 15 con]] or petrified.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -2,28 +2,19 @@
 	"_id": "r2JNgS2474vuq9oy",
 	"_key": "!items!r2JNgS2474vuq9oy",
 	"effects": [
-		"YWdkfrbwnxtT4nUY",
-		"o3dQi9gdFgWhDNJg",
-		"eoN2RYcXriSBtzDB",
-		"1gLcCayYRfDAAQYB"
+		"7yErzttRT6Zaz8pz"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/weapons/swords/sword-gold-holy.webp",
 	"name": "Spell Effect: Holy Weapon",
 	"system": {
-		"bonuses": {
-			"attackBonus": "1",
-			"damageBonus": "1",
-			"meleeAttackBonus": "1",
-			"meleeDamageBonus": "1",
-			"rangedAttackBonus": "1",
-			"rangedDamageBonus": "1"
-		},
 		"category": "effect",
 		"description": "",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -36,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

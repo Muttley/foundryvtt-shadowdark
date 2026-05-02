@@ -1,0 +1,46 @@
+{
+	"_id": "r1cwY7jUars9bs24",
+	"_key": "!items!r1cwY7jUars9bs24",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/movement/feet-winged-boots-brown.webp",
+	"name": "Boots of Hovering",
+	"system": {
+		"broken": false,
+		"canBeEquipped": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>Brown, sturdy boots polished to a sheen. Small, silver wings adorn the heels.</em></p><p><strong>Benefit.</strong> You can walk on an insubstantial surface for 1 turn at a time. You fall through the surface if you end your turn on it.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"isPhysical": true,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

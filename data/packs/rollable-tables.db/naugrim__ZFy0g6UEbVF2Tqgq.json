@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.ZFy0g6UEbVF2Tqgq",
 	"description": "Naugrim",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Naugrim",
 	"range": [
 		6,
 		6
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

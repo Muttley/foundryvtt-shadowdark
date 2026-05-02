@@ -3,17 +3,21 @@
 	"_key": "!actors.items!OkhcwZ7JqJxTgkJo.zsKCU3we8eiou4Ou",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Soulbind",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All targets within near [[check 20 cha]] or fall under control of archdevil for [[/r 1d4]] rounds. [[check 20 cha]] on turn to end the effect.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

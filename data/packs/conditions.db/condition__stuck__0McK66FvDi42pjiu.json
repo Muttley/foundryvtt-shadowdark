@@ -4,6 +4,8 @@
 	"effects": [
 		"Pw5zyo8apyAphCG2"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/environment/traps/trap-jaw-steel.webp",
 	"name": "Condition: Stuck",
@@ -25,14 +27,13 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"start": {
 			"combatTime": null,
-			"initiative": null,
 			"value": 0
 		},
 		"tokenIcon": {

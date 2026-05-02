@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2jy6YrCKfrKewPho.FeRG9LTXYjlYa9aW",
 	"description": "Mines",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		78,
 		79
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

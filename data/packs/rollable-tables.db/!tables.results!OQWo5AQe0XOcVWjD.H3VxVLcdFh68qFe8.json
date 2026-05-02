@@ -3,12 +3,14 @@
 	"_key": "!tables.results!OQWo5AQe0XOcVWjD.H3VxVLcdFh68qFe8",
 	"description": "Bow",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		13,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

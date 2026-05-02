@@ -3,14 +3,15 @@
 	"_key": "!actors.items!5AV9DF5BbMu7mvVO.5CsCrF9cJgfopFqt",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Longbow",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 1,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "",
 			"value": "1d8"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"far"
 		],

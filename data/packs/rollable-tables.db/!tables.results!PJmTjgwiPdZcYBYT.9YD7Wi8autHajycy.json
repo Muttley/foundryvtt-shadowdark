@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.9YD7Wi8autHajycy",
 	"description": "The body of a dead crawler holds a random magic item",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		100,
 		100
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

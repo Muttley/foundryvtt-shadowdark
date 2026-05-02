@@ -3,6 +3,8 @@
 	"_key": "!items!22pcP3fv7Mz1vJSs",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "sE2Ooa1HgAMXmCra",
 	"img": "icons/magic/symbols/runes-triangle-orange.webp",
 	"name": "Coven",
@@ -10,14 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],
+		"damageType": "none",
 		"description": "<p>You call upon the magic you share with your fellow witches. </p><p>You regain the use of one tier 3 spell or lower that you can no longer cast for the day. </p><p>After successfully casting this spell, you can't do so again until you complete a rest.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-1"

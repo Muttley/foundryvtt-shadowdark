@@ -3,12 +3,15 @@
 	"_key": "!actors.items!0Q9d1621wpUEsuFC.SFc52S0b9ce6Xldl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Carrion Mist",
 	"system": {
 		"description": "<p>Each time vrock is hit, 3:6 chance of carrion mist in near-sized cube centered on vrock. All enemies [[check 15 con]] or violent vomiting [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

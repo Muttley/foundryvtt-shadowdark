@@ -3,18 +3,21 @@
 	"_key": "!actors.items!UzRHO1MCMmYDSVzo.g5tUfZrRzPhiKHqB",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Gas",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>All in near [[check 12 con]] or blinded for [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

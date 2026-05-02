@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.czdsovaXEkCbHRjY",
 	"description": "[[/r 2d4]] dwarven miners (@UUID[Compendium.shadowdark.monsters.Kw5KEyZVy5ugaTTy]{Soldiers}) shore up a collapsing wall",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		62,
 		63
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

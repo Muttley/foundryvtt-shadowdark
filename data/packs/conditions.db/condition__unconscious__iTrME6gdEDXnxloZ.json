@@ -1,25 +1,27 @@
 {
 	"_id": "iTrME6gdEDXnxloZ",
 	"_key": "!items.effects!2UFWFSeffj7vrSSR.iTrME6gdEDXnxloZ",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
 	"name": "Condition: Unconscious",
 	"origin": "Item.2UFWFSeffj7vrSSR",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

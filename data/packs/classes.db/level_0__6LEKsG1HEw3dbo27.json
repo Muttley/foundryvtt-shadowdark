@@ -3,11 +3,13 @@
 	"_key": "!items!6LEKsG1HEw3dbo27",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Level 0",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": true,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -19,12 +21,9 @@
 		"classAbilityChoiceCount": 0,
 		"classAbilityChoices": [
 		],
-		"classTalentTable": "",
-		"description": "<p>Some games begin with 0-level characters — weak peasants who have not yet attained the skill required to be adventurers. 0-level characters are fragile.</p><p>GMs should see The Gauntlet on pg. 116 for more insight.</p><p>Because 0-level characters have beginner's luck, they can wield all gear until 1st level.</p><p>0-level characters start with:</p><ul><li><p>Stats, pg. 15</p></li><li><p>Choice of ancestry, pg. 16</p></li><li><p>Hit points equal to their Constitution modifier (minimum 1)</p></li><li><p>Background, pg. 26</p></li><li><p>Choice of alignment, pg. 27</p></li><li><p>Starting gear, pg. 33</p></li></ul><p>0-level characters reach 1st level after surviving their first adventure (see pg. 39).</p>",
+		"classTalentTable": null,
+		"description": "<p>Some games begin with 0-level characters — weak peasants who have not yet attained the skill required to be adventurers. 0-level characters are fragile and start with hit points equal to their Constitution modifier (minimum 1)</p>",
 		"hitPoints": "",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -38,14 +37,15 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},
 		"spellcasting": {
 			"ability": "",
 			"baseDifficulty": 10,
-			"class": "__not_spellcaster__",
+			"class": "",
 			"spellsknown": {
 				"1": {
 					"1": null,
@@ -123,6 +123,7 @@
 		"talentChoices": [
 		],
 		"talents": [
+			"Compendium.shadowdark.talents.Item.uMEh2Cwn7uKjEVSK"
 		],
 		"titles": [
 			{

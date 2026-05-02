@@ -3,14 +3,15 @@
 	"_key": "!actors.items!0kzqjwTD3ouYsDZh.Bdq531Yzhj5NTMpK",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Rock",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 8,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "",
 			"value": "2d12"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"far"
 		],

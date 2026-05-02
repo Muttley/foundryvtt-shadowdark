@@ -3,11 +3,15 @@
 	"_key": "!actors.items!qSeHWgP59WltutCz.90HbnXI8rj8tSAqy",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Statue",
 	"system": {
 		"description": "<p>When standing still, looks exactly like a suit of armor.</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

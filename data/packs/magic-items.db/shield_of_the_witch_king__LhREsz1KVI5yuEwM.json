@@ -1,0 +1,50 @@
+{
+	"_id": "LhREsz1KVI5yuEwM",
+	"_key": "!items!LhREsz1KVI5yuEwM",
+	"effects": [
+		"UmHdci1cvynol7xU"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/shield/kite-decorative-steel-claws.webp",
+	"name": "Shield of the Witch-King",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 2
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "<p><em>A jagged triangle of black steel with spiny, armored plates.</em></p><p><strong>Bonus.</strong> +2 shield. Can only be wielded by a chaotic being.</p><p><strong>Benefit.</strong> You take half damage from undead creatures.</p><p><strong>Curse.</strong> If you go to 0 HP, the spirit of Ix-Natheer tries to steal your body. He blocks healing magic from affecting you. If you die, Ix-Natheer possesses you.</p><p><strong>Personality.</strong> Chaotic. The spirit of the witch-king Ix-Natheer animates this shield. He pounces on opportunities to betray his wielder so he can try to take over their body and return to unlife.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
+			"Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

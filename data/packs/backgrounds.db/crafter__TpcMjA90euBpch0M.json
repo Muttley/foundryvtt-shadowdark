@@ -3,14 +3,16 @@
 	"_key": "!items!TpcMjA90euBpch0M",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Crafter",
 	"system": {
 		"description": "<p>You can make and fix any utilitarian item</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

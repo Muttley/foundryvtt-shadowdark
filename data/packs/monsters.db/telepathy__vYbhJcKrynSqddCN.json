@@ -3,12 +3,15 @@
 	"_key": "!actors.items!6ldPPlMIMSd4ALoZ.vYbhJcKrynSqddCN",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Telepathy",
 	"system": {
 		"description": "<p>Can secretly hear the surface thoughts of all humanoids within near.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

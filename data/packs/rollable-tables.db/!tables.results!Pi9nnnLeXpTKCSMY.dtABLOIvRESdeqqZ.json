@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.dtABLOIvRESdeqqZ",
 	"description": "Mithral locket with a painting of a halfling (20 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		50,
 		53
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 4
 }

@@ -1,13 +1,12 @@
 @use "../abstracts" as *;
 
+// TODO remove this legacy styling after next release
 .shadowdark.welcome-message,
 .shadowdark.roll-card,
-.shadowdark.item-card {
+.shadowdark.item-card,
+.shadowdark.light-source-card,
+.shadowdark.ability-card {
   .card-header {
-    padding: 3px 0;
-    border-top: 2px groove #FFF;
-    border-bottom: 2px groove #FFF;
-
     img {
       flex: 0 0 36px;
       margin-right: 5px;
@@ -15,75 +14,238 @@
       height: 36px;
       border-radius: 3px;
     }
-
-    h3 {
-      flex: 1;
-      margin: 0;
-      line-height: 1;
-			align-self: center;
-    }
-  }
-
-  .card-content {
-    padding: 3px 0 3px;
-
-    p {
-      padding: 3px 0 3px;
-    }
-  }
-
-  .card-attack-roll {
-    padding: 3px 0 3px;
-    border-top: 2px groove #FFF;
-  }
-
-  .card-damage-rolls {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card-damage-roll {
-    padding: 2px 6px 3px;
-
-    h3 {
-      font-size: 12px;
-    }
-
-  }
-
-  .card-damage-roll-single {
-    padding: 12px 0 3px;
-    grid-column: span 2;
-  }
-
-  .card-spell-critical {
-    font-size: 12px;
-    padding: 3px 0 0;
-  }
-
-  .card-buttons {
-    padding: 3px 0 3px;
-    display: none;
-  }
-
-  .card-buttons.hp {
-    padding: 3px 0 3px;
-    display: block;
-  }
-
-  .card-footer {
-    padding: 3px 0 0;
-    border-top: 2px groove #FFF;
-
-    span {
-      border: 2px groove #FFF;
-      border-radius: 5px;
-      padding: 0 4px 0 4px;
-      font-size: 10px;
-    }
   }
 }
 
+
+.chat-message {
+	font-family: "Montserrat-Medium";
+
+	h3 {
+		font-family: "Montserrat-bold";
+		font-size: var(--font-size-16);
+		margin: 4px 0px;
+	}
+
+	.message-header {
+		margin-bottom: 4px;
+
+		img {
+			width:40px;
+			flex: 0 0 auto;
+			border: 2px solid black;
+		}
+
+		.message-sender-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			white-space: unset;
+
+			.message-sender {
+				text-wrap: wrap;
+				font-size: var(--font-size-18);
+				font-family: "Montserrat-Bold";
+				color: black;
+
+			}
+
+		}
+
+
+		.message-metadata {
+			flex: none;
+        	font-size: var(--font-size-10);
+		}
+	}
+
+	.message-content {
+		font-family: "Montserrat-Medium";
+
+		.descriptions {
+			margin: 0px 4px;
+		}
+
+		.item-wrapper {
+			display: flex;
+			flex-direction: row;
+			gap: 4px;
+			line-height: 1;
+			margin: 4px;
+
+			.item-image {
+				width: 25px;
+				height: 25px;
+				display: inline-block;
+				flex-shrink: 0;
+			}
+
+			.item-text-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+				flex: 1;
+
+				.item-name {
+					font-size: 1em;
+				}
+
+				.item-subtext {
+					font-size: 0.75em;
+					color: #707070;
+				}
+			}
+
+			.action-title {
+				font-size: var(--font-size-18);
+				font-family: "Montserrat-Bold";
+			}
+
+			.action-subtitle {
+				font-size: var(--font-size-12);
+			}
+
+		}
+
+		.dice-roll {
+
+			.dice-result {
+				display: flex;
+				order: 0;
+				background: rgba(0, 0, 0, 0.1);
+				border: 1px solid #999;
+				border-radius: 3px;
+				box-shadow: 0 0 2px #FFF inset;
+				align-items: stretch;
+				min-height: 28px;
+
+				.dice-total {
+					flex: 1;
+					font-size: var(--font-size-20);
+					background: none;
+					border: solid black 1px;
+					box-shadow: none;
+					max-width: fit-content;
+					min-width: 2em;
+					font-family: "Montserrat-Bold";
+					padding: 0px 4px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+				}
+
+				.dice-text {
+					flex:1;
+					margin: 0px 4px;
+					align-content: center;
+					align-items: center;
+					line-height: 1;
+
+					.dice-success {
+						font-size: var(--font-size-14);
+						font-family: 'Montserrat-Bold';
+						text-align: center;
+					}
+
+					.dice-formula {
+						color: #444;
+						font-size: var(--font-size-14);
+						margin: 0px;
+						border: none;
+						background: none;
+						box-shadow: none;
+						line-height: normal;
+						flex:1;
+
+						&.small {
+							font-size: var(--font-size-10);
+						}
+
+						i {
+							margin: 0px 4px;
+							color: #361010;
+						}
+					}
+
+					&.dice-damage {
+						display: flex;
+					}
+				}
+
+				&.critical-success {
+					color:#1c7b00;
+					text-shadow: 0px 0px 10px #ffffff;
+				}
+				&.failure {
+					color:gray;
+				}
+				&.critical-failure {
+					color:#750003;
+					text-shadow: 0 0 10px black;
+				}
+			}
+			.dice-tooltip {
+				margin-top: 4px;
+				font-size: var(--font-size-12);
+			}
+		}
+
+		.sub-heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid black;
+
+			.reroll-icon {
+				font-size: 0.8em;
+			}
+		}
+
+		.apply-damage {
+			margin: 0px 4px;
+
+			i {
+				font-size: var(--font-size-14);
+			}
+
+			&.damage-applied {
+				opacity: 0.4;
+			}
+		}
+
+		.target-wrapper {
+			display: flex;
+			margin:4px 0px 0px 4px;
+			align-items: center;
+
+			.targets {
+				flex:1;
+
+				.target {
+					display: flex;
+					flex: 1;
+					margin-top: 4px;
+
+					img {
+						width: 25px;
+						height: 25px;
+						display: inline-block;
+						text-align: center;
+						font-size: var(--font-size-18);
+					}
+
+					span {
+						margin: 0px 4px;
+						line-height: 25px;
+						font-size: var(--font-size-14);
+					}
+				}
+			}
+
+		}
+	}
+}
 
 
 .shadowdark.welcome-message {
@@ -106,41 +268,4 @@
 			padding: 0px 10px 0px 10px;
 		}
 	}
-}
-
-.shadowdark.light-source-card,
-.shadowdark.ability-card {
-  .card-header {
-    padding: 3px 0;
-    border-top: 2px groove #FFF;
-    border-bottom: 2px groove #FFF;
-
-    img {
-      flex: 0 0 36px;
-      margin-right: 5px;
-      width: 36px;
-      height: 36px;
-      border-radius: 3px;
-    }
-
-    h3 {
-      flex: 1;
-      margin: 0;
-      line-height: 1;
-			align-self: center;
-    }
-  }
-
-  .card-content {
-    padding: 3px 0 3px;
-
-    p {
-      padding: 3px 0 3px;
-    }
-  }
-
-  .card-ability-roll {
-    padding: 3px 0 3px;
-    border-top: 2px groove #FFF;
-  }
 }

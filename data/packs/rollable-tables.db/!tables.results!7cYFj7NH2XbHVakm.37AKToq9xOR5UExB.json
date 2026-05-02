@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.37AKToq9xOR5UExB",
 	"description": "Success",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		91,
 		91
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

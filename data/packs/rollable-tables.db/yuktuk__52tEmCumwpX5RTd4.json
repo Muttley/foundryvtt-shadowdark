@@ -3,12 +3,14 @@
 	"_key": "!tables.results!swiCqIGo0Bb3sJyI.52tEmCumwpX5RTd4",
 	"description": "Yuktuk",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Yuktuk",
 	"range": [
 		3,
 		3
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!B1B7yApS28xtu8HN.oSzGRe1VcE86McEP",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Invisibility",
 	"system": {
 		"description": "<p>1/day, turn invisible for 3 rounds. Ends if duergar attacks.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

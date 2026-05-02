@@ -3,14 +3,15 @@
 	"_key": "!actors.items!ubcYvhvDW1WywYcw.h3hcYlggXJFutOXM",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Bite",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 1,
 			"critical": {
@@ -26,6 +27,8 @@
 			"value": "1d4"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

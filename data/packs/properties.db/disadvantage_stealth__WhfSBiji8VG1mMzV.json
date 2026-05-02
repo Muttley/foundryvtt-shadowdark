@@ -3,13 +3,16 @@
 	"_key": "!items!WhfSBiji8VG1mMzV",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "HwVNTdYe7cKVBJC7",
 	"img": "icons/sundries/documents/document-torn-diagram-tan.webp",
 	"name": "Disadvantage/Stealth",
 	"system": {
 		"description": "<p>You have disadvantage on stealth rolls when wearing this armor</p>",
 		"itemType": "armor",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

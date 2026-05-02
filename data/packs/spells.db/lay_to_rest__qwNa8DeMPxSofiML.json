@@ -3,6 +3,8 @@
 	"_key": "!items!qwNa8DeMPxSofiML",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "DzARPzBmfc6ssBqS",
 	"img": "icons/magic/death/grave-tombstone-glow-teal.webp",
 	"name": "Lay to Rest",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
+		"damageType": "none",
 		"description": "<p>You instantly send an undead creature you touch to its final afterlife, destroying it utterly. </p><p>You can target an undead creature of LV 9 or less</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

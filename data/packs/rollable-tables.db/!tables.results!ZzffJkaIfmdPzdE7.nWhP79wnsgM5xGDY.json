@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ZzffJkaIfmdPzdE7.nWhP79wnsgM5xGDY",
 	"description": "+2 points to distribute to any stats",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		7,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

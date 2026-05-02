@@ -3,6 +3,8 @@
 	"_key": "!items!Jkl9j4RZ2WYy0Gmd",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "p6yXRQ2vgJxwQ8he",
 	"img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
 	"name": "Petrifying Gaze",
@@ -14,6 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},

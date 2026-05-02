@@ -1,0 +1,38 @@
+{
+	"_id": "Kf2eneYOrzvxxnWU",
+	"_key": "!items.effects!v2khQSVLOXjdYA4j.Kf2eneYOrzvxxnWU",
+	"description": "+1 to your next spellcasting check or ranged attack (1/day)",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
+	},
+	"folder": null,
+	"img": "icons/magic/air/air-smoke-casting.webp",
+	"name": "Spellcasting Advantage on Spell",
+	"origin": "Compendium.shadowdark.magic-items.Item.v2khQSVLOXjdYA4j",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.advantage.all",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

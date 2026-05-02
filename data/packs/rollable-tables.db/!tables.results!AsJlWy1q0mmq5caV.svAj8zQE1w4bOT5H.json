@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.svAj8zQE1w4bOT5H",
 	"description": "An NPC throws off their disguise, revealing an enemy",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		96,
 		97
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

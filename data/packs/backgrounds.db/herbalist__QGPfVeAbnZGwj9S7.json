@@ -3,11 +3,15 @@
 	"_key": "!items!QGPfVeAbnZGwj9S7",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Herbalist",
 	"system": {
 		"description": "<p>You know plants, medicines, and poisons</p>",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

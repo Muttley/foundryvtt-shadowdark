@@ -3,12 +3,14 @@
 	"_key": "!tables.results!7cYFj7NH2XbHVakm.MPLM8GL7xutEE9pT",
 	"description": "Family",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		21,
 		21
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

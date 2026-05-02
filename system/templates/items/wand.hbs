@@ -6,9 +6,17 @@
 			{{localize "SHADOWDARK.sheet.item.tab.details"}}
 		</a>
 
-		<a class="navigation-tab" data-tab="tab-effects">
-			{{localize "SHADOWDARK.sheet.item.tab.effects"}}
-		</a>
+		{{#if showEffectsTab}}
+			<a class="navigation-tab" data-tab="tab-effects">
+				{{localize "SHADOWDARK.sheet.item.tab.effects"}}
+			</a>
+		{{/if}}
+
+		{{#if showIdentifyTab}}
+			<a class="navigation-tab" data-tab="tab-identify">
+				{{localize "SHADOWDARK.item.magic_item.identify"}}
+			</a>
+		{{/if}}
 
 		<a class="navigation-tab" data-tab="tab-description">
 			{{localize "SHADOWDARK.sheet.item.tab.description"}}
@@ -21,7 +29,12 @@
 
 	<section class="SD-content-body flex1">
 		{{> items/wand/details-tab }}
-		{{> items/_partials/effects-tab }}
+		{{#if showEffectsTab}}
+			{{> items/_partials/effects-tab }}
+		{{/if}}
+		{{#if isUnidentified}}
+			{{> items/_partials/identify-tab }}
+		{{/if}}
 		{{> items/_partials/description-tab }}
 		{{> items/_partials/source-tab }}
 	</section>

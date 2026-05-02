@@ -1,0 +1,54 @@
+{
+	"_id": "REKbDm3ShTNQouM2",
+	"_key": "!items!REKbDm3ShTNQouM2",
+	"effects": [
+		"nv1kzlTwOcLqpi7w",
+		"dZkdrikRTlcELylW",
+		"0SIRUg3EWmVGZkBZ"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/polearms/trident-silver-blue.webp",
+	"name": "Trident of the Seas",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A three-pronged, mithral harpoon studded with pearls.</em></p><p><strong>Bonus.</strong> +2 spear.</p><p><strong>Benefit.</strong> You can breathe underwater, as well as speak to and understand wild sea creatures. Once per day, you can cast @UUID[Compendium.shadowdark.spells.Item.TKDuwFu1hP2lX549]{control water} (pg. 57) with a +4 bonus.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": true,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!es2O2GjdzKjSCMMG.3u2YlIj853owvMd3",
 	"description": "Twist",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		10,
 		10
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

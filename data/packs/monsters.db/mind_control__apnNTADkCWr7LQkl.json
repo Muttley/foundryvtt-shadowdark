@@ -3,17 +3,21 @@
 	"_key": "!actors.items!MnV9R6AbzWjLreaZ.apnNTADkCWr7LQkl",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/weapon-sword-skull-purple.webp",
 	"name": "Mind Control",
 	"system": {
 		"attack": {
-			"num": "1"
+			"num": 1
 		},
 		"bonuses": {
 			"attackBonus": 0
 		},
 		"description": "<p>One target in near [[check 15 cha]] or brain eater controls for [[/r 1d4]] rounds.</p>",
+		"properties": [
+		],
 		"ranges": [
 		],
 		"source": {

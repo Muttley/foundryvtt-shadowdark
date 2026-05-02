@@ -3,14 +3,15 @@
 	"_key": "!actors.items!sncxcSi6ziTStjAh.w5Ili1AOm8hEmX5A",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Touch",
 	"system": {
 		"attack": {
-			"num": "2"
+			"num": 2
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 6,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 0
 		},
 		"damage": {
-			"numDice": "2",
+			"numDice": 2,
 			"special": "Paralysis",
 			"value": "2d8"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

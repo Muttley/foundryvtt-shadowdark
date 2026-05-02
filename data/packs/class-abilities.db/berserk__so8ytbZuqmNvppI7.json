@@ -3,6 +3,8 @@
 	"_key": "!items!so8ytbZuqmNvppI7",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "q7zkgCiSTr8Xxshe",
 	"img": "icons/skills/wounds/injury-eyes-blood-red-pink.webp",
 	"name": "Berserk",
@@ -14,6 +16,8 @@
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-2"
 		},

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.gw4lEv3jkPRrQnIo",
 	"description": "Pair of elf-forged shortswords (14 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		38,
 		39
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

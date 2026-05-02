@@ -1,79 +1,57 @@
 {
 	"_id": "vMxGVAApQXuIeBXk",
 	"_key": "!items.effects!cC4hF54uctVhvvCo.vMxGVAApQXuIeBXk",
-	"changes": [
-		{
-			"key": "system.abilities.str.base",
-			"mode": 4,
-			"priority": null,
-			"value": "16"
-		},
-		{
-			"key": "system.abilities.dex.base",
-			"mode": 4,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.con.base",
-			"mode": 4,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.attributes.hp.base",
-			"mode": 3,
-			"priority": null,
-			"value": "23"
-		},
-		{
-			"key": "system.attributes.ac.override",
-			"mode": 5,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.abilities.str.base",
-			"mode": 3,
-			"priority": null,
-			"value": "16"
-		},
-		{
-			"key": "system.abilities.dex.base",
-			"mode": 3,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.con.base",
-			"mode": 3,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.attributes.hp.base",
-			"mode": 4,
-			"priority": null,
-			"value": "23"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 1,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
 	"name": "Winter Wolf",
 	"origin": "Item.hVsjl5GZqSajuFU6",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.str.value",
+				"priority": null,
+				"type": "override",
+				"value": 16
+			},
+			{
+				"key": "system.abilities.dex.value",
+				"priority": null,
+				"type": "override",
+				"value": 14
+			},
+			{
+				"key": "system.abilities.con.value",
+				"priority": null,
+				"type": "override",
+				"value": 12
+			},
+			{
+				"key": "system.attributes.hp.max",
+				"priority": null,
+				"type": "override",
+				"value": 23
+			},
+			{
+				"key": "system.attributes.ac.all",
+				"priority": null,
+				"type": "override",
+				"value": 12
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

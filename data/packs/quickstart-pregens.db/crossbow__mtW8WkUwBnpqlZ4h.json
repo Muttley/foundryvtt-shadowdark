@@ -3,43 +3,28 @@
 	"_key": "!actors.items!RfFy5Nq3izy5oVD6.mtW8WkUwBnpqlZ4h",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/weapons/crossbows/crossbow-purple.webp",
 	"name": "Crossbow",
 	"system": {
 		"ammoClass": "crossbow-bolts",
-		"attackBonus": 0,
 		"baseWeapon": "",
-		"bonuses": {
-			"attackBonus": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": 0,
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 8,
 			"sp": 0
 		},
 		"damage": {
-			"bonus": 0,
-			"critMultiplier": 2,
-			"numDice": 1,
 			"oneHanded": "",
 			"twoHanded": "d6"
 		},
 		"description": "",
 		"equipped": true,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.HyqHR9AhIDkm4La9",
 			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
@@ -52,12 +37,10 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false,
-		"type": "ranged",
-		"weaponMastery": false
+		"type": "ranged"
 	},
 	"type": "Weapon"
 }

@@ -3,6 +3,8 @@
 	"_key": "!items!RQGpRHGd04HiuI2Q",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "S2MLlGpmsIRnqf6Z",
 	"img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
 	"name": "Dominion",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
+		"damageType": "none",
 		"description": "<p>Mighty beings come to your aid. </p><p>The beings must have a combined total of 16 levels or less. Chaotic PCs summon demons/devils, and lawful or neutral PCs summon angels. </p><p>The beings act of free will to aid you on your turn. After 10 rounds, they return to their realms. </p><p>You cannot cast this spell again until you complete penance.</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "10"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

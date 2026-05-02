@@ -1,25 +1,27 @@
 {
 	"_id": "rRaOIGFZ6RzYlvUI",
 	"_key": "!items.effects!PLPiCgwZaEetlx5O.rRaOIGFZ6RzYlvUI",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 1,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
 	"name": "Hallucinating",
 	"origin": "Item.XIVFQdlFLE6VjDfs",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

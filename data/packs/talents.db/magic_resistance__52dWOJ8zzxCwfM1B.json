@@ -3,15 +3,17 @@
 	"_key": "!items!52dWOJ8zzxCwfM1B",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue-yellow.webp",
 	"name": "Magic Resistance",
 	"system": {
 		"description": "<p>Hostile spells that target you are always hard to cast</p><p>duplicate = reroll</p>",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "level"

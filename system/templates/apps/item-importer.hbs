@@ -1,25 +1,21 @@
-<form class="item-importer" autocomplete="off">
-	<section>
-		<div>
-			<p>{{localize "SHADOWDARK.apps.item-importer.instruction1"}}</p>
-			<hr />
-			<p>
-
-				{{localize "SHADOWDARK.apps.item-importer.instruction2a"}}<br>
-				<div style="border:1px solid black;background-color: lightgrey; font-size:0.65em;margin-left:50px;margin-right:50px;">
-					{{localize "SHADOWDARK.apps.item-importer.instruction2b"}}<br>
-					<i>{{localize "SHADOWDARK.apps.item-importer.instruction2c"}}</i><br>
-					{{localize "SHADOWDARK.apps.item-importer.instruction2d"}}
-				</div>
-			</p>
-			<textarea name="itemText" style="height:300px;"></textarea>
-			<hr />
-			<p>{{localize "SHADOWDARK.apps.item-importer.instruction3"}}</p>
-		</div>
-	</section>
-	<footer class="sheet-footer flexrow">
-		<button class="import">
-			{{localize "SHADOWDARK.apps.item-importer.import_button"}}
-		</button>
-	</footer>
-</form>
+<div class="flexrow" style="flex: 1; align-items: stretch; gap: 10px;">
+	<div style="width: 250px; flex: none; padding: 4px 0;">
+		<h1 style="font-family: var(--font-header); font-size: 2.5em; text-align: center;">{{localize "SHADOWDARK.apps.item-importer.header"}}</h1>
+		<hr />
+		<p>{{localize "SHADOWDARK.apps.item-importer.instruction1"}}</p>
+		<hr />
+		<p>{{localize "SHADOWDARK.apps.item-importer.instruction2a"}}</p>
+		<blockquote style="font-size: 0.85em; opacity: 0.8;">
+			{{localize "SHADOWDARK.apps.item-importer.instruction2b"}}<br>
+			<i>{{localize "SHADOWDARK.apps.item-importer.instruction2c"}}</i><br>
+			{{localize "SHADOWDARK.apps.item-importer.instruction2d"}}
+		</blockquote>
+		<hr />
+		<p>{{localize "SHADOWDARK.apps.item-importer.instruction3"}}</p>
+		<button type="submit">{{localize "SHADOWDARK.apps.item-importer.import_button"}}</button>
+	</div>
+	<div class="flex1" style="display: flex; flex-direction: column;">
+		<textarea name="itemText" placeholder="{{localize "SHADOWDARK.apps.item-importer.placeholder"}}" style="flex: 1; width: 100%; resize: none;"></textarea>
+		<ul class="import-errors" hidden></ul>
+	</div>
+</div>

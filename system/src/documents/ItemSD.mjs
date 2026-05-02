@@ -1,20 +1,16 @@
 export default class ItemSD extends foundry.documents.Item {
 
-	get isRollable() {
-		return [
-			"Potion",
-			"Scroll",
-			"Spell",
-			"Wand",
-			"Weapon",
-		].includes(this.type);
+	static migrateData(data) {
+		// migrate legacy Scolls and Wands
+		if (["Scroll", "Wand"].includes(data.type) && data.system?.spellName) {
+			foundry.utils.setProperty(data, "flags.shadowdark.legacyData", foundry.utils.deepClone(data.system));
+		}
+		return super.migrateData(data);
 	}
-
 
 	get typeSlug() {
 		return this.type.slugify();
 	}
-
 
 	get usesAmmunition() {
 		return (game.settings.get("shadowdark", "autoConsumeAmmunition")
@@ -46,7 +42,7 @@ export default class ItemSD extends foundry.documents.Item {
 				? `${game.combat.round}.${game.combat.turn}`
 				: null;
 
-			updateData["system.start"] = {
+			updateData["flags.shadowdark.start"] = {
 				value: game.time.worldTime,
 				combatTime,
 			};
@@ -72,19 +68,24 @@ export default class ItemSD extends foundry.documents.Item {
 			actor: this.actor,
 			description,
 			item: this.toObject(),
-			itemProperties: await this.propertyItems(),
+			itemProperties: this.system.propertyItems,
 		};
 
-		if (this.actor.type === "Player") {
-			data.isSpellCaster = await this.actor.isSpellCaster();
-			data.canUseMagicItems = await this.actor.canUseMagicItems();
+		if (this.actor.system.isPC) {
+			data.isSpellCaster = this.actor.system.isSpellCaster;
+			data.canUseMagicItems = this.actor.system.canUseMagicItems;
 		}
 
-		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+		if (this.system.isSpell) {
 			data.spellClasses = await this.getSpellClassesDisplay();
 		}
 
-		if (["Armor", "Weapon"].includes(this.type)) {
+		if (this.system.isScroll) {
+			const spellObj = await fromUuid(this.system.spellUuid);
+			if (spellObj) data.spellName = spellObj.name;
+		}
+
+		if (this.system.isArmor || this.system.isWeapon) {
 			data.baseItemName = await this.getBaseItemName();
 		}
 
@@ -127,14 +128,14 @@ export default class ItemSD extends foundry.documents.Item {
 		const data = {
 			description,
 			item: this.toObject(),
-			itemProperties: await this.propertyItems(),
+			itemProperties: this.system.propertyItems,
 		};
 
-		if (["Scroll", "Spell", "Wand"].includes(this.type)) {
+		if (this.system.isSpell) {
 			data.spellClasses = await this.getSpellClassesDisplay();
 		}
 
-		if (["Armor", "Weapon"].includes(this.type)) {
+		if (this.system.isArmor || this.system.isWeapon) {
 			data.baseItemName = await this.getBaseItemName();
 		}
 
@@ -197,7 +198,7 @@ export default class ItemSD extends foundry.documents.Item {
 
 	async reduceAmmunition(amount) {
 		const newAmount = Math.max(0, this.system.quantity - amount);
-		this.update({"system.quantity": newAmount});
+		await this.update({"system.quantity": newAmount});
 	}
 
 
@@ -231,10 +232,10 @@ export default class ItemSD extends foundry.documents.Item {
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (roll) {
-			if (this.type === "Scroll") {
+			if (this.system.isScroll) {
 				data.actor.deleteEmbeddedDocuments("Item", [this._id]);
 			}
-			else if (this.type === "Wand") {
+			else if (this.system.isWand) {
 				if (roll.rolls.main.critical === "failure") {
 					data.actor.deleteEmbeddedDocuments("Item", [this._id]);
 				}
@@ -242,18 +243,6 @@ export default class ItemSD extends foundry.documents.Item {
 		}
 
 		return roll;
-	}
-
-
-	async hasProperty(property) {
-		property = property.slugify();
-
-		const propertyItems = await this.propertyItems();
-		const propertyItem = propertyItems.find(
-			p => p.name.slugify() === property
-		);
-
-		return propertyItem ? true : false;
 	}
 
 	isActiveLight() {
@@ -265,64 +254,14 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 	isSpell() {
-		return ["Scroll", "Spell", "Wand", "NPC Spell"].includes(this.type);
-	}
-
-	isEffect() {
-		return this.type === "Effect";
-	}
-
-	isTalent() {
-		return this.type === "Talent";
-	}
-
-	isWeapon() {
-		return this.type === "Weapon";
-	}
-
-	isFinesseWeapon() {
-		return this.hasProperty("finesse");
-	}
-
-	isThrownWeapon() {
-		return this.hasProperty("thrown");
-	}
-
-	isMagicItem() {
-		return this.system.isPhysical && this.system.magicItem;
-	}
-
-	isVersatile() {
-		return this.hasProperty("versatile");
-	}
-
-	isOneHanded() {
-		return this.hasProperty("one-handed");
-	}
-
-	isTwoHanded() {
-		const damage = this.system.damage;
-		return this.hasProperty("two-handed")
-			|| (damage.oneHanded === "" && damage.twoHanded !== "");
-	}
-
-	async isAShield() {
-		if (!this.type === "Armor") return false;
-
-		const isAShield = await this.hasProperty("shield");
-		return isAShield;
-	}
-
-	async isNotAShield() {
-		const isAShield = await this.isAShield();
-		return !isAShield;
+		return ["Scroll", "Spell", "Wand"].includes(this.type);
 	}
 
 	async propertiesDisplay() {
 		let properties = [];
 
 		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const property of await this.propertyItems()) {
+			for (const property of await this.system.propertyItems) {
 				properties.push(property.name);
 			}
 		}
@@ -345,7 +284,7 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 
-	async propertyItems() {
+	async getPropertyItems() {
 		const propertyItems = [];
 
 		for (const uuid of this.system.properties ?? []) {
@@ -390,7 +329,7 @@ export default class ItemSD extends foundry.documents.Item {
 			// If there is combat, check if it was added during combat, otherwise
 			// consider it expired
 			if (game.combat) {
-				const startCombatTime = this.system.start.combatTime;
+				const startCombatTime = this.getFlag("shadowdark", "start")?.combatTime ?? null;
 				if (!startCombatTime) return { expired: true, remaining: 0, progress: 100 };
 
 				const round = startCombatTime.split(".")[0];
@@ -431,7 +370,7 @@ export default class ItemSD extends foundry.documents.Item {
 			return { expired: true, remaining: 0, progress: 0 };
 		}
 		else {
-			const start = this.system.start?.value ?? 0;
+			const start = this.getFlag("shadowdark", "start")?.value ?? 0;
 			const remaining = start + duration - game.time.worldTime;
 			const progress = (100 - Math.floor(100 * remaining / duration));
 			const result = { expired: remaining <= 0, remaining, progress };

@@ -28,7 +28,7 @@
 				</div>
 				<a class="item-name" data-action="show-details">
 					{{item.name}}
-					{{#if item.lightSourceUsed}}
+					{{#if item.system.light.hasBeenUsed}}
 						<em>{{localize 'SHADOWDARK.inventory.item.light_used'}}</em>
 					{{/if}}
 				</a>

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!piZE4vxM1QjLxEt0.uLTUz0TZILHtQIMr",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 9 con]] or take [[/r 1d4]] damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

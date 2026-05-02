@@ -3,12 +3,15 @@
 	"_key": "!actors.items!bzKSq624safyHLbE.VziIPMsG3eWonz5K",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Carrion Tracker",
 	"system": {
 		"description": "<p>Can track dead flesh unerringly within a mile.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

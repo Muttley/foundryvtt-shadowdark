@@ -3,12 +3,15 @@
 	"_key": "!actors.items!5uzilW5qSX7bPzxe.KJWjPMbXrXhSRIXC",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Regenerate",
 	"system": {
 		"description": "<p>Regains [[/r 2d6]] HP on its turn unless its wounds are cauterized with acid.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

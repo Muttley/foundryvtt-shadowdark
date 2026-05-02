@@ -1,17 +1,70 @@
-<div
-	class="shadowdark chat-card roll-card"
-	data-actor-id="{{data.actor.id}}"
-	{{#if tokenId}}
-		data-token-id="{{tokenId}}"
+<divclass="shadowdark chat-card">
+	<!-- mainRoll -->
+	{{#if mainRoll.html}}
+		<h3 class="sub-heading">
+			{{mainRoll.label}}
+			{{#unless mainRoll.success}}
+				<i class="fa-solid fa-arrows-rotate reroll-icon" data-action="reroll" data-roll-type="main"></i>
+			{{/unless}}
+		</h3>
+		{{{mainRoll.html}}}
 	{{/if}}
->
-	<header class="card-header flexrow">
-		<img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
-		<h3 class="roll-name">{{title}}</h3>
-	</header>
-	<div class="roll card-roll blindable" data-blind="{{data.rolls.main.blind}}">
-		{{#if data.rolls.main}}
-			<div>{{{data.rolls.main.renderedHTML}}}</div>
-		{{/if}}
+
+	<!-- Item -->
+	{{#if item}}
+		<div class="item-wrapper">
+			<a data-link data-uuid="{{item.uuid}}">
+				<img class="item-image" src="{{item.img}}">
+			</a>
+			<div class="item-text-wrapper">
+				<span class="item-name">{{item.name}}</span>
+				<span class="item-subtext">
+					{{item.system.subtext}}{{#if ammunitionName}}, {{ammunitionName}}{{/if}}
+				</span>
+			</div>
+		</div>
+	{{/if}}
+
+	<div class="descriptions">
+		{{#each descriptions}}
+			{{{this}}}
+		{{/each}}
 	</div>
+
+	<!-- Damage Roll -->
+	{{#if damageRoll.html}}
+		<h3 class="sub-heading">
+			{{damageRoll.label}}
+			<a data-action="reroll" data-roll-type="damage"><i class="fa-solid fa-arrows-rotate reroll-icon" ></i></a>
+		</h3>
+		{{{damageRoll.html}}}
+	{{else}}
+		{{#if damageRoll.needed}}
+			<h3 class="sub-heading">{{damageRoll.label}}</h3>
+			<div class="dice-roll" data-action="expandRoll" >
+				<div class="dice-result" data-action="rollDamage">
+					<div class="dice-text">
+						<div class="dice-success"><i class="fa-solid fa-dice"></i> Roll</div>
+					</div>
+				</div>
+				<div class="dice-tooltip"></div>
+			</div>
+		{{/if}}
+	{{/if}}
+
+	<!-- Targets -->
+	{{#if showTargets}}
+		<h3 class="sub-heading">{{localize "SHADOWDARK.chat.targets"}}</h3>
+		<div class="target-wrapper">
+			<div class="targets">
+				<a class="target" data-action="focus-target" data-target-uuid="{{target.uuid}}" data-actor-uuid="{{target.actor.uuid}}">
+					<img src="{{target.texture.src}}">
+					<span>{{target.name}}</span>
+				</a>
+			</div>
+			{{#if damageRoll.html}}
+				<a class="apply-damage" data-action="apply-damage" data-target="target" data-tooltip="Apply damage to selected Targets"></a>
+			{{/if}}
+		</div>
+	{{/if}}
 </div>

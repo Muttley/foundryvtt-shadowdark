@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.V2tVVcqJZY5U95Jc",
 	"description": "A small, woodland creature jumps out of a backpack",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		36,
 		37
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

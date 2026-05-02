@@ -3,12 +3,14 @@
 	"_key": "!tables.results!8piSI566ZPW7kA87.nFO6CLacDPwVQVac",
 	"description": "The Demonic",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		19,
 		19
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

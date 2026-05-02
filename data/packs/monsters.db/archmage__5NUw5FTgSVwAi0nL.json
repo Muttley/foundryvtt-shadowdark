@@ -3,6 +3,8 @@
 	"_key": "!actors!5NUw5FTgSVwAi0nL",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -24,8 +26,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 1,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -94,9 +97,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -137,21 +137,23 @@
 				"value": 12
 			},
 			"hp": {
-				"hd": 0,
 				"max": 44,
 				"value": 44
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 10
+			"value": 10,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> A wizened magic-user crackling with arcane power. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 44, <strong>ATK</strong> 2 spell +7, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> -1, <strong>I</strong> +4, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 10</p>\n\t<p><strong> Death Bolt (INT Spell)</strong>. DC 15. One target of LV 9 or less within near [[check 15 con]] or go to 0 HP.</p><p><strong>Enervate (INT Spell)</strong>. DC 14. Focus. One target within near is stupefied for the duration.</p><p><strong>Fireblast (INT Spell)</strong>. DC 14. 4d6 damage to all within a near-sized cube within far.</p><p><strong>Float (INT Spell)</strong>. Self. DC 14. Fly double near for 5 rounds.</p><p><strong>Mithralskin (INT Spell)</strong>. Self. DC 14. AC becomes 18 for 5 rounds.</p><p><strong>Void Step (INT Spell)</strong>. Self and up to 4 willing targets. DC 15. Teleport up to 100 miles.</p>",
-		"spellcastingAbility": "int",
-		"spellcastingAttackNum": 2,
-		"spellcastingBonus": 7
+		"notes": "<p><i> A wizened magic-user crackling with arcane power. </i></p>\n\t\n\t<p><strong>AC</strong> 12, <strong>HP</strong> 44, <strong>ATK</strong> 2 spell +7, <strong>MV</strong> near, <strong>S</strong> -1, <strong>D</strong> +2, <strong>C</strong> -1, <strong>I</strong> +4, <strong>W</strong> +2, <strong>Ch</strong> +1, <strong>AL</strong> L, <strong>LV</strong> 10</p>\n\t<p><strong> Death Bolt (INT Spell)</strong>. DC 15. One target of LV 9 or less within near [[check 15 con]] or go to 0 HP.</p><p><strong>Enervate (INT Spell)</strong>. DC 14. Focus. One target within near is stupefied for the duration.</p><p><strong>Fireblast (INT Spell)</strong>. DC 14. 4d6 damage to all within a near-sized cube within far.</p><p><strong>Float (INT Spell)</strong>. Self. DC 14. Fly double near for 5 rounds.</p><p><strong>Mithralskin (INT Spell)</strong>. Self. DC 14. AC becomes 18 for 5 rounds.</p><p><strong>Void Step (INT Spell)</strong>. Self and up to 4 willing targets. DC 15. Teleport up to 100 miles.</p>",
+		"spellcasting": {
+			"ability": "int",
+			"attacks": 2,
+			"bonus": 7
+		}
 	},
 	"type": "NPC"
 }

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.LEr7Gw3DGpxFLIBR",
 	"description": "Someone tries to plant an object on your person",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		30,
 		31
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

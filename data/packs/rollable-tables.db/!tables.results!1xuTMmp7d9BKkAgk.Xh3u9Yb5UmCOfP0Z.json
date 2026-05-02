@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1xuTMmp7d9BKkAgk.Xh3u9Yb5UmCOfP0Z",
 	"description": "Imbue",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		9,
 		9
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

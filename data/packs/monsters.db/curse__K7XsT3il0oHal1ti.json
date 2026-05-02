@@ -3,12 +3,15 @@
 	"_key": "!actors.items!y8O1UJWvVI7fDXpn.K7XsT3il0oHal1ti",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Curse",
 	"system": {
 		"description": "<p>Slam damage can only be healed by level 5+ priest.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

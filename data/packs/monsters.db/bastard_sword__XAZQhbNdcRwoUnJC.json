@@ -3,14 +3,15 @@
 	"_key": "!actors.items!HO9aYtRdsjHHAYHj.XAZQhbNdcRwoUnJC",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
 	"name": "Bastard Sword",
 	"system": {
 		"attack": {
-			"num": "3"
+			"num": 3
 		},
-		"attackType": "physical",
 		"bonuses": {
 			"attackBonus": 4,
 			"critical": {
@@ -21,11 +22,13 @@
 			"damageBonus": 2
 		},
 		"damage": {
-			"numDice": "1",
+			"numDice": 1,
 			"special": "",
 			"value": "1d8"
 		},
 		"description": "",
+		"properties": [
+		],
 		"ranges": [
 			"close"
 		],

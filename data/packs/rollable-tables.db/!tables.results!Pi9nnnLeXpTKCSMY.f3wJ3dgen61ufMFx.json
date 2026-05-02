@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.f3wJ3dgen61ufMFx",
 	"description": "Dull dagger (1 gp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

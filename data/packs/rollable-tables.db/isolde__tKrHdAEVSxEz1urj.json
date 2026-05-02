@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.tKrHdAEVSxEz1urj",
 	"description": "Isolde",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Isolde",
 	"range": [
 		11,
 		11
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

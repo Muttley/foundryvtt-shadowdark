@@ -1,0 +1,53 @@
+{
+	"_id": "ck4lutlGUcVmIE6y",
+	"_key": "!items!ck4lutlGUcVmIE6y",
+	"effects": [
+		"kjwVuIlPksnF2hR1",
+		"n94S9biW3s0ZHhoR"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/staves/staff-obsidian.webp",
+	"name": "Staff of Ord",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 5
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d4"
+		},
+		"description": "<p><em>A tapered, mithral staff that resonates with arcane power. The tip features an upward- looking eye in a circle of runes.</em></p><p><strong>Bonus.</strong> +3 staff. Can only be wielded by a wizard.</p><p><strong>Benefit.</strong> Functions as a wand of @UUID[Compendium.shadowdark.spells.Item.UWGzL8qsentdrvar]{dimension door} (pg. 59), @UUID[Compendium.shadowdark.spells.Item.j2gvzfnMGQwxqgGg]{fireball} (pg. 60), @UUID[Compendium.shadowdark.spells.Item.AnJVapep2NJoicUP]{sending} (pg. 70), and @UUID[Compendium.shadowdark.spells.Item.AZo6rYWOo0SHvpxZ]{telekinesis} (pg. 72). Unlike a wand, the staff remains intact if you roll a 1 on your spellcasting checks. Hostile spells targeting you are DC 18 to cast.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

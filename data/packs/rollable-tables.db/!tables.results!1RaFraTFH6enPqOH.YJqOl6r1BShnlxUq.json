@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1RaFraTFH6enPqOH.YJqOl6r1BShnlxUq",
 	"description": "of the Mad",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		84,
 		85
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

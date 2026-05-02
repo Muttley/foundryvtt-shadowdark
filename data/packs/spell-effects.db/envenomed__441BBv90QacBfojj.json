@@ -1,31 +1,33 @@
 {
 	"_id": "441BBv90QacBfojj",
 	"_key": "!items.effects!sZ6msFePi3R6DUju.441BBv90QacBfojj",
-	"changes": [
-		{
-			"key": "system.bonuses.damageMultiplier",
-			"mode": 4,
-			"priority": null,
-			"value": "2"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 1,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 1
 	},
+	"flags": {
+	},
+	"folder": null,
 	"img": "icons/creatures/reptiles/serpent-horned-green.webp",
 	"name": "Envenomed",
 	"origin": "Item.h9MTxzrrPmyhEmRL",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.damage.all",
+				"priority": null,
+				"type": "multiply",
+				"value": 2
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

@@ -4,15 +4,12 @@
 	"effects": [
 		"PAkmxzlF6cIsPNkt"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/death/skull-poison-green.webp",
 	"name": "Condition: Disease (3)",
 	"system": {
-		"abilities": {
-			"con": {
-				"bonus": "-3"
-			}
-		},
 		"category": "condition",
 		"description": "",
 		"duration": {
@@ -30,8 +27,8 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

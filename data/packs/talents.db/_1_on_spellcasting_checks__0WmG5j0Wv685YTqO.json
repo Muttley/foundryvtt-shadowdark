@@ -4,17 +4,16 @@
 	"effects": [
 		"QBX0EGnKmDfPJ8gQ"
 	],
+	"flags": {
+	},
 	"folder": "Z4zDnZoxthjHXo5V",
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "+1 on Spellcasting Checks",
 	"system": {
-		"bonuses": {
-			"spellcastingCheckBonus": "1"
-		},
 		"description": "",
 		"level": null,
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		},

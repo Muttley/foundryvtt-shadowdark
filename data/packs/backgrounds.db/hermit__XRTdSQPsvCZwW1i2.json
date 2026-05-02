@@ -3,14 +3,16 @@
 	"_key": "!items!XRTdSQPsvCZwW1i2",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "Ow9U3BiGFKGjRrIn",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Hermit",
 	"system": {
 		"description": "<p>The wilds (and its creatures) are your family</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		}
 	},

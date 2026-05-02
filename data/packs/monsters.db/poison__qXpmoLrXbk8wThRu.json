@@ -3,12 +3,15 @@
 	"_key": "!actors.items!QziiJsawKcGcS0QJ.qXpmoLrXbk8wThRu",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 12 con]] or drop to 0 HP in [[/r 1d4]] rounds.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

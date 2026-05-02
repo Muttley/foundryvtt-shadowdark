@@ -3,12 +3,14 @@
 	"_key": "!tables.results!AsJlWy1q0mmq5caV.ZNfvUJ2xV07xJdSz",
 	"description": "A wild-eyed man approaches with a holy book held high",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		66,
 		67
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

@@ -4,6 +4,8 @@
 	"effects": [
 		"71bMZvK0yxmAAcUL"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
 	"name": "Spell Effect: Odin's Wisdom",
@@ -12,7 +14,7 @@
 		"description": "<p>For the spell's duration, add your level as an additional bonus to your Wisdom checks and spellcasting checks.</p>",
 		"duration": {
 			"type": "rounds",
-			"value": "1"
+			"value": 1
 		},
 		"effectPanel": {
 			"show": true
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-3"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

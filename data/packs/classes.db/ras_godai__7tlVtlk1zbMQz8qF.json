@@ -3,11 +3,13 @@
 	"_key": "!items!7tlVtlk1zbMQz8qF",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/sundries/documents/document-sealed-brown-red.webp",
 	"name": "Ras-Godai",
 	"system": {
-		"alignment": "",
+		"alignment": "neutral",
 		"allArmor": false,
 		"allMeleeWeapons": false,
 		"allRangedWeapons": false,
@@ -24,9 +26,6 @@
 		"classTalentTable": "Compendium.shadowdark.rollable-tables.RollTable.0vRwhfQgvAkzToHN",
 		"description": "<p>Black-clad assassins who train from childhood inside a hidden desert monastery. They gain their sorcerous powers from a legendary black lotus flower that was given to them by a demon.</p>",
 		"hitPoints": "d6",
-		"language": {
-			"select": null
-		},
 		"languages": {
 			"common": 0,
 			"fixed": [
@@ -41,9 +40,9 @@
 			"required": false,
 			"startingBoons": 0
 		},
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"spellcasting": {

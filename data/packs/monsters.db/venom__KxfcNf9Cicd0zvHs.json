@@ -3,12 +3,15 @@
 	"_key": "!actors.items!K9M3BA8PlvYWFADe.KxfcNf9Cicd0zvHs",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Venom",
 	"system": {
 		"description": "<p>[[check 9 con]] or go to 0 HP.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

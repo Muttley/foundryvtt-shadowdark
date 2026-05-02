@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.m4o9hmboTUcNcQlp",
 	"description": "An armored beast the size of a ship is rampaging nearby",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		1,
 		1
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

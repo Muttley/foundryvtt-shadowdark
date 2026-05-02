@@ -3,12 +3,15 @@
 	"_key": "!actors.items!QErMaMVIbddgk9MX.tQALSbY1bERwiD2a",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Split",
 	"system": {
 		"description": "<p>If cut or chopped, split into two smaller oozes (divide remaining HP between both). Can split up to four times.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

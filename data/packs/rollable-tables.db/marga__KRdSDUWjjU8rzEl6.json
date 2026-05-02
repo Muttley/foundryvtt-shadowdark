@@ -3,12 +3,14 @@
 	"_key": "!tables.results!IVnsYyvJAM36YQsv.KRdSDUWjjU8rzEl6",
 	"description": "Marga",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Marga",
 	"range": [
 		3,
 		3
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

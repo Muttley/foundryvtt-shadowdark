@@ -3,6 +3,8 @@
 	"_key": "!items!u8WU3mY6O498LDsQ",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "S2MLlGpmsIRnqf6Z",
 	"img": "icons/magic/life/heart-hand-gold-green.webp",
 	"name": "Heal",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
+		"damageType": "healing",
 		"description": "<p>One creature you touch is healed to full hit points. </p><p>You cannot cast this spell again until you complete a rest.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "close",
 		"source": {
 			"title": "core-rules"

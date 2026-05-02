@@ -3,6 +3,8 @@
 	"_key": "!items!eQnV4AQwj9kOkGmn",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "czS3CsyEqdZdRBcr",
 	"img": "icons/magic/holy/angel-wings-gray.webp",
 	"name": "Freya's Omen",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
+		"damageType": "none",
 		"description": "<p>For the spell's duration, you do not lose the ability to cast a spell if you fail its spellcasting check.</p><p>If you critically fail a spellcasting check, you may reroll your check once. You must use the new result.</p><p>@UUID[Compendium.shadowdark.spell-effects.Item.HBIVwYRcojImlOOx]{Spell Effect: Freya's Omen}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1d6"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "self",
 		"source": {
 			"title": "cursed-scroll-3"

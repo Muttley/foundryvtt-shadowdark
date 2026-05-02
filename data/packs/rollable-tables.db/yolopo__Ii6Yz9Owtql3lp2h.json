@@ -3,12 +3,14 @@
 	"_key": "!tables.results!swiCqIGo0Bb3sJyI.Ii6Yz9Owtql3lp2h",
 	"description": "Yolopo",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Yolopo",
 	"range": [
 		1,
 		1
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

@@ -3,18 +3,19 @@
 	"_key": "!actors.items!4gxXdPgUd0ofz89A.xGRGAFd9S45a8hh3",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/equipment/shield/shield-round-boss-wood-brown.webp",
 	"name": "Shield",
 	"system": {
 		"ac": {
-			"attribute": "",
+			"attribute": "dex",
 			"base": 0,
 			"modifier": 2
 		},
 		"baseArmor": "",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 10,
@@ -23,7 +24,6 @@
 		"description": "",
 		"equipped": true,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
 		"properties": [
 			"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
@@ -36,7 +36,6 @@
 			"slots_used": 1
 		},
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"stashed": false

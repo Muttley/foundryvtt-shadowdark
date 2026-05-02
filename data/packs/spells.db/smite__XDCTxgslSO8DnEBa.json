@@ -3,6 +3,8 @@
 	"_key": "!items!XDCTxgslSO8DnEBa",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "IqNdoEHw03QSMA55",
 	"img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
 	"name": "Smite",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
+		"damageType": "damage",
 		"description": "<p>You call down punishing flames on a creature you can see within range. It takes [[/r 1d6]] damage.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "1d6",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "near",
 		"source": {
 			"title": "core-rules"

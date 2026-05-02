@@ -3,14 +3,16 @@
 	"_key": "!items!vWVStctij50sm35u",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "pl9dhvRO02wkiizP",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Trader",
 	"system": {
 		"description": "<p>You have mercantile connections in every village</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-3"
 		}
 	},

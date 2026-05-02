@@ -3,12 +3,14 @@
 	"_key": "!tables.results!PJmTjgwiPdZcYBYT.MNXczdeJO7TWUGAj",
 	"description": "A mutated @UUID[Compendium.shadowdark.monsters.nhKDBbnOnXXTzfBr]{Cave Brute} explodes through a crumbling wall",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		1,
 		1
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

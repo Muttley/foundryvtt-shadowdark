@@ -3,12 +3,15 @@
 	"_key": "!actors.items!B1B7yApS28xtu8HN.DflpLmg28xZE2I99",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Sunblind",
 	"system": {
 		"description": "<p>Blinded in bright light.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

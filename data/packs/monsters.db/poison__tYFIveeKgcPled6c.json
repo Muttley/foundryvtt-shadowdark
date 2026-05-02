@@ -3,12 +3,15 @@
 	"_key": "!actors.items!anfsgfN2gFs72MHo.tYFIveeKgcPled6c",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Poison",
 	"system": {
 		"description": "<p>[[check 18 con]] or go to 0 HP with a death timer of 1.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

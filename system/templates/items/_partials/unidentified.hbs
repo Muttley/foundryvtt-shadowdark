@@ -1,0 +1,23 @@
+<div>
+	<label for="toggle-identified-checkbox">
+		<h3>
+			{{localize "SHADOWDARK.item.magic_item.unidentified"}}
+		</h3>
+	</label>
+	{{#if isUnidentified}}
+		<a
+			data-tooltip="{{localize "SHADOWDARK.item.magic_item.identifiedTooltip"}}"
+		>
+			<i
+				class="fas fa-circle-question"
+				style="color:var(--primary);"
+			></i>
+		</a>
+	{{/if}}
+</div>
+<input
+	id="toggle-identified-checkbox"
+	data-action="toggle-identified"
+	type="checkbox"
+	{{checked isUnidentified}}
+/>

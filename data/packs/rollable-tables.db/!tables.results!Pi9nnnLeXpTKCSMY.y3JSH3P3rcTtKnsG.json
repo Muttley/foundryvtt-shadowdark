@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.y3JSH3P3rcTtKnsG",
 	"description": "Bent, tin fork (1 cp)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		1,
 		1
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

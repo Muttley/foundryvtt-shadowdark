@@ -3,6 +3,8 @@
 	"_key": "!items!o0261gnDqGC5hQB1",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "np4FRJ73NRBEQKnS",
 	"img": "icons/equipment/chest/breastplate-layered-steel.webp",
 	"name": "Plate Mail",
@@ -14,7 +16,6 @@
 		},
 		"baseArmor": "",
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 130,
@@ -23,9 +24,7 @@
 		"description": "",
 		"equipped": false,
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": false,
-		"predefinedEffects": "",
 		"properties": [
 			"Compendium.shadowdark.properties.Item.WhfSBiji8VG1mMzV",
 			"Compendium.shadowdark.properties.Item.kBLs47xhX1snaDGA"

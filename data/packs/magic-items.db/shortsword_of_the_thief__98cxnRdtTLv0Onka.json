@@ -1,0 +1,46 @@
+{
+	"_id": "98cxnRdtTLv0Onka",
+	"_key": "!items!98cxnRdtTLv0Onka",
+	"effects": [
+		"4QneUXW9pG2CMpKS",
+		"JAfTcoh8jcncSGJM"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/sword-guard-worn-purple.webp",
+	"name": "Shortsword of the Thief",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "shortsword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d6",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A stubby, grey blade riddled with notches and scars.</em></p><p><strong>Bonus</strong>. +1 shortsword. +2 if wielded by a halfling or thief.</p><p><strong>Benefit</strong>. Once per day, regain a luck token you just spent.</p>",
+		"equipped": false,
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!ursSNgr3ExIvXiKJ.3deVdC5KNoQsykzJ",
 	"description": "Overlord",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		100,
 		100
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

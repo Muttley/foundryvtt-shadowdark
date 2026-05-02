@@ -1,54 +1,32 @@
-export default class SpellImporter extends foundry.appv1.api.FormApplication {
+import ImporterSD from "./ImporterSD.mjs";
+
+export default class SpellImporter extends ImporterSD {
 	/**
 	 * Contains an importer function to import spell stat blocks
 	 */
 
-	/** @inheritdoc */
-	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["spell-importer"],
-			width: 300,
-			resizable: false,
-		});
-	}
+	static DEFAULT_OPTIONS = {
+		id: "sd-spell-importer",
+		window: {
+			title: "SHADOWDARK.apps.spell-importer.title",
+		},
+	};
 
-	/** @inheritdoc */
-	get template() {
-		return "systems/shadowdark/templates/apps/spell-importer.hbs";
-	}
+	static PARTS = {
+		form: {
+			template: "systems/shadowdark/templates/apps/spell-importer.hbs",
+		},
+	};
 
-	/** @inheritdoc */
-	get title() {
-		const title = game.i18n.localize("SHADOWDARK.apps.spell-importer.title");
-		return `${title}`;
-	}
+	static IMPORTER_CONFIG = {
+		textField: "spellText",
+		sidebarTab: "items",
+		errorMessage: "Failed to fully parse the spell stat block.",
+	};
 
-	/** @inheritdoc */
-	async _updateObject(event, formData) {
-		event.preventDefault();
-		try {
-			let newSpell = await this._importSpell(formData.spellText);
-			ui.notifications.info(`Successfully Created: ${newSpell.name} [${newSpell._id}]`);
-			ui.sidebar.activateTab("items");
-
-		}
-		catch(error) {
-			ui.notifications.error(`Failed to fully parse the spell stat block. ${error}`);
-		}
-	}
-
-	/** @inheritdoc */
-	_onSubmit(event) {
-		event.preventDefault();
-		super._onSubmit(event);
-	}
-
-	_toTitleCase(str) {
-		return str.replace(/\w\S*/g, m => m.charAt(0).toUpperCase() + m.substr(1).toLowerCase());
-	}
-
-	_toCamelCase(str) {
-		return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+	/** @override */
+	async _import(spellText) {
+		return this._importSpell(spellText);
 	}
 
 	/**
@@ -74,7 +52,7 @@ export default class SpellImporter extends foundry.appv1.api.FormApplication {
 		}).join(""));
 
 		// set 4 main variables, removing newlines
-		const titleName = this._toTitleCase(parsedText[1]);
+		const titleName = parsedText[1].titleCase();
 		const tier = parsedText[2];
 		const classes = parsedText[3].trim().split(", ");
 		let durationType = parsedText[5].replace(/(\r\n|\n|\r)/gm, " ");

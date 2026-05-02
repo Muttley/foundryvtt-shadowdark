@@ -1,0 +1,41 @@
+{
+	"_id": "E7SwrOhzSAyMZ1Ec",
+	"_key": "!items.effects!5bpWuaT0KTNzuzCu.E7SwrOhzSAyMZ1Ec",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+	"name": "Weapon Mastery",
+	"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.melee.bonus.REPLACEME",
+				"priority": null,
+				"type": "add",
+				"value": "1+floor(@level.value/2)"
+			},
+			{
+				"key": "system.roll.melee.damage.REPLACEME",
+				"priority": null,
+				"type": "add",
+				"value": "1+floor(@level.value/2)"
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!NTRHmnsw7poR4rZ9.U64PY6W4sCVtw1FR",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Rampage",
 	"system": {
 		"description": "<p>In place of attacks, move far in a straight line and make one bite attack. On a hit, triple damage.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

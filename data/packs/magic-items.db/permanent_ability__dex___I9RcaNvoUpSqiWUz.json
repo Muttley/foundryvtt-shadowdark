@@ -1,0 +1,34 @@
+{
+	"_id": "I9RcaNvoUpSqiWUz",
+	"_key": "!items.effects!Ka1NPr6edk9cwrzo.I9RcaNvoUpSqiWUz",
+	"description": "Permanent Ability (Dex)",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Permanent Ability (Dex)",
+	"origin": "Compendium.shadowdark.magic-items.Item.Ka1NPr6edk9cwrzo",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.dex.value",
+				"type": "override",
+				"value": 18
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

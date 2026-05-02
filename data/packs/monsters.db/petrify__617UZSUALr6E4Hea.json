@@ -3,12 +3,15 @@
 	"_key": "!actors.items!xUxKG0CR6Elw1l7h.617UZSUALr6E4Hea",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Petrify",
 	"system": {
 		"description": "<p>[[check 12 con]] or petrified.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!3cz1ScEh3YlMU1ql.89iCU6eRSUBUhsor",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Bound",
 	"system": {
 		"description": "<p>A secret, mundane contingency (such as the touch of a feather) ends the invisible stalker's magical servitude.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

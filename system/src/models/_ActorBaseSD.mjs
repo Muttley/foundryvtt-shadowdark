@@ -1,0 +1,365 @@
+const fields = foundry.data.fields;
+
+export class ActorBaseSD extends foundry.abstract.TypeDataModel {
+	static defineSchema() {
+		return {
+			attributes: new fields.SchemaField({
+				ac: new fields.SchemaField({
+					value: new fields.NumberField({integer: true, initial: 10, min: 0}),
+				}),
+				hp: new fields.SchemaField({
+					value: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+					max: new fields.NumberField({ integer: true, initial: 0, min: 0}),
+				}),
+			}),
+			notes: new fields.HTMLField(),
+		};
+	}
+
+	rollConfigGenerators = {
+		check: this._generateStatCheckConfig.bind(this),
+	};
+
+	/* ----------------------- */
+	/* Getters       */
+	/* ----------------------- */
+
+	get isPC() {
+		return false;
+	}
+
+	get isNPC() {
+		return false;
+	}
+
+	get isMonster() {
+		return false;
+	}
+
+	/* ----------------------- */
+	/* Public Functions       */
+	/* ----------------------- */
+
+	getPhysicalItems(group=true) {
+		return this._sortByUserOrder(
+			this.parent.items.filter(
+				i => i.system.isPhysical && !i.system.stashed
+			)
+		);
+	}
+
+	getSlotUsage() {
+		const slots = {
+			coins: 0,
+			gear: 0,
+			gems: 0,
+			treasure: 0,
+			total: 0,
+		};
+
+		// Coins. Work out how many slots all these coins are taking up.
+		if (this.coins) {
+			const totalCoins = this.coins.gp + this.coins.sp + this.coins.cp;
+			const freeCoins = shadowdark.defaults.FREE_COIN_CARRY;
+			if (totalCoins > freeCoins) {
+				slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
+			}
+		}
+
+		// Gear and treasure. Only carried gear taking into account the free carry limits.
+		const freeCarrySeen = {};
+		let gemCount = 0;
+		for (const i of this.getPhysicalItems()) {
+			// Skip if gem
+			if (i.system.isGem) {
+				gemCount++;
+				continue;
+			}
+
+			// calculate free carry
+			let freeCarry = i.system.slots.free_carry;
+			if (Object.hasOwn(freeCarrySeen, i.name)) {
+				freeCarry = Math.max(0, freeCarry - freeCarrySeen[i.name]);
+				freeCarrySeen[i.name] += freeCarry;
+			}
+			else {
+				freeCarrySeen[i.name] = freeCarry;
+			}
+			freeCarry = freeCarry * i.system.slots.slots_used;
+			const totalUsed = i.system.slotsUsed - freeCarry;
+
+			// Seperate Treasure
+			if (i.system.treasure) {
+				slots.treasure += totalUsed;
+			}
+			else {
+				slots.gear += totalUsed;
+			}
+		}
+
+		// Gems
+		if (gemCount > 0) {
+			slots.gems = Math.ceil(gemCount / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
+		}
+
+		// Total
+		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
+		return slots;
+	}
+
+	getStashedItems() {
+		return this._sortByUserOrder(
+			this.parent.items.filter(
+				i => i.system.stashed
+			)
+		);
+	}
+
+	/* ----------------------- */
+	/* Private Functions       */
+	/* ----------------------- */
+
+	// change the default data provided by actor.getRollData()
+	_modifyRollData(rollData) {
+		// calculate initiative
+		let initBonus = this.abilities.dex.mod;
+		initBonus += this.roll?.initiative?.bonus ?? 0;
+		const initAdv = this.roll?.initiative?.advantage ?? 0;
+		const fomula = `d20${shadowdark.dice.formatBonus(initBonus)}`;
+		rollData.initiative = shadowdark.dice.applyAdvantage(fomula, initAdv);
+	}
+
+	_sortByUserOrder(collection) {
+		return Array.from(collection ?? []).sort(
+			(a, b) => (a.sort || 0) - (b.sort || 0)
+		);
+	}
+
+	_getAbilityModifier(ability) {
+		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return;
+
+		const modifier = this.abilities[ability].mod;
+
+		let tooltip = "";
+		if (modifier !== 0) {
+			tooltip = shadowdark.dice.createToolTip(
+				game.i18n.format(
+					"SHADOWDARK.roll.tooltip.stat_bonus",
+					{stat: CONFIG.SHADOWDARK.ABILITIES_LONG[ability]}
+				),
+				modifier
+			);
+		}
+
+		return {modifier, tooltip};
+	}
+
+	/**
+	 * Starting at a baseValue, returns the combined total of a AE based key
+	 * and any selectors present. e.g. system.[baseKey].[selector]
+	 * Deterministic placeholders are resolved based on actor's rollData
+	 * @param {string} baseKey The base key under system. without selectors
+	 * @param {int|string} baseValue The starting value that the AE effects will modify
+	 * @param {document} config Roll config object. Used to apply situational modifiers
+	 * @param {document} item optional item to use as a selector by it's name and properties
+	 * @returns {rollKeyObject}
+	 */
+	_getActiveEffectKeys(baseKey, baseValue, item=null, config={}) {
+		if (!baseKey.startsWith("system.")) baseKey = "system.".concat(baseKey);
+
+		// add extra base keys
+		const baseKeys = [baseKey];
+		if (baseKey.startsWith("system.roll.melee") || baseKey.startsWith("system.roll.ranged")) {
+			baseKeys.push(
+				baseKey.replace(/^system\.roll\.(melee|ranged)\./, "system.roll.attack.")
+			);
+		}
+		else if (baseKey.startsWith("system.roll.stat.")) {
+			// Also search for the "all" key for stat rolls
+			baseKeys.push(
+				baseKey.replace(/(str|dex|con|int|wis|cha)$/, "all")
+			);
+		}
+
+		const keys = [...baseKeys];
+		const changes = [];
+		config.situational ??= [];
+
+		for (const base of baseKeys) {
+
+			// keys that relate to items can have multiple selectors
+			if (item) {
+				const selectors = [];
+				selectors.push("all");
+				// Does item have properties?
+				const properties = item.system.propertyNames;
+				if (properties.length > 0) selectors.push(...properties);
+				// is item armor?
+				if (item.system?.baseArmor) selectors.push(item.system.baseArmor);
+				// is item a weapon?
+				if (item.system?.baseWeapon) selectors.push(item.system.baseWeapon);
+				// add name of item
+				selectors.push(item.name.slugify());
+
+				// generate full keys list
+				selectors.forEach(s => {
+					keys.push(`${base}.${s.slugify()}`);
+				});
+			}
+		}
+
+		// Exclude "all" keys from armor items as ac.value is used for that instead
+		if (item?.system?.isArmor) {
+			const excludeKeys = ["system.attributes.ac", "system.attributes.ac.all"];
+			excludeKeys.forEach(k => {
+				const idx = keys.indexOf(k);
+				if (idx !== -1) keys.splice(idx, 1);
+			});
+		}
+
+		// Use different a item for .this in cases like wands or scrolls
+		if (item == null || config.itemUuid !== item.uuid) {
+			item = config.itemUuid
+				? fromUuidSync(config.itemUuid)
+				: item;
+		}
+
+		// get data from all matching keys
+		this.parent.appliedEffects.forEach(e => e.changes.forEach(c => {
+
+			const isItem = item && baseKeys.some(base =>
+				c.key === `${base}.this` && e.parent.uuid === item.uuid
+			);
+
+			if (keys.includes(c.key) || isItem) {
+				// include only selected situational active effects
+				if (e.isSituational) {
+					if (!config.situational.includes(e.uuid)) {
+						config.situational.push(e.uuid);
+					}
+					if (!config.selected?.includes(e.uuid)) return;
+				}
+
+				c.name = e.parent.name;
+				c.value = shadowdark.dice.resolveFormula(c.value, this.parent.getRollData());
+				c.priority = c.priority ?? c.mode * 10;
+				changes.push(c);
+			}
+		}));
+
+		// calculate final value based on all Active Effect changes
+		let finalValue = baseValue;
+		const tooltips =[];
+
+		// Calculate add type changes
+		let intParts = 0;
+		let strParts = "";
+		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.ADD).forEach(c => {
+			if (!isNaN(Number(c.value)) && c.value !== "") intParts += Number(c.value);
+			else strParts += ` + ${c.value}`;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+", c.key));
+		});
+		// string output
+		if (typeof finalValue === "string" || strParts) {
+
+			if (typeof finalValue === "number") {
+				finalValue += intParts;
+				finalValue = shadowdark.dice.formatBonus(finalValue).toString();
+			}
+			else if (typeof finalValue === "string") {
+				finalValue = finalValue.concat(shadowdark.dice.formatBonus(intParts));
+			}
+			else {
+				finalValue = "";
+			}
+
+			if (strParts) finalValue = finalValue.concat(strParts);
+
+			// trim any leading + as this is added elsewhere if needed.
+			finalValue = finalValue.trim().replace(/^\+\s*/, "");
+
+		}
+		// int output
+		else {
+			finalValue += intParts;
+		}
+
+		// Calculate multiply type changes
+		let multiplyBonus = 1;
+		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY).forEach(c => {
+			multiplyBonus = multiplyBonus * c.value;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "x", c.key));
+		});
+
+		if (multiplyBonus !== 1) {
+			if (typeof finalValue === "string") {
+				finalValue = `(${finalValue})*${multiplyBonus}`;
+			}
+			else {
+				finalValue = finalValue * multiplyBonus;
+			}
+		}
+
+		// Calculate override type changes
+		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE).forEach(c => {
+			finalValue = c.value;
+			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "=", c.key));
+		});
+
+		return {
+			value: finalValue,
+			tooltips: tooltips.filter(Boolean).join(", "),
+			changes,
+		};
+	}
+
+	_generateStatCheckConfig(config) {
+		if (!config.check.stat) return;
+		config.type = "check";
+		shadowdark.dice.initializeD20Check(config);
+		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.check");
+
+		// generate check formula from ability mod and AE roll bonuses
+		const ability = config.check.stat;
+		const abilityMod = this._getAbilityModifier(ability);
+		const rollKey = this._getActiveEffectKeys(`roll.stat.bonus.${ability}`, abilityMod.modifier, null, config);
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(rollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+
+		// calculate roll advantage
+		const advRollKeyAdv = this._getActiveEffectKeys(`roll.stat.advantage.${ability}`, 0, null, config);
+		config.mainRoll.advantage = advRollKeyAdv.value;
+
+		// generate tooltips
+		const tooltips = [];
+		if (abilityMod.tooltip) tooltips.push(abilityMod.tooltip);
+		tooltips.push(rollKey.tooltips);
+		tooltips.push(advRollKeyAdv.tooltips);
+		config.mainRoll.tooltips = tooltips.filter(Boolean).join(", ");
+
+	}
+
+	async rollStatCheck(abilityId, config={}) {
+		const ability = abilityId.toLowerCase();
+		if (!CONFIG.SHADOWDARK.ABILITY_KEYS.includes(ability)) return false;
+		config.check = {
+			stat: ability,
+		};
+		config.actorId = this.parent.id;
+		config.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
+		config.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
+
+		this.rollConfigGenerators.check?.(config);
+
+		// show roll prompt and end if closed
+		const prompt = await shadowdark.dice.rollDialog(config);
+		if (!prompt) return false;
+
+		// call Stat Check hooks and cancel if any return false
+		if (!await Hooks.call("SD-Stat-Check", config)) return false;
+
+		// Prompt, evaluate and roll the check
+		return await shadowdark.dice.rollFromConfig(config);
+	}
+
+}

@@ -3,12 +3,15 @@
 	"_key": "!actors.items!NTRHmnsw7poR4rZ9.ynrB47ZsdfxMlRet",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Regeneration",
 	"system": {
 		"description": "<p>Regains [[/r 4d10]] lost HP at the beginning of its turn.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

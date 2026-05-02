@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.kgj2Esiwy4YorWNI",
 	"description": "A monstrosity called The Oracle lurks below the university",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		90,
 		91
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

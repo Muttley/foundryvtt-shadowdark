@@ -3,12 +3,14 @@
 	"_key": "!tables.results!swiCqIGo0Bb3sJyI.21lFWr4EAaJrN4PY",
 	"description": "Binx",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "Binx",
 	"range": [
 		7,
 		7
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

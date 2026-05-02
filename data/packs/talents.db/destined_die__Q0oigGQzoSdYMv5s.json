@@ -1,0 +1,35 @@
+{
+	"_id": "Q0oigGQzoSdYMv5s",
+	"_key": "!items.effects!Az2fXCwgo5C3x2X7.Q0oigGQzoSdYMv5s",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/gaming/dice-runed-brown.webp",
+	"name": "Destined Die",
+	"origin": "Compendium.shadowdark.talents.Item.Az2fXCwgo5C3x2X7",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.bonus.destineddie",
+				"priority": null,
+				"type": "add",
+				"value": 6
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -1,0 +1,48 @@
+{
+	"_id": "Bm8NbNaVH1pUerSh",
+	"_key": "!items!Bm8NbNaVH1pUerSh",
+	"effects": [
+		"MN2vxYiGWgfQSbpi"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/neck/choker-chain-thin-gold.webp",
+	"name": "Necklace of Charm",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A gold, fishbone chain that shimmers with subtle beauty.</em></p><p><strong>Benefit.</strong> Your Charisma stat becomes 18 (+4) while wearing this necklace.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

@@ -1,0 +1,50 @@
+{
+	"_id": "fntDmrpNulld7y2r",
+	"_key": "!items!fntDmrpNulld7y2r",
+	"effects": [
+		"SRuuhmxcNFfK8yUo"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/equipment/shield/kite-steel-boss-gold.webp",
+	"name": "Shield of the Lion",
+	"system": {
+		"ac": {
+			"attribute": "",
+			"base": 0,
+			"modifier": 2
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 10,
+			"sp": 0
+		},
+		"description": "<p><em>This shield is carved as a roaring lion's face with a flowing mane.</em></p><p><strong>Bonus.</strong> +1 shield.</p><p><strong>Benefit.</strong> Once per day, you can command the lion to animate and bellow a ferocious roar. All hostile creatures within near range must immediately make a morale check.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.jq0m0lGb7QOCSJXL",
+			"Compendium.shadowdark.properties.Item.61gM0DuJQwLbIBwu"
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

@@ -3,12 +3,14 @@
 	"_key": "!tables.results!MlSMyJcXaJWuZ56O.NZmlOJS6dQJ0CUip",
 	"description": "A local lord has somehow been stranded atop a high roof",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		60,
 		61
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

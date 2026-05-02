@@ -3,15 +3,17 @@
 	"_key": "!items!Ovw15rq5cAfDMe1t",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "TcpWrnecaN2k2gYr",
 	"img": "icons/skills/toxins/bottle-open-vapors-pink.webp",
 	"name": "Immunity to Poison",
 	"system": {
 		"description": "",
 		"level": 0,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-1"
 		},
 		"talentClass": "patronBoon"

@@ -5,7 +5,9 @@
 	<div class="SD-grid">
 		{{> items/_partials/item-properties/ammunition }}
 		{{> items/_partials/item-properties/light-source }}
-		{{> items/_partials/item-properties/magic-item }}
+		{{#ifCond isGM '||' isIdentified}}
+			{{> items/_partials/item-properties/magic-item }}
+		{{/ifCond}}
 		{{> items/_partials/item-properties/treasure }}
 	</div>
 {{/ui/sd-box}}

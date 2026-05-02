@@ -8,14 +8,11 @@
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "+1 on Spellcasting Checks",
 	"system": {
-		"bonuses": {
-			"spellcastingCheckBonus": "1"
-		},
 		"description": "",
 		"level": null,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": ""
 		},
 		"talentClass": "level"

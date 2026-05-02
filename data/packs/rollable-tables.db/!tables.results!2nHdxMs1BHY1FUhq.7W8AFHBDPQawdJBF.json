@@ -3,12 +3,14 @@
 	"_key": "!tables.results!2nHdxMs1BHY1FUhq.7W8AFHBDPQawdJBF",
 	"description": "Abandoned",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		13,
 		13
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

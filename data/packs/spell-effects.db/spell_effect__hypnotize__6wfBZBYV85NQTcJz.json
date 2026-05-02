@@ -4,6 +4,8 @@
 	"effects": [
 		"rRaOIGFZ6RzYlvUI"
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
 	"name": "Spell Effect: Hypnotize",
@@ -25,13 +27,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
-		"magicItem": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-1"
 		},
 		"start": {
-			"combatTime": "0.null",
 			"value": 10286
 		},
 		"tokenIcon": {

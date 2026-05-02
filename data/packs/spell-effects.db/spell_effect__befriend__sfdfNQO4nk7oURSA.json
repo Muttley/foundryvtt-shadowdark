@@ -3,6 +3,8 @@
 	"_key": "!items!sfdfNQO4nk7oURSA",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/mammals/rodent-rat-green.webp",
 	"name": "Spell Effect: Befriend",
@@ -11,7 +13,7 @@
 		"description": "",
 		"duration": {
 			"type": "rounds",
-			"value": "5"
+			"value": 5
 		},
 		"effectPanel": {
 			"show": true
@@ -24,11 +26,12 @@
 			"remainingSecs": 3600,
 			"template": "torch"
 		},
+		"properties": [
+		],
 		"source": {
 			"title": "cursed-scroll-4"
 		},
 		"start": {
-			"combatTime": "18.-1",
 			"value": 5449
 		},
 		"tokenIcon": {

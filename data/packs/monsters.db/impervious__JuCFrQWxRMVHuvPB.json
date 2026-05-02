@@ -3,12 +3,15 @@
 	"_key": "!actors.items!4A7ELy7Oj4YKRqTf.JuCFrQWxRMVHuvPB",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Impervious",
 	"system": {
 		"description": "<p>Electricity immune.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

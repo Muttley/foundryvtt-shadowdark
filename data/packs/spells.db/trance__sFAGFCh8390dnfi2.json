@@ -3,6 +3,8 @@
 	"_key": "!items!sFAGFCh8390dnfi2",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "G4Rg3SiJ4c0vIpqq",
 	"img": "icons/creatures/eyes/humanoid-single-blind.webp",
 	"name": "Trance",
@@ -10,13 +12,16 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.xdjod5gPhNPIkLth"
 		],
+		"damageType": "none",
 		"description": "<p>You enter a trance, catching small glimpses of a creature's fate. One humanoid creature you touch (you can't target yourself) gains a luck token. It can't have more than one luck token at once.</p>",
 		"duration": {
 			"type": "instant",
-			"value": 1
+			"value": "1"
 		},
+		"formula": "",
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"range": "touch",
 		"source": {
 			"title": "cursed-scroll-3"

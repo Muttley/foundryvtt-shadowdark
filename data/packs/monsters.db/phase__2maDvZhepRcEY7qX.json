@@ -3,12 +3,15 @@
 	"_key": "!actors.items!QziiJsawKcGcS0QJ.2maDvZhepRcEY7qX",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "icons/creatures/abilities/dragon-breath-purple.webp",
 	"name": "Phase",
 	"system": {
 		"description": "<p>Once per round, become corporeal or incorporeal.</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": ""
 		}

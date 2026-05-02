@@ -3,12 +3,15 @@
 	"_key": "!items!Ev3IVBU0Sb7Fcwib",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "InLbadov5GPzXI6c",
 	"img": "icons/environment/people/commoner.webp",
 	"name": "Minstrel",
 	"system": {
 		"description": "<p>You've traveled far with your charm and talent</p>",
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
 			"title": "core-rules"
 		}

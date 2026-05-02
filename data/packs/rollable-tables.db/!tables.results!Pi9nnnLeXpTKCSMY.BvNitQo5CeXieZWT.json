@@ -3,12 +3,14 @@
 	"_key": "!tables.results!Pi9nnnLeXpTKCSMY.BvNitQo5CeXieZWT",
 	"description": "Two lustrous pearls (40 gp each)",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		86,
 		87
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 2
 }

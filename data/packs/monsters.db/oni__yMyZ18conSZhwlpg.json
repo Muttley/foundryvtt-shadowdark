@@ -3,6 +3,8 @@
 	"_key": "!actors!yMyZ18conSZhwlpg",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": null,
 	"img": "systems/shadowdark/assets/tokens/cowled_token.webp",
 	"items": [
@@ -23,8 +25,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -93,9 +96,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",
@@ -136,21 +136,23 @@
 				"value": 11
 			},
 			"hp": {
-				"hd": 0,
 				"max": 33,
 				"value": 33
 			}
 		},
 		"darkAdapted": true,
 		"level": {
-			"value": 7
+			"value": 7,
+			"xp": 0
 		},
 		"move": "near",
 		"moveNote": "",
-		"notes": "\n\t<p><i> Cunning and sorcerous ogre-demons with shaggy white hair, blue skin, and yellow eyes. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 33, <strong>ATK</strong> 1 glaive (near) +6 (1d10) or 1 spell +5, <strong>MV</strong> near, <strong>S</strong> +5, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +1, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p>\n\t<p><strong> Shapeshift</strong>. In place of attacks, turn into any humanoid or back into original form.</p><p><strong>Fade (CHA Spell)</strong>. DC 13. Self. Become invisible for 1d4 rounds.</p><p><strong>Hellfrost (CHA Spell)</strong>. DC 13. All within near-sized cube extending from oni 3d6 damage.</p><p><strong>Mist (CHA Spell)</strong>. DC 13. Self. Turn into mist that can fly double near. Lasts 2d4 rounds.</p>",
-		"spellcastingAbility": "cha",
-		"spellcastingAttackNum": 1,
-		"spellcastingBonus": 5
+		"notes": "<p><i> Cunning and sorcerous ogre-demons with shaggy white hair, blue skin, and yellow eyes. </i></p>\n\t\n\t<p><strong>AC</strong> 11, <strong>HP</strong> 33, <strong>ATK</strong> 1 glaive (near) +6 (1d10) or 1 spell +5, <strong>MV</strong> near, <strong>S</strong> +5, <strong>D</strong> +1, <strong>C</strong> +2, <strong>I</strong> +2, <strong>W</strong> +1, <strong>Ch</strong> +3, <strong>AL</strong> <strong>C</strong>, <strong>LV</strong> 7</p>\n\t<p><strong> Shapeshift</strong>. In place of attacks, turn into any humanoid or back into original form.</p><p><strong>Fade (CHA Spell)</strong>. DC 13. Self. Become invisible for 1d4 rounds.</p><p><strong>Hellfrost (CHA Spell)</strong>. DC 13. All within near-sized cube extending from oni 3d6 damage.</p><p><strong>Mist (CHA Spell)</strong>. DC 13. Self. Turn into mist that can fly double near. Lasts 2d4 rounds.</p>",
+		"spellcasting": {
+			"ability": "cha",
+			"attacks": 1,
+			"bonus": 5
+		}
 	},
 	"type": "NPC"
 }

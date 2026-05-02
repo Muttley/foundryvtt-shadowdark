@@ -1,0 +1,48 @@
+{
+	"_id": "HxnAZ36Mm2jSDF6p",
+	"_key": "!items!HxnAZ36Mm2jSDF6p",
+	"effects": [
+		"lx4pzHIfjRY8COai"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/commodities/biological/organ-brain-pink.webp",
+	"name": "Helm of Mind Reading",
+	"system": {
+		"ac": {
+			"attribute": "dex",
+			"base": 0,
+			"modifier": 0
+		},
+		"baseArmor": "",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p><em>A helm carved with brain ridges, a spinal neck-guard, and octopus-like tentacles.</em></p><p><strong>Benefit.</strong> You can cast the @UUID[Compendium.shadowdark.spells.Item.XBt4wA37ypUiXkp6]{detect thoughts} spell (pg. 58) three times per day (+4 bonus).</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": "Identified Name"
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "core-rules"
+		},
+		"stashed": false
+	},
+	"type": "Armor"
+}

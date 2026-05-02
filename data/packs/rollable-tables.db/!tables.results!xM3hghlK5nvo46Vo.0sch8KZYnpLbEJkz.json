@@ -3,12 +3,14 @@
 	"_key": "!tables.results!xM3hghlK5nvo46Vo.0sch8KZYnpLbEJkz",
 	"description": "Roll a Patron Boon from any patron; an unexplained gift",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		12,
 		12
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

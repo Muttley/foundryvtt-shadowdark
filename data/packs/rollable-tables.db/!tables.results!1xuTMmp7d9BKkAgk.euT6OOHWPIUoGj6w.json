@@ -3,12 +3,14 @@
 	"_key": "!tables.results!1xuTMmp7d9BKkAgk.euT6OOHWPIUoGj6w",
 	"description": "Obstruct",
 	"drawn": false,
+	"flags": {
+	},
 	"img": "icons/svg/d20-black.svg",
 	"name": "",
 	"range": [
 		19,
 		19
 	],
-	"type": "text",
+	"type": "document",
 	"weight": 1
 }

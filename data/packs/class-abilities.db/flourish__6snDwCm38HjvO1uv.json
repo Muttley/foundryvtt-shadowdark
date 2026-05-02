@@ -3,20 +3,22 @@
 	"_key": "!items!6snDwCm38HjvO1uv",
 	"effects": [
 	],
+	"flags": {
+	},
 	"folder": "ntYpdY6HvWuXyrsm",
 	"img": "icons/skills/melee/sword-twirl-orange.webp",
 	"name": "Flourish",
 	"system": {
 		"ability": "",
 		"dc": null,
-		"description": "<p><span>3/day, regain [[/roll 1d6]] hit points when you hit an enemy with a melee attack.</span></p>",
+		"description": "<p>3/day, regain [[/roll 1d6]] hit points when you hit an enemy with a melee attack.</p>",
 		"group": "Pit Fighter",
 		"limitedUses": true,
 		"loseOnFailure": false,
 		"lost": false,
-		"predefinedEffects": "",
+		"properties": [
+		],
 		"source": {
-			"page": 0,
 			"title": "cursed-scroll-2"
 		},
 		"uses": {
