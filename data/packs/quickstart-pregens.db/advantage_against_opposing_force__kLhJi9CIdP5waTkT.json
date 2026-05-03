@@ -1,6 +1,6 @@
 {
 	"_id": "kLhJi9CIdP5waTkT",
-	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.m8m90f1fjo6sxttg.kLhJi9CIdP5waTkT",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.OaioDAFnmjSLB0in.kLhJi9CIdP5waTkT",
 	"description": "<p>You have advantage on Strength checks to overcome an opposing force, such as kicking open a stuck door, etc.</p>",
 	"disabled": false,
 	"duration": {
@@ -10,23 +10,26 @@
 		"value": null
 	},
 	"flags": {
-		"shadowdark": {
-			"situational": true
-		}
 	},
 	"folder": null,
 	"img": "icons/environment/people/infantry.webp",
 	"name": "Advantage Against Opposing Force",
 	"origin": "Compendium.shadowdark.talents.Item.F0NXUJcnBOYKzhMi",
 	"showIcon": 1,
-	"start": null,
+	"start": {
+		"combat": null,
+		"combatant": null,
+		"initiative": null,
+		"round": 7,
+		"time": 19326,
+		"turn": 0
+	},
 	"statuses": [
 	],
 	"system": {
 		"changes": [
 			{
 				"key": "system.roll.stat.advantage.str",
-				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

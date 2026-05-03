@@ -1,0 +1,22 @@
+{
+	"_id": "jyHJL1jwu5240ngl",
+	"_key": "!actors.items!CVFznZtBMmHG2w4a.jyHJL1jwu5240ngl",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"name": "Turn Undead",
+	"system": {
+		"description": "<p>You know the turn undead spell. It doesn’t count toward your number of known spells.</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": ""
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

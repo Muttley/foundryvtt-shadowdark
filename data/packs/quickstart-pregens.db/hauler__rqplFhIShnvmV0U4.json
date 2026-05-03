@@ -1,6 +1,6 @@
 {
 	"_id": "rqplFhIShnvmV0U4",
-	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.MEH4xFzsjmMx1bry.rqplFhIShnvmV0U4",
+	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.g21kFm6j6U70zbhc.rqplFhIShnvmV0U4",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -23,7 +23,6 @@
 		"changes": [
 			{
 				"key": "system.slots",
-				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "max(@abilities.con.mod, 0)"

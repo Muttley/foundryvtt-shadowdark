@@ -1,6 +1,6 @@
 {
-	"_id": "ZjpQVS9L1baZZ2PF",
-	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.9IM4SDWD0HsdFNav.ZjpQVS9L1baZZ2PF",
+	"_id": "k9wVrL0gDKPn2rNt",
+	"_key": "!actors.items.effects!x3L0onniGSB97CU7.kB2LygBinZXTN337.k9wVrL0gDKPn2rNt",
 	"description": "",
 	"disabled": false,
 	"duration": {
@@ -12,8 +12,8 @@
 	"flags": {
 	},
 	"folder": null,
-	"img": "icons/magic/air/air-smoke-casting.webp",
-	"name": "Spellcasting Advantage on Spell",
+	"img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+	"name": "Initiative Advantage",
 	"origin": null,
 	"showIcon": 1,
 	"start": null,
@@ -22,7 +22,7 @@
 	"system": {
 		"changes": [
 			{
-				"key": "system.roll.spell.advantage.magic-missile",
+				"key": "system.roll.initiative.advantage",
 				"priority": null,
 				"type": "add",
 				"value": 1

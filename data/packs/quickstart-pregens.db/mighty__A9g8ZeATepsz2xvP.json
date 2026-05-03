@@ -1,6 +1,6 @@
 {
 	"_id": "A9g8ZeATepsz2xvP",
-	"_key": "!actors.items.effects!CVFznZtBMmHG2w4a.Xg8iDp7jy7fZg1BJ.A9g8ZeATepsz2xvP",
+	"_key": "!actors.items.effects!CVFznZtBMmHG2w4a.EeaX7oql3EiQhbbs.A9g8ZeATepsz2xvP",
 	"description": "<p>You have a +1 bonus to attack and damage rolls with melee weapons.</p>",
 	"disabled": false,
 	"duration": {
@@ -16,21 +16,26 @@
 	"name": "Mighty",
 	"origin": "Compendium.shadowdark.talents.Item.LR6h4lXVXwx7AFQ6",
 	"showIcon": 1,
-	"start": null,
+	"start": {
+		"combat": null,
+		"combatant": null,
+		"initiative": null,
+		"round": 7,
+		"time": 18928,
+		"turn": 0
+	},
 	"statuses": [
 	],
 	"system": {
 		"changes": [
 			{
 				"key": "system.roll.melee.bonus.all",
-				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1
 			},
 			{
 				"key": "system.roll.melee.damage.all",
-				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1
