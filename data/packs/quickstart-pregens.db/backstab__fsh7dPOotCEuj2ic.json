@@ -1,6 +1,6 @@
 {
 	"_id": "fsh7dPOotCEuj2ic",
-	"_key": "!actors.items.effects!x3L0onniGSB97CU7.oyitm9xjkIlIiwp3.fsh7dPOotCEuj2ic",
+	"_key": "!actors.items.effects!x3L0onniGSB97CU7.ALZ1ZvPs3bfZ6U7L.fsh7dPOotCEuj2ic",
 	"changes": [
 		{
 			"key": "system.roll.attack.extra-damage-die.all",
@@ -15,12 +15,15 @@
 		"combat": null,
 		"rounds": null,
 		"seconds": null,
-		"startRound": 7,
-		"startTime": 30619,
+		"startRound": 1,
+		"startTime": 46520,
 		"startTurn": 0,
 		"turns": null
 	},
 	"flags": {
+		"shadowdark": {
+			"situational": true
+		}
 	},
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"name": "Backstab",

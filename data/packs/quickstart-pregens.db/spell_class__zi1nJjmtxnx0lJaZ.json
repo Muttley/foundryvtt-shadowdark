@@ -1,12 +1,12 @@
 {
-	"_id": "ZjpQVS9L1baZZ2PF",
-	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.uY2o9OFArKBMTo7h.ZjpQVS9L1baZZ2PF",
+	"_id": "zi1nJjmtxnx0lJaZ",
+	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.A6GLRbwxmGDVT0WS.zi1nJjmtxnx0lJaZ",
 	"changes": [
 		{
-			"key": "system.roll.spell.advantage.magic-missile",
+			"key": "system.spellcasting.classes",
 			"mode": 2,
 			"priority": null,
-			"value": "1"
+			"value": "wizard"
 		}
 	],
 	"description": "",
@@ -22,9 +22,9 @@
 	},
 	"flags": {
 	},
-	"img": "icons/magic/air/air-smoke-casting.webp",
-	"name": "Spellcasting Advantage on Spell",
-	"origin": null,
+	"img": "icons/magic/symbols/runes-star-pentagon-orange.webp",
+	"name": "Spell Class",
+	"origin": "Compendium.shadowdark.talents.Item.Td6iQW4hVJLZLVLi",
 	"statuses": [
 	],
 	"system": {
