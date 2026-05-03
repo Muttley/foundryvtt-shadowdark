@@ -10,6 +10,11 @@
 	}
 
 
+	h2 {
+		font-size: 24px;
+		font-family: 'Old Newspaper Font';
+		text-align: center;
+	}
 
 	.roll-input {
 		gap: 0.5rem;
@@ -127,6 +132,14 @@
 			flex: 1;
 			height: 2.5rem;
 		}
+	}
+
+}
+
+body.theme-light #sd-roll-dialog {
+
+	hr {
+		background-image: linear-gradient(90deg, transparent 0%, #000000 50%, transparent 100%);
 	}
 
 }

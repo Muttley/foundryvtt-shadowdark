@@ -729,6 +729,8 @@ export default class PlayerSD extends ActorBaseSD {
 
 		shadowdark.dice.setRollTarget(config);
 
+		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_casting_spell", { name: spell.name });
+
 		await this.rollConfigGenerators.spell?.(config);
 
 		if (!await shadowdark.dice.rollDialog(config)) return false;
@@ -995,7 +997,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		shadowdark.dice.setRollTarget(config);
 
-		config.heading = `Attacking with ${weapon.name}`;
+		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_attacking_with", { name: weapon.name });
 
 		if (weapon.usesAmmunition) {
 			const ammunition = weapon.actor.ammunitionItems();
@@ -1119,6 +1121,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		config.actorId = this.parent.id;
 		config.itemUuid = abilityUuid;
+		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_using_ability", { name: ability.name });
 		await this.rollConfigGenerators.ability?.(config);
 
 		if (!await shadowdark.dice.rollDialog(config)) return false;
