@@ -1,6 +1,6 @@
 {
-	"_id": "mgsBO4kcI8zdkOwI",
-	"_key": "!items!mgsBO4kcI8zdkOwI",
+	"_id": "N27A6nb0epkHZ3lR",
+	"_key": "!items!N27A6nb0epkHZ3lR",
 	"effects": [
 	],
 	"flags": {
@@ -15,18 +15,22 @@
 			"gp": 0,
 			"sp": 0
 		},
-		"description": "",
+		"description": "<p>@UUID[Compendium.shadowdark.spells.ItN82uLU3PhJFLNm]{Burning Hands}</p>",
 		"equipped": false,
-		"identification": {
-			"description": "",
-			"identified": true,
-			"name": ""
-		},
 		"isAmmunition": false,
-		"magicItem": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
 		"properties": [
 		],
 		"quantity": 1,
+		"scroll": false,
 		"slots": {
 			"free_carry": 0,
 			"per_slot": 1,
@@ -35,8 +39,8 @@
 		"source": {
 			"title": "core-rules"
 		},
-		"spellUuid": "Compendium.shadowdark.spells.Item.ItN82uLU3PhJFLNm",
-		"stashed": false
+		"stashed": false,
+		"treasure": false
 	},
-	"type": "Scroll"
+	"type": "Basic"
 }
