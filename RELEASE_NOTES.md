@@ -1,3 +1,10 @@
+# v4.0.3
+
+## Bugfixes
+- [#1308] Fixed missing compendium active effects data when running on foundry v13.
+
+---
+
 # v4.0.2
 
 ## Bugfixes
