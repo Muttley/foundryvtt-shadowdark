@@ -1,7 +1,8 @@
 # v4.0.3
 
 ## Bugfixes
-- [#1308] Fixed missing compendium active effects data when running on foundry v13.
+- [#1308] Fixed missing compendium active effects data when running on foundry v13. Restores spell tab.
+- [#1313] Fixed light tracking not showing up on player sheet.
 
 ---
 
