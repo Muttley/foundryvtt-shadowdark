@@ -1,33 +1,33 @@
 {
 	"_id": "UGQKMdNcgb1O8qwy",
 	"_key": "!items.effects!98HEgBRJSED5epGt.UGQKMdNcgb1O8qwy",
+	"changes": [
+		{
+			"key": "system.roll.attack.upgrade-damage-die.REPLACEME",
+			"mode": 2,
+			"priority": null,
+			"value": "5"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 	"name": "Increased Weapon Damage Die",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.attack.upgrade-damage-die.REPLACEME",
-				"priority": null,
-				"type": "add",
-				"value": 5
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

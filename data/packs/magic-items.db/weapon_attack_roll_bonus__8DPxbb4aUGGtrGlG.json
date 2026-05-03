@@ -1,32 +1,29 @@
 {
 	"_id": "8DPxbb4aUGGtrGlG",
 	"_key": "!items.effects!5gdNWsFJjgmtZroK.8DPxbb4aUGGtrGlG",
+	"changes": [
+		{
+			"key": "system.roll.attack.bonus.this",
+			"mode": 2,
+			"value": "3"
+		}
+	],
 	"description": "Weapon Attack Roll Bonus",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startTime": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
 	"name": "Weapon Attack Roll Bonus",
 	"origin": "Compendium.shadowdark.magic-items.Item.5gdNWsFJjgmtZroK",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.attack.bonus.this",
-				"type": "add",
-				"value": 3
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

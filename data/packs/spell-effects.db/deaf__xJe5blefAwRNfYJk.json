@@ -1,27 +1,27 @@
 {
 	"_id": "xJe5blefAwRNfYJk",
 	"_key": "!items.effects!aAdqy5QwVJrT8JWE.xJe5blefAwRNfYJk",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/sonic/scream-wail-shout-teal.webp",
 	"name": "Deaf",
 	"origin": "Item.aAdqy5QwVJrT8JWE",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

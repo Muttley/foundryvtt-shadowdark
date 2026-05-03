@@ -1,0 +1,23 @@
+{
+	"_id": "ALZ1ZvPs3bfZ6U7L",
+	"_key": "!actors.items!x3L0onniGSB97CU7.ALZ1ZvPs3bfZ6U7L",
+	"effects": [
+		"fsh7dPOotCEuj2ic"
+	],
+	"flags": {
+	},
+	"folder": "8t1Gmpgn1Q6HXJAz",
+	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
+	"name": "Backstab",
+	"system": {
+		"description": "<p>If you hit a creature who is unaware of your attack, you deal an extra weapon die of damage. Add additional weapon dice of damage equal to half your level (round down).</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "class"
+	},
+	"type": "Talent"
+}

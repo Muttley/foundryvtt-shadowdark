@@ -1,0 +1,24 @@
+{
+	"_id": "84S8aIQnu84q0i9h",
+	"_key": "!actors.items!wnjtoBC4k5dIiG8X.84S8aIQnu84q0i9h",
+	"effects": [
+		"qIFVq4PAB70lPkf9",
+		"0rcSjPSjHdvGwtOu"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Stout",
+	"system": {
+		"description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": ""
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

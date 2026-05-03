@@ -1,33 +1,33 @@
 {
 	"_id": "c7CGt0FBJHv5BtpM",
 	"_key": "!items.effects!0yk16c9qcJ9vCekD.c7CGt0FBJHv5BtpM",
+	"changes": [
+		{
+			"key": "system.roll.melee.bonus.all",
+			"mode": 2,
+			"priority": null,
+			"value": "1"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
 	"name": "Melee Attack Roll Bonus",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.melee.bonus.all",
-				"priority": null,
-				"type": "add",
-				"value": 1
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

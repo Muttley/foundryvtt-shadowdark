@@ -1,33 +1,33 @@
 {
 	"_id": "JiT09XfIkqCuIOiD",
 	"_key": "!items.effects!5rK6guXTllcryhLv.JiT09XfIkqCuIOiD",
+	"changes": [
+		{
+			"key": "system.attributes.ac.value",
+			"mode": 5,
+			"priority": null,
+			"value": "20"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 10
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/defensive/armor-stone-skin.webp",
 	"name": "Stoneskin",
 	"origin": "Compendium.shadowdark.spell-effects.Item.5rK6guXTllcryhLv",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.attributes.ac.value",
-				"priority": null,
-				"type": "override",
-				"value": 20
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

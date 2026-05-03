@@ -1,33 +1,33 @@
 {
 	"_id": "b7lXcLAavPlpMhqp",
 	"_key": "!items.effects!w3UsdCcYKnwcAgbH.b7lXcLAavPlpMhqp",
+	"changes": [
+		{
+			"key": "system.roll.attack.critical-success.all",
+			"mode": 5,
+			"priority": null,
+			"value": "18"
+		}
+	],
 	"description": "Critical Success Threshold",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Critical Success Threshold",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.attack.critical-success.all",
-				"priority": null,
-				"type": "override",
-				"value": 18
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

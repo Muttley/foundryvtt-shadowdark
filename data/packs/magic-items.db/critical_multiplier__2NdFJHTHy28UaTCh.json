@@ -1,33 +1,33 @@
 {
 	"_id": "2NdFJHTHy28UaTCh",
 	"_key": "!items.effects!Mb7OBENXa5XnClS9.2NdFJHTHy28UaTCh",
+	"changes": [
+		{
+			"key": "system.roll.attack.critical-multiplier.this",
+			"mode": 5,
+			"priority": null,
+			"value": "4"
+		}
+	],
 	"description": "Critical Multiplier",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Critical Multiplier",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.attack.critical-multiplier.this",
-				"priority": null,
-				"type": "override",
-				"value": 4
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

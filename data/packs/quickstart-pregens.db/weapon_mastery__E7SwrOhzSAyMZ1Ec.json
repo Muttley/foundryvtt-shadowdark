@@ -1,38 +1,38 @@
 {
 	"_id": "E7SwrOhzSAyMZ1Ec",
 	"_key": "!actors.items.effects!wnjtoBC4k5dIiG8X.ys29FVZBITfUFwra.E7SwrOhzSAyMZ1Ec",
+	"changes": [
+		{
+			"key": "system.roll.melee.bonus.greataxe",
+			"mode": 2,
+			"priority": null,
+			"value": "1+floor(@level.value/2)"
+		},
+		{
+			"key": "system.roll.melee.damage.greataxe",
+			"mode": 2,
+			"value": "1+floor(@level.value/2)"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
 	"name": "Weapon Mastery",
 	"origin": "Compendium.shadowdark.talents.eg8u9L4gcJAxBxVX",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.melee.bonus.greataxe",
-				"priority": null,
-				"type": "add",
-				"value": "1+floor(@level.value/2)"
-			},
-			{
-				"key": "system.roll.melee.damage.greataxe",
-				"type": "add",
-				"value": "1+floor(@level.value/2)"
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

@@ -1,27 +1,27 @@
 {
 	"_id": "Ivoesj08KB4Fg49z",
 	"_key": "!items.effects!KXfv6edqcRQdnc7m.Ivoesj08KB4Fg49z",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-flaming-pentagon-orange.webp",
 	"name": "Protection from Fire",
 	"origin": "Item.rEfRjUeHNEs2Efo6",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

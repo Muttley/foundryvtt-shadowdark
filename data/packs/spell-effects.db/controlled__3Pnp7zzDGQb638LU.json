@@ -1,27 +1,27 @@
 {
 	"_id": "3Pnp7zzDGQb638LU",
 	"_key": "!items.effects!nctlTXcIkACzb0yd.3Pnp7zzDGQb638LU",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/creatures/eyes/void-single-black-purple.webp",
 	"name": "Controlled",
 	"origin": "Item.sLb9GOXx9F6XCb2o",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

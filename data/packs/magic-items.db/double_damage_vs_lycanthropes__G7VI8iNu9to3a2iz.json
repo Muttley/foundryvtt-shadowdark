@@ -1,36 +1,36 @@
 {
 	"_id": "G7VI8iNu9to3a2iz",
 	"_key": "!items.effects!bpJlJ3vnZVmvOEJV.G7VI8iNu9to3a2iz",
+	"changes": [
+		{
+			"key": "system.roll.attack.damage.this",
+			"mode": 1,
+			"priority": null,
+			"value": "2"
+		}
+	],
 	"description": "Double Damage vs Lycanthropes",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 		"shadowdark": {
 			"situational": true
 		}
 	},
-	"folder": null,
 	"img": "icons/commodities/tech/cog-steel-grey.webp",
 	"name": "Double Damage vs Lycanthropes",
 	"origin": "Compendium.shadowdark.magic-items.Item.bpJlJ3vnZVmvOEJV",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.attack.damage.this",
-				"priority": null,
-				"type": "multiply",
-				"value": 2
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,
