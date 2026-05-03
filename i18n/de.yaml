@@ -216,8 +216,8 @@ SHADOWDARK.chat.welcome_message.watch: Video-Tutorial ansehen
 SHADOWDARK.chatcard.default: Wurf
 SHADOWDARK.check.requesting: Wurf anfordern
 SHADOWDARK.class-ability.ability.check: Fähigkeitswurf
-SHADOWDARK.class-ability.ability.label: Fähigkeit
 SHADOWDARK.class-ability.ability.group: "{group} Ability"
+SHADOWDARK.class-ability.ability.label: Fähigkeit
 SHADOWDARK.class-ability.available.label: Verfügbar
 SHADOWDARK.class-ability.boons: Vorteile
 SHADOWDARK.class-ability.dc.label: SG
@@ -321,9 +321,9 @@ SHADOWDARK.dialog.item.use: Verwenden
 SHADOWDARK.dialog.light_source.pick_up.title: Figur auswählen, um Lichtquelle zuzuweisen
 SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
 SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
-SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll_mode_label: Wurfmodus
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
+SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll: Wurf
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "WARNUNG: Dieser Zauber ist nicht von der gleichen Klasse wie der Charakter, bist du sicher, dass du versuchen möchtest ihn zu lernen?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Bestätige Zauber lernen
@@ -380,14 +380,14 @@ SHADOWDARK.error.general.no_character_selected: Kein Charakter ausgewählt
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Schirmherr kann nicht hinzugefügt werden, da die aktuell konfigurierte Klasse es nicht erlaubt
 SHADOWDARK.error.source.source_missing: Quelle fehlt oder unbekannt...
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: Du kannst keine Zauber dieser Klasse wirken
-SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: Du kannst magische Gegenstände nicht verwenden
-SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Zu viele Token ausgewählt
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.form.section_header.class_abilities.label: Klassen-Fähigkeiten
 SHADOWDARK.form.section_header.equipment.label: Ausrüstung
 SHADOWDARK.form.section_header.languages.label: Sprachen
