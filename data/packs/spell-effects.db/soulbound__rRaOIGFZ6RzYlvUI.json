@@ -1,27 +1,27 @@
 {
 	"_id": "rRaOIGFZ6RzYlvUI",
 	"_key": "!items.effects!z7X1jRQHFTnSXpds.rRaOIGFZ6RzYlvUI",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
 	"name": "Soulbound",
 	"origin": "Item.XIVFQdlFLE6VjDfs",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

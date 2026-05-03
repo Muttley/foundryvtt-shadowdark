@@ -1,27 +1,27 @@
 {
 	"_id": "6sDtwzG4ddaew8SZ",
 	"_key": "!items.effects!PUFCnXLjvBQSM2YO.6sDtwzG4ddaew8SZ",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
 	"name": "Paralyzed",
 	"origin": "Compendium.shadowdark.spell-effects.Item.PUFCnXLjvBQSM2YO",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

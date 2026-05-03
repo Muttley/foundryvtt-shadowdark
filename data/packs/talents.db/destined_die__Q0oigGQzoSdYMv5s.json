@@ -1,33 +1,33 @@
 {
 	"_id": "Q0oigGQzoSdYMv5s",
 	"_key": "!items.effects!Az2fXCwgo5C3x2X7.Q0oigGQzoSdYMv5s",
+	"changes": [
+		{
+			"key": "system.bonus.destineddie",
+			"mode": 2,
+			"priority": null,
+			"value": "6"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/sundries/gaming/dice-runed-brown.webp",
 	"name": "Destined Die",
 	"origin": "Compendium.shadowdark.talents.Item.Az2fXCwgo5C3x2X7",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.bonus.destineddie",
-				"priority": null,
-				"type": "add",
-				"value": 6
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

@@ -1,57 +1,57 @@
 {
 	"_id": "vMxGVAApQXuIeBXk",
 	"_key": "!items.effects!3vCyl2kqfz31N1yP.vMxGVAApQXuIeBXk",
+	"changes": [
+		{
+			"key": "system.abilities.str.value",
+			"mode": 5,
+			"priority": null,
+			"value": "16"
+		},
+		{
+			"key": "system.abilities.dex.value",
+			"mode": 5,
+			"priority": null,
+			"value": "14"
+		},
+		{
+			"key": "system.abilities.con.value",
+			"mode": 5,
+			"priority": null,
+			"value": "12"
+		},
+		{
+			"key": "system.attributes.hp.max",
+			"mode": 5,
+			"priority": null,
+			"value": "19"
+		},
+		{
+			"key": "system.attributes.ac.all",
+			"mode": 5,
+			"priority": null,
+			"value": "12"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
 	"name": "Dire Wolf",
 	"origin": "Item.hVsjl5GZqSajuFU6",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.abilities.str.value",
-				"priority": null,
-				"type": "override",
-				"value": 16
-			},
-			{
-				"key": "system.abilities.dex.value",
-				"priority": null,
-				"type": "override",
-				"value": 14
-			},
-			{
-				"key": "system.abilities.con.value",
-				"priority": null,
-				"type": "override",
-				"value": 12
-			},
-			{
-				"key": "system.attributes.hp.max",
-				"priority": null,
-				"type": "override",
-				"value": 19
-			},
-			{
-				"key": "system.attributes.ac.all",
-				"priority": null,
-				"type": "override",
-				"value": 12
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

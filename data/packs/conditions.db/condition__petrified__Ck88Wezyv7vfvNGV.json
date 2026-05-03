@@ -1,27 +1,27 @@
 {
 	"_id": "Ck88Wezyv7vfvNGV",
 	"_key": "!items.effects!DihIx1S94zeXV3oM.Ck88Wezyv7vfvNGV",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "seconds",
-		"value": 1
+		"combat": null,
+		"rounds": null,
+		"seconds": 1,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/creatures/magical/construct-stone-earth-gray.webp",
 	"name": "Condition: Petrified",
 	"origin": "Item.XbrayNCUis3pV0XU",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,
