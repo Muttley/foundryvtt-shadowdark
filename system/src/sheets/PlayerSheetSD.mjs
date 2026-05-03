@@ -885,46 +885,46 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				spellitems.scrolls.push({item: i, spell: spellObj});
 			}
 
-		}
+			if (i.system?.light?.isSource) {
 
-		/*
-		if (i.system.light.isSource) {
+				const timeRemaining = Math.ceil(
+					i.system.light.remainingSecs / 60
+				);
+				const lightRemainingSetting = (game.user.isGM)
+					? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
 
-			const timeRemaining = Math.ceil(
-				i.system.light.remainingSecs / 60
-			);
-			const lightRemainingSetting = (game.user.isGM)
-				? 2 : game.settings.get("shadowdark", "playerShowLightRemaining");
-
-			if (lightRemainingSetting > 0) {
-				// construct time remaing progress bar
-				const maxSeconds = i.system.light.longevityMins * 60;
-				i.lightSourceProgress = "◆";
-				for (let x = 1; x < 4; x++) {
-					if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
-						i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
+				if (lightRemainingSetting > 0) {
+					// construct time remaing progress bar
+					const maxSeconds = i.system.light.longevityMins * 60;
+					i.lightSourceProgress = "◆";
+					for (let x = 1; x < 4; x++) {
+						if (i.system.light.remainingSecs > (maxSeconds * x / 4)) {
+							i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◆");
+						}
+						else {
+							i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
+						}
 					}
-					else {
-						i.lightSourceProgress = i.lightSourceProgress.concat(" ", "◇");
-					}
+				}
+
+				if (lightRemainingSetting < 2) {
+					i.lightSourceTimeRemaining = "";
+				}
+				else if (i.system.light.remainingSecs < 60) {
+					i.lightSourceTimeRemaining = game.i18n.localize(
+						"SHADOWDARK.inventory.item.light_seconds_remaining"
+					);
+				}
+				else {
+					i.lightSourceTimeRemaining = game.i18n.format(
+						"SHADOWDARK.inventory.item.light_remaining",
+						{ timeRemaining }
+					);
 				}
 			}
 
-			if (lightRemainingSetting < 2) {
-				i.lightSourceTimeRemaining = "";
-			}
-			else if (i.system.light.remainingSecs < 60) {
-				i.lightSourceTimeRemaining = game.i18n.localize(
-					"SHADOWDARK.inventory.item.light_seconds_remaining"
-				);
-			}
-			else {
-				i.lightSourceTimeRemaining = game.i18n.format(
-					"SHADOWDARK.inventory.item.light_remaining",
-					{ timeRemaining }
-				);
-			}
-		}*/
+		}
+
 		const nonPhysicalItems = this.actor.items.filter(i => !i.system.isPhysical);
 		for (const i of nonPhysicalItems) {
 
