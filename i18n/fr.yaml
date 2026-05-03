@@ -216,8 +216,8 @@ SHADOWDARK.chat.welcome_message.watch: Regardez le tutoriel vidéo
 SHADOWDARK.chatcard.default: Lancer
 SHADOWDARK.check.requesting: 'Requête : Test de Difficulté'
 SHADOWDARK.class-ability.ability.check: Test de Capacité
-SHADOWDARK.class-ability.ability.label: Capacité
 SHADOWDARK.class-ability.ability.group: "{group} Ability"
+SHADOWDARK.class-ability.ability.label: Capacité
 SHADOWDARK.class-ability.available.label: Disponible
 SHADOWDARK.class-ability.boons: Faveurs
 SHADOWDARK.class-ability.dc.label: ND
@@ -319,8 +319,11 @@ SHADOWDARK.dialog.item.sell_all: Tout Vendre
 SHADOWDARK.dialog.item.sell: Vendre
 SHADOWDARK.dialog.item.use: Utiliser
 SHADOWDARK.dialog.light_source.pick_up.title: Sélectionnez l'Acteur à qui donner la source lumineuse
+SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
+SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
 SHADOWDARK.dialog.roll_mode_label: Mode de lancer
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
+SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll: Jet de dés
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "AVERTISSEMENT : Ce sort n'est pas pour la même classe que le personnage, êtes-vous sûr de vouloir l'apprendre ?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Confirmer l'apprentissage du sort
@@ -377,14 +380,14 @@ SHADOWDARK.error.general.no_character_selected: Aucun personnage sélectionné
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Impossible d'ajouter le protecteur car la classe actuellement configurée ne le permet pas
 SHADOWDARK.error.source.source_missing: Source manquante ou inconnue...
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: Vous ne pouvez pas lancer des sorts de cette classe
-SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: Vous ne pouvez pas utiliser d'objets magiques
-SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Trop de jetons sélectionnés
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.form.section_header.class_abilities.label: Talents de classe
 SHADOWDARK.form.section_header.equipment.label: Équipement
 SHADOWDARK.form.section_header.languages.label: Langues
