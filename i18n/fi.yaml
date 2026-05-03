@@ -216,8 +216,8 @@ SHADOWDARK.chat.welcome_message.watch: Katso opastusvideo
 SHADOWDARK.chatcard.default: Heitä noppaa
 SHADOWDARK.check.requesting: Pyydetään heittoa
 SHADOWDARK.class-ability.ability.check: Kyvykkyysheitto
-SHADOWDARK.class-ability.ability.label: Kyky
 SHADOWDARK.class-ability.ability.group: "{group} Ability"
+SHADOWDARK.class-ability.ability.label: Kyky
 SHADOWDARK.class-ability.available.label: Käytettävissä
 SHADOWDARK.class-ability.boons: Siunaukset
 SHADOWDARK.class-ability.dc.label: VA
@@ -319,8 +319,11 @@ SHADOWDARK.dialog.item.sell_all: Myy kaikki
 SHADOWDARK.dialog.item.sell: Myy
 SHADOWDARK.dialog.item.use: Käytä
 SHADOWDARK.dialog.light_source.pick_up.title: Valitse kenelle annetaan valonlähde
+SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
+SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
 SHADOWDARK.dialog.roll_mode_label: Heittotapa
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
+SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll: Heitä noppaa
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VAROITUS: Tämä loitsu ei ole saman hahmoluokan loitsu! Oletko varma, että yrität oppia sitä?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Vahvista loitsun oppiminen
@@ -377,14 +380,14 @@ SHADOWDARK.error.general.no_character_selected: Ei hahmoa valittuna
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Suojelijan siunausta ei voitu lisätä, koska valittu hahmoluokka ei salli sitä
 SHADOWDARK.error.source.source_missing: Lähdemateriaali puuttuu tai on tuntematon...
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: Et pysty loihtimaan tämän hahmoluokan loitsuja
-SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: Et pysty käyttämään taikaesineitä
-SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Liian monta tokenia valittuna
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.form.section_header.class_abilities.label: Hahmoluokan ominaisuudet
 SHADOWDARK.form.section_header.equipment.label: Varusteet
 SHADOWDARK.form.section_header.languages.label: Kielet

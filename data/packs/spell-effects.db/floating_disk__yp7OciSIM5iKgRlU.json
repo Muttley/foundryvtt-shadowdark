@@ -1,27 +1,27 @@
 {
 	"_id": "yp7OciSIM5iKgRlU",
 	"_key": "!items.effects!VMkeCfccn7zp2up7.yp7OciSIM5iKgRlU",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 10
+		"combat": null,
+		"rounds": 10,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/commodities/metal/plate-steel-pink.webp",
 	"name": "Floating disk",
 	"origin": "Item.VMkeCfccn7zp2up7",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

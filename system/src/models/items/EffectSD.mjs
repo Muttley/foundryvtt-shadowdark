@@ -32,4 +32,13 @@ export default class EffectSD extends BaseItemSD {
 
 		return Object.assign(super.defineSchema(), schema);
 	}
+
+
+	static migrateData(data) {
+		if (`${data.start.combatTime}`.endsWith(".null")) {
+			data.start.combatTime = null;
+		}
+
+		return super.migrateData(data);
+	}
 }

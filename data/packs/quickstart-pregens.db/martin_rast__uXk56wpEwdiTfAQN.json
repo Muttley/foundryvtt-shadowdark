@@ -19,11 +19,11 @@
 		"CGJ4zxmqFilgRBIZ",
 		"HsowE8JPDwcXugdG",
 		"15j8vdCGXCjRSxFw",
-		"XG40F8MkXEHxeuAD",
-		"zOpXczZOt9Hgsb5Y",
-		"eKWXox9KuxnErU26",
-		"uyQ6Gk66YqMVbwmu",
-		"1F7ax6jrD0B6SyEp"
+		"Ns4v7zveq3uXaegt",
+		"kaO7TrtQ8kmZvf4j",
+		"ZgPiv6ttj4KbiA5X",
+		"L7MXRXLxu29ZHm5m",
+		"0ladgOD68Mb1vY6j"
 	],
 	"name": "Martin Rast",
 	"prototypeToken": {
@@ -36,9 +36,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -107,6 +106,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Martin_Rast_token.webp",

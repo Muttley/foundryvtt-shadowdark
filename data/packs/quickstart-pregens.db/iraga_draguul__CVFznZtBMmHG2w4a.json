@@ -21,14 +21,14 @@
 		"Drkn5HCuzmZ4lXeQ",
 		"dnuYDVd7SgqrfKY9",
 		"e04loDnEXhVPS9uK",
-		"jyHJL1jwu5240ngl",
-		"bnHagMjZ4QClqG0E",
-		"jQ8uHq9gyS7oeZnK",
-		"11jwbicr6aCQewlN",
 		"WZliJsaRzttyWAdD",
 		"zIGnwQlVSE5I2Toe",
 		"3ZsTgW8A6BUQbBdc",
-		"EeaX7oql3EiQhbbs"
+		"HrBISy7YSm5fCE8g",
+		"rpZWsv15XAvnsky1",
+		"gyW8ctwFLkwZrFek",
+		"i2IfM7lJOqc8OTXl",
+		"lXBa2beUZOwgmD8w"
 	],
 	"name": "Iraga Draguul",
 	"prototypeToken": {
@@ -41,9 +41,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -112,6 +111,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Iraga_Draguul_token.webp",

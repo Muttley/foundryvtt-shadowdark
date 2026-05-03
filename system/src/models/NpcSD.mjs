@@ -156,6 +156,19 @@ export default class NpcSD extends ActorBaseSD {
 		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);
 		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
 		config.mainRoll.tooltips = spellRollKey.tooltips;
+
+		config.cast.damageType ??= spell.system?.damageType;
+		const formula = spell.system?.formula?.trim();
+		if (formula && spell.system?.damageType !== "none") {
+			config.damageRoll ??= {};
+			config.damageRoll.base ??= formula;
+			config.damageRoll.formula ??= formula;
+			config.damageRoll.label ??= game.i18n.localize(
+				config.cast.damageType === "healing"
+					? "SHADOWDARK.roll.healing"
+					: "SHADOWDARK.roll.damage"
+			);
+		}
 	}
 
 	async castSpell(spellUuid, config={}) {
@@ -169,6 +182,12 @@ export default class NpcSD extends ActorBaseSD {
 			return;
 		}
 
+		if (spell.system.lost) {
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.error.spells.lost")
+			);
+		}
+
 		config.actorId = this.parent.id;
 		config.itemUuid = spellUuid;
 		config.cast ??= {};
@@ -176,14 +195,18 @@ export default class NpcSD extends ActorBaseSD {
 
 		shadowdark.dice.setRollTarget(config);
 
+		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_casting_spell", { name: spell.name });
+
 		await this.rollConfigGenerators.spell?.(config);
 
 		if (!await shadowdark.dice.rollDialog(config)) return false;
 
-		// Call player cast spell hooks and cancel if any return false
+		// Call NPC cast spell hooks and cancel if any return false
 		if (!await Hooks.call("SD-NPC-Spell-Cast", config)) return false;
 
-		const roll = shadowdark.dice.rollFromConfig(config);
+		const roll = await shadowdark.dice.rollFromConfig(config);
+
+		if (!roll.success) spell.update({"system.lost": true});
 
 		return roll.success;
 	}
@@ -198,6 +221,8 @@ export default class NpcSD extends ActorBaseSD {
 		config.itemUuid = attack.uuid;
 
 		shadowdark.dice.setRollTarget(config);
+
+		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_attacking_with", { name: attack.name });
 
 		// generates attack data
 		await this.rollConfigGenerators.attack?.(config);
