@@ -1,8 +1,8 @@
 import { UpdateBaseSD } from "../UpdateBaseSD.mjs";
 
-export default class Update_260430_1 extends UpdateBaseSD {
+export default class Update_260503_1 extends UpdateBaseSD {
 
-	static version = 260430.1;
+	static version = 260503.1;
 
 	async updateItem(itemData, actorData) {
 		if (!actorData) return;
