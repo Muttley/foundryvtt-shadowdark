@@ -23,11 +23,11 @@
 		"uGylTowCiu0J2nW1",
 		"pdCL2elKH5ufXMAA",
 		"3LgBOXugwE3Ufxjy",
-		"DKvQ17FZz9GZpj5L",
-		"c0CBAB9xR7kVzE5m",
-		"odsUnnRoqpxszckX",
-		"bfPcCpIuXjjhejCa",
-		"fWyJCJ5J7zFWzSSl"
+		"vidlqyrxrKYxHAdm",
+		"h7XimcSeX88FwuPK",
+		"FfVoAYskj2Jn090z",
+		"xdukM7u6LkuSd6gX",
+		"6UXvmSt8z623qgXf"
 	],
 	"name": "Elbin Grizzlegut",
 	"prototypeToken": {
@@ -40,9 +40,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -111,6 +110,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Elbin_Grizzlegut_token.webp",

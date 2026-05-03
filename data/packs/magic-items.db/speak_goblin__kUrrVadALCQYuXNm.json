@@ -1,33 +1,33 @@
 {
 	"_id": "kUrrVadALCQYuXNm",
 	"_key": "!items.effects!YITrYmzXxk6Yjxfc.kUrrVadALCQYuXNm",
+	"changes": [
+		{
+			"key": "system.languages",
+			"mode": 2,
+			"priority": null,
+			"value": "Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN"
+		}
+	],
 	"description": "Speak Goblin",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/commodities/tech/cog-steel-grey.webp",
 	"name": "Speak Goblin",
 	"origin": "Compendium.shadowdark.magic-items.Item.YITrYmzXxk6Yjxfc",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.languages",
-				"priority": null,
-				"type": "add",
-				"value": "Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN"
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

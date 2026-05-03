@@ -1,27 +1,27 @@
 {
 	"_id": "rRaOIGFZ6RzYlvUI",
 	"_key": "!items.effects!6wfBZBYV85NQTcJz.rRaOIGFZ6RzYlvUI",
+	"changes": [
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": "turnStart",
-		"units": "rounds",
-		"value": 1
+		"combat": null,
+		"rounds": 1,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
 	"name": "Hypnotized",
 	"origin": "Item.XIVFQdlFLE6VjDfs",
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

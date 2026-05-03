@@ -20,10 +20,10 @@
 		"lQI9KwjnfIND3nma",
 		"LRXImQ7OWk4vOjrl",
 		"kJbjoRI9rKem1LGC",
-		"lIxYM8I3mhj5wSJi",
-		"YygPeZWAadicBJLM",
-		"IHgdKEAKaYpTLKnz",
-		"wMdbnaiykRYJcNhV"
+		"WRSkYHsDyw23tZRT",
+		"CNE7mfLjwGeXOr7j",
+		"BXGdD0rx1RWFnBLv",
+		"e4cl7SKLrvRFgWA2"
 	],
 	"name": "Ralina Biggins",
 	"prototypeToken": {
@@ -36,9 +36,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -107,6 +106,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Ralina_Biggins_token.webp",

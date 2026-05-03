@@ -1,34 +1,33 @@
 {
 	"_id": "lSaJHBE00pEuwfOx",
-	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.3PgHcaDmBDrL5ktw.lSaJHBE00pEuwfOx",
+	"_key": "!actors.items.effects!PTFsYZ8ni3MbSdw8.YZYT0ZS0YqnMWnH0.lSaJHBE00pEuwfOx",
+	"changes": [
+		{
+			"key": "system.abilities.int.value",
+			"mode": 2,
+			"priority": null,
+			"value": "2"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": 0,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 	"name": "Ability Score Improvement (Int)",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.abilities.int.value",
-				"phase": "initial",
-				"priority": null,
-				"type": "add",
-				"value": 2
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

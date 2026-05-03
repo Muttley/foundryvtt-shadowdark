@@ -1,0 +1,22 @@
+{
+	"_id": "OOQtqUt37w9UMxrD",
+	"_key": "!actors.items!PTFsYZ8ni3MbSdw8.OOQtqUt37w9UMxrD",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/environment/people/group.webp",
+	"name": "Ambitious",
+	"system": {
+		"description": "<p>You gain one additional talent roll at 1st level.</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

@@ -23,10 +23,10 @@
 		"eZenY58xIvu8hp2e",
 		"bKa5QTkhswSY7Aun",
 		"q4XASzehX7TfLgjb",
-		"q76laoSsm3a3wCkj",
-		"NjBaEiTYYRsYvfIh",
-		"rfGjQWMBNlh8Hqea",
-		"qxRucAZqVBTlq7gy"
+		"F2moDaLM7RD9aMb8",
+		"1NzWmVAz7KltbAj7",
+		"17y4Trb6UrlMNLt5",
+		"LsCy1cxn3Qzh7Jh4"
 	],
 	"name": "Yriel Lirandar",
 	"prototypeToken": {
@@ -39,9 +39,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -110,6 +109,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Yriel_Lirandar_token.webp",

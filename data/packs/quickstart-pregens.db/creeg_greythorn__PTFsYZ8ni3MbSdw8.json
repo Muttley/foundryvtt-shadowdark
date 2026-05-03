@@ -24,10 +24,10 @@
 		"qVtTmQObYWWaInEl",
 		"oyJqz7mu7vZ9bfTH",
 		"WTy4zczgHGERH7zP",
-		"3WU4JXNvnouradA9",
-		"l4qJ5oTNgfwQbdbL",
-		"3PgHcaDmBDrL5ktw",
-		"zTldNRlYjWv0BBbr"
+		"OOQtqUt37w9UMxrD",
+		"YZYT0ZS0YqnMWnH0",
+		"t0co0RRkXIDiwyyv",
+		"TnJe84PRjCQzFxRN"
 	],
 	"name": "Creeg Greythorn",
 	"prototypeToken": {
@@ -40,9 +40,8 @@
 		"bar2": {
 			"attribute": null
 		},
-		"depth": 1,
-		"detectionModes": {
-		},
+		"detectionModes": [
+		],
 		"displayBars": 0,
 		"displayName": 40,
 		"disposition": 1,
@@ -111,6 +110,9 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/quickstart/pregens/Creeg_Greythorn_token.webp",

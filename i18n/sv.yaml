@@ -216,8 +216,8 @@ SHADOWDARK.chat.welcome_message.watch: Watch the Video Tutorial
 SHADOWDARK.chatcard.default: Rulla
 SHADOWDARK.check.requesting: Requesting a check
 SHADOWDARK.class-ability.ability.check: Ability Check
-SHADOWDARK.class-ability.ability.label: Förmåga
 SHADOWDARK.class-ability.ability.group: "{group} Ability"
+SHADOWDARK.class-ability.ability.label: Förmåga
 SHADOWDARK.class-ability.available.label: Tillgänglig
 SHADOWDARK.class-ability.boons: Boons
 SHADOWDARK.class-ability.dc.label: DC
@@ -319,8 +319,11 @@ SHADOWDARK.dialog.item.sell_all: Sälj allt
 SHADOWDARK.dialog.item.sell: Sälj
 SHADOWDARK.dialog.item.use: Användning
 SHADOWDARK.dialog.light_source.pick_up.title: Välj aktör för att ge ljuskällan
+SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
+SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
 SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
+SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll: Rulla
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "VARNING: Denna besvärjelse är inte tillgänglig för klassen för karaktären, är du säker på att du vill lära dig den?"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: Bekräfta lärande av inkompatibel besvärjelse
@@ -377,14 +380,14 @@ SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: You are unable to cast spells of that class
-SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: You are unable to use magic items
-SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: Too many tokens selected
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.form.section_header.class_abilities.label: Class Abilities
 SHADOWDARK.form.section_header.equipment.label: Utrustning
 SHADOWDARK.form.section_header.languages.label: Språk

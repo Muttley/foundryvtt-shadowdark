@@ -1,9 +1,9 @@
 {
 	"_id": "QBX0EGnKmDfPJ8gQ",
-	"_key": "!actors.items.effects!RfFy5Nq3izy5oVD6.ufk3xI6cL6wueXj4.QBX0EGnKmDfPJ8gQ",
+	"_key": "!actors.items.effects!RfFy5Nq3izy5oVD6.xdukM7u6LkuSd6gX.QBX0EGnKmDfPJ8gQ",
 	"changes": [
 		{
-			"key": "system.roll.spell.advantage.all",
+			"key": "system.roll.spell.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -16,9 +16,11 @@
 		"rounds": null,
 		"seconds": null,
 		"startRound": null,
-		"startTime": null,
+		"startTime": 0,
 		"startTurn": null,
 		"turns": null
+	},
+	"flags": {
 	},
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Spellcasting Check Bonus",

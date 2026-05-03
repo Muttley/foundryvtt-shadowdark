@@ -1,38 +1,38 @@
 {
 	"_id": "XmlEQByLpzXULngp",
 	"_key": "!actors.items.effects!4gxXdPgUd0ofz89A.q4XASzehX7TfLgjb.XmlEQByLpzXULngp",
+	"changes": [
+		{
+			"key": "system.roll.melee.bonus.bastard-sword",
+			"mode": 2,
+			"priority": null,
+			"value": "1+floor(@level.value/2)"
+		},
+		{
+			"key": "system.roll.melee.damage.bastard-sword",
+			"mode": 2,
+			"value": "1+floor(@level.value/2)"
+		}
+	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
 	"name": "Weapon Mastery",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.roll.melee.bonus.bastard-sword",
-				"priority": null,
-				"type": "add",
-				"value": "1+floor(@level.value/2)"
-			},
-			{
-				"key": "system.roll.melee.damage.bastard-sword",
-				"type": "add",
-				"value": "1+floor(@level.value/2)"
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

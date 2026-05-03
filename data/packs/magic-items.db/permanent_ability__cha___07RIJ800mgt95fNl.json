@@ -1,33 +1,33 @@
 {
 	"_id": "07RIJ800mgt95fNl",
 	"_key": "!items.effects!ZypO4jCOurSK2aOB.07RIJ800mgt95fNl",
+	"changes": [
+		{
+			"key": "system.abilities.cha.value",
+			"mode": 5,
+			"priority": null,
+			"value": "18"
+		}
+	],
 	"description": "Permanent Ability (Cha)",
 	"disabled": false,
 	"duration": {
-		"expired": false,
-		"expiry": null,
-		"units": "seconds",
-		"value": null
+		"combat": null,
+		"rounds": null,
+		"seconds": null,
+		"startRound": null,
+		"startTime": null,
+		"startTurn": null,
+		"turns": null
 	},
 	"flags": {
 	},
-	"folder": null,
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Permanent Ability (Cha)",
 	"origin": null,
-	"showIcon": 1,
-	"start": null,
 	"statuses": [
 	],
 	"system": {
-		"changes": [
-			{
-				"key": "system.abilities.cha.value",
-				"priority": null,
-				"type": "override",
-				"value": 18
-			}
-		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,
