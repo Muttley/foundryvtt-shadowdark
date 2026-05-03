@@ -216,8 +216,8 @@ SHADOWDARK.chat.welcome_message.watch: 觀看影片教學
 SHADOWDARK.chatcard.default: 擲骰
 SHADOWDARK.check.requesting: 要求檢定
 SHADOWDARK.class-ability.ability.check: 屬性檢定
-SHADOWDARK.class-ability.ability.label: 屬性
 SHADOWDARK.class-ability.ability.group: "{group} Ability"
+SHADOWDARK.class-ability.ability.label: 屬性
 SHADOWDARK.class-ability.available.label: 可用的
 SHADOWDARK.class-ability.boons: 恩惠
 SHADOWDARK.class-ability.dc.label: DC
@@ -321,9 +321,9 @@ SHADOWDARK.dialog.item.use: 使用
 SHADOWDARK.dialog.light_source.pick_up.title: 選擇角色以提供光源
 SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
 SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
-SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll_mode_label: 擲骰模式
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
+SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
 SHADOWDARK.dialog.roll: 擲骰
 SHADOWDARK.dialog.scroll.learn_spell_class_warning: "警告：此法術不屬於該角色的職業，確定要嘗試學習嗎？"
 SHADOWDARK.dialog.scroll.wrong_class_confirm: 確認學習法術
@@ -380,14 +380,14 @@ SHADOWDARK.error.general.no_character_selected: 尚未選擇角色
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: 目前的職業不允許加入契約主
 SHADOWDARK.error.source.source_missing: 來源遺失或不明……
+SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
 SHADOWDARK.error.spells.spell_not_found: Spell not found
 SHADOWDARK.error.spells.unable_to_cast_spell: 你無法施放該職業的法術
-SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.unable_to_use_item: 你無法使用魔法物品
-SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.error.too_many_tokens_selected: 選取的角色代幣數量過多
+SHADOWDARK.error.wand.broken: This wand is broken
 SHADOWDARK.form.section_header.class_abilities.label: 職業技能
 SHADOWDARK.form.section_header.equipment.label: 裝備
 SHADOWDARK.form.section_header.languages.label: 語言
