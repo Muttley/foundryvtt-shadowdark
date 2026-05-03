@@ -1,0 +1,22 @@
+{
+	"_id": "soIUoa9xiWruYqIZ",
+	"_key": "!actors.items!Jnb0sFKKKrAfowY0.soIUoa9xiWruYqIZ",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/environment/people/group.webp",
+	"name": "Keen Senses",
+	"system": {
+		"description": "<p>You can't be surprised.</p>",
+		"level": 1,
+		"properties": [
+		],
+		"source": {
+			"title": "core-rules"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}
