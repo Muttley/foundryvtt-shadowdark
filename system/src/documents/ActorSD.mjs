@@ -293,7 +293,7 @@ export default class ActorSD extends foundry.documents.Actor {
 		// If the scene uses metres, convert
 		if (canvas.scene.grid.units === "m") {
 			for (const key of ["dim", "bright"]) {
-				template.light[key] = Math.max(1, Math.round(template.light[key] * 0.3));
+				template.light[key] = Math.max(1, Math.round(template.light[key] * 0.3048));
 			}
 		}
 
