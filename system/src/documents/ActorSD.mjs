@@ -280,7 +280,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		await this.changeLightSettings(noLight);
 	}
 
-
 	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
 
@@ -289,13 +288,17 @@ export default class ActorSD extends foundry.documents.Actor {
 			"systems/shadowdark/assets/mappings/map-light-sources.json"
 		);
 
-		const lightData = lightSources[
-			item.system.light.template
-		].light;
+		const template = lightSources[item.system.light.template];
 
-		await this.changeLightSettings(lightData);
+		// If the scene uses metres, convert
+		if (canvas.scene.grid.units === "m") {
+			for (const key of ["dim", "bright"]) {
+				template.light[key] = Math.max(1, Math.round(template.light[key] * 0.3));
+			}
+		}
+
+		await this.changeLightSettings(template.light);
 	}
-
 
 	async useAbility(itemId, options={}) {
 		const item = this.items.get(itemId);
