@@ -1,3 +1,10 @@
+# v4.1.0
+
+## Enhancements
+- [#1315] Added metric conversion for light sources.
+
+---
+
 # v4.0.3
 
 ## Bugfixes
