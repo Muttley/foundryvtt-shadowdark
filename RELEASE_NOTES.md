@@ -1,3 +1,10 @@
+# v4.0.4
+
+## Bugfixes
+- [#1318] Added z-index to .chat-log to prevent chat output from being obscured in F14 with collapsed sidebar.
+
+---
+
 # v4.0.3
 
 ## Bugfixes

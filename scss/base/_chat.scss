@@ -6,17 +6,21 @@
 .shadowdark.item-card,
 .shadowdark.light-source-card,
 .shadowdark.ability-card {
-  .card-header {
-    img {
-      flex: 0 0 36px;
-      margin-right: 5px;
-      width: 36px;
-      height: 36px;
-      border-radius: 3px;
-    }
-  }
+	.card-header {
+		img {
+			flex: 0 0 36px;
+			margin-right: 5px;
+			width: 36px;
+			height: 36px;
+			border-radius: 3px;
+		}
+	}
 }
 
+.chat-log {
+	position: relative;
+	z-index: 1;
+}
 
 .chat-message {
 	font-family: "Montserrat-Medium";
@@ -31,7 +35,7 @@
 		margin-bottom: 4px;
 
 		img {
-			width:40px;
+			width: 40px;
 			flex: 0 0 auto;
 			border: 2px solid black;
 		}
@@ -47,15 +51,12 @@
 				font-size: var(--font-size-18);
 				font-family: "Montserrat-Bold";
 				color: black;
-
 			}
-
 		}
-
 
 		.message-metadata {
 			flex: none;
-        	font-size: var(--font-size-10);
+			font-size: var(--font-size-10);
 		}
 	}
 
@@ -104,18 +105,16 @@
 			.action-subtitle {
 				font-size: var(--font-size-12);
 			}
-
 		}
 
 		.dice-roll {
-
 			.dice-result {
 				display: flex;
 				order: 0;
 				background: rgba(0, 0, 0, 0.1);
 				border: 1px solid #999;
 				border-radius: 3px;
-				box-shadow: 0 0 2px #FFF inset;
+				box-shadow: 0 0 2px #fff inset;
 				align-items: stretch;
 				min-height: 28px;
 
@@ -132,11 +131,10 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-
 				}
 
 				.dice-text {
-					flex:1;
+					flex: 1;
 					margin: 0px 4px;
 					align-content: center;
 					align-items: center;
@@ -144,7 +142,7 @@
 
 					.dice-success {
 						font-size: var(--font-size-14);
-						font-family: 'Montserrat-Bold';
+						font-family: "Montserrat-Bold";
 						text-align: center;
 					}
 
@@ -156,7 +154,7 @@
 						background: none;
 						box-shadow: none;
 						line-height: normal;
-						flex:1;
+						flex: 1;
 
 						&.small {
 							font-size: var(--font-size-10);
@@ -174,14 +172,14 @@
 				}
 
 				&.critical-success {
-					color:#1c7b00;
+					color: #1c7b00;
 					text-shadow: 0px 0px 10px #ffffff;
 				}
 				&.failure {
-					color:gray;
+					color: gray;
 				}
 				&.critical-failure {
-					color:#750003;
+					color: #750003;
 					text-shadow: 0 0 10px black;
 				}
 			}
@@ -216,11 +214,11 @@
 
 		.target-wrapper {
 			display: flex;
-			margin:4px 0px 0px 4px;
+			margin: 4px 0px 0px 4px;
 			align-items: center;
 
 			.targets {
-				flex:1;
+				flex: 1;
 
 				.target {
 					display: flex;
@@ -242,11 +240,9 @@
 					}
 				}
 			}
-
 		}
 	}
 }
-
 
 .shadowdark.welcome-message {
 	.message-content {
@@ -254,7 +250,7 @@
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 18px;
 		p {
-		padding: 3px 0 3px;
+			padding: 3px 0 3px;
 		}
 	}
 	.shadowdark-logo {
