@@ -60,6 +60,11 @@
 
 		.descriptions {
 			margin: 0px 4px;
+			font-size: 13px;
+
+			.content-link, .inline-roll {
+				font-size:11px
+			}
 		}
 
 		.item-wrapper {
