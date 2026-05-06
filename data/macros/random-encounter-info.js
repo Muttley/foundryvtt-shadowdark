@@ -8,21 +8,24 @@ if (!actor || (actor.type === "NPC")) {
 // Starting Distance
 const distanceTableID = pack.index.find(o => o.name === "Random Encounter: Distance")._id;
 const distanceTable = await pack.getDocument(distanceTableID);
-const distanceResult = await distanceTable.roll();
-const distance = distanceResult.results[0].text;
+const distanceRoll = await distanceTable.roll();
+const distanceResult = distanceRoll.results[0];
+const distance = distanceResult.description || distanceResult.name;
 
 // Activity
 const activityTableID = pack.index.find(o => o.name === "Random Encounter: Activity")._id;
 const activityTable = await pack.getDocument(activityTableID);
-const activityResult = await activityTable.roll();
-const activity = activityResult.results[0].text;
+const activityRoll = await activityTable.roll();
+const activityResult = activityRoll.results[0];
+const activity = activityResult.description || activityResult.name;
 
 // Reaction
 const reactionTableID = pack.index.find(o => o.name === "Random Encounter: Reaction")._id;
 const reactionTable = await pack.getDocument(reactionTableID);
 const actorCha = actor.system.abilities.cha.mod;
 const reactionRoll = await new Roll(`2d6 + ${actorCha}`).evaluate({async: true});
-const reaction = reactionTable.getResultsForRoll(reactionRoll._total)[0].text;
+const reactionResult = reactionTable.getResultsForRoll(reactionRoll._total)[0];
+const reaction = reactionResult.description || reactionResult.name;
 
 // Treasure
 const treasureRoll = await new Roll("1d100").evaluate({ async: true });
