@@ -1,6 +1,4 @@
 {
-	"_id": "gkKBIvn9MFzJVHRo",
-	"_key": "!actors.effects!PTFsYZ8ni3MbSdw8.gkKBIvn9MFzJVHRo",
 	"changes": [
 		{
 			"key": "system.roll.spell.advantage.magic-missile",
@@ -16,18 +14,19 @@
 		"rounds": null,
 		"seconds": null,
 		"startRound": null,
-		"startTime": 506,
+		"startTime": 0,
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {},
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",
-	"origin": "Actor.PTFsYZ8ni3MbSdw8.Item.9IM4SDWD0HsdFNav",
-	"statuses": [
-	],
-	"system": {
-	},
+	"origin": null,
+	"statuses": [],
+	"system": {},
 	"tint": "#ffffff",
-	"transfer": false,
-	"type": "base"
+	"transfer": true,
+	"type": "base",
+	"_id": "Mt8xVzCy3Bh5EiGn4",
+	"_key": "!actors.items.effects!Jnb0sFKKKrAfowY0.7d0PZnt5RXA1EBoW.Mt8xVzCy3Bh5EiGn4"
 }

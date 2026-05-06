@@ -1,9 +1,7 @@
 {
-	"_id": "KKuguluCP3repDNL",
-	"_key": "!actors.effects!Jnb0sFKKKrAfowY0.KKuguluCP3repDNL",
 	"changes": [
 		{
-			"key": "system.roll.spell.advantage.all",
+			"key": "system.roll.spell.bonus.all",
 			"mode": 2,
 			"priority": null,
 			"value": "1"
@@ -16,18 +14,19 @@
 		"rounds": null,
 		"seconds": null,
 		"startRound": null,
-		"startTime": 845,
+		"startTime": 0,
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {},
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Spellcasting Check Bonus",
-	"origin": "Actor.Jnb0sFKKKrAfowY0.Item.XVUaR231fv7CO42u",
-	"statuses": [
-	],
-	"system": {
-	},
+	"origin": null,
+	"statuses": [],
+	"system": {},
 	"tint": "#ffffff",
-	"transfer": false,
-	"type": "base"
+	"transfer": true,
+	"type": "base",
+	"_id": "Cj8nLpSo3Rx5UyWd4",
+	"_key": "!actors.items.effects!CVFznZtBMmHG2w4a.i2IfM7lJOqc8OTXl.Cj8nLpSo3Rx5UyWd4"
 }
