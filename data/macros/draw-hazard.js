@@ -5,18 +5,21 @@ const pack = game.packs.get("shadowdark.rollable-tables");
 
 const movementTableID = pack.index.find(o => o.name === "Hazard: Movement")._id;
 const movementTable = await pack.getDocument(movementTableID);
-const movementResult = await movementTable.draw({displayChat: false});
-const movement = movementResult.results.pop().getChatText();
+const movementDraw = await movementTable.draw({displayChat: false});
+const movementResult = movementDraw.results.pop();
+const movement = movementResult.description || movementResult.name;
 
 const damageTableID = pack.index.find(o => o.name === "Hazard: Damage")._id;
 const damageTable = await pack.getDocument(damageTableID);
-const damageResult = await damageTable.draw({displayChat: false});
-const damage = damageResult.results.pop().getChatText();
+const damageDraw = await damageTable.draw({displayChat: false});
+const damageResult = damageDraw.results.pop();
+const damage = damageResult.description || damageResult.name;
 
 const weakenTableID = pack.index.find(o => o.name === "Hazard: Weaken")._id;
 const weakenTable = await pack.getDocument(weakenTableID);
-const weakenResult = await weakenTable.draw({displayChat: false});
-const weaken = weakenResult.results.pop().getChatText();
+const weakenDraw = await weakenTable.draw({displayChat: false});
+const weakenResult = weakenDraw.results.pop();
+const weaken = weakenResult.description || weakenResult.name;
 
 const message = `
 <p>

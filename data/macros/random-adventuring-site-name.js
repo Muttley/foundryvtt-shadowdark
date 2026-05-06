@@ -4,18 +4,21 @@ const pack = game.packs.get("shadowdark.rollable-tables");
 
 const nameoneTableID = pack.index.find(o => o.name === "Adventuring Site Name: Name 1")._id;
 const nameoneTable = await pack.getDocument(nameoneTableID);
-const nameoneResult = await nameoneTable.draw({displayChat: false});
-const nameone = nameoneResult.results.pop().getChatText();
+const nameoneDraw = await nameoneTable.draw({displayChat: false});
+const nameoneResult = nameoneDraw.results.pop();
+const nameone = nameoneResult.description || nameoneResult.name;
 
 const nametwoTableID = pack.index.find(o => o.name === "Adventuring Site Name: Name 2")._id;
 const nametwoTable = await pack.getDocument(nametwoTableID);
-const nametwoResult = await nametwoTable.draw({displayChat: false});
-const nametwo = nametwoResult.results.pop().getChatText();
+const nametwoDraw = await nametwoTable.draw({displayChat: false});
+const nametwoResult = nametwoDraw.results.pop();
+const nametwo = nametwoResult.description || nametwoResult.name;
 
 const namethreeTableID = pack.index.find(o => o.name === "Adventuring Site Name: Name 3")._id;
 const namethreeTable = await pack.getDocument(namethreeTableID);
-const namethreeResult = await namethreeTable.draw({displayChat: false});
-const namethree = namethreeResult.results.pop().getChatText();
+const namethreeDraw = await namethreeTable.draw({displayChat: false});
+const namethreeResult = namethreeDraw.results.pop();
+const namethree = namethreeResult.description || namethreeResult.name;
 
 const message = `<h3>${nameone} ${nametwo} ${namethree}</h3>`;
 

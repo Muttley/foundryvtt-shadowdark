@@ -2,18 +2,21 @@ const pack = game.packs.get("shadowdark.rollable-tables");
 
 const trapTableID = pack.index.find(o => o.name === "Trap: Trap")._id;
 const trapTable = await pack.getDocument(trapTableID);
-const trapResult = await trapTable.draw({displayChat: false});
-const trap = trapResult.results.pop().getChatText();
+const trapDraw = await trapTable.draw({displayChat: false});
+const trapResult = trapDraw.results.pop();
+const trap = trapResult.description || trapResult.name;
 
 const triggerTableID = pack.index.find(o => o.name === "Trap: Trigger")._id;
 const triggerTable = await pack.getDocument(triggerTableID);
-const triggerResult = await triggerTable.draw({displayChat: false});
-const trigger = triggerResult.results.pop().getChatText();
+const triggerDraw = await triggerTable.draw({displayChat: false});
+const triggerResult = triggerDraw.results.pop();
+const trigger = triggerResult.description || triggerResult.name;
 
 const effectTableID = pack.index.find(o => o.name === "Trap: Damage or Effect")._id;
 const effectTable = await pack.getDocument(effectTableID);
-const effectResult = await effectTable.draw({displayChat: false});
-const effect = effectResult.results.pop().getChatText();
+const effectDraw = await effectTable.draw({displayChat: false});
+const effectResult = effectDraw.results.pop();
+const effect = effectResult.description || effectResult.name;
 
 const message = `
 <p>
