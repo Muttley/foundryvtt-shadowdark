@@ -1,6 +1,18 @@
 export default class ActiveEffectSD extends ActiveEffect {
 
+	// v14 override
+	static applyChange(targetDoc, change, options={}) {
+		change.effect.applyRules(targetDoc, change);
+		return super.applyChange(targetDoc, change, options);
+	}
+
+	// v13 override
 	apply(actor, change) {
+		this.applyRules(actor, change);
+		return super.apply(actor, change);
+	}
+
+	applyRules(actor, change) {
 
 		if (!change.value) return;
 
@@ -13,34 +25,30 @@ export default class ActiveEffectSD extends ActiveEffect {
 			return;
 		}
 
+		// enforce deterministic formulas for integer keys only
 		const field = actor.system.schema.getField(change.key.slice(7));
+		const forceInt = (field?.integer ?? false);
 
-		// enforce deterministic formulas for integer keys
-		if (field?.integer) {
+		const resolvedFormula = shadowdark.dice.resolveFormula(
+			change.value,
+			actor.getRollData(),
+			forceInt
+		);
 
-			const resolvedFormula = shadowdark.dice.resolveFormula(
-				change.value,
-				actor.getRollData(),
-				true // return only deterministic
+		// don't apply null values or non-deterministic formulas to int
+		if (forceInt && !Number.isInteger(resolvedFormula)) {
+			console.error(
+				"ERROR: Cannot Resolve AE formula to integer:",
+				`${actor?.name} > ${change.effect?.name} > ${change.value}`
 			);
-
-			// don't apply null values or non-deterministic formulas
-			if (!Number.isInteger(resolvedFormula)) {
-				console.error(
-					"ERROR: Cannot Resolve AE formula to integer:",
-					`${actor?.name} > ${change.effect?.name} > ${change.value}`
-				);
-				return;
-			}
-
-			// apply resolved formula value
-			change.value = resolvedFormula;
+			return;
 		}
+
+		// apply resolved formula value
+		change.value = resolvedFormula;
 
 		// TODO Enforce validation where (field.constructor.name === "DocumentUUIDField")
 
-		// call default behavior for everything else
-		return super.apply(actor, change);
 	}
 
 	get isSituational() {
