@@ -1,6 +1,4 @@
 {
-	"_id": "cDGzOUOtVhzSVsJn",
-	"_key": "!actors.effects!RfFy5Nq3izy5oVD6.cDGzOUOtVhzSVsJn",
 	"changes": [
 		{
 			"key": "system.roll.hp.advantage",
@@ -16,18 +14,19 @@
 		"rounds": null,
 		"seconds": null,
 		"startRound": null,
-		"startTime": 568,
+		"startTime": 0,
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {},
 	"img": "icons/magic/life/cross-area-circle-green-white.webp",
 	"name": "HP Roll Advantage",
-	"origin": "Actor.RfFy5Nq3izy5oVD6.Item.DP89QQbqMjvF1hB1",
-	"statuses": [
-	],
-	"system": {
-	},
+	"origin": null,
+	"statuses": [],
+	"system": {},
 	"tint": "#ffffff",
-	"transfer": false,
-	"type": "base"
+	"transfer": true,
+	"type": "base",
+	"_id": "Qx2BZdGC7Fl9ImKr8",
+	"_key": "!actors.items.effects!RfFy5Nq3izy5oVD6.6UXvmSt8z623qgXf.Qx2BZdGC7Fl9ImKr8"
 }

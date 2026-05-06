@@ -1,6 +1,4 @@
 {
-	"_id": "H83UQWfWESNMQUo8",
-	"_key": "!actors.effects!RfFy5Nq3izy5oVD6.H83UQWfWESNMQUo8",
 	"changes": [
 		{
 			"key": "system.attributes.hp.max",
@@ -16,18 +14,19 @@
 		"rounds": null,
 		"seconds": null,
 		"startRound": null,
-		"startTime": 568,
+		"startTime": 0,
 		"startTurn": null,
 		"turns": null
 	},
+	"flags": {},
 	"img": "icons/magic/life/heart-shadow-red.webp",
 	"name": "Extra HP Max",
-	"origin": "Actor.RfFy5Nq3izy5oVD6.Item.DP89QQbqMjvF1hB1",
-	"statuses": [
-	],
-	"system": {
-	},
+	"origin": "Item.SXuw8zzD6a8dwmJE",
+	"statuses": [],
+	"system": {},
 	"tint": "#ffffff",
-	"transfer": false,
-	"type": "base"
+	"transfer": true,
+	"type": "base",
+	"_id": "Pw1AYcFB6Ek8HlJq7",
+	"_key": "!actors.items.effects!RfFy5Nq3izy5oVD6.6UXvmSt8z623qgXf.Pw1AYcFB6Ek8HlJq7"
 }
