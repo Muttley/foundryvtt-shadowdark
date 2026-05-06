@@ -1,7 +1,7 @@
 # v4.0.4
 
 ## Bugfixes
-- [#1318] Added z-index to .chat-log to prevent chat output from being obscured in F14 with collapsed sidebar.
+- [#1318] Re-scope .editor rule to prevent chat output from being obscured in F14 with collapsed sidebar.
 
 ---
 
