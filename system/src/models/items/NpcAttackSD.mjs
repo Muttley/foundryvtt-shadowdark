@@ -28,4 +28,11 @@ export default class NpcAttackSD extends BaseItemSD {
 
 		return Object.assign(super.defineSchema(), schema);
 	}
+
+	get subtext() {
+		const ranges = this.ranges
+			.map(r => game.i18n.localize(CONFIG.SHADOWDARK.RANGES[r]))
+			.join("/");
+		return [ranges, this.damage.special].filter(Boolean).join(", ");
+	}
 }
