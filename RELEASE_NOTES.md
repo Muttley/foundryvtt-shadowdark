@@ -1,7 +1,11 @@
 # v4.0.4
 
 ## Bugfixes
-- [#1318] Re-scope .editor rule to prevent chat output from being obscured in F14 with collapsed sidebar.
+- [#1316] Draw Hazard and Draw Trap macros have broken links using Foundry v14
+- [#1318] Chat box to large with collapsed sidebar using Foundry v14
+- [#1320] Fixed Active Effects errors when interacting with a character using Foundry v14
+- [#1322] NPC missing attack numbers and features functions
+- [#1325] Resolved spellcasting and talent problems in quickstart pregenerated characters
 
 ---
 

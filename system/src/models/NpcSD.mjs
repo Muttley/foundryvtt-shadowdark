@@ -71,7 +71,7 @@ export default class NpcSD extends ActorBaseSD {
 		const attackOptions = {
 			attackType: item.system.attackType,
 			attackName: item.name,
-			// numAttacks: item.system.attack.num,
+			numAttacks: item.system.attack.num,
 			attackBonus: parseInt(item.system.bonuses?.attackBonus, 10),
 			baseDamage: item.system.damage.value,
 			bonusDamage: parseInt(item.system.bonuses?.damageBonus, 10),
@@ -80,13 +80,6 @@ export default class NpcSD extends ActorBaseSD {
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
-
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
 
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
@@ -106,7 +99,7 @@ export default class NpcSD extends ActorBaseSD {
 
 		const attackOptions = {
 			attackName: item.name,
-			// numAttacks: item.system.attack.num,
+			numAttacks: item.system.attack.num,
 			attackBonus: item.system.bonuses?.attackBonus,
 			itemId,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
@@ -114,61 +107,10 @@ export default class NpcSD extends ActorBaseSD {
 			description,
 		};
 
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
-
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
 			attackOptions
 		);
-	}
-
-	async _generateSpellConfig(config) {
-		const spell = await fromUuid(config.cast?.spellUuid ?? config.itemUuid);
-		if (!spell) return;
-		config.type = "spell";
-		config.cast ??= {};
-		config.cast.spellUuid ??= spell.uuid;
-		config.cast.focus ??= false;
-		config.cast.range ??= spell.system.range;
-		config.cast.duration ??= spell.system?.duration;
-
-		config.descriptions ??= [];
-		config.descriptions.push(spell.system?.description);
-
-		config.mainRoll ??= {};
-		config.mainRoll.type = "spell";
-		config.mainRoll.base ??= "d20";
-		config.mainRoll.label ??= "Spell Roll";
-		config.mainRoll.dc ??= spell.system?.dc;
-
-		const spellRollKey = this._getActiveEffectKeys(
-			"system.roll.spell.bonus",
-			this.spellcasting.bonus,
-			spell,
-			config
-		);
-
-		config.mainRoll.bonus ??= shadowdark.dice.formatBonus(spellRollKey.value);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${config.mainRoll.bonus}`;
-		config.mainRoll.tooltips = spellRollKey.tooltips;
-
-		config.cast.damageType ??= spell.system?.damageType;
-		const formula = spell.system?.formula?.trim();
-		if (formula && spell.system?.damageType !== "none") {
-			config.damageRoll ??= {};
-			config.damageRoll.base ??= formula;
-			config.damageRoll.formula ??= formula;
-			config.damageRoll.label ??= game.i18n.localize(
-				config.cast.damageType === "healing"
-					? "SHADOWDARK.roll.healing"
-					: "SHADOWDARK.roll.damage"
-			);
-		}
 	}
 
 	async castSpell(spellUuid, config={}) {
@@ -230,9 +172,6 @@ export default class NpcSD extends ActorBaseSD {
 		// show roll prompt and cancelled if closed
 		if (!await shadowdark.dice.rollDialog(config)) return false;
 
-		// re-generates attack data
-		await this.rollConfigGenerators.attack?.(config);
-
 		// Call NPC attack hooks
 		if (!await Hooks.call("SD-NPC-Attack", config)) return false;
 
@@ -248,8 +187,10 @@ export default class NpcSD extends ActorBaseSD {
 
 		const config = {
 			actorId: this.parent.id,
-			title: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title"),
-			mainRoll: {formula},
+			mainRoll: {
+				label: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title"),
+				formula,
+			},
 			rollMode: CONST.DICE_ROLL_MODES.PRIVATE,
 		};
 
@@ -272,26 +213,102 @@ export default class NpcSD extends ActorBaseSD {
 		if (!attack) return;
 		config.type = "attack";
 
-		config.mainRoll ??= {};
-		config.mainRoll.base ??= "d20";
-		const atkBonus = shadowdark.dice.formatBonus(attack.system.bonuses.attackBonus);
-		config.mainRoll.formula ??= `${config.mainRoll.base}${atkBonus}`;
-		config.mainRoll.advantage ??= 0;
-		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.attack");
-
-		config.descriptions ??= [];
-		config.descriptions.push(attack.system?.description);
-
 		config.attack ??= {};
 		config.attack.range ??= attack.system.ranges[0];
-		config.attack.type ??= (config.attack.range === "close")? "melee" : "ranged";
+		config.attack.type ??= (config.attack.range === "close") ? "melee" : "ranged";
 
-		config.damageRoll ??= {};
-		config.damageRoll.label ??= game.i18n.localize("SHADOWDARK.roll.damage");
-		config.damageRoll.base ??= attack.system.damage.value;
-		const dmgBonus = shadowdark.dice.formatBonus(attack.system.bonuses.damageBonus);
-		config.damageRoll.formula ??= `${config.damageRoll.base}${dmgBonus}`;
-		// TODO apply AE roll keys
+		config.descriptions = [];
+		config.descriptions.push(attack.system?.description);
+
+		// add attack features to descriptions
+		if (attack.system.damage?.special) {
+			const featureNames = attack.system.damage.special.split(",").map(s => s.trim().toLowerCase());
+			for (const name of featureNames) {
+				const feature = this.parent.items.find(
+					i => i.system.isNPCFeature && i.name.toLowerCase() === name
+				);
+				if (!feature) continue;
+				const header = `<strong>${feature.name}.</strong> `;
+				const desc = feature.system.description.startsWith("<p>")
+					? feature.system.description.replace("<p>", `<p>${header}`)
+					: header + feature.system.description;
+				config.descriptions.push(desc);
+			}
+		}
+
+		shadowdark.dice.initializeD20Check(config);
+		config.mainRoll.label ??= game.i18n.localize("SHADOWDARK.roll.attack");
+		config.mainRoll.advantage = 0;
+
+		const atkBonus = shadowdark.dice.formatBonus(attack.system.bonuses.attackBonus);
+		config.mainRoll.bonus = atkBonus;
+		config.mainRoll.formula = `${config.mainRoll.base}${atkBonus}`;
+
+		if (attack.system.bonuses.critical) {
+			config.mainRoll.criticalSuccessAt = attack.system.bonuses.critical.successThreshold;
+			config.mainRoll.criticalFailureAt = attack.system.bonuses.critical.failureThreshold;
+		}
+
+		if (attack.system.damage?.value) {
+			config.damageRoll ??= {};
+			config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
+			config.damageRoll.base = attack.system.damage.value;
+			const dmgBonus = shadowdark.dice.formatBonus(attack.system.bonuses.damageBonus ?? 0);
+			config.damageRoll.formula = `${config.damageRoll.base}${dmgBonus}`;
+			config.damageRoll.criticalMultiplier = attack.system.bonuses.critical.multiplier;
+		}
+
+
+	}
+
+	async _generateSpellConfig(config) {
+		const spell = await fromUuid(config.cast?.spellUuid ?? config.itemUuid);
+		if (!spell) return;
+		config.type = "spell";
+		config.cast ??= {};
+		config.cast.spellUuid ??= spell.uuid;
+		config.cast.focus ??= false;
+		config.cast.range ??= spell.system.range;
+		config.cast.duration ??= spell.system?.duration;
+		config.cast.damageType ??= spell.system?.damageType;
+
+		config.descriptions = [];
+		config.descriptions.push(spell.system?.description);
+
+		shadowdark.dice.initializeD20Check(config);
+		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.spell_cast");
+		config.mainRoll.dc ??= spell.system?.dc;
+
+		const spellRollKey = this._getActiveEffectKeys(
+			"system.roll.spell.bonus",
+			this.spellcasting.bonus,
+			spell,
+			config
+		);
+
+		config.mainRoll.bonus = shadowdark.dice.formatBonus(spellRollKey.value);
+		config.mainRoll.formula = `${config.mainRoll.base}${config.mainRoll.bonus}`;
+		config.mainRoll.tooltips = spellRollKey.tooltips;
+
+		const formula = spell.system?.formula?.trim();
+		if (formula && spell.system?.damageType !== "none") {
+			config.damageRoll ??= {};
+			config.damageRoll.base = formula;
+			config.damageRoll.formula = formula;
+			config.damageRoll.label = game.i18n.localize(
+				config.cast.damageType === "healing"
+					? "SHADOWDARK.roll.healing"
+					: "SHADOWDARK.roll.damage"
+			);
+		}
+
+		const spellAdvKey = this._getActiveEffectKeys(
+			"system.roll.spell.advantage",
+			0,
+			spell,
+			config
+		);
+		config.mainRoll.advantage = spellAdvKey.value;
 	}
 
 }

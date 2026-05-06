@@ -607,7 +607,7 @@ export default class PlayerSD extends ActorBaseSD {
 			flags: { "core.canPopout": true },
 			flavor: title,
 			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
-			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+			style: CONST.CHAT_MESSAGE_STYLES.OTHER,
 			user: game.user.id,
 		});
 

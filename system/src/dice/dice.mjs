@@ -132,6 +132,9 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 			if (forceDeterministic) {
 				return null;
 			}
+			else {
+				return formula;
+			}
 		}
 		return r.total;
 	}

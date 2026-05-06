@@ -191,13 +191,17 @@ export default class MonsterImporterSD extends ImporterSD {
 			}
 
 			// parse remaining string parts for +dmg or feature
+			const features = [];
 			for (let i = 1; i < dmgStrs.length; i++) {
 				if (parseInt(dmgStrs[i])) {
 					attackObj.system.bonuses.damageBonus = parseInt(dmgStrs[i]);
 				}
 				else {
-					attackObj.system.damage.special = dmgStrs[i].titleCase();
+					features.push(dmgStrs[i].titleCase());
 				}
+			}
+			if (features.length) {
+				attackObj.system.damage.special = features.join(", ");
 			}
 		}
 
