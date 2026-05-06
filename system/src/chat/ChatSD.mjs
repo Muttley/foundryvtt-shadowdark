@@ -22,7 +22,7 @@ export default class ChatSD {
 			speaker: ChatMessage.getSpeaker({
 				actor: actor,
 			}),
-			type: data.type ?? CONST.CHAT_MESSAGE_STYLES.OTHER,
+			style: data.style ?? CONST.CHAT_MESSAGE_STYLES.OTHER,
 			user: game.user.id,
 		};
 
