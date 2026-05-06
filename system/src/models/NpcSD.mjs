@@ -71,7 +71,7 @@ export default class NpcSD extends ActorBaseSD {
 		const attackOptions = {
 			attackType: item.system.attackType,
 			attackName: item.name,
-			// numAttacks: item.system.attack.num,
+			numAttacks: item.system.attack.num,
 			attackBonus: parseInt(item.system.bonuses?.attackBonus, 10),
 			baseDamage: item.system.damage.value,
 			bonusDamage: parseInt(item.system.bonuses?.damageBonus, 10),
@@ -80,13 +80,6 @@ export default class NpcSD extends ActorBaseSD {
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 		};
-
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
 
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-attack.hbs",
@@ -106,20 +99,13 @@ export default class NpcSD extends ActorBaseSD {
 
 		const attackOptions = {
 			attackName: item.name,
-			// numAttacks: item.system.attack.num,
+			numAttacks: item.system.attack.num,
 			attackBonus: item.system.bonuses?.attackBonus,
 			itemId,
 			ranges: item.system.ranges.map(s => game.i18n.localize(
 				CONFIG.SHADOWDARK.RANGES[s])).join("/"),
 			description,
 		};
-
-		attackOptions.numAttacks = await TextEditor.enrichHTML(
-			item.system.attack.num,
-			{
-				async: true,
-			}
-		);
 
 		return await foundry.applications.handlebars.renderTemplate(
 			"systems/shadowdark/templates/_partials/npc-special-attack.hbs",
