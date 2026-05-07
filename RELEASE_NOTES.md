@@ -1,3 +1,10 @@
+# v4.0.5
+
+## Bugfixes
+- [#1333] Fix apply to token/target tooltips
+
+---
+
 # v4.0.4
 
 ## Bugfixes
