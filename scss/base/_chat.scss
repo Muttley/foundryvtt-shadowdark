@@ -17,6 +17,33 @@
 	}
 }
 
+.shadowdark.item-card {
+	.card-header {
+		&[data-action="expandDescription"] {
+			cursor: pointer;
+		}
+
+		i {
+			margin-left: 4px;
+			transition: transform 250ms ease;
+		}
+	}
+
+	.card-content {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 250ms ease;
+
+		.wrapper {
+			overflow: hidden;
+		}
+
+		&.expanded {
+			grid-template-rows: 1fr;
+		}
+	}
+}
+
 .chat-message {
 	font-family: "Montserrat-Medium";
 
@@ -62,8 +89,9 @@
 			margin: 0px 4px;
 			font-size: 13px;
 
-			.content-link, .inline-roll {
-				font-size:11px
+			.content-link,
+			.inline-roll {
+				font-size: 11px;
 			}
 		}
 

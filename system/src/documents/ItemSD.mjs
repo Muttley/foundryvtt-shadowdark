@@ -71,6 +71,11 @@ export default class ItemSD extends foundry.documents.Item {
 			itemProperties: this.system.propertyItems,
 		};
 
+		if (this.system.isPhysical) {
+			const textOnly = description.replace(/<[^>]+>/g, "");
+			data.shortDesc = textOnly.length > 1 && textOnly.length < 300;
+		}
+
 		if (this.actor.system.isPC) {
 			data.isSpellCaster = this.actor.system.isSpellCaster;
 			data.canUseMagicItems = this.actor.system.canUseMagicItems;

@@ -3,13 +3,23 @@
 	data-actor-id="{{actor._id}}"
 	data-item-id="{{item._id}}"
 >
-	<header class="card-header flexrow">
+	<header class="card-header flexrow"
+		{{#if description }}
+			data-action="expandDescription"
+		{{/if}}
+	>
 		<img src="{{item.img}}" data-tooltip="{{item.name}}"/>
-		<h3 class="item-name">{{item.name}}</h3>
+		<h3 class="item-name">{{item.name}}
+			{{#if description}}
+				<i class="fa-thin fa-caret-{{#if shortDesc}}down{{else}}right{{/if}}"></i>
+			{{/if}}
+		</h3>
 	</header>
 
-	<div class="card-content">
-		{{{description}}}
+	<div class="card-content {{#if shortDesc}}expanded{{/if}}">
+		<div class="wrapper">
+			{{{description}}}
+		</div>
 	</div>
 
 	<footer class="card-footer">
