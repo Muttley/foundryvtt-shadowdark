@@ -32,8 +32,11 @@
 		grid-template-rows: 30px 1fr;
 	}
 
-	.tab-identify .grid-2-columns {
-		margin: 8px 0;
+	.tab-identify.active {
+		height: 100%;
+		display: grid;
+		grid-template-rows: 30px auto auto 1fr;
+		gap: 8px;
 	}
 
 	select:disabled {
