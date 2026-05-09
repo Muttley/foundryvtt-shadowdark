@@ -122,17 +122,48 @@ export default class ItemSD extends foundry.documents.Item {
 		}
 	}
 
-	async getDetailsContent() {
-		const description = await this.getEnrichedDescription();
+	// If passed, spellId does double duty. It tells us:
+	// 1. the template is being output on the Spells tab
+	// 2. the uuid of the one (of possibly several) Wand spell clicked.
+	async getDetailsContent(spellId = null) {
+		const itemDescription = await this.getEnrichedDescription();
+		let spells = [];
 
 		const data = {
-			description,
+			itemDescription,
 			item: this.toObject(),
 			itemProperties: this.system.propertyItems,
+			isSpellsTab: !!spellId,
 		};
 
-		if (this.system.isSpell) {
-			data.spellClasses = await this.getSpellClassesDisplay();
+		if (this.isSpell()) {
+			switch (this.type) {
+				case "Scroll":
+					spells.push(await fromUuid(this.system.spellUuid));
+					break;
+				case "Wand":
+					if (spellId) {
+						spells.push(await fromUuid(spellId));
+					}
+					else {
+						spells = await Promise.all(
+							data.item.system.spells.map(s => fromUuid(s.uuid))
+						);
+					}
+					break;
+				case "Spell":
+					spells.push(this);
+					break;
+			}
+
+			data.spells = await Promise.all(
+				spells.map(async spell => {
+					const obj = spell.toObject();
+					obj.spellClasses = await spell.getSpellClassesDisplay();
+					obj.spellDescription = await spell.getEnrichedDescription();
+					return obj;
+				})
+			);
 		}
 
 		if (this.system.isArmor || this.system.isWeapon) {
