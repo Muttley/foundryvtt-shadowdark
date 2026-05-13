@@ -24,6 +24,7 @@ import {
 } from "./src/hooks.mjs";
 
 import listenOnSocket from "./src/socket.mjs";
+import { ItemPilesSetup } from "./src/hooks/shadowdark-item-piles.js";
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
@@ -143,6 +144,9 @@ Hooks.once("init", () => {
 
 	// Attack init hooks
 	HooksInitSD.attach();
+
+	// Load Item Piles setup
+	if (game.modules.get("item-piles")?.active) ItemPilesSetup();
 
 });
 
