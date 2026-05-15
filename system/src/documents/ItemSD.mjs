@@ -61,85 +61,39 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 
-	async getChatData(htmlOptions={}) {
+	async displayCard() {
+		shadowdark.chat.renderItemCardMessage(this.actor, {
+			template: "systems/shadowdark/templates/chat/item/default.hbs",
+			templateData: await this.getDisplayData(),
+		});
+	}
+
+	async displayDetails(spellId = null) {
+		const data = await this.getDisplayData(spellId);
+		const templatePath = "systems/shadowdark/templates/_partials/details/default.hbs";
+		return await foundry.applications.handlebars.renderTemplate(templatePath, data);
+	}
+
+	// If passed, spellId does double duty. It tells us:
+	// 1. the template is being output on the Spells tab
+	// 2. the uuid of the Wand spell clicked (out of possibly several listed).
+	async getDisplayData(spellId = null) {
 		const description = await this.getEnrichedDescription();
+		let spells = [];
 
 		const data = {
 			actor: this.actor,
 			description,
 			item: this.toObject(),
-			itemProperties: this.system.propertyItems,
-		};
-
-		if (this.actor.system.isPC) {
-			data.isSpellCaster = this.actor.system.isSpellCaster;
-			data.canUseMagicItems = this.actor.system.canUseMagicItems;
-		}
-
-		if (this.system.isSpell) {
-			data.spellClasses = await this.getSpellClassesDisplay();
-		}
-
-		if (this.system.isScroll) {
-			const spellObj = await fromUuid(this.system.spellUuid);
-			if (spellObj) data.spellName = spellObj.name;
-		}
-
-		if (this.system.isArmor || this.system.isWeapon) {
-			data.baseItemName = await this.getBaseItemName();
-		}
-
-		return data;
-	}
-
-
-	async displayCard(options={}) {
-		shadowdark.chat.renderItemCardMessage(this.actor, {
-			template: this.getItemTemplate("systems/shadowdark/templates/chat/item"),
-			templateData: await this.getChatData(),
-		});
-	}
-
-
-	async getBaseItemName() {
-		if (this.type === "Armor") {
-			if (this.system.baseArmor === "") return "";
-
-			for (const armor of await shadowdark.compendiums.baseArmor()) {
-				if (armor.name.slugify() === this.system.baseArmor) {
-					return armor.name;
-				}
-			}
-		}
-		else if (this.type === "Weapon") {
-			if (this.system.baseWeapon === "") return "";
-
-			for (const armor of await shadowdark.compendiums.baseWeapons()) {
-				if (armor.name.slugify() === this.system.baseWeapon) {
-					return armor.name;
-				}
-			}
-		}
-	}
-
-	// If passed, spellId does double duty. It tells us:
-	// 1. the template is being output on the Spells tab
-	// 2. the uuid of the one (of possibly several) Wand spell clicked.
-	async getDetailsContent(spellId = null) {
-		const itemDescription = await this.getEnrichedDescription();
-		let spells = [];
-
-		const data = {
-			itemDescription,
-			item: this.toObject(),
-			itemProperties: this.system.propertyItems,
+			subtext: this.system.subtext || "",
 			isSpellsTab: !!spellId,
+			isIdentified: this.system.isIdentified,
 		};
 
 		if (this.isSpell()) {
 			switch (this.type) {
 				case "Scroll":
-					spells.push(await fromUuid(this.system.spellUuid));
+					if (this.system.spellUuid) spells.push(await fromUuid(this.system.spellUuid));
 					break;
 				case "Wand":
 					if (spellId) {
@@ -147,7 +101,9 @@ export default class ItemSD extends foundry.documents.Item {
 					}
 					else {
 						spells = await Promise.all(
-							data.item.system.spells.map(s => fromUuid(s.uuid))
+							data.item.system.spells
+								.filter(s => s.uuid)
+								.map(s => fromUuid(s.uuid))
 						);
 					}
 					break;
@@ -155,26 +111,22 @@ export default class ItemSD extends foundry.documents.Item {
 					spells.push(this);
 					break;
 			}
+			spells = spells.filter(Boolean);
 
 			data.spells = await Promise.all(
 				spells.map(async spell => {
 					const obj = spell.toObject();
-					obj.spellClasses = await spell.getSpellClassesDisplay();
-					obj.spellDescription = await spell.getEnrichedDescription();
+					const [classes, spellDescription] = await Promise.all([
+						spell.getSpellClassesDisplay(),
+						spell.getEnrichedDescription(),
+					]);
+					obj.spellDescription = spellDescription;
+					obj.subtext = [spell.system.subtext, classes].filter(Boolean).join(" • ");
 					return obj;
 				})
 			);
 		}
-
-		if (this.system.isArmor || this.system.isWeapon) {
-			data.baseItemName = await this.getBaseItemName();
-		}
-
-		const templatePath = this.getItemTemplate(
-			"systems/shadowdark/templates/_partials/details"
-		);
-
-		return await foundry.applications.handlebars.renderTemplate(templatePath, data);
+		return data;
 	}
 
 
@@ -185,24 +137,6 @@ export default class ItemSD extends foundry.documents.Item {
 				async: true,
 			}
 		);
-	}
-
-
-	getItemTemplate(basePath) {
-		switch (this.type) {
-			case "Armor":
-				return `${basePath}/armor.hbs`;
-			case "Effect":
-				return `${basePath}/effect.hbs`;
-			case "Scroll":
-			case "Wand":
-			case "Spell":
-				return `${basePath}/spell.hbs`;
-			case "Weapon":
-				return `${basePath}/weapon.hbs`;
-			default:
-				return `${basePath}/default.hbs`;
-		}
 	}
 
 
@@ -286,18 +220,6 @@ export default class ItemSD extends foundry.documents.Item {
 
 	isSpell() {
 		return ["Scroll", "Spell", "Wand"].includes(this.type);
-	}
-
-	async propertiesDisplay() {
-		let properties = [];
-
-		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const property of await this.system.propertyItems) {
-				properties.push(property.name);
-			}
-		}
-
-		return properties.join(", ");
 	}
 
 	npcAttackRangesDisplay() {

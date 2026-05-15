@@ -75,8 +75,12 @@ export default class WeaponSD extends PhysicalItemSD {
 	}
 
 	get subtext() {
-		const range = Handlebars.helpers.fromConfig("RANGES", this.range);
-		const properties = this.propertyNames.filter(Boolean).join(", ");
-		return [range, this.handedness, properties].filter(Boolean).join(", ");
+		const type = game.i18n.localize(CONFIG.SHADOWDARK.WEAPON_TYPES[this.type]).titleCase();
+		const range = game.i18n.localize(CONFIG.SHADOWDARK.RANGES[this.range]);
+		const oneHandedDie = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[this.damage.oneHanded];
+		const twohandedDie = CONFIG.SHADOWDARK.WEAPON_BASE_DAMAGE[this.damage.twoHanded];
+		const damageDice = [oneHandedDie, twohandedDie].filter(Boolean).join(", ");
+		const properties = this.propertyNames.filter(Boolean).map(p => p.titleCase()).join(", ");
+		return [type, range, damageDice, properties].filter(Boolean).join(" • ");
 	}
 }

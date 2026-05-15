@@ -1,1 +1,31 @@
-{{{description}}}
+{{#if spells}}
+	{{#if isSpellsTab}}
+		{{#each spells}}
+			<div class="details-description">
+				{{{this.spellDescription}}}
+			</div>
+			<p class="subtext">
+				{{{spanBullets this.subtext}}}
+			</p>
+		{{/each}}
+	{{else}}
+		{{{description}}}
+		{{#if isIdentified}}
+			{{#each spells}}
+				<p class="subtext">
+					<b>
+						{{this.name}}
+					</b>
+					{{{spanBullets this.subtext}}}
+				</p>
+			{{/each}}
+		{{/if}}
+	{{/if}}
+{{else}}
+	{{{description}}}
+	{{#if subtext}}
+		<p class="subtext">
+			{{{spanBullets subtext}}}
+		</p>
+	{{/if}}
+{{/if}}

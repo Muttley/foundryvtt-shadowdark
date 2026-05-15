@@ -50,7 +50,7 @@ export default class SpellSD extends BaseItemSD {
 		const duration = Handlebars.helpers.getSpellDuration(
 			this.duration.type, this.duration.value
 		);
-		return [tier, range, duration].filter(Boolean).join(", ");
+		return [tier, range, duration].filter(Boolean).join(" • ");
 	}
 
 }

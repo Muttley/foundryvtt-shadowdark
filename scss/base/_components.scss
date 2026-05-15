@@ -2,25 +2,24 @@
 @use "../mixins" as *;
 
 .shadowdark {
-
 	.SD-box {
-		display:grid;
+		display: grid;
 		grid-template-rows: 28px 1fr;
 		border: 2px solid #{$primary-color};
 
 		.header {
-			display:flex;
+			display: flex;
 			height: 28px;
 			overflow: hidden;
 
 			label {
-				background:#{$primary-color};
-				color:white;
+				background: #{$primary-color};
+				color: white;
 				font-size: 18px;
 				font-family: "Old Newspaper Font";
 				text-transform: uppercase;
-				float:left;
-				padding:0px 8px;
+				float: left;
+				padding: 0px 8px;
 				line-height: 1.5;
 				white-space: nowrap;
 				overflow: hidden;
@@ -30,17 +29,17 @@
 				background-image: url("../assets/artwork/title_right.png");
 				background-repeat: no-repeat;
 				background-size: auto;
-				float:right;
+				float: right;
 				flex-grow: 1;
-				text-align:right;
+				text-align: right;
 				padding: 3px 5px;
 				font-size: 16px;
 			}
 
 			&.light {
-				label{
+				label {
 					background: none;
-					color:black;
+					color: black;
 					font-weight: bold;
 				}
 				span {
@@ -50,7 +49,7 @@
 		}
 
 		.content {
-			padding:5px;
+			padding: 5px;
 		}
 	}
 
@@ -60,11 +59,18 @@
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 1.8;
-		color:white;
+		color: white;
 		height: 28px;
-		background: linear-gradient(90deg, transparent 40px, black 40px, black calc(100% - 40px), transparent calc(100% - 40px)),
-		url("../assets/artwork/title_right.png") no-repeat right,
-		url("../assets/artwork/title_left.png") no-repeat left;
+		background:
+			linear-gradient(
+				90deg,
+				transparent 40px,
+				black 40px,
+				black calc(100% - 40px),
+				transparent calc(100% - 40px)
+			),
+			url("../assets/artwork/title_right.png") no-repeat right,
+			url("../assets/artwork/title_left.png") no-repeat left;
 		background-size: auto;
 	}
 
@@ -101,7 +107,7 @@
 	}
 
 	.SD-list {
-		margin:0px;
+		margin: 0px;
 		padding: 0px;
 		list-style: none;
 
@@ -142,14 +148,14 @@
 
 			.item-name,
 			.effect-name {
-				flex:2;
+				flex: 2;
 				overflow: hidden;
 				align-items: center;
 			}
 
 			.item-details {
 				flex: 0 0 100%;
-				margin:5px;
+				margin: 5px;
 				font-size: 12px;
 			}
 
@@ -176,7 +182,7 @@
 
 			.actions {
 				flex: 0 0 50px;
-				display:flex;
+				display: flex;
 				flex-direction: row;
 				justify-content: flex-end;
 				align-items: center;
@@ -188,21 +194,18 @@
 						color: var(--primary);
 					}
 				}
-
 			}
-
 		}
-
 	}
 
 	.SD-table {
 		@include p-reset;
 		font-family: "Montserrat-Medium";
 		background-color: rgba(255, 255, 255, 0);
-		border:none;
+		border: none;
 		font-size: 14px;
 		margin: 0px 6px 14px 6px;
-		width:100%;
+		width: 100%;
 
 		th {
 			font-family: "Montserrat-Bold";
@@ -221,7 +224,19 @@
 				border: none;
 			}
 		}
+	}
 
+	.subtext {
+		font-size: 12px;
+		font-style: italic;
+		> b {
+			font-style: initial;
+		}
+		& span {
+			font-size: 16px;
+			line-height: 0;
+			vertical-align: -0.05em;
+		}
 	}
 
 	.tags {
@@ -264,5 +279,4 @@
 			}
 		}
 	}
-
 }

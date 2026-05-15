@@ -354,7 +354,7 @@ export default class UtilitySD {
 			let details = "";
 			if (item) {
 				const spell = target.closest("[data-spell-id]");
-				details = await item.getDetailsContent(spell?.dataset?.spellId);
+				details = await item.displayDetails(spell?.dataset?.spellId);
 			}
 
 			const detailsDiv = document.createElement("div");
