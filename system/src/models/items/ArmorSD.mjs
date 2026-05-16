@@ -32,4 +32,13 @@ export default class ArmorSD extends PhysicalItemSD {
 		return this.hasProperty("shield");
 	}
 
+	get subtext() {
+		const base = this.ac.base;
+		const mod = this.ac.modifier ? Number(this.ac.modifier).signedString() : "";
+		const ac = base || mod ? `AC ${base}${mod}` : "";
+		const attr = this.ac.attribute.titleCase();
+		const properties = this.propertyNames.filter(Boolean).map(p => p.titleCase()).join(", ");
+		return [ac, attr, properties].filter(Boolean).join(" • ");
+	}
+
 }

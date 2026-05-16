@@ -216,4 +216,8 @@ export default function registerHandlebarsHelpers() {
 		return html.replace(rgx, "$& selected");
 	});
 
+	Handlebars.registerHelper("spanBullets", subtext => {
+		return (subtext ?? "").replaceAll("•", "<span> • </span>");
+	});
+
 }

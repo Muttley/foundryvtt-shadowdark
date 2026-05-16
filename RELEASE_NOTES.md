@@ -1,3 +1,10 @@
+# v4.0.5
+
+## Bugfixes
+- [#1337] Spell information should not display in info box on unidentified Wand, and display information on identified Wand
+
+---
+
 # v4.0.4
 
 ## Bugfixes
