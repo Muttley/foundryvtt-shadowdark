@@ -172,6 +172,7 @@ SHADOWDARK.chat_card.button.use_scroll: 두루마리 사용
 SHADOWDARK.chat_card.button.use_wand: 마법봉 사용
 SHADOWDARK.chat_card.context.apply_damage_secondary: 2차 피해 적용
 SHADOWDARK.chat_card.context.apply_damage: 피해 적용
+SHADOWDARK.chat_card.context.apply_damageType_to_selectedType: Apply {damageType} to selected {selectedType}
 SHADOWDARK.chat_card.context.apply_healing_secondary: 2차 치유 적용
 SHADOWDARK.chat_card.context.apply_healing: 치유 적용
 SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?
