@@ -172,6 +172,7 @@ SHADOWDARK.chat_card.button.use_scroll: Utiliser Parchemin
 SHADOWDARK.chat_card.button.use_wand: Utiliser baguette
 SHADOWDARK.chat_card.context.apply_damage_secondary: Appliquer les dégâts secondaires
 SHADOWDARK.chat_card.context.apply_damage: Appliquer les dégâts
+SHADOWDARK.chat_card.context.apply_damageType_to_selectedType: Apply {damageType} to selected {selectedType}
 SHADOWDARK.chat_card.context.apply_healing_secondary: Appliquer la guérison secondaire
 SHADOWDARK.chat_card.context.apply_healing: Appliquer les soins
 SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?

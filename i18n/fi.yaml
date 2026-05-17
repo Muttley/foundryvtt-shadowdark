@@ -172,6 +172,7 @@ SHADOWDARK.chat_card.button.use_scroll: Käytä loitsukäärö
 SHADOWDARK.chat_card.button.use_wand: Käytä taikasauvaa
 SHADOWDARK.chat_card.context.apply_damage_secondary: Käytä vaihtoehtoista vahinkoa
 SHADOWDARK.chat_card.context.apply_damage: Käytä normaalia vahinkoa
+SHADOWDARK.chat_card.context.apply_damageType_to_selectedType: Apply {damageType} to selected {selectedType}
 SHADOWDARK.chat_card.context.apply_healing_secondary: Käytä vaihtoehtoista parannusta
 SHADOWDARK.chat_card.context.apply_healing: Käytä normaalia parannusta
 SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?
