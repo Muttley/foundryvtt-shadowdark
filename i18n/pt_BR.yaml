@@ -11,7 +11,7 @@ SHADOWDARK.ability_strength: Força
 SHADOWDARK.ability_wis: Sab
 SHADOWDARK.ability_wisdom: Sabedoria
 SHADOWDARK.alignment.chaotic: Caótico
-SHADOWDARK.alignment.lawful: Leal
+SHADOWDARK.alignment.lawful: Ordeiro
 SHADOWDARK.alignment.neutral: Neutro
 SHADOWDARK.ancestry.choice_count: Número de Escolhas
 SHADOWDARK.ancestry.choice: Escolha
@@ -108,7 +108,7 @@ SHADOWDARK.apps.level-up.title: Subindo de nível
 SHADOWDARK.apps.monster-importer.header: Importador de Monstros
 SHADOWDARK.apps.monster-importer.import_button: Importar Monstro
 SHADOWDARK.apps.monster-importer.instruction1: 1. Copie o texto do monstro do material fonte.
-SHADOWDARK.apps.monster-importer.instruction2a: 2. Cole o texto nesta caixa seguindo o formato de monstro presente nas regras básicas. Adicione uma linha em branco entre cada habilidade.
+SHADOWDARK.apps.monster-importer.instruction2a: 2. Cole o texto nesta caixa seguindo o formato de monstro presente nas regras básicas. Adicione uma linha em branco entre cada atributo.
 SHADOWDARK.apps.monster-importer.instruction2b: Nome do Monstro
 SHADOWDARK.apps.monster-importer.instruction2c: Texto Ilustrativo
 SHADOWDARK.apps.monster-importer.instruction2d: Bloco principal de estatísticas
@@ -689,7 +689,7 @@ SHADOWDARK.roll.label.failure: Falha
 SHADOWDARK.roll.label.success: Sucesso
 SHADOWDARK.roll.normal: Normal
 SHADOWDARK.roll.one_handed_damage: Dano de Uma Mão
-SHADOWDARK.roll.special_ability: Roalgem da Habilidade
+SHADOWDARK.roll.special_ability: Teste de Atributo 
 SHADOWDARK.roll.spell_cast: Teste de Conjuração
 SHADOWDARK.roll.spell_casting_check: Teste de Conjuração
 SHADOWDARK.roll.success: Sucesso! ({value})
