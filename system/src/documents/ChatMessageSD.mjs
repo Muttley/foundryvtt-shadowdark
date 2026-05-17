@@ -56,10 +56,16 @@ export default class ChatMessageSD extends ChatMessage {
 			html.querySelectorAll('[data-action="reroll"]').forEach(btn => btn.remove());
 		}
 		if (game.user.isGM) {
+			const damageType = this.rollConfig?.cast?.damageType === "healing" ? "healing" : "damage";
 			html.querySelectorAll(".apply-damage").forEach(async a => {
 				const context = {};
 				context.healing = (this.rollConfig?.cast?.damageType === "healing");
 				context.target = a.dataset.target === "target";
+				const selectedType = context.target ? "targets" : "tokens";
+				a.dataset.tooltip = game.i18n.format(
+					"SHADOWDARK.chat_card.context.apply_damageType_to_selectedType",
+					{ damageType, selectedType }
+				);
 				const selectorhtml = await foundry.applications.handlebars.renderTemplate(
 					"systems/shadowdark/templates/dice/_partials/damage-selectors.hbs",
 					context
