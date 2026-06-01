@@ -13,6 +13,11 @@ export default class ChatMessageSD extends ChatMessage {
 			damageButton.addEventListener("click", event => this._onRollDamage(event, damageButton));
 		}
 
+		const expandDescription = html.querySelector('[data-action="expandDescription"]');
+		if (expandDescription) {
+			expandDescription.addEventListener("click", event => this._onExpandDescription(event));
+		}
+
 		// reroll
 		html.querySelectorAll('[data-action="reroll"]').forEach(btn => {
 			btn.addEventListener("click", event => this._onReroll(event, btn));
@@ -51,15 +56,21 @@ export default class ChatMessageSD extends ChatMessage {
 	}
 
 	_applyVisibilityRules(html) {
-		const canReroll = game.user.isGM || game.user.id === this.user?.id;
+		const canReroll = game.user.isGM || game.user.id === this.author?.id;
 		if (!canReroll) {
 			html.querySelectorAll('[data-action="reroll"]').forEach(btn => btn.remove());
 		}
 		if (game.user.isGM) {
+			const damageType = this.rollConfig?.cast?.damageType === "healing" ? "healing" : "damage";
 			html.querySelectorAll(".apply-damage").forEach(async a => {
 				const context = {};
 				context.healing = (this.rollConfig?.cast?.damageType === "healing");
 				context.target = a.dataset.target === "target";
+				const selectedType = context.target ? "targets" : "tokens";
+				a.dataset.tooltip = game.i18n.format(
+					"SHADOWDARK.chat_card.context.apply_damageType_to_selectedType",
+					{ damageType, selectedType }
+				);
 				const selectorhtml = await foundry.applications.handlebars.renderTemplate(
 					"systems/shadowdark/templates/dice/_partials/damage-selectors.hbs",
 					context
@@ -166,6 +177,12 @@ export default class ChatMessageSD extends ChatMessage {
 		const deleteButton = metadata.querySelector(".message-delete");
 		deleteButton?.remove();
 
+	}
+
+	_onExpandDescription(event) {
+		if (event.target.closest("[data-link]")) return;
+		const itemWrapper = event.currentTarget.closest(".item-wrapper");
+		itemWrapper?.classList.toggle("expanded");
 	}
 
 }

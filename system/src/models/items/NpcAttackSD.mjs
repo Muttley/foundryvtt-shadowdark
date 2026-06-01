@@ -28,4 +28,39 @@ export default class NpcAttackSD extends BaseItemSD {
 
 		return Object.assign(super.defineSchema(), schema);
 	}
+
+	get subtext() {
+		const ranges = this.ranges
+			.map(r => game.i18n.localize(CONFIG.SHADOWDARK.RANGES[r]))
+			.join("/");
+		return [ranges, this.damage.special].filter(Boolean).join(" • ");
+	}
+
+
+	async render(data={}, template=null) {
+		const parts = [this.description];
+
+		if (this.damage?.special) {
+			const featureNames = this.damage.special
+				.split(",")
+				.map(s => s.trim().toLowerCase());
+
+			for (const name of featureNames) {
+				const feature = this.parent.actor?.items.find(
+					i => i.system.isNPCFeature && i.name.toLowerCase() === name
+				);
+				if (!feature) continue;
+
+				const header = `<strong>${feature.name}.</strong> `;
+				const desc = feature.system.description.startsWith("<p>")
+					? feature.system.description.replace("<p>", `<p>${header}`)
+					: header + feature.system.description;
+				parts.push(desc);
+			}
+		}
+
+		data.description = parts.join("");
+		return super.render(data, template);
+	}
+
 }

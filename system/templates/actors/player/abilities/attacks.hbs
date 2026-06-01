@@ -6,15 +6,7 @@
 	<div class="content">
 		{{#each attacks.melee}}
 			<div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
-				<a
-					class="rollable"
-					data-action="item-attack"
-					data-attack-type="melee"
-					data-item-id="{{this.itemUuid}}"
-				>
-					<i class="fa-solid fa-dice-d20"></i>
-					{{>  actors/player/abilities/weapon-attack }}
-				</a>
+				{{> actors/player/abilities/weapon-attack attackType="melee"}}
 			</div>
 		{{/each}}
 	</div>
@@ -28,17 +20,8 @@
 	<div class="content">
 		{{#each attacks.ranged}}
 			<div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
-				<a
-					class="rollable"
-					data-action="item-attack"
-					data-attack-type="ranged"
-					data-item-id="{{this.itemUuid}}"
-				>
-					<i class="fa-solid fa-dice-d20"></i>
-					{{> actors/player/abilities/weapon-attack }}
-				</a>
+				{{> actors/player/abilities/weapon-attack attackType="ranged"}}
 			</div>
 		{{/each}}
 	</div>
 </div>
-

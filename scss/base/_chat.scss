@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../mixins" as *;
 
 // TODO remove this legacy styling after next release
 .shadowdark.welcome-message,
@@ -6,17 +7,16 @@
 .shadowdark.item-card,
 .shadowdark.light-source-card,
 .shadowdark.ability-card {
-  .card-header {
-    img {
-      flex: 0 0 36px;
-      margin-right: 5px;
-      width: 36px;
-      height: 36px;
-      border-radius: 3px;
-    }
-  }
+	.card-header {
+		img {
+			flex: 0 0 36px;
+			margin-right: 5px;
+			width: 36px;
+			height: 36px;
+			border-radius: 3px;
+		}
+	}
 }
-
 
 .chat-message {
 	font-family: "Montserrat-Medium";
@@ -31,9 +31,10 @@
 		margin-bottom: 4px;
 
 		img {
-			width:40px;
+			width: 40px;
 			flex: 0 0 auto;
 			border: 2px solid black;
+			border-radius: 3px;
 		}
 
 		.message-sender-wrapper {
@@ -47,75 +48,100 @@
 				font-size: var(--font-size-18);
 				font-family: "Montserrat-Bold";
 				color: black;
-
 			}
-
 		}
-
 
 		.message-metadata {
 			flex: none;
-        	font-size: var(--font-size-10);
+			font-size: var(--font-size-10);
 		}
 	}
 
 	.message-content {
 		font-family: "Montserrat-Medium";
 
-		.descriptions {
-			margin: 0px 4px;
+		.item-wrapper {
+
+			.item-header {
+				display: flex;
+				flex-direction: row;
+				gap: 4px;
+				line-height: 1;
+				margin: 4px;
+
+				&[data-action="expandDescription"] {
+					cursor: pointer;
+				}
+
+				.item-image {
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					flex-shrink: 0;
+					border-radius: 3px;
+				}
+
+				.item-text-wrapper {
+					display: flex;
+					flex-direction: column;
+					gap: 2px;
+					flex: 1;
+					justify-content: center;
+
+					.item-name {
+						font-size: 1.1em;
+					}
+				}
+
+				.fa-caret-right {
+					color: grey;
+					transition: transform 250ms ease;
+					align-self: center;
+				}
+			}
+
+			.description {
+				display: grid;
+				grid-template-rows: 0fr;
+				transition: grid-template-rows 250ms ease;
+
+				.description-wrapper {
+					margin: 0px 4px;
+					font-size: 13px;
+					overflow: hidden;
+
+					.content-link,
+					.inline-roll {
+						font-size: 11px;
+					}
+				}
+
+			}
+
+			&.expanded {
+
+				.fa-caret-right {
+					transform: rotate(90deg);
+				}
+
+				.description {
+					grid-template-rows: 1fr;
+				}
+			}
 		}
 
-		.item-wrapper {
-			display: flex;
-			flex-direction: row;
-			gap: 4px;
-			line-height: 1;
-			margin: 4px;
-
-			.item-image {
-				width: 25px;
-				height: 25px;
-				display: inline-block;
-				flex-shrink: 0;
-			}
-
-			.item-text-wrapper {
-				display: flex;
-				flex-direction: column;
-				gap: 2px;
-				flex: 1;
-
-				.item-name {
-					font-size: 1em;
-				}
-
-				.item-subtext {
-					font-size: 0.75em;
-					color: #707070;
-				}
-			}
-
-			.action-title {
-				font-size: var(--font-size-18);
-				font-family: "Montserrat-Bold";
-			}
-
-			.action-subtitle {
-				font-size: var(--font-size-12);
-			}
-
+		.item-subtext {
+			@include item-subtext;
 		}
 
 		.dice-roll {
-
 			.dice-result {
 				display: flex;
 				order: 0;
 				background: rgba(0, 0, 0, 0.1);
 				border: 1px solid #999;
 				border-radius: 3px;
-				box-shadow: 0 0 2px #FFF inset;
+				box-shadow: 0 0 2px #fff inset;
 				align-items: stretch;
 				min-height: 28px;
 
@@ -132,11 +158,10 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-
 				}
 
 				.dice-text {
-					flex:1;
+					flex: 1;
 					margin: 0px 4px;
 					align-content: center;
 					align-items: center;
@@ -144,7 +169,7 @@
 
 					.dice-success {
 						font-size: var(--font-size-14);
-						font-family: 'Montserrat-Bold';
+						font-family: "Montserrat-Bold";
 						text-align: center;
 					}
 
@@ -156,7 +181,7 @@
 						background: none;
 						box-shadow: none;
 						line-height: normal;
-						flex:1;
+						flex: 1;
 
 						&.small {
 							font-size: var(--font-size-10);
@@ -174,14 +199,14 @@
 				}
 
 				&.critical-success {
-					color:#1c7b00;
+					color: #1c7b00;
 					text-shadow: 0px 0px 10px #ffffff;
 				}
 				&.failure {
-					color:gray;
+					color: gray;
 				}
 				&.critical-failure {
-					color:#750003;
+					color: #750003;
 					text-shadow: 0 0 10px black;
 				}
 			}
@@ -216,11 +241,11 @@
 
 		.target-wrapper {
 			display: flex;
-			margin:4px 0px 0px 4px;
+			margin: 4px 0px 0px 4px;
 			align-items: center;
 
 			.targets {
-				flex:1;
+				flex: 1;
 
 				.target {
 					display: flex;
@@ -242,11 +267,9 @@
 					}
 				}
 			}
-
 		}
 	}
 }
-
 
 .shadowdark.welcome-message {
 	.message-content {
@@ -254,7 +277,7 @@
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 18px;
 		p {
-		padding: 3px 0 3px;
+			padding: 3px 0 3px;
 		}
 	}
 	.shadowdark-logo {

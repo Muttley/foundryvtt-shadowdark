@@ -216,4 +216,16 @@ export default function registerHandlebarsHelpers() {
 		return html.replace(rgx, "$& selected");
 	});
 
+	Handlebars.registerHelper("formatSubtext", function(text, attackType) {
+		if (typeof text !== "string") return new Handlebars.SafeString("");
+		if (attackType === "ranged") {
+			const melee = game.i18n.localize("SHADOWDARK.weapon.type.melee");
+			const ranged = game.i18n.localize("SHADOWDARK.weapon.type.ranged");
+			text = text.split(melee).join(ranged);
+			const close = game.i18n.localize("SHADOWDARK.range.close");
+			const near = game.i18n.localize("SHADOWDARK.range.near");
+			text = text.split(close).join(near);
+		}
+		return new Handlebars.SafeString(text.replaceAll("•", "<span> • </span>"));
+	});
 }

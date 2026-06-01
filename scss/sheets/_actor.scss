@@ -4,7 +4,6 @@
 
 .shadowdark.sheet.player,
 .shadowdark.sheet.npc {
-
 	min-width: 550px;
 
 	.editor-content {
@@ -42,15 +41,13 @@
 		display: inline-block;
 		max-width: 24px;
 		height: 24px;
-
 		background-size: contain;
 		background-repeat: no-repeat;
-
 		font-size: 14px;
 		vertical-align: middle;
 		text-align: center;
-
 		color: transparent;
+		border-radius: 3px;
 
 		&:hover {
 			background: none !important;

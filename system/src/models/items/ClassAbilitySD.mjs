@@ -31,7 +31,7 @@ export default class ClassAbilitySD extends BaseItemSD {
 	get subtext() {
 		const ability = game.i18n.format("SHADOWDARK.class-ability.ability.group", {group: this.group});
 		const uses = this.limitedUses ? `${this.uses.available} / ${this.uses.max}` : "";
-		return [ability, uses].filter(Boolean).join(", ");
+		return [ability, uses].filter(Boolean).join(" • ");
 	}
 
 }

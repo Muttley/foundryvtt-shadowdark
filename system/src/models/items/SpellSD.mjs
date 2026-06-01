@@ -50,7 +50,16 @@ export default class SpellSD extends BaseItemSD {
 		const duration = Handlebars.helpers.getSpellDuration(
 			this.duration.type, this.duration.value
 		);
-		return [tier, range, duration].filter(Boolean).join(", ");
+		return [tier, range, duration].filter(Boolean).join(" • ");
+	}
+
+	async getClassNames() {
+		const classes = await Promise.all(this.class.map(uuid => fromUuid(uuid)));
+		return classes
+			.filter(Boolean)
+			.map(c => c.name)
+			.sort((a, b) => a.localeCompare(b))
+			.join(", ");
 	}
 
 }

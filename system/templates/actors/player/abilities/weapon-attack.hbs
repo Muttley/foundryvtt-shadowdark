@@ -1,5 +1,14 @@
-<b style="font-size:16px">{{this.item.name}}</b>
-({{this.attack.range}})
-{{this.mainRoll.bonus}}
-({{this.damageRoll.formula}})
-<div style="font-size: 12px;">{{this.item.system.subtext}}</div>
+<a
+	class="rollable"
+	data-action="item-attack"
+	data-attack-type="{{attackType}}"
+	data-item-id="{{this.itemUuid}}"
+>
+	<i class="fa-solid fa-dice-d20"></i>
+	<b class="item-name">{{this.item.name}}</b>
+	{{this.mainRoll.bonus}}
+	({{this.damageRoll.formula}})
+</a>
+<span class="item-subtext">
+	{{formatSubtext this.item.system.subtext attackType}}
+</span>

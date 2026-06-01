@@ -5,6 +5,49 @@
 
 ---
 
+# v4.0.6
+
+## Bugfixes
+- [#1365] Restored accidentally deleted NPC Feature item template
+
+# Chores
+- [#1364] Merge Spanish translation updates from Crowdin
+
+---
+
+# v4.0.5
+
+## Enhancements
+- [#1340] Added native Item Piles support. The Item Piles: Shadowdark module is no longer required.
+
+## Bugfixes
+- [#1326] Bug: Players missing attribute bonus tooltip on spell cast
+- [#1332] Bug: Reroll button not showing up for players using foundry v14
+- [#1333] Fix apply to token/target tooltips
+- [#1335] Editor icon on Identify Tab hidden by wrapping div when it contains no content
+- [#1337] Spell information should not display in info box on unidentified Wand, and display information on identified Wand
+- [#1341] Farsight (Spell) talent had incorrect spell bonus effect
+- [#1348] Knight of St. Ydris talent had incorrect spellcasting class set
+- [#1349] Fixed validation errors when creating treasure items
+- [#1353] Fixed chat cards showing the incorrect actor when rolling from unlinked token actors
+- [#1357] Fixed damage roll result not visible to other players after Dice So Nice animation
+
+## Chores
+- [#1342] Merge Portuguese (Brazilian) and Spanish translation updates from Crowdin
+
+---
+
+# v4.0.4
+
+## Bugfixes
+- [#1316] Draw Hazard and Draw Trap macros have broken links using Foundry v14
+- [#1318] Chat box to large with collapsed sidebar using Foundry v14
+- [#1320] Fixed Active Effects errors when interacting with a character using Foundry v14
+- [#1322] NPC missing attack numbers and features functions
+- [#1325] Resolved spellcasting and talent problems in quickstart pregenerated characters
+
+---
+
 # v4.0.3
 
 ## Bugfixes

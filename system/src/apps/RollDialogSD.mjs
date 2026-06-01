@@ -1,8 +1,8 @@
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const FormDataExtended = foundry.applications.ux.FormDataExtended;
 
-export default class RollDialogSD extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+export default class RollDialogSD
+	extends HandlebarsApplicationMixin(ApplicationV2) {
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-roll-dialog",
@@ -161,7 +161,7 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 
 		this.config.selected = selectedArray;
 
-		const actor = game.actors.get(this.config.actorId);
+		const actor = await fromUuid(this.config.actorUuid);
 		await actor?.system.rollConfigGenerators[this.config.type]?.(this.config);
 		await this.render(true);
 	}

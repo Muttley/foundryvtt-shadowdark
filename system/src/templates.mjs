@@ -84,6 +84,8 @@ export default function() {
 		"systems/shadowdark/templates/apps/level-up/hp.hbs",
 		"systems/shadowdark/templates/apps/level-up/spells.hbs",
 		"systems/shadowdark/templates/apps/level-up/talents.hbs",
+		"systems/shadowdark/templates/chat/item-card.hbs",
+		"systems/shadowdark/templates/_partials/item-description.hbs",
 		"systems/shadowdark/templates/items/_partials/choice-selector.hbs",
 		"systems/shadowdark/templates/items/_partials/cost.hbs",
 		"systems/shadowdark/templates/items/_partials/description-tab.hbs",

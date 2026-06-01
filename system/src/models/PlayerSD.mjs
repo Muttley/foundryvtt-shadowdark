@@ -360,8 +360,6 @@ export default class PlayerSD extends ActorBaseSD {
 		if (!ability) return;
 		config.type = "ability";
 
-		config.descriptions = [];
-		config.descriptions.push(ability.system.description);
 
 		// roll required?
 		if (ability.system.ability) {
@@ -415,8 +413,6 @@ export default class PlayerSD extends ActorBaseSD {
 		config.attack.type ??= weapon.system.type;
 		config.attack.range ??= weapon.system.range;
 
-		config.descriptions = [];
-		config.descriptions.push(weapon.system?.description);
 
 		// calulate attack config
 		this._calcAttackMainConfig(weapon, config);
@@ -451,16 +447,14 @@ export default class PlayerSD extends ActorBaseSD {
 			}
 		}
 
-		config.descriptions = [];
-		config.descriptions.push(spell.system?.description);
-
 		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.spell_cast");
 		config.mainRoll.dc = spell.system?.dc;
 
+		const ability = this._getAbilityModifier(config.cast.ability);
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",
-			this.abilities[config.cast.ability].mod,
+			ability.modifier,
 			spell,
 			config
 		);
@@ -482,6 +476,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// generate tooltips
 		const tooltips = [];
+		if (ability.tooltip) tooltips.push(ability.tooltip);
 		tooltips.push(spellRollKey.tooltips);
 		tooltips.push(...critTooltips);
 		tooltips.push(spellAdvKey.tooltips);
@@ -568,58 +563,38 @@ export default class PlayerSD extends ActorBaseSD {
 		const spellcastingAttribute =
 			characterClass?.system?.spellcasting?.ability ?? "int";
 
-		const checkRoll = await this.rollStatCheck(
-			spellcastingAttribute,
-			{ mainRoll: {dc: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC} }
-		);
-
-		// Player cancelled the roll
-		if (checkRoll === false) return;
-		const messageType = checkRoll.success
-			? "SHADOWDARK.chat.spell_learn.success"
-			: "SHADOWDARK.chat.spell_learn.failure";
-
-		const message = game.i18n.format(
-			messageType,
-			{
-				name: this.parent.name,
-				spellName: linkedSpell?.name,
-			}
-		);
-
-		const cardData = {
-			actor: this,
-			item: item,
-			message,
+		const config = {
+			actorId: this.parent.id,
+			itemUuid: item.uuid,
+			heading: game.i18n.format(
+				"SHADOWDARK.dialog.roll_learn_spell",
+				{ name: linkedSpell.name }
+			),
+			check: { stat: spellcastingAttribute },
+			mainRoll: { dc: CONFIG.SHADOWDARK.DEFAULTS.LEARN_SPELL_DC },
 		};
 
-		let template = "systems/shadowdark/templates/chat/spell-learn.hbs";
+		this.rollConfigGenerators.check?.(config);
 
-		const content = await foundry.applications.handlebars.renderTemplate(
-			template, cardData
-		);
+		config.messages.success.push(game.i18n.format(
+			"SHADOWDARK.chat.spell_learn.success",
+			{ name: this.parent.name, spellName: linkedSpell.name }
+		));
+		config.messages.failure.push(game.i18n.format(
+			"SHADOWDARK.chat.spell_learn.failure",
+			{ name: this.parent.name, spellName: linkedSpell.name }
+		));
 
-		const title = game.i18n.localize("SHADOWDARK.chat.spell_learn.title");
+		if (!await shadowdark.dice.rollDialog(config)) return;
 
-		await ChatMessage.create({
-			title,
-			content,
-			flags: { "core.canPopout": true },
-			flavor: title,
-			speaker: ChatMessage.getSpeaker({ actor: this, token: this.token }),
-			type: CONST.CHAT_MESSAGE_STYLES.OTHER,
-			user: game.user.id,
-		});
+		const roll = await shadowdark.dice.rollFromConfig(config);
 
-		if (checkRoll.success && linkedSpell) {
+		if (roll.success) {
 			this.parent.createEmbeddedDocuments("Item", [linkedSpell.toObject()]);
 		}
 
 		// original scroll always lost regardless of outcome
-		await this.parent.deleteEmbeddedDocuments(
-			"Item",
-			[item._id]
-		);
+		await this.parent.deleteEmbeddedDocuments("Item", [item._id]);
 	}
 
 	/* ----------------------- */
@@ -680,7 +655,7 @@ export default class PlayerSD extends ActorBaseSD {
 			);
 		}
 
-		config.actorId = this.parent.id;
+		config.actorUuid = this.parent.uuid;
 		config.itemUuid ??= spellUuid;
 
 		const triggeringItem = config.itemUuid
@@ -986,7 +961,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 	async rollAttack(weaponUuid, config={}) {
 
-		config.actorId = this.parent.id;
+		config.actorUuid = this.parent.uuid;
 		config.itemUuid = weaponUuid;
 
 		const weapon = await fromUuid(weaponUuid);
@@ -1119,7 +1094,7 @@ export default class PlayerSD extends ActorBaseSD {
 			);
 		}
 
-		config.actorId = this.parent.id;
+		config.actorUuid = this.parent.uuid;
 		config.itemUuid = abilityUuid;
 		config.heading = game.i18n.format("SHADOWDARK.dialog.roll_using_ability", { name: ability.name });
 		await this.rollConfigGenerators.ability?.(config);
@@ -1159,6 +1134,39 @@ export default class PlayerSD extends ActorBaseSD {
 			const chatData = await shadowdark.chat.renderRollMessage(config);
 			await ChatMessage.create(chatData);
 		}
+	}
+
+	async usePotion(itemId) {
+		const item = this.parent.items.get(itemId);
+
+		const confirmed = await foundry.applications.api.DialogV2.confirm({
+			window: {
+				title: game.i18n.format(
+					"SHADOWDARK.dialog.item.use", { name: item.name }
+				),
+			},
+			content: `<p>${game.i18n.localize("SHADOWDARK.dialog.general.are_you_sure")}</p>`,
+			rejectClose: false,
+		});
+		if (!confirmed) return;
+
+		if (!item.system.isIdentified) {
+			await item.system.toggleIdentified();
+		}
+
+		const config = {
+			actorId: this.parent.id,
+			itemUuid: item.uuid,
+			heading: game.i18n.format(
+				"SHADOWDARK.chat.potion_used",
+				{ name: this.parent.name }
+			),
+		};
+
+		const chatData = await shadowdark.chat.renderRollMessage(config);
+		await ChatMessage.create(chatData);
+
+		await this.parent.deleteEmbeddedDocuments("Item", [itemId]);
 	}
 
 	async useLuckToken(postToChat=false) {

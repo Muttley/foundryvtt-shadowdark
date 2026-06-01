@@ -61,120 +61,6 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 
-	async getChatData(htmlOptions={}) {
-		const description = await this.getEnrichedDescription();
-
-		const data = {
-			actor: this.actor,
-			description,
-			item: this.toObject(),
-			itemProperties: this.system.propertyItems,
-		};
-
-		if (this.actor.system.isPC) {
-			data.isSpellCaster = this.actor.system.isSpellCaster;
-			data.canUseMagicItems = this.actor.system.canUseMagicItems;
-		}
-
-		if (this.system.isSpell) {
-			data.spellClasses = await this.getSpellClassesDisplay();
-		}
-
-		if (this.system.isScroll) {
-			const spellObj = await fromUuid(this.system.spellUuid);
-			if (spellObj) data.spellName = spellObj.name;
-		}
-
-		if (this.system.isArmor || this.system.isWeapon) {
-			data.baseItemName = await this.getBaseItemName();
-		}
-
-		return data;
-	}
-
-
-	async displayCard(options={}) {
-		shadowdark.chat.renderItemCardMessage(this.actor, {
-			template: this.getItemTemplate("systems/shadowdark/templates/chat/item"),
-			templateData: await this.getChatData(),
-		});
-	}
-
-
-	async getBaseItemName() {
-		if (this.type === "Armor") {
-			if (this.system.baseArmor === "") return "";
-
-			for (const armor of await shadowdark.compendiums.baseArmor()) {
-				if (armor.name.slugify() === this.system.baseArmor) {
-					return armor.name;
-				}
-			}
-		}
-		else if (this.type === "Weapon") {
-			if (this.system.baseWeapon === "") return "";
-
-			for (const armor of await shadowdark.compendiums.baseWeapons()) {
-				if (armor.name.slugify() === this.system.baseWeapon) {
-					return armor.name;
-				}
-			}
-		}
-	}
-
-	async getDetailsContent() {
-		const description = await this.getEnrichedDescription();
-
-		const data = {
-			description,
-			item: this.toObject(),
-			itemProperties: this.system.propertyItems,
-		};
-
-		if (this.system.isSpell) {
-			data.spellClasses = await this.getSpellClassesDisplay();
-		}
-
-		if (this.system.isArmor || this.system.isWeapon) {
-			data.baseItemName = await this.getBaseItemName();
-		}
-
-		const templatePath = this.getItemTemplate(
-			"systems/shadowdark/templates/_partials/details"
-		);
-
-		return await foundry.applications.handlebars.renderTemplate(templatePath, data);
-	}
-
-
-	async getEnrichedDescription() {
-		return await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-			this.system.description,
-			{
-				async: true,
-			}
-		);
-	}
-
-
-	getItemTemplate(basePath) {
-		switch (this.type) {
-			case "Armor":
-				return `${basePath}/armor.hbs`;
-			case "Effect":
-				return `${basePath}/effect.hbs`;
-			case "Scroll":
-			case "Wand":
-			case "Spell":
-				return `${basePath}/spell.hbs`;
-			case "Weapon":
-				return `${basePath}/weapon.hbs`;
-			default:
-				return `${basePath}/default.hbs`;
-		}
-	}
-
-
 	lightRemainingString() {
 		if (this.type !== "Basic" && !this.system.light.isSource) return;
 
@@ -207,44 +93,6 @@ export default class ItemSD extends foundry.documents.Item {
 	}
 
 
-	/* -------------------------------------------- */
-	/*  Roll Methods                                */
-	/* -------------------------------------------- */
-
-	async rollItem(parts, data, options={}) {
-		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
-
-
-	async rollNpcAttack(parts, data, options={}) {
-		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-npc-attack-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
-	}
-
-
-	async rollSpell(parts, data, options={}) {
-		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-spell-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		options.isSpell = true;
-		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
-
-		if (roll) {
-			if (this.system.isScroll) {
-				data.actor.deleteEmbeddedDocuments("Item", [this._id]);
-			}
-			else if (this.system.isWand) {
-				if (roll.rolls.main.critical === "failure") {
-					data.actor.deleteEmbeddedDocuments("Item", [this._id]);
-				}
-			}
-		}
-
-		return roll;
-	}
-
 	isActiveLight() {
 		return this.isLight() && this.system.light.active;
 	}
@@ -255,18 +103,6 @@ export default class ItemSD extends foundry.documents.Item {
 
 	isSpell() {
 		return ["Scroll", "Spell", "Wand"].includes(this.type);
-	}
-
-	async propertiesDisplay() {
-		let properties = [];
-
-		if (this.type === "Armor" || this.type === "Weapon") {
-			for (const property of await this.system.propertyItems) {
-				properties.push(property.name);
-			}
-		}
-
-		return properties.join(", ");
 	}
 
 	npcAttackRangesDisplay() {
@@ -376,18 +212,5 @@ export default class ItemSD extends foundry.documents.Item {
 			const result = { expired: remaining <= 0, remaining, progress };
 			return result;
 		}
-	}
-
-	async getSpellClassesDisplay() {
-		const classes = [];
-
-		for (const uuid of this.system.class ?? []) {
-			const item = await fromUuid(uuid);
-			classes.push(item.name);
-		}
-
-		classes.sort((a, b) => a.localeCompare(b));
-
-		return classes.join(", ");
 	}
 }

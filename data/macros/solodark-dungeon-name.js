@@ -13,8 +13,9 @@ const selected = [];
 for (const name of tableNames) {
 	const tableId = pack.index.find(o => o.name === name)._id;
 	const table = await pack.getDocument(tableId);
-	const result = await table.draw({displayChat: false});
-	selected.push(result.results.pop().getChatText());
+	const draw = await table.draw({displayChat: false});
+	const tableResult = draw.results.pop();
+	selected.push(tableResult.description || tableResult.name);
 }
 
 const message = `<h3>${selected.join(" ")}</h3>`;

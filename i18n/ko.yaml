@@ -172,6 +172,7 @@ SHADOWDARK.chat_card.button.use_scroll: 두루마리 사용
 SHADOWDARK.chat_card.button.use_wand: 마법봉 사용
 SHADOWDARK.chat_card.context.apply_damage_secondary: 2차 피해 적용
 SHADOWDARK.chat_card.context.apply_damage: 피해 적용
+SHADOWDARK.chat_card.context.apply_damageType_to_selectedType: Apply {damageType} to selected {selectedType}
 SHADOWDARK.chat_card.context.apply_healing_secondary: 2차 치유 적용
 SHADOWDARK.chat_card.context.apply_healing: 치유 적용
 SHADOWDARK.chat_card.dialog.reapply_damage.content: Damage has already been applied from this roll. Apply it again?
@@ -321,6 +322,7 @@ SHADOWDARK.dialog.item.use: 사용
 SHADOWDARK.dialog.light_source.pick_up.title: 광원을 줄 액터 지정
 SHADOWDARK.dialog.roll_attacking_with: Attacking with {name}
 SHADOWDARK.dialog.roll_casting_spell: Casting Spell {name}
+SHADOWDARK.dialog.roll_learn_spell: Attempting to Learn {name} Spell
 SHADOWDARK.dialog.roll_mode_label: Rolling Mode
 SHADOWDARK.dialog.roll_situational_bonuses: Situational Bonuses
 SHADOWDARK.dialog.roll_using_ability: Using Ability {name}
@@ -548,6 +550,7 @@ SHADOWDARK.item.npc_attack_bonus: 명중 보너스
 SHADOWDARK.item.npc_attack_count: 공격 숫자
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
 SHADOWDARK.item.npc_attack_special: 공격 재주
+SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
 SHADOWDARK.item.npc.spell_ability: 주문시전 능력
@@ -638,6 +641,7 @@ SHADOWDARK.migration.completed_schema: 섀도다크 RPG v{version} 업데이트�
 SHADOWDARK.module_art_config.portraits: 포트레이트
 SHADOWDARK.module_art_config.tokens: 토큰
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
+SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
 SHADOWDARK.npc_attack.type.physical: 물리
 SHADOWDARK.npc_attack.type.special: 특수
 SHADOWDARK.npc_move.close: 인접

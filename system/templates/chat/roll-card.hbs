@@ -4,30 +4,19 @@
 		<h3 class="sub-heading">
 			{{mainRoll.label}}
 			{{#unless mainRoll.success}}
-				<i class="fa-solid fa-arrows-rotate reroll-icon" data-action="reroll" data-roll-type="main"></i>
+				<a data-action="reroll" data-roll-type="main"><i class="fa-solid fa-arrows-rotate reroll-icon"></i></a>
 			{{/unless}}
 		</h3>
 		{{{mainRoll.html}}}
 	{{/if}}
 
-	<!-- Item -->
-	{{#if item}}
-		<div class="item-wrapper">
-			<a data-link data-uuid="{{item.uuid}}">
-				<img class="item-image" src="{{item.img}}">
-			</a>
-			<div class="item-text-wrapper">
-				<span class="item-name">{{item.name}}</span>
-				<span class="item-subtext">
-					{{item.system.subtext}}{{#if ammunitionName}}, {{ammunitionName}}{{/if}}
-				</span>
-			</div>
-		</div>
-	{{/if}}
+	<!-- item html -->
+	{{{itemHTML}}}
 
-	<div class="descriptions">
-		{{#each descriptions}}
-			{{{this}}}
+	<!-- Additional Roll Messages -->
+	<div class="messages">
+		{{#each messages}}
+			<p>{{{this}}}</p>
 		{{/each}}
 	</div>
 
@@ -63,7 +52,7 @@
 				</a>
 			</div>
 			{{#if damageRoll.html}}
-				<a class="apply-damage" data-action="apply-damage" data-target="target" data-tooltip="Apply damage to selected Targets"></a>
+				<a class="apply-damage" data-action="apply-damage" data-target="target"></a>
 			{{/if}}
 		</div>
 	{{/if}}

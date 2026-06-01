@@ -152,7 +152,7 @@ export default class ShadowdarkMacro {
 		else if (item.system.isSpell) actor.system.castSpell(item.uuid, config);
 		else if (item.system.isAbility) actor.system.useAbility(item.uuid, config);
 		else if (item.system.isWeapon) actor.system.rollAttack(item.uuid, config);
-		else if (item.type === "Potion") actor.usePotion(item._id);
+		else if (item.type === "Potion") actor.system.usePotion(item._id);
 		else item.sheet.render(true);
 	}
 }

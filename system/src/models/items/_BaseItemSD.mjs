@@ -34,4 +34,15 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 		return propertyItem ? true : false;
 	}
 
+	async render(data={}, template=null) {
+		template ??= "systems/shadowdark/templates/chat/item-card.hbs";
+		data.subtext ??= this.subtext;
+		data.item ??= this.parent;
+		data.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+			data.description ?? this.description, {async: true}
+		);
+
+		return await foundry.applications.handlebars.renderTemplate(template, data);
+	}
+
 }

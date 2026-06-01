@@ -311,9 +311,7 @@ export class EffectPanelControllerSD {
 		if (event.ctrlKey || event.metaKey) {
 			sourceItem?.sheet.render(true);
 		}
-		else {
-			sourceItem?.displayCard();
-		}
+		else if (sourceItem) shadowdark.chat.showItemCard(sourceItem.uuid);
 	}
 
 	/**

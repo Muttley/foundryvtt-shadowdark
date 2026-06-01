@@ -1,0 +1,14 @@
+@mixin item-subtext($font-size: 0.85em) {
+	font-size: $font-size;
+	color: #707070;
+	font-style: italic;
+	display: block;
+	> b {
+		font-style: initial;
+	}
+	& span {
+		font-size: 16px;
+		line-height: 0;
+		vertical-align: -0.05em;
+	}
+}

@@ -2,19 +2,17 @@
 	"_id": "6UXvmSt8z623qgXf",
 	"_key": "!actors.items!RfFy5Nq3izy5oVD6.6UXvmSt8z623qgXf",
 	"effects": [
-		"qIFVq4PAB70lPkf9",
-		"0rcSjPSjHdvGwtOu"
+		"Pw1AYcFB6Ek8HlJq7",
+		"Qx2BZdGC7Fl9ImKr8"
 	],
-	"flags": {
-	},
+	"flags": {},
 	"folder": "MFeFmA2ubOJxaTwm",
 	"img": "icons/environment/people/group.webp",
 	"name": "Stout",
 	"system": {
 		"description": "<p>Start with +2 HP. Roll your hit point gains with advantage.</p>",
 		"level": 1,
-		"properties": [
-		],
+		"properties": [],
 		"source": {
 			"title": "core-rules"
 		},

@@ -24,6 +24,7 @@ import {
 } from "./src/hooks.mjs";
 
 import listenOnSocket from "./src/socket.mjs";
+import { ItemPilesDeprecationCheck, ItemPilesSetup } from "./src/hooks/shadowdark-item-piles.js";
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
@@ -144,6 +145,9 @@ Hooks.once("init", () => {
 	// Attack init hooks
 	HooksInitSD.attach();
 
+	// Load Item Piles setup
+	if (game.modules.get("item-piles")?.active) ItemPilesSetup();
+
 });
 
 /* -------------------------------------------- */
@@ -162,6 +166,8 @@ Hooks.on("ready", async () => {
 	chat.messages.welcomeMessage();
 
 	UtilitySD.showNewReleaseNotes();
+
+	ItemPilesDeprecationCheck();
 
 	shadowdark.log("Game Ready");
 });

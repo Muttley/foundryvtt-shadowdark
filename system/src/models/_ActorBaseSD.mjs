@@ -345,7 +345,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		config.check = {
 			stat: ability,
 		};
-		config.actorId = this.parent.id;
+		config.actorUuid = this.parent.uuid;
 		config.title ??= game.i18n.localize("SHADOWDARK.dialog.ability_check.title");
 		config.heading ??= game.i18n.localize(`SHADOWDARK.dialog.ability_check.${ability}`);
 

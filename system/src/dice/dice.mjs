@@ -112,6 +112,14 @@ export function initializeD20Check(config={}) {
 	config.mainRoll.base = "d20";
 	config.mainRoll.canCritical = true;
 	config.situational = [];
+
+	config.messages = {
+		any: [],
+		success: [],
+		failure: [],
+		criticalSuccess: [],
+		criticalFailure: [],
+	};
 	return config;
 }
 
@@ -131,6 +139,9 @@ export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
 		catch(err) {
 			if (forceDeterministic) {
 				return null;
+			}
+			else {
+				return formula;
 			}
 		}
 		return r.total;
@@ -192,6 +203,25 @@ export async function roll(config, rolldata={}) {
 	return await new shadowdark.dice.RollSD(config.formula, rolldata, config).evaluate();
 }
 
+export async function rollDamage(config, critical=false) {
+
+	if (!config.damageRoll?.formula) {
+		console.error("Error: Missing Damage Formula");
+		return false;
+	}
+
+	const actor = await fromUuid(config.actorUuid);
+
+	if (!actor) {
+		console.error(`Error: Actor ${config.actorUuid} not found`);
+		return false;
+	}
+
+	config.damageRoll.type = config.damageRoll.type ?? "damage";
+	config.damageRoll.criticalHit = critical;
+	return await roll(config.damageRoll, actor.getRollData());
+}
+
 /**
  * Rolls damage for an existing chat message and updates the message with the result
  * @param {ChatMessage} msg Chat message containing the attack roll
@@ -203,30 +233,19 @@ export async function rollDamageFromMessage(msg) {
 		console.error("Error: No roll config found on message");
 		return;
 	}
-	if (!config.damageRoll?.formula || msg.getRoll("damage")) return false;
-	const actor = game.actors.get(config.actorId);
-	if (!actor) {
-		console.error(`Error: Actor ${config.actorId} not found`);
-		return;
-	}
+	if (msg.getRoll("damage")) return false;
 
 	const mainRoll = msg.getRoll("main");
+	if (!mainRoll) return false;
 
-	config.damageRoll.type = config.damageRoll.type ?? "damage";
-	config.damageRoll.criticalHit = mainRoll.criticalSuccess;
-	const damageRoll = await roll(config.damageRoll, actor.getRollData());
+	const damageRoll = await rollDamage(config, mainRoll.criticalSuccess);
+	if (!damageRoll) return false;
 
 	const content = await shadowdark.chat.renderRollHTML(config, [mainRoll, damageRoll]);
 
-	// update message with new roll and content
-	await msg.update({rolls: [...msg.rolls, damageRoll]});
-	if (game.dice3d && !damageRoll.isDeterministic) {
-		game.dice3d.waitFor3DAnimationByMessageID(msg.id).then(() =>
-			msg.update({content})
-		);
-	}
-	else {
-		await msg.update({content});
+	await msg.update({rolls: [...msg.rolls, damageRoll], content});
+
+	if (!game.dice3d || damageRoll.isDeterministic) {
 		shadowdark.utils.diceSound(true);
 	}
 }
@@ -243,7 +262,7 @@ export async function rerollFromMessage(msg, rollType) {
 		console.error("Error: No roll config found on message");
 		return;
 	}
-	const actor = game.actors.get(config.actorId);
+	const actor = await fromUuid(config.actorUuid);
 
 	if (!game.user.isGM) {
 		if (actor.system.hasLuckToken) {
@@ -334,7 +353,7 @@ export async function rollFromConfig(config) {
 		console.error("Error: missing required config property: mainRoll.formula");
 		return false;
 	}
-	const actor = game.actors.get(config.actorId);
+	const actor = await fromUuid(config.actorUuid);
 	if (!actor) {
 		console.error("Error: missing or invalid config property: actorId");
 		return false;
@@ -357,13 +376,14 @@ export async function rollFromConfig(config) {
 		config.damageRoll.needed = needsDamage;
 	}
 
+	if (game.settings.get("shadowdark", "rollDamage") && config?.damageRoll?.needed) {
+		const damageRoll = await rollDamage(config, mainRoll.criticalSuccess);
+		rolls.push(damageRoll);
+	}
+
 	// render roll
 	const chatData = await shadowdark.chat.renderRollMessage(config, rolls);
-	const msg = await ChatMessage.create(chatData);
-
-	if (game.settings.get("shadowdark", "rollDamage") && config?.damageRoll?.needed) {
-		await rollDamageFromMessage(msg);
-	}
+	await ChatMessage.create(chatData);
 
 	return mainRoll;
 }

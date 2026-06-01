@@ -141,7 +141,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 	async _displayFeature(event) {
 		event.preventDefault();
 		const item = this.actor.items.get(event.currentTarget?.dataset?.itemId);
-		return item.displayCard();
+		return shadowdark.chat.showItemCard(item.uuid);
 	}
 
 	async _onCastSpell(event, options) {

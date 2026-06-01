@@ -218,7 +218,7 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 				advantage: this.data.hp.advantage,
 				label: label,
 			},
-			actorId: this.data.actor.id,
+			actorUuid: this.data.actor.uuid,
 		};
 		const result = await shadowdark.dice.rollFromConfig(config);
 		this.data.rolls.hp = result.total;

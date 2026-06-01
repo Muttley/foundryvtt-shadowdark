@@ -100,7 +100,8 @@ const carousingEvent = selectedEvent.event;
 const tableRoll = await new Roll(`1d8 + ${selectedEvent.bonus}`).evaluate({ async: true });
 const tableResult = table.getResultsForRoll(tableRoll._total);
 
-const xpGain = parseInt(tableResult[0].text.match(/(\d+) XP/)[1], 10);
+const resultText = tableResult[0].description || tableResult[0].name;
+const xpGain = parseInt(resultText.match(/(\d+) XP/)[1], 10);
 
 let levelUp = ``;
 if (
@@ -116,7 +117,7 @@ const chatHtml = `
 
 	<div class="card-content">
 		<p>After spending ${cost} GP and ${carousingEvent}....</p>
-		${tableResult[0].text}
+		${resultText}
 		${levelUp}
 	</div>
 </div>
