@@ -549,8 +549,8 @@ SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.npc_attack_bonus: Attack Bonus
 SHADOWDARK.item.npc_attack_count: Num. Attacks
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
-SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Attack Features
 SHADOWDARK.item.npc_attack_type: Type
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Damage Dice
 SHADOWDARK.item.npc.spell_ability: Spellcasting Ability
@@ -625,11 +625,8 @@ SHADOWDARK.light_source.light_spell.near: Light Spell (Near)
 SHADOWDARK.light_source.torch: Torch
 SHADOWDARK.light-source.dropped: Dropped {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
-SHADOWDARK.light-tracker.active: Active
-SHADOWDARK.light-tracker.paused: Paused
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
@@ -642,6 +639,7 @@ SHADOWDARK.module_art_config.portraits: Portraits
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Close
@@ -744,8 +742,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User 
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.

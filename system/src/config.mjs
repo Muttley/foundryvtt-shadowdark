@@ -1,5 +1,11 @@
+export const SYSTEM_ID = "shadowdark";
+export const SYSTEM_NAME = "Shadowdark";
+
+globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
+globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
+
 // Namespace Configuration Values
-const SHADOWDARK = {};
+export const SHADOWDARK = {};
 
 SHADOWDARK.ABILITIES_LONG = {
 	str: "SHADOWDARK.ability_strength",
@@ -571,5 +577,3 @@ SHADOWDARK.WEAPON_TYPES = {
 	melee: "SHADOWDARK.weapon.type.melee",
 	ranged: "SHADOWDARK.weapon.type.ranged",
 };
-
-export default SHADOWDARK;
