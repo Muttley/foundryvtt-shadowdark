@@ -1,0 +1,32 @@
+.themed.theme-dark #lightTracker {
+	--background-color: var(--color-cool-5-75);
+	--border-color: var(--color-cool-4);
+}
+
+#lightTracker {
+	flex: none;
+	gap: 8px;
+	color: var(--text-color);
+	font-size: var(--font-size-12);
+
+	button {
+		--button-size: 20px;
+		background: none;
+		border: none;
+		pointer-events: all;
+	}
+}
+
+#lightTracker #lightTracker-list {
+	// pointer-events: all;
+	width: 200px;
+	background: var(--background-color);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 6px 8px;
+}
+
+#lightTracker #lightTracker-status {
+	font-family: var(--font-monospace);
+	gap: 8px;
+}

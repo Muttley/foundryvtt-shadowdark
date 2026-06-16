@@ -93,15 +93,6 @@ export default function registerSystemSettings() {
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
-	game.settings.register("shadowdark", "trackLightSourcesOpen", {
-		name: "SHADOWDARK.settings.track_light_sources.open_on_start.name",
-		hint: "SHADOWDARK.settings.track_light_sources.open_on_start.hint",
-		scope: "world",
-		config: true,
-		default: true,
-		type: Boolean,
-	});
-
 	game.settings.register("shadowdark", "trackInactiveUserLightSources", {
 		name: "SHADOWDARK.settings.track_light_sources.inactive_user.name",
 		hint: "SHADOWDARK.settings.track_light_sources.inactive_user.hint",

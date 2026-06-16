@@ -1,6 +1,7 @@
 # v4.1.0
 
 ## Enhancements
+- [#1380] Replace Light Tracker UI element as ApplicationV2
 - [#1315] Added metric conversion for light sources.
 
 ---
