@@ -131,7 +131,18 @@ export function initializeD20Check(config={}) {
  * @returns {string}
  */
 export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
-	const r = new Roll(formula.toString(), rollData);
+	let r;
+	try {
+		r = new Roll(formula.toString(), rollData);
+	}
+	catch(err) {
+		if (forceDeterministic) {
+			return null;
+		}
+		else {
+			return formula;
+		}
+	}
 	if (r.isDeterministic) {
 		try {
 			r.evaluateSync();
