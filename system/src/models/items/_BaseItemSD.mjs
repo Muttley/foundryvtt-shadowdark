@@ -28,9 +28,15 @@ export class BaseItemSD extends foundry.abstract.TypeDataModel {
 		for (const uuid of this.properties ?? []) {
 			propertyItems.push(fromUuidSync(uuid));
 		}
-		const propertyItem = propertyItems.find(
-			p => p.name.slugify() === property.slugify()
-		);
+		
+		const propSlug = (property || "").slugify();
+		
+		const propertyItem = propertyItems.find(p => {
+			if (!p) return false;
+			const engName = p.originalName || p.flags?.babele?.originalName || p.name || "";
+			return engName.slugify() === propSlug || (p.name || "").slugify() === propSlug;
+		});
+		
 		return propertyItem ? true : false;
 	}
 
