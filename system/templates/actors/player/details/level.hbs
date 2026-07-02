@@ -5,11 +5,14 @@
 		<span></span>
 	</div>
 	<div class="content centered">
-		{{#unless levelUp}}
+		{{#unless levelUp}}{{#unless levelUpNoClass}}
 			{{system.level.value}}
-		{{/unless}}
+		{{/unless}}{{/unless}}
 		{{#if levelUp}}
 			<a class="fa-solid fa-arrow-up fa-beat" data-action="level-up"></a>
+		{{/if}}
+		{{#if levelUpNoClass}}
+			<span class="fa-solid fa-arrow-up" style="opacity: 0.35; cursor: default;" title="{{localize 'SHADOWDARK.sheet.player.choose_class_to_level_up'}}"></span>
 		{{/if}}
 	</div>
 </div>

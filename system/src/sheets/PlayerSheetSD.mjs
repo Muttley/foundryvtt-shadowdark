@@ -194,7 +194,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		context.gearSlots = this.actor.system.slots;
 
 		context.xpNextLevel = this.actor.system.level.value * 10;
-		context.levelUp = (this.actor.system.level.xp >= context.xpNextLevel);
+		const hasEnoughXp = this.actor.system.level.xp >= context.xpNextLevel;
 
 		context.isSpellCaster = this.actor.system.isSpellCaster;
 		context.canUseMagicItems = this.actor.system.canUseMagicItems;
@@ -210,6 +210,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		await this._prepareItems(context);
 
 		context.characterClass = await this.actor.system.getClass();
+		context.levelUp = hasEnoughXp && !!context.characterClass;
+		context.levelUpNoClass = hasEnoughXp && !context.characterClass;
 		context.classHasPatron = context.characterClass?.system?.patron?.required ?? false;
 		context.classTitle = await this.actor.system.getTitle();
 
