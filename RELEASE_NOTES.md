@@ -3,6 +3,9 @@
 # Enhancements
 - [#1376] Update the Monster Importer to handle various publisher quirks
 
+## Bugfixes
+- [#1389] Fixed dropping Language, Ancestry, Background, Class, Deity or Patron items onto a character sheet *(Ashley Towner)*
+
 # Chores
 - [#1369] Merge Spanish translation updates from Crowdin
 - [#1384] Merge Spanish translation updates from Crowdin
