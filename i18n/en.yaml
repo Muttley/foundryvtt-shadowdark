@@ -750,6 +750,8 @@ SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Rea
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.settings.track_light_sources.ride_along.hint: Any newly lit light sources will ride along on the current light timer.
+SHADOWDARK.settings.track_light_sources.ride_along.name: Realtime Light Ride-Along
 SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
 SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
 SHADOWDARK.settings.track_light_sources.show_remaining.option0: None

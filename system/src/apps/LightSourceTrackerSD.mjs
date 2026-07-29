@@ -352,6 +352,34 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 			return;
 		}
 
+		const rideAlongEnabled = game.settings.get(
+			"shadowdark",
+			"realtimeLightSourceRideAlong"
+		);
+
+		if (rideAlongEnabled) {
+			const activeLightSources =
+				this.monitoredLightSources
+					.map(source => source.lightSources)
+					.flat();
+
+			// if there are no active light sources already, then behave like normal
+			if (activeLightSources.length > 0) {
+				const lightOwner = game.actors.find(actor => actor.items.get(item._id));
+				const minRemainingSecs = activeLightSources.reduce(
+					(a, b) =>
+						a < b.system.light.remainingSecs ? a : b.system.light.remainingSecs,
+					Number.MAX_SAFE_INTEGER
+				);
+				await lightOwner.updateEmbeddedDocuments("Item", [
+					{
+						"_id": item._id,
+						"system.light.remainingSecs": minRemainingSecs,
+					},
+				]);
+			}
+		}
+
 		const status = item.system.light.active ? "on" : "off";
 
 		shadowdark.debug(`Turning ${status} ${actor.name}'s ${item.name} light source`);

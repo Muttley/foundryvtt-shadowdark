@@ -4,7 +4,6 @@ import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
  * Register all of the system"s settings.
  */
 export default function registerSystemSettings() {
-
 	// -----------------
 	//  Content Sources
 	// -----------------
@@ -118,6 +117,16 @@ export default function registerSystemSettings() {
 		scope: "world",
 		config: true,
 		default: true,
+		type: Boolean,
+		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
+	});
+
+	game.settings.register("shadowdark", "realtimeLightSourceRideAlong", {
+		name: "SHADOWDARK.settings.track_light_sources.ride_along.name",
+		hint: "SHADOWDARK.settings.track_light_sources.ride_along.hint",
+		scope: "world",
+		config: true,
+		default: false,
 		type: Boolean,
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
@@ -266,5 +275,4 @@ export default function registerSystemSettings() {
 		default: false,
 		requiresReload: true,
 	});
-
 }
