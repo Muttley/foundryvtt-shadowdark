@@ -121,14 +121,19 @@ export default function registerSystemSettings() {
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
 	});
 
-	game.settings.register("shadowdark", "realtimeLightSourceRideAlong", {
-		name: "SHADOWDARK.settings.track_light_sources.ride_along.name",
-		hint: "SHADOWDARK.settings.track_light_sources.ride_along.hint",
+	game.settings.register("shadowdark", "realtimeLightBehaviour", {
+		name: "SHADOWDARK.settings.track_light_sources.behaviour.name",
+		hint: "SHADOWDARK.settings.track_light_sources.behaviour.hint",
 		scope: "world",
 		config: true,
-		default: false,
-		type: Boolean,
-		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
+		default: 0,
+		type: Number,
+		choices: {
+			0: "SHADOWDARK.settings.track_light_sources.behaviour.separate",
+			1: "SHADOWDARK.settings.track_light_sources.behaviour.ride_along",
+			2: "SHADOWDARK.settings.track_light_sources.behaviour.extinguish_others",
+			3: "SHADOWDARK.settings.track_light_sources.behaviour.ride_along_or_extinguish",
+		},
 	});
 
 	game.settings.register("shadowdark", "pauseLightTrackingWithGame", {
