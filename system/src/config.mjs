@@ -138,6 +138,7 @@ SHADOWDARK.PROPERTY_TYPES = {
 SHADOWDARK.RANGES = {
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	far: "SHADOWDARK.range.far",
 	nearLine: "SHADOWDARK.range.nearLine",
 };

@@ -302,6 +302,7 @@ export default class PlayerSD extends ActorBaseSD {
 		config.damageRoll ??= {};
 		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
 		config.damageRoll.base = base;
+		config.damageRoll.explode = false;
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
@@ -338,6 +339,16 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 
+		const explodeDamageDieKey = this._getActiveEffectKeys(
+			`roll.${key}.explode-damage-die`,
+			0,
+			item,
+			config
+		);
+		if (explodeDamageDieKey.value) {
+			config.damageRoll.explode = true;
+		}
+
 		config.damageRoll.formula = shadowdark.dice.resolveFormula(
 			damageRollKey.value, this.parent.getRollData()
 		);
@@ -347,6 +358,7 @@ export default class PlayerSD extends ActorBaseSD {
 		tooltips.push(damageRollKey.tooltips);
 		tooltips.push(damageDieRollKey.tooltips);
 		tooltips.push(extraDieRollKey.tooltips);
+		tooltips.push(explodeDamageDieKey.tooltips);
 		config.damageRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 	}
@@ -602,19 +614,19 @@ export default class PlayerSD extends ActorBaseSD {
 	/* ----------------------- */
 
 	async addAncestry(item) {
-		this.update({"system.ancestry": item.uuid});
+		return this.parent.update({"system.ancestry": item.uuid});
 	}
 
 	async addBackground(item) {
-		this.update({"system.background": item.uuid});
+		return this.parent.update({"system.background": item.uuid});
 	}
 
 	async addClass(item) {
-		this.update({"system.class": item.uuid});
+		return this.parent.update({"system.class": item.uuid});
 	}
 
 	async addDeity(item) {
-		this.update({"system.deity": item.uuid});
+		return this.parent.update({"system.deity": item.uuid});
 	}
 
 	async addLanguage(item) {
@@ -627,9 +639,9 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 
 		if (!languageFound) {
-			const currentLanguages = this.languages;
-			currentLanguages.push(item.uuid);
-			this.update({"system.languages": currentLanguages});
+			return this.parent.update({
+				"system.languages": [...this.languages, item.uuid],
+			});
 		}
 	}
 
@@ -637,7 +649,7 @@ export default class PlayerSD extends ActorBaseSD {
 		const myClass = await this.getClass();
 
 		if (myClass && myClass.system.patron.required) {
-			this.update({"system.patron": item.uuid});
+			return this.parent.update({"system.patron": item.uuid});
 		}
 		else {
 			ui.notifications.error(

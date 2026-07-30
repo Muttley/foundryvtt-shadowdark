@@ -3,13 +3,13 @@
 	"_key": "!items.effects!5bpWuaT0KTNzuzCu.E7SwrOhzSAyMZ1Ec",
 	"changes": [
 		{
-			"key": "system.roll.melee.bonus.REPLACEME",
+			"key": "system.roll.attack.bonus.REPLACEME",
 			"mode": 2,
 			"priority": null,
 			"value": "1+floor(@level.value/2)"
 		},
 		{
-			"key": "system.roll.melee.damage.REPLACEME",
+			"key": "system.roll.attack.damage.REPLACEME",
 			"mode": 2,
 			"priority": null,
 			"value": "1+floor(@level.value/2)"

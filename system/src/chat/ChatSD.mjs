@@ -46,6 +46,7 @@ export default class ChatSD {
 
 		const chatData = {
 			content: await item.system.render({expanded: true}),
+			speaker: ChatMessage.getSpeaker({alias: game.user.name}),
 			flags: { "core.canPopout": true },
 			rollMode: mode,
 		};

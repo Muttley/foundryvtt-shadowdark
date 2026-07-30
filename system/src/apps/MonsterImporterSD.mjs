@@ -225,7 +225,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		let current = "";
 		for (const line of text.split(/\r?\n/)) {
 			const isBlank = line.trim() === "";
-			const isFeatureStart = /^[A-Z][a-z].*\.\s/.test(line);
+			const isFeatureStart = /^[A-Z][a-z].*[.:]\s/.test(line);
 
 			// Boundary reached — save the current feature
 			if ((isBlank || isFeatureStart) && current.trim()) {
@@ -250,7 +250,7 @@ export default class MonsterImporterSD extends ImporterSD {
 	 * @returns {featureObj}
 	 */
 	_parseFeature(str) {
-		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
+		const featureStr = str.match(/([^.:]*)[.:](?:\s*)?(.*)/);
 		if (!featureStr) {
 			throw new Error(`Could not parse feature: "${str.substring(0, 40)}"`);
 		}
@@ -489,9 +489,9 @@ export default class MonsterImporterSD extends ImporterSD {
 
 		const parsedText = monsterText.match([
 			/(.*)\n/,							// parsedText[1] matches Title
-			/([\S\s]*)\n/,						// parsedText[2] matches flavor Text
-			/(AC \d*[\S\s]*LV \d*)(?:\n|$)/,	// parsedText[3] matches Stat Block
-			/([\S\s]*)?/,						// parsedText[4] matches features
+			/([\S\s]*\n)?/,						// parsedText[2] matches optional flavor Text
+			/(AC \d*[\S\s]*LV \d+)\.?(?:\n|$)/,	// parsedText[3] matches Stat Block
+			/([\S\s]*)?/,						// parsedText[4] matches optional features
 		].map(function(r) {
 			return r.source;
 		}).join(""));
@@ -507,11 +507,9 @@ export default class MonsterImporterSD extends ImporterSD {
 		}
 
 		const titleName = parsedText[1].titleCase();
-		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
+		const flavorText = (parsedText[2] ?? "").replace(/(\r\n|\n|\r)/gm, " ");
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		const featuresText = parsedText[4];
-		const features = typeof featuresText !== "undefined"
-			? this._parseFeatures(featuresText) : [];
+		const features = this._parseFeatures(parsedText[4] ?? "");
 
 		// Collect errors from all parsing stages
 		const errors = [];

@@ -81,7 +81,7 @@ export default class ActiveEffectsSD {
 		}));
 
 		// If any effects was created without a value, we don't create the item
-		if (itemObj.effects.some(e => e.changes.some(c => !c.value))) return ui.notifications.warn(
+		if (itemObj.effects.some(e => e.changes.some(c => c.value === ""))) return ui.notifications.warn(
 			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
 		);
 

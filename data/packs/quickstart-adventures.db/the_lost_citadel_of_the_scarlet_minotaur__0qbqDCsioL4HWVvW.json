@@ -6820,7 +6820,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.critical.multiplier",
+							"key": "system.roll.attack.critical-multiplier.this",
 							"mode": 5,
 							"priority": null,
 							"value": "4"
@@ -6848,7 +6848,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				},
 				{
@@ -6864,7 +6864,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.attackBonus",
+							"key": "system.roll.attack.bonus.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -6892,7 +6892,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				},
 				{
@@ -6908,7 +6908,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.damageBonus",
+							"key": "system.roll.attack.damage.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -6936,7 +6936,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				}
 			],
@@ -7573,7 +7573,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.attackBonus",
+							"key": "system.roll.attack.bonus.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -7601,7 +7601,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				},
 				{
@@ -7617,7 +7617,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.damageBonus",
+							"key": "system.roll.attack.damage.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -7645,7 +7645,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				}
 			],
@@ -8294,7 +8294,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.attackBonus",
+							"key": "system.roll.attack.bonus.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -8322,7 +8322,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				},
 				{
@@ -8338,7 +8338,7 @@
 					},
 					"changes": [
 						{
-							"key": "system.bonuses.damageBonus",
+							"key": "system.roll.attack.damage.this",
 							"mode": 2,
 							"priority": null,
 							"value": "1"
@@ -8366,7 +8366,7 @@
 					"system": {
 					},
 					"tint": "#ffffff",
-					"transfer": false,
+					"transfer": true,
 					"type": "base"
 				}
 			],
