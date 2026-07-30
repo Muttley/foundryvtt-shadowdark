@@ -1,0 +1,42 @@
+{
+	"_id": "i4gJv0503i9kshYC",
+	"_key": "!items!i4gJv0503i9kshYC",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+	"name": "Scroll of Light",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>@UUID[Actor.Xd7wGmvi2Mf7c7z0.Item.QJy9vKkW5A4EdXs2]{Light}</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"spellUuid": "Compendium.shadowdark.spells.Item.N4v17mtxJlVBbgpn",
+		"stashed": false
+	},
+	"type": "Scroll"
+}

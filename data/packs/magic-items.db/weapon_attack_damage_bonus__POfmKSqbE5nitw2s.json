@@ -1,27 +1,32 @@
 {
 	"_id": "POfmKSqbE5nitw2s",
 	"_key": "!items.effects!Nz0Wzbzgwa74gEgQ.POfmKSqbE5nitw2s",
-	"changes": [
-		{
-			"key": "system.roll.attack.damage.this",
-			"mode": 2,
-			"value": "1"
-		}
-	],
 	"description": "Weapon Attack Damage Bonus",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"startTime": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
 	"name": "Weapon Attack Damage Bonus",
 	"origin": "Compendium.shadowdark.magic-items.Item.Nz0Wzbzgwa74gEgQ",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.damage.this",
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

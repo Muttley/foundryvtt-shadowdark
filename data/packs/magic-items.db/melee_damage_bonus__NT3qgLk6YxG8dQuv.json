@@ -1,0 +1,35 @@
+{
+	"_id": "NT3qgLk6YxG8dQuv",
+	"_key": "!items.effects!qk4oabtNkR319n90.NT3qgLk6YxG8dQuv",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/strike-axe-blood-red.webp",
+	"name": "Melee Damage Bonus",
+	"origin": "Item.qk4oabtNkR319n90",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.melee.damage.all",
+				"phase": "initial",
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

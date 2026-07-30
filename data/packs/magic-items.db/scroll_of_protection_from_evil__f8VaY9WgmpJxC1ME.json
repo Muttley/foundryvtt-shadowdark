@@ -1,0 +1,42 @@
+{
+	"_id": "f8VaY9WgmpJxC1ME",
+	"_key": "!items!f8VaY9WgmpJxC1ME",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+	"name": "Scroll of Protection from Evil",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>@UUID[Compendium.shadowdark.spells.Item.CH5fnXxghhGQlr7h]{Protection from Evil}</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"spellUuid": "Compendium.shadowdark.spells.Item.CH5fnXxghhGQlr7h",
+		"stashed": false
+	},
+	"type": "Scroll"
+}

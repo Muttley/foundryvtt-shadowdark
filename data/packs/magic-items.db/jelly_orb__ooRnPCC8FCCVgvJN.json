@@ -1,0 +1,51 @@
+{
+	"_id": "ooRnPCC8FCCVgvJN",
+	"_key": "!items!ooRnPCC8FCCVgvJN",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/commodities/materials/slime-thick-blue.webp",
+	"name": "Jelly Orb",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>Edible slime ball, breathe underwater for 1 hour</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"light": {
+			"active": false,
+			"hasBeenUsed": false,
+			"isSource": false,
+			"longevityMins": 60,
+			"remainingSecs": 3600,
+			"template": "torch"
+		},
+		"magicItem": true,
+		"properties": [
+		],
+		"quantity": 1,
+		"scroll": false,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"stashed": false,
+		"treasure": false
+	},
+	"type": "Basic"
+}

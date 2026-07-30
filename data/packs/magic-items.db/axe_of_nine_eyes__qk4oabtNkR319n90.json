@@ -1,0 +1,53 @@
+{
+	"_id": "qk4oabtNkR319n90",
+	"_key": "!items!qk4oabtNkR319n90",
+	"effects": [
+		"JJyBMwRca7dp4Ou7",
+		"NT3qgLk6YxG8dQuv"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/axes/axe-battle-worn-eye.webp",
+	"name": "Axe of Nine Eyes",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "greataxe",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "<p><em>A silvery, +1 greataxe with nine open eyes engraved on its blade. Its wielder can learn the </em>@UUID[Compendium.shadowdark.magic-items.Item.gNah418e2ykhDWDE]{True Name} <em>of up to 9 creatures total. An eye closes each time this is used.</em></p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

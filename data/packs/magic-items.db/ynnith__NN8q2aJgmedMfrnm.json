@@ -1,0 +1,53 @@
+{
+	"_id": "NN8q2aJgmedMfrnm",
+	"_key": "!items!NN8q2aJgmedMfrnm",
+	"effects": [
+		"HcunJo9lsdxtj8p8",
+		"5iAPSMbm5EclVkse"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/staves/staff-simple-wrapped.webp",
+	"name": "Ynnith",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "staff",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><em>A +1 staff of knotted oak</em></p><p><strong>Bonus. </strong>+1 staff.</p><p><strong>Benefit. </strong>Once a day, the wielder can summon an obedient giant owl for 5 rounds.</p><p><strong>Curse. </strong>Druids who see the staff will try to lay claim to it.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

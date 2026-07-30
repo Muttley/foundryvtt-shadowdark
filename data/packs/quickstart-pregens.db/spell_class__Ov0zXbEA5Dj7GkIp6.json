@@ -1,4 +1,6 @@
 {
+	"_id": "Ov0zXbEA5Dj7GkIp6",
+	"_key": "!actors.items.effects!CVFznZtBMmHG2w4a.lXBa2beUZOwgmD8w.Ov0zXbEA5Dj7GkIp6",
 	"changes": [
 		{
 			"key": "system.spellcasting.classes",
@@ -18,15 +20,16 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"flags": {},
+	"flags": {
+	},
 	"img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
 	"name": "Spell Class",
 	"origin": "Compendium.shadowdark.talents.Item.EYRxfb5BUEzH1w3b",
-	"statuses": [],
-	"system": {},
+	"statuses": [
+	],
+	"system": {
+	},
 	"tint": "#ffffff",
 	"transfer": true,
-	"type": "base",
-	"_id": "Ov0zXbEA5Dj7GkIp6",
-	"_key": "!actors.items.effects!CVFznZtBMmHG2w4a.lXBa2beUZOwgmD8w.Ov0zXbEA5Dj7GkIp6"
+	"type": "base"
 }

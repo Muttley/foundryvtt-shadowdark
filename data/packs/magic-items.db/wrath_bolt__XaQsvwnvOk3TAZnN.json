@@ -1,0 +1,56 @@
+{
+	"_id": "XaQsvwnvOk3TAZnN",
+	"_key": "!items!XaQsvwnvOk3TAZnN",
+	"effects": [
+		"xwiRD5vkzpmFn4Sd",
+		"u9KcTSUxAz4Tz9zg",
+		"VU4MlhbeYOgPlEke",
+		"JUfuu0JhYDQE9QMi"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/sword-flamberge.webp",
+	"name": "Wrath Bolt",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "dagger",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d4",
+			"twoHanded": ""
+		},
+		"description": "<p><strong>Curse. </strong>Deals [[/r 1d100]] damage to anyone who tries to take it from previous possessor (dead or alive).</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
+			"Compendium.shadowdark.properties.Item.c35ROL1nXwC840kC"
+		],
+		"quantity": 1,
+		"range": "near",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

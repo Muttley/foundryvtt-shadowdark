@@ -1,0 +1,36 @@
+{
+	"_id": "zQd4dPnp6pqJ28Kc",
+	"_key": "!items.effects!eqUuf9OGupuGPsBM.zQd4dPnp6pqJ28Kc",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+	"name": "Melee Attack Roll Bonus",
+	"origin": "Item.eqUuf9OGupuGPsBM",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.melee.bonus.all",
+				"phase": "initial",
+				"priority": 20,
+				"type": "add",
+				"value": 2
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
