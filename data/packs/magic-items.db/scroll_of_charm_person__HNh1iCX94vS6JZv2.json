@@ -1,0 +1,42 @@
+{
+	"_id": "HNh1iCX94vS6JZv2",
+	"_key": "!items!HNh1iCX94vS6JZv2",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/sundries/scrolls/scroll-runed-brown-purple.webp",
+	"name": "Scroll of Charm Person",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p></p><p>@UUID[Compendium.shadowdark.spells.Item.0VCMisYBNpLkx28M]{Charm Person}</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"spellUuid": "Compendium.shadowdark.spells.Item.0VCMisYBNpLkx28M",
+		"stashed": false
+	},
+	"type": "Scroll"
+}

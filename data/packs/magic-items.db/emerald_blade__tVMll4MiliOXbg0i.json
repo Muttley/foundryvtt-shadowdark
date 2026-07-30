@@ -1,0 +1,53 @@
+{
+	"_id": "tVMll4MiliOXbg0i",
+	"_key": "!items!tVMll4MiliOXbg0i",
+	"effects": [
+		"A9BPMWmWpSXDGqYI",
+		"XxQ6F27a8mmAtDxN"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/sword-guard-serrated.webp",
+	"name": "Emerald Blade",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "bastard-sword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "d8",
+			"twoHanded": "d10"
+		},
+		"description": "<p><em>A +2 bastard sword that allows its wielder to speak to wild animals.</em></p><p><strong>Bonus. </strong>+2 bastard sword.</p><p><strong>Benefit. </strong>Allows its wielder to speak to wild animals</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.qEIYaQ9j2EUmSrx6"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "cursed-scroll-1"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

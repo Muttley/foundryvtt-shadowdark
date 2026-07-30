@@ -1,0 +1,36 @@
+{
+	"_id": "oHRtAdI8eDjSMzju",
+	"_key": "!items.effects!EKLviLxm9xcL9iWc.oHRtAdI8eDjSMzju",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+	"name": "Ability Score Improvement (Cha)",
+	"origin": "Compendium.shadowdark.magic-items.Item.EKLviLxm9xcL9iWc",
+	"showIcon": 1,
+	"start": null,
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.cha.value",
+				"phase": "initial",
+				"priority": 20,
+				"type": "add",
+				"value": 2
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}
