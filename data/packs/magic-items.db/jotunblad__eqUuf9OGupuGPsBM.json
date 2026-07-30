@@ -1,0 +1,53 @@
+{
+	"_id": "eqUuf9OGupuGPsBM",
+	"_key": "!items!eqUuf9OGupuGPsBM",
+	"effects": [
+		"zQd4dPnp6pqJ28Kc",
+		"L8qZFZFh4n57A3BT"
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/swords/greatsword-crossguard-curved.webp",
+	"name": "Jotunblad",
+	"system": {
+		"ammoClass": "",
+		"baseWeapon": "greatsword",
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 12,
+			"sp": 0
+		},
+		"damage": {
+			"oneHanded": "",
+			"twoHanded": "d12"
+		},
+		"description": "<p>A green-hued +2 greatsword.</p>",
+		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": true,
+		"properties": [
+			"Compendium.shadowdark.properties.Item.b6Gm2ULKj2qyy2xJ"
+		],
+		"quantity": 1,
+		"range": "close",
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 2
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"stashed": false,
+		"type": "melee"
+	},
+	"type": "Weapon"
+}

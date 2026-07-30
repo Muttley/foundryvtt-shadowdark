@@ -1,0 +1,47 @@
+{
+	"_id": "SaHAMKARPugwUtEP",
+	"_key": "!items!SaHAMKARPugwUtEP",
+	"effects": [
+	],
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/weapons/wands/wand-carved-fire.webp",
+	"name": "Wand of Wisdom",
+	"system": {
+		"broken": false,
+		"cost": {
+			"cp": 0,
+			"gp": 0,
+			"sp": 0
+		},
+		"description": "<p>A gnarled stick dipped in gold with the word \"wisdom\" etched on it in runes. Seers can wield it. Contains the seer spell @UUID[Compendium.shadowdark.spells.Item.sFAGFCh8390dnfi2]{trance}.</p>",
+		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
+		"isAmmunition": false,
+		"magicItem": false,
+		"properties": [
+		],
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "cursed-scroll-3"
+		},
+		"spells": [
+			{
+				"lost": false,
+				"uuid": "Compendium.shadowdark.spells.Item.sFAGFCh8390dnfi2"
+			}
+		],
+		"stashed": false
+	},
+	"type": "Wand"
+}
