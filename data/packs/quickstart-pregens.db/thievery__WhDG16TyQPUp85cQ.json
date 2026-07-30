@@ -1,0 +1,42 @@
+{
+	"_id": "WhDG16TyQPUp85cQ",
+	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.ZgPiv6ttj4KbiA5X.WhDG16TyQPUp85cQ",
+	"description": "<p>You are trained in the following tasks and have advantage on any associated checks: Climbing, Sneaking and hiding, Applying disguises, Finding and disabling traps and delicate tasks such as picking pockets and opening locks.</p>",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+	"name": "Thievery",
+	"origin": "Compendium.shadowdark.talents.Item.TiaXUSTLoJpjfyxD",
+	"showIcon": 1,
+	"start": {
+		"combat": null,
+		"combatant": null,
+		"initiative": null,
+		"round": null,
+		"time": 0,
+		"turn": null
+	},
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.stat.advantage.all",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

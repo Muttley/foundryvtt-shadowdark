@@ -1,42 +1,42 @@
 {
 	"_id": "87uOTjxp5i1LkLYh",
 	"_key": "!items.effects!Az2fXCwgo5C3x2X7.87uOTjxp5i1LkLYh",
-	"changes": [
-		{
-			"key": "system.roll.attack.damage.all",
-			"mode": 2,
-			"priority": null,
-			"value": "d@bonus.destineddie"
-		},
-		{
-			"key": "system.roll.spell.damage.all",
-			"mode": 2,
-			"priority": null,
-			"value": "d@bonus.destineddie"
-		}
-	],
 	"description": "<p>Whenever you use a luck token, add 1d6 to the roll. Damage.</p>",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 		"shadowdark": {
 			"situational": true
 		}
 	},
+	"folder": null,
 	"img": "icons/sundries/gaming/dice-runed-brown.webp",
 	"name": "Destined (Dmg)",
 	"origin": "Compendium.shadowdark.talents.Item.Az2fXCwgo5C3x2X7",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.attack.damage.all",
+				"priority": null,
+				"type": "add",
+				"value": "d@bonus.destineddie"
+			},
+			{
+				"key": "system.roll.spell.damage.all",
+				"priority": null,
+				"type": "add",
+				"value": "d@bonus.destineddie"
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

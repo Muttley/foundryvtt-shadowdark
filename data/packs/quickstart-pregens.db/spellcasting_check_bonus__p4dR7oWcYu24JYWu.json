@@ -1,0 +1,42 @@
+{
+	"_id": "p4dR7oWcYu24JYWu",
+	"_key": "!actors.items.effects!Jnb0sFKKKrAfowY0.SKaFT0NF4Jcc93LZ.p4dR7oWcYu24JYWu",
+	"description": "",
+	"disabled": false,
+	"duration": {
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
+	},
+	"flags": {
+	},
+	"folder": null,
+	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
+	"name": "Spellcasting Check Bonus",
+	"origin": null,
+	"showIcon": 1,
+	"start": {
+		"combat": null,
+		"combatant": null,
+		"initiative": null,
+		"round": null,
+		"time": 0,
+		"turn": null
+	},
+	"statuses": [
+	],
+	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.bonus.all",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
+	},
+	"tint": "#ffffff",
+	"transfer": true,
+	"type": "base"
+}

@@ -1,33 +1,33 @@
 {
 	"_id": "dejbAcycqE6ujmcJ",
 	"_key": "!items.effects!EYRxfb5BUEzH1w3b.dejbAcycqE6ujmcJ",
-	"changes": [
-		{
-			"key": "system.spellcasting.classes",
-			"mode": 2,
-			"priority": null,
-			"value": "priest"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
 	"name": "Spell Class",
 	"origin": "Compendium.shadowdark.talents.Item.EYRxfb5BUEzH1w3b",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.spellcasting.classes",
+				"priority": null,
+				"type": "add",
+				"value": "priest"
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

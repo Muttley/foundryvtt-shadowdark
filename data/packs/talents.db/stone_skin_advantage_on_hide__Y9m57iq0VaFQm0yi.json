@@ -1,36 +1,36 @@
 {
 	"_id": "Y9m57iq0VaFQm0yi",
 	"_key": "!items.effects!RyaDaPST58N9e7aJ.Y9m57iq0VaFQm0yi",
-	"changes": [
-		{
-			"key": "system.roll.dex.advantage",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
-	],
 	"description": "<p>You have advantage on checks to hide in natural environments.</p>",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 		"shadowdark": {
 			"situational": true
 		}
 	},
+	"folder": null,
 	"img": "icons/commodities/stone/boulder-grey-blue.webp",
 	"name": "Stone Skin Advantage on Hide",
 	"origin": "Compendium.shadowdark.talents.Item.RyaDaPST58N9e7aJ",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.dex.advantage",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

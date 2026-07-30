@@ -1,33 +1,33 @@
 {
 	"_id": "4CAhqfyLJIkeEoPW",
 	"_key": "!items.effects!RyaDaPST58N9e7aJ.4CAhqfyLJIkeEoPW",
-	"changes": [
-		{
-			"key": "system.attributes.ac.unarmored",
-			"mode": 2,
-			"priority": null,
-			"value": "2+floor(@level.value/2)"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/earth/strike-fist-stone-gray.webp",
 	"name": "Stone Skin Talent",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.attributes.ac.unarmored",
+				"priority": null,
+				"type": "add",
+				"value": "2+floor(@level.value/2)"
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

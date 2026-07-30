@@ -1,33 +1,33 @@
 {
 	"_id": "1sKZFEAOhR1t3W5D",
 	"_key": "!items.effects!0Ws5acsixawAITFi.1sKZFEAOhR1t3W5D",
-	"changes": [
-		{
-			"key": "system.abilities.cha.value",
-			"mode": 5,
-			"priority": null,
-			"value": "18"
-		}
-	],
 	"description": "permanentAbility",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "permanentAbility",
 	"origin": "Item.B3iC2SrJAnnNifTE",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.cha.value",
+				"priority": null,
+				"type": "override",
+				"value": 18
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,
