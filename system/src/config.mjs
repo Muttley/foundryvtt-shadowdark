@@ -96,12 +96,6 @@ SHADOWDARK.LANGUAGE_RARITY = {
 	rare: "SHADOWDARK.language.rarity.rare",
 };
 
-SHADOWDARK.LIGHT_SOURCE_ITEM_IDS = [
-	"PkQXG3AaHNMVwGTc", // Light Spell
-	"rjNBToTJCYLLdVcT", // Light Spell (Double Time)
-	"BBDG7QpHOFXG6sKe", // Light Spell (Double Range)
-];
-
 SHADOWDARK.NPC_ATTACK_TYPES = {
 	physical: "SHADOWDARK.npc_attack.type.physical",
 	special: "SHADOWDARK.npc_attack.type.special",

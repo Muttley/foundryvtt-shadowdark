@@ -14,6 +14,7 @@ export const lightSource = () => ({
 	light: new fields.SchemaField({
 		active: new fields.BooleanField({initial: false}),
 		animation: new fields.StringField({blank: true, initial: "torch"}),
+		autoActivate: new fields.BooleanField({initial: false}),
 		bright: new fields.NumberField({initial: 5, min: 0}),
 		color: new fields.ColorField({initial: "#d1c846"}),
 		dim: new fields.NumberField({initial: 30, min: 0}),

@@ -298,7 +298,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		// Activate light spell if dropped onto the sheet
-		if (CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item.id)) {
+		if (item.system.light?.autoActivate) {
 			return this._dropActivateLightSource(item);
 		}
 
