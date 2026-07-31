@@ -13,14 +13,16 @@ export const languageChoices = () => ({
 export const lightSource = () => ({
 	light: new fields.SchemaField({
 		active: new fields.BooleanField({initial: false}),
+		animation: new fields.StringField({blank: true, initial: "torch"}),
+		bright: new fields.NumberField({initial: 5, min: 0}),
+		color: new fields.ColorField({initial: "#d1c846"}),
+		dim: new fields.NumberField({initial: 30, min: 0}),
 		hasBeenUsed: new fields.BooleanField({initial: false}),
 		isSource: new fields.BooleanField({initial: false}),
 		longevityMins: new fields.NumberField({ integer: true, initial: 60, min: 0}),
 		remainingSecs: new fields.NumberField({ integer: true, initial: 3600, min: 0}),
-		template: new fields.StringField({
-			initial: "torch",
-			choices: Object.keys(CONFIG.SHADOWDARK.LIGHT_SETTING_NAMES),
-		}),
+		// Retained temporarily so existing documents can be migrated.
+		template: new fields.StringField({blank: true, initial: ""}),
 	}),
 });
 

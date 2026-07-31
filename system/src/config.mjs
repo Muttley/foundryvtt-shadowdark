@@ -96,13 +96,6 @@ SHADOWDARK.LANGUAGE_RARITY = {
 	rare: "SHADOWDARK.language.rarity.rare",
 };
 
-SHADOWDARK.LIGHT_SETTING_NAMES = {
-	lantern: "SHADOWDARK.light_source.lantern",
-	lightSpellDouble: "SHADOWDARK.light_source.light_spell.double_near",
-	lightSpellNear: "SHADOWDARK.light_source.light_spell.near",
-	torch: "SHADOWDARK.light_source.torch",
-};
-
 SHADOWDARK.LIGHT_SOURCE_ITEM_IDS = [
 	"PkQXG3AaHNMVwGTc", // Light Spell
 	"rjNBToTJCYLLdVcT", // Light Spell (Double Time)
@@ -335,8 +328,8 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
 	},
 	lightSource: {
-		defaultValue: "REPLACEME",
-		effectKey: "system.light.template",
+		defaultValue: true,
+		effectKey: "system.light.isSource",
 		img: "icons/magic/light/torch-fire-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.lightSource",
 		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",

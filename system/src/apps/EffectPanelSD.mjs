@@ -111,7 +111,7 @@ export default class EffectPanelSD extends foundry.appv1.api.Application {
 				return e.isExpired
 				&& !(
 					e.effectName === "Light Source"
-					|| e.changes.some(c => c.key === "system.light.template")
+					|| shadowdark.effects.isLightSourceEffect(e)
 				);
 			})
 			.filter((value, index, self) => {

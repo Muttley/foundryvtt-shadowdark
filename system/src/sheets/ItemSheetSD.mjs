@@ -420,6 +420,13 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 
 	async getSheetDataForBasicItem(context) {
 		const item = context.item;
+		context.lightAnimations = {
+			"": game.i18n.localize("SHADOWDARK.item.light.animation_none"),
+		};
+
+		for (const [key, animation] of Object.entries(CONFIG.Canvas.lightAnimations)) {
+			context.lightAnimations[key] = game.i18n.localize(animation.label);
+		}
 
 		if (item.system.light.isSource) {
 			if (!item.system.light.hasBeenUsed) {
