@@ -5,7 +5,7 @@ export default class ActiveEffectsSD {
 	 * a slugified name to be used in effect values.
 	 * @param {string} type - Type of input to ask about
 	 * @param {Array<string>} options - The list of options to choose from
-	 * @returns {string}
+	 * @returns {Promise<object>}
 	 */
 	static async askEffectInput(effectParameters) {
 		// const effectParameters = [{key, type, options}, {key, type, options}];
@@ -185,7 +185,7 @@ export default class ActiveEffectsSD {
 	 * @param {string} effectName - effectKey from mapping
 	 * @param {Object} value - data value from mapping
 	 * @param {Object} name - name value from mapping
-	 * @returns {Object}
+	 * @returns {Promise<Object>}
 	 */
 	static async handlePredefinedEffect(effectName, value, name=null) {
 		if (effectName === "Armor Mastery") {
@@ -245,7 +245,7 @@ export default class ActiveEffectsSD {
 	 * @param {Item} item - Item that has the effects
 	 * @param {*} effect - The effect being analyzed
 	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
-	 * @returns {Object} - Object updated with the changes
+	 * @returns {Promise<Object>} - Object updated with the changes
 	 */
 	static async modifyEffectChangesWithInput(item, effect) {
 		// Create an object out of the item to modify before creating
