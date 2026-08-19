@@ -1,6 +1,6 @@
 SHADOWDARK.ability_cha: Car
 SHADOWDARK.ability_charisma: Carisma
-SHADOWDARK.ability_con: Con
+SHADOWDARK.ability_con: Cos
 SHADOWDARK.ability_constitution: Costituzione
 SHADOWDARK.ability_dex: Des
 SHADOWDARK.ability_dexterity: Destrezza
@@ -17,7 +17,7 @@ SHADOWDARK.ancestry.choice_count: Lista scelte
 SHADOWDARK.ancestry.choice: Scelta
 SHADOWDARK.ancestry.fixed: Fisso
 SHADOWDARK.ancestry.languages.label: Linguaggi di stirpe
-SHADOWDARK.ancestry.languages.prompt: Seleziona la Lingua
+SHADOWDARK.ancestry.languages.prompt: Seleziona la Lingua...
 SHADOWDARK.ancestry.nametable.label: Tabella Nomi Casuali
 SHADOWDARK.ancestry.nametable.placeholder: Trascina La Tabella Tiri Qui
 SHADOWDARK.ancestry.nametable.random_weight: Casuale
@@ -36,7 +36,7 @@ SHADOWDARK.app.item_properties.save: Salva
 SHADOWDARK.app.item_properties.talent.effects.title: Tipi Di Effetto Talento
 SHADOWDARK.app.item_properties.title: Proprietà
 SHADOWDARK.app.item_properties.weapon.title: Proprietà Arma
-SHADOWDARK.app.light_tracker.minute_short: Min
+SHADOWDARK.app.light_tracker.minute_short: minuto
 SHADOWDARK.app.light_tracker.minutes_short: minuti
 SHADOWDARK.app.light_tracker.title: Controllo Luce
 SHADOWDARK.app.light-tracker.douse-light: Spegni Luce
@@ -51,11 +51,11 @@ SHADOWDARK.apps.character-generator.create_character: Crea Personaggio
 SHADOWDARK.apps.character-generator.error.create: Creazione del personaggio non riuscita {error}
 SHADOWDARK.apps.character-generator.error.name: Il nome del personaggio non può essere vuoto
 SHADOWDARK.apps.character-generator.error.no_ancestry_for_name: Impossibile tirare un nome casuale senza una Stirpe selezionata
-SHADOWDARK.apps.character-generator.gear: Equip.
+SHADOWDARK.apps.character-generator.gear: Equipaggiamento
 SHADOWDARK.apps.character-generator.gold: Oro
 SHADOWDARK.apps.character-generator.name: Nome del personaggio
 SHADOWDARK.apps.character-generator.see_details: Vedi Dettagli
-SHADOWDARK.apps.character-generator.sidebar_create: Crea
+SHADOWDARK.apps.character-generator.sidebar_create: Genera un Personaggio
 SHADOWDARK.apps.character-generator.sidebar_import: Importa
 SHADOWDARK.apps.character-generator.starting_gear: Equipaggiamento Iniziale
 SHADOWDARK.apps.character-generator.success: Personaggio creato
@@ -88,20 +88,21 @@ SHADOWDARK.apps.item-importer.instruction1: 1. Copia il testo dell'oggetto dal m
 SHADOWDARK.apps.item-importer.instruction2a: 2. Incolla il testo in questa casella seguendo il formato dell'oggetto mostrato nelle regole di base.
 SHADOWDARK.apps.item-importer.instruction2b: Nome Oggetto
 SHADOWDARK.apps.item-importer.instruction2c: Testo di descrizione
-SHADOWDARK.apps.item-importer.instruction2d: Caratteristiche
+SHADOWDARK.apps.item-importer.instruction2d: Dettagli
 SHADOWDARK.apps.item-importer.instruction3: 3. Clic Importa Oggetto.
 SHADOWDARK.apps.item-importer.placeholder: Incolla il testo dell'oggetto qui...
 SHADOWDARK.apps.item-importer.title: Importa Oggetto
 SHADOWDARK.apps.level-up.dragdrop: Trascina e rilascia qui
-SHADOWDARK.apps.level-up.errors.missing_boon_table: Impossibile tirare Doni Patrono perché la tabella configurata non può essere caricata
+SHADOWDARK.apps.level-up.errors.missing_boon_table: Impossibile tirare Favori Patrono perché la tabella configurata non può essere caricata
+SHADOWDARK.apps.level-up.errors.missing_class: Impossibile usare lo strumento Aumento di Livello su un personaggio che non ha una classe impostata
 SHADOWDARK.apps.level-up.hit_points: Punti Ferita
 SHADOWDARK.apps.level-up.level_up: Aumento di Livello!
 SHADOWDARK.apps.level-up.leveling_to: Aumenta al livello
 SHADOWDARK.apps.level-up.missing_selections: Selezione mancante
 SHADOWDARK.apps.level-up.notalent: Nessun talento guadagnato a questo livello
-SHADOWDARK.apps.level-up.or_boons: o Dono
+SHADOWDARK.apps.level-up.or_boons: O Favori
 SHADOWDARK.apps.level-up.prompt: Non tutte le selezioni richieste sono state fatte. Continuare con l'aumento di livello comunque?
-SHADOWDARK.apps.level-up.roll_boon: Tira per il Dono
+SHADOWDARK.apps.level-up.roll_boon: Tira per il Favore
 SHADOWDARK.apps.level-up.roll_talent: Tira per il Talento
 SHADOWDARK.apps.level-up.spell_tier_out_of_range: Grado incantesimo fuori portata
 SHADOWDARK.apps.level-up.title: Aumento di Livello
@@ -112,7 +113,7 @@ SHADOWDARK.apps.monster-importer.instruction2a: 2. Incolla il testo nella casell
 SHADOWDARK.apps.monster-importer.instruction2b: Nome del Mostro
 SHADOWDARK.apps.monster-importer.instruction2c: Testo descrizione
 SHADOWDARK.apps.monster-importer.instruction2d: Blocco delle statistiche principali
-SHADOWDARK.apps.monster-importer.instruction2e: Caratteristica
+SHADOWDARK.apps.monster-importer.instruction2e: Dettagli
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clic Importa Mostro.
 SHADOWDARK.apps.monster-importer.placeholder: Incolla il testo del mostro qui...
 SHADOWDARK.apps.monster-importer.title: Importa Mostro
@@ -136,7 +137,7 @@ SHADOWDARK.apps.solodark.button1: Improbabile o Impossibile
 SHADOWDARK.apps.solodark.button2: Pari Possibilità
 SHADOWDARK.apps.solodark.button3: Probabile o Certo
 SHADOWDARK.apps.solodark.oracle: L'Oracolo
-SHADOWDARK.apps.solodark.phrasing: 'Fai la tua domanda con frase affermativa. Invece di chiedere, "Non ci sono orchi in questa stanza?" chiedi: "Ci sono orchi in questa stanza?"'
+SHADOWDARK.apps.solodark.phrasing: 'Fai la tua domanda con frase affermativa. Invece di chiedere, "Non ci sono orchi in questa stanza?" Chiedi: "Ci sono orchi in questa stanza?"'
 SHADOWDARK.apps.solodark.question1: Qual è la domanda?
 SHADOWDARK.apps.solodark.question2: Quanto è probabile un "sì" come risultato?
 SHADOWDARK.apps.solodark.roll_prompt: Tira per il test
@@ -160,7 +161,7 @@ SHADOWDARK.armor.properties.disadvantage_swimming: Svantaggio/Nuoto
 SHADOWDARK.armor.properties.no_swimming: No Nuoto
 SHADOWDARK.armor.properties.one_handed: Occupa Una Mano
 SHADOWDARK.armor.properties.shield: Scudo
-SHADOWDARK.boon.type.label: Tipo Dono
+SHADOWDARK.boon.type.label: Tipo Favore
 SHADOWDARK.boons.blessing: Benedizione
 SHADOWDARK.boons.oath: Giuramento
 SHADOWDARK.boons.secret: Segreto
@@ -220,7 +221,7 @@ SHADOWDARK.class-ability.ability.check: Prove di Abilità
 SHADOWDARK.class-ability.ability.group: "Abilità Di {group}"
 SHADOWDARK.class-ability.ability.label: Abilità
 SHADOWDARK.class-ability.available.label: Disponibile
-SHADOWDARK.class-ability.boons: Doni
+SHADOWDARK.class-ability.boons: Favori
 SHADOWDARK.class-ability.dc.label: CD
 SHADOWDARK.class-ability.group.label: Abilità di Gruppo
 SHADOWDARK.class-ability.limited-uses.label: Utilizzi Limitati?
@@ -248,7 +249,7 @@ SHADOWDARK.class.spellcasting_class.label: Classe Incantesimo
 SHADOWDARK.class.spellcasting_class.this_class: "Questo ({name})"
 SHADOWDARK.class.spellcasting.base_difficulty.label: CD Base Lancio Incantesimi
 SHADOWDARK.class.spells_Known.label: Incantesimi conosciuti per Grado
-SHADOWDARK.class.starting_boons.count.label: Doni Iniziali
+SHADOWDARK.class.starting_boons.count.label: Favori Iniziali
 SHADOWDARK.class.talent_choices.count.label: Lista scelte
 SHADOWDARK.class.talent_choices.label: Scelta Talento
 SHADOWDARK.class.talent_choices.prompt: Seleziona Talento...
@@ -295,7 +296,7 @@ SHADOWDARK.dialog.general.cancel: Annulla
 SHADOWDARK.dialog.general.no: "No"
 SHADOWDARK.dialog.general.select: Seleziona
 SHADOWDARK.dialog.general.yes: "Si"
-SHADOWDARK.dialog.gm: Gamemaster
+SHADOWDARK.dialog.gm: Game master
 SHADOWDARK.dialog.hp_re_roll.title: Ritira PF
 SHADOWDARK.dialog.hp_roll.per_level: Tira PF per il livello {level}
 SHADOWDARK.dialog.hp_roll.previous_hp: "PF prima del tiro: {hp}"
@@ -482,55 +483,55 @@ SHADOWDARK.item.effect.predefined_effect.damageMultiplier: Moltiplicatore Danno
 SHADOWDARK.item.effect.predefined_effect.hpAdvantage: Vantaggio Tiro PF
 SHADOWDARK.item.effect.predefined_effect.initAdvantage: Vantaggio Iniziativa
 SHADOWDARK.item.effect.predefined_effect.lightSource: Fonte di Luce
-SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Melee Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Melee Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Permanent Ability (Cha)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: Permanent Ability (Con)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: Permanent Ability (Dex)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: Permanent Ability (Int)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: Permanent Ability (Str)
-SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: Permanent Ability (Wis)
-SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Ranged Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Ranged Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Spellcasting Advantage on Spell
-SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Spellcasting Check Bonus
-SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Spellcasting Class
-SHADOWDARK.item.effect.predefined_effect.spellDamageBonus: Spell Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Stone Skin Talent
-SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Unarmored AC Bonus
-SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Weapon Attack Roll Bonus
-SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Weapon Attack Damage Bonus
-SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Weapon Damage Die D12
-SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Weapon Damage Die Improvement by Property
-SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Extra Damage Die by Property
-SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Extra Damage Die Improvement by Property
-SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Weapon Damage Multiplier
-SHADOWDARK.item.effect.predefined_effect.weaponMastery: Weapon Mastery
-SHADOWDARK.item.effect.show-on-panel: Show on panel
-SHADOWDARK.item.effect.show-token-icon: Show token icon
-SHADOWDARK.item.effect.source.title: Item Source
-SHADOWDARK.item.effect.warning.add_effect_without_value: Can't add effects without selecting a value when asked.
-SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Can't add effects with Rounds type duration outside of combat.
-SHADOWDARK.item.equipped: Equipped
-SHADOWDARK.item.errors.no_available_ammunition: No ammunition available
-SHADOWDARK.item.errors.no_spellcasting_classes: This character does not have a spellcasting class
-SHADOWDARK.item.gm_only: GM Only
-SHADOWDARK.item.inventory_free_carry: Free Carry
+SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus: Bonus Attacco in Mischia
+SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus: Bonus Danno in Mischia
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha: Cambio Caratteristica Permanente (Car)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon: Cambio Caratteristica Permanente (Cos)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex: Cambio Caratteristica Permanente (Des)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt: Cambio Caratteristica Permanente (Int)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr: Cambio Caratteristica Permanente (For)
+SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis: Cambio Caratteristica Permanente (Sag)
+SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus: Bonus Attacco a Distanza
+SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus: Bonus Danno a Distanza
+SHADOWDARK.item.effect.predefined_effect.spellAdvantage: Vantaggio Lancio Incantesimo
+SHADOWDARK.item.effect.predefined_effect.spellCastingBonus: Bonus Lancio Incantesimi
+SHADOWDARK.item.effect.predefined_effect.spellcastingClasses: Bonus Classe Incantatore
+SHADOWDARK.item.effect.predefined_effect.spellDamageBonus: Bonus Danno Incantesimo
+SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent: Talento Pelle Di Pietra
+SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus: Bonus CA Senza Armatura
+SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus: Bonus Attacco Arma
+SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus: Bonus Danno Arma
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12: Dado Danno Arma D12
+SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty: Miglioramento Danno Danno Arma per Proprietà
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieByProperty: Danno Danno extra per proprietà
+SHADOWDARK.item.effect.predefined_effect.weaponDamageExtraDieImprovementByProperty: Danno Danno Arma extra per Proprietà
+SHADOWDARK.item.effect.predefined_effect.weaponDamageMultiplier: Moltiplicatore Danno Arma
+SHADOWDARK.item.effect.predefined_effect.weaponMastery: Maestro D'Armi
+SHADOWDARK.item.effect.show-on-panel: Mostra sul pannello
+SHADOWDARK.item.effect.show-token-icon: Mostra icona del token
+SHADOWDARK.item.effect.source.title: Fonti dell'Oggetto
+SHADOWDARK.item.effect.warning.add_effect_without_value: Impossibile aggiungere effetti senza selezionare un valore quando richiesto.
+SHADOWDARK.item.effect.warning.add_round_item_outside_combat: Impossibile aggiungere effetti con durata tipo Round al di fuori del combattimento.
+SHADOWDARK.item.equipped: Equipaggiato
+SHADOWDARK.item.errors.no_available_ammunition: Nessuna munizione disponibile
+SHADOWDARK.item.errors.no_spellcasting_classes: Questo personaggio non ha una classe Incantatore
+SHADOWDARK.item.gm_only: Solo GM
+SHADOWDARK.item.inventory_free_carry: Senza Peso
 SHADOWDARK.item.inventory_per_slot: Max per Slot
-SHADOWDARK.item.inventory_quantity: Quantity
-SHADOWDARK.item.inventory_slots: Slots per Item
-SHADOWDARK.item.level: Level
-SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
-SHADOWDARK.item.light.is_source: Light Source
-SHADOWDARK.item.light.longevity: Longevity (Mins)
-SHADOWDARK.item.light.remaining: Remaining (Mins)
-SHADOWDARK.item.light.template: Light Template
-SHADOWDARK.item.magic_item.identificationDetails: Identification Details
-SHADOWDARK.item.magic_item.identified: Identified
-SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
-SHADOWDARK.item.magic_item.identifiedName: Identified Name
-SHADOWDARK.item.magic_item.identifiedTooltip: Unchecking will update current item name to Identified Name and append Identified Description to item Description.
-SHADOWDARK.item.magic_item.identify: Identify
+SHADOWDARK.item.inventory_quantity: Quantità
+SHADOWDARK.item.inventory_slots: Slot per Oggetto
+SHADOWDARK.item.level: Livello
+SHADOWDARK.item.light.in_use_tooltip: Questo campo non può essere modificato mentre la luce è attiva
+SHADOWDARK.item.light.is_source: Fonte di Luce
+SHADOWDARK.item.light.longevity: Longevità (min)
+SHADOWDARK.item.light.remaining: Rimanenti (min)
+SHADOWDARK.item.light.template: Modello Illuminazione
+SHADOWDARK.item.magic_item.identificationDetails: Dettagli Identificazione
+SHADOWDARK.item.magic_item.identified: Identificato
+SHADOWDARK.item.magic_item.identifiedDescription: Descrizione Identificato
+SHADOWDARK.item.magic_item.identifiedName: Nome Identificato
+SHADOWDARK.item.magic_item.identifiedTooltip: Il deselezionamento aggiornerà il nome corrente dell'elemento al nome identificato e aggiungerà la descrizione identificata alla descrizione dell'articolo.
+SHADOWDARK.item.magic_item.identify: Identificazione
 SHADOWDARK.item.magic_item.is_magic: Oggetto Magico
 SHADOWDARK.item.magic_item.title: Effetto/i Oggetto Magico
 SHADOWDARK.item.magic_item.type.attackBonus: Bonus Attacco
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: Nome Oggetto
 SHADOWDARK.item.npc_attack_bonus: Bonus Attacco
 SHADOWDARK.item.npc_attack_count: Num. Attacchi
 SHADOWDARK.item.npc_attack_damage_formula: Formula Di Danno
-SHADOWDARK.item.npc_attack_special: Caratteristiche Attacco
 SHADOWDARK.item.npc_attack_special_placeholder: Veleno, Acido, ...
+SHADOWDARK.item.npc_attack_special: Dettagli Attacco
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Num. Dadi Danno
 SHADOWDARK.item.npc.spell_ability: Lanciare Incantesimi
@@ -581,7 +582,7 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2M
 SHADOWDARK.item.weapon_damage.twoHanded: Danno 2M
 SHADOWDARK.item.weapon_range: Portata
 SHADOWDARK.item.weapon_type: Tipo
-SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastard Sword
+SHADOWDARK.item.weapon.base_weapon.bastard_sword: Spada Bastarda
 SHADOWDARK.item.weapon.base_weapon.club: Randello
 SHADOWDARK.item.weapon.base_weapon.crossbow: Balestra
 SHADOWDARK.item.weapon.base_weapon.dagger: Pugnale
@@ -651,7 +652,7 @@ SHADOWDARK.npc_move.near: Vicino
 SHADOWDARK.npc_move.none: Nessuno
 SHADOWDARK.npc_move.special: Speciale
 SHADOWDARK.npc_move.triple_near: Triplo Vicino
-SHADOWDARK.patron.boons_table.label: Tabella Doni Patrono
+SHADOWDARK.patron.boons_table.label: Tabella Favori Patrono
 SHADOWDARK.property.type.option.armor: Armatura
 SHADOWDARK.property.type.option.weapon: Arma
 SHADOWDARK.property.type.title: Tipo Proprietà
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Fall.Crit.
 SHADOWDARK.roll.tooltip.critical_multiplier: Molt.Crit.
 SHADOWDARK.roll.tooltip.critical_success: Succ. Crit.
 SHADOWDARK.roll.tooltip.disadvantage: Svant.
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Dado
 SHADOWDARK.roll.tooltip.extra_die: Agg.Dado
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Sostituita ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "Bonus {stat}"
@@ -758,7 +760,7 @@ SHADOWDARK.settings.track_light_sources.show_remaining.option2: Punti e minuti r
 SHADOWDARK.settings.use_clockwise_initiative.hint: Se selezionato, il combattente con il tiro di iniziativa più alto andrà prima e tutti gli altri combattenti seguiranno in un ordine fisso. Tutti gli NPC saranno raggruppati nell'ordine di iniziativa.
 SHADOWDARK.settings.use_clockwise_initiative.name: Usa Iniziativa In senso Orario
 SHADOWDARK.settings.use_momentum_mode.hint: Dadi Danni esplodono
-SHADOWDARK.settings.use_momentum_mode.name: Abilita Modalità Momento
+SHADOWDARK.settings.use_momentum_mode.name: Abilita Modalità Momentum
 SHADOWDARK.settings.use_pulp_mode.hint: Mostra i token della fortuna come valore numerico piuttosto che come casella di controllo
 SHADOWDARK.settings.use_pulp_mode.name: Abilita Modalità Pulp
 SHADOWDARK.sheet.abilities.label: Abilità
@@ -789,56 +791,56 @@ SHADOWDARK.sheet.general.effects_and_conditions.title: Effetti e Condizioni
 SHADOWDARK.sheet.general.item_create.tooltip: Crea Oggetto {type}
 SHADOWDARK.sheet.general.item_delete.title: Elimina Oggetto
 SHADOWDARK.sheet.general.item_edit.title: Modifica Oggetto
-SHADOWDARK.sheet.general.roll_hp: Roll HP
-SHADOWDARK.sheet.general.section.toggle_hide: Click to Hide Section
-SHADOWDARK.sheet.general.section.toggle_show: Click to Show Section
-SHADOWDARK.sheet.item.tab.description: Description
-SHADOWDARK.sheet.item.tab.details: Details
-SHADOWDARK.sheet.item.tab.effects: Effects
-SHADOWDARK.sheet.item.tab.light: Light
-SHADOWDARK.sheet.item.tab.magic: Magic
-SHADOWDARK.sheet.item.tab.source: Source
-SHADOWDARK.sheet.item.tab.spellsknown: Spells Known
-SHADOWDARK.sheet.item.tab.titles: Titles
-SHADOWDARK.sheet.npc.attacks_label: Attacks
-SHADOWDARK.sheet.npc.dark_adapted: Dark-Adapted
-SHADOWDARK.sheet.npc.description_label: Description
-SHADOWDARK.sheet.npc.features_label: Features
-SHADOWDARK.sheet.npc.movement_short: Move
-SHADOWDARK.sheet.npc.movement: Movement
-SHADOWDARK.sheet.npc.specials_label: Special Attacks
-SHADOWDARK.sheet.npc.tab.abilities: Abilities
-SHADOWDARK.sheet.npc.tab.description: Description
-SHADOWDARK.sheet.npc.tab.spells: Spells
-SHADOWDARK.sheet.player.active_effect_override: This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.
-SHADOWDARK.sheet.player.ancestry.label: Ancestry
-SHADOWDARK.sheet.player.ancestry.tooltip: Your character's cultural and ancestral heritage
-SHADOWDARK.sheet.player.available_spells: Available Spells
+SHADOWDARK.sheet.general.roll_hp: Tira PF
+SHADOWDARK.sheet.general.section.toggle_hide: Clic per Nascondere Sezione
+SHADOWDARK.sheet.general.section.toggle_show: Clicca per Mostrare Sezione
+SHADOWDARK.sheet.item.tab.description: Descrizione
+SHADOWDARK.sheet.item.tab.details: Dettagli
+SHADOWDARK.sheet.item.tab.effects: Effetti
+SHADOWDARK.sheet.item.tab.light: Luce
+SHADOWDARK.sheet.item.tab.magic: Magia
+SHADOWDARK.sheet.item.tab.source: Fonte
+SHADOWDARK.sheet.item.tab.spellsknown: Incantesimi Conosciuti
+SHADOWDARK.sheet.item.tab.titles: Titoli
+SHADOWDARK.sheet.npc.attacks_label: Attacchi
+SHADOWDARK.sheet.npc.dark_adapted: Abituato al Buio
+SHADOWDARK.sheet.npc.description_label: Descrizione
+SHADOWDARK.sheet.npc.features_label: Capacità
+SHADOWDARK.sheet.npc.movement_short: Muovi
+SHADOWDARK.sheet.npc.movement: Movimento
+SHADOWDARK.sheet.npc.specials_label: Attacchi Speciali
+SHADOWDARK.sheet.npc.tab.abilities: Caratteristiche
+SHADOWDARK.sheet.npc.tab.description: Descrizione
+SHADOWDARK.sheet.npc.tab.spells: Incantesimi
+SHADOWDARK.sheet.player.active_effect_override: Questo valore è modificato da un Effetto Attivo e non può essere modificato. Disabilita l'effetto per modificarlo.
+SHADOWDARK.sheet.player.ancestry.label: Stirpe
+SHADOWDARK.sheet.player.ancestry.tooltip: Il patrimonio culturale e ancestrale del tuo personaggio
+SHADOWDARK.sheet.player.available_spells: Incantesimi Disponibili
 SHADOWDARK.sheet.player.background.label: Background
-SHADOWDARK.sheet.player.background.tooltip: Your history and past experience. You are adept at tasks related to your background.
-SHADOWDARK.sheet.player.boon.label: Boon
-SHADOWDARK.sheet.player.boons.blessings.label: Blessings
-SHADOWDARK.sheet.player.boons.label: Boons
-SHADOWDARK.sheet.player.boons.name: Boon Name
-SHADOWDARK.sheet.player.boons.oaths.label: Oaths
-SHADOWDARK.sheet.player.boons.secrets.label: Secrets
-SHADOWDARK.sheet.player.class_spells: Class Spells
-SHADOWDARK.sheet.player.class.label: Class
-SHADOWDARK.sheet.player.class.tooltip: Your character's job
-SHADOWDARK.sheet.player.deity.label: Deity
-SHADOWDARK.sheet.player.deity.tooltip: Your character’s cosmic link to the opposing forces of Law and Chaos, or balanced Neutrality.
-SHADOWDARK.sheet.player.inventory.gear.label: Gear
-SHADOWDARK.sheet.player.inventory.items.label: Items
-SHADOWDARK.sheet.player.inventory.quantity_short.label: Qty
-SHADOWDARK.sheet.player.inventory.slots.label: Slots
-SHADOWDARK.sheet.player.inventory.stashed_item.label: Stashed Item
-SHADOWDARK.sheet.player.inventory.treasure.label: Treasure
-SHADOWDARK.sheet.player.inventory.type.label: Type
-SHADOWDARK.sheet.player.inventory.value.label: Value
-SHADOWDARK.sheet.player.languages: Languages
-SHADOWDARK.sheet.player.luck: Luck
-SHADOWDARK.sheet.player.melee_attacks: Melee Attacks
-SHADOWDARK.sheet.player.name.label: Name
+SHADOWDARK.sheet.player.background.tooltip: La tua storia ed esperienza passata. Sei esperto in attività legate al tuo background.
+SHADOWDARK.sheet.player.boon.label: Favore
+SHADOWDARK.sheet.player.boons.blessings.label: Benedizioni
+SHADOWDARK.sheet.player.boons.label: Favori
+SHADOWDARK.sheet.player.boons.name: Nome Favore
+SHADOWDARK.sheet.player.boons.oaths.label: Giuramenti
+SHADOWDARK.sheet.player.boons.secrets.label: Segreti
+SHADOWDARK.sheet.player.class_spells: Classe Incantesimo
+SHADOWDARK.sheet.player.class.label: Classe
+SHADOWDARK.sheet.player.class.tooltip: Lavoro del tuo personaggio
+SHADOWDARK.sheet.player.deity.label: Divinità
+SHADOWDARK.sheet.player.deity.tooltip: Il legame cosmico del tuo personaggio con le forze opposte della Legge e del Caos, o Neutralità equilibrata.
+SHADOWDARK.sheet.player.inventory.gear.label: Equip
+SHADOWDARK.sheet.player.inventory.items.label: Oggetti
+SHADOWDARK.sheet.player.inventory.quantity_short.label: Qtà
+SHADOWDARK.sheet.player.inventory.slots.label: Slot
+SHADOWDARK.sheet.player.inventory.stashed_item.label: Oggetto Riposto
+SHADOWDARK.sheet.player.inventory.treasure.label: Tesoro
+SHADOWDARK.sheet.player.inventory.type.label: Tipo
+SHADOWDARK.sheet.player.inventory.value.label: Valore
+SHADOWDARK.sheet.player.languages: Linguaggi
+SHADOWDARK.sheet.player.luck: Fortuna
+SHADOWDARK.sheet.player.melee_attacks: Attacchi in Mischia
+SHADOWDARK.sheet.player.name.label: Nome
 SHADOWDARK.sheet.player.open_spellbook.tooltip: Aprire il Grimorio
 SHADOWDARK.sheet.player.patron.tooltip: Il tuo patrono è la fonte dei tuoi doni soprannaturali
 SHADOWDARK.sheet.player.ranged_attacks: Attacchi a Distanza
@@ -902,7 +904,7 @@ SHADOWDARK.talent.backstab: Pugnalata alle Spalle
 SHADOWDARK.talent.class.ancestry: Stirpe
 SHADOWDARK.talent.class.class: Classe
 SHADOWDARK.talent.class.level: Livello
-SHADOWDARK.talent.class.patronBoon: Dono Patrono
+SHADOWDARK.talent.class.patronBoon: Favore Patrono
 SHADOWDARK.talent.level_gained: Livello Ottenuto
 SHADOWDARK.talent.type.ability_improvement: Miglioramento dei Punteggi di Caratteristica
 SHADOWDARK.talent.type.advantage.hp: Vantaggio Tiro PF
@@ -910,42 +912,42 @@ SHADOWDARK.talent.type.advantage.initiative: Vantaggio Iniziativa
 SHADOWDARK.talent.type.advantage.spell: Vantaggio Lancio Incantesimo
 SHADOWDARK.talent.type.advantage.title: Bonus Vantaggio
 SHADOWDARK.talent.type.armor_bonus: Bonus Armatura CA
-SHADOWDARK.talent.type.armor_mastery: Maestria D'Armatura
+SHADOWDARK.talent.type.armor_mastery: Maestro D'Armatura
 SHADOWDARK.talent.type.backstab_die: Dadi Extra Pugnalata alle Spalle
 SHADOWDARK.talent.type.bonus_caster_classes: Bonus Classe Incantatore
 SHADOWDARK.talent.type.custom: Talento Personalizzato
 SHADOWDARK.talent.type.melee_attack_bonus: Bonus Attacco in Mischia
 SHADOWDARK.talent.type.melee_damage_bonus: Bonus Danno in Mischia
-SHADOWDARK.talent.type.ranged_attack_bonus: Ranged Attack Roll Bonus
-SHADOWDARK.talent.type.ranged_damage_bonus: Ranged Damage Roll Bonus
-SHADOWDARK.talent.type.spell_bonus: Spellcasting Bonus
-SHADOWDARK.talent.type.stoneSkinTalent: Stone Skin Talent
-SHADOWDARK.talent.type.title: Talent Type(s)
-SHADOWDARK.talent.type.weapon_mastery: Weapon Mastery
-SHADOWDARK.tours.lightsource.notification.not_enabled: You need to enable the Lightsource Tracker in settings to be able to run the Tour
-SHADOWDARK.weapon.properties.finesse: Finesse
-SHADOWDARK.weapon.properties.loading: Loading
-SHADOWDARK.weapon.properties.thrown: Thrown
-SHADOWDARK.weapon.properties.two_handed: Two-Handed
+SHADOWDARK.talent.type.ranged_attack_bonus: Bonus Attacco a Distanza
+SHADOWDARK.talent.type.ranged_damage_bonus: Bonus Danno a Distanza
+SHADOWDARK.talent.type.spell_bonus: Bonus Lancio Incantesimi
+SHADOWDARK.talent.type.stoneSkinTalent: Talento Pelle Di Pietra
+SHADOWDARK.talent.type.title: Tipo(i) Di Talento
+SHADOWDARK.talent.type.weapon_mastery: Maestro D'Armi
+SHADOWDARK.tours.lightsource.notification.not_enabled: È necessario abilitare il Lightsource Tracker nelle impostazioni per poter eseguire il Tour
+SHADOWDARK.weapon.properties.finesse: Accurata
+SHADOWDARK.weapon.properties.loading: Ricarica
+SHADOWDARK.weapon.properties.thrown: Lancio
+SHADOWDARK.weapon.properties.two_handed: A Due Mani
 SHADOWDARK.weapon.properties.versatile: Versatile
-SHADOWDARK.weapon.type.melee: Melee
-SHADOWDARK.weapon.type.ranged: Ranged
-TYPES.Actor.Light: Light
-TYPES.Actor.NPC: NPC
-TYPES.Actor.Player: Player
-TYPES.Item.Ancestry: Ancestry
-TYPES.Item.Armor: Armor
+SHADOWDARK.weapon.type.melee: Mischia
+SHADOWDARK.weapon.type.ranged: Distanza
+TYPES.Actor.Light: Luce
+TYPES.Actor.NPC: PNG
+TYPES.Actor.Player: Giocatore
+TYPES.Item.Ancestry: Stirpe
+TYPES.Item.Armor: Armatura
 TYPES.Item.Background: Background
-TYPES.Item.Basic: Basic
-TYPES.Item.Boon: Boon
-TYPES.Item.Class Ability: Class Ability
+TYPES.Item.Basic: Base
+TYPES.Item.Boon: Favori
+TYPES.Item.Class Ability: Abilità Di Classe
 TYPES.Item.Class: Classe
 TYPES.Item.Deity: Divinità
 TYPES.Item.Effect: Effetto
 TYPES.Item.Gem: Gemma
 TYPES.Item.Language: Lingua
 TYPES.Item.NPC Attack: Attacco PNG
-TYPES.Item.NPC Feature: Funzione PNG
+TYPES.Item.NPC Feature: Dettagli PNG
 TYPES.Item.NPC Special Attack: Attacco Speciale PNG
 TYPES.Item.NPC Spell: Incantesimo PNG
 TYPES.Item.Patron: Patrono

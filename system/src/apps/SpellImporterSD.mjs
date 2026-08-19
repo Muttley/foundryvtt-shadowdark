@@ -68,10 +68,10 @@ export default class SpellImporter extends ImporterSD {
 		let classObj = (
 			await (shadowdark.compendiums.classes())
 		).contents.filter(
-			c => classes.includes(c.name.toLowerCase())
+			c => classes.includes(c.name)
 		);
 
-		let classIDs = classObj.map(c => `Compendium.shadowdark.classes.Item.${c._id}`);
+		let classIDs = classObj.map(c => c.uuid);
 
 		let spellObj = {
 			name: titleName,

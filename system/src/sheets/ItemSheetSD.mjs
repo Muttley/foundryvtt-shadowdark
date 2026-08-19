@@ -369,8 +369,7 @@ export default class ItemSheetSD extends foundry.appv1.sheets.ItemSheet {
 			context.isIdentified = context.system.isIdentified;
 			context.isUnidentified = !context.system.isIdentified;
 			context.showIdentifyTab = context.isUnidentified && context.isGM;
-			context.showEffectsTab = context.system.magicItem
-				&& (context.system.isIdentified || context.isGM);
+			context.showEffectsTab = (context.system.isIdentified || context.isGM);
 		}
 
 		// Call any type-specific methods for this item type to gather

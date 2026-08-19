@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Ausrüstung
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Name des Charakters
 SHADOWDARK.apps.character-generator.see_details: Details anzeigen
-SHADOWDARK.apps.character-generator.sidebar_create: Erzeugen
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Importieren
 SHADOWDARK.apps.character-generator.starting_gear: Startausrüstung
 SHADOWDARK.apps.character-generator.success: Charakter erstellt
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Element importieren
 SHADOWDARK.apps.level-up.dragdrop: Hier ziehen und ablegen
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Schirmherr-Vorteil kann nicht gewürfelt werden, da die konfigurierte Würfeltabelle nicht geladen werden konnte
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Trefferpunkte
 SHADOWDARK.apps.level-up.level_up: Neue Stufe!
 SHADOWDARK.apps.level-up.leveling_to: Aufstieg auf Stufe
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: Gegenstandsname
 SHADOWDARK.item.npc_attack_bonus: Angriffsbonus
 SHADOWDARK.item.npc_attack_count: Anzahl Angriffe
 SHADOWDARK.item.npc_attack_damage_formula: Schadensformel
-SHADOWDARK.item.npc_attack_special: Spezial
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Spezial
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Anz. Schadenswürfel
 SHADOWDARK.item.npc.spell_ability: Zauber-Fähigkeit
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"

@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: 裝備
 SHADOWDARK.apps.character-generator.gold: 金幣
 SHADOWDARK.apps.character-generator.name: 角色名稱
 SHADOWDARK.apps.character-generator.see_details: 查看詳細
-SHADOWDARK.apps.character-generator.sidebar_create: 創建
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: 匯入
 SHADOWDARK.apps.character-generator.starting_gear: 起始裝備
 SHADOWDARK.apps.character-generator.success: 角色已創建
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: 匯入物品
 SHADOWDARK.apps.level-up.dragdrop: 拖放到此處
 SHADOWDARK.apps.level-up.errors.missing_boon_table: 無法擲出契約主恩賜，因為所設定的隨機骰表無法載入
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: 生命值
 SHADOWDARK.apps.level-up.level_up: 升級！
 SHADOWDARK.apps.level-up.leveling_to: 升級到等級
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: 物品名稱
 SHADOWDARK.item.npc_attack_bonus: 攻擊加值
 SHADOWDARK.item.npc_attack_count: 攻擊次數
 SHADOWDARK.item.npc_attack_damage_formula: 傷害公式
-SHADOWDARK.item.npc_attack_special: 攻擊特性
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: 攻擊特性
 SHADOWDARK.item.npc_attack_type: 類型
 SHADOWDARK.item.npc_attack.num_damage_dice: 傷害骰數量
 SHADOWDARK.item.npc.spell_ability: 施法屬性
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"

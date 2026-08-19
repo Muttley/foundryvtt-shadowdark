@@ -598,13 +598,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onlevelUp(event) {
 		event.preventDefault();
 
-		let actorClass = await this.actor.system.getClass();
-		if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
-			new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
-			this.close();
+		const actorClass = await this.actor.system.getClass();
+
+		if (actorClass) {
+			if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
+				new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
+				this.close();
+			}
+			else {
+				new shadowdark.apps.LevelUpSD(this.actor._id).render(true);
+			}
 		}
 		else {
-			new shadowdark.apps.LevelUpSD(this.actor._id).render(true);
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.apps.level-up.errors.missing_class")
+			);
 		}
 	}
 

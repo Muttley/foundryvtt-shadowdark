@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Equipamento
 SHADOWDARK.apps.character-generator.gold: Ouro
 SHADOWDARK.apps.character-generator.name: Nome do Personagem
 SHADOWDARK.apps.character-generator.see_details: Ver detalhes
-SHADOWDARK.apps.character-generator.sidebar_create: Criar
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Equipamento Inicial
 SHADOWDARK.apps.character-generator.success: Personagem criado
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Cole o texto do item aqui...
 SHADOWDARK.apps.item-importer.title: Importar Item
 SHADOWDARK.apps.level-up.dragdrop: Arraste e Solte Aqui
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Não foi possível rolar o Dádiva de Patrono, pois a Tabela configurada não pôde ser carregada
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Pontos de Vida
 SHADOWDARK.apps.level-up.level_up: Subir de Nível!
 SHADOWDARK.apps.level-up.leveling_to: Subindo para o nível
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: Nome do Item
 SHADOWDARK.item.npc_attack_bonus: Bônus de Ataque
 SHADOWDARK.item.npc_attack_count: Núm. Ataques
 SHADOWDARK.item.npc_attack_damage_formula: Fórmula de Dano
-SHADOWDARK.item.npc_attack_special: Características de Ataque
 SHADOWDARK.item.npc_attack_special_placeholder: Veneno, Ácido ...
+SHADOWDARK.item.npc_attack_special: Características de Ataque
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Núm. Dados de Dano
 SHADOWDARK.item.npc.spell_ability: Atributo de Conjuração
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: DESV
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Fórmula Substituída ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "Bônus de {stat}"

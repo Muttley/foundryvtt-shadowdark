@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Varusteet
 SHADOWDARK.apps.character-generator.gold: Kulta
 SHADOWDARK.apps.character-generator.name: Hahmon nimi
 SHADOWDARK.apps.character-generator.see_details: Näytä tiedot
-SHADOWDARK.apps.character-generator.sidebar_create: Luo
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Tuo
 SHADOWDARK.apps.character-generator.starting_gear: Aloitusvarustus
 SHADOWDARK.apps.character-generator.success: Hahmo luotu
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Tuo esine
 SHADOWDARK.apps.level-up.dragdrop: Vedä ja tiputa tähän
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Suojelijan siunausta ei voitu heittää, koska taulukkoa ei saatu ladattua
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Osumapisteet
 SHADOWDARK.apps.level-up.level_up: Hahmosi kehittyi seuraavalle tasolle!
 SHADOWDARK.apps.level-up.leveling_to: Kehitetään hahmoa tasolle
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: Esineen nimi
 SHADOWDARK.item.npc_attack_bonus: Hyökkäysbonus
 SHADOWDARK.item.npc_attack_count: Hyökkäyksien lukumäärä
 SHADOWDARK.item.npc_attack_damage_formula: Vahingon laskukaava
-SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Erikoiskyky
 SHADOWDARK.item.npc_attack_type: Tyyppi
 SHADOWDARK.item.npc_attack.num_damage_dice: Vahinkonoppien määrä
 SHADOWDARK.item.npc.spell_ability: Loihtimiskyky
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"

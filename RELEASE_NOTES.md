@@ -17,17 +17,26 @@
 	* See wiki for details: https://github.com/Muttley/foundryvtt-shadowdark/wiki/Active-Effects
 - [#1406] Retain aspect ratio of Actor images without cropping
 - [#1408] Enable new Italian translation in config
+- [#1412] Move character creator button to make it more prominent as it's easy to miss at the bottom of the Actors sidebar
+	* Now at the top of the sidebar and renamed "Build Character" to make it more obvious
+- [#1420] Show Effects tab on non-Magic Item items as well
 
 # Bugfixes
+- [#1374] Issue Leveling Up in Foundry
+	* You are now warned if you try to use the level up tool on a character that has no Class set
 - [#1382] Error when adding +1 Dex level up talent to character
 - [#1388] Weapon Mastery talent using the incorrect attribute keys
 - [#1395] Item description to chat fails in v14 when global chat is set to Public in Character
 - [#1410] Characters with the Stout talent get +2 added every level up HP roll, instead of just the first level
+- [#1418] Class alignment restrictions defaulting to neutral instead of empty string
+- [#1419] Spell Importer should use uuid field, not build it manually
 
 # Chores
 - [#1369] Merge Spanish translation updates from Crowdin
 - [#1384] Merge Spanish translation updates from Crowdin
 - [#1396] Merge Italian translation updates from Crowdin
+- [#1409] Merge various language translation updates from Crowdin
+- [#1414] Merge Italian translation updates from Crowdin
 
 **NOTE:** Many thanks to *Vacco* for his valiant effort in providing 100% coverage with a new Italian translation of the system.
 

@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
 SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Import Item
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
@@ -549,8 +550,8 @@ SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.npc_attack_bonus: 명중 보너스
 SHADOWDARK.item.npc_attack_count: 공격 숫자
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
-SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: 공격 재주
 SHADOWDARK.item.npc_attack_type: 유형
 SHADOWDARK.item.npc_attack.num_damage_dice: 피해 주사위
 SHADOWDARK.item.npc.spell_ability: 주문시전 능력
@@ -701,6 +702,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"

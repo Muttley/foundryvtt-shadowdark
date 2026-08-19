@@ -298,11 +298,10 @@ export default class PlayerSD extends ActorBaseSD {
 	 * @param {*} base base damage formula
 	 */
 	_calcDamageConfig(item, config, key, base=1) {
-
 		config.damageRoll ??= {};
-		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
 		config.damageRoll.base = base;
 		config.damageRoll.explode = false;
+		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
@@ -316,6 +315,16 @@ export default class PlayerSD extends ActorBaseSD {
 				config.damageRoll.base,
 				damageDieRollKey.value
 			);
+		}
+
+		const damageAdvantageKey = this._getActiveEffectKeys(
+			`roll.${key}.damage-advantage`,
+			0,
+			item,
+			config
+		);
+		if (damageAdvantageKey.value) {
+			config.damageRoll.advantage = damageAdvantageKey.value;
 		}
 
 		// Get roll key extra dice
@@ -355,6 +364,7 @@ export default class PlayerSD extends ActorBaseSD {
 
 		// generate tooltips
 		const tooltips = [];
+		tooltips.push(damageAdvantageKey.tooltips);
 		tooltips.push(damageRollKey.tooltips);
 		tooltips.push(damageDieRollKey.tooltips);
 		tooltips.push(extraDieRollKey.tooltips);
@@ -431,7 +441,8 @@ export default class PlayerSD extends ActorBaseSD {
 		this._calcDamageConfig(weapon,
 			config,
 			config.attack.type,
-			weapon.system.getDamageFormula(config.attack.handedness));
+			weapon.system.getDamageFormula(config.attack.handedness)
+		);
 		this._calcAttackExtraConfig(weapon, config);
 
 		return config;

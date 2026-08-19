@@ -100,8 +100,9 @@
 
 	blockquote,
 	table > caption {
-		font-family: "Montserrat-SemiBold";
+		font-family: "Montserrat-Bold";
 		font-size: 16px;
+		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 1.8;
@@ -158,6 +159,7 @@
 		th {
 			padding-left: 10px;
 			padding-right: 10px;
+			text-align: left;
 		}
 	}
 
