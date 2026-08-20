@@ -1,0 +1,57 @@
+<div class="light-settings">
+	<fieldset
+		{{#if item.system.light.active}}
+			data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
+			disabled
+		{{/if}}
+	>
+		<h3>
+			<label for="light-bright-{{item.id}}">
+				{{localize 'SHADOWDARK.item.light.bright_radius'}}
+			</label>
+		</h3>
+		<input
+			id="light-bright-{{item.id}}"
+			name="system.light.bright"
+			type="number"
+			min="0"
+			value="{{item.system.light.bright}}"
+		>
+
+		<h3>
+			<label for="light-dim-{{item.id}}">
+				{{localize 'SHADOWDARK.item.light.dim_radius'}}
+			</label>
+		</h3>
+		<input
+			id="light-dim-{{item.id}}"
+			name="system.light.dim"
+			type="number"
+			min="0"
+			value="{{item.system.light.dim}}"
+		>
+
+		<label>
+			<h3>
+				{{localize 'SHADOWDARK.item.light.color'}}
+			</h3>
+			{{colorPicker
+				name="system.light.color"
+				value=item.system.light.color
+			}}
+		</label>
+
+		<h3>
+			<label for="light-animation-{{item.id}}">
+				{{localize 'SHADOWDARK.item.light.animation'}}
+			</label>
+		</h3>
+		<select id="light-animation-{{item.id}}" name="system.light.animation">
+			{{selectOptions
+				lightAnimations
+				selected=item.system.light.animation
+				localize=false
+			}}
+		</select>
+	</fieldset>
+</div>

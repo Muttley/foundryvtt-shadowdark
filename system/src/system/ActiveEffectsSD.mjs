@@ -1,11 +1,84 @@
 export default class ActiveEffectsSD {
+	static isLightSourceEffect(effect) {
+		return effect.changes?.some(change => [
+			"system.light.isSource",
+			"system.light.template",
+		].includes(change.key));
+	}
+
+
+	static async askLightSourceInput() {
+		const animations = {
+			"": game.i18n.localize("SHADOWDARK.item.light.animation_none"),
+		};
+
+		for (const [key, animation] of Object.entries(CONFIG.Canvas.lightAnimations)) {
+			animations[key] = game.i18n.localize(animation.label);
+		}
+
+		const content = await foundry.applications.handlebars.renderTemplate(
+			"systems/shadowdark/templates/dialog/effect-light-source.hbs",
+			{animations}
+		);
+		const data = {
+			title: game.i18n.localize("SHADOWDARK.item.effect.predefined_effect.lightSource"),
+			content,
+			classes: ["shadowdark-dialog"],
+			buttons: {
+				submit: {
+					label: game.i18n.localize("SHADOWDARK.dialog.submit"),
+					callback: html => {
+						const form = html[0].querySelector("form");
+						return Object.fromEntries(new FormData(form));
+					},
+				},
+			},
+			close: () => false,
+		};
+
+		return Dialog.wait(data);
+	}
+
+
+	static async createLightSourceEffect(owner, data) {
+		const light = await this.askLightSourceInput();
+		if (!light) return;
+
+		const changes = [
+			["system.light.isSource", true],
+			["system.light.bright", Number(light.bright)],
+			["system.light.dim", Number(light.dim)],
+			["system.light.color", light.color],
+			["system.light.animation", light.animation],
+		].map(([effectKey, value]) => ({
+			key: effectKey,
+			value,
+			mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+		}));
+
+		const [newActiveEffect] = await owner.createEmbeddedDocuments(
+			"ActiveEffect",
+			[{
+				name: game.i18n.localize("SHADOWDARK.item.effect.predefined_effect.lightSource"),
+				img: data.img,
+				changes,
+				disabled: false,
+				origin: owner.uuid,
+				transfer: true,
+			}]
+		);
+
+		if (owner.documentName === "Actor") {
+			newActiveEffect.sheet.render(true);
+		}
+	}
 
 	/**
 	 * Creates a dialog that allows the user to pick from a list. Returns
 	 * a slugified name to be used in effect values.
 	 * @param {string} type - Type of input to ask about
 	 * @param {Array<string>} options - The list of options to choose from
-	 * @returns {string}
+	 * @returns {Promise<object>}
 	 */
 	static async askEffectInput(effectParameters) {
 		// const effectParameters = [{key, type, options}, {key, type, options}];
@@ -81,17 +154,27 @@ export default class ActiveEffectsSD {
 		}));
 
 		// If any effects was created without a value, we don't create the item
-		if (itemObj.effects.some(e => e.changes.some(c => c.value === ""))) return ui.notifications.warn(
+		if (itemObj.effects.some(e => e.changes.some(c => (
+			c.value === "" && c.key !== "system.light.animation"
+		)))) return ui.notifications.warn(
 			game.i18n.localize("SHADOWDARK.item.effect.warning.add_effect_without_value")
 		);
 
 		// Activate lightsource tracking
-		if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
+		const lightEffect = itemObj.effects.find(e => this.isLightSourceEffect(e));
+		if (lightEffect) {
 			const duration = itemObj.totalDuration;
 			itemObj.system.light.isSource = true;
 			itemObj.system.light.longevitySecs = duration;
 			itemObj.system.light.remainingSecs = duration;
 			itemObj.system.light.longevityMins = duration / 60;
+
+			for (const change of lightEffect.changes) {
+				const field = change.key.replace("system.light.", "");
+				if (["animation", "bright", "color", "dim"].includes(field)) {
+					itemObj.system.light[field] = change.value;
+				}
+			}
 		}
 
 		return itemObj;
@@ -109,6 +192,9 @@ export default class ActiveEffectsSD {
 		const data = CONFIG.SHADOWDARK.PREDEFINED_EFFECTS[key];
 
 		if (!data) return shadowdark.error(`No effect found (${key})`);
+		if (key === "lightSource") {
+			return this.createLightSourceEffect(owner, data);
+		}
 
 		let defaultValue = "REPLACEME";
 		[defaultValue] = await shadowdark.effects.handlePredefinedEffect(
@@ -185,7 +271,7 @@ export default class ActiveEffectsSD {
 	 * @param {string} effectName - effectKey from mapping
 	 * @param {Object} value - data value from mapping
 	 * @param {Object} name - name value from mapping
-	 * @returns {Object}
+	 * @returns {Promise<Object>}
 	 */
 	static async handlePredefinedEffect(effectName, value, name=null) {
 		if (effectName === "Armor Mastery") {
@@ -194,23 +280,6 @@ export default class ActiveEffectsSD {
 			const options = await shadowdark.utils.getSlugifiedItemList(
 				await shadowdark.compendiums.baseArmor()
 			);
-
-			const chosen = await this.askEffectInput({name, type, options});
-			return chosen[type] ?? [value];
-		}
-		else if (effectName === "lightSource") {
-			const type = "lightsource";
-
-			// TODO Need to move to light source objects to allow customisation
-			//
-			const lightSourceList = await foundry.utils.fetchJsonWithTimeout(
-				"systems/shadowdark/assets/mappings/map-light-sources.json"
-			);
-
-			const options = {};
-			Object.keys(lightSourceList).map(i => {
-				return options[i] = game.i18n.localize(lightSourceList[i].lang);
-			});
 
 			const chosen = await this.askEffectInput({name, type, options});
 			return chosen[type] ?? [value];
@@ -245,7 +314,7 @@ export default class ActiveEffectsSD {
 	 * @param {Item} item - Item that has the effects
 	 * @param {*} effect - The effect being analyzed
 	 * @param {*} key - Optional key if it isn't a unique system.bonuses.key
-	 * @returns {Object} - Object updated with the changes
+	 * @returns {Promise<Object>} - Object updated with the changes
 	 */
 	static async modifyEffectChangesWithInput(item, effect) {
 		// Create an object out of the item to modify before creating

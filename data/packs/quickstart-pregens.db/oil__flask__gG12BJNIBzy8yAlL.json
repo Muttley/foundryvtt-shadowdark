@@ -20,11 +20,15 @@
 		"isAmmunition": false,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"bright": 15,
+			"color": "#d1c846",
+			"dim": 60,
 			"hasBeenUsed": false,
 			"isSource": true,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "lantern"
+			"template": ""
 		},
 		"magicItem": false,
 		"properties": [
