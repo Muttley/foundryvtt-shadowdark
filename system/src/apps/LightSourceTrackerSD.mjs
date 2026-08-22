@@ -65,32 +65,7 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		html.find(".disable-all-lights").click(
 			async event => {
 				event.preventDefault();
-
-				shadowdark.debug("Turning out all the lights");
-
-				if (this.monitoredLightSources.length <= 0) return;
-
-				for (const actorData of this.monitoredLightSources) {
-					if (actorData.lightSources.length <= 0) continue;
-
-					const actor = game.actors.get(actorData._id);
-
-					await actor.turnLightOff();
-
-					for (const itemData of actorData.lightSources) {
-						shadowdark.debug(`Turning off ${actor.name}'s ${itemData.name} light source`);
-
-						if (itemData.type === "Effect") {
-							await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
-						}
-						else {
-							await actor.updateEmbeddedDocuments("Item", [{
-								"_id": itemData._id,
-								"system.light.active": false,
-							}]);
-						}
-					}
-				}
+				await this._turnOutAllLights();
 
 				const cardData = {
 					img: "icons/magic/perception/shadow-stealth-eyes-purple.webp",
@@ -154,6 +129,34 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 				this.render(false);
 			}
 		);
+	}
+
+	async _turnOutAllLights() {
+		shadowdark.debug("Turning out all the lights");
+
+		if (this.monitoredLightSources.length <= 0) return;
+
+		for (const actorData of this.monitoredLightSources) {
+			if (actorData.lightSources.length <= 0) continue;
+
+			const actor = game.actors.get(actorData._id);
+
+			await actor.turnLightOff();
+
+			for (const itemData of actorData.lightSources) {
+				shadowdark.debug(`Turning off ${actor.name}'s ${itemData.name} light source`);
+
+				if (itemData.type === "Effect") {
+					await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+				}
+				else {
+					await actor.updateEmbeddedDocuments("Item", [{
+						"_id": itemData._id,
+						"system.light.active": false,
+					}]);
+				}
+			}
+		}
 	}
 
 	/**
@@ -335,7 +338,13 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 		}
 	}
 
-	async toggleLightSource(actor, item) {
+	/**
+	 * toggle a light source
+	 * @param actor
+	 * @param item
+	 * @param {"SEPARATE"|"RIDEALONG"|"EXTINGUISH"} behaviour
+	 */
+	async toggleLightSource(actor, item, behaviour) {
 		if (this._isDisabled()) return;
 
 		if (!game.user.isGM) {
@@ -346,10 +355,35 @@ export default class LightSourceTrackerSD extends foundry.appv1.api.Application 
 					data: {
 						actor,
 						item,
+						behaviour,
 					},
 				}
 			);
 			return;
+		}
+		const activeLightSources = this.monitoredLightSources
+			.map(source => source.lightSources)
+			.flat();
+
+		if (behaviour === "RIDEALONG") {
+			// if there are no active light sources already, then behave like normal
+			if (activeLightSources.length > 0) {
+				const lightOwner = game.actors.find(actor => actor.items.get(item._id));
+				const minRemainingSecs = activeLightSources.reduce(
+					(a, b) =>
+						a < b.system.light.remainingSecs ? a : b.system.light.remainingSecs,
+					Number.MAX_SAFE_INTEGER
+				);
+				await lightOwner.updateEmbeddedDocuments("Item", [
+					{
+						"_id": item._id,
+						"system.light.remainingSecs": minRemainingSecs,
+					},
+				]);
+			}
+		}
+		else if (behaviour === "EXTINGUISH") {
+			this._turnOutAllLights();
 		}
 
 		const status = item.system.light.active ? "on" : "off";

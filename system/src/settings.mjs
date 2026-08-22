@@ -4,7 +4,6 @@ import SourceFilterSettings from "./apps/SourceFilterSettings.mjs";
  * Register all of the system"s settings.
  */
 export default function registerSystemSettings() {
-
 	// -----------------
 	//  Content Sources
 	// -----------------
@@ -120,6 +119,21 @@ export default function registerSystemSettings() {
 		default: true,
 		type: Boolean,
 		onChange: () => game.shadowdark.lightSourceTracker._settingsChanged(),
+	});
+
+	game.settings.register("shadowdark", "realtimeLightBehaviour", {
+		name: "SHADOWDARK.settings.track_light_sources.behaviour.name",
+		hint: "SHADOWDARK.settings.track_light_sources.behaviour.hint",
+		scope: "world",
+		config: true,
+		default: 0,
+		type: Number,
+		choices: {
+			0: "SHADOWDARK.settings.track_light_sources.behaviour.separate",
+			1: "SHADOWDARK.settings.track_light_sources.behaviour.ride_along",
+			2: "SHADOWDARK.settings.track_light_sources.behaviour.extinguish_others",
+			3: "SHADOWDARK.settings.track_light_sources.behaviour.ride_along_or_extinguish",
+		},
 	});
 
 	game.settings.register("shadowdark", "pauseLightTrackingWithGame", {
@@ -266,5 +280,4 @@ export default function registerSystemSettings() {
 		default: false,
 		requiresReload: true,
 	});
-
 }

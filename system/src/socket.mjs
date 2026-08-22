@@ -46,7 +46,8 @@ export default function listenOnSocket() {
 		if (event.type === "toggleLightSource" && game.user.isGM) {
 			game.shadowdark.lightSourceTracker.toggleLightSource(
 				event.data.actor,
-				event.data.item
+				event.data.item,
+				event.data.behaviour
 			);
 		}
 	});

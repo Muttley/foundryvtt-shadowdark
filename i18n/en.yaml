@@ -36,12 +36,12 @@ SHADOWDARK.app.item_properties.save: Save
 SHADOWDARK.app.item_properties.talent.effects.title: Talent Effect Types
 SHADOWDARK.app.item_properties.title: Properties
 SHADOWDARK.app.item_properties.weapon.title: Weapon Properties
-SHADOWDARK.app.light_tracker.minute_short: min
-SHADOWDARK.app.light_tracker.minutes_short: mins
-SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.app.light-tracker.douse-light: Douse Light
 SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
+SHADOWDARK.app.light_tracker.minute_short: min
+SHADOWDARK.app.light_tracker.minutes_short: mins
 SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
+SHADOWDARK.app.light_tracker.title: Light Tracker
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
 SHADOWDARK.app.loading.body: Searching Distant Lands...
 SHADOWDARK.app.loading.title: Loading
@@ -79,6 +79,8 @@ SHADOWDARK.apps.effect_panel.duration_label.x_hours: "{hours} Hours Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_minutes: "{minutes} Minutes Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_rounds: "{rounds} Rounds Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_seconds: "{seconds} Seconds Remaining"
+SHADOWDARK.apps.light_source.behaviour.prompt: Should this new light ride along on the current timer, or extinguish other lights?
+SHADOWDARK.apps.light_source.behaviour.title: How should this light behave?
 SHADOWDARK.apps.effect_panel.duration_label.x_weeks: "{weeks} Weeks Remaining"
 SHADOWDARK.apps.effect_panel.duration_label.x_years: "{years} Years Remaining"
 SHADOWDARK.apps.effect_panel.right_click_to_remove: "[Right click] Remove effect"
@@ -746,12 +748,22 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User 
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
+SHADOWDARK.settings.track_light_sources.only_one.hint: Any newly lit light extinguishes other lights
+SHADOWDARK.settings.track_light_sources.only_one.name: One light at a time
 SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
 SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
+SHADOWDARK.settings.track_light_sources.behaviour.name: Light Tracking Behaviour
+SHADOWDARK.settings.track_light_sources.behaviour.separate: Track Separately
+SHADOWDARK.settings.track_light_sources.behaviour.ride_along: Ride-Along on Current Timer
+SHADOWDARK.settings.track_light_sources.behaviour.extinguish_others: Extinguish Other Light Sources
+SHADOWDARK.settings.track_light_sources.behaviour.ride_along_or_extinguish: Ride-Along or Extinguish (Prompt)
+SHADOWDARK.settings.track_light_sources.behaviour.hint: How new real-time light sources should behave.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.
 SHADOWDARK.settings.track_light_sources.realtime_tracking.name: Realtime Light Tracking
+SHADOWDARK.settings.track_light_sources.ride_along.hint: Any newly lit light sources will ride along on the current light timer.
+SHADOWDARK.settings.track_light_sources.ride_along.name: Realtime Light Ride-Along
 SHADOWDARK.settings.track_light_sources.show_remaining.hint: Controls if players can see remaining time left on light sources.
 SHADOWDARK.settings.track_light_sources.show_remaining.name: "Show Players Light Remaining"
 SHADOWDARK.settings.track_light_sources.show_remaining.option0: None
