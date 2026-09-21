@@ -777,6 +777,57 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _toggleLightSource(item, options = {}) {
 		const active = !item.system.light.active;
 
+		const realtimeLightBehaviour = game.settings.get("shadowdark",  "realtimeLightBehaviour");
+
+		let behaviour;
+
+		if (!active || realtimeLightBehaviour === 0) {
+			// If we are extinguishing a light, then it should just behave like a
+			// separately tracked light
+			behaviour = "SEPARATE";
+		}
+		else if (realtimeLightBehaviour === 1) { // ride-along
+			behaviour = "RIDEALONG";
+		}
+		else if (realtimeLightBehaviour === 2) { // extinguish others
+			behaviour = "EXTINGUISH";
+		}
+		else if (realtimeLightBehaviour === 3) { // a choice of ride-along or extinguish
+			behaviour = await foundry.applications.api.DialogV2.wait({
+				window: {
+					title: game.i18n.localize(
+						"SHADOWDARK.apps.light_source.behaviour.title"
+					),
+				},
+				content: `<p>${game.i18n.localize(
+					"SHADOWDARK.apps.light_source.behaviour.prompt"
+				)}</p>`,
+				buttons: [
+					{
+						action: "rideAlong",
+						icon: "fa-solid fa-clock",
+						label: game.i18n.localize(
+							"SHADOWDARK.settings.track_light_sources.behaviour.ride_along"
+						),
+						callback: () => "RIDEALONG",
+						default: true,
+					},
+					{
+						action: "extinguish",
+						icon: "fa-solid fa-fire-extinguisher",
+						label: game.i18n.localize(
+							"SHADOWDARK.settings.track_light_sources.behaviour.extinguish_others"
+						),
+						callback: () => "EXTINGUISH",
+					},
+				],
+				rejectClose: false,
+			});
+		}
+
+		// If no behaviour is selected, cancel the lighting
+		if (!behaviour) return;
+
 		if (active) {
 			// Find any currently active lights and turn them off
 			const activeLightSources = await this.actor.getActiveLightSources();
@@ -789,6 +840,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				);
 			}
 		}
+
 
 		const dataUpdate = {
 			"_id": item.id,
@@ -812,7 +864,8 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			this._sendToggledLightSourceToChat(active, item, options);
 			game.shadowdark.lightSourceTracker.toggleLightSource(
 				this.actor,
-				updatedLight
+				updatedLight,
+				behaviour
 			);
 		}
 	}
