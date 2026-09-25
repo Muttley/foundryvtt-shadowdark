@@ -1,15 +1,9 @@
 # v4.1.0
 
-## Enhancements
-- [#1380] Replace Light Tracker UI element as ApplicationV2
-- [#1315] Added metric conversion for light sources.
-
----
-
-# v4.0.7
-
 # Enhancements
+- [#1315] Added metric conversion for light sources.
 - [#1376] Update the Monster Importer to handle various publisher quirks
+- [#1380] Replace Light Tracker UI element as ApplicationV2
 - [#1389] Allow drag/drop of languages onto character sheet
 - [#1391] Fixed active effects on +1 to Weapon Attacks and Damage talents
 - [#1394] Added Double Near as a selectable weapon range
