@@ -18,6 +18,7 @@
 	* You are now warned if you try to use the level up tool on a character that has no Class set
 - [#1382] Error when adding +1 Dex level up talent to character
 - [#1388] Weapon Mastery talent using the incorrect attribute keys
+- [#1390] Weapon Properties Break with Translation Modules (Babele)
 - [#1395] Item description to chat fails in v14 when global chat is set to Public in Character
 - [#1410] Characters with the Stout talent get +2 added every level up HP roll, instead of just the first level
 - [#1418] Class alignment restrictions defaulting to neutral instead of empty string
