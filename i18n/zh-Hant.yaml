@@ -628,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: 光亮術（中距離）
 SHADOWDARK.light_source.torch: 火把
 SHADOWDARK.light-source.dropped: '{name} 丟了'
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: 拾取光源
-SHADOWDARK.light-tracker.active: 啟用中
-SHADOWDARK.light-tracker.paused: 已暫停
-SHADOWDARK.light-tracker.status.label: 狀態
-SHADOWDARK.light-tracker.title: 光源追蹤器
-SHADOWDARK.light-tracker.user_warning: 一位或多位使用者尚未選擇角色
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "'{macro}' 巨集執行失敗，錯誤如下：{error}"
 SHADOWDARK.macro.error.gm_role_required: '''{macro}'' 巨集需擁有 ''遊戲主持人'' 角色權限'
 SHADOWDARK.macro.success: '''{macro}'' 巨集執行成功'
@@ -645,9 +642,11 @@ SHADOWDARK.module_art_config.portraits: 頭像
 SHADOWDARK.module_art_config.tokens: 代幣
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: 當啟用順時針先攻時，僅遊戲主持人可擲先攻骰。
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: 物理
 SHADOWDARK.npc_attack.type.special: 特殊
 SHADOWDARK.npc_move.close: 近距離
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: 雙倍中距離
 SHADOWDARK.npc_move.far: 遠距離
 SHADOWDARK.npc_move.near: 中距離
@@ -748,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: 追蹤非活躍使�
 SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率，單位為秒。
 SHADOWDARK.settings.track_light_sources.interval.name: 光源追蹤間隔
 SHADOWDARK.settings.track_light_sources.name: 追蹤光源
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）。
-SHADOWDARK.settings.track_light_sources.open_on_start.name: 啟動時開啟光源追蹤介面
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停。
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 暫停光源追蹤
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 若勾選，光源追蹤將依照真實時間進行。若使用外部時間或日曆模組，請停用此選項。
