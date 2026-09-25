@@ -257,7 +257,7 @@ export default class NpcSD extends ActorBaseSD {
 
 		shadowdark.dice.initializeD20Check(config);
 		config.mainRoll.label = game.i18n.localize("SHADOWDARK.roll.spell_cast");
-		config.mainRoll.dc ??= spell.system?.dc;
+		config.mainRoll.dc = spell.system?.dc;
 
 		const spellRollKey = this._getActiveEffectKeys(
 			"system.roll.spell.bonus",

@@ -24,6 +24,7 @@
 - [#1390] Weapon Properties Break with Translation Modules (Babele) *(luizrcb)*
 - [#1395] Item description to chat fails in v14 when global chat is set to Public in Character
 - [#1410] Characters with the Stout talent get +2 added every level up HP roll, instead of just the first level
+- [#1417] NPC Spell Attacks incorrectly using targetted actors AC instead of a configured spell DC
 - [#1418] Class alignment restrictions defaulting to neutral instead of empty string
 - [#1419] Spell Importer should use uuid field, not build it manually
 - [#1421] Unable to add negative attack bonus to NPC Attacks
