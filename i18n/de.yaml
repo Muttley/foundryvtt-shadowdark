@@ -628,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: Lichtzauber (Nah)
 SHADOWDARK.light_source.torch: Fackel
 SHADOWDARK.light-source.dropped: '{name} fallen gelassen'
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Lichtquelle aufheben
-SHADOWDARK.light-tracker.active: Aktiv
-SHADOWDARK.light-tracker.paused: Pausiert
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Licht-Tracker
-SHADOWDARK.light-tracker.user_warning: Ein oder mehrere Benutzer haben kein Charakter ausgewählt
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "Das '{macro}' ist mit dem folgenden Fehler fehlgeschlagen: {error}"
 SHADOWDARK.macro.error.gm_role_required: Das '{macro}' Makro benötigt die Spielleiter Berechtigung
 SHADOWDARK.macro.success: '''{macro}'' Makro erfolgreich abgeschlossen'
@@ -645,6 +642,7 @@ SHADOWDARK.module_art_config.portraits: Porträts
 SHADOWDARK.module_art_config.tokens: Token
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Wenn die Initiative im Uhrzeigersinn aktiviert ist, kann nur der SL die Initiative würfeln.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Physisch
 SHADOWDARK.npc_attack.type.special: Spezial
 SHADOWDARK.npc_move.close: Direkt
@@ -749,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Lichtquellen inaktiv
 SHADOWDARK.settings.track_light_sources.interval.hint: Wie häufig erfasste Lichtquellen in Minuten aktualisiert werden.
 SHADOWDARK.settings.track_light_sources.interval.name: Licht-Tracking-Intervall
 SHADOWDARK.settings.track_light_sources.name: Lichtquellen tracken
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Wenn aktiviert, wird die Licht Tracking Schnittstelle beim Start geöffnet (nur GM).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Light Tracking UI beim Start öffnen
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Wenn aktiviert, wird Licht Tracking pausiert, wann immer Foundry pausiert wird.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Licht-Tracking pausieren
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Wenn aktiviert, folgt die Lichtverfolgung in Echtzeit. Wenn Deaktiviert, wird ein externes Zeit-/Kalendermodul verwendet.
