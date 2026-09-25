@@ -11,13 +11,13 @@ export default class NpcAttackSD extends BaseItemSD {
 				num: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
 			}),
 			bonuses: new fields.SchemaField({
-				attackBonus: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+				attackBonus: new fields.NumberField({ integer: true, initial: 0 }),
 				critical: new fields.SchemaField({
 					failureThreshold: new fields.NumberField({ integer: true, initial: 1}),
 					multiplier: new fields.NumberField({ integer: true, initial: 2}),
 					successThreshold: new fields.NumberField({ integer: true, initial: 20}),
 				}),
-				damageBonus: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+				damageBonus: new fields.NumberField({ integer: true, initial: 0 }),
 			}),
 			damage: new fields.SchemaField({
 				numDice: new fields.NumberField({ integer: true, initial: 1, min: 1 }),

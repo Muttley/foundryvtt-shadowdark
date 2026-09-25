@@ -115,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
 SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.request-check.copied: Copied to Clipboard
@@ -644,6 +646,7 @@ SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker 
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Close
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: Double Near
 SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Near

@@ -29,6 +29,9 @@ export default class ImporterSD extends foundry.applications.api.HandlebarsAppli
 		const text = formData.object[config.textField];
 		const errorList = form.querySelector(".import-errors");
 
+		const keepOpen = formData.object.keepWindowOpen ?? false;
+		const openNewDocument = formData.object.openNewDocument ?? true;
+
 		// Clear previous errors
 		if (errorList) {
 			errorList.replaceChildren();
@@ -41,8 +44,14 @@ export default class ImporterSD extends foundry.applications.api.HandlebarsAppli
 				`Successfully Created: ${newDoc.name} [${newDoc._id}]`
 			);
 			ui.sidebar.activateTab(config.sidebarTab);
-			this.close();
-			newDoc.sheet.render(true);
+
+			if (!keepOpen) {
+				this.close();
+			}
+
+			if (openNewDocument) {
+				newDoc.sheet.render(true);
+			}
 		}
 		catch(error) {
 			if (error.details && errorList) {

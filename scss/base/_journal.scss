@@ -98,6 +98,24 @@
 		margin: 0 0 0.5rem;
 	}
 
+	div.spell {
+		.header {
+			font-family: "Montserrat-Bold";
+			font-size: 1.4em;
+			background: black;
+			color: white;
+			margin: 0 0 0.5rem;
+			padding: 0.2rem;
+			text-align: center;
+		}
+
+		.tags {
+			font-size: 1.1em;
+			font-style: italic;
+		}
+
+	}
+
 	blockquote,
 	table > caption {
 		font-family: "Montserrat-Bold";
