@@ -452,7 +452,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		const movement = this._parseMovement(stats.MV);
 		const notesText = this._generateNotesText(statBlock, flavorTextParagraphs, features);
 
-		const slugName = titleName.slugify();
+		// const slugName = titleName.slugify();
 
 		return {
 			name: titleName,
