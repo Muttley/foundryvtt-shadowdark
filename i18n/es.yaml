@@ -628,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: Hechizo de Luz (Rango Cercano)
 SHADOWDARK.light_source.torch: Antorcha
 SHADOWDARK.light-source.dropped: '{name}'
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Recoger fuente de luz
-SHADOWDARK.light-tracker.active: Activo
-SHADOWDARK.light-tracker.paused: En pausa
-SHADOWDARK.light-tracker.status.label: Estado
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: Uno o más usuarios no han seleccionado un personaje
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "La '{macro}' macro ha fallado por el siguiente error: {error}"
 SHADOWDARK.macro.error.gm_role_required: La macro '{macro}' requiere que tengas el rol de usuario 'Maestro de Juego'
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
@@ -645,6 +642,7 @@ SHADOWDARK.module_art_config.portraits: Retratos
 SHADOWDARK.module_art_config.tokens: Fichas
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
 SHADOWDARK.npc_move.close: Rango Melee
@@ -749,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Rastrear fuentes de 
 SHADOWDARK.settings.track_light_sources.interval.hint: Con qué frecuencia se actualizarán las fuentes de luz en segundos.
 SHADOWDARK.settings.track_light_sources.interval.name: Intervalo de seguimiento de luces
 SHADOWDARK.settings.track_light_sources.name: Seguimiento de fuentes de luz
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Si está marcado, la interfaz de seguimiento de luz se abrirá al iniciar (sólo GM).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Abrir IU de seguimiento de luz al iniciar
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Si está marcado, el Seguimiento de Luz en Tiempo Real se detendrá cada vez que se pausa Foundry
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento de luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.
