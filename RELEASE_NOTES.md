@@ -22,6 +22,7 @@
 - [#1410] Characters with the Stout talent get +2 added every level up HP roll, instead of just the first level
 - [#1418] Class alignment restrictions defaulting to neutral instead of empty string
 - [#1419] Spell Importer should use uuid field, not build it manually
+- [#1421] Unable to add negative attack bonus to NPC Attacks
 
 # Chores
 - [#1369] Merge Spanish translation updates from Crowdin

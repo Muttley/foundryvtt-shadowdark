@@ -11,7 +11,7 @@ export default class NpcSpecialAttackSD extends BaseItemSD {
 				num: new fields.NumberField({ integer: true, initial: 1, min: 1 }),
 			}),
 			bonuses: new fields.SchemaField({
-				attackBonus: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+				attackBonus: new fields.NumberField({ integer: true, initial: 0 }),
 			}),
 		};
 
