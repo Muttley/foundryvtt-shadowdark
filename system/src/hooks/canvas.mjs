@@ -26,11 +26,11 @@ export const CanvasHooks = {
 				catch(error) {
 					shadowdark.log(`Couldn't read anything: ${error}`);
 				}
-				// If the item is an effect or one of the lightsource items,
+				// If the item is an effect or an automatically activated light source,
 				// we want to emulate dropping the item on the sheet.
 				if (
 					item.type === "Effect"
-					|| CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item._id)
+					|| item.system.light?.autoActivate
 				) {
 					actor.sheet.emulateItemDrop(data);
 					return false; // Stop modules for doing anything further

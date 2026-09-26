@@ -20,11 +20,16 @@
 		"isAmmunition": false,
 		"light": {
 			"active": false,
+			"animation": "",
+			"autoActivate": true,
+			"bright": 60,
+			"color": "#ffffff",
+			"dim": 0,
 			"hasBeenUsed": false,
 			"isSource": true,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "lightSpellDouble"
+			"template": ""
 		},
 		"magicItem": false,
 		"properties": [

@@ -26,6 +26,13 @@
 		line-height: 1.75;
 	}
 
+	.light-settings fieldset {
+		border: 0;
+		margin: 0;
+		min-width: 0;
+		padding: 0;
+	}
+
 	.tab-description.active {
 		height: 100%;
 		display: grid;
