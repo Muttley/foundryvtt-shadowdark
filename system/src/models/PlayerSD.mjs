@@ -581,6 +581,16 @@ export default class PlayerSD extends ActorBaseSD {
 			);
 		}
 
+		const spellAlignment = linkedSpell.system?.alignment ?? "";
+
+		if (spellAlignment !== "") {
+			if (spellAlignment !== this.alignment) {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.error.spells.alignment_mismatch")
+				);
+			}
+		}
+
 		const characterClass = await this.getClass();
 
 		const spellcastingAttribute =
@@ -676,6 +686,16 @@ export default class PlayerSD extends ActorBaseSD {
 			return ui.notifications.error(
 				game.i18n.localize("SHADOWDARK.error.spells.spell_not_found")
 			);
+		}
+
+		const spellAlignment = spell.system?.alignment ?? "";
+
+		if (spellAlignment !== "") {
+			if (spellAlignment !== this.alignment) {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.error.spells.alignment_mismatch")
+				);
+			}
 		}
 
 		config.actorUuid = this.parent.uuid;

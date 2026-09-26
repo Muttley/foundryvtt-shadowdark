@@ -1,6 +1,7 @@
 # v4.1.0
 
 # Enhancements
+- [#1124] Add support for spells that can only be used by a character of the correct alignment
 - [#1315] Added metric conversion for light sources.
 - [#1376] Update the Monster Importer to handle various publisher quirks
 - [#1380] Replace Light Tracker UI element as ApplicationV2
