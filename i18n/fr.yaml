@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Aucun personnage sélectionné
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Impossible d'ajouter le protecteur car la classe actuellement configurée ne le permet pas
 SHADOWDARK.error.source.source_missing: Source manquante ou inconnue...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -564,6 +565,7 @@ SHADOWDARK.item.properties.label: Propriétés de l'Objet
 SHADOWDARK.item.scroll.label: Parchemin
 SHADOWDARK.item.source_tag: Étiquette de Source
 SHADOWDARK.item.source: Source
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Classes de lanceurs de sorts
 SHADOWDARK.item.spell_class: Lanceur de sorts
 SHADOWDARK.item.spell_duration: Durée
