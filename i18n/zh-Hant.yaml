@@ -524,6 +524,12 @@ SHADOWDARK.item.inventory_per_slot: 每格最大數量
 SHADOWDARK.item.inventory_quantity: 數量
 SHADOWDARK.item.inventory_slots: 每個物品佔用欄位
 SHADOWDARK.item.level: 等級
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.animation_none: None
+SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.bright_radius: Bright Radius
+SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: 光源啟用時無法編輯此欄位
 SHADOWDARK.item.light.is_source: 光源
 SHADOWDARK.item.light.longevity: 持續時間（分鐘）
