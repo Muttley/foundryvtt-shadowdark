@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: No se ha seleccionado ningún to
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: No se puede agregar patrón, ya que la clase configurada actualmente no lo permite
 SHADOWDARK.error.source.source_missing: Fuente faltante o desconocida...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -564,6 +565,7 @@ SHADOWDARK.item.properties.label: Propiedades del Objeto
 SHADOWDARK.item.scroll.label: Pergamino
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Fuente
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Clases de hechicero
 SHADOWDARK.item.spell_class: Clase de Hechizos
 SHADOWDARK.item.spell_duration: Duración
