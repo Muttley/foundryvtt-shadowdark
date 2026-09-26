@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Снаряжение
 SHADOWDARK.apps.character-generator.gold: Золото
 SHADOWDARK.apps.character-generator.name: Имя персонажа
 SHADOWDARK.apps.character-generator.see_details: Просмотреть детали
-SHADOWDARK.apps.character-generator.sidebar_create: Создать
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: "Импортировать\n"
 SHADOWDARK.apps.character-generator.starting_gear: Стартовое снаряжение
 SHADOWDARK.apps.character-generator.success: Персонаж создан
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Импортировать предмет
 SHADOWDARK.apps.level-up.dragdrop: Перетащите сюда
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Не удается выбрать дар Покровителя, так как конфигурация Таблицы Бросков не загружена
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Очки Здоровья
 SHADOWDARK.apps.level-up.level_up: Повышение уровня!
 SHADOWDARK.apps.level-up.leveling_to: Повышение до уровня
@@ -114,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Описание
 SHADOWDARK.apps.monster-importer.instruction2d: Основной блок характеристик
 SHADOWDARK.apps.monster-importer.instruction2e: Особенность
 SHADOWDARK.apps.monster-importer.instruction3: 3. Нажмите "Импортировать монстра".
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Импортировать монстра
 SHADOWDARK.apps.request-check.copied: Скопировано в буфер обмена
@@ -549,8 +552,8 @@ SHADOWDARK.item.name: Название предмета
 SHADOWDARK.item.npc_attack_bonus: Бонус к атаке
 SHADOWDARK.item.npc_attack_count: Кол-во Атак
 SHADOWDARK.item.npc_attack_damage_formula: Формула урона
-SHADOWDARK.item.npc_attack_special: Особенности атаки
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Особенности атаки
 SHADOWDARK.item.npc_attack_type: Тип
 SHADOWDARK.item.npc_attack.num_damage_dice: Кол-во кубиков урона
 SHADOWDARK.item.npc.spell_ability: Заклинательная характеристика
@@ -625,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: Заклинание света (Бл�
 SHADOWDARK.light_source.torch: Факел
 SHADOWDARK.light-source.dropped: Выронен {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Поднять источник света
-SHADOWDARK.light-tracker.active: Активен
-SHADOWDARK.light-tracker.paused: На паузе
-SHADOWDARK.light-tracker.status.label: Статус
-SHADOWDARK.light-tracker.title: Трекер освещения
-SHADOWDARK.light-tracker.user_warning: Один или несколько пользователей не выбрали персонажа
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "Макрос '{macro}' завершился с ошибкой: {error}"
 SHADOWDARK.macro.error.gm_role_required: Для макроса '{macro}' требуется роль 'Мастер игры'
 SHADOWDARK.macro.success: Макрос '{macro}' успешно выполнен
@@ -642,9 +642,11 @@ SHADOWDARK.module_art_config.portraits: Портреты
 SHADOWDARK.module_art_config.tokens: Жетоны
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Когда включена инициатива по часовой стрелке, только Мастер может бросать инициативу.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Физическая
 SHADOWDARK.npc_attack.type.special: Особая
 SHADOWDARK.npc_move.close: Вплотную
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: Близко х2
 SHADOWDARK.npc_move.far: Далеко
 SHADOWDARK.npc_move.near: Близко
@@ -701,6 +703,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
@@ -744,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Отслеживат
 SHADOWDARK.settings.track_light_sources.interval.hint: Как часто будут обновляться отслеживаемые источники света, в секундах.
 SHADOWDARK.settings.track_light_sources.interval.name: Интервал отслеживания света
 SHADOWDARK.settings.track_light_sources.name: Отслеживать источники света
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Если отмечено, интерфейс отслеживания света будет открываться при запуске (только для GM).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Открывать интерфейс отслеживания света при запуске
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Если отмечено, отслеживание света в реальном времени будет приостанавливаться всякий раз, когда Foundry приостанавливается.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Приостанавливать отслеживание света
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Если отмечено, отслеживание света будет следовать реальному времени. Отключите, если используется внешний модуль времени/календаря.

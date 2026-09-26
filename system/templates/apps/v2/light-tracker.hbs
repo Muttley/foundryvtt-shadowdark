@@ -1,0 +1,80 @@
+<div class="lightTracker">
+	<div id="lightTracker-list" class="flexcol">
+		<div class="players-list plain scrollable flexcol" data-tooltip-direction="RIGHT">
+			{{#each monitoredLightSources as |actor|}}
+				{{#if actor.showOnTracker}}
+				<div class="grid-2-columns" style="grid-template-columns: max-content 1fr; margin-bottom: 8px;">
+					<div
+						style="cursor: pointer;"
+					>
+						<img
+							src="{{actor.img}}"
+							height="32"
+							width="32"
+							data-action="openCharacterSheet"
+							data-actor-id="{{actor._id}}"
+							data-tooltip="{{localize "SHADOWDARK.light-tracker.open_character_sheet"}}"
+						/>
+					</div>
+
+					<div>
+						<div>
+							{{actor.name}}
+						</div>
+						<div class="light-sources">
+							{{#each actor.lightSources as |light|}}
+								<div class="light-source">
+									<a
+										data-action="douse"
+										data-actor-id="{{actor._id}}"
+										data-item-id="{{light._id}}"
+										data-tooltip="{{localize 'SHADOWDARK.app.light-tracker.douse-light'}}"
+									>
+										<i class="flame fa-solid fa-fire-flame-curved" style="color: darkorange;"></i>
+									</a>
+									{{light.name}}
+									({{secondsToMins light.system.light.remainingSecs}}
+									{{#ifCond light.system.light.remainingSecs '<=' 60}}
+										{{localize 'SHADOWDARK.app.light_tracker.minute_short'}})
+									{{else}}
+										{{localize 'SHADOWDARK.app.light_tracker.minutes_short'}})
+									{{/ifCond}}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+				{{/if}}
+			{{/each}}
+		</div>
+		<div id="lightTracker-status" class="flexrow">
+			<div>
+				{{#ifCond activeLightSourceCount "<=" 0}}
+					{{localize "SHADOWDARK.light-tracker.no-active"}}
+				{{/ifCond}}
+			</div>
+
+			<button
+				id="lightTracker-turn-off"
+				type="button"
+				class="icon fa-solid fa-face-fearful"
+				data-action="lightsOut"
+				data-tooltip="{{localize "SHADOWDARK.app.light-tracker.turn-out-the-lights"}}"
+			></button>
+
+			<button
+				id="lightTracker-expand"
+				type="button"
+				{{#if showAllPlayerActors}}
+					class="icon fa-solid fa-caret-down"
+					data-tooltip="{{localize "SHADOWDARK.app.light-tracker.hide-inactive"}}"
+				{{else}}
+					class="icon fa-solid fa-caret-up"
+					data-tooltip="{{localize "SHADOWDARK.app.light-tracker.show-all-actors"}}"
+				{{/if}}
+				data-action="expand"
+			></button>
+		</div>
+	</div>
+
+</div>

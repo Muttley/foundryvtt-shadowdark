@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Karaktärsnamn
 SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Importera föremål
 SHADOWDARK.apps.level-up.dragdrop: Drag and Drop Here
 SHADOWDARK.apps.level-up.errors.missing_boon_table: Unable to roll Patron Boon as the configured RollTable could not be loaded
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Hit Points
 SHADOWDARK.apps.level-up.level_up: Level Up!
 SHADOWDARK.apps.level-up.leveling_to: Leveling up to level
@@ -114,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Beskrivande text
 SHADOWDARK.apps.monster-importer.instruction2d: Primärt statistikblock
 SHADOWDARK.apps.monster-importer.instruction2e: Egenskap
 SHADOWDARK.apps.monster-importer.instruction3: 3. Klicka på Importera Monster.
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Importera monster
 SHADOWDARK.apps.request-check.copied: Copied to Clipboard
@@ -549,8 +552,8 @@ SHADOWDARK.item.name: Item Name
 SHADOWDARK.item.npc_attack_bonus: Attackbonus
 SHADOWDARK.item.npc_attack_count: Antal Attacker
 SHADOWDARK.item.npc_attack_damage_formula: Skadeformel
-SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Special
 SHADOWDARK.item.npc_attack_type: Typ
 SHADOWDARK.item.npc_attack.num_damage_dice: Antal skadetärningar
 SHADOWDARK.item.npc.spell_ability: Besvärjelseförmåga
@@ -625,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: Ljusmagi (Nära)
 SHADOWDARK.light_source.torch: Fackla
 SHADOWDARK.light-source.dropped: Släppte {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Plocka upp ljuskälla
-SHADOWDARK.light-tracker.active: Aktiv
-SHADOWDARK.light-tracker.paused: Pausad
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: En eller flera användare har inte valt en karaktär
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "Makro '{macro}' misslyckades med följande fel: {error}"
 SHADOWDARK.macro.error.gm_role_required: Makro '{macro}' kräver att du har användarrollen 'Game Master'
 SHADOWDARK.macro.success: Makro '{macro}' slutfört framgångsrikt
@@ -642,9 +642,11 @@ SHADOWDARK.module_art_config.portraits: Porträtt
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: När medsols initiativ är aktiverat, kan endast GM rulla initiativ.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Fysisk
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Nära
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: Dubbelnära
 SHADOWDARK.npc_move.far: Långt
 SHADOWDARK.npc_move.near: Nära
@@ -701,6 +703,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
@@ -744,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Spåra inaktiva anv�
 SHADOWDARK.settings.track_light_sources.interval.hint: Hur ofta ska ljuskällor uppdateras, angivet i sekunder.
 SHADOWDARK.settings.track_light_sources.interval.name: Uppdateringsintervall för ljus
 SHADOWDARK.settings.track_light_sources.name: Spåra ljuskällor
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Om markerad kommer ljusspårning visas vid start (enbart SL).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Öppna ljusspåraren vid start
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Om markerad kommer trackningen av ljuskällor pausas om Foundry är pausat.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausa ljusspårning
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Om markerad kommer ljusspårningen följa i realtid. Inaktivera om en extern tid/kalendermodul används.

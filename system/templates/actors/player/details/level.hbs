@@ -5,11 +5,10 @@
 		<span></span>
 	</div>
 	<div class="content centered">
-		{{#unless levelUp}}
-			{{system.level.value}}
-		{{/unless}}
 		{{#if levelUp}}
 			<a class="fa-solid fa-arrow-up fa-beat" data-action="level-up"></a>
+		{{else}}
+			{{system.level.value}}
 		{{/if}}
 	</div>
 </div>

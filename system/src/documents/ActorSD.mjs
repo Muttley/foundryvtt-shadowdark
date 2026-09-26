@@ -280,7 +280,6 @@ export default class ActorSD extends foundry.documents.Actor {
 		await this.changeLightSettings(noLight);
 	}
 
-
 	async turnLightOn(itemId) {
 		const item = this.items.get(itemId);
 		const light = item.system.light;
@@ -308,8 +307,138 @@ export default class ActorSD extends foundry.documents.Actor {
 			shadows: 0,
 		};
 
-		await this.changeLightSettings(lightData);
+		await this.changeLightSettings(template.light);
 	}
+
+	async useAbility(itemId, options={}) {
+		const item = this.items.get(itemId);
+
+		if (item.type === "NPC Feature") return item.displayCard();
+
+		// does ability use on a roll check?
+		let success = true;
+		let rolled = false;
+		if (item.system.ability) {
+			rolled = true;
+			options = foundry.utils.mergeObject({target: item.system.dc}, options);
+			const result = await this.system.rollStatCheck(
+				item.system.ability,
+				options
+			);
+
+			// Abort if prompt is closed
+			if (!result) return;
+
+			success = result?.success ?? false;
+
+			if (!success && item.system.loseOnFailure) {
+				item.update({"system.lost": true});
+			}
+		}
+
+		// If the ability has limited uses, deduct
+		if (item.system.limitedUses) {
+			if (item.system.uses.available <= 0) {
+				return ui.notifications.error(
+					game.i18n.format("SHADOWDARK.error.class_ability.no-uses-remaining"),
+					{permanent: false}
+				);
+			}
+			else {
+				const newUsesAvailable = item.system.uses.available - 1;
+
+				item.update({
+					"system.uses.available": Math.max(0, newUsesAvailable),
+				});
+			}
+		}
+
+		const abilityDescription =
+			await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+				item.system.description,
+				{
+					secrets: this.isOwner,
+					async: true,
+					relativeTo: this,
+				}
+			);
+
+		return shadowdark.chat.renderUseAbilityMessage(this.actor, {
+			flavor: game.i18n.localize("SHADOWDARK.chat.use_ability.title"),
+			templateData: {
+				abilityDescription,
+				actor: this,
+				item: item,
+				rolled,
+				success,
+			},
+		});
+	}
+
+
+	async usePotion(itemId) {
+		const item = this.items.get(itemId);
+
+		foundry.applications.handlebars.renderTemplate(
+			"systems/shadowdark/templates/dialog/confirm-use-potion.hbs",
+			{name: item.name}
+		).then(html => {
+			new Dialog({
+				title: "Confirm Use",
+				content: html,
+				buttons: {
+					Yes: {
+						icon: "<i class=\"fa fa-check\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.yes")}`,
+						callback: async () => {
+							let potionDescription = await item.getEnrichedDescription();
+							// If unidentified, append the identified description
+							if (item.system?.isIdentified === false
+								&& item.system?.identification.description) {
+								potionDescription = potionDescription.concat(
+									item.system.identification.description
+								);
+							}
+							const cardData = {
+								actor: this,
+								item: item,
+								message: game.i18n.format(
+									"SHADOWDARK.chat.potion_used",
+									{
+										name: this.name,
+										potionName: item.name,
+									}
+								),
+								potionDescription,
+							};
+
+							let template = "systems/shadowdark/templates/chat/potion-used.hbs";
+
+							const content = await foundry.applications.handlebars.renderTemplate(
+								template,
+								cardData);
+
+							await ChatMessage.create({
+								content,
+								rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+							});
+
+							await this.deleteEmbeddedDocuments(
+								"Item",
+								[itemId]
+							);
+						},
+					},
+					Cancel: {
+						icon: "<i class=\"fa fa-times\"></i>",
+						label: `${game.i18n.localize("SHADOWDARK.dialog.general.cancel")}`,
+					},
+				},
+				default: "Yes",
+			}).render(true);
+		});
+	}
+
 
 	async yourLightExpired(itemId) {
 		this.turnLightOff(itemId);

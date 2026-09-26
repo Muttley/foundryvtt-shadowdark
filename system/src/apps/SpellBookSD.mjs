@@ -8,10 +8,11 @@ export default class SpellBookSD extends foundry.appv1.api.FormApplication {
 	constructor(classUuid, characterUid = "") {
 	    super();
 		this.classID = classUuid;
+		this.character = null;
 
 		if (characterUid !== "") {
-			let actorObj = game.actors.get(characterUid);
-			hasSpells = actorObj.items.filter(d => (d.type === "Spell")).map(x => x.name);
+			this.character = game.actors.get(characterUid);
+			hasSpells = this.character.items.filter(d => (d.type === "Spell")).map(x => x.name);
 		}
 	}
 
@@ -77,6 +78,12 @@ export default class SpellBookSD extends foundry.appv1.api.FormApplication {
 			const tier = spell.system.tier;
 			if (!spellList[tier]) {
 				spellList[tier] = [];
+			}
+
+			if (this.character && spell.system.alignment !== "—") {
+				if (this.character.system.alignment !== spell.system.alignment) {
+					continue; // character is wrong alignment for this spell
+				}
 			}
 
 			spellList[tier].push(spell);

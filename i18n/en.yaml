@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Gear
 SHADOWDARK.apps.character-generator.gold: Gold
 SHADOWDARK.apps.character-generator.name: Character Name
 SHADOWDARK.apps.character-generator.see_details: See Details
-SHADOWDARK.apps.character-generator.sidebar_create: Create
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Import
 SHADOWDARK.apps.character-generator.starting_gear: Starting Gear
 SHADOWDARK.apps.character-generator.success: Character created
@@ -115,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Flavor text
 SHADOWDARK.apps.monster-importer.instruction2d: Main stat block
 SHADOWDARK.apps.monster-importer.instruction2e: Feature
 SHADOWDARK.apps.monster-importer.instruction3: 3. Click Import Monster.
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Import Monster
 SHADOWDARK.apps.request-check.copied: Copied to Clipboard
@@ -383,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Source missing or unknown...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -568,6 +571,7 @@ SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Scroll
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Caster Classes
 SHADOWDARK.item.spell_class: Spell Class
 SHADOWDARK.item.spell_duration: Duration
@@ -632,11 +636,8 @@ SHADOWDARK.light_source.light_spell.near: Light Spell (Near)
 SHADOWDARK.light_source.torch: Torch
 SHADOWDARK.light-source.dropped: Dropped {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Pick up Lightsource
-SHADOWDARK.light-tracker.active: Active
-SHADOWDARK.light-tracker.paused: Paused
-SHADOWDARK.light-tracker.status.label: Status
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: One or more users have not selected a character
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "The '{macro}' macro failed with the following error: {error}"
 SHADOWDARK.macro.error.gm_role_required: The '{macro}' macro requires you to have the 'Game Master' user role
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
@@ -649,9 +650,11 @@ SHADOWDARK.module_art_config.portraits: Portraits
 SHADOWDARK.module_art_config.tokens: Tokens
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Close
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: Double Near
 SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Near
@@ -752,8 +755,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Track Inactive User 
 SHADOWDARK.settings.track_light_sources.interval.hint: How frequently tracked light sources will be updated, in seconds.
 SHADOWDARK.settings.track_light_sources.interval.name: Light Tracking Interval
 SHADOWDARK.settings.track_light_sources.name: Track Light Sources
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: If checked the Light Tracking interface will open on startup (GM only).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Open Light Tracking UI on Startup
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: If checked the Realtime Light Tracking will pause whenever Foundry is paused.
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pause Light Tracking
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: If checked the Light Tracking will follow real time. Disable if an external time/calendar module is used.

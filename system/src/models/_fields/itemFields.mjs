@@ -28,6 +28,12 @@ export const lightSource = () => ({
 });
 
 export const magic = () => ({
+	alignment: new fields.StringField({
+		blank: true,
+		initial: "",
+		nullable: false,
+		choices: [Object.keys(CONFIG.SHADOWDARK.ALIGNMENTS)],
+	}),
 	class: new fields.ArrayField(new fields.DocumentUUIDField()),
 	damageType: new fields.StringField({
     	initial: "none",

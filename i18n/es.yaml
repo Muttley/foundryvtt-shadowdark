@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: Equipo
 SHADOWDARK.apps.character-generator.gold: Oro
 SHADOWDARK.apps.character-generator.name: Nombre del personaje
 SHADOWDARK.apps.character-generator.see_details: Ver Detalles
-SHADOWDARK.apps.character-generator.sidebar_create: Crear
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: Importar
 SHADOWDARK.apps.character-generator.starting_gear: Equipamiento Inicial
 SHADOWDARK.apps.character-generator.success: Personaje creado
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: Importar elemento
 SHADOWDARK.apps.level-up.dragdrop: Arrastrar y soltar aquí
 SHADOWDARK.apps.level-up.errors.missing_boon_table: No se puede tirar la Bendición del Patrón porque no se pudo cargar la tabla de tiradas configurada
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: Puntos de Golpe
 SHADOWDARK.apps.level-up.level_up: '¡Subir nivel!'
 SHADOWDARK.apps.level-up.leveling_to: Subiendo nivel
@@ -114,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Texto de ambientación
 SHADOWDARK.apps.monster-importer.instruction2d: Perfil principal
 SHADOWDARK.apps.monster-importer.instruction2e: Característica
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clic en importar monstruo.
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: Importar monstruo
 SHADOWDARK.apps.request-check.copied: Copiado al Portapapeles
@@ -549,8 +552,8 @@ SHADOWDARK.item.name: Nombre del Objeto
 SHADOWDARK.item.npc_attack_bonus: Bonus de Ataque
 SHADOWDARK.item.npc_attack_count: Número de ataques
 SHADOWDARK.item.npc_attack_damage_formula: Damage Formula
-SHADOWDARK.item.npc_attack_special: Especial
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: Especial
 SHADOWDARK.item.npc_attack_type: Tipo
 SHADOWDARK.item.npc_attack.num_damage_dice: Número de dados de daño
 SHADOWDARK.item.npc.spell_ability: Habilidad de Hechizo
@@ -625,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: Hechizo de Luz (Rango Cercano)
 SHADOWDARK.light_source.torch: Antorcha
 SHADOWDARK.light-source.dropped: '{name}'
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Recoger fuente de luz
-SHADOWDARK.light-tracker.active: Activo
-SHADOWDARK.light-tracker.paused: En pausa
-SHADOWDARK.light-tracker.status.label: Estado
-SHADOWDARK.light-tracker.title: Light Tracker
-SHADOWDARK.light-tracker.user_warning: Uno o más usuarios no han seleccionado un personaje
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "La '{macro}' macro ha fallado por el siguiente error: {error}"
 SHADOWDARK.macro.error.gm_role_required: La macro '{macro}' requiere que tengas el rol de usuario 'Maestro de Juego'
 SHADOWDARK.macro.success: The '{macro}' macro completed successfully
@@ -642,9 +642,11 @@ SHADOWDARK.module_art_config.portraits: Retratos
 SHADOWDARK.module_art_config.tokens: Fichas
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative is enabled, only the GM can roll initiative.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: Físico
 SHADOWDARK.npc_attack.type.special: Especial
 SHADOWDARK.npc_move.close: Rango Melee
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: Doble Rango Cercano
 SHADOWDARK.npc_move.far: Rango Lejano
 SHADOWDARK.npc_move.near: Rango Cercano
@@ -701,6 +703,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Desventaja
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "Bonificador de {stat}"
@@ -744,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: Rastrear fuentes de 
 SHADOWDARK.settings.track_light_sources.interval.hint: Con qué frecuencia se actualizarán las fuentes de luz en segundos.
 SHADOWDARK.settings.track_light_sources.interval.name: Intervalo de seguimiento de luces
 SHADOWDARK.settings.track_light_sources.name: Seguimiento de fuentes de luz
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: Si está marcado, la interfaz de seguimiento de luz se abrirá al iniciar (sólo GM).
-SHADOWDARK.settings.track_light_sources.open_on_start.name: Abrir IU de seguimiento de luz al iniciar
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: Si está marcado, el Seguimiento de Luz en Tiempo Real se detendrá cada vez que se pausa Foundry
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: Pausar seguimiento de luz
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: Si está marcado, el seguimiento de luz seguirá en tiempo real. Desactivar si se utiliza un módulo de hora/calendario externo.

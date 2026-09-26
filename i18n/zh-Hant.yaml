@@ -55,7 +55,7 @@ SHADOWDARK.apps.character-generator.gear: 裝備
 SHADOWDARK.apps.character-generator.gold: 金幣
 SHADOWDARK.apps.character-generator.name: 角色名稱
 SHADOWDARK.apps.character-generator.see_details: 查看詳細
-SHADOWDARK.apps.character-generator.sidebar_create: 創建
+SHADOWDARK.apps.character-generator.sidebar_create: Build Character
 SHADOWDARK.apps.character-generator.sidebar_import: 匯入
 SHADOWDARK.apps.character-generator.starting_gear: 起始裝備
 SHADOWDARK.apps.character-generator.success: 角色已創建
@@ -94,6 +94,7 @@ SHADOWDARK.apps.item-importer.placeholder: Paste item text here...
 SHADOWDARK.apps.item-importer.title: 匯入物品
 SHADOWDARK.apps.level-up.dragdrop: 拖放到此處
 SHADOWDARK.apps.level-up.errors.missing_boon_table: 無法擲出契約主恩賜，因為所設定的隨機骰表無法載入
+SHADOWDARK.apps.level-up.errors.missing_class: Unable to use Level Up tool on a character that has no class set
 SHADOWDARK.apps.level-up.hit_points: 生命值
 SHADOWDARK.apps.level-up.level_up: 升級！
 SHADOWDARK.apps.level-up.leveling_to: 升級到等級
@@ -114,6 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: 敘事性描述
 SHADOWDARK.apps.monster-importer.instruction2d: 主要屬性欄s
 SHADOWDARK.apps.monster-importer.instruction2e: 特性
 SHADOWDARK.apps.monster-importer.instruction3: 3. 點擊匯入怪物。
+SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
+SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
 SHADOWDARK.apps.monster-importer.placeholder: Paste monster text here...
 SHADOWDARK.apps.monster-importer.title: 匯入怪物
 SHADOWDARK.apps.request-check.copied: 已複製到剪貼簿
@@ -549,8 +552,8 @@ SHADOWDARK.item.name: 物品名稱
 SHADOWDARK.item.npc_attack_bonus: 攻擊加值
 SHADOWDARK.item.npc_attack_count: 攻擊次數
 SHADOWDARK.item.npc_attack_damage_formula: 傷害公式
-SHADOWDARK.item.npc_attack_special: 攻擊特性
 SHADOWDARK.item.npc_attack_special_placeholder: Poison, Acid, ...
+SHADOWDARK.item.npc_attack_special: 攻擊特性
 SHADOWDARK.item.npc_attack_type: 類型
 SHADOWDARK.item.npc_attack.num_damage_dice: 傷害骰數量
 SHADOWDARK.item.npc.spell_ability: 施法屬性
@@ -625,11 +628,8 @@ SHADOWDARK.light_source.light_spell.near: 光亮術（中距離）
 SHADOWDARK.light_source.torch: 火把
 SHADOWDARK.light-source.dropped: '{name} 丟了'
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: 拾取光源
-SHADOWDARK.light-tracker.active: 啟用中
-SHADOWDARK.light-tracker.paused: 已暫停
-SHADOWDARK.light-tracker.status.label: 狀態
-SHADOWDARK.light-tracker.title: 光源追蹤器
-SHADOWDARK.light-tracker.user_warning: 一位或多位使用者尚未選擇角色
+SHADOWDARK.light-tracker.no-active: No Active Lights
+SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
 SHADOWDARK.macro.error.caught_error: "'{macro}' 巨集執行失敗，錯誤如下：{error}"
 SHADOWDARK.macro.error.gm_role_required: '''{macro}'' 巨集需擁有 ''遊戲主持人'' 角色權限'
 SHADOWDARK.macro.success: '''{macro}'' 巨集執行成功'
@@ -642,9 +642,11 @@ SHADOWDARK.module_art_config.portraits: 頭像
 SHADOWDARK.module_art_config.tokens: 代幣
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: 當啟用順時針先攻時，僅遊戲主持人可擲先攻骰。
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "The 'Item Piles: Shadowdark' module is no longer required and can be uninstalled."
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
 SHADOWDARK.npc_attack.type.physical: 物理
 SHADOWDARK.npc_attack.type.special: 特殊
 SHADOWDARK.npc_move.close: 近距離
+SHADOWDARK.npc_move.double_close: Double Close
 SHADOWDARK.npc_move.double_near: 雙倍中距離
 SHADOWDARK.npc_move.far: 遠距離
 SHADOWDARK.npc_move.near: 中距離
@@ -701,6 +703,7 @@ SHADOWDARK.roll.tooltip.critical_failure: Crit.Fail
 SHADOWDARK.roll.tooltip.critical_multiplier: Crit.Multi
 SHADOWDARK.roll.tooltip.critical_success: Crit.Succ
 SHADOWDARK.roll.tooltip.disadvantage: Dis
+SHADOWDARK.roll.tooltip.explode_damage_die: X.Die
 SHADOWDARK.roll.tooltip.extra_die: Add.Die
 SHADOWDARK.roll.tooltip.formula_replaced: "Formula Replaced ({formula})"
 SHADOWDARK.roll.tooltip.stat_bonus: "{stat} Bonus"
@@ -744,8 +747,6 @@ SHADOWDARK.settings.track_light_sources.inactive_user.name: 追蹤非活躍使�
 SHADOWDARK.settings.track_light_sources.interval.hint: 設定光源追蹤更新的時間頻率，單位為秒。
 SHADOWDARK.settings.track_light_sources.interval.name: 光源追蹤間隔
 SHADOWDARK.settings.track_light_sources.name: 追蹤光源
-SHADOWDARK.settings.track_light_sources.open_on_start.hint: 若勾選，啟動時將自動開啟光源追蹤介面（僅限 GM）。
-SHADOWDARK.settings.track_light_sources.open_on_start.name: 啟動時開啟光源追蹤介面
 SHADOWDARK.settings.track_light_sources.pause_with_game.hint: 若勾選，當 Foundry 暫停時，光源即時追蹤也會暫停。
 SHADOWDARK.settings.track_light_sources.pause_with_game.name: 暫停光源追蹤
 SHADOWDARK.settings.track_light_sources.realtime_tracking.hint: 若勾選，光源追蹤將依照真實時間進行。若使用外部時間或日曆模組，請停用此選項。
