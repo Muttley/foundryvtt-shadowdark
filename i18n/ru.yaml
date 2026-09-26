@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Персонаж не выбра
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Не удается добавить Покровителя, так как текущий выбранный класс не разрешает этого
 SHADOWDARK.error.source.source_missing: Источник отсутствует или неизвестен...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -523,6 +524,12 @@ SHADOWDARK.item.inventory_per_slot: Макс. на слот
 SHADOWDARK.item.inventory_quantity: Количество
 SHADOWDARK.item.inventory_slots: Слотов на предмет
 SHADOWDARK.item.level: Уровень
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.animation_none: None
+SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.bright_radius: Bright Radius
+SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: Это поле не может быть изменено, пока освещение активно
 SHADOWDARK.item.light.is_source: Источник света
 SHADOWDARK.item.light.longevity: Долговечность (мин)
@@ -564,6 +571,7 @@ SHADOWDARK.item.properties.label: Свойства предмета
 SHADOWDARK.item.scroll.label: Свиток
 SHADOWDARK.item.source_tag: Тег источника
 SHADOWDARK.item.source: Источник
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Классы заклинателей
 SHADOWDARK.item.spell_class: Класс заклинания
 SHADOWDARK.item.spell_duration: Длительность

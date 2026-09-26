@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Källa saknad eller okänd...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -523,6 +524,12 @@ SHADOWDARK.item.inventory_per_slot: Max antal per plats
 SHADOWDARK.item.inventory_quantity: Kvantitet
 SHADOWDARK.item.inventory_slots: Platser per föremål
 SHADOWDARK.item.level: Nivå
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.animation_none: None
+SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.bright_radius: Bright Radius
+SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: This field cannot be edited while the light is active
 SHADOWDARK.item.light.is_source: Ljuskälla
 SHADOWDARK.item.light.longevity: Livslängd (min)
@@ -564,6 +571,7 @@ SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: Pergamentrulle
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Källa
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Besvärjelseklasser
 SHADOWDARK.item.spell_class: Besvärjelseklass
 SHADOWDARK.item.spell_duration: Varaktighet

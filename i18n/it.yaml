@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Personaggio non selezionato
 SHADOWDARK.error.no_token_selected: Nessun token selezionato
 SHADOWDARK.error.patron.no_supported_class: Impossibile aggiungere Patrono poiché la classe configurata non lo permette
 SHADOWDARK.error.source.source_missing: Fonte mancante o sconosciuta...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Incantesimo attualmente perso
 SHADOWDARK.error.spells.no_class_selected: Questo incantesimo non ha una classe selezionata
 SHADOWDARK.error.spells.not_a_spellcaster: Questo personaggio non è un incantatore
@@ -523,6 +524,12 @@ SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantità
 SHADOWDARK.item.inventory_slots: Slot per Oggetto
 SHADOWDARK.item.level: Livello
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.animation_none: None
+SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.bright_radius: Bright Radius
+SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: Questo campo non può essere modificato mentre la luce è attiva
 SHADOWDARK.item.light.is_source: Fonte di Luce
 SHADOWDARK.item.light.longevity: Longevità (min)
@@ -564,6 +571,7 @@ SHADOWDARK.item.properties.label: Proprietà oggetto
 SHADOWDARK.item.scroll.label: Pergamena
 SHADOWDARK.item.source_tag: Tag fonte
 SHADOWDARK.item.source: Fonte
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Classe Incantatore
 SHADOWDARK.item.spell_class: Classe Incantesimo
 SHADOWDARK.item.spell_duration: Durata

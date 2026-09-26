@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Kein Charakter ausgewählt
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Schirmherr kann nicht hinzugefügt werden, da die aktuell konfigurierte Klasse es nicht erlaubt
 SHADOWDARK.error.source.source_missing: Quelle fehlt oder unbekannt...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -523,6 +524,12 @@ SHADOWDARK.item.inventory_per_slot: Max pro Platz
 SHADOWDARK.item.inventory_quantity: Menge
 SHADOWDARK.item.inventory_slots: Plätze pro Gegenstand
 SHADOWDARK.item.level: Stufe
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.animation_none: None
+SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.bright_radius: Bright Radius
+SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: Dieses Feld kann nicht bearbeitet werden, wenn das Licht aktiv ist
 SHADOWDARK.item.light.is_source: Lichtquelle
 SHADOWDARK.item.light.longevity: Leuchtdauer (Min)
@@ -564,6 +571,7 @@ SHADOWDARK.item.properties.label: Gegenstandseigenschaften
 SHADOWDARK.item.scroll.label: Schriftrolle
 SHADOWDARK.item.source_tag: Quell-Tag
 SHADOWDARK.item.source: Quelle
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Zauberwirkerklassen
 SHADOWDARK.item.spell_class: Zauberklasse
 SHADOWDARK.item.spell_duration: Dauer
