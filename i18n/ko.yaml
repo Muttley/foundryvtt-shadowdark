@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: No character selected
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Unable to add Patron as the currently configured class does not allow it
 SHADOWDARK.error.source.source_missing: Source missing or unknown...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -564,6 +565,7 @@ SHADOWDARK.item.properties.label: Item Properties
 SHADOWDARK.item.scroll.label: 두루마리
 SHADOWDARK.item.source_tag: Source Tag
 SHADOWDARK.item.source: Source
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: 주문시전 클래스
 SHADOWDARK.item.spell_class: 주문 클래스
 SHADOWDARK.item.spell_duration: 지속시간
