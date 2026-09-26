@@ -307,7 +307,7 @@ export default class ActorSD extends foundry.documents.Actor {
 			shadows: 0,
 		};
 
-		await this.changeLightSettings(template.light);
+		await this.changeLightSettings(lightData);
 	}
 
 	async useAbility(itemId, options={}) {
