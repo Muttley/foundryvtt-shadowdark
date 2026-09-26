@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: 尚未選擇角色
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: 目前的職業不允許加入契約主
 SHADOWDARK.error.source.source_missing: 來源遺失或不明……
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -564,6 +565,7 @@ SHADOWDARK.item.properties.label: 物品特性
 SHADOWDARK.item.scroll.label: 卷軸
 SHADOWDARK.item.source_tag: 來源標籤
 SHADOWDARK.item.source: 來源
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: 可施法職業
 SHADOWDARK.item.spell_class: 法術類別
 SHADOWDARK.item.spell_duration: 持續時間
