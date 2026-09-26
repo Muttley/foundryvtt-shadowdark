@@ -385,6 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Ei hahmoa valittuna
 SHADOWDARK.error.no_token_selected: No token selected
 SHADOWDARK.error.patron.no_supported_class: Suojelijan siunausta ei voitu lisätä, koska valittu hahmoluokka ei salli sitä
 SHADOWDARK.error.source.source_missing: Lähdemateriaali puuttuu tai on tuntematon...
+SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
 SHADOWDARK.error.spells.lost: Spell currently lost
 SHADOWDARK.error.spells.no_class_selected: This spell has no class selected
 SHADOWDARK.error.spells.not_a_spellcaster: This character is not a spellcaster
@@ -564,6 +565,7 @@ SHADOWDARK.item.properties.label: Tavaran ominaisuudet
 SHADOWDARK.item.scroll.label: Loitsukäärö
 SHADOWDARK.item.source_tag: Lähdetunniste
 SHADOWDARK.item.source: Lähde
+SHADOWDARK.item.spell_alignment: Alignment
 SHADOWDARK.item.spell_caster_classes: Loihtimisluokat
 SHADOWDARK.item.spell_class: Loitsun luokitus
 SHADOWDARK.item.spell_duration: Kestoaika
