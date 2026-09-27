@@ -80,7 +80,7 @@ export default class SpellBookSD extends foundry.appv1.api.FormApplication {
 				spellList[tier] = [];
 			}
 
-			if (this.character && spell.system.alignment !== "—") {
+			if (this.character && spell.system.alignment !== "") {
 				if (this.character.system.alignment !== spell.system.alignment) {
 					continue; // character is wrong alignment for this spell
 				}
