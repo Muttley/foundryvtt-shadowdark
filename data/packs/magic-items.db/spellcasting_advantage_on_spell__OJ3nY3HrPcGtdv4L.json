@@ -1,33 +1,33 @@
 {
 	"_id": "OJ3nY3HrPcGtdv4L",
 	"_key": "!items.effects!dupIuIdb8hVNC5gh.OJ3nY3HrPcGtdv4L",
-	"changes": [
-		{
-			"key": "system.roll.spell.advantage.shapechanger",
-			"mode": 2,
-			"priority": null,
-			"value": "1"
-		}
-	],
 	"description": "Spellcasting Advantage on Spell",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/air/air-smoke-casting.webp",
 	"name": "Spellcasting Advantage on Spell",
 	"origin": "Compendium.shadowdark.magic-items.Item.dupIuIdb8hVNC5gh",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.advantage.shapechanger",
+				"priority": null,
+				"type": "add",
+				"value": 1
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

@@ -1,39 +1,39 @@
 {
 	"_id": "7Rv0ynJ2wKOIJGnw",
 	"_key": "!items.effects!Om7QWre7U4Tbh84B.7Rv0ynJ2wKOIJGnw",
-	"changes": [
-		{
-			"key": "system.spellcasting.allowAllItems",
-			"mode": 2,
-			"priority": null,
-			"value": "true"
-		},
-		{
-			"key": "system.spellcasting.itemAbility",
-			"mode": 2,
-			"priority": null,
-			"value": "cha"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/symbols/runes-triangle-magenta.webp",
 	"name": "Allow Magic Items",
 	"origin": "Compendium.shadowdark.talents.Item.Om7QWre7U4Tbh84B",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.spellcasting.allowAllItems",
+				"priority": null,
+				"type": "add",
+				"value": true
+			},
+			{
+				"key": "system.spellcasting.itemAbility",
+				"priority": null,
+				"type": "add",
+				"value": "cha"
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

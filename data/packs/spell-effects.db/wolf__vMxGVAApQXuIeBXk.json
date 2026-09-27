@@ -1,57 +1,57 @@
 {
 	"_id": "vMxGVAApQXuIeBXk",
 	"_key": "!items.effects!B9ChlhtUjECrLlre.vMxGVAApQXuIeBXk",
-	"changes": [
-		{
-			"key": "system.abilities.str.value",
-			"mode": 5,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.dex.value",
-			"mode": 5,
-			"priority": null,
-			"value": "14"
-		},
-		{
-			"key": "system.abilities.con.value",
-			"mode": 5,
-			"priority": null,
-			"value": "12"
-		},
-		{
-			"key": "system.attributes.hp.max",
-			"mode": 5,
-			"priority": null,
-			"value": "10"
-		},
-		{
-			"key": "system.attributes.ac.all",
-			"mode": 5,
-			"priority": null,
-			"value": "12"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 1,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 1
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
 	"name": "Wolf",
 	"origin": "Item.hVsjl5GZqSajuFU6",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.str.value",
+				"priority": null,
+				"type": "override",
+				"value": 14
+			},
+			{
+				"key": "system.abilities.dex.value",
+				"priority": null,
+				"type": "override",
+				"value": 14
+			},
+			{
+				"key": "system.abilities.con.value",
+				"priority": null,
+				"type": "override",
+				"value": 12
+			},
+			{
+				"key": "system.attributes.hp.max",
+				"priority": null,
+				"type": "override",
+				"value": 10
+			},
+			{
+				"key": "system.attributes.ac.all",
+				"priority": null,
+				"type": "override",
+				"value": 12
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

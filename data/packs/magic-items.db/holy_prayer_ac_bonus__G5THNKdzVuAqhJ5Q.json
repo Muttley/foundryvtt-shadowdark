@@ -1,36 +1,36 @@
 {
 	"_id": "G5THNKdzVuAqhJ5Q",
 	"_key": "!items.effects!8RyBRclanxBD4pMx.G5THNKdzVuAqhJ5Q",
-	"changes": [
-		{
-			"key": "system.attributes.ac.value",
-			"mode": 2,
-			"priority": null,
-			"value": "2"
-		}
-	],
 	"description": "+2 AC for 3 rounds after speaking a holy prayer (1/day)",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 		"shadowdark": {
 			"situational": true
 		}
 	},
+	"folder": null,
 	"img": "icons/commodities/tech/cog-steel-grey.webp",
 	"name": "Holy Prayer AC Bonus",
 	"origin": "Compendium.shadowdark.magic-items.Item.8RyBRclanxBD4pMx",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.attributes.ac.value",
+				"priority": null,
+				"type": "add",
+				"value": 2
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

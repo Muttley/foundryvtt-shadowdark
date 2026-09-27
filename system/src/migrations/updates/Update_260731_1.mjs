@@ -14,6 +14,8 @@ export default class Update_260731_1 extends UpdateBaseSD {
 	static version = 260731.1;
 
 	async updateItem(itemData) {
+		if (!["Basic", "Effect"].includes(itemData.type)) return;
+
 		const updateData = {};
 		const template = itemData.system?.light?.template;
 

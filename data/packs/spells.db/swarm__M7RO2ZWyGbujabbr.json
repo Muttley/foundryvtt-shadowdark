@@ -9,6 +9,7 @@
 	"img": "icons/creatures/mammals/bats-movement-flying-black.webp",
 	"name": "Swarm",
 	"system": {
+		"alignment": "",
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],

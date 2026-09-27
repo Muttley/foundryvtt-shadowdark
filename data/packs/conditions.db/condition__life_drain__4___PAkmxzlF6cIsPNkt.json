@@ -1,33 +1,33 @@
 {
 	"_id": "PAkmxzlF6cIsPNkt",
 	"_key": "!items.effects!pkvfOgSt7c86e1dw.PAkmxzlF6cIsPNkt",
-	"changes": [
-		{
-			"key": "system.abilities.con.value",
-			"mode": 2,
-			"priority": null,
-			"value": "-4"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/unholy/hand-light-pink.webp",
 	"name": "Condition: Life Drain (4)",
 	"origin": null,
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.con.value",
+				"priority": null,
+				"type": "add",
+				"value": -4
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

@@ -1,27 +1,27 @@
 {
 	"_id": "3XkiakzqwT78EG4j",
 	"_key": "!items.effects!vmcHEQWOyX933G1R.3XkiakzqwT78EG4j",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": 1,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "seconds",
+		"value": 1
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
 	"name": "Condition: Mesmerized",
 	"origin": "Item.vmcHEQWOyX933G1R",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

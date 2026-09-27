@@ -1,36 +1,36 @@
 {
 	"_id": "lx4pzHIfjRY8COai",
 	"_key": "!items.effects!HxnAZ36Mm2jSDF6p.lx4pzHIfjRY8COai",
-	"changes": [
-		{
-			"key": "system.roll.spell.bonus.detect-thoughts",
-			"mode": 2,
-			"priority": null,
-			"value": "4"
-		}
-	],
 	"description": "+4 to detect thoughts spellcasting checks (3/day)",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 		"shadowdark": {
 			"situational": true
 		}
 	},
+	"folder": null,
 	"img": "icons/magic/fire/flame-burning-fist-strike.webp",
 	"name": "Spellcasting Check Bonus",
 	"origin": "Compendium.shadowdark.magic-items.Item.HxnAZ36Mm2jSDF6p",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.roll.spell.bonus.detect-thoughts",
+				"priority": null,
+				"type": "add",
+				"value": 4
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

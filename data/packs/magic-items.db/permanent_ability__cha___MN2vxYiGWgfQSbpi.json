@@ -1,27 +1,32 @@
 {
 	"_id": "MN2vxYiGWgfQSbpi",
 	"_key": "!items.effects!Bm8NbNaVH1pUerSh.MN2vxYiGWgfQSbpi",
-	"changes": [
-		{
-			"key": "system.abilities.cha.value",
-			"mode": 5,
-			"value": "18"
-		}
-	],
 	"description": "Permanent Ability (Cha)",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"startTime": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/skills/melee/strike-axe-blood-red.webp",
 	"name": "Permanent Ability (Cha)",
 	"origin": "Compendium.shadowdark.magic-items.Item.Bm8NbNaVH1pUerSh",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.abilities.cha.value",
+				"type": "override",
+				"value": 18
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

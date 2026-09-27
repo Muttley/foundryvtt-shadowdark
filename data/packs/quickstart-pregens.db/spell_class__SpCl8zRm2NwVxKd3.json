@@ -1,33 +1,40 @@
 {
 	"_id": "SpCl8zRm2NwVxKd3",
 	"_key": "!actors.items.effects!Jnb0sFKKKrAfowY0.Gl9xK1TrcmMaFfCN.SpCl8zRm2NwVxKd3",
-	"changes": [
-		{
-			"key": "system.spellcasting.classes",
-			"mode": 2,
-			"priority": null,
-			"value": "wizard"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": 0,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/symbols/runes-star-pentagon-orange.webp",
 	"name": "Spell Class",
 	"origin": "Compendium.shadowdark.talents.Item.Td6iQW4hVJLZLVLi",
+	"showIcon": 1,
+	"start": {
+		"combat": null,
+		"combatant": null,
+		"initiative": null,
+		"round": null,
+		"time": 0,
+		"turn": null
+	},
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.spellcasting.classes",
+				"priority": null,
+				"type": "add",
+				"value": "wizard"
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

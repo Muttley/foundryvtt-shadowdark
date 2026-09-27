@@ -1,4 +1,6 @@
 {
+	"_id": "Ip4tRvYu9Xd1AeCj0",
+	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.L7MXRXLxu29ZHm5m.Ip4tRvYu9Xd1AeCj0",
 	"changes": [
 		{
 			"key": "system.roll.attack.extra-damage-die.all",
@@ -26,11 +28,11 @@
 	"img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
 	"name": "Backstab",
 	"origin": "Compendium.shadowdark.talents.Item.KLDZKFY6SrqQKSva",
-	"statuses": [],
-	"system": {},
+	"statuses": [
+	],
+	"system": {
+	},
 	"tint": "#ffffff",
 	"transfer": true,
-	"type": "base",
-	"_id": "Ip4tRvYu9Xd1AeCj0",
-	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.L7MXRXLxu29ZHm5m.Ip4tRvYu9Xd1AeCj0"
+	"type": "base"
 }

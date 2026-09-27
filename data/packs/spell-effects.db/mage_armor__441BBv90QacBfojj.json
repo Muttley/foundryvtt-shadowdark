@@ -1,33 +1,33 @@
 {
 	"_id": "441BBv90QacBfojj",
 	"_key": "!items.effects!h9MTxzrrPmyhEmRL.441BBv90QacBfojj",
-	"changes": [
-		{
-			"key": "system.attributes.ac.value",
-			"mode": 5,
-			"priority": null,
-			"value": "14"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 10,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 10
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
 	"name": "Mage Armor",
 	"origin": "Item.h9MTxzrrPmyhEmRL",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.attributes.ac.value",
+				"priority": null,
+				"type": "override",
+				"value": 14
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

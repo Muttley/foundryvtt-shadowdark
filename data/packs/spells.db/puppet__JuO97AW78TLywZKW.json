@@ -9,6 +9,7 @@
 	"img": "icons/magic/control/control-influence-puppet.webp",
 	"name": "Puppet",
 	"system": {
+		"alignment": "",
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],

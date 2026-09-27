@@ -1,27 +1,27 @@
 {
 	"_id": "P1QXkErKypSKB6bl",
 	"_key": "!items.effects!vI70AaskCqH9tKJ7.P1QXkErKypSKB6bl",
-	"changes": [
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": 5,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": "turnStart",
+		"units": "rounds",
+		"value": 5
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
 	"name": "Mirror Image",
 	"origin": "Item.vI70AaskCqH9tKJ7",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,

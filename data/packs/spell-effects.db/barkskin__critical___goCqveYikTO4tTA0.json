@@ -1,33 +1,33 @@
 {
 	"_id": "goCqveYikTO4tTA0",
 	"_key": "!items.effects!qbCPO5ftwWImjRIG.goCqveYikTO4tTA0",
-	"changes": [
-		{
-			"key": "system.attributes.ac.value",
-			"mode": 5,
-			"priority": null,
-			"value": "18"
-		}
-	],
 	"description": "",
 	"disabled": false,
 	"duration": {
-		"combat": null,
-		"rounds": null,
-		"seconds": null,
-		"startRound": null,
-		"startTime": null,
-		"startTurn": null,
-		"turns": null
+		"expired": false,
+		"expiry": null,
+		"units": "seconds",
+		"value": null
 	},
 	"flags": {
 	},
+	"folder": null,
 	"img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
 	"name": "Barkskin (Critical)",
 	"origin": "Compendium.shadowdark.spell-effects.Item.7GAeLAX0xl65gxer",
+	"showIcon": 1,
+	"start": null,
 	"statuses": [
 	],
 	"system": {
+		"changes": [
+			{
+				"key": "system.attributes.ac.value",
+				"priority": null,
+				"type": "override",
+				"value": 18
+			}
+		]
 	},
 	"tint": "#ffffff",
 	"transfer": true,
