@@ -285,7 +285,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		}
 
 		const spellObj = {
-			name: parsedSpell[1],
+			name: parsedSpell[1].trim(),
 			type: "Spell",
 			system: {
 				tier: parsedSpell[3] - 10,
@@ -299,21 +299,29 @@ export default class MonsterImporterSD extends ImporterSD {
 		};
 
 		// Take a chance at finding the range in the description
-		const potentialRange = parsedSpell[2].toLowerCase();
+		// const potentialRange = parsedSpell[2].toLowerCase();
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
-		const ranges = ["self", "far", "double near", "near", "close"];
+
+		const ranges = [];
+		const rangeLut = {};
+		for (const key of Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES)) {
+			let rangeString = CONFIG.SHADOWDARK.SPELL_RANGES[key].toLowerCase();
+			ranges.push(rangeString);
+			rangeLut[rangeString] = key;
+		}
+
+		ranges.sort((a, b) => a.length - b.length);
 
 		for (const range of ranges) {
-			if (potentialRange.includes(range)) {
-				spellObj.system.range = range;
-				break;
+			if (descStr.includes(range)) {
+				spellObj.system.range = rangeLut[range];
+				// break;
 			}
 		}
 		if (!spellObj.system.range) {
 			for (const range of ranges) {
 				if (descStr.includes(`in ${range}`) || descStr.includes(`${range} range`)) {
-					spellObj.system.range = range;
-					break;
+					spellObj.system.range = rangeLut[range];
 				}
 			}
 		}
@@ -321,7 +329,7 @@ export default class MonsterImporterSD extends ImporterSD {
 			for (const word of parsedSpell[4].toLowerCase().split(" ")) {
 				for (const range of ranges) {
 					if (word.includes(`${range}.`) || word.includes(`${range},`) || word.includes(`${range}-`)) {
-						spellObj.system.range = range;
+						spellObj.system.range = rangeLut[range];
 						break;
 					}
 				}
