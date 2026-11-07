@@ -29,6 +29,7 @@
 - [#1418] Class alignment restrictions defaulting to neutral instead of empty string
 - [#1419] Spell Importer should use uuid field, not build it manually
 - [#1421] Unable to add negative attack bonus to NPC Attacks
+- [#1422] Additional damage die not exploding in Momentum Mode
 - [#1432] Pre-defined effect: Spellcasting Check Bonus incorrect change
 
 # Chores

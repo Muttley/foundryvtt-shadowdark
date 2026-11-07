@@ -44,7 +44,7 @@ export function applyCriticalHit(formula, multiplier=2) {
  * @returns {string} // new roll formula
  */
 export function applyExploding(formula) {
-	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
+	return formula.replaceAll(/(\d*d\d+[a-z0-9]*)/ig, match => {
 		return `${match}x`;
 	});
 }
