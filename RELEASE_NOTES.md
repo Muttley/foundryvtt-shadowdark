@@ -14,6 +14,7 @@
 - [#1408] Enable new Italian translation in config
 - [#1412] Move character creator button to make it more prominent as it's easy to miss at the bottom of the Actors sidebar
 	* Now at the top of the sidebar and renamed "Build Character" to make it more obvious
+- [#1413] Add ability to customise light sources
 - [#1420] Show Effects tab on non-Magic Item items as well
 - [#1427] Add new "Double Close" NPC move speed for very slow-moving creatures
 
