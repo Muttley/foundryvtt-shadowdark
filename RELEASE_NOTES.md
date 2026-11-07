@@ -22,6 +22,7 @@
 - [#1374] Issue Leveling Up in Foundry
 	* You are now warned if you try to use the level up tool on a character that has no Class set
 - [#1382] Error when adding +1 Dex level up talent to character
+- [#1385] Name conflict with homebrew classes and spellcasting
 - [#1388] Weapon Mastery talent using the incorrect attribute keys
 - [#1390] Weapon Properties Break with Translation Modules (Babele) *(luizrcb)*
 - [#1395] Item description to chat fails in v14 when global chat is set to Public in Character
