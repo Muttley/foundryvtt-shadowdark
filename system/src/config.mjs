@@ -414,7 +414,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 	},
 	spellCastingBonus: {
 		defaultValue: 1,
-		effectKey: "system.roll.spell.advantage.all",
+		effectKey: "system.roll.spell.bonus.all",
 		img: "icons/magic/fire/flame-burning-fist-strike.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellCastingBonus",
 		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
