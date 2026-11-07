@@ -454,7 +454,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Lederrüstung
 SHADOWDARK.item.armor.base_armor.plate_mail: Plattenrüstung
 SHADOWDARK.item.armor.base_armor.shield: Schild
 SHADOWDARK.item.armor.base_armor.title: Basisrüstung
-SHADOWDARK.item.broken: Broken
+SHADOWDARK.item.broken: Beschädigt
 SHADOWDARK.item.cost: Kosten
 SHADOWDARK.item.description: Beschreibung
 SHADOWDARK.item.effect.category.condition: Zustand
@@ -524,11 +524,11 @@ SHADOWDARK.item.inventory_per_slot: Max pro Platz
 SHADOWDARK.item.inventory_quantity: Menge
 SHADOWDARK.item.inventory_slots: Plätze pro Gegenstand
 SHADOWDARK.item.level: Stufe
-SHADOWDARK.item.light.animation: Animation
 SHADOWDARK.item.light.animation_none: None
-SHADOWDARK.item.light.auto_activate: Activate Automatically
+SHADOWDARK.item.light.animation: Animation
+SHADOWDARK.item.light.auto_activate: Automatisch aktivieren
 SHADOWDARK.item.light.bright_radius: Bright Radius
-SHADOWDARK.item.light.color: Colour
+SHADOWDARK.item.light.color: Farbe
 SHADOWDARK.item.light.dim_radius: Dim Radius
 SHADOWDARK.item.light.in_use_tooltip: Dieses Feld kann nicht bearbeitet werden, wenn das Licht aktiv ist
 SHADOWDARK.item.light.is_source: Lichtquelle
@@ -536,11 +536,11 @@ SHADOWDARK.item.light.longevity: Leuchtdauer (Min)
 SHADOWDARK.item.light.remaining: Verbleibend (Min)
 SHADOWDARK.item.light.template: Lichtvorlage
 SHADOWDARK.item.magic_item.identificationDetails: Identification Details
-SHADOWDARK.item.magic_item.identified: Identified
+SHADOWDARK.item.magic_item.identified: Identifiziert
 SHADOWDARK.item.magic_item.identifiedDescription: Identified Description
 SHADOWDARK.item.magic_item.identifiedName: Identified Name
 SHADOWDARK.item.magic_item.identifiedTooltip: Unchecking will update current item name to Identified Name and append Identified Description to item Description.
-SHADOWDARK.item.magic_item.identify: Identify
+SHADOWDARK.item.magic_item.identify: Identifizieren
 SHADOWDARK.item.magic_item.is_magic: Magischer Gegenstand
 SHADOWDARK.item.magic_item.title: Magische Gegenstandseffekt(e)
 SHADOWDARK.item.magic_item.type.attackBonus: Angriffsbonus
@@ -550,7 +550,7 @@ SHADOWDARK.item.magic_item.type.critMultiplier: Krit-Multiplikator
 SHADOWDARK.item.magic_item.type.custom: Benutzerdefinierter Effekt
 SHADOWDARK.item.magic_item.type.damageBonus: Schadensbonus
 SHADOWDARK.item.magic_item.type.permanentAbility: Permanente Fähigkeitsänderung
-SHADOWDARK.item.magic_item.unidentified: Unidentified
+SHADOWDARK.item.magic_item.unidentified: Nicht identifiziert
 SHADOWDARK.item.magic_item.unidentifiedName: Unidentified {type}
 SHADOWDARK.item.name_from_spell.Potion: Trank des {spellName}
 SHADOWDARK.item.name_from_spell.Scroll: Schriftrolle des {spellName}
