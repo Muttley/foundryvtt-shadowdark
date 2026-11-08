@@ -5,6 +5,12 @@
 		"71bMZvK0yxmAAcUL"
 	],
 	"flags": {
+		"shadowdark": {
+			"start": {
+				"combatTime": null,
+				"value": 0
+			}
+		}
 	},
 	"folder": null,
 	"img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
@@ -21,6 +27,11 @@
 		},
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,

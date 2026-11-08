@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Whispers",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Hostile spells cast on one target in near are DC 9 for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",

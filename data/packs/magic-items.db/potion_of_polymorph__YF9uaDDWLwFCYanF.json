@@ -9,6 +9,7 @@
 	"img": "icons/consumables/potions/potion-bottle-labeled-stopped-purple.webp",
 	"name": "Potion of Polymorph",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,6 +18,7 @@
 			"gp": 0,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p><em>A pickled newt floats in this lavender flask of clear liquid.</em></p><p><strong>Benefit.</strong> When you drink this potion, it casts the @UUID[Compendium.shadowdark.spells.Item.1ZAZQsFvPBEZPkVP]{polymorph} spell (pg. 67) on you with a duration of 1 hour instead of 10 rounds.</p>",
 		"duration": {
 			"type": "rounds"

@@ -33,6 +33,7 @@
 		"changes": [
 			{
 				"key": "system.roll.stat.advantage.str",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

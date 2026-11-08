@@ -30,6 +30,7 @@
 		"changes": [
 			{
 				"key": "system.slots",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "max(@abilities.con.mod, 0)"

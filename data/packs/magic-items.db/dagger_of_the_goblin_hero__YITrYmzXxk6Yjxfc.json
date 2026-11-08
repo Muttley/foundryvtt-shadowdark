@@ -14,33 +14,25 @@
 	"system": {
 		"ammoClass": "",
 		"baseWeapon": "dagger",
-		"bonuses": {
-			"attackBonus": 0,
-			"critical": {
-				"failureThreshold": 1,
-				"multiplier": 2,
-				"successThreshold": 20
-			},
-			"damageBonus": 0,
-			"damageMultiplier": 1
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
 			"sp": 0
 		},
 		"damage": {
-			"numDice": 1,
 			"oneHanded": "d4",
 			"twoHanded": ""
 		},
 		"description": "<p><em>A curved dagger with a half- moon notch at the blade's base.</em></p><p><strong>Bonus.</strong> +1 dagger.</p><p><strong>Benefit.</strong> You can speak Goblin. All goblinoid creatures react to you with a friendly attitude.</p>",
 		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
-		"languages": "Compendium.shadowdark.languages.Item.NN9wFGgwk49oOQeN",
 		"magicItem": true,
 		"properties": [
 			"Compendium.shadowdark.properties.Item.rqQwpoeWEqi0ZcYK",
@@ -57,8 +49,7 @@
 			"title": "core-rules"
 		},
 		"stashed": false,
-		"type": "melee",
-		"weaponMastery": false
+		"type": "melee"
 	},
 	"type": "Weapon"
 }

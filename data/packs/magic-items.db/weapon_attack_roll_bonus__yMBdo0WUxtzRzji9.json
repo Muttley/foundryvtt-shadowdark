@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.bonus.this",
+				"phase": "initial",
 				"type": "add",
 				"value": 1
 			}

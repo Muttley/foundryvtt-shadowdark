@@ -26,18 +26,21 @@
 		"changes": [
 			{
 				"key": "system.roll.stat.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "d@bonus.destineddie"
 			},
 			{
 				"key": "system.roll.attack.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "d@bonus.destineddie"
 			},
 			{
 				"key": "system.roll.spell.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "d@bonus.destineddie"

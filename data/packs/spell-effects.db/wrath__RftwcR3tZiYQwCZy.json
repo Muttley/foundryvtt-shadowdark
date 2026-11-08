@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.roll.melee.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 2
 			},
 			{
 				"key": "system.roll.ranged.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 2

@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.roll.melee.bonus.bastard-sword",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "1+floor(@level.value/2)"
 			},
 			{
 				"key": "system.roll.melee.damage.bastard-sword",
+				"phase": "initial",
 				"type": "add",
 				"value": "1+floor(@level.value/2)"
 			}

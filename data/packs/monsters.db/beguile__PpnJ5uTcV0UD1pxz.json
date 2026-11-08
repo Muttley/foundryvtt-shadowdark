@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Beguile",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Focus. One target in near of LV 2 or less is stupefied for the duration.</p>",
 		"duration": {
 			"type": "focus",

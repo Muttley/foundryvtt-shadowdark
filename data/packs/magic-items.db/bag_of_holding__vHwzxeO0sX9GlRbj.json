@@ -18,9 +18,19 @@
 		},
 		"description": "<p><em>A worn, leather pouch with tight drawstrings.</em></p><p><strong>Benefit</strong>. This bag has an interdimensional space inside that can hold up to 10 gear slots.</p><p><strong>Curse</strong>. Placing this item inside another <em>Bag of Holding</em> or a <em>Portable Hole</em> destroys both items and all held inside them.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,

@@ -23,6 +23,12 @@
 		},
 		"description": "<p><strong>Type:</strong> Melee or Ranged.</p><p><strong>Range:</strong> Close or Near</p><p><strong>Finesse (F).</strong> You may use your STR or DEX when attacking with this weapon.</p><p><strong>Lash (La).</strong> When you make a ranged attack with this weapon, it does not leave your grasp.</p>",
 		"equipped": false,
+		"handedness": "",
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"magicItem": false,
 		"properties": [

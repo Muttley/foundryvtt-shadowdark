@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Rebuke",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Focus. Chaotic creatures cannot attack priest or come within near range for duration.</p>",
 		"duration": {
 			"type": "focus",

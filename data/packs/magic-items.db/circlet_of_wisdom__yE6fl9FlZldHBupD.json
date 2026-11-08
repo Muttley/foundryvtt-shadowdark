@@ -10,13 +10,7 @@
 	"img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
 	"name": "Circlet of Wisdom",
 	"system": {
-		"abilities": {
-			"wis": {
-				"base": "18"
-			}
-		},
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -24,10 +18,19 @@
 		},
 		"description": "<p><em>A thin, silver circlet set with a shimmering, blue pearl.</em></p><p><strong>Benefit.</strong> Your Wisdom stat becomes 18 (+4) while wearing this circlet.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
@@ -35,6 +38,8 @@
 			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

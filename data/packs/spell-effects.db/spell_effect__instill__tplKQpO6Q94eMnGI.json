@@ -5,6 +5,12 @@
 		"ZdO7fIT4Y62U19ut"
 	],
 	"flags": {
+		"shadowdark": {
+			"start": {
+				"combatTime": null,
+				"value": 0
+			}
+		}
 	},
 	"folder": null,
 	"img": "icons/weapons/staves/staff-forest-jewel.webp",
@@ -21,6 +27,11 @@
 		},
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,

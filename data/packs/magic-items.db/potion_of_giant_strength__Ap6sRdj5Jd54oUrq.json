@@ -9,6 +9,7 @@
 	"img": "icons/consumables/potions/bottle-conical-corked-green.webp",
 	"name": "Potion of Giant Strength",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,6 +18,7 @@
 			"gp": 0,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p><em>A clay jar holding a stew of green, leafy sludge.</em></p><p><strong>Benefit.</strong> Your Strength becomes 18 (+4) and you deal x2 damage on melee attacks for 10 rounds.</p>",
 		"duration": {
 			"type": "rounds"

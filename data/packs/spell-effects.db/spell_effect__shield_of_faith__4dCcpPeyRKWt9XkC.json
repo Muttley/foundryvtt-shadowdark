@@ -5,6 +5,12 @@
 		"GKcLELNdIj1o3OX3"
 	],
 	"flags": {
+		"shadowdark": {
+			"start": {
+				"combatTime": null,
+				"value": 0
+			}
+		}
 	},
 	"folder": null,
 	"img": "icons/magic/defensive/shield-barrier-blue.webp",
@@ -21,6 +27,11 @@
 		},
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,

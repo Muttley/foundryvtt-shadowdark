@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.roll.melee.bonus.greataxe",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "1+floor(@level.value/2)"
 			},
 			{
 				"key": "system.roll.melee.damage.greataxe",
+				"phase": "initial",
 				"type": "add",
 				"value": "1+floor(@level.value/2)"
 			}

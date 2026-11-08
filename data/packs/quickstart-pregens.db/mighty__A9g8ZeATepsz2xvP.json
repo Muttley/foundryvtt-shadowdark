@@ -30,12 +30,14 @@
 		"changes": [
 			{
 				"key": "system.roll.melee.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1
 			},
 			{
 				"key": "system.roll.melee.damage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

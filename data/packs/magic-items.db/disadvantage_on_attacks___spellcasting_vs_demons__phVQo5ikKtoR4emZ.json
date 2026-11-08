@@ -26,18 +26,21 @@
 		"changes": [
 			{
 				"key": "system.roll.melee.advantage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": -1
 			},
 			{
 				"key": "system.roll.ranged.advantage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": -1
 			},
 			{
 				"key": "system.roll.spell.advantage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": -1

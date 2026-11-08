@@ -17,6 +17,11 @@
 		},
 		"description": "<p>Dummy item that acts like a light source cast by the @UUID[Compendium.shadowdark.spells.N4v17mtxJlVBbgpn]{Light} spell.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"light": {
 			"active": false,

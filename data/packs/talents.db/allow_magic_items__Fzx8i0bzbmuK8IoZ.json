@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.spellcasting.allowAllItems",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": true

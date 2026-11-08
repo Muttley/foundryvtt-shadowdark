@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.abilities.wis.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": -4

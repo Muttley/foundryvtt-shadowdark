@@ -10,7 +10,6 @@
 	"name": "Flying Carpet",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -18,10 +17,19 @@
 		},
 		"description": "<p><em>A richly woven, red carpet with gold tassels.</em></p><p><strong>Benefit.</strong> The carpet fits two riders (one is the driver). It can fly double near on the driver's turn.</p><p><strong>Personality.</strong> Neutral. Playful, mischievous. Enjoys visiting new places and gets restless without a frequent change in location.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
@@ -29,6 +37,8 @@
 			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

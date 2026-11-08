@@ -26,6 +26,7 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.damage.this",
+				"phase": "initial",
 				"priority": null,
 				"type": "multiply",
 				"value": 2

@@ -17,10 +17,16 @@
 		},
 		"description": "<p>Sheds light to a near distance (see Light Sources, pg. 46). Burns for one hour of real time.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"light": {
 			"active": false,
 			"animation": "torch",
+			"autoActivate": false,
 			"bright": 5,
 			"color": "#d1c846",
 			"dim": 30,

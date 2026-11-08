@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1
 			},
 			{
 				"key": "system.roll.attack.damage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

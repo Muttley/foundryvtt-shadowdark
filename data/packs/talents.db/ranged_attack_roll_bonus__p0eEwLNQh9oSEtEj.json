@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.ranged.bonus.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

@@ -41,6 +41,7 @@
 - [#1409] Merge various language translation updates from Crowdin
 - [#1414] Merge Italian translation updates from Crowdin
 - [#1433] Merge German translation updates from Crowdin
+- [#1437] Update compendium data to latest version export
 
 **NOTE:** Many thanks to *Vacco* for his valiant effort in providing 100% coverage with a new Italian translation of the system.
 

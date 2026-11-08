@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.bonus.REPLACEME",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "1+floor(@level.value/2)"
 			},
 			{
 				"key": "system.roll.attack.damage.REPLACEME",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "1+floor(@level.value/2)"

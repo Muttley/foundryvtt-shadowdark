@@ -26,6 +26,7 @@
 		"changes": [
 			{
 				"key": "system.roll.spell.advantage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

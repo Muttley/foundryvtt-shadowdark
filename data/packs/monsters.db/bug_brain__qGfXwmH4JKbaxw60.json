@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Bug Brain",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Near range, one target. Target's INT drops to 1 for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",

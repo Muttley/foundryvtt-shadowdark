@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.spellcasting.classes",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "priest"

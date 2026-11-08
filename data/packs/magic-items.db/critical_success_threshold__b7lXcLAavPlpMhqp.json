@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.critical-success.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 18

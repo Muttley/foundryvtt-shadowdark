@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Deathtouch",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>[[/r 2d4]] damage to one creature within close.</p>",
 		"duration": {
 			"type": "rounds",

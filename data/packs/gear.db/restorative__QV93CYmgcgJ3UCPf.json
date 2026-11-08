@@ -9,6 +9,7 @@
 	"img": "icons/consumables/drinks/alcohol-spirits-bottle-green.webp",
 	"name": "Restorative",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,12 +18,18 @@
 			"gp": 0,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p>Ends one poison or disease</p>",
 		"duration": {
 			"type": "rounds",
 			"value": ""
 		},
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"lost": false,
 		"magicItem": true,

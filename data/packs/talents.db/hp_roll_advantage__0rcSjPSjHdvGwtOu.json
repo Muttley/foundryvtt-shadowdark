@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.hp.advantage",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 1

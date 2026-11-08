@@ -26,12 +26,14 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.damage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "d@bonus.destineddie"
 			},
 			{
 				"key": "system.roll.spell.damage.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "d@bonus.destineddie"

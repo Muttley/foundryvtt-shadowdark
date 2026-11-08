@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.critical-multiplier.this",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 4

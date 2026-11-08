@@ -26,6 +26,7 @@
 		"changes": [
 			{
 				"key": "system.roll.spell.bonus.detect-thoughts",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 4

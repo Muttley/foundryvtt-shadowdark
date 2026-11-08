@@ -9,6 +9,7 @@
 	"img": "icons/consumables/potions/vial-cork-empty.webp",
 	"name": "Potion of Invisibility",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,12 +18,18 @@
 			"gp": 80,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p><em>This glass vial appears to be empty, but a liquid audibly splashes around inside it.</em></p><p><strong>Benefit</strong>. When you drink this potion, you become invisible for 10 rounds or until you attack or cast a spell.</p><p>@UUID[Compendium.shadowdark.spell-effects.SMXbMbXcj5hLvTjY]{Spell Effect: Invisibility}</p>",
 		"duration": {
 			"type": "rounds",
 			"value": "1"
 		},
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"lost": false,
 		"magicItem": true,

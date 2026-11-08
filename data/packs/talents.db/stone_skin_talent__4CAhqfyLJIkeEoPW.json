@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.attributes.ac.unarmored",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "2+floor(@level.value/2)"

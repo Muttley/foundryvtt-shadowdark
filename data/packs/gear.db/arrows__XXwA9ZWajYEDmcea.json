@@ -5,7 +5,7 @@
 	],
 	"flags": {
 	},
-	"folder": "0ws7y8D3IktigkiB",
+	"folder": "aDuF91SrY1z6oZoL",
 	"img": "icons/weapons/ammunition/arrows-barbed-white.webp",
 	"name": "Arrows",
 	"system": {
@@ -17,9 +17,19 @@
 		},
 		"description": "<p>Ammunition for shortbows or longbows.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
@@ -29,7 +39,7 @@
 		"magicItem": false,
 		"properties": [
 		],
-		"quantity": 20,
+		"quantity": 5,
 		"scroll": false,
 		"slots": {
 			"free_carry": 0,

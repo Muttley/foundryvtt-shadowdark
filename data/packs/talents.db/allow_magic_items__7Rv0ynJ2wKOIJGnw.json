@@ -23,12 +23,14 @@
 		"changes": [
 			{
 				"key": "system.spellcasting.allowAllItems",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": true
 			},
 			{
 				"key": "system.spellcasting.itemAbility",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "cha"

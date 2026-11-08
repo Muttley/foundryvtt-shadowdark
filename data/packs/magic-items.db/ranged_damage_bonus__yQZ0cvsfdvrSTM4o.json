@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.roll.ranged.damage.all",
+				"phase": "initial",
 				"type": "add",
 				"value": 1
 			}

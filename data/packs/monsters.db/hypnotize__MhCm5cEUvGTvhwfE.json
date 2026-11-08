@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Hypnotize",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Focus. One target in near range who can see naga is helplessly stupefied for duration.</p>",
 		"duration": {
 			"type": "focus",

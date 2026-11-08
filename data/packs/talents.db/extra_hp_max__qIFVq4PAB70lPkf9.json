@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.attributes.hp.max",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": 2

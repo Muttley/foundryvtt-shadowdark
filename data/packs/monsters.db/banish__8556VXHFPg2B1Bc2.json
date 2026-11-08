@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Banish",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>All extradimensional creatures within near [[check 15 cha]] or sent back to their home planes.</p>",
 		"duration": {
 			"type": "instant",

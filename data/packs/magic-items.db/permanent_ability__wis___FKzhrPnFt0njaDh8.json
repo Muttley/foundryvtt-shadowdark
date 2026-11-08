@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.abilities.wis.value",
+				"phase": "initial",
 				"type": "override",
 				"value": 18
 			}

@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.abilities.cha.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "downgrade",
 				"value": 3

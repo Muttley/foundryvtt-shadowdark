@@ -26,6 +26,7 @@
 		"changes": [
 			{
 				"key": "system.roll.attack.extra-damage-die.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "add",
 				"value": "1+@bonus.backstabdice+floor(@level.value/2)"

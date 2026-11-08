@@ -23,30 +23,35 @@
 		"changes": [
 			{
 				"key": "system.abilities.str.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 16
 			},
 			{
 				"key": "system.abilities.dex.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 14
 			},
 			{
 				"key": "system.abilities.con.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 12
 			},
 			{
 				"key": "system.attributes.hp.max",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 23
 			},
 			{
 				"key": "system.attributes.ac.all",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 12

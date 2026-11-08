@@ -23,6 +23,7 @@
 		"changes": [
 			{
 				"key": "system.abilities.int.value",
+				"phase": "initial",
 				"priority": null,
 				"type": "override",
 				"value": 3
