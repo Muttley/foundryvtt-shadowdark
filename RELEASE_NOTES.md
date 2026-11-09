@@ -43,6 +43,7 @@
 - [#1414] Merge Italian translation updates from Crowdin
 - [#1433] Merge German translation updates from Crowdin
 - [#1437] Update compendium data to latest version export
+- [#1438] You are accessing the numeric #mode of an ActiveEffect change. Use the string #type instead *(Foundry V14 compatibility)*
 
 **NOTE:** Many thanks to *Vacco* for his valiant effort in providing 100% coverage with a new Italian translation of the system.
 

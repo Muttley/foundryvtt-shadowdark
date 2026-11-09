@@ -53,7 +53,7 @@ export default class ActiveEffectsSD {
 		].map(([effectKey, value]) => ({
 			key: effectKey,
 			value,
-			mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			type: "override",
 		}));
 
 		const [newActiveEffect] = await owner.createEmbeddedDocuments(
@@ -207,10 +207,6 @@ export default class ActiveEffectsSD {
 
 		data.defaultValue = defaultValue;
 
-		const effectMode = foundry.utils.getProperty(
-			CONST.ACTIVE_EFFECT_MODES,
-			data.mode.split(".")[2]);
-
 		const value = (isNaN(parseInt(data.defaultValue, 10)))
 			? data.defaultValue
 			: parseInt(data.defaultValue, 10);
@@ -222,7 +218,7 @@ export default class ActiveEffectsSD {
 				changes: [{
 					key: data.effectKey,
 					value,
-					mode: effectMode,
+					type: data.type,
 				}],
 				disabled: false,
 				origin: owner.uuid,
