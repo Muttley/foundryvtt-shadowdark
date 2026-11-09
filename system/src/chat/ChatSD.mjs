@@ -26,7 +26,7 @@ export default class ChatSD {
 			user: game.user.id,
 		};
 
-		ChatMessage.applyRollMode(chatData, mode);
+		ChatMessage.applyMode(chatData, mode);
 
 		await ChatMessage.create(chatData);
 	}
@@ -51,7 +51,7 @@ export default class ChatSD {
 			rollMode: mode,
 		};
 
-		ChatMessage.applyRollMode(chatData, mode);
+		ChatMessage.applyMode(chatData, mode);
 		await ChatMessage.create(chatData);
 	}
 
@@ -148,7 +148,7 @@ export default class ChatSD {
 			user: game.user.id,
 		};
 		if (config.rollMode) {
-			ChatMessage.applyRollMode(chatData, config.rollMode);
+			ChatMessage.applyMode(chatData, config.rollMode);
 		}
 
 		return chatData;

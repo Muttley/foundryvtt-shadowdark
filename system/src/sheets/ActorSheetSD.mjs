@@ -107,9 +107,9 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 
 		return [
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
+				label: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
 				icon: '<i class="fas fa-edit"></i>',
-				condition: element => canEdit(element, this.actor),
+				visible: element => canEdit(element, this.actor),
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					const item = this.actor.items.get(itemId);
@@ -117,9 +117,9 @@ export default class ActorSheetSD extends foundry.appv1.sheets.ActorSheet {
 				},
 			},
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
+				label: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: element => canEdit(element, this.actor),
+				visible: element => canEdit(element, this.actor),
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					this._onItemDelete(itemId);

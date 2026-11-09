@@ -122,9 +122,9 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 
 		return [
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
+				label: game.i18n.localize("SHADOWDARK.sheet.general.item_edit.title"),
 				icon: '<i class="fas fa-edit"></i>',
-				condition: element => canEdit(element),
+				visible: element => canEdit(element),
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					const item = this.actor.items.get(itemId);
@@ -132,9 +132,9 @@ export default class GemBagSD extends foundry.appv1.api.Application {
 				},
 			},
 			{
-				name: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
+				label: game.i18n.localize("SHADOWDARK.sheet.general.item_delete.title"),
 				icon: '<i class="fas fa-trash"></i>',
-				condition: element => canEdit(element),
+				visible: element => canEdit(element),
 				callback: element => {
 					const itemId = element.dataset.itemId;
 					this._onItemDelete(itemId);

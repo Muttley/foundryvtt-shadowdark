@@ -121,7 +121,7 @@ export default class RollDialogSD
 
 		// roll modes
 		context.rollMode = this.config.rollMode;
-		context.rollModes = CONFIG.Dice.rollModes;
+		context.rollModes = CONFIG.ChatMessage.modes;
 
 		await Hooks.call("SD-Roll-Dialog", context);
 
