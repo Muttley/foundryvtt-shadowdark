@@ -56,7 +56,7 @@ export default class RequestCheckSD extends foundry.appv1.api.FormApplication {
 					body: `[[check ${dc} ${stat}]]`,
 				},
 			},
-			CONST.DICE_ROLL_MODES.PUBLIC
+			CONFIG.ChatMessage.modes.public
 		);
 	}
 

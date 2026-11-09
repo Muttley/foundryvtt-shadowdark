@@ -761,7 +761,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		await ChatMessage.create({
 			content,
 			speaker: options.speaker ?? ChatMessage.getSpeaker(),
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+			rollMode: CONFIG.ChatMessage.modes.public,
 		});
 	}
 

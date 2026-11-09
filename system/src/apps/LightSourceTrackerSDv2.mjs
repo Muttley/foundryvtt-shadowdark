@@ -147,7 +147,7 @@ export default class LightSourceTrackerSDv2 extends HandlebarsApplicationMixin(A
 
 		await ChatMessage.create({
 			content,
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+			rollMode: CONFIG.ChatMessage.modes.public,
 		});
 
 		this.dirty = true;
@@ -442,7 +442,7 @@ export default class LightSourceTrackerSDv2 extends HandlebarsApplicationMixin(A
 		await ChatMessage.create({
 			content,
 			speaker: speaker ?? ChatMessage.getSpeaker(),
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+			rollMode: CONFIG.ChatMessage.modes.public,
 		});
 
 		// Flag the housekeeper to get to work
