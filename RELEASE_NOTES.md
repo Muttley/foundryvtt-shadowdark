@@ -45,6 +45,7 @@
 - [#1437] Update compendium data to latest version export
 - [#1438] You are accessing the numeric #mode of an ActiveEffect change. Use the string #type instead *(Foundry V14 compatibility)*
 - [#1439] CONST.DICE_ROLL_MODES is deprecated in favor of configured CONFIG.ChatMessage.modes *(Foundry V14 compatibility)*
+- [#1440] ContextMenuEntry#condition is deprecated. Use ContextMenuEntry#visible instead *(Foundry V14 compatibility)*
 - [#1441] ContextMenuEntry#name is deprecated. Use ContextMenuEntry#label instead *(Foundry V14 compatibility)*
 
 **NOTE:** Many thanks to *Vacco* for his valiant effort in providing 100% coverage with a new Italian translation of the system.
