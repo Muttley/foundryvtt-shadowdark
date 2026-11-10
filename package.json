@@ -15,26 +15,26 @@
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.3",
-		"chalk": "^5.6.2",
+		"chalk": "^6.0.1",
 		"classic-level": "^3.0.0",
-		"del": "^8.0.1",
-		"glob": "^13.0.6",
+		"del": "^9.0.1",
+		"glob": "^14.0.4",
 		"gulp": "^5.0.1",
 		"gulp-eslint-new": "^2.6.2",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^6.0.1",
 		"gulp-yaml": "^2.0.4",
 		"json-stable-stringify-pretty": "^1.2.0",
-		"marked": "^18.0.4",
+		"marked": "^18.2.0",
 		"merge-stream": "^2.0.0",
-		"nedb-promises": "^6.2.3",
+		"nedb-promises": "^6.2.4",
 		"node-gyp-build": "^4.8.4",
-		"rollup": "^4.60.4",
-		"sass": "^1.100.0",
-		"yaml": "^2.9.0",
-		"yargs": "^18.0.0"
+		"rollup": "^4.68.2",
+		"sass": "^1.108.1",
+		"yaml": "^2.9.1",
+		"yargs": "^18.2.0"
 	},
 	"dependencies": {
-		"npm": "^11.15.0"
+		"npm": "^12.2.2"
 	}
 }
