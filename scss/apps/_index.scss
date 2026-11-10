@@ -1,3 +1,5 @@
+@use "v2";
+
 @forward "active-effects";
 @forward "character-generator";
 @forward "compendium-item-selector";
@@ -5,7 +7,6 @@
 @forward "item-properties";
 @forward "level-up";
 @forward "loading-spinner";
-@forward "light-tracker";
 @forward "module-art-config";
 @forward "roll-dialog";
 @forward "shadowdarkling-importer";

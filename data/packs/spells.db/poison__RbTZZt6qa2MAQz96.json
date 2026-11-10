@@ -9,6 +9,7 @@
 	"img": "icons/magic/acid/dissolve-pool-bubbles.webp",
 	"name": "Poison",
 	"system": {
+		"alignment": "",
 		"class": [
 			"Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND"
 		],

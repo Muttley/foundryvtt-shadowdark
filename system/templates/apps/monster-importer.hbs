@@ -18,9 +18,30 @@
 		<hr />
 		<p>{{localize "SHADOWDARK.apps.monster-importer.instruction3"}}</p>
 		<button type="submit">{{localize "SHADOWDARK.apps.monster-importer.import_button"}}</button>
+		<hr>
+		<div>
+			<label for="keepWindowOpen">
+				<input
+					type="checkbox"
+					name="keepWindowOpen"
+				>
+				{{localize "SHADOWDARK.apps.monster-importer.keepOpen"}}
+			</label>
+		</div>
+		<div>
+			<label for="openNewDocument">
+				<input
+					type="checkbox"
+					name="openNewDocument"
+					checked
+				>
+				{{localize "SHADOWDARK.apps.monster-importer.openNewMonster"}}
+			</label>
+		</div>
 	</div>
 	<div class="flex1" style="display: flex; flex-direction: column;">
 		<textarea name="monsterText" placeholder="{{localize "SHADOWDARK.apps.monster-importer.placeholder"}}" style="flex: 1; width: 100%; resize: none;"></textarea>
+
 		<ul class="import-errors" hidden></ul>
 	</div>
 </div>

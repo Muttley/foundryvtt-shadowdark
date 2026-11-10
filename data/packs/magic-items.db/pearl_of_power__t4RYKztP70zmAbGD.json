@@ -17,14 +17,24 @@
 		},
 		"description": "<p><em>A fat, opalescent pearl glowing with an inner radiance.</em></p><p><strong>Benefit</strong>. Once per day, you may regain the ability to cast a spell you have lost. This cannot restore a spell lost due to a critical spellcasting failure.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
 		"properties": [

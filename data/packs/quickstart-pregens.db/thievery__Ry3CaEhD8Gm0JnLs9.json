@@ -1,4 +1,6 @@
 {
+	"_id": "Ry3CaEhD8Gm0JnLs9",
+	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.ZgPiv6ttj4KbiA5X.Ry3CaEhD8Gm0JnLs9",
 	"changes": [
 		{
 			"key": "system.roll.stat.advantage.all",
@@ -18,15 +20,16 @@
 		"startTurn": null,
 		"turns": null
 	},
-	"flags": {},
+	"flags": {
+	},
 	"img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
 	"name": "Thievery",
 	"origin": "Compendium.shadowdark.talents.Item.TiaXUSTLoJpjfyxD",
-	"statuses": [],
-	"system": {},
+	"statuses": [
+	],
+	"system": {
+	},
 	"tint": "#ffffff",
 	"transfer": true,
-	"type": "base",
-	"_id": "Ry3CaEhD8Gm0JnLs9",
-	"_key": "!actors.items.effects!uXk56wpEwdiTfAQN.ZgPiv6ttj4KbiA5X.Ry3CaEhD8Gm0JnLs9"
+	"type": "base"
 }

@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Wither",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>[[/r 4d8]] damage to enemies within a near-sized cube centered on lich.</p>",
 		"duration": {
 			"type": "instant",

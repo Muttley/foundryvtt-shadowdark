@@ -16,11 +16,7 @@
 			"modifier": 0
 		},
 		"baseArmor": "",
-		"bonuses": {
-			"rangedDamageBonus": "1"
-		},
 		"broken": false,
-		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -28,8 +24,12 @@
 		},
 		"description": "<p><em>Leather bracers embossed with soaring hawks.</em></p><p><strong>Benefit.</strong> You deal +1 damage with ranged weapons.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"magicItem": true,
 		"properties": [
 		],

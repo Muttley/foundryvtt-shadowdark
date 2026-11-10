@@ -1,5 +1,11 @@
+export const SYSTEM_ID = "shadowdark";
+export const SYSTEM_NAME = "Shadowdark";
+
+globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
+globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
+
 // Namespace Configuration Values
-const SHADOWDARK = {};
+export const SHADOWDARK = {};
 
 SHADOWDARK.ABILITIES_LONG = {
 	str: "SHADOWDARK.ability_strength",
@@ -96,19 +102,6 @@ SHADOWDARK.LANGUAGE_RARITY = {
 	rare: "SHADOWDARK.language.rarity.rare",
 };
 
-SHADOWDARK.LIGHT_SETTING_NAMES = {
-	lantern: "SHADOWDARK.light_source.lantern",
-	lightSpellDouble: "SHADOWDARK.light_source.light_spell.double_near",
-	lightSpellNear: "SHADOWDARK.light_source.light_spell.near",
-	torch: "SHADOWDARK.light_source.torch",
-};
-
-SHADOWDARK.LIGHT_SOURCE_ITEM_IDS = [
-	"PkQXG3AaHNMVwGTc", // Light Spell
-	"rjNBToTJCYLLdVcT", // Light Spell (Double Time)
-	"BBDG7QpHOFXG6sKe", // Light Spell (Double Range)
-];
-
 SHADOWDARK.NPC_ATTACK_TYPES = {
 	physical: "SHADOWDARK.npc_attack.type.physical",
 	special: "SHADOWDARK.npc_attack.type.special",
@@ -117,6 +110,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 SHADOWDARK.NPC_MOVES = {
 	none: "SHADOWDARK.npc_move.none",
 	close: "SHADOWDARK.npc_move.close",
+	doubleClose: "SHADOWDARK.npc_move.double_close",
 	near: "SHADOWDARK.npc_move.near",
 	doubleNear: "SHADOWDARK.range.double_near",
 	tripleNear: "SHADOWDARK.npc_move.triple_near",
@@ -132,6 +126,7 @@ SHADOWDARK.PROPERTY_TYPES = {
 SHADOWDARK.RANGES = {
 	close: "SHADOWDARK.range.close",
 	near: "SHADOWDARK.range.near",
+	doubleNear: "SHADOWDARK.range.double_near",
 	far: "SHADOWDARK.range.far",
 	nearLine: "SHADOWDARK.range.nearLine",
 };
@@ -226,238 +221,238 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		effectKey: "system.abilities.cha.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementCha",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	abilityImprovementCon: {
 		defaultValue: 1,
 		effectKey: "system.abilities.con.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementCon",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	abilityImprovementDex: {
 		defaultValue: 1,
 		effectKey: "system.abilities.dex.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementDex",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	abilityImprovementInt: {
 		defaultValue: 1,
 		effectKey: "system.abilities.int.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementInt",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	abilityImprovementStr: {
 		defaultValue: 1,
 		effectKey: "system.abilities.str.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementStr",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	abilityImprovementWis: {
 		defaultValue: 1,
 		effectKey: "system.abilities.wis.value",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.abilityImprovementWis",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	acBonus: {
 		defaultValue: 1,
 		effectKey: "system.attributes.ac.value",
 		img: "icons/skills/melee/shield-block-gray-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.acBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	acBonusFromAttribute: {
 		defaultValue: "system.attributes.REPLACEME.mod",
 		effectKey: "system.attributes.ac.value",
 		img: "icons/skills/melee/shield-block-gray-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.acBonusFromAttribute",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	additionalGearSlots: {
 		defaultValue: 1,
 		effectKey: "system.slots",
 		img: "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.additionalGearSlots",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	armorMastery: {
 		defaultValue: 1,
 		effectKey: "system.attributes.ac.REPLACEME",
 		img: "icons/magic/defensive/shield-barrier-deflect-teal.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.armorMastery",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	criticalFailureThreshold: {
 		defaultValue: 3,
 		effectKey: "system.roll.attack.critical-failure.this",
 		img: "icons/magic/life/cross-area-circle-green-white.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.criticalFailureThreshold",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	criticalSuccessThreshold: {
 		defaultValue: 18,
 		effectKey: "system.roll.attack.critical-success.this",
 		img: "icons/magic/fire/flame-burning-fist-strike.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.criticalSuccessThreshold",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	critMultiplier: {
 		defaultValue: 4,
 		effectKey: "system.roll.attack.critical-multiplier.this",
 		img: "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.critMultiplier",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	damageMultiplier: {
 		defaultValue: 2,
 		effectKey: "system.roll.attack.damage.this",
 		img: "icons/skills/melee/strike-hammer-destructive-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
-		mode: "CONST.ACTIVE_EFFECT_MODES.MULTIPLY",
+		type: "multiply",
 	},
 	hpAdvantage: {
 		defaultValue: 1,
 		effectKey: "system.roll.hp.advantage",
 		img: "icons/magic/life/cross-area-circle-green-white.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.hpAdvantage",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	initAdvantage: {
 		defaultValue: 1,
 		effectKey: "system.roll.initiative.advantage",
 		img: "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.initAdvantage",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	lightSource: {
-		defaultValue: "REPLACEME",
-		effectKey: "system.light.template",
+		defaultValue: true,
+		effectKey: "system.light.isSource",
 		img: "icons/magic/light/torch-fire-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.lightSource",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	meleeAttackBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.melee.bonus.all",
 		img: "icons/skills/melee/strike-polearm-glowing-white.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.meleeAttackBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	meleeDamageBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.melee.damage.all",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.meleeDamageBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	permanentAbilityCha: {
 		defaultValue: 18,
 		effectKey: "system.abilities.cha.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityCha",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	permanentAbilityCon: {
 		defaultValue: 18,
 		effectKey: "system.abilities.con.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityCon",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	permanentAbilityDex: {
 		defaultValue: 18,
 		effectKey: "system.abilities.dex.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityDex",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	permanentAbilityInt: {
 		defaultValue: 18,
 		effectKey: "system.abilities.int.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityInt",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	permanentAbilityStr: {
 		defaultValue: 18,
 		effectKey: "system.abilities.str.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityStr",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	permanentAbilityWis: {
 		defaultValue: 18,
 		effectKey: "system.abilities.wis.value",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.permanentAbilityWis",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	rangedAttackBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.ranged.bonus.all",
 		img: "icons/weapons/ammunition/arrow-head-war-flight.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.rangedAttackBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	rangedDamageBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.ranged.damage.all",
 		img: "icons/skills/melee/strike-axe-blood-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.rangedDamageBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	spellAdvantage: {
 		defaultValue: 1,
 		effectKey: "system.roll.spell.advantage.REPLACEME",
 		img: "icons/magic/air/air-smoke-casting.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellAdvantage",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	spellCastingBonus: {
 		defaultValue: 1,
-		effectKey: "system.roll.spell.advantage.all",
+		effectKey: "system.roll.spell.bonus.all",
 		img: "icons/magic/fire/flame-burning-fist-strike.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellCastingBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	spellcastingClasses: {
 		defaultValue: "REPLACEME",
 		effectKey: "system.spellcasting.classes",
 		img: "icons/sundries/documents/document-sealed-brown-red.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellcastingClasses",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	spellDamageBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.spell.damage",
 		img: "icons/magic/lightning/orb-ball-blue.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.spellDamageBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	stoneSkinTalent: {
 		defaultValue: "2+floor(@level.value/2)",
 		effectKey: "system.attributes.ac.value",
 		icon: "icons/magic/earth/strike-fist-stone-gray.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.stoneSkinTalent",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	unarmoredAcBonus: {
 		defaultValue: 1,
 		effectKey: "system.attributes.ac.unarmored",
 		img: "icons/skills/melee/shield-block-gray-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.unarmoredAcBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	weaponAttackBonus: {
 		defaultValue: 1,
 		effectKey: "system.roll.attack.bonus.this",
 		img: "icons/skills/melee/strike-polearm-glowing-white.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponAttackBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 		restriction: "Weapon",
 	},
 	weaponDamageBonus: {
@@ -465,7 +460,7 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		effectKey: "system.roll.attack.damage.this",
 		img: "icons/weapons/ammunition/arrow-head-war-flight.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponDamageBonus",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 		restriction: "Weapon",
 	},
 	weaponDamageDieD12: {
@@ -473,28 +468,28 @@ SHADOWDARK.PREDEFINED_EFFECTS = {
 		effectKey: "system.roll.attack.upgrade-damage-die.REPLACEME",
 		img: "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieD12",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	weaponDamageDieImprovementByProperty: {
 		defaultValue: 1,
 		effectKey: "system.roll.attack.upgrade-damage-die.REPLACEME",
 		img: "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponDamageDieImprovementByProperty",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 	weaponDamageMultiplier: {
 		defaultValue: 2,
 		effectKey: "system.roll.attack.damage.this",
 		img: "icons/skills/melee/strike-hammer-destructive-orange.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.damageMultiplier",
-		mode: "CONST.ACTIVE_EFFECT_MODES.OVERRIDE",
+		type: "override",
 	},
 	weaponMastery: {
 		defaultValue: 1,
 		effectKey: "system.bonuses.weaponMastery",
 		img: "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
 		name: "SHADOWDARK.item.effect.predefined_effect.weaponMastery",
-		mode: "CONST.ACTIVE_EFFECT_MODES.ADD",
+		type: "add",
 	},
 };
 
@@ -571,5 +566,3 @@ SHADOWDARK.WEAPON_TYPES = {
 	melee: "SHADOWDARK.weapon.type.melee",
 	ranged: "SHADOWDARK.weapon.type.ranged",
 };
-
-export default SHADOWDARK;

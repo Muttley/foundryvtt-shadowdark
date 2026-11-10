@@ -298,10 +298,10 @@ export default class PlayerSD extends ActorBaseSD {
 	 * @param {*} base base damage formula
 	 */
 	_calcDamageConfig(item, config, key, base=1) {
-
 		config.damageRoll ??= {};
-		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
 		config.damageRoll.base = base;
+		config.damageRoll.explode = false;
+		config.damageRoll.label = game.i18n.localize("SHADOWDARK.roll.damage");
 
 		// Get roll key die improvements
 		const damageDieRollKey = this._getActiveEffectKeys(
@@ -315,6 +315,16 @@ export default class PlayerSD extends ActorBaseSD {
 				config.damageRoll.base,
 				damageDieRollKey.value
 			);
+		}
+
+		const damageAdvantageKey = this._getActiveEffectKeys(
+			`roll.${key}.damage-advantage`,
+			0,
+			item,
+			config
+		);
+		if (damageAdvantageKey.value) {
+			config.damageRoll.advantage = damageAdvantageKey.value;
 		}
 
 		// Get roll key extra dice
@@ -338,15 +348,27 @@ export default class PlayerSD extends ActorBaseSD {
 			config
 		);
 
+		const explodeDamageDieKey = this._getActiveEffectKeys(
+			`roll.${key}.explode-damage-die`,
+			0,
+			item,
+			config
+		);
+		if (explodeDamageDieKey.value) {
+			config.damageRoll.explode = true;
+		}
+
 		config.damageRoll.formula = shadowdark.dice.resolveFormula(
 			damageRollKey.value, this.parent.getRollData()
 		);
 
 		// generate tooltips
 		const tooltips = [];
+		tooltips.push(damageAdvantageKey.tooltips);
 		tooltips.push(damageRollKey.tooltips);
 		tooltips.push(damageDieRollKey.tooltips);
 		tooltips.push(extraDieRollKey.tooltips);
+		tooltips.push(explodeDamageDieKey.tooltips);
 		config.damageRoll.tooltips = tooltips.filter(Boolean).join(", ");
 
 	}
@@ -419,7 +441,8 @@ export default class PlayerSD extends ActorBaseSD {
 		this._calcDamageConfig(weapon,
 			config,
 			config.attack.type,
-			weapon.system.getDamageFormula(config.attack.handedness));
+			weapon.system.getDamageFormula(config.attack.handedness)
+		);
 		this._calcAttackExtraConfig(weapon, config);
 
 		return config;
@@ -558,6 +581,16 @@ export default class PlayerSD extends ActorBaseSD {
 			);
 		}
 
+		const spellAlignment = linkedSpell.system?.alignment ?? "";
+
+		if (spellAlignment !== "") {
+			if (spellAlignment !== this.alignment) {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.error.spells.alignment_mismatch")
+				);
+			}
+		}
+
 		const characterClass = await this.getClass();
 
 		const spellcastingAttribute =
@@ -602,19 +635,19 @@ export default class PlayerSD extends ActorBaseSD {
 	/* ----------------------- */
 
 	async addAncestry(item) {
-		this.update({"system.ancestry": item.uuid});
+		return this.parent.update({"system.ancestry": item.uuid});
 	}
 
 	async addBackground(item) {
-		this.update({"system.background": item.uuid});
+		return this.parent.update({"system.background": item.uuid});
 	}
 
 	async addClass(item) {
-		this.update({"system.class": item.uuid});
+		return this.parent.update({"system.class": item.uuid});
 	}
 
 	async addDeity(item) {
-		this.update({"system.deity": item.uuid});
+		return this.parent.update({"system.deity": item.uuid});
 	}
 
 	async addLanguage(item) {
@@ -627,9 +660,9 @@ export default class PlayerSD extends ActorBaseSD {
 		}
 
 		if (!languageFound) {
-			const currentLanguages = this.languages;
-			currentLanguages.push(item.uuid);
-			this.update({"system.languages": currentLanguages});
+			return this.parent.update({
+				"system.languages": [...this.languages, item.uuid],
+			});
 		}
 	}
 
@@ -637,7 +670,7 @@ export default class PlayerSD extends ActorBaseSD {
 		const myClass = await this.getClass();
 
 		if (myClass && myClass.system.patron.required) {
-			this.update({"system.patron": item.uuid});
+			return this.parent.update({"system.patron": item.uuid});
 		}
 		else {
 			ui.notifications.error(
@@ -653,6 +686,16 @@ export default class PlayerSD extends ActorBaseSD {
 			return ui.notifications.error(
 				game.i18n.localize("SHADOWDARK.error.spells.spell_not_found")
 			);
+		}
+
+		const spellAlignment = spell.system?.alignment ?? "";
+
+		if (spellAlignment !== "") {
+			if (spellAlignment !== this.alignment) {
+				return ui.notifications.error(
+					game.i18n.localize("SHADOWDARK.error.spells.alignment_mismatch")
+				);
+			}
 		}
 
 		config.actorUuid = this.parent.uuid;

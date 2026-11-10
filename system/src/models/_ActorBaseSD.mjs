@@ -254,7 +254,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		// Calculate add type changes
 		let intParts = 0;
 		let strParts = "";
-		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.ADD).forEach(c => {
+		changes.filter(c => c.type === "add").forEach(c => {
 			if (!isNaN(Number(c.value)) && c.value !== "") intParts += Number(c.value);
 			else strParts += ` + ${c.value}`;
 			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "+", c.key));
@@ -286,7 +286,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 
 		// Calculate multiply type changes
 		let multiplyBonus = 1;
-		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY).forEach(c => {
+		changes.filter(c => c.type === "multiply").forEach(c => {
 			multiplyBonus = multiplyBonus * c.value;
 			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "x", c.key));
 		});
@@ -301,7 +301,7 @@ export class ActorBaseSD extends foundry.abstract.TypeDataModel {
 		}
 
 		// Calculate override type changes
-		changes.filter(c => c.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE).forEach(c => {
+		changes.filter(c => c.type === "override").forEach(c => {
 			finalValue = c.value;
 			tooltips.push(shadowdark.dice.createToolTip(c.name, c.value, "=", c.key));
 		});

@@ -60,6 +60,7 @@
 
 	.portrait {
 		grid-row: span 2;
+		object-fit: contain;
 	}
 
 	.rollable {

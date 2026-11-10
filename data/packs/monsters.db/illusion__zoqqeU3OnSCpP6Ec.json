@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Illusion",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Create a convincing visual and/ or auditory illusion within near. Lasts until dismissed.</p>",
 		"duration": {
 			"type": "permanent",

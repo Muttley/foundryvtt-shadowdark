@@ -17,14 +17,24 @@
 		},
 		"description": "<p><em>A brooch made from a horned scarab beetle dipped in gold.</em></p><p><strong>Benefit</strong>. If you die, make a [[check 18 con]] check. If you succeed, you are unconscious instead of dead.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
 		"properties": [

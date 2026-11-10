@@ -1,3 +1,6 @@
+import { SHADOWDARK } from "./src/config.mjs";
+
+import { registerLightTrackerLayer } from "./src/apps/LightSourceTrackerSDv2.mjs";
 import ActiveEffectsSD from "./src/system/ActiveEffectsSD.mjs";
 import ChatSD from "./src/chat/ChatSD.mjs";
 import CompendiumsSD from "./src/documents/CompendiumsSD.mjs";
@@ -7,7 +10,6 @@ import performDataMigration from "./src/migration.mjs";
 import registerHandlebarsHelpers from "./src/handlebars.mjs";
 import registerSystemSettings from "./src/settings.mjs";
 import registerTextEditorEnrichers from "./src/enrichers.mjs";
-import SHADOWDARK from "./src/config.mjs";
 import ShadowdarkMacro from "./src/macro.mjs";
 import UtilitySD from "./src/utils/UtilitySD.mjs";
 
@@ -65,7 +67,7 @@ Hooks.once("init", () => {
 
 	game.shadowdark = {
 		config: SHADOWDARK,
-		lightSourceTracker: new apps.LightSourceTrackerSD(),
+		lightSourceTracker: new apps.LightSourceTrackerSDv2(),
 		effectPanel: new apps.EffectPanelSD(),
 	};
 
@@ -78,6 +80,7 @@ Hooks.once("init", () => {
 
 	CONFIG.Dice.rolls = [dice.RollSD];
 
+	registerLightTrackerLayer();
 	registerHandlebarsHelpers();
 	registerSystemSettings();
 	registerTextEditorEnrichers();

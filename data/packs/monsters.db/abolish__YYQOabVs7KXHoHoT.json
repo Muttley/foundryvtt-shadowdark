@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Abolish",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>One target in far takes [[/r 5d8]] damage.</p>",
 		"duration": {
 			"type": "instant",

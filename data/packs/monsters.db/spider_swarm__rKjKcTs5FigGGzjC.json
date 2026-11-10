@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Spider Swarm",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>A spider swarm appears within near. Stays [[/r 1d4]] rounds. Follows sorcerer's commands.</p>",
 		"duration": {
 			"type": "rounds",

@@ -1,0 +1,20 @@
+<form>
+	<div class="form-group">
+		<label for="effect-light-bright">{{localize "SHADOWDARK.item.light.bright_radius"}}</label>
+		<input id="effect-light-bright" name="bright" type="number" min="0" value="5">
+	</div>
+	<div class="form-group">
+		<label for="effect-light-dim">{{localize "SHADOWDARK.item.light.dim_radius"}}</label>
+		<input id="effect-light-dim" name="dim" type="number" min="0" value="30">
+	</div>
+	<div class="form-group">
+		<label for="effect-light-color">{{localize "SHADOWDARK.item.light.color"}}</label>
+		{{colorPicker id="effect-light-color" name="color" value="#d1c846"}}
+	</div>
+	<div class="form-group">
+		<label for="effect-light-animation">{{localize "SHADOWDARK.item.light.animation"}}</label>
+		<select id="effect-light-animation" name="animation">
+			{{selectOptions animations selected="torch" localize=false}}
+		</select>
+	</div>
+</form>

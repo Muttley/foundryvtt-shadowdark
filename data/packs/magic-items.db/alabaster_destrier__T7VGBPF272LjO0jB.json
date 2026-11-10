@@ -10,7 +10,6 @@
 	"name": "Alabaster Destrier",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -18,17 +17,28 @@
 		},
 		"description": "<p><em>A smooth, pearly statuette of a running horse.</em></p><p></p><p><strong>Benefit.</strong> Once per day, the wielder can speak the command word to turn the statuette into a @UUID[Compendium.shadowdark.monsters.Actor.5Tp7B3qOMEAdMkJ8]{pegasus} that accepts neutral or lawful riders. The statuette remains in this form for 1 hour.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

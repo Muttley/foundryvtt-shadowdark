@@ -225,7 +225,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		let current = "";
 		for (const line of text.split(/\r?\n/)) {
 			const isBlank = line.trim() === "";
-			const isFeatureStart = /^[A-Z][a-z].*\.\s/.test(line);
+			const isFeatureStart = /^[A-Z][a-z].*[.:]\s/.test(line);
 
 			// Boundary reached — save the current feature
 			if ((isBlank || isFeatureStart) && current.trim()) {
@@ -250,7 +250,7 @@ export default class MonsterImporterSD extends ImporterSD {
 	 * @returns {featureObj}
 	 */
 	_parseFeature(str) {
-		const featureStr = str.match(/([^.]*)\.(?:\s*)?(.*)/);
+		const featureStr = str.match(/([^.:]*)[.:](?:\s*)?(.*)/);
 		if (!featureStr) {
 			throw new Error(`Could not parse feature: "${str.substring(0, 40)}"`);
 		}
@@ -285,7 +285,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		}
 
 		const spellObj = {
-			name: parsedSpell[1],
+			name: parsedSpell[1].trim(),
 			type: "Spell",
 			system: {
 				tier: parsedSpell[3] - 10,
@@ -299,28 +299,37 @@ export default class MonsterImporterSD extends ImporterSD {
 		};
 
 		// Take a chance at finding the range in the description
-		const potentialRange = parsedSpell[2].toLowerCase();
+		// const potentialRange = parsedSpell[2].toLowerCase();
 		const descStr = (`${parsedSpell[2]}.  ${parsedSpell[4]}`).toLowerCase();
 
-		for (const range of ["self", "far", "near", "close"]) {
-			if (potentialRange.includes(range)) {
-				spellObj.system.range = range;
-				break;
+		const ranges = [];
+		const rangeLut = {};
+		for (const key of Object.keys(CONFIG.SHADOWDARK.SPELL_RANGES)) {
+			let rangeString = CONFIG.SHADOWDARK.SPELL_RANGES[key].toLowerCase();
+			ranges.push(rangeString);
+			rangeLut[rangeString] = key;
+		}
+
+		ranges.sort((a, b) => a.length - b.length);
+
+		for (const range of ranges) {
+			if (descStr.includes(range)) {
+				spellObj.system.range = rangeLut[range];
+				// break;
 			}
 		}
 		if (!spellObj.system.range) {
-			for (const range of ["far", "near", "close"]) {
+			for (const range of ranges) {
 				if (descStr.includes(`in ${range}`) || descStr.includes(`${range} range`)) {
-					spellObj.system.range = range;
-					break;
+					spellObj.system.range = rangeLut[range];
 				}
 			}
 		}
 		if (!spellObj.system.range) {
 			for (const word of parsedSpell[4].toLowerCase().split(" ")) {
-				for (const range of ["self", "far", "near", "close"]) {
+				for (const range of ranges) {
 					if (word.includes(`${range}.`) || word.includes(`${range},`) || word.includes(`${range}-`)) {
-						spellObj.system.range = range;
+						spellObj.system.range = rangeLut[range];
 						break;
 					}
 				}
@@ -349,12 +358,14 @@ export default class MonsterImporterSD extends ImporterSD {
 
 	 // Formats statblocks with standard look and feel
 	_generateNotesText = (statBlock, flavorText, features) => `
-	<p><i>${flavorText}</i></p>
-	<p></p>
-	<p>${statBlock.replace(/AC|HP|ATK|MV|S|D|Ch|C|I|W|AL|LV/g, "<strong>$&</strong>")}</p><p></p>
+	${flavorText
+		.map(p => p.replace(/^\s*|\s$/, ""))
+		.map(p => p.replace(/(.*)/, "<p><i>$1</i></p>"))
+		.join("")}
+	<p>${statBlock.replace(/AC|HP|ATK|MV|S|D|Ch|C|I|W|AL|LV/g, "<strong>$&</strong>")}</p>
 	${features
 		.map(feat => feat.replace(/([^.]*)/, "<strong>$1</strong>"))
-		.map(feat => `<p>${feat}</p><p></p>`)
+		.map(feat => `<p>${feat}</p>`)
 		.join("")}`;
 
 	/**
@@ -444,10 +455,12 @@ export default class MonsterImporterSD extends ImporterSD {
 	/**
 	 * Builds a Foundry actor data object from validated parsed data.
 	 */
-	_buildActorObj(titleName, stats, statBlock, flavorText, features) {
+	_buildActorObj(titleName, stats, statBlock, flavorTextParagraphs, features) {
 		const alignments = {L: "lawful", N: "neutral", C: "chaotic"};
 		const movement = this._parseMovement(stats.MV);
-		const notesText = this._generateNotesText(statBlock, flavorText, features);
+		const notesText = this._generateNotesText(statBlock, flavorTextParagraphs, features);
+
+		// const slugName = titleName.slugify();
 
 		return {
 			name: titleName,
@@ -489,9 +502,9 @@ export default class MonsterImporterSD extends ImporterSD {
 
 		const parsedText = monsterText.match([
 			/(.*)\n/,							// parsedText[1] matches Title
-			/([\S\s]*)\n/,						// parsedText[2] matches flavor Text
-			/(AC \d*[\S\s]*LV \d*)(?:\n|$)/,	// parsedText[3] matches Stat Block
-			/([\S\s]*)?/,						// parsedText[4] matches features
+			/([\S\s]*\n)?/,						// parsedText[2] matches optional flavor Text
+			/(AC \d*[\S\s]*LV \d+)\.?(?:\n|$)/,	// parsedText[3] matches Stat Block
+			/([\S\s]*)?/,						// parsedText[4] matches optional features
 		].map(function(r) {
 			return r.source;
 		}).join(""));
@@ -507,11 +520,10 @@ export default class MonsterImporterSD extends ImporterSD {
 		}
 
 		const titleName = parsedText[1].titleCase();
-		const flavorText = parsedText[2].replace(/(\r\n|\n|\r)/gm, " ");
+		const flavorText = (parsedText[2] ?? "").replace(/(\r\n|\n|\r)/gm, " ");
+		const flavorTextParagraphs = flavorText.split(/~p~/g);
 		const statBlock = parsedText[3].replace(/(\r\n|\n|\r)/gm, " ");
-		const featuresText = parsedText[4];
-		const features = typeof featuresText !== "undefined"
-			? this._parseFeatures(featuresText) : [];
+		const features = this._parseFeatures(parsedText[4] ?? "");
 
 		// Collect errors from all parsing stages
 		const errors = [];
@@ -551,7 +563,7 @@ export default class MonsterImporterSD extends ImporterSD {
 		}
 
 		const actorObj = this._buildActorObj(
-			titleName, stats, statBlock, flavorText, features
+			titleName, stats, statBlock, flavorTextParagraphs, features
 		);
 		return { actorObj, attackArray, featureArray, castingAbility, spellcasting };
 	}

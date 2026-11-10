@@ -26,7 +26,7 @@ export default class ChatSD {
 			user: game.user.id,
 		};
 
-		ChatMessage.applyRollMode(chatData, mode);
+		ChatMessage.applyMode(chatData, mode);
 
 		await ChatMessage.create(chatData);
 	}
@@ -46,11 +46,12 @@ export default class ChatSD {
 
 		const chatData = {
 			content: await item.system.render({expanded: true}),
+			speaker: ChatMessage.getSpeaker({alias: game.user.name}),
 			flags: { "core.canPopout": true },
 			rollMode: mode,
 		};
 
-		ChatMessage.applyRollMode(chatData, mode);
+		ChatMessage.applyMode(chatData, mode);
 		await ChatMessage.create(chatData);
 	}
 
@@ -147,7 +148,7 @@ export default class ChatSD {
 			user: game.user.id,
 		};
 		if (config.rollMode) {
-			ChatMessage.applyRollMode(chatData, config.rollMode);
+			ChatMessage.applyMode(chatData, config.rollMode);
 		}
 
 		return chatData;

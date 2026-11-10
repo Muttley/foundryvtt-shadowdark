@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Riddle",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>One target in far [[check 15 int]] or stupefied [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",

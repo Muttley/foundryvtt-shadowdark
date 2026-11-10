@@ -25,4 +25,21 @@
 			{{/if}}
 		>
 	{{/if}}
+	<div class="SD-grid right">
+		<h3>
+			<label for="light-auto-activate-{{item.id}}">
+				{{localize 'SHADOWDARK.item.light.auto_activate'}}
+			</label>
+		</h3>
+		<input
+			id="light-auto-activate-{{item.id}}"
+			name="system.light.autoActivate"
+			type="checkbox"
+			{{checked item.system.light.autoActivate}}
+			{{#if item.system.light.active}}
+				data-tooltip="{{localize 'SHADOWDARK.item.light.in_use_tooltip'}}"
+				disabled
+			{{/if}}
+		>
+	</div>
 </div>

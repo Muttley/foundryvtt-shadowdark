@@ -10,7 +10,6 @@
 	"name": "Amulet of Secrecy",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -18,17 +17,28 @@
 		},
 		"description": "<p><em>A heavy, flat pendant carved with a lidded eye.</em></p><p><strong>Benefit.</strong> You can't be detected by divination magic such as the scrying spell or a Crystal Ball while wearing this amulet.</p><p><strong>Curse.</strong> You constantly have the sensation of being watched.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

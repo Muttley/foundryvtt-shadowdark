@@ -44,7 +44,7 @@ export function applyCriticalHit(formula, multiplier=2) {
  * @returns {string} // new roll formula
  */
 export function applyExploding(formula) {
-	return formula.replace(/(\d*)d(\d+[a-z0-9]*)/i, function(match) {
+	return formula.replaceAll(/(\d*d\d+[a-z0-9]*)/ig, match => {
 		return `${match}x`;
 	});
 }
@@ -79,6 +79,9 @@ export function createToolTip(name, value, prefix="+", key="") {
 	}
 	else if (key.includes("extra-damage-die")) {
 		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.extra_die")} ${value})`;
+	}
+	else if (key.includes("explode-damage-die")) {
+		return `${name} (${game.i18n.localize("SHADOWDARK.roll.tooltip.explode_damage_die")})`;
 	}
 	else {
 		return `${name} (${value > 0 ? prefix : ""}${value})`;
@@ -131,7 +134,18 @@ export function initializeD20Check(config={}) {
  * @returns {string}
  */
 export function resolveFormula(formula, rollData={}, forceDeterministic=false) {
-	const r = new Roll(formula.toString(), rollData);
+	let r;
+	try {
+		r = new Roll(formula.toString(), rollData);
+	}
+	catch(err) {
+		if (forceDeterministic) {
+			return null;
+		}
+		else {
+			return formula;
+		}
+	}
 	if (r.isDeterministic) {
 		try {
 			r.evaluateSync();
@@ -194,7 +208,8 @@ export async function roll(config, rolldata={}) {
 				config.formula = applyCriticalHit(config.formula, config.criticalMultiplier);
 			}
 			// apply momentum mode
-			if (game.settings.get("shadowdark", "useMomentumMode")) {
+			const useMomentumMode = game.settings.get("shadowdark", "useMomentumMode");
+			if (useMomentumMode || config.explode) {
 				config.formula = applyExploding(config.formula);
 			}
 		}

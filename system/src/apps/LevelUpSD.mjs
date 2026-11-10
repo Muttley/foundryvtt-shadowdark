@@ -163,8 +163,10 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 
 		// get HP advantage
 		const hpRollKey = this.data.actor.system._getActiveEffectKeys("system.roll.hp.advantage", 0);
+		const hpBonusKey = this.data.actor.system._getActiveEffectKeys("system.attributes.hp.max", 0);
 		this.data.hp = {
 			advantage: hpRollKey.value,
+			bonus: hpBonusKey.value,
 			tooltips: hpRollKey.tooltips,
 		};
 
@@ -374,8 +376,12 @@ export default class LevelUpSD extends foundry.appv1.api.FormApplication {
 		await this.data.actor.createEmbeddedDocuments("Item", allItems);
 
 		// calculate new HP base
-		let newMaxHP = this.data.actor.system.attributes.hp.max + this.data.rolls.hp;
-		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
+		let newMaxHP = this.data.actor.system.attributes.hp.max
+			- this.data.hp.bonus
+			+ this.data.rolls.hp;
+
+		let newValueHP = this.data.actor.system.attributes.hp.value
+			+ this.data.rolls.hp;
 
 		if (this.data.targetLevel === 1) {
 			let hpConMod = this.data.actor.system.abilities.con.mod;

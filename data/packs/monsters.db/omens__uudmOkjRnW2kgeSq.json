@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Omens",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Self. ADV on all actions for [[/r 1d4]] rounds.</p>",
 		"duration": {
 			"type": "rounds",

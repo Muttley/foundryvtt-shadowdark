@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Hellfrost",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>All within near-sized cube extending from oni [[/r 3d6]] damage.</p>",
 		"duration": {
 			"type": "instant",

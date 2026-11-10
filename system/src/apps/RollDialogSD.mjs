@@ -1,8 +1,8 @@
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const FormDataExtended = foundry.applications.ux.FormDataExtended;
 
-export default class RollDialogSD extends foundry.applications.api.HandlebarsApplicationMixin(
-	foundry.applications.api.ApplicationV2
-) {
+export default class RollDialogSD
+	extends HandlebarsApplicationMixin(ApplicationV2) {
 
 	static DEFAULT_OPTIONS = {
 		id: "sd-roll-dialog",
@@ -121,7 +121,7 @@ export default class RollDialogSD extends foundry.applications.api.HandlebarsApp
 
 		// roll modes
 		context.rollMode = this.config.rollMode;
-		context.rollModes = CONFIG.Dice.rollModes;
+		context.rollModes = CONFIG.ChatMessage.modes;
 
 		await Hooks.call("SD-Roll-Dialog", context);
 

@@ -113,7 +113,7 @@ export default function() {
 		"systems/shadowdark/templates/items/armor/_partials/item-properties.hbs",
 		"systems/shadowdark/templates/items/armor/details-tab.hbs",
 		"systems/shadowdark/templates/items/basic/_partials/item-properties.hbs",
-		"systems/shadowdark/templates/items/basic/_partials/light-template.hbs",
+		"systems/shadowdark/templates/items/basic/_partials/light-settings.hbs",
 		"systems/shadowdark/templates/items/basic/_partials/light-timer.hbs",
 		"systems/shadowdark/templates/items/basic/details-tab.hbs",
 		"systems/shadowdark/templates/items/basic/light-tab.hbs",

@@ -288,17 +288,17 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		if (item.effects.toObject().length > 0) {
 			let itemObj = await shadowdark.effects.createItemWithEffect(item);
 
-			const newItem = await this.actor.createEmbeddedDocuments("Item", [itemObj]);
+			const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemObj]);
 
-			if (itemObj.effects.some(e => e.changes.some(c => c.key === "system.light.template"))) {
-				this._toggleLightSource(newItem);
+			if (itemObj.effects.some(e => shadowdark.effects.isLightSourceEffect(e))) {
+				await this._toggleLightSource(newItem);
 			}
 
 			return;
 		}
 
 		// Activate light spell if dropped onto the sheet
-		if (CONFIG.SHADOWDARK.LIGHT_SOURCE_ITEM_IDS.includes(item.id)) {
+		if (item.system.light?.autoActivate) {
 			return this._dropActivateLightSource(item);
 		}
 
@@ -598,13 +598,21 @@ export default class PlayerSheetSD extends ActorSheetSD {
 	async _onlevelUp(event) {
 		event.preventDefault();
 
-		let actorClass = await this.actor.system.getClass();
-		if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
-			new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
-			this.close();
+		const actorClass = await this.actor.system.getClass();
+
+		if (actorClass) {
+			if (this.actor.system.level.value === 0 && actorClass.name.includes("Level 0")) {
+				new shadowdark.apps.CharacterGeneratorSD(this.actor._id).render(true);
+				this.close();
+			}
+			else {
+				new shadowdark.apps.LevelUpSD(this.actor._id).render(true);
+			}
 		}
 		else {
-			new shadowdark.apps.LevelUpSD(this.actor._id).render(true);
+			return ui.notifications.warn(
+				game.i18n.localize("SHADOWDARK.apps.level-up.errors.missing_class")
+			);
 		}
 	}
 
@@ -753,7 +761,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		await ChatMessage.create({
 			content,
 			speaker: options.speaker ?? ChatMessage.getSpeaker(),
-			rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+			rollMode: CONFIG.ChatMessage.modes.public,
 		});
 	}
 

@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Gate",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>Open a portal at a point within near to another location on any plane. Lasts [[/r 1d6]] rounds or until dismissed.</p>",
 		"duration": {
 			"type": "rounds",

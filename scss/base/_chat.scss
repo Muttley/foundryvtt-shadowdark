@@ -200,14 +200,14 @@
 
 				&.critical-success {
 					color: #1c7b00;
-					text-shadow: 0px 0px 10px #ffffff;
+					text-shadow: 0px 0px 10px green;
 				}
 				&.failure {
 					color: gray;
 				}
 				&.critical-failure {
-					color: #750003;
-					text-shadow: 0 0 10px black;
+					color: #750004;
+					text-shadow: 0 0 10px red;
 				}
 			}
 			.dice-tooltip {

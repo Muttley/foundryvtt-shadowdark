@@ -9,6 +9,7 @@
 	"img": "icons/consumables/potions/bottle-corked-red.webp",
 	"name": "Potion of Vitality",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,6 +18,7 @@
 			"gp": 0,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p><em>A crimson elixir that gently thumps with a heartbeat.</em></p><p><strong>Benefit.</strong> When you drink this potion, roll your class's hit points die. You permanently gain that many HP.</p><p><strong>Curse.</strong> If you drink more than one Potion of Vitality in your lifetime, you must pass a [[check 18 con]] check each time or die instantly.</p>",
 		"duration": {
 			"type": "rounds"

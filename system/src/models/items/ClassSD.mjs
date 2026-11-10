@@ -20,8 +20,9 @@ export default class ClassSD extends BaseItemSD {
 		const schema = {
 			...itemfields.languageChoices(),
 			alignment: new fields.StringField({
-				initial: "neutral",
+				initial: "",
 				choices: Object.keys(CONFIG.SHADOWDARK.ALIGNMENTS),
+				blank: true,
 			}),
 			allArmor: new fields.BooleanField({initial: false}),
 			allMeleeWeapons: new fields.BooleanField({initial: false}),

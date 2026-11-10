@@ -9,6 +9,7 @@
 	"img": "icons/creatures/invertebrates/tick-cross-glowing-purple.webp",
 	"name": "Foebane",
 	"system": {
+		"alignment": "",
 		"broken": false,
 		"class": [
 		],
@@ -17,12 +18,18 @@
 			"gp": 0,
 			"sp": 0
 		},
+		"damageType": "none",
 		"description": "<p>ADV on attacks and damage against one creature type you choose for [[/r 1d6]] rounds</p>",
 		"duration": {
 			"type": "rounds",
 			"value": ""
 		},
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
 		"lost": false,
 		"magicItem": true,

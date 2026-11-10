@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Mithralskin",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>AC becomes 18 for 5 rounds.</p>",
 		"duration": {
 			"type": "rounds",

@@ -21,8 +21,9 @@
 		"bar2": {
 			"attribute": null
 		},
-		"detectionModes": [
-		],
+		"depth": 2,
+		"detectionModes": {
+		},
 		"displayBars": 0,
 		"displayName": 0,
 		"disposition": -1,
@@ -91,9 +92,6 @@
 			"anchorX": 0.5,
 			"anchorY": 0.5,
 			"fit": "contain",
-			"offsetX": 0,
-			"offsetY": 0,
-			"rotation": 0,
 			"scaleX": 1,
 			"scaleY": 1,
 			"src": "systems/shadowdark/assets/tokens/cowled_token.webp",

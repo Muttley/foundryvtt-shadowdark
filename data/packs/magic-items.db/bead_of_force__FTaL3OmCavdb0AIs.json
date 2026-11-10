@@ -10,7 +10,6 @@
 	"name": "Bead of Force",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -18,17 +17,28 @@
 		},
 		"description": "<p><em>A marble with a blue ring of light glowing softly inside it.</em></p><p><strong>Benefit.</strong> You can throw this bead at one target up to a near distance. If you hit, the target becomes caught in a @UUID[Compendium.shadowdark.spells.Item.B091clRxdPW3SQ4G]{resilient sphere} spell (pg. 69).</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {

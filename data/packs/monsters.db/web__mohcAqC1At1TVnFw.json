@@ -9,8 +9,10 @@
 	"img": "icons/magic/symbols/runes-star-magenta.webp",
 	"name": "Web",
 	"system": {
+		"alignment": "",
 		"class": [
 		],
+		"damageType": "none",
 		"description": "<p>A near-sized cube of webs within far immobilizes all inside it for 5 rounds. [[check 15 str]] on turn to break free.</p>",
 		"duration": {
 			"type": "rounds",

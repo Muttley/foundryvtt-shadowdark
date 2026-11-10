@@ -10,7 +10,6 @@
 	"name": "Bag of Devouring",
 	"system": {
 		"broken": false,
-		"canBeEquipped": false,
 		"cost": {
 			"cp": 0,
 			"gp": 0,
@@ -18,17 +17,28 @@
 		},
 		"description": "<p><em>A worn, leather pouch with tight drawstrings.</em></p><p><strong>Curse.</strong> This bag devours and destroys anything placed inside it in 1d6 rounds.</p>",
 		"equipped": false,
+		"identification": {
+			"description": "",
+			"identified": true,
+			"name": ""
+		},
 		"isAmmunition": false,
-		"isPhysical": true,
 		"light": {
 			"active": false,
+			"animation": "torch",
+			"autoActivate": false,
+			"bright": 5,
+			"color": "#d1c846",
+			"dim": 30,
 			"hasBeenUsed": false,
 			"isSource": false,
 			"longevityMins": 60,
 			"remainingSecs": 3600,
-			"template": "torch"
+			"template": ""
 		},
 		"magicItem": true,
+		"properties": [
+		],
 		"quantity": 1,
 		"scroll": false,
 		"slots": {
