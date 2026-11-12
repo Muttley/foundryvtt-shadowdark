@@ -2,6 +2,7 @@
 
 ## Bugfixes
 - [#1443] Animated damage numbers not showing for final hit
+- [#1444] Spell Alignment can't be saved
 
 ---
 
