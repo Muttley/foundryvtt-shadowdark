@@ -48,7 +48,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 		// If _preUpdate captured a previous HP value, animate the change
 		const prev = options?.shadowdark?.prevHpValue;
-		if (prev !== undefined && this.system.attributes?.hp?.value) {
+		if (prev !== undefined) {
 			const delta = this.system.attributes.hp.value - prev;
 			if (delta !== 0) this._animateHpChange(delta);
 		}

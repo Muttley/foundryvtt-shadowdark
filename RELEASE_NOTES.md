@@ -1,6 +1,13 @@
+# v4.1.1
+
+## Bugfixes
+- [#1443] Animated damage numbers not showing for final hit
+
+---
+
 # v4.1.0
 
-# Enhancements
+## Enhancements
 - [#1124] Add support for spells that can only be used by a character of the correct alignment
 - [#1315] Added metric conversion for light sources.
 - [#1376] Update the Monster Importer to handle various publisher quirks
@@ -18,7 +25,7 @@
 - [#1420] Show Effects tab on non-Magic Item items as well
 - [#1427] Add new "Double Close" NPC move speed for very slow-moving creatures
 
-# Bugfixes
+## Bugfixes
 - [#1374] Issue Leveling Up in Foundry
 	* You are now warned if you try to use the level up tool on a character that has no Class set
 - [#1382] Error when adding +1 Dex level up talent to character
@@ -35,7 +42,7 @@
 - [#1431] Error on the Lost Citadel Random Encounter journal
 - [#1432] Pre-defined effect: Spellcasting Check Bonus incorrect change
 
-# Chores
+## Chores
 - [#1369] Merge Spanish translation updates from Crowdin
 - [#1384] Merge Spanish translation updates from Crowdin
 - [#1396] Merge Italian translation updates from Crowdin
