@@ -32,7 +32,7 @@ export const magic = () => ({
 		blank: true,
 		initial: "",
 		nullable: false,
-		choices: [Object.keys(CONFIG.SHADOWDARK.ALIGNMENTS)],
+		choices: Object.keys(CONFIG.SHADOWDARK.ALIGNMENTS),
 	}),
 	class: new fields.ArrayField(new fields.DocumentUUIDField()),
 	damageType: new fields.StringField({
