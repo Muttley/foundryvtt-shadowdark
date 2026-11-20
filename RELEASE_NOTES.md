@@ -1,3 +1,11 @@
+
+# v4.1.2
+
+## Chores
+- [#1447] Merge Italian translation updates from Crowdin
+
+---
+
 # v4.1.1
 
 ## Bugfixes
