@@ -1,6 +1,9 @@
 
 # v4.1.2
 
+## Bugfixes
+- [#1450] Chat messages not honoring chosen display mode
+
 ## Chores
 - [#1447] Merge Italian translation updates from Crowdin
 
