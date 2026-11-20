@@ -115,8 +115,8 @@ SHADOWDARK.apps.monster-importer.instruction2c: Testo descrizione
 SHADOWDARK.apps.monster-importer.instruction2d: Blocco delle statistiche principali
 SHADOWDARK.apps.monster-importer.instruction2e: Dettagli
 SHADOWDARK.apps.monster-importer.instruction3: 3. Clic Importa Mostro.
-SHADOWDARK.apps.monster-importer.keepOpen: Keep window open after import
-SHADOWDARK.apps.monster-importer.openNewMonster: Open monster sheet after import
+SHADOWDARK.apps.monster-importer.keepOpen: Mantieni la finestra aperta dopo l'importazione
+SHADOWDARK.apps.monster-importer.openNewMonster: Apri scheda mostro dopo l'importazione
 SHADOWDARK.apps.monster-importer.placeholder: Incolla il testo del mostro qui...
 SHADOWDARK.apps.monster-importer.title: Importa Mostro
 SHADOWDARK.apps.request-check.copied: Copiato negli Appunti
@@ -385,7 +385,7 @@ SHADOWDARK.error.general.no_character_selected: Personaggio non selezionato
 SHADOWDARK.error.no_token_selected: Nessun token selezionato
 SHADOWDARK.error.patron.no_supported_class: Impossibile aggiungere Patrono poiché la classe configurata non lo permette
 SHADOWDARK.error.source.source_missing: Fonte mancante o sconosciuta...
-SHADOWDARK.error.spells.alignment_mismatch: Unable to cast spells with that alignment requirement
+SHADOWDARK.error.spells.alignment_mismatch: Impossibile lanciare incantesimi con questo requisito di allineamento
 SHADOWDARK.error.spells.lost: Incantesimo attualmente perso
 SHADOWDARK.error.spells.no_class_selected: Questo incantesimo non ha una classe selezionata
 SHADOWDARK.error.spells.not_a_spellcaster: Questo personaggio non è un incantatore
@@ -524,12 +524,12 @@ SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantità
 SHADOWDARK.item.inventory_slots: Slot per Oggetto
 SHADOWDARK.item.level: Livello
-SHADOWDARK.item.light.animation: Animation
-SHADOWDARK.item.light.animation_none: None
-SHADOWDARK.item.light.auto_activate: Activate Automatically
-SHADOWDARK.item.light.bright_radius: Bright Radius
-SHADOWDARK.item.light.color: Colour
-SHADOWDARK.item.light.dim_radius: Dim Radius
+SHADOWDARK.item.light.animation_none: Nessuna
+SHADOWDARK.item.light.animation: Animazione
+SHADOWDARK.item.light.auto_activate: Si attiva automaticamente
+SHADOWDARK.item.light.bright_radius: Raggio Luminosità
+SHADOWDARK.item.light.color: A colori
+SHADOWDARK.item.light.dim_radius: Raggio Luce Fioca
 SHADOWDARK.item.light.in_use_tooltip: Questo campo non può essere modificato mentre la luce è attiva
 SHADOWDARK.item.light.is_source: Fonte di Luce
 SHADOWDARK.item.light.longevity: Longevità (min)
@@ -571,7 +571,7 @@ SHADOWDARK.item.properties.label: Proprietà oggetto
 SHADOWDARK.item.scroll.label: Pergamena
 SHADOWDARK.item.source_tag: Tag fonte
 SHADOWDARK.item.source: Fonte
-SHADOWDARK.item.spell_alignment: Alignment
+SHADOWDARK.item.spell_alignment: Allineamento
 SHADOWDARK.item.spell_caster_classes: Classe Incantatore
 SHADOWDARK.item.spell_class: Classe Incantesimo
 SHADOWDARK.item.spell_duration: Durata
@@ -636,8 +636,8 @@ SHADOWDARK.light_source.light_spell.near: Incantesimo Luce (Vicino)
 SHADOWDARK.light_source.torch: Torcia
 SHADOWDARK.light-source.dropped: Caduta {name}
 SHADOWDARK.light-source.pick-up-lightsource.tooltip: Raccoglie Fonte di Luce
-SHADOWDARK.light-tracker.no-active: No Active Lights
-SHADOWDARK.light-tracker.open_character_sheet: Open Character Sheet
+SHADOWDARK.light-tracker.no-active: Nessuna Luce Attiva
+SHADOWDARK.light-tracker.open_character_sheet: Apri Scheda Personaggio
 SHADOWDARK.macro.error.caught_error: "La macro '{macro}' fallita con il seguente errore: {error}"
 SHADOWDARK.macro.error.gm_role_required: La macro '{macro}' richiede di avere il ruolo utente 'Game Master'
 SHADOWDARK.macro.success: La macro '{macro}' completata con successo
@@ -650,11 +650,11 @@ SHADOWDARK.module_art_config.portraits: Ritratti
 SHADOWDARK.module_art_config.tokens: Token
 SHADOWDARK.notify.combat.clockwise_initiative_only_gm: Quando è abilitata l'iniziativa in senso orario, solo il GM può lanciare iniziativa.
 SHADOWDARK.notify.shadowdark_item_piles_deprecated: "Il modulo 'Item Piles: Shadowdark' non è più richiesto e può essere disinstallato."
-SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: The 'Light Tracker UI Toggle' macro is no longer required and can be deleted.
+SHADOWDARK.notify.shadowdark_light_tracker_macro_deprecated: La macro 'Light Tracker UI Toggle' non è più richiesta e può essere eliminata.
 SHADOWDARK.npc_attack.type.physical: Fisico
 SHADOWDARK.npc_attack.type.special: Speciale
 SHADOWDARK.npc_move.close: Corto
-SHADOWDARK.npc_move.double_close: Double Close
+SHADOWDARK.npc_move.double_close: Doppio Vicino
 SHADOWDARK.npc_move.double_near: Doppio Vicino
 SHADOWDARK.npc_move.far: Lungo
 SHADOWDARK.npc_move.near: Vicino
