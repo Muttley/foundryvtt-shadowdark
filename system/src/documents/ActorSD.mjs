@@ -420,7 +420,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 							await ChatMessage.create({
 								content,
-								rollMode: CONFIG.ChatMessage.modes.public,
+								rollMode: "public",
 							});
 
 							await this.deleteEmbeddedDocuments(
@@ -463,7 +463,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 		await ChatMessage.create({
 			content,
-			rollMode: CONFIG.ChatMessage.modes.public,
+			rollMode: "public",
 		});
 	}
 
@@ -491,7 +491,7 @@ export default class ActorSD extends foundry.documents.Actor {
 
 		await ChatMessage.create({
 			content,
-			rollMode: CONFIG.ChatMessage.modes.public,
+			rollMode: "public",
 		});
 	}
 

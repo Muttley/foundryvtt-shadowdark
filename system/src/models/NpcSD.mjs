@@ -191,7 +191,7 @@ export default class NpcSD extends ActorBaseSD {
 				label: game.i18n.localize("SHADOWDARK.dialog.hp_roll.title"),
 				formula,
 			},
-			rollMode: CONFIG.ChatMessage.modes.private,
+			rollMode: "gm",
 		};
 
 		const result = await shadowdark.dice.rollFromConfig(config);

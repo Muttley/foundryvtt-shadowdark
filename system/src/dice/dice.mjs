@@ -338,7 +338,7 @@ export async function rerollFromMessage(msg, rollType) {
 export async function rollDialog(config) {
 
 	// get global role default if rollMode not set
-	config.rollMode ??= game.settings.get("core", "rollMode");
+	config.rollMode ??= game.settings.get("core", "messageMode");
 	config.type ??= "";
 	config.heading ??= "";
 

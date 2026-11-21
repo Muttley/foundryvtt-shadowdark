@@ -18,23 +18,27 @@
 		"chalk": "^6.0.1",
 		"classic-level": "^3.0.0",
 		"del": "^9.0.1",
-		"glob": "^14.0.4",
+		"glob": "^14.0.6",
 		"gulp": "^5.0.1",
 		"gulp-eslint-new": "^2.6.2",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^6.0.1",
 		"gulp-yaml": "^2.0.4",
 		"json-stable-stringify-pretty": "^1.2.0",
-		"marked": "^18.2.0",
+		"marked": "^18.2.1",
 		"merge-stream": "^2.0.0",
 		"nedb-promises": "^6.2.4",
 		"node-gyp-build": "^4.8.4",
-		"rollup": "^4.68.2",
-		"sass": "^1.108.1",
+		"rollup": "^4.68.7",
+		"sass": "^1.108.2",
 		"yaml": "^2.9.1",
 		"yargs": "^18.2.0"
 	},
 	"dependencies": {
-		"npm": "^12.2.2"
+		"npm": "^12.2.3"
+	},
+	"allowScripts": {
+		"classic-level@3.0.0": true,
+		"@parcel/watcher@2.5.0": true
 	}
 }
