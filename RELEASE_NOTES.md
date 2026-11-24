@@ -1,3 +1,11 @@
+# v4.1.3
+
+## Bugfixes
+- [#1453] Stone Skin using incorrect effect key
+- [#1454] Wolfshape AC override using incorrect effect key
+
+---
+
 # v4.1.2
 
 ## Bugfixes
